@@ -93,8 +93,10 @@
 
       <div class="grid md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('textBinary.text')}</label>
+          <label for="text-binary-input" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('textBinary.text')}</label>
           <textarea
+            id="text-binary-input"
+            name="textInput"
             value={text}
             onchange={(e) => handleTextChange(e.target.value)}
             class="w-full h-40 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded p-3 font-mono text-sm text-gray-900 dark:text-white"
@@ -104,12 +106,14 @@
         </div>
         <div>
           <div class="flex justify-between items-center mb-1">
-            <label class="text-sm text-gray-600 dark:text-gray-300">{t('textBinary.binary')}</label>
+            <label for="text-binary-output" class="text-sm text-gray-600 dark:text-gray-300">{t('textBinary.binary')}</label>
             <button onclick={copyResult} class="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
               {copied ? t('copied') : t('copy')}
             </button>
           </div>
           <textarea
+            id="text-binary-output"
+            name="binaryOutput"
             value={binary}
             onchange={(e) => handleBinaryChange(e.target.value)}
             class="w-full h-40 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded p-3 font-mono text-sm text-green-600 dark:text-green-400"

@@ -106,11 +106,12 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="binary-text-input" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {mode === 'toText' ? t('binaryInput') : t('textInput')}
           </label>
           <textarea
-            value={mode === 'toText' ? binary : text}
+            id="binary-text-input"
+            name="inputValue"
             onchange={(e) => mode === 'toText' ? binary = e.target.value : text = e.target.value}
             placeholder={mode === 'toText' ? t('binaryPlaceholder') : t('textPlaceholder')}
             class="w-full h-40 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono"
@@ -118,11 +119,12 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="binary-text-output" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {mode === 'toText' ? t('textOutput') : t('binaryOutput')}
           </label>
           <textarea
-            value={mode === 'toText' ? text : binary}
+            id="binary-text-output"
+            name="outputValue"
             readOnly
             placeholder={t('outputPlaceholder')}
             class="w-full h-40 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono"></textarea>

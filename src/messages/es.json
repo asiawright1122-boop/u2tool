@@ -9655,6 +9655,11 @@
         "item2": "Categoría B",
         "item3": "Categoría C",
         "item4": "Categoría D",
+        "categoryA": "Categoría A",
+        "categoryB": "Categoría B",
+        "categoryC": "Categoría C",
+        "categoryD": "Categoría D",
+        "categoryE": "Categoría E",
         "excellent": "Excelente",
         "good": "Bueno",
         "average": "Promedio",
@@ -15296,7 +15301,7 @@
       "headerNamePlaceholder": "Nombre del encabezado",
       "headerValuePlaceholder": "Valor"
     },
-    "jwt-debugger": {
+    "jwt-decoder": {
       "name": "Depurador JWT",
       "description": "Depure y verifique tokens JWT con validación de firma",
       "seo_title": "Herramienta gratis para depurar JWT online",

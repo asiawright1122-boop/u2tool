@@ -118,12 +118,14 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="mortgage-loan-amount" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('homePrice')}
           </label>
           <div class="relative">
             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">$</span>
             <input
+              id="mortgage-loan-amount"
+              name="loanAmount"
               type="number"
               bind:value={loanAmount}
               class="w-full pl-7 pr-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -133,12 +135,14 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="mortgage-down-payment" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('downPayment')}
           </label>
           <div class="relative">
             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">$</span>
             <input
+              id="mortgage-down-payment"
+              name="downPayment"
               type="number"
               bind:value={downPayment}
               class="w-full pl-7 pr-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -151,11 +155,13 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="mortgage-interest-rate" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('interestRate')}
           </label>
           <div class="relative">
             <input
+              id="mortgage-interest-rate"
+              name="interestRate"
               type="number"
               step="0.1"
               bind:value={interestRate}
@@ -167,10 +173,12 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="mortgage-loan-term" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('loanTerm')}
           </label>
           <select
+            id="mortgage-loan-term"
+            name="loanTerm"
             bind:value={loanTerm}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
           >
@@ -183,12 +191,14 @@
         </div>
 
         <div class="md:col-span-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="mortgage-extra-payment" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('extraMonthlyPayment')}
           </label>
           <div class="relative">
             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">$</span>
             <input
+              id="mortgage-extra-payment"
+              name="extraPayment"
               type="number"
               bind:value={extraPayment}
               class="w-full pl-7 pr-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"

@@ -84,7 +84,11 @@
       prettierConfig.singleQuote = config.singleQuote;
       prettierConfig.trailingComma = config.trailingComma;
       prettierConfig.bracketSpacing = config.bracketSpacing;
+      prettierConfig.bracketSameLine = config.bracketSameLine;
       prettierConfig.arrowParens = config.arrowParens;
+      prettierConfig.endOfLine = config.endOfLine;
+      prettierConfig.proseWrap = config.proseWrap;
+      prettierConfig.htmlWhitespaceSensitivity = config.htmlWhitespaceSensitivity;
     }
 
     output = JSON.stringify(prettierConfig, null, 2);
@@ -128,10 +132,12 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Print Width -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="prettier-print-width" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {t('printWidth')}
           </label>
           <input
+            id="prettier-print-width"
+            name="printWidth"
             type="number"
             value={config.printWidth}
             onchange={(e) => config = ({ ...config, printWidth: parseInt(e.target.value) || 80 })}
@@ -141,10 +147,12 @@
 
         <!-- Tab Width -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="prettier-tab-width" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {t('tabWidth')}
           </label>
           <input
+            id="prettier-tab-width"
+            name="tabWidth"
             type="number"
             value={config.tabWidth}
             onchange={(e) => config = ({ ...config, tabWidth: parseInt(e.target.value) || 2 })}
@@ -154,10 +162,12 @@
 
         <!-- Trailing Comma -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="prettier-trailing-comma" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {t('trailingComma')}
           </label>
           <select
+            id="prettier-trailing-comma"
+            name="trailingComma"
             value={config.trailingComma}
             onchange={(e) => config = ({ ...config, trailingComma: e.target.value as 'none' | 'es5' | 'all' })}
             class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -170,10 +180,12 @@
 
         <!-- Arrow Parens -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="prettier-arrow-parens" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {t('arrowParens')}
           </label>
           <select
+            id="prettier-arrow-parens"
+            name="arrowParens"
             value={config.arrowParens}
             onchange={(e) => config = ({ ...config, arrowParens: e.target.value as 'avoid' | 'always' })}
             class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -185,10 +197,12 @@
 
         <!-- End of Line -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="prettier-end-of-line" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {t('endOfLine')}
           </label>
           <select
+            id="prettier-end-of-line"
+            name="endOfLine"
             value={config.endOfLine}
             onchange={(e) => config = ({ ...config, endOfLine: e.target.value as 'lf' | 'crlf' | 'cr' | 'auto' })}
             class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -202,10 +216,12 @@
 
         <!-- Prose Wrap -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="prettier-prose-wrap" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {t('proseWrap')}
           </label>
           <select
+            id="prettier-prose-wrap"
+            name="proseWrap"
             value={config.proseWrap}
             onchange={(e) => config = ({ ...config, proseWrap: e.target.value as 'always' | 'never' | 'preserve' })}
             class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -215,12 +231,32 @@
             <option value="never">Never</option>
           </select>
         </div>
+
+        <!-- HTML Whitespace Sensitivity -->
+        <div>
+          <label for="prettier-html-whitespace-sensitivity" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            {t('htmlWhitespaceSensitivity')}
+          </label>
+          <select
+            id="prettier-html-whitespace-sensitivity"
+            name="htmlWhitespaceSensitivity"
+            value={config.htmlWhitespaceSensitivity}
+            onchange={(e) => config = ({ ...config, htmlWhitespaceSensitivity: e.target.value as 'css' | 'strict' | 'ignore' })}
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          >
+            <option value="css">CSS</option>
+            <option value="strict">Strict</option>
+            <option value="ignore">Ignore</option>
+          </select>
+        </div>
       </div>
 
       <!-- Boolean Options -->
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <label class="flex items-center gap-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+        <label for="prettier-use-tabs" class="flex items-center gap-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
           <input
+            id="prettier-use-tabs"
+            name="useTabs"
             type="checkbox"
             checked={config.useTabs}
             onchange={(e) => config = ({ ...config, useTabs: e.target.checked })}
@@ -229,8 +265,10 @@
           <span class="text-sm text-gray-700 dark:text-gray-300">{t('useTabs')}</span>
         </label>
 
-        <label class="flex items-center gap-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+        <label for="prettier-semi" class="flex items-center gap-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
           <input
+            id="prettier-semi"
+            name="semi"
             type="checkbox"
             checked={config.semi}
             onchange={(e) => config = ({ ...config, semi: e.target.checked })}
@@ -239,8 +277,10 @@
           <span class="text-sm text-gray-700 dark:text-gray-300">{t('semi')}</span>
         </label>
 
-        <label class="flex items-center gap-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+        <label for="prettier-single-quote" class="flex items-center gap-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
           <input
+            id="prettier-single-quote"
+            name="singleQuote"
             type="checkbox"
             checked={config.singleQuote}
             onchange={(e) => config = ({ ...config, singleQuote: e.target.checked })}
@@ -249,8 +289,10 @@
           <span class="text-sm text-gray-700 dark:text-gray-300">{t('singleQuote')}</span>
         </label>
 
-        <label class="flex items-center gap-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+        <label for="prettier-bracket-spacing" class="flex items-center gap-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
           <input
+            id="prettier-bracket-spacing"
+            name="bracketSpacing"
             type="checkbox"
             checked={config.bracketSpacing}
             onchange={(e) => config = ({ ...config, bracketSpacing: e.target.checked })}
@@ -259,8 +301,10 @@
           <span class="text-sm text-gray-700 dark:text-gray-300">{t('bracketSpacing')}</span>
         </label>
 
-        <label class="flex items-center gap-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+        <label for="prettier-bracket-same-line" class="flex items-center gap-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
           <input
+            id="prettier-bracket-same-line"
+            name="bracketSameLine"
             type="checkbox"
             checked={config.bracketSameLine}
             onchange={(e) => config = ({ ...config, bracketSameLine: e.target.checked })}

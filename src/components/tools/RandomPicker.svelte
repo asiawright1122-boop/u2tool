@@ -84,10 +84,12 @@
     <div class="space-y-6">
       <!-- Input -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label for="picker-items" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           {t('enterItems')}
         </label>
         <textarea
+          id="picker-items"
+          name="pickerItems"
           bind:value={input}
           placeholder={t('itemsPlaceholder')}
           rows={6}
@@ -99,10 +101,12 @@
 
       <!-- Winner Count -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label for="picker-winner-count" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           {t('numberOfWinners')}
         </label>
         <input
+          id="picker-winner-count"
+          name="winnerCount"
           type="number"
           bind:value={winnerCount}
           min="1"

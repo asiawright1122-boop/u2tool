@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount, onDestroy } from 'svelte';
+  import { onMount, onDestroy, tick } from 'svelte';
   import type { EChartsOption, ECharts as EChartsInstance } from 'echarts';
 
   export { type EChartsOption };
@@ -43,18 +43,29 @@
     return chartInstance;
   }
 
+  const ECHARTS_LOAD_TIMEOUT_MS = 10000;
+
   onMount(async () => {
-    if (!containerEl) return;
-    
-    try {
-      // 动态导入 echarts（懒加载）
-      const echartsModule = await import('echarts');
-      const echarts = echartsModule.default || echartsModule;
-      
+    await tick();
+    if (!containerEl) {
+      loadError = 'Chart container not ready';
       isLoading = false;
-      
+      return;
+    }
+
+    try {
+      const loadEcharts = import('echarts');
+      const timeout = new Promise<never>((_, reject) =>
+        setTimeout(() => reject(new Error('ECharts load timeout')), ECHARTS_LOAD_TIMEOUT_MS)
+      );
+      const echartsModule = await Promise.race([loadEcharts, timeout]);
+      const echarts = echartsModule.default || echartsModule;
+
+      isLoading = false;
+
       chartInstance = echarts.init(containerEl, theme);
-      chartInstance.setOption(option, notMerge, lazyUpdate);
+      const optToUse = typeof option === 'function' ? (option as () => any)() : option;
+      chartInstance.setOption(optToUse, notMerge, lazyUpdate);
 
       if (onChartReady) onChartReady(chartInstance);
 
@@ -74,7 +85,9 @@
       resizeObserver.observe(containerEl);
     } catch (error) {
       console.error('Failed to load ECharts:', error);
-      loadError = 'Failed to load chart library';
+      loadError = error instanceof Error && error.message === 'ECharts load timeout'
+        ? 'Chart library load timeout'
+        : 'Failed to load chart library';
       isLoading = false;
     }
   });
@@ -82,7 +95,8 @@
   // Update chart when option changes
   $effect(() => {
     if (chartInstance && option) {
-      chartInstance.setOption(option, notMerge, lazyUpdate);
+      const optToUse = typeof option === 'function' ? (option as () => any)() : option;
+      chartInstance.setOption(optToUse, notMerge, lazyUpdate);
     }
   });
 

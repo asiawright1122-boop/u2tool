@@ -9654,6 +9654,11 @@
         "item2": "Catégorie B",
         "item3": "Catégorie C",
         "item4": "Catégorie D",
+        "categoryA": "Catégorie A",
+        "categoryB": "Catégorie B",
+        "categoryC": "Catégorie C",
+        "categoryD": "Catégorie D",
+        "categoryE": "Catégorie E",
         "excellent": "Excellent",
         "good": "Bon",
         "average": "Moyen",
@@ -15262,7 +15267,7 @@
       "headerNamePlaceholder": "Nom de l'en-tête",
       "headerValuePlaceholder": "Valeur"
     },
-    "jwt-debugger": {
+    "jwt-decoder": {
       "name": "Débogueur JWT",
       "description": "Déboguez et vérifiez les tokens JWT avec validation de signature",
       "seo_title": "Outil en ligne gratuit pour déboguer JWT",

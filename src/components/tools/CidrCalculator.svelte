@@ -116,8 +116,10 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium mb-2">{t('cidr.input')}</label>
+        <label for="cidr-input" class="block text-sm font-medium mb-2">{t('cidr.input')}</label>
         <input
+          id="cidr-input"
+          name="cidrValue"
           type="text"
           bind:value={cidr}
           placeholder="192.168.1.0/24"

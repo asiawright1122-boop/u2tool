@@ -102,8 +102,10 @@
 
     <div class="space-y-4">
       <div>
-        <label class="block text-sm font-medium mb-2">{t('jsonData')}</label>
+        <label for="json-path-json" class="block text-sm font-medium mb-2">{t('jsonData')}</label>
         <textarea
+          id="json-path-json"
+          name="jsonData"
           class="tool-textarea"
           bind:value={json}
           placeholder={t('jsonPlaceholder')}
@@ -111,9 +113,10 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium mb-2">{t('expression')}</label>
+        <label for="json-path-expression" class="block text-sm font-medium mb-2">{t('expression')}</label>
         <input
-          type="text"
+          id="json-path-expression"
+          name="pathExpression"
           bind:value={path}
           class="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
           placeholder={t('expressionPlaceholder')}

@@ -69,10 +69,12 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="loan-principal" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('principal')}
           </label>
           <input
+            id="loan-principal"
+            name="principalAmount"
             type="number"
             bind:value={principal}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -81,10 +83,12 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="loan-interest-rate" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('interestRate')}
           </label>
           <input
+            id="loan-interest-rate"
+            name="interestRate"
             type="number"
             step="0.1"
             bind:value={interestRate}
@@ -94,10 +98,12 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="loan-term-months" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('termMonths')}
           </label>
           <input
+            id="loan-term-months"
+            name="termMonths"
             type="number"
             bind:value={termMonths}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -106,10 +112,12 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="loan-payment-frequency" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('paymentFrequency')}
           </label>
           <select
+            id="loan-payment-frequency"
+            name="paymentFrequency"
             value={paymentFrequency}
             onchange={(e) => paymentFrequency = e.target.value as 'monthly' | 'biweekly' | 'weekly'}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"

@@ -68,7 +68,7 @@
 
     <div class="space-y-4">
       <div class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-blue-500 transition-colors bg-gray-50 dark:bg-transparent" onclick={() => fileRef?.click()}>
-        <input bind:this={fileRef} type="file" onchange={handleFile} class="hidden" />
+        <input id="data-uri-file" bind:this={fileRef} type="file" onchange={handleFile} class="hidden" />
         <p class="text-gray-600 dark:text-gray-300">{'Drop file here or click to browse'}</p>
       </div>
       {#if fileInfo}
@@ -79,8 +79,8 @@
         </div>
 {/if}
       <div>
-        <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{td('output')}</label>
-        <textarea value={dataUri} readOnly class="w-full h-40 p-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-xs break-all text-gray-900 dark:text-white"></textarea>
+        <label for="data-uri-output" class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{td('output')}</label>
+        <textarea id="data-uri-output" name="dataUriOutput" value={dataUri} readOnly class="w-full h-40 p-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-xs break-all text-gray-900 dark:text-white"></textarea>
       </div>
       <div class="flex gap-2">
         <button onclick={copy} disabled={!dataUri} class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50">{copied ? t('copied') : t('copy')}</button>

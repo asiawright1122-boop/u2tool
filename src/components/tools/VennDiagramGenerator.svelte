@@ -44,13 +44,16 @@
         { label: 'C', description: '', radius: 100, x: 260, y: 300, color: '#ffe66d' },
     ]);
 
+  let isInitialized = $state(false);
   $effect(() => {
+        if (isInitialized) return;
+        isInitialized = true;
         // Initialize placeholders with translations
         title = t('defaultTitle');
         sets = [
-            { ...sets[0], label: t('sampleSet1') },
-            { ...sets[1], label: t('sampleSet2') },
-            { ...sets[2], label: t('sampleSet3') }
+            { label: t('sampleSet1'), description: '', radius: 100, x: 200, y: 200, color: '#ff6b6b' },
+            { label: t('sampleSet2'), description: '', radius: 100, x: 320, y: 200, color: '#4ecdc4' },
+            { label: t('sampleSet3'), description: '', radius: 100, x: 260, y: 300, color: '#ffe66d' },
         ];
     });
 
@@ -138,6 +141,8 @@
                         <div>
                             <input
                                 type="text"
+                                id="vennTitle"
+                                name="vennTitle"
                                 bind:value={title}
                                 class="tool-input mb-2"
                                 placeholder={t('chartTitlePlaceholder')}
@@ -146,6 +151,9 @@
                                 <label class="inline-flex items-center">
                                     <input
                                         type="radio"
+                                        id="mode2set"
+                                        name="vennMode"
+                                        value="2set"
                                         checked={mode === '2set'}
                                         onchange={() => mode = '2set'}
                                         class="mr-2"
@@ -155,6 +163,9 @@
                                 <label class="inline-flex items-center">
                                     <input
                                         type="radio"
+                                        id="mode3set"
+                                        name="vennMode"
+                                        value="3set"
                                         checked={mode === '3set'}
                                         onchange={() => mode = '3set'}
                                         class="mr-2"
@@ -177,6 +188,8 @@
                                 </div>
                                 <input
                                     type="text"
+                                    id="setLabel-{index}"
+                                    name="setLabel-{index}"
                                     value={set.label}
                                     onchange={(e) => updateSet(index, 'label', e.target.value)}
                                     placeholder={t('labelPlaceholder')}
@@ -185,12 +198,16 @@
                                 <div class="grid grid-cols-2 gap-2">
                                     <input
                                         type="color"
+                                        id="setColor-{index}"
+                                        name="setColor-{index}"
                                         value={set.color}
                                         onchange={(e) => updateSet(index, 'color', e.target.value)}
                                         class="h-9 w-full rounded cursor-pointer bg-transparent"
                                     />
                                     <input
                                         type="number"
+                                        id="setRadius-{index}"
+                                        name="setRadius-{index}"
                                         value={set.radius}
                                         onchange={(e) => updateSet(index, 'radius', parseInt(e.target.value) || 50)}
                                         class="tool-input"

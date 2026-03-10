@@ -75,8 +75,10 @@
     <div class="space-y-4">
       <div class="grid md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('input')}</label>
+          <label for="number-base-input" class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('input')}</label>
           <input
+            id="number-base-input"
+            name="numberInput"
             type="text"
             bind:value={input}
             class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
@@ -84,8 +86,10 @@
           />
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">From Base</label>
+          <label for="number-base-from" class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">From Base</label>
           <select
+            id="number-base-from"
+            name="fromBase"
             value={fromBase}
             onchange={(e) => fromBase = Number(e.target.value)}
             class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"

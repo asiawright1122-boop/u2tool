@@ -9648,6 +9648,11 @@
         "item2": "Kategorie B",
         "item3": "Kategorie C",
         "item4": "Kategorie D",
+        "categoryA": "Kategorie A",
+        "categoryB": "Kategorie B",
+        "categoryC": "Kategorie C",
+        "categoryD": "Kategorie D",
+        "categoryE": "Kategorie E",
         "excellent": "Ausgezeichnet",
         "good": "Gut",
         "average": "Durchschnittlich",
@@ -15249,7 +15254,7 @@
       "headerNamePlaceholder": "Header-Name",
       "headerValuePlaceholder": "Wert"
     },
-    "jwt-debugger": {
+    "jwt-decoder": {
       "name": "JWT-Debugger",
       "description": "Debuggen und verifizieren Sie JWT-Tokens mit Signaturvalidierung",
       "seo_title": "Kostenlose JWT Debugger Online-Tool",

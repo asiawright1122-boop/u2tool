@@ -76,30 +76,30 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label for="regex-pattern" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           {selectedPattern ? t(`patterns.${COMMON_PATTERNS.find(p => p.id === selectedPattern)?.descKey}`) : t('customPattern')}
         </label>
-        <input type="text" value={currentPattern}
+        <input id="regex-pattern" name="pattern" type="text" value={currentPattern}
           onchange={(e) => { customPattern = e.target.value; selectedPattern = ''; }}
           class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono"
           placeholder={t('placeholder')} />
       </div>
 
       <div class="flex gap-4">
-        <label class="flex items-center gap-2 text-gray-600 dark:text-gray-300">
-          <input type="checkbox" checked={flags.g} onchange={(e) => flags = {...flags, g: e.target.checked}} /> {t('flagGlobal')}
+        <label for="regex-flag-g" class="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+          <input id="regex-flag-g" name="flagGlobal" type="checkbox" checked={flags.g} onchange={(e) => flags = {...flags, g: e.target.checked}} /> {t('flagGlobal')}
         </label>
-        <label class="flex items-center gap-2 text-gray-600 dark:text-gray-300">
-          <input type="checkbox" checked={flags.i} onchange={(e) => flags = {...flags, i: e.target.checked}} /> {t('flagCaseInsensitive')}
+        <label for="regex-flag-i" class="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+          <input id="regex-flag-i" name="flagCaseInsensitive" type="checkbox" checked={flags.i} onchange={(e) => flags = {...flags, i: e.target.checked}} /> {t('flagCaseInsensitive')}
         </label>
-        <label class="flex items-center gap-2 text-gray-600 dark:text-gray-300">
-          <input type="checkbox" checked={flags.m} onchange={(e) => flags = {...flags, m: e.target.checked}} /> {t('flagMultiline')}
+        <label for="regex-flag-m" class="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+          <input id="regex-flag-m" name="flagMultiline" type="checkbox" checked={flags.m} onchange={(e) => flags = {...flags, m: e.target.checked}} /> {t('flagMultiline')}
         </label>
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('testString')}</label>
-        <textarea bind:value={testString}
+        <label for="regex-test-string" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('testString')}</label>
+        <textarea id="regex-test-string" name="testString" bind:value={testString}
           class="w-full h-32 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white"
           placeholder={t('testPlaceholder')}></textarea>
       </div>

@@ -58,8 +58,10 @@
 
     <div class="space-y-4">
       <div>
-        <label class="block text-sm font-medium mb-2">{t('input')}</label>
+        <label for="html-encoder-input" class="block text-sm font-medium mb-2">{t('input')}</label>
         <textarea
+          id="html-encoder-input"
+          name="htmlInput"
           class="tool-textarea"
           bind:value={input}
           placeholder={t('inputPlaceholder')}></textarea>
@@ -79,7 +81,7 @@
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium">{t('output')}</label>
+          <label for="html-encoder-output" class="text-sm font-medium">{t('output')}</label>
           {#if output}
 <button
               onclick={copyOutput}
@@ -90,6 +92,8 @@
 {/if}
         </div>
         <textarea
+          id="html-encoder-output"
+          name="htmlOutput"
           class="tool-textarea"
           value={output}
           readOnly

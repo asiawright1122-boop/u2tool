@@ -166,6 +166,8 @@
 <div  class="flex items-center gap-2">
               <span class="text-sm text-gray-600 dark:text-gray-300">{tm('col')} {i + 1}:</span>
               <select
+                id={`column-alignment-${i}`}
+                name={`columnAlignment${i}`}
                 value={align}
                 onchange={(e) => updateAlignment(i, e.target.value as Alignment)}
                 class="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm text-gray-900 dark:text-white"

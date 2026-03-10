@@ -53,8 +53,10 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('input')}</label>
+        <label for="text-case-input" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('input')}</label>
         <textarea
+          id="text-case-input"
+          name="textCaseInput"
           bind:value={text}
           placeholder={t('caseCounter.placeholder')}
           class="w-full h-40 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500"></textarea>

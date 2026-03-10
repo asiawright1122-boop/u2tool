@@ -37,7 +37,8 @@
 
 
     <div class="space-y-4">
-      <textarea bind:value={text} class="w-full h-48 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" placeholder={t('textStats.placeholder')}></textarea>
+      <label for="text-stats-input" class="sr-only">{t('textStats.placeholder')}</label>
+      <textarea id="text-stats-input" name="textStatsInput" bind:value={text} class="w-full h-48 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" placeholder={t('textStats.placeholder')}></textarea>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
         {#each [
           { label: t('textStats.chars'), value: stats.chars },

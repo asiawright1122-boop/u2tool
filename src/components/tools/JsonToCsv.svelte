@@ -144,8 +144,10 @@
 
     <div class="space-y-4">
       <div>
-        <label class="block text-sm font-medium mb-2">{t('input')} (JSON or CSV)</label>
+        <label for="json-csv-input" class="block text-sm font-medium mb-2">{t('input')} (JSON or CSV)</label>
         <textarea
+          id="json-csv-input"
+          name="jsonCsvInput"
           class="tool-textarea"
           bind:value={input}
           placeholder={'[{"name": "John", "age": 30}, {"name": "Jane", "age": 25}]'}
@@ -188,6 +190,8 @@
             </div>
           </div>
           <textarea
+            id="json-csv-output"
+            name="jsonCsvOutput"
             class="tool-textarea"
             value={output}
             readOnly

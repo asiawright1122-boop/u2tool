@@ -187,6 +187,8 @@
 {/if}
           </div>
           <textarea
+            id="text-hex-input"
+            name="textInput"
             bind:value={text}
             placeholder={t('textPlaceholder')}
             class="w-full h-48 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono"></textarea>
@@ -194,7 +196,7 @@
 
         <div class="space-y-2">
           <div class="flex items-center justify-between">
-            <label class="block text-sm font-medium text-gray-600 dark:text-gray-300">
+            <label for="text-hex-output" class="block text-sm font-medium text-gray-600 dark:text-gray-300">
               {t('hexOutput')}
             </label>
             {#if hex}
@@ -207,6 +209,8 @@
 {/if}
           </div>
           <textarea
+            id="text-hex-output"
+            name="hexOutput"
             bind:value={hex}
             placeholder={t('hexPlaceholder')}
             class="w-full h-48 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono"></textarea>

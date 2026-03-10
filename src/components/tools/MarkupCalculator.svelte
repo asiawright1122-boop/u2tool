@@ -91,12 +91,14 @@
       <!-- Input Form -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="markup-cost" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {t('cost')}
           </label>
           <div class="relative">
             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">$</span>
             <input
+              id="markup-cost"
+              name="costValue"
               type="number"
               bind:value={cost}
               placeholder="50"
@@ -107,11 +109,13 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="markup-percentage" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {t('markupPercentage')}
           </label>
           <div class="relative">
             <input
+              id="markup-percentage"
+              name="markupPercentage"
               type="number"
               bind:value={markupPercentage}
               placeholder="100"
@@ -146,10 +150,12 @@
 
       <!-- Markup Slider -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label for="markup-slider" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           {t('adjustMarkup')}: {markupPercentage}%
         </label>
         <input
+          id="markup-slider"
+          name="markupSlider"
           type="range"
           min="0"
           max="500"

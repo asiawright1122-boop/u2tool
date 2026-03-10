@@ -114,8 +114,8 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
-        <textarea bind:value={input}
+        <label for="encoding-detector-input" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
+        <textarea id="encoding-detector-input" name="inputValue" bind:value={input}
           class="w-full h-40 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"
           placeholder={t('placeholder')}></textarea>
       </div>

@@ -8328,6 +8328,11 @@
         "item2": "Category B",
         "item3": "Category C",
         "item4": "Category D",
+        "categoryA": "Category A",
+        "categoryB": "Category B",
+        "categoryC": "Category C",
+        "categoryD": "Category D",
+        "categoryE": "Category E",
         "excellent": "Excellent",
         "good": "Good",
         "average": "Average",
@@ -11837,7 +11842,7 @@
       "headerNamePlaceholder": "Header name",
       "headerValuePlaceholder": "Value"
     },
-    "jwt-debugger": {
+    "jwt-decoder": {
       "name": "JWT Debugger",
       "description": "Debug and verify JWT tokens with signature validation",
       "seo_title": "Free JWT Debugger Online - Decode and Verify JWT Tokens",
@@ -12357,6 +12362,7 @@
       "arrowParens": "arrow Parens",
       "endOfLine": "end Of Line",
       "proseWrap": "prose Wrap",
+      "htmlWhitespaceSensitivity": "HTML Whitespace Sensitivity",
       "useTabs": "use Tabs",
       "semi": "semi",
       "singleQuote": "single Quote",

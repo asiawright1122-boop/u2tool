@@ -69,16 +69,20 @@
     <div class="space-y-4">
       <div class="grid md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium mb-2">{t('diffChecker.original')}</label>
+          <label for="diff-original" class="block text-sm font-medium mb-2">{t('diffChecker.original')}</label>
           <textarea
+            id="diff-original"
+            name="originalText"
             class="tool-textarea"
             bind:value={text1}
             placeholder={t('diffChecker.originalPlaceholder')}
             rows={10}></textarea>
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2">{t('diffChecker.modified')}</label>
+          <label for="diff-modified" class="block text-sm font-medium mb-2">{t('diffChecker.modified')}</label>
           <textarea
+            id="diff-modified"
+            name="modifiedText"
             class="tool-textarea"
             bind:value={text2}
             placeholder={t('diffChecker.modifiedPlaceholder')}

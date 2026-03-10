@@ -53,16 +53,20 @@
         <h3 class="text-lg font-medium mb-4 text-gray-900 dark:text-white">{t('dateDiff')}</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('startDate')}</label>
+            <label for="date-calc-start" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('startDate')}</label>
             <input
+              id="date-calc-start"
+              name="startDate"
               type="date"
               bind:value={date1}
               class="w-full bg-white dark:bg-gray-600 border border-gray-300 dark:border-gray-500 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('endDate')}</label>
+            <label for="date-calc-end" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('endDate')}</label>
             <input
+              id="date-calc-end"
+              name="endDate"
               type="date"
               bind:value={date2}
               class="w-full bg-white dark:bg-gray-600 border border-gray-300 dark:border-gray-500 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
@@ -94,16 +98,20 @@
         <h3 class="text-lg font-medium mb-4 text-gray-900 dark:text-white">{t('addSubtract')}</h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('baseDate')}</label>
+            <label for="date-calc-base" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('baseDate')}</label>
             <input
+              id="date-calc-base"
+              name="baseDate"
               type="date"
               bind:value={baseDate}
               class="w-full bg-white dark:bg-gray-600 border border-gray-300 dark:border-gray-500 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('operation')}</label>
+            <label for="date-calc-operation" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('operation')}</label>
             <select
+              id="date-calc-operation"
+              name="operation"
               value={operation}
               onchange={(e) => operation = e.target.value as 'add' | 'subtract'}
               class="w-full bg-white dark:bg-gray-600 border border-gray-300 dark:border-gray-500 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
@@ -113,8 +121,10 @@
             </select>
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('days')}</label>
+            <label for="date-calc-days" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('days')}</label>
             <input
+              id="date-calc-days"
+              name="daysValue"
               type="number"
               value={days}
               onchange={(e) => days = Number(e.target.value)}

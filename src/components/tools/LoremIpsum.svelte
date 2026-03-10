@@ -66,8 +66,10 @@
     <div class="space-y-4">
       <div class="flex flex-wrap gap-4 items-end">
         <div>
-          <label class="tool-label">{t('lorem.type')}</label>
+          <label for="lorem-type" class="tool-label">{t('lorem.type')}</label>
           <select
+            id="lorem-type"
+            name="loremType"
             value={type}
             onchange={(e) => type = e.target.value as typeof type}
             class="tool-input h-[42px]"
@@ -79,8 +81,10 @@
         </div>
 
         <div>
-          <label class="tool-label">{t('count')}</label>
+          <label for="lorem-count" class="tool-label">{t('count')}</label>
           <input
+            id="lorem-count"
+            name="loremCount"
             type="number"
             min="1"
             max="100"

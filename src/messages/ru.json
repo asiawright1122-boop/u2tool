@@ -9636,6 +9636,11 @@
         "item2": "Категория Б",
         "item3": "Категория В",
         "item4": "Категория Г",
+        "categoryA": "Категория А",
+        "categoryB": "Категория Б",
+        "categoryC": "Категория В",
+        "categoryD": "Категория Г",
+        "categoryE": "Категория Д",
         "excellent": "Отлично",
         "good": "Хорошо",
         "average": "Средне",
@@ -15188,7 +15193,7 @@
       "headerNamePlaceholder": "Имя заголовка",
       "headerValuePlaceholder": "Значение"
     },
-    "jwt-debugger": {
+    "jwt-decoder": {
       "name": "Отладчик JWT",
       "description": "Отладка и проверка JWT-токенов с валидацией подписи",
       "seo_title": "Бесплатный онлайн инструмент JWT Debugger для проверки токенов",

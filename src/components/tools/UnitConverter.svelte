@@ -104,15 +104,19 @@
       <div class="grid md:grid-cols-[1fr,auto,1fr] gap-4 items-stretch">
         <!-- From Section -->
         <div class="p-5 bg-gray-50 dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-700 transition-all hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10">
-          <label class="tool-label text-xs uppercase tracking-wider text-gray-500 mb-3 block text-center md:text-left">{'From'}</label>
+          <label for="unit-from-value" class="tool-label text-xs uppercase tracking-wider text-gray-500 mb-3 block text-center md:text-left">{'From'}</label>
           <div class="space-y-3">
             <input
+              id="unit-from-value"
+              name="inputValue"
               type="number"
               bind:value={inputValue}
               class="tool-input text-2xl md:text-3xl font-mono text-center h-16 bg-white dark:bg-gray-800 shadow-sm"
               placeholder={tu('enterValue')}
             />
             <select
+              id="unit-from"
+              name="fromUnit"
               bind:value={fromUnit}
               class="tool-select text-center font-medium bg-white dark:bg-gray-800 shadow-sm"
             >
@@ -146,12 +150,14 @@
 
         <!-- To Section -->
         <div class="p-5 bg-gray-50 dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-700 transition-all hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10">
-          <label class="tool-label text-xs uppercase tracking-wider text-gray-500 mb-3 block text-center md:text-left">{'To'}</label>
+          <label for="unit-to" class="tool-label text-xs uppercase tracking-wider text-gray-500 mb-3 block text-center md:text-left">{'To'}</label>
           <div class="space-y-3">
             <div class="tool-input flex items-center justify-center text-2xl md:text-3xl font-mono h-16 bg-white dark:bg-gray-800 shadow-sm overflow-hidden text-ellipsis whitespace-nowrap">
               {result || '0'}
             </div>
             <select
+              id="unit-to"
+              name="toUnit"
               bind:value={toUnit}
               class="tool-select text-center font-medium bg-white dark:bg-gray-800 shadow-sm"
             >

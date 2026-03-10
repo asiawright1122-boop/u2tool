@@ -75,10 +75,12 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="compound-principal" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('principal')}
           </label>
           <input
+            id="compound-principal"
+            name="principalAmount"
             type="number"
             bind:value={principal}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -87,10 +89,12 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="compound-rate" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('annualRate')}
           </label>
           <input
+            id="compound-rate"
+            name="annualRate"
             type="number"
             step="0.1"
             bind:value={annualRate}
@@ -100,10 +104,12 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="compound-years" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('years')}
           </label>
           <input
+            id="compound-years"
+            name="yearsValue"
             type="number"
             bind:value={years}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -112,10 +118,12 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="compound-frequency" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('compoundingFrequency')}
           </label>
           <select
+            id="compound-frequency"
+            name="compoundingFrequency"
             value={compoundingFrequency}
             onchange={(e) => compoundingFrequency = e.target.value as typeof compoundingFrequency}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -128,10 +136,12 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="compound-contribution" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('regularContribution')}
           </label>
           <input
+            id="compound-contribution"
+            name="regularContribution"
             type="number"
             bind:value={regularContribution}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -140,10 +150,12 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="compound-contrib-freq" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('contributionFrequency')}
           </label>
           <select
+            id="compound-contrib-freq"
+            name="contributionFrequency"
             value={contributionFrequency}
             onchange={(e) => contributionFrequency = e.target.value as 'monthly' | 'annually'}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"

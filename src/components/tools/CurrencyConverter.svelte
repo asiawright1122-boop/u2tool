@@ -81,10 +81,12 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label for="currency-amount" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           {t('amount')}
         </label>
         <input
+          id="currency-amount"
+          name="amountValue"
           type="number"
           bind:value={amount}
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-lg"
@@ -96,10 +98,12 @@
 
       <div class="grid grid-cols-1 md:grid-cols-[1fr,auto,1fr] gap-4 items-end">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="currency-from" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('from')}
           </label>
           <select
+            id="currency-from"
+            name="fromCurrency"
             bind:value={fromCurrency}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
           >
@@ -147,10 +151,12 @@
         </button>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="currency-to" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('to')}
           </label>
           <select
+            id="currency-to"
+            name="toCurrency"
             bind:value={toCurrency}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
           >

@@ -162,10 +162,12 @@
 
         <!-- Age -->
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label for="calorie-age" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
             {t('age')}
           </label>
           <input
+            id="calorie-age"
+            name="ageValue"
             type="number"
             bind:value={age}
             min="1"
@@ -176,12 +178,14 @@
 
         <!-- Height -->
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+          <label for="calorie-height" class="block text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
             <Ruler class="w-4 h-4" />
             {t('height')} ({unit === 'metric' ? 'cm' : 'ft/in'})
           </label>
           {#if unit === 'metric'}
 <input
+              id="calorie-height"
+              name="heightCm"
               type="number"
               bind:value={height}
               min="50"
@@ -191,6 +195,8 @@
 {:else}
 <div class="flex gap-2">
               <input
+                id="calorie-height-feet"
+                name="heightFeet"
                 type="number"
                 bind:value={heightFeet}
                 min="1"
@@ -199,6 +205,8 @@
                 class="w-1/2 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
               />
               <input
+                id="calorie-height-inches"
+                name="heightInches"
                 type="number"
                 bind:value={heightInches}
                 min="0"
@@ -212,11 +220,13 @@
 
         <!-- Weight -->
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+          <label for="calorie-weight" class="block text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
             <Scale class="w-4 h-4" />
             {t('weight')} ({unit === 'metric' ? 'kg' : 'lbs'})
           </label>
           <input
+            id="calorie-weight"
+            name="weightValue"
             type="number"
             bind:value={weight}
             min="20"
@@ -228,11 +238,13 @@
 
       <!-- Activity Level -->
       <div class="space-y-2">
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+        <label for="calorie-activity" class="block text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
           <Activity class="w-4 h-4" />
           {t('activityLevel')}
         </label>
         <select
+          id="calorie-activity"
+          name="activityLevel"
           value={activityLevel}
           onchange={(e) => activityLevel = e.target.value as ActivityLevel}
           class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"

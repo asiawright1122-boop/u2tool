@@ -93,10 +93,12 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="bmi-weight" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('weight')} ({unit === 'metric' ? 'kg' : 'lbs'})
           </label>
           <input
+            id="bmi-weight"
+            name="weightValue"
             type="number"
             bind:value={weight}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -105,10 +107,12 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="bmi-height" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('height')} ({unit === 'metric' ? 'cm' : 'inches'})
           </label>
           <input
+            id="bmi-height"
+            name="heightValue"
             type="number"
             bind:value={height}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"

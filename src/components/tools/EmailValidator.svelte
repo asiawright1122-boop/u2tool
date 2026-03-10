@@ -74,10 +74,12 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label for="email-validator-input" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           {t('inputLabel')}
         </label>
         <textarea
+          id="email-validator-input"
+          name="emailInput"
           bind:value={email}
           placeholder={t('inputPlaceholder')}
           class="w-full h-40 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm"></textarea>

@@ -69,8 +69,10 @@
 
     <div class="space-y-6">
       <div class="flex items-center gap-4">
-        <input type="color" bind:value={baseColor} class="w-16 h-16 rounded cursor-pointer" />
-        <input type="text" bind:value={baseColor} class="px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded font-mono text-gray-900 dark:text-white" />
+        <label for="color-picker" class="sr-only">{t('palette.baseColor')}</label>
+        <input type="color" id="color-picker" name="baseColor" bind:value={baseColor} class="w-16 h-16 rounded cursor-pointer" />
+        <label for="color-hex" class="sr-only">{t('palette.hexCode')}</label>
+        <input type="text" id="color-hex" name="hexColor" bind:value={baseColor} class="px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded font-mono text-gray-900 dark:text-white" />
       </div>
       <div>
         <h3 class="font-medium text-gray-900 dark:text-white mb-2">{t('palette.shades')}</h3>

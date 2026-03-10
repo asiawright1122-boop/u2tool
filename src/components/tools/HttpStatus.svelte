@@ -33,7 +33,7 @@
 
 
     <div class="space-y-4">
-      <input type="text" bind:value={search} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" placeholder={t('httpStatus.search')} />
+      <input type="text" id="http-status-search" name="search" bind:value={search} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" placeholder={t('httpStatus.search')} />
       <div class="grid md:grid-cols-2 gap-3 max-h-[500px] overflow-auto">
         {#each filtered as [code, info] (code)}
 <div  class={`p-4 rounded-lg border ${getColor(code)}`}>

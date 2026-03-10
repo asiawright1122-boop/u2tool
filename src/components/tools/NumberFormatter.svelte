@@ -57,12 +57,12 @@
     <div class="space-y-4">
       <div class="grid md:grid-cols-4 gap-4">
         <div>
-          <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-200">{t('numberFormat.number')}</label>
-          <input type="text" bind:value={number} class="w-full p-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg font-mono text-gray-900 dark:text-gray-100" />
+          <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-200" for="number-input">{t('numberFormat.number')}</label>
+          <input type="text" id="number-input" name="number" bind:value={number} class="w-full p-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg font-mono text-gray-900 dark:text-gray-100" />
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-200">{t('numberFormat.style')}</label>
-          <select value={style} onchange={(e) => style = e.target.value as typeof style} class="w-full p-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100">
+          <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-200" for="number-style">{t('numberFormat.style')}</label>
+          <select id="number-style" name="style" value={style} onchange={(e) => style = e.target.value as typeof style} class="w-full p-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100">
             <option value="decimal">{t('numberFormat.decimal')}</option>
             <option value="currency">{t('numberFormat.currency')}</option>
             <option value="percent">{t('numberFormat.percent')}</option>
@@ -70,8 +70,8 @@
         </div>
         {#if style === 'currency'}
 <div>
-            <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-200">{t('numberFormat.currencyCode')}</label>
-            <select bind:value={currency} class="w-full p-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100">
+            <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-200" for="currency-code">{t('numberFormat.currencyCode')}</label>
+            <select id="currency-code" name="currency" bind:value={currency} class="w-full p-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100">
               <option value="USD">USD ($)</option>
               <option value="EUR">EUR (€)</option>
               <option value="GBP">GBP (£)</option>

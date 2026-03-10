@@ -53,8 +53,10 @@
 
     <div class="space-y-4">
       <div class="flex items-center gap-4">
-        <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('count')}:</label>
+        <label for="uuid-count" class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('count')}:</label>
         <input
+          id="uuid-count"
+          name="uuidCount"
           type="number"
           min="1"
           max="100"

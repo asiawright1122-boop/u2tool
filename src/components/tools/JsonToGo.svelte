@@ -81,8 +81,8 @@
 
     <div class="space-y-4">
       <div class="flex gap-4 items-center">
-        <label class="text-sm text-gray-600 dark:text-white">{t('structName')}:</label>
-        <input type="text" bind:value={structName} class="px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded text-gray-900 dark:text-white" />
+        <label class="text-sm text-gray-600 dark:text-white" for="struct-name">{t('structName')}:</label>
+        <input type="text" id="struct-name" name="structName" bind:value={structName} class="px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded text-gray-900 dark:text-white" />
       </div>
       <div class="grid md:grid-cols-2 gap-4">
         <div>

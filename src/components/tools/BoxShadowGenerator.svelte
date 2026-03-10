@@ -148,13 +148,13 @@
           
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('boxColor')}</label>
-              <input type="color" bind:value={boxColor}
+              <label for="box-color" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('boxColor')}</label>
+              <input type="color" id="box-color" name="boxColor" bind:value={boxColor}
                 class="w-full h-10 rounded cursor-pointer" />
             </div>
             <div>
-              <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('borderRadius')}: {boxRadius}px</label>
-              <input type="range" min="0" max="50" value={boxRadius}
+              <label for="box-radius" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('borderRadius')}: {boxRadius}px</label>
+              <input type="range" id="box-radius" name="boxRadius" min="0" max="50" value={boxRadius}
                 onchange={(e) => boxRadius = parseInt(e.target.value)}
                 class="w-full mt-2" />
             </div>

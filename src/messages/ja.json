@@ -9651,6 +9651,11 @@
         "item2": "カテゴリB",
         "item3": "カテゴリC",
         "item4": "カテゴリD",
+        "categoryA": "カテゴリA",
+        "categoryB": "カテゴリB",
+        "categoryC": "カテゴリC",
+        "categoryD": "カテゴリD",
+        "categoryE": "カテゴリE",
         "excellent": "優秀",
         "good": "良く",
         "average": "平均",
@@ -15241,7 +15246,7 @@
       "headerNamePlaceholder": "ヘッダー名",
       "headerValuePlaceholder": "値"
     },
-    "jwt-debugger": {
+    "jwt-decoder": {
       "name": "JWTデバッガー",
       "description": "署名検証付きでJWTトークンをデバッグ・検証",
       "seo_title": "JWT Debugger：無料オンラインツール",

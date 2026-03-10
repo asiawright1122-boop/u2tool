@@ -248,6 +248,8 @@ function validateInput(value: string): boolean {
                   {regime?.currencySymbol}
                 </span>
                 <input
+                  id="tax-gross-income"
+                  name="grossIncome"
                   type="number"
                   value={grossIncome}
                   onchange={(e) => handleIncomeChange(e.target.value)}
@@ -272,10 +274,12 @@ function validateInput(value: string): boolean {
 
             <!-- Filing Status -->
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label for="tax-filing-status" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 {t('filingStatus')}
               </label>
               <select
+                id="tax-filing-status"
+                name="filingStatus"
                 bind:value={filingStatus}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
               >
@@ -293,6 +297,8 @@ function validateInput(value: string): boolean {
             <div class="flex items-center gap-4 mb-2">
               <label class="flex items-center gap-2 cursor-pointer">
                 <input
+                  id="tax-standard-deduction"
+                  name="deductionType"
                   type="radio"
                   checked={useStandardDeduction}
                   onchange={() => useStandardDeduction = true}
@@ -304,6 +310,8 @@ function validateInput(value: string): boolean {
               </label>
               <label class="flex items-center gap-2 cursor-pointer">
                 <input
+                  id="tax-itemized-deduction"
+                  name="deductionType"
                   type="radio"
                   checked={!useStandardDeduction}
                   onchange={() => useStandardDeduction = false}
@@ -321,6 +329,8 @@ function validateInput(value: string): boolean {
                   {regime?.currencySymbol}
                 </span>
                 <input
+                  id="tax-custom-deduction"
+                  name="customDeduction"
                   type="number"
                   bind:value={customDeduction}
                   class="w-full pl-8 pr-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"

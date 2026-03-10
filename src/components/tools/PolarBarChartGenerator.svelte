@@ -253,9 +253,11 @@
             <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="chartTitle" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
+                  id="chartTitle"
                   type="text"
+                  name="chartTitle"
                   bind:value={chartTitle}
                   class="tool-input"
                   placeholder={t('chartTitlePlaceholder')}
@@ -263,8 +265,10 @@
               </div>
 
               <div>
-                <label for="{t('colorTheme')}" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                <label for="colorTheme" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
                 <select
+                  id="colorTheme"
+                  name="colorTheme"
                   value={colorTheme}
                   onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes}
                   class="tool-input"
@@ -277,8 +281,10 @@
               </div>
 
               <div>
-                <label for="{t('innerRadius')}: {innerRadius}%" class="block text-sm font-medium mb-1">{t('innerRadius')}: {innerRadius}%</label>
+                <label for="innerRadius" class="block text-sm font-medium mb-1">{t('innerRadius')}: {innerRadius}%</label>
                 <input
+                  id="innerRadius"
+                  name="innerRadius"
                   type="range"
                   min={0}
                   max={50}
@@ -291,6 +297,8 @@
               <div class="flex flex-wrap gap-6 text-sm">
                 <label class="flex items-center gap-2 cursor-pointer whitespace-nowrap">
                   <input
+                    id="showLegend"
+                    name="showLegend"
                     type="checkbox"
                     bind:checked={showLegend}
                     class="w-4 h-4 accent-blue-500"
@@ -299,6 +307,8 @@
                 </label>
                 <label class="flex items-center gap-2 cursor-pointer whitespace-nowrap">
                   <input
+                    id="roundCap"
+                    name="roundCap"
                     type="checkbox"
                     bind:checked={roundCap}
                     class="w-4 h-4 accent-blue-500"
@@ -307,6 +317,8 @@
                 </label>
                 <label class="flex items-center gap-2 cursor-pointer whitespace-nowrap">
                   <input
+                    id="stackMode"
+                    name="stackMode"
                     type="checkbox"
                     bind:checked={stackMode}
                     class="w-4 h-4 accent-blue-500"
@@ -330,6 +342,8 @@
 <div  class="flex gap-2 items-center">
                   <input
                     type="text"
+                    name="dataName-{index}"
+                    id="dataName-{index}"
                     value={item.name}
                     onchange={(e) => updateDataItem(index, 'name', (e.target as HTMLInputElement).value)}
                     class="tool-input flex-[2] min-w-[100px]"
@@ -337,6 +351,8 @@
                   />
                   <input
                     type="number"
+                    name="dataValue-{index}"
+                    id="dataValue-{index}"
                     value={item.value}
                     onchange={(e) => updateDataItem(index, 'value', (e.target as HTMLInputElement).value)}
                     class="tool-input w-20 shrink-0"

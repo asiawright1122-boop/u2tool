@@ -14366,6 +14366,11 @@
         "item2": "类别B",
         "item3": "类别C",
         "item4": "类别D",
+        "categoryA": "类别A",
+        "categoryB": "类别B",
+        "categoryC": "类别C",
+        "categoryD": "类别D",
+        "categoryE": "类别E",
         "excellent": "优秀",
         "good": "良好",
         "average": "一般",
@@ -20922,7 +20927,7 @@
       "headerNamePlaceholder": "请求头名称",
       "headerValuePlaceholder": "值"
     },
-    "jwt-debugger": {
+    "jwt-decoder": {
       "name": "JWT调试器",
       "description": "调试和验证JWT令牌，支持签名验证",
       "seo_title": "免费在线JWT调试器 - 快速验证签名",

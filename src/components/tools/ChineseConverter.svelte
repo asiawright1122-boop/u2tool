@@ -48,8 +48,8 @@
 
     <div class="space-y-4">
       <div>
-        <label class="block text-sm font-medium mb-2">{t('input')}</label>
-        <textarea class="tool-textarea" bind:value={input} placeholder={t('chinese.placeholder')} rows={6}></textarea>
+        <label for="chinese-input" class="block text-sm font-medium mb-2">{t('input')}</label>
+        <textarea id="chinese-input" name="inputValue" class="tool-textarea" bind:value={input} placeholder={t('chinese.placeholder')} rows={6}></textarea>
       </div>
       <div class="flex flex-wrap gap-2">
         <button onclick={convertToTraditional} class="btn-primary">{t('chinese.toTraditional')}</button>
@@ -59,12 +59,12 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium">{t('output')}</label>
+            <label for="chinese-output" class="text-sm font-medium">{t('output')}</label>
             <button onclick={copyOutput} class={`text-sm px-3 py-1 rounded text-white ${copied ? 'bg-green-600' : 'bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600'}`}>
               {copied ? t('copied') : t('copy')}
             </button>
           </div>
-          <textarea class="tool-textarea" value={output} readOnly rows={6}></textarea>
+          <textarea id="chinese-output" name="outputValue" class="tool-textarea" value={output} readOnly rows={6}></textarea>
         </div>
 {/if}
     </div>

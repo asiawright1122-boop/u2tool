@@ -122,12 +122,14 @@
       <!-- Input Form -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="breakeven-fixed-costs" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {t('fixedCosts')}
           </label>
           <div class="relative">
             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">$</span>
             <input
+              id="breakeven-fixed-costs"
+              name="fixedCosts"
               type="number"
               bind:value={fixedCosts}
               placeholder="10000"
@@ -138,12 +140,14 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="breakeven-variable-cost" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {t('variableCostPerUnit')}
           </label>
           <div class="relative">
             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">$</span>
             <input
+              id="breakeven-variable-cost"
+              name="variableCostPerUnit"
               type="number"
               bind:value={variableCostPerUnit}
               placeholder="25"
@@ -154,12 +158,14 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="breakeven-selling-price" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {t('sellingPricePerUnit')}
           </label>
           <div class="relative">
             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">$</span>
             <input
+              id="breakeven-selling-price"
+              name="sellingPricePerUnit"
               type="number"
               bind:value={sellingPricePerUnit}
               placeholder="50"

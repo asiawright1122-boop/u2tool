@@ -210,28 +210,28 @@
           <h3 class="font-medium text-gray-900 dark:text-gray-100 mb-4">{t('pomodoro.settings')}</h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">{t('pomodoro.workDuration')} ({t('pomodoro.minutes')})</label>
-              <input type="number" min="1" max="60" value={workDuration} onchange={(e) => { workDuration = parseInt(e.target.value) || 25; if (currentPhase === 'work' && !isRunning) timeRemaining = (parseInt(e.target.value) || 25) * 60; }}
+              <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1" for="pomodoro-work-duration">{t('pomodoro.workDuration')} ({t('pomodoro.minutes')})</label>
+              <input type="number" id="pomodoro-work-duration" name="workDuration" min="1" max="60" value={workDuration} onchange={(e) => { workDuration = parseInt(e.target.value) || 25; if (currentPhase === 'work' && !isRunning) timeRemaining = (parseInt(e.target.value) || 25) * 60; }}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700" />
             </div>
             <div>
-              <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">{t('pomodoro.shortBreakDuration')} ({t('pomodoro.minutes')})</label>
-              <input type="number" min="1" max="30" value={shortBreakDuration} onchange={(e) => { shortBreakDuration = parseInt(e.target.value) || 5; if (currentPhase === 'shortBreak' && !isRunning) timeRemaining = (parseInt(e.target.value) || 5) * 60; }}
+              <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1" for="pomodoro-short-break">{t('pomodoro.shortBreakDuration')} ({t('pomodoro.minutes')})</label>
+              <input type="number" id="pomodoro-short-break" name="shortBreakDuration" min="1" max="30" value={shortBreakDuration} onchange={(e) => { shortBreakDuration = parseInt(e.target.value) || 5; if (currentPhase === 'shortBreak' && !isRunning) timeRemaining = (parseInt(e.target.value) || 5) * 60; }}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700" />
             </div>
             <div>
-              <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">{t('pomodoro.longBreakDuration')} ({t('pomodoro.minutes')})</label>
-              <input type="number" min="1" max="60" value={longBreakDuration} onchange={(e) => { longBreakDuration = parseInt(e.target.value) || 15; if (currentPhase === 'longBreak' && !isRunning) timeRemaining = (parseInt(e.target.value) || 15) * 60; }}
+              <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1" for="pomodoro-long-break">{t('pomodoro.longBreakDuration')} ({t('pomodoro.minutes')})</label>
+              <input type="number" id="pomodoro-long-break" name="longBreakDuration" min="1" max="60" value={longBreakDuration} onchange={(e) => { longBreakDuration = parseInt(e.target.value) || 15; if (currentPhase === 'longBreak' && !isRunning) timeRemaining = (parseInt(e.target.value) || 15) * 60; }}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700" />
             </div>
             <div>
-              <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">{t('pomodoro.sessionsBeforeLongBreak')}</label>
-              <input type="number" min="1" max="10" value={sessionsBeforeLongBreak} onchange={(e) => sessionsBeforeLongBreak = parseInt(e.target.value) || 4}
+              <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1" for="pomodoro-sessions">{t('pomodoro.sessionsBeforeLongBreak')}</label>
+              <input type="number" id="pomodoro-sessions" name="sessionsBeforeLongBreak" min="1" max="10" value={sessionsBeforeLongBreak} onchange={(e) => sessionsBeforeLongBreak = parseInt(e.target.value) || 4}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700" />
             </div>
           </div>
           <div class="flex items-center gap-2">
-            <input type="checkbox" id="soundEnabled" bind:checked={soundEnabled} class="w-4 h-4" />
+            <input type="checkbox" id="soundEnabled" name="soundEnabled" bind:checked={soundEnabled} class="w-4 h-4" />
             <label for="soundEnabled" class="text-sm text-gray-600 dark:text-gray-400">{t('pomodoro.soundNotification')}</label>
           </div>
         </div>

@@ -95,8 +95,10 @@
 
     <div class="space-y-4">
       <div class="flex gap-4 items-center">
-        <label class="text-sm text-gray-600 dark:text-gray-300">{t('jsonTs.interfaceName')}:</label>
+        <label for="json-ts-interface-name" class="text-sm text-gray-600 dark:text-gray-300">{t('jsonTs.interfaceName')}:</label>
         <input
+          id="json-ts-interface-name"
+          name="interfaceName"
           type="text"
           value={interfaceName}
           onchange={(e) => interfaceName = e.target.value || 'Root'}
@@ -106,15 +108,17 @@
 
       <div class="grid md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">JSON</label>
+          <label for="json-ts-input" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">JSON</label>
           <textarea
+            id="json-ts-input"
+            name="jsonInput"
             bind:value={jsonInput}
             class="w-full h-64 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded p-3 font-mono text-sm text-gray-900 dark:text-white"
             placeholder={t('jsonTs.jsonPlaceholder')}></textarea>
         </div>
         <div>
           <div class="flex justify-between items-center mb-1">
-            <label class="text-sm text-gray-600 dark:text-gray-300">TypeScript</label>
+            <label for="json-ts-output" class="text-sm text-gray-600 dark:text-gray-300">TypeScript</label>
             <button onclick={copyOutput} class="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
               {copied ? t('copied') : t('copy')}
             </button>

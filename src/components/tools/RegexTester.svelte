@@ -82,10 +82,12 @@
     <div class="space-y-4">
       <!-- Pattern Input -->
       <div>
-        <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('regex.pattern')}</label>
+        <label for="regex-pattern" class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('regex.pattern')}</label>
         <div class="flex items-center gap-2">
           <span class="text-gray-500 dark:text-gray-300">/</span>
           <input
+            id="regex-pattern"
+            name="patternValue"
             type="text"
             bind:value={pattern}
             class="flex-1 px-3 py-2 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded font-mono text-gray-900 dark:text-white"
@@ -93,6 +95,8 @@
           />
           <span class="text-gray-500 dark:text-gray-300">/</span>
           <input
+            id="regex-flags"
+            name="flagsValue"
             type="text"
             bind:value={flags}
             class="w-16 px-3 py-2 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded font-mono text-gray-900 dark:text-white"
@@ -129,9 +133,10 @@
 
       <!-- Test String -->
       <div>
-        <label class="block text-sm font-medium mb-2">{t('regex.testString')}</label>
+        <label for="regex-test-string" class="block text-sm font-medium mb-2">{t('regex.testString')}</label>
         <textarea
-          class="tool-textarea"
+          id="regex-test-string"
+          name="testStringValue"
           bind:value={testString}
           placeholder={t('regex.testString')}></textarea>
       </div>

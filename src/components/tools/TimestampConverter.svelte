@@ -73,9 +73,11 @@
 
       <!-- Unix Timestamp Input -->
       <div class="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
-        <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('timestamp.unixTimestamp')}</label>
+        <label for="timestamp-unix" class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('timestamp.unixTimestamp')}</label>
         <div class="flex gap-2">
           <input
+            id="timestamp-unix"
+            name="unixTimestamp"
             type="number"
             value={timestamp}
             onchange={(e) => timestamp = parseInt(e.target.value) || 0}
@@ -89,8 +91,10 @@
 
       <!-- Date Input -->
       <div class="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
-        <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('timestamp.dateTime')}</label>
+        <label for="timestamp-date" class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('timestamp.dateTime')}</label>
         <input
+          id="timestamp-date"
+          name="dateTimeValue"
           type="datetime-local"
           value={dateString}
           onchange={(e) => updateFromDate(e.target.value)}

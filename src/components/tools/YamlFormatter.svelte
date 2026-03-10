@@ -79,8 +79,10 @@ hobbies:
     <div class="space-y-4">
       <div class="flex flex-wrap gap-4 items-center">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('indentSize')}</label>
+          <label for="yaml-indent" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('indentSize')}</label>
           <select
+            id="yaml-indent"
+            name="indentSize"
             value={indentSize}
             onchange={(e) => indentSize = Number(e.target.value)}
             class="px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white"
@@ -111,15 +113,19 @@ hobbies:
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('input')}</label>
+          <label for="yaml-input" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('input')}</label>
           <textarea
+            id="yaml-input"
+            name="yamlInput"
             bind:value={input}
             class="w-full h-80 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
             placeholder={t('inputPlaceholder')}></textarea>
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('output')}</label>
+          <label for="yaml-output" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('output')}</label>
           <textarea
+            id="yaml-output"
+            name="yamlOutput"
             value={output}
             readOnly
             class="w-full h-80 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"></textarea>

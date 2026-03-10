@@ -178,8 +178,10 @@
     <div class="space-y-4">
       <div class="flex flex-wrap gap-2 items-center">
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-700 dark:text-gray-300">{t('indent')}:</label>
+          <label for="js-beautifier-indent" class="text-sm text-gray-700 dark:text-gray-300">{t('indent')}:</label>
           <select
+            id="js-beautifier-indent"
+            name="indentSize"
             value={indentSize}
             onchange={(e) => indentSize = Number(e.target.value)}
             class="bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded px-2 py-1 text-sm text-gray-900 dark:text-gray-100"
@@ -211,8 +213,10 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('input')}</label>
+          <label for="js-beautifier-input" class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('input')}</label>
           <textarea
+            id="js-beautifier-input"
+            name="jsInput"
             bind:value={input}
             class="w-full h-80 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
             placeholder={t('placeholder')}
@@ -220,8 +224,10 @@
         </div>
 
         <div>
-          <label class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('output')}</label>
+          <label for="js-beautifier-output" class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('output')}</label>
           <textarea
+            id="js-beautifier-output"
+            name="jsOutput"
             value={output}
             readOnly
             class="w-full h-80 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"

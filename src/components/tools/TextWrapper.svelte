@@ -58,8 +58,8 @@
 
     <div class="space-y-4">
       <div class="flex items-center gap-4">
-        <label class="text-sm text-gray-700 dark:text-white">{t('textWrapper.width')}:</label>
-        <input type="number" value={width} onchange={(e) => width = Number(e.target.value)} min={20} max={200} class="w-24 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded text-gray-900 dark:text-white" />
+        <label class="text-sm text-gray-700 dark:text-white" for="text-width">{t('textWrapper.width')}:</label>
+        <input type="number" id="text-width" name="width" value={width} onchange={(e) => width = Number(e.target.value)} min={20} max={200} class="w-24 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded text-gray-900 dark:text-white" />
         <span class="text-gray-600 dark:text-gray-300">{t('textWrapper.chars')}</span>
       </div>
       <div class="grid md:grid-cols-2 gap-4">

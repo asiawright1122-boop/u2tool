@@ -89,8 +89,9 @@
 
       <!-- Color Picker -->
       <div>
-        <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('color.preview')}</label>
+        <label for="color-picker" class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('color.preview')}</label>
         <input
+          id="color-picker"
           type="color"
           value={hex}
           onchange={(e) => updateFromHex(e.target.value)}
@@ -101,7 +102,7 @@
       <!-- HEX -->
       <div class="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium text-gray-700 dark:text-gray-300">HEX</label>
+          <label for="color-hex" class="text-sm font-medium text-gray-700 dark:text-gray-300">HEX</label>
           <button
             onclick={() => copyValue('hex', hex)}
             class={`text-xs px-2 py-1 rounded ${copied === 'hex' ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
@@ -110,6 +111,8 @@
           </button>
         </div>
         <input
+          id="color-hex"
+          name="hexColor"
           type="text"
           value={hex}
           onchange={(e) => updateFromHex(e.target.value)}
@@ -120,7 +123,7 @@
       <!-- RGB -->
       <div class="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium text-gray-700 dark:text-gray-300">RGB</label>
+          <label for="color-rgb" class="text-sm font-medium text-gray-700 dark:text-gray-300">RGB</label>
           <button
             onclick={() => copyValue('rgb', `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`)}
             class={`text-xs px-2 py-1 rounded ${copied === 'rgb' ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
@@ -131,8 +134,10 @@
         <div class="grid grid-cols-3 gap-2">
           {#each (['r', 'g', 'b'] as const) as c (c)}
 <div >
-              <label class="text-xs text-gray-500 dark:text-gray-300 uppercase">{c}</label>
+              <label for={`color-rgb-${c}`} class="text-xs text-gray-500 dark:text-gray-300 uppercase">{c}</label>
               <input
+                id={`color-rgb-${c}`}
+                name={`rgb${c.toUpperCase()}`}
                 type="number"
                 min="0"
                 max="255"

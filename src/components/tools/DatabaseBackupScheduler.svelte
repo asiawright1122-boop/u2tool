@@ -76,44 +76,34 @@
           </select>
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('host')}</label>
-          <input type="text" value={config.host} onchange={(e) => updateConfig('host', e.target.value)}
+          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1" for="db-host">{t('host')}</label>
+          <input type="text" id="db-host" name="host" value={config.host} onchange={(e) => updateConfig('host', e.target.value)}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('databaseName')}</label>
-          <input type="text" value={config.dbName} onchange={(e) => updateConfig('dbName', e.target.value)}
+          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1" for="db-name">{t('databaseName')}</label>
+          <input type="text" id="db-name" name="dbName" value={config.dbName} onchange={(e) => updateConfig('dbName', e.target.value)}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('username')}</label>
-          <input type="text" value={config.username} onchange={(e) => updateConfig('username', e.target.value)}
+          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1" for="db-username">{t('username')}</label>
+          <input type="text" id="db-username" name="username" value={config.username} onchange={(e) => updateConfig('username', e.target.value)}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('schedule')}</label>
-          <select value={config.schedule} onchange={(e) => updateConfig('schedule', e.target.value)}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm">
-            <option value="hourly">{t('hourly')}</option>
-            <option value="daily">{t('daily')}</option>
-            <option value="weekly">{t('weekly')}</option>
-            <option value="monthly">{t('monthly')}</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('retention')}</label>
-          <input type="number" value={config.retention} onchange={(e) => updateConfig('retention', parseInt(e.target.value) || 7)} min={1}
+          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1" for="db-retention">{t('retention')}</label>
+          <input type="number" id="db-retention" name="retention" value={config.retention} onchange={(e) => updateConfig('retention', parseInt(e.target.value) || 7)} min={1}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
         </div>
         <div class="col-span-2">
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('outputPath')}</label>
-          <input type="text" value={config.outputPath} onchange={(e) => updateConfig('outputPath', e.target.value)}
+          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1" for="db-output-path">{t('outputPath')}</label>
+          <input type="text" id="db-output-path" name="outputPath" value={config.outputPath} onchange={(e) => updateConfig('outputPath', e.target.value)}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
         </div>
       </div>
 
       <label class="flex items-center gap-2">
-        <input type="checkbox" checked={config.compression} onchange={(e) => updateConfig('compression', e.target.checked)} class="rounded" />
+        <input type="checkbox" id="db-compression" name="compression" checked={config.compression} onchange={(e) => updateConfig('compression', e.target.checked)} class="rounded" />
         <span class="text-sm text-gray-700 dark:text-gray-300">{t('enableCompression')}</span>
       </label>
 

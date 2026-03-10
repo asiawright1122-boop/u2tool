@@ -68,44 +68,44 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('text')}</label>
-            <input type="text" bind:value={text}
+            <label for="gradient-text" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('text')}</label>
+            <input type="text" id="gradient-text" name="gradientText" bind:value={text}
               class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white" />
           </div>
           
           <div class="grid grid-cols-3 gap-4">
             <div>
-              <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('color1')}</label>
-              <input type="color" bind:value={color1}
+              <label for="gradient-color-1" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('color1')}</label>
+              <input type="color" id="gradient-color-1" name="gradientColor1" bind:value={color1}
                 class="w-full h-10 rounded cursor-pointer" />
             </div>
             <div>
-              <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('color2')}</label>
-              <input type="color" bind:value={color2}
+              <label for="gradient-color-2" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('color2')}</label>
+              <input type="color" id="gradient-color-2" name="gradientColor2" bind:value={color2}
                 class="w-full h-10 rounded cursor-pointer" />
             </div>
             <div>
-              <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('color3')}</label>
-              <input type="color" value={color3 || '#ffffff'} onchange={(e) => color3 = e.target.value}
+              <label for="gradient-color-3" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('color3')}</label>
+              <input type="color" id="gradient-color-3" name="gradientColor3" value={color3 || '#ffffff'} onchange={(e) => color3 = e.target.value}
                 class="w-full h-10 rounded cursor-pointer" />
             </div>
           </div>
 
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('angle')}: {angle}°</label>
-            <input type="range" min="0" max="360" value={angle}
+            <label for="gradient-angle" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('angle')}: {angle}°</label>
+            <input type="range" id="gradient-angle" name="gradientAngle" min="0" max="360" value={angle}
               onchange={(e) => angle = parseInt(e.target.value)} class="w-full" />
           </div>
 
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('fontSize')}: {fontSize}px</label>
-              <input type="range" min="16" max="120" value={fontSize}
+              <label for="gradient-font-size" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('fontSize')}: {fontSize}px</label>
+              <input type="range" id="gradient-font-size" name="gradientFontSize" min="16" max="120" value={fontSize}
                 onchange={(e) => fontSize = parseInt(e.target.value)} class="w-full" />
             </div>
             <div>
-              <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('fontWeight')}: {fontWeight}</label>
-              <input type="range" min="100" max="900" step="100" value={fontWeight}
+              <label for="gradient-font-weight" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('fontWeight')}: {fontWeight}</label>
+              <input type="range" id="gradient-font-weight" name="gradientFontWeight" min="100" max="900" step="100" value={fontWeight}
                 onchange={(e) => fontWeight = parseInt(e.target.value)} class="w-full" />
             </div>
           </div>

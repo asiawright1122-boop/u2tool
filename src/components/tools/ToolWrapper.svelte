@@ -16,14 +16,17 @@
   let loading = $state(true);
   let error = $state<string | null>(null);
 
+  // Only depend on slug: when slug changes, load the tool. Avoid reading loading/loadedComponent
+  // here so that updating them in the importer callback does not re-trigger this effect.
   $effect(() => {
+    const currentSlug = slug;
     loadedComponent = null;
     loading = true;
     error = null;
 
-    const importer = TOOL_IMPORT_MAP[slug];
+    const importer = TOOL_IMPORT_MAP[currentSlug];
     if (!importer) {
-      error = `Tool not found: ${slug}`;
+      error = `Tool not found: ${currentSlug}`;
       loading = false;
       return;
     }
@@ -34,8 +37,8 @@
         loading = false;
       })
       .catch((err) => {
-        console.error(`Failed to load tool ${slug}:`, err);
-        error = `Failed to load tool: ${slug}`;
+        console.error(`[ToolWrapper] Failed to load tool ${currentSlug}:`, err);
+        error = `Failed to load tool: ${currentSlug}`;
         loading = false;
       });
   });

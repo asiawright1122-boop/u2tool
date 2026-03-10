@@ -73,8 +73,8 @@
 
     <div class="space-y-4">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('urlLabel')}</label>
-        <input type="text" bind:value={url} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" />
+        <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2" for="url-input">{t('urlLabel')}</label>
+        <input type="text" id="url-input" name="url" bind:value={url} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" />
       </div>
       {#if parsed}
 <div class="space-y-2">

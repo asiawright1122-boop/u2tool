@@ -8325,6 +8325,11 @@
         "item2": "카테고리 B",
         "item3": "카테고리 C",
         "item4": "카테고리 D",
+        "categoryA": "카테고리 A",
+        "categoryB": "카테고리 B",
+        "categoryC": "카테고리 C",
+        "categoryD": "카테고리 D",
+        "categoryE": "카테고리 E",
         "excellent": "출 sắc",
         "good": "좋음",
         "average": "평균",
@@ -11810,7 +11815,7 @@
       "headerNamePlaceholder": "헤더 이름",
       "headerValuePlaceholder": "값"
     },
-    "jwt-debugger": {
+    "jwt-decoder": {
       "name": "JWT 디버거",
       "description": "서명 검증으로 JWT 토큰 디버그 및 확인",
       "seo_title": "무료 JWT Debugger 온라인 도구: JSON Web Token 검증 및 디버그",
@@ -12330,6 +12335,7 @@
       "arrowParens": "화살표 함수 괄호",
       "endOfLine": "줄 끝",
       "proseWrap": "산문 줄바꿈",
+      "htmlWhitespaceSensitivity": "HTML 공백 민감도",
       "useTabs": "탭 사용",
       "semi": "세미콜론",
       "singleQuote": "작은따옴표",

@@ -61,8 +61,10 @@
 
     <div class="space-y-4">
       <div class="flex gap-4 items-center">
-        <label class="text-sm text-gray-600 dark:text-gray-300">{t('base')}:</label>
+        <label for="base-calc-base" class="text-sm text-gray-600 dark:text-gray-300">{t('base')}:</label>
         <select
+          id="base-calc-base"
+          name="numberBase"
           value={base}
           onchange={(e) => base = Number(e.target.value)}
           class="bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-1 text-gray-900 dark:text-white"
@@ -76,10 +78,12 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
         <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+          <label for="base-calc-num1" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('number1')}
           </label>
           <input
+            id="base-calc-num1"
+            name="number1Value"
             type="text"
             bind:value={num1}
             class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono focus:outline-none focus:border-blue-500"
@@ -87,10 +91,12 @@
         </div>
         
         <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+          <label for="base-calc-operation" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('operation')}
           </label>
           <select
+            id="base-calc-operation"
+            name="operationType"
             value={operation}
             onchange={(e) => operation = e.target.value as Operation}
             class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white"
@@ -106,10 +112,12 @@
         </div>
         
         <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+          <label for="base-calc-num2" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('number2')}
           </label>
           <input
+            id="base-calc-num2"
+            name="number2Value"
             type="text"
             bind:value={num2}
             class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono focus:outline-none focus:border-blue-500"

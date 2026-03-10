@@ -127,8 +127,10 @@ timeLeft === 0 && !isFinished && (
           </div>
           <div class="flex justify-center gap-4">
             <div class="text-center">
-              <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">{t('countdownTimer.hours')}</label>
+              <label for="countdown-hours" class="block text-sm text-gray-600 dark:text-gray-400 mb-1">{t('countdownTimer.hours')}</label>
               <input
+                id="countdown-hours"
+                name="countdownHours"
                 type="number"
                 min="0"
                 max="23"
@@ -139,8 +141,10 @@ timeLeft === 0 && !isFinished && (
             </div>
             <span class="text-4xl font-bold self-end pb-2">:</span>
             <div class="text-center">
-              <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">{t('countdownTimer.minutes')}</label>
+              <label for="countdown-minutes" class="block text-sm text-gray-600 dark:text-gray-400 mb-1">{t('countdownTimer.minutes')}</label>
               <input
+                id="countdown-minutes"
+                name="countdownMinutes"
                 type="number"
                 min="0"
                 max="59"
@@ -151,8 +155,10 @@ timeLeft === 0 && !isFinished && (
             </div>
             <span class="text-4xl font-bold self-end pb-2">:</span>
             <div class="text-center">
-              <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">{t('countdownTimer.seconds')}</label>
+              <label for="countdown-seconds" class="block text-sm text-gray-600 dark:text-gray-400 mb-1">{t('countdownTimer.seconds')}</label>
               <input
+                id="countdown-seconds"
+                name="countdownSeconds"
                 type="number"
                 min="0"
                 max="59"

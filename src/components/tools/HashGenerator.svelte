@@ -60,9 +60,10 @@
 
     <div class="space-y-4">
       <div>
-        <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('input')}</label>
+        <label for="hash-input" class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('input')}</label>
         <textarea
-          class="tool-textarea"
+          id="hash-input"
+          name="inputValue"
           bind:value={input}
           placeholder={t('inputPlaceholder')}></textarea>
       </div>

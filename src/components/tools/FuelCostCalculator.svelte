@@ -110,11 +110,13 @@ const currencySymbol = CURRENCY_SYMBOLS[locale] || '$';
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Distance -->
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+          <label for="fuel-distance" class="block text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
             <Car class="w-4 h-4" />
             {t('distance')} ({unit === 'metric' ? 'km' : 'miles'})
           </label>
           <input
+            id="fuel-distance"
+            name="distanceValue"
             type="number"
             bind:value={distance}
             min="0"
@@ -125,11 +127,13 @@ const currencySymbol = CURRENCY_SYMBOLS[locale] || '$';
 
         <!-- Fuel Efficiency -->
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+          <label for="fuel-efficiency" class="block text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
             <Fuel class="w-4 h-4" />
             {t('fuelEfficiency')} ({unit === 'metric' ? 'L/100km' : 'MPG'})
           </label>
           <input
+            id="fuel-efficiency"
+            name="fuelEfficiency"
             type="number"
             bind:value={fuelEfficiency}
             min="0"
@@ -140,11 +144,13 @@ const currencySymbol = CURRENCY_SYMBOLS[locale] || '$';
 
         <!-- Fuel Price -->
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+          <label for="fuel-price" class="block text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
             <DollarSign class="w-4 h-4" />
             {t('fuelPrice')} ({unit === 'metric' ? t('perLiter') : t('perGallon')})
           </label>
           <input
+            id="fuel-price"
+            name="fuelPrice"
             type="number"
             bind:value={fuelPrice}
             min="0"

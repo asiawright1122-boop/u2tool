@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onDestroy } from 'svelte';
+  import { onDestroy } from "svelte";
 
   interface Props {
     locale: string;
@@ -10,158 +10,299 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools'] as Record<string, unknown> || {};
-    const keys = key.split('.');
+    const scope =
+      (translations["tools"]["jwt-decoder"] as Record<string, unknown>) || {};
+    const keys = key.split(".");
     let value: unknown = scope;
-    for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
-    return typeof value === 'string' ? value : `MISSING: tools.${key}`;
-  }
-  function tj(key: string): string {
-    const scope = translations['tools']['jwt-decoder'] as Record<string, unknown> || {};
-    const keys = key.split('.');
-    let value: unknown = scope;
-    for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
-    return typeof value === 'string' ? value : `MISSING: tools.jwt-decoder.${key}`;
+    for (const k of keys) {
+      value = (value as Record<string, unknown>)?.[k];
+    }
+    return typeof value === "string"
+      ? value
+      : `MISSING: tools.jwt-decoder.${key}`;
   }
 
   // Types
-  interface JwtPayload {
-  header: Record<string, unknown>;
-  payload: Record<string, unknown>;
-  signature: string;
-}
+  interface JwtParts {
+    header: Record<string, unknown>;
+    payload: Record<string, unknown>;
+    signature: string;
+  }
 
-  let input = $state('');
+  let token = $state("");
 
   let decoded = $state(null);
 
-  let error = $state('');
+  let error = $state("");
 
-  let copied = $state('');
+  let secret = $state("");
 
-  let timerRef = $state(null);  onDestroy(() => {
+  let isValid = $state(null);
+
+  let copied = $state("");
+
+  let timerRef = $state(null);
+
+  $effect(() => {
+    decodeToken(token);
+  });
+  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
 
   // Functions
-  function decodeJwt() {
-    if (!input.trim()) {
-      error = tj('enterToken');
-      decoded = null;
+  function base64UrlDecode(str: string): string {
+    const base64 = str.replace(/-/g, "+").replace(/_/g, "/");
+    const padding = "=".repeat((4 - (base64.length % 4)) % 4);
+    return atob(base64 + padding);
+  }
+  function decodeToken(jwt: string) {
+    error = "";
+    decoded = null;
+    isValid = null;
+
+    if (!jwt.trim()) {
       return;
     }
-    try {
-      const parts = input.trim().split('.');
-      if (parts.length !== 3) {
-        throw new Error(tj('invalidFormat'));
-      }
 
-      const header = JSON.parse(atob(parts[0].replace(/-/g, '+').replace(/_/g, '/')));
-      const payload = JSON.parse(atob(parts[1].replace(/-/g, '+').replace(/_/g, '/')));
-      
-      decoded = { header, payload, signature: parts[2] };
-      error = '';
-    } catch (_e) {
-      error = tj('invalidToken');
-      decoded = null;
+    const parts = jwt.split(".");
+    if (parts.length !== 3) {
+      error = t("errors.invalidFormat");
+      return;
+    }
+
+    try {
+      const header = JSON.parse(base64UrlDecode(parts[0]));
+      const payload = JSON.parse(base64UrlDecode(parts[1]));
+      const signature = parts[2];
+
+      decoded = { header, payload, signature };
+    } catch {
+      error = t("errors.decodeFailed");
     }
   }
-  async function copySection(section: string, content: string) {
-    await navigator.clipboard.writeText(content);
-    copied = section;
-    setTimeout(() => copied = '', 2000);
+  function formatTimestamp(timestamp: number): string {
+    const date = new Date(timestamp * 1000);
+    return date.toLocaleString();
   }
-  function formatDate(timestamp: number) {
-    return new Date(timestamp * 1000).toLocaleString();
+  function isExpired(payload: Record<string, unknown>): boolean {
+    if (typeof payload.exp === "number") {
+      return Date.now() > payload.exp * 1000;
+    }
+    return false;
   }
-
+  function copyToClipboard(text: string, type: string) {
+    navigator.clipboard.writeText(text);
+    copied = type;
+    setTimeout(() => (copied = ""), 2000);
+  }
+  function loadExample() {
+    // Example JWT (expired, for demo purposes)
+    token =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJleHAiOjE1MTYyNDI2MjIsInJvbGUiOiJhZG1pbiJ9.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
+  }
 </script>
 
+{#snippet renderValue(key, value)}
+  {JSON.stringify(value)}
+{/snippet}
 
-    <div class="space-y-4">
-      <div>
-        <label class="block text-sm font-medium mb-2">{t('input')} (JWT Token)</label>
-        <textarea
-          class="tool-textarea"
-          bind:value={input}
-          placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
-          rows={4}></textarea>
+<div class="space-y-6">
+  <div>
+    <label
+      for="jwt-token"
+      class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+    >
+      {t("tokenInput")}
+    </label>
+    <textarea
+      id="jwt-token"
+      name="tokenValue"
+      bind:value={token}
+      placeholder={t("placeholder")}
+      class="w-full h-32 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm break-all"
+    ></textarea>
+    <button
+      onclick={loadExample}
+      class="mt-2 text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+    >
+      {t("loadExample")}
+    </button>
+  </div>
+
+  {#if error}
+    <div
+      class="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-600 dark:text-red-400"
+    >
+      {error}
+    </div>
+  {/if}
+
+  {#if decoded}
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div class="space-y-4">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-lg font-medium text-gray-900 dark:text-white">
+              {t("header")}
+            </h3>
+            <button
+              onclick={() =>
+                copyToClipboard(
+                  JSON.stringify(decoded.header, null, 2),
+                  "header",
+                )}
+              class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+            >
+              {copied === "header" ? t("copied") : t("copy")}
+            </button>
+          </div>
+          <div
+            class="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
+          >
+            <pre
+              class="text-sm font-mono text-red-700 dark:text-red-300 overflow-x-auto">
+                  {JSON.stringify(decoded.header, null, 2)}
+                </pre>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-lg font-medium text-gray-900 dark:text-white">
+              {t("payload")}
+            </h3>
+            <button
+              onclick={() =>
+                copyToClipboard(
+                  JSON.stringify(decoded.payload, null, 2),
+                  "payload",
+                )}
+              class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+            >
+              {copied === "payload" ? t("copied") : t("copy")}
+            </button>
+          </div>
+          <div
+            class="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg"
+          >
+            <pre
+              class="text-sm font-mono text-purple-700 dark:text-purple-300 overflow-x-auto">
+                  {JSON.stringify(decoded.payload, null, 2)}
+                </pre>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-2">
+            {t("signature")}
+          </h3>
+          <div
+            class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg"
+          >
+            <code
+              class="text-sm font-mono text-blue-700 dark:text-blue-300 break-all"
+            >
+              {decoded.signature}
+            </code>
+          </div>
+        </div>
       </div>
 
-      <button onclick={decodeJwt} class="btn-primary">
-        {t('decode')}
-      </button>
-
-      {#if error}
-<div class="p-3 bg-red-100 dark:bg-red-900/50 border border-red-300 dark:border-red-700 rounded-lg text-red-700 dark:text-red-300 text-sm">
-          {error}
-        </div>
-{/if}
-
-      {#if decoded}
-<div class="space-y-4">
-          <!-- Header -->
-          <div class="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
-            <div class="flex justify-between items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/30 border-b border-gray-300 dark:border-gray-700">
-              <span class="font-medium text-blue-700 dark:text-blue-400">{tj('header')}</span>
-              <button
-                onclick={() => copySection('header', JSON.stringify(decoded.header, null, 2))}
-                class="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-gray-900 dark:text-white"
-              >
-                {copied === 'header' ? t('copied') : t('copy')}
-              </button>
-            </div>
-            <pre class="p-4 text-sm overflow-x-auto text-gray-900 dark:text-white">
-              {JSON.stringify(decoded.header, null, 2)}
-            </pre>
-          </div>
-
-          <!-- Payload -->
-          <div class="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
-            <div class="flex justify-between items-center px-4 py-2 bg-purple-100 dark:bg-purple-900/30 border-b border-gray-300 dark:border-gray-700">
-              <span class="font-medium text-purple-700 dark:text-purple-400">{tj('payload')}</span>
-              <button
-                onclick={() => copySection('payload', JSON.stringify(decoded.payload, null, 2))}
-                class="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-gray-900 dark:text-white"
-              >
-                {copied === 'payload' ? t('copied') : t('copy')}
-              </button>
-            </div>
-            <pre class="p-4 text-sm overflow-x-auto text-gray-900 dark:text-white">
-              {JSON.stringify(decoded.payload, null, 2)}
-            </pre>
-            <!-- Show formatted dates for common claims -->
-            {#if decoded.payload.exp !== undefined || decoded.payload.iat !== undefined || decoded.payload.nbf !== undefined}
-<div class="px-4 pb-4 text-xs text-gray-600 dark:text-gray-300 space-y-1 border-t border-gray-300 dark:border-gray-700 pt-3">
-                {#if decoded.payload.iat !== undefined}
-<div>{tj('issuedAt')}: {formatDate(Number(decoded.payload.iat))}</div>
-{/if}
-                {#if decoded.payload.exp !== undefined}
-<div>{tj('expires')}: {formatDate(Number(decoded.payload.exp))}</div>
-{/if}
-                {#if decoded.payload.nbf !== undefined}
-<div>{tj('notBefore')}: {formatDate(Number(decoded.payload.nbf))}</div>
-{/if}
-              </div>
-{/if}
-          </div>
-
-          <!-- Signature -->
-          <div class="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
-            <div class="flex justify-between items-center px-4 py-2 bg-green-100 dark:bg-green-900/30 border-b border-gray-300 dark:border-gray-700">
-              <span class="font-medium text-green-700 dark:text-green-400">{tj('signature')}</span>
-              <button
-                onclick={() => copySection('signature', decoded.signature)}
-                class="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-gray-900 dark:text-white"
-              >
-                {copied === 'signature' ? t('copied') : t('copy')}
-              </button>
-            </div>
-            <div class="p-4 text-sm text-gray-700 dark:text-gray-300 break-all">
-              {decoded.signature}
-            </div>
+      <div class="space-y-4">
+        <div>
+          <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-2">
+            {t("claims")}
+          </h3>
+          <div
+            class="border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden"
+          >
+            <table class="w-full">
+              <thead class="bg-gray-100 dark:bg-gray-800">
+                <tr>
+                  <th
+                    class="px-4 py-2 text-left text-sm font-medium text-gray-700 dark:text-gray-300"
+                  >
+                    {t("claim")}
+                  </th>
+                  <th
+                    class="px-4 py-2 text-left text-sm font-medium text-gray-700 dark:text-gray-300"
+                  >
+                    {t("value")}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {#each Object.entries(decoded.payload) as [key, value] (key)}
+                  <tr class="border-t border-gray-300 dark:border-gray-600">
+                    <td
+                      class="px-4 py-2 text-sm font-mono text-gray-900 dark:text-white"
+                    >
+                      {key}
+                    </td>
+                    <td
+                      class="px-4 py-2 text-sm font-mono text-gray-600 dark:text-gray-400"
+                    >
+                      {@render renderValue(key, value)}
+                    </td>
+                  </tr>
+                {/each}
+              </tbody>
+            </table>
           </div>
         </div>
-{/if}
+
+        {#if typeof decoded.payload.exp === "number"}
+          <div
+            class={`p-4 rounded-lg ${
+              isExpired(decoded.payload)
+                ? "bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800"
+                : "bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800"
+            }`}
+          >
+            <div class="flex items-center gap-2">
+              <span
+                class={`text-2xl ${isExpired(decoded.payload) ? "text-red-500" : "text-green-500"}`}
+              >
+                {isExpired(decoded.payload)
+                  ? '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>'
+                  : "✓"}
+              </span>
+              <span
+                class={`font-medium ${
+                  isExpired(decoded.payload)
+                    ? "text-red-700 dark:text-red-300"
+                    : "text-green-700 dark:text-green-300"
+                }`}
+              >
+                {isExpired(decoded.payload) ? t("expired") : t("notExpired")}
+              </span>
+            </div>
+            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+              {t("expiresAt")}: {formatTimestamp(decoded.payload.exp)}
+            </p>
+          </div>
+        {/if}
+
+        <div>
+          <label
+            for="jwt-secret"
+            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+          >
+            {t("verifySignature")}
+          </label>
+          <input
+            id="jwt-secret"
+            name="secretValue"
+            bind:value={secret}
+            placeholder={t("secretPlaceholder")}
+            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono"
+          />
+          <p class="mt-2 text-xs text-gray-500 dark:text-gray-400">
+            {t("verifyNote")}
+          </p>
+        </div>
+      </div>
     </div>
-  
+  {/if}
+</div>

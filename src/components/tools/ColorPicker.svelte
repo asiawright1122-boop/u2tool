@@ -94,8 +94,10 @@
           style="background-color: {color}"></div>
         <div class="flex-1 space-y-4">
           <div>
-            <label class="block text-sm font-medium mb-2">{t('colorPicker.selectColor')}</label>
+            <label for="color-picker-input" class="block text-sm font-medium mb-2">{t('colorPicker.selectColor')}</label>
             <input
+              id="color-picker-input"
+              name="colorValue"
               type="color"
               value={color}
               onchange={(e) => handleColorChange(e.target.value)}
@@ -103,8 +105,10 @@
             />
           </div>
           <div>
-            <label class="block text-sm font-medium mb-2">HEX</label>
+            <label for="color-hex-input" class="block text-sm font-medium mb-2">HEX</label>
             <input
+              id="color-hex-input"
+              name="hexColor"
               type="text"
               value={color}
               onchange={(e) => {

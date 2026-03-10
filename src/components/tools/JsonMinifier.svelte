@@ -97,12 +97,14 @@
     <div class="space-y-4">
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium">{t('input')}</label>
+          <label for="json-min-input" class="block text-sm font-medium">{t('input')}</label>
           <button onclick={loadSample} class="text-sm text-blue-400 hover:text-blue-300">
             Load Sample
           </button>
         </div>
         <textarea
+          id="json-min-input"
+          name="jsonInput"
           class="tool-textarea"
           bind:value={input}
           placeholder={t('inputPlaceholder')}

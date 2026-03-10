@@ -55,30 +55,30 @@
     <div class="space-y-6">
       <div class="grid md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('cssUnit.value')}</label>
-          <input type="number" bind:value={value} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" />
+          <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2" for="css-unit-value">{t('cssUnit.value')}</label>
+          <input type="number" id="css-unit-value" name="value" bind:value={value} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('cssUnit.unit')}</label>
-          <select bind:value={fromUnit} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white">
+          <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2" for="css-unit-from">{t('cssUnit.unit')}</label>
+          <select id="css-unit-from" name="fromUnit" bind:value={fromUnit} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white">
             {#each UNITS as u (u)}
 <option  value={u}>{u}</option>
 {/each}
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('cssUnit.baseFontSize')}</label>
-          <input type="number" bind:value={baseFontSize} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" />
+          <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2" for="css-base-font-size">{t('cssUnit.baseFontSize')}</label>
+          <input type="number" id="css-base-font-size" name="baseFontSize" bind:value={baseFontSize} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" />
         </div>
       </div>
       <div class="grid md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('cssUnit.viewportWidth')}</label>
-          <input type="number" bind:value={viewportWidth} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" />
+          <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2" for="css-viewport-width">{t('cssUnit.viewportWidth')}</label>
+          <input type="number" id="css-viewport-width" name="viewportWidth" bind:value={viewportWidth} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('cssUnit.viewportHeight')}</label>
-          <input type="number" bind:value={viewportHeight} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" />
+          <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2" for="css-viewport-height">{t('cssUnit.viewportHeight')}</label>
+          <input type="number" id="css-viewport-height" name="viewportHeight" bind:value={viewportHeight} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" />
         </div>
       </div>
       <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">

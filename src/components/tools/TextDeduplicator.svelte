@@ -66,6 +66,8 @@
         <label class="flex items-center gap-2 cursor-pointer">
           <input
             type="checkbox"
+            id="dedup-case-sensitive"
+            name="dedupCaseSensitive"
             bind:checked={caseSensitive}
             class="w-4 h-4 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
           />
@@ -74,6 +76,8 @@
         <label class="flex items-center gap-2 cursor-pointer">
           <input
             type="checkbox"
+            id="dedup-trim-lines"
+            name="dedupTrimLines"
             bind:checked={trimLines}
             class="w-4 h-4 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
           />
@@ -105,15 +109,19 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('input')}</label>
+          <label for="dedup-input" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('input')}</label>
           <textarea
+            id="dedup-input"
+            name="dedupInput"
             bind:value={input}
             class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
             placeholder={t('placeholder')}></textarea>
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('output')}</label>
+          <label for="dedup-output" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('output')}</label>
           <textarea
+            id="dedup-output"
+            name="dedupOutput"
             value={result.output}
             readOnly
             class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"></textarea>

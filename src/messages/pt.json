@@ -9660,6 +9660,11 @@
         "item2": "Categoria B",
         "item3": "Categoria C",
         "item4": "Categoria D",
+        "categoryA": "Categoria A",
+        "categoryB": "Categoria B",
+        "categoryC": "Categoria C",
+        "categoryD": "Categoria D",
+        "categoryE": "Categoria E",
         "excellent": "Excelente",
         "good": "Bom",
         "average": "Médio",
@@ -15299,7 +15304,7 @@
       "headerNamePlaceholder": "Nome do cabeçalho",
       "headerValuePlaceholder": "Valor"
     },
-    "jwt-debugger": {
+    "jwt-decoder": {
       "name": "Depurador JWT",
       "description": "Depure e verifique tokens JWT com validação de assinatura",
       "seo_title": "Grátis: Debugger JWT Online",

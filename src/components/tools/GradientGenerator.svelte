@@ -114,8 +114,10 @@
 
         {#if type === 'linear'}
 <div class="flex-1 min-w-[200px]">
-            <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('gradient.angle')}: {angle}°</label>
+            <label for="gradient-angle" class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('gradient.angle')}: {angle}°</label>
             <input
+              id="gradient-angle"
+              name="gradientAngle"
               type="range"
               min="0"
               max="360"

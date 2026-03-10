@@ -84,8 +84,10 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium mb-2">{t('metaTagGenerator.pageTitle')}</label>
+          <label for="meta-title" class="block text-sm font-medium mb-2">{t('metaTagGenerator.pageTitle')}</label>
           <input
+            id="meta-title"
+            name="pageTitle"
             type="text"
             bind:value={title}
             class="tool-input"
@@ -93,8 +95,10 @@
           />
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2">{t('metaTagGenerator.author')}</label>
+          <label for="meta-author" class="block text-sm font-medium mb-2">{t('metaTagGenerator.author')}</label>
           <input
+            id="meta-author"
+            name="authorName"
             type="text"
             bind:value={author}
             class="tool-input"
@@ -104,8 +108,10 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium mb-2">{t('metaTagGenerator.description')}</label>
+        <label for="meta-description" class="block text-sm font-medium mb-2">{t('metaTagGenerator.description')}</label>
         <textarea
+          id="meta-description"
+          name="pageDescription"
           bind:value={description}
           class="tool-input"
           rows={2}
@@ -114,8 +120,10 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium mb-2">{t('metaTagGenerator.keywords')}</label>
+        <label for="meta-keywords" class="block text-sm font-medium mb-2">{t('metaTagGenerator.keywords')}</label>
         <input
+          id="meta-keywords"
+          name="keywords"
           type="text"
           bind:value={keywords}
           class="tool-input"
@@ -125,8 +133,10 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium mb-2">{t('metaTagGenerator.ogImageUrl')}</label>
+          <label for="meta-og-image" class="block text-sm font-medium mb-2">{t('metaTagGenerator.ogImageUrl')}</label>
           <input
+            id="meta-og-image"
+            name="ogImageUrl"
             type="text"
             bind:value={ogImage}
             class="tool-input"
@@ -134,8 +144,10 @@
           />
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2">{t('metaTagGenerator.pageUrl')}</label>
+          <label for="meta-og-url" class="block text-sm font-medium mb-2">{t('metaTagGenerator.pageUrl')}</label>
           <input
+            id="meta-og-url"
+            name="pageUrl"
             type="text"
             bind:value={ogUrl}
             class="tool-input"
@@ -146,8 +158,10 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium mb-2">{t('metaTagGenerator.twitterCardType')}</label>
+          <label for="meta-twitter-card" class="block text-sm font-medium mb-2">{t('metaTagGenerator.twitterCardType')}</label>
           <select
+            id="meta-twitter-card"
+            name="twitterCardType"
             bind:value={twitterCard}
             class="tool-input"
           >
@@ -158,8 +172,10 @@
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2">{t('metaTagGenerator.twitterUsername')}</label>
+          <label for="meta-twitter-site" class="block text-sm font-medium mb-2">{t('metaTagGenerator.twitterUsername')}</label>
           <input
+            id="meta-twitter-site"
+            name="twitterUsername"
             type="text"
             bind:value={twitterSite}
             class="tool-input"
@@ -170,8 +186,10 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium mb-2">{t('metaTagGenerator.robots')}</label>
+          <label for="meta-robots" class="block text-sm font-medium mb-2">{t('metaTagGenerator.robots')}</label>
           <select
+            id="meta-robots"
+            name="robotsSetting"
             bind:value={robots}
             class="tool-input"
           >
@@ -182,8 +200,10 @@
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2">{t('metaTagGenerator.viewport')}</label>
+          <label for="meta-viewport" class="block text-sm font-medium mb-2">{t('metaTagGenerator.viewport')}</label>
           <input
+            id="meta-viewport"
+            name="viewportSetting"
             type="text"
             bind:value={viewport}
             class="tool-input"

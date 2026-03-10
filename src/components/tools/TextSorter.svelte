@@ -140,8 +140,10 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
           <!-- 排序类型 -->
           <div>
-            <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('sorter.sortType')}</label>
+            <label for="sort-type" class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('sorter.sortType')}</label>
             <select
+              id="sort-type"
+              name="sortType"
               value={sortType}
               onchange={(e) => sortType = e.target.value as SortType}
               class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100"
@@ -155,8 +157,10 @@
           
           <!-- 排序顺序 -->
           <div>
-            <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('sorter.order')}</label>
+            <label for="sort-order" class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('sorter.order')}</label>
             <select
+              id="sort-order"
+              name="sortOrder"
               value={order}
               onchange={(e) => order = e.target.value as SortOrder}
               class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100"
@@ -172,6 +176,8 @@
           <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-200">
             <input
               type="checkbox"
+              id="sort-case-sensitive"
+              name="sortCaseSensitive"
               bind:checked={caseSensitive}
               class="rounded bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600"
             />
@@ -180,6 +186,8 @@
           <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-200">
             <input
               type="checkbox"
+              id="sort-trim-lines"
+              name="sortTrimLines"
               bind:checked={trimLines}
               class="rounded bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600"
             />
@@ -188,6 +196,8 @@
           <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-200">
             <input
               type="checkbox"
+              id="sort-remove-empty"
+              name="sortRemoveEmpty"
               bind:checked={removeEmpty}
               class="rounded bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600"
             />
@@ -196,6 +206,8 @@
           <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-200">
             <input
               type="checkbox"
+              id="sort-remove-duplicates"
+              name="sortRemoveDuplicates"
               bind:checked={removeDups}
               class="rounded bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600"
             />
@@ -231,10 +243,12 @@
         <!-- 输入 -->
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm text-gray-700 dark:text-gray-300">{t('input')}</label>
+            <label for="sort-input" class="text-sm text-gray-700 dark:text-gray-300">{t('input')}</label>
             <span class="text-xs text-gray-500 dark:text-gray-300">{inputLines} {t('sorter.lines')}</span>
           </div>
           <textarea
+            id="sort-input"
+            name="sortInput"
             bind:value={input}
             placeholder={t('sorter.placeholder')}
             class="w-full h-64 px-3 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded font-mono text-sm text-gray-900 dark:text-gray-100 resize-none focus:outline-none focus:border-blue-500"></textarea>
@@ -243,7 +257,7 @@
         <!-- 输出 -->
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm text-gray-700 dark:text-gray-300">{t('output')}</label>
+            <label for="sort-output" class="text-sm text-gray-700 dark:text-gray-300">{t('output')}</label>
             <div class="flex items-center gap-2">
               <span class="text-xs text-gray-500 dark:text-gray-300">{outputLines} {t('sorter.lines')}</span>
               <button
@@ -258,6 +272,8 @@
             </div>
           </div>
           <textarea
+            id="sort-output"
+            name="sortOutput"
             value={output}
             readOnly
             class="w-full h-64 px-3 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded font-mono text-sm text-gray-900 dark:text-gray-100 resize-none"></textarea>

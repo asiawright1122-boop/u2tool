@@ -64,12 +64,12 @@ b === '1' && <rect  x={i * 2} y="10" width="2" height="80" fill="black"></rect>
     <div class="space-y-4">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div class="flex flex-col">
-          <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('barcode.text')}</label>
-          <input type="text" bind:value={text} class="w-full h-12 px-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" />
+          <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2" for="barcode-text">{t('barcode.text')}</label>
+          <input type="text" id="barcode-text" name="text" bind:value={text} class="w-full h-12 px-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" />
         </div>
         <div class="flex flex-col">
-          <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('barcode.format')}</label>
-          <select value={format} onchange={(e) => format = e.target.value as typeof format} class="w-full h-12 px-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white">
+          <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2" for="barcode-format">{t('barcode.format')}</label>
+          <select id="barcode-format" name="format" value={format} onchange={(e) => format = e.target.value as typeof format} class="w-full h-12 px-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white">
             <option value="code128">Code 128</option>
             <option value="code39">Code 39</option>
             <option value="ean13">EAN-13</option>

@@ -82,8 +82,10 @@
     <div class="space-y-6">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div class="flex flex-col">
-          <label class="block text-sm font-medium mb-2 truncate">{tg('columns')}</label>
+          <label for="grid-columns" class="block text-sm font-medium mb-2 truncate">{tg('columns')}</label>
           <input
+            id="grid-columns"
+            name="gridColumns"
             type="number"
             min={1}
             max={12}
@@ -93,8 +95,10 @@
           />
         </div>
         <div class="flex flex-col">
-          <label class="block text-sm font-medium mb-2 truncate">{tg('rows')}</label>
+          <label for="grid-rows" class="block text-sm font-medium mb-2 truncate">{tg('rows')}</label>
           <input
+            id="grid-rows"
+            name="gridRows"
             type="number"
             min={1}
             max={12}
@@ -104,8 +108,10 @@
           />
         </div>
         <div class="flex flex-col">
-          <label class="block text-sm font-medium mb-2 truncate">{tg('gap')}</label>
+          <label for="grid-gap" class="block text-sm font-medium mb-2 truncate">{tg('gap')}</label>
           <input
+            id="grid-gap"
+            name="gridGap"
             type="number"
             min={0}
             value={gap}
@@ -114,8 +120,8 @@
           />
         </div>
         <div class="flex flex-col">
-          <label class="block text-sm font-medium mb-2 truncate">{tg('justifyItems')}</label>
-          <select bind:value={justifyItems} class="tool-input flex-1">
+          <label for="grid-justify-items" class="block text-sm font-medium mb-2 truncate">{tg('justifyItems')}</label>
+          <select id="grid-justify-items" name="gridJustifyItems" bind:value={justifyItems} class="tool-input flex-1">
             <option value="stretch">{tg('stretch')}</option>
             <option value="start">{tg('start')}</option>
             <option value="center">{tg('center')}</option>

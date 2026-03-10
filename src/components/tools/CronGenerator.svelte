@@ -119,40 +119,50 @@
       <!-- Fields -->
       <div class="grid grid-cols-5 gap-4">
         <div>
-          <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{tc('minute')}</label>
+          <label for="cron-minute" class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{tc('minute')}</label>
           <input
+            id="cron-minute"
+            name="minuteValue"
             type="text"
             bind:value={minute}
             class="w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-center text-gray-900 dark:text-white"
           />
         </div>
         <div>
-          <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{tc('hour')}</label>
+          <label for="cron-hour" class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{tc('hour')}</label>
           <input
+            id="cron-hour"
+            name="hourValue"
             type="text"
             bind:value={hour}
             class="w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-center text-gray-900 dark:text-white"
           />
         </div>
         <div>
-          <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{tc('day')}</label>
+          <label for="cron-day" class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{tc('day')}</label>
           <input
+            id="cron-day"
+            name="dayValue"
             type="text"
             bind:value={dayOfMonth}
             class="w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-center text-gray-900 dark:text-white"
           />
         </div>
         <div>
-          <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{tc('month')}</label>
+          <label for="cron-month" class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{tc('month')}</label>
           <input
+            id="cron-month"
+            name="monthValue"
             type="text"
             bind:value={month}
             class="w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-center text-gray-900 dark:text-white"
           />
         </div>
         <div>
-          <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{tc('weekday')}</label>
+          <label for="cron-weekday" class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{tc('weekday')}</label>
           <input
+            id="cron-weekday"
+            name="weekdayValue"
             type="text"
             bind:value={dayOfWeek}
             class="w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-center text-gray-900 dark:text-white"

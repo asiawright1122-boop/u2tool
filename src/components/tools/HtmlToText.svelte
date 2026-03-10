@@ -144,8 +144,10 @@
 
     <div class="space-y-6">
       <div class="flex flex-wrap gap-4 items-center">
-        <label class="flex items-center gap-2 cursor-pointer">
+        <label for="preserve-links" class="flex items-center gap-2 cursor-pointer">
           <input
+            id="preserve-links"
+            name="preserveLinks"
             type="checkbox"
             bind:checked={preserveLinks}
             class="w-4 h-4 text-blue-600 rounded"
@@ -153,8 +155,10 @@
           <span class="text-sm text-gray-600 dark:text-gray-300">{t('preserveLinks')}</span>
         </label>
 
-        <label class="flex items-center gap-2 cursor-pointer">
+        <label for="preserve-line-breaks" class="flex items-center gap-2 cursor-pointer">
           <input
+            id="preserve-line-breaks"
+            name="preserveLineBreaks"
             type="checkbox"
             bind:checked={preserveLineBreaks}
             class="w-4 h-4 text-blue-600 rounded"
@@ -162,8 +166,10 @@
           <span class="text-sm text-gray-600 dark:text-gray-300">{t('preserveLineBreaks')}</span>
         </label>
 
-        <label class="flex items-center gap-2 cursor-pointer">
+        <label for="preserve-lists" class="flex items-center gap-2 cursor-pointer">
           <input
+            id="preserve-lists"
+            name="preserveLists"
             type="checkbox"
             bind:checked={preserveLists}
             class="w-4 h-4 text-blue-600 rounded"
@@ -181,18 +187,19 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300">
+          <label for="html-input" class="block text-sm font-medium text-gray-600 dark:text-gray-300">
             {t('htmlInput')}
           </label>
           <textarea
-            bind:value={html}
+            id="html-input"
+            name="htmlValue"
             placeholder={t('htmlPlaceholder')}
             class="w-full h-64 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono text-sm"></textarea>
         </div>
 
         <div class="space-y-2">
           <div class="flex items-center justify-between">
-            <label class="block text-sm font-medium text-gray-600 dark:text-gray-300">
+            <label for="text-output" class="block text-sm font-medium text-gray-600 dark:text-gray-300">
               {t('textOutput')}
             </label>
             {#if text}
@@ -205,7 +212,8 @@
 {/if}
           </div>
           <textarea
-            value={text}
+            id="text-output"
+            name="textValue"
             readOnly
             placeholder={t('textPlaceholder')}
             class="w-full h-64 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100"></textarea>

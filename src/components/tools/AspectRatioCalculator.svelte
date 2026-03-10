@@ -87,8 +87,10 @@
         <label class="block text-sm font-medium text-gray-900 dark:text-white mb-3">{t('aspect.original')}</label>
         <div class="grid grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('aspect.width')}</label>
+            <label for="aspect-orig-width" class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('aspect.width')}</label>
             <input
+              id="aspect-orig-width"
+              name="originalWidth"
               type="number"
               value={width}
               onchange={(e) => handleWidthChange(parseInt(e.target.value) || 0)}
@@ -96,8 +98,10 @@
             />
           </div>
           <div>
-            <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('aspect.height')}</label>
+            <label for="aspect-orig-height" class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('aspect.height')}</label>
             <input
+              id="aspect-orig-height"
+              name="originalHeight"
               type="number"
               value={height}
               onchange={(e) => handleHeightChange(parseInt(e.target.value) || 0)}
@@ -135,6 +139,8 @@
           <label class="text-sm font-medium text-gray-900 dark:text-white">{t('aspect.resize')}</label>
           <label class="flex items-center gap-2 cursor-pointer">
             <input
+              id="aspect-lock-ratio"
+              name="lockRatio"
               type="checkbox"
               bind:checked={lockRatio}
               class="w-4 h-4 rounded"
@@ -144,8 +150,10 @@
         </div>
         <div class="grid grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('aspect.newWidth')}</label>
+            <label for="aspect-new-width" class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('aspect.newWidth')}</label>
             <input
+              id="aspect-new-width"
+              name="newWidthValue"
               type="number"
               value={newWidth}
               onchange={(e) => handleNewWidthChange(parseInt(e.target.value) || 0)}
@@ -153,8 +161,10 @@
             />
           </div>
           <div>
-            <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('aspect.newHeight')}</label>
+            <label for="aspect-new-height" class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('aspect.newHeight')}</label>
             <input
+              id="aspect-new-height"
+              name="newHeightValue"
               type="number"
               value={newHeight}
               onchange={(e) => handleNewHeightChange(parseInt(e.target.value) || 0)}

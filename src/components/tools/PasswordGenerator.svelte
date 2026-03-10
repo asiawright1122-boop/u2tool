@@ -95,10 +95,12 @@
 
       <!-- Length Slider -->
       <div>
-        <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
+        <label for="password-length" class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
           {t('length')}: {length}
         </label>
         <input
+          id="password-length"
+          name="passwordLength"
           type="range"
           min="8"
           max="64"
@@ -118,6 +120,8 @@
         ] as { key, label } (key)}
 <label  class="flex items-center gap-2 cursor-pointer text-gray-700 dark:text-gray-300">
             <input
+              id={`password-option-${key}`}
+              name={`option-${key}`}
               type="checkbox"
               checked={options[key as keyof typeof options]}
               onchange={() => toggleOption(key as keyof typeof options)}

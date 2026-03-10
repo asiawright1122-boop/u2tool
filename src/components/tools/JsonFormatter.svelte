@@ -84,9 +84,10 @@
 
     <div class="space-y-4">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{tg('input')}</label>
+        <label for="json-formatter-input" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{tg('input')}</label>
         <textarea
-          class="tool-textarea"
+          id="json-formatter-input"
+          name="inputValue"
           bind:value={input}
           placeholder={t('inputPlaceholder')}></textarea>
       </div>
@@ -111,7 +112,7 @@
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{tg('output')}</label>
+          <label for="json-formatter-output" class="text-sm font-medium text-gray-700 dark:text-gray-300">{tg('output')}</label>
           {#if output}
 <button
               onclick={copyOutput}
@@ -122,6 +123,8 @@
 {/if}
         </div>
         <textarea
+          id="json-formatter-output"
+          name="outputValue"
           class="tool-textarea"
           value={output}
           readOnly

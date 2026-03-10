@@ -91,8 +91,10 @@
     <div class="space-y-6">
       <div class="flex flex-wrap items-center justify-center gap-4">
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-400">{t('count')}:</label>
+          <label for="color-count" class="text-sm text-gray-600 dark:text-gray-400">{t('count')}:</label>
           <input
+            id="color-count"
+            name="colorCount"
             type="number"
             min="1"
             max="20"
@@ -102,8 +104,10 @@
           />
         </div>
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-400">{t('format')}:</label>
+          <label for="color-format" class="text-sm text-gray-600 dark:text-gray-400">{t('format')}:</label>
           <select
+            id="color-format"
+            name="colorFormat"
             value={format}
             onchange={(e) => format = e.target.value as 'hex' | 'rgb' | 'hsl'}
             class="px-3 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"

@@ -61,13 +61,13 @@
       </div>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="space-y-3">
-          <label class="block text-sm font-medium text-gray-900 dark:text-white">{t('epoch.timestamp')}</label>
-          <input type="text" bind:value={epoch} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-gray-900 dark:text-white" placeholder="1702400000" />
+          <label for="epoch-timestamp" class="block text-sm font-medium text-gray-900 dark:text-white">{t('epoch.timestamp')}</label>
+          <input type="text" id="epoch-timestamp" name="epochValue" bind:value={epoch} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-gray-900 dark:text-white" placeholder="1702400000" />
           <button onclick={epochToDate} class="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">{t('epoch.toDate')}</button>
         </div>
         <div class="space-y-3">
-          <label class="block text-sm font-medium text-gray-900 dark:text-white">{t('epoch.datetime')}</label>
-          <input type="text" bind:value={date} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-gray-900 dark:text-white" placeholder="2024-12-12 12:00:00" />
+          <label for="epoch-datetime" class="block text-sm font-medium text-gray-900 dark:text-white">{t('epoch.datetime')}</label>
+          <input type="text" id="epoch-datetime" name="datetimeValue" bind:value={date} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-gray-900 dark:text-white" placeholder="2024-12-12 12:00:00" />
           <button onclick={dateToEpoch} class="w-full px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">{t('epoch.toEpoch')}</button>
         </div>
       </div>
