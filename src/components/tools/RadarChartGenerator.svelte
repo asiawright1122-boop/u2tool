@@ -13,30 +13,9 @@
   );
 
   // Translation helpers
-  function t(key: string): string {
-    const scope =
-      (translationsTyped["tools"]?.["radar-chart-generator"] as Record<
-        string,
-        unknown
-      >) || {};
-    const keys = key.split(".");
-    let value: unknown = scope;
-    for (const k of keys) {
-      value = (value as Record<string, unknown>)?.[k];
-    }
-    return typeof value === "string"
-      ? value
-      : `MISSING: tools.radar-chart-generator.${key}`;
-  }
-  function tg(key: string): string {
-    const scope = (translationsTyped["tools"] as Record<string, unknown>) || {};
-    const keys = key.split(".");
-    let value: unknown = scope;
-    for (const k of keys) {
-      value = (value as Record<string, unknown>)?.[k];
-    }
-    return typeof value === "string" ? value : `MISSING: tools.${key}`;
-  }
+  import { createToolTranslator, createGeneralTranslator } from '@/lib/translation-helper';
+  const t = createToolTranslator(translations, 'radar-chart-generator');
+  const tg = createGeneralTranslator(translations);
 
   // Imports
   import EChartsWrapper, {

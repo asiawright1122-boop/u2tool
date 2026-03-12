@@ -9,13 +9,9 @@
   let { locale, translations }: Props = $props();
 
   // Translation helpers
-  function t(key: string): string {
-    const scope = (translations['tools']['half-doughnut-chart-generator'] as Record<string, unknown>) || {};
-    const keys = key.split('.');
-    let value: unknown = scope;
-    for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
-    return typeof value === 'string' ? value : `MISSING: tools.half-doughnut-chart-generator.${key}`;
-  }
+  import { createToolTranslator, createGeneralTranslator } from '@/lib/translation-helper';
+  const t = createToolTranslator(translations, 'half-doughnut-chart-generator');
+  const tg = createGeneralTranslator(translations);
 
   // Imports
   import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';

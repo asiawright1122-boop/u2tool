@@ -9,20 +9,9 @@
   let { locale, translations }: Props = $props();
 
   // Translation helpers
-  function t(key: string): string {
-    const scope = (translations['tools']['percentage-stacked-bar-chart-generator'] as Record<string, unknown>) || {};
-    const keys = key.split('.');
-    let value: unknown = scope;
-    for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
-    return typeof value === 'string' ? value : `MISSING: tools.percentage-stacked-bar-chart-generator.${key}`;
-  }
-  function _tg(key: string): string {
-    const scope = translations['tools'] as Record<string, unknown> || {};
-    const keys = key.split('.');
-    let value: unknown = scope;
-    for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
-    return typeof value === 'string' ? value : `MISSING: tools.${key}`;
-  }
+  import { createToolTranslator, createGeneralTranslator } from '@/lib/translation-helper';
+  const t = createToolTranslator(translations, 'percentage-stacked-bar-chart-generator');
+  const tg = createGeneralTranslator(translations);
 
   // Imports
   import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';

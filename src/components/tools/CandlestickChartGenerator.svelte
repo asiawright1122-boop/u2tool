@@ -9,35 +9,9 @@
   let { locale, translations }: Props = $props();
 
   // Translation helpers
-  function t(key: string, vars?: Record<string, string | number>): string {
-    const translationsTyped = translations as Record<string, unknown>; // Cast once
-    const tools = (translationsTyped["tools"] as Record<string, unknown>) || {};
-    const scope =
-      (tools["candlestick-chart-generator"] as Record<string, unknown>) || {};
-    const keys = key.split(".");
-    let value: unknown = scope;
-    for (const k of keys) {
-      value = (value as Record<string, unknown>)?.[k];
-    }
-    if (typeof value !== "string")
-      return `MISSING: tools.candlestick-chart-generator.${key}`;
-    if (!vars) return value;
-    let result = value;
-    for (const [vKey, vVal] of Object.entries(vars)) {
-      result = result.replace(`{${vKey}}`, String(vVal));
-    }
-    return result;
-  }
-  function tg(key: string): string {
-    const translationsTyped = translations as Record<string, unknown>; // Cast once
-    const scope = (translationsTyped["tools"] as Record<string, unknown>) || {};
-    const keys = key.split(".");
-    let value: unknown = scope;
-    for (const k of keys) {
-      value = (value as Record<string, unknown>)?.[k];
-    }
-    return typeof value === "string" ? value : `MISSING: tools.${key}`;
-  }
+  import { createToolTranslator, createGeneralTranslator } from '@/lib/translation-helper';
+  const t = createToolTranslator(translations, 'candlestick-chart-generator');
+  const tg = createGeneralTranslator(translations);
 
   // Imports
   import EChartsWrapper, {
@@ -234,7 +208,6 @@
   });
 
   // Functions
-  const chartTheme = useChartTheme();
   function exportChart(format: "png" | "svg") {
     if (!chartRef) {
       console.warn("Chart ref not available");
