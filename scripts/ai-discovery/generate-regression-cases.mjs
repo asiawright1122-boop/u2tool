@@ -9,7 +9,7 @@ const DEFAULT_OUTPUT = 'docs/ai-discovery-regression-cases.generated.json';
 function parseArgs(argv) {
   const args = {
     input: '',
-    locale: 'en',
+    locale: 'all',
     limit: DEFAULT_LIMIT,
     out: DEFAULT_OUTPUT,
   };
@@ -78,18 +78,19 @@ function normalizeQuery(query) {
     .trim();
 }
 
-function toId(query, index) {
+function toId(query, index, locale) {
   const slug = normalizeQuery(query)
     .replace(/[^a-z0-9\s-]/g, '')
     .trim()
     .replace(/\s+/g, '-')
     .slice(0, 40);
-  return `fallback-${index + 1}-${slug || 'query'}`;
+  return `fallback-${locale}-${index + 1}-${slug || 'query'}`;
 }
 
-function buildCases(events, locale, limit) {
+function buildCases(events, localeFilter, limit) {
   const frequency = new Map();
   const examples = new Map();
+  const localeByKey = new Map();
 
   for (const event of events) {
     if (!event || typeof event !== 'object') {
@@ -104,14 +105,25 @@ function buildCases(events, locale, limit) {
       continue;
     }
 
+    const eventLocale =
+      typeof event.locale === 'string' && event.locale.trim().length > 0
+        ? event.locale.trim()
+        : 'en';
+
+    if (localeFilter !== 'all' && eventLocale !== localeFilter) {
+      continue;
+    }
+
     const normalized = normalizeQuery(event.query);
     if (!normalized) {
       continue;
     }
 
-    frequency.set(normalized, (frequency.get(normalized) ?? 0) + 1);
-    if (!examples.has(normalized)) {
-      examples.set(normalized, event.query.trim());
+    const key = `${eventLocale}::${normalized}`;
+    frequency.set(key, (frequency.get(key) ?? 0) + 1);
+    if (!examples.has(key)) {
+      examples.set(key, event.query.trim());
+      localeByKey.set(key, eventLocale);
     }
   }
 
@@ -119,10 +131,11 @@ function buildCases(events, locale, limit) {
     .sort((a, b) => b[1] - a[1])
     .slice(0, limit);
 
-  return ranked.map(([normalized, count], index) => {
-    const original = examples.get(normalized) ?? normalized;
+  return ranked.map(([key, count], index) => {
+    const original = examples.get(key) ?? key.split('::')[1] ?? key;
+    const locale = localeByKey.get(key) ?? 'en';
     return {
-      id: toId(original, index),
+      id: toId(original, index, locale),
       locale,
       query: original,
       expectedAction: 'fallback',
@@ -135,7 +148,7 @@ function buildCases(events, locale, limit) {
 
 function printUsage() {
   console.log('Usage:');
-  console.log('  node scripts/ai-discovery/generate-regression-cases.mjs --input <events.json|events.ndjson> [--locale en] [--limit 20] [--out docs/ai-discovery-regression-cases.generated.json]');
+  console.log('  node scripts/ai-discovery/generate-regression-cases.mjs --input <events.json|events.ndjson> [--locale all|en|zh] [--limit 20] [--out docs/ai-discovery-regression-cases.generated.json]');
 }
 
 function main() {

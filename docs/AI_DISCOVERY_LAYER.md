@@ -88,13 +88,25 @@ npm run qa:ai-discovery:regression
 Generate candidate fallback cases from telemetry export (JSON or NDJSON):
 
 ```bash
-npm run qa:ai-discovery:seed-regression -- --input <events.json> --locale en --limit 20
+npm run qa:ai-discovery:seed-regression -- --input <events.json> --locale all --limit 20
 ```
 
 Analyze telemetry export and produce a markdown quality snapshot:
 
 ```bash
 npm run qa:ai-discovery:analyze-telemetry -- --input <events.json> --locale all --top 20
+```
+
+Merge generated cases into the baseline regression set:
+
+```bash
+npm run qa:ai-discovery:merge-regression
+```
+
+Run the full phase 2 quality loop in one command:
+
+```bash
+npm run qa:ai-discovery:quality-loop -- --input <events.json> --locale all --top 20 --limit 20 --apply --run-regression
 ```
 
 Current behavior:
@@ -110,15 +122,20 @@ Suggested workflow:
 1. Collect top fallback queries from telemetry (`fallback_viewed`).
 2. Generate a telemetry quality snapshot:
    - `npm run qa:ai-discovery:analyze-telemetry -- --input <events.json>`
-3. Optionally generate a draft regression file using:
-   - `npm run qa:ai-discovery:seed-regression -- --input <events.json>`
-4. Add representative cases to `docs/ai-discovery-regression-cases.json` with:
+3. Generate a draft regression file:
+   - `npm run qa:ai-discovery:seed-regression -- --input <events.json> --locale all`
+4. Merge draft cases into baseline:
+   - `npm run qa:ai-discovery:merge-regression`
+5. Review and refine representative cases in `docs/ai-discovery-regression-cases.json`:
    - `expectedTopSlug` for known intent
    - `expectedAction` for behavior-level checks
    - `minConfidence` / `maxConfidence` guardrails
-5. Run `npm run qa:ai-discovery:regression`.
-6. Tune matcher rules / intent keywords.
-7. Re-run regression and keep the new cases in git to prevent quality regressions.
+6. Run `npm run qa:ai-discovery:regression`.
+7. Tune matcher rules / intent keywords.
+8. Re-run regression and keep the new cases in git to prevent quality regressions.
+
+Shortcut:
+- `npm run qa:ai-discovery:quality-loop -- --input <events.json> --locale all --apply --run-regression`
 
 ## Manual QA Checklist
 

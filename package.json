@@ -14,6 +14,8 @@
     "qa:ai-discovery:regression": "npx vitest run src/lib/ai-discovery/regression-cases.test.ts",
     "qa:ai-discovery:analyze-telemetry": "node scripts/ai-discovery/analyze-telemetry.mjs",
     "qa:ai-discovery:seed-regression": "node scripts/ai-discovery/generate-regression-cases.mjs",
+    "qa:ai-discovery:merge-regression": "node scripts/ai-discovery/merge-regression-cases.mjs",
+    "qa:ai-discovery:quality-loop": "node scripts/ai-discovery/run-quality-loop.mjs",
     "cleanup:temp-files": "npx tsx scripts/cleanup/cleanup-temp-files.ts",
     "cleanup:dry-run": "npx tsx scripts/cleanup/cleanup-temp-files.ts --dry-run",
     "spec:list": "npx tsx scripts/spec-lifecycle/list-active-specs.ts",
