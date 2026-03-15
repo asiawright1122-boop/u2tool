@@ -1,167 +1,139 @@
-# Cloudflare Workers 部署指南
+# Cloudflare Pages 部署指南
 
-## 概述
+> 说明：这个文件名保留了历史上的 `WORKERS` 命名，但当前仓库实际是 Astro 静态站，部署目标应视为 Cloudflare Pages 静态项目，而不是 Cloudflare Workers 运行时应用。
 
-本项目使用 `@opennextjs/cloudflare` 将 Next.js 应用部署到 Cloudflare Workers。
+## 当前事实
 
-## 优势对比
+从当前仓库可以确认：
 
-| 特性 | Vercel (免费版) | Cloudflare Workers |
-|------|----------------|-------------------|
-| 构建磁盘限制 | ~13GB | 无限制 |
-| 函数执行时间 | 10s | 30s (免费) / 无限 (付费) |
-| 带宽 | 100GB/月 | 无限制 |
-| 请求数 | 无限制 | 10万/天 (免费) / 无限 (付费) |
-| 边缘节点 | ~20 | 300+ |
-| 中国访问 | 较慢 | 快（有中国节点） |
+- [`astro.config.mjs`](/Users/kaka/Dev/u2tool/astro.config.mjs) 使用 `output: 'static'`
+- 构建产物目录是 `dist/`
+- [`public/_headers`](/Users/kaka/Dev/u2tool/public/_headers) 和 [`public/_redirects`](/Users/kaka/Dev/u2tool/public/_redirects) 采用的是 Cloudflare Pages 约定
+- 仓库中没有 `wrangler.toml`
+- [`package.json`](/Users/kaka/Dev/u2tool/package.json) 中没有 `deploy:cf` 或 `build:cf`
 
-## 前置条件
+这意味着当前推荐部署方式是：
 
-1. Cloudflare 账号
-2. 域名已添加到 Cloudflare（可选，用于自定义域名）
-3. Node.js 18+
+1. Cloudflare Pages 连接 Git 仓库自动构建
+2. 或者手动把 `dist/` 发布到 Cloudflare Pages
 
-## 部署步骤
+## 部署前检查
 
-### 1. 登录 Cloudflare
+推荐先在本地跑：
 
 ```bash
-npx wrangler login
+npm run qa:ai-discovery:strict
 ```
 
-### 2. 构建并部署
+如果只是常规发布，至少执行：
 
 ```bash
-# 构建 + 部署到生产环境
-npm run deploy:cf
-
-# 或者分步执行
-npm run build:cf    # 构建
-npx wrangler deploy # 部署
+npm run build
 ```
 
-### 3. 配置自定义域名
+## Cloudflare Pages 项目配置
 
-在 `wrangler.toml` 中配置：
+如果使用 Git 集成，请在 Cloudflare Dashboard 中把项目配置为：
 
-```toml
-[env.production]
-routes = [
-  { pattern = "www.u2tool.com", custom_domain = true },
-  { pattern = "u2tool.com", custom_domain = true }
-]
+- Framework preset: `Astro` 或 `None`
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Root directory: 仓库根目录
+
+当前仓库没有内置部署脚本，所以不要按旧文档去找 `npm run deploy:cf`。
+
+## 环境变量
+
+当前部署最关键的变量是：
+
+- `PUBLIC_SITE_URL=https://www.u2tool.com`
+- `PUBLIC_AI_DISCOVERY_ENABLED=true` 或 `false`
+
+说明：
+
+- `PUBLIC_SITE_URL` 用于 canonical、hreflang、sitemap 和页面绝对地址
+- `PUBLIC_AI_DISCOVERY_ENABLED` 控制 AI discovery 页面、搜索 API 行为和 telemetry 接收
+- 这是 Astro 构建时环境变量；在 Cloudflare Pages 中修改后，需要重新触发一次部署才能生效
+
+如果只是准备灰度 AI discovery，最小配置就是：
+
+```text
+PUBLIC_SITE_URL=https://www.u2tool.com
+PUBLIC_AI_DISCOVERY_ENABLED=true
 ```
 
-然后在 Cloudflare Dashboard 中：
-1. 进入 Workers & Pages
-2. 选择你的 Worker
-3. 点击 "Custom Domains"
-4. 添加域名
+## 发布方式
 
-### 4. 配置环境变量
+### 方式 1：Git 集成自动部署
 
-在 Cloudflare Dashboard 中：
-1. 进入 Workers & Pages > u2tool > Settings > Variables
-2. 添加环境变量：
-   - `INDEXNOW_KEY`
-   - `NEXT_PUBLIC_BASE_URL`
+推荐用于正式环境。
 
-或者在 `wrangler.toml` 中配置：
+1. 确认 `main` 已推到远端
+2. 在 Cloudflare Pages 项目中确认上述构建配置和环境变量
+3. 触发一次新的 production deployment
+4. 等待 Pages 完成构建并发布
 
-```toml
-[vars]
-NEXT_PUBLIC_BASE_URL = "https://www.u2tool.com"
-```
+### 方式 2：手动部署静态产物
 
-敏感变量使用 secrets：
+如果需要手动发布：
+
+1. 本地执行 `npm run build`
+2. 确认产物在 `dist/`
+3. 通过 Cloudflare Pages 控制台上传 `dist/`
+
+如果你的本机已经安装并登录了 Wrangler，也可以使用：
 
 ```bash
-npx wrangler secret put INDEXNOW_KEY
+npx wrangler pages deploy dist --project-name <your-pages-project>
 ```
 
-## 本地开发
+注意：这是可选 CLI 路径，不是仓库内置脚本。
 
-```bash
-# 使用 Cloudflare Workers 本地模拟器
-npm run dev:cf
+## AI Discovery 灰度步骤
 
-# 或者使用标准 Next.js 开发服务器
-npm run dev
-```
-
-## 常见问题
-
-### Q: 构建失败 "Worker size limit exceeded"
-
-Workers 免费版有 1MB 的 Worker 大小限制。解决方案：
-
-1. 升级到 Workers Paid（$5/月），限制提升到 10MB
-2. 优化代码，减少依赖
-
-### Q: 翻译文件太大怎么办？
-
-可以将翻译文件存储到 R2：
-
-1. 创建 R2 存储桶
-2. 上传翻译文件
-3. 在 Worker 中从 R2 读取
-
-```toml
-[[r2_buckets]]
-binding = "TRANSLATIONS"
-bucket_name = "u2tool-translations"
-```
-
-### Q: 如何使用 KV 缓存？
-
-1. 创建 KV 命名空间：
-   ```bash
-   npx wrangler kv:namespace create CACHE
-   ```
-
-2. 在 `wrangler.toml` 中配置：
-   ```toml
-   [[kv_namespaces]]
-   binding = "CACHE"
-   id = "your-kv-namespace-id"
-   ```
-
-### Q: ISR 在 Workers 上如何工作？
-
-`@opennextjs/cloudflare` 支持 ISR，但需要配置 KV 存储来缓存页面。
-
-## 监控和日志
-
-```bash
-# 查看实时日志
-npx wrangler tail
-
-# 查看部署状态
-npx wrangler deployments list
-```
+1. 在 Cloudflare Pages 项目中把 `PUBLIC_AI_DISCOVERY_ENABLED` 设为 `true`
+2. 重新部署当前 `main`
+3. 发布后执行 [`docs/AI_DISCOVERY_LAYER.md`](/Users/kaka/Dev/u2tool/docs/AI_DISCOVERY_LAYER.md) 里的 `Manual QA Checklist`
+4. 重点验证：
+   - `/{locale}/ai`
+   - 头部全局搜索无结果跳转到 AI 页
+   - `/api/ai-discovery/search`
+   - `/api/ai-discovery/events`
 
 ## 回滚
 
-```bash
-# 列出所有部署
-npx wrangler deployments list
+最快的回滚方式不是回滚代码，而是关闭特性开关：
 
-# 回滚到指定版本
-npx wrangler rollback <deployment-id>
-```
+1. 把 `PUBLIC_AI_DISCOVERY_ENABLED` 改为 `false`
+2. 重新部署
 
-## 成本估算
+结果：
 
-| 计划 | 价格 | 包含 |
-|------|------|------|
-| Free | $0 | 10万请求/天, 1MB Worker |
-| Paid | $5/月 | 1000万请求/月, 10MB Worker |
-| Enterprise | 联系销售 | 无限制 |
+- `/{locale}/ai` 会回到工具列表
+- telemetry 端点变成空操作
+- 既有工具页和 SEO 路由保持不变
 
-对于 u2tool 这样的工具网站，免费版通常足够。如果流量增长，$5/月的付费版性价比很高。
+如果需要代码级回滚，再回退以下路径对应的提交：
 
-## 相关链接
+- [`src/lib/ai-discovery`](/Users/kaka/Dev/u2tool/src/lib/ai-discovery)
+- [`src/components/ai`](/Users/kaka/Dev/u2tool/src/components/ai)
+- [`src/pages/[locale]/ai.astro`](/Users/kaka/Dev/u2tool/src/pages/[locale]/ai.astro)
+- [`src/pages/api/ai-discovery`](/Users/kaka/Dev/u2tool/src/pages/api/ai-discovery)
+- [`src/components/ui/GlobalSearch.svelte`](/Users/kaka/Dev/u2tool/src/components/ui/GlobalSearch.svelte)
 
-- [OpenNext Cloudflare 文档](https://opennext.js.org/cloudflare)
-- [Cloudflare Workers 文档](https://developers.cloudflare.com/workers/)
-- [Wrangler CLI 文档](https://developers.cloudflare.com/workers/wrangler/)
+## 监控与验收
+
+发布后建议记录这几项：
+
+- Cloudflare Pages 构建是否成功
+- `/en/ai` 是否可访问
+- `query_submitted` 是否开始出现
+- `result_clicked` 与 `fallback_viewed` 是否有首批回流
+
+最小验收标准：
+
+1. Pages 构建成功
+2. AI discovery 路由可访问
+3. 搜索 API 可返回 JSON
+4. fallback 正常
+5. telemetry 有回流

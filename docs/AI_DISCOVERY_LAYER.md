@@ -51,6 +51,8 @@ Behavior:
 - `true`: `/[locale]/ai` is available and telemetry is accepted
 - missing or any other value: AI page redirects to `/{locale}/tools`, telemetry endpoint returns `204`
 
+Because this site is built as a static Astro project, `PUBLIC_AI_DISCOVERY_ENABLED` is evaluated at build time. In Cloudflare Pages, changing it requires a new deployment.
+
 ## Telemetry
 
 Current events:
@@ -77,9 +79,9 @@ Optional stricter check:
 npm run qa:ai-discovery:strict
 ```
 
-Note:
+Current behavior:
 - `qa:ai-discovery:strict` includes `npm run check`
-- the repository currently has unrelated historical type issues, so strict mode may fail before AI discovery changes are the cause
+- `astro check` currently finishes with `0 errors`, `0 warnings`, and non-blocking hints
 
 ## Manual QA Checklist
 
