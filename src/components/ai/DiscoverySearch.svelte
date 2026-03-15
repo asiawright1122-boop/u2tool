@@ -2,6 +2,7 @@
   import { getLocalizedPath } from '@/lib/i18n';
   import type { Locale } from '@/lib/i18n';
   import { buildDiscoveryEvent, sendDiscoveryEvents } from '@/lib/ai-discovery/telemetry';
+  import { createTranslator } from '@/lib/translations';
   import * as Icon from 'lucide-svelte';
 
   interface DiscoveryMatch {
@@ -25,9 +26,10 @@
 
   interface Props {
     locale: string;
+    translations?: Record<string, unknown>;
   }
 
-  let { locale }: Props = $props();
+  let { locale, translations = {} }: Props = $props();
 
   let query = $state('');
   let isLoading = $state(false);
@@ -37,6 +39,45 @@
   let action = $state<'direct' | 'suggest' | 'fallback'>('fallback');
   let confidence = $state(0);
   let fallbackEventSent = $state(false);
+
+  function t(key: string, fallback: string): string {
+    const translator = createTranslator(translations as Record<string, unknown>);
+    return translator(key, fallback);
+  }
+
+  const pageTitle = $derived(
+    t('aiDiscovery.heroTitle', 'AI Tool Discovery')
+  );
+  const pageDescription = $derived(
+    t(
+      'aiDiscovery.heroDescription',
+      'Describe what you want to do, and we will map it to the best existing tool first.'
+    )
+  );
+  const inputPlaceholder = $derived(
+    t('aiDiscovery.inputPlaceholder', 'Example: convert json to csv')
+  );
+  const submitIdleLabel = $derived(
+    t('aiDiscovery.submitIdle', 'Find Tool')
+  );
+  const submitLoadingLabel = $derived(
+    t('aiDiscovery.submitLoading', 'Searching...')
+  );
+  const directResultSummary = $derived(
+    t('aiDiscovery.directResultSummary', 'Best match found.')
+  );
+  const suggestResultSummary = $derived(
+    t('aiDiscovery.suggestResultSummary', 'Here are suggested matches.')
+  );
+  const confidenceLabel = $derived(
+    t('aiDiscovery.confidenceLabel', 'Confidence')
+  );
+  const noMatchMessage = $derived(
+    t('aiDiscovery.noMatchMessage', 'No confident match found for this query yet.')
+  );
+  const browseAllToolsLabel = $derived(
+    t('aiDiscovery.browseAllTools', 'Browse all tools')
+  );
 
   let initializedFromUrl = false;
   $effect(() => {
@@ -82,7 +123,7 @@
     fallbackEventSent = false;
 
     if (!trimmed) {
-      error = 'Please enter a query.';
+      error = t('aiDiscovery.emptyQueryError', 'Please enter a query.');
       updateQueryInUrl('');
       return;
     }
@@ -93,7 +134,7 @@
       const response = await fetch(`/api/ai-discovery/search?locale=${encodeURIComponent(locale)}&q=${encodeURIComponent(trimmed)}`);
       const payload = await response.json() as DiscoveryResponse | { error?: string; message?: string };
       if (!response.ok) {
-        error = payload.message ?? payload.error ?? 'Search failed.';
+        error = payload.message ?? payload.error ?? t('aiDiscovery.requestFailedError', 'Search failed.');
         return;
       }
 
@@ -114,7 +155,7 @@
       }
     } catch (err) {
       console.error('[DiscoverySearch] request failed', err);
-      error = 'Failed to search. Please try again.';
+      error = t('aiDiscovery.requestFailedError', 'Failed to search. Please try again.');
     } finally {
       isLoading = false;
     }
@@ -155,9 +196,9 @@
 
 <section class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm p-5 md:p-6">
   <div class="mb-5">
-    <h1 class="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white">AI Tool Discovery</h1>
+    <h1 class="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white">{pageTitle}</h1>
     <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
-      Describe what you want to do, and we will map it to the best existing tool first.
+      {pageDescription}
     </p>
   </div>
 
@@ -165,7 +206,8 @@
     <input
       bind:value={query}
       type="text"
-      placeholder="Example: convert json to csv"
+      placeholder={inputPlaceholder}
+      aria-label={inputPlaceholder}
       class="flex-1 h-10 px-3 rounded-lg border border-gray-200 dark:border-gray-700
              bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white
              focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -179,7 +221,7 @@
       {#if isLoading}
         <Icon.Loader2 class="w-4 h-4 animate-spin" />
       {/if}
-      <span>{isLoading ? 'Searching...' : 'Find Tool'}</span>
+      <span>{isLoading ? submitLoadingLabel : submitIdleLabel}</span>
     </button>
   </form>
 
@@ -194,10 +236,10 @@
       {#if results.length > 0}
         <div class="mb-3 flex items-center justify-between gap-4">
           <p class="text-sm text-gray-600 dark:text-gray-300">
-            {action === 'direct' ? 'Best match found.' : 'Here are suggested matches.'}
+            {action === 'direct' ? directResultSummary : suggestResultSummary}
           </p>
           <span class="text-xs px-2 py-1 rounded-full bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
-            Confidence {(confidence * 100).toFixed(0)}%
+            {confidenceLabel} {(confidence * 100).toFixed(0)}%
           </span>
         </div>
 
@@ -221,14 +263,14 @@
       {:else}
         <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/60 p-4">
           <p class="text-sm text-gray-700 dark:text-gray-300">
-            No confident match found for this query yet.
+            {noMatchMessage}
           </p>
           <div class="mt-3">
             <a
               href={toToolsPath()}
               class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-900 text-white dark:bg-white dark:text-gray-900 text-sm font-medium"
             >
-              Browse all tools
+              {browseAllToolsLabel}
               <Icon.ArrowRight class="w-4 h-4" />
             </a>
           </div>

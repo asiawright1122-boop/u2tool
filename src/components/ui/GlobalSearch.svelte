@@ -8,6 +8,7 @@
   import { getLocalizedPath } from '@/lib/i18n';
   import type { Locale } from '@/lib/i18n';
   import { buildAiDiscoveryLink } from '@/lib/ai-discovery/query-link';
+  import { createTranslator } from '@/lib/translations';
   import * as Icon from 'lucide-svelte';
 
   interface Props {
@@ -32,54 +33,25 @@
   let searchInputRef: HTMLInputElement | undefined = $state();
   let isLoading = $state(false);
 
-  const AI_DISCOVERY_BUTTON_LABELS: Record<string, string> = {
-    en: 'Try AI discovery',
-    zh: '试试 AI 发现',
-    ja: 'AI discovery を試す',
-    ko: 'AI discovery 사용해 보기',
-    es: 'Probar AI discovery',
-    pt: 'Experimentar AI discovery',
-    fr: 'Essayer AI discovery',
-    de: 'AI discovery ausprobieren',
-    ru: 'Попробовать AI discovery',
-    ar: 'جرّب AI discovery',
-  };
-
-  function getNestedValue(source: Record<string, unknown>, path: string): unknown {
-    let value: unknown = source;
-    for (const key of path.split('.')) {
-      value = (value as Record<string, unknown> | undefined)?.[key];
-    }
-    return value;
-  }
-
-  function translate(paths: string[], fallback: string): string {
-    const messages = translations as Record<string, unknown>;
-
-    for (const path of paths) {
-      const value = getNestedValue(messages, path);
-      if (typeof value === 'string' && value.trim().length > 0) {
-        return value;
-      }
-    }
-
-    return fallback;
+  function t(key: string, fallback: string): string {
+    const translator = createTranslator(translations as Record<string, unknown>);
+    return translator(key, fallback);
   }
 
   const searchPlaceholder = $derived(
-    translate(['search.placeholder', 'nav.searchPlaceholder'], 'Search tools...')
+    t('search.placeholder', t('nav.searchPlaceholder', 'Search tools...'))
   );
   const searchButtonLabel = $derived(
-    translate(['common.search', 'nav.search'], 'Search')
+    t('common.search', 'Search')
   );
   const searchLoadingLabel = $derived(
-    translate(['common.loading'], 'Loading...')
+    t('common.loading', 'Loading...')
   );
   const noResultsLabel = $derived(
-    translate(['search.noResults', 'nav.noResults'], 'No tools found')
+    t('search.noResults', t('nav.noResults', 'No tools found'))
   );
   const aiDiscoveryButtonLabel = $derived(
-    AI_DISCOVERY_BUTTON_LABELS[locale] ?? AI_DISCOVERY_BUTTON_LABELS.en
+    t('aiDiscovery.globalSearchCta', 'Try AI discovery')
   );
 
   async function loadToolsIndex() {

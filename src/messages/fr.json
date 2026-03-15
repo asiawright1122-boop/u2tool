@@ -112,6 +112,23 @@
     "categories": "Catégories",
     "launches": "Lancements"
   },
+  "aiDiscovery": {
+    "pageTitle": "Découverte d'outils IA",
+    "pageDescription": "Décrivez votre intention et trouvez rapidement l'outil existant le plus adapté.",
+    "heroTitle": "Découverte d'outils IA",
+    "heroDescription": "Décrivez ce que vous voulez faire et nous vous orienterons d'abord vers l'outil existant le plus adapté.",
+    "inputPlaceholder": "Exemple : convertir json en csv",
+    "submitIdle": "Trouver un outil",
+    "submitLoading": "Recherche...",
+    "emptyQueryError": "Veuillez saisir une requête.",
+    "requestFailedError": "La recherche a échoué. Veuillez réessayer.",
+    "directResultSummary": "Meilleure correspondance trouvée.",
+    "suggestResultSummary": "Voici quelques correspondances suggérées.",
+    "confidenceLabel": "Confiance",
+    "noMatchMessage": "Aucune correspondance fiable n'a encore été trouvée pour cette requête.",
+    "browseAllTools": "Voir tous les outils",
+    "globalSearchCta": "Essayer la découverte IA"
+  },
   "home": {
     "hero": {
       "title": "Outils en ligne gratuits",

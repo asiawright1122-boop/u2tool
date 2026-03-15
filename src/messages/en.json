@@ -112,6 +112,23 @@
     "categories": "Categories",
     "launches": "Launches"
   },
+  "aiDiscovery": {
+    "pageTitle": "AI Tool Discovery",
+    "pageDescription": "Describe your intent and find the right existing tool quickly.",
+    "heroTitle": "AI Tool Discovery",
+    "heroDescription": "Describe what you want to do, and we will map it to the best existing tool first.",
+    "inputPlaceholder": "Example: convert json to csv",
+    "submitIdle": "Find Tool",
+    "submitLoading": "Searching...",
+    "emptyQueryError": "Please enter a query.",
+    "requestFailedError": "Failed to search. Please try again.",
+    "directResultSummary": "Best match found.",
+    "suggestResultSummary": "Here are suggested matches.",
+    "confidenceLabel": "Confidence",
+    "noMatchMessage": "No confident match found for this query yet.",
+    "browseAllTools": "Browse all tools",
+    "globalSearchCta": "Try AI discovery"
+  },
   "home": {
     "hero": {
       "title": "Free Online Tools",

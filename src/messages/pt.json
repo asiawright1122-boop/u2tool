@@ -112,6 +112,23 @@
     "categories": "Categorias",
     "launches": "Lançamentos"
   },
+  "aiDiscovery": {
+    "pageTitle": "Descoberta de Ferramentas com IA",
+    "pageDescription": "Descreva sua intenção e encontre rapidamente a ferramenta existente certa.",
+    "heroTitle": "Descoberta de Ferramentas com IA",
+    "heroDescription": "Descreva o que você quer fazer e vamos primeiro mapear para a melhor ferramenta existente.",
+    "inputPlaceholder": "Exemplo: converter json para csv",
+    "submitIdle": "Encontrar ferramenta",
+    "submitLoading": "Pesquisando...",
+    "emptyQueryError": "Digite uma consulta.",
+    "requestFailedError": "Falha na busca. Tente novamente.",
+    "directResultSummary": "Melhor correspondência encontrada.",
+    "suggestResultSummary": "Aqui estão algumas correspondências sugeridas.",
+    "confidenceLabel": "Confiança",
+    "noMatchMessage": "Ainda não encontramos uma correspondência confiável para esta consulta.",
+    "browseAllTools": "Ver todas as ferramentas",
+    "globalSearchCta": "Experimentar descoberta com IA"
+  },
   "home": {
     "hero": {
       "title": "Ferramentas Online Gratuitas",

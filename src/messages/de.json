@@ -112,6 +112,23 @@
     "categories": "Kategorien",
     "launches": "Einführungen"
   },
+  "aiDiscovery": {
+    "pageTitle": "KI-Tool-Finder",
+    "pageDescription": "Beschreibe dein Anliegen und finde schnell das passende bestehende Tool.",
+    "heroTitle": "KI-Tool-Finder",
+    "heroDescription": "Beschreibe, was du tun möchtest, und wir ordnen es zuerst dem passendsten bestehenden Tool zu.",
+    "inputPlaceholder": "Beispiel: json in csv umwandeln",
+    "submitIdle": "Tool finden",
+    "submitLoading": "Suche läuft...",
+    "emptyQueryError": "Bitte gib eine Suchanfrage ein.",
+    "requestFailedError": "Die Suche ist fehlgeschlagen. Bitte versuche es erneut.",
+    "directResultSummary": "Beste Übereinstimmung gefunden.",
+    "suggestResultSummary": "Hier sind empfohlene Treffer.",
+    "confidenceLabel": "Trefferquote",
+    "noMatchMessage": "Für diese Anfrage wurde noch keine verlässliche Übereinstimmung gefunden.",
+    "browseAllTools": "Alle Tools ansehen",
+    "globalSearchCta": "KI-Entdeckung ausprobieren"
+  },
   "home": {
     "hero": {
       "title": "Kostenlose Online-Tools",

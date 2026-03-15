@@ -112,6 +112,23 @@
     "categories": "الفئات",
     "launches": "الإطلاقات"
   },
+  "aiDiscovery": {
+    "pageTitle": "اكتشاف الأدوات بالذكاء الاصطناعي",
+    "pageDescription": "صف ما تريد فعله واعثر بسرعة على الأداة الحالية المناسبة.",
+    "heroTitle": "اكتشاف الأدوات بالذكاء الاصطناعي",
+    "heroDescription": "صف ما تريد القيام به، وسنربطه أولاً بأفضل أداة حالية مناسبة.",
+    "inputPlaceholder": "مثال: تحويل json إلى csv",
+    "submitIdle": "اعثر على الأداة",
+    "submitLoading": "جارٍ البحث...",
+    "emptyQueryError": "يرجى إدخال استعلام.",
+    "requestFailedError": "فشل البحث. حاول مرة أخرى.",
+    "directResultSummary": "تم العثور على أفضل تطابق.",
+    "suggestResultSummary": "إليك بعض التطابقات المقترحة.",
+    "confidenceLabel": "الثقة",
+    "noMatchMessage": "لم يتم العثور بعد على تطابق موثوق لهذا الاستعلام.",
+    "browseAllTools": "تصفح جميع الأدوات",
+    "globalSearchCta": "جرّب الاكتشاف بالذكاء الاصطناعي"
+  },
   "home": {
     "hero": {
       "title": "أدوات مجانية عبر الإنترنت",

@@ -112,6 +112,23 @@
     "categories": "Categorías",
     "launches": "Lanzamientos"
   },
+  "aiDiscovery": {
+    "pageTitle": "Descubrimiento de herramientas con IA",
+    "pageDescription": "Describe tu intención y encuentra rápidamente la herramienta existente adecuada.",
+    "heroTitle": "Descubrimiento de herramientas con IA",
+    "heroDescription": "Describe lo que quieres hacer y primero te llevaremos a la herramienta existente más adecuada.",
+    "inputPlaceholder": "Ejemplo: convertir json a csv",
+    "submitIdle": "Encontrar herramienta",
+    "submitLoading": "Buscando...",
+    "emptyQueryError": "Introduce una consulta.",
+    "requestFailedError": "La búsqueda falló. Inténtalo de nuevo.",
+    "directResultSummary": "Se encontró la mejor coincidencia.",
+    "suggestResultSummary": "Estas son algunas coincidencias sugeridas.",
+    "confidenceLabel": "Confianza",
+    "noMatchMessage": "Aún no se encontró una coincidencia fiable para esta consulta.",
+    "browseAllTools": "Ver todas las herramientas",
+    "globalSearchCta": "Probar descubrimiento con IA"
+  },
   "home": {
     "hero": {
       "title": "Herramientas en línea gratuitas",

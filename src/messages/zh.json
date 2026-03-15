@@ -112,6 +112,23 @@
     "categories": "分类",
     "launches": "产品发布"
   },
+  "aiDiscovery": {
+    "pageTitle": "AI 工具发现",
+    "pageDescription": "描述你的需求，快速找到最合适的现有工具。",
+    "heroTitle": "AI 工具发现",
+    "heroDescription": "告诉我们你想完成什么，我们会优先将你匹配到最合适的现有工具。",
+    "inputPlaceholder": "例如：json 转 csv",
+    "submitIdle": "查找工具",
+    "submitLoading": "搜索中...",
+    "emptyQueryError": "请输入查询内容。",
+    "requestFailedError": "搜索失败，请稍后重试。",
+    "directResultSummary": "已找到最匹配的工具。",
+    "suggestResultSummary": "这里是推荐的匹配结果。",
+    "confidenceLabel": "匹配度",
+    "noMatchMessage": "暂时没有为这个查询找到高置信度匹配结果。",
+    "browseAllTools": "浏览全部工具",
+    "globalSearchCta": "试试 AI 工具发现"
+  },
   "home": {
     "hero": {
       "title": "免费在线工具",

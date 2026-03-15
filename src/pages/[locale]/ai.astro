@@ -30,18 +30,21 @@ const baseMessages = await loadBaseMessages(locale);
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
 const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
 const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
+const aiMessages = (baseMessages.aiDiscovery as Record<string, string>) ?? {};
 const BASE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://www.u2tool.com';
+const aiPageTitle = aiMessages.pageTitle || 'AI Tool Discovery';
+const aiPageDescription = aiMessages.pageDescription || 'Describe your intent and find the right existing tool quickly.';
 ---
 
 <BaseLayout
-  title={`AI Tool Discovery | U2Tool`}
-  description="Describe your intent and find the right existing tool quickly."
+  title={`${aiPageTitle} | U2Tool`}
+  description={aiPageDescription}
   locale={locale}
   canonicalPath="/ai"
 >
   <HreflangTags path="/ai" slot="head" />
-  <meta property="og:title" content="AI Tool Discovery | U2Tool" slot="head" />
-  <meta property="og:description" content="Describe your intent and find the right existing tool quickly." slot="head" />
+  <meta property="og:title" content={`${aiPageTitle} | U2Tool`} slot="head" />
+  <meta property="og:description" content={aiPageDescription} slot="head" />
   <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
   <meta property="og:type" content="website" slot="head" />
   <meta property="og:url" content={`${BASE_URL}/${locale}/ai`} slot="head" />
@@ -59,7 +62,7 @@ const BASE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://www.u2tool.com';
 
     <main class="py-6 px-4">
       <div class="max-w-4xl mx-auto">
-        <DiscoverySearch client:load locale={locale} />
+        <DiscoverySearch client:load locale={locale} translations={baseMessages} />
       </div>
     </main>
 

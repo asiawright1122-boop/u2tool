@@ -112,6 +112,23 @@
     "categories": "카테고리",
     "launches": "출시"
   },
+  "aiDiscovery": {
+    "pageTitle": "AI 도구 탐색",
+    "pageDescription": "원하는 작업을 설명하면 적합한 기존 도구를 빠르게 찾을 수 있습니다.",
+    "heroTitle": "AI 도구 탐색",
+    "heroDescription": "무엇을 하고 싶은지 설명해 주시면 먼저 가장 알맞은 기존 도구로 연결해 드립니다.",
+    "inputPlaceholder": "예: json을 csv로 변환",
+    "submitIdle": "도구 찾기",
+    "submitLoading": "검색 중...",
+    "emptyQueryError": "검색어를 입력해 주세요.",
+    "requestFailedError": "검색에 실패했습니다. 다시 시도해 주세요.",
+    "directResultSummary": "가장 적합한 결과를 찾았습니다.",
+    "suggestResultSummary": "추천 결과를 보여드릴게요.",
+    "confidenceLabel": "신뢰도",
+    "noMatchMessage": "아직 이 검색어에 대한 높은 신뢰도의 결과를 찾지 못했습니다.",
+    "browseAllTools": "모든 도구 보기",
+    "globalSearchCta": "AI 도구 탐색 사용해 보기"
+  },
   "home": {
     "hero": {
       "title": "무료 온라인 도구",

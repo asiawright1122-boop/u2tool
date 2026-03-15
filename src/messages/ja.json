@@ -112,6 +112,23 @@
     "categories": "カテゴリー",
     "launches": "ローンチ"
   },
+  "aiDiscovery": {
+    "pageTitle": "AIツール探索",
+    "pageDescription": "やりたいことを説明すると、最適な既存ツールをすばやく見つけられます。",
+    "heroTitle": "AIツール探索",
+    "heroDescription": "何をしたいかを入力すると、まず最適な既存ツールにマッピングします。",
+    "inputPlaceholder": "例: json を csv に変換",
+    "submitIdle": "ツールを探す",
+    "submitLoading": "検索中...",
+    "emptyQueryError": "検索内容を入力してください。",
+    "requestFailedError": "検索に失敗しました。もう一度お試しください。",
+    "directResultSummary": "最適な一致が見つかりました。",
+    "suggestResultSummary": "候補となる一致を表示しています。",
+    "confidenceLabel": "信頼度",
+    "noMatchMessage": "この検索に対する十分な一致はまだ見つかっていません。",
+    "browseAllTools": "すべてのツールを見る",
+    "globalSearchCta": "AIツール探索を試す"
+  },
   "home": {
     "hero": {
       "title": "無料のオンラインツール",
