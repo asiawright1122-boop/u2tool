@@ -32,15 +32,55 @@
   let searchInputRef: HTMLInputElement | undefined = $state();
   let isLoading = $state(false);
 
-  const translationsTyped = $derived(translations as Record<string, Record<string, unknown>>);
+  const AI_DISCOVERY_BUTTON_LABELS: Record<string, string> = {
+    en: 'Try AI discovery',
+    zh: '试试 AI 发现',
+    ja: 'AI discovery を試す',
+    ko: 'AI discovery 사용해 보기',
+    es: 'Probar AI discovery',
+    pt: 'Experimentar AI discovery',
+    fr: 'Essayer AI discovery',
+    de: 'AI discovery ausprobieren',
+    ru: 'Попробовать AI discovery',
+    ar: 'جرّب AI discovery',
+  };
 
-  function t(key: string): string {
-    const scope = translationsTyped['search'] as Record<string, unknown> || {};
-    const keys = key.split('.');
-    let value: unknown = scope;
-    for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
-    return typeof value === 'string' ? value : key;
+  function getNestedValue(source: Record<string, unknown>, path: string): unknown {
+    let value: unknown = source;
+    for (const key of path.split('.')) {
+      value = (value as Record<string, unknown> | undefined)?.[key];
+    }
+    return value;
   }
+
+  function translate(paths: string[], fallback: string): string {
+    const messages = translations as Record<string, unknown>;
+
+    for (const path of paths) {
+      const value = getNestedValue(messages, path);
+      if (typeof value === 'string' && value.trim().length > 0) {
+        return value;
+      }
+    }
+
+    return fallback;
+  }
+
+  const searchPlaceholder = $derived(
+    translate(['search.placeholder', 'nav.searchPlaceholder'], 'Search tools...')
+  );
+  const searchButtonLabel = $derived(
+    translate(['common.search', 'nav.search'], 'Search')
+  );
+  const searchLoadingLabel = $derived(
+    translate(['common.loading'], 'Loading...')
+  );
+  const noResultsLabel = $derived(
+    translate(['search.noResults', 'nav.noResults'], 'No tools found')
+  );
+  const aiDiscoveryButtonLabel = $derived(
+    AI_DISCOVERY_BUTTON_LABELS[locale] ?? AI_DISCOVERY_BUTTON_LABELS.en
+  );
 
   async function loadToolsIndex() {
     if (toolsIndex.length > 0) return;
@@ -141,9 +181,6 @@
 
     navigateToAiDiscovery(searchQuery);
   }
-
-  let currentResults = $derived(searchResults());
- 
    function handleInput() {
      if (searchQuery.trim().length > 0) {
        isOpen = true;
@@ -206,6 +243,8 @@
       type="text"
       bind:this={searchInputRef}
       bind:value={searchQuery}
+      placeholder={searchPlaceholder}
+      aria-label={searchPlaceholder}
       oninput={handleInput}
       onkeydown={handleKeydown}
       onfocus={handleFocus}
@@ -221,7 +260,7 @@
              text-white text-sm font-medium transition-colors flex items-center gap-1"
     >
       <Icon.Search class="w-4 h-4" />
-      <span>搜索</span>
+      <span>{searchButtonLabel}</span>
     </button>
   </div>
 
@@ -231,7 +270,7 @@
                 overflow-hidden z-50">
       {#if isLoading}
         <div class="px-4 py-3 text-sm text-gray-500 dark:text-gray-400 text-center">
-          Loading...
+          {searchLoadingLabel}
         </div>
       {:else if searchResults().length > 0}
         <ul class="py-1 max-h-80 overflow-y-auto">
@@ -261,12 +300,12 @@
         </ul>
       {:else if searchQuery.trim().length > 0}
         <div class="px-4 py-3 text-sm text-gray-500 dark:text-gray-400 text-center space-y-2">
-          <p>{t('noResults')}</p>
+          <p>{noResultsLabel}</p>
           <button
             onclick={() => navigateToAiDiscovery(searchQuery)}
             class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium transition-colors"
           >
-            Try AI discovery
+            {aiDiscoveryButtonLabel}
           </button>
         </div>
       {/if}
