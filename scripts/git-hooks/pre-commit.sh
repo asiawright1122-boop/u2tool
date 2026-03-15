@@ -40,6 +40,7 @@ JS_TS_FILES=$(echo "$STAGED_FILES" | grep -E '\.(js|ts|jsx|tsx|svelte|astro)$' |
 if [ -n "$JS_TS_FILES" ]; then
   CONSOLE_LOG_FILES=""
   DEBUGGER_FILES=""
+  DEBUGGER_PATTERN='(^|[[:space:];{}()])debugger([[:space:]]*;)?[[:space:]]*$'
   
   for file in $JS_TS_FILES; do
     if [ -f "$file" ]; then
@@ -48,8 +49,8 @@ if [ -n "$JS_TS_FILES" ]; then
         CONSOLE_LOG_FILES="$CONSOLE_LOG_FILES\n  $file"
       fi
       
-      # 检查 debugger
-      if grep -n 'debugger' "$file" | grep -v '//' | grep -v '/\*' > /dev/null; then
+      # 只拦截真正的 debugger 语句，避免误伤 jwt-debugger / JwtDebugger 之类的标识符或字符串
+      if grep -nE "$DEBUGGER_PATTERN" "$file" | grep -v '//' | grep -v '/\*' > /dev/null; then
         DEBUGGER_FILES="$DEBUGGER_FILES\n  $file"
       fi
     fi
