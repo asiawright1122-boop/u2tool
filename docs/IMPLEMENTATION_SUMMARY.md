@@ -1,5 +1,25 @@
 # 全面项目清理和优化系统 - 实现总结
 
+## 2026-03-15 AI 发现层里程碑
+
+本次新增了一条独立于现有 SEO 工具页的 AI 发现层，用于把自然语言查询优先映射到现有工具，而不是直接生成新工具。
+
+已完成内容：
+- 新增 `PUBLIC_AI_DISCOVERY_ENABLED` 特性开关
+- 新增 `src/lib/ai-discovery/` 匹配核心、索引构建、查询链接和 telemetry 模块
+- 新增 `/api/ai-discovery/search` 与 `/api/ai-discovery/events`
+- 新增 `/{locale}/ai` 页面和 `DiscoverySearch` 组件
+- 把头部 `GlobalSearch` 的无结果状态接到了 AI 发现页
+- 新增 `npm run qa:ai-discovery` 与 `npm run qa:ai-discovery:strict`
+
+当前定位：
+- Phase 1 只做“发现现有工具”
+- 不替换现有 `/{locale}/tools/{slug}` 路由
+- 不在这一阶段自动生成新工具
+
+运行手册：
+- `docs/AI_DISCOVERY_LAYER.md`
+
 生成时间: 2026/3/9 13:30:00
 
 ## 📊 实现概览

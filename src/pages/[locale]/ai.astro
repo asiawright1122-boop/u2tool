@@ -1,0 +1,70 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.svelte';
+import Sidebar from '@/components/layout/Sidebar.svelte';
+import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
+import Footer from '@/components/layout/Footer.astro';
+import HreflangTags from '@/components/seo/HreflangTags.astro';
+import DiscoverySearch from '@/components/ai/DiscoverySearch.svelte';
+import { categories } from '@/config/tools';
+import { locales } from '@/lib/i18n';
+import type { Locale } from '@/lib/i18n';
+import { loadBaseMessages } from '@/lib/translations';
+import { isAiDiscoveryEnabled } from '@/lib/ai-discovery/feature-flag';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return locales.map((locale) => ({
+    params: { locale },
+    props: { locale },
+  }));
+};
+
+const { locale } = Astro.props as { locale: Locale };
+
+if (!isAiDiscoveryEnabled()) {
+  return Astro.redirect(`/${locale}/tools`);
+}
+
+const baseMessages = await loadBaseMessages(locale);
+const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
+const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
+const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
+const BASE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://www.u2tool.com';
+---
+
+<BaseLayout
+  title={`AI Tool Discovery | U2Tool`}
+  description="Describe your intent and find the right existing tool quickly."
+  locale={locale}
+  canonicalPath="/ai"
+>
+  <HreflangTags path="/ai" slot="head" />
+  <meta property="og:title" content="AI Tool Discovery | U2Tool" slot="head" />
+  <meta property="og:description" content="Describe your intent and find the right existing tool quickly." slot="head" />
+  <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
+  <meta property="og:type" content="website" slot="head" />
+  <meta property="og:url" content={`${BASE_URL}/${locale}/ai`} slot="head" />
+  <meta name="twitter:card" content="summary_large_image" slot="head" />
+
+  <aside class="hidden lg:block fixed left-0 top-0 bottom-0 z-40" style="width: 220px">
+    <Sidebar client:load locale={locale} categories={categories} categoryNames={categoryMessages} navMessages={navMessages} siteName={siteMessages.name || 'U2Tool'} />
+  </aside>
+  <aside class="hidden md:block lg:hidden fixed left-0 top-0 bottom-0 z-40" style="width: 64px">
+    <Sidebar client:load locale={locale} categories={categories} categoryNames={categoryMessages} navMessages={navMessages} siteName={siteMessages.name || 'U2Tool'} />
+  </aside>
+
+  <div class="main-content-with-sidebar main-content-with-mobile-nav">
+    <Header client:load locale={locale} translations={baseMessages} />
+
+    <main class="py-6 px-4">
+      <div class="max-w-4xl mx-auto">
+        <DiscoverySearch client:load locale={locale} />
+      </div>
+    </main>
+
+    <Footer locale={locale} />
+  </div>
+
+  <MobileBottomNav client:load locale={locale} navMessages={navMessages} />
+</BaseLayout>

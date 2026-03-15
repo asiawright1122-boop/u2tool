@@ -33,7 +33,7 @@
 
     importer()
       .then((mod) => {
-        loadedComponent = mod.default;
+        loadedComponent = mod.default as ToolComponent;
         loading = false;
       })
       .catch((err) => {

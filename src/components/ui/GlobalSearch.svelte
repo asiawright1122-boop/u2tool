@@ -7,6 +7,7 @@
    */
   import { getLocalizedPath } from '@/lib/i18n';
   import type { Locale } from '@/lib/i18n';
+  import { buildAiDiscoveryLink } from '@/lib/ai-discovery/query-link';
   import * as Icon from 'lucide-svelte';
 
   interface Props {
@@ -123,13 +124,22 @@
     return results.sort((a, b) => b.score - a.score).slice(0, 8);
   });
 
-  function handleSearchClick() {
+  async function handleSearchClick() {
+    if (!searchQuery.trim()) {
+      return;
+    }
+
+    if (toolsIndex.length === 0) {
+      await loadToolsIndex();
+    }
+
     const results = searchResults();
     if (results.length > 0) {
       navigateToTool(results[0].slug);
-    } else if (searchQuery.trim() && toolsIndex.length === 0) {
-      loadToolsIndex();
+      return;
     }
+
+    navigateToAiDiscovery(searchQuery);
   }
 
   let currentResults = $derived(searchResults());
@@ -158,6 +168,9 @@
     } else if (e.key === 'Enter' && results[selectedIndex]) {
       e.preventDefault();
       navigateToTool(results[selectedIndex].slug);
+    } else if (e.key === 'Enter' && searchQuery.trim()) {
+      e.preventDefault();
+      void handleSearchClick();
     } else if (e.key === 'Escape') {
       isOpen = false;
       searchInputRef?.blur();
@@ -167,6 +180,11 @@
   function navigateToTool(slug: string) {
     const toolPath = getLocalizedPath(locale as Locale, `/tools/${slug}`);
     window.location.href = toolPath;
+  }
+
+  function navigateToAiDiscovery(query: string) {
+    const aiPath = buildAiDiscoveryLink(locale as Locale, query);
+    window.location.href = aiPath;
   }
 
   function handleFocus() {
@@ -198,7 +216,7 @@
              transition-all duration-200"
     />
     <button
-      onclick={handleSearchClick}
+      onclick={() => void handleSearchClick()}
       class="absolute right-1 top-1/2 -translate-y-1/2 h-7 px-3 rounded-md bg-blue-500 hover:bg-blue-600 
              text-white text-sm font-medium transition-colors flex items-center gap-1"
     >
@@ -242,8 +260,14 @@
           {/each}
         </ul>
       {:else if searchQuery.trim().length > 0}
-        <div class="px-4 py-3 text-sm text-gray-500 dark:text-gray-400 text-center">
-          {t('noResults')}
+        <div class="px-4 py-3 text-sm text-gray-500 dark:text-gray-400 text-center space-y-2">
+          <p>{t('noResults')}</p>
+          <button
+            onclick={() => navigateToAiDiscovery(searchQuery)}
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium transition-colors"
+          >
+            Try AI discovery
+          </button>
         </div>
       {/if}
     </div>
