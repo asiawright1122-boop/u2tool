@@ -79,9 +79,30 @@ Optional stricter check:
 npm run qa:ai-discovery:strict
 ```
 
+Query regression check (phase 2 quality loop):
+
+```bash
+npm run qa:ai-discovery:regression
+```
+
 Current behavior:
 - `qa:ai-discovery:strict` includes `npm run check`
 - `astro check` currently finishes with `0 errors`, `0 warnings`, and non-blocking hints
+
+## Query Regression Loop
+
+Use `docs/ai-discovery-regression-cases.json` as the baseline evaluation set for real-world intent quality.
+The regression command uses a stable baseline candidate set so matcher changes can be validated deterministically.
+
+Suggested workflow:
+1. Collect top fallback queries from telemetry (`fallback_viewed`).
+2. Add representative cases to `docs/ai-discovery-regression-cases.json` with:
+   - `expectedTopSlug` for known intent
+   - `expectedAction` for behavior-level checks
+   - `minConfidence` / `maxConfidence` guardrails
+3. Run `npm run qa:ai-discovery:regression`.
+4. Tune matcher rules / intent keywords.
+5. Re-run regression and keep the new cases in git to prevent quality regressions.
 
 ## Manual QA Checklist
 

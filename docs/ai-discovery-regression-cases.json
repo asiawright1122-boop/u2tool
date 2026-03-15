@@ -1,0 +1,45 @@
+[
+  {
+    "id": "json-to-csv-direct",
+    "locale": "en",
+    "query": "convert json to csv",
+    "expectedTopSlug": "json-to-csv",
+    "expectedAction": "direct",
+    "minConfidence": 0.5
+  },
+  {
+    "id": "cron-intent-top-match",
+    "locale": "en",
+    "query": "make cron expression",
+    "expectedTopSlug": "cron-generator",
+    "minConfidence": 0.45
+  },
+  {
+    "id": "docker-compose-intent-top-match",
+    "locale": "en",
+    "query": "docker compose file",
+    "expectedTopSlug": "docker-compose-generator",
+    "minConfidence": 0.45
+  },
+  {
+    "id": "meta-tags-intent-top-match",
+    "locale": "en",
+    "query": "seo meta tags",
+    "expectedTopSlug": "meta-tag-generator",
+    "minConfidence": 0.45
+  },
+  {
+    "id": "gitignore-intent-top-match",
+    "locale": "en",
+    "query": "create gitignore file",
+    "expectedTopSlug": "gitignore-generator",
+    "minConfidence": 0.35
+  },
+  {
+    "id": "nonsense-fallback",
+    "locale": "en",
+    "query": "qzvptm kkzzxx",
+    "expectedAction": "fallback",
+    "maxConfidence": 0.2
+  }
+]
