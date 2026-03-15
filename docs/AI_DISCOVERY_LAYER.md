@@ -85,6 +85,12 @@ Query regression check (phase 2 quality loop):
 npm run qa:ai-discovery:regression
 ```
 
+Generate candidate fallback cases from telemetry export (JSON or NDJSON):
+
+```bash
+npm run qa:ai-discovery:seed-regression -- --input <events.json> --locale en --limit 20
+```
+
 Current behavior:
 - `qa:ai-discovery:strict` includes `npm run check`
 - `astro check` currently finishes with `0 errors`, `0 warnings`, and non-blocking hints
@@ -96,13 +102,15 @@ The regression command uses a stable baseline candidate set so matcher changes c
 
 Suggested workflow:
 1. Collect top fallback queries from telemetry (`fallback_viewed`).
-2. Add representative cases to `docs/ai-discovery-regression-cases.json` with:
+2. Optionally generate a draft file using:
+   - `npm run qa:ai-discovery:seed-regression -- --input <events.json>`
+3. Add representative cases to `docs/ai-discovery-regression-cases.json` with:
    - `expectedTopSlug` for known intent
    - `expectedAction` for behavior-level checks
    - `minConfidence` / `maxConfidence` guardrails
-3. Run `npm run qa:ai-discovery:regression`.
-4. Tune matcher rules / intent keywords.
-5. Re-run regression and keep the new cases in git to prevent quality regressions.
+4. Run `npm run qa:ai-discovery:regression`.
+5. Tune matcher rules / intent keywords.
+6. Re-run regression and keep the new cases in git to prevent quality regressions.
 
 ## Manual QA Checklist
 
