@@ -70,14 +70,5 @@
 /ar/tools/base64-encode /ar/tools/base64 301
 /ar/tools/base64-decode /ar/tools/base64 301
 
-# Root redirect based on browser language (301 for SEO)
-/ /zh 301 Country=CN,SG,TW,HK
-/ /ja 301 Country=JP
-/ /ko 301 Country=KR
-/ /es 301 Country=ES,MX,AR,CL,CO
-/ /pt 301 Country=BR,PT
-/ /fr 301 Country=FR,BE,CH
-/ /de 301 Country=DE,AT,CH
-/ /ru 301 Country=RU
-/ /ar 301 Country=SA,EG,AE,KW,QA
+# Root redirect should stay in a Pages-supported format.
 / /en 301
