@@ -58,6 +58,7 @@ export const GET: APIRoute = async ({ request }) => {
     locale: localeParam,
     query,
     maxResults: 8,
+    assetBaseUrl: url,
   });
 
   return new Response(JSON.stringify(result), {

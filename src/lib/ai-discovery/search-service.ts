@@ -30,6 +30,7 @@ export interface DiscoverySearchInput {
   locale: string;
   query: string;
   maxResults?: number;
+  assetBaseUrl?: string | URL;
   dependencies?: DiscoverySearchDependencies;
 }
 
@@ -64,8 +65,11 @@ function computeConfidence(score: number): number {
   return Math.max(0, Math.min(1, score / 250));
 }
 
-async function defaultBuildIndex(locale: Locale): Promise<DiscoveryCandidate[]> {
-  const baseMessages = await loadBaseMessages(locale);
+async function defaultBuildIndex(
+  locale: Locale,
+  assetBaseUrl?: string | URL
+): Promise<DiscoveryCandidate[]> {
+  const baseMessages = await loadBaseMessages(locale, assetBaseUrl);
   const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
   const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
   return buildDiscoveryIndex(tools, toolsObj, categoryMessages);
@@ -86,7 +90,9 @@ export async function runDiscoverySearch(input: DiscoverySearchInput): Promise<D
   }
 
   const locale = isValidLocale(input.locale) ? input.locale : defaultLocale;
-  const buildIndex = input.dependencies?.buildIndex ?? defaultBuildIndex;
+  const buildIndex =
+    input.dependencies?.buildIndex ??
+    ((locale: Locale) => defaultBuildIndex(locale, input.assetBaseUrl));
   const intentDictionary = input.dependencies?.intentDictionary ?? DEFAULT_INTENT_DICTIONARY;
 
   const candidates = await buildIndex(locale);
