@@ -48,10 +48,10 @@ if (notFound) {
 }
 
 // Load tool-specific translations (merged base + detailed, with English fallback)
-const messages = notFound ? {} : await loadToolMessages(locale, tool.slug);
+const messages = notFound ? {} : await loadToolMessages(locale, tool.slug, Astro.url);
 
 // Load base messages for common UI strings (nav labels, category names, etc.)
-const baseMessages = notFound ? {} : await loadBaseMessages(locale);
+const baseMessages = notFound ? {} : await loadBaseMessages(locale, Astro.url);
 const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
 const toolsCommon = (baseMessages.tools as Record<string, unknown>) ?? {};

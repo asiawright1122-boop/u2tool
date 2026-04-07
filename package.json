@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "node scripts/prepare-public-messages.mjs",
     "build": "NODE_OPTIONS=--max-old-space-size=4096 astro build",
+    "postbuild": "node scripts/cleanup-public-messages.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",

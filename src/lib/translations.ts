@@ -15,6 +15,71 @@
 
 import type { Locale } from './i18n';
 
+type MessagesRecord = Record<string, unknown>;
+
+async function readJsonFromFile(relativePath: string): Promise<MessagesRecord | null> {
+  try {
+    const [{ readFile }, { fileURLToPath }] = await Promise.all([
+      import('node:fs/promises'),
+      import('node:url'),
+    ]);
+    const filePath = fileURLToPath(new URL(relativePath, import.meta.url));
+    const content = await readFile(filePath, 'utf-8');
+    return JSON.parse(content) as MessagesRecord;
+  } catch {
+    return null;
+  }
+}
+
+function resolveAssetUrl(
+  assetPath: string,
+  assetBaseUrl?: string | URL
+): URL | null {
+  try {
+    if (assetBaseUrl) {
+      return new URL(assetPath, assetBaseUrl);
+    }
+    const siteUrl = import.meta.env.SITE ?? import.meta.env.PUBLIC_SITE_URL;
+    return siteUrl ? new URL(assetPath, siteUrl) : null;
+  } catch {
+    return null;
+  }
+}
+
+async function readJsonFromAsset(
+  assetPath: string,
+  assetBaseUrl?: string | URL
+): Promise<MessagesRecord | null> {
+  const url = resolveAssetUrl(assetPath, assetBaseUrl);
+  if (!url) {
+    return null;
+  }
+
+  try {
+    const response = await fetch(url, {
+      headers: { Accept: 'application/json' },
+    });
+    if (!response.ok) {
+      return null;
+    }
+    return (await response.json()) as MessagesRecord;
+  } catch {
+    return null;
+  }
+}
+
+async function loadMessagesFile(
+  relativePath: string,
+  assetPath: string,
+  assetBaseUrl?: string | URL
+): Promise<MessagesRecord | null> {
+  const fileMessages = await readJsonFromFile(relativePath);
+  if (fileMessages) {
+    return fileMessages;
+  }
+  return readJsonFromAsset(assetPath, assetBaseUrl);
+}
+
 /**
  * Load the full base translation file for a locale.
  * Used at build time in Astro pages for static generation.
@@ -22,24 +87,30 @@ import type { Locale } from './i18n';
  * Falls back to English if the requested locale file is not found.
  */
 export async function loadBaseMessages(
-  locale: Locale
-): Promise<Record<string, unknown>> {
-  try {
-    const messages = await import(`../messages/${locale}.json`);
-    return messages.default ?? messages;
-  } catch {
-    // Locale file not found — fall back to English
-    if (locale !== 'en') {
-      try {
-        const fallback = await import('../messages/en.json');
-        return fallback.default ?? fallback;
-      } catch {
-        // English file also missing — return empty object
-        return {};
-      }
-    }
-    return {};
+  locale: Locale,
+  assetBaseUrl?: string | URL
+): Promise<MessagesRecord> {
+  const primary = await loadMessagesFile(
+    `../messages/${locale}.json`,
+    `/messages/${locale}.json`,
+    assetBaseUrl
+  );
+  if (primary) {
+    return primary;
   }
+
+  if (locale !== 'en') {
+    const fallback = await loadMessagesFile(
+      '../messages/en.json',
+      '/messages/en.json',
+      assetBaseUrl
+    );
+    if (fallback) {
+      return fallback;
+    }
+  }
+
+  return {};
 }
 
 /**
@@ -52,33 +123,31 @@ export async function loadBaseMessages(
  */
 export async function loadToolMessages(
   locale: Locale,
-  slug: string
-): Promise<Record<string, unknown>> {
+  slug: string,
+  assetBaseUrl?: string | URL
+): Promise<MessagesRecord> {
   // 1. Load base messages and extract tool-specific keys
-  const base = await loadBaseMessages(locale);
-  const toolsObj = (base.tools as Record<string, unknown>) ?? {};
-  const toolData = (toolsObj[slug] as Record<string, unknown>) ?? {};
+  const base = await loadBaseMessages(locale, assetBaseUrl);
+  const toolsObj = (base.tools as MessagesRecord) ?? {};
+  const toolData = (toolsObj[slug] as MessagesRecord) ?? {};
 
   // 2. Load detailed per-tool translation (split file)
-  let detailed: Record<string, unknown> = {};
-  try {
-    const mod = await import(`../messages/${locale}/tools/${slug}.json`);
-    detailed = mod.default ?? mod;
-  } catch {
-    // Detailed file not found for this locale — try English fallback
-    if (locale !== 'en') {
-      try {
-        const mod = await import(`../messages/en/tools/${slug}.json`);
-        detailed = mod.default ?? mod;
-      } catch {
-        // English detailed file also missing — continue with empty
-      }
-    }
+  let detailed = await loadMessagesFile(
+    `../messages/${locale}/tools/${slug}.json`,
+    `/messages/${locale}/tools/${slug}.json`,
+    assetBaseUrl
+  );
+  if (!detailed && locale !== 'en') {
+    detailed = await loadMessagesFile(
+      `../messages/en/tools/${slug}.json`,
+      `/messages/en/tools/${slug}.json`,
+      assetBaseUrl
+    );
   }
 
   // 3. Merge: tool-specific base data takes precedence over detailed
   //    (base has name, description, seo_*; detailed has detailed_description, usage_steps, etc.)
-  return { ...detailed, ...toolData };
+  return { ...(detailed ?? {}), ...toolData };
 }
 
 /**
