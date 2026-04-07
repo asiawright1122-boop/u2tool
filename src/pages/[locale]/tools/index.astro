@@ -18,6 +18,8 @@ import type { Locale } from '@/lib/i18n';
 import { loadBaseMessages } from '@/lib/translations';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 
+export const prerender = true;
+
 export const getStaticPaths: GetStaticPaths = () => {
   return locales.map((locale) => ({
     params: { locale },

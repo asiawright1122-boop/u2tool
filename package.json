@@ -9,6 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
+    "validate:production-routes": "node scripts/validation/verify-production-routes.mjs",
     "qa:ai-discovery": "npx vitest run src/lib/ai-discovery/*.test.ts && npm run build",
     "qa:ai-discovery:strict": "npm run qa:ai-discovery && npm run check",
     "qa:ai-discovery:regression": "npx vitest run src/lib/ai-discovery/regression-cases.test.ts",

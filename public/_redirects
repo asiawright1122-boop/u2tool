@@ -6,6 +6,19 @@
 #
 # Requirements: 5.7, 5.8
 
+# Legacy non-localized browse routes should canonicalize to English.
+/tools /en/tools 301
+/tools/* /en/tools/:splat 301
+/categories /en/tools 301
+/categories/* /en/categories/:splat 301
+/compare /en/compare 301
+/compare/* /en/compare/:splat 301
+/ai /en/ai 301
+
+# Deprecated ranking pages should collapse back to the tools index.
+/:locale/tools/ranking/newest /:locale/tools 301
+/:locale/tools/ranking/popular /:locale/tools 301
+
 # Base64 tool aliases (all locales)
 /en/tools/base64-encoder /en/tools/base64 301
 /en/tools/base64-decoder /en/tools/base64 301
