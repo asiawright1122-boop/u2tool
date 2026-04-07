@@ -1,0 +1,130 @@
+---
+export const prerender = false;
+
+const url = new URL(Astro.request.url);
+const rawPath = url.pathname || '/';
+const normalizedPath =
+  rawPath !== '/' && rawPath.endsWith('/') ? rawPath.slice(0, -1) : rawPath;
+const segments = normalizedPath.split('/').filter(Boolean);
+const localePattern = /^[a-z]{2}$/;
+
+type RedirectStatus = 301 | 302 | 303 | 307 | 308;
+
+const redirect = (to: string, status: RedirectStatus = 301) => Astro.redirect(to, status);
+
+if (segments.length === 0) {
+  return redirect('/en', 302);
+}
+
+const [first, second, third] = segments;
+const rest = segments.slice(1).join('/');
+
+if (first === 'tools') {
+  return redirect(rest ? `/en/tools/${rest}` : '/en/tools', 301);
+}
+if (first === 'categories') {
+  return redirect(rest ? `/en/categories/${rest}` : '/en/tools', 301);
+}
+if (first === 'compare') {
+  return redirect(rest ? `/en/compare/${rest}` : '/en/compare', 301);
+}
+if (first === 'ai') {
+  return redirect('/en/ai', 301);
+}
+
+if (localePattern.test(first) && second === 'tools' && third === 'ranking') {
+  return redirect(`/${first}/tools`, 301);
+}
+if (first === 'tools' && second === 'ranking') {
+  return redirect('/en/tools', 301);
+}
+
+Astro.response.status = 404;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page Not Found | U2Tool</title>
+    <meta
+      name="description"
+      content="The page you requested could not be found on U2Tool."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+        color: #0f172a;
+      }
+
+      main {
+        width: min(100%, 40rem);
+        padding: 2rem;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0 0 0.75rem;
+        font-size: clamp(2rem, 5vw, 3rem);
+        line-height: 1.1;
+      }
+
+      p {
+        margin: 0 0 1.5rem;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #334155;
+      }
+
+      .actions {
+        display: flex;
+        gap: 0.75rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 10rem;
+        padding: 0.875rem 1.25rem;
+        border-radius: 999px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .primary {
+        background: #2563eb;
+        color: #fff;
+      }
+
+      .secondary {
+        background: rgba(255, 255, 255, 0.75);
+        color: #0f172a;
+        border: 1px solid rgba(15, 23, 42, 0.12);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Page not found</h1>
+      <p>The URL you requested is unavailable or has moved. Try the English homepage or browse the tool catalog.</p>
+      <div class="actions">
+        <a class="primary" href="/en">Go to homepage</a>
+        <a class="secondary" href="/en/tools">Browse tools</a>
+      </div>
+    </main>
+  </body>
+</html>

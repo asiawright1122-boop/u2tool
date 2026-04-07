@@ -52,6 +52,30 @@ const ogLocale = ogLocaleMap[locale] || 'en_US';
 const alternateLocales = locales
   .filter(l => l !== locale)
   .map(l => ogLocaleMap[l] || l);
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'U2Tool',
+  url: BASE_URL,
+  logo: `${BASE_URL}/favicon.svg`,
+  description:
+    'Free online tools for developers and designers. 500+ tools including JSON formatter, QR code generator, password generator, and more.',
+  sameAs: ['https://github.com/u2tool'],
+};
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'U2Tool',
+  url: BASE_URL,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${BASE_URL}/${locale}/tools?q={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
 ---
 
 <!doctype html>
@@ -70,37 +94,10 @@ const alternateLocales = locales
     ))}
 
     <!-- Organization Schema -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "U2Tool",
-        "url": "${BASE_URL}",
-        "logo": "${BASE_URL}/favicon.svg",
-        "description": "Free online tools for developers and designers. 500+ tools including JSON formatter, QR code generator, password generator, and more.",
-        "sameAs": [
-          "https://github.com/u2tool"
-        ]
-      }
-    </script>
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
 
     <!-- WebSite Schema with SearchAction -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "U2Tool",
-        "url": "${BASE_URL}",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "${BASE_URL}/{search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
-        }
-      }
-    </script>
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
 
     <!-- Additional head content (hreflang, structured data, etc.) -->
     <slot name="head" />

@@ -4,6 +4,8 @@ import { locales } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadBaseMessages } from '@/lib/translations';
 
+export const prerender = true;
+
 export const GET: APIRoute = async ({ params }) => {
   const locale = params.locale as Locale;
   const baseMessages = await loadBaseMessages(locale);

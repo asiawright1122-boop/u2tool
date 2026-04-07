@@ -27,7 +27,6 @@
   let { locale, categories, categoryNames, navMessages, siteName = 'U2Tool' }: Props = $props();
 
   let toolsExpanded = $state(true);
-  let rankingExpanded = $state(true);
 
   function homePath() {
     return getLocalizedPath(locale as Locale, '/');
@@ -87,40 +86,6 @@
         <span class="text-sm font-medium">{navMessages.home || 'Home'}</span>
       {/if}
     </a>
-
-    <!-- Ranking -->
-    <div>
-      <button
-        onclick={() => { if (!collapsed) rankingExpanded = !rankingExpanded; }}
-        class="sidebar-item w-full"
-        class:justify-center={collapsed}
-        title={collapsed ? (navMessages.ranking || 'Ranking') : undefined}
-      >
-        <span class="sidebar-icon">{@html getIconSvg('trophy', 18)}</span>
-        {#if !collapsed}
-          <span class="flex-1 text-sm font-medium text-left">{navMessages.ranking || 'Ranking'}</span>
-          <svg class="w-4 h-4 transition-transform {rankingExpanded ? 'rotate-180' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        {/if}
-      </button>
-
-      {#if !collapsed && rankingExpanded}
-        <nav class="mt-1 space-y-0.5">
-          <a href={getLocalizedPath(locale as Locale, '/tools/ranking/newest')} class="sidebar-item pl-8">
-            <span class="sidebar-icon">{@html getIconSvg('sparkle', 16)}</span>
-            <span class="flex-1 text-sm truncate">{navMessages.newest || 'Newest'}</span>
-          </a>
-          <a href={getLocalizedPath(locale as Locale, '/tools/ranking/popular')} class="sidebar-item pl-8">
-            <span class="sidebar-icon">{@html getIconSvg('flame', 16)}</span>
-            <span class="flex-1 text-sm truncate">{navMessages.hottest || 'Popular'}</span>
-          </a>
-        </nav>
-      {/if}
-    </div>
-
-    <!-- Divider -->
-    <div class="h-px bg-gray-200 dark:bg-gray-700 my-2 mx-2"></div>
 
     <!-- Tool Categories -->
     <div>
