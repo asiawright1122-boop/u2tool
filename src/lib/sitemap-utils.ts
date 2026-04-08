@@ -7,7 +7,6 @@
 import { locales } from '@/lib/i18n';
 
 const BASE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://www.u2tool.com';
-const TODAY = new Date().toISOString().split('T')[0];
 
 // Extended hreflang mapping with language-region codes
 export const hreflangMap: Record<string, string> = {
@@ -40,7 +39,6 @@ export function buildUrl(path: string, priority: string, changefreq: string): st
 
   return `  <url>
     <loc>${loc}</loc>
-    <lastmod>${TODAY}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
 ${alternates}

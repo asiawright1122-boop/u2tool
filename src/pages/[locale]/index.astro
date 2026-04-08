@@ -17,7 +17,6 @@ import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
 import Footer from '@/components/layout/Footer.astro';
 import PopularToolsCarousel from '@/components/PopularToolsCarousel.svelte';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
-import StructuredData from '@/components/seo/StructuredData.astro';
 import { tools, categories, getPopularTools, getToolsByCategory } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
 import { locales, getLocalizedPath } from '@/lib/i18n';
@@ -79,32 +78,12 @@ const carouselTools = popularTools.map(tool => ({
   {/* SEO: Hreflang tags */}
   <HreflangTags path="/" slot="head" />
 
-  {/* SEO: WebSite structured data with SearchAction */}
-  <StructuredData type="WebSite" data={{
-    name: 'U2Tool',
-    url: BASE_URL,
-    description: heroMessages.subtitle || '500+ free online tools for developers and everyone.',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${BASE_URL}/${locale}/tools?q={search_term_string}`,
-      'query-input': 'required name=search_term_string',
-    },
-  }} slot="head" />
-
-  {/* SEO: Organization structured data */}
-  <StructuredData type="Organization" data={{
-    name: 'U2Tool',
-    url: BASE_URL,
-    logo: `${BASE_URL}/favicon.svg`,
-    sameAs: [],
-  }} slot="head" />
-
   {/* OG meta tags */}
   <meta property="og:title" content={`${heroMessages.title || 'Free Online Tools'} | U2Tool`} slot="head" />
   <meta property="og:description" content={heroMessages.subtitle || '500+ free online tools for developers and everyone.'} slot="head" />
   <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
   <meta property="og:type" content="website" slot="head" />
-  <meta property="og:url" content={`${BASE_URL}/${locale}`} slot="head" />
+  <meta property="og:url" content={`${BASE_URL}/${locale}/`} slot="head" />
   <meta property="og:site_name" content="U2Tool" slot="head" />
   <meta name="twitter:card" content="summary_large_image" slot="head" />
   <meta name="twitter:title" content={`${heroMessages.title || 'Free Online Tools'} | U2Tool`} slot="head" />

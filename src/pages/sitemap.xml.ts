@@ -15,12 +15,12 @@ export const GET: APIRoute = () => {
 
   for (const locale of locales) {
     // Homepage
-    urls.push(buildUrl(`/${locale}`, '1.0', 'daily'));
+    urls.push(buildUrl(`/${locale}/`, '1.0', 'daily'));
     // Tools list
-    urls.push(buildUrl(`/${locale}/tools`, '0.9', 'daily'));
+    urls.push(buildUrl(`/${locale}/tools/`, '0.9', 'daily'));
     // Categories
     for (const cat of categories) {
-      urls.push(buildUrl(`/${locale}/categories/${cat.id}`, '0.8', 'weekly'));
+      urls.push(buildUrl(`/${locale}/categories/${cat.id}/`, '0.8', 'weekly'));
     }
     // Tool detail pages
     for (const tool of tools) {
@@ -30,5 +30,4 @@ export const GET: APIRoute = () => {
 
   return generateSitemapResponse(urls);
 };
-
 
