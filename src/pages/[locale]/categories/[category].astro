@@ -66,8 +66,8 @@ const pageTitle = `${categoryName} - U2Tool`;
 const pageDescription = `${categoryTools.length}+ free ${categoryName} tools online.`;
 
 const breadcrumbItems = [
-  { label: navMessages.home || 'Home', href: `/${locale}` },
-  { label: categoryName, href: `/${locale}/categories/${category}` },
+  { label: navMessages.home || 'Home', href: `/${locale}/` },
+  { label: categoryName, href: `/${locale}/categories/${category}/` },
 ];
 
 // BreadcrumbList structured data
@@ -84,7 +84,7 @@ const breadcrumbData = {
 const collectionData = {
   name: categoryName,
   description: pageDescription,
-  url: `${BASE_URL}/${locale}/categories/${category}`,
+  url: `${BASE_URL}/${locale}/categories/${category}/`,
   numberOfItems: categoryTools.length,
   hasPart: categoryTools.slice(0, 10).map(tool => ({
     '@type': 'SoftwareApplication',
@@ -98,9 +98,9 @@ const collectionData = {
   title={pageTitle}
   description={pageDescription}
   locale={locale}
-  canonicalPath={`/categories/${category}`}
+  canonicalPath={`/categories/${category}/`}
 >
-  <HreflangTags path={`/categories/${category}`} slot="head" />
+  <HreflangTags path={`/categories/${category}/`} slot="head" />
   <StructuredData type="BreadcrumbList" data={breadcrumbData} slot="head" />
   <StructuredData type="CollectionPage" data={collectionData} slot="head" />
 
@@ -108,7 +108,7 @@ const collectionData = {
   <meta property="og:description" content={pageDescription} slot="head" />
   <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
   <meta property="og:type" content="website" slot="head" />
-  <meta property="og:url" content={`${BASE_URL}/${locale}/categories/${category}`} slot="head" />
+  <meta property="og:url" content={`${BASE_URL}/${locale}/categories/${category}/`} slot="head" />
   <meta property="og:site_name" content="U2Tool" slot="head" />
   <meta name="twitter:card" content="summary_large_image" slot="head" />
   <meta name="twitter:image" content={`${BASE_URL}/og-default.svg`} slot="head" />

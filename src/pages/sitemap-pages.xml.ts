@@ -15,14 +15,14 @@ export const GET: APIRoute = () => {
 
   for (const locale of locales) {
     // 首页 - 最高优先级
-    urls.push(buildUrl(`/${locale}`, '1.0', 'daily'));
+    urls.push(buildUrl(`/${locale}/`, '1.0', 'daily'));
     
     // 工具列表页 - 高优先级
-    urls.push(buildUrl(`/${locale}/tools`, '0.9', 'daily'));
+    urls.push(buildUrl(`/${locale}/tools/`, '0.9', 'daily'));
     
     // 分类页面 - 中等优先级
     for (const cat of categories) {
-      urls.push(buildUrl(`/${locale}/categories/${cat.id}`, '0.8', 'weekly'));
+      urls.push(buildUrl(`/${locale}/categories/${cat.id}/`, '0.8', 'weekly'));
     }
   }
 

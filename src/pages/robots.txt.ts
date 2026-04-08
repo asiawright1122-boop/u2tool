@@ -71,9 +71,6 @@ Allow: /
 # Sitemap
 Sitemap: ${BASE_URL}/sitemap.xml
 
-# AI LLM discovery
-Sitemap: ${BASE_URL}/llms.txt
-
 # Disallow admin/api paths
 Disallow: /api/
 `;
