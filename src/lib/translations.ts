@@ -14,9 +14,11 @@
  */
 
 import type { Locale } from './i18n';
-import { toolMessageAliases } from './tool-message-aliases';
 
 type MessagesRecord = Record<string, unknown>;
+const toolMessageAliases: Record<string, string> = {
+  'jwt-debugger': 'jwt-decoder',
+};
 
 const baseMessagesCache = new Map<string, MessagesRecord>();
 const toolMessagesCache = new Map<string, MessagesRecord>();
