@@ -209,7 +209,7 @@
   }
 </script>
 
-<div class="relative flex-1 max-w-md mx-4">
+<div class="relative flex-1 max-w-sm mx-3 min-w-0">
   <div class="relative flex items-center">
     <input
       type="text"

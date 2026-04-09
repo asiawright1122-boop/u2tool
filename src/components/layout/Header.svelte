@@ -32,16 +32,14 @@
   let homePath = $derived(getLocalizedPath(locale as Locale, '/'));
 </script>
 
-<header class="sticky top-0 z-40 w-full border-b border-gray-200/80 dark:border-gray-800/80
+<header class="w-full border-b border-gray-200/80 dark:border-gray-800/80
                bg-white/90 dark:bg-gray-900/90 backdrop-blur-md">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="w-full px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-14">
       <GlobalSearch {locale} translations={translations} />
 
-      <div class="flex items-center gap-2 shrink-0">
-        <div class="hidden sm:block">
-          <LanguageSelector {locale} {currentPath} />
-        </div>
+      <div class="flex items-center gap-3 shrink-0">
+        <LanguageSelector {locale} {currentPath} />
         <ThemeToggle />
       </div>
     </div>
