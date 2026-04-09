@@ -1,139 +1,111 @@
-# Cloudflare Pages 部署指南
+# Cloudflare 自动部署说明
 
-> 说明：这个文件名保留了历史上的 `WORKERS` 命名，但当前仓库实际是 Astro 静态站，部署目标应视为 Cloudflare Pages 静态项目，而不是 Cloudflare Workers 运行时应用。
+> 当前仓库已经不是“静态 Pages 站点”的部署模型了，而是 `Astro + @astrojs/cloudflare + Workers 运行时`。
 
 ## 当前事实
 
-从当前仓库可以确认：
+从仓库现状可以确认：
 
-- [`astro.config.mjs`](/Users/kaka/Dev/u2tool/astro.config.mjs) 使用 `output: 'static'`
-- 构建产物目录是 `dist/`
-- [`public/_headers`](/Users/kaka/Dev/u2tool/public/_headers) 和 [`public/_redirects`](/Users/kaka/Dev/u2tool/public/_redirects) 采用的是 Cloudflare Pages 约定
-- 仓库中没有 `wrangler.toml`
-- [`package.json`](/Users/kaka/Dev/u2tool/package.json) 中没有 `deploy:cf` 或 `build:cf`
+- [`astro.config.mjs`](/Users/kaka/Dev/u2tool/astro.config.mjs) 使用 `output: 'server'`
+- 构建产物同时包含静态资源目录 `dist/` 和 Worker 入口 `dist/_worker.js/index.js`
+- [`wrangler.jsonc`](/Users/kaka/Dev/u2tool/wrangler.jsonc) 现在负责声明 Worker 入口、静态资源目录和兼容性配置
+- 新增的 [`deploy-cloudflare.yml`](/Users/kaka/Dev/u2tool/.github/workflows/deploy-cloudflare.yml) 会在 `main` 分支推送后自动构建并执行 `wrangler deploy`
+- [`prepare-cloudflare-assets.mjs`](/Users/kaka/Dev/u2tool/scripts/deploy/prepare-cloudflare-assets.mjs) 会在部署前生成 `dist/.assetsignore`，避免把 `dist/_worker.js` 误上传成公开静态资源
 
-这意味着当前推荐部署方式是：
+这意味着：
 
-1. Cloudflare Pages 连接 Git 仓库自动构建
-2. 或者手动把 `dist/` 发布到 Cloudflare Pages
+1. GitHub 侧现在具备“推送即部署”的能力
+2. 但 Cloudflare 后台仍然需要完成一次性接线，否则自动部署仍然不会真正对外生效
 
-## 部署前检查
+## 自动部署触发条件
 
-推荐先在本地跑：
+只有同时满足下面两件事，才会自动部署：
 
-```bash
-npm run qa:ai-discovery:strict
-```
+1. 有新的提交真正推到远端 `main`
+2. GitHub 仓库里已经配置好 Cloudflare 所需密钥
 
-如果只是常规发布，至少执行：
+如果只是本地改了代码、但没有新 commit push，上线不会发生。
+
+## GitHub 需要配置的 Secrets
+
+到 GitHub 仓库：
+
+`Settings -> Secrets and variables -> Actions`
+
+新增这两个仓库密钥：
+
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+
+建议 `API Token` 权限至少包含：
+
+- `Account` 的 `Workers Scripts: Edit`
+- `Zone` 的 `Workers Routes: Edit`
+
+如果你们是通过自定义域直接挂 Worker，还要确保这个 Token 对对应 Zone 有权限。
+
+## Cloudflare 侧需要确认的项目
+
+到 Cloudflare Dashboard 里确认以下几点：
+
+1. 这个域名现在是不是仍然挂在旧的 Pages 项目上
+2. `u2tool.com` / `www.u2tool.com` 有没有绑定到 Worker `u2tool`
+3. Worker 是否位于正确的账号下
+
+如果域名还指向旧 Pages 项目，那么即使 GitHub Action 成功执行了 `wrangler deploy`，公网访问的也还是旧页面。
+
+## 推荐上线方式
+
+### 方式 1：GitHub Actions 自动部署
+
+适合长期正式使用。
+
+流程：
+
+1. 配好 GitHub Secrets
+2. 确认 Cloudflare 中 `u2tool.com` 已绑定到 Worker `u2tool`
+3. 把新代码 commit 并 push 到 `main`
+4. 等待 GitHub Actions 中 `Deploy To Cloudflare` 工作流完成
+
+### 方式 2：手动验证部署链路
+
+适合首次接线时快速排查。
+
+本地可执行：
 
 ```bash
 npm run build
+npx wrangler deploy
 ```
 
-## Cloudflare Pages 项目配置
-
-如果使用 Git 集成，请在 Cloudflare Dashboard 中把项目配置为：
-
-- Framework preset: `Astro` 或 `None`
-- Build command: `npm run build`
-- Build output directory: `dist`
-- Root directory: 仓库根目录
-
-当前仓库没有内置部署脚本，所以不要按旧文档去找 `npm run deploy:cf`。
+如果手动 `wrangler deploy` 能成功，而 GitHub 自动部署不成功，问题通常就在 GitHub Secrets 或 Actions 权限。
 
 ## 环境变量
 
-当前部署最关键的变量是：
+当前最关键的构建时变量仍然是：
 
 - `PUBLIC_SITE_URL=https://www.u2tool.com`
 - `PUBLIC_AI_DISCOVERY_ENABLED=true` 或 `false`
 
 说明：
 
-- `PUBLIC_SITE_URL` 用于 canonical、hreflang、sitemap 和页面绝对地址
-- `PUBLIC_AI_DISCOVERY_ENABLED` 控制 AI discovery 页面、搜索 API 行为和 telemetry 接收
-- 这是 Astro 构建时环境变量；在 Cloudflare Pages 中修改后，需要重新触发一次部署才能生效
+- `PUBLIC_SITE_URL` 影响 canonical、hreflang、sitemap、结构化数据等 SEO 输出
+- `PUBLIC_AI_DISCOVERY_ENABLED` 影响 AI discovery 页面和相关 API
+- 这些值在重新部署前不会自动生效
 
-如果只是准备灰度 AI discovery，最小配置就是：
+## 验收清单
 
-```text
-PUBLIC_SITE_URL=https://www.u2tool.com
-PUBLIC_AI_DISCOVERY_ENABLED=true
-```
+部署完成后建议依次检查：
 
-## 发布方式
+1. GitHub Actions 的 `Deploy To Cloudflare` 是否成功
+2. Cloudflare Worker 最新发布时间是否更新
+3. `https://u2tool.com/en/` 和 `https://www.u2tool.com/en/` 是否出现新 UI
+4. `/zh/tools/...` 这类工具页是否正常加载
+5. `robots.txt`、`sitemap.xml`、`sitemap-pages.xml` 是否返回最新版本
 
-### 方式 1：Git 集成自动部署
+## 你现在最容易踩的坑
 
-推荐用于正式环境。
+当前最常见的不是“部署命令失败”，而是下面两类：
 
-1. 确认 `main` 已推到远端
-2. 在 Cloudflare Pages 项目中确认上述构建配置和环境变量
-3. 触发一次新的 production deployment
-4. 等待 Pages 完成构建并发布
-
-### 方式 2：手动部署静态产物
-
-如果需要手动发布：
-
-1. 本地执行 `npm run build`
-2. 确认产物在 `dist/`
-3. 通过 Cloudflare Pages 控制台上传 `dist/`
-
-如果你的本机已经安装并登录了 Wrangler，也可以使用：
-
-```bash
-npx wrangler pages deploy dist --project-name <your-pages-project>
-```
-
-注意：这是可选 CLI 路径，不是仓库内置脚本。
-
-## AI Discovery 灰度步骤
-
-1. 在 Cloudflare Pages 项目中把 `PUBLIC_AI_DISCOVERY_ENABLED` 设为 `true`
-2. 重新部署当前 `main`
-3. 发布后执行 [`docs/AI_DISCOVERY_LAYER.md`](/Users/kaka/Dev/u2tool/docs/AI_DISCOVERY_LAYER.md) 里的 `Manual QA Checklist`
-4. 重点验证：
-   - `/{locale}/ai`
-   - 头部全局搜索无结果跳转到 AI 页
-   - `/api/ai-discovery/search`
-   - `/api/ai-discovery/events`
-
-## 回滚
-
-最快的回滚方式不是回滚代码，而是关闭特性开关：
-
-1. 把 `PUBLIC_AI_DISCOVERY_ENABLED` 改为 `false`
-2. 重新部署
-
-结果：
-
-- `/{locale}/ai` 会回到工具列表
-- telemetry 端点变成空操作
-- 既有工具页和 SEO 路由保持不变
-
-如果需要代码级回滚，再回退以下路径对应的提交：
-
-- [`src/lib/ai-discovery`](/Users/kaka/Dev/u2tool/src/lib/ai-discovery)
-- [`src/components/ai`](/Users/kaka/Dev/u2tool/src/components/ai)
-- [`src/pages/[locale]/ai.astro`](/Users/kaka/Dev/u2tool/src/pages/[locale]/ai.astro)
-- [`src/pages/api/ai-discovery`](/Users/kaka/Dev/u2tool/src/pages/api/ai-discovery)
-- [`src/components/ui/GlobalSearch.svelte`](/Users/kaka/Dev/u2tool/src/components/ui/GlobalSearch.svelte)
-
-## 监控与验收
-
-发布后建议记录这几项：
-
-- Cloudflare Pages 构建是否成功
-- `/en/ai` 是否可访问
-- `query_submitted` 是否开始出现
-- `result_clicked` 与 `fallback_viewed` 是否有首批回流
-
-最小验收标准：
-
-1. Pages 构建成功
-2. AI discovery 路由可访问
-3. 搜索 API 可返回 JSON
-4. fallback 正常
-5. telemetry 有回流
+- 本地改动很多，但没有新的远端提交，所以不会触发自动部署
+- GitHub Action 已经部署了 Worker，但域名还绑在旧 Pages 项目上，因此你看到的依然是旧站

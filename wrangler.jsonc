@@ -1,0 +1,35 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "u2tool",
+  "main": "./dist/_worker.js/index.js",
+  "compatibility_date": "2026-04-09",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "global_fetch_strictly_public"
+  ],
+  "workers_dev": true,
+  "routes": [
+    {
+      "pattern": "u2tool.com/*",
+      "zone_name": "u2tool.com"
+    },
+    {
+      "pattern": "www.u2tool.com/*",
+      "zone_name": "u2tool.com"
+    }
+  ],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "kv_namespaces": [
+    {
+      "binding": "SESSION",
+      "id": "5820eaf924a84d82b2d3a146d38c1fcd",
+      "preview_id": "5820eaf924a84d82b2d3a146d38c1fcd"
+    }
+  ]
+}
