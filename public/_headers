@@ -10,7 +10,27 @@
   Content-Type: application/xml
 
 # HTML pages - no store to avoid stale layouts
-/*
+/
+  Cache-Control: no-store
+/en*
+  Cache-Control: no-store
+/zh*
+  Cache-Control: no-store
+/ja*
+  Cache-Control: no-store
+/ko*
+  Cache-Control: no-store
+/es*
+  Cache-Control: no-store
+/pt*
+  Cache-Control: no-store
+/fr*
+  Cache-Control: no-store
+/de*
+  Cache-Control: no-store
+/ru*
+  Cache-Control: no-store
+/ar*
   Cache-Control: no-store
 
 # Security headers for all pages
