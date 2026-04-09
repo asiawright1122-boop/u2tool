@@ -34,7 +34,7 @@
 
 <header class="w-full border-b border-gray-200/80 dark:border-gray-800/80
                bg-white/90 dark:bg-gray-900/90 backdrop-blur-md">
-  <div class="w-full px-4 sm:px-6 lg:px-8">
+  <div class="w-full px-4 sm:px-6 lg:pl-0 lg:pr-6">
     <div class="flex items-center justify-between h-14">
       <GlobalSearch {locale} translations={translations} />
 
