@@ -4,14 +4,14 @@
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
-# HTML pages - short cache, always revalidate
-/*.html
-  Cache-Control: public, max-age=0, must-revalidate
-
 # Sitemap
 /sitemap.xml
   Cache-Control: public, max-age=3600
   Content-Type: application/xml
+
+# HTML pages - no store to avoid stale layouts
+/*
+  Cache-Control: no-store
 
 # Security headers for all pages
 /*
