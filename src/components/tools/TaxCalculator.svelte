@@ -42,6 +42,7 @@
   import { calculateTax } from '@/lib/tax-calculator';
   import { formatCurrency } from '@/lib/currency-formatter';
   import { savePreferences, loadPreferences } from '@/lib/preferences';
+  import { EXAMPLE_INCOMES } from '@/lib/tool-stubs';
 
   let selectedCountry = $state('US');
 

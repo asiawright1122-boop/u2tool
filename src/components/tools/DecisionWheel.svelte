@@ -24,6 +24,7 @@
 
   // Imports
   import { Plus, Trash2, RotateCcw, Volume2, VolumeX } from 'lucide-svelte';
+  import { COLORS } from '@/lib/tool-stubs';
 
   // Types
   interface WheelOption {

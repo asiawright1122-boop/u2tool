@@ -1,0 +1,115 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.svelte';
+import StaticSidebar from '@/components/layout/StaticSidebar.astro';
+import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
+import Footer from '@/components/layout/Footer.astro';
+import HreflangTags from '@/components/seo/HreflangTags.astro';
+import StructuredData from '@/components/seo/StructuredData.astro';
+import ComparisonGuideSection from '@/components/discovery/ComparisonGuideSection.astro';
+import { categories, tools } from '@/config/tools';
+import { locales } from '@/lib/i18n';
+import type { Locale } from '@/lib/i18n';
+import {
+  buildComparisonGuides,
+  buildComparisonGuidesItemList,
+  getComparisonUiCopy,
+} from '@/lib/comparison-surfaces';
+import { loadBaseMessages } from '@/lib/translations';
+import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
+import { getPublicSiteUrl } from '@/lib/public-env';
+
+export const prerender = true;
+
+export const getStaticPaths: GetStaticPaths = () =>
+  locales.map((locale) => ({
+    params: { locale },
+    props: { locale },
+  }));
+
+const { locale } = Astro.props as { locale: Locale };
+const baseMessages = await loadBaseMessages(locale);
+const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
+const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
+const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
+const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
+const headerTranslations = buildHeaderTranslations(baseMessages);
+const mobileNavMessages = buildMobileNavMessages(navMessages);
+
+const toolNames = Object.fromEntries(
+  tools.map((tool) => {
+    const entry = toolsObj[tool.slug] as Record<string, unknown> | undefined;
+    return [tool.slug, (entry?.name as string) || tool.slug];
+  })
+);
+const toolDescriptions = Object.fromEntries(
+  tools.map((tool) => {
+    const entry = toolsObj[tool.slug] as Record<string, unknown> | undefined;
+    return [tool.slug, (entry?.seo_description as string) || (entry?.description as string) || ''];
+  })
+);
+
+const uiCopy = getComparisonUiCopy(locale);
+const guides = buildComparisonGuides(locale, categoryMessages, toolNames, toolDescriptions);
+const BASE_URL = getPublicSiteUrl();
+const comparisonItemListData = buildComparisonGuidesItemList(BASE_URL, guides);
+const collectionData = {
+  name: uiCopy.comparisonSectionTitle,
+  description: uiCopy.comparisonSectionDescription,
+  url: `${BASE_URL}/${locale}/compare`,
+  numberOfItems: guides.length,
+  hasPart: guides.map((guide) => ({
+    '@type': 'CollectionPage',
+    name: guide.title,
+    description: guide.shortDescription,
+    url: `${BASE_URL}${guide.href}`,
+  })),
+};
+---
+
+<BaseLayout
+  title={uiCopy.comparisonSectionTitle}
+  description={uiCopy.comparisonSectionDescription}
+  locale={locale}
+  canonicalPath="/compare"
+  siteDescription={siteMessages.description}
+>
+  <HreflangTags path="/compare" slot="head" />
+  <StructuredData type="CollectionPage" data={collectionData} slot="head" />
+  <StructuredData type="ItemList" data={comparisonItemListData} slot="head" />
+  <meta property="og:title" content={`${uiCopy.comparisonSectionTitle} | U2Tool`} slot="head" />
+  <meta property="og:description" content={uiCopy.comparisonSectionDescription} slot="head" />
+  <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
+  <meta property="og:type" content="website" slot="head" />
+  <meta property="og:url" content={`${BASE_URL}/${locale}/compare`} slot="head" />
+  <meta name="twitter:card" content="summary_large_image" slot="head" />
+
+  <StaticSidebar
+    locale={locale}
+    categories={categories}
+    categoryNames={categoryMessages}
+    navMessages={navMessages}
+    siteName={siteMessages.name || 'U2Tool'}
+  />
+
+  <div class="main-content-with-sidebar main-content-with-mobile-nav">
+    <Header client:load locale={locale} translations={headerTranslations} />
+
+    <main class="py-6 px-4">
+      <div class="max-w-6xl mx-auto">
+        <ComparisonGuideSection
+          title={uiCopy.comparisonSectionTitle}
+          description={uiCopy.comparisonSectionDescription}
+          guides={guides}
+          ctaLabel={uiCopy.guideCtaLabel}
+          includedToolsLabel={uiCopy.includedToolsLabel}
+        />
+      </div>
+    </main>
+
+    <Footer locale={locale} />
+  </div>
+
+  <MobileBottomNav client:load locale={locale} navMessages={mobileNavMessages} />
+</BaseLayout>

@@ -24,6 +24,7 @@
 
   // Imports
   import { GraduationCap, Plus, Trash2, Calculator } from 'lucide-svelte';
+  import { GRADE_POINTS_4, GRADE_POINTS_5 } from '@/lib/tool-stubs';
 
   // Types
   type GpaScale = '4.0' | '5.0';

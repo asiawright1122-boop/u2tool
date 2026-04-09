@@ -35,6 +35,48 @@
   rules: Record<string, string>;
 }
 
+  const FRAMEWORKS = [
+    { value: 'none', label: 'Vanilla JavaScript' },
+    { value: 'react', label: 'React' },
+    { value: 'vue', label: 'Vue' },
+    { value: 'next', label: 'Next.js' },
+  ] as const;
+
+  const STYLE_GUIDES = [
+    { value: 'none', label: 'ESLint Recommended' },
+    { value: 'airbnb', label: 'Airbnb' },
+    { value: 'standard', label: 'Standard' },
+    { value: 'google', label: 'Google' },
+  ] as const;
+
+  const COMMON_RULES = [
+    {
+      key: 'no-console',
+      label: 'no-console',
+      description: 'Disallow console logs in production code',
+    },
+    {
+      key: 'no-debugger',
+      label: 'no-debugger',
+      description: 'Disallow debugger statements',
+    },
+    {
+      key: 'eqeqeq',
+      label: 'eqeqeq',
+      description: 'Require strict equality checks',
+    },
+    {
+      key: 'curly',
+      label: 'curly',
+      description: 'Require curly braces for all control statements',
+    },
+    {
+      key: 'semi',
+      label: 'semi',
+      description: 'Require semicolons',
+    },
+  ] as const;
+
   let config = $state({
     framework: 'none',
     styleGuide: 'none',

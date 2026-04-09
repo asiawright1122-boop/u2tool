@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { CURRENCIES } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -53,7 +55,163 @@
   ]);
 
   // Functions
-  const _currencySymbol = CURRENCIES.find(c => c.code === currency)?.symbol || '$';
+  const _currencySymbol = CURRENCIES.find((item) => item.code === currency)?.symbol || '$';
+  /*
+
+
+    <div class="space-y-6">
+      <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+        <!-- Form -->
+        <div class="space-y-4">
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.invoiceNumber')}</label>
+              <input type="text" bind:value={invoiceNumber}
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.currency')}</label>
+              <select bind:value={currency}
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800">
+                {#each CURRENCIES as c (c.code)}
+<option  value={c.code}>{c.symbol} {c.code}</option>
+{/each}
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.invoiceDate')}</label>
+              <input type="date" bind:value={invoiceDate}
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.dueDate')}</label>
+              <input type="date" bind:value={dueDate}
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.from')}</label>
+              <input type="text" bind:value={companyName} placeholder={t('invoice.companyName')}
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 mb-2" />
+              <textarea bind:value={companyAddress} placeholder={t('invoice.address')} rows={2}
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800"></textarea>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.to')}</label>
+              <input type="text" bind:value={clientName} placeholder={t('invoice.clientName')}
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 mb-2" />
+              <textarea bind:value={clientAddress} placeholder={t('invoice.address')} rows={2}
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800"></textarea>
+            </div>
+          </div>
+
+          <!-- Items -->
+          <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+            <h3 class="font-medium text-gray-900 dark:text-gray-100 mb-3">{t('invoice.items')}</h3>
+            <div class="space-y-2">
+              {#each items as item (item.id)}
+<div  class="grid grid-cols-12 gap-2 items-center">
+                  <input type="text" value={item.description} onchange={(e) => updateItem(item.id, 'description', e.target.value)}
+                    placeholder={t('invoice.description')} class="col-span-5 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />
+                  <input type="number" min="1" value={item.quantity} onchange={(e) => updateItem(item.id, 'quantity', parseInt(e.target.value) || 1)}
+                    placeholder={t('invoice.quantity')} class="col-span-2 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />
+                  <input type="number" min="0" step="0.01" value={item.unitPrice} onchange={(e) => updateItem(item.id, 'unitPrice', parseFloat(e.target.value) || 0)}
+                    placeholder={t('invoice.unitPrice')} class="col-span-3 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />
+                  <span class="col-span-1 text-sm text-gray-600 dark:text-gray-400 text-right">{formatCurrency(item.quantity * item.unitPrice)}</span>
+                  <button onclick={() => removeItem(item.id)} disabled={items.length === 1} class="col-span-1 text-red-500 hover:text-red-700 disabled:opacity-30">×</button>
+                </div>
+{/each}
+            </div>
+            <button onclick={addItem} class="mt-3 text-sm text-blue-600 hover:text-blue-800">{t('invoice.addItem')}</button>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.taxRate')} (%)</label>
+              <input type="number" min="0" max="100" step="0.1" value={taxRate} onchange={(e) => taxRate = parseFloat(e.target.value) || 0}
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.notes')}</label>
+              <textarea bind:value={notes} rows={2}
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800"></textarea>
+            </div>
+          </div>
+
+          <button onclick={downloadPDF} class="w-full px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium">
+            {t('invoice.downloadPdf')}
+          </button>
+        </div>
+
+        <!-- Preview -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div bind:this={invoiceRef} class="p-8 bg-white text-gray-900" style="min-height: 600px">
+            <div class="flex justify-between items-start mb-8">
+              <div>
+                <h1 class="text-3xl font-bold text-gray-900">{t('invoice.invoice')}</h1>
+                <p class="text-gray-600 mt-1">#{invoiceNumber}</p>
+              </div>
+              <div class="text-right">
+                <p class="text-sm text-gray-600">{t('invoice.invoiceDate')}: {invoiceDate}</p>
+                <p class="text-sm text-gray-600">{t('invoice.dueDate')}: {dueDate}</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 class="text-sm font-semibold text-gray-500 uppercase mb-2">{t('invoice.from')}</h3>
+                <p class="font-medium text-gray-900">{companyName || '—'}</p>
+                <p class="text-sm text-gray-600 whitespace-pre-line">{companyAddress}</p>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-gray-500 uppercase mb-2">{t('invoice.to')}</h3>
+                <p class="font-medium text-gray-900">{clientName || '—'}</p>
+                <p class="text-sm text-gray-600 whitespace-pre-line">{clientAddress}</p>
+              </div>
+            </div>
+
+            <table class="w-full mb-8">
+              <thead>
+                <tr class="border-b-2 border-gray-200">
+                  <th class="text-left py-3 text-sm font-semibold text-gray-600">{t('invoice.description')}</th>
+                  <th class="text-right py-3 text-sm font-semibold text-gray-600">{t('invoice.quantity')}</th>
+                  <th class="text-right py-3 text-sm font-semibold text-gray-600">{t('invoice.unitPrice')}</th>
+                  <th class="text-right py-3 text-sm font-semibold text-gray-600">{t('invoice.amount')}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {#each items as item (item.id)}
+<tr  class="border-b border-gray-100">
+                    <td class="py-3 text-gray-900">{item.description || '—'}</td>
+                    <td class="py-3 text-right text-gray-600">{item.quantity}</td>
+                    <td class="py-3 text-right text-gray-600">{formatCurrency(item.unitPrice)}</td>
+                    <td class="py-3 text-right text-gray-900">{formatCurrency(item.quantity * item.unitPrice)}</td>
+                  </tr>
+{/each}
+              </tbody>
+            </table>
+
+            <div class="flex justify-end">
+              <div class="w-64">
+                <div class="flex justify-between py-2"><span class="text-gray-600">{t('invoice.subtotal')}</span><span>{formatCurrency(subtotal)}</span></div>
+                {#if taxRate > 0}
+<div class="flex justify-between py-2"><span class="text-gray-600">{t('invoice.tax')} ({taxRate}%)</span><span>{formatCurrency(taxAmount)}</span></div>
+{/if}
+                <div class="flex justify-between py-3 border-t-2 border-gray-900 font-bold text-lg"><span>{t('invoice.total')}</span><span>{formatCurrency(total)}</span></div>
+              </div>
+            </div>
+
+            {#if notes}
+<div class="mt-8 pt-4 border-t border-gray-200"><p class="text-sm text-gray-600">{notes}</p></div>
+{/if}
+          </div>
+        </div>
+      </div>
+    </div>
+  
+*/
   function addItem() {
     items = [...items, { id: Date.now().toString(), description: '', quantity: 1, unitPrice: 0 }];
   }

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { emojiData } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -111,7 +112,7 @@
 
       <!-- 最近使用 -->
       {#if recentEmojis.length > 0}
-!search && (
+{#if !search}
         <div class="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg">
           <div class="text-xs text-gray-600 dark:text-gray-300 mb-2">{t('emoji.recent')}</div>
           <div class="flex flex-wrap gap-1">
@@ -128,7 +129,7 @@
 {/each}
           </div>
         </div>
-      )
+      {/if}
 {/if}
 
 

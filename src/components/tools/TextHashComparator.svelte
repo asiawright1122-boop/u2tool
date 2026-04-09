@@ -108,7 +108,7 @@
       </button>
 
       {#if hash1}
-hash2 && (
+{#if hash2}
         <div class={`p-4 rounded-lg border ${isMatch ? 'bg-green-900/20 border-green-700' : 'bg-red-900/20 border-red-700'}`}>
           <div class="flex items-center gap-2">
             <span class={`text-2xl ${isMatch ? 'text-green-400' : 'text-red-400'}`}>
@@ -119,7 +119,7 @@ hash2 && (
             </span>
           </div>
         </div>
-      )
+      {/if}
 {/if}
     </div>
   

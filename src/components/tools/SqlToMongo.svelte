@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { convertSqlToMongo } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;

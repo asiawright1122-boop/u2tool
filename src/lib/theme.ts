@@ -8,11 +8,30 @@
  */
 
 import { writable } from 'svelte/store';
+import {
+  THEME_STORAGE_KEY,
+  isTheme,
+  resolveThemePreference,
+  type Theme,
+} from './theme-contract';
 
-export type Theme = 'light' | 'dark' | 'system';
+export const THEME_CHANGE_EVENT = 'u2tool:themechange';
+
+export function getResolvedTheme(theme: Theme): 'light' | 'dark' {
+  if (typeof window === 'undefined') {
+    return resolveThemePreference(theme, false);
+  }
+
+  return resolveThemePreference(
+    theme,
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+  );
+}
 
 function createThemeStore() {
   const { subscribe, set, update } = writable<Theme>('system');
+  let currentTheme: Theme = 'system';
+  let listenersInitialized = false;
 
   return {
     subscribe,
@@ -23,10 +42,12 @@ function createThemeStore() {
      */
     toggle() {
       update((current) => {
-        const next: Theme = current === 'dark' ? 'light' : 'dark';
+        currentTheme = current;
+        const next: Theme = getResolvedTheme(currentTheme) === 'dark' ? 'light' : 'dark';
         if (typeof localStorage !== 'undefined') {
-          localStorage.setItem('theme', next);
+          localStorage.setItem(THEME_STORAGE_KEY, next);
         }
+        currentTheme = next;
         applyTheme(next);
         return next;
       });
@@ -41,14 +62,32 @@ function createThemeStore() {
     init() {
       if (typeof localStorage === 'undefined') return;
 
-      const saved = localStorage.getItem('theme') as Theme | null;
-      if (saved && (saved === 'light' || saved === 'dark' || saved === 'system')) {
-        set(saved);
-        applyTheme(saved);
-      } else {
-        // No saved preference — use system default
-        set('system');
-        applyTheme('system');
+      const saved = localStorage.getItem(THEME_STORAGE_KEY);
+      currentTheme = isTheme(saved) ? saved : 'system';
+      set(currentTheme);
+      applyTheme(currentTheme);
+
+      if (!listenersInitialized && typeof window !== 'undefined') {
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        const handleSystemThemeChange = () => {
+          if (currentTheme === 'system') {
+            applyTheme('system');
+          }
+        };
+        const handleStorageChange = (event: StorageEvent) => {
+          if (event.key !== null && event.key !== THEME_STORAGE_KEY) {
+            return;
+          }
+
+          currentTheme = isTheme(event.newValue) ? event.newValue : 'system';
+          set(currentTheme);
+          applyTheme(currentTheme);
+        };
+
+        mediaQuery.addEventListener('change', handleSystemThemeChange);
+
+        window.addEventListener('storage', handleStorageChange);
+        listenersInitialized = true;
       }
     },
   };
@@ -61,12 +100,22 @@ function createThemeStore() {
 function applyTheme(theme: Theme): void {
   if (typeof document === 'undefined') return;
 
-  const isDark =
-    theme === 'dark' ||
-    (theme === 'system' &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches);
+  const resolvedTheme = getResolvedTheme(theme);
+  const isDark = resolvedTheme === 'dark';
 
   document.documentElement.classList.toggle('dark', isDark);
+  document.documentElement.style.colorScheme = resolvedTheme;
+
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(
+      new CustomEvent(THEME_CHANGE_EVENT, {
+        detail: {
+          theme,
+          resolvedTheme,
+        },
+      })
+    );
+  }
 }
 
 /**
@@ -79,3 +128,4 @@ function applyTheme(theme: Theme): void {
  *   $theme              // reactive current value ('light' | 'dark' | 'system')
  */
 export const theme = createThemeStore();
+export { THEME_STORAGE_KEY, type Theme };

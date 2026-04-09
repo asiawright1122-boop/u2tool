@@ -21,6 +21,13 @@
   seconds: number;
 }
 
+  const PRESETS: Preset[] = [
+    { name: '1 min', seconds: 60 },
+    { name: '5 min', seconds: 300 },
+    { name: '10 min', seconds: 600 },
+    { name: '25 min', seconds: 1500 },
+  ];
+
   let hours = $state(0);
 
   let minutes = $state(5);
@@ -33,11 +40,14 @@
 
   let isFinished = $state(false);
 
-  let intervalRef = $state(null);
+  let intervalRef = $state<ReturnType<typeof setInterval> | null>(null);
 
-  let audioRef = $state(null);
+  let audioRef = $state<HTMLAudioElement | null>(null);
 
   function playAlarm() {
+    audioRef?.play().catch(() => {
+      // Ignore autoplay restrictions.
+    });
     if (typeof window !== 'undefined' && 'Notification' in window) {
       Notification.requestPermission().then(perm => {
         if (perm === 'granted') {
@@ -97,23 +107,25 @@
     isFinished = false;
   }
   function handlePreset(preset: Preset) {
-    h = Math.floor(preset.seconds / 3600);
-    m = Math.floor((preset.seconds % 3600) / 60);
-    s = preset.seconds % 60;
-    hours = h;
-    minutes = m;
-    seconds = s;
+    const presetHours = Math.floor(preset.seconds / 3600);
+    const presetMinutes = Math.floor((preset.seconds % 3600) / 60);
+    const presetSeconds = preset.seconds % 60;
+    hours = presetHours;
+    minutes = presetMinutes;
+    seconds = presetSeconds;
     timeLeft = preset.seconds;
     isFinished = false;
   }
-  const progress = timeLeft > 0 ? (timeLeft / (hours * 3600 + minutes * 60 + seconds)) * 100 : 0;
+  let progress = $derived.by(() => {
+    const totalDuration = hours * 3600 + minutes * 60 + seconds;
+    return timeLeft > 0 && totalDuration > 0 ? (timeLeft / totalDuration) * 100 : 0;
+  });
 
 </script>
 
 
     <div class="space-y-6">
-      {#if !isRunning}
-timeLeft === 0 && !isFinished && (
+      {#if !isRunning && timeLeft === 0 && !isFinished}
         <div class="space-y-4">
           <div class="flex flex-wrap gap-2 justify-center">
             {#each PRESETS as preset (preset.name)}
@@ -169,7 +181,6 @@ timeLeft === 0 && !isFinished && (
             </div>
           </div>
         </div>
-      )
 {/if}
 
       {#if isRunning || timeLeft > 0 || isFinished}

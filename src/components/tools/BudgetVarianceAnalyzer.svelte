@@ -4,6 +4,17 @@
     translations: Record<string, unknown>;
   }
 
+  const DEFAULT_CATEGORIES = [
+    'Revenue',
+    'Cost of Goods Sold',
+    'Marketing',
+    'Salaries',
+    'Rent',
+    'Utilities',
+    'Operations',
+    'Other',
+  ];
+
   let { locale, translations }: Props = $props();
 
   // Translation helpers
@@ -37,7 +48,7 @@
   currency: string;
 }
 
-  let data = $state({
+  let data = $state<AnalysisData>({
     title: 'Q1 Budget Analysis',
     period: 'January - March 2024',
     items: [
@@ -51,7 +62,7 @@
     currency: 'USD',
   });
 
-  function updateData(key: K, value: AnalysisData[K]) {
+  function updateData<K extends keyof AnalysisData>(key: K, value: AnalysisData[K]) {
     data = ({ ...data, [key]: value });
   }
 
@@ -107,7 +118,13 @@
   });
 
   let currencySymbol = $derived.by(() => {
-    const symbols: Record<string, string> = { USD: '$', EUR: '€', GBP: '£', CNY: '¥', JPY: '¥' };
+    const symbols: Record<string, string> = {
+      USD: '$',
+      EUR: '€',
+      GBP: '£',
+      CNY: '¥',
+      JPY: '¥',
+    };
     return symbols[data.currency] || '$';
   });
 
@@ -333,4 +350,3 @@
         {t('exportReport')}
       </button>
     </div>
-  

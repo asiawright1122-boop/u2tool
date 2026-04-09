@@ -38,16 +38,16 @@
       "seo_description": "Convertissez couleurs, dates, unités, YAML en JSON et plus avec nos outils convertisseurs gratuits. Conversions rapides et précises dans votre navigateur."
     },
     "development": {
-      "seo_title": "Outils pour Développeurs - Testeur Regex, Formateur de Code",
-      "seo_description": "Outils essentiels pour développeurs : testeur d'expressions régulières, formateur SQL, testeur de chemins JSON, embellisseur de code et plus. Outils gratuits pour programmeurs."
+      "seo_title": "Outils de developpement pour regex, JSON, API et configuration",
+      "seo_description": "Testez regex et JSON, verifiez des API et generez des fichiers de configuration dans le navigateur. Outils de developpement pour regex tester, JSON validator, API tester et setup projet."
     },
     "security": {
       "seo_title": "Outils de Sécurité - Générateur de Mots de Passe, Hash, Chiffrement",
       "seo_description": "Outils de sécurité en ligne gratuits pour la génération de mots de passe, le calcul de hash, le chiffrement de texte et le hachage de fichiers. Protégez vos données avec des outils basés sur navigateur."
     },
     "network": {
-      "seo_title": "Outils Réseau - Recherche IP, Encodeur URL et Plus",
-      "seo_description": "Utilitaires réseau gratuits incluant la recherche IP, l'encodeur/décodeur d'URL et plus. Vérifiez les informations réseau et encodez les URLs instantanément."
+      "seo_title": "Outils reseau pour DNS, SSL, IP et analyse URL",
+      "seo_description": "Controlez DNS, SSL et IP, analysez les URLs et lisez les headers directement dans le navigateur. Outils reseau pour DNS lookup, SSL checker, IP validator et URL parser."
     },
     "image": {
       "seo_title": "Outils d'Image - Générateur QR, Convertisseur Base64 et Plus",
@@ -62,16 +62,16 @@
       "seo_description": "Créez de beaux graphiques en ligne avec nos outils générateurs gratuits. Générez des graphiques à barres, en lignes, camemberts et plus sans aucun logiciel."
     },
     "office": {
-      "seo_title": "Outils de Bureau - PDF, Créateur de CV et Productivité",
-      "seo_description": "Outils de bureau en ligne gratuits pour le traitement PDF, la création de CV et la productivité. Créez des documents professionnels sans installer de logiciel."
+      "seo_title": "Outils de bureau en ligne - PDF, CV, conversion de documents et reunions",
+      "seo_description": "Outils gratuits pour fusionner des PDF, creer un CV, convertir des documents et organiser des reunions. Travaillez sur vos fichiers et votre coordination d equipe directement dans le navigateur."
     },
     "lifestyle": {
       "seo_title": "Outils Style de Vie et Santé - Calculateur de Calories, Sommeil et Plus",
       "seo_description": "Outils gratuits de style de vie et santé incluant calculateur de calories, IMC, sommeil, apport en eau et plus. Améliorez votre santé aujourd'hui."
     },
     "finance": {
-      "seo_title": "Outils Financiers en Ligne - Convertisseur de Devises, Calculateur de Prêt",
-      "seo_description": "Outils financiers gratuits incluant convertisseur de devises, calculateur de prêt, hypothèque, ROI et impôts. Gérez votre argent intelligemment."
+      "seo_title": "Outils financiers en ligne - devises, ROI, factures et pilotage budgetaire",
+      "seo_description": "Outils financiers gratuits pour convertir des devises, calculer ROI, marges, taxes et hypotheses, puis preparer factures et suivi des depenses sans quitter le navigateur."
     },
     "fun": {
       "seo_title": "Outils de Divertissement - Tirage au Sort, Dés et Jeux",
@@ -1276,10 +1276,10 @@
       "convert": "Convertir",
       "inputPlaceholder": "Entrez un objet JSON...",
       "outputPlaceholder": "Le code Java apparaîtra ici...",
-      "name": "JSON to Java",
+      "name": "JSON vers Java",
       "description": "Convertir des données JSON en classes Java POJO avec le support de Lombok.",
-      "seo_title": "Convertisseur gratuit JSON to Java en ligne",
-      "seo_description": "Convertissez JSON en classes Java en ligne avec cet outil gratuit. Support Lombok, getters/setters et modèles builder. Parfait pour le développement d'API et la modélisation de données.",
+      "seo_title": "Convertisseur JSON vers Java gratuit en ligne",
+      "seo_description": "Convertissez un JSON en classes Java POJO en ligne. Générez rapidement des modèles pour vos API et la modélisation de données.",
       "detailed_description": "Notre outil JSON vers Java permet de générer automatiquement des classes POJO (Plain Old Java Object) à partir d'un document JSON structuré, en intégrant des fonctionnalités avancées via Lombok. Techniquement, l'outil analyse la structure du JSON fourni, identifie les types de données (primitifs, tableaux, objets imbriqués), et construit des classes Java avec des champs typés, des accesseurs/mutateurs, ainsi que des constructeurs. L'utilisation de Lombok (activée via l'annotation @Data) élimine le code boilerplate en générant automatiquement les méthodes toString(), equals(), hashCode(), ainsi que les getters et setters. Ce processus est particulièrement utile pour les développeurs Java intégrant des API REST externes, manipulant des données de configuration complexes, ou souhaitant valider la conformité d'un JSON avec un schéma attendu. Contrairement à d'autres outils, notre solution supporte la détection intelligente des collections (List, Map) et propose des options de personnalisation comme la génération de constructeurs avec arguments ou l'activation de l'annotation @NoArgsConstructor. L'implémentation interne utilise un analyseur basé sur Jackson pour inférer les types, tout en conservant la structure hiérarchique originale des données JSON.",
       "usage_steps": [
         "Collez votre JSON dans la zone de texte principale ou chargez un fichier via le bouton 'Importer JSON'.",
@@ -1595,7 +1595,7 @@
     "json-formatter": {
       "name": "Formateur et Valideur JSON",
       "description": "Outil gratuit en ligne pour formater, valider et embellir vos données JSON.",
-      "seo_title": "Formateur JSON gratuit en ligne - Valider et Beautifier JSON",
+      "seo_title": "Formateur JSON gratuit en ligne - valider et mettre en forme JSON",
       "seo_description": "Formatez et validez vos données JSON instantanément avec notre outil en ligne gratuit. Collez votre JSON, obtenez une mise en forme parfaite et corrigez les erreurs. Essayez-le maintenant !",
       "inputPlaceholder": "Saisissez vos données JSON ici...",
       "outputPlaceholder": "Le JSON formatté apparaîtra ici...",
@@ -1941,8 +1941,8 @@
     "regex-tester": {
       "name": "Testeur de Regex",
       "description": "Testez des expressions régulières avec des correspondances en temps réel et un coloriage syntaxique.",
-      "seo_title": "Regex Tester en ligne gratuit - Testez vos expressions régulières maintenant !",
-      "seo_description": "Testez et visualisez vos expressions régulières en temps réel sur notre outil en ligne gratuit. Commencez à tester vos JSON, Base64, SVG et plus ! Essayez dès maintenant !",
+      "seo_title": "Testeur regex en ligne gratuit - testez vos expressions régulières",
+      "seo_description": "Testez et visualisez vos expressions régulières en temps réel avec ce testeur regex en ligne gratuit.",
       "detailed_description": "Le Regex Tester permet de valider et d'affiner des expressions régulières (regex) en analysant leur comportement sur du texte réel. Techniquement, il intègre un moteur de regex compatible avec les standards ECMA 262, prenant en charge les méta-caractères, quantifieurs, groupes de capture et assertions. Les développeurs l'utiliseront pour valider des formats de données (emails, UUIDs), parser des logs serveur ou extraire des informations structurées (numéros de téléphone, URLs). Le processus fonctionne via un interpréteur en temps réel : l'outil décompose l'expression en opcodes exécutables, applique les balises (g, i, m, s) sélectionnées, puis met en surbrillance les correspondances dans le DOM via des spans CSS. Il affiche également les groupes capturés dans un tableau détaillé, avec leurs indices de début/fin. Ce niveau de granularité permet de diagnostiquer des problèmes comme les quantifieurs gourmands ou les échappements manquants, cruciaux pour des applications de traitement de données complexes.",
       "usage_steps": [
         "Saisissez votre expression régulière dans le champ dédié, en utilisant des syntaxes comme \\d+ ou [A-Z]{2,4}",
@@ -1960,64 +1960,58 @@
       ]
     },
     "jwt-decoder": {
-      "name": "Décodeur JWT en Ligne",
-      "description": "Décodez et inspectez gratuitement vos tokens JWT pour voir l'en-tête, la charge utile et la signature.",
-      "seo_title": "Décodeur JWT Gratuit - Outil en Ligne pour Décoder les Tokens",
-      "seo_description": "Décodez instantanément vos tokens JWT avec notre outil gratuit en ligne. Visualisez l'en-tête, la charge utile et la signature. Aucune inscription requise, utilisez-le dès maintenant !",
-      "enterToken": "Veuillez entrer un jeton JWT",
-      "invalidFormat": "Format de jeton JWT invalide",
-      "invalidToken": "Jeton JWT invalide",
-      "header": "Tête",
-      "payload": "Chargement",
-      "signature": "Signature",
-      "issuedAt": "Émis le (iat)",
-      "expires": "Expire le (exp)",
-      "notBefore": "Avant de ne pas (nbf)",
-      "detailed_description": "Ce décodeur JWT est un outil en ligne gratuit conçu pour les développeurs et administrateurs système. Il vous permet de coller un token JWT (JSON Web Token) et de le décoder instantanément pour en inspecter le contenu. L'outil sépare et affiche clairement les trois parties principales : l'en-tête (header) qui définit l'algorithme et le type, la charge utile (payload) contenant les revendications (claims), et la signature. C'est idéal pour déboguer des problèmes d'authentification, vérifier les données d'un token ou comprendre la structure d'un JWT sans avoir à écrire de code.",
+      "name": "Débogueur JWT",
+      "description": "Déboguez et vérifiez les tokens JWT avec validation de signature",
+      "seo_title": "Outil en ligne gratuit pour déboguer JWT",
+      "seo_description": "Décodez et vérifiez gratuitement des tokens JWT en ligne. Décryptez la tête et le chargement, vérifiez les signatures avec une clé secrète ou publique. Outil essentiel pour le débogage de l'authentification.",
+      "detailed_description": "Le JWT Debugger est un outil technique spécifiquement conçu pour analyser, valider et diagnostiquer les tokens JSON Web Token (JWT) selon les standards RFC 7519. Il permet de décomposer un token en trois segments (en-tête, payload et signature) et d'effectuer des vérifications cryptographiques sur la signature via des algorithmes comme HMAC-SHA256 ou RSA-SHA256. Les développeurs et administrateurs système peuvent utiliser cet outil pour identifier des problèmes de formatage, valider la provenance d'un token via une clé publique, ou vérifier la validité temporelle (claims 'exp' ou 'nbf'). L'outil affiche des erreurs précises en cas de signature invalide, de clé incorrecte, ou de données corrompues, tout en supportant l'analyse de tokens encodés avec des algorithmes modernes comme ES256 ou RS512. Ce niveau de détail technique en fait un outil indispensable pour déboguer des intégrations OAuth2 ou des systèmes d'authentification basés sur des tokens.",
       "usage_steps": [
-        "Copiez votre token JWT complet depuis votre application ou vos logs.",
-        "Collez le token dans la zone de texte principale de l'outil.",
-        "Cliquez sur le bouton 'Décoder' ou appuyez sur Entrée.",
-        "Consultez les sections dépliées pour l'En-tête et la Charge Utile décodés.",
-        "Analysez les données JSON formatées et les détails de la signature."
+        "Collez le token JWT complet dans le champ d'entrée à l'étiquette 'Token à analyser'.",
+        "Cliquez sur le bouton 'Décoder' pour afficher automatiquement les segments d'en-tête et de payload en clair.",
+        "Sélectionnez l'algorithme de signature utilisé (HS256, RS256, etc.) dans le menu déroulant 'Méthode de validation'.",
+        "Importez une clé publique ou un certificat X.509 via le bouton 'Charger la clé' pour valider la signature électronique.",
+        "Vérifiez le statut de signature dans la section 'Résultats de la validation' (statut 'Valide', 'Invalide', ou 'Erreur de format').",
+        "Utilisez l'onglet 'Analyse temporelle' pour contrôler les dates d'expiration ('exp'), de début de validité ('nbf') et leur conformité avec l'horloge système."
       ],
       "usage_examples": [
-        "Un développeur backend vérifie les claims (comme 'exp' ou 'sub') d'un token généré par son API.",
-        "Un administrateur diagnostique une erreur d'autorisation en inspectant le contenu d'un token d'accès.",
-        "Un étudiant en sécurité apprend la structure des JWT en décodant un exemple de token de démonstration."
+        "Un développeur identifie une incompatibilité d'algorithme lors de la validation d'un token généré par un fournisseur tiers.",
+        "Un administrateur système vérifie pourquoi un token généré par Keycloak est rejeté par une API Spring Security en raison d'une signature invalide.",
+        "Un auditeur de sécurité analyse un JWT pour détecter l'utilisation d'algorithmes obsolètes comme HS256 avec une clé faible.",
+        "Un testeur QA reproduit une erreur 'token expired' en modifiant manuellement la date d'expiration dans le payload et en vérifiant le résultat de validation."
       ],
-      "input": "Entrée",
-      "decode": "Décodez",
-      "copied": "Copié !",
+      "token": "Token JWT",
+      "header": "En-tête",
+      "payload": "Payload",
+      "signature": "Signature",
+      "secret": "Clé Secrète",
+      "verify": "Vérifier la Signature",
+      "valid": "Signature Valide",
+      "invalid": "Signature Invalide",
+      "expired": "Token Expiré",
+      "tokenPlaceholder": "Collez votre token JWT ici...",
+      "notExpired": "Token Valide",
+      "expiresAt": "Expire le",
+      "errors": {
+        "invalidFormat": "Format JWT invalide",
+        "decodeFailed": "Échec du décodage du token"
+      },
+      "placeholder": "Collez le token JWT ici...",
+      "loadExample": "Charger l'exemple",
+      "tokenInput": "Entrée du token",
+      "claim": "Revendication",
+      "claims": "Revendications",
+      "copied": "Copié !",
       "copy": "Copier",
-      "faqs": [
-        {
-          "question": "Cet outil vérifie-t-il la validité de la signature du JWT ?",
-          "answer": "Non, cet outil décode uniquement le token (décode Base64Url). Il ne vérifie pas la signature car cela nécessiterait la clé secrète."
-        },
-        {
-          "question": "Que se passe-t-il si mon token JWT est malformé ou invalide ?",
-          "answer": "L'outil affichera un message d'erreur clair indiquant que le format du token est incorrect (ex: parties manquantes)."
-        },
-        {
-          "question": "Puis-je décoder des tokens JWT chiffrés (JWE) avec cet outil ?",
-          "answer": "Non, cet outil est conçu uniquement pour les JWT signés (JWS). Il ne peut pas décrypter les JWE."
-        },
-        {
-          "question": "Y a-t-il une limite à la taille du token que je peux décoder ?",
-          "answer": "La limite est pratique et liée à la taille du champ de saisie du navigateur. Les tokens JWT standards sont parfaitement pris en charge."
-        },
-        {
-          "question": "Mes tokens JWT sont-ils envoyés à vos serveurs lors du décodage ?",
-          "answer": "Non, le décodage s'effectue entièrement côté client (dans votre navigateur). Aucune donnée n'est envoyée à un serveur externe."
-        }
-      ]
+      "secretPlaceholder": "Entrez la clé secrète...",
+      "value": "Valeur",
+      "verifyNote": "Note : La vérification de signature est effectuée côté client",
+      "verifySignature": "Vérifier la signature"
     },
     "diff-checker": {
-      "name": "Diff Checker",
+      "name": "Comparateur de différences",
       "description": "Comparez deux textes et mettez en évidence les différences entre eux.",
-      "seo_title": "Diff Checker en ligne gratuit - Comparez des textes facilement 🚀",
-      "seo_description": "Comparez deux textes et soulignez les différences en ligne avec notre outil gratuit. Simplifiez votre travail et améliorez votre efficacité avec Diff Checker ! 📝🔍",
+      "seo_title": "Comparateur de différences en ligne gratuit - comparez des textes facilement",
+      "seo_description": "Comparez deux textes en ligne et mettez en évidence les différences avec un comparateur gratuit.",
       "detailed_description": "Le Diff Checker est un outil de comparaison de texte avancé qui permet aux utilisateurs de détecter et de visualiser les différences entre deux versions d'un document ou d'un code source. Techniquement, l'outil utilise des algorithmes de diff, tels que le Longest Common Subsequence (LCS), pour identifier les insertions, suppressions et modifications entre deux ensembles de données textuelles. Cette approche permet non seulement de souligner les changements spécifiques, mais aussi de présenter ces modifications de manière structurée et compréhensible. Les utilisateurs ont besoin de cet outil pour diverses raisons : vérifier les modifications apportées à des documents contractuels, assurer la cohérence des traductions, ou encore debuguer des erreurs dans le code. Par exemple, un développeur peut utiliser le Diff Checker pour identifier rapidement les lignes de code modifiées entre deux versions d'un fichier, facilitant ainsi le processus de revue de code et de débogage.",
       "usage_steps": [
         "Ouvrez la page du Diff Checker sur le site web.",
@@ -2223,7 +2217,7 @@
     "xml-formatter": {
       "name": "Formateur et Minificateur XML",
       "description": "Formatez, minifiez et validez vos données XML gratuitement en ligne.",
-      "seo_title": "Formateur XML Gratuit - Outil en Ligne pour Formater et Minifier",
+      "seo_title": "Formateur XML gratuit en ligne - formater et compacter XML",
       "seo_description": "Formatez et minifiez vos fichiers XML instantanément avec notre outil en ligne gratuit. Validez la syntaxe XML et améliorez la lisibilité. Aucune inscription requise.",
       "detailed_description": "Cet outil gratuit vous permet de formater (indenter) vos données XML pour une lecture aisée ou de les minifier (compresser) pour réduire leur taille. Il valide également la syntaxe XML pour détecter les erreurs. Idéal pour les développeurs, intégrateurs et administrateurs travaillant avec des flux de données, des fichiers de configuration ou des API REST/XML.",
       "usage_steps": [
@@ -2595,7 +2589,7 @@
     "random-generator": {
       "name": "Générateur de Nombres Aléatoires",
       "description": "Générer des nombres aléatoires dans un intervalle spécifié, avec une génération en masse et des options uniques.",
-      "seo_title": "Outil en ligne gratuit pour générer des nombres aléatoires - Random Number Generator",
+      "seo_title": "Générateur de nombres aléatoires gratuit en ligne",
       "seo_description": "Créez des nombres aléatoires personnalisés en ligne avec notre outil. Générez en masse et assurez-vous de l'unicité. Commencez dès maintenant !",
       "detailed_description": "Le générateur de nombres aléatoires est un outil technique conçu pour produire des séquences de valeurs numériques dans des plages définies par l'utilisateur, avec des options avancées pour la génération massive et l'unicité. Basé sur un algorithme hybride combinant des sources d'entropie système et un générateur de nombres pseudo-aléatoires (PRNG) de type Mersenne Twister, il garantit à la fois rapidité et qualité statistique. Les développeurs peuvent spécifier des paramètres précis comme la borne inférieure/supérieure, le nombre d'échantillons souhaités, et activer une vérification d'unicité pour éviter les doublons. La fonctionnalité de graine (seed) permet de reproduire des séquences déterministes, utile pour les tests reproductibles ou les simulations Monte Carlo. Ce outil répond aux besoins critiques de création de jeux de données synthétiques pour tests de charge, d'échantillonnage statistique, de génération de jetons de sécurité, ou de prototypage d'expériences aléatoires en recherche. Sa capacité à exporter en formats structurés (CSV, JSON, XML) le rend compatible avec les workflows d'analyse automatique.",
       "usage_steps": [
@@ -2751,7 +2745,7 @@
       ]
     },
     "color-blender": {
-      "name": "Color Blender",
+      "name": "Mélangeur de couleurs",
       "description": "Mélangez deux couleurs et générez des étapes de gradient.",
       "seo_title": "Outil en ligne gratuit pour mixer des couleurs et générer des gradients",
       "seo_description": "Créez des transitions de couleurs fluides en ligne avec notre outil facile à utiliser. Essayez maintenant sans inscription !",
@@ -3687,7 +3681,7 @@
     "statistics-calculator": {
       "name": "Calculatrice de Statistiques",
       "description": "Calculez la moyenne, la médiane, la moda, l'écart-type, la variance et plus encore.",
-      "seo_title": "Outil gratuit en ligne pour calculer la moyenne, la médiane et plus !",
+      "seo_title": "Calculatrice de statistiques gratuite en ligne",
       "seo_description": "Utilisez notre outil en ligne pour calculer facilement la moyenne, la médiane, la mode, l'écart-type et plus encore. Commencez dès maintenant !",
       "detailed_description": "Le Statistics Calculator est un outil technique conçu pour exécuter des analyses statistiques avancées sur des ensembles de données numériques. Il calcule des mesures de tendance centrale (moyenne arithmétique, médiane, mode), des indicateurs de dispersion (écart-types, variance, intervalle interquartile) et des coefficients de forme (asymétrie, kurtosis). Intégrant des algorithmes numériques optimisés tels que la méthode de Welford pour éviter les erreurs d'arrondi lors du calcul de la variance, il garantit une précision de calcul même sur de grands jeux de données. Les utilisateurs peuvent importer des fichiers CSV ou saisir manuellement des séries temporelles, des échantillons aléatoires ou des données catégorielles. L'outil effectue également des tests d'hypothèse basiques comme le test t de Student ou le test de Shapiro-Wilk pour vérifier la normalité des données. Indispensable pour les étudiants en statistiques, les data analysts ou les chercheurs en sciences sociales, il permet de synthétiser rapidement des distributions complexes, d'identifier des valeurs aberrantes via des boxplots générés automatiquement, ou d'estimer des intervalles de confiance avec un niveau de significativité paramétrable (90%, 95%, 99%).",
       "usage_steps": [
@@ -4112,7 +4106,7 @@
       "name": "Générateur de Tableau Markdown",
       "description": "Créez et éditez des tableaux Markdown avec un éditeur visuel et une prévisualisation en direct.",
       "seo_title": "Générateur de Tableau Markdown Gratuit en Ligne",
-      "seo_description": "Générez des tableaux Markdown avec un éditeur visuel en ligne pour free. Prévisualisation en direct, alignement des colonnes et import CSV. Parfait pour les fichiers README GitHub et les documents.",
+      "seo_description": "Générez des tableaux Markdown avec un éditeur visuel en ligne gratuit. Prévisualisation en direct, alignement des colonnes et import CSV pour README GitHub et documentation.",
       "addRow": "+ Ajouter une ligne",
       "addColumn": "+ Ajouter une colonne",
       "loadSample": "Charger un exemple",
@@ -4635,7 +4629,7 @@
       "output": "CSS Output",
       "copy": "Copier CSS",
       "seo_title": "Générateur de Ombre Box Gratuit en Ligne",
-      "seo_description": "Générer un box-shadow CSS avec un éditeur visuel en ligne pour free. Personnalisez l'offset, le flou, l'extension et la couleur. Copiez le code CSS avec un clic pour vos projets.",
+      "seo_description": "Générez un box-shadow CSS avec un éditeur visuel en ligne gratuit. Ajustez décalage, flou, étalement et couleur, puis copiez le code CSS pour vos projets.",
       "shadowLayers": "Couche d'Ombre",
       "addLayer": "+ Ajouter une Couche",
       "layer": "Couche {index}",
@@ -4916,7 +4910,7 @@
       "input": "Texte d'entrée",
       "copy": "Copier les résultats",
       "seo_title": "Prévisualisation gratuite de raccourcissement de URL en ligne",
-      "seo_description": "Prévisualisez et analysez les URL raccourcies en ligne pour free. Étendez les liens bit.ly, tinyurl, et autres pour voir l'adresse cible. Vérifiez la sécurité avant de cliquer.",
+      "seo_description": "Prévisualisez et analysez les URL raccourcies en ligne gratuitement. Développez les liens bit.ly, tinyurl et autres pour voir l'adresse cible et vérifier la sécurité avant de cliquer.",
       "note": "Note: En raison des restrictions de sécurité des navigateurs, l'expansion réelle des URL nécessite des requêtes côté serveur. Cette outil identifie les URL raccourcies et affiche leurs domaines.",
       "placeholder": "Coller le texte contenant des URL raccourcies (bit.ly, tinyurl.com, t.co, etc.)...",
       "analyzing": "Analyse en cours...",
@@ -5125,7 +5119,7 @@
       "output": "CSS Output",
       "copy": "Copier CSS",
       "seo_title": "Générateur de Filtres CSS Gratuit en Ligne",
-      "seo_description": "Générer des effets de filtre CSS avec un éditeur visuel en ligne pour free. Appliquez du flou, de la luminosité, du contraste, de la sépia et plus encore. Copiez le code CSS pour vos projets.",
+      "seo_description": "Générez des effets de filtre CSS avec un éditeur visuel en ligne gratuit. Ajustez flou, luminosité, contraste, sépia et autres réglages, puis copiez le code CSS.",
       "reset": "Réinitialiser",
       "uploadImage": "Télécharger une Image",
       "blur": "Flou",
@@ -5222,7 +5216,7 @@
       "name": "Générateur de CSS Clip Path",
       "description": "Créez des formes de CSS clip-path avec un éditeur visuel.",
       "seo_title": "Générateur de CSS Clip Path Gratuit en Ligne",
-      "seo_description": "Créez des formes de CSS clip-path avec un éditeur visuel en ligne pour free. Conception de polygones, de cercles, d'ellipses et de chemins personnalisés. Copiez le code CSS pour des dispositions créatives.",
+      "seo_description": "Créez des formes CSS clip-path avec un éditeur visuel en ligne gratuit. Concevez polygones, cercles, ellipses et tracés personnalisés, puis copiez le code CSS pour vos mises en page.",
       "detailed_description": "Le générateur CSS Clip Path est un outil technique permettant de créer et d'optimiser des formes CSS avec une précision géométrique. Il permet de définir des zones de découpage personnalisées via la propriété CSS `clip-path`, en générant des valeurs polygonales, elliptiques ou personnalisées. Ce tool est indispensable pour les développeurs souhaitant intégrer des designs non rectangulaires sans recourir à des images ou SVG. Il simplifie la manipulation de coordonnées cartésiennes, de courbes de Bézier ou de pourcentages relatifs au viewport. Grâce à son éditeur visuel, les utilisateurs peuvent ajuster des points d'ancrage, des angles et des unités (px, %, vw/vh), tout en visualisant en temps réel le rendu sur un élément HTML de référence. L'outil intègre également des options avancées comme la gestion de `inset()` pour les masquages rectangulaires avec arrondis, et la compatibilité cross-browsers avec préfixes automatiques (-webkit-, -moz-). Cela élimine les erreurs manuelles dans le calcul des coordonnées et garantit des résultats réactifs, adaptés aux différentes résolutions d'écran.",
       "usage_steps": [
         "Sélectionnez un type de forme de base (polygon, ellipse, inset) dans le menu déroulant 'Shape Type'.",
@@ -5303,10 +5297,10 @@
       ]
     },
     "canvas-drawing": {
-      "name": "Canvas Drawing",
+      "name": "Dessin sur canevas",
       "description": "Outil simple avec pinceau et gomme.",
-      "seo_title": "Outil en ligne de dessin gratuit",
-      "seo_description": "Outil de dessin simple en ligne avec pinceau et gomme gratuit. Personnalisez la taille, la couleur et l'opacité. Téléchargez l'artwork en PNG. Parfait pour des croquis rapides.",
+      "seo_title": "Outil de dessin sur canevas gratuit en ligne",
+      "seo_description": "Dessinez sur un canevas en ligne avec pinceau et gomme, puis téléchargez vos croquis en PNG.",
       "detailed_description": "L'outil Canvas Drawing est un éditeur graphique basé sur le standard HTML5 Canvas, permettant de créer et modifier des images matricielles (raster) via une interface interactive. Techniquement, il utilise le contexte 2D de l'élément <canvas> pour tracer des chemins vectoriels dynamiques avec des algorithmes de rasterisation en temps réel. La brosse applique des opérations de dessin avec possibilité de réglage de la dureté, de la pression (simulée) et de l'opacité, tandis que la gomme utilise des modes de fusion (compositing) pour supprimer des pixels en ajustant les canaux RGBA. Ce toolchain est utile pour les développeurs web souhaitant tester des prototypes d'interfaces, les designers créant des assets 2D simplifiés, ou les enseignants annotant des diagrammes techniques. L'outil gère les événements tactiles et souris pour capturer les mouvements, lesquels sont convertis en séries de points interpolés pour fluidifier les tracés. Les fichiers générés peuvent être exportés en PNG ou JPEG avec différentes résolutions, incluant des options de mise à l'échelle basées sur des ratios d'affichage paramétrables.",
       "usage_steps": [
         "Sélectionnez l'outil 'Brosse' ou 'Gomme' dans le panneau latéral de contrôle",
@@ -6495,8 +6489,8 @@
     "lorem-picsum": {
       "name": "Lorem Picsum",
       "description": "Génère des images de place-tenants aléatoires à partir de Picsum Photos.",
-      "seo_title": "Générateur gratuit d’images placeholder en ligne - Outil facile!",
-      "seo_description": "Créez facilement des images placeholder de haute qualité avec Lorem Picsum. Utilisez notre outil en ligne pour générer des images JSON, Base64 ou SVG. Commencez maintenant!",
+      "seo_title": "Générateur d'images Lorem Picsum gratuit en ligne",
+      "seo_description": "Créez facilement des images factices de haute qualité avec Lorem Picsum pour vos maquettes et prototypes.",
       "width": "Largeur",
       "height": "Hauteur",
       "seed": "Graine",
@@ -6939,8 +6933,8 @@
     "base-calculator": {
       "name": "Calculateur de base",
       "description": "Effectuez des calculs dans différentes bases numériques.",
-      "seo_title": "Calculatrice Gratuite en Ligne",
-      "seo_description": "Calculez en binaire, octal, décimal et hexadécimal. Outil supportant les opérations arithmétiques et bit à bit comme AND, OR, XOR, NOT, décalage. Pour le programmage bas niveau.",
+      "seo_title": "Calculateur de bases gratuit en ligne",
+      "seo_description": "Calculez et convertissez en binaire, octal, décimal et hexadécimal avec ce calculateur de bases.",
       "base": "Base numérique",
       "binary": "Binaire",
       "octal": "Octal",
@@ -7113,7 +7107,9 @@
         "productB": "Produit B",
         "productC": "Produit C",
         "productD": "Produit D",
-        "productE": "Produit E"
+        "productE": "Produit E",
+        "sales": "Sales",
+        "profit": "Profit"
       },
       "importCsv": "Importer CSV",
       "csvFormat": "Format CSV : catégorie,valeur (une par ligne)",
@@ -7144,7 +7140,8 @@
         "Un développeur d'applications SaaS génère un tableau de bord technique montrant la latence des API par région, avec code couleur selon les normes SLA"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "addCategory": "Add Category"
     },
     "line-chart-generator": {
       "name": "Générateur de Graphique en Lignes",
@@ -7763,7 +7760,8 @@
         "tip2": "Définissez les valeurs des nœuds",
         "tip3": "Activez la navigation par fil d'ariane",
         "tip4": "Ajustez la profondeur des feuilles",
-        "tip5": "Exportez en PNG ou SVG"
+        "tip5": "Exportez en PNG ou SVG",
+        "tip6": "All processing is local, ensuring complete privacy."
       },
       "detailed_description": "Le générateur de cartes arborescentes (Treemap Chart Generator) est un outil en ligne robuste conçu pour visualiser des données hiérarchiques de manière efficace et esthétique. Cette application permet aux utilisateurs de créer des cartes arborescentes, un type de visualisation de données qui utilise des rectangles imbriqués pour représenter des structures de données complexes. Chaque rectangle correspond à une catégorie, et sa taille et sa couleur peuvent être modifiées pour refléter différentes valeurs, telles que la taille d'un segment ou son importance. Les utilisateurs peuvent facilement personnaliser l'apparence de ces rectangles, ajuster les couleurs, les étiquettes, et même exporter le diagramme finale au format PNG ou SVG, ce qui le rend idéal pour les présentations, les rapports, et les analyses de données. Ce générateur est particulièrement utile pour les professionnels de la data, les analystes financiers, et les chercheurs qui doivent présenter des données volumineuses et multidimensionnelles de manière claire et compréhensible. La capacité de visualiser des relations hiérarchiques et de comparer des proportions de manière intuitive en fait un outil indispensable pour l'analyse de données approfondie et la prise de décision stratégique.",
       "usage_steps": [
@@ -7781,7 +7779,9 @@
         "Un chercheur en environnement étudie la répartition des espèces dans différentes régions. Il utilise le générateur de cartes arborescentes pour créer une visualisation montrant la diversité biologique, avec des rectangles de tailles et de couleurs variées pour représenter l'abondance et la rareté des espèces."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "delete": "Delete",
+      "total": "Total"
     },
     "doughnut-chart-generator": {
       "name": "Générateur de Graphique en Ananas",
@@ -8713,7 +8713,41 @@
         "Visualisation des chevauchements entre segments de marché identifiés par analyse de données clients",
         "Enseignement interactif des opérations ensemblistes (union, intersection, complémentarité) en cours de mathématiques discrètes",
         "Analyse sociologique des réponses partiellement superposées à un questionnaire sur les comportements d'achat"
-      ]
+      ],
+      "setCount": "Number of Sets",
+      "labels": "Label Settings",
+      "setA": "Set A",
+      "setB": "Set B",
+      "setC": "Set C",
+      "intersections": "Intersection Settings",
+      "intersectionAB": "A ∩ B",
+      "intersectionBC": "B ∩ C",
+      "intersectionAC": "A ∩ C",
+      "intersectionABC": "A ∩ B ∩ C",
+      "chartTitle": "Chart Title",
+      "colorTheme": "Color Theme",
+      "themeDefault": "Classic",
+      "themeVibrant": "Vibrant",
+      "themePastel": "Pastel",
+      "opacity": "Opacity",
+      "loadSample": "Load Sample Data",
+      "chartSettings": "Chart Settings",
+      "sampleTitle": "Sample Venn Diagram",
+      "sampleData": {
+        "math": "Math",
+        "science": "Science",
+        "art": "Art",
+        "both": "Intersection"
+      },
+      "tips": {
+        "title": "Venn Diagram Info",
+        "tip1": "Select the number of sets (2 or 3).",
+        "tip2": "Modify set labels to reflect your data content.",
+        "tip3": "Adjust opacity to see overlapping areas clearly.",
+        "tip4": "Real-time preview with consistent export results.",
+        "tip5": "Perfect for showing logical relationships and differences.",
+        "tip6": "Local browser processing, no data upload required."
+      }
     },
     "timeline-chart-generator": {
       "name": "Générateur de chronologies",
@@ -9903,7 +9937,7 @@
     "time-calculator": {
       "name": "Calculateur d'Heures",
       "description": "Ajoutez, souchez et calculez les différences entre des heures.",
-      "seo_title": "Calculer l'heure en ligne – Outil gratuit pour ajouter et soustraire du temps",
+      "seo_title": "Calculateur d'heures en ligne gratuit pour ajouter et soustraire du temps",
       "seo_description": "Utilisez notre outil en ligne gratuit pour facilement calculer la différence entre les heures. Ajoutez, soustrayez et gérez votre temps avec précision. Commencez maintenant !",
       "time1": "Heure 1",
       "time2": "Heure 2",
@@ -9979,7 +10013,7 @@
     "regex-visualizer": {
       "name": "Visualiseur de Regex",
       "description": "Visualisez les expressions régulières sous forme de diagrammes de chemin de fer. Testez des motifs avec des chaînes d'exemple.",
-      "seo_title": "Regex Visualizer Gratuit en Ligne - Testez vos expressions régulières facilement !",
+      "seo_title": "Visualiseur regex gratuit en ligne - testez vos expressions régulières",
       "seo_description": "Visualisez vos expressions régulières en diagrammes ferroviaires en ligne. Testez vos modèles avec des chaînes de caractères de prédéfinies. Essayez notre outil gratuit maintenant !",
       "pattern": "Motif Regex",
       "patternPlaceholder": "^([a-zA-Z0-9]+)@([a-zA-Z0-9]+)\\.[a-zA-Z]{2,}$",
@@ -12398,8 +12432,8 @@
     "tax-calculator": {
       "name": "Calculateur d'impôts",
       "description": "Estimez l'impôt sur le revenu fédéral avec une breakdown des tranches et le taux effectif.",
-      "seo_title": "Calculateur d'impôt gratuit en ligne - Brackets & Taux effectif",
-      "seo_description": "Estimez votre impôt fédéral avec notre outil en ligne. Découvrez vos brackets fiscaux et taux effectif. Commencez maintenant !",
+      "seo_title": "Calculateur d'impôt gratuit en ligne - tranches et taux effectif",
+      "seo_description": "Utilisez ce calculateur d'impôts en ligne pour estimer votre impôt fédéral et visualiser vos tranches fiscales ainsi que votre taux effectif.",
       "grossIncome": "Revenu brut",
       "filingStatus": "Statut de déclaration",
       "single": "Célibataire",
@@ -12501,8 +12535,8 @@
     "water-intake-calculator": {
       "name": "Calculateur d'Apport Hydratant",
       "description": "Calculez votre apport hydrique quotidien en fonction de votre poids et de votre niveau d'activité.",
-      "seo_title": "Calculateur d’Intégration Hydrique Gratuite - Besoins Hydratation Journaliers",
-      "seo_description": "Calculez vos besoins en eau quotidienne en ligne gratuitement. Selon le poids corporel et le niveau d’activité.",
+      "seo_title": "Calculateur d'apport hydrique gratuit en ligne",
+      "seo_description": "Utilisez ce calculateur d'apport hydrique pour estimer vos besoins quotidiens en eau selon le poids corporel et le niveau d'activité.",
       "activityLevel": "Niveau d'Activité",
       "sedentary": "Sédentaire",
       "lightlyActive": "Activité Légère",
@@ -12735,7 +12769,7 @@
     "name-generator": {
       "name": "Générateur de Noms",
       "description": "Générez des noms aléatoires pour des personnages, des bébés ou des projets.",
-      "seo_title": "Outil en ligne gratuit pour générer des noms aléatoires - Name Generator",
+      "seo_title": "Générateur de noms aléatoires gratuit en ligne",
       "seo_description": "Créez des noms uniques pour vos personnages, bébés ou projets avec notre outil en ligne facile à utiliser. Commencez dès maintenant !",
       "gender": "Genre",
       "any": "Tous les genres",
@@ -12779,8 +12813,8 @@
     "random-picker": {
       "name": "Choiseur Aléatoire",
       "description": "Sélectionnez des éléments aléatoires à partir d'une liste avec des effets d'animation.",
-      "seo_title": "Picker en ligne gratuit : Choisissez aléatoirement avec animation !",
-      "seo_description": "Utilisez notre outil de picker en ligne pour sélectionner aléatoirement des éléments avec des effets d'animation. Facile et amusant, essayez maintenant !",
+      "seo_title": "Sélecteur aléatoire gratuit en ligne avec animation",
+      "seo_description": "Utilisez ce sélecteur aléatoire en ligne pour choisir des éléments avec des effets d'animation.",
       "enterItems": "Saisissez des éléments (un par ligne)",
       "numberOfWinners": "Nombre de Gagnants",
       "pick": "Sélectionner Aléatoirement",
@@ -12809,10 +12843,10 @@
       "itemCount": "Nombre d'Éléments"
     },
     "coin-flipper": {
-      "name": "Greffon à Monnaie",
+      "name": "Pile ou Face",
       "description": "Lancez un jet de monnaie virtuel avec une animation réaliste et des statistiques.",
-      "seo_title": "Gratuit Outil de Pile ou Face En Ligne Avec Animation Réaliste",
-      "seo_description": "Découvrez notre outil en ligne de pile ou face gratuit avec animation et statistiques en temps réel. Essayez maintenant !",
+      "seo_title": "Pile ou face gratuit en ligne avec animation réaliste",
+      "seo_description": "Utilisez cet outil de pile ou face en ligne pour lancer une pièce avec animation réaliste et consulter les statistiques en temps réel.",
       "flip": "Lancer la Monnaie",
       "flipping": "Lancement...",
       "heads": "Ciseau",
@@ -12877,7 +12911,7 @@
     "team-generator": {
       "name": "Générateur d'Équipes",
       "description": "Divisez les personnes en équipes équilibrées au hasard.",
-      "seo_title": "Gratuit en ligne : Outil Team Generator pour des équipes équilibrées",
+      "seo_title": "Générateur d'équipes gratuit en ligne pour des groupes équilibrés",
       "seo_description": "Divisez vos groupes en équipes équilibrées de manière aléatoire. Notre outil en ligne gratuit optimise la collaboration. Commencez dès maintenant !",
       "enterNames": "Saisissez les noms (un par ligne)",
       "numberOfTeams": "Nombre d'Équipes",
@@ -13110,7 +13144,7 @@
       "name": "Calculateur d'Allure",
       "description": "Calculez l'allure, le temps ou la distance de course.",
       "seo_title": "Calculateur de vitesse de course en ligne gratuit",
-      "seo_description": "Calculez votre vitesse de course, votre temps de fin ou votre distance en ligne gratuitement. Idéal pour la planification de votre marathon.",
+      "seo_description": "Calculez votre allure de course, votre temps de fin ou votre distance en ligne. Idéal pour préparer un marathon.",
       "time": "Temps",
       "pace": "Allure",
       "hours": "Heures",
@@ -13540,7 +13574,7 @@
     "text-summarizer": {
       "name": "Résumeur de Texte",
       "description": "Résumez des textes longs en extraignant les phrases clés.",
-      "seo_title": "Résumé en ligne gratuit - Outil d'auto-résumé",
+      "seo_title": "Résumeur de texte gratuit en ligne",
       "seo_description": "Résumez du texte long en ligne gratuitement. Extraire automatiquement les phrases clés et les points principaux.",
       "enterText": "Saisissez le texte à résumer",
       "summarize": "Résumer",
@@ -14688,7 +14722,7 @@
     "palindrome-checker": {
       "name": "Vérificateur de Palindromes",
       "description": "Vérifiez si le texte se lit de la même façon dans les deux sens",
-      "seo_title": "Outil gratuit en ligne pour vérifier les palindromes - Palindrome Checker",
+      "seo_title": "Vérificateur de palindromes gratuit en ligne",
       "seo_description": "Vérifiez si votre texte est un palindrome en ligne gratuitement. Notre outil facile à utiliser vous aide à découvrir les symétries de vos phrases. Commencez maintenant !",
       "detailed_description": "Le vérificateur de palindromes teste si votre texte se lit de la même façon dans les deux sens. Il peut ignorer les espaces, la ponctuation et la casse.",
       "usage_steps": [
@@ -15092,8 +15126,8 @@
     "xml-validator": {
       "name": "Valideur XML",
       "description": "Validez la syntaxe et la bien-forméité de votre XML",
-      "seo_title": "XML Validator en ligne gratuit - Vérifiez la syntaxe XML facilement !",
-      "seo_description": "Utilisez notre outil XML Validator en ligne gratuit pour vérifier la syntaxe et l'alignement de vos documents XML. Commencez dès maintenant !",
+      "seo_title": "Valideur XML gratuit en ligne - vérifiez la syntaxe XML",
+      "seo_description": "Utilisez notre valideur XML en ligne gratuit pour vérifier la syntaxe et l'alignement de vos documents XML.",
       "detailed_description": "Le validateur XML effectue une analyse syntaxique rigoureuse des documents XML en appliquant les règles des spécifications XML 1.0 et 1.1. Il identifie les erreurs de structure telles que les balises non fermées, les attributs mal formés, les espaces de noms non déclarés, les sections CDATA mal délimitées ou les entités non résolues. Contrairement aux validateurs basiques, cet outil inclut un moteur de détection des erreurs de validation DTD (Document Type Definition) et signale précisément les lignes et colonnes concernées avec des codes d'erreur standardisés (ex: XML_ERR_NAME_REQUIRED). Les développeurs ont besoin de cet outil pour garantir l'intégrité des données lors de l'échange entre systèmes hétérogènes, éviter les pannes critiques dans les applications consommant du XML (comme les services web SOAP), et corriger les erreurs de configuration dans des fichiers tels que les descriptors J2EE ou les fichiers de mapping ORM. Le processus utilise un analyseur SAX (Simple API for XML) pour détecter les erreurs de bien-forméness sans nécessiter de schéma externe, et un analyseur DOM en mode validation lorsqu'un DTD ou XSD est fourni. Les résultats incluent des détails techniques comme les codes d'erreur libxml2 ou les messages du validateur Apache Xerces, permettant une résolution précise des problèmes.",
       "usage_steps": [
         "Chargez votre fichier XML en utilisant le bouton 'Parcourir' ou collez directement le code dans l'éditeur monospace.",
@@ -15283,54 +15317,6 @@
       "sending": "Envoi en cours...",
       "headerNamePlaceholder": "Nom de l'en-tête",
       "headerValuePlaceholder": "Valeur"
-    },
-    "jwt-decoder": {
-      "name": "Débogueur JWT",
-      "description": "Déboguez et vérifiez les tokens JWT avec validation de signature",
-      "seo_title": "Outil en ligne gratuit pour déboguer JWT",
-      "seo_description": "Décodez et vérifiez gratuitement des tokens JWT en ligne. Décryptez la tête et le chargement, vérifiez les signatures avec une clé secrète ou publique. Outil essentiel pour le débogage de l'authentification.",
-      "detailed_description": "Le JWT Debugger est un outil technique spécifiquement conçu pour analyser, valider et diagnostiquer les tokens JSON Web Token (JWT) selon les standards RFC 7519. Il permet de décomposer un token en trois segments (en-tête, payload et signature) et d'effectuer des vérifications cryptographiques sur la signature via des algorithmes comme HMAC-SHA256 ou RSA-SHA256. Les développeurs et administrateurs système peuvent utiliser cet outil pour identifier des problèmes de formatage, valider la provenance d'un token via une clé publique, ou vérifier la validité temporelle (claims 'exp' ou 'nbf'). L'outil affiche des erreurs précises en cas de signature invalide, de clé incorrecte, ou de données corrompues, tout en supportant l'analyse de tokens encodés avec des algorithmes modernes comme ES256 ou RS512. Ce niveau de détail technique en fait un outil indispensable pour déboguer des intégrations OAuth2 ou des systèmes d'authentification basés sur des tokens.",
-      "usage_steps": [
-        "Collez le token JWT complet dans le champ d'entrée à l'étiquette 'Token à analyser'.",
-        "Cliquez sur le bouton 'Décoder' pour afficher automatiquement les segments d'en-tête et de payload en clair.",
-        "Sélectionnez l'algorithme de signature utilisé (HS256, RS256, etc.) dans le menu déroulant 'Méthode de validation'.",
-        "Importez une clé publique ou un certificat X.509 via le bouton 'Charger la clé' pour valider la signature électronique.",
-        "Vérifiez le statut de signature dans la section 'Résultats de la validation' (statut 'Valide', 'Invalide', ou 'Erreur de format').",
-        "Utilisez l'onglet 'Analyse temporelle' pour contrôler les dates d'expiration ('exp'), de début de validité ('nbf') et leur conformité avec l'horloge système."
-      ],
-      "usage_examples": [
-        "Un développeur identifie une incompatibilité d'algorithme lors de la validation d'un token généré par un fournisseur tiers.",
-        "Un administrateur système vérifie pourquoi un token généré par Keycloak est rejeté par une API Spring Security en raison d'une signature invalide.",
-        "Un auditeur de sécurité analyse un JWT pour détecter l'utilisation d'algorithmes obsolètes comme HS256 avec une clé faible.",
-        "Un testeur QA reproduit une erreur 'token expired' en modifiant manuellement la date d'expiration dans le payload et en vérifiant le résultat de validation."
-      ],
-      "token": "Token JWT",
-      "header": "En-tête",
-      "payload": "Payload",
-      "signature": "Signature",
-      "secret": "Clé Secrète",
-      "verify": "Vérifier la Signature",
-      "valid": "Signature Valide",
-      "invalid": "Signature Invalide",
-      "expired": "Token Expiré",
-      "tokenPlaceholder": "Collez votre token JWT ici...",
-      "notExpired": "Token Valide",
-      "expiresAt": "Expire le",
-      "errors": {
-        "invalidFormat": "Format JWT invalide",
-        "decodeFailed": "Échec du décodage du token"
-      },
-      "placeholder": "Collez le token JWT ici...",
-      "loadExample": "Charger l'exemple",
-      "tokenInput": "Entrée du token",
-      "claim": "Revendication",
-      "claims": "Revendications",
-      "copied": "Copié !",
-      "copy": "Copier",
-      "secretPlaceholder": "Entrez la clé secrète...",
-      "value": "Valeur",
-      "verifyNote": "Note : La vérification de signature est effectuée côté client",
-      "verifySignature": "Vérifier la signature"
     },
     "csp-generator": {
       "name": "Générateur CSP",
@@ -15709,7 +15695,7 @@
       "name": "Formateur de code Rust",
       "description": "Formatez votre code Rust dans le style rustfmt",
       "seo_title": "Outil en ligne gratuit rustfmt",
-      "seo_description": "Formatter et beautifier votre code Rust en ligne avec rustfmt. Aucune installation requise.",
+      "seo_description": "Formatez et embellissez votre code Rust en ligne avec rustfmt. Aucune installation requise.",
       "detailed_description": "Rust Formatter est un outil en ligne qui formate votre code Rust selon les directives de style rustfmt. Il aide à maintenir un style de code cohérent dans vos projets Rust en gérant automatiquement l'indentation, le retour à la ligne, l'espacement autour des opérateurs et la mise en forme des structures et des énumérations. L'outil est parfait pour les développeurs qui souhaitent un code Rust propre et lisible sans installer d'outils supplémentaires. Que vous écriviez du code système, des services web ou des applications CLI en Rust, ce formateur garantit que votre code suit les normes de la communauté.",
       "usage_steps": [
         "Collez votre code Rust",
@@ -16656,10 +16642,10 @@
       "step3": "Étape 3"
     },
     "markup-calculator": {
-      "name": "Markup Calculator",
+      "name": "Calculateur de majoration",
       "description": "Calculate selling price based on cost and desired markup",
-      "seo_title": "Calculateur Gratuit en Ligne - Prix de Vente Optimal",
-      "seo_description": "Calculez le prix de vente en fonction du coût et du marging souhaité avec notre outil en ligne gratuit. Entrez le coût et le pourcentage de marge pour trouver le prix de vente et la profitabilité optimales.",
+      "seo_title": "Calculateur de majoration gratuit en ligne",
+      "seo_description": "Calculez le prix de vente en fonction du coût et de la majoration souhaitée avec ce calculateur gratuit en ligne.",
       "detailed_description": "Markup Calculator helps you determine the selling price for your products based on cost and desired markup percentage. Enter the cost and your target markup percentage, and the tool calculates the selling price and profit amount. Useful for retail pricing, wholesale calculations, and ensuring consistent profit margins across your product line.",
       "usage_steps": [
         "Enter the cost price",
@@ -18004,7 +17990,7 @@
     "performance-profiler": {
       "name": "Profileur de Performance de Code",
       "description": "Analysez la performance du code et identifiez les goulets d'étranglement",
-      "seo_title": "Profiler de Performance en Ligne Gratuit - Outil de Benchmark | U2Tool",
+      "seo_title": "Profileur de performance de code gratuit en ligne | U2Tool",
       "seo_description": "Mesurez le temps d'exécution du code JavaScript, identifiez les boute-necks en ligne gratuitement.",
       "detailed_description": "Le Profileur de Performance de Code mesure le temps d'exécution et identifie les goulets d'étranglement de performance dans votre code.",
       "usage_steps": [
@@ -19514,8 +19500,8 @@
     "milestone-tracker": {
       "name": "Suivi des Étapes Clés",
       "description": "Suivez les étapes clés et les délais de projet",
-      "seo_title": "Suiveur gratuit de jalons en ligne - Planning de projet | U2Tool",
-      "seo_description": "Suivez vos jalons et échéances de projet. Visualisez le planning de projet.",
+      "seo_title": "Suivi des jalons gratuit en ligne - planning de projet | U2Tool",
+      "seo_description": "Suivez les jalons et échéances de projet avec un outil de suivi clair pour votre planning.",
       "detailed_description": "Le Suivi des Étapes Clés aide à définir, suivre et visualiser les étapes clés du projet.",
       "usage_steps": [
         "Ajoutez des étapes clés avec des dates",
@@ -19627,8 +19613,8 @@
     "meeting-minutes-generator": {
       "name": "Générateur de Compte-Rendus de Réunion",
       "description": "Générez des compte-rendus de réunion structurés à partir de vos notes",
-      "seo_title": "Générateur gratuit de minutes de réunion en ligne 📝",
-      "seo_description": "Convertissez vos notes en minutes structurées de réunion facilement en ligne. Notre outil JSON vous aide à gagner du temps et à rester organisé. Commencez dès maintenant !",
+      "seo_title": "Générateur de comptes rendus de réunion gratuit en ligne",
+      "seo_description": "Transformez vos notes en compte rendu de réunion structuré avec participants, décisions et actions à suivre.",
       "detailed_description": "Le Générateur de Compte-Rendus de Réunion crée des compte-rendus de réunion professionnels et structurés à partir de vos notes.",
       "usage_steps": [
         "Saisissez les détails de la réunion",
@@ -19698,10 +19684,10 @@
       "decisions": "Décisions"
     },
     "timezone-meeting-scheduler": {
-      "name": "Planificateur d'Heures d'Accord",
+      "name": "Planificateur de réunions multi-fuseaux",
       "description": "Planifiez des réunions sur plusieurs fuseaux horaires",
-      "seo_title": "Gestionnaire de rendez-vous en ligne gratuit pour fuseaux horaires différents",
-      "seo_description": "Planifiez efficacement vos réunions à travers différents fuseaux horaires avec notre outil en ligne. Commencez dès maintenant gratuitement!",
+      "seo_title": "Planificateur de réunions multi-fuseaux gratuit en ligne",
+      "seo_description": "Planifiez des réunions entre plusieurs fuseaux horaires avec ce planificateur en ligne gratuit.",
       "detailed_description": "Le Planificateur d'Heures d'Accord aide à trouver les heures de réunion optimales pour les participants répartis dans différents fuseaux horaires.",
       "usage_steps": [
         "Ajoutez les emplacements des participants",
@@ -19850,7 +19836,7 @@
       "name": "Trouveur de Salles de Réunion",
       "description": "Trouvez et réservez des salles de réunion disponibles",
       "seo_title": "Trouver et réserver des salles de réunion en ligne gratuitement",
-      "seo_description": "Utilisez notre outil Meeting Room Finder pour trouver rapidement des salles disponibles et réserver en ligne. Commencez dès maintenant !",
+      "seo_description": "Utilisez notre outil de recherche de salles de réunion pour trouver rapidement des salles disponibles et réserver en ligne.",
       "detailed_description": "Le Trouveur de Salles de Réunion aide à localiser des salles de réunion disponibles en fonction de la capacité et des équipements.",
       "usage_steps": [
         "Saisissez la date et l'heure de la réunion",
@@ -19914,9 +19900,9 @@
     },
     "invoice-template-generator": {
       "name": "Générateur de Modèles de Facture",
-      "description": "Description",
-      "seo_title": "Générateur Gratuit en Ligne de Modèles Factures - Outil Simple & Rapide",
-      "seo_description": "Créez facilement des modèles factures personnalisés avec notre outil en ligne. Compatible JSON & Base64, exportez en SVG. Commencez maintenant et économisez du temps !",
+      "description": "Créez des modèles de facture professionnels et personnalisables",
+      "seo_title": "Générateur de modèle de facture gratuit en ligne",
+      "seo_description": "Créez un modèle de facture clair avec coordonnées, lignes d'articles, taxes, échéance et total prêt à télécharger.",
       "detailed_description": "Le Générateur de Modèles de Facture crée des factures professionnelles avec des modèles personnalisables.",
       "usage_steps": [
         "Saisissez les informations de l'entreprise",
@@ -19996,9 +19982,9 @@
     },
     "expense-report-generator": {
       "name": "Générateur de Rapports de Frais",
-      "description": "Description",
-      "seo_title": "Générateur Gratuit de Rapports de Frais en Ligne",
-      "seo_description": "Créez facilement vos rapports de frais avec notre outil en ligne. Exportez directement en JSON ou Base64. Commencez maintenant !",
+      "description": "Créez des rapports de frais clairs pour les remboursements et le suivi des dépenses",
+      "seo_title": "Générateur de rapport de frais gratuit en ligne",
+      "seo_description": "Préparez un rapport de frais avec catégories, reçus, période, montants et total pour accélérer les demandes de remboursement.",
       "detailed_description": "Le Générateur de Rapports de Frais crée des rapports de frais bien organisés avec classification et totaux automatiques.",
       "usage_steps": [
         "Ajoutez des éléments de dépense",
@@ -20159,9 +20145,9 @@
     },
     "cost-benefit-analyzer": {
       "name": "Analyseur de Coût-Bénéfice",
-      "description": "Description",
-      "seo_title": "Analyseur de coûts-bénéfices gratuit en ligne - Optimisez votre budget !",
-      "seo_description": "Découvrez notre outil gratuit d'analyse coûts-bénéfices en ligne pour évaluer efficacement vos investissements. Optimisez votre budget et prenez des décisions éclairées avec notre analyse en JSON. Commencez dès aujourd'hui !",
+      "description": "Évaluez les coûts, les bénéfices et le ROI d'un investissement ou d'un projet",
+      "seo_title": "Analyseur coût-bénéfice gratuit en ligne",
+      "seo_description": "Comparez les coûts, les bénéfices, le ROI et le délai de récupération pour évaluer un investissement ou arbitrer un projet.",
       "detailed_description": "L'Analyseur de Coût-Bénéfice aide à évaluer les investissements en calculant le ROI et la période de remboursement.",
       "usage_steps": [
         "Saisissez les coûts d'investissement",
@@ -23191,5 +23177,10 @@
     "info": "Information",
     "showLess": "Afficher moins",
     "showMore": "Afficher tout"
+  },
+  "search": {
+    "placeholder": "Search tools...",
+    "noResults": "No tools found",
+    "categories": "Categories"
   }
 }

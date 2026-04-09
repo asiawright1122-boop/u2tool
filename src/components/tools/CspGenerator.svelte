@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { defaultDirectives } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -124,7 +125,7 @@
                 </p>
 
                 {#if directive.enabled}
-directive.name !== 'upgrade-insecure-requests' && directive.name !== 'block-all-mixed-content' && (
+{#if directive.name !== 'upgrade-insecure-requests' && directive.name !== 'block-all-mixed-content'}
                   <div class="space-y-2">
                     <div class="flex flex-wrap gap-1">
                       {#each directive.values as value, valueIndex (valueIndex)}
@@ -155,7 +156,7 @@ directive.name !== 'upgrade-insecure-requests' && directive.name !== 'block-all-
 {/each}
                     </select>
                   </div>
-                )
+                {/if}
 {/if}
               </div>
 {/each}

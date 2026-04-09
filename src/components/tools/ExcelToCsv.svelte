@@ -4,22 +4,35 @@
     translations: Record<string, unknown>;
   }
 
-  let { locale, translations }: Props = $props();
+  let { locale: _locale, translations }: Props = $props();
 
   // Translation helpers
-  function t(key: string): string {
-    const scope = translations['tool']['excelToCsv'] as Record<string, unknown> || {};
+  function getNestedValue(scope: Record<string, unknown>, key: string): string | undefined {
     const keys = key.split('.');
     let value: unknown = scope;
-    for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
-    return typeof value === 'string' ? value : `MISSING: tool.excelToCsv.${key}`;
+    for (const k of keys) {
+      value = (value as Record<string, unknown>)?.[k];
+    }
+    return typeof value === 'string' ? value : undefined;
   }
+
+  function t(key: string): string {
+    const toolScope = (translations['tool'] as Record<string, unknown>)?.['excelToCsv'] as Record<string, unknown> | undefined;
+    const toolsScope = translations['tools'] as Record<string, unknown> | undefined;
+    const kebabScope = toolsScope?.['excel-to-csv'] as Record<string, unknown> | undefined;
+    const camelScope = toolsScope?.['excelToCsv'] as Record<string, unknown> | undefined;
+
+    const value =
+      (kebabScope && getNestedValue(kebabScope, key)) ||
+      (camelScope && getNestedValue(camelScope, key)) ||
+      (toolScope && getNestedValue(toolScope, key));
+
+    return value ?? `MISSING: tools.excel-to-csv.${key}`;
+  }
+
   function tc(key: string): string {
     const scope = translations['tools'] as Record<string, unknown> || {};
-    const keys = key.split('.');
-    let value: unknown = scope;
-    for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
-    return typeof value === 'string' ? value : `MISSING: tools.${key}`;
+    return getNestedValue(scope, key) ?? `MISSING: tools.${key}`;
   }
 
   let csv = $state('');
@@ -30,11 +43,11 @@
 
   let fileName = $state('');
 
-  let sheets = $state([]);
+  let sheets = $state<string[]>([]);
 
   let selectedSheet = $state('');
 
-  let workbook = $state(null);
+  let workbook = $state<any>(null);
 
   async function loadExcel(file: File) {
     loading = true;
@@ -60,7 +73,7 @@
 
   function handleDrop(e: DragEvent) {
     e.preventDefault();
-    const file = e.dataTransfer.files[0];
+    const file = e.dataTransfer?.files?.[0];
     if (file?.name.match(/\.(xlsx|xls)$/i)) {
       loadExcel(file);
     } else {
@@ -78,7 +91,8 @@
     }
   }
   function handleFileChange(e: Event) {
-    const file = e.target.files?.[0];
+    const target = e.target as HTMLInputElement | null;
+    const file = target?.files?.[0];
     if (file) loadExcel(file);
   }
   function copyToClipboard() { return navigator.clipboard.writeText(csv); }

@@ -99,7 +99,7 @@ export function formatPython(code: string, options: Partial<PythonFormatOptions>
     );
     
     // Format the line
-    let formattedLine = formatPythonLine(trimmedLine, opts);
+    let formattedLine = formatPythonLine(trimmedLine);
     
     // Apply indentation
     formattedLine = indentStr.repeat(indentLevel) + formattedLine;
@@ -145,7 +145,7 @@ export function formatPython(code: string, options: Partial<PythonFormatOptions>
 }
 
 // Format a single line of Python code
-function formatPythonLine(line: string, options: PythonFormatOptions): string {
+function formatPythonLine(line: string): string {
   let result = line;
   
   // Add spaces around operators

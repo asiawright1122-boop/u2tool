@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { SERVICE_TEMPLATES, generateDockerCompose } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;

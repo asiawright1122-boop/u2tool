@@ -39,6 +39,17 @@
   fileTypes: FileTypeConfig[];
 }
 
+  const COMMON_PATTERNS = [
+    { pattern: '*.js', label: 'JavaScript' },
+    { pattern: '*.ts', label: 'TypeScript' },
+    { pattern: '*.tsx', label: 'TypeScript React' },
+    { pattern: '*.py', label: 'Python' },
+    { pattern: '*.md', label: 'Markdown' },
+    { pattern: '*.{yml,yaml}', label: 'YAML' },
+    { pattern: '*.json', label: 'JSON' },
+    { pattern: '*.{html,css}', label: 'HTML/CSS' },
+  ] as const;
+
   let config = $state({
     root: true,
     defaultConfig: {

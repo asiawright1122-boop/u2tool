@@ -93,13 +93,13 @@
 
       <!-- Result Text -->
       {#if currentResult}
-!isFlipping && (
+{#if !isFlipping}
         <div class="text-center">
           <span class="text-3xl font-bold text-gray-900 dark:text-white">
             {currentResult === 'heads' ? t('heads') : t('tails')}
           </span>
         </div>
-      )
+      {/if}
 {/if}
 
       <!-- Flip Count -->

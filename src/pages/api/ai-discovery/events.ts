@@ -2,6 +2,8 @@ import type { APIRoute } from 'astro';
 import { isAiDiscoveryEnabled } from '@/lib/ai-discovery/feature-flag';
 import { isValidDiscoveryEvent } from '@/lib/ai-discovery/telemetry';
 
+export const prerender = false;
+
 const MAX_EVENTS_PER_REQUEST = 20;
 
 export const GET: APIRoute = async () => {

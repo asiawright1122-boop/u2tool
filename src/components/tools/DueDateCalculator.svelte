@@ -24,6 +24,7 @@
 
   // Imports
   import { Baby, Calendar, Clock, Heart } from 'lucide-svelte';
+  import { CONCEPTION_OFFSET, PREGNANCY_DAYS } from '@/lib/tool-stubs';
 
   // Types
   type CalculationMethod = 'lmp' | 'conception' | 'ivf';

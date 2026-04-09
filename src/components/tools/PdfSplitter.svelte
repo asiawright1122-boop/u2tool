@@ -177,7 +177,7 @@
 {/if}
 
       {#if pages.length > 0}
-!loading && (
+{#if !loading}
         
           <div class="flex flex-wrap gap-4 items-end">
             <div>
@@ -227,7 +227,7 @@
 {/if}
           </button>
         
-      )
+      {/if}
 {/if}
     </div>
   

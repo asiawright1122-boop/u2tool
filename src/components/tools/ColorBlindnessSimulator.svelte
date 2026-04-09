@@ -24,13 +24,19 @@
   percentage: string;
 }
 
+  const simulations: SimulationInfo[] = [
+    { type: 'normal', name: 'Normal', description: 'Normal vision', percentage: '92%' },
+    { type: 'protanopia', name: 'Protanopia', description: 'Red-blind', percentage: '1%' },
+    { type: 'deuteranopia', name: 'Deuteranopia', description: 'Green-blind', percentage: '5%' },
+    { type: 'tritanopia', name: 'Tritanopia', description: 'Blue-blind', percentage: '0.1%' },
+    { type: 'achromatopsia', name: 'Achromatopsia', description: 'Monochrome', percentage: '0.003%' },
+  ];
+
   let color = $state('#3B82F6');
 
-  let selectedType = $state('normal');
+  let selectedType = $state<ColorBlindnessType>('normal');
 
-  let image = $state(null);
-
-  let canvasRef = $state(null);
+  let image = $state<string | null>(null);
 
   // Functions
   function hexToRgb(hex: string) {
@@ -192,15 +198,13 @@
                   src={image} 
                   alt="Simulated" 
                   class="w-full rounded-lg" 
-                  style="...getFilterStyle(selectedType); aspect-ratio: auto" 
+                  style={`filter: ${(getFilterStyle(selectedType).filter ?? 'none')}; aspect-ratio: auto`} 
                 />
               </div>
             </div>
           </div>
         </div>
 {/if}
-
-      <canvas bind:this={canvasRef} class="hidden"></canvas>
 
       <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
         <h3 class="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('aboutTitle')}</h3>

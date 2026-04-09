@@ -148,7 +148,7 @@
 
       {#if pages.length > 0}
 <div>
-!loading && (
+{#if !loading}
         
           <div class="flex flex-wrap gap-4 items-center">
             <div class="flex items-center gap-2">
@@ -187,7 +187,7 @@
             {t('pdfRotator.save')}
           </button>
         
-      )
+      {/if}
 </div>
 {/if}
     </div>

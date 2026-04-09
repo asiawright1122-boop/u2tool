@@ -8,8 +8,9 @@
  */
 
 import type { APIRoute } from 'astro';
+import { getPublicSiteUrl } from '@/lib/public-env';
 
-const BASE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://www.u2tool.com';
+const BASE_URL = getPublicSiteUrl();
 
 export const GET: APIRoute = () => {
   const robotsTxt = `# robots.txt for U2Tool
@@ -70,6 +71,11 @@ Allow: /
 
 # Sitemap
 Sitemap: ${BASE_URL}/sitemap.xml
+Sitemap: ${BASE_URL}/sitemap-pages.xml
+Sitemap: ${BASE_URL}/sitemap-tools.xml
+
+# LLM discovery manifest
+# ${BASE_URL}/llms.txt
 
 # Disallow admin/api paths
 Disallow: /api/

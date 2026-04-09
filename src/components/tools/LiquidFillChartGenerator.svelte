@@ -24,7 +24,6 @@
   import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
   import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
-  import 'echarts-liquidfill';
 
   let isInitialized = $state(false);
 
@@ -201,7 +200,7 @@
           <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden bg-gray-100 dark:bg-gray-800" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef as any} option={getChartOption()} style="height: 400px; width: 100%" notMerge={true}
+              bind:this={chartRef as any} option={getChartOption} style="height: 400px; width: 100%" notMerge={true}
               lazyUpdate={true}
             />
           </div>

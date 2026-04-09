@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { decodeJwt, formatJson } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -60,6 +62,31 @@
     token = '';
     decoded = null;
     error = '';
+  }
+
+  function formatDate(value: Date): string {
+    return value.toLocaleString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+    });
+  }
+
+  function getClaimDescription(key: string): string {
+    const claimMap: Record<string, string> = {
+      iss: 'jwt.claims.iss',
+      sub: 'jwt.claims.sub',
+      aud: 'jwt.claims.aud',
+      exp: 'jwt.claims.exp',
+      nbf: 'jwt.claims.nbf',
+      iat: 'jwt.claims.iat',
+      jti: 'jwt.claims.jti',
+    };
+
+    return claimMap[key] ? t(claimMap[key]) : '';
   }
 
   $effect(() => {
@@ -198,29 +225,7 @@
                       <td class="px-4 py-2 font-mono text-gray-900 dark:text-white break-all max-w-xs">
                         {typeof value === 'object' ? JSON.stringify(value) : String(value)}
                       </td>
-                      <td class="px-4 py-2 text-gray-600 dark:text-gray-400">
-                        {#if key === 'iss'}
-t('jwt.claims.iss')
-{/if}
-                        {#if key === 'sub'}
-t('jwt.claims.sub')
-{/if}
-                        {#if key === 'aud'}
-t('jwt.claims.aud')
-{/if}
-                        {#if key === 'exp'}
-t('jwt.claims.exp')
-{/if}
-                        {#if key === 'nbf'}
-t('jwt.claims.nbf')
-{/if}
-                        {#if key === 'iat'}
-t('jwt.claims.iat')
-{/if}
-                        {#if key === 'jti'}
-t('jwt.claims.jti')
-{/if}
-                      </td>
+                      <td class="px-4 py-2 text-gray-600 dark:text-gray-400">{getClaimDescription(key)}</td>
                     </tr>
 {/each}
                 </tbody>

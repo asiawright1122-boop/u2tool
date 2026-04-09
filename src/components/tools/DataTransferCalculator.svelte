@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { COMMON_SPEEDS } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { formatValue, getSqlType, quoteIdentifier } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;

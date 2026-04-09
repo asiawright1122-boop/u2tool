@@ -150,7 +150,7 @@ features:
 {/if}
 
           {#if result.valid}
-result.parsed !== undefined && (
+{#if result.parsed !== undefined}
             <div class="mt-4">
               <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 {t('parsedOutput')}
@@ -159,7 +159,7 @@ result.parsed !== undefined && (
                 {JSON.stringify(result.parsed, null, 2)}
               </pre>
             </div>
-          )
+          {/if}
 {/if}
         </div>
 {/if}

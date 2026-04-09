@@ -154,7 +154,7 @@
 {/if}
 
       {#if result}
-!error && (
+{#if !error}
         <div class="space-y-4">
           <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
             <div class="grid grid-cols-3 gap-4">
@@ -186,7 +186,7 @@
             </div>
           </div>
         </div>
-      )
+      {/if}
 {/if}
     </div>
   

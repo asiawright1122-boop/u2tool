@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { commonTypos, disposableDomains, freeProviders } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;

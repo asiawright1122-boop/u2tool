@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { useChartTheme } from "@/hooks/useChartTheme";
+
     interface Props {
         locale: string;
         translations: Record<string, unknown>;
@@ -28,7 +30,7 @@
         return result;
     }
     function tg(key: string): string {
-        const tools = (translations as any)["tools"] || {};
+        const scope = (translations as any)["tools"] || {};
         const keys = key.split(".");
         let value: unknown = scope;
         for (const k of keys) {

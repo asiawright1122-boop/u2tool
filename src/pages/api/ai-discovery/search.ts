@@ -1,10 +1,29 @@
 import type { APIRoute } from 'astro';
 import { defaultLocale, isValidLocale } from '@/lib/i18n';
+import { isAiDiscoveryEnabled } from '@/lib/ai-discovery/feature-flag';
 import { runDiscoverySearch } from '@/lib/ai-discovery/search-service';
+
+export const prerender = false;
 
 const MAX_QUERY_LENGTH = 300;
 
 export const GET: APIRoute = async ({ request }) => {
+  if (!isAiDiscoveryEnabled()) {
+    return new Response(
+      JSON.stringify({
+        error: 'FEATURE_DISABLED',
+        message: 'AI discovery is disabled',
+      }),
+      {
+        status: 404,
+        headers: {
+          'Content-Type': 'application/json',
+          'Cache-Control': 'no-store',
+        },
+      }
+    );
+  }
+
   const url = new URL(request.url);
   const query = (url.searchParams.get('q') ?? '').trim();
   const localeParam = (url.searchParams.get('locale') ?? defaultLocale).trim();

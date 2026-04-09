@@ -1,65 +1,63 @@
 /**
  * Chart theme colors for ECharts components (Svelte version)
- * 
- * Reads the current theme from the document's html class and provides
- * appropriate color values for chart rendering.
+ *
+ * Exposes a live view over the current chart theme so existing chart
+ * generators can read up-to-date colors without per-component watchers.
  */
 
-export interface ChartThemeColors {
-  backgroundColor: string;
-  textColor: string;
-  axisLineColor: string;
-  axisLabelColor: string;
-  splitLineColor: string;
-  tooltipBg: string;
-  tooltipBorder: string;
-  tooltipText: string;
-  legendText: string;
-  labelColor: string;
-}
+import {
+  darkTheme,
+  lightTheme,
+  getChartTheme,
+  isDarkThemeActive,
+  type ChartThemeColors,
+} from '@/lib/chart-theme';
 
-const darkTheme: ChartThemeColors = {
-  backgroundColor: '#1f2937',
-  textColor: '#fff',
-  axisLineColor: '#374151',
-  axisLabelColor: '#9ca3af',
-  splitLineColor: '#374151',
-  tooltipBg: 'rgba(31, 41, 55, 0.9)',
-  tooltipBorder: '#374151',
-  tooltipText: '#e5e7eb',
-  legendText: '#e5e7eb',
-  labelColor: '#e5e7eb',
-};
+type LiveChartTheme = ChartThemeColors & { isDark: boolean; mounted: boolean };
 
-const lightTheme: ChartThemeColors = {
-  backgroundColor: '#ffffff',
-  textColor: '#1f2937',
-  axisLineColor: '#d1d5db',
-  axisLabelColor: '#4b5563',
-  splitLineColor: '#e5e7eb',
-  tooltipBg: 'rgba(255, 255, 255, 0.95)',
-  tooltipBorder: '#d1d5db',
-  tooltipText: '#1f2937',
-  legendText: '#374151',
-  labelColor: '#374151',
-};
+const LIVE_THEME_KEYS: Array<keyof LiveChartTheme> = [
+  'backgroundColor',
+  'textColor',
+  'axisLineColor',
+  'axisLabelColor',
+  'splitLineColor',
+  'tooltipBg',
+  'tooltipBorder',
+  'tooltipText',
+  'legendText',
+  'labelColor',
+  'isDark',
+  'mounted',
+];
 
 /**
  * Get chart theme colors based on current dark/light mode.
- * In Svelte, this is a plain function (not a hook).
- * Call it reactively inside $derived or $effect.
+ * The returned object is backed by getters so theme reads stay current
+ * when callers pass `getChartOption` into EChartsWrapper.
  */
-export function useChartTheme(): ChartThemeColors & { isDark: boolean; mounted: boolean } {
-  const isDark = typeof document !== 'undefined' 
-    ? document.documentElement.classList.contains('dark')
-    : false;
-  const colors = isDark ? darkTheme : lightTheme;
+export function useChartTheme(): LiveChartTheme {
+  return new Proxy({} as LiveChartTheme, {
+    get(_, property: keyof LiveChartTheme) {
+      if (property === 'mounted') {
+        return typeof document !== 'undefined';
+      }
 
-  return {
-    ...colors,
-    isDark,
-    mounted: typeof document !== 'undefined',
-  };
+      if (property === 'isDark') {
+        return isDarkThemeActive();
+      }
+
+      return getChartTheme()[property as keyof ChartThemeColors];
+    },
+    ownKeys() {
+      return LIVE_THEME_KEYS;
+    },
+    getOwnPropertyDescriptor() {
+      return {
+        configurable: true,
+        enumerable: true,
+      };
+    },
+  });
 }
 
 export { darkTheme, lightTheme };

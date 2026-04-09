@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { K, SAMPLE_INPUT, generateHtmlToc, generateToc, parseTocInput } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;

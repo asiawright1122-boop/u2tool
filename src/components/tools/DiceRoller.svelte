@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { diceConfig } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -157,7 +158,7 @@
 
       <!-- Current Result -->
       {#if currentResult}
-!isRolling && (
+{#if !isRolling}
         <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 text-center">
           <div class="text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {currentResult.total}
@@ -177,7 +178,7 @@
 {/if}
           </div>
         </div>
-      )
+      {/if}
 {/if}
 
       <!-- History -->

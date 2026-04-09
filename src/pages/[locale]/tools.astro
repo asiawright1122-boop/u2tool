@@ -1,0 +1,157 @@
+---
+/**
+ * Tool list page for each locale
+ * Route: /{locale}/tools/
+ * Includes sidebar layout matching the original Next.js design.
+ * Supports ?category= filtering via ToolsGrid Svelte component.
+ */
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.svelte';
+import StaticSidebar from '@/components/layout/StaticSidebar.astro';
+import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
+import Footer from '@/components/layout/Footer.astro';
+import ToolsGrid from '@/components/tools/ToolsGrid.astro';
+import CategorySpotlightSection from '@/components/discovery/CategorySpotlightSection.astro';
+import ComparisonGuideSection from '@/components/discovery/ComparisonGuideSection.astro';
+import StructuredData from '@/components/seo/StructuredData.astro';
+import HreflangTags from '@/components/seo/HreflangTags.astro';
+import { tools, categories } from '@/config/tools';
+import { locales } from '@/lib/i18n';
+import type { Locale } from '@/lib/i18n';
+import { loadBaseMessages } from '@/lib/translations';
+import { buildCategoryDiscoveryItemList, buildCategoryDiscoverySpotlights } from '@/lib/discovery-surface';
+import { buildComparisonGuides, getComparisonUiCopy } from '@/lib/comparison-surfaces';
+import { getToolsPageSeo } from '@/lib/seo';
+import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
+import { getPublicSiteUrl } from '@/lib/public-env';
+
+export const prerender = true;
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return locales.map((locale) => ({
+    params: { locale },
+    props: { locale },
+  }));
+};
+
+const { locale } = Astro.props as { locale: Locale };
+const baseMessages = await loadBaseMessages(locale);
+const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
+const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
+const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
+const homeMessages = (baseMessages.home as Record<string, unknown>) ?? {};
+const searchMessages = (baseMessages.search as Record<string, string>) ?? {};
+const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
+const toolsMessages = (baseMessages.tools as Record<string, string>) ?? {};
+const toolsPageSeo = getToolsPageSeo(baseMessages, tools.length);
+const headerTranslations = buildHeaderTranslations(baseMessages);
+const mobileNavMessages = buildMobileNavMessages(navMessages);
+
+const toolNames: Record<string, string> = {};
+const toolDescriptions: Record<string, string> = {};
+for (const tool of tools) {
+  const currentTool = toolsObj[tool.slug] as Record<string, unknown> | undefined;
+  toolNames[tool.slug] = (currentTool?.name as string) || tool.slug;
+  toolDescriptions[tool.slug] =
+    (currentTool?.seo_description as string) || (currentTool?.description as string) || '';
+}
+
+const baseUrl = getPublicSiteUrl();
+const discoverySpotlights = buildCategoryDiscoverySpotlights(
+  locale,
+  categoryMessages,
+  toolNames,
+  toolDescriptions
+);
+const discoveryItemListData = buildCategoryDiscoveryItemList(baseUrl, discoverySpotlights);
+const comparisonUiCopy = getComparisonUiCopy(locale);
+const comparisonGuides = buildComparisonGuides(locale, categoryMessages, toolNames, toolDescriptions);
+const toolsCollectionData = {
+  name: toolsPageSeo.title,
+  description: toolsPageSeo.description,
+  url: `${baseUrl}/${locale}/tools`,
+  numberOfItems: tools.length,
+  hasPart: discoverySpotlights.map((spotlight) => ({
+    '@type': 'CollectionPage',
+    name: spotlight.name,
+    url: `${baseUrl}${spotlight.href}`,
+    numberOfItems: spotlight.toolCount,
+  })),
+};
+---
+
+<BaseLayout
+  title={toolsPageSeo.title}
+  description={toolsPageSeo.description}
+  locale={locale}
+  canonicalPath="/tools"
+  siteDescription={siteMessages.description}
+>
+  <HreflangTags path="/tools" slot="head" />
+  <StructuredData type="CollectionPage" data={toolsCollectionData} slot="head" />
+  <StructuredData type="ItemList" data={discoveryItemListData} slot="head" />
+
+  <meta property="og:title" content={toolsPageSeo.title} slot="head" />
+  <meta property="og:description" content={toolsPageSeo.description} slot="head" />
+  <meta property="og:image" content={`${baseUrl}/og-default.svg`} slot="head" />
+  <meta property="og:type" content="website" slot="head" />
+  <meta property="og:url" content={`${baseUrl}/${locale}/tools`} slot="head" />
+  <meta property="og:site_name" content="U2Tool" slot="head" />
+  <meta name="twitter:card" content="summary_large_image" slot="head" />
+  <meta name="twitter:title" content={toolsPageSeo.title} slot="head" />
+  <meta name="twitter:description" content={toolsPageSeo.description} slot="head" />
+  <meta name="twitter:image" content={`${baseUrl}/og-default.svg`} slot="head" />
+
+  <StaticSidebar
+    locale={locale}
+    categories={categories}
+    categoryNames={categoryMessages}
+    navMessages={navMessages}
+    siteName={siteMessages.name || 'U2Tool'}
+  />
+
+  <div class="main-content-with-sidebar main-content-with-mobile-nav">
+    <Header client:load locale={locale} translations={headerTranslations} />
+
+    <main class="py-6 px-4">
+      <div class="max-w-6xl mx-auto">
+        <CategorySpotlightSection
+          eyebrow={siteMessages.name || 'U2Tool'}
+          title={(homeMessages.categories as string) || 'Tool Categories'}
+          description={(homeMessages.categoriesDesc as string) || 'Find the right tool for your needs'}
+          popularLabel={(toolsMessages.popular || 'Popular').toUpperCase()}
+          toolsCountLabel={(homeMessages.toolsCount as string) || 'tools'}
+          spotlights={discoverySpotlights}
+        />
+        <ComparisonGuideSection
+          title={comparisonUiCopy.comparisonSectionTitle}
+          description={comparisonUiCopy.comparisonSectionDescription}
+          guides={comparisonGuides}
+          ctaLabel={comparisonUiCopy.guideCtaLabel}
+          includedToolsLabel={comparisonUiCopy.includedToolsLabel}
+        />
+        <ToolsGrid
+          locale={locale}
+          categories={categories}
+          tools={tools.map((tool) => ({
+            slug: tool.slug,
+            category: tool.category,
+            icon: tool.icon,
+            popular: tool.popular,
+          }))}
+          categoryNames={categoryMessages}
+          toolNames={toolNames}
+          toolDescriptions={toolDescriptions}
+          previewCount={6}
+          searchIndexPath={`/${locale}/tools-index.json`}
+          emptyResultsLabel={searchMessages.noResults || navMessages.noResults || 'No tools found'}
+        />
+      </div>
+    </main>
+
+    <Footer locale={locale} />
+  </div>
+
+  <MobileBottomNav client:load locale={locale} navMessages={mobileNavMessages} />
+</BaseLayout>

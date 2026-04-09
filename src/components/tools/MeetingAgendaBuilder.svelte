@@ -39,6 +39,76 @@
   objective: string;
 }
 
+  function formatDuration(minutes: number): string {
+    if (minutes < 60) return `${minutes}m`;
+    const h = Math.floor(minutes / 60);
+    const m = minutes % 60;
+    return m === 0 ? `${h}h` : `${h}h ${m}m`;
+  }
+
+  function formatTimeWithOffset(startTime: string, offsetMinutes: number): string {
+    const [h, m] = startTime.split(':').map((value) => parseInt(value, 10) || 0);
+    const total = h * 60 + m + offsetMinutes;
+    const normalized = ((total % (24 * 60)) + 24 * 60) % (24 * 60);
+    const nextH = Math.floor(normalized / 60);
+    const nextM = normalized % 60;
+    return `${String(nextH).padStart(2, '0')}:${String(nextM).padStart(2, '0')}`;
+  }
+
+  function buildAgendaOutput(
+    meeting: MeetingInfo,
+    agendaItems: AgendaItem[],
+    outputFormat: 'markdown' | 'text' | 'html'
+  ): string {
+    const total = agendaItems.reduce((sum, item) => sum + item.duration, 0);
+
+    if (outputFormat === 'text') {
+      const lines: string[] = [
+        `${meeting.title}`,
+        `${meeting.date} ${meeting.startTime} @ ${meeting.location}`,
+        `Objective: ${meeting.objective}`,
+        `Total Duration: ${formatDuration(total)}`,
+        '',
+        'Agenda:',
+      ];
+
+      let elapsed = 0;
+      agendaItems.forEach((item, index) => {
+        const start = formatTimeWithOffset(meeting.startTime, elapsed);
+        elapsed += item.duration;
+        const end = formatTimeWithOffset(meeting.startTime, elapsed);
+        lines.push(
+          `${index + 1}. [${start}-${end}] ${item.topic} (${formatDuration(item.duration)})` +
+          (item.presenter ? ` - ${item.presenter}` : '')
+        );
+      });
+
+      return lines.join('\n');
+    }
+
+    if (outputFormat === 'html') {
+      let elapsed = 0;
+      const itemsHtml = agendaItems.map((item, index) => {
+        const start = formatTimeWithOffset(meeting.startTime, elapsed);
+        elapsed += item.duration;
+        const end = formatTimeWithOffset(meeting.startTime, elapsed);
+        return `<li><strong>${index + 1}. ${item.topic}</strong> (${start}-${end}, ${formatDuration(item.duration)})${item.presenter ? ` - ${item.presenter}` : ''}</li>`;
+      }).join('\n');
+
+      return `<h2>${meeting.title}</h2>\n<p>${meeting.date} ${meeting.startTime} @ ${meeting.location}</p>\n<p><strong>Objective:</strong> ${meeting.objective}</p>\n<p><strong>Total Duration:</strong> ${formatDuration(total)}</p>\n<ol>\n${itemsHtml}\n</ol>`;
+    }
+
+    let elapsed = 0;
+    const mdItems = agendaItems.map((item, index) => {
+      const start = formatTimeWithOffset(meeting.startTime, elapsed);
+      elapsed += item.duration;
+      const end = formatTimeWithOffset(meeting.startTime, elapsed);
+      return `${index + 1}. **${item.topic}** (${start}-${end}, ${formatDuration(item.duration)})${item.presenter ? ` - ${item.presenter}` : ''}`;
+    }).join('\n');
+
+    return `# ${meeting.title}\n\n- Date: ${meeting.date}\n- Time: ${meeting.startTime}\n- Location: ${meeting.location}\n- Objective: ${meeting.objective}\n- Total Duration: ${formatDuration(total)}\n\n## Agenda\n${mdItems}`;
+  }
+
   let info = $state({
     title: 'Weekly Team Meeting',
     date: new Date().toISOString().split('T')[0],
@@ -56,11 +126,11 @@
     { id: '5', topic: 'Next Steps & Wrap-up', duration: 10, presenter: '', notes: '' },
   ]);
 
-  let format = $state('markdown');
+  let format = $state<'markdown' | 'text' | 'html'>('markdown');
 
   let copied = $state(false);
 
-  function updateInfo(key: K, value: MeetingInfo[K]) {
+  function updateInfo<K extends keyof MeetingInfo>(key: K, value: MeetingInfo[K]) {
     info = ({ ...info, [key]: value });
   }
 
@@ -93,9 +163,9 @@
     items = newItems;
   }
 
-  let totalDuration = $derived(items.reduce((sum, item) => sum + item.duration, 0));
+  let totalDuration = $derived.by(() => items.reduce((sum, item) => sum + item.duration, 0));
 
-  let output = $derived(generateAgenda(info, items, format));
+  let output = $derived.by(() => buildAgendaOutput(info, items, format));
 
   function handleCopy() {
     navigator.clipboard.writeText(output);

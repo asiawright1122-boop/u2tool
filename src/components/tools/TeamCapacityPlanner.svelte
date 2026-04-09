@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { calculateCapacity } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -64,7 +66,7 @@
     team = team.filter(m => m.id !== id);
   }
 
-  function updateConfig(key: K, value: SprintConfig[K]) {
+  function updateConfig(key: keyof SprintConfig, value: SprintConfig[keyof SprintConfig]) {
     config = ({ ...config, [key]: value });
   }
 

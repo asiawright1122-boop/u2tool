@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { buildCrc32Table, crc32 } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;

@@ -175,7 +175,7 @@
 
       {#if pages.length > 0}
 <div>
-!loading && (
+{#if !loading}
         
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div>
@@ -213,7 +213,7 @@
             {t('pdfToImage.convert')} ({selectedCount} {t('pdfToImage.pages')})
           </button>
         
-      )
+      {/if}
 </div>
 {/if}
     </div>

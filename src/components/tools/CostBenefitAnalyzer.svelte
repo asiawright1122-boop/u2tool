@@ -47,7 +47,7 @@
   currency: string;
 }
 
-  let data = $state({
+  let data = $state<AnalysisData>({
     projectName: 'New Software Implementation',
     timeframeYears: 3,
     discountRate: 10,
@@ -66,7 +66,7 @@
     currency: 'USD',
   });
 
-  function updateData(key: K, value: AnalysisData[K]) {
+  function updateData<K extends keyof AnalysisData>(key: K, value: AnalysisData[K]) {
     data = ({ ...data, [key]: value });
   }
 
@@ -172,7 +172,13 @@
   });
 
   let currencySymbol = $derived.by(() => {
-    const symbols: Record<string, string> = { USD: '$', EUR: '€', GBP: '£', CNY: '¥', JPY: '¥' };
+    const symbols: Record<string, string> = {
+      USD: '$',
+      EUR: '€',
+      GBP: '£',
+      CNY: '¥',
+      JPY: '¥',
+    };
     return symbols[data.currency] || '$';
   });
 
@@ -410,4 +416,3 @@
         </div>
       </div>
     </div>
-  

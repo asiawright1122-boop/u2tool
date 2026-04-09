@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { colors } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;

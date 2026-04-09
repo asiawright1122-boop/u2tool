@@ -87,12 +87,12 @@
         <button onclick={clear} class="px-4 py-2 bg-gray-500 dark:bg-gray-600 text-white rounded hover:bg-gray-600 dark:hover:bg-gray-700">{t('clear')}</button>
       </div>
       {#if dataUri}
-dataUri.startsWith('data:image') && (
+{#if dataUri.startsWith('data:image')}
         <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 min-h-[200px]">
           <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">{'Preview'}</p>
           <img src={dataUri} alt="Preview" class="max-w-full max-h-64 mx-auto" style="aspect-ratio: auto" />
         </div>
-      )
+      {/if}
 {/if}
     </div>
   

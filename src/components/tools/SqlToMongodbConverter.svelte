@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { convertSqlToMongo } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -24,19 +26,44 @@
 
   // Types
   interface ConversionResult {
-  collection: string;
-  operation: string;
-  query: string;
-  options?: string;
-}
+    collection: string;
+    operation: string;
+    query: string;
+    options?: string;
+  }
+
+  interface ConversionExample {
+    label: string;
+    sql: string;
+  }
+
+  const EXAMPLES: ConversionExample[] = [
+    {
+      label: 'Find adults',
+      sql: 'SELECT * FROM users WHERE age >= 18 LIMIT 10',
+    },
+    {
+      label: 'Recent orders',
+      sql: "SELECT id, total FROM orders WHERE status = 'paid' ORDER BY created_at DESC LIMIT 5",
+    },
+    {
+      label: 'Update profile',
+      sql: "UPDATE users SET plan = 'pro' WHERE id = 42",
+    },
+    {
+      label: 'Delete inactive',
+      sql: "DELETE FROM sessions WHERE last_seen < '2024-01-01'",
+    },
+  ];
 
   let sql = $state('');
 
   let copied = $state(false);
 
-  let result = $derived.by(() => {
+  let result = $derived.by<ConversionResult | null>(() => {
     if (!sql.trim()) return null;
-    return convertSqlToMongo(sql);
+    const conversion = convertSqlToMongo(sql) as ConversionResult | string | null;
+    return conversion && typeof conversion === 'object' ? conversion : null;
   });
 
   function handleCopy() {
@@ -89,11 +116,11 @@
 
       <!-- Error -->
       {#if sql.trim()}
-!result && (
+{#if !result}
         <div class="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-600 dark:text-red-400">
           Unable to convert SQL query. Please check the syntax.
         </div>
-      )
+      {/if}
 {/if}
 
       <!-- Result -->

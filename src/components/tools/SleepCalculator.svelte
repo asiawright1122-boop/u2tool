@@ -24,6 +24,7 @@
 
   // Imports
   import { Moon, Sun, Clock, Info } from 'lucide-svelte';
+  import { SLEEP_CYCLE_MINUTES } from '@/lib/tool-stubs';
 
   // Types
   type Mode = 'wake' | 'sleep';

@@ -32,16 +32,202 @@
   type: FieldType;
 }
 
-  let mounted = $state(false);
+  interface LocaleOption {
+    value: string;
+    label: string;
+  }
+
+  const FIELD_TYPES: FieldType[] = [
+    'name',
+    'firstName',
+    'lastName',
+    'email',
+    'phone',
+    'address',
+    'city',
+    'country',
+    'company',
+    'jobTitle',
+    'date',
+    'number',
+    'uuid',
+    'url',
+    'username',
+  ];
+
+  const LOCALES: LocaleOption[] = [
+    { value: 'en', label: 'English' },
+    { value: 'zh', label: '简体中文' },
+    { value: 'ja', label: '日本語' },
+    { value: 'ko', label: '한국어' },
+    { value: 'fr', label: 'Français' },
+    { value: 'de', label: 'Deutsch' },
+    { value: 'es', label: 'Español' },
+    { value: 'pt', label: 'Português' },
+    { value: 'ru', label: 'Русский' },
+    { value: 'ar', label: 'العربية' },
+  ];
+
+  const TYPE_DISPLAY_NAMES: Record<string, Record<FieldType, string>> = {
+    en: {
+      name: 'Name',
+      firstName: 'First Name',
+      lastName: 'Last Name',
+      email: 'Email',
+      phone: 'Phone',
+      address: 'Address',
+      city: 'City',
+      country: 'Country',
+      company: 'Company',
+      jobTitle: 'Job Title',
+      date: 'Date',
+      number: 'Number',
+      uuid: 'UUID',
+      url: 'URL',
+      username: 'Username',
+    },
+    zh: {
+      name: '姓名',
+      firstName: '名',
+      lastName: '姓',
+      email: '邮箱',
+      phone: '电话',
+      address: '地址',
+      city: '城市',
+      country: '国家',
+      company: '公司',
+      jobTitle: '职位',
+      date: '日期',
+      number: '数字',
+      uuid: 'UUID',
+      url: '链接',
+      username: '用户名',
+    },
+  };
+
+  const FIRST_NAMES: Record<string, string[]> = {
+    en: ['Alex', 'Jordan', 'Taylor', 'Casey', 'Sam', 'Maya', 'Chris', 'Morgan'],
+    zh: ['张', '李', '王', '刘', '陈', '杨', '赵', '周'],
+  };
+
+  const LAST_NAMES: Record<string, string[]> = {
+    en: ['Smith', 'Johnson', 'Brown', 'Miller', 'Wilson', 'Taylor', 'Clark', 'Lee'],
+    zh: ['伟', '芳', '娜', '敏', '静', '磊', '洋', '强'],
+  };
+
+  const CITY_BY_LOCALE: Record<string, string[]> = {
+    en: ['New York', 'Los Angeles', 'Chicago', 'Seattle', 'Austin', 'Boston'],
+    zh: ['北京', '上海', '广州', '深圳', '杭州', '成都'],
+  };
+
+  const COUNTRY_BY_LOCALE: Record<string, string[]> = {
+    en: ['United States', 'Canada', 'United Kingdom', 'Australia', 'Germany', 'Japan'],
+    zh: ['中国', '日本', '韩国', '新加坡', '美国', '英国'],
+  };
+
+  const COMPANY_SAMPLES = ['Acme Labs', 'Nova Tech', 'Blue Ocean', 'Pioneer AI', 'Cloud Peak', 'Vertex Soft'];
+  const JOB_TITLE_SAMPLES = ['Engineer', 'Designer', 'Manager', 'Analyst', 'Consultant', 'Director'];
+  const ADDRESS_SAMPLES = ['123 Main St', '456 Oak Ave', '789 Pine Rd', '321 River Dr', '654 Lake Blvd'];
+  const EMAIL_DOMAINS = ['example.com', 'mail.com', 'demo.io', 'sample.net', 'u2tool.com'];
+
+  function normalizeLocaleKey(input: string): string {
+    const normalized = (input || 'en').toLowerCase();
+    const short = normalized.split('-')[0];
+    return TYPE_DISPLAY_NAMES[short] ? short : 'en';
+  }
+
+  function getFieldNames(localeKey: string): Record<FieldType, string> {
+    return TYPE_DISPLAY_NAMES[normalizeLocaleKey(localeKey)] || TYPE_DISPLAY_NAMES.en;
+  }
+
+  function randomInt(min: number, max: number): number {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function pickOne(items: string[]): string {
+    if (items.length === 0) return '';
+    return items[randomInt(0, items.length - 1)];
+  }
+
+  function randomUuid(): string {
+    if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
+      return crypto.randomUUID();
+    }
+
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (char) => {
+      const r = Math.floor(Math.random() * 16);
+      const v = char === 'x' ? r : (r & 0x3) | 0x8;
+      return v.toString(16);
+    });
+  }
+
+  function normalizeName(value: string): string {
+    return value.toLowerCase().replace(/\s+/g, '.').replace(/[^a-z0-9._-]/g, '');
+  }
+
+  function generateFirstName(localeKey: string): string {
+    const key = normalizeLocaleKey(localeKey);
+    return pickOne(FIRST_NAMES[key] || FIRST_NAMES.en);
+  }
+
+  function generateLastName(localeKey: string): string {
+    const key = normalizeLocaleKey(localeKey);
+    return pickOne(LAST_NAMES[key] || LAST_NAMES.en);
+  }
+
+  function generateFullName(localeKey: string): string {
+    const key = normalizeLocaleKey(localeKey);
+    const first = generateFirstName(key);
+    const last = generateLastName(key);
+    return key === 'zh' ? `${first}${last}` : `${first} ${last}`;
+  }
+
+  const GENERATORS: Record<FieldType, (localeKey: string) => string> = {
+    name: (localeKey) => generateFullName(localeKey),
+    firstName: (localeKey) => generateFirstName(localeKey),
+    lastName: (localeKey) => generateLastName(localeKey),
+    email: (localeKey) => {
+      const name = normalizeName(generateFullName(localeKey)).replace(/\.+/g, '.');
+      return `${name || `user${randomInt(1000, 9999)}`}@${pickOne(EMAIL_DOMAINS)}`;
+    },
+    phone: (localeKey) => normalizeLocaleKey(localeKey) === 'zh'
+      ? `1${randomInt(30, 99)}${randomInt(10000000, 99999999)}`
+      : `+1-${randomInt(200, 999)}-${randomInt(100, 999)}-${randomInt(1000, 9999)}`,
+    address: () => pickOne(ADDRESS_SAMPLES),
+    city: (localeKey) => {
+      const key = normalizeLocaleKey(localeKey);
+      return pickOne(CITY_BY_LOCALE[key] || CITY_BY_LOCALE.en);
+    },
+    country: (localeKey) => {
+      const key = normalizeLocaleKey(localeKey);
+      return pickOne(COUNTRY_BY_LOCALE[key] || COUNTRY_BY_LOCALE.en);
+    },
+    company: () => pickOne(COMPANY_SAMPLES),
+    jobTitle: () => pickOne(JOB_TITLE_SAMPLES),
+    date: () => {
+      const start = new Date('2020-01-01').getTime();
+      const end = new Date('2030-12-31').getTime();
+      return new Date(randomInt(start, end)).toISOString().slice(0, 10);
+    },
+    number: () => String(randomInt(1, 100000)),
+    uuid: () => randomUuid(),
+    url: () => `https://example.com/item/${randomInt(1000, 9999)}`,
+    username: (localeKey) => {
+      const first = normalizeName(generateFirstName(localeKey));
+      const last = normalizeName(generateLastName(localeKey));
+      return `${first}${last}${randomInt(10, 99)}`;
+    },
+  };
 
   let count = $state(10);
 
-  // Removed duplicate declaration of 'locale' (already in props)
+  let previousLocale = $state(locale);
+  const initialFieldNames = getFieldNames(locale);
 
-  let fields = $state([
-    { id: '1', name: 'name', type: 'name' },
-    { id: '2', name: 'email', type: 'email' },
-    { id: '3', name: 'phone', type: 'phone' },
+  let fields = $state<Field[]>([
+    { id: '1', name: initialFieldNames.name, type: 'name' },
+    { id: '2', name: initialFieldNames.email, type: 'email' },
+    { id: '3', name: initialFieldNames.phone, type: 'phone' },
   ]);
 
   let data = $state([] as Record<string, string>[]);
@@ -50,18 +236,19 @@
 
   let copied = $state(false);
 
-  let editingCell = $state(null);
+  let editingCell = $state<{ row: number; field: string } | null>(null);
 
   let editValue = $state('');
 
-  let timerRef = $state(null);
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);
 
   function handleGenerate() {
     const generated: Record<string, string>[] = [];
+    const activeLocale = normalizeLocaleKey(locale);
     for (let i = 0; i < count; i++) {
       const record: Record<string, string> = {};
       for (const field of fields) {
-        record[field.name] = generators[field.type](locale);
+        record[field.name] = GENERATORS[field.type](activeLocale);
       }
       generated.push(record);
     }
@@ -69,20 +256,38 @@
   }
 
   $effect(() => {
-    mounted = true;
+    const previousNames = getFieldNames(previousLocale);
+    const currentNames = getFieldNames(locale);
+
+    if (normalizeLocaleKey(previousLocale) === normalizeLocaleKey(locale)) {
+      return;
+    }
+
+    let changed = false;
+    const nextFields = fields.map((field) => {
+      const previousDefault = previousNames[field.type];
+      if (field.name === previousDefault) {
+        changed = true;
+        return { ...field, name: currentNames[field.type] };
+      }
+      return field;
+    });
+
+    if (changed) {
+      fields = nextFields;
+    }
+
+    previousLocale = locale;
   });
 
-  $effect(() => {
-    const fieldNames = FIELD_NAMES[locale] || FIELD_NAMES.en;
-    fields = fields.map(f => ({ ...f, name: fieldNames[f.type] || f.name }));
-  });  onDestroy(() => {
+  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
 
   // Functions
   function addField() {
     const id = Date.now().toString();
-    const fieldNames = FIELD_NAMES[locale] || FIELD_NAMES.en;
+    const fieldNames = getFieldNames(locale);
     fields = [...fields, { id, name: fieldNames.name, type: 'name' }];
   }
   function removeField(id: string) {
@@ -93,7 +298,7 @@
       if (f.id !== id) return f;
       // If type changes, update name to match the new type
       if (updates.type && updates.type !== f.type) {
-        const fieldNames = FIELD_NAMES[locale] || FIELD_NAMES.en;
+        const fieldNames = getFieldNames(locale);
         return { ...f, ...updates, name: fieldNames[updates.type] };
       }
       return { ...f, ...updates };
@@ -229,7 +434,7 @@
                 >
                   {#each FIELD_TYPES as type (type)}
 <option  value={type}>
-                      {mounted ? (TYPE_DISPLAY_NAMES[locale] || TYPE_DISPLAY_NAMES.en)[type] : TYPE_DISPLAY_NAMES.en[type]}
+                      {getFieldNames(locale)[type]}
                     </option>
 {/each}
                 </select>

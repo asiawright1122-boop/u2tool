@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { generateGo, generateJava, generateJavaScript, generatePhp, generatePython, generateRuby, parseCurlCommand } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;

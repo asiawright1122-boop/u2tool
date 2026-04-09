@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { AI_PATTERNS, FILLER_WORDS } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;

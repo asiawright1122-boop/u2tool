@@ -130,18 +130,18 @@
                   {contact.fullName || t('unnamed')}
                 </h4>
                 {#if contact.emails}
-contact.emails.length > 0 && (
+{#if contact.emails.length > 0}
                   <p class="text-sm text-gray-600 dark:text-gray-300">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> {contact.emails[0].address}
                   </p>
-                )
+                {/if}
 {/if}
                 {#if contact.phones}
-contact.phones.length > 0 && (
+{#if contact.phones.length > 0}
                   <p class="text-sm text-gray-600 dark:text-gray-300">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg> {contact.phones[0].number}
                   </p>
-                )
+                {/if}
 {/if}
                 {#if contact.organization}
 <p class="text-sm text-gray-600 dark:text-gray-300">
@@ -154,18 +154,18 @@ contact.phones.length > 0 && (
                   </p>
 {/if}
                 {#if contact.addresses}
-contact.addresses.length > 0 && (
+{#if contact.addresses.length > 0}
                   <p class="text-sm text-gray-600 dark:text-gray-300">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> {contact.addresses[0].formatted}
                   </p>
-                )
+                {/if}
 {/if}
                 {#if contact.urls}
-contact.urls.length > 0 && (
+{#if contact.urls.length > 0}
                   <p class="text-sm text-gray-600 dark:text-gray-300">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg> {contact.urls[0]}
                   </p>
-                )
+                {/if}
 {/if}
               </div>
 {/each}

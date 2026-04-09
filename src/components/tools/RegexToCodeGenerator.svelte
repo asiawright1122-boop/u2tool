@@ -33,6 +33,116 @@
   test: string;
 }
 
+  const LANGUAGES = [
+    { value: 'javascript', label: 'JavaScript' },
+    { value: 'python', label: 'Python' },
+    { value: 'java', label: 'Java' },
+    { value: 'csharp', label: 'C#' },
+    { value: 'go', label: 'Go' },
+    { value: 'php', label: 'PHP' },
+    { value: 'ruby', label: 'Ruby' },
+    { value: 'rust', label: 'Rust' },
+  ] as const;
+
+  const OPERATIONS = [
+    { value: 'match', label: 'Match first' },
+    { value: 'matchAll', label: 'Match all' },
+    { value: 'replace', label: 'Replace' },
+    { value: 'split', label: 'Split' },
+    { value: 'test', label: 'Test only' },
+  ] as const;
+
+  const CODE_TEMPLATES: Record<Language, CodeTemplate> = {
+    javascript: {
+      match: 'const regex = /{PATTERN}/{FLAGS};\nconst result = "{TEST_STRING}".match(regex);',
+      matchAll:
+        'const regex = /{PATTERN}/{FLAGS};\nconst results = Array.from("{TEST_STRING}".matchAll(regex));',
+      replace:
+        'const regex = /{PATTERN}/{FLAGS};\nconst result = "{TEST_STRING}".replace(regex, "{REPLACEMENT}");',
+      split: 'const regex = /{PATTERN}/{FLAGS};\nconst result = "{TEST_STRING}".split(regex);',
+      test: 'const regex = /{PATTERN}/{FLAGS};\nconst isMatch = regex.test("{TEST_STRING}");',
+    },
+    python: {
+      match:
+        'import re\npattern = r"{PATTERN}"\ntext = "{TEST_STRING}"\nresult = re.search(pattern, text{PY_FLAGS})',
+      matchAll:
+        'import re\npattern = r"{PATTERN}"\ntext = "{TEST_STRING}"\nresults = re.findall(pattern, text{PY_FLAGS})',
+      replace:
+        'import re\npattern = r"{PATTERN}"\ntext = "{TEST_STRING}"\nresult = re.sub(pattern, "{REPLACEMENT}", text{PY_FLAGS})',
+      split:
+        'import re\npattern = r"{PATTERN}"\ntext = "{TEST_STRING}"\nresult = re.split(pattern, text{PY_FLAGS})',
+      test:
+        'import re\npattern = r"{PATTERN}"\ntext = "{TEST_STRING}"\nis_match = bool(re.search(pattern, text{PY_FLAGS}))',
+    },
+    java: {
+      match:
+        'Pattern pattern = Pattern.compile("{PATTERN}"{JAVA_FLAGS});\nMatcher matcher = pattern.matcher("{TEST_STRING}");\nboolean found = matcher.find();',
+      matchAll:
+        'Pattern pattern = Pattern.compile("{PATTERN}"{JAVA_FLAGS});\nMatcher matcher = pattern.matcher("{TEST_STRING}");\nwhile (matcher.find()) {\n  System.out.println(matcher.group());\n}',
+      replace:
+        'Pattern pattern = Pattern.compile("{PATTERN}"{JAVA_FLAGS});\nString result = pattern.matcher("{TEST_STRING}").replaceAll("{REPLACEMENT}");',
+      split:
+        'Pattern pattern = Pattern.compile("{PATTERN}"{JAVA_FLAGS});\nString[] result = pattern.split("{TEST_STRING}");',
+      test:
+        'Pattern pattern = Pattern.compile("{PATTERN}"{JAVA_FLAGS});\nboolean isMatch = pattern.matcher("{TEST_STRING}").find();',
+    },
+    csharp: {
+      match:
+        'var regex = new Regex(@"{PATTERN}"{CS_FLAGS});\nvar result = regex.Match("{TEST_STRING}");',
+      matchAll:
+        'var regex = new Regex(@"{PATTERN}"{CS_FLAGS});\nvar results = regex.Matches("{TEST_STRING}");',
+      replace:
+        'var regex = new Regex(@"{PATTERN}"{CS_FLAGS});\nvar result = regex.Replace("{TEST_STRING}", "{REPLACEMENT}");',
+      split:
+        'var regex = new Regex(@"{PATTERN}"{CS_FLAGS});\nvar result = regex.Split("{TEST_STRING}");',
+      test:
+        'var regex = new Regex(@"{PATTERN}"{CS_FLAGS});\nvar isMatch = regex.IsMatch("{TEST_STRING}");',
+    },
+    go: {
+      match:
+        're := regexp.MustCompile(`{PATTERN}`)\nresult := re.FindString("{TEST_STRING}")',
+      matchAll:
+        're := regexp.MustCompile(`{PATTERN}`)\nresults := re.FindAllString("{TEST_STRING}", -1)',
+      replace:
+        're := regexp.MustCompile(`{PATTERN}`)\nresult := re.ReplaceAllString("{TEST_STRING}", "{REPLACEMENT}")',
+      split:
+        're := regexp.MustCompile(`{PATTERN}`)\nresult := re.Split("{TEST_STRING}", -1)',
+      test:
+        're := regexp.MustCompile(`{PATTERN}`)\nisMatch := re.MatchString("{TEST_STRING}")',
+    },
+    php: {
+      match:
+        '$pattern = "/{PATTERN}/{FLAGS}";\npreg_match($pattern, "{TEST_STRING}", $matches);',
+      matchAll:
+        '$pattern = "/{PATTERN}/{FLAGS}";\npreg_match_all($pattern, "{TEST_STRING}", $matches);',
+      replace:
+        '$pattern = "/{PATTERN}/{FLAGS}";\n$result = preg_replace($pattern, "{REPLACEMENT}", "{TEST_STRING}");',
+      split:
+        '$pattern = "/{PATTERN}/{FLAGS}";\n$result = preg_split($pattern, "{TEST_STRING}");',
+      test:
+        '$pattern = "/{PATTERN}/{FLAGS}";\n$isMatch = preg_match($pattern, "{TEST_STRING}") === 1;',
+    },
+    ruby: {
+      match: 'regex = /{PATTERN}/{FLAGS}\nresult = "{TEST_STRING}".match(regex)',
+      matchAll: 'regex = /{PATTERN}/{FLAGS}\nresults = "{TEST_STRING}".scan(regex)',
+      replace:
+        'regex = /{PATTERN}/{FLAGS}\nresult = "{TEST_STRING}".gsub(regex, "{REPLACEMENT}")',
+      split: 'regex = /{PATTERN}/{FLAGS}\nresult = "{TEST_STRING}".split(regex)',
+      test: 'regex = /{PATTERN}/{FLAGS}\nis_match = regex.match?("{TEST_STRING}")',
+    },
+    rust: {
+      match:
+        'let re = Regex::new(r"{PATTERN}").unwrap();\nlet result = re.find("{TEST_STRING}");',
+      matchAll:
+        'let re = Regex::new(r"{PATTERN}").unwrap();\nlet results: Vec<_> = re.find_iter("{TEST_STRING}").collect();',
+      replace:
+        'let re = Regex::new(r"{PATTERN}").unwrap();\nlet result = re.replace_all("{TEST_STRING}", "{REPLACEMENT}");',
+      split:
+        'let re = Regex::new(r"{PATTERN}").unwrap();\nlet result: Vec<_> = re.split("{TEST_STRING}").collect();',
+      test: 'let re = Regex::new(r"{PATTERN}").unwrap();\nlet is_match = re.is_match("{TEST_STRING}");',
+    },
+  };
+
   let pattern = $state('\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b');
 
   let testString = $state('Contact us at hello@example.com or support@test.org');

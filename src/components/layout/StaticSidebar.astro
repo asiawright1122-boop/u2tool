@@ -1,0 +1,149 @@
+---
+import { getLocalizedPath } from '@/lib/i18n';
+import { getIconSvg } from '@/lib/icon-svg';
+import type { Locale } from '@/lib/i18n';
+
+interface CategoryItem {
+  id: string;
+  icon: string;
+}
+
+interface Props {
+  locale: string;
+  categories: CategoryItem[];
+  categoryNames: Record<string, string>;
+  navMessages: Record<string, string>;
+  siteName?: string;
+}
+
+const {
+  locale,
+  categories,
+  categoryNames,
+  navMessages,
+  siteName = 'U2Tool',
+} = Astro.props as Props;
+
+const compactCategories = categories.slice(0, 5);
+
+function localized(path: string) {
+  return getLocalizedPath(locale as Locale, path);
+}
+
+function categoryPath(categoryId: string) {
+  return localized(`/categories/${categoryId}`);
+}
+---
+
+<aside class="hidden lg:block fixed left-0 top-0 bottom-0 z-40" style="width: 220px">
+  <nav
+    class="h-full w-full bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 overflow-y-auto overflow-x-hidden"
+    role="navigation"
+    aria-label={navMessages.toolCategories || 'Tool Categories'}
+  >
+    <div class="h-16 flex items-center px-4 border-b border-gray-200 dark:border-gray-800">
+      <a href={localized('/')} class="flex items-center gap-2">
+        <span class="text-blue-500 inline-flex" set:html={getIconSvg('wrench', 24)} />
+        <span class="text-lg font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+          {siteName}
+        </span>
+      </a>
+    </div>
+
+    <div class="py-3 px-2">
+      <a href={localized('/')} class="sidebar-item">
+        <span class="sidebar-icon" set:html={getIconSvg('home', 18)} />
+        <span class="text-sm font-medium">{navMessages.home || 'Home'}</span>
+      </a>
+
+      <div class="h-px bg-gray-200 dark:bg-gray-700 my-2 mx-2"></div>
+
+      <div class="mt-1">
+        <div class="sidebar-item">
+          <span class="sidebar-icon" set:html={getIconSvg('wrench', 18)} />
+          <span class="flex-1 text-sm font-medium">{navMessages.toolCategories || 'Tool Categories'}</span>
+        </div>
+        <nav class="mt-1 space-y-0.5" aria-label={navMessages.toolCategories || 'Tool Categories'}>
+          {categories.map((category) => (
+            <a
+              href={categoryPath(category.id)}
+              class="sidebar-item pl-8"
+              title={categoryNames[category.id] || category.id}
+            >
+              <span class="sidebar-icon" set:html={getIconSvg(category.icon, 16)} />
+              <span class="flex-1 text-sm truncate">{categoryNames[category.id] || category.id}</span>
+            </a>
+          ))}
+        </nav>
+      </div>
+
+      <div class="h-px bg-gray-200 dark:bg-gray-700 my-2 mx-2"></div>
+
+      <a href={localized('/tools')} class="sidebar-item">
+        <span class="sidebar-icon" set:html={getIconSvg('list', 18)} />
+        <span class="text-sm font-medium">{navMessages.tools || 'All Tools'}</span>
+      </a>
+    </div>
+  </nav>
+</aside>
+
+<aside class="hidden md:block lg:hidden fixed left-0 top-0 bottom-0 z-40" style="width: 64px">
+  <nav
+    class="h-full w-full bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 overflow-y-auto overflow-x-hidden"
+    role="navigation"
+    aria-label={navMessages.tools || 'Tools'}
+  >
+    <div class="h-16 flex items-center justify-center border-b border-gray-200 dark:border-gray-800">
+      <a
+        href={localized('/tools')}
+        class="inline-flex text-blue-500"
+        title={siteName}
+        aria-label={siteName}
+        set:html={getIconSvg('wrench', 24)}
+      />
+    </div>
+
+    <div class="py-3 px-2 space-y-1.5">
+      <a
+        href={localized('/')}
+        class="sidebar-item justify-center"
+        title={navMessages.home || 'Home'}
+        aria-label={navMessages.home || 'Home'}
+      >
+        <span class="sidebar-icon" set:html={getIconSvg('home', 18)} />
+      </a>
+      <a
+        href={localized('/tools')}
+        class="sidebar-item justify-center"
+        title={navMessages.tools || 'All Tools'}
+        aria-label={navMessages.tools || 'All Tools'}
+      >
+        <span class="sidebar-icon" set:html={getIconSvg('list', 18)} />
+      </a>
+
+      <div class="h-px bg-gray-200 dark:bg-gray-700 my-2 mx-1"></div>
+
+      {compactCategories.map((category) => (
+        <a
+          href={categoryPath(category.id)}
+          class="sidebar-item justify-center"
+          title={categoryNames[category.id] || category.id}
+          aria-label={categoryNames[category.id] || category.id}
+        >
+          <span class="sidebar-icon" set:html={getIconSvg(category.icon, 18)} />
+        </a>
+      ))}
+    </div>
+  </nav>
+</aside>
+
+<style>
+  .sidebar-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+</style>

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { ASCII_FONTS } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;

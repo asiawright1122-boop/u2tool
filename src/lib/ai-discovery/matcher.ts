@@ -27,6 +27,8 @@ export function matchTools(
   for (const candidate of toolCandidates) {
     const normalizedName = normalizeQuery(candidate.name);
     const normalizedDescription = normalizeQuery(candidate.description);
+    const normalizedSeoTitle = normalizeQuery(candidate.seoTitle ?? '');
+    const normalizedSeoDescription = normalizeQuery(candidate.seoDescription ?? '');
     const normalizedCategoryName = normalizeQuery(candidate.categoryName);
     const normalizedAliases = (candidate.aliases ?? []).map((alias) => normalizeQuery(alias));
 
@@ -49,6 +51,37 @@ export function matchTools(
       matchedTerms.add('description_contains');
     }
 
+    if (normalizedSeoTitle === normalizedQuery) {
+      score += 180;
+      matchedTerms.add('seo_title_exact');
+    } else if (normalizedSeoTitle.includes(normalizedQuery)) {
+      score += 70;
+      matchedTerms.add('seo_title_contains');
+    }
+
+    if (normalizedSeoDescription.includes(normalizedQuery)) {
+      score += 24;
+      matchedTerms.add('seo_description_contains');
+    }
+
+    if (queryTokens.length > 0 && queryTokens.every((token) => normalizedName.includes(token))) {
+      score += 90;
+      matchedTerms.add('name_all_tokens');
+    }
+
+    if (queryTokens.length > 0 && queryTokens.every((token) => normalizedSeoTitle.includes(token))) {
+      score += 70;
+      matchedTerms.add('seo_title_all_tokens');
+    }
+
+    if (
+      queryTokens.length > 0 &&
+      queryTokens.every((token) => normalizedSeoDescription.includes(token))
+    ) {
+      score += 80;
+      matchedTerms.add('seo_description_all_tokens');
+    }
+
     if (normalizedCategoryName.includes(normalizedQuery)) {
       score += 25;
       matchedTerms.add('category_contains');
@@ -66,6 +99,14 @@ export function matchTools(
       if (normalizedDescription.includes(token)) {
         score += 8;
         matchedTerms.add(`description:${token}`);
+      }
+      if (normalizedSeoTitle.includes(token)) {
+        score += 12;
+        matchedTerms.add(`seo_title:${token}`);
+      }
+      if (normalizedSeoDescription.includes(token)) {
+        score += 6;
+        matchedTerms.add(`seo_description:${token}`);
       }
       if (normalizedCategoryName.includes(token)) {
         score += 6;

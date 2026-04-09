@@ -1,0 +1,296 @@
+---
+import { getLocalizedPath } from '@/lib/i18n';
+import { getIconSvg } from '@/lib/icon-svg';
+import type { Locale } from '@/lib/i18n';
+
+interface CategoryItem {
+  id: string;
+  icon: string;
+}
+
+interface ToolItem {
+  slug: string;
+  category: string;
+  icon: string;
+  popular?: boolean;
+}
+
+interface Props {
+  locale: string;
+  categories: CategoryItem[];
+  tools: ToolItem[];
+  categoryNames: Record<string, string>;
+  toolNames: Record<string, string>;
+  toolDescriptions: Record<string, string>;
+  previewCount?: number;
+  searchIndexPath?: string;
+  emptyResultsLabel?: string;
+}
+
+const {
+  locale,
+  categories,
+  tools,
+  categoryNames,
+  toolNames,
+  toolDescriptions,
+  previewCount,
+  searchIndexPath,
+  emptyResultsLabel = 'No tools found',
+} = Astro.props as Props;
+
+const effectivePreviewCount =
+  typeof previewCount === 'number' && Number.isFinite(previewCount) && previewCount > 0
+    ? Math.floor(previewCount)
+    : null;
+
+function getToolsByCategory(categoryId: string) {
+  return tools.filter((tool) => tool.category === categoryId);
+}
+
+function toolPath(slug: string) {
+  return getLocalizedPath(locale as Locale, `/tools/${slug}`);
+}
+
+function categoryPath(categoryId: string) {
+  return getLocalizedPath(locale as Locale, `/categories/${categoryId}`);
+}
+---
+
+<div
+  id="tools-grid"
+  data-empty-results-label={emptyResultsLabel}
+  data-search-index-path={searchIndexPath || ''}
+  data-tools-base-path={getLocalizedPath(locale as Locale, '/tools')}
+>
+  <div
+    data-search-results
+    hidden
+    class="mb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"
+  />
+  <p
+    data-search-empty
+    hidden
+    class="mb-8 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-300"
+  >
+    {emptyResultsLabel}
+  </p>
+  {categories.map((category) => {
+    const categoryTools = getToolsByCategory(category.id);
+    const renderedTools = effectivePreviewCount
+      ? categoryTools.slice(0, effectivePreviewCount)
+      : categoryTools;
+
+    if (categoryTools.length === 0) {
+      return null;
+    }
+
+    return (
+      <section class="tools-grid-section mb-8" data-category={category.id} id={category.id}>
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+          <span
+            class="text-blue-500 dark:text-blue-400 inline-flex"
+            set:html={getIconSvg(category.icon, 20)}
+          />
+          <a
+            href={categoryPath(category.id)}
+            class="transition-colors hover:text-blue-600 dark:hover:text-blue-300"
+          >
+            {categoryNames[category.id] || category.id}
+          </a>
+          <span class="text-sm font-normal text-gray-400 dark:text-gray-500">({categoryTools.length})</span>
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {renderedTools.map((tool) => (
+            <a
+              href={toolPath(tool.slug)}
+              class="group flex items-center gap-3 p-3 bg-white dark:bg-gray-800/60
+                     border border-gray-100 dark:border-gray-700/40 rounded-xl
+                     hover:border-blue-400/60 dark:hover:border-blue-500/40
+                     hover:bg-blue-50/50 dark:hover:bg-blue-900/10
+                     cursor-pointer transition-all duration-200"
+            >
+              <span
+                class="text-blue-500 dark:text-blue-400 flex-shrink-0 inline-flex"
+                set:html={getIconSvg(tool.icon, 22)}
+              />
+              <div class="flex-1 min-w-0">
+                <h3 class="font-medium text-sm text-gray-900 dark:text-white truncate group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  {toolNames[tool.slug] || tool.slug}
+                </h3>
+                <p class="text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5">
+                  {toolDescriptions[tool.slug] || ''}
+                </p>
+              </div>
+              {tool.popular && (
+                <span class="inline-flex items-center px-1.5 py-0.5 text-[10px] font-medium rounded-full bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400 flex-shrink-0">
+                  HOT
+                </span>
+              )}
+            </a>
+          ))}
+        </div>
+      </section>
+    );
+  })}
+</div>
+
+<script is:inline>
+  (() => {
+    const root = document.getElementById('tools-grid');
+    if (!root) return;
+
+    const sections = Array.from(root.querySelectorAll('.tools-grid-section'));
+    const searchResults = root.querySelector('[data-search-results]');
+    const emptyState = root.querySelector('[data-search-empty]');
+    const searchIndexPath = root.getAttribute('data-search-index-path') || '';
+    const toolsBasePath = root.getAttribute('data-tools-base-path') || '';
+    if (!sections.length) return;
+
+    const normalize = (value) =>
+      value
+        .toLowerCase()
+        .normalize('NFKC')
+        .replace(/\s+/g, ' ')
+        .trim();
+
+    const scoreTool = (tool, query, queryTokens) => {
+      let score = 0;
+      const name = normalize(tool.name || tool.slug || '');
+      const description = normalize(tool.description || '');
+      const category = normalize(tool.categoryName || tool.category || '');
+
+      if (name.includes(query)) {
+        score += 100;
+        if (name.startsWith(query)) score += 50;
+      }
+
+      if (description.includes(query)) score += 30;
+      if (category.includes(query)) score += 20;
+
+      for (const token of queryTokens) {
+        if (name.includes(token)) score += 10;
+        if (description.includes(token)) score += 5;
+        if (category.includes(token)) score += 3;
+      }
+
+      return score;
+    };
+
+    const renderSearchResults = (items) => {
+      if (!searchResults) return;
+
+      searchResults.replaceChildren();
+
+      for (const item of items) {
+        const link = document.createElement('a');
+        link.href = `${toolsBasePath}/${item.slug}`;
+        link.className = 'group flex flex-col gap-2 rounded-xl border border-slate-200 bg-white p-4 transition-colors hover:border-blue-400/60 hover:bg-blue-50/40 dark:border-slate-700 dark:bg-slate-900/70 dark:hover:border-blue-500/40 dark:hover:bg-blue-500/10';
+
+        const header = document.createElement('div');
+        header.className = 'flex items-start justify-between gap-3';
+
+        const title = document.createElement('h3');
+        title.className = 'font-medium text-sm text-slate-900 transition-colors group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-300';
+        title.textContent = item.name || item.slug;
+
+        const badge = document.createElement('span');
+        badge.className = 'rounded-full bg-slate-100 px-2 py-1 text-[10px] font-medium uppercase tracking-[0.16em] text-slate-500 dark:bg-slate-800 dark:text-slate-300';
+        badge.textContent = item.categoryName || item.category;
+
+        header.append(title, badge);
+        link.append(header);
+
+        if (item.description) {
+          const description = document.createElement('p');
+          description.className = 'text-xs leading-5 text-slate-500 dark:text-slate-400';
+          description.textContent = item.description;
+          link.append(description);
+        }
+
+        searchResults.append(link);
+      }
+    };
+
+    const showPreviewSections = (activeCategory) => {
+      if (searchResults) {
+        searchResults.hidden = true;
+        searchResults.replaceChildren();
+      }
+
+      if (emptyState) {
+        emptyState.hidden = true;
+      }
+
+      let visibleSections = 0;
+
+      for (const section of sections) {
+        const matchesCategory =
+          !activeCategory || section.getAttribute('data-category') === activeCategory;
+        section.toggleAttribute('hidden', !matchesCategory);
+        if (matchesCategory) visibleSections += 1;
+      }
+
+      if (emptyState && visibleSections === 0) {
+        emptyState.hidden = false;
+      }
+    };
+
+    const applyCategoryFilter = async () => {
+      const params = new URLSearchParams(window.location.search);
+      const activeCategory = params.get('category');
+      const query = normalize(params.get('q') || '');
+      const queryTokens = query ? query.split(' ').filter(Boolean) : [];
+
+      if (!query) {
+        showPreviewSections(activeCategory);
+        return;
+      }
+
+      if (!searchIndexPath || !searchResults) {
+        showPreviewSections(activeCategory);
+        return;
+      }
+
+      try {
+        const response = await fetch(searchIndexPath);
+        if (!response.ok) {
+          throw new Error(`Unexpected response: ${response.status}`);
+        }
+
+        const toolsIndex = await response.json();
+        const results = toolsIndex
+          .map((tool) => ({
+            ...tool,
+            score: scoreTool(tool, query, queryTokens),
+          }))
+          .filter((tool) =>
+            tool.score > 0 && (!activeCategory || tool.category === activeCategory)
+          )
+          .sort((a, b) => b.score - a.score)
+          .slice(0, 24);
+
+        for (const section of sections) {
+          section.hidden = true;
+        }
+
+        if (results.length === 0) {
+          searchResults.hidden = true;
+          if (emptyState) emptyState.hidden = false;
+          return;
+        }
+
+        renderSearchResults(results);
+        searchResults.hidden = false;
+        if (emptyState) emptyState.hidden = true;
+      } catch {
+        showPreviewSections(activeCategory);
+      }
+    };
+
+    void applyCategoryFilter();
+    window.addEventListener('popstate', () => {
+      void applyCategoryFilter();
+    });
+  })();
+</script>

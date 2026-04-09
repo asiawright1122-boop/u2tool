@@ -283,7 +283,7 @@ Thank you for your attention!
 
       <!-- Speaker Notes -->
       {#if slides.length > 0}
-slides[currentSlide]?.notes && (
+{#if slides[currentSlide]?.notes}
         <div class="p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
           <h3 class="text-sm font-medium text-yellow-800 dark:text-yellow-200 mb-2">
             {t('speakerNotes')}
@@ -292,7 +292,7 @@ slides[currentSlide]?.notes && (
             {slides[currentSlide].notes}
           </p>
         </div>
-      )
+      {/if}
 {/if}
 
       <!-- Fullscreen Presentation Mode -->

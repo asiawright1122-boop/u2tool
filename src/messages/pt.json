@@ -46,8 +46,8 @@
       "seo_description": "Ferramentas de segurança online gratuitas para geração de senhas, cálculo de hash, criptografia de texto e hash de arquivos. Proteja seus dados com ferramentas baseadas em navegador."
     },
     "network": {
-      "seo_title": "Ferramentas de Rede - Consulta IP, Codificador URL e Mais",
-      "seo_description": "Utilitários de rede gratuitos incluindo consulta de IP, codificador/decodificador de URL e mais. Verifique informações de rede e codifique URLs instantaneamente."
+      "seo_title": "Ferramentas de rede para DNS, SSL, IP e analise de URL",
+      "seo_description": "Consulte DNS, verifique SSL e IP e analise URLs e cabecalhos no navegador. Ferramentas de rede para DNS lookup, SSL checker, IP validator e URL parser em fluxos tecnicos."
     },
     "image": {
       "seo_title": "Ferramentas de Imagem - Gerador QR, Conversor Base64 e Mais",
@@ -62,16 +62,16 @@
       "seo_description": "Crie gráficos bonitos online com nossas ferramentas geradoras gratuitas. Gere gráficos de barras, linhas, pizza e mais sem nenhum software."
     },
     "office": {
-      "seo_title": "Ferramentas de Escritório - PDF, Criador de Currículo e Produtividade",
-      "seo_description": "Ferramentas de escritório online gratuitas para processamento de PDF, criação de currículo e produtividade. Crie documentos profissionais sem instalar software."
+      "seo_title": "Ferramentas de escritorio online - PDF, curriculo, planilhas e reunioes",
+      "seo_description": "Ferramentas gratuitas para editar PDF, criar curriculo, converter documentos, trabalhar com planilhas e organizar reunioes. Tudo roda no navegador, sem instalar software."
     },
     "lifestyle": {
       "seo_title": "Ferramentas de Estilo de Vida e Saúde - Calculadora de Calorias, Sono e Mais",
       "seo_description": "Ferramentas gratuitas de estilo de vida e saúde incluindo calculadora de calorias, IMC, sono, ingestão de água e mais. Melhore sua saúde hoje."
     },
     "finance": {
-      "seo_title": "Ferramentas Financeiras Online - Conversor de Moedas, Calculadora de Empréstimos",
-      "seo_description": "Ferramentas financeiras gratuitas incluindo conversor de moedas, calculadora de empréstimos, hipoteca, ROI e impostos. Gerencie seu dinheiro de forma inteligente."
+      "seo_title": "Ferramentas financeiras online - cambio, ROI, faturas e orcamento",
+      "seo_description": "Ferramentas financeiras gratuitas para converter moedas, calcular ROI, impostos e margem, validar dados bancarios e criar faturas ou relatorios de despesas diretamente no navegador."
     },
     "fun": {
       "seo_title": "Ferramentas de Diversão e Entretenimento - Sorteador, Dados e Jogos",
@@ -1279,7 +1279,7 @@
       "name": "JSON para Java",
       "description": "Converter dados JSON em classes POJO Java com suporte ao Lombok.",
       "seo_title": "Conversor JSON para Java Grátis Online",
-      "seo_description": "Converter JSON para classes Java online de graça. Suporte ao Lombok, getters/setters e padrões @Builder. Perfeito para desenvolvimento de API e modelagem de dados.",
+      "seo_description": "Converta JSON em classes Java online grátis e gere modelos para APIs e estruturas de dados.",
       "detailed_description": "O conversor JSON para Java é uma ferramenta técnica especializada que transforma estruturas de dados JSON em classes Java POJO (Plain Old Java Object) otimizadas, com suporte opcional para anotações do Lombok. Internamente, o algoritmo realiza *schema inference* para mapear tipos JSON (objetos, arrays, primitivos) para equivalentes Java, identificando automaticamente campos como `String`, `LocalDateTime`, `List<>` ou até enums. A ferramenta destaca-se por gerar código com *getter*, *setter*, `toString()` e `equals()` através do `@Data` do Lombok, reduzindo significativamente código boilerplate. Desenvolvedores precisam deste recurso ao integrar APIs REST que retornam JSON dinâmico, mapear configurações externas ou criar modelos para testes unitários. O processo utiliza parser Jackson para validar o JSON de entrada, seguido de análise semântica para inferir tipos complexos e hierarquias de classes, garantindo compatibilidade com Java 11+. O resultado é um código compilável com pacotes configuráveis, nomes de classes personalizados e suporte a campos aninhados com classes estáticas internas.",
       "usage_steps": [
         "Cole o JSON na área de texto com formatação automática (botão 'Colar JSON')",
@@ -1941,7 +1941,7 @@
     "regex-tester": {
       "name": "Testador de Regex",
       "description": "Teste expressões regulares com correspondência em tempo real e destacamento sintático.",
-      "seo_title": "Regex Tester Online Grátis - Teste Expressões Regulares em Tempo Real",
+      "seo_title": "Ferramenta para testar regex online grátis em tempo real",
       "seo_description": "Use nossa ferramenta online para testar expressões regulares com correspondência em tempo real e destaque. Experimente agora e descubra soluções JSON, Base64 e SVG!",
       "detailed_description": "O Regex Tester é uma ferramenta de desenvolvimento projetada para validar, depurar e otimizar expressões regulares (regex) com feedback imediato. Tecnicamente, ele utiliza um mecanismo de compilação即时 de padrões regulares compatível com padrões modernos, como os do JavaScript, permitindo testes em tempo real sem recarga da página. A ferramenta destaca correspondências exatas, grupos de captura e backreferences no texto analisado, além de identificar erros de sintaxe no padrão inserido. Desenvolvedores precisam deste recurso para validar entradas de usuários, extrair dados estruturados de textos não formatados (como logs ou páginas HTML) e garantir a precisão de validações em formulários. O funcionamento se dá por meio de análise léxica em dois estágios: primeiro, o padrão regex é compilado e verificado quanto a inconsistências; depois, é aplicado ao texto de teste, exibindo resultados dinamicamente no DOM. Recursos como seleção de modificadores (g, m, i), realce de grupos e exibição de posições de correspondência tornam a ferramenta indispensável para depuração eficiente.",
       "usage_steps": [
@@ -1960,64 +1960,58 @@
       ]
     },
     "jwt-decoder": {
-      "name": "Decodificador de JWT",
-      "description": "Ferramenta online gratuita para decodificar e inspecionar tokens JWT.",
-      "seo_title": "Decodificador de JWT Grátis | Inspecione Tokens Online",
-      "seo_description": "Decodifique tokens JWT gratuitamente. Veja o cabeçalho, payload e assinatura de forma segura e instantânea. Use nossa ferramenta online agora!",
-      "enterToken": "Por favor, insira um token JWT",
-      "invalidFormat": "Formato de token JWT inválido",
-      "invalidToken": "Token JWT inválido",
-      "header": "Cabeçalho",
-      "payload": "Carga",
-      "signature": "Assinatura",
-      "issuedAt": "Emitido em (iat)",
-      "expires": "Expira em (exp)",
-      "notBefore": "Não antes (nbf)",
-      "detailed_description": "O Decodificador de JWT é uma ferramenta online gratuita para desenvolvedores e profissionais de segurança. Ele permite que você inspecione e decodifique tokens JWT (JSON Web Tokens) de forma rápida e segura, visualizando separadamente o cabeçalho, o payload e a assinatura. Ideal para depuração de autenticação e análise de dados de sessão.",
+      "name": "Depurador JWT",
+      "description": "Depure e verifique tokens JWT com validação de assinatura",
+      "seo_title": "Grátis: Debugger JWT Online",
+      "seo_description": "Use nossa ferramenta online para debugar e validar JWT com validação de assinatura. Teste JSON, Base64 e SVG gratuitamente hoje!",
+      "detailed_description": "O JWT Debugger é uma ferramenta técnica especializada para análise e validação de tokens JWT (JSON Web Token) sob o prisma de segurança e integridade. Internamente, o token JWT é dividido em três partes: header, payload e signature, codificadas em Base64Url. A ferramenta decodifica essas partes, exibindo seus conteúdos em formato JSON, e verifica a assinatura digital por meio de algoritmos HMAC, RSA ou ECDSA, comparando o hash gerado com o valor fornecido no token. Isso permite identificar manipulações ou incompatibilidades na assinatura. Além disso, valida automaticamente claims padrão como 'exp' (expiration time) e 'nbf' (not before), cruciais para tokens de autenticação. Desenvolvedores precisam deste recurso para diagnosticar tokens inválidos em sistemas de autenticação OAuth2/OpenID, auditar tokens recebidos de APIs terceiras ou testar a implementação de serviços que emitem JWTs. O diferencial do JWT Debugger está na exibição detalhada dos metadados criptográficos, como o algoritmo utilizado (ex.: HS256, RS256) e o cabeçalho 'kid' (Key ID), facilitando a depuração de falhas em fluxos de autenticação modernos.",
       "usage_steps": [
-        "Cole seu token JWT no campo de entrada.",
-        "Clique no botão 'Decodificar'.",
-        "Analise o cabeçalho (Header) decodificado.",
-        "Revise o conteúdo do payload.",
-        "Verifique a seção de assinatura para validação."
+        "Acesse a interface do JWT Debugger e cole o token JWT no campo 'Token Input' com formato xxxx.xxxx.xxxx.",
+        "Clique em 'Decode Token' para separar as partes do token (header, payload, signature) e exibi-las em painéis individuais.",
+        "Analise o header para identificar o algoritmo (alg) e identificador de chave (kid) utilizados na assinatura.",
+        "Valide a assinatura clicando em 'Verify Signature', inserindo a chave secreta ou certificado público no campo dedicado.",
+        "Verifique o payload para inspecionar claims como 'exp', 'iat' e 'aud', com destaque para datas em formato Unix timestamp.",
+        "Use o modo 'Raw Output' para visualizar os bytes decodificados em hexadecimal ou o modo 'Structured JSON' para navegar nos campos aninhados."
       ],
       "usage_examples": [
-        "Um desenvolvedor depurando um erro de autenticação em sua API.",
-        "Um analista de segurança verificando os dados contidos em um token de sessão.",
-        "Um estudante aprendendo sobre a estrutura e os campos de um JWT."
+        "Um desenvolvedor testa um token JWT gerado por um serviço de autenticação e descobre que o horário de expiração ('exp') está definido 5 minutos no passado, causando falhas de login.",
+        "Durante a integração com uma API OAuth2, um engenheiro utiliza a ferramenta para confirmar que o token apresenta o 'aud' (audience) incorreto, bloqueando o acesso ao recurso esperado.",
+        "Em uma auditoria de segurança, um analista detecta que um token está assinado com HS256, mas o servidor espera RS256, expondo uma vulnerabilidade de configuração.",
+        "Um DevOps investiga por que tokens emitidos por um cluster Kubernetes são rejeitados, descobrindo que o certificado público usado para verificação não corresponde à chave privada do token."
       ],
-      "input": "Entrada",
-      "decode": "Decodificar",
+      "token": "Token JWT",
+      "header": "Cabeçalho",
+      "payload": "Payload",
+      "signature": "Assinatura",
+      "secret": "Chave Secreta",
+      "verify": "Verificar Assinatura",
+      "valid": "Assinatura Válida",
+      "invalid": "Assinatura Inválida",
+      "expired": "Token Expirado",
+      "tokenPlaceholder": "Cole seu token JWT aqui...",
+      "notExpired": "Token Válido",
+      "expiresAt": "Expira em",
+      "errors": {
+        "invalidFormat": "Formato JWT inválido",
+        "decodeFailed": "Falha ao decodificar token"
+      },
+      "placeholder": "Cole o token JWT aqui...",
+      "loadExample": "Carregar exemplo",
+      "tokenInput": "Entrada de token",
+      "claim": "Reivindicação",
+      "claims": "Reivindicações",
       "copied": "Copiado!",
       "copy": "Copiar",
-      "faqs": [
-        {
-          "question": "Esta ferramenta valida a assinatura do JWT?",
-          "answer": "Não, ela apenas decodifica e exibe as partes do token. A validação da assinatura requer a chave secreta."
-        },
-        {
-          "question": "Meus tokens JWT são enviados para algum servidor?",
-          "answer": "Não, todo o processo de decodificação ocorre localmente no seu navegador, garantindo sua privacidade."
-        },
-        {
-          "question": "Quais formatos de token JWT são suportados?",
-          "answer": "Ela suporta os formatos padrão JWT (JWS) com as codificações Base64Url mais comuns."
-        },
-        {
-          "question": "Posso decodificar tokens com payloads grandes?",
-          "answer": "Sim, mas há um limite prático de tamanho para a entrada, adequado para a maioria dos casos de uso."
-        },
-        {
-          "question": "Esta ferramenta pode ser usada para tokens JWE (criptografados)?",
-          "answer": "Não, ela é projetada apenas para decodificar tokens JWS (assinados), não descriptografar JWE."
-        }
-      ]
+      "secretPlaceholder": "Digite a chave secreta...",
+      "value": "Valor",
+      "verifyNote": "Nota: A verificação de assinatura é feita no lado do cliente",
+      "verifySignature": "Verificar assinatura"
     },
     "diff-checker": {
       "name": "Diff Checker",
       "description": "Compare dois textos e destaque as diferenças entre eles.",
-      "seo_title": "Diff Checker Online Grátis - Compare Textos Fácilmente",
-      "seo_description": "Compare dois textos online gratuitamente. Destaque conteúdo adicionado, removido e alterado com vista ao lado. Essencial para revisão de código e comparação de documentos.",
+      "seo_title": "Comparador diff online grátis - compare textos facilmente",
+      "seo_description": "Compare dois textos com um visual diff online e destaque conteúdo adicionado, removido e alterado.",
       "detailed_description": "O Diff Checker é uma ferramenta de comparação de texto avançada que permite aos usuários identificar e visualizar as diferenças entre dois conjuntos de texto. Utilizando algoritmos de detecção de diferenças, o Diff Checker destaca as linhas e palavras que foram adicionadas, removidas ou modificadas, proporcionando uma visão clara e detalhada das alterações. Esta ferramenta é essencial para desenvolvedores, editores de conteúdo, e qualquer pessoa que precise comparar versões de documentos, códigos fonte, ou textos em geral. Alguns dos casos de uso específicos incluem a revisão de contratos legais, a comparação de versões de códigos de software, e a verificação de alterações em documentos de colaboração. O Diff Checker opera de maneira eficiente, mesmo com grandes volumes de texto, garantindo que as diferenças sejam identificadas e exibidas de forma precisa e intuitiva.",
       "usage_steps": [
         "Abra a página do Diff Checker no seu navegador.",
@@ -2088,7 +2082,7 @@
     "cron-generator": {
       "name": "Gerador de Expressões Cron",
       "description": "Gerar e analisar expressões cron visualmente.",
-      "seo_title": "Cron Expression Generator Online Grátis - Ferramenta Visual",
+      "seo_title": "Gerador de expressões cron online grátis - ferramenta visual",
       "seo_description": "Gere e analise cron expressions visualmente com a nossa ferramenta online grátis. Converta JSON, Base64 e SVG facilmente. Comece agora!",
       "presets": "Presetes Rápidos",
       "minute": "Minuto (0-59)",
@@ -2264,7 +2258,7 @@
     "chinese-converter": {
       "name": "Conversor de Chinês",
       "description": "Converter entre caracteres simplificados e tradicionais do chinês.",
-      "seo_title": "Grátis Online: Converta entre Caracteres Simplificados e Tradicionais",
+      "seo_title": "Conversor de chinês simplificado e tradicional grátis online",
       "seo_description": "Use nossa ferramenta gratuita online para converter texto entre caracteres simplificados e tradicionais chineses. Simplifique a sua comunicação! Tente agora.",
       "detailed_description": "O Chinese Converter é uma ferramenta técnica especializada em transformações bidirecionais entre caracteres chineses simplificados e tradicionais, fundamentada em padrões de codificação Unicode (GB18030/UTF-8) e tabelas de mapeamento ISO/IEC 10646. Sua funcionalidade abrange a detecção automática de grafias regionais (como variantes de Hong Kong, Macau e Taiwan) e a preservação de consistência em conversões reversas (round-trip). Desenvolvido com algoritmos baseados na biblioteca OpenCC e aprimorado com regras contextuais personalizadas, o toolchain processa texto em formatos RAW, HTML e XML, mantendo integridade em entidades especiais e codificação de caracteres. Profissionais de localização de software, pesquisadores de linguística computacional e desenvolvedores de sistemas multilíngues necessitam desta ferramenta para resolver desafios como normalização de dados em bases de conhecimento, adaptação de conteúdo para diferentes mercados (e.g., Mainland China vs. comunidades da diáspora) e depuração de inconsistências em APIs que lidam com CJK (Chinese-Japanese-Korean). A precisão é garantida através de validação contra dicionários acadêmicos e testes de regressão com corpus bilíngües.",
       "usage_steps": [
@@ -2469,7 +2463,7 @@
     "css-beautifier": {
       "name": "CSS Beautifier",
       "description": "Format e belificie o código CSS com opções de minificação e belificação.",
-      "seo_title": "CSS Beautifier Online Grátis - Formate e Minifique CSS",
+      "seo_title": "Formatador CSS online grátis - formate e minifique CSS",
       "seo_description": "Formatar e belificar seu CSS online de forma gratuita. Minifique e belifique seu código CSS com nossa ferramenta poderosa. Tente agora!",
       "detailed_description": "O CSS Beautifier é uma ferramenta de formatação e embelezamento de código CSS que ajuda desenvolvedores a manter a legibilidade e consistência de seus estilos. Com opções de minificação e formatação, esta ferramenta é essencial para quem trabalha com CSS em projetos de desenvolvimento web. A minificação reduz o tamanho do código, eliminando espaços em branco e comentários, o que é ideal para otimização de desempenho em produção. A formatação, por outro lado, adiciona a indentação adequada e quebras de linha, tornando o código mais legível e fácil de manter. Esta ferramenta utiliza algoritmos avançados para garantir que o CSS minificado seja compatível com todos os navegadores modernos, mantendo a integridade dos estilos. Além disso, o CSS Beautifier suporta a conversão de códigos CSS3, incluindo propriedades e valores modernos, sem perder a compatibilidade com versões anteriores do CSS. A utilização desta ferramenta é crítica para equipes que trabalham em projetos colaborativos, onde a consistência do código é fundamental para a colaboração eficiente e a manutenção contínua.",
       "usage_steps": [
@@ -2751,10 +2745,10 @@
       ]
     },
     "color-blender": {
-      "name": "Color Blender",
+      "name": "Misturador de Cores",
       "description": "Combine duas cores e gere etapas de gradiente.",
-      "seo_title": "Color Blender Online Grátis",
-      "seo_description": "Crie transições de cores suaves online gratuitamente com esta ferramenta. Perfeita para designers e paletas.",
+      "seo_title": "Misturador de cores online grátis",
+      "seo_description": "Misture cores online para criar transições suaves e paletas úteis para design.",
       "detailed_description": "O Color Blender é uma ferramenta avançada de manipulação de cores que permite aos usuários criar e personalizar gradientes suaves entre duas cores. Tecnicamente, o tool utiliza algoritmos de interpolação linear para gerar uma série de cores intermediárias que fazem a transição gradual entre a cor inicial e a final. Este processo é fundamental para designers e desenvolvedores web que buscam aperfeiçoar a estética de interfaces de usuário, gráficos e elementos visuais. O Color Blender suporta múltiplos formatos de cores, incluindo hexadecimal, RGB e HSL, proporcionando uma flexibilidade incomparável na criação de paletas de cores. Além disso, os usuários podem ajustar o número de etapas de gradiente, controlando a suavidade ou a intensidade da transição. Esta funcionalidade é essencial para projetos que exigem precisão cromática, como a criação de designs responsivos ou a otimização de imagens para diferentes dispositivos.",
       "usage_steps": [
         "Acesse a ferramenta Color Blender no menu de conversores do site.",
@@ -3074,7 +3068,7 @@
     "base32": {
       "name": "Encoder/Decoder Base32",
       "description": "Codifique texto para Base32 ou decodifique strings Base32 para texto.",
-      "seo_title": "Encoder/Decoder Base32 Online Grátis",
+      "seo_title": "Codificador e decodificador Base32 online grátis",
       "seo_description": "Codifique texto em Base32 ou decodifique strings Base32 online gratuitamente. Ferramenta que suporta o padrão RFC 4648, perfeita para segredos TOTP e codificação de dados seguros.",
       "detailed_description": "O Base32 Encoder/Decoder é uma ferramenta essencial para desenvolvedores e profissionais de TI que precisam converter dados entre formatos legíveis por humanos e representações codificadas. Base32 é um método de codificação binária para texto, onde os dados são convertidos em uma sequência de 32 caracteres específicos (A-Z, 2-7). Esta codificação é frequentemente usada em cenários onde a segurança e a facilidade de transmissão dos dados são cruciais, como em códigos QR, identificadores únicos e transmissão de dados por canais que não suportam todos os caracteres ASCII.\n\nA necessidade desta ferramenta surge em situações onde os dados precisam ser transmitidos de maneira confiável e segura, sem a possibilidade de caracteres especiais serem mal interpretados ou corrompidos. Por exemplo, em sistemas de autenticação de dois fatores, onde os códigos são frequentemente transmitidos via SMS ou e-mail, a codificação Base32 garante que os caracteres sejam consistentes e não causem problemas de interpretação.\n\nTecnicamente, o processo de codificação Base32 envolve a divisão dos dados binários em grupos de 5 bits, cada um representado por um dos 32 caracteres possíveis. Na decodificação, o processo é revertido, recuperando os dados originais a partir da sequência de caracteres Base32. Esta ferramenta simplifica esses processos, permitindo que os usuários realizem codificações e decodificações rapidamente e de forma precisa, sem a necessidade de implementar manualmente os algoritmos de codificação.\n\nAlém disso, a ferramenta suporta a entrada de dados em formato de texto ou arquivo, facilitando a integração com pipelines de desenvolvimento e automação de tarefas. A interface intuitiva e os feedbacks em tempo real garantem que os usuários possam confiar nos resultados, otimizando o fluxo de trabalho e minimizando erros.",
       "usage_steps": [
@@ -3519,7 +3513,7 @@
     "number-formatter": {
       "name": "Formatter de Números",
       "description": "Formatar números em diferentes locais com estilos decimais, monetários e de porcentagem.",
-      "seo_title": "Formatter de Números Online Grátis - Ferramenta Multi-locais",
+      "seo_title": "Formatador de números online grátis",
       "seo_description": "Formatar números em diferentes locais com estilos decimais, monetários e porcentuais online. Use nossa ferramenta gratuita agora!",
       "detailed_description": "O Number Formatter é uma ferramenta técnica especializada em aplicar formatação internacionalizada a números, utilizando padrões de localidade definidos pelo ICU (International Components for Unicode). Ele permite transformar valores numéricos em representações decimais, monetárias ou percentuais, adaptando-se automaticamente às convenções de 150+ idiomas e sistemas monetários. Sua utilidade é crítica em aplicações financeiras, relatórios multilíngues e integrações de dados globais, onde inconsistências de formatação podem causar erros de interpretação. O núcleo da ferramenta processa entradas via JavaScript's Intl API, manipulando opcionalmente parâmetros como símbolos monetários ISO 4217, casas decimais configuráveis e sistemas de numeração (arábico, romano, indiano). A engine detecta automaticamente padrões regionais para separadores de milhares (vírgula, ponto ou espaço) e notação decimal, garantindo precisão em ambientes de desenvolvimento front-end/back-end.",
       "usage_steps": [
@@ -3625,7 +3619,7 @@
       "name": "Calculadora CIDR",
       "description": "Calcule intervalos de endereços IP, máscaras de sub-rede e hosts disponíveis.",
       "seo_title": "Calculadora CIDR Online Grátis",
-      "seo_description": "Use nossa ferramenta gratuita online para calcular rangos de endereços IP, máscaras de subrede e hospedes disponíveis.",
+      "seo_description": "Use esta calculadora CIDR online grátis para calcular intervalos de endereços IP, máscaras de sub-rede e hosts disponíveis.",
       "detailed_description": "O CIDR Calculator é uma ferramenta técnica especializada para profissionais de redes que precisam analisar e manipular notações CIDR (Classless Inter-Domain Routing) com precisão. Ele converte automaticamente blocos CIDR em informações críticas como endereço de rede, máscara de sub-rede em formato decimal ou hexadecimal, intervalo de hosts utilizáveis, endereço de broadcast e até mesmo a máscara curinga (wildcard mask) para regras de firewall. Ao inserir uma notação como 192.168.1.0/24, o algoritmo desmonta o prefixo de rede, calcula o número exato de hosts disponíveis (levando em conta subtração de endereços reservados) e identifica sobreposições potenciais em redes IPv4 ou IPv6. Esta funcionalidade é essencial para engenheiros de redes que projetam arquiteturas escaláveis, técnicos que auditam endereçamento em nuvem ou profissionais de segurança que configuram listas de acesso (ACLs). A ferramenta também inclui cálculos avançados como identificação de supernets, detecção de intervalos inválidos e validação de máscaras não contíguas, características raramente encontradas em ferramentas genéricas. Sua interface exibe resultados em múltiplas abas organizadas por categorias técnicas (Rede, Hosts, Máscara), permitindo análise detalhada sem sobrecarga visual.",
       "usage_steps": [
         "Insira a notação CIDR desejada no campo 'Endereço CIDR' (ex: 10.0.0.0/28).",
@@ -3748,10 +3742,10 @@
       ]
     },
     "text-extractor": {
-      "name": "Extractador de Texto",
+      "name": "Extrator de Texto",
       "description": "Extraia e-mails, URLs, números de telefone, endereços IP e muito mais do texto.",
-      "seo_title": "Grátis: Extrair Emails e URLs Online | Ferramenta Fácil!",
-      "seo_description": "Converse com a nossa ferramenta online gratuita para extrair emails, URLs, números de telefone e endereços IP do texto. Facilita a sua vida! Tente agora!",
+      "seo_title": "Extrator de texto online grátis para emails e URLs",
+      "seo_description": "Use nossa ferramenta online grátis para extrair emails, URLs, números de telefone e endereços IP do texto.",
       "detailed_description": "O Text Extractor é uma ferramenta de processamento de linguagem natural (PLN) que utiliza algoritmos avançados de reconhecimento de padrões baseados em expressões regulares (regex) otimizadas para identificar e estruturar informações não estruturadas. O núcleo do funcionamento envolve tokenização de texto, onde o conteúdo é dividido em unidades lógicas (tokens) e analisado conforme regras gramaticais específicas para cada tipo de dado (como formatos de e-mail RFC 5322, URLs com esquemas HTTP/HTTPS, números de telefone E.164, IPv4/IPv6). A ferramenta também suporta detecção de codificações Unicode (UTF-8, UTF-16) e manipula grandes volumes de texto com paralelismo via multithreading. É essencial para profissionais que lidam com mineração de dados, preparação de datasets para machine learning ou auditorias de segurança, onde a extração precisa de metadados de logs é crítica. Diferentemente de ferramentas genéricas, o Text Extractor permite customização avançada de regex por usuário e exportação em formatos estruturados (JSON, CSV, XML) com timestamps de processamento para análise forense.",
       "usage_steps": [
         "Acesse a interface web do Text Extractor e cole o conteúdo no campo de texto com suporte a arrastar e soltar (drag-and-drop).",
@@ -4025,7 +4019,7 @@
     "json-minifier": {
       "name": "Minificador de JSON",
       "description": "Minifique JSON removendo espaços em branco e formatação para reduzir o tamanho do arquivo.",
-      "seo_title": "JSON Minifier Online Grátis - Compacte JSON em 1 clique!",
+      "seo_title": "Minificador JSON online grátis - compacte JSON em 1 clique",
       "seo_description": "Com nossa ferramenta gratuita online, minimize JSON rapidamente removendo espaços em branco e formatando automaticamente. Reduza o tamanho do arquivo e melhore o desempenho do seu site. Tente agora!",
       "detailed_description": "O JSON Minifier é uma ferramenta especializada para otimização de dados estruturados no formato JSON, realizando a remoção de espaços em branco redundantes, quebras de linha e caracteres não essenciais sem comprometer a integridade sintática. Tecnicamente, o processo envolve a análise léxica (tokenização) do documento JSON, identificação de elementos descartáveis (como comentários e formatação estética) e reestruturação do Abstract Syntax Tree (AST) para gerar uma saída compactada. Essa redução de tamanho é crítica em aplicações web onde a latência de rede afeta performance, como APIs RESTful ou transmissão de payloads em SPAs (Single Page Applications). Além disso, desenvolvedores que trabalham com armazenamento limitado (ex.: localStorage) ou transmissão de dados em ambientes de baixa banda (IoT) se beneficiam da compressão eficiente. A ferramenta valida previamente a sintaxe JSON, assegurando que o resultado minificado mantenha a funcionalidade original, mesmo após a eliminação de 80-90% do volume inicial.",
       "usage_steps": [
@@ -4150,7 +4144,7 @@
       "name": "Codificador/Decodificador Base58",
       "description": "Codifique e decodifique strings Base58 usadas em Bitcoin e criptomoedas.",
       "seo_title": "Codificador e Decodificador Base58 Grátis Online",
-      "seo_description": "Encode and decode Base58 strings online for free. Usado em endereços Bitcoin, hashes IPFS e carteiras criptográficas. Ferramenta de codificação segura baseada em navegador.",
+      "seo_description": "Codifique e decodifique strings Base58 online. Útil para endereços Bitcoin, hashes IPFS e carteiras criptográficas.",
       "encodeBtn": "Codificar para Base58",
       "decodeBtn": "Decodificar de Base58",
       "placeholder": "Digite o texto para codificar ou Base58 para decodificar...",
@@ -4243,7 +4237,7 @@
       "name": "Previsualização Open Graph",
       "description": "Visualize como sua página será exibida quando compartilhada nas redes sociais.",
       "seo_title": "Previsualização Open Graph Grátis Online",
-      "seo_description": "Pré-visualize e teste cards de compartilhamento para Facebook, Twitter, LinkedIn e mais online gratuitamente antes de publicar.",
+      "seo_description": "Use esta previsualização Open Graph para revisar cards de compartilhamento de Facebook, Twitter e LinkedIn antes de publicar.",
       "detailed_description": "O Open Graph Preview é uma ferramenta indispensável para desenvolvedores e criadores de conteúdo que desejam validar a aparência de suas páginas quando compartilhadas em redes sociais. Esta ferramenta permite a visualização precisa do conteúdo de metadados Open Graph, que são utilizados pelas plataformas de mídia social para determinar como um link será exibido quando compartilhado. O Open Graph Preview analisa a URL fornecida, extrai os metadados relevantes, como título, descrição, imagem e tipo de conteúdo, e apresenta uma prévia exata de como esses elementos serão apresentados em plataformas como Facebook, Twitter e LinkedIn. Isso é crucial para garantir que as previews sejam atraentes e precisas, melhorando a taxa de cliques e a experiência do usuário. Ao utilizar esta ferramenta, os desenvolvedores podem testar e ajustar os metadados de suas páginas antes de publicá-las, evitando problemas de exibição e garantindo uma presença online consistente e profissional.",
       "usage_steps": [
         "Acesse a página do Open Graph Preview no site de ferramentas de desenvolvimento.",
@@ -4579,7 +4573,7 @@
       "output": "Saída Minificada",
       "minify": "Minificar",
       "copy": "Copiar",
-      "seo_title": "CSS Minifier Online Grátis - Comprimi e Minifica CSS Fácilmente",
+      "seo_title": "Minificador CSS online grátis - comprima e minifique CSS facilmente",
       "seo_description": "Use nossa ferramenta online para minificar e compressão CSS gratuitamente. Economize tempo e otimize seu código CSS facilmente. Comece agora!",
       "detailed_description": "O CSS Minifier é uma ferramenta essencial para desenvolvedores que buscam otimizar o desempenho de seus websites. Técnica e funcionalmente, ele compacta o código CSS, removendo espaços em branco, quebras de linha, comentários e caracteres não essenciais, resultando em um arquivo CSS muito mais leve. Isso não apenas reduz o tempo de carregamento das páginas, mas também melhora a eficiência da entrega de conteúdo, especialmente em ambientes de produção onde a performance é crítica.\n\nDesenvolvedores precisam desta ferramenta por várias razões. Primeiramente, em projetos de grande escala, onde o CSS pode se tornar extenso e complexo, a minificação ajuda a manter a manutenção do código mais organizada e eficiente. Além disso, em ambientes de desenvolvimento, onde o código CSS é frequentemente alterado, a minificação automática pode ser integrada aos pipelines de build, garantindo que a versão compactada esteja sempre atualizada.\n\nO CSS Minifier opera através de um algoritmo avançado de compressão que preserva a funcionalidade do CSS original. Ele analisa o código, identifica elementos redundantes e os remove, sem afetar a estilização da página. Além disando a compressão, a ferramenta também pode gerar mapas de origem (source maps) para facilitar a depuração do código minificado, permitindo que os desenvolvedores rastreiem erros de volta ao código original, sem perda de contexto.",
       "usage_steps": [
@@ -4856,7 +4850,7 @@
       "name": "Gerador de Expressões Regulares",
       "description": " gere e teste expressões regulares com padrões comuns.",
       "copy": "Copiar Padrão",
-      "seo_title": "Regex Generator Online - Ferramenta Grátis para Testar Expressões Regulares",
+      "seo_title": "Gerador de regex online grátis - teste expressões regulares",
       "seo_description": "Gerar e testar expressões regulares com padrões comuns online. Nossa ferramenta grátis facilita a validação JSON, Base64, SVG e mais. Tente agora!",
       "commonPatterns": "Padrões Comuns",
       "customPattern": "Padrão Personalizado",
@@ -5468,8 +5462,8 @@
     "whois-lookup": {
       "name": "Pesquisa WHOIS",
       "description": "Consulte informações de registro de domínio.",
-      "seo_title": "Grátis WHOIS Lookup Online – Ferramenta Potente",
-      "seo_description": "Descubra informações de registro de domínio com nossa ferramenta WHOIS Lookup gratuita e online. Explore detalhes JSON, Base64 e SVG rapidamente e facilmente. Tente agora!",
+      "seo_title": "Consulta WHOIS online grátis - ferramenta potente",
+      "seo_description": "Consulte informações de registro de domínio com nossa ferramenta WHOIS online grátis.",
       "loading": "Consultando...",
       "lookup": "Pesquisa WHOIS",
       "registrar": "Registrador",
@@ -6940,7 +6934,7 @@
       ]
     },
     "base-calculator": {
-      "name": "Calculadora Básica",
+      "name": "Calculadora de Bases",
       "description": "Realize cálculos em diferentes bases numéricas.",
       "seo_title": "Calculadora de Base Grátis Online",
       "seo_description": "Calcule em binário, octal, decimal e hexadecimal. Suporta operações aritméticas e bit a bit. Essencial para programadores.",
@@ -7116,7 +7110,9 @@
         "productB": "Produto B",
         "productC": "Produto C",
         "productD": "Produto D",
-        "productE": "Produto E"
+        "productE": "Produto E",
+        "sales": "Sales",
+        "profit": "Profit"
       },
       "importCsv": "Importar CSV",
       "csvFormat": "Formato CSV: categoria,valor (um por linha)",
@@ -7147,7 +7143,8 @@
         "Um pesquisador ajusta manualmente escalas logarítmicas no eixo Y para visualizar dados de crescimento bacteriano exponencial em publicação científica."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "addCategory": "Add Category"
     },
     "line-chart-generator": {
       "name": "Gerador de Gráficos de Linha",
@@ -7379,7 +7376,7 @@
     "scatter-chart-generator": {
       "name": "Gerador de Gráficos de Dispersão",
       "description": "Crie gráficos de dispersão online. Analise correlações e exporte como PNG/SVG.",
-      "seo_title": "Grátis Scatter Chart Generator Online - Analisar Correlações",
+      "seo_title": "Gerador de gráfico de dispersão online grátis - analise correlações",
       "seo_description": "Crie gráficos de dispersão online gratuitamente para analisar correlações e exportar em PNG/SVG. Use nossa ferramenta poderosa agora!",
       "chartTitle": "Título do Gráfico",
       "chartTitlePlaceholder": "Insira o título do gráfico",
@@ -7589,7 +7586,7 @@
     "gauge-chart-generator": {
       "name": "Gerador de Gráficos de Bússola",
       "description": "Crie gráficos de bússola online. Exiba progresso e métricas com exportação em PNG/SVG.",
-      "seo_title": "Gauge Chart Generator Online - Ferramenta Grátis para Visualização de Progresso",
+      "seo_title": "Gerador de gráfico gauge online grátis - visualize progresso",
       "seo_description": "Crie gráficos de indicador online facilmente. Visualize progresso e métricas com exportação PNG/SVG. Acesse nossa ferramenta gratuita agora!",
       "chartTitle": "Título do Gráfico",
       "chartTitlePlaceholder": "Insira o título do gráfico",
@@ -7766,7 +7763,8 @@
         "tip2": "Defina valores de nós",
         "tip3": "Ative navegação por trilha",
         "tip4": "Ajuste a profundidade das folhas",
-        "tip5": "Exporte como PNG ou SVG"
+        "tip5": "Exporte como PNG ou SVG",
+        "tip6": "All processing is local, ensuring complete privacy."
       },
       "detailed_description": "O Gerador de Gráficos de Treemap é uma ferramenta poderosa e versátil que permite a criação de gráficos de treemap de forma online. Este tipo de gráfico é ideal para visualizar dados hierárquicos de maneira eficaz, facilitando a compreensão de relações e proporções entre diferentes categorias. O gerador utiliza algoritmos de layout otimizados para garantir que os retângulos sejam dispostos de forma eficiente, maximizando o uso do espaço e mantendo a clareza visual. Com a possibilidade de exportar os gráficos em formatos PNG e SVG, os usuários podem integrar essas visualizações em relatórios, apresentações e sites sem perder a qualidade. O Gerador de Gráficos de Treemap é uma solução indispensável para analistas de dados, designers de UX e quaisquer profissionais que precisem apresentar dados complexos de forma simplificada e atraente.",
       "usage_steps": [
@@ -7784,7 +7782,9 @@
         "Um gestor de projetos utiliza o gerador para representar a alocação de recursos em um projeto complexo, exibindo a distribuição de tarefas entre as equipes e os prazos. Isso melhora a comunicação e a gestão do projeto."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "delete": "Delete",
+      "total": "Total"
     },
     "doughnut-chart-generator": {
       "name": "Gerador de Gráficos de Rosca",
@@ -7928,7 +7928,7 @@
     "sunburst-chart-generator": {
       "name": "Gerador de Gráficos de Radial",
       "description": "Crie gráficos de radial online. Visualize dados hierárquicos radialmente e exporte como PNG/SVG.",
-      "seo_title": "Sunburst Chart Generator Online Grátis - Visualize Data Radialmente",
+      "seo_title": "Gerador de gráfico sunburst online grátis - visualize dados radialmente",
       "seo_description": "Crie gráficos sunburst profissionais online. Visualize dados hierárquicos e exporte como PNG ou SVG.",
       "chartTitle": "Título do Gráfico",
       "chartTitlePlaceholder": "Insira o título do gráfico",
@@ -8524,7 +8524,7 @@
     },
     "tree-chart-generator": {
       "name": "Gerador de Gráficos de Árvore",
-      "seo_title": "Tree Chart Generator Online Grátis - Crie Diagramas Hierárquicos!",
+      "seo_title": "Gerador de gráfico em árvore online grátis - crie diagramas hierárquicos",
       "seo_description": "Crie gráficos de árvore profissionais online de graça. Visualize estruturas hierárquicas e exporte como PNG ou SVG.",
       "title": "Gerador de Gráficos de Árvore",
       "description": "Crie gráficos de árvore hierárquica com layouts ortogonais e radiais.",
@@ -8585,7 +8585,7 @@
     },
     "theme-river-generator": {
       "name": "Gerador de Rio Tema",
-      "seo_title": "Theme River Generator Online – Ferramenta Grátis para Visualizar Dados",
+      "seo_title": "Gerador de gráfico theme river online grátis - visualize dados",
       "seo_description": "Crie gráficos de rios de tema online e visualize a fluidez de dados ao longo do tempo. A ferramenta gráfica JSON facilita a análise de dados complexos. Tente agora!",
       "title": "Gerador de Rio Tema",
       "description": "Crie gráficos temáticos de rios mostrando o fluxo de dados ao longo do tempo.",
@@ -8719,7 +8719,41 @@
         "Exemplo 2: Um professor de matemática está preparando uma aula sobre conjuntos e subconjuntos. Com o Gerador de Diagramas de Venn, ele cria exemplos visuais para ilustrar conceitos como interseção e união, facilitando a compreensão dos alunos.",
         "Exemplo 3: Um cientista de dados está analisando os resultados de uma pesquisa sobre hábitos alimentares. Ele usa o Gerador de Diagramas de Venn para mostrar a interseção entre diferentes grupos de alimentos consumidos, ajudando na identificação de padrões e tendências.",
         "Exemplo 4: Uma equipe de marketing está planejando uma campanha que envolve diferentes canais de comunicação. Usando o Gerador de Diagramas de Venn, eles podem mapear a sobreposição de clientes que utilizam múltiplos canais, otimizando assim a estratégia de marketing."
-      ]
+      ],
+      "setCount": "Number of Sets",
+      "labels": "Label Settings",
+      "setA": "Set A",
+      "setB": "Set B",
+      "setC": "Set C",
+      "intersections": "Intersection Settings",
+      "intersectionAB": "A ∩ B",
+      "intersectionBC": "B ∩ C",
+      "intersectionAC": "A ∩ C",
+      "intersectionABC": "A ∩ B ∩ C",
+      "chartTitle": "Chart Title",
+      "colorTheme": "Color Theme",
+      "themeDefault": "Classic",
+      "themeVibrant": "Vibrant",
+      "themePastel": "Pastel",
+      "opacity": "Opacity",
+      "loadSample": "Load Sample Data",
+      "chartSettings": "Chart Settings",
+      "sampleTitle": "Sample Venn Diagram",
+      "sampleData": {
+        "math": "Math",
+        "science": "Science",
+        "art": "Art",
+        "both": "Intersection"
+      },
+      "tips": {
+        "title": "Venn Diagram Info",
+        "tip1": "Select the number of sets (2 or 3).",
+        "tip2": "Modify set labels to reflect your data content.",
+        "tip3": "Adjust opacity to see overlapping areas clearly.",
+        "tip4": "Real-time preview with consistent export results.",
+        "tip5": "Perfect for showing logical relationships and differences.",
+        "tip6": "Local browser processing, no data upload required."
+      }
     },
     "timeline-chart-generator": {
       "name": "Gerador de Linhas do Tempo",
@@ -9988,8 +10022,8 @@
     "regex-visualizer": {
       "name": "Visualizador Regex",
       "description": "Visualize expressões regulares como diagramas de via-férrea. Teste padrões com strings de exemplo.",
-      "seo_title": "Regex Visualizer Online - Ferramenta Grátis para Testar Expressões Regulares",
-      "seo_description": "Visualize e teste suas expressões regulares com nosso Regex Visualizer online. Ferramenta gratuita e fácil de usar. Experimente agora!",
+      "seo_title": "Visualizador de regex online grátis - teste expressões regulares",
+      "seo_description": "Visualize e teste suas expressões regulares com nosso visualizador de regex online.",
       "pattern": "Padrão Regex",
       "patternPlaceholder": "^\\w+@\\w+\\.\\w{2,}'$",
       "testString": "String de Teste",
@@ -11321,8 +11355,8 @@
     "stopwatch": {
       "name": "Cronômetro",
       "description": "Cronômetro preciso com marcação de voltas. Trace várias voltas com indicadores de melhor e pior tempo.",
-      "seo_title": "Grátis Online: Relógio de Tempo com Registro de Volta - Ferramenta Precisa",
-      "seo_description": "Faça marcas precisas com nossa ferramenta online de relógio de tempo multi-lap. Registre melhores e piores voltas. Tudo grátis!",
+      "seo_title": "Cronômetro online grátis com registro de voltas",
+      "seo_description": "Use este cronômetro online grátis para medir tempo, registrar voltas e acompanhar melhores marcas.",
       "detailed_description": "O Cronômetro Online é um ferramenta de medição de tempo preciso com precisão de centésimos de segundo (10 milissegundos). Suporta funções de início, parada, reinício e marcação de voltas. A função de volta grava múltiplos tempos de divisão e marca automaticamente as voltas mais rápidas e mais lentas. Exibe o tempo de cada volta e o tempo total acumulado. Interface limpa e intuitiva com exibição em grande fonte para fácil visualização. Adequado para treinamento esportivo, cronometragem de cozinha, cronometragem de estudos e vários outros cenários. Todas as medições são feitas localmente no seu navegador, sem conexão à internet necessária.",
       "usage_steps": [
         "Abra a página do ferramenta de Cronômetro",
@@ -11860,7 +11894,7 @@
       "name": "Calculadora Binária",
       "description": "Realizar operações binárias e de bits.",
       "seo_title": "Calculadora Binária Online Grátis - Faz Operações Bit-a-bit!",
-      "seo_description": "Converte, soma, subtrai e realiza operações bit-a-bit em binário. Nossa ferramenta gratuita facilita o trabalho com números binários. Tente agora!",
+      "seo_description": "Use esta calculadora binária para converter, somar, subtrair e executar operações bit a bit com números binários.",
       "operand1": "Primeiro Operando",
       "operand2": "Segundo Operando",
       "operation": "Operação",
@@ -12736,7 +12770,7 @@
     "name-generator": {
       "name": "Gerador de Nomes",
       "description": "Gere nomes aleatórios para personagens, bebês ou projetos.",
-      "seo_title": "Nome Generator Online Grátis - Crie Personagens em Minutos!",
+      "seo_title": "Gerador de nomes online grátis - crie personagens em minutos",
       "seo_description": "Gerador online gráfico de nomes aleatórios. Ótimo para nomes de bebês, personagens e projetos criativos.",
       "gender": "Gênero",
       "any": "Qualquer",
@@ -12780,7 +12814,7 @@
     "random-picker": {
       "name": "Sorteio Aleatório",
       "description": "Escolha itens aleatórios de uma lista com efeitos de animação.",
-      "seo_title": "Random Picker - Escolha Online Grátis com Efeitos Animados",
+      "seo_title": "Sorteador aleatório online grátis com efeitos animados",
       "seo_description": "Aproveite nossa ferramenta online gratuita para escolher itens aleatórios com efeitos animados. Experimente agora!",
       "enterItems": "Insira itens (um por linha)",
       "numberOfWinners": "Número de Vencedores",
@@ -12878,7 +12912,7 @@
     "team-generator": {
       "name": "Gerador de Equipes",
       "description": "Divida aleatoriamente pessoas em equipes equilibradas.",
-      "seo_title": "Grátis Online Team Generator - Divida Seus Grupos Fácilmente",
+      "seo_title": "Gerador de equipes online grátis - divida seus grupos facilmente",
       "seo_description": "Gerador de equipes online grátis que divide automaticamente pessoas em equipes equilibradas. Tente agora e organize suas sessões em minutos!",
       "enterNames": "Insira nomes (um por linha)",
       "numberOfTeams": "Número de Equipes",
@@ -13507,7 +13541,7 @@
       "name": "Verificador de Densidade de Palavras-chave",
       "description": "Analisa a frequência e densidade de palavras-chave no seu conteúdo.",
       "seo_title": "Grátis: Verifique a Densidade de Palavras-chave Online",
-      "seo_description": "Analyze o uso de palavras-chave em seu conteúdo com nossa ferramenta gratuita online. Aumente sua visibilidade SEO com a ajuda da Keyword Density Checker. Comece agora!",
+      "seo_description": "Analise o uso de palavras-chave no seu conteúdo com este verificador de densidade e ajuste seu texto para SEO.",
       "enterContent": "Digite Seu Conteúdo",
       "analyze": "Analisar",
       "totalWords": "Total de Palavras",
@@ -13581,7 +13615,7 @@
     "paraphrase-tool": {
       "name": "Ferramenta de Paráfrase",
       "description": "Reescreve texto em diferentes estilos mantendo o significado.",
-      "seo_title": "Paraphrase Tool Online Grátis - Redija Textos Diferentes!",
+      "seo_title": "Ferramenta de paráfrase online grátis - reescreva textos",
       "seo_description": "Redija textos de diferentes estilos mantendo o significado original. Use nossa ferramenta online gratuita para melhorar a visibilidade do seu conteúdo. Tente agora!",
       "enterText": "Digite Texto para Parafrasear",
       "paraphrase": "Parafrasear",
@@ -13619,8 +13653,8 @@
     "graphql-formatter": {
       "name": "Formatador GraphQL",
       "description": "Formata e embeleza consultas e esquemas GraphQL.",
-      "seo_title": "GraphQL Formatter – Online Grátis para Formatar Queries",
-      "seo_description": "Aproveite a ferramenta online gratuita GraphQL Formatter para formatar e melhorar suas queries e esquemas JSON. Tudo em um só lugar!",
+      "seo_title": "Formatador GraphQL online grátis para consultas",
+      "seo_description": "Use nosso formatador GraphQL online para organizar consultas e esquemas com mais legibilidade e compatibilidade com JSON.",
       "enterQuery": "Digite Consulta GraphQL",
       "validate": "Validar",
       "formatted": "Consulta Formatada",
@@ -15321,54 +15355,6 @@
       "headerNamePlaceholder": "Nome do cabeçalho",
       "headerValuePlaceholder": "Valor"
     },
-    "jwt-decoder": {
-      "name": "Depurador JWT",
-      "description": "Depure e verifique tokens JWT com validação de assinatura",
-      "seo_title": "Grátis: Debugger JWT Online",
-      "seo_description": "Use nossa ferramenta online para debugar e validar JWT com validação de assinatura. Teste JSON, Base64 e SVG gratuitamente hoje!",
-      "detailed_description": "O JWT Debugger é uma ferramenta técnica especializada para análise e validação de tokens JWT (JSON Web Token) sob o prisma de segurança e integridade. Internamente, o token JWT é dividido em três partes: header, payload e signature, codificadas em Base64Url. A ferramenta decodifica essas partes, exibindo seus conteúdos em formato JSON, e verifica a assinatura digital por meio de algoritmos HMAC, RSA ou ECDSA, comparando o hash gerado com o valor fornecido no token. Isso permite identificar manipulações ou incompatibilidades na assinatura. Além disso, valida automaticamente claims padrão como 'exp' (expiration time) e 'nbf' (not before), cruciais para tokens de autenticação. Desenvolvedores precisam deste recurso para diagnosticar tokens inválidos em sistemas de autenticação OAuth2/OpenID, auditar tokens recebidos de APIs terceiras ou testar a implementação de serviços que emitem JWTs. O diferencial do JWT Debugger está na exibição detalhada dos metadados criptográficos, como o algoritmo utilizado (ex.: HS256, RS256) e o cabeçalho 'kid' (Key ID), facilitando a depuração de falhas em fluxos de autenticação modernos.",
-      "usage_steps": [
-        "Acesse a interface do JWT Debugger e cole o token JWT no campo 'Token Input' com formato xxxx.xxxx.xxxx.",
-        "Clique em 'Decode Token' para separar as partes do token (header, payload, signature) e exibi-las em painéis individuais.",
-        "Analise o header para identificar o algoritmo (alg) e identificador de chave (kid) utilizados na assinatura.",
-        "Valide a assinatura clicando em 'Verify Signature', inserindo a chave secreta ou certificado público no campo dedicado.",
-        "Verifique o payload para inspecionar claims como 'exp', 'iat' e 'aud', com destaque para datas em formato Unix timestamp.",
-        "Use o modo 'Raw Output' para visualizar os bytes decodificados em hexadecimal ou o modo 'Structured JSON' para navegar nos campos aninhados."
-      ],
-      "usage_examples": [
-        "Um desenvolvedor testa um token JWT gerado por um serviço de autenticação e descobre que o horário de expiração ('exp') está definido 5 minutos no passado, causando falhas de login.",
-        "Durante a integração com uma API OAuth2, um engenheiro utiliza a ferramenta para confirmar que o token apresenta o 'aud' (audience) incorreto, bloqueando o acesso ao recurso esperado.",
-        "Em uma auditoria de segurança, um analista detecta que um token está assinado com HS256, mas o servidor espera RS256, expondo uma vulnerabilidade de configuração.",
-        "Um DevOps investiga por que tokens emitidos por um cluster Kubernetes são rejeitados, descobrindo que o certificado público usado para verificação não corresponde à chave privada do token."
-      ],
-      "token": "Token JWT",
-      "header": "Cabeçalho",
-      "payload": "Payload",
-      "signature": "Assinatura",
-      "secret": "Chave Secreta",
-      "verify": "Verificar Assinatura",
-      "valid": "Assinatura Válida",
-      "invalid": "Assinatura Inválida",
-      "expired": "Token Expirado",
-      "tokenPlaceholder": "Cole seu token JWT aqui...",
-      "notExpired": "Token Válido",
-      "expiresAt": "Expira em",
-      "errors": {
-        "invalidFormat": "Formato JWT inválido",
-        "decodeFailed": "Falha ao decodificar token"
-      },
-      "placeholder": "Cole o token JWT aqui...",
-      "loadExample": "Carregar exemplo",
-      "tokenInput": "Entrada de token",
-      "claim": "Reivindicação",
-      "claims": "Reivindicações",
-      "copied": "Copiado!",
-      "copy": "Copiar",
-      "secretPlaceholder": "Digite a chave secreta...",
-      "value": "Valor",
-      "verifyNote": "Nota: A verificação de assinatura é feita no lado do cliente",
-      "verifySignature": "Verificar assinatura"
-    },
     "csp-generator": {
       "name": "Gerador CSP",
       "description": "Gere cabeçalhos de Política de Segurança de Conteúdo",
@@ -15745,7 +15731,7 @@
     "rust-formatter": {
       "name": "Formatador de Rust",
       "description": "Formata o código Rust no estilo rustfmt",
-      "seo_title": "Formatter de Código Rust Grátis Online - Ferramenta Fácil!",
+      "seo_title": "Formatador de código Rust grátis online - ferramenta rustfmt",
       "seo_description": "Formatar seu código Rust em estilo rustfmt de forma rápida e gratuita online. Tente nossa ferramenta fácil de usar hoje!",
       "detailed_description": "Rust Formatter é uma ferramenta online que formata seu código Rust de acordo com as diretrizes de estilo do rustfmt. Ajuda a manter um estilo de código consistente em seus projetos Rust, lidando automaticamente com indentação, quebra de linha, espaçamento em torno de operadores e formatação de estruturas/enumerações. A ferramenta é perfeita para desenvolvedores que desejam código Rust limpo e legível sem a necessidade de instalar ferramentas adicionais. Seja você esteja escrevendo código de sistemas, serviços web ou aplicações CLI em Rust, este formatador garante que seu código siga os padrões da comunidade.",
       "usage_steps": [
@@ -15762,7 +15748,7 @@
     "yaml-formatter": {
       "name": "Formatador YAML",
       "description": "Formate e valide YAML com opções personalizáveis",
-      "seo_title": "Formatter e Validação de YAML Online Grátis",
+      "seo_title": "Formatador e validador de YAML online grátis",
       "seo_description": "Formatar e validar YAML com opções personalizáveis online. Ferramenta gratuita para melhorar sua eficiência. Tente agora!",
       "detailed_description": "O YAML Formatter é uma ferramenta online completa para formatar e validar arquivos YAML. Ele corrige automaticamente problemas de indentação, valida a sintaxe e formata seus arquivos de configuração YAML. A ferramenta suporta estruturas aninhadas complexas, arrays, strings multi-linha e arquivos YAML multi-documento. Perfeito para engenheiros DevOps que trabalham com manifestos do Kubernetes, pipelines CI/CD ou qualquer configuração baseada em YAML. Obtenha feedback instantâneo sobre erros de sintaxe e produza saída YAML limpa e corretamente indentada.",
       "usage_steps": [
@@ -17157,7 +17143,7 @@
       "name": "Decodificador de Carga JWT",
       "description": "Descodifique e insira cargas de tokens JWT sem verificação",
       "seo_title": "Decodificador JWT Grátis Online - Inspeção de Reivindicações",
-      "seo_description": "Decodifique tokens JWT online gratuitamente. Veja a cabecalho, payload e data de expiração. Ferramenta JSON.",
+      "seo_description": "Decodifique tokens JWT online grátis e veja o cabeçalho, a carga útil e a data de expiração.",
       "detailed_description": "O Decodificador de Carga JWT extrai e exibe o cabeçalho e a carga dos Tokens JSON Web sem a necessidade da chave secreta.",
       "usage_steps": [
         "Cole o token JWT",
@@ -17276,7 +17262,7 @@
     "request-header-builder": {
       "name": "Construtor de Cabeçalhos de Solicitações HTTP",
       "description": "Construa e formate cabeçalhos de solicitações HTTP para testes de API",
-      "seo_title": "HTTP Request Header Builder Online - Ferramenta Grátis para Testes API",
+      "seo_title": "Construtor de cabeçalhos HTTP online - ferramenta grátis para testes de API",
       "seo_description": "Construa e formate headers HTTP para testes de API de forma rápida e fácil online. Use nossa ferramenta gratuita agora!",
       "detailed_description": "O Construtor de Cabeçalhos de Solicitações HTTP ajuda a construir cabeçalhos HTTP bem formatados para solicitações de API, com opções de cabeçalhos comuns e exportação.",
       "usage_steps": [
@@ -17332,7 +17318,7 @@
     "webhook-tester": {
       "name": "Testador de Webhook",
       "description": "Teste e depura endpoints de webhook com payloads personalizados",
-      "seo_title": "Webhook Tester Grátis Online - Teste e Diagnostique Webhooks de Forma Fácil",
+      "seo_title": "Testador de webhook grátis online - teste e diagnostique webhooks",
       "seo_description": "Teste e depure webhook endpoints com payloads personalizados online. Nossa ferramenta gratuita facilita a validação e o desenvolvimento de webhooks. Comece agora!",
       "detailed_description": "O Testador de Webhook permite que você envie solicitações de teste para endpoints de webhook com payloads personalizados, cabeçalhos e métodos HTTP.",
       "usage_steps": [
@@ -17398,7 +17384,7 @@
     "api-response-formatter": {
       "name": "Formatador de Respostas da API",
       "description": "Formatar e melhorar visualmente respostas da API (JSON, XML) para leitura",
-      "seo_title": "Formatter de Resposta API Grátis Online - JSON/XML",
+      "seo_title": "Formatador de resposta de API grátis online - JSON/XML",
       "seo_description": "Formatar e melhorar respostas API online instantaneamente. Suporte a JSON e XML com destaque sintático.",
       "detailed_description": "O Formatador de Respostas da API melhora visualmente respostas brutas da API em formato JSON ou XML com destaque de sintaxe e visão em árvore expandível.",
       "usage_steps": [
@@ -18039,10 +18025,10 @@
       "foundVulnerabilities": "Vulnerabilidades Encontradas"
     },
     "performance-profiler": {
-      "name": "Code Performance Profiler",
+      "name": "Analisador de Desempenho de Código",
       "description": "Analise o desempenho do código e identifique gargalos",
-      "seo_title": "Profiler Online Grátis: Identifique Bottlenecks no Seu Código",
-      "seo_description": "Use nossa ferramenta online gratuita para profiler de desempenho de código e descubra os gargalos. Melhore a eficiência do seu código JSON e Base64. Comece agora!",
+      "seo_title": "Analisador de desempenho de código grátis online",
+      "seo_description": "Use nosso analisador de desempenho de código online para identificar gargalos e melhorar a velocidade de execução.",
       "detailed_description": "O Code Performance Profiler mede o tempo de execução e identifica gargalos de desempenho no seu código.",
       "usage_steps": [
         "Cole funções de código",
@@ -18146,10 +18132,10 @@
       "potentialMemoryLeaks": "Possíveis Vazamentos de Memória"
     },
     "code-duplication-finder": {
-      "name": "Code Duplication Finder",
+      "name": "Detector de Duplicação de Código",
       "description": "Encontre blocos de código duplicados e sugira refatoração",
-      "seo_title": "Grátis: Ferramenta Online de Detecção de Código Duplicado",
-      "seo_description": "Encontre blocos de código duplicados em seu código-fonte. Identifique código copiado e colado para refatoração.",
+      "seo_title": "Detector de duplicação de código online grátis",
+      "seo_description": "Encontre duplicação de código no código-fonte e identifique trechos copiados para refatoração.",
       "detailed_description": "O Code Duplication Finder identifica blocos de código duplicados ou semelhantes que violam o princípio DRY.",
       "usage_steps": [
         "Cole seu código",
@@ -18212,7 +18198,7 @@
     "unused-imports-finder": {
       "name": "Encontrador de Importações Não Utilizadas",
       "description": "Identifique importações e dependências não utilizadas no código",
-      "seo_title": "Free Online Ferramenta para Descobrir Imports Inúteis - Grátis!",
+      "seo_title": "Encontrador de imports não utilizados online grátis",
       "seo_description": "Encontre imports e dependências desnecessárias em seu código online. Use nossa ferramenta gratuita agora para otimizar seu código JSON, Base64 e SVG.",
       "detailed_description": "O Encontrador de Importações Não Utilizadas varre seu código para identificar importações que são declaradas mas nunca utilizadas.",
       "usage_steps": [
@@ -18581,11 +18567,11 @@
       "info": "Informação"
     },
     "database-backup-scheduler": {
-      "name": "Agendador de Backup de Banco de Dados",
-      "description": "Crie agendamentos e scripts de backup para bancos de dados",
-      "seo_title": "Grátis: Agenda de Backup Online para Banco de Dados",
-      "seo_description": "Gere agendas e scripts de backup JSON para bancos de dados online. Use nossa ferramenta gratuita para segurança total dos seus dados. Comece agora!",
-      "detailed_description": "O Agendador de Backup de Banco de Dados ajuda a criar agendamentos e gera scripts de backup para bancos de dados.",
+      "name": "Agendador de Cópias de Segurança de Banco de Dados",
+      "description": "Crie agendamentos e scripts de cópia de segurança para bancos de dados",
+      "seo_title": "Agendador de cópias de segurança de banco de dados online grátis",
+      "seo_description": "Crie agendas e scripts de cópia de segurança para bancos de dados com este agendador online grátis.",
+      "detailed_description": "O Agendador de Cópias de Segurança de Banco de Dados ajuda a criar agendamentos e gera scripts de cópia de segurança para bancos de dados.",
       "usage_steps": [
         "Selecione o tipo de banco de dados",
         "Configure a frequência",
@@ -18749,7 +18735,7 @@
       "name": "Resolver de Conflitos de Mesclagem",
       "description": "Ajudamos a resolver conflitos de mesclagem do Git com diferença visual",
       "seo_title": "Resolva conflitos Git online gratuitamente - U2Tool",
-      "seo_description": "Compare mudanças conflituosas visualmente online com a ferramenta U2Tool.",
+      "seo_description": "Use este resolvedor de conflitos de mesclagem para comparar mudanças conflitantes visualmente e preparar a resolução.",
       "detailed_description": "O Resolver de Conflitos de Mesclagem oferece uma interface visual para resolver conflitos de mesclagem do Git.",
       "usage_steps": [
         "Cole o conteúdo conflitante",
@@ -18799,7 +18785,7 @@
     "git-history-visualizer": {
       "name": "Visualizador de Histórico do Git",
       "description": "Visualize a história de commit do Git e a estrutura de ramificações",
-      "seo_title": "Git History Visualizer Online – Ferramenta Gratuita",
+      "seo_title": "Visualizador de histórico do Git online - ferramenta gratuita",
       "seo_description": "Visualize o histórico de commits do Git como um gráfico. Acompanhe a estrutura das branches e fusões.",
       "detailed_description": "O Visualizador de Histórico do Git cria representações visuais da história de commit do Git.",
       "usage_steps": [
@@ -18917,7 +18903,7 @@
     "git-tag-manager": {
       "name": "Gerenciador de Tags do Git",
       "description": "Gerencie e organize tags do Git para lançamentos",
-      "seo_title": "Git Tag Manager Online - Organize Tags Grátis",
+      "seo_title": "Gerenciador de tags do Git online - organize tags grátis",
       "seo_description": "Gerencie e organize suas tags Git para releases com nossa ferramenta online. Organize melhor, grave tempo e trabalhe grátis!",
       "detailed_description": "O Gerenciador de Tags do Git ajuda a organizar e criar tags do Git seguindo a versão semântica.",
       "usage_steps": [
@@ -19097,7 +19083,7 @@
     "table-of-contents-generator": {
       "name": "Gerador de Sumário",
       "description": "Crie um sumário a partir dos cabeçalhos do seu documento",
-      "seo_title": "Gere seu Índice Remissivo Online Grátis!",
+      "seo_title": "Gerador de sumário online grátis para Markdown",
       "seo_description": "Gere sumários a partir de cabeçalhos Markdown. Crie TOC com links de ancreza online usando a ferramenta U2Tool.",
       "detailed_description": "O Gerador de Sumário cria um sumário navegável a partir dos cabeçalhos do documento com links de âncora.",
       "usage_steps": [
@@ -19203,8 +19189,8 @@
     "document-formatter": {
       "name": "Formatador de Documentos",
       "description": "Formate e limpe o texto de documentos com várias opções",
-      "seo_title": "Formatter de Documentos Online Grátis - Limpe e Organize Textos",
-      "seo_description": "Use nossa ferramenta online gratuita para formatar e limpar textos de documentos com várias opções. Aperfeiçoe seu conteúdo JSON, Base64 e SVG facilmente. Tente agora!",
+      "seo_title": "Formatador de documentos online grátis - limpe e organize textos",
+      "seo_description": "Use este formatador de documentos online grátis para limpar, reorganizar e padronizar textos.",
       "detailed_description": "O Formatador de Documentos limpa e formata documentos de texto com remoção de espaços em branco e opções de formatação.",
       "usage_steps": [
         "Cole o texto do documento",
@@ -19267,7 +19253,7 @@
     "citation-formatter": {
       "name": "Formatador de Citações",
       "description": "Formate citações em APA, MLA, Chicago e outros estilos",
-      "seo_title": "Formatter de citações online grátis - Organize suas referências em APA, MLA e mais!",
+      "seo_title": "Formatador de citações online grátis - organize referências em APA, MLA e mais",
       "seo_description": "A ferramenta de formatação de citações em linha facilita a sua vida acadêmica. Organize citações em vários estilos, como APA, MLA e Chicago, sem esforço. Tudo online e grátis!",
       "detailed_description": "O Formatador de Citações gera citações e entradas de bibliografia corretamente formatadas em vários estilos.",
       "usage_steps": [
@@ -19431,8 +19417,8 @@
     "resource-allocation-planner": {
       "name": "Plano de Alocação de Recursos",
       "description": "Planeje e otimize a alocação de recursos entre projetos",
-      "seo_title": "Planner Grátis Online de Alocação de Recursos",
-      "seo_description": "Optimize a alocação de recursos nos seus projetos com nossa ferramenta online gratuita. Planeje melhor com JSON e Base64. Comece agora!",
+      "seo_title": "Planejador de alocação de recursos online grátis",
+      "seo_description": "Planeje a alocação de recursos dos seus projetos com este planejador online grátis.",
       "detailed_description": "O Plano de Alocação de Recursos ajuda a distribuir membros da equipe entre projetos e tarefas.",
       "usage_steps": [
         "Adicionar membros da equipe",
@@ -19615,7 +19601,7 @@
     "team-capacity-planner": {
       "name": "Planejador de Capacidade de Equipe",
       "description": "Planeje a capacidade da equipe e a distribuição de carga de trabalho",
-      "seo_title": "Team Capacity Planner Online Grátis - Distribua Trabalho Eficientemente",
+      "seo_title": "Planejador de capacidade da equipe online grátis",
       "seo_description": "Planeje a capacidade do seu time e distribua o trabalho com eficiência usando nossa ferramenta online gratuita. Comece agora!",
       "detailed_description": "O Planejador de Capacidade de Equipe calcula a capacidade disponível da equipe, levando em consideração feriados e reuniões.",
       "usage_steps": [
@@ -19664,8 +19650,8 @@
     "meeting-minutes-generator": {
       "name": "Gerador de Atas de Reuniões",
       "description": "Crie atas de reuniões estruturadas a partir de anotações",
-      "seo_title": "Gere Minutas de Reunião Online Grátis com Ferramenta",
-      "seo_description": "Crie minutas estruturadas de reunião facilmente online. Use nossa ferramenta gratuita para notas e minutas em JSON. Comece agora!",
+      "seo_title": "Gerador gratuito de atas de reunião online",
+      "seo_description": "Crie atas de reunião com pauta, participantes, decisões e itens de ação a partir das suas anotações.",
       "detailed_description": "O Gerador de Atas de Reuniões cria atas de reuniões profissionais e estruturadas a partir das suas anotações.",
       "usage_steps": [
         "Insira detalhes da reunião",
@@ -19844,8 +19830,8 @@
     "calendar-availability-finder": {
       "name": "Buscador de Disponibilidade de Calendário",
       "description": "Encontre horários disponíveis comuns em vários calendários",
-      "seo_title": "Calendário Availability Finder Online - Ferramenta Grátis",
-      "seo_description": "Encontre horários disponíveis comuns em calendários online. Nosso Availability Finder JSON é uma ferramenta gratuita e eficaz para gerenciar suas agendas. Tente agora!",
+      "seo_title": "Buscador de disponibilidade de calendário online grátis",
+      "seo_description": "Encontre horários em comum com este buscador de disponibilidade de calendário online grátis.",
       "detailed_description": "O Buscador de Disponibilidade de Calendário ajuda a encontrar horários livres comuns ao agendar com várias pessoas.",
       "usage_steps": [
         "Adicionar disponibilidade de participantes",
@@ -19950,10 +19936,10 @@
       "busy": "Ocupado"
     },
     "invoice-template-generator": {
-      "name": "Gerador de Modelos de Notas Fiscais",
-      "description": "Descrição",
-      "seo_title": "Gerador de Modelos de Faturas Grátis Online",
-      "seo_description": "Crie modelos de faturas personalizados rapidamente com nossa ferramenta JSON online. Baixe em formato Base64 ou SVG. Tudo grátis!",
+      "name": "Gerador de Modelos de Fatura",
+      "description": "Crie modelos de fatura profissionais e personalizáveis",
+      "seo_title": "Gerador de modelo de fatura grátis online",
+      "seo_description": "Monte um modelo de fatura com dados da empresa, cliente, itens, impostos, vencimento e total para download.",
       "detailed_description": "O Gerador de Modelos de Notas Fiscais cria notas fiscais profissionais com modelos personalizáveis.",
       "usage_steps": [
         "Insira informações da empresa",
@@ -20033,9 +20019,9 @@
     },
     "expense-report-generator": {
       "name": "Gerador de Relatórios de Despesas",
-      "description": "Descrição",
-      "seo_title": "Gerador Gratuito de Relatórios de Despesas Online",
-      "seo_description": "Crie relatórios de despesas JSON com segurança e facilidade. Nossa ferramenta online facilita a gestão financeira. Comece agora!",
+      "description": "Crie relatórios de despesas organizados para reembolso e controle financeiro",
+      "seo_title": "Gerador gratuito de relatório de despesas online",
+      "seo_description": "Crie relatórios de despesas com categorias, recibos, período e totais para acelerar aprovações e reembolsos.",
       "detailed_description": "O Gerador de Relatórios de Despesas cria relatórios de despesas organizados com categorização e totais automáticos.",
       "usage_steps": [
         "Adicione itens de despesa",
@@ -20122,8 +20108,8 @@
     "budget-variance-analyzer": {
       "name": "Analisador de Variações Orçamentárias",
       "description": "Analisar variações entre orçamento e gastos reais",
-      "seo_title": "Análise de Variações Orçamentárias Online Grátis - Ferramenta JSON",
-      "seo_description": "A nossa ferramenta JSON online analisa variações orçamentárias gratuitamente. Descubra desvios entre orçamento e gastos reais com facilidade. Comece agora!",
+      "seo_title": "Analisador de variações orçamentárias grátis online",
+      "seo_description": "Compare orçamento e gasto real, identifique desvios por categoria e acompanhe variações favoráveis e desfavoráveis.",
       "detailed_description": "O Analisador de Variações Orçamentárias compara o orçamento planejado com os gastos reais para identificar variações.",
       "usage_steps": [
         "Insira itens do orçamento",
@@ -20195,11 +20181,11 @@
       "exportReport": "Exportar relatório"
     },
     "cost-benefit-analyzer": {
-      "name": "Analizador de Custo-Benefício",
-      "description": "Descrição",
-      "seo_title": "Análise de Custo-Benefício Online Grátis - Ferramenta Potente",
-      "seo_description": "Calcule ROI e razões de custo-benefício. Analise decisões de investimento.",
-      "detailed_description": "O Analizador de Custo-Benefício ajuda a avaliar investimentos, calculando o ROI e o período de amortização.",
+      "name": "Analisador de Custo-Benefício",
+      "description": "Avalie custos, benefícios e ROI de investimentos e projetos",
+      "seo_title": "Analisador de custo-benefício grátis online",
+      "seo_description": "Compare custos, benefícios, ROI, VPL e payback para decidir entre investimentos, projetos e propostas.",
+      "detailed_description": "O Analisador de Custo-Benefício ajuda a avaliar investimentos, calculando o ROI e o período de retorno.",
       "usage_steps": [
         "Insira os custos de investimento",
         "Adicione benefícios esperados",
@@ -23228,5 +23214,10 @@
     "info": "Informação",
     "showLess": "Mostrar menos",
     "showMore": "Mostrar tudo"
+  },
+  "search": {
+    "placeholder": "Search tools...",
+    "noResults": "No tools found",
+    "categories": "Categories"
   }
 }

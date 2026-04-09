@@ -24,6 +24,7 @@
 
   // Imports
   import { Calculator, Activity, Scale, Ruler } from 'lucide-svelte';
+  import { ACTIVITY_MULTIPLIERS } from '@/lib/tool-stubs';
 
   // Types
   type Gender = 'male' | 'female';

@@ -52,11 +52,15 @@ const lightTheme: ChartThemeColors = {
  * Reads the .dark class from the document element.
  */
 export function getChartTheme(): ChartThemeColors {
+  return isDarkThemeActive() ? darkTheme : lightTheme;
+}
+
+export function isDarkThemeActive(): boolean {
   if (typeof document === 'undefined') {
-    return lightTheme;
+    return false;
   }
-  const isDark = document.documentElement.classList.contains('dark');
-  return isDark ? darkTheme : lightTheme;
+
+  return document.documentElement.classList.contains('dark');
 }
 
 export { darkTheme, lightTheme };

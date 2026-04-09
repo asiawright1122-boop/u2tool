@@ -111,22 +111,22 @@
                   </p>
                   <p class="text-xs text-gray-600 dark:text-gray-400">{error.message}</p>
                   {#if error.suggestions}
-error.suggestions.length > 0 && (
+{#if error.suggestions.length > 0}
                     <p class="text-xs text-green-600 dark:text-green-400">
                       {t('suggestion')}: {error.suggestions[0]}
                     </p>
-                  )
+                  {/if}
 {/if}
                 </div>
                 {#if error.suggestions}
-error.suggestions.length > 0 && (
+{#if error.suggestions.length > 0}
                   <button
                     onclick={() => applyFix(error)}
                     class="text-xs px-2 py-1 bg-blue-600 text-white rounded hover:bg-blue-700"
                   >
                     {t('fix')}
                   </button>
-                )
+                {/if}
 {/if}
               </div>
 {/each}

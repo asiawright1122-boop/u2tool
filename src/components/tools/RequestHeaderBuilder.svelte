@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { PRESETS } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -29,6 +31,18 @@
   value: string;
   enabled: boolean;
 }
+
+  const COMMON_HEADERS = [
+    { key: 'Content-Type', values: ['application/json', 'application/x-www-form-urlencoded', 'multipart/form-data'] },
+    { key: 'Accept', values: ['application/json', 'text/plain', '*/*'] },
+    { key: 'Authorization', values: ['Bearer <token>', 'Basic <base64-credentials>'] },
+    { key: 'User-Agent', values: ['Mozilla/5.0', 'PostmanRuntime/7.0.0'] },
+    { key: 'Cache-Control', values: ['no-cache', 'max-age=3600'] },
+    { key: 'X-Requested-With', values: ['XMLHttpRequest'] },
+    { key: 'Origin', values: ['https://example.com'] },
+    { key: 'Referer', values: ['https://example.com/page'] },
+    { key: 'Accept-Language', values: ['en-US,en;q=0.9', 'zh-CN,zh;q=0.9'] },
+  ] as const;
 
   let headers = $state([
     { id: '1', key: 'Content-Type', value: 'application/json', enabled: true },
@@ -181,7 +195,7 @@
                     class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm"
                   />
                   <datalist id={`values-${header.id}`}>
-                    {#each COMMON_HEADERS.find(h => h.key === header.key)?.values as v (v)}
+                    {#each (COMMON_HEADERS.find(h => h.key === header.key)?.values ?? []) as v (v)}
 <option  value={v}></option>
 {/each}
                   </datalist>

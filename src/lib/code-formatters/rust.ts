@@ -49,10 +49,6 @@ export function formatRust(code: string, options: Partial<RustFormatOptions> = {
     // Check if we need to increase indent
     const openBraces = (trimmedLine.match(/{/g) || []).length;
     const closeBraces = (trimmedLine.match(/}/g) || []).length;
-    const openBrackets = (trimmedLine.match(/\[/g) || []).length;
-    const closeBrackets = (trimmedLine.match(/\]/g) || []).length;
-    const openParens = (trimmedLine.match(/\(/g) || []).length;
-    const closeParens = (trimmedLine.match(/\)/g) || []).length;
     
     // Only count if line ends with opener
     if (trimmedLine.endsWith('{') || trimmedLine.endsWith('[') || trimmedLine.endsWith('(')) {
@@ -128,13 +124,10 @@ export function validateRust(code: string): { valid: boolean; errors: string[] }
   let inString = false;
   let inRawString = false;
   let inChar = false;
-  let inComment = false;
   let inBlockComment = false;
   
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    inComment = false;
-    
     for (let j = 0; j < line.length; j++) {
       const char = line[j];
       const nextChar = j < line.length - 1 ? line[j + 1] : '';

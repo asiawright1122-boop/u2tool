@@ -8,6 +8,8 @@
  * Requirements: 6.7
  */
 
+import { getPublicSiteUrl } from '@/lib/public-env';
+
 interface BreadcrumbItem {
   label: string;
   href: string;
@@ -20,7 +22,7 @@ interface Props {
 
 const { items } = Astro.props;
 
-const BASE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://www.u2tool.com';
+const BASE_URL = getPublicSiteUrl();
 
 // Generate JSON-LD BreadcrumbList structured data
 const breadcrumbJsonLd = {

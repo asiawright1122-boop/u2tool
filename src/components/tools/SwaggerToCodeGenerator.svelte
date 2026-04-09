@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { EXAMPLE_SPEC, generateGo, generatePython, generateTypeScript } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -148,11 +150,11 @@
 
       <!-- Error -->
       {#if input.trim()}
-!result && (
+{#if !result}
         <div class="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-600 dark:text-red-400">
           Invalid OpenAPI/Swagger spec. Please check the JSON format.
         </div>
-      )
+      {/if}
 {/if}
 
       <!-- Result -->

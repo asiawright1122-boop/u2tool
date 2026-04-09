@@ -4,7 +4,7 @@
     translations: Record<string, unknown>;
   }
 
-  let { locale, translations }: Props = $props();
+  let { locale: _locale, translations }: Props = $props();
 
   // Translation helpers
   function t(key: string): string {
@@ -15,45 +15,96 @@
     return typeof value === 'string' ? value : `MISSING: tools.${key}`;
   }
 
-  // Types
   interface Note {
-  id: string;
-  title: string;
-  content: string;
-  color: string;
-  createdAt: number;
-  updatedAt: number;
-}
+    id: string;
+    title: string;
+    content: string;
+    color: string;
+    createdAt: number;
+    updatedAt: number;
+  }
 
-  let notes = $state([]);
+  interface NoteColor {
+    id: string;
+    name: string;
+    swatchClass: string;
+    cardClass: string;
+  }
 
-  let editingNote = $state(null);
+  const COLOR_OPTIONS: NoteColor[] = [
+    { id: 'blue', name: 'Blue', swatchClass: 'bg-blue-500', cardClass: 'border-blue-300 bg-blue-50 dark:border-blue-800 dark:bg-blue-950/30' },
+    { id: 'green', name: 'Green', swatchClass: 'bg-green-500', cardClass: 'border-green-300 bg-green-50 dark:border-green-800 dark:bg-green-950/30' },
+    { id: 'amber', name: 'Amber', swatchClass: 'bg-amber-500', cardClass: 'border-amber-300 bg-amber-50 dark:border-amber-800 dark:bg-amber-950/30' },
+    { id: 'purple', name: 'Purple', swatchClass: 'bg-purple-500', cardClass: 'border-purple-300 bg-purple-50 dark:border-purple-800 dark:bg-purple-950/30' },
+    { id: 'rose', name: 'Rose', swatchClass: 'bg-rose-500', cardClass: 'border-rose-300 bg-rose-50 dark:border-rose-800 dark:bg-rose-950/30' },
+    { id: 'teal', name: 'Teal', swatchClass: 'bg-teal-500', cardClass: 'border-teal-300 bg-teal-50 dark:border-teal-800 dark:bg-teal-950/30' },
+  ];
 
+  const NOTE_STORAGE_KEY = 'notepad-notes';
+  const COLOR_CLASS_SET = new Set(COLOR_OPTIONS.map((color) => color.cardClass));
+
+  let notes = $state<Note[]>([]);
+  let editingNote = $state<Note | null>(null);
   let searchQuery = $state('');
+  let selectedColor = $state(COLOR_OPTIONS[0].cardClass);
+  let hasHydrated = $state(false);
 
-  let selectedColor = $state(COLORS[0].value);
+  function createId(): string {
+    if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
+      return crypto.randomUUID();
+    }
+    return `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+  }
+
+  function normalizeColorClass(value: string): string {
+    return COLOR_CLASS_SET.has(value) ? value : COLOR_OPTIONS[0].cardClass;
+  }
+
+  function normalizeNote(raw: Partial<Note>): Note {
+    const now = Date.now();
+    return {
+      id: raw.id || createId(),
+      title: raw.title || '',
+      content: raw.content || '',
+      color: normalizeColorClass(raw.color || selectedColor),
+      createdAt: typeof raw.createdAt === 'number' ? raw.createdAt : now,
+      updatedAt: typeof raw.updatedAt === 'number' ? raw.updatedAt : now,
+    };
+  }
 
   $effect(() => {
-    const saved = localStorage.getItem('notepad-notes');
-    if (saved) {
-      try {
-        notes = JSON.parse(saved);
-      } catch {
-        notes = [];
+    if (hasHydrated) return;
+    hasHydrated = true;
+
+    if (typeof window === 'undefined') return;
+
+    const saved = localStorage.getItem(NOTE_STORAGE_KEY);
+    if (!saved) return;
+
+    try {
+      const parsed = JSON.parse(saved);
+      if (Array.isArray(parsed)) {
+        notes = parsed.map((item) => normalizeNote(item));
       }
+    } catch {
+      notes = [];
     }
   });
 
   $effect(() => {
-    if (notes.length > 0) {
-      localStorage.setItem('notepad-notes', JSON.stringify(notes));
+    if (!hasHydrated || typeof window === 'undefined') return;
+
+    if (notes.length === 0) {
+      localStorage.removeItem(NOTE_STORAGE_KEY);
+      return;
     }
+
+    localStorage.setItem(NOTE_STORAGE_KEY, JSON.stringify(notes));
   });
 
-  // Functions
   function createNote() {
     const newNote: Note = {
-      id: Date.now().toString(),
+      id: createId(),
       title: '',
       content: '',
       color: selectedColor,
@@ -63,20 +114,30 @@
     notes = [newNote, ...notes];
     editingNote = newNote;
   }
+
   function updateNote(id: string, updates: Partial<Note>) {
-    notes = notes.map(note => 
-      note.id === id ? { ...note, ...updates, updatedAt: Date.now() } : note
+    notes = notes.map((note) =>
+      note.id === id
+        ? { ...note, ...updates, updatedAt: Date.now(), color: normalizeColorClass(updates.color || note.color) }
+        : note
     );
     if (editingNote?.id === id) {
-      editingNote = { ...editingNote, ...updates, updatedAt: Date.now() };
+      editingNote = {
+        ...editingNote,
+        ...updates,
+        updatedAt: Date.now(),
+        color: normalizeColorClass(updates.color || editingNote.color),
+      };
     }
   }
+
   function deleteNote(id: string) {
-    notes = notes.filter(note => note.id !== id);
+    notes = notes.filter((note) => note.id !== id);
     if (editingNote?.id === id) {
       editingNote = null;
     }
   }
+
   function exportNotes() {
     const data = JSON.stringify(notes, null, 2);
     const blob = new Blob([data], { type: 'application/json' });
@@ -87,7 +148,8 @@
     a.click();
     URL.revokeObjectURL(url);
   }
-  function formatDate(timestamp: number) {
+
+  function formatDate(timestamp: number): string {
     return new Date(timestamp).toLocaleDateString(undefined, {
       month: 'short',
       day: 'numeric',
@@ -95,11 +157,16 @@
       minute: '2-digit',
     });
   }
-  const filteredNotes = notes.filter(note =>
-    note.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    note.content.toLowerCase().includes(searchQuery.toLowerCase())
-  );
 
+  const filteredNotes = $derived.by(() => {
+    const query = searchQuery.trim().toLowerCase();
+    if (!query) return notes;
+
+    return notes.filter((note) =>
+      note.title.toLowerCase().includes(query) ||
+      note.content.toLowerCase().includes(query)
+    );
+  });
 </script>
 
 
@@ -130,12 +197,13 @@
 
       <div class="flex gap-2 items-center">
         <span class="text-sm text-gray-600 dark:text-gray-400">{t('notePad.color')}:</span>
-        {#each COLORS as color (color.name)}
-<button 
-            onclick={() => selectedColor = color.value}
-            class={`w-6 h-6 rounded-full border-2 ${color.value} ${selectedColor === color.value ? 'ring-2 ring-blue-500' : ''}`}
+        {#each COLOR_OPTIONS as color (color.id)}
+<button
+            onclick={() => selectedColor = color.cardClass}
+            class={`w-6 h-6 rounded-full border-2 ${color.swatchClass} ${selectedColor === color.cardClass ? 'ring-2 ring-blue-500' : ''}`}
             title={color.name}
-          />
+            aria-label={color.name}
+          ></button>
 {/each}
       </div>
 
@@ -161,15 +229,17 @@
             onchange={(e) => updateNote(editingNote.id, { content: e.target.value })}
             placeholder={t('notePad.contentPlaceholder')}
             class="w-full h-40 bg-transparent border-none outline-none resize-none"
-          />
+          ></textarea>
           <div class="flex justify-between items-center mt-2 text-xs text-gray-500">
             <span>{t('notePad.updated')}: {formatDate(editingNote.updatedAt)}</span>
             <div class="flex gap-2">
-              {#each COLORS as color (color.name)}
-<button 
-                  onclick={() => updateNote(editingNote.id, { color: color.value })}
-                  class={`w-4 h-4 rounded-full border ${color.value}`}
-                />
+              {#each COLOR_OPTIONS as color (color.id)}
+<button
+                  onclick={() => updateNote(editingNote.id, { color: color.cardClass })}
+                  class={`w-4 h-4 rounded-full border ${color.swatchClass}`}
+                  title={color.name}
+                  aria-label={color.name}
+                ></button>
 {/each}
             </div>
           </div>
@@ -189,6 +259,7 @@
               <button
                 onclick={(e) => { e.stopPropagation(); deleteNote(note.id); }}
                 class="text-gray-400 hover:text-red-500 ml-2"
+                aria-label="Delete note"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
               </button>

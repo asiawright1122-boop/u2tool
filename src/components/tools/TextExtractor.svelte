@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { extractPatterns } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -199,7 +200,7 @@
         {#if allResults}
 <div class="space-y-3">
             {#each (Object.entries(allResults) as [ExtractType, string[]][]) as [type, items] (type)}
-items.length > 0 && (
+{#if items.length > 0}
                 <div  class="p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
                   <div class="flex items-center justify-between mb-2">
                     <span class="text-sm font-medium text-blue-600 dark:text-blue-400">
@@ -222,18 +223,18 @@ items.length > 0 && (
 {/each}
                   </div>
                 </div>
-              )
+              {/if}
 {/each}
           </div>
 {/if}
 
         <!-- 无结果提示 -->
         {#if totalResults === 0}
-input && (
+{#if input}
           <div class="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-center text-gray-600 dark:text-gray-300">
             {t('extractor.noResults')}
           </div>
-        )
+        {/if}
 {/if}
       </div>
 

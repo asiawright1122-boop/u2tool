@@ -32,7 +32,88 @@
 
   let copied = $state(false);
 
-  let timerRef = $state(null);  onDestroy(() => {
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);
+
+  function prettyPrintGraphQL(source: string): string {
+    const input = source.replace(/\r\n/g, '\n').trim();
+    if (!input) return '';
+
+    let formatted = '';
+    let indent = 0;
+    let inString = false;
+    let quote = '';
+    let escaped = false;
+
+    const appendIndent = () => {
+      formatted += '  '.repeat(Math.max(0, indent));
+    };
+
+    for (const char of input) {
+      if (inString) {
+        formatted += char;
+        if (escaped) {
+          escaped = false;
+        } else if (char === '\\') {
+          escaped = true;
+        } else if (char === quote) {
+          inString = false;
+          quote = '';
+        }
+        continue;
+      }
+
+      if (char === '"' || char === "'") {
+        inString = true;
+        quote = char;
+        formatted += char;
+        continue;
+      }
+
+      if (char === '{' || char === '[') {
+        formatted = formatted.trimEnd();
+        if (formatted && !formatted.endsWith('\n') && !formatted.endsWith('(')) {
+          formatted += ' ';
+        }
+        formatted += `${char}\n`;
+        indent += 1;
+        appendIndent();
+        continue;
+      }
+
+      if (char === '}' || char === ']') {
+        formatted = formatted.trimEnd();
+        indent = Math.max(0, indent - 1);
+        formatted += `\n${'  '.repeat(indent)}${char}`;
+        continue;
+      }
+
+      if (char === ',') {
+        formatted += ',\n';
+        appendIndent();
+        continue;
+      }
+
+      if (char === '\n') {
+        formatted = formatted.trimEnd();
+        formatted += '\n';
+        appendIndent();
+        continue;
+      }
+
+      if (/\s/.test(char)) {
+        if (formatted && !/\s$/.test(formatted)) {
+          formatted += ' ';
+        }
+        continue;
+      }
+
+      formatted += char;
+    }
+
+    return formatted.trim();
+  }
+
+  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
 
@@ -54,7 +135,7 @@
 
     try {
       // Remove comments and extra whitespace
-      const minified = input
+        const minified = input
         .replace(/#[^\n]*/g, '') // Remove comments
         .replace(/\s+/g, ' ') // Collapse whitespace
         .replace(/\s*([{}():,])\s*/g, '$1') // Remove space around punctuation

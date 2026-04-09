@@ -153,7 +153,7 @@
 {/if}
 
       {#if result}
-!error && (
+{#if !error}
         <div class="space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <ResultCard
@@ -203,7 +203,7 @@
             </div>
           </div>
         </div>
-      )
+      {/if}
 {/if}
     </div>
   

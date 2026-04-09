@@ -136,18 +136,18 @@
 
       <!-- Animation Display -->
       {#if isAnimating}
-currentDisplay && (
+{#if currentDisplay}
         <div class="text-center py-8">
           <div class="text-4xl font-bold text-purple-600 dark:text-purple-400 animate-pulse">
             {currentDisplay}
           </div>
         </div>
-      )
+      {/if}
 {/if}
 
       <!-- Winners Display -->
       {#if winners.length > 0}
-!isAnimating && (
+{#if !isAnimating}
         <div class="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 rounded-xl p-6">
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg> {t('winners')}
@@ -167,7 +167,7 @@ currentDisplay && (
 {/each}
           </div>
         </div>
-      )
+      {/if}
 {/if}
     </div>
   

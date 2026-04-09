@@ -2,16 +2,27 @@
 import type { GetStaticPaths } from 'astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/layout/Header.svelte';
-import Sidebar from '@/components/layout/Sidebar.svelte';
+import StaticSidebar from '@/components/layout/StaticSidebar.astro';
 import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
 import Footer from '@/components/layout/Footer.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
+import StructuredData from '@/components/seo/StructuredData.astro';
 import DiscoverySearch from '@/components/ai/DiscoverySearch.svelte';
-import { categories } from '@/config/tools';
+import CategorySpotlightSection from '@/components/discovery/CategorySpotlightSection.astro';
+import ComparisonGuideSection from '@/components/discovery/ComparisonGuideSection.astro';
+import { tools, categories } from '@/config/tools';
 import { locales } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadBaseMessages } from '@/lib/translations';
 import { isAiDiscoveryEnabled } from '@/lib/ai-discovery/feature-flag';
+import { buildCategoryDiscoveryItemList, buildCategoryDiscoverySpotlights } from '@/lib/discovery-surface';
+import { buildComparisonGuides, getComparisonUiCopy } from '@/lib/comparison-surfaces';
+import {
+  buildDiscoveryTranslations,
+  buildHeaderTranslations,
+  buildMobileNavMessages,
+} from '@/lib/layout-translations';
+import { getPublicSiteUrl } from '@/lib/public-env';
 
 export const prerender = true;
 
@@ -25,51 +36,91 @@ export const getStaticPaths: GetStaticPaths = () => {
 const { locale } = Astro.props as { locale: Locale };
 
 if (!isAiDiscoveryEnabled()) {
-  return Astro.redirect(`/${locale}/tools/`);
+  return Astro.redirect(`/${locale}/tools`);
 }
 
 const baseMessages = await loadBaseMessages(locale);
+const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
 const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
+const homeMessages = (baseMessages.home as Record<string, unknown>) ?? {};
 const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
 const aiMessages = (baseMessages.aiDiscovery as Record<string, string>) ?? {};
-const BASE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://www.u2tool.com';
+const toolsMessages = (baseMessages.tools as Record<string, string>) ?? {};
+const headerTranslations = buildHeaderTranslations(baseMessages);
+const discoveryTranslations = buildDiscoveryTranslations(baseMessages);
+const mobileNavMessages = buildMobileNavMessages(navMessages);
+const BASE_URL = getPublicSiteUrl();
 const aiPageTitle = aiMessages.pageTitle || 'AI Tool Discovery';
 const aiPageDescription = aiMessages.pageDescription || 'Describe your intent and find the right existing tool quickly.';
+const toolNames = Object.fromEntries(
+  tools.map((tool) => {
+    const toolMessage = toolsObj[tool.slug] as Record<string, unknown> | undefined;
+    return [tool.slug, (toolMessage?.name as string) || tool.slug];
+  })
+);
+const toolDescriptions = Object.fromEntries(
+  tools.map((tool) => {
+    const toolMessage = toolsObj[tool.slug] as Record<string, unknown> | undefined;
+    return [tool.slug, (toolMessage?.seo_description as string) || (toolMessage?.description as string) || ''];
+  })
+);
+const discoverySpotlights = buildCategoryDiscoverySpotlights(locale, categoryMessages, toolNames, toolDescriptions);
+const discoveryItemListData = buildCategoryDiscoveryItemList(BASE_URL, discoverySpotlights);
+const comparisonUiCopy = getComparisonUiCopy(locale);
+const comparisonGuides = buildComparisonGuides(locale, categoryMessages, toolNames, toolDescriptions);
 ---
 
 <BaseLayout
   title={`${aiPageTitle} | U2Tool`}
   description={aiPageDescription}
   locale={locale}
-  canonicalPath="/ai/"
+  canonicalPath="/ai"
+  siteDescription={siteMessages.description}
 >
-  <HreflangTags path="/ai/" slot="head" />
+  <HreflangTags path="/ai" slot="head" />
+  <StructuredData type="ItemList" data={discoveryItemListData} slot="head" />
   <meta property="og:title" content={`${aiPageTitle} | U2Tool`} slot="head" />
   <meta property="og:description" content={aiPageDescription} slot="head" />
   <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
   <meta property="og:type" content="website" slot="head" />
-  <meta property="og:url" content={`${BASE_URL}/${locale}/ai/`} slot="head" />
+  <meta property="og:url" content={`${BASE_URL}/${locale}/ai`} slot="head" />
   <meta name="twitter:card" content="summary_large_image" slot="head" />
 
-  <aside class="hidden lg:block fixed left-0 top-0 bottom-0 z-40" style="width: 220px">
-    <Sidebar client:load locale={locale} categories={categories} categoryNames={categoryMessages} navMessages={navMessages} siteName={siteMessages.name || 'U2Tool'} />
-  </aside>
-  <aside class="hidden md:block lg:hidden fixed left-0 top-0 bottom-0 z-40" style="width: 64px">
-    <Sidebar client:load locale={locale} categories={categories} categoryNames={categoryMessages} navMessages={navMessages} siteName={siteMessages.name || 'U2Tool'} />
-  </aside>
+  <StaticSidebar
+    locale={locale}
+    categories={categories}
+    categoryNames={categoryMessages}
+    navMessages={navMessages}
+    siteName={siteMessages.name || 'U2Tool'}
+  />
 
   <div class="main-content-with-sidebar main-content-with-mobile-nav">
-    <Header client:load locale={locale} translations={baseMessages} />
+    <Header client:load locale={locale} translations={headerTranslations} />
 
     <main class="py-6 px-4">
       <div class="max-w-4xl mx-auto">
-        <DiscoverySearch client:load locale={locale} translations={baseMessages} />
+        <DiscoverySearch client:load locale={locale} translations={discoveryTranslations} />
+        <CategorySpotlightSection
+          eyebrow={aiPageTitle}
+          title={(homeMessages.categories as string) || 'Tool Categories'}
+          description={aiMessages.heroDescription || aiPageDescription}
+          popularLabel={(toolsMessages.popular || 'Popular').toUpperCase()}
+          toolsCountLabel={(homeMessages.toolsCount as string) || 'tools'}
+          spotlights={discoverySpotlights}
+        />
+        <ComparisonGuideSection
+          title={comparisonUiCopy.comparisonSectionTitle}
+          description={comparisonUiCopy.comparisonSectionDescription}
+          guides={comparisonGuides}
+          ctaLabel={comparisonUiCopy.guideCtaLabel}
+          includedToolsLabel={comparisonUiCopy.includedToolsLabel}
+        />
       </div>
     </main>
 
     <Footer locale={locale} />
   </div>
 
-  <MobileBottomNav client:load locale={locale} navMessages={navMessages} />
+  <MobileBottomNav client:load locale={locale} navMessages={mobileNavMessages} />
 </BaseLayout>

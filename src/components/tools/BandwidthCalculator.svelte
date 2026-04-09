@@ -32,6 +32,10 @@
 
   let copied = $state(false);
 
+  const FILE_SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB'] as const;
+  const TIME_UNITS = ['seconds', 'minutes', 'hours'] as const;
+  const BANDWIDTH_UNITS = ['bps', 'Kbps', 'Mbps', 'Gbps'] as const;
+
   let results = $derived.by(() => {
     const size = parseFloat(fileSize) || 0;
     const time = parseFloat(transferTime) || 0;

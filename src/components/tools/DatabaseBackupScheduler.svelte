@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { K, generateBackupScript, generateCrontab } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;

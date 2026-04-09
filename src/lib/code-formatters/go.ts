@@ -19,10 +19,6 @@ export function formatGo(code: string, options: Partial<GoFormatOptions> = {}): 
   let indentLevel = 0;
   const formattedLines: string[] = [];
   
-  // Keywords that increase indentation
-  const blockOpeners = ['{'];
-  const blockClosers = ['}'];
-  
   for (let i = 0; i < lines.length; i++) {
     let line = lines[i];
     const trimmedLine = line.trim();
@@ -112,14 +108,10 @@ export function validateGo(code: string): { valid: boolean; errors: string[] } {
   let openBrackets = 0;
   let inString = false;
   let inRawString = false;
-  let inComment = false;
   let inBlockComment = false;
   
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    
-    // Reset single-line comment flag
-    inComment = false;
     
     for (let j = 0; j < line.length; j++) {
       const char = line[j];

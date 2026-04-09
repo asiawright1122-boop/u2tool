@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { HTTP_STATUS_CODES } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -143,7 +145,7 @@
             </p>
 
             {#if selectedCode.solutions}
-selectedCode.solutions.length > 0 && (
+{#if selectedCode.solutions.length > 0}
               <div class="mt-4">
                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">
                   Solutions:
@@ -154,7 +156,7 @@ selectedCode.solutions.length > 0 && (
 {/each}
                 </ul>
               </div>
-            )
+            {/if}
 {/if}
 
             <button

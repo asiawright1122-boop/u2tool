@@ -22,6 +22,8 @@ describe('buildDiscoveryIndex', () => {
       'json-to-csv': {
         name: 'JSON to CSV',
         description: 'Convert json quickly',
+        seo_title: 'JSON to CSV Converter',
+        seo_description: 'Convert JSON data to CSV format online',
       },
       'cron-generator': {
         name: 'Cron Generator',
@@ -39,6 +41,8 @@ describe('buildDiscoveryIndex', () => {
       slug: 'json-to-csv',
       name: 'JSON to CSV',
       description: 'Convert json quickly',
+      seoTitle: 'JSON to CSV Converter',
+      seoDescription: 'Convert JSON data to CSV format online',
       categoryName: 'Converters',
     });
   });

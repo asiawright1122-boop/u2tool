@@ -24,6 +24,7 @@
 
   // Imports
   import { Droplets, Activity, Sun, Thermometer } from 'lucide-svelte';
+  import { ACTIVITY_FACTORS, CLIMATE_FACTORS } from '@/lib/tool-stubs';
 
   // Types
   type Unit = 'metric' | 'imperial';

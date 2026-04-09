@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { detectFormat, formatDate, parseTimestamp } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;

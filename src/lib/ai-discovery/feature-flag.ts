@@ -1,3 +1,5 @@
+import { isPublicAiDiscoveryEnabled } from '@/lib/public-env';
+
 export function isAiDiscoveryEnabled(): boolean {
-  return import.meta.env.PUBLIC_AI_DISCOVERY_ENABLED === 'true';
+  return isPublicAiDiscoveryEnabled();
 }

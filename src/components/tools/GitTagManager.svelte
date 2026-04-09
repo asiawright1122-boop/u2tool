@@ -4,76 +4,109 @@
     translations: Record<string, unknown>;
   }
 
+  interface Tag {
+    name: string;
+    type: 'lightweight' | 'annotated';
+    message?: string;
+    commit?: string;
+  }
+
+  interface SemverParts {
+    major: number;
+    minor: number;
+    patch: number;
+    prerelease?: string;
+  }
+
   let { locale, translations }: Props = $props();
 
-  // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['git-tag-manager'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['git-tag-manager'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
-    for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
+    for (const k of keys) value = (value as Record<string, unknown>)?.[k];
     return typeof value === 'string' ? value : `MISSING: tools.git-tag-manager.${key}`;
   }
+
   function tCommon(key: string): string {
-    const scope = translations['tools'] as Record<string, unknown> || {};
+    const scope = (translations['tools'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
-    for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
+    for (const k of keys) value = (value as Record<string, unknown>)?.[k];
     return typeof value === 'string' ? value : `MISSING: tools.${key}`;
   }
 
-  // Types
-  interface Tag {
-  name: string;
-  type: 'lightweight' | 'annotated';
-  message?: string;
-  commit?: string;
-}
-  interface SemverParts {
-  major: number;
-  minor: number;
-  patch: number;
-  prerelease?: string;
-}
+  function parseSemver(version = ''): SemverParts | null {
+    const match = /^v?(\d+)\.(\d+)\.(\d+)(?:-([0-9A-Za-z.-]+))?$/.exec(version.trim());
+    if (!match) return null;
+    return {
+      major: Number(match[1]),
+      minor: Number(match[2]),
+      patch: Number(match[3]),
+      prerelease: match[4],
+    };
+  }
+
+  function bumpVersion(version: string, type: 'major' | 'minor' | 'patch' | 'prerelease'): string {
+    const parsed = parseSemver(version) ?? { major: 1, minor: 0, patch: 0 };
+    if (type === 'major') return `v${parsed.major + 1}.0.0`;
+    if (type === 'minor') return `v${parsed.major}.${parsed.minor + 1}.0`;
+    if (type === 'patch') return `v${parsed.major}.${parsed.minor}.${parsed.patch + 1}`;
+    const base = `v${parsed.major}.${parsed.minor}.${parsed.patch + 1}`;
+    return `${base}-rc.1`;
+  }
+
+  function generateCommands(tagData: Tag): string[] {
+    const target = tagData.commit?.trim() ? ` ${tagData.commit.trim()}` : '';
+    if (tagData.type === 'annotated') {
+      const message = (tagData.message?.trim() || `Release ${tagData.name}`).replace(/"/g, '\\"');
+      return [
+        `git tag -a ${tagData.name}${target} -m "${message}"`,
+        `git push origin ${tagData.name}`,
+      ];
+    }
+
+    return [
+      `git tag ${tagData.name}${target}`,
+      `git push origin ${tagData.name}`,
+    ];
+  }
 
   let currentVersion = $state('v1.0.0');
-
-  let tag = $state({
+  let tag = $state<Tag>({
     name: 'v1.0.1',
     type: 'annotated',
     message: 'Release v1.0.1',
     commit: '',
   });
+  let copied = $state<string | null>(null);
 
-  let copied = $state(null);
-
-  function updateTag(key: K, value: Tag[K]) {
-    tag = ({ ...tag, [key]: value });
+  function updateTag<K extends keyof Tag>(key: K, value: Tag[K]) {
+    tag = { ...tag, [key]: value };
   }
 
   function handleBump(type: 'major' | 'minor' | 'patch' | 'prerelease') {
-    const newVersion = bumpVersion(currentVersion, type);
-    currentVersion = newVersion;
-    tag = ({
+    const nextVersion = bumpVersion(currentVersion, type);
+    currentVersion = nextVersion;
+    tag = {
       ...tag,
-      name: newVersion,
-      message: `Release ${newVersion}`,
-    });
+      name: nextVersion,
+      message: `Release ${nextVersion}`,
+    };
   }
 
-  let commands = $derived(generateCommands(tag));
+  let commands = $derived.by(() => generateCommands(tag));
+  let allCommands = $derived.by(() => commands.join('\n'));
+  let semverParts = $derived.by(() => parseSemver(tag.name));
+  let isValidSemver = $derived.by(() => semverParts !== null);
 
   function handleCopy(text: string, key: string) {
     navigator.clipboard.writeText(text);
     copied = key;
-    setTimeout(() => copied = null, 2000);
+    setTimeout(() => {
+      copied = null;
+    }, 2000);
   }
-
-  // Functions
-  const allCommands = commands.join('\n');
-  const semverParts = parseSemver(tag.name);
-  const isValidSemver = semverParts !== null;
-
 </script>
 
 
@@ -121,13 +154,13 @@
             }`}
           />
           {#if isValidSemver}
-<p class="text-xs text-green-600 mt-1">
-              ✓ Valid semver: {semverParts.major}.{semverParts.minor}.{semverParts.patch}
+            <p class="text-xs text-green-600 mt-1">
+              Valid semver: {semverParts.major}.{semverParts.minor}.{semverParts.patch}
               {#if semverParts.prerelease}
-`-${semverParts.prerelease}`
-{/if}
+                -{semverParts.prerelease}
+              {/if}
             </p>
-{/if}
+          {/if}
         </div>
 
         <div>

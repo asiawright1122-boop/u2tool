@@ -256,7 +256,7 @@
 {/if}
 
           {#if activeTab === 'response'}
-response && (
+{#if response}
             <div class="space-y-4">
               <div class="flex items-center gap-4 text-sm">
                 <span class={`font-bold ${getStatusColor(response.status)}`}>
@@ -287,7 +287,7 @@ response && (
                 </pre>
               </div>
             </div>
-          )
+          {/if}
 {/if}
         </div>
       </div>

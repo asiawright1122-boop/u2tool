@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { DEFAULT_PORTS, K, generateCodeSnippet, generateConnectionString } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;

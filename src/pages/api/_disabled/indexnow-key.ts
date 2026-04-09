@@ -25,7 +25,7 @@ function isValidIndexNowKey(key: string): boolean {
   return /^[a-f0-9]{8,128}$/i.test(key);
 }
 
-export const GET: APIRoute = async ({ request }) => {
+export const GET: APIRoute = async () => {
   try {
     // Get the IndexNow key from environment variable
     const indexNowKey = import.meta.env.INDEXNOW_KEY || process.env.INDEXNOW_KEY;

@@ -10,6 +10,8 @@
  */
 
 import { locales } from '@/lib/i18n';
+import { getPublicSiteUrl } from '@/lib/public-env';
+import { getHreflang } from '@/lib/seo';
 
 interface Props {
   /** Path without locale prefix, e.g. `/tools/json-formatter` */
@@ -18,36 +20,23 @@ interface Props {
 
 const { path } = Astro.props;
 
-const BASE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://www.u2tool.com';
+const BASE_URL = getPublicSiteUrl();
 
 // Ensure path starts with /
 const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+const pathSuffix = normalizedPath === '/' ? '' : normalizedPath;
 
-// Map locale codes to hreflang values
-// Most are the same, but some need region qualifiers for proper hreflang
-const hreflangMap: Record<string, string> = {
-  en: 'en',
-  zh: 'zh',
-  ja: 'ja',
-  ko: 'ko',
-  es: 'es',
-  pt: 'pt',
-  fr: 'fr',
-  de: 'de',
-  ru: 'ru',
-  ar: 'ar',
-};
 ---
 
 {locales.map((locale) => (
   <link
     rel="alternate"
-    hreflang={hreflangMap[locale] || locale}
-    href={`${BASE_URL}/${locale}${normalizedPath}`}
+    hreflang={getHreflang(locale)}
+    href={`${BASE_URL}/${locale}${pathSuffix}`}
   />
 ))}
 <link
   rel="alternate"
   hreflang="x-default"
-  href={`${BASE_URL}/en${normalizedPath}`}
+  href={`${BASE_URL}/en${pathSuffix}`}
 />

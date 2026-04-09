@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { parseUrl } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -87,11 +89,11 @@
 
       <!-- Error -->
       {#if url.trim()}
-!parsed && (
+{#if !parsed}
         <div class="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-600 dark:text-red-400">
           {t('urlParser.invalid')}
         </div>
-      )
+      {/if}
 {/if}
 
       <!-- Parsed Result -->
@@ -123,12 +125,12 @@
                   </div>
 {/if}
                 {#if parsed.pathname}
-parsed.pathname !== '/' && (
+{#if parsed.pathname !== '/'}
                   <div class="p-3 bg-gray-50 dark:bg-gray-900 rounded-lg">
                     <span class="text-sm text-gray-500 dark:text-gray-400">{t('urlParser.pathname')}</span>
                     <p class="font-mono text-gray-900 dark:text-white">{parsed.pathname}</p>
                   </div>
-                )
+                {/if}
 {/if}
                 {#if parsed.hash}
 <div class="p-3 bg-gray-50 dark:bg-gray-900 rounded-lg">

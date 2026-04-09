@@ -82,33 +82,15 @@ function unescapeText(text: string): string {
 }
 
 // Parse a single property line
-function parseProperty(line: string): { name: string; params: Record<string, string>; value: string } | null {
+function parseProperty(line: string): { name: string; value: string } | null {
   const colonIndex = line.indexOf(':');
   if (colonIndex === -1) return null;
   
   const beforeColon = line.substring(0, colonIndex);
   const value = line.substring(colonIndex + 1);
-  
-  // Parse property name and parameters
-  const semicolonIndex = beforeColon.indexOf(';');
-  let name: string;
-  const params: Record<string, string> = {};
-  
-  if (semicolonIndex === -1) {
-    name = beforeColon;
-  } else {
-    name = beforeColon.substring(0, semicolonIndex);
-    const paramStr = beforeColon.substring(semicolonIndex + 1);
-    const paramParts = paramStr.split(';');
-    for (const part of paramParts) {
-      const eqIndex = part.indexOf('=');
-      if (eqIndex !== -1) {
-        params[part.substring(0, eqIndex)] = part.substring(eqIndex + 1);
-      }
-    }
-  }
-  
-  return { name: name.toUpperCase(), params, value };
+
+  const name = beforeColon.split(';', 1)[0];
+  return { name: name.toUpperCase(), value };
 }
 
 // Parse iCal content
@@ -133,7 +115,7 @@ export function parseICal(content: string): ICalParseResult {
       const prop = parseProperty(line);
       if (!prop) continue;
       
-      const { name, params, value } = prop;
+      const { name, value } = prop;
       
       // Calendar-level properties
       if (!inEvent) {

@@ -137,7 +137,7 @@
       </button>
 
       {#if isStarted}
-!isFinished && (
+{#if !isFinished}
         <div class="p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg text-center">
           <div class="text-2xl font-bold text-yellow-600 dark:text-yellow-400">
             {t('typing')}...
@@ -146,7 +146,7 @@
             {typedText.length} / {targetText.length} {t('characters')}
           </div>
         </div>
-      )
+      {/if}
 {/if}
 
       {#if result}
@@ -187,7 +187,7 @@
             <div class="text-sm text-gray-600 dark:text-gray-400 mb-2">{t('rating')}</div>
             <div class="text-lg font-semibold">
               {#if result.wpm < 20}
-t('beginner')
+{t('beginner')}
 {/if}
               {#if result.wpm >= 20}
 {result.wpm < 40 ? t('average') : ''}
@@ -199,7 +199,7 @@ t('beginner')
 {result.wpm < 80 ? t('fast') : ''}
 {/if}
               {#if result.wpm >= 80}
-t('professional')
+{t('professional')}
 {/if}
             </div>
           </div>

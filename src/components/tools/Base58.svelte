@@ -6,6 +6,89 @@
     translations: Record<string, unknown>;
   }
 
+  const BASE58_ALPHABET = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
+  const BASE58_BASE = 58n;
+  const BASE58_LOOKUP = new Map(
+    Array.from(BASE58_ALPHABET).map((char, index) => [char, BigInt(index)])
+  );
+
+  function bytesToBigInt(bytes: Uint8Array): bigint {
+    let value = 0n;
+    for (const byte of bytes) {
+      value = (value << 8n) + BigInt(byte);
+    }
+    return value;
+  }
+
+  function bigIntToBytes(value: bigint): Uint8Array {
+    if (value === 0n) {
+      return new Uint8Array();
+    }
+
+    const bytes: number[] = [];
+    let remaining = value;
+
+    while (remaining > 0n) {
+      bytes.unshift(Number(remaining & 0xffn));
+      remaining >>= 8n;
+    }
+
+    return Uint8Array.from(bytes);
+  }
+
+  function encodeBase58Value(input: string): string {
+    const bytes = new TextEncoder().encode(input);
+    if (bytes.length === 0) {
+      return '';
+    }
+
+    let leadingZeroBytes = 0;
+    while (leadingZeroBytes < bytes.length && bytes[leadingZeroBytes] === 0) {
+      leadingZeroBytes += 1;
+    }
+
+    let value = bytesToBigInt(bytes);
+    let encoded = '';
+
+    while (value > 0n) {
+      const remainder = Number(value % BASE58_BASE);
+      encoded = `${BASE58_ALPHABET[remainder]}${encoded}`;
+      value /= BASE58_BASE;
+    }
+
+    return `${'1'.repeat(leadingZeroBytes)}${encoded}`;
+  }
+
+  function decodeBase58Value(input: string): string {
+    const trimmed = input.trim();
+    if (!trimmed) {
+      return '';
+    }
+
+    let leadingOnes = 0;
+    while (leadingOnes < trimmed.length && trimmed[leadingOnes] === '1') {
+      leadingOnes += 1;
+    }
+
+    let value = 0n;
+    for (const char of trimmed) {
+      const digit = BASE58_LOOKUP.get(char);
+      if (digit === undefined) {
+        throw new Error(`Invalid Base58 character: ${char}`);
+      }
+
+      value = value * BASE58_BASE + digit;
+    }
+
+    const decoded = bigIntToBytes(value);
+    const prefix = new Uint8Array(leadingOnes);
+    const merged = new Uint8Array(prefix.length + decoded.length);
+    merged.set(prefix);
+    merged.set(decoded, prefix.length);
+
+    return new TextDecoder().decode(merged);
+  }
+
   let { locale, translations }: Props = $props();
 
   // Translation helpers
@@ -32,7 +115,9 @@
 
   let copied = $state(false);
 
-  let timerRef = $state(null);  onDestroy(() => {
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);
+
+  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
 
@@ -44,7 +129,7 @@
       return;
     }
     try {
-      output = encodeBase58(input);
+      output = encodeBase58Value(input);
       error = '';
     } catch (_e) {
       error = t('errorEncoding');
@@ -58,7 +143,7 @@
       return;
     }
     try {
-      output = decodeBase58(input);
+      output = decodeBase58Value(input);
       error = '';
     } catch (e: unknown) {
       error = e instanceof Error ? e.message : t('errorInvalidInput');

@@ -9,27 +9,43 @@
    * Requirements: 6.1, 6.2, 6.3
    */
   import { onMount } from 'svelte';
-  import { theme } from '@/lib/theme';
+  import { theme, THEME_CHANGE_EVENT } from '@/lib/theme';
 
   let currentTheme = $state('system');
+  let isDark = $state(false);
+
+  function syncResolvedTheme() {
+    if (typeof document === 'undefined') {
+      isDark = false;
+      return;
+    }
+
+    isDark = document.documentElement.classList.contains('dark');
+  }
 
   onMount(() => {
     theme.init();
     const unsubscribe = theme.subscribe((value) => {
       currentTheme = value;
+      syncResolvedTheme();
     });
-    return unsubscribe;
+    syncResolvedTheme();
+
+    const handleThemeChange = () => {
+      syncResolvedTheme();
+    };
+
+    window.addEventListener(THEME_CHANGE_EVENT, handleThemeChange);
+
+    return () => {
+      unsubscribe();
+      window.removeEventListener(THEME_CHANGE_EVENT, handleThemeChange);
+    };
   });
 
   function handleToggle() {
     theme.toggle();
   }
-
-  // Determine if we should show the moon (currently light) or sun (currently dark)
-  let isDark = $derived(
-    currentTheme === 'dark' ||
-    (currentTheme === 'system' && typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches)
-  );
 </script>
 
 <button

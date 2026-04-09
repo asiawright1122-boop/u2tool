@@ -16,7 +16,7 @@ export const DISCOVERY_ALIASES: Record<string, string[]> = {
 function readToolString(
   toolsObj: Record<string, unknown>,
   slug: string,
-  field: 'name' | 'description'
+  field: 'name' | 'description' | 'seo_title' | 'seo_description'
 ): string | null {
   const toolData = toolsObj[slug];
   if (!toolData || typeof toolData !== 'object') {
@@ -35,12 +35,16 @@ export function buildDiscoveryIndex(
   return tools.map((tool) => {
     const name = readToolString(toolsObj, tool.slug, 'name') ?? tool.slug;
     const description = readToolString(toolsObj, tool.slug, 'description') ?? '';
+    const seoTitle = readToolString(toolsObj, tool.slug, 'seo_title') ?? undefined;
+    const seoDescription = readToolString(toolsObj, tool.slug, 'seo_description') ?? undefined;
     const categoryName = categoryMessages[tool.category] ?? tool.category;
 
     return {
       slug: tool.slug,
       name,
       description,
+      seoTitle,
+      seoDescription,
       category: tool.category,
       categoryName,
       aliases: DISCOVERY_ALIASES[tool.slug],

@@ -8,6 +8,9 @@
 import type { APIRoute } from 'astro';
 import { locales } from '@/lib/i18n';
 import { categories } from '@/config/tools';
+import { comparisonSurfaceSlugs } from '@/lib/comparison-surfaces';
+import { sitemapLastmodManifest } from '@/generated/sitemap-lastmod';
+import { isAiDiscoveryEnabled } from '@/lib/ai-discovery/feature-flag';
 import { buildUrl, generateSitemapResponse } from '@/lib/sitemap-utils';
 
 export const GET: APIRoute = () => {
@@ -15,14 +18,25 @@ export const GET: APIRoute = () => {
 
   for (const locale of locales) {
     // 首页 - 最高优先级
-    urls.push(buildUrl(`/${locale}/`, '1.0', 'daily'));
+    urls.push(buildUrl(`/${locale}`, '1.0', 'daily', sitemapLastmodManifest.pages));
+
+    // AI 发现页
+    if (isAiDiscoveryEnabled()) {
+      urls.push(buildUrl(`/${locale}/ai`, '0.6', 'weekly', sitemapLastmodManifest.ai));
+    }
     
     // 工具列表页 - 高优先级
-    urls.push(buildUrl(`/${locale}/tools/`, '0.9', 'daily'));
+    urls.push(buildUrl(`/${locale}/tools`, '0.9', 'daily', sitemapLastmodManifest.pages));
+
+    // 比较/选型页
+    urls.push(buildUrl(`/${locale}/compare`, '0.8', 'weekly', sitemapLastmodManifest.pages));
+    for (const slug of comparisonSurfaceSlugs) {
+      urls.push(buildUrl(`/${locale}/compare/${slug}`, '0.7', 'weekly', sitemapLastmodManifest.pages));
+    }
     
     // 分类页面 - 中等优先级
     for (const cat of categories) {
-      urls.push(buildUrl(`/${locale}/categories/${cat.id}/`, '0.8', 'weekly'));
+      urls.push(buildUrl(`/${locale}/categories/${cat.id}`, '0.8', 'weekly', sitemapLastmodManifest.pages));
     }
   }
 

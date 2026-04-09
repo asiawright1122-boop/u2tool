@@ -2,6 +2,7 @@ import { tools } from '@/config/tools';
 import { defaultLocale, isValidLocale } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadBaseMessages } from '@/lib/translations';
+import { buildComparisonDiscoveryIndex } from '@/lib/comparison-surfaces';
 import { buildDiscoveryIndex } from './index-builder';
 import { matchTools } from './matcher';
 import { normalizeQuery } from './normalize';
@@ -41,12 +42,17 @@ const DEFAULT_INTENT_DICTIONARY: IntentDictionary = {
     'docker-compose-generator': ['docker compose', 'compose file'],
     'meta-tag-generator': ['meta tags', 'seo title'],
     'gitignore-generator': ['gitignore', '.gitignore'],
+    'choose-text-tool': ['choose text tool', 'word counter vs text cleaner', 'text tool comparison'],
+    'choose-jwt-tool': ['jwt decoder vs debugger', 'choose jwt tool', 'decode jwt token'],
+    'choose-chart-type': ['bar vs line chart', 'choose chart type', 'pie chart or bar chart'],
   },
   keywordsByCategory: {
+    text: ['text', 'word', 'markdown', 'slug', 'diff', 'writing'],
     converters: ['convert', 'transform'],
     generators: ['generate', 'builder', 'make'],
     development: ['code', 'developer', 'dev'],
-    security: ['hash', 'password', 'encrypt'],
+    security: ['hash', 'password', 'encrypt', 'jwt', 'checksum', 'hmac'],
+    charts: ['chart', 'graph', 'visualization', 'bar chart', 'line chart'],
     image: ['image', 'photo', 'png', 'jpg'],
   },
 };
@@ -72,7 +78,23 @@ async function defaultBuildIndex(
   const baseMessages = await loadBaseMessages(locale, assetBaseUrl);
   const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
   const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
-  return buildDiscoveryIndex(tools, toolsObj, categoryMessages);
+  const toolNames = Object.fromEntries(
+    tools.map((tool) => {
+      const entry = toolsObj[tool.slug] as Record<string, unknown> | undefined;
+      return [tool.slug, (entry?.name as string) || tool.slug];
+    })
+  );
+  const toolDescriptions = Object.fromEntries(
+    tools.map((tool) => {
+      const entry = toolsObj[tool.slug] as Record<string, unknown> | undefined;
+      return [tool.slug, (entry?.seo_description as string) || (entry?.description as string) || ''];
+    })
+  );
+
+  return [
+    ...buildDiscoveryIndex(tools, toolsObj, categoryMessages),
+    ...buildComparisonDiscoveryIndex(locale, categoryMessages, toolNames, toolDescriptions),
+  ];
 }
 
 export async function runDiscoverySearch(input: DiscoverySearchInput): Promise<DiscoverySearchResponse> {

@@ -42,8 +42,8 @@
       "seo_description": "Essential developer tools including regex tester, SQL formatter, JSON path tester, code beautifier, and more. Free online tools for programmers."
     },
     "security": {
-      "seo_title": "Security Tools Online - Password Generator, Hash, Encryption",
-      "seo_description": "Free online security tools for password generation, hash calculation, text encryption, and file hashing. Secure your data with our browser-based tools."
+      "seo_title": "Security Tools Online for Passwords, JWT, HMAC and Checksum Checks",
+      "seo_description": "Generate stronger passwords and TOTP codes, inspect JWT payloads, create HMAC signatures, and verify checksum or hash outputs directly in your browser."
     },
     "network": {
       "seo_title": "Network Tools Online - IP Lookup, URL Encoder & More",
@@ -58,8 +58,8 @@
       "seo_description": "Free online math tools including number base converter, aspect ratio calculator, and more. Perform calculations instantly in your browser."
     },
     "charts": {
-      "seo_title": "Chart Generator Tools - Bar Charts, Line Charts & More",
-      "seo_description": "Create beautiful charts online with our free chart generator tools. Generate bar charts, line charts, pie charts, and more without any software."
+      "seo_title": "Chart Generator Tools for Bar, Heatmap, Sankey and Gantt Charts",
+      "seo_description": "Choose the right chart generator for bar charts, line charts, heatmap views, Sankey flows, and gantt timelines without turning the page into a generic chart list."
     },
     "office": {
       "seo_title": "Office Tools Online - PDF, Resume Builder & Productivity",
@@ -265,14 +265,14 @@
     "base64": {
       "name": "Base64 Encoder/Decoder",
       "description": "Encode text to Base64 or decode Base64 to text instantly.",
-      "seo_title": "Free Base64 Encoder & Decoder Online",
-      "seo_description": "Encode text to Base64 or decode Base64 strings instantly online for free. Secure browser-based tool with no data upload. Perfect for developers."
+      "seo_title": "Free Base64 Encoder and Decoder Online",
+      "seo_description": "Use this free online Base64 encoder and decoder to convert text, URLs, and data instantly in your browser with no uploads or signup."
     },
     "uuid-generator": {
       "name": "UUID Generator",
       "description": "Generate random UUIDs (v4) instantly. Copy single or bulk UUIDs.",
-      "seo_title": "Free UUID Generator Online - Generate UUID v4",
-      "seo_description": "Generate random UUID v4 strings online for free. Supports bulk generation of multiple UUIDs at once. Secure, fast, and works in your browser."
+      "seo_title": "Free UUID Generator Online",
+      "seo_description": "Use this free online UUID generator to create random UUID v4 values in bulk for database IDs, API identifiers, and test data."
     },
     "url-encoder": {
       "name": "URL Encoder/Decoder",
@@ -283,8 +283,8 @@
     "password-generator": {
       "name": "Password Generator",
       "description": "Generate strong, secure random passwords with customizable options.",
-      "seo_title": "Free Strong Password Generator Online",
-      "seo_description": "Generate secure random passwords online for free. Customize length, include uppercase, lowercase, numbers, and symbols. No data stored or uploaded.",
+      "seo_title": "Free Password Generator Online",
+      "seo_description": "Use this free online password generator to create strong random passwords with custom length, uppercase, lowercase, numbers, and symbols.",
       "selectOption": "Please select at least one option"
     },
     "hash-generator": {
@@ -297,7 +297,7 @@
       "name": "QR Code Generator",
       "description": "Generate QR codes from text or URLs. Download as PNG.",
       "seo_title": "Free QR Code Generator Online",
-      "seo_description": "Generate QR codes from text, URLs, or data online for free. Download as high-quality PNG image. Customize size and error correction level."
+      "seo_description": "Use this free online QR code generator to turn text, links, and contact details into downloadable QR codes for sharing, print, and marketing."
     },
     "color-converter": {
       "name": "Color Converter",
@@ -326,8 +326,8 @@
     "html-encoder": {
       "name": "HTML Encoder/Decoder",
       "description": "Encode special characters to HTML entities or decode them back.",
-      "seo_title": "Free HTML Encoder & Decoder Online",
-      "seo_description": "Encode and decode HTML entities online for free. Handle special characters safely for web development. Prevent XSS attacks and display HTML correctly."
+      "seo_title": "Free HTML Encoder and Decoder Online",
+      "seo_description": "Use this free online HTML encoder and decoder to convert special characters and HTML entities for web development, content sanitizing, and XSS-safe output."
     },
     "markdown-preview": {
       "name": "Markdown Preview",
@@ -344,14 +344,14 @@
     "regex-tester": {
       "name": "Regex Tester",
       "description": "Test regular expressions with real-time matching and highlighting.",
-      "seo_title": "Free Regex Tester & Debugger Online",
-      "seo_description": "Test and debug regular expressions online for free. Real-time matching with syntax highlighting and match groups. Perfect for developers and data processing."
+      "seo_title": "Free Regex Tester Online",
+      "seo_description": "Use this free online regex tester to test regular expressions, inspect match groups, and debug regex patterns with real-time highlighting."
     },
     "jwt-decoder": {
       "name": "JWT Decoder",
       "description": "Decode and inspect JWT tokens. View header, payload, and signature.",
-      "seo_title": "Free JWT Decoder Online",
-      "seo_description": "Decode and inspect JWT (JSON Web Tokens) online for free. View header, payload, and signature without verification. Essential for debugging auth.",
+      "seo_title": "Free JWT Debugger and Signature Verifier Online",
+      "seo_description": "Use this free online JWT debugger to decode token headers and payloads, inspect claims, check expiry, and verify JWT signatures for authentication debugging.",
       "enterToken": "Please enter a JWT token",
       "invalidFormat": "Invalid JWT format",
       "invalidToken": "Invalid JWT token",
@@ -365,8 +365,8 @@
     "diff-checker": {
       "name": "Diff Checker",
       "description": "Compare two texts and highlight the differences between them.",
-      "seo_title": "Free Text Diff Checker Online",
-      "seo_description": "Compare two texts online for free. Highlight added, removed, and changed content with side-by-side view. Essential for code review and document comparison."
+      "seo_title": "Free Diff Checker Online",
+      "seo_description": "Use this free online diff checker to compare two texts, highlight added and removed lines, and review content changes side by side for code and document workflows."
     },
     "json-to-csv": {
       "name": "JSON to CSV",
@@ -457,8 +457,8 @@
     "xml-formatter": {
       "name": "XML Formatter",
       "description": "Format and minify XML data, validate XML syntax.",
-      "seo_title": "Free XML Formatter Online",
-      "seo_description": "Format, beautify and minify XML data online for free. Syntax highlighting, error detection, and tree view. Perfect for API development and configuration files."
+      "seo_title": "Free XML Formatter and Minifier Online",
+      "seo_description": "Use this free online XML formatter to beautify, minify, and validate XML with instant syntax feedback for API payloads, configuration files, and debugging."
     },
     "chinese-converter": {
       "name": "Chinese Converter",
@@ -490,7 +490,7 @@
       "name": "Code Minifier",
       "description": "Minify HTML, CSS, JavaScript code to reduce file size.",
       "seo_title": "Free Code Minifier Online",
-      "seo_description": "Minify HTML, CSS, and JavaScript code online for free. Reduce file size and improve page load speed. Essential for web performance optimization and deployment.",
+      "seo_description": "Use this free online code minifier to compress HTML, CSS, and JavaScript, reduce file size, and improve website loading performance before deployment.",
       "codeType": "Code Type",
       "placeholder": "Enter {type} code to minify...",
       "original": "Original",
@@ -633,7 +633,7 @@
       "name": "JSON Schema Validator",
       "description": "Validate JSON data against JSON Schema.",
       "seo_title": "Free JSON Schema Validator Online",
-      "seo_description": "Validate JSON data against JSON Schema online for free. Support draft-04, draft-06, and draft-07 schemas. Get detailed error messages and validation reports."
+      "seo_description": "Use this free online JSON Schema validator to check whether JSON data matches Schema rules and review detailed validation errors quickly."
     },
     "regex-patterns": {
       "name": "Regex Patterns Library",
@@ -882,7 +882,7 @@
       "name": "Statistics Calculator",
       "description": "Calculate mean, median, mode, standard deviation, variance and more.",
       "seo_title": "Free Statistics Calculator Online",
-      "seo_description": "Calculate statistical measures online for free. Get mean, median, mode, standard deviation, variance, and more. Essential for data analysis and research."
+      "seo_description": "Use this free online statistics calculator to compute mean, median, mode, variance, standard deviation, and other core statistics for data analysis."
     },
     "scientific-calculator": {
       "name": "Scientific Calculator",
@@ -1406,7 +1406,7 @@
       "description": "Generate and test regular expressions with common patterns.",
       "copy": "Copy Pattern",
       "seo_title": "Free Regex Generator Online",
-      "seo_description": "Generate and test regular expressions online for free. Build patterns with visual helpers and test against sample text. Essential for pattern matching tasks.",
+      "seo_description": "Generate regex patterns online for free. Build regular expressions with visual helpers, test against sample text, and speed up pattern matching, extraction, and form validation.",
       "commonPatterns": "Common Patterns",
       "customPattern": "Custom Pattern",
       "testString": "Test String",
@@ -1685,8 +1685,8 @@
     "whois-lookup": {
       "name": "WHOIS Lookup",
       "description": "Look up domain registration information.",
-      "seo_title": "Free WHOIS Lookup Tool Online",
-      "seo_description": "Look up domain registration and ownership information online for free. Get registrar, creation date, expiration date, and nameservers. Domain research tool.",
+      "seo_title": "Free WHOIS Lookup Online",
+      "seo_description": "Use this free online WHOIS lookup tool to check domain ownership, registrar details, registration dates, expiration dates, and nameserver records.",
       "loading": "Looking up...",
       "lookup": "WHOIS Lookup",
       "registrar": "Registrar",
@@ -2223,7 +2223,7 @@
       "name": "Lorem Picsum",
       "description": "Generate random placeholder images from Picsum Photos.",
       "seo_title": "Free Lorem Picsum Image Generator Online",
-      "seo_description": "Generate random placeholder images with custom dimensions, grayscale, and blur effects. Perfect for mockups, wireframes, and web design prototyping.",
+      "seo_description": "Generate random placeholder images from Lorem Picsum with custom width, height, grayscale, blur, seed, and image ID options for mockups, prototypes, and layout testing.",
       "width": "Width",
       "height": "Height",
       "seed": "Seed",
@@ -2651,8 +2651,8 @@
       "outputPlaceholder": "Result will appear here...",
       "name": "Base64 Encoder/Decoder",
       "description": "Encode text to Base64 or decode Base64 to text instantly.",
-      "seo_title": "Free Base64 Encoder & Decoder Online",
-      "seo_description": "Encode text to Base64 or decode Base64 strings instantly online for free. Secure browser-based tool with no data upload. Perfect for developers."
+      "seo_title": "Free Base64 Encoder and Decoder Online",
+      "seo_description": "Use this free online Base64 encoder and decoder to convert text, URLs, and data instantly in your browser with no uploads or signup."
     },
     "json": {
       "invalidJson": "Invalid JSON"
@@ -3900,8 +3900,8 @@
     "uuid-generator": {
       "name": "UUID Generator",
       "description": "Generate random UUIDs (v4) instantly. Copy single or bulk UUIDs.",
-      "seo_title": "Free UUID Generator Online - Generate UUID v4",
-      "seo_description": "Generate random UUID v4 strings online for free. Supports bulk generation of multiple UUIDs at once. Secure, fast, and works in your browser."
+      "seo_title": "Free UUID Generator Online",
+      "seo_description": "Use this free online UUID generator to create random UUID v4 values in bulk for database IDs, API identifiers, and test data."
     },
     "url-encoder": {
       "name": "URL Encoder/Decoder",
@@ -3913,8 +3913,8 @@
     "password-generator": {
       "name": "Password Generator",
       "description": "Generate strong, secure random passwords with customizable options.",
-      "seo_title": "Free Strong Password Generator Online",
-      "seo_description": "Generate secure random passwords online for free. Customize length, include uppercase, lowercase, numbers, and symbols. No data stored or uploaded.",
+      "seo_title": "Free Password Generator Online",
+      "seo_description": "Use this free online password generator to create strong random passwords with custom length, uppercase, lowercase, numbers, and symbols.",
       "selectOption": "Please select at least one option",
       "copied": "Copied!",
       "copy": "Copy",
@@ -3932,7 +3932,7 @@
       "name": "QR Code Generator",
       "description": "Generate QR codes from text or URLs. Download as PNG.",
       "seo_title": "Free QR Code Generator Online",
-      "seo_description": "Generate QR codes from text, URLs, or data online for free. Download as high-quality PNG image. Customize size and error correction level.",
+      "seo_description": "Use this free online QR code generator to turn text, links, and contact details into downloadable QR codes for sharing, print, and marketing.",
       "inputPlaceholder": "Enter text here..."
     },
     "color-converter": {
@@ -3963,8 +3963,8 @@
     "html-encoder": {
       "name": "HTML Encoder/Decoder",
       "description": "Encode special characters to HTML entities or decode them back.",
-      "seo_title": "Free HTML Encoder & Decoder Online",
-      "seo_description": "Encode and decode HTML entities online for free. Handle special characters safely for web development. Prevent XSS attacks and display HTML correctly.",
+      "seo_title": "Free HTML Encoder and Decoder Online",
+      "seo_description": "Use this free online HTML encoder and decoder to convert special characters and HTML entities for web development, content sanitizing, and XSS-safe output.",
       "inputPlaceholder": "Enter text here..."
     },
     "markdown-preview": {
@@ -3983,33 +3983,47 @@
     "regex-tester": {
       "name": "Regex Tester",
       "description": "Test regular expressions with real-time matching and highlighting.",
-      "seo_title": "Free Regex Tester & Debugger Online",
-      "seo_description": "Test and debug regular expressions online for free. Real-time matching with syntax highlighting and match groups. Perfect for developers and data processing."
+      "seo_title": "Free Regex Tester Online",
+      "seo_description": "Use this free online regex tester to test regular expressions, inspect match groups, and debug regex patterns with real-time highlighting."
     },
     "jwt-decoder": {
-      "name": "JWT Decoder",
-      "description": "Decode and inspect JWT tokens. View header, payload, and signature.",
-      "seo_title": "Free JWT Decoder Online",
-      "seo_description": "Decode and inspect JWT (JSON Web Tokens) online for free. View header, payload, and signature without verification. Essential for debugging auth.",
-      "enterToken": "Please enter a JWT token",
-      "invalidFormat": "Invalid JWT format",
-      "invalidToken": "Invalid JWT token",
+      "name": "JWT Debugger",
+      "description": "Debug and verify JWT tokens with signature validation",
+      "seo_title": "Free JWT Debugger and Signature Verifier Online",
+      "seo_description": "Use this free online JWT debugger to decode token headers and payloads, inspect claims, check expiry, and verify JWT signatures for authentication debugging.",
+      "token": "JWT Token",
       "header": "Header",
       "payload": "Payload",
       "signature": "Signature",
-      "issuedAt": "Issued At (iat)",
-      "expires": "Expires (exp)",
-      "notBefore": "Not Before (nbf)",
-      "input": "Input",
-      "decode": "Decode",
+      "secret": "Secret Key",
+      "verify": "Verify Signature",
+      "valid": "Valid Signature",
+      "invalid": "Invalid Signature",
+      "expired": "Token Expired",
+      "tokenPlaceholder": "Paste your JWT token here...",
+      "notExpired": "Token Valid",
+      "expiresAt": "Expires at",
+      "errors": {
+        "invalidFormat": "Invalid JWT format",
+        "decodeFailed": "Failed to decode token"
+      },
+      "placeholder": "Paste JWT token here...",
+      "loadExample": "Load Example",
+      "tokenInput": "Token Input",
+      "claim": "Claim",
+      "claims": "Claims",
       "copied": "Copied!",
-      "copy": "Copy"
+      "copy": "Copy",
+      "secretPlaceholder": "Enter secret key...",
+      "value": "Value",
+      "verifyNote": "Note: Signature verification is done client-side",
+      "verifySignature": "Verify Signature"
     },
     "diff-checker": {
       "name": "Diff Checker",
       "description": "Compare two texts and highlight the differences between them.",
-      "seo_title": "Free Text Diff Checker Online",
-      "seo_description": "Compare two texts online for free. Highlight added, removed, and changed content with side-by-side view. Essential for code review and document comparison."
+      "seo_title": "Free Diff Checker Online",
+      "seo_description": "Use this free online diff checker to compare two texts, highlight added and removed lines, and review content changes side by side for code and document workflows."
     },
     "json-to-csv": {
       "name": "JSON to CSV",
@@ -4110,8 +4124,8 @@
     "xml-formatter": {
       "name": "XML Formatter",
       "description": "Format and minify XML data, validate XML syntax.",
-      "seo_title": "Free XML Formatter Online",
-      "seo_description": "Format, beautify and minify XML data online for free. Syntax highlighting, error detection, and tree view. Perfect for API development and configuration files."
+      "seo_title": "Free XML Formatter and Minifier Online",
+      "seo_description": "Use this free online XML formatter to beautify, minify, and validate XML with instant syntax feedback for API payloads, configuration files, and debugging."
     },
     "chinese-converter": {
       "name": "Chinese Converter",
@@ -4146,7 +4160,7 @@
       "name": "Code Minifier",
       "description": "Minify HTML, CSS, JavaScript code to reduce file size.",
       "seo_title": "Free Code Minifier Online",
-      "seo_description": "Minify HTML, CSS, and JavaScript code online for free. Reduce file size and improve page load speed. Essential for web performance optimization and deployment.",
+      "seo_description": "Use this free online code minifier to compress HTML, CSS, and JavaScript, reduce file size, and improve website loading performance before deployment.",
       "codeType": "Code Type",
       "placeholder": "Enter {type} code to minify...",
       "original": "Original",
@@ -4329,7 +4343,7 @@
       "name": "JSON Schema Validator",
       "description": "Validate JSON data against JSON Schema.",
       "seo_title": "Free JSON Schema Validator Online",
-      "seo_description": "Validate JSON data against JSON Schema online for free. Support draft-04, draft-06, and draft-07 schemas. Get detailed error messages and validation reports."
+      "seo_description": "Use this free online JSON Schema validator to check whether JSON data matches Schema rules and review detailed validation errors quickly."
     },
     "regex-patterns": {
       "name": "Regex Patterns Library",
@@ -4582,7 +4596,7 @@
       "name": "Statistics Calculator",
       "description": "Calculate mean, median, mode, standard deviation, variance and more.",
       "seo_title": "Free Statistics Calculator Online",
-      "seo_description": "Calculate statistical measures online for free. Get mean, median, mode, standard deviation, variance, and more. Essential for data analysis and research."
+      "seo_description": "Use this free online statistics calculator to compute mean, median, mode, variance, standard deviation, and other core statistics for data analysis."
     },
     "scientific-calculator": {
       "name": "Scientific Calculator",
@@ -5168,7 +5182,7 @@
       "description": "Generate and test regular expressions with common patterns.",
       "copy": "Copy Pattern",
       "seo_title": "Free Regex Generator Online",
-      "seo_description": "Generate and test regular expressions online for free. Build patterns with visual helpers and test against sample text. Essential for pattern matching tasks.",
+      "seo_description": "Generate regex patterns online for free. Build regular expressions with visual helpers, test against sample text, and speed up pattern matching, extraction, and form validation.",
       "commonPatterns": "Common Patterns",
       "customPattern": "Custom Pattern",
       "testString": "Test String",
@@ -5449,8 +5463,8 @@
     "whois-lookup": {
       "name": "WHOIS Lookup",
       "description": "Look up domain registration information.",
-      "seo_title": "Free WHOIS Lookup Tool Online",
-      "seo_description": "Look up domain registration and ownership information online for free. Get registrar, creation date, expiration date, and nameservers. Domain research tool.",
+      "seo_title": "Free WHOIS Lookup Online",
+      "seo_description": "Use this free online WHOIS lookup tool to check domain ownership, registrar details, registration dates, expiration dates, and nameserver records.",
       "loading": "Looking up...",
       "lookup": "WHOIS Lookup",
       "registrar": "Registrar",
@@ -5988,7 +6002,7 @@
       "name": "Lorem Picsum",
       "description": "Generate random placeholder images from Picsum Photos.",
       "seo_title": "Free Lorem Picsum Image Generator Online",
-      "seo_description": "Generate random placeholder images with custom dimensions, grayscale, and blur effects. Perfect for mockups, wireframes, and web design prototyping.",
+      "seo_description": "Generate random placeholder images from Lorem Picsum with custom width, height, grayscale, blur, seed, and image ID options for mockups, prototypes, and layout testing.",
       "width": "Width",
       "height": "Height",
       "seed": "Seed",
@@ -6252,7 +6266,7 @@
       "name": "Base Calculator",
       "description": "Perform calculations in different number bases.",
       "seo_title": "Free Base Calculator Online",
-      "seo_description": "Calculate in binary, octal, decimal, and hexadecimal. Supports arithmetic and bitwise operations like AND, OR, XOR, NOT, shift. For low-level programming.",
+      "seo_description": "Calculate and convert values across binary, octal, decimal, and hexadecimal, with arithmetic and bitwise operations for programming, debugging, and number-base practice.",
       "base": "Number Base",
       "binary": "Binary",
       "octal": "Octal",
@@ -8535,7 +8549,7 @@
       "name": "Regex Visualizer",
       "description": "Visualize regular expressions as railroad diagrams. Test patterns with sample strings.",
       "seo_title": "Free Regex Visualizer & Tester Online",
-      "seo_description": "Visualize regular expressions as railroad diagrams online for free. Test patterns, see matches highlighted. Export as SVG or PNG.",
+      "seo_description": "Visualize regex patterns as railroad diagrams online for free. Test regular expressions, inspect highlighted matches, and export SVG or PNG for docs and teaching.",
       "pattern": "Regex Pattern",
       "patternPlaceholder": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]'{2,}'$",
       "testString": "Test String",
@@ -11842,39 +11856,6 @@
       "headerNamePlaceholder": "Header name",
       "headerValuePlaceholder": "Value"
     },
-    "jwt-decoder": {
-      "name": "JWT Debugger",
-      "description": "Debug and verify JWT tokens with signature validation",
-      "seo_title": "Free JWT Debugger Online - Decode and Verify JWT Tokens",
-      "seo_description": "Debug JWT tokens online for free. Decode header and payload, verify signatures with secret or public key. Essential for authentication debugging.",
-      "token": "JWT Token",
-      "header": "Header",
-      "payload": "Payload",
-      "signature": "Signature",
-      "secret": "Secret Key",
-      "verify": "Verify Signature",
-      "valid": "Valid Signature",
-      "invalid": "Invalid Signature",
-      "expired": "Token Expired",
-      "tokenPlaceholder": "Paste your JWT token here...",
-      "notExpired": "Token Valid",
-      "expiresAt": "Expires at",
-      "errors": {
-        "invalidFormat": "Invalid JWT format",
-        "decodeFailed": "Failed to decode token"
-      },
-      "placeholder": "Paste JWT token here...",
-      "loadExample": "Load Example",
-      "tokenInput": "Token Input",
-      "claim": "Claim",
-      "claims": "Claims",
-      "copied": "Copied!",
-      "copy": "Copy",
-      "secretPlaceholder": "Enter secret key...",
-      "value": "Value",
-      "verifyNote": "Note: Signature verification is done client-side",
-      "verifySignature": "Verify Signature"
-    },
     "csp-generator": {
       "name": "CSP Generator",
       "description": "Generate Content Security Policy headers",
@@ -12682,7 +12663,7 @@
       "name": "Neumorphism Generator",
       "description": "Generate soft UI neumorphic effects with customizable shadows and shapes",
       "seo_title": "Free Neumorphism CSS Generator Online - Soft UI Tool",
-      "seo_description": "Create beautiful neumorphic soft UI effects with our free online generator. Customize shadows, shapes, and colors to design modern skeuomorphic interfaces.",
+      "seo_description": "Generate neumorphism CSS with adjustable shadows, light direction, blur, radius, and colors for soft UI buttons, cards, and input components.",
       "backgroundColor": "Background Color",
       "shape": "Shape",
       "shapes": {
@@ -13548,8 +13529,8 @@
     "dependency-vulnerability-checker": {
       "name": "Dependency Vulnerability Checker",
       "description": "Check package dependencies for known security vulnerabilities",
-      "seo_title": "Free Dependency Vulnerability Scanner Online | U2Tool",
-      "seo_description": "Scan package.json, requirements.txt for security vulnerabilities. Check npm, pip dependencies.",
+      "seo_title": "Free Dependency Vulnerability Checker Online",
+      "seo_description": "Use this free online dependency vulnerability checker to scan package.json and requirements.txt for insecure packages and surface dependency security risks quickly.",
       "input": "Input",
       "output": "Output",
       "process": "Process",

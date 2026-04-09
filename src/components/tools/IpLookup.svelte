@@ -114,7 +114,7 @@
 {/if}
 
       {#if info}
-!loading && (
+{#if !loading}
         <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 space-y-3">
           <div class="grid grid-cols-2 gap-4">
             <div>
@@ -142,18 +142,18 @@
               <span class="ml-2 text-gray-900 dark:text-white">{info.timezone || '-'}</span>
             </div>
             {#if info.lat}
-info.lon && (
+{#if info.lon}
               <div class="col-span-2">
                 <span class="text-gray-500 dark:text-gray-300">{t('coordinates')}:</span>
                 <span class="ml-2 text-gray-900 dark:text-white font-mono">
                   {info.lat.toFixed(4)}, {info.lon.toFixed(4)}
                 </span>
               </div>
-            )
+            {/if}
 {/if}
           </div>
         </div>
-      )
+      {/if}
 {/if}
     </div>
   

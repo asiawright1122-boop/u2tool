@@ -184,7 +184,7 @@
 
       <!-- Preview Table -->
       {#if currentSheet}
-currentSheet.data.length > 0 && (
+{#if currentSheet.data.length > 0}
         <div>
           <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {t('excelToJson.preview')} ({currentSheet.data.length} {t('excelToJson.rows')})
@@ -223,7 +223,7 @@ currentSheet.data.length > 0 && (
             </p>
 {/if}
         </div>
-      )
+      {/if}
 {/if}
 
       <!-- JSON Output -->

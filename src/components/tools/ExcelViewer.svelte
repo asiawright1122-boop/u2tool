@@ -170,7 +170,7 @@
 
       <!-- Filter -->
       {#if currentSheet}
-currentSheet.headers.length > 0 && (
+{#if currentSheet.headers.length > 0}
         <div class="flex flex-wrap gap-4 items-end">
           <div>
             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
@@ -207,12 +207,12 @@ currentSheet.headers.length > 0 && (
             </button>
 {/if}
         </div>
-      )
+      {/if}
 {/if}
 
       <!-- Data Table -->
       {#if currentSheet}
-processedData.length > 0 && (
+{#if processedData.length > 0}
         <div>
           <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">
             {t('excelViewer.showing')} {processedData.length} / {currentSheet.data.length} {t('excelViewer.rows')}
@@ -250,15 +250,15 @@ processedData.length > 0 && (
             </table>
           </div>
         </div>
-      )
+      {/if}
 {/if}
 
       {#if currentSheet}
-processedData.length === 0 && (
+{#if processedData.length === 0}
         <div class="text-center py-8 text-gray-500 dark:text-gray-400">
           {filterValue ? t('excelViewer.noResults') : t('excelViewer.emptySheet')}
         </div>
-      )
+      {/if}
 {/if}
     </div>
   

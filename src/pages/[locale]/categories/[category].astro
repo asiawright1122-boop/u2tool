@@ -7,9 +7,10 @@
 import type { GetStaticPaths } from 'astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/layout/Header.svelte';
-import Sidebar from '@/components/layout/Sidebar.svelte';
+import StaticSidebar from '@/components/layout/StaticSidebar.astro';
 import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
 import Footer from '@/components/layout/Footer.astro';
+import CategorySupportSection from '@/components/categories/CategorySupportSection.astro';
 import Breadcrumb from '@/components/layout/Breadcrumb.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
@@ -19,6 +20,10 @@ import { getIconSvg } from '@/lib/icon-svg';
 import { locales, getLocalizedPath } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadBaseMessages } from '@/lib/translations';
+import { getCategoryPageSeo } from '@/lib/seo';
+import { getCategorySupportContent } from '@/lib/category-support';
+import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
+import { getPublicSiteUrl } from '@/lib/public-env';
 
 export const prerender = true;
 
@@ -45,6 +50,8 @@ const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
 const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
 const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
+const headerTranslations = buildHeaderTranslations(baseMessages);
+const mobileNavMessages = buildMobileNavMessages(navMessages);
 
 const categoryName = categoryMessages[category] || category;
 const categoryTools = getToolsByCategory(category);
@@ -58,16 +65,20 @@ function getToolName(slug: string): string {
 
 function getToolDescription(slug: string): string {
   const t = toolsObj[slug] as Record<string, unknown> | undefined;
-  return (t?.description as string) || '';
+  return (t?.seo_description as string) || (t?.description as string) || '';
 }
 
-const BASE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://www.u2tool.com';
-const pageTitle = `${categoryName} - U2Tool`;
-const pageDescription = `${categoryTools.length}+ free ${categoryName} tools online.`;
+const BASE_URL = getPublicSiteUrl();
+const categorySeo = getCategoryPageSeo(baseMessages, category, categoryName, categoryTools.length);
+const pageTitle = categorySeo.title;
+const pageDescription = categorySeo.description;
+const categorySupport = getCategorySupportContent(locale, category);
+const categoryToolNames = Object.fromEntries(categoryTools.map((tool) => [tool.slug, getToolName(tool.slug)]));
+const categoryToolDescriptions = Object.fromEntries(categoryTools.map((tool) => [tool.slug, getToolDescription(tool.slug)]));
 
 const breadcrumbItems = [
-  { label: navMessages.home || 'Home', href: `/${locale}/` },
-  { label: categoryName, href: `/${locale}/categories/${category}/` },
+  { label: navMessages.home || 'Home', href: `/${locale}` },
+  { label: categoryName, href: `/${locale}/categories/${category}` },
 ];
 
 // BreadcrumbList structured data
@@ -84,7 +95,7 @@ const breadcrumbData = {
 const collectionData = {
   name: categoryName,
   description: pageDescription,
-  url: `${BASE_URL}/${locale}/categories/${category}/`,
+  url: `${BASE_URL}/${locale}/categories/${category}`,
   numberOfItems: categoryTools.length,
   hasPart: categoryTools.slice(0, 10).map(tool => ({
     '@type': 'SoftwareApplication',
@@ -98,9 +109,10 @@ const collectionData = {
   title={pageTitle}
   description={pageDescription}
   locale={locale}
-  canonicalPath={`/categories/${category}/`}
+  canonicalPath={`/categories/${category}`}
+  siteDescription={siteMessages.description}
 >
-  <HreflangTags path={`/categories/${category}/`} slot="head" />
+  <HreflangTags path={`/categories/${category}`} slot="head" />
   <StructuredData type="BreadcrumbList" data={breadcrumbData} slot="head" />
   <StructuredData type="CollectionPage" data={collectionData} slot="head" />
 
@@ -108,20 +120,23 @@ const collectionData = {
   <meta property="og:description" content={pageDescription} slot="head" />
   <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
   <meta property="og:type" content="website" slot="head" />
-  <meta property="og:url" content={`${BASE_URL}/${locale}/categories/${category}/`} slot="head" />
+  <meta property="og:url" content={`${BASE_URL}/${locale}/categories/${category}`} slot="head" />
   <meta property="og:site_name" content="U2Tool" slot="head" />
   <meta name="twitter:card" content="summary_large_image" slot="head" />
+  <meta name="twitter:title" content={pageTitle} slot="head" />
+  <meta name="twitter:description" content={pageDescription} slot="head" />
   <meta name="twitter:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
 
-  <aside class="hidden lg:block fixed left-0 top-0 bottom-0 z-40" style="width: 220px">
-    <Sidebar client:load locale={locale} categories={categories} categoryNames={categoryMessages} navMessages={navMessages} siteName={siteMessages.name || 'U2Tool'} />
-  </aside>
-  <aside class="hidden md:block lg:hidden fixed left-0 top-0 bottom-0 z-40" style="width: 64px">
-    <Sidebar client:load locale={locale} categories={categories} categoryNames={categoryMessages} navMessages={navMessages} siteName={siteMessages.name || 'U2Tool'} />
-  </aside>
+  <StaticSidebar
+    locale={locale}
+    categories={categories}
+    categoryNames={categoryMessages}
+    navMessages={navMessages}
+    siteName={siteMessages.name || 'U2Tool'}
+  />
 
   <div class="main-content-with-sidebar main-content-with-mobile-nav">
-    <Header client:load locale={locale} translations={baseMessages} />
+    <Header client:load locale={locale} translations={headerTranslations} />
 
     <main class="py-6 px-4">
       <div class="max-w-6xl mx-auto">
@@ -136,6 +151,15 @@ const collectionData = {
             <span class="text-lg font-normal text-gray-400">({categoryTools.length})</span>
           </h1>
         </div>
+
+        {categorySupport && (
+          <CategorySupportSection
+            content={categorySupport}
+            locale={locale}
+            toolNames={categoryToolNames}
+            toolDescriptions={categoryToolDescriptions}
+          />
+        )}
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {categoryTools.map((tool) => (
@@ -168,5 +192,5 @@ const collectionData = {
     <Footer locale={locale} />
   </div>
 
-  <MobileBottomNav client:load locale={locale} navMessages={navMessages} />
+  <MobileBottomNav client:load locale={locale} navMessages={mobileNavMessages} />
 </BaseLayout>

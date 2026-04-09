@@ -280,7 +280,7 @@
                     <div class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style="min-height: 600px">
                         <EChartsWrapper
               bind:this={chartRef as any}
-                            option={getChartOption()}
+                            option={getChartOption}
                             style="height: 600px; width: 100%"
                             notMerge={true}
               lazyUpdate={true}

@@ -12,16 +12,23 @@
 import type { GetStaticPaths } from 'astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/layout/Header.svelte';
-import Sidebar from '@/components/layout/Sidebar.svelte';
+import StaticSidebar from '@/components/layout/StaticSidebar.astro';
 import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
 import Footer from '@/components/layout/Footer.astro';
 import PopularToolsCarousel from '@/components/PopularToolsCarousel.svelte';
+import CategorySpotlightSection from '@/components/discovery/CategorySpotlightSection.astro';
+import ComparisonGuideSection from '@/components/discovery/ComparisonGuideSection.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
-import { tools, categories, getPopularTools, getToolsByCategory } from '@/config/tools';
+import StructuredData from '@/components/seo/StructuredData.astro';
+import { tools, categories, getPopularTools } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
 import { locales, getLocalizedPath } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadBaseMessages } from '@/lib/translations';
+import { buildCategoryDiscoveryItemList, buildCategoryDiscoverySpotlights } from '@/lib/discovery-surface';
+import { buildComparisonGuides, getComparisonUiCopy } from '@/lib/comparison-surfaces';
+import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
+import { getPublicSiteUrl } from '@/lib/public-env';
 
 export const prerender = true;
 
@@ -41,12 +48,14 @@ const homeMessages = (baseMessages.home as Record<string, unknown>) ?? {};
 const heroMessages = (homeMessages.hero as Record<string, string>) ?? {};
 const statsMessages = (homeMessages.stats as Record<string, string>) ?? {};
 const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
+const headerTranslations = buildHeaderTranslations(baseMessages);
+const mobileNavMessages = buildMobileNavMessages(navMessages);
 
 const popularTools = getPopularTools();
 const recentTools = tools.slice(-4).reverse();
 const basePath = `/${locale}`;
 
-const BASE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://www.u2tool.com';
+const BASE_URL = getPublicSiteUrl();
 
 function getToolName(slug: string): string {
   const t = toolsObj[slug] as Record<string, unknown> | undefined;
@@ -55,7 +64,7 @@ function getToolName(slug: string): string {
 
 function getToolDescription(slug: string): string {
   const t = toolsObj[slug] as Record<string, unknown> | undefined;
-  return (t?.description as string) || '';
+  return (t?.seo_description as string) || (t?.description as string) || '';
 }
 
 // Prepare carousel data with pre-resolved translations
@@ -67,6 +76,27 @@ const carouselTools = popularTools.map(tool => ({
   description: getToolDescription(tool.slug),
   categoryName: categoryMessages[tool.category] || tool.category,
 }));
+const toolNames = Object.fromEntries(
+  tools.map((tool) => [tool.slug, getToolName(tool.slug)])
+);
+const toolDescriptions = Object.fromEntries(
+  tools.map((tool) => [tool.slug, getToolDescription(tool.slug)])
+);
+const discoverySpotlights = buildCategoryDiscoverySpotlights(
+  locale,
+  categoryMessages,
+  toolNames,
+  toolDescriptions
+);
+const discoveryItemListData = buildCategoryDiscoveryItemList(BASE_URL, discoverySpotlights);
+const toolsMessages = (baseMessages.tools as Record<string, string>) ?? {};
+const comparisonUiCopy = getComparisonUiCopy(locale);
+const comparisonGuides = buildComparisonGuides(
+  locale,
+  categoryMessages,
+  toolNames,
+  toolDescriptions
+).slice(0, 3);
 ---
 
 <BaseLayout
@@ -74,48 +104,34 @@ const carouselTools = popularTools.map(tool => ({
   description={heroMessages.subtitle || '500+ free online tools for developers and everyone.'}
   locale={locale}
   canonicalPath="/"
+  siteDescription={siteMessages.description}
 >
   {/* SEO: Hreflang tags */}
   <HreflangTags path="/" slot="head" />
+  <StructuredData type="ItemList" data={discoveryItemListData} slot="head" />
 
   {/* OG meta tags */}
   <meta property="og:title" content={`${heroMessages.title || 'Free Online Tools'} | U2Tool`} slot="head" />
   <meta property="og:description" content={heroMessages.subtitle || '500+ free online tools for developers and everyone.'} slot="head" />
   <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
   <meta property="og:type" content="website" slot="head" />
-  <meta property="og:url" content={`${BASE_URL}/${locale}/`} slot="head" />
+  <meta property="og:url" content={`${BASE_URL}/${locale}`} slot="head" />
   <meta property="og:site_name" content="U2Tool" slot="head" />
   <meta name="twitter:card" content="summary_large_image" slot="head" />
   <meta name="twitter:title" content={`${heroMessages.title || 'Free Online Tools'} | U2Tool`} slot="head" />
   <meta name="twitter:description" content={heroMessages.subtitle || '500+ free online tools for developers and everyone.'} slot="head" />
   <meta name="twitter:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
-  <!-- Sidebar - Desktop (expanded) -->
-  <aside class="hidden lg:block fixed left-0 top-0 bottom-0 z-40" style="width: 220px">
-    <Sidebar
-      client:load
-      locale={locale}
-      categories={categories}
-      categoryNames={categoryMessages}
-      navMessages={navMessages}
-      siteName={siteMessages.name || 'U2Tool'}
-    />
-  </aside>
-
-  <!-- Sidebar - Tablet (collapsed, icons only) -->
-  <aside class="hidden md:block lg:hidden fixed left-0 top-0 bottom-0 z-40" style="width: 64px">
-    <Sidebar
-      client:load
-      locale={locale}
-      categories={categories}
-      categoryNames={categoryMessages}
-      navMessages={navMessages}
-      siteName={siteMessages.name || 'U2Tool'}
-    />
-  </aside>
+  <StaticSidebar
+    locale={locale}
+    categories={categories}
+    categoryNames={categoryMessages}
+    navMessages={navMessages}
+    siteName={siteMessages.name || 'U2Tool'}
+  />
 
   <!-- Main content area with responsive left margin -->
   <div class="main-content-with-sidebar main-content-with-mobile-nav">
-    <Header client:load locale={locale} translations={baseMessages} />
+    <Header client:load locale={locale} translations={headerTranslations} />
 
     <main class="py-6 px-4">
       <div class="max-w-5xl mx-auto">
@@ -187,6 +203,23 @@ const carouselTools = popularTools.map(tool => ({
           </div>
         </section>
 
+        <CategorySpotlightSection
+          eyebrow={siteMessages.name || 'U2Tool'}
+          title={(homeMessages.categories as string) || 'Tool Categories'}
+          description={(homeMessages.categoriesDesc as string) || 'Find the right tool for your needs'}
+          popularLabel={(toolsMessages.popular || 'Popular').toUpperCase()}
+          toolsCountLabel={(homeMessages.toolsCount as string) || 'tools'}
+          spotlights={discoverySpotlights}
+        />
+
+        <ComparisonGuideSection
+          title={comparisonUiCopy.comparisonSectionTitle}
+          description={comparisonUiCopy.comparisonSectionDescription}
+          guides={comparisonGuides}
+          ctaLabel={comparisonUiCopy.guideCtaLabel}
+          includedToolsLabel={comparisonUiCopy.includedToolsLabel}
+        />
+
         <!-- Popular Tools Carousel -->
         <section class="mb-10">
           <div class="flex items-center justify-between mb-6">
@@ -208,47 +241,6 @@ const carouselTools = popularTools.map(tool => ({
             basePath={basePath}
           />
         </section>
-
-        <!-- All Tools by Category -->
-        {categories.map((cat) => {
-          const catTools = getToolsByCategory(cat.id);
-          if (catTools.length === 0) return null;
-          return (
-            <section class="mb-8 content-auto">
-              <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                <span class="text-blue-500 dark:text-blue-400" set:html={getIconSvg(cat.icon, 20)} />
-                <span>{categoryMessages[cat.id] || cat.id}</span>
-                <span class="text-sm font-normal text-gray-400 dark:text-gray-500">({catTools.length})</span>
-              </h2>
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                {catTools.map((tool) => (
-                  <a
-                    href={getLocalizedPath(locale, `/tools/${tool.slug}`)}
-                    class="group flex items-center gap-3 p-3 bg-white dark:bg-gray-800/60
-                           border border-gray-100 dark:border-gray-700/40 rounded-xl
-                           hover:border-blue-400/60 dark:hover:border-blue-500/40
-                           hover:bg-blue-50/50 dark:hover:bg-blue-900/10
-                           cursor-pointer transition-all duration-200"
-                  >
-                    <span class="text-2xl flex-shrink-0 text-blue-500 dark:text-blue-400" set:html={getIconSvg(tool.icon, 22)} />
-                    <div class="flex-1 min-w-0">
-                      <h3 class="font-medium text-sm text-gray-900 dark:text-white truncate group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                        {getToolName(tool.slug)}
-                      </h3>
-                      <p class="text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5">
-                        {getToolDescription(tool.slug)}
-                      </p>
-                    </div>
-                    {tool.popular && (
-                      <span class="inline-flex items-center px-1.5 py-0.5 text-[10px] font-medium rounded-full bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400 flex-shrink-0">HOT</span>
-                    )}
-                  </a>
-                ))}
-              </div>
-            </section>
-          );
-        })}
-
       </div>
     </main>
 
@@ -256,5 +248,5 @@ const carouselTools = popularTools.map(tool => ({
   </div>
 
   <!-- Mobile Bottom Navigation -->
-  <MobileBottomNav client:load locale={locale} navMessages={navMessages} />
+  <MobileBottomNav client:load locale={locale} navMessages={mobileNavMessages} />
 </BaseLayout>

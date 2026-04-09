@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { K, SAMPLE_CONTENT, buildOutlineTree, extractHeadings, generateOutline } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;

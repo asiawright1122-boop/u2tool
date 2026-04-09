@@ -8,12 +8,12 @@
   }
 
   interface Props {
-    option: EChartsOption;
+    option: EChartsOption | (() => EChartsOption);
     style?: string;
     className?: string;
     notMerge?: boolean;
     lazyUpdate?: boolean;
-    theme?: string | object;
+    theme?: string | object | (() => string | object | undefined);
     showLoading?: boolean;
     loadingOption?: object;
     onChartReady?: (chart: EChartsInstance) => void;
@@ -36,6 +36,9 @@
   let containerEl: HTMLDivElement;
   let chartInstance: EChartsInstance | undefined;
   let resizeObserver: ResizeObserver | undefined;
+  let themeObserver: MutationObserver | undefined;
+  let themeRefreshFrame = 0;
+  let stopObservingTheme: (() => void) | undefined;
   
   // 加载状态管理
   type LoadingPhase = 'idle' | 'loading-library' | 'initializing-chart' | 'ready' | 'error';
@@ -43,6 +46,9 @@
   let loadError = $state<string | null>(null);
   let retryCount = $state(0);
   const MAX_RETRIES = 3;
+  const PLUGIN_SERIES_TYPES = new Set(['liquidFill', 'wordCloud']);
+  const HIERARCHY_SERIES_TYPES = new Set(['graph', 'sankey', 'sunburst', 'tree', 'treemap']);
+  const FINANCE_SERIES_TYPES = new Set(['boxplot', 'candlestick']);
 
   export function getEchartsInstance(): EChartsInstance | undefined {
     return chartInstance;
@@ -55,7 +61,62 @@
    * 使用 requestIdleCallback 延迟加载 ECharts 库
    * 避免阻塞主线程，提升页面响应速度
    */
-  async function loadEChartsWithIdleCallback(): Promise<any> {
+  function getOptionToUse(): EChartsOption {
+    return typeof option === 'function' ? (option as () => EChartsOption)() : option;
+  }
+
+  function getThemeToUse() {
+    return typeof theme === 'function' ? theme() : theme;
+  }
+
+  function getSeriesTypes(chartOption: EChartsOption): string[] {
+    const series = chartOption?.series;
+    const seriesList = Array.isArray(series) ? series : series ? [series] : [];
+
+    return seriesList.flatMap((seriesOption) => {
+      const seriesType = typeof seriesOption === 'object' && seriesOption
+        ? (seriesOption as { type?: string }).type
+        : undefined;
+
+      return seriesType ? [seriesType] : [];
+    });
+  }
+
+  async function loadRuntimeModule(chartOption: EChartsOption) {
+    const seriesTypes = getSeriesTypes(chartOption);
+
+    if (seriesTypes.some((seriesType) => PLUGIN_SERIES_TYPES.has(seriesType))) {
+      return import('@/lib/echarts/plugin-runtime');
+    }
+
+    if (seriesTypes.includes('custom')) {
+      return import('@/lib/echarts/custom-runtime');
+    }
+
+    if (seriesTypes.includes('themeRiver')) {
+      return import('@/lib/echarts/theme-river-runtime');
+    }
+
+    if (seriesTypes.includes('parallel')) {
+      return import('@/lib/echarts/parallel-runtime');
+    }
+
+    if (seriesTypes.some((seriesType) => FINANCE_SERIES_TYPES.has(seriesType))) {
+      return import('@/lib/echarts/finance-runtime');
+    }
+
+    if (seriesTypes.some((seriesType) => HIERARCHY_SERIES_TYPES.has(seriesType))) {
+      return import('@/lib/echarts/hierarchy-runtime');
+    }
+
+    if (seriesTypes.includes('heatmap') && chartOption && 'calendar' in chartOption) {
+      return import('@/lib/echarts/calendar-runtime');
+    }
+
+    return import('@/lib/echarts/common-runtime');
+  }
+
+  async function loadEChartsWithIdleCallback(chartOption: EChartsOption): Promise<any> {
     // 等待浏览器空闲时加载
     await new Promise<void>((resolve) => {
       if ('requestIdleCallback' in window) {
@@ -66,8 +127,8 @@
       }
     });
 
-    // 动态导入 ECharts 库
-    const echartsModule = await import('echarts');
+    const echartsModule = await loadRuntimeModule(chartOption);
+
     return echartsModule.default || echartsModule;
   }
 
@@ -82,8 +143,9 @@
     try {
       // Phase 1: 加载 ECharts 库
       loadingPhase = 'loading-library';
+      const optToUse = getOptionToUse();
       
-      const loadEcharts = loadEChartsWithIdleCallback();
+      const loadEcharts = loadEChartsWithIdleCallback(optToUse);
       const timeout = new Promise<never>((_, reject) =>
         setTimeout(() => reject(new Error('ECharts load timeout')), ECHARTS_LOAD_TIMEOUT_MS)
       );
@@ -94,8 +156,7 @@
       loadingPhase = 'initializing-chart';
       await tick(); // 确保 DOM 更新
 
-      chartInstance = echarts.init(containerEl, theme);
-      const optToUse = typeof option === 'function' ? (option as () => any)() : option;
+      chartInstance = echarts.init(containerEl, getThemeToUse());
       chartInstance.setOption(optToUse, notMerge, lazyUpdate);
 
       if (onChartReady) onChartReady(chartInstance);
@@ -153,16 +214,56 @@
     await initializeChart();
   }
 
-  onMount(async () => {
-    await tick();
-    await initializeChart();
+  function refreshChartForThemeChange() {
+    if (!chartInstance || loadingPhase !== 'ready') {
+      return;
+    }
+
+    chartInstance.setOption(getOptionToUse(), true, lazyUpdate);
+    chartInstance.resize();
+  }
+
+  function observeThemeChanges() {
+    if (typeof document === 'undefined') {
+      return;
+    }
+
+    const scheduleThemeRefresh = () => {
+      cancelAnimationFrame(themeRefreshFrame);
+      themeRefreshFrame = requestAnimationFrame(() => {
+        refreshChartForThemeChange();
+      });
+    };
+
+    themeObserver = new MutationObserver((mutations) => {
+      if (mutations.some((mutation) => mutation.attributeName === 'class' || mutation.attributeName === 'style')) {
+        scheduleThemeRefresh();
+      }
+    });
+    themeObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class', 'style'],
+    });
+
+    window.addEventListener('u2tool:themechange', scheduleThemeRefresh);
+
+    return () => {
+      window.removeEventListener('u2tool:themechange', scheduleThemeRefresh);
+    };
+  }
+
+  onMount(() => {
+    void (async () => {
+      await tick();
+      await initializeChart();
+      stopObservingTheme = observeThemeChanges();
+    })();
   });
 
   // Update chart when option changes
   $effect(() => {
     if (chartInstance && option && loadingPhase === 'ready') {
-      const optToUse = typeof option === 'function' ? (option as () => any)() : option;
-      chartInstance.setOption(optToUse, notMerge, lazyUpdate);
+      chartInstance.setOption(getOptionToUse(), notMerge, lazyUpdate);
     }
   });
 
@@ -179,6 +280,9 @@
 
   onDestroy(() => {
     resizeObserver?.disconnect();
+    themeObserver?.disconnect();
+    stopObservingTheme?.();
+    cancelAnimationFrame(themeRefreshFrame);
     if (chartInstance) {
       chartInstance.dispose();
       chartInstance = undefined;

@@ -692,7 +692,7 @@
       >
         <EChartsWrapper
           bind:this={chartRef as any}
-          option={getChartOption()}
+          option={getChartOption}
           style="height: 400px; width: 100%"
           notMerge={true}
           lazyUpdate={true}

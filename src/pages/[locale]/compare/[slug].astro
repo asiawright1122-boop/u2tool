@@ -1,0 +1,217 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.svelte';
+import StaticSidebar from '@/components/layout/StaticSidebar.astro';
+import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
+import Footer from '@/components/layout/Footer.astro';
+import Breadcrumb from '@/components/layout/Breadcrumb.astro';
+import HreflangTags from '@/components/seo/HreflangTags.astro';
+import StructuredData from '@/components/seo/StructuredData.astro';
+import { categories, tools } from '@/config/tools';
+import { locales } from '@/lib/i18n';
+import type { Locale } from '@/lib/i18n';
+import {
+  comparisonSurfaceSlugs,
+  getComparisonGuide,
+  getComparisonUiCopy,
+} from '@/lib/comparison-surfaces';
+import { loadBaseMessages } from '@/lib/translations';
+import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
+import { getPublicSiteUrl } from '@/lib/public-env';
+
+export const prerender = true;
+
+export const getStaticPaths: GetStaticPaths = () =>
+  locales.flatMap((locale) =>
+    comparisonSurfaceSlugs.map((slug) => ({
+      params: { locale, slug },
+      props: { locale, slug },
+    }))
+  );
+
+const { locale, slug } = Astro.props as { locale: Locale; slug: string };
+const baseMessages = await loadBaseMessages(locale);
+const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
+const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
+const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
+const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
+const headerTranslations = buildHeaderTranslations(baseMessages);
+const mobileNavMessages = buildMobileNavMessages(navMessages);
+
+const toolNames = Object.fromEntries(
+  tools.map((tool) => {
+    const entry = toolsObj[tool.slug] as Record<string, unknown> | undefined;
+    return [tool.slug, (entry?.name as string) || tool.slug];
+  })
+);
+const toolDescriptions = Object.fromEntries(
+  tools.map((tool) => {
+    const entry = toolsObj[tool.slug] as Record<string, unknown> | undefined;
+    return [tool.slug, (entry?.seo_description as string) || (entry?.description as string) || ''];
+  })
+);
+
+const guide = getComparisonGuide(locale, slug, categoryMessages, toolNames, toolDescriptions);
+if (!guide) {
+  return Astro.redirect(`/${locale}/compare`);
+}
+
+const uiCopy = getComparisonUiCopy(locale);
+const BASE_URL = getPublicSiteUrl();
+const breadcrumbItems = [
+  { label: navMessages.home || 'Home', href: `/${locale}` },
+  { label: uiCopy.comparisonSectionTitle, href: `/${locale}/compare` },
+  { label: guide.title, href: guide.href },
+];
+const breadcrumbData = {
+  itemListElement: breadcrumbItems.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.label,
+    item: `${BASE_URL}${item.href}`,
+  })),
+};
+const collectionData = {
+  name: guide.title,
+  description: guide.description,
+  url: `${BASE_URL}${guide.href}`,
+  numberOfItems: guide.workflows.reduce((count, workflow) => count + workflow.tools.length, 0),
+  hasPart: guide.workflows.flatMap((workflow) =>
+    workflow.tools.map((tool) => ({
+      '@type': 'SoftwareApplication',
+      name: tool.name,
+      description: tool.description || undefined,
+      url: `${BASE_URL}${tool.href}`,
+    }))
+  ),
+};
+---
+
+<BaseLayout
+  title={guide.title}
+  description={guide.description}
+  locale={locale}
+  canonicalPath={`/compare/${guide.slug}`}
+  siteDescription={siteMessages.description}
+>
+  <HreflangTags path={`/compare/${guide.slug}`} slot="head" />
+  <StructuredData type="BreadcrumbList" data={breadcrumbData} slot="head" />
+  <StructuredData type="CollectionPage" data={collectionData} slot="head" />
+  <meta property="og:title" content={`${guide.title} | U2Tool`} slot="head" />
+  <meta property="og:description" content={guide.description} slot="head" />
+  <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
+  <meta property="og:type" content="website" slot="head" />
+  <meta property="og:url" content={`${BASE_URL}${guide.href}`} slot="head" />
+  <meta name="twitter:card" content="summary_large_image" slot="head" />
+
+  <StaticSidebar
+    locale={locale}
+    categories={categories}
+    categoryNames={categoryMessages}
+    navMessages={navMessages}
+    siteName={siteMessages.name || 'U2Tool'}
+  />
+
+  <div class="main-content-with-sidebar main-content-with-mobile-nav">
+    <Header client:load locale={locale} translations={headerTranslations} />
+
+    <main class="py-6 px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="mb-6">
+          <Breadcrumb locale={locale} items={breadcrumbItems} />
+        </div>
+
+        <section class="rounded-3xl border border-slate-200/80 bg-gradient-to-br from-white via-slate-50 to-amber-50/70 p-6 shadow-sm dark:border-slate-700/60 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800/80">
+          <h1 class="text-3xl font-bold text-slate-900 dark:text-white">{guide.title}</h1>
+          <p class="mt-4 max-w-4xl text-sm leading-7 text-slate-700 dark:text-slate-300">
+            {guide.description}
+          </p>
+
+          <div class="mt-5 flex flex-wrap gap-2">
+            {guide.relatedCategories.map((category) => (
+              <a
+                href={category.href}
+                class="inline-flex items-center rounded-full border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 transition-colors hover:border-amber-300 hover:text-amber-700 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-amber-400 dark:hover:text-amber-300"
+              >
+                {category.name}
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section class="mt-8 rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm dark:border-slate-700/60 dark:bg-slate-900/70">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white">{uiCopy.workflowTitle}</h2>
+          <div class="mt-6 grid gap-4 lg:grid-cols-2">
+            {guide.workflows.map((workflow) => (
+              <article
+                data-comparison-workflow={workflow.slug}
+                class="rounded-2xl border border-slate-200/80 bg-slate-50/80 p-5 dark:border-slate-700/60 dark:bg-slate-800/70"
+              >
+                <h3 class="text-base font-semibold text-slate-900 dark:text-white">
+                  {workflow.title}
+                </h3>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  {workflow.tools.map((tool) => (
+                    <a
+                      href={tool.href}
+                      data-comparison-tool={tool.slug}
+                      title={tool.description || tool.name}
+                      class="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-xs font-medium text-amber-800 transition-colors hover:border-amber-300 hover:bg-amber-100 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-200 dark:hover:border-amber-400/40 dark:hover:bg-amber-500/20"
+                    >
+                      {tool.name}
+                    </a>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="mt-8 rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm dark:border-slate-700/60 dark:bg-slate-900/70">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white">{uiCopy.tableTitle}</h2>
+          <div class="mt-5 overflow-x-auto">
+            <table class="min-w-full divide-y divide-slate-200 text-sm dark:divide-slate-700">
+              <thead>
+                <tr class="text-left text-xs uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+                  <th class="px-3 py-3">{uiCopy.tableToolLabel}</th>
+                  <th class="px-3 py-3">{uiCopy.workflowTitle}</th>
+                  <th class="px-3 py-3">{uiCopy.tableCategoryLabel}</th>
+                  <th class="px-3 py-3">{uiCopy.routeLabel}</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+                {guide.workflows.flatMap((workflow) =>
+                  workflow.tools.map((tool) => (
+                    <tr>
+                      <td class="px-3 py-4 align-top">
+                        <div class="font-medium text-slate-900 dark:text-white">{tool.name}</div>
+                        <div class="mt-1 text-xs leading-6 text-slate-600 dark:text-slate-300">
+                          {tool.description}
+                        </div>
+                      </td>
+                      <td class="px-3 py-4 align-top text-slate-700 dark:text-slate-200">{workflow.title}</td>
+                      <td class="px-3 py-4 align-top text-slate-700 dark:text-slate-200">{tool.categoryName}</td>
+                      <td class="px-3 py-4 align-top">
+                        <a
+                          href={tool.href}
+                          class="inline-flex items-center rounded-full bg-slate-900 px-3 py-1.5 text-xs font-medium text-white transition-colors hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100"
+                        >
+                          {uiCopy.routeLabel}
+                        </a>
+                      </td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <Footer locale={locale} />
+  </div>
+
+  <MobileBottomNav client:load locale={locale} navMessages={mobileNavMessages} />
+</BaseLayout>

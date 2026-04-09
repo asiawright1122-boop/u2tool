@@ -8,10 +8,41 @@ const messagesDir = path.join(process.cwd(), 'src/messages');
 const languages = ['en', 'zh', 'es', 'pt', 'ja', 'ru', 'fr', 'ar', 'de', 'ko'] as const;
 type Language = typeof languages[number];
 
+function isObject(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+function deepMerge(
+  base: Record<string, unknown>,
+  override: Record<string, unknown>
+): Record<string, unknown> {
+  const merged: Record<string, unknown> = { ...base };
+
+  for (const [key, value] of Object.entries(override)) {
+    const baseValue = merged[key];
+    if (isObject(baseValue) && isObject(value)) {
+      merged[key] = deepMerge(baseValue, value);
+      continue;
+    }
+
+    merged[key] = value;
+  }
+
+  return merged;
+}
+
 function loadTranslations(lang: string): Record<string, unknown> {
-  const filePath = path.join(messagesDir, `${lang}.json`);
-  const content = fs.readFileSync(filePath, 'utf-8');
-  return JSON.parse(content);
+  const rootPath = path.join(messagesDir, `${lang}.json`);
+  const basePath = path.join(messagesDir, lang, 'base.json');
+
+  const rootMessages = fs.existsSync(rootPath)
+    ? (JSON.parse(fs.readFileSync(rootPath, 'utf-8')) as Record<string, unknown>)
+    : {};
+  const baseMessages = fs.existsSync(basePath)
+    ? (JSON.parse(fs.readFileSync(basePath, 'utf-8')) as Record<string, unknown>)
+    : {};
+
+  return deepMerge(baseMessages, rootMessages);
 }
 
 function getAllKeys(obj: Record<string, unknown>, prefix = ''): string[] {
@@ -54,9 +85,7 @@ describe('Translation Files', () => {
         console.warn(`Missing keys in ${lang}.json:`, missingKeys.slice(0, 10));
       }
       
-      // Allow some missing keys but warn about them
-      // In a strict mode, you would use: expect(missingKeys).toHaveLength(0);
-      expect(missingKeys.length).toBeLessThan(100); // Relaxed threshold
+      expect(missingKeys).toHaveLength(0);
     });
   });
 
@@ -105,8 +134,8 @@ describe('Translation Property-Based Tests', () => {
    * Property 1: Translation Key Completeness
    * *For any* translation key that exists in en.json, that same key SHALL exist in all other language files
    * 
-   * Note: This test collects missing keys and reports them. During active i18n work,
-   * we allow a threshold of missing keys but track them for completion.
+   * Note: This test collects missing keys and reports them.
+   * Current policy is strict parity: zero missing keys per locale.
    */
   it('Property 1: For any key in en.json, that key should exist in all other language files', () => {
     const enKeys = allKeys['en'];
@@ -149,14 +178,12 @@ describe('Translation Property-Based Tests', () => {
       }
     }
     
-    // Allow a threshold during active i18n work (same as unit test threshold)
-    // This threshold should decrease as i18n work progresses
-    const MISSING_KEY_THRESHOLD_PER_LANG = 100;
+    const MISSING_KEY_THRESHOLD_PER_LANG = 0;
     for (const lang of otherLanguages) {
       expect(
         missingKeysByLang[lang].length,
         `Too many missing keys in ${lang}.json`
-      ).toBeLessThan(MISSING_KEY_THRESHOLD_PER_LANG);
+      ).toBe(MISSING_KEY_THRESHOLD_PER_LANG);
     }
   });
 

@@ -81,21 +81,17 @@
       saved: savedPercent
     };
   }
+
   function copyOutput() {
     navigator.clipboard.writeText(output);
     copied = true;
     if (timerRef) clearTimeout(timerRef);
     timerRef = setTimeout(() => copied = false, 2000);
   }
-  function formatSize(bytes: number) {
-    if (bytes < 1024) return bytes + ' B';
-    useEffect(() => {
-      return () => {
-        if (timerRef) clearTimeout(timerRef);
-      };
-    }, []);
 
-    return (bytes / 1024).toFixed(2) + ' KB';
+  function formatSize(bytes: number) {
+    if (bytes < 1024) return `${bytes} B`;
+    return `${(bytes / 1024).toFixed(2)} KB`;
   }
 
 </script>

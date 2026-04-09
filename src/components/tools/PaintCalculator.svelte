@@ -268,7 +268,7 @@
 
       <!-- Results -->
       {#if result}
-result.paintableArea > 0 && (
+{#if result.paintableArea > 0}
         <div class="bg-green-50 dark:bg-green-900/20 rounded-xl p-6">
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             {t('results')}
@@ -303,7 +303,7 @@ result.paintableArea > 0 && (
             </div>
           </div>
         </div>
-      )
+      {/if}
 {/if}
     </div>
   

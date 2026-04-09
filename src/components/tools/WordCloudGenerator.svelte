@@ -27,7 +27,6 @@
   // Imports
   import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
   import { useChartTheme } from '@/hooks/useChartTheme';
-  import 'echarts-wordcloud';
 
   const colorThemes = {
   default: ['#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#3ba272', '#fc8452', '#9a60b4'],
@@ -391,7 +390,7 @@
           <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="min-height: 400px">
             <EChartsWrapper
               bind:this={chartRef}
-              option={getChartOption()}
+              option={getChartOption}
               style="height: 400px; width: 100%"
               notMerge={true}
               lazyUpdate={true}

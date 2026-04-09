@@ -7,6 +7,8 @@
 
   interface DiscoveryMatch {
     slug: string;
+    href?: string;
+    kind?: 'comparison' | 'tool';
     name: string;
     description: string;
     category: string;
@@ -96,6 +98,10 @@
 
   function toToolPath(slug: string): string {
     return getLocalizedPath(locale as Locale, `/tools/${slug}`);
+  }
+
+  function toResultPath(result: DiscoveryMatch): string {
+    return result.href || toToolPath(result.slug);
   }
 
   function toToolsPath(): string {
@@ -246,7 +252,7 @@
         <div class="space-y-3">
           {#each results as result}
             <a
-              href={toToolPath(result.slug)}
+              href={toResultPath(result)}
               onclick={() => handleResultClick(result)}
               class="block rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:border-blue-400 dark:hover:border-blue-500 transition-colors"
             >

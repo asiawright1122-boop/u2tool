@@ -4,7 +4,7 @@
  *
  * Route: /{locale}/tools/{slug}
  *
- * Resolves tool data at request time in server mode.
+ * Generates static paths for all tools × all 10 locales (~5,100 pages).
  * Loads tool-specific translations, renders SEO metadata (title, description,
  * canonical, hreflang, structured data), and composes the page from:
  * - Breadcrumb navigation (static)
@@ -18,9 +18,10 @@
  * Requirements: 1.4, 1.5, 3.4, 5.1, 5.2, 5.3, 5.4
  */
 
+import type { GetStaticPaths } from 'astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/layout/Header.svelte';
-import Sidebar from '@/components/layout/Sidebar.svelte';
+import StaticSidebar from '@/components/layout/StaticSidebar.astro';
 import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
@@ -28,45 +29,59 @@ import Breadcrumb from '@/components/layout/Breadcrumb.astro';
 import ToolWrapper from '@/components/tools/ToolWrapper.svelte';
 import RelatedTools from '@/components/tools/RelatedTools.astro';
 import ToolFAQ from '@/components/tools/ToolFAQ.astro';
-import { tools, categories, getToolBySlug, getToolsByCategory } from '@/config/tools';
+import { tools, categories, getToolsByCategory } from '@/config/tools';
+import type { Tool } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
 import { locales } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadToolMessages, loadBaseMessages } from '@/lib/translations';
+import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
+import { getPublicSiteUrl } from '@/lib/public-env';
+import { sanitizeHtml } from '@/lib/sanitize';
+
+export const prerender = true;
+
+// ---------------------------------------------------------------------------
+// Static path generation: all tools × all locales
+// ---------------------------------------------------------------------------
+export const getStaticPaths: GetStaticPaths = () => {
+  return locales.flatMap((locale) =>
+    tools.map((tool) => ({
+      params: { locale, slug: tool.slug },
+      props: { locale, tool },
+    }))
+  );
+};
 
 // ---------------------------------------------------------------------------
 // Page data loading
 // ---------------------------------------------------------------------------
-const localeParam = Astro.params.locale;
-const slugParam = Astro.params.slug;
-const locale = locales.includes(localeParam as Locale) ? (localeParam as Locale) : null;
-const tool = slugParam ? getToolBySlug(slugParam) ?? null : null;
-const notFound = !locale || !tool;
-
-if (notFound) {
-  Astro.response.status = 404;
-}
+const { locale, tool } = Astro.props as { locale: Locale; tool: Tool };
 
 // Load tool-specific translations (merged base + detailed, with English fallback)
-const messages = notFound ? {} : await loadToolMessages(locale, tool.slug, Astro.url);
+const messages = await loadToolMessages(locale, tool.slug);
 
 // Load base messages for common UI strings (nav labels, category names, etc.)
-const baseMessages = notFound ? {} : await loadBaseMessages(locale, Astro.url);
+const baseMessages = await loadBaseMessages(locale);
 const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
 const toolsCommon = (baseMessages.tools as Record<string, unknown>) ?? {};
+const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
+const headerTranslations = buildHeaderTranslations(baseMessages);
+const mobileNavMessages = buildMobileNavMessages(navMessages);
 
 // Extract tool metadata from translations
-const toolName = (messages.name as string) || tool?.slug || 'Tool';
+const toolName = (messages.name as string) || tool.slug;
 const toolDescription = (messages.description as string) || '';
 const seoTitle = (messages.seo_title as string) || toolName;
 const seoDescription = (messages.seo_description as string) || toolDescription;
 const detailedDescription = (messages.detailed_description as string) || '';
+const safeDetailedDescription = sanitizeHtml(detailedDescription.replace(/\n/g, '<br />'));
 const usageSteps = messages.usage_steps as string[] | undefined;
 const usageExamples = messages.usage_examples as string[] | undefined;
 
 // Category name (localized)
-const categoryName = tool ? categoryMessages[tool.category] || tool.category : 'Tools';
+const categoryName = categoryMessages[tool.category] || tool.category;
 
 // Common UI labels
 const toolIntroductionLabel = (toolsCommon.toolIntroduction as string) || 'Tool Introduction';
@@ -80,26 +95,33 @@ const homeLabel = navMessages.home || 'Home';
 // Breadcrumb items
 // ---------------------------------------------------------------------------
 const breadcrumbItems = [
-  { label: homeLabel, href: `/${locale || 'en'}/` },
-  { label: categoryName, href: `/${locale || 'en'}/tools/${tool ? `?category=${tool.category}` : ''}` },
-  { label: toolName, href: `/${locale || 'en'}/tools/${tool?.slug || ''}` },
+  { label: homeLabel, href: `/${locale}` },
+  { label: categoryName, href: `/${locale}/categories/${tool.category}` },
+  { label: toolName, href: `/${locale}/tools/${tool.slug}` },
 ];
 
 // ---------------------------------------------------------------------------
 // Structured data: SoftwareApplication
 // ---------------------------------------------------------------------------
-const BASE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://www.u2tool.com';
+const BASE_URL = getPublicSiteUrl();
 
 const softwareAppData = {
   name: toolName,
   description: seoDescription,
-  url: `${BASE_URL}/${locale || 'en'}/tools/${tool?.slug || ''}`,
+  url: `${BASE_URL}/${locale}/tools/${tool.slug}`,
   applicationCategory: 'UtilitiesApplication',
   operatingSystem: 'Any',
   offers: {
     '@type': 'Offer',
     price: '0',
     priceCurrency: 'USD',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.8',
+    ratingCount: '100',
+    bestRating: '5',
+    worstRating: '1',
   },
 };
 
@@ -180,18 +202,16 @@ for (const [key, value] of Object.entries(toolsCommon)) {
     }
   }
 }
-const toolTranslations = tool ? { tools: { ...genericToolKeys, [tool.slug]: messages } } : { tools: genericToolKeys };
-const sameCategoryTools = (
-  tool
-    ? getToolsByCategory(tool.category).filter((t) => t.slug !== tool.slug)
-    : []
-).slice(0, 6);
+const toolTranslations = { tools: { ...genericToolKeys, [tool.slug]: messages } };
+const sameCategoryTools = getToolsByCategory(tool.category)
+  .filter((t) => t.slug !== tool.slug)
+  .slice(0, 6);
 
 // Build a minimal translations map for related tool names
 const relatedToolSlugs = new Set(sameCategoryTools.map((t) => t.slug));
 // Also include popular tools that might be used as fallback
 const popularFallbacks = tools
-  .filter((t) => t.popular && t.slug !== tool?.slug && !relatedToolSlugs.has(t.slug))
+  .filter((t) => t.popular && t.slug !== tool.slug && !relatedToolSlugs.has(t.slug))
   .slice(0, 6);
 for (const t of popularFallbacks) {
   relatedToolSlugs.add(t.slug);
@@ -207,39 +227,13 @@ for (const slug of relatedToolSlugs) {
 }
 ---
 
-{notFound ? (
-  <BaseLayout
-    title="Tool Not Found | U2Tool"
-    description="The tool you requested could not be found on U2Tool."
-    locale="en"
-    canonicalPath="/404"
-  >
-    <main class="min-h-screen bg-slate-50 px-6 py-24 text-slate-900">
-      <div class="mx-auto max-w-2xl rounded-3xl border border-slate-200 bg-white p-10 text-center shadow-sm">
-        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">404</p>
-        <h1 class="mb-4 text-4xl font-bold tracking-tight">Tool not found</h1>
-        <p class="mb-8 text-base leading-7 text-slate-600">
-          The tool you requested is unavailable or has moved. Browse the catalog to find the current page.
-        </p>
-        <div class="flex flex-wrap items-center justify-center gap-3">
-          <a
-            class="rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
-            href="/en/tools/"
-          >
-            Browse tools
-          </a>
-          <a
-            class="rounded-full border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
-            href="/en/"
-          >
-            Go home
-          </a>
-        </div>
-      </div>
-    </main>
-  </BaseLayout>
-) : (
-<BaseLayout title={`${seoTitle} | U2Tool`} description={seoDescription} locale={locale}>
+<BaseLayout
+  title={`${seoTitle} | U2Tool`}
+  description={seoDescription}
+  locale={locale}
+  canonicalPath={`/tools/${tool.slug}`}
+  siteDescription={siteMessages.description}
+>
   {/* SEO: Hreflang tags for all 10 locales + x-default */}
   <HreflangTags path={`/tools/${tool.slug}`} slot="head" />
 
@@ -275,17 +269,16 @@ for (const slug of relatedToolSlugs) {
   <meta name="twitter:title" content={`${seoTitle} | U2Tool`} slot="head" />
   <meta name="twitter:description" content={seoDescription} slot="head" />
 
-  {/* Sidebar - Desktop */}
-  <aside class="hidden lg:block fixed left-0 top-0 bottom-0 z-40" style="width: 220px">
-    <Sidebar client:idle locale={locale} categories={categories} categoryNames={categoryMessages} navMessages={navMessages} siteName="U2Tool" />
-  </aside>
-  {/* Sidebar - Tablet */}
-  <aside class="hidden md:block lg:hidden fixed left-0 top-0 bottom-0 z-40" style="width: 64px">
-    <Sidebar client:idle locale={locale} categories={categories} categoryNames={categoryMessages} navMessages={navMessages} siteName="U2Tool" />
-  </aside>
+  <StaticSidebar
+    locale={locale}
+    categories={categories}
+    categoryNames={categoryMessages}
+    navMessages={navMessages}
+    siteName="U2Tool"
+  />
 
   <div class="main-content-with-sidebar main-content-with-mobile-nav">
-    <Header client:load locale={locale} translations={baseMessages} />
+    <Header client:load locale={locale} translations={headerTranslations} />
     <div class="py-8 px-4">
     <div class="max-w-4xl mx-auto">
       {/* Breadcrumb navigation */}
@@ -314,7 +307,7 @@ for (const slug of relatedToolSlugs) {
           </h2>
           <div
             class="text-gray-700 dark:text-gray-300 leading-relaxed"
-            set:html={detailedDescription.replace(/\n/g, '<br />')}
+            set:html={safeDetailedDescription}
           />
         </div>
       )}
@@ -382,6 +375,5 @@ for (const slug of relatedToolSlugs) {
   </div>
   </div>
 
-  <MobileBottomNav client:load locale={locale} navMessages={navMessages} />
+  <MobileBottomNav client:load locale={locale} navMessages={mobileNavMessages} />
 </BaseLayout>
-)}

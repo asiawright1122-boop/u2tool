@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { formatJson, parseResponse, sortObject } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -86,6 +88,54 @@ Cache-Control: no-cache
     input = examples[type];
   }
 
+  function formatXml(xml: string): string {
+    const compact = xml.replace(/>\s*</g, '><').trim();
+    let indent = 0;
+
+    return compact
+      .replace(/></g, '>\n<')
+      .split('\n')
+      .map((line) => {
+        if (line.startsWith('</')) {
+          indent = Math.max(indent - 1, 0);
+        }
+
+        const formattedLine = `${'  '.repeat(indent)}${line}`;
+
+        if (/^<[^!?/][^>]*[^/]>/u.test(line) && !line.includes('</')) {
+          indent += 1;
+        }
+
+        return formattedLine;
+      })
+      .join('\n');
+  }
+
+  function countKeys(value: unknown): number {
+    if (Array.isArray(value)) {
+      return value.reduce((sum, item) => sum + countKeys(item), value.length);
+    }
+
+    if (!value || typeof value !== 'object') {
+      return 0;
+    }
+
+    return Object.values(value).reduce((sum, item) => sum + countKeys(item), Object.keys(value).length);
+  }
+
+  function getDepth(value: unknown): number {
+    if (!value || typeof value !== 'object') {
+      return 0;
+    }
+
+    if (Array.isArray(value)) {
+      return value.length === 0 ? 1 : 1 + Math.max(...value.map((item) => getDepth(item)));
+    }
+
+    const children = Object.values(value);
+    return children.length === 0 ? 1 : 1 + Math.max(...children.map((item) => getDepth(item)));
+  }
+
 </script>
 
 
@@ -155,11 +205,11 @@ Cache-Control: no-cache
 
       <!-- Error -->
       {#if input.trim()}
-!parsed && (
+{#if !parsed}
         <div class="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-600 dark:text-red-400">
           {t('unableToParse')}
         </div>
-      )
+      {/if}
 {/if}
 
       <!-- Parsed Result -->
@@ -177,7 +227,7 @@ Cache-Control: no-cache
                 </div>
 {/if}
               {#if parsed.headers}
-Object.keys(parsed.headers).length > 0 && (
+{#if Object.keys(parsed.headers).length > 0}
                 <div>
                   <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('headers')}</h4>
                   <div class="space-y-1">
@@ -189,7 +239,7 @@ Object.keys(parsed.headers).length > 0 && (
 {/each}
                   </div>
                 </div>
-              )
+              {/if}
 {/if}
             </div>
 {/if}
@@ -221,13 +271,13 @@ Object.keys(parsed.headers).length > 0 && (
 
           <!-- Stats -->
           {#if typeof parsed.body === 'object'}
-parsed.body !== null && (
+{#if parsed.body !== null}
             <div class="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400">
               <span>{t('keys')}: {countKeys(parsed.body)}</span>
               <span>{t('depth')}: {getDepth(parsed.body)}</span>
               <span>{t('size')}: {new Blob([formattedBody]).size} {t('bytes')}</span>
             </div>
-          )
+          {/if}
 {/if}
         </div>
 {/if}

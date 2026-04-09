@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { SAMPLE_PAYLOADS } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -41,13 +43,25 @@
   error?: string;
 }
 
+  const METHODS = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'] as const;
+
+  const WEBHOOK_SAMPLES: Record<string, string> = {
+    json:
+      SAMPLE_PAYLOADS.json ??
+      '{\n  "event": "ping",\n  "timestamp": "2026-01-01T00:00:00.000Z"\n}',
+    github:
+      '{\n  "action": "opened",\n  "repository": { "name": "demo-repo" },\n  "pull_request": { "number": 123 }\n}',
+    stripe:
+      '{\n  "id": "evt_test_123",\n  "type": "payment_intent.succeeded",\n  "data": { "object": { "amount": 1999, "currency": "usd" } }\n}',
+  };
+
   let url = $state('');
 
   let method = $state('POST');
 
   let headers = $state('Content-Type: application/json');
 
-  let body = $state(SAMPLE_PAYLOADS.json);
+  let body = $state(WEBHOOK_SAMPLES.json);
 
   let requests = $state([]);
 
@@ -142,8 +156,8 @@
     setTimeout(() => copied = null, 2000);
   }
 
-  function loadSample(type: keyof typeof SAMPLE_PAYLOADS) {
-    body = SAMPLE_PAYLOADS[type];
+  function loadSample(type: keyof typeof WEBHOOK_SAMPLES) {
+    body = WEBHOOK_SAMPLES[type] ?? WEBHOOK_SAMPLES.json;
   }
 
 </script>

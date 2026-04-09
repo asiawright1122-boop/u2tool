@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { generateParagraph, generateSentence, generateWords } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;

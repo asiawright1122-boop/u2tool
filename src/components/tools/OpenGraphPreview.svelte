@@ -307,14 +307,14 @@
 
       <!-- 抓取模式下显示获取到的信息（只读） -->
       {#if mode === 'fetch'}
-title && (
+{#if title}
         <div class="p-4 bg-gray-100 dark:bg-gray-800/30 rounded-lg space-y-2 text-sm">
           <div><span class="text-gray-500 dark:text-gray-400">{t('openGraphPreview.title')}:</span> <span class="text-gray-900 dark:text-gray-100">{title}</span></div>
           <div><span class="text-gray-500 dark:text-gray-400">{t('openGraphPreview.description')}:</span> <span class="text-gray-900 dark:text-gray-100">{description || '-'}</span></div>
           <div><span class="text-gray-500 dark:text-gray-400">{t('openGraphPreview.siteName')}:</span> <span class="text-gray-900 dark:text-gray-100">{siteName || '-'}</span></div>
           <div><span class="text-gray-500 dark:text-gray-400">{t('openGraphPreview.imageUrl')}:</span> <span class="text-gray-900 dark:text-gray-100">{image || '-'}</span></div>
         </div>
-      )
+      {/if}
 {/if}
 
       <!-- Preview Type Selector -->

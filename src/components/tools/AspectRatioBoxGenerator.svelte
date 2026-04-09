@@ -32,6 +32,14 @@
   height: number;
 }
 
+  const PRESETS: Preset[] = [
+    { name: '16:9', width: 16, height: 9 },
+    { name: '4:3', width: 4, height: 3 },
+    { name: '1:1', width: 1, height: 1 },
+    { name: '3:2', width: 3, height: 2 },
+    { name: '21:9', width: 21, height: 9 },
+  ];
+
   let width = $state(16);
 
   let height = $state(9);
@@ -40,7 +48,7 @@
 
   let copied = $state(false);
 
-  let timerRef = $state(null);
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);
 
   let paddingPercent = $derived.by(() => {
     return ((height / width) * 100).toFixed(4);
@@ -67,7 +75,9 @@
   width: 100%;
 }`;
     }
-  });  onDestroy(() => {
+  });
+
+  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
 

@@ -177,7 +177,7 @@
 {/if}
 
       {#if fileName}
-!isLoading && (
+{#if !isLoading}
         <div class="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg space-y-3">
           <div class="flex items-center justify-between">
             <div>
@@ -199,7 +199,7 @@
             </video>
 {/if}
         </div>
-      )
+      {/if}
 {/if}
 
       <div class="flex items-center gap-4">

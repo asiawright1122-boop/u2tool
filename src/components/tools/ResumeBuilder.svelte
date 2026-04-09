@@ -20,16 +20,21 @@
   type LangLevel = 'native' | 'fluent' | 'advanced' | 'intermediate' | 'basic';
   interface Experience { id: string; company: string; position: string; startDate: string; endDate: string; description: string; current: boolean; }
   interface Education { id: string; school: string; degree: string; field: string; graduationDate: string; gpa?: string; }
+  interface ResumeSkill { name: string; level: number; }
+  interface ResumeLanguage { name: string; level: LangLevel; }
 
-  let resumeRef = $state(null);
+  const LANG_LEVELS: LangLevel[] = ['native', 'fluent', 'advanced', 'intermediate', 'basic'];
+  const PDF_MARGIN_MM = 10;
 
-  let fileInputRef = $state(null);
+  let resumeRef = $state<HTMLDivElement | null>(null);
+
+  let fileInputRef = $state<HTMLInputElement | null>(null);
 
   let activeTab = $state('edit');
 
   let template = $state('professional');
 
-  let photo = $state(null);
+  let photo = $state<string | null>(null);
 
   let accentColor = $state('#2563eb');
 
@@ -47,29 +52,47 @@
 
   let summary = $state('');
 
-  let skills = $state([]);
+  let skills = $state<ResumeSkill[]>([]);
 
   let newSkill = $state('');
 
   let newSkillLevel = $state(80);
 
-  let languages = $state([]);
+  let languages = $state<ResumeLanguage[]>([]);
 
   let newLang = $state('');
 
   let newLangLevel = $state('intermediate');
 
-  let experiences = $state([]);
+  let experiences = $state<Experience[]>([]);
 
-  let educations = $state([]);
+  let educations = $state<Education[]>([]);
 
   // Functions
-const langLabels = LANG_LEVEL_LABELS[locale] || LANG_LEVEL_LABELS.en;
+  function getLangLabel(level: LangLevel): string {
+    return t(`langLevels.${level}`);
+  }
+
+  function getTemplateClasses(currentTemplate: TemplateType): string {
+    switch (currentTemplate) {
+      case 'minimal':
+        return 'border border-gray-200';
+      case 'creative':
+        return 'border-l-8 border-[var(--accent)] bg-gradient-to-br from-white via-white to-slate-50';
+      case 'professional':
+      default:
+        return 'border-t-8 border-[var(--accent)]';
+    }
+  }
+
   function handlePhotoUpload(e: Event) {
-    const file = e.target.files?.[0];
+    const target = e.currentTarget as HTMLInputElement | null;
+    const file = target?.files?.[0];
     if (file) {
       const reader = new FileReader();
-      reader.onload = (ev) => photo = ev.target?.result as string;
+      reader.onload = (ev) => {
+        photo = (ev.target?.result as string) || null;
+      };
       reader.readAsDataURL(file);
     }
   }
@@ -105,20 +128,52 @@ const langLabels = LANG_LEVEL_LABELS[locale] || LANG_LEVEL_LABELS.en;
   function removeEducation(id: string) { return educations = educations.filter(edu => edu.id !== id); }
   async function exportPDF() {
     if (!resumeRef) return;
-    const html2pdf = (await import('html2pdf.js')).default;
-    html2pdf().set({
-      margin: 10,
-      filename: `${name || 'resume'}.pdf`,
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    }).from(resumeRef).save();
+
+    try {
+      const html2canvas = (await import('html2canvas')).default;
+      const jsPDF = (await import('jspdf')).default;
+      const canvas = await html2canvas(resumeRef, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: '#ffffff',
+        windowWidth: resumeRef.scrollWidth,
+        windowHeight: resumeRef.scrollHeight,
+      });
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+      const pageWidth = pdf.internal.pageSize.getWidth();
+      const pageHeight = pdf.internal.pageSize.getHeight();
+      const contentWidth = pageWidth - PDF_MARGIN_MM * 2;
+      const contentHeight = (canvas.height * contentWidth) / canvas.width;
+      const pageContentHeight = pageHeight - PDF_MARGIN_MM * 2;
+
+      for (let renderedHeight = 0; renderedHeight < contentHeight; renderedHeight += pageContentHeight) {
+        if (renderedHeight > 0) {
+          pdf.addPage();
+        }
+
+        pdf.addImage(
+          imgData,
+          'PNG',
+          PDF_MARGIN_MM,
+          PDF_MARGIN_MM - renderedHeight,
+          contentWidth,
+          contentHeight,
+          undefined,
+          'FAST'
+        );
+      }
+
+      pdf.save(`${name.trim() || 'resume'}.pdf`);
+    } catch (error) {
+      console.error('Resume PDF export failed:', error);
+    }
   }
 
 </script>
 
 {#snippet renderPreview()}
-<div bind:this={resumeRef} class={`bg-white text-gray-900 p-8 min-h-[297mm] w-[210mm] mx-auto shadow-lg ${baseStyles}`} style="--accent: {accentColor}">
+<div bind:this={resumeRef} class={`bg-white text-gray-900 p-8 min-h-[297mm] w-[210mm] mx-auto shadow-lg ${getTemplateClasses(template)}`} style="--accent: {accentColor}">
         <div class="flex items-start gap-6 mb-6">
           {#if photo}
 <img src={photo} alt="Photo" class="w-24 h-24 rounded-full object-cover border-4" style="border-color: {accentColor}" />
@@ -171,9 +226,7 @@ const langLabels = LANG_LEVEL_LABELS[locale] || LANG_LEVEL_LABELS.en;
                   <div><span class="font-semibold">{edu.degree}</span> - {edu.field}</div>
                   <span class="text-sm text-gray-500">{edu.graduationDate}</span>
                 </div>
-                <p class="text-gray-600">{edu.school} {#if edu.gpa}
-`(GPA: ${edu.gpa})`
-{/if}</p>
+                <p class="text-gray-600">{edu.school} {#if edu.gpa}<span> ({t('gpa')}: {edu.gpa})</span>{/if}</p>
               </div>
 {/each}
           </section>
@@ -197,7 +250,7 @@ const langLabels = LANG_LEVEL_LABELS[locale] || LANG_LEVEL_LABELS.en;
               <h2 class="text-lg font-semibold border-b-2 pb-1 mb-2" style="border-color: {accentColor}; color: {accentColor}">{t('languages')}</h2>
               <ul class="space-y-1">
                 {#each languages as lang, idx (idx)}
-<li  class="flex justify-between text-sm"><span>{lang.name}</span><span class="text-gray-500">{langLabels[lang.level]}</span></li>
+<li  class="flex justify-between text-sm"><span>{lang.name}</span><span class="text-gray-500">{getLangLabel(lang.level)}</span></li>
 {/each}
               </ul>
             </section>
@@ -329,7 +382,7 @@ const langLabels = LANG_LEVEL_LABELS[locale] || LANG_LEVEL_LABELS.en;
                 <input value={newLang} onchange={e => newLang = e.target.value} placeholder={t('addLanguage')} class="flex-1 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" onkeydown={e => e.key === 'Enter' && addLanguage()} />
                 <select value={newLangLevel} onchange={e => newLangLevel = e.target.value as LangLevel} class="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
                   {#each LANG_LEVELS as lvl (lvl)}
-<option  value={lvl}>{langLabels[lvl]}</option>
+<option  value={lvl}>{getLangLabel(lvl)}</option>
 {/each}
                 </select>
                 <button onclick={addLanguage} class="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">+</button>
@@ -338,7 +391,7 @@ const langLabels = LANG_LEVEL_LABELS[locale] || LANG_LEVEL_LABELS.en;
 <div class="flex flex-wrap gap-2">
                   {#each languages as lang, idx (idx)}
 <span  class="inline-flex items-center gap-1 px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">
-                      {lang.name} - {langLabels[lang.level]}
+                      {lang.name} - {getLangLabel(lang.level)}
                       <button onclick={() => removeLanguage(idx)} class="ml-1 text-green-600 dark:text-green-400 hover:text-red-500">×</button>
                     </span>
 {/each}

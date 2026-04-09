@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { SAMPLE_TEXT } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -40,9 +42,58 @@
   mostFrequentWords: { word: string; count: number }[];
 }
 
+  function analyzeDocumentText(content: string): DocumentStats {
+    const text = content ?? '';
+    const trimmed = text.trim();
+    const words = trimmed.length > 0 ? trimmed.split(/\s+/).filter(Boolean) : [];
+    const sentences = trimmed.length > 0
+      ? trimmed.split(/[.!?]+/).map((s) => s.trim()).filter(Boolean)
+      : [];
+    const paragraphs = trimmed.length > 0
+      ? trimmed.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean)
+      : [];
+    const lines = text.length > 0 ? text.split(/\r?\n/).length : 0;
+    const wordFrequency = new Map<string, number>();
+
+    for (const rawWord of words) {
+      const normalized = rawWord.toLowerCase().replace(/^[^a-z0-9]+|[^a-z0-9]+$/g, '');
+      if (!normalized) continue;
+      wordFrequency.set(normalized, (wordFrequency.get(normalized) ?? 0) + 1);
+    }
+
+    const uniqueWords = wordFrequency.size;
+    const sortedWords = [...wordFrequency.entries()].sort((a, b) => b[1] - a[1]);
+    const longestWord = words.reduce((longest, word) => (
+      word.length > longest.length ? word : longest
+    ), '');
+
+    return {
+      characters: text.length,
+      charactersNoSpaces: text.replace(/\s/g, '').length,
+      words: words.length,
+      sentences: sentences.length,
+      paragraphs: paragraphs.length,
+      lines,
+      pages: Math.max(1, Math.ceil(words.length / 500)),
+      readingTime: Math.max(1, Math.ceil(words.length / 220)),
+      speakingTime: Math.max(1, Math.ceil(words.length / 130)),
+      uniqueWords,
+      avgWordLength: words.length > 0
+        ? Number((words.reduce((sum, word) => sum + word.length, 0) / words.length).toFixed(1))
+        : 0,
+      avgSentenceLength: sentences.length > 0
+        ? Number((words.length / sentences.length).toFixed(1))
+        : 0,
+      longestWord,
+      mostFrequentWords: sortedWords
+        .slice(0, 10)
+        .map(([word, count]) => ({ word, count })),
+    };
+  }
+
   let text = $state(SAMPLE_TEXT);
 
-  let stats = $derived(analyzeDocument(text));
+  let stats = $derived.by(() => analyzeDocumentText(text));
 
 </script>
 
