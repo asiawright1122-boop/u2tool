@@ -435,7 +435,7 @@ ${renderJavaScriptHeaders(input.headers)}
 });
 
 const data = await response.json();
-console.log(data);`;
+return data;`;
 }
 
 export function generatePython(input: unknown): string {

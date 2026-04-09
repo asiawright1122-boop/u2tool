@@ -67,7 +67,7 @@
     return typeof value === 'string' ? value : `MISSING: tools.${key}`;
   }
 
-  let code = $state('function hello() {\n  console.log("Hello, World!");\n}');
+  let code = $state('function hello() {\n  return "Hello, World!";\n}');
   let theme = $state<ThemeKey>('dracula');
   let language = $state<LanguageKey>('javascript');
   let padding = $state(32);
