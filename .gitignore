@@ -23,3 +23,16 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# AI Agent Workspaces & Validation Artifacts
+.planning/
+.kiro/
+.tmp/
+docs/*_REPORT.md
+docs/BUILD_ANALYSIS.md
+public/_routes.json
+scripts/validation/
+scripts/build-optimization/
+scripts/planning/
+scripts/dependency-audit/
+src/generated/
