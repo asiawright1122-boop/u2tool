@@ -70,25 +70,25 @@ const faqJsonLd = faqs.length > 0 ? generateFAQJsonLd(faqs) : null;
     {/* Heading */}
     <h2
       id="faq-heading"
-      class="text-xl font-bold text-gray-900 dark:text-white mb-4"
+      class="text-2xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight"
     >
-      FAQ - {toolName}
+      FAQ — {toolName}
     </h2>
 
     {/* FAQ Accordion using native <details>/<summary> */}
-    <div class="space-y-3" role="list">
+    <div class="space-y-4" role="list">
       {faqs.map((faq, index) => (
         <details
-          class="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden group"
+          class="border border-slate-200/60 dark:border-slate-800 rounded-2xl overflow-hidden group transition-all duration-300 backdrop-blur-sm"
           open={index === 0}
         >
           {/* Question */}
-          <summary class="flex items-center justify-between p-4 cursor-pointer bg-gray-100 dark:bg-gray-800/50 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors list-none [&::-webkit-details-marker]:hidden">
-            <h3 class="font-medium text-gray-900 dark:text-white pr-4 m-0 text-base">
+          <summary class="flex items-center justify-between p-5 cursor-pointer bg-white/60 dark:bg-slate-900/40 hover:bg-white dark:hover:bg-slate-900 transition-colors list-none [&::-webkit-details-marker]:hidden border-b border-transparent group-open:border-slate-200/60 dark:group-open:border-slate-800">
+            <h3 class="font-bold text-slate-900 dark:text-white pr-6 m-0 text-base tracking-tight">
               {faq.question}
             </h3>
             <svg
-              class="w-5 h-5 text-gray-500 dark:text-gray-400 flex-shrink-0 transition-transform duration-200 group-open:rotate-180"
+              class="w-5 h-5 text-slate-400 dark:text-slate-500 flex-shrink-0 transition-transform duration-300 group-open:rotate-180 group-open:text-blue-600 dark:group-open:text-amber-500"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -96,14 +96,14 @@ const faqJsonLd = faqs.length > 0 ? generateFAQJsonLd(faqs) : null;
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                stroke-width="2"
+                stroke-width="2.5"
                 d="M19 9l-7 7-7-7"
               />
             </svg>
           </summary>
 
           {/* Answer */}
-          <div class="p-4 bg-gray-50 dark:bg-gray-900/50 text-gray-700 dark:text-gray-300 leading-relaxed faq-answer">
+          <div class="p-5 bg-slate-50/50 dark:bg-slate-950/40 text-slate-600 dark:text-slate-400 leading-relaxed faq-answer text-sm md:text-base">
             {faq.answer}
           </div>
         </details>

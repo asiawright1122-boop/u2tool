@@ -144,11 +144,11 @@ const collectionData = {
           <Breadcrumb locale={locale} items={breadcrumbItems} />
         </div>
 
-        <div class="mb-8">
-          <h1 class="text-3xl font-bold text-gray-900 dark:text-white flex items-center gap-3">
-            <span class="text-blue-500 dark:text-blue-400" set:html={getIconSvg(catIcon, 28)} />
+        <div class="mb-10">
+          <h1 class="text-3xl font-bold text-slate-900 dark:text-white flex items-center gap-4 tracking-tight">
+            <span class="text-blue-600 dark:text-amber-500 transition-transform hover:scale-110 duration-300" set:html={getIconSvg(catIcon, 32)} />
             <span>{categoryName}</span>
-            <span class="text-lg font-normal text-gray-400">({categoryTools.length})</span>
+            <span class="text-lg font-medium text-slate-400 dark:text-slate-500 ml-1">({categoryTools.length})</span>
           </h1>
         </div>
 
@@ -161,27 +161,26 @@ const collectionData = {
           />
         )}
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {categoryTools.map((tool) => (
             <a
               href={getLocalizedPath(locale, `/tools/${tool.slug}`)}
-              class="group flex items-center gap-3 p-4 bg-white dark:bg-gray-800/60
-                     border border-gray-100 dark:border-gray-700/40 rounded-xl
-                     hover:border-blue-400/60 dark:hover:border-blue-500/40
-                     hover:bg-blue-50/50 dark:hover:bg-blue-900/10
-                     cursor-pointer transition-all duration-200"
+              class="group flex items-center gap-4 p-5 bg-white/40 dark:bg-slate-900/40
+                     border border-slate-200/60 dark:border-slate-800 rounded-2xl
+                     hover:shadow-2xl hover:border-blue-400/60 dark:hover:border-amber-500/50
+                     backdrop-blur-md cursor-pointer transition-all duration-300"
             >
-              <span class="text-blue-500 dark:text-blue-400 flex-shrink-0" set:html={getIconSvg(tool.icon, 22)} />
+              <span class="text-blue-600 dark:text-amber-500 flex-shrink-0 transition-transform group-hover:scale-110 duration-300" set:html={getIconSvg(tool.icon, 24)} />
               <div class="flex-1 min-w-0">
-                <h3 class="font-medium text-sm text-gray-900 dark:text-white truncate group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <h3 class="font-bold text-sm text-slate-900 dark:text-white truncate group-hover:text-blue-600 dark:group-hover:text-amber-400 transition-colors uppercase tracking-tight">
                   {getToolName(tool.slug)}
                 </h3>
-                <p class="text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5">
+                <p class="text-xs text-slate-500 dark:text-slate-400 truncate mt-1.5">
                   {getToolDescription(tool.slug)}
                 </p>
               </div>
               {tool.popular && (
-                <span class="inline-flex items-center px-1.5 py-0.5 text-[10px] font-medium rounded-full bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400 flex-shrink-0">HOT</span>
+                <span class="inline-flex items-center px-2 py-0.5 text-[10px] font-bold rounded-full bg-amber-100 text-amber-600 dark:bg-amber-900/40 dark:text-amber-400 flex-shrink-0 border border-amber-200/50 dark:border-amber-500/30 shadow-[0_0_10px_rgba(245,158,11,0.2)]">HOT</span>
               )}
             </a>
           ))}

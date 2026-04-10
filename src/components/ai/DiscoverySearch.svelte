@@ -200,86 +200,102 @@
   });
 </script>
 
-<section class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm p-5 md:p-6">
-  <div class="mb-5">
-    <h1 class="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white">{pageTitle}</h1>
-    <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+<section class="relative overflow-hidden rounded-3xl border border-slate-200/60 bg-gradient-to-br from-slate-50 via-white to-slate-100 shadow-xl
+                dark:border-slate-800 dark:from-slate-900 dark:via-zinc-900 dark:to-black p-6 md:p-8 backdrop-blur-sm mb-10">
+  <!-- Background Decorations -->
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/5 via-amber-200/10 to-transparent dark:from-amber-500/10 dark:via-amber-700/5 dark:to-transparent pointer-events-none"></div>
+
+  <div class="relative z-10 mb-6">
+    <h1 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">{pageTitle}</h1>
+    <p class="mt-2 text-sm text-slate-600 dark:text-slate-400 max-w-2xl">
       {pageDescription}
     </p>
   </div>
 
-  <form class="flex flex-col sm:flex-row gap-3" onsubmit={(event) => { event.preventDefault(); void submitSearch(); }}>
-    <input
-      bind:value={query}
-      type="text"
-      placeholder={inputPlaceholder}
-      aria-label={inputPlaceholder}
-      class="flex-1 h-10 px-3 rounded-lg border border-gray-200 dark:border-gray-700
-             bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white
-             focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-    />
+  <form class="relative z-10 flex flex-col sm:flex-row gap-3" onsubmit={(event) => { event.preventDefault(); void submitSearch(); }}>
+    <div class="relative flex-1">
+      <input
+        bind:value={query}
+        type="text"
+        placeholder={inputPlaceholder}
+        aria-label={inputPlaceholder}
+        class="w-full h-12 pl-4 pr-10 rounded-xl border border-slate-200 dark:border-slate-700
+               bg-white/60 dark:bg-slate-800/80 text-slate-900 dark:text-white
+               focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500
+               placeholder:text-slate-400 transition-all duration-200"
+      />
+      {#if isLoading}
+        <div class="absolute right-3 top-1/2 -translate-y-1/2">
+          <Icon.Loader2 class="w-5 h-5 animate-spin text-slate-400" />
+        </div>
+      {/if}
+    </div>
     <button
       type="submit"
       disabled={isLoading}
-      class="h-10 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 disabled:opacity-60 disabled:cursor-not-allowed
-             text-white text-sm font-medium transition-colors inline-flex items-center justify-center gap-2"
+      class="h-12 px-6 rounded-xl bg-slate-950 dark:bg-white text-white dark:text-slate-950 text-sm font-bold transition-all
+             hover:bg-black hover:shadow-lg dark:hover:bg-slate-100 disabled:opacity-60 disabled:cursor-not-allowed
+             inline-flex items-center justify-center gap-2 group border border-slate-800 dark:border-transparent lg:min-w-[140px]"
     >
-      {#if isLoading}
-        <Icon.Loader2 class="w-4 h-4 animate-spin" />
-      {/if}
       <span>{isLoading ? submitLoadingLabel : submitIdleLabel}</span>
+      {#if !isLoading}
+        <Icon.Search class="w-4 h-4 transition-transform group-hover:scale-110" />
+      {/if}
     </button>
   </form>
 
   {#if error}
-    <div class="mt-4 rounded-lg border border-red-200 bg-red-50 text-red-700 dark:border-red-900/40 dark:bg-red-950/20 dark:text-red-300 px-3 py-2 text-sm">
+    <div class="relative z-10 mt-4 rounded-xl border border-red-200 bg-red-50/50 text-red-700 dark:border-red-900/40 dark:bg-red-950/20 dark:text-red-300 px-4 py-3 text-sm flex items-center gap-2">
+      <Icon.AlertCircle class="w-4 h-4 shrink-0" />
       {error}
     </div>
   {/if}
 
   {#if hasSearched && !isLoading}
-    <div class="mt-5 border-t border-gray-100 dark:border-gray-800 pt-5">
+    <div class="relative z-10 mt-6 border-t border-slate-200/60 dark:border-slate-800 pt-6">
       {#if results.length > 0}
-        <div class="mb-3 flex items-center justify-between gap-4">
-          <p class="text-sm text-gray-600 dark:text-gray-300">
+        <div class="mb-4 flex items-center justify-between gap-4">
+          <p class="text-sm font-medium text-slate-600 dark:text-slate-400">
             {action === 'direct' ? directResultSummary : suggestResultSummary}
           </p>
-          <span class="text-xs px-2 py-1 rounded-full bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 dark:bg-amber-900/30 dark:text-amber-400 border border-blue-100 dark:border-amber-500/30">
             {confidenceLabel} {(confidence * 100).toFixed(0)}%
           </span>
         </div>
 
-        <div class="space-y-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {#each results as result}
             <a
               href={toResultPath(result)}
               onclick={() => handleResultClick(result)}
-              class="block rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:border-blue-400 dark:hover:border-blue-500 transition-colors"
+              class="group block rounded-2xl border border-slate-200/60 bg-white/40 dark:bg-slate-900/40 p-5
+                     backdrop-blur-md transition-all duration-300 hover:shadow-xl hover:border-blue-400/60 dark:hover:border-amber-500/50"
             >
               <div class="flex items-start justify-between gap-3">
-                <div>
-                  <h3 class="text-sm font-semibold text-gray-900 dark:text-white">{result.name}</h3>
-                  <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">{result.description}</p>
+                <div class="min-w-0">
+                  <h3 class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-amber-400 transition-colors uppercase tracking-tight">{result.name}</h3>
+                  <p class="mt-1.5 text-xs text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">{result.description}</p>
                 </div>
-                <span class="text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap">{result.categoryName}</span>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 whitespace-nowrap bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md border border-slate-200/50 dark:border-slate-700/50">
+                  {result.categoryName}
+                </span>
               </div>
             </a>
           {/each}
         </div>
       {:else}
-        <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/60 p-4">
-          <p class="text-sm text-gray-700 dark:text-gray-300">
+        <div class="rounded-2xl border border-slate-200/60 bg-white/40 dark:bg-slate-800/40 p-6 text-center backdrop-blur-md">
+          <Icon.SearchX class="w-8 h-8 mx-auto text-slate-300 dark:text-slate-600 mb-3" />
+          <p class="text-sm text-slate-700 dark:text-slate-300 mb-4">
             {noMatchMessage}
           </p>
-          <div class="mt-3">
-            <a
-              href={toToolsPath()}
-              class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-900 text-white dark:bg-white dark:text-gray-900 text-sm font-medium"
-            >
-              {browseAllToolsLabel}
-              <Icon.ArrowRight class="w-4 h-4" />
-            </a>
-          </div>
+          <a
+            href={toToolsPath()}
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-950 text-white dark:bg-white dark:text-slate-950 text-sm font-bold hover:shadow-lg transition-all"
+          >
+            {browseAllToolsLabel}
+            <Icon.ArrowRight class="w-4 h-4" />
+          </a>
         </div>
       {/if}
     </div>

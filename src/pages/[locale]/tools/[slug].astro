@@ -287,33 +287,33 @@ for (const slug of relatedToolSlugs) {
       </div>
 
       {/* Tool Header */}
-      <div class="text-center mb-8">
+      <div class="text-center mb-10 pt-4">
         {/* Tool icon */}
-        <div class="mx-auto mb-4 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-50 dark:bg-blue-900/20 text-blue-500 dark:text-blue-400">
-          <Fragment set:html={getIconSvg(tool.icon, 32)} />
+        <div class="mx-auto mb-6 inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 shadow-xl backdrop-blur-sm text-blue-600 dark:text-amber-500 transition-transform hover:scale-110 duration-500">
+          <Fragment set:html={getIconSvg(tool.icon, 40)} />
         </div>
         {/* Tool name (LCP element) */}
-        <h1 class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">
+        <h1 class="text-3xl md:text-4xl font-bold mb-3 text-slate-900 dark:text-white tracking-tight">
           {toolName}
         </h1>
-        <p class="text-gray-600 dark:text-gray-300">{toolDescription}</p>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">{toolDescription}</p>
       </div>
 
       {/* Detailed description */}
       {detailedDescription && (
-        <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 mb-6 shadow-sm">
-          <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+        <div class="bg-white/40 dark:bg-slate-900/40 border border-slate-200/60 dark:border-slate-800 rounded-3xl p-6 md:p-8 mb-8 backdrop-blur-md shadow-xl transition-all hover:shadow-2xl">
+          <h2 class="text-2xl font-bold mb-5 text-slate-900 dark:text-white tracking-tight">
             {toolIntroductionLabel}
           </h2>
           <div
-            class="text-gray-700 dark:text-gray-300 leading-relaxed"
+            class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm md:text-base"
             set:html={safeDetailedDescription}
           />
         </div>
       )}
 
       {/* Tool Component — Island Architecture: hydrate only when visible */}
-      <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 shadow-sm mb-6">
+      <div class="bg-white/40 dark:bg-slate-900/40 border border-slate-200/60 dark:border-slate-800 rounded-3xl p-6 md:p-8 shadow-xl backdrop-blur-md mb-8 transition-all hover:shadow-2xl">
         <ToolWrapper
           client:visible
           slug={tool.slug}
@@ -324,19 +324,20 @@ for (const slug of relatedToolSlugs) {
 
       {/* Usage instructions */}
       {(usageSteps || usageExamples) && (
-        <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 mb-6 shadow-sm">
-          <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+        <div class="bg-white/40 dark:bg-slate-900/40 border border-slate-200/60 dark:border-slate-800 rounded-3xl p-6 md:p-8 mb-8 backdrop-blur-md shadow-xl transition-all hover:shadow-2xl">
+          <h2 class="text-2xl font-bold mb-6 text-slate-900 dark:text-white tracking-tight">
             {usageInstructionsLabel}
           </h2>
 
           {usageSteps && Array.isArray(usageSteps) && (
             <Fragment>
-              <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
+              <h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-white tracking-tight flex items-center gap-2">
+                <span class="w-1.5 h-6 bg-blue-600 dark:bg-amber-500 rounded-full"></span>
                 {usageStepsLabel}
               </h3>
-              <ol class="list-decimal list-inside space-y-2 mb-6">
+              <ol class="list-decimal list-inside space-y-3 mb-8">
                 {usageSteps.map((step: string) => (
-                  <li class="text-gray-700 dark:text-gray-300">{step}</li>
+                  <li class="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed">{step}</li>
                 ))}
               </ol>
             </Fragment>
@@ -344,13 +345,14 @@ for (const slug of relatedToolSlugs) {
 
           {usageExamples && Array.isArray(usageExamples) && (
             <Fragment>
-              <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
+              <h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-white tracking-tight flex items-center gap-2">
+                <span class="w-1.5 h-6 bg-blue-600 dark:bg-amber-500 rounded-full"></span>
                 {usageExamplesLabel}
               </h3>
-              <div class="space-y-3">
+              <div class="space-y-4">
                 {usageExamples.map((example: string) => (
-                  <div class="bg-gray-100 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-700">
-                    <code class="text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap break-words">
+                  <div class="bg-slate-50/50 dark:bg-slate-950/50 p-4 rounded-xl border border-slate-200/60 dark:border-slate-800/80 shadow-inner">
+                    <code class="text-sm text-slate-800 dark:text-slate-200 whitespace-pre-wrap break-words font-mono">
                       {example}
                     </code>
                   </div>
