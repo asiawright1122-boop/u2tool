@@ -31,7 +31,7 @@ const { ctaLabel, description, guides, includedToolsLabel, title } = Astro.props
     {guides.map((guide) => (
       <article
         data-comparison-guide={guide.slug}
-        class="rounded-2xl border border-slate-200/80 bg-white/90 p-5 dark:border-slate-700/60 dark:bg-slate-900/70"
+        class="flex flex-col h-full rounded-2xl border border-slate-200/80 bg-white/90 p-5 dark:border-slate-700/60 dark:bg-slate-900/70"
       >
         <div class="flex items-start justify-between gap-3">
           <div class="min-w-0">
@@ -63,7 +63,7 @@ const { ctaLabel, description, guides, includedToolsLabel, title } = Astro.props
           ))}
         </div>
 
-        <div class="mt-5">
+        <div class="mt-auto pt-5">
           <a
             href={guide.href}
             class="inline-flex items-center rounded-full bg-slate-900 px-3.5 py-2 text-sm font-medium text-white transition-colors hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100"
