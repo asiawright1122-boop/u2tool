@@ -116,15 +116,15 @@ const collectionData = {
   <div class="main-content-with-sidebar main-content-with-mobile-nav">
     <Header client:load locale={locale} translations={headerTranslations} />
 
-    <main class="py-6 px-4 lg:pl-0 lg:pr-6">
-      <div class="max-w-none mx-0">
+    <main class="py-6 px-4 lg:px-0 lg:pr-6">
+      <div class="w-full max-w-6xl">
         <div class="mb-6">
           <Breadcrumb locale={locale} items={breadcrumbItems} />
         </div>
 
-        <section class="rounded-3xl border border-slate-200/80 bg-gradient-to-br from-white via-slate-50 to-amber-50/70 p-6 shadow-sm dark:border-slate-700/60 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800/80">
-          <h1 class="text-3xl font-bold text-slate-900 dark:text-white">{guide.title}</h1>
-          <p class="mt-4 max-w-4xl text-sm leading-7 text-slate-700 dark:text-slate-300">
+        <section class="u2-surface p-6">
+          <h1 class="text-3xl font-bold text-[color:rgb(var(--u2-ink))]">{guide.title}</h1>
+          <p class="mt-4 max-w-4xl text-sm leading-7 text-[color:rgb(var(--u2-ink-soft))]">
             {guide.description}
           </p>
 
@@ -132,7 +132,7 @@ const collectionData = {
             {guide.relatedCategories.map((category) => (
               <a
                 href={category.href}
-                class="inline-flex items-center rounded-full border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 transition-colors hover:border-amber-300 hover:text-amber-700 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-amber-400 dark:hover:text-amber-300"
+                class="u2-chip u2-chip-warm"
               >
                 {category.name}
               </a>
@@ -140,15 +140,15 @@ const collectionData = {
           </div>
         </section>
 
-        <section class="mt-8 rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm dark:border-slate-700/60 dark:bg-slate-900/70">
-          <h2 class="text-2xl font-bold text-slate-900 dark:text-white">{uiCopy.workflowTitle}</h2>
-          <div class="mt-6 grid gap-4 lg:grid-cols-2">
+        <section class="mt-8 u2-surface p-6">
+          <h2 class="text-2xl font-bold text-[color:rgb(var(--u2-ink))]">{uiCopy.workflowTitle}</h2>
+          <div class="mt-6 grid gap-5 lg:grid-cols-2">
             {guide.workflows.map((workflow) => (
               <article
                 data-comparison-workflow={workflow.slug}
-                class="rounded-2xl border border-slate-200/80 bg-slate-50/80 p-5 dark:border-slate-700/60 dark:bg-slate-800/70"
+                class="u2-glass-panel"
               >
-                <h3 class="text-base font-semibold text-slate-900 dark:text-white">
+                <h3 class="text-base font-semibold text-[color:rgb(var(--u2-ink))]">
                   {workflow.title}
                 </h3>
                 <div class="mt-4 flex flex-wrap gap-2">
@@ -157,7 +157,7 @@ const collectionData = {
                       href={tool.href}
                       data-comparison-tool={tool.slug}
                       title={tool.description || tool.name}
-                      class="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-xs font-medium text-amber-800 transition-colors hover:border-amber-300 hover:bg-amber-100 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-200 dark:hover:border-amber-400/40 dark:hover:bg-amber-500/20"
+                      class="u2-glass-chip text-xs"
                     >
                       {tool.name}
                     </a>
@@ -168,34 +168,47 @@ const collectionData = {
           </div>
         </section>
 
-        <section class="mt-8 rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm dark:border-slate-700/60 dark:bg-slate-900/70">
-          <h2 class="text-2xl font-bold text-slate-900 dark:text-white">{uiCopy.tableTitle}</h2>
-          <div class="mt-5 overflow-x-auto">
-            <table class="min-w-full divide-y divide-slate-200 text-sm dark:divide-slate-700">
-              <thead>
-                <tr class="text-left text-xs uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
-                  <th class="px-3 py-3">{uiCopy.tableToolLabel}</th>
-                  <th class="px-3 py-3">{uiCopy.workflowTitle}</th>
-                  <th class="px-3 py-3">{uiCopy.tableCategoryLabel}</th>
-                  <th class="px-3 py-3">{uiCopy.routeLabel}</th>
+        <section class="mt-8 u2-surface p-6">
+          <h2 class="text-2xl font-bold text-[color:rgb(var(--u2-ink))]">{uiCopy.tableTitle}</h2>
+          <div class="mt-5 overflow-x-auto overflow-y-hidden">
+            <table class="w-full text-sm min-w-[800px] table-auto">
+              <thead class="bg-slate-50/50 dark:bg-slate-800/50">
+                <tr class="text-left text-xs uppercase tracking-[0.18em] text-[color:rgb(var(--u2-ink-muted))]">
+                  <th class="px-4 py-3 min-w-[240px] font-semibold">{uiCopy.tableToolLabel}</th>
+                  <th class="px-4 py-3 whitespace-nowrap font-semibold border-l border-slate-200/50 dark:border-slate-700/50">{uiCopy.workflowTitle}</th>
+                  <th class="px-4 py-3 whitespace-nowrap font-semibold border-l border-slate-200/50 dark:border-slate-700/50">{uiCopy.tableCategoryLabel}</th>
+                  <th class="px-4 py-3 whitespace-nowrap font-semibold border-l border-slate-200/50 dark:border-slate-700/50">{uiCopy.routeLabel}</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+              <tbody class="divide-y divide-slate-200/70 dark:divide-slate-700/70">
                 {guide.workflows.flatMap((workflow) =>
                   workflow.tools.map((tool) => (
-                    <tr>
-                      <td class="px-3 py-4 align-top">
-                        <div class="font-medium text-slate-900 dark:text-white">{tool.name}</div>
-                        <div class="mt-1 text-xs leading-6 text-slate-600 dark:text-slate-300">
-                          {tool.description}
+                    <tr class="hover:bg-[color:rgba(var(--u2-accent),0.02)] transition-colors">
+                      <td class="px-4 py-4 min-w-[240px]">
+                        <div class="flex flex-col gap-1.5">
+                          <span class="font-bold text-[color:rgb(var(--u2-ink))]">
+                            {tool.name}
+                          </span>
+                          <span class="text-xs leading-5 text-[color:rgb(var(--u2-ink-soft))]">
+                            {tool.description}
+                          </span>
                         </div>
                       </td>
-                      <td class="px-3 py-4 align-top text-slate-700 dark:text-slate-200">{workflow.title}</td>
-                      <td class="px-3 py-4 align-top text-slate-700 dark:text-slate-200">{tool.categoryName}</td>
-                      <td class="px-3 py-4 align-top">
+                      <td class="px-4 py-4 border-l border-slate-200/30 dark:border-slate-700/30 w-max" style="white-space: nowrap;">
+                        <span class="text-[13px] text-[color:rgb(var(--u2-ink-soft))] whitespace-nowrap inline-block" style="white-space: nowrap;">
+                          {workflow.title}
+                        </span>
+                      </td>
+                      <td class="px-4 py-4 w-auto whitespace-nowrap border-l border-slate-200/30 dark:border-slate-700/30" style="white-space: nowrap;">
+                        <span class="text-[13px] text-[color:rgb(var(--u2-ink-muted))] whitespace-nowrap flex-shrink-0 inline-block" style="white-space: nowrap;">
+                          {tool.categoryName}
+                        </span>
+                      </td>
+                      <td class="px-4 py-4 w-min whitespace-nowrap border-l border-slate-200/30 dark:border-slate-700/30 text-right" style="white-space: nowrap;">
                         <a
                           href={tool.href}
-                          class="inline-flex items-center rounded-full bg-slate-900 px-3 py-1.5 text-xs font-medium text-white transition-colors hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100"
+                          class="u2-button-primary u2-button-compact text-xs cursor-pointer inline-flex items-center justify-center whitespace-nowrap flex-shrink-0 shadow-sm"
+                          style="white-space: nowrap; word-break: keep-all; padding-left: 1rem; padding-right: 1rem; min-width: max-content;"
                         >
                           {uiCopy.routeLabel}
                         </a>
