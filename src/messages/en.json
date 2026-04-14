@@ -7119,6 +7119,19 @@
         "productC": "Product C",
         "productD": "Product D",
         "productE": "Product E"
+      },
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings",
+      "addRow": "Add Row",
+      "item": "Item",
+      "tips": {
+        "title": "Tips",
+        "tip1": "Click color theme to switch chart colors",
+        "tip2": "Supports horizontal and vertical orientation",
+        "tip3": "Add or remove data rows",
+        "tip4": "Chart title is customizable",
+        "tip5": "Toggle legend and grid visibility",
+        "tip6": "Export as PNG or SVG format"
       }
     },
     "line-chart-generator": {
@@ -7172,7 +7185,11 @@
         "tip4": "Import large time-series data quickly via CSV.",
         "tip5": "Different line styles help distinguish series.",
         "tip6": "Exported images are ready for reports and presentations."
-      }
+      },
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings",
+      "confirmClear": "Confirm clear all data?",
+      "csvImportError": "CSV import error"
     },
     "pie-chart-generator": {
       "name": "Pie Chart Generator",
@@ -7247,7 +7264,9 @@
         "A government agency generates public report infographics with multi-layered legends positioned dynamically around the chart circumference"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "radar-chart-generator": {
       "name": "Radar Chart Generator",
@@ -7322,7 +7341,9 @@
         "Example 4: A financial analyst employs the tool to compare the financial health of several companies in the same industry, focusing on key financial ratios like profitability, liquidity, and leverage. The radar chart highlights the relative strengths and weaknesses of each company."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "scatter-chart-generator": {
       "name": "Scatter Chart Generator",
@@ -7391,7 +7412,9 @@
         "Example 4: An environmental scientist plotting rainfall amounts against crop yield data to determine optimal irrigation thresholds."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "area-chart-generator": {
       "name": "Area Chart Generator",
@@ -7458,7 +7481,9 @@
         "Social media engineers tracking API rate limits versus actual usage through stepwise area charts with discontinuous data gaps"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "funnel-chart-generator": {
       "name": "Funnel Chart Generator",
@@ -7532,7 +7557,9 @@
         "An e-commerce analyst wants to understand the conversion rate from website visits to completed transactions. By uploading data on website traffic, cart additions, and final purchases, they can generate a funnel chart that pinpoints where users are most likely to abandon the process and take targeted actions to reduce cart abandonment."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "gauge-chart-generator": {
       "name": "Gauge Chart Generator",
@@ -7589,7 +7616,10 @@
         "Get processing results quickly without waiting"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings",
+      "quickpresets": "Quick Presets"
     },
     "heatmap-chart-generator": {
       "name": "Heatmap Chart Generator",
@@ -7653,7 +7683,9 @@
         "Comparing demographic statistics across geographic regions using census data with normalized population density values"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "treemap-chart-generator": {
       "name": "Treemap Chart Generator",
@@ -7708,7 +7740,12 @@
         "tip4": "Supports unlimited levels of nesting.",
         "tip5": "Export high-quality images with transparent backgrounds.",
         "tip6": "All processing is local, ensuring complete privacy."
-      }
+      },
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings",
+      "confirmClear": "Confirm clear all data?",
+      "nodeName": "Node Name",
+      "value": "Value"
     },
     "doughnut-chart-generator": {
       "name": "Doughnut Chart Generator",
@@ -7775,7 +7812,9 @@
         "An educator demonstrating statistical probability distributions to students with interactive label toggling during lectures"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "sankey-chart-generator": {
       "name": "Sankey Chart Generator",
@@ -7847,7 +7886,9 @@
         "Mapping biological metabolic pathways where nodes represent enzymes and links show reaction flux rates in biochemistry research"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "sunburst-chart-generator": {
       "name": "Sunburst Chart Generator",
@@ -7976,7 +8017,9 @@
         "A portfolio manager evaluating sector rotation dynamics by generating synchronized weekly charts for technology, energy, and consumer staples ETFs with comparative scaling"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "boxplot-chart-generator": {
       "name": "Boxplot Chart Generator",
@@ -8045,7 +8088,9 @@
         "A climate scientist visualizing annual temperature range distributions across coastal vs inland regions to study climate change impacts."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "wordcloud-generator": {
       "name": "Word Cloud Generator",
@@ -8175,7 +8220,9 @@
         "Example 4: A business analyst uses the tool to visualize customer journey maps, highlighting touchpoints and decision points to improve user experience and conversion rates."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "calendar-heatmap-generator": {
       "name": "Calendar Heatmap Generator",
@@ -8322,7 +8369,9 @@
         "Sports analysts comparing player shooting accuracy across 8 court zones in basketball using concentric radial heat maps"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "parallel-chart-generator": {
       "name": "Parallel Chart Generator",
@@ -8444,7 +8493,9 @@
         "Example 4: An environmental scientist uses the tool to visualize the correlation between carbon emissions (X-axis), economic growth (Y-axis), and the area of forest cover (bubble size) to assess the impact of industrial activities on the environment."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "tree-chart-generator": {
       "name": "Tree Chart Generator",
@@ -8603,7 +8654,9 @@
         "Plan a construction project with milestones for foundation, framing, electrical, and finishing"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "venn-diagram-generator": {
       "name": "Venn Diagram Generator",
@@ -8772,7 +8825,9 @@
         "Example 4: A sports analyst is comparing the performance metrics of athletes in a circular track event. Using the Nightingale Rose Chart Generator, they can create a chart that displays the varying performance data, such as speed and endurance, in a clear and intuitive manner."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "grouped-bar-chart-generator": {
       "name": "Grouped Bar Chart Generator",
@@ -8843,7 +8898,9 @@
       ],
       "clear": "Clear",
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "stacked-bar-chart-generator": {
       "name": "Stacked Bar Chart Generator",
@@ -8914,7 +8971,9 @@
         "University administrators analyzing student enrollment distributions across four academic colleges (STEM, humanities, business, arts) by undergraduate/graduate status"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "grouped-line-chart-generator": {
       "name": "Grouped Line Chart Generator",
@@ -8986,7 +9045,9 @@
         "Tracking A/B test conversion rates across four demographic segments with confidence interval shading between data series"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "step-line-chart-generator": {
       "name": "Step Line Chart Generator",
@@ -9061,7 +9122,9 @@
         "Example 4: An environmental scientist monitors temperature changes in a specific region, plotting daily high and low temperatures to identify patterns and anomalies over a month."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "waterfall-chart-generator": {
       "name": "Waterfall Chart Generator",
@@ -9136,7 +9199,9 @@
         "Illustrating profit margin fluctuations during a product lifecycle analysis for a business intelligence dashboard"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "stacked-area-chart-generator": {
       "name": "Stacked Area Chart Generator",
@@ -9205,7 +9270,9 @@
         "A retail manager tracking inventory levels of various clothing categories across multiple store locations"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "positive-negative-bar-chart-generator": {
       "name": "Positive Negative Bar Chart Generator",
@@ -9278,7 +9345,9 @@
         "A project manager tracking task completion percentages against deadlines, where negative bars indicate delays and positive segments show ahead-of-schedule progress."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "percentage-stacked-bar-chart-generator": {
       "name": "Percentage Stacked Bar Chart Generator",
@@ -9343,7 +9412,9 @@
         "Environmental scientists displaying pollutant composition ratios in water samples"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "mixed-chart-generator": {
       "name": "Mixed Chart Generator",
@@ -9414,7 +9485,9 @@
         "Tracking stock prices (line) with trading volume indicators (bars) in financial dashboard development"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "ring-progress-chart-generator": {
       "name": "Ring Progress Chart Generator",
@@ -9464,7 +9537,9 @@
         "4. Gamification interface tracking daily fitness goals with segmented rings that reveal achievement badges at specific percentage thresholds"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "liquid-fill-chart-generator": {
       "name": "Liquid Fill Chart Generator",
@@ -9520,7 +9595,9 @@
         "Designing interactive fitness app milestones that use wave frequency changes to represent workout intensity levels over time."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "multi-ring-chart-generator": {
       "name": "Multi Ring Chart Generator",
@@ -9577,7 +9654,9 @@
         "Financial auditors tracking quarterly budget allocations across 12 departments with color-coded rings and embedded percentage annotations"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "half-doughnut-chart-generator": {
       "name": "Half Doughnut Chart Generator",
@@ -9637,7 +9716,9 @@
         "Implementing a progress indicator that shows completion percentage while maintaining a modern, minimal aesthetic in SaaS platforms"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "nested-pie-chart-generator": {
       "name": "Nested Pie Chart Generator",
@@ -9706,7 +9787,9 @@
         "Mapping university enrollment data showing colleges as outer rings and degree programs with enrollment numbers inside"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "pictorial-bar-chart-generator": {
       "name": "Pictorial Bar Chart Generator",
@@ -9777,7 +9860,9 @@
         "Example 4: A sports coach is analyzing the performance metrics of athletes. The coach can use the tool to create a pictorial bar chart where each bar represents a different metric (e.g., goals scored, assists made) with sports icons (e.g., soccer balls, basketballs) to represent the values. This helps in making the data more visually engaging and easier to interpret."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "chartPreview",
+      "chartsettings": "chartSettings"
     },
     "env-parser": {
       "name": "Env File Parser",

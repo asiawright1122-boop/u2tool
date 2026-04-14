@@ -7133,7 +7133,9 @@
       ],
       "png": "PNG",
       "svg": "SVG",
-      "addCategory": "Add Category"
+      "addCategory": "Add Category",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "line-chart-generator": {
       "name": "라인 그래프 생성기",
@@ -7210,7 +7212,9 @@
         "4. 마케터가 월별 매출 데이터를 SVG 형식으로 내보내 프레젠테이션에 삽입"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "pie-chart-generator": {
       "name": "파이 차트 생성기",
@@ -7285,7 +7289,9 @@
         "4. 금융 애널리스트가 모바일 앱에서 동적으로 로딩되는 파이 차트를 구현하기 위해 D3.js 데이터 바인딩 예제를 참조"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "radar-chart-generator": {
       "name": "레이더 차트 생성기",
@@ -7360,7 +7366,9 @@
         "Example 4: 스포츠 코치는 선수의 기술, 체력, 전략 등을 다차원으로 평가하여, 개인 맞춤형 훈련 계획을 수립할 수 있습니다."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "scatter-chart-generator": {
       "name": "스케터 차트 생성기",
@@ -7429,7 +7437,9 @@
         "기계 학습 엔지니어가 훈련 데이터셋의 피처 간 다중 공선성 탐지"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "area-chart-generator": {
       "name": "영역 차트 생성기",
@@ -7496,7 +7506,9 @@
         "4. 기상청이 월별 강수량 데이터를 Stacked 영역 차트로 시각화해 연간 패턴 분석"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "funnel-chart-generator": {
       "name": "퍼널 차트 생성기",
@@ -7570,7 +7582,9 @@
         "Example 4: 웹 분석가가 랜딩 페이지의 성능을 분석합니다. Funnel Chart Generator를 사용하여 '랜딩 페이지 방문', '포맷 다운로드', '연락처 정보 제공', '컨설팅 요청' 등의 단계를 차트로 시각화하여, 각 단계의 전환율을 분석하고 개선 방안을 고민합니다."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "gauge-chart-generator": {
       "name": "가이지 차트 생성기",
@@ -7630,7 +7644,10 @@
         "4. 금융 분석가: 주식 또는 주가 지수의 변동 폭을 시각적으로 표현하여 투자자들에게 제공할 수 있습니다. 예를 들어, 특정 주식의 가격 변동 범위를 게이지 차트로 표시하여 투자 결정을 돕을 수 있습니다."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정",
+      "quickpresets": "Quick Presets"
     },
     "heatmap-chart-generator": {
       "name": "히트맵 차트 생성기",
@@ -7694,7 +7711,9 @@
         "의료 연구: MRI 스캔의 뇌 활성화 영역 데이터를 히트맵으로 변환해 신경 과학적 패턴 분석"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "treemap-chart-generator": {
       "name": "트리맵 차트 생성기",
@@ -7773,7 +7792,9 @@
       "png": "PNG",
       "svg": "SVG",
       "delete": "Delete",
-      "total": "Total"
+      "total": "Total",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "doughnut-chart-generator": {
       "name": "도넛 차트 생성기",
@@ -7840,7 +7861,9 @@
         "의료기관이 환자 연령대 분포 데이터를 WHO 표준 시각화 가이드라인에 맞춰 표현"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "sankey-chart-generator": {
       "name": "산키 차트 생성기",
@@ -7912,7 +7935,9 @@
         "물류 회사에서 항구-창고-판매점 간의 화물 이동량 분포 시각화"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "sunburst-chart-generator": {
       "name": "선버스트 차트 생성기",
@@ -8041,7 +8066,9 @@
         "4. 퀀트 개발자가 백테스팅 결과의 수익률 곡선과 캔들스틱 차트를 동기화하여 전략 검증"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "boxplot-chart-generator": {
       "name": "박스플롯 차트 생성기",
@@ -8110,7 +8137,9 @@
         "의료 연구팀이 임상시험 환자 별 약물 반응 시간의 중앙값 및 분산 비교"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "wordcloud-generator": {
       "name": "단어 구름 생성기",
@@ -8240,7 +8269,9 @@
         "Example 4: 프로젝트 관리 - 프로젝트의 작업 흐름과 의존성을 시각적으로 표현하여, 팀원들이 프로젝트의 진행 상황을 쉽게 이해할 수 있도록 할 수 있습니다."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "calendar-heatmap-generator": {
       "name": "캘린더 히트맵 생성기",
@@ -8387,7 +8418,9 @@
         "도시계획자가 8개 방향별 교통 혼잡도 데이터를 반지름 막대로 표현해 인프라 개선 계획 수립에 활용합니다."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "parallel-chart-generator": {
       "name": "평행 차트 생성기",
@@ -8509,7 +8542,9 @@
         "Example 4: 환경 과학자가 온도, 습도, 오염 물질 농도 간의 관계를 분석하여 환경 변화를 모니터링합니다."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "tree-chart-generator": {
       "name": "트리 차트 생성기",
@@ -8668,7 +8703,9 @@
         "기초, 골조, 전기, 마감 등의 마일스톤이 포함된 건설 프로젝트 계획"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "venn-diagram-generator": {
       "name": "벤 다이어그램 생성기",
@@ -8866,7 +8903,9 @@
         "사회학 연구: 다양한 연령대의 소득 분포를 표현하여 경제적 불평등을 시각화합니다."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "grouped-bar-chart-generator": {
       "name": "집계 막대 그래프 생성 도구",
@@ -8937,7 +8976,9 @@
       ],
       "clear": "지우기",
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "stacked-bar-chart-generator": {
       "name": "누적 막대 차트 생성기",
@@ -9008,7 +9049,9 @@
         "전자상거래 플랫폼이 창고별 재고 수량을 상품 카테고리별로 비율 기반으로 모니터링"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "grouped-line-chart-generator": {
       "name": "그룹 꺾은선 차트 생성기",
@@ -9080,7 +9123,9 @@
         "투자자가 S&P 500 지수와 개별 기업 주가의 1년간 상관관계를 시각화하여 포트폴리오 최적화"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "step-line-chart-generator": {
       "name": "스텝 라인 차트 생성기",
@@ -9155,7 +9200,9 @@
         "Example 4: 금융 분석가는 주식 시장의 시간별 가격 변화를 단계 선 차트로 시각화하여 트레이딩 전략을 세웁니다."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "waterfall-chart-generator": {
       "name": "물결 차트 생성기",
@@ -9230,7 +9277,9 @@
         "4. 마케팅 ROI 비교: 다양한 캠페인의 초기 투자 대비 수익 변화를 막대 그래프와 병렬로 표시"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "stacked-area-chart-generator": {
       "name": "누적 영역 차트 생성기",
@@ -9299,7 +9348,9 @@
         "환경 연구소가 연도별 온실가스 배출원별 데이터를 퍼센티지 스택 차트로 표현하여 정책 효과성을 평가합니다."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "positive-negative-bar-chart-generator": {
       "name": "양수 음수 막대 차트 생성기",
@@ -9372,7 +9423,9 @@
         "공공기관 예산 집행 현황에서 편성액 대비 실제 지출액 오차 시각화"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "percentage-stacked-bar-chart-generator": {
       "name": "100% 누적 막대 차트 생성기",
@@ -9437,7 +9490,9 @@
         "교육 기관이 전공별 학습 방법 선호도 설문 결과를 시각화해 교육 전략 수립에 반영할 때 사용."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "mixed-chart-generator": {
       "name": "혼합 차트 생성기",
@@ -9508,7 +9563,9 @@
         "4. 전자상거래 대시보드: 주간 주문 수량(바 차트)과 평균 장바구니 금액(라인 차트, 달러)을 결합하여 소비자 행동 분석."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "ring-progress-chart-generator": {
       "name": "반지 진행도 차트 생성기",
@@ -9558,7 +9615,9 @@
         "클라우드 서버의 CPU 사용률을 실시간으로 모니터링하는 관제 시스템 인터페이스 설계"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "liquid-fill-chart-generator": {
       "name": "액체 채우기 차트 생성기",
@@ -9614,7 +9673,9 @@
         "4. 교육 플랫폼: 퀴즈 정답률을 물결 효과 차트로 표현해 학습자 피드백 페이지에 적용."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "multi-ring-chart-generator": {
       "name": "다중 링 차트 생성기",
@@ -9671,7 +9732,9 @@
         "4. 환경 공학자가 대기 질 지수(AQI 120), 미세먼지(PM2.5 35μg/m³), 온도(28°C)를 실시간 대시보드에 통합"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "half-doughnut-chart-generator": {
       "name": "반도넛 차트 생성기",
@@ -9736,7 +9799,9 @@
         "DevOps 엔지니어가 서버 용량 사용률(70%)을 모니터링 대시보드에 연동할 때"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "nested-pie-chart-generator": {
       "name": "중첩 원형 차트 생성기",
@@ -9805,7 +9870,9 @@
         "생물학 연구팀이 생물 분류 계통도를 왕국(Kingdom) 단계를 내부 링, 종(species) 단계를 외부 링에 매핑"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "pictorial-bar-chart-generator": {
       "name": "픽토리얼 막대 차트 생성기",
@@ -9876,7 +9943,9 @@
         "프로젝트 진행 상황: 프로젝트의 각 단계 완료율을 입력하고, 체크 마크 이미지를 사용하여 진행 상황을 한눈에 확인할 수 있습니다."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "차트미리보기",
+      "chartsettings": "차트설정"
     },
     "env-parser": {
       "name": "Env 파일 파서",

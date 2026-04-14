@@ -7144,7 +7144,9 @@
       ],
       "png": "PNG",
       "svg": "SVG",
-      "addCategory": "Add Category"
+      "addCategory": "Add Category",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "line-chart-generator": {
       "name": "Gerador de Gráficos de Linha",
@@ -7221,7 +7223,9 @@
         "Um professor de estatística demonstrando a convergência de séries matemáticas com anotações explicativas em pontos críticos."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "pie-chart-generator": {
       "name": "Gerador de Gráficos de Pizza",
@@ -7296,7 +7300,9 @@
         "Desenvolvedores integrando gráficos dinâmicos em dashboards com exportação para PDF"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "radar-chart-generator": {
       "name": "Gerador de Gráficos de Radar",
@@ -7371,7 +7377,9 @@
         "Um pesquisador de dados científicos pode empregar a ferramenta para visualizar e comparar múltiplos parâmetros em um experimento, como temperatura, pressão, umidade e concentração de compostos. Isso facilita a análise de interações complexas e a identificação de padrões nas dados."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "scatter-chart-generator": {
       "name": "Gerador de Gráficos de Dispersão",
@@ -7440,7 +7448,9 @@
         "Visualização de dados biomédicos, como relação entre dosagem de medicamento e resposta imunológica."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "area-chart-generator": {
       "name": "Gerador de Gráficos de Área",
@@ -7507,7 +7517,9 @@
         "Representação de fluxo de caixa acumulado em projetos de investimento, combinando dados de receita e despesa em um único gráfico."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "funnel-chart-generator": {
       "name": "Gerador de Gráficos de Funil",
@@ -7581,7 +7593,9 @@
         "Um consultor de negócios precisa criar uma apresentação para um cliente, demonstrando a eficácia de um novo funil de marketing. Ele utiliza o Funnel Chart Generator para gerar um gráfico detalhado das etapas de conversão, desde a geração de leads até a retenção de clientes, destacando as melhorias implementadas."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "gauge-chart-generator": {
       "name": "Gerador de Gráficos de Bússola",
@@ -7641,7 +7655,10 @@
         "Um desenvolvedor de software pode utilizar o gráfico para monitorar a cobertura de testes em um projeto, destacando o percentual de código que está sendo testado automaticamente."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config",
+      "quickpresets": "Quick Presets"
     },
     "heatmap-chart-generator": {
       "name": "Gerador de Gráficos de Calor",
@@ -7705,7 +7722,9 @@
         "Economistas comparando PIB regional usando mapa de calor georreferenciado com projeção cartográfica."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "treemap-chart-generator": {
       "name": "Gerador de Gráficos de Treemap",
@@ -7784,7 +7803,9 @@
       "png": "PNG",
       "svg": "SVG",
       "delete": "Delete",
-      "total": "Total"
+      "total": "Total",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "doughnut-chart-generator": {
       "name": "Gerador de Gráficos de Rosca",
@@ -7851,7 +7872,9 @@
         "Um pesquisador de UX apresentando resultados de uma enquete sobre preferências de usuários entre múltiplas interfaces de um produto."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "sankey-chart-generator": {
       "name": "Gerador de Gráficos Sankey",
@@ -7923,7 +7946,9 @@
         "Rastreamento de jornadas de usuários em um site, exibindo transições entre páginas com percentuais de conversão."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "sunburst-chart-generator": {
       "name": "Gerador de Gráficos de Radial",
@@ -8052,7 +8077,9 @@
         "Um desenvolvedor integrando gráficos interativos de candlestick em um painel de monitoramento de criptomoedas com D3.js"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "boxplot-chart-generator": {
       "name": "Gerador de Gráficos de Boxplot",
@@ -8121,7 +8148,9 @@
         "Um pesquisador ambiental avalia a concentração de poluentes em diferentes estações do ano, usando boxplots empilhados para análise sazonal."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "wordcloud-generator": {
       "name": "Gerador de Nuvem de Palavras",
@@ -8251,7 +8280,9 @@
         "Exemplo 4: Um analista de marketing utiliza a ferramenta para representar a jornada do cliente em um funil de vendas, identificando pontos de conversão e oportunidades de melhoria."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "calendar-heatmap-generator": {
       "name": "Gerador de Heatmap de Calendário",
@@ -8398,7 +8429,9 @@
         "Comparação de vendas por região geográfica, usando coordenadas angulares para direções cardeais e magnitude de receita em barras radiais."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "parallel-chart-generator": {
       "name": "Gerador de Gráficos Paralelos",
@@ -8520,7 +8553,9 @@
         "Uma organização ambiental pode usar o Gerador de Gráficos de Bolhas 3D para mapear a poluição do ar em várias cidades, com o eixo X representando a população, o eixo Y representando o nível de poluição e o tamanho das bolhas indicando o número de dias com qualidade do ar ruim."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "tree-chart-generator": {
       "name": "Gerador de Gráficos de Árvore",
@@ -8679,7 +8714,9 @@
         "Planeje um projeto de construção com marcos para fundação, estrutura, elétrica e acabamento"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "venn-diagram-generator": {
       "name": "Gerador de Diagramas de Venn",
@@ -8877,7 +8914,9 @@
         "Exemplo 4: Um pesquisador em ciências políticas utiliza a ferramenta para mostrar a distribuição de votos em uma eleição, onde cada setor representa um partido político e o raio indica a porcentagem de votos recebidos."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "grouped-bar-chart-generator": {
       "name": "Gerador de Gráficos de Barras Agrupados",
@@ -8948,7 +8987,9 @@
       ],
       "clear": "Limpar",
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "stacked-bar-chart-generator": {
       "name": "Gerador de Gráficos de Barras Empilhadas",
@@ -9019,7 +9060,9 @@
         "Monitorar tráfego de diferentes fontes (orgânico, pago, redes sociais) em múltiplos sites ao longo de meses."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "grouped-line-chart-generator": {
       "name": "Gerador de Gráfico de Linhas Agrupadas",
@@ -9091,7 +9134,9 @@
         "Um estudo climático mostrando variações anuais de temperatura e precipitação, com duas escalas Y (°C e mm) para correlacionar padrões meteorológicos."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "step-line-chart-generator": {
       "name": "Gerador de Gráficos de Linha em Passos",
@@ -9166,7 +9211,9 @@
         "Um pesquisador de mercado pode gerar gráficos de linha degrau para comparar as vendas de diferentes produtos em períodos específicos, ajudando a identificar tendências e padrões no comportamento do consumidor."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "waterfall-chart-generator": {
       "name": "Gerador de Gráficos de Cascata",
@@ -9241,7 +9288,9 @@
         "4. Economistas visualizando fatores que contribuíram para variação do PIB trimestral de um setor industrial."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "stacked-area-chart-generator": {
       "name": "Gerador de Gráficos de Área Empilhada",
@@ -9310,7 +9359,9 @@
         "Um educador visualizando a evolução do número de matrículas em cursos técnicos, superiores e pós-graduação em uma instituição de ensino."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "positive-negative-bar-chart-generator": {
       "name": "Gerador de Gráficos de Barras Positivo/Negativo",
@@ -9383,7 +9434,9 @@
         "Avaliação de satisfação de clientes pré e pós-atendimento, mapeando melhorias e áreas críticas em serviços."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "percentage-stacked-bar-chart-generator": {
       "name": "Gerador de Gráficos de Barras Empilhadas em Percentual",
@@ -9448,7 +9501,9 @@
         "Um educador visualizando o desempenho de turmas em múltiplas disciplinas, destacando subgrupos com cores contrastantes para facilitar discussões em reuniões pedagógicas."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "mixed-chart-generator": {
       "name": "Gerador de Gráficos Misto",
@@ -9519,7 +9574,9 @@
         "Educadores exibindo médias de notas (barras) e porcentagem de frequência (linha) de alunos, facilitando a correlação entre desempenho acadêmico e assiduidade."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "ring-progress-chart-generator": {
       "name": "Gerador de Gráficos de Progresso de Anel",
@@ -9569,7 +9626,9 @@
         "Um educador montando um painel educacional para acompanhar o progresso dos alunos em cursos online, com exportação de gráficos para relatórios PDF."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "liquid-fill-chart-generator": {
       "name": "Gerador de Gráficos de Nível Líquido",
@@ -9625,7 +9684,9 @@
         "Elemento de interface em um painel IoT que exibe o nível de preenchimento virtual de um tanque de armazenamento em tempo real."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "multi-ring-chart-generator": {
       "name": "Gerador de Gráficos de Anel Multiplo",
@@ -9682,7 +9743,9 @@
         "Avaliação de desempenho acadêmico: cruzar notas de diferentes disciplinas com frequência e engajamento em plataformas digitais"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "half-doughnut-chart-generator": {
       "name": "Gerador de Gráfico de Meia Rosca",
@@ -9747,7 +9810,9 @@
         "Criar dashboards médicos para mostrar percentual de recuperação de pacientes em tratamentos de longa duração"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "nested-pie-chart-generator": {
       "name": "Gerador de Gráficos de Pizza Aninhados",
@@ -9816,7 +9881,9 @@
         "Professores demonstrando divisão do currículo escolar por disciplinas principais e tópicos específicos em cada uma."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "pictorial-bar-chart-generator": {
       "name": "Gerador de Gráficos de Barras Pictóricos",
@@ -9887,7 +9954,9 @@
         "Um gestor de projetos quer apresentar o progresso de diferentes tarefas em um projeto. Ele utiliza o gerador para criar um gráfico com símbolos de 'check' para representar o progresso, permitindo que a equipe veja claramente quais tarefas estão avançando e quais estão atrasadas."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "pre",
+      "chartsettings": "config"
     },
     "env-parser": {
       "name": "Parser de Arquivos .env",

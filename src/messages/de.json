@@ -7132,7 +7132,9 @@
       ],
       "png": "PNG",
       "svg": "SVG",
-      "addCategory": "Add Category"
+      "addCategory": "Add Category",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "line-chart-generator": {
       "name": "Linendiagramm-Generator",
@@ -7209,7 +7211,9 @@
         "Darstellung von Herzfrequenzverläufen während klinischer Tests mit Überlagerung von Medikamenteneinnahmezeitpunkten als vertikale Markierungen."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "pie-chart-generator": {
       "name": "Kuchenchart-Generator",
@@ -7284,7 +7288,9 @@
         "Ein Projektmanager nutzt das Tool zur Zeiterfassung verschiedener Arbeitspakete, deaktiviert einzelne Slices zur Fokussierung auf Hauptaufgaben und integriert das PNG-Bild in ein Jira-Dashboard."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "radar-chart-generator": {
       "name": "Radar-Diagramm-Generator",
@@ -7359,7 +7365,9 @@
         "Ein Finanzanalyst untersucht die finanziellen Kennzahlen mehrerer Unternehmen in der gleichen Branche. Er verwendet das Radar Chart Generator-Tool, um Kriterien wie Umsatz, Gewinnmargen, Schulden und Eigenkapitalquote darzustellen und die relative Position der Unternehmen in der Branche zu visualisieren."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "scatter-chart-generator": {
       "name": "Streudiagramm-Generator",
@@ -7428,7 +7436,9 @@
         "Ein Data Scientist nutzt das Tool zur Identifikation von Ausreißern in Finanzdaten durch Streudiagramme von Kursvolatilität versus Handelsvolumen."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "area-chart-generator": {
       "name": "Flächendiagramm-Generator",
@@ -7495,7 +7505,9 @@
         "Ein E-Commerce-Manager nutzt die Crosshair-Funktion, um zeitliche Korrelationen zwischen Website-Besucherzahlen und Verkaufspeak-Zeiten zu identifizieren."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "funnel-chart-generator": {
       "name": "Kanal-Diagramm-Generator",
@@ -7569,7 +7581,9 @@
         "Ein Event-Organisator erstellt ein Funnel-Diagramm, um die Teilnehmergewinne eines Online-Workshops zu verfolgen. Stufen wie Anmeldung, Bestätigung, Teilnahme und abschließende Bewertungen werden dargestellt, um die Effektivität der Veranstaltung zu analysieren."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "gauge-chart-generator": {
       "name": "Gauge Chart Ersteller",
@@ -7629,7 +7643,10 @@
         "Ein Marketing-Experte verwendet den Generator, um die KPIs einer digitalen Marketing-Kampagne zu visualisieren. Das Gauge Diagramm zeigt den aktuellen Click-Through-Rate (CTR) im Vergleich zum Zielwert. Die Bilder werden in Berichten und Präsentationen verwendet, um die Kampagnenleistung zu veranschaulichen."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen",
+      "quickpresets": "Quick Presets"
     },
     "heatmap-chart-generator": {
       "name": "Heatmap-Generator",
@@ -7693,7 +7710,9 @@
         "Analyse von Verkehrsdichten in Smart-City-Projekten durch räumliche Aggregation von GPS-Tracks in hexagonale Binning-Strukturen."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "treemap-chart-generator": {
       "name": "Baumdiagramm-Generator",
@@ -7772,7 +7791,9 @@
       "png": "PNG",
       "svg": "SVG",
       "delete": "Delete",
-      "total": "Total"
+      "total": "Total",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "doughnut-chart-generator": {
       "name": "Doughnut Chart Ersteller",
@@ -7839,7 +7860,9 @@
         "E-Commerce-Analyse: Vergleich von Verkaufsquoten saisonaler Produktkategorien mit interaktiven Hover-Effekten in der Webanwendung."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "sankey-chart-generator": {
       "name": "Sankey-Diagramm-Generator",
@@ -7911,7 +7934,9 @@
         "Ein Data-Scientist analysiert Website-User-Journeys von der Akquise über Conversion-Pfade bis zu Abwanderungsraten mit dynamischen Datenimportschnittstellen."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "sunburst-chart-generator": {
       "name": "Sunburst-Diagramm-Generator",
@@ -8040,7 +8065,9 @@
         "Ein Quant-Entwickler verwendet exportierte Chart-Daten im JSON-Format für Backtesting-Algorithmen zur Erkennung von Morning-Star-Patterns."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "boxplot-chart-generator": {
       "name": "Boxplotdiagramm-Generator",
@@ -8109,7 +8136,9 @@
         "Ein Industrieingenieur überwacht Fertigungstoleranzen von Bauteilen durch tägliche Boxplot-Updates mit automatischer Trendlinienberechnung."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "wordcloud-generator": {
       "name": "Wortwolken-Generator",
@@ -8239,7 +8268,9 @@
         "Beispiel 4: Ein Marketing-Spezialist erstellt eine Visualisierung der Kundenbeziehungen in einem E-Commerce-Unternehmen. Durch die Darstellung von Kaufverhaltensmustern und Produktinteraktionen kann er gezielte Marketingkampagnen entwickeln."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "calendar-heatmap-generator": {
       "name": "Kalender-Heatmap-Generator",
@@ -8386,7 +8417,9 @@
         "Analyse saisonaler Verkaufsmuster in Einzelhandelsdaten mit dynamischen Logarithmus-Skalierungen für Peak-Ereignisse."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "parallel-chart-generator": {
       "name": "Parallelkoordinaten-Generator",
@@ -8508,7 +8541,9 @@
         "Ein Umweltforscher erstellt ein 3D-Blasendiagramm, um die Beziehung zwischen der Kohlendioxidemission (X-Achse), dem Energieverbrauch (Y-Achse) und der Bevölkerungsdichte (Größe der Blasen) in verschiedenen Städten zu visualisieren, um Umweltstrategien zu entwickeln."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "tree-chart-generator": {
       "name": "Baumdiagramm-Generator",
@@ -8667,7 +8702,9 @@
         "Planen Sie ein Bauvorhaben mit Meilensteinen für Grundlage, Rahmen, Elektrik und Abschluss"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "venn-diagram-generator": {
       "name": "Venn-Diagramm-Generator",
@@ -8865,7 +8902,9 @@
         "Ein Lehrer an einer Hochschule verwendet den Nightingale Rose Chart Generator, um Studenten die Prinzipien der Datenvisualisierung und die Anwendung von Polardiagrammen in der Praxis zu vermitteln. Die interaktive Oberfläche und die Möglichkeit, verschiedene Szenarien zu simulieren, machen das Lernen interaktiv und praktisch."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "grouped-bar-chart-generator": {
       "name": "Gruppierter Balkendiagramm-Generator",
@@ -8936,7 +8975,9 @@
       ],
       "clear": "Löschen",
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "stacked-bar-chart-generator": {
       "name": "Gestapeltes Balkendiagramm-Generator",
@@ -9007,7 +9048,9 @@
         "Ein Bildungsinstitut stellt den Anteil von Absolventen in verschiedenen Studiengängen nach Geschlecht dar, wobei die Gesamthöhe jedes Balkens die Studierendenzahl pro Fachrichtung zeigt."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "grouped-line-chart-generator": {
       "name": "Gruppiertes Liniendiagramm-Generator",
@@ -9079,7 +9122,9 @@
         "Monitoring von Conversion-Raten vor und nach A/B-Tests mit dynamischer Datenaktualisierung über integrierte JSON-API-Schnittstellen."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "step-line-chart-generator": {
       "name": "Stufen-Liniendiagramm-Generator",
@@ -9154,7 +9199,9 @@
         "Beispiel 4: Ein Forscher in der Biologie verwendet den Generator, um die Wachstumsraten von Pflanzen in regelmäßigen Intervallen darzustellen. Das Diagramm hilft ihm, die genauen Zeitpunkte von Wachstumsstößen zu identifizieren und diese mit Umweltfaktoren in Beziehung zu setzen."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "waterfall-chart-generator": {
       "name": "Wasserfalldiagramm-Generator",
@@ -9229,7 +9276,9 @@
         "Ein Energieversorger analysiert stündliche Netzauslastungsschwankungen mit automatischer Berechnung von Lastspitzen über 24h-Zeiträumen"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "stacked-area-chart-generator": {
       "name": "Gestapeltes Flächendiagramm-Generator",
@@ -9298,7 +9347,9 @@
         "Ein Demografie-Forscher präsentiert den prozentualen Bevölkerungsanteil verschiedener Altersgruppen über drei Jahrzehnte zur Unterstützung von Sozialpolitik-Entscheidungen"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "positive-negative-bar-chart-generator": {
       "name": "Positiv/Negativ Balkendiagramm-Generator",
@@ -9371,7 +9422,9 @@
         "4. Statistischer Vergleich von Conversion-Rate-Verbesserungen und -Rückgängen in A/B-Tests (Web-Analytik)."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "percentage-stacked-bar-chart-generator": {
       "name": "Prozentuale Stapelbar diagramm Generator",
@@ -9436,7 +9489,9 @@
         "Ein E-Commerce-Manager vergleicht die Produktkategorienzusammensetzung der Quartalsumsätze, wobei jeder Bar ein Quartal entspricht."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "mixed-chart-generator": {
       "name": "Mischdiagramm-Generator",
@@ -9507,7 +9562,9 @@
         "Gesundheitsstatistik: Anzahl stationärer Patienten (Balken) versus tägliche Impfraten (Linie) während einer Pandemie."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "ring-progress-chart-generator": {
       "name": "Ring Fortschrittsbalken Generator",
@@ -9557,7 +9614,9 @@
         "Ein LMS-Anbieter integriert responsive Ringcharts in Kursabschlussstatistiken, die sich automatisch an mobile Bildschirme anpassen."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "liquid-fill-chart-generator": {
       "name": "Flüssigkeitsfülldiagramm-Generator",
@@ -9613,7 +9672,9 @@
         "Ein Gesundheits-App-Entwickler implementiert einen täglichen Aktivitätszähler, der durch einen ansteigenden Flüssigkeitschart die Erreichung von Bewegungszielen zeigt."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "multi-ring-chart-generator": {
       "name": "Multi-Ring-Diagramm-Generator",
@@ -9670,7 +9731,9 @@
         "Ein Klimaforscher analysiert Temperatur-, CO2- und Niederschlagsdaten über mehrere Jahrzehnte durch logarithmisch skalierte Ringebenen."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "half-doughnut-chart-generator": {
       "name": "Halbmond-Diagramm-Generator",
@@ -9735,7 +9798,9 @@
         "Ein Bildungsanbieter präsentiert Abschlussraten verschiedener Kurse in einer kompakten Infografik für mobile Endgeräte."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "nested-pie-chart-generator": {
       "name": "Generator für verschachtelte Kreisdiagramme",
@@ -9804,7 +9869,9 @@
         "Ein Marktforscher analysiert demografische Daten: Innerer Ring = Altersgruppen, äußere Ringe = Untergruppen nach Einkommensniveau und Bildungsstand."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "pictorial-bar-chart-generator": {
       "name": "Grafischer Balkendiagramm-Generator",
@@ -9875,7 +9942,9 @@
         "Beispiel 4: Ein Reiseveranstalter nutzt das Tool, um die Anzahl von Buchungen für verschiedene Urlaubsziele mit Symbolen von Flugzeugen zu visualisieren, um den Reisefluss nach Regionen zu veranschaulichen."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "Diagrammvorschau",
+      "chartsettings": "Einstellungen"
     },
     "env-parser": {
       "name": "Env-Datei-Parser",

@@ -10965,6 +10965,19 @@
         "productC": "产品C",
         "productD": "产品D",
         "productE": "产品E"
+      },
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置",
+      "addRow": "添加行",
+      "item": "项目",
+      "tips": {
+        "title": "小贴士",
+        "tip1": "点击颜色主题可切换图表配色",
+        "tip2": "支持水平和垂直方向排列",
+        "tip3": "可添加或删除数据行",
+        "tip4": "图表标题可自定义",
+        "tip5": "支持显示/隐藏图例和网格",
+        "tip6": "导出为PNG或SVG格式"
       }
     },
     "line-chart-generator": {
@@ -11018,7 +11031,11 @@
         "tip4": "可以通过 CSV 快速导入大量时序数据。",
         "tip5": "支持多种线条样式以区分不同系列。",
         "tip6": "导出图片可直接用于报告和幻灯片。"
-      }
+      },
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置",
+      "confirmClear": "确认清空所有数据？",
+      "csvImportError": "CSV导入错误"
     },
     "pie-chart-generator": {
       "name": "饼图生成器",
@@ -11115,7 +11132,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "radar-chart-generator": {
       "name": "雷达图生成器",
@@ -11212,7 +11231,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "scatter-chart-generator": {
       "name": "散点图生成器",
@@ -11303,7 +11324,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "area-chart-generator": {
       "name": "区域图生成器",
@@ -11392,7 +11415,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "funnel-chart-generator": {
       "name": "漏斗图生成器",
@@ -11487,7 +11512,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "gauge-chart-generator": {
       "name": "仪表图生成器",
@@ -11568,7 +11595,10 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置",
+      "quickpresets": "快速预设"
     },
     "heatmap-chart-generator": {
       "name": "热力图图表生成器",
@@ -11654,7 +11684,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "treemap-chart-generator": {
       "name": "矩形树图生成器",
@@ -11709,7 +11741,12 @@
         "tip4": "支持无限层级的嵌套结构。",
         "tip5": "导出支持透明背景的高清图片。",
         "tip6": "所有操作都在本地完成，保证隐私。"
-      }
+      },
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置",
+      "confirmClear": "确认清空所有数据？",
+      "nodeName": "节点名称",
+      "value": "值"
     },
     "doughnut-chart-generator": {
       "name": "圆环图生成器",
@@ -11798,7 +11835,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "sankey-chart-generator": {
       "name": "桑基图生成器",
@@ -11892,7 +11931,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "sunburst-chart-generator": {
       "name": "旭日图生成器",
@@ -12065,7 +12106,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "boxplot-chart-generator": {
       "name": "箱线图生成器",
@@ -12156,7 +12199,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "wordcloud-generator": {
       "name": "词云生成器",
@@ -12326,7 +12371,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "calendar-heatmap-generator": {
       "name": "日历热力图生成器",
@@ -12517,7 +12564,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "parallel-chart-generator": {
       "name": "平行坐标图生成器",
@@ -12683,7 +12732,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "tree-chart-generator": {
       "name": "树状图生成器",
@@ -12909,7 +12960,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "venn-diagram-generator": {
       "name": "维恩图生成器",
@@ -13122,7 +13175,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "grouped-bar-chart-generator": {
       "name": "分组柱状图生成器",
@@ -13211,7 +13266,9 @@
       ],
       "clear": "清空",
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "stacked-bar-chart-generator": {
       "name": "堆叠柱状图生成器",
@@ -13304,7 +13361,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "grouped-line-chart-generator": {
       "name": "分组折线图生成器",
@@ -13394,7 +13453,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "step-line-chart-generator": {
       "name": "阶梯折线图生成器",
@@ -13491,7 +13552,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "waterfall-chart-generator": {
       "name": "瀑布图生成器",
@@ -13588,7 +13651,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "stacked-area-chart-generator": {
       "name": "堆叠面积图生成器",
@@ -13679,7 +13744,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "positive-negative-bar-chart-generator": {
       "name": "正负柱状图生成器",
@@ -13774,7 +13841,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "percentage-stacked-bar-chart-generator": {
       "name": "百分比堆积柱状图生成器",
@@ -13861,7 +13930,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "mixed-chart-generator": {
       "name": "混合图表生成器",
@@ -13954,7 +14025,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "ring-progress-chart-generator": {
       "name": "环形进度图表生成器",
@@ -14026,7 +14099,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "liquid-fill-chart-generator": {
       "name": "液体填充图表生成器",
@@ -14104,7 +14179,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "multi-ring-chart-generator": {
       "name": "多环进度图生成器",
@@ -14183,7 +14260,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "half-doughnut-chart-generator": {
       "name": "半圆环图生成器",
@@ -14266,7 +14345,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "nested-pie-chart-generator": {
       "name": "嵌套饼图生成器",
@@ -14357,7 +14438,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "pictorial-bar-chart-generator": {
       "name": "图片条形图生成器",
@@ -14450,7 +14533,9 @@
         }
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "图表预览",
+      "chartsettings": "图表设置"
     },
     "env-parser": {
       "name": "环境文件解析器",

@@ -7141,7 +7141,9 @@
       ],
       "png": "PNG",
       "svg": "SVG",
-      "addCategory": "Add Category"
+      "addCategory": "Add Category",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "line-chart-generator": {
       "name": "Générateur de Graphique en Lignes",
@@ -7218,7 +7220,9 @@
         "Un chef de projet compare les délais réels et prévus de différentes phases en configurant des lignes de référence horizontales et des annotations contextuelles sur l'axe X."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "pie-chart-generator": {
       "name": "Générateur de Graphique en Camembert",
@@ -7293,7 +7297,9 @@
         "Un développeur d'applications SaaS génère des modèles de rapports PDF automatisés en intégrant l'API de l'outil pour convertir des données JSON en images PNG."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "radar-chart-generator": {
       "name": "Générateur de Graphique Radar",
@@ -7368,7 +7374,9 @@
         "Un professeur d'université peut créer un graphique radar pour évaluer les performances d'un étudiant sur plusieurs compétences, telles que la recherche, l'écriture, et la présentation orale. Ce graphique peut être intégré dans un rapport d'évaluation et utilisé pour discuter des points d'amélioration avec l'étudiant."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "scatter-chart-generator": {
       "name": "Générateur de Graphes de Dispersion",
@@ -7437,7 +7445,9 @@
         "Calibration en laboratoire : tracé de la réponse d'un capteur de température (mV vs. °C) avec ajustement polynomial."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "area-chart-generator": {
       "name": "Générateur de Graphique en Aire",
@@ -7504,7 +7514,9 @@
         "Un professeur illustre l'absentéisme scolaire cumulé par trimestre pour plusieurs classes dans un format SVG éditable."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "funnel-chart-generator": {
       "name": "Générateur de Graphique à Entonnoir",
@@ -7578,7 +7590,9 @@
         "Un responsable de la gestion de projet utilise le Funnel Chart Generator pour montrer l'avancement des tâches dans un processus de développement. Chaque étape représente une phase du projet, et la largeur de l'entonnoir indique le nombre de tâches terminées par rapport au total."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "gauge-chart-generator": {
       "name": "Générateur de Graphique de Jauge",
@@ -7638,7 +7652,10 @@
         "Un directeur marketing emploie le Générateur de Cadrans pour suivre l'évolution de la part de marché de son entreprise. Le cadran est configuré pour montrer 15% de part de marché, avec des graduations et des annotations pour comparer avec les objectifs annuels de l'entreprise."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres",
+      "quickpresets": "Quick Presets"
     },
     "heatmap-chart-generator": {
       "name": "Générateur de Cartes Thermiques",
@@ -7702,7 +7719,9 @@
         "Représenter la concentration d'expression de gènes dans des études de biologie moléculaire"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "treemap-chart-generator": {
       "name": "Générateur de Carte en Treemap",
@@ -7781,7 +7800,9 @@
       "png": "PNG",
       "svg": "SVG",
       "delete": "Delete",
-      "total": "Total"
+      "total": "Total",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "doughnut-chart-generator": {
       "name": "Générateur de Graphique en Ananas",
@@ -7848,7 +7869,9 @@
         "Intégrer un dashboard financier en temps réel avec camemberts dynamiques actualisés via API REST"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "sankey-chart-generator": {
       "name": "Générateur de Graphes de Sankey",
@@ -7920,7 +7943,9 @@
         "Cartographie des routes logistiques internationales avec affichage des volumes transportés par voie"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "sunburst-chart-generator": {
       "name": "Générateur de Diagramme en Roseau de Soleil",
@@ -8049,7 +8074,9 @@
         "Un analyste quantitatif teste un backtesting de stratégie en exportant des graphiques SVG avec des annotations automatiques sur les points d'entrée/sortie."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "boxplot-chart-generator": {
       "name": "Générateur de Graphique en Boîte",
@@ -8118,7 +8145,9 @@
         "Présenter les résultats d'une enquête sur l'échelle Likert 1-5 avec boîtes groupées par questions et annotations statistiques"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "wordcloud-generator": {
       "name": "Générateur de Nuage de Mots",
@@ -8248,7 +8277,9 @@
         "Un analyste financier utilise le Graph Chart Generator pour représenter les liens entre les entreprises dans un secteur particulier, en montrant les fusions, les acquisitions, et les partenariats. Cette visualisation aide à comprendre les dynamiques du marché et à prendre des décisions éclairées."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "calendar-heatmap-generator": {
       "name": "Générateur de Carte thermique de calendrier",
@@ -8395,7 +8426,9 @@
         "Modéliser la répartition des temps de réponse d'un serveur web sur un cycle de 24 heures avec un dégradé de température"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "parallel-chart-generator": {
       "name": "Générateur de Graphes en Coordonnées Parallèles",
@@ -8514,7 +8547,9 @@
         "Obtenez des résultats de traitement rapidement sans attendre"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "tree-chart-generator": {
       "name": "Générateur de Schéma Arborescent",
@@ -8673,7 +8708,9 @@
         "Planifiez un projet de construction avec des jalons pour les fondations, la structure, l'électricité et les finitions"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "venn-diagram-generator": {
       "name": "Générateur de diagrammes de Venn",
@@ -8871,7 +8908,9 @@
         "Un gestionnaire de projet utilise le graphique en rose pour suivre les progrès d'un projet en visualisant les tâches complétées par phase, mettant en évidence les écarts par rapport au calendrier planifié."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "grouped-bar-chart-generator": {
       "name": "Générateur de Graphique en Colonnes Groupées",
@@ -8942,7 +8981,9 @@
       ],
       "clear": "Effacer",
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "stacked-bar-chart-generator": {
       "name": "Générateur de Graphique en Barres Empilées",
@@ -9013,7 +9054,9 @@
         "Un site e-commerce montre la distribution des ventes par catégorie de produit et sous-marques."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "grouped-line-chart-generator": {
       "name": "Générateur de Graphique Linéaire Groupé",
@@ -9085,7 +9128,9 @@
         "Représenter les courbes de croissance bactérienne dans 5 conditions expérimentales en laboratoire, avec annotation des phases critiques."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "step-line-chart-generator": {
       "name": "Générateur de Graphique en Lignes Étapes",
@@ -9160,7 +9205,9 @@
         "Un chercheur en sciences environnementales peut générer un graphique en ligne échelonnée pour illustrer les variations de température et de précipitations mensuelles sur plusieurs années, aidant à détecter des tendances climatiques."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "waterfall-chart-generator": {
       "name": "Générateur de diagramme en cascade",
@@ -9235,7 +9282,9 @@
         "Visualiser l'impact des différentes phases de dépense sur le budget initial d'un projet informatique sur 6 mois"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "stacked-area-chart-generator": {
       "name": "Générateur de Graphique en Aire Empilée",
@@ -9304,7 +9353,9 @@
         "Un économiste modélisant l'évolution des réserves de change d'un pays divisées par devise (USD, EUR, CNY) sur un cycle électoral."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "positive-negative-bar-chart-generator": {
       "name": "Générateur de graphique en barres positif/négatif",
@@ -9377,7 +9428,9 @@
         "Recherche médicale : Illustrer l'efficacité comparative de traitements avec des valeurs positives pour résultats thérapeutiques et négatives pour effets secondaires"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "percentage-stacked-bar-chart-generator": {
       "name": "Générateur de Graphique en Barres Empilées en Pourcentage",
@@ -9442,7 +9495,9 @@
         "Un administrateur réseau analyse la distribution du trafic web (mobile, bureau, tablette) sur 12 mois via un graphique à barres horizontales."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "mixed-chart-generator": {
       "name": "Générateur de Graphique Mélange",
@@ -9513,7 +9568,9 @@
         "Représenter les budgets prévisionnels (barres) vs. dépenses réelles (linéaire) avec axes adaptés dans un outil de gestion comptable"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "ring-progress-chart-generator": {
       "name": "Générateur de Graphique de Progrès de Cercle",
@@ -9563,7 +9620,9 @@
         "Un ingénieur IoT développe une interface de suivi énergétique avec des anneaux à dégradé radial reflétant le niveau de charge de batteries."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "liquid-fill-chart-generator": {
       "name": "Générateur de Graphique de Remplissage Liquide",
@@ -9619,7 +9678,9 @@
         "Une application éducative simulant un chronomètre visuel avec un décompte en pourcentage animé."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "multi-ring-chart-generator": {
       "name": "Générateur de Graphique à Anneaux Multiples",
@@ -9676,7 +9737,9 @@
         "Un analyste financier crée un diagramme à cinq anneaux pour comparer les ratios sectoriels (marge bénéficiaire, dette/équité, etc.) de cinq entreprises concurrentes."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "half-doughnut-chart-generator": {
       "name": "Générateur de graphique en demi-donut",
@@ -9741,7 +9804,9 @@
         "Un analyste en communication mesure l'engagement social (likes, partages, commentaires) sur une plateforme web responsive, en superposant deux demi-couronnes pour comparer deux campagnes."
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "nested-pie-chart-generator": {
       "name": "Générateur de diagramme en cercle imbriqué",
@@ -9810,7 +9875,9 @@
         "Représenter la taxonomie de produits avec catégories principales et sous-catégories hiérarchiques imbriquées"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "pictorial-bar-chart-generator": {
       "name": "Générateur de Diagramme en Barres Illustrées",
@@ -9878,7 +9945,9 @@
         "Obtenez des résultats de traitement rapidement sans attendre"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "apercu",
+      "chartsettings": "parametres"
     },
     "env-parser": {
       "name": "Analyseur de fichiers .env",

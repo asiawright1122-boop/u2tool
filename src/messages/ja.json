@@ -7135,7 +7135,9 @@
       ],
       "png": "PNG",
       "svg": "SVG",
-      "addCategory": "Add Category"
+      "addCategory": "Add Category",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "line-chart-generator": {
       "name": "折れ線グラフ生成",
@@ -7212,7 +7214,9 @@
         "IoT監視：温度センサーの1分間隔リアルタイムデータをストリーミング表示するダッシュボード構築"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "pie-chart-generator": {
       "name": "円グラフ生成",
@@ -7287,7 +7291,9 @@
         "教育機関が生徒の成績分布を保護者に説明するためのスクリーンリーダー対応グラフを作成"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "radar-chart-generator": {
       "name": "レーダーチャート生成",
@@ -7362,7 +7368,9 @@
         "Example 4: 研究者が、複数の実験結果（反応時間、精度、再現性）を比較するためにこのツールを使用します。Radarチャートは、複雑なデータを視覚的に表現し、パターンやトレンドを明確に示すことで、研究結果の解析を効果的にサポートします。"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "scatter-chart-generator": {
       "name": "散布図生成",
@@ -7431,7 +7439,9 @@
         "製造業で品質管理データから異常値を検出し、生産プロセスの改善点を特定する。"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "area-chart-generator": {
       "name": "エリアチャート生成",
@@ -7498,7 +7508,9 @@
         "複数地域の新型コロナ感染者数をスタック型チャートで表示し、流行の拡大傾向の比較"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "funnel-chart-generator": {
       "name": "ファネルチャート生成",
@@ -7572,7 +7584,9 @@
         "Example 4: SaaS企業が無料トライアルからの有料プランへの移行プロセスを分析し、どの段階でユーザが脱落しているかを特定し、コンバージョン率を向上させるための施策を検討します。"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "gauge-chart-generator": {
       "name": "ゲージチャート生成",
@@ -7632,7 +7646,10 @@
         "Example 4: マーケティング部門がキャンペーンのクリック率を追跡するために、ゲージチャートを分析ダッシュボードに追加し、キャンペーンの効果をリアルタイムでモニタリングします。"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定",
+      "quickpresets": "Quick Presets"
     },
     "heatmap-chart-generator": {
       "name": "ヒートマップ生成",
@@ -7696,7 +7713,9 @@
         "ゲノム研究：遺伝子発現レベルの比較実験結果をハイブリダイゼーションマップとして表現"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "treemap-chart-generator": {
       "name": "ツリーマップ生成",
@@ -7775,7 +7794,9 @@
       "png": "PNG",
       "svg": "SVG",
       "delete": "Delete",
-      "total": "Total"
+      "total": "Total",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "doughnut-chart-generator": {
       "name": "ドーナツチャート生成",
@@ -7842,7 +7863,9 @@
         "物流管理者が倉庫在庫の品目別構成比をリアルタイムダッシュボードに表示する用途。"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "sankey-chart-generator": {
       "name": "サンキー図生成",
@@ -7914,7 +7937,9 @@
         "公共予算の配分監査：中央政府から地方自治体への資金流の透明性を担保するレポート作成"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "sunburst-chart-generator": {
       "name": "サンバーストチャート生成",
@@ -8043,7 +8068,9 @@
         "FXブローカーが顧客向けレポートにカスタムカラーのローソク足チャートを組み込み"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "boxplot-chart-generator": {
       "name": "箱ひげ図生成",
@@ -8112,7 +8139,9 @@
         "金融機関での月次株価リターンデータの極端な異常値検出"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "wordcloud-generator": {
       "name": "単語クラウド生成ツール",
@@ -8242,7 +8271,9 @@
         "Example 4: 学術研究 - 研究分野の引用関係や協力ネットワークを可視化し、知識の伝播や研究コミュニティの構造を分析します。"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "calendar-heatmap-generator": {
       "name": "カレンダーヒートマップ生成",
@@ -8389,7 +8420,9 @@
         "財務予算配分：部署ごとの支出比率をリングチャート形式で部門横断的に表示。"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "parallel-chart-generator": {
       "name": "平行座標チャート生成",
@@ -8511,7 +8544,9 @@
         "Example 4: 医療研究者の伊藤さんが、複数の患者の治療期間（X軸）、回復速度（Y軸）、および治療コスト（バブルのサイズ）の関係を調査するために、Bubble Chart Generatorを使用して3Dバブルチャートを作成しました。これにより、治療の効果とコスト効率のバランスを評価するのに役立ちました。"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "tree-chart-generator": {
       "name": "ツリー図生成",
@@ -8670,7 +8705,9 @@
         "基礎、フレーミング、電気、仕上げなどのマイルストーンを含む建設プロジェクトを計画"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "venn-diagram-generator": {
       "name": "ベン図生成",
@@ -8868,7 +8905,9 @@
         "Example 4: 経済学者が、複数の国々のGDPデータをNightingaleローズチャートで比較し、経済成長のパターンを分析します。これにより、各国の経済状況や成長率の違いを視覚的に示すことができ、政策立案に活用することができます。"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "grouped-bar-chart-generator": {
       "name": "グループ化棒グラフ生成",
@@ -8939,7 +8978,9 @@
       ],
       "clear": "クリア",
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "stacked-bar-chart-generator": {
       "name": "積み上げ棒グラフ生成",
@@ -9010,7 +9051,9 @@
         "製造業の品質管理工程で発生した不良品数を工程別に区分した月次トレンド分析"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "grouped-line-chart-generator": {
       "name": "グループ化折れ線グラフ生成",
@@ -9082,7 +9125,9 @@
         "ウェブサイトパフォーマンス監視：PC・モバイル・タブレット端末ごとのページロード時間の週次変化グラフ化"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "step-line-chart-generator": {
       "name": "ステップラインチャート生成",
@@ -9157,7 +9202,9 @@
         "Example 4: 研究者は、実験結果の変化を詳細に追跡するために、各試験の結果をステップラインチャートで表現します。これにより、実験過程での具体的な変化点を明確にすることが可能になります。"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "waterfall-chart-generator": {
       "name": "ウォーターフォールチャート生成",
@@ -9232,7 +9279,9 @@
         "データセンターのサーバー負荷変化（ピーク時・通常時のリソース使用量比較）"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "stacked-area-chart-generator": {
       "name": "積み上げエリアチャート生成",
@@ -9301,7 +9350,9 @@
         "産業部門別のCO2排出量推移を対数目盛で比較表示し、環境影響を評価"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "positive-negative-bar-chart-generator": {
       "name": "正負棒グラフ生成",
@@ -9374,7 +9425,9 @@
         "プロジェクト予算と実績の差異分析（正負の予算達成率表示）"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "percentage-stacked-bar-chart-generator": {
       "name": "100%積み上げ棒グラフ作成",
@@ -9439,7 +9492,9 @@
         "年代別ブランド認知率調査結果を性別系列で積み上げ表示し、ターゲット層の傾向を抽出するマーケティング分析"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "mixed-chart-generator": {
       "name": "複合グラフ生成",
@@ -9510,7 +9565,9 @@
         "エネルギー消費量（棒）と外気湿度（線）の建物管理システム向けモニタリング"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "ring-progress-chart-generator": {
       "name": "リング進捗チャート生成",
@@ -9560,7 +9617,9 @@
         "マーケティングキャンペーンの目標達成率をLPに動的に表示するためのコード自動生成"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "liquid-fill-chart-generator": {
       "name": "液体充填チャート生成",
@@ -9616,7 +9675,9 @@
         "ウェアラブルデバイスアプリに心拍数の波動表示モジュールを組み込み"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "multi-ring-chart-generator": {
       "name": "マルチリングチャート生成",
@@ -9673,7 +9734,9 @@
         "教育プラットフォームのスキルマップ：受講者のプログラミング言語習熟度を5段階の同心円で表現し、個人ごとの成長軌跡をトレース可能に"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "half-doughnut-chart-generator": {
       "name": "半円ドーナツチャート生成",
@@ -9738,7 +9801,9 @@
         "マーケティングキャンペーンのクリック率比較を、左右対称の双方向半ドーナツチャートで表現"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "nested-pie-chart-generator": {
       "name": "ネスト円グラフ生成",
@@ -9807,7 +9872,9 @@
         "ITインフラ監視ダッシュボードで、サーバークラスター全体使用率（内環）と個別ノード負荷（外環）をリアルタイム表示する事例"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "pictorial-bar-chart-generator": {
       "name": "ピクトグラム棒グラフ生成",
@@ -9878,7 +9945,9 @@
         "Example 4: 統計局が、年齢ごとの人口分布を可視化するために、異なる年齢層を表すアイコンを使用してピクトリアルバーチャートを作成します。これにより、人口の年齢構成を直感的に理解できます。"
       ],
       "png": "PNG",
-      "svg": "SVG"
+      "svg": "SVG",
+      "chartpreview": "チャートプレビュー",
+      "chartsettings": "チャート設定"
     },
     "env-parser": {
       "name": "環境変数ファイル解析",
