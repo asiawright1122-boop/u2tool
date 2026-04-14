@@ -69,8 +69,8 @@
 
     <div class="space-y-4">
       <div class="flex gap-2">
-        <button onclick={() => mode = 'encode'} class={`px-4 py-2 rounded ${mode === 'encode' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'}`}>{t('encode')}</button>
-        <button onclick={() => mode = 'decode'} class={`px-4 py-2 rounded ${mode === 'decode' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'}`}>{t('decode')}</button>
+        <button onclick={() => mode = 'encode'} class={`px-4 py-2 rounded ${mode === 'encode' ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'}`}>{t('encode')}</button>
+        <button onclick={() => mode = 'decode'} class={`px-4 py-2 rounded ${mode === 'decode' ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'}`}>{t('decode')}</button>
       </div>
       <div class="grid md:grid-cols-2 gap-4">
         <div>

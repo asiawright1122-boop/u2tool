@@ -99,13 +99,13 @@
           <div class="flex gap-2">
             <button
               onclick={() => type = 'linear'}
-              class={`px-4 py-2 rounded-lg text-white ${type === 'linear' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-800'}`}
+              class={`px-4 py-2 rounded-lg text-white ${type === 'linear' ? 'bg-amber-600' : 'bg-gray-500 dark:bg-gray-800'}`}
             >
               {t('gradient.linear')}
             </button>
             <button
               onclick={() => type = 'radial'}
-              class={`px-4 py-2 rounded-lg text-white ${type === 'radial' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-800'}`}
+              class={`px-4 py-2 rounded-lg text-white ${type === 'radial' ? 'bg-amber-600' : 'bg-gray-500 dark:bg-gray-800'}`}
             >
               {t('gradient.radial')}
             </button>
@@ -202,7 +202,7 @@
             <span class="text-sm text-gray-600 dark:text-gray-300">CSS</span>
             <button
               onclick={() => copyValue('css', `background: ${css};`)}
-              class={`text-xs px-2 py-1 rounded text-white ${copied === 'css' ? 'bg-green-600' : 'bg-gray-500 dark:bg-gray-700'}`}
+              class={`text-xs px-2 py-1 rounded text-white ${copied === 'css' ? 'bg-emerald-500' : 'bg-gray-500 dark:bg-gray-700'}`}
             >
               {copied === 'css' ? t('copied') : t('copy')}
             </button>
@@ -217,12 +217,12 @@
             <span class="text-sm text-gray-600 dark:text-gray-300">Tailwind CSS</span>
             <button
               onclick={() => copyValue('tailwind', `bg-gradient-to-r from-[${colors[0].color}] to-[${colors[colors.length-1].color}]`)}
-              class={`text-xs px-2 py-1 rounded text-white ${copied === 'tailwind' ? 'bg-green-600' : 'bg-gray-500 dark:bg-gray-700'}`}
+              class={`text-xs px-2 py-1 rounded text-white ${copied === 'tailwind' ? 'bg-emerald-500' : 'bg-gray-500 dark:bg-gray-700'}`}
             >
               {copied === 'tailwind' ? t('copied') : t('copy')}
             </button>
           </div>
-          <code class="text-sm text-blue-700 dark:text-blue-400 break-all">
+          <code class="text-sm text-amber-700 dark:text-amber-400 break-all">
             bg-gradient-to-r from-[{colors[0].color}] to-[{colors[colors.length-1].color}]
           </code>
         </div>

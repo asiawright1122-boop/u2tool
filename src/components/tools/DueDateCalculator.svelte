@@ -129,8 +129,8 @@
   function getTrimesterColor(trimester: number) {
     switch (trimester) {
       case 1: return 'from-pink-400 to-pink-500';
-      case 2: return 'from-purple-400 to-purple-500';
-      case 3: return 'from-blue-400 to-blue-500';
+      case 2: return 'from-slate-400 to-slate-500';
+      case 3: return 'from-amber-400 to-amber-500';
       default: return 'from-gray-400 to-gray-500';
     }
   }
@@ -141,7 +141,7 @@
     <div class="space-y-6">
       <!-- Method Selection -->
       <div class="space-y-2">
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+        <label class="tool-label">
           {t('calculationMethod')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -195,7 +195,7 @@
       {#if result}
 <div class="space-y-4">
           <!-- Due Date -->
-          <div class="p-6 bg-gradient-to-r from-pink-50 to-purple-50 dark:from-pink-900/20 dark:to-purple-900/20 rounded-xl border border-pink-200 dark:border-pink-800">
+          <div class="p-6 bg-gradient-to-r from-pink-50 to-slate-50 dark:from-pink-900/20 dark:to-slate-900/20 rounded-xl border border-pink-200 dark:border-pink-800">
             <div class="flex items-center gap-3 mb-4">
               <Baby class="w-8 h-8 text-pink-500" />
               <div>

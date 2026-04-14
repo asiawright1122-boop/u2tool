@@ -88,7 +88,7 @@
           <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('input')}</label>
           <textarea
             bind:value={input}
-            class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
             placeholder={t('inputPlaceholder')}></textarea>
         </div>
 
@@ -122,7 +122,7 @@
 {#if error.suggestions.length > 0}
                   <button
                     onclick={() => applyFix(error)}
-                    class="text-xs px-2 py-1 bg-blue-600 text-white rounded hover:bg-blue-700"
+                    class="text-xs px-2 py-1 bg-amber-600 text-white rounded hover:bg-amber-700"
                   >
                     {t('fix')}
                   </button>

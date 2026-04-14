@@ -66,44 +66,44 @@
         <textarea
           bind:value={input}
           rows={4}
-          class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"
+          class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"
           placeholder={t('inputPlaceholder')}></textarea>
       </div>
 
       <div class="flex flex-wrap gap-4">
         <button
           onclick={() => method = 'base64'}
-          class={`px-4 py-2 rounded-lg transition-colors ${method === 'base64' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
+          class={`px-4 py-2 rounded-lg transition-colors ${method === 'base64' ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
         >
           {t('methodBase64')}
         </button>
         <button
           onclick={() => method = 'hex'}
-          class={`px-4 py-2 rounded-lg transition-colors ${method === 'hex' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
+          class={`px-4 py-2 rounded-lg transition-colors ${method === 'hex' ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
         >
           {t('methodHex')}
         </button>
         <button
           onclick={() => method = 'html'}
-          class={`px-4 py-2 rounded-lg transition-colors ${method === 'html' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
+          class={`px-4 py-2 rounded-lg transition-colors ${method === 'html' ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
         >
           {t('methodHtml')}
         </button>
         <button
           onclick={() => method = 'url'}
-          class={`px-4 py-2 rounded-lg transition-colors ${method === 'url' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
+          class={`px-4 py-2 rounded-lg transition-colors ${method === 'url' ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
         >
           {t('methodUrl')}
         </button>
         <button
           onclick={() => method = 'rot13'}
-          class={`px-4 py-2 rounded-lg transition-colors ${method === 'rot13' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
+          class={`px-4 py-2 rounded-lg transition-colors ${method === 'rot13' ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
         >
           {t('methodRot13')}
         </button>
         <button
           onclick={() => method = 'reverse'}
-          class={`px-4 py-2 rounded-lg transition-colors ${method === 'reverse' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
+          class={`px-4 py-2 rounded-lg transition-colors ${method === 'reverse' ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
         >
           {t('methodReverse')}
         </button>
@@ -112,7 +112,7 @@
       <div class="flex justify-center">
         <button
           onclick={obfuscate}
-          class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition-colors shadow-lg shadow-blue-500/20"
+          class="px-8 py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-xl transition-colors shadow-lg shadow-amber-500/20"
         >
           {t('obfuscate')}
         </button>
@@ -124,7 +124,7 @@
             <label class="block text-sm font-medium text-gray-600 dark:text-gray-300">{t('result')} ({method})</label>
             <button
               onclick={() => navigator.clipboard.writeText(output)}
-              class="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
+              class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300"
             >
               {t('copy')}
             </button>

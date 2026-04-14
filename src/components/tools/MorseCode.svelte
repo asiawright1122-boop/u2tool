@@ -115,7 +115,7 @@
               </button>
               <button
                 onclick={textToMorse}
-                class="px-3 py-1 text-sm bg-blue-600 hover:bg-blue-700 rounded transition-colors"
+                class="px-3 py-1 text-sm bg-amber-600 hover:bg-amber-700 rounded transition-colors"
               >
                 {t('toMorse')} →
               </button>
@@ -123,7 +123,7 @@
           </div>
           <textarea
             bind:value={text}
-            class="w-full h-48 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            class="w-full h-48 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
             placeholder={t('textPlaceholder')}></textarea>
         </div>
 
@@ -133,7 +133,7 @@
             <div class="flex gap-2">
               <button
                 onclick={morseToText}
-                class="px-3 py-1 text-sm bg-green-600 hover:bg-green-700 rounded transition-colors"
+                class="px-3 py-1 text-sm bg-emerald-500 hover:bg-green-700 rounded transition-colors"
               >
                 ← {t('toText')}
               </button>
@@ -155,7 +155,7 @@
           </div>
           <textarea
             bind:value={morse}
-            class="w-full h-48 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            class="w-full h-48 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
             placeholder={t('morsePlaceholder')}></textarea>
         </div>
       </div>

@@ -10959,7 +10959,12 @@
         "may": "五月",
         "jun": "六月",
         "sales": "销售额",
-        "profit": "利润"
+        "profit": "利润",
+        "productA": "产品A",
+        "productB": "产品B",
+        "productC": "产品C",
+        "productD": "产品D",
+        "productE": "产品E"
       }
     },
     "line-chart-generator": {
@@ -11691,7 +11696,10 @@
         "insurance": "保险业",
         "pharma": "制药业",
         "medical": "医疗器械",
-        "energy": "能源"
+        "energy": "能源",
+        "tech": "科技",
+        "finance": "金融",
+        "healthcare": "医疗"
       },
       "tips": {
         "title": "使用小贴士",
@@ -11887,8 +11895,6 @@
       "svg": "SVG"
     },
     "sunburst-chart-generator": {
-      "name": "太阳系图生成器",
-      "description": "在线创建太阳系图。以辐射方式可视化层次结构数据，并导出为PNG/SVG。",
       "name": "旭日图生成器",
       "description": "在线创建旭日图。以辐射方式可视化层次结构数据，并导出为PNG/SVG。",
       "seo_title": "免费在线旭日图生成器 - 绘制层级占比旭日图",
@@ -14127,7 +14133,11 @@
         "completion": "完成度",
         "satisfaction": "满意度",
         "efficiency": "效率",
-        "quality": "质量"
+        "quality": "质量",
+        "revenue": "营收",
+        "expenses": "支出",
+        "profit": "利润",
+        "growth": "增长"
       },
       "tips": {
         "title": "提示",

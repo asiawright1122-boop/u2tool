@@ -96,7 +96,7 @@
     <div class="space-y-4">
       <!-- Upload Area -->
       <div
-        class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center hover:border-blue-500 transition-colors cursor-pointer bg-gray-50 dark:bg-transparent"
+        class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center hover:border-amber-500 transition-colors cursor-pointer bg-gray-50 dark:bg-transparent"
         onclick={() => fileInputRef?.click()}
       >
         <input

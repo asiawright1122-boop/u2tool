@@ -182,7 +182,7 @@ function hello() {
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('documentTitle')}
           </label>
           <input
@@ -192,7 +192,7 @@ function hello() {
           />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('fontSize')}
           </label>
           <select
@@ -208,7 +208,7 @@ function hello() {
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('pageSize')}
           </label>
           <select
@@ -224,7 +224,7 @@ function hello() {
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('markdownInput')}
           </label>
           <textarea
@@ -234,7 +234,7 @@ function hello() {
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('preview')}
           </label>
           <div
@@ -247,7 +247,7 @@ function hello() {
       <div class="flex gap-4">
         <button
           onclick={generatePdf}
-          class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+          class="px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> {t('generatePdf')}
         </button>
@@ -259,9 +259,9 @@ function hello() {
         </button>
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h3 class="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('supportedSyntax')}</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm text-blue-700 dark:text-blue-400">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+        <h3 class="font-medium text-amber-800 dark:text-amber-300 mb-2">{t('supportedSyntax')}</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm text-amber-700 dark:text-amber-400">
           <div>• {t('headings')}</div>
           <div>• {t('boldItalic')}</div>
           <div>• {t('lists')}</div>

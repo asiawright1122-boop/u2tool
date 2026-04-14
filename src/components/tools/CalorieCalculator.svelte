@@ -113,7 +113,7 @@
           onclick={() => unit = 'metric'}
           class={`px-4 py-2 rounded-lg font-medium transition-colors ${
             unit === 'metric'
-              ? 'bg-blue-500 text-white'
+              ? 'bg-amber-500 text-white'
               : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300'
           }`}
         >
@@ -123,7 +123,7 @@
           onclick={() => unit = 'imperial'}
           class={`px-4 py-2 rounded-lg font-medium transition-colors ${
             unit === 'imperial'
-              ? 'bg-blue-500 text-white'
+              ? 'bg-amber-500 text-white'
               : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300'
           }`}
         >
@@ -134,7 +134,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Gender -->
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('gender')}
           </label>
           <div class="flex gap-2">
@@ -142,7 +142,7 @@
               onclick={() => gender = 'male'}
               class={`flex-1 px-4 py-2 rounded-lg font-medium transition-colors ${
                 gender === 'male'
-                  ? 'bg-blue-500 text-white'
+                  ? 'bg-amber-500 text-white'
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300'
               }`}
             >
@@ -163,7 +163,7 @@
 
         <!-- Age -->
         <div class="space-y-2">
-          <label for="calorie-age" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label for="calorie-age" class="tool-label">
             {t('age')}
           </label>
           <input
@@ -274,9 +274,9 @@
           </div>
 
           <!-- Maintenance -->
-          <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
-            <div class="font-medium text-blue-700 dark:text-blue-300 mb-2">{t('maintenance')}</div>
-            <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">
+          <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg border border-amber-200 dark:border-amber-800">
+            <div class="font-medium text-amber-700 dark:text-amber-300 mb-2">{t('maintenance')}</div>
+            <div class="text-3xl font-bold text-amber-600 dark:text-amber-400">
               {result.maintenance.toLocaleString()} <span class="text-lg font-normal">{t('caloriesPerDay')}</span>
             </div>
           </div>

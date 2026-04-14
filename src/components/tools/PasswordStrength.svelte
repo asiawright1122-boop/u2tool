@@ -138,7 +138,7 @@
             type={showPassword ? 'text' : 'password'}
             bind:value={password}
             placeholder={t('pwStrength.placeholder')}
-            class="w-full p-3 pr-20 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full p-3 pr-20 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
           <button
             type="button"

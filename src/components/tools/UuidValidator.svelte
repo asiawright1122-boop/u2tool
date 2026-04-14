@@ -80,13 +80,13 @@
         <textarea
           bind:value={input}
           placeholder={t('uuidValidator.placeholder')}
-          class="w-full h-40 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+          class="w-full h-40 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent"></textarea>
       </div>
 
       <div class="flex gap-3">
         <button
           onclick={handleValidate}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors text-white"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium transition-colors text-white"
         >
           {t('uuidValidator.validate')}
         </button>

@@ -54,7 +54,7 @@
         <button
           onclick={() => mode = 'chars'}
           class={`px-4 py-2 rounded-lg transition-colors ${
-            mode === 'chars' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'
+            mode === 'chars' ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'
           }`}
         >
           {t('reverseChars')}
@@ -62,7 +62,7 @@
         <button
           onclick={() => mode = 'words'}
           class={`px-4 py-2 rounded-lg transition-colors ${
-            mode === 'words' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'
+            mode === 'words' ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'
           }`}
         >
           {t('reverseWords')}
@@ -70,7 +70,7 @@
         <button
           onclick={() => mode = 'lines'}
           class={`px-4 py-2 rounded-lg transition-colors ${
-            mode === 'lines' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'
+            mode === 'lines' ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'
           }`}
         >
           {t('reverseLines')}
@@ -89,7 +89,7 @@
           <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('input')}</label>
           <textarea
             bind:value={input}
-            class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
             placeholder={t('placeholder')}></textarea>
         </div>
 
@@ -98,7 +98,7 @@
           <textarea
             value={reversed}
             readOnly
-            class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"></textarea>
+            class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"></textarea>
         </div>
       </div>
     </div>

@@ -79,7 +79,7 @@
     <div class="space-y-6">
       <!-- Type Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('type')} *
         </label>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
@@ -88,8 +88,8 @@
               onclick={() => type = ct.value}
               class={`px-3 py-2 text-sm rounded-lg border transition-colors text-left ${
                 type === ct.value
-                  ? 'bg-blue-500 text-white border-blue-500'
-                  : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 hover:border-blue-400'
+                  ? 'bg-amber-500 text-white border-amber-500'
+                  : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 hover:border-amber-400'
               }`}
               title={ct.description}
             >
@@ -104,7 +104,7 @@
 
       <!-- Scope -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('scope')} ({t('optional')})
         </label>
         <input
@@ -117,7 +117,7 @@
 
       <!-- Subject -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('subject')} *
         </label>
         <input
@@ -143,7 +143,7 @@
           type="checkbox"
           id="breaking"
           bind:checked={isBreaking}
-          class="w-4 h-4 text-blue-500 rounded border-gray-300 focus:ring-blue-500"
+          class="w-4 h-4 text-amber-500 rounded border-gray-300 focus:ring-amber-500"
         />
         <label for="breaking" class="text-sm text-gray-700 dark:text-gray-300">
           {t('breakingChange')}
@@ -152,7 +152,7 @@
 
       <!-- Body -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('body')} ({t('optional')})
         </label>
         <textarea
@@ -164,7 +164,7 @@
 
       <!-- Footer -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('footer')} ({t('optional')})
         </label>
         <textarea
@@ -177,13 +177,13 @@
       <!-- Output -->
       <div>
         <div class="flex items-center justify-between mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('commitMessage')}
           </label>
           <button
             onclick={handleCopy}
             disabled={!subject}
-            class="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            class="px-3 py-1 text-sm bg-amber-500 text-white rounded hover:bg-amber-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {copied ? common('copied') : common('copy')}
           </button>
@@ -194,11 +194,11 @@
       </div>
 
       <!-- Tips -->
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h4 class="text-sm font-medium text-blue-800 dark:text-blue-300 mb-2">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+        <h4 class="text-sm font-medium text-amber-800 dark:text-amber-300 mb-2">
           {t('tips')}
         </h4>
-        <ul class="text-xs text-blue-700 dark:text-blue-400 space-y-1 list-disc list-inside">
+        <ul class="text-xs text-amber-700 dark:text-amber-400 space-y-1 list-disc list-inside">
           <li>{t('tip1')}</li>
           <li>{t('tip2')}</li>
           <li>{t('tip3')}</li>

@@ -69,7 +69,7 @@
 <button 
               onclick={() => { selectedPattern = pattern.id; customPattern = ''; }}
               class={`px-3 py-2 rounded-lg text-sm transition-colors ${
-                selectedPattern === pattern.id ? 'bg-blue-600' : 'bg-gray-700 hover:bg-gray-600'
+                selectedPattern === pattern.id ? 'bg-amber-600' : 'bg-gray-700 hover:bg-gray-600'
               }`}>
               {t(`patterns.${pattern.labelKey}`)}
             </button>
@@ -78,7 +78,7 @@
       </div>
 
       <div>
-        <label for="regex-pattern" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label for="regex-pattern" class="tool-label">
           {selectedPattern ? t(`patterns.${COMMON_PATTERNS.find(p => p.id === selectedPattern)?.descKey}`) : t('customPattern')}
         </label>
         <input id="regex-pattern" name="pattern" type="text" value={currentPattern}
@@ -100,7 +100,7 @@
       </div>
 
       <div>
-        <label for="regex-test-string" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('testString')}</label>
+        <label for="regex-test-string" class="tool-label">{t('testString')}</label>
         <textarea id="regex-test-string" name="testString" bind:value={testString}
           class="w-full h-32 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white"
           placeholder={t('testPlaceholder')}></textarea>
@@ -108,7 +108,7 @@
 
       <div class="flex gap-4">
         <button onclick={testPattern}
-          class="px-6 py-2 bg-green-600 hover:bg-green-700 rounded-lg font-medium transition-colors text-white">
+          class="px-6 py-2 bg-emerald-500 hover:bg-green-700 rounded-lg font-medium transition-colors text-white">
           {t('testPattern')}
         </button>
         <button onclick={copyPattern} disabled={!currentPattern}
@@ -119,7 +119,7 @@
 
       {#if matches.length > 0}
 <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('matches')} ({matches.length})</label>
+          <label class="tool-label">{t('matches')} ({matches.length})</label>
           <div class="bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg p-4 space-y-2">
             {#each matches as match, i (i)}
 <div  class="px-3 py-2 bg-white dark:bg-gray-600 border border-gray-200 dark:border-gray-500 rounded font-mono text-green-600 dark:text-green-400">{match}</div>

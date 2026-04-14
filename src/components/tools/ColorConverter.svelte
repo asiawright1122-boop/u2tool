@@ -105,7 +105,7 @@
           <label for="color-hex" class="text-sm font-medium text-gray-700 dark:text-gray-300">HEX</label>
           <button
             onclick={() => copyValue('hex', hex)}
-            class={`text-xs px-2 py-1 rounded ${copied === 'hex' ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
+            class={`text-xs px-2 py-1 rounded ${copied === 'hex' ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
           >
             {copied === 'hex' ? t('copied') : t('copy')}
           </button>
@@ -126,7 +126,7 @@
           <label for="color-rgb" class="text-sm font-medium text-gray-700 dark:text-gray-300">RGB</label>
           <button
             onclick={() => copyValue('rgb', `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`)}
-            class={`text-xs px-2 py-1 rounded ${copied === 'rgb' ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
+            class={`text-xs px-2 py-1 rounded ${copied === 'rgb' ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
           >
             {copied === 'rgb' ? t('copied') : t('copy')}
           </button>
@@ -156,7 +156,7 @@
           <label class="text-sm font-medium text-gray-700 dark:text-gray-300">HSL</label>
           <button
             onclick={() => copyValue('hsl', `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`)}
-            class={`text-xs px-2 py-1 rounded ${copied === 'hsl' ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
+            class={`text-xs px-2 py-1 rounded ${copied === 'hsl' ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
           >
             {copied === 'hsl' ? t('copied') : t('copy')}
           </button>

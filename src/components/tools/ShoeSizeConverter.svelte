@@ -58,7 +58,7 @@
     <div class="space-y-6">
       <!-- Gender Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('gender')}
         </label>
         <div class="flex gap-2">
@@ -66,7 +66,7 @@
             onclick={() => handleGenderChange('men')}
             class={`px-4 py-2 rounded-lg font-medium transition-colors ${
               gender === 'men'
-                ? 'bg-blue-600 text-white'
+                ? 'bg-amber-600 text-white'
                 : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
             }`}
           >
@@ -87,7 +87,7 @@
 
       <!-- Size System Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('selectSystem')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -96,7 +96,7 @@
               onclick={() => handleSystemChange(system)}
               class={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                 fromSystem === system
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
               }`}
             >
@@ -108,7 +108,7 @@
 
       <!-- Size Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('selectSize')} ({sizeSystemNames[fromSystem]})
         </label>
         <div class="flex flex-wrap gap-2">
@@ -117,7 +117,7 @@
               onclick={() => selectedSize = row[fromSystem]}
               class={`px-3 py-2 rounded-lg font-medium transition-colors min-w-[50px] ${
                 selectedSize === row[fromSystem]
-                  ? 'bg-green-600 text-white'
+                  ? 'btn-success'
                   : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
               }`}
             >
@@ -138,7 +138,7 @@
 <div 
                 class={`p-4 rounded-lg text-center ${
                   system === fromSystem
-                    ? 'bg-blue-100 dark:bg-blue-900 border-2 border-blue-500'
+                    ? 'bg-amber-100 dark:bg-amber-900 border-2 border-amber-500'
                     : 'bg-white dark:bg-gray-700'
                 }`}
               >
@@ -174,7 +174,7 @@
               {#each sizes as row, idx (idx)}
 <tr  
                   class={`border-b border-gray-100 dark:border-gray-700 ${
-                    matchingRow === row ? 'bg-blue-50 dark:bg-blue-900/30' : ''
+                    matchingRow === row ? 'bg-amber-50 dark:bg-amber-900/30' : ''
                   }`}
                 >
                   {#each systems as system (system)}

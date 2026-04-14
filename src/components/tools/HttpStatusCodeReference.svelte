@@ -93,7 +93,7 @@
         {#each filteredCodes as status (status.code)}
 <div 
             onclick={() => selectedCode = status}
-            class="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-blue-500 dark:hover:border-blue-400 cursor-pointer transition-colors bg-white dark:bg-gray-800"
+            class="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-amber-500 dark:hover:border-amber-400 cursor-pointer transition-colors bg-white dark:bg-gray-800"
           >
             <div class="flex items-center gap-3 mb-2">
               <span class={`px-2 py-1 rounded text-sm font-bold ${CATEGORY_COLORS[status.category]}`}>

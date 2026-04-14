@@ -98,7 +98,7 @@
 <p class="text-red-600 dark:text-red-400">{error}</p>
 {/if}
       <div class="flex gap-2">
-        <button onclick={convert} class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">{tg('convert')}</button>
+        <button onclick={convert} class="px-4 py-2 bg-amber-600 text-white rounded hover:bg-amber-700">{tg('convert')}</button>
         <button onclick={copy} class="px-4 py-2 bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-white rounded hover:bg-gray-300 dark:hover:bg-gray-700">{copied ? tg('copied') : tg('copy')}</button>
       </div>
     </div>

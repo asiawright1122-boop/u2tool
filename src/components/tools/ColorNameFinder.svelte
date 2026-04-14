@@ -38,10 +38,10 @@
             <input type="color" id="color-picker" name="color" bind:value={color}
               class="w-12 h-10 rounded cursor-pointer" />
             <input type="text" id="color-hex" name="hexColor" bind:value={color}
-              class="flex-1 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono focus:outline-none focus:border-blue-500" />
+              class="flex-1 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono focus:outline-none focus:border-amber-500" />
           </div>
         </div>
-        <button onclick={handleFind} class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+        <button onclick={handleFind} class="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors">
           {t('find')}
         </button>
       </div>

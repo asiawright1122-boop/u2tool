@@ -130,7 +130,7 @@
           onclick={() => mode = 'encode'}
           class={`flex-1 px-4 py-2 rounded-lg transition-colors ${
             mode === 'encode'
-              ? 'bg-blue-600 text-white'
+              ? 'bg-amber-600 text-white'
               : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
           }`}
         >
@@ -140,7 +140,7 @@
           onclick={() => mode = 'decode'}
           class={`flex-1 px-4 py-2 rounded-lg transition-colors ${
             mode === 'decode'
-              ? 'bg-blue-600 text-white'
+              ? 'bg-amber-600 text-white'
               : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
           }`}
         >
@@ -194,7 +194,7 @@
       <div class="flex gap-2">
         <button
           onclick={convert}
-          class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          class="flex-1 px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
         >
           {tc('convert')}
         </button>
@@ -204,7 +204,7 @@
           class={`flex-1 px-4 py-2 rounded-lg transition-colors ${
             isPlaying
               ? 'bg-gray-400 cursor-not-allowed'
-              : 'bg-green-600 text-white hover:bg-green-700'
+              : 'btn-success hover:bg-green-700'
           }`}
         >
           {isPlaying ? t('playing') : t('play')} <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
@@ -221,7 +221,7 @@
               </label>
               <button
                 onclick={copyToClipboard}
-                class="text-sm text-blue-600 hover:text-blue-700"
+                class="text-sm text-amber-600 hover:text-amber-700"
               >
                 {copied ? tc('copied') : tc('copy')}
               </button>
@@ -239,9 +239,9 @@
 <span 
                     class={`inline-flex items-center justify-center ${
                       char === '.'
-                        ? 'w-3 h-3 bg-blue-500 rounded-full'
+                        ? 'w-3 h-3 bg-amber-500 rounded-full'
                         : char === '-'
-                        ? 'w-8 h-3 bg-blue-500 rounded'
+                        ? 'w-8 h-3 bg-amber-500 rounded'
                         : char === ' '
                         ? 'w-2'
                         : char === '/'
@@ -257,11 +257,11 @@
             <div class="text-sm text-gray-600 dark:text-gray-400 mb-2">{t('legend')}</div>
             <div class="grid grid-cols-2 gap-2 text-sm">
               <div class="flex items-center gap-2">
-                <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
+                <span class="w-3 h-3 bg-amber-500 rounded-full"></span>
                 <span>{t('dot')} (.)</span>
               </div>
               <div class="flex items-center gap-2">
-                <span class="w-8 h-3 bg-blue-500 rounded"></span>
+                <span class="w-8 h-3 bg-amber-500 rounded"></span>
                 <span>{t('dash')} (-)</span>
               </div>
               <div class="flex items-center gap-2">

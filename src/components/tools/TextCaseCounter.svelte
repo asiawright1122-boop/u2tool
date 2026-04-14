@@ -45,7 +45,7 @@
       <div class="text-2xl font-bold text-gray-900 dark:text-white">{value}</div>
       <div class="text-sm text-gray-600 dark:text-gray-300">{label}</div>
       {#if percent}
-<div class="text-xs text-blue-400 mt-1">{percent}%</div>
+<div class="text-xs text-amber-400 mt-1">{percent}%</div>
 {/if}
     </div>
 {/snippet}
@@ -53,13 +53,13 @@
 
     <div class="space-y-6">
       <div>
-        <label for="text-case-input" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('input')}</label>
+        <label for="text-case-input" class="tool-label">{t('input')}</label>
         <textarea
           id="text-case-input"
           name="textCaseInput"
           bind:value={text}
           placeholder={t('caseCounter.placeholder')}
-          class="w-full h-40 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500"></textarea>
+          class="w-full h-40 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500"></textarea>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -77,7 +77,7 @@
           <div class="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('caseCounter.ratio')}</div>
           <div class="flex h-4 rounded overflow-hidden">
             <div
-              class="bg-blue-500"
+              class="bg-amber-500"
               style="width: {stats.uppercasePercent}%"
               title={`Uppercase: ${stats.uppercasePercent}%`}></div>
             <div
@@ -86,7 +86,7 @@
               title={`Lowercase: ${stats.lowercasePercent}%`}></div>
           </div>
           <div class="flex justify-between text-xs mt-1">
-            <span class="text-blue-400">A-Z: {stats.uppercasePercent}%</span>
+            <span class="text-amber-400">A-Z: {stats.uppercasePercent}%</span>
             <span class="text-green-400">a-z: {stats.lowercasePercent}%</span>
           </div>
         </div>

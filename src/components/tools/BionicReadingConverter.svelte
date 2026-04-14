@@ -62,7 +62,7 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('inputLabel')}
         </label>
         <textarea
@@ -72,7 +72,7 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('fixationStrength')}: {fixationStrength}%
         </label>
         <input
@@ -97,7 +97,7 @@
             <button
               onclick={copyHtml}
               disabled={!input}
-              class="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+              class="px-3 py-1 text-sm bg-amber-600 text-white rounded hover:bg-amber-700 disabled:opacity-50"
             >
               {copied ? t('copied') : t('copyHtml')}
             </button>

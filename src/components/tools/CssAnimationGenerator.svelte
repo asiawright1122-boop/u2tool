@@ -71,12 +71,12 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('cssAnimation.preset')}</label>
+            <label class="tool-label">{t('cssAnimation.preset')}</label>
             <div class="grid grid-cols-4 gap-2">
               {#each presetKeys as key (key)}
 <button 
                   onclick={() => animation = key}
-                  class={`p-2 rounded text-xs text-white ${animation === key ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-800 hover:bg-gray-600 dark:hover:bg-gray-700'}`}
+                  class={`p-2 rounded text-xs text-white ${animation === key ? 'bg-amber-600' : 'bg-gray-500 dark:bg-gray-800 hover:bg-gray-600 dark:hover:bg-gray-700'}`}
                 >
                   {t(`cssAnimation.${key}`)}
                 </button>
@@ -121,10 +121,10 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('cssAnimation.preview')}</label>
+          <label class="tool-label">{t('cssAnimation.preview')}</label>
           <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-8 flex items-center justify-center min-h-[200px]">
             <div
-              class="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg"
+              class="w-20 h-20 bg-gradient-to-br from-amber-500 to-slate-600 rounded-lg"
               style="animation: {animation} {duration}s {timing} {iteration}"></div>
           </div>
         </div>

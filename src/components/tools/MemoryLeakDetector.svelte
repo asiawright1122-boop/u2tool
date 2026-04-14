@@ -53,7 +53,7 @@
     switch (severity) {
       case 'high': return 'border-red-500 bg-red-50 dark:bg-red-900/20';
       case 'medium': return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
-      case 'low': return 'border-blue-500 bg-blue-50 dark:bg-blue-900/20';
+      case 'low': return 'border-amber-500 bg-amber-50 dark:bg-amber-900/20';
       default: return 'border-gray-500 bg-gray-50 dark:bg-gray-800';
     }
   }
@@ -64,8 +64,8 @@
     <div class="space-y-6">
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Code {tCommon('input')}</label>
-          <button onclick={loadExample} class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400">{t('loadExample')}</button>
+          <label class="tool-label">Code {tCommon('input')}</label>
+          <button onclick={loadExample} class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400">{t('loadExample')}</button>
         </div>
         <textarea bind:value={code} placeholder={t("inputPlaceholder")}
           class="w-full h-64 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm resize-none"></textarea>
@@ -91,9 +91,9 @@
                 <div class="text-xl font-bold text-yellow-600">{result.issues.filter(i => i.severity === 'medium').length}</div>
                 <div class="text-xs text-yellow-500">Medium</div>
               </div>
-              <div class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center">
-                <div class="text-xl font-bold text-blue-600">{result.issues.filter(i => i.severity === 'low').length}</div>
-                <div class="text-xs text-blue-500">Low</div>
+              <div class="p-3 bg-amber-50 dark:bg-amber-900/20 rounded-lg text-center">
+                <div class="text-xl font-bold text-amber-600">{result.issues.filter(i => i.severity === 'low').length}</div>
+                <div class="text-xs text-amber-500">Low</div>
               </div>
             </div>
           </div>

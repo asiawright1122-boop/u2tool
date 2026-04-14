@@ -116,7 +116,7 @@
               onclick={() => operation = op}
               class={`w-12 h-12 rounded-lg text-2xl font-bold transition-colors ${
                 operation === op
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
@@ -131,7 +131,7 @@
       <div class="flex justify-center">
         <button
           onclick={calculate}
-          class="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-lg"
+          class="px-8 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium text-lg"
         >
           = {t('calculate')}
         </button>
@@ -143,9 +143,9 @@
             <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">{t('result')}</div>
             <div class="flex items-center justify-center gap-4">
               <div class="flex flex-col items-center">
-                <span class="text-4xl font-bold text-blue-600 dark:text-blue-400">{result.num}</span>
-                <div class="w-16 h-1 bg-blue-600 dark:bg-blue-400 my-1"></div>
-                <span class="text-4xl font-bold text-blue-600 dark:text-blue-400">{result.den}</span>
+                <span class="text-4xl font-bold text-amber-600 dark:text-amber-400">{result.num}</span>
+                <div class="w-16 h-1 bg-amber-600 dark:bg-amber-400 my-1"></div>
+                <span class="text-4xl font-bold text-amber-600 dark:text-amber-400">{result.den}</span>
               </div>
               {#if result.den !== 1}
 <div>
@@ -160,7 +160,7 @@
             </div>
             <button
               onclick={copyResult}
-              class="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+              class="mt-4 px-4 py-2 btn-success rounded-lg hover:bg-green-700 transition-colors"
             >
               {copied ? t('copied') : t('copy')}
             </button>
@@ -169,8 +169,8 @@
 {/if}
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-        <div class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center">
-          <div class="font-medium text-blue-600 dark:text-blue-400">+</div>
+        <div class="p-3 bg-amber-50 dark:bg-amber-900/20 rounded-lg text-center">
+          <div class="font-medium text-amber-600 dark:text-amber-400">+</div>
           <div class="text-gray-600 dark:text-gray-400">{t('addition')}</div>
         </div>
         <div class="p-3 bg-green-50 dark:bg-green-900/20 rounded-lg text-center">

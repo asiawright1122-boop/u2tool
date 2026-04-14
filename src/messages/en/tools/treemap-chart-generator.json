@@ -13,5 +13,10 @@
     "Example 2: A project manager employs the tool to represent the organizational structure of a large company. Each department and sub-department is mapped as a node, with the size reflecting the number of employees. This visualization helps in understanding the distribution of resources across the company.",
     "Example 3: A data scientist uses the Treemap Chart Generator to analyze the file system of a server. The hierarchy is set to directories and subdirectories, with the size of each rectangle representing the disk usage. This helps in identifying large files or directories that may need to be optimized.",
     "Example 4: A marketing team utilizes the tool to visualize the performance of different product categories. The hierarchy is based on product lines, and the size of each node is determined by the revenue generated. This visualization aids in strategic decision-making and resource allocation."
-  ]
+  ],
+  "sampleData": {
+    "tech": "Technology",
+    "finance": "Finance",
+    "healthcare": "Healthcare"
+  }
 }

@@ -131,7 +131,7 @@ console.log("Max:", findMax(numbers));`);
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('input')}
           </label>
           <textarea
@@ -140,7 +140,7 @@ console.log("Max:", findMax(numbers));`);
             placeholder={t('inputPlaceholder')}></textarea>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('output')}
           </label>
           <textarea

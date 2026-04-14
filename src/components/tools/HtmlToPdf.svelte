@@ -81,7 +81,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('htmlInput')}
             </label>
             <textarea
@@ -92,7 +92,7 @@
 
           <div class="grid grid-cols-3 gap-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="tool-label">
                 {t('pageSize')}
               </label>
               <select
@@ -105,7 +105,7 @@
               </select>
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="tool-label">
                 {t('orientation')}
               </label>
               <select
@@ -118,7 +118,7 @@
               </select>
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="tool-label">
                 {t('margin')} (mm)
               </label>
               <input
@@ -141,7 +141,7 @@
             </button>
             <button
               onclick={generatePdf}
-              class="flex-1 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              class="flex-1 px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
             >
               {t('generatePdf')}
             </button>
@@ -149,14 +149,14 @@
 
           <button
             onclick={() => html = defaultHtml}
-            class="w-full px-4 py-2 text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+            class="w-full px-4 py-2 text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
           >
             {t('loadExample')}
           </button>
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('previewLabel')}
           </label>
           <div class="border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden bg-white">

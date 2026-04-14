@@ -157,7 +157,7 @@
         <button
           onclick={sendRequest}
           disabled={loading}
-          class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium disabled:opacity-50"
+          class="px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium disabled:opacity-50"
         >
           {loading ? t('sending') : t('send')}
         </button>
@@ -165,7 +165,7 @@
 
       <button
         onclick={loadExample}
-        class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+        class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
       >
         {t('loadExample')}
       </button>
@@ -176,7 +176,7 @@
             onclick={() => activeTab = 'headers'}
             class={`px-4 py-2 text-sm font-medium ${
               activeTab === 'headers'
-                ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 border-b-2 border-blue-600'
+                ? 'bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 border-b-2 border-amber-600'
                 : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800'
             }`}
           >
@@ -186,7 +186,7 @@
             onclick={() => activeTab = 'body'}
             class={`px-4 py-2 text-sm font-medium ${
               activeTab === 'body'
-                ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 border-b-2 border-blue-600'
+                ? 'bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 border-b-2 border-amber-600'
                 : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800'
             }`}
           >
@@ -197,7 +197,7 @@
               onclick={() => activeTab = 'response'}
               class={`px-4 py-2 text-sm font-medium ${
                 activeTab === 'response'
-                  ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 border-b-2 border-blue-600'
+                  ? 'bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 border-b-2 border-amber-600'
                   : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800'
               }`}
             >
@@ -241,7 +241,7 @@
 {/each}
               <button
                 onclick={addHeader}
-                class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
               >
                 + {t('addHeader')}
               </button>
@@ -272,7 +272,7 @@
                 <div class="text-xs font-mono bg-gray-50 dark:bg-gray-900 p-2 rounded max-h-32 overflow-auto">
                   {#each Object.entries(response.headers) as [key, value] (key)}
 <div >
-                      <span class="text-blue-600 dark:text-blue-400">{key}:</span> {value}
+                      <span class="text-amber-600 dark:text-amber-400">{key}:</span> {value}
                     </div>
 {/each}
                 </div>

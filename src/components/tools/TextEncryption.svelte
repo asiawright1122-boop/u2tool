@@ -87,13 +87,13 @@
       <div class="flex gap-2">
         <button
           onclick={() => mode = 'encrypt'}
-          class={`px-4 py-2 rounded ${mode === 'encrypt' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
+          class={`px-4 py-2 rounded ${mode === 'encrypt' ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
         >
           {t('encryption.encrypt')}
         </button>
         <button
           onclick={() => mode = 'decrypt'}
-          class={`px-4 py-2 rounded ${mode === 'decrypt' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
+          class={`px-4 py-2 rounded ${mode === 'decrypt' ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
         >
           {t('encryption.decrypt')}
         </button>
@@ -119,7 +119,7 @@
 
       <button
         onclick={handleProcess}
-        class="w-full bg-blue-600 hover:bg-blue-700 py-2 rounded font-medium text-white"
+        class="w-full bg-amber-600 hover:bg-amber-700 py-2 rounded font-medium text-white"
       >
         {mode === 'encrypt' ? t('encryption.encrypt') : t('encryption.decrypt')}
       </button>
@@ -127,7 +127,7 @@
       <div>
         <div class="flex justify-between items-center mb-1">
           <label class="text-sm text-gray-700 dark:text-gray-300">{t('output')}</label>
-          <button onclick={copyOutput} class="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300">
+          <button onclick={copyOutput} class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-500 dark:hover:text-amber-300">
             {t('copy')}
           </button>
         </div>

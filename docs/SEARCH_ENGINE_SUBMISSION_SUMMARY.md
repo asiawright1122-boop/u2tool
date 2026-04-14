@@ -12,12 +12,12 @@
 **提交详情**:
 - 支持搜索引擎: Bing、Yandex 等
 - 提交方式: IndexNow API
-- 验证文件: `public/35151298dc86454c8fbd19a34aaba6d7.txt`
-- API Key: `35151298dc86454c8fbd19a34aaba6d7`
+- 验证文件: `public/u2tool2026indexnowkey.txt`
+- API Key: `u2tool2026indexnowkey`
 
 **提交命令**:
 ```bash
-npx ts-node scripts/submit-indexnow.ts
+npm run submit:indexnow
 ```
 
 ---
@@ -261,7 +261,7 @@ npx ts-node scripts/submit-urls.ts --engine=baidu
 
 **IndexNow**（每周一次）:
 ```bash
-npx ts-node scripts/submit-indexnow.ts
+npm run submit:indexnow
 ```
 
 **百度推送**（每日，有配额限制）:
@@ -284,4 +284,3 @@ npx ts-node scripts/submit-urls.ts --engine=baidu
 - [Sitemap 提交指南](./SITEMAP_SUBMISSION_GUIDE.md)
 - [SEO 设置指南](./SEO_SETUP_GUIDE.md)
 - [Yandex 验证指南](./YANDEX_VERIFICATION.md)
-

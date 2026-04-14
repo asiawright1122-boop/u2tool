@@ -81,7 +81,7 @@
                     onclick={() => toggleTemplate(id)}
                     class={`px-3 py-1.5 rounded text-sm ${
                       selectedTemplates.includes(id)
-                        ? 'bg-blue-600 text-white'
+                        ? 'bg-amber-600 text-white'
                         : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                     }`}
                   >

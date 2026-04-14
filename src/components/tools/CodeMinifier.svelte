@@ -85,7 +85,7 @@
 <button 
               onclick={() => codeType = type}
               class={`px-4 py-2 rounded-lg uppercase font-medium text-white ${
-                codeType === type ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-800 hover:bg-gray-600 dark:hover:bg-gray-700'
+                codeType === type ? 'bg-amber-600' : 'bg-gray-500 dark:bg-gray-800 hover:bg-gray-600 dark:hover:bg-gray-700'
               }`}
             >
               {type}
@@ -127,7 +127,7 @@
               <label class="text-sm font-medium">{t('output')}</label>
               <button
                 onclick={copyOutput}
-                class={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+                class={`text-sm px-3 py-1 rounded ${copied ? 'bg-emerald-500' : 'bg-gray-700 hover:bg-gray-600'}`}
               >
                 {copied ? t('copied') : t('copy')}
               </button>

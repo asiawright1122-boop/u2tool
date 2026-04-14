@@ -119,19 +119,19 @@
         <div class="flex flex-wrap gap-2">
           <button
             onclick={() => format = 'unicode'}
-            class={`px-4 py-2 rounded-lg text-sm ${format === 'unicode' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-white'}`}
+            class={`px-4 py-2 rounded-lg text-sm ${format === 'unicode' ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-white'}`}
           >
             Unicode (\u0000)
           </button>
           <button
             onclick={() => format = 'html'}
-            class={`px-4 py-2 rounded-lg text-sm ${format === 'html' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-white'}`}
+            class={`px-4 py-2 rounded-lg text-sm ${format === 'html' ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-white'}`}
           >
             HTML (&#0000;)
           </button>
           <button
             onclick={() => format = 'css'}
-            class={`px-4 py-2 rounded-lg text-sm ${format === 'css' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-white'}`}
+            class={`px-4 py-2 rounded-lg text-sm ${format === 'css' ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-white'}`}
           >
             CSS (\0000)
           </button>
@@ -171,7 +171,7 @@
             <label class="text-sm font-medium text-gray-700 dark:text-white">{t('output')}</label>
             <button
               onclick={copyOutput}
-              class={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-white'}`}
+              class={`text-sm px-3 py-1 rounded ${copied ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-white'}`}
             >
               {copied ? t('copied') : t('copy')}
             </button>
@@ -188,10 +188,10 @@
       <div class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-sm text-gray-600 dark:text-gray-300">
         <p class="mb-2">{t('unicode.reference')}:</p>
         <ul class="list-disc list-inside space-y-1">
-          <li><code class="text-blue-600 dark:text-blue-400">\u4E2D</code> → 中 (Unicode)</li>
-          <li><code class="text-blue-600 dark:text-blue-400">&#20013;</code> → 中 (HTML Decimal)</li>
-          <li><code class="text-blue-600 dark:text-blue-400">&#x4E2D;</code> → 中 (HTML Hex)</li>
-          <li><code class="text-blue-600 dark:text-blue-400">\4E2D</code> → 中 (CSS)</li>
+          <li><code class="text-amber-600 dark:text-amber-400">\u4E2D</code> → 中 (Unicode)</li>
+          <li><code class="text-amber-600 dark:text-amber-400">&#20013;</code> → 中 (HTML Decimal)</li>
+          <li><code class="text-amber-600 dark:text-amber-400">&#x4E2D;</code> → 中 (HTML Hex)</li>
+          <li><code class="text-amber-600 dark:text-amber-400">\4E2D</code> → 中 (CSS)</li>
         </ul>
       </div>
     </div>

@@ -204,13 +204,13 @@
     <div class="space-y-6">
       <!-- Base Image -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('baseImage')}
         </label>
         <select
           value={config.baseImage}
           onchange={(e) => config = ({ ...config, baseImage: e.target.value })}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
         >
           {#each BASE_IMAGES as img (img.value)}
 <option  value={img.value}>{img.label}</option>
@@ -220,7 +220,7 @@
 
       <!-- Working Directory -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('workdir')}
         </label>
         <input
@@ -228,13 +228,13 @@
           value={config.workdir}
           onchange={(e) => config = ({ ...config, workdir: e.target.value })}
           placeholder="/app"
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
         />
       </div>
 
       <!-- Environment Variables -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('envVars')}
         </label>
         <div class="space-y-2">
@@ -245,18 +245,18 @@
                 value={env.key}
                 onchange={(e) => updateEnvVar(index, 'key', e.target.value)}
                 placeholder={t('envKey')}
-                class="flex-1 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="flex-1 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
               />
               <input
                 type="text"
                 value={env.value}
                 onchange={(e) => updateEnvVar(index, 'value', e.target.value)}
                 placeholder={t('envValue')}
-                class="flex-1 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="flex-1 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
               />
               <button
                 onclick={() => removeEnvVar(index)}
-                class="px-3 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg"
+                class="px-3 py-2 bg-red-500 hover:bg-rose-500 text-white rounded-lg"
               >
                 ✕
               </button>
@@ -273,7 +273,7 @@
 
       <!-- COPY Commands -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('copyCommands')}
         </label>
         <div class="space-y-2">
@@ -284,11 +284,11 @@
                 value={cmd}
                 onchange={(e) => updateCopyCommand(index, e.target.value)}
                 placeholder="package*.json ./"
-                class="flex-1 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+                class="flex-1 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent font-mono text-sm"
               />
               <button
                 onclick={() => removeCopyCommand(index)}
-                class="px-3 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg"
+                class="px-3 py-2 bg-red-500 hover:bg-rose-500 text-white rounded-lg"
               >
                 ✕
               </button>
@@ -305,7 +305,7 @@
 
       <!-- RUN Commands -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('runCommands')}
         </label>
         <div class="space-y-2">
@@ -316,11 +316,11 @@
                 value={cmd}
                 onchange={(e) => updateRunCommand(index, e.target.value)}
                 placeholder="npm install"
-                class="flex-1 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+                class="flex-1 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent font-mono text-sm"
               />
               <button
                 onclick={() => removeRunCommand(index)}
-                class="px-3 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg"
+                class="px-3 py-2 bg-red-500 hover:bg-rose-500 text-white rounded-lg"
               >
                 ✕
               </button>
@@ -337,7 +337,7 @@
 
       <!-- Expose Port -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('exposePort')}
         </label>
         <input
@@ -345,13 +345,13 @@
           value={config.exposePort}
           onchange={(e) => config = ({ ...config, exposePort: e.target.value })}
           placeholder="3000"
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
         />
       </div>
 
       <!-- Entrypoint -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('entrypoint')}
         </label>
         <input
@@ -359,13 +359,13 @@
           value={config.entrypoint}
           onchange={(e) => config = ({ ...config, entrypoint: e.target.value })}
           placeholder="node server.js"
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent font-mono text-sm"
         />
       </div>
 
       <!-- CMD -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('cmd')}
         </label>
         <input
@@ -373,7 +373,7 @@
           value={config.cmd}
           onchange={(e) => config = ({ ...config, cmd: e.target.value })}
           placeholder="npm start"
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent font-mono text-sm"
         />
       </div>
 
@@ -381,7 +381,7 @@
       <div class="flex justify-center gap-4">
         <button
           onclick={generateDockerfile}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium text-white"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium text-white"
         >
           {t('generate')}
         </button>
@@ -407,7 +407,7 @@
               </button>
               <button
                 onclick={downloadFile}
-                class="px-3 py-1 bg-green-600 hover:bg-green-700 rounded text-sm text-white"
+                class="px-3 py-1 bg-emerald-500 hover:bg-green-700 rounded text-sm text-white"
               >
                 {t('download')}
               </button>

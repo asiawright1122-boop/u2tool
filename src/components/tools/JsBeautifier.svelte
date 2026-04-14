@@ -192,7 +192,7 @@
         </div>
         <button
           onclick={beautify}
-          class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors text-white"
+          class="px-4 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg transition-colors text-white"
         >
           {t('beautify')}
         </button>
@@ -218,7 +218,7 @@
             id="js-beautifier-input"
             name="jsInput"
             bind:value={input}
-            class="w-full h-80 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            class="w-full h-80 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
             placeholder={t('placeholder')}
             spellCheck={false}></textarea>
         </div>
@@ -230,7 +230,7 @@
             name="jsOutput"
             value={output}
             readOnly
-            class="w-full h-80 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            class="w-full h-80 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
             placeholder={t('outputPlaceholder')}></textarea>
         </div>
       </div>

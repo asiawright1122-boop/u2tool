@@ -66,14 +66,14 @@
         <select
           value={order}
           onchange={(e) => order = e.target.value as SortOrder}
-          class="bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          class="bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none"
         >
           <option value="asc">{t('ascending')}</option>
           <option value="desc">{t('descending')}</option>
         </select>
         <button
           onclick={sortJson}
-          class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors text-white"
+          class="px-4 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg transition-colors text-white"
         >
           {t('sort')}
         </button>
@@ -97,7 +97,7 @@
           <label class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{tg('input')}</label>
           <textarea
             bind:value={input}
-            class="w-full h-80 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            class="w-full h-80 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
             placeholder={t('placeholder')}
             spellCheck={false}></textarea>
         </div>
@@ -106,7 +106,7 @@
           <textarea
             value={output}
             readOnly
-            class="w-full h-80 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"></textarea>
+            class="w-full h-80 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"></textarea>
         </div>
       </div>
     </div>

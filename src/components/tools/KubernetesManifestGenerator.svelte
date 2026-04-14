@@ -122,17 +122,17 @@
         </div>
         <div>
           <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('namespace')}</label>
-          <input type="text" value={config.namespace} onchange={(e) => updateConfig('namespace', e.target.value)}
+          <input type="text" bind:value={config.namespace}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
         </div>
         <div>
           <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('image')}</label>
-          <input type="text" value={config.image} onchange={(e) => updateConfig('image', e.target.value)}
+          <input type="text" bind:value={config.image}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
         </div>
         <div>
           <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('replicas')}</label>
-          <input type="number" value={config.replicas} onchange={(e) => updateConfig('replicas', parseInt(e.target.value) || 1)} min={1}
+          <input type="number" bind:value={config.replicas} min={1}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
         </div>
       </div>
@@ -141,12 +141,12 @@
       <div class="grid grid-cols-3 gap-4">
         <div>
           <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('servicePort')}</label>
-          <input type="number" value={config.port} onchange={(e) => updateConfig('port', parseInt(e.target.value) || 80)}
+          <input type="number" bind:value={config.port}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
         </div>
         <div>
           <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('containerPort')}</label>
-          <input type="number" value={config.targetPort} onchange={(e) => updateConfig('targetPort', parseInt(e.target.value) || 80)}
+          <input type="number" bind:value={config.targetPort}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
         </div>
         <div>
@@ -162,7 +162,7 @@
 
       <!-- Resources -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('resources')}</label>
+        <label class="tool-label">{t('resources')}</label>
         <div class="grid grid-cols-4 gap-4">
           <div>
             <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('cpuRequest')}</label>
@@ -190,15 +190,15 @@
       <!-- Environment Variables -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">{t('environmentVariables')}</label>
-          <button onclick={addEnvVar} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400">{t('addEnvVar')}</button>
+          <label class="tool-label">{t('environmentVariables')}</label>
+          <button onclick={addEnvVar} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">{t('addEnvVar')}</button>
         </div>
         <div class="space-y-2">
           {#each config.envVars as env, idx (idx)}
 <div  class="flex gap-2">
-              <input type="text" value={env.key} onchange={(e) => updateEnvVar(idx, 'key', e.target.value)} placeholder={t("keyPlaceholder")}
+              <input type="text" bind:value={env.key} placeholder={t("keyPlaceholder")}
                 class="flex-1 px-3 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm font-mono" />
-              <input type="text" value={env.value} onchange={(e) => updateEnvVar(idx, 'value', e.target.value)} placeholder={t("valuePlaceholder")}
+              <input type="text" bind:value={env.value} placeholder={t("valuePlaceholder")}
                 class="flex-1 px-3 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
               <button onclick={() => removeEnvVar(idx)} class="text-red-500 hover:text-red-600">✕</button>
             </div>
@@ -213,7 +213,7 @@
           <span class="text-sm text-gray-700 dark:text-gray-300">{t('includeIngress')}</span>
         </label>
         {#if config.includeIngress}
-<input type="text" value={config.ingressHost} onchange={(e) => updateConfig('ingressHost', e.target.value)} placeholder={t("hostPlaceholder")}
+<input type="text" bind:value={config.ingressHost} placeholder={t("hostPlaceholder")}
             class="px-3 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
 {/if}
         <label class="flex items-center gap-2">
@@ -225,8 +225,8 @@
       <!-- Output -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">{t('kubernetesManifests')}</label>
-          <button onclick={handleCopy} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400">
+          <label class="tool-label">{t('kubernetesManifests')}</label>
+          <button onclick={handleCopy} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">
             {copied ? tCommon('copied') : tCommon('copy')}
           </button>
         </div>

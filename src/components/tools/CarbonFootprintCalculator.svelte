@@ -113,8 +113,8 @@
       </div>
 
       <!-- Transportation Section -->
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h3 class="text-lg font-medium text-blue-800 dark:text-blue-300 mb-4 flex items-center gap-2">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+        <h3 class="text-lg font-medium text-amber-800 dark:text-amber-300 mb-4 flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg> {t('transportation')}
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -246,7 +246,7 @@
                 onclick={() => dietType = diet}
                 class={`px-4 py-2 rounded-lg border transition-colors ${
                   dietType === diet
-                    ? 'bg-green-600 text-white border-green-600'
+                    ? 'btn-success border-green-600'
                     : 'bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
                 }`}
               >
@@ -267,7 +267,7 @@
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             <div class="p-4 bg-white dark:bg-gray-800 rounded-lg text-center">
               <div class="text-sm text-gray-500 dark:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg> {t('transportation')}</div>
-              <div class="text-xl font-bold text-blue-600">{results.transport.toFixed(2)} t</div>
+              <div class="text-xl font-bold text-amber-600">{results.transport.toFixed(2)} t</div>
             </div>
             <div class="p-4 bg-white dark:bg-gray-800 rounded-lg text-center">
               <div class="text-sm text-gray-500 dark:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg> {t('homeEnergy')}</div>

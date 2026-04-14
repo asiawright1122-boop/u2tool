@@ -212,7 +212,7 @@
       <!-- Upload Area -->
       <div
         onclick={() => fileInputRef?.click()}
-        class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-blue-500 dark:hover:border-blue-400 transition-colors"
+        class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-amber-500 dark:hover:border-amber-400 transition-colors"
       >
         <input
           bind:this={fileInputRef}
@@ -275,7 +275,7 @@
             {t('createCollage')}
           </button>
           {#if result}
-<button onclick={downloadImage} class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg">
+<button onclick={downloadImage} class="px-6 py-2 bg-emerald-500 hover:bg-green-700 text-white rounded-lg">
               {tg('download')}
             </button>
 {/if}

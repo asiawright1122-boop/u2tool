@@ -146,14 +146,14 @@
           </div>
           
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('output')}</label>
+            <label class="tool-label">{t('output')}</label>
             <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 font-mono text-sm text-green-600 dark:text-green-400">
               {getCss()}
             </div>
           </div>
           
           <button onclick={copyToClipboard}
-            class="w-full px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors">
+            class="w-full px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium transition-colors">
             {t('copy')}
           </button>
         </div>

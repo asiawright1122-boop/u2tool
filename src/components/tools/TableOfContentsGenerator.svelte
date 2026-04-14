@@ -116,7 +116,7 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             TOC Entries (use indentation for hierarchy)
           </label>
           <textarea
@@ -129,12 +129,12 @@
 
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="tool-label">
               Generated Table of Contents
             </label>
             <button
               onclick={handleCopy}
-              class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+              class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
             >
               {copied ? tCommon('copied') : tCommon('copy')}
             </button>
@@ -145,9 +145,9 @@
         </div>
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h3 class="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">Input Format</h3>
-        <div class="text-xs text-blue-700 dark:text-blue-300 font-mono">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+        <h3 class="text-sm font-medium text-amber-800 dark:text-amber-200 mb-2">Input Format</h3>
+        <div class="text-xs text-amber-700 dark:text-amber-300 font-mono">
           <p>Chapter Title | 1</p>
           <p>&nbsp;&nbsp;Section | 3 &nbsp;&nbsp;&nbsp;← 2 spaces = level 1</p>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;Subsection | 5 &nbsp;← 4 spaces = level 2</p>

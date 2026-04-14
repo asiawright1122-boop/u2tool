@@ -70,35 +70,37 @@
 {#each filteredCategories as cat}
   {@const catTools = getToolsByCategory(cat.id)}
       {#if catTools.length > 0}
-    <section id={cat.id} class="mb-8">
-      <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-        <span class="text-blue-500 dark:text-blue-400 inline-flex">{@html getIconSvg(cat.icon, 20)}</span>
+    <section id={cat.id} class="mb-10">
+      <h2 class="text-sm font-black text-slate-400 dark:text-slate-500 mb-5 flex items-center gap-3 uppercase tracking-[0.25em]">
+        <span class="text-slate-950 dark:text-amber-500/80 inline-flex drop-shadow-[0_0_8px_rgba(245,158,11,0.3)]">{@html getIconSvg(cat.icon, 18)}</span>
         <span>{categoryNames[cat.id] || cat.id}</span>
-        <span class="text-sm font-normal text-gray-400 dark:text-gray-500">({catTools.length})</span>
+        <span class="text-[10px] font-medium opacity-50">({catTools.length})</span>
       </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {#each catTools as tool}
           <a
             href={toolPath(tool.slug)}
-            class="group flex items-center gap-3 p-3 bg-white dark:bg-gray-800/60
-                   border border-gray-100 dark:border-gray-700/40 rounded-xl
-                   hover:border-blue-400/60 dark:hover:border-blue-500/40
-                   hover:bg-blue-50/50 dark:hover:bg-blue-900/10
-                   cursor-pointer transition-all duration-200"
+            class="group flex items-center gap-4 p-4 bg-white dark:bg-white/[0.02]
+                   border border-slate-200/60 dark:border-white/[0.05] rounded-2xl
+                   hover:border-amber-500/40 dark:hover:border-amber-500/30
+                   hover:bg-amber-50/50 dark:hover:bg-amber-500/[0.02]
+                   hover:shadow-xl hover:shadow-amber-500/5
+                   cursor-pointer transition-all duration-300 relative overflow-hidden"
           >
-            <span class="text-blue-500 dark:text-blue-400 flex-shrink-0 inline-flex">
-              {@html getIconSvg(tool.icon, 22)}
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-500/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <span class="text-slate-950 dark:text-amber-500 flex-shrink-0 inline-flex drop-shadow-sm group-hover:scale-110 transition-transform duration-500">
+              {@html getIconSvg(tool.icon, 20)}
             </span>
-            <div class="flex-1 min-w-0">
-              <h3 class="font-medium text-sm text-gray-900 dark:text-white truncate group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            <div class="flex-1 min-w-0 relative z-10">
+              <h3 class="font-bold text-sm text-slate-900 dark:text-white truncate group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors tracking-tight">
                 {toolNames[tool.slug] || tool.slug}
               </h3>
-              <p class="text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5">
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 truncate mt-0.5 font-medium">
                 {toolDescriptions[tool.slug] || ''}
               </p>
             </div>
             {#if tool.popular}
-              <span class="inline-flex items-center px-1.5 py-0.5 text-[10px] font-medium rounded-full bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400 flex-shrink-0">HOT</span>
+              <span class="inline-flex items-center px-2 py-0.5 text-[9px] font-black uppercase tracking-tighter rounded-lg bg-red-100 text-red-600 dark:bg-red-500/10 dark:text-red-400 flex-shrink-0 border border-red-200/50 dark:border-red-500/20">HOT</span>
             {/if}
           </a>
         {/each}

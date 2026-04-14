@@ -169,7 +169,7 @@ dc = "eqdc20"`;
           <textarea
             bind:value={input}
             placeholder={mode === 'toml-to-json' ? t('tomlPlaceholder') : t('jsonPlaceholder')}
-            class="w-full h-80 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+            class="w-full h-80 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"></textarea>
         </div>
 
         <div>
@@ -207,7 +207,7 @@ dc = "eqdc20"`;
         <button
           onclick={convert}
           disabled={!input.trim()}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium text-white"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium text-white"
         >
           {t('convert')}
         </button>

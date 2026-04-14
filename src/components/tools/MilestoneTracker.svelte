@@ -90,13 +90,13 @@
                   color === 'green' ? 'bg-green-500 border-green-500' :
                   color === 'red' ? 'bg-red-500 border-red-500' :
                   color === 'orange' ? 'bg-orange-500 border-orange-500' :
-                  'bg-white dark:bg-gray-800 border-blue-500'
+                  'bg-white dark:bg-gray-800 border-amber-500'
                 } ${milestone.status === 'completed' ? '' : 'flex items-center justify-center'}`}>
                   {#if milestone.status === 'completed'}
 <span class="text-white text-xs">✓</span>
 {/if}
                   {#if milestone.status !== 'completed'}
-<span class="text-xs font-bold text-blue-500">{idx + 1}</span>
+<span class="text-xs font-bold text-amber-500">{idx + 1}</span>
 {/if}
                 </div>
                 

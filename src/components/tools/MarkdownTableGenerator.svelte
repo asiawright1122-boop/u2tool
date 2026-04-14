@@ -193,7 +193,7 @@
                       type="text"
                       value={cell}
                       onchange={(e) => updateCell(rowIndex, colIndex, e.target.value)}
-                      class={`w-full px-3 py-2 bg-transparent border-none focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-900 dark:text-white ${
+                      class={`w-full px-3 py-2 bg-transparent border-none focus:outline-none focus:ring-1 focus:ring-amber-500 text-gray-900 dark:text-white ${
                         rowIndex === 0 ? 'font-bold' : ''
                       }`}
                       placeholder={rowIndex === 0 ? tm('header') : tm('cell')}
@@ -237,7 +237,7 @@
           <label class="text-sm font-medium">{tm('markdownOutput')}</label>
           <button
             onclick={copyMarkdown}
-            class={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+            class={`text-sm px-3 py-1 rounded ${copied ? 'bg-emerald-500' : 'bg-gray-700 hover:bg-gray-600'}`}
           >
             {copied ? t('copied') : t('copy')}
           </button>

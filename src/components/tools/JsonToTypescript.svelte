@@ -119,7 +119,7 @@
         <div>
           <div class="flex justify-between items-center mb-1">
             <label for="json-ts-output" class="text-sm text-gray-600 dark:text-gray-300">TypeScript</label>
-            <button onclick={copyOutput} class="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
+            <button onclick={copyOutput} class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-300">
               {copied ? t('copied') : t('copy')}
             </button>
           </div>
@@ -132,7 +132,7 @@
 
       <button
         onclick={convert}
-        class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded font-medium"
+        class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 rounded font-medium"
       >
         {t('convert')}
       </button>

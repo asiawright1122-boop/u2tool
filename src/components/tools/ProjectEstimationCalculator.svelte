@@ -117,7 +117,7 @@
                       class="w-20 px-2 py-1 text-center border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                     />
                   </td>
-                  <td class="px-3 py-2 text-center font-medium text-blue-600 dark:text-blue-400">
+                  <td class="px-3 py-2 text-center font-medium text-amber-600 dark:text-amber-400">
                     {Math.round(expected * 10) / 10} {unitLabel}
                   </td>
                   <td class="px-3 py-2">

@@ -151,7 +151,7 @@
           <textarea
             bind:value={input}
             placeholder={t('inputPlaceholder')}
-            class="w-full h-96 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+            class="w-full h-96 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"></textarea>
         </div>
 
         <div>
@@ -178,7 +178,7 @@
         <button
           onclick={convert}
           disabled={!input.trim()}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 text-white disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium"
         >
           {t('convert')}
         </button>

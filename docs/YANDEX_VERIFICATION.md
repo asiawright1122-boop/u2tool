@@ -118,7 +118,7 @@ npx ts-node scripts/verify-yandex-meta.ts
 
 3. **使用 IndexNow**
    - Yandex 支持 IndexNow 协议
-   - 运行：`npx ts-node scripts/submit-indexnow.ts`
+   - 运行：`npm run submit:indexnow`
 
 ## 📝 相关文件
 
@@ -136,4 +136,3 @@ npx ts-node scripts/verify-yandex-meta.ts
 - [ ] 在 Yandex Webmaster 中点击 "Verify"
 - [ ] 验证成功
 - [ ] 提交 Sitemap
-

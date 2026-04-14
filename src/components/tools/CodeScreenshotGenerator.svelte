@@ -127,7 +127,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{tCommon('input')}</label>
+            <label class="tool-label">{tCommon('input')}</label>
             <textarea
               bind:value={code}
               class="w-full h-48 p-3 border rounded-lg font-mono text-sm bg-white dark:bg-gray-800 dark:border-gray-600"
@@ -192,7 +192,7 @@
 
           <button
             onclick={downloadImage}
-            class="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+            class="w-full py-2 px-4 bg-amber-600 text-white rounded-lg hover:bg-amber-700">
             {tCommon('download')} PNG
           </button>
         </div>

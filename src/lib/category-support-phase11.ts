@@ -17,412 +17,532 @@ export const phaseElevenPriorityClusters: Array<{ locale: PhaseElevenLocale; cat
 ];
 
 export const phaseElevenSupportContent = {
-  de: {
-    charts: {
-      eyebrow: 'Für die Chart-Wahl nach Datenform',
-      title: 'Chart-Generatoren für Trends, Verteilungen, Heatmaps, Flüsse und Zeitpläne',
-      intro:
-        'Die Charts-Kategorie sollte Besucher nach Datenfrage routen statt nur dutzende Diagrammtypen aufzulisten. So landet jemand schneller bei Balken-, Linien-, Heatmap-, Sankey- oder Gantt-Ansichten.',
-      highlightsTitle: 'Wofür diese Kategorie besonders geeignet ist',
-      highlights: [
-        'Zeitreihen und Kategorien mit Balken-, Linien- und Flächendiagrammen vergleichen.',
-        'Anteile, Korrelationen und dichte Matrizen mit Pie-, Scatter- und Heatmap-Charts sichtbar machen.',
-        'Flüsse, Hierarchien und Projektpläne mit Sankey-, Treemap- und Gantt-Ansichten abbilden.',
+  "de": {
+    "charts": {
+      "eyebrow": "Wählen Sie das richtige Diagramm für Ihre Daten",
+      "title": "Diagramm-Generatoren für Trends, Verteilungen, Flüsse und Zeitpläne",
+      "intro": "Visualisieren Sie Ihre Daten mit höchster Präzision. Unsere umfangreiche Suite von Diagramm-Generatoren hilft Ihnen, nackte Zahlen in überzeugende visuelle Geschichten zu verwandeln – von einfachen Balkendiagrammen bis hin zu komplexen Sankey-Diagrammen.",
+      "highlightsTitle": "Wichtige Funktionen",
+      "highlights": [
+        "Vergleichen Sie Kategorien oder Zeitreihen mit Balken-, Linien- und Flächendiagrammen.",
+        "Zeigen Sie Anteile und Korrelationen mit Kreis-, Streuwert- und Heatmap-Diagrammen.",
+        "Bilden Sie Flüsse, Hierarchien und Projektpläne mit Sankey-, Treemap- und Gantt-Ansichten ab."
       ],
-      workflowsTitle: 'Empfohlene Chart-Routen',
-      workflows: [
+      "workflowsTitle": "Diagrammtypen entdecken",
+      "workflows": [
         {
-          title: 'Trends und Vergleiche',
-          description: 'Nutze diese Tools, wenn du Entwicklungen über Zeit oder Unterschiede zwischen Kategorien zeigen musst.',
-          toolSlugs: ['bar-chart-generator', 'line-chart-generator', 'area-chart-generator'],
+          "title": "Trends und Vergleiche",
+          "description": "Perfekt, um Veränderungen über die Zeit oder Unterschiede zwischen Gruppen aufzuzeigen.",
+          "toolSlugs": [
+            "bar-chart-generator",
+            "line-chart-generator",
+            "area-chart-generator"
+          ]
         },
         {
-          title: 'Verteilungen, Anteile und Korrelationen',
-          description: 'Wähle diese Route für Anteile, Streuung und Muster in dichten Datensätzen.',
-          toolSlugs: ['pie-chart-generator', 'scatter-chart-generator', 'heatmap-chart-generator'],
+          "title": "Verteilungen, Anteile und Muster",
+          "description": "Ideal zur Darstellung von Proportionen, Streuungen und zum Erkennen von Mustern in dichten Datensätzen.",
+          "toolSlugs": [
+            "pie-chart-generator",
+            "scatter-chart-generator",
+            "heatmap-chart-generator"
+          ]
         },
         {
-          title: 'Flüsse, Hierarchien und Zeitpläne',
-          description: 'Öffne diese Tools, wenn Standarddiagramme nicht reichen und du Prozesse oder Projektverläufe zeigen musst.',
-          toolSlugs: ['sankey-chart-generator', 'treemap-chart-generator', 'gantt-chart-generator'],
-        },
+          "title": "Flüsse, Hierarchien und Zeitpläne",
+          "description": "Entwickelt zur Visualisierung komplexer Prozesse, Organisationsstrukturen und Projektplanungen.",
+          "toolSlugs": [
+            "sankey-chart-generator",
+            "treemap-chart-generator",
+            "gantt-chart-generator"
+          ]
+        }
       ],
-      noteTitle: 'Intent-Fokus',
-      note:
-        'Suchanfragen wie Bar Chart Generator, Heatmap Chart Generator und Gantt Chart Maker bleiben nur dann präzise, wenn die Seite nach Datenform statt nach einem endlosen Toolraster sortiert.',
+      "noteTitle": "100% lokale Verarbeitung",
+      "note": "Die gesamte Diagrammerstellung erfolgt direkt in Ihrem Browser. Ihre sensiblen Daten verlassen niemals Ihr Gerät und werden auf keinem Server gespeichert."
     },
-    security: {
-      eyebrow: 'Für Passwörter, JWT und Integritätsprüfungen',
-      title: 'Sicherheits-Tools für Passwörter, JWT-Debugging, HMAC und Checksums',
-      intro:
-        'Diese Kategorie wird stark, wenn sie klare Sicherheitsjobs trennt: Passwörter erzeugen, JWT-Claims prüfen, HMAC-Signaturen erstellen oder Checksums verifizieren.',
-      highlightsTitle: 'Typische Sicherheitsaufgaben',
-      highlights: [
-        'Starke Passwörter und Einmalcodes für Testkonten, Admin-Zugänge und interne Freigaben vorbereiten.',
-        'JWT-Header und Payloads prüfen, wenn Login-, Session- oder Ablaufprobleme debuggt werden müssen.',
-        'Hashes, HMACs und Checksums für Dateien, Releases und Integritätsprüfungen direkt im Browser erzeugen.',
+    "security": {
+      "eyebrow": "Professionelle Kryptographie- & Sicherheitssuite",
+      "title": "Sicherheitstools für Passwörter, JWT-Debugging, HMAC und Checksums",
+      "intro": "Sichern Sie Ihre Workflows mit unseren fortschrittlichen Sicherheitstools. Generieren Sie robuste Passwörter, debuggen Sie JWT-Token und überprüfen Sie die Dateiintegrität – alles effizient in Ihrem Browser.",
+      "highlightsTitle": "Unverzichtbare Werkzeuge",
+      "highlights": [
+        "Generieren Sie starke Passwörter und Einmalcodes für sicheren Zugriff.",
+        "Überprüfen Sie JWT-Header und -Payloads für nahtloses Authentifizierungs-Debugging.",
+        "Berechnen Sie Hashes, HMAC-Signaturen und Prüfsummen (Checksums) zur Datenüberprüfung."
       ],
-      workflowsTitle: 'Empfohlene Sicherheitsrouten',
-      workflows: [
+      "workflowsTitle": "Sicherheits-Tools erkunden",
+      "workflows": [
         {
-          title: 'Passwörter und Einmalcodes',
-          description: 'Nutze diese Tools für stärkere Zugangsdaten und zeitbasierte Codes im Betrieb, Support oder Staging.',
-          toolSlugs: ['password-generator', 'password-strength', 'totp-generator'],
+          "title": "Passwörter und Einmalcodes",
+          "description": "Sichern Sie Ihre Konten mit kryptographisch starken Passwörtern und zeitbasierten PINs.",
+          "toolSlugs": [
+            "password-generator",
+            "password-strength",
+            "totp-generator"
+          ]
         },
         {
-          title: 'JWT-Erstellung und Token-Debugging',
-          description: 'Erzeuge Test-Tokens, prüfe JWT-Payloads und analysiere Auth-Probleme ohne die Schritte zu vermischen.',
-          toolSlugs: ['jwt-generator', 'jwt-debugger', 'jwt-payload-decoder'],
+          "title": "JWT-Erstellung und Token-Debugging",
+          "description": "Dekodieren, überprüfen und inspizieren Sie JSON Web Tokens, ohne Ihre Geheimnisse zu gefährden.",
+          "toolSlugs": [
+            "jwt-generator",
+            "jwt-debugger",
+            "jwt-payload-decoder"
+          ]
         },
         {
-          title: 'Hash-, HMAC- und Checksum-Prüfung',
-          description: 'Öffne diese Route für Integritätschecks, signierte Payloads und technische Freigaben.',
-          toolSlugs: ['hash-generator', 'hmac-generator', 'checksum-verifier'],
-        },
+          "title": "Hash, HMAC und Checksum-Prüfung",
+          "description": "Validieren Sie die Dateiintegrität und generieren Sie im Handumdrehen sichere kryptographische Hashes.",
+          "toolSlugs": [
+            "hash-generator",
+            "hmac-generator",
+            "checksum-verifier"
+          ]
+        }
       ],
-      noteTitle: 'Warum das wichtig ist',
-      note:
-        'Queries wie Passwort Generator, JWT Debugger, HMAC Generator und Checksum Verifier brauchen klar getrennte Routen statt einer vagen Sicherheitsliste.',
-    },
+      "noteTitle": "Zero-Knowledge-Architektur",
+      "note": "Ihre Sicherheit und Privatsphäre sind garantiert. Alle kryptographischen Operationen laufen lokal auf Ihrem Gerät ab. Wir übertragen oder protokollieren niemals Ihre Passwörter, Token oder Dateien."
+    }
   },
-  en: {
-    charts: {
-      eyebrow: 'For chart selection by data shape',
-      title: 'Chart generators for trends, distributions, heatmaps, flows, and timelines',
-      intro:
-        'The charts category should route users by the question their data needs to answer instead of dumping dozens of chart names onto one page. That keeps bar, heatmap, Sankey, and gantt intent precise.',
-      highlightsTitle: 'Best-fit chart jobs in this category',
-      highlights: [
-        'Compare categories or time series with bar, line, and area charts for reports and dashboards.',
-        'Show shares, clusters, and dense matrices with pie, scatter, and heatmap charts.',
-        'Map flows, hierarchies, and project schedules with Sankey, treemap, and gantt views.',
+  "en": {
+    "charts": {
+      "eyebrow": "Choose the right chart for your data",
+      "title": "Chart generators for trends, distributions, flows, and timelines",
+      "intro": "Visualize your data with precision. Our comprehensive suite of chart generators helps you transform raw numbers into compelling visual stories, whether you need simple bar charts or complex Sankey diagrams.",
+      "highlightsTitle": "Key capabilities",
+      "highlights": [
+        "Compare categories or time series with bar, line, and area charts.",
+        "Show shares and correlations with pie, scatter, and heatmap charts.",
+        "Map flows, hierarchies, and project schedules with Sankey, treemap, and gantt views."
       ],
-      workflowsTitle: 'Recommended chart routes',
-      workflows: [
+      "workflowsTitle": "Explore chart types",
+      "workflows": [
         {
-          title: 'Trends and comparisons',
-          description: 'Start here when your audience needs to compare categories or see change over time.',
-          toolSlugs: ['bar-chart-generator', 'line-chart-generator', 'area-chart-generator'],
+          "title": "Trends and comparisons",
+          "description": "Perfect for showing changes over time or comparing differences between groups.",
+          "toolSlugs": [
+            "bar-chart-generator",
+            "line-chart-generator",
+            "area-chart-generator"
+          ]
         },
         {
-          title: 'Distributions, shares, and correlations',
-          description: 'Use these charts when you need proportions, patterns, and relationship-heavy datasets.',
-          toolSlugs: ['pie-chart-generator', 'scatter-chart-generator', 'heatmap-chart-generator'],
+          "title": "Distributions, shares, and correlations",
+          "description": "Ideal for displaying proportions, data spread, and identifying patterns or correlations.",
+          "toolSlugs": [
+            "pie-chart-generator",
+            "scatter-chart-generator",
+            "heatmap-chart-generator"
+          ]
         },
         {
-          title: 'Flows, hierarchies, and timelines',
-          description: 'Open these tools when a basic comparison chart is not enough for process or planning data.',
-          toolSlugs: ['sankey-chart-generator', 'treemap-chart-generator', 'gantt-chart-generator'],
-        },
+          "title": "Flows, hierarchies, and timelines",
+          "description": "Designed for visualizing complex processes, organizational structures, and project planning.",
+          "toolSlugs": [
+            "sankey-chart-generator",
+            "treemap-chart-generator",
+            "gantt-chart-generator"
+          ]
+        }
       ],
-      noteTitle: 'Why this matters',
-      note:
-        'Queries like bar chart generator, heatmap chart generator, and gantt chart maker stay relevant when the page routes by data shape instead of acting like a generic chart dump.',
+      "noteTitle": "100% Client-Side Processing",
+      "note": "All chart generation happens directly in your browser. Your sensitive data never leaves your device and is never stored on any server."
     },
-    security: {
-      eyebrow: 'For passwords, JWT, and integrity checks',
-      title: 'Security tools for passwords, JWT debugging, HMAC signatures, and checksums',
-      intro:
-        'This category performs best when it separates exact security jobs: generate stronger passwords, inspect JWT claims, create HMAC signatures, or verify checksums before release.',
-      highlightsTitle: 'Common security jobs here',
-      highlights: [
-        'Generate stronger passwords and one-time codes for test accounts, admin access, and internal handoffs.',
-        'Inspect JWT headers and payload claims when debugging login, session, and expiry issues.',
-        'Create hashes, HMAC signatures, and checksum checks directly in the browser for release and integrity workflows.',
+    "security": {
+      "eyebrow": "Professional cryptography & security suite",
+      "title": "Security tools for passwords, JWT debugging, HMAC, and checksums",
+      "intro": "Secure your workflows with our advanced security tools. Generate robust passwords, debug JWT tokens, and verify file integrity—all efficiently processed within your browser.",
+      "highlightsTitle": "Essential tools",
+      "highlights": [
+        "Generate strong passwords and one-time codes for secure access.",
+        "Inspect JWT headers and payloads for seamless authentication debugging.",
+        "Calculate hashes, HMAC signatures, and checksums for data integrity verification."
       ],
-      workflowsTitle: 'Recommended security routes',
-      workflows: [
+      "workflowsTitle": "Explore security tools",
+      "workflows": [
         {
-          title: 'Passwords and one-time codes',
-          description: 'Use these tools when you need stronger login secrets or time-based access codes.',
-          toolSlugs: ['password-generator', 'password-strength', 'totp-generator'],
+          "title": "Passwords and one-time codes",
+          "description": "Secure your accounts with cryptographically strong passwords and time-based PINs.",
+          "toolSlugs": [
+            "password-generator",
+            "password-strength",
+            "totp-generator"
+          ]
         },
         {
-          title: 'JWT creation and token debugging',
-          description: 'Generate test tokens, inspect JWT payloads, and debug auth flows without mixing those jobs together.',
-          toolSlugs: ['jwt-generator', 'jwt-debugger', 'jwt-payload-decoder'],
+          "title": "JWT creation and token debugging",
+          "description": "Decode, verify, and inspect JSON Web Tokens without compromising your secrets.",
+          "toolSlugs": [
+            "jwt-generator",
+            "jwt-debugger",
+            "jwt-payload-decoder"
+          ]
         },
         {
-          title: 'Hash, HMAC, and checksum verification',
-          description: 'Choose this route for integrity checks, keyed signatures, and release-asset verification.',
-          toolSlugs: ['hash-generator', 'hmac-generator', 'checksum-verifier'],
-        },
+          "title": "Hash, HMAC, and checksum verification",
+          "description": "Validate file integrity and generate secure cryptographic hashes instantly.",
+          "toolSlugs": [
+            "hash-generator",
+            "hmac-generator",
+            "checksum-verifier"
+          ]
+        }
       ],
-      noteTitle: 'Intent focus',
-      note:
-        'Searches like password generator, JWT debugger, HMAC generator, and checksum verifier need explicit routing instead of a vague security bucket.',
-    },
+      "noteTitle": "Zero-Knowledge Architecture",
+      "note": "Your security and privacy are guaranteed. All cryptographic operations run locally on your device. We never transmit or log your passwords, tokens, or files."
+    }
   },
-  es: {
-    charts: {
-      eyebrow: 'Para elegir graficos segun la forma de los datos',
-      title: 'Generadores de graficos para tendencias, distribuciones, heatmaps, flujos y cronogramas',
-      intro:
-        'La categoria de graficos debe guiar por la pregunta que responden los datos, no por una lista plana de nombres. Asi la intencion de barras, heatmap, Sankey o gantt sigue siendo clara.',
-      highlightsTitle: 'Trabajos de graficos que encajan aqui',
-      highlights: [
-        'Comparar categorias o series temporales con graficos de barras, lineas y areas.',
-        'Mostrar proporciones, patrones y relaciones con graficos de pastel, dispersion y heatmap.',
-        'Representar flujos, jerarquias y planes de proyecto con vistas Sankey, treemap y gantt.',
+  "es": {
+    "charts": {
+      "eyebrow": "Elige el gráfico adecuado para tus datos",
+      "title": "Generadores de gráficos para tendencias, distribuciones, flujos y cronogramas",
+      "intro": "Visualiza tus datos con precisión. Nuestra completa suite de generadores de gráficos te ayuda a transformar números crudos en historias visuales atractivas, ya necesites gráficos de barras simples o complejos diagramas Sankey.",
+      "highlightsTitle": "Capacidades clave",
+      "highlights": [
+        "Compara categorías o series temporales con gráficos de barras, líneas y áreas.",
+        "Muestra proporciones y correlaciones con gráficos circulares, de dispersión y mapas de calor.",
+        "Traza flujos, jerarquías y calendarios de proyectos con vistas Sankey, treemap y diagramas de Gantt."
       ],
-      workflowsTitle: 'Rutas recomendadas',
-      workflows: [
+      "workflowsTitle": "Explorar tipos de gráficos",
+      "workflows": [
         {
-          title: 'Tendencias y comparaciones',
-          description: 'Empieza aqui cuando necesites mostrar cambios en el tiempo o diferencias entre grupos.',
-          toolSlugs: ['bar-chart-generator', 'line-chart-generator', 'area-chart-generator'],
+          "title": "Tendencias y comparaciones",
+          "description": "Perfecto para mostrar cambios a lo largo del tiempo o comparar diferencias entre grupos.",
+          "toolSlugs": [
+            "bar-chart-generator",
+            "line-chart-generator",
+            "area-chart-generator"
+          ]
         },
         {
-          title: 'Distribuciones, proporciones y correlaciones',
-          description: 'Usa esta ruta para porcentajes, dispersion y conjuntos de datos con relaciones visibles.',
-          toolSlugs: ['pie-chart-generator', 'scatter-chart-generator', 'heatmap-chart-generator'],
+          "title": "Distribuciones, proporciones y correlaciones",
+          "description": "Ideal para mostrar proporciones, dispersión de datos e identificar patrones o correlaciones.",
+          "toolSlugs": [
+            "pie-chart-generator",
+            "scatter-chart-generator",
+            "heatmap-chart-generator"
+          ]
         },
         {
-          title: 'Flujos, jerarquias y cronogramas',
-          description: 'Abre estas herramientas cuando un grafico basico no basta para procesos o planificacion.',
-          toolSlugs: ['sankey-chart-generator', 'treemap-chart-generator', 'gantt-chart-generator'],
-        },
+          "title": "Flujos, jerarquías y cronogramas",
+          "description": "Diseñado para visualizar procesos complejos, estructuras organizativas y planificación de proyectos.",
+          "toolSlugs": [
+            "sankey-chart-generator",
+            "treemap-chart-generator",
+            "gantt-chart-generator"
+          ]
+        }
       ],
-      noteTitle: 'Enfoque de intencion',
-      note:
-        'Busquedas como bar chart generator, heatmap chart generator y gantt chart maker funcionan mejor si la pagina ordena por forma de datos y no por una lista generica.',
+      "noteTitle": "Procesamiento 100% en el cliente",
+      "note": "Toda la generación de gráficos ocurre directamente en tu navegador. Tus datos sensibles nunca salen de tu dispositivo y jamás se almacenan en ningún servidor."
     },
-    security: {
-      eyebrow: 'Para contrasenas, JWT y comprobaciones de integridad',
-      title: 'Herramientas de seguridad para contrasenas, JWT, HMAC y checksums',
-      intro:
-        'Esta categoria rinde mejor cuando separa trabajos concretos: generar contrasenas, revisar claims JWT, crear firmas HMAC o verificar checksums.',
-      highlightsTitle: 'Trabajos de seguridad mas comunes',
-      highlights: [
-        'Preparar contrasenas fuertes y codigos de un solo uso para cuentas de prueba, soporte y accesos internos.',
-        'Inspeccionar encabezados y payloads JWT cuando depuras sesiones, login o expiracion de tokens.',
-        'Crear hashes, firmas HMAC y checksums desde el navegador para validaciones tecnicas y entregas.',
+    "security": {
+      "eyebrow": "Suite profesional de criptografía y seguridad",
+      "title": "Herramientas de seguridad para contraseñas, depuración de JWT, HMAC y checksums",
+      "intro": "Asegura tus flujos de trabajo con nuestras avanzadas herramientas de seguridad. Genera contraseñas robustas, depura tokens JWT y verifica la integridad de tus archivos, todo procesado eficientemente en tu navegador.",
+      "highlightsTitle": "Herramientas esenciales",
+      "highlights": [
+        "Genera contraseñas fuertes y códigos de un solo uso para un acceso seguro.",
+        "Inspecciona encabezados y payloads de JWT para una depuración de autenticación fluida.",
+        "Calcula hashes, firmas HMAC y checksums para la verificación de integridad de datos."
       ],
-      workflowsTitle: 'Rutas de seguridad recomendadas',
-      workflows: [
+      "workflowsTitle": "Explorar herramientas de seguridad",
+      "workflows": [
         {
-          title: 'Contrasenas y codigos de un solo uso',
-          description: 'Usa estas herramientas cuando necesites credenciales mas fuertes o codigos temporales.',
-          toolSlugs: ['password-generator', 'password-strength', 'totp-generator'],
+          "title": "Contraseñas y códigos de un solo uso",
+          "description": "Asegura tus cuentas con contraseñas criptográficamente fuertes y PINs basados en el tiempo.",
+          "toolSlugs": [
+            "password-generator",
+            "password-strength",
+            "totp-generator"
+          ]
         },
         {
-          title: 'Creacion de JWT y depuracion de tokens',
-          description: 'Genera tokens de prueba, inspecciona payloads JWT y separa mejor los pasos del flujo de autenticacion.',
-          toolSlugs: ['jwt-generator', 'jwt-debugger', 'jwt-payload-decoder'],
+          "title": "Creación de JWT y depuración de tokens",
+          "description": "Decodifica, verifica e inspecciona JSON Web Tokens sin comprometer tus secretos.",
+          "toolSlugs": [
+            "jwt-generator",
+            "jwt-debugger",
+            "jwt-payload-decoder"
+          ]
         },
         {
-          title: 'Hash, HMAC y verificacion de checksum',
-          description: 'Elige esta ruta para comprobaciones de integridad, firmas y revision tecnica de archivos o payloads.',
-          toolSlugs: ['hash-generator', 'hmac-generator', 'checksum-verifier'],
-        },
+          "title": "Hash, HMAC y verificación de checksum",
+          "description": "Valida la integridad de archivos y genera hashes criptográficos seguros al instante.",
+          "toolSlugs": [
+            "hash-generator",
+            "hmac-generator",
+            "checksum-verifier"
+          ]
+        }
       ],
-      noteTitle: 'Por que importa',
-      note:
-        'Consultas como password generator, JWT debugger, HMAC generator y checksum verifier necesitan rutas claras en lugar de una categoria de seguridad demasiado vaga.',
-    },
+      "noteTitle": "Arquitectura de Conocimiento Cero (Zero-Knowledge)",
+      "note": "Tu seguridad y privacidad están garantizadas. Todas las operaciones criptográficas se ejecutan localmente en tu dispositivo. Nunca transmitimos ni registramos tus contraseñas, tokens o archivos."
+    }
   },
-  ja: {
-    charts: {
-      eyebrow: 'データの形からチャートを選ぶために',
-      title: 'トレンド、分布、ヒートマップ、フロー、ガントに向くチャート生成ツール',
-      intro:
-        'チャートカテゴリは名前の一覧ではなく、データが何を答えるべきかで案内する方が強くなります。そうすれば棒グラフ、ヒートマップ、Sankey、ガントの意図がぶれません。',
-      highlightsTitle: 'このカテゴリで解決しやすい仕事',
-      highlights: [
-        '棒グラフ、折れ線、面グラフで時系列やカテゴリ比較を整理する。',
-        '円グラフ、散布図、ヒートマップで割合、相関、密な分布を可視化する。',
-        'Sankey、Treemap、ガントでフロー、階層、計画を表現する。',
+  "ja": {
+    "charts": {
+      "eyebrow": "データに適したチャートを選択",
+      "title": "トレンド、分布、フロー、スケジュールのためのチャートジェネレーター",
+      "intro": "データを正確に視覚化します。当社の包括的なチャートジェネレーターのスイートは、シンプルな棒グラフから複雑なSankeyダイアグラムまで、生のデータを魅力的な視覚的ストーリーに変換するのに役立ちます。",
+      "highlightsTitle": "主な機能",
+      "highlights": [
+        "棒グラフ、折れ線グラフ、面グラフでカテゴリや時系列を比較できます。",
+        "円グラフ、散布図、ヒートマップで割合や相関関係を示します。",
+        "Sankey、ツリーマップ、ガントビューでフロー、階層、プロジェクトスケジュールをマッピングします。"
       ],
-      workflowsTitle: 'おすすめの選び方',
-      workflows: [
+      "workflowsTitle": "チャートの種類を探索する",
+      "workflows": [
         {
-          title: '推移と比較',
-          description: '時間変化やカテゴリ差を見せたいときはこのルートから選びます。',
-          toolSlugs: ['bar-chart-generator', 'line-chart-generator', 'area-chart-generator'],
+          "title": "トレンドと比較",
+          "description": "時間の経過に伴う変化を示したり、グループ間の違いを比較するのに最適です。",
+          "toolSlugs": [
+            "bar-chart-generator",
+            "line-chart-generator",
+            "area-chart-generator"
+          ]
         },
         {
-          title: '分布、構成比、相関',
-          description: '割合、散らばり、関係性を見せたいデータに向いています。',
-          toolSlugs: ['pie-chart-generator', 'scatter-chart-generator', 'heatmap-chart-generator'],
+          "title": "分布、構成比、相関関係",
+          "description": "比率、データの広がりを表示し、パターンや相関関係を特定するのに理想的です。",
+          "toolSlugs": [
+            "pie-chart-generator",
+            "scatter-chart-generator",
+            "heatmap-chart-generator"
+          ]
         },
         {
-          title: 'フロー、階層、スケジュール',
-          description: '通常の比較チャートでは足りない業務フローや計画管理に使います。',
-          toolSlugs: ['sankey-chart-generator', 'treemap-chart-generator', 'gantt-chart-generator'],
-        },
+          "title": "フロー、階層、スケジュール",
+          "description": "複雑なプロセス、組織構造、プロジェクト計画の視覚化のために設計されています。",
+          "toolSlugs": [
+            "sankey-chart-generator",
+            "treemap-chart-generator",
+            "gantt-chart-generator"
+          ]
+        }
       ],
-      noteTitle: '意図を保つポイント',
-      note:
-        'bar chart generator、heatmap chart generator、gantt chart maker のような検索は、ページがデータの形で案内するときに最も精度が上がります。',
+      "noteTitle": "100% クライアントサイド処理",
+      "note": "チャートの生成はすべてブラウザ内で直接実行されます。機密データがデバイスから離れることはなく、サーバーに保存されることも絶対にありません。"
     },
-    security: {
-      eyebrow: 'パスワード、JWT、整合性確認のために',
-      title: 'パスワード生成、JWT デバッグ、HMAC、チェックサム向けセキュリティツール',
-      intro:
-        'このカテゴリは、パスワード作成、JWT クレーム確認、HMAC 署名、チェックサム検証のような具体的な作業で分けると強くなります。',
-      highlightsTitle: 'このカテゴリの代表的な仕事',
-      highlights: [
-        'テストアカウントや管理者用に強いパスワードとワンタイムコードを準備する。',
-        'ログイン、セッション、期限切れの問題を調べるために JWT ヘッダーとペイロードを確認する。',
-        'ブラウザ上でハッシュ、HMAC、チェックサムを作成し、配布前の整合性確認に使う。',
+    "security": {
+      "eyebrow": "プロフェッショナルな暗号化＆セキュリティスイート",
+      "title": "パスワード、JWTデバッグ、HMAC、チェックサム用のセキュリティツール",
+      "intro": "高度なセキュリティツールでワークフローを保護します。強力なパスワードの生成、JWTトークンのデバッグ、ファイルの整合性の検証など、すべてブラウザ内で効率的に処理されます。",
+      "highlightsTitle": "不可欠なツール",
+      "highlights": [
+        "安全なアクセスのための強力なパスワードとワンタイムコードを生成します。",
+        "シームレスな認証デバッグのために、JWTヘッダーとペイロードを検査します。",
+        "データの整合性検証のために、ハッシュ、HMAC署名、チェックサムを計算します。"
       ],
-      workflowsTitle: 'おすすめのセキュリティルート',
-      workflows: [
+      "workflowsTitle": "セキュリティツールを探索する",
+      "workflows": [
         {
-          title: 'パスワードとワンタイムコード',
-          description: 'より強い認証情報や時間ベースのコードが必要なときに使います。',
-          toolSlugs: ['password-generator', 'password-strength', 'totp-generator'],
+          "title": "パスワードとワンタイムコード",
+          "description": "暗号学的に強力なパスワードと時間ベースのPINでアカウントを保護します。",
+          "toolSlugs": [
+            "password-generator",
+            "password-strength",
+            "totp-generator"
+          ]
         },
         {
-          title: 'JWT 作成とトークンデバッグ',
-          description: 'テスト用トークンの生成、JWT ペイロードの確認、認証フローの切り分けに向いています。',
-          toolSlugs: ['jwt-generator', 'jwt-debugger', 'jwt-payload-decoder'],
+          "title": "JWT の作成とトークンのデバッグ",
+          "description": "シークレットを危険にさらすことなく、JSON Web Tokenをデコード、検証、検査します。",
+          "toolSlugs": [
+            "jwt-generator",
+            "jwt-debugger",
+            "jwt-payload-decoder"
+          ]
         },
         {
-          title: 'ハッシュ、HMAC、チェックサム検証',
-          description: '整合性確認、署名、配布物の検証を進めるときにこのルートを使います。',
-          toolSlugs: ['hash-generator', 'hmac-generator', 'checksum-verifier'],
-        },
+          "title": "ハッシュ、HMAC、チェックサムの検証",
+          "description": "ファイルの整合性を検証し、安全な暗号化ハッシュを瞬時に生成します。",
+          "toolSlugs": [
+            "hash-generator",
+            "hmac-generator",
+            "checksum-verifier"
+          ]
+        }
       ],
-      noteTitle: '意図の境界',
-      note:
-        'password generator、JWT debugger、HMAC generator、checksum verifier のような検索は、曖昧な security 一覧より明確な導線の方が合います。',
-    },
+      "noteTitle": "ゼロ知識アーキテクチャ (Zero-Knowledge Architecture)",
+      "note": "セキュリティとプライバシーは完全に保護されています。すべての暗号化処理はデバイス上でローカルに実行されます。当社がパスワード、トークン、またはファイルを送信したり保存したりすることは絶対にありません。"
+    }
   },
-  ko: {
-    charts: {
-      eyebrow: '데이터 형태에 맞춰 차트를 고를 때',
-      title: '추세, 분포, 히트맵, 흐름, 간트용 차트 생성 도구',
-      intro:
-        '차트 카테고리는 차트 이름을 길게 나열하는 것보다 데이터가 어떤 질문에 답해야 하는지로 안내할 때 더 강해집니다. 그래야 bar, heatmap, Sankey, gantt 의도가 흐려지지 않습니다.',
-      highlightsTitle: '이 카테고리가 잘 맞는 차트 작업',
-      highlights: [
-        '막대, 선, 영역 차트로 시간 흐름이나 카테고리 비교를 정리한다.',
-        '원형, 산점도, 히트맵으로 비중, 상관관계, 밀집 패턴을 보여준다.',
-        'Sankey, Treemap, gantt 로 흐름, 계층, 프로젝트 일정까지 표현한다.',
+  "ko": {
+    "charts": {
+      "eyebrow": "데이터에 알맞은 차트 선택하기",
+      "title": "추세, 분포, 흐름 및 일정을 위한 차트 생성 도구",
+      "intro": "데이터를 정밀하게 시각화하세요. U2Tool의 포괄적인 차트 생성 도구 모음을 사용하면, 간단한 막대 차트부터 복잡한 Sankey 다이어그램까지 원시 데이터를 매력적인 시각적 스토리로 변환할 수 있습니다.",
+      "highlightsTitle": "주요 기능",
+      "highlights": [
+        "막대, 선, 영역 차트로 카테고리나 시계열 데이터를 비교합니다.",
+        "원형, 산점도, 히트맵으로 비율과 상관관계를 보여줍니다.",
+        "Sankey, 트리맵, 간트 차트로 흐름, 계층 구조 및 프로젝트 일정을 매핑합니다."
       ],
-      workflowsTitle: '추천 차트 경로',
-      workflows: [
+      "workflowsTitle": "차트 유형 둘러보기",
+      "workflows": [
         {
-          title: '추세와 비교',
-          description: '시간 변화나 그룹 간 차이를 보여줘야 할 때 이 경로에서 시작합니다.',
-          toolSlugs: ['bar-chart-generator', 'line-chart-generator', 'area-chart-generator'],
+          "title": "추세와 비교",
+          "description": "시간에 따른 변화를 보여주거나 그룹 간의 차이를 비교하는 데 완벽합니다.",
+          "toolSlugs": [
+            "bar-chart-generator",
+            "line-chart-generator",
+            "area-chart-generator"
+          ]
         },
         {
-          title: '분포, 비중, 상관관계',
-          description: '비율, 흩어짐, 관계 중심 데이터에 어울리는 차트입니다.',
-          toolSlugs: ['pie-chart-generator', 'scatter-chart-generator', 'heatmap-chart-generator'],
+          "title": "분포, 비율 및 상관관계",
+          "description": "비율, 데이터 분포를 표시하고 패턴이나 상관관계를 파악하는 데 이상적입니다.",
+          "toolSlugs": [
+            "pie-chart-generator",
+            "scatter-chart-generator",
+            "heatmap-chart-generator"
+          ]
         },
         {
-          title: '흐름, 계층, 일정',
-          description: '일반 비교 차트로는 부족한 프로세스와 계획 데이터를 다룰 때 사용합니다.',
-          toolSlugs: ['sankey-chart-generator', 'treemap-chart-generator', 'gantt-chart-generator'],
-        },
+          "title": "흐름, 계층 구조 및 일정",
+          "description": "복잡한 프로세스, 조직 구조 및 프로젝트 계획을 시각화하도록 설계되었습니다.",
+          "toolSlugs": [
+            "sankey-chart-generator",
+            "treemap-chart-generator",
+            "gantt-chart-generator"
+          ]
+        }
       ],
-      noteTitle: '의도 고정 포인트',
-      note:
-        'bar chart generator, heatmap chart generator, gantt chart maker 같은 검색은 페이지가 데이터 형태 기준으로 안내할 때 가장 정확해집니다.',
+      "noteTitle": "100% 클라이언트 측 처리",
+      "note": "모든 차트 생성은 브라우저 내에서 직접 이루어집니다. 민감한 데이터는 기기를 벗어나지 않으며 어떤 서버에도 절대 저장되지 않습니다."
     },
-    security: {
-      eyebrow: '비밀번호, JWT, 무결성 검증 작업용',
-      title: '비밀번호 생성, JWT 디버깅, HMAC, 체크섬용 보안 도구',
-      intro:
-        '이 카테고리는 비밀번호 생성, JWT 클레임 확인, HMAC 서명 생성, 체크섬 검증처럼 구체적인 보안 작업으로 나눌 때 가장 강해집니다.',
-      highlightsTitle: '대표적인 보안 작업',
-      highlights: [
-        '테스트 계정과 운영 접근용으로 더 강한 비밀번호와 일회용 코드를 준비한다.',
-        '로그인, 세션, 만료 이슈를 디버깅하기 위해 JWT 헤더와 페이로드를 확인한다.',
-        '브라우저에서 해시, HMAC, 체크섬을 만들어 배포 전 무결성을 점검한다.',
+    "security": {
+      "eyebrow": "전문적인 암호화 및 보안 도구 모음",
+      "title": "비밀번호, JWT 디버깅, HMAC 및 체크섬용 보안 도구",
+      "intro": "고급 보안 도구로 워크플로우를 보호하세요. 강력한 비밀번호를 생성하고, JWT 토큰을 디버깅하며, 파일 무결성을 검증하는 모든 과정이 브라우저 내에서 효율적으로 처리됩니다.",
+      "highlightsTitle": "필수 보안 도구",
+      "highlights": [
+        "안전한 접근을 위해 강력한 비밀번호와 일회용 코드를 생성합니다.",
+        "원활한 인증 디버깅을 위해 JWT 헤더 및 페이로드를 검사합니다.",
+        "데이터 무결성 검증을 위해 해시, HMAC 서명 및 체크섬을 계산합니다."
       ],
-      workflowsTitle: '추천 보안 경로',
-      workflows: [
+      "workflowsTitle": "보안 도구 둘러보기",
+      "workflows": [
         {
-          title: '비밀번호와 일회용 코드',
-          description: '더 강한 인증 정보나 시간 기반 접근 코드가 필요할 때 사용합니다.',
-          toolSlugs: ['password-generator', 'password-strength', 'totp-generator'],
+          "title": "비밀번호와 일회용 코드",
+          "description": "암호학적으로 강력한 비밀번호와 시간 기반 PIN으로 계정을 보호하세요.",
+          "toolSlugs": [
+            "password-generator",
+            "password-strength",
+            "totp-generator"
+          ]
         },
         {
-          title: 'JWT 생성과 토큰 디버깅',
-          description: '테스트 토큰을 만들고 JWT 페이로드를 확인하며 인증 흐름 문제를 분리할 수 있습니다.',
-          toolSlugs: ['jwt-generator', 'jwt-debugger', 'jwt-payload-decoder'],
+          "title": "JWT 생성 및 토큰 디버깅",
+          "description": "보안 키를 노출하지 않고 JSON Web Token을 디코딩, 검증 및 검사합니다.",
+          "toolSlugs": [
+            "jwt-generator",
+            "jwt-debugger",
+            "jwt-payload-decoder"
+          ]
         },
         {
-          title: '해시, HMAC, 체크섬 검증',
-          description: '무결성 확인, 서명, 배포 자산 검증이 필요할 때 이 경로를 엽니다.',
-          toolSlugs: ['hash-generator', 'hmac-generator', 'checksum-verifier'],
-        },
+          "title": "해시, HMAC 및 체크섬 검증",
+          "description": "파일 무결성을 쉽게 검증하고 안전한 암호화 해시를 즉시 생성합니다.",
+          "toolSlugs": [
+            "hash-generator",
+            "hmac-generator",
+            "checksum-verifier"
+          ]
+        }
       ],
-      noteTitle: '의도 집중',
-      note:
-        'password generator, JWT debugger, HMAC generator, checksum verifier 같은 검색은 모호한 보안 목록보다 명확한 경로가 더 잘 맞습니다.',
-    },
+      "noteTitle": "영지식 아키텍처 (Zero-Knowledge Architecture)",
+      "note": "사용자의 보안과 프라이버시가 완벽하게 보장됩니다. 모든 암호화 작업은 기기에서 로컬로 실행됩니다. 당사는 귀하의 비밀번호, 토큰 또는 파일을 절대 전송하거나 로그로 남기지 않습니다."
+    }
   },
-  zh: {
-    charts: {
-      eyebrow: '按数据形态选择图表',
-      title: '适合趋势、分布、热力图、流程和甘特场景的图表生成工具',
-      intro:
-        '图表分类不应该只是堆一长串图表名字，而要先回答数据想表达什么问题。这样柱状图、热力图、Sankey、甘特图等搜索意图才不会混在一起。',
-      highlightsTitle: '这类页面最该解决的图表任务',
-      highlights: [
-        '用柱状图、折线图、面积图处理时间趋势和分类对比。',
-        '用饼图、散点图、热力图展示占比、相关性和密集分布。',
-        '用 Sankey、矩形树图、甘特图表达流程、层级和项目计划。',
+  "zh": {
+    "charts": {
+      "eyebrow": "按数据形态选择图表",
+      "title": "适用于趋势、分布、流程和甘特场景的图表生成工具",
+      "intro": "精准地让数据可视化。无论是简单的柱状图还是复杂的桑基图，我们全面的图表生成器套件都能帮您将冷冰冰的数字转化为具有说服力的视觉故事。",
+      "highlightsTitle": "核心能力",
+      "highlights": [
+        "使用柱状图、折线图和面积图对比类别或时间序列的发展趋势。",
+        "使用饼图、散点图和热力图展示数据占比、密集分布或相关性。",
+        "使用桑基图、矩形树图和甘特图梳理业务流程、层级结构和项目排期。"
       ],
-      workflowsTitle: '推荐图表路径',
-      workflows: [
+      "workflowsTitle": "探索图表类型",
+      "workflows": [
         {
-          title: '趋势与对比',
-          description: '当你要展示时间变化或分类差异时，从这一组图表开始选。',
-          toolSlugs: ['bar-chart-generator', 'line-chart-generator', 'area-chart-generator'],
+          "title": "趋势与对比",
+          "description": "非常适合用来展示数据随时间发生的变化，或对比不同分组之间的差异。",
+          "toolSlugs": [
+            "bar-chart-generator",
+            "line-chart-generator",
+            "area-chart-generator"
+          ]
         },
         {
-          title: '分布、占比与相关性',
-          description: '适合比例结构、散点关系和高密度矩阵数据。',
-          toolSlugs: ['pie-chart-generator', 'scatter-chart-generator', 'heatmap-chart-generator'],
+          "title": "分布、占比与相关性",
+          "description": "适合用于展示数据比例结构、离散程度，以及识别高密度矩阵中的模式或相关性。",
+          "toolSlugs": [
+            "pie-chart-generator",
+            "scatter-chart-generator",
+            "heatmap-chart-generator"
+          ]
         },
         {
-          title: '流程、层级与排期',
-          description: '当普通对比图不够表达业务流程或项目安排时，直接走这条路径。',
-          toolSlugs: ['sankey-chart-generator', 'treemap-chart-generator', 'gantt-chart-generator'],
-        },
+          "title": "流程、层级与项目排期",
+          "description": "专为可视化复杂的业务流程、组织结构和周密的计划安排而设计。",
+          "toolSlugs": [
+            "sankey-chart-generator",
+            "treemap-chart-generator",
+            "gantt-chart-generator"
+          ]
+        }
       ],
-      noteTitle: '为什么要这样组织',
-      note:
-        '像 bar chart generator、heatmap chart generator、gantt chart maker 这类查询，只有按数据形态分流时，页面主题才不会跑偏。',
+      "noteTitle": "100% 纯本地运行保障",
+      "note": "所有的图表渲染和计算都在您的浏览器中进行。您的所有敏感数据绝不会离开当前设备，更不会被存储在任何服务器上。"
     },
-    security: {
-      eyebrow: '面向密码、JWT 和完整性校验任务',
-      title: '用于密码生成、JWT 调试、HMAC 签名和校验和验证的安全工具',
-      intro:
-        '安全分类只有在按具体任务拆分时才有搜索价值，比如生成密码、检查 JWT claims、创建 HMAC 签名、验证校验和，而不是泛泛地写成安全工具大全。',
-      highlightsTitle: '这类页面最常见的安全任务',
-      highlights: [
-        '为测试账号、管理员入口和内部交接生成更强的密码与一次性验证码。',
-        '排查登录、会话和过期问题时检查 JWT 头部与 payload 内容。',
-        '在浏览器里直接生成哈希、HMAC 和校验和，用于发布前的完整性校验。',
+    "security": {
+      "eyebrow": "专业的密码与安全验证套件",
+      "title": "密码、JWT调试、HMAC和校验和的安全工具聚集地",
+      "intro": "使用我们的高级安全工具套件守护您的开发工作流。在浏览器内您就能高效生成可靠的高强度密码、调试 JWT 载荷参数，或进行文件完整性验证。",
+      "highlightsTitle": "必备的安全利器",
+      "highlights": [
+        "为安全的认证环节快速生成高强度密码与一次性验证码(TOTP)。",
+        "轻松解析 JWT 的 header 和 payload 内容，享受无缝无干扰的认证调试体验。",
+        "利用本地运算能力毫秒级生成哈希值、HMAC 签名与各类校验和以确认数据完整无被篡改。"
       ],
-      workflowsTitle: '推荐安全路径',
-      workflows: [
+      "workflowsTitle": "探索安全工具",
+      "workflows": [
         {
-          title: '密码与一次性验证码',
-          description: '需要更强登录凭证或基于时间的一次性访问码时，优先走这组工具。',
-          toolSlugs: ['password-generator', 'password-strength', 'totp-generator'],
+          "title": "密码与验证码工具",
+          "description": "使用符合密码学标准的高强度密码以及基于时间的一次性 PIN 码守护您的账户安全。",
+          "toolSlugs": [
+            "password-generator",
+            "password-strength",
+            "totp-generator"
+          ]
         },
         {
-          title: 'JWT 生成与 Token 调试',
-          description: '适合生成测试 Token、检查 JWT payload、拆分认证流程中的具体问题。',
-          toolSlugs: ['jwt-generator', 'jwt-debugger', 'jwt-payload-decoder'],
+          "title": "JWT 编解码与调试",
+          "description": "为您提供最安全的 JSON Web Token 解析、校验与审查方案，确保开发密钥永不泄露。",
+          "toolSlugs": [
+            "jwt-generator",
+            "jwt-debugger",
+            "jwt-payload-decoder"
+          ]
         },
         {
-          title: '哈希、HMAC 与校验和验证',
-          description: '当你要做完整性检查、签名验证或发布资产校验时，直接进入这条路径。',
-          toolSlugs: ['hash-generator', 'hmac-generator', 'checksum-verifier'],
-        },
+          "title": "哈希、HMAC 与校验和",
+          "description": "帮助您快速生成主流哈希散列以及用于文件对比的校验和签名，即刻完成检验。",
+          "toolSlugs": [
+            "hash-generator",
+            "hmac-generator",
+            "checksum-verifier"
+          ]
+        }
       ],
-      noteTitle: '意图边界',
-      note:
-        'password generator、JWT debugger、HMAC generator、checksum verifier 这类搜索词，需要清晰分流，而不是一个模糊的安全分类页。',
-    },
-  },
+      "noteTitle": "零知识安全架构体系",
+      "note": "您的安全和隐私是我们的绝对底线。以上所有的密码学与加密操作都在您本地设备完成，我们绝不收集、传输或记录任何密码、令牌甚至文件内容。"
+    }
+  }
 };

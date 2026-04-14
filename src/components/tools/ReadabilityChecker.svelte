@@ -53,7 +53,7 @@
         <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('input')}</label>
         <textarea
           bind:value={input}
-          class="w-full h-48 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+          class="w-full h-48 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
           placeholder={t('inputPlaceholder')}></textarea>
       </div>
 
@@ -93,7 +93,7 @@
 
           <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
             <h3 class="text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('readingTime')}</h3>
-            <p class="text-2xl font-bold text-blue-600">
+            <p class="text-2xl font-bold text-amber-600">
               {result.readingTime} {t('minutes')}
             </p>
           </div>
@@ -110,13 +110,13 @@
 {/if}
 
       {#if result}
-<div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
-          <h3 class="font-medium text-blue-800 dark:text-blue-200 mb-2">{t('interpretation')}</h3>
-          <p class="text-sm text-blue-700 dark:text-blue-300">
+<div class="bg-amber-50 dark:bg-amber-900/20 rounded-lg p-4">
+          <h3 class="font-medium text-amber-800 dark:text-amber-200 mb-2">{t('interpretation')}</h3>
+          <p class="text-sm text-amber-700 dark:text-amber-300">
             {result.gradeLevel}
           </p>
           {#if result.suggestions.length > 0}
-<ul class="mt-2 text-sm text-blue-700 dark:text-blue-300 list-disc list-inside">
+<ul class="mt-2 text-sm text-amber-700 dark:text-amber-300 list-disc list-inside">
               {#each result.suggestions as suggestion, i (i)}
 <li >{suggestion}</li>
 {/each}

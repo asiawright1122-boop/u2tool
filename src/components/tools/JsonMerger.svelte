@@ -69,7 +69,7 @@
           </label>
           <textarea
             bind:value={json1}
-            class="w-full h-48 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono text-sm focus:outline-none focus:border-blue-500"
+            class="w-full h-48 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono text-sm focus:outline-none focus:border-amber-500"
             placeholder={t('inputPlaceholder')}></textarea>
         </div>
         <div>
@@ -78,14 +78,14 @@
           </label>
           <textarea
             bind:value={json2}
-            class="w-full h-48 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono text-sm focus:outline-none focus:border-blue-500"
+            class="w-full h-48 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono text-sm focus:outline-none focus:border-amber-500"
             placeholder={t('inputPlaceholder')}></textarea>
         </div>
       </div>
 
       <button
         onclick={handleMerge}
-        class="w-full px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        class="w-full px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
       >
         {t('merge')}
       </button>
@@ -102,7 +102,7 @@
             <label class="text-sm font-medium text-gray-600 dark:text-gray-300">{t('result')}</label>
             <button
               onclick={handleCopy}
-              class="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+              class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-300"
             >
               {t('copy')}
             </button>

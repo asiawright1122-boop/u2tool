@@ -61,7 +61,7 @@
       <div class="grid md:grid-cols-3 gap-4">
         <div>
           <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('tts.voice')}</label>
-          <select value={voice} onchange={(e) => voice = Number(e.target.value)} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white">
+          <select bind:value={voice} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white">
             {#each voices as v, i (i)}
 <option  value={i}>{v.name} ({v.lang})</option>
 {/each}
@@ -69,16 +69,16 @@
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('tts.rate')}: {rate}</label>
-          <input type="range" min="0.5" max="2" step="0.1" value={rate} onchange={(e) => rate = Number(e.target.value)} class="w-full" />
+          <input type="range" min="0.5" max="2" step="0.1" bind:value={rate} class="w-full" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('tts.pitch')}: {pitch}</label>
-          <input type="range" min="0.5" max="2" step="0.1" value={pitch} onchange={(e) => pitch = Number(e.target.value)} class="w-full" />
+          <input type="range" min="0.5" max="2" step="0.1" bind:value={pitch} class="w-full" />
         </div>
       </div>
       <div class="flex gap-2">
-        <button onclick={speak} disabled={speaking || !text} class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50">{t('tts.speak')}</button>
-        <button onclick={stop} disabled={!speaking} class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 disabled:opacity-50">{t('tts.stop')}</button>
+        <button onclick={speak} disabled={speaking || !text} class="px-4 py-2 bg-amber-600 text-white rounded hover:bg-amber-700 disabled:opacity-50">{t('tts.speak')}</button>
+        <button onclick={stop} disabled={!speaking} class="px-4 py-2 bg-rose-500 text-white rounded hover:bg-red-700 disabled:opacity-50">{t('tts.stop')}</button>
       </div>
     </div>
   

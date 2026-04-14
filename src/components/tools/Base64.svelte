@@ -69,20 +69,27 @@
 
     <div class="space-y-4">
       <div>
-        <label for="base64-input" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{tg('input')}</label>
+        <label for="base64-input" class="tool-label">{tg('input')}</label>
         <textarea
           id="base64-input"
           name="inputValue"
+          class="tool-textarea h-48"
           bind:value={input}
           placeholder={t('inputPlaceholder')}></textarea>
       </div>
 
       <div class="flex flex-wrap gap-2">
         <button onclick={encode} class="btn-primary">
-          {t('encodeToBase64')}
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            {t('encodeToBase64')}
+          </div>
         </button>
         <button onclick={decode} class="btn-secondary">
-          {t('decodeFromBase64')}
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+            {t('decodeFromBase64')}
+          </div>
         </button>
         <button onclick={() => { input = ''; output = ''; }} class="btn-secondary">
           {tg('clear')}
@@ -90,21 +97,26 @@
       </div>
 
       <div>
-        <div class="flex justify-between items-center mb-2">
-          <label for="base64-output" class="text-sm font-medium text-gray-700 dark:text-gray-300">{tg('output')}</label>
+        <div class="flex justify-between items-center mb-2.5">
+          <label for="base64-output" class="tool-label !mb-0">{tg('output')}</label>
           {#if output}
-<button
+            <button
               onclick={copyOutput}
-              class={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100'}`}
+              class={`btn-sm transition-all duration-300 ${copied ? 'btn-success' : 'btn-secondary'}`}
             >
-              {copied ? tg('copied') : tg('copy')}
+              <div class="flex items-center gap-1.5">
+                {#if copied}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                {/if}
+                {copied ? tg('copied') : tg('copy')}
+              </div>
             </button>
-{/if}
+          {/if}
         </div>
         <textarea
           id="base64-output"
           name="outputValue"
-          class="tool-textarea"
+          class="tool-result h-48"
           value={output}
           readOnly
           placeholder={t('outputPlaceholder')}></textarea>

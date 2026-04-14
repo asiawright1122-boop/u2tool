@@ -147,7 +147,7 @@
           <button onclick={() => loadPreset('dark')} class="text-sm px-2 py-1 bg-gray-700 dark:bg-gray-800 text-white rounded hover:bg-gray-600 dark:hover:bg-gray-700">
             {t('presetDark')}
           </button>
-          <button onclick={() => loadPreset('brand')} class="text-sm px-2 py-1 bg-blue-100 text-blue-700 rounded hover:bg-blue-200">
+          <button onclick={() => loadPreset('brand')} class="text-sm px-2 py-1 bg-amber-100 text-amber-700 rounded hover:bg-amber-200">
             {t('presetBrand')}
           </button>
         </div>
@@ -158,7 +158,7 @@
           <h3 class="font-medium text-gray-100">{t('variables')}</h3>
           <button
             onclick={addVariable}
-            class="px-3 py-1 text-sm bg-green-600 text-white rounded hover:bg-green-700"
+            class="px-3 py-1 text-sm btn-success rounded hover:bg-green-700"
           >
             + {t('addVariable')}
           </button>
@@ -223,7 +223,7 @@
         <div class="space-y-2">
           <div class="flex items-center justify-between">
             <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('cssLabel')}</label>
-            <button onclick={() => handleCopy(cssOutput)} class="text-sm text-blue-600 hover:text-blue-800">
+            <button onclick={() => handleCopy(cssOutput)} class="text-sm text-amber-600 hover:text-amber-800">
               {t('copy')}
             </button>
           </div>
@@ -235,7 +235,7 @@
         <div class="space-y-2">
           <div class="flex items-center justify-between">
             <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('scssLabel')}</label>
-            <button onclick={() => handleCopy(scssOutput)} class="text-sm text-blue-600 hover:text-blue-800">
+            <button onclick={() => handleCopy(scssOutput)} class="text-sm text-amber-600 hover:text-amber-800">
               {t('copy')}
             </button>
           </div>
@@ -247,7 +247,7 @@
         <div class="space-y-2">
           <div class="flex items-center justify-between">
             <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('jsLabel')}</label>
-            <button onclick={() => handleCopy(jsOutput)} class="text-sm text-blue-600 hover:text-blue-800">
+            <button onclick={() => handleCopy(jsOutput)} class="text-sm text-amber-600 hover:text-amber-800">
               {t('copy')}
             </button>
           </div>

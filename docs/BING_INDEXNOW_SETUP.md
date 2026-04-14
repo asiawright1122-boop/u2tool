@@ -5,13 +5,13 @@
 ### ✅ 已完成的配置
 
 1. **IndexNow Key 文件已部署**
-   - 文件路径: `public/35151298dc86454c8fbd19a34aaba6d7.txt`
-   - 访问 URL: `https://www.u2tool.com/35151298dc86454c8fbd19a34aaba6d7.txt`
-   - 文件内容: `35151298dc86454c8fbd19a34aaba6d7`
+   - 文件路径: `public/u2tool2026indexnowkey.txt`
+   - 访问 URL: `https://www.u2tool.com/u2tool2026indexnowkey.txt`
+   - 文件内容: `u2tool2026indexnowkey`
    - 状态: ✅ 可正常访问
 
 2. **IndexNow API 提交**
-   - 已通过 `scripts/submit-indexnow.ts` 提交
+   - 已通过 `npm run submit:indexnow` 提交
    - 支持批量提交 URL
 
 ### ⚠️ 需要在 Bing Webmaster Tools 中配置
@@ -33,8 +33,8 @@ Bing Webmaster Tools 需要在平台中手动配置 IndexNow Key，才能识别�
 
 1. 在 IndexNow 设置页面，找到 **"IndexNow Key"** 或 **"API Key"** 设置
 2. 输入以下信息：
-   - **Key**: `35151298dc86454c8fbd19a34aaba6d7`
-   - **Key Location**: `https://www.u2tool.com/35151298dc86454c8fbd19a34aaba6d7.txt`
+   - **Key**: `u2tool2026indexnowkey`
+   - **Key Location**: `https://www.u2tool.com/u2tool2026indexnowkey.txt`
 3. 点击 **"保存"** 或 **"验证"** 按钮
 
 ### 步骤 3: 验证配置
@@ -49,16 +49,16 @@ Bing Webmaster Tools 需要在平台中手动配置 IndexNow Key，才能识别�
 
 ### Key 信息
 
-- **IndexNow Key**: `35151298dc86454c8fbd19a34aaba6d7`
-- **Key 文件 URL**: `https://www.u2tool.com/35151298dc86454c8fbd19a34aaba6d7.txt`
-- **Key 文件内容**: `35151298dc86454c8fbd19a34aaba6d7`
+- **IndexNow Key**: `u2tool2026indexnowkey`
+- **Key 文件 URL**: `https://www.u2tool.com/u2tool2026indexnowkey.txt`
+- **Key 文件内容**: `u2tool2026indexnowkey`
 
 ### 验证文件状态
 
 ```bash
 # 检查验证文件
-curl https://www.u2tool.com/35151298dc86454c8fbd19a34aaba6d7.txt
-# 应该返回: 35151298dc86454c8fbd19a34aaba6d7
+curl https://www.u2tool.com/u2tool2026indexnowkey.txt
+# 应该返回: u2tool2026indexnowkey
 ```
 
 ---
@@ -70,7 +70,7 @@ curl https://www.u2tool.com/35151298dc86454c8fbd19a34aaba6d7.txt
 **症状**: Bing 显示 "无法访问 Key 文件"
 
 **解决方案**:
-1. 确认文件可以通过浏览器访问: `https://www.u2tool.com/35151298dc86454c8fbd19a34aaba6d7.txt`
+1. 确认文件可以通过浏览器访问: `https://www.u2tool.com/u2tool2026indexnowkey.txt`
 2. 检查文件内容是否正确（应该是 key 本身，没有换行）
 3. 等待 5-10 分钟后重试（Bing 可能需要时间抓取）
 
@@ -101,11 +101,11 @@ curl https://www.u2tool.com/35151298dc86454c8fbd19a34aaba6d7.txt
 IndexNow 已通过脚本配置，可以手动运行：
 
 ```bash
-# 提交所有 URL
-npx ts-node scripts/submit-indexnow.ts
+# 提交高价值恢复 URL
+npm run submit:indexnow
 
 # 测试模式
-npx ts-node scripts/submit-indexnow.ts --dry-run
+npm run submit:indexnow:dry
 ```
 
 ### 支持的搜索引擎
@@ -128,5 +128,4 @@ IndexNow 协议支持以下搜索引擎：
 ## 📝 更新记录
 
 - 2026-01-04: 创建配置指南
-- IndexNow Key: `35151298dc86454c8fbd19a34aaba6d7`
-
+- IndexNow Key: `u2tool2026indexnowkey`

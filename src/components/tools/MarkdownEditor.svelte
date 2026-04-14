@@ -84,19 +84,19 @@ function hello() {
         <div class="flex gap-2">
           <button
             onclick={() => viewMode = 'edit'}
-            class={`px-3 py-1 rounded text-sm ${viewMode === 'edit' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-700'}`}
+            class={`px-3 py-1 rounded text-sm ${viewMode === 'edit' ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-gray-700'}`}
           >
             {t('markdownEditor.edit')}
           </button>
           <button
             onclick={() => viewMode = 'split'}
-            class={`px-3 py-1 rounded text-sm ${viewMode === 'split' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-700'}`}
+            class={`px-3 py-1 rounded text-sm ${viewMode === 'split' ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-gray-700'}`}
           >
             {t('markdownEditor.split')}
           </button>
           <button
             onclick={() => viewMode = 'preview'}
-            class={`px-3 py-1 rounded text-sm ${viewMode === 'preview' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-700'}`}
+            class={`px-3 py-1 rounded text-sm ${viewMode === 'preview' ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-gray-700'}`}
           >
             {t('markdownEditor.preview')}
           </button>
@@ -126,7 +126,7 @@ function hello() {
       <div class={`grid gap-4 ${viewMode === 'split' ? 'md:grid-cols-2' : 'grid-cols-1'}`}>
         {#if viewMode === 'edit' || viewMode === 'split'}
 <div class="space-y-2">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="tool-label">
               {t('markdownEditor.markdown')}
             </label>
             <textarea
@@ -138,7 +138,7 @@ function hello() {
 
         {#if viewMode === 'preview' || viewMode === 'split'}
 <div class="space-y-2">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="tool-label">
               {t('markdownEditor.previewLabel')}
             </label>
             <div
@@ -148,10 +148,10 @@ function hello() {
       </div>
 
       <div class="flex gap-2">
-        <button onclick={() => handleDownload('md')} class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        <button onclick={() => handleDownload('md')} class="px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700">
           {t('markdownEditor.downloadMd')}
         </button>
-        <button onclick={() => handleDownload('html')} class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+        <button onclick={() => handleDownload('html')} class="px-4 py-2 btn-success rounded-lg hover:bg-green-700">
           {t('markdownEditor.downloadHtml')}
         </button>
         <button onclick={() => markdown = ''} class="px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600">

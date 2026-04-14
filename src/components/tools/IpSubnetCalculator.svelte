@@ -79,7 +79,7 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('subnetMask')}
         </label>
         <div class="flex gap-2 mb-2">
@@ -87,7 +87,7 @@
             onclick={() => maskType = 'cidr'}
             class={`px-4 py-2 rounded-lg transition-colors ${
               maskType === 'cidr'
-                ? 'bg-blue-600 text-white'
+                ? 'bg-amber-600 text-white'
                 : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
             }`}
           >
@@ -97,7 +97,7 @@
             onclick={() => maskType = 'dotted'}
             class={`px-4 py-2 rounded-lg transition-colors ${
               maskType === 'dotted'
-                ? 'bg-blue-600 text-white'
+                ? 'bg-amber-600 text-white'
                 : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
             }`}
           >
@@ -112,7 +112,7 @@
                 onclick={() => subnetMask = cidr.toString()}
                 class={`px-3 py-1 rounded-lg text-sm transition-colors ${
                   subnetMask === cidr.toString()
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-amber-600 text-white'
                     : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                 }`}
               >
@@ -141,7 +141,7 @@
 
       <button
         onclick={calculate}
-        class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        class="w-full px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
       >
         {tc('calculate')}
       </button>
@@ -189,9 +189,9 @@
           </div>
 
           <div class="grid grid-cols-2 gap-4">
-            <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+            <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
               <div class="text-sm text-gray-600 dark:text-gray-400">{t('cidr')}</div>
-              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">
+              <div class="text-2xl font-bold text-amber-600 dark:text-amber-400">
                 /{result.cidr}
               </div>
             </div>

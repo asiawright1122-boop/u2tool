@@ -91,7 +91,7 @@
             onclick={() => typingSpeed = level.speed}
             class={`px-3 py-1 rounded-lg text-sm transition-colors ${
               typingSpeed === level.speed
-                ? 'bg-blue-600 text-white'
+                ? 'bg-amber-600 text-white'
                 : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'
             }`}
           >
@@ -102,7 +102,7 @@
 
       <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 text-center">
         <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('estimatedTime')}</p>
-        <p class="text-4xl font-bold text-blue-600">{results.formatted}</p>
+        <p class="text-4xl font-bold text-amber-600">{results.formatted}</p>
         <p class="text-sm text-gray-500 mt-2">
           ({results.minutes} {t('minutesTotal')})
         </p>
@@ -111,7 +111,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center">
           <p class="text-sm text-gray-600 dark:text-gray-300">{t('pureTypingTime')}</p>
-          <p class="text-xl font-bold text-blue-600">{results.formatted}</p>
+          <p class="text-xl font-bold text-amber-600">{results.formatted}</p>
         </div>
         <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center">
           <p class="text-sm text-gray-600 dark:text-gray-300">{t('recommendedBreaks')}</p>
@@ -119,7 +119,7 @@
         </div>
         <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center">
           <p class="text-sm text-gray-600 dark:text-gray-300">{t('totalWithBreaks')}</p>
-          <p class="text-xl font-bold text-purple-600">{results.totalWithBreaks}m</p>
+          <p class="text-xl font-bold text-slate-600">{results.totalWithBreaks}m</p>
         </div>
       </div>
 

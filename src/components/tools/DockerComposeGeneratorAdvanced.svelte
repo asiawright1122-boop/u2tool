@@ -81,12 +81,12 @@
     <div class="space-y-6">
       <!-- Quick Add -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('quickAddService')}</label>
+        <label class="tool-label">{t('quickAddService')}</label>
         <div class="flex flex-wrap gap-2">
           {#each Object.keys(SERVICE_TEMPLATES) as template (template)}
 <button 
               onclick={() => addService(template)}
-              class="px-3 py-1.5 text-sm bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-lg hover:bg-blue-200 dark:hover:bg-blue-900/50"
+              class="px-3 py-1.5 text-sm bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-lg hover:bg-amber-200 dark:hover:bg-amber-900/50"
             >
               {template}
             </button>
@@ -97,8 +97,8 @@
       <!-- Services -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">{t('services')} ({services.length})</label>
-          <button onclick={() => addService()} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400">{t('addEmptyService')}</button>
+          <label class="tool-label">{t('services')} ({services.length})</label>
+          <button onclick={() => addService()} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">{t('addEmptyService')}</button>
         </div>
         <div class="space-y-4 max-h-96 overflow-y-auto">
           {#each services as service (service.id)}
@@ -176,8 +176,8 @@
       <!-- Output -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">docker-compose.yml</label>
-          <button onclick={handleCopy} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400">
+          <label class="tool-label">docker-compose.yml</label>
+          <button onclick={handleCopy} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">
             {copied ? tCommon('copied') : tCommon('copy')}
           </button>
         </div>

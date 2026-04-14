@@ -129,11 +129,11 @@
         <!-- Settings -->
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('signature.penColor')}</label>
+            <label class="tool-label">{t('signature.penColor')}</label>
             <div class="flex flex-wrap gap-2">
               {#each colors as color (color)}
 <button  onclick={() => penColor = color}
-                  class={`w-8 h-8 rounded-full border-2 ${penColor === color ? 'border-blue-500 ring-2 ring-blue-200' : 'border-gray-300'}`}
+                  class={`w-8 h-8 rounded-full border-2 ${penColor === color ? 'border-amber-500 ring-2 ring-amber-500/20' : 'border-gray-300'}`}
                   style="background-color: {color}" />
 {/each}
               <input type="color" bind:value={penColor} class="w-8 h-8 rounded cursor-pointer" />
@@ -141,7 +141,7 @@
           </div>
           <div>
             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('signature.penWidth')}: {penWidth}px</label>
-            <input type="range" min="1" max="10" value={penWidth} onchange={(e) => penWidth = parseInt(e.target.value)} class="w-full" />
+            <input type="range" min="1" max="10" bind:value={penWidth} class="w-full" />
           </div>
           <div>
             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('signature.backgroundColor')}</label>
@@ -168,11 +168,11 @@
               {t('clear')}
             </button>
             <button onclick={() => downloadSignature('png')} disabled={!hasSignature}
-              class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed">
+              class="px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 disabled:opacity-50 disabled:cursor-not-allowed">
               {t('signature.downloadPng')}
             </button>
             <button onclick={() => downloadSignature('svg')} disabled={!hasSignature}
-              class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed">
+              class="px-4 py-2 btn-success rounded-lg hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed">
               {t('signature.downloadSvg')}
             </button>
           </div>

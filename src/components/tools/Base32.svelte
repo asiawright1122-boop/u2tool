@@ -76,15 +76,15 @@
 
     <div class="space-y-4">
       <div class="flex gap-2">
-        <button onclick={() => mode = 'encode'} class={`px-4 py-2 rounded text-white ${mode === 'encode' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-700'}`}>{t('encode')}</button>
-        <button onclick={() => mode = 'decode'} class={`px-4 py-2 rounded text-white ${mode === 'decode' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-700'}`}>{t('decode')}</button>
+        <button onclick={() => mode = 'encode'} class={`px-4 py-2 rounded text-white ${mode === 'encode' ? 'bg-amber-600' : 'bg-gray-500 dark:bg-gray-700'}`}>{t('encode')}</button>
+        <button onclick={() => mode = 'decode'} class={`px-4 py-2 rounded text-white ${mode === 'decode' ? 'bg-amber-600' : 'bg-gray-500 dark:bg-gray-700'}`}>{t('decode')}</button>
       </div>
       <div>
         <label for="base32-input" class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('input')}</label>
         <textarea id="base32-input" name="inputValue" bind:value={input} class="w-full h-32 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" placeholder={mode === 'encode' ? 'Hello World' : 'JBSWY3DPEBLW64TMMQ======'}></textarea>
       </div>
       <div class="flex gap-2">
-        <button onclick={convert} class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">{t('convert')}</button>
+        <button onclick={convert} class="px-4 py-2 bg-amber-600 text-white rounded hover:bg-amber-700">{t('convert')}</button>
         <button onclick={copy} class="px-4 py-2 bg-gray-500 dark:bg-gray-600 text-white rounded hover:bg-gray-600 dark:hover:bg-gray-700">{copied ? t('copied') : t('copy')}</button>
       </div>
       <div>

@@ -60,7 +60,7 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('oldValue')}
           </label>
           <input
@@ -71,7 +71,7 @@
           />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('newValue')}
           </label>
           <input
@@ -86,7 +86,7 @@
       <div class="flex justify-center gap-4">
         <button
           onclick={calculate}
-          class="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+          class="px-8 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
         >
           {t('calculate')}
         </button>
@@ -129,7 +129,7 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center">
+        <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg text-center">
           <div class="text-2xl mb-1"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
           <div class="font-medium text-gray-900 dark:text-white">{t('example1Title')}</div>
           <div class="text-sm text-gray-600 dark:text-gray-400">{t('example1')}</div>

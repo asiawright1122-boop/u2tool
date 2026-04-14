@@ -226,7 +226,7 @@
 
       <!-- Scripts -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('scripts')}</label>
+        <label class="tool-label">{t('scripts')}</label>
         <div class="space-y-2 mb-4">
           {#each scripts as script, index (index)}
 <div  class="flex gap-2">
@@ -246,7 +246,7 @@
               />
               <button
                 onclick={() => removeScript(script.name)}
-                class="px-3 py-2 bg-red-600 hover:bg-red-700 rounded text-sm text-white"
+                class="px-3 py-2 bg-rose-500 hover:bg-red-700 rounded text-sm text-white"
               >
                 ✕
               </button>
@@ -271,7 +271,7 @@
       <div class="flex justify-center">
         <button
           onclick={generate}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium"
         >
           {t('generate')}
         </button>
@@ -291,7 +291,7 @@
               </button>
               <button
                 onclick={downloadOutput}
-                class="px-2 py-1 bg-green-600 hover:bg-green-700 rounded text-xs text-white"
+                class="px-2 py-1 bg-emerald-500 hover:bg-green-700 rounded text-xs text-white"
               >
                 {t('download')}
               </button>

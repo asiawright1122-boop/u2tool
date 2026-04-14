@@ -106,7 +106,7 @@
           type="checkbox"
           id="includeDialCode"
           bind:checked={includeDialCode}
-          class="w-4 h-4 text-blue-600 rounded"
+          class="w-4 h-4 text-amber-600 rounded"
         />
         <label for="includeDialCode" class="text-sm text-gray-700 dark:text-gray-300">
           {t('includeDialCode')}
@@ -115,7 +115,7 @@
 
       <button
         onclick={formatPhone}
-        class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+        class="px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
       >
         {t('format')}
       </button>
@@ -140,7 +140,7 @@
             </div>
             <button
               onclick={copyToClipboard}
-              class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+              class="px-4 py-2 btn-success rounded-lg hover:bg-green-700 transition-colors"
             >
               {t('copy')}
             </button>
@@ -148,8 +148,8 @@
         </div>
 {/if}
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h3 class="font-medium text-blue-800 dark:text-blue-300 mb-3">{t('allFormats')}</h3>
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+        <h3 class="font-medium text-amber-800 dark:text-amber-300 mb-3">{t('allFormats')}</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
           {#each countryFormats as c (c.code)}
 <div  class="flex justify-between text-gray-700 dark:text-gray-300">

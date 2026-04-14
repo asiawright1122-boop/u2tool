@@ -80,7 +80,7 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('country')}
           </label>
           <select
@@ -94,7 +94,7 @@
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('gender')}
           </label>
           <select
@@ -108,7 +108,7 @@
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('count')}
           </label>
           <input
@@ -125,7 +125,7 @@
       <div class="flex justify-center">
         <button
           onclick={generateNames}
-          class="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+          class="px-8 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M16 8h.01"/><path d="M8 8h.01"/><path d="M8 16h.01"/><path d="M16 16h.01"/><path d="M12 12h.01"/></svg> {t('generate')}
         </button>
@@ -139,7 +139,7 @@
             </h3>
             <button
               onclick={copyNames}
-              class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 text-sm"
+              class="px-4 py-2 btn-success rounded-lg hover:bg-green-700 text-sm"
             >
               {copied ? t('copied') : t('copyAll')}
             </button>

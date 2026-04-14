@@ -104,7 +104,7 @@
     <div class="space-y-6">
       <!-- Style Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('selectStyle')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -113,7 +113,7 @@
               onclick={() => style = s.id}
               class={`px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${
                 style === s.id
-                  ? 'bg-purple-600 text-white'
+                  ? 'bg-slate-600 text-white'
                   : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
               }`}
             >
@@ -126,7 +126,7 @@
 
       <!-- Input -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('originalText')}
         </label>
         <textarea
@@ -140,7 +140,7 @@
       <button
         onclick={paraphrase}
         disabled={!input.trim()}
-        class="w-full py-3 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed"
+        class="w-full py-3 bg-slate-600 text-white rounded-lg font-medium hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {t('paraphrase')}
       </button>
@@ -154,8 +154,8 @@
               onclick={copyToClipboard}
               class={`px-3 py-1 rounded text-sm font-medium ${
                 copied
-                  ? 'bg-green-600 text-white'
-                  : 'bg-purple-600 text-white hover:bg-purple-700'
+                  ? 'btn-success'
+                  : 'bg-slate-600 text-white hover:bg-slate-700'
               }`}
             >
               {copied ? tc('copied') : tc('copy')}
@@ -168,9 +168,9 @@
 {/if}
 
       <!-- Tips -->
-      <div class="bg-purple-50 dark:bg-purple-900/20 rounded-xl p-4">
-        <h4 class="font-medium text-purple-800 dark:text-purple-200 mb-2">{t('tips')}</h4>
-        <ul class="text-sm text-purple-700 dark:text-purple-300 space-y-1 list-disc list-inside">
+      <div class="bg-slate-50 dark:bg-slate-900/20 rounded-xl p-4">
+        <h4 class="font-medium text-slate-800 dark:text-slate-200 mb-2">{t('tips')}</h4>
+        <ul class="text-sm text-slate-700 dark:text-slate-300 space-y-1 list-disc list-inside">
           <li>{t('tip1')}</li>
           <li>{t('tip2')}</li>
           <li>{t('tip3')}</li>

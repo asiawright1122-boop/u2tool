@@ -73,7 +73,7 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('inputLabel')}
         </label>
         <textarea
@@ -84,7 +84,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('repeatCount')}
           </label>
           <input
@@ -97,7 +97,7 @@
           />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('separator')}
           </label>
           <select
@@ -130,7 +130,7 @@
             onclick={() => count = n}
             class={`px-3 py-1 rounded text-sm ${
               count === n
-                ? 'bg-blue-600 text-white'
+                ? 'bg-amber-600 text-white'
                 : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
             }`}
           >
@@ -146,14 +146,14 @@
             <button
               onclick={copyResult}
               disabled={!result}
-              class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 text-sm"
+              class="px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 disabled:opacity-50 text-sm"
             >
               {copied ? t('copied') : t('copy')}
             </button>
             <button
               onclick={downloadResult}
               disabled={!result}
-              class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50 text-sm"
+              class="px-4 py-2 btn-success rounded-lg hover:bg-green-700 disabled:opacity-50 text-sm"
             >
               {t('download')}
             </button>

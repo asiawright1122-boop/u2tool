@@ -132,7 +132,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Print Width -->
         <div>
-          <label for="prettier-print-width" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="prettier-print-width" class="tool-label">
             {t('printWidth')}
           </label>
           <input
@@ -141,13 +141,13 @@
             type="number"
             value={config.printWidth}
             onchange={(e) => config = ({ ...config, printWidth: parseInt(e.target.value) || 80 })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
 
         <!-- Tab Width -->
         <div>
-          <label for="prettier-tab-width" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="prettier-tab-width" class="tool-label">
             {t('tabWidth')}
           </label>
           <input
@@ -156,13 +156,13 @@
             type="number"
             value={config.tabWidth}
             onchange={(e) => config = ({ ...config, tabWidth: parseInt(e.target.value) || 2 })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
 
         <!-- Trailing Comma -->
         <div>
-          <label for="prettier-trailing-comma" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="prettier-trailing-comma" class="tool-label">
             {t('trailingComma')}
           </label>
           <select
@@ -170,7 +170,7 @@
             name="trailingComma"
             value={config.trailingComma}
             onchange={(e) => config = ({ ...config, trailingComma: e.target.value as 'none' | 'es5' | 'all' })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           >
             <option value="none">None</option>
             <option value="es5">ES5</option>
@@ -180,7 +180,7 @@
 
         <!-- Arrow Parens -->
         <div>
-          <label for="prettier-arrow-parens" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="prettier-arrow-parens" class="tool-label">
             {t('arrowParens')}
           </label>
           <select
@@ -188,7 +188,7 @@
             name="arrowParens"
             value={config.arrowParens}
             onchange={(e) => config = ({ ...config, arrowParens: e.target.value as 'avoid' | 'always' })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           >
             <option value="always">Always</option>
             <option value="avoid">Avoid</option>
@@ -197,7 +197,7 @@
 
         <!-- End of Line -->
         <div>
-          <label for="prettier-end-of-line" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="prettier-end-of-line" class="tool-label">
             {t('endOfLine')}
           </label>
           <select
@@ -205,7 +205,7 @@
             name="endOfLine"
             value={config.endOfLine}
             onchange={(e) => config = ({ ...config, endOfLine: e.target.value as 'lf' | 'crlf' | 'cr' | 'auto' })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           >
             <option value="lf">LF (Unix)</option>
             <option value="crlf">CRLF (Windows)</option>
@@ -216,7 +216,7 @@
 
         <!-- Prose Wrap -->
         <div>
-          <label for="prettier-prose-wrap" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="prettier-prose-wrap" class="tool-label">
             {t('proseWrap')}
           </label>
           <select
@@ -224,7 +224,7 @@
             name="proseWrap"
             value={config.proseWrap}
             onchange={(e) => config = ({ ...config, proseWrap: e.target.value as 'always' | 'never' | 'preserve' })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           >
             <option value="preserve">Preserve</option>
             <option value="always">Always</option>
@@ -234,7 +234,7 @@
 
         <!-- HTML Whitespace Sensitivity -->
         <div>
-          <label for="prettier-html-whitespace-sensitivity" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="prettier-html-whitespace-sensitivity" class="tool-label">
             {t('htmlWhitespaceSensitivity')}
           </label>
           <select
@@ -242,7 +242,7 @@
             name="htmlWhitespaceSensitivity"
             value={config.htmlWhitespaceSensitivity}
             onchange={(e) => config = ({ ...config, htmlWhitespaceSensitivity: e.target.value as 'css' | 'strict' | 'ignore' })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           >
             <option value="css">CSS</option>
             <option value="strict">Strict</option>
@@ -260,7 +260,7 @@
             type="checkbox"
             checked={config.useTabs}
             onchange={(e) => config = ({ ...config, useTabs: e.target.checked })}
-            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+            class="w-4 h-4 text-amber-600 bg-gray-100 border-gray-300 rounded focus:ring-amber-500"
           />
           <span class="text-sm text-gray-700 dark:text-gray-300">{t('useTabs')}</span>
         </label>
@@ -272,7 +272,7 @@
             type="checkbox"
             checked={config.semi}
             onchange={(e) => config = ({ ...config, semi: e.target.checked })}
-            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+            class="w-4 h-4 text-amber-600 bg-gray-100 border-gray-300 rounded focus:ring-amber-500"
           />
           <span class="text-sm text-gray-700 dark:text-gray-300">{t('semi')}</span>
         </label>
@@ -284,7 +284,7 @@
             type="checkbox"
             checked={config.singleQuote}
             onchange={(e) => config = ({ ...config, singleQuote: e.target.checked })}
-            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+            class="w-4 h-4 text-amber-600 bg-gray-100 border-gray-300 rounded focus:ring-amber-500"
           />
           <span class="text-sm text-gray-700 dark:text-gray-300">{t('singleQuote')}</span>
         </label>
@@ -296,7 +296,7 @@
             type="checkbox"
             checked={config.bracketSpacing}
             onchange={(e) => config = ({ ...config, bracketSpacing: e.target.checked })}
-            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+            class="w-4 h-4 text-amber-600 bg-gray-100 border-gray-300 rounded focus:ring-amber-500"
           />
           <span class="text-sm text-gray-700 dark:text-gray-300">{t('bracketSpacing')}</span>
         </label>
@@ -308,7 +308,7 @@
             type="checkbox"
             checked={config.bracketSameLine}
             onchange={(e) => config = ({ ...config, bracketSameLine: e.target.checked })}
-            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+            class="w-4 h-4 text-amber-600 bg-gray-100 border-gray-300 rounded focus:ring-amber-500"
           />
           <span class="text-sm text-gray-700 dark:text-gray-300">{t('bracketSameLine')}</span>
         </label>
@@ -318,7 +318,7 @@
       <div class="flex justify-center gap-4">
         <button
           onclick={generateConfig}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium text-white"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium text-white"
         >
           {t('generate')}
         </button>
@@ -344,7 +344,7 @@
               </button>
               <button
                 onclick={downloadFile}
-                class="px-3 py-1 bg-green-600 hover:bg-green-700 rounded text-sm text-white"
+                class="px-3 py-1 bg-emerald-500 hover:bg-green-700 rounded text-sm text-white"
               >
                 {t('download')}
               </button>

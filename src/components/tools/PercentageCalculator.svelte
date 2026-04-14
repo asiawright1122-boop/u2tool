@@ -98,7 +98,7 @@
             <span class="font-mono text-lg text-green-600 dark:text-green-400">{result1.toFixed(2)}</span>
             <button
               onclick={() => copyResult(result1.toFixed(2), 'r1')}
-              class={`px-2 py-1 text-xs rounded ${copied === 'r1' ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
+              class={`px-2 py-1 text-xs rounded ${copied === 'r1' ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
             >
               {copied === 'r1' ? '✓' : t('copy')}
             </button>
@@ -128,7 +128,7 @@
             <span class="font-mono text-lg text-green-600 dark:text-green-400">{result2.toFixed(2)}%</span>
             <button
               onclick={() => copyResult(result2.toFixed(2) + '%', 'r2')}
-              class={`px-2 py-1 text-xs rounded ${copied === 'r2' ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
+              class={`px-2 py-1 text-xs rounded ${copied === 'r2' ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
             >
               {copied === 'r2' ? '✓' : t('copy')}
             </button>
@@ -161,7 +161,7 @@
             </span>
             <button
               onclick={() => copyResult((result3 >= 0 ? '+' : '') + result3.toFixed(2) + '%', 'r3')}
-              class={`px-2 py-1 text-xs rounded ${copied === 'r3' ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
+              class={`px-2 py-1 text-xs rounded ${copied === 'r3' ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
             >
               {copied === 'r3' ? '✓' : t('copy')}
             </button>
@@ -199,7 +199,7 @@
             <span class="font-mono text-lg text-green-600 dark:text-green-400">{result4.toFixed(2)}</span>
             <button
               onclick={() => copyResult(result4.toFixed(2), 'r4')}
-              class={`px-2 py-1 text-xs rounded ${copied === 'r4' ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
+              class={`px-2 py-1 text-xs rounded ${copied === 'r4' ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
             >
               {copied === 'r4' ? '✓' : t('copy')}
             </button>

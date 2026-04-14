@@ -64,8 +64,8 @@
     <div class="space-y-6">
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Code {tCommon('input')}</label>
-          <button onclick={loadExample} class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400">{t('loadExample')}</button>
+          <label class="tool-label">Code {tCommon('input')}</label>
+          <button onclick={loadExample} class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400">{t('loadExample')}</button>
         </div>
         <textarea bind:value={code} placeholder={t("inputPlaceholder")}
           class="w-full h-64 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm resize-none"></textarea>
@@ -121,8 +121,8 @@
 
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Cleaned Code</label>
-              <button onclick={handleCopy} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400">
+              <label class="tool-label">Cleaned Code</label>
+              <button onclick={handleCopy} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">
                 {copied ? tCommon('copied') : tCommon('copy')}
               </button>
             </div>

@@ -149,7 +149,7 @@
     <div class="space-y-6">
       <!-- File Upload -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('selectFile')}
         </label>
         <div class="flex items-center justify-center w-full">
@@ -185,7 +185,7 @@
 
       <!-- Expected Checksum -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('expectedChecksum')}
         </label>
         <input
@@ -193,7 +193,7 @@
           value={expectedChecksum}
           onchange={(e) => handleExpectedChecksumChange(e.target.value)}
           placeholder={t('expectedChecksumPlaceholder')}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent"
         />
       </div>
 
@@ -202,7 +202,7 @@
         <button
           onclick={calculateChecksums}
           disabled={!file || isCalculating}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed rounded-lg font-medium text-white"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-gray-400 disabled:cursor-not-allowed rounded-lg font-medium text-white"
         >
           {isCalculating ? t('calculating') : t('calculate')}
         </button>

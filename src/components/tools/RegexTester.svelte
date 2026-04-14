@@ -116,7 +116,7 @@
 <button 
             onclick={() => toggleFlag(flag)}
             class={`px-3 py-1 text-sm rounded ${
-              flags.includes(flag) ? 'bg-blue-600' : 'bg-gray-700'
+              flags.includes(flag) ? 'bg-amber-600' : 'bg-gray-700'
             }`}
           >
             {flag} - {label}
@@ -158,7 +158,7 @@
             {#each matches as m, i (i)}
 <div  class="p-2 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded text-sm">
                 <span class="text-gray-500 dark:text-gray-300">#{i + 1}</span>
-                <span class="mx-2 text-blue-600 dark:text-blue-400 font-mono">&quot;{m.match}&quot;</span>
+                <span class="mx-2 text-amber-600 dark:text-amber-400 font-mono">&quot;{m.match}&quot;</span>
                 <span class="text-gray-500 dark:text-gray-300">{t('regex.atIndex')} {m.index}</span>
               </div>
 {/each}

@@ -172,7 +172,7 @@
         <!-- 状态指示 -->
         {#if state === 'recording'}
 <div class="flex items-center gap-2 text-red-600 dark:text-red-400">
-            <span class="w-3 h-3 bg-red-600 rounded-full animate-pulse"></span>
+            <span class="w-3 h-3 bg-rose-500 rounded-full animate-pulse"></span>
             {t('screen-recorder.recording')}
           </div>
 {/if}
@@ -188,7 +188,7 @@
           {#if state === 'idle'}
 <button
               onclick={startRecording}
-              class="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors flex items-center gap-2"
+              class="px-6 py-3 bg-rose-500 text-white rounded-lg hover:bg-red-700 transition-colors flex items-center gap-2"
             >
               <span class="w-4 h-4 bg-white rounded-full"></span>
               {t('screen-recorder.start')}
@@ -219,7 +219,7 @@
 
               <button
                 onclick={resumeRecording}
-                class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                class="px-6 py-3 btn-success rounded-lg hover:bg-green-700 transition-colors"
               >
                 ▶ {t('screen-recorder.resume')}
               </button>
@@ -236,7 +236,7 @@
           {#if state === 'stopped'}
 <button
               onclick={resetRecording}
-              class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              class="px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg> {t('screen-recorder.newRecording')}
             </button>
@@ -265,7 +265,7 @@
 
           <button
             onclick={downloadRecording}
-            class="w-full px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
+            class="w-full px-6 py-3 btn-success rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
           >
             ⬇ {t('screen-recorder.download')}
           </button>
@@ -275,11 +275,11 @@
       <!-- 使用说明 -->
       {#if state === 'idle'}
 {#if !recordedUrl}
-        <div class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-          <h4 class="font-medium text-blue-900 dark:text-blue-300 mb-2">
+        <div class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+          <h4 class="font-medium text-amber-900 dark:text-amber-300 mb-2">
             {t('screen-recorder.instructions')}
           </h4>
-          <ul class="text-sm text-blue-700 dark:text-blue-400 space-y-1 list-disc list-inside">
+          <ul class="text-sm text-amber-700 dark:text-amber-400 space-y-1 list-disc list-inside">
             <li>{t('screen-recorder.instruction1')}</li>
             <li>{t('screen-recorder.instruction2')}</li>
             <li>{t('screen-recorder.instruction3')}</li>

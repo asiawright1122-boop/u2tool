@@ -124,7 +124,7 @@
           <textarea
             bind:value={userAgent}
             placeholder={t('uaParser.placeholder')}
-            class="flex-1 h-24 p-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-gray-100"></textarea>
+            class="flex-1 h-24 p-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm resize-none focus:ring-2 focus:ring-amber-500 focus:border-transparent text-gray-900 dark:text-gray-100"></textarea>
         </div>
         <button
           onclick={useCurrentUA}

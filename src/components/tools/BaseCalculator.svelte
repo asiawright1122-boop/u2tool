@@ -88,7 +88,7 @@
             name="number1Value"
             type="text"
             bind:value={num1}
-            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono focus:outline-none focus:border-blue-500"
+            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono focus:outline-none focus:border-amber-500"
           />
         </div>
         
@@ -122,14 +122,14 @@
             name="number2Value"
             type="text"
             bind:value={num2}
-            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono focus:outline-none focus:border-blue-500"
+            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono focus:outline-none focus:border-amber-500"
           />
         </div>
       </div>
 
       <button
         onclick={handleCalculate}
-        class="w-full px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        class="w-full px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
       >
         {t('calculate')}
       </button>

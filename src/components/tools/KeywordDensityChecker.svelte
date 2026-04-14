@@ -103,7 +103,7 @@
     <div class="space-y-6">
       <!-- Input -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('enterText')}
         </label>
         <textarea
@@ -139,9 +139,9 @@
       {#if analysis}
 <div>
 
-          <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4">
+          <div class="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-4">
             <div class="text-center">
-              <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">
+              <div class="text-3xl font-bold text-amber-600 dark:text-amber-400">
                 {analysis.totalWords}
               </div>
               <div class="text-sm text-gray-600 dark:text-gray-400">{t('totalWords')}</div>
@@ -170,7 +170,7 @@
                       <td class="px-3 py-2 w-32">
                         <div class="h-2 bg-gray-200 dark:bg-gray-600 rounded-full overflow-hidden">
                           <div 
-                            class="h-full bg-blue-500 rounded-full"
+                            class="h-full bg-amber-500 rounded-full"
                             style="width: {Math.min(item.density * 10, 100)}%"></div>
                         </div>
                       </td>
@@ -201,7 +201,7 @@
               <h3 class="font-semibold text-gray-900 dark:text-white mb-3">{t('threeWordPhrases')}</h3>
               <div class="flex flex-wrap gap-2">
                 {#each analysis.topPhrases3 as [phrase, count], idx (idx)}
-<span  class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">
+<span  class="px-3 py-1 bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 rounded-full text-sm">
                     {phrase} ({count})
                   </span>
 {/each}

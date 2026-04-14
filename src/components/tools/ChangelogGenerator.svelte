@@ -149,10 +149,10 @@
   const categories: { key: keyof Omit<ChangelogEntry, 'version' | 'date'>; label: string; color: string }[] = [
     { key: 'added', label: 'Added', color: 'bg-green-100 dark:bg-green-900 border-green-300 dark:border-green-700' },
     { key: 'changed', label: 'Changed', color: 'bg-yellow-100 dark:bg-yellow-900 border-yellow-300 dark:border-yellow-700' },
-    { key: 'fixed', label: 'Fixed', color: 'bg-blue-100 dark:bg-blue-900 border-blue-300 dark:border-blue-700' },
+    { key: 'fixed', label: 'Fixed', color: 'bg-amber-100 dark:bg-amber-900 border-amber-300 dark:border-amber-700' },
     { key: 'removed', label: 'Removed', color: 'bg-red-100 dark:bg-red-900 border-red-300 dark:border-red-700' },
     { key: 'deprecated', label: 'Deprecated', color: 'bg-orange-100 dark:bg-orange-900 border-orange-300 dark:border-orange-700' },
-    { key: 'security', label: 'Security', color: 'bg-purple-100 dark:bg-purple-900 border-purple-300 dark:border-purple-700' },
+    { key: 'security', label: 'Security', color: 'bg-slate-100 dark:bg-slate-900 border-slate-300 dark:border-slate-700' },
   ];
 
 </script>
@@ -162,25 +162,25 @@
       <!-- Project Info -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('projectName')}
           </label>
           <input
             type="text"
             bind:value={projectName}
             placeholder={t('projectNamePlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('projectUrl')}
           </label>
           <input
             type="text"
             bind:value={projectUrl}
             placeholder={t('projectUrlPlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
       </div>
@@ -188,7 +188,7 @@
       <!-- Add Entry Button -->
       <button
         onclick={addEntry}
-        class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white text-sm"
+        class="px-4 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg text-white text-sm"
       >
         + {t('addVersion')}
       </button>
@@ -221,7 +221,7 @@
               {#if entries.length > 1}
 <button
                   onclick={() => removeEntry(entryIndex)}
-                  class="px-3 py-2 bg-red-500 hover:bg-red-600 text-white rounded text-sm mt-5"
+                  class="px-3 py-2 bg-red-500 hover:bg-rose-500 text-white rounded text-sm mt-5"
                 >
                   {t('removeVersion')}
                 </button>
@@ -271,7 +271,7 @@
       <div class="flex justify-center gap-4">
         <button
           onclick={generateChangelog}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium text-white"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium text-white"
         >
           {t('generate')}
         </button>
@@ -297,7 +297,7 @@
               </button>
               <button
                 onclick={downloadFile}
-                class="px-3 py-1 bg-green-600 hover:bg-green-700 rounded text-sm text-white"
+                class="px-3 py-1 bg-emerald-500 hover:bg-green-700 rounded text-sm text-white"
               >
                 {t('download')}
               </button>

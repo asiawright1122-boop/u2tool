@@ -235,14 +235,14 @@
   <div>
     <div class="flex justify-between items-center mb-2">
       <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{t('historicalData')}</h3>
-      <button onclick={addPeriod} class="px-3 py-1 bg-blue-500 text-white rounded-lg text-sm hover:bg-blue-600">+ {t('addPeriod')}</button>
+      <button onclick={addPeriod} class="px-3 py-1 bg-amber-500 text-white rounded-lg text-sm hover:bg-amber-600">+ {t('addPeriod')}</button>
     </div>
     <div class="space-y-2">
       {#each historicalData as item, i}
         <div class="flex gap-2 items-center">
-          <input type="text" value={item.period} onchange={(e) => updateHistorical(i, 'period', e.currentTarget.value)} class="w-28 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-900 dark:text-white" />
-          <input type="number" value={item.revenue} onchange={(e) => updateHistorical(i, 'revenue', Number(e.currentTarget.value))} class="flex-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-900 dark:text-white" placeholder={t('revenue')} />
-          <input type="number" value={item.expenses} onchange={(e) => updateHistorical(i, 'expenses', Number(e.currentTarget.value))} class="flex-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-900 dark:text-white" placeholder={t('expenses')} />
+          <input type="text" bind:value={item.period} class="w-28 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-900 dark:text-white" />
+          <input type="number" bind:value={item.revenue} class="flex-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-900 dark:text-white" placeholder={t('revenue')} />
+          <input type="number" bind:value={item.expenses} class="flex-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-900 dark:text-white" placeholder={t('expenses')} />
           <button onclick={() => removePeriod(i)} class="text-red-500 hover:text-red-700 text-sm px-2">✕</button>
         </div>
       {/each}
@@ -262,9 +262,9 @@
             <span class="w-20 text-xs text-gray-600 dark:text-gray-400">{item.period}</span>
           </div>
           <div class="flex gap-1 h-6">
-            <div class="bg-blue-500 rounded-l" style="width: {(revenue / maxValue) * 100}%" title={`${t('revenue')}: ${formatCurrency(revenue)}`}></div>
+            <div class="bg-amber-500 rounded-l" style="width: {(revenue / maxValue) * 100}%" title={`${t('revenue')}: ${formatCurrency(revenue)}`}></div>
             <div class="bg-red-400" style="width: {(expenses / maxValue) * 100}%" title={`${t('expenses')}: ${formatCurrency(expenses)}`}></div>
-            <div class={`rounded-r ${profit >= 0 ? 'bg-green-500' : 'bg-red-600'}`} style="width: {(Math.abs(profit) / maxValue) * 100}%" title={`${t('profit')}: ${formatCurrency(profit)}`}></div>
+            <div class={`rounded-r ${profit >= 0 ? 'bg-green-500' : 'bg-rose-500'}`} style="width: {(Math.abs(profit) / maxValue) * 100}%" title={`${t('profit')}: ${formatCurrency(profit)}`}></div>
           </div>
         </div>
       {/each}
@@ -278,15 +278,15 @@
             <span class="text-xs px-1 bg-yellow-200 dark:bg-yellow-800 text-yellow-800 dark:text-yellow-200 rounded">{t('forecast')}</span>
           </div>
           <div class="flex gap-1 h-6">
-            <div class="bg-blue-500 rounded-l" style="width: {(revenue / maxValue) * 100}%" title={`${t('revenue')}: ${formatCurrency(revenue)}`}></div>
+            <div class="bg-amber-500 rounded-l" style="width: {(revenue / maxValue) * 100}%" title={`${t('revenue')}: ${formatCurrency(revenue)}`}></div>
             <div class="bg-red-400" style="width: {(expenses / maxValue) * 100}%" title={`${t('expenses')}: ${formatCurrency(expenses)}`}></div>
-            <div class={`rounded-r ${profit >= 0 ? 'bg-green-500' : 'bg-red-600'}`} style="width: {(Math.abs(profit) / maxValue) * 100}%" title={`${t('profit')}: ${formatCurrency(profit)}`}></div>
+            <div class={`rounded-r ${profit >= 0 ? 'bg-green-500' : 'bg-rose-500'}`} style="width: {(Math.abs(profit) / maxValue) * 100}%" title={`${t('profit')}: ${formatCurrency(profit)}`}></div>
           </div>
         </div>
       {/each}
     </div>
     <div class="flex gap-4 mt-2 text-xs text-gray-500">
-      <span class="flex items-center gap-1"><span class="w-3 h-3 bg-blue-500 rounded inline-block"></span> {t('revenue')}</span>
+      <span class="flex items-center gap-1"><span class="w-3 h-3 bg-amber-500 rounded inline-block"></span> {t('revenue')}</span>
       <span class="flex items-center gap-1"><span class="w-3 h-3 bg-red-400 rounded inline-block"></span> {t('expenses')}</span>
       <span class="flex items-center gap-1"><span class="w-3 h-3 bg-green-500 rounded inline-block"></span> {t('profit')}</span>
     </div>
@@ -322,7 +322,7 @@
 
   <!-- Export -->
   <div class="flex justify-end">
-    <button onclick={exportForecast} class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">{t('exportForecastReport')}</button>
+    <button onclick={exportForecast} class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-emerald-500">{t('exportForecastReport')}</button>
   </div>
 </div>
             

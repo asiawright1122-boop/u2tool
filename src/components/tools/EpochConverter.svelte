@@ -57,18 +57,18 @@
     <div class="space-y-6">
       <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 text-center">
         <p class="text-sm text-gray-600 dark:text-gray-300 mb-1">{t('epoch.current')}</p>
-        <p class="text-3xl font-mono text-blue-600 dark:text-blue-400 cursor-pointer" onclick={() => copy(currentEpoch.toString())}>{currentEpoch}</p>
+        <p class="text-3xl font-mono text-amber-600 dark:text-amber-400 cursor-pointer" onclick={() => copy(currentEpoch.toString())}>{currentEpoch}</p>
       </div>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="space-y-3">
           <label for="epoch-timestamp" class="block text-sm font-medium text-gray-900 dark:text-white">{t('epoch.timestamp')}</label>
           <input type="text" id="epoch-timestamp" name="epochValue" bind:value={epoch} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-gray-900 dark:text-white" placeholder="1702400000" />
-          <button onclick={epochToDate} class="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">{t('epoch.toDate')}</button>
+          <button onclick={epochToDate} class="w-full px-4 py-2 bg-amber-600 text-white rounded hover:bg-amber-700">{t('epoch.toDate')}</button>
         </div>
         <div class="space-y-3">
           <label for="epoch-datetime" class="block text-sm font-medium text-gray-900 dark:text-white">{t('epoch.datetime')}</label>
           <input type="text" id="epoch-datetime" name="datetimeValue" bind:value={date} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-gray-900 dark:text-white" placeholder="2024-12-12 12:00:00" />
-          <button onclick={dateToEpoch} class="w-full px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">{t('epoch.toEpoch')}</button>
+          <button onclick={dateToEpoch} class="w-full px-4 py-2 btn-success rounded hover:bg-green-700">{t('epoch.toEpoch')}</button>
         </div>
       </div>
       <div class="flex gap-2">

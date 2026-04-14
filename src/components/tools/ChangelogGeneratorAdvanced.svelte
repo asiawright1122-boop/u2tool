@@ -127,7 +127,7 @@
               onclick={() => format = f}
               class={`px-3 py-1.5 text-sm rounded-lg ${
                 format === f
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
               }`}
             >
@@ -137,7 +137,7 @@
         </div>
         <button
           onclick={addRelease}
-          class="px-3 py-1.5 text-sm bg-green-600 text-white rounded-lg hover:bg-green-700"
+          class="px-3 py-1.5 text-sm btn-success rounded-lg hover:bg-green-700"
         >
           {t('addRelease')}
         </button>
@@ -162,7 +162,7 @@
               />
               <button
                 onclick={() => addEntry(releaseIdx)}
-                class="ml-auto text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded hover:bg-blue-200"
+                class="ml-auto text-xs px-2 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded hover:bg-amber-200"
               >
                 {t('addEntry')}
               </button>
@@ -213,12 +213,12 @@
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('generatedChangelog')}
           </label>
           <button
             onclick={handleCopy}
-            class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+            class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
           >
             {copied ? tCommon('copied') : tCommon('copy')}
           </button>

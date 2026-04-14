@@ -99,7 +99,7 @@
     <div class="space-y-4">
       <!-- Input Section -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {tg('input')}
         </label>
         <textarea
@@ -197,7 +197,7 @@
       <!-- Output Format Selection -->
       {#if parseResult.entries.length > 0}
 <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('outputFormat')}
           </label>
           <div class="flex gap-2">
@@ -206,7 +206,7 @@
                 onclick={() => outputFormat = format}
                 class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   outputFormat === format
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-amber-600 text-white'
                     : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                 }`}
               >
@@ -228,7 +228,7 @@
               onclick={handleCopy}
               class={`text-sm px-3 py-1 rounded ${
                 copied 
-                  ? 'bg-green-600 text-white' 
+                  ? 'btn-success' 
                   : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100'
               }`}
             >

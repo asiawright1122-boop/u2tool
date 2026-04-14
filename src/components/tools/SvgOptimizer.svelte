@@ -109,7 +109,7 @@
         <div>
           <div class="flex justify-between items-center mb-1">
             <label class="text-sm text-gray-600 dark:text-gray-300">{t('output')}</label>
-            <button onclick={copyOutput} class="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
+            <button onclick={copyOutput} class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300">
               {copied ? t('copied') : t('copy')}
             </button>
           </div>
@@ -122,7 +122,7 @@
 
       <button
         onclick={optimize}
-        class="w-full bg-blue-600 hover:bg-blue-700 py-2 rounded font-medium text-white"
+        class="w-full bg-amber-600 hover:bg-amber-700 py-2 rounded font-medium text-white"
       >
         {t('svgOptimizer.optimize')}
       </button>
@@ -138,7 +138,7 @@
             <div class="text-sm text-gray-600 dark:text-gray-300">{t('svgOptimizer.optimized')}</div>
           </div>
           <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-3 text-center">
-            <div class="text-lg font-bold text-blue-600 dark:text-blue-400">{stats.saved}%</div>
+            <div class="text-lg font-bold text-amber-600 dark:text-amber-400">{stats.saved}%</div>
             <div class="text-sm text-gray-600 dark:text-gray-300">{t('svgOptimizer.saved')}</div>
           </div>
         </div>

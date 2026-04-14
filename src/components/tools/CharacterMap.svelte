@@ -79,7 +79,7 @@
               onclick={() => selectedCategory = category}
               class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 selectedCategory === category
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
               }`}
             >
@@ -96,7 +96,7 @@
             {#each recentlyUsed as char, i (i)}
 <button 
                 onclick={() => copyChar(char)}
-                class="w-10 h-10 flex items-center justify-center text-xl bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors"
+                class="w-10 h-10 flex items-center justify-center text-xl bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded hover:bg-amber-50 dark:hover:bg-amber-900/30 transition-colors"
               >
                 {char}
               </button>
@@ -116,7 +116,7 @@
               class={`aspect-square flex items-center justify-center text-xl rounded transition-all ${
                 copied === char
                   ? 'bg-green-500 text-white scale-110'
-                  : 'bg-gray-50 dark:bg-gray-700 hover:bg-blue-100 dark:hover:bg-blue-900/50 hover:scale-110'
+                  : 'bg-gray-50 dark:bg-gray-700 hover:bg-amber-100 dark:hover:bg-amber-900/50 hover:scale-110'
               }`}
               title={`Click to copy: ${char}`}
             >
@@ -126,8 +126,8 @@
         </div>
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center">
-        <p class="text-sm text-blue-700 dark:text-blue-400">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg text-center">
+        <p class="text-sm text-amber-700 dark:text-amber-400">
           <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg> {t('tip')}
         </p>
       </div>

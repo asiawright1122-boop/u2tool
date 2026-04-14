@@ -54,8 +54,8 @@
     <div class="space-y-6">
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Code {tCommon('input')}</label>
-          <button onclick={loadExample} class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400">{t('loadExample')}</button>
+          <label class="tool-label">Code {tCommon('input')}</label>
+          <button onclick={loadExample} class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400">{t('loadExample')}</button>
         </div>
         <textarea bind:value={code} placeholder={t("inputPlaceholder")}
           class="w-full h-64 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm resize-none"></textarea>
@@ -103,9 +103,9 @@
 {/if}
 
           {#if result.suggestions.length > 0}
-<div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-              <h4 class="text-sm font-medium text-blue-800 dark:text-blue-300 mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg> Suggestions</h4>
-              <ul class="text-sm text-blue-700 dark:text-blue-400 space-y-1">
+<div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+              <h4 class="text-sm font-medium text-amber-800 dark:text-amber-300 mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg> Suggestions</h4>
+              <ul class="text-sm text-amber-700 dark:text-amber-400 space-y-1">
                 {#each result.suggestions as s, i (i)}
 <li >• {s}</li>
 {/each}

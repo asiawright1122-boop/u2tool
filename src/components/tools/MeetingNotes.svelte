@@ -171,13 +171,13 @@
             <input type="text" bind:value={newAttendee} placeholder={t('meeting.addAttendee')}
               onkeypress={(e) => e.key === 'Enter' && addAttendee()}
               class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />
-            <button onclick={addAttendee} class="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm">{t('add')}</button>
+            <button onclick={addAttendee} class="px-3 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 text-sm">{t('add')}</button>
           </div>
           <div class="flex flex-wrap gap-2">
             {#each attendees as attendee, index (index)}
-<span  class="inline-flex items-center gap-1 px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">
+<span  class="inline-flex items-center gap-1 px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 rounded-full text-sm">
                 {attendee}
-                <button onclick={() => removeAttendee(index)} class="text-blue-600 hover:text-blue-800">×</button>
+                <button onclick={() => removeAttendee(index)} class="text-amber-600 hover:text-amber-800">×</button>
               </span>
 {/each}
           </div>
@@ -190,7 +190,7 @@
             <input type="text" bind:value={newAgendaItem} placeholder={t('meeting.addAgendaItem')}
               onkeypress={(e) => e.key === 'Enter' && addAgendaItem()}
               class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />
-            <button onclick={addAgendaItem} class="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm">{t('add')}</button>
+            <button onclick={addAgendaItem} class="px-3 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 text-sm">{t('add')}</button>
           </div>
           <ol class="list-decimal list-inside space-y-1">
             {#each agenda as item, index (index)}
@@ -221,7 +221,7 @@
           <div class="flex gap-2">
             <input type="date" value={newAction.dueDate} onchange={(e) => newAction = { ...newAction, dueDate: e.target.value }}
               class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />
-            <button onclick={addActionItem} class="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm">{t('add')}</button>
+            <button onclick={addActionItem} class="px-3 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 text-sm">{t('add')}</button>
           </div>
         </div>
         <div class="space-y-2">
@@ -230,7 +230,7 @@
               <input type="checkbox" checked={item.completed} onchange={() => toggleActionItem(item.id)} class="w-4 h-4" />
               <span class={`flex-1 text-sm ${item.completed ? 'line-through text-gray-500' : 'text-gray-700 dark:text-gray-300'}`}>{item.task}</span>
               {#if item.assignee}
-<span class="text-xs text-blue-600 dark:text-blue-400">@{item.assignee}</span>
+<span class="text-xs text-amber-600 dark:text-amber-400">@{item.assignee}</span>
 {/if}
               {#if item.dueDate}
 <span class="text-xs text-gray-500">{item.dueDate}</span>
@@ -243,7 +243,7 @@
 
       <!-- Export Buttons -->
       <div class="flex gap-3">
-        <button onclick={exportToMarkdown} class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">{t('meeting.exportMarkdown')}</button>
+        <button onclick={exportToMarkdown} class="px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700">{t('meeting.exportMarkdown')}</button>
         <button onclick={exportToText} class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600">{t('meeting.exportText')}</button>
       </div>
     </div>

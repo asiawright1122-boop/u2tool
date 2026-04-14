@@ -268,9 +268,9 @@
                 </select>
               </div>
               <div class="flex flex-wrap gap-6 text-sm">
-                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" bind:checked={showLegend} class="w-4 h-4 accent-blue-500" /><span>{t('showLegend')}</span></label>
-                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" bind:checked={showGrid} class="w-4 h-4 accent-blue-500" /><span>{t('showGrid')}</span></label>
-                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" bind:checked={horizontal} class="w-4 h-4 accent-blue-500" /><span>{t('horizontal')}</span></label>
+                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" bind:checked={showLegend} class="w-4 h-4 accent-amber-500" /><span>{t('showLegend')}</span></label>
+                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" bind:checked={showGrid} class="w-4 h-4 accent-amber-500" /><span>{t('showGrid')}</span></label>
+                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" bind:checked={horizontal} class="w-4 h-4 accent-amber-500" /><span>{t('horizontal')}</span></label>
               </div>
             </div>
           </div>
@@ -291,7 +291,7 @@
                     {#each series as s, i (i)}
 <th  class="text-left py-2 px-2 font-medium">
                         <div class="flex items-center gap-1">
-                          <input type="text" value={s.name} onchange={(e) => updateSeriesName(i, (e.target as HTMLInputElement).value)} class="w-20 px-1 py-0.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-xs" />
+                          <input type="text" bind:value={s.name} class="w-20 px-1 py-0.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-xs" />
                           {#if series.length > 1}
 <button onclick={() => deleteSeries(i)} class="text-red-400 hover:text-red-300 text-xs">✕</button>
 {/if}
@@ -305,11 +305,11 @@
                   {#each categories as cat, catIndex (catIndex)}
 <tr  class="border-b border-gray-100 dark:border-gray-800 last:border-b-0">
                       <td class="py-2 px-2 min-w-[120px]">
-                        <input type="text" value={cat} onchange={(e) => updateCategory(catIndex, (e.target as HTMLInputElement).value)} class="w-full min-w-[100px] px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
+                        <input type="text" bind:value={cat} class="w-full min-w-[100px] px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
                       </td>
                       {#each series as s, seriesIndex (seriesIndex)}
 <td  class="py-2 px-2">
-                          <input type="number" value={s.values[catIndex]} onchange={(e) => updateSeriesValue(seriesIndex, catIndex, parseFloat((e.target as HTMLInputElement).value) || 0)} class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
+                          <input type="number" bind:value={s.values[catIndex]} class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
                         </td>
 {/each}
                       <td class="py-2 px-2">
@@ -334,9 +334,9 @@
         </div>
       </div>
 
-      <div class="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300">
+      <div class="p-3 bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-lg text-sm text-amber-700 dark:text-amber-300">
         <p class="font-medium mb-1"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg> {t('tips.title')}</p>
-        <ul class="space-y-0.5 text-blue-600 dark:text-blue-400">
+        <ul class="space-y-0.5 text-amber-600 dark:text-amber-400">
           <li>• {t('tips.tip1')}</li>
           <li>• {t('tips.tip2')}</li>
           <li>• {t('tips.tip3')}</li>

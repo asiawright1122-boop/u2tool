@@ -65,7 +65,7 @@
         <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('pasteText')}</label>
         <textarea
           bind:value={text}
-          class="w-full h-64 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+          class="w-full h-64 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
           placeholder={t('placeholder')}></textarea>
       </div>
 
@@ -84,7 +84,7 @@
 
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
         <div class="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-center">
-          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">{stats.words}</div>
+          <div class="text-3xl font-bold text-amber-600 dark:text-amber-400">{stats.words}</div>
           <div class="text-sm text-gray-600 dark:text-gray-300 mt-1">{t('words')}</div>
         </div>
         <div class="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-center">
@@ -92,15 +92,15 @@
           <div class="text-sm text-gray-600 dark:text-gray-300 mt-1">{t('characters')}</div>
         </div>
         <div class="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-center">
-          <div class="text-3xl font-bold text-purple-600 dark:text-purple-400">{stats.sentences}</div>
+          <div class="text-3xl font-bold text-slate-600 dark:text-slate-400">{stats.sentences}</div>
           <div class="text-sm text-gray-600 dark:text-gray-300 mt-1">{t('sentences')}</div>
         </div>
         <div class="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-center">
           <div class="text-3xl font-bold text-yellow-600 dark:text-yellow-400">{stats.paragraphs}</div>
           <div class="text-sm text-gray-600 dark:text-gray-300 mt-1">{t('paragraphs')}</div>
         </div>
-        <div class="p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-center">
-          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">{formatTime(stats.readingTime)}</div>
+        <div class="p-4 bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-lg text-center">
+          <div class="text-3xl font-bold text-amber-600 dark:text-amber-400">{formatTime(stats.readingTime)}</div>
           <div class="text-sm text-gray-600 dark:text-gray-300 mt-1">{t('readingTime')}</div>
         </div>
         <div class="p-4 bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-700 rounded-lg text-center">
@@ -113,7 +113,7 @@
         <h4 class="font-semibold mb-3 text-gray-900 dark:text-white">{t('reference')}</h4>
         <div class="grid md:grid-cols-3 gap-4 text-sm">
           <div>
-            <span class="text-blue-600 dark:text-blue-400">{t('slow')}</span>
+            <span class="text-amber-600 dark:text-amber-400">{t('slow')}</span>
             <span class="text-gray-600 dark:text-gray-300 ml-2">100-150 {t('wpm')}</span>
           </div>
           <div>
@@ -121,7 +121,7 @@
             <span class="text-gray-600 dark:text-gray-300 ml-2">200-250 {t('wpm')}</span>
           </div>
           <div>
-            <span class="text-purple-600 dark:text-purple-400">{t('fast')}</span>
+            <span class="text-slate-600 dark:text-slate-400">{t('fast')}</span>
             <span class="text-gray-600 dark:text-gray-300 ml-2">300-400 {t('wpm')}</span>
           </div>
         </div>

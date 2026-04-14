@@ -82,7 +82,7 @@
             <input
               type="text"
               bind:value={color1}
-              class="flex-1 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              class="flex-1 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-amber-500 focus:outline-none"
             />
           </div>
         </div>
@@ -98,7 +98,7 @@
             <input
               type="text"
               bind:value={color2}
-              class="flex-1 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              class="flex-1 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-amber-500 focus:outline-none"
             />
           </div>
         </div>
@@ -111,14 +111,14 @@
             min={1}
             max={20}
             onchange={(e) => steps = Math.min(20, Math.max(1, Number(e.target.value)))}  
-            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none"
           />
         </div>
       </div>
 
       <button
         onclick={copyAll}
-        class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+        class="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition-colors"
       >
         {tg('copy')} {tg('all')}
       </button>

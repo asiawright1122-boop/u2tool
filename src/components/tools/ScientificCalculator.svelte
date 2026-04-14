@@ -182,7 +182,7 @@
           </div>
           <button
             onclick={copyResult}
-            class={`px-2 py-1 text-xs rounded ${copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
+            class={`px-2 py-1 text-xs rounded ${copied ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
           >
             {copied ? '✓' : t('copy')}
           </button>
@@ -195,13 +195,13 @@
           <span class="text-xs text-gray-600 dark:text-gray-300">{t('sci.angleMode')}:</span>
           <button
             onclick={() => isRadians = true}
-            class={`px-2 py-1 text-xs rounded ${isRadians ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'}`}
+            class={`px-2 py-1 text-xs rounded ${isRadians ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'}`}
           >
             RAD
           </button>
           <button
             onclick={() => isRadians = false}
-            class={`px-2 py-1 text-xs rounded ${!isRadians ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'}`}
+            class={`px-2 py-1 text-xs rounded ${!isRadians ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'}`}
           >
             DEG
           </button>

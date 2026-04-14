@@ -115,7 +115,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- File Size -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('fileSize')}
           </label>
           <div class="flex gap-2">
@@ -139,7 +139,7 @@
 
         <!-- Connection Speed -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('connectionSpeed')}
           </label>
           <div class="flex gap-2">
@@ -164,7 +164,7 @@
 
       <!-- Preset Speeds -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('presetSpeeds')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -181,7 +181,7 @@
 
       <!-- Results -->
       {#if results}
-<div class="p-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg text-white">
+<div class="p-6 bg-gradient-to-r from-amber-500 to-slate-600 rounded-lg text-white">
           <div class="flex items-center justify-between mb-4">
             <h3 class="text-lg font-medium">{t('estimatedTime')}</h3>
             <button

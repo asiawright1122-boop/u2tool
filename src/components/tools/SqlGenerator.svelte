@@ -80,7 +80,7 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
               onclick={() => command = cmd}
               class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 command === cmd
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
@@ -96,7 +96,7 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
               <input
                 type="text"
                 bind:value={tableName}
-                class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"
+                class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"
               />
             </div>
 
@@ -107,7 +107,7 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
                 <input
                   type="text"
                   bind:value={columns}
-                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"
+                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"
                 />
               </div>
             {/if}
@@ -119,7 +119,7 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
                 <input
                   type="text"
                   bind:value={values}
-                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"
+                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"
                 />
               </div>
 {/if}
@@ -130,7 +130,7 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
                 <input
                   type="text"
                   bind:value={updates}
-                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"
+                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"
                 />
               </div>
 {/if}
@@ -141,7 +141,7 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
                 <textarea
                   bind:value={tableSchema}
                   rows={6}
-                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"></textarea>
+                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"></textarea>
               </div>
 {/if}
 
@@ -151,7 +151,7 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
                 <input
                   type="text"
                   bind:value={where}
-                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"
+                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"
                 />
               </div>
 {/if}
@@ -163,7 +163,7 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
                   <input
                     type="text"
                     bind:value={orderBy}
-                    class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"
+                    class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"
                   />
                 </div>
                 <div>
@@ -171,7 +171,7 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
                   <input
                     type="text"
                     bind:value={limit}
-                    class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"
+                    class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"
                   />
                 </div>
               </div>
@@ -180,10 +180,10 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
 
           <div>
              <div class="flex justify-between items-center mb-2">
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">{t('sqlGenerator.generatedSql')}</label>
+              <label class="tool-label">{t('sqlGenerator.generatedSql')}</label>
               <button
                 onclick={() => navigator.clipboard.writeText(generateSql())}
-                class="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300"
+                class="text-xs text-amber-600 dark:text-amber-400 hover:text-amber-500 dark:hover:text-amber-300"
               >
                 {t('sqlGenerator.copySql')}
               </button>

@@ -146,7 +146,7 @@
               onclick={() => { grid = { rows: preset.rows, cols: preset.cols }; parts = []; }}
               class={`px-3 py-1.5 rounded text-sm ${
                 grid.rows === preset.rows && grid.cols === preset.cols
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
@@ -178,7 +178,7 @@
 
       <!-- Upload Area -->
       {#if !image}
-<label class="block border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-blue-500">
+<label class="block border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-amber-500">
           <input type="file" accept="image/*" onchange={handleImageUpload} class="hidden" />
           <div class="text-4xl mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg></div>
           <p class="text-gray-600 dark:text-gray-300">{t('dropzone')}</p>
@@ -218,7 +218,7 @@
 <div class="space-y-4">
           <div class="flex justify-between items-center">
             <h3 class="font-medium">{t('result')} ({parts.length} {t('parts')})</h3>
-            <button onclick={downloadAll} class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg">
+            <button onclick={downloadAll} class="px-4 py-2 bg-emerald-500 hover:bg-green-700 text-white rounded-lg">
               {t('downloadAll')}
             </button>
           </div>

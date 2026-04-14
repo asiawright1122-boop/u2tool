@@ -80,7 +80,7 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('markdownInput')}
           </label>
           <textarea
@@ -95,20 +95,20 @@
             <div class="flex gap-2">
               <button
                 onclick={() => viewMode = 'html'}
-                class={`px-3 py-1 text-sm rounded ${viewMode === 'html' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'}`}
+                class={`px-3 py-1 text-sm rounded ${viewMode === 'html' ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'}`}
               >
                 HTML
               </button>
               <button
                 onclick={() => viewMode = 'preview'}
-                class={`px-3 py-1 text-sm rounded ${viewMode === 'preview' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'}`}
+                class={`px-3 py-1 text-sm rounded ${viewMode === 'preview' ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'}`}
               >
                 {t('preview')}
               </button>
             </div>
             <button
               onclick={handleCopy}
-              class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+              class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
             >
               {copied ? tCommon('copied') : tCommon('copy')}
             </button>

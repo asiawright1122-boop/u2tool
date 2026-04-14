@@ -106,7 +106,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('complexity')}: {complexity}
             </label>
             <input
@@ -120,7 +120,7 @@
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('contrast')}: {contrast}%
             </label>
             <input
@@ -136,7 +136,7 @@
 
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('size')}: {size}px
             </label>
             <input
@@ -150,7 +150,7 @@
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('color')}
             </label>
             <div class="flex items-center gap-3">
@@ -173,7 +173,7 @@
       <div class="flex gap-3">
         <button
           onclick={generateBlob}
-          class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+          class="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors"
         >
           {t('generate')}
         </button>
@@ -185,7 +185,7 @@
         </button>
         <button
           onclick={handleDownload}
-          class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+          class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-emerald-500 transition-colors"
         >
           {common('download')} SVG
         </button>
@@ -193,7 +193,7 @@
 
       <!-- SVG Output -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           SVG {common('output')}
         </label>
         <pre class="p-4 bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm font-mono max-h-48">
@@ -203,7 +203,7 @@
 
       <!-- CSS Output -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           CSS clip-path
         </label>
         <pre class="p-4 bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm font-mono">

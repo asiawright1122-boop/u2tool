@@ -262,8 +262,8 @@
 
     <div class="space-y-6">
       <div class="flex flex-wrap gap-2 border-b border-gray-200 dark:border-gray-700 pb-4">
-        <button onclick={() => activeTab = 'edit'} class={`px-4 py-2 rounded-lg font-medium transition-colors ${activeTab === 'edit' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}>{t('editTab')}</button>
-        <button onclick={() => activeTab = 'preview'} class={`px-4 py-2 rounded-lg font-medium transition-colors ${activeTab === 'preview' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}>{t('previewTab')}</button>
+        <button onclick={() => activeTab = 'edit'} class={`px-4 py-2 rounded-lg font-medium transition-colors ${activeTab === 'edit' ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}>{t('editTab')}</button>
+        <button onclick={() => activeTab = 'preview'} class={`px-4 py-2 rounded-lg font-medium transition-colors ${activeTab === 'preview' ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}>{t('previewTab')}</button>
         <div class="flex-1"></div>
         <select value={template} onchange={e => template = e.target.value as TemplateType} class="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
           <option value="professional">{t('templates.professional')}</option>
@@ -271,7 +271,7 @@
           <option value="creative">{t('templates.creative')}</option>
         </select>
         <input type="color" value={accentColor} onchange={e => accentColor = e.target.value} class="w-10 h-10 rounded cursor-pointer" title={t('accentColor')} />
-        <button onclick={exportPDF} class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">{t('exportPDF')}</button>
+        <button onclick={exportPDF} class="px-4 py-2 btn-success rounded-lg hover:bg-green-700 transition-colors">{t('exportPDF')}</button>
       </div>
 
       {#if activeTab === 'edit'}
@@ -287,7 +287,7 @@
 <div class="w-20 h-20 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
 {/if}
                 <input bind:this={fileInputRef} type="file" accept="image/*" onchange={handlePhotoUpload} class="hidden" />
-                <button onclick={() => fileInputRef?.click()} class="absolute -bottom-1 -right-1 w-8 h-8 bg-blue-600 text-white rounded-full text-sm hover:bg-blue-700"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></button>
+                <button onclick={() => fileInputRef?.click()} class="absolute -bottom-1 -right-1 w-8 h-8 bg-amber-600 text-white rounded-full text-sm hover:bg-amber-700"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></button>
               </div>
               <div class="flex-1 grid grid-cols-2 gap-2">
                 <input value={name} onchange={e => name = e.target.value} placeholder={t('placeholders.name')} class="col-span-2 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
@@ -307,25 +307,25 @@
           <section class="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 space-y-4">
             <div class="flex justify-between items-center">
               <h3 class="font-semibold text-gray-900 dark:text-white">{t('experience')}</h3>
-              <button onclick={addExperience} class="px-3 py-1 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700">{t('addExperience')}</button>
+              <button onclick={addExperience} class="px-3 py-1 bg-amber-600 text-white rounded-lg text-sm hover:bg-amber-700">{t('addExperience')}</button>
             </div>
             {#each experiences as exp (exp.id)}
 <div  class="border border-gray-200 dark:border-gray-700 rounded-lg p-3 space-y-2">
                 <div class="flex justify-between">
-                  <input value={exp.company} onchange={e => updateExperience(exp.id, 'company', e.target.value)} placeholder={t('company')} class="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <input bind:value={exp.company} placeholder={t('company')} class="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
                   <button onclick={() => removeExperience(exp.id)} class="ml-2 text-red-500 hover:text-red-700"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg></button>
                 </div>
-                <input value={exp.position} onchange={e => updateExperience(exp.id, 'position', e.target.value)} placeholder={t('position')} class="w-full px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                <input bind:value={exp.position} placeholder={t('position')} class="w-full px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
                 <div class="flex gap-2 items-center">
-                  <input type="month" value={exp.startDate} onchange={e => updateExperience(exp.id, 'startDate', e.target.value)} class="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <input type="month" bind:value={exp.startDate} class="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
                   <span class="text-gray-500">-</span>
-                  <input type="month" value={exp.endDate} onchange={e => updateExperience(exp.id, 'endDate', e.target.value)} disabled={exp.current} class="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm disabled:opacity-50" />
+                  <input type="month" bind:value={exp.endDate} disabled={exp.current} class="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm disabled:opacity-50" />
                   <label class="flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400">
                     <input type="checkbox" checked={exp.current} onchange={e => updateExperience(exp.id, 'current', e.target.checked)} />
                     {t('present')}
                   </label>
                 </div>
-                <textarea value={exp.description} onchange={e => updateExperience(exp.id, 'description', e.target.value)} placeholder={t('jobDescription')} rows={2} class="w-full px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm resize-none" />
+                <textarea bind:value={exp.description} placeholder={t('jobDescription')} rows={2} class="w-full px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm resize-none" />
               </div>
 {/each}
           </section>
@@ -334,19 +334,19 @@
           <section class="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 space-y-4">
             <div class="flex justify-between items-center">
               <h3 class="font-semibold text-gray-900 dark:text-white">{t('education')}</h3>
-              <button onclick={addEducation} class="px-3 py-1 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700">{t('addEducation')}</button>
+              <button onclick={addEducation} class="px-3 py-1 bg-amber-600 text-white rounded-lg text-sm hover:bg-amber-700">{t('addEducation')}</button>
             </div>
             {#each educations as edu (edu.id)}
 <div  class="border border-gray-200 dark:border-gray-700 rounded-lg p-3 space-y-2">
                 <div class="flex justify-between">
-                  <input value={edu.school} onchange={e => updateEducation(edu.id, 'school', e.target.value)} placeholder={t('school')} class="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <input bind:value={edu.school} placeholder={t('school')} class="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
                   <button onclick={() => removeEducation(edu.id)} class="ml-2 text-red-500 hover:text-red-700"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg></button>
                 </div>
                 <div class="grid grid-cols-2 gap-2">
-                  <input value={edu.degree} onchange={e => updateEducation(edu.id, 'degree', e.target.value)} placeholder={t('degree')} class="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
-                  <input value={edu.field} onchange={e => updateEducation(edu.id, 'field', e.target.value)} placeholder={t('fieldOfStudy')} class="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
-                  <input type="month" value={edu.graduationDate} onchange={e => updateEducation(edu.id, 'graduationDate', e.target.value)} class="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
-                  <input value={edu.gpa || ''} onchange={e => updateEducation(edu.id, 'gpa', e.target.value)} placeholder={t('gpa')} class="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <input bind:value={edu.degree} placeholder={t('degree')} class="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <input bind:value={edu.field} placeholder={t('fieldOfStudy')} class="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <input type="month" bind:value={edu.graduationDate} class="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <input bind:value={edu.gpa || ''} placeholder={t('gpa')} class="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
                 </div>
               </div>
 {/each}
@@ -358,18 +358,18 @@
               <h3 class="font-semibold text-gray-900 dark:text-white">{t('skills')}</h3>
               <div class="flex gap-2">
                 <input value={newSkill} onchange={e => newSkill = e.target.value} placeholder={t('addSkill')} class="flex-1 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" onkeydown={e => e.key === 'Enter' && addSkill()} />
-                <input type="range" min="10" max="100" value={newSkillLevel} onchange={e => newSkillLevel = Number(e.target.value)} class="w-24" />
+                <input type="range" min="10" max="100" bind:value={newSkillLevel} class="w-24" />
                 <span class="w-10 text-center text-gray-600 dark:text-gray-400">{newSkillLevel}%</span>
-                <button onclick={addSkill} class="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">+</button>
+                <button onclick={addSkill} class="px-3 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700">+</button>
               </div>
               {#if skills.length === 0}
 <p class="text-gray-500 text-sm">{t('noSkills')}</p>
 {:else}
 <div class="flex flex-wrap gap-2">
                   {#each skills as skill, idx (idx)}
-<span  class="inline-flex items-center gap-1 px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+<span  class="inline-flex items-center gap-1 px-3 py-1 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-full text-sm">
                       {skill.name} ({skill.level}%)
-                      <button onclick={() => removeSkill(idx)} class="ml-1 text-blue-600 dark:text-blue-400 hover:text-red-500">×</button>
+                      <button onclick={() => removeSkill(idx)} class="ml-1 text-amber-600 dark:text-amber-400 hover:text-red-500">×</button>
                     </span>
 {/each}
                 </div>
@@ -385,7 +385,7 @@
 <option  value={lvl}>{getLangLabel(lvl)}</option>
 {/each}
                 </select>
-                <button onclick={addLanguage} class="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">+</button>
+                <button onclick={addLanguage} class="px-3 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700">+</button>
               </div>
               {#if languages.length > 0}
 <div class="flex flex-wrap gap-2">

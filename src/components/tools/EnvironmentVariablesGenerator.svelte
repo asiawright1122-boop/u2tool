@@ -76,12 +76,12 @@
     <div class="space-y-6">
       <!-- Presets -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Quick Presets</label>
+        <label class="tool-label">Quick Presets</label>
         <div class="flex flex-wrap gap-2">
           {#each Object.keys(PRESETS) as preset (preset)}
 <button 
               onclick={() => applyPreset(preset as keyof typeof PRESETS)}
-              class="px-3 py-1.5 text-sm bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-lg hover:bg-blue-200 dark:hover:bg-blue-900/50"
+              class="px-3 py-1.5 text-sm bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-lg hover:bg-amber-200 dark:hover:bg-amber-900/50"
             >
               {preset.charAt(0).toUpperCase() + preset.slice(1)}
             </button>
@@ -92,8 +92,8 @@
       <!-- Variables -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Environment Variables</label>
-          <button onclick={addVar} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400">+ Add Variable</button>
+          <label class="tool-label">Environment Variables</label>
+          <button onclick={addVar} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">+ Add Variable</button>
         </div>
         <div class="space-y-2 max-h-64 overflow-y-auto">
           {#each vars as v (v.id)}
@@ -137,14 +137,14 @@
 
       <!-- Format Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{tCommon('output')} Format</label>
+        <label class="tool-label">{tCommon('output')} Format</label>
         <div class="flex flex-wrap gap-2">
           {#each (['env', 'json', 'yaml', 'docker', 'shell'] as const) as fmt (fmt)}
 <button 
               onclick={() => format = fmt}
               class={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
                 format === fmt
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
               }`}
             >
@@ -158,8 +158,8 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">{tCommon('output')}</label>
-            <button onclick={() => handleCopy(output, 'output')} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400">
+            <label class="tool-label">{tCommon('output')}</label>
+            <button onclick={() => handleCopy(output, 'output')} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">
               {copied === 'output' ? tCommon('copied') : tCommon('copy')}
             </button>
           </div>
@@ -169,8 +169,8 @@
         </div>
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">.env.example</label>
-            <button onclick={() => handleCopy(exampleOutput, 'example')} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400">
+            <label class="tool-label">.env.example</label>
+            <button onclick={() => handleCopy(exampleOutput, 'example')} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">
               {copied === 'example' ? tCommon('copied') : tCommon('copy')}
             </button>
           </div>

@@ -99,7 +99,7 @@
 
         <button
           onclick={loadSample}
-          class="text-sm text-blue-600 hover:text-blue-800"
+          class="text-sm text-amber-600 hover:text-amber-800"
         >
           {t('loadSample')}
         </button>
@@ -142,7 +142,7 @@
       <div class="flex justify-center">
         <button
           onclick={handleCalculate}
-          class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          class="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
         >
           {t('calculate')}
         </button>
@@ -155,7 +155,7 @@
             {#if crcHex}
 <button
                 onclick={() => handleCopy(crcHex)}
-                class="text-sm text-blue-600 hover:text-blue-800"
+                class="text-sm text-amber-600 hover:text-amber-800"
               >
                 {t('copy')}
               </button>
@@ -170,7 +170,7 @@
             {#if crcDec}
 <button
                 onclick={() => handleCopy(crcDec)}
-                class="text-sm text-blue-600 hover:text-blue-800"
+                class="text-sm text-amber-600 hover:text-amber-800"
               >
                 {t('copy')}
               </button>
@@ -180,9 +180,9 @@
         </div>
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-        <h3 class="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('info')}</h3>
-        <p class="text-sm text-blue-700 dark:text-blue-400">{t('infoText')}</p>
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/30 rounded-lg">
+        <h3 class="font-medium text-amber-800 dark:text-amber-300 mb-2">{t('info')}</h3>
+        <p class="text-sm text-amber-700 dark:text-amber-400">{t('infoText')}</p>
       </div>
     </div>
   

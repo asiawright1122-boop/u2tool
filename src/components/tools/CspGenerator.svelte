@@ -103,7 +103,7 @@
             {#each directives as directive, index (directive.name)}
 <div 
                 class={`p-4 border rounded-lg ${directive.enabled
-                    ? 'border-blue-300 dark:border-blue-700 bg-blue-50 dark:bg-blue-900/20'
+                    ? 'border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-900/20'
                     : 'border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800'
                   }`}
               >
@@ -164,7 +164,7 @@
 
           <button
             onclick={resetToDefaults}
-            class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+            class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
           >
             {t('resetDefaults')}
           </button>
@@ -193,7 +193,7 @@
 
           <button
             onclick={copyToClipboard}
-            class="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+            class="w-full px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
           >
             {copied ? t('copied') : t('copy')}
           </button>

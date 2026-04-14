@@ -133,7 +133,7 @@
         >
           {#each Array.from({ length: itemCount }) as _, i (i)}
 <div 
-              class="bg-purple-600/50 border border-purple-400 rounded p-4 text-center text-gray-900 dark:text-white"
+              class="bg-slate-600/50 border border-slate-400 rounded p-4 text-center text-gray-900 dark:text-white"
               style="min-width: 60px; min-height: 60px"
             >
               {i + 1}
@@ -148,7 +148,7 @@
           <label class="text-sm font-medium">{t('cssFlexboxGenerator.generatedCss')}</label>
           <button
             onclick={copyCSS}
-            class={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+            class={`text-sm px-3 py-1 rounded ${copied ? 'bg-emerald-500' : 'bg-gray-700 hover:bg-gray-600'}`}
           >
             {copied ? t('copied') : t('copy')}
           </button>

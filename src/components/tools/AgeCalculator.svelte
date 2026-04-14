@@ -87,14 +87,14 @@
 
       <button
         onclick={calculate}
-        class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        class="w-full px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
       >
         {tc('calculate')}
       </button>
 
       {#if result}
 <div class="space-y-4">
-          <div class="p-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white text-center">
+          <div class="p-6 bg-gradient-to-r from-amber-500 to-slate-500 rounded-lg text-white text-center">
             <div class="text-5xl font-bold mb-2">
               {result.years} <span class="text-2xl">{t('years')}</span>
             </div>

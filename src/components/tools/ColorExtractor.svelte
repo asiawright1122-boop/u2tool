@@ -189,7 +189,7 @@
 
       <!-- Upload -->
       {#if !image}
-<label class="block border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-blue-500">
+<label class="block border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-amber-500">
           <input
             bind:this={fileInputRef}
             type="file"
@@ -226,7 +226,7 @@
               {#if colors.length > 0}
 <button
                   onclick={downloadPalette}
-                  class="text-sm text-blue-600 hover:underline"
+                  class="text-sm text-amber-600 hover:underline"
                 >
                   {t('downloadPalette')}
                 </button>

@@ -88,7 +88,7 @@
       <div
         ondrop={handleDrop}
         ondragover={(e) => e.preventDefault()}
-        class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-blue-500 transition-colors"
+        class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-amber-500 transition-colors"
       >
         <input
           type="file"
@@ -106,7 +106,7 @@
 
       {#if loading}
 <div class="text-center py-4">
-          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto"></div>
+          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-500 mx-auto"></div>
           <p class="mt-2 text-gray-600 dark:text-gray-400">{t('converting')}</p>
         </div>
 {/if}
@@ -136,7 +136,7 @@
               </button>
               <button
                 onclick={downloadHtml}
-                class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                class="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors"
               >
                 {tc('download')} HTML
               </button>

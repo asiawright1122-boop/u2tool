@@ -162,7 +162,7 @@
       <!-- Sheet Selection -->
       {#if sheets.length > 1}
 <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('excelToJson.selectSheet')}
           </label>
           <div class="flex flex-wrap gap-2">
@@ -171,7 +171,7 @@
                 onclick={() => handleSheetChange(sheet.name)}
                 class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   selectedSheet === sheet.name
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-amber-600 text-white'
                     : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                 }`}
               >
@@ -242,7 +242,7 @@
               </button>
               <button
                 onclick={handleDownload}
-                class="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
+                class="px-3 py-1 text-sm bg-amber-600 text-white rounded hover:bg-amber-700"
               >
                 {t('excelToJson.download')}
               </button>

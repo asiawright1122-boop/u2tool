@@ -86,7 +86,7 @@
         <button
           onclick={copyResult}
           disabled={!result.output}
-          class="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 rounded-lg transition-colors text-white"
+          class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:opacity-50 rounded-lg transition-colors text-white"
         >
           {tg('copy')}
         </button>
@@ -94,7 +94,7 @@
 
       <div class="grid grid-cols-3 gap-4">
         <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-3 text-center">
-          <div class="text-xl font-bold text-blue-600 dark:text-blue-400">{result.original}</div>
+          <div class="text-xl font-bold text-amber-600 dark:text-amber-400">{result.original}</div>
           <div class="text-sm text-gray-600 dark:text-gray-300">{t('original')}</div>
         </div>
         <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-3 text-center">
@@ -114,7 +114,7 @@
             id="dedup-input"
             name="dedupInput"
             bind:value={input}
-            class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
             placeholder={t('placeholder')}></textarea>
         </div>
         <div>
@@ -124,7 +124,7 @@
             name="dedupOutput"
             value={result.output}
             readOnly
-            class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"></textarea>
+            class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"></textarea>
         </div>
       </div>
     </div>

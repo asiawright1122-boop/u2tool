@@ -52,7 +52,7 @@
 
     <div class="space-y-6">
       <div>
-        <label for="anagram-input" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label for="anagram-input" class="tool-label">
           {t('inputLabel')}
         </label>
         <input
@@ -74,7 +74,7 @@
           {#if results.length > 0}
 <button
               onclick={copyResults}
-              class="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
+              class="px-3 py-1 text-sm bg-amber-600 text-white rounded hover:bg-amber-700"
             >
               {copied ? t('copied') : t('copy')}
             </button>
@@ -84,7 +84,7 @@
 <div class="flex flex-wrap gap-2">
             {#each results as word, i (i)}
 <span 
-                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
+                class="px-3 py-1 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-full text-sm font-medium"
               >
                 {word}
               </span>
@@ -95,9 +95,9 @@
 {/if}
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h3 class="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('tipTitle')}</h3>
-        <p class="text-sm text-blue-700 dark:text-blue-400">{t('tipDescription')}</p>
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+        <h3 class="font-medium text-amber-800 dark:text-amber-300 mb-2">{t('tipTitle')}</h3>
+        <p class="text-sm text-amber-700 dark:text-amber-400">{t('tipDescription')}</p>
       </div>
     </div>
   

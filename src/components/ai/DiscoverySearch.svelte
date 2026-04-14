@@ -200,10 +200,10 @@
   });
 </script>
 
-<section class="relative overflow-hidden rounded-3xl border border-slate-200/60 bg-gradient-to-br from-slate-50 via-white to-slate-100 shadow-xl
-                dark:border-slate-800 dark:from-slate-900 dark:via-zinc-900 dark:to-black p-6 md:p-8 backdrop-blur-sm mb-10">
+<section class="relative overflow-hidden rounded-3xl border border-slate-200/60 glass shadow-2xl
+                dark:border-white/10 dark:bg-slate-900/40 p-6 md:p-8 backdrop-blur-xl mb-10">
   <!-- Background Decorations -->
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/5 via-amber-200/10 to-transparent dark:from-amber-500/10 dark:via-amber-700/5 dark:to-transparent pointer-events-none"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/5 via-amber-500/10 to-transparent dark:from-amber-600/15 dark:via-amber-800/10 dark:to-transparent pointer-events-none"></div>
 
   <div class="relative z-10 mb-6">
     <h1 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">{pageTitle}</h1>
@@ -219,9 +219,9 @@
         type="text"
         placeholder={inputPlaceholder}
         aria-label={inputPlaceholder}
-        class="w-full h-12 pl-4 pr-10 rounded-xl border border-slate-200 dark:border-slate-700
-               bg-white/60 dark:bg-slate-800/80 text-slate-900 dark:text-white
-               focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500
+        class="w-full h-12 pl-4 pr-10 rounded-xl border border-slate-200 dark:border-white/10
+               bg-white/60 dark:bg-slate-900/60 text-slate-900 dark:text-white
+               focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500
                placeholder:text-slate-400 transition-all duration-200"
       />
       {#if isLoading}
@@ -233,8 +233,8 @@
     <button
       type="submit"
       disabled={isLoading}
-      class="h-12 px-6 rounded-xl bg-slate-950 dark:bg-white text-white dark:text-slate-950 text-sm font-bold transition-all
-             hover:bg-black hover:shadow-lg dark:hover:bg-slate-100 disabled:opacity-60 disabled:cursor-not-allowed
+      class="h-12 px-6 rounded-xl bg-slate-950 dark:bg-amber-500 text-white dark:text-slate-950 text-sm font-bold transition-all
+             hover:bg-black hover:shadow-[0_0_20px_rgba(245,158,11,0.3)] dark:hover:bg-amber-400 disabled:opacity-60 disabled:cursor-not-allowed
              inline-flex items-center justify-center gap-2 group border border-slate-800 dark:border-transparent lg:min-w-[140px]"
     >
       <span>{isLoading ? submitLoadingLabel : submitIdleLabel}</span>
@@ -258,7 +258,7 @@
           <p class="text-sm font-medium text-slate-600 dark:text-slate-400">
             {action === 'direct' ? directResultSummary : suggestResultSummary}
           </p>
-          <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 dark:bg-amber-900/30 dark:text-amber-400 border border-blue-100 dark:border-amber-500/30">
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 dark:bg-amber-900/30 dark:text-amber-400 border border-slate-200 dark:border-amber-500/30">
             {confidenceLabel} {(confidence * 100).toFixed(0)}%
           </span>
         </div>
@@ -268,12 +268,13 @@
             <a
               href={toResultPath(result)}
               onclick={() => handleResultClick(result)}
-              class="group block rounded-2xl border border-slate-200/60 bg-white/40 dark:bg-slate-900/40 p-5
-                     backdrop-blur-md transition-all duration-300 hover:shadow-xl hover:border-blue-400/60 dark:hover:border-amber-500/50"
+              class="glass-card group/result flex flex-col gap-3 p-5 relative overflow-hidden"
             >
+              <div class="absolute inset-0 bg-gradient-to-br from-transparent to-amber-500/5 dark:to-amber-500/10 opacity-0 group-hover/result:opacity-100 transition-opacity duration-500"></div>
+              <div class="relative z-10">
               <div class="flex items-start justify-between gap-3">
                 <div class="min-w-0">
-                  <h3 class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-amber-400 transition-colors uppercase tracking-tight">{result.name}</h3>
+                  <h3 class="text-sm font-bold text-slate-900 dark:text-white group-hover/result:text-amber-600 dark:group-hover/result:text-amber-400 transition-colors uppercase tracking-tight">{result.name}</h3>
                   <p class="mt-1.5 text-xs text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">{result.description}</p>
                 </div>
                 <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 whitespace-nowrap bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md border border-slate-200/50 dark:border-slate-700/50">
@@ -291,7 +292,7 @@
           </p>
           <a
             href={toToolsPath()}
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-950 text-white dark:bg-white dark:text-slate-950 text-sm font-bold hover:shadow-lg transition-all"
+            class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-slate-950 text-white dark:bg-amber-500 dark:text-slate-950 text-sm font-bold hover:shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-all"
           >
             {browseAllToolsLabel}
             <Icon.ArrowRight class="w-4 h-4" />

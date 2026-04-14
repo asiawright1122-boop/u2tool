@@ -37,15 +37,14 @@ function categoryPath(categoryId: string) {
 
 <aside class="hidden lg:block fixed left-0 top-0 bottom-0 z-40" style="width: 220px">
   <nav
-    class="h-full w-full bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 overflow-y-auto overflow-x-hidden"
+    class="h-full w-full bg-white dark:bg-slate-950 border-r border-slate-200 dark:border-white/5 overflow-y-auto overflow-x-hidden no-scrollbar"
     role="navigation"
     aria-label={navMessages.toolCategories || 'Tool Categories'}
   >
-    <div class="h-16 flex items-center justify-center border-b border-gray-200 dark:border-gray-800">
-      <a href={localized('/')} class="flex items-center justify-center w-full">
-        <span class="text-2xl font-black tracking-widest uppercase bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent drop-shadow-sm">
-          {siteName}
-        </span>
+    <div class="h-16 flex items-center px-5 border-b border-slate-200 dark:border-white/10 mb-2">
+      <a href={localized('/')} class="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white group">
+        <span class="text-amber-500 transition-transform group-hover:scale-110 duration-500 drop-shadow-[0_0_15px_rgba(245,158,11,0.5)]" set:html={getIconSvg('gem', 24)} />
+        <span class="tracking-tight">U2<span class="text-amber-500">Tool</span></span>
       </a>
     </div>
 
@@ -55,50 +54,51 @@ function categoryPath(categoryId: string) {
         <span class="text-sm font-medium">{navMessages.home || 'Home'}</span>
       </a>
 
-      <div class="h-px bg-gray-200 dark:bg-gray-700 my-2 mx-2"></div>
+      <div class="h-[0.5px] bg-slate-200 dark:bg-white/10 my-4 mx-4"></div>
 
-      <div class="mt-1">
-        <div class="sidebar-item">
-          <span class="sidebar-icon" set:html={getIconSvg('wrench', 18)} />
-          <span class="flex-1 text-sm font-medium">{navMessages.toolCategories || 'Tool Categories'}</span>
+      <div class="mt-2 px-2">
+        <div class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-4 px-2">
+          {navMessages.toolCategories || 'Tool Categories'}
         </div>
-        <nav class="mt-1 space-y-0.5" aria-label={navMessages.toolCategories || 'Tool Categories'}>
+        <nav class="space-y-1.5" aria-label={navMessages.toolCategories || 'Tool Categories'}>
           {categories.map((category) => (
             <a
               href={categoryPath(category.id)}
-              class="sidebar-item pl-8"
+              class="sidebar-item"
               title={categoryNames[category.id] || category.id}
             >
-              <span class="sidebar-icon" set:html={getIconSvg(category.icon, 16)} />
-              <span class="flex-1 text-sm truncate">{categoryNames[category.id] || category.id}</span>
+              <span class="sidebar-icon opacity-70" set:html={getIconSvg(category.icon, 16)} />
+              <span class="flex-1 text-[13px] font-medium truncate">{categoryNames[category.id] || category.id}</span>
             </a>
           ))}
         </nav>
       </div>
 
-      <div class="h-px bg-gray-200 dark:bg-gray-700 my-2 mx-2"></div>
+      <div class="h-[0.5px] bg-slate-200 dark:bg-white/10 my-6 mx-4"></div>
 
-      <a href={localized('/tools')} class="sidebar-item">
-        <span class="sidebar-icon" set:html={getIconSvg('list', 18)} />
-        <span class="text-sm font-medium">{navMessages.tools || 'All Tools'}</span>
-      </a>
+      <div class="px-2">
+        <a href={localized('/tools')} class="sidebar-item group/item">
+          <span class="sidebar-icon text-slate-400 group-hover/item:text-amber-500 transition-colors" set:html={getIconSvg('list', 18)} />
+          <span class="text-[13px] font-bold uppercase tracking-wider">{navMessages.tools || 'All Tools'}</span>
+        </a>
+      </div>
     </div>
   </nav>
 </aside>
 
 <aside class="hidden md:block lg:hidden fixed left-0 top-0 bottom-0 z-40" style="width: 64px">
   <nav
-    class="h-full w-full bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 overflow-y-auto overflow-x-hidden"
+    class="h-full w-full bg-white dark:bg-slate-950 border-r border-slate-200 dark:border-white/5 overflow-y-auto overflow-x-hidden no-scrollbar"
     role="navigation"
     aria-label={navMessages.tools || 'Tools'}
   >
-    <div class="h-16 flex items-center justify-center border-b border-gray-200 dark:border-gray-800">
+    <div class="h-16 flex items-center justify-center border-b border-slate-200 dark:border-white/10">
       <a
-        href={localized('/tools')}
-        class="inline-flex text-blue-500"
+        href={localized('/')}
+        class="inline-flex text-amber-500 hover:text-amber-400 transition-colors drop-shadow-[0_0_8px_rgba(245,158,11,0.4)]"
         title={siteName}
         aria-label={siteName}
-        set:html={getIconSvg('wrench', 24)}
+        set:html={getIconSvg('home', 24)}
       />
     </div>
 
@@ -120,7 +120,7 @@ function categoryPath(categoryId: string) {
         <span class="sidebar-icon" set:html={getIconSvg('list', 18)} />
       </a>
 
-      <div class="h-px bg-gray-200 dark:bg-gray-700 my-2 mx-1"></div>
+      <div class="h-px bg-slate-200 dark:bg-white/10 my-2 mx-1"></div>
 
       {compactCategories.map((category) => (
         <a

@@ -97,7 +97,7 @@
           <button
             onclick={() => mode = 'toRoman'}
             class={`px-4 py-2 rounded-md transition-colors ${
-              mode === 'toRoman' ? 'bg-blue-600 text-white' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'
+              mode === 'toRoman' ? 'bg-amber-600 text-white' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'
             }`}
           >
             {t('arabicToRoman')}
@@ -105,7 +105,7 @@
           <button
             onclick={() => mode = 'toArabic'}
             class={`px-4 py-2 rounded-md transition-colors ${
-              mode === 'toArabic' ? 'bg-blue-600 text-white' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'
+              mode === 'toArabic' ? 'bg-amber-600 text-white' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'
             }`}
           >
             {t('romanToArabic')}
@@ -115,7 +115,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {mode === 'toRoman' ? t('arabicNumber') : t('romanNumeral')}
           </label>
           <input
@@ -127,7 +127,7 @@
           />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {mode === 'toRoman' ? t('romanNumeral') : t('arabicNumber')}
           </label>
           <input
@@ -147,10 +147,10 @@
 {/if}
 
       <div class="flex justify-center gap-4">
-        <button onclick={handleConvert} class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+        <button onclick={handleConvert} class="px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium">
           {t('convert')}
         </button>
-        <button onclick={copyResult} class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+        <button onclick={copyResult} class="px-6 py-3 btn-success rounded-lg hover:bg-green-700 transition-colors">
           {copied ? t('copied') : t('copy')}
         </button>
       </div>
@@ -160,7 +160,7 @@
         <div class="grid grid-cols-4 md:grid-cols-7 gap-2 text-center text-sm">
           {#each [['I', '1'], ['V', '5'], ['X', '10'], ['L', '50'], ['C', '100'], ['D', '500'], ['M', '1000']] as [r, a] (r)}
 <div  class="p-2 bg-white dark:bg-gray-700 rounded">
-              <div class="font-bold text-lg text-blue-600 dark:text-blue-400">{r}</div>
+              <div class="font-bold text-lg text-amber-600 dark:text-amber-400">{r}</div>
               <div class="text-gray-600 dark:text-gray-400">{a}</div>
             </div>
 {/each}

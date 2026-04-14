@@ -206,14 +206,14 @@
           <button
             onclick={compressImage}
             disabled={isProcessing}
-            class="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium text-white"
+            class="px-6 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium text-white"
           >
             {isProcessing ? t('processing') : t('compress')}
           </button>
           {#if compressedImage}
 <button
               onclick={downloadCompressed}
-              class="px-6 py-2 bg-green-600 hover:bg-green-700 rounded-lg font-medium text-white"
+              class="px-6 py-2 bg-emerald-500 hover:bg-green-700 rounded-lg font-medium text-white"
             >
               {t('download')}
             </button>
@@ -225,7 +225,7 @@
       {#if compressedSize > 0}
 <div class="grid grid-cols-3 gap-4 text-center">
           <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-            <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">{formatSize(originalSize)}</div>
+            <div class="text-2xl font-bold text-amber-600 dark:text-amber-400">{formatSize(originalSize)}</div>
             <div class="text-sm text-gray-600 dark:text-gray-300">{t('originalSize')}</div>
           </div>
           <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">

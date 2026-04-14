@@ -44,32 +44,32 @@
 
     <div class="space-y-4">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('template')}
         </label>
         <textarea
           bind:value={template}
-          class="w-full h-32 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono text-sm focus:outline-none focus:border-blue-500"
+          class="w-full h-32 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono text-sm focus:outline-none focus:border-amber-500"
           placeholder={t('templatePlaceholder')}></textarea>
         <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">{t('syntaxHint')}</p>
       </div>
 
       {#if detectedVars.length > 0}
 <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('variables')} ({detectedVars.length})
           </label>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
             {#each detectedVars as varName (varName)}
 <div  class="flex items-center gap-2">
-                <span class="text-sm text-blue-600 dark:text-blue-400 font-mono min-w-[100px]">
+                <span class="text-sm text-amber-600 dark:text-amber-400 font-mono min-w-[100px]">
                   {`{{ ${varName} }}`}
                 </span>
                 <input
                   type="text"
                   value={variables[varName] || ''}
                   onchange={(e) => handleVariableChange(varName, e.target.value)}
-                  class="flex-1 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded px-3 py-1 text-gray-900 dark:text-white text-sm focus:outline-none focus:border-blue-500"
+                  class="flex-1 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded px-3 py-1 text-gray-900 dark:text-white text-sm focus:outline-none focus:border-amber-500"
                   placeholder={t('valuePlaceholder')}
                 />
               </div>
@@ -80,7 +80,7 @@
 
       <button
         onclick={handleProcess}
-        class="w-full px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        class="w-full px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
       >
         {t('process')}
       </button>
@@ -91,7 +91,7 @@
             <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('result')}</label>
             <button
               onclick={handleCopy}
-              class="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300"
+              class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-500 dark:hover:text-amber-300"
             >
               {t('copy')}
             </button>

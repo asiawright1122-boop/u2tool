@@ -99,7 +99,7 @@
       <div
         ondrop={handleDrop}
         ondragover={(e) => e.preventDefault()}
-        class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-blue-500 transition-colors"
+        class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-amber-500 transition-colors"
       >
         <input
           type="file"
@@ -109,7 +109,7 @@
           id="csv-excel-input"
         />
         <label for="csv-excel-input" class="cursor-pointer">
-          <div class="text-4xl mb-4 text-blue-500"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
+          <div class="text-4xl mb-4 text-amber-500"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
           <p class="text-gray-600 dark:text-gray-400">{t('dropzone')}</p>
           <p class="text-sm text-gray-500 mt-2">CSV → XLSX</p>
         </label>
@@ -117,7 +117,7 @@
 
       {#if loading}
 <div class="text-center py-4">
-          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto"></div>
+          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-500 mx-auto"></div>
           <p class="mt-2 text-gray-600 dark:text-gray-400">{t('converting')}</p>
         </div>
 {/if}
@@ -136,7 +136,7 @@
             </div>
             <button
               onclick={downloadExcel}
-              class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+              class="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors"
             >
               {tc('download')} XLSX
             </button>

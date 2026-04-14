@@ -120,7 +120,7 @@
     <div class="space-y-6">
       <!-- Input -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('enterText')}
         </label>
         <textarea
@@ -132,7 +132,7 @@
 
       <!-- Length Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('summaryLength')}
         </label>
         <div class="flex gap-2">
@@ -141,7 +141,7 @@
               onclick={() => summaryLength = len}
               class={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 summaryLength === len
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
               }`}
             >
@@ -162,7 +162,7 @@
               <div class="text-xs text-gray-500">{t('originalWords')}</div>
             </div>
             <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg text-center">
-              <div class="text-2xl font-bold text-blue-600">{summary.summaryWords}</div>
+              <div class="text-2xl font-bold text-amber-600">{summary.summaryWords}</div>
               <div class="text-xs text-gray-500">{t('summaryWords')}</div>
             </div>
             <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg text-center">
@@ -183,8 +183,8 @@
                 onclick={copyToClipboard}
                 class={`px-3 py-1 rounded text-sm font-medium ${
                   copied
-                    ? 'bg-green-600 text-white'
-                    : 'bg-blue-600 text-white hover:bg-blue-700'
+                    ? 'btn-success'
+                    : 'bg-amber-600 text-white hover:bg-amber-700'
                 }`}
               >
                 {copied ? tc('copied') : tc('copy')}
@@ -199,9 +199,9 @@
 {/if}
 
       <!-- Tips -->
-      <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4">
-        <h4 class="font-medium text-blue-800 dark:text-blue-200 mb-2">{t('tips')}</h4>
-        <ul class="text-sm text-blue-700 dark:text-blue-300 space-y-1 list-disc list-inside">
+      <div class="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-4">
+        <h4 class="font-medium text-amber-800 dark:text-amber-200 mb-2">{t('tips')}</h4>
+        <ul class="text-sm text-amber-700 dark:text-amber-300 space-y-1 list-disc list-inside">
           <li>{t('tip1')}</li>
           <li>{t('tip2')}</li>
           <li>{t('tip3')}</li>

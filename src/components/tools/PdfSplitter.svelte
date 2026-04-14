@@ -171,7 +171,7 @@
 
       {#if loading}
 <div class="text-center py-8">
-          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
+          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-600 mx-auto"></div>
           <p class="mt-2 text-gray-600 dark:text-gray-400">{t('pdfSplitter.processing')}</p>
         </div>
 {/if}
@@ -192,11 +192,11 @@
 
                 <div>
                   <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('pdfSplitter.from')}</label>
-                  <input type="number" value={rangeStart} onchange={e => rangeStart = Number(e.target.value)} min={1} max={pages.length} class="w-20 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
+                  <input type="number" bind:value={rangeStart} min={1} max={pages.length} class="w-20 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
                 </div>
                 <div>
                   <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('pdfSplitter.to')}</label>
-                  <input type="number" value={rangeEnd} onchange={e => rangeEnd = Number(e.target.value)} min={1} max={pages.length} class="w-20 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
+                  <input type="number" bind:value={rangeEnd} min={1} max={pages.length} class="w-20 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
                 </div>
               
 {/if}
@@ -211,7 +211,7 @@
               </div>
               <div class="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2">
                 {#each pages as page (page.pageNum)}
-<div  onclick={() => togglePage(page.pageNum)} class={`cursor-pointer border-2 rounded overflow-hidden transition-all ${page.selected ? 'border-blue-500 ring-2 ring-blue-200' : 'border-gray-200 dark:border-gray-700'}`}>
+<div  onclick={() => togglePage(page.pageNum)} class={`cursor-pointer border-2 rounded overflow-hidden transition-all ${page.selected ? 'border-amber-500 ring-2 ring-amber-500/20' : 'border-gray-200 dark:border-gray-700'}`}>
                     <img src={page.thumbnail} alt={`Page ${page.pageNum}`} class="w-full" />
                     <div class="text-center text-xs py-1 bg-gray-50 dark:bg-gray-800">{page.pageNum}</div>
                   </div>
@@ -221,7 +221,7 @@
 </div>
 {/if}
 
-          <button onclick={handleSplit} disabled={loading || (splitMode === 'selected' && selectedCount === 0)} class="w-full px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium">
+          <button onclick={handleSplit} disabled={loading || (splitMode === 'selected' && selectedCount === 0)} class="w-full px-4 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium">
             {t('pdfSplitter.split')} {#if splitMode === 'selected'}
 `(${selectedCount} ${t('pdfSplitter.pages')})`
 {/if}

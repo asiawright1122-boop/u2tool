@@ -147,7 +147,7 @@
               <div class="text-sm text-gray-500">{t('tails')} ({tailsPercent}%)</div>
             </div>
             <div>
-              <div class="text-2xl font-bold text-blue-600">{history.length}</div>
+              <div class="text-2xl font-bold text-amber-600">{history.length}</div>
               <div class="text-sm text-gray-500">{t('total')}</div>
             </div>
           </div>

@@ -58,7 +58,7 @@
     switch (type) {
       case 'warning': return 'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-800';
       case 'improvement': return 'bg-yellow-50 border-yellow-200 dark:bg-yellow-900/20 dark:border-yellow-800';
-      case 'info': return 'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800';
+      case 'info': return 'bg-amber-50 border-amber-200 dark:bg-amber-900/20 dark:border-amber-800';
       default: return 'bg-gray-50 border-gray-200 dark:bg-gray-800 dark:border-gray-700';
     }
   }
@@ -69,8 +69,8 @@
     <div class="space-y-6">
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">{t('sqlQuery')}</label>
-          <button onclick={loadExample} class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400">{t('loadExample')}</button>
+          <label class="tool-label">{t('sqlQuery')}</label>
+          <button onclick={loadExample} class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400">{t('loadExample')}</button>
         </div>
         <textarea bind:value={sql} placeholder={t("inputPlaceholder")}
           class="w-full h-40 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm resize-none"></textarea>
@@ -106,8 +106,8 @@
 
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">{t('formattedQuery')}</label>
-              <button onclick={handleCopy} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400">
+              <label class="tool-label">{t('formattedQuery')}</label>
+              <button onclick={handleCopy} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">
                 {copied ? tCommon('copied') : tCommon('copy')}
               </button>
             </div>

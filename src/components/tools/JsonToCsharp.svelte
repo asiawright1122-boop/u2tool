@@ -149,7 +149,7 @@
       <div class="flex gap-4">
         <button
           onclick={convert}
-          class="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition-colors"
+          class="px-6 py-2 bg-slate-600 hover:bg-slate-700 text-white rounded-lg font-medium transition-colors"
         >
           {t('convert')}
         </button>

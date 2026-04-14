@@ -50,8 +50,8 @@
 
 <button
   onclick={handleToggle}
-  class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800
-         transition-colors text-gray-700 dark:text-gray-300"
+  class="p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-white/5
+         transition-all duration-300 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white border border-transparent hover:border-slate-200 dark:hover:border-white/10"
   aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
 >
   {#if isDark}

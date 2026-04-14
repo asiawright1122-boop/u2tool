@@ -83,7 +83,7 @@
             <label class="text-sm font-medium">{t('mongoQuery')}</label>
             <button
               onclick={copyOutput}
-              class={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+              class={`text-sm px-3 py-1 rounded ${copied ? 'bg-emerald-500' : 'bg-gray-700 hover:bg-gray-600'}`}
             >
               {copied ? tg('copied') : tg('copy')}
             </button>
@@ -101,7 +101,7 @@
               class="w-full p-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-left hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             >
               <div class="text-sm text-gray-600 dark:text-gray-300">{t(ex.descKey)}</div>
-              <code class="text-blue-600 dark:text-blue-400 text-sm">{ex.sql}</code>
+              <code class="text-amber-600 dark:text-amber-400 text-sm">{ex.sql}</code>
             </button>
 {/each}
         </div>

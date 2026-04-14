@@ -185,7 +185,7 @@
           <button
             onclick={sendRequest}
             disabled={!url.trim() || isLoading}
-            class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
+            class="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
           >
             {isLoading ? t('sending') : t('send')}
           </button>
@@ -193,7 +193,7 @@
 
         <!-- Headers -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('headers')}
           </label>
           <textarea
@@ -207,25 +207,25 @@
         {#if method !== 'GET'}
 <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+              <label class="tool-label">
                 {t('requestBody')}
               </label>
               <div class="flex gap-2">
                 <button
                   onclick={() => loadSample('json')}
-                  class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                  class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"
                 >
                   JSON
                 </button>
                 <button
                   onclick={() => loadSample('github')}
-                  class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                  class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"
                 >
                   GitHub
                 </button>
                 <button
                   onclick={() => loadSample('stripe')}
-                  class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                  class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"
                 >
                   Stripe
                 </button>
@@ -268,7 +268,7 @@
                 <div class="flex items-center justify-between mb-2">
                   <div class="flex items-center gap-3">
                     <span class={`px-2 py-0.5 text-xs font-medium rounded ${
-                      req.method === 'GET' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300' :
+                      req.method === 'GET' ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300' :
                       req.method === 'POST' ? 'bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300' :
                       req.method === 'PUT' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/50 dark:text-yellow-300' :
                       req.method === 'DELETE' ? 'bg-red-100 text-red-700 dark:bg-red-900/50 dark:text-red-300' :
@@ -302,7 +302,7 @@
                           <span class="text-xs text-gray-500 dark:text-gray-400">{t('responseBody')}</span>
                           <button
                             onclick={() => handleCopy(req.response!.body, req.id)}
-                            class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                            class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"
                           >
                             {copied === req.id ? tCommon('copied') : tCommon('copy')}
                           </button>
@@ -337,9 +337,9 @@
 {/if}
 
       <!-- Tips -->
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h4 class="text-sm font-medium text-blue-800 dark:text-blue-300 mb-2">{t('tips')}</h4>
-        <ul class="text-sm text-blue-700 dark:text-blue-400 space-y-1">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+        <h4 class="text-sm font-medium text-amber-800 dark:text-amber-300 mb-2">{t('tips')}</h4>
+        <ul class="text-sm text-amber-700 dark:text-amber-400 space-y-1">
           <li>• {t('tip1')}</li>
           <li>• {t('tip2')}</li>
           <li>• {t('tip3')}</li>

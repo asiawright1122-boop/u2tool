@@ -150,7 +150,7 @@
             name="preserveLinks"
             type="checkbox"
             bind:checked={preserveLinks}
-            class="w-4 h-4 text-blue-600 rounded"
+            class="w-4 h-4 text-amber-600 rounded"
           />
           <span class="text-sm text-gray-600 dark:text-gray-300">{t('preserveLinks')}</span>
         </label>
@@ -161,7 +161,7 @@
             name="preserveLineBreaks"
             type="checkbox"
             bind:checked={preserveLineBreaks}
-            class="w-4 h-4 text-blue-600 rounded"
+            class="w-4 h-4 text-amber-600 rounded"
           />
           <span class="text-sm text-gray-600 dark:text-gray-300">{t('preserveLineBreaks')}</span>
         </label>
@@ -172,14 +172,14 @@
             name="preserveLists"
             type="checkbox"
             bind:checked={preserveLists}
-            class="w-4 h-4 text-blue-600 rounded"
+            class="w-4 h-4 text-amber-600 rounded"
           />
           <span class="text-sm text-gray-600 dark:text-gray-300">{t('preserveLists')}</span>
         </label>
 
         <button
           onclick={loadSample}
-          class="text-sm text-blue-600 hover:text-blue-800"
+          class="text-sm text-amber-600 hover:text-amber-800"
         >
           {t('loadSample')}
         </button>
@@ -205,7 +205,7 @@
             {#if text}
 <button
                 onclick={handleCopy}
-                class="text-sm text-blue-600 hover:text-blue-800"
+                class="text-sm text-amber-600 hover:text-amber-800"
               >
                 {t('copy')}
               </button>
@@ -223,15 +223,15 @@
       <div class="flex justify-center">
         <button
           onclick={handleConvert}
-          class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          class="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
         >
           {t('convert')}
         </button>
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-        <h3 class="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('features')}</h3>
-        <ul class="text-sm text-blue-700 dark:text-blue-400 space-y-1">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/30 rounded-lg">
+        <h3 class="font-medium text-amber-800 dark:text-amber-300 mb-2">{t('features')}</h3>
+        <ul class="text-sm text-amber-700 dark:text-amber-400 space-y-1">
           <li>• {t('feature1')}</li>
           <li>• {t('feature2')}</li>
           <li>• {t('feature3')}</li>

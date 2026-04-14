@@ -216,7 +216,7 @@
       <div>
         <div class="flex justify-between items-center mb-3">
           <h3 class="font-medium text-gray-900 dark:text-white">{t('expenses')}</h3>
-          <button onclick={addExpense} class="text-sm text-blue-600 hover:text-blue-700">{t('addExpense')}</button>
+          <button onclick={addExpense} class="text-sm text-amber-600 hover:text-amber-700">{t('addExpense')}</button>
         </div>
         
         <div class="overflow-x-auto">
@@ -301,20 +301,20 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-          <p class="text-sm text-blue-600 dark:text-blue-400">{t('totalExpenses')}</p>
-          <p class="text-2xl font-bold text-blue-700 dark:text-blue-300">{currencySymbol}{calculations.total.toFixed(2)}</p>
-          <p class="text-xs text-blue-500">{report.expenses.length} {t('items')}</p>
+        <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+          <p class="text-sm text-amber-600 dark:text-amber-400">{t('totalExpenses')}</p>
+          <p class="text-2xl font-bold text-amber-700 dark:text-amber-300">{currencySymbol}{calculations.total.toFixed(2)}</p>
+          <p class="text-xs text-amber-500">{report.expenses.length} {t('items')}</p>
         </div>
         <div class="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
           <p class="text-sm text-green-600 dark:text-green-400">{t('withReceipts')}</p>
           <p class="text-2xl font-bold text-green-700 dark:text-green-300">{calculations.withReceipts}</p>
           <p class="text-xs text-green-500">{calculations.withoutReceipts} {t('withoutReceipts')}</p>
         </div>
-        <div class="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
-          <p class="text-sm text-purple-600 dark:text-purple-400">{t('categories')}</p>
-          <p class="text-2xl font-bold text-purple-700 dark:text-purple-300">{Object.keys(calculations.byCategory).length}</p>
-          <p class="text-xs text-purple-500">{t('expenseCategories')}</p>
+        <div class="p-4 bg-slate-50 dark:bg-slate-900/20 rounded-lg">
+          <p class="text-sm text-slate-600 dark:text-slate-400">{t('categories')}</p>
+          <p class="text-2xl font-bold text-slate-700 dark:text-slate-300">{Object.keys(calculations.byCategory).length}</p>
+          <p class="text-xs text-slate-500">{t('expenseCategories')}</p>
         </div>
       </div>
 
@@ -326,7 +326,7 @@
               <span class="w-32 text-sm text-gray-600 dark:text-gray-400">{cat}</span>
               <div class="flex-1 h-4 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                 <div
-                  class="h-full bg-blue-500 rounded-full"
+                  class="h-full bg-amber-500 rounded-full"
                   style="width: {(amount / calculations.total) * 100}%"></div>
               </div>
               <span class="w-24 text-sm text-right text-gray-900 dark:text-white">{currencySymbol}{amount.toFixed(2)}</span>
@@ -337,10 +337,10 @@
       </div>
 
       <div class="flex gap-3">
-        <button onclick={exportCSV} class="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+        <button onclick={exportCSV} class="flex-1 px-4 py-2 btn-success rounded-lg hover:bg-green-700">
           {t('exportCSV')}
         </button>
-        <button onclick={exportJSON} class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        <button onclick={exportJSON} class="flex-1 px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700">
           {t('exportJSON')}
         </button>
       </div>
@@ -419,7 +419,7 @@
       <div>
         <div class="flex justify-between items-center mb-3">
           <h3 class="font-medium text-gray-900 dark:text-white">{t('expenses')}</h3>
-          <button onclick={addExpense} class="text-sm text-blue-600 hover:text-blue-700">{t('addExpense')}</button>
+          <button onclick={addExpense} class="text-sm text-amber-600 hover:text-amber-700">{t('addExpense')}</button>
         </div>
         
         <div class="overflow-x-auto">
@@ -504,20 +504,20 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-          <p class="text-sm text-blue-600 dark:text-blue-400">{t('totalExpenses')}</p>
-          <p class="text-2xl font-bold text-blue-700 dark:text-blue-300">{currencySymbol}{calculations.total.toFixed(2)}</p>
-          <p class="text-xs text-blue-500">{report.expenses.length} {t('items')}</p>
+        <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+          <p class="text-sm text-amber-600 dark:text-amber-400">{t('totalExpenses')}</p>
+          <p class="text-2xl font-bold text-amber-700 dark:text-amber-300">{currencySymbol}{calculations.total.toFixed(2)}</p>
+          <p class="text-xs text-amber-500">{report.expenses.length} {t('items')}</p>
         </div>
         <div class="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
           <p class="text-sm text-green-600 dark:text-green-400">{t('withReceipts')}</p>
           <p class="text-2xl font-bold text-green-700 dark:text-green-300">{calculations.withReceipts}</p>
           <p class="text-xs text-green-500">{calculations.withoutReceipts} {t('withoutReceipts')}</p>
         </div>
-        <div class="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
-          <p class="text-sm text-purple-600 dark:text-purple-400">{t('categories')}</p>
-          <p class="text-2xl font-bold text-purple-700 dark:text-purple-300">{Object.keys(calculations.byCategory).length}</p>
-          <p class="text-xs text-purple-500">{t('expenseCategories')}</p>
+        <div class="p-4 bg-slate-50 dark:bg-slate-900/20 rounded-lg">
+          <p class="text-sm text-slate-600 dark:text-slate-400">{t('categories')}</p>
+          <p class="text-2xl font-bold text-slate-700 dark:text-slate-300">{Object.keys(calculations.byCategory).length}</p>
+          <p class="text-xs text-slate-500">{t('expenseCategories')}</p>
         </div>
       </div>
 
@@ -529,7 +529,7 @@
               <span class="w-32 text-sm text-gray-600 dark:text-gray-400">{cat}</span>
               <div class="flex-1 h-4 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                 <div
-                  class="h-full bg-blue-500 rounded-full"
+                  class="h-full bg-amber-500 rounded-full"
                   style="width: {(amount / calculations.total) * 100}%"></div>
               </div>
               <span class="w-24 text-sm text-right text-gray-900 dark:text-white">{currencySymbol}{amount.toFixed(2)}</span>
@@ -540,10 +540,10 @@
       </div>
 
       <div class="flex gap-3">
-        <button onclick={exportCSV} class="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+        <button onclick={exportCSV} class="flex-1 px-4 py-2 btn-success rounded-lg hover:bg-green-700">
           {t('exportCSV')}
         </button>
-        <button onclick={exportJSON} class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        <button onclick={exportJSON} class="flex-1 px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700">
           {t('exportJSON')}
         </button>
       </div>

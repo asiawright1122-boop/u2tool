@@ -32,7 +32,9 @@
     "perf:compare": "npx tsx scripts/performance/benchmark.ts compare",
     "deps:audit": "npx tsx scripts/dependency-audit/audit-dependencies.ts",
     "hooks:install": "npx tsx scripts/git-hooks/install-hooks.ts",
-    "validate:sitemap": "npx tsx scripts/validate-sitemap-fix.ts"
+    "submit:indexnow": "node scripts/submit-indexnow.js",
+    "submit:indexnow:dry": "node scripts/submit-indexnow.js --dry-run",
+    "validate:sitemap": "node scripts/validate-sitemap-fix.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.0",

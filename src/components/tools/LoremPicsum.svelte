@@ -148,7 +148,7 @@
               <input
                 type="checkbox"
                 bind:checked={grayscale}
-                class="w-4 h-4 text-blue-600 rounded"
+                class="w-4 h-4 text-amber-600 rounded"
               />
               <span class="text-sm text-gray-600 dark:text-gray-300">{t('grayscale')}</span>
             </label>
@@ -179,7 +179,7 @@
               <div class="space-y-2">
                 <div class="flex items-center justify-between">
                   <label class="tool-label mb-0">{t('imageUrl')}</label>
-                  <button onclick={() => handleCopy(imageUrl)} class="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
+                  <button onclick={() => handleCopy(imageUrl)} class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-300">
                     {t('copy')}
                   </button>
                 </div>
@@ -194,11 +194,11 @@
               <div class="grid grid-cols-1 gap-2">
                 <div class="flex items-center justify-between p-2 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded">
                   <code class="text-xs text-gray-600 dark:text-gray-300 truncate flex-1">{generateHtmlCode()}</code>
-                  <button onclick={() => handleCopy(generateHtmlCode())} class="ml-2 text-xs text-blue-600 dark:text-blue-400">HTML</button>
+                  <button onclick={() => handleCopy(generateHtmlCode())} class="ml-2 text-xs text-amber-600 dark:text-amber-400">HTML</button>
                 </div>
                 <div class="flex items-center justify-between p-2 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded">
                   <code class="text-xs text-gray-600 dark:text-gray-300 truncate flex-1">{generateMarkdownCode()}</code>
-                  <button onclick={() => handleCopy(generateMarkdownCode())} class="ml-2 text-xs text-blue-600 dark:text-blue-400">Markdown</button>
+                  <button onclick={() => handleCopy(generateMarkdownCode())} class="ml-2 text-xs text-amber-600 dark:text-amber-400">Markdown</button>
                 </div>
               </div>
             </div>
@@ -227,9 +227,9 @@
         </div>
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg">
-        <h3 class="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('info')}</h3>
-        <p class="text-sm text-blue-700 dark:text-blue-400">{t('infoText')}</p>
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-lg">
+        <h3 class="font-medium text-amber-800 dark:text-amber-300 mb-2">{t('info')}</h3>
+        <p class="text-sm text-amber-700 dark:text-amber-400">{t('infoText')}</p>
       </div>
     </div>
   

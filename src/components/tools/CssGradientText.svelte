@@ -132,7 +132,7 @@
           </div>
 
           <button onclick={copyToClipboard}
-            class="w-full px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">
+            class="w-full px-6 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-medium transition-colors">
             {t('copy')}
           </button>
         </div>

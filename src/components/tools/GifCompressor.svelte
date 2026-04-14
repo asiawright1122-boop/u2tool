@@ -201,7 +201,7 @@
 
       <!-- Upload -->
       {#if !originalGif}
-<label class="block border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-blue-500">
+<label class="block border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-amber-500">
           <input
             bind:this={fileInputRef}
             type="file"
@@ -254,7 +254,7 @@
               {isProcessing ? t('processing') : t('compress')}
             </button>
             {#if compressedGif}
-<button onclick={downloadCompressed} class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg">
+<button onclick={downloadCompressed} class="px-6 py-2 bg-emerald-500 hover:bg-green-700 text-white rounded-lg">
                 {tg('download')}
               </button>
 {/if}
@@ -264,7 +264,7 @@
           {#if compressedSize > 0}
 <div class="grid grid-cols-3 gap-4 text-center">
               <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-                <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">{formatSize(originalSize)}</div>
+                <div class="text-2xl font-bold text-amber-600 dark:text-amber-400">{formatSize(originalSize)}</div>
                 <div class="text-sm text-gray-600 dark:text-gray-400">{t('originalSize')}</div>
               </div>
               <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">

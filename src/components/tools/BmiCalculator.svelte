@@ -47,7 +47,7 @@
   }
   function getCategoryColor(category: string) {
     switch (category) {
-      case 'underweight': return 'text-blue-600 dark:text-blue-400';
+      case 'underweight': return 'text-amber-600 dark:text-amber-400';
       case 'normal': return 'text-green-600 dark:text-green-400';
       case 'overweight': return 'text-yellow-600 dark:text-yellow-400';
       case 'obese': return 'text-red-600 dark:text-red-400';
@@ -56,7 +56,7 @@
   }
   function getCategoryBg(category: string) {
     switch (category) {
-      case 'underweight': return 'bg-blue-50 dark:bg-blue-900/20';
+      case 'underweight': return 'bg-amber-50 dark:bg-amber-900/20';
       case 'normal': return 'bg-green-50 dark:bg-green-900/20';
       case 'overweight': return 'bg-yellow-50 dark:bg-yellow-900/20';
       case 'obese': return 'bg-red-50 dark:bg-red-900/20';
@@ -73,7 +73,7 @@
           onclick={() => unit = 'metric'}
           class={`px-4 py-2 rounded-lg transition-colors ${
             unit === 'metric'
-              ? 'bg-blue-600 text-white'
+              ? 'bg-amber-600 text-white'
               : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
           }`}
         >
@@ -83,7 +83,7 @@
           onclick={() => unit = 'imperial'}
           class={`px-4 py-2 rounded-lg transition-colors ${
             unit === 'imperial'
-              ? 'bg-blue-600 text-white'
+              ? 'bg-amber-600 text-white'
               : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
           }`}
         >
@@ -123,7 +123,7 @@
 
       <button
         onclick={calculate}
-        class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        class="w-full px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
       >
         {tc('calculate')}
       </button>
@@ -150,7 +150,7 @@
             <h3 class="font-semibold mb-2">{t('bmiCategories')}</h3>
             <div class="space-y-1 text-sm">
               <div class="flex justify-between">
-                <span class="text-blue-600">{t('underweight')}</span>
+                <span class="text-amber-600">{t('underweight')}</span>
                 <span>&lt; 18.5</span>
               </div>
               <div class="flex justify-between">

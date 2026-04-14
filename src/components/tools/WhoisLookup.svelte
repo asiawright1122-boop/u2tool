@@ -85,7 +85,7 @@
           type="text"
           bind:value={domain}
           placeholder="example.com"
-          class="flex-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-500"
+          class="flex-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-amber-500"
           onkeydown={(e) => e.key === 'Enter' && lookup()}
         />
         <button
@@ -105,7 +105,7 @@
 
       {#if result}
 <div class="space-y-4">
-          <div class="p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg">
+          <div class="p-4 bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-lg">
             <div class="text-lg font-semibold text-gray-900 dark:text-white">{result.domain}</div>
           </div>
 

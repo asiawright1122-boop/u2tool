@@ -129,7 +129,7 @@
     <div class="space-y-6">
       <!-- Upload -->
       {#if !image}
-<label class="block border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-blue-500">
+<label class="block border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-amber-500">
           <input
             bind:this={fileInputRef}
             type="file"
@@ -147,7 +147,7 @@
           <div class="space-y-4">
             <div class="flex justify-between items-center">
               <h3 class="font-medium">{t('image')}</h3>
-              <button onclick={clearAll} class="text-sm text-blue-600 hover:underline">
+              <button onclick={clearAll} class="text-sm text-amber-600 hover:underline">
                 {tg('clear')}
               </button>
             </div>
@@ -170,7 +170,7 @@
               {#if cleanedImage}
 <button
                   onclick={downloadCleanedImage}
-                  class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg text-sm"
+                  class="px-4 py-2 bg-emerald-500 hover:bg-green-700 text-white rounded-lg text-sm"
                 >
                   {t('downloadClean')}
                 </button>

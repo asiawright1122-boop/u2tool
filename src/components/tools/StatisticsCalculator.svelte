@@ -115,7 +115,7 @@
         </label>
         <textarea
           bind:value={input}
-          class="w-full h-32 px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="w-full h-32 px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           placeholder="10, 20, 30, 40, 50"></textarea>
         <p class="text-xs text-gray-500 dark:text-gray-300 mt-1">
           {t('stats.inputHint')}
@@ -130,7 +130,7 @@
             type="radio"
             checked={isPopulation}
             onchange={() => isPopulation = true}
-            class="text-blue-500"
+            class="text-amber-500"
           />
           <span class="text-sm text-gray-900 dark:text-white">{t('stats.population')}</span>
         </label>
@@ -139,7 +139,7 @@
             type="radio"
             checked={!isPopulation}
             onchange={() => isPopulation = false}
-            class="text-blue-500"
+            class="text-amber-500"
           />
           <span class="text-sm text-gray-900 dark:text-white">{t('stats.sample')}</span>
         </label>

@@ -113,7 +113,7 @@
     <div class="space-y-4">
       <!-- Input Section -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {tg('input')}
         </label>
         <textarea
@@ -175,7 +175,7 @@
                 onclick={handleCopyAll}
                 class={`text-sm px-3 py-1 rounded ${
                   copied 
-                    ? 'bg-green-600 text-white' 
+                    ? 'btn-success' 
                     : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100'
                 }`}
               >
@@ -217,7 +217,7 @@
                       <span class={`px-2 py-1 rounded text-xs ${
                         entry.detected === 'unknown' 
                           ? 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300'
-                          : 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300'
+                          : 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300'
                       }`}>
                         {t(entry.detected)}
                       </span>

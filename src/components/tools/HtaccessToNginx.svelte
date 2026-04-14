@@ -269,7 +269,7 @@ Options -Indexes`;
       <div class="flex justify-center gap-3">
         <button
           onclick={convert}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg"
         >
           {tg('convert')}
         </button>

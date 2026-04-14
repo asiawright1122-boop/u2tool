@@ -98,11 +98,11 @@
     <div class="space-y-6">
       <div class="flex gap-4">
         <button onclick={() => mode = 'create'}
-          class={`px-4 py-2 rounded-lg font-medium transition-colors ${mode === 'create' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'}`}>
+          class={`px-4 py-2 rounded-lg font-medium transition-colors ${mode === 'create' ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'}`}>
           {t('createPatch')}
         </button>
         <button onclick={() => mode = 'apply'}
-          class={`px-4 py-2 rounded-lg font-medium transition-colors ${mode === 'apply' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'}`}>
+          class={`px-4 py-2 rounded-lg font-medium transition-colors ${mode === 'apply' ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'}`}>
           {t('applyPatch')}
         </button>
       </div>
@@ -122,7 +122,7 @@
             </div>
           </div>
           <button onclick={createPatch}
-            class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors text-white">
+            class="px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium transition-colors text-white">
             {t('createPatch')}
           </button>
           {#if patch}
@@ -130,7 +130,7 @@
               <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('generatedPatch')}</label>
               <pre class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 font-mono text-sm overflow-x-auto">
                 {#each patch.split('\n') as line, i (i)}
-<div  class={line.startsWith('+') ? 'text-green-600 dark:text-green-400' : line.startsWith('-') ? 'text-red-600 dark:text-red-400' : line.startsWith('@@') ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-300'}>
+<div  class={line.startsWith('+') ? 'text-green-600 dark:text-green-400' : line.startsWith('-') ? 'text-red-600 dark:text-red-400' : line.startsWith('@@') ? 'text-amber-600 dark:text-amber-400' : 'text-gray-600 dark:text-gray-300'}>
                     {line}
                   </div>
 {/each}
@@ -154,7 +154,7 @@
             </div>
           </div>
           <button onclick={applyPatch}
-            class="px-6 py-2 bg-green-600 hover:bg-green-700 rounded-lg font-medium transition-colors text-white">
+            class="px-6 py-2 bg-emerald-500 hover:bg-green-700 rounded-lg font-medium transition-colors text-white">
             {t('applyPatch')}
           </button>
           {#if patchResult}

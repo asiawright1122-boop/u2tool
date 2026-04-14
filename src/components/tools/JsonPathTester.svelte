@@ -118,7 +118,7 @@
           id="json-path-expression"
           name="pathExpression"
           bind:value={path}
-          class="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+          class="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
           placeholder={t('expressionPlaceholder')}
         />
         <div class="flex flex-wrap gap-2 mt-2">
@@ -150,7 +150,7 @@
             <label class="text-sm font-medium text-gray-600 dark:text-white">{t('result')}</label>
             <button
               onclick={copyResult}
-              class={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'}`}
+              class={`text-sm px-3 py-1 rounded ${copied ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'}`}
             >
               {copied ? tg('copied') : tg('copy')}
             </button>

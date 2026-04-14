@@ -192,7 +192,7 @@
           </select>
         </div>
         <div class="flex items-end">
-          <button onclick={addItem} class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+          <button onclick={addItem} class="w-full px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700">
             {t('addItem')}
           </button>
         </div>
@@ -216,12 +216,12 @@
             {analysis.totalVariancePercent >= 0 ? '+' : ''}{analysis.totalVariancePercent.toFixed(1)}%
           </p>
         </div>
-        <div class="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+        <div class="p-4 bg-slate-50 dark:bg-slate-900/20 rounded-lg">
           <p class="text-xs text-gray-500">{t('status')}</p>
-          <p class="text-lg font-bold text-purple-600">
+          <p class="text-lg font-bold text-slate-600">
             {analysis.favorable.length} / {analysis.items.length}
           </p>
-          <p class="text-xs text-purple-500">{t('favorableItems')}</p>
+          <p class="text-xs text-slate-500">{t('favorableItems')}</p>
         </div>
       </div>
 
@@ -346,7 +346,7 @@
         </div>
       </div>
 
-      <button onclick={exportReport} class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+      <button onclick={exportReport} class="w-full px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700">
         {t('exportReport')}
       </button>
     </div>

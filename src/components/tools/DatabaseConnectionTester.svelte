@@ -77,27 +77,27 @@
         </div>
         <div>
           <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1" for="db-host">{t('database-connection-tester.host')}</label>
-          <input type="text" id="db-host" name="host" value={config.host} onchange={(e) => updateConfig('host', e.target.value)}
+          <input type="text" id="db-host" name="host" bind:value={config.host}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
         </div>
         <div>
           <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1" for="db-port">{t('database-connection-tester.port')}</label>
-          <input type="text" id="db-port" name="port" value={config.port} onchange={(e) => updateConfig('port', e.target.value)}
+          <input type="text" id="db-port" name="port" bind:value={config.port}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
         </div>
         <div>
           <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1" for="db-name">{t('database-connection-tester.database')}</label>
-          <input type="text" id="db-name" name="database" value={config.database} onchange={(e) => updateConfig('database', e.target.value)}
+          <input type="text" id="db-name" name="database" bind:value={config.database}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
         </div>
         <div>
           <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1" for="db-username">{t('database-connection-tester.username')}</label>
-          <input type="text" id="db-username" name="username" value={config.username} onchange={(e) => updateConfig('username', e.target.value)}
+          <input type="text" id="db-username" name="username" bind:value={config.username}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
         </div>
         <div>
           <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1" for="db-password">{t('database-connection-tester.password')}</label>
-          <input type="password" id="db-password" name="password" value={config.password} onchange={(e) => updateConfig('password', e.target.value)}
+          <input type="password" id="db-password" name="password" bind:value={config.password}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
         </div>
       </div>
@@ -109,8 +109,8 @@
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">{t('database-connection-tester.connectionString')}</label>
-          <button onclick={() => handleCopy(connectionString, 'conn')} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400">
+          <label class="tool-label">{t('database-connection-tester.connectionString')}</label>
+          <button onclick={() => handleCopy(connectionString, 'conn')} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">
             {copied === 'conn' ? t('copied') : t('copy')}
           </button>
         </div>
@@ -121,8 +121,8 @@
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">{t('database-connection-tester.codeSnippet')}</label>
-          <button onclick={() => handleCopy(codeSnippet, 'code')} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400">
+          <label class="tool-label">{t('database-connection-tester.codeSnippet')}</label>
+          <button onclick={() => handleCopy(codeSnippet, 'code')} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">
             {copied === 'code' ? t('copied') : t('copy')}
           </button>
         </div>

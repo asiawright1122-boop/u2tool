@@ -133,7 +133,7 @@
 
     <div class="space-y-4">
       <div class="flex justify-end">
-        <button onclick={loadExample} class="text-sm text-blue-400 hover:text-blue-300">
+        <button onclick={loadExample} class="text-sm text-amber-400 hover:text-amber-300">
           {t('schemaValidator.loadExample')}
         </button>
       </div>
@@ -157,7 +157,7 @@
 
       <button
         onclick={handleValidate}
-        class="w-full bg-blue-600 hover:bg-blue-700 py-2 rounded font-medium"
+        class="w-full bg-amber-600 hover:bg-amber-700 py-2 rounded font-medium"
       >
         {t('schemaValidator.validate')}
       </button>

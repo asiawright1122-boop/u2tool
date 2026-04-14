@@ -68,7 +68,7 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('commitType')} *
           </label>
           <select
@@ -85,7 +85,7 @@
         </div>
         
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('scope')}
           </label>
           <input
@@ -99,7 +99,7 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('subject')} * <span class="text-xs text-gray-500">({config.subject.length}/72)</span>
         </label>
         <input
@@ -116,7 +116,7 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('body')}
         </label>
         <textarea
@@ -142,7 +142,7 @@
 
       {#if config.breaking}
 <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('breakingDescription')}
           </label>
           <textarea
@@ -156,7 +156,7 @@
 {/if}
 
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('relatedIssues')}
         </label>
         <input
@@ -170,13 +170,13 @@
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('generatedMessage')}
           </label>
           <button
             onclick={handleCopy}
             disabled={!isValid}
-            class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 disabled:opacity-50"
+            class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400 disabled:opacity-50"
           >
             {copied ? tCommon('copied') : tCommon('copy')}
           </button>
@@ -190,9 +190,9 @@
         </pre>
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h3 class="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">{t('formatTitle')}</h3>
-        <code class="text-xs text-blue-700 dark:text-blue-300">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+        <h3 class="text-sm font-medium text-amber-800 dark:text-amber-200 mb-2">{t('formatTitle')}</h3>
+        <code class="text-xs text-amber-700 dark:text-amber-300">
           &lt;type&gt;[optional scope][!]: &lt;description&gt;<br/>
           [optional body]<br/>
           [optional footer(s)]

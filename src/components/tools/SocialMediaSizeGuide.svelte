@@ -68,7 +68,7 @@
           onclick={() => selectedPlatform = null}
           class={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
             !selectedPlatform
-              ? 'bg-blue-600 text-white'
+              ? 'bg-amber-600 text-white'
               : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
           }`}
         >

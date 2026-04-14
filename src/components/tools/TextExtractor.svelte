@@ -130,7 +130,7 @@
           <div class="flex gap-2">
             <button
               onclick={handleExtract}
-              class="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded text-sm font-medium text-white"
+              class="px-4 py-2 bg-amber-600 hover:bg-amber-500 rounded text-sm font-medium text-white"
             >
               {t('extractor.extract')}
             </button>
@@ -156,7 +156,7 @@
         <textarea
           bind:value={input}
           placeholder={t('extractor.placeholder')}
-          class="w-full h-40 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded font-mono text-sm text-gray-900 dark:text-white resize-none focus:outline-none focus:border-blue-500"></textarea>
+          class="w-full h-40 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded font-mono text-sm text-gray-900 dark:text-white resize-none focus:outline-none focus:border-amber-500"></textarea>
       </div>
 
       <!-- 结果区域 -->
@@ -169,7 +169,7 @@
 <button
               onclick={handleCopyAll}
               class={`px-2 py-1 text-xs rounded ${
-                copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-white'
+                copied ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-white'
               }`}
             >
               {copied ? t('copied') : t('extractor.copyAll')}
@@ -203,7 +203,7 @@
 {#if items.length > 0}
                 <div  class="p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
                   <div class="flex items-center justify-between mb-2">
-                    <span class="text-sm font-medium text-blue-600 dark:text-blue-400">
+                    <span class="text-sm font-medium text-amber-600 dark:text-amber-400">
                       {extractTypes.find(t => t.value === type)?.label} ({items.length})
                     </span>
                   </div>

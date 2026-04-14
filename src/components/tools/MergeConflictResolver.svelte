@@ -106,19 +106,19 @@
   <div class="flex flex-wrap gap-2">
     <button
       onclick={() => (mode = 'current')}
-      class={`px-3 py-1.5 rounded ${mode === 'current' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700'}`}
+      class={`px-3 py-1.5 rounded ${mode === 'current' ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700'}`}
     >
       {t('useCurrent') || 'Use current'}
     </button>
     <button
       onclick={() => (mode = 'incoming')}
-      class={`px-3 py-1.5 rounded ${mode === 'incoming' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700'}`}
+      class={`px-3 py-1.5 rounded ${mode === 'incoming' ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700'}`}
     >
       {t('useIncoming') || 'Use incoming'}
     </button>
     <button
       onclick={() => (mode = 'both')}
-      class={`px-3 py-1.5 rounded ${mode === 'both' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700'}`}
+      class={`px-3 py-1.5 rounded ${mode === 'both' ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700'}`}
     >
       {t('keepBoth') || 'Keep both'}
     </button>

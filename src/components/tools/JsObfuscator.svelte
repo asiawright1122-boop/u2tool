@@ -245,7 +245,7 @@ console.log(calculateSum(5, 10));`;
       <div class="flex justify-center gap-3">
         <button
           onclick={obfuscate}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg"
         >
           {t('obfuscate')}
         </button>
@@ -258,9 +258,9 @@ console.log(calculateSum(5, 10));`;
         </button>
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg text-sm">
-        <p class="text-blue-700 dark:text-blue-400 font-medium mb-2">{t('info')}</p>
-        <p class="text-blue-600 dark:text-gray-300">{t('infoText')}</p>
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg text-sm">
+        <p class="text-amber-700 dark:text-amber-400 font-medium mb-2">{t('info')}</p>
+        <p class="text-amber-600 dark:text-gray-300">{t('infoText')}</p>
       </div>
     </div>
   

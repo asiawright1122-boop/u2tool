@@ -165,7 +165,7 @@
               onclick={() => toggleAmenity(amenity)}
               class={`px-3 py-1 text-sm rounded-full ${
                 filters.requiredAmenities.includes(amenity)
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
               }`}
             >
@@ -226,7 +226,7 @@ bookingRoom === room.id ? (
                   />
                   <button
                     onclick={() => bookRoom(room.id)}
-                    class="px-3 py-1 text-sm bg-green-600 text-white rounded hover:bg-green-700"
+                    class="px-3 py-1 text-sm btn-success rounded hover:bg-green-700"
                   >
                     {t('book')}
                   </button>
@@ -240,7 +240,7 @@ bookingRoom === room.id ? (
               ) : (
                 <button
                   onclick={() => bookingRoom = room.id}
-                  class="w-full px-3 py-1.5 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
+                  class="w-full px-3 py-1.5 text-sm bg-amber-600 text-white rounded hover:bg-amber-700"
                 >
                   {t('bookRoom')}
                 </button>

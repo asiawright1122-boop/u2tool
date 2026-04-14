@@ -133,7 +133,7 @@ ${slides.map(slide => `
       case 'dark':
         return 'bg-gray-900 text-white';
       case 'gradient':
-        return 'bg-gradient-to-br from-purple-600 to-blue-500 text-white';
+        return 'bg-gradient-to-br from-slate-600 to-amber-500 text-white';
       default:
         return 'bg-white text-gray-900';
     }
@@ -166,12 +166,12 @@ Thank you for your attention!
         <!-- Input Section -->
         <div class="space-y-4">
           <div class="flex items-center justify-between">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="tool-label">
               {t('markdownInput')}
             </label>
             <button
               onclick={() => markdown = sampleMarkdown}
-              class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+              class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
             >
               {t('loadSample')}
             </button>
@@ -179,7 +179,7 @@ Thank you for your attention!
           <textarea
             bind:value={markdown}
             placeholder={t('inputPlaceholder')}
-            class="w-full h-80 p-4 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono text-sm resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+            class="w-full h-80 p-4 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono text-sm resize-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"></textarea>
           <p class="text-xs text-gray-500 dark:text-gray-400">
             {t('hint')}
           </p>
@@ -188,7 +188,7 @@ Thank you for your attention!
         <!-- Preview Section -->
         <div class="space-y-4">
           <div class="flex items-center justify-between">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="tool-label">
               {t('preview')}
             </label>
             <div class="flex items-center gap-2">
@@ -257,7 +257,7 @@ Thank you for your attention!
         <button
           onclick={handleConvert}
           disabled={!markdown.trim()}
-          class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          class="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           {t('convert')}
         </button>
@@ -266,13 +266,13 @@ Thank you for your attention!
 
             <button
               onclick={() => isPresenting = true}
-              class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+              class="px-6 py-2 btn-success rounded-lg hover:bg-green-700 transition-colors"
             >
               {t('present')}
             </button>
             <button
               onclick={exportToHtml}
-              class="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+              class="px-6 py-2 bg-slate-600 text-white rounded-lg hover:bg-slate-700 transition-colors"
             >
               {t('exportHtml')}
             </button>

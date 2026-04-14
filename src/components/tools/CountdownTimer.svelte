@@ -191,7 +191,7 @@
               <circle
                 cx="128" cy="128" r="120"
                 stroke="currentColor" stroke-width="8" fill="none"
-                class={isFinished ? 'text-red-500' : 'text-blue-500'}
+                class={isFinished ? 'text-red-500' : 'text-amber-500'}
                 stroke-dasharray={2 * Math.PI * 120}
                 stroke-dashoffset={2 * Math.PI * 120 * (1 - progress / 100)}
                 stroke-linecap="round"></circle>
@@ -215,7 +215,7 @@
 <button
             onclick={handleStart}
             disabled={hours === 0 && minutes === 0 && seconds === 0 && timeLeft === 0}
-            class="px-8 py-3 bg-green-500 text-white rounded-full font-medium hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed min-w-[120px]"
+            class="px-8 py-3 bg-green-500 text-white rounded-full font-medium hover:bg-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed min-w-[120px]"
           >
             {timeLeft > 0 ? t('countdownTimer.resume') : t('countdownTimer.start')}
           </button>

@@ -108,15 +108,15 @@
                     <div
                       class={`p-2 text-center rounded-lg ${
                         hasRun
-                          ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-medium'
+                          ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 font-medium'
                           : 'text-gray-700 dark:text-gray-300'
                       } ${
-                        isToday ? 'ring-2 ring-blue-500' : ''
+                        isToday ? 'ring-2 ring-amber-500' : ''
                       }`}
                     >
                       {day}
                       {#if hasRun}
-<div class="w-1.5 h-1.5 bg-blue-500 rounded-full mx-auto mt-1"></div>
+<div class="w-1.5 h-1.5 bg-amber-500 rounded-full mx-auto mt-1"></div>
 {/if}
                     </div>
                   

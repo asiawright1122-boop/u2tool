@@ -123,7 +123,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('svgCode')}
             </label>
             <textarea
@@ -159,7 +159,7 @@
 
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="tool-label">
                 {t('width')}
               </label>
               <input
@@ -170,7 +170,7 @@
               />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="tool-label">
                 {t('height')}
               </label>
               <input
@@ -184,7 +184,7 @@
 
           <div class="grid grid-cols-3 gap-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="tool-label">
                 {t('fill')}
               </label>
               <input
@@ -194,7 +194,7 @@
               />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="tool-label">
                 {t('stroke')}
               </label>
               <input
@@ -204,7 +204,7 @@
               />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="tool-label">
                 {t('strokeWidth')}
               </label>
               <input
@@ -220,7 +220,7 @@
 
           <button
             onclick={applyChanges}
-            class="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+            class="w-full px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
           >
             {t('applyChanges')}
           </button>
@@ -228,7 +228,7 @@
 
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('preview')}
             </label>
             <div class="border border-gray-300 dark:border-gray-600 rounded-lg p-4 min-h-64 flex items-center justify-center bg-[url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAADFJREFUOE9jZGBg+M+ABRw9epQRm3QYGxvDJRgZGRmxKcamBpsabGqwqcGmBpsabGoAAPvfB/1uTd4UAAAAAElFTkSuQmCC')]">
@@ -250,7 +250,7 @@
               </button>
               <button
                 onclick={downloadSvg}
-                class="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                class="flex-1 px-4 py-2 btn-success rounded-lg hover:bg-green-700 transition-colors"
               >
                 {t('download')}
               </button>

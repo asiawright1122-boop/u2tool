@@ -295,7 +295,7 @@ curl -sL https://www.u2tool.com/sitemap.xml | grep -c "<url>"
 
 4. **IndexNow 补充**
    - 除了 Sitemap，还可以使用 IndexNow 实时通知更新
-   - 运行：`npx ts-node scripts/submit-indexnow.ts`
+   - 运行：`npm run submit:indexnow`
 
 ---
 
@@ -315,4 +315,3 @@ curl -sL https://www.u2tool.com/sitemap.xml | grep -c "<url>"
 - [SEO 设置指南](./SEO_SETUP_GUIDE.md)
 - [Yandex 验证指南](./YANDEX_VERIFICATION.md)
 - [部署指南](../DEPLOYMENT_GUIDE.md)
-

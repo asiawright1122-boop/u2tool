@@ -57,12 +57,12 @@
     <div class="space-y-6">
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             Git Log Output
           </label>
           <button
             onclick={handleCopy}
-            class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400"
+            class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"
           >
             {copied ? tCommon('copied') : 'Copy git log command'}
           </button>
@@ -89,11 +89,11 @@
 <div 
                     onclick={() => selectedCommit = commit}
                     class={`flex items-start gap-3 p-3 border-b border-gray-200 dark:border-gray-700 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 ${
-                      selectedCommit?.hash === commit.hash ? 'bg-blue-50 dark:bg-blue-900/20' : ''
+                      selectedCommit?.hash === commit.hash ? 'bg-amber-50 dark:bg-amber-900/20' : ''
                     }`}
                   >
                     <div class="flex flex-col items-center">
-                      <div class={`w-3 h-3 rounded-full ${getCommitColor(commit.message)} ${commit.isMerge ? 'ring-2 ring-purple-300' : ''}`}></div>
+                      <div class={`w-3 h-3 rounded-full ${getCommitColor(commit.message)} ${commit.isMerge ? 'ring-2 ring-slate-300' : ''}`}></div>
                       {#if idx < commits.length - 1}
 <div class="w-0.5 h-8 bg-gray-300 dark:bg-gray-600"></div>
 {/if}
@@ -104,7 +104,7 @@
                           {commit.shortHash}
                         </code>
                         {#if commit.isMerge}
-<span class="text-xs px-1.5 py-0.5 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded">
+<span class="text-xs px-1.5 py-0.5 bg-slate-100 dark:bg-slate-900/30 text-slate-700 dark:text-slate-300 rounded">
                             merge
                           </span>
 {/if}
@@ -168,7 +168,7 @@
 {/if}
                 {#if selectedCommit.isMerge}
 <div class="pt-2 border-t border-gray-200 dark:border-gray-700">
-                    <span class="text-xs px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded">
+                    <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-900/30 text-slate-700 dark:text-slate-300 rounded">
                       Merge Commit
                     </span>
                   </div>
@@ -192,7 +192,7 @@
                   <span class="text-gray-600 dark:text-gray-400">fix: Bug fix</span>
                 </div>
                 <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                  <div class="w-2 h-2 rounded-full bg-amber-500"></div>
                   <span class="text-gray-600 dark:text-gray-400">docs: Documentation</span>
                 </div>
                 <div class="flex items-center gap-2">
@@ -200,7 +200,7 @@
                   <span class="text-gray-600 dark:text-gray-400">refactor: Refactoring</span>
                 </div>
                 <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 rounded-full bg-purple-500"></div>
+                  <div class="w-2 h-2 rounded-full bg-slate-500"></div>
                   <span class="text-gray-600 dark:text-gray-400">Merge commit</span>
                 </div>
               </div>

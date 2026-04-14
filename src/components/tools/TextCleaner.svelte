@@ -98,7 +98,7 @@
             <textarea
               bind:value={input}
               rows={8}
-              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"
+              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"
               placeholder={t('placeholder')}></textarea>
           </div>
 
@@ -107,7 +107,7 @@
               <label class="block text-sm font-medium text-gray-600 dark:text-gray-300">{t('cleanedText')}</label>
               <button
                 onclick={() => navigator.clipboard.writeText(output)}
-                class="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
+                class="text-xs text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300"
               >
                 {t('copyResult')}
               </button>
@@ -129,7 +129,7 @@
                   type="checkbox"
                   checked={options.trim}
                   onchange={() => handleOptionChange('trim')}
-                  class="form-checkbox h-4 w-4 text-blue-600 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
+                  class="form-checkbox h-4 w-4 text-amber-600 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
                 />
                 <span class="text-gray-600 dark:text-gray-300 text-sm">{t('trimLines')}</span>
               </label>
@@ -138,7 +138,7 @@
                   type="checkbox"
                   checked={options.removeEmptyLines}
                   onchange={() => handleOptionChange('removeEmptyLines')}
-                  class="form-checkbox h-4 w-4 text-blue-600 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
+                  class="form-checkbox h-4 w-4 text-amber-600 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
                 />
                 <span class="text-gray-600 dark:text-gray-300 text-sm">{t('removeEmptyLines')}</span>
               </label>
@@ -147,7 +147,7 @@
                   type="checkbox"
                   checked={options.removeDuplicateLines}
                   onchange={() => handleOptionChange('removeDuplicateLines')}
-                  class="form-checkbox h-4 w-4 text-blue-600 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
+                  class="form-checkbox h-4 w-4 text-amber-600 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
                 />
                 <span class="text-gray-600 dark:text-gray-300 text-sm">{t('removeDuplicateLines')}</span>
               </label>
@@ -156,7 +156,7 @@
                   type="checkbox"
                   checked={options.removeExtraSpaces}
                   onchange={() => handleOptionChange('removeExtraSpaces')}
-                  class="form-checkbox h-4 w-4 text-blue-600 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
+                  class="form-checkbox h-4 w-4 text-amber-600 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
                 />
                 <span class="text-gray-600 dark:text-gray-300 text-sm">{t('removeExtraSpaces')}</span>
               </label>
@@ -165,7 +165,7 @@
                   type="checkbox"
                   checked={options.removeHtml}
                   onchange={() => handleOptionChange('removeHtml')}
-                  class="form-checkbox h-4 w-4 text-blue-600 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
+                  class="form-checkbox h-4 w-4 text-amber-600 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
                 />
                 <span class="text-gray-600 dark:text-gray-300 text-sm">{t('removeHtmlTags')}</span>
               </label>
@@ -174,7 +174,7 @@
                   type="checkbox"
                   checked={options.removePunctuation}
                   onchange={() => handleOptionChange('removePunctuation')}
-                  class="form-checkbox h-4 w-4 text-blue-600 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
+                  class="form-checkbox h-4 w-4 text-amber-600 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
                 />
                 <span class="text-gray-600 dark:text-gray-300 text-sm">{t('removePunctuation')}</span>
               </label>
@@ -184,7 +184,7 @@
                     type="checkbox"
                     checked={options.lowercase}
                     onchange={() => handleOptionChange('lowercase')}
-                    class="form-checkbox h-4 w-4 text-blue-600 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
+                    class="form-checkbox h-4 w-4 text-amber-600 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
                   />
                   <span class="text-gray-600 dark:text-gray-300 text-sm">{t('lowercase')}</span>
                 </label>
@@ -193,7 +193,7 @@
                     type="checkbox"
                     checked={options.uppercase}
                     onchange={() => handleOptionChange('uppercase')}
-                    class="form-checkbox h-4 w-4 text-blue-600 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
+                    class="form-checkbox h-4 w-4 text-amber-600 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
                   />
                   <span class="text-gray-600 dark:text-gray-300 text-sm">{t('uppercase')}</span>
                 </label>

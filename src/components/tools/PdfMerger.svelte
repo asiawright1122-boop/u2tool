@@ -152,7 +152,7 @@
 {/each}
           </div>
 
-          <button onclick={handleMerge} disabled={pdfs.length < 2 || loading} class="w-full px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium">
+          <button onclick={handleMerge} disabled={pdfs.length < 2 || loading} class="w-full px-4 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium">
             {loading ? t('pdfMerger.merging') : t('pdfMerger.merge')}
           </button>
         

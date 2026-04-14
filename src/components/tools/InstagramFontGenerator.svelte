@@ -63,7 +63,7 @@
     <div class="space-y-6">
       <!-- Input -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('enterText')}
         </label>
         <textarea
@@ -92,7 +92,7 @@
               disabled={!input}
               class={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 copiedStyle === style.id
-                  ? 'bg-green-600 text-white'
+                  ? 'btn-success'
                   : 'bg-pink-600 text-white hover:bg-pink-700 disabled:opacity-50'
               }`}
             >

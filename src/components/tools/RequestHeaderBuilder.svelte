@@ -114,13 +114,13 @@
     <div class="space-y-6">
       <!-- Presets -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           Quick Presets
         </label>
         <div class="flex flex-wrap gap-2">
           <button
             onclick={() => applyPreset('json')}
-            class="px-3 py-1.5 text-sm bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-lg hover:bg-blue-200 dark:hover:bg-blue-900/50"
+            class="px-3 py-1.5 text-sm bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-lg hover:bg-amber-200 dark:hover:bg-amber-900/50"
           >
             JSON API
           </button>
@@ -132,7 +132,7 @@
           </button>
           <button
             onclick={() => applyPreset('cors')}
-            class="px-3 py-1.5 text-sm bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-lg hover:bg-purple-200 dark:hover:bg-purple-900/50"
+            class="px-3 py-1.5 text-sm bg-slate-100 dark:bg-slate-900/30 text-slate-700 dark:text-slate-300 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-900/50"
           >
             CORS Preflight
           </button>
@@ -148,7 +148,7 @@
       <!-- Headers List -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             Headers ({enabledHeaders.length} active)
           </label>
           <div class="flex gap-2">
@@ -220,7 +220,7 @@
 
       <!-- Output Format -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {tCommon('output')} Format
         </label>
         <div class="flex flex-wrap gap-2">
@@ -229,7 +229,7 @@
               onclick={() => outputFormat = fmt}
               class={`px-3 py-1.5 text-sm rounded-lg transition-colors ${
                 outputFormat === fmt
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
               }`}
             >
@@ -242,13 +242,13 @@
       <!-- Output -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {tCommon('output')}
           </label>
           <button
             onclick={handleCopy}
             disabled={!output}
-            class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 disabled:opacity-50"
+            class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400 disabled:opacity-50"
           >
             {copied ? tCommon('copied') : tCommon('copy')}
           </button>
@@ -274,7 +274,7 @@
                   enabled: true,
                 }];
               }}
-              class="p-2 text-left text-xs bg-gray-50 dark:bg-gray-800 rounded border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500"
+              class="p-2 text-left text-xs bg-gray-50 dark:bg-gray-800 rounded border border-gray-200 dark:border-gray-700 hover:border-amber-400 dark:hover:border-amber-500"
             >
               <span class="font-medium text-gray-900 dark:text-white">{h.key}</span>
               <span class="block text-gray-500 dark:text-gray-400 truncate">{h.values[0]}</span>

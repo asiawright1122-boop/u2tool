@@ -372,7 +372,7 @@ We may update this Privacy Policy from time to time. We will notify you of any c
             </h3>
             <button
               onclick={() => copyToClipboard(generateHtmlCode(), 'html')}
-              class="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
+              class="px-3 py-1 text-sm bg-amber-600 text-white rounded hover:bg-amber-700"
             >
               {copied === 'html' ? t('copied') : t('copy')}
             </button>
@@ -389,7 +389,7 @@ We may update this Privacy Policy from time to time. We will notify you of any c
             </h3>
             <button
               onclick={() => copyToClipboard(generateCssCode(), 'css')}
-              class="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
+              class="px-3 py-1 text-sm bg-amber-600 text-white rounded hover:bg-amber-700"
             >
               {copied === 'css' ? t('copied') : t('copy')}
             </button>
@@ -406,7 +406,7 @@ We may update this Privacy Policy from time to time. We will notify you of any c
             </h3>
             <button
               onclick={() => copyToClipboard(generatePrivacyPolicy(), 'policy')}
-              class="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
+              class="px-3 py-1 text-sm bg-amber-600 text-white rounded hover:bg-amber-700"
             >
               {copied === 'policy' ? t('copied') : t('copy')}
             </button>

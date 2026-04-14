@@ -79,14 +79,14 @@
           <input
             type="checkbox"
             bind:checked={showOriginal}
-            class="w-4 h-4 text-blue-600 rounded"
+            class="w-4 h-4 text-amber-600 rounded"
           />
           <span class="text-sm text-gray-600 dark:text-gray-300">{t('showOriginal')}</span>
         </label>
 
         <button
           onclick={loadSample}
-          class="text-sm text-blue-600 hover:text-blue-800"
+          class="text-sm text-amber-600 hover:text-amber-800"
         >
           {t('loadSample')}
         </button>
@@ -111,7 +111,7 @@
             {#if output}
 <button
                 onclick={handleCopy}
-                class="text-sm text-blue-600 hover:text-blue-800"
+                class="text-sm text-amber-600 hover:text-amber-800"
               >
                 {t('copy')}
               </button>
@@ -128,7 +128,7 @@
       <div class="flex justify-center">
         <button
           onclick={handleConvert}
-          class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          class="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
         >
           {t('convert')}
         </button>
@@ -139,7 +139,7 @@
         <div class="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-2 text-sm">
           {#each Object.entries(NATO_ALPHABET).slice(0, 26) as [letter, word] (letter)}
 <div  class="p-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded text-center">
-              <div class="font-bold text-blue-600">{letter}</div>
+              <div class="font-bold text-amber-600">{letter}</div>
               <div class="text-gray-600 dark:text-gray-300 text-xs">{word}</div>
             </div>
 {/each}

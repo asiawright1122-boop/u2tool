@@ -186,7 +186,7 @@
       <!-- Upload Area -->
       <div
         onclick={() => fileInputRef?.click()}
-        class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-6 text-center cursor-pointer hover:border-blue-500"
+        class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-6 text-center cursor-pointer hover:border-amber-500"
       >
         <input
           bind:this={fileInputRef}
@@ -239,14 +239,14 @@
                   {#if img.convertedDataUrl}
 <button
                       onclick={() => downloadSingle(img)}
-                      class="px-3 py-1 bg-green-600 hover:bg-green-700 text-white text-sm rounded"
+                      class="px-3 py-1 bg-emerald-500 hover:bg-green-700 text-white text-sm rounded"
                     >
                       {tg('download')}
                     </button>
 {/if}
                   <button
                     onclick={() => removeImage(img.id)}
-                    class="px-3 py-1 bg-red-500 hover:bg-red-600 text-white text-sm rounded"
+                    class="px-3 py-1 bg-red-500 hover:bg-rose-500 text-white text-sm rounded"
                   >
                     ✕
                   </button>
@@ -268,7 +268,7 @@
             {isProcessing ? t('processing') : t('convert')}
           </button>
           {#if images.some((img) => img.convertedDataUrl)}
-<button onclick={downloadAll} class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg">
+<button onclick={downloadAll} class="px-6 py-2 bg-emerald-500 hover:bg-green-700 text-white rounded-lg">
               {t('downloadAll')}
             </button>
 {/if}

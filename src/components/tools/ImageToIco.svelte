@@ -152,7 +152,7 @@
     <div class="space-y-6">
       <!-- Upload -->
       {#if !image}
-<label class="block border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-blue-500">
+<label class="block border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-amber-500">
           <input type="file" accept="image/*" onchange={handleImageUpload} class="hidden" />
           <div class="text-4xl mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/></svg></div>
           <p class="text-gray-600 dark:text-gray-300">{t('dropzone')}</p>
@@ -168,7 +168,7 @@
                   onclick={() => toggleSize(size)}
                   class={`px-4 py-2 rounded-lg ${
                     selectedSizes.includes(size)
-                      ? 'bg-blue-600 text-white'
+                      ? 'bg-amber-600 text-white'
                       : 'bg-gray-200 dark:bg-gray-700'
                   }`}
                 >
@@ -186,7 +186,7 @@
 <div 
                   class={`text-center p-2 rounded-lg ${
                     selectedSizes.includes(preview.size)
-                      ? 'bg-blue-50 dark:bg-blue-900/20 ring-2 ring-blue-500'
+                      ? 'bg-amber-50 dark:bg-amber-900/20 ring-2 ring-amber-500'
                       : 'bg-gray-100 dark:bg-gray-800'
                   }`}
                   style="min-width: {Math.max(preview.size + 16, 60)}"
@@ -202,7 +202,7 @@
                   <p class="text-xs mt-1 text-gray-600 dark:text-gray-400">{preview.size}px</p>
                   <button
                     onclick={() => downloadPng(preview.size)}
-                    class="text-xs text-blue-600 hover:underline mt-1"
+                    class="text-xs text-amber-600 hover:underline mt-1"
                   >
                     PNG
                   </button>
@@ -216,7 +216,7 @@
             <button
               onclick={downloadIco}
               disabled={selectedSizes.length === 0}
-              class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white disabled:bg-gray-400 disabled:cursor-not-allowed rounded-lg"
+              class="px-6 py-2 bg-emerald-500 hover:bg-green-700 text-white disabled:bg-gray-400 disabled:cursor-not-allowed rounded-lg"
             >
               {t('downloadIco')} ({selectedSizes.length} {t('sizes')})
             </button>

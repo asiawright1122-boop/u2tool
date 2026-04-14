@@ -86,7 +86,7 @@
           <span class="font-mono text-lg break-all select-all text-gray-900 dark:text-gray-100">{password}</span>
           <button
             onclick={copyPassword}
-            class={`ml-4 px-4 py-2 rounded text-white ${copied ? 'bg-green-600' : 'bg-blue-600 hover:bg-blue-700'}`}
+            class={`ml-4 px-4 py-2 rounded text-white ${copied ? 'bg-emerald-500' : 'bg-amber-600 hover:bg-amber-700'}`}
           >
             {copied ? t('copied') : t('copy')}
           </button>

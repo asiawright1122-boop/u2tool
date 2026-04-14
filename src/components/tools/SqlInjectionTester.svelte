@@ -48,8 +48,8 @@
     <div class="space-y-6">
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Code to Analyze</label>
-          <button onclick={loadExample} class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400">{t('loadExample')}</button>
+          <label class="tool-label">Code to Analyze</label>
+          <button onclick={loadExample} class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400">{t('loadExample')}</button>
         </div>
         <textarea bind:value={code} placeholder={t("inputPlaceholder")}
           class="w-full h-48 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm resize-none"></textarea>
@@ -73,13 +73,13 @@
 <div  class={`p-4 rounded-lg border-l-4 ${
                   issue.severity === 'high' ? 'border-red-500 bg-red-50 dark:bg-red-900/20' :
                   issue.severity === 'medium' ? 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20' :
-                  'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
+                  'border-amber-500 bg-amber-50 dark:bg-amber-900/20'
                 }`}>
                   <div class="flex items-center gap-2 mb-1">
                     <span class={`px-2 py-0.5 text-xs font-medium rounded ${
                       issue.severity === 'high' ? 'bg-red-100 text-red-700' :
                       issue.severity === 'medium' ? 'bg-yellow-100 text-yellow-700' :
-                      'bg-blue-100 text-blue-700'
+                      'bg-amber-100 text-amber-700'
                     }`}>{issue.severity.toUpperCase()}</span>
                     <span class="font-medium text-gray-900 dark:text-white">{issue.type}</span>
                   </div>
@@ -90,9 +90,9 @@
             </div>
 {/if}
 
-          <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-            <h4 class="text-sm font-medium text-blue-800 dark:text-blue-300 mb-2">Safe Query Examples</h4>
-            <pre class="text-xs font-mono text-blue-700 dark:text-blue-400 whitespace-pre-wrap">
+          <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+            <h4 class="text-sm font-medium text-amber-800 dark:text-amber-300 mb-2">Safe Query Examples</h4>
+            <pre class="text-xs font-mono text-amber-700 dark:text-amber-400 whitespace-pre-wrap">
 {`// Parameterized query (Node.js)
 db.query('SELECT * FROM users WHERE id = ?', [userId]);
 

@@ -59,7 +59,7 @@
     <div class="space-y-4">
       <div class="flex items-center gap-4">
         <label class="text-sm text-gray-700 dark:text-white" for="text-width">{t('textWrapper.width')}:</label>
-        <input type="number" id="text-width" name="width" value={width} onchange={(e) => width = Number(e.target.value)} min={20} max={200} class="w-24 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded text-gray-900 dark:text-white" />
+        <input type="number" id="text-width" name="width" bind:value={width} min={20} max={200} class="w-24 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded text-gray-900 dark:text-white" />
         <span class="text-gray-600 dark:text-gray-300">{t('textWrapper.chars')}</span>
       </div>
       <div class="grid md:grid-cols-2 gap-4">
@@ -73,7 +73,7 @@
         </div>
       </div>
       <div class="flex gap-2">
-        <button onclick={wrap} class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">{t('textWrapper.wrap')}</button>
+        <button onclick={wrap} class="px-4 py-2 bg-amber-600 text-white rounded hover:bg-amber-700">{t('textWrapper.wrap')}</button>
         <button onclick={copy} class="px-4 py-2 bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-white rounded hover:bg-gray-300 dark:hover:bg-gray-700">{copied ? t('copied') : t('copy')}</button>
       </div>
     </div>

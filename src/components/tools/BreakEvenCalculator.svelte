@@ -115,8 +115,8 @@
 
     <div class="space-y-6">
       <!-- Info -->
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-        <p class="text-sm text-blue-700 dark:text-blue-300">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+        <p class="text-sm text-amber-700 dark:text-amber-300">
           {t('info')}
         </p>
       </div>
@@ -124,7 +124,7 @@
       <!-- Input Form -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label for="breakeven-fixed-costs" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="breakeven-fixed-costs" class="tool-label">
             {t('fixedCosts')}
           </label>
           <div class="relative">
@@ -135,14 +135,14 @@
               type="number"
               bind:value={fixedCosts}
               placeholder="10000"
-              class="w-full pl-8 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="w-full pl-8 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
             />
           </div>
           <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">{t('fixedCostsHint')}</p>
         </div>
 
         <div>
-          <label for="breakeven-variable-cost" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="breakeven-variable-cost" class="tool-label">
             {t('variableCostPerUnit')}
           </label>
           <div class="relative">
@@ -153,14 +153,14 @@
               type="number"
               bind:value={variableCostPerUnit}
               placeholder="25"
-              class="w-full pl-8 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="w-full pl-8 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
             />
           </div>
           <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">{t('variableCostHint')}</p>
         </div>
 
         <div>
-          <label for="breakeven-selling-price" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="breakeven-selling-price" class="tool-label">
             {t('sellingPricePerUnit')}
           </label>
           <div class="relative">
@@ -171,7 +171,7 @@
               type="number"
               bind:value={sellingPricePerUnit}
               placeholder="50"
-              class="w-full pl-8 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="w-full pl-8 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
             />
           </div>
         </div>
@@ -188,7 +188,7 @@
       <div class="flex justify-center gap-4">
         <button
           onclick={handleCalculate}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium text-white"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium text-white"
         >
           {t('calculate')}
         </button>
@@ -213,19 +213,19 @@
               <p class="text-xs text-green-600 dark:text-green-400">{t('units')}</p>
             </div>
             
-            <div class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-              <p class="text-sm text-blue-600 dark:text-blue-400">{t('breakEvenRevenue')}</p>
-              <p class="text-2xl font-bold text-blue-700 dark:text-blue-300">
+            <div class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+              <p class="text-sm text-amber-600 dark:text-amber-400">{t('breakEvenRevenue')}</p>
+              <p class="text-2xl font-bold text-amber-700 dark:text-amber-300">
                 {formatCurrency(result.breakEvenRevenue)}
               </p>
             </div>
             
-            <div class="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg">
-              <p class="text-sm text-purple-600 dark:text-purple-400">{t('contributionMargin')}</p>
-              <p class="text-2xl font-bold text-purple-700 dark:text-purple-300">
+            <div class="p-4 bg-slate-50 dark:bg-slate-900/20 border border-slate-200 dark:border-slate-800 rounded-lg">
+              <p class="text-sm text-slate-600 dark:text-slate-400">{t('contributionMargin')}</p>
+              <p class="text-2xl font-bold text-slate-700 dark:text-slate-300">
                 {formatCurrency(result.contributionMargin)}
               </p>
-              <p class="text-xs text-purple-600 dark:text-purple-400">{t('perUnit')}</p>
+              <p class="text-xs text-slate-600 dark:text-slate-400">{t('perUnit')}</p>
             </div>
             
             <div class="p-4 bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-lg">

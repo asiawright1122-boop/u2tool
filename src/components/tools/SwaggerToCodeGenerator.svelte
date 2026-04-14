@@ -111,12 +111,12 @@
       <!-- Input -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             OpenAPI/Swagger Spec (JSON)
           </label>
           <button
             onclick={loadExample}
-            class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400"
+            class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"
           >
             {t('loadExample')}
           </button>
@@ -129,7 +129,7 @@
 
       <!-- Language Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           Target Language
         </label>
         <div class="flex flex-wrap gap-2">
@@ -138,7 +138,7 @@
               onclick={() => language = lang}
               class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 language === lang
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
               }`}
             >
@@ -161,12 +161,12 @@
       {#if result}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="tool-label">
               Generated API Client
             </label>
             <button
               onclick={handleCopy}
-              class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+              class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
             >
               {copied ? tCommon('copied') : tCommon('copy')}
             </button>
@@ -178,9 +178,9 @@
 {/if}
 
       <!-- Info -->
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h4 class="text-sm font-medium text-blue-800 dark:text-blue-300 mb-2">Supported Features</h4>
-        <ul class="text-sm text-blue-700 dark:text-blue-400 space-y-1">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+        <h4 class="text-sm font-medium text-amber-800 dark:text-amber-300 mb-2">Supported Features</h4>
+        <ul class="text-sm text-amber-700 dark:text-amber-400 space-y-1">
           <li>• OpenAPI 3.0 and Swagger 2.0 specs</li>
           <li>• Path parameters and query parameters</li>
           <li>• Request body for POST/PUT/PATCH</li>

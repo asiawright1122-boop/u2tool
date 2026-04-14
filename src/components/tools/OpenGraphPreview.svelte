@@ -237,7 +237,7 @@
               <button
                 onclick={fetchOgTags}
                 disabled={loading || !fetchUrl.trim()}
-                class="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed rounded transition-colors"
+                class="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-gray-600 disabled:cursor-not-allowed rounded transition-colors"
               >
                 {loading ? t('openGraphPreview.fetching') : t('openGraphPreview.fetchButton')}
               </button>
@@ -321,19 +321,19 @@
       <div class="flex gap-2">
         <button
           onclick={() => previewType = 'facebook'}
-          class={`px-4 py-2 rounded ${previewType === 'facebook' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
+          class={`px-4 py-2 rounded ${previewType === 'facebook' ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
         >
           {t('openGraphPreview.platform.facebook')}
         </button>
         <button
           onclick={() => previewType = 'twitter'}
-          class={`px-4 py-2 rounded ${previewType === 'twitter' ? 'bg-blue-400 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
+          class={`px-4 py-2 rounded ${previewType === 'twitter' ? 'bg-amber-400 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
         >
           {t('openGraphPreview.platform.twitter')}
         </button>
         <button
           onclick={() => previewType = 'linkedin'}
-          class={`px-4 py-2 rounded ${previewType === 'linkedin' ? 'bg-blue-700 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
+          class={`px-4 py-2 rounded ${previewType === 'linkedin' ? 'bg-amber-700 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
         >
           {t('openGraphPreview.platform.linkedin')}
         </button>
@@ -387,7 +387,7 @@
           <label class="block text-sm font-medium">{t('openGraphPreview.generatedCode')}</label>
           <button
             onclick={handleCopy}
-            class="px-3 py-1 text-sm bg-blue-600 hover:bg-blue-700 rounded transition-colors"
+            class="px-3 py-1 text-sm bg-amber-600 hover:bg-amber-700 rounded transition-colors"
           >
             {copied ? t('copied') : t('copy')}
           </button>

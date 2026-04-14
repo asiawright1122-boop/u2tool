@@ -170,7 +170,7 @@
               onclick={() => isRoundTrip = false}
               class={`flex-1 px-4 py-2 rounded-lg font-medium transition-colors ${
                 !isRoundTrip
-                  ? 'bg-blue-500 text-white'
+                  ? 'bg-amber-500 text-white'
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300'
               }`}
             >
@@ -180,7 +180,7 @@
               onclick={() => isRoundTrip = true}
               class={`flex-1 px-4 py-2 rounded-lg font-medium transition-colors ${
                 isRoundTrip
-                  ? 'bg-blue-500 text-white'
+                  ? 'bg-amber-500 text-white'
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300'
               }`}
             >
@@ -240,7 +240,7 @@
           </div>
 
           <!-- Trip Summary -->
-          <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+          <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg border border-amber-200 dark:border-amber-800">
             <div class="text-sm text-gray-600 dark:text-gray-400">
               {t('tripSummary', {
                 distance: isRoundTrip ? parseFloat(distance) * 2 : parseFloat(distance),
@@ -348,7 +348,7 @@
               onclick={() => isRoundTrip = false}
               class={`flex-1 px-4 py-2 rounded-lg font-medium transition-colors ${
                 !isRoundTrip
-                  ? 'bg-blue-500 text-white'
+                  ? 'bg-amber-500 text-white'
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300'
               }`}
             >
@@ -358,7 +358,7 @@
               onclick={() => isRoundTrip = true}
               class={`flex-1 px-4 py-2 rounded-lg font-medium transition-colors ${
                 isRoundTrip
-                  ? 'bg-blue-500 text-white'
+                  ? 'bg-amber-500 text-white'
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300'
               }`}
             >
@@ -418,7 +418,7 @@
           </div>
 
           <!-- Trip Summary -->
-          <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+          <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg border border-amber-200 dark:border-amber-800">
             <div class="text-sm text-gray-600 dark:text-gray-400">
               {t('tripSummary', {
                 distance: isRoundTrip ? parseFloat(distance) * 2 : parseFloat(distance),

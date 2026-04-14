@@ -64,7 +64,7 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('targetDuration')} ({t('minutes')})
           </label>
           <input
@@ -78,7 +78,7 @@
           />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('wordsPerMinute')}
           </label>
           <input
@@ -115,7 +115,7 @@
           class={`px-8 py-3 rounded-lg font-medium transition-colors ${
             isRunning
               ? 'bg-yellow-500 hover:bg-yellow-600 text-white'
-              : 'bg-green-500 hover:bg-green-600 text-white'
+              : 'bg-green-500 hover:btn-success'
           }`}
         >
           {isRunning ? t('pause') : t('start')}

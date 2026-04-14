@@ -122,7 +122,7 @@
 
       <div class="flex gap-4">
         <button onclick={analyzeText}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-medium transition-colors">
           {t('analyzeText')}
         </button>
         <button onclick={() => fileInputRef?.click()}
@@ -148,7 +148,7 @@
                 <div class="flex justify-between items-center">
                   <span class="font-medium text-gray-900 dark:text-white">{result.encoding}</span>
                   <span class={`px-2 py-1 rounded text-sm text-white ${
-                    result.confidence >= 90 ? 'bg-green-600' : result.confidence >= 70 ? 'bg-yellow-600' : 'bg-gray-500 dark:bg-gray-600'
+                    result.confidence >= 90 ? 'bg-emerald-500' : result.confidence >= 70 ? 'bg-yellow-600' : 'bg-gray-500 dark:bg-gray-600'
                   }`}>{result.confidence}% {t('confidence')}</span>
                 </div>
                 <div class="text-gray-600 dark:text-gray-300 text-sm mt-1">{result.details}</div>

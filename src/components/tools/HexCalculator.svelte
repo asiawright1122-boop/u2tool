@@ -101,7 +101,7 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('operation')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -110,7 +110,7 @@
               onclick={() => operation = op.value}
               class={`px-3 py-2 rounded-lg font-mono transition-colors ${
                 operation === op.value
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
@@ -142,7 +142,7 @@
 
       <button
         onclick={calculate}
-        class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        class="w-full px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
       >
         {tc('calculate')}
       </button>
@@ -166,7 +166,7 @@
               </div>
               <div>
                 <div class="text-sm text-gray-600 dark:text-gray-400">{t('decimal')}</div>
-                <div class="text-xl font-mono font-bold text-blue-600 dark:text-blue-400">
+                <div class="text-xl font-mono font-bold text-amber-600 dark:text-amber-400">
                   {result.decimal}
                 </div>
               </div>

@@ -394,7 +394,7 @@
         </div>
     </div>
     <div
-        class="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300 mt-4"
+        class="p-3 bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-lg text-sm text-amber-700 dark:text-amber-300 mt-4"
     >
         <p class="font-medium mb-1">
             <svg
@@ -413,7 +413,7 @@
             >
             {t("tipsTitle")}
         </p>
-        <ul class="space-y-0.5 text-blue-600 dark:text-blue-400">
+        <ul class="space-y-0.5 text-amber-600 dark:text-amber-400">
             <li>• {t("tip1")}</li>
             <li>• {t("tip2")}</li>
         </ul>

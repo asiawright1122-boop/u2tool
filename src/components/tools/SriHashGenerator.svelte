@@ -122,7 +122,7 @@
                 name="inputType"
                 checked={inputType === 'url'}
                 onchange={() => inputType = 'url'}
-                class="text-blue-600"
+                class="text-amber-600"
               />
               <span class="text-sm text-gray-700 dark:text-gray-300">{t('fromUrl')}</span>
             </label>
@@ -132,14 +132,14 @@
                 name="inputType"
                 checked={inputType === 'content'}
                 onchange={() => inputType = 'content'}
-                class="text-blue-600"
+                class="text-amber-600"
               />
               <span class="text-sm text-gray-700 dark:text-gray-300">{t('fromContent')}</span>
             </label>
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {inputType === 'url' ? t('urlInput') : t('contentInput')}
             </label>
             {#if inputType === 'url'}
@@ -158,7 +158,7 @@
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('algorithm')}
             </label>
             <select
@@ -176,7 +176,7 @@
             <button
               onclick={generate}
               disabled={loading}
-              class="flex-1 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium disabled:opacity-50"
+              class="flex-1 px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium disabled:opacity-50"
             >
               {loading ? t('generating') : t('generate')}
             </button>
@@ -204,7 +204,7 @@
                 </label>
                 <button
                   onclick={() => copyToClipboard(hash, 'hash')}
-                  class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                  class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
                 >
                   {copied === 'hash' ? t('copied') : t('copy')}
                 </button>
@@ -223,7 +223,7 @@
                 </label>
                 <button
                   onclick={() => copyToClipboard(getScriptTag(), 'script')}
-                  class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                  class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
                 >
                   {copied === 'script' ? t('copied') : t('copy')}
                 </button>
@@ -242,7 +242,7 @@
                 </label>
                 <button
                   onclick={() => copyToClipboard(getLinkTag(), 'link')}
-                  class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                  class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
                 >
                   {copied === 'link' ? t('copied') : t('copy')}
                 </button>
@@ -254,11 +254,11 @@
               </div>
             </div>
 
-            <div class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-              <h4 class="font-medium text-blue-800 dark:text-blue-200 mb-2">
+            <div class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+              <h4 class="font-medium text-amber-800 dark:text-amber-200 mb-2">
                 {t('whatIsSri')}
               </h4>
-              <p class="text-sm text-blue-700 dark:text-blue-300">
+              <p class="text-sm text-amber-700 dark:text-amber-300">
                 {t('sriExplanation')}
               </p>
             </div>

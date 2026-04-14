@@ -73,7 +73,7 @@
             type="number"
             value={min}
             onchange={(e) => min = Number(e.target.value)}
-            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none"
           />
         </div>
         <div>
@@ -82,7 +82,7 @@
             type="number"
             value={max}
             onchange={(e) => max = Number(e.target.value)}
-            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none"
           />
         </div>
         <div>
@@ -93,7 +93,7 @@
             min={1}
             max={1000}
             onchange={(e) => count = Math.min(1000, Math.max(1, Number(e.target.value)))}
-            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none"
           />
         </div>
         <div class="flex items-end">
@@ -111,7 +111,7 @@
       <div class="flex gap-2">
         <button
           onclick={generate}
-          class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors text-white"
+          class="px-4 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg transition-colors text-white"
         >
           {tg('generate')}
         </button>

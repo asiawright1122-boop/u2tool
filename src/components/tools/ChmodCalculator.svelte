@@ -68,7 +68,7 @@
     <div class="space-y-6">
       <div class="flex items-center gap-4">
         <label class="text-sm font-medium text-gray-900 dark:text-white">{t('chmod.octal')}:</label>
-        <input type="text" value={octal} onchange={(e) => handleOctal(e.target.value)} maxLength={3} class="w-24 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded font-mono text-xl text-center text-gray-900 dark:text-white" />
+        <input type="text" bind:value={octal} maxLength={3} class="w-24 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded font-mono text-xl text-center text-gray-900 dark:text-white" />
         <button onclick={() => copy(`chmod ${octal}`)} class="px-3 py-2 bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-white rounded hover:bg-gray-300 dark:hover:bg-gray-700">{copied ? '✓' : t('copy')}</button>
       </div>
       <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">

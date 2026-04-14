@@ -171,7 +171,7 @@
                     onclick={() => toggleSheet(file.id, sheet.name)}
                     class={`px-3 py-1 text-sm rounded-full transition-colors ${
                       sheet.selected
-                        ? 'bg-blue-600 text-white'
+                        ? 'bg-amber-600 text-white'
                         : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400'
                     }`}
                   >
@@ -188,7 +188,7 @@
       {#if files.length > 0}
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('excelMerger.mergeMode')}
             </label>
             <div class="flex gap-4">
@@ -232,7 +232,7 @@
 <button
           onclick={handleMerge}
           disabled={totalSelectedSheets === 0}
-          class="w-full px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
+          class="w-full px-4 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
         >
           {t('excelMerger.merge')} ({totalSelectedSheets} {t('excelMerger.sheets')})
         </button>

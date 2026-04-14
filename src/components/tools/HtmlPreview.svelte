@@ -50,7 +50,7 @@
       <div class="flex gap-2 mb-2">
         <button
           onclick={refreshPreview}
-          class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+          class="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition-colors"
         >
           {t('refresh')}
         </button>
@@ -67,7 +67,7 @@
           <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('htmlCode')}</label>
           <textarea
             bind:value={html}
-            class="w-full h-96 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            class="w-full h-96 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
             placeholder={t('placeholder')}
             spellCheck={false}></textarea>
         </div>

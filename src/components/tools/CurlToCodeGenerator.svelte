@@ -107,7 +107,7 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('convert')} → 
         </label>
         <select
@@ -126,12 +126,12 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="tool-label">
               cURL {t('input')}
             </label>
             <button
               onclick={() => curlCommand = exampleCurl}
-              class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400"
+              class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"
             >
               {t('sql.loadExample')}
             </button>
@@ -143,7 +143,7 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {language.charAt(0).toUpperCase() + language.slice(1)} {t('output')}
           </label>
           <textarea
@@ -157,14 +157,14 @@
       <div class="flex gap-3 flex-wrap">
         <button
           onclick={handleConvert}
-          class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+          class="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
         >
           {t('convert')}
         </button>
         {#if output}
 <button
             onclick={handleCopy}
-            class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium"
+            class="px-6 py-2 btn-success rounded-lg hover:bg-green-700 transition-colors font-medium"
           >
             {copied ? t('copied') : t('copy')}
           </button>

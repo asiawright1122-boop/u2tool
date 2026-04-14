@@ -60,7 +60,7 @@
 
     <div class="space-y-6">
       <div>
-        <label for="palindrome-input" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label for="palindrome-input" class="tool-label">
           {t('inputLabel')}
         </label>
         <textarea
@@ -143,13 +143,13 @@
         </div>
 {/if}
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h3 class="font-medium text-blue-800 dark:text-blue-300 mb-3">{t('examples')}</h3>
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+        <h3 class="font-medium text-amber-800 dark:text-amber-300 mb-3">{t('examples')}</h3>
         <div class="flex flex-wrap gap-2">
           {#each examples as example, i (i)}
 <button 
               onclick={() => input = example.text}
-              class="px-3 py-1 bg-white dark:bg-gray-800 border border-blue-200 dark:border-blue-700 rounded-full text-sm text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors"
+              class="px-3 py-1 bg-white dark:bg-gray-800 border border-amber-200 dark:border-amber-700 rounded-full text-sm text-amber-700 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900/50 transition-colors"
             >
               {example.text}
             </button>

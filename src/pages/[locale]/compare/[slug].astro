@@ -116,51 +116,58 @@ const collectionData = {
   <div class="main-content-with-sidebar main-content-with-mobile-nav">
     <Header client:load locale={locale} translations={headerTranslations} />
 
-    <main class="py-6 px-4 lg:px-0 lg:pr-6">
-      <div class="w-full max-w-6xl">
+    <main class="py-6 px-4 lg:px-6">
+      <div class="max-w-none mx-0">
         <div class="mb-6">
           <Breadcrumb locale={locale} items={breadcrumbItems} />
         </div>
 
-        <section class="rounded-3xl border border-slate-200/60 bg-gradient-to-br from-slate-50 via-white to-slate-100 shadow-xl dark:border-slate-800 dark:from-slate-900 dark:via-zinc-900 dark:to-black p-6 md:p-8 backdrop-blur-sm">
-          <h1 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">{guide.title}</h1>
-          <p class="mt-4 max-w-4xl text-base leading-7 text-slate-600 dark:text-slate-400">
-            {guide.description}
-          </p>
+        <!-- Hero Section -->
+        <section class="rounded-[2.5rem] border border-slate-200/60 glass shadow-2xl dark:border-white/10 dark:bg-slate-950/40 p-8 md:p-14 backdrop-blur-3xl relative overflow-hidden group">
+          <div class="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-amber-500/10 opacity-60"></div>
+          <div class="absolute -right-24 -top-24 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl group-hover:bg-amber-500/20 transition-all duration-700"></div>
+          <div class="relative z-10 w-full max-w-none">
+            <h1 class="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tight leading-[1.1]">{guide.title}</h1>
+            <p class="mt-6 max-w-4xl text-lg md:text-xl leading-relaxed text-slate-600 dark:text-slate-400 font-medium">
+              {guide.description}
+            </p>
 
-          <div class="mt-6 flex flex-wrap gap-2.5">
-            {guide.relatedCategories.map((category) => (
-              <a
-                href={category.href}
-                class="inline-flex items-center rounded-full border border-slate-200 bg-white/50 px-3.5 py-1.5 text-xs font-bold text-slate-700 transition-all hover:border-blue-400 hover:text-blue-600 dark:border-slate-800 dark:bg-slate-900/50 dark:text-slate-300 dark:hover:border-amber-500/50 dark:hover:text-amber-400 uppercase tracking-wider"
-              >
-                {category.name}
-              </a>
-            ))}
+            <div class="mt-10 flex flex-wrap gap-3">
+              {guide.relatedCategories.map((category) => (
+                <a
+                  href={category.href}
+                  class="inline-flex items-center rounded-full border border-slate-200 bg-white/60 px-5 py-2.5 text-[10px] font-black text-slate-700 transition-all hover:border-amber-400 hover:text-amber-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400 dark:hover:border-amber-500/50 dark:hover:text-amber-400 uppercase tracking-[0.2em] shadow-sm active:scale-95"
+                >
+                  {category.name}
+                </a>
+              ))}
+            </div>
           </div>
         </section>
 
-        <section class="mt-10 rounded-3xl border border-slate-200/60 bg-gradient-to-br from-white via-slate-50 to-slate-100 shadow-xl dark:border-slate-800 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 p-6 md:p-8 backdrop-blur-sm">
-          <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight flex items-center gap-2.5">
-            <span class="w-1.5 h-7 bg-blue-600 dark:bg-amber-500 rounded-full"></span>
+        <!-- Workflow Section -->
+        <section class="mt-12 glass-card p-8 md:p-12 transition-all hover:shadow-amber-500/10">
+          <h2 class="text-2xl md:text-3xl font-black text-slate-900 dark:text-white tracking-tight flex items-center gap-4">
+            <span class="w-1.5 h-10 bg-gradient-to-b from-amber-400 to-amber-600 rounded-full shadow-[0_0_15px_rgba(245,158,11,0.5)]"></span>
             {uiCopy.workflowTitle}
           </h2>
-          <div class="mt-8 grid gap-5 lg:grid-cols-2">
+          <div class="mt-12 grid gap-8 lg:grid-cols-2">
             {guide.workflows.map((workflow) => (
               <article
                 data-comparison-workflow={workflow.slug}
-                class="rounded-2xl border border-slate-200 bg-white/40 p-5 backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/40 hover:shadow-lg transition-all duration-300"
+                class="rounded-[2rem] border border-slate-200 dark:border-white/5 bg-slate-100/30 dark:bg-white/[0.02] p-8 backdrop-blur-md hover:border-amber-500/40 transition-all duration-500 group/workflow shadow-sm relative overflow-hidden h-full flex flex-col"
               >
-                <h3 class="text-base font-bold text-slate-900 dark:text-white uppercase tracking-tight">
+                <div class="absolute inset-0 bg-gradient-to-tr from-amber-500/5 to-transparent opacity-0 group-hover/workflow:opacity-100 transition-opacity duration-500"></div>
+                <h3 class="text-[10px] font-black text-amber-600 dark:text-amber-500/80 uppercase tracking-[0.3em] mb-6">
                   {workflow.title}
                 </h3>
-                <div class="mt-4 flex flex-wrap gap-2">
+                <div class="mt-auto flex flex-wrap gap-3">
                   {workflow.tools.map((tool) => (
                     <a
                       href={tool.href}
                       data-comparison-tool={tool.slug}
                       title={tool.description || tool.name}
-                      class="inline-flex items-center rounded-full border border-slate-200 bg-white/50 px-3.5 py-1.5 text-xs font-bold text-slate-700 transition-all hover:border-amber-400 hover:text-amber-600 dark:border-slate-700 dark:bg-slate-800/50 dark:text-slate-300 dark:hover:border-amber-500/50 dark:hover:text-amber-400"
+                      class="inline-flex items-center rounded-2xl border border-slate-200/60 bg-white/80 px-5 py-3 text-xs font-bold text-slate-700 transition-all hover:border-amber-500/50 hover:text-amber-600 dark:border-white/10 dark:bg-slate-900/60 dark:text-slate-300 dark:hover:border-amber-500/50 dark:hover:text-amber-400 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-95"
                     >
                       {tool.name}
                     </a>
@@ -171,49 +178,53 @@ const collectionData = {
           </div>
         </section>
 
-        <section class="mt-10 rounded-3xl border border-slate-200/60 bg-white/40 p-6 md:p-8 shadow-xl backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/40">
-          <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight flex items-center gap-2.5">
-            <span class="w-1.5 h-7 bg-blue-600 dark:bg-amber-500 rounded-full"></span>
-            {uiCopy.tableTitle}
-          </h2>
-          <div class="mt-8 overflow-x-auto overflow-y-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-950/20">
-            <table class="w-full text-sm min-w-[800px] table-auto">
+        <!-- Comparison Table Section -->
+        <section class="mt-12 glass-card p-0 md:p-0 shadow-2xl transition-all hover:shadow-amber-500/10 overflow-hidden border-none cursor-default">
+          <div class="p-8 md:p-12 pb-0">
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900 dark:text-white tracking-tight flex items-center gap-4">
+              <span class="w-1.5 h-10 bg-gradient-to-b from-amber-400 to-amber-600 rounded-full shadow-[0_0_15px_rgba(245,158,11,0.5)]"></span>
+              {uiCopy.tableTitle}
+            </h2>
+          </div>
+          
+          <div class="mt-10 overflow-x-auto border-t border-slate-200 dark:border-white/10 bg-white/40 dark:bg-slate-950/40 backdrop-blur-xl relative">
+            <table class="w-full text-sm min-w-[900px] table-fixed border-collapse">
               <thead>
-                <tr class="text-left text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400 border-b border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50">
-                  <th class="px-6 py-4 font-bold">{uiCopy.tableToolLabel}</th>
-                  <th class="px-6 py-4 font-bold border-l border-slate-200/50 dark:border-slate-800/50">{uiCopy.workflowTitle}</th>
-                  <th class="px-6 py-4 font-bold border-l border-slate-200/50 dark:border-slate-800/50">{uiCopy.tableCategoryLabel}</th>
-                  <th class="px-6 py-4 font-bold border-l border-slate-200/50 dark:border-slate-800/50 text-right">{uiCopy.routeLabel}</th>
+                <tr class="text-left text-[10px] font-black uppercase tracking-[0.25em] text-slate-400/80 dark:text-slate-500 border-b border-slate-200 dark:border-white/10 glass-nav !bg-slate-50/90 dark:!bg-slate-950/95 sticky top-0 z-20">
+                  <th class="px-10 py-6 w-2/5">{uiCopy.tableToolLabel}</th>
+                  <th class="px-10 py-6 w-1/5 border-l border-slate-200/50 dark:border-white/10">{uiCopy.workflowTitle}</th>
+                  <th class="px-10 py-6 w-1/5 border-l border-slate-200/50 dark:border-white/10">{uiCopy.tableCategoryLabel}</th>
+                  <th class="px-10 py-6 w-[160px] border-l border-slate-200/50 dark:border-white/10 text-center">{uiCopy.routeLabel}</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-slate-200/60 dark:divide-slate-800/60">
+              <tbody class="divide-y divide-slate-200 dark:divide-white/5">
                 {guide.workflows.flatMap((workflow) =>
                   workflow.tools.map((tool) => (
-                    <tr class="hover:bg-blue-50/30 dark:hover:bg-amber-500/5 transition-colors group">
-                      <td class="px-6 py-5 min-w-[240px]">
-                        <div class="flex flex-col gap-1.5">
-                          <span class="font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-amber-400 transition-colors">
+                    <tr class="hover:bg-amber-500/[0.03] dark:hover:bg-amber-500/[0.05] transition-all duration-300 group/row">
+                      <td class="px-10 py-8">
+                        <div class="flex flex-col gap-2">
+                          <span class="font-black text-lg text-slate-900 dark:text-white group-hover/row:text-amber-600 dark:group-hover/row:text-amber-500 transition-colors tracking-tight">
                             {tool.name}
                           </span>
-                          <span class="text-xs leading-5 text-slate-500 dark:text-slate-400 max-w-sm line-clamp-1">
+                          <span class="text-xs leading-relaxed text-slate-500 dark:text-slate-400 max-w-sm line-clamp-2">
                             {tool.description}
                           </span>
                         </div>
                       </td>
-                      <td class="px-6 py-5 border-l border-slate-200/30 dark:border-slate-800/30 w-max">
-                        <span class="text-xs font-bold text-slate-500 dark:text-slate-500 uppercase tracking-wider">
+                      <td class="px-10 py-8 border-l border-slate-200/50 dark:border-white/5">
+                        <span class="inline-block text-[9px] font-black text-amber-700 dark:text-amber-500/80 uppercase tracking-[.15em] bg-amber-500/10 dark:bg-amber-500/5 px-3 py-1.5 rounded-lg border border-amber-500/20 shadow-sm">
                           {workflow.title}
                         </span>
                       </td>
-                      <td class="px-6 py-5 w-auto border-l border-slate-200/30 dark:border-slate-800/30">
-                        <span class="text-xs font-bold text-slate-400 dark:text-slate-600 uppercase tracking-widest bg-slate-100 dark:bg-slate-900 px-2 py-0.5 rounded border border-slate-200/50 dark:border-slate-800/50">
+                      <td class="px-10 py-8 border-l border-slate-200/50 dark:border-white/5">
+                        <span class="text-[10px] font-black text-slate-700 dark:text-amber-200/70 uppercase tracking-widest">
                           {tool.categoryName}
                         </span>
                       </td>
-                      <td class="px-6 py-5 w-min border-l border-slate-200/30 dark:border-slate-800/30 text-right">
+                      <td class="px-10 py-8 border-l border-slate-200/50 dark:border-white/5 text-center">
                         <a
                           href={tool.href}
-                          class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-slate-950 dark:bg-white text-white dark:text-slate-950 text-[10px] font-black uppercase tracking-widest border border-slate-800 dark:border-transparent transition-all hover:bg-black dark:hover:bg-slate-100 hover:shadow-lg dark:hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]"
+                          class="btn-primary !px-5 !py-2.5 !text-[9px] !rounded-xl active:scale-95"
                         >
                           {uiCopy.routeLabel}
                         </a>

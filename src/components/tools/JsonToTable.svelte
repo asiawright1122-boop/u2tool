@@ -142,7 +142,7 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('jsonInput')}
         </label>
         <textarea
@@ -159,7 +159,7 @@
 
       <button
         onclick={convert}
-        class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+        class="px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
       >
         {t('convert')}
       </button>
@@ -181,7 +181,7 @@
             </button>
             <button
               onclick={downloadCsv}
-              class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm"
+              class="px-4 py-2 btn-success rounded-lg hover:bg-green-700 transition-colors text-sm"
             >
               {t('downloadCsv')}
             </button>

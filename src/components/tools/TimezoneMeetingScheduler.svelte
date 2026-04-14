@@ -99,7 +99,7 @@
 
               <div class={`p-3 rounded-lg border ${
                 idx === 0 ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800' :
-                allWorking ? 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800' :
+                allWorking ? 'bg-amber-50 dark:bg-amber-900/20 border-amber-200 dark:border-amber-800' :
                 'bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700'
               }`}>
                 <div class="flex justify-between items-center mb-2">
@@ -110,7 +110,7 @@
 <span class="text-xs px-2 py-0.5 bg-green-500 text-white rounded">{t('best')}</span>
 {/if}
                   {#if allWorking}
-idx !== 0 && <span class="text-xs px-2 py-0.5 bg-blue-500 text-white rounded">{t('allWorking')}</span>
+idx !== 0 && <span class="text-xs px-2 py-0.5 bg-amber-500 text-white rounded">{t('allWorking')}</span>
 {/if}
                 </div>
                 <div class="flex flex-wrap gap-3 text-sm">

@@ -89,26 +89,26 @@
 
 
     <div class="space-y-4">
-      <div class="flex flex-wrap gap-4 items-center">
-        <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('intensity')}</label>
+      <div class="flex flex-wrap gap-6 items-center glass-card p-6 !rounded-2xl">
+        <div class="flex items-center gap-3">
+          <label class="tool-label !mb-0">{t('intensity')}</label>
           <select
             value={intensity}
             onchange={(e) => intensity = e.target.value as Intensity}
-            class="px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white"
+            class="tool-select !py-2 !px-4 min-w-[140px]"
           >
             <option value="light">{t('light')}</option>
             <option value="medium">{t('medium')}</option>
             <option value="strong">{t('strong')}</option>
           </select>
         </div>
-        <label class="flex items-center gap-2 cursor-pointer">
+        <label class="flex items-center gap-3 cursor-pointer group">
           <input
             type="checkbox"
             bind:checked={addFillers}
-            class="w-4 h-4"
+            class="w-5 h-5 rounded border-slate-300 dark:border-white/10 text-amber-500 focus:ring-amber-500/20 transition-all cursor-pointer"
           />
-          <span class="text-sm text-gray-600 dark:text-gray-300">{t('addFillers')}</span>
+          <span class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 group-hover:text-amber-500 transition-colors">{t('addFillers')}</span>
         </label>
       </div>
 
@@ -124,20 +124,21 @@
         </button>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('input')}</label>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="space-y-3">
+          <label class="tool-label">{tg('input')}</label>
           <textarea
             bind:value={input}
-            class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            class="tool-textarea h-80 resize-none"
             placeholder={t('inputPlaceholder')}></textarea>
         </div>
-        <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('output')}</label>
+        <div class="space-y-3">
+          <label class="tool-label">{tg('output')}</label>
           <textarea
             value={output}
             readOnly
-            class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"></textarea>
+            class="tool-textarea h-80 resize-none bg-slate-50/30 dark:bg-white/5 border-amber-500/10"
+            placeholder={t('outputPlaceholder')}></textarea>
         </div>
       </div>
     </div>

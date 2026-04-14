@@ -74,7 +74,7 @@
 
 
               <div class="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
-                <div class="text-sm font-medium text-blue-600 dark:text-blue-400 mb-2">
+                <div class="text-sm font-medium text-amber-600 dark:text-amber-400 mb-2">
                   {t('dnsLookup.records', { type })}
                 </div>
                 {#each typeResults as r, i (i)}

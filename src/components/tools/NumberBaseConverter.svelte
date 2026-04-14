@@ -81,7 +81,7 @@
             name="numberInput"
             type="text"
             bind:value={input}
-            class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+            class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
             placeholder={t('inputPlaceholder')}
           />
         </div>
@@ -92,7 +92,7 @@
             name="fromBase"
             value={fromBase}
             onchange={(e) => fromBase = Number(e.target.value)}
-            class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+            class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
           >
             {#each bases as { base, name } (base)}
 <option  value={base}>
@@ -126,7 +126,7 @@
               <button
                 onclick={() => copyValue(base, value)}
                 class={`text-sm px-3 py-1 rounded ${
-                  copied === String(base) ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'
+                  copied === String(base) ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'
                 }`}
               >
                 {copied === String(base) ? t('copied') : t('copy')}

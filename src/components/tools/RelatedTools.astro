@@ -96,7 +96,7 @@ function getToolName(slug: string): string {
       id="related-tools-heading"
       class="text-xl font-bold mb-6 text-slate-900 dark:text-white tracking-tight flex items-center gap-2"
     >
-      <span class="w-1.5 h-6 bg-blue-600 dark:bg-amber-500 rounded-full"></span>
+      <span class="w-1.5 h-6 bg-amber-600 dark:bg-amber-500 rounded-full"></span>
       {headingLabel}
     </h2>
 
@@ -107,15 +107,15 @@ function getToolName(slug: string): string {
           return (
             <a
               href={`/${locale}/tools/${tool.slug}`}
-              class="flex flex-col items-center p-4 bg-white/40 dark:bg-slate-900/40 border border-slate-200/60 dark:border-slate-800 rounded-2xl hover:border-blue-500/50 hover:shadow-xl dark:hover:border-amber-500/50 transition-all duration-300 group backdrop-blur-sm"
+              class="flex flex-col items-center p-4 bg-white/40 dark:bg-slate-900/40 border border-slate-200/60 dark:border-slate-800 rounded-2xl hover:border-amber-500/50 hover:shadow-xl dark:hover:border-amber-500/50 transition-all duration-300 group backdrop-blur-sm"
               title={toolName}
             >
               <span
-                class="text-blue-600 dark:text-amber-500 mb-3 group-hover:scale-110 transition-transform duration-300 inline-flex"
+                class="text-amber-600 dark:text-amber-500 mb-3 group-hover:scale-110 transition-transform duration-300 inline-flex"
                 aria-hidden="true"
                 set:html={getIconSvg(tool.icon, 28)}
               />
-              <span class="text-xs font-bold text-slate-700 dark:text-slate-300 text-center line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-amber-400 transition-colors uppercase tracking-tight">
+              <span class="text-xs font-bold text-slate-700 dark:text-slate-300 text-center line-clamp-2 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors uppercase tracking-tight">
                 {toolName}
               </span>
             </a>

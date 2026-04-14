@@ -122,7 +122,7 @@
           onclick={() => mode = 'toDpi'}
           class={`flex-1 px-4 py-2 rounded-lg border transition-colors ${
             mode === 'toDpi'
-              ? 'bg-blue-500 text-white border-blue-500'
+              ? 'bg-amber-500 text-white border-amber-500'
               : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600'
           }`}
         >
@@ -132,7 +132,7 @@
           onclick={() => mode = 'toPixels'}
           class={`flex-1 px-4 py-2 rounded-lg border transition-colors ${
             mode === 'toPixels'
-              ? 'bg-blue-500 text-white border-blue-500'
+              ? 'bg-amber-500 text-white border-amber-500'
               : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600'
           }`}
         >
@@ -205,7 +205,7 @@
 
           <!-- DPI Results -->
           {#if dpiResults}
-<div class="p-6 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg text-white">
+<div class="p-6 bg-gradient-to-r from-slate-500 to-pink-600 rounded-lg text-white">
               <div class="flex items-center justify-between mb-4">
                 <h3 class="text-lg font-medium">{t('calculatedDpi')}</h3>
                 <button
@@ -303,7 +303,7 @@
 
       <!-- Print Size Presets -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('commonPrintSizes')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -319,11 +319,11 @@
       </div>
 
       <!-- DPI Guide -->
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h4 class="text-sm font-medium text-blue-800 dark:text-blue-300 mb-2">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+        <h4 class="text-sm font-medium text-amber-800 dark:text-amber-300 mb-2">
           {t('dpiGuide')}
         </h4>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs text-blue-700 dark:text-blue-400">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs text-amber-700 dark:text-amber-400">
           <div>72 DPI: {t('screen')}</div>
           <div>150 DPI: {t('draft')}</div>
           <div>300 DPI: {t('print')}</div>

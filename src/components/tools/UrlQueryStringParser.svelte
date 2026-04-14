@@ -62,12 +62,12 @@
       <!-- Input -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             URL / Query String
           </label>
           <button
             onclick={() => url = exampleUrl}
-            class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400"
+            class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"
           >
             {t('sql.loadExample')}
           </button>
@@ -151,7 +151,7 @@
                 </h3>
                 <button
                   onclick={() => handleCopy(buildQueryString(), 'query')}
-                  class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                  class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
                 >
                   {copied === 'query' ? t('copied') : t('copy')} Query String
                 </button>
@@ -171,7 +171,7 @@
                     {#each parsed.params as param, idx (idx)}
 <tr  class="bg-white dark:bg-gray-800">
                         <td class="px-4 py-2 text-gray-500 dark:text-gray-400">{idx + 1}</td>
-                        <td class="px-4 py-2 font-mono text-blue-600 dark:text-blue-400">{param.key}</td>
+                        <td class="px-4 py-2 font-mono text-amber-600 dark:text-amber-400">{param.key}</td>
                         <td class="px-4 py-2 font-mono text-gray-600 dark:text-gray-400 max-w-xs truncate">
                           {param.value}
                         </td>
@@ -181,7 +181,7 @@
                         <td class="px-4 py-2">
                           <button
                             onclick={() => handleCopy(param.decoded, `param-${idx}`)}
-                            class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                            class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"
                           >
                             {copied === `param-${idx}` ? '✓' : t('copy')}
                           </button>
@@ -202,7 +202,7 @@
               </h3>
               <button
                 onclick={() => handleCopy(JSON.stringify(Object.fromEntries(parsed.params.map(p => [p.key, p.decoded])), null, 2), 'json')}
-                class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
               >
                 {copied === 'json' ? t('copied') : t('copy')}
               </button>

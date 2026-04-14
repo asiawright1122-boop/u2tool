@@ -77,11 +77,11 @@
           {#each Object.entries(hashes) as [algo, hash] (algo)}
 <div  class="p-3 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div class="flex justify-between items-center mb-1">
-                <span class="text-sm font-medium text-blue-600 dark:text-blue-400">{algo}</span>
+                <span class="text-sm font-medium text-amber-600 dark:text-amber-400">{algo}</span>
                 <button
                   onclick={() => copyHash(algo, hash)}
                   class={`text-xs px-2 py-1 rounded ${
-                    copied === algo ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100'
+                    copied === algo ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100'
                   }`}
                 >
                   {copied === algo ? t('copied') : t('copy')}

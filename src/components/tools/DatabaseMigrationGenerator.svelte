@@ -150,10 +150,10 @@
       <!-- Columns -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">{t('columns')}</label>
+          <label class="tool-label">{t('columns')}</label>
           <button
             onclick={addColumn}
-            class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+            class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
           >
             {t('addColumn')}
           </button>
@@ -199,10 +199,10 @@
       {#if result}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="tool-label">
               {t('generatedMigration')}
             </label>
-            <button onclick={handleCopy} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400">
+            <button onclick={handleCopy} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">
               {copied ? tCommon('copied') : tCommon('copy')}
             </button>
           </div>

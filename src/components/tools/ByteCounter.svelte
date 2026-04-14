@@ -48,7 +48,7 @@
 
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
         <div class="bg-gray-100 dark:bg-gray-800 rounded p-4 text-center">
-          <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">{charCount}</div>
+          <div class="text-2xl font-bold text-amber-600 dark:text-amber-400">{charCount}</div>
           <div class="text-sm text-gray-600 dark:text-gray-300">{t('byteCounter.characters')}</div>
         </div>
         <div class="bg-gray-100 dark:bg-gray-800 rounded p-4 text-center">
@@ -60,7 +60,7 @@
           <div class="text-sm text-gray-600 dark:text-gray-300">UTF-16 {t('byteCounter.bytes')}</div>
         </div>
         <div class="bg-gray-100 dark:bg-gray-800 rounded p-4 text-center">
-          <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">{asciiBytes}</div>
+          <div class="text-2xl font-bold text-slate-600 dark:text-slate-400">{asciiBytes}</div>
           <div class="text-sm text-gray-600 dark:text-gray-300">ASCII {t('byteCounter.bytes')}</div>
         </div>
         <div class="bg-gray-100 dark:bg-gray-800 rounded p-4 text-center">

@@ -90,7 +90,7 @@
     <div class="space-y-4">
       <!-- Input Section -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {tg('input')} (JSON)
         </label>
         <textarea
@@ -171,7 +171,7 @@
               onclick={handleCopy}
               class={`text-sm px-3 py-1 rounded ${
                 copied 
-                  ? 'bg-green-600 text-white' 
+                  ? 'btn-success' 
                   : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100'
               }`}
             >

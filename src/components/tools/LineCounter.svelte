@@ -72,7 +72,7 @@
     <div class="space-y-4">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center">
-          <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">{stats.total}</div>
+          <div class="text-2xl font-bold text-amber-600 dark:text-amber-400">{stats.total}</div>
           <div class="text-sm text-gray-600 dark:text-gray-300">{t('totalLines')}</div>
         </div>
         <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center">
@@ -84,7 +84,7 @@
           <div class="text-sm text-gray-600 dark:text-gray-300">{t('emptyLines')}</div>
         </div>
         <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center">
-          <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">{stats.unique}</div>
+          <div class="text-2xl font-bold text-slate-600 dark:text-slate-400">{stats.unique}</div>
           <div class="text-sm text-gray-600 dark:text-gray-300">{t('uniqueLines')}</div>
         </div>
       </div>
@@ -92,19 +92,19 @@
       <div class="flex gap-2 flex-wrap">
         <button
           onclick={removeDuplicates}
-          class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+          class="px-4 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg transition-colors"
         >
           {t('removeDuplicates')}
         </button>
         <button
           onclick={removeEmpty}
-          class="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
+          class="px-4 py-2 bg-emerald-500 hover:bg-green-700 rounded-lg transition-colors"
         >
           {t('removeEmpty')}
         </button>
         <button
           onclick={sortLines}
-          class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors"
+          class="px-4 py-2 bg-slate-600 hover:bg-slate-700 rounded-lg transition-colors"
         >
           {t('sortLines')}
         </button>
@@ -122,7 +122,7 @@
         <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('input')}</label>
         <textarea
           bind:value={input}
-          class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+          class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
           placeholder={t('placeholder')}></textarea>
       </div>
     </div>

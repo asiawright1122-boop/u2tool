@@ -75,21 +75,21 @@
     <div class="space-y-6">
       <!-- Topic Input -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('topic')}
         </label>
         <input
           type="text"
           bind:value={topic}
           placeholder={t('topicPlaceholder')}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           onkeydown={(e) => e.key === 'Enter' && handleGenerate()}
         />
       </div>
 
       <!-- Platform Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('platform')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -101,7 +101,7 @@
               }}
               class={`px-4 py-2 rounded-lg text-sm ${
                 platform === p.id
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
@@ -114,7 +114,7 @@
 
       <!-- Count Slider -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('count')}: {count}
         </label>
         <input
@@ -129,7 +129,7 @@
 
       <!-- Quick Topics -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('quickTopics')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -149,7 +149,7 @@
         <button
           onclick={handleGenerate}
           disabled={!topic.trim()}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed rounded-lg font-medium text-white"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-gray-400 disabled:cursor-not-allowed rounded-lg font-medium text-white"
         >
           {t('generate')}
         </button>
@@ -172,7 +172,7 @@
               </h3>
               <button
                 onclick={copyAll}
-                class="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded text-sm text-white"
+                class="px-3 py-1 bg-amber-600 hover:bg-amber-700 rounded text-sm text-white"
               >
                 {copied ? tCommon('copied') : t('copyAll')}
               </button>
@@ -181,7 +181,7 @@
               {#each result.hashtags as tag (tag)}
 <button 
                   onclick={() => copyToClipboard(tag)}
-                  class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm hover:bg-blue-200 dark:hover:bg-blue-900/50"
+                  class="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-full text-sm hover:bg-amber-200 dark:hover:bg-amber-900/50"
                 >
                   {tag}
                 </button>
@@ -197,7 +197,7 @@
               </h3>
               <button
                 onclick={() => copyToClipboard(result.popular.join(' '))}
-                class="px-3 py-1 bg-green-600 hover:bg-green-700 rounded text-sm text-white"
+                class="px-3 py-1 bg-emerald-500 hover:bg-green-700 rounded text-sm text-white"
               >
                 {tCommon('copy')}
               </button>
@@ -214,14 +214,14 @@
           </div>
 
           <!-- Niche Hashtags -->
-          <div class="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg">
+          <div class="p-4 bg-slate-50 dark:bg-slate-900/20 border border-slate-200 dark:border-slate-800 rounded-lg">
             <div class="flex justify-between items-center mb-3">
-              <h3 class="text-sm font-medium text-purple-700 dark:text-purple-300">
+              <h3 class="text-sm font-medium text-slate-700 dark:text-slate-300">
                 {t('nicheHashtags')} ({result.niche.length})
               </h3>
               <button
                 onclick={() => copyToClipboard(result.niche.join(' '))}
-                class="px-3 py-1 bg-purple-600 hover:bg-purple-700 rounded text-sm text-white"
+                class="px-3 py-1 bg-slate-600 hover:bg-slate-700 rounded text-sm text-white"
               >
                 {tCommon('copy')}
               </button>
@@ -229,7 +229,7 @@
             <div class="flex flex-wrap gap-2">
               {#each result.niche as tag (tag)}
 <span 
-                  class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm"
+                  class="px-3 py-1 bg-slate-100 dark:bg-slate-900/30 text-slate-700 dark:text-slate-300 rounded-full text-sm"
                 >
                   {tag}
                 </span>
@@ -239,7 +239,7 @@
 
           <!-- Copy Box -->
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('copyBox')}
             </label>
             <textarea

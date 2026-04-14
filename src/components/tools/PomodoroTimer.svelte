@@ -132,7 +132,7 @@
   const phaseColors = {
     work: { bg: 'bg-red-50 dark:bg-red-900/20', text: 'text-red-600 dark:text-red-400', stroke: '#ef4444' },
     shortBreak: { bg: 'bg-green-50 dark:bg-green-900/20', text: 'text-green-600 dark:text-green-400', stroke: '#22c55e' },
-    longBreak: { bg: 'bg-blue-50 dark:bg-blue-900/20', text: 'text-blue-600 dark:text-blue-400', stroke: '#3b82f6' },
+    longBreak: { bg: 'bg-amber-50 dark:bg-amber-900/20', text: 'text-amber-600 dark:text-amber-400', stroke: '#3b82f6' },
   };
 
 </script>
@@ -174,7 +174,7 @@
         <div class="flex gap-3 mt-6">
           <button onclick={toggleTimer}
             class={`px-6 py-3 rounded-lg font-medium text-white transition-colors ${
-              isRunning ? 'bg-yellow-500 hover:bg-yellow-600' : 'bg-green-500 hover:bg-green-600'
+              isRunning ? 'bg-yellow-500 hover:bg-yellow-600' : 'bg-green-500 hover:bg-emerald-500'
             }`}>
             {isRunning ? t('pomodoro.pause') : t('pomodoro.start')}
           </button>
@@ -199,7 +199,7 @@
       <!-- Settings Toggle -->
       <div class="flex justify-center">
         <button onclick={() => showSettings = !showSettings}
-          class="text-blue-600 dark:text-blue-400 hover:underline">
+          class="text-amber-600 dark:text-amber-400 hover:underline">
           {showSettings ? t('pomodoro.hideSettings') : t('pomodoro.showSettings')}
         </button>
       </div>
@@ -211,22 +211,22 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1" for="pomodoro-work-duration">{t('pomodoro.workDuration')} ({t('pomodoro.minutes')})</label>
-              <input type="number" id="pomodoro-work-duration" name="workDuration" min="1" max="60" value={workDuration} onchange={(e) => { workDuration = parseInt(e.target.value) || 25; if (currentPhase === 'work' && !isRunning) timeRemaining = (parseInt(e.target.value) || 25) * 60; }}
+              <input type="number" id="pomodoro-work-duration" name="workDuration" min="1" max="60" bind:value={workDuration}}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700" />
             </div>
             <div>
               <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1" for="pomodoro-short-break">{t('pomodoro.shortBreakDuration')} ({t('pomodoro.minutes')})</label>
-              <input type="number" id="pomodoro-short-break" name="shortBreakDuration" min="1" max="30" value={shortBreakDuration} onchange={(e) => { shortBreakDuration = parseInt(e.target.value) || 5; if (currentPhase === 'shortBreak' && !isRunning) timeRemaining = (parseInt(e.target.value) || 5) * 60; }}
+              <input type="number" id="pomodoro-short-break" name="shortBreakDuration" min="1" max="30" bind:value={shortBreakDuration}}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700" />
             </div>
             <div>
               <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1" for="pomodoro-long-break">{t('pomodoro.longBreakDuration')} ({t('pomodoro.minutes')})</label>
-              <input type="number" id="pomodoro-long-break" name="longBreakDuration" min="1" max="60" value={longBreakDuration} onchange={(e) => { longBreakDuration = parseInt(e.target.value) || 15; if (currentPhase === 'longBreak' && !isRunning) timeRemaining = (parseInt(e.target.value) || 15) * 60; }}
+              <input type="number" id="pomodoro-long-break" name="longBreakDuration" min="1" max="60" bind:value={longBreakDuration}}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700" />
             </div>
             <div>
               <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1" for="pomodoro-sessions">{t('pomodoro.sessionsBeforeLongBreak')}</label>
-              <input type="number" id="pomodoro-sessions" name="sessionsBeforeLongBreak" min="1" max="10" value={sessionsBeforeLongBreak} onchange={(e) => sessionsBeforeLongBreak = parseInt(e.target.value) || 4}
+              <input type="number" id="pomodoro-sessions" name="sessionsBeforeLongBreak" min="1" max="10" bind:value={sessionsBeforeLongBreak}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700" />
             </div>
           </div>

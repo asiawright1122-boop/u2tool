@@ -91,7 +91,7 @@
               type="file"
               accept="image/*"
               onchange={handleImageUpload}
-              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-blue-600 file:text-white hover:file:bg-blue-700"
+              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700"
             />
           </div>
 
@@ -113,7 +113,7 @@
               {#each presetColors as color (color)}
 <button 
                   onclick={() => borderColor = color}
-                  class={`w-8 h-8 rounded border-2 ${borderColor === color ? 'border-blue-500' : 'border-gray-300'}`}
+                  class={`w-8 h-8 rounded border-2 ${borderColor === color ? 'border-amber-500' : 'border-gray-300'}`}
                   style="background-color: {color}"
                 />
 {/each}
@@ -135,7 +135,7 @@
           <button
             onclick={downloadImage}
             disabled={!image}
-            class="w-full px-4 py-2 bg-green-600 hover:bg-green-700 text-white disabled:bg-gray-400 disabled:cursor-not-allowed rounded-lg"
+            class="w-full px-4 py-2 bg-emerald-500 hover:bg-green-700 text-white disabled:bg-gray-400 disabled:cursor-not-allowed rounded-lg"
           >
             {tg('download')}
           </button>

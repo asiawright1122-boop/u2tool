@@ -71,7 +71,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <!-- Gender -->
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('gender')}
           </label>
           <select
@@ -88,7 +88,7 @@
 
         <!-- Origin -->
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('origin')}
           </label>
           <select
@@ -106,7 +106,7 @@
 
         <!-- Count -->
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('count')}
           </label>
           <select
@@ -125,7 +125,7 @@
       <div class="flex gap-3">
         <button
           onclick={generate}
-          class="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all font-medium"
+          class="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-slate-500 to-pink-500 text-white rounded-lg hover:from-slate-600 hover:to-pink-600 transition-all font-medium"
         >
           <RefreshCw class="w-5 h-5" />
           {t('generate')}

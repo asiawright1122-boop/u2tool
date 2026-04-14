@@ -13,6 +13,8 @@ import { sitemapLastmodManifest } from '@/generated/sitemap-lastmod';
 import { isAiDiscoveryEnabled } from '@/lib/ai-discovery/feature-flag';
 import { buildUrl, generateSitemapResponse } from '@/lib/sitemap-utils';
 
+export const prerender = true;
+
 export const GET: APIRoute = () => {
   const urls: string[] = [];
 

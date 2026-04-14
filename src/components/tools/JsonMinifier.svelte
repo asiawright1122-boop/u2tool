@@ -98,7 +98,7 @@
       <div>
         <div class="flex justify-between items-center mb-2">
           <label for="json-min-input" class="block text-sm font-medium">{t('input')}</label>
-          <button onclick={loadSample} class="text-sm text-blue-400 hover:text-blue-300">
+          <button onclick={loadSample} class="text-sm text-amber-400 hover:text-amber-300">
             Load Sample
           </button>
         </div>
@@ -130,7 +130,7 @@
       {#if stats}
 <div class="grid grid-cols-3 gap-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
           <div class="text-center">
-            <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">{stats.original}</div>
+            <div class="text-2xl font-bold text-amber-600 dark:text-amber-400">{stats.original}</div>
             <div class="text-sm text-gray-600 dark:text-gray-300">Original (bytes)</div>
           </div>
           <div class="text-center">
@@ -138,7 +138,7 @@
             <div class="text-sm text-gray-600 dark:text-gray-300">Minified (bytes)</div>
           </div>
           <div class="text-center">
-            <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">{stats.saved}%</div>
+            <div class="text-2xl font-bold text-slate-600 dark:text-slate-400">{stats.saved}%</div>
             <div class="text-sm text-gray-600 dark:text-gray-300">Saved</div>
           </div>
         </div>
@@ -150,7 +150,7 @@
           {#if output}
 <button
               onclick={copyOutput}
-              class={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+              class={`text-sm px-3 py-1 rounded ${copied ? 'bg-emerald-500' : 'bg-gray-700 hover:bg-gray-600'}`}
             >
               {copied ? t('copied') : t('copy')}
             </button>

@@ -60,7 +60,7 @@
           onclick={() => mode = 'convert'}
           class={`px-4 py-2 rounded-lg font-medium transition-colors ${
             mode === 'convert'
-              ? 'bg-blue-600 text-white'
+              ? 'bg-amber-600 text-white'
               : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
           }`}
         >
@@ -70,7 +70,7 @@
           onclick={() => mode = 'measure'}
           class={`px-4 py-2 rounded-lg font-medium transition-colors ${
             mode === 'measure'
-              ? 'bg-blue-600 text-white'
+              ? 'bg-amber-600 text-white'
               : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
           }`}
         >
@@ -81,7 +81,7 @@
       {#if mode === 'convert'}
 <!-- Size Selection -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('selectUSSize')}
           </label>
           <div class="flex flex-wrap gap-2">
@@ -90,7 +90,7 @@
                 onclick={() => selectedUS = row.us}
                 class={`px-3 py-2 rounded-lg font-medium transition-colors min-w-[50px] ${
                   selectedUS === row.us
-                    ? 'bg-green-600 text-white'
+                    ? 'btn-success'
                     : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                 }`}
               >
@@ -103,7 +103,7 @@
 <!-- Measurement Input -->
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('measurementType')}
             </label>
             <div class="flex gap-2">
@@ -111,7 +111,7 @@
                 onclick={() => measureType = 'circumference'}
                 class={`px-4 py-2 rounded-lg font-medium transition-colors ${
                   measureType === 'circumference'
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-amber-600 text-white'
                     : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
                 }`}
               >
@@ -121,7 +121,7 @@
                 onclick={() => measureType = 'diameter'}
                 class={`px-4 py-2 rounded-lg font-medium transition-colors ${
                   measureType === 'diameter'
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-amber-600 text-white'
                     : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
                 }`}
               >
@@ -130,7 +130,7 @@
             </div>
           </div>
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('enterMeasurement')} (mm)
             </label>
             <input
@@ -138,7 +138,7 @@
               bind:value={measurement}
               placeholder={measureType === 'circumference' ? '44-75' : '14-24'}
               step="0.1"
-              class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
+              class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
             />
           </div>
         </div>}
@@ -187,7 +187,7 @@
               {#each ringSizes as row, idx (idx)}
 <tr  
                   class={`border-b border-gray-100 dark:border-gray-700 ${
-                    displayRow === row ? 'bg-blue-50 dark:bg-blue-900/30' : ''
+                    displayRow === row ? 'bg-amber-50 dark:bg-amber-900/30' : ''
                   }`}
                 >
                   {#each systems as system (system)}

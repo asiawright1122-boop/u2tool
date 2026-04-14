@@ -90,7 +90,7 @@
 
 {#snippet TimeInput(value, onChange, label)}
 <div class="space-y-2">
-      <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+      <label class="tool-label">
         {label}
       </label>
       <div class="flex gap-2 items-center">
@@ -143,7 +143,7 @@
 
       <!-- Operation Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('operation')}
         </label>
         <div class="flex gap-2">
@@ -152,7 +152,7 @@
               onclick={() => operation = op}
               class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 operation === op
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
               }`}
             >
@@ -164,7 +164,7 @@
 
       <!-- Format Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('format')}
         </label>
         <div class="flex gap-2">
@@ -172,7 +172,7 @@
             onclick={() => format = '24h'}
             class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               format === '24h'
-                ? 'bg-blue-600 text-white'
+                ? 'bg-amber-600 text-white'
                 : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
             }`}
           >
@@ -182,7 +182,7 @@
             onclick={() => format = '12h'}
             class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               format === '12h'
-                ? 'bg-blue-600 text-white'
+                ? 'bg-amber-600 text-white'
                 : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
             }`}
           >
@@ -212,7 +212,7 @@
               onclick={handleCopy}
               class={`text-sm px-3 py-1 rounded ${
                 copied 
-                  ? 'bg-green-600 text-white' 
+                  ? 'btn-success' 
                   : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100'
               }`}
             >
@@ -220,7 +220,7 @@
             </button>
           </div>
           
-          <div class="text-3xl font-mono text-center text-blue-600 dark:text-blue-400 mb-4">
+          <div class="text-3xl font-mono text-center text-amber-600 dark:text-amber-400 mb-4">
             {formatTime(result, format)}
           </div>
           

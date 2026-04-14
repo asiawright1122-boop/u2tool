@@ -54,10 +54,10 @@
 
               <div class="p-3 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
                 <div class="flex justify-between items-center mb-2">
-                  <span class="text-sm font-medium text-blue-600 dark:text-blue-400">{label}</span>
+                  <span class="text-sm font-medium text-amber-600 dark:text-amber-400">{label}</span>
                   <button
                     onclick={() => copyResult(id, result)}
-                    class={`text-xs px-2 py-1 rounded ${copied === id ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
+                    class={`text-xs px-2 py-1 rounded ${copied === id ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
                   >
                     {copied === id ? tg('copied') : tg('copy')}
                   </button>

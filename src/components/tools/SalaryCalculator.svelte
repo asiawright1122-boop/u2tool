@@ -191,8 +191,8 @@
 <div>
 
               <!-- Before Tax -->
-              <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
-                <h3 class="font-medium text-blue-800 dark:text-blue-300 mb-3">
+              <div class="bg-amber-50 dark:bg-amber-900/20 rounded-lg p-4">
+                <h3 class="font-medium text-amber-800 dark:text-amber-300 mb-3">
                   {t('salary.beforeTax')}
                 </h3>
                 <div class="grid grid-cols-2 gap-3">
@@ -399,8 +399,8 @@
 <div>
 
               <!-- Before Tax -->
-              <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
-                <h3 class="font-medium text-blue-800 dark:text-blue-300 mb-3">
+              <div class="bg-amber-50 dark:bg-amber-900/20 rounded-lg p-4">
+                <h3 class="font-medium text-amber-800 dark:text-amber-300 mb-3">
                   {t('salary.beforeTax')}
                 </h3>
                 <div class="grid grid-cols-2 gap-3">

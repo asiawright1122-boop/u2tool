@@ -113,11 +113,11 @@
     <div class="space-y-6">
       <div class="flex gap-4">
         <button onclick={() => mode = 'encode'}
-          class={`px-4 py-2 rounded-lg font-medium transition-colors text-white ${mode === 'encode' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-700 hover:bg-gray-600 dark:hover:bg-gray-600'}`}>
+          class={`px-4 py-2 rounded-lg font-medium transition-colors text-white ${mode === 'encode' ? 'bg-amber-600' : 'bg-gray-500 dark:bg-gray-700 hover:bg-gray-600 dark:hover:bg-gray-600'}`}>
           Encode
         </button>
         <button onclick={() => mode = 'decode'}
-          class={`px-4 py-2 rounded-lg font-medium transition-colors text-white ${mode === 'decode' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-700 hover:bg-gray-600 dark:hover:bg-gray-600'}`}>
+          class={`px-4 py-2 rounded-lg font-medium transition-colors text-white ${mode === 'decode' ? 'bg-amber-600' : 'bg-gray-500 dark:bg-gray-700 hover:bg-gray-600 dark:hover:bg-gray-600'}`}>
           Decode
         </button>
       </div>
@@ -139,7 +139,7 @@
 
       <div class="flex gap-4">
         <button onclick={process}
-          class="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition-colors">
+          class="px-6 py-2 bg-slate-600 hover:bg-slate-700 text-white rounded-lg font-medium transition-colors">
           {mode === 'encode' ? t('encode') : t('decode')}
         </button>
         <button onclick={copyToClipboard} disabled={!output}

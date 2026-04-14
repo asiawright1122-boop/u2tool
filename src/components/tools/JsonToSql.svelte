@@ -169,7 +169,7 @@
           </label>
           
           <div class="flex gap-2 ml-auto">
-            <button onclick={handleConvert} class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded text-sm font-medium">
+            <button onclick={handleConvert} class="px-4 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded text-sm font-medium">
               {tg('convert')}
             </button>
             <button onclick={loadExample} class="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded text-sm">
@@ -190,7 +190,7 @@
           <textarea
             bind:value={input}
             placeholder={t('inputPlaceholder')}
-            class="w-full h-64 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded font-mono text-sm text-gray-900 dark:text-white resize-none focus:outline-none focus:border-blue-500"></textarea>
+            class="w-full h-64 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded font-mono text-sm text-gray-900 dark:text-white resize-none focus:outline-none focus:border-amber-500"></textarea>
         </div>
         <div>
           <div class="flex justify-between items-center mb-2">
@@ -198,7 +198,7 @@
             <button
               onclick={handleCopy}
               disabled={!output}
-              class={`px-2 py-1 text-xs rounded ${copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'} disabled:opacity-50`}
+              class={`px-2 py-1 text-xs rounded ${copied ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'} disabled:opacity-50`}
             >
               {copied ? tg('copied') : tg('copy')}
             </button>

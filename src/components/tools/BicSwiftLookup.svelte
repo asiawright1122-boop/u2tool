@@ -85,7 +85,7 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('inputLabel')}
         </label>
         <div class="flex gap-2">
@@ -99,7 +99,7 @@
           />
           <button
             onclick={lookup}
-            class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+            class="px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
           >
             {t('lookup')}
           </button>
@@ -157,8 +157,8 @@
               </div>
 
               {#if result.bankInfo}
-<div class="p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-                  <h4 class="font-medium text-blue-800 dark:text-blue-300 mb-2">
+<div class="p-4 bg-amber-50 dark:bg-amber-900/30 rounded-lg">
+                  <h4 class="font-medium text-amber-800 dark:text-amber-300 mb-2">
                     {t('bankInformation')}
                   </h4>
                   <div class="space-y-1 text-gray-700 dark:text-gray-300">
@@ -191,8 +191,8 @@
           {t('bicStructure')}
         </h3>
         <div class="grid grid-cols-4 gap-2 text-center">
-          <div class="p-2 bg-blue-100 dark:bg-blue-900/30 rounded">
-            <div class="font-mono font-bold text-blue-700 dark:text-blue-300">AAAA</div>
+          <div class="p-2 bg-amber-100 dark:bg-amber-900/30 rounded">
+            <div class="font-mono font-bold text-amber-700 dark:text-amber-300">AAAA</div>
             <div class="text-xs text-gray-600 dark:text-gray-400">{t('structure.bank')}</div>
           </div>
           <div class="p-2 bg-green-100 dark:bg-green-900/30 rounded">
@@ -203,8 +203,8 @@
             <div class="font-mono font-bold text-yellow-700 dark:text-yellow-300">CC</div>
             <div class="text-xs text-gray-600 dark:text-gray-400">{t('structure.location')}</div>
           </div>
-          <div class="p-2 bg-purple-100 dark:bg-purple-900/30 rounded">
-            <div class="font-mono font-bold text-purple-700 dark:text-purple-300">DDD</div>
+          <div class="p-2 bg-slate-100 dark:bg-slate-900/30 rounded">
+            <div class="font-mono font-bold text-slate-700 dark:text-slate-300">DDD</div>
             <div class="text-xs text-gray-600 dark:text-gray-400">{t('structure.branch')}</div>
           </div>
         </div>

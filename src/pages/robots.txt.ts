@@ -12,6 +12,8 @@ import { getPublicSiteUrl } from '@/lib/public-env';
 
 const BASE_URL = getPublicSiteUrl();
 
+export const prerender = true;
+
 export const GET: APIRoute = () => {
   const robotsTxt = `# robots.txt for U2Tool
 User-agent: *
@@ -71,6 +73,7 @@ Allow: /
 
 # Sitemap
 Sitemap: ${BASE_URL}/sitemap.xml
+Sitemap: ${BASE_URL}/sitemap-priority.xml
 Sitemap: ${BASE_URL}/sitemap-pages.xml
 Sitemap: ${BASE_URL}/sitemap-tools.xml
 

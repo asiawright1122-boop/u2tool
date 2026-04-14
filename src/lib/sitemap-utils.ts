@@ -39,6 +39,16 @@ ${alternates}
 }
 
 /**
+ * 构建 sitemap index 中的单个子 sitemap 条目
+ */
+export function buildSitemapIndexEntry(path: string, lastmod = SITEMAP_LASTMOD): string {
+  return `  <sitemap>
+    <loc>${esc(`${BASE_URL}${path}`)}</loc>
+    <lastmod>${lastmod}</lastmod>
+  </sitemap>`;
+}
+
+/**
  * 生成 sitemap XML 响应
  */
 export function generateSitemapResponse(urls: string[]): Response {
@@ -49,6 +59,23 @@ ${urls.join('\n')}
 </urlset>`;
 
   return new Response(sitemap, {
+    headers: {
+      'Content-Type': 'application/xml; charset=utf-8',
+      'Cache-Control': 'public, max-age=3600',
+    },
+  });
+}
+
+/**
+ * 生成 sitemap index XML 响应
+ */
+export function generateSitemapIndexResponse(entries: string[]): Response {
+  const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${entries.join('\n')}
+</sitemapindex>`;
+
+  return new Response(sitemapIndex, {
     headers: {
       'Content-Type': 'application/xml; charset=utf-8',
       'Cache-Control': 'public, max-age=3600',

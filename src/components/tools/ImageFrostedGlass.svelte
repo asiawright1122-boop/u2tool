@@ -87,7 +87,7 @@
               type="file"
               accept="image/*"
               onchange={handleImageUpload}
-              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-blue-600 file:text-white hover:file:bg-blue-700"
+              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700"
             />
           </div>
 
@@ -99,7 +99,7 @@
                   onclick={() => blurIntensity = preset.value}
                   class={`flex-1 px-3 py-2 rounded-lg text-sm ${
                     blurIntensity === preset.value
-                      ? 'bg-blue-600 text-white'
+                      ? 'bg-amber-600 text-white'
                       : 'bg-gray-200 dark:bg-gray-700'
                   }`}
                 >
@@ -126,7 +126,7 @@
           <button
             onclick={downloadImage}
             disabled={!image}
-            class="w-full px-4 py-2 bg-green-600 hover:bg-green-700 text-white disabled:bg-gray-400 disabled:cursor-not-allowed rounded-lg"
+            class="w-full px-4 py-2 bg-emerald-500 hover:bg-green-700 text-white disabled:bg-gray-400 disabled:cursor-not-allowed rounded-lg"
           >
             {tg('download')}
           </button>

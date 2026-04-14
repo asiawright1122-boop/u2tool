@@ -92,7 +92,7 @@
       </div>
 
       <div>
-        <label for="discount-percentage" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label for="discount-percentage" class="tool-label">
           {t('discountPercentage')}
         </label>
         <div class="flex flex-wrap gap-2 mb-2">
@@ -101,7 +101,7 @@
               onclick={() => discountPercentage = discount.toString()}
               class={`px-4 py-2 rounded-lg transition-colors ${
                 discountPercentage === discount.toString()
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
@@ -126,7 +126,7 @@
           </label>
           <button
             onclick={addAdditionalDiscount}
-            class="text-sm text-blue-600 hover:text-blue-700"
+            class="text-sm text-amber-600 hover:text-amber-700"
           >
             + {t('addDiscount')}
           </button>
@@ -152,7 +152,7 @@
 
       <button
         onclick={calculate}
-        class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        class="w-full px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
       >
         {tc('calculate')}
       </button>
@@ -171,9 +171,9 @@
                 {formatCurrency(result.amountSaved)}
               </div>
             </div>
-            <div class="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+            <div class="p-4 bg-slate-50 dark:bg-slate-900/20 rounded-lg">
               <div class="text-sm text-gray-600 dark:text-gray-400">{t('totalDiscount')}</div>
-              <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">
+              <div class="text-2xl font-bold text-slate-600 dark:text-slate-400">
                 {result.totalDiscountPercentage.toFixed(1)}%
               </div>
             </div>

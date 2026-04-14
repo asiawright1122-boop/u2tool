@@ -105,7 +105,7 @@
 <button  onclick={() => applyPreset(preset.values)}
                 class="px-3 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-sm text-gray-900 dark:text-gray-100">{t(preset.nameKey)}</button>
 {/each}
-            <button onclick={reset} class="px-3 py-1 bg-red-600 hover:bg-red-700 rounded text-sm text-white">{t('reset')}</button>
+            <button onclick={reset} class="px-3 py-1 bg-rose-500 hover:bg-red-700 rounded text-sm text-white">{t('reset')}</button>
           </div>
 
           {#each [
@@ -137,12 +137,12 @@
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('output')}</label>
+            <label class="tool-label">{t('output')}</label>
             <pre class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 font-mono text-sm text-green-600 dark:text-green-400">{getCss()}</pre>
           </div>
 
           <button onclick={copyToClipboard}
-            class="w-full px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors">
+            class="w-full px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium transition-colors">
             {t('copy')}
           </button>
         </div>

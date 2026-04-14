@@ -141,7 +141,7 @@
 
       {#if loading}
 <div class="text-center py-8">
-          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
+          <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-600 mx-auto"></div>
           <p class="mt-2 text-gray-600 dark:text-gray-400">{t('pdfRotator.processing')}</p>
         </div>
 {/if}
@@ -153,7 +153,7 @@
           <div class="flex flex-wrap gap-4 items-center">
             <div class="flex items-center gap-2">
               <span class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('pdfRotator.rotateAll')}:</span>
-              <select value={globalRotation} onchange={e => globalRotation = Number(e.target.value)} class="px-3 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800">
+              <select bind:value={globalRotation} class="px-3 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800">
                 <option value={90}>90°</option>
                 <option value={180}>180°</option>
                 <option value={270}>270°</option>
@@ -169,7 +169,7 @@
                 <div class="relative bg-gray-100 dark:bg-gray-800 p-2">
                   <img src={page.thumbnail} alt={`Page ${page.pageNum}`} class="w-full transition-transform" style="transform: rotate({page.rotation}deg)" />
                   {#if page.rotation !== 0}
-<span class="absolute top-1 right-1 bg-blue-500 text-white text-xs px-1 rounded">{page.rotation}°</span>
+<span class="absolute top-1 right-1 bg-amber-500 text-white text-xs px-1 rounded">{page.rotation}°</span>
 {/if}
                 </div>
                 <div class="flex items-center justify-between p-1 bg-gray-50 dark:bg-gray-800">
@@ -183,7 +183,7 @@
 {/each}
           </div>
 
-          <button onclick={handleSave} disabled={!hasChanges || loading} class="w-full px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium">
+          <button onclick={handleSave} disabled={!hasChanges || loading} class="w-full px-4 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium">
             {t('pdfRotator.save')}
           </button>
         

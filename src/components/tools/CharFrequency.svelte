@@ -43,9 +43,9 @@
 
     <div class="space-y-4">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('inputLabel')}</label>
+        <label class="tool-label">{t('inputLabel')}</label>
         <textarea bind:value={input}
-          class="w-full h-32 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+          class="w-full h-32 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
           placeholder={t('placeholder')}></textarea>
       </div>
 
@@ -63,7 +63,7 @@
       </div>
 
       <button onclick={handleAnalyze}
-        class="w-full px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+        class="w-full px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors">
         {t('analyze')}
       </button>
 
@@ -76,9 +76,9 @@
           <div class="max-h-80 overflow-y-auto space-y-1">
             {#each results as r, i (i)}
 <div  class="flex items-center gap-3 p-2 bg-gray-100 dark:bg-gray-700 rounded">
-                <span class="w-8 text-center font-mono text-blue-600 dark:text-blue-400">{r.char}</span>
+                <span class="w-8 text-center font-mono text-amber-600 dark:text-amber-400">{r.char}</span>
                 <div class="flex-1 h-4 bg-gray-200 dark:bg-gray-600 rounded overflow-hidden">
-                  <div class="h-full bg-blue-500" style="width: {(r.count / maxCount) * 100}%"></div>
+                  <div class="h-full bg-amber-500" style="width: {(r.count / maxCount) * 100}%"></div>
                 </div>
                 <span class="w-12 text-right text-sm text-gray-700 dark:text-gray-300">{r.count}</span>
                 <span class="w-16 text-right text-sm text-gray-500 dark:text-gray-400">{r.percentage.toFixed(1)}%</span>

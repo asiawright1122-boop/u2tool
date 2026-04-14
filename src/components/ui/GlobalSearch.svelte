@@ -209,7 +209,7 @@
   }
 </script>
 
-<div class="relative flex-1 max-w-xl mx-6 min-w-0">
+<div class="relative flex-1 max-w-xl mx-6 min-w-0 group/search">
   <div class="relative flex items-center">
     <input
       type="text"
@@ -221,25 +221,25 @@
       onkeydown={handleKeydown}
       onfocus={handleFocus}
       onblur={handleBlur}
-      class="w-full h-9 pl-4 pr-24 text-sm rounded-lg border border-gray-200 dark:border-gray-700
-             bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white
-             focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
-             transition-all duration-200"
+      class="w-full h-10 pl-4 pr-32 text-sm rounded-xl border border-slate-200 dark:border-white/10
+             bg-white/60 dark:bg-slate-900 text-slate-900 dark:text-white backdrop-blur-md
+             focus:outline-none focus:ring-4 focus:ring-amber-500/10 focus:border-amber-500/30
+             transition-all duration-300 group-hover/search:border-slate-300 dark:group-hover/search:border-white/20 shadow-sm"
     />
     <button
       onclick={() => void handleSearchClick()}
-      class="absolute right-1 top-1/2 -translate-y-1/2 h-7 px-3 rounded-md bg-blue-500 hover:bg-blue-600 
-             text-white text-sm font-medium transition-colors flex items-center gap-1"
+      class="absolute right-1 top-1/2 -translate-y-1/2 h-8 px-4 rounded-lg bg-slate-950 dark:bg-amber-500 hover:bg-black dark:hover:bg-amber-400
+             text-white dark:text-slate-950 text-[10px] font-black uppercase tracking-widest transition-all duration-300 flex items-center gap-2 shadow-lg dark:shadow-amber-500/10"
     >
-      <Icon.Search class="w-4 h-4" />
+      <Icon.Search class="w-3.5 h-3.5" />
       <span>{searchButtonLabel}</span>
     </button>
   </div>
 
   {#if isOpen}
-    <div class="absolute top-full left-0 right-0 mt-1 bg-white dark:bg-gray-800 
-                border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg 
-                overflow-hidden z-50">
+    <div class="absolute top-full left-0 right-0 mt-2 glass-strong !bg-white/95 dark:!bg-slate-900/95
+                border border-slate-200 dark:border-white/10 rounded-2xl shadow-2xl 
+                overflow-hidden z-[100] animate-in fade-in slide-in-from-top-2 duration-300">
       {#if isLoading}
         <div class="px-4 py-3 text-sm text-gray-500 dark:text-gray-400 text-center">
           {searchLoadingLabel}
@@ -250,19 +250,19 @@
             <li>
               <button
                 onclick={() => navigateToTool(result.slug)}
-                class="w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700
-                       {index === selectedIndex ? 'bg-gray-100 dark:bg-gray-700' : ''}"
+                class="w-full px-5 py-3 text-left transition-colors duration-200
+                       {index === selectedIndex ? 'bg-amber-500/10 dark:bg-amber-500/10' : 'hover:bg-slate-50 dark:hover:bg-white/5'}"
               >
                 <div class="flex items-center justify-between">
-                  <span class="font-medium text-sm text-gray-900 dark:text-white">
+                  <span class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400">
                     {result.name}
                   </span>
-                  <span class="text-xs text-gray-500 dark:text-gray-400">
+                  <span class="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-white/5 px-2 py-0.5 rounded">
                     {result.categoryName}
                   </span>
                 </div>
                 {#if result.description}
-                  <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5 line-clamp-1">
+                  <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-1.5 line-clamp-1 font-medium">
                     {result.description}
                   </p>
                 {/if}
@@ -271,12 +271,15 @@
           {/each}
         </ul>
       {:else if searchQuery.trim().length > 0}
-        <div class="px-4 py-3 text-sm text-gray-500 dark:text-gray-400 text-center space-y-2">
-          <p>{noResultsLabel}</p>
+        <div class="px-6 py-8 text-center space-y-4">
+          <p class="text-sm font-medium text-slate-500 dark:text-slate-400 leading-relaxed italic">
+            "{searchQuery}" - {noResultsLabel}
+          </p>
           <button
             onclick={() => navigateToAiDiscovery(searchQuery)}
-            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium transition-colors"
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-950 dark:bg-amber-500 text-white dark:text-slate-950 text-[10px] font-black uppercase tracking-widest transition-all duration-300 hover:shadow-xl dark:hover:shadow-amber-500/20 active:scale-95"
           >
+            <Icon.Sparkles class="w-3.5 h-3.5" />
             {aiDiscoveryButtonLabel}
           </button>
         </div>

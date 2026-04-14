@@ -150,7 +150,7 @@ ${config.companyName ? `**${config.companyName}**\n` : ''}${config.email ? `Emai
               type="text"
               value={config.websiteName}
               onchange={(e) => config = { ...config, websiteName: e.target.value }}
-              class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+              class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
               placeholder={t('privacyPolicyGenerator.websiteNamePlaceholder')}
             />
           </div>
@@ -160,7 +160,7 @@ ${config.companyName ? `**${config.companyName}**\n` : ''}${config.email ? `Emai
               type="text"
               value={config.websiteUrl}
               onchange={(e) => config = { ...config, websiteUrl: e.target.value }}
-              class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+              class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
               placeholder={t('privacyPolicyGenerator.websiteUrlPlaceholder')}
             />
           </div>
@@ -170,7 +170,7 @@ ${config.companyName ? `**${config.companyName}**\n` : ''}${config.email ? `Emai
               type="text"
               value={config.companyName}
               onchange={(e) => config = { ...config, companyName: e.target.value }}
-              class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+              class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
               placeholder={t('privacyPolicyGenerator.companyNamePlaceholder')}
             />
           </div>
@@ -180,7 +180,7 @@ ${config.companyName ? `**${config.companyName}**\n` : ''}${config.email ? `Emai
               type="email"
               value={config.email}
               onchange={(e) => config = { ...config, email: e.target.value }}
-              class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+              class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
               placeholder={t('privacyPolicyGenerator.contactEmailPlaceholder')}
             />
           </div>

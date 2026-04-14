@@ -189,7 +189,7 @@
         >
           {#each Array.from({ length: columns * rows }) as _, i (i)}
 <div 
-              class="bg-blue-600/50 border border-blue-400 rounded p-2 text-center text-sm text-gray-900 dark:text-white"
+              class="bg-amber-600/50 border border-amber-400 rounded p-2 text-center text-sm text-gray-900 dark:text-white"
             >
               {i + 1}
             </div>
@@ -203,7 +203,7 @@
           <label class="text-sm font-medium">{tg('generatedCss')}</label>
           <button
             onclick={copyCSS}
-            class={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+            class={`text-sm px-3 py-1 rounded ${copied ? 'bg-emerald-500' : 'bg-gray-700 hover:bg-gray-600'}`}
           >
             {copied ? t('copied') : t('copy')}
           </button>

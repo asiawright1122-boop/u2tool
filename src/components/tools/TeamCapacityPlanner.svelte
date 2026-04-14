@@ -130,24 +130,24 @@
           </select>
         </div>
         <div class="flex items-end">
-          <button onclick={addMember} class="w-full px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+          <button onclick={addMember} class="w-full px-3 py-2 btn-success rounded-lg hover:bg-green-700">
             {t('addMember')}
           </button>
         </div>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center">
-          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">{summary.totalCapacity}h</div>
-          <div class="text-sm text-blue-700 dark:text-blue-300">{t('totalCapacity')}</div>
+        <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg text-center">
+          <div class="text-3xl font-bold text-amber-600 dark:text-amber-400">{summary.totalCapacity}h</div>
+          <div class="text-sm text-amber-700 dark:text-amber-300">{t('totalCapacity')}</div>
         </div>
         <div class="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg text-center">
           <div class="text-3xl font-bold text-green-600 dark:text-green-400">{summary.avgCapacity}h</div>
           <div class="text-sm text-green-700 dark:text-green-300">{t('avgPerPerson')}</div>
         </div>
-        <div class="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg text-center">
-          <div class="text-3xl font-bold text-purple-600 dark:text-purple-400">{summary.utilizationRate}%</div>
-          <div class="text-sm text-purple-700 dark:text-purple-300">{t('utilization')}</div>
+        <div class="p-4 bg-slate-50 dark:bg-slate-900/20 rounded-lg text-center">
+          <div class="text-3xl font-bold text-slate-600 dark:text-slate-400">{summary.utilizationRate}%</div>
+          <div class="text-sm text-slate-700 dark:text-slate-300">{t('utilization')}</div>
         </div>
         <div class="p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg text-center">
           <div class="text-3xl font-bold text-orange-600 dark:text-orange-400">{team.length}</div>
@@ -226,7 +226,7 @@
                   />
                 </td>
                 <td class="px-3 py-2 text-center">
-                  <span class="font-bold text-blue-600 dark:text-blue-400">{member.capacity}h</span>
+                  <span class="font-bold text-amber-600 dark:text-amber-400">{member.capacity}h</span>
                 </td>
                 <td class="px-3 py-2">
                   <button onclick={() => removeMember(member.id)} class="text-red-500 hover:text-red-700">✕</button>

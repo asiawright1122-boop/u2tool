@@ -144,7 +144,7 @@
       <!-- 输入区域 -->
       <form onsubmit={handleSubmit} class="space-y-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('ip-geolocation.ipAddress')}
           </label>
           <div class="flex gap-2">
@@ -152,12 +152,12 @@
               type="text"
               bind:value={ip}
               placeholder={t('ip-geolocation.placeholder')}
-              class="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent"
             />
             <button
               type="submit"
               disabled={loading}
-              class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              class="px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               {loading ? t('ip-geolocation.loading') : t('ip-geolocation.lookup')}
             </button>
@@ -168,7 +168,7 @@
           type="button"
           onclick={handleMyIp}
           disabled={loading}
-          class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          class="px-4 py-2 btn-success rounded-lg hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           {t('ip-geolocation.myIp')}
         </button>

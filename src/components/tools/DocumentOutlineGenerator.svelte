@@ -106,7 +106,7 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             Document Content
           </label>
           <textarea
@@ -118,12 +118,12 @@
 
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="tool-label">
               Generated Outline ({headings.length} headings)
             </label>
             <button
               onclick={handleCopy}
-              class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+              class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
             >
               {copied ? tCommon('copied') : tCommon('copy')}
             </button>
@@ -134,16 +134,16 @@
         </div>
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h3 class="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">Supported Formats</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-blue-700 dark:text-blue-300">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+        <h3 class="text-sm font-medium text-amber-800 dark:text-amber-200 mb-2">Supported Formats</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-amber-700 dark:text-amber-300">
           <div>
             <strong>Markdown:</strong>
-            <code class="block mt-1 bg-blue-100 dark:bg-blue-800/30 p-1 rounded"># Heading 1<br/>## Heading 2</code>
+            <code class="block mt-1 bg-amber-100 dark:bg-amber-800/30 p-1 rounded"># Heading 1<br/>## Heading 2</code>
           </div>
           <div>
             <strong>HTML:</strong>
-            <code class="block mt-1 bg-blue-100 dark:bg-blue-800/30 p-1 rounded">&lt;h1&gt;Heading&lt;/h1&gt;<br/>&lt;h2&gt;Heading&lt;/h2&gt;</code>
+            <code class="block mt-1 bg-amber-100 dark:bg-amber-800/30 p-1 rounded">&lt;h1&gt;Heading&lt;/h1&gt;<br/>&lt;h2&gt;Heading&lt;/h2&gt;</code>
           </div>
         </div>
       </div>

@@ -60,7 +60,7 @@
       <!-- Field Labels -->
       <div class="grid grid-cols-5 gap-2 text-center text-sm">
         <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded">
-          <div class="font-mono text-blue-600 dark:text-blue-400">{cron.split(/\s+/)[0] || '*'}</div>
+          <div class="font-mono text-amber-600 dark:text-amber-400">{cron.split(/\s+/)[0] || '*'}</div>
           <div class="text-gray-600 dark:text-gray-300 text-xs mt-1">{tc('minute')}</div>
           <div class="text-gray-500 dark:text-gray-300 text-xs">0-59</div>
         </div>
@@ -75,7 +75,7 @@
           <div class="text-gray-500 dark:text-gray-300 text-xs">1-31</div>
         </div>
         <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded">
-          <div class="font-mono text-purple-600 dark:text-purple-400">{cron.split(/\s+/)[3] || '*'}</div>
+          <div class="font-mono text-slate-600 dark:text-slate-400">{cron.split(/\s+/)[3] || '*'}</div>
           <div class="text-gray-600 dark:text-gray-300 text-xs mt-1">{tc('month')}</div>
           <div class="text-gray-500 dark:text-gray-300 text-xs">1-12</div>
         </div>
@@ -87,8 +87,8 @@
       </div>
 
       <!-- Explanation -->
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-        <h3 class="text-sm font-medium text-blue-700 dark:text-blue-400 mb-2">{tc('explanation')}</h3>
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+        <h3 class="text-sm font-medium text-amber-700 dark:text-amber-400 mb-2">{tc('explanation')}</h3>
         <p class="text-lg text-gray-900 dark:text-white">{explanation}</p>
       </div>
 
@@ -115,7 +115,7 @@
               onclick={() => cron = ex.cron}
               class="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg text-left hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             >
-              <code class="text-blue-600 dark:text-blue-400">{ex.cron}</code>
+              <code class="text-amber-600 dark:text-amber-400">{ex.cron}</code>
               <div class="text-sm text-gray-600 dark:text-gray-300 mt-1">{tc(ex.descKey)}</div>
             </button>
 {/each}
@@ -126,10 +126,10 @@
       <div class="p-4 bg-gray-100 dark:bg-gray-800/50 rounded-lg text-sm">
         <h3 class="font-medium text-gray-900 dark:text-white mb-2">{tc('specialChars')}</h3>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-gray-600 dark:text-gray-300">
-          <div><code class="text-blue-600 dark:text-blue-400">*</code> - {tc('anyValue')}</div>
-          <div><code class="text-blue-600 dark:text-blue-400">,</code> - {tc('valueList')}</div>
-          <div><code class="text-blue-600 dark:text-blue-400">-</code> - {tc('range')}</div>
-          <div><code class="text-blue-600 dark:text-blue-400">/</code> - {tc('stepValues')}</div>
+          <div><code class="text-amber-600 dark:text-amber-400">*</code> - {tc('anyValue')}</div>
+          <div><code class="text-amber-600 dark:text-amber-400">,</code> - {tc('valueList')}</div>
+          <div><code class="text-amber-600 dark:text-amber-400">-</code> - {tc('range')}</div>
+          <div><code class="text-amber-600 dark:text-amber-400">/</code> - {tc('stepValues')}</div>
         </div>
       </div>
     </div>

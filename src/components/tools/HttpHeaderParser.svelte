@@ -72,7 +72,7 @@ X-Requested-With: XMLHttpRequest`;
           <label class="block text-sm font-medium">{t('httpHeader.input')}</label>
           <button
             onclick={loadExample}
-            class="text-sm text-blue-400 hover:text-blue-300"
+            class="text-sm text-amber-400 hover:text-amber-300"
           >
             {t('httpHeader.loadExample')}
           </button>
@@ -80,7 +80,7 @@ X-Requested-With: XMLHttpRequest`;
         <textarea
           bind:value={input}
           placeholder={t('httpHeader.placeholder')}
-          class="w-full h-48 p-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+          class="w-full h-48 p-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"></textarea>
       </div>
 
       <button onclick={handleParse} class="btn-primary w-full">
@@ -94,7 +94,7 @@ X-Requested-With: XMLHttpRequest`;
             {#each headers as header, index (index)}
 <div  class="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
                 <div class="flex flex-wrap items-start gap-2">
-                  <span class="px-2 py-1 bg-blue-600 text-white rounded text-sm font-medium">
+                  <span class="px-2 py-1 bg-amber-600 text-white rounded text-sm font-medium">
                     {header.name}
                   </span>
                   <span class="flex-1 font-mono text-sm text-gray-600 dark:text-gray-300 break-all">

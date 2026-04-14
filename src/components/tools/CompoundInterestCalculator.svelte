@@ -168,7 +168,7 @@
 
       <button
         onclick={calculate}
-        class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        class="w-full px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
       >
         {tc('calculate')}
       </button>
@@ -181,15 +181,15 @@
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+            <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
               <div class="text-sm text-gray-600 dark:text-gray-400">{t('initialInvestment')}</div>
-              <div class="text-xl font-bold text-blue-600 dark:text-blue-400">
+              <div class="text-xl font-bold text-amber-600 dark:text-amber-400">
                 {formatCurrency(parseFloat(principal))}
               </div>
             </div>
-            <div class="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+            <div class="p-4 bg-slate-50 dark:bg-slate-900/20 rounded-lg">
               <div class="text-sm text-gray-600 dark:text-gray-400">{t('totalContributions')}</div>
-              <div class="text-xl font-bold text-purple-600 dark:text-purple-400">
+              <div class="text-xl font-bold text-slate-600 dark:text-slate-400">
                 {formatCurrency(result.totalContributions)}
               </div>
             </div>

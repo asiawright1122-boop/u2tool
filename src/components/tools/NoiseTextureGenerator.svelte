@@ -127,7 +127,7 @@ background-repeat: repeat;`;
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('noiseType')}
             </label>
             <div class="grid grid-cols-3 gap-2">
@@ -136,7 +136,7 @@ background-repeat: repeat;`;
                   onclick={() => noiseType = type}
                   class={`px-3 py-2 text-sm rounded-lg border transition-colors ${
                     noiseType === type
-                      ? 'bg-blue-500 text-white border-blue-500'
+                      ? 'bg-amber-500 text-white border-amber-500'
                       : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600'
                   }`}
                 >
@@ -147,7 +147,7 @@ background-repeat: repeat;`;
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('intensity')}: {intensity}%
             </label>
             <input
@@ -161,7 +161,7 @@ background-repeat: repeat;`;
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('scale')}: {scale}x
             </label>
             <input
@@ -177,7 +177,7 @@ background-repeat: repeat;`;
 
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('size')}: {size}px
             </label>
             <select
@@ -193,7 +193,7 @@ background-repeat: repeat;`;
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('baseColor')}
             </label>
             <div class="flex items-center gap-3">
@@ -211,7 +211,7 @@ background-repeat: repeat;`;
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('noiseColor')}
             </label>
             <div class="flex items-center gap-3">
@@ -234,7 +234,7 @@ background-repeat: repeat;`;
       <div class="flex gap-3">
         <button
           onclick={generateNoise}
-          class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+          class="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors"
         >
           {t('regenerate')}
         </button>
@@ -246,7 +246,7 @@ background-repeat: repeat;`;
         </button>
         <button
           onclick={handleDownload}
-          class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+          class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-emerald-500 transition-colors"
         >
           {common('download')} PNG
         </button>
@@ -254,7 +254,7 @@ background-repeat: repeat;`;
 
       <!-- CSS Usage -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           CSS {t('usage')}
         </label>
         <pre class="p-4 bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm font-mono">

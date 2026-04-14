@@ -166,7 +166,7 @@
           onclick={() => { mode = 'encode'; handleClear(); }}
           class={`px-4 py-2 rounded-lg font-medium transition-colors ${
             mode === 'encode'
-              ? 'bg-blue-600 text-white'
+              ? 'bg-amber-600 text-white'
               : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
           }`}
         >
@@ -176,7 +176,7 @@
           onclick={() => { mode = 'decode'; handleClear(); }}
           class={`px-4 py-2 rounded-lg font-medium transition-colors ${
             mode === 'decode'
-              ? 'bg-blue-600 text-white'
+              ? 'bg-amber-600 text-white'
               : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
           }`}
         >
@@ -191,7 +191,7 @@
           <div
             ondrop={handleDrop}
             ondragover={(e) => e.preventDefault()}
-            class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center hover:border-blue-500 dark:hover:border-blue-400 transition-colors cursor-pointer"
+            class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center hover:border-amber-500 dark:hover:border-amber-400 transition-colors cursor-pointer"
             onclick={() => fileInputRef?.click()}
           >
             <input
@@ -237,7 +237,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div>
-                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label class="tool-label">
                   {t('preview')}
                 </label>
                 <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-gray-50 dark:bg-gray-900 min-h-[200px] flex items-center justify-center">
@@ -245,7 +245,7 @@
                 </div>
               </div>
               <div>
-                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label class="tool-label">
                   Base64 {tCommon('output')}
                 </label>
                 <textarea
@@ -263,7 +263,7 @@
             <div class="flex gap-3 flex-wrap">
               <button
                 onclick={handleCopy}
-                class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium"
+                class="px-6 py-2 btn-success rounded-lg hover:bg-green-700 transition-colors font-medium"
               >
                 {copied ? tCommon('copied') : tCommon('copy')}
               </button>
@@ -281,7 +281,7 @@
 <!-- Decode Mode: Base64 to Image -->
         <div class="space-y-6">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               Base64 {tCommon('input')}
             </label>
             <textarea
@@ -293,7 +293,7 @@
           <div class="flex gap-3 flex-wrap">
             <button
               onclick={handleBase64Decode}
-              class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              class="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
             >
               {t('decode')}
             </button>
@@ -309,7 +309,7 @@
           {#if imagePreview}
 
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="tool-label">
                 {t('preview')}
               </label>
               <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-gray-50 dark:bg-gray-900 min-h-[200px] flex items-center justify-center">
@@ -318,7 +318,7 @@
               <div class="mt-4">
                 <button
                   onclick={handleDownload}
-                  class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium"
+                  class="px-6 py-2 btn-success rounded-lg hover:bg-green-700 transition-colors font-medium"
                 >
                   {tCommon('download')}
                 </button>

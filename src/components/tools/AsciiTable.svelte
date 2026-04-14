@@ -140,19 +140,19 @@
           <input
             type="checkbox"
             bind:checked={showExtended}
-            class="w-4 h-4 text-blue-600 rounded"
+            class="w-4 h-4 text-amber-600 rounded"
           />
           <span class="text-sm text-gray-600 dark:text-gray-300">{t('showExtended')}</span>
         </label>
       </div>
 
       {#if selectedChar}
-<div class="p-4 bg-blue-900/20 rounded-lg">
+<div class="p-4 bg-amber-900/20 rounded-lg">
           <div class="flex items-center justify-between mb-2">
-            <h3 class="font-medium text-blue-300">{t('selectedChar')}</h3>
+            <h3 class="font-medium text-amber-300">{t('selectedChar')}</h3>
             <button
               onclick={() => selectedChar = null}
-              class="text-blue-400 hover:text-blue-300"
+              class="text-amber-400 hover:text-amber-300"
             >
               ✕
             </button>

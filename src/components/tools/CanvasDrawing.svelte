@@ -110,13 +110,13 @@
         <div class="flex gap-2">
           <button
             onclick={() => tool = 'brush'}
-            class={`px-3 py-1 rounded text-white ${tool === 'brush' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-700'}`}
+            class={`px-3 py-1 rounded text-white ${tool === 'brush' ? 'bg-amber-600' : 'bg-gray-500 dark:bg-gray-700'}`}
           >
             {t('canvas.brush')}
           </button>
           <button
             onclick={() => tool = 'eraser'}
-            class={`px-3 py-1 rounded text-white ${tool === 'eraser' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-700'}`}
+            class={`px-3 py-1 rounded text-white ${tool === 'eraser' ? 'bg-amber-600' : 'bg-gray-500 dark:bg-gray-700'}`}
           >
             {t('canvas.eraser')}
           </button>
@@ -124,7 +124,7 @@
         <button onclick={clearCanvas} class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 rounded">
           {t('clear')}
         </button>
-        <button onclick={downloadImage} class="px-3 py-1 bg-green-600 hover:bg-green-700 text-white rounded">
+        <button onclick={downloadImage} class="px-3 py-1 bg-emerald-500 hover:bg-green-700 text-white rounded">
           {t('download')}
         </button>
       </div>

@@ -225,14 +225,14 @@
           <button
             onclick={convertImage}
             disabled={isProcessing}
-            class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium"
+            class="px-6 py-2 bg-amber-600 hover:bg-amber-700 text-white disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium"
           >
             {isProcessing ? t('processing') : t('convert')}
           </button>
           {#if convertedImage}
 <button
               onclick={downloadConverted}
-              class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium"
+              class="px-6 py-2 bg-emerald-500 hover:bg-green-700 text-white rounded-lg font-medium"
             >
               {t('download')}
             </button>
@@ -245,7 +245,7 @@
         <h3 class="font-medium mb-3 text-gray-900 dark:text-white">{t('formatInfo')}</h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
           <div>
-            <div class="font-medium text-blue-600 dark:text-blue-400">PNG</div>
+            <div class="font-medium text-amber-600 dark:text-amber-400">PNG</div>
             <p class="text-gray-600 dark:text-gray-300">{t('pngDesc')}</p>
           </div>
           <div>
@@ -253,7 +253,7 @@
             <p class="text-gray-600 dark:text-gray-300">{t('jpegDesc')}</p>
           </div>
           <div>
-            <div class="font-medium text-purple-600 dark:text-purple-400">WebP</div>
+            <div class="font-medium text-slate-600 dark:text-slate-400">WebP</div>
             <p class="text-gray-600 dark:text-gray-300">{t('webpDesc')}</p>
           </div>
         </div>

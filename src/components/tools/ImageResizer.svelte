@@ -142,7 +142,7 @@
 <div>
                   <div class="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('imageResizer.resized')}: {newWidth} × {newHeight}</div>
                   <img src={resizedImage} alt="Resized" class="max-w-full h-auto rounded-lg border border-gray-200 dark:border-gray-700" style="aspect-ratio: auto" />
-                  <button onclick={downloadImage} class="mt-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg">
+                  <button onclick={downloadImage} class="mt-2 px-4 py-2 bg-emerald-500 hover:bg-green-700 text-white rounded-lg">
                     {t('download')}
                   </button>
                 </div>

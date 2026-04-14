@@ -144,7 +144,7 @@
 
         <button
           onclick={loadSample}
-          class="text-sm text-blue-600 hover:text-blue-800"
+          class="text-sm text-amber-600 hover:text-amber-800"
         >
           {t('loadSample')}
         </button>
@@ -152,7 +152,7 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('input')}
           </label>
           <textarea
@@ -163,13 +163,13 @@
 
         <div class="space-y-2">
           <div class="flex items-center justify-between">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="tool-label">
               {t('output')}
             </label>
             {#if output}
 <button
                 onclick={handleCopy}
-                class="text-sm text-blue-600 hover:text-blue-800"
+                class="text-sm text-amber-600 hover:text-amber-800"
               >
                 {t('copy')}
               </button>
@@ -192,15 +192,15 @@
       <div class="flex justify-center">
         <button
           onclick={convert}
-          class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          class="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
         >
           {t('convert')}
         </button>
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-        <h3 class="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('quickRef')}</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm text-blue-700 dark:text-blue-400">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/30 rounded-lg">
+        <h3 class="font-medium text-amber-800 dark:text-amber-300 mb-2">{t('quickRef')}</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm text-amber-700 dark:text-amber-400">
           <div>0 = 0000</div>
           <div>1 = 0001</div>
           <div>2 = 0010</div>

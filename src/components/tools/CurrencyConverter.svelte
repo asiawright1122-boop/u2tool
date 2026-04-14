@@ -196,12 +196,12 @@
 
       {#if result !== null}
 <div class="space-y-4">
-          <div class="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl">
+          <div class="p-6 bg-gradient-to-r from-amber-50 to-slate-50 dark:from-amber-900/20 dark:to-slate-900/20 rounded-xl">
             <div class="text-center">
               <div class="text-sm text-gray-600 dark:text-gray-400 mb-2">
                 {formatResult(parseFloat(amount) || 0, fromCurrency)} =
               </div>
-              <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">
+              <div class="text-3xl font-bold text-amber-600 dark:text-amber-400">
                 {formatResult(result, toCurrency)}
               </div>
             </div>

@@ -267,7 +267,7 @@ function validateInput(value: string): boolean {
 {/if}
               <button
                 onclick={useExampleIncome}
-                class="mt-1 text-xs text-blue-600 dark:text-blue-400 hover:underline"
+                class="mt-1 text-xs text-amber-600 dark:text-amber-400 hover:underline"
               >
                 {t('useExample')}
               </button>
@@ -303,7 +303,7 @@ function validateInput(value: string): boolean {
                   type="radio"
                   checked={useStandardDeduction}
                   onchange={() => useStandardDeduction = true}
-                  class="text-blue-600"
+                  class="text-amber-600"
                 />
                 <span class="text-sm text-gray-700 dark:text-gray-300">
                   {t('standardDeduction')} ({currentFilingStatus ? formatAmount(currentFilingStatus.standardDeduction) : ''})
@@ -316,7 +316,7 @@ function validateInput(value: string): boolean {
                   type="radio"
                   checked={!useStandardDeduction}
                   onchange={() => useStandardDeduction = false}
-                  class="text-blue-600"
+                  class="text-amber-600"
                 />
                 <span class="text-sm text-gray-700 dark:text-gray-300">
                   {t('itemizedDeductions')}
@@ -353,7 +353,7 @@ function validateInput(value: string): boolean {
 <div  
                     class={`p-3 rounded-lg border transition-colors ${
                       additionalDeductions[deduction.id] 
-                        ? 'bg-blue-50 dark:bg-blue-900/20 border-blue-300 dark:border-blue-700' 
+                        ? 'bg-amber-50 dark:bg-amber-900/20 border-amber-300 dark:border-amber-700' 
                         : 'bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700'
                     }`}
                   >
@@ -368,7 +368,7 @@ function validateInput(value: string): boolean {
                             handleDeductionAmountChange(deduction.id, '0');
                           }
                         }}
-                        class="mt-1 text-blue-600 rounded flex-shrink-0"
+                        class="mt-1 text-amber-600 rounded flex-shrink-0"
                       />
                       <div class="flex-1 min-w-0">
                         <div class="text-sm font-medium text-gray-800 dark:text-gray-200">
@@ -389,7 +389,7 @@ function validateInput(value: string): boolean {
                               max={deduction.maxAmount}
                               class={`flex-1 px-2 py-1.5 text-sm border rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
                                 additionalDeductions[deduction.id]
-                                  ? 'border-blue-300 dark:border-blue-600'
+                                  ? 'border-amber-300 dark:border-amber-600'
                                   : 'border-gray-300 dark:border-gray-600'
                               }`}
                               placeholder="0"
@@ -416,7 +416,7 @@ function validateInput(value: string): boolean {
             class={`w-full px-4 py-2 rounded-lg transition-colors ${
               isCalculateDisabled
                 ? 'bg-gray-300 dark:bg-gray-700 text-gray-500 dark:text-gray-400 cursor-not-allowed'
-                : 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-amber-600 text-white hover:bg-amber-700'
             }`}
           >
             {tc('calculate')}
@@ -444,9 +444,9 @@ function validateInput(value: string): boolean {
                     {formatAmount(result.takeHomePay)}
                   </div>
                 </div>
-                <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
                   <div class="text-sm text-gray-600 dark:text-gray-400">{t('effectiveRate')}</div>
-                  <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                  <div class="text-2xl font-bold text-amber-600 dark:text-amber-400">
                     {result.effectiveRate.toFixed(2)}%
                   </div>
                 </div>

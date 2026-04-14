@@ -98,7 +98,7 @@
 
       <div class="flex gap-4">
         <button onclick={analyzeUrls} disabled={loading || !input}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 rounded-lg font-medium transition-colors text-white">
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 disabled:opacity-50 rounded-lg font-medium transition-colors text-white">
           {loading ? t('analyzing') : t('analyzeUrls')}
         </button>
         <button onclick={copyResults} disabled={results.length === 0}
@@ -113,7 +113,7 @@
           <div class="space-y-2">
             {#each results as result, index (index)}
 <div  class={`p-4 rounded-lg ${result.status === 'error' ? 'bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-700' : 'bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600'}`}>
-                <div class="font-mono text-sm text-blue-600 dark:text-blue-400 break-all">{result.shortUrl}</div>
+                <div class="font-mono text-sm text-amber-600 dark:text-amber-400 break-all">{result.shortUrl}</div>
                 {#if result.expandedUrl}
 <div class="font-mono text-sm text-green-600 dark:text-green-400 break-all mt-1">→ {result.expandedUrl}</div>
 {/if}

@@ -143,7 +143,7 @@
     <div class="space-y-6">
       <!-- Shape Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('selectShape')}
         </label>
         <div class="flex flex-wrap gap-2">

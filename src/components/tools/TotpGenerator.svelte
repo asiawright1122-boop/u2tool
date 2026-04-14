@@ -88,7 +88,7 @@
             value={secret}
             onchange={(e) => secret = e.target.value.toUpperCase().replace(/[^A-Z2-7]/g, '')}
             placeholder={t('totp.secretPlaceholder')}
-            class="flex-1 p-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-gray-100"
+            class="flex-1 p-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent text-gray-900 dark:text-gray-100"
           />
           <button
             onclick={handleGenerateSecret}
@@ -99,7 +99,7 @@
           <button
             onclick={copySecret}
             class={`px-4 py-2 rounded-lg text-sm ${
-              copiedSecret ? 'bg-green-600' : 'bg-blue-600 hover:bg-blue-700'
+              copiedSecret ? 'bg-emerald-500' : 'bg-amber-600 hover:bg-amber-700'
             }`}
           >
             {copiedSecret ? t('copied') : t('copy')}
@@ -126,7 +126,7 @@
             onclick={copyCode}
             disabled={code === '------'}
             class={`px-4 py-2 rounded-lg text-sm ${
-              copied ? 'bg-green-600' : code === '------' ? 'bg-gray-600 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
+              copied ? 'bg-emerald-500' : code === '------' ? 'bg-gray-600 cursor-not-allowed' : 'bg-amber-600 hover:bg-amber-700'
             }`}
           >
             {copied ? t('copied') : t('copy')}

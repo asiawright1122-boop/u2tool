@@ -239,9 +239,9 @@
     "base64": {
       "encodeToBase64": "Encode to Base64",
       "decodeFromBase64": "Decode from Base64",
-      "inputPlaceholder": "Enter text to encode or Base64 to decode...",
-      "outputPlaceholder": "Result will appear here...",
-      "name": "Free Online Base64 Encoder Decoder",
+      "inputPlaceholder": "Paste or type text to encode/decode...",
+      "outputPlaceholder": "Base64 encoded or decoded result will appear here...",
+      "name": "Base64 Encoder & Decoder",
       "description": "Instantly encode text to Base64 or decode strings with this free online tool.",
       "seo_title": "Free Base64 Encoder and Decoder Online",
       "seo_description": "Use this free online Base64 encoder and decoder to convert text, URLs, and data instantly in your browser with no uploads or signup.",
@@ -278,6 +278,49 @@
         {
           "question": "Is my data stored on your servers after conversion?",
           "answer": "No, all encoding and decoding happens locally in your browser; no data is ever sent to our servers."
+        }
+      ]
+    },
+    "json-formatter": {
+      "name": "JSON Formatter & Validator",
+      "description": "A free online tool to format, beautify, and validate JSON data with syntax highlighting.",
+      "seo_title": "JSON Formatter - Free Online JSON Beautifier & Validator Tool",
+      "seo_description": "Format, validate, and fix JSON instantly with our free online tool. Beautify JSON for readability and catch errors with syntax highlighting. No registration required.",
+      "inputPlaceholder": "Enter JSON data here...",
+      "outputPlaceholder": "Formatted JSON will appear here...",
+      "detailed_description": "This JSON Formatter is an essential online utility for developers, data analysts, and anyone working with JSON data. It instantly transforms messy, minified, or invalid JSON into a clean, readable, and properly indented structure with syntax highlighting. The tool also validates your JSON for common errors, helping you debug and fix issues quickly. It's perfect for preparing data for documentation, APIs, or configuration files.",
+      "usage_steps": [
+        "Paste your raw or minified JSON string into the input field.",
+        "Click the 'Format & Validate' button to process the data.",
+        "View the beautified JSON output with color-coded syntax highlighting.",
+        "Check the validation panel for any errors or warnings in your JSON structure.",
+        "Copy the formatted result or download it as a .txt file for later use."
+      ],
+      "usage_examples": [
+        "Cleaning up a compressed API response for debugging and documentation.",
+        "Validating JSON configuration files before deploying a web application.",
+        "Formatting JSON output from a database query for a readable report."
+      ],
+      "faqs": [
+        {
+          "question": "What happens if my JSON has a syntax error?",
+          "answer": "The validator will pinpoint the exact line and character of the error, such as a missing comma or bracket, to help you fix it."
+        },
+        {
+          "question": "Does this tool support formatting JSON with custom indentation?",
+          "answer": "Yes, you can choose between 2-space or 4-space indentation levels for your formatted output."
+        },
+        {
+          "question": "Can I format extremely large JSON files with this online tool?",
+          "answer": "It handles most common JSON sizes efficiently, but for massive files (over 1MB), performance may vary based on your browser."
+        },
+        {
+          "question": "Is the JSON data I paste stored on your servers?",
+          "answer": "No, all processing happens client-side in your browser. Your data is never sent to or stored on our servers."
+        },
+        {
+          "question": "Does the tool fix common JSON errors automatically?",
+          "answer": "It identifies and reports errors like trailing commas or mismatched quotes but requires manual correction for data integrity."
         }
       ]
     },
@@ -1595,49 +1638,6 @@
       "height": "Height",
       "lockRatio": "Lock Ratio",
       "resize": "Resize"
-    },
-    "json-formatter": {
-      "name": "JSON Formatter & Validator",
-      "description": "A free online tool to format, beautify, and validate JSON data with syntax highlighting.",
-      "seo_title": "JSON Formatter - Free Online JSON Beautifier & Validator Tool",
-      "seo_description": "Format, validate, and fix JSON instantly with our free online tool. Beautify JSON for readability and catch errors with syntax highlighting. No registration required.",
-      "inputPlaceholder": "Enter JSON data here...",
-      "outputPlaceholder": "Formatted JSON will appear here...",
-      "detailed_description": "This JSON Formatter is an essential online utility for developers, data analysts, and anyone working with JSON data. It instantly transforms messy, minified, or invalid JSON into a clean, readable, and properly indented structure with syntax highlighting. The tool also validates your JSON for common errors, helping you debug and fix issues quickly. It's perfect for preparing data for documentation, APIs, or configuration files.",
-      "usage_steps": [
-        "Paste your raw or minified JSON string into the input field.",
-        "Click the 'Format & Validate' button to process the data.",
-        "View the beautified JSON output with color-coded syntax highlighting.",
-        "Check the validation panel for any errors or warnings in your JSON structure.",
-        "Copy the formatted result or download it as a .txt file for later use."
-      ],
-      "usage_examples": [
-        "Cleaning up a compressed API response for debugging and documentation.",
-        "Validating JSON configuration files before deploying a web application.",
-        "Formatting JSON output from a database query for a readable report."
-      ],
-      "faqs": [
-        {
-          "question": "What happens if my JSON has a syntax error?",
-          "answer": "The validator will pinpoint the exact line and character of the error, such as a missing comma or bracket, to help you fix it."
-        },
-        {
-          "question": "Does this tool support formatting JSON with custom indentation?",
-          "answer": "Yes, you can choose between 2-space or 4-space indentation levels for your formatted output."
-        },
-        {
-          "question": "Can I format extremely large JSON files with this online tool?",
-          "answer": "It handles most common JSON sizes efficiently, but for massive files (over 1MB), performance may vary based on your browser."
-        },
-        {
-          "question": "Is the JSON data I paste stored on your servers?",
-          "answer": "No, all processing happens client-side in your browser. Your data is never sent to or stored on our servers."
-        },
-        {
-          "question": "Does the tool fix common JSON errors automatically?",
-          "answer": "It identifies and reports errors like trailing commas or mismatched quotes but requires manual correction for data integrity."
-        }
-      ]
     },
     "uuid-generator": {
       "name": "UUID Generator",
@@ -7113,7 +7113,12 @@
         "may": "May",
         "jun": "Jun",
         "sales": "Sales",
-        "profit": "Profit"
+        "profit": "Profit",
+        "productA": "Product A",
+        "productB": "Product B",
+        "productC": "Product C",
+        "productD": "Product D",
+        "productE": "Product E"
       }
     },
     "line-chart-generator": {
@@ -7690,7 +7695,10 @@
         "insurance": "Insurance",
         "pharma": "Pharma",
         "medical": "Medical",
-        "energy": "Energy"
+        "energy": "Energy",
+        "tech": "Technology",
+        "finance": "Finance",
+        "healthcare": "Healthcare"
       },
       "tips": {
         "title": "Usage Tips",
@@ -9541,7 +9549,11 @@
         "completion": "Completion",
         "satisfaction": "Satisfaction",
         "efficiency": "Efficiency",
-        "quality": "Quality"
+        "quality": "Quality",
+        "revenue": "Revenue",
+        "expenses": "Expenses",
+        "profit": "Profit",
+        "growth": "Growth"
       },
       "tips": {
         "title": "Tips",

@@ -240,7 +240,7 @@
     <div class="space-y-6">
       <!-- Project Name -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('projectName')}
         </label>
         <input
@@ -248,13 +248,13 @@
           value={config.projectName}
           onchange={(e) => config = ({ ...config, projectName: e.target.value })}
           placeholder={t('projectNamePlaceholder')}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
         />
       </div>
 
       <!-- Description -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('description')}
         </label>
         <textarea
@@ -262,14 +262,14 @@
           onchange={(e) => config = ({ ...config, description: e.target.value })}
           placeholder={t('descriptionPlaceholder')}
           rows={3}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent resize-none"
         />
       </div>
 
       <!-- Author Info -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('author')}
           </label>
           <input
@@ -277,11 +277,11 @@
             value={config.author}
             onchange={(e) => config = ({ ...config, author: e.target.value })}
             placeholder={t('authorPlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('authorGithub')}
           </label>
           <input
@@ -289,14 +289,14 @@
             value={config.authorGithub}
             onchange={(e) => config = ({ ...config, authorGithub: e.target.value })}
             placeholder={t('authorGithubPlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
       </div>
 
       <!-- Badges -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('badges')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -305,7 +305,7 @@
               onclick={() => toggleBadge(badge.type)}
               class={`px-3 py-1.5 rounded text-sm ${
                 config.badges.find(b => b.type === badge.type)?.enabled
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
@@ -317,7 +317,7 @@
 
       <!-- Features -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('features')}
         </label>
         <div class="space-y-2">
@@ -328,11 +328,11 @@
                 value={feature}
                 onchange={(e) => updateFeature(index, e.target.value)}
                 placeholder={t('featurePlaceholder')}
-                class="flex-1 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="flex-1 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
               />
               <button
                 onclick={() => removeFeature(index)}
-                class="px-3 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg"
+                class="px-3 py-2 bg-red-500 hover:bg-rose-500 text-white rounded-lg"
               >
                 ✕
               </button>
@@ -349,7 +349,7 @@
 
       <!-- Installation -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('installation')}
         </label>
         <textarea
@@ -357,13 +357,13 @@
           onchange={(e) => config = ({ ...config, installation: e.target.value })}
           placeholder={t('installationPlaceholder')}
           rows={2}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent resize-none"
         />
       </div>
 
       <!-- Usage -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('usage')}
         </label>
         <textarea
@@ -371,19 +371,19 @@
           onchange={(e) => config = ({ ...config, usage: e.target.value })}
           placeholder={t('usagePlaceholder')}
           rows={4}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent resize-none"
         />
       </div>
 
       <!-- License -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('license')}
         </label>
         <select
           value={config.license}
           onchange={(e) => config = ({ ...config, license: e.target.value })}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
         >
           <option value="MIT">MIT</option>
           <option value="Apache-2.0">Apache 2.0</option>
@@ -400,7 +400,7 @@
             type="checkbox"
             checked={config.includeTableOfContents}
             onchange={(e) => config = ({ ...config, includeTableOfContents: e.target.checked })}
-            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+            class="w-4 h-4 text-amber-600 bg-gray-100 border-gray-300 rounded focus:ring-amber-500"
           />
           <span class="text-sm text-gray-700 dark:text-gray-300">{t('includeTableOfContents')}</span>
         </label>
@@ -410,7 +410,7 @@
       <div class="flex justify-center gap-4">
         <button
           onclick={generateReadme}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium text-white"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium text-white"
         >
           {t('generate')}
         </button>
@@ -436,7 +436,7 @@
               </button>
               <button
                 onclick={downloadFile}
-                class="px-3 py-1 bg-green-600 hover:bg-green-700 rounded text-sm text-white"
+                class="px-3 py-1 bg-emerald-500 hover:bg-green-700 rounded text-sm text-white"
               >
                 {t('download')}
               </button>

@@ -154,7 +154,7 @@
 
       <button
         onclick={calculate}
-        class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        class="w-full px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
       >
         {tc('calculate')}
       </button>
@@ -162,13 +162,13 @@
       {#if result}
 <div class="space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+            <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
               <div class="text-sm text-gray-600 dark:text-gray-400">{t('simpleRoi')}</div>
               <div class={`text-2xl font-bold ${result.simpleRoi >= 0 ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
                 {formatPercent(result.simpleRoi)}
               </div>
             </div>
-            <div class="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+            <div class="p-4 bg-slate-50 dark:bg-slate-900/20 rounded-lg">
               <div class="text-sm text-gray-600 dark:text-gray-400">{t('annualizedRoi')}</div>
               <div class={`text-2xl font-bold ${result.annualizedRoi >= 0 ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
                 {formatPercent(result.annualizedRoi)}

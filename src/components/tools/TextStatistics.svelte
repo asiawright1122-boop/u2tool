@@ -55,7 +55,7 @@
           { label: t('textStats.speakTime'), value: `${stats.speakTime} min` },
         ] as s, i (i)}
 <div  class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-3 text-center">
-            <p class="text-2xl font-bold text-blue-600 dark:text-blue-400">{s.value}</p>
+            <p class="text-2xl font-bold text-amber-600 dark:text-amber-400">{s.value}</p>
             <p class="text-sm text-gray-600 dark:text-gray-300">{s.label}</p>
           </div>
 {/each}

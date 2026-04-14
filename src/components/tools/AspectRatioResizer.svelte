@@ -126,7 +126,7 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('uploadImage')}
         </label>
         <input
@@ -149,7 +149,7 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="tool-label">
                 {t('width')} (px)
               </label>
               <input
@@ -160,7 +160,7 @@
               />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="tool-label">
                 {t('height')} (px)
               </label>
               <input
@@ -177,7 +177,7 @@
               type="checkbox"
               id="lockRatio"
               bind:checked={lockRatio}
-              class="w-4 h-4 text-blue-600 rounded"
+              class="w-4 h-4 text-amber-600 rounded"
             />
             <label for="lockRatio" class="text-sm text-gray-700 dark:text-gray-300">
               <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> {t('lockAspectRatio')}
@@ -192,7 +192,7 @@
                   onclick={() => applyRatio(ratio)}
                   class={`p-2 text-xs rounded-lg border transition-colors ${
                     selectedRatio?.name === ratio.name
-                      ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
+                      ? 'border-amber-500 bg-amber-50 dark:bg-amber-900/20'
                       : 'border-gray-200 dark:border-gray-700 hover:border-gray-300'
                   }`}
                 >
@@ -208,7 +208,7 @@
               {#each socialMediaSizes as size (size.name)}
 <button 
                   onclick={() => applySocialSize(size)}
-                  class="p-3 text-left rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 transition-colors"
+                  class="p-3 text-left rounded-lg border border-gray-200 dark:border-gray-700 hover:border-amber-500 transition-colors"
                 >
                   <div class="text-sm font-medium text-gray-900 dark:text-white">{size.name}</div>
                   <div class="text-xs text-gray-500">{size.width} × {size.height}</div>
@@ -217,7 +217,7 @@
             </div>
           </div>
 
-          <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+          <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
             <div class="flex items-center justify-between">
               <div>
                 <div class="text-sm text-gray-600 dark:text-gray-400">{t('outputSize')}</div>
@@ -227,7 +227,7 @@
               </div>
               <button
                 onclick={downloadImage}
-                class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                class="px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
               >
                 {t('download')}
               </button>

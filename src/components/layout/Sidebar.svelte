@@ -58,17 +58,15 @@
 </script>
 
 <nav
-  class="h-full w-full bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 overflow-y-auto overflow-x-hidden"
+  class="h-full w-full bg-white dark:bg-slate-950 border-r border-slate-200 dark:border-white/5 overflow-y-auto overflow-x-hidden"
   role="navigation"
 >
   <!-- Logo -->
-  <div class="h-16 flex items-center px-4 border-b border-gray-200 dark:border-gray-800">
-    <a href={homePath()} class="flex items-center gap-2">
-      <span class="text-blue-500">{@html getIconSvg('wrench', 24)}</span>
+  <div class="h-16 flex items-center px-5 border-b border-slate-200 dark:border-white/5 mb-2">
+    <a href={homePath()} class="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white group w-full" class:justify-center={collapsed}>
+      <span class="text-amber-500 transition-transform group-hover:scale-110 duration-500 drop-shadow-[0_0_15px_rgba(245,158,11,0.5)] shrink-0">{@html getIconSvg('gem', 24)}</span>
       {#if !collapsed}
-        <span class="text-lg font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-          {siteName}
-        </span>
+        <span class="tracking-tight truncate">U2<span class="text-amber-500">Tool</span></span>
       {/if}
     </a>
   </div>
@@ -95,7 +93,7 @@
         class:justify-center={collapsed}
         title={collapsed ? (navMessages.toolCategories || 'Categories') : undefined}
       >
-        <span class="sidebar-icon">{@html getIconSvg('wrench', 18)}</span>
+        <span class="sidebar-icon">{@html getIconSvg('layout-grid', 18)}</span>
         {#if !collapsed}
           <span class="flex-1 text-sm font-medium text-left">{navMessages.toolCategories || 'Tool Categories'}</span>
           <svg class="w-4 h-4 transition-transform {toolsExpanded ? 'rotate-180' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">

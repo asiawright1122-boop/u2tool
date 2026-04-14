@@ -270,7 +270,7 @@
   <div class="flex flex-wrap gap-3">
     <button
       onclick={useNow}
-      class="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+      class="rounded-lg bg-amber-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-amber-700"
     >
       {tz('now')}
     </button>
@@ -282,22 +282,22 @@
     </button>
   </div>
 
-  <section class="rounded-xl bg-gradient-to-r from-slate-900 to-blue-900 p-5 text-white shadow-lg">
+  <section class="rounded-xl bg-gradient-to-r from-slate-900 to-amber-900 p-5 text-white shadow-lg">
     <div class="flex items-center justify-between gap-3">
       <div>
-        <div class="text-sm uppercase tracking-wide text-blue-100">{tz('convertedTime')}</div>
+        <div class="text-sm uppercase tracking-wide text-amber-100">{tz('convertedTime')}</div>
         {#if result}
           <div class="mt-2 text-3xl font-bold">{result.time}</div>
-          <div class="mt-1 text-blue-100">{result.date}</div>
-          <div class="mt-3 text-sm text-blue-100">{targetTimezone}</div>
+          <div class="mt-1 text-amber-100">{result.date}</div>
+          <div class="mt-3 text-sm text-amber-100">{targetTimezone}</div>
         {:else}
-          <div class="mt-2 text-lg font-medium text-blue-100">-</div>
+          <div class="mt-2 text-lg font-medium text-amber-100">-</div>
         {/if}
       </div>
       <button
         onclick={copyResult}
         disabled={!result}
-        class="rounded-lg border border-blue-300/40 px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-50"
+        class="rounded-lg border border-amber-300/40 px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-50"
       >
         {copied ? tz('copied') : tz('copy')}
       </button>

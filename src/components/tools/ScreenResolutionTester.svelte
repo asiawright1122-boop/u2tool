@@ -69,7 +69,7 @@
 
 
     <div class="space-y-6">
-      <div class="p-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white">
+      <div class="p-6 bg-gradient-to-r from-amber-500 to-slate-500 rounded-lg text-white">
         <h3 class="text-lg font-semibold mb-4">{t('currentScreen')}</h3>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
           <div>
@@ -119,7 +119,7 @@
           />
           <button
             onclick={openCustomResolution}
-            class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            class="px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
           >
             {t('test')}
           </button>
@@ -145,7 +145,7 @@
         <h3 class="font-semibold mb-3">{t('viewportIndicator')}</h3>
         <div class="flex justify-center">
           <div
-            class="border-2 border-blue-500 rounded relative"
+            class="border-2 border-amber-500 rounded relative"
             style="width: 300px; height: {300 * (viewportHeight / viewportWidth)}px; max-height: 200px"
           >
             <div class="absolute inset-0 flex items-center justify-center text-sm text-gray-500">

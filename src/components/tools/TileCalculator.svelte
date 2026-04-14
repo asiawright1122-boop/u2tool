@@ -100,7 +100,7 @@
         <button
           onclick={() => unit = 'metric'}
           class={`px-3 py-1 rounded text-sm ${
-            unit === 'metric' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700'
+            unit === 'metric' ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700'
           }`}
         >
           {t('metric')} (m, cm)
@@ -108,7 +108,7 @@
         <button
           onclick={() => unit = 'imperial'}
           class={`px-3 py-1 rounded text-sm ${
-            unit === 'imperial' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700'
+            unit === 'imperial' ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700'
           }`}
         >
           {t('imperial')} (ft, in)
@@ -117,7 +117,7 @@
 
       <!-- Pattern Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('pattern')}
         </label>
         <div class="flex gap-2">
@@ -126,7 +126,7 @@
               onclick={() => pattern = p.id}
               class={`px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${
                 pattern === p.id
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
               }`}
             >
@@ -228,7 +228,7 @@
 
       <!-- Results -->
       {#if result}
-<div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6">
+<div class="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-6">
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             {t('results')}
           </h3>
@@ -245,9 +245,9 @@
                 {(result.tileArea * 10000).toFixed(0)} cm²
               </div>
             </div>
-            <div class="p-4 rounded-lg bg-blue-100 dark:bg-blue-800 text-center">
+            <div class="p-4 rounded-lg bg-amber-100 dark:bg-amber-800 text-center">
               <div class="text-xs text-gray-500 mb-1">{t('tilesNeeded')}</div>
-              <div class="text-2xl font-bold text-blue-700 dark:text-blue-300">
+              <div class="text-2xl font-bold text-amber-700 dark:text-amber-300">
                 {result.tilesNeeded}
               </div>
             </div>

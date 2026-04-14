@@ -65,7 +65,7 @@
       <!-- Input -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             Code {tCommon('input')}
           </label>
           <div class="flex gap-2 items-center">
@@ -78,7 +78,7 @@
               <option value="python">Python</option>
               <option value="go">Go</option>
             </select>
-            <button onclick={loadExample} class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400">
+            <button onclick={loadExample} class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400">
               {t('loadExample')}
             </button>
           </div>
@@ -127,9 +127,9 @@
           <div class="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
             <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">{t('lineBreakdown')}</h3>
             <div class="flex gap-4">
-              <div class="flex-1 bg-blue-100 dark:bg-blue-900/30 rounded p-2 text-center">
-                <div class="text-lg font-medium text-blue-700 dark:text-blue-300">{result.codeLines}</div>
-                <div class="text-xs text-blue-600 dark:text-blue-400">{t('code')}</div>
+              <div class="flex-1 bg-amber-100 dark:bg-amber-900/30 rounded p-2 text-center">
+                <div class="text-lg font-medium text-amber-700 dark:text-amber-300">{result.codeLines}</div>
+                <div class="text-xs text-amber-600 dark:text-amber-400">{t('code')}</div>
               </div>
               <div class="flex-1 bg-green-100 dark:bg-green-900/30 rounded p-2 text-center">
                 <div class="text-lg font-medium text-green-700 dark:text-green-300">{result.commentLines}</div>
@@ -188,8 +188,8 @@
 {/if}
 
           <!-- Legend -->
-          <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-            <h4 class="text-sm font-medium text-blue-800 dark:text-blue-300 mb-2">{t('complexityGuide')}</h4>
+          <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+            <h4 class="text-sm font-medium text-amber-800 dark:text-amber-300 mb-2">{t('complexityGuide')}</h4>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
               <div><span class="text-green-600">1-5:</span> {t('simple')}</div>
               <div><span class="text-yellow-600">6-10:</span> {t('moderate')}</div>

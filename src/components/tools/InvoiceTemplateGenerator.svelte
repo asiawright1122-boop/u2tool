@@ -111,7 +111,7 @@
               onclick={() => updateInvoice('template', tmpl)}
               class={`px-4 py-2 rounded-lg capitalize ${
                 invoice.template === tmpl
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
               }`}
             >
@@ -228,7 +228,7 @@
         <div>
           <div class="flex justify-between items-center mb-2">
             <h3 class="font-medium">{t('items')}</h3>
-            <button onclick={addItem} class="text-sm text-blue-600 hover:text-blue-700">{t('addItem')}</button>
+            <button onclick={addItem} class="text-sm text-amber-600 hover:text-amber-700">{t('addItem')}</button>
           </div>
           <div class="space-y-2">
             {#each invoice.items as item (item.id)}
@@ -286,7 +286,7 @@
 
         <button
           onclick={downloadHTML}
-          class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+          class="w-full px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700"
         >
           {t('downloadInvoice')}
         </button>
@@ -300,7 +300,7 @@
         `}</style>
         <div class={`invoice-${invoice.template}`}>
           {#if invoice.template === 'modern'}
-<div class="border-l-4 border-blue-600 pl-4 mb-6">
+<div class="border-l-4 border-amber-600 pl-4 mb-6">
               <h1 class="text-3xl font-bold text-gray-900">INVOICE</h1>
               <p class="text-gray-500">#{invoice.invoiceNumber}</p>
             </div>
@@ -378,7 +378,7 @@
               </div>
               <div class="flex justify-between py-3 text-lg font-bold">
                 <span class="text-gray-900">Total</span>
-                <span class="text-blue-600">{formatCurrency(calculations.total)}</span>
+                <span class="text-amber-600">{formatCurrency(calculations.total)}</span>
               </div>
             </div>
           </div>
@@ -429,7 +429,7 @@
               onclick={() => updateInvoice('template', tmpl)}
               class={`px-4 py-2 rounded-lg capitalize ${
                 invoice.template === tmpl
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
               }`}
             >
@@ -546,7 +546,7 @@
         <div>
           <div class="flex justify-between items-center mb-2">
             <h3 class="font-medium">{t('items')}</h3>
-            <button onclick={addItem} class="text-sm text-blue-600 hover:text-blue-700">{t('addItem')}</button>
+            <button onclick={addItem} class="text-sm text-amber-600 hover:text-amber-700">{t('addItem')}</button>
           </div>
           <div class="space-y-2">
             {#each invoice.items as item (item.id)}
@@ -604,7 +604,7 @@
 
         <button
           onclick={downloadHTML}
-          class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+          class="w-full px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700"
         >
           {t('downloadInvoice')}
         </button>
@@ -618,7 +618,7 @@
         `}</style>
         <div class={`invoice-${invoice.template}`}>
           {#if invoice.template === 'modern'}
-<div class="border-l-4 border-blue-600 pl-4 mb-6">
+<div class="border-l-4 border-amber-600 pl-4 mb-6">
               <h1 class="text-3xl font-bold text-gray-900">INVOICE</h1>
               <p class="text-gray-500">#{invoice.invoiceNumber}</p>
             </div>
@@ -696,7 +696,7 @@
               </div>
               <div class="flex justify-between py-3 text-lg font-bold">
                 <span class="text-gray-900">Total</span>
-                <span class="text-blue-600">{formatCurrency(calculations.total)}</span>
+                <span class="text-amber-600">{formatCurrency(calculations.total)}</span>
               </div>
             </div>
           </div>

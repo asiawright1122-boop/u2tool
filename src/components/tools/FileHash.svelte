@@ -127,7 +127,7 @@
                 <span class="text-sm text-gray-600 dark:text-gray-300 uppercase">{algo}</span>
                 <button
                   onclick={() => copyHash(hash)}
-                  class="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
+                  class="text-xs text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300"
                 >
                   {t('copy')}
                 </button>

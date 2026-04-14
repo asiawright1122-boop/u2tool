@@ -124,12 +124,12 @@
       <!-- Input Section -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('jsonToExcel.jsonInput')}
           </label>
           <button
             onclick={loadSample}
-            class="text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400"
+            class="text-sm text-amber-600 hover:text-amber-800 dark:text-amber-400"
           >
             {t('jsonToExcel.loadSample')}
           </button>
@@ -209,7 +209,7 @@
       <button
         onclick={handleDownload}
         disabled={!jsonInput.trim() || !!error}
-        class="w-full px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
+        class="w-full px-4 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
       >
         {t('jsonToExcel.download')}
       </button>

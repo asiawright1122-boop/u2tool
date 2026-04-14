@@ -161,7 +161,7 @@
     <div class="space-y-4">
       <!-- Pattern Input -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('pattern')}
         </label>
         <input
@@ -174,7 +174,7 @@
 
       <!-- Test String Input -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('testString')}
         </label>
         <textarea
@@ -232,7 +232,7 @@
       <!-- Matches Section -->
       {#if testString}
 <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('matches')} ({matches.length})
           </label>
           <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">

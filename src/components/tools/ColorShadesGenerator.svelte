@@ -78,7 +78,7 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('baseColor')}</label>
+          <label class="tool-label">{t('baseColor')}</label>
           <div class="flex gap-2">
             <input type="color" bind:value={baseColor}
               class="w-16 h-10 rounded cursor-pointer" />
@@ -87,14 +87,14 @@
           </div>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('numberOfShades', { count: shadeCount })}</label>
+          <label class="tool-label">{t('numberOfShades', { count: shadeCount })}</label>
           <input type="range" min="5" max="15" value={shadeCount}
             onchange={(e) => shadeCount = parseInt(e.target.value)}
             class="w-full mt-2" />
         </div>
         <div class="flex items-end">
           <button onclick={copyAll}
-            class="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors text-white">
+            class="w-full px-4 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium transition-colors text-white">
             {t('copyCssVariables')}
           </button>
         </div>
@@ -115,7 +115,7 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('output')}</label>
+        <label class="tool-label">{t('output')}</label>
         <pre class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 font-mono text-sm text-green-600 dark:text-green-400 overflow-x-auto">
           {#each shades as shade, i}
 `--color-${(i + 1) * 100}: ${shade};`).join('\n'

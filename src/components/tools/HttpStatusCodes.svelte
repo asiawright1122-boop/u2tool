@@ -41,7 +41,7 @@
   function getBadgeColor(code: number) {
     if (code >= 100 && code < 200) return 'bg-gray-200 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 border-gray-400/30 dark:border-gray-500/30';
     if (code >= 200 && code < 300) return 'bg-green-100 dark:bg-green-500/20 text-green-700 dark:text-green-400 border-green-500/30';
-    if (code >= 300 && code < 400) return 'bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-400 border-blue-500/30';
+    if (code >= 300 && code < 400) return 'bg-amber-100 dark:bg-amber-500/20 text-amber-700 dark:text-amber-400 border-amber-500/30';
     if (code >= 400 && code < 500) return 'bg-yellow-100 dark:bg-yellow-500/20 text-yellow-700 dark:text-yellow-400 border-yellow-500/30';
     if (code >= 500 && code < 600) return 'bg-red-100 dark:bg-red-500/20 text-red-700 dark:text-red-400 border-red-500/30';
     return 'bg-gray-200 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300';
@@ -56,11 +56,11 @@
           type="text"
           bind:value={search}
           placeholder={t('searchPlaceholder')}
-          class="flex-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
+          class="flex-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
         />
         <select
           bind:value={filter}
-          class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
+          class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
         >
           <option value="all">{t('allCategories')}</option>
           <option value="1xx">{t('informational')}</option>

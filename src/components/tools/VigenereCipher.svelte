@@ -87,8 +87,8 @@
 
     <div class="space-y-6">
       <!-- Info -->
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-        <p class="text-sm text-blue-700 dark:text-blue-300">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+        <p class="text-sm text-amber-700 dark:text-amber-300">
           {t('info')}
         </p>
       </div>
@@ -99,7 +99,7 @@
           onclick={() => handleModeChange('encrypt')}
           class={`px-6 py-2 rounded-lg font-medium ${
             mode === 'encrypt'
-              ? 'bg-blue-600 text-white'
+              ? 'bg-amber-600 text-white'
               : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600'
           }`}
         >
@@ -109,7 +109,7 @@
           onclick={() => handleModeChange('decrypt')}
           class={`px-6 py-2 rounded-lg font-medium ${
             mode === 'decrypt'
-              ? 'bg-blue-600 text-white'
+              ? 'bg-amber-600 text-white'
               : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600'
           }`}
         >
@@ -119,7 +119,7 @@
 
       <!-- Keyword -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('keyword')}
         </label>
         <input
@@ -127,7 +127,7 @@
           value={keyword}
           onchange={(e) => handleKeywordChange(e.target.value)}
           placeholder={t('keywordPlaceholder')}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono focus:ring-2 focus:ring-amber-500 focus:border-transparent"
         />
         {#if keyword}
 <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
@@ -138,7 +138,7 @@
 
       <!-- Input -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {tCommon('input')}
         </label>
         <textarea
@@ -146,7 +146,7 @@
           onchange={(e) => handleInputChange(e.target.value)}
           placeholder={t('inputPlaceholder')}
           rows={6}
-          class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+          class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono focus:ring-2 focus:ring-amber-500 focus:border-transparent resize-none"
         />
       </div>
 
@@ -155,7 +155,7 @@
         <button
           onclick={handleProcess}
           disabled={!keyword}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed rounded-lg font-medium text-white"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-gray-400 disabled:cursor-not-allowed rounded-lg font-medium text-white"
         >
           {mode === 'encrypt' ? t('encrypt') : t('decrypt')}
         </button>
@@ -208,14 +208,14 @@
               <tr>
                 <th class="p-1 text-gray-500 dark:text-gray-400"></th>
                 {#each 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('') as char (char)}
-<th  class="p-1 text-blue-600 dark:text-blue-400">{char}</th>
+<th  class="p-1 text-amber-600 dark:text-amber-400">{char}</th>
 {/each}
               </tr>
             </thead>
             <tbody>
               {#each table as row, rowIndex (rowIndex)}
 <tr >
-                  <td class="p-1 text-blue-600 dark:text-blue-400 font-bold">
+                  <td class="p-1 text-amber-600 dark:text-amber-400 font-bold">
                     {String.fromCharCode(65 + rowIndex)}
                   </td>
                   {#each row as cell, colIndex (colIndex)}

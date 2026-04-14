@@ -158,14 +158,14 @@
           <input
             type="checkbox"
             bind:checked={uppercase}
-            class="w-4 h-4 text-blue-600 rounded"
+            class="w-4 h-4 text-amber-600 rounded"
           />
           <span class="text-sm text-gray-600 dark:text-gray-300">{t('uppercase')}</span>
         </label>
 
         <button
           onclick={loadSample}
-          class="text-sm text-blue-600 hover:text-blue-800"
+          class="text-sm text-amber-600 hover:text-amber-800"
         >
           {t('loadSample')}
         </button>
@@ -180,7 +180,7 @@
             {#if text}
 <button
                 onclick={() => handleCopy(text)}
-                class="text-sm text-blue-600 hover:text-blue-800"
+                class="text-sm text-amber-600 hover:text-amber-800"
               >
                 {t('copy')}
               </button>
@@ -202,7 +202,7 @@
             {#if hex}
 <button
                 onclick={() => handleCopy(hex)}
-                class="text-sm text-blue-600 hover:text-blue-800"
+                class="text-sm text-amber-600 hover:text-amber-800"
               >
                 {t('copy')}
               </button>
@@ -220,7 +220,7 @@
       <div class="flex justify-center gap-4">
         <button
           onclick={handleConvert}
-          class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          class="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
         >
           {mode === 'encode' ? t('textToHex') : t('hexToText')}
         </button>
@@ -232,9 +232,9 @@
         </button>
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg">
-        <h3 class="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('info')}</h3>
-        <p class="text-sm text-blue-700 dark:text-blue-400">{t('infoText')}</p>
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-lg">
+        <h3 class="font-medium text-amber-800 dark:text-amber-300 mb-2">{t('info')}</h3>
+        <p class="text-sm text-amber-700 dark:text-amber-400">{t('infoText')}</p>
       </div>
     </div>
   

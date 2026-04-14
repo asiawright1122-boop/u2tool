@@ -61,7 +61,7 @@ INSERT INTO users (id, name, email, age) VALUES (2, 'Jane', 'jane@example.com', 
       </div>
       
       <button onclick={handleConvert}
-        class="w-full px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        class="w-full px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700">
         {t('convert')}
       </button>
 
@@ -73,7 +73,7 @@ INSERT INTO users (id, name, email, age) VALUES (2, 'Jane', 'jane@example.com', 
 <div>
           <div class="flex justify-between items-center mb-2">
             <label class="text-sm font-medium text-gray-600 dark:text-gray-300">JSON</label>
-            <button onclick={handleCopy} class="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300">{t('copy')}</button>
+            <button onclick={handleCopy} class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-500 dark:hover:text-amber-300">{t('copy')}</button>
           </div>
           <pre class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-green-600 dark:text-green-400 font-mono text-sm overflow-auto max-h-64">
             {output}

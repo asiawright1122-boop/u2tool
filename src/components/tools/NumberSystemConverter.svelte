@@ -77,12 +77,12 @@
       <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border dark:border-gray-700">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('inputBase')}</label>
+            <label class="tool-label">{t('inputBase')}</label>
             <div class="flex gap-2 flex-wrap">
               {#each bases as base (base)}
 <button  onclick={() => handleBaseChange(base)}
                   class={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                    inputBase === base ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                    inputBase === base ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}>
                   {baseNames[base]}
                 </button>
@@ -90,10 +90,10 @@
             </div>
           </div>
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{tCommon('input')}</label>
+            <label class="tool-label">{tCommon('input')}</label>
             <div class="flex items-center gap-2">
               <span class="text-gray-500 font-mono">{basePrefixes[inputBase]}</span>
-              <input type="text" value={inputValue} onchange={(e) => handleInputChange(e.target.value)}
+              <input type="text" bind:value={inputValue}
                 class={`flex-1 p-3 border rounded-lg font-mono text-lg dark:bg-gray-700 dark:border-gray-600 ${error ? 'border-red-500' : ''}`}
                 placeholder={tCommon('inputPlaceholder')} />
             </div>
@@ -108,7 +108,7 @@
         <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('results')}</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {#each bases as base (base)}
-<div  class={`p-4 rounded-lg ${inputBase === base ? 'bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500' : 'bg-gray-50 dark:bg-gray-700'}`}>
+<div  class={`p-4 rounded-lg ${inputBase === base ? 'bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-500' : 'bg-gray-50 dark:bg-gray-700'}`}>
               <div class="text-sm text-gray-500 dark:text-gray-400 mb-1">{baseNames[base]}</div>
               <div class="font-mono text-lg text-gray-900 dark:text-white break-all">
                 {#if isValid}

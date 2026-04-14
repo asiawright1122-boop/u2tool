@@ -126,7 +126,7 @@
             <div class="text-sm text-gray-600 dark:text-gray-300">Minified Size</div>
           </div>
           <div class="bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg p-4 text-center">
-            <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">{stats.saved}%</div>
+            <div class="text-2xl font-bold text-amber-600 dark:text-amber-400">{stats.saved}%</div>
             <div class="text-sm text-gray-600 dark:text-gray-300">Size Reduced</div>
           </div>
         </div>
@@ -157,7 +157,7 @@
       <div class="flex gap-4">
         <button
           onclick={minify}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-medium transition-colors"
         >
           {t('minify')}
         </button>

@@ -114,7 +114,7 @@
       <!-- Names Input -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('yourName')}
           </label>
           <input
@@ -126,7 +126,7 @@
         </div>
 
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('partnerName')}
           </label>
           <input

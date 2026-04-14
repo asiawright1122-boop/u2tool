@@ -43,8 +43,8 @@
 
 
     <div class="space-y-6">
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg">
-        <p class="text-sm text-blue-700 dark:text-blue-300">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-lg">
+        <p class="text-sm text-amber-700 dark:text-amber-300">
           <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> {t('note')}
         </p>
       </div>
@@ -56,7 +56,7 @@
             type="text"
             bind:value={searchTerm}
             placeholder={t('searchPlaceholder')}
-            class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-gray-100 placeholder-gray-500 focus:outline-none focus:border-blue-500"
+            class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-500"
           />
         </div>
         <div>
@@ -65,7 +65,7 @@
             type="number"
             bind:value={customPort}
             placeholder={t('portPlaceholder')}
-            class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-gray-100 placeholder-gray-500 focus:outline-none focus:border-blue-500"
+            class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-500"
             min="1"
             max="65535"
           />
@@ -102,7 +102,7 @@
             <tbody>
               {#each filteredPorts as port (port.port)}
 <tr  class="border-b border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50">
-                  <td class="py-3 px-4 font-mono text-blue-600 dark:text-blue-400">{port.port}</td>
+                  <td class="py-3 px-4 font-mono text-amber-600 dark:text-amber-400">{port.port}</td>
                   <td class="py-3 px-4 font-semibold text-gray-900 dark:text-white">{port.service}</td>
                   <td class="py-3 px-4 text-gray-600 dark:text-gray-300">{t(port.descKey)}</td>
                 </tr>
@@ -121,15 +121,15 @@
         <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">{t('portRanges')}</h4>
         <div class="grid md:grid-cols-3 gap-4 text-sm">
           <div>
-            <span class="text-blue-600 dark:text-blue-400">0-1023:</span>
+            <span class="text-amber-600 dark:text-amber-400">0-1023:</span>
             <span class="text-gray-600 dark:text-gray-300 ml-2">{t('wellKnown')}</span>
           </div>
           <div>
-            <span class="text-blue-600 dark:text-blue-400">1024-49151:</span>
+            <span class="text-amber-600 dark:text-amber-400">1024-49151:</span>
             <span class="text-gray-600 dark:text-gray-300 ml-2">{t('registered')}</span>
           </div>
           <div>
-            <span class="text-blue-600 dark:text-blue-400">49152-65535:</span>
+            <span class="text-amber-600 dark:text-amber-400">49152-65535:</span>
             <span class="text-gray-600 dark:text-gray-300 ml-2">{t('dynamic')}</span>
           </div>
         </div>

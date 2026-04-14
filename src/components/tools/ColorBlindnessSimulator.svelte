@@ -115,7 +115,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('selectColor')}
           </label>
           <div class="flex gap-3">
@@ -133,7 +133,7 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('uploadImage')}
           </label>
           <input
@@ -151,7 +151,7 @@
             onclick={() => selectedType = sim.type}
             class={`p-3 rounded-lg border-2 transition-colors ${
               selectedType === sim.type
-                ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
+                ? 'border-amber-500 bg-amber-50 dark:bg-amber-900/20'
                 : 'border-gray-200 dark:border-gray-700 hover:border-gray-300'
             }`}
           >
@@ -206,9 +206,9 @@
         </div>
 {/if}
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h3 class="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('aboutTitle')}</h3>
-        <p class="text-sm text-blue-700 dark:text-blue-400">{t('aboutDescription')}</p>
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+        <h3 class="font-medium text-amber-800 dark:text-amber-300 mb-2">{t('aboutTitle')}</h3>
+        <p class="text-sm text-amber-700 dark:text-amber-400">{t('aboutDescription')}</p>
       </div>
     </div>
   

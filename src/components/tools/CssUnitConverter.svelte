@@ -86,7 +86,7 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
           {#each UNITS as u (u)}
 <div  class="bg-gray-200 dark:bg-gray-700 rounded p-3 text-center">
-              <p class="text-lg font-mono text-blue-600 dark:text-blue-400">{convert(u)}</p>
+              <p class="text-lg font-mono text-amber-600 dark:text-amber-400">{convert(u)}</p>
               <p class="text-sm text-gray-600 dark:text-gray-300">{u}</p>
             </div>
 {/each}

@@ -99,7 +99,7 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('amount')}
           </label>
           <div class="relative">
@@ -116,7 +116,7 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('calculationMode')}
           </label>
           <select
@@ -145,7 +145,7 @@
 
         {#if useCustomRate}
 <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('customRate')}
             </label>
             <div class="relative w-48">
@@ -164,7 +164,7 @@
 {:else}
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="tool-label">
                 {t('country')}
               </label>
               <select
@@ -185,7 +185,7 @@
             </div>
 
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="tool-label">
                 {t('rateType')}
               </label>
               <select
@@ -221,7 +221,7 @@
       </div>
 
       {#if result}
-<div class="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl border border-blue-100 dark:border-blue-800/30">
+<div class="p-6 bg-gradient-to-r from-amber-50 to-slate-50 dark:from-amber-900/20 dark:to-slate-900/20 rounded-xl border border-amber-100 dark:border-amber-800/30">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div class="text-center p-4 bg-white/80 dark:bg-gray-800/80 rounded-lg shadow-sm backdrop-blur-sm">
               <div class="text-sm text-gray-500 dark:text-gray-400">{t('netAmount')}</div>
@@ -233,7 +233,7 @@
               <div class="text-sm text-gray-500 dark:text-gray-400">
                 {t('vatAmount')} ({result.vatRate}%)
               </div>
-              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">
+              <div class="text-2xl font-bold text-amber-600 dark:text-amber-400">
                 €{result.vatAmount.toFixed(2)}
               </div>
             </div>

@@ -411,7 +411,7 @@
           </label>
           <button
             onclick={addField}
-            class="text-sm px-3 py-1 rounded bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-900/50"
+            class="text-sm px-3 py-1 rounded bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 hover:bg-amber-200 dark:hover:bg-amber-900/50"
           >
             {t('addField')}
           </button>
@@ -485,7 +485,7 @@
                 onclick={handleCopy}
                 class={`text-sm px-3 py-1 rounded ${
                   copied 
-                    ? 'bg-green-600 text-white' 
+                    ? 'btn-success' 
                     : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100'
                 }`}
               >
@@ -543,7 +543,7 @@
                               }
                             }}
                             autoFocus
-                            class="w-full px-2 py-1 border border-blue-500 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                            class="w-full px-2 py-1 border border-amber-500 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-1 focus:ring-amber-500"
                           />
 {:else}
 <div

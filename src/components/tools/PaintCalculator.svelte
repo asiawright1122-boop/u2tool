@@ -126,7 +126,7 @@
         <button
           onclick={() => unit = 'metric'}
           class={`px-3 py-1 rounded text-sm ${
-            unit === 'metric' ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700'
+            unit === 'metric' ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700'
           }`}
         >
           {t('metric')} (m)
@@ -134,7 +134,7 @@
         <button
           onclick={() => unit = 'imperial'}
           class={`px-3 py-1 rounded text-sm ${
-            unit === 'imperial' ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700'
+            unit === 'imperial' ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700'
           }`}
         >
           {t('imperial')} (ft)
@@ -147,7 +147,7 @@
           <h3 class="font-semibold text-gray-900 dark:text-white">{t('walls')}</h3>
           <button
             onclick={addWall}
-            class="px-3 py-1 bg-green-600 text-white rounded-lg text-sm hover:bg-green-700"
+            class="px-3 py-1 btn-success rounded-lg text-sm hover:bg-green-700"
           >
             + {t('addWall')}
           </button>
@@ -191,7 +191,7 @@
           <h3 class="font-semibold text-gray-900 dark:text-white">{t('openings')}</h3>
           <button
             onclick={addOpening}
-            class="px-3 py-1 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700"
+            class="px-3 py-1 bg-amber-600 text-white rounded-lg text-sm hover:bg-amber-700"
           >
             + {t('addOpening')}
           </button>

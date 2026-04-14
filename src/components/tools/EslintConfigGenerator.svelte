@@ -202,13 +202,13 @@
     <div class="space-y-6">
       <!-- Framework -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('framework')}
         </label>
         <select
           value={config.framework}
           onchange={(e) => config = ({ ...config, framework: e.target.value })}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
         >
           {#each FRAMEWORKS as fw (fw.value)}
 <option  value={fw.value}>{fw.label}</option>
@@ -218,13 +218,13 @@
 
       <!-- Style Guide -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('styleGuide')}
         </label>
         <select
           value={config.styleGuide}
           onchange={(e) => config = ({ ...config, styleGuide: e.target.value })}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
         >
           {#each STYLE_GUIDES as sg (sg.value)}
 <option  value={sg.value}>{sg.label}</option>
@@ -239,7 +239,7 @@
           id="typescript"
           checked={config.typescript}
           onchange={(e) => config = ({ ...config, typescript: e.target.checked })}
-          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+          class="w-4 h-4 text-amber-600 bg-gray-100 border-gray-300 rounded focus:ring-amber-500"
         />
         <label for="typescript" class="text-sm font-medium text-gray-700 dark:text-gray-300">
           {t('typescript')}
@@ -248,7 +248,7 @@
 
       <!-- Environment -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('environment')}
         </label>
         <div class="flex flex-wrap gap-4">
@@ -257,7 +257,7 @@
               type="checkbox"
               checked={config.env.browser}
               onchange={() => toggleEnv('browser')}
-              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+              class="w-4 h-4 text-amber-600 bg-gray-100 border-gray-300 rounded focus:ring-amber-500"
             />
             <span class="text-sm text-gray-700 dark:text-gray-300">Browser</span>
           </label>
@@ -266,7 +266,7 @@
               type="checkbox"
               checked={config.env.node}
               onchange={() => toggleEnv('node')}
-              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+              class="w-4 h-4 text-amber-600 bg-gray-100 border-gray-300 rounded focus:ring-amber-500"
             />
             <span class="text-sm text-gray-700 dark:text-gray-300">Node.js</span>
           </label>
@@ -275,7 +275,7 @@
               type="checkbox"
               checked={config.env.es2021}
               onchange={() => toggleEnv('es2021')}
-              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+              class="w-4 h-4 text-amber-600 bg-gray-100 border-gray-300 rounded focus:ring-amber-500"
             />
             <span class="text-sm text-gray-700 dark:text-gray-300">ES2021</span>
           </label>
@@ -284,14 +284,14 @@
 
       <!-- Rules -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('rules')}
         </label>
         <div class="space-y-2">
           {#each COMMON_RULES as rule (rule.key)}
 <div  class="flex items-center gap-4 p-2 bg-gray-50 dark:bg-gray-800 rounded-lg">
               <div class="flex-1">
-                <code class="text-sm font-mono text-blue-600 dark:text-blue-400">{rule.label}</code>
+                <code class="text-sm font-mono text-amber-600 dark:text-amber-400">{rule.label}</code>
                 <p class="text-xs text-gray-500 dark:text-gray-400">{rule.description}</p>
               </div>
               <select
@@ -312,7 +312,7 @@
       <div class="flex justify-center gap-4">
         <button
           onclick={generateConfig}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium text-white"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium text-white"
         >
           {t('generate')}
         </button>
@@ -338,7 +338,7 @@
               </button>
               <button
                 onclick={downloadFile}
-                class="px-3 py-1 bg-green-600 hover:bg-green-700 rounded text-sm text-white"
+                class="px-3 py-1 bg-emerald-500 hover:bg-green-700 rounded text-sm text-white"
               >
                 {t('download')}
               </button>

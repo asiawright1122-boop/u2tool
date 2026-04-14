@@ -156,7 +156,7 @@
           onclick={() => mode = 'pace'}
           class={`px-4 py-2 rounded-lg font-medium transition-colors ${
             mode === 'pace'
-              ? 'bg-blue-500 text-white'
+              ? 'bg-amber-500 text-white'
               : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300'
           }`}
         >
@@ -166,7 +166,7 @@
           onclick={() => mode = 'time'}
           class={`px-4 py-2 rounded-lg font-medium transition-colors ${
             mode === 'time'
-              ? 'bg-blue-500 text-white'
+              ? 'bg-amber-500 text-white'
               : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300'
           }`}
         >
@@ -176,7 +176,7 @@
           onclick={() => mode = 'distance'}
           class={`px-4 py-2 rounded-lg font-medium transition-colors ${
             mode === 'distance'
-              ? 'bg-blue-500 text-white'
+              ? 'bg-amber-500 text-white'
               : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300'
           }`}
         >

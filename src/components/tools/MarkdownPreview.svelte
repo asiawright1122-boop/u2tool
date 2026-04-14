@@ -66,7 +66,7 @@ code blocks
             <label class="text-sm font-medium">{t('markdown.editor')}</label>
           </div>
           <textarea
-            class="h-96 w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-900 dark:text-gray-100 focus:outline-none focus:border-blue-500 resize-none"
+            class="h-96 w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-900 dark:text-gray-100 focus:outline-none focus:border-amber-500 resize-none"
             bind:value={markdown}
             placeholder={t('inputPlaceholder')}></textarea>
         </div>
@@ -77,7 +77,7 @@ code blocks
             <label class="text-sm font-medium">{t('markdown.preview')}</label>
             <button
               onclick={copyHtml}
-              class={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+              class={`text-sm px-3 py-1 rounded ${copied ? 'bg-emerald-500' : 'bg-gray-700 hover:bg-gray-600'}`}
             >
               {copied ? t('copied') : t('markdown.exportHtml')}
             </button>

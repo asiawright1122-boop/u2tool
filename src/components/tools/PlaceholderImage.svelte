@@ -87,7 +87,7 @@
             min={1}
             max={2000}
             onchange={(e) => width = Math.min(2000, Math.max(1, Number(e.target.value)))}
-            class="w-full bg-gray-100 dark:bg-gray-700 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            class="w-full bg-gray-100 dark:bg-gray-700 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none"
           />
         </div>
         <div>
@@ -98,7 +98,7 @@
             min={1}
             max={2000}
             onchange={(e) => height = Math.min(2000, Math.max(1, Number(e.target.value)))}
-            class="w-full bg-gray-100 dark:bg-gray-700 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            class="w-full bg-gray-100 dark:bg-gray-700 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none"
           />
         </div>
         <div>
@@ -112,7 +112,7 @@
             <input
               type="text"
               bind:value={bgColor}
-              class="flex-1 bg-gray-100 dark:bg-gray-700 rounded-lg px-2 py-2 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              class="flex-1 bg-gray-100 dark:bg-gray-700 rounded-lg px-2 py-2 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none"
             />
           </div>
         </div>
@@ -127,7 +127,7 @@
             <input
               type="text"
               bind:value={textColor}
-              class="flex-1 bg-gray-100 dark:bg-gray-700 rounded-lg px-2 py-2 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              class="flex-1 bg-gray-100 dark:bg-gray-700 rounded-lg px-2 py-2 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none"
             />
           </div>
         </div>
@@ -139,20 +139,20 @@
           type="text"
           bind:value={text}
           placeholder={`${width} × ${height}`}
-          class="w-full bg-gray-100 dark:bg-gray-700 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          class="w-full bg-gray-100 dark:bg-gray-700 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none"
         />
       </div>
 
       <div class="flex gap-2 flex-wrap">
         <button
           onclick={generateImage}
-          class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors text-white"
+          class="px-4 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg transition-colors text-white"
         >
           {t('generate')}
         </button>
         <button
           onclick={downloadImage}
-          class="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition-colors text-white"
+          class="px-4 py-2 bg-emerald-500 hover:bg-green-700 rounded-lg transition-colors text-white"
         >
           {tg('download')} PNG
         </button>

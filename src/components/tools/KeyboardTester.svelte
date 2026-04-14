@@ -86,8 +86,8 @@
 
 
     <div class="space-y-6">
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center">
-        <p class="text-blue-700 dark:text-blue-300">{t('pressAnyKey')}</p>
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg text-center">
+        <p class="text-amber-700 dark:text-amber-300">{t('pressAnyKey')}</p>
       </div>
 
       {#if lastKey}
@@ -118,7 +118,7 @@
 <button 
                   class={`${getKeyWidth(code)} h-10 rounded text-xs font-medium transition-all ${
                     pressedKeys.has(code)
-                      ? 'bg-blue-500 text-white scale-95'
+                      ? 'bg-amber-500 text-white scale-95'
                       : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   }`}
                 >
@@ -135,7 +135,7 @@
           <h3 class="font-semibold">{t('keyHistory')}</h3>
           <button
             onclick={clearHistory}
-            class="text-sm text-blue-600 hover:text-blue-700"
+            class="text-sm text-amber-600 hover:text-amber-700"
           >
             {t('clear')}
           </button>

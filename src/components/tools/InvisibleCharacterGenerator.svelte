@@ -62,7 +62,7 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('selectCharacter')}
           </label>
           <select
@@ -78,7 +78,7 @@
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('repeatCount')}
           </label>
           <input
@@ -103,7 +103,7 @@
           </div>
           <button
             onclick={copyGenerated}
-            class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            class="px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
           >
             {copied === 'generated' ? t('copied') : t('copy')}
           </button>
@@ -119,10 +119,10 @@
               class={`p-3 text-left rounded-lg border transition-colors ${
                 copied === char.unicode
                   ? 'bg-green-100 dark:bg-green-900/30 border-green-500'
-                  : 'bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-blue-500'
+                  : 'bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-amber-500'
               }`}
             >
-              <div class="font-mono text-sm text-blue-600 dark:text-blue-400">{char.unicode}</div>
+              <div class="font-mono text-sm text-amber-600 dark:text-amber-400">{char.unicode}</div>
               <div class="text-sm font-medium text-gray-900 dark:text-white">{char.name}</div>
               <div class="text-xs text-gray-500 dark:text-gray-400">{char.description}</div>
             </button>
@@ -130,22 +130,22 @@
         </div>
       </div>
 
-      <div class="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
-        <h3 class="font-medium text-purple-800 dark:text-purple-300 mb-3">{t('detectTitle')}</h3>
+      <div class="p-4 bg-slate-50 dark:bg-slate-900/20 rounded-lg">
+        <h3 class="font-medium text-slate-800 dark:text-slate-300 mb-3">{t('detectTitle')}</h3>
         <textarea
           bind:value={testInput}
           placeholder={t('detectPlaceholder')}
-          class="w-full h-24 px-4 py-3 border border-purple-200 dark:border-purple-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white mb-3"></textarea>
+          class="w-full h-24 px-4 py-3 border border-slate-200 dark:border-slate-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white mb-3"></textarea>
         {#if detectedChars.length > 0}
 <div class="space-y-1">
             {#each detectedChars as d, i (i)}
-<div  class="text-sm text-purple-700 dark:text-purple-400">
+<div  class="text-sm text-slate-700 dark:text-slate-400">
                 ✓ {d.name} ({d.char}): {d.count} {t('found')}
               </div>
 {/each}
           </div>
 {:else if testInput}
-<p class="text-sm text-purple-600 dark:text-purple-400">{t('noInvisibleFound')}</p>
+<p class="text-sm text-slate-600 dark:text-slate-400">{t('noInvisibleFound')}</p>
 {:else}
 {null}
 {/if}

@@ -137,7 +137,7 @@
               onclick={() => toggleSize(size)}
               class={`px-3 py-1 rounded text-sm ${
                 selectedSizes.includes(size)
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
@@ -194,7 +194,7 @@
           <button
             onclick={generateFavicons}
             disabled={isProcessing || selectedSizes.length === 0}
-            class="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium text-white"
+            class="px-6 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium text-white"
           >
             {isProcessing ? t('processing') : t('generate')}
           </button>
@@ -208,7 +208,7 @@
             <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('generated')}</label>
             <button
               onclick={downloadAll}
-              class="px-3 py-1.5 bg-green-600 hover:bg-green-700 rounded text-sm text-white"
+              class="px-3 py-1.5 bg-emerald-500 hover:bg-green-700 rounded text-sm text-white"
             >
               {t('downloadAll')}
             </button>

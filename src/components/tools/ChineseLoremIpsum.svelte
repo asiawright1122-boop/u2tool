@@ -96,7 +96,7 @@
             onclick={() => outputType = type}
             class={`flex-1 px-4 py-2 rounded-lg transition-colors ${
               outputType === type
-                ? 'bg-blue-600 text-white'
+                ? 'bg-amber-600 text-white'
                 : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
             }`}
           >
@@ -120,7 +120,7 @@
 
       <button
         onclick={generate}
-        class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        class="w-full px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
       >
         {tc('generate')}
       </button>
@@ -137,7 +137,7 @@
               </span>
               <button
                 onclick={copyToClipboard}
-                class="text-sm text-blue-600 hover:text-blue-700"
+                class="text-sm text-amber-600 hover:text-amber-700"
               >
                 {copied ? tc('copied') : tc('copy')}
               </button>

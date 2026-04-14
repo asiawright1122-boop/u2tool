@@ -145,10 +145,12 @@ const collectionData = {
         </div>
 
         <div class="mb-10">
-          <h1 class="text-3xl font-bold text-slate-900 dark:text-white flex items-center gap-4 tracking-tight">
-            <span class="text-blue-600 dark:text-amber-500 transition-transform hover:scale-110 duration-300" set:html={getIconSvg(catIcon, 32)} />
-            <span>{categoryName}</span>
-            <span class="text-lg font-medium text-slate-400 dark:text-slate-500 ml-1">({categoryTools.length})</span>
+          <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white flex items-center gap-5 tracking-tight drop-shadow-sm dark:drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
+            <span class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/60 dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xl backdrop-blur-xl text-slate-400 dark:text-amber-500 transition-all duration-500 hover:scale-110 hover:shadow-amber-500/20" set:html={getIconSvg(catIcon, 32)} />
+            <div class="flex flex-col">
+              <span>{categoryName}</span>
+              <span class="text-sm font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-amber-500/60 mt-1">{categoryTools.length} {navMessages.tools || 'Tools'}</span>
+            </div>
           </h1>
         </div>
 
@@ -161,27 +163,32 @@ const collectionData = {
           />
         )}
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {categoryTools.map((tool) => (
             <a
               href={getLocalizedPath(locale, `/tools/${tool.slug}`)}
-              class="group flex items-center gap-4 p-5 bg-white/40 dark:bg-slate-900/40
-                     border border-slate-200/60 dark:border-slate-800 rounded-2xl
-                     hover:shadow-2xl hover:border-blue-400/60 dark:hover:border-amber-500/50
-                     backdrop-blur-md cursor-pointer transition-all duration-300"
+              class="glass-card flex items-center gap-4 p-5 group/card relative overflow-hidden"
             >
-              <span class="text-blue-600 dark:text-amber-500 flex-shrink-0 transition-transform group-hover:scale-110 duration-300" set:html={getIconSvg(tool.icon, 24)} />
-              <div class="flex-1 min-w-0">
-                <h3 class="font-bold text-sm text-slate-900 dark:text-white truncate group-hover:text-blue-600 dark:group-hover:text-amber-400 transition-colors uppercase tracking-tight">
-                  {getToolName(tool.slug)}
-                </h3>
-                <p class="text-xs text-slate-500 dark:text-slate-400 truncate mt-1.5">
-                  {getToolDescription(tool.slug)}
-                </p>
+              <div class="absolute inset-0 bg-gradient-to-br from-transparent to-amber-500/5 dark:to-amber-500/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
+              <div class="relative z-10 flex items-center gap-4 w-full">
+                <span
+                  class="text-slate-400 dark:text-slate-500 flex-shrink-0 inline-flex transition-all duration-500 group-hover/card:text-amber-500 group-hover/card:scale-110 group-hover/card:drop-shadow-[0_0_8px_rgba(245,158,11,0.5)]"
+                  set:html={getIconSvg(tool.icon, 24)}
+                />
+                <div class="flex-1 min-w-0">
+                  <h3 class="font-bold text-sm text-slate-900 dark:text-white truncate group-hover/card:text-amber-600 dark:group-hover/card:text-amber-400 transition-colors uppercase tracking-tight">
+                    {getToolName(tool.slug)}
+                  </h3>
+                  <p class="text-[11px] text-slate-500 dark:text-slate-400 truncate mt-1.5 leading-relaxed">
+                    {getToolDescription(tool.slug)}
+                  </p>
+                </div>
+                {tool.popular && (
+                  <span class="inline-flex items-center px-2 py-0.5 text-[9px] font-black rounded-full bg-amber-100 text-amber-600 dark:bg-amber-900/40 dark:text-amber-400 flex-shrink-0 border border-amber-200/50 dark:border-amber-500/30 shadow-[0_0_15px_rgba(245,158,11,0.2)] tracking-tighter uppercase">
+                    HOT
+                  </span>
+                )}
               </div>
-              {tool.popular && (
-                <span class="inline-flex items-center px-2 py-0.5 text-[10px] font-bold rounded-full bg-amber-100 text-amber-600 dark:bg-amber-900/40 dark:text-amber-400 flex-shrink-0 border border-amber-200/50 dark:border-amber-500/30 shadow-[0_0_10px_rgba(245,158,11,0.2)]">HOT</span>
-              )}
             </a>
           ))}
         </div>

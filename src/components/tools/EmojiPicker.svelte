@@ -82,7 +82,7 @@
           type="text"
           bind:value={search}
           placeholder={t('emoji.searchPlaceholder')}
-          class="w-full px-4 py-3 pl-10 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-sm text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+          class="w-full px-4 py-3 pl-10 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-sm text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
         />
         <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-300"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
       </div>
@@ -92,7 +92,7 @@
         <button
           onclick={() => selectedCategory = 'all'}
           class={`px-3 py-2 rounded-lg text-sm whitespace-nowrap text-white ${
-            selectedCategory === 'all' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-700 hover:bg-gray-600'
+            selectedCategory === 'all' ? 'bg-amber-600' : 'bg-gray-500 dark:bg-gray-700 hover:bg-gray-600'
           }`}
         >
           {t('all')}
@@ -101,7 +101,7 @@
 <button 
             onclick={() => selectedCategory = cat}
             class={`px-3 py-2 rounded-lg text-sm whitespace-nowrap flex items-center gap-1 text-white ${
-              selectedCategory === cat ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-700 hover:bg-gray-600'
+              selectedCategory === cat ? 'bg-amber-600' : 'bg-gray-500 dark:bg-gray-700 hover:bg-gray-600'
             }`}
           >
             <span>{categoryIcons[cat]}</span>
@@ -120,7 +120,7 @@
 <button 
                 onclick={() => handleCopy(emoji)}
                 class={`w-10 h-10 text-2xl rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors ${
-                  copied === emoji ? 'bg-green-100 dark:bg-green-600/30' : ''
+                  copied === emoji ? 'bg-green-100 dark:bg-emerald-500/30' : ''
                 }`}
                 title={copied === emoji ? t('copied') : t('emoji.clickToCopy')}
               >
@@ -150,7 +150,7 @@
 <button 
                 onclick={() => handleCopy(item.emoji)}
                 class={`w-10 h-10 text-2xl rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors ${
-                  copied === item.emoji ? 'bg-green-100 dark:bg-green-600/30' : ''
+                  copied === item.emoji ? 'bg-green-100 dark:bg-emerald-500/30' : ''
                 }`}
                 title={item.name}
               >

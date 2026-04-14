@@ -84,14 +84,14 @@
   function getQualityColor(quality: string) {
     switch (quality) {
       case 'optimal': return 'bg-green-100 dark:bg-green-900/30 border-green-300 dark:border-green-700';
-      case 'good': return 'bg-blue-100 dark:bg-blue-900/30 border-blue-300 dark:border-blue-700';
+      case 'good': return 'bg-amber-100 dark:bg-amber-900/30 border-amber-300 dark:border-amber-700';
       default: return 'bg-yellow-100 dark:bg-yellow-900/30 border-yellow-300 dark:border-yellow-700';
     }
   }
   function getQualityBadge(quality: string) {
     switch (quality) {
       case 'optimal': return 'bg-green-500 text-white';
-      case 'good': return 'bg-blue-500 text-white';
+      case 'good': return 'bg-amber-500 text-white';
       default: return 'bg-yellow-500 text-white';
     }
   }
@@ -117,7 +117,7 @@
           onclick={() => mode = 'sleep'}
           class={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-medium transition-colors ${
             mode === 'sleep'
-              ? 'bg-indigo-500 text-white'
+              ? 'bg-slate-500 text-white'
               : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300'
           }`}
         >
@@ -141,7 +141,7 @@
         </div>
 
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('fallAsleepTime')} ({t('minutes')})
           </label>
           <select
@@ -187,11 +187,11 @@
       </div>
 
       <!-- Sleep Cycle Info -->
-      <div class="p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg border border-indigo-200 dark:border-indigo-800">
+      <div class="p-4 bg-slate-50 dark:bg-slate-900/20 rounded-lg border border-slate-200 dark:border-slate-800">
         <div class="flex items-start gap-3">
-          <Info class="w-5 h-5 text-indigo-500 mt-0.5" />
+          <Info class="w-5 h-5 text-slate-500 mt-0.5" />
           <div>
-            <div class="font-medium text-indigo-700 dark:text-indigo-300">{t('aboutSleepCycles')}</div>
+            <div class="font-medium text-slate-700 dark:text-slate-300">{t('aboutSleepCycles')}</div>
             <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
               {t('sleepCycleInfo')}
             </p>

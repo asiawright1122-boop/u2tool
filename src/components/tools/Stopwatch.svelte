@@ -114,8 +114,8 @@
           onclick={handleStartStop}
           class={`px-8 py-3 rounded-full font-medium min-w-[120px] ${
             isRunning
-              ? 'bg-red-500 hover:bg-red-600 text-white'
-              : 'bg-green-500 hover:bg-green-600 text-white'
+              ? 'bg-red-500 hover:bg-rose-500 text-white'
+              : 'bg-green-500 hover:btn-success'
           }`}
         >
           {isRunning ? t('stopwatchUI.stop') : t('stopwatchUI.start')}

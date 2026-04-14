@@ -93,7 +93,7 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('title')} ({t('optional')})
           </label>
           <input
@@ -105,7 +105,7 @@
         </div>
         <div class="grid grid-cols-3 gap-2">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('fontSize')}
             </label>
             <select
@@ -119,7 +119,7 @@
             </select>
           </div>
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('font')}
             </label>
             <select
@@ -132,7 +132,7 @@
             </select>
           </div>
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('pageSize')}
             </label>
             <select
@@ -148,7 +148,7 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('content')}
         </label>
         <textarea
@@ -165,7 +165,7 @@
         <button
           onclick={generatePdf}
           disabled={!text.trim() || isGenerating}
-          class="px-8 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+          class="px-8 py-3 bg-rose-500 text-white rounded-lg hover:bg-red-700 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
         >
           {#if isGenerating}
 

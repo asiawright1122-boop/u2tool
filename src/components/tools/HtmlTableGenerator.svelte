@@ -147,7 +147,7 @@
           <label class="text-sm text-gray-600 dark:text-gray-300">HTML</label>
           <button
             onclick={copyHtml}
-            class="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300"
+            class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-500 dark:hover:text-amber-300"
           >
             {copied ? t('copied') : t('copy')}
           </button>

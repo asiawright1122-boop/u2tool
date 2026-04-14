@@ -100,7 +100,7 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('documentText')}
         </label>
         <textarea
@@ -111,17 +111,17 @@
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center">
-          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">{stats.words.toLocaleString()}</div>
-          <div class="text-sm text-blue-700 dark:text-blue-300">{t('words')}</div>
+        <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg text-center">
+          <div class="text-3xl font-bold text-amber-600 dark:text-amber-400">{stats.words.toLocaleString()}</div>
+          <div class="text-sm text-amber-700 dark:text-amber-300">{t('words')}</div>
         </div>
         <div class="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg text-center">
           <div class="text-3xl font-bold text-green-600 dark:text-green-400">{stats.characters.toLocaleString()}</div>
           <div class="text-sm text-green-700 dark:text-green-300">{t('characters')}</div>
         </div>
-        <div class="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg text-center">
-          <div class="text-3xl font-bold text-purple-600 dark:text-purple-400">{stats.sentences}</div>
-          <div class="text-sm text-purple-700 dark:text-purple-300">{t('sentences')}</div>
+        <div class="p-4 bg-slate-50 dark:bg-slate-900/20 rounded-lg text-center">
+          <div class="text-3xl font-bold text-slate-600 dark:text-slate-400">{stats.sentences}</div>
+          <div class="text-sm text-slate-700 dark:text-slate-300">{t('sentences')}</div>
         </div>
         <div class="p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg text-center">
           <div class="text-3xl font-bold text-orange-600 dark:text-orange-400">{stats.paragraphs}</div>
@@ -175,7 +175,7 @@
                 <span class="text-sm font-medium text-gray-900 dark:text-white">{stats.readingTime} {t('min')}</span>
               </div>
               <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                <div class="bg-blue-600 h-2 rounded-full" style="width: {Math.min(100, stats.readingTime * 5)}%"></div>
+                <div class="bg-amber-600 h-2 rounded-full" style="width: {Math.min(100, stats.readingTime * 5)}%"></div>
               </div>
             </div>
             <div>
@@ -184,7 +184,7 @@
                 <span class="text-sm font-medium text-gray-900 dark:text-white">{stats.speakingTime} {t('min')}</span>
               </div>
               <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                <div class="bg-green-600 h-2 rounded-full" style="width: {Math.min(100, stats.speakingTime * 5)}%"></div>
+                <div class="bg-emerald-500 h-2 rounded-full" style="width: {Math.min(100, stats.speakingTime * 5)}%"></div>
               </div>
             </div>
           </div>

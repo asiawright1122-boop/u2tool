@@ -160,7 +160,7 @@
             />
             <label
               for="png-upload"
-              class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors cursor-pointer"
+              class="inline-block px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors cursor-pointer"
             >
               {t('selectFile')}
             </label>
@@ -172,7 +172,7 @@
 <div class="space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="tool-label">
                 {t('conversionMode')}
               </label>
               <select
@@ -186,7 +186,7 @@
             </div>
             {#if mode === 'trace'}
 <div>
-                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label class="tool-label">
                   {t('threshold')}: {threshold}
                 </label>
                 <input
@@ -203,7 +203,7 @@
 
           <button
             onclick={convert}
-            class="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+            class="w-full px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
           >
             {t('convert')}
           </button>
@@ -213,7 +213,7 @@
       {#if svgOutput}
 <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('svgOutput')}
             </label>
             <textarea
@@ -230,7 +230,7 @@
             </button>
             <button
               onclick={downloadSvg}
-              class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium"
+              class="px-6 py-3 btn-success rounded-lg hover:bg-green-700 transition-colors font-medium"
             >
               {t('download')}
             </button>

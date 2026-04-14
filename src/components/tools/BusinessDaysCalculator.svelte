@@ -128,7 +128,7 @@
           onclick={() => reverseMode = false}
           class={`px-4 py-2 rounded-lg font-medium transition-colors ${
             !reverseMode
-              ? 'bg-blue-600 text-white'
+              ? 'bg-amber-600 text-white'
               : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
           }`}
         >
@@ -138,7 +138,7 @@
           onclick={() => reverseMode = true}
           class={`px-4 py-2 rounded-lg font-medium transition-colors ${
             reverseMode
-              ? 'bg-blue-600 text-white'
+              ? 'bg-amber-600 text-white'
               : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
           }`}
         >
@@ -191,7 +191,7 @@
               type="checkbox"
               id="excludeWeekends"
               bind:checked={excludeWeekends}
-              class="w-4 h-4 text-blue-600 rounded"
+              class="w-4 h-4 text-amber-600 rounded"
             />
             <label for="excludeWeekends" class="text-sm text-gray-700 dark:text-gray-300">
               {t('businessDays.excludeWeekends')}
@@ -219,7 +219,7 @@
               <button
                 onclick={addHoliday}
                 disabled={!newHolidayDate || !newHolidayName}
-                class="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                class="px-3 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
               >
                 {t('add')}
               </button>
@@ -258,7 +258,7 @@
 <div class="space-y-4">
                 <div class="grid grid-cols-2 gap-4">
                   <div class="bg-white dark:bg-gray-700 p-4 rounded-lg text-center">
-                    <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">
+                    <div class="text-3xl font-bold text-amber-600 dark:text-amber-400">
                       {calculateBusinessDays.businessDays}
                     </div>
                     <div class="text-sm text-gray-600 dark:text-gray-400">
@@ -305,7 +305,7 @@
                 <div class="text-sm text-gray-600 dark:text-gray-400 mb-2">
                   {t('businessDays.calculatedEndDate')}
                 </div>
-                <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                <div class="text-2xl font-bold text-amber-600 dark:text-amber-400">
                   {calculateEndDateFromBusinessDays}
                 </div>
                 <div class="text-sm text-gray-500 dark:text-gray-400 mt-2">

@@ -141,7 +141,7 @@
           </div>
           
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('underbust')} ({unit})
             </label>
             <input
@@ -154,7 +154,7 @@
           </div>
           
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('bust')} ({unit})
             </label>
             <input
@@ -170,7 +170,7 @@
 <!-- Size Selection -->
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('selectBand')}
             </label>
             <div class="flex flex-wrap gap-2">
@@ -190,7 +190,7 @@
           </div>
           
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('selectCup')}
             </label>
             <div class="flex flex-wrap gap-2">

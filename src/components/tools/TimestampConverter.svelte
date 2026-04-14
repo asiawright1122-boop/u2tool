@@ -66,8 +66,8 @@
 
     <div class="space-y-6">
       <!-- Current Time -->
-      <div class="p-4 bg-blue-100 dark:bg-blue-900/30 border border-blue-300 dark:border-blue-700 rounded-lg text-center">
-        <div class="text-sm text-blue-600 dark:text-blue-400 mb-1">{t('timestamp.currentTime')}</div>
+      <div class="p-4 bg-amber-100 dark:bg-amber-900/30 border border-amber-300 dark:border-amber-700 rounded-lg text-center">
+        <div class="text-sm text-amber-600 dark:text-amber-400 mb-1">{t('timestamp.currentTime')}</div>
         <div class="text-3xl font-mono font-bold text-gray-900 dark:text-gray-100">{Math.floor(currentTime / 1000)}</div>
       </div>
 
@@ -110,7 +110,7 @@
               <span class="text-sm font-medium text-gray-500 dark:text-gray-300 uppercase">{key}</span>
               <button
                 onclick={() => copyValue(key, value)}
-                class={`text-xs px-2 py-1 rounded ${copied === key ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
+                class={`text-xs px-2 py-1 rounded ${copied === key ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
               >
                 {copied === key ? t('copied') : t('copy')}
               </button>

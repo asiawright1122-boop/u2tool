@@ -48,7 +48,7 @@
   // Functions
   function getHealthStatus() {
     if (hoursPerDay <= 2) return { status: t('excellent'), color: 'text-green-600' };
-    if (hoursPerDay <= 4) return { status: t('good'), color: 'text-blue-600' };
+    if (hoursPerDay <= 4) return { status: t('good'), color: 'text-amber-600' };
     if (hoursPerDay <= 6) return { status: t('moderate'), color: 'text-yellow-600' };
     if (hoursPerDay <= 8) return { status: t('high'), color: 'text-orange-600' };
     return { status: t('excessive'), color: 'text-red-600' };
@@ -101,28 +101,28 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center">
           <p class="text-sm text-gray-600 dark:text-gray-300">{t('daily')}</p>
-          <p class="text-2xl font-bold text-blue-600">{results.daily}h</p>
+          <p class="text-2xl font-bold text-amber-600">{results.daily}h</p>
         </div>
         <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center">
           <p class="text-sm text-gray-600 dark:text-gray-300">{t('weekly')}</p>
-          <p class="text-2xl font-bold text-blue-600">{results.weekly}h</p>
+          <p class="text-2xl font-bold text-amber-600">{results.weekly}h</p>
           <p class="text-xs text-gray-500">({results.weeklyDays} {t('days')})</p>
         </div>
         <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center">
           <p class="text-sm text-gray-600 dark:text-gray-300">{t('monthly')}</p>
-          <p class="text-2xl font-bold text-blue-600">{results.monthly}h</p>
+          <p class="text-2xl font-bold text-amber-600">{results.monthly}h</p>
           <p class="text-xs text-gray-500">({results.monthlyDays} {t('days')})</p>
         </div>
         <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center">
           <p class="text-sm text-gray-600 dark:text-gray-300">{t('yearly')}</p>
-          <p class="text-2xl font-bold text-blue-600">{results.yearly}h</p>
+          <p class="text-2xl font-bold text-amber-600">{results.yearly}h</p>
           <p class="text-xs text-gray-500">({results.yearlyDays} {t('days')})</p>
         </div>
       </div>
 
-      <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
-        <h3 class="font-medium text-blue-800 dark:text-blue-200 mb-2">{t('recommendations')}</h3>
-        <ul class="text-sm text-blue-700 dark:text-blue-300 space-y-1 list-disc list-inside">
+      <div class="bg-amber-50 dark:bg-amber-900/20 rounded-lg p-4">
+        <h3 class="font-medium text-amber-800 dark:text-amber-200 mb-2">{t('recommendations')}</h3>
+        <ul class="text-sm text-amber-700 dark:text-amber-300 space-y-1 list-disc list-inside">
           <li>{t('tip1')}</li>
           <li>{t('tip2')}</li>
           <li>{t('tip3')}</li>

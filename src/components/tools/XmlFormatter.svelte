@@ -116,7 +116,7 @@
             <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('output')}</label>
             <button
               onclick={copyOutput}
-              class={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
+              class={`text-sm px-3 py-1 rounded ${copied ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
             >
               {copied ? t('copied') : t('copy')}
             </button>

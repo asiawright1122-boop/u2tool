@@ -112,7 +112,7 @@
 
     <div class="space-y-6">
       <div class="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           Current Version
         </label>
         <div class="flex gap-2 items-center">
@@ -132,7 +132,7 @@
             <button onclick={() => handleBump('patch')} class="px-2 py-1 text-xs bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded hover:bg-green-200">
               Patch
             </button>
-            <button onclick={() => handleBump('prerelease')} class="px-2 py-1 text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded hover:bg-purple-200">
+            <button onclick={() => handleBump('prerelease')} class="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-900/30 text-slate-700 dark:text-slate-300 rounded hover:bg-slate-200">
               Pre
             </button>
           </div>
@@ -141,7 +141,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             Tag Name *
           </label>
           <input
@@ -164,7 +164,7 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             Tag Type
           </label>
           <select
@@ -180,7 +180,7 @@
 
       {#if tag.type === 'annotated'}
 <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             Tag Message
           </label>
           <textarea
@@ -194,7 +194,7 @@
 {/if}
 
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           Commit Hash (optional)
         </label>
         <input
@@ -208,12 +208,12 @@
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             Git Commands
           </label>
           <button
             onclick={() => handleCopy(allCommands, 'all')}
-            class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+            class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
           >
             {copied === 'all' ? tCommon('copied') : 'Copy All'}
           </button>
@@ -226,7 +226,7 @@
               </code>
               <button
                 onclick={() => handleCopy(cmd, `cmd-${idx}`)}
-                class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"
               >
                 {copied === `cmd-${idx}` ? '✓' : tCommon('copy')}
               </button>
@@ -236,9 +236,9 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-          <h3 class="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">Useful Commands</h3>
-          <div class="space-y-1 text-xs font-mono text-blue-700 dark:text-blue-300">
+        <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+          <h3 class="text-sm font-medium text-amber-800 dark:text-amber-200 mb-2">Useful Commands</h3>
+          <div class="space-y-1 text-xs font-mono text-amber-700 dark:text-amber-300">
             <p>git tag -l &quot;v*&quot; # List tags</p>
             <p>git show {tag.name} # Show tag info</p>
             <p>git tag -d {tag.name} # Delete local</p>

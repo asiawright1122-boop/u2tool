@@ -147,7 +147,7 @@
         <button
           onclick={addCity}
           disabled={!selectedTimezone}
-          class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+          class="px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 disabled:opacity-50"
         >
           {t('worldClock.addCity')}
         </button>
@@ -158,8 +158,8 @@
 <div 
             class={`relative p-4 rounded-xl border ${
               isDaytime(city.timezone)
-                ? 'bg-gradient-to-br from-blue-50 to-yellow-50 dark:from-blue-900/20 dark:to-yellow-900/20 border-blue-200 dark:border-blue-800'
-                : 'bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 border-indigo-200 dark:border-indigo-800'
+                ? 'bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 border-amber-200 dark:border-amber-800'
+                : 'bg-gradient-to-br from-slate-50 to-slate-50 dark:from-slate-900/20 dark:to-slate-900/20 border-slate-200 dark:border-slate-800'
             }`}
           >
             <button

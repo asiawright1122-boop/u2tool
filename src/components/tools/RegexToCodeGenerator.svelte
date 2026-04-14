@@ -201,7 +201,7 @@
     <div class="space-y-6">
       <!-- Pattern Input -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           Regex Pattern
         </label>
         <input
@@ -214,7 +214,7 @@
 
       <!-- Test String -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           Test String
         </label>
         <input
@@ -228,7 +228,7 @@
       <!-- Replacement (for replace operation) -->
       {#if operation === 'replace'}
 <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             Replacement
           </label>
           <input
@@ -243,7 +243,7 @@
       <!-- Options -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             Language
           </label>
           <select
@@ -257,7 +257,7 @@
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             Operation
           </label>
           <select
@@ -271,7 +271,7 @@
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             Flags
           </label>
           <div class="flex gap-4">
@@ -297,12 +297,12 @@
       <!-- Generated Code -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             Generated Code ({LANGUAGES.find(l => l.value === language)?.label})
           </label>
           <button
             onclick={handleCopy}
-            class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+            class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
           >
             {copied ? tCommon('copied') : tCommon('copy')}
           </button>

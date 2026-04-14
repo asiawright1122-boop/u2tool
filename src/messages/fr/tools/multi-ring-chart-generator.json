@@ -13,5 +13,11 @@
     "Un chef de projet visualise l'avancement global d'un programme en superposant un anneau pour le budget consommé, un pour le temps écoulé et un pour les tâches accomplies.",
     "Un médecin utilise le diagramme pour illustrer l'évolution de trois paramètres santé d'un patient (nombre de pas, calories brûlées, fréquence cardiaque) sur une période hebdomadaire.",
     "Un analyste financier crée un diagramme à cinq anneaux pour comparer les ratios sectoriels (marge bénéficiaire, dette/équité, etc.) de cinq entreprises concurrentes."
-  ]
+  ],
+  "sampleData": {
+    "revenue": "Revenus",
+    "expenses": "Dépenses",
+    "profit": "Bénéfice",
+    "growth": "Croissance"
+  }
 }

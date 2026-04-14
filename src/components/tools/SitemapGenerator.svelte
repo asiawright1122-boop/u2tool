@@ -80,7 +80,7 @@ ${urls.map(url => `  <url>
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('baseUrl')}</label>
+        <label class="tool-label">{t('baseUrl')}</label>
         <input type="text" bind:value={baseUrl}
           class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white"
           placeholder="https://example.com" />
@@ -89,7 +89,7 @@ ${urls.map(url => `  <url>
       <div>
         <div class="flex justify-between items-center mb-2">
           <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('urls')}</label>
-          <button onclick={addUrl} class="px-3 py-1 bg-green-600 hover:bg-green-700 rounded text-sm text-white">
+          <button onclick={addUrl} class="px-3 py-1 bg-emerald-500 hover:bg-green-700 rounded text-sm text-white">
             {t('addUrl')}
           </button>
         </div>
@@ -97,12 +97,12 @@ ${urls.map(url => `  <url>
         <div class="space-y-2 max-h-64 overflow-y-auto">
           {#each urls as url, index (index)}
 <div  class="grid grid-cols-12 gap-2 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg p-2">
-              <input type="text" value={url.loc} onchange={(e) => updateUrl(index, 'loc', e.target.value)}
+              <input type="text" bind:value={url.loc}
                 class="col-span-4 px-2 py-1 bg-white dark:bg-gray-600 border border-gray-300 dark:border-gray-500 rounded text-gray-900 dark:text-white text-sm"
                 placeholder="/path" />
-              <input type="date" value={url.lastmod} onchange={(e) => updateUrl(index, 'lastmod', e.target.value)}
+              <input type="date" bind:value={url.lastmod}
                 class="col-span-2 px-2 py-1 bg-white dark:bg-gray-600 border border-gray-300 dark:border-gray-500 rounded text-gray-900 dark:text-white text-sm" />
-              <select value={url.changefreq} onchange={(e) => updateUrl(index, 'changefreq', e.target.value)}
+              <select bind:value={url.changefreq}
                 class="col-span-2 px-2 py-1 bg-white dark:bg-gray-600 border border-gray-300 dark:border-gray-500 rounded text-gray-900 dark:text-white text-sm">
                 <option value="always">always</option>
                 <option value="hourly">hourly</option>
@@ -112,21 +112,21 @@ ${urls.map(url => `  <url>
                 <option value="yearly">yearly</option>
                 <option value="never">never</option>
               </select>
-              <select value={url.priority} onchange={(e) => updateUrl(index, 'priority', e.target.value)}
+              <select bind:value={url.priority}
                 class="col-span-2 px-2 py-1 bg-white dark:bg-gray-600 border border-gray-300 dark:border-gray-500 rounded text-gray-900 dark:text-white text-sm">
                 {#each ['1.0', '0.9', '0.8', '0.7', '0.6', '0.5', '0.4', '0.3', '0.2', '0.1'] as p (p)}
 <option  value={p}>{p}</option>
 {/each}
               </select>
               <button onclick={() => removeUrl(index)}
-                class="col-span-2 px-2 py-1 bg-red-600 hover:bg-red-700 rounded text-sm text-white">{t('remove')}</button>
+                class="col-span-2 px-2 py-1 bg-rose-500 hover:bg-red-700 rounded text-sm text-white">{t('remove')}</button>
             </div>
 {/each}
         </div>
       </div>
 
       <div class="flex gap-4">
-        <button onclick={generate} class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors text-white">
+        <button onclick={generate} class="px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium transition-colors text-white">
           {t('generate')}
         </button>
         <button onclick={copyToClipboard} disabled={!output}
@@ -134,14 +134,14 @@ ${urls.map(url => `  <url>
           {t('copy')}
         </button>
         <button onclick={downloadFile} disabled={!output}
-          class="px-6 py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 rounded-lg font-medium transition-colors text-white">
+          class="px-6 py-2 bg-emerald-500 hover:bg-green-700 disabled:opacity-50 rounded-lg font-medium transition-colors text-white">
           {t('download')}
         </button>
       </div>
 
       {#if output}
 <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('output')}</label>
+          <label class="tool-label">{t('output')}</label>
           <pre class="bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg p-4 font-mono text-sm text-green-600 dark:text-green-400 overflow-x-auto max-h-64">
             {output}
           </pre>

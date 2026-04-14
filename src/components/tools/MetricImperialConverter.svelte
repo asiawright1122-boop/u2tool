@@ -97,7 +97,7 @@
             onclick={() => category = cat}
             class={`p-3 rounded-lg border transition-colors text-center ${
               category === cat
-                ? 'bg-blue-600 text-white border-blue-600'
+                ? 'bg-amber-600 text-white border-amber-600'
                 : 'bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
             }`}
           >
@@ -110,7 +110,7 @@
       <!-- Converter -->
       <div class="grid grid-cols-1 md:grid-cols-[1fr,auto,1fr] gap-4 items-end">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('from')}
           </label>
           <input
@@ -147,7 +147,7 @@
         </button>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('to')}
           </label>
           <div class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white text-lg mb-2 min-h-[52px] flex items-center">
@@ -173,11 +173,11 @@
 
       <!-- Result Display -->
       {#if result !== null}
-<div class="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl text-center">
+<div class="p-6 bg-gradient-to-r from-amber-50 to-slate-50 dark:from-amber-900/20 dark:to-slate-900/20 rounded-xl text-center">
           <div class="text-lg text-gray-600 dark:text-gray-400 mb-2">
             {inputValue} {categoryUnits[fromUnit]?.symbol} =
           </div>
-          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">
+          <div class="text-3xl font-bold text-amber-600 dark:text-amber-400">
             {formatResult(result)} {categoryUnits[toUnit]?.symbol}
           </div>
         </div>
@@ -189,8 +189,8 @@
           {t('quickReference')}
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-            <h4 class="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('metric')}</h4>
+          <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+            <h4 class="font-medium text-amber-800 dark:text-amber-300 mb-2">{t('metric')}</h4>
             <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1">
               {#each metricUnits as [key, unit] (key)}
 <li >{unit.name} ({unit.symbol})</li>

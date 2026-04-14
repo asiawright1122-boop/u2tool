@@ -103,7 +103,7 @@
       <!-- Personal Info -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('name')}
           </label>
           <input
@@ -111,11 +111,11 @@
             value={config.name}
             onchange={(e) => config = ({ ...config, name: e.target.value })}
             placeholder={t('namePlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('title')}
           </label>
           <input
@@ -123,11 +123,11 @@
             value={config.title}
             onchange={(e) => config = ({ ...config, title: e.target.value })}
             placeholder={t('titlePlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('company')}
           </label>
           <input
@@ -135,11 +135,11 @@
             value={config.company}
             onchange={(e) => config = ({ ...config, company: e.target.value })}
             placeholder={t('companyPlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('email')}
           </label>
           <input
@@ -147,11 +147,11 @@
             value={config.email}
             onchange={(e) => config = ({ ...config, email: e.target.value })}
             placeholder={t('emailPlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('phone')}
           </label>
           <input
@@ -159,11 +159,11 @@
             value={config.phone}
             onchange={(e) => config = ({ ...config, phone: e.target.value })}
             placeholder={t('phonePlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('website')}
           </label>
           <input
@@ -171,7 +171,7 @@
             value={config.website}
             onchange={(e) => config = ({ ...config, website: e.target.value })}
             placeholder={t('websitePlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
       </div>
@@ -179,7 +179,7 @@
       <!-- Social Links -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             LinkedIn
           </label>
           <input
@@ -187,11 +187,11 @@
             value={config.linkedin}
             onchange={(e) => config = ({ ...config, linkedin: e.target.value })}
             placeholder={t('usernamePlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             Twitter
           </label>
           <input
@@ -199,11 +199,11 @@
             value={config.twitter}
             onchange={(e) => config = ({ ...config, twitter: e.target.value })}
             placeholder={t('usernamePlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             GitHub
           </label>
           <input
@@ -211,14 +211,14 @@
             value={config.github}
             onchange={(e) => config = ({ ...config, github: e.target.value })}
             placeholder={t('usernamePlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
       </div>
 
       <!-- Style Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('style')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -227,7 +227,7 @@
               onclick={() => config = ({ ...config, style: s.id })}
               class={`px-4 py-2 rounded-lg text-sm ${
                 config.style === s.id
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
@@ -239,7 +239,7 @@
 
       <!-- Color Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('primaryColor')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -265,7 +265,7 @@
       <div class="flex justify-center gap-4">
         <button
           onclick={handleGenerate}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium text-white"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium text-white"
         >
           {t('generate')}
         </button>
@@ -287,7 +287,7 @@
                 onclick={() => activeTab = tab}
                 class={`px-4 py-2 text-sm font-medium ${
                   activeTab === tab
-                    ? 'text-blue-600 border-b-2 border-blue-600'
+                    ? 'text-amber-600 border-b-2 border-amber-600'
                     : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
                 }`}
               >
@@ -308,7 +308,7 @@
               <div class="flex justify-end mb-2">
                 <button
                   onclick={() => copyToClipboard(result.html, 'html')}
-                  class="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded text-sm text-white"
+                  class="px-3 py-1 bg-amber-600 hover:bg-amber-700 rounded text-sm text-white"
                 >
                   {copied === 'html' ? tCommon('copied') : tCommon('copy')}
                 </button>
@@ -324,7 +324,7 @@
               <div class="flex justify-end mb-2">
                 <button
                   onclick={() => copyToClipboard(result.plainText, 'text')}
-                  class="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded text-sm text-white"
+                  class="px-3 py-1 bg-amber-600 hover:bg-amber-700 rounded text-sm text-white"
                 >
                   {copied === 'text' ? tCommon('copied') : tCommon('copy')}
                 </button>
@@ -338,9 +338,9 @@
 {/if}
 
       <!-- Instructions -->
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-        <h3 class="text-sm font-medium text-blue-700 dark:text-blue-300 mb-2">{t('howToUse')}</h3>
-        <ol class="text-sm text-blue-600 dark:text-blue-400 space-y-1 list-decimal list-inside">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+        <h3 class="text-sm font-medium text-amber-700 dark:text-amber-300 mb-2">{t('howToUse')}</h3>
+        <ol class="text-sm text-amber-600 dark:text-amber-400 space-y-1 list-decimal list-inside">
           <li>{t('step1')}</li>
           <li>{t('step2')}</li>
           <li>{t('step3')}</li>

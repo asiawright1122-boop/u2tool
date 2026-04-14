@@ -123,7 +123,7 @@
           type="text"
           bind:value={cidr}
           placeholder="192.168.1.0/24"
-          class="w-full p-3 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="w-full p-3 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent"
         />
         {#if error}
 <p class="mt-1 text-sm text-red-600 dark:text-red-500">{error}</p>

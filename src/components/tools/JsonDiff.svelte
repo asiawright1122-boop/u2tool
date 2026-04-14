@@ -82,7 +82,7 @@
           <textarea bind:value={json2} class="w-full h-48 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" placeholder={t('placeholder')}></textarea>
         </div>
       </div>
-      <button onclick={compare} class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">{t('compare')}</button>
+      <button onclick={compare} class="px-4 py-2 bg-amber-600 text-white rounded hover:bg-amber-700">{t('compare')}</button>
       {#if error}
 <p class="text-red-600 dark:text-red-400">{error}</p>
 {/if}

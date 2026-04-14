@@ -79,7 +79,7 @@
             <h3 class="text-lg font-medium text-gray-900 dark:text-white">{t('shadowLayers')}</h3>
             <button
               onclick={addShadow}
-              class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded text-sm"
+              class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white rounded text-sm"
             >
               {t('addLayer')}
             </button>
@@ -177,7 +177,7 @@
           </div>
           
           <button onclick={copyToClipboard}
-            class="w-full px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">
+            class="w-full px-6 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-medium transition-colors">
             {t('copy')}
           </button>
         </div>

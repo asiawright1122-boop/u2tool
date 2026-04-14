@@ -126,7 +126,7 @@ border-left: ${w}px solid transparent;`,
             onclick={() => direction = dir}
             class={`px-3 py-2 rounded-lg transition-colors ${
               direction === dir
-                ? 'bg-blue-600 text-white'
+                ? 'bg-amber-600 text-white'
                 : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'
             }`}
           >

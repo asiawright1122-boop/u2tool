@@ -199,8 +199,8 @@
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">{t('actionItems')}</label>
-          <button onclick={addActionItem} class="text-xs px-2 py-1 bg-green-600 text-white rounded hover:bg-green-700">
+          <label class="tool-label">{t('actionItems')}</label>
+          <button onclick={addActionItem} class="text-xs px-2 py-1 btn-success rounded hover:bg-green-700">
             {t('addItem')}
           </button>
         </div>
@@ -239,13 +239,13 @@
             {#each (['markdown', 'text', 'html'] as const) as f (f)}
 <button 
                 onclick={() => format = f}
-                class={`px-3 py-1 text-sm rounded ${format === f ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'}`}
+                class={`px-3 py-1 text-sm rounded ${format === f ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'}`}
               >
                 {f.toUpperCase()}
               </button>
 {/each}
           </div>
-          <button onclick={handleCopy} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400">
+          <button onclick={handleCopy} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">
             {copied ? tCommon('copied') : tCommon('copy')}
           </button>
         </div>

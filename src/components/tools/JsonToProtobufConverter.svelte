@@ -81,12 +81,12 @@
       <!-- Input -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             JSON {tCommon('input')}
           </label>
           <button
             onclick={loadExample}
-            class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400"
+            class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"
           >
             {t('loadExample')}
           </button>
@@ -158,12 +158,12 @@
       {#if result}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="tool-label">
               {t('protocolBuffers')}
             </label>
             <button
               onclick={handleCopy}
-              class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+              class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
             >
               {copied ? tCommon('copied') : tCommon('copy')}
             </button>
@@ -175,9 +175,9 @@
 {/if}
 
       <!-- Type Mapping Reference -->
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h4 class="text-sm font-medium text-blue-800 dark:text-blue-300 mb-2">{t('typeMapping')}</h4>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm text-blue-700 dark:text-blue-400">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+        <h4 class="text-sm font-medium text-amber-800 dark:text-amber-300 mb-2">{t('typeMapping')}</h4>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm text-amber-700 dark:text-amber-400">
           <div>string → string</div>
           <div>number (int) → int32/int64</div>
           <div>number (float) → double</div>

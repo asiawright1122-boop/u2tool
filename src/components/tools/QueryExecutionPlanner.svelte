@@ -53,8 +53,8 @@
     <div class="space-y-6">
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">SQL Query</label>
-          <button onclick={loadExample} class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400">{t('loadExample')}</button>
+          <label class="tool-label">SQL Query</label>
+          <button onclick={loadExample} class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400">{t('loadExample')}</button>
         </div>
         <textarea bind:value={sql} placeholder={t("inputPlaceholder")}
           class="w-full h-40 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm resize-none"></textarea>
@@ -75,7 +75,7 @@
 <div  class={`p-4 rounded-lg border ${step.warning ? 'border-yellow-300 bg-yellow-50 dark:bg-yellow-900/20' : 'border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700'}`}>
                 <div class="flex items-center justify-between mb-2">
                   <div class="flex items-center gap-3">
-                    <span class="w-6 h-6 flex items-center justify-center bg-blue-600 text-white text-xs rounded-full">{idx + 1}</span>
+                    <span class="w-6 h-6 flex items-center justify-center bg-amber-600 text-white text-xs rounded-full">{idx + 1}</span>
                     <span class="font-medium text-gray-900 dark:text-white">{step.operation}</span>
                     {#if step.table}
 <span class="text-sm text-gray-500">on {step.table}</span>
@@ -94,8 +94,8 @@
 {/each}
           </div>
 
-          <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-            <p class="text-sm text-blue-700 dark:text-blue-400">
+          <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+            <p class="text-sm text-amber-700 dark:text-amber-400">
               <strong>Note:</strong> This is a simplified execution plan analysis. 
               For accurate plans, use EXPLAIN ANALYZE in your database client.
             </p>

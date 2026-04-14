@@ -119,7 +119,7 @@
       <div class="flex items-center justify-center gap-4">
         <button
           onclick={() => { mode = 'hex-to-base64'; output = ''; error = ''; }}
-          class={`px-4 py-2 rounded-lg text-white ${mode === 'hex-to-base64' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-700 hover:bg-gray-600 dark:hover:bg-gray-600'}`}
+          class={`px-4 py-2 rounded-lg text-white ${mode === 'hex-to-base64' ? 'bg-amber-600' : 'bg-gray-500 dark:bg-gray-700 hover:bg-gray-600 dark:hover:bg-gray-600'}`}
         >
           {t('hexToBase64')}
         </button>
@@ -132,7 +132,7 @@
         </button>
         <button
           onclick={() => { mode = 'base64-to-hex'; output = ''; error = ''; }}
-          class={`px-4 py-2 rounded-lg text-white ${mode === 'base64-to-hex' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-700 hover:bg-gray-600 dark:hover:bg-gray-600'}`}
+          class={`px-4 py-2 rounded-lg text-white ${mode === 'base64-to-hex' ? 'bg-amber-600' : 'bg-gray-500 dark:bg-gray-700 hover:bg-gray-600 dark:hover:bg-gray-600'}`}
         >
           {t('base64ToHex')}
         </button>
@@ -176,7 +176,7 @@
       <div class="flex justify-center gap-3">
         <button
           onclick={convert}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg"
         >
           {tg('convert')}
         </button>
@@ -194,7 +194,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-600 dark:text-gray-300">
           <div>
             <p class="font-medium text-gray-700 dark:text-gray-300">Hex:</p>
-            <code class="text-blue-600 dark:text-blue-400">48 65 6C 6C 6F</code>
+            <code class="text-amber-600 dark:text-amber-400">48 65 6C 6C 6F</code>
           </div>
           <div>
             <p class="font-medium text-gray-700 dark:text-gray-300">Base64:</p>

@@ -134,7 +134,7 @@ curl https://www.u2tool.com/robots.txt
 npx lighthouse https://www.u2tool.com --output=json
 
 # 提交 IndexNow
-npx ts-node scripts/submit-indexnow.ts --dry-run
+npm run submit:indexnow:dry
 ```
 
 ---

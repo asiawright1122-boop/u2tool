@@ -53,7 +53,7 @@
               name="card"
               value={data.card}
               onchange={handleChange}
-              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
+              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
             >
               <option value="summary">{t('twitterCardGenerator.cardSummary')}</option>
               <option value="summary_large_image">{t('twitterCardGenerator.cardSummaryLargeImage')}</option>
@@ -69,7 +69,7 @@
               name="title"
               value={data.title}
               onchange={handleChange}
-              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
+              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
               placeholder={t('twitterCardGenerator.titlePlaceholder')}
             />
           </div>
@@ -81,7 +81,7 @@
               value={data.description}
               onchange={handleChange}
               rows={3}
-              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
+              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
               placeholder={t('twitterCardGenerator.descriptionPlaceholder')}
               maxLength={200}></textarea>
           </div>
@@ -93,7 +93,7 @@
               name="image"
               value={data.image}
               onchange={handleChange}
-              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
+              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
               placeholder={t('twitterCardGenerator.imageUrlPlaceholder')}
             />
           </div>
@@ -105,7 +105,7 @@
               name="alt"
               value={data.alt}
               onchange={handleChange}
-              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
+              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
               placeholder={t('twitterCardGenerator.imageAltTextPlaceholder')}
             />
           </div>
@@ -118,7 +118,7 @@
                 name="site"
                 value={data.site}
                 onchange={handleChange}
-                class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
+                class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
                 placeholder={t('twitterCardGenerator.siteUsernamePlaceholder')}
               />
             </div>
@@ -129,7 +129,7 @@
                 name="creator"
                 value={data.creator}
                 onchange={handleChange}
-                class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
+                class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
                 placeholder={t('twitterCardGenerator.creatorUsernamePlaceholder')}
               />
             </div>

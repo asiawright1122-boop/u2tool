@@ -13,5 +13,10 @@
     "Un data scientist travaille sur l'analyse de l'utilisation des ressources par département dans une grande entreprise. Il utilise le générateur pour visualiser la consommation de ressources sous forme de rectangles imbriqués, permettant une comparaison facile des différents départements et des sous-départements.",
     "Une équipe de marketing cherche à comprendre la répartition des clients par segment et sous-segment. Ils importent les données client dans le générateur et créent une carte arborescente avec des rectangles de différentes tailles et couleurs pour montrer le nombre de clients dans chaque segment et la performance des ventes.",
     "Un chercheur en environnement étudie la répartition des espèces dans différentes régions. Il utilise le générateur de cartes arborescentes pour créer une visualisation montrant la diversité biologique, avec des rectangles de tailles et de couleurs variées pour représenter l'abondance et la rareté des espèces."
-  ]
+  ],
+  "sampleData": {
+    "tech": "Technologie",
+    "finance": "Finance",
+    "healthcare": "Santé"
+  }
 }

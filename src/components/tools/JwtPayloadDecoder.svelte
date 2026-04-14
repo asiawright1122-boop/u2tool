@@ -105,12 +105,12 @@
       <!-- Input -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             JWT Token
           </label>
           <button
             onclick={() => token = exampleToken}
-            class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400"
+            class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"
           >
             {t('sql.loadExample')}
           </button>
@@ -125,7 +125,7 @@
       <div class="flex gap-3 flex-wrap">
         <button
           onclick={handleDecode}
-          class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+          class="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
         >
           {t('decode')}
         </button>
@@ -176,7 +176,7 @@
               </h3>
               <button
                 onclick={() => handleCopy(formatJson(decoded.header), 'header')}
-                class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
               >
                 {copied === 'header' ? t('copied') : t('copy')}
               </button>
@@ -194,7 +194,7 @@
               </h3>
               <button
                 onclick={() => handleCopy(formatJson(decoded.payload), 'payload')}
-                class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
               >
                 {copied === 'payload' ? t('copied') : t('copy')}
               </button>
@@ -221,7 +221,7 @@
                 <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
                   {#each Object.entries(decoded.payload) as [key, value] (key)}
 <tr  class="bg-white dark:bg-gray-800">
-                      <td class="px-4 py-2 font-mono text-blue-600 dark:text-blue-400">{key}</td>
+                      <td class="px-4 py-2 font-mono text-amber-600 dark:text-amber-400">{key}</td>
                       <td class="px-4 py-2 font-mono text-gray-900 dark:text-white break-all max-w-xs">
                         {typeof value === 'object' ? JSON.stringify(value) : String(value)}
                       </td>

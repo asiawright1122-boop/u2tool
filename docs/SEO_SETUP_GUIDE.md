@@ -89,7 +89,7 @@
 Bing 原生支持 IndexNow，配置后可实时通知页面更新：
 ```bash
 # 运行批量提交
-npx ts-node scripts/submit-indexnow.ts
+npm run submit:indexnow
 ```
 
 ---
@@ -185,24 +185,24 @@ IndexNow 是一种即时通知搜索引擎页面更新的协议，支持 Bing、
 
 ### 6.1 当前配置
 
-- **API Key**: `35151298dc86454c8fbd19a34aaba6d7`
-- **验证文件**: `public/35151298dc86454c8fbd19a34aaba6d7.txt`
+- **API Key**: `u2tool2026indexnowkey`
+- **验证文件**: `public/u2tool2026indexnowkey.txt`
 - **环境变量**: `.env.local` 中的 `INDEXNOW_KEY`
 
 ### 6.2 使用方法
 
 ```bash
 # 测试模式（不实际提交）
-npx ts-node scripts/submit-indexnow.ts --dry-run
+npm run submit:indexnow:dry
 
 # 提交所有 URL
-npx ts-node scripts/submit-indexnow.ts
+npm run submit:indexnow
 
 # 只提交中文页面
-npx ts-node scripts/submit-indexnow.ts --locale=zh
+node scripts/submit-indexnow.js --locales=zh
 
 # 只提交特定分类
-npx ts-node scripts/submit-indexnow.ts --category=encoding
+node scripts/submit-indexnow.js --locales=en --limit=200
 ```
 
 ### 6.3 自动化提交

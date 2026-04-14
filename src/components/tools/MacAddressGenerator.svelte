@@ -131,14 +131,14 @@
           <input
             type="checkbox"
             bind:checked={uppercase}
-            class="w-4 h-4 text-blue-600 rounded"
+            class="w-4 h-4 text-amber-600 rounded"
           />
           <span class="text-sm text-gray-600 dark:text-gray-300">{t('uppercase')}</span>
         </label>
 
         <button
           onclick={loadSample}
-          class="text-sm text-blue-400 hover:text-blue-300"
+          class="text-sm text-amber-400 hover:text-amber-300"
         >
           {t('reset')}
         </button>
@@ -164,7 +164,7 @@
               <input
                 type="checkbox"
                 bind:checked={locallyAdministered}
-                class="w-4 h-4 text-blue-600 rounded"
+                class="w-4 h-4 text-amber-600 rounded"
               />
               <span class="text-sm text-gray-600 dark:text-gray-300">{t('locallyAdministered')}</span>
             </label>
@@ -173,7 +173,7 @@
               <input
                 type="checkbox"
                 bind:checked={multicast}
-                class="w-4 h-4 text-blue-600 rounded"
+                class="w-4 h-4 text-amber-600 rounded"
               />
               <span class="text-sm text-gray-600 dark:text-gray-300">{t('multicast')}</span>
             </label>
@@ -187,7 +187,7 @@
 
           <button
             onclick={generate}
-            class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            class="w-full px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
           >
             {t('generate')}
           </button>
@@ -201,7 +201,7 @@
             {#if output}
 <button
                 onclick={handleCopy}
-                class="text-sm text-blue-400 hover:text-blue-300"
+                class="text-sm text-amber-400 hover:text-amber-300"
               >
                 {t('copyAll')}
               </button>
@@ -215,9 +215,9 @@
         </div>
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg">
-        <h3 class="font-medium text-blue-700 dark:text-blue-300 mb-2">{t('info')}</h3>
-        <p class="text-sm text-blue-600 dark:text-blue-400">{t('infoText')}</p>
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-800 rounded-lg">
+        <h3 class="font-medium text-amber-700 dark:text-amber-300 mb-2">{t('info')}</h3>
+        <p class="text-sm text-amber-600 dark:text-amber-400">{t('infoText')}</p>
       </div>
     </div>
   

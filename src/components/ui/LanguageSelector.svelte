@@ -55,31 +55,31 @@
 <div class="language-selector relative">
   <button
     onclick={toggleDropdown}
-    class="flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg
-           hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors
-           text-gray-700 dark:text-gray-300"
+    class="flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-widest
+           hover:bg-slate-100 dark:hover:bg-white/5 transition-all duration-300
+           text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white rounded-xl border border-transparent hover:border-slate-200 dark:hover:border-white/10"
     aria-label="Select language"
     aria-expanded={open}
   >
-    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
         d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
     </svg>
     <span>{localeLabels[locale] || locale}</span>
-    <svg class="w-3 h-3 transition-transform" class:rotate-180={open} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg class="w-3 h-3 transition-transform duration-300" class:rotate-180={open} fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
     </svg>
   </button>
 
   {#if open}
-    <div class="absolute top-full right-0 mt-1 w-44 bg-white dark:bg-gray-800
-                border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg
-                z-50 py-1 max-h-80 overflow-y-auto">
+    <div class="absolute top-full right-0 mt-2 w-48 glass-strong !bg-white/95 dark:!bg-slate-900/95
+                border border-slate-200 dark:border-white/10 rounded-2xl shadow-2xl
+                z-50 py-2 max-h-80 overflow-y-auto animate-in fade-in slide-in-from-top-2 duration-300">
       {#each locales as loc}
         <button
           onclick={() => handleSelect(loc)}
-          class="w-full text-left px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700
-                 transition-colors {loc === locale ? 'text-primary font-semibold bg-gray-50 dark:bg-gray-700/50' : 'text-gray-700 dark:text-gray-300'}"
+          class="w-full text-left px-5 py-2.5 text-xs font-bold uppercase tracking-widest transition-all duration-200
+                 {loc === locale ? 'text-amber-600 dark:text-amber-500 bg-amber-500/10' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/10'}"
         >
           {localeLabels[loc] || loc}
         </button>

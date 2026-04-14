@@ -154,7 +154,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('schemaName')}
             </label>
             <input
@@ -165,7 +165,7 @@
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('jsonInput')}
             </label>
             <textarea
@@ -183,7 +183,7 @@
           <div class="flex gap-4">
             <button
               onclick={convert}
-              class="flex-1 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              class="flex-1 px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
             >
               {t('convert')}
             </button>
@@ -204,7 +204,7 @@
             {#if output}
 <button
                 onclick={copyToClipboard}
-                class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
               >
                 {copied ? t('copied') : t('copy')}
               </button>
@@ -218,11 +218,11 @@
         </div>
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-        <h4 class="font-medium text-blue-800 dark:text-blue-200 mb-2">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+        <h4 class="font-medium text-amber-800 dark:text-amber-200 mb-2">
           {t('whatIsZod')}
         </h4>
-        <p class="text-sm text-blue-700 dark:text-blue-300">
+        <p class="text-sm text-amber-700 dark:text-amber-300">
           {t('zodExplanation')}
         </p>
       </div>

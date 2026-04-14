@@ -57,7 +57,7 @@
           <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('hexEditor.text')}</label>
           <textarea bind:value={text} class="w-full h-40 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" placeholder={t('inputPlaceholder')}></textarea>
           <div class="flex gap-2 mt-2">
-            <button onclick={textToHex} class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">{t('hexEditor.toHex')}</button>
+            <button onclick={textToHex} class="px-4 py-2 bg-amber-600 text-white rounded hover:bg-amber-700">{t('hexEditor.toHex')}</button>
             <button onclick={() => copy(text)} class="px-3 py-2 bg-gray-500 dark:bg-gray-600 text-white rounded hover:bg-gray-600 dark:hover:bg-gray-700">{copied ? t('copied') : t('copy')}</button>
           </div>
         </div>
@@ -65,7 +65,7 @@
           <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('hexEditor.hex')}</label>
           <textarea bind:value={hex} class="w-full h-40 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" placeholder="48 65 6C 6C 6F"></textarea>
           <div class="flex gap-2 mt-2">
-            <button onclick={hexToText} class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">{t('hexEditor.toText')}</button>
+            <button onclick={hexToText} class="px-4 py-2 btn-success rounded hover:bg-green-700">{t('hexEditor.toText')}</button>
             <button onclick={() => copy(hex)} class="px-3 py-2 bg-gray-500 dark:bg-gray-600 text-white rounded hover:bg-gray-600 dark:hover:bg-gray-700">{copied ? t('copied') : t('copy')}</button>
           </div>
         </div>

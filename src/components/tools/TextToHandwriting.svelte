@@ -146,7 +146,7 @@
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('style')}
           </label>
           <div class="space-y-1">
@@ -155,7 +155,7 @@
                 onclick={() => style = s}
                 class={`w-full px-3 py-2 rounded-lg text-left transition-colors ${
                   style.name === s.name
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-amber-600 text-white'
                     : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'
                 }`}
               >
@@ -166,7 +166,7 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('paper')}
           </label>
           <div class="space-y-1">
@@ -175,7 +175,7 @@
                 onclick={() => paper = p}
                 class={`w-full px-3 py-2 rounded-lg text-left transition-colors ${
                   paper.name === p.name
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-amber-600 text-white'
                     : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'
                 }`}
               >
@@ -226,7 +226,7 @@
 
       <button
         onclick={downloadImage}
-        class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        class="w-full px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
       >
         {tc('download')} PNG
       </button>

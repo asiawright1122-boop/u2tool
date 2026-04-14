@@ -55,7 +55,7 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('inputLabel')}
         </label>
         <textarea
@@ -75,7 +75,7 @@
               <button
                 onclick={() => copyToClipboard(applyStyle(input, type), type)}
                 disabled={!input}
-                class="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                class="px-3 py-1 text-sm bg-amber-600 text-white rounded hover:bg-amber-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {copied === type ? t('copied') : t('copy')}
               </button>

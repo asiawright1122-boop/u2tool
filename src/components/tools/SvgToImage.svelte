@@ -132,7 +132,7 @@
               type="file"
               accept=".svg"
               onchange={handleFileUpload}
-              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-blue-600 file:text-white hover:file:bg-blue-700"
+              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700"
             />
           </div>
 
@@ -215,14 +215,14 @@
           <div class="flex gap-3">
             <button
               onclick={convert}
-              class="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg"
+              class="flex-1 px-4 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg"
             >
               {tg('convert')}
             </button>
             <button
               onclick={download}
               disabled={!previewUrl}
-              class="flex-1 px-4 py-2 bg-green-600 hover:bg-green-700 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg"
+              class="flex-1 px-4 py-2 bg-emerald-500 hover:bg-green-700 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg"
             >
               {tg('download')}
             </button>

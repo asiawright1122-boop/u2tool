@@ -147,7 +147,7 @@
       <div
         ondrop={handleDrop}
         ondragover={(e) => e.preventDefault()}
-        class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center hover:border-blue-500 transition-colors bg-gray-50 dark:bg-transparent"
+        class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center hover:border-amber-500 transition-colors bg-gray-50 dark:bg-transparent"
       >
         <input
           type="file"
@@ -170,9 +170,9 @@
 {/if}
 
       {#if isLoading}
-<div class="p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-center">
-          <div class="animate-spin inline-block w-6 h-6 border-2 border-blue-600 border-t-transparent rounded-full mb-2"></div>
-          <p class="text-blue-700 dark:text-blue-400">{t('processing')}</p>
+<div class="p-4 bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-lg text-center">
+          <div class="animate-spin inline-block w-6 h-6 border-2 border-amber-600 border-t-transparent rounded-full mb-2"></div>
+          <p class="text-amber-700 dark:text-amber-400">{t('processing')}</p>
         </div>
 {/if}
 
@@ -208,7 +208,7 @@
             type="checkbox"
             checked={includeDataUri}
             onchange={toggleDataUri}
-            class="w-4 h-4 text-blue-600 rounded"
+            class="w-4 h-4 text-amber-600 rounded"
           />
           <span class="text-sm text-gray-600 dark:text-gray-300">{t('includeDataUri')}</span>
         </label>
@@ -222,7 +222,7 @@
           {#if base64}
 <button
               onclick={handleCopy}
-              class="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+              class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-300"
             >
               {t('copy')}
             </button>

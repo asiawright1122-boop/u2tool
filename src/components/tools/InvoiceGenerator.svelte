@@ -113,24 +113,24 @@
             <div class="space-y-2">
               {#each items as item (item.id)}
 <div  class="grid grid-cols-12 gap-2 items-center">
-                  <input type="text" value={item.description} onchange={(e) => updateItem(item.id, 'description', e.target.value)}
+                  <input type="text" bind:value={item.description}
                     placeholder={t('invoice.description')} class="col-span-5 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />
-                  <input type="number" min="1" value={item.quantity} onchange={(e) => updateItem(item.id, 'quantity', parseInt(e.target.value) || 1)}
+                  <input type="number" min="1" bind:value={item.quantity}
                     placeholder={t('invoice.quantity')} class="col-span-2 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />
-                  <input type="number" min="0" step="0.01" value={item.unitPrice} onchange={(e) => updateItem(item.id, 'unitPrice', parseFloat(e.target.value) || 0)}
+                  <input type="number" min="0" step="0.01" bind:value={item.unitPrice}
                     placeholder={t('invoice.unitPrice')} class="col-span-3 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />
                   <span class="col-span-1 text-sm text-gray-600 dark:text-gray-400 text-right">{formatCurrency(item.quantity * item.unitPrice)}</span>
                   <button onclick={() => removeItem(item.id)} disabled={items.length === 1} class="col-span-1 text-red-500 hover:text-red-700 disabled:opacity-30">×</button>
                 </div>
 {/each}
             </div>
-            <button onclick={addItem} class="mt-3 text-sm text-blue-600 hover:text-blue-800">{t('invoice.addItem')}</button>
+            <button onclick={addItem} class="mt-3 text-sm text-amber-600 hover:text-amber-800">{t('invoice.addItem')}</button>
           </div>
 
           <div class="grid grid-cols-2 gap-4">
             <div>
               <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.taxRate')} (%)</label>
-              <input type="number" min="0" max="100" step="0.1" value={taxRate} onchange={(e) => taxRate = parseFloat(e.target.value) || 0}
+              <input type="number" min="0" max="100" step="0.1" bind:value={taxRate}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
             </div>
             <div>
@@ -140,7 +140,7 @@
             </div>
           </div>
 
-          <button onclick={downloadPDF} class="w-full px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium">
+          <button onclick={downloadPDF} class="w-full px-4 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 font-medium">
             {t('invoice.downloadPdf')}
           </button>
         </div>
@@ -301,24 +301,24 @@
             <div class="space-y-2">
               {#each items as item (item.id)}
 <div  class="grid grid-cols-12 gap-2 items-center">
-                  <input type="text" value={item.description} onchange={(e) => updateItem(item.id, 'description', e.target.value)}
+                  <input type="text" bind:value={item.description}
                     placeholder={t('invoice.description')} class="col-span-5 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />
-                  <input type="number" min="1" value={item.quantity} onchange={(e) => updateItem(item.id, 'quantity', parseInt(e.target.value) || 1)}
+                  <input type="number" min="1" bind:value={item.quantity}
                     placeholder={t('invoice.quantity')} class="col-span-2 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />
-                  <input type="number" min="0" step="0.01" value={item.unitPrice} onchange={(e) => updateItem(item.id, 'unitPrice', parseFloat(e.target.value) || 0)}
+                  <input type="number" min="0" step="0.01" bind:value={item.unitPrice}
                     placeholder={t('invoice.unitPrice')} class="col-span-3 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />
                   <span class="col-span-1 text-sm text-gray-600 dark:text-gray-400 text-right">{formatCurrency(item.quantity * item.unitPrice)}</span>
                   <button onclick={() => removeItem(item.id)} disabled={items.length === 1} class="col-span-1 text-red-500 hover:text-red-700 disabled:opacity-30">×</button>
                 </div>
 {/each}
             </div>
-            <button onclick={addItem} class="mt-3 text-sm text-blue-600 hover:text-blue-800">{t('invoice.addItem')}</button>
+            <button onclick={addItem} class="mt-3 text-sm text-amber-600 hover:text-amber-800">{t('invoice.addItem')}</button>
           </div>
 
           <div class="grid grid-cols-2 gap-4">
             <div>
               <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.taxRate')} (%)</label>
-              <input type="number" min="0" max="100" step="0.1" value={taxRate} onchange={(e) => taxRate = parseFloat(e.target.value) || 0}
+              <input type="number" min="0" max="100" step="0.1" bind:value={taxRate}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
             </div>
             <div>
@@ -328,7 +328,7 @@
             </div>
           </div>
 
-          <button onclick={downloadPDF} class="w-full px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium">
+          <button onclick={downloadPDF} class="w-full px-4 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 font-medium">
             {t('invoice.downloadPdf')}
           </button>
         </div>

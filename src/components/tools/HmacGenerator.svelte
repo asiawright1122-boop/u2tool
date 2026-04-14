@@ -123,7 +123,7 @@
               <button
                 onclick={copyResult}
                 class={`px-3 py-1 rounded text-sm whitespace-nowrap text-white ${
-                  copied ? 'bg-green-600' : 'bg-blue-600 hover:bg-blue-700'
+                  copied ? 'bg-emerald-500' : 'bg-amber-600 hover:bg-amber-700'
                 }`}
               >
                 {copied ? t('copied') : t('copy')}

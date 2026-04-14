@@ -76,7 +76,7 @@
           <textarea
             bind:value={text1}
             placeholder={t('hashCompare.placeholder')}
-            class="w-full h-32 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500"></textarea>
+            class="w-full h-32 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500"></textarea>
           {#if hash1}
 <div class="mt-2 p-2 bg-gray-100 dark:bg-gray-800 rounded text-xs font-mono break-all text-gray-600 dark:text-gray-300">
               {hash1}
@@ -90,7 +90,7 @@
           <textarea
             bind:value={text2}
             placeholder={t('hashCompare.placeholder')}
-            class="w-full h-32 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500"></textarea>
+            class="w-full h-32 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500"></textarea>
           {#if hash2}
 <div class="mt-2 p-2 bg-gray-100 dark:bg-gray-800 rounded text-xs font-mono break-all text-gray-600 dark:text-gray-300">
               {hash2}
@@ -102,7 +102,7 @@
       <button
         onclick={handleCompare}
         disabled={isComparing || !text1 || !text2}
-        class="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 dark:disabled:bg-gray-700 text-white disabled:text-gray-500 dark:disabled:text-gray-400 rounded-lg font-medium transition-colors"
+        class="px-6 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-gray-300 dark:disabled:bg-gray-700 text-white disabled:text-gray-500 dark:disabled:text-gray-400 rounded-lg font-medium transition-colors"
       >
         {isComparing ? t('hashCompare.comparing') : t('hashCompare.compare')}
       </button>

@@ -227,7 +227,7 @@ ${headers}
         <label class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('curlCommand')}</label>
         <textarea
           bind:value={curlCommand}
-          class="w-full h-32 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-gray-100 focus:outline-none focus:border-blue-500"
+          class="w-full h-32 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-gray-100 focus:outline-none focus:border-amber-500"
           placeholder={t('placeholder')}></textarea>
       </div>
 
@@ -237,7 +237,7 @@ ${headers}
           <select
             value={language}
             onchange={(e) => language = e.target.value as OutputLanguage}
-            class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-blue-500"
+            class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-amber-500"
           >
             <option value="javascript">{t('langJavaScript')}</option>
             <option value="python">{t('langPython')}</option>

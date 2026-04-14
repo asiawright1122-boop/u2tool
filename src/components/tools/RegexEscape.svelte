@@ -88,7 +88,7 @@
 
         <button
           onclick={loadSample}
-          class="text-sm text-blue-600 hover:text-blue-800"
+          class="text-sm text-amber-600 hover:text-amber-800"
         >
           {t('loadSample')}
         </button>
@@ -96,7 +96,7 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('input')}
           </label>
           <textarea
@@ -107,13 +107,13 @@
 
         <div class="space-y-2">
           <div class="flex items-center justify-between">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label class="tool-label">
               {t('output')}
             </label>
             {#if output}
 <button
                 onclick={handleCopy}
-                class="text-sm text-blue-600 hover:text-blue-800"
+                class="text-sm text-amber-600 hover:text-amber-800"
               >
                 {t('copy')}
               </button>
@@ -130,7 +130,7 @@
       <div class="flex justify-center gap-4">
         <button
           onclick={handleConvert}
-          class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          class="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
         >
           {mode === 'escape' ? t('escapeBtn') : t('unescapeBtn')}
         </button>
@@ -157,9 +157,9 @@
         </div>
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
-        <h3 class="font-medium text-blue-700 dark:text-blue-300 mb-2">{t('info')}</h3>
-        <p class="text-sm text-blue-600 dark:text-blue-200">{t('infoText')}</p>
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-lg">
+        <h3 class="font-medium text-amber-700 dark:text-amber-300 mb-2">{t('info')}</h3>
+        <p class="text-sm text-amber-600 dark:text-amber-200">{t('infoText')}</p>
       </div>
     </div>
   

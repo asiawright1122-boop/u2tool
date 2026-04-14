@@ -96,7 +96,10 @@ const themeInitScript = buildThemeInitScript();
     <!-- Inline theme-detection script: runs before render to prevent FOUC -->
     <script is:inline set:html={themeInitScript} />
   </head>
-  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+  <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen relative">
+    <!-- Immersive Background System -->
+    <div class="ambient-aura"></div>
+    
     <slot />
   </body>
 </html>

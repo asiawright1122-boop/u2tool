@@ -82,7 +82,7 @@
             onclick={() => style = s}
             class={`px-4 py-2 text-sm rounded-lg ${
               style === s
-                ? 'bg-blue-600 text-white'
+                ? 'bg-amber-600 text-white'
                 : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
             }`}
           >
@@ -225,12 +225,12 @@
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('formattedCitation')} ({style.toUpperCase()})
           </label>
           <button
             onclick={handleCopy}
-            class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+            class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
           >
             {copied ? tCommon('copied') : tCommon('copy')}
           </button>

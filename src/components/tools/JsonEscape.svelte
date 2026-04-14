@@ -60,14 +60,14 @@
         <textarea
           bind:value={input}
           placeholder={t('jsonEscape.placeholder')}
-          class="w-full h-40 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500"></textarea>
+          class="w-full h-40 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500"></textarea>
       </div>
 
       <div class="flex gap-3">
-        <button onclick={escapeJson} class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium">
+        <button onclick={escapeJson} class="px-6 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-medium">
           {t('jsonEscape.escape')}
         </button>
-        <button onclick={unescapeJson} class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium">
+        <button onclick={unescapeJson} class="px-6 py-2 bg-emerald-500 hover:bg-green-700 text-white rounded-lg font-medium">
           {t('jsonEscape.unescape')}
         </button>
       </div>

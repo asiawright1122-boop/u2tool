@@ -68,28 +68,24 @@
             {#each pageTools as tool}
               <a
                 href="{basePath}/tools/{tool.slug}"
-                class="group p-5 bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/50
-                       rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800
-                       hover:border-gray-300 dark:hover:border-gray-600
-                       hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-black/20
-                       transition-all"
+                class="glass-card flex items-center gap-4 p-5 group/card relative overflow-hidden"
               >
-                <div class="flex items-start gap-4">
-                  <span class="text-blue-500 dark:text-blue-400 group-hover:scale-110 transition-transform duration-300 flex-shrink-0 inline-flex">
-                    {@html getIconSvg(tool.icon, 28)}
+                <div class="absolute inset-0 bg-gradient-to-br from-transparent to-amber-500/5 dark:to-amber-500/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
+                <div class="relative z-10 flex items-center gap-4 w-full">
+                  <span class="text-slate-400 dark:text-slate-500 flex-shrink-0 inline-flex transition-all duration-500 group-hover/card:text-amber-500 group-hover/card:scale-110 group-hover/card:drop-shadow-[0_0_8px_rgba(245,158,11,0.5)]">
+                    {@html getIconSvg(tool.icon, 24)}
                   </span>
                   <div class="flex-1 min-w-0">
-                    <h3 class="font-semibold text-lg mb-1 text-gray-900 dark:text-white
-                               group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <h3 class="font-bold text-sm text-slate-900 dark:text-white truncate group-hover/card:text-amber-600 dark:group-hover/card:text-amber-400 transition-colors">
                       {tool.name}
                     </h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-300 line-clamp-2">
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 truncate mt-1.5 leading-relaxed">
                       {tool.description}
                     </p>
-                    <span class="inline-flex items-center gap-1 mt-3 text-xs text-gray-500 dark:text-gray-400">
-                      <span class="px-2 py-0.5 bg-gray-100 dark:bg-gray-700/50 rounded">{tool.categoryName}</span>
-                    </span>
                   </div>
+                  <span class="inline-flex items-center px-2 py-0.5 text-[9px] font-black rounded-full bg-slate-100 text-slate-500 dark:bg-white/5 dark:text-slate-500 flex-shrink-0 border border-slate-200 dark:border-white/10 tracking-widest uppercase shadow-sm">
+                    {tool.categoryName}
+                  </span>
                 </div>
               </a>
             {/each}
@@ -104,12 +100,13 @@
     <div class="flex items-center justify-center gap-4 mt-8">
       <button
         onclick={goToPrev}
-        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/50
-               hover:bg-gray-200 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600
-               transition-colors text-gray-700 dark:text-white"
+        class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50
+               hover:bg-slate-200 dark:hover:bg-slate-700 hover:border-slate-300 dark:hover:border-slate-600
+               hover:text-amber-500 dark:hover:text-amber-400 active:scale-95
+               transition-all duration-300 text-slate-700 dark:text-slate-300"
         aria-label="Previous"
       >
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-5 h-5 transition-transform group-active:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
       </button>
@@ -118,7 +115,7 @@
         {#each Array.from({ length: totalPages }) as _, index}
           <button
             onclick={() => goToPage(index)}
-            class="h-2 rounded-full transition-all {currentPage === index ? 'w-6 bg-blue-500' : 'w-2 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'}"
+            class="h-2 rounded-full transition-all duration-300 {currentPage === index ? 'w-6 bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.5)]' : 'w-2 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400 dark:hover:bg-slate-600'}"
             aria-label="Page {index + 1}"
           ></button>
         {/each}
@@ -126,18 +123,19 @@
 
       <button
         onclick={goToNext}
-        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/50
-               hover:bg-gray-200 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600
-               transition-colors text-gray-700 dark:text-white"
+        class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50
+               hover:bg-slate-200 dark:hover:bg-slate-700 hover:border-slate-300 dark:hover:border-slate-600
+               hover:text-amber-500 dark:hover:text-amber-400 active:scale-95
+               transition-all duration-300 text-slate-700 dark:text-slate-300"
         aria-label="Next"
       >
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-5 h-5 transition-transform group-active:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
       </button>
     </div>
 
-    <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-3">
+    <p class="text-center text-sm font-black tracking-widest text-slate-400 dark:text-slate-500 mt-4 opacity-50 uppercase">
       {currentPage + 1} / {totalPages}
     </p>
   {/if}

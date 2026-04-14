@@ -92,7 +92,7 @@
       <div
         ondrop={handleDrop}
         ondragover={(e) => e.preventDefault()}
-        class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl p-8 text-center hover:border-blue-500 transition-colors"
+        class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl p-8 text-center hover:border-amber-500 transition-colors"
       >
         {#if imageUrl}
 <div class="space-y-4">
@@ -122,7 +122,7 @@
             />
             <label
               for="webp-upload"
-              class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors cursor-pointer"
+              class="inline-block px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors cursor-pointer"
             >
               {t('selectFile')}
             </label>
@@ -134,7 +134,7 @@
 <div class="space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="tool-label">
                 {t('fileName')}
               </label>
               <div class="flex items-center gap-2">
@@ -147,7 +147,7 @@
               </div>
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="tool-label">
                 {t('quality')}: {quality}%
               </label>
               <input
@@ -163,7 +163,7 @@
 
           <button
             onclick={convertToPng}
-            class="w-full px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium"
+            class="w-full px-6 py-3 btn-success rounded-lg hover:bg-green-700 transition-colors font-medium"
           >
             {t('download')}
           </button>

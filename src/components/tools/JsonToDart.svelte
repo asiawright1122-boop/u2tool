@@ -46,7 +46,7 @@
           <input type="text" bind:value={className}
             class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white" />
         </div>
-        <button onclick={handleConvert} class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        <button onclick={handleConvert} class="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700">
           {t('convert')}
         </button>
       </div>

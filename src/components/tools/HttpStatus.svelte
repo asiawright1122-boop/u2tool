@@ -25,7 +25,7 @@
   );
   function getColor(code: string) {
     if (code.startsWith('2')) return 'bg-green-100 dark:bg-green-900/50 border-green-300 dark:border-green-700';
-    if (code.startsWith('3')) return 'bg-blue-100 dark:bg-blue-900/50 border-blue-300 dark:border-blue-700';
+    if (code.startsWith('3')) return 'bg-amber-100 dark:bg-amber-900/50 border-amber-300 dark:border-amber-700';
     if (code.startsWith('4')) return 'bg-yellow-100 dark:bg-yellow-900/50 border-yellow-300 dark:border-yellow-700';
     if (code.startsWith('5')) return 'bg-red-100 dark:bg-red-900/50 border-red-300 dark:border-red-700';
     return 'bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-700';

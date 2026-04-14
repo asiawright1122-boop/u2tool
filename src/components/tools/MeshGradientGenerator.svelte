@@ -92,12 +92,12 @@ background-color: ${points[0]?.color || '#ffffff'};`;
       <!-- Color Points -->
       <div class="space-y-4">
         <div class="flex items-center justify-between">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('colorPoints')}
           </label>
           <button
             onclick={randomize}
-            class="px-3 py-1 text-sm bg-purple-500 text-white rounded hover:bg-purple-600 transition-colors"
+            class="px-3 py-1 text-sm bg-slate-500 text-white rounded hover:bg-slate-600 transition-colors"
           >
             {t('randomize')}
           </button>
@@ -148,7 +148,7 @@ background-color: ${points[0]?.color || '#ffffff'};`;
 
       <!-- Blur Control -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('blur')}: {blur}%
         </label>
         <input
@@ -164,12 +164,12 @@ background-color: ${points[0]?.color || '#ffffff'};`;
       <!-- CSS Output -->
       <div>
         <div class="flex items-center justify-between mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             CSS {common('output')}
           </label>
           <button
             onclick={handleCopy}
-            class="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+            class="px-3 py-1 text-sm bg-amber-500 text-white rounded hover:bg-amber-600 transition-colors"
           >
             {copied ? common('copied') : common('copy')}
           </button>

@@ -94,7 +94,7 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, ${shadowOpacity});`;
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('blur')}: {blur}px
             </label>
             <input
@@ -108,7 +108,7 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, ${shadowOpacity});`;
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('transparency')}: {(transparency * 100).toFixed(0)}%
             </label>
             <input
@@ -122,7 +122,7 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, ${shadowOpacity});`;
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('borderOpacity')}: {(borderOpacity * 100).toFixed(0)}%
             </label>
             <input
@@ -138,7 +138,7 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, ${shadowOpacity});`;
 
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('shadowOpacity')}: {(shadowOpacity * 100).toFixed(0)}%
             </label>
             <input
@@ -152,7 +152,7 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, ${shadowOpacity});`;
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('backgroundColor')}
             </label>
             <div class="flex items-center gap-3">
@@ -174,12 +174,12 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, ${shadowOpacity});`;
       <!-- CSS Output -->
       <div>
         <div class="flex items-center justify-between mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             CSS {common('output')}
           </label>
           <button
             onclick={handleCopy}
-            class="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+            class="px-3 py-1 text-sm bg-amber-500 text-white rounded hover:bg-amber-600 transition-colors"
           >
             {copied ? common('copied') : common('copy')}
           </button>

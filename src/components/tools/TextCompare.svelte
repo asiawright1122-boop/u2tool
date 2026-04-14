@@ -72,7 +72,7 @@
       {#if similarity}
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
           <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-center">
-            <p class="text-3xl font-bold text-blue-600 dark:text-blue-400">{similarity.charSim}%</p>
+            <p class="text-3xl font-bold text-amber-600 dark:text-amber-400">{similarity.charSim}%</p>
             <p class="text-sm text-gray-600 dark:text-gray-300">{t('textCompare.charSimilarity')}</p>
           </div>
           <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-center">
@@ -84,7 +84,7 @@
             <p class="text-sm text-gray-600 dark:text-gray-300">{t('textCompare.editDistance')}</p>
           </div>
           <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-center">
-            <p class="text-3xl font-bold text-purple-600 dark:text-purple-400">{similarity.common}/{similarity.total}</p>
+            <p class="text-3xl font-bold text-slate-600 dark:text-slate-400">{similarity.common}/{similarity.total}</p>
             <p class="text-sm text-gray-600 dark:text-gray-300">{t('textCompare.commonWords')}</p>
           </div>
         </div>

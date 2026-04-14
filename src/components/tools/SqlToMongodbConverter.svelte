@@ -85,14 +85,14 @@
       <!-- Input -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             SQL Query
           </label>
           <div class="flex gap-2">
             {#each EXAMPLES.slice(0, 4) as ex (ex.label)}
 <button 
                 onclick={() => sql = ex.sql}
-                class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"
               >
                 {ex.label}
               </button>
@@ -137,12 +137,12 @@
 
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+              <label class="tool-label">
                 MongoDB Query
               </label>
               <button
                 onclick={handleCopy}
-                class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
               >
                 {copied ? tCommon('copied') : tCommon('copy')}
               </button>
@@ -163,9 +163,9 @@
           {#each EXAMPLES as ex (ex.sql)}
 <button 
               onclick={() => sql = ex.sql}
-              class="p-3 text-left text-xs bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500"
+              class="p-3 text-left text-xs bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-amber-400 dark:hover:border-amber-500"
             >
-              <span class="font-medium text-blue-600 dark:text-blue-400">{ex.label}</span>
+              <span class="font-medium text-amber-600 dark:text-amber-400">{ex.label}</span>
               <span class="block font-mono text-gray-600 dark:text-gray-400 mt-1 truncate">
                 {ex.sql}
               </span>
@@ -175,9 +175,9 @@
       </div>
 
       <!-- Reference -->
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h4 class="text-sm font-medium text-blue-800 dark:text-blue-300 mb-2">Supported SQL Operations</h4>
-        <ul class="text-sm text-blue-700 dark:text-blue-400 space-y-1">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+        <h4 class="text-sm font-medium text-amber-800 dark:text-amber-300 mb-2">Supported SQL Operations</h4>
+        <ul class="text-sm text-amber-700 dark:text-amber-400 space-y-1">
           <li>• SELECT with WHERE, ORDER BY, LIMIT, OFFSET</li>
           <li>• INSERT INTO ... VALUES</li>
           <li>• UPDATE ... SET ... WHERE</li>

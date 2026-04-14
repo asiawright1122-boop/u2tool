@@ -215,7 +215,7 @@
             <button
               onclick={spin}
               disabled={isSpinning || options.length < 2}
-              class="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 disabled:opacity-50 transition-all font-medium"
+              class="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-slate-500 to-pink-500 text-white rounded-lg hover:from-slate-600 hover:to-pink-600 disabled:opacity-50 transition-all font-medium"
             >
               {t('spin')}
             </button>
@@ -240,7 +240,7 @@
 
         <!-- Options List -->
         <div class="space-y-3">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('options')} ({options.length})
           </label>
           
@@ -269,7 +269,7 @@
 
           <button
             onclick={addOption}
-            class="flex items-center gap-2 px-4 py-2 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg w-full justify-center"
+            class="flex items-center gap-2 px-4 py-2 text-amber-600 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-900/20 rounded-lg w-full justify-center"
           >
             <Plus class="w-4 h-4" />
             {t('addOption')}

@@ -128,7 +128,7 @@
 
       <div class="flex gap-4">
         <button onclick={process}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-medium transition-colors">
           {mode === 'flatten' ? t('flatten') : t('unflatten')}
         </button>
         <button onclick={copyToClipboard} disabled={!output}

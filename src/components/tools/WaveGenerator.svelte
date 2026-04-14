@@ -100,7 +100,7 @@ ${paths}
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('height')}: {height}px
             </label>
             <input
@@ -114,7 +114,7 @@ ${paths}
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('frequency')}: {frequency}
             </label>
             <input
@@ -129,7 +129,7 @@ ${paths}
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('amplitude')}: {amplitude}px
             </label>
             <input
@@ -145,7 +145,7 @@ ${paths}
 
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('layers')}: {layers}
             </label>
             <input
@@ -159,7 +159,7 @@ ${paths}
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('position')}
             </label>
             <div class="flex gap-2">
@@ -167,7 +167,7 @@ ${paths}
                 onclick={() => position = 'top'}
                 class={`flex-1 px-3 py-2 text-sm rounded-lg border transition-colors ${
                   position === 'top'
-                    ? 'bg-blue-500 text-white border-blue-500'
+                    ? 'bg-amber-500 text-white border-amber-500'
                     : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600'
                 }`}
               >
@@ -177,7 +177,7 @@ ${paths}
                 onclick={() => position = 'bottom'}
                 class={`flex-1 px-3 py-2 text-sm rounded-lg border transition-colors ${
                   position === 'bottom'
-                    ? 'bg-blue-500 text-white border-blue-500'
+                    ? 'bg-amber-500 text-white border-amber-500'
                     : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600'
                 }`}
               >
@@ -187,7 +187,7 @@ ${paths}
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('color')}
             </label>
             <div class="flex items-center gap-3">
@@ -210,13 +210,13 @@ ${paths}
       <div class="flex gap-3">
         <button
           onclick={handleCopy}
-          class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+          class="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors"
         >
           {copied ? common('copied') : common('copy')} SVG
         </button>
         <button
           onclick={handleDownload}
-          class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+          class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-emerald-500 transition-colors"
         >
           {common('download')} SVG
         </button>
@@ -224,7 +224,7 @@ ${paths}
 
       <!-- SVG Output -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           SVG {common('output')}
         </label>
         <pre class="p-4 bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm font-mono max-h-48">

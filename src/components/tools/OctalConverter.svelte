@@ -149,7 +149,7 @@
 
         <button
           onclick={loadSample}
-          class="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+          class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-300"
         >
           {t('loadSample')}
         </button>
@@ -174,7 +174,7 @@
             {#if output}
 <button
                 onclick={handleCopy}
-                class="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+                class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-300"
               >
                 {t('copy')}
               </button>
@@ -203,9 +203,9 @@
         </button>
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg">
-        <h3 class="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('info')}</h3>
-        <p class="text-sm text-blue-700 dark:text-blue-400">{t('infoText')}</p>
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-lg">
+        <h3 class="font-medium text-amber-800 dark:text-amber-300 mb-2">{t('info')}</h3>
+        <p class="text-sm text-amber-700 dark:text-amber-400">{t('infoText')}</p>
       </div>
     </div>
   

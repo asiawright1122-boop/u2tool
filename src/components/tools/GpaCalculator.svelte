@@ -91,7 +91,7 @@
   function getGpaColor(gpa: number, maxGpa: number) {
     const ratio = gpa / maxGpa;
     if (ratio >= 0.9) return 'text-green-600 dark:text-green-400';
-    if (ratio >= 0.8) return 'text-blue-600 dark:text-blue-400';
+    if (ratio >= 0.8) return 'text-amber-600 dark:text-amber-400';
     if (ratio >= 0.7) return 'text-yellow-600 dark:text-yellow-400';
     if (ratio >= 0.6) return 'text-orange-600 dark:text-orange-400';
     return 'text-red-600 dark:text-red-400';
@@ -115,7 +115,7 @@
           onclick={() => scale = '4.0'}
           class={`px-4 py-2 rounded-lg font-medium transition-colors ${
             scale === '4.0'
-              ? 'bg-blue-500 text-white'
+              ? 'bg-amber-500 text-white'
               : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300'
           }`}
         >
@@ -125,7 +125,7 @@
           onclick={() => scale = '5.0'}
           class={`px-4 py-2 rounded-lg font-medium transition-colors ${
             scale === '5.0'
-              ? 'bg-blue-500 text-white'
+              ? 'bg-amber-500 text-white'
               : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300'
           }`}
         >
@@ -136,7 +136,7 @@
       <!-- Courses List -->
       <div class="space-y-3">
         <div class="flex items-center justify-between">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('courses')} ({courses.length})
           </label>
         </div>
@@ -188,7 +188,7 @@
 
         <button
           onclick={addCourse}
-          class="flex items-center gap-2 px-4 py-2 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg"
+          class="flex items-center gap-2 px-4 py-2 text-amber-600 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-900/20 rounded-lg"
         >
           <Plus class="w-4 h-4" />
           {t('addCourse')}
@@ -196,9 +196,9 @@
       </div>
 
       <!-- Results -->
-      <div class="p-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
+      <div class="p-6 bg-gradient-to-r from-amber-50 to-slate-50 dark:from-amber-900/20 dark:to-slate-900/20 rounded-xl border border-amber-200 dark:border-amber-800">
         <div class="flex items-center gap-3 mb-4">
-          <GraduationCap class="w-8 h-8 text-blue-500" />
+          <GraduationCap class="w-8 h-8 text-amber-500" />
           <div>
             <div class="text-sm text-gray-600 dark:text-gray-400">{t('yourGpa')}</div>
             <div class={`text-4xl font-bold ${getGpaColor(result.gpa, result.maxGpa)}`}>
@@ -211,7 +211,7 @@
         <div class="mb-4">
           <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
             <div
-              class="h-full bg-gradient-to-r from-blue-400 to-purple-400 rounded-full transition-all duration-500"
+              class="h-full bg-gradient-to-r from-amber-400 to-slate-400 rounded-full transition-all duration-500"
               style="width: {result.percentage}%"></div>
           </div>
           <div class="flex justify-between text-sm text-gray-500 mt-1">

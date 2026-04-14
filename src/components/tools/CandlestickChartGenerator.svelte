@@ -434,7 +434,7 @@
               <input
                 type="checkbox"
                 bind:checked={showMA5}
-                class="w-4 h-4 accent-blue-500"
+                class="w-4 h-4 accent-amber-500"
               />
               <span>MA5</span>
             </label>
@@ -444,7 +444,7 @@
               <input
                 type="checkbox"
                 bind:checked={showMA10}
-                class="w-4 h-4 accent-blue-500"
+                class="w-4 h-4 accent-amber-500"
               />
               <span>MA10</span>
             </label>
@@ -454,7 +454,7 @@
               <input
                 type="checkbox"
                 bind:checked={showMA20}
-                class="w-4 h-4 accent-blue-500"
+                class="w-4 h-4 accent-amber-500"
               />
               <span>MA20</span>
             </label>
@@ -584,7 +584,7 @@
 
   <!-- 使用说明 -->
   <div
-    class="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300"
+    class="p-3 bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-lg text-sm text-amber-700 dark:text-amber-300"
   >
     <p class="font-medium mb-1">
       <svg
@@ -603,7 +603,7 @@
       >
       {t("tips.title")}
     </p>
-    <ul class="space-y-0.5 text-blue-600 dark:text-blue-400">
+    <ul class="space-y-0.5 text-amber-600 dark:text-amber-400">
       <li>• {t("tips.tip1")}</li>
       <li>• {t("tips.tip2")}</li>
       <li>• {t("tips.tip3")}</li>

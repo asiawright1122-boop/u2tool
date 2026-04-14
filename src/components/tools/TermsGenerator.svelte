@@ -156,7 +156,7 @@ ${config.companyName ? `**${config.companyName}**\n` : ''}${config.email ? `Emai
               type="text"
               value={config.websiteName}
               onchange={(e) => config = { ...config, websiteName: e.target.value }}
-              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
               placeholder={t('termsGenerator.websiteNamePlaceholder')}
             />
           </div>
@@ -166,7 +166,7 @@ ${config.companyName ? `**${config.companyName}**\n` : ''}${config.email ? `Emai
               type="text"
               value={config.websiteUrl}
               onchange={(e) => config = { ...config, websiteUrl: e.target.value }}
-              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
               placeholder={t('termsGenerator.websiteUrlPlaceholder')}
             />
           </div>
@@ -176,7 +176,7 @@ ${config.companyName ? `**${config.companyName}**\n` : ''}${config.email ? `Emai
               type="text"
               value={config.companyName}
               onchange={(e) => config = { ...config, companyName: e.target.value }}
-              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
               placeholder={t('termsGenerator.companyNamePlaceholder')}
             />
           </div>
@@ -186,7 +186,7 @@ ${config.companyName ? `**${config.companyName}**\n` : ''}${config.email ? `Emai
               type="email"
               value={config.email}
               onchange={(e) => config = { ...config, email: e.target.value }}
-              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
               placeholder={t('termsGenerator.contactEmailPlaceholder')}
             />
           </div>
@@ -196,7 +196,7 @@ ${config.companyName ? `**${config.companyName}**\n` : ''}${config.email ? `Emai
               type="text"
               value={config.country}
               onchange={(e) => config = { ...config, country: e.target.value }}
-              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
               placeholder={t('termsGenerator.governingLawCountryPlaceholder')}
             />
           </div>

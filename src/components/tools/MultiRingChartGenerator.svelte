@@ -214,12 +214,12 @@
               </div>
               <div>
                 <label for="{t('ringWidth')}: {ringWidth}px" class="block text-sm font-medium mb-1">{t('ringWidth')}: {ringWidth}px</label>
-                <input type="range" min="8" max="25" value={ringWidth} onchange={(e) => ringWidth = Number((e.target as HTMLInputElement).value)}
+                <input type="range" min="8" max="25" bind:value={ringWidth}
                   class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" />
               </div>
               <div class="flex flex-wrap gap-6 text-sm">
                 <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" bind:checked={showAnimation} class="w-4 h-4 accent-blue-500" />
+                  <input type="checkbox" bind:checked={showAnimation} class="w-4 h-4 accent-amber-500" />
                   <span>{t('showAnimation')}</span>
                 </label>
               </div>
@@ -234,11 +234,11 @@
             <div class="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-3 space-y-2">
               {#each data as ring (ring.id)}
 <div  class="flex items-center gap-2 p-2 bg-white dark:bg-gray-800 rounded border border-gray-200 dark:border-gray-600">
-                  <input type="color" value={ring.color} onchange={(e) => updateRing(ring.id, 'color', (e.target as HTMLInputElement).value)}
+                  <input type="color" bind:value={ring.color}
                     class="w-8 h-8 rounded cursor-pointer" />
-                  <input type="text" value={ring.name} onchange={(e) => updateRing(ring.id, 'name', (e.target as HTMLInputElement).value)}
+                  <input type="text" bind:value={ring.name}
                     class="flex-1 px-2 py-1 bg-transparent border border-gray-200 dark:border-gray-600 rounded text-sm" placeholder={t('ringName')} />
-                  <input type="number" min="0" max="100" value={ring.value} onchange={(e) => updateRing(ring.id, 'value', (e.target as HTMLInputElement).value)}
+                  <input type="number" min="0" max="100" bind:value={ring.value}
                     class="w-16 px-2 py-1 bg-transparent border border-gray-200 dark:border-gray-600 rounded text-sm text-center" />
                   <span class="text-sm text-gray-500">%</span>
                   <button onclick={() => deleteRing(ring.id)} class="text-red-400 hover:text-red-300 disabled:opacity-50" disabled={data.length <= 1}>✕</button>
@@ -259,9 +259,9 @@
         </div>
       </div>
 
-      <div class="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300">
+      <div class="p-3 bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-lg text-sm text-amber-700 dark:text-amber-300">
         <p class="font-medium mb-1"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg> {t('tips.title')}</p>
-        <ul class="space-y-0.5 text-blue-600 dark:text-blue-400">
+        <ul class="space-y-0.5 text-amber-600 dark:text-amber-400">
           <li>• {t('tips.tip1')}</li>
           <li>• {t('tips.tip2')}</li>
           <li>• {t('tips.tip3')}</li>

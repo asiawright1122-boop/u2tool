@@ -148,25 +148,25 @@ export const tools: Tool[] = [
   { slug: 'image-cropper', category: 'image', icon: 'image', component: 'ImageCropper' },
 
   // Batch 18 - Development Tools
-  { slug: 'gitignore-generator', category: 'development', icon: 'code-2', component: 'GitignoreGenerator', popular: true },
-  { slug: 'docker-compose-generator', category: 'development', icon: 'code-2', component: 'DockerComposeGenerator' },
-  { slug: 'package-json-generator', category: 'development', icon: 'code-2', component: 'PackageJsonGenerator' },
+  { slug: 'gitignore-generator', category: 'development', icon: 'file-x', component: 'GitignoreGenerator', popular: true },
+  { slug: 'docker-compose-generator', category: 'development', icon: 'box', component: 'DockerComposeGenerator' },
+  { slug: 'package-json-generator', category: 'development', icon: 'package', component: 'PackageJsonGenerator' },
 
   // Batch 19 - New Popular Tools
   { slug: 'json-minifier', category: 'encoding', icon: 'binary', component: 'JsonMinifier' },
   { slug: 'timezone-converter', category: 'converters', icon: 'arrow-left-right', component: 'TimezoneConverter', popular: true },
-  { slug: 'color-contrast-checker', category: 'development', icon: 'code-2', component: 'ColorContrastChecker' },
+  { slug: 'color-contrast-checker', category: 'development', icon: 'contrast', component: 'ColorContrastChecker' },
   { slug: 'markdown-table-generator', category: 'generators', icon: 'zap', component: 'MarkdownTableGenerator' },
   { slug: 'base58', category: 'encoding', icon: 'hash', component: 'Base58' },
 
   // Batch 20 - SEO & Development Tools
   { slug: 'meta-tag-generator', category: 'generators', icon: 'zap', component: 'MetaTagGenerator' },
   { slug: 'robots-txt-generator', category: 'generators', icon: 'zap', component: 'RobotsTxtGenerator' },
-  { slug: 'opengraph-preview', category: 'development', icon: 'code-2', component: 'OpenGraphPreview' },
-  { slug: 'css-grid-generator', category: 'generators', icon: 'zap', component: 'CssGridGenerator' },
-  { slug: 'css-flexbox-generator', category: 'generators', icon: 'zap', component: 'CssFlexboxGenerator' },
+  { slug: 'opengraph-preview', category: 'development', icon: 'share-2', component: 'OpenGraphPreview' },
+  { slug: 'css-grid-generator', category: 'generators', icon: 'grid-3x3', component: 'CssGridGenerator' },
+  { slug: 'css-flexbox-generator', category: 'generators', icon: 'layout-grid', component: 'CssFlexboxGenerator' },
   { slug: 'jwt-generator', category: 'security', icon: 'shield-check', component: 'JwtGenerator' },
-  { slug: 'cron-explainer', category: 'development', icon: 'code-2', component: 'CronExplainer' },
+  { slug: 'cron-explainer', category: 'development', icon: 'calendar-search', component: 'CronExplainer' },
   { slug: 'json-to-graphql', category: 'converters', icon: 'arrow-left-right', component: 'JsonToGraphql' },
   { slug: 'sql-to-mongo', category: 'converters', icon: 'arrow-left-right', component: 'SqlToMongo' },
 
@@ -174,10 +174,10 @@ export const tools: Tool[] = [
   { slug: 'json-to-csharp', category: 'converters', icon: 'arrow-left-right', component: 'JsonToCsharp' },
   { slug: 'json-to-rust', category: 'converters', icon: 'arrow-left-right', component: 'JsonToRust' },
   { slug: 'json-to-swift', category: 'converters', icon: 'arrow-left-right', component: 'JsonToSwift' },
-  { slug: 'css-minifier', category: 'development', icon: 'code-2', component: 'CssMinifier' },
-  { slug: 'js-minifier', category: 'development', icon: 'code-2', component: 'JsMinifier' },
-  { slug: 'box-shadow-generator', category: 'generators', icon: 'zap', component: 'BoxShadowGenerator' },
-  { slug: 'border-radius-generator', category: 'generators', icon: 'zap', component: 'BorderRadiusGenerator' },
+  { slug: 'css-minifier', category: 'development', icon: 'file-digit', component: 'CssMinifier' },
+  { slug: 'js-minifier', category: 'development', icon: 'zap', component: 'JsMinifier' },
+  { slug: 'box-shadow-generator', category: 'generators', icon: 'copy', component: 'BoxShadowGenerator' },
+  { slug: 'border-radius-generator', category: 'generators', icon: 'circle', component: 'BorderRadiusGenerator' },
   { slug: 'text-to-ascii-art', category: 'text', icon: 'type', component: 'TextToAsciiArt' },
 
   // Batch 22 - Utility Tools
@@ -185,14 +185,14 @@ export const tools: Tool[] = [
   { slug: 'json-flattener', category: 'encoding', icon: 'binary', component: 'JsonFlattener' },
   { slug: 'base85', category: 'encoding', icon: 'hash', component: 'Base85' },
   { slug: 'html-to-markdown', category: 'converters', icon: 'arrow-left-right', component: 'HtmlToMarkdown' },
-  { slug: 'regex-generator', category: 'development', icon: 'code-2', component: 'RegexGenerator' },
+  { slug: 'regex-generator', category: 'development', icon: 'wand-2', component: 'RegexGenerator' },
   { slug: 'url-shortener-preview', category: 'network', icon: 'globe', component: 'UrlShortenerPreview' },
 
   // Batch 23 - More Utility Tools
   { slug: 'json-viewer', category: 'encoding', icon: 'binary', component: 'JsonViewer' },
   { slug: 'xml-to-json', category: 'converters', icon: 'arrow-left-right', component: 'XmlToJson' },
   { slug: 'ip-address-generator', category: 'network', icon: 'globe', component: 'IpAddressGenerator' },
-  { slug: 'css-gradient-text', category: 'generators', icon: 'zap', component: 'CssGradientText' },
+  { slug: 'css-gradient-text', category: 'generators', icon: 'type', component: 'CssGradientText' },
   { slug: 'sitemap-generator', category: 'generators', icon: 'zap', component: 'SitemapGenerator' },
 
   // Batch 24 - Advanced Tools
@@ -203,9 +203,9 @@ export const tools: Tool[] = [
 
   // Batch 25 - More Tools
   { slug: 'css-clip-path-generator', category: 'generators', icon: 'zap', component: 'CssClipPathGenerator' },
-  { slug: 'uuid-validator', category: 'development', icon: 'code-2', component: 'UuidValidator' },
+  { slug: 'uuid-validator', category: 'development', icon: 'check-square', component: 'UuidValidator' },
   { slug: 'text-hash-comparator', category: 'security', icon: 'shield-check', component: 'TextHashComparator' },
-  { slug: 'json-path-finder', category: 'development', icon: 'code-2', component: 'JsonPathFinder' },
+  { slug: 'json-path-finder', category: 'development', icon: 'compass', component: 'JsonPathFinder' },
   { slug: 'canvas-drawing', category: 'image', icon: 'image', component: 'CanvasDrawing' },
 
   // Batch 26 - New Tools
@@ -224,23 +224,23 @@ export const tools: Tool[] = [
   { slug: 'cookie-policy-generator', category: 'generators', icon: 'zap', component: 'CookiePolicyGenerator' },
   { slug: 'json-to-tsv', category: 'converters', icon: 'arrow-left-right', component: 'JsonToTsv' },
   { slug: 'csv-viewer', category: 'converters', icon: 'arrow-left-right', component: 'CsvViewer' },
-  { slug: 'htaccess-generator', category: 'development', icon: 'code-2', component: 'HtaccessGenerator' },
-  { slug: 'nginx-config-generator', category: 'development', icon: 'code-2', component: 'NginxConfigGenerator' },
-  { slug: 'curl-converter', category: 'development', icon: 'code-2', component: 'CurlConverter' },
+  { slug: 'htaccess-generator', category: 'development', icon: 'settings-2', component: 'HtaccessGenerator' },
+  { slug: 'nginx-config-generator', category: 'development', icon: 'server-cog', component: 'NginxConfigGenerator' },
+  { slug: 'curl-converter', category: 'development', icon: 'terminal', component: 'CurlConverter' },
   { slug: 'reading-time-calculator', category: 'text', icon: 'type', component: 'ReadingTimeCalculator' },
 
   // Batch 28 - New Popular Tools
   { slug: 'open-graph-generator', category: 'generators', icon: 'zap', component: 'OpenGraphGenerator' },
   { slug: 'twitter-card-generator', category: 'generators', icon: 'zap', component: 'TwitterCardGenerator' },
-  { slug: 'mime-type-lookup', category: 'development', icon: 'code-2', component: 'MimeTypeLookup' },
-  { slug: 'http-status-codes', category: 'development', icon: 'code-2', component: 'HttpStatusCodes' },
+  { slug: 'mime-type-lookup', category: 'development', icon: 'file-search-2', component: 'MimeTypeLookup' },
+  { slug: 'http-status-codes', category: 'development', icon: 'server', component: 'HttpStatusCodes' },
   { slug: 'string-obfuscator', category: 'security', icon: 'shield-check', component: 'StringObfuscator' },
   { slug: 'text-cleaner', category: 'text', icon: 'type', component: 'TextCleaner' },
   { slug: 'list-randomizer', category: 'text', icon: 'type', component: 'ListRandomizer' },
-  { slug: 'sql-generator', category: 'development', icon: 'code-2', component: 'SqlGenerator' },
+  { slug: 'sql-generator', category: 'development', icon: 'database-plus', component: 'SqlGenerator' },
 
   // Batch 29 - New Tools from toolfk.com
-  { slug: 'htaccess-to-nginx', category: 'development', icon: 'code-2', component: 'HtaccessToNginx' },
+  { slug: 'htaccess-to-nginx', category: 'development', icon: 'repeat', component: 'HtaccessToNginx' },
   { slug: 'js-obfuscator', category: 'security', icon: 'shield-check', component: 'JsObfuscator' },
   { slug: 'image-watermark', category: 'image', icon: 'image', component: 'ImageWatermark' },
   { slug: 'svg-to-image', category: 'image', icon: 'image', component: 'SvgToImage' },
@@ -255,14 +255,14 @@ export const tools: Tool[] = [
 
   // Batch 31 - More Tools
   { slug: 'text-to-hex', category: 'encoding', icon: 'binary', component: 'TextToHex' },
-  { slug: 'css-variables-generator', category: 'development', icon: 'code-2', component: 'CssVariablesGenerator' },
+  { slug: 'css-variables-generator', category: 'development', icon: 'variable', component: 'CssVariablesGenerator' },
   { slug: 'lorem-picsum', category: 'image', icon: 'image', component: 'LoremPicsum' },
-  { slug: 'regex-escape', category: 'development', icon: 'code-2', component: 'RegexEscape' },
+  { slug: 'regex-escape', category: 'development', icon: 'lock', component: 'RegexEscape' },
   { slug: 'html-to-text', category: 'text', icon: 'type', component: 'HtmlToText' },
   { slug: 'binary-to-decimal', category: 'math', icon: 'calculator', component: 'BinaryToDecimal' },
   { slug: 'octal-converter', category: 'math', icon: 'calculator', component: 'OctalConverter' },
   { slug: 'text-to-nato', category: 'text', icon: 'type', component: 'TextToNato' },
-  { slug: 'crc32-calculator', category: 'development', icon: 'code-2', component: 'Crc32Calculator' },
+  { slug: 'crc32-calculator', category: 'development', icon: 'hash', component: 'Crc32Calculator' },
   { slug: 'mac-address-generator', category: 'network', icon: 'globe', component: 'MacAddressGenerator' },
 
   // Batch 32 - New Popular Tools (to reach 200)
@@ -326,12 +326,12 @@ export const tools: Tool[] = [
   { slug: 'pictorial-bar-chart-generator', category: 'charts', icon: 'bar-chart-horizontal', component: 'PictorialBarChartGenerator' },
 
   // Batch 37 - New Popular Tools (热门低竞争工具)
-  { slug: 'env-parser', category: 'development', icon: 'code-2', component: 'EnvParser' },
-  { slug: 'json-schema-generator', category: 'development', icon: 'code-2', component: 'JsonSchemaGenerator' },
+  { slug: 'env-parser', category: 'development', icon: 'binary', component: 'EnvParser' },
+  { slug: 'json-schema-generator', category: 'development', icon: 'braces', component: 'JsonSchemaGenerator' },
   { slug: 'time-calculator', category: 'converters', icon: 'arrow-left-right', component: 'TimeCalculator' },
   { slug: 'batch-timestamp-converter', category: 'converters', icon: 'arrow-left-right', component: 'BatchTimestampConverter' },
-  { slug: 'regex-visualizer', category: 'development', icon: 'code-2', component: 'RegexVisualizer' },
-  { slug: 'crontab-calendar', category: 'development', icon: 'code-2', component: 'CrontabCalendar' },
+  { slug: 'regex-visualizer', category: 'development', icon: 'eye', component: 'RegexVisualizer' },
+  { slug: 'crontab-calendar', category: 'development', icon: 'calendar-days', component: 'CrontabCalendar' },
   { slug: 'fake-data-generator', category: 'generators', icon: 'zap', component: 'FakeDataGenerator' },
 
   // Batch 38 - New Image Tools (新增图片工具)
@@ -401,8 +401,8 @@ export const tools: Tool[] = [
   { slug: 'chinese-lorem-ipsum', category: 'generators', icon: 'zap', component: 'ChineseLoremIpsum' },
   { slug: 'text-to-image', category: 'image', icon: 'image', component: 'TextToImage' },
   { slug: 'text-to-handwriting', category: 'image', icon: 'image', component: 'TextToHandwriting' },
-  { slug: 'screen-resolution-tester', category: 'development', icon: 'code-2', component: 'ScreenResolutionTester' },
-  { slug: 'keyboard-tester', category: 'development', icon: 'code-2', component: 'KeyboardTester' },
+  { slug: 'screen-resolution-tester', category: 'development', icon: 'monitor', component: 'ScreenResolutionTester' },
+  { slug: 'keyboard-tester', category: 'development', icon: 'keyboard', component: 'KeyboardTester' },
   { slug: 'typing-speed-test', category: 'text', icon: 'type', component: 'TypingSpeedTest' },
   { slug: 'morse-code-player', category: 'encoding', icon: 'binary', component: 'MorseCodePlayer' },
 
@@ -578,47 +578,47 @@ export const tools: Tool[] = [
   { slug: 'vcard-parser', category: 'converters', icon: 'arrow-left-right', component: 'VcardParser' },
 
   // Batch 54 - Developer Tools - API and Network Tools (开发者工具 - API 和网络工具)
-  { slug: 'curl-to-code-generator', category: 'development', icon: 'code-2', component: 'CurlToCodeGenerator' },
+  { slug: 'curl-to-code-generator', category: 'development', icon: 'terminal', component: 'CurlToCodeGenerator' },
   { slug: 'http-status-code-reference', category: 'network', icon: 'globe', component: 'HttpStatusCodeReference' },
   { slug: 'jwt-payload-decoder', category: 'security', icon: 'shield-check', component: 'JwtPayloadDecoder' },
   { slug: 'base64-image-converter', category: 'image', icon: 'image', component: 'Base64ImageConverter' },
   { slug: 'url-query-string-parser', category: 'network', icon: 'globe', component: 'UrlQueryStringParser' },
-  { slug: 'request-header-builder', category: 'development', icon: 'code-2', component: 'RequestHeaderBuilder' },
-  { slug: 'webhook-tester', category: 'development', icon: 'code-2', component: 'WebhookTester' },
-  { slug: 'api-response-formatter', category: 'development', icon: 'code-2', component: 'ApiResponseFormatter' },
+  { slug: 'request-header-builder', category: 'development', icon: 'list-plus', component: 'RequestHeaderBuilder' },
+  { slug: 'webhook-tester', category: 'development', icon: 'webhook', component: 'WebhookTester' },
+  { slug: 'api-response-formatter', category: 'development', icon: 'braces', component: 'ApiResponseFormatter' },
 
   // Batch 54 - Developer Tools - Code Conversion and Generation (开发者工具 - 代码转换和生成)
-  { slug: 'sql-to-mongodb-converter', category: 'development', icon: 'code-2', component: 'SqlToMongodbConverter' },
+  { slug: 'sql-to-mongodb-converter', category: 'development', icon: 'database-zap', component: 'SqlToMongodbConverter' },
   { slug: 'json-to-protobuf-converter', category: 'converters', icon: 'arrow-left-right', component: 'JsonToProtobufConverter' },
-  { slug: 'regex-to-code-generator', category: 'development', icon: 'code-2', component: 'RegexToCodeGenerator' },
-  { slug: 'swagger-to-code-generator', category: 'development', icon: 'code-2', component: 'SwaggerToCodeGenerator' },
-  { slug: 'database-migration-generator', category: 'development', icon: 'code-2', component: 'DatabaseMigrationGenerator' },
-  { slug: 'environment-variables-generator', category: 'development', icon: 'code-2', component: 'EnvironmentVariablesGenerator' },
+  { slug: 'regex-to-code-generator', category: 'development', icon: 'wand-2', component: 'RegexToCodeGenerator' },
+  { slug: 'swagger-to-code-generator', category: 'development', icon: 'file-text', component: 'SwaggerToCodeGenerator' },
+  { slug: 'database-migration-generator', category: 'development', icon: 'database-backup', component: 'DatabaseMigrationGenerator' },
+  { slug: 'environment-variables-generator', category: 'development', icon: 'binary', component: 'EnvironmentVariablesGenerator' },
   { slug: 'docker-compose-generator-advanced', category: 'development', icon: 'code-2', component: 'DockerComposeGeneratorAdvanced' },
-  { slug: 'kubernetes-manifest-generator', category: 'development', icon: 'code-2', component: 'KubernetesManifestGenerator' },
+  { slug: 'kubernetes-manifest-generator', category: 'development', icon: 'ship', component: 'KubernetesManifestGenerator' },
 
   // Batch 54 - Developer Tools - Code Analysis and Optimization (开发者工具 - 代码分析和优化)
-  { slug: 'code-complexity-analyzer', category: 'development', icon: 'code-2', component: 'CodeComplexityAnalyzer' },
+  { slug: 'code-complexity-analyzer', category: 'development', icon: 'gauge', component: 'CodeComplexityAnalyzer' },
   { slug: 'dependency-vulnerability-checker', category: 'security', icon: 'shield-check', component: 'DependencyVulnerabilityChecker' },
-  { slug: 'performance-profiler', category: 'development', icon: 'code-2', component: 'PerformanceProfiler' },
-  { slug: 'memory-leak-detector', category: 'development', icon: 'code-2', component: 'MemoryLeakDetector' },
-  { slug: 'code-duplication-finder', category: 'development', icon: 'code-2', component: 'CodeDuplicationFinder' },
+  { slug: 'performance-profiler', category: 'development', icon: 'timer', component: 'PerformanceProfiler' },
+  { slug: 'memory-leak-detector', category: 'development', icon: 'activity', component: 'MemoryLeakDetector' },
+  { slug: 'code-duplication-finder', category: 'development', icon: 'copy', component: 'CodeDuplicationFinder' },
   { slug: 'unused-imports-finder', category: 'development', icon: 'code-2', component: 'UnusedImportsFinder' },
   { slug: 'dead-code-analyzer', category: 'development', icon: 'code-2', component: 'DeadCodeAnalyzer' },
 
   // Batch 54 - Developer Tools - Database Tools (开发者工具 - 数据库工具)
-  { slug: 'sql-query-optimizer', category: 'development', icon: 'code-2', component: 'SqlQueryOptimizer' },
-  { slug: 'database-schema-visualizer', category: 'development', icon: 'code-2', component: 'DatabaseSchemaVisualizer' },
+  { slug: 'sql-query-optimizer', category: 'development', icon: 'database-zap', component: 'SqlQueryOptimizer' },
+  { slug: 'database-schema-visualizer', category: 'development', icon: 'layout', component: 'DatabaseSchemaVisualizer' },
   { slug: 'sql-injection-tester', category: 'security', icon: 'shield-check', component: 'SqlInjectionTester' },
   { slug: 'database-connection-tester', category: 'network', icon: 'globe', component: 'DatabaseConnectionTester' },
   { slug: 'query-execution-planner', category: 'development', icon: 'code-2', component: 'QueryExecutionPlanner' },
   { slug: 'database-backup-scheduler', category: 'development', icon: 'code-2', component: 'DatabaseBackupScheduler' },
 
   // Batch 54 - Developer Tools - Version Control Tools (开发者工具 - 版本控制工具)
-  { slug: 'git-commit-message-generator', category: 'development', icon: 'code-2', component: 'GitCommitMessageGenerator' },
+  { slug: 'git-commit-message-generator', category: 'development', icon: 'git-commit', component: 'GitCommitMessageGenerator' },
   { slug: 'git-branch-naming-validator', category: 'development', icon: 'code-2', component: 'GitBranchNamingValidator' },
   { slug: 'merge-conflict-resolver', category: 'development', icon: 'code-2', component: 'MergeConflictResolver' },
-  { slug: 'git-history-visualizer', category: 'development', icon: 'code-2', component: 'GitHistoryVisualizer' },
+  { slug: 'git-history-visualizer', category: 'development', icon: 'history', component: 'GitHistoryVisualizer' },
   { slug: 'changelog-generator-advanced', category: 'generators', icon: 'zap', component: 'ChangelogGeneratorAdvanced' },
   { slug: 'git-tag-manager', category: 'development', icon: 'code-2', component: 'GitTagManager' },
 

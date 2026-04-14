@@ -13,5 +13,11 @@
     "Industrial engineers monitoring real-time machinery sensor data with four rings representing temperature, pressure, vibration, and RPM metrics",
     "Game developers visualizing player performance statistics through 8-layer rings showing kill/death ratios, resource collection rates, and mission completion times",
     "Financial auditors tracking quarterly budget allocations across 12 departments with color-coded rings and embedded percentage annotations"
-  ]
+  ],
+  "sampleData": {
+    "revenue": "Revenue",
+    "expenses": "Expenses",
+    "profit": "Profit",
+    "growth": "Growth"
+  }
 }

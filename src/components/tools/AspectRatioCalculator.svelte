@@ -113,7 +113,7 @@
       </div>
 
       <!-- Aspect Ratio Display -->
-      <div class="p-6 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 rounded-xl text-center">
+      <div class="p-6 bg-gradient-to-r from-amber-100 to-slate-100 dark:from-amber-900/30 dark:to-slate-900/30 rounded-xl text-center">
         <div class="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('aspect.ratio')}</div>
         <div class="text-4xl font-bold text-gray-900 dark:text-white">{ratio}</div>
       </div>
@@ -183,7 +183,7 @@
         </div>
         <button
           onclick={copyDimensions}
-          class={`px-4 py-2 rounded-lg text-white ${copied ? 'bg-green-600' : 'bg-gray-600 dark:bg-gray-700 hover:bg-gray-500 dark:hover:bg-gray-600'}`}
+          class={`px-4 py-2 rounded-lg text-white ${copied ? 'bg-emerald-500' : 'bg-gray-600 dark:bg-gray-700 hover:bg-gray-500 dark:hover:bg-gray-600'}`}
         >
           {copied ? t('copied') : t('copy')}
         </button>

@@ -140,7 +140,7 @@
           <div class="max-h-96 overflow-y-auto space-y-1">
             {#each filteredResults as item, i (i)}
 <div  class="flex items-center gap-2 p-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded hover:bg-gray-200 dark:hover:bg-gray-700 group">
-                <code class="flex-1 text-sm font-mono text-blue-600 dark:text-blue-400">{item.path}</code>
+                <code class="flex-1 text-sm font-mono text-amber-600 dark:text-amber-400">{item.path}</code>
                 <span class="text-xs text-gray-500 dark:text-gray-300">{item.type}</span>
                 <span class="text-sm text-gray-600 dark:text-gray-300 truncate max-w-[200px]">{String(item.value)}</span>
                 <button

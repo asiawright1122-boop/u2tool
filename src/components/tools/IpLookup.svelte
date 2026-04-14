@@ -83,19 +83,19 @@
           type="text"
           bind:value={ip}
           placeholder={t('placeholder')}
-          class="flex-1 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          class="flex-1 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none"
         />
         <button
           onclick={lookupCustomIp}
           disabled={loading || !ip.trim()}
-          class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white disabled:bg-gray-400 dark:disabled:bg-gray-600 rounded-lg transition-colors"
+          class="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white disabled:bg-gray-400 dark:disabled:bg-gray-600 rounded-lg transition-colors"
         >
           {t('lookup')}
         </button>
         <button
           onclick={getMyIp}
           disabled={loading}
-          class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white disabled:bg-gray-400 dark:disabled:bg-gray-600 rounded-lg transition-colors"
+          class="px-4 py-2 bg-emerald-500 hover:bg-green-700 text-white disabled:bg-gray-400 dark:disabled:bg-gray-600 rounded-lg transition-colors"
         >
           {t('myIp')}
         </button>

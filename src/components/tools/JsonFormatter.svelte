@@ -84,17 +84,21 @@
 
     <div class="space-y-4">
       <div>
-        <label for="json-formatter-input" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{tg('input')}</label>
+        <label for="json-formatter-input" class="tool-label">{tg('input')}</label>
         <textarea
           id="json-formatter-input"
           name="inputValue"
+          class="tool-textarea h-64"
           bind:value={input}
           placeholder={t('inputPlaceholder')}></textarea>
       </div>
 
       <div class="flex flex-wrap gap-2">
         <button onclick={formatJson} class="btn-primary">
-          {tg('format')} ({tg('beautify')})
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+            {tg('format')}
+          </div>
         </button>
         <button onclick={minifyJson} class="btn-secondary">
           {tg('minify')}
@@ -105,27 +109,35 @@
       </div>
 
       {#if error}
-<div class="tool-error">
-          {error}
+        <div class="tool-error animate-in fade-in slide-in-from-top-1 duration-300">
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            {error}
+          </div>
         </div>
-{/if}
+      {/if}
 
       <div>
-        <div class="flex justify-between items-center mb-2">
-          <label for="json-formatter-output" class="text-sm font-medium text-gray-700 dark:text-gray-300">{tg('output')}</label>
+        <div class="flex justify-between items-center mb-2.5">
+          <label for="json-formatter-output" class="tool-label !mb-0">{tg('output')}</label>
           {#if output}
-<button
+            <button
               onclick={copyOutput}
-              class={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100'}`}
+              class={`btn-sm transition-all duration-300 ${copied ? 'btn-success' : 'btn-secondary'}`}
             >
-              {copied ? tg('copied') : tg('copy')}
+              <div class="flex items-center gap-1.5">
+                {#if copied}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                {/if}
+                {copied ? tg('copied') : tg('copy')}
+              </div>
             </button>
-{/if}
+          {/if}
         </div>
         <textarea
           id="json-formatter-output"
           name="outputValue"
-          class="tool-textarea"
+          class="tool-result h-64"
           value={output}
           readOnly
           placeholder={t('outputPlaceholder')}></textarea>

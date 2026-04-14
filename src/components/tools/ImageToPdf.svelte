@@ -175,7 +175,7 @@
             </div>
             <div>
               <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('imageToPdf.margin')}</label>
-              <input type="number" value={margin} onchange={e => margin = Number(e.target.value)} min={0} max={100} class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
+              <input type="number" bind:value={margin} min={0} max={100} class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
             </div>
             <div>
               <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('imageToPdf.fileName')}</label>
@@ -198,7 +198,7 @@
 {/each}
           </div>
 
-          <button onclick={handleConvert} disabled={loading} class="w-full px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium">
+          <button onclick={handleConvert} disabled={loading} class="w-full px-4 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium">
             {loading ? t('imageToPdf.converting') : t('imageToPdf.convert')}
           </button>
         

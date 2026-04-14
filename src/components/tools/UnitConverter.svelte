@@ -92,7 +92,7 @@
                 fromUnit = unitKeys[0];
                 toUnit = unitKeys[1] || unitKeys[0];
               }}
-              class={`px-4 py-2 rounded-lg text-sm transition-colors ${category === cat ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700'
+              class={`px-4 py-2 rounded-lg text-sm transition-colors ${category === cat ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700'
                 }`}
             >
               {t(`unit.${cat}`)}
@@ -104,7 +104,7 @@
       <!-- Conversion -->
       <div class="grid md:grid-cols-[1fr,auto,1fr] gap-4 items-stretch">
         <!-- From Section -->
-        <div class="p-5 bg-gray-50 dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-700 transition-all hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10">
+        <div class="p-5 bg-gray-50 dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-700 transition-all hover:border-amber-400/50 hover:shadow-lg hover:shadow-amber-500/10">
           <label for="unit-from-value" class="tool-label text-xs uppercase tracking-wider text-gray-500 mb-3 block text-center md:text-left">{'From'}</label>
           <div class="space-y-3">
             <input
@@ -132,7 +132,7 @@
         <div class="flex items-center justify-center self-center py-2 md:py-0">
           <button
             onclick={swapUnits}
-            class="p-4 rounded-full bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 text-gray-500 hover:text-blue-600 hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all duration-200 active:scale-90 group"
+            class="p-4 rounded-full bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 text-gray-500 hover:text-amber-600 hover:border-amber-500 dark:hover:border-amber-500 hover:shadow-md transition-all duration-200 active:scale-90 group"
             title={tu('swapUnits')}
             aria-label={tu('swapUnits')}
           >
@@ -150,7 +150,7 @@
         </div>
 
         <!-- To Section -->
-        <div class="p-5 bg-gray-50 dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-700 transition-all hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10">
+        <div class="p-5 bg-gray-50 dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-700 transition-all hover:border-amber-400/50 hover:shadow-lg hover:shadow-amber-500/10">
           <label for="unit-to" class="tool-label text-xs uppercase tracking-wider text-gray-500 mb-3 block text-center md:text-left">{'To'}</label>
           <div class="space-y-3">
             <div class="tool-input flex items-center justify-center text-2xl md:text-3xl font-mono h-16 bg-white dark:bg-gray-800 shadow-sm overflow-hidden text-ellipsis whitespace-nowrap">
@@ -174,7 +174,7 @@
 <div class="flex justify-center">
           <button
             onclick={copyResult}
-            class={`px-6 py-2 rounded-lg text-white ${copied ? 'bg-green-600' : 'bg-gray-600 dark:bg-gray-700 hover:bg-gray-500 dark:hover:bg-gray-600'}`}
+            class={`px-6 py-2 rounded-lg text-white ${copied ? 'bg-emerald-500' : 'bg-gray-600 dark:bg-gray-700 hover:bg-gray-500 dark:hover:bg-gray-600'}`}
           >
             {copied ? t('copied') : t('copy')} {t('result')}
           </button>
@@ -187,7 +187,7 @@
         <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-gray-600 dark:text-gray-300">
           {#each categoryUnits.slice(0, 6) as [key, def] (key)}
 <div >
-              <span class="text-blue-600 dark:text-blue-400">{key}</span> = {def.name}
+              <span class="text-amber-600 dark:text-amber-400">{key}</span> = {def.name}
             </div>
 {/each}
         </div>

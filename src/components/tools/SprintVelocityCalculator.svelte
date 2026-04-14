@@ -109,19 +109,19 @@
 
 <div class="space-y-6">
   <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-    <div class="rounded-lg p-4 bg-blue-50 dark:bg-blue-900/20 text-center">
-      <div class="text-2xl font-bold text-blue-700 dark:text-blue-300">{stats.average}</div>
-      <div class="text-xs text-blue-600 dark:text-blue-400">{t('avgVelocity', 'Avg velocity')}</div>
+    <div class="rounded-lg p-4 bg-amber-50 dark:bg-amber-900/20 text-center">
+      <div class="text-2xl font-bold text-amber-700 dark:text-amber-300">{stats.average}</div>
+      <div class="text-xs text-amber-600 dark:text-amber-400">{t('avgVelocity', 'Avg velocity')}</div>
     </div>
     <div class="rounded-lg p-4 bg-green-50 dark:bg-green-900/20 text-center">
       <div class="text-2xl font-bold text-green-700 dark:text-green-300">{stats.completionRate}%</div>
       <div class="text-xs text-green-600 dark:text-green-400">{t('completionRate', 'Completion rate')}</div>
     </div>
-    <div class="rounded-lg p-4 bg-purple-50 dark:bg-purple-900/20 text-center">
-      <div class="text-2xl font-bold text-purple-700 dark:text-purple-300">
+    <div class="rounded-lg p-4 bg-slate-50 dark:bg-slate-900/20 text-center">
+      <div class="text-2xl font-bold text-slate-700 dark:text-slate-300">
         {stats.trend === 'up' ? 'UP' : stats.trend === 'down' ? 'DOWN' : 'STABLE'}
       </div>
-      <div class="text-xs text-purple-600 dark:text-purple-400">{t('trend', 'Trend')}</div>
+      <div class="text-xs text-slate-600 dark:text-slate-400">{t('trend', 'Trend')}</div>
     </div>
     <div class="rounded-lg p-4 bg-amber-50 dark:bg-amber-900/20 text-center">
       <div class="text-2xl font-bold text-amber-700 dark:text-amber-300">{stats.predictedNext}</div>
@@ -203,7 +203,7 @@
         </div>
         <div class="h-2 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
           <div
-            class="h-full bg-blue-500"
+            class="h-full bg-amber-500"
             style={`width: ${(sprint.completed / maxPoints) * 100}%`}
           ></div>
         </div>

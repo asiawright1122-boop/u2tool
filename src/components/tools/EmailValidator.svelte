@@ -76,7 +76,7 @@
 
     <div class="space-y-6">
       <div>
-        <label for="email-validator-input" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label for="email-validator-input" class="tool-label">
           {t('inputLabel')}
         </label>
         <textarea
@@ -89,7 +89,7 @@
 
       <button
         onclick={handleValidate}
-        class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+        class="px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
       >
         {t('validate')}
       </button>
@@ -141,7 +141,7 @@
                     </div>
                     <div class="flex gap-2">
                       {#if result.isFreeProvider}
-<span class="px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded text-xs">
+<span class="px-2 py-0.5 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 rounded text-xs">
                           {t('freeProvider')}
                         </span>
 {/if}

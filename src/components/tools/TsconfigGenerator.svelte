@@ -206,7 +206,7 @@
     <div class="space-y-6">
       <!-- Presets -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('presets')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -224,13 +224,13 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Target -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('target')}
           </label>
           <select
             value={config.target}
             onchange={(e) => config = ({ ...config, target: e.target.value })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           >
             {#each TARGETS as t (t)}
 <option  value={t}>{t}</option>
@@ -240,13 +240,13 @@
 
         <!-- Module -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('module')}
           </label>
           <select
             value={config.module}
             onchange={(e) => config = ({ ...config, module: e.target.value })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           >
             {#each MODULES as m (m)}
 <option  value={m}>{m}</option>
@@ -256,13 +256,13 @@
 
         <!-- Module Resolution -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('moduleResolution')}
           </label>
           <select
             value={config.moduleResolution}
             onchange={(e) => config = ({ ...config, moduleResolution: e.target.value })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           >
             {#each MODULE_RESOLUTIONS as mr (mr)}
 <option  value={mr}>{mr}</option>
@@ -272,13 +272,13 @@
 
         <!-- JSX -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             JSX
           </label>
           <select
             value={config.jsx}
             onchange={(e) => config = ({ ...config, jsx: e.target.value })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           >
             {#each JSX_OPTIONS as j (j)}
 <option  value={j}>{j}</option>
@@ -288,34 +288,34 @@
 
         <!-- Out Dir -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('outDir')}
           </label>
           <input
             type="text"
             value={config.outDir}
             onchange={(e) => config = ({ ...config, outDir: e.target.value })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
 
         <!-- Root Dir -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('rootDir')}
           </label>
           <input
             type="text"
             value={config.rootDir}
             onchange={(e) => config = ({ ...config, rootDir: e.target.value })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
       </div>
 
       <!-- Lib -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('lib')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -324,7 +324,7 @@
               onclick={() => toggleLib(lib)}
               class={`px-3 py-1.5 rounded text-sm ${
                 config.lib.includes(lib)
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
@@ -354,7 +354,7 @@
               type="checkbox"
               checked={config[key as keyof TsconfigOptions] as boolean}
               onchange={(e) => config = ({ ...config, [key]: e.target.checked })}
-              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+              class="w-4 h-4 text-amber-600 bg-gray-100 border-gray-300 rounded focus:ring-amber-500"
             />
             <span class="text-xs text-gray-700 dark:text-gray-300">{label}</span>
           </label>
@@ -365,7 +365,7 @@
       <div class="flex justify-center gap-4">
         <button
           onclick={generateConfig}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium text-white"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium text-white"
         >
           {t('generate')}
         </button>
@@ -391,7 +391,7 @@
               </button>
               <button
                 onclick={downloadFile}
-                class="px-3 py-1 bg-green-600 hover:bg-green-700 rounded text-sm text-white"
+                class="px-3 py-1 bg-emerald-500 hover:bg-green-700 rounded text-sm text-white"
               >
                 {t('download')}
               </button>

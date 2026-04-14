@@ -83,7 +83,7 @@
     <div class="space-y-6">
       <!-- License Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('selectLicense')}
         </label>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
@@ -92,7 +92,7 @@
               onclick={() => selectedLicense = license.id}
               class={`p-3 rounded-lg text-left ${
                 selectedLicense === license.id
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700'
               }`}
             >
@@ -118,7 +118,7 @@
               </ul>
             </div>
             <div>
-              <h4 class="font-medium text-blue-600 dark:text-blue-400 mb-1">{t('conditions')}</h4>
+              <h4 class="font-medium text-amber-600 dark:text-amber-400 mb-1">{t('conditions')}</h4>
               <ul class="space-y-1">
                 {#if currentLicense.conditions.length > 0}
 {#each currentLicense.conditions as c (c)}
@@ -144,25 +144,25 @@
       <!-- Author Info -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('author')}
           </label>
           <input
             type="text"
             bind:value={author}
             placeholder={t('authorPlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('year')}
           </label>
           <input
             type="text"
             bind:value={year}
             placeholder={t('yearPlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
           />
         </div>
       </div>
@@ -171,7 +171,7 @@
       <div class="flex justify-center gap-4">
         <button
           onclick={generateLicense}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium text-white"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium text-white"
         >
           {t('generate')}
         </button>
@@ -197,7 +197,7 @@
               </button>
               <button
                 onclick={downloadFile}
-                class="px-3 py-1 bg-green-600 hover:bg-green-700 rounded text-sm text-white"
+                class="px-3 py-1 bg-emerald-500 hover:bg-green-700 rounded text-sm text-white"
               >
                 {t('download')}
               </button>

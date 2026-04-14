@@ -159,7 +159,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <!-- Input -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {tc('input')}
           </label>
           <textarea
@@ -179,7 +179,7 @@
 <button
                 onclick={copyToClipboard}
                 class={`px-3 py-1 rounded text-sm ${
-                  copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-600 hover:bg-gray-300'
+                  copied ? 'btn-success' : 'bg-gray-200 dark:bg-gray-600 hover:bg-gray-300'
                 }`}
               >
                 {copied ? tc('copied') : tc('copy')}

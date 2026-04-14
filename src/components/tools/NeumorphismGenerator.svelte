@@ -103,7 +103,7 @@ box-shadow: ${getShadow()};`;
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('backgroundColor')}
             </label>
             <div class="flex items-center gap-3">
@@ -121,7 +121,7 @@ box-shadow: ${getShadow()};`;
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('shape')}
             </label>
             <div class="grid grid-cols-4 gap-2">
@@ -130,8 +130,8 @@ box-shadow: ${getShadow()};`;
                   onclick={() => shape = s}
                   class={`px-3 py-2 text-sm rounded-lg border transition-colors ${
                     shape === s
-                      ? 'bg-blue-500 text-white border-blue-500'
-                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 hover:border-blue-400'
+                      ? 'bg-amber-500 text-white border-amber-500'
+                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 hover:border-amber-400'
                   }`}
                 >
                   {t(`shapes.${s}`)}
@@ -141,7 +141,7 @@ box-shadow: ${getShadow()};`;
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('distance')}: {distance}px
             </label>
             <input
@@ -157,7 +157,7 @@ box-shadow: ${getShadow()};`;
 
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('intensity')}: {intensity}
             </label>
             <input
@@ -171,7 +171,7 @@ box-shadow: ${getShadow()};`;
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('blur')}: {blur}px
             </label>
             <input
@@ -185,7 +185,7 @@ box-shadow: ${getShadow()};`;
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('borderRadius')}: {borderRadius}px
             </label>
             <input
@@ -203,12 +203,12 @@ box-shadow: ${getShadow()};`;
       <!-- CSS Output -->
       <div>
         <div class="flex items-center justify-between mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             CSS {common('output')}
           </label>
           <button
             onclick={handleCopy}
-            class="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+            class="px-3 py-1 text-sm bg-amber-500 text-white rounded hover:bg-amber-600 transition-colors"
           >
             {copied ? common('copied') : common('copy')}
           </button>

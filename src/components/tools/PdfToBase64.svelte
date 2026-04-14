@@ -114,7 +114,7 @@
       <div
         ondrop={handleDrop}
         ondragover={(e) => e.preventDefault()}
-        class="border-2 border-dashed border-gray-600 rounded-lg p-8 text-center hover:border-blue-500 transition-colors"
+        class="border-2 border-dashed border-gray-600 rounded-lg p-8 text-center hover:border-amber-500 transition-colors"
       >
         <input
           type="file"
@@ -162,7 +162,7 @@
             type="checkbox"
             checked={includeDataUri}
             onchange={toggleDataUri}
-            class="w-4 h-4 text-blue-600 rounded"
+            class="w-4 h-4 text-amber-600 rounded"
           />
           <span class="text-sm text-gray-600 dark:text-gray-300">{t('includeDataUri')}</span>
         </label>
@@ -176,7 +176,7 @@
           {#if base64}
 <button
               onclick={handleCopy}
-              class="text-sm text-blue-600 hover:text-blue-800"
+              class="text-sm text-amber-600 hover:text-amber-800"
             >
               {t('copy')}
             </button>
@@ -189,9 +189,9 @@
           class="w-full h-64 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-mono text-xs"></textarea>
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-        <h3 class="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('info')}</h3>
-        <p class="text-sm text-blue-700 dark:text-blue-400">{t('infoText')}</p>
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/30 rounded-lg">
+        <h3 class="font-medium text-amber-800 dark:text-amber-300 mb-2">{t('info')}</h3>
+        <p class="text-sm text-amber-700 dark:text-amber-400">{t('infoText')}</p>
       </div>
     </div>
   

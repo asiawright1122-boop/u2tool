@@ -103,7 +103,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- File Size -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('fileSize')}
           </label>
           <div class="flex gap-2">
@@ -127,7 +127,7 @@
 
         <!-- Transfer Time -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('transferTime')}
           </label>
           <div class="flex gap-2">
@@ -159,7 +159,7 @@
             </h3>
             <button
               onclick={handleCopy}
-              class="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+              class="px-3 py-1 text-sm bg-amber-500 text-white rounded hover:bg-amber-600 transition-colors"
             >
               {copied ? common('copied') : common('copy')}
             </button>
@@ -212,11 +212,11 @@
 {/if}
 
       <!-- Common Bandwidth Reference -->
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h4 class="text-sm font-medium text-blue-800 dark:text-blue-300 mb-2">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+        <h4 class="text-sm font-medium text-amber-800 dark:text-amber-300 mb-2">
           {t('commonBandwidths')}
         </h4>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs text-blue-700 dark:text-blue-400">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs text-amber-700 dark:text-amber-400">
           <div>3G: ~1-5 Mbps</div>
           <div>4G LTE: ~10-50 Mbps</div>
           <div>5G: ~100-1000 Mbps</div>

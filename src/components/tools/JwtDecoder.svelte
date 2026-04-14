@@ -111,7 +111,7 @@
   <div>
     <label
       for="jwt-token"
-      class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+      class="tool-label"
     >
       {t("tokenInput")}
     </label>
@@ -124,7 +124,7 @@
     ></textarea>
     <button
       onclick={loadExample}
-      class="mt-2 text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+      class="mt-2 text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
     >
       {t("loadExample")}
     </button>
@@ -152,7 +152,7 @@
                   JSON.stringify(decoded.header, null, 2),
                   "header",
                 )}
-              class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+              class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
             >
               {copied === "header" ? t("copied") : t("copy")}
             </button>
@@ -178,16 +178,16 @@
                   JSON.stringify(decoded.payload, null, 2),
                   "payload",
                 )}
-              class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+              class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
             >
               {copied === "payload" ? t("copied") : t("copy")}
             </button>
           </div>
           <div
-            class="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg"
+            class="p-4 bg-slate-50 dark:bg-slate-900/20 border border-slate-200 dark:border-slate-800 rounded-lg"
           >
             <pre
-              class="text-sm font-mono text-purple-700 dark:text-purple-300 overflow-x-auto">
+              class="text-sm font-mono text-slate-700 dark:text-slate-300 overflow-x-auto">
                   {JSON.stringify(decoded.payload, null, 2)}
                 </pre>
           </div>
@@ -198,10 +198,10 @@
             {t("signature")}
           </h3>
           <div
-            class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg"
+            class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg"
           >
             <code
-              class="text-sm font-mono text-blue-700 dark:text-blue-300 break-all"
+              class="text-sm font-mono text-amber-700 dark:text-amber-300 break-all"
             >
               {decoded.signature}
             </code>
@@ -287,7 +287,7 @@
         <div>
           <label
             for="jwt-secret"
-            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+            class="tool-label"
           >
             {t("verifySignature")}
           </label>

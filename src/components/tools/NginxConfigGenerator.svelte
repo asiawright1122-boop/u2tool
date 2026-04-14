@@ -179,7 +179,7 @@ server {
               type="text"
               value={config.serverName}
               onchange={(e) => config = { ...config, serverName: e.target.value }}
-              class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+              class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
               placeholder={t('exampleDomain')}
             />
           </div>
@@ -189,7 +189,7 @@ server {
               type="text"
               value={config.rootPath}
               onchange={(e) => config = { ...config, rootPath: e.target.value }}
-              class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+              class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
               placeholder="/var/www/html"
             />
           </div>
@@ -199,7 +199,7 @@ server {
               type="text"
               value={config.proxyPass}
               onchange={(e) => config = { ...config, proxyPass: e.target.value }}
-              class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+              class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
               placeholder="http://localhost:3000"
             />
           </div>

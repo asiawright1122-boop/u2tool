@@ -23,35 +23,38 @@ const homePath = getLocalizedPath(locale as Locale, '/');
 const toolsPath = getLocalizedPath(locale as Locale, '/tools');
 ---
 
-<footer class="border-t border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<footer class="border-t border-slate-200 dark:border-white/5 bg-white dark:bg-slate-950 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent to-amber-500/[0.02] dark:to-amber-500/[0.03] pointer-events-none"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
       <!-- Brand -->
       <div>
-        <a href={homePath} class="flex items-center gap-2 text-lg font-bold text-gray-900 dark:text-white">
-          <span class="text-blue-500" set:html={getIconSvg('wrench', 20)} />
-          <span>U2Tool</span>
+        <a href={homePath} class="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white group">
+          <span class="text-amber-500 transition-transform group-hover:scale-110 duration-500 drop-shadow-[0_0_15px_rgba(245,158,11,0.5)]" set:html={getIconSvg('gem', 24)} />
+          <span class="tracking-tight">U2<span class="text-amber-500">Tool</span></span>
         </a>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
-          Free online tools for developers and everyone.
+        <p class="mt-4 text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-xs font-medium">
+          Premium online tool collection for developers and creative professionals. Built for speed and privacy.
         </p>
       </div>
 
       <!-- Quick Links -->
       <div>
-        <h3 class="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider">
-          Links
+        <h3 class="text-xs font-black text-slate-900 dark:text-slate-300 uppercase tracking-[0.2em] mb-6">
+          Navigation
         </h3>
-        <ul class="mt-3 space-y-2">
+        <ul class="space-y-4">
           <li>
             <a href={homePath}
-               class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+               class="text-sm font-bold text-slate-400 hover:text-amber-600 dark:text-slate-600 dark:hover:text-amber-500 transition-all duration-300 flex items-center gap-2 group/link">
+              <span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-800 transition-all group-hover/link:w-3 group-hover/link:bg-amber-500"></span>
               Home
             </a>
           </li>
           <li>
             <a href={toolsPath}
-               class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+               class="text-sm font-bold text-slate-400 hover:text-amber-600 dark:text-slate-600 dark:hover:text-amber-500 transition-all duration-300 flex items-center gap-2 group/link">
+              <span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-800 transition-all group-hover/link:w-3 group-hover/link:bg-amber-500"></span>
               All Tools
             </a>
           </li>
@@ -60,17 +63,17 @@ const toolsPath = getLocalizedPath(locale as Locale, '/tools');
 
       <!-- Legal -->
       <div>
-        <h3 class="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider">
-          Legal
+        <h3 class="text-xs font-black text-slate-900 dark:text-slate-300 uppercase tracking-[0.2em] mb-6">
+          Platform
         </h3>
-        <ul class="mt-3 space-y-2">
+        <ul class="space-y-4">
           <li>
-            <span class="text-sm text-gray-600 dark:text-gray-400">
+            <span class="text-sm font-bold text-slate-600 dark:text-slate-500 cursor-default">
               Privacy Policy
             </span>
           </li>
           <li>
-            <span class="text-sm text-gray-600 dark:text-gray-400">
+            <span class="text-sm font-bold text-slate-600 dark:text-slate-500 cursor-default">
               Terms of Service
             </span>
           </li>
@@ -79,9 +82,9 @@ const toolsPath = getLocalizedPath(locale as Locale, '/tools');
     </div>
 
     <!-- Copyright -->
-    <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800">
-      <p class="text-center text-sm text-gray-500 dark:text-gray-400">
-        &copy; {currentYear} U2Tool. All rights reserved.
+    <div class="mt-12 pt-8 border-t border-slate-200 dark:border-white/5">
+      <p class="text-center text-[11px] font-bold uppercase tracking-[0.1em] text-slate-500 dark:text-slate-600">
+        &copy; {currentYear} <span class="text-slate-900 dark:text-slate-400">U2Tool</span>. Crafted for Excellence.
       </p>
     </div>
   </div>

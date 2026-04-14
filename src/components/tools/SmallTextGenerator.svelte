@@ -53,7 +53,7 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('inputLabel')}
         </label>
         <textarea
@@ -73,7 +73,7 @@
               <button
                 onclick={() => copyToClipboard(convertText(input, type), type)}
                 disabled={!input}
-                class="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                class="px-3 py-1 text-sm bg-amber-600 text-white rounded hover:bg-amber-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {copied === type ? t('copied') : t('copy')}
               </button>
@@ -89,9 +89,9 @@
 {/each}
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <h3 class="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('usageTitle')}</h3>
-        <p class="text-sm text-blue-700 dark:text-blue-400">{t('usageDescription')}</p>
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+        <h3 class="font-medium text-amber-800 dark:text-amber-300 mb-2">{t('usageTitle')}</h3>
+        <p class="text-sm text-amber-700 dark:text-amber-400">{t('usageDescription')}</p>
       </div>
     </div>
   

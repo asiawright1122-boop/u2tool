@@ -84,7 +84,7 @@ address:
               </button>
               <button
                 onclick={yamlToJson}
-                class="px-3 py-1 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded transition-colors"
+                class="px-3 py-1 text-sm bg-amber-600 hover:bg-amber-700 text-white rounded transition-colors"
               >
                 → JSON
               </button>
@@ -103,7 +103,7 @@ address:
             <div class="flex gap-2">
               <button
                 onclick={jsonToYamlConvert}
-                class="px-3 py-1 text-sm bg-green-600 hover:bg-green-700 text-white rounded transition-colors"
+                class="px-3 py-1 text-sm bg-emerald-500 hover:bg-green-700 text-white rounded transition-colors"
               >
                 ← YAML
               </button>

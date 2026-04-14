@@ -35,7 +35,7 @@
           type="text"
           bind:value={search}
           placeholder={t('searchPlaceholder') || 'Search MIME types...'}
-          class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl px-6 py-4 text-lg text-gray-900 dark:text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+          class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl px-6 py-4 text-lg text-gray-900 dark:text-white placeholder-gray-500 focus:ring-2 focus:ring-amber-500 outline-none transition-all"
         />
       </div>
 
@@ -52,7 +52,7 @@
             <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
               {#each filtered as item, index (index)}
 <tr  class="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
-                  <td class="px-6 py-4 font-mono text-blue-600 dark:text-blue-400">{item.ext}</td>
+                  <td class="px-6 py-4 font-mono text-amber-600 dark:text-amber-400">{item.ext}</td>
                   <td class="px-6 py-4 font-mono text-green-600 dark:text-green-400 break-all">{item.mime}</td>
                   <td class="px-6 py-4 text-gray-600 dark:text-gray-300">{item.desc}</td>
                 </tr>

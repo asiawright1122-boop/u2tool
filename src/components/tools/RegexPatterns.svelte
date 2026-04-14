@@ -102,7 +102,7 @@
               </button>
               <button
                 onclick={() => copyPattern(p.pattern)}
-                class="text-xs bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded"
+                class="text-xs bg-amber-600 hover:bg-amber-700 text-white px-2 py-1 rounded"
               >
                 {copied === p.pattern ? '✓' : t('copy')}
               </button>

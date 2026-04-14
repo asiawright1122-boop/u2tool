@@ -106,20 +106,20 @@
       <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border dark:border-gray-700">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('ipAddress')}</label>
+            <label class="tool-label">{t('ipAddress')}</label>
             <input type="text" bind:value={ipAddress}
               class="w-full p-3 border rounded-lg font-mono dark:bg-gray-700 dark:border-gray-600"
               placeholder="192.168.1.0" />
           </div>
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">CIDR: /{cidr}</label>
-            <input type="range" min="0" max="32" value={cidr} onchange={(e) => cidr = Number(e.target.value)} class="w-full" />
+            <label class="tool-label">CIDR: /{cidr}</label>
+            <input type="range" min="0" max="32" bind:value={cidr} class="w-full" />
           </div>
         </div>
         <div class="mt-4 flex flex-wrap gap-2">
           {#each commonSubnets as s (s.cidr)}
 <button  onclick={() => cidr = s.cidr}
-              class={`px-3 py-1 text-sm rounded-lg ${cidr === s.cidr ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'}`}>
+              class={`px-3 py-1 text-sm rounded-lg ${cidr === s.cidr ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'}`}>
               {s.name}
             </button>
 {/each}
@@ -127,7 +127,7 @@
         {#if error}
 <p class="mt-2 text-sm text-red-500">{error}</p>
 {/if}
-        <button onclick={calculate} class="mt-4 w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700">{tCommon('convert')}</button>
+        <button onclick={calculate} class="mt-4 w-full py-2 px-4 bg-amber-600 text-white rounded-lg hover:bg-amber-700">{tCommon('convert')}</button>
       </div>
 
       {#if result}
@@ -154,7 +154,7 @@
             <span class={`px-3 py-1 rounded-full text-sm ${result.isPrivate ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'}`}>
               {result.isPrivate ? t('privateIp') : t('publicIp')}
             </span>
-            <span class="px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+            <span class="px-3 py-1 rounded-full text-sm bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200">
               {t('class')} {result.ipClass}
             </span>
           </div>

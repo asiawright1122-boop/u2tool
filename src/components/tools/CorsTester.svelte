@@ -162,7 +162,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label class="tool-label">
               {t('urlToTest')}
             </label>
             <input
@@ -175,7 +175,7 @@
 
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="tool-label">
                 {t('method')}
               </label>
               <select
@@ -190,7 +190,7 @@
               </select>
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="tool-label">
                 {t('origin')}
               </label>
               <input
@@ -205,7 +205,7 @@
             <button
               onclick={testCors}
               disabled={loading || !url}
-              class="flex-1 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium disabled:opacity-50"
+              class="flex-1 px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium disabled:opacity-50"
             >
               {loading ? t('testing') : t('testCors')}
             </button>
@@ -289,7 +289,7 @@
                       <div class="text-xs font-mono bg-white dark:bg-gray-800 p-2 rounded">
                         {#each Object.entries(result.headers) as [key, value] (key)}
 <div >
-                            <span class="text-blue-600 dark:text-blue-400">{key}:</span> {value}
+                            <span class="text-amber-600 dark:text-amber-400">{key}:</span> {value}
                           </div>
 {/each}
                       </div>
@@ -302,11 +302,11 @@
         </div>
       </div>
 
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-        <h4 class="font-medium text-blue-800 dark:text-blue-200 mb-2">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+        <h4 class="font-medium text-amber-800 dark:text-amber-200 mb-2">
           {t('whatIsCors')}
         </h4>
-        <p class="text-sm text-blue-700 dark:text-blue-300">
+        <p class="text-sm text-amber-700 dark:text-amber-300">
           {t('corsExplanation')}
         </p>
       </div>

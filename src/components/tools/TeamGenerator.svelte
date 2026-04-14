@@ -99,7 +99,7 @@
     <div class="space-y-6">
       <!-- Input -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('enterMembers')}
         </label>
         <textarea
@@ -112,7 +112,7 @@
       <!-- Settings -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('numberOfTeams')}
           </label>
           <input
@@ -124,7 +124,7 @@
           />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('teamNames')} ({t('optional')})
           </label>
           <input
@@ -141,7 +141,7 @@
         <button
           onclick={generateTeams}
           disabled={!input.trim()}
-          class="flex-1 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 disabled:opacity-50"
+          class="flex-1 py-3 btn-success rounded-lg font-medium hover:bg-green-700 disabled:opacity-50"
         >
           {tc('generate')}
         </button>
@@ -150,7 +150,7 @@
 
             <button
               onclick={shuffleTeams}
-              class="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700"
+              class="px-6 py-3 bg-amber-600 text-white rounded-lg font-medium hover:bg-amber-700"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline"><path d="m21 16-4 4-4-4"/><path d="M17 20V4"/><path d="m3 8 4-4 4 4"/><path d="M7 4v16"/></svg> {t('shuffle')}
             </button>

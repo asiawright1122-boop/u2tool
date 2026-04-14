@@ -84,7 +84,7 @@
     <div class="space-y-6">
       <!-- Input -->
       <div>
-        <label for="picker-items" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label for="picker-items" class="tool-label">
           {t('enterItems')}
         </label>
         <textarea
@@ -101,7 +101,7 @@
 
       <!-- Winner Count -->
       <div>
-        <label for="picker-winner-count" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label for="picker-winner-count" class="tool-label">
           {t('numberOfWinners')}
         </label>
         <input
@@ -120,7 +120,7 @@
         <button
           onclick={pickWinners}
           disabled={items.length === 0 || isAnimating}
-          class="flex-1 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-bold text-lg hover:from-purple-700 hover:to-pink-700 disabled:opacity-50 transition-all"
+          class="flex-1 py-4 bg-gradient-to-r from-slate-600 to-pink-600 text-white rounded-xl font-bold text-lg hover:from-slate-700 hover:to-pink-700 disabled:opacity-50 transition-all"
         >
           {isAnimating ? '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M16 8h.01"/><path d="M8 8h.01"/><path d="M8 16h.01"/><path d="M16 16h.01"/><path d="M12 12h.01"/></svg> ...' : `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M16 8h.01"/><path d="M8 8h.01"/><path d="M8 16h.01"/><path d="M16 16h.01"/><path d="M12 12h.01"/></svg> ${t('pick')}`}
         </button>
@@ -138,7 +138,7 @@
       {#if isAnimating}
 {#if currentDisplay}
         <div class="text-center py-8">
-          <div class="text-4xl font-bold text-purple-600 dark:text-purple-400 animate-pulse">
+          <div class="text-4xl font-bold text-slate-600 dark:text-slate-400 animate-pulse">
             {currentDisplay}
           </div>
         </div>

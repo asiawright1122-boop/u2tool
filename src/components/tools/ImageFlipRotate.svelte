@@ -110,7 +110,7 @@
               type="file"
               accept="image/*"
               onchange={handleImageUpload}
-              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-blue-600 file:text-white hover:file:bg-blue-700"
+              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700"
             />
           </div>
 
@@ -119,13 +119,13 @@
             <div class="flex gap-2">
               <button
                 onclick={() => flipH = !flipH}
-                class={`flex-1 px-4 py-2 rounded-lg ${flipH ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700'}`}
+                class={`flex-1 px-4 py-2 rounded-lg ${flipH ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700'}`}
               >
                 ↔ {t('horizontal')}
               </button>
               <button
                 onclick={() => flipV = !flipV}
-                class={`flex-1 px-4 py-2 rounded-lg ${flipV ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700'}`}
+                class={`flex-1 px-4 py-2 rounded-lg ${flipV ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700'}`}
               >
                 ↕ {t('vertical')}
               </button>
@@ -138,7 +138,7 @@
               {#each rotatePresets as deg (deg)}
 <button 
                   onclick={() => rotation = deg}
-                  class={`flex-1 px-2 py-1 rounded text-sm ${rotation === deg ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700'}`}
+                  class={`flex-1 px-2 py-1 rounded text-sm ${rotation === deg ? 'bg-amber-600 text-white' : 'bg-gray-200 dark:bg-gray-700'}`}
                 >
                   {deg}°
                 </button>
@@ -179,7 +179,7 @@
           <button
             onclick={downloadImage}
             disabled={!image}
-            class="w-full px-4 py-2 bg-green-600 hover:bg-green-700 text-white disabled:bg-gray-400 disabled:cursor-not-allowed rounded-lg"
+            class="w-full px-4 py-2 bg-emerald-500 hover:bg-green-700 text-white disabled:bg-gray-400 disabled:cursor-not-allowed rounded-lg"
           >
             {tg('download')}
           </button>

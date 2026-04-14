@@ -191,7 +191,7 @@
           type="checkbox"
           checked={config.root}
           onchange={(e) => config = ({ ...config, root: e.target.checked })}
-          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+          class="w-4 h-4 text-amber-600 bg-gray-100 border-gray-300 rounded focus:ring-amber-500"
         />
         <span class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('root')}</span>
       </label>
@@ -274,7 +274,7 @@
                 ...config, 
                 defaultConfig: { ...config.defaultConfig, trimTrailingWhitespace: e.target.checked }
               })}
-              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+              class="w-4 h-4 text-amber-600 bg-gray-100 border-gray-300 rounded focus:ring-amber-500"
             />
             <span class="text-xs text-gray-700 dark:text-gray-300">{t('trimTrailingWhitespace')}</span>
           </label>
@@ -287,7 +287,7 @@
                 ...config, 
                 defaultConfig: { ...config.defaultConfig, insertFinalNewline: e.target.checked }
               })}
-              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+              class="w-4 h-4 text-amber-600 bg-gray-100 border-gray-300 rounded focus:ring-amber-500"
             />
             <span class="text-xs text-gray-700 dark:text-gray-300">{t('insertFinalNewline')}</span>
           </label>
@@ -296,7 +296,7 @@
 
       <!-- Add File Types -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('addFileType')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -323,10 +323,10 @@
           {#each config.fileTypes as ft, index (ft.pattern)}
 <div  class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg space-y-3">
               <div class="flex justify-between items-center">
-                <code class="text-sm font-mono text-blue-600 dark:text-blue-400">{ft.pattern}</code>
+                <code class="text-sm font-mono text-amber-600 dark:text-amber-400">{ft.pattern}</code>
                 <button
                   onclick={() => removeFileType(index)}
-                  class="px-2 py-1 bg-red-500 hover:bg-red-600 text-white rounded text-xs"
+                  class="px-2 py-1 bg-red-500 hover:bg-rose-500 text-white rounded text-xs"
                 >
                   {t('remove')}
                 </button>
@@ -367,7 +367,7 @@
       <div class="flex justify-center gap-4">
         <button
           onclick={generateConfig}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium text-white"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium text-white"
         >
           {t('generate')}
         </button>
@@ -393,7 +393,7 @@
               </button>
               <button
                 onclick={downloadFile}
-                class="px-3 py-1 bg-green-600 hover:bg-green-700 rounded text-sm text-white"
+                class="px-3 py-1 bg-emerald-500 hover:bg-green-700 rounded text-sm text-white"
               >
                 {t('download')}
               </button>

@@ -103,7 +103,7 @@
             onclick={() => applyPreset(preset)}
             class={`px-3 py-2 rounded-lg transition-colors ${
               width === preset.width && height === preset.height
-                ? 'bg-blue-600 text-white'
+                ? 'bg-amber-600 text-white'
                 : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'
             }`}
           >
@@ -151,7 +151,7 @@
       <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
         <div class="max-w-md mx-auto">
           <div
-            class="bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold"
+            class="bg-amber-500 rounded-lg flex items-center justify-center text-white font-bold"
             style={method === 'aspect-ratio' 
               ? { aspectRatio: `${width} / ${height}`, width: '100%' }
               : { position: 'relative', width: '100%', paddingBottom: `${paddingPercent}%` }

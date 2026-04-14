@@ -88,7 +88,7 @@
     <div class="space-y-6">
       <!-- Dice Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('selectDice')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -110,7 +110,7 @@
       <!-- Settings -->
       <div class="grid grid-cols-2 gap-4">
         <div>
-          <label for="dice-count" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="dice-count" class="tool-label">
             {t('numberOfDice')}
           </label>
           <input
@@ -124,7 +124,7 @@
           />
         </div>
         <div>
-          <label for="dice-modifier" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="dice-modifier" class="tool-label">
             {t('modifier')}
           </label>
           <input

@@ -32,10 +32,10 @@
   }
 
   const COLOR_OPTIONS: NoteColor[] = [
-    { id: 'blue', name: 'Blue', swatchClass: 'bg-blue-500', cardClass: 'border-blue-300 bg-blue-50 dark:border-blue-800 dark:bg-blue-950/30' },
+    { id: 'blue', name: 'Blue', swatchClass: 'bg-amber-500', cardClass: 'border-amber-300 bg-amber-50 dark:border-amber-800 dark:bg-amber-950/30' },
     { id: 'green', name: 'Green', swatchClass: 'bg-green-500', cardClass: 'border-green-300 bg-green-50 dark:border-green-800 dark:bg-green-950/30' },
     { id: 'amber', name: 'Amber', swatchClass: 'bg-amber-500', cardClass: 'border-amber-300 bg-amber-50 dark:border-amber-800 dark:bg-amber-950/30' },
-    { id: 'purple', name: 'Purple', swatchClass: 'bg-purple-500', cardClass: 'border-purple-300 bg-purple-50 dark:border-purple-800 dark:bg-purple-950/30' },
+    { id: 'purple', name: 'Purple', swatchClass: 'bg-slate-500', cardClass: 'border-slate-300 bg-slate-50 dark:border-slate-800 dark:bg-slate-950/30' },
     { id: 'rose', name: 'Rose', swatchClass: 'bg-rose-500', cardClass: 'border-rose-300 bg-rose-50 dark:border-rose-800 dark:bg-rose-950/30' },
     { id: 'teal', name: 'Teal', swatchClass: 'bg-teal-500', cardClass: 'border-teal-300 bg-teal-50 dark:border-teal-800 dark:bg-teal-950/30' },
   ];
@@ -175,7 +175,7 @@
         <div class="flex gap-2">
           <button
             onclick={createNote}
-            class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center gap-2"
+            class="px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 flex items-center gap-2"
           >
             <span>+</span> {t('notePad.newNote')}
           </button>
@@ -200,7 +200,7 @@
         {#each COLOR_OPTIONS as color (color.id)}
 <button
             onclick={() => selectedColor = color.cardClass}
-            class={`w-6 h-6 rounded-full border-2 ${color.swatchClass} ${selectedColor === color.cardClass ? 'ring-2 ring-blue-500' : ''}`}
+            class={`w-6 h-6 rounded-full border-2 ${color.swatchClass} ${selectedColor === color.cardClass ? 'ring-2 ring-amber-500' : ''}`}
             title={color.name}
             aria-label={color.name}
           ></button>

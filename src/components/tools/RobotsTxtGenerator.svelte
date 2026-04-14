@@ -192,7 +192,7 @@
           <label class="text-sm font-medium">{tr('output')}</label>
           <button
             onclick={copyOutput}
-            class={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+            class={`text-sm px-3 py-1 rounded ${copied ? 'bg-emerald-500' : 'bg-gray-700 hover:bg-gray-600'}`}
           >
             {copied ? t('copied') : t('copy')}
           </button>

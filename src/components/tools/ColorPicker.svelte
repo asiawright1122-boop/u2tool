@@ -130,7 +130,7 @@
               <span class="text-xs text-gray-600 dark:text-gray-300">{label}</span>
               <button
                 onclick={() => copyValue(label, value)}
-                class={`text-xs px-2 py-0.5 rounded ${copied === label ? 'bg-green-600' : 'bg-gray-700'}`}
+                class={`text-xs px-2 py-0.5 rounded ${copied === label ? 'bg-emerald-500' : 'bg-gray-700'}`}
               >
                 {copied === label ? t('copied') : t('copy')}
               </button>
@@ -189,7 +189,7 @@
             <div class="text-xs text-gray-600 dark:text-gray-300">{t('colorPicker.green')}</div>
           </div>
           <div>
-            <div class="text-2xl font-bold text-blue-500 dark:text-blue-400">{rgb.b}</div>
+            <div class="text-2xl font-bold text-amber-500 dark:text-amber-400">{rgb.b}</div>
             <div class="text-xs text-gray-600 dark:text-gray-300">{t('colorPicker.blue')}</div>
           </div>
         </div>

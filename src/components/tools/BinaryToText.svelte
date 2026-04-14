@@ -85,7 +85,7 @@
             onclick={() => mode = 'toText'}
             class={`px-4 py-2 rounded-md transition-colors ${
               mode === 'toText'
-                ? 'bg-blue-600 text-white'
+                ? 'bg-amber-600 text-white'
                 : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'
             }`}
           >
@@ -95,7 +95,7 @@
             onclick={() => mode = 'toBinary'}
             class={`px-4 py-2 rounded-md transition-colors ${
               mode === 'toBinary'
-                ? 'bg-blue-600 text-white'
+                ? 'bg-amber-600 text-white'
                 : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'
             }`}
           >
@@ -106,7 +106,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label for="binary-text-input" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="binary-text-input" class="tool-label">
             {mode === 'toText' ? t('binaryInput') : t('textInput')}
           </label>
           <textarea
@@ -119,7 +119,7 @@
         </div>
 
         <div>
-          <label for="binary-text-output" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="binary-text-output" class="tool-label">
             {mode === 'toText' ? t('textOutput') : t('binaryOutput')}
           </label>
           <textarea
@@ -140,7 +140,7 @@
       <div class="flex justify-center gap-4">
         <button
           onclick={handleConvert}
-          class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+          class="px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
         >
           {t('convert')}
         </button>
@@ -152,7 +152,7 @@
         </button>
         <button
           onclick={copyToClipboard}
-          class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+          class="px-6 py-3 btn-success rounded-lg hover:bg-green-700 transition-colors"
         >
           {copied ? t('copied') : t('copy')}
         </button>

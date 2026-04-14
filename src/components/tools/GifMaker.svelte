@@ -195,7 +195,7 @@
       <!-- Upload Area -->
       <div
         onclick={() => fileInputRef?.click()}
-        class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-6 text-center cursor-pointer hover:border-blue-500"
+        class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-6 text-center cursor-pointer hover:border-amber-500"
       >
         <input
           bind:this={fileInputRef}
@@ -217,7 +217,7 @@
             {#each frames as frame, index (frame.id)}
 <div 
                 class={`relative group w-20 h-20 ${
-                  index === previewFrame ? 'ring-2 ring-blue-500' : ''
+                  index === previewFrame ? 'ring-2 ring-amber-500' : ''
                 }`}
                 style="aspect-ratio: 1/1"
               >
@@ -270,7 +270,7 @@
             {isProcessing ? t('processing') : t('createGif')}
           </button>
           {#if result}
-<button onclick={downloadGif} class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg">
+<button onclick={downloadGif} class="px-6 py-2 bg-emerald-500 hover:bg-green-700 text-white rounded-lg">
               {tg('download')}
             </button>
 {/if}

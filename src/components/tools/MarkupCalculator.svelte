@@ -84,8 +84,8 @@
 
     <div class="space-y-6">
       <!-- Info -->
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-        <p class="text-sm text-blue-700 dark:text-blue-300">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+        <p class="text-sm text-amber-700 dark:text-amber-300">
           {t('info')}
         </p>
       </div>
@@ -93,7 +93,7 @@
       <!-- Input Form -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label for="markup-cost" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="markup-cost" class="tool-label">
             {t('cost')}
           </label>
           <div class="relative">
@@ -105,13 +105,13 @@
               bind:value={cost}
               placeholder="50"
               step="0.01"
-              class="w-full pl-8 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="w-full pl-8 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
             />
           </div>
         </div>
 
         <div>
-          <label for="markup-percentage" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label for="markup-percentage" class="tool-label">
             {t('markupPercentage')}
           </label>
           <div class="relative">
@@ -122,7 +122,7 @@
               bind:value={markupPercentage}
               placeholder="100"
               step="1"
-              class="w-full pr-8 pl-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="w-full pr-8 pl-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
             />
             <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">%</span>
           </div>
@@ -131,7 +131,7 @@
 
       <!-- Quick Markup Buttons -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('commonMarkups')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -140,7 +140,7 @@
               onclick={() => markupPercentage = String(markup)}
               class={`px-3 py-1 rounded text-sm ${
                 markupPercentage === String(markup)
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-amber-600 text-white'
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
@@ -152,7 +152,7 @@
 
       <!-- Markup Slider -->
       <div>
-        <label for="markup-slider" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label for="markup-slider" class="tool-label">
           {t('adjustMarkup')}: {markupPercentage}%
         </label>
         <input
@@ -178,7 +178,7 @@
       <div class="flex justify-center gap-4">
         <button
           onclick={handleCalculate}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium text-white"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium text-white"
         >
           {t('calculate')}
         </button>
@@ -202,16 +202,16 @@
               </p>
             </div>
             
-            <div class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-              <p class="text-sm text-blue-600 dark:text-blue-400">{t('profit')}</p>
-              <p class="text-2xl font-bold text-blue-700 dark:text-blue-300">
+            <div class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+              <p class="text-sm text-amber-600 dark:text-amber-400">{t('profit')}</p>
+              <p class="text-2xl font-bold text-amber-700 dark:text-amber-300">
                 {formatCurrency(result.profit)}
               </p>
             </div>
             
-            <div class="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg">
-              <p class="text-sm text-purple-600 dark:text-purple-400">{t('profitMargin')}</p>
-              <p class="text-2xl font-bold text-purple-700 dark:text-purple-300">
+            <div class="p-4 bg-slate-50 dark:bg-slate-900/20 border border-slate-200 dark:border-slate-800 rounded-lg">
+              <p class="text-sm text-slate-600 dark:text-slate-400">{t('profitMargin')}</p>
+              <p class="text-2xl font-bold text-slate-700 dark:text-slate-300">
                 {formatPercent(result.profitMargin)}
               </p>
             </div>
@@ -222,13 +222,13 @@
             <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">{t('priceBreakdown')}</h3>
             <div class="h-8 flex rounded overflow-hidden">
               <div 
-                class="bg-red-400 dark:bg-red-600 flex items-center justify-center text-white text-xs font-medium"
+                class="bg-red-400 dark:bg-rose-500 flex items-center justify-center text-white text-xs font-medium"
                 style="width: {(parseFloat(cost) / result.sellingPrice) * 100}%"
               >
                 {t('cost')}
               </div>
               <div 
-                class="bg-green-400 dark:bg-green-600 flex items-center justify-center text-white text-xs font-medium"
+                class="bg-green-400 dark:bg-emerald-500 flex items-center justify-center text-white text-xs font-medium"
                 style="width: {(result.profit / result.sellingPrice) * 100}%"
               >
                 {t('profit')}
@@ -260,7 +260,7 @@
                 {#each generateComparisonTable() as row, index (row.markup)}
 <tr  
                     class={`${index % 2 === 0 ? 'bg-white dark:bg-gray-900' : ''} ${
-                      markupPercentage === String(row.markup) ? 'bg-blue-50 dark:bg-blue-900/20' : ''
+                      markupPercentage === String(row.markup) ? 'bg-amber-50 dark:bg-amber-900/20' : ''
                     }`}
                   >
                     <td class="py-2 px-3 text-gray-900 dark:text-gray-100">{row.markup}%</td>

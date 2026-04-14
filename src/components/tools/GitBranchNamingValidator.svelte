@@ -147,7 +147,7 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('namingConvention')}
         </label>
         <select
@@ -165,7 +165,7 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('branchName')}
         </label>
         <input
@@ -212,17 +212,17 @@
 
           {#if !isValid}
 {#if suggestion && suggestion !== branchName}
-            <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+            <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
               <div class="flex justify-between items-center mb-2">
-                <h3 class="text-sm font-medium text-blue-800 dark:text-blue-200">{t('suggestedName')}</h3>
+                <h3 class="text-sm font-medium text-amber-800 dark:text-amber-200">{t('suggestedName')}</h3>
                 <button
                   onclick={handleCopy}
-                  class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400"
+                  class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
                 >
                   {copied ? tCommon('copied') : tCommon('copy')}
                 </button>
               </div>
-              <code class="text-sm text-blue-700 dark:text-blue-300 bg-blue-100 dark:bg-blue-800/30 px-2 py-1 rounded">
+              <code class="text-sm text-amber-700 dark:text-amber-300 bg-amber-100 dark:bg-amber-800/30 px-2 py-1 rounded">
                 {suggestion}
               </code>
             </div>

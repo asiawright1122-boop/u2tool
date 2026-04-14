@@ -88,8 +88,8 @@
 
     <div class="space-y-6">
       <!-- Info -->
-      <div class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-        <p class="text-sm text-blue-700 dark:text-blue-300">
+      <div class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+        <p class="text-sm text-amber-700 dark:text-amber-300">
           {t('info')}
         </p>
       </div>
@@ -97,7 +97,7 @@
       <!-- Input Form -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('cost')}
           </label>
           <div class="relative">
@@ -107,13 +107,13 @@
               bind:value={cost}
               placeholder="50"
               step="0.01"
-              class="w-full pl-8 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="w-full pl-8 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
             />
           </div>
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label class="tool-label">
             {t('sellingPrice')}
           </label>
           <div class="relative">
@@ -123,7 +123,7 @@
               bind:value={sellingPrice}
               placeholder="100"
               step="0.01"
-              class="w-full pl-8 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="w-full pl-8 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
             />
           </div>
         </div>
@@ -131,7 +131,7 @@
 
       <!-- Quick Margin Buttons -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('targetMargin')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -148,7 +148,7 @@
 
       <!-- Quick Markup Buttons -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <label class="tool-label">
           {t('targetMarkup')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -167,7 +167,7 @@
       <div class="flex justify-center gap-4">
         <button
           onclick={handleCalculate}
-          class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium text-white"
+          class="px-6 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg font-medium text-white"
         >
           {t('calculate')}
         </button>
@@ -191,16 +191,16 @@
               </p>
             </div>
             
-            <div class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-              <p class="text-sm text-blue-600 dark:text-blue-400">{t('profitMargin')}</p>
-              <p class="text-2xl font-bold text-blue-700 dark:text-blue-300">
+            <div class="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+              <p class="text-sm text-amber-600 dark:text-amber-400">{t('profitMargin')}</p>
+              <p class="text-2xl font-bold text-amber-700 dark:text-amber-300">
                 {formatPercent(result.profitMargin)}
               </p>
             </div>
             
-            <div class="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg">
-              <p class="text-sm text-purple-600 dark:text-purple-400">{t('markup')}</p>
-              <p class="text-2xl font-bold text-purple-700 dark:text-purple-300">
+            <div class="p-4 bg-slate-50 dark:bg-slate-900/20 border border-slate-200 dark:border-slate-800 rounded-lg">
+              <p class="text-sm text-slate-600 dark:text-slate-400">{t('markup')}</p>
+              <p class="text-2xl font-bold text-slate-700 dark:text-slate-300">
                 {formatPercent(result.markup)}
               </p>
             </div>
@@ -221,7 +221,7 @@
                 <div class="w-24 text-sm text-gray-600 dark:text-gray-400">{t('cost')}</div>
                 <div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden">
                   <div 
-                    class="h-full bg-red-400 dark:bg-red-600"
+                    class="h-full bg-red-400 dark:bg-rose-500"
                     style="width: {(parseFloat(cost) / parseFloat(sellingPrice)) * 100}%"></div>
                 </div>
                 <div class="w-24 text-right text-sm text-gray-900 dark:text-gray-100">{formatCurrency(parseFloat(cost))}</div>
@@ -230,7 +230,7 @@
                 <div class="w-24 text-sm text-gray-600 dark:text-gray-400">{t('profit')}</div>
                 <div class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden">
                   <div 
-                    class="h-full bg-green-400 dark:bg-green-600"
+                    class="h-full bg-green-400 dark:bg-emerald-500"
                     style="width: {result.profitMargin}%"></div>
                 </div>
                 <div class="w-24 text-right text-sm text-gray-900 dark:text-gray-100">{formatCurrency(result.profit)}</div>

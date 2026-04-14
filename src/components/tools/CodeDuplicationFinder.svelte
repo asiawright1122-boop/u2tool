@@ -52,14 +52,14 @@
     <div class="space-y-6">
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Code {tCommon('input')}</label>
+          <label class="tool-label">Code {tCommon('input')}</label>
           <div class="flex items-center gap-4">
             <label class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
               {t('minLines')}:
-              <input type="number" value={minLines} onchange={(e) => minLines = Math.max(2, parseInt(e.target.value) || 3)}
+              <input type="number" bind:value={minLines}
                 min={2} max={10} class="w-16 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
             </label>
-            <button onclick={loadExample} class="text-xs text-blue-600 hover:text-blue-700 dark:text-blue-400">{t('loadExample')}</button>
+            <button onclick={loadExample} class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400">{t('loadExample')}</button>
           </div>
         </div>
         <textarea bind:value={code} placeholder={t("inputPlaceholder")}
@@ -112,9 +112,9 @@
                 </div>
 {/each}
               
-              <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                <h4 class="text-sm font-medium text-blue-800 dark:text-blue-300 mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg> {t('refactoringSuggestions')}</h4>
-                <ul class="text-sm text-blue-700 dark:text-blue-400 space-y-1">
+              <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+                <h4 class="text-sm font-medium text-amber-800 dark:text-amber-300 mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg> {t('refactoringSuggestions')}</h4>
+                <ul class="text-sm text-amber-700 dark:text-amber-400 space-y-1">
                   <li>• {t('tip1')}</li>
                   <li>• {t('tip2')}</li>
                   <li>• {t('tip3')}</li>

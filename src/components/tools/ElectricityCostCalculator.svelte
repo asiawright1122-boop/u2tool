@@ -106,7 +106,7 @@
       <!-- Appliances List -->
       <div class="space-y-3">
         <div class="flex items-center justify-between">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('appliances')} ({appliances.length})
           </label>
         </div>
@@ -165,7 +165,7 @@
         <div class="space-y-2">
           <button
             onclick={() => addAppliance()}
-            class="flex items-center gap-2 px-4 py-2 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg"
+            class="flex items-center gap-2 px-4 py-2 text-amber-600 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-900/20 rounded-lg"
           >
             <Plus class="w-4 h-4" />
             {t('addAppliance')}
@@ -279,7 +279,7 @@
       <!-- Appliances List -->
       <div class="space-y-3">
         <div class="flex items-center justify-between">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label class="tool-label">
             {t('appliances')} ({appliances.length})
           </label>
         </div>
@@ -338,7 +338,7 @@
         <div class="space-y-2">
           <button
             onclick={() => addAppliance()}
-            class="flex items-center gap-2 px-4 py-2 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg"
+            class="flex items-center gap-2 px-4 py-2 text-amber-600 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-900/20 rounded-lg"
           >
             <Plus class="w-4 h-4" />
             {t('addAppliance')}

@@ -143,7 +143,7 @@
                 class={`p-4 rounded-lg border ${
                   result.isPast
                     ? 'bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700'
-                    : 'bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border-blue-200 dark:border-blue-800'
+                    : 'bg-gradient-to-r from-amber-50 to-slate-50 dark:from-amber-900/20 dark:to-slate-900/20 border-amber-200 dark:border-amber-800'
                 }`}
               >
                 <div class="flex items-start justify-between mb-4">
@@ -171,7 +171,7 @@
 
                 <!-- Main Counter -->
                 <div class="text-center mb-4">
-                  <div class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
+                  <div class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-slate-500">
                     {result.isPast ? '-' : ''}{result.totalDays}
                   </div>
                   <div class="text-gray-500">{t('days')}</div>

@@ -93,7 +93,7 @@
         </div>
         <div class="flex items-end gap-2">
           <button onclick={generate}
-            class="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">
+            class="flex-1 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-medium transition-colors">
             {t('generate')}
           </button>
           <button onclick={copyToClipboard} disabled={generated.length === 0}
