@@ -1748,7 +1748,12 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Uuid Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "count": "count",
+      "generate": "生成",
+      "copied": "已复制！",
+      "copy": "复制",
+      "all": "all"
     },
     "url-encoder": {
       "name": "URL编码/解码",
@@ -1788,7 +1793,17 @@
           "answer": "由于所有处理都在浏览器本地完成，Url Encoder 的处理速度非常快，通常可以在几毫秒内完成。"
         }
       ],
-      "inputPlaceholder": "在这里输入文本..."
+      "inputPlaceholder": "在这里输入文本...",
+      "input": "输入",
+      "url": {
+        "encodeUrl": "encodeurl",
+        "decodeUrl": "decodeurl"
+      },
+      "clear": "清空",
+      "output": "输出",
+      "copied": "已复制！",
+      "copy": "复制",
+      "outputPlaceholder": "结果将显示在这里..."
     },
     "password-generator": {
       "name": "密码生成器",
@@ -1880,7 +1895,13 @@
           "answer": "由于所有处理都在浏览器本地完成，Hash Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
       ],
-      "inputPlaceholder": "在此处输入文本..."
+      "inputPlaceholder": "在此处输入文本...",
+      "input": "输入",
+      "hash": {
+        "generateHashes": "generatehashes"
+      },
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "qr-generator": {
       "name": "二维码生成器",
@@ -1924,7 +1945,12 @@
           "answer": "由于所有处理都在浏览器本地完成，Qr Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
       ],
-      "inputPlaceholder": "在此处输入文本..."
+      "inputPlaceholder": "在此处输入文本...",
+      "input": "输入",
+      "qr": {
+        "generateQr": "generateqr",
+        "downloadPng": "downloadpng"
+      }
     },
     "color-converter": {
       "name": "颜色转换器",
@@ -1967,7 +1993,12 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Color Converter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "color": {
+        "preview": "预览"
+      },
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "timestamp-converter": {
       "name": "时间戳转换器",
@@ -2010,7 +2041,14 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Timestamp Converter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "timestamp": {
+        "currentTime": "currenttime",
+        "unixTimestamp": "unixtimestamp",
+        "dateTime": "datetime"
+      },
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "word-counter": {
       "name": "单词计数器",
@@ -2050,7 +2088,15 @@
           "answer": "由于所有处理都在浏览器本地完成，Word Counter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
       ],
-      "inputPlaceholder": "在此输入文本..."
+      "inputPlaceholder": "在此输入文本...",
+      "input": "输入",
+      "wordCounter": {
+        "words": "words",
+        "characters": "characters",
+        "sentences": "sentences",
+        "paragraphs": "paragraphs"
+      },
+      "clear": "清空"
     },
     "case-converter": {
       "name": "文本大小写转换器",
@@ -2093,7 +2139,13 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Case Converter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "uppercase": "uppercase",
+      "lowercase": "lowercase",
+      "titleCase": "标题case",
+      "sentenceCase": "sentencecase",
+      "camelCase": "camelcase",
+      "snakeCase": "snakecase"
     },
     "html-encoder": {
       "name": "HTML 编码器/解码器",
@@ -2133,7 +2185,17 @@
           "answer": "由于所有处理都在浏览器本地完成，Html Encoder 的处理速度非常快，通常可以在几毫秒内完成。"
         }
       ],
-      "inputPlaceholder": "在此输入文本..."
+      "inputPlaceholder": "在此输入文本...",
+      "input": "输入",
+      "html": {
+        "encodeHtml": "encodehtml",
+        "decodeHtml": "decodehtml"
+      },
+      "clear": "清空",
+      "output": "输出",
+      "copied": "已复制！",
+      "copy": "复制",
+      "outputPlaceholder": "结果将显示在这里..."
     },
     "markdown-preview": {
       "name": "Markdown 预览",
@@ -2173,7 +2235,14 @@
           "answer": "由于所有处理都在浏览器本地完成，Markdown Preview 的处理速度非常快，通常可以在几毫秒内完成。"
         }
       ],
-      "inputPlaceholder": "在此处输入文本..."
+      "inputPlaceholder": "在此处输入文本...",
+      "markdown": {
+        "editor": "编辑器",
+        "preview": "预览",
+        "exportHtml": "exporthtml"
+      },
+      "copied": "已复制！",
+      "clear": "清空"
     },
     "lorem-ipsum": {
       "name": "Lorem Ipsum生成器",
@@ -2212,7 +2281,18 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Lorem Ipsum 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "lorem": {
+        "type": "类型",
+        "paragraphs": "paragraphs",
+        "sentences": "sentences",
+        "words": "words"
+      },
+      "count": "count",
+      "generate": "生成",
+      "output": "输出",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "regex-tester": {
       "name": "正则表达式测试器",
@@ -2251,7 +2331,19 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Regex Tester 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "regex": {
+        "pattern": "pattern",
+        "global": "global",
+        "caseInsensitive": "caseinsensitive",
+        "multiline": "multiline",
+        "dotall": "dotall",
+        "testString": "teststring",
+        "atIndex": "atindex"
+      },
+      "result": "结果",
+      "match": "match",
+      "matches": "matches"
     },
     "jwt-decoder": {
       "name": "JWT 调试器",
@@ -2338,7 +2430,18 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Diff Checker 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "diffChecker": {
+        "original": "original",
+        "originalPlaceholder": "originalplaceholder",
+        "modified": "modified",
+        "modifiedPlaceholder": "modifiedplaceholder",
+        "compare": "compare",
+        "added": "added",
+        "removed": "removed",
+        "unchanged": "unchanged"
+      },
+      "clear": "清空"
     },
     "json-to-csv": {
       "name": "JSON转CSV",
@@ -2381,7 +2484,14 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Json To Csv 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "errorInvalidJson": "errorinvalidjson",
+      "errorInvalidFormat": "errorinvalid格式",
+      "input": "输入",
+      "output": "输出",
+      "copied": "已复制！",
+      "copy": "复制",
+      "download": "下载"
     },
     "image-to-base64": {
       "name": "图片转Base64",
@@ -2559,7 +2669,10 @@
       "separator": "分隔符",
       "none": "无",
       "lowercase": "小写",
-      "slug": "Slug"
+      "slug": "Slug",
+      "input": "输入",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "number-base-converter": {
       "name": "数制转换器",
@@ -2603,7 +2716,12 @@
           "answer": "由于所有处理都在浏览器本地完成，Number Base Converter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
       ],
-      "inputPlaceholder": "在此处输入文本..."
+      "inputPlaceholder": "在此处输入文本...",
+      "errorInvalidInput": "errorinvalidinput",
+      "input": "输入",
+      "convert": "转换",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "json-path-tester": {
       "name": "JSONPath 测试器",
@@ -2695,7 +2813,17 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Xml Formatter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "xml": {
+        "invalidXml": "invalidxml"
+      },
+      "input": "输入",
+      "format": "格式化",
+      "minify": "minify",
+      "clear": "清空",
+      "output": "输出",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "chinese-converter": {
       "name": "中文转换器",
@@ -2738,7 +2866,17 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Chinese Converter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "input": "输入",
+      "chinese": {
+        "placeholder": "在此输入文本...",
+        "toTraditional": "totraditional",
+        "toSimplified": "tosimplified"
+      },
+      "clear": "清空",
+      "output": "输出",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "unit-converter": {
       "name": "单位转换器",
@@ -2829,7 +2967,18 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Gradient Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "gradient": {
+        "type": "类型",
+        "linear": "linear",
+        "radial": "radial",
+        "angle": "angle",
+        "colors": "colors",
+        "addColor": "add颜色",
+        "presets": "presets"
+      },
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "unicode-converter": {
       "name": "Unicode 转换器",
@@ -2872,7 +3021,20 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Unicode Converter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "input": "输入",
+      "unicode": {
+        "placeholder": "在此输入文本...",
+        "format": "格式化",
+        "textToUnicode": "texttounicode",
+        "unicodeToText": "unicodetotext",
+        "examples": "examples",
+        "reference": "reference"
+      },
+      "clear": "清空",
+      "output": "输出",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "code-minifier": {
       "name": "代码压缩器",
@@ -2965,7 +3127,17 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Sql Formatter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "input": "输入",
+      "sql": {
+        "loadExample": "load示例"
+      },
+      "format": "格式化",
+      "minify": "minify",
+      "clear": "清空",
+      "output": "输出",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "pinyin-converter": {
       "name": "拼音转换器",
@@ -3008,7 +3180,18 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Pinyin Converter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "input": "输入",
+      "pinyin": {
+        "placeholder": "在此输入文本...",
+        "withTone": "withtone",
+        "note": "note"
+      },
+      "convert": "转换",
+      "clear": "清空",
+      "output": "输出",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "color-picker": {
       "name": "颜色选择器",
@@ -3047,7 +3230,18 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Color Picker 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "colorPicker": {
+        "selectColor": "select颜色",
+        "presets": "presets",
+        "recent": "recent",
+        "info": "info",
+        "red": "red",
+        "green": "green",
+        "blue": "blue"
+      },
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "aspect-ratio": {
       "name": "宽高比计算器",
@@ -3086,7 +3280,21 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Aspect Ratio 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "aspect": {
+        "original": "original",
+        "width": "宽度",
+        "height": "高度",
+        "ratio": "ratio",
+        "common": "common",
+        "resize": "resize",
+        "lockRatio": "lockratio",
+        "newWidth": "new宽度",
+        "newHeight": "new高度"
+      },
+      "result": "结果",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "css-beautifier": {
       "name": "CSS美化工具",
@@ -3126,7 +3334,15 @@
           "answer": "由于所有处理都在浏览器本地完成，Css Beautifier 的处理速度非常快，通常可以在几毫秒内完成。"
         }
       ],
-      "indent": "缩进"
+      "indent": "缩进",
+      "error": "错误",
+      "beautify": "beautify",
+      "minify": "minify",
+      "copy": "复制",
+      "input": "输入",
+      "placeholder": "在此输入文本...",
+      "output": "输出",
+      "outputPlaceholder": "结果将显示在这里..."
     },
     "js-beautifier": {
       "name": "JavaScript美化工具",
@@ -3166,7 +3382,15 @@
           "answer": "由于所有处理都在浏览器本地完成，Js Beautifier 的处理速度非常快，通常可以在几毫秒内完成。"
         }
       ],
-      "indent": "缩进"
+      "indent": "缩进",
+      "error": "错误",
+      "beautify": "beautify",
+      "minify": "minify",
+      "copy": "复制",
+      "input": "输入",
+      "placeholder": "在此输入文本...",
+      "output": "输出",
+      "outputPlaceholder": "结果将显示在这里..."
     },
     "html-preview": {
       "name": "HTML 预览",
@@ -3206,7 +3430,9 @@
       ],
       "refresh": "刷新",
       "htmlCode": "HTML 代码",
-      "preview": "预览"
+      "preview": "预览",
+      "clear": "清空",
+      "placeholder": "在此输入文本..."
     },
     "ip-lookup": {
       "name": "IP 查找",
@@ -3255,7 +3481,9 @@
       "city": "城市",
       "isp": "运营商",
       "timezone": "时区",
-      "coordinates": "坐标"
+      "coordinates": "坐标",
+      "error": "错误",
+      "placeholder": "在此输入文本..."
     },
     "morse-code": {
       "name": "摩尔斯电码转换器",
@@ -3302,7 +3530,8 @@
       "toText": "转文本",
       "play": "播放",
       "morsePlaceholder": "输入摩斯码...",
-      "reference": "参考"
+      "reference": "参考",
+      "copy": "复制"
     },
     "random-generator": {
       "name": "随机数生成器",
@@ -3345,7 +3574,10 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Random Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "min": "min",
+      "max": "max",
+      "unique": "unique"
     },
     "text-reverser": {
       "name": "文本反转工具",
@@ -3384,7 +3616,11 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Text Reverser 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "reverseChars": "reversechars",
+      "reverseWords": "reversewords",
+      "reverseLines": "reverselines",
+      "placeholder": "在此输入文本..."
     },
     "line-counter": {
       "name": "行数统计器",
@@ -3423,7 +3659,16 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Line Counter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "totalLines": "totallines",
+      "nonEmptyLines": "nonemptylines",
+      "emptyLines": "emptylines",
+      "uniqueLines": "uniquelines",
+      "removeDuplicates": "removeduplicates",
+      "removeEmpty": "removeempty",
+      "sortLines": "sortlines",
+      "ignoreEmpty": "ignoreempty",
+      "placeholder": "在此输入文本..."
     },
     "string-escape": {
       "name": "字符串转义/反转义",
@@ -3463,7 +3708,11 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，String Escape 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "error": "错误",
+      "escape": "escape",
+      "unescape": "unescape",
+      "placeholder": "在此输入文本..."
     },
     "yaml-json": {
       "name": "YAML JSON 转换器",
@@ -3502,7 +3751,11 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Yaml Json 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "invalidYaml": "invalidyaml",
+      "invalidJson": "invalidjson",
+      "yamlPlaceholder": "yamlplaceholder",
+      "jsonPlaceholder": "jsonplaceholder"
     },
     "date-calculator": {
       "name": "日期计算器",
@@ -3552,7 +3805,9 @@
       "addSubtract": "加减",
       "baseDate": "基准日期",
       "operation": "操作",
-      "subtract": "减去"
+      "subtract": "减去",
+      "add": "add",
+      "result": "结果"
     },
     "text-deduplicator": {
       "name": "文本去重工具",
@@ -3591,7 +3846,13 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Text Deduplicator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "caseSensitive": "casesensitive",
+      "trimLines": "trimlines",
+      "original": "original",
+      "unique": "unique",
+      "removed": "removed",
+      "placeholder": "在此输入文本..."
     },
     "color-blender": {
       "name": "颜色混合器",
@@ -3630,7 +3891,10 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Color Blender 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "color1": "color1",
+      "color2": "color2",
+      "steps": "steps"
     },
     "json-sorter": {
       "name": "JSON排序工具",
@@ -3669,7 +3933,12 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Json Sorter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "invalidJson": "invalidjson",
+      "ascending": "ascending",
+      "descending": "descending",
+      "sort": "sort",
+      "placeholder": "在此输入文本..."
     },
     "placeholder-image": {
       "name": "占位符图片生成器",
@@ -3708,7 +3977,13 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Placeholder Image 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "width": "宽度",
+      "height": "高度",
+      "bgColor": "bg颜色",
+      "textColor": "text颜色",
+      "customText": "自定义text",
+      "generate": "生成"
     },
     "text-encryption": {
       "name": "文本加密",
@@ -3747,7 +4022,18 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Text Encryption 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "encryption": {
+        "error": "错误",
+        "encrypt": "encrypt",
+        "decrypt": "decrypt",
+        "password": "password",
+        "passwordPlaceholder": "passwordplaceholder",
+        "inputPlaceholder": "在此输入文本..."
+      },
+      "input": "输入",
+      "output": "输出",
+      "copy": "复制"
     },
     "file-hash": {
       "name": "文件哈希计算器",
@@ -3786,7 +4072,14 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，File Hash 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "fileHash": {
+        "dropzone": "dropzone",
+        "fileName": "file名称",
+        "fileSize": "file大小",
+        "calculating": "calculating"
+      },
+      "copy": "复制"
     },
     "html-table-generator": {
       "name": "HTML表格生成器",
@@ -3829,7 +4122,17 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Html Table Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "tableGen": {
+        "rows": "rows",
+        "cols": "cols",
+        "hasHeader": "hasheader",
+        "header": "header",
+        "cell": "cell",
+        "preview": "预览"
+      },
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "json-schema-validator": {
       "name": "JSON Schema验证器",
@@ -3868,7 +4171,15 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Json Schema Validator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "schemaValidator": {
+        "loadExample": "load示例",
+        "jsonPlaceholder": "jsonplaceholder",
+        "schemaPlaceholder": "schemaplaceholder",
+        "validate": "validate",
+        "valid": "valid",
+        "invalid": "invalid"
+      }
     },
     "regex-patterns": {
       "name": "正则表达式模式库",
@@ -3907,7 +4218,14 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Regex Patterns 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "regexPatterns": {
+        "test": "test",
+        "match": "match",
+        "noMatch": "nomatch",
+        "tryIt": "tryit"
+      },
+      "copy": "复制"
     },
     "byte-counter": {
       "name": "字节计数器",
@@ -3946,7 +4264,15 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Byte Counter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "input": "输入",
+      "byteCounter": {
+        "placeholder": "在此输入文本...",
+        "characters": "characters",
+        "bytes": "bytes",
+        "lines": "lines",
+        "size": "大小"
+      }
     },
     "json-to-typescript": {
       "name": "JSON转TypeScript",
@@ -3989,7 +4315,17 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Json To Typescript 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "json": {
+        "invalidJson": "invalidjson"
+      },
+      "jsonTs": {
+        "interfaceName": "interface名称",
+        "jsonPlaceholder": "jsonplaceholder"
+      },
+      "copied": "已复制！",
+      "copy": "复制",
+      "convert": "转换"
     },
     "svg-optimizer": {
       "name": "SVG优化器",
@@ -4028,7 +4364,19 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Svg Optimizer 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "input": "输入",
+      "svgOptimizer": {
+        "placeholder": "在此输入文本...",
+        "optimize": "optimize",
+        "original": "original",
+        "optimized": "optimized",
+        "saved": "saved",
+        "preview": "预览"
+      },
+      "output": "输出",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "text-to-binary": {
       "name": "文本转二进制",
@@ -4071,7 +4419,17 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Text To Binary 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "textBinary": {
+        "toBinary": "tobinary",
+        "toText": "totext",
+        "text": "text",
+        "textPlaceholder": "textplaceholder",
+        "binary": "binary",
+        "binaryPlaceholder": "binaryplaceholder"
+      },
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "markdown-to-html": {
       "name": "Markdown 转 HTML",
@@ -4114,7 +4472,13 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Markdown To Html 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "mdToHtml": {
+        "mdPlaceholder": "mdplaceholder",
+        "preview": "预览"
+      },
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "html-minifier": {
       "name": "HTML压缩器",
@@ -4153,7 +4517,14 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Html Minifier 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "error": "错误",
+      "minify": "minify",
+      "beautify": "beautify",
+      "copied": "已复制！",
+      "copy": "复制",
+      "input": "输入",
+      "output": "输出"
     },
     "json-diff": {
       "name": "JSON差异对比",
@@ -4237,7 +4608,15 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Base32 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "error": "错误",
+      "encode": "encode",
+      "decode": "decode",
+      "input": "输入",
+      "convert": "转换",
+      "copied": "已复制！",
+      "copy": "复制",
+      "output": "输出"
     },
     "epoch-converter": {
       "name": "时间戳转换器",
@@ -4280,7 +4659,17 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Epoch Converter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "epoch": {
+        "current": "current",
+        "timestamp": "timestamp",
+        "toDate": "todate",
+        "datetime": "datetime",
+        "toEpoch": "toepoch",
+        "useNow": "usenow"
+      },
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "css-unit-converter": {
       "name": "CSS单位转换器",
@@ -4323,7 +4712,15 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Css Unit Converter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "cssUnit": {
+        "value": "值",
+        "unit": "unit",
+        "baseFontSize": "basefont大小",
+        "viewportWidth": "viewport宽度",
+        "viewportHeight": "viewport高度"
+      },
+      "result": "结果"
     },
     "text-statistics": {
       "name": "文本统计",
@@ -4362,7 +4759,22 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Text Statistics 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "textStats": {
+        "placeholder": "在此输入文本...",
+        "chars": "chars",
+        "charsNoSpace": "charsnospace",
+        "words": "words",
+        "uniqueWords": "uniquewords",
+        "sentences": "sentences",
+        "paragraphs": "paragraphs",
+        "lines": "lines",
+        "avgWordLen": "avgwordlen",
+        "digits": "digits",
+        "spaces": "spaces",
+        "readTime": "readtime",
+        "speakTime": "speaktime"
+      }
     },
     "hex-editor": {
       "name": "十六进制编辑器",
@@ -4402,7 +4814,15 @@
           "answer": "由于所有处理都在浏览器本地完成，Hex Editor 的处理速度非常快，通常可以在几毫秒内完成。"
         }
       ],
-      "inputPlaceholder": "在此输入文本..."
+      "inputPlaceholder": "在此输入文本...",
+      "hexEditor": {
+        "text": "text",
+        "toHex": "tohex",
+        "hex": "hex",
+        "toText": "totext"
+      },
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "color-palette": {
       "name": "颜色调色板生成器",
@@ -4441,7 +4861,15 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Color Palette 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "palette": {
+        "baseColor": "base颜色",
+        "hexCode": "hexcode",
+        "shades": "shades",
+        "complementary": "complementary",
+        "analogous": "analogous",
+        "triadic": "triadic"
+      }
     },
     "http-status": {
       "name": "HTTP状态码",
@@ -4480,7 +4908,10 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Http Status 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "httpStatus": {
+        "search": "search"
+      }
     },
     "json-to-yaml": {
       "name": "JSON 转 YAML",
@@ -4523,7 +4954,13 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Json To Yaml 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "json": {
+        "invalidJson": "invalidjson"
+      },
+      "convert": "转换",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "data-uri": {
       "name": "数据URI生成器",
@@ -4605,7 +5042,16 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Text Compare 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "textCompare": {
+        "text1": "text1",
+        "placeholder": "在此输入文本...",
+        "text2": "text2",
+        "charSimilarity": "charsimilarity",
+        "wordSimilarity": "wordsimilarity",
+        "editDistance": "editdistance",
+        "commonWords": "commonwords"
+      }
     },
     "json-to-go": {
       "name": "JSON转Go结构体",
@@ -4738,7 +5184,16 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Chmod Calculator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "chmod": {
+        "octal": "octal",
+        "symbolic": "symbolic",
+        "read": "read",
+        "write": "write",
+        "execute": "execute",
+        "command": "command"
+      },
+      "copy": "复制"
     },
     "barcode-generator": {
       "name": "条形码生成器",
@@ -4781,7 +5236,11 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Barcode Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "barcode": {
+        "text": "text",
+        "format": "格式化"
+      }
     },
     "text-to-speech": {
       "name": "文本转语音",
@@ -4824,7 +5283,15 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Text To Speech 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "tts": {
+        "placeholder": "在此输入文本...",
+        "voice": "voice",
+        "rate": "rate",
+        "pitch": "pitch",
+        "speak": "speak",
+        "stop": "stop"
+      }
     },
     "url-parser": {
       "name": "URL 解析器",
@@ -4918,7 +5385,13 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Json To Xml 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "json": {
+        "invalidJson": "invalidjson"
+      },
+      "convert": "转换",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "text-wrapper": {
       "name": "文本换行器",
@@ -4957,7 +5430,17 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Text Wrapper 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "textWrapper": {
+        "width": "宽度",
+        "chars": "chars",
+        "placeholder": "在此输入文本...",
+        "wrap": "wrap"
+      },
+      "input": "输入",
+      "output": "输出",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "csv-to-json": {
       "name": "CSV转JSON",
@@ -5000,7 +5483,21 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Csv To Json 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "csvToJson": {
+        "error": "错误",
+        "delimiterTab": "delimitertab",
+        "csv": "csv",
+        "csvPlaceholder": "csvplaceholder",
+        "json": "json"
+      },
+      "csvJson": {
+        "delimiter": "delimiter",
+        "hasHeader": "hasheader"
+      },
+      "convert": "转换",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "html-entity": {
       "name": "HTML实体转换器",
@@ -5039,7 +5536,17 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Html Entity 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "encode": "encode",
+      "decode": "decode",
+      "input": "输入",
+      "output": "输出",
+      "convert": "转换",
+      "copied": "已复制！",
+      "copy": "复制",
+      "htmlEntity": {
+        "common": "common"
+      }
     },
     "number-formatter": {
       "name": "数字格式化器",
@@ -5082,7 +5589,16 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Number Formatter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "numberFormat": {
+        "number": "number",
+        "style": "样式",
+        "decimal": "decimal",
+        "currency": "currency",
+        "percent": "percent",
+        "currencyCode": "currencycode"
+      },
+      "copied": "已复制！"
     },
     "hmac-generator": {
       "name": "HMAC生成器",
@@ -5125,7 +5641,19 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Hmac Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "hmac": {
+        "error": "错误",
+        "message": "message",
+        "messagePlaceholder": "messageplaceholder",
+        "secretKey": "secret键",
+        "keyPlaceholder": "键placeholder",
+        "algorithm": "algorithm"
+      },
+      "generate": "生成",
+      "result": "结果",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "password-strength": {
       "name": "密码强度检测器",
@@ -5164,7 +5692,19 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Password Strength 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "pwStrength": {
+        "password": "password",
+        "placeholder": "在此输入文本...",
+        "hide": "hide",
+        "show": "show",
+        "strength": "strength",
+        "score": "score",
+        "length": "length",
+        "chars": "chars",
+        "charTypes": "chartypes",
+        "suggestions": "suggestions"
+      }
     },
     "totp-generator": {
       "name": "TOTP 生成器",
@@ -5207,7 +5747,20 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Totp Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "totp": {
+        "secret": "secret",
+        "secretPlaceholder": "secretplaceholder",
+        "secretHint": "secrethint",
+        "currentCode": "currentcode",
+        "howItWorks": "howitworks",
+        "step1": "step1",
+        "step2": "step2",
+        "step3": "step3"
+      },
+      "generate": "生成",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "user-agent-parser": {
       "name": "用户代理解析器",
@@ -5246,7 +5799,17 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，User Agent Parser 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "uaParser": {
+        "userAgent": "useragent",
+        "placeholder": "在此输入文本...",
+        "useCurrent": "usecurrent",
+        "browser": "browser",
+        "version": "version",
+        "os": "os",
+        "device": "device",
+        "engine": "engine"
+      }
     },
     "cidr-calculator": {
       "name": "CIDR计算器",
@@ -5285,7 +5848,21 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Cidr Calculator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "cidr": {
+        "invalid": "invalid",
+        "input": "输入",
+        "commonPrefixes": "commonprefixes",
+        "networkAddress": "networkaddress",
+        "broadcastAddress": "broadcastaddress",
+        "firstHost": "firsthost",
+        "lastHost": "lasthost",
+        "subnetMask": "subnetmask",
+        "wildcardMask": "wildcardmask",
+        "totalHosts": "totalhosts",
+        "usableHosts": "usablehosts",
+        "binaryMask": "binarymask"
+      }
     },
     "http-header-parser": {
       "name": "HTTP 头解析器",
@@ -5324,7 +5901,14 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Http Header Parser 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "httpHeader": {
+        "input": "输入",
+        "loadExample": "load示例",
+        "placeholder": "在此输入文本...",
+        "parse": "parse",
+        "parsed": "parsed"
+      }
     },
     "percentage-calculator": {
       "name": "百分比计算器",
@@ -5363,7 +5947,21 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Percentage Calculator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "percent": {
+        "whatIsPercent": "whatispercent",
+        "of": "of",
+        "whatPercentIs": "whatpercentis",
+        "isWhatPercentOf": "iswhatpercentof",
+        "percentChange": "percentchange",
+        "from": "from",
+        "to": "to",
+        "increaseDecrease": "increasedecrease",
+        "increase": "increase",
+        "decrease": "decrease",
+        "quickRef": "quickref"
+      },
+      "copy": "复制"
     },
     "statistics-calculator": {
       "name": "统计计算器",
@@ -5402,7 +6000,29 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Statistics Calculator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "stats": {
+        "inputLabel": "inputlabel",
+        "inputHint": "inputhint",
+        "varianceType": "variance类型",
+        "population": "population",
+        "sample": "示例",
+        "dataOverview": "数据overview",
+        "count": "count",
+        "mean": "mean",
+        "median": "median",
+        "mode": "mode",
+        "noMode": "nomode",
+        "sum": "sum",
+        "min": "min",
+        "max": "max",
+        "range": "range",
+        "populationVariance": "populationvariance",
+        "sampleVariance": "示例variance",
+        "populationStdDev": "populationstddev",
+        "sampleStdDev": "示例stddev"
+      },
+      "copy": "复制"
     },
     "scientific-calculator": {
       "name": "科学计算器",
@@ -5441,7 +6061,13 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Scientific Calculator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "sci": {
+        "error": "错误",
+        "angleMode": "anglemode",
+        "quickFormulas": "quickformulas"
+      },
+      "copy": "复制"
     },
     "text-sorter": {
       "name": "文本排序器",
@@ -5480,7 +6106,35 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Text Sorter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "sorter": {
+        "sortType": "sort类型",
+        "alphabetical": "alphabetical",
+        "numerical": "numerical",
+        "natural": "natural",
+        "byLength": "bylength",
+        "order": "order",
+        "ascending": "ascending",
+        "descending": "descending",
+        "caseSensitive": "casesensitive",
+        "trimLines": "trimlines",
+        "removeEmpty": "removeempty",
+        "removeDuplicates": "removeduplicates",
+        "sort": "sort",
+        "loadExample": "load示例",
+        "lines": "lines",
+        "placeholder": "在此输入文本...",
+        "sortTypes": "sorttypes",
+        "alphabeticalDesc": "alphabeticaldesc",
+        "numericalDesc": "numericaldesc",
+        "naturalDesc": "naturaldesc",
+        "byLengthDesc": "bylengthdesc"
+      },
+      "clear": "清空",
+      "input": "输入",
+      "output": "输出",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "text-extractor": {
       "name": "文本提取器",
@@ -5519,7 +6173,30 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Text Extractor 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "extractor": {
+        "email": "email",
+        "url": "url",
+        "phone": "phone",
+        "ip": "ip",
+        "number": "number",
+        "hashtag": "hashtag",
+        "mention": "mention",
+        "type": "类型",
+        "extract": "extract",
+        "loadExample": "load示例",
+        "placeholder": "在此输入文本...",
+        "found": "found",
+        "copyAll": "copyall",
+        "noResults": "noresults",
+        "supportedTypes": "supportedtypes"
+      },
+      "all": "all",
+      "clear": "清空",
+      "input": "输入",
+      "result": "结果",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "emoji-picker": {
       "name": "表情符号选择器",
@@ -5558,7 +6235,20 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Emoji Picker 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "emoji": {
+        "searchPlaceholder": "searchplaceholder",
+        "recent": "recent",
+        "clickToCopy": "clicktocopy",
+        "emojis": "emojis",
+        "noResults": "noresults",
+        "howToUse": "howtouse",
+        "tip1": "tip1",
+        "tip2": "tip2",
+        "tip3": "tip3"
+      },
+      "all": "all",
+      "copied": "已复制！"
     },
     "json-to-sql": {
       "name": "JSON 转 SQL",
@@ -5657,7 +6347,11 @@
       "compress": "压缩",
       "originalSize": "原始大小",
       "compressedSize": "压缩后大小",
-      "reduction": "减少"
+      "reduction": "减少",
+      "clear": "清空",
+      "dropzone": "dropzone",
+      "original": "original",
+      "download": "下载"
     },
     "image-converter": {
       "name": "图像格式转换器",
@@ -5709,7 +6403,12 @@
       "formatInfo": "格式说明",
       "pngDesc": "无损压缩，支持透明",
       "jpegDesc": "有损压缩，文件更小",
-      "webpDesc": "现代格式，压缩最佳"
+      "webpDesc": "现代格式，压缩最佳",
+      "clear": "清空",
+      "dropzone": "dropzone",
+      "original": "original",
+      "convert": "转换",
+      "download": "下载"
     },
     "favicon-generator": {
       "name": "Favicon生成器",
@@ -5758,7 +6457,13 @@
       "processing": "处理中...",
       "generated": "已生成",
       "downloadAll": "全部下载",
-      "htmlCode": "HTML 代码"
+      "htmlCode": "HTML 代码",
+      "clear": "清空",
+      "dropzone": "dropzone",
+      "original": "original",
+      "generate": "生成",
+      "download": "下载",
+      "copy": "复制"
     },
     "image-cropper": {
       "name": "图片裁剪工具",
@@ -5802,7 +6507,12 @@
       "changeImage": "更换图片",
       "preview": "预览",
       "cropFirst": "请先裁剪图片",
-      "crop": "裁剪"
+      "crop": "裁剪",
+      "clear": "清空",
+      "dropzone": "dropzone",
+      "width": "宽度",
+      "height": "高度",
+      "download": "下载"
     },
     "gitignore-generator": {
       "name": ".gitignore 生成器",
@@ -5958,7 +6668,10 @@
       "scripts": "脚本",
       "scriptName": "脚本名称",
       "scriptCommand": "命令",
-      "commonScripts": "常用脚本"
+      "commonScripts": "常用脚本",
+      "generate": "生成",
+      "copy": "复制",
+      "download": "下载"
     },
     "json-minifier": {
       "name": "JSON压缩工具",
@@ -5998,7 +6711,18 @@
           "answer": "由于所有处理都在浏览器本地完成，Json Minifier 的处理速度非常快，通常可以在几毫秒内完成。"
         }
       ],
-      "inputPlaceholder": "在此处输入文本..."
+      "inputPlaceholder": "在此处输入文本...",
+      "json": {
+        "invalidJson": "invalidjson"
+      },
+      "input": "输入",
+      "minify": "minify",
+      "beautify": "beautify",
+      "clear": "清空",
+      "output": "输出",
+      "copied": "已复制！",
+      "copy": "复制",
+      "outputPlaceholder": "结果将显示在这里..."
     },
     "timezone-converter": {
       "name": "时区转换器",
@@ -6257,7 +6981,38 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Meta Tag Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "metaTagGenerator": {
+        "pageTitle": "page标题",
+        "pageTitlePlaceholder": "page标题placeholder",
+        "author": "author",
+        "authorPlaceholder": "authorplaceholder",
+        "description": "描述",
+        "descriptionPlaceholder": "描述placeholder",
+        "characters": "characters",
+        "keywords": "keywords",
+        "keywordsPlaceholder": "keywordsplaceholder",
+        "ogImageUrl": "ogimageurl",
+        "ogImageUrlPlaceholder": "ogimageurlplaceholder",
+        "pageUrl": "pageurl",
+        "pageUrlPlaceholder": "pageurlplaceholder",
+        "twitterCardType": "twittercard类型",
+        "twitterCardSummary": "twittercardsummary",
+        "twitterCardSummaryLargeImage": "twittercardsummarylargeimage",
+        "twitterCardApp": "twittercardapp",
+        "twitterCardPlayer": "twittercardplayer",
+        "twitterUsername": "twitterusername",
+        "twitterUsernamePlaceholder": "twitterusernameplaceholder",
+        "robots": "robots",
+        "robotsIndexFollow": "robotsindexfollow",
+        "robotsNoindexFollow": "robotsnoindexfollow",
+        "robotsIndexNofollow": "robotsindexnofollow",
+        "robotsNoindexNofollow": "robotsnoindexnofollow",
+        "viewport": "viewport",
+        "generatedMetaTags": "generatedmetatags"
+      },
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "robots-txt-generator": {
       "name": "robots.txt 生成器",
@@ -6356,7 +7111,46 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Opengraph Preview 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "openGraphPreview": {
+        "defaultTitle": "默认标题",
+        "defaultDescription": "默认描述",
+        "defaultSiteName": "默认site名称",
+        "fetchError": "fetcherror",
+        "imageLoadError": "imageloaderror",
+        "modeFetch": "modefetch",
+        "modeManual": "modemanual",
+        "fetchUrlLabel": "fetchurllabel",
+        "fetching": "fetching",
+        "fetchButton": "fetchbutton",
+        "title": "标题",
+        "titlePlaceholder": "标题placeholder",
+        "siteName": "site名称",
+        "siteNamePlaceholder": "site名称placeholder",
+        "description": "描述",
+        "descriptionPlaceholder": "描述placeholder",
+        "imageUrl": "imageurl",
+        "imageUrlPlaceholder": "imageurlplaceholder",
+        "pageUrl": "pageurl",
+        "pageUrlPlaceholder": "pageurlplaceholder",
+        "platform": {
+          "facebook": "facebook",
+          "twitter": "twitter",
+          "linkedin": "linkedin"
+        },
+        "preview": "预览",
+        "generatedCode": "generatedcode",
+        "recommendations": {
+          "title": "标题",
+          "imageSize": "image大小",
+          "titleLength": "标题length",
+          "descriptionLength": "描述length",
+          "highQuality": "highquality",
+          "testDebugger": "testdebugger"
+        }
+      },
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "css-grid-generator": {
       "name": "CSS网格生成器",
@@ -6456,7 +7250,42 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Css Flexbox Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "cssFlexboxGenerator": {
+        "direction": "direction",
+        "directionRow": "direction行",
+        "directionRowReverse": "direction行reverse",
+        "directionColumn": "direction列",
+        "directionColumnReverse": "direction列reverse",
+        "justifyContent": "justifycontent",
+        "justifyFlexStart": "justifyflexstart",
+        "justifyFlexEnd": "justifyflexend",
+        "justifyCenter": "justifycenter",
+        "justifySpaceBetween": "justifyspacebetween",
+        "justifySpaceAround": "justifyspacearound",
+        "justifySpaceEvenly": "justifyspaceevenly",
+        "alignItems": "alignitems",
+        "alignStretch": "alignstretch",
+        "alignFlexStart": "alignflexstart",
+        "alignFlexEnd": "alignflexend",
+        "alignCenter": "aligncenter",
+        "alignBaseline": "alignbaseline",
+        "flexWrap": "flexwrap",
+        "wrapNoWrap": "wrapnowrap",
+        "wrapWrap": "wrapwrap",
+        "wrapWrapReverse": "wrapwrapreverse",
+        "gap": "gap",
+        "items": "items",
+        "preview": "预览",
+        "generatedCss": "generatedcss",
+        "quickReference": "quickreference",
+        "quickReferenceJustify": "quickreferencejustify",
+        "quickReferenceAlign": "quickreferencealign",
+        "quickReferenceDirection": "quickreferencedirection",
+        "quickReferenceWrap": "quickreferencewrap"
+      },
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "jwt-generator": {
       "name": "JWT生成器",
@@ -6499,7 +7328,29 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Jwt Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "jwt": {
+        "invalidPayload": "invalidpayload",
+        "error": "错误",
+        "algorithm": "algorithm",
+        "secretKey": "secret键",
+        "secretPlaceholder": "secretplaceholder",
+        "payload": "payload",
+        "generate": "生成",
+        "generatedToken": "generatedtoken",
+        "commonClaims": "commonclaims",
+        "claims": {
+          "iss": "iss",
+          "sub": "sub",
+          "aud": "aud",
+          "exp": "exp",
+          "nbf": "nbf",
+          "iat": "iat",
+          "jti": "jti"
+        }
+      },
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "cron-explainer": {
       "name": "Cron表达式解释器",
@@ -7955,7 +8806,20 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Css Clip Path Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "clipPath": {
+        "preview": "预览",
+        "presets": "presets",
+        "value": "值",
+        "syntax": "syntax",
+        "circleDesc": "circledesc",
+        "ellipseDesc": "ellipsedesc",
+        "polygonDesc": "polygondesc",
+        "insetDesc": "insetdesc"
+      },
+      "output": "输出",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "uuid-validator": {
       "name": "UUID验证器",
@@ -7994,7 +8858,20 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Uuid Validator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "uuidValidator": {
+        "input": "输入",
+        "placeholder": "在此输入文本...",
+        "validate": "validate",
+        "valid": "valid",
+        "invalid": "invalid",
+        "invalidFormat": "invalid格式",
+        "versions": "versions",
+        "v1Desc": "v1desc",
+        "v4Desc": "v4desc",
+        "v5Desc": "v5desc"
+      },
+      "clear": "清空"
     },
     "text-hash-comparator": {
       "name": "文本哈希值比较工具",
@@ -8033,7 +8910,16 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Text Hash Comparator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "hashCompare": {
+        "text1": "text1",
+        "placeholder": "在此输入文本...",
+        "text2": "text2",
+        "comparing": "comparing",
+        "compare": "compare",
+        "match": "match",
+        "noMatch": "nomatch"
+      }
     },
     "json-path-finder": {
       "name": "JSON 路径查找器",
@@ -8072,7 +8958,19 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Json Path Finder 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "json": {
+        "invalidJson": "invalidjson"
+      },
+      "jsonPathFinder": {
+        "loadSample": "load示例",
+        "placeholder": "在此输入文本...",
+        "analyze": "analyze",
+        "search": "search",
+        "paths": "paths"
+      },
+      "input": "输入",
+      "copy": "复制"
     },
     "canvas-drawing": {
       "name": "画布绘图工具",
@@ -8111,7 +9009,14 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Canvas Drawing 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "canvas": {
+        "size": "大小",
+        "brush": "brush",
+        "eraser": "eraser"
+      },
+      "clear": "清空",
+      "download": "下载"
     },
     "json-escape": {
       "name": "JSON 转义工具",
@@ -8150,7 +9055,17 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Json Escape 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "errorProcessing": "errorprocessing",
+      "input": "输入",
+      "jsonEscape": {
+        "placeholder": "在此输入文本...",
+        "escape": "escape",
+        "unescape": "unescape"
+      },
+      "output": "输出",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "css-animation-generator": {
       "name": "CSS动画生成器",
@@ -8193,7 +9108,17 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Css Animation Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "cssAnimation": {
+        "preset": "preset",
+        "duration": "duration",
+        "timing": "timing",
+        "iteration": "iteration",
+        "preview": "预览"
+      },
+      "output": "输出",
+      "copied": "已复制！",
+      "copy": "复制"
     },
     "text-case-counter": {
       "name": "文本大小写计数器",
@@ -8232,7 +9157,19 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Text Case Counter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "input": "输入",
+      "caseCounter": {
+        "placeholder": "在此输入文本...",
+        "total": "total",
+        "letters": "letters",
+        "uppercase": "uppercase",
+        "lowercase": "lowercase",
+        "digits": "digits",
+        "spaces": "spaces",
+        "special": "special",
+        "ratio": "ratio"
+      }
     },
     "dns-lookup": {
       "name": "DNS 查询工具",
@@ -8271,7 +9208,11 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Dns Lookup 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "dnsLookup": {
+        "ipError": "iperror",
+        "error": "错误"
+      }
     },
     "image-resizer": {
       "name": "图像缩放器",
@@ -8310,7 +9251,18 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Image Resizer 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "imageResizer": {
+        "dropzone": "dropzone",
+        "original": "original",
+        "width": "宽度",
+        "height": "高度",
+        "lockRatio": "lockratio",
+        "resize": "resize",
+        "resized": "resized"
+      },
+      "clear": "清空",
+      "download": "下载"
     },
     "ssl-checker": {
       "name": "SSL证书检查器",
@@ -8548,7 +9500,23 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Port Reference 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "note": "note",
+      "searchPorts": "searchports",
+      "searchPlaceholder": "searchplaceholder",
+      "lookupPort": "lookupport",
+      "portPlaceholder": "portplaceholder",
+      "port": "port",
+      "service": "service",
+      "descriptionLabel": "描述label",
+      "unknownPort": "unknownport",
+      "invalidPort": "invalidport",
+      "commonPorts": "commonports",
+      "noResults": "noresults",
+      "portRanges": "portranges",
+      "wellKnown": "wellknown",
+      "registered": "registered",
+      "dynamic": "dynamic"
     },
     "privacy-policy-generator": {
       "name": "隐私政策生成器",
@@ -8591,7 +9559,29 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Privacy Policy Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "privacyPolicyGenerator": {
+        "websiteName": "website名称",
+        "websiteNamePlaceholder": "website名称placeholder",
+        "websiteUrl": "websiteurl",
+        "websiteUrlPlaceholder": "websiteurlplaceholder",
+        "companyName": "company名称",
+        "companyNamePlaceholder": "company名称placeholder",
+        "contactEmail": "contactemail",
+        "contactEmailPlaceholder": "contactemailplaceholder",
+        "featuresTitle": "features标题",
+        "features": {
+          "collectsPersonalData": "collectspersonal数据",
+          "usesCookies": "usescookies",
+          "usesAnalytics": "usesanalytics",
+          "usesAds": "usesads",
+          "allowsUserAccounts": "allowsuseraccounts",
+          "sellsData": "sells数据"
+        },
+        "generate": "生成",
+        "copyToClipboard": "copytoclipboard",
+        "generatedOutput": "generatedoutput"
+      }
     },
     "terms-generator": {
       "name": "服务条款生成器",
@@ -8634,7 +9624,28 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Terms Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "termsGenerator": {
+        "websiteName": "website名称",
+        "websiteNamePlaceholder": "website名称placeholder",
+        "websiteUrl": "websiteurl",
+        "websiteUrlPlaceholder": "websiteurlplaceholder",
+        "companyName": "company名称",
+        "companyNamePlaceholder": "company名称placeholder",
+        "contactEmail": "contactemail",
+        "contactEmailPlaceholder": "contactemailplaceholder",
+        "governingLawCountry": "governinglawcountry",
+        "governingLawCountryPlaceholder": "governinglawcountryplaceholder",
+        "featuresTitle": "features标题",
+        "features": {
+          "allowsUserContent": "allowsusercontent",
+          "hasSubscription": "hassubscription",
+          "hasRefundPolicy": "hasrefundpolicy"
+        },
+        "generate": "生成",
+        "copyToClipboard": "copytoclipboard",
+        "generatedOutput": "generatedoutput"
+      }
     },
     "cookie-policy-generator": {
       "name": "Cookie政策生成器",
@@ -8777,7 +9788,24 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Csv Viewer 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "csvViewer": {
+        "defaultInput": "默认input",
+        "delimiterComma": "delimitercomma",
+        "delimiterSemicolon": "delimitersemicolon",
+        "delimiterTab": "delimitertab",
+        "delimiterPipe": "delimiterpipe",
+        "downloadCsv": "downloadcsv",
+        "csvInput": "csvinput",
+        "csvPlaceholder": "csvplaceholder",
+        "tablePreview": "表格预览",
+        "noData": "no数据",
+        "tip": "tip"
+      },
+      "csvJson": {
+        "delimiter": "delimiter",
+        "hasHeader": "hasheader"
+      }
     },
     "htaccess-generator": {
       "name": ".htaccess生成器",
@@ -9046,7 +10074,31 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Open Graph Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "openGraphGenerator": {
+        "siteTitle": "site标题",
+        "siteTitlePlaceholder": "site标题placeholder",
+        "siteDescription": "site描述",
+        "siteDescriptionPlaceholder": "site描述placeholder",
+        "url": "url",
+        "urlPlaceholder": "urlplaceholder",
+        "imageUrl": "imageurl",
+        "imageUrlPlaceholder": "imageurlplaceholder",
+        "siteName": "site名称",
+        "siteNamePlaceholder": "site名称placeholder",
+        "type": "类型",
+        "typeWebsite": "类型website",
+        "typeArticle": "类型article",
+        "typeProfile": "类型profile",
+        "typeVideo": "类型video",
+        "typeMusic": "类型music",
+        "preview": "预览",
+        "ogPreviewAlt": "og预览alt",
+        "noImage": "noimage",
+        "previewTitleFallback": "预览标题fallback",
+        "previewDescriptionFallback": "预览描述fallback",
+        "generatedHtml": "generatedhtml"
+      }
     },
     "twitter-card-generator": {
       "name": "TwitterCard生成器",
@@ -9089,7 +10141,31 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Twitter Card Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "twitterCardGenerator": {
+        "cardType": "card类型",
+        "cardSummary": "cardsummary",
+        "cardSummaryLargeImage": "cardsummarylargeimage",
+        "cardApp": "cardapp",
+        "cardPlayer": "cardplayer",
+        "title": "标题",
+        "titlePlaceholder": "标题placeholder",
+        "description": "描述",
+        "descriptionPlaceholder": "描述placeholder",
+        "imageUrl": "imageurl",
+        "imageUrlPlaceholder": "imageurlplaceholder",
+        "imageAltText": "imagealttext",
+        "imageAltTextPlaceholder": "imagealttextplaceholder",
+        "siteUsername": "siteusername",
+        "siteUsernamePlaceholder": "siteusernameplaceholder",
+        "creatorUsername": "creatorusername",
+        "creatorUsernamePlaceholder": "creatorusernameplaceholder",
+        "preview": "预览",
+        "previewImageFallback": "预览imagefallback",
+        "previewTitleFallback": "预览标题fallback",
+        "previewDescriptionFallback": "预览描述fallback",
+        "generatedHtml": "generatedhtml"
+      }
     },
     "mime-type-lookup": {
       "name": "MIME类型查找",
@@ -9128,7 +10204,8 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Mime Type Lookup 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "searchPlaceholder": "searchplaceholder"
     },
     "http-status-codes": {
       "name": "HTTP状态码查询",
@@ -9369,7 +10446,20 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Sql Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "sqlGenerator": {
+        "commandType": "command类型",
+        "tableName": "表格名称",
+        "columns": "columns",
+        "values": "values",
+        "setUpdates": "setupdates",
+        "schemaDefinition": "schemadefinition",
+        "whereClause": "whereclause",
+        "orderBy": "orderby",
+        "limit": "limit",
+        "generatedSql": "generatedsql",
+        "copySql": "copysql"
+      }
     },
     "htaccess-to-nginx": {
       "name": "Apache .htaccess 转 Nginx 配置转换器",
@@ -13007,7 +14097,20 @@
         "tip4": "所有内容实时预览，导出效果一致。",
         "tip5": "适合展示逻辑关系、共同点和差异性。",
         "tip6": "浏览器本地处理，无需上传数据。"
-      }
+      },
+      "sampleSet1": "示例set1",
+      "sampleSet2": "示例set2",
+      "sampleSet3": "示例set3",
+      "confirmClear": "confirmclear",
+      "settings": "设置",
+      "mode2Set": "mode2set",
+      "mode3Set": "mode3set",
+      "dataEditor": "数据编辑器",
+      "labelPlaceholder": "labelplaceholder",
+      "dragNote": "dragnote",
+      "tipsTitle": "tips标题",
+      "tip1": "tip1",
+      "tip2": "tip2"
     },
     "timeline-chart-generator": {
       "name": "时间线图表生成器",
@@ -13878,10 +14981,10 @@
       "themeForest": "森林",
       "percentageNote": "数值代表百分比，每个类别之和应为100%",
       "sampleData": {
-        "Q1": "第一季度",
-        "Q2": "第二季度",
-        "Q3": "第三季度",
-        "Q4": "第四季度",
+        "q1": "第一季度",
+        "q2": "第二季度",
+        "q3": "第三季度",
+        "q4": "第四季度",
         "mobile": "手机",
         "tablet": "平板",
         "desktop": "桌面"
@@ -15670,7 +16773,31 @@
           "question": "需要安装软件吗？",
           "answer": "不需要。发票生成器是完全基于浏览器的在线工具，打开网页即可使用。"
         }
-      ]
+      ],
+      "invoice": {
+        "invoiceNumber": "invoicenumber",
+        "currency": "currency",
+        "invoiceDate": "invoicedate",
+        "dueDate": "duedate",
+        "from": "from",
+        "companyName": "company名称",
+        "address": "address",
+        "to": "to",
+        "clientName": "client名称",
+        "items": "items",
+        "description": "描述",
+        "quantity": "quantity",
+        "unitPrice": "unitprice",
+        "addItem": "add项目",
+        "taxRate": "taxrate",
+        "notes": "notes",
+        "downloadPdf": "downloadpdf",
+        "invoice": "invoice",
+        "amount": "amount",
+        "subtotal": "subtotal",
+        "tax": "tax",
+        "total": "total"
+      }
     },
     "resume-builder": {
       "name": "简历生成器",
@@ -15785,7 +16912,16 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Signature Pad 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "signature": {
+        "penColor": "pen颜色",
+        "penWidth": "pen宽度",
+        "backgroundColor": "background颜色",
+        "transparent": "transparent",
+        "downloadPng": "downloadpng",
+        "downloadSvg": "downloadsvg"
+      },
+      "clear": "清空"
     },
     "pomodoro-timer": {
       "name": "番茄钟计时器",
@@ -15824,7 +16960,24 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Pomodoro Timer 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "pomodoro": {
+        "pause": "pause",
+        "start": "start",
+        "reset": "reset",
+        "skip": "skip",
+        "completedSessions": "completedsessions",
+        "hideSettings": "hide设置",
+        "showSettings": "show设置",
+        "settings": "设置",
+        "workDuration": "workduration",
+        "minutes": "minutes",
+        "shortBreakDuration": "shortbreakduration",
+        "longBreakDuration": "longbreakduration",
+        "sessionsBeforeLongBreak": "sessionsbeforelongbreak",
+        "soundNotification": "soundnotification"
+      },
+      "clear": "清空"
     },
     "meeting-notes": {
       "name": "会议记录",
@@ -15863,7 +17016,26 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Meeting Notes 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "meeting": {
+        "untitled": "untitled",
+        "date": "date",
+        "attendees": "attendees",
+        "agenda": "agenda",
+        "notes": "notes",
+        "actionItems": "actionitems",
+        "title": "标题",
+        "titlePlaceholder": "标题placeholder",
+        "time": "time",
+        "addAttendee": "addattendee",
+        "addAgendaItem": "addagenda项目",
+        "notesPlaceholder": "notesplaceholder",
+        "task": "task",
+        "assignee": "assignee",
+        "exportMarkdown": "exportmarkdown",
+        "exportText": "exporttext"
+      },
+      "add": "add"
     },
     "business-days-calculator": {
       "name": "工作日计算器",
@@ -15902,7 +17074,25 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Business Days Calculator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "businessDays": {
+        "calculateDays": "calculatedays",
+        "calculateEndDate": "calculateenddate",
+        "startDate": "startdate",
+        "endDate": "enddate",
+        "businessDaysToAdd": "businessdaystoadd",
+        "excludeWeekends": "excludeweekends",
+        "customHolidays": "自定义holidays",
+        "holidayName": "holiday名称",
+        "businessDays": "businessdays",
+        "totalDays": "totaldays",
+        "weekendDays": "weekenddays",
+        "holidayDays": "holidaydays",
+        "invalidDateRange": "invaliddaterange",
+        "calculatedEndDate": "calculatedenddate"
+      },
+      "add": "add",
+      "result": "结果"
     },
     "salary-calculator": {
       "name": "工资计算器",
@@ -15941,7 +17131,21 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Salary Calculator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "salary": {
+        "amount": "amount",
+        "payFrequency": "payfrequency",
+        "hoursPerWeek": "hoursperweek",
+        "taxRate": "taxrate",
+        "beforeTax": "beforetax",
+        "hourly": "hourly",
+        "daily": "daily",
+        "weekly": "weekly",
+        "biweekly": "biweekly",
+        "monthly": "monthly",
+        "annual": "annual",
+        "afterTax": "aftertax"
+      }
     },
     "invoice": {
       "invoice": "发票",
@@ -16181,7 +17385,23 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Excel To Json 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "excelToJson": {
+        "invalidFileType": "invalidfile类型",
+        "parseError": "parseerror",
+        "copyError": "copyerror",
+        "uploadFile": "uploadfile",
+        "supportedFormats": "supportedformats",
+        "fileLoaded": "fileloaded",
+        "selectSheet": "selectsheet",
+        "rows": "rows",
+        "preview": "预览",
+        "showingFirst": "showingfirst",
+        "jsonOutput": "jsonoutput",
+        "copied": "已复制！",
+        "copy": "复制",
+        "download": "下载"
+      }
     },
     "json-to-excel": {
       "name": "JSON 转 Excel",
@@ -16224,7 +17444,21 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Json To Excel 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "jsonToExcel": {
+        "invalidJson": "invalidjson",
+        "emptyData": "empty数据",
+        "parseError": "parseerror",
+        "noInput": "noinput",
+        "exportError": "exporterror",
+        "jsonInput": "jsoninput",
+        "loadSample": "load示例",
+        "placeholder": "在此输入文本...",
+        "fileName": "file名称",
+        "sheetName": "sheet名称",
+        "preview": "预览",
+        "download": "下载"
+      }
     },
     "excel-viewer": {
       "name": "在线Excel查看器",
@@ -16263,7 +17497,23 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Excel Viewer 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "excelViewer": {
+        "invalidFileType": "invalidfile类型",
+        "parseError": "parseerror",
+        "uploadFile": "uploadfile",
+        "supportedFormats": "supportedformats",
+        "fileLoaded": "fileloaded",
+        "filterColumn": "filter列",
+        "selectColumn": "select列",
+        "filterValue": "filter值",
+        "enterValue": "enter值",
+        "clearFilter": "clearfilter",
+        "showing": "showing",
+        "rows": "rows",
+        "noResults": "noresults",
+        "emptySheet": "emptysheet"
+      }
     },
     "excel-merger": {
       "name": "Excel合并器",
@@ -16302,7 +17552,22 @@
           "question": "需要安装软件吗？",
           "answer": "不需要。Excel合并器是完全基于浏览器的在线工具，打开网页即可使用。"
         }
-      ]
+      ],
+      "excelMerger": {
+        "invalidFileType": "invalidfile类型",
+        "parseError": "parseerror",
+        "noSheetsSelected": "nosheetsselected",
+        "mergeError": "mergeerror",
+        "uploadFiles": "uploadfiles",
+        "multipleFiles": "multiplefiles",
+        "uploadedFiles": "uploadedfiles",
+        "mergeMode": "mergemode",
+        "vertical": "vertical",
+        "horizontal": "horizontal",
+        "outputFileName": "outputfile名称",
+        "merge": "merge",
+        "sheets": "sheets"
+      }
     },
     "pdf-to-image": {
       "name": "PDF 转图片",
@@ -16345,7 +17610,22 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Pdf To Image 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "pdfToImage": {
+        "invalidFileType": "invalidfile类型",
+        "parseError": "parseerror",
+        "noPagesSelected": "nopagesselected",
+        "convertError": "converterror",
+        "uploadPdf": "uploadpdf",
+        "selectPdf": "selectpdf",
+        "processing": "processing",
+        "format": "格式化",
+        "dpi": "dpi",
+        "selectAll": "selectall",
+        "deselectAll": "deselectall",
+        "convert": "转换",
+        "pages": "pages"
+      }
     },
     "image-to-pdf": {
       "name": "图片转 PDF",
@@ -16384,7 +17664,24 @@
           "question": "需要安装软件吗？",
           "answer": "不需要。图片转 PDF 工具是完全基于浏览器的在线工具，打开网页即可使用。"
         }
-      ]
+      ],
+      "imageToPdf": {
+        "invalidFileType": "invalidfile类型",
+        "noImages": "noimages",
+        "convertError": "converterror",
+        "uploadImages": "uploadimages",
+        "supportedFormats": "supportedformats",
+        "pageSize": "page大小",
+        "fitToImage": "fittoimage",
+        "orientation": "orientation",
+        "portrait": "portrait",
+        "landscape": "landscape",
+        "margin": "margin",
+        "fileName": "file名称",
+        "imageList": "image列表",
+        "converting": "converting",
+        "convert": "转换"
+      }
     },
     "pdf-merger": {
       "name": "PDF合并器",
@@ -16420,7 +17717,22 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Pdf Merger 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "pdfMerger": {
+        "invalidFileType": "invalidfile类型",
+        "parseError": "parseerror",
+        "needMoreFiles": "needmorefiles",
+        "mergeError": "mergeerror",
+        "uploadPdfs": "uploadpdfs",
+        "multipleFiles": "multiplefiles",
+        "outputFileName": "outputfile名称",
+        "fileList": "file列表",
+        "files": "files",
+        "totalPages": "totalpages",
+        "pages": "pages",
+        "merging": "merging",
+        "merge": "merge"
+      }
     },
     "pdf-splitter": {
       "name": "PDF 拆分器",
@@ -16459,7 +17771,25 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Pdf Splitter 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "pdfSplitter": {
+        "invalidFileType": "invalidfile类型",
+        "parseError": "parseerror",
+        "noPagesSelected": "nopagesselected",
+        "splitError": "spliterror",
+        "uploadPdf": "uploadpdf",
+        "processing": "processing",
+        "splitMode": "splitmode",
+        "selectedPages": "selectedpages",
+        "pageRange": "pagerange",
+        "eachPage": "eachpage",
+        "from": "from",
+        "to": "to",
+        "selectAll": "selectall",
+        "deselectAll": "deselectall",
+        "split": "split",
+        "pages": "pages"
+      }
     },
     "pdf-compressor": {
       "name": "PDF 压缩器",
@@ -16498,7 +17828,20 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Pdf Compressor 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "pdfCompressor": {
+        "invalidFileType": "invalidfile类型",
+        "compressError": "compresserror",
+        "uploadPdf": "uploadpdf",
+        "originalSize": "original大小",
+        "compressionLevel": "compressionlevel",
+        "compressing": "compressing",
+        "compress": "compress",
+        "compressionComplete": "compressioncomplete",
+        "reduced": "reduced",
+        "compressedSize": "compressed大小",
+        "download": "下载"
+      }
     },
     "pdf-rotator": {
       "name": "PDF 页面旋转器",
@@ -16537,7 +17880,18 @@
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Pdf Rotator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
-      ]
+      ],
+      "pdfRotator": {
+        "invalidFileType": "invalidfile类型",
+        "parseError": "parseerror",
+        "saveError": "saveerror",
+        "uploadPdf": "uploadpdf",
+        "processing": "processing",
+        "rotateAll": "rotateall",
+        "apply": "apply",
+        "reset": "reset",
+        "save": "save"
+      }
     },
     "markdown-editor": {
       "name": "Markdown 编辑器",
@@ -16578,7 +17932,20 @@
       "code": "代码",
       "link": "链接",
       "image": "图片",
-      "quote": "引用"
+      "quote": "引用",
+      "markdownEditor": {
+        "edit": "edit",
+        "split": "split",
+        "preview": "预览",
+        "copyMd": "copymd",
+        "copyHtml": "copyhtml",
+        "markdown": "markdown",
+        "placeholder": "在此输入文本...",
+        "previewLabel": "预览label",
+        "downloadMd": "downloadmd",
+        "downloadHtml": "downloadhtml",
+        "clear": "清空"
+      }
     },
     "world-clock": {
       "name": "世界时钟",
@@ -16613,7 +17980,14 @@
           "question": "如何判断是白天还是夜晚？",
           "answer": "每个城市卡片会显示太阳☀️或月亮🌙图标，6:00-18:00 显示太阳表示白天，其他时间显示月亮表示夜晚。"
         }
-      ]
+      ],
+      "worldClock": {
+        "format24h": "format24h",
+        "showSeconds": "showseconds",
+        "selectCity": "selectcity",
+        "addCity": "addcity",
+        "noCities": "nocities"
+      }
     },
     "stopwatch": {
       "name": "秒表",
@@ -16648,7 +18022,18 @@
           "question": "最快和最慢圈次如何标记？",
           "answer": "当记录 2 个或以上圈次时，系统会自动用🏆标记最快圈次，用🐢标记最慢圈次，方便您分析表现。"
         }
-      ]
+      ],
+      "stopwatchUI": {
+        "lap": "lap",
+        "stop": "stop",
+        "start": "start",
+        "reset": "reset",
+        "laps": "laps",
+        "lapNumber": "lapnumber",
+        "lapTime": "laptime",
+        "totalTime": "totaltime",
+        "lapLabel": "laplabel"
+      }
     },
     "countdown-timer": {
       "name": "倒计时计时器",
@@ -16683,7 +18068,18 @@
           "question": "暂停后我可以继续吗？",
           "answer": "可以。点击暂停后，倒计时将保持当前状态。点击'继续'从暂停的地方继续。"
         }
-      ]
+      ],
+      "countdownTimer": {
+        "timeUp": "timeup",
+        "timerFinished": "timerfinished",
+        "hours": "hours",
+        "minutes": "minutes",
+        "seconds": "seconds",
+        "resume": "resume",
+        "start": "start",
+        "pause": "pause",
+        "reset": "reset"
+      }
     },
     "note-pad": {
       "name": "便签本",
@@ -16723,7 +18119,21 @@
           "question": "我可以创建多少个便签？",
           "answer": "便签数量没有限制。根据需要创建即可。请注意，浏览器本地存储有容量限制（通常为5-10MB）。"
         }
-      ]
+      ],
+      "notePad": {
+        "newNote": "newnote",
+        "export": "export",
+        "search": "search",
+        "color": "颜色",
+        "titlePlaceholder": "标题placeholder",
+        "contentPlaceholder": "contentplaceholder",
+        "updated": "updated",
+        "untitled": "untitled",
+        "noContent": "nocontent",
+        "noNotes": "nonotes",
+        "noResults": "noresults",
+        "totalNotes": "totalnotes"
+      }
     },
     "excelToJson": {
       "uploadFile": "上传 Excel 文件",
@@ -16963,7 +18373,13 @@
           "question": "有文件大小限制吗？",
           "answer": "处理在您的浏览器中完成，因此非常大的文件可能会变慢。我们建议文件大小不超过50MB。"
         }
-      ]
+      ],
+      "page": "page",
+      "errorParsing": "errorparsing",
+      "errorInvalidFile": "errorinvalidfile",
+      "dropzone": "dropzone",
+      "extracting": "extracting",
+      "pages": "pages"
     },
     "word-to-txt": {
       "name": "Word转文本",
@@ -16994,7 +18410,11 @@
           "question": "格式会保留吗？",
           "answer": "此工具仅提取纯文本。格式、图像和表格不会保留。"
         }
-      ]
+      ],
+      "errorParsing": "errorparsing",
+      "errorInvalidFile": "errorinvalidfile",
+      "dropzone": "dropzone",
+      "extracting": "extracting"
     },
     "word-to-html": {
       "name": "Word转HTML",
@@ -17025,7 +18445,13 @@
           "question": "可以编辑HTML吗？",
           "answer": "是的，您可以复制HTML代码并在任何文本编辑器或HTML编辑器中编辑。"
         }
-      ]
+      ],
+      "errorParsing": "errorparsing",
+      "errorInvalidFile": "errorinvalidfile",
+      "dropzone": "dropzone",
+      "converting": "converting",
+      "showCode": "showcode",
+      "showPreview": "show预览"
     },
     "excel-to-csv": {
       "name": "Excel转CSV",
@@ -17054,7 +18480,11 @@
           "question": "公式会被转换吗？",
           "answer": "仅导出计算值，公式本身不会导出。"
         }
-      ]
+      ],
+      "errorParsing": "errorparsing",
+      "errorInvalidFile": "errorinvalidfile",
+      "dropzone": "dropzone",
+      "converting": "converting"
     },
     "csv-to-excel": {
       "name": "CSV转Excel",
@@ -17085,7 +18515,14 @@
           "question": "特殊字符会保留吗？",
           "answer": "是的，使用UTF-8编码来保留特殊字符和国际文本。"
         }
-      ]
+      ],
+      "errorParsing": "errorparsing",
+      "errorInvalidFile": "errorinvalidfile",
+      "errorExport": "errorexport",
+      "dropzone": "dropzone",
+      "converting": "converting",
+      "rows": "rows",
+      "showingFirst": "showingfirst"
     },
     "loan-calculator": {
       "name": "贷款计算器",
@@ -21119,7 +22556,8 @@
       "tip4": "使用不同的设置多次运行以获得多样性",
       "addFillers": "添加自然填充词",
       "humanize": "人性化",
-      "inputPlaceholder": "在此粘贴您的 AI 生成文本..."
+      "inputPlaceholder": "在此粘贴您的 AI 生成文本...",
+      "outputPlaceholder": "结果将显示在这里..."
     },
     "text-spinner": {
       "name": "文本改写器",
@@ -21668,7 +23106,8 @@
       "bracketSpacing": "括号间距",
       "bracketSameLine": "括号同行",
       "generate": "生成",
-      "download": "下载"
+      "download": "下载",
+      "htmlWhitespaceSensitivity": "htmlwhitespacesensitivity"
     },
     "tsconfig-generator": {
       "name": "TSConfig 生成器",
@@ -21900,7 +23339,8 @@
       "inputPlaceholder": "请输入内容...",
       "swap": "交换",
       "outputPlaceholder": "结果将显示在这里...",
-      "showTable": "显示表格"
+      "showTable": "显示表格",
+      "none": "none"
     },
     "checksum-verifier": {
       "name": "校验和验证器",
@@ -22592,7 +24032,13 @@
       "outputPlaceholder": "结果将显示在此处...",
       "errors": {
         "emptyInput": "请输入一些内容"
-      }
+      },
+      "errorInvalidInput": "errorinvalidinput",
+      "convert": "转换",
+      "sql": {
+        "loadExample": "load示例"
+      },
+      "copied": "已复制！"
     },
     "http-status-code-reference": {
       "name": "HTTP状态码参考",
@@ -22621,6 +24067,13 @@
       "outputPlaceholder": "结果将显示在此处...",
       "errors": {
         "emptyInput": "请输入一些内容"
+      },
+      "httpStatus": {
+        "search": "search"
+      },
+      "all": "all",
+      "nav": {
+        "noResults": "noresults"
       }
     },
     "jwt-payload-decoder": {
@@ -22650,6 +24103,16 @@
       "outputPlaceholder": "结果将显示在此处...",
       "errors": {
         "emptyInput": "请输入一些内容"
+      },
+      "errorInvalidInput": "errorinvalidinput",
+      "errorInvalidFormat": "errorinvalid格式",
+      "sql": {
+        "loadExample": "load示例"
+      },
+      "decode": "decode",
+      "copied": "已复制！",
+      "jwt": {
+        "commonClaims": "commonclaims"
       }
     },
     "base64-image-converter": {
@@ -22741,7 +24204,20 @@
       "outputPlaceholder": "结果将在此处显示...",
       "errors": {
         "emptyInput": "请输入一些内容"
-      }
+      },
+      "sql": {
+        "loadExample": "load示例"
+      },
+      "urlParser": {
+        "invalid": "invalid",
+        "protocol": "protocol",
+        "hostname": "hostname",
+        "port": "port",
+        "pathname": "pathname",
+        "hash": "hash",
+        "queryParams": "queryparams"
+      },
+      "copied": "已复制！"
     },
     "request-header-builder": {
       "name": "HTTP请求头构建器",
@@ -23997,7 +25473,21 @@
       "database": "数据库",
       "username": "用户名",
       "password": "密码",
-      "connectionString": "连接字符串"
+      "connectionString": "连接字符串",
+      "database-connection-tester": {
+        "databaseType": "database类型",
+        "host": "host",
+        "port": "port",
+        "database": "database",
+        "username": "username",
+        "password": "password",
+        "useSSL": "usessl",
+        "connectionString": "connectionstring",
+        "codeSnippet": "codesnippet",
+        "note": "note",
+        "noteText": "notetext"
+      },
+      "copied": "已复制！"
     },
     "query-execution-planner": {
       "name": "查询执行计划工具",
@@ -24264,7 +25754,10 @@
       "success": "成功",
       "failed": "失败",
       "warning": "警告",
-      "info": "信息"
+      "info": "信息",
+      "useCurrent": "usecurrent",
+      "useIncoming": "useincoming",
+      "keepBoth": "keepboth"
     },
     "git-history-visualizer": {
       "name": "Git历史可视化工具",
@@ -25959,7 +27452,26 @@
       "asn": "ASN",
       "viewOnMap": "在地图上查看",
       "invalidIp": "无效的 IP 地址",
-      "lookupError": "IP 地址查询失败"
+      "lookupError": "IP 地址查询失败",
+      "ip-geolocation": {
+        "lookupError": "lookuperror",
+        "ipAddress": "ipaddress",
+        "placeholder": "在此输入文本...",
+        "loading": "加载中...",
+        "lookup": "lookup",
+        "myIp": "myip",
+        "results": "results",
+        "country": "country",
+        "region": "region",
+        "city": "city",
+        "zipCode": "zipcode",
+        "timezone": "timezone",
+        "coordinates": "coordinates",
+        "isp": "isp",
+        "organization": "organization",
+        "asn": "asn",
+        "viewOnMap": "viewonmap"
+      }
     },
     "screen-recorder": {
       "name": "屏幕录制",
@@ -25974,7 +27486,24 @@
       "instructions": "使用说明",
       "instruction1": "点击\"开始录制\"按钮",
       "instruction2": "选择要录制的屏幕、窗口或标签页",
-      "instruction3": "完成后点击\"停止\"，然后下载录制文件"
+      "instruction3": "完成后点击\"停止\"，然后下载录制文件",
+      "screen-recorder": {
+        "permissionDenied": "permissiondenied",
+        "startError": "starterror",
+        "recording": "recording",
+        "paused": "paused",
+        "start": "start",
+        "pause": "pause",
+        "stop": "stop",
+        "resume": "resume",
+        "newRecording": "newrecording",
+        "preview": "预览",
+        "download": "下载",
+        "instructions": "instructions",
+        "instruction1": "instruction1",
+        "instruction2": "instruction2",
+        "instruction3": "instruction3"
+      }
     }
   },
   "tool": {

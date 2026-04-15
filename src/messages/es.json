@@ -1654,7 +1654,12 @@
         "Generar un token de sesión en formato UUID v4 sin guiones para un API REST que requiere identificadores compactos de 24 caracteres",
         "Producir 10 UUIDs en mayúsculas para definir constantes en código Java que siguen el estándar de nomenclatura UPPER_SNAKE_CASE",
         "Exportar 500 UUIDs en formato JSON array para integrar directamente como fixture en pruebas unitarias de una aplicación Node.js"
-      ]
+      ],
+      "count": "count",
+      "generate": "Generar",
+      "copied": "¡Copiado!",
+      "copy": "Copiar",
+      "all": "all"
     },
     "url-encoder": {
       "name": "Codificador y Decodificador de URL",
@@ -1696,7 +1701,17 @@
           "question": "¿Se almacenan o envían mis URLs procesadas a un servidor?",
           "answer": "No, todo el procesamiento se realiza localmente en tu navegador. Tus datos nunca salen de tu dispositivo, garantizando privacidad total."
         }
-      ]
+      ],
+      "input": "Entrada",
+      "url": {
+        "encodeUrl": "url.encodeUrl",
+        "decodeUrl": "url.decodeUrl"
+      },
+      "clear": "Limpiar",
+      "output": "Salida",
+      "copied": "¡Copiado!",
+      "copy": "Copiar",
+      "outputPlaceholder": "El resultado aparecerá aquí..."
     },
     "password-generator": {
       "name": "Generador de Contraseñas",
@@ -1744,7 +1759,13 @@
         "Ejemplo 3: Un equipo de ciberseguridad utiliza el Generador de Hashes para detectar modificaciones en archivos sensibles. Generan hashes SHA-1 de los archivos importantes y los almacenan. Posteriormente, generan nuevos hashes y los comparan con los originales para detectar cualquier alteración.",
         "Ejemplo 4: Un programador de blockchain utiliza el Generador de Hashes para crear hashes SHA-256 de bloques de datos. Estos hashes se utilizan para asegurar la integridad y la inmutabilidad de la cadena de bloques, lo que es fundamental para mantener la seguridad del sistema."
       ],
-      "inputPlaceholder": "Introduce texto aquí..."
+      "inputPlaceholder": "Introduce texto aquí...",
+      "input": "Entrada",
+      "hash": {
+        "generateHashes": "hash.generateHashes"
+      },
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "qr-generator": {
       "name": "Generador de Códigos QR",
@@ -1766,7 +1787,12 @@
         "Un museo crea rutas interactivas mediante QR que activan contenido AR en aplicaciones móviles.",
         "Un desarrollador integra QR en etiquetas RFID para trazabilidad de componentes en cadena de suministro."
       ],
-      "inputPlaceholder": "Introduce texto aquí..."
+      "inputPlaceholder": "Introduce texto aquí...",
+      "input": "Entrada",
+      "qr": {
+        "generateQr": "qr.generateQr",
+        "downloadPng": "qr.downloadPng"
+      }
     },
     "color-converter": {
       "name": "Convertidor de Colores",
@@ -1787,7 +1813,12 @@
         "Un diseñador gráfico valida que el color corporativo PMS 2945 se traduzca correctamente a RGB para un mockup digital, verificando coincidencia con su muestra física bajo iluminación D65.",
         "Un ingeniero de datos elige colores contrastantes en HSL para visualizaciones estadísticas, asegurando accesibilidad para usuarios con deficiencia de color mediante cálculo de luminancia relativa.",
         "Un artista digital convierte una paleta de 256 colores en formato HEX a RGB para generar un archivo .gpl compatible con GIMP, corrigiendo discrepancias en la profundidad de bits."
-      ]
+      ],
+      "color": {
+        "preview": "color.preview"
+      },
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "timestamp-converter": {
       "name": "Convertidor de Marcas de Tiempo",
@@ -1808,7 +1839,14 @@
         "Un desarrollador frontend transforma fechas ISO 8601 obtenidas de una API GraphQL a timestamps para actualizar un componente de gráfico de tiempo real",
         "Un analista de datos convierte un conjunto de fechas en formato '15/08/2023 14:23:00' (GMT-5) a Unix Epoch para cargarlo en una base de datos temporal de Amazon Redshift",
         "Un especialista en ciberseguridad traduce timestamps de un archivo de registro de auditoría del sistema (con milisegundos) a hora local para correlacionar eventos de intrusiones"
-      ]
+      ],
+      "timestamp": {
+        "currentTime": "timestamp.currentTime",
+        "unixTimestamp": "timestamp.unixTimestamp",
+        "dateTime": "timestamp.dateTime"
+      },
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "word-counter": {
       "name": "Contador de Palabras",
@@ -1830,7 +1868,15 @@
         "Un editor de revista digital analiza 15 artículos para comparar su densidad de contenido por párrafo",
         "Un especialista SEO identifica palabras clave repetidas más de 5 veces en un cuerpo de texto de 800 palabras"
       ],
-      "inputPlaceholder": "Escribe aquí..."
+      "inputPlaceholder": "Escribe aquí...",
+      "input": "Entrada",
+      "wordCounter": {
+        "words": "wordCounter.words",
+        "characters": "wordCounter.characters",
+        "sentences": "wordCounter.sentences",
+        "paragraphs": "wordCounter.paragraphs"
+      },
+      "clear": "Limpiar"
     },
     "case-converter": {
       "name": "Convertidor de Caso",
@@ -1851,7 +1897,13 @@
         "Estandarizar nombres de columnas en scripts SQL generados automáticamente con mixedCase a snake_case",
         "Preparar contenido para SEO normalizando títulos en title case siguiendo directrices de Google",
         "Transformar logs del sistema en formato alternado para mejorar legibilidad en informes técnicos"
-      ]
+      ],
+      "uppercase": "uppercase",
+      "lowercase": "lowercase",
+      "titleCase": "titleCase",
+      "sentenceCase": "sentenceCase",
+      "camelCase": "camelCase",
+      "snakeCase": "snakeCase"
     },
     "html-encoder": {
       "name": "Codificador y Decodificador HTML",
@@ -1893,7 +1945,17 @@
           "question": "¿Se almacena o envía el texto que codifico o decodifico a un servidor?",
           "answer": "No, toda la conversión ocurre localmente en tu navegador. Tus datos nunca salen de tu ordenador, garantizando máxima privacidad."
         }
-      ]
+      ],
+      "input": "Entrada",
+      "html": {
+        "encodeHtml": "html.encodeHtml",
+        "decodeHtml": "html.decodeHtml"
+      },
+      "clear": "Limpiar",
+      "output": "Salida",
+      "copied": "¡Copiado!",
+      "copy": "Copiar",
+      "outputPlaceholder": "El resultado aparecerá aquí..."
     },
     "markdown-preview": {
       "name": "Visualizador de Markdown",
@@ -1915,7 +1977,14 @@
         "Preparar presentaciones técnicas usando Markdown convertido a diapositivas Reveal.js.",
         "Diseñar plantillas de correo electrónico HTML manteniendo la sintaxis simplificada de Markdown."
       ],
-      "inputPlaceholder": "Escribe aquí..."
+      "inputPlaceholder": "Escribe aquí...",
+      "markdown": {
+        "editor": "markdown.editor",
+        "preview": "markdown.preview",
+        "exportHtml": "markdown.exportHtml"
+      },
+      "copied": "¡Copiado!",
+      "clear": "Limpiar"
     },
     "lorem-ipsum": {
       "name": "Generador de Lorem Ipsum",
@@ -1936,7 +2005,18 @@
         "Un equipo de desarrollo está creando una aplicación móvil y aún no tiene el contenido final. Utilizan el Generador Lorem Ipsum para generar texto de relleno y simular cómo se verá el contenido en la interfaz de usuario, lo que les permite continuar con el desarrollo y pruebas sin retrasos.",
         "Un freelancer de diseño está trabajando en un folleto y necesita texto de relleno para presentar una propuesta a un cliente. Utiliza el Generador Lorem Ipsum para crear un texto coherente que se ajuste al espacio disponible en el folleto, permitiendo una presentación profesional.",
         "Un estudiante de diseño gráfico está aprendiendo a usar un software de diseño y necesita texto de relleno para practicar con diferentes tipografías y estilos de texto. Utiliza el Generador Lorem Ipsum para generar texto de diferentes longitudes y estilos, lo que le ayuda a explorar y experimentar con diversas técnicas de diseño."
-      ]
+      ],
+      "lorem": {
+        "type": "lorem.type",
+        "paragraphs": "lorem.paragraphs",
+        "sentences": "lorem.sentences",
+        "words": "lorem.words"
+      },
+      "count": "count",
+      "generate": "Generar",
+      "output": "Salida",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "regex-tester": {
       "name": "Tester de Expresiones Regulares",
@@ -1957,7 +2037,19 @@
         "Extraer números de teléfono en formatos internacionales desde un documento, identificando patrones como +[1-9]\\d{1,2} \\d{3} \\d{3} \\d{4}.",
         "Analizar logs de servidores para detectar códigos de error HTTP 4xx/5xx usando regex como \\b(4|5)\\d{2}\\b.",
         "Normalizar entradas de usuarios eliminando caracteres especiales en formularios web con expresiones como [^a-zA-Z0-9\\s]."
-      ]
+      ],
+      "regex": {
+        "pattern": "regex.pattern",
+        "global": "regex.global",
+        "caseInsensitive": "regex.caseInsensitive",
+        "multiline": "regex.multiline",
+        "dotall": "regex.dotall",
+        "testString": "regex.testString",
+        "atIndex": "regex.atIndex"
+      },
+      "result": "Resultado",
+      "match": "match",
+      "matches": "matches"
     },
     "jwt-decoder": {
       "name": "Depurador JWT",
@@ -2026,7 +2118,18 @@
         "Un redactor de contenido web debe revisar un artículo antes de su publicación final. Utiliza Diff Checker para comparar el borrador inicial con la versión final, asegurándose de que todas las correcciones y actualizaciones hayan sido realizadas.",
         "Un abogado necesita verificar las modificaciones en un contrato legal antes de firmarlo. Utiliza Diff Checker para comparar la versión original del contrato con la versión revisada, resaltando cualquier cambio en cláusulas y términos.",
         "Un profesor de literatura desea comparar dos versiones de un ensayo de un estudiante para evaluar la calidad de las revisiones realizadas. Utiliza Diff Checker para identificar y resaltar las adiciones, eliminaciones y cambios realizados en el ensayo, facilitando la evaluación y el feedback."
-      ]
+      ],
+      "diffChecker": {
+        "original": "diffChecker.original",
+        "originalPlaceholder": "diffChecker.originalPlaceholder",
+        "modified": "diffChecker.modified",
+        "modifiedPlaceholder": "diffChecker.modifiedPlaceholder",
+        "compare": "diffChecker.compare",
+        "added": "diffChecker.added",
+        "removed": "diffChecker.removed",
+        "unchanged": "diffChecker.unchanged"
+      },
+      "clear": "Limpiar"
     },
     "json-to-csv": {
       "name": "JSON a CSV",
@@ -2047,7 +2150,14 @@
         "Un analista de datos recibe un archivo CSV con información de clientes y necesita estructurarlo en formato JSON para importarlo en una aplicación de gestión de relaciones con clientes (CRM). La herramienta JSON a CSV le permite convertir rápidamente el archivo CSV en JSON, facilitando la importación de datos.",
         "Un equipo de marketing quiere generar un informe detallado a partir de datos recopilados de varias fuentes en formato JSON. Utilizan la herramienta JSON a CSV para convertir los datos en CSV y luego importarlos en Excel para crear gráficos y tablas.",
         "Un ingeniero de datos trabaja en un proyecto que requiere la sincronización de datos entre dos sistemas, uno que utiliza JSON y otro que utiliza CSV. La herramienta JSON a CSV es esencial para mantener la coherencia de los datos al convertirlos en el formato requerido por cada sistema."
-      ]
+      ],
+      "errorInvalidJson": "errorInvalidJson",
+      "errorInvalidFormat": "errorInvalidFormat",
+      "input": "Entrada",
+      "output": "Salida",
+      "copied": "¡Copiado!",
+      "copy": "Copiar",
+      "download": "Descargar"
     },
     "image-to-base64": {
       "name": "Imagen a Base64",
@@ -2159,7 +2269,10 @@
       "separator": "Separador",
       "none": "Ninguno",
       "lowercase": "Minúsculas",
-      "slug": "Slug"
+      "slug": "Slug",
+      "input": "Entrada",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "number-base-converter": {
       "name": "Convertidor de bases numéricas",
@@ -2181,7 +2294,12 @@
         "Un experto en forense digital transforma una marca de tiempo hexadecimal (0x5A5BFC3D) a formato decimal legible para analizar registros de actividad en un sistema Linux.",
         "Un diseñador de interfaces convierte un código de color hexadecimal (#FF5733) a sus componentes RGB decimales (255, 87, 51) para implementar paletas en frameworks CSS."
       ],
-      "inputPlaceholder": "Ingrese texto aquí..."
+      "inputPlaceholder": "Ingrese texto aquí...",
+      "errorInvalidInput": "errorInvalidInput",
+      "input": "Entrada",
+      "convert": "Convertir",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "json-path-tester": {
       "name": "JSONPath Tester",
@@ -2253,7 +2371,17 @@
           "question": "¿Se envía mi datos XML a un servidor para su procesamiento?",
           "answer": "No. Todo el procesamiento (formateo, minificación, validación) ocurre localmente en tu navegador web. Tus datos XML nunca abandonan tu computadora, garantizando total privacidad."
         }
-      ]
+      ],
+      "xml": {
+        "invalidXml": "xml.invalidXml"
+      },
+      "input": "Entrada",
+      "format": "Formatear",
+      "minify": "minify",
+      "clear": "Limpiar",
+      "output": "Salida",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "chinese-converter": {
       "name": "Convertidor de Chino",
@@ -2274,7 +2402,17 @@
         "Un historiador digitalizando documentos de la dinastía Qing, que requieren conversión a simplificados modernos manteniendo términos técnicos históricos",
         "Una empresa multinacional traduciendo manuales técnicos de equipos industriales para clientes en Hong Kong y Macao, donde coexisten ambos sistemas",
         "Un investigador lingüístico comparando frecuencias de uso de grafías variantes en medios de comunicación de Beijing y Taipei"
-      ]
+      ],
+      "input": "Entrada",
+      "chinese": {
+        "placeholder": "Ingrese texto aquí...",
+        "toTraditional": "chinese.toTraditional",
+        "toSimplified": "chinese.toSimplified"
+      },
+      "clear": "Limpiar",
+      "output": "Salida",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "unit-converter": {
       "name": "Convertidor de Unidades",
@@ -2321,7 +2459,18 @@
         "Crear un efecto hover en un botón de compra con un gradiente radial que simule iluminación centrada al interactuar.",
         "Generar un patrón de gradiente cónico para un dashboard de datos, combinando HSL con transparencia en anillos concéntricos.",
         "Implementar un texto degradado en una campaña de marketing digital, aplicando blend modes sobre una imagen de fondo."
-      ]
+      ],
+      "gradient": {
+        "type": "gradient.type",
+        "linear": "gradient.linear",
+        "radial": "gradient.radial",
+        "angle": "gradient.angle",
+        "colors": "gradient.colors",
+        "addColor": "gradient.addColor",
+        "presets": "gradient.presets"
+      },
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "unicode-converter": {
       "name": "Convertidor Unicode",
@@ -2342,7 +2491,20 @@
         "Ejemplo 2: Un ingeniero de software que está depurando un error de codificación en una API que maneja datos de usuarios internacionales utiliza el Conversor de Unicode para verificar si los caracteres Unicode están siendo procesados correctamente en el flujo de datos.",
         "Ejemplo 3: Un diseñador de sitios web que está creando un formulario de contacto que admite emojis utiliza el Conversor de Unicode para convertir los emojis en su formato de puntos de código, asegurando que se muestren correctamente en todos los navegadores.",
         "Ejemplo 4: Un lingüista que está estudiando alfabetos antiguos y caracteres raros utiliza el Conversor de Unicode para convertir y visualizar estos caracteres en un formato que pueda ser compartido y documentado fácilmente en un informe digital."
-      ]
+      ],
+      "input": "Entrada",
+      "unicode": {
+        "placeholder": "Ingrese texto aquí...",
+        "format": "Formatear",
+        "textToUnicode": "unicode.textToUnicode",
+        "unicodeToText": "unicode.unicodeToText",
+        "examples": "unicode.examples",
+        "reference": "unicode.reference"
+      },
+      "clear": "Limpiar",
+      "output": "Salida",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "code-minifier": {
       "name": "Minificador de código",
@@ -2395,7 +2557,17 @@
         "Un analista de datos trabaja con grandes volúmenes de datos y a menudo necesita revisar consultas SQL escritas por diferentes desarrolladores. Usa el SQL Formatter para estandarizar el formato de las consultas, facilitando la revisión y la depuración de errores.",
         "Un equipo de desarrollo de una startup está trabajando en una aplicación móvil que requiere consultas SQL optimizadas. El SQL Formatter ayuda a los desarrolladores a mantener un código limpio y consistente, lo que mejora la eficiencia del equipo y reduce el tiempo de desarrollo.",
         "Un programador que trabaja en un proyecto de análisis de datos utiliza el SQL Formatter para formatear consultas generadas automáticamente por un script. Esto permite que el programador revise y ajuste manualmente las consultas antes de ejecutarlas en la base de datos."
-      ]
+      ],
+      "input": "Entrada",
+      "sql": {
+        "loadExample": "sql.loadExample"
+      },
+      "format": "Formatear",
+      "minify": "minify",
+      "clear": "Limpiar",
+      "output": "Salida",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "pinyin-converter": {
       "name": "Convertidor Pinyin",
@@ -2416,7 +2588,18 @@
         "Un desarrollador extrae automáticamente Pinyin desde una base de datos de productos chinos para implementar un sistema de búsqueda sin necesidad de teclado chino.",
         "Un lingüista compara patrones tonales entre dialectos al convertir textos paralelos y analizar diferencias en la acentuación automática.",
         "Un traductor técnico prepara documentación bilingüe (chino-inglés) donde el Pinyin con tonos se utiliza como guía de pronunciación en glosarios especializados."
-      ]
+      ],
+      "input": "Entrada",
+      "pinyin": {
+        "placeholder": "Ingrese texto aquí...",
+        "withTone": "pinyin.withTone",
+        "note": "pinyin.note"
+      },
+      "convert": "Convertir",
+      "clear": "Limpiar",
+      "output": "Salida",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "color-picker": {
       "name": "Color Picker",
@@ -2437,7 +2620,18 @@
         "Crear paletas de degradados SVG precisos ajustando matiz y saturación visualmente mientras se obtienen valores HSL interpolados.",
         "Verificar el ratio de contraste entre colores seleccionados para cumplir con estándares de accesibilidad WCAG AA/AAA.",
         "Depurar inconsistencias de renderizado de colores en diferentes dispositivos comparando valores RGB absolutos."
-      ]
+      ],
+      "colorPicker": {
+        "selectColor": "colorPicker.selectColor",
+        "presets": "colorPicker.presets",
+        "recent": "colorPicker.recent",
+        "info": "colorPicker.info",
+        "red": "colorPicker.red",
+        "green": "colorPicker.green",
+        "blue": "colorPicker.blue"
+      },
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "aspect-ratio": {
       "name": "Calculadora de Proporciones",
@@ -2458,7 +2652,21 @@
         "Un desarrollador de aplicaciones móviles está trabajando en una app que debe verse bien en teléfonos y tablets. La pantalla de bienvenida tiene una imagen de fondo con una proporción de 16:9, pero en tablets, la proporción es 4:3. Con la calculadora, el desarrollador ajusta la imagen para que se adapte a ambos formatos de pantalla sin perder calidad visual.",
         "Un editor de videos está preparando un clip para subir a YouTube, pero necesita asegurarse de que se vea bien en pantallas de diferentes tamaños. El video original tiene una proporción de 21:9, pero YouTube recomienda 16:9. Utilizando la herramienta, el editor ajusta las dimensiones del video para que se vea correctamente en todas las plataformas.",
         "Un arquitecto está diseñando una fachada para un edificio y necesita asegurarse de que una ventana específica se vea proporcional en el diseño. La ventana tiene una proporción de 2:1, pero el espacio en la fachada es de 3:2. Con la Calculadora de Proporción de Aspecto, el arquitecto ajusta las dimensiones de la ventana para que se integre perfectamente en el diseño de la fachada."
-      ]
+      ],
+      "aspect": {
+        "original": "aspect.original",
+        "width": "aspect.width",
+        "height": "aspect.height",
+        "ratio": "aspect.ratio",
+        "common": "aspect.common",
+        "resize": "aspect.resize",
+        "lockRatio": "aspect.lockRatio",
+        "newWidth": "aspect.newWidth",
+        "newHeight": "aspect.newHeight"
+      },
+      "result": "Resultado",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "css-beautifier": {
       "name": "CSS Beautifier",
@@ -2480,7 +2688,15 @@
         "Un desarrollador de rendimiento necesita optimizar la carga de una página web. Utiliza la opción 'Minify' del CSS Beautifier para reducir el tamaño del archivo CSS, lo que ayuda a acelerar la carga de la página y mejorar la experiencia del usuario.",
         "Un estudiante de programación trabaja en un proyecto de curso y necesita compartir su código CSS con sus compañeros para recibir comentarios. Utiliza el CSS Beautifier para formatear el código de manera profesional, lo que facilita la revisión y el aprendizaje colaborativo."
       ],
-      "indent": "Sangría"
+      "indent": "Sangría",
+      "error": "Error",
+      "beautify": "beautify",
+      "minify": "minify",
+      "copy": "Copiar",
+      "input": "Entrada",
+      "placeholder": "Ingrese texto aquí...",
+      "output": "Salida",
+      "outputPlaceholder": "El resultado aparecerá aquí..."
     },
     "js-beautifier": {
       "name": "Embellecedor de JavaScript",
@@ -2502,7 +2718,15 @@
         "Un estudiante analiza un fragmento de código obfuscado para entender patrones de diseño en funciones callback anidadas.",
         "Un ingeniero prepara código para una presentación técnica, generando versiones side-by-side con y sin comentarios explicativos."
       ],
-      "indent": "Sangría"
+      "indent": "Sangría",
+      "error": "Error",
+      "beautify": "beautify",
+      "minify": "minify",
+      "copy": "Copiar",
+      "input": "Entrada",
+      "placeholder": "Ingrese texto aquí...",
+      "output": "Salida",
+      "outputPlaceholder": "El resultado aparecerá aquí..."
     },
     "html-preview": {
       "name": "Previsualización HTML",
@@ -2524,7 +2748,9 @@
       ],
       "refresh": "Actualizar",
       "htmlCode": "Código HTML",
-      "preview": "Vista previa"
+      "preview": "Vista previa",
+      "clear": "Limpiar",
+      "placeholder": "Ingrese texto aquí..."
     },
     "ip-lookup": {
       "name": "Localización de IP",
@@ -2555,7 +2781,9 @@
       "city": "Ciudad",
       "isp": "ISP",
       "timezone": "Zona horaria",
-      "coordinates": "Coordenadas"
+      "coordinates": "Coordenadas",
+      "error": "Error",
+      "placeholder": "Ingrese texto aquí..."
     },
     "morse-code": {
       "name": "Convertidor de Código Morse",
@@ -2584,7 +2812,8 @@
       "toText": "A texto",
       "play": "Reproducir",
       "morsePlaceholder": "Ingrese código morse...",
-      "reference": "Referencia"
+      "reference": "Referencia",
+      "copy": "Copiar"
     },
     "random-generator": {
       "name": "Generador de Números Aleatorios",
@@ -2605,7 +2834,10 @@
         "Un profesor de estadística creando 25 IDs únicos con 4 dígitos decimales para asignar proyectos de investigación.",
         "Un diseñador de juegos configurando una tabla de probabilidades para drops de items raros usando valores entre 0 y 1 con 6 decimales.",
         "Un científico de datos extrayendo una muestra aleatoria de 1,200 registros de un dataset de 1 millón usando semillas reproducibles."
-      ]
+      ],
+      "min": "min",
+      "max": "max",
+      "unique": "unique"
     },
     "text-reverser": {
       "name": "Reversor de Texto",
@@ -2626,7 +2858,11 @@
         "Un diseñador gráfico crea texto espejo para una plantilla de tarjeta de presentación en idioma árabe",
         "Un SEO especialista invierte parámetros de URL para verificar indexación en motores de búsqueda",
         "Un profesor de criptografía genera una versión cifrada básica de un mensaje usando inversión de palabras y base64"
-      ]
+      ],
+      "reverseChars": "reverseChars",
+      "reverseWords": "reverseWords",
+      "reverseLines": "reverseLines",
+      "placeholder": "Ingrese texto aquí..."
     },
     "line-counter": {
       "name": "Contador de Líneas",
@@ -2647,7 +2883,16 @@
         "Un escritor debe preparar un documento para su publicación. Usa la herramienta para eliminar líneas en blanco y asegurarse de que no haya duplicados, mejorando la coherencia y la legibilidad del texto.",
         "Un analista de datos trabaja con un archivo CSV y necesita contar el número de registros. Utiliza el Contador de Líneas para obtener un conteo preciso y verificar la integridad de los datos.",
         "Un administrador de sistemas necesita ordenar un archivo de configuración para facilitar la revisión. Utiliza la opción 'Ordenar líneas' para organizar el contenido de manera alfabética, lo que simplifica la tarea de revisión y mantenimiento."
-      ]
+      ],
+      "totalLines": "totalLines",
+      "nonEmptyLines": "nonEmptyLines",
+      "emptyLines": "emptyLines",
+      "uniqueLines": "uniqueLines",
+      "removeDuplicates": "removeDuplicates",
+      "removeEmpty": "removeEmpty",
+      "sortLines": "sortLines",
+      "ignoreEmpty": "ignoreEmpty",
+      "placeholder": "Ingrese texto aquí..."
     },
     "string-escape": {
       "name": "Escape de Cadenas/Desescape de Cadenas",
@@ -2668,7 +2913,11 @@
         "Sanitizar contenido generado por usuarios antes de insertarlo en una página: escapas el texto a HTML para evitar XSS al mostrar comentarios con <script> o atributos.",
         "Construir una URL con parámetros que contienen espacios y caracteres reservados: escapas 'nombre completo' y 'email@dominio.com' a percent-encoding y los concatenas en la query string.",
         "Inyectar cadenas en plantillas JavaScript: escapas 'Línea 1\\nLínea 2' a formato JavaScript para que la variable contenga exactamente dos líneas sin romper la sintaxis."
-      ]
+      ],
+      "error": "Error",
+      "escape": "escape",
+      "unescape": "unescape",
+      "placeholder": "Ingrese texto aquí..."
     },
     "yaml-json": {
       "name": "Convertidor de YAML/JSON",
@@ -2689,7 +2938,11 @@
         "Un desarrollador de microservicios depura un archivo JSON mal formado exportado desde MongoDB, convirtiéndolo a YAML para mejorar legibilidad antes de transformarlo nuevamente.",
         "Un arquitecto de APIs transforma especificaciones OpenAPI 3.0 (YAML) a formato JSON para validarlas en herramientas que solo aceptan JSON Schema.",
         "Un especialista en CI/CD normaliza archivos de configuración de múltiples repositorios convirtiendo YAML legacy a JSON estandarizado compatible con nuevas pipelines."
-      ]
+      ],
+      "invalidYaml": "invalidYaml",
+      "invalidJson": "invalidJson",
+      "yamlPlaceholder": "yamlPlaceholder",
+      "jsonPlaceholder": "jsonPlaceholder"
     },
     "date-calculator": {
       "name": "Calculadora de Fechas",
@@ -2721,7 +2974,9 @@
       "addSubtract": "Sumar/Restar",
       "baseDate": "Fecha base",
       "operation": "Operación",
-      "subtract": "Restar"
+      "subtract": "Restar",
+      "add": "add",
+      "result": "Resultado"
     },
     "text-deduplicator": {
       "name": "Deduplicador de Texto",
@@ -2742,7 +2997,13 @@
         "Ejemplo 2: Un escritor de contenido tiene un documento con múltiples versiones de un mismo texto y necesita asegurarse de que no haya fragmentos repetidos antes de publicar. Text Deduplicator le ayuda a eliminar las repeticiones y mantener un contenido único.",
         "Ejemplo 3: Un investigador en ciencias sociales recopila respuestas de encuestas en un archivo de texto. Algunas respuestas son repetidas debido a errores de entrada. Utiliza Text Deduplicator para limpiar el archivo y obtener datos precisos para su estudio.",
         "Ejemplo 4: Un desarrollador trabaja en un proyecto de minería de datos y necesita un conjunto de datos limpio para entrenar un modelo de aprendizaje automático. Text Deduplicator le permite eliminar duplicados de manera eficiente, mejorando la calidad de los datos de entrenamiento."
-      ]
+      ],
+      "caseSensitive": "caseSensitive",
+      "trimLines": "trimLines",
+      "original": "original",
+      "unique": "unique",
+      "removed": "removed",
+      "placeholder": "Ingrese texto aquí..."
     },
     "color-blender": {
       "name": "Blendedor de Colores",
@@ -2763,7 +3024,10 @@
         "Un desarrollador de aplicaciones móviles necesita crear una escala de colores para los botones de una app. Utiliza Color Blender para generar una paleta de 5 colores entre un verde y un amarillo, asegurando que los botones tengan una apariencia coherente y agradable.",
         "Un artista digital está trabajando en una ilustración y necesita una paleta de colores que fluya suavemente entre un rojo y un morado. Utiliza Color Blender para generar 10 pasos de degradado, lo que le permite crear una imagen visualmente atractiva y bien equilibrada.",
         "Un diseñador gráfico está desarrollando un logotipo que requiere un degradado sutil. Utiliza Color Blender para mezclar un blanco con un gris oscuro en 4 pasos, lo que le permite crear un efecto de profundidad y sofisticación en el diseño del logotipo."
-      ]
+      ],
+      "color1": "color1",
+      "color2": "color2",
+      "steps": "steps"
     },
     "json-sorter": {
       "name": "Clasificador JSON",
@@ -2784,7 +3048,12 @@
         "Un ingeniero de datos normaliza metadatos de imágenes antes de indexarlos en un almacén NoSQL.",
         "Un auditor de seguridad estandariza registros de logs JSON para facilitar análisis forense automatizado.",
         "Un arquitecto de sistemas reconcilia configuraciones desplegadas en múltiples regiones de cloud computing."
-      ]
+      ],
+      "invalidJson": "invalidJson",
+      "ascending": "ascending",
+      "descending": "descending",
+      "sort": "sort",
+      "placeholder": "Ingrese texto aquí..."
     },
     "placeholder-image": {
       "name": "Generador de Imágenes de Reemplazo",
@@ -2805,7 +3074,13 @@
         "Un diseñador de UI prototipa una pantalla de inicio con una imagen hero de 1920x1080px en modo oscuro (#1E1E1E) y texto en contraste #FFFFFF.",
         "Un equipo QA valida el comportamiento de un componente <img> al recibir imágenes de distintos aspectos (1:1, 16:9, 4:3) generadas dinámicamente.",
         "Un diseñador UX crea avatares circulares de 100x100px con iniciales en negrita (fuente Montserrat) para un sistema de comentarios en una aplicación web."
-      ]
+      ],
+      "width": "width",
+      "height": "height",
+      "bgColor": "bgColor",
+      "textColor": "textColor",
+      "customText": "customText",
+      "generate": "Generar"
     },
     "text-encryption": {
       "name": "Encriptación de Texto",
@@ -2826,7 +3101,18 @@
         "2. Un investigador protege un documento con datos médicos sensibles antes de almacenarlo en la nube.",
         "3. Un equipo DevOps encripta claves de API para incluirlas en un repositorio de código compartido.",
         "4. Un usuario almacena notas personales en un servicio de notas digitales usando cifrado previo para garantizar privacidad."
-      ]
+      ],
+      "encryption": {
+        "error": "Error",
+        "encrypt": "encryption.encrypt",
+        "decrypt": "encryption.decrypt",
+        "password": "encryption.password",
+        "passwordPlaceholder": "encryption.passwordPlaceholder",
+        "inputPlaceholder": "Ingrese texto aquí..."
+      },
+      "input": "Entrada",
+      "output": "Salida",
+      "copy": "Copiar"
     },
     "file-hash": {
       "name": "Calculadora de Hash de Archivos",
@@ -2847,7 +3133,14 @@
         "Un desarrollador de software genera un checksum MD5 para un archivo de configuración crítico y lo incluye en un script de monitorización para detectar modificaciones no autorizadas",
         "Un auditor de seguridad compara los valores SHA-512 de archivos en un servidor comprometido contra copias de respaldo verificadas para identificar documentos alterados",
         "Un usuario final valida que un documento PDF firmado digitalmente no haya sido modificado después de la firma mediante la comparación de hashes pre y post-firmado"
-      ]
+      ],
+      "fileHash": {
+        "dropzone": "fileHash.dropzone",
+        "fileName": "fileHash.fileName",
+        "fileSize": "fileHash.fileSize",
+        "calculating": "fileHash.calculating"
+      },
+      "copy": "Copiar"
     },
     "html-table-generator": {
       "name": "Generador de Tablas HTML",
@@ -2868,7 +3161,17 @@
         "Crear un horario académico con celdas combinadas para clases que abarcan múltiples horas, usando rowspan para agrupaciones temporales",
         "Generar una plantilla de exportación CSV-HTML para un sistema de gestión, manteniendo consistencia en encabezados y formato de números",
         "Desarrollar un componente de precios con tablas anidadas y columnas destacadas, exportando a JSX para integrar en una aplicación React"
-      ]
+      ],
+      "tableGen": {
+        "rows": "tableGen.rows",
+        "cols": "tableGen.cols",
+        "hasHeader": "tableGen.hasHeader",
+        "header": "tableGen.header",
+        "cell": "tableGen.cell",
+        "preview": "tableGen.preview"
+      },
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "json-schema-validator": {
       "name": "Validador de Esquemas JSON",
@@ -2889,7 +3192,15 @@
         "Un equipo de desarrolladores trabaja en una aplicación que integra datos de múltiples fuentes externas. A medida que los datos son recibidos, utilizan el JSON Schema Validator para verificar que los datos entrantes cumplan con el formato esperado, evitando así problemas de compatibilidad y errores en el procesamiento.",
         "Una empresa de e-commerce tiene un sistema de gestión de pedidos que utiliza JSON para el flujo de datos. Antes de enviar un pedido a la base de datos, se utiliza el JSON Schema Validator para asegurar que todos los detalles del pedido, como la dirección de envío y el método de pago, sean válidos y completos.",
         "Un analista de datos está trabajando con un conjunto de datos JSON que contiene información sobre usuarios y sus interacciones con una aplicación web. Antes de realizar análisis detallados, utiliza el JSON Schema Validator para verificar que los datos estén estructurados correctamente y no contengan anomalías que puedan afectar los resultados de los informes."
-      ]
+      ],
+      "schemaValidator": {
+        "loadExample": "schemaValidator.loadExample",
+        "jsonPlaceholder": "schemaValidator.jsonPlaceholder",
+        "schemaPlaceholder": "schemaValidator.schemaPlaceholder",
+        "validate": "schemaValidator.validate",
+        "valid": "schemaValidator.valid",
+        "invalid": "schemaValidator.invalid"
+      }
     },
     "regex-patterns": {
       "name": "Biblioteca de Patrones Regex",
@@ -2910,7 +3221,14 @@
         "2. Extraer automáticamente números de teléfono de registros de logs, normalizándolos al formato E.164 (+1 para EE.UU., +44 para Reino Unido, etc.).",
         "3. Filtrar URLs maliciosas en un firewall de aplicación, verificando coincidencias con dominios de alto riesgo usando patrones de subdominios dinámicos.",
         "4. Procesar archivos CSV para identificar celdas que contengan fechas en formatos no estándar (ej: DD/MM/AAAA vs MM/DD/AAAA) mediante detección de patrones contextuales."
-      ]
+      ],
+      "regexPatterns": {
+        "test": "regexPatterns.test",
+        "match": "regexPatterns.match",
+        "noMatch": "regexPatterns.noMatch",
+        "tryIt": "regexPatterns.tryIt"
+      },
+      "copy": "Copiar"
     },
     "byte-counter": {
       "name": "Contador de Bytes",
@@ -2931,7 +3249,15 @@
         "Un ingeniero de bases de datos confirma que una cadena Unicode con caracteres circilos y emojis no sobrepase el límite de 512 bytes de un campo VARCHAR.",
         "Un especialista en redes analiza el tamaño exacto de un mensaje codificado en UTF-16LE para protocolos binarios como MQTT.",
         "Un docente demuestra visualmente cómo el carácter '€' ocupa 3 bytes en UTF-8 pero 2 bytes en UTF-16 cuando se activa la opción de visualización hexadecimal."
-      ]
+      ],
+      "input": "Entrada",
+      "byteCounter": {
+        "placeholder": "Ingrese texto aquí...",
+        "characters": "byteCounter.characters",
+        "bytes": "byteCounter.bytes",
+        "lines": "byteCounter.lines",
+        "size": "byteCounter.size"
+      }
     },
     "json-to-typescript": {
       "name": "JSON a TypeScript",
@@ -2952,7 +3278,17 @@
         "Crear interfaces para archivos de configuración JSON con propiedades jerárquicas y valores por defecto",
         "Generar tipos para documentos MongoDB a partir de ejemplos de registros exportados",
         "Validar esquemas de payloads de webhooks con estructuras dinámicas que incluyen múltiples eventos"
-      ]
+      ],
+      "json": {
+        "invalidJson": "json.invalidJson"
+      },
+      "jsonTs": {
+        "interfaceName": "jsonTs.interfaceName",
+        "jsonPlaceholder": "jsonTs.jsonPlaceholder"
+      },
+      "copied": "¡Copiado!",
+      "copy": "Copiar",
+      "convert": "Convertir"
     },
     "svg-optimizer": {
       "name": "Optimizador de SVG",
@@ -2973,7 +3309,19 @@
         "Ejemplo 2: Un desarrollador frontend está trabajando en una aplicación móvil que utiliza gráficos vectoriales para la interfaz de usuario. Al optimizar los SVG con esta herramienta, logra reducir el tamaño de la aplicación, lo que mejora la eficiencia del almacenamiento y la velocidad de carga.",
         "Ejemplo 3: Un equipo de desarrollo de software está creando un portal web con múltiples capas de gráficos interactivos. El uso del Optimizador de SVG permite que los archivos SVG sean más ligeros, lo que facilita la integración de animaciones y transiciones sin afectar el rendimiento del portal.",
         "Ejemplo 4: Un freelance web designer necesita entregar un proyecto con un conjunto de iconos SVG personalizados. Utiliza el Optimizador de SVG para asegurarse de que los iconos sean lo más compactos posible, lo que facilita la gestión y distribución de los archivos a los clientes."
-      ]
+      ],
+      "input": "Entrada",
+      "svgOptimizer": {
+        "placeholder": "Ingrese texto aquí...",
+        "optimize": "svgOptimizer.optimize",
+        "original": "svgOptimizer.original",
+        "optimized": "svgOptimizer.optimized",
+        "saved": "svgOptimizer.saved",
+        "preview": "svgOptimizer.preview"
+      },
+      "output": "Salida",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "text-to-binary": {
       "name": "Texto a Binario",
@@ -2994,7 +3342,17 @@
         "Un docente de arquitectura de computadoras genera ejemplos didácticos de representación de caracteres en memoria",
         "Un desarrollador de firmware convierte mensajes de diagnóstico a binario para depurar dispositivos IoT",
         "Un especialista en forense digital decodifica hexadumps de archivos para identificar strings legibles en volcados de memoria"
-      ]
+      ],
+      "textBinary": {
+        "toBinary": "textBinary.toBinary",
+        "toText": "textBinary.toText",
+        "text": "textBinary.text",
+        "textPlaceholder": "textBinary.textPlaceholder",
+        "binary": "textBinary.binary",
+        "binaryPlaceholder": "textBinary.binaryPlaceholder"
+      },
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "markdown-to-html": {
       "name": "Markdown a HTML",
@@ -3015,7 +3373,13 @@
         "Un creador de contenido transforma un artículo con listas y tablas en HTML para publicarlo en una plataforma de blogs que no soporta Markdown",
         "Un estudiante genera una página web académica a partir de apuntes en Markdown, manteniendo el formato de ecuaciones matemáticas",
         "Un ingeniero DevOps automatiza la conversión de informes técnicos en Markdown a informes HTML con estilos personalizados para compartir en equipos no técnicos"
-      ]
+      ],
+      "mdToHtml": {
+        "mdPlaceholder": "mdToHtml.mdPlaceholder",
+        "preview": "mdToHtml.preview"
+      },
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "html-minifier": {
       "name": "Minificador de HTML",
@@ -3036,7 +3400,14 @@
         "Un diseñador web que está revisando el código de un sitio existente usa la opción 'Beautify' para hacer el HTML más legible y fácil de mantener, facilitando la identificación y corrección de errores.",
         "Un equipo de desarrollo que trabaja en un proyecto de alta concurrencia utiliza el HTML Minifier para optimizar el rendimiento de sus páginas, asegurando que carguen rápidamente incluso bajo alta carga de tráfico.",
         "Un desarrollador freelancer que trabaja en un sitio de blog utiliza la herramienta para minimizar el HTML de las entradas de blog, reduciendo el tiempo de carga y mejorando el SEO del sitio."
-      ]
+      ],
+      "error": "Error",
+      "minify": "minify",
+      "beautify": "beautify",
+      "copied": "¡Copiado!",
+      "copy": "Copiar",
+      "input": "Entrada",
+      "output": "Salida"
     },
     "json-diff": {
       "name": "JSON Diff",
@@ -3084,7 +3455,15 @@
         "Un ingeniero de seguridad emplea el Base32 Encoder/Decoder para decodificar una cadena de texto Base32 que ha recibido en un log de actividad, con el fin de verificar la integridad de los datos y detectar posibles manipulaciones.",
         "Un administrador de sistemas utiliza la herramienta para codificar nombres de usuario y contraseñas en Base32 antes de almacenarlos en un archivo de configuración, mejorando así la seguridad del sistema y reduciendo el riesgo de exposición accidental de credenciales.",
         "Un programador de IoT utiliza la codificación Base32 para optimizar la transmisión de datos a través de redes de baja velocidad, donde la presencia de caracteres no imprimibles podría causar errores en la transmisión."
-      ]
+      ],
+      "error": "Error",
+      "encode": "encode",
+      "decode": "decode",
+      "input": "Entrada",
+      "convert": "Convertir",
+      "copied": "¡Copiado!",
+      "copy": "Copiar",
+      "output": "Salida"
     },
     "epoch-converter": {
       "name": "Convertidor de Epoch",
@@ -3105,7 +3484,17 @@
         "Un analista de ciberseguridad transforma logs AWS CloudTrail con timestamps epoch a hora local para investigar un incidente ocurrido a las 2023-12-25T14:30:45-05:00",
         "Un ingeniero DevOps genera una marca de tiempo de expiración para un token JWT sumando 86400 segundos (24h) a la fecha actual y convirtiéndola en formato epoch milisegundo",
         "Un desarrollador móvil Android convierte fechas de eventos a milisegundos epoch para indexarlas en una base de datos Room con soporte de zonas horarias"
-      ]
+      ],
+      "epoch": {
+        "current": "epoch.current",
+        "timestamp": "epoch.timestamp",
+        "toDate": "epoch.toDate",
+        "datetime": "epoch.datetime",
+        "toEpoch": "epoch.toEpoch",
+        "useNow": "epoch.useNow"
+      },
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "css-unit-converter": {
       "name": "Convertidor de unidades CSS",
@@ -3126,7 +3515,15 @@
         "Transformar 2em en porcentaje para el padding de un botón (equivalente al 200%)",
         "Calcular la altura de una sección hero usando vh: convertir 100vh a px para compatibilidad con frameworks de animación",
         "Ajustar 12pt a px para estilos de impresión, considerando la relación 1pt=1.333px en pantallas"
-      ]
+      ],
+      "cssUnit": {
+        "value": "cssUnit.value",
+        "unit": "cssUnit.unit",
+        "baseFontSize": "cssUnit.baseFontSize",
+        "viewportWidth": "cssUnit.viewportWidth",
+        "viewportHeight": "cssUnit.viewportHeight"
+      },
+      "result": "Resultado"
     },
     "text-statistics": {
       "name": "Estadísticas de Texto",
@@ -3147,7 +3544,22 @@
         "Ejemplo 2: Un redactor de contenido web utiliza Text Statistics para analizar un artículo de blog antes de publicarlo. Al revisar las estadísticas de densidad de palabras y frecuencia de palabras clave, puede asegurarse de que el contenido sea optimizado para SEO y atractivo para los lectores.",
         "Ejemplo 3: Un estudiante de literatura utiliza Text Statistics para realizar un análisis comparativo de dos textos clásicos. La herramienta le permite identificar patrones de uso de lenguaje y estilos de escritura, facilitando la elaboración de un ensayo académico más sólido.",
         "Ejemplo 4: Un profesional de marketing utiliza Text Statistics para evaluar la efectividad de un correo electrónico de marketing. Al analizar el nivel de lectura y la estructura del texto, puede ajustar el contenido para mejorar la tasa de apertura y conversión del correo electrónico."
-      ]
+      ],
+      "textStats": {
+        "placeholder": "Ingrese texto aquí...",
+        "chars": "textStats.chars",
+        "charsNoSpace": "textStats.charsNoSpace",
+        "words": "textStats.words",
+        "uniqueWords": "textStats.uniqueWords",
+        "sentences": "textStats.sentences",
+        "paragraphs": "textStats.paragraphs",
+        "lines": "textStats.lines",
+        "avgWordLen": "textStats.avgWordLen",
+        "digits": "textStats.digits",
+        "spaces": "textStats.spaces",
+        "readTime": "textStats.readTime",
+        "speakTime": "textStats.speakTime"
+      }
     },
     "hex-editor": {
       "name": "Editor hexadecimal",
@@ -3169,7 +3581,15 @@
         "Un programador de firmware examina la diferencia hexadecimal entre dos versiones de un archivo .hex para identificar cambios en secciones de memoria crítica.",
         "Un estudiante compara la representación hexadecimal de caracteres UTF-8 multibyte (ej: 'ñ' = C3 B1) versus ASCII simple para entender codificaciones de texto."
       ],
-      "inputPlaceholder": "Ingrese texto aquí..."
+      "inputPlaceholder": "Ingrese texto aquí...",
+      "hexEditor": {
+        "text": "hexEditor.text",
+        "toHex": "hexEditor.toHex",
+        "hex": "hexEditor.hex",
+        "toText": "hexEditor.toText"
+      },
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "color-palette": {
       "name": "Generador de Paletas de Colores",
@@ -3190,7 +3610,15 @@
         "Un ilustrador genera colores análogos para una infografía médica, manteniendo coherencia visual en diagramas de anatomía.",
         "Un equipo de branding desarrolla una identidad corporativa usando esquemas complementarios que respetan la normativa de contrastes para personas con daltonismo.",
         "Un desarrollador de temas WordPress ajusta manualmente la luminosidad de una paleta monocromática para optimizar la legibilidad en modos claro/oscuro."
-      ]
+      ],
+      "palette": {
+        "baseColor": "palette.baseColor",
+        "hexCode": "palette.hexCode",
+        "shades": "palette.shades",
+        "complementary": "palette.complementary",
+        "analogous": "palette.analogous",
+        "triadic": "palette.triadic"
+      }
     },
     "http-status": {
       "name": "Códigos de Estado HTTP",
@@ -3211,7 +3639,10 @@
         "Un administrador de sistemas consulta el código 503 Service Unavailable para configurar health checks en Kubernetes",
         "Un SEO auditor verifica diferencias técnicas entre 301 Moved Permanently y 308 Permanent Redirect para migraciones de dominio",
         "Un estudiante compara los códigos 404 Not Found y 410 Gone para entender estrategias de gestión de URLs obsoletas"
-      ]
+      ],
+      "httpStatus": {
+        "search": "httpStatus.search"
+      }
     },
     "json-to-yaml": {
       "name": "JSON a YAML",
@@ -3232,7 +3663,13 @@
         "Migrar archivos de configuración de aplicaciones Node.js (JSON) a entornos Docker que requieren YAML.",
         "Convertir logs estructurados en JSON a formato YAML legible para auditorías de seguridad.",
         "Preparar datos de prueba en formato YAML para frameworks de testing como Behave o PyTest."
-      ]
+      ],
+      "json": {
+        "invalidJson": "json.invalidJson"
+      },
+      "convert": "Convertir",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "data-uri": {
       "name": "Generador de URI de Datos",
@@ -3278,7 +3715,16 @@
         "Un investigador académico verifica el nivel de originalidad entre un artículo y una base de datos de fuentes previas.",
         "Un equipo legal analiza modificaciones en contratos digitales detectando alteraciones en cláusulas críticas.",
         "Un especialista en NLP evalúa la precisión de un modelo de generación de texto comparando respuestas automatizadas con referencias humanas."
-      ]
+      ],
+      "textCompare": {
+        "text1": "textCompare.text1",
+        "placeholder": "Ingrese texto aquí...",
+        "text2": "textCompare.text2",
+        "charSimilarity": "textCompare.charSimilarity",
+        "wordSimilarity": "textCompare.wordSimilarity",
+        "editDistance": "textCompare.editDistance",
+        "commonWords": "textCompare.commonWords"
+      }
     },
     "json-to-go": {
       "name": "JSON a Struct Go",
@@ -3349,7 +3795,16 @@
         "Un desarrollador de software está creando un script que debe ser ejecutable por todos, pero solo modificable por el propietario. Utiliza el Chmod Calculator para verificar que el valor simbólico 'rwxr-xr-x' se traduce al valor octal '755'.",
         "Un ingeniero de seguridad está revisando los permisos de un directorio crítico en un servidor. Necesita asegurarse de que solo el propietario tenga permisos de lectura, escritura y ejecución, y que los usuarios del grupo y otros solo tengan permisos de lectura y ejecución. Utiliza el Chmod Calculator para confirmar que '755' en notación octal es correcto.",
         "Un administrador de red está configurando un archivo de logs que debe ser accesible solo por el propietario y los usuarios del grupo, pero no por otros usuarios. Utiliza el Chmod Calculator para verificar que el valor octal '640' se traduce a 'rw-r-----' en notación simbólica."
-      ]
+      ],
+      "chmod": {
+        "octal": "chmod.octal",
+        "symbolic": "chmod.symbolic",
+        "read": "chmod.read",
+        "write": "chmod.write",
+        "execute": "chmod.execute",
+        "command": "chmod.command"
+      },
+      "copy": "Copiar"
     },
     "barcode-generator": {
       "name": "Generador de Códigos de Barras",
@@ -3370,7 +3825,11 @@
         "2. Un ingeniero de logística crea códigos EAN-13 con checksum automático para etiquetas de envíos internacionales que cumplen con normativas europeas.",
         "3. Un desarrollador de software incluye el generador en una aplicación web para crear códigos Code 128 dinámicos con colores personalizados para clientes industriales.",
         "4. Una biblioteca universitaria implementa códigos Code 39 para catalogar libros con caracteres alfabéticos en sistemas de préstamo automatizados."
-      ]
+      ],
+      "barcode": {
+        "text": "barcode.text",
+        "format": "Formatear"
+      }
     },
     "text-to-speech": {
       "name": "Texto a voz",
@@ -3391,7 +3850,15 @@
         "Un desarrollador de apps móviles prueba la accesibilidad de su interfaz generando respuestas de voz con diferentes géneros vocales",
         "Un investigador de fonética compara formantes vocales sintetizados versus grabaciones reales en un estudio acústico",
         "Una editorial automática convierte libros técnicos en audiolibros con marcadores de capítulo mediante pausas configurables"
-      ]
+      ],
+      "tts": {
+        "placeholder": "Ingrese texto aquí...",
+        "voice": "tts.voice",
+        "rate": "tts.rate",
+        "pitch": "tts.pitch",
+        "speak": "tts.speak",
+        "stop": "tts.stop"
+      }
     },
     "url-parser": {
       "name": "URL Parser",
@@ -3445,7 +3912,13 @@
         "Transformar respuestas de APIs REST (JSON) en feeds XML compatibles con lectores RSS antiguos en una plataforma de noticias.",
         "Generar archivos de metadatos XML para un repositorio digital a partir de datos estructurados en JSON desde una base de datos NoSQL.",
         "Convertir archivos de localización (i18n) de formato JSON a XML para integrarlos en un sistema de gestión de contenido (CMS) que solo acepta XLIFF."
-      ]
+      ],
+      "json": {
+        "invalidJson": "json.invalidJson"
+      },
+      "convert": "Convertir",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "text-wrapper": {
       "name": "Envoltorio de texto",
@@ -3466,7 +3939,17 @@
         "Un escritor de libros electrónicos utiliza el Text Wrapper para formatear el contenido de su libro, asegurando que el texto se vea bien en dispositivos de lectura con diferentes tamaños de pantalla.",
         "Un desarrollador de software necesita preparar un informe technical en un formato de texto plano para un sistema legacy que tiene un límite de 80 caracteres por línea. El Text Wrapper ayuda a ajustar el informe automáticamente.",
         "Un periodista redacta un artículo para un periódico digital y utiliza el Text Wrapper para asegurarse de que el texto se ajuste correctamente a las columnas del diseño web del periódico."
-      ]
+      ],
+      "textWrapper": {
+        "width": "textWrapper.width",
+        "chars": "textWrapper.chars",
+        "placeholder": "Ingrese texto aquí...",
+        "wrap": "textWrapper.wrap"
+      },
+      "input": "Entrada",
+      "output": "Salida",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "csv-to-json": {
       "name": "CSV a JSON",
@@ -3487,7 +3970,21 @@
         "Un analista de datos preparando registros de ventas para visualización en D3.js, convirtiendo CSV con fechas en formato DD/MM/YYYY a JSON con timestamps UNIX.",
         "Un ingeniero IoT procesando datos de sensores que envían información en CSV plano sin encabezados, generando un JSON con claves numéricas para su ingestión en Kafka.",
         "Un científico de datos automatizando la preparación de datasets académicos, convirtiendo archivos CSV con campos multilínea a JSON válido manteniendo la coherencia de tipos."
-      ]
+      ],
+      "csvToJson": {
+        "error": "Error",
+        "delimiterTab": "csvToJson.delimiterTab",
+        "csv": "csvToJson.csv",
+        "csvPlaceholder": "csvToJson.csvPlaceholder",
+        "json": "csvToJson.json"
+      },
+      "csvJson": {
+        "delimiter": "csvJson.delimiter",
+        "hasHeader": "csvJson.hasHeader"
+      },
+      "convert": "Convertir",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "html-entity": {
       "name": "Convertidor de Entidades HTML",
@@ -3508,7 +4005,17 @@
         "Migrar un blog con guiones largos, diéresis y símbolos a un CMS que no soporta UTF‑8: usa 'Solo números' para obtener referencias &#8211; y &#x2013; que cualquier parser renderiza.",
         "Depurar un validador que 'escapa' entidades duplicadas: decodifica un fragmento HTML y comprueba si el número de entidades coincide con los caracteres Unicode resultantes.",
         "Generar un feed RSS con contenido que incluye < y >: codifica el texto en 'Solo nombres' para maximizar legibilidad humana en el XML."
-      ]
+      ],
+      "encode": "encode",
+      "decode": "decode",
+      "input": "Entrada",
+      "output": "Salida",
+      "convert": "Convertir",
+      "copied": "¡Copiado!",
+      "copy": "Copiar",
+      "htmlEntity": {
+        "common": "htmlEntity.common"
+      }
     },
     "number-formatter": {
       "name": "Formateador de Números",
@@ -3529,7 +4036,16 @@
         "Un marketplace e-commerce transforma automáticamente precios de USD a formato japonés (¥1,250) para usuarios de Tokio.",
         "Un investigador ajusta datos científicos a formato francés (1 234,56 %) para un artículo académico publicado en París.",
         "Un desarrollador verifica la renderización de números en sistema numérico tamil (௧,௨௩௪.௫௬) para una aplicación en India."
-      ]
+      ],
+      "numberFormat": {
+        "number": "numberFormat.number",
+        "style": "numberFormat.style",
+        "decimal": "numberFormat.decimal",
+        "currency": "numberFormat.currency",
+        "percent": "numberFormat.percent",
+        "currencyCode": "numberFormat.currencyCode"
+      },
+      "copied": "¡Copiado!"
     },
     "hmac-generator": {
       "name": "Generador de HMAC",
@@ -3550,7 +4066,19 @@
         "Validar payloads entrantes en un servicio SaaS que utiliza webhooks firmados con HMAC-SHA512.",
         "Crear tokens de autenticación efímeros para sesiones de usuarios en una aplicación descentralizada.",
         "Verificar la integridad de archivos de configuración distribuidos en un entorno de microservicios."
-      ]
+      ],
+      "hmac": {
+        "error": "Error",
+        "message": "hmac.message",
+        "messagePlaceholder": "hmac.messagePlaceholder",
+        "secretKey": "hmac.secretKey",
+        "keyPlaceholder": "hmac.keyPlaceholder",
+        "algorithm": "hmac.algorithm"
+      },
+      "generate": "Generar",
+      "result": "Resultado",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "password-strength": {
       "name": "Comprobador de seguridad de contraseña",
@@ -3571,7 +4099,19 @@
         "Un administrador de sistemas analiza credenciales existentes para identificar vulnerabilidades en una migración a LDAP seguro",
         "Un investigador de ciberseguridad compara la efectividad de diferentes políticas de contraseñas en entornos empresariales",
         "Un estudiante de criptografía experimenta con combinaciones de contraseñas para observar cambios en la entropía calculada"
-      ]
+      ],
+      "pwStrength": {
+        "password": "pwStrength.password",
+        "placeholder": "Ingrese texto aquí...",
+        "hide": "pwStrength.hide",
+        "show": "pwStrength.show",
+        "strength": "pwStrength.strength",
+        "score": "pwStrength.score",
+        "length": "pwStrength.length",
+        "chars": "pwStrength.chars",
+        "charTypes": "pwStrength.charTypes",
+        "suggestions": "pwStrength.suggestions"
+      }
     },
     "totp-generator": {
       "name": "Generador TOTP",
@@ -3592,7 +4132,20 @@
         "Depurar un sistema de autenticación OAuth2 en un entorno de desarrollo local aislado",
         "Generar códigos de recuperación para cuentas de criptomonedas en dispositivos offline",
         "Comparar resultados entre algoritmos SHA-1, SHA-256 y SHA-512 en entornos de pruebas de seguridad"
-      ]
+      ],
+      "totp": {
+        "secret": "totp.secret",
+        "secretPlaceholder": "totp.secretPlaceholder",
+        "secretHint": "totp.secretHint",
+        "currentCode": "totp.currentCode",
+        "howItWorks": "totp.howItWorks",
+        "step1": "totp.step1",
+        "step2": "totp.step2",
+        "step3": "totp.step3"
+      },
+      "generate": "Generar",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "user-agent-parser": {
       "name": "Parser de Agente de Usuario",
@@ -3613,7 +4166,17 @@
         "Ejemplo 2: Un administrador de sistemas usa esta herramienta para diagnosticar problemas de acceso a una aplicación web en dispositivos móviles, descubriendo que el error es específico para ciertas versiones de iOS.",
         "Ejemplo 3: Un analista de marketing emplea el User Agent Parser para segmentar a los visitantes de un sitio web según su sistema operativo y dispositivo, lo que permite personalizar campañas publicitarias basadas en el entorno tecnológico del usuario.",
         "Ejemplo 4: Un equipo de soporte técnico utiliza la herramienta para ayudar a los usuarios que experimentan problemas con una aplicación web, identificando rápidamente el navegador y la versión que están utilizando para proporcionar soluciones más precisas."
-      ]
+      ],
+      "uaParser": {
+        "userAgent": "uaParser.userAgent",
+        "placeholder": "Ingrese texto aquí...",
+        "useCurrent": "uaParser.useCurrent",
+        "browser": "uaParser.browser",
+        "version": "uaParser.version",
+        "os": "uaParser.os",
+        "device": "uaParser.device",
+        "engine": "uaParser.engine"
+      }
     },
     "cidr-calculator": {
       "name": "Calculadora CIDR",
@@ -3634,7 +4197,21 @@
         "Un ingeniero DevOps configura grupos de seguridad en AWS al validar rangos IP para subredes privadas y públicas en una VPC CIDR personalizada",
         "Un analista de ciberseguridad identifica el rango de ataque potencial al convertir un bloque CIDR grande (/18) en direcciones IP individuales para escaneo",
         "Un estudiante de certificación CCNA practica cálculos de VLSM al verificar manualmente el número de hosts utilizables en subredes /27 versus /29"
-      ]
+      ],
+      "cidr": {
+        "invalid": "cidr.invalid",
+        "input": "Entrada",
+        "commonPrefixes": "cidr.commonPrefixes",
+        "networkAddress": "cidr.networkAddress",
+        "broadcastAddress": "cidr.broadcastAddress",
+        "firstHost": "cidr.firstHost",
+        "lastHost": "cidr.lastHost",
+        "subnetMask": "cidr.subnetMask",
+        "wildcardMask": "cidr.wildcardMask",
+        "totalHosts": "cidr.totalHosts",
+        "usableHosts": "cidr.usableHosts",
+        "binaryMask": "cidr.binaryMask"
+      }
     },
     "http-header-parser": {
       "name": "Parser de Encabezados HTTP",
@@ -3655,7 +4232,14 @@
         "2. Un estudiante analiza diferencias entre encabezados HTTP/1.0 y HTTP/1.1 al comparar salidas de dos solicitudes idénticas.",
         "3. Un auditor de seguridad detecta un encabezado 'Server' con versión específica, exponiendo información crítica para ataques dirigidos.",
         "4. Un ingeniero de DevOps valida que todos los recursos estáticos incluyan 'Cache-Control' con directivas adecuadas para CDNs."
-      ]
+      ],
+      "httpHeader": {
+        "input": "Entrada",
+        "loadExample": "httpHeader.loadExample",
+        "placeholder": "Ingrese texto aquí...",
+        "parse": "httpHeader.parse",
+        "parsed": "httpHeader.parsed"
+      }
     },
     "percentage-calculator": {
       "name": "Calculadora de Porcentajes",
@@ -3676,7 +4260,21 @@
         "Un estudiante de estadística ajusta datos normalizados para un proyecto académico, convirtiendo valores absolutos a porcentajes relativos respecto al total de la muestra.",
         "Un comerciante aplica un descuento del 22.5% a un producto de $89.99, determinando el precio final con redondeo automático a dos decimales para facturación.",
         "Un ingeniero químico analiza la eficiencia de un proceso al comparar la cantidad de reactivo consumido (12.7g) frente al valor teórico esperado (15.0g), obteniendo la desviación porcentual."
-      ]
+      ],
+      "percent": {
+        "whatIsPercent": "percent.whatIsPercent",
+        "of": "percent.of",
+        "whatPercentIs": "percent.whatPercentIs",
+        "isWhatPercentOf": "percent.isWhatPercentOf",
+        "percentChange": "percent.percentChange",
+        "from": "percent.from",
+        "to": "percent.to",
+        "increaseDecrease": "percent.increaseDecrease",
+        "increase": "percent.increase",
+        "decrease": "percent.decrease",
+        "quickRef": "percent.quickRef"
+      },
+      "copy": "Copiar"
     },
     "statistics-calculator": {
       "name": "Calculadora de Estadísticas",
@@ -3697,7 +4295,29 @@
         "Un analista financiero procesa datos de ventas diarias durante 6 meses para obtener la desviación estándar y evaluar la estabilidad de ingresos.",
         "Un investigador científico introduce datos de temperatura de un experimento en el campo 'Valores Muestrales' para generar un intervalo de confianza al 95%.",
         "Un ingeniero de calidad evalúa el tiempo de respuesta de un servidor mediante el cálculo del rango intercuartílico y detección automática de valores atípicos."
-      ]
+      ],
+      "stats": {
+        "inputLabel": "stats.inputLabel",
+        "inputHint": "stats.inputHint",
+        "varianceType": "stats.varianceType",
+        "population": "stats.population",
+        "sample": "stats.sample",
+        "dataOverview": "stats.dataOverview",
+        "count": "stats.count",
+        "mean": "stats.mean",
+        "median": "stats.median",
+        "mode": "stats.mode",
+        "noMode": "stats.noMode",
+        "sum": "stats.sum",
+        "min": "stats.min",
+        "max": "stats.max",
+        "range": "stats.range",
+        "populationVariance": "stats.populationVariance",
+        "sampleVariance": "stats.sampleVariance",
+        "populationStdDev": "stats.populationStdDev",
+        "sampleStdDev": "stats.sampleStdDev"
+      },
+      "copy": "Copiar"
     },
     "scientific-calculator": {
       "name": "Calculadora Científica",
@@ -3718,7 +4338,13 @@
         "Un estudiante de química determina el pH de una solución con [H+] = 1.5×10⁻³ M aplicando log₁₀(1.5e-3) y corrigiendo el resultado con la función de valor absoluto.",
         "Un físico simula el decaimiento radiactivo mediante la ecuación N(t) = N₀*e^(-λt), ajustando λ para diferentes isótopos y visualizando la curva exponencial en 2D.",
         "Un analista financiero modela el crecimiento de una inversión con interés compuesto usando A = P(1 + r/n)^(nt), comparando escenarios con distintas frecuencias de capitalización."
-      ]
+      ],
+      "sci": {
+        "error": "Error",
+        "angleMode": "sci.angleMode",
+        "quickFormulas": "sci.quickFormulas"
+      },
+      "copy": "Copiar"
     },
     "text-sorter": {
       "name": "Ordenador de Texto",
@@ -3739,7 +4365,35 @@
         "Clasificar logs del sistema por timestamp ISO 8601 usando orden numérico descendente",
         "Normalizar listados de correos electrónicos eliminando espacios extras antes de importar a CRM",
         "Organizar catálogos de productos por SKU numérico con soporte para ceros iniciales"
-      ]
+      ],
+      "sorter": {
+        "sortType": "sorter.sortType",
+        "alphabetical": "sorter.alphabetical",
+        "numerical": "sorter.numerical",
+        "natural": "sorter.natural",
+        "byLength": "sorter.byLength",
+        "order": "sorter.order",
+        "ascending": "sorter.ascending",
+        "descending": "sorter.descending",
+        "caseSensitive": "sorter.caseSensitive",
+        "trimLines": "sorter.trimLines",
+        "removeEmpty": "sorter.removeEmpty",
+        "removeDuplicates": "sorter.removeDuplicates",
+        "sort": "sorter.sort",
+        "loadExample": "sorter.loadExample",
+        "lines": "sorter.lines",
+        "placeholder": "Ingrese texto aquí...",
+        "sortTypes": "sorter.sortTypes",
+        "alphabeticalDesc": "sorter.alphabeticalDesc",
+        "numericalDesc": "sorter.numericalDesc",
+        "naturalDesc": "sorter.naturalDesc",
+        "byLengthDesc": "sorter.byLengthDesc"
+      },
+      "clear": "Limpiar",
+      "input": "Entrada",
+      "output": "Salida",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "text-extractor": {
       "name": "Extractador de Texto",
@@ -3760,7 +4414,30 @@
         "Un analista de marketing extrae correos electrónicos de comentarios en redes sociales para construir una lista de clientes potenciales.",
         "Un investigador de ciberseguridad procesa documentos PDF en busca de credenciales expuestas accidentalmente en textos no estructurados.",
         "Un desarrollador limpia datos de contacto migrando registros antiguos, normalizando números de teléfono según formato internacional E.164."
-      ]
+      ],
+      "extractor": {
+        "email": "extractor.email",
+        "url": "extractor.url",
+        "phone": "extractor.phone",
+        "ip": "extractor.ip",
+        "number": "extractor.number",
+        "hashtag": "extractor.hashtag",
+        "mention": "extractor.mention",
+        "type": "extractor.type",
+        "extract": "extractor.extract",
+        "loadExample": "extractor.loadExample",
+        "placeholder": "Ingrese texto aquí...",
+        "found": "extractor.found",
+        "copyAll": "extractor.copyAll",
+        "noResults": "extractor.noResults",
+        "supportedTypes": "extractor.supportedTypes"
+      },
+      "all": "all",
+      "clear": "Limpiar",
+      "input": "Entrada",
+      "result": "Resultado",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "emoji-picker": {
       "name": "Selector de Emoji",
@@ -3781,7 +4458,20 @@
         "Una marca de viajes agrega consistencia visual a sus stories de Instagram mediante búsqueda por categorías como 'Naturaleza' y 'Transporte'.",
         "Un diseñador de interfaces prueba la legibilidad de emojis en distintos fondos usando la función de copia en HTML entities para pruebas en entorno de desarrollo.",
         "Un profesor crea preguntas interactivas para Kahoot! utilizando la búsqueda por términos y el historial reciente para mantener un estilo visual uniforme."
-      ]
+      ],
+      "emoji": {
+        "searchPlaceholder": "emoji.searchPlaceholder",
+        "recent": "emoji.recent",
+        "clickToCopy": "emoji.clickToCopy",
+        "emojis": "emoji.emojis",
+        "noResults": "emoji.noResults",
+        "howToUse": "emoji.howToUse",
+        "tip1": "emoji.tip1",
+        "tip2": "emoji.tip2",
+        "tip3": "emoji.tip3"
+      },
+      "all": "all",
+      "copied": "¡Copiado!"
     },
     "json-to-sql": {
       "name": "JSON a SQL",
@@ -3840,7 +4530,11 @@
       "compress": "Comprimir",
       "originalSize": "Tamaño original",
       "compressedSize": "Tamaño comprimido",
-      "reduction": "Reducción"
+      "reduction": "Reducción",
+      "clear": "Limpiar",
+      "dropzone": "dropzone",
+      "original": "original",
+      "download": "Descargar"
     },
     "image-converter": {
       "name": "Convertidor de Formatos de Imágenes",
@@ -3870,7 +4564,12 @@
       "formatInfo": "Info del formato",
       "pngDesc": "Compresión sin pérdida, soporta transparencia",
       "jpegDesc": "Compresión con pérdida, tamaño menor",
-      "webpDesc": "Formato moderno, mejor compresión"
+      "webpDesc": "Formato moderno, mejor compresión",
+      "clear": "Limpiar",
+      "dropzone": "dropzone",
+      "original": "original",
+      "convert": "Convertir",
+      "download": "Descargar"
     },
     "favicon-generator": {
       "name": "Generador de Favicon",
@@ -3897,7 +4596,13 @@
       "processing": "Procesando...",
       "generated": "Generado",
       "downloadAll": "Descargar todo",
-      "htmlCode": "Código HTML"
+      "htmlCode": "Código HTML",
+      "clear": "Limpiar",
+      "dropzone": "dropzone",
+      "original": "original",
+      "generate": "Generar",
+      "download": "Descargar",
+      "copy": "Copiar"
     },
     "image-cropper": {
       "name": "Cortador de Imágenes",
@@ -3924,7 +4629,12 @@
       "changeImage": "Cambiar imagen",
       "preview": "Vista previa",
       "cropFirst": "Primero recorta una imagen",
-      "crop": "Recortar"
+      "crop": "Recortar",
+      "clear": "Limpiar",
+      "dropzone": "dropzone",
+      "width": "width",
+      "height": "height",
+      "download": "Descargar"
     },
     "gitignore-generator": {
       "name": "Generador de .gitignore",
@@ -4014,7 +4724,10 @@
       "scripts": "Scripts",
       "scriptName": "Nombre del script",
       "scriptCommand": "Comando",
-      "commonScripts": "Scripts comunes"
+      "commonScripts": "Scripts comunes",
+      "generate": "Generar",
+      "copy": "Copiar",
+      "download": "Descargar"
     },
     "json-minifier": {
       "name": "Minificador de JSON",
@@ -4036,7 +4749,18 @@
         "Preparar un archivo JSON de traducción para producción, eliminando comentarios internos de desarrollo.",
         "Minificar datos almacenados en localStorage del navegador para mejorar el rendimiento en aplicaciones SPAs."
       ],
-      "inputPlaceholder": "Escribe aquí el texto..."
+      "inputPlaceholder": "Escribe aquí el texto...",
+      "json": {
+        "invalidJson": "json.invalidJson"
+      },
+      "input": "Entrada",
+      "minify": "minify",
+      "beautify": "beautify",
+      "clear": "Limpiar",
+      "output": "Salida",
+      "copied": "¡Copiado!",
+      "copy": "Copiar",
+      "outputPlaceholder": "El resultado aparecerá aquí..."
     },
     "timezone-converter": {
       "name": "Convertidor de zona horaria",
@@ -4193,7 +4917,38 @@
         "Un comercio electrónico genera Twitter Cards para productos nuevos, permitiendo previews en tweets con precios y disponibilidad",
         "Un freelance corrige errores de meta description en un sitio cliente, optimizando fragmentos para mejorar CTR en resultados de búsqueda",
         "Un equipo de marketing configura metaetiquetas de autoría para campañas de email marketing, garantizando visualización correcta en clientes de correo"
-      ]
+      ],
+      "metaTagGenerator": {
+        "pageTitle": "metaTagGenerator.pageTitle",
+        "pageTitlePlaceholder": "metaTagGenerator.pageTitlePlaceholder",
+        "author": "metaTagGenerator.author",
+        "authorPlaceholder": "metaTagGenerator.authorPlaceholder",
+        "description": "metaTagGenerator.description",
+        "descriptionPlaceholder": "metaTagGenerator.descriptionPlaceholder",
+        "characters": "metaTagGenerator.characters",
+        "keywords": "metaTagGenerator.keywords",
+        "keywordsPlaceholder": "metaTagGenerator.keywordsPlaceholder",
+        "ogImageUrl": "metaTagGenerator.ogImageUrl",
+        "ogImageUrlPlaceholder": "metaTagGenerator.ogImageUrlPlaceholder",
+        "pageUrl": "metaTagGenerator.pageUrl",
+        "pageUrlPlaceholder": "metaTagGenerator.pageUrlPlaceholder",
+        "twitterCardType": "metaTagGenerator.twitterCardType",
+        "twitterCardSummary": "metaTagGenerator.twitterCardSummary",
+        "twitterCardSummaryLargeImage": "metaTagGenerator.twitterCardSummaryLargeImage",
+        "twitterCardApp": "metaTagGenerator.twitterCardApp",
+        "twitterCardPlayer": "metaTagGenerator.twitterCardPlayer",
+        "twitterUsername": "metaTagGenerator.twitterUsername",
+        "twitterUsernamePlaceholder": "metaTagGenerator.twitterUsernamePlaceholder",
+        "robots": "metaTagGenerator.robots",
+        "robotsIndexFollow": "metaTagGenerator.robotsIndexFollow",
+        "robotsNoindexFollow": "metaTagGenerator.robotsNoindexFollow",
+        "robotsIndexNofollow": "metaTagGenerator.robotsIndexNofollow",
+        "robotsNoindexNofollow": "metaTagGenerator.robotsNoindexNofollow",
+        "viewport": "metaTagGenerator.viewport",
+        "generatedMetaTags": "metaTagGenerator.generatedMetaTags"
+      },
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "robots-txt-generator": {
       "name": "Generador de robots.txt",
@@ -4252,7 +5007,46 @@
         "Ejemplo 2: Un equipo de marketing digital está lanzando una campaña de promoción para un nuevo producto. Quieren asegurarse de que todas las páginas de aterrizaje se muestren de manera consistente en diferentes plataformas. Open Graph Preview les permite revisar y optimizar los metadatos OG para maximizar la engagement.",
         "Ejemplo 3: Un diseñador web está trabajando en la rediseño de un sitio e-commerce. Durante el proceso, utiliza Open Graph Preview para verificar que las tarjetas de compartir de los productos sigan siendo atractivas y funcionales, incluso después de los cambios en el diseño y la estructura del sitio.",
         "Ejemplo 4: Un administrador de contenidos de una organización sin fines de lucro necesita compartir regularmente actualizaciones y campañas de recaudación de fondos en redes sociales. Open Graph Preview le ayuda a asegurarse de que las imágenes y descripciones sean apropiadas y generen el impacto deseado."
-      ]
+      ],
+      "openGraphPreview": {
+        "defaultTitle": "openGraphPreview.defaultTitle",
+        "defaultDescription": "openGraphPreview.defaultDescription",
+        "defaultSiteName": "openGraphPreview.defaultSiteName",
+        "fetchError": "openGraphPreview.fetchError",
+        "imageLoadError": "openGraphPreview.imageLoadError",
+        "modeFetch": "openGraphPreview.modeFetch",
+        "modeManual": "openGraphPreview.modeManual",
+        "fetchUrlLabel": "openGraphPreview.fetchUrlLabel",
+        "fetching": "openGraphPreview.fetching",
+        "fetchButton": "openGraphPreview.fetchButton",
+        "title": "openGraphPreview.title",
+        "titlePlaceholder": "openGraphPreview.titlePlaceholder",
+        "siteName": "openGraphPreview.siteName",
+        "siteNamePlaceholder": "openGraphPreview.siteNamePlaceholder",
+        "description": "openGraphPreview.description",
+        "descriptionPlaceholder": "openGraphPreview.descriptionPlaceholder",
+        "imageUrl": "openGraphPreview.imageUrl",
+        "imageUrlPlaceholder": "openGraphPreview.imageUrlPlaceholder",
+        "pageUrl": "openGraphPreview.pageUrl",
+        "pageUrlPlaceholder": "openGraphPreview.pageUrlPlaceholder",
+        "platform": {
+          "facebook": "openGraphPreview.platform.facebook",
+          "twitter": "openGraphPreview.platform.twitter",
+          "linkedin": "openGraphPreview.platform.linkedin"
+        },
+        "preview": "openGraphPreview.preview",
+        "generatedCode": "openGraphPreview.generatedCode",
+        "recommendations": {
+          "title": "openGraphPreview.recommendations.title",
+          "imageSize": "openGraphPreview.recommendations.imageSize",
+          "titleLength": "openGraphPreview.recommendations.titleLength",
+          "descriptionLength": "openGraphPreview.recommendations.descriptionLength",
+          "highQuality": "openGraphPreview.recommendations.highQuality",
+          "testDebugger": "openGraphPreview.recommendations.testDebugger"
+        }
+      },
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "css-grid-generator": {
       "name": "Generador de cuadrícula CSS",
@@ -4309,7 +5103,42 @@
         "Diseñar una galería de imágenes con altura variable pero alineación visual uniforme mediante align-items: stretch",
         "Implementar un formulario con campos alineados verticalmente en dispositivos móviles usando flex-direction: column",
         "Construir una cuadrícula de tarjetas con espaciado consistente y ajuste automático en diferentes anchos de pantalla mediante flex-wrap y gap"
-      ]
+      ],
+      "cssFlexboxGenerator": {
+        "direction": "cssFlexboxGenerator.direction",
+        "directionRow": "cssFlexboxGenerator.directionRow",
+        "directionRowReverse": "cssFlexboxGenerator.directionRowReverse",
+        "directionColumn": "cssFlexboxGenerator.directionColumn",
+        "directionColumnReverse": "cssFlexboxGenerator.directionColumnReverse",
+        "justifyContent": "cssFlexboxGenerator.justifyContent",
+        "justifyFlexStart": "cssFlexboxGenerator.justifyFlexStart",
+        "justifyFlexEnd": "cssFlexboxGenerator.justifyFlexEnd",
+        "justifyCenter": "cssFlexboxGenerator.justifyCenter",
+        "justifySpaceBetween": "cssFlexboxGenerator.justifySpaceBetween",
+        "justifySpaceAround": "cssFlexboxGenerator.justifySpaceAround",
+        "justifySpaceEvenly": "cssFlexboxGenerator.justifySpaceEvenly",
+        "alignItems": "cssFlexboxGenerator.alignItems",
+        "alignStretch": "cssFlexboxGenerator.alignStretch",
+        "alignFlexStart": "cssFlexboxGenerator.alignFlexStart",
+        "alignFlexEnd": "cssFlexboxGenerator.alignFlexEnd",
+        "alignCenter": "cssFlexboxGenerator.alignCenter",
+        "alignBaseline": "cssFlexboxGenerator.alignBaseline",
+        "flexWrap": "cssFlexboxGenerator.flexWrap",
+        "wrapNoWrap": "cssFlexboxGenerator.wrapNoWrap",
+        "wrapWrap": "cssFlexboxGenerator.wrapWrap",
+        "wrapWrapReverse": "cssFlexboxGenerator.wrapWrapReverse",
+        "gap": "cssFlexboxGenerator.gap",
+        "items": "cssFlexboxGenerator.items",
+        "preview": "cssFlexboxGenerator.preview",
+        "generatedCss": "cssFlexboxGenerator.generatedCss",
+        "quickReference": "cssFlexboxGenerator.quickReference",
+        "quickReferenceJustify": "cssFlexboxGenerator.quickReferenceJustify",
+        "quickReferenceAlign": "cssFlexboxGenerator.quickReferenceAlign",
+        "quickReferenceDirection": "cssFlexboxGenerator.quickReferenceDirection",
+        "quickReferenceWrap": "cssFlexboxGenerator.quickReferenceWrap"
+      },
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "jwt-generator": {
       "name": "Generador de JWT",
@@ -4330,7 +5159,29 @@
         "Crear tokens expirados para validar políticas de renovación de sesiones en una aplicación móvil.",
         "Generar credenciales para demostraciones de seguridad mostrando diferencias entre firma simétrica y asimétrica.",
         "Probar vulnerabilidades de algoritmos débiles al seleccionar 'None' como método de firma en entornos de capacitación."
-      ]
+      ],
+      "jwt": {
+        "invalidPayload": "jwt.invalidPayload",
+        "error": "Error",
+        "algorithm": "jwt.algorithm",
+        "secretKey": "jwt.secretKey",
+        "secretPlaceholder": "jwt.secretPlaceholder",
+        "payload": "jwt.payload",
+        "generate": "Generar",
+        "generatedToken": "jwt.generatedToken",
+        "commonClaims": "jwt.commonClaims",
+        "claims": {
+          "iss": "jwt.claims.iss",
+          "sub": "jwt.claims.sub",
+          "aud": "jwt.claims.aud",
+          "exp": "jwt.claims.exp",
+          "nbf": "jwt.claims.nbf",
+          "iat": "jwt.claims.iat",
+          "jti": "jwt.claims.jti"
+        }
+      },
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "cron-explainer": {
       "name": "Explicador de Expresiones Cron",
@@ -5232,7 +6083,20 @@
         "Implementar un efecto de hover en botones que transforma un rectángulo en un hexágono mediante animación CSS.",
         "Diseñar un avatar circular con bordes recortados asimétricos usando combinaciones de `circle()` y `polygon()`. ",
         "Generar un banner adaptable que cambia de forma en móviles (ej: de rectángulo a triángulo invertido) con media queries integradas."
-      ]
+      ],
+      "clipPath": {
+        "preview": "clipPath.preview",
+        "presets": "clipPath.presets",
+        "value": "clipPath.value",
+        "syntax": "clipPath.syntax",
+        "circleDesc": "clipPath.circleDesc",
+        "ellipseDesc": "clipPath.ellipseDesc",
+        "polygonDesc": "clipPath.polygonDesc",
+        "insetDesc": "clipPath.insetDesc"
+      },
+      "output": "Salida",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "uuid-validator": {
       "name": "Validador UUID",
@@ -5253,7 +6117,20 @@
         "Un QA engineer valida que los tokens de autenticación OIDC contengan UUIDv4 correctamente formateados según la especificación OpenID",
         "Un arquitecto de sistemas distribuidos confirma que los identificadores de transacción siguen el estándar UUIDv1 con marca de tiempo válida",
         "Un especialista en ciberseguridad analiza logs para detectar UUIDs maliciosamente manipulados que intenten explotar vulnerabilidades en parsers de UUID"
-      ]
+      ],
+      "uuidValidator": {
+        "input": "Entrada",
+        "placeholder": "Ingrese texto aquí...",
+        "validate": "uuidValidator.validate",
+        "valid": "uuidValidator.valid",
+        "invalid": "uuidValidator.invalid",
+        "invalidFormat": "uuidValidator.invalidFormat",
+        "versions": "uuidValidator.versions",
+        "v1Desc": "uuidValidator.v1Desc",
+        "v4Desc": "uuidValidator.v4Desc",
+        "v5Desc": "uuidValidator.v5Desc"
+      },
+      "clear": "Limpiar"
     },
     "text-hash-comparator": {
       "name": "Comparador de hash de texto",
@@ -5274,7 +6151,16 @@
         "Comparar contraseñas hasheadas en una base de datos con valores de referencia para detectar brechas de seguridad.",
         "Validar consistencia de logs digitales en investigaciones forenses mediante comparación de huellas hash.",
         "Comprobar respuestas estandarizadas en APIs REST asegurando que el contenido no haya sido alterado durante la transmisión."
-      ]
+      ],
+      "hashCompare": {
+        "text1": "hashCompare.text1",
+        "placeholder": "Ingrese texto aquí...",
+        "text2": "hashCompare.text2",
+        "comparing": "hashCompare.comparing",
+        "compare": "hashCompare.compare",
+        "match": "hashCompare.match",
+        "noMatch": "hashCompare.noMatch"
+      }
     },
     "json-path-finder": {
       "name": "Buscador de Rutas JSON",
@@ -5295,7 +6181,19 @@
         "Depurar un JSON mal formado devuelto por un microservicio, identificando el token inválido exacto",
         "Validar que todos los archivos de configuración de un sistema contienen la ruta '$.database.timeout' definida",
         "Transformar un documento XML a JSON manteniendo equivalencia de rutas mediante mapeo XPath a notación punto"
-      ]
+      ],
+      "json": {
+        "invalidJson": "json.invalidJson"
+      },
+      "jsonPathFinder": {
+        "loadSample": "jsonPathFinder.loadSample",
+        "placeholder": "Ingrese texto aquí...",
+        "analyze": "jsonPathFinder.analyze",
+        "search": "jsonPathFinder.search",
+        "paths": "jsonPathFinder.paths"
+      },
+      "input": "Entrada",
+      "copy": "Copiar"
     },
     "canvas-drawing": {
       "name": "Dibujo en Canvas",
@@ -5316,7 +6214,14 @@
         "Corrección precisa de imágenes PNG para eliminar artefactos mediante selección de áreas específicas",
         "Creación de máscaras de recorte para efectos visuales en aplicaciones web usando datos alfa",
         "Entrenamiento de modelos de reconocimiento de patrones con datasets de dibujos vectoriales normalizados"
-      ]
+      ],
+      "canvas": {
+        "size": "canvas.size",
+        "brush": "canvas.brush",
+        "eraser": "canvas.eraser"
+      },
+      "clear": "Limpiar",
+      "download": "Descargar"
     },
     "json-escape": {
       "name": "Escape y Desescape de JSON",
@@ -5337,7 +6242,17 @@
         "Ejemplo 2: Un ingeniero de front-end está integrando una cadena JSON en un script HTML y necesita asegurarse de que no se produzcan problemas de parsing debido a caracteres especiales. Utiliza la herramienta para escapar la cadena antes de insertarla en el script.",
         "Ejemplo 3: Un administrador de bases de datos recibe un archivo JSON que necesita ser almacenado en una tabla. Antes de importar los datos, usa la herramienta para desescapar la cadena JSON y asegurarse de que se almacene correctamente en la base de datos.",
         "Ejemplo 4: Un desarrollador de aplicaciones móviles está depurando un problema donde los datos JSON enviados desde un servidor están llegando con caracteres escapados incorrectamente. Usa la herramienta para desescapar la cadena JSON y verificar si los datos son correctos antes de proceder con la depuración."
-      ]
+      ],
+      "errorProcessing": "errorProcessing",
+      "input": "Entrada",
+      "jsonEscape": {
+        "placeholder": "Ingrese texto aquí...",
+        "escape": "jsonEscape.escape",
+        "unescape": "jsonEscape.unescape"
+      },
+      "output": "Salida",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "css-animation-generator": {
       "name": "Generador de Animaciones CSS",
@@ -5358,7 +6273,17 @@
         "Diseñar un spinner de carga personalizado con rotación progresiva y degradado de color para una dashboard",
         "Implementar un menú hamburguesa que se transforme en X con animación smooth en dispositivos móviles",
         "Generar una secuencia de parallax scrolling para una página de portafolio con elementos que aparecen gradualmente"
-      ]
+      ],
+      "cssAnimation": {
+        "preset": "cssAnimation.preset",
+        "duration": "cssAnimation.duration",
+        "timing": "cssAnimation.timing",
+        "iteration": "cssAnimation.iteration",
+        "preview": "cssAnimation.preview"
+      },
+      "output": "Salida",
+      "copied": "¡Copiado!",
+      "copy": "Copiar"
     },
     "text-case-counter": {
       "name": "Contador de Mayúsculas y Minúsculas",
@@ -5379,7 +6304,19 @@
         "Un lingüista computacional estudia la proporción de mayúsculas en títulos de artículos científicos para entrenar modelos de generación automática de resúmenes.",
         "Un ingeniero de datos valida la consistencia de registros en un dataset de clientes, detectando anomalías como nombres completamente en mayúsculas o sin capitalización adecuada.",
         "Un diseñador de interfaces evalúa la distribución de casos en mensajes de soporte para optimizar algoritmos de detección automática de gritos (shouting detection) en chatbots."
-      ]
+      ],
+      "input": "Entrada",
+      "caseCounter": {
+        "placeholder": "Ingrese texto aquí...",
+        "total": "caseCounter.total",
+        "letters": "caseCounter.letters",
+        "uppercase": "caseCounter.uppercase",
+        "lowercase": "caseCounter.lowercase",
+        "digits": "caseCounter.digits",
+        "spaces": "caseCounter.spaces",
+        "special": "caseCounter.special",
+        "ratio": "caseCounter.ratio"
+      }
     },
     "dns-lookup": {
       "name": "DNS Lookup",
@@ -5400,7 +6337,11 @@
         "Diagnosticar fallos en envío de correos electrónicos comprobando la configuración de registros MX y SPF.",
         "Analizar diferencias en respuestas DNS entre servidores públicos para detectar posibles problemas de caché.",
         "Validar implementación correcta de DNSSEC revisando la presencia de registros DS y RRSIG en el dominio."
-      ]
+      ],
+      "dnsLookup": {
+        "ipError": "dnsLookup.ipError",
+        "error": "Error"
+      }
     },
     "image-resizer": {
       "name": "Redimensionador de Imágenes",
@@ -5421,7 +6362,18 @@
         "Un fotógrafo profesional debe subir sus imágenes a una plataforma de redes sociales que requiere un tamaño específico. Con Image Resizer, puede ajustar el tamaño de las imágenes a las dimensiones requeridas sin perder calidad, y descargarlas directamente para subirlas.",
         "Un desarrollador de software está creando un juego para dispositivos móviles y necesita optimizar las imágenes de los personajes y elementos del juego. Usa Image Resizer para reducir el tamaño de las imágenes sin comprometer la calidad, mejorando así el rendimiento del juego en dispositivos con recursos limitados.",
         "Un bloguero necesita preparar imágenes para una entrada de blog, y quiere asegurarse de que las imágenes se carguen rápidamente en la página. Con Image Resizer, puede ajustar el tamaño y la calidad de las imágenes para que sean óptimas para la web, mejorando la experiencia del usuario."
-      ]
+      ],
+      "imageResizer": {
+        "dropzone": "imageResizer.dropzone",
+        "original": "imageResizer.original",
+        "width": "imageResizer.width",
+        "height": "imageResizer.height",
+        "lockRatio": "imageResizer.lockRatio",
+        "resize": "imageResizer.resize",
+        "resized": "imageResizer.resized"
+      },
+      "clear": "Limpiar",
+      "download": "Descargar"
     },
     "ssl-checker": {
       "name": "Verificador de Certificados SSL",
@@ -5605,7 +6557,23 @@
         "Un analista de seguridad compara puertos abiertos en un servidor web contra la lista de servicios bien conocidos para priorizar escaneos de vulnerabilidades en puertos no estándar.",
         "Un desarrollador de aplicaciones cloud revisa las asignaciones de puertos dinámicos (49152-65535) para evitar conflictos al desplegar microservicios en contenedores.",
         "Un estudiante de ciberseguridad estudia la correlación entre puertos registrados (1024-49151) y sus servicios asociados para preparar el examen de certificación CCNA."
-      ]
+      ],
+      "note": "note",
+      "searchPorts": "searchPorts",
+      "searchPlaceholder": "searchPlaceholder",
+      "lookupPort": "lookupPort",
+      "portPlaceholder": "portPlaceholder",
+      "port": "port",
+      "service": "service",
+      "descriptionLabel": "descriptionLabel",
+      "unknownPort": "unknownPort",
+      "invalidPort": "invalidPort",
+      "commonPorts": "commonPorts",
+      "noResults": "noResults",
+      "portRanges": "portRanges",
+      "wellKnown": "wellKnown",
+      "registered": "registered",
+      "dynamic": "dynamic"
     },
     "privacy-policy-generator": {
       "name": "Generador de Política de Privacidad",
@@ -5626,7 +6594,29 @@
         "Una aplicación de salud móvil que procesa datos médicos sensibles y necesita cumplir HIPAA y GDPR simultáneamente.",
         "Un blog que utiliza Google Analytics y necesita cláusulas específicas para cookies de terceros conforme al ePrivacy Directive.",
         "Una plataforma SaaS que implementa blockchain para verificación de identidad y requiere anexos técnicos sobre criptografía de clave pública."
-      ]
+      ],
+      "privacyPolicyGenerator": {
+        "websiteName": "privacyPolicyGenerator.websiteName",
+        "websiteNamePlaceholder": "privacyPolicyGenerator.websiteNamePlaceholder",
+        "websiteUrl": "privacyPolicyGenerator.websiteUrl",
+        "websiteUrlPlaceholder": "privacyPolicyGenerator.websiteUrlPlaceholder",
+        "companyName": "privacyPolicyGenerator.companyName",
+        "companyNamePlaceholder": "privacyPolicyGenerator.companyNamePlaceholder",
+        "contactEmail": "privacyPolicyGenerator.contactEmail",
+        "contactEmailPlaceholder": "privacyPolicyGenerator.contactEmailPlaceholder",
+        "featuresTitle": "privacyPolicyGenerator.featuresTitle",
+        "features": {
+          "collectsPersonalData": "privacyPolicyGenerator.features.collectsPersonalData",
+          "usesCookies": "privacyPolicyGenerator.features.usesCookies",
+          "usesAnalytics": "privacyPolicyGenerator.features.usesAnalytics",
+          "usesAds": "privacyPolicyGenerator.features.usesAds",
+          "allowsUserAccounts": "privacyPolicyGenerator.features.allowsUserAccounts",
+          "sellsData": "privacyPolicyGenerator.features.sellsData"
+        },
+        "generate": "Generar",
+        "copyToClipboard": "privacyPolicyGenerator.copyToClipboard",
+        "generatedOutput": "privacyPolicyGenerator.generatedOutput"
+      }
     },
     "terms-generator": {
       "name": "Generador de términos de servicio",
@@ -5647,7 +6637,28 @@
         "Un desarrollador indie crea condiciones de uso para un juego en Early Access con políticas de beta testing y limitación de responsabilidad",
         "Un marketplace B2B define términos contractuales con cláusulas de confidencialidad (NDA) y jurisdicción específica para múltiples países",
         "Un creador de cursos en línea implementa políticas de suscripción recurrente y términos de cancelación automática en su plataforma educativa"
-      ]
+      ],
+      "termsGenerator": {
+        "websiteName": "termsGenerator.websiteName",
+        "websiteNamePlaceholder": "termsGenerator.websiteNamePlaceholder",
+        "websiteUrl": "termsGenerator.websiteUrl",
+        "websiteUrlPlaceholder": "termsGenerator.websiteUrlPlaceholder",
+        "companyName": "termsGenerator.companyName",
+        "companyNamePlaceholder": "termsGenerator.companyNamePlaceholder",
+        "contactEmail": "termsGenerator.contactEmail",
+        "contactEmailPlaceholder": "termsGenerator.contactEmailPlaceholder",
+        "governingLawCountry": "termsGenerator.governingLawCountry",
+        "governingLawCountryPlaceholder": "termsGenerator.governingLawCountryPlaceholder",
+        "featuresTitle": "termsGenerator.featuresTitle",
+        "features": {
+          "allowsUserContent": "termsGenerator.features.allowsUserContent",
+          "hasSubscription": "termsGenerator.features.hasSubscription",
+          "hasRefundPolicy": "termsGenerator.features.hasRefundPolicy"
+        },
+        "generate": "Generar",
+        "copyToClipboard": "termsGenerator.copyToClipboard",
+        "generatedOutput": "termsGenerator.generatedOutput"
+      }
     },
     "cookie-policy-generator": {
       "name": "Generador de Política de Cookies",
@@ -5728,7 +6739,24 @@
         "Un analista de datos normaliza archivos de log delimitados por tabulaciones provenientes de servidores Linux, convirtiéndolos a formato JSON para procesamiento posterior.",
         "Un científico de datos identifica y corrige inconsistencias en un dataset de entrenamiento de machine learning donde ciertas filas contienen campos faltantes.",
         "Un ingeniero DevOps valida el formato de un archivo CSV exportado desde un contenedor Docker antes de integrarlo en un pipeline de CI/CD automatizado."
-      ]
+      ],
+      "csvViewer": {
+        "defaultInput": "csvViewer.defaultInput",
+        "delimiterComma": "csvViewer.delimiterComma",
+        "delimiterSemicolon": "csvViewer.delimiterSemicolon",
+        "delimiterTab": "csvViewer.delimiterTab",
+        "delimiterPipe": "csvViewer.delimiterPipe",
+        "downloadCsv": "csvViewer.downloadCsv",
+        "csvInput": "csvViewer.csvInput",
+        "csvPlaceholder": "csvViewer.csvPlaceholder",
+        "tablePreview": "csvViewer.tablePreview",
+        "noData": "csvViewer.noData",
+        "tip": "csvViewer.tip"
+      },
+      "csvJson": {
+        "delimiter": "csvJson.delimiter",
+        "hasHeader": "csvJson.hasHeader"
+      }
     },
     "htaccess-generator": {
       "name": "Generador de .htaccess",
@@ -5891,7 +6919,31 @@
         "Un e-commerce añade etiquetas Open Graph a una página de producto nuevo, incluyendo múltiples imágenes y el tipo 'product' para mejorar su visualización en Facebook Ads.",
         "Un desarrollador corrige errores de previsualización en una landing page al generar etiquetas og:image con dimensiones específicas que cumplen las recomendaciones de Twitter Cards.",
         "Un medio de comunicación internacional define locales alternativos (es-ES, fr-FR) en sus artículos para que las redes sociales muestren automáticamente la versión traducida adecuada."
-      ]
+      ],
+      "openGraphGenerator": {
+        "siteTitle": "openGraphGenerator.siteTitle",
+        "siteTitlePlaceholder": "openGraphGenerator.siteTitlePlaceholder",
+        "siteDescription": "openGraphGenerator.siteDescription",
+        "siteDescriptionPlaceholder": "openGraphGenerator.siteDescriptionPlaceholder",
+        "url": "openGraphGenerator.url",
+        "urlPlaceholder": "openGraphGenerator.urlPlaceholder",
+        "imageUrl": "openGraphGenerator.imageUrl",
+        "imageUrlPlaceholder": "openGraphGenerator.imageUrlPlaceholder",
+        "siteName": "openGraphGenerator.siteName",
+        "siteNamePlaceholder": "openGraphGenerator.siteNamePlaceholder",
+        "type": "openGraphGenerator.type",
+        "typeWebsite": "openGraphGenerator.typeWebsite",
+        "typeArticle": "openGraphGenerator.typeArticle",
+        "typeProfile": "openGraphGenerator.typeProfile",
+        "typeVideo": "openGraphGenerator.typeVideo",
+        "typeMusic": "openGraphGenerator.typeMusic",
+        "preview": "openGraphGenerator.preview",
+        "ogPreviewAlt": "openGraphGenerator.ogPreviewAlt",
+        "noImage": "openGraphGenerator.noImage",
+        "previewTitleFallback": "openGraphGenerator.previewTitleFallback",
+        "previewDescriptionFallback": "openGraphGenerator.previewDescriptionFallback",
+        "generatedHtml": "openGraphGenerator.generatedHtml"
+      }
     },
     "twitter-card-generator": {
       "name": "Generador de tarjetas de Twitter",
@@ -5912,7 +6964,31 @@
         "Ejemplo 2: Un desarrollador de software lanza una nueva aplicación y necesita promocionarla en Twitter. Utiliza la opción 'App Card' del generador para incluir detalles específicos sobre la app, como el nombre, la descripción, la URL de descarga y una captura de pantalla atractiva.",
         "Ejemplo 3: Una empresa de música lanza un nuevo video musical y quiere compartirlo en Twitter. Usa el Generador de Tarjetas de Twitter para crear una tarjeta de tipo 'Player' que permita a los usuarios reproducir el video directamente desde el tweet, sin necesidad de salir de la plataforma.",
         "Ejemplo 4: Un portal de noticias desea mejorar la apariencia de sus enlaces compartidos en Twitter. Utiliza el generador para crear tarjetas de resumen con imágenes grandes, incluyendo el título de la noticia, una breve descripción y el logo del sitio web, para aumentar la visibilidad y el clic-through rate (CTR)."
-      ]
+      ],
+      "twitterCardGenerator": {
+        "cardType": "twitterCardGenerator.cardType",
+        "cardSummary": "twitterCardGenerator.cardSummary",
+        "cardSummaryLargeImage": "twitterCardGenerator.cardSummaryLargeImage",
+        "cardApp": "twitterCardGenerator.cardApp",
+        "cardPlayer": "twitterCardGenerator.cardPlayer",
+        "title": "twitterCardGenerator.title",
+        "titlePlaceholder": "twitterCardGenerator.titlePlaceholder",
+        "description": "twitterCardGenerator.description",
+        "descriptionPlaceholder": "twitterCardGenerator.descriptionPlaceholder",
+        "imageUrl": "twitterCardGenerator.imageUrl",
+        "imageUrlPlaceholder": "twitterCardGenerator.imageUrlPlaceholder",
+        "imageAltText": "twitterCardGenerator.imageAltText",
+        "imageAltTextPlaceholder": "twitterCardGenerator.imageAltTextPlaceholder",
+        "siteUsername": "twitterCardGenerator.siteUsername",
+        "siteUsernamePlaceholder": "twitterCardGenerator.siteUsernamePlaceholder",
+        "creatorUsername": "twitterCardGenerator.creatorUsername",
+        "creatorUsernamePlaceholder": "twitterCardGenerator.creatorUsernamePlaceholder",
+        "preview": "twitterCardGenerator.preview",
+        "previewImageFallback": "twitterCardGenerator.previewImageFallback",
+        "previewTitleFallback": "twitterCardGenerator.previewTitleFallback",
+        "previewDescriptionFallback": "twitterCardGenerator.previewDescriptionFallback",
+        "generatedHtml": "twitterCardGenerator.generatedHtml"
+      }
     },
     "mime-type-lookup": {
       "name": "Consulta de Tipos MIME",
@@ -5933,7 +7009,8 @@
         "Un QA Engineer valida que una API REST devuelve el tipo MIME application/problem+json en respuestas de error HTTP 4xx",
         "Un arquitecto de sistemas investiga por qué un CDN no cachea correctamente archivos .woff2 identificando su tipo MIME incorrecto",
         "Un desarrollador frontend implementa validación de carga de archivos en un formulario React, verificando tipos MIME permitidos"
-      ]
+      ],
+      "searchPlaceholder": "searchPlaceholder"
     },
     "http-status-codes": {
       "name": "Códigos de Estado HTTP",
@@ -6080,7 +7157,20 @@
         "Un DBA genera una instrucción CREATE TABLE con restricciones CHECK y claves foráneas para implementar un nuevo módulo de auditoría.",
         "Un analista crea una subconsulta correlacionada para calcular el promedio móvil de precios de productos en un período específico.",
         "Un ingeniero de datos diseña una actualización masiva con cláusula WHERE basada en expresiones regulares para normalizar registros históricos."
-      ]
+      ],
+      "sqlGenerator": {
+        "commandType": "sqlGenerator.commandType",
+        "tableName": "sqlGenerator.tableName",
+        "columns": "sqlGenerator.columns",
+        "values": "sqlGenerator.values",
+        "setUpdates": "sqlGenerator.setUpdates",
+        "schemaDefinition": "sqlGenerator.schemaDefinition",
+        "whereClause": "sqlGenerator.whereClause",
+        "orderBy": "sqlGenerator.orderBy",
+        "limit": "sqlGenerator.limit",
+        "generatedSql": "sqlGenerator.generatedSql",
+        "copySql": "sqlGenerator.copySql"
+      }
     },
     "htaccess-to-nginx": {
       "name": "Convertidor de htaccess a Nginx",
@@ -9466,10 +10556,10 @@
       "themeForest": "Bosque",
       "percentageNote": "Los valores representan porcentajes y deben sumar al 100% por categoría",
       "sampleData": {
-        "Q1": "T1",
-        "Q2": "T2",
-        "Q3": "T3",
-        "Q4": "T4",
+        "q1": "T1",
+        "q2": "T2",
+        "q3": "T3",
+        "q4": "T4",
         "mobile": "Móvil",
         "tablet": "Tablet",
         "desktop": "Escritorio"
@@ -10678,7 +11768,31 @@
         "Una empresa de catering crea plantillas con campos variables para servicios adicionales (propinas, alquiler de menaje) que se calculan en tiempo real",
         "Un consultor técnico incluye diagramas SVG personalizados en las facturas para proyectos de infraestructura",
         "Una academia en línea automatiza facturas recurrentes con fechas de vencimiento dinámicas basadas en el ciclo de facturación mensual"
-      ]
+      ],
+      "invoice": {
+        "invoiceNumber": "invoice.invoiceNumber",
+        "currency": "invoice.currency",
+        "invoiceDate": "invoice.invoiceDate",
+        "dueDate": "invoice.dueDate",
+        "from": "invoice.from",
+        "companyName": "invoice.companyName",
+        "address": "invoice.address",
+        "to": "invoice.to",
+        "clientName": "invoice.clientName",
+        "items": "invoice.items",
+        "description": "invoice.description",
+        "quantity": "invoice.quantity",
+        "unitPrice": "invoice.unitPrice",
+        "addItem": "invoice.addItem",
+        "taxRate": "invoice.taxRate",
+        "notes": "invoice.notes",
+        "downloadPdf": "invoice.downloadPdf",
+        "invoice": "invoice.invoice",
+        "amount": "invoice.amount",
+        "subtotal": "invoice.subtotal",
+        "tax": "invoice.tax",
+        "total": "invoice.total"
+      }
     },
     "resume-builder": {
       "name": "Constructor de Currículum",
@@ -10757,7 +11871,16 @@
         "Un médico debe firmar digitalmente una receta médica. Con el Signature Pad, crea su firma usando un dispositivo táctil y la exporta en formato SVG para mayor calidad en la impresión.",
         "Un gerente de proyectos necesita enviar un informe financiero a sus inversores. Utiliza el Signature Pad para añadir su firma al final del informe y lo envía por correo electrónico en formato PDF.",
         "Un diseñador gráfico debe firmar un acuerdo de servicio con un cliente. Usa el Signature Pad para crear una firma estilizada y la exporta en formato JPEG para incluirla en el contrato digital."
-      ]
+      ],
+      "signature": {
+        "penColor": "signature.penColor",
+        "penWidth": "signature.penWidth",
+        "backgroundColor": "signature.backgroundColor",
+        "transparent": "signature.transparent",
+        "downloadPng": "signature.downloadPng",
+        "downloadSvg": "signature.downloadSvg"
+      },
+      "clear": "Limpiar"
     },
     "pomodoro-timer": {
       "name": "Temporizador Pomodoro",
@@ -10778,7 +11901,24 @@
         "Un escritor freelance puede emplear el temporizador para escribir en intervalos concentrados, intercalados con descansos breves para recargar su creatividad y evitar el bloqueo del escritor.",
         "Un diseñador gráfico puede configurar el temporizador para gestionar eficazmente su tiempo mientras trabaja en proyectos de diseño detallado, asegurando que no gaste demasiado tiempo en una sola tarea y manteniendo un ritmo constante.",
         "Un estudiante puede utilizar el Temporizador Pomodoro para estudiar en sesiones cortas, con descansos para mantener la concentración y absorber mejor la información."
-      ]
+      ],
+      "pomodoro": {
+        "pause": "pomodoro.pause",
+        "start": "pomodoro.start",
+        "reset": "pomodoro.reset",
+        "skip": "pomodoro.skip",
+        "completedSessions": "pomodoro.completedSessions",
+        "hideSettings": "pomodoro.hideSettings",
+        "showSettings": "pomodoro.showSettings",
+        "settings": "pomodoro.settings",
+        "workDuration": "pomodoro.workDuration",
+        "minutes": "pomodoro.minutes",
+        "shortBreakDuration": "pomodoro.shortBreakDuration",
+        "longBreakDuration": "pomodoro.longBreakDuration",
+        "sessionsBeforeLongBreak": "pomodoro.sessionsBeforeLongBreak",
+        "soundNotification": "pomodoro.soundNotification"
+      },
+      "clear": "Limpiar"
     },
     "meeting-notes": {
       "name": "Notas de Reunión",
@@ -10799,7 +11939,26 @@
         "Un gerente de proyectos usa Meeting Notes para registrar las decisiones tomadas en las reuniones de seguimiento de proyectos, facilitando el seguimiento de los hitos y la asignación de tareas.",
         "Una agencia de marketing utiliza Meeting Notes para planificar y documentar las estrategias de marketing durante las reuniones de brainstorming, asegurando que todas las ideas y acciones propuestas sean registradas y seguidas.",
         "Un equipo de atención al cliente utiliza Meeting Notes para documentar las reuniones semanales de revisión de casos, donde se discuten y asignan acciones para mejorar la calidad del servicio."
-      ]
+      ],
+      "meeting": {
+        "untitled": "meeting.untitled",
+        "date": "meeting.date",
+        "attendees": "meeting.attendees",
+        "agenda": "meeting.agenda",
+        "notes": "meeting.notes",
+        "actionItems": "meeting.actionItems",
+        "title": "meeting.title",
+        "titlePlaceholder": "meeting.titlePlaceholder",
+        "time": "meeting.time",
+        "addAttendee": "meeting.addAttendee",
+        "addAgendaItem": "meeting.addAgendaItem",
+        "notesPlaceholder": "meeting.notesPlaceholder",
+        "task": "meeting.task",
+        "assignee": "meeting.assignee",
+        "exportMarkdown": "meeting.exportMarkdown",
+        "exportText": "meeting.exportText"
+      },
+      "add": "add"
     },
     "business-days-calculator": {
       "name": "Calculadora de Días Hábiles",
@@ -10820,7 +11979,25 @@
         "El departamento de nómina determina 22 días efectivos en un ciclo de pago mensual, considerando 2 días de asueto corporativo.",
         "Un gerente de proyecto internacional calcula plazos en múltiples zonas horarias, ajustando festivos de EUA, Alemania y Japón.",
         "Un abogado calcula 30 días hábiles para una notificación legal, excluyendo fines de semana y 5 festivos nacionales específicos."
-      ]
+      ],
+      "businessDays": {
+        "calculateDays": "businessDays.calculateDays",
+        "calculateEndDate": "businessDays.calculateEndDate",
+        "startDate": "businessDays.startDate",
+        "endDate": "businessDays.endDate",
+        "businessDaysToAdd": "businessDays.businessDaysToAdd",
+        "excludeWeekends": "businessDays.excludeWeekends",
+        "customHolidays": "businessDays.customHolidays",
+        "holidayName": "businessDays.holidayName",
+        "businessDays": "businessDays.businessDays",
+        "totalDays": "businessDays.totalDays",
+        "weekendDays": "businessDays.weekendDays",
+        "holidayDays": "businessDays.holidayDays",
+        "invalidDateRange": "businessDays.invalidDateRange",
+        "calculatedEndDate": "businessDays.calculatedEndDate"
+      },
+      "add": "add",
+      "result": "Resultado"
     },
     "salary-calculator": {
       "name": "Calculadora de Salario",
@@ -10841,7 +12018,21 @@
         "Un reclutador en México transforma un salario mensual bruto de $20,000 MXN a equivalente semanal para comparar con el SMI local",
         "Un analista de recursos humanos en Colombia ajusta un salario anual de $45,000,000 COP a diario considerando 23.83 días laborables mensuales",
         "Un ingeniero español calcula su equivalencia horaria neta desde un salario mensual de €2,500 aplicando el 19% de retención IRPF"
-      ]
+      ],
+      "salary": {
+        "amount": "salary.amount",
+        "payFrequency": "salary.payFrequency",
+        "hoursPerWeek": "salary.hoursPerWeek",
+        "taxRate": "salary.taxRate",
+        "beforeTax": "salary.beforeTax",
+        "hourly": "salary.hourly",
+        "daily": "salary.daily",
+        "weekly": "salary.weekly",
+        "biweekly": "salary.biweekly",
+        "monthly": "salary.monthly",
+        "annual": "salary.annual",
+        "afterTax": "salary.afterTax"
+      }
     },
     "invoice": {
       "invoice": "FACTURA",
@@ -11059,7 +12250,23 @@
         "Análisis de datos en un entorno de desarrollo: Un científico de datos tiene un conjunto de datos en Excel que necesita analizar en un entorno de desarrollo que solo acepta JSON. Utiliza la herramienta para convertir los datos y luego los carga en su entorno de análisis.",
         "Actualización de configuraciones en una aplicación web: Un desarrollador frontend necesita actualizar las configuraciones de una aplicación web que almacena datos en formato JSON. Utiliza Excel to JSON para convertir las nuevas configuraciones desde un archivo Excel y luego las implementa en la aplicación.",
         "Generación de reportes dinámicos: Un analista de negocios quiere generar reportes dinámicos en una aplicación web que utiliza JSON para representar los datos. Convierte los datos de Excel a JSON con la herramienta y los integra en la aplicación para generar reportes en tiempo real."
-      ]
+      ],
+      "excelToJson": {
+        "invalidFileType": "excelToJson.invalidFileType",
+        "parseError": "excelToJson.parseError",
+        "copyError": "excelToJson.copyError",
+        "uploadFile": "excelToJson.uploadFile",
+        "supportedFormats": "excelToJson.supportedFormats",
+        "fileLoaded": "excelToJson.fileLoaded",
+        "selectSheet": "excelToJson.selectSheet",
+        "rows": "excelToJson.rows",
+        "preview": "excelToJson.preview",
+        "showingFirst": "excelToJson.showingFirst",
+        "jsonOutput": "excelToJson.jsonOutput",
+        "copied": "¡Copiado!",
+        "copy": "Copiar",
+        "download": "Descargar"
+      }
     },
     "json-to-excel": {
       "name": "JSON a Excel",
@@ -11080,7 +12287,21 @@
         "Un analista de IoT convierte logs de dispositivos en formato JSON a una tabla de Excel para análisis de tendencias de sensores",
         "Un desarrollador de e-commerce mapea un catálogo de productos con atributos jerárquicos a una plantilla de Excel para gestión de inventario",
         "Un científico de datos prepara un dataset de encuestas con respuestas anidadas para modelado estadístico en Power BI"
-      ]
+      ],
+      "jsonToExcel": {
+        "invalidJson": "jsonToExcel.invalidJson",
+        "emptyData": "jsonToExcel.emptyData",
+        "parseError": "jsonToExcel.parseError",
+        "noInput": "jsonToExcel.noInput",
+        "exportError": "jsonToExcel.exportError",
+        "jsonInput": "jsonToExcel.jsonInput",
+        "loadSample": "jsonToExcel.loadSample",
+        "placeholder": "Ingrese texto aquí...",
+        "fileName": "jsonToExcel.fileName",
+        "sheetName": "jsonToExcel.sheetName",
+        "preview": "jsonToExcel.preview",
+        "download": "Descargar"
+      }
     },
     "excel-viewer": {
       "name": "Visor de Excel",
@@ -11101,7 +12322,23 @@
         "Un gerente de proyectos utiliza el ordenamiento por prioridad y el filtro de estado 'Pendiente' para reasignar tareas en un cronograma compartido",
         "Un profesor carga una planilla de calificaciones y ordena por promedio para identificar estudiantes que requieren apoyo académico",
         "Un equipo remoto colabora en tiempo real analizando datos de ventas filtrando por región y usando la función de comparación de hojas para validar consistencia"
-      ]
+      ],
+      "excelViewer": {
+        "invalidFileType": "excelViewer.invalidFileType",
+        "parseError": "excelViewer.parseError",
+        "uploadFile": "excelViewer.uploadFile",
+        "supportedFormats": "excelViewer.supportedFormats",
+        "fileLoaded": "excelViewer.fileLoaded",
+        "filterColumn": "excelViewer.filterColumn",
+        "selectColumn": "excelViewer.selectColumn",
+        "filterValue": "excelViewer.filterValue",
+        "enterValue": "excelViewer.enterValue",
+        "clearFilter": "excelViewer.clearFilter",
+        "showing": "excelViewer.showing",
+        "rows": "excelViewer.rows",
+        "noResults": "excelViewer.noResults",
+        "emptySheet": "excelViewer.emptySheet"
+      }
     },
     "excel-merger": {
       "name": "Fusionador de Excel",
@@ -11122,7 +12359,22 @@
         "Un investigador combina datos demográficos de múltiples regiones usando fusión horizontal, alineando columnas por código postal.",
         "Un coordinador de logística integra hojas de inventario de almacenes distintos, eliminando duplicados de productos durante la fusión.",
         "Un desarrollador extrae y consolida registros de pruebas automatizadas de varios archivos XLSX para generar informes técnicos unificados."
-      ]
+      ],
+      "excelMerger": {
+        "invalidFileType": "excelMerger.invalidFileType",
+        "parseError": "excelMerger.parseError",
+        "noSheetsSelected": "excelMerger.noSheetsSelected",
+        "mergeError": "excelMerger.mergeError",
+        "uploadFiles": "excelMerger.uploadFiles",
+        "multipleFiles": "excelMerger.multipleFiles",
+        "uploadedFiles": "excelMerger.uploadedFiles",
+        "mergeMode": "excelMerger.mergeMode",
+        "vertical": "excelMerger.vertical",
+        "horizontal": "excelMerger.horizontal",
+        "outputFileName": "excelMerger.outputFileName",
+        "merge": "excelMerger.merge",
+        "sheets": "excelMerger.sheets"
+      }
     },
     "pdf-to-image": {
       "name": "PDF a Imagen",
@@ -11143,7 +12395,22 @@
         "Un investigador científico extrae gráficos de un artículo académico PDF y los convierte a JPEG optimizados para publicación web",
         "Una empresa de logística transforma guías de remisión PDF en imágenes para sistemas OCR de reconocimiento automático",
         "Un diseñador gráfico convierte diapositivas de presentaciones PDF a imágenes transparentes PNG para composiciones en Adobe After Effects"
-      ]
+      ],
+      "pdfToImage": {
+        "invalidFileType": "pdfToImage.invalidFileType",
+        "parseError": "pdfToImage.parseError",
+        "noPagesSelected": "pdfToImage.noPagesSelected",
+        "convertError": "pdfToImage.convertError",
+        "uploadPdf": "pdfToImage.uploadPdf",
+        "selectPdf": "pdfToImage.selectPdf",
+        "processing": "pdfToImage.processing",
+        "format": "Formatear",
+        "dpi": "pdfToImage.dpi",
+        "selectAll": "pdfToImage.selectAll",
+        "deselectAll": "pdfToImage.deselectAll",
+        "convert": "Convertir",
+        "pages": "pdfToImage.pages"
+      }
     },
     "image-to-pdf": {
       "name": "Imagen a PDF",
@@ -11164,7 +12431,24 @@
         "Un estudiante de arquitectura tiene que presentar un proyecto final que incluye varios planos y renderizaciones. Con Image to PDF, puede crear un documento PDF que combine todas las imágenes en un solo archivo, con la orientación adecuada y sin perder calidad.",
         "Un profesor de historia ha recopilado una serie de imágenes históricas y necesita crear un folleto educativo para sus alumnos. Utiliza Image to PDF para ajustar el tamaño del papel a A4 y establecer los márgenes apropiados para que el documento se imprima correctamente.",
         "Un fotógrafo de bodas quiere compartir un álbum digital con sus clientes. Con Image to PDF, puede convertir las fotos seleccionadas en un PDF interactivo, configurando la orientación en paisaje y la resolución a 150 DPI para un equilibrio entre calidad y tamaño del archivo."
-      ]
+      ],
+      "imageToPdf": {
+        "invalidFileType": "imageToPdf.invalidFileType",
+        "noImages": "imageToPdf.noImages",
+        "convertError": "imageToPdf.convertError",
+        "uploadImages": "imageToPdf.uploadImages",
+        "supportedFormats": "imageToPdf.supportedFormats",
+        "pageSize": "imageToPdf.pageSize",
+        "fitToImage": "imageToPdf.fitToImage",
+        "orientation": "imageToPdf.orientation",
+        "portrait": "imageToPdf.portrait",
+        "landscape": "imageToPdf.landscape",
+        "margin": "imageToPdf.margin",
+        "fileName": "imageToPdf.fileName",
+        "imageList": "imageToPdf.imageList",
+        "converting": "imageToPdf.converting",
+        "convert": "Convertir"
+      }
     },
     "pdf-merger": {
       "name": "Fusionador de PDF",
@@ -11182,7 +12466,22 @@
       "usage_examples": [
         "Usa Fusionador de PDF para procesar tus datos",
         "Obtén resultados de procesamiento rápidamente sin esperar"
-      ]
+      ],
+      "pdfMerger": {
+        "invalidFileType": "pdfMerger.invalidFileType",
+        "parseError": "pdfMerger.parseError",
+        "needMoreFiles": "pdfMerger.needMoreFiles",
+        "mergeError": "pdfMerger.mergeError",
+        "uploadPdfs": "pdfMerger.uploadPdfs",
+        "multipleFiles": "pdfMerger.multipleFiles",
+        "outputFileName": "pdfMerger.outputFileName",
+        "fileList": "pdfMerger.fileList",
+        "files": "pdfMerger.files",
+        "totalPages": "pdfMerger.totalPages",
+        "pages": "pdfMerger.pages",
+        "merging": "pdfMerger.merging",
+        "merge": "pdfMerger.merge"
+      }
     },
     "pdf-splitter": {
       "name": "Divisor de PDF",
@@ -11203,7 +12502,25 @@
         "Un editor de una revista científica recibe un manuscrito de 50 páginas y lo divide en capítulos para enviar a diferentes revisores. PDF Splitter le permite extraer fácilmente cada capítulo en un archivo PDF separado.",
         "Un profesor de universidad desea crear un extracto de un libro de texto para una clase. Usa PDF Splitter para extraer las páginas 20 a 30 y generara un documento PDF más manejable para sus estudiantes.",
         "Un diseñador gráfico necesita una serie de imágenes en alta resolución de un catálogo de productos. Utiliza PDF Splitter para extraer cada página del catálogo y luego convierte cada página en imágenes individuales."
-      ]
+      ],
+      "pdfSplitter": {
+        "invalidFileType": "pdfSplitter.invalidFileType",
+        "parseError": "pdfSplitter.parseError",
+        "noPagesSelected": "pdfSplitter.noPagesSelected",
+        "splitError": "pdfSplitter.splitError",
+        "uploadPdf": "pdfSplitter.uploadPdf",
+        "processing": "pdfSplitter.processing",
+        "splitMode": "pdfSplitter.splitMode",
+        "selectedPages": "pdfSplitter.selectedPages",
+        "pageRange": "pdfSplitter.pageRange",
+        "eachPage": "pdfSplitter.eachPage",
+        "from": "pdfSplitter.from",
+        "to": "pdfSplitter.to",
+        "selectAll": "pdfSplitter.selectAll",
+        "deselectAll": "pdfSplitter.deselectAll",
+        "split": "pdfSplitter.split",
+        "pages": "pdfSplitter.pages"
+      }
     },
     "pdf-compressor": {
       "name": "Compresor de PDF",
@@ -11224,7 +12541,20 @@
         "2. Un diseñador reduce de 800MB a 75MB un portfolio PDF con 50 páginas de diseños vectoriales y fotos para enviarlo por correo a un cliente.",
         "3. Una empresa de consultoría comprime 200 informes técnicos mensuales (total 4.2GB) a 600MB para almacenarlos en SharePoint sin perder búsquedas OCR.",
         "4. Un abogado prepara un contrato de 35MB para enviarlo por WhatsApp, activando 'Modo documento legal' que preserva capas de firmas digitales."
-      ]
+      ],
+      "pdfCompressor": {
+        "invalidFileType": "pdfCompressor.invalidFileType",
+        "compressError": "pdfCompressor.compressError",
+        "uploadPdf": "pdfCompressor.uploadPdf",
+        "originalSize": "pdfCompressor.originalSize",
+        "compressionLevel": "pdfCompressor.compressionLevel",
+        "compressing": "pdfCompressor.compressing",
+        "compress": "pdfCompressor.compress",
+        "compressionComplete": "pdfCompressor.compressionComplete",
+        "reduced": "pdfCompressor.reduced",
+        "compressedSize": "pdfCompressor.compressedSize",
+        "download": "Descargar"
+      }
     },
     "pdf-rotator": {
       "name": "Rotador de páginas PDF",
@@ -11245,7 +12575,18 @@
         "Un editor de libros electrónicos ajustando páginas individuales de un manuscrito para garantizar consistencia visual en dispositivos de lectura vertical.",
         "Un contable recibiendo facturas digitales con orientaciones mezcladas que deben estandarizarse antes de almacenarlas en un sistema ERP.",
         "Un diseñador gráfico rotando páginas específicas de un catálogo para crear efectos visuales asimétricos en un proyecto de impresión."
-      ]
+      ],
+      "pdfRotator": {
+        "invalidFileType": "pdfRotator.invalidFileType",
+        "parseError": "pdfRotator.parseError",
+        "saveError": "pdfRotator.saveError",
+        "uploadPdf": "pdfRotator.uploadPdf",
+        "processing": "pdfRotator.processing",
+        "rotateAll": "pdfRotator.rotateAll",
+        "apply": "pdfRotator.apply",
+        "reset": "pdfRotator.reset",
+        "save": "pdfRotator.save"
+      }
     },
     "excelToJson": {
       "uploadFile": "Subir archivo Excel",
@@ -11453,7 +12794,18 @@
           "question": "¿Cómo se marcan las vueltas más rápidas y más lentas?",
           "answer": "Cuando se graban 2 o más vueltas, el sistema automáticamente marca la vuelta más rápida con 🏆 y la más lenta con 🐢, ayudándote a analizar el rendimiento."
         }
-      ]
+      ],
+      "stopwatchUI": {
+        "lap": "stopwatchUI.lap",
+        "stop": "stopwatchUI.stop",
+        "start": "stopwatchUI.start",
+        "reset": "stopwatchUI.reset",
+        "laps": "stopwatchUI.laps",
+        "lapNumber": "stopwatchUI.lapNumber",
+        "lapTime": "stopwatchUI.lapTime",
+        "totalTime": "stopwatchUI.totalTime",
+        "lapLabel": "stopwatchUI.lapLabel"
+      }
     },
     "countdownTimer": {
       "hours": "Horas",
@@ -11519,7 +12871,20 @@
       "code": "Código",
       "link": "Enlace",
       "image": "Imagen",
-      "quote": "Cita"
+      "quote": "Cita",
+      "markdownEditor": {
+        "edit": "markdownEditor.edit",
+        "split": "markdownEditor.split",
+        "preview": "markdownEditor.preview",
+        "copyMd": "markdownEditor.copyMd",
+        "copyHtml": "markdownEditor.copyHtml",
+        "markdown": "markdownEditor.markdown",
+        "placeholder": "Ingrese texto aquí...",
+        "previewLabel": "markdownEditor.previewLabel",
+        "downloadMd": "markdownEditor.downloadMd",
+        "downloadHtml": "markdownEditor.downloadHtml",
+        "clear": "Limpiar"
+      }
     },
     "world-clock": {
       "name": "Reloj Mundial",
@@ -11554,7 +12919,14 @@
           "question": "¿Cómo sé si es de día o de noche?",
           "answer": "Cada tarjeta de ciudad muestra un icono de sol ☀️ o luna 🌙. El sol indica día (6:00-18:00), la luna indica noche (otras horas)."
         }
-      ]
+      ],
+      "worldClock": {
+        "format24h": "worldClock.format24h",
+        "showSeconds": "worldClock.showSeconds",
+        "selectCity": "worldClock.selectCity",
+        "addCity": "worldClock.addCity",
+        "noCities": "worldClock.noCities"
+      }
     },
     "countdown-timer": {
       "name": "Cronómetro de Cuenta Atrás",
@@ -11589,7 +12961,18 @@
           "question": "¿Puedo continuar después de pausar?",
           "answer": "Sí. Después de hacer clic en pausa, la cuenta atrás mantiene su estado actual. Haz clic en 'Reanudar' para continuar desde donde lo pausaste."
         }
-      ]
+      ],
+      "countdownTimer": {
+        "timeUp": "countdownTimer.timeUp",
+        "timerFinished": "countdownTimer.timerFinished",
+        "hours": "countdownTimer.hours",
+        "minutes": "countdownTimer.minutes",
+        "seconds": "countdownTimer.seconds",
+        "resume": "countdownTimer.resume",
+        "start": "countdownTimer.start",
+        "pause": "countdownTimer.pause",
+        "reset": "countdownTimer.reset"
+      }
     },
     "note-pad": {
       "name": "Block de Notas",
@@ -11629,7 +13012,21 @@
           "question": "¿Cuántas notas puedo crear?",
           "answer": "No hay límite en el número de notas. Crea tantas como necesites. Ten en cuenta que el almacenamiento local del navegador tiene límites de capacidad (generalmente 5-10MB)."
         }
-      ]
+      ],
+      "notePad": {
+        "newNote": "notePad.newNote",
+        "export": "notePad.export",
+        "search": "notePad.search",
+        "color": "notePad.color",
+        "titlePlaceholder": "notePad.titlePlaceholder",
+        "contentPlaceholder": "notePad.contentPlaceholder",
+        "updated": "notePad.updated",
+        "untitled": "notePad.untitled",
+        "noContent": "notePad.noContent",
+        "noNotes": "notePad.noNotes",
+        "noResults": "notePad.noResults",
+        "totalNotes": "notePad.totalNotes"
+      }
     },
     "stopwatchUI": {
       "start": "Iniciar",
@@ -11671,7 +13068,13 @@
           "question": "¿Hay un límite de tamaño de archivo?",
           "answer": "El procesamiento se realiza en tu navegador, por lo que los archivos muy grandes pueden ser lentos. Recomendamos archivos inferiores a 50MB."
         }
-      ]
+      ],
+      "page": "page",
+      "errorParsing": "errorParsing",
+      "errorInvalidFile": "errorInvalidFile",
+      "dropzone": "dropzone",
+      "extracting": "extracting",
+      "pages": "pages"
     },
     "word-to-txt": {
       "name": "Word a Texto",
@@ -11693,7 +13096,11 @@
         "Ejemplo 3: Un escritor de contenido necesita convertir sus borradores en Word a texto plano para facilitar la revisión y edición en un editor de texto simple. Word to Text ayuda a eliminar distracciones como el formateo y permite una revisión más eficiente del contenido.",
         "Ejemplo 4: Una empresa de marketing utiliza Word to Text para convertir informes de campaña de Word a texto plano antes de importarlos a una plataforma de análisis de datos. Esto asegura que los informes se integren sin problemas y que los datos estén listos para ser analizados inmediatamente."
       ],
-      "faqs": []
+      "faqs": [],
+      "errorParsing": "errorParsing",
+      "errorInvalidFile": "errorInvalidFile",
+      "dropzone": "dropzone",
+      "extracting": "extracting"
     },
     "word-to-html": {
       "name": "Word a HTML",
@@ -11715,7 +13122,13 @@
         "Un equipo legal digitaliza contratos antiguos en DOCX y los convierte a HTML para implementar un sistema de búsqueda semántica en el código",
         "Un docente crea una página web educativa convirtiendo un libro de texto DOCX con ecuaciones matemáticas en HTML5 compatible con lectores de pantalla"
       ],
-      "faqs": []
+      "faqs": [],
+      "errorParsing": "errorParsing",
+      "errorInvalidFile": "errorInvalidFile",
+      "dropzone": "dropzone",
+      "converting": "converting",
+      "showCode": "showCode",
+      "showPreview": "showPreview"
     },
     "excel-to-csv": {
       "name": "Excel a CSV",
@@ -11731,7 +13144,11 @@
       "usage_examples": [
         "Exportar datos Excel a CSV"
       ],
-      "faqs": []
+      "faqs": [],
+      "errorParsing": "errorParsing",
+      "errorInvalidFile": "errorInvalidFile",
+      "dropzone": "dropzone",
+      "converting": "converting"
     },
     "csv-to-excel": {
       "name": "CSV a Excel",
@@ -11753,7 +13170,14 @@
         "Un administrador de sistemas migra logs del sistema en CSV a Excel, manteniendo el formato de fecha local específico para auditorías.",
         "Un equipo de ventas integra datos de clientes desde una API externa (formato CSV) a un libro de Excel compartido con filtros avanzados."
       ],
-      "faqs": []
+      "faqs": [],
+      "errorParsing": "errorParsing",
+      "errorInvalidFile": "errorInvalidFile",
+      "errorExport": "errorExport",
+      "dropzone": "dropzone",
+      "converting": "converting",
+      "rows": "rows",
+      "showingFirst": "showingFirst"
     },
     "loan-calculator": {
       "name": "Calculadora de Préstamos",
@@ -16140,7 +17564,8 @@
       "tip4": "Ejecuta varias veces con diferentes ajustes para obtener variedad",
       "addFillers": "Añadir palabras de relleno",
       "humanize": "Humanizar",
-      "inputPlaceholder": "Pegue su texto generado por IA aquí..."
+      "inputPlaceholder": "Pegue su texto generado por IA aquí...",
+      "outputPlaceholder": "El resultado aparecerá aquí..."
     },
     "dockerfile-generator": {
       "name": "Generador de Dockerfile",
@@ -16219,7 +17644,8 @@
       "bracketSpacing": "Espaciado de corchetes",
       "bracketSameLine": "Corchete en misma línea",
       "generate": "Generar",
-      "download": "Descargar"
+      "download": "Descargar",
+      "htmlWhitespaceSensitivity": "htmlWhitespaceSensitivity"
     },
     "tsconfig-generator": {
       "name": "Generador de TSConfig",
@@ -16480,7 +17906,8 @@
       "inputPlaceholder": "Ingrese texto...",
       "swap": "Intercambiar",
       "outputPlaceholder": "El resultado aparecerá aquí...",
-      "showTable": "Mostrar tabla"
+      "showTable": "Mostrar tabla",
+      "none": "none"
     },
     "checksum-verifier": {
       "name": "Verificador de Suma de Verificación",
@@ -17178,7 +18605,13 @@
       "outputPlaceholder": "Los resultados aparecerán aquí...",
       "errors": {
         "emptyInput": "Por favor, introduce alguna entrada"
-      }
+      },
+      "errorInvalidInput": "errorInvalidInput",
+      "convert": "Convertir",
+      "sql": {
+        "loadExample": "sql.loadExample"
+      },
+      "copied": "¡Copiado!"
     },
     "http-status-code-reference": {
       "name": "Referencia de Códigos de Estado HTTP",
@@ -17207,6 +18640,13 @@
       "outputPlaceholder": "Los resultados aparecerán aquí...",
       "errors": {
         "emptyInput": "Por favor, ingresa algún dato"
+      },
+      "httpStatus": {
+        "search": "httpStatus.search"
+      },
+      "all": "all",
+      "nav": {
+        "noResults": "nav.noResults"
       }
     },
     "jwt-payload-decoder": {
@@ -17236,6 +18676,16 @@
       "outputPlaceholder": "Los resultados aparecerán aquí...",
       "errors": {
         "emptyInput": "Por favor, introduzca algún dato"
+      },
+      "errorInvalidInput": "errorInvalidInput",
+      "errorInvalidFormat": "errorInvalidFormat",
+      "sql": {
+        "loadExample": "sql.loadExample"
+      },
+      "decode": "decode",
+      "copied": "¡Copiado!",
+      "jwt": {
+        "commonClaims": "jwt.commonClaims"
       }
     },
     "base64-image-converter": {
@@ -17327,7 +18777,20 @@
       "outputPlaceholder": "Los resultados aparecerán aquí...",
       "errors": {
         "emptyInput": "Por favor, introduce algún input"
-      }
+      },
+      "sql": {
+        "loadExample": "sql.loadExample"
+      },
+      "urlParser": {
+        "invalid": "urlParser.invalid",
+        "protocol": "urlParser.protocol",
+        "hostname": "urlParser.hostname",
+        "port": "urlParser.port",
+        "pathname": "urlParser.pathname",
+        "hash": "urlParser.hash",
+        "queryParams": "urlParser.queryParams"
+      },
+      "copied": "¡Copiado!"
     },
     "request-header-builder": {
       "name": "Constructor de Encabezados de Solicitud HTTP",
@@ -18583,7 +20046,21 @@
       "database": "Base de Datos",
       "username": "Usuario",
       "password": "Contraseña",
-      "connectionString": "Cadena de Conexión"
+      "connectionString": "Cadena de Conexión",
+      "database-connection-tester": {
+        "databaseType": "database-connection-tester.databaseType",
+        "host": "database-connection-tester.host",
+        "port": "database-connection-tester.port",
+        "database": "database-connection-tester.database",
+        "username": "database-connection-tester.username",
+        "password": "database-connection-tester.password",
+        "useSSL": "database-connection-tester.useSSL",
+        "connectionString": "database-connection-tester.connectionString",
+        "codeSnippet": "database-connection-tester.codeSnippet",
+        "note": "database-connection-tester.note",
+        "noteText": "database-connection-tester.noteText"
+      },
+      "copied": "¡Copiado!"
     },
     "query-execution-planner": {
       "name": "Planificador de Ejecución de Consultas",
@@ -18850,7 +20327,10 @@
       "success": "Éxito",
       "failed": "Fallido",
       "warning": "Advertencia",
-      "info": "Información"
+      "info": "Información",
+      "useCurrent": "useCurrent",
+      "useIncoming": "useIncoming",
+      "keepBoth": "keepBoth"
     },
     "git-history-visualizer": {
       "name": "Visualizador de Historial de Git",
@@ -20545,7 +22025,26 @@
       "asn": "ASN",
       "viewOnMap": "Ver en mapa",
       "invalidIp": "Dirección IP inválida",
-      "lookupError": "Error al buscar dirección IP"
+      "lookupError": "Error al buscar dirección IP",
+      "ip-geolocation": {
+        "lookupError": "ip-geolocation.lookupError",
+        "ipAddress": "ip-geolocation.ipAddress",
+        "placeholder": "Ingrese texto aquí...",
+        "loading": "Cargando...",
+        "lookup": "ip-geolocation.lookup",
+        "myIp": "ip-geolocation.myIp",
+        "results": "ip-geolocation.results",
+        "country": "ip-geolocation.country",
+        "region": "ip-geolocation.region",
+        "city": "ip-geolocation.city",
+        "zipCode": "ip-geolocation.zipCode",
+        "timezone": "ip-geolocation.timezone",
+        "coordinates": "ip-geolocation.coordinates",
+        "isp": "ip-geolocation.isp",
+        "organization": "ip-geolocation.organization",
+        "asn": "ip-geolocation.asn",
+        "viewOnMap": "ip-geolocation.viewOnMap"
+      }
     },
     "screen-recorder": {
       "name": "Grabador de pantalla",
@@ -20567,7 +22066,24 @@
       "instructions": "Instrucciones",
       "instruction1": "Haga clic en \"Iniciar grabación\"",
       "instruction2": "Seleccione la pantalla, ventana o pestaña a grabar",
-      "instruction3": "Haga clic en \"Detener\" al terminar y descargue"
+      "instruction3": "Haga clic en \"Detener\" al terminar y descargue",
+      "screen-recorder": {
+        "permissionDenied": "screen-recorder.permissionDenied",
+        "startError": "screen-recorder.startError",
+        "recording": "screen-recorder.recording",
+        "paused": "screen-recorder.paused",
+        "start": "screen-recorder.start",
+        "pause": "screen-recorder.pause",
+        "stop": "screen-recorder.stop",
+        "resume": "screen-recorder.resume",
+        "newRecording": "screen-recorder.newRecording",
+        "preview": "screen-recorder.preview",
+        "download": "Descargar",
+        "instructions": "screen-recorder.instructions",
+        "instruction1": "screen-recorder.instruction1",
+        "instruction2": "screen-recorder.instruction2",
+        "instruction3": "screen-recorder.instruction3"
+      }
     }
   },
   "tool": {

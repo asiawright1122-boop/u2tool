@@ -1654,7 +1654,12 @@
         "APIキー管理：マイクロサービス間認証用に256ビット相当のセキュアなAPIキーとしてUUIDを変換して使用する。",
         "セッション管理：Webアプリケーションの認証セッションIDとして、波括弧付き形式のUUIDを即時生成する。",
         "ブロックチェーントランザクション：分散台帳のトランザクション識別子として、大文字形式のUUIDを生成してスマートコントラクトに埋め込む。"
-      ]
+      ],
+      "count": "count",
+      "generate": "生成",
+      "copied": "コピーしました！",
+      "copy": "コピー",
+      "all": "all"
     },
     "url-encoder": {
       "name": "URLエンコーダー/デコーダー",
@@ -1696,7 +1701,17 @@
           "question": "エンコードされたURLをそのままブラウザのアドレスバーに入力できますか？",
           "answer": "はい、エンコードされたURL（例: %E3%81%82）は、ブラウザが正しく解釈するため、アドレスバーに直接貼り付けてアクセス可能です。"
         }
-      ]
+      ],
+      "input": "入力",
+      "url": {
+        "encodeUrl": "url.encodeUrl",
+        "decodeUrl": "url.decodeUrl"
+      },
+      "clear": "クリア",
+      "output": "出力",
+      "copied": "コピーしました！",
+      "copy": "コピー",
+      "outputPlaceholder": "結果がここに表示されます..."
     },
     "password-generator": {
       "name": "パスワード生成ツール",
@@ -1744,7 +1759,13 @@
         "Example 3: デジタル署名の生成 - ドキュメントのデジタル署名を生成するために、SHA-1でドキュメントのコンテンツをハッシュ化します。その後、このハッシュ値を公開鍵で署名することで、ドキュメントの正当性を確認できます。",
         "Example 4: APIのリクエスト認証 - APIリクエストを安全に送信するために、リクエストのペイロードと秘密キーを組み合わせてSHA-256でハッシュ化し、生成されたハッシュ値を認証ヘッダーに含めます。これにより、リクエストの送信者が正当であることを確認できます。"
       ],
-      "inputPlaceholder": "ここにテキストを入力..."
+      "inputPlaceholder": "ここにテキストを入力...",
+      "input": "入力",
+      "hash": {
+        "generateHashes": "hash.generateHashes"
+      },
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "qr-generator": {
       "name": "QRコードジェネレーター",
@@ -1766,7 +1787,12 @@
         "大学が講義資料のダウンロードURLをQRコード化し、印刷物とデジタル教材を連携",
         "コンサート運営者が電子チケットにSVG形式のアニメーションQRコードを採用して偽造防止"
       ],
-      "inputPlaceholder": "ここにテキストを入力..."
+      "inputPlaceholder": "ここにテキストを入力...",
+      "input": "入力",
+      "qr": {
+        "generateQr": "qr.generateQr",
+        "downloadPng": "qr.downloadPng"
+      }
     },
     "color-converter": {
       "name": "カラーコード変換",
@@ -1787,7 +1813,12 @@
         "グラフィックデザイナーがHSLの彩度を±10%調整しながら、アクセントカラーのトーン調整",
         "フロントエンド開発者がテーマの明度(Lightness)を一括変更するためにRGB→HSL変換",
         "アクセシビリティチェックでWCAGのコントラスト比計算のためにHEX→RGBの相対明度変換"
-      ]
+      ],
+      "color": {
+        "preview": "color.preview"
+      },
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "timestamp-converter": {
       "name": "Unixタイムスタンプ変換",
@@ -1808,7 +1839,14 @@
         "IoTデバイスのセンサーデータ（POSIXタイムスタンプ）をJST形式で可視化",
         "暗号通貨トランザクションのブロック生成時間を日本語フォーマットで報告書作成",
         "レガシーシステムの32ビットタイムスタンプ（2038年問題対象）を確認して新形式に変換"
-      ]
+      ],
+      "timestamp": {
+        "currentTime": "timestamp.currentTime",
+        "unixTimestamp": "timestamp.unixTimestamp",
+        "dateTime": "timestamp.dateTime"
+      },
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "word-counter": {
       "name": "文字数カウンター",
@@ -1830,7 +1868,15 @@
         "SEOコンテンツ作成における段落数の最適化分析（例：1段落150文字以内）",
         "自然言語処理パイプライン前のテキスト前処理品質検証"
       ],
-      "inputPlaceholder": "ここにテキストを入力..."
+      "inputPlaceholder": "ここにテキストを入力...",
+      "input": "入力",
+      "wordCounter": {
+        "words": "wordCounter.words",
+        "characters": "wordCounter.characters",
+        "sentences": "wordCounter.sentences",
+        "paragraphs": "wordCounter.paragraphs"
+      },
+      "clear": "クリア"
     },
     "case-converter": {
       "name": "大文字・小文字変換",
@@ -1851,7 +1897,13 @@
         "2. 多言語対応のアプリケーションで、ユーザーアカウント名を言語ごとの特殊ケースを考慮して正規化する場合",
         "3. 機械学習の前処理で、テキストコーパスをWord2Vecのトレーニングに適した形式に変換する場合",
         "4. API開発において、レスポンス内の列挙型値をOpenAPI仕様に沿った定数形式に変換する場合"
-      ]
+      ],
+      "uppercase": "uppercase",
+      "lowercase": "lowercase",
+      "titleCase": "titleCase",
+      "sentenceCase": "sentenceCase",
+      "camelCase": "camelCase",
+      "snakeCase": "snakeCase"
     },
     "html-encoder": {
       "name": "HTMLエンコーダー/デコーダー",
@@ -1884,7 +1936,17 @@
           "q": "このツールは安全ですか？",
           "a": "はい、すべての処理はブラウザ内で行われ、データは送信されません。"
         }
-      ]
+      ],
+      "input": "入力",
+      "html": {
+        "encodeHtml": "html.encodeHtml",
+        "decodeHtml": "html.decodeHtml"
+      },
+      "clear": "クリア",
+      "output": "出力",
+      "copied": "コピーしました！",
+      "copy": "コピー",
+      "outputPlaceholder": "結果がここに表示されます..."
     },
     "markdown-preview": {
       "name": "マークダウンプレビュー",
@@ -1906,7 +1968,14 @@
         "Example 3: ウェブデザイナーとして、クライアントに提出する提案書やレポートをMarkdownで書き、即座にHTML形式で見せられることで、クライアントとのコミュニケーションをスムーズに進められます。",
         "Example 4: 学生として、研究報告書やプロジェクトのドキュメンテーションをMarkdown形式で作成し、教員に提出前に正確な表示を確認できます。"
       ],
-      "inputPlaceholder": "ここにテキストを入力..."
+      "inputPlaceholder": "ここにテキストを入力...",
+      "markdown": {
+        "editor": "markdown.editor",
+        "preview": "markdown.preview",
+        "exportHtml": "markdown.exportHtml"
+      },
+      "copied": "コピーしました！",
+      "clear": "クリア"
     },
     "lorem-ipsum": {
       "name": "Lorem Ipsum生成",
@@ -1927,7 +1996,18 @@
         "2. UI/UXデザイナーがモバイルアプリのプロトタイプを作成する際、Lorem Ipsum Generatorで生成したダミーテキストをUI要素に埋め込み、ユーザーインターフェースのデザインをテストします。",
         "3. デベロッパーが新しいブログシステムのテンプレートを検証する際、Lorem Ipsum Generatorで生成したテキストをテンプレートに適用し、デザインのバランスやレスポンシブ性を確認します。",
         "4. グラフィックデザイナーがブロchureやポスターデザインの見本を作成する際、Lorem Ipsum Generatorを使用してダミーテキストを生成し、デザインの全体的な見え方を確認します。"
-      ]
+      ],
+      "lorem": {
+        "type": "lorem.type",
+        "paragraphs": "lorem.paragraphs",
+        "sentences": "lorem.sentences",
+        "words": "lorem.words"
+      },
+      "count": "count",
+      "generate": "生成",
+      "output": "出力",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "regex-tester": {
       "name": "正規表現テスター",
@@ -1948,7 +2028,19 @@
         "2. サーバーログ解析：タイムスタンプやIPアドレスを抽出する際の不要なスペースの影響を排除。",
         "3. IPv6アドレス検証：省略表記（::）や混合ケース（例: 2001:db8::FF00:42:8329）のテスト。",
         "4. 国際電話番号抽出：国番号（+81 vs 0031）と区切り文字の違い（例: 03-1234-5678 vs (03) 1234 5678）を統一的に処理。"
-      ]
+      ],
+      "regex": {
+        "pattern": "regex.pattern",
+        "global": "regex.global",
+        "caseInsensitive": "regex.caseInsensitive",
+        "multiline": "regex.multiline",
+        "dotall": "regex.dotall",
+        "testString": "regex.testString",
+        "atIndex": "regex.atIndex"
+      },
+      "result": "結果",
+      "match": "match",
+      "matches": "matches"
     },
     "jwt-decoder": {
       "name": "JWTデコーダー",
@@ -2017,7 +2109,18 @@
         "Example 2: テクニカルライターがドキュメントの最新版と旧版を比較し、変更履歴を確認します。",
         "Example 3: 翻訳者が元のテキストと翻訳後のテキストを比較し、品質チェックを行います。",
         "Example 4: 法務担当者が契約書の異なるバージョンを比較し、重要な変更点を特定します。"
-      ]
+      ],
+      "diffChecker": {
+        "original": "diffChecker.original",
+        "originalPlaceholder": "diffChecker.originalPlaceholder",
+        "modified": "diffChecker.modified",
+        "modifiedPlaceholder": "diffChecker.modifiedPlaceholder",
+        "compare": "diffChecker.compare",
+        "added": "diffChecker.added",
+        "removed": "diffChecker.removed",
+        "unchanged": "diffChecker.unchanged"
+      },
+      "clear": "クリア"
     },
     "json-to-csv": {
       "name": "JSON to CSV",
@@ -2038,7 +2141,14 @@
         "Example 2: データベースからエクスポートした CSV ファイルを、API に送信するために JSON 形式に変換する。ここでは、CSV データをアップロードし、出力形式を JSON に設定します。",
         "Example 3: ウェブアプリケーションの開発中に、テスト用のデータを JSON 形式から CSV 形式に変換して、データベースにインポートする。変換オプションでクォートを設定し、データの形式を整えます。",
         "Example 4: 市場調査で収集した CSV データを、データ分析ツールで処理するために JSON 形式に変換する。デリミターをセミコロンに設定して、ツールの要件に合わせます。"
-      ]
+      ],
+      "errorInvalidJson": "errorInvalidJson",
+      "errorInvalidFormat": "errorInvalidFormat",
+      "input": "入力",
+      "output": "出力",
+      "copied": "コピーしました！",
+      "copy": "コピー",
+      "download": "ダウンロード"
     },
     "image-to-base64": {
       "name": "画像をBase64に変換",
@@ -2150,7 +2260,10 @@
       "separator": "区切り文字",
       "none": "なし",
       "lowercase": "小文字",
-      "slug": "スラッグ"
+      "slug": "スラッグ",
+      "input": "入力",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "number-base-converter": {
       "name": "進数変換ツール",
@@ -2172,7 +2285,12 @@
         "セキュリティ研究者がハッシュ値を16進数からBase64形式に中間変換する際に数値表現を確認する。",
         "学生がコンピュータアーキテクチャの課題で2の補数表現を使用した負の数の基数変換を検証する。"
       ],
-      "inputPlaceholder": "ここにテキストを入力..."
+      "inputPlaceholder": "ここにテキストを入力...",
+      "errorInvalidInput": "errorInvalidInput",
+      "input": "入力",
+      "convert": "変換",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "json-path-tester": {
       "name": "JSONPath Tester",
@@ -2244,7 +2362,17 @@
           "question": "整形時のインデント（字下げ）のスタイルを変更できますか？",
           "answer": "現在のバージョンでは、スペース2つ分の固定インデントスタイルとなります。カスタマイズ機能は今後のアップデートで検討中です。"
         }
-      ]
+      ],
+      "xml": {
+        "invalidXml": "xml.invalidXml"
+      },
+      "input": "入力",
+      "format": "フォーマット",
+      "minify": "minify",
+      "clear": "クリア",
+      "output": "出力",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "chinese-converter": {
       "name": "簡体字・繁体字変換",
@@ -2265,7 +2393,17 @@
         "例2: 北京大学の中国文学研究者が明代の古籍をOCR処理後に繁体字→簡体字に変換し、学術論文のデータベース化を実施",
         "例3: ゲーム開発会社が簡体字テキストベースのUIを繁体字に変換し、香港・マカオ向けのローカライゼーションを実施",
         "例4: 国立図書館が従来のBig5エンコード資料をGB18030形式に変換し、次世代デジタルアーカイブシステムに統合"
-      ]
+      ],
+      "input": "入力",
+      "chinese": {
+        "placeholder": "ここにテキストを入力...",
+        "toTraditional": "chinese.toTraditional",
+        "toSimplified": "chinese.toSimplified"
+      },
+      "clear": "クリア",
+      "output": "出力",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "unit-converter": {
       "name": "単位変換",
@@ -2312,7 +2450,18 @@
         "2. ボタン要素のホバーステートで放射状に広がるホワイトグロー効果を、中心点を50% 50%に設定した放射グラデーションで実装する。",
         "3. モバイルアプリのプロモーションセクションに、45度の角度を持つ三色線形グラデーションを適用したレスポンシブデザインを構築する。",
         "4. Eコマースサイトの商品カードに、IE11と最新ブラウザで正しくレンダリングされるベンダープレフィックス付きの放射グラデーションを生成する。"
-      ]
+      ],
+      "gradient": {
+        "type": "gradient.type",
+        "linear": "gradient.linear",
+        "radial": "gradient.radial",
+        "angle": "gradient.angle",
+        "colors": "gradient.colors",
+        "addColor": "gradient.addColor",
+        "presets": "gradient.presets"
+      },
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "unicode-converter": {
       "name": "Unicode変換ツール",
@@ -2333,7 +2482,20 @@
         "絵文字を含む国際化ドメイン名をPunycodeに変換し、メールクライアントでの正規表示を保証する。",
         "XML文書の文字参照形式（&#xXXXX;）をプレーンテキストに変換して、データベースインポート時のパースエラーを回避する。",
         "レガシーシステムとの通信で必要となるUTF-32BE形式のバイトストリームを生成し、エンディアン変換問題を解決する。"
-      ]
+      ],
+      "input": "入力",
+      "unicode": {
+        "placeholder": "ここにテキストを入力...",
+        "format": "フォーマット",
+        "textToUnicode": "unicode.textToUnicode",
+        "unicodeToText": "unicode.unicodeToText",
+        "examples": "unicode.examples",
+        "reference": "unicode.reference"
+      },
+      "clear": "クリア",
+      "output": "出力",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "code-minifier": {
       "name": "コードミニファイ",
@@ -2386,7 +2548,17 @@
         "例2: ソフトウェア開発者が大量のINSERT文を整形して、コードの可読性を向上させる場合。整形されたINSERT文は、データの挿入順序やフィールド名が一目で分かります。",
         "例3: データエンジニアが複数のテーブルからデータを抽出する長いSELECT文を整形して、SQLのパフォーマンスを最適化する場合。整形されたSELECT文は、各部分が明確に区別され、最適化のためのポイントが見つけやすくなります。",
         "例4: 新規開発者が、既存のプロジェクトで使用されている複雑なUPDATE文を理解するために、SQL Formatterを使用する場合。整形されたUPDATE文は、更新されるフィールドと条件が明確に表示され、コードの理解が容易になります。"
-      ]
+      ],
+      "input": "入力",
+      "sql": {
+        "loadExample": "sql.loadExample"
+      },
+      "format": "フォーマット",
+      "minify": "minify",
+      "clear": "クリア",
+      "output": "出力",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "pinyin-converter": {
       "name": "ピンイン変換",
@@ -2407,7 +2579,18 @@
         "iOSアプリ開発者がユーザー入力の漢字をPinyinに変換して検索インデックスを構築するケース",
         "言語学者が方言テキストの音韻パターンを分析するために標準Pinyinに正規化するケース",
         "技術文書翻訳者が専門用語のローマ字表記を統一するために校正ツールとして活用するケース"
-      ]
+      ],
+      "input": "入力",
+      "pinyin": {
+        "placeholder": "ここにテキストを入力...",
+        "withTone": "pinyin.withTone",
+        "note": "pinyin.note"
+      },
+      "convert": "変換",
+      "clear": "クリア",
+      "output": "出力",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "color-picker": {
       "name": "カラーピッカー",
@@ -2428,7 +2611,18 @@
         "モバイルアプリのテーマカラーを設計する際に、RGB値をAndroidのXMLカラーリソースに直接適用する。",
         "ゲーム開発者がスプライトシートの色を調整するため、HSLの色相環を使用して類似色を生成する。",
         "データ可視化ツールでグラデーションを実装する際、HSV空間の連続的な変化をRGB線形補間で再現する。"
-      ]
+      ],
+      "colorPicker": {
+        "selectColor": "colorPicker.selectColor",
+        "presets": "colorPicker.presets",
+        "recent": "colorPicker.recent",
+        "info": "colorPicker.info",
+        "red": "colorPicker.red",
+        "green": "colorPicker.green",
+        "blue": "colorPicker.blue"
+      },
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "aspect-ratio": {
       "name": "アスペクト比計算",
@@ -2449,7 +2643,21 @@
         "2. ウェブデザイナーは、レスポンシブデザインのウェブページで画像を表示する際、画像のアスペクト比を維持しながら幅を800ピクセルに設定しました。Aspect Ratio Calculatorを使用して、対応する高さを計算し、画像が表示領域に収まるようにしました。",
         "3. 印刷業者が必要なページサイズに画像をリサイズする際、画像の元のサイズが2000x1500ピクセルで、最終的なページサイズがA4（210x297mm）であることを確認しました。Aspect Ratio Calculatorを使用して、画像の新しいサイズを計算し、印刷用に最適なサイズに調整しました。",
         "4. あるゲーム開発者は、ゲーム内のUI要素を異なる解像度に対応させる必要がありました。ゲームの元の解像度が1280x720ピクセルで、新しいモニターでの解像度が1920x1080ピクセルに変更される予定だったため、Aspect Ratio Calculatorを使用して、新しい解像度に対応するUI要素のサイズを計算しました。"
-      ]
+      ],
+      "aspect": {
+        "original": "aspect.original",
+        "width": "aspect.width",
+        "height": "aspect.height",
+        "ratio": "aspect.ratio",
+        "common": "aspect.common",
+        "resize": "aspect.resize",
+        "lockRatio": "aspect.lockRatio",
+        "newWidth": "aspect.newWidth",
+        "newHeight": "aspect.newHeight"
+      },
+      "result": "結果",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "css-beautifier": {
       "name": "CSS整形ツール",
@@ -2471,7 +2679,15 @@
         "Example 3: 新しいチームメンバーが既存のプロジェクトに参加した場合、CSS Beautifierを使用してコードを一貫性のあるフォーマットに整形します。これにより、チーム内のコードスタイルの統一が図られます。",
         "Example 4: ウェブ開発者が自動化されたビルドプロセスでCSS Beautifierを統合します。これにより、毎回手動でコードを整形または圧縮する必要がなくなり、開発プロセスが効率化されます。"
       ],
-      "indent": "インデント"
+      "indent": "インデント",
+      "error": "エラー",
+      "beautify": "beautify",
+      "minify": "minify",
+      "copy": "コピー",
+      "input": "入力",
+      "placeholder": "ここにテキストを入力...",
+      "output": "出力",
+      "outputPlaceholder": "結果がここに表示されます..."
     },
     "js-beautifier": {
       "name": "JavaScript整形ツール",
@@ -2493,7 +2709,15 @@
         "教育機関の課題提出時、学生がJSHintで指摘されるインデントミスを自動修正するケース",
         "レガシーシステムのメンテナンス中に即時関数(IIFE)のスコープ構造を視覚化して可読性を向上させるケース"
       ],
-      "indent": "インデント"
+      "indent": "インデント",
+      "error": "エラー",
+      "beautify": "beautify",
+      "minify": "minify",
+      "copy": "コピー",
+      "input": "入力",
+      "placeholder": "ここにテキストを入力...",
+      "output": "出力",
+      "outputPlaceholder": "結果がここに表示されます..."
     },
     "html-preview": {
       "name": "HTMLプレビュー",
@@ -2515,7 +2739,9 @@
       ],
       "refresh": "更新",
       "htmlCode": "HTMLコード",
-      "preview": "プレビュー"
+      "preview": "プレビュー",
+      "clear": "クリア",
+      "placeholder": "ここにテキストを入力..."
     },
     "ip-lookup": {
       "name": "IPアドレス検索",
@@ -2546,7 +2772,9 @@
       "city": "都市",
       "isp": "ISP",
       "timezone": "タイムゾーン",
-      "coordinates": "座標"
+      "coordinates": "座標",
+      "error": "エラー",
+      "placeholder": "ここにテキストを入力..."
     },
     "morse-code": {
       "name": "モールスコード変換",
@@ -2575,7 +2803,8 @@
       "toText": "テキストへ",
       "play": "再生",
       "morsePlaceholder": "モールス符号を入力...",
-      "reference": "参照"
+      "reference": "参照",
+      "copy": "コピー"
     },
     "random-generator": {
       "name": "乱数生成ツール",
@@ -2596,7 +2825,10 @@
         "暗号通貨ウォレット開発時に、128ビット相当のランダムエントロピーをHEX形式で生成して秘密鍵作成",
         "ゲームのガチャシステム実装で、0.000〜100.000の範囲で小数第3位精度の確率値を1000件生成",
         "学術研究用に正規分布に従う乱数列を生成するため、中心極限定理に基づいた後処理スクリプトと連携"
-      ]
+      ],
+      "min": "min",
+      "max": "max",
+      "unique": "unique"
     },
     "text-reverser": {
       "name": "テキスト反転",
@@ -2617,7 +2849,11 @@
         "セキュリティチームが機密情報を含むCSVデータの文字列をランダム化するための一時オブスキュレーション処理",
         "NLPエンジニアが文構造解析のために、英語テキストの単語順序を逆から学習させる前処理",
         "システム管理者がWindowsとLinuxの混在環境で、行終端コードの違いを吸収した逆順比較を行うケース"
-      ]
+      ],
+      "reverseChars": "reverseChars",
+      "reverseWords": "reverseWords",
+      "reverseLines": "reverseLines",
+      "placeholder": "ここにテキストを入力..."
     },
     "line-counter": {
       "name": "行数カウント",
@@ -2638,7 +2874,16 @@
         "Example 2: システム管理者がログファイルを分析し、特定のエラーメッセージの頻度をカウントするために、重複行を削除せずに空行を無視して行数を数える。",
         "Example 3: 研究者が大量の調査データを整理する際に、空行を無視し、アルファベット順に並べ替えて行数をカウントし、データの整合性を確認する。",
         "Example 4: コンテンツ作成者が複数のテキストファイルを統合する際、重複行を削除し、逆アルファベット順に並べ替えて、最終的なコンテンツの行数を確認する。"
-      ]
+      ],
+      "totalLines": "totalLines",
+      "nonEmptyLines": "nonEmptyLines",
+      "emptyLines": "emptyLines",
+      "uniqueLines": "uniqueLines",
+      "removeDuplicates": "removeDuplicates",
+      "removeEmpty": "removeEmpty",
+      "sortLines": "sortLines",
+      "ignoreEmpty": "ignoreEmpty",
+      "placeholder": "ここにテキストを入力..."
     },
     "string-escape": {
       "name": "文字エスケープ/アンエスケープ",
@@ -2659,7 +2904,11 @@
         "ユーザー投稿をReactやVueのDOMに挿入する前に、HTMLエスケープを行い、&lt;script&gt;や&lt;img onerror=...&gt;などのInjectionを許さない安全性を確保する。",
         "REST APIのGETエンドポイントに日本語パラメータ（例：?q=検索語）を含める際、URLエンコードして半角スペースや「/」「#」などを適切にpercent-encodingし、404や誤ったクエリ分割を回避する。",
         "テストコードや静的解析のルールにJavaScriptの文字列リテラルを埋め込む際、UnicodeエスケープやASCII制御文字（\\n、\\t）を統一して、lintやminifyの互換性を高める。"
-      ]
+      ],
+      "error": "エラー",
+      "escape": "escape",
+      "unescape": "unescape",
+      "placeholder": "ここにテキストを入力..."
     },
     "yaml-json": {
       "name": "YAML/JSON変換ツール",
@@ -2680,7 +2929,11 @@
         "Swagger API仕様（JSON）を、OpenAPI Generatorで読み込めるYAML形式に変換してドキュメント生成。",
         "Ansibleプレイブックの複雑なリスト構造をJSONに変換し、Node.jsアプリケーションの設定ファイルとして再利用。",
         "AWS CloudFormationテンプレート（YAML）をJSONに変換して、レガシーシステムの構成管理ツールにインポート。"
-      ]
+      ],
+      "invalidYaml": "invalidYaml",
+      "invalidJson": "invalidJson",
+      "yamlPlaceholder": "yamlPlaceholder",
+      "jsonPlaceholder": "jsonPlaceholder"
     },
     "date-calculator": {
       "name": "日付計算ツール",
@@ -2712,7 +2965,9 @@
       "addSubtract": "加算/減算",
       "baseDate": "基準日",
       "operation": "操作",
-      "subtract": "減算"
+      "subtract": "減算",
+      "add": "add",
+      "result": "結果"
     },
     "text-deduplicator": {
       "name": "重複行削除",
@@ -2733,7 +2988,13 @@
         "ログファイルの分析: サーバーログやアプリケーションログに大量の重複エントリーがある場合、Text Deduplicatorを使用して不要な重複を除去し、実際の問題を迅速に特定できます。",
         "リサーチデータの整理: 学術研究や市場調査で収集したデータに重複が含まれている場合、このツールを使用して一意のデータのみを保持し、分析の精度を向上させることができます。",
         "コンテンツ生成の最適化: コンテンツ生成ツールで生成された文章に重複がある場合、Text Deduplicatorを使用して一意のコンテンツのみを抽出し、品質を向上させることができます。"
-      ]
+      ],
+      "caseSensitive": "caseSensitive",
+      "trimLines": "trimLines",
+      "original": "original",
+      "unique": "unique",
+      "removed": "removed",
+      "placeholder": "ここにテキストを入力..."
     },
     "color-blender": {
       "name": "カラーブレンド",
@@ -2754,7 +3015,10 @@
         "Example 2: グラフィックデザイナーは、ポスターデザインに使用するグラデーションテキストエフェクトを作成するために、Color Blenderを利用します。2つのコンプリメンタリーな色を使用して、15ステップの指数補間グラデーションを生成し、テキストに適用することで、視覚的な深度を追加できます。",
         "Example 3: UIデザイナーは、アプリのボタンやアイコンに使用するグラデーション効果を作成するために、Color Blenderを使用します。2つの類似した色を使用して、5ステップの線形補間グラデーションを生成することで、ボタンやアイコンに微妙なシャドウ効果を追加できます。",
         "Example 4: ウェブ開発者は、CSSコードで使用するグラデーションを生成するために、Color Blenderを使用します。2つの色を選択し、20ステップの線形補間グラデーションを生成した後、CSSコードを直接エクスポートして、ウェブサイトのスタイルシートに反映させることができます。"
-      ]
+      ],
+      "color1": "color1",
+      "color2": "color2",
+      "steps": "steps"
     },
     "json-sorter": {
       "name": "JSONソーダー",
@@ -2775,7 +3039,12 @@
         "例2: オープンAPIのレスポンスサンプルをドキュメント化する際に、キーの順序を統一して可読性を向上。",
         "例3: JSON-LDデータの@context定義をアルファベット順に整理し、セマンティックウェブの互換性を確保。",
         "例4: ロギングシステムから出力された非構造化JSONを前処理し、ELKスタックでの分析精度を向上。"
-      ]
+      ],
+      "invalidJson": "invalidJson",
+      "ascending": "ascending",
+      "descending": "descending",
+      "sort": "sort",
+      "placeholder": "ここにテキストを入力..."
     },
     "placeholder-image": {
       "name": "プレースホルダー画像生成",
@@ -2796,7 +3065,13 @@
         "ECサイトの商品一覧ページで、300x300pxの正方形画像と16:9バナーの表示挙動確認",
         "デザインカンプのプレゼンテーションで、#FF5733と#33A1FFのブランドカラーパレットを使用したサンプル画像作成",
         "CMS開発環境において、画像アップロード機能実装前のダミーメディアプレビューとしての利用"
-      ]
+      ],
+      "width": "width",
+      "height": "height",
+      "bgColor": "bgColor",
+      "textColor": "textColor",
+      "customText": "customText",
+      "generate": "生成"
     },
     "text-encryption": {
       "name": "テキスト暗号化",
@@ -2817,7 +3092,18 @@
         "医療従事者が患者情報の一部を暗号化し、非安全なチャットアプリで送信する。",
         "システム管理者がSSH接続用の認証情報をローカルに暗号化してメモに保存する。",
         "ブロガーがプライベートな原稿のドラフトを、クラウドストレージに暗号化して保管する。"
-      ]
+      ],
+      "encryption": {
+        "error": "エラー",
+        "encrypt": "encryption.encrypt",
+        "decrypt": "encryption.decrypt",
+        "password": "encryption.password",
+        "passwordPlaceholder": "encryption.passwordPlaceholder",
+        "inputPlaceholder": "ここにテキストを入力..."
+      },
+      "input": "入力",
+      "output": "出力",
+      "copy": "コピー"
     },
     "file-hash": {
       "name": "ファイルハッシュ計算",
@@ -2838,7 +3124,14 @@
         "企業間での大容量ファイル転送完了時に、受信側がSHA-512ハッシュを比較してデータ破損を確認。",
         "デジタルフォレンジック調査で、証拠ファイルのハッシュ値を取得し、証拠の完全性を記録。",
         "クラウドストレージ内の重複ファイル検出のため、MD5ハッシュを基に同一ファイルをフィルタリング。"
-      ]
+      ],
+      "fileHash": {
+        "dropzone": "fileHash.dropzone",
+        "fileName": "fileHash.fileName",
+        "fileSize": "fileHash.fileSize",
+        "calculating": "fileHash.calculating"
+      },
+      "copy": "コピー"
     },
     "html-table-generator": {
       "name": "HTMLテーブル生成器",
@@ -2859,7 +3152,17 @@
         "eコマース開発者が商品比較機能用に、動的に行数が変化する応用可能なテンプレートを生成するケース。",
         "大学教員が時間割表をアクセシブルな形式で公開するために、スクリーンリーダー対応のテーブル構築を行うケース。",
         "フロントエンドエンジニアがレスポンシブデザイン対応のテーブルを検証するため、メディアクエリ連携CSSを生成するケース。"
-      ]
+      ],
+      "tableGen": {
+        "rows": "tableGen.rows",
+        "cols": "tableGen.cols",
+        "hasHeader": "tableGen.hasHeader",
+        "header": "tableGen.header",
+        "cell": "tableGen.cell",
+        "preview": "tableGen.preview"
+      },
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "json-schema-validator": {
       "name": "JSONスキーマバリデーター",
@@ -2880,7 +3183,15 @@
         "Example 2: データエンジニアとして、データベースに新しいJSONデータをインポートする前に、データの形式が正しいことを確認するために、JSON Schema Validatorを使用します。",
         "Example 3: フロントエンド開発者として、ユーザーが入力したデータがアプリケーションの要件に合致していることを確認するために、JSON Schema Validatorを使用します。",
         "Example 4: システムインテグレーターとして、異なるシステム間でのデータ交換時に、送受信されるJSONデータが指定されたスキーマに準拠していることを確認するために、JSON Schema Validatorを使用します。"
-      ]
+      ],
+      "schemaValidator": {
+        "loadExample": "schemaValidator.loadExample",
+        "jsonPlaceholder": "schemaValidator.jsonPlaceholder",
+        "schemaPlaceholder": "schemaValidator.schemaPlaceholder",
+        "validate": "schemaValidator.validate",
+        "valid": "schemaValidator.valid",
+        "invalid": "schemaValidator.invalid"
+      }
     },
     "regex-patterns": {
       "name": "正規表現パターンライブラリ",
@@ -2901,7 +3212,14 @@
         "Webスクレイピング結果からIPv4/IPv6アドレスを特定のフォーマットで一括抽出するニーズ。",
         "国際電話番号をE.164フォーマットに統一するための入力フォーム制御。",
         "ログ分析システムで、カスタム正規表現による特定のエラーパターン検出ルールの構築。"
-      ]
+      ],
+      "regexPatterns": {
+        "test": "regexPatterns.test",
+        "match": "regexPatterns.match",
+        "noMatch": "regexPatterns.noMatch",
+        "tryIt": "regexPatterns.tryIt"
+      },
+      "copy": "コピー"
     },
     "byte-counter": {
       "name": "バイト数カウント",
@@ -2922,7 +3240,15 @@
         "組込デバイスのフラッシュメモリ節約のため、表示用テキストのUTF-16からUTF-8への変換効果を定量評価",
         "多言語メールテンプレート作成時、特定文字がASCII範囲外かどうかをバイト数比較で検証",
         "CSVファイルのアップロード処理で、UTF-8 BOM付き/なしのサイズ差がストレージに与える影響を分析"
-      ]
+      ],
+      "input": "入力",
+      "byteCounter": {
+        "placeholder": "ここにテキストを入力...",
+        "characters": "byteCounter.characters",
+        "bytes": "byteCounter.bytes",
+        "lines": "byteCounter.lines",
+        "size": "byteCounter.size"
+      }
     },
     "json-to-typescript": {
       "name": "JSONからTypeScript変換",
@@ -2943,7 +3269,17 @@
         "既存のJSON設定ファイル（例：webpack.config.json）をTypeScriptプロジェクト用に型定義付きモジュールに変換する",
         "Firebase Realtime Databaseのデータスナップショットから、リアルタイム更新に対応した型付きモデルクラスを生成する",
         "GraphQLクエリのサンプルレスポンスを元に、Apollo Client用の型定義ファイル（*.d.ts）を自動生成する"
-      ]
+      ],
+      "json": {
+        "invalidJson": "json.invalidJson"
+      },
+      "jsonTs": {
+        "interfaceName": "jsonTs.interfaceName",
+        "jsonPlaceholder": "jsonTs.jsonPlaceholder"
+      },
+      "copied": "コピーしました！",
+      "copy": "コピー",
+      "convert": "変換"
     },
     "svg-optimizer": {
       "name": "SVG最適化",
@@ -2964,7 +3300,19 @@
         "ゲーム開発者がモバイルアプリケーションに使用するSVGグラフィックを最適化することで、アプリのパフォーマンスを向上させ、ユーザーエクスペリエンスを改善できます。",
         "レスポンシブデザインのWebページを作成する際、SVG Optimizerを使用して、すべてのデバイスで効率的に読み込むことができる最適化されたSVGファイルを作成できます。",
         "電子書籍の制作において、SVG Optimizerで最適化された画像を使用することで、電子書籍ファイルの全体的なサイズを削減し、ダウンロード時間を短縮できます。"
-      ]
+      ],
+      "input": "入力",
+      "svgOptimizer": {
+        "placeholder": "ここにテキストを入力...",
+        "optimize": "svgOptimizer.optimize",
+        "original": "svgOptimizer.original",
+        "optimized": "svgOptimizer.optimized",
+        "saved": "svgOptimizer.saved",
+        "preview": "svgOptimizer.preview"
+      },
+      "output": "出力",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "text-to-binary": {
       "name": "テキストとバイナリ変換",
@@ -2985,7 +3333,17 @@
         "組み込み開発者がマイコンのフラッシュメモリに保存されたバイナリ文字列をデバッグする用途",
         "セキュリティ研究者がステガノグラフィーツールで隠蔽されたバイナリデータを解析する場面",
         "コンピューターサイエンスの教育現場で、学生が文字コードの内部表現を視覚的に学ぶとき"
-      ]
+      ],
+      "textBinary": {
+        "toBinary": "textBinary.toBinary",
+        "toText": "textBinary.toText",
+        "text": "textBinary.text",
+        "textPlaceholder": "textBinary.textPlaceholder",
+        "binary": "textBinary.binary",
+        "binaryPlaceholder": "textBinary.binaryPlaceholder"
+      },
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "markdown-to-html": {
       "name": "MarkdownをHTMLに変換",
@@ -3006,7 +3364,13 @@
         "ブログ記事の移植：既存のMarkdown形式の記事をHTML化し、CMSへのアップロード準備",
         "プレゼン資料の変換：Markdownで書かれたスライド原稿をHTML+CSSのスライド形式に変換",
         "メールテンプレート作成：Markdownで整形したコンテンツをテーブルレイアウトのHTMLメール用コードに変換"
-      ]
+      ],
+      "mdToHtml": {
+        "mdPlaceholder": "mdToHtml.mdPlaceholder",
+        "preview": "mdToHtml.preview"
+      },
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "html-minifier": {
       "name": "HTMLミニファイ",
@@ -3027,7 +3391,14 @@
         "Example 2: フロントエンド開発者がチームで共有するHTMLコードを整形する際、HTML Minifierを使用してコードの可読性を向上させ、コードレビューの効率を高めることができます。",
         "Example 3: ウェブ開発者が新しいウェブページを作成する際、HTML Minifierを使用して、最初から最適化されたコードを生成することができます。これにより、開発プロセス全体がスムーズになり、パフォーマンスが向上します。",
         "Example 4: ウェブサイトのパフォーマンスを監視するエンジニアが、特定のページの読み込み時間を改善するため、HTML Minifierを使用してHTMLコードを縮小し、不要なデータを削除することで、全体的なレスポンスタイムを改善できます。"
-      ]
+      ],
+      "error": "エラー",
+      "minify": "minify",
+      "beautify": "beautify",
+      "copied": "コピーしました！",
+      "copy": "コピー",
+      "input": "入力",
+      "output": "出力"
     },
     "json-diff": {
       "name": "JSON Diff",
@@ -3075,7 +3446,15 @@
         "Example 2: 電子メールで機密データを安全に送信する場合、データをBase32エンコードしてメール本文に含め、受信者はBase32デコーダーを使用して元のデータを復元できます。",
         "Example 3: URLのクエリパラメータとしてデータを含める必要がある場合、Base32エンコーディングを使用してデータを符号化し、URLに直接埋め込むことができます。これにより、特殊文字による問題を回避できます。",
         "Example 4: ファイル名に使用できる文字が限定されている場合、ファイル名をBase32形式にエンコードして、一意のファイル名を作成することができます。これにより、ファイル名の衝突を防ぐことができます。"
-      ]
+      ],
+      "error": "エラー",
+      "encode": "encode",
+      "decode": "decode",
+      "input": "入力",
+      "convert": "変換",
+      "copied": "コピーしました！",
+      "copy": "コピー",
+      "output": "出力"
     },
     "epoch-converter": {
       "name": "Unix時間変換",
@@ -3096,7 +3475,17 @@
         "Example 2: ログファイル内のタイムスタンプを解析する。システムログに記録された1598870400のようなエポックタイムスタンプを変換し、ログの時間帯を特定します。",
         "Example 3: サーバー間のタイムゾーンの調整を行う。UTCのエポックタイムスタンプを現地のタイムゾーンに変換し、サーバーのロケーションに合わせた日時に調整します。",
         "Example 4: イベントスケジューリングアプリケーションで使用する。ユーザーが指定した日時をエポックタイムスタンプに変換し、バックエンドシステムで一貫性のある形式で保存します。"
-      ]
+      ],
+      "epoch": {
+        "current": "epoch.current",
+        "timestamp": "epoch.timestamp",
+        "toDate": "epoch.toDate",
+        "datetime": "epoch.datetime",
+        "toEpoch": "epoch.toEpoch",
+        "useNow": "epoch.useNow"
+      },
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "css-unit-converter": {
       "name": "CSS単位変換ツール",
@@ -3117,7 +3506,15 @@
         "2. ネストされたコンポーネントのwidth値をemから%に変換する際、継承関係を考慮した相対計算を自動実行。",
         "3. ヘッダー要素のheight値をptからvwに変換し、モバイル端末でのビューポート比率に応じたスケーリングを実現。",
         "4. vh単位を用いてfull-screenセクションを構築する際、実際の表示領域に応じた正確なvh-to-px換算値を取得。"
-      ]
+      ],
+      "cssUnit": {
+        "value": "cssUnit.value",
+        "unit": "cssUnit.unit",
+        "baseFontSize": "cssUnit.baseFontSize",
+        "viewportWidth": "cssUnit.viewportWidth",
+        "viewportHeight": "cssUnit.viewportHeight"
+      },
+      "result": "結果"
     },
     "text-statistics": {
       "name": "テキスト統計",
@@ -3138,7 +3535,22 @@
         "Example 2: 学術論文の著者が文章の可読性を向上させるために、平均文長や頻出単語を分析します。",
         "Example 3: コピーライターが広告文の影響力を評価するために、特殊文字の使用頻度や最長の単語を調査します。",
         "Example 4: 教育者が学生が提出したレポートの質を評価するために、段落数や単語数の分布をチェックします。"
-      ]
+      ],
+      "textStats": {
+        "placeholder": "ここにテキストを入力...",
+        "chars": "textStats.chars",
+        "charsNoSpace": "textStats.charsNoSpace",
+        "words": "textStats.words",
+        "uniqueWords": "textStats.uniqueWords",
+        "sentences": "textStats.sentences",
+        "paragraphs": "textStats.paragraphs",
+        "lines": "textStats.lines",
+        "avgWordLen": "textStats.avgWordLen",
+        "digits": "textStats.digits",
+        "spaces": "textStats.spaces",
+        "readTime": "textStats.readTime",
+        "speakTime": "textStats.speakTime"
+      }
     },
     "hex-editor": {
       "name": "16進エディタ",
@@ -3160,7 +3572,15 @@
         "ファームウェア更新ファイルのチェックサム領域を16進編集して検証",
         "ネットワークパケットキャプチャのバイナリデータをエンディアン変換して解析"
       ],
-      "inputPlaceholder": "ここにテキストを入力..."
+      "inputPlaceholder": "ここにテキストを入力...",
+      "hexEditor": {
+        "text": "hexEditor.text",
+        "toHex": "hexEditor.toHex",
+        "hex": "hexEditor.hex",
+        "toText": "hexEditor.toText"
+      },
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "color-palette": {
       "name": "カラーパレット生成",
@@ -3181,7 +3601,15 @@
         "モバイルアプリ開発者がMaterial 3のTonal Palette仕様に基づいたボタンコンポーネントを設計",
         "ECサイトの季節限定バナー制作において、Hue Rotation機能でトーンオントーンのカラーバリエーション生成",
         "データビジュアライゼーションプロジェクトで、カテゴリカルカラーパレットをD3.js用にJSON形式でエクスポート"
-      ]
+      ],
+      "palette": {
+        "baseColor": "palette.baseColor",
+        "hexCode": "palette.hexCode",
+        "shades": "palette.shades",
+        "complementary": "palette.complementary",
+        "analogous": "palette.analogous",
+        "triadic": "palette.triadic"
+      }
     },
     "http-status": {
       "name": "HTTPステータスコード",
@@ -3202,7 +3630,10 @@
         "2. SEO対策でリダイレクト設定を確認する際、301（Moved Permanently）と302（Found）のキャッシュ挙動の違いを比較する。",
         "3. API連携時に受信した429（Too Many Requests）エラーから、レートリミットの仕様を確認し、クライアント側のリトライロジックを調整する。",
         "4. 新人エンジニアのトレーニングとして、2xx系と4xx系コードの処理フローを視覚的に比較してHTTPプロトコルの設計哲学を学ぶ。"
-      ]
+      ],
+      "httpStatus": {
+        "search": "httpStatus.search"
+      }
     },
     "json-to-yaml": {
       "name": "JSONからYAML変換",
@@ -3223,7 +3654,13 @@
         "APIテストのサンプルレスポンスをYAMLドキュメントとしてドキュメンテーションに埋め込む",
         "PythonのDjangoプロジェクト設定をJSONからYAMLに移行してAnsibleプレイブックと統合する",
         "IoTデバイスの設定データをJSONからYAMLに変換し、人間可読性を向上させる"
-      ]
+      ],
+      "json": {
+        "invalidJson": "json.invalidJson"
+      },
+      "convert": "変換",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "data-uri": {
       "name": "データURI生成ツール",
@@ -3269,7 +3706,16 @@
         "ドキュメントバージョン比較：ソフトウェア開発プロジェクトでの仕様書変更履歴を視覚化し、修正箇所を明確にします。",
         "重複データ検出：顧客データベース内の重複記録を識別するため、住所や連絡先情報の類似性を分析します。",
         "自然言語処理パイプライン：機械学習モデルの出力と参照の比較を自動化し、モデルの精度を評価します。"
-      ]
+      ],
+      "textCompare": {
+        "text1": "textCompare.text1",
+        "placeholder": "ここにテキストを入力...",
+        "text2": "textCompare.text2",
+        "charSimilarity": "textCompare.charSimilarity",
+        "wordSimilarity": "textCompare.wordSimilarity",
+        "editDistance": "textCompare.editDistance",
+        "commonWords": "textCompare.commonWords"
+      }
     },
     "json-to-go": {
       "name": "JSONをGo構造体に変換",
@@ -3340,7 +3786,16 @@
         "Example 2: データベースの設定ファイルに対して、所有者には読み取り・書き込み権限、グループには読み取り権限、その他のユーザーにはアクセスを許可しない設定が必要です。この場合、シンボリック表記でu=rw,g=r,o=を入力し、オクタル表記0640に変換します。",
         "Example 3: システムのログファイルに対して、所有者には読み取り・書き込み権限、グループには読み取り権限、その他のユーザーにはアクセスを許可しない設定が必要です。この場合、シンボリック表記でu=rw,g=r,o=を入力し、オクタル表記0640に変換します。",
         "Example 4: 共有ディレクトリに対して、所有者とグループには読み取り・書き込み・実行権限、その他のユーザーには読み取り・実行権限を設定する必要があります。この場合、シンボリック表記でu=rwx,g=rwx,o=rxを入力し、オクタル表記0775に変換します。"
-      ]
+      ],
+      "chmod": {
+        "octal": "chmod.octal",
+        "symbolic": "chmod.symbolic",
+        "read": "chmod.read",
+        "write": "chmod.write",
+        "execute": "chmod.execute",
+        "command": "chmod.command"
+      },
+      "copy": "コピー"
     },
     "barcode-generator": {
       "name": "バーコード生成",
@@ -3361,7 +3816,11 @@
         "病院が患者識別用のCode 128バーコードをリストバンドに印刷するケース。",
         "物流会社が国際貨物追跡用にCode 39フォーマットのバーコードを生成するケース。",
         "イベント運営者が入場チケットの偽造防止にUPCバーコードを導入するケース。"
-      ]
+      ],
+      "barcode": {
+        "text": "barcode.text",
+        "format": "フォーマット"
+      }
     },
     "text-to-speech": {
       "name": "テキスト音声変換",
@@ -3382,7 +3841,15 @@
         "英語学習者が発音チェックのために英文を音声化するケース",
         "教育機関で講義録音の代替として教科書内容を音声化するケース",
         "ビジネスシーンで自動音声案内メッセージを作成するケース"
-      ]
+      ],
+      "tts": {
+        "placeholder": "ここにテキストを入力...",
+        "voice": "tts.voice",
+        "rate": "tts.rate",
+        "pitch": "tts.pitch",
+        "speak": "tts.speak",
+        "stop": "tts.stop"
+      }
     },
     "url-parser": {
       "name": "URL解析ツール",
@@ -3436,7 +3903,13 @@
         "2. IoTデバイスから収集したJSONログデータを、BIツールで解析可能な階層型XMLレポート形式に変換。",
         "3. モバイルアプリの設定ファイルをJSONからXMLに変換し、企業の既存コンフィグ管理ツールと統合。",
         "4. 医療機関がDICOM標準に準拠したXMLデータを生成するため、JSON形式の患者データを変換・整形。"
-      ]
+      ],
+      "json": {
+        "invalidJson": "json.invalidJson"
+      },
+      "convert": "変換",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "text-wrapper": {
       "name": "テキスト折り返し",
@@ -3457,7 +3930,17 @@
         "文書作成: 学術論文やレポートを書く際、指定の行幅にテキストを調整することで、フォーマットの要件を満たしつつ、文書の全体的な見栄えを整えることができます。",
         "コード整形: プログラミングコードを書く際、コードの各行を適切な長さに折り返すことで、コードの可読性を向上させ、バグの発見や維持管理を容易にします。",
         "印刷準備: テキストを印刷する際、用紙の幅に合わせてテキストを折り返すことで、余白の調整やページ数の最適化を実現できます。"
-      ]
+      ],
+      "textWrapper": {
+        "width": "textWrapper.width",
+        "chars": "textWrapper.chars",
+        "placeholder": "ここにテキストを入力...",
+        "wrap": "textWrapper.wrap"
+      },
+      "input": "入力",
+      "output": "出力",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "csv-to-json": {
       "name": "CSVからJSONへ",
@@ -3478,7 +3961,21 @@
         "IoTデバイスのログデータ（タブ区切り）を、タイムスタンプをキーとしたネスト構造JSONに変換し、Grafanaで可視化する準備。",
         "機械学習のトレーニングデータとして利用するCSVを、TensorFlow.jsが読み込めるJSON形式に変換するワークフロー。",
         "システム設定値（セミコロン区切りCSV）を、階層構造ありのJSONに変換し、Node.jsアプリケーションの設定ファイルとして利用するパターン。"
-      ]
+      ],
+      "csvToJson": {
+        "error": "エラー",
+        "delimiterTab": "csvToJson.delimiterTab",
+        "csv": "csvToJson.csv",
+        "csvPlaceholder": "csvToJson.csvPlaceholder",
+        "json": "csvToJson.json"
+      },
+      "csvJson": {
+        "delimiter": "csvJson.delimiter",
+        "hasHeader": "csvJson.hasHeader"
+      },
+      "convert": "変換",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "html-entity": {
       "name": "HTMLエンティティ変換ツール",
@@ -3499,7 +3996,17 @@
         "JSON-LD に « <、>、&、\" を含む説明文を埋め込む際、HTML 文書中に直接記述して構文エラーを防ぎ、検索エンジンに正確な Unicode テキストを配信する。",
         "WYSIWYG エディタにコード片や不等号（< ≤ ≥）を入力し、エディタ側の自動変換による意図しないマークアップ混入を抑制して、出力 HTML の整合性を維持する。",
         "国際化ドメインのテストや UI 文言の可視化で、例.jp の「例」のような非 ASCII 文字を &#x4F8B; へ変換し、ASCII  окружение 下での表示・検証フローを安定化する。"
-      ]
+      ],
+      "encode": "encode",
+      "decode": "decode",
+      "input": "入力",
+      "output": "出力",
+      "convert": "変換",
+      "copied": "コピーしました！",
+      "copy": "コピー",
+      "htmlEntity": {
+        "common": "htmlEntity.common"
+      }
     },
     "number-formatter": {
       "name": "数値フォーマット",
@@ -3520,7 +4027,16 @@
         "財務部門が米国株式報酬をユーロ換算表示する際、en-DEロケールで1.000,00€形式で出力",
         "教育機関がアラビア語圏向け教材で、アラビア数字（١٢٣）とローマ数字（CXXIII）の対応表作成",
         "APIレスポンスの数値データを統一フォーマットに変換するETLプロセスの前処理確認"
-      ]
+      ],
+      "numberFormat": {
+        "number": "numberFormat.number",
+        "style": "numberFormat.style",
+        "decimal": "numberFormat.decimal",
+        "currency": "numberFormat.currency",
+        "percent": "numberFormat.percent",
+        "currencyCode": "numberFormat.currencyCode"
+      },
+      "copied": "コピーしました！"
     },
     "hmac-generator": {
       "name": "HMAC生成",
@@ -3541,7 +4057,19 @@
         "ブロックチェーントランザクションのペイロード整合性チェック",
         "OAuth 2.0プロトコルにおけるJWT（JSON Web Token）署名生成",
         "IoTデバイス間のTLS通信における前共有鍵（PSK）ベースのメッセージ認証"
-      ]
+      ],
+      "hmac": {
+        "error": "エラー",
+        "message": "hmac.message",
+        "messagePlaceholder": "hmac.messagePlaceholder",
+        "secretKey": "hmac.secretKey",
+        "keyPlaceholder": "hmac.keyPlaceholder",
+        "algorithm": "hmac.algorithm"
+      },
+      "generate": "生成",
+      "result": "結果",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "password-strength": {
       "name": "パスワード強度チェッカー",
@@ -3562,7 +4090,19 @@
         "SIEMシステムと連携して、既存アカウントのパスワードポリシー準拠状況を一括診断するセキュリティ監査用",
         "教育機関で、学生のパスワード作成能力を評価するための実習ツールとして活用",
         "ペネトレーションテストの事前準備として、社内システムで使用される可能性のある脆弱なパスワード候補を特定する際の分析ツール"
-      ]
+      ],
+      "pwStrength": {
+        "password": "pwStrength.password",
+        "placeholder": "ここにテキストを入力...",
+        "hide": "pwStrength.hide",
+        "show": "pwStrength.show",
+        "strength": "pwStrength.strength",
+        "score": "pwStrength.score",
+        "length": "pwStrength.length",
+        "chars": "pwStrength.chars",
+        "charTypes": "pwStrength.charTypes",
+        "suggestions": "pwStrength.suggestions"
+      }
     },
     "totp-generator": {
       "name": "TOTP生成",
@@ -3583,7 +4123,20 @@
         "API開発中にバックエンドのTOTP検証ロジックをテストするために、特定時刻のパスワードを手動生成する。",
         "サーバー障害時の緊急アクセス手段として、バックアップシークレットキーから過去のタイムスロットのコードを再生成する。",
         "IoTデバイスのSSHログインにTOTPを統合するため、組み込みシステム向けシークレットキーの検証に使用する。"
-      ]
+      ],
+      "totp": {
+        "secret": "totp.secret",
+        "secretPlaceholder": "totp.secretPlaceholder",
+        "secretHint": "totp.secretHint",
+        "currentCode": "totp.currentCode",
+        "howItWorks": "totp.howItWorks",
+        "step1": "totp.step1",
+        "step2": "totp.step2",
+        "step3": "totp.step3"
+      },
+      "generate": "生成",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "user-agent-parser": {
       "name": "ユーザーエージェント解析",
@@ -3604,7 +4157,17 @@
         "Example 2: セキュリティ管理者が不審なアクセスを検出する際、User Agent Parserを使用して、アクセス元のデバイス情報やブラウザ情報を解析し、攻撃の兆候を把握します。",
         "Example 3: マーケティングチームがユーザーのデバイス分布を調査する際、User Agent Parserを使用して、ウェブサイト訪問者のデバイス種類（デスクトップ、モバイル、タブレット）を特定し、広告戦略を調整します。",
         "Example 4: サポートチームがユーザーからの問い合わせに対応する際、User Agent Parserを使用して、ユーザーが使用しているブラウザやOSの詳細を確認し、問題の原因を特定しやすいようにします。"
-      ]
+      ],
+      "uaParser": {
+        "userAgent": "uaParser.userAgent",
+        "placeholder": "ここにテキストを入力...",
+        "useCurrent": "uaParser.useCurrent",
+        "browser": "uaParser.browser",
+        "version": "uaParser.version",
+        "os": "uaParser.os",
+        "device": "uaParser.device",
+        "engine": "uaParser.engine"
+      }
     },
     "cidr-calculator": {
       "name": "CIDR計算ツール",
@@ -3625,7 +4188,21 @@
         "例2: データセンタ内で4つの/27サブネット（各30ホスト）を/24ネットワークから効率的に分割設計",
         "例3: IPv6環境構築時、/56プレフィックスから最大256個の/64サブネットを生成可能なネットワーク構成の検証",
         "例4: レガシな255.255.255.128サブネットマスクをCIDR表記（/25）に変換し、クラウドVPC設定に適用"
-      ]
+      ],
+      "cidr": {
+        "invalid": "cidr.invalid",
+        "input": "入力",
+        "commonPrefixes": "cidr.commonPrefixes",
+        "networkAddress": "cidr.networkAddress",
+        "broadcastAddress": "cidr.broadcastAddress",
+        "firstHost": "cidr.firstHost",
+        "lastHost": "cidr.lastHost",
+        "subnetMask": "cidr.subnetMask",
+        "wildcardMask": "cidr.wildcardMask",
+        "totalHosts": "cidr.totalHosts",
+        "usableHosts": "cidr.usableHosts",
+        "binaryMask": "cidr.binaryMask"
+      }
     },
     "http-header-parser": {
       "name": "HTTPヘッダー解析ツール",
@@ -3646,7 +4223,14 @@
         "CDN経由時のCache-Controlディレクティブの有効性確認",
         "CORSプリフライトリクエストのAccess-Control-Allow-Headers内容検証",
         "セキュリティヘッダー(X-Content-Type-Options等)のブラウザ互換性確認"
-      ]
+      ],
+      "httpHeader": {
+        "input": "入力",
+        "loadExample": "httpHeader.loadExample",
+        "placeholder": "ここにテキストを入力...",
+        "parse": "httpHeader.parse",
+        "parsed": "httpHeader.parsed"
+      }
     },
     "percentage-calculator": {
       "name": "パーセント計算",
@@ -3667,7 +4251,21 @@
         "大学教職員が学期末テストの平均点（38点→45点）の改善率を算出（+18.42%）",
         "ECサイトで5,000円の商品に20%割引クーポン適用時の実質価格（4,000円）を即時表示",
         "気温変化データ（−5℃→7℃）の絶対変化量（+12℃）と相対変化率（240%）の両方を可視化"
-      ]
+      ],
+      "percent": {
+        "whatIsPercent": "percent.whatIsPercent",
+        "of": "percent.of",
+        "whatPercentIs": "percent.whatPercentIs",
+        "isWhatPercentOf": "percent.isWhatPercentOf",
+        "percentChange": "percent.percentChange",
+        "from": "percent.from",
+        "to": "percent.to",
+        "increaseDecrease": "percent.increaseDecrease",
+        "increase": "percent.increase",
+        "decrease": "percent.decrease",
+        "quickRef": "percent.quickRef"
+      },
+      "copy": "コピー"
     },
     "statistics-calculator": {
       "name": "統計計算",
@@ -3688,7 +4286,29 @@
         "自動車工場の品質管理部門が、エンジン部品の寸法測定データから規格逸脱を検出するケース。",
         "投資ファンドマネージャーが株式ポートフォリオのリスク指標（標準偏差）を比較するケース。",
         "社会学者が世論調査の標本データから、人口統計学的属性ごとの回答傾向を多変量解析するケース。"
-      ]
+      ],
+      "stats": {
+        "inputLabel": "stats.inputLabel",
+        "inputHint": "stats.inputHint",
+        "varianceType": "stats.varianceType",
+        "population": "stats.population",
+        "sample": "stats.sample",
+        "dataOverview": "stats.dataOverview",
+        "count": "stats.count",
+        "mean": "stats.mean",
+        "median": "stats.median",
+        "mode": "stats.mode",
+        "noMode": "stats.noMode",
+        "sum": "stats.sum",
+        "min": "stats.min",
+        "max": "stats.max",
+        "range": "stats.range",
+        "populationVariance": "stats.populationVariance",
+        "sampleVariance": "stats.sampleVariance",
+        "populationStdDev": "stats.populationStdDev",
+        "sampleStdDev": "stats.sampleStdDev"
+      },
+      "copy": "コピー"
     },
     "scientific-calculator": {
       "name": "科学計算",
@@ -3709,7 +4329,13 @@
         "2. 量子化学計算：波動関数Ψ(x)=A*e^(-αx²)の規格化定数Aを求解",
         "3. 経済モデルの複利計算：連続複利成長率（A = P*e^(rt)）のシミュレーション",
         "4. 電気回路設計：LC共振回路のQ係数（Q = 1/R*√(L/C)）の最適化計算"
-      ]
+      ],
+      "sci": {
+        "error": "エラー",
+        "angleMode": "sci.angleMode",
+        "quickFormulas": "sci.quickFormulas"
+      },
+      "copy": "コピー"
     },
     "text-sorter": {
       "name": "テキスト並べ替え",
@@ -3730,7 +4356,35 @@
         "CSVの数値カラムを降順ソートし、上位10件の売上データを抽出",
         "Apacheアクセスログのタイムスタンプを時刻順に並び替えしてアクセスパターン分析",
         "製品コードの先頭2文字（カテゴリコード）でグループ化した後に長さ順に整列"
-      ]
+      ],
+      "sorter": {
+        "sortType": "sorter.sortType",
+        "alphabetical": "sorter.alphabetical",
+        "numerical": "sorter.numerical",
+        "natural": "sorter.natural",
+        "byLength": "sorter.byLength",
+        "order": "sorter.order",
+        "ascending": "sorter.ascending",
+        "descending": "sorter.descending",
+        "caseSensitive": "sorter.caseSensitive",
+        "trimLines": "sorter.trimLines",
+        "removeEmpty": "sorter.removeEmpty",
+        "removeDuplicates": "sorter.removeDuplicates",
+        "sort": "sorter.sort",
+        "loadExample": "sorter.loadExample",
+        "lines": "sorter.lines",
+        "placeholder": "ここにテキストを入力...",
+        "sortTypes": "sorter.sortTypes",
+        "alphabeticalDesc": "sorter.alphabeticalDesc",
+        "numericalDesc": "sorter.numericalDesc",
+        "naturalDesc": "sorter.naturalDesc",
+        "byLengthDesc": "sorter.byLengthDesc"
+      },
+      "clear": "クリア",
+      "input": "入力",
+      "output": "出力",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "text-extractor": {
       "name": "テキスト抽出",
@@ -3751,7 +4405,30 @@
         "2. サーバーログファイルから異常なアクセス元IPを特定し、セキュリティ分析に使用。",
         "3. PDF形式の名刺帳から電話番号とURLを一括抽出し、CRMシステムにインポート。",
         "4. ソーシャルメディア投稿から短縮URLを検出し、元のリンク先をトレースするための前処理。"
-      ]
+      ],
+      "extractor": {
+        "email": "extractor.email",
+        "url": "extractor.url",
+        "phone": "extractor.phone",
+        "ip": "extractor.ip",
+        "number": "extractor.number",
+        "hashtag": "extractor.hashtag",
+        "mention": "extractor.mention",
+        "type": "extractor.type",
+        "extract": "extractor.extract",
+        "loadExample": "extractor.loadExample",
+        "placeholder": "ここにテキストを入力...",
+        "found": "extractor.found",
+        "copyAll": "extractor.copyAll",
+        "noResults": "extractor.noResults",
+        "supportedTypes": "extractor.supportedTypes"
+      },
+      "all": "all",
+      "clear": "クリア",
+      "input": "入力",
+      "result": "結果",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "emoji-picker": {
       "name": "絵文字ピッカー",
@@ -3772,7 +4449,20 @@
         "2. SNSマーケティング担当者が季節限定の絵文字（例：☃️🎄）を含んだ投稿文案を迅速に作成",
         "3. UIデザイナーがFigmaプロトタイプに挿入する絵文字の正確なサイズとカラーバリエーションを確認",
         "4. カスタマーサポート担当者が応答メールに感情表現用絵文字（😢👍💡）を一括挿入して親しみやすさ向上"
-      ]
+      ],
+      "emoji": {
+        "searchPlaceholder": "emoji.searchPlaceholder",
+        "recent": "emoji.recent",
+        "clickToCopy": "emoji.clickToCopy",
+        "emojis": "emoji.emojis",
+        "noResults": "emoji.noResults",
+        "howToUse": "emoji.howToUse",
+        "tip1": "emoji.tip1",
+        "tip2": "emoji.tip2",
+        "tip3": "emoji.tip3"
+      },
+      "all": "all",
+      "copied": "コピーしました！"
     },
     "json-to-sql": {
       "name": "JSONからSQL変換",
@@ -3831,7 +4521,11 @@
       "compress": "圧縮",
       "originalSize": "元のサイズ",
       "compressedSize": "圧縮後サイズ",
-      "reduction": "削減"
+      "reduction": "削減",
+      "clear": "クリア",
+      "dropzone": "dropzone",
+      "original": "original",
+      "download": "ダウンロード"
     },
     "image-converter": {
       "name": "画像形式変換",
@@ -3861,7 +4555,12 @@
       "formatInfo": "形式情報",
       "pngDesc": "可逆圧縮、透明度対応",
       "jpegDesc": "非可逆圧縮、ファイルサイズ小",
-      "webpDesc": "最新形式、最高圧縮"
+      "webpDesc": "最新形式、最高圧縮",
+      "clear": "クリア",
+      "dropzone": "dropzone",
+      "original": "original",
+      "convert": "変換",
+      "download": "ダウンロード"
     },
     "favicon-generator": {
       "name": "ファビコン生成器",
@@ -3888,7 +4587,13 @@
       "processing": "処理中...",
       "generated": "生成済み",
       "downloadAll": "すべてダウンロード",
-      "htmlCode": "HTMLコード"
+      "htmlCode": "HTMLコード",
+      "clear": "クリア",
+      "dropzone": "dropzone",
+      "original": "original",
+      "generate": "生成",
+      "download": "ダウンロード",
+      "copy": "コピー"
     },
     "image-cropper": {
       "name": "画像切り抜き",
@@ -3915,7 +4620,12 @@
       "changeImage": "画像を変更",
       "preview": "プレビュー",
       "cropFirst": "先に画像を切り抜いてください",
-      "crop": "切り抜き"
+      "crop": "切り抜き",
+      "clear": "クリア",
+      "dropzone": "dropzone",
+      "width": "width",
+      "height": "height",
+      "download": "ダウンロード"
     },
     "gitignore-generator": {
       "name": ".gitignore生成",
@@ -4005,7 +4715,10 @@
       "scripts": "スクリプト",
       "scriptName": "スクリプト名",
       "scriptCommand": "コマンド",
-      "commonScripts": "一般的なスクリプト"
+      "commonScripts": "一般的なスクリプト",
+      "generate": "生成",
+      "copy": "コピー",
+      "download": "ダウンロード"
     },
     "json-minifier": {
       "name": "JSON Minifier",
@@ -4027,7 +4740,18 @@
         "JavaScriptバンドル内に静的に埋め込むJSONデータのファイルサイズ最適化",
         "サーバーレス関数の初期化時にLambdaメモリ制限内で実行するためのパッケージ軽量化"
       ],
-      "inputPlaceholder": "ここにテキストを入力..."
+      "inputPlaceholder": "ここにテキストを入力...",
+      "json": {
+        "invalidJson": "json.invalidJson"
+      },
+      "input": "入力",
+      "minify": "minify",
+      "beautify": "beautify",
+      "clear": "クリア",
+      "output": "出力",
+      "copied": "コピーしました！",
+      "copy": "コピー",
+      "outputPlaceholder": "結果がここに表示されます..."
     },
     "timezone-converter": {
       "name": "タイムゾーン変換",
@@ -4184,7 +4908,38 @@
         "ECサイトの商品ページで、Twitterカード経由のアクセス時に価格と在庫状況を表示する構造化データを生成するケース。",
         "多言語対応サイトで、hreflangタグを使って検索エンジンに言語別ページの関連性を伝える設定を行うケース。",
         "企業LPでOpen Graphの「og:type=article」を使用し、LinkedIn投稿時のプロフェッショナルなプレビューデザインを実現するケース。"
-      ]
+      ],
+      "metaTagGenerator": {
+        "pageTitle": "metaTagGenerator.pageTitle",
+        "pageTitlePlaceholder": "metaTagGenerator.pageTitlePlaceholder",
+        "author": "metaTagGenerator.author",
+        "authorPlaceholder": "metaTagGenerator.authorPlaceholder",
+        "description": "metaTagGenerator.description",
+        "descriptionPlaceholder": "metaTagGenerator.descriptionPlaceholder",
+        "characters": "metaTagGenerator.characters",
+        "keywords": "metaTagGenerator.keywords",
+        "keywordsPlaceholder": "metaTagGenerator.keywordsPlaceholder",
+        "ogImageUrl": "metaTagGenerator.ogImageUrl",
+        "ogImageUrlPlaceholder": "metaTagGenerator.ogImageUrlPlaceholder",
+        "pageUrl": "metaTagGenerator.pageUrl",
+        "pageUrlPlaceholder": "metaTagGenerator.pageUrlPlaceholder",
+        "twitterCardType": "metaTagGenerator.twitterCardType",
+        "twitterCardSummary": "metaTagGenerator.twitterCardSummary",
+        "twitterCardSummaryLargeImage": "metaTagGenerator.twitterCardSummaryLargeImage",
+        "twitterCardApp": "metaTagGenerator.twitterCardApp",
+        "twitterCardPlayer": "metaTagGenerator.twitterCardPlayer",
+        "twitterUsername": "metaTagGenerator.twitterUsername",
+        "twitterUsernamePlaceholder": "metaTagGenerator.twitterUsernamePlaceholder",
+        "robots": "metaTagGenerator.robots",
+        "robotsIndexFollow": "metaTagGenerator.robotsIndexFollow",
+        "robotsNoindexFollow": "metaTagGenerator.robotsNoindexFollow",
+        "robotsIndexNofollow": "metaTagGenerator.robotsIndexNofollow",
+        "robotsNoindexNofollow": "metaTagGenerator.robotsNoindexNofollow",
+        "viewport": "metaTagGenerator.viewport",
+        "generatedMetaTags": "metaTagGenerator.generatedMetaTags"
+      },
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "robots-txt-generator": {
       "name": "robots.txt ジェネレーター",
@@ -4243,7 +4998,46 @@
         "例 2: 企業の製品ページをTwitterでプロモートする際、Open Graph Previewを使用して、製品の特徴や価格が正しく表示されるか確認します。これにより、ユーザーが製品ページをクリックする可能性が高まり、購入率の向上が期待できます。",
         "例 3: ニュースサイトの記事をLinkedInで共有する前に、Open Graph Previewを使用して、記事のサムネイル画像が高品質であることを確認します。これにより、記事の視覚的吸引力が向上し、共有の頻度が増える可能性があります。",
         "例 4: イベントのウェブページをInstagramにリンクする際、Open Graph Previewを使用して、イベントの日時や場所が正しく表示されるか確認します。これにより、ユーザーがイベントの詳細を簡単に確認でき、参加率の向上が期待できます。"
-      ]
+      ],
+      "openGraphPreview": {
+        "defaultTitle": "openGraphPreview.defaultTitle",
+        "defaultDescription": "openGraphPreview.defaultDescription",
+        "defaultSiteName": "openGraphPreview.defaultSiteName",
+        "fetchError": "openGraphPreview.fetchError",
+        "imageLoadError": "openGraphPreview.imageLoadError",
+        "modeFetch": "openGraphPreview.modeFetch",
+        "modeManual": "openGraphPreview.modeManual",
+        "fetchUrlLabel": "openGraphPreview.fetchUrlLabel",
+        "fetching": "openGraphPreview.fetching",
+        "fetchButton": "openGraphPreview.fetchButton",
+        "title": "openGraphPreview.title",
+        "titlePlaceholder": "openGraphPreview.titlePlaceholder",
+        "siteName": "openGraphPreview.siteName",
+        "siteNamePlaceholder": "openGraphPreview.siteNamePlaceholder",
+        "description": "openGraphPreview.description",
+        "descriptionPlaceholder": "openGraphPreview.descriptionPlaceholder",
+        "imageUrl": "openGraphPreview.imageUrl",
+        "imageUrlPlaceholder": "openGraphPreview.imageUrlPlaceholder",
+        "pageUrl": "openGraphPreview.pageUrl",
+        "pageUrlPlaceholder": "openGraphPreview.pageUrlPlaceholder",
+        "platform": {
+          "facebook": "openGraphPreview.platform.facebook",
+          "twitter": "openGraphPreview.platform.twitter",
+          "linkedin": "openGraphPreview.platform.linkedin"
+        },
+        "preview": "openGraphPreview.preview",
+        "generatedCode": "openGraphPreview.generatedCode",
+        "recommendations": {
+          "title": "openGraphPreview.recommendations.title",
+          "imageSize": "openGraphPreview.recommendations.imageSize",
+          "titleLength": "openGraphPreview.recommendations.titleLength",
+          "descriptionLength": "openGraphPreview.recommendations.descriptionLength",
+          "highQuality": "openGraphPreview.recommendations.highQuality",
+          "testDebugger": "openGraphPreview.recommendations.testDebugger"
+        }
+      },
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "css-grid-generator": {
       "name": "CSSグリッドジェネレーター",
@@ -4299,7 +5093,42 @@
         "カード型ギャラリーレイアウト：flex-wrapとalign-contentの組み合わせでグリッド風デザインを実装",
         "中央揃えモーダルダイアログ：display: flexコンテナ内でalign-items/justify-contentをmiddle/ceterに設定",
         "不揃いな高さのカラム整列：align-selfプロパティで特定アイテムの垂直位置を個別制御"
-      ]
+      ],
+      "cssFlexboxGenerator": {
+        "direction": "cssFlexboxGenerator.direction",
+        "directionRow": "cssFlexboxGenerator.directionRow",
+        "directionRowReverse": "cssFlexboxGenerator.directionRowReverse",
+        "directionColumn": "cssFlexboxGenerator.directionColumn",
+        "directionColumnReverse": "cssFlexboxGenerator.directionColumnReverse",
+        "justifyContent": "cssFlexboxGenerator.justifyContent",
+        "justifyFlexStart": "cssFlexboxGenerator.justifyFlexStart",
+        "justifyFlexEnd": "cssFlexboxGenerator.justifyFlexEnd",
+        "justifyCenter": "cssFlexboxGenerator.justifyCenter",
+        "justifySpaceBetween": "cssFlexboxGenerator.justifySpaceBetween",
+        "justifySpaceAround": "cssFlexboxGenerator.justifySpaceAround",
+        "justifySpaceEvenly": "cssFlexboxGenerator.justifySpaceEvenly",
+        "alignItems": "cssFlexboxGenerator.alignItems",
+        "alignStretch": "cssFlexboxGenerator.alignStretch",
+        "alignFlexStart": "cssFlexboxGenerator.alignFlexStart",
+        "alignFlexEnd": "cssFlexboxGenerator.alignFlexEnd",
+        "alignCenter": "cssFlexboxGenerator.alignCenter",
+        "alignBaseline": "cssFlexboxGenerator.alignBaseline",
+        "flexWrap": "cssFlexboxGenerator.flexWrap",
+        "wrapNoWrap": "cssFlexboxGenerator.wrapNoWrap",
+        "wrapWrap": "cssFlexboxGenerator.wrapWrap",
+        "wrapWrapReverse": "cssFlexboxGenerator.wrapWrapReverse",
+        "gap": "cssFlexboxGenerator.gap",
+        "items": "cssFlexboxGenerator.items",
+        "preview": "cssFlexboxGenerator.preview",
+        "generatedCss": "cssFlexboxGenerator.generatedCss",
+        "quickReference": "cssFlexboxGenerator.quickReference",
+        "quickReferenceJustify": "cssFlexboxGenerator.quickReferenceJustify",
+        "quickReferenceAlign": "cssFlexboxGenerator.quickReferenceAlign",
+        "quickReferenceDirection": "cssFlexboxGenerator.quickReferenceDirection",
+        "quickReferenceWrap": "cssFlexboxGenerator.quickReferenceWrap"
+      },
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "jwt-generator": {
       "name": "JWT生成",
@@ -4320,7 +5149,29 @@
         "例2: マイクロサービス間通信で使用するJWTを生成し、各サービス間の権限検証プロセスをシミュレーションします。",
         "例3: OpenID Connectのフロー検証において、IDトークンの構造と署名プロセスを視覚的に確認しながら実装を行います。",
         "例4: サードパーティAPIの連携テストで、カスタムクレーム（audやscope）を含むトークンを生成し、権限スコープの動作確認を行います。"
-      ]
+      ],
+      "jwt": {
+        "invalidPayload": "jwt.invalidPayload",
+        "error": "エラー",
+        "algorithm": "jwt.algorithm",
+        "secretKey": "jwt.secretKey",
+        "secretPlaceholder": "jwt.secretPlaceholder",
+        "payload": "jwt.payload",
+        "generate": "生成",
+        "generatedToken": "jwt.generatedToken",
+        "commonClaims": "jwt.commonClaims",
+        "claims": {
+          "iss": "jwt.claims.iss",
+          "sub": "jwt.claims.sub",
+          "aud": "jwt.claims.aud",
+          "exp": "jwt.claims.exp",
+          "nbf": "jwt.claims.nbf",
+          "iat": "jwt.claims.iat",
+          "jti": "jwt.claims.jti"
+        }
+      },
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "cron-explainer": {
       "name": "クロン表現解説",
@@ -5225,7 +6076,20 @@
         "スクロール連動で現れる円形セクションの`clip-path: circle()`実装",
         "CSSアニメーションで変形するポリゴンシェイプのキーフレーム設計",
         "テキスト回り込み用に複雑なパスを定義した`shape-outside`プロパティの生成"
-      ]
+      ],
+      "clipPath": {
+        "preview": "clipPath.preview",
+        "presets": "clipPath.presets",
+        "value": "clipPath.value",
+        "syntax": "clipPath.syntax",
+        "circleDesc": "clipPath.circleDesc",
+        "ellipseDesc": "clipPath.ellipseDesc",
+        "polygonDesc": "clipPath.polygonDesc",
+        "insetDesc": "clipPath.insetDesc"
+      },
+      "output": "出力",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "uuid-validator": {
       "name": "UUID検証",
@@ -5246,7 +6110,20 @@
         "QAエンジニアが、APIレスポンスに含まれるUUIDがバージョン4のランダム性要件を満たすか検証。",
         "データベース管理者が、レガシーシステム内のUUIDが正しい16進数フォーマットに従っているか一括チェック。",
         "セキュリティ監査担当者が、認証トークンとして使用されるUUIDの予測不可能性をエントロピー分析で評価。"
-      ]
+      ],
+      "uuidValidator": {
+        "input": "入力",
+        "placeholder": "ここにテキストを入力...",
+        "validate": "uuidValidator.validate",
+        "valid": "uuidValidator.valid",
+        "invalid": "uuidValidator.invalid",
+        "invalidFormat": "uuidValidator.invalidFormat",
+        "versions": "uuidValidator.versions",
+        "v1Desc": "uuidValidator.v1Desc",
+        "v4Desc": "uuidValidator.v4Desc",
+        "v5Desc": "uuidValidator.v5Desc"
+      },
+      "clear": "クリア"
     },
     "text-hash-comparator": {
       "name": "テキスト ハッシュ コンパレータ",
@@ -5267,7 +6144,16 @@
         "例2: パスワードリセット時に、データベース保存済みのハッシュ値とユーザー入力値のハッシュをリアルタイム比較",
         "例3: システム構成ファイル（例: nginx.conf）のバックアップと現行バージョンのハッシュ比較による変更差分検証",
         "例4: ソフトウェアのコードコミット履歴で、特定のファイルが意図せず変更されていないことをハッシュ値で証明"
-      ]
+      ],
+      "hashCompare": {
+        "text1": "hashCompare.text1",
+        "placeholder": "ここにテキストを入力...",
+        "text2": "hashCompare.text2",
+        "comparing": "hashCompare.comparing",
+        "compare": "hashCompare.compare",
+        "match": "hashCompare.match",
+        "noMatch": "hashCompare.noMatch"
+      }
     },
     "json-path-finder": {
       "name": "JSONパスファインダー",
@@ -5288,7 +6174,19 @@
         "AWS CloudTrailログから特定リソースARNに関連するイベント（$.Records[?(@.resources[0] == 'arn:aws:...')]）をフィルタリング",
         "多言語対応の翻訳データ（$.ja.pages.home.title）を抽出してローカライズ処理に利用",
         "IoTデバイスからのセンサーデータ配列（$.sensors[?(@.type == 'temperature')].readings[-1].value）の最新値を取得"
-      ]
+      ],
+      "json": {
+        "invalidJson": "json.invalidJson"
+      },
+      "jsonPathFinder": {
+        "loadSample": "jsonPathFinder.loadSample",
+        "placeholder": "ここにテキストを入力...",
+        "analyze": "jsonPathFinder.analyze",
+        "search": "jsonPathFinder.search",
+        "paths": "jsonPathFinder.paths"
+      },
+      "input": "入力",
+      "copy": "コピー"
     },
     "canvas-drawing": {
       "name": "キャンバス描画",
@@ -5309,7 +6207,14 @@
         "教育者による数学公式の視覚的説明図の作成",
         "UIプロトタイパーがアプリ画面のワイヤーフレーム作成",
         "アーティストがデジタルスケッチの下書きをブラウザ上で実施"
-      ]
+      ],
+      "canvas": {
+        "size": "canvas.size",
+        "brush": "canvas.brush",
+        "eraser": "canvas.eraser"
+      },
+      "clear": "クリア",
+      "download": "ダウンロード"
     },
     "json-escape": {
       "name": "JSONエスケープ/アンエスケープ",
@@ -5330,7 +6235,17 @@
         "サーバーログ解析で、改行コードを含むエラーメッセージをJSON配列に変換する際の制御文字処理",
         "JavaScriptからPHPバックエンドに渡す多言語テキスト（例：日本語やアラビア語）のUnicodeエスケープ変換",
         "設定ファイルのJSON構文検証で、意図せず含まれたタブ文字（\\t）を可視化してデバッグするアンエスケープ操作"
-      ]
+      ],
+      "errorProcessing": "errorProcessing",
+      "input": "入力",
+      "jsonEscape": {
+        "placeholder": "ここにテキストを入力...",
+        "escape": "jsonEscape.escape",
+        "unescape": "jsonEscape.unescape"
+      },
+      "output": "出力",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "css-animation-generator": {
       "name": "CSS アニメーション生成器",
@@ -5351,7 +6266,17 @@
         "ECサイトの商品カードにホバーエフェクトを追加し、scale変換で3D的な反応を実装",
         "ランディングページのヘッダーセクションにスクロール連動アニメーションを設定して表示効果を付与",
         "管理画面のアラートメッセージにバウンスアニメーションを適用し、ユーザーの注意を引くUI設計を実現"
-      ]
+      ],
+      "cssAnimation": {
+        "preset": "cssAnimation.preset",
+        "duration": "cssAnimation.duration",
+        "timing": "cssAnimation.timing",
+        "iteration": "cssAnimation.iteration",
+        "preview": "cssAnimation.preview"
+      },
+      "output": "出力",
+      "copied": "コピーしました！",
+      "copy": "コピー"
     },
     "text-case-counter": {
       "name": "文字種カウント",
@@ -5372,7 +6297,19 @@
         "例2: 言語学者が、多言語対応文書のコーパス分析において、言語ごとのケース使用傾向を比較するための統計データを抽出する。",
         "例3: QAエンジニアが、フォーム入力フィールドのバリデーションロジックテストとして、意図しない文字種の混入を検出する。",
         "例4: セキュリティアナリストが、ソースコードスキャニングで検出されたobfuscated（難読化）テキストの異常なケースパターンを解析する。"
-      ]
+      ],
+      "input": "入力",
+      "caseCounter": {
+        "placeholder": "ここにテキストを入力...",
+        "total": "caseCounter.total",
+        "letters": "caseCounter.letters",
+        "uppercase": "caseCounter.uppercase",
+        "lowercase": "caseCounter.lowercase",
+        "digits": "caseCounter.digits",
+        "spaces": "caseCounter.spaces",
+        "special": "caseCounter.special",
+        "ratio": "caseCounter.ratio"
+      }
     },
     "dns-lookup": {
       "name": "DNS検索",
@@ -5393,7 +6330,11 @@
         "新規ドメインでMXレコードがメールフィルタリングサービスに正しく指向しているか検証する",
         "TXTレコードのSPF設定がRFC 7208準拠で構成されているかチェックする",
         "DNSプロパゲーション状況を複数のリージョンから同時照会して反映状況を確認する"
-      ]
+      ],
+      "dnsLookup": {
+        "ipError": "dnsLookup.ipError",
+        "error": "エラー"
+      }
     },
     "image-resizer": {
       "name": "画像リサイズツール",
@@ -5414,7 +6355,18 @@
         "Example 2: インフルエンサーがInstagramに投稿する写真を最適化したい場合、1080x1080ピクセルにリサイズし、アスペクト比を維持しながら画質を最高に設定できます。",
         "Example 3: 企業の広報担当者が、プレスリリースに使用するロゴを小さくしたい場合、Image Resizerを使って200x200ピクセルにリサイズし、Web用に適切なファイルサイズに調整できます。",
         "Example 4: 写真愛好家がフォトブックに使用する画像を一括でリサイズしたい場合、バッチ処理機能を使用して複数の画像を一度に処理し、画質を最適化しながらリサイズできます。"
-      ]
+      ],
+      "imageResizer": {
+        "dropzone": "imageResizer.dropzone",
+        "original": "imageResizer.original",
+        "width": "imageResizer.width",
+        "height": "imageResizer.height",
+        "lockRatio": "imageResizer.lockRatio",
+        "resize": "imageResizer.resize",
+        "resized": "imageResizer.resized"
+      },
+      "clear": "クリア",
+      "download": "ダウンロード"
     },
     "ssl-checker": {
       "name": "SSL証明書チェック",
@@ -5598,7 +6550,23 @@
         "ペネトレーションテストで、Nmapスキャン結果に現れた未知のポート（例: 5060/SIP）のサービス識別と攻撃面分析を行うケース。",
         "IoTデバイス開発において、カスタムアプリケーションが使用する新規ポートをIANA登録する際の既存競合サービス調査に利用するケース。",
         "大学のネットワーク授業で、学生がTCP 80番ポート（HTTP）とTCP 443番ポート（HTTPS）のTLSハンドシェイクプロセスの違いを比較学習するケース。"
-      ]
+      ],
+      "note": "note",
+      "searchPorts": "searchPorts",
+      "searchPlaceholder": "searchPlaceholder",
+      "lookupPort": "lookupPort",
+      "portPlaceholder": "portPlaceholder",
+      "port": "port",
+      "service": "service",
+      "descriptionLabel": "descriptionLabel",
+      "unknownPort": "unknownPort",
+      "invalidPort": "invalidPort",
+      "commonPorts": "commonPorts",
+      "noResults": "noResults",
+      "portRanges": "portRanges",
+      "wellKnown": "wellKnown",
+      "registered": "registered",
+      "dynamic": "dynamic"
     },
     "privacy-policy-generator": {
       "name": "プライバシーポリシー生成",
@@ -5619,7 +6587,29 @@
         "2. オンラインストアがPCI DSS要件に応じた決済情報取り扱い規定を生成",
         "3. ヘルステックアプリがHIPAA準拠の医療データ管理方針を日本語/英語で出力",
         "4. ゲームアプリがCOPPAに基づき13歳未満ユーザーの同意管理プロセスを文書化"
-      ]
+      ],
+      "privacyPolicyGenerator": {
+        "websiteName": "privacyPolicyGenerator.websiteName",
+        "websiteNamePlaceholder": "privacyPolicyGenerator.websiteNamePlaceholder",
+        "websiteUrl": "privacyPolicyGenerator.websiteUrl",
+        "websiteUrlPlaceholder": "privacyPolicyGenerator.websiteUrlPlaceholder",
+        "companyName": "privacyPolicyGenerator.companyName",
+        "companyNamePlaceholder": "privacyPolicyGenerator.companyNamePlaceholder",
+        "contactEmail": "privacyPolicyGenerator.contactEmail",
+        "contactEmailPlaceholder": "privacyPolicyGenerator.contactEmailPlaceholder",
+        "featuresTitle": "privacyPolicyGenerator.featuresTitle",
+        "features": {
+          "collectsPersonalData": "privacyPolicyGenerator.features.collectsPersonalData",
+          "usesCookies": "privacyPolicyGenerator.features.usesCookies",
+          "usesAnalytics": "privacyPolicyGenerator.features.usesAnalytics",
+          "usesAds": "privacyPolicyGenerator.features.usesAds",
+          "allowsUserAccounts": "privacyPolicyGenerator.features.allowsUserAccounts",
+          "sellsData": "privacyPolicyGenerator.features.sellsData"
+        },
+        "generate": "生成",
+        "copyToClipboard": "privacyPolicyGenerator.copyToClipboard",
+        "generatedOutput": "privacyPolicyGenerator.generatedOutput"
+      }
     },
     "terms-generator": {
       "name": "利用規約生成",
@@ -5640,7 +6630,28 @@
         "ECサイト運営者が特定商取引法に基づく表記義務を満たすための返品ポリシー条項を組み込み",
         "モバイルアプリ開発者が未成年者利用時の保護者同意証明プロセスを文書化",
         "フリーランスのエンジニアがGitHubリポジトリに適用するオープンソースライセンスの例外規定作成"
-      ]
+      ],
+      "termsGenerator": {
+        "websiteName": "termsGenerator.websiteName",
+        "websiteNamePlaceholder": "termsGenerator.websiteNamePlaceholder",
+        "websiteUrl": "termsGenerator.websiteUrl",
+        "websiteUrlPlaceholder": "termsGenerator.websiteUrlPlaceholder",
+        "companyName": "termsGenerator.companyName",
+        "companyNamePlaceholder": "termsGenerator.companyNamePlaceholder",
+        "contactEmail": "termsGenerator.contactEmail",
+        "contactEmailPlaceholder": "termsGenerator.contactEmailPlaceholder",
+        "governingLawCountry": "termsGenerator.governingLawCountry",
+        "governingLawCountryPlaceholder": "termsGenerator.governingLawCountryPlaceholder",
+        "featuresTitle": "termsGenerator.featuresTitle",
+        "features": {
+          "allowsUserContent": "termsGenerator.features.allowsUserContent",
+          "hasSubscription": "termsGenerator.features.hasSubscription",
+          "hasRefundPolicy": "termsGenerator.features.hasRefundPolicy"
+        },
+        "generate": "生成",
+        "copyToClipboard": "termsGenerator.copyToClipboard",
+        "generatedOutput": "termsGenerator.generatedOutput"
+      }
     },
     "cookie-policy-generator": {
       "name": "クッキーポリシー生成",
@@ -5721,7 +6732,24 @@
         "国際物流システムのCSV出力がRFC 4180準拠か検証するため、エスケープ文字の処理状況をインタラクティブにテストする。",
         "大学のコンピュータ科学講義で、学生がCSVフォーマットの基本構造を視覚的に学ぶためのデモツールとして使用する。",
         "API開発時、返却されるCSVレスポンスを即時変換し、JSON形式でエラーログの解析に活用するETLパイプラインの構築。"
-      ]
+      ],
+      "csvViewer": {
+        "defaultInput": "csvViewer.defaultInput",
+        "delimiterComma": "csvViewer.delimiterComma",
+        "delimiterSemicolon": "csvViewer.delimiterSemicolon",
+        "delimiterTab": "csvViewer.delimiterTab",
+        "delimiterPipe": "csvViewer.delimiterPipe",
+        "downloadCsv": "csvViewer.downloadCsv",
+        "csvInput": "csvViewer.csvInput",
+        "csvPlaceholder": "csvViewer.csvPlaceholder",
+        "tablePreview": "csvViewer.tablePreview",
+        "noData": "csvViewer.noData",
+        "tip": "csvViewer.tip"
+      },
+      "csvJson": {
+        "delimiter": "csvJson.delimiter",
+        "hasHeader": "csvJson.hasHeader"
+      }
     },
     "htaccess-generator": {
       "name": ".htaccess生成",
@@ -5884,7 +6912,31 @@
         "2. Eコマースサイトの開発者が商品ページのog:price:amount属性を動的に設定し、価格情報付きの共有プレビューを実装。",
         "3. マルチリンガルサイト管理者が言語別メタタグを一括生成し、hreflangタグとの整合性を担保。",
         "4. ウェブアプリケーションのデバッグ時に、Open Graphプロトコル準拠性を確認するための検証用コード生成。"
-      ]
+      ],
+      "openGraphGenerator": {
+        "siteTitle": "openGraphGenerator.siteTitle",
+        "siteTitlePlaceholder": "openGraphGenerator.siteTitlePlaceholder",
+        "siteDescription": "openGraphGenerator.siteDescription",
+        "siteDescriptionPlaceholder": "openGraphGenerator.siteDescriptionPlaceholder",
+        "url": "openGraphGenerator.url",
+        "urlPlaceholder": "openGraphGenerator.urlPlaceholder",
+        "imageUrl": "openGraphGenerator.imageUrl",
+        "imageUrlPlaceholder": "openGraphGenerator.imageUrlPlaceholder",
+        "siteName": "openGraphGenerator.siteName",
+        "siteNamePlaceholder": "openGraphGenerator.siteNamePlaceholder",
+        "type": "openGraphGenerator.type",
+        "typeWebsite": "openGraphGenerator.typeWebsite",
+        "typeArticle": "openGraphGenerator.typeArticle",
+        "typeProfile": "openGraphGenerator.typeProfile",
+        "typeVideo": "openGraphGenerator.typeVideo",
+        "typeMusic": "openGraphGenerator.typeMusic",
+        "preview": "openGraphGenerator.preview",
+        "ogPreviewAlt": "openGraphGenerator.ogPreviewAlt",
+        "noImage": "openGraphGenerator.noImage",
+        "previewTitleFallback": "openGraphGenerator.previewTitleFallback",
+        "previewDescriptionFallback": "openGraphGenerator.previewDescriptionFallback",
+        "generatedHtml": "openGraphGenerator.generatedHtml"
+      }
     },
     "twitter-card-generator": {
       "name": "Xカード生成",
@@ -5905,7 +6957,31 @@
         "Example 2: Eコマースサイトの管理者が商品ページをTwitterで共有する際、商品の高解像度画像と価格情報を正確に表示させることで、商品の販売を促進できます。",
         "Example 3: ニュースサイトの編集者が記事をTwitterで共有する際、記事の主要なポイントを要約したテキストを表示させることで、読者の興味を引きつけることができます。",
         "Example 4: ウェブデザイナーが新しいウェブサイトのプロモーションをTwitterで行う際、サイトのデザインや機能を紹介する画像と説明を表示させることで、潜在的なクライアントの関心を引きつけます。"
-      ]
+      ],
+      "twitterCardGenerator": {
+        "cardType": "twitterCardGenerator.cardType",
+        "cardSummary": "twitterCardGenerator.cardSummary",
+        "cardSummaryLargeImage": "twitterCardGenerator.cardSummaryLargeImage",
+        "cardApp": "twitterCardGenerator.cardApp",
+        "cardPlayer": "twitterCardGenerator.cardPlayer",
+        "title": "twitterCardGenerator.title",
+        "titlePlaceholder": "twitterCardGenerator.titlePlaceholder",
+        "description": "twitterCardGenerator.description",
+        "descriptionPlaceholder": "twitterCardGenerator.descriptionPlaceholder",
+        "imageUrl": "twitterCardGenerator.imageUrl",
+        "imageUrlPlaceholder": "twitterCardGenerator.imageUrlPlaceholder",
+        "imageAltText": "twitterCardGenerator.imageAltText",
+        "imageAltTextPlaceholder": "twitterCardGenerator.imageAltTextPlaceholder",
+        "siteUsername": "twitterCardGenerator.siteUsername",
+        "siteUsernamePlaceholder": "twitterCardGenerator.siteUsernamePlaceholder",
+        "creatorUsername": "twitterCardGenerator.creatorUsername",
+        "creatorUsernamePlaceholder": "twitterCardGenerator.creatorUsernamePlaceholder",
+        "preview": "twitterCardGenerator.preview",
+        "previewImageFallback": "twitterCardGenerator.previewImageFallback",
+        "previewTitleFallback": "twitterCardGenerator.previewTitleFallback",
+        "previewDescriptionFallback": "twitterCardGenerator.previewDescriptionFallback",
+        "generatedHtml": "twitterCardGenerator.generatedHtml"
+      }
     },
     "mime-type-lookup": {
       "name": "MIME型検索",
@@ -5926,7 +7002,8 @@
         "モバイルアプリ開発時、異なるAndroidバージョン間での音声ファイル再生対応形式を確認するユースケース",
         "データインジェストパイプライン構築時に、未識別バイナリファイルのコンテンツタイプを識別するシナリオ",
         "セキュリティチームがファイルアップロード機能の検証において、危険なMIMEタイプのマッピングを検出するケース"
-      ]
+      ],
+      "searchPlaceholder": "searchPlaceholder"
     },
     "http-status-codes": {
       "name": "HTTPステータスコード",
@@ -6073,7 +7150,20 @@
         "2. 初心者エンジニアが複雑な UPDATE 文を構築する際、SET 句と WHERE 条件の構文エラーを防ぐためにツールを利用するケース。",
         "3. DBA がデータ移行作業中に、複数のレコード挿入を一括で行うためのバッチ INSERT 文を自動生成するケース。",
         "4. ウェブアプリケーションの認証機能実装時、プレースホルダ付きのパラメータ化クエリを生成して SQL インジェクション対策を施すケース。"
-      ]
+      ],
+      "sqlGenerator": {
+        "commandType": "sqlGenerator.commandType",
+        "tableName": "sqlGenerator.tableName",
+        "columns": "sqlGenerator.columns",
+        "values": "sqlGenerator.values",
+        "setUpdates": "sqlGenerator.setUpdates",
+        "schemaDefinition": "sqlGenerator.schemaDefinition",
+        "whereClause": "sqlGenerator.whereClause",
+        "orderBy": "sqlGenerator.orderBy",
+        "limit": "sqlGenerator.limit",
+        "generatedSql": "sqlGenerator.generatedSql",
+        "copySql": "sqlGenerator.copySql"
+      }
     },
     "htaccess-to-nginx": {
       "name": "htaccessからNginxへの変換ツール",
@@ -9462,10 +10552,10 @@
       "themeForest": "フォレスト",
       "percentageNote": "値はパーセンテージを表し、各カテゴリで合計100%になる必要があります",
       "sampleData": {
-        "Q1": "第1四半期",
-        "Q2": "第2四半期",
-        "Q3": "第3四半期",
-        "Q4": "第4四半期",
+        "q1": "第1四半期",
+        "q2": "第2四半期",
+        "q3": "第3四半期",
+        "q4": "第4四半期",
         "mobile": "モバイル",
         "tablet": "タブレット",
         "desktop": "デスクトップ"
@@ -10674,7 +11764,31 @@
         "個人経営カフェが月次仕入先への飲料原液購入請求書をPDFで送付",
         "システムコンサルタントが作業時間帯（通常時/深夜割増）別に計算書を自動生成",
         "ECモール運営者が取引先会計システム向けにXML形式の請求データを出力"
-      ]
+      ],
+      "invoice": {
+        "invoiceNumber": "invoice.invoiceNumber",
+        "currency": "invoice.currency",
+        "invoiceDate": "invoice.invoiceDate",
+        "dueDate": "invoice.dueDate",
+        "from": "invoice.from",
+        "companyName": "invoice.companyName",
+        "address": "invoice.address",
+        "to": "invoice.to",
+        "clientName": "invoice.clientName",
+        "items": "invoice.items",
+        "description": "invoice.description",
+        "quantity": "invoice.quantity",
+        "unitPrice": "invoice.unitPrice",
+        "addItem": "invoice.addItem",
+        "taxRate": "invoice.taxRate",
+        "notes": "invoice.notes",
+        "downloadPdf": "invoice.downloadPdf",
+        "invoice": "invoice.invoice",
+        "amount": "invoice.amount",
+        "subtotal": "invoice.subtotal",
+        "tax": "invoice.tax",
+        "total": "invoice.total"
+      }
     },
     "resume-builder": {
       "name": "履歴書作成",
@@ -10753,7 +11867,16 @@
         "Example 2: 不動産の売買契約書にデジタル署名をつける。不動産の売買では、書類の交換が頻繁に行われますが、デジタル署名を使用することで、物理的な書類のやり取りを省き、取引をスムーズに進めることができます。",
         "Example 3: 医療機関での患者同意書にデジタル署名を追加する。患者の同意が必要な医療行為では、デジタル署名を使用することで、同意の証明を即座に取得し、保管することができます。",
         "Example 4: 業務報告書や提案書にデジタル署名を追加する。企業の内部文書や顧客への提案書にデジタル署名を追加することで、文書の信頼性とプロフェッショナリズムを高めることができます。"
-      ]
+      ],
+      "signature": {
+        "penColor": "signature.penColor",
+        "penWidth": "signature.penWidth",
+        "backgroundColor": "signature.backgroundColor",
+        "transparent": "signature.transparent",
+        "downloadPng": "signature.downloadPng",
+        "downloadSvg": "signature.downloadSvg"
+      },
+      "clear": "クリア"
     },
     "pomodoro-timer": {
       "name": "ポモドーロタイマー",
@@ -10774,7 +11897,24 @@
         "Example 2: 営業担当者のBさんは、毎日のクライアントとの会議準備にポモドーロタイマーを使用して、短時間で効果的なプレゼンテーション資料を作成し、時間を無駄にすることなく準備を進めることができます。",
         "Example 3: 学生のCさんは、試験勉強中にポモドーロタイマーを使用して、複数の科目の学習時間を効率的に管理し、疲労を軽減しながら学習時間を最適化できます。",
         "Example 4: デザイナーのDさんは、クリエイティブなアイデアを詰める際にポモドーロタイマーを使用して、一定の時間内に集中力を高め、休憩を挟んで新たな視点を得ることができます。"
-      ]
+      ],
+      "pomodoro": {
+        "pause": "pomodoro.pause",
+        "start": "pomodoro.start",
+        "reset": "pomodoro.reset",
+        "skip": "pomodoro.skip",
+        "completedSessions": "pomodoro.completedSessions",
+        "hideSettings": "pomodoro.hideSettings",
+        "showSettings": "pomodoro.showSettings",
+        "settings": "pomodoro.settings",
+        "workDuration": "pomodoro.workDuration",
+        "minutes": "pomodoro.minutes",
+        "shortBreakDuration": "pomodoro.shortBreakDuration",
+        "longBreakDuration": "pomodoro.longBreakDuration",
+        "sessionsBeforeLongBreak": "pomodoro.sessionsBeforeLongBreak",
+        "soundNotification": "pomodoro.soundNotification"
+      },
+      "clear": "クリア"
     },
     "meeting-notes": {
       "name": "ミーティングノート",
@@ -10795,7 +11935,26 @@
         "Example 2: 新商品の発売準備会議で、各部門の役割を定義し、重要なアクションアイテムを追跡し、プロジェクトのスケジュールを管理します。",
         "Example 3: クロスファンクショナルチームの調整会議で、異なる部署間のコミュニケーションをスムーズにし、共通の目標に向けて協力します。",
         "Example 4: 顧客との打合せ後、具体的なアクションプランを作成し、担当者にタスクを割り当て、進捗を追跡します。"
-      ]
+      ],
+      "meeting": {
+        "untitled": "meeting.untitled",
+        "date": "meeting.date",
+        "attendees": "meeting.attendees",
+        "agenda": "meeting.agenda",
+        "notes": "meeting.notes",
+        "actionItems": "meeting.actionItems",
+        "title": "meeting.title",
+        "titlePlaceholder": "meeting.titlePlaceholder",
+        "time": "meeting.time",
+        "addAttendee": "meeting.addAttendee",
+        "addAgendaItem": "meeting.addAgendaItem",
+        "notesPlaceholder": "meeting.notesPlaceholder",
+        "task": "meeting.task",
+        "assignee": "meeting.assignee",
+        "exportMarkdown": "meeting.exportMarkdown",
+        "exportText": "meeting.exportText"
+      },
+      "add": "add"
     },
     "business-days-calculator": {
       "name": "営業日計算機",
@@ -10816,7 +11975,25 @@
         "ソフトウェア開発プロジェクトのマイルストーン設定：要件定義フェーズの20日間の実作業日数を週5日体制で計算",
         "有給休暇の残日数確認：2023年1月10日から12月末までの取得可能日数を土日と会社休日を除外して算出",
         "国際物流の納期管理：大阪（UTC+9）とフランクフルト（UTC+2）のタイムゾーン差を考慮した輸送日数の正確な計算"
-      ]
+      ],
+      "businessDays": {
+        "calculateDays": "businessDays.calculateDays",
+        "calculateEndDate": "businessDays.calculateEndDate",
+        "startDate": "businessDays.startDate",
+        "endDate": "businessDays.endDate",
+        "businessDaysToAdd": "businessDays.businessDaysToAdd",
+        "excludeWeekends": "businessDays.excludeWeekends",
+        "customHolidays": "businessDays.customHolidays",
+        "holidayName": "businessDays.holidayName",
+        "businessDays": "businessDays.businessDays",
+        "totalDays": "businessDays.totalDays",
+        "weekendDays": "businessDays.weekendDays",
+        "holidayDays": "businessDays.holidayDays",
+        "invalidDateRange": "businessDays.invalidDateRange",
+        "calculatedEndDate": "businessDays.calculatedEndDate"
+      },
+      "add": "add",
+      "result": "結果"
     },
     "salary-calculator": {
       "name": "給与計算機",
@@ -10837,7 +12014,21 @@
         "人事担当者が新入社員の年収提示額から日給相当額を逆算して福利厚生費を計算",
         "海外支社との給与体系比較のため、ドル表記の年収を日本円ベースの時給に換算",
         "請負契約における単価改定の際、週給制から月給換算時の社会保険料影響をシミュレーション"
-      ]
+      ],
+      "salary": {
+        "amount": "salary.amount",
+        "payFrequency": "salary.payFrequency",
+        "hoursPerWeek": "salary.hoursPerWeek",
+        "taxRate": "salary.taxRate",
+        "beforeTax": "salary.beforeTax",
+        "hourly": "salary.hourly",
+        "daily": "salary.daily",
+        "weekly": "salary.weekly",
+        "biweekly": "salary.biweekly",
+        "monthly": "salary.monthly",
+        "annual": "salary.annual",
+        "afterTax": "salary.afterTax"
+      }
     },
     "invoice": {
       "invoice": "請求書",
@@ -11055,7 +12246,23 @@
         "データアナリストが、Excel で収集した調査データを JSON 形式に変換し、BI ツールに取り込むことで、レポート作成を効率化します。",
         "モバイルアプリ開発者が、Excel で作成した設定ファイルを JSON 形式に変換し、アプリのリソースファイルとして使用します。",
         "システム管理者が、Excel で管理しているサーバー設定情報を JSON 形式に変換し、自動化スクリプトに組み込むことで、サーバーのプロビジョニングを自動化します。"
-      ]
+      ],
+      "excelToJson": {
+        "invalidFileType": "excelToJson.invalidFileType",
+        "parseError": "excelToJson.parseError",
+        "copyError": "excelToJson.copyError",
+        "uploadFile": "excelToJson.uploadFile",
+        "supportedFormats": "excelToJson.supportedFormats",
+        "fileLoaded": "excelToJson.fileLoaded",
+        "selectSheet": "excelToJson.selectSheet",
+        "rows": "excelToJson.rows",
+        "preview": "excelToJson.preview",
+        "showingFirst": "excelToJson.showingFirst",
+        "jsonOutput": "excelToJson.jsonOutput",
+        "copied": "コピーしました！",
+        "copy": "コピー",
+        "download": "ダウンロード"
+      }
     },
     "json-to-excel": {
       "name": "JSON から Excel",
@@ -11076,7 +12283,21 @@
         "IoTセンサーのJSONログデータをCSV経由せずに直接Excelで分析可能に変換",
         "ECサイトの注文データを受注管理システム用のExcelフォーマットに変換",
         "CRMシステムのエクスポートデータを営業分析用ダッシュボードに即時反映"
-      ]
+      ],
+      "jsonToExcel": {
+        "invalidJson": "jsonToExcel.invalidJson",
+        "emptyData": "jsonToExcel.emptyData",
+        "parseError": "jsonToExcel.parseError",
+        "noInput": "jsonToExcel.noInput",
+        "exportError": "jsonToExcel.exportError",
+        "jsonInput": "jsonToExcel.jsonInput",
+        "loadSample": "jsonToExcel.loadSample",
+        "placeholder": "ここにテキストを入力...",
+        "fileName": "jsonToExcel.fileName",
+        "sheetName": "jsonToExcel.sheetName",
+        "preview": "jsonToExcel.preview",
+        "download": "ダウンロード"
+      }
     },
     "excel-viewer": {
       "name": "Excelビューア",
@@ -11097,7 +12318,23 @@
         "財務担当者が機密性の高い損益計算書を社内ネットワーク外で安全に閲覧・比較する",
         "品質保証チームがテストケースのマトリクスをフィルタ条件で絞り込み、担当者別に再配分する",
         "教育機関が生徒名簿の複数シートを一括表示し、成績列ごとのヒストグラム生成に利用する"
-      ]
+      ],
+      "excelViewer": {
+        "invalidFileType": "excelViewer.invalidFileType",
+        "parseError": "excelViewer.parseError",
+        "uploadFile": "excelViewer.uploadFile",
+        "supportedFormats": "excelViewer.supportedFormats",
+        "fileLoaded": "excelViewer.fileLoaded",
+        "filterColumn": "excelViewer.filterColumn",
+        "selectColumn": "excelViewer.selectColumn",
+        "filterValue": "excelViewer.filterValue",
+        "enterValue": "excelViewer.enterValue",
+        "clearFilter": "excelViewer.clearFilter",
+        "showing": "excelViewer.showing",
+        "rows": "excelViewer.rows",
+        "noResults": "excelViewer.noResults",
+        "emptySheet": "excelViewer.emptySheet"
+      }
     },
     "excel-merger": {
       "name": "Excel 結合ツール",
@@ -11118,7 +12355,22 @@
         "財務部門の損益計算書（フォーマット不揃いの5ファイル）を、統一フォーマットで水平統合するケース",
         "市場調査会社が、異なる設問構成のアンケート結果を列方向に統合してクロス集計するケース",
         "物流管理システムで、3ヶ月分の在庫データ（各月別ファイル）を時系列に並べた垂直統合表を作成するケース"
-      ]
+      ],
+      "excelMerger": {
+        "invalidFileType": "excelMerger.invalidFileType",
+        "parseError": "excelMerger.parseError",
+        "noSheetsSelected": "excelMerger.noSheetsSelected",
+        "mergeError": "excelMerger.mergeError",
+        "uploadFiles": "excelMerger.uploadFiles",
+        "multipleFiles": "excelMerger.multipleFiles",
+        "uploadedFiles": "excelMerger.uploadedFiles",
+        "mergeMode": "excelMerger.mergeMode",
+        "vertical": "excelMerger.vertical",
+        "horizontal": "excelMerger.horizontal",
+        "outputFileName": "excelMerger.outputFileName",
+        "merge": "excelMerger.merge",
+        "sheets": "excelMerger.sheets"
+      }
     },
     "pdf-to-image": {
       "name": "PDF から画像",
@@ -11139,7 +12391,22 @@
         "2. 電子契約の事前準備：署名が必要なPDF契約書をPNG形式で変換し、e-signatureツールで編集可能な画像として提供。",
         "3. 古典籍のデジタルアーカイブ：老朽化した紙の文献をPDF化後、600dpi PNGに変換して詳細な画像アーカイブを構築。",
         "4. グラフィックデザインの素材抽出：PDFに埋め込まれたベクターチャートをJPEG変換し、Photoshopで再加工するワークフロー。"
-      ]
+      ],
+      "pdfToImage": {
+        "invalidFileType": "pdfToImage.invalidFileType",
+        "parseError": "pdfToImage.parseError",
+        "noPagesSelected": "pdfToImage.noPagesSelected",
+        "convertError": "pdfToImage.convertError",
+        "uploadPdf": "pdfToImage.uploadPdf",
+        "selectPdf": "pdfToImage.selectPdf",
+        "processing": "pdfToImage.processing",
+        "format": "フォーマット",
+        "dpi": "pdfToImage.dpi",
+        "selectAll": "pdfToImage.selectAll",
+        "deselectAll": "pdfToImage.deselectAll",
+        "convert": "変換",
+        "pages": "pdfToImage.pages"
+      }
     },
     "image-to-pdf": {
       "name": "画像から PDF",
@@ -11160,7 +12427,24 @@
         "Example 2: 学生が研究発表の資料を作成する際、実験結果の画像やグラフを PDF にまとめ、プレゼンテーション資料として使用する。",
         "Example 3: 不動産業者が物件の写真を PDF にまとめ、顾客にメールで送信することで、物件の詳細情報を効果的に共有する。",
         "Example 4: 会社のレポート作成において、グラフや図表を含む複数の画像を PDF にまとめ、社内や取引先に配布する。"
-      ]
+      ],
+      "imageToPdf": {
+        "invalidFileType": "imageToPdf.invalidFileType",
+        "noImages": "imageToPdf.noImages",
+        "convertError": "imageToPdf.convertError",
+        "uploadImages": "imageToPdf.uploadImages",
+        "supportedFormats": "imageToPdf.supportedFormats",
+        "pageSize": "imageToPdf.pageSize",
+        "fitToImage": "imageToPdf.fitToImage",
+        "orientation": "imageToPdf.orientation",
+        "portrait": "imageToPdf.portrait",
+        "landscape": "imageToPdf.landscape",
+        "margin": "imageToPdf.margin",
+        "fileName": "imageToPdf.fileName",
+        "imageList": "imageToPdf.imageList",
+        "converting": "imageToPdf.converting",
+        "convert": "変換"
+      }
     },
     "pdf-merger": {
       "name": "PDFマージャー",
@@ -11178,7 +12462,22 @@
       "usage_examples": [
         "PDFマージャーを使用してデータを処理する",
         "待ち時間なしで迅速に処理結果を取得する"
-      ]
+      ],
+      "pdfMerger": {
+        "invalidFileType": "pdfMerger.invalidFileType",
+        "parseError": "pdfMerger.parseError",
+        "needMoreFiles": "pdfMerger.needMoreFiles",
+        "mergeError": "pdfMerger.mergeError",
+        "uploadPdfs": "pdfMerger.uploadPdfs",
+        "multipleFiles": "pdfMerger.multipleFiles",
+        "outputFileName": "pdfMerger.outputFileName",
+        "fileList": "pdfMerger.fileList",
+        "files": "pdfMerger.files",
+        "totalPages": "pdfMerger.totalPages",
+        "pages": "pdfMerger.pages",
+        "merging": "pdfMerger.merging",
+        "merge": "pdfMerger.merge"
+      }
     },
     "pdf-splitter": {
       "name": "PDF 分割ツール",
@@ -11199,7 +12498,25 @@
         "Example 2: 大学の教授が、学生に特定のページだけを印刷して提出させたい場合。PDF Splitterで必要なページのみを抽出し、学生に提供することで、無駄な印刷を防ぐことができます。",
         "Example 3: 法務部門で、契約書の特定の部分を別のドキュメントに追加したい場合。PDF Splitterで該当部分を抽出し、新しい契約書に統合することができます。",
         "Example 4: グラフィックデザイナーが、複数ページのデザイン案をクライアントに提示する際、各ページを個別のファイルとして送信したい場合。PDF Splitterで各ページを分割し、クライアントに渡すことができます。"
-      ]
+      ],
+      "pdfSplitter": {
+        "invalidFileType": "pdfSplitter.invalidFileType",
+        "parseError": "pdfSplitter.parseError",
+        "noPagesSelected": "pdfSplitter.noPagesSelected",
+        "splitError": "pdfSplitter.splitError",
+        "uploadPdf": "pdfSplitter.uploadPdf",
+        "processing": "pdfSplitter.processing",
+        "splitMode": "pdfSplitter.splitMode",
+        "selectedPages": "pdfSplitter.selectedPages",
+        "pageRange": "pdfSplitter.pageRange",
+        "eachPage": "pdfSplitter.eachPage",
+        "from": "pdfSplitter.from",
+        "to": "pdfSplitter.to",
+        "selectAll": "pdfSplitter.selectAll",
+        "deselectAll": "pdfSplitter.deselectAll",
+        "split": "pdfSplitter.split",
+        "pages": "pdfSplitter.pages"
+      }
     },
     "pdf-compressor": {
       "name": "PDF 圧縮ツール",
@@ -11220,7 +12537,20 @@
         "2. ウェブサイト用ポートフォリオPDFで、SVG画像を圧縮せずテキスト層のみFlate圧縮して表示速度を向上。",
         "3. 多言語マニュアルのCJKフォント部分をサブセット化し、不要なグリフデータを除去してファイルサイズを43%削減。",
         "4. 電子契約用PDFのXMPメタデータとプレビュー画像を完全削除し、セキュリティ強化とサイズ縮小を同時に実施。"
-      ]
+      ],
+      "pdfCompressor": {
+        "invalidFileType": "pdfCompressor.invalidFileType",
+        "compressError": "pdfCompressor.compressError",
+        "uploadPdf": "pdfCompressor.uploadPdf",
+        "originalSize": "pdfCompressor.originalSize",
+        "compressionLevel": "pdfCompressor.compressionLevel",
+        "compressing": "pdfCompressor.compressing",
+        "compress": "pdfCompressor.compress",
+        "compressionComplete": "pdfCompressor.compressionComplete",
+        "reduced": "pdfCompressor.reduced",
+        "compressedSize": "pdfCompressor.compressedSize",
+        "download": "ダウンロード"
+      }
     },
     "pdf-rotator": {
       "name": "PDF ページ回転ツール",
@@ -11241,7 +12571,18 @@
         "例2：CAD図面のA1サイズを270°回転させ、印刷時の用紙方向に最適化する。",
         "例3：学術論文のグラフページが逆向きになっている場合、該当ページのみ180°修正する。",
         "例4：契約書の電子署名ページが誤って90°傾いている場合、個別修正してフォーマットを統一する。"
-      ]
+      ],
+      "pdfRotator": {
+        "invalidFileType": "pdfRotator.invalidFileType",
+        "parseError": "pdfRotator.parseError",
+        "saveError": "pdfRotator.saveError",
+        "uploadPdf": "pdfRotator.uploadPdf",
+        "processing": "pdfRotator.processing",
+        "rotateAll": "pdfRotator.rotateAll",
+        "apply": "pdfRotator.apply",
+        "reset": "pdfRotator.reset",
+        "save": "pdfRotator.save"
+      }
     },
     "markdown-editor": {
       "name": "Markdown エディター",
@@ -11279,7 +12620,20 @@
       "code": "コード",
       "link": "リンク",
       "image": "画像",
-      "quote": "引用"
+      "quote": "引用",
+      "markdownEditor": {
+        "edit": "markdownEditor.edit",
+        "split": "markdownEditor.split",
+        "preview": "markdownEditor.preview",
+        "copyMd": "markdownEditor.copyMd",
+        "copyHtml": "markdownEditor.copyHtml",
+        "markdown": "markdownEditor.markdown",
+        "placeholder": "ここにテキストを入力...",
+        "previewLabel": "markdownEditor.previewLabel",
+        "downloadMd": "markdownEditor.downloadMd",
+        "downloadHtml": "markdownEditor.downloadHtml",
+        "clear": "クリア"
+      }
     },
     "world-clock": {
       "name": "世界時計",
@@ -11311,7 +12665,14 @@
           "question": "昼夜はどのように判断されますか？",
           "answer": "各都市カードには太陽☀️または月🌙アイコンが表示されます。6:00-18:00は太陽（昼）、それ以外は月（夜）を示します。"
         }
-      ]
+      ],
+      "worldClock": {
+        "format24h": "worldClock.format24h",
+        "showSeconds": "worldClock.showSeconds",
+        "selectCity": "worldClock.selectCity",
+        "addCity": "worldClock.addCity",
+        "noCities": "worldClock.noCities"
+      }
     },
     "stopwatch": {
       "name": "ストップウォッチ",
@@ -11343,7 +12704,18 @@
           "question": "最速と最遅のラップはどのようにマークされますか？",
           "answer": "2つ以上のラップが記録されると、システムは自動的に最速のラップに🏆、最遅のラップに🐢をマークし、パフォーマンス分析に役立ちます。"
         }
-      ]
+      ],
+      "stopwatchUI": {
+        "lap": "stopwatchUI.lap",
+        "stop": "stopwatchUI.stop",
+        "start": "stopwatchUI.start",
+        "reset": "stopwatchUI.reset",
+        "laps": "stopwatchUI.laps",
+        "lapNumber": "stopwatchUI.lapNumber",
+        "lapTime": "stopwatchUI.lapTime",
+        "totalTime": "stopwatchUI.totalTime",
+        "lapLabel": "stopwatchUI.lapLabel"
+      }
     },
     "countdown-timer": {
       "name": "カウントダウンタイマー",
@@ -11378,7 +12750,18 @@
           "question": "一時停止した後に再開できますか？",
           "answer": "はい。一時停止をクリックした後、カウントダウンは現在の状態を維持します。一時停止から再開するには「再開」をクリックします。"
         }
-      ]
+      ],
+      "countdownTimer": {
+        "timeUp": "countdownTimer.timeUp",
+        "timerFinished": "countdownTimer.timerFinished",
+        "hours": "countdownTimer.hours",
+        "minutes": "countdownTimer.minutes",
+        "seconds": "countdownTimer.seconds",
+        "resume": "countdownTimer.resume",
+        "start": "countdownTimer.start",
+        "pause": "countdownTimer.pause",
+        "reset": "countdownTimer.reset"
+      }
     },
     "note-pad": {
       "name": "ノートパッド",
@@ -11418,7 +12801,21 @@
           "question": "作成できるノートの数に制限はありますか？",
           "answer": "ノートの数に制限はありません。必要な分だけ作成できます。ただし、ブラウザローカルストレージには容量制限があります（一般的には5-10MB）ので、注意してください。"
         }
-      ]
+      ],
+      "notePad": {
+        "newNote": "notePad.newNote",
+        "export": "notePad.export",
+        "search": "notePad.search",
+        "color": "notePad.color",
+        "titlePlaceholder": "notePad.titlePlaceholder",
+        "contentPlaceholder": "notePad.contentPlaceholder",
+        "updated": "notePad.updated",
+        "untitled": "notePad.untitled",
+        "noContent": "notePad.noContent",
+        "noNotes": "notePad.noNotes",
+        "noResults": "notePad.noResults",
+        "totalNotes": "notePad.totalNotes"
+      }
     },
     "excelToJson": {
       "uploadFile": "Excel ファイルをアップロード",
@@ -11658,7 +13055,13 @@
           "question": "ファイルサイズに制限はありますか？",
           "answer": "処理はブラウザ内で行われますので、非常に大きなファイルの場合、遅くなる可能性があります。50MB未満のファイルをお勧めします。"
         }
-      ]
+      ],
+      "page": "page",
+      "errorParsing": "errorParsing",
+      "errorInvalidFile": "errorInvalidFile",
+      "dropzone": "dropzone",
+      "extracting": "extracting",
+      "pages": "pages"
     },
     "word-to-txt": {
       "name": "Wordからテキスト",
@@ -11680,7 +13083,11 @@
         "Example 3: ウェブ開発者がクライアントから受け取ったデザイン仕様書（.docx 形式）を、ウェブサイトの開発フローに組み込む必要がある場合、Word to Text を使用してテキストを抽出し、開発チームとの共有や自動化プロセスに利用できます。",
         "Example 4: 法務担当者が契約書（.docx 形式）を検閲する際、Word to Text を使用してテキスト形式に変換し、契約条項の検索や比較を行えるようになります。これにより、契約書の詳細なチェックや修正が効率的に行えます。"
       ],
-      "faqs": []
+      "faqs": [],
+      "errorParsing": "errorParsing",
+      "errorInvalidFile": "errorInvalidFile",
+      "dropzone": "dropzone",
+      "extracting": "extracting"
     },
     "word-to-html": {
       "name": "WordからHTML",
@@ -11702,7 +13109,13 @@
         "企業の社内規定書をCMSにインポート可能なHTML形式に一括変換",
         "大学の研究論文をWeb公開用にアクセシビリティ対応のHTML5ドキュメントに変換"
       ],
-      "faqs": []
+      "faqs": [],
+      "errorParsing": "errorParsing",
+      "errorInvalidFile": "errorInvalidFile",
+      "dropzone": "dropzone",
+      "converting": "converting",
+      "showCode": "showCode",
+      "showPreview": "showPreview"
     },
     "excel-to-csv": {
       "name": "ExcelからCSVへの変換ツール",
@@ -11731,7 +13144,11 @@
           "question": "公式も変換されますか？",
           "answer": "変換されるのは計算値のみで、公式自体は変換されません。"
         }
-      ]
+      ],
+      "errorParsing": "errorParsing",
+      "errorInvalidFile": "errorInvalidFile",
+      "dropzone": "dropzone",
+      "converting": "converting"
     },
     "csv-to-excel": {
       "name": "CSVからExcel",
@@ -11753,7 +13170,14 @@
         "例3: サーバーログのCSVデータをExcelに変換し、条件付き書式で異常値の可視化を実施。",
         "例4: 学術研究の実験結果を共有するため、複数のCSVファイルを統合した.xlsx形式の論文附属資料を作成。"
       ],
-      "faqs": []
+      "faqs": [],
+      "errorParsing": "errorParsing",
+      "errorInvalidFile": "errorInvalidFile",
+      "errorExport": "errorExport",
+      "dropzone": "dropzone",
+      "converting": "converting",
+      "rows": "rows",
+      "showingFirst": "showingFirst"
     },
     "loan-calculator": {
       "name": "ローン計算機",
@@ -16083,7 +17507,8 @@
       "tip4": "さまざまな設定で複数回実行してバリエーションを得ます",
       "addFillers": "自然なフィラーワードを追加",
       "humanize": "人間化",
-      "inputPlaceholder": "AI生成テキストをここに貼り付け..."
+      "inputPlaceholder": "AI生成テキストをここに貼り付け...",
+      "outputPlaceholder": "結果がここに表示されます..."
     },
     "dockerfile-generator": {
       "name": "Dockerfile ジェネレーター",
@@ -16195,7 +17620,8 @@
       "bracketSpacing": "括弧のスペース",
       "bracketSameLine": "括弧を同じ行に",
       "generate": "生成",
-      "download": "ダウンロード"
+      "download": "ダウンロード",
+      "htmlWhitespaceSensitivity": "htmlWhitespaceSensitivity"
     },
     "tsconfig-generator": {
       "name": "TSConfigジェネレーター",
@@ -16456,7 +17882,8 @@
       "inputPlaceholder": "テキストを入力...",
       "swap": "入れ替え",
       "outputPlaceholder": "結果がここに表示されます...",
-      "showTable": "テーブルを表示"
+      "showTable": "テーブルを表示",
+      "none": "none"
     },
     "checksum-verifier": {
       "name": "チェックサム検証ツール",
@@ -17121,7 +18548,13 @@
       "outputPlaceholder": "結果がここに表示されます...",
       "errors": {
         "emptyInput": "入力を入力してください"
-      }
+      },
+      "errorInvalidInput": "errorInvalidInput",
+      "convert": "変換",
+      "sql": {
+        "loadExample": "sql.loadExample"
+      },
+      "copied": "コピーしました！"
     },
     "http-status-code-reference": {
       "name": "HTTPステータスコードリファレンス",
@@ -17150,6 +18583,13 @@
       "outputPlaceholder": "結果はここに表示されます...",
       "errors": {
         "emptyInput": "入力を入力してください"
+      },
+      "httpStatus": {
+        "search": "httpStatus.search"
+      },
+      "all": "all",
+      "nav": {
+        "noResults": "nav.noResults"
       }
     },
     "jwt-payload-decoder": {
@@ -17179,6 +18619,16 @@
       "outputPlaceholder": "結果はここに表示されます...",
       "errors": {
         "emptyInput": "入力を入力してください"
+      },
+      "errorInvalidInput": "errorInvalidInput",
+      "errorInvalidFormat": "errorInvalidFormat",
+      "sql": {
+        "loadExample": "sql.loadExample"
+      },
+      "decode": "decode",
+      "copied": "コピーしました！",
+      "jwt": {
+        "commonClaims": "jwt.commonClaims"
       }
     },
     "base64-image-converter": {
@@ -17270,7 +18720,20 @@
       "outputPlaceholder": "結果はここに表示されます...",
       "errors": {
         "emptyInput": "入力を入力してください"
-      }
+      },
+      "sql": {
+        "loadExample": "sql.loadExample"
+      },
+      "urlParser": {
+        "invalid": "urlParser.invalid",
+        "protocol": "urlParser.protocol",
+        "hostname": "urlParser.hostname",
+        "port": "urlParser.port",
+        "pathname": "urlParser.pathname",
+        "hash": "urlParser.hash",
+        "queryParams": "urlParser.queryParams"
+      },
+      "copied": "コピーしました！"
     },
     "request-header-builder": {
       "name": "HTTPリクエストヘッダー作成ツール",
@@ -18526,7 +19989,21 @@
       "database": "データベース",
       "username": "ユーザー名",
       "password": "パスワード",
-      "connectionString": "接続文字列"
+      "connectionString": "接続文字列",
+      "database-connection-tester": {
+        "databaseType": "database-connection-tester.databaseType",
+        "host": "database-connection-tester.host",
+        "port": "database-connection-tester.port",
+        "database": "database-connection-tester.database",
+        "username": "database-connection-tester.username",
+        "password": "database-connection-tester.password",
+        "useSSL": "database-connection-tester.useSSL",
+        "connectionString": "database-connection-tester.connectionString",
+        "codeSnippet": "database-connection-tester.codeSnippet",
+        "note": "database-connection-tester.note",
+        "noteText": "database-connection-tester.noteText"
+      },
+      "copied": "コピーしました！"
     },
     "query-execution-planner": {
       "name": "クエリ実行計画ツール",
@@ -18793,7 +20270,10 @@
       "success": "成功",
       "failed": "失敗",
       "warning": "警告",
-      "info": "情報"
+      "info": "情報",
+      "useCurrent": "useCurrent",
+      "useIncoming": "useIncoming",
+      "keepBoth": "keepBoth"
     },
     "git-history-visualizer": {
       "name": "Git履歴可視化ツール",
@@ -20488,7 +21968,26 @@
       "asn": "ASN",
       "viewOnMap": "地図で表示",
       "invalidIp": "無効な IP アドレス",
-      "lookupError": "IP アドレスの検索に失敗しました"
+      "lookupError": "IP アドレスの検索に失敗しました",
+      "ip-geolocation": {
+        "lookupError": "ip-geolocation.lookupError",
+        "ipAddress": "ip-geolocation.ipAddress",
+        "placeholder": "ここにテキストを入力...",
+        "loading": "読み込み中...",
+        "lookup": "ip-geolocation.lookup",
+        "myIp": "ip-geolocation.myIp",
+        "results": "ip-geolocation.results",
+        "country": "ip-geolocation.country",
+        "region": "ip-geolocation.region",
+        "city": "ip-geolocation.city",
+        "zipCode": "ip-geolocation.zipCode",
+        "timezone": "ip-geolocation.timezone",
+        "coordinates": "ip-geolocation.coordinates",
+        "isp": "ip-geolocation.isp",
+        "organization": "ip-geolocation.organization",
+        "asn": "ip-geolocation.asn",
+        "viewOnMap": "ip-geolocation.viewOnMap"
+      }
     },
     "screen-recorder": {
       "name": "スクリーンレコーダー",
@@ -20510,7 +22009,24 @@
       "instructions": "使い方",
       "instruction1": "「録画開始」ボタンをクリック",
       "instruction2": "録画する画面、ウィンドウ、またはタブを選択",
-      "instruction3": "完了したら「停止」をクリックし、録画をダウンロード"
+      "instruction3": "完了したら「停止」をクリックし、録画をダウンロード",
+      "screen-recorder": {
+        "permissionDenied": "screen-recorder.permissionDenied",
+        "startError": "screen-recorder.startError",
+        "recording": "screen-recorder.recording",
+        "paused": "screen-recorder.paused",
+        "start": "screen-recorder.start",
+        "pause": "screen-recorder.pause",
+        "stop": "screen-recorder.stop",
+        "resume": "screen-recorder.resume",
+        "newRecording": "screen-recorder.newRecording",
+        "preview": "screen-recorder.preview",
+        "download": "ダウンロード",
+        "instructions": "screen-recorder.instructions",
+        "instruction1": "screen-recorder.instruction1",
+        "instruction2": "screen-recorder.instruction2",
+        "instruction3": "screen-recorder.instruction3"
+      }
     }
   },
   "tool": {

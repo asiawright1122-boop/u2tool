@@ -36,3 +36,7 @@ scripts/build-optimization/
 scripts/planning/
 scripts/dependency-audit/
 src/generated/
+
+# Translation fix artifacts
+*-audit-report*.json
+backups/fix-*/

@@ -1654,7 +1654,12 @@
         "2. OAuth 2.0 인증 시 nonce 토큰 생성을 통한 재생 공격 방지",
         "3. 클라우드 스토리지에 업로드되는 파일명 생성 시 충돌 방지",
         "4. 마이크로서비스 아키텍처에서 트랜잭션 ID로 분산 추적 구현"
-      ]
+      ],
+      "count": "count",
+      "generate": "생성",
+      "copied": "복사됨!",
+      "copy": "복사",
+      "all": "all"
     },
     "url-encoder": {
       "name": "URL 인코더/디코더",
@@ -1696,7 +1701,17 @@
           "question": "입력한 데이터는 서버에 저장되나요?",
           "answer": "아니요, 이 도구는 클라이언트 측에서 즉시 처리하는 방식으로 작동하여, 사용자의 입력 데이터가 외부 서버로 전송되거나 저장되지 않습니다."
         }
-      ]
+      ],
+      "input": "입력",
+      "url": {
+        "encodeUrl": "url.encodeUrl",
+        "decodeUrl": "url.decodeUrl"
+      },
+      "clear": "지우기",
+      "output": "출력",
+      "copied": "복사됨!",
+      "copy": "복사",
+      "outputPlaceholder": "결과가 여기에 표시됩니다..."
     },
     "password-generator": {
       "name": "비밀번호 생성기",
@@ -1744,7 +1759,13 @@
         "Example 3: 메시지 인증 - 메시지의 해시 값을 생성하여, 메시지가 전송 과정에서 변조되지 않았는지 확인할 수 있습니다. 송신자와 수신자가 동일한 해시 값을 생성하면 메시지의 무결성을 확인할 수 있습니다.",
         "Example 4: 로그 관리 - 로그 파일의 해시 값을 생성하여, 로그 파일이 변조되지 않았는지 확인할 수 있습니다. 이는 보안 이벤트를 추적하고 분석하는 데 유용합니다."
       ],
-      "inputPlaceholder": "여기에 텍스트를 입력하세요..."
+      "inputPlaceholder": "여기에 텍스트를 입력하세요...",
+      "input": "입력",
+      "hash": {
+        "generateHashes": "hash.generateHashes"
+      },
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "qr-generator": {
       "name": "QR 코드 생성기",
@@ -1766,7 +1787,12 @@
         "물류 회사가 창고 자산 추적을 위해 내구성을 고려한 오류 정정 수준 H 코드 제작",
         "스마트 홈 장비 제조사가 제품 설정용 Wi-Fi 자격 증명을 인코딩한 컬러 QR 코드 제공"
       ],
-      "inputPlaceholder": "여기에 텍스트를 입력하세요..."
+      "inputPlaceholder": "여기에 텍스트를 입력하세요...",
+      "input": "입력",
+      "qr": {
+        "generateQr": "qr.generateQr",
+        "downloadPng": "qr.downloadPng"
+      }
     },
     "color-converter": {
       "name": "색상 변환기",
@@ -1787,7 +1813,12 @@
         "UX 디자이너가 포토샵에서 추출한 RGB(255, 87, 51) 값을 리액트 네이티브 앱의 색상 테마 설정에 HSL로 변환해 사용하는 경우.",
         "프론트엔드 엔지니어가 색상 접근성을 개선하기 위해 WCAG 기준에 맞는 HSL 밝기 값(예: Lightness 45% 이상)으로 HEX 색상을 변환할 때.",
         "게임 개발자가 스프라이트 시트의 색상 팔레트를 최적화하기 위해 RGB와 HSL 간 반복 변환을 통해 채도 균형을 조정하는 시나리오."
-      ]
+      ],
+      "color": {
+        "preview": "color.preview"
+      },
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "timestamp-converter": {
       "name": "타임스탬프 변환기",
@@ -1808,7 +1839,14 @@
         "2. IoT 장비의 UTC 기반 데이터베이스 레코드를 현지 시간대 형식으로 리포팅하기 위한 일괄 변환",
         "3. JavaScript 개발 환경에서 new Date('2025-01-01').getTime() 결과값을 Unix 시간으로 확인",
         "4. PostgreSQL의 EXTRACT(EPOCH FROM NOW()) 결과를 ISO 8601 형식으로 변환해 프론트엔드 표시"
-      ]
+      ],
+      "timestamp": {
+        "currentTime": "timestamp.currentTime",
+        "unixTimestamp": "timestamp.unixTimestamp",
+        "dateTime": "timestamp.dateTime"
+      },
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "word-counter": {
       "name": "단어 카운터",
@@ -1830,7 +1868,15 @@
         "번역가가 프로젝트 계약 시 1,000단어당 요금 기준으로 작업량 산정",
         "소프트웨어 개발자가 입력 필드의 255자 제한을 테스트하기 위해 특수 기호 포함 텍스트 검증"
       ],
-      "inputPlaceholder": "여기에 텍스트 입력..."
+      "inputPlaceholder": "여기에 텍스트 입력...",
+      "input": "입력",
+      "wordCounter": {
+        "words": "wordCounter.words",
+        "characters": "wordCounter.characters",
+        "sentences": "wordCounter.sentences",
+        "paragraphs": "wordCounter.paragraphs"
+      },
+      "clear": "지우기"
     },
     "case-converter": {
       "name": "케이스 변환기",
@@ -1851,7 +1897,13 @@
         "2. SEO 최적화: HTML 제목 태그의 'product page'를 'Product Page' 타이틀 케이스로 변환",
         "3. 데이터베이스 정제: CSV 파일의 'CATEGORY' 열을 'Category' 형식으로 표준화",
         "4. 이메일 템플릿 생성: 수신자 이름을 'jane doe'에서 'Jane Doe'로 자동 변환"
-      ]
+      ],
+      "uppercase": "uppercase",
+      "lowercase": "lowercase",
+      "titleCase": "titleCase",
+      "sentenceCase": "sentenceCase",
+      "camelCase": "camelCase",
+      "snakeCase": "snakeCase"
     },
     "html-encoder": {
       "name": "HTML 엔티티 인코더/디코더",
@@ -1893,7 +1945,17 @@
           "question": "입력한 텍스트 데이터는 서버에 저장되나요?",
           "answer": "절대 저장되지 않습니다. 모든 처리는 사용자의 브라우저에서만 이루어지며, 개인정보 보호에 안전합니다."
         }
-      ]
+      ],
+      "input": "입력",
+      "html": {
+        "encodeHtml": "html.encodeHtml",
+        "decodeHtml": "html.decodeHtml"
+      },
+      "clear": "지우기",
+      "output": "출력",
+      "copied": "복사됨!",
+      "copy": "복사",
+      "outputPlaceholder": "결과가 여기에 표시됩니다..."
     },
     "markdown-preview": {
       "name": "마크다운 미리보기",
@@ -1915,7 +1977,14 @@
         "3. 팀원들과 공유할 회의 메모를 작성할 때, 표와 체크리스트 문법을 사용해 구조화된 문서를 실시간으로 협업합니다.",
         "4. 수학 공식을 포함한 보고서를 작성할 때 LaTeX 문법을 지원하는 확장 기능을 활성화하여 수식이 정상 렌더링되는지 확인합니다."
       ],
-      "inputPlaceholder": "여기에 텍스트 입력..."
+      "inputPlaceholder": "여기에 텍스트 입력...",
+      "markdown": {
+        "editor": "markdown.editor",
+        "preview": "markdown.preview",
+        "exportHtml": "markdown.exportHtml"
+      },
+      "copied": "복사됨!",
+      "clear": "지우기"
     },
     "lorem-ipsum": {
       "name": "로리모 잠시문장 생성기",
@@ -1936,7 +2005,18 @@
         "Example 2: 그래픽 디자이너가 프린트 매거진의 레이아웃을 작업할 때, Lorem Ipsum Generator를 사용하여 페이지의 텍스트 비주얼을 테스트합니다.",
         "Example 3: 프론트엔드 개발자가 새로운 웹 애플리케이션의 프로토타이핑을 진행할 때, Lorem Ipsum Generator를 사용하여 초기 콘텐츠를 채워넣습니다.",
         "Example 4: UI/UX 디자이너가 모바일 앱의 화면을 디자인할 때, Lorem Ipsum Generator를 사용하여 텍스트 요소의 배치와 길이를 테스트합니다."
-      ]
+      ],
+      "lorem": {
+        "type": "lorem.type",
+        "paragraphs": "lorem.paragraphs",
+        "sentences": "lorem.sentences",
+        "words": "lorem.words"
+      },
+      "count": "count",
+      "generate": "생성",
+      "output": "출력",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "regex-tester": {
       "name": "정규표현식 테스터",
@@ -1957,7 +2037,19 @@
         "Example 2: 날짜 형식 검사 - 사용자는 입력된 날짜 문자열이 특정 형식에 맞는지 확인할 수 있습니다. 예를 들어, '^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])-(19|20)\\d\\d$'와 같은 정규 표현식을 사용하여 'MM-DD-YYYY' 형식의 날짜를 검사할 수 있습니다.",
         "Example 3: IP 주소 검사 - 사용자는 입력된 IP 주소가 올바른 형식인지 확인할 수 있습니다. 예를 들어, '^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$'와 같은 정규 표현식을 사용하여 IP 주소의 유효성을 검사할 수 있습니다.",
         "Example 4: HTML 태그 추출 - 사용자는 입력된 HTML 코드에서 특정 태그를 추출할 수 있습니다. 예를 들어, '<p>(.*?)</p>'와 같은 정규 표현식을 사용하여 모든 <p> 태그의 내용을 추출할 수 있습니다."
-      ]
+      ],
+      "regex": {
+        "pattern": "regex.pattern",
+        "global": "regex.global",
+        "caseInsensitive": "regex.caseInsensitive",
+        "multiline": "regex.multiline",
+        "dotall": "regex.dotall",
+        "testString": "regex.testString",
+        "atIndex": "regex.atIndex"
+      },
+      "result": "결과",
+      "match": "match",
+      "matches": "matches"
     },
     "jwt-decoder": {
       "name": "JWT 디코더",
@@ -2026,7 +2118,18 @@
         "Example 2: 학술 논문 작성자들은 논문의 이전 버전과 최신 버전을 비교하여 수정된 부분을 확인하여 피드백을 반영했는지를 확인할 수 있습니다.",
         "Example 3: 웹사이트 관리자들은 웹 페이지의 HTML 코드를 변경한 후, 이전 버전과 최신 버전을 비교하여 변경 사항을 확인할 수 있습니다.",
         "Example 4: 법률 문서 작성자들은 문서의 이전 버전과 최신 버전을 비교하여 법률 조항의 변경 상태를 확인하고, 필요한 수정 사항을 파악할 수 있습니다."
-      ]
+      ],
+      "diffChecker": {
+        "original": "diffChecker.original",
+        "originalPlaceholder": "diffChecker.originalPlaceholder",
+        "modified": "diffChecker.modified",
+        "modifiedPlaceholder": "diffChecker.modifiedPlaceholder",
+        "compare": "diffChecker.compare",
+        "added": "diffChecker.added",
+        "removed": "diffChecker.removed",
+        "unchanged": "diffChecker.unchanged"
+      },
+      "clear": "지우기"
     },
     "json-to-csv": {
       "name": "JSON을 CSV로 변환",
@@ -2047,7 +2150,14 @@
         "Example 2: 데이터 과학자가 크롤링한 웹사이트 데이터를 JSON 형식으로 저장한 후, 이를 분석하기 쉽도록 CSV로 변환합니다. 이를 통해 데이터를 더 효율적으로 처리할 수 있습니다.",
         "Example 3: 프로젝트 매니저가 여러 소스에서 수집한 데이터를 통합하여 보고서를 작성할 때, 이 도구를 활용하여 JSON 데이터를 CSV로 변환합니다. 이로써 데이터를 스프레드시트에서 쉽게 정리하고 시각화할 수 있습니다.",
         "Example 4: 마케팅 팀이 고객 데이터를 분석하기 위해, 기존의 CSV 데이터를 JSON 포맷으로 변환하여 데이터베이스에 저장합니다. 이를 통해 데이터의 구조화와 관리가 용이해집니다."
-      ]
+      ],
+      "errorInvalidJson": "errorInvalidJson",
+      "errorInvalidFormat": "errorInvalidFormat",
+      "input": "입력",
+      "output": "출력",
+      "copied": "복사됨!",
+      "copy": "복사",
+      "download": "다운로드"
     },
     "image-to-base64": {
       "name": "이미지 to Base64",
@@ -2159,7 +2269,10 @@
       "separator": "구분자",
       "none": "없음",
       "lowercase": "소문자",
-      "slug": "슬러그"
+      "slug": "슬러그",
+      "input": "입력",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "number-base-converter": {
       "name": "수진법 변환 도구",
@@ -2181,7 +2294,12 @@
         "컴퓨터 그래픽스 개발: RGB 색상 값(예: #FF5733)을 10진수 튜플로 변환하여 OpenGL 쉐이더에 적용",
         "암호화 알고리즘 검증: 2의 보수 표현법을 사용한 음수를 이진수로 변환하여 SHA-2 해시 연산 과정 검증"
       ],
-      "inputPlaceholder": "여기에 텍스트 입력..."
+      "inputPlaceholder": "여기에 텍스트 입력...",
+      "errorInvalidInput": "errorInvalidInput",
+      "input": "입력",
+      "convert": "변환",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "json-path-tester": {
       "name": "JSONPath 테스터",
@@ -2253,7 +2371,17 @@
           "question": "서버에 XML 데이터가 저장되나요? 개인정보 보안은 어떻게 되나요?",
           "answer": "이 도구는 클라이언트 측에서 대부분의 처리를 수행하는 방식으로 설계되었으며, 사용자의 XML 데이터를 서버에 저장하거나 제삼자와 공유하지 않습니다."
         }
-      ]
+      ],
+      "xml": {
+        "invalidXml": "xml.invalidXml"
+      },
+      "input": "입력",
+      "format": "포맷",
+      "minify": "minify",
+      "clear": "지우기",
+      "output": "출력",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "chinese-converter": {
       "name": "중국어 변환기",
@@ -2274,7 +2402,17 @@
         "2. 고대 중국 문헌 디지털 아카이브 구축 시 원문 번체자를 현대 간체자로 일괄 변환",
         "3. OCR 스캔으로 생성된 혼합된 간체/번체 텍스트의 표준화 처리",
         "4. 국제 학술지 투고를 위해 번체자로 작성된 중국어 초안을 간체자로 변환"
-      ]
+      ],
+      "input": "입력",
+      "chinese": {
+        "placeholder": "여기에 텍스트 입력...",
+        "toTraditional": "chinese.toTraditional",
+        "toSimplified": "chinese.toSimplified"
+      },
+      "clear": "지우기",
+      "output": "출력",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "unit-converter": {
       "name": "단위 변환기",
@@ -2321,7 +2459,18 @@
         "버튼 호버 효과로 방사형 그라디언트를 사용해 3D 입체감을 표현하고 사용자 참여도를 높입니다.",
         "관리자 대시보드의 차트 배경에 미묘한 두 가지 색상 그라디언트를 적용해 정보 집중도를 향상시킵니다.",
         "프로모션 배너에 대비되는 색상 전환 효과를 가진 다중 색상 중단점 그라디언트를 구현해 시선을 유도합니다."
-      ]
+      ],
+      "gradient": {
+        "type": "gradient.type",
+        "linear": "gradient.linear",
+        "radial": "gradient.radial",
+        "angle": "gradient.angle",
+        "colors": "gradient.colors",
+        "addColor": "gradient.addColor",
+        "presets": "gradient.presets"
+      },
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "unicode-converter": {
       "name": "유니코드 변환기",
@@ -2342,7 +2491,20 @@
         "iOS/Android 앱에서 이모티콘 표시 문제 해결을 위한 UTF-16LE/BE 변환 테스트",
         "CSV 파일의 비 ASCII 문자가 레거시 시스템에서 정상 처리되도록 UTF-8 with BOM 변환",
         "악성 스크립트 분석 시 obfuscation된 유니코드 이스케이프 시퀀스 디코딩"
-      ]
+      ],
+      "input": "입력",
+      "unicode": {
+        "placeholder": "여기에 텍스트 입력...",
+        "format": "포맷",
+        "textToUnicode": "unicode.textToUnicode",
+        "unicodeToText": "unicode.unicodeToText",
+        "examples": "unicode.examples",
+        "reference": "unicode.reference"
+      },
+      "clear": "지우기",
+      "output": "출력",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "code-minifier": {
       "name": "코드 최소화 도구",
@@ -2392,7 +2554,17 @@
       "usage_examples": [
         "SQL 포맷터를 사용하여 데이터 처리",
         "대기 시간 없이 처리 결과 빠르게 얻기"
-      ]
+      ],
+      "input": "입력",
+      "sql": {
+        "loadExample": "sql.loadExample"
+      },
+      "format": "포맷",
+      "minify": "minify",
+      "clear": "지우기",
+      "output": "출력",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "pinyin-converter": {
       "name": "병음 변환기",
@@ -2413,7 +2585,18 @@
         "웹 개발자가 국제화(I18N) 프로젝트에서 중국어 사용자 입력을 로마자로 변환하여 검색 인덱싱 최적화",
         "언어학 연구에서 방언 발음을 표준 병음으로 정규화하여 음운론적 분석 수행",
         "출판 편집자가 아동용 중국어 동화책에 병음 부호를 자동 삽입하여 다중 텍스트 레이어 생성"
-      ]
+      ],
+      "input": "입력",
+      "pinyin": {
+        "placeholder": "여기에 텍스트 입력...",
+        "withTone": "pinyin.withTone",
+        "note": "pinyin.note"
+      },
+      "convert": "변환",
+      "clear": "지우기",
+      "output": "출력",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "color-picker": {
       "name": "색상 선택기",
@@ -2434,7 +2617,18 @@
         "2. SVG 아이콘의 stroke 색상을 WCAG AA 등급을 만족하는 대비율로 조정할 때 색상 휠과 접근성 체크 기능 동시 사용",
         "3. 포토샵 PSD 파일의 특정 픽셀 색상을 eyedropper 도구로 추출하고 CMYK 포맷으로 인쇄용 디자인에 적용",
         "4. 반응형 웹사이트의 다크 모드 테마 색상을 HSL 슬라이더로 동적 생성 후 Sass 루프를 통해 팔레트 자동 확장"
-      ]
+      ],
+      "colorPicker": {
+        "selectColor": "colorPicker.selectColor",
+        "presets": "colorPicker.presets",
+        "recent": "colorPicker.recent",
+        "info": "colorPicker.info",
+        "red": "colorPicker.red",
+        "green": "colorPicker.green",
+        "blue": "colorPicker.blue"
+      },
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "aspect-ratio": {
       "name": "면비율 계산기",
@@ -2455,7 +2649,21 @@
         "예시 2: 유튜브 크리에이터가 9:16 비율의 스마트폰 동영상을 1080x1920 픽셀로 조정하여 수직 화면에서 잘 보이도록 만들려는 경우, 이 도구를 활용할 수 있습니다.",
         "예시 3: 그래픽 디자이너가 프린트용 이미지를 4:3 비율로 조정하면서 특정 크기에 맞추려는 경우, 이 도구를 사용하여 가로와 세로 차원을 정확히 계산할 수 있습니다.",
         "예시 4: 사진작가가 3:2 비율의 사진을 600x400 픽셀로 줄여서 웹사이트에 게시하려는 경우, 이 도구를 사용하여 비율을 유지하면서 크기를 조정할 수 있습니다."
-      ]
+      ],
+      "aspect": {
+        "original": "aspect.original",
+        "width": "aspect.width",
+        "height": "aspect.height",
+        "ratio": "aspect.ratio",
+        "common": "aspect.common",
+        "resize": "aspect.resize",
+        "lockRatio": "aspect.lockRatio",
+        "newWidth": "aspect.newWidth",
+        "newHeight": "aspect.newHeight"
+      },
+      "result": "결과",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "css-beautifier": {
       "name": "CSS 정리 도구",
@@ -2477,7 +2685,15 @@
         "새로운 개발자가 프로젝트에 참여할 때, CSS 코드를 쉽게 이해할 수 있도록 CSS Beautifier를 통해 코드를 가독성 높게 정리합니다.",
         "CSS 코드에 문법 오류가 있는지 확인하기 위해, 개발자가 CSS Beautifier를 사용하여 코드를 검사하고 필요한 수정을 수행합니다."
       ],
-      "indent": "들여쓰기"
+      "indent": "들여쓰기",
+      "error": "오류",
+      "beautify": "beautify",
+      "minify": "minify",
+      "copy": "복사",
+      "input": "입력",
+      "placeholder": "여기에 텍스트 입력...",
+      "output": "출력",
+      "outputPlaceholder": "결과가 여기에 표시됩니다..."
     },
     "js-beautifier": {
       "name": "자바스크립트 뷰티파이어",
@@ -2499,7 +2715,15 @@
         "프론트엔드 성능 최적화를 위해 JS 파일 크기를 30% 이상 감소시켜야 하는 프로덕션 배포 시",
         "정적 타입 검사를 위해 TypeScript 코드를 JavaScript로 변환한 후 세미콜론 누락 문제를 자동 수정할 때"
       ],
-      "indent": "들여쓰기"
+      "indent": "들여쓰기",
+      "error": "오류",
+      "beautify": "beautify",
+      "minify": "minify",
+      "copy": "복사",
+      "input": "입력",
+      "placeholder": "여기에 텍스트 입력...",
+      "output": "출력",
+      "outputPlaceholder": "결과가 여기에 표시됩니다..."
     },
     "html-preview": {
       "name": "HTML 미리보기",
@@ -2521,7 +2745,9 @@
       ],
       "refresh": "새로고침",
       "htmlCode": "HTML 코드",
-      "preview": "미리보기"
+      "preview": "미리보기",
+      "clear": "지우기",
+      "placeholder": "여기에 텍스트 입력..."
     },
     "ip-lookup": {
       "name": "IP Lookup",
@@ -2552,7 +2778,9 @@
       "city": "도시",
       "isp": "ISP",
       "timezone": "시간대",
-      "coordinates": "좌표"
+      "coordinates": "좌표",
+      "error": "오류",
+      "placeholder": "여기에 텍스트 입력..."
     },
     "morse-code": {
       "name": "모스 코드 변환기",
@@ -2581,7 +2809,8 @@
       "toText": "텍스트로",
       "play": "재생",
       "morsePlaceholder": "모스 부호 입력...",
-      "reference": "참조"
+      "reference": "참조",
+      "copy": "복사"
     },
     "random-generator": {
       "name": "무작위 숫자 생성기",
@@ -2602,7 +2831,10 @@
         "온라인 추첨 이벤트를 위한 1000개 단위의 중복 없는 6자리 고유 코드 생성",
         "게임 개발에서 몬스터 드랍 테이블을 위한 1~100 범위의 가중치 없는 확률 계산",
         "통계적 표본 추출을 위한 10,000명 중 500명을 무작위로 선택하는 인덱스 생성"
-      ]
+      ],
+      "min": "min",
+      "max": "max",
+      "unique": "unique"
     },
     "text-reverser": {
       "name": "텍스트 반전 도구",
@@ -2623,7 +2855,11 @@
         "2. 시스템 관리자가 로그 파일의 최신 항목부터 분석하기 위해 줄 순서를 뒤집을 때",
         "3. 언어학자가 회문(Palindrome) 구조를 테스트하기 위해 문장을 문자 단위로 반전할 때",
         "4. 프론트엔드 개발자가 RTL(오른쪽에서 왼쪽) 언어 표기를 시뮬레이션하기 위해 텍스트 흐름을 반전할 때"
-      ]
+      ],
+      "reverseChars": "reverseChars",
+      "reverseWords": "reverseWords",
+      "reverseLines": "reverseLines",
+      "placeholder": "여기에 텍스트 입력..."
     },
     "line-counter": {
       "name": "라인 카운터",
@@ -2644,7 +2880,16 @@
         "2. 로그 파일에서 빈 줄을 제거하고, 알파벳순으로 정렬하여 특정 이벤트를 빠르게 찾습니다.",
         "3. 문장 리스트에서 중복된 문장을 제거하고, 문장을 역순으로 정렬하여 역대별 내용을 확인합니다.",
         "4. 대규모 설문조사 결과에서 빈 응답을 제거하고, 응답 결과를 알파벳순으로 정렬하여 분석 데이터를 준비합니다."
-      ]
+      ],
+      "totalLines": "totalLines",
+      "nonEmptyLines": "nonEmptyLines",
+      "emptyLines": "emptyLines",
+      "uniqueLines": "uniqueLines",
+      "removeDuplicates": "removeDuplicates",
+      "removeEmpty": "removeEmpty",
+      "sortLines": "sortLines",
+      "ignoreEmpty": "ignoreEmpty",
+      "placeholder": "여기에 텍스트 입력..."
     },
     "string-escape": {
       "name": "문자열 도주/언도",
@@ -2666,7 +2911,11 @@
         "사용자 입력(예: 닉네임)을 HTML 속성값에 주입하기 전 XSS를 막기 위해 HTML 모드로 lt, gt, amp, quot, apos를 변환하고, 속성값 컨텍스트 설정을 맞춘 뒤 템플릿에 안전하게 삽입합니다.",
         "RESTful API의 쿼리 파라미터로 특수문자(예: ?, &, =)를 포함한 값을 전달할 때, URL 모드 Query로 Percent-encoding을 적용해 서버 측 라우팅 오류를 방지합니다.",
         "JavaScript 템플릿 리터럴 내부에 외부 데이터를 삽입할 때, 줄바꿈과 역슬래시/따옴표 문제를 피하기 위해 JavaScript 모드로 유니코드/헥스 이스케이프를 적용해 런타임 에러를 방지합니다."
-      ]
+      ],
+      "error": "오류",
+      "escape": "escape",
+      "unescape": "unescape",
+      "placeholder": "여기에 텍스트 입력..."
     },
     "yaml-json": {
       "name": "YAML/JSON 변환기",
@@ -2687,7 +2936,11 @@
         "Example 2: DevOps 엔지니어는 CI/CD 파이프라인에서 사용되는 YAML 파일을 JSON 형식으로 변환하여 다른 시스템에 쉽게 통합할 수 있습니다.",
         "Example 3: 프론트엔드 개발자의 경우, 웹 애플리케이션에서 사용되는 JSON 데이터를 YAML 형식으로 변환하여 설정 파일을 더 쉽게 관리할 수 있습니다.",
         "Example 4: 시스템 관리자는 다양한 서비스에서 사용하는 설정 파일을 YAML에서 JSON으로, 또는 그 반대로 변환하여 시스템 간의 호환성을 보장할 수 있습니다."
-      ]
+      ],
+      "invalidYaml": "invalidYaml",
+      "invalidJson": "invalidJson",
+      "yamlPlaceholder": "yamlPlaceholder",
+      "jsonPlaceholder": "jsonPlaceholder"
     },
     "date-calculator": {
       "name": "날짜 계산기",
@@ -2719,7 +2972,9 @@
       "addSubtract": "더하기/빼기",
       "baseDate": "기준 날짜",
       "operation": "연산",
-      "subtract": "빼기"
+      "subtract": "빼기",
+      "add": "add",
+      "result": "결과"
     },
     "text-deduplicator": {
       "name": "텍스트 중복 제거 도구",
@@ -2740,7 +2995,13 @@
         "웹 크롤링 결과 처리: 크롤링한 데이터에서 중복된 URL을 제거하여 고유한 웹 페이지만 분석합니다.",
         "문서 정리: 여러 출처에서 수집한 문서를 하나로 합칠 때 중복된 문장을 제거하여 문서의 일관성을 유지합니다.",
         "이메일 마케팅: 이메일 목록에서 중복된 이메일 주소를 제거하여 효과적인 이메일 캠페인을 수행합니다."
-      ]
+      ],
+      "caseSensitive": "caseSensitive",
+      "trimLines": "trimLines",
+      "original": "original",
+      "unique": "unique",
+      "removed": "removed",
+      "placeholder": "여기에 텍스트 입력..."
     },
     "color-blender": {
       "name": "색상 혼합기",
@@ -2761,7 +3022,10 @@
         "Example 2: UI/UX 디자이너가 애플리케이션의 버튼이나 배경색을 설계할 때, Color Blender를 활용하여 다양한 색상 단계를 생성하여 사용자 인터페이스의 시각적 조화를 높일 수 있습니다.",
         "Example 3: 그래픽 디자이너가 포스터를 디자인할 때, Color Blender를 사용하여 포스터의 배경 그래디언트를 생성하여 시각적으로 눈에 띄는 효과를 낼 수 있습니다.",
         "Example 4: 웹 개발자가 웹사이트의 컬러 스키마를 설계할 때, Color Blender를 통해 주요 색상과 보조 색상 사이의 그래디언트를 생성하여 웹사이트의 전반적인 색상 일관성을 유지할 수 있습니다."
-      ]
+      ],
+      "color1": "color1",
+      "color2": "color2",
+      "steps": "steps"
     },
     "json-sorter": {
       "name": "JSON 정렬 도구",
@@ -2782,7 +3046,12 @@
         "Git으로 관리하는 환경 설정 파일의 diff 비교 시 불필요한 순서 변경 차이를 제거할 때",
         "NoSQL 데이터베이스 문서의 필드 순서를 정형화하여 스키마 검증을 자동화하는 프로세스",
         "OpenAPI 문서 생성 시 예시 응답의 키를 알파벳 순으로 정렬하여 개발자 가독성을 향상시키는 경우"
-      ]
+      ],
+      "invalidJson": "invalidJson",
+      "ascending": "ascending",
+      "descending": "descending",
+      "sort": "sort",
+      "placeholder": "여기에 텍스트 입력..."
     },
     "placeholder-image": {
       "name": "플레이스홀더 이미지 생성기",
@@ -2803,7 +3072,13 @@
         "UI 디자이너가 스토리보드 제작 시 저작권 문제 없이 사용할 수 있는 테스트 이미지 생성",
         "모바일 앱 개발자가 다양한 화면 밀도(dpi)에 대응하는 이미지 플레이스홀더 생성",
         "백엔드 개발자가 REST API 응답에 포함될 기본 이미지 URL을 프로토타입 단계에서 테스트"
-      ]
+      ],
+      "width": "width",
+      "height": "height",
+      "bgColor": "bgColor",
+      "textColor": "textColor",
+      "customText": "customText",
+      "generate": "생성"
     },
     "text-encryption": {
       "name": "텍스트 암호화",
@@ -2824,7 +3099,18 @@
         "고객 신용카드 정보를 PCI DSS 표준에 따라 AES-256-CBC로 일시적으로 암호화 후 데이터베이스에 저장",
         "보안 감사용으로 생성된 HMAC 태그를 첨부하여 전자 계약 문서의 무결성 검증",
         "IoT 장비 간 통신 시 JSON 페이로드를 암호화하여 중간자 공격 방지"
-      ]
+      ],
+      "encryption": {
+        "error": "오류",
+        "encrypt": "encryption.encrypt",
+        "decrypt": "encryption.decrypt",
+        "password": "encryption.password",
+        "passwordPlaceholder": "encryption.passwordPlaceholder",
+        "inputPlaceholder": "여기에 텍스트 입력..."
+      },
+      "input": "입력",
+      "output": "출력",
+      "copy": "복사"
     },
     "file-hash": {
       "name": "파일 해시 계산기",
@@ -2845,7 +3131,14 @@
         "2. 연구 데이터 백업 시 원본과 복사본의 MD5 해시 일치 여부를 점검하여 전송 오류 탐지.",
         "3. 기업 보안팀이 의심스러운 이메일 첨부파일의 SHA-1 해시를 바이러스토탈 데이터베이스와 대조하여 악성코드 식별.",
         "4. 시스템 관리자가 중복된 대용량 백업 파일을 식별하기 위해 SHA-512 해시 기반 비교 수행."
-      ]
+      ],
+      "fileHash": {
+        "dropzone": "fileHash.dropzone",
+        "fileName": "fileHash.fileName",
+        "fileSize": "fileHash.fileSize",
+        "calculating": "fileHash.calculating"
+      },
+      "copy": "복사"
     },
     "html-table-generator": {
       "name": "HTML 표 생성기",
@@ -2866,7 +3159,17 @@
         "학교 시간표 편집 시 셀 병합(span) 기능으로 과목 시간대 설정",
         "데이터 분석 보고서에 CSV 데이터를 HTML 테이블로 변환하여 삽입",
         "관리자 페이지 대시보드에서 접근성을 준수하는 테이블 구현"
-      ]
+      ],
+      "tableGen": {
+        "rows": "tableGen.rows",
+        "cols": "tableGen.cols",
+        "hasHeader": "tableGen.hasHeader",
+        "header": "tableGen.header",
+        "cell": "tableGen.cell",
+        "preview": "tableGen.preview"
+      },
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "json-schema-validator": {
       "name": "JSON 스키마 검증기",
@@ -2887,7 +3190,15 @@
         "2. 데이터 검증: 데이터 엔지니어가 대규모 데이터 집합에서 데이터의 일관성을 유지하고, 예상되지 않은 형식의 데이터를 식별할 때 사용합니다. 이는 데이터 품질 관리에 매우 중요합니다.",
         "3. 프론트엔드 개발: 프론트엔드 개발자가 서버로부터 받은 JSON 데이터가 올바른 형식인지 확인할 때 사용합니다. 이는 UI 로직의 안정성을 보장합니다.",
         "4. 자동화 테스트: 테스트 엔지니어가 자동화 테스트 스크립트에서 JSON 데이터의 유효성을 검증할 때 사용합니다. 이는 테스트의 정확성과 신뢰성을 높입니다."
-      ]
+      ],
+      "schemaValidator": {
+        "loadExample": "schemaValidator.loadExample",
+        "jsonPlaceholder": "schemaValidator.jsonPlaceholder",
+        "schemaPlaceholder": "schemaValidator.schemaPlaceholder",
+        "validate": "schemaValidator.validate",
+        "valid": "schemaValidator.valid",
+        "invalid": "schemaValidator.invalid"
+      }
     },
     "regex-patterns": {
       "name": "정규표현식 패턴 라이브러리",
@@ -2908,7 +3219,14 @@
         "로그 파일에서 특정 형식의 URL을 추출할 때, URL 패턴을 활용하여 원하는 데이터만 필터링할 수 있습니다.",
         "웹 스크래핑 프로젝트에서 전화번호를 추출할 때, 전화번호 패턴을 사용하여 다양한 형식의 전화번호를 일관되게 처리할 수 있습니다.",
         "데이터베이스에서 특정 형식의 아이디를 찾을 때, 사용자 정의 패턴을 생성하여 쿼리에 적용할 수 있습니다."
-      ]
+      ],
+      "regexPatterns": {
+        "test": "regexPatterns.test",
+        "match": "regexPatterns.match",
+        "noMatch": "regexPatterns.noMatch",
+        "tryIt": "regexPatterns.tryIt"
+      },
+      "copy": "복사"
     },
     "byte-counter": {
       "name": "바이트 계산기",
@@ -2929,7 +3247,15 @@
         "임베디드 시스템에서 256바이트 제한 로그 메시지 생성 시 ASCII로의 변환 가능성 검증",
         "게임 내 대사 파일이 16비트 인코딩에서 메모리 오버플로우를 유발하지 않는지 검증",
         "HTTP 헤더 필드의 최대 8KB 제한을 준수하기 위해 UTF-8 인코딩 기반 바이트 수 확인"
-      ]
+      ],
+      "input": "입력",
+      "byteCounter": {
+        "placeholder": "여기에 텍스트 입력...",
+        "characters": "byteCounter.characters",
+        "bytes": "byteCounter.bytes",
+        "lines": "byteCounter.lines",
+        "size": "byteCounter.size"
+      }
     },
     "json-to-typescript": {
       "name": "JSON에서 TypeScript 변환",
@@ -2950,7 +3276,17 @@
         "2. GraphQL API의 예시 응답을 기반으로 Apollo Client의 QueryResult 인터페이스 정의",
         "3. IoT 장비의 JSON 로그 형식을 분석하여 NestJS 백엔드의 DTO 타입 자동 생성",
         "4. 브라우저 확장 프로그램의 manifest.json을 TypeScript 상수로 변환 후 런타임 검증 로직 구축"
-      ]
+      ],
+      "json": {
+        "invalidJson": "json.invalidJson"
+      },
+      "jsonTs": {
+        "interfaceName": "jsonTs.interfaceName",
+        "jsonPlaceholder": "jsonTs.jsonPlaceholder"
+      },
+      "copied": "복사됨!",
+      "copy": "복사",
+      "convert": "변환"
     },
     "svg-optimizer": {
       "name": "SVG 최적화 도구",
@@ -2971,7 +3307,19 @@
         "UI/UX 디자이너: 고해상도 이미지 사용으로 인한 파일 크기 문제가 발생할 때, SVG Optimizer를 통해 파일 크기를 줄여 성능을 개선할 수 있습니다.",
         "그래픽 디자이너: 다양한 프로젝트에서 사용할 SVG 파일을 최적화하여 저장 공간을 절약하고, 전송 시간을 단축할 수 있습니다.",
         "프론트엔드 개발자: 웹 애플리케이션에서 사용되는 많은 SVG 파일을 효율적으로 관리하기 위해, SVG Optimizer를 활용하여 일괄적으로 최적화할 수 있습니다."
-      ]
+      ],
+      "input": "입력",
+      "svgOptimizer": {
+        "placeholder": "여기에 텍스트 입력...",
+        "optimize": "svgOptimizer.optimize",
+        "original": "svgOptimizer.original",
+        "optimized": "svgOptimizer.optimized",
+        "saved": "svgOptimizer.saved",
+        "preview": "svgOptimizer.preview"
+      },
+      "output": "출력",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "text-to-binary": {
       "name": "텍스트를 이진수로 변환",
@@ -2992,7 +3340,17 @@
         "임베디드 시스템의 펌웨어 업데이트를 위해 텍스트 기반 JSON 설정 파일을 바이너리 포맷으로 인코딩",
         "Base64로 인코딩된 전자서명을 디코딩해 원본 바이너리 데이터의 SHA-256 해시 값을 검증",
         "컴퓨터 아키텍처 실습에서 8비트 ALU 연산 결과를 이진 표현으로 시뮬레이션한 텍스트 데이터를 디버깅"
-      ]
+      ],
+      "textBinary": {
+        "toBinary": "textBinary.toBinary",
+        "toText": "textBinary.toText",
+        "text": "textBinary.text",
+        "textPlaceholder": "textBinary.textPlaceholder",
+        "binary": "textBinary.binary",
+        "binaryPlaceholder": "textBinary.binaryPlaceholder"
+      },
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "markdown-to-html": {
       "name": "마크다운 HTML 변환기",
@@ -3013,7 +3371,13 @@
         "2. 기술 블로그 글 작성 시 마크다운 형식의 초안을 HTML 스켈레톤에 자동 삽입하여 게시물 템플릿 생성",
         "3. 이메일 뉴스레터 제작을 위해 마크다운 형식의 콘텐츠를 table 기반 HTML로 변환",
         "4. JAMstack 아키텍처 기반 정적 사이트에서 마크다운 파일들을 자동으로 HTML 페이지로 빌드하는 파이프라인 구성"
-      ]
+      ],
+      "mdToHtml": {
+        "mdPlaceholder": "mdToHtml.mdPlaceholder",
+        "preview": "mdToHtml.preview"
+      },
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "html-minifier": {
       "name": "HTML 축소기",
@@ -3034,7 +3398,14 @@
         "대규모 웹 프로젝트에서 코드 리뷰를 수행할 때, HTML Minifier의 'Beautify' 기능을 사용하여 코드의 가독성을 향상시킬 수 있습니다.",
         "웹 애플리케이션의 성능을 최적화하기 위해, 개발자는 HTML Minifier를 사용하여 불필요한 코드 요소를 제거할 수 있습니다.",
         "웹 페이지의 유지보수를 쉽게 하기 위해, HTML Minifier의 'Beautify' 기능을 사용하여 코드를 일관된 형식으로 재구성할 수 있습니다."
-      ]
+      ],
+      "error": "오류",
+      "minify": "minify",
+      "beautify": "beautify",
+      "copied": "복사됨!",
+      "copy": "복사",
+      "input": "입력",
+      "output": "출력"
     },
     "json-diff": {
       "name": "JSON 차이 비교",
@@ -3082,7 +3453,15 @@
         "Example 2: 이메일 전송: 이메일에서 바이너리 파일을 전송할 때, Base32 인코딩을 사용하여 파일을 텍스트로 변환하여 전송할 수 있습니다. 이렇게 하면 이메일 시스템이 바이너리 데이터를 처리하는 데 발생할 수 있는 문제를 방지할 수 있습니다.",
         "Example 3: URL 생성: 웹 서비스에서 동적으로 생성되는 URL에 포함될 파라미터를 Base32로 인코딩하여, URL을 더 간결하고 가독성 있게 만들 수 있습니다.",
         "Example 4: 데이터 무결성 검사: 데이터를 Base32로 인코딩하고 디코딩하여 데이터가 전송 중에 손상되지 않았는지 확인할 수 있습니다. 이는 중요한 데이터의 무결성을 유지하는 데 유용합니다."
-      ]
+      ],
+      "error": "오류",
+      "encode": "encode",
+      "decode": "decode",
+      "input": "입력",
+      "convert": "변환",
+      "copied": "복사됨!",
+      "copy": "복사",
+      "output": "출력"
     },
     "epoch-converter": {
       "name": "에포크 변환기",
@@ -3103,7 +3482,17 @@
         "글로벌 이벤트 일정(GMT+9)을 Unix 타임스탬프로 변환하여 Kafka 메시지 키 생성",
         "IoT 센서 데이터의 밀리초 단위 타임스탬프를 한국 시간(KST)으로 변환해 대시보드 표시",
         "Node.js에서 생성한 Date.now() 값을 PHP strtotime() 형식으로 검증할 때 사용"
-      ]
+      ],
+      "epoch": {
+        "current": "epoch.current",
+        "timestamp": "epoch.timestamp",
+        "toDate": "epoch.toDate",
+        "datetime": "epoch.datetime",
+        "toEpoch": "epoch.toEpoch",
+        "useNow": "epoch.useNow"
+      },
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "css-unit-converter": {
       "name": "CSS 단위 변환기",
@@ -3124,7 +3513,15 @@
         "이미지 캐러셀의 너비를 vw 단위에서 px 값으로 변환해 JavaScript 동작에 적용",
         "접근성 향상을 위해 12pt 단위의 레거시 텍스트를 rem 단위로 변환 및 최적화",
         "네스티드 요소의 폰트 크기 계산 시 2em을 백분율(%) 값으로 변환해 상대적 크기 검증"
-      ]
+      ],
+      "cssUnit": {
+        "value": "cssUnit.value",
+        "unit": "cssUnit.unit",
+        "baseFontSize": "cssUnit.baseFontSize",
+        "viewportWidth": "cssUnit.viewportWidth",
+        "viewportHeight": "cssUnit.viewportHeight"
+      },
+      "result": "결과"
     },
     "text-statistics": {
       "name": "텍스트 통계",
@@ -3145,7 +3542,22 @@
         "마케팅 전문가: 마케팅 캠페인의 효과를 측정하기 위해, 캠페인 관련 콘텐츠의 통계를 분석합니다. 예를 들어, 소셜 미디어 포스팅의 단어 수, 문장 길이 등을 분석하여 콘텐츠의 효과를 평가할 수 있습니다.",
         "학술 저널 편집자: 학술 논문의 품질을 평가하기 위해, 논문의 구조와 내용을 분석합니다. 예를 들어, 문장 길이의 분포, 단어의 다양성 등을 분석하여 논문의 가독성을 평가할 수 있습니다.",
         "데이터 과학자: 대용량 텍스트 데이터를 분석하여 인사이트를 얻기 위해, Text Statistics를 사용합니다. 예를 들어, 소셜 미디어 데이터의 감성 분석을 수행하기 전에, 데이터의 기본 통계를 확인하여 데이터의 특성을 파악할 수 있습니다."
-      ]
+      ],
+      "textStats": {
+        "placeholder": "여기에 텍스트 입력...",
+        "chars": "textStats.chars",
+        "charsNoSpace": "textStats.charsNoSpace",
+        "words": "textStats.words",
+        "uniqueWords": "textStats.uniqueWords",
+        "sentences": "textStats.sentences",
+        "paragraphs": "textStats.paragraphs",
+        "lines": "textStats.lines",
+        "avgWordLen": "textStats.avgWordLen",
+        "digits": "textStats.digits",
+        "spaces": "textStats.spaces",
+        "readTime": "textStats.readTime",
+        "speakTime": "textStats.speakTime"
+      }
     },
     "hex-editor": {
       "name": "16진수 편집기",
@@ -3167,7 +3579,15 @@
         "3. SHA-256 해시값 검증을 위해 64자리 16진수 스트링을 UTF-8 텍스트로 변환하여 바이트 비교를 수행합니다.",
         "4. 이진 세이브 데이터 편집 시 특정 오프셋의 바이트 값을 수정한 후 체크섬 재계산 기능으로 데이터 일관성을 확인합니다."
       ],
-      "inputPlaceholder": "여기에 텍스트 입력..."
+      "inputPlaceholder": "여기에 텍스트 입력...",
+      "hexEditor": {
+        "text": "hexEditor.text",
+        "toHex": "hexEditor.toHex",
+        "hex": "hexEditor.hex",
+        "toText": "hexEditor.toText"
+      },
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "color-palette": {
       "name": "색상 팔레트 생성기",
@@ -3188,7 +3608,15 @@
         "그래픽 디자이너가 포스터 제작 시 유사색 팔레트를 활용해 시각적 통일감을 유지하는 레이아웃 구성",
         "데이터 시각화 전문가가 차트 색상으로 삼색 방식을 적용해 구분성이 높은 대시보드 디자인",
         "게임 개발자가 UI 요소에 접근성 기준을 충족하는 고대비 색상 조합을 적용하여 플레이어 편의성 향상"
-      ]
+      ],
+      "palette": {
+        "baseColor": "palette.baseColor",
+        "hexCode": "palette.hexCode",
+        "shades": "palette.shades",
+        "complementary": "palette.complementary",
+        "analogous": "palette.analogous",
+        "triadic": "palette.triadic"
+      }
     },
     "http-status": {
       "name": "HTTP 상태 코드",
@@ -3209,7 +3637,10 @@
         "새로운 API를 개발하면서, 특정 요청에 대한 적절한 상태 코드를 선택해야 할 때, 이 도구를 통해 각 상태 코드의 용도를 확인하고 올바른 코드를 사용합니다.",
         "웹사이트의 사용자 피드백에서 '페이지가 표시되지 않는다'는 내용이 자주 등장할 때, 404 Not Found 코드를 조회하여 해당 URL이 제대로 설정되어 있는지 확인합니다.",
         "네트워크 모니터링 도구에서 429 Too Many Requests 코드가 자주 발생할 때, 이 도구를 통해 이 코드의 의미를 이해하고, 요청 제한을 조정하거나 서버 설정을 최적화할 수 있습니다."
-      ]
+      ],
+      "httpStatus": {
+        "search": "httpStatus.search"
+      }
     },
     "json-to-yaml": {
       "name": "JSON YAML 변환기",
@@ -3230,7 +3661,13 @@
         "2. REST API 응답으로 받은 JSON 데이터를 CI/CD 파이프라인 설정 파일(YAML)에 통합할 때.",
         "3. 클라우드 서비스의 JSON 기반 템플릿을 Kubernetes의 YAML 배포 정의로 재구성할 때.",
         "4. Python 애플리케이션의 설정 파일을 JSON에서 YAML로 포맷 변경하여 팀의 표준화를 유지할 때."
-      ]
+      ],
+      "json": {
+        "invalidJson": "json.invalidJson"
+      },
+      "convert": "변환",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "data-uri": {
       "name": "데이터 URI 생성기",
@@ -3276,7 +3713,16 @@
         "소프트웨어 개발에서 Git 커밋 간 코드 차이를 정량적으로 분석할 때",
         "채용 담당자가 이력서와 채용 공고 간 핵심 역량 일치도를 평가하는 경우",
         "번역된 자막 파일이 원본 대본과 얼마나 일치하는지를 확인하는 미디어 프로젝트"
-      ]
+      ],
+      "textCompare": {
+        "text1": "textCompare.text1",
+        "placeholder": "여기에 텍스트 입력...",
+        "text2": "textCompare.text2",
+        "charSimilarity": "textCompare.charSimilarity",
+        "wordSimilarity": "textCompare.wordSimilarity",
+        "editDistance": "textCompare.editDistance",
+        "commonWords": "textCompare.commonWords"
+      }
     },
     "json-to-go": {
       "name": "JSON Go 구조체 변환기",
@@ -3347,7 +3793,16 @@
         "Example 2: 시스템 관리자가 시스템 로그 파일의 권한을 확인하려고 합니다. octal 값 '640'을 symbolic 표기법으로 변환하여 파일에 대한 접근 권한을 이해합니다.",
         "Example 3: 개발자가 스크립트 파일을 작성하고 실행하려고 합니다. Chmod Calculator를 사용하여 '755' 값을 symbolic 표기법으로 변환하여 스크립트 파일에 적절한 실행 권한을 부여합니다.",
         "Example 4: 보안 전문가가 특정 디렉토리의 파일 권한을 검토하려고 합니다. symbolic 표기법 'rwxrwxrwx'를 octal 값으로 변환하여 모든 사용자가 모든 권한을 가짐을 확인하고, 보안 리스크를 평가합니다."
-      ]
+      ],
+      "chmod": {
+        "octal": "chmod.octal",
+        "symbolic": "chmod.symbolic",
+        "read": "chmod.read",
+        "write": "chmod.write",
+        "execute": "chmod.execute",
+        "command": "chmod.command"
+      },
+      "copy": "복사"
     },
     "barcode-generator": {
       "name": "바코드 생성기",
@@ -3368,7 +3823,11 @@
         "의약품 포장에 Code 39 사용하여 26자 알파뉴메릭 일련번호 인쇄",
         "도서 ISBN 번호(EAN-13)를 변환해 책 표지 디자인에 삽입",
         "소형 가전제품 포장에 1.5cm 크기의 UPC-A 바코드 PNG 파일 생성"
-      ]
+      ],
+      "barcode": {
+        "text": "barcode.text",
+        "format": "포맷"
+      }
     },
     "text-to-speech": {
       "name": "텍스트 음성 변환",
@@ -3389,7 +3848,15 @@
         "2. 유튜브 영상 편집 시 자막 대신 생성된 음성을 동기화하여 청각 장애인용 설명음성 트랙 추가",
         "3. 영어 학습자들이 원어민 발음을 비교하기 위해 문장별로 다른 억양(Accent) 적용",
         "4. 스마트홈 기기용 음성 알림 메시지 생성 시 특정 단어에 강조(Emphasis) 태그 적용"
-      ]
+      ],
+      "tts": {
+        "placeholder": "여기에 텍스트 입력...",
+        "voice": "tts.voice",
+        "rate": "tts.rate",
+        "pitch": "tts.pitch",
+        "speak": "tts.speak",
+        "stop": "tts.stop"
+      }
     },
     "url-parser": {
       "name": "URL 파서",
@@ -3443,7 +3910,13 @@
         "2. MongoDB의 BSON 문서를 XML 기반 EDI(전자문서교환) 시스템에 연동하기 위한 중계 변환",
         "3. IoT 장비의 JSON 구성 파일을 XML 기반 자동화 스크립트에서 사용할 수 있도록 재구성",
         "4. 금융 규제 보고서 생성 시 RESTful API 데이터를 XBRL(확장가능 비즈니스 보고 언어) 스키마에 맞는 XML로 변환"
-      ]
+      ],
+      "json": {
+        "invalidJson": "json.invalidJson"
+      },
+      "convert": "변환",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "text-wrapper": {
       "name": "텍스트 줄바꿈",
@@ -3464,7 +3937,17 @@
         "예시 2: 뉴스 기사 작성 시, 기사의 각 줄이 70자 이내로 유지되도록 하여 가독성을 높이고, 기사 형식에 맞게 조정합니다.",
         "예시 3: 코드 주석 작성 시, 주석이 한 줄에 지나치게 길어지지 않도록 Text Wrapper를 사용하여 주석의 줄 길이를 80자로 설정합니다.",
         "예시 4: 소설이나 에세이 작성 시, 각 문장이 특정 길이를 초과하지 않도록 하여 전체적인 형식을 일관되게 유지합니다."
-      ]
+      ],
+      "textWrapper": {
+        "width": "textWrapper.width",
+        "chars": "textWrapper.chars",
+        "placeholder": "여기에 텍스트 입력...",
+        "wrap": "textWrapper.wrap"
+      },
+      "input": "입력",
+      "output": "출력",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "csv-to-json": {
       "name": "CSV를 JSON으로",
@@ -3485,7 +3968,21 @@
         "REST API 테스트를 위한 Postman 컬렉션 초기화 데이터셋 생성",
         "서버 로그 파일을 ELK 스택 분석용 JSON 형식으로 일괄 변환",
         "MongoDB 문서 삽입을 위한 CSV 기반 초기 데이터 마이그레이션"
-      ]
+      ],
+      "csvToJson": {
+        "error": "오류",
+        "delimiterTab": "csvToJson.delimiterTab",
+        "csv": "csvToJson.csv",
+        "csvPlaceholder": "csvToJson.csvPlaceholder",
+        "json": "csvToJson.json"
+      },
+      "csvJson": {
+        "delimiter": "csvJson.delimiter",
+        "hasHeader": "csvJson.hasHeader"
+      },
+      "convert": "변환",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "html-entity": {
       "name": "HTML 엔티티 변환기",
@@ -3506,7 +4003,17 @@
         "사용자 댓글을 innerHTML로 삽입하기 전 '<script>alert(1)</script>'나 '\"onmouseover=alert(1)' 같은 위험 문자열을 &lt; &gt; &amp; &quot; &#x27;로 이스케이프하여 DOM 파서의 해석을 방지합니다.",
         "HTML 속성값에 동적으로 텍스트를 삽입할 때, 따옴표와 앰퍼샌드가 속성 구문을 깨뜨리지 않도록 '100% 할인 & 무료 배송'을 &quot;100% 할인 &amp; 무료 배송&quot;로 엔터티 변환하여 안전하게 바인딩합니다.",
         "HTML 이스케이프를 수행한 뒤 개발 과정에서 원문으로 빠르게 되돌리기 위해, 변환된 엔터티 문자열을 디코딩 탭으로 전환해 원문 텍스트를 한 번에 복원합니다."
-      ]
+      ],
+      "encode": "encode",
+      "decode": "decode",
+      "input": "입력",
+      "output": "출력",
+      "convert": "변환",
+      "copied": "복사됨!",
+      "copy": "복사",
+      "htmlEntity": {
+        "common": "htmlEntity.common"
+      }
     },
     "number-formatter": {
       "name": "숫자 포맷터",
@@ -3527,7 +4034,16 @@
         "중국어 지역화된 이커머스 사이트에서 미국 달러 가격을 'US$1,000'에서 '1 000,00 $US'로 표시",
         "브라질 통계청에서 0.7562를 '75,62%' 형식으로 변환하여 공식 문서 작성",
         "다국적 기업의 ERP 시스템에서 일본 지사의 매출 데이터를 '1,234,567円'에서 '1 234 567 JPY'로 표준화"
-      ]
+      ],
+      "numberFormat": {
+        "number": "numberFormat.number",
+        "style": "numberFormat.style",
+        "decimal": "numberFormat.decimal",
+        "currency": "numberFormat.currency",
+        "percent": "numberFormat.percent",
+        "currencyCode": "numberFormat.currencyCode"
+      },
+      "copied": "복사됨!"
     },
     "hmac-generator": {
       "name": "HMAC 생성기",
@@ -3548,7 +4064,19 @@
         "2. 클라우드 스토리지 API에 액세스하는 사전 서명된 URL 생성 시, SHA-512 알고리즘으로 시간 기반 토큰을 서명합니다.",
         "3. IoT 장비에서 수집한 센서 데이터의 무결성을 보장하기 위해, SHA-256 HMAC 값을 데이터 패킷에 첨부합니다.",
         "4. 분산 시스템 간 메시지 큐 전송 시, HMAC-SHA1을 사용하여 메시지가 조작되지 않았는지 검증하는 미들웨어 구현."
-      ]
+      ],
+      "hmac": {
+        "error": "오류",
+        "message": "hmac.message",
+        "messagePlaceholder": "hmac.messagePlaceholder",
+        "secretKey": "hmac.secretKey",
+        "keyPlaceholder": "hmac.keyPlaceholder",
+        "algorithm": "hmac.algorithm"
+      },
+      "generate": "생성",
+      "result": "결과",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "password-strength": {
       "name": "비밀번호 강도 검사기",
@@ -3569,7 +4097,19 @@
         "2. 대학 보안팀이 졸업생의 포트폴리오 웹사이트 암호 정책 테스트",
         "3. 금융 앱 사용자가 OTP 대체로 사용하려는 암호의 비트 강도 계산",
         "4. 오픈소스 프로젝트 기여자가 CI/CD 파이프라인 암호의 entropy 값 확인"
-      ]
+      ],
+      "pwStrength": {
+        "password": "pwStrength.password",
+        "placeholder": "여기에 텍스트 입력...",
+        "hide": "pwStrength.hide",
+        "show": "pwStrength.show",
+        "strength": "pwStrength.strength",
+        "score": "pwStrength.score",
+        "length": "pwStrength.length",
+        "chars": "pwStrength.chars",
+        "charTypes": "pwStrength.charTypes",
+        "suggestions": "pwStrength.suggestions"
+      }
     },
     "totp-generator": {
       "name": "TOTP 생성기",
@@ -3590,7 +4130,20 @@
         "웹 애플리케이션 개발 시 인증 서버와 TOTP 동기화 테스트를 위한 토큰 시뮬레이션",
         "재해 복구 계획 수립 시 오프라인 상태에서도 사용 가능한 백업 코드 배치 생성",
         "보안 감사 중 인증 서버의 허용 가능한 시간 윈도우(±1스텝) 동기화 검증"
-      ]
+      ],
+      "totp": {
+        "secret": "totp.secret",
+        "secretPlaceholder": "totp.secretPlaceholder",
+        "secretHint": "totp.secretHint",
+        "currentCode": "totp.currentCode",
+        "howItWorks": "totp.howItWorks",
+        "step1": "totp.step1",
+        "step2": "totp.step2",
+        "step3": "totp.step3"
+      },
+      "generate": "생성",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "user-agent-parser": {
       "name": "사용자 에이전트 분석기",
@@ -3611,7 +4164,17 @@
         "Example 2: 웹 사이트 운영자 B는 사용자 환경을 이해하기 위해 User Agent Parser를 사용하여 방문자들의 브라우저와 운영 체제 정보를 수집합니다. 이를 통해 웹 사이트의 호환성을 개선하고, 방문자들에게 최적의 사용 경험을 제공할 수 있습니다.",
         "Example 3: IT 보안 전문가 C는 웹 애플리케이션의 보안을 강화하기 위해 User Agent Parser를 사용하여 비정상적인 사용자 에이전트 문자열을 감지합니다. 이를 통해 potential한 위협을 식별하고 대응할 수 있습니다.",
         "Example 4: 마케팅 분석가 D는 사용자 행동 분석을 위해 User Agent Parser를 사용하여 방문자들의 디바이스 유형을 파악합니다. 이를 통해 PC와 모바일 사용자의 행동 패턴을 비교하고, 타겟팅 마케팅 전략을 수립할 수 있습니다."
-      ]
+      ],
+      "uaParser": {
+        "userAgent": "uaParser.userAgent",
+        "placeholder": "여기에 텍스트 입력...",
+        "useCurrent": "uaParser.useCurrent",
+        "browser": "uaParser.browser",
+        "version": "uaParser.version",
+        "os": "uaParser.os",
+        "device": "uaParser.device",
+        "engine": "uaParser.engine"
+      }
     },
     "cidr-calculator": {
       "name": "CIDR 계산기",
@@ -3632,7 +4195,21 @@
         "AWS VPC 구성 중 10.0.0.0/8 범위에서 /28 서브넷 16개를 생성해 CIDR 중복 없이 자동 확장 그룹 설정",
         "보안 감사 시 192.168.1.0/24와 192.168.1.128/25 범위의 중첩 여부를 검증하여 라우팅 오류 방지",
         "네트워크 교육 환경에서 /30 마스크(2개 호스트)를 통해 포인트-투-포인트 연결의 주소 할당 최소화 실습"
-      ]
+      ],
+      "cidr": {
+        "invalid": "cidr.invalid",
+        "input": "입력",
+        "commonPrefixes": "cidr.commonPrefixes",
+        "networkAddress": "cidr.networkAddress",
+        "broadcastAddress": "cidr.broadcastAddress",
+        "firstHost": "cidr.firstHost",
+        "lastHost": "cidr.lastHost",
+        "subnetMask": "cidr.subnetMask",
+        "wildcardMask": "cidr.wildcardMask",
+        "totalHosts": "cidr.totalHosts",
+        "usableHosts": "cidr.usableHosts",
+        "binaryMask": "cidr.binaryMask"
+      }
     },
     "http-header-parser": {
       "name": "HTTP 헤더 분석기",
@@ -3653,7 +4230,14 @@
         "웹 성능 최적화를 위해 Cache-Control 지시어(max-age, no-cache 등)의 설정 오류 탐지",
         "OWASP Top 10 보안 감사에서 X-Frame-Options 및 Content-Security-Policy 헤더 존재 여부 확인",
         "HTTP/2 전환 시 Alt-Svc 헤더의 파라미터 구문 분석 및 호환성 검사"
-      ]
+      ],
+      "httpHeader": {
+        "input": "입력",
+        "loadExample": "httpHeader.loadExample",
+        "placeholder": "여기에 텍스트 입력...",
+        "parse": "httpHeader.parse",
+        "parsed": "httpHeader.parsed"
+      }
     },
     "percentage-calculator": {
       "name": "퍼센트 계산기",
@@ -3674,7 +4258,21 @@
         "재무 분석가가 분기별 매출 성장률을 산출해 경영진에게 제시할 데이터 시각화",
         "소프트웨어 엔지니어가 API 응답 시간 개선률을 측정하여 성능 최적화 보고",
         "교육기관에서 학생의 중간고사 대비 기말고사 성적 향상률을 분석하는 시스템 구축"
-      ]
+      ],
+      "percent": {
+        "whatIsPercent": "percent.whatIsPercent",
+        "of": "percent.of",
+        "whatPercentIs": "percent.whatPercentIs",
+        "isWhatPercentOf": "percent.isWhatPercentOf",
+        "percentChange": "percent.percentChange",
+        "from": "percent.from",
+        "to": "percent.to",
+        "increaseDecrease": "percent.increaseDecrease",
+        "increase": "percent.increase",
+        "decrease": "percent.decrease",
+        "quickRef": "percent.quickRef"
+      },
+      "copy": "복사"
     },
     "statistics-calculator": {
       "name": "통계 계산기",
@@ -3695,7 +4293,29 @@
         "자동차 제조업체에서 엔진 부품 치수 측정값의 표준편차를 계산해 품질 일관성 검증",
         "금융 분석가 포트폴리오 수익률의 Sharpe Ratio 계산을 위한 기초 통계 확보",
         "생물학 연구자 실험 그룹 간 평균 차이의 유의성 검정을 위한 기술통계 제공"
-      ]
+      ],
+      "stats": {
+        "inputLabel": "stats.inputLabel",
+        "inputHint": "stats.inputHint",
+        "varianceType": "stats.varianceType",
+        "population": "stats.population",
+        "sample": "stats.sample",
+        "dataOverview": "stats.dataOverview",
+        "count": "stats.count",
+        "mean": "stats.mean",
+        "median": "stats.median",
+        "mode": "stats.mode",
+        "noMode": "stats.noMode",
+        "sum": "stats.sum",
+        "min": "stats.min",
+        "max": "stats.max",
+        "range": "stats.range",
+        "populationVariance": "stats.populationVariance",
+        "sampleVariance": "stats.sampleVariance",
+        "populationStdDev": "stats.populationStdDev",
+        "sampleStdDev": "stats.sampleStdDev"
+      },
+      "copy": "복사"
     },
     "scientific-calculator": {
       "name": "공학용 계산기",
@@ -3716,7 +4336,13 @@
         "2. 생물학 실험에서 박테리아의 지수적 성장 모델 N(t) = N₀e^(rt)의 매개변수 r을 추정하기 위해 반복적 시뮬레이션을 수행합니다.",
         "3. 건축 설계 시 삼각측량을 이용해 높이 30m, 수평거리 50m인 건물의 경사각을 tan⁻¹(30/50)로 계산합니다.",
         "4. 금융 분석에서 복리 계산식 A = P(1 + r/n)^(nt)를 입력해 5년 후 예금액을 예측합니다."
-      ]
+      ],
+      "sci": {
+        "error": "오류",
+        "angleMode": "sci.angleMode",
+        "quickFormulas": "sci.quickFormulas"
+      },
+      "copy": "복사"
     },
     "text-sorter": {
       "name": "텍스트 정렬기",
@@ -3737,7 +4363,35 @@
         "2. 전자상거래 데이터에서 제품 SKU 코드를 수치형으로 변환해 정렬",
         "3. 학술 논문 참고문헌 목록을 저자 이름 기준으로 사전순 정리",
         "4. 시스템 로그 파일을 타임스탬프 길이 기준으로 내림차순 정렬해 최신 항목 우선 표시"
-      ]
+      ],
+      "sorter": {
+        "sortType": "sorter.sortType",
+        "alphabetical": "sorter.alphabetical",
+        "numerical": "sorter.numerical",
+        "natural": "sorter.natural",
+        "byLength": "sorter.byLength",
+        "order": "sorter.order",
+        "ascending": "sorter.ascending",
+        "descending": "sorter.descending",
+        "caseSensitive": "sorter.caseSensitive",
+        "trimLines": "sorter.trimLines",
+        "removeEmpty": "sorter.removeEmpty",
+        "removeDuplicates": "sorter.removeDuplicates",
+        "sort": "sorter.sort",
+        "loadExample": "sorter.loadExample",
+        "lines": "sorter.lines",
+        "placeholder": "여기에 텍스트 입력...",
+        "sortTypes": "sorter.sortTypes",
+        "alphabeticalDesc": "sorter.alphabeticalDesc",
+        "numericalDesc": "sorter.numericalDesc",
+        "naturalDesc": "sorter.naturalDesc",
+        "byLengthDesc": "sorter.byLengthDesc"
+      },
+      "clear": "지우기",
+      "input": "입력",
+      "output": "출력",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "text-extractor": {
       "name": "텍스트 추출기",
@@ -3758,7 +4412,30 @@
         "2. 보안 로그 파일에서 비정상적인 IPv6 주소 패턴을 식별하여 침해 지표(IOCs) 분석",
         "3. 연구 논문의 참고문헌 섹션에서 DOI(Digital Object Identifier) URL을 자동으로 수집",
         "4. 이력서 데이터베이스에서 MAC 주소를 추출하여 하드웨어 장치 사용 이력 추적"
-      ]
+      ],
+      "extractor": {
+        "email": "extractor.email",
+        "url": "extractor.url",
+        "phone": "extractor.phone",
+        "ip": "extractor.ip",
+        "number": "extractor.number",
+        "hashtag": "extractor.hashtag",
+        "mention": "extractor.mention",
+        "type": "extractor.type",
+        "extract": "extractor.extract",
+        "loadExample": "extractor.loadExample",
+        "placeholder": "여기에 텍스트 입력...",
+        "found": "extractor.found",
+        "copyAll": "extractor.copyAll",
+        "noResults": "extractor.noResults",
+        "supportedTypes": "extractor.supportedTypes"
+      },
+      "all": "all",
+      "clear": "지우기",
+      "input": "입력",
+      "result": "결과",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "emoji-picker": {
       "name": "이모지 선택기",
@@ -3779,7 +4456,20 @@
         "Twitter 트렌드 분석을 위한 특정 지역 이모지(🇺🇳, 🇪🇺 등) 배치 전략 수립",
         "이커머스 웹사이트의 상품 설명에 사용할 일치된 스타일(Outline/Color)의 이모지 집합 생성",
         "국제 회의 일정 안내 이메일에서 시차 표기를 위해 🌅(06:00), 🌃(22:00) 등의 기호 활용"
-      ]
+      ],
+      "emoji": {
+        "searchPlaceholder": "emoji.searchPlaceholder",
+        "recent": "emoji.recent",
+        "clickToCopy": "emoji.clickToCopy",
+        "emojis": "emoji.emojis",
+        "noResults": "emoji.noResults",
+        "howToUse": "emoji.howToUse",
+        "tip1": "emoji.tip1",
+        "tip2": "emoji.tip2",
+        "tip3": "emoji.tip3"
+      },
+      "all": "all",
+      "copied": "복사됨!"
     },
     "json-to-sql": {
       "name": "JSON SQL 변환기",
@@ -3838,7 +4528,11 @@
       "compress": "압축",
       "originalSize": "원본 크기",
       "compressedSize": "압축 크기",
-      "reduction": "감소"
+      "reduction": "감소",
+      "clear": "지우기",
+      "dropzone": "dropzone",
+      "original": "original",
+      "download": "다운로드"
     },
     "image-converter": {
       "name": "이미지 포맷 변환기",
@@ -3868,7 +4562,12 @@
       "formatInfo": "형식 정보",
       "pngDesc": "무손실 압축, 투명도 지원",
       "jpegDesc": "손실 압축, 작은 파일 크기",
-      "webpDesc": "최신 형식, 최고 압축"
+      "webpDesc": "최신 형식, 최고 압축",
+      "clear": "지우기",
+      "dropzone": "dropzone",
+      "original": "original",
+      "convert": "변환",
+      "download": "다운로드"
     },
     "favicon-generator": {
       "name": "파비콘 생성기",
@@ -3892,7 +4591,13 @@
       "processing": "처리 중...",
       "generated": "생성됨",
       "downloadAll": "모두 다운로드",
-      "htmlCode": "HTML 코드"
+      "htmlCode": "HTML 코드",
+      "clear": "지우기",
+      "dropzone": "dropzone",
+      "original": "original",
+      "generate": "생성",
+      "download": "다운로드",
+      "copy": "복사"
     },
     "image-cropper": {
       "name": "이미지 자르기",
@@ -3919,7 +4624,12 @@
       "changeImage": "이미지 변경",
       "preview": "미리보기",
       "cropFirst": "먼저 이미지를 자르세요",
-      "crop": "자르기"
+      "crop": "자르기",
+      "clear": "지우기",
+      "dropzone": "dropzone",
+      "width": "width",
+      "height": "height",
+      "download": "다운로드"
     },
     "gitignore-generator": {
       "name": ".gitignore 생성기",
@@ -4009,7 +4719,10 @@
       "scripts": "스크립트",
       "scriptName": "스크립트 이름",
       "scriptCommand": "명령어",
-      "commonScripts": "일반 스크립트"
+      "commonScripts": "일반 스크립트",
+      "generate": "생성",
+      "copy": "복사",
+      "download": "다운로드"
     },
     "json-minifier": {
       "name": "JSON 최소화 도구",
@@ -4031,7 +4744,18 @@
         "3. 모바일 앱에서 API 응답으로 받은 JSON 데이터의 네트워크 오버헤드를 줄이기 위해 미리 최소화합니다.",
         "4. 개발 단계에서 포맷이 손상된 JSON 파일을 정리하여 유효성 검사와 크기 최적화를 동시에 수행할 때 사용합니다."
       ],
-      "inputPlaceholder": "여기에 텍스트 입력..."
+      "inputPlaceholder": "여기에 텍스트 입력...",
+      "json": {
+        "invalidJson": "json.invalidJson"
+      },
+      "input": "입력",
+      "minify": "minify",
+      "beautify": "beautify",
+      "clear": "지우기",
+      "output": "출력",
+      "copied": "복사됨!",
+      "copy": "복사",
+      "outputPlaceholder": "결과가 여기에 표시됩니다..."
     },
     "timezone-converter": {
       "name": "타임존 변환기",
@@ -4188,7 +4912,38 @@
         "이커머스 사이트에서 제품 페이지의 Facebook 공유 시 썸네일 이미지와 제목 자동 매핑 설정",
         "프론트엔드 개발자가 반응형 웹사이트 구현을 위해 viewport 및 charset 메타 태그 자동 생성",
         "마케터가 캠페인용 랜딩 페이지의 Twitter Card 표시 형식을 preview_large로 지정하여 미리보기 최적화"
-      ]
+      ],
+      "metaTagGenerator": {
+        "pageTitle": "metaTagGenerator.pageTitle",
+        "pageTitlePlaceholder": "metaTagGenerator.pageTitlePlaceholder",
+        "author": "metaTagGenerator.author",
+        "authorPlaceholder": "metaTagGenerator.authorPlaceholder",
+        "description": "metaTagGenerator.description",
+        "descriptionPlaceholder": "metaTagGenerator.descriptionPlaceholder",
+        "characters": "metaTagGenerator.characters",
+        "keywords": "metaTagGenerator.keywords",
+        "keywordsPlaceholder": "metaTagGenerator.keywordsPlaceholder",
+        "ogImageUrl": "metaTagGenerator.ogImageUrl",
+        "ogImageUrlPlaceholder": "metaTagGenerator.ogImageUrlPlaceholder",
+        "pageUrl": "metaTagGenerator.pageUrl",
+        "pageUrlPlaceholder": "metaTagGenerator.pageUrlPlaceholder",
+        "twitterCardType": "metaTagGenerator.twitterCardType",
+        "twitterCardSummary": "metaTagGenerator.twitterCardSummary",
+        "twitterCardSummaryLargeImage": "metaTagGenerator.twitterCardSummaryLargeImage",
+        "twitterCardApp": "metaTagGenerator.twitterCardApp",
+        "twitterCardPlayer": "metaTagGenerator.twitterCardPlayer",
+        "twitterUsername": "metaTagGenerator.twitterUsername",
+        "twitterUsernamePlaceholder": "metaTagGenerator.twitterUsernamePlaceholder",
+        "robots": "metaTagGenerator.robots",
+        "robotsIndexFollow": "metaTagGenerator.robotsIndexFollow",
+        "robotsNoindexFollow": "metaTagGenerator.robotsNoindexFollow",
+        "robotsIndexNofollow": "metaTagGenerator.robotsIndexNofollow",
+        "robotsNoindexNofollow": "metaTagGenerator.robotsNoindexNofollow",
+        "viewport": "metaTagGenerator.viewport",
+        "generatedMetaTags": "metaTagGenerator.generatedMetaTags"
+      },
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "robots-txt-generator": {
       "name": "robots.txt 생성기",
@@ -4247,7 +5002,46 @@
         "Example 2: 마케팅 팀이 새로운 제품 페이지를 만들었을 때, Open Graph Preview를 통해 소셜 미디어에서의 공유 효과를 미리 검증하고, 더 나은 사용자 경험을 제공하기 위해 필요한 수정을 진행합니다.",
         "Example 3: 커뮤니티 관리자가 사용자들이 게시한 콘텐츠를 Twitter에서 공유하기 전에 Open Graph Preview를 사용하여 해당 콘텐츠의 미리보기를 확인하고, 필요시 제목이나 이미지를 변경합니다.",
         "Example 4: 디자이너가 웹사이트의 디자인을 최적화하기 위해 Open Graph Preview를 활용하여 다양한 이미지와 텍스트의 조합을 실험하고, 가장 효과적인 결과를 찾아냅니다."
-      ]
+      ],
+      "openGraphPreview": {
+        "defaultTitle": "openGraphPreview.defaultTitle",
+        "defaultDescription": "openGraphPreview.defaultDescription",
+        "defaultSiteName": "openGraphPreview.defaultSiteName",
+        "fetchError": "openGraphPreview.fetchError",
+        "imageLoadError": "openGraphPreview.imageLoadError",
+        "modeFetch": "openGraphPreview.modeFetch",
+        "modeManual": "openGraphPreview.modeManual",
+        "fetchUrlLabel": "openGraphPreview.fetchUrlLabel",
+        "fetching": "openGraphPreview.fetching",
+        "fetchButton": "openGraphPreview.fetchButton",
+        "title": "openGraphPreview.title",
+        "titlePlaceholder": "openGraphPreview.titlePlaceholder",
+        "siteName": "openGraphPreview.siteName",
+        "siteNamePlaceholder": "openGraphPreview.siteNamePlaceholder",
+        "description": "openGraphPreview.description",
+        "descriptionPlaceholder": "openGraphPreview.descriptionPlaceholder",
+        "imageUrl": "openGraphPreview.imageUrl",
+        "imageUrlPlaceholder": "openGraphPreview.imageUrlPlaceholder",
+        "pageUrl": "openGraphPreview.pageUrl",
+        "pageUrlPlaceholder": "openGraphPreview.pageUrlPlaceholder",
+        "platform": {
+          "facebook": "openGraphPreview.platform.facebook",
+          "twitter": "openGraphPreview.platform.twitter",
+          "linkedin": "openGraphPreview.platform.linkedin"
+        },
+        "preview": "openGraphPreview.preview",
+        "generatedCode": "openGraphPreview.generatedCode",
+        "recommendations": {
+          "title": "openGraphPreview.recommendations.title",
+          "imageSize": "openGraphPreview.recommendations.imageSize",
+          "titleLength": "openGraphPreview.recommendations.titleLength",
+          "descriptionLength": "openGraphPreview.recommendations.descriptionLength",
+          "highQuality": "openGraphPreview.recommendations.highQuality",
+          "testDebugger": "openGraphPreview.recommendations.testDebugger"
+        }
+      },
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "css-grid-generator": {
       "name": "CSS 그리드 생성기",
@@ -4303,7 +5097,42 @@
         "카드형 레이아웃에서 아이템을 수직/수평 중앙 정렬하여 일관된 디자인을 구현할 때.",
         "이미지 갤러리에서 다양한 크기의 이미지를 자동 조정하며 공간을 효율적으로 배분할 때.",
         "모바일 폼 요소의 입력 필드와 라벨을 동일한 높이로 정렬하고 레이아웃을 유연하게 조정할 때."
-      ]
+      ],
+      "cssFlexboxGenerator": {
+        "direction": "cssFlexboxGenerator.direction",
+        "directionRow": "cssFlexboxGenerator.directionRow",
+        "directionRowReverse": "cssFlexboxGenerator.directionRowReverse",
+        "directionColumn": "cssFlexboxGenerator.directionColumn",
+        "directionColumnReverse": "cssFlexboxGenerator.directionColumnReverse",
+        "justifyContent": "cssFlexboxGenerator.justifyContent",
+        "justifyFlexStart": "cssFlexboxGenerator.justifyFlexStart",
+        "justifyFlexEnd": "cssFlexboxGenerator.justifyFlexEnd",
+        "justifyCenter": "cssFlexboxGenerator.justifyCenter",
+        "justifySpaceBetween": "cssFlexboxGenerator.justifySpaceBetween",
+        "justifySpaceAround": "cssFlexboxGenerator.justifySpaceAround",
+        "justifySpaceEvenly": "cssFlexboxGenerator.justifySpaceEvenly",
+        "alignItems": "cssFlexboxGenerator.alignItems",
+        "alignStretch": "cssFlexboxGenerator.alignStretch",
+        "alignFlexStart": "cssFlexboxGenerator.alignFlexStart",
+        "alignFlexEnd": "cssFlexboxGenerator.alignFlexEnd",
+        "alignCenter": "cssFlexboxGenerator.alignCenter",
+        "alignBaseline": "cssFlexboxGenerator.alignBaseline",
+        "flexWrap": "cssFlexboxGenerator.flexWrap",
+        "wrapNoWrap": "cssFlexboxGenerator.wrapNoWrap",
+        "wrapWrap": "cssFlexboxGenerator.wrapWrap",
+        "wrapWrapReverse": "cssFlexboxGenerator.wrapWrapReverse",
+        "gap": "cssFlexboxGenerator.gap",
+        "items": "cssFlexboxGenerator.items",
+        "preview": "cssFlexboxGenerator.preview",
+        "generatedCss": "cssFlexboxGenerator.generatedCss",
+        "quickReference": "cssFlexboxGenerator.quickReference",
+        "quickReferenceJustify": "cssFlexboxGenerator.quickReferenceJustify",
+        "quickReferenceAlign": "cssFlexboxGenerator.quickReferenceAlign",
+        "quickReferenceDirection": "cssFlexboxGenerator.quickReferenceDirection",
+        "quickReferenceWrap": "cssFlexboxGenerator.quickReferenceWrap"
+      },
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "jwt-generator": {
       "name": "JWT 생성기",
@@ -4324,7 +5153,29 @@
         "2. 마이크로서비스 간 인가 헤더를 시뮬레이션할 때 특정 역할(role) 클레임이 포함된 토큰을 사용자 정의합니다.",
         "3. RSA 공개키 기반 서명을 테스트하기 위해 RS256 알고리즘과 키 쌍을 사용해 JWT를 생성하고 검증합니다.",
         "4. 보안 감사 도중 잘못된 비밀 키로 서명된 토큰의 실패 사례를 재현하여 인증 로직의 견고성을 검증합니다."
-      ]
+      ],
+      "jwt": {
+        "invalidPayload": "jwt.invalidPayload",
+        "error": "오류",
+        "algorithm": "jwt.algorithm",
+        "secretKey": "jwt.secretKey",
+        "secretPlaceholder": "jwt.secretPlaceholder",
+        "payload": "jwt.payload",
+        "generate": "생성",
+        "generatedToken": "jwt.generatedToken",
+        "commonClaims": "jwt.commonClaims",
+        "claims": {
+          "iss": "jwt.claims.iss",
+          "sub": "jwt.claims.sub",
+          "aud": "jwt.claims.aud",
+          "exp": "jwt.claims.exp",
+          "nbf": "jwt.claims.nbf",
+          "iat": "jwt.claims.iat",
+          "jti": "jwt.claims.jti"
+        }
+      },
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "cron-explainer": {
       "name": "크론 표현 설명기",
@@ -5229,7 +6080,20 @@
         "2. 프로필 이미지에 원형 마스크를 적용한 반응형 아바타 컴포넌트 생성",
         "3. 인포그래픽 차트의 특정 데이터 영역 강조를 위한 클리핑 애니메이션 적용",
         "4. 포트폴리오 갤러리에서 다각형 형태의 커스텀 레이아웃 구축"
-      ]
+      ],
+      "clipPath": {
+        "preview": "clipPath.preview",
+        "presets": "clipPath.presets",
+        "value": "clipPath.value",
+        "syntax": "clipPath.syntax",
+        "circleDesc": "clipPath.circleDesc",
+        "ellipseDesc": "clipPath.ellipseDesc",
+        "polygonDesc": "clipPath.polygonDesc",
+        "insetDesc": "clipPath.insetDesc"
+      },
+      "output": "출력",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "uuid-validator": {
       "name": "UUID��證工具",
@@ -5250,7 +6114,20 @@
         "데이터베이스 마이그레이션 시 기존 UUID1 값들이 하이픈 위치까지 정확하게 보존되었는지 배치 검사",
         "IoT 장비에서 전송된 UUID가 RFC 표준 외의 사용자 정의 포맷인지 분석하여 게이트웨이 필터링 로직 개선",
         "OAuth 2.0 인증 토큰에 포함된 UUID5 값이 SHA-1 해시 기반 네임스페이스를 올바르게 사용하는지 확인"
-      ]
+      ],
+      "uuidValidator": {
+        "input": "입력",
+        "placeholder": "여기에 텍스트 입력...",
+        "validate": "uuidValidator.validate",
+        "valid": "uuidValidator.valid",
+        "invalid": "uuidValidator.invalid",
+        "invalidFormat": "uuidValidator.invalidFormat",
+        "versions": "uuidValidator.versions",
+        "v1Desc": "uuidValidator.v1Desc",
+        "v4Desc": "uuidValidator.v4Desc",
+        "v5Desc": "uuidValidator.v5Desc"
+      },
+      "clear": "지우기"
     },
     "text-hash-comparator": {
       "name": "텍스트 해시 비교기",
@@ -5271,7 +6148,16 @@
         "블록체인 트랜잭션의 입력 데이터 무결성을 확인하기 위해 두 노드의 텍스트 해시를 비교합니다.",
         "디지털 포렌식에서 증거로 확보한 텍스트 파일이 변조되지 않았는지 확인하기 위해 원본 해시와 비교합니다.",
         "API 응답의 로그 파일에서 특정 시간대의 텍스트 블록이 다른 서버와 동일한지 해시 값을 통해 확인합니다."
-      ]
+      ],
+      "hashCompare": {
+        "text1": "hashCompare.text1",
+        "placeholder": "여기에 텍스트 입력...",
+        "text2": "hashCompare.text2",
+        "comparing": "hashCompare.comparing",
+        "compare": "hashCompare.compare",
+        "match": "hashCompare.match",
+        "noMatch": "hashCompare.noMatch"
+      }
     },
     "json-path-finder": {
       "name": "JSON 경로 찾기",
@@ -5292,7 +6178,19 @@
         "AWS Lambda 환경 변수로 전달된 JSON 구조에서 특정 오류 코드 경로를 디버깅하는 데 활용됩니다.",
         "E-commerce 플랫폼의 제품 카탈로그에서 'products[*].price'와 같은 동적 경로를 생성해 가격 비교 시스템에 적용됩니다.",
         "서버리스 아키텍처의 CloudFormation 템플릿에서 리소스 ARN 경로를 자동으로 추출해 CI/CD 파이프라인에 통합됩니다."
-      ]
+      ],
+      "json": {
+        "invalidJson": "json.invalidJson"
+      },
+      "jsonPathFinder": {
+        "loadSample": "jsonPathFinder.loadSample",
+        "placeholder": "여기에 텍스트 입력...",
+        "analyze": "jsonPathFinder.analyze",
+        "search": "jsonPathFinder.search",
+        "paths": "jsonPathFinder.paths"
+      },
+      "input": "입력",
+      "copy": "복사"
     },
     "canvas-drawing": {
       "name": "캔버스 그림 그리기",
@@ -5313,7 +6211,14 @@
         "교육용 슬라이드에서 복잡한 수학 개념을 설명하기 위한 스케치 일러스트를 제작할 때",
         "사용자로부터 전자 서명을 수집하기 위한 폼 양식의 사전 설계를 신속하게 검증하는 경우",
         "스크린샷 이미지에 주석을 추가하여 소프트웨어 버그 리포트를 명확히 설명해야 할 때"
-      ]
+      ],
+      "canvas": {
+        "size": "canvas.size",
+        "brush": "canvas.brush",
+        "eraser": "canvas.eraser"
+      },
+      "clear": "지우기",
+      "download": "다운로드"
     },
     "json-escape": {
       "name": "JSON 이스케이프 변환기",
@@ -5334,7 +6239,17 @@
         "로그 파일에서 추출한 오염된 JSON 응답(\\\"error\\\":\\\"Invalid\\nChar\\\")을 원래 문장으로 언이스케이프",
         "데이터베이스에 저장된 유니코드 JSON 필드(\\uAC00\\uAC01\\uAC02)를 읽기 가능한 한글로 변환",
         "CSV 파일에서 읽은 특수 기호 포함 데이터를 JSON 배열로 변환 시 \"기호 => \\\"기호\" 자동 이스케이프"
-      ]
+      ],
+      "errorProcessing": "errorProcessing",
+      "input": "입력",
+      "jsonEscape": {
+        "placeholder": "여기에 텍스트 입력...",
+        "escape": "jsonEscape.escape",
+        "unescape": "jsonEscape.unescape"
+      },
+      "output": "출력",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "css-animation-generator": {
       "name": "CSS 애니메이션 생성기",
@@ -5355,7 +6270,17 @@
         "제품 카드에 마우스 오버 시 발생하는 3D 회전 효과 구현을 위한 transform 애니메이션 설계",
         "스플래시 화면에서 헤더 요소의 점진적 노출을 위한 fade-in + slide-down 복합 애니메이션 구성",
         "데이터 대시보드의 실시간 업데이트 시각화를 위한 수직 막대 그래프 성장 애니메이션 제작"
-      ]
+      ],
+      "cssAnimation": {
+        "preset": "cssAnimation.preset",
+        "duration": "cssAnimation.duration",
+        "timing": "cssAnimation.timing",
+        "iteration": "cssAnimation.iteration",
+        "preview": "cssAnimation.preview"
+      },
+      "output": "출력",
+      "copied": "복사됨!",
+      "copy": "복사"
     },
     "text-case-counter": {
       "name": "텍스트 대소문자 카운터",
@@ -5376,7 +6301,19 @@
         "코드베이스 분석: 소스 코드 파일에서 변수명의 케이스 일관성(CamelCase vs snake_case)을 검증.",
         "데이터 정제: 사용자 입력 폼에서 전화번호 필드의 숫자/기호 비율이 올바른지 자동 검사.",
         "자막 파일 품질 관리: 자막 텍스트의 대문자 사용 비율이 10% 미만인지 확인하여 시청자 가독성 보장."
-      ]
+      ],
+      "input": "입력",
+      "caseCounter": {
+        "placeholder": "여기에 텍스트 입력...",
+        "total": "caseCounter.total",
+        "letters": "caseCounter.letters",
+        "uppercase": "caseCounter.uppercase",
+        "lowercase": "caseCounter.lowercase",
+        "digits": "caseCounter.digits",
+        "spaces": "caseCounter.spaces",
+        "special": "caseCounter.special",
+        "ratio": "caseCounter.ratio"
+      }
     },
     "dns-lookup": {
       "name": "DNS 조회",
@@ -5397,7 +6334,11 @@
         "CDN 서비스 통합 시 CNAME 레코드의 대상 도메인과 체인 길이(chain length)를 확인해 올바른 매핑 여부를 검증합니다.",
         "도메인 이전 후 A 레코드의 IP 주소 변경이 글로벌 루트 서버에 전파되었는지 확인하기 위해 TTL 만료 시간을 분석합니다.",
         "보안 감사 시 TXT 레코드에서 SPF, DKIM, DNSKEY 레코드의 존재성과 형식을 검사하여 도메인 인증 상태를 점검합니다."
-      ]
+      ],
+      "dnsLookup": {
+        "ipError": "dnsLookup.ipError",
+        "error": "오류"
+      }
     },
     "image-resizer": {
       "name": "이미지 리사이즈 도구",
@@ -5418,7 +6359,18 @@
         "예시 2: 사진가는 개인 블로그에 사진을 게시하기 전에 이미지 크기를 맞추고 품질을 최적화해야 합니다. Image Resizer를 사용하여 모든 사진을 일관된 크기와 품질로 조정합니다.",
         "예시 3: 마케팅 전문가가 소셜 미디어에서 사용할 프로모션 이미지를 준비하고 있습니다. Image Resizer를 사용하여 이미지를 소셜 미디어 플랫폼에 맞는 크기로 조정하고, 필요에 따라 회전시키거나 크롭합니다.",
         "예시 4: IT 전문가가 회사 웹사이트의 이미지 로딩 시간을 단축시키기 위해 이미지 크기를 최적화해야 합니다. Image Resizer를 사용하여 모든 이미지를 압축률을 조정하여 파일 크기를 줄입니다."
-      ]
+      ],
+      "imageResizer": {
+        "dropzone": "imageResizer.dropzone",
+        "original": "imageResizer.original",
+        "width": "imageResizer.width",
+        "height": "imageResizer.height",
+        "lockRatio": "imageResizer.lockRatio",
+        "resize": "imageResizer.resize",
+        "resized": "imageResizer.resized"
+      },
+      "clear": "지우기",
+      "download": "다운로드"
     },
     "ssl-checker": {
       "name": "SSL 인증서 검사기",
@@ -5602,7 +6554,23 @@
         "클라우드 서버 설정 시 80/443 포트의 TCP 프로토콜 적용 여부 검증",
         "침해 분석 중 554번 포트(RTSP)에서 비인가 스트리밍 서비스 감지 사례",
         "IoT 장비 개발 시 1883번 포트(MQTT) 대신 TLS 적용된 8883 포트 사용 결정"
-      ]
+      ],
+      "note": "note",
+      "searchPorts": "searchPorts",
+      "searchPlaceholder": "searchPlaceholder",
+      "lookupPort": "lookupPort",
+      "portPlaceholder": "portPlaceholder",
+      "port": "port",
+      "service": "service",
+      "descriptionLabel": "descriptionLabel",
+      "unknownPort": "unknownPort",
+      "invalidPort": "invalidPort",
+      "commonPorts": "commonPorts",
+      "noResults": "noResults",
+      "portRanges": "portRanges",
+      "wellKnown": "wellKnown",
+      "registered": "registered",
+      "dynamic": "dynamic"
     },
     "privacy-policy-generator": {
       "name": "개인정보 보호정책 생성기",
@@ -5623,7 +6591,29 @@
         "2. 의료 정보 앱이 HIPAA 규정 준수를 위해 데이터 암호화 표준과 접근 통제 조항 포함",
         "3. 블로그 플랫폼이 사용자 댓글 수집 시 한국 정보통신망법에 따른 명시적 동의 문구 자동 생성",
         "4. SaaS 서비스가 다중 클라우드 환경에서 데이터 전송 경로를 시각화한 처리 흐름도 포함 정책 작성"
-      ]
+      ],
+      "privacyPolicyGenerator": {
+        "websiteName": "privacyPolicyGenerator.websiteName",
+        "websiteNamePlaceholder": "privacyPolicyGenerator.websiteNamePlaceholder",
+        "websiteUrl": "privacyPolicyGenerator.websiteUrl",
+        "websiteUrlPlaceholder": "privacyPolicyGenerator.websiteUrlPlaceholder",
+        "companyName": "privacyPolicyGenerator.companyName",
+        "companyNamePlaceholder": "privacyPolicyGenerator.companyNamePlaceholder",
+        "contactEmail": "privacyPolicyGenerator.contactEmail",
+        "contactEmailPlaceholder": "privacyPolicyGenerator.contactEmailPlaceholder",
+        "featuresTitle": "privacyPolicyGenerator.featuresTitle",
+        "features": {
+          "collectsPersonalData": "privacyPolicyGenerator.features.collectsPersonalData",
+          "usesCookies": "privacyPolicyGenerator.features.usesCookies",
+          "usesAnalytics": "privacyPolicyGenerator.features.usesAnalytics",
+          "usesAds": "privacyPolicyGenerator.features.usesAds",
+          "allowsUserAccounts": "privacyPolicyGenerator.features.allowsUserAccounts",
+          "sellsData": "privacyPolicyGenerator.features.sellsData"
+        },
+        "generate": "생성",
+        "copyToClipboard": "privacyPolicyGenerator.copyToClipboard",
+        "generatedOutput": "privacyPolicyGenerator.generatedOutput"
+      }
     },
     "terms-generator": {
       "name": "서비스 이용약관 생성기",
@@ -5644,7 +6634,28 @@
         "2. 이커머스 플랫폼이 특정 국가 수출 시 해당 지역의 전자상거래법을 반영한 지역별 약관 다중 생성",
         "3. 모바일 앱 개발자가 앱스토어 심사 기준에 부합하는 데이터 수집 범위 및 사용 제한 조항 자동 포함",
         "4. 프리랜서 개발자가 클라이언트 프로젝트에 적용할 프로젝트 특정 조항을 커스터마이징하여 계약 문서 생성"
-      ]
+      ],
+      "termsGenerator": {
+        "websiteName": "termsGenerator.websiteName",
+        "websiteNamePlaceholder": "termsGenerator.websiteNamePlaceholder",
+        "websiteUrl": "termsGenerator.websiteUrl",
+        "websiteUrlPlaceholder": "termsGenerator.websiteUrlPlaceholder",
+        "companyName": "termsGenerator.companyName",
+        "companyNamePlaceholder": "termsGenerator.companyNamePlaceholder",
+        "contactEmail": "termsGenerator.contactEmail",
+        "contactEmailPlaceholder": "termsGenerator.contactEmailPlaceholder",
+        "governingLawCountry": "termsGenerator.governingLawCountry",
+        "governingLawCountryPlaceholder": "termsGenerator.governingLawCountryPlaceholder",
+        "featuresTitle": "termsGenerator.featuresTitle",
+        "features": {
+          "allowsUserContent": "termsGenerator.features.allowsUserContent",
+          "hasSubscription": "termsGenerator.features.hasSubscription",
+          "hasRefundPolicy": "termsGenerator.features.hasRefundPolicy"
+        },
+        "generate": "생성",
+        "copyToClipboard": "termsGenerator.copyToClipboard",
+        "generatedOutput": "termsGenerator.generatedOutput"
+      }
     },
     "cookie-policy-generator": {
       "name": "쿠키 정책 생성기",
@@ -5725,7 +6736,24 @@
         "2. 머신러닝 엔지니어가 학습 데이터셋의 누락된 필드를 시각적으로 식별하고 전처리.",
         "3. 금융 연구원이 다중 CSV 파일의 통화 데이터 형식을 비교하여 보고서 통합.",
         "4. 학생이 과제를 위해 CSV 테이블의 특정 열만 필터링해 엑셀로 변환."
-      ]
+      ],
+      "csvViewer": {
+        "defaultInput": "csvViewer.defaultInput",
+        "delimiterComma": "csvViewer.delimiterComma",
+        "delimiterSemicolon": "csvViewer.delimiterSemicolon",
+        "delimiterTab": "csvViewer.delimiterTab",
+        "delimiterPipe": "csvViewer.delimiterPipe",
+        "downloadCsv": "csvViewer.downloadCsv",
+        "csvInput": "csvViewer.csvInput",
+        "csvPlaceholder": "csvViewer.csvPlaceholder",
+        "tablePreview": "csvViewer.tablePreview",
+        "noData": "csvViewer.noData",
+        "tip": "csvViewer.tip"
+      },
+      "csvJson": {
+        "delimiter": "csvJson.delimiter",
+        "hasHeader": "csvJson.hasHeader"
+      }
     },
     "htaccess-generator": {
       "name": ".htaccess 생성기",
@@ -5888,7 +6916,31 @@
         "전자상거래 제품 페이지에 OG:PRICE:USD, OG:AVAILABILITY 등 부가 속성 포함",
         "유튜브 영상 URL로 Twitter Summary Card 구조화된 메타데이터 생성",
         "포트폴리오 웹사이트에 OG:DETERMINER='a' 설정으로 기사형 프리뷰 최적화"
-      ]
+      ],
+      "openGraphGenerator": {
+        "siteTitle": "openGraphGenerator.siteTitle",
+        "siteTitlePlaceholder": "openGraphGenerator.siteTitlePlaceholder",
+        "siteDescription": "openGraphGenerator.siteDescription",
+        "siteDescriptionPlaceholder": "openGraphGenerator.siteDescriptionPlaceholder",
+        "url": "openGraphGenerator.url",
+        "urlPlaceholder": "openGraphGenerator.urlPlaceholder",
+        "imageUrl": "openGraphGenerator.imageUrl",
+        "imageUrlPlaceholder": "openGraphGenerator.imageUrlPlaceholder",
+        "siteName": "openGraphGenerator.siteName",
+        "siteNamePlaceholder": "openGraphGenerator.siteNamePlaceholder",
+        "type": "openGraphGenerator.type",
+        "typeWebsite": "openGraphGenerator.typeWebsite",
+        "typeArticle": "openGraphGenerator.typeArticle",
+        "typeProfile": "openGraphGenerator.typeProfile",
+        "typeVideo": "openGraphGenerator.typeVideo",
+        "typeMusic": "openGraphGenerator.typeMusic",
+        "preview": "openGraphGenerator.preview",
+        "ogPreviewAlt": "openGraphGenerator.ogPreviewAlt",
+        "noImage": "openGraphGenerator.noImage",
+        "previewTitleFallback": "openGraphGenerator.previewTitleFallback",
+        "previewDescriptionFallback": "openGraphGenerator.previewDescriptionFallback",
+        "generatedHtml": "openGraphGenerator.generatedHtml"
+      }
     },
     "twitter-card-generator": {
       "name": "트위터 카드 생성기",
@@ -5906,7 +6958,31 @@
       "usage_examples": [
         "트위터 카드 생성기를 사용하여 데이터 처리",
         "대기 시간 없이 빠르게 처리 결과 얻기"
-      ]
+      ],
+      "twitterCardGenerator": {
+        "cardType": "twitterCardGenerator.cardType",
+        "cardSummary": "twitterCardGenerator.cardSummary",
+        "cardSummaryLargeImage": "twitterCardGenerator.cardSummaryLargeImage",
+        "cardApp": "twitterCardGenerator.cardApp",
+        "cardPlayer": "twitterCardGenerator.cardPlayer",
+        "title": "twitterCardGenerator.title",
+        "titlePlaceholder": "twitterCardGenerator.titlePlaceholder",
+        "description": "twitterCardGenerator.description",
+        "descriptionPlaceholder": "twitterCardGenerator.descriptionPlaceholder",
+        "imageUrl": "twitterCardGenerator.imageUrl",
+        "imageUrlPlaceholder": "twitterCardGenerator.imageUrlPlaceholder",
+        "imageAltText": "twitterCardGenerator.imageAltText",
+        "imageAltTextPlaceholder": "twitterCardGenerator.imageAltTextPlaceholder",
+        "siteUsername": "twitterCardGenerator.siteUsername",
+        "siteUsernamePlaceholder": "twitterCardGenerator.siteUsernamePlaceholder",
+        "creatorUsername": "twitterCardGenerator.creatorUsername",
+        "creatorUsernamePlaceholder": "twitterCardGenerator.creatorUsernamePlaceholder",
+        "preview": "twitterCardGenerator.preview",
+        "previewImageFallback": "twitterCardGenerator.previewImageFallback",
+        "previewTitleFallback": "twitterCardGenerator.previewTitleFallback",
+        "previewDescriptionFallback": "twitterCardGenerator.previewDescriptionFallback",
+        "generatedHtml": "twitterCardGenerator.generatedHtml"
+      }
     },
     "mime-type-lookup": {
       "name": "MIME 타입 조회",
@@ -5927,7 +7003,8 @@
         "사용자 업로드 파일의 실제 타입 검증을 위해 파일 헤더와 MIME 타입 비교",
         "WebAssembly 모듈 로딩 시 브라우저 호환성을 위한 'application/wasm' 타입 설정 검증",
         "이메일 첨부 파일의 'application/msword' 타입이 Outlook에서 올바르게 렌더링되는지 테스트"
-      ]
+      ],
+      "searchPlaceholder": "searchPlaceholder"
     },
     "http-status-codes": {
       "name": "HTTP 상태 코드",
@@ -6074,7 +7151,20 @@
         "2. SaaS 시스템의 사용자 등록 API에서 입력값을 기반으로 파라미터화된 INSERT 문 자동 생성",
         "3. 재고 관리 시스템에서 '창고별 보유 재고량 30% 미만 품목'을 업데이트하는 UPDATE + JOIN 쿼리 작성",
         "4. 데이터 정제 작업 시 '특정 기간 내 중복된 트랜잭션'을 삭제하기 위한 DELETE + 윈도우 함수 쿼리 생성"
-      ]
+      ],
+      "sqlGenerator": {
+        "commandType": "sqlGenerator.commandType",
+        "tableName": "sqlGenerator.tableName",
+        "columns": "sqlGenerator.columns",
+        "values": "sqlGenerator.values",
+        "setUpdates": "sqlGenerator.setUpdates",
+        "schemaDefinition": "sqlGenerator.schemaDefinition",
+        "whereClause": "sqlGenerator.whereClause",
+        "orderBy": "sqlGenerator.orderBy",
+        "limit": "sqlGenerator.limit",
+        "generatedSql": "sqlGenerator.generatedSql",
+        "copySql": "sqlGenerator.copySql"
+      }
     },
     "htaccess-to-nginx": {
       "name": "htaccess를 Nginx로 변환",
@@ -9460,10 +10550,10 @@
       "themeForest": "숲",
       "percentageNote": "값은 퍼센트로 표시되며 각 카테고리별로 100%를 합해야 합니다",
       "sampleData": {
-        "Q1": "Q1",
-        "Q2": "Q2",
-        "Q3": "Q3",
-        "Q4": "Q4",
+        "q1": "Q1",
+        "q2": "Q2",
+        "q3": "Q3",
+        "q4": "Q4",
         "mobile": "모바일",
         "tablet": "태블릿",
         "desktop": "데스크톱"
@@ -10672,7 +11762,31 @@
         "수산물 수출업체가 다국어(한국어/영어) 송장을 자동 생성하기 위해 템플릿 언어 설정을 변경하는 경우",
         "소프트웨어 개발 스타트업이 반복 청구를 위해 템플릿에 Stripe 결제 링크를 동적 변수로 포함하는 시나리오",
         "회계사가 세무 감사용으로 날인된 송장을 생성하기 위해 디지털 서명 캔버스에 펜 궤적을 기록하는 작업"
-      ]
+      ],
+      "invoice": {
+        "invoiceNumber": "invoice.invoiceNumber",
+        "currency": "invoice.currency",
+        "invoiceDate": "invoice.invoiceDate",
+        "dueDate": "invoice.dueDate",
+        "from": "invoice.from",
+        "companyName": "invoice.companyName",
+        "address": "invoice.address",
+        "to": "invoice.to",
+        "clientName": "invoice.clientName",
+        "items": "invoice.items",
+        "description": "invoice.description",
+        "quantity": "invoice.quantity",
+        "unitPrice": "invoice.unitPrice",
+        "addItem": "invoice.addItem",
+        "taxRate": "invoice.taxRate",
+        "notes": "invoice.notes",
+        "downloadPdf": "invoice.downloadPdf",
+        "invoice": "invoice.invoice",
+        "amount": "invoice.amount",
+        "subtotal": "invoice.subtotal",
+        "tax": "invoice.tax",
+        "total": "invoice.total"
+      }
     },
     "resume-builder": {
       "name": "이력서 빌더",
@@ -10748,7 +11862,16 @@
         "Example 2: 의료 기록 서명: 병원에서 환자 동의서를 작성할 때, 서명 패드를 사용하여 환자의 전자 서명을 안전하게 수집합니다.",
         "Example 3: 회의록 서명: 회의록에 참가자들의 서명을 추가할 때, 서명 패드를 사용하여 각 참가자의 서명을 쉽게 수집하고 문서에 추가합니다.",
         "Example 4: 전자서명 인증: 온라인 거래에서 구매자의 서명을 수집하여, 거래의 법적 유효성을 확보하고 보안을 강화합니다."
-      ]
+      ],
+      "signature": {
+        "penColor": "signature.penColor",
+        "penWidth": "signature.penWidth",
+        "backgroundColor": "signature.backgroundColor",
+        "transparent": "signature.transparent",
+        "downloadPng": "signature.downloadPng",
+        "downloadSvg": "signature.downloadSvg"
+      },
+      "clear": "지우기"
     },
     "pomodoro-timer": {
       "name": "뽀모도로 타이머",
@@ -10769,7 +11892,24 @@
         "2. 학생: 시험 준비를 하는 학생은 Pomodoro Timer를 사용하여 공부 시간을 관리합니다. 4번의 25분 작업 세션 후 15분의 긴 휴식을 통해 지속적인 학습 효과를 높입니다.",
         "3. 프리랜서: 프리랜서는 여러 프로젝트를 동시에 수행할 때 Pomodoro Timer를 활용하여 시간을 효율적으로 관리합니다. 각 프로젝트를 위한 별도의 작업 세션을 설정하여 프로젝트 간의 전환을 부드럽게 합니다.",
         "4. 코딩 학습자: 코딩을 배우는 학습자는 Pomodoro Timer를 사용하여 코딩 연습 시간을 관리합니다. 25분 동안 코딩을 하고 5분 동안 쉬는 것으로, 집중력을 유지하면서 실력을 향상시킬 수 있습니다."
-      ]
+      ],
+      "pomodoro": {
+        "pause": "pomodoro.pause",
+        "start": "pomodoro.start",
+        "reset": "pomodoro.reset",
+        "skip": "pomodoro.skip",
+        "completedSessions": "pomodoro.completedSessions",
+        "hideSettings": "pomodoro.hideSettings",
+        "showSettings": "pomodoro.showSettings",
+        "settings": "pomodoro.settings",
+        "workDuration": "pomodoro.workDuration",
+        "minutes": "pomodoro.minutes",
+        "shortBreakDuration": "pomodoro.shortBreakDuration",
+        "longBreakDuration": "pomodoro.longBreakDuration",
+        "sessionsBeforeLongBreak": "pomodoro.sessionsBeforeLongBreak",
+        "soundNotification": "pomodoro.soundNotification"
+      },
+      "clear": "지우기"
     },
     "meeting-notes": {
       "name": "회의록 작성 도구",
@@ -10790,7 +11930,26 @@
         "2. 마케팅 팀이 신상품 출시를 준비하며, 회의에서 결정된 테스크를 할당하고, 완료 예정일을 설정할 때 사용합니다.",
         "3. 소프트웨어 개발 팀이 스프린트 회의에서 이슈와 버그를 논의하고, 각 이슈의 responsible person을 지정할 때 활용합니다.",
         "4. 인사팀이 직원 평가 회의에서 각 직원의 성과를 기록하고, 향후 개선 방안을 제안할 때 사용합니다."
-      ]
+      ],
+      "meeting": {
+        "untitled": "meeting.untitled",
+        "date": "meeting.date",
+        "attendees": "meeting.attendees",
+        "agenda": "meeting.agenda",
+        "notes": "meeting.notes",
+        "actionItems": "meeting.actionItems",
+        "title": "meeting.title",
+        "titlePlaceholder": "meeting.titlePlaceholder",
+        "time": "meeting.time",
+        "addAttendee": "meeting.addAttendee",
+        "addAgendaItem": "meeting.addAgendaItem",
+        "notesPlaceholder": "meeting.notesPlaceholder",
+        "task": "meeting.task",
+        "assignee": "meeting.assignee",
+        "exportMarkdown": "meeting.exportMarkdown",
+        "exportText": "meeting.exportText"
+      },
+      "add": "add"
     },
     "business-days-calculator": {
       "name": "영업일 계산기",
@@ -10811,7 +11970,25 @@
         "2. 싱가포르에 기반한 IT 지원 센터가 10영업일 내 문제 해결을 약속한 SLA 준수를 위해 2024-01-15 기준 10일 후 날짜를 계산.",
         "3. 독일 자동차 부품 공장이 2023-12-10부터 2023-12-24까지 급여 주기 중 크리스마스 휴일 2일을 제외한 실제 근무일 수 확인.",
         "4. 뉴욕 소재 무역 회사가 중국에서 수입한 제품의 통관 일정을 설정하기 위해 2024-02-01 기준 15영업일 후 날짜 계산(중국 춘절 포함)."
-      ]
+      ],
+      "businessDays": {
+        "calculateDays": "businessDays.calculateDays",
+        "calculateEndDate": "businessDays.calculateEndDate",
+        "startDate": "businessDays.startDate",
+        "endDate": "businessDays.endDate",
+        "businessDaysToAdd": "businessDays.businessDaysToAdd",
+        "excludeWeekends": "businessDays.excludeWeekends",
+        "customHolidays": "businessDays.customHolidays",
+        "holidayName": "businessDays.holidayName",
+        "businessDays": "businessDays.businessDays",
+        "totalDays": "businessDays.totalDays",
+        "weekendDays": "businessDays.weekendDays",
+        "holidayDays": "businessDays.holidayDays",
+        "invalidDateRange": "businessDays.invalidDateRange",
+        "calculatedEndDate": "businessDays.calculatedEndDate"
+      },
+      "add": "add",
+      "result": "결과"
     },
     "salary-calculator": {
       "name": "급여 계산기",
@@ -10832,7 +12009,21 @@
         "인사 담당자가 한국식 주당 40시간 기준 연봉을 미국식 주당 37.5시간으로 재계산",
         "신입 개발자 구직자가 월급 300만원과 연봉 4,200만원 제안의 실질적 차이 분석",
         "계약직 근로자가 일당 15만원을 8시간 기준으로 시간당 단가 재확인 후 7시간 근무 조정"
-      ]
+      ],
+      "salary": {
+        "amount": "salary.amount",
+        "payFrequency": "salary.payFrequency",
+        "hoursPerWeek": "salary.hoursPerWeek",
+        "taxRate": "salary.taxRate",
+        "beforeTax": "salary.beforeTax",
+        "hourly": "salary.hourly",
+        "daily": "salary.daily",
+        "weekly": "salary.weekly",
+        "biweekly": "salary.biweekly",
+        "monthly": "salary.monthly",
+        "annual": "salary.annual",
+        "afterTax": "salary.afterTax"
+      }
     },
     "invoice": {
       "invoice": "청구서",
@@ -11050,7 +12241,23 @@
         "Example 2: 데이터 과학자가 여러 Excel 시트에서 추출한 데이터를 JSON 형식으로 변환하여 데이터 분석 도구로 로드합니다.",
         "Example 3: 프론트엔드 개발자가 Excel로 작성된 사용자 프로필 정보를 JSON으로 변환하여 애플리케이션의 데이터베이스에 쉽게 저장합니다.",
         "Example 4: API 개발자가 Excel에서 관리되는 데이터를 JSON 형식으로 변환하여 API 엔드포인트를 통해 클라이언트 애플리케이션으로 전송합니다."
-      ]
+      ],
+      "excelToJson": {
+        "invalidFileType": "excelToJson.invalidFileType",
+        "parseError": "excelToJson.parseError",
+        "copyError": "excelToJson.copyError",
+        "uploadFile": "excelToJson.uploadFile",
+        "supportedFormats": "excelToJson.supportedFormats",
+        "fileLoaded": "excelToJson.fileLoaded",
+        "selectSheet": "excelToJson.selectSheet",
+        "rows": "excelToJson.rows",
+        "preview": "excelToJson.preview",
+        "showingFirst": "excelToJson.showingFirst",
+        "jsonOutput": "excelToJson.jsonOutput",
+        "copied": "복사됨!",
+        "copy": "복사",
+        "download": "다운로드"
+      }
     },
     "json-to-excel": {
       "name": "JSON을 Excel로",
@@ -11071,7 +12278,21 @@
         "2. 스마트 미터기에서 수집한 15분 단위 전력 사용량 JSON 로그를 시간별 시트로 정리",
         "3. MongoDB 컬렉션의 JSON 내보내기 파일을 Excel 형식으로 변환하여 재무 분석 수행",
         "4. 웹 애플리케이션의 다국어 번역 키-값 쌍을 Excel 템플릿으로 변환해 현지화 팀에 배포"
-      ]
+      ],
+      "jsonToExcel": {
+        "invalidJson": "jsonToExcel.invalidJson",
+        "emptyData": "jsonToExcel.emptyData",
+        "parseError": "jsonToExcel.parseError",
+        "noInput": "jsonToExcel.noInput",
+        "exportError": "jsonToExcel.exportError",
+        "jsonInput": "jsonToExcel.jsonInput",
+        "loadSample": "jsonToExcel.loadSample",
+        "placeholder": "여기에 텍스트 입력...",
+        "fileName": "jsonToExcel.fileName",
+        "sheetName": "jsonToExcel.sheetName",
+        "preview": "jsonToExcel.preview",
+        "download": "다운로드"
+      }
     },
     "excel-viewer": {
       "name": "엑셀 뷰어",
@@ -11092,7 +12313,23 @@
         "2. 재무 팀이 민감한 예산 보고서를 이메일 첨부 없이 공유 링크로 내부 협업 도구에 삽입",
         "3. 현장 엔지니어가 인터넷 환경에서 오피스 설치 없이 설비 점검 기록 시트의 최신 데이터 확인",
         "4. 데이터 사이언스 팀이 머신러닝 전처리 전 Excel 파일의 결측치 분포를 시각적 탐색"
-      ]
+      ],
+      "excelViewer": {
+        "invalidFileType": "excelViewer.invalidFileType",
+        "parseError": "excelViewer.parseError",
+        "uploadFile": "excelViewer.uploadFile",
+        "supportedFormats": "excelViewer.supportedFormats",
+        "fileLoaded": "excelViewer.fileLoaded",
+        "filterColumn": "excelViewer.filterColumn",
+        "selectColumn": "excelViewer.selectColumn",
+        "filterValue": "excelViewer.filterValue",
+        "enterValue": "excelViewer.enterValue",
+        "clearFilter": "excelViewer.clearFilter",
+        "showing": "excelViewer.showing",
+        "rows": "excelViewer.rows",
+        "noResults": "excelViewer.noResults",
+        "emptySheet": "excelViewer.emptySheet"
+      }
     },
     "excel-merger": {
       "name": "Excel 병합기",
@@ -11113,7 +12350,22 @@
         "2. 인사평가 시스템에서 CSV 형식의 직원 정보와 XLSX 형식의 성과 데이터를 수평 병합",
         "3. 시장 조사 설문 응답(5개 지역) 파일을 결합하고 중복 행 자동 제거 기능 활용",
         "4. 제조업체의 부품 재고 목록(공급업체별)을 열 기준으로 병합해 통합 재고 관리 시트 생성"
-      ]
+      ],
+      "excelMerger": {
+        "invalidFileType": "excelMerger.invalidFileType",
+        "parseError": "excelMerger.parseError",
+        "noSheetsSelected": "excelMerger.noSheetsSelected",
+        "mergeError": "excelMerger.mergeError",
+        "uploadFiles": "excelMerger.uploadFiles",
+        "multipleFiles": "excelMerger.multipleFiles",
+        "uploadedFiles": "excelMerger.uploadedFiles",
+        "mergeMode": "excelMerger.mergeMode",
+        "vertical": "excelMerger.vertical",
+        "horizontal": "excelMerger.horizontal",
+        "outputFileName": "excelMerger.outputFileName",
+        "merge": "excelMerger.merge",
+        "sheets": "excelMerger.sheets"
+      }
     },
     "pdf-to-image": {
       "name": "PDF를 이미지로",
@@ -11134,7 +12386,22 @@
         "2. 제품 카탈로그 PDF를 300 DPI PNG로 일괄 변환 후 웹사이트 리소스로 활용",
         "3. 스캔된 계약서 PDF를 CMYK 색상 프로파일로 JPEG 변환해 인쇄소에 전달",
         "4. PDF 형식의漫화책을 페이지 단위로 분할해 Instagram 포스트용 1080x1920 이미지 생성"
-      ]
+      ],
+      "pdfToImage": {
+        "invalidFileType": "pdfToImage.invalidFileType",
+        "parseError": "pdfToImage.parseError",
+        "noPagesSelected": "pdfToImage.noPagesSelected",
+        "convertError": "pdfToImage.convertError",
+        "uploadPdf": "pdfToImage.uploadPdf",
+        "selectPdf": "pdfToImage.selectPdf",
+        "processing": "pdfToImage.processing",
+        "format": "포맷",
+        "dpi": "pdfToImage.dpi",
+        "selectAll": "pdfToImage.selectAll",
+        "deselectAll": "pdfToImage.deselectAll",
+        "convert": "변환",
+        "pages": "pdfToImage.pages"
+      }
     },
     "image-to-pdf": {
       "name": "이미지를 PDF로",
@@ -11155,7 +12422,24 @@
         "Example 2: 학생이 연구 프로젝트의 이미지 데이터를 PDF 보고서로 변환하여 제출합니다. 각 이미지는 연구 결과의 단계별로 정리되어 페이지로 구성됩니다.",
         "Example 3: 회사의 마케팅 팀이 프레젠테이션 자료를 준비할 때, 이미지 슬라이드를 PDF로 변환하여 프린트나 디지털 공유에 사용합니다.",
         "Example 4: 사진작가가 전시회 카탈로그를 만드는 경우, 여러 사진을 하나의 PDF 파일로 조합하여 전시회 참가자들에게 배포합니다."
-      ]
+      ],
+      "imageToPdf": {
+        "invalidFileType": "imageToPdf.invalidFileType",
+        "noImages": "imageToPdf.noImages",
+        "convertError": "imageToPdf.convertError",
+        "uploadImages": "imageToPdf.uploadImages",
+        "supportedFormats": "imageToPdf.supportedFormats",
+        "pageSize": "imageToPdf.pageSize",
+        "fitToImage": "imageToPdf.fitToImage",
+        "orientation": "imageToPdf.orientation",
+        "portrait": "imageToPdf.portrait",
+        "landscape": "imageToPdf.landscape",
+        "margin": "imageToPdf.margin",
+        "fileName": "imageToPdf.fileName",
+        "imageList": "imageToPdf.imageList",
+        "converting": "imageToPdf.converting",
+        "convert": "변환"
+      }
     },
     "pdf-merger": {
       "name": "PDF 병합기",
@@ -11173,7 +12457,22 @@
       "usage_examples": [
         "PDF 병합기을 사용하여 데이터 처리",
         "대기 없이 처리 결과를 빠르게 얻기"
-      ]
+      ],
+      "pdfMerger": {
+        "invalidFileType": "pdfMerger.invalidFileType",
+        "parseError": "pdfMerger.parseError",
+        "needMoreFiles": "pdfMerger.needMoreFiles",
+        "mergeError": "pdfMerger.mergeError",
+        "uploadPdfs": "pdfMerger.uploadPdfs",
+        "multipleFiles": "pdfMerger.multipleFiles",
+        "outputFileName": "pdfMerger.outputFileName",
+        "fileList": "pdfMerger.fileList",
+        "files": "pdfMerger.files",
+        "totalPages": "pdfMerger.totalPages",
+        "pages": "pdfMerger.pages",
+        "merging": "pdfMerger.merging",
+        "merge": "pdfMerger.merge"
+      }
     },
     "pdf-splitter": {
       "name": "PDF 분할기",
@@ -11194,7 +12493,25 @@
         "학술 논문을 여러 공동 연구원에게 분배할 때, 각 연구원이 담당한 부분만을 추출하여 공유합니다.",
         "법률 문서에서 특정 조항만 필요한 경우, 해당 페이지만 분리하여 클라이언트에게 전달합니다.",
         "책 출판 과정에서 각 장을 개별 PDF 파일로 분할하여 편집자에게 전송합니다."
-      ]
+      ],
+      "pdfSplitter": {
+        "invalidFileType": "pdfSplitter.invalidFileType",
+        "parseError": "pdfSplitter.parseError",
+        "noPagesSelected": "pdfSplitter.noPagesSelected",
+        "splitError": "pdfSplitter.splitError",
+        "uploadPdf": "pdfSplitter.uploadPdf",
+        "processing": "pdfSplitter.processing",
+        "splitMode": "pdfSplitter.splitMode",
+        "selectedPages": "pdfSplitter.selectedPages",
+        "pageRange": "pdfSplitter.pageRange",
+        "eachPage": "pdfSplitter.eachPage",
+        "from": "pdfSplitter.from",
+        "to": "pdfSplitter.to",
+        "selectAll": "pdfSplitter.selectAll",
+        "deselectAll": "pdfSplitter.deselectAll",
+        "split": "pdfSplitter.split",
+        "pages": "pdfSplitter.pages"
+      }
     },
     "pdf-compressor": {
       "name": "PDF 압축기",
@@ -11215,7 +12532,20 @@
         "2. 학술 연구자가 400페이지 논문을 웹 호스팅하기 위해 1.2GB 파일을 280MB로 변환",
         "3. 회계사가 클라우드 백업 시스템의 15GB 월간 할당량 내에서 900개의 세금 서류 처리",
         "4. 웹 개발자가 웹사이트 리소스 최적화를 위해 120MB의 제품 카탈로그 PDF 재가공"
-      ]
+      ],
+      "pdfCompressor": {
+        "invalidFileType": "pdfCompressor.invalidFileType",
+        "compressError": "pdfCompressor.compressError",
+        "uploadPdf": "pdfCompressor.uploadPdf",
+        "originalSize": "pdfCompressor.originalSize",
+        "compressionLevel": "pdfCompressor.compressionLevel",
+        "compressing": "pdfCompressor.compressing",
+        "compress": "pdfCompressor.compress",
+        "compressionComplete": "pdfCompressor.compressionComplete",
+        "reduced": "pdfCompressor.reduced",
+        "compressedSize": "pdfCompressor.compressedSize",
+        "download": "다운로드"
+      }
     },
     "pdf-rotator": {
       "name": "PDF 페이지 회전기",
@@ -11236,7 +12566,18 @@
         "건축 설계도에서 일부 페이지가 180° 뒤집혀 출력된 문제를 역전 없이 바로 수정",
         "학술 논문 제출 시 가로로 삽입된 그래프 페이지를 원본 해상도 유지 상태로 회전",
         "전자책 제작 과정에서 다양한 각도로 촬영된 PDF 콘텐츠를 일괄 정렬하여 ePub 포맷 변환 준비"
-      ]
+      ],
+      "pdfRotator": {
+        "invalidFileType": "pdfRotator.invalidFileType",
+        "parseError": "pdfRotator.parseError",
+        "saveError": "pdfRotator.saveError",
+        "uploadPdf": "pdfRotator.uploadPdf",
+        "processing": "pdfRotator.processing",
+        "rotateAll": "pdfRotator.rotateAll",
+        "apply": "pdfRotator.apply",
+        "reset": "pdfRotator.reset",
+        "save": "pdfRotator.save"
+      }
     },
     "markdown-editor": {
       "name": "Markdown 편집기",
@@ -11277,7 +12618,20 @@
       "code": "코드",
       "link": "링크",
       "image": "이미지",
-      "quote": "인용"
+      "quote": "인용",
+      "markdownEditor": {
+        "edit": "markdownEditor.edit",
+        "split": "markdownEditor.split",
+        "preview": "markdownEditor.preview",
+        "copyMd": "markdownEditor.copyMd",
+        "copyHtml": "markdownEditor.copyHtml",
+        "markdown": "markdownEditor.markdown",
+        "placeholder": "여기에 텍스트 입력...",
+        "previewLabel": "markdownEditor.previewLabel",
+        "downloadMd": "markdownEditor.downloadMd",
+        "downloadHtml": "markdownEditor.downloadHtml",
+        "clear": "지우기"
+      }
     },
     "world-clock": {
       "name": "세계 시계",
@@ -11312,7 +12666,14 @@
           "question": "주야간은 어떻게 판단되나요?",
           "answer": "각 도시 카드에 태양☀️ 또는 달🌙 아이콘이 표시됩니다. 6:00-18:00은 태양(낮), 그 외는 달(밤)을 나타냅니다."
         }
-      ]
+      ],
+      "worldClock": {
+        "format24h": "worldClock.format24h",
+        "showSeconds": "worldClock.showSeconds",
+        "selectCity": "worldClock.selectCity",
+        "addCity": "worldClock.addCity",
+        "noCities": "worldClock.noCities"
+      }
     },
     "stopwatch": {
       "name": "스톱워치",
@@ -11347,7 +12708,18 @@
           "question": "가장 빠른 랩과 가장 느린 랩은 어떻게 표시되나요?",
           "answer": "2개 이상의 랩이 기록되면 시스템이 자동으로 가장 빠른 랩에 🏆, 가장 느린 랩에 🐢를 표시하여 성능 분석에 도움을 줍니다."
         }
-      ]
+      ],
+      "stopwatchUI": {
+        "lap": "stopwatchUI.lap",
+        "stop": "stopwatchUI.stop",
+        "start": "stopwatchUI.start",
+        "reset": "stopwatchUI.reset",
+        "laps": "stopwatchUI.laps",
+        "lapNumber": "stopwatchUI.lapNumber",
+        "lapTime": "stopwatchUI.lapTime",
+        "totalTime": "stopwatchUI.totalTime",
+        "lapLabel": "stopwatchUI.lapLabel"
+      }
     },
     "countdown-timer": {
       "name": "카운트다운 타이머",
@@ -11382,7 +12754,18 @@
           "question": "일시정지 후 계속할 수 있나요?",
           "answer": "네. 일시정지를 클릭하면 카운트다운은 현재 상태를 유지합니다. 일시정지된 곳에서 계속하기 위해 '재개'를 클릭합니다."
         }
-      ]
+      ],
+      "countdownTimer": {
+        "timeUp": "countdownTimer.timeUp",
+        "timerFinished": "countdownTimer.timerFinished",
+        "hours": "countdownTimer.hours",
+        "minutes": "countdownTimer.minutes",
+        "seconds": "countdownTimer.seconds",
+        "resume": "countdownTimer.resume",
+        "start": "countdownTimer.start",
+        "pause": "countdownTimer.pause",
+        "reset": "countdownTimer.reset"
+      }
     },
     "note-pad": {
       "name": "노트 패드",
@@ -11422,7 +12805,21 @@
           "question": "몇 개의 노트를 만들 수 있나요?",
           "answer": "노트의 수에는 제한이 없습니다. 필요한 만큼 만들 수 있습니다. 하지만 브라우저 로컬 스토리지의 용량 제한(대체로 5-10MB)을 고려해야 합니다."
         }
-      ]
+      ],
+      "notePad": {
+        "newNote": "notePad.newNote",
+        "export": "notePad.export",
+        "search": "notePad.search",
+        "color": "notePad.color",
+        "titlePlaceholder": "notePad.titlePlaceholder",
+        "contentPlaceholder": "notePad.contentPlaceholder",
+        "updated": "notePad.updated",
+        "untitled": "notePad.untitled",
+        "noContent": "notePad.noContent",
+        "noNotes": "notePad.noNotes",
+        "noResults": "notePad.noResults",
+        "totalNotes": "notePad.totalNotes"
+      }
     },
     "excelToJson": {
       "uploadFile": "Excel 파일 업로드",
@@ -11662,7 +13059,13 @@
           "question": "파일 크기 제한이 있나요?",
           "answer": "처리는 브라우저에서 이루어지므로, 매우 큰 파일은 느릴 수 있습니다. 50MB 미만의 파일을 추천드립니다."
         }
-      ]
+      ],
+      "page": "page",
+      "errorParsing": "errorParsing",
+      "errorInvalidFile": "errorInvalidFile",
+      "dropzone": "dropzone",
+      "extracting": "extracting",
+      "pages": "pages"
     },
     "word-to-txt": {
       "name": "워드 텍스트 변환기",
@@ -11684,7 +13087,11 @@
         "Example 3: 번역가들은 워드 문서를 텍스트로 변환하여, 번역 소프트웨어에서 더 효율적으로 작업할 수 있습니다. 이는 번역 프로세스를 가속화하고, 일관성을 유지할 수 있도록 도와줍니다.",
         "Example 4: 학생들은 연구 프로젝트의 참고 문헌을 워드 문서에서 텍스트로 변환하여, 빠르게 요약하거나 인용할 수 있습니다. 이는 연구 자료의 관리와 작성 과정을 간편화합니다."
       ],
-      "faqs": []
+      "faqs": [],
+      "errorParsing": "errorParsing",
+      "errorInvalidFile": "errorInvalidFile",
+      "dropzone": "dropzone",
+      "extracting": "extracting"
     },
     "word-to-html": {
       "name": "Word를 HTML로",
@@ -11706,7 +13113,13 @@
         "3. 학회 논문의 복잡한 표를 웹 포털에 게시하기 위한 HTML5 구조로 변환할 때",
         "4. 기업 내부 시스템에서 생성된 Word 리포트를 Power BI 대시보드 위젯으로 통합할 때"
       ],
-      "faqs": []
+      "faqs": [],
+      "errorParsing": "errorParsing",
+      "errorInvalidFile": "errorInvalidFile",
+      "dropzone": "dropzone",
+      "converting": "converting",
+      "showCode": "showCode",
+      "showPreview": "showPreview"
     },
     "excel-to-csv": {
       "name": "엑셀을 CSV로 변환",
@@ -11735,7 +13148,11 @@
           "question": "공식이 변환됩니까?",
           "answer": "공식 자체는 변환되지 않으며, 계산된 값만 내보내집니다."
         }
-      ]
+      ],
+      "errorParsing": "errorParsing",
+      "errorInvalidFile": "errorInvalidFile",
+      "dropzone": "dropzone",
+      "converting": "converting"
     },
     "csv-to-excel": {
       "name": "CSV를 Excel로",
@@ -11757,7 +13174,14 @@
         "3. 전자상거래 플랫폼의 주문 CSV를 Excel 매크로 호환 포맷으로 변환하여 자동 정산 시스템과 연동",
         "4. 공공기관의 오픈데이터 CSV를 Excel 템플릿 형식으로 변환해 부서별 보고서 자동 생성 프로세스에 통합"
       ],
-      "faqs": []
+      "faqs": [],
+      "errorParsing": "errorParsing",
+      "errorInvalidFile": "errorInvalidFile",
+      "errorExport": "errorExport",
+      "dropzone": "dropzone",
+      "converting": "converting",
+      "rows": "rows",
+      "showingFirst": "showingFirst"
     },
     "loan-calculator": {
       "name": "대출 계산기",
@@ -16094,7 +17518,8 @@
       "tip4": "다양한 결과를 위해 여러 번 실행",
       "addFillers": "자연스러운 필러 단어 추가",
       "humanize": "인간화",
-      "inputPlaceholder": "AI 생성 텍스트를 여기에 붙여넣기..."
+      "inputPlaceholder": "AI 생성 텍스트를 여기에 붙여넣기...",
+      "outputPlaceholder": "결과가 여기에 표시됩니다..."
     },
     "dockerfile-generator": {
       "name": "도커파일 생성기",
@@ -16206,7 +17631,8 @@
       "bracketSpacing": "괄호 간격",
       "bracketSameLine": "같은 줄 괄호",
       "generate": "생성",
-      "download": "다운로드"
+      "download": "다운로드",
+      "htmlWhitespaceSensitivity": "htmlWhitespaceSensitivity"
     },
     "tsconfig-generator": {
       "name": "TSConfig 생성기",
@@ -16467,7 +17893,8 @@
       "inputPlaceholder": "내용을 입력하세요...",
       "swap": "교환",
       "outputPlaceholder": "결과가 여기에 표시됩니다...",
-      "showTable": "테이블 표시"
+      "showTable": "테이블 표시",
+      "none": "none"
     },
     "checksum-verifier": {
       "name": "체크섬 검증기",
@@ -17132,7 +18559,13 @@
       "outputPlaceholder": "결과가 여기에 표시됩니다...",
       "errors": {
         "emptyInput": "입력을 입력해 주세요"
-      }
+      },
+      "errorInvalidInput": "errorInvalidInput",
+      "convert": "변환",
+      "sql": {
+        "loadExample": "sql.loadExample"
+      },
+      "copied": "복사됨!"
     },
     "http-status-code-reference": {
       "name": "HTTP 상태 코드 참조",
@@ -17161,6 +18594,13 @@
       "outputPlaceholder": "결과가 여기에 표시됩니다...",
       "errors": {
         "emptyInput": "입력을 입력해 주세요"
+      },
+      "httpStatus": {
+        "search": "httpStatus.search"
+      },
+      "all": "all",
+      "nav": {
+        "noResults": "nav.noResults"
       }
     },
     "jwt-payload-decoder": {
@@ -17190,6 +18630,16 @@
       "outputPlaceholder": "결과가 여기에 표시됩니다...",
       "errors": {
         "emptyInput": "입력을 입력해 주세요"
+      },
+      "errorInvalidInput": "errorInvalidInput",
+      "errorInvalidFormat": "errorInvalidFormat",
+      "sql": {
+        "loadExample": "sql.loadExample"
+      },
+      "decode": "decode",
+      "copied": "복사됨!",
+      "jwt": {
+        "commonClaims": "jwt.commonClaims"
       }
     },
     "base64-image-converter": {
@@ -17281,7 +18731,20 @@
       "outputPlaceholder": "결과가 여기에 표시됩니다...",
       "errors": {
         "emptyInput": "입력을 입력하십시오"
-      }
+      },
+      "sql": {
+        "loadExample": "sql.loadExample"
+      },
+      "urlParser": {
+        "invalid": "urlParser.invalid",
+        "protocol": "urlParser.protocol",
+        "hostname": "urlParser.hostname",
+        "port": "urlParser.port",
+        "pathname": "urlParser.pathname",
+        "hash": "urlParser.hash",
+        "queryParams": "urlParser.queryParams"
+      },
+      "copied": "복사됨!"
     },
     "request-header-builder": {
       "name": "HTTP 요청 헤더 빌더",
@@ -18537,7 +20000,21 @@
       "database": "데이터베이스",
       "username": "사용자 이름",
       "password": "비밀번호",
-      "connectionString": "연결 문자열"
+      "connectionString": "연결 문자열",
+      "database-connection-tester": {
+        "databaseType": "database-connection-tester.databaseType",
+        "host": "database-connection-tester.host",
+        "port": "database-connection-tester.port",
+        "database": "database-connection-tester.database",
+        "username": "database-connection-tester.username",
+        "password": "database-connection-tester.password",
+        "useSSL": "database-connection-tester.useSSL",
+        "connectionString": "database-connection-tester.connectionString",
+        "codeSnippet": "database-connection-tester.codeSnippet",
+        "note": "database-connection-tester.note",
+        "noteText": "database-connection-tester.noteText"
+      },
+      "copied": "복사됨!"
     },
     "query-execution-planner": {
       "name": "쿼리 실행 계획 도구",
@@ -18804,7 +20281,10 @@
       "success": "성공",
       "failed": "실패",
       "warning": "경고",
-      "info": "정보"
+      "info": "정보",
+      "useCurrent": "useCurrent",
+      "useIncoming": "useIncoming",
+      "keepBoth": "keepBoth"
     },
     "git-history-visualizer": {
       "name": "Git 이력 시각화 도구",
@@ -20499,7 +21979,26 @@
       "asn": "ASN",
       "viewOnMap": "지도에서 보기",
       "invalidIp": "잘못된 IP 주소",
-      "lookupError": "IP 주소 조회 실패"
+      "lookupError": "IP 주소 조회 실패",
+      "ip-geolocation": {
+        "lookupError": "ip-geolocation.lookupError",
+        "ipAddress": "ip-geolocation.ipAddress",
+        "placeholder": "여기에 텍스트 입력...",
+        "loading": "로딩 중...",
+        "lookup": "ip-geolocation.lookup",
+        "myIp": "ip-geolocation.myIp",
+        "results": "ip-geolocation.results",
+        "country": "ip-geolocation.country",
+        "region": "ip-geolocation.region",
+        "city": "ip-geolocation.city",
+        "zipCode": "ip-geolocation.zipCode",
+        "timezone": "ip-geolocation.timezone",
+        "coordinates": "ip-geolocation.coordinates",
+        "isp": "ip-geolocation.isp",
+        "organization": "ip-geolocation.organization",
+        "asn": "ip-geolocation.asn",
+        "viewOnMap": "ip-geolocation.viewOnMap"
+      }
     },
     "screen-recorder": {
       "name": "화면 녹화",
@@ -20521,7 +22020,24 @@
       "instructions": "사용 방법",
       "instruction1": "\"녹화 시작\" 버튼 클릭",
       "instruction2": "녹화할 화면, 창 또는 탭 선택",
-      "instruction3": "완료되면 \"중지\"를 클릭하고 녹화 다운로드"
+      "instruction3": "완료되면 \"중지\"를 클릭하고 녹화 다운로드",
+      "screen-recorder": {
+        "permissionDenied": "screen-recorder.permissionDenied",
+        "startError": "screen-recorder.startError",
+        "recording": "screen-recorder.recording",
+        "paused": "screen-recorder.paused",
+        "start": "screen-recorder.start",
+        "pause": "screen-recorder.pause",
+        "stop": "screen-recorder.stop",
+        "resume": "screen-recorder.resume",
+        "newRecording": "screen-recorder.newRecording",
+        "preview": "screen-recorder.preview",
+        "download": "다운로드",
+        "instructions": "screen-recorder.instructions",
+        "instruction1": "screen-recorder.instruction1",
+        "instruction2": "screen-recorder.instruction2",
+        "instruction3": "screen-recorder.instruction3"
+      }
     }
   },
   "tool": {

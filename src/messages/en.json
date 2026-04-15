@@ -1658,7 +1658,12 @@
         "Creating temporary database records for user verification workflows with collision-resistant primary keys in a PostgreSQL schema.",
         "Implementing OAuth2 token generation for a SaaS platform with guaranteed uniqueness across millions of daily authentication requests.",
         "Building test datasets for blockchain transaction simulations needing globally unique operation identifiers without centralized registry."
-      ]
+      ],
+      "count": "Count",
+      "generate": "Generate",
+      "copied": "Copied!",
+      "copy": "Copy",
+      "all": "All"
     },
     "url-encoder": {
       "name": "URL Encoder and Decoder",
@@ -1700,7 +1705,17 @@
           "question": "Is my data secure when using this online tool?",
           "answer": "Yes. All processing happens instantly in your browser. Your URLs are never sent to or stored on our servers."
         }
-      ]
+      ],
+      "input": "Input",
+      "url": {
+        "encodeUrl": "Encode Url",
+        "decodeUrl": "Decode Url"
+      },
+      "clear": "Clear",
+      "output": "Output",
+      "copied": "Copied!",
+      "copy": "Copy",
+      "outputPlaceholder": "Result will appear here..."
     },
     "password-generator": {
       "name": "Password Generator",
@@ -1748,7 +1763,13 @@
         "Example 3: A digital signature service needs to verify the authenticity of documents. By generating a hash of the document and signing it with a private key, the service can ensure that any alterations to the document will be detected when the hash is recomputed and compared to the signed version.",
         "Example 4: A security analyst is conducting a forensic investigation and needs to verify the integrity of evidence files. They can use the Hash Generator to create hashes of the files and compare them to known good hashes to ensure that the evidence has not been altered."
       ],
-      "inputPlaceholder": "Enter text here..."
+      "inputPlaceholder": "Enter text here...",
+      "input": "Input",
+      "hash": {
+        "generateHashes": "Generate Hashes"
+      },
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "qr-generator": {
       "name": "QR Code Generator",
@@ -1770,7 +1791,12 @@
         "Event organizers generating ticket QR codes with inverted colors for night-time scanning",
         "Developers testing error correction capabilities by deliberately damaging generated codes"
       ],
-      "inputPlaceholder": "Enter text here..."
+      "inputPlaceholder": "Enter text here...",
+      "input": "Input",
+      "qr": {
+        "generateQr": "Generate Qr",
+        "downloadPng": "Download Png"
+      }
     },
     "color-converter": {
       "name": "Color Converter",
@@ -1791,7 +1817,12 @@
         "A UX engineer troubleshoots a color contrast accessibility issue by converting a background RGB(34,12,56) to HSL to adjust lightness while preserving hue identity.",
         "A digital artist migrating from photo editing software converts CMYK-equivalent RGB values to HSL to create graduated color variations programmatically in JavaScript.",
         "A front-end developer standardizes legacy CSS files by bulk-converting hexadecimal shorthand codes (#444) to normalized 6-digit HEX (#444444) for cross-browser compatibility."
-      ]
+      ],
+      "color": {
+        "preview": "Preview"
+      },
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "timestamp-converter": {
       "name": "Timestamp Converter",
@@ -1812,7 +1843,14 @@
         "Validating OAuth 2.0 token expiration claims by converting JWT 'exp' timestamp to readable date format",
         "Normalizing IoT device timestamps from different regions into UTC for centralized log analysis",
         "Verifying Kubernetes pod scheduling times by converting event timestamps from nanoseconds to human-readable format"
-      ]
+      ],
+      "timestamp": {
+        "currentTime": "Current Time",
+        "unixTimestamp": "Unix Timestamp",
+        "dateTime": "Date Time"
+      },
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "word-counter": {
       "name": "Word Counter",
@@ -1834,7 +1872,15 @@
         "A computational linguist uses sentence count statistics to train a machine learning model for academic paper abstract detection",
         "A legal professional validates contract section length requirements by analyzing paragraph distribution patterns in proposed agreements"
       ],
-      "inputPlaceholder": "Enter text here..."
+      "inputPlaceholder": "Enter text here...",
+      "input": "Input",
+      "wordCounter": {
+        "words": "Words",
+        "characters": "Characters",
+        "sentences": "Sentences",
+        "paragraphs": "Paragraphs"
+      },
+      "clear": "Clear"
     },
     "case-converter": {
       "name": "Case Converter",
@@ -1855,7 +1901,13 @@
         "Normalize multilingual product titles to title case following ISO/IEC 14651 sorting rules for e-commerce SEO",
         "Transform Python variable names between snake_case and PascalCase during framework migration (e.g., Django to FastAPI)",
         "Prepare CSV headers for Salesforce import by converting to API-expected uppercase with underscore separators"
-      ]
+      ],
+      "uppercase": "Uppercase",
+      "lowercase": "Lowercase",
+      "titleCase": "Title Case",
+      "sentenceCase": "Sentence Case",
+      "camelCase": "Camel Case",
+      "snakeCase": "Snake Case"
     },
     "html-encoder": {
       "name": "HTML Encoder and Decoder",
@@ -1897,7 +1949,17 @@
           "question": "Is my data secure when using this online encoder/decoder?",
           "answer": "Yes, all processing happens in your browser. Your text is never sent to or stored on our servers."
         }
-      ]
+      ],
+      "input": "Input",
+      "html": {
+        "encodeHtml": "Encode Html",
+        "decodeHtml": "Decode Html"
+      },
+      "clear": "Clear",
+      "output": "Output",
+      "copied": "Copied!",
+      "copy": "Copy",
+      "outputPlaceholder": "Result will appear here..."
     },
     "markdown-preview": {
       "name": "Markdown Preview",
@@ -1919,7 +1981,14 @@
         "A content marketer drafts a blog post with embedded tweets (via HTML <blockquote> tags in Markdown) and uses the export function to hand off a polished HTML version to their CMS team.",
         "A university student writes a research paper in Markdown, using the version comparison tool to track changes between drafts and maintain formatting consistency across sections."
       ],
-      "inputPlaceholder": "Enter text here..."
+      "inputPlaceholder": "Enter text here...",
+      "markdown": {
+        "editor": "Editor",
+        "preview": "Preview",
+        "exportHtml": "Export Html"
+      },
+      "copied": "Copied!",
+      "clear": "Clear"
     },
     "lorem-ipsum": {
       "name": "Lorem Ipsum Generator",
@@ -1940,7 +2009,18 @@
         "Example 2: A graphic designer is working on a print brochure. They need to populate the text sections with placeholder content to test the readability and flow of the design. The Lorem Ipsum Generator provides the necessary text in a format that fits the design seamlessly.",
         "Example 3: A UX designer is prototyping a mobile app and needs to simulate various text lengths in the user interface. By customizing the number of sentences and paragraphs, they can create realistic text blocks that help in testing the app’s responsiveness and layout.",
         "Example 4: A content writer is preparing a sample article for a client. They use the Lorem Ipsum Generator to create a placeholder version of the article, allowing the client to review the structure and formatting before the final content is written."
-      ]
+      ],
+      "lorem": {
+        "type": "Type",
+        "paragraphs": "Paragraphs",
+        "sentences": "Sentences",
+        "words": "Words"
+      },
+      "count": "Count",
+      "generate": "Generate",
+      "output": "Output",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "regex-tester": {
       "name": "Regex Tester",
@@ -1961,7 +2041,19 @@
         "Extracting HTTP status codes from server logs using capturing groups with \\\\b word boundaries",
         "Debugging a CSV parser regex that fails on quoted fields containing escaped commas",
         "Benchmarking different phone number validation patterns to optimize backtracking efficiency"
-      ]
+      ],
+      "regex": {
+        "pattern": "Pattern",
+        "global": "Global",
+        "caseInsensitive": "Case Insensitive",
+        "multiline": "Multiline",
+        "dotall": "Dotall",
+        "testString": "Test String",
+        "atIndex": "At Index"
+      },
+      "result": "Result",
+      "match": "Match",
+      "matches": "Matches"
     },
     "jwt-decoder": {
       "name": "JWT Debugger",
@@ -2030,7 +2122,18 @@
         "Example 2: A technical writer is reviewing multiple drafts of a user manual. They can use Diff Checker to highlight the changes made in each draft, ensuring that all necessary updates have been included and that the content remains consistent.",
         "Example 3: A content manager is tasked with merging contributions from multiple authors into a single document. Diff Checker helps them identify overlapping sections and conflicting edits, allowing for a smoother merging process.",
         "Example 4: A researcher is comparing two versions of a scientific paper to ensure that all reviewer comments have been addressed. By using Diff Checker, they can efficiently track the changes and verify that the final version meets the required standards."
-      ]
+      ],
+      "diffChecker": {
+        "original": "Original",
+        "originalPlaceholder": "Original Placeholder",
+        "modified": "Modified",
+        "modifiedPlaceholder": "Modified Placeholder",
+        "compare": "Compare",
+        "added": "Added",
+        "removed": "Removed",
+        "unchanged": "Unchanged"
+      },
+      "clear": "Clear"
     },
     "json-to-csv": {
       "name": "JSON to CSV",
@@ -2051,7 +2154,14 @@
         "Example 2: A data analyst is working with a CSV file containing sales data and needs to integrate it into a NoSQL database that accepts JSON. The tool allows them to convert the CSV data into a JSON format that is compatible with the database, streamlining the data integration process.",
         "Example 3: A software tester is writing automated tests for an application that exchanges data in JSON format. They need to create test cases with sample JSON data. The converter helps them generate valid JSON from a CSV file containing test scenarios, ensuring that the test data is in the correct format.",
         "Example 4: A data engineer is tasked with migrating data from a legacy system that exports data in CSV format to a modern application that requires JSON input. The JSON to CSV converter facilitates this migration by converting the CSV data into JSON, which can then be imported into the new system."
-      ]
+      ],
+      "errorInvalidJson": "Error Invalid Json",
+      "errorInvalidFormat": "Error Invalid Format",
+      "input": "Input",
+      "output": "Output",
+      "copied": "Copied!",
+      "copy": "Copy",
+      "download": "Download"
     },
     "image-to-base64": {
       "name": "Image to Base64",
@@ -2163,7 +2273,10 @@
       "separator": "Separator",
       "none": "None",
       "lowercase": "Lowercase",
-      "slug": "Slug"
+      "slug": "Slug",
+      "input": "Input",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "number-base-converter": {
       "name": "Number Base Converter",
@@ -2185,7 +2298,12 @@
         "Example 3: A game developer converts RGB color codes between decimal (128,64,32) and hexadecimal (804020) representations when implementing shader materials.",
         "Example 4: A computer science student verifies Booth's algorithm results by cross-converting negative binary numbers (e.g., 11110101) to decimal equivalent values."
       ],
-      "inputPlaceholder": "Enter text here..."
+      "inputPlaceholder": "Enter text here...",
+      "errorInvalidInput": "Error Invalid Input",
+      "input": "Input",
+      "convert": "Convert",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "json-path-tester": {
       "name": "JSONPath Tester",
@@ -2257,7 +2375,17 @@
           "question": "Is my XML data stored or logged on your servers?",
           "answer": "No. All processing occurs in real-time within your browser. Your XML data is never transmitted or stored on our servers."
         }
-      ]
+      ],
+      "xml": {
+        "invalidXml": "Invalid Xml"
+      },
+      "input": "Input",
+      "format": "Format",
+      "minify": "Minify",
+      "clear": "Clear",
+      "output": "Output",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "chinese-converter": {
       "name": "Chinese Converter",
@@ -2278,7 +2406,17 @@
         "A historian transforming Ming Dynasty manuscripts digitized in Simplified script back to their original Traditional form for academic publication",
         "An e-commerce platform normalizing product descriptions between mainland China and Hong Kong market variants during database migration",
         "A linguistics student analyzing character frequency differences between Simplified and Traditional versions of contemporary Chinese literature"
-      ]
+      ],
+      "input": "Input",
+      "chinese": {
+        "placeholder": "Enter text here...",
+        "toTraditional": "To Traditional",
+        "toSimplified": "To Simplified"
+      },
+      "clear": "Clear",
+      "output": "Output",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "unit-converter": {
       "name": "Unit Converter",
@@ -2325,7 +2463,18 @@
         "Designing a subtle button hover effect using a 10% opacity radial gradient overlay on a dark background",
         "Generating a material design-style card shadow using a 50% radial gradient with transparent black color stops",
         "Implementing a dark mode transition effect with a vertical linear gradient from #1A1A1A to #2C2C2C"
-      ]
+      ],
+      "gradient": {
+        "type": "Type",
+        "linear": "Linear",
+        "radial": "Radial",
+        "angle": "Angle",
+        "colors": "Colors",
+        "addColor": "Add Color",
+        "presets": "Presets"
+      },
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "unicode-converter": {
       "name": "Unicode Converter",
@@ -2346,7 +2495,20 @@
         "Example 2: Prepare emoji-rich text for JSON APIs by transforming UTF-16LE input into \\uXXXX-escaped sequences compatible with JSON standards.",
         "Example 3: Decode URL-encoded query parameters containing mixed Cyrillic and Latin characters back to human-readable text for debugging.",
         "Example 4: Fix endianness issues in UTF-16 data exported from mainframe systems by specifying byte order and converting to network byte order (UTF-16BE)."
-      ]
+      ],
+      "input": "Input",
+      "unicode": {
+        "placeholder": "Enter text here...",
+        "format": "Format",
+        "textToUnicode": "Text To Unicode",
+        "unicodeToText": "Unicode To Text",
+        "examples": "Examples",
+        "reference": "Reference"
+      },
+      "clear": "Clear",
+      "output": "Output",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "code-minifier": {
       "name": "Code Minifier",
@@ -2399,7 +2561,17 @@
         "Example 2: A team of developers is collaborating on a project and needs to ensure that all SQL queries adhere to a consistent style guide. The SQL Formatter helps them standardize the code, improving readability and maintainability.",
         "Example 3: A junior developer is learning to write SQL queries and often struggles with formatting. The SQL Formatter provides a quick and easy way to format their queries, helping them understand best practices and improve their skills.",
         "Example 4: A data analyst is preparing a report and needs to write a SQL query to extract specific data from a database. By using the SQL Formatter, they can ensure that the query is well-structured and easy to review by their peers or supervisors."
-      ]
+      ],
+      "input": "Input",
+      "sql": {
+        "loadExample": "Load Example"
+      },
+      "format": "Format",
+      "minify": "Minify",
+      "clear": "Clear",
+      "output": "Output",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "pinyin-converter": {
       "name": "Pinyin Converter",
@@ -2420,7 +2592,18 @@
         "A speech synthesis developer preprocesses Mandarin text into tone-number format compatible with TTS engines",
         "A linguist analyzes regional dialect influences by comparing pinyin outputs of traditional vs simplified character sets",
         "An international corporation prepares bilingual documentation by automatically generating phonetic guides for Chinese product names"
-      ]
+      ],
+      "input": "Input",
+      "pinyin": {
+        "placeholder": "Enter text here...",
+        "withTone": "With Tone",
+        "note": "Note"
+      },
+      "convert": "Convert",
+      "clear": "Clear",
+      "output": "Output",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "color-picker": {
       "name": "Color Picker",
@@ -2441,7 +2624,18 @@
         "Fine-tuning a semi-transparent overlay by adjusting RGBA values to achieve exactly 0.73 opacity for a Material Design card component",
         "Generating accessible text/background color pairs with automated contrast ratio calculations meeting WCAG 2.1 AA standards",
         "Creating smooth color stops for SVG gradients by sampling HSV values at precise 5° hue intervals with fixed saturation/vibrance"
-      ]
+      ],
+      "colorPicker": {
+        "selectColor": "Select Color",
+        "presets": "Presets",
+        "recent": "Recent",
+        "info": "Info",
+        "red": "Red",
+        "green": "Green",
+        "blue": "Blue"
+      },
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "aspect-ratio": {
       "name": "Aspect Ratio Calculator",
@@ -2462,7 +2656,21 @@
         "Example 2: A graphic designer is creating a series of social media posts and needs to ensure that all images maintain a consistent 16:9 aspect ratio. The tool helps them calculate the correct dimensions for each image, regardless of the original size.",
         "Example 3: A videographer is preparing a 4K video (3840x2160) for a platform that requires a 1080p resolution (1920x1080). The Aspect Ratio Calculator ensures that the video is resized correctly without changing its aspect ratio, maintaining the visual quality.",
         "Example 4: A photographer is printing a series of landscape photos and needs to resize them to fit a standard 8x10 inch frame. The tool helps them calculate the new dimensions while keeping the aspect ratio consistent, ensuring that the photos look perfect in the frames."
-      ]
+      ],
+      "aspect": {
+        "original": "Original",
+        "width": "Width",
+        "height": "Height",
+        "ratio": "Ratio",
+        "common": "Common",
+        "resize": "Resize",
+        "lockRatio": "Lock Ratio",
+        "newWidth": "New Width",
+        "newHeight": "New Height"
+      },
+      "result": "Result",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "css-beautifier": {
       "name": "CSS Beautifier",
@@ -2484,7 +2692,15 @@
         "Example 3: A web designer is preparing a website for launch and wants to ensure the CSS files are optimized for performance. They use the CSS Beautifier's minification feature to compress the CSS, reducing file size and improving page load times.",
         "Example 4: A team of developers is collaborating on a project and needs to standardize their CSS formatting. The CSS Beautifier's customizable settings allow them to define a consistent formatting style, ensuring uniformity across the project's CSS files."
       ],
-      "indent": "Indent"
+      "indent": "Indent",
+      "error": "Error",
+      "beautify": "Beautify",
+      "minify": "Minify",
+      "copy": "Copy",
+      "input": "Input",
+      "placeholder": "Enter text here...",
+      "output": "Output",
+      "outputPlaceholder": "Result will appear here..."
     },
     "js-beautifier": {
       "name": "JavaScript Beautifier",
@@ -2506,7 +2722,15 @@
         "Reducing JavaScript payload size for mobile app assets",
         "Converting legacy jQuery scripts to modern ES6 module syntax visually"
       ],
-      "indent": "Indent"
+      "indent": "Indent",
+      "error": "Error",
+      "beautify": "Beautify",
+      "minify": "Minify",
+      "copy": "Copy",
+      "input": "Input",
+      "placeholder": "Enter text here...",
+      "output": "Output",
+      "outputPlaceholder": "Result will appear here..."
     },
     "html-preview": {
       "name": "HTML Preview",
@@ -2528,7 +2752,9 @@
       ],
       "refresh": "Refresh",
       "htmlCode": "HTML Code",
-      "preview": "Preview"
+      "preview": "Preview",
+      "clear": "Clear",
+      "placeholder": "Enter text here..."
     },
     "ip-lookup": {
       "name": "IP Lookup",
@@ -2559,7 +2785,9 @@
       "city": "City",
       "isp": "ISP",
       "timezone": "Timezone",
-      "coordinates": "Coordinates"
+      "coordinates": "Coordinates",
+      "error": "Error",
+      "placeholder": "Enter text here..."
     },
     "morse-code": {
       "name": "Morse Code Converter",
@@ -2588,7 +2816,8 @@
       "toText": "To Text",
       "play": "Play",
       "morsePlaceholder": "Enter morse code...",
-      "reference": "Reference"
+      "reference": "Reference",
+      "copy": "Copy"
     },
     "random-generator": {
       "name": "Random Number Generator",
@@ -2609,7 +2838,10 @@
         "Simulating 10,000 dice rolls with 3-sided virtual dice for board game probability analysis",
         "Generating 500MB of test data with controlled numerical variance for database index fragmentation studies",
         "Producing verifiable randomness for NFT loot box algorithms requiring auditable entropy sources"
-      ]
+      ],
+      "min": "Min",
+      "max": "Max",
+      "unique": "Unique"
     },
     "text-reverser": {
       "name": "Text Reverser",
@@ -2630,7 +2862,11 @@
         "Analyzing genetic sequences by reversing DNA strands to identify palindromic restriction enzyme sites",
         "System administrators viewing log files in reverse chronological order without altering original timestamps",
         "Natural language processing researchers creating baseline datasets by reversing word order in training texts"
-      ]
+      ],
+      "reverseChars": "Reverse Chars",
+      "reverseWords": "Reverse Words",
+      "reverseLines": "Reverse Lines",
+      "placeholder": "Enter text here..."
     },
     "line-counter": {
       "name": "Line Counter",
@@ -2651,7 +2887,16 @@
         "Example 2: A data analyst is preparing a report based on a large dataset of customer feedback. The dataset includes many blank lines and duplicate responses, which need to be cleaned up before analysis. The Line Counter can help by removing these unnecessary lines, ensuring that the analyst works with a clean, concise dataset.",
         "Example 3: A content manager is compiling a list of frequently asked questions (FAQs) from multiple sources. The sources contain overlapping questions and some entries are blank. Using the Line Counter with the 'Remove Duplicates' and 'Remove Empty Lines' options, the manager can create a consolidated and well-organized list of FAQs.",
         "Example 4: A software engineer is writing a script that processes a file containing a list of IP addresses. The script needs to ensure that each IP address is unique and sorted for easy reference. By using the Line Counter's 'Remove Duplicates' and 'Sort Lines' features, the engineer can preprocess the IP address list and ensure that the script runs efficiently."
-      ]
+      ],
+      "totalLines": "Total Lines",
+      "nonEmptyLines": "Non Empty Lines",
+      "emptyLines": "Empty Lines",
+      "uniqueLines": "Unique Lines",
+      "removeDuplicates": "Remove Duplicates",
+      "removeEmpty": "Remove Empty",
+      "sortLines": "Sort Lines",
+      "ignoreEmpty": "Ignore Empty",
+      "placeholder": "Enter text here..."
     },
     "string-escape": {
       "name": "String Escape/Unescape",
@@ -2672,7 +2917,11 @@
         "A frontend developer receives a query string from user input and must safely append it to a URL; percent‑encode only the query component to avoid breaking the URL structure.",
         "A CMS stores user comments and must render them in HTML without XSS; unescape any existing escape sequences, then encode reserved HTML characters to named or numeric entities.",
         "A QA engineer writes Playwright test scripts and must inject dynamic text into a JavaScript string; escape backslashes and quotes according to the chosen quote style to prevent syntax errors."
-      ]
+      ],
+      "error": "Error",
+      "escape": "Escape",
+      "unescape": "Unescape",
+      "placeholder": "Enter text here..."
     },
     "yaml-json": {
       "name": "YAML/JSON Converter",
@@ -2693,7 +2942,11 @@
         "A front-end developer transforms JSON API responses into YAML fixtures for Ember.js application testing",
         "A data scientist reformats hierarchical research data between Jupyter Notebook JSON outputs and Pandas YAML imports",
         "A systems architect migrates legacy Ansible playbooks (YAML) to Azure ARM templates (JSON) during cloud provider transition"
-      ]
+      ],
+      "invalidYaml": "Invalid Yaml",
+      "invalidJson": "Invalid Json",
+      "yamlPlaceholder": "Yaml Placeholder",
+      "jsonPlaceholder": "Json Placeholder"
     },
     "date-calculator": {
       "name": "Date Calculator",
@@ -2725,7 +2978,9 @@
       "addSubtract": "Add/Subtract",
       "baseDate": "Base Date",
       "operation": "Operation",
-      "subtract": "Subtract"
+      "subtract": "Subtract",
+      "add": "Add",
+      "result": "Result"
     },
     "text-deduplicator": {
       "name": "Text Deduplicator",
@@ -2746,7 +3001,13 @@
         "Example 2: A content creator is compiling a list of potential guest contributors for a blog. They use the Text Deduplicator to clean up the list, ensuring that each contributor's name is unique and avoiding confusion or redundancy in their outreach efforts.",
         "Example 3: A developer is working on a script that processes log files from multiple servers. The Text Deduplicator helps in eliminating duplicate log entries, making the log files more manageable and easier to analyze for troubleshooting and performance monitoring.",
         "Example 4: A researcher is compiling a bibliography for a scientific paper. They use the Text Deduplicator to ensure that each reference is unique, maintaining the integrity of their work and preventing accidental citation of the same source multiple times."
-      ]
+      ],
+      "caseSensitive": "Case Sensitive",
+      "trimLines": "Trim Lines",
+      "original": "Original",
+      "unique": "Unique",
+      "removed": "Removed",
+      "placeholder": "Enter text here..."
     },
     "color-blender": {
       "name": "Color Blender",
@@ -2767,7 +3028,10 @@
         "Example 2: A graphic designer is creating a logo for a tech startup and needs a gradient that transitions from a vibrant orange (#FFA500) to a deep purple (#800080). They use Color Blender to experiment with different blending modes to find the perfect gradient that matches the brand's aesthetic.",
         "Example 3: A UI designer is working on a mobile app and needs to create a gradient for a button that changes color when hovered over. They use Color Blender to generate a gradient from a light gray (#D3D3D3) to a dark gray (#A9A9A9) with 5 steps, ensuring a smooth and responsive transition.",
         "Example 4: A digital artist is creating a piece of abstract art and wants to blend a series of colors to create a dynamic visual effect. They use Color Blender to blend a bright red (#FF0000) with a deep green (#008000) and generate 15 gradient steps, experimenting with the 'Exponential' blending mode to create a more dramatic transition."
-      ]
+      ],
+      "color1": "Color1",
+      "color2": "Color2",
+      "steps": "Steps"
     },
     "json-sorter": {
       "name": "JSON Sorter",
@@ -2788,7 +3052,12 @@
         "Preparing JSON files for git version control to prevent meaningless diff conflicts caused by arbitrary key ordering",
         "Creating verifiable data signatures by generating predictably ordered JSON before cryptographic hashing",
         "Organizing configuration files for infrastructure-as-code projects where alphabetical key grouping improves readability"
-      ]
+      ],
+      "invalidJson": "Invalid Json",
+      "ascending": "Ascending",
+      "descending": "Descending",
+      "sort": "Sort",
+      "placeholder": "Enter text here..."
     },
     "placeholder-image": {
       "name": "Placeholder Image Generator",
@@ -2809,7 +3078,13 @@
         "Generating a 800x600 JPEG with 70% quality to test image loading performance metrics",
         "Producing a responsive 16:9 banner with centered white text on a #333333 background",
         "Building a grid of 48x48 pixel icons with varying color schemes for design system documentation"
-      ]
+      ],
+      "width": "Width",
+      "height": "Height",
+      "bgColor": "Bg Color",
+      "textColor": "Text Color",
+      "customText": "Custom Text",
+      "generate": "Generate"
     },
     "text-encryption": {
       "name": "Text Encryption",
@@ -2830,7 +3105,18 @@
         "Protect cryptocurrency wallet recovery phrases during email transmission to cold storage devices",
         "Anonymize user credentials in log files by encrypting them with rotating session keys",
         "Create self-expiring API keys by encrypting timestamped tokens with hardware security module (HSM) derived keys"
-      ]
+      ],
+      "encryption": {
+        "error": "Error",
+        "encrypt": "Encrypt",
+        "decrypt": "Decrypt",
+        "password": "Password",
+        "passwordPlaceholder": "Password Placeholder",
+        "inputPlaceholder": "Enter text here..."
+      },
+      "input": "Input",
+      "output": "Output",
+      "copy": "Copy"
     },
     "file-hash": {
       "name": "File Hash Calculator",
@@ -2851,7 +3137,14 @@
         "Example 2: Forensic investigators creating hash sets for evidence files to detect tampering during legal proceedings",
         "Example 3: System administrators verifying configuration file consistency across servers using MD5 checksums",
         "Example 4: Blockchain developers testing SHA-512 outputs for cryptographic key generation in distributed ledger implementations"
-      ]
+      ],
+      "fileHash": {
+        "dropzone": "Dropzone",
+        "fileName": "File Name",
+        "fileSize": "File Size",
+        "calculating": "Calculating"
+      },
+      "copy": "Copy"
     },
     "html-table-generator": {
       "name": "HTML Table Generator",
@@ -2872,7 +3165,17 @@
         "2. Generating a database query results viewer with dynamic column sorting and customizable cell padding for enterprise dashboards",
         "3. Building accessible data tables for government websites with automatic scope attributes and screen reader-friendly caption elements",
         "4. Developing an e-commerce product inventory template with fixed column widths and text-overflow: ellipsis handling for long descriptions"
-      ]
+      ],
+      "tableGen": {
+        "rows": "Rows",
+        "cols": "Cols",
+        "hasHeader": "Has Header",
+        "header": "Header",
+        "cell": "Cell",
+        "preview": "Preview"
+      },
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "json-schema-validator": {
       "name": "JSON Schema Validator",
@@ -2893,7 +3196,15 @@
         "Example 2: A frontend developer is building a form that collects user data and sends it to a server in JSON format. They use the JSON Schema Validator to validate the form data against a predefined schema, ensuring that the data is valid before submission.",
         "Example 3: A data scientist is working with a large dataset in JSON format. They use the JSON Schema Validator to verify that the dataset adheres to a specific schema, ensuring that all required fields are present and data types are consistent, which is crucial for data analysis and processing.",
         "Example 4: An integration engineer is setting up a system that exchanges data with multiple external services using JSON. They use the JSON Schema Validator to validate the JSON data received from these services, ensuring that it meets the expected format and structure, thereby maintaining data integrity and preventing integration issues."
-      ]
+      ],
+      "schemaValidator": {
+        "loadExample": "Load Example",
+        "jsonPlaceholder": "Json Placeholder",
+        "schemaPlaceholder": "Schema Placeholder",
+        "validate": "Validate",
+        "valid": "Valid",
+        "invalid": "Invalid"
+      }
     },
     "regex-patterns": {
       "name": "Regex Patterns Library",
@@ -2914,7 +3225,14 @@
         "Extracting timestamped error codes from multi-line server logs using grouped captures with configurable delimiters",
         "Implementing phone number formatting for 150+ countries in a React form component using E.164 normalization patterns",
         "Sanitizing user-generated content in a Python API by removing unwanted HTML tags while preserving allowed formatting"
-      ]
+      ],
+      "regexPatterns": {
+        "test": "Test",
+        "match": "Match",
+        "noMatch": "No Match",
+        "tryIt": "Try It"
+      },
+      "copy": "Copy"
     },
     "byte-counter": {
       "name": "Byte Counter",
@@ -2935,7 +3253,15 @@
         "A web developer optimizing JSON API payloads to stay under HTTP/2 frame size limits (typically 16KB)",
         "A data scientist preparing UTF-8 encoded CSV files that must not exceed 1,048,576 bytes for legacy system ingestion",
         "A security analyst comparing ASCII vs UTF-8 byte counts to detect potential encoding-based obfuscation in log entries"
-      ]
+      ],
+      "input": "Input",
+      "byteCounter": {
+        "placeholder": "Enter text here...",
+        "characters": "Characters",
+        "bytes": "Bytes",
+        "lines": "Lines",
+        "size": "Size"
+      }
     },
     "json-to-typescript": {
       "name": "JSON to TypeScript",
@@ -2956,7 +3282,17 @@
         "Converting MongoDB document samples into TypeScript interfaces for type-safe aggregation pipeline operations in a Node.js backend.",
         "Generating interface skeletons from Swagger JSON specifications to enforce contract-first API development in a microservices architecture.",
         "Creating type definitions for Firebase Realtime Database snapshots to improve query typing and prevent runtime errors in a React Native application."
-      ]
+      ],
+      "json": {
+        "invalidJson": "Invalid Json"
+      },
+      "jsonTs": {
+        "interfaceName": "Interface Name",
+        "jsonPlaceholder": "Json Placeholder"
+      },
+      "copied": "Copied!",
+      "copy": "Copy",
+      "convert": "Convert"
     },
     "svg-optimizer": {
       "name": "SVG Optimizer",
@@ -2977,7 +3313,19 @@
         "Example 2: A graphic artist is developing a mobile app and needs to include several SVG graphics. The app has strict file size limits to ensure smooth performance on mobile devices. The SVG Optimizer helps the artist reduce the size of the SVG files without losing any visual detail.",
         "Example 3: A content manager is updating a company blog and wants to include an SVG chart to illustrate data. The original SVG file is large and slows down the loading time of the blog post. Using the SVG Optimizer, the manager can compress the file, ensuring that the chart loads quickly and the post remains engaging.",
         "Example 4: An e-commerce platform uses SVGs for product images and icons. During a site audit, it is discovered that the SVG files are contributing to slow load times. By optimizing these files with the SVG Optimizer, the platform can improve its load speed, potentially boosting user satisfaction and conversion rates."
-      ]
+      ],
+      "input": "Input",
+      "svgOptimizer": {
+        "placeholder": "Enter text here...",
+        "optimize": "Optimize",
+        "original": "Original",
+        "optimized": "Optimized",
+        "saved": "Saved",
+        "preview": "Preview"
+      },
+      "output": "Output",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "text-to-binary": {
       "name": "Text to Binary",
@@ -2998,7 +3346,17 @@
         "A computer science student visualizes ASCII art representation of executable file headers",
         "A firmware developer decodes memory-mapped I/O register values from hardware logs",
         "A digital artist encodes hidden text messages into the least significant bits of image pixel data"
-      ]
+      ],
+      "textBinary": {
+        "toBinary": "To Binary",
+        "toText": "To Text",
+        "text": "Text",
+        "textPlaceholder": "Text Placeholder",
+        "binary": "Binary",
+        "binaryPlaceholder": "Binary Placeholder"
+      },
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "markdown-to-html": {
       "name": "Markdown to HTML",
@@ -3019,7 +3377,13 @@
         "A technical writer processes 50+ API reference files using GFM tables, automating conversion to HTML for enterprise portal deployment",
         "A web designer transforms Markdown-based email templates into responsive HTML with custom class attributes for email client compatibility",
         "A student converts academic papers written in Markdown to HTML format with footnotes preserved for university CMS submission"
-      ]
+      ],
+      "mdToHtml": {
+        "mdPlaceholder": "Md Placeholder",
+        "preview": "Preview"
+      },
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "html-minifier": {
       "name": "HTML Minifier",
@@ -3040,7 +3404,14 @@
         "Example 2: A content management system (CMS) administrator is tasked with improving the performance of a large blog. They use the HTML Minifier to compress the HTML code of each blog post, resulting in faster page loads and a better user experience for readers.",
         "Example 3: A frontend developer is building a single-page application (SPA) and wants to ensure that the initial HTML file is as small as possible to enhance the initial load time. By minifying the HTML, they can achieve this goal and provide a smoother user experience.",
         "Example 4: A security analyst is reviewing the source code of a web application to identify potential vulnerabilities. They use the HTML Minifier to obfuscate the HTML code, making it harder for attackers to read and understand the structure of the site, thereby enhancing the security of the application."
-      ]
+      ],
+      "error": "Error",
+      "minify": "Minify",
+      "beautify": "Beautify",
+      "copied": "Copied!",
+      "copy": "Copy",
+      "input": "Input",
+      "output": "Output"
     },
     "json-diff": {
       "name": "JSON Diff",
@@ -3088,7 +3459,15 @@
         "Example 2: A network administrator is setting up a secure communication protocol for a custom application. They need to encode sensitive data before transmission to prevent eavesdropping. The Base32 Encoder/Decoder helps them encode the data, which can then be decoded on the receiving end to ensure data integrity.",
         "Example 3: A software engineer is developing a checksum system for a file transfer application. They need to generate a unique, compact checksum for each file that can be easily verified. By encoding the file's hash using Base32, they can create a checksum that is both human-readable and resistant to transmission errors.",
         "Example 4: A web developer is working on a URL shortening service. They need to encode long URLs into a shorter, more manageable format that can be easily shared. Using Base32 encoding, they can convert the long URLs into a compact form that is easier to handle and less prone to errors when copied or typed."
-      ]
+      ],
+      "error": "Error",
+      "encode": "Encode",
+      "decode": "Decode",
+      "input": "Input",
+      "convert": "Convert",
+      "copied": "Copied!",
+      "copy": "Copy",
+      "output": "Output"
     },
     "epoch-converter": {
       "name": "Epoch Converter",
@@ -3109,7 +3488,17 @@
         "An API developer generates an OAuth 2.0 token expiration value by converting '2025-01-01 00:00:00 UTC' to Epoch milliseconds (1735689600000).",
         "A data analyst transforms a PostgreSQL timestamp column (TIMESTAMP WITH TIME ZONE) into Epoch seconds for compatibility with a legacy reporting tool.",
         "A systems administrator calculates a cron job schedule by converting '2024-12-31 23:59:59 UTC-0500' to Epoch (1735676399) to verify execution timing."
-      ]
+      ],
+      "epoch": {
+        "current": "Current",
+        "timestamp": "Timestamp",
+        "toDate": "To Date",
+        "datetime": "Datetime",
+        "toEpoch": "To Epoch",
+        "useNow": "Use Now"
+      },
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "css-unit-converter": {
       "name": "CSS Unit Converter",
@@ -3130,7 +3519,15 @@
         "Transform 30em font-size to vw units for a hero heading that scales fluidly between device widths.",
         "Calculate 24pt line-height to pixel equivalent for print stylesheet compatibility.",
         "Convert 75vh container height to percentage-based units to create scroll-driven animations that work across viewport sizes."
-      ]
+      ],
+      "cssUnit": {
+        "value": "Value",
+        "unit": "Unit",
+        "baseFontSize": "Base Font Size",
+        "viewportWidth": "Viewport Width",
+        "viewportHeight": "Viewport Height"
+      },
+      "result": "Result"
     },
     "text-statistics": {
       "name": "Text Statistics",
@@ -3151,7 +3548,22 @@
         "Example 2: A linguistics professor is conducting a study on sentence complexity in Shakespeare's plays. They use Text Statistics to analyze the average sentence length and word frequency in different sections of the plays.",
         "Example 3: A content marketing team wants to optimize their blog posts for SEO. They use Text Statistics to ensure each post has a balanced distribution of paragraphs and a consistent use of keywords.",
         "Example 4: A data scientist is preparing text data for a machine learning model. They use Text Statistics to preprocess the data by identifying and removing any outliers in sentence length and character count to ensure the model is trained on clean, consistent data."
-      ]
+      ],
+      "textStats": {
+        "placeholder": "Enter text here...",
+        "chars": "Chars",
+        "charsNoSpace": "Chars No Space",
+        "words": "Words",
+        "uniqueWords": "Unique Words",
+        "sentences": "Sentences",
+        "paragraphs": "Paragraphs",
+        "lines": "Lines",
+        "avgWordLen": "Avg Word Len",
+        "digits": "Digits",
+        "spaces": "Spaces",
+        "readTime": "Read Time",
+        "speakTime": "Speak Time"
+      }
     },
     "hex-editor": {
       "name": "Hex Editor",
@@ -3173,7 +3585,15 @@
         "Example 3: Constructing a custom TCP/IP packet with specific byte fields for network testing scenarios",
         "Example 4: Recovering text from a damaged disk image by manually correcting misaligned hex values in sector data"
       ],
-      "inputPlaceholder": "Enter text here..."
+      "inputPlaceholder": "Enter text here...",
+      "hexEditor": {
+        "text": "Text",
+        "toHex": "To Hex",
+        "hex": "Hex",
+        "toText": "To Text"
+      },
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "color-palette": {
       "name": "Color Palette Generator",
@@ -3194,7 +3614,15 @@
         "Brand designer developing a seasonal product line requires analogous hues within 45° of Pantone 18-4052 Classic Blue",
         "Game UI artist optimizing health/mana bars needs complementary red/cyan variants with equal perceived brightness",
         "Data visualization engineer generating 12-category diverging color scales for heatmaps with CVD-friendly differentiation"
-      ]
+      ],
+      "palette": {
+        "baseColor": "Base Color",
+        "hexCode": "Hex Code",
+        "shades": "Shades",
+        "complementary": "Complementary",
+        "analogous": "Analogous",
+        "triadic": "Triadic"
+      }
     },
     "http-status": {
       "name": "HTTP Status Codes",
@@ -3215,7 +3643,10 @@
         "An SEO specialist auditing site migrations verifies 301 redirect implementations using the status code's cache-control directives",
         "API consumers validating error responses compare 4xx series codes against documented endpoints in the troubleshooting pane",
         "Students learning HTTP protocols explore 1xx informational responses through the interactive response class filter"
-      ]
+      ],
+      "httpStatus": {
+        "search": "Search"
+      }
     },
     "json-to-yaml": {
       "name": "JSON to YAML",
@@ -3236,7 +3667,13 @@
         "Converting MongoDB document exports to YAML for initializing test databases",
         "Transforming API gateway response schemas for OpenAPI specification compliance",
         "Creating Helm chart values.yaml files from JSON-based application configurations"
-      ]
+      ],
+      "json": {
+        "invalidJson": "Invalid Json"
+      },
+      "convert": "Convert",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "data-uri": {
       "name": "Data URI Generator",
@@ -3282,7 +3719,16 @@
         "An academic researcher analyzing paraphrased student submissions for potential plagiarism beyond simple string matching",
         "A quality assurance specialist validating chatbot responses against expected output corpora using cosine similarity thresholds",
         "A data scientist evaluating the consistency of OCR-converted historical documents against modern transcriptions through edit distance metrics"
-      ]
+      ],
+      "textCompare": {
+        "text1": "Text1",
+        "placeholder": "Enter text here...",
+        "text2": "Text2",
+        "charSimilarity": "Char Similarity",
+        "wordSimilarity": "Word Similarity",
+        "editDistance": "Edit Distance",
+        "commonWords": "Common Words"
+      }
     },
     "json-to-go": {
       "name": "JSON to Go Struct",
@@ -3353,7 +3799,16 @@
         "Example 2: A system administrator is reviewing the permissions of a critical configuration file. They notice the octal value '700' and want to understand what this means in symbolic notation. Using the tool, they input '700' and get 'u=rwx,g=,o=', confirming that only the owner has full access.",
         "Example 3: A team is working on a collaborative project where multiple users need to read and execute files in a shared directory, but only the project lead can write to it. They use the Chmod Calculator to find the symbolic notation for the octal value '750', which is 'u=rwx,g=rx,o='.",
         "Example 4: A security auditor is reviewing a server's file permissions to ensure compliance with security policies. They encounter a file with the symbolic notation 'u=rwx,g=rx,o=' and need to verify the octal value. Using the Chmod Calculator, they confirm that the octal value is '750', which aligns with the required security settings."
-      ]
+      ],
+      "chmod": {
+        "octal": "Octal",
+        "symbolic": "Symbolic",
+        "read": "Read",
+        "write": "Write",
+        "execute": "Execute",
+        "command": "Command"
+      },
+      "copy": "Copy"
     },
     "barcode-generator": {
       "name": "Barcode Generator",
@@ -3374,7 +3829,11 @@
         "An industrial maintenance team generates Code 128 barcodes with alphanumeric asset IDs for tracking machinery parts in a warehouse management system",
         "A university library implements Code 39 barcodes on book spine labels for automated check-in/check-out using existing library management software",
         "A medical research lab produces UPC-A codes for specimen containers, integrating with laboratory information management systems (LIMS) for sample tracking"
-      ]
+      ],
+      "barcode": {
+        "text": "Text",
+        "format": "Format"
+      }
     },
     "text-to-speech": {
       "name": "Text to Speech",
@@ -3395,7 +3854,15 @@
         "A localization specialist creates multilingual voiceovers for software UI elements using regional language variants.",
         "A podcast host generates royalty-free intro/outro segments from transcribed show notes with consistent vocal tone.",
         "A cognitive researcher tests speech comprehension rates by systematically varying phoneme duration and stress patterns."
-      ]
+      ],
+      "tts": {
+        "placeholder": "Enter text here...",
+        "voice": "Voice",
+        "rate": "Rate",
+        "pitch": "Pitch",
+        "speak": "Speak",
+        "stop": "Stop"
+      }
     },
     "url-parser": {
       "name": "URL Parser",
@@ -3449,7 +3916,13 @@
         "Transforming Firebase Realtime Database JSON exports into XML feeds for SharePoint list imports",
         "Migrating MQTT IoT sensor data streams from JSON payloads to XML archives for compliance reporting",
         "Generating Android XML resource files from translated JSON strings in internationalization workflows"
-      ]
+      ],
+      "json": {
+        "invalidJson": "Invalid Json"
+      },
+      "convert": "Convert",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "text-wrapper": {
       "name": "Text Wrapper",
@@ -3470,7 +3943,17 @@
         "Example 2: A content writer is preparing an email newsletter and needs to ensure that the text fits well within the email client's default width. They use the Text Wrapper tool to adjust the line length of the newsletter content.",
         "Example 3: A technical writer is creating a user manual and needs to adhere to strict formatting guidelines, including a maximum line length of 70 characters. They use the Text Wrapper tool to format the manual's content before finalizing the document.",
         "Example 4: A web developer is optimizing a website's content for mobile devices, where the screen width is limited. They use the Text Wrapper tool to ensure that the text is properly formatted for mobile viewing, enhancing user experience."
-      ]
+      ],
+      "textWrapper": {
+        "width": "Width",
+        "chars": "Chars",
+        "placeholder": "Enter text here...",
+        "wrap": "Wrap"
+      },
+      "input": "Input",
+      "output": "Output",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "csv-to-json": {
       "name": "CSV to JSON",
@@ -3491,7 +3974,21 @@
         "API engineer transforms OAuth2 client credentials spreadsheet into security-validated JSON configuration files for Express.js authentication middleware",
         "Data scientist prepares time-series sensor data from CSV to JSON Lines format for AWS Lambda stream processing",
         "Enterprise architect maps LDAP directory exports to JSON objects with relational links for Neo4j graph database import"
-      ]
+      ],
+      "csvToJson": {
+        "error": "Error",
+        "delimiterTab": "Delimiter Tab",
+        "csv": "Csv",
+        "csvPlaceholder": "Csv Placeholder",
+        "json": "Json"
+      },
+      "csvJson": {
+        "delimiter": "Delimiter",
+        "hasHeader": "Has Header"
+      },
+      "convert": "Convert",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "html-entity": {
       "name": "HTML Entity Converter",
@@ -3512,7 +4009,17 @@
         "Embed JSON-LD within an HTML page and ensure quotes and hyphens are entities; use Mixed output to keep &amp; readable while escaping em/en dashes as &#8211; and &#8212; to prevent accidental truncation by validators.",
         "Build a newsletter template from dynamic content and encode only ASCII symbols while leaving UTF‑8 intact, avoiding double-encoding by selecting Full ASCII scope and leaving Unicode characters unchanged.",
         "Fix a legacy CMS export that mixes raw and encoded characters by using Detect/Auto-Convert to normalize all entities to a consistent set of named references for the common symbols."
-      ]
+      ],
+      "encode": "Encode",
+      "decode": "Decode",
+      "input": "Input",
+      "output": "Output",
+      "convert": "Convert",
+      "copied": "Copied!",
+      "copy": "Copy",
+      "htmlEntity": {
+        "common": "Common"
+      }
     },
     "number-formatter": {
       "name": "Number Formatter",
@@ -3533,7 +4040,16 @@
         "A financial analyst converts quarterly revenue figures to localized formats for multinational board presentations, including Japanese yen with no decimal places",
         "A data scientist standardizes survey response percentages across 15 languages for a global market research report",
         "A localization engineer validates number formatting consistency across mobile app metrics when transitioning from Latin American Spanish to Russian interfaces"
-      ]
+      ],
+      "numberFormat": {
+        "number": "Number",
+        "style": "Style",
+        "decimal": "Decimal",
+        "currency": "Currency",
+        "percent": "Percent",
+        "currencyCode": "Currency Code"
+      },
+      "copied": "Copied!"
     },
     "hmac-generator": {
       "name": "HMAC Generator",
@@ -3554,7 +4070,19 @@
         "Verifying GitHub webhook payloads by comparing generated HMAC-SHA256 against X-Hub-Signature-256 headers",
         "Creating time-limited password reset tokens using HMAC-SHA512 with user-specific salts",
         "Validating firmware update packages through HMAC integrity checks before device-side execution"
-      ]
+      ],
+      "hmac": {
+        "error": "Error",
+        "message": "Message",
+        "messagePlaceholder": "Message Placeholder",
+        "secretKey": "Secret Key",
+        "keyPlaceholder": "Key Placeholder",
+        "algorithm": "Algorithm"
+      },
+      "generate": "Generate",
+      "result": "Result",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "password-strength": {
       "name": "Password Strength Checker",
@@ -3575,7 +4103,19 @@
         "A security auditor quantifying entropy reduction in employee passwords containing organizational keywords",
         "A blockchain developer testing passphrase resistance to BIP-39 seed recovery attacks",
         "A university researcher comparing entropy metrics across biometric-generated vs human-created passwords"
-      ]
+      ],
+      "pwStrength": {
+        "password": "Password",
+        "placeholder": "Enter text here...",
+        "hide": "Hide",
+        "show": "Show",
+        "strength": "Strength",
+        "score": "Score",
+        "length": "Length",
+        "chars": "Chars",
+        "charTypes": "Char Types",
+        "suggestions": "Suggestions"
+      }
     },
     "totp-generator": {
       "name": "TOTP Generator",
@@ -3596,7 +4136,20 @@
         "Recovering access to a cloud storage account by generating backup codes when the primary authenticator app is unavailable",
         "A system administrator verifying clock synchronization between servers using TOTP-based SSH authentication",
         "Security researchers analyzing token patterns to demonstrate time-window vulnerabilities in legacy MFA systems"
-      ]
+      ],
+      "totp": {
+        "secret": "Secret",
+        "secretPlaceholder": "Secret Placeholder",
+        "secretHint": "Secret Hint",
+        "currentCode": "Current Code",
+        "howItWorks": "How It Works",
+        "step1": "Step1",
+        "step2": "Step2",
+        "step3": "Step3"
+      },
+      "generate": "Generate",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "user-agent-parser": {
       "name": "User Agent Parser",
@@ -3617,7 +4170,17 @@
         "Example 2: An analytics team is analyzing user behavior on a mobile app. They use the User Agent Parser to segment users by device type and OS, helping them understand which devices are most popular and tailor their marketing strategies accordingly.",
         "Example 3: A security analyst is investigating a potential attack on a web application. By parsing the User Agent strings from the server logs, they can determine the browsers and operating systems used by the attackers, which can provide valuable insights into the attack vectors and help in strengthening security measures.",
         "Example 4: A UX designer is optimizing a website for different screen sizes. The User Agent Parser helps them identify the most common devices and screen resolutions used by their audience, allowing them to prioritize design adjustments for the most widely used devices."
-      ]
+      ],
+      "uaParser": {
+        "userAgent": "User Agent",
+        "placeholder": "Enter text here...",
+        "useCurrent": "Use Current",
+        "browser": "Browser",
+        "version": "Version",
+        "os": "Os",
+        "device": "Device",
+        "engine": "Engine"
+      }
     },
     "cidr-calculator": {
       "name": "CIDR Calculator",
@@ -3638,7 +4201,21 @@
         "A network architect designing a campus network uses the calculator to create non-overlapping /27 subnets for separate departments while maintaining route summarization.",
         "An IT security analyst troubleshoots firewall rules by converting a 2001:db8::/32 IPv6 CIDR to its hexadecimal subnet mask equivalent for ACL configuration.",
         "A systems administrator planning a network migration verifies that a /22 CIDR block contains exactly 1,022 usable host addresses to accommodate current and future physical devices."
-      ]
+      ],
+      "cidr": {
+        "invalid": "Invalid",
+        "input": "Input",
+        "commonPrefixes": "Common Prefixes",
+        "networkAddress": "Network Address",
+        "broadcastAddress": "Broadcast Address",
+        "firstHost": "First Host",
+        "lastHost": "Last Host",
+        "subnetMask": "Subnet Mask",
+        "wildcardMask": "Wildcard Mask",
+        "totalHosts": "Total Hosts",
+        "usableHosts": "Usable Hosts",
+        "binaryMask": "Binary Mask"
+      }
     },
     "http-header-parser": {
       "name": "HTTP Header Parser",
@@ -3659,7 +4236,14 @@
         "Auditing security headers (X-Content-Type-Options, HSTS, CSP) across multiple endpoints to ensure compliance with OWASP recommendations",
         "Optimizing caching strategies by visualizing Cache-Control directive hierarchies and ETag validation patterns",
         "Reverse-engineering third-party API authentication mechanisms by inspecting WWW-Authenticate challenge-response sequences"
-      ]
+      ],
+      "httpHeader": {
+        "input": "Input",
+        "loadExample": "Load Example",
+        "placeholder": "Enter text here...",
+        "parse": "Parse",
+        "parsed": "Parsed"
+      }
     },
     "percentage-calculator": {
       "name": "Percentage Calculator",
@@ -3680,7 +4264,21 @@
         "Analyze stock price fluctuation from $89.50 to $97.25: Use 'Change' mode to determine +8.66% movement with precise decimal output",
         "Compare year-over-year sales metrics: Input Q1 revenue $125,000 and Q2 revenue $142,300 to calculate 13.84% growth",
         "Adjust recipe ingredients: Calculate 2/3 reduction of 300g flour using 'Delta' mode with -66.667% input to get precise 100g measurement"
-      ]
+      ],
+      "percent": {
+        "whatIsPercent": "What Is Percent",
+        "of": "Of",
+        "whatPercentIs": "What Percent Is",
+        "isWhatPercentOf": "Is What Percent Of",
+        "percentChange": "Percent Change",
+        "from": "From",
+        "to": "To",
+        "increaseDecrease": "Increase Decrease",
+        "increase": "Increase",
+        "decrease": "Decrease",
+        "quickRef": "Quick Ref"
+      },
+      "copy": "Copy"
     },
     "statistics-calculator": {
       "name": "Statistics Calculator",
@@ -3701,7 +4299,29 @@
         "An economist calculating weighted mean inflation rates across different commodity groups with varying significance coefficients",
         "A software engineer evaluating response time logs to identify outliers using interquartile range and standard deviation metrics",
         "A manufacturing quality control specialist processing dimensional measurements of machined parts to assess process capability (CPK) requirements"
-      ]
+      ],
+      "stats": {
+        "inputLabel": "Input Label",
+        "inputHint": "Input Hint",
+        "varianceType": "Variance Type",
+        "population": "Population",
+        "sample": "Sample",
+        "dataOverview": "Data Overview",
+        "count": "Count",
+        "mean": "Mean",
+        "median": "Median",
+        "mode": "Mode",
+        "noMode": "No Mode",
+        "sum": "Sum",
+        "min": "Min",
+        "max": "Max",
+        "range": "Range",
+        "populationVariance": "Population Variance",
+        "sampleVariance": "Sample Variance",
+        "populationStdDev": "Population Std Dev",
+        "sampleStdDev": "Sample Std Dev"
+      },
+      "copy": "Copy"
     },
     "scientific-calculator": {
       "name": "Scientific Calculator",
@@ -3722,7 +4342,13 @@
         "Example 2: Model bacterial growth with N(t) = N₀e^(kt) where N₀=500, k=0.03/min, t=20 minutes.",
         "Example 3: Convert 50°C to Fahrenheit using the formula F = (C × 9/5) + 32, then calculate its Kelvin equivalent.",
         "Example 4: Solve for earthquake magnitude on the Richter scale using M = log₁₀(A/A₀) with amplitude ratio A/A₀=800."
-      ]
+      ],
+      "sci": {
+        "error": "Error",
+        "angleMode": "Angle Mode",
+        "quickFormulas": "Quick Formulas"
+      },
+      "copy": "Copy"
     },
     "text-sorter": {
       "name": "Text Sorter",
@@ -3743,7 +4369,35 @@
         "Optimizing dictionary compilation: Alphabetizing vocabulary lists while preserving case-specific entries like 'Apple' vs 'apple'",
         "Preparing CSV headers: Arranging column names by character length to identify potential schema inconsistencies",
         "Analyzing command output: Sorting Linux 'ps' process listings by memory usage percentage after extracting relevant columns"
-      ]
+      ],
+      "sorter": {
+        "sortType": "Sort Type",
+        "alphabetical": "Alphabetical",
+        "numerical": "Numerical",
+        "natural": "Natural",
+        "byLength": "By Length",
+        "order": "Order",
+        "ascending": "Ascending",
+        "descending": "Descending",
+        "caseSensitive": "Case Sensitive",
+        "trimLines": "Trim Lines",
+        "removeEmpty": "Remove Empty",
+        "removeDuplicates": "Remove Duplicates",
+        "sort": "Sort",
+        "loadExample": "Load Example",
+        "lines": "Lines",
+        "placeholder": "Enter text here...",
+        "sortTypes": "Sort Types",
+        "alphabeticalDesc": "Alphabetical Desc",
+        "numericalDesc": "Numerical Desc",
+        "naturalDesc": "Natural Desc",
+        "byLengthDesc": "By Length Desc"
+      },
+      "clear": "Clear",
+      "input": "Input",
+      "output": "Output",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "text-extractor": {
       "name": "Text Extractor",
@@ -3764,7 +4418,30 @@
         "An investigative journalist identifies embedded tracking URLs in leaked documents with domain categorization",
         "A data engineer cleans phone number formats across 10,000 customer records using E.164 standardization",
         "A digital forensics specialist recovers deleted email addresses from memory dumps through pattern entropy analysis"
-      ]
+      ],
+      "extractor": {
+        "email": "Email",
+        "url": "Url",
+        "phone": "Phone",
+        "ip": "Ip",
+        "number": "Number",
+        "hashtag": "Hashtag",
+        "mention": "Mention",
+        "type": "Type",
+        "extract": "Extract",
+        "loadExample": "Load Example",
+        "placeholder": "Enter text here...",
+        "found": "Found",
+        "copyAll": "Copy All",
+        "noResults": "No Results",
+        "supportedTypes": "Supported Types"
+      },
+      "all": "All",
+      "clear": "Clear",
+      "input": "Input",
+      "result": "Result",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "emoji-picker": {
       "name": "Emoji Picker",
@@ -3785,7 +4462,20 @@
         "A social media manager creating Instagram stories requires precise emoji combinations for visual hierarchy and engagement metrics",
         "A UX designer prototyping in Figma wants to maintain consistent emoji styling across mockups using standardized Unicode versions",
         "A technical writer documenting API error codes uses emojis to create visually distinct status indicators in markdown files"
-      ]
+      ],
+      "emoji": {
+        "searchPlaceholder": "Search Placeholder",
+        "recent": "Recent",
+        "clickToCopy": "Click To Copy",
+        "emojis": "Emojis",
+        "noResults": "No Results",
+        "howToUse": "How To Use",
+        "tip1": "Tip1",
+        "tip2": "Tip2",
+        "tip3": "Tip3"
+      },
+      "all": "All",
+      "copied": "Copied!"
     },
     "json-to-sql": {
       "name": "JSON to SQL",
@@ -3844,7 +4534,11 @@
       "compress": "Compress",
       "originalSize": "Original Size",
       "compressedSize": "Compressed Size",
-      "reduction": "Reduction"
+      "reduction": "Reduction",
+      "clear": "Clear",
+      "dropzone": "Dropzone",
+      "original": "Original",
+      "download": "Download"
     },
     "image-converter": {
       "name": "Image Format Converter",
@@ -3874,7 +4568,12 @@
       "formatInfo": "Format Info",
       "pngDesc": "Lossless compression, supports transparency",
       "jpegDesc": "Lossy compression, smaller file size",
-      "webpDesc": "Modern format, best compression"
+      "webpDesc": "Modern format, best compression",
+      "clear": "Clear",
+      "dropzone": "Dropzone",
+      "original": "Original",
+      "convert": "Convert",
+      "download": "Download"
     },
     "favicon-generator": {
       "name": "Favicon Generator",
@@ -3901,7 +4600,13 @@
       "processing": "Processing...",
       "generated": "Generated",
       "downloadAll": "Download All",
-      "htmlCode": "HTML Code"
+      "htmlCode": "HTML Code",
+      "clear": "Clear",
+      "dropzone": "Dropzone",
+      "original": "Original",
+      "generate": "Generate",
+      "download": "Download",
+      "copy": "Copy"
     },
     "image-cropper": {
       "name": "Image Cropper",
@@ -3928,7 +4633,12 @@
       "changeImage": "Change Image",
       "preview": "Preview",
       "cropFirst": "Crop an image first",
-      "crop": "Crop"
+      "crop": "Crop",
+      "clear": "Clear",
+      "dropzone": "Dropzone",
+      "width": "Width",
+      "height": "Height",
+      "download": "Download"
     },
     "gitignore-generator": {
       "name": ".gitignore Generator",
@@ -4018,7 +4728,10 @@
       "scripts": "Scripts",
       "scriptName": "Script Name",
       "scriptCommand": "Command",
-      "commonScripts": "Common Scripts"
+      "commonScripts": "Common Scripts",
+      "generate": "Generate",
+      "copy": "Copy",
+      "download": "Download"
     },
     "json-minifier": {
       "name": "JSON Minifier",
@@ -4040,7 +4753,18 @@
         "Preparing JSON Web Tokens (JWTs) by removing whitespace before Base64Url encoding",
         "Minifying package.json dependencies lists to meet AWS Lambda's 4KB environment variable size limit"
       ],
-      "inputPlaceholder": "Enter text here..."
+      "inputPlaceholder": "Enter text here...",
+      "json": {
+        "invalidJson": "Invalid Json"
+      },
+      "input": "Input",
+      "minify": "Minify",
+      "beautify": "Beautify",
+      "clear": "Clear",
+      "output": "Output",
+      "copied": "Copied!",
+      "copy": "Copy",
+      "outputPlaceholder": "Result will appear here..."
     },
     "timezone-converter": {
       "name": "Timezone Converter",
@@ -4197,7 +4921,38 @@
         "Content marketer creating Twitter Card summaries with lead magnet PDF attachments for LinkedIn article promotion",
         "Frontend engineer implementing responsive viewport tags with device-width directives for mobile-first indexing compliance",
         "SEO specialist auditing existing meta tags across multiple pages using the batch processing feature with CSV import/export"
-      ]
+      ],
+      "metaTagGenerator": {
+        "pageTitle": "Page Title",
+        "pageTitlePlaceholder": "Page Title Placeholder",
+        "author": "Author",
+        "authorPlaceholder": "Author Placeholder",
+        "description": "Description",
+        "descriptionPlaceholder": "Description Placeholder",
+        "characters": "Characters",
+        "keywords": "Keywords",
+        "keywordsPlaceholder": "Keywords Placeholder",
+        "ogImageUrl": "Og Image Url",
+        "ogImageUrlPlaceholder": "Og Image Url Placeholder",
+        "pageUrl": "Page Url",
+        "pageUrlPlaceholder": "Page Url Placeholder",
+        "twitterCardType": "Twitter Card Type",
+        "twitterCardSummary": "Twitter Card Summary",
+        "twitterCardSummaryLargeImage": "Twitter Card Summary Large Image",
+        "twitterCardApp": "Twitter Card App",
+        "twitterCardPlayer": "Twitter Card Player",
+        "twitterUsername": "Twitter Username",
+        "twitterUsernamePlaceholder": "Twitter Username Placeholder",
+        "robots": "Robots",
+        "robotsIndexFollow": "Robots Index Follow",
+        "robotsNoindexFollow": "Robots Noindex Follow",
+        "robotsIndexNofollow": "Robots Index Nofollow",
+        "robotsNoindexNofollow": "Robots Noindex Nofollow",
+        "viewport": "Viewport",
+        "generatedMetaTags": "Generated Meta Tags"
+      },
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "robots-txt-generator": {
       "name": "robots.txt Generator",
@@ -4256,7 +5011,46 @@
         "Example 2: A web developer is creating a new landing page for a client and needs to verify that the page's Open Graph meta tags are correctly set up for sharing on social media. They use the tool to test the page across different platforms and devices to ensure consistent and accurate representation.",
         "Example 3: A social media manager is scheduling a series of posts for a new product launch and wants to ensure that the content looks perfect on both desktop and mobile devices. They use the Open Graph Preview tool to preview the content and make any necessary tweaks to the meta tags.",
         "Example 4: A digital agency is working on a website redesign and needs to test the Open Graph tags on various pages to ensure that all shared content looks consistent and professional. They use the tool to validate the meta tags and ensure that the content is optimized for social sharing."
-      ]
+      ],
+      "openGraphPreview": {
+        "defaultTitle": "Default Title",
+        "defaultDescription": "Default Description",
+        "defaultSiteName": "Default Site Name",
+        "fetchError": "Fetch Error",
+        "imageLoadError": "Image Load Error",
+        "modeFetch": "Mode Fetch",
+        "modeManual": "Mode Manual",
+        "fetchUrlLabel": "Fetch Url Label",
+        "fetching": "Fetching",
+        "fetchButton": "Fetch Button",
+        "title": "Title",
+        "titlePlaceholder": "Title Placeholder",
+        "siteName": "Site Name",
+        "siteNamePlaceholder": "Site Name Placeholder",
+        "description": "Description",
+        "descriptionPlaceholder": "Description Placeholder",
+        "imageUrl": "Image Url",
+        "imageUrlPlaceholder": "Image Url Placeholder",
+        "pageUrl": "Page Url",
+        "pageUrlPlaceholder": "Page Url Placeholder",
+        "platform": {
+          "facebook": "Facebook",
+          "twitter": "Twitter",
+          "linkedin": "Linkedin"
+        },
+        "preview": "Preview",
+        "generatedCode": "Generated Code",
+        "recommendations": {
+          "title": "Title",
+          "imageSize": "Image Size",
+          "titleLength": "Title Length",
+          "descriptionLength": "Description Length",
+          "highQuality": "High Quality",
+          "testDebugger": "Test Debugger"
+        }
+      },
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "css-grid-generator": {
       "name": "CSS Grid Generator",
@@ -4312,7 +5106,42 @@
         "Example 2: Building a navigation bar with vertically centered icons and text where align-items: center automatically maintains consistent spacing regardless of font size changes",
         "Example 3: Designing a product card layout with uneven content heights where flex-grow ensures uniform container expansion while maintaining visual hierarchy",
         "Example 4: Developing a dashboard interface with nested flex containers to create complex column/row relationships that adapt to dynamic data visualization elements"
-      ]
+      ],
+      "cssFlexboxGenerator": {
+        "direction": "Direction",
+        "directionRow": "Direction Row",
+        "directionRowReverse": "Direction Row Reverse",
+        "directionColumn": "Direction Column",
+        "directionColumnReverse": "Direction Column Reverse",
+        "justifyContent": "Justify Content",
+        "justifyFlexStart": "Justify Flex Start",
+        "justifyFlexEnd": "Justify Flex End",
+        "justifyCenter": "Justify Center",
+        "justifySpaceBetween": "Justify Space Between",
+        "justifySpaceAround": "Justify Space Around",
+        "justifySpaceEvenly": "Justify Space Evenly",
+        "alignItems": "Align Items",
+        "alignStretch": "Align Stretch",
+        "alignFlexStart": "Align Flex Start",
+        "alignFlexEnd": "Align Flex End",
+        "alignCenter": "Align Center",
+        "alignBaseline": "Align Baseline",
+        "flexWrap": "Flex Wrap",
+        "wrapNoWrap": "Wrap No Wrap",
+        "wrapWrap": "Wrap Wrap",
+        "wrapWrapReverse": "Wrap Wrap Reverse",
+        "gap": "Gap",
+        "items": "Items",
+        "preview": "Preview",
+        "generatedCss": "Generated Css",
+        "quickReference": "Quick Reference",
+        "quickReferenceJustify": "Quick Reference Justify",
+        "quickReferenceAlign": "Quick Reference Align",
+        "quickReferenceDirection": "Quick Reference Direction",
+        "quickReferenceWrap": "Quick Reference Wrap"
+      },
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "jwt-generator": {
       "name": "JWT Generator",
@@ -4333,7 +5162,29 @@
         "2. Generating SAML bearer tokens for testing federated identity providers in enterprise SSO implementations",
         "3. Crafting maliciously forged tokens with modified exp values to stress-test validation logic in payment gateways",
         "4. Producing JWTs with embedded public keys for testing OpenID Connect discovery endpoints in mobile app backends"
-      ]
+      ],
+      "jwt": {
+        "invalidPayload": "Invalid Payload",
+        "error": "Error",
+        "algorithm": "Algorithm",
+        "secretKey": "Secret Key",
+        "secretPlaceholder": "Secret Placeholder",
+        "payload": "Payload",
+        "generate": "Generate",
+        "generatedToken": "Generated Token",
+        "commonClaims": "Common Claims",
+        "claims": {
+          "iss": "Iss",
+          "sub": "Sub",
+          "aud": "Aud",
+          "exp": "Exp",
+          "nbf": "Nbf",
+          "iat": "Iat",
+          "jti": "Jti"
+        }
+      },
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "cron-explainer": {
       "name": "Cron Expression Explainer",
@@ -5238,7 +6089,20 @@
         "Generate a circular profile image mask with a customizable border-radius equivalent in CSS",
         "Design an animated SVG path transition between two complex shapes for a data visualization",
         "Build a responsive magazine-style text wrap around a custom SVG shape for editorial layouts"
-      ]
+      ],
+      "clipPath": {
+        "preview": "Preview",
+        "presets": "Presets",
+        "value": "Value",
+        "syntax": "Syntax",
+        "circleDesc": "Circle Desc",
+        "ellipseDesc": "Ellipse Desc",
+        "polygonDesc": "Polygon Desc",
+        "insetDesc": "Inset Desc"
+      },
+      "output": "Output",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "uuid-validator": {
       "name": "UUID Validator",
@@ -5259,7 +6123,20 @@
         "Detecting version 1 UUIDs containing duplicate MAC addresses that expose internal network topology",
         "Validating UUIDs in a NoSQL database to identify version mismatches causing data partition issues",
         "Auditing version 5 UUIDs in a security token system to confirm proper SHA-1 namespace implementation"
-      ]
+      ],
+      "uuidValidator": {
+        "input": "Input",
+        "placeholder": "Enter text here...",
+        "validate": "Validate",
+        "valid": "Valid",
+        "invalid": "Invalid",
+        "invalidFormat": "Invalid Format",
+        "versions": "Versions",
+        "v1Desc": "V1 Desc",
+        "v4Desc": "V4 Desc",
+        "v5Desc": "V5 Desc"
+      },
+      "clear": "Clear"
     },
     "text-hash-comparator": {
       "name": "Text Hash Comparator",
@@ -5280,7 +6157,16 @@
         "A cybersecurity analyst checking if a server's SSH configuration file has been modified post-incident by comparing MD5 digests from system snapshots",
         "A blockchain developer ensuring consistency between smart contract source code and on-chain bytecode using Keccak-256 hash comparisons",
         "A legal tech specialist validating document integrity for e-discovery by comparing SHA-1 hashes of evidence files across multiple storage mediums"
-      ]
+      ],
+      "hashCompare": {
+        "text1": "Text1",
+        "placeholder": "Enter text here...",
+        "text2": "Text2",
+        "comparing": "Comparing",
+        "compare": "Compare",
+        "match": "Match",
+        "noMatch": "No Match"
+      }
     },
     "json-path-finder": {
       "name": "JSON Path Finder",
@@ -5301,7 +6187,19 @@
         "Mapping configuration settings from a multi-layered JSON config file to environment variables in a deployment script",
         "Debugging malformed JSON data from a sensor network by identifying the exact path to invalid numeric values",
         "Generating test cases for a GraphQL API by creating valid query paths from a reference schema document"
-      ]
+      ],
+      "json": {
+        "invalidJson": "Invalid Json"
+      },
+      "jsonPathFinder": {
+        "loadSample": "Load Sample",
+        "placeholder": "Enter text here...",
+        "analyze": "Analyze",
+        "search": "Search",
+        "paths": "Paths"
+      },
+      "input": "Input",
+      "copy": "Copy"
     },
     "canvas-drawing": {
       "name": "Canvas Drawing",
@@ -5322,7 +6220,14 @@
         "Creating technical documentation diagrams with programmatically generated annotations and callouts",
         "Teaching HTML5 Canvas API by visually demonstrating transformation matrices and path operations",
         "Designing game sprites with layered animation frames for HTML5 game development workflows"
-      ]
+      ],
+      "canvas": {
+        "size": "Size",
+        "brush": "Brush",
+        "eraser": "Eraser"
+      },
+      "clear": "Clear",
+      "download": "Download"
     },
     "json-escape": {
       "name": "JSON Escape/Unescape",
@@ -5343,7 +6248,17 @@
         "A DevOps engineer processes JSON configuration files containing Unicode characters that must be converted to escape sequences for legacy system compatibility",
         "A frontend developer debugging a malformed JSON response from an HTTP API uses unescaping to visualize control characters embedded in error messages",
         "A data engineer prepares CSV-to-JSON conversion output by escaping special characters in user-generated content fields before bulk ingestion into a document database"
-      ]
+      ],
+      "errorProcessing": "Error Processing",
+      "input": "Input",
+      "jsonEscape": {
+        "placeholder": "Enter text here...",
+        "escape": "Escape",
+        "unescape": "Unescape"
+      },
+      "output": "Output",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "css-animation-generator": {
       "name": "CSS Animation Generator",
@@ -5364,7 +6279,17 @@
         "Designing a loading spinner with synchronized rotation and pulse effects using multiple animation layers",
         "Implementing a parallax scrolling effect with percentage-based keyframe positioning",
         "Generating cross-browser compatible animations with automatic vendor prefix injection for legacy projects"
-      ]
+      ],
+      "cssAnimation": {
+        "preset": "Preset",
+        "duration": "Duration",
+        "timing": "Timing",
+        "iteration": "Iteration",
+        "preview": "Preview"
+      },
+      "output": "Output",
+      "copied": "Copied!",
+      "copy": "Copy"
     },
     "text-case-counter": {
       "name": "Text Case Counter",
@@ -5385,7 +6310,19 @@
         "A computational linguist comparing case usage patterns in historical vs modern English texts.",
         "A QA specialist verifying that API responses maintain consistent case formatting in JSON keys.",
         "A typographer analyzing manuscript drafts to ensure proper capitalization of technical terminology."
-      ]
+      ],
+      "input": "Input",
+      "caseCounter": {
+        "placeholder": "Enter text here...",
+        "total": "Total",
+        "letters": "Letters",
+        "uppercase": "Uppercase",
+        "lowercase": "Lowercase",
+        "digits": "Digits",
+        "spaces": "Spaces",
+        "special": "Special",
+        "ratio": "Ratio"
+      }
     },
     "dns-lookup": {
       "name": "DNS Lookup",
@@ -5406,7 +6343,11 @@
         "Debug email delivery issues by validating MX record priority values and associated mail server A record reachability",
         "Audit DNSSEC chain integrity for a financial institution's domain by requesting DS and RRSIG records",
         "Troubleshoot CDN integration by examining CNAME resolution paths and associated TXT record metadata"
-      ]
+      ],
+      "dnsLookup": {
+        "ipError": "Ip Error",
+        "error": "Error"
+      }
     },
     "image-resizer": {
       "name": "Image Resizer",
@@ -5427,7 +6368,18 @@
         "Example 2: A social media manager is preparing images for a marketing campaign on Instagram. They use the Image Resizer to resize the images to the exact dimensions required by Instagram, ensuring that the images look perfect on the platform.",
         "Example 3: A mobile app designer is optimizing images for an app interface. They need to reduce the file size of images to improve app performance. Using the Image Resizer, they resize the images to smaller dimensions while maintaining quality.",
         "Example 4: A photographer is creating a digital gallery and needs to generate thumbnail images for a quick overview. They use the Image Resizer to create small, low-resolution versions of their full-sized photos, ensuring that the thumbnails load quickly and provide a good preview."
-      ]
+      ],
+      "imageResizer": {
+        "dropzone": "Dropzone",
+        "original": "Original",
+        "width": "Width",
+        "height": "Height",
+        "lockRatio": "Lock Ratio",
+        "resize": "Resize",
+        "resized": "Resized"
+      },
+      "clear": "Clear",
+      "download": "Download"
     },
     "ssl-checker": {
       "name": "SSL Certificate Checker",
@@ -5611,7 +6563,23 @@
         "A security analyst cross-references open ports from a vulnerability scan against the tool's database to prioritize critical service exposures",
         "A developer debugging a containerized application discovers their custom service is conflicting with the registered PostgreSQL port (5432)",
         "A red team member validates potential SMB attack surfaces by checking for systems exposing ports 139 and 445 in unpatched configurations"
-      ]
+      ],
+      "note": "Note",
+      "searchPorts": "Search Ports",
+      "searchPlaceholder": "Search Placeholder",
+      "lookupPort": "Lookup Port",
+      "portPlaceholder": "Port Placeholder",
+      "port": "Port",
+      "service": "Service",
+      "descriptionLabel": "Description Label",
+      "unknownPort": "Unknown Port",
+      "invalidPort": "Invalid Port",
+      "commonPorts": "Common Ports",
+      "noResults": "No Results",
+      "portRanges": "Port Ranges",
+      "wellKnown": "Well Known",
+      "registered": "Registered",
+      "dynamic": "Dynamic"
     },
     "privacy-policy-generator": {
       "name": "Privacy Policy Generator",
@@ -5632,7 +6600,29 @@
         "A healthcare app developer creates HIPAA-aligned disclosures for patient data handling workflows.",
         "A SaaS platform generates multi-language policies covering EU, California, and Brazil jurisdictions.",
         "A non-profit organization configures donor data management clauses for recurring payment processing."
-      ]
+      ],
+      "privacyPolicyGenerator": {
+        "websiteName": "Website Name",
+        "websiteNamePlaceholder": "Website Name Placeholder",
+        "websiteUrl": "Website Url",
+        "websiteUrlPlaceholder": "Website Url Placeholder",
+        "companyName": "Company Name",
+        "companyNamePlaceholder": "Company Name Placeholder",
+        "contactEmail": "Contact Email",
+        "contactEmailPlaceholder": "Contact Email Placeholder",
+        "featuresTitle": "Features Title",
+        "features": {
+          "collectsPersonalData": "Collects Personal Data",
+          "usesCookies": "Uses Cookies",
+          "usesAnalytics": "Uses Analytics",
+          "usesAds": "Uses Ads",
+          "allowsUserAccounts": "Allows User Accounts",
+          "sellsData": "Sells Data"
+        },
+        "generate": "Generate",
+        "copyToClipboard": "Copy To Clipboard",
+        "generatedOutput": "Generated Output"
+      }
     },
     "terms-generator": {
       "name": "Terms of Service Generator",
@@ -5653,7 +6643,28 @@
         "A gaming company generating Korean-specified policies under South Korea's Act on Promotion of Information and Communications Network",
         "An edtech platform building FERPA-compliant sections for student data handling in US educational software",
         "A health tech firm generating HIPAA-compliant Business Associate Agreements as policy addendums"
-      ]
+      ],
+      "termsGenerator": {
+        "websiteName": "Website Name",
+        "websiteNamePlaceholder": "Website Name Placeholder",
+        "websiteUrl": "Website Url",
+        "websiteUrlPlaceholder": "Website Url Placeholder",
+        "companyName": "Company Name",
+        "companyNamePlaceholder": "Company Name Placeholder",
+        "contactEmail": "Contact Email",
+        "contactEmailPlaceholder": "Contact Email Placeholder",
+        "governingLawCountry": "Governing Law Country",
+        "governingLawCountryPlaceholder": "Governing Law Country Placeholder",
+        "featuresTitle": "Features Title",
+        "features": {
+          "allowsUserContent": "Allows User Content",
+          "hasSubscription": "Has Subscription",
+          "hasRefundPolicy": "Has Refund Policy"
+        },
+        "generate": "Generate",
+        "copyToClipboard": "Copy To Clipboard",
+        "generatedOutput": "Generated Output"
+      }
     },
     "cookie-policy-generator": {
       "name": "Cookie Policy Generator",
@@ -5734,7 +6745,24 @@
         "A financial analyst corrects inconsistent decimal separators in EU/US currency datasets using the delimiter override feature",
         "A bioinformatics researcher merges two clinical study datasets by visually aligning header columns across files",
         "An e-commerce manager debugs product inventory discrepancies by sorting CSV rows by stock ID and filtering null values"
-      ]
+      ],
+      "csvViewer": {
+        "defaultInput": "Default Input",
+        "delimiterComma": "Delimiter Comma",
+        "delimiterSemicolon": "Delimiter Semicolon",
+        "delimiterTab": "Delimiter Tab",
+        "delimiterPipe": "Delimiter Pipe",
+        "downloadCsv": "Download Csv",
+        "csvInput": "Csv Input",
+        "csvPlaceholder": "Csv Placeholder",
+        "tablePreview": "Table Preview",
+        "noData": "No Data",
+        "tip": "Tip"
+      },
+      "csvJson": {
+        "delimiter": "Delimiter",
+        "hasHeader": "Has Header"
+      }
     },
     "htaccess-generator": {
       "name": ".htaccess Generator",
@@ -5897,7 +6925,31 @@
         "An e-commerce developer generates product-specific Open Graph tags for a Shopify store, embedding price and availability metadata visible in WhatsApp share previews.",
         "A video hosting platform uses the tool to create dynamic og:video:type tags for HTML5 video content, ensuring compatibility with LinkedIn's crawler.",
         "A PR agency builds press release pages with custom og:site_name values and Twitter Card integration to maintain brand consistency across social shares."
-      ]
+      ],
+      "openGraphGenerator": {
+        "siteTitle": "Site Title",
+        "siteTitlePlaceholder": "Site Title Placeholder",
+        "siteDescription": "Site Description",
+        "siteDescriptionPlaceholder": "Site Description Placeholder",
+        "url": "Url",
+        "urlPlaceholder": "Url Placeholder",
+        "imageUrl": "Image Url",
+        "imageUrlPlaceholder": "Image Url Placeholder",
+        "siteName": "Site Name",
+        "siteNamePlaceholder": "Site Name Placeholder",
+        "type": "Type",
+        "typeWebsite": "Type Website",
+        "typeArticle": "Type Article",
+        "typeProfile": "Type Profile",
+        "typeVideo": "Type Video",
+        "typeMusic": "Type Music",
+        "preview": "Preview",
+        "ogPreviewAlt": "Og Preview Alt",
+        "noImage": "No Image",
+        "previewTitleFallback": "Preview Title Fallback",
+        "previewDescriptionFallback": "Preview Description Fallback",
+        "generatedHtml": "Generated Html"
+      }
     },
     "twitter-card-generator": {
       "name": "Twitter Card Generator",
@@ -5918,7 +6970,31 @@
         "Example 2: An e-commerce company is launching a new product. By generating Twitter Card meta tags for the product page, they can ensure that the product image, title, and description are displayed prominently in tweets, increasing the likelihood of user clicks and purchases.",
         "Example 3: A content creator is hosting a live streaming event. They can use the tool to generate a player card that embeds the live stream directly into the tweet, allowing followers to watch the event without leaving Twitter.",
         "Example 4: A mobile app developer is promoting a new app. By creating an app card with the Twitter Card Generator, they can provide direct links to download the app from both the App Store and Google Play, streamlining the user experience and driving app installs."
-      ]
+      ],
+      "twitterCardGenerator": {
+        "cardType": "Card Type",
+        "cardSummary": "Card Summary",
+        "cardSummaryLargeImage": "Card Summary Large Image",
+        "cardApp": "Card App",
+        "cardPlayer": "Card Player",
+        "title": "Title",
+        "titlePlaceholder": "Title Placeholder",
+        "description": "Description",
+        "descriptionPlaceholder": "Description Placeholder",
+        "imageUrl": "Image Url",
+        "imageUrlPlaceholder": "Image Url Placeholder",
+        "imageAltText": "Image Alt Text",
+        "imageAltTextPlaceholder": "Image Alt Text Placeholder",
+        "siteUsername": "Site Username",
+        "siteUsernamePlaceholder": "Site Username Placeholder",
+        "creatorUsername": "Creator Username",
+        "creatorUsernamePlaceholder": "Creator Username Placeholder",
+        "preview": "Preview",
+        "previewImageFallback": "Preview Image Fallback",
+        "previewTitleFallback": "Preview Title Fallback",
+        "previewDescriptionFallback": "Preview Description Fallback",
+        "generatedHtml": "Generated Html"
+      }
     },
     "mime-type-lookup": {
       "name": "MIME Type Lookup",
@@ -5939,7 +7015,8 @@
         "An API engineer building a file validation system needs to confirm that '.xlsx' documents map to 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' for proper Content-Type header validation.",
         "A DevOps specialist configuring an Nginx server needs to ensure '.woff2' font files serve with the 'font/woff2' MIME type instead of generic application/octet-stream defaults.",
         "A data engineer processing email attachments identifies '.eml' files require 'message/rfc822' MIME type handling to maintain header integrity during ETL operations."
-      ]
+      ],
+      "searchPlaceholder": "Search Placeholder"
     },
     "http-status-codes": {
       "name": "HTTP Status Codes",
@@ -6086,7 +7163,20 @@
         "Creating daily reports with complex JOINs across 5+ tables using point-and-click column selection",
         "Building audit trails through automated UPDATE triggers with BEFORE/AFTER image capture",
         "Optimizing slow queries by generating covering indexes with INCLUDE() clauses for PostgreSQL"
-      ]
+      ],
+      "sqlGenerator": {
+        "commandType": "Command Type",
+        "tableName": "Table Name",
+        "columns": "Columns",
+        "values": "Values",
+        "setUpdates": "Set Updates",
+        "schemaDefinition": "Schema Definition",
+        "whereClause": "Where Clause",
+        "orderBy": "Order By",
+        "limit": "Limit",
+        "generatedSql": "Generated Sql",
+        "copySql": "Copy Sql"
+      }
     },
     "htaccess-to-nginx": {
       "name": "htaccess to Nginx Converter",
@@ -8701,7 +9791,20 @@
         "tip4": "Real-time preview with consistent export results.",
         "tip5": "Perfect for showing logical relationships and differences.",
         "tip6": "Local browser processing, no data upload required."
-      }
+      },
+      "sampleSet1": "Sample Set1",
+      "sampleSet2": "Sample Set2",
+      "sampleSet3": "Sample Set3",
+      "confirmClear": "Confirm Clear",
+      "settings": "Settings",
+      "mode2Set": "Mode2 Set",
+      "mode3Set": "Mode3 Set",
+      "dataEditor": "Data Editor",
+      "labelPlaceholder": "Label Placeholder",
+      "dragNote": "Drag Note",
+      "tipsTitle": "Tips Title",
+      "tip1": "Tip1",
+      "tip2": "Tip2"
     },
     "timeline-chart-generator": {
       "name": "Timeline Chart Generator",
@@ -9382,10 +10485,10 @@
       "themeForest": "Forest",
       "percentageNote": "Values represent percentages and should sum to 100% per category",
       "sampleData": {
-        "Q1": "Q1",
-        "Q2": "Q2",
-        "Q3": "Q3",
-        "Q4": "Q4",
+        "q1": "Q1",
+        "q2": "Q2",
+        "q3": "Q3",
+        "q4": "Q4",
         "mobile": "Mobile",
         "tablet": "Tablet",
         "desktop": "Desktop"
@@ -10589,7 +11692,31 @@
         "An import/export company creates dual-currency invoices automatically converting USD to EUR using real-time API rates.",
         "A marketing agency configures conditional payment terms: 2% discount if paid within 10 days, enforced via PDF form field validation.",
         "An event planner batches 200 vendor invoices from a CSV, applying unique tax IDs and automating sequential numbering with regex masks."
-      ]
+      ],
+      "invoice": {
+        "invoiceNumber": "Invoice Number",
+        "currency": "Currency",
+        "invoiceDate": "Invoice Date",
+        "dueDate": "Due Date",
+        "from": "From",
+        "companyName": "Company Name",
+        "address": "Address",
+        "to": "To",
+        "clientName": "Client Name",
+        "items": "Items",
+        "description": "Description",
+        "quantity": "Quantity",
+        "unitPrice": "Unit Price",
+        "addItem": "Add Item",
+        "taxRate": "Tax Rate",
+        "notes": "Notes",
+        "downloadPdf": "Download Pdf",
+        "invoice": "Invoice",
+        "amount": "Amount",
+        "subtotal": "Subtotal",
+        "tax": "Tax",
+        "total": "Total"
+      }
     },
     "resume-builder": {
       "name": "Resume Builder",
@@ -10668,7 +11795,16 @@
         "A healthcare professional must sign a patient consent form digitally. With Signature Pad, they can draw their signature and export it as a PNG file to insert into the electronic health record system.",
         "A financial advisor is preparing a client’s investment agreement. They use Signature Pad to create a high-quality digital signature and embed it into the PDF document using their document management software.",
         "A small business owner needs to sign multiple invoices and purchase orders. Signature Pad allows them to create a consistent and standardized digital signature, which they can then easily apply to all documents, ensuring a professional and secure process."
-      ]
+      ],
+      "signature": {
+        "penColor": "Pen Color",
+        "penWidth": "Pen Width",
+        "backgroundColor": "Background Color",
+        "transparent": "Transparent",
+        "downloadPng": "Download Png",
+        "downloadSvg": "Download Svg"
+      },
+      "clear": "Clear"
     },
     "pomodoro-timer": {
       "name": "Pomodoro Timer",
@@ -10689,7 +11825,24 @@
         "Example 2: A freelance writer uses the tool to structure their writing time. By setting the work interval to 45 minutes and the short break to 10 minutes, they can work in longer, more productive blocks while still taking regular breaks to recharge.",
         "Example 3: A college student uses the Pomodoro Timer to study for exams. They set the work interval to 30 minutes and the short break to 5 minutes, helping them stay on track and avoid distractions during study sessions.",
         "Example 4: A graphic designer uses the tool to manage client projects. By setting the work interval to 50 minutes and the short break to 10 minutes, they can maintain high levels of creativity and productivity, while also taking breaks to rest their eyes and refresh their mind."
-      ]
+      ],
+      "pomodoro": {
+        "pause": "Pause",
+        "start": "Start",
+        "reset": "Reset",
+        "skip": "Skip",
+        "completedSessions": "Completed Sessions",
+        "hideSettings": "Hide Settings",
+        "showSettings": "Show Settings",
+        "settings": "Settings",
+        "workDuration": "Work Duration",
+        "minutes": "Minutes",
+        "shortBreakDuration": "Short Break Duration",
+        "longBreakDuration": "Long Break Duration",
+        "sessionsBeforeLongBreak": "Sessions Before Long Break",
+        "soundNotification": "Sound Notification"
+      },
+      "clear": "Clear"
     },
     "meeting-notes": {
       "name": "Meeting Notes",
@@ -10710,7 +11863,26 @@
         "Example 2: A marketing team holds a weekly strategy meeting to discuss upcoming campaigns. The team lead uses Meeting Notes to record the discussion points, assign tasks to team members, and track progress over subsequent meetings.",
         "Example 3: A software development team conducts a sprint planning session. The Scrum Master uses Meeting Notes to capture the sprint goals, user stories, and any technical dependencies. Action items are assigned to developers for implementation.",
         "Example 4: A sales manager meets with a new client to gather requirements for a custom solution. They use Meeting Notes to document the client's needs, action items for the sales team, and follow-up dates for additional meetings."
-      ]
+      ],
+      "meeting": {
+        "untitled": "Untitled",
+        "date": "Date",
+        "attendees": "Attendees",
+        "agenda": "Agenda",
+        "notes": "Notes",
+        "actionItems": "Action Items",
+        "title": "Title",
+        "titlePlaceholder": "Title Placeholder",
+        "time": "Time",
+        "addAttendee": "Add Attendee",
+        "addAgendaItem": "Add Agenda Item",
+        "notesPlaceholder": "Notes Placeholder",
+        "task": "Task",
+        "assignee": "Assignee",
+        "exportMarkdown": "Export Markdown",
+        "exportText": "Export Text"
+      },
+      "add": "Add"
     },
     "business-days-calculator": {
       "name": "Business Days Calculator",
@@ -10731,7 +11903,25 @@
         "Example 2: An attorney determines filing deadlines for legal documents requiring 15 business days notice, accounting for state-specific court holidays.",
         "Example 3: An HR analyst calculates payroll periods for remote workers in multiple countries with varying public holidays.",
         "Example 4: A vendor compliance officer verifies SLA response times against a client's regional holiday schedule."
-      ]
+      ],
+      "businessDays": {
+        "calculateDays": "Calculate Days",
+        "calculateEndDate": "Calculate End Date",
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "businessDaysToAdd": "Business Days To Add",
+        "excludeWeekends": "Exclude Weekends",
+        "customHolidays": "Custom Holidays",
+        "holidayName": "Holiday Name",
+        "businessDays": "Business Days",
+        "totalDays": "Total Days",
+        "weekendDays": "Weekend Days",
+        "holidayDays": "Holiday Days",
+        "invalidDateRange": "Invalid Date Range",
+        "calculatedEndDate": "Calculated End Date"
+      },
+      "add": "Add",
+      "result": "Result"
     },
     "salary-calculator": {
       "name": "Salary Calculator",
@@ -10752,7 +11942,21 @@
         "An HR manager calculates monthly equivalent of a $98,000 annual package with 25% tax withholdings",
         "A part-time worker compares $18.75/hour (25 hrs/wk) vs a $36,000/year full-time offer including benefits",
         "A startup founder converts 150 contracted hours/month to annual FTE cost including 30% overhead for benefits"
-      ]
+      ],
+      "salary": {
+        "amount": "Amount",
+        "payFrequency": "Pay Frequency",
+        "hoursPerWeek": "Hours Per Week",
+        "taxRate": "Tax Rate",
+        "beforeTax": "Before Tax",
+        "hourly": "Hourly",
+        "daily": "Daily",
+        "weekly": "Weekly",
+        "biweekly": "Biweekly",
+        "monthly": "Monthly",
+        "annual": "Annual",
+        "afterTax": "After Tax"
+      }
     },
     "invoice": {
       "invoice": "INVOICE",
@@ -10970,7 +12174,23 @@
         "Example 2: A data analyst is tasked with creating a dashboard that visualizes sales data from multiple Excel sheets. The analyst uses the tool to convert the sheets into JSON, which can then be easily consumed by the dashboard application.",
         "Example 3: A software engineer is building a mobile app that requires data from an Excel file containing product information. The engineer uses the tool to convert the data to JSON, making it easier to parse and display within the app.",
         "Example 4: A project manager needs to sync resource allocation data from an Excel file to a project management tool that only accepts JSON input. The project manager uses the tool to convert the data, ensuring seamless integration and up-to-date information in the project management system."
-      ]
+      ],
+      "excelToJson": {
+        "invalidFileType": "Invalid File Type",
+        "parseError": "Parse Error",
+        "copyError": "Copy Error",
+        "uploadFile": "Upload File",
+        "supportedFormats": "Supported Formats",
+        "fileLoaded": "File Loaded",
+        "selectSheet": "Select Sheet",
+        "rows": "Rows",
+        "preview": "Preview",
+        "showingFirst": "Showing First",
+        "jsonOutput": "Json Output",
+        "copied": "Copied!",
+        "copy": "Copy",
+        "download": "Download"
+      }
     },
     "json-to-excel": {
       "name": "JSON to Excel",
@@ -10991,7 +12211,21 @@
         "Example 2: Transforming MongoDB document arrays with geographic coordinates into Excel tables for sales territory analysis",
         "Example 3: Migrating IoT sensor data stored in JSON time-series format to Excel sheets with automatic date column detection",
         "Example 4: Creating HR onboarding spreadsheets by flattening employee profile JSON with embedded organizational chart structures"
-      ]
+      ],
+      "jsonToExcel": {
+        "invalidJson": "Invalid Json",
+        "emptyData": "Empty Data",
+        "parseError": "Parse Error",
+        "noInput": "No Input",
+        "exportError": "Export Error",
+        "jsonInput": "Json Input",
+        "loadSample": "Load Sample",
+        "placeholder": "Enter text here...",
+        "fileName": "File Name",
+        "sheetName": "Sheet Name",
+        "preview": "Preview",
+        "download": "Download"
+      }
     },
     "excel-viewer": {
       "name": "Excel Viewer",
@@ -11012,7 +12246,23 @@
         "A project manager filters a Gantt chart spreadsheet to display only delayed tasks while preparing a status report for stakeholders",
         "A researcher analyzes experimental results by applying multiple filters to isolate specific data ranges before exporting to JSON for visualization",
         "A developer debugs spreadsheet data integration issues by exporting filtered views to CSV for comparison against database records"
-      ]
+      ],
+      "excelViewer": {
+        "invalidFileType": "Invalid File Type",
+        "parseError": "Parse Error",
+        "uploadFile": "Upload File",
+        "supportedFormats": "Supported Formats",
+        "fileLoaded": "File Loaded",
+        "filterColumn": "Filter Column",
+        "selectColumn": "Select Column",
+        "filterValue": "Filter Value",
+        "enterValue": "Enter Value",
+        "clearFilter": "Clear Filter",
+        "showing": "Showing",
+        "rows": "Rows",
+        "noResults": "No Results",
+        "emptySheet": "Empty Sheet"
+      }
     },
     "excel-merger": {
       "name": "Excel Merger",
@@ -11033,7 +12283,22 @@
         "Example 2: Marketing teams combine customer transaction data (CSV) with CRM contact lists (XLSX) via email address key column for targeted campaign segmentation",
         "Example 3: Logistics managers horizontally merge equipment inventory spreadsheets from three warehouses, resolving header discrepancies like 'Asset_ID' vs 'EquipmentTag'",
         "Example 4: Data scientists vertically merge IoT sensor readings from temperature and humidity devices with 15-minute intervals into a unified training dataset"
-      ]
+      ],
+      "excelMerger": {
+        "invalidFileType": "Invalid File Type",
+        "parseError": "Parse Error",
+        "noSheetsSelected": "No Sheets Selected",
+        "mergeError": "Merge Error",
+        "uploadFiles": "Upload Files",
+        "multipleFiles": "Multiple Files",
+        "uploadedFiles": "Uploaded Files",
+        "mergeMode": "Merge Mode",
+        "vertical": "Vertical",
+        "horizontal": "Horizontal",
+        "outputFileName": "Output File Name",
+        "merge": "Merge",
+        "sheets": "Sheets"
+      }
     },
     "pdf-to-image": {
       "name": "PDF to Image",
@@ -11054,7 +12319,22 @@
         "An online course instructor converts PDF quizzes to JPEG images for embedding in LMS platforms that block PDF uploads",
         "An architect exports specific blueprint layers as PNGs with transparency for overlaying in AutoCAD LT",
         "A developer converts PDF invoices to optimized JPEGs for a legacy CMS that lacks PDF rendering capabilities"
-      ]
+      ],
+      "pdfToImage": {
+        "invalidFileType": "Invalid File Type",
+        "parseError": "Parse Error",
+        "noPagesSelected": "No Pages Selected",
+        "convertError": "Convert Error",
+        "uploadPdf": "Upload Pdf",
+        "selectPdf": "Select Pdf",
+        "processing": "Processing",
+        "format": "Format",
+        "dpi": "Dpi",
+        "selectAll": "Select All",
+        "deselectAll": "Deselect All",
+        "convert": "Convert",
+        "pages": "Pages"
+      }
     },
     "image-to-pdf": {
       "name": "Image to PDF",
@@ -11075,7 +12355,24 @@
         "Example 2: A real estate agent needs to create a property listing brochure. They upload high-resolution images of the property and use the tool to arrange them in a visually appealing layout, complete with detailed captions and descriptions.",
         "Example 3: A student is preparing a research report for a class presentation. They have collected various diagrams and charts as images and use the Image to PDF tool to combine them into a single document, which they can easily share with classmates and instructors.",
         "Example 4: A photographer wants to create a digital portfolio to showcase their work on a website. They use the tool to convert a selection of their best photos into a PDF, optimizing the resolution for web viewing and ensuring that the document loads quickly."
-      ]
+      ],
+      "imageToPdf": {
+        "invalidFileType": "Invalid File Type",
+        "noImages": "No Images",
+        "convertError": "Convert Error",
+        "uploadImages": "Upload Images",
+        "supportedFormats": "Supported Formats",
+        "pageSize": "Page Size",
+        "fitToImage": "Fit To Image",
+        "orientation": "Orientation",
+        "portrait": "Portrait",
+        "landscape": "Landscape",
+        "margin": "Margin",
+        "fileName": "File Name",
+        "imageList": "Image List",
+        "converting": "Converting",
+        "convert": "Convert"
+      }
     },
     "pdf-merger": {
       "name": "PDF Merger",
@@ -11093,7 +12390,22 @@
       "usage_examples": [
         "Use PDF Merger to process your data",
         "Get processing results quickly without waiting"
-      ]
+      ],
+      "pdfMerger": {
+        "invalidFileType": "Invalid File Type",
+        "parseError": "Parse Error",
+        "needMoreFiles": "Need More Files",
+        "mergeError": "Merge Error",
+        "uploadPdfs": "Upload Pdfs",
+        "multipleFiles": "Multiple Files",
+        "outputFileName": "Output File Name",
+        "fileList": "File List",
+        "files": "Files",
+        "totalPages": "Total Pages",
+        "pages": "Pages",
+        "merging": "Merging",
+        "merge": "Merge"
+      }
     },
     "pdf-splitter": {
       "name": "PDF Splitter",
@@ -11111,7 +12423,25 @@
       "usage_examples": [
         "Use PDF Splitter to process your data",
         "Get processing results quickly without waiting"
-      ]
+      ],
+      "pdfSplitter": {
+        "invalidFileType": "Invalid File Type",
+        "parseError": "Parse Error",
+        "noPagesSelected": "No Pages Selected",
+        "splitError": "Split Error",
+        "uploadPdf": "Upload Pdf",
+        "processing": "Processing",
+        "splitMode": "Split Mode",
+        "selectedPages": "Selected Pages",
+        "pageRange": "Page Range",
+        "eachPage": "Each Page",
+        "from": "From",
+        "to": "To",
+        "selectAll": "Select All",
+        "deselectAll": "Deselect All",
+        "split": "Split",
+        "pages": "Pages"
+      }
     },
     "pdf-compressor": {
       "name": "PDF Compressor",
@@ -11132,7 +12462,20 @@
         "An academic researcher reducing a 500-page thesis PDF from 120MB to 35MB to meet university repository upload requirements",
         "A real estate agent optimizing a 50MB property catalog PDF for Instagram story sharing with interactive form fields intact",
         "A small business owner shrinking 100 invoice PDFs (total 800MB) to 220MB for cost-effective cloud storage backup"
-      ]
+      ],
+      "pdfCompressor": {
+        "invalidFileType": "Invalid File Type",
+        "compressError": "Compress Error",
+        "uploadPdf": "Upload Pdf",
+        "originalSize": "Original Size",
+        "compressionLevel": "Compression Level",
+        "compressing": "Compressing",
+        "compress": "Compress",
+        "compressionComplete": "Compression Complete",
+        "reduced": "Reduced",
+        "compressedSize": "Compressed Size",
+        "download": "Download"
+      }
     },
     "pdf-rotator": {
       "name": "PDF Rotator",
@@ -11153,7 +12496,18 @@
         "A graphic designer rotates 12 landscape-oriented figures in a 50-page technical report without affecting embedded vector diagrams",
         "An office worker standardizes orientation of 30 mixed-receipt scans with inconsistent mobile camera angles before archiving",
         "A student adjusts a 10-chapter thesis PDF where chapters imported from different sources have conflicting portrait/landscape layouts"
-      ]
+      ],
+      "pdfRotator": {
+        "invalidFileType": "Invalid File Type",
+        "parseError": "Parse Error",
+        "saveError": "Save Error",
+        "uploadPdf": "Upload Pdf",
+        "processing": "Processing",
+        "rotateAll": "Rotate All",
+        "apply": "Apply",
+        "reset": "Reset",
+        "save": "Save"
+      }
     },
     "markdown-editor": {
       "name": "Markdown Editor",
@@ -11194,7 +12548,20 @@
       "code": "Code",
       "link": "Link",
       "image": "Image",
-      "quote": "Quote"
+      "quote": "Quote",
+      "markdownEditor": {
+        "edit": "Edit",
+        "split": "Split",
+        "preview": "Preview",
+        "copyMd": "Copy Md",
+        "copyHtml": "Copy Html",
+        "markdown": "Markdown",
+        "placeholder": "Enter text here...",
+        "previewLabel": "Preview Label",
+        "downloadMd": "Download Md",
+        "downloadHtml": "Download Html",
+        "clear": "Clear"
+      }
     },
     "world-clock": {
       "name": "World Clock",
@@ -11229,7 +12596,14 @@
           "question": "How do I know if it's day or night?",
           "answer": "Each city card shows a sun ☀️ or moon 🌙 icon. Sun indicates daytime (6:00-18:00), moon indicates nighttime (other hours)."
         }
-      ]
+      ],
+      "worldClock": {
+        "format24h": "Format24h",
+        "showSeconds": "Show Seconds",
+        "selectCity": "Select City",
+        "addCity": "Add City",
+        "noCities": "No Cities"
+      }
     },
     "stopwatch": {
       "name": "Stopwatch",
@@ -11264,7 +12638,18 @@
           "question": "How are fastest and slowest laps marked?",
           "answer": "When 2 or more laps are recorded, the system automatically marks the fastest lap with 🏆 and the slowest with 🐢, helping you analyze performance."
         }
-      ]
+      ],
+      "stopwatchUI": {
+        "lap": "Lap",
+        "stop": "Stop",
+        "start": "Start",
+        "reset": "Reset",
+        "laps": "Laps",
+        "lapNumber": "Lap Number",
+        "lapTime": "Lap Time",
+        "totalTime": "Total Time",
+        "lapLabel": "Lap Label"
+      }
     },
     "countdown-timer": {
       "name": "Countdown Timer",
@@ -11299,7 +12684,18 @@
           "question": "Can I continue after pausing?",
           "answer": "Yes. After clicking pause, the countdown maintains its current state. Click 'Resume' to continue from where you paused."
         }
-      ]
+      ],
+      "countdownTimer": {
+        "timeUp": "Time Up",
+        "timerFinished": "Timer Finished",
+        "hours": "Hours",
+        "minutes": "Minutes",
+        "seconds": "Seconds",
+        "resume": "Resume",
+        "start": "Start",
+        "pause": "Pause",
+        "reset": "Reset"
+      }
     },
     "note-pad": {
       "name": "Note Pad",
@@ -11339,7 +12735,21 @@
           "question": "How many notes can I create?",
           "answer": "There's no limit on the number of notes. Create as many as you need. Note that browser local storage has capacity limits (typically 5-10MB)."
         }
-      ]
+      ],
+      "notePad": {
+        "newNote": "New Note",
+        "export": "Export",
+        "search": "Search",
+        "color": "Color",
+        "titlePlaceholder": "Title Placeholder",
+        "contentPlaceholder": "Content Placeholder",
+        "updated": "Updated",
+        "untitled": "Untitled",
+        "noContent": "No Content",
+        "noNotes": "No Notes",
+        "noResults": "No Results",
+        "totalNotes": "Total Notes"
+      }
     },
     "excelToJson": {
       "uploadFile": "Upload Excel File",
@@ -11579,7 +12989,13 @@
           "question": "Is there a file size limit?",
           "answer": "Processing happens in your browser, so very large files may be slow. We recommend files under 50MB."
         }
-      ]
+      ],
+      "page": "Page",
+      "errorParsing": "Error Parsing",
+      "errorInvalidFile": "Error Invalid File",
+      "dropzone": "Dropzone",
+      "extracting": "Extracting",
+      "pages": "Pages"
     },
     "word-to-txt": {
       "name": "Word to Text",
@@ -11610,7 +13026,11 @@
           "question": "Is formatting preserved?",
           "answer": "This tool extracts plain text only. Formatting, images, and tables are not preserved."
         }
-      ]
+      ],
+      "errorParsing": "Error Parsing",
+      "errorInvalidFile": "Error Invalid File",
+      "dropzone": "Dropzone",
+      "extracting": "Extracting"
     },
     "word-to-html": {
       "name": "Word to HTML",
@@ -11641,7 +13061,13 @@
           "question": "Can I edit the HTML?",
           "answer": "Yes, you can copy the HTML code and edit it in any text editor or HTML editor."
         }
-      ]
+      ],
+      "errorParsing": "Error Parsing",
+      "errorInvalidFile": "Error Invalid File",
+      "dropzone": "Dropzone",
+      "converting": "Converting",
+      "showCode": "Show Code",
+      "showPreview": "Show Preview"
     },
     "excel-to-csv": {
       "name": "Excel to CSV",
@@ -11670,7 +13096,11 @@
           "question": "Are formulas converted?",
           "answer": "Only the calculated values are exported, not the formulas themselves."
         }
-      ]
+      ],
+      "errorParsing": "Error Parsing",
+      "errorInvalidFile": "Error Invalid File",
+      "dropzone": "Dropzone",
+      "converting": "Converting"
     },
     "csv-to-excel": {
       "name": "CSV to Excel",
@@ -11701,7 +13131,14 @@
           "question": "Are special characters preserved?",
           "answer": "Yes, UTF-8 encoding is used to preserve special characters and international text."
         }
-      ]
+      ],
+      "errorParsing": "Error Parsing",
+      "errorInvalidFile": "Error Invalid File",
+      "errorExport": "Error Export",
+      "dropzone": "Dropzone",
+      "converting": "Converting",
+      "rows": "Rows",
+      "showingFirst": "Showing First"
     },
     "loan-calculator": {
       "name": "Loan Calculator",
@@ -15606,7 +17043,8 @@
       "tip4": "Run multiple times with different settings for variety",
       "addFillers": "Add natural filler words",
       "humanize": "Humanize",
-      "inputPlaceholder": "Paste your AI-generated text here..."
+      "inputPlaceholder": "Paste your AI-generated text here...",
+      "outputPlaceholder": "Result will appear here..."
     },
     "text-spinner": {
       "name": "Text Spinner",
@@ -16154,7 +17592,8 @@
       "bracketSpacing": "bracket Spacing",
       "bracketSameLine": "bracket Same Line",
       "generate": "Generate",
-      "download": "Download"
+      "download": "Download",
+      "htmlWhitespaceSensitivity": "Html Whitespace Sensitivity"
     },
     "tsconfig-generator": {
       "name": "TSConfig Generator",
@@ -16415,7 +17854,8 @@
       "inputPlaceholder": "input Placeholder",
       "swap": "swap",
       "outputPlaceholder": "output Placeholder",
-      "showTable": "show Table"
+      "showTable": "show Table",
+      "none": "None"
     },
     "checksum-verifier": {
       "name": "Checksum Verifier",
@@ -17080,7 +18520,13 @@
       "outputPlaceholder": "Results will appear here...",
       "errors": {
         "emptyInput": "Please enter some input"
-      }
+      },
+      "errorInvalidInput": "Error Invalid Input",
+      "convert": "Convert",
+      "sql": {
+        "loadExample": "Load Example"
+      },
+      "copied": "Copied!"
     },
     "http-status-code-reference": {
       "name": "HTTP Status Code Reference",
@@ -17109,6 +18555,13 @@
       "outputPlaceholder": "Results will appear here...",
       "errors": {
         "emptyInput": "Please enter some input"
+      },
+      "httpStatus": {
+        "search": "Search"
+      },
+      "all": "All",
+      "nav": {
+        "noResults": "No Results"
       }
     },
     "jwt-payload-decoder": {
@@ -17138,6 +18591,16 @@
       "outputPlaceholder": "Results will appear here...",
       "errors": {
         "emptyInput": "Please enter some input"
+      },
+      "errorInvalidInput": "Error Invalid Input",
+      "errorInvalidFormat": "Error Invalid Format",
+      "sql": {
+        "loadExample": "Load Example"
+      },
+      "decode": "Decode",
+      "copied": "Copied!",
+      "jwt": {
+        "commonClaims": "Common Claims"
       }
     },
     "base64-image-converter": {
@@ -17229,7 +18692,20 @@
       "outputPlaceholder": "Results will appear here...",
       "errors": {
         "emptyInput": "Please enter some input"
-      }
+      },
+      "sql": {
+        "loadExample": "Load Example"
+      },
+      "urlParser": {
+        "invalid": "Invalid",
+        "protocol": "Protocol",
+        "hostname": "Hostname",
+        "port": "Port",
+        "pathname": "Pathname",
+        "hash": "Hash",
+        "queryParams": "Query Params"
+      },
+      "copied": "Copied!"
     },
     "request-header-builder": {
       "name": "HTTP Request Header Builder",
@@ -18485,7 +19961,21 @@
       "database": "Database",
       "username": "Username",
       "password": "Password",
-      "connectionString": "Connection String"
+      "connectionString": "Connection String",
+      "database-connection-tester": {
+        "databaseType": "Database Type",
+        "host": "Host",
+        "port": "Port",
+        "database": "Database",
+        "username": "Username",
+        "password": "Password",
+        "useSSL": "Use S S L",
+        "connectionString": "Connection String",
+        "codeSnippet": "Code Snippet",
+        "note": "Note",
+        "noteText": "Note Text"
+      },
+      "copied": "Copied!"
     },
     "query-execution-planner": {
       "name": "Query Execution Planner",
@@ -18752,7 +20242,10 @@
       "success": "Success",
       "failed": "Failed",
       "warning": "Warning",
-      "info": "Info"
+      "info": "Info",
+      "useCurrent": "Use Current",
+      "useIncoming": "Use Incoming",
+      "keepBoth": "Keep Both"
     },
     "git-history-visualizer": {
       "name": "Git History Visualizer",
@@ -20447,7 +21940,26 @@
       "asn": "ASN",
       "viewOnMap": "View on Map",
       "invalidIp": "Invalid IP address",
-      "lookupError": "Failed to lookup IP address"
+      "lookupError": "Failed to lookup IP address",
+      "ip-geolocation": {
+        "lookupError": "Lookup Error",
+        "ipAddress": "Ip Address",
+        "placeholder": "Enter text here...",
+        "loading": "Loading...",
+        "lookup": "Lookup",
+        "myIp": "My Ip",
+        "results": "Results",
+        "country": "Country",
+        "region": "Region",
+        "city": "City",
+        "zipCode": "Zip Code",
+        "timezone": "Timezone",
+        "coordinates": "Coordinates",
+        "isp": "Isp",
+        "organization": "Organization",
+        "asn": "Asn",
+        "viewOnMap": "View On Map"
+      }
     },
     "screen-recorder": {
       "name": "Screen Recorder",
@@ -20469,7 +21981,24 @@
       "instructions": "How to use",
       "instruction1": "Click \"Start Recording\" to begin",
       "instruction2": "Select the screen, window, or tab you want to record",
-      "instruction3": "Click \"Stop\" when finished, then download your recording"
+      "instruction3": "Click \"Stop\" when finished, then download your recording",
+      "screen-recorder": {
+        "permissionDenied": "Permission Denied",
+        "startError": "Start Error",
+        "recording": "Recording",
+        "paused": "Paused",
+        "start": "Start",
+        "pause": "Pause",
+        "stop": "Stop",
+        "resume": "Resume",
+        "newRecording": "New Recording",
+        "preview": "Preview",
+        "download": "Download",
+        "instructions": "Instructions",
+        "instruction1": "Instruction1",
+        "instruction2": "Instruction2",
+        "instruction3": "Instruction3"
+      }
     }
   },
   "tool": {
