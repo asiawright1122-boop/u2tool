@@ -17,8 +17,25 @@
   if (typeof window !== 'undefined') {
     console.log('=== PercentageStackedBarChartGenerator Debug ===');
     console.log('translations:', translations);
-    console.log('translations.tools:', translations.tools);
-    console.log('tool data:', translations.tools?.['percentage-stacked-bar-chart-generator']);
+    console.log('translations type:', typeof translations);
+    console.log('translations.tools:', translations?.tools);
+    console.log('translations.tools type:', typeof translations?.tools);
+    
+    if (translations?.tools) {
+      const toolsKeys = Object.keys(translations.tools);
+      console.log('tools keys (first 10):', toolsKeys.slice(0, 10));
+      console.log('has percentage-stacked-bar-chart-generator:', toolsKeys.includes('percentage-stacked-bar-chart-generator'));
+      
+      const toolData = (translations.tools as Record<string, unknown>)['percentage-stacked-bar-chart-generator'];
+      console.log('tool data:', toolData);
+      console.log('tool data type:', typeof toolData);
+      
+      if (toolData && typeof toolData === 'object') {
+        const toolDataKeys = Object.keys(toolData);
+        console.log('tool data keys (first 20):', toolDataKeys.slice(0, 20));
+      }
+    }
+    
     console.log('t("series1"):', t('series1'));
     console.log('t("series2"):', t('series2'));
     console.log('t("series3"):', t('series3'));
