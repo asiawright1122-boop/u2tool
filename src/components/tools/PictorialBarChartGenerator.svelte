@@ -25,6 +25,16 @@
   forest: ['#2d6a4f', '#40916c', '#52b788', '#74c69d', '#95d5b2', '#b7e4c7'],
 };
 
+  const symbolOptions = [
+    { value: 'roundRect' },
+    { value: 'rect' },
+    { value: 'circle' },
+    { value: 'diamond' },
+    { value: 'triangle' },
+    { value: 'arrow' },
+    { value: 'pin' },
+  ];
+
   // Default data
   const defaultDataValues = [
     { id: 'def-1', categoryKey: 'productA', value: 320 },
