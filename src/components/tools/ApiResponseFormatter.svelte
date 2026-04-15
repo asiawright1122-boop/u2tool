@@ -10,7 +10,8 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['api-response-formatter'] as Record<string, unknown> || {};
+    const tools = translations['tools'] as Record<string, unknown> || {};
+    const scope = tools['api-response-formatter'] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -143,7 +144,7 @@ Cache-Control: no-cache
       <!-- Input -->
       <section class="glass-card p-6">
         <div class="flex justify-between items-end mb-4">
-          <label class="tool-label !mb-0">
+          <label class="tool-label !mb-0" for="api-formatter-input">
             {tCommon('input')} <span class="text-[10px] opacity-40 ml-1 font-mono tracking-tighter">(JSON, HTTP, XML)</span>
           </label>
           <div class="flex gap-4">
@@ -168,6 +169,7 @@ Cache-Control: no-cache
           </div>
         </div>
         <textarea
+          id="api-formatter-input"
           bind:value={input}
           placeholder={t("inputPlaceholder")}
           class="tool-textarea h-48"></textarea>
@@ -176,10 +178,11 @@ Cache-Control: no-cache
         <div class="mt-6 flex flex-wrap items-center justify-between gap-6 pt-6 border-t border-slate-200/60 dark:border-white/5">
           <div class="flex items-center gap-6">
             <div class="flex items-center gap-3">
-              <label class="text-[10px] font-black uppercase tracking-widest text-slate-400">{t('indent')}</label>
+              <label class="text-[10px] font-black uppercase tracking-widest text-slate-400" for="api-indent-select">{t('indent')}</label>
               <select
+                id="api-indent-select"
                 value={indentSize}
-                onchange={(e) => indentSize = parseInt(e.target.value)}
+                onchange={(e) => indentSize = parseInt((e.target as HTMLSelectElement).value)}
                 class="px-3 py-1.5 border border-slate-200 dark:border-white/10 rounded-xl bg-white dark:bg-slate-900/50 text-slate-900 dark:text-white text-xs font-bold"
               >
                 <option value={2}>2 {t('spaces')}</option>
@@ -251,12 +254,12 @@ Cache-Control: no-cache
           {#if formattedBody}
             <div class="glass-card p-6">
               <div class="flex justify-between items-center mb-6">
-                <label class="tool-label !mb-0">
+                <div class="tool-label !mb-0">
                   {tCommon('output')}
                   {#if parsed.contentType}
                     <span class="text-[10px] opacity-40 font-mono tracking-tighter ml-2">({parsed.contentType})</span>
                   {/if}
-                </label>
+                </div>
                 <div class="flex items-center gap-6">
                   {#if typeof parsed.body === 'object' && parsed.body !== null}
                     <div class="hidden sm:flex items-center gap-4 text-[10px] font-black uppercase tracking-widest text-slate-400/60">

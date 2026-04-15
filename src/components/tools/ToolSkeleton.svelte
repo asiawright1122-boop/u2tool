@@ -49,6 +49,9 @@
   
   return categoryVariantMap[category] || 'default';
 }
+
+</script>
+
 {#snippet DefaultSkeleton()}
   <div class="flex flex-col gap-6">
     <div class="h-10 w-48 tool-skeleton"></div>

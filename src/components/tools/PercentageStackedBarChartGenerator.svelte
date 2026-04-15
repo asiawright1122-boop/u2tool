@@ -58,7 +58,7 @@
 
   let horizontal = $state(false);
 
-  let timerRef = $state(null);
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);
 
   let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
@@ -240,7 +240,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <div class="block text-sm font-medium mb-2">{t('chartSettings')}</div>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
                 <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
@@ -271,7 +271,7 @@
 
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="text-sm font-medium">{t('seriesNames')}</label>
+              <div class="text-sm font-medium">{t('seriesNames')}</div>
               <button onclick={addSeries} class="btn-secondary btn-sm" disabled={seriesNames.length >= 8}>+ {t('addSeries')}</button>
             </div>
             <div class="flex flex-wrap gap-2">
@@ -292,7 +292,7 @@
 
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="text-sm font-medium">{t('dataEditor')}</label>
+              <div class="text-sm font-medium">{t('dataEditor')}</div>
               <button onclick={addRow} class="btn-secondary btn-sm">+ {t('addRow')}</button>
             </div>
             <div class="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-3 overflow-x-auto">
@@ -307,15 +307,15 @@
                   </tr>
                 </thead>
                 <tbody>
-                  {#each data as row (row.id)}
+                  {#each data as row, _rowIdx (row.id)}
 <tr  class="border-b border-gray-100 dark:border-gray-800 last:border-b-0">
                       <td class="py-2 px-2">
-                        <input type="text" bind:value={row.category}
+                        <input type="text" value={row.category} oninput={(e) => { data[_rowIdx] = { ...data[_rowIdx], category: (e.currentTarget as HTMLInputElement).value }; data = [...data]; }}
                           class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-sm" />
                       </td>
                       {#each row.values as val, idx (idx)}
 <td  class="py-2 px-2">
-                          <input type="number" bind:value={val}
+                          <input type="number" value={val} oninput={(e) => { const v = Number((e.currentTarget as HTMLInputElement).value) || 0; const newValues = [...data[_rowIdx].values]; newValues[idx] = v; data[_rowIdx] = { ...data[_rowIdx], values: newValues }; data = [...data]; }}
                             class="w-16 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-sm" />
                         </td>
 {/each}
@@ -332,7 +332,7 @@
         </div>
 
         <div>
-          <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <div class="block text-sm font-medium mb-2">{t('chartPreview')}</div>
           <div class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden bg-gray-100 dark:bg-gray-800" style="min-height: 400px">
             <EChartsWrapper
               bind:this={chartRef as any} option={getChartOption} style="height: 400px; width: 100%" notMerge={true}

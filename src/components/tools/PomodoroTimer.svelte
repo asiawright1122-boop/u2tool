@@ -211,17 +211,17 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1" for="pomodoro-work-duration">{t('pomodoro.workDuration')} ({t('pomodoro.minutes')})</label>
-              <input type="number" id="pomodoro-work-duration" name="workDuration" min="1" max="60" bind:value={workDuration}}
+              <input type="number" id="pomodoro-work-duration" name="workDuration" min="1" max="60" bind:value={workDuration}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700" />
             </div>
             <div>
               <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1" for="pomodoro-short-break">{t('pomodoro.shortBreakDuration')} ({t('pomodoro.minutes')})</label>
-              <input type="number" id="pomodoro-short-break" name="shortBreakDuration" min="1" max="30" bind:value={shortBreakDuration}}
+              <input type="number" id="pomodoro-short-break" name="shortBreakDuration" min="1" max="30" bind:value={shortBreakDuration}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700" />
             </div>
             <div>
               <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1" for="pomodoro-long-break">{t('pomodoro.longBreakDuration')} ({t('pomodoro.minutes')})</label>
-              <input type="number" id="pomodoro-long-break" name="longBreakDuration" min="1" max="60" bind:value={longBreakDuration}}
+              <input type="number" id="pomodoro-long-break" name="longBreakDuration" min="1" max="60" bind:value={longBreakDuration}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700" />
             </div>
             <div>

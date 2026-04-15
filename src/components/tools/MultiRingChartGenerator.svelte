@@ -232,13 +232,13 @@
               <button onclick={addRing} class="btn-secondary btn-sm" disabled={data.length >= 6}>+ {t('addRing')}</button>
             </div>
             <div class="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-3 space-y-2">
-              {#each data as ring (ring.id)}
+              {#each data as ring, _ringIdx (ring.id)}
 <div  class="flex items-center gap-2 p-2 bg-white dark:bg-gray-800 rounded border border-gray-200 dark:border-gray-600">
-                  <input type="color" bind:value={ring.color}
+                  <input type="color" value={ring.color} onchange={(e) => { data[_ringIdx] = { ...data[_ringIdx], color: (e.currentTarget as HTMLInputElement).value }; data = [...data]; }}
                     class="w-8 h-8 rounded cursor-pointer" />
-                  <input type="text" bind:value={ring.name}
+                  <input type="text" value={ring.name} oninput={(e) => { data[_ringIdx] = { ...data[_ringIdx], name: (e.currentTarget as HTMLInputElement).value }; data = [...data]; }}
                     class="flex-1 px-2 py-1 bg-transparent border border-gray-200 dark:border-gray-600 rounded text-sm" placeholder={t('ringName')} />
-                  <input type="number" min="0" max="100" bind:value={ring.value}
+                  <input type="number" min="0" max="100" value={ring.value} oninput={(e) => { data[_ringIdx] = { ...data[_ringIdx], value: Number((e.currentTarget as HTMLInputElement).value) || 0 }; data = [...data]; }}
                     class="w-16 px-2 py-1 bg-transparent border border-gray-200 dark:border-gray-600 rounded text-sm text-center" />
                   <span class="text-sm text-gray-500">%</span>
                   <button onclick={() => deleteRing(ring.id)} class="text-red-400 hover:text-red-300 disabled:opacity-50" disabled={data.length <= 1}>✕</button>

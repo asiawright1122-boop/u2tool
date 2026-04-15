@@ -290,18 +290,18 @@
                   </tr>
                 </thead>
                 <tbody>
-                  {#each data as row (row.id)}
+                  {#each data as row, _rowIdx (row.id)}
 <tr  class="border-b border-gray-100 dark:border-gray-800 last:border-b-0">
                       <td class="py-2 px-2">
-                        <input type="text" bind:value={row.category}
+                        <input type="text" value={row.category} oninput={(e) => { data[_rowIdx] = { ...data[_rowIdx], category: (e.currentTarget as HTMLInputElement).value }; data = [...data]; }}
                           class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-sm" />
                       </td>
                       <td class="py-2 px-2">
-                        <input type="number" bind:value={row.barValue}
+                        <input type="number" value={row.barValue} oninput={(e) => { data[_rowIdx] = { ...data[_rowIdx], barValue: Number((e.currentTarget as HTMLInputElement).value) || 0 }; data = [...data]; }}
                           class="w-20 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-sm" />
                       </td>
                       <td class="py-2 px-2">
-                        <input type="number" bind:value={row.lineValue}
+                        <input type="number" value={row.lineValue} oninput={(e) => { data[_rowIdx] = { ...data[_rowIdx], lineValue: Number((e.currentTarget as HTMLInputElement).value) || 0 }; data = [...data]; }}
                           class="w-20 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-sm" />
                       </td>
                       <td class="py-2 px-2">

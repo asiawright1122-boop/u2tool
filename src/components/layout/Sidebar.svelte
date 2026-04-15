@@ -59,7 +59,6 @@
 
 <nav
   class="h-full w-full bg-white dark:bg-slate-950 border-r border-slate-200 dark:border-white/5 overflow-y-auto overflow-x-hidden"
-  role="navigation"
 >
   <!-- Logo -->
   <div class="h-16 flex items-center px-5 border-b border-slate-200 dark:border-white/5 mb-2">

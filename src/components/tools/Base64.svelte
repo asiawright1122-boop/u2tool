@@ -10,7 +10,8 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['base64'] as Record<string, unknown> || {};
+    const tools = translations['tools'] as Record<string, unknown> || {};
+    const scope = tools['base64'] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -30,7 +31,7 @@
 
   let copied = $state(false);
 
-  let timerRef = $state(null);  onDestroy(() => {
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
 

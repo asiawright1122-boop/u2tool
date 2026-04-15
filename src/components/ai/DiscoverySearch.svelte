@@ -140,7 +140,8 @@
       const response = await fetch(`/api/ai-discovery/search?locale=${encodeURIComponent(locale)}&q=${encodeURIComponent(trimmed)}`);
       const payload = await response.json() as DiscoveryResponse | { error?: string; message?: string };
       if (!response.ok) {
-        error = payload.message ?? payload.error ?? t('aiDiscovery.requestFailedError', 'Search failed.');
+        const errPayload = payload as { error?: string; message?: string };
+        error = errPayload.message ?? errPayload.error ?? t('aiDiscovery.requestFailedError', 'Search failed.');
         return;
       }
 

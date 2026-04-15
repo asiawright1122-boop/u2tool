@@ -196,9 +196,9 @@
         <div class="space-y-2">
           {#each config.envVars as env, idx (idx)}
 <div  class="flex gap-2">
-              <input type="text" bind:value={env.key} placeholder={t("keyPlaceholder")}
+              <input type="text" value={env.key} oninput={(e) => { config.envVars[idx] = { ...config.envVars[idx], key: (e.currentTarget as HTMLInputElement).value }; config.envVars = [...config.envVars]; }} placeholder={t("keyPlaceholder")}
                 class="flex-1 px-3 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm font-mono" />
-              <input type="text" bind:value={env.value} placeholder={t("valuePlaceholder")}
+              <input type="text" value={env.value} oninput={(e) => { config.envVars[idx] = { ...config.envVars[idx], value: (e.currentTarget as HTMLInputElement).value }; config.envVars = [...config.envVars]; }} placeholder={t("valuePlaceholder")}
                 class="flex-1 px-3 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
               <button onclick={() => removeEnvVar(idx)} class="text-red-500 hover:text-red-600">✕</button>
             </div>

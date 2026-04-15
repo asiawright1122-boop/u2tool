@@ -8,7 +8,8 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['resume'] as Record<string, unknown> || {};
+    const tools = translations['tools'] as Record<string, unknown> || {};
+    const scope = tools['resume'] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -206,7 +207,7 @@
         {#if experiences.length > 0}
 <section class="mb-6">
             <h2 class="text-lg font-semibold border-b-2 pb-1 mb-2" style="border-color: {accentColor}; color: {accentColor}">{t('experience')}</h2>
-            {#each experiences as exp (exp.id)}
+            {#each experiences as exp, _expIdx (exp.id)}
 <div  class="mb-4">
                 <div class="flex justify-between items-start">
                   <div><span class="font-semibold">{exp.position}</span> @ {exp.company}</div>
@@ -220,7 +221,7 @@
         {#if educations.length > 0}
 <section class="mb-6">
             <h2 class="text-lg font-semibold border-b-2 pb-1 mb-2" style="border-color: {accentColor}; color: {accentColor}">{t('education')}</h2>
-            {#each educations as edu (edu.id)}
+            {#each educations as edu, _eduIdx (edu.id)}
 <div  class="mb-3">
                 <div class="flex justify-between">
                   <div><span class="font-semibold">{edu.degree}</span> - {edu.field}</div>
@@ -265,12 +266,12 @@
         <button onclick={() => activeTab = 'edit'} class={`px-4 py-2 rounded-lg font-medium transition-colors ${activeTab === 'edit' ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}>{t('editTab')}</button>
         <button onclick={() => activeTab = 'preview'} class={`px-4 py-2 rounded-lg font-medium transition-colors ${activeTab === 'preview' ? 'bg-amber-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}>{t('previewTab')}</button>
         <div class="flex-1"></div>
-        <select value={template} onchange={e => template = e.target.value as TemplateType} class="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+        <select value={template} onchange={e => template = (e.target as HTMLSelectElement).value as TemplateType} class="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
           <option value="professional">{t('templates.professional')}</option>
           <option value="minimal">{t('templates.minimal')}</option>
           <option value="creative">{t('templates.creative')}</option>
         </select>
-        <input type="color" value={accentColor} onchange={e => accentColor = e.target.value} class="w-10 h-10 rounded cursor-pointer" title={t('accentColor')} />
+        <input type="color" value={accentColor} onchange={e => accentColor = (e.target as HTMLInputElement).value} class="w-10 h-10 rounded cursor-pointer" title={t('accentColor')} />
         <button onclick={exportPDF} class="px-4 py-2 btn-success rounded-lg hover:bg-green-700 transition-colors">{t('exportPDF')}</button>
       </div>
 
@@ -290,17 +291,17 @@
                 <button onclick={() => fileInputRef?.click()} class="absolute -bottom-1 -right-1 w-8 h-8 bg-amber-600 text-white rounded-full text-sm hover:bg-amber-700"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></button>
               </div>
               <div class="flex-1 grid grid-cols-2 gap-2">
-                <input value={name} onchange={e => name = e.target.value} placeholder={t('placeholders.name')} class="col-span-2 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
-                <input value={title} onchange={e => title = e.target.value} placeholder={t('placeholders.title')} class="col-span-2 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
+                <input value={name} onchange={e => name = (e.target as HTMLInputElement).value} placeholder={t('placeholders.name')} class="col-span-2 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
+                <input value={title} onchange={e => title = (e.target as HTMLInputElement).value} placeholder={t('placeholders.title')} class="col-span-2 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
               </div>
             </div>
             <div class="grid grid-cols-2 gap-2">
-              <input value={email} onchange={e => email = e.target.value} placeholder={t('placeholders.email')} type="email" class="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
-              <input value={phone} onchange={e => phone = e.target.value} placeholder={t('placeholders.phone')} class="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
-              <input value={location} onchange={e => location = e.target.value} placeholder={t('placeholders.location')} class="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
-              <input value={website} onchange={e => website = e.target.value} placeholder={t('placeholders.website')} class="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
+              <input value={email} onchange={e => email = (e.target as HTMLInputElement).value} placeholder={t('placeholders.email')} type="email" class="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
+              <input value={phone} onchange={e => phone = (e.target as HTMLInputElement).value} placeholder={t('placeholders.phone')} class="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
+              <input value={location} onchange={e => location = (e.target as HTMLInputElement).value} placeholder={t('placeholders.location')} class="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
+              <input value={website} onchange={e => website = (e.target as HTMLInputElement).value} placeholder={t('placeholders.website')} class="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
             </div>
-            <textarea value={summary} onchange={e => summary = e.target.value} placeholder={t('summaryPlaceholder')} rows={3} class="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white resize-none" />
+            <textarea value={summary} onchange={e => summary = (e.target as HTMLTextAreaElement).value} placeholder={t('summaryPlaceholder')} rows={3} class="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white resize-none" />
           </section>
 
           <!-- 工作经历 -->
@@ -309,23 +310,23 @@
               <h3 class="font-semibold text-gray-900 dark:text-white">{t('experience')}</h3>
               <button onclick={addExperience} class="px-3 py-1 bg-amber-600 text-white rounded-lg text-sm hover:bg-amber-700">{t('addExperience')}</button>
             </div>
-            {#each experiences as exp (exp.id)}
+            {#each experiences as exp, _expIdx (exp.id)}
 <div  class="border border-gray-200 dark:border-gray-700 rounded-lg p-3 space-y-2">
                 <div class="flex justify-between">
-                  <input bind:value={exp.company} placeholder={t('company')} class="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <input value={exp.company} oninput={(e) => { experiences[_expIdx] = { ...experiences[_expIdx], company: (e.currentTarget as HTMLInputElement).value }; experiences = [...experiences]; }} placeholder={t('company')} class="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
                   <button onclick={() => removeExperience(exp.id)} class="ml-2 text-red-500 hover:text-red-700"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg></button>
                 </div>
-                <input bind:value={exp.position} placeholder={t('position')} class="w-full px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                <input value={exp.position} oninput={(e) => { experiences[_expIdx] = { ...experiences[_expIdx], position: (e.currentTarget as HTMLInputElement).value }; experiences = [...experiences]; }} placeholder={t('position')} class="w-full px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
                 <div class="flex gap-2 items-center">
-                  <input type="month" bind:value={exp.startDate} class="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <input type="month" value={exp.startDate} oninput={(e) => { experiences[_expIdx] = { ...experiences[_expIdx], startDate: (e.currentTarget as HTMLInputElement).value }; experiences = [...experiences]; }} class="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
                   <span class="text-gray-500">-</span>
-                  <input type="month" bind:value={exp.endDate} disabled={exp.current} class="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm disabled:opacity-50" />
-                  <label class="flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400">
-                    <input type="checkbox" checked={exp.current} onchange={e => updateExperience(exp.id, 'current', e.target.checked)} />
+                  <input type="month" value={exp.endDate} oninput={(e) => { experiences[_expIdx] = { ...experiences[_expIdx], endDate: (e.currentTarget as HTMLInputElement).value }; experiences = [...experiences]; }} disabled={exp.current} class="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm disabled:opacity-50" />
+                  <label for={`current-${exp.id}`} class="flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400">
+                    <input id={`current-${exp.id}`} type="checkbox" checked={exp.current} onchange={e => updateExperience(exp.id, 'current', (e.target as HTMLInputElement).checked)} />
                     {t('present')}
                   </label>
                 </div>
-                <textarea bind:value={exp.description} placeholder={t('jobDescription')} rows={2} class="w-full px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm resize-none" />
+                <textarea value={exp.description} oninput={(e) => { experiences[_expIdx] = { ...experiences[_expIdx], description: (e.currentTarget as HTMLTextAreaElement).value }; experiences = [...experiences]; }} placeholder={t('jobDescription')} rows={2} class="w-full px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm resize-none" />
               </div>
 {/each}
           </section>
@@ -336,17 +337,17 @@
               <h3 class="font-semibold text-gray-900 dark:text-white">{t('education')}</h3>
               <button onclick={addEducation} class="px-3 py-1 bg-amber-600 text-white rounded-lg text-sm hover:bg-amber-700">{t('addEducation')}</button>
             </div>
-            {#each educations as edu (edu.id)}
+            {#each educations as edu, _eduIdx (edu.id)}
 <div  class="border border-gray-200 dark:border-gray-700 rounded-lg p-3 space-y-2">
                 <div class="flex justify-between">
-                  <input bind:value={edu.school} placeholder={t('school')} class="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <input value={edu.school} oninput={(e) => { educations[_eduIdx] = { ...educations[_eduIdx], school: (e.currentTarget as HTMLInputElement).value }; educations = [...educations]; }} placeholder={t('school')} class="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
                   <button onclick={() => removeEducation(edu.id)} class="ml-2 text-red-500 hover:text-red-700"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg></button>
                 </div>
                 <div class="grid grid-cols-2 gap-2">
-                  <input bind:value={edu.degree} placeholder={t('degree')} class="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
-                  <input bind:value={edu.field} placeholder={t('fieldOfStudy')} class="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
-                  <input type="month" bind:value={edu.graduationDate} class="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
-                  <input bind:value={edu.gpa || ''} placeholder={t('gpa')} class="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <input value={edu.degree} oninput={(e) => { educations[_eduIdx] = { ...educations[_eduIdx], degree: (e.currentTarget as HTMLInputElement).value }; educations = [...educations]; }} placeholder={t('degree')} class="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <input value={edu.field} oninput={(e) => { educations[_eduIdx] = { ...educations[_eduIdx], field: (e.currentTarget as HTMLInputElement).value }; educations = [...educations]; }} placeholder={t('fieldOfStudy')} class="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <input type="month" value={edu.graduationDate} oninput={(e) => { educations[_eduIdx] = { ...educations[_eduIdx], graduationDate: (e.currentTarget as HTMLInputElement).value }; educations = [...educations]; }} class="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <input value={edu.gpa || ''} oninput={(e) => { educations[_eduIdx] = { ...educations[_eduIdx], gpa: (e.currentTarget as HTMLInputElement).value }; educations = [...educations]; }} placeholder={t('gpa')} class="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
                 </div>
               </div>
 {/each}
@@ -357,7 +358,7 @@
             <section class="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 space-y-4">
               <h3 class="font-semibold text-gray-900 dark:text-white">{t('skills')}</h3>
               <div class="flex gap-2">
-                <input value={newSkill} onchange={e => newSkill = e.target.value} placeholder={t('addSkill')} class="flex-1 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" onkeydown={e => e.key === 'Enter' && addSkill()} />
+                <input value={newSkill} onchange={e => newSkill = (e.target as HTMLInputElement).value} placeholder={t('addSkill')} class="flex-1 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" onkeydown={e => e.key === 'Enter' && addSkill()} />
                 <input type="range" min="10" max="100" bind:value={newSkillLevel} class="w-24" />
                 <span class="w-10 text-center text-gray-600 dark:text-gray-400">{newSkillLevel}%</span>
                 <button onclick={addSkill} class="px-3 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700">+</button>
@@ -379,9 +380,9 @@
             <section class="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 space-y-4">
               <h3 class="font-semibold text-gray-900 dark:text-white">{t('languages')}</h3>
               <div class="flex gap-2">
-                <input value={newLang} onchange={e => newLang = e.target.value} placeholder={t('addLanguage')} class="flex-1 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" onkeydown={e => e.key === 'Enter' && addLanguage()} />
-                <select value={newLangLevel} onchange={e => newLangLevel = e.target.value as LangLevel} class="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
-                  {#each LANG_LEVELS as lvl (lvl)}
+                <input value={newLang} onchange={e => newLang = (e.target as HTMLInputElement).value} placeholder={t('addLanguage')} class="flex-1 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" onkeydown={e => e.key === 'Enter' && addLanguage()} />
+                <select value={newLangLevel} onchange={e => newLangLevel = (e.target as HTMLSelectElement).value as LangLevel} class="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+                  {#each LANG_LEVELS as lvl, _lvlIdx (lvl)}
 <option  value={lvl}>{getLangLabel(lvl)}</option>
 {/each}
                 </select>

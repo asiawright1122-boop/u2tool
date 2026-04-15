@@ -73,7 +73,7 @@
               <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.currency')}</label>
               <select bind:value={currency}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800">
-                {#each CURRENCIES as c (c.code)}
+                {#each CURRENCIES as c, _cIdx (c.code)}
 <option  value={c.code}>{c.symbol} {c.code}</option>
 {/each}
               </select>
@@ -111,13 +111,13 @@
           <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
             <h3 class="font-medium text-gray-900 dark:text-gray-100 mb-3">{t('invoice.items')}</h3>
             <div class="space-y-2">
-              {#each items as item (item.id)}
+              {#each items as item, _itemIdx (item.id)}
 <div  class="grid grid-cols-12 gap-2 items-center">
-                  <input type="text" bind:value={item.description}
+                  <input type="text" value={item.description} oninput={(e) => { items[_itemIdx] = { ...items[_itemIdx], description: (e.currentTarget as HTMLInputElement).value }; items = [...items]; }}
                     placeholder={t('invoice.description')} class="col-span-5 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />
-                  <input type="number" min="1" bind:value={item.quantity}
+                  <input type="number" min="1" value={item.quantity} oninput={(e) => { items[_itemIdx] = { ...items[_itemIdx], quantity: Number((e.currentTarget as HTMLInputElement).value) || 0 }; items = [...items]; }}
                     placeholder={t('invoice.quantity')} class="col-span-2 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />
-                  <input type="number" min="0" step="0.01" bind:value={item.unitPrice}
+                  <input type="number" min="0" step="0.01" value={item.unitPrice} oninput={(e) => { items[_itemIdx] = { ...items[_itemIdx], unitPrice: Number((e.currentTarget as HTMLInputElement).value) || 0 }; items = [...items]; }}
                     placeholder={t('invoice.unitPrice')} class="col-span-3 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />
                   <span class="col-span-1 text-sm text-gray-600 dark:text-gray-400 text-right">{formatCurrency(item.quantity * item.unitPrice)}</span>
                   <button onclick={() => removeItem(item.id)} disabled={items.length === 1} class="col-span-1 text-red-500 hover:text-red-700 disabled:opacity-30">×</button>
@@ -182,7 +182,7 @@
                 </tr>
               </thead>
               <tbody>
-                {#each items as item (item.id)}
+                {#each items as item, _itemIdx (item.id)}
 <tr  class="border-b border-gray-100">
                     <td class="py-3 text-gray-900">{item.description || '—'}</td>
                     <td class="py-3 text-right text-gray-600">{item.quantity}</td>
@@ -261,7 +261,7 @@
               <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.currency')}</label>
               <select bind:value={currency}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800">
-                {#each CURRENCIES as c (c.code)}
+                {#each CURRENCIES as c, _cIdx (c.code)}
 <option  value={c.code}>{c.symbol} {c.code}</option>
 {/each}
               </select>
@@ -299,13 +299,13 @@
           <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
             <h3 class="font-medium text-gray-900 dark:text-gray-100 mb-3">{t('invoice.items')}</h3>
             <div class="space-y-2">
-              {#each items as item (item.id)}
+              {#each items as item, _itemIdx (item.id)}
 <div  class="grid grid-cols-12 gap-2 items-center">
-                  <input type="text" bind:value={item.description}
+                  <input type="text" value={item.description} oninput={(e) => { items[_itemIdx] = { ...items[_itemIdx], description: (e.currentTarget as HTMLInputElement).value }; items = [...items]; }}
                     placeholder={t('invoice.description')} class="col-span-5 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />
-                  <input type="number" min="1" bind:value={item.quantity}
+                  <input type="number" min="1" value={item.quantity} oninput={(e) => { items[_itemIdx] = { ...items[_itemIdx], quantity: Number((e.currentTarget as HTMLInputElement).value) || 0 }; items = [...items]; }}
                     placeholder={t('invoice.quantity')} class="col-span-2 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />
-                  <input type="number" min="0" step="0.01" bind:value={item.unitPrice}
+                  <input type="number" min="0" step="0.01" value={item.unitPrice} oninput={(e) => { items[_itemIdx] = { ...items[_itemIdx], unitPrice: Number((e.currentTarget as HTMLInputElement).value) || 0 }; items = [...items]; }}
                     placeholder={t('invoice.unitPrice')} class="col-span-3 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />
                   <span class="col-span-1 text-sm text-gray-600 dark:text-gray-400 text-right">{formatCurrency(item.quantity * item.unitPrice)}</span>
                   <button onclick={() => removeItem(item.id)} disabled={items.length === 1} class="col-span-1 text-red-500 hover:text-red-700 disabled:opacity-30">×</button>
@@ -370,7 +370,7 @@
                 </tr>
               </thead>
               <tbody>
-                {#each items as item (item.id)}
+                {#each items as item, _itemIdx (item.id)}
 <tr  class="border-b border-gray-100">
                     <td class="py-3 text-gray-900">{item.description || '—'}</td>
                     <td class="py-3 text-right text-gray-600">{item.quantity}</td>

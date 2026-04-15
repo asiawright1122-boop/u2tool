@@ -303,12 +303,12 @@
               <button onclick={addInnerItem} class="btn-secondary btn-sm">+ {t('addCategory')}</button>
             </div>
             <div class="space-y-2">
-              {#each innerData as item (item.id)}
+              {#each innerData as item, _itemIdx (item.id)}
 <div  class="p-3 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
                   <div class="flex items-center gap-2 mb-2">
-                    <input type="text" bind:value={item.name}
+                    <input type="text" value={item.name} oninput={(e) => { innerData[_itemIdx] = { ...innerData[_itemIdx], name: (e.currentTarget as HTMLInputElement).value }; innerData = [...innerData]; }}
                       class="flex-1 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-sm" />
-                    <input type="number" bind:value={item.value}
+                    <input type="number" value={item.value} oninput={(e) => { innerData[_itemIdx] = { ...innerData[_itemIdx], value: Number((e.currentTarget as HTMLInputElement).value) || 0 }; innerData = [...innerData]; }}
                       class="w-16 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-sm" />
                     <button onclick={() => deleteInnerItem(item.id)} class="text-red-400 hover:text-red-300 disabled:opacity-50" disabled={innerData.length <= 1}>✕</button>
                   </div>

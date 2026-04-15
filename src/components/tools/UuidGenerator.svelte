@@ -26,7 +26,7 @@
 
   let copied = $state(false);
 
-  let timerRef = $state(null);  onDestroy(() => {
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
 

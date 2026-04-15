@@ -17,7 +17,8 @@
     return typeof value === 'string' ? value : `MISSING: tools.${key}`;
   }
   function tc(key: string): string {
-    const scope = translations['tools']['color-contrast-checker'] as Record<string, unknown> || {};
+    const tools = translations['tools'] as Record<string, unknown> || {};
+    const scope = tools['color-contrast-checker'] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -62,7 +63,7 @@
     <div class="space-y-8">
       <div class="grid grid-cols-1 md:grid-cols-[1fr,auto,1fr] gap-6 items-end">
         <div class="space-y-2">
-          <label class="tool-label !mb-0">{'Foreground Color'}</label>
+          <div class="tool-label !mb-0">{'Foreground Color'}</div>
           <div class="flex gap-2">
             <input
               type="color"
@@ -83,7 +84,7 @@
         </button>
 
         <div class="space-y-2">
-          <label class="tool-label !mb-0">{'Background Color'}</label>
+          <div class="tool-label !mb-0">{'Background Color'}</div>
           <div class="flex gap-2">
             <input
               type="color"

@@ -299,7 +299,7 @@
                     {#each series as s, i (i)}
 <th  class="text-left py-2 px-2 font-medium">
                         <div class="flex items-center gap-1">
-                          <input type="text" bind:value={s.name} class="w-20 px-1 py-0.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-xs" />
+                          <input type="text" value={s.name} oninput={(e) => { series[i] = { ...series[i], name: (e.currentTarget as HTMLInputElement).value }; series = [...series]; }} class="w-20 px-1 py-0.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-xs" />
                           {#if series.length > 1}
 <button onclick={() => deleteSeries(i)} class="text-red-400 hover:text-red-300 text-xs">✕</button>
 {/if}
@@ -313,11 +313,11 @@
                   {#each categories as cat, catIndex (catIndex)}
 <tr  class="border-b border-gray-100 dark:border-gray-800 last:border-b-0">
                       <td class="py-2 px-2 min-w-[120px]">
-                        <input type="text" bind:value={cat} class="w-full min-w-[100px] px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
+                        <input type="text" value={cat} oninput={(e) => { categories[catIndex] = (e.currentTarget as HTMLInputElement).value; categories = [...categories]; }} class="w-full min-w-[100px] px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
                       </td>
                       {#each series as s, seriesIndex (seriesIndex)}
 <td  class="py-2 px-2">
-                          <input type="number" bind:value={s.values[catIndex]} class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
+                          <input type="number" value={s.values[catIndex]} oninput={(e) => { series[seriesIndex].values[catIndex] = Number((e.currentTarget as HTMLInputElement).value) || 0 ; series = [...series]; }} class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
                         </td>
 {/each}
                       <td class="py-2 px-2">

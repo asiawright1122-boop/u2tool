@@ -240,9 +240,9 @@
     <div class="space-y-2">
       {#each historicalData as item, i}
         <div class="flex gap-2 items-center">
-          <input type="text" bind:value={item.period} class="w-28 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-900 dark:text-white" />
-          <input type="number" bind:value={item.revenue} class="flex-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-900 dark:text-white" placeholder={t('revenue')} />
-          <input type="number" bind:value={item.expenses} class="flex-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-900 dark:text-white" placeholder={t('expenses')} />
+          <input type="text" value={item.period} oninput={(e) => { historicalData[i] = { ...historicalData[i], period: (e.currentTarget as HTMLInputElement).value }; historicalData = [...historicalData]; }} class="w-28 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-900 dark:text-white" />
+          <input type="number" value={item.revenue} oninput={(e) => { historicalData[i] = { ...historicalData[i], revenue: Number((e.currentTarget as HTMLInputElement).value) || 0 }; historicalData = [...historicalData]; }} class="flex-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-900 dark:text-white" placeholder={t('revenue')} />
+          <input type="number" value={item.expenses} oninput={(e) => { historicalData[i] = { ...historicalData[i], expenses: Number((e.currentTarget as HTMLInputElement).value) || 0 }; historicalData = [...historicalData]; }} class="flex-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-900 dark:text-white" placeholder={t('expenses')} />
           <button onclick={() => removePeriod(i)} class="text-red-500 hover:text-red-700 text-sm px-2">✕</button>
         </div>
       {/each}

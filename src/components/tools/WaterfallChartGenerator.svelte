@@ -372,16 +372,16 @@
                   </tr>
                 </thead>
                 <tbody>
-                  {#each data as row (row.id)}
+                  {#each data as row, _rowIdx (row.id)}
 <tr  class="border-b border-gray-100 dark:border-gray-800 last:border-b-0">
                       <td class="py-2 px-2 min-w-[120px]">
-                        <input type="text" bind:value={row.category} class="w-full min-w-[100px] px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
+                        <input type="text" value={row.category} oninput={(e) => { data[_rowIdx] = { ...data[_rowIdx], category: (e.currentTarget as HTMLInputElement).value }; data = [...data]; }} class="w-full min-w-[100px] px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
                       </td>
                       <td class="py-2 px-2 min-w-[100px]">
-                        <input type="number" bind:value={row.value} class="w-full min-w-[80px] px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
+                        <input type="number" value={row.value} oninput={(e) => { data[_rowIdx] = { ...data[_rowIdx], value: Number((e.currentTarget as HTMLInputElement).value) || 0 }; data = [...data]; }} class="w-full min-w-[80px] px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
                       </td>
                       <td class="py-2 px-2 min-w-[100px]">
-                        <select bind:value={row.type} class="w-full min-w-[80px] px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm">
+                        <select value={row.type} onchange={(e) => { data[_rowIdx] = { ...data[_rowIdx], type: (e.currentTarget as HTMLSelectElement).value }; data = [...data]; }} class="w-full min-w-[80px] px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm">
                           <option value="increase">{t('typeIncrease')}</option>
                           <option value="decrease">{t('typeDecrease')}</option>
                           <option value="total">{t('typeTotal')}</option>
