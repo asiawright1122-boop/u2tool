@@ -1,5 +1,9 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { createToolTranslator, createGeneralTranslator } from '@/lib/translation-helper';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
+  import { useChartTheme } from '@/hooks/useChartTheme';
 
   interface Props {
     locale: string;
@@ -7,23 +11,19 @@
   }
 
   const colorThemes = {
-  default: ['#5470c6', '#91cc75'],
-  ocean: ['#0077b6', '#00b4d8'],
-  sunset: ['#ff6b6b', '#feca57'],
-  forest: ['#2d6a4f', '#52b788'],
-};
+    default: ['#5470c6', '#91cc75'],
+    ocean: ['#0077b6', '#00b4d8'],
+    sunset: ['#ff6b6b', '#feca57'],
+    forest: ['#2d6a4f', '#52b788'],
+  };
+
+  const shapeOptions = ['circle', 'rect', 'roundRect', 'triangle', 'diamond', 'pin', 'arrow'];
 
   let { locale, translations }: Props = $props();
 
   // Translation helpers
-  import { createToolTranslator, createGeneralTranslator } from '@/lib/translation-helper';
   const t = createToolTranslator(translations, 'liquid-fill-chart-generator');
   const tg = createGeneralTranslator(translations);
-
-  // Imports
-  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
-  import type { EChartsOption } from "echarts";
-  import { useChartTheme } from '@/hooks/useChartTheme';
 
   let isInitialized = $state(false);
 
