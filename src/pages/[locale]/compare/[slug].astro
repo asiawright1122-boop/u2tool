@@ -19,6 +19,7 @@ import {
 import { loadBaseMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
+import { buildLocalizedPagePath } from '@/lib/seo';
 
 export const prerender = true;
 
@@ -54,14 +55,14 @@ const toolDescriptions = Object.fromEntries(
 
 const guide = getComparisonGuide(locale, slug, categoryMessages, toolNames, toolDescriptions);
 if (!guide) {
-  return Astro.redirect(`/${locale}/compare`);
+  return Astro.redirect(`/${locale}/compare/`);
 }
 
 const uiCopy = getComparisonUiCopy(locale);
 const BASE_URL = getPublicSiteUrl();
 const breadcrumbItems = [
-  { label: navMessages.home || 'Home', href: `/${locale}` },
-  { label: uiCopy.comparisonSectionTitle, href: `/${locale}/compare` },
+  { label: navMessages.home || 'Home', href: buildLocalizedPagePath(locale, '/') },
+  { label: uiCopy.comparisonSectionTitle, href: buildLocalizedPagePath(locale, '/compare') },
   { label: guide.title, href: guide.href },
 ];
 const breadcrumbData = {

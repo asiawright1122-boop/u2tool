@@ -47,7 +47,7 @@ describe('discovery surface governance', () => {
     ]);
 
     for (const spotlight of spotlights) {
-      expect(spotlight.href).toBe(`/en/categories/${spotlight.category}`);
+      expect(spotlight.href).toBe(`/en/categories/${spotlight.category}/`);
     }
   });
 
@@ -57,7 +57,7 @@ describe('discovery surface governance', () => {
     for (const spotlight of spotlights) {
       for (const tool of spotlight.tools) {
         expect(getToolBySlug(tool.slug)?.category).toBe(spotlight.category);
-        expect(tool.href).toBe(`/en/tools/${tool.slug}`);
+        expect(tool.href).toBe(`/en/tools/${tool.slug}/`);
       }
     }
   });
@@ -69,6 +69,6 @@ describe('discovery surface governance', () => {
 
     expect(itemList.numberOfItems).toBe(3);
     expect(elements[0]?.position).toBe(1);
-    expect(elements[0]?.url).toBe('https://u2tool.com/en/categories/text');
+    expect(elements[0]?.url).toBe('https://u2tool.com/en/categories/text/');
   });
 });

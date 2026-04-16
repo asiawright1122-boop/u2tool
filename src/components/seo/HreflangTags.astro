@@ -11,7 +11,7 @@
 
 import { locales } from '@/lib/i18n';
 import { getPublicSiteUrl } from '@/lib/public-env';
-import { getHreflang } from '@/lib/seo';
+import { buildLocalizedPageUrl, getHreflang } from '@/lib/seo';
 
 interface Props {
   /** Path without locale prefix, e.g. `/tools/json-formatter` */
@@ -22,21 +22,17 @@ const { path } = Astro.props;
 
 const BASE_URL = getPublicSiteUrl();
 
-// Ensure path starts with /
-const normalizedPath = path.startsWith('/') ? path : `/${path}`;
-const pathSuffix = normalizedPath === '/' ? '' : normalizedPath;
-
 ---
 
 {locales.map((locale) => (
   <link
     rel="alternate"
     hreflang={getHreflang(locale)}
-    href={`${BASE_URL}/${locale}${pathSuffix}`}
+    href={buildLocalizedPageUrl(BASE_URL, locale, path)}
   />
 ))}
 <link
   rel="alternate"
   hreflang="x-default"
-  href={`${BASE_URL}/en${pathSuffix}`}
+  href={buildLocalizedPageUrl(BASE_URL, 'en', path)}
 />

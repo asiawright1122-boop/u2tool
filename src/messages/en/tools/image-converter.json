@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Image Format Converter enables precise conversion between PNG, JPEG, and WebP formats through a server-side processing pipeline that leverages industry-standard codecs like libpng, libjpeg, and libwebp. Technically, this tool decodes source images into raw pixel data, then re-encodes them using format-specific compression algorithms: lossless DEFLATE for PNG, lossy DCT-based compression for JPEG, and VP8/VP8L encoding for WebP. Users benefit from granular control over compression parameters, including quality factor adjustment (1-100), chroma subsampling options, and metadata stripping capabilities. This tool addresses critical use cases such as optimizing web assets for Core Web Vitals compliance, preparing assets for cross-platform compatibility (e.g., legacy systems requiring JPEG), and reducing storage costs through WebP's superior compression density. Advanced features include color space conversion (RGB/CMYK), automatic ICC profile handling, and support for transparency channels during PNG conversions. Processing occurs in-memory using WebAssembly-optimized ImageMagick binaries, ensuring zero disk I/O overhead and sub-second conversion times for files under 25MB.",
+  "detailed_description": "The Image Format Converter helps you switch local images between PNG, JPEG, and WebP without leaving the browser. Upload a file, choose the target format, adjust quality for JPEG or WebP, and compare the original with the converted preview before downloading the result. It is useful for preparing lighter website assets, creating email-friendly JPEGs, or checking how the same image looks across common web formats in a quick one-page workflow.",
   "usage_steps": [
-    "Drag-and-drop your source image into the designated upload area or click 'Browse' to select from your device",
-    "Choose target format (PNG/JPEG/WebP) from the format selection dropdown menu",
-    "Adjust quality slider: set 0-100% compression level for JPEG/WebP or select 'Lossless' for PNG",
-    "Enable 'Strip Metadata' checkbox to remove EXIF/IPTC data and reduce file footprint",
-    "Toggle advanced options: enable 'Preserve Transparency' for PNG conversions or 'Color Space Conversion' to CMYK",
-    "Click 'Convert' to initiate processing, then download the optimized file via the provided link"
+    "Upload an image from your device to load the original preview.",
+    "Choose PNG, JPEG, or WebP as the target format.",
+    "If you select JPEG or WebP, adjust the quality slider to balance size and clarity.",
+    "Run the conversion and compare the converted preview with the original image.",
+    "Download the converted file once the result looks right."
   ],
   "usage_examples": [
-    "A web developer converts a 24-bit PNG banner to WebP with 85% quality, reducing file size from 1.2MB to 340KB while maintaining visual fidelity for faster page loads",
-    "A graphic designer converts a JPEG logo with embedded CMYK profile to RGB PNG format for compatibility with web-based design tools",
-    "An email marketer converts high-resolution product images from PNG to optimized JPEG format at 75% quality to meet 10MB attachment size limits",
-    "A mobile app engineer batch-converts legacy JPEG assets to WebP format using lossless compression to reduce APK size by 18%"
+    "Convert a PNG screenshot to JPEG for a smaller email attachment.",
+    "Export a logo or UI asset as WebP for a faster landing page.",
+    "Compare PNG, JPEG, and WebP outputs before publishing an image-heavy page."
   ]
 }

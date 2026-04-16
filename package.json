@@ -11,6 +11,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
+    "report:content-trust": "node scripts/validation/content-trust-audit.mjs",
     "validate:production-routes": "node scripts/validation/verify-production-routes.mjs",
     "qa:ai-discovery": "npx vitest run src/lib/ai-discovery/*.test.ts && npm run build",
     "qa:ai-discovery:strict": "npm run qa:ai-discovery && npm run check",

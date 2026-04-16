@@ -19,6 +19,7 @@ import {
 import { loadBaseMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
+import { buildLocalizedPageUrl } from '@/lib/seo';
 
 export const prerender = true;
 
@@ -57,7 +58,7 @@ const comparisonItemListData = buildComparisonGuidesItemList(BASE_URL, guides);
 const collectionData = {
   name: uiCopy.comparisonSectionTitle,
   description: uiCopy.comparisonSectionDescription,
-  url: `${BASE_URL}/${locale}/compare`,
+  url: buildLocalizedPageUrl(BASE_URL, locale, '/compare'),
   numberOfItems: guides.length,
   hasPart: guides.map((guide) => ({
     '@type': 'CollectionPage',
@@ -82,7 +83,7 @@ const collectionData = {
   <meta property="og:description" content={uiCopy.comparisonSectionDescription} slot="head" />
   <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
   <meta property="og:type" content="website" slot="head" />
-  <meta property="og:url" content={`${BASE_URL}/${locale}/compare`} slot="head" />
+  <meta property="og:url" content={buildLocalizedPageUrl(BASE_URL, locale, '/compare')} slot="head" />
   <meta name="twitter:card" content="summary_large_image" slot="head" />
 
   <StaticSidebar

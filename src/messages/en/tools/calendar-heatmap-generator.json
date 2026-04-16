@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Calendar Heatmap Generator is a specialized data visualization tool that transforms time-series datasets into color-coded calendar grids using HTML5 Canvas and SVG rendering. By mapping numerical values to chromatic gradients via D3.js scale interpolators, it enables granular analysis of daily patterns across months or years. Developers and analysts can input structured data in CSV/JSON formats containing ISO 8601 date stamps and corresponding metric values, which the tool processes through a date-fns.js parser to construct two-dimensional temporal matrices. Each calendar cell's fill color intensity is calculated using either linear or logarithmic color scales, with optional custom domain ranges for precise data normalization. The resulting visualizations support responsive SVG output with embedded metadata tooltips and raster PNG exports at 4K resolution. This tool addresses specific needs for tracking metrics like API usage trends, health tracking adherence, or financial transaction frequencies, offering precise control over date range filtering, color palette inversion, and weekday/weekend contrast adjustments.",
+  "detailed_description": "The Calendar Heatmap Generator turns daily values into a calendar-style chart so you can spot streaks, gaps, and seasonal patterns quickly. It works well for contribution history, habit tracking, daily traffic, or any dataset organized by date. You can load date-and-value pairs, choose a color range, review the calendar preview, and export the result as PNG or SVG when you need a compact visual for dashboards, status updates, or documentation.",
   "usage_steps": [
-    "Upload structured data via the file input field, ensuring columns contain 'date' (YYYY-MM-DD) and 'value' (numerical) fields",
-    "Select date range using the dual-month picker to define visualization boundaries",
-    "Configure color scale using the gradient builder with options for sequential, diverging, or custom hex color arrays",
-    "Adjust intensity normalization with the domain range slider to compress or expand color value mappings",
-    "Toggle weekday/weekend cell borders using the accessibility checkbox for temporal pattern emphasis",
-    "Export rendered visualization using the resolution selector (SVG or PNG with DPI control)"
+    "Enter or paste date-and-value rows in the editor so each day you care about is represented clearly.",
+    "Set the date range and chart title to match the period you want to review.",
+    "Choose colors that make low and high activity easy to distinguish in the calendar grid.",
+    "Inspect the preview to confirm missing days, busy periods, and labels look right.",
+    "Export the final calendar heatmap as PNG or SVG for sharing or embedding elsewhere."
   ],
   "usage_examples": [
-    "Analyzing daily GitHub commit frequency over six months to identify coding productivity patterns",
-    "Visualizing website traffic metrics from Google Analytics exports to detect seasonal user engagement trends",
-    "Tracking fitness app workout completion rates with color gradients showing exercise consistency",
-    "Mapping retail sales transactions to calendar days for identifying peak purchasing periods by week and month"
+    "Show daily product usage over a quarter to highlight busy periods and quiet weekends.",
+    "Track workout or study consistency over several months in a personal dashboard.",
+    "Visualize contribution activity for a project timeline or team update."
   ]
 }

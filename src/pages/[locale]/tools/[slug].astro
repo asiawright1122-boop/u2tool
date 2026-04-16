@@ -37,7 +37,10 @@ import type { Locale } from '@/lib/i18n';
 import { loadToolMessages, loadBaseMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
+import { buildLocalizedPageUrl } from '@/lib/seo';
 import { sanitizeHtml } from '@/lib/sanitize';
+import { assessSupportContentTrust } from '@/lib/content-trust';
+import { buildSafeFallbackSupportContent } from '@/lib/support-content-fallback';
 
 export const prerender = true;
 
@@ -75,10 +78,9 @@ const toolName = (messages.name as string) || tool.slug;
 const toolDescription = (messages.description as string) || '';
 const seoTitle = (messages.seo_title as string) || toolName;
 const seoDescription = (messages.seo_description as string) || toolDescription;
-const detailedDescription = (messages.detailed_description as string) || '';
-const safeDetailedDescription = sanitizeHtml(detailedDescription.replace(/\n/g, '<br />'));
-const usageSteps = messages.usage_steps as string[] | undefined;
-const usageExamples = messages.usage_examples as string[] | undefined;
+const rawDetailedDescription = (messages.detailed_description as string) || '';
+const rawUsageSteps = messages.usage_steps as string[] | undefined;
+const rawUsageExamples = messages.usage_examples as string[] | undefined;
 
 // Category name (localized)
 const categoryName = categoryMessages[tool.category] || tool.category;
@@ -108,7 +110,7 @@ const BASE_URL = getPublicSiteUrl();
 const softwareAppData = {
   name: toolName,
   description: seoDescription,
-  url: `${BASE_URL}/${locale}/tools/${tool.slug}`,
+  url: buildLocalizedPageUrl(BASE_URL, locale, `/tools/${tool.slug}`),
   applicationCategory: 'UtilitiesApplication',
   operatingSystem: 'Any',
   offers: {
@@ -116,30 +118,7 @@ const softwareAppData = {
     price: '0',
     priceCurrency: 'USD',
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    ratingCount: '100',
-    bestRating: '5',
-    worstRating: '1',
-  },
 };
-
-// ---------------------------------------------------------------------------
-// Structured data: HowTo (if usage steps are available)
-// ---------------------------------------------------------------------------
-const howToData = usageSteps && usageSteps.length > 0
-  ? {
-      name: `How to use ${toolName}`,
-      description: seoDescription,
-      step: usageSteps.map((step, index) => ({
-        '@type': 'HowToStep',
-        position: index + 1,
-        text: step,
-      })),
-      totalTime: 'PT2M',
-    }
-  : null;
 
 // ---------------------------------------------------------------------------
 // FAQ data: extract from translations if available
@@ -179,7 +158,50 @@ function extractFAQs(msgs: Record<string, unknown>): FAQItem[] {
   return faqs;
 }
 
-const faqs = extractFAQs(messages);
+const rawFaqs = extractFAQs(messages);
+const supportContentTrust = assessSupportContentTrust({
+  slug: tool.slug,
+  locale,
+  name: toolName,
+  description: toolDescription,
+  detailedDescription: rawDetailedDescription,
+  usageSteps: rawUsageSteps,
+  usageExamples: rawUsageExamples,
+  faqs: rawFaqs,
+});
+const supportContentFallback =
+  supportContentTrust.blockSupportContent
+    ? buildSafeFallbackSupportContent(tool.slug, toolName, locale)
+    : null;
+const detailedDescription = supportContentTrust.blockSupportContent
+  ? supportContentFallback?.detailedDescription ?? ''
+  : rawDetailedDescription;
+const safeDetailedDescription = detailedDescription
+  ? sanitizeHtml(detailedDescription.replace(/\n/g, '<br />'))
+  : '';
+const usageSteps = supportContentTrust.blockSupportContent
+  ? supportContentFallback?.usageSteps
+  : rawUsageSteps;
+const usageExamples = supportContentTrust.blockSupportContent
+  ? supportContentFallback?.usageExamples
+  : rawUsageExamples;
+const faqs = supportContentTrust.blockSupportContent ? [] : rawFaqs;
+
+// ---------------------------------------------------------------------------
+// Structured data: HowTo (if usage steps are available)
+// ---------------------------------------------------------------------------
+const howToData = usageSteps && usageSteps.length > 0
+  ? {
+      name: `How to use ${toolName}`,
+      description: seoDescription,
+      step: usageSteps.map((step, index) => ({
+        '@type': 'HowToStep',
+        position: index + 1,
+        text: step,
+      })),
+      totalTime: 'PT2M',
+    }
+  : null;
 
 // ---------------------------------------------------------------------------
 // Build translations object for ToolWrapper
@@ -263,7 +285,7 @@ for (const slug of relatedToolSlugs) {
     slot="head"
   />
   <meta property="og:type" content="website" slot="head" />
-  <meta property="og:url" content={`${BASE_URL}/${locale}/tools/${tool.slug}`} slot="head" />
+  <meta property="og:url" content={buildLocalizedPageUrl(BASE_URL, locale, `/tools/${tool.slug}`)} slot="head" />
   <meta property="og:site_name" content="U2Tool" slot="head" />
   <meta name="twitter:card" content="summary_large_image" slot="head" />
   <meta name="twitter:title" content={`${seoTitle} | U2Tool`} slot="head" />

@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Stacked Area Chart Generator enables developers and data analysts to visualize multi-series temporal data through layered area representations. This tool employs a stacking algorithm to display cumulative contributions of categorical variables along a Y-axis against a time-based X-axis, with each data series rendered as a filled region. Users can choose between absolute value stacking or normalized percentage-based visualization to highlight proportionality. Built with D3.js and SVG rendering, it supports dynamic axis scaling, custom color palettes, and interactive tooltips displaying precise data points. The generator's unique capability lies in its ability to handle irregular time intervals and missing data points through cubic interpolation, making it ideal for financial forecasting, resource allocation analysis, and trend comparison scenarios where data continuity matters. Technical features include support for JSON/CSV data imports, axis label customization, and export options in both vector and raster formats.",
+  "detailed_description": "The Stacked Area Chart Generator shows how several series contribute to a changing total across time or ordered categories. It is useful when you want to keep the overall trend visible while also showing how each part of the total shifts over the same timeline. You can enter grouped data, adjust stack order, colors, labels, and legend settings, then export the final chart as PNG or SVG after checking the live preview in the browser.",
   "usage_steps": [
-    "1. Import structured data via CSV/JSON file or manual entry in the grid editor",
-    "2. Map columns to 'X-axis (Time)', 'Y-axis (Value)', and 'Series (Category)' fields",
-    "3. Select stacking mode using the toggle switch between 'Absolute' and 'Percentage' views",
-    "4. Configure color encoding through the integrated CIELAB color picker for accessibility compliance",
-    "5. Adjust axis ranges manually or enable auto-scaling for dynamic datasets",
-    "6. Export the chart as SVG for infinite resolution or PNG with customizable DPI settings"
+    "Enter the ordered labels and values for each series you want to stack.",
+    "Set the chart title and confirm the series order matches the story you want to tell.",
+    "Adjust colors, legend visibility, and labels so each layer stays distinct.",
+    "Review the preview and refine the data if small sections are hard to read.",
+    "Export the completed stacked area chart as PNG or SVG for decks, dashboards, or reports."
   ],
   "usage_examples": [
-    "A financial analyst comparing quarterly revenue contributions from different product lines across five years",
-    "A mobile app developer visualizing daily active user distribution across Android, iOS, and Web platforms",
-    "An energy researcher analyzing hourly electricity generation mix from solar, wind, and fossil sources",
-    "A retail manager tracking inventory levels of various clothing categories across multiple store locations"
+    "Show how traffic sources contribute to total visits over time.",
+    "Visualize the changing mix of subscription plans across several quarters.",
+    "Track department headcount composition by month during a reorganization."
   ]
 }

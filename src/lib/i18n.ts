@@ -13,6 +13,40 @@ export type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = 'en';
 
+function splitPathSuffix(path: string): { pathname: string; suffix: string } {
+  const hashIndex = path.indexOf('#');
+  const hash = hashIndex >= 0 ? path.slice(hashIndex) : '';
+  const withoutHash = hashIndex >= 0 ? path.slice(0, hashIndex) : path;
+  const queryIndex = withoutHash.indexOf('?');
+  const query = queryIndex >= 0 ? withoutHash.slice(queryIndex) : '';
+  const pathname = queryIndex >= 0 ? withoutHash.slice(0, queryIndex) : withoutHash;
+
+  return {
+    pathname: pathname || '/',
+    suffix: `${query}${hash}`,
+  };
+}
+
+function isFileLikePath(pathname: string): boolean {
+  const segments = pathname.split('/').filter(Boolean);
+  const lastSegment = segments.at(-1) || '';
+  return /\.[a-z0-9]+$/i.test(lastSegment);
+}
+
+export function ensurePagePath(pathname: string): string {
+  const trimmed = pathname.trim();
+  if (!trimmed || trimmed === '/') {
+    return '/';
+  }
+
+  const normalized = trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
+  if (isFileLikePath(normalized)) {
+    return normalized;
+  }
+
+  return normalized.endsWith('/') ? normalized : `${normalized}/`;
+}
+
 /**
  * Type guard to check if a string is a valid locale.
  */
@@ -40,24 +74,29 @@ export function getLocaleFromPath(path: string): Locale {
 /**
  * Replace or prepend the locale prefix in a URL path.
  * Examples:
- *   getLocalizedPath('zh', '/en/tools/json-formatter') => '/zh/tools/json-formatter'
- *   getLocalizedPath('ja', '/tools/json-formatter')    => '/ja/tools/json-formatter'
- *   getLocalizedPath('en', '/en')                      => '/en'
+ *   getLocalizedPath('zh', '/en/tools/json-formatter') => '/zh/tools/json-formatter/'
+ *   getLocalizedPath('ja', '/tools/json-formatter')    => '/ja/tools/json-formatter/'
+ *   getLocalizedPath('en', '/en')                      => '/en/'
  */
 export function getLocalizedPath(locale: Locale, path: string): string {
+  const { pathname, suffix } = splitPathSuffix(path);
+
   // Remove leading slash for processing
-  const cleanPath = path.replace(/^\//, '');
+  const cleanPath = pathname.replace(/^\//, '');
   const segments = cleanPath.split('/');
+  let localizedPath: string;
 
   // Check if the first segment is already a valid locale
   if (segments[0] && isValidLocale(segments[0])) {
     // Replace existing locale prefix
     segments[0] = locale;
-    return '/' + segments.join('/');
+    localizedPath = '/' + segments.join('/');
+  } else {
+    // No locale prefix found — prepend the locale
+    localizedPath = '/' + locale + (cleanPath ? '/' + cleanPath : '');
   }
 
-  // No locale prefix found — prepend the locale
-  return '/' + locale + (cleanPath ? '/' + cleanPath : '');
+  return `${ensurePagePath(localizedPath)}${suffix}`;
 }
 
 /**

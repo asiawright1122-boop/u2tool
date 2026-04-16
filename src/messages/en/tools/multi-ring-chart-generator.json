@@ -1,18 +1,16 @@
 {
-  "detailed_description": "The Multi Ring Chart Generator is an SVG-based visualization tool that creates layered concentric ring charts for comparative data analysis. This tool enables developers and analysts to map multiple datasets to distinct radial layers, each representing a separate metric with customizable thickness, color gradients, and scale ranges. Unlike traditional doughnut charts, this generator supports asynchronous data binding through JSON or CSV inputs, allowing dynamic updates to individual rings without full chart re-rendering. The technical architecture leverages D3.js for responsive scaling across devices, with options to set inner/outer radii ratios, arc interpolation methods, and collision detection for overlapping value ranges. Users benefit from precision control over stroke-linejoin properties and gradient stops for visual differentiation. Common applications include tracking KPIs across business quarters, comparing sensor data in IoT dashboards, visualizing multi-player game statistics, and displaying nested survey response distributions. The tool's unique ring isolation feature lets users highlight specific datasets by dimming unrelated layers through opacity adjustments in real time.",
+  "detailed_description": "The Multi Ring Chart Generator creates concentric ring charts for layered comparisons in a compact circular layout. It works well when you want to compare several related breakdowns, such as periods, teams, or goal areas, without switching between multiple separate charts. You can enter segment values for each ring, adjust colors, labels, spacing, and titles, then export the preview as PNG or SVG for dashboards, reports, or presentation slides.",
   "usage_steps": [
-    "Navigate to the 'Chart Configuration' panel and specify the number of concentric rings (3-12 layers supported) using the range slider",
-    "Upload structured data via CSV/JSON import, ensuring each column corresponds to a distinct metric's value array",
-    "Use the 'Data Mapping Panel' to assign specific dataset fields to individual rings, configuring min/max value boundaries for each layer",
-    "Customize visual properties through the 'Style Editor' - select from 12 preset color gradients, adjust ring thickness (5-50px), and set corner radius for arc endpoints",
-    "Enable 'Dynamic Scaling' mode or manually configure axis ranges using the 'Scale Type Selector' for linear/logarithmic transformations",
-    "Preview interactive chart in the 'Render Window' and export as SVG vector graphic or PNG bitmap with resolution up to 4K"
+    "Add the labels and values for each ring so every layer represents the comparison you want to show.",
+    "Set the chart title and arrange the inner and outer rings in the order that reads most clearly.",
+    "Adjust colors, ring thickness, labels, and spacing to keep the circular layout easy to understand.",
+    "Review the preview and refine the data if any segments feel too crowded or visually unbalanced.",
+    "Export the final multi ring chart as PNG or SVG for sharing or embedding elsewhere."
   ],
   "usage_examples": [
-    "Marketing analysts comparing monthly conversion rates across three campaign variants using nested rings with diverging color scales",
-    "Industrial engineers monitoring real-time machinery sensor data with four rings representing temperature, pressure, vibration, and RPM metrics",
-    "Game developers visualizing player performance statistics through 8-layer rings showing kill/death ratios, resource collection rates, and mission completion times",
-    "Financial auditors tracking quarterly budget allocations across 12 departments with color-coded rings and embedded percentage annotations"
+    "Compare planned versus actual spend across several departments in one compact chart.",
+    "Show how customer mix changes across quarters using a separate ring for each period.",
+    "Build a KPI summary card with separate rings for adoption, retention, and revenue targets."
   ],
   "sampleData": {
     "revenue": "Revenue",

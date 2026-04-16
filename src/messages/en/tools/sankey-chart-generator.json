@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Sankey Chart Generator is a specialized tool for creating flow-based data visualizations using Sankey diagrams, which map quantitative relationships between entities through directed links and proportionally sized nodes. Technically, it leverages D3.js to render dynamic, force-directed graphs that automatically calculate node positioning and link curvature based on input data. Users can visualize complex systems like energy transfer networks, financial transaction pipelines, or resource allocation chains by defining source-target relationships with associated numerical values. The tool supports multi-dimensional analysis through features like color-coding branches via categorical metadata, adjusting link transparency based on flow magnitude, and implementing hierarchical clustering algorithms to group related nodes. Built-in data validation checks ensure proper formatting of input JSON/CSV files, which must include 'source', 'target', and 'value' fields per entry. Advanced users can customize layout parameters such as node spacing ratios, link curvature tension, and force simulation strength to optimize readability for specific datasets.",
+  "detailed_description": "The Sankey Chart Generator helps you visualize flow from one stage, team, or category to another with widths that reflect relative volume. It is a strong format for showing movement across funnels, budgets, user journeys, or operational handoffs where the path matters as much as the totals. You can enter source, target, and value rows, adjust labels and colors, review the live preview, and export the finished diagram as PNG or SVG for dashboards, presentations, or documentation.",
   "usage_steps": [
-    "Access the tool via the 'Charts' category on the homepage and click 'Start New Project' to initialize the workspace",
-    "Upload structured data in CSV/TSV format or manually input flow values using the tabular editor with required 'Source Node', 'Target Node', and 'Flow Volume' columns",
-    "Map data fields to visualization elements using the 'Node Configuration' panel, specifying categorical labels and numerical weights for each connection",
-    "Adjust visual hierarchy with the 'Layout Controls' slider to set node alignment (left/right/center) and link bundling intensity",
-    "Customize presentation settings in the 'Style Editor' by selecting diverging color scales, setting minimum link opacity thresholds, and toggling node border visibility",
-    "Export the final diagram as a high-resolution PNG image or SVG vector file using the 'Download' dropdown, with options to include embedded metadata or legend annotations"
+    "Add rows for each flow using clear source labels, target labels, and values.",
+    "Set the chart title and confirm the stage names match the story you want to explain.",
+    "Adjust colors, node labels, and spacing so the main paths remain easy to follow.",
+    "Review the preview and refine the data if branches feel too crowded or repetitive.",
+    "Export the completed Sankey chart as PNG or SVG for reports, slides, or internal docs."
   ],
   "usage_examples": [
-    "Modeling electricity distribution networks to identify transmission bottlenecks by visualizing voltage flow between substations",
-    "Tracking customer purchase pathways across marketing channels to measure conversion efficiency in e-commerce platforms",
-    "Analyzing carbon emission transfers between industrial sectors using input-output economic models",
-    "Mapping biological metabolic pathways where nodes represent enzymes and links show reaction flux rates in biochemistry research"
+    "Show how leads move from acquisition channels into qualified and closed stages.",
+    "Visualize budget allocation from top-level departments into programs and projects.",
+    "Map user journeys from landing pages into feature areas and conversion steps."
   ]
 }

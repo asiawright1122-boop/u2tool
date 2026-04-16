@@ -23,6 +23,7 @@ import {
   buildMobileNavMessages,
 } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
+import { buildLocalizedPageUrl } from '@/lib/seo';
 
 export const prerender = true;
 
@@ -36,7 +37,7 @@ export const getStaticPaths: GetStaticPaths = () => {
 const { locale } = Astro.props as { locale: Locale };
 
 if (!isAiDiscoveryEnabled()) {
-  return Astro.redirect(`/${locale}/tools`);
+  return Astro.redirect(`/${locale}/tools/`);
 }
 
 const baseMessages = await loadBaseMessages(locale);
@@ -84,7 +85,7 @@ const comparisonGuides = buildComparisonGuides(locale, categoryMessages, toolNam
   <meta property="og:description" content={aiPageDescription} slot="head" />
   <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
   <meta property="og:type" content="website" slot="head" />
-  <meta property="og:url" content={`${BASE_URL}/${locale}/ai`} slot="head" />
+  <meta property="og:url" content={buildLocalizedPageUrl(BASE_URL, locale, '/ai')} slot="head" />
   <meta name="twitter:card" content="summary_large_image" slot="head" />
 
   <StaticSidebar

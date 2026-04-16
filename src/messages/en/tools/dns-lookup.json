@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The DNS Lookup tool performs granular interrogation of domain name system (DNS) infrastructure by retrieving specific resource records from authoritative name servers. Technically, it initiates UDP-based queries against configured DNS servers to fetch A/AAAA records for IPv4/IPv6 mapping, MX records for mail routing validation, CNAMEs for canonical name resolution, TXT records for SPF/DKIM configurations, and NS records for zone delegation verification. Developers and system administrators utilize this tool to diagnose DNS propagation delays post-zone updates, validate DNSSEC signature chains, and troubleshoot misconfigured mail exchanger records that cause email delivery failures. The tool's advanced mode reveals packet round-trip times, EDNS0 buffer sizes, and authoritative server IP geolocation metadata by parsing response headers and OPT pseudo-records. Unlike basic resolvers, it bypasses local resolver caches by directly querying configured name servers, ensuring results reflect current zone file states. Internally, it implements asynchronous non-blocking I/O with parallel query threading to handle bulk lookups while respecting RFC 1034 protocol standards.",
+  "detailed_description": "The DNS Lookup tool checks common DNS record types for a domain and shows the answers returned by a public DNS-over-HTTPS endpoint. It looks up A, AAAA, CNAME, MX, NS, and TXT records, then groups the returned values with their TTLs so you can inspect current DNS data without leaving the page. This is useful for quick troubleshooting, propagation checks, and verifying whether the records you expect are already visible.",
   "usage_steps": [
-    "Input the target domain name into the 'Domain' text field with real-time syntax validation",
-    "Select desired query type from the multi-select dropdown (A, AAAA, MX, TXT, CNAME, NS, SOA)",
-    "Adjust advanced settings: specify custom DNS server IP, set timeout threshold (500-5000ms), enable DNSSEC validation",
-    "Click 'Initiate Query' button to trigger parallel DNS resolution attempts across selected record types",
-    "Analyze response grid displaying TTL values, record class, response flags (AA, TC, RD), and RCODE status codes",
-    "Export results in JSON format with full packet hex dumps or CSV summary using the 'Download' toggle menu"
+    "Enter a domain name in the lookup field.",
+    "Run the lookup to request A, AAAA, CNAME, MX, NS, and TXT records.",
+    "Review each result group and compare the returned values and TTLs.",
+    "Use the output to confirm current DNS answers after a change or migration.",
+    "Repeat the lookup later if you are checking whether propagation has finished."
   ],
   "usage_examples": [
-    "Confirm successful DNS propagation after migrating web hosting providers by comparing A record responses across global anycast resolvers",
-    "Debug email delivery issues by validating MX record priority values and associated mail server A record reachability",
-    "Audit DNSSEC chain integrity for a financial institution's domain by requesting DS and RRSIG records",
-    "Troubleshoot CDN integration by examining CNAME resolution paths and associated TXT record metadata"
+    "Confirm that a new MX setup is visible before testing email delivery.",
+    "Check whether a TXT verification record has propagated after a DNS update.",
+    "Inspect A and AAAA answers during a hosting move or CDN cutover."
   ]
 }

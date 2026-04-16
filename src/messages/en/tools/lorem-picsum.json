@@ -1,17 +1,15 @@
 {
-  "detailed_description": "Lorem Picsum is a developer utility that programmatically generates randomized placeholder images using the Picsum Photos API, a curated collection of Creative Commons Zero licensed photographs. Technically, it functions by sending HTTP GET requests to Picsum's endpoints with specified query parameters for image manipulation. The tool leverages RESTful API architecture to dynamically fetch images with customizable dimensions (width/height in pixels), aspect ratios, and image processing filters like grayscale conversion, blur effects (using Gaussian blur algorithms), and quality compression settings. When a request is made, the API server processes the image using backend image manipulation libraries (e.g., ImageMagick or similar), applies the specified transformations, and returns the resulting image stream in JPEG/WebP format. Developers benefit from this tool during front-end development cycles to test responsive image grids, prototype UI layouts without copyright concerns, and validate image loading performance under different network conditions. The tool's cache-busting mechanism ensures unique image delivery by appending randomized cache-buster parameters to each request, preventing browser caching issues during iterative development.",
+  "detailed_description": "Lorem Picsum helps you build placeholder image URLs from Picsum Photos with the size and options you need. You can set width and height, choose a seed or image ID, toggle grayscale, add blur, and preview the resulting image on the page. The tool also gives you a copyable image URL plus HTML and Markdown snippets, which makes it useful for prototypes, docs, and frontend testing.",
   "usage_steps": [
-    "Navigate to the URL parameter builder interface with predefined code snippets for HTML/CSS/JavaScript implementation.",
-    "Input target dimensions using the pixel grid selector (minimum 300x200 pixels, maximum 3840x2160) or enable 'Responsive Mode' for fluid sizing.",
-    "Adjust advanced filters via the control panel: toggle grayscale conversion, set blur intensity (1-10), or select compression quality (10-100%).",
-    "Click 'Generate Image URL' to create a customized API endpoint link with embedded transformation parameters.",
-    "Preview the processed image in the dedicated viewport pane, which simulates loading states and error handling scenarios.",
-    "Copy the embed code snippet with automatic CDN path optimization for production deployment or testing environments."
+    "Set the width and height or choose one of the preset size buttons.",
+    "Optionally add a seed or specific image ID to make the result repeatable.",
+    "Toggle grayscale or adjust blur if you want a stylized placeholder.",
+    "Generate the URL and confirm the preview matches your needs.",
+    "Copy the direct URL, HTML snippet, or Markdown snippet for your project."
   ],
   "usage_examples": [
-    "A front-end developer testing CSS grid layouts uses randomized 16:9 images at varying resolutions to validate responsive breakpoints.",
-    "A UX designer prototyping an e-commerce catalog applies grayscale filters to placeholder product images for accessibility testing.",
-    "A mobile app developer simulating slow network conditions requests heavily compressed JPEG images (quality=20) to test progressive loading UI.",
-    "A CMS administrator verifying image pipeline performance generates 100 unique URLs with cache-buster parameters to stress-test CDN caching rules."
+    "Generate repeatable placeholder images for a design system demo.",
+    "Create quick Markdown-ready images for internal docs or test content.",
+    "Preview different responsive image sizes before real assets are available."
   ]
 }

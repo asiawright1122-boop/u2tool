@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Parallel Chart Generator is a specialized data visualization tool that creates parallel coordinate charts for analyzing multivariate datasets. This tool employs orthogonal axes spaced horizontally to represent individual dimensions, with each data row connected by polylines to reveal correlations and clusters. Built on D3.js and SVG rendering, it supports dynamic axis reordering through drag-and-drop interactions to optimize pattern recognition. Users can apply linear or logarithmic scaling per axis, implement spline interpolation for smoother visual transitions, and utilize built-in data normalization to handle heterogeneous measurement units. The tool's unique value lies in its ability to handle both categorical and numerical data through hybrid axis encoding, making it particularly valuable for identifying outliers in multivariate analysis scenarios such as financial portfolio comparisons, scientific data exploration, and performance metric evaluations. Technical features include CSV/TSV data parsing with automatic type detection, responsive axis labeling with collision detection, and configurable brush selection for dimension filtering.",
+  "detailed_description": "The Parallel Chart Generator helps you compare many dimensions of the same records in a single view. It is useful for spotting patterns, outliers, and similar profiles when a simple two-axis chart cannot capture enough variables. You can enter multi-column data, choose which dimensions to display, adjust labels and color options, and export the resulting chart as PNG or SVG after reviewing the live preview in the browser.",
   "usage_steps": [
-    "Upload structured data via CSV file or paste delimiter-separated values directly into the Data Input Panel",
-    "Map columns to parallel axes using the Dimension Assignment Matrix with drag-and-drop reordering capability",
-    "Adjust individual axis scales through the Range Configuration Menu, selecting linear/log scale or custom min/max values",
-    "Customize visual encoding in the Style Editor by choosing color gradients, line opacities, and polyline thickness",
-    "Activate Brush Mode to select specific data ranges and isolate patterns across multiple dimensions simultaneously",
-    "Export visualizations using the Resolution Control Panel to generate PNG screenshots at 72-300dpi or editable SVG code"
+    "Paste or enter multi-column data so each row represents one record you want to compare.",
+    "Select the dimensions to display and arrange the axis order to match the pattern you want to inspect.",
+    "Adjust colors, labels, and line visibility settings to keep the chart readable.",
+    "Review the preview and reorder or trim dimensions if important differences are hard to see.",
+    "Export the final parallel chart as PNG or SVG for analysis notes, reports, or presentations."
   ],
   "usage_examples": [
-    "Comparing investment portfolios across risk metrics, ROI percentages, and asset allocations for financial analysts",
-    "Visualizing patient health data with vital signs, lab results, and treatment timelines in medical research studies",
-    "Analyzing university rankings across academic performance indicators, student satisfaction scores, and research outputs",
-    "Evaluating athlete performance statistics including speed metrics, strength measurements, and competition results"
+    "Compare customer account attributes across spend, activity, retention, and satisfaction measures.",
+    "Review equipment readings across several operating dimensions to spot unusual combinations.",
+    "Analyze applicant profiles across score, experience, budget, and outcome fields in a hiring or intake review."
   ]
 }

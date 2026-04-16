@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Image Watermark tool enables developers to programmatically overlay text-based watermarks onto raster image files using advanced graphics processing techniques. Technically, it leverages the HTML5 Canvas API combined with server-side ImageMagick processing to apply semi-transparent text layers with customizable font metrics, positioning, and compositing modes. The tool supports lossless watermark embedding in JPEG, PNG, WebP, and BMP formats, preserving original image metadata while applying anti-aliased text rendering for professional results. Developers need this tool to protect digital assets through copyright notices, brand identifiers, or security seals - crucial for preventing unauthorized image redistribution. The backend processes images by first analyzing pixel density to determine optimal watermark contrast, then applies affine transformations for angled text placement, and finally adjusts alpha channels to maintain visibility without obscuring image content. Advanced features include automatic text wrapping for long watermarks, shadow effects for enhanced legibility, and DPI-aware scaling to ensure print-readiness. This tool differentiates itself through granular controls over font kerning, baseline alignment, and CMYK color space management for print-specific workflows.",
+  "detailed_description": "The Image Watermark tool adds a text watermark to an uploaded image in the browser. You can control the watermark text, position, size, opacity, rotation, and color, then preview the result on the canvas before exporting a PNG. It works well for branded previews, draft proofs, copyright labels, and internal review copies where you need a visible text overlay without opening a full design app.",
   "usage_steps": [
-    "1. Click 'Upload Image' to select your source file (max 25MB, supports JPEG/PNG/WebP/BMP)",
-    "2. Enter watermark text in the dedicated input field, with character limit indicator",
-    "3. Use the position matrix to set placement (9-grid layout with 'Top-Left', 'Center', 'Bottom-Right' options)",
-    "4. Adjust font properties via sliders: size (8-150pt), opacity (10-90%), rotation (-45° to +45°)",
-    "5. Toggle advanced settings: enable drop shadow, select font family (serif/sans-serif/monospace)",
-    "6. Preview watermark overlay in real-time using the split-screen comparison viewer"
+    "Upload an image from your device to load it into the preview canvas.",
+    "Enter the watermark text you want to apply.",
+    "Choose a placement such as center, corner, or tiled repetition.",
+    "Adjust font size, opacity, rotation, and color until the overlay looks right.",
+    "Download the final watermarked PNG once the preview is ready."
   ],
   "usage_examples": [
-    "A professional photographer embedding their copyright notice in EXIF-consistent positioning across portfolio images",
-    "E-commerce platform adding product SKUs as watermarks for inventory tracking on product renders",
-    "Government agency applying 'CONFIDENTIAL' banners with 45° diagonal orientation on sensitive document scans",
-    "Digital artist creating limited-edition NFT previews with transparent signature watermarks on canvas corners"
+    "Add a branded draft label before sharing a mockup for feedback.",
+    "Place a copyright notice in the corner of a portfolio preview image.",
+    "Create tiled review watermarks for internal-only screenshots or design comps."
   ]
 }

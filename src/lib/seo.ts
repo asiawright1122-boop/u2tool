@@ -1,5 +1,5 @@
 import type { ToolCategory } from '@/config/tools';
-import type { Locale } from './i18n';
+import { ensurePagePath, getLocalizedPath, type Locale } from './i18n';
 
 export interface SeoMetadata {
   title: string;
@@ -79,11 +79,56 @@ export function withBrand(title: string, brand = 'U2Tool'): string {
 }
 
 export function buildWebsiteSearchUrlTemplate(baseUrl: string, locale: Locale = 'en'): string {
-  return `${baseUrl}/${locale}/tools?q={search_term_string}`;
+  return `${buildLocalizedPageUrl(baseUrl, locale, '/tools')}?q={search_term_string}`;
+}
+
+export function withPageUrlTrailingSlash(urlOrPath: string): string {
+  if (!urlOrPath) {
+    return urlOrPath;
+  }
+
+  try {
+    const url = new URL(urlOrPath);
+    url.pathname = ensurePagePath(url.pathname);
+    return url.toString();
+  } catch {
+    return ensurePagePath(urlOrPath);
+  }
+}
+
+export function buildLocalizedPagePath(locale: Locale, path = '/'): string {
+  return getLocalizedPath(locale, path);
+}
+
+export function buildLocalizedPageUrl(baseUrl: string, locale: Locale, path = '/'): string {
+  return withPageUrlTrailingSlash(`${baseUrl}${buildLocalizedPagePath(locale, path)}`);
 }
 
 export function buildSiteDescription(toolCount: number): string {
   return `${toolCount}+ free online tools for developers, designers, and teams. Format, convert, generate, and validate data directly in your browser.`;
+}
+
+function getLargestNumericClaim(text: string): number {
+  const matches = [...text.matchAll(/\b(\d[\d,]*)\+?\b/g)];
+  const values = matches
+    .map((match) => Number.parseInt(match[1].replace(/,/g, ''), 10))
+    .filter((value) => Number.isFinite(value));
+
+  return values.length > 0 ? Math.max(...values) : 0;
+}
+
+export function resolveSiteDescription(siteDescription: string | undefined, toolCount: number): string {
+  const candidate = siteDescription?.trim();
+  if (!candidate) {
+    return buildSiteDescription(toolCount);
+  }
+
+  const largestClaim = getLargestNumericClaim(candidate);
+  if (largestClaim > toolCount || /\bmillions? of developers\b/i.test(candidate)) {
+    return buildSiteDescription(toolCount);
+  }
+
+  return candidate;
 }
 
 export function getSiteDescription(
