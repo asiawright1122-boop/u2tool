@@ -81,7 +81,20 @@ async function runCheck(check) {
 
   if (check.expect.status === 404) {
     const followed = await fetchFollow(target);
-    if (followed.status === 200 && /\/en\/?$/.test(new URL(followed.finalUrl).pathname)) {
+    const targetPath = new URL(target).pathname;
+    const followedPath = new URL(followed.finalUrl).pathname;
+    const normalized404Path = targetPath.endsWith('/') ? targetPath : `${targetPath}/`;
+
+    if (
+      [301, 302, 307, 308].includes(manual.status)
+      && manual.location === normalized404Path
+      && followed.status === 404
+      && followedPath === normalized404Path
+    ) {
+      return { ok: true, details: [`slash-normalized 404 via ${manual.location}`], manual };
+    }
+
+    if (followed.status === 200 && /\/en\/?$/.test(followedPath)) {
       ok = false;
       details.push(`soft-redirect to ${followed.finalUrl}`);
     }
