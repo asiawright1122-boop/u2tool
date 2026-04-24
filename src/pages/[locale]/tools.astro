@@ -36,11 +36,11 @@ export const getStaticPaths: GetStaticPaths = () => {
   }));
 };
 
-const localeParam = Astro.params.locale ?? (Astro.props as { locale?: Locale }).locale;
-if (!localeParam || !isValidLocale(localeParam)) {
+const localeCandidate = Astro.params.locale ?? (Astro.props as { locale?: Locale }).locale;
+if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate)) {
   return Astro.redirect('/en/tools/', 302);
 }
-const locale: Locale = localeParam;
+const locale: Locale = localeCandidate;
 const baseMessages = await loadBaseMessages(locale);
 const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};

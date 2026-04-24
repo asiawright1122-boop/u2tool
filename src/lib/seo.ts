@@ -53,6 +53,14 @@ function isNonEmptyString(value: unknown): value is string {
   return typeof value === 'string' && value.trim().length > 0;
 }
 
+function normalizeCountClaim(value: string, toolCount: number): string {
+  if (toolCount <= 0) {
+    return value;
+  }
+
+  return value.replace(/\b\d[\d,]*\+/g, `${toolCount}+`);
+}
+
 function readSeoNamespace(
   parent: Record<string, unknown>,
   key: string
@@ -185,10 +193,45 @@ export function getToolsPageSeo(
   const toolsPage = readSeoNamespace(pages, 'tools');
 
   return {
-    title: toolsPage.title ?? `Browse ${toolCount}+ Free Online Tools`,
+    title: toolsPage.title
+      ? normalizeCountClaim(toolsPage.title, toolCount)
+      : `Browse ${toolCount}+ Free Online Tools`,
     description:
-      toolsPage.description ??
-      `Browse ${toolCount}+ free online tools for developers, designers, and creators.`,
+      toolsPage.description
+        ? normalizeCountClaim(toolsPage.description, toolCount)
+        : `Browse ${toolCount}+ free online tools for developers, designers, and creators.`,
+  };
+}
+
+export function getHomePageSeo(
+  baseMessages: Record<string, unknown>,
+  toolCount: number
+): SeoMetadata {
+  const pages = isRecord(baseMessages.pages) ? baseMessages.pages : {};
+  const homePage = readSeoNamespace(pages, 'home');
+  const home = isRecord(baseMessages.home) ? baseMessages.home : {};
+  const hero = isRecord(home.hero) ? home.hero : {};
+
+  const fallbackTitle = `${toolCount}+ Free Online Tools for Developers & Designers`;
+  const fallbackDescription =
+    `Use ${toolCount}+ free online tools for JSON, PDF, images, text, charts, SEO, and developer workflows. Fast, browser-based, and no signup required.`;
+  const heroTitle = isNonEmptyString(hero.title) ? hero.title.trim() : '';
+  const heroDescription = isNonEmptyString(hero.subtitle) ? hero.subtitle.trim() : '';
+  const genericHomeTitle = heroTitle === 'Free Online Tools';
+  const genericHomeDescription = heroDescription === 'Boost your productivity with our collection of free developer tools. No signup required, works entirely in your browser.'
+    || heroDescription === 'Boost your productivity with our collection of free developer tools.';
+
+  return {
+    title: homePage.title
+      ? normalizeCountClaim(homePage.title, toolCount)
+      : heroTitle && !genericHomeTitle
+        ? normalizeCountClaim(heroTitle, toolCount)
+        : fallbackTitle,
+    description: homePage.description
+      ? normalizeCountClaim(homePage.description, toolCount)
+      : heroDescription && !genericHomeDescription
+        ? normalizeCountClaim(heroDescription, toolCount)
+        : fallbackDescription,
   };
 }
 

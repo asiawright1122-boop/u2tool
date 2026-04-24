@@ -29,7 +29,7 @@ import { buildCategoryDiscoveryItemList, buildCategoryDiscoverySpotlights } from
 import { buildComparisonGuides, getComparisonUiCopy } from '@/lib/comparison-surfaces';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
-import { buildLocalizedPageUrl } from '@/lib/seo';
+import { buildLocalizedPageUrl, getHomePageSeo } from '@/lib/seo';
 
 export const prerender = false;
 
@@ -40,11 +40,11 @@ export const getStaticPaths: GetStaticPaths = () => {
   }));
 };
 
-const localeParam = Astro.params.locale ?? (Astro.props as { locale?: Locale }).locale;
-if (!localeParam || !isValidLocale(localeParam)) {
+const localeCandidate = Astro.params.locale ?? (Astro.props as { locale?: Locale }).locale;
+if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate)) {
   return Astro.redirect('/en/', 302);
 }
-const locale: Locale = localeParam;
+const locale: Locale = localeCandidate;
 const baseMessages = await loadBaseMessages(locale);
 const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
@@ -57,6 +57,7 @@ const aboutStatsMessages = (aboutMessages.stats as Record<string, string>) ?? {}
 const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
 const headerTranslations = buildHeaderTranslations(baseMessages);
 const mobileNavMessages = buildMobileNavMessages(navMessages);
+const homePageSeo = getHomePageSeo(baseMessages, tools.length);
 
 const popularTools = getPopularTools();
 const recentTools = tools.slice(-4).reverse();
@@ -107,8 +108,8 @@ const comparisonGuides = buildComparisonGuides(
 ---
 
 <BaseLayout
-  title={`${heroMessages.title || 'Free Online Tools'} | U2Tool`}
-  description={heroMessages.subtitle || '500+ free online tools for developers and everyone.'}
+  title={homePageSeo.title}
+  description={homePageSeo.description}
   locale={locale}
   canonicalPath="/"
   siteDescription={siteMessages.description}
@@ -118,15 +119,15 @@ const comparisonGuides = buildComparisonGuides(
   <StructuredData type="ItemList" data={discoveryItemListData} slot="head" />
 
   {/* OG meta tags */}
-  <meta property="og:title" content={`${heroMessages.title || 'Free Online Tools'} | U2Tool`} slot="head" />
-  <meta property="og:description" content={heroMessages.subtitle || '500+ free online tools for developers and everyone.'} slot="head" />
+  <meta property="og:title" content={homePageSeo.title} slot="head" />
+  <meta property="og:description" content={homePageSeo.description} slot="head" />
   <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
   <meta property="og:type" content="website" slot="head" />
   <meta property="og:url" content={buildLocalizedPageUrl(BASE_URL, locale, '/')} slot="head" />
   <meta property="og:site_name" content="U2Tool" slot="head" />
   <meta name="twitter:card" content="summary_large_image" slot="head" />
-  <meta name="twitter:title" content={`${heroMessages.title || 'Free Online Tools'} | U2Tool`} slot="head" />
-  <meta name="twitter:description" content={heroMessages.subtitle || '500+ free online tools for developers and everyone.'} slot="head" />
+  <meta name="twitter:title" content={homePageSeo.title} slot="head" />
+  <meta name="twitter:description" content={homePageSeo.description} slot="head" />
   <meta name="twitter:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
   <StaticSidebar
     locale={locale}
