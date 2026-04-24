@@ -136,26 +136,38 @@ function categoryPath(categoryId: string) {
   })}
 </div>
 
-<script is:inline>
+<script>
+  import { buildSearchResultHref } from './tools-grid-search';
+
+  interface SearchIndexItem {
+    slug?: string;
+    href?: string;
+    name?: string;
+    description?: string;
+    category?: string;
+    categoryName?: string;
+    score?: number;
+  }
+
   (() => {
     const root = document.getElementById('tools-grid');
     if (!root) return;
 
-    const sections = Array.from(root.querySelectorAll('.tools-grid-section'));
-    const searchResults = root.querySelector('[data-search-results]');
-    const emptyState = root.querySelector('[data-search-empty]');
+    const sections = Array.from(root.querySelectorAll<HTMLElement>('.tools-grid-section'));
+    const searchResults = root.querySelector<HTMLElement>('[data-search-results]');
+    const emptyState = root.querySelector<HTMLElement>('[data-search-empty]');
     const searchIndexPath = root.getAttribute('data-search-index-path') || '';
     const toolsBasePath = root.getAttribute('data-tools-base-path') || '';
     if (!sections.length) return;
 
-    const normalize = (value) =>
+    const normalize = (value: string) =>
       value
         .toLowerCase()
         .normalize('NFKC')
         .replace(/\s+/g, ' ')
         .trim();
 
-    const scoreTool = (tool, query, queryTokens) => {
+    const scoreTool = (tool: SearchIndexItem, query: string, queryTokens: string[]) => {
       let score = 0;
       const name = normalize(tool.name || tool.slug || '');
       const description = normalize(tool.description || '');
@@ -178,7 +190,7 @@ function categoryPath(categoryId: string) {
       return score;
     };
 
-    const renderSearchResults = (items) => {
+    const renderSearchResults = (items: SearchIndexItem[]) => {
       if (!searchResults) return;
 
       searchResults.replaceChildren();
@@ -186,6 +198,7 @@ function categoryPath(categoryId: string) {
       for (const item of items) {
         const link = document.createElement('a');
         link.className = 'glass-card flex items-center gap-4 p-5 group/card relative overflow-hidden';
+        link.href = buildSearchResultHref(item, toolsBasePath);
         
         const overlay = document.createElement('div');
         overlay.className = 'absolute inset-0 bg-gradient-to-br from-transparent to-amber-500/5 dark:to-amber-500/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500';
@@ -205,7 +218,7 @@ function categoryPath(categoryId: string) {
 
         const title = document.createElement('h3');
         title.className = 'font-bold text-sm text-slate-900 dark:text-white truncate group-hover/card:text-amber-600 dark:group-hover/card:text-amber-400 transition-colors';
-        title.textContent = item.name || item.slug;
+        title.textContent = item.name || item.slug || '';
 
         const description = document.createElement('p');
         description.className = 'text-[11px] text-slate-500 dark:text-slate-400 truncate mt-1.5 leading-relaxed';
@@ -225,7 +238,7 @@ function categoryPath(categoryId: string) {
       }
     };
 
-    const showPreviewSections = (activeCategory) => {
+    const showPreviewSections = (activeCategory: string | null) => {
       if (searchResults) {
         searchResults.hidden = true;
         searchResults.replaceChildren();
@@ -271,16 +284,17 @@ function categoryPath(categoryId: string) {
           throw new Error(`Unexpected response: ${response.status}`);
         }
 
-        const toolsIndex = await response.json();
+        const toolsIndex = (await response.json()) as SearchIndexItem[];
         const results = toolsIndex
-          .map((tool) => ({
+          .map((tool: SearchIndexItem) => ({
             ...tool,
             score: scoreTool(tool, query, queryTokens),
           }))
-          .filter((tool) =>
-            tool.score > 0 && (!activeCategory || tool.category === activeCategory)
+          .filter(
+            (tool: SearchIndexItem) =>
+              (tool.score || 0) > 0 && (!activeCategory || tool.category === activeCategory)
           )
-          .sort((a, b) => b.score - a.score)
+          .sort((a: SearchIndexItem, b: SearchIndexItem) => (b.score || 0) - (a.score || 0))
           .slice(0, 24);
 
         for (const section of sections) {

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { generateTeams as buildTeams, type Team } from '@/lib/popular-tools-batch3-remaining';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -22,12 +24,6 @@
     return typeof value === 'string' ? value : `MISSING: tools.${key}`;
   }
 
-  // Types
-  interface Team {
-  name: string;
-  members: string[];
-}
-
   let input = $state('');
 
   let teamCount = $state('2');
@@ -38,53 +34,23 @@
 
   // Functions
   function generateTeams() {
-    const members = input
-      .split('\n')
-      .map(m => m.trim())
-      .filter(m => m.length > 0);
-
-    if (members.length === 0) return;
-
-    const count = parseInt(teamCount) || 2;
-    const names = teamNames
-      .split(',')
-      .map(n => n.trim())
-      .filter(n => n.length > 0);
-
-    // Shuffle members
-    const shuffled = [...members].sort(() => Math.random() - 0.5);
-
-    // Distribute to teams
-    const result: Team[] = [];
-    for (let i = 0; i < count; i++) {
-      result.push({
-        name: names[i] || `${t('team')} ${i + 1}`,
-        members: [],
-      });
-    }
-
-    shuffled.forEach((member, idx) => {
-      result[idx % count].members.push(member);
-    });
-
-    teams = result;
+    teams = buildTeams(
+      input.split('\n'),
+      parseInt(teamCount) || 2,
+      teamNames.split(','),
+      t('team')
+    );
   }
   function shuffleTeams() {
     if (teams.length === 0) return;
     
     const allMembers = teams.flatMap(t => t.members);
-    const shuffled = [...allMembers].sort(() => Math.random() - 0.5);
-    
-    const result = teams.map((team, idx) => ({
-      ...team,
-      members: [] as string[],
-    }));
-
-    shuffled.forEach((member, idx) => {
-      result[idx % result.length].members.push(member);
-    });
-
-    teams = result;
+    teams = buildTeams(
+      allMembers,
+      teams.length,
+      teams.map((team) => team.name),
+      t('team')
+    );
   }
   async function copyTeams() {
     const text = teams
