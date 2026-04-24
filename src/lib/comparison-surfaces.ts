@@ -1344,6 +1344,22 @@ export function getComparisonGuide(
   return guide ?? null;
 }
 
+export function findComparisonGuideForTool(
+  locale: Locale,
+  toolSlug: string,
+  categoryNames: Record<string, string>,
+  toolNames: Record<string, string>,
+  toolDescriptions: Record<string, string>
+): ComparisonSurfaceGuide | null {
+  return (
+    buildComparisonGuides(locale, categoryNames, toolNames, toolDescriptions).find((guide) =>
+      guide.workflows.some((workflow) =>
+        workflow.tools.some((tool) => tool.slug === toolSlug)
+      )
+    ) ?? null
+  );
+}
+
 export function buildComparisonGuidesItemList(
   baseUrl: string,
   guides: ComparisonSurfaceGuide[]
