@@ -6,10 +6,14 @@ const checks = [
   { name: 'sitemap pages', url: '/sitemap-pages.xml', expect: { status: 200, contentTypeIncludes: 'application/xml' } },
   { name: 'sitemap tools', url: '/sitemap-tools.xml', expect: { status: 200, contentTypeIncludes: 'application/xml' } },
   { name: 'llms.txt', url: '/llms.txt', expect: { status: 200, contentTypeIncludes: 'text/plain' } },
+  { name: 'messages base en', url: '/messages/en/base.json', expect: { status: 200, contentTypeIncludes: 'application/json' } },
+  { name: 'messages root en', url: '/messages/en.json', expect: { status: 200, contentTypeIncludes: 'application/json' } },
   { name: 'home en', url: '/en/', expect: { status: 200 } },
   { name: 'tools en', url: '/en/tools/', expect: { status: 200 } },
   { name: 'home schema placeholders', url: '/en/', expect: { status: 200 }, bodyMustNotInclude: '${BASE_URL}' },
   { name: 'tools schema placeholders', url: '/en/tools/', expect: { status: 200 }, bodyMustNotInclude: '${BASE_URL}' },
+  { name: 'home translated tool labels', url: '/en/', expect: { status: 200 }, bodyMustInclude: 'JSON Formatter' },
+  { name: 'home translated category labels', url: '/en/', expect: { status: 200 }, bodyMustInclude: 'Text Tools' },
   { name: 'legacy /tools', url: '/tools', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/tools/' } },
   { name: 'legacy /compare', url: '/compare', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/compare/' } },
   { name: 'legacy /ai', url: '/ai', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/ai/' } },
@@ -105,6 +109,14 @@ async function runCheck(check) {
     if (followed.text.includes(check.bodyMustNotInclude)) {
       ok = false;
       details.push(`body contains "${check.bodyMustNotInclude}"`);
+    }
+  }
+
+  if (check.bodyMustInclude) {
+    const followed = await fetchText(target);
+    if (!followed.text.includes(check.bodyMustInclude)) {
+      ok = false;
+      details.push(`body missing "${check.bodyMustInclude}"`);
     }
   }
 
