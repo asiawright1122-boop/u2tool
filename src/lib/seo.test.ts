@@ -56,8 +56,17 @@ describe('seo helpers', () => {
       501
     );
 
-    expect(seo.title).toBe('501+ Free Online Tools for Developers & Designers');
-    expect(seo.description).toContain('501+ free online tools');
+    expect(seo.title).toBe('U2Tool: 501+ Free Online Tools, Converters & Generators');
+    expect(seo.description).toContain("Explore U2Tool's 501+ free online tools");
+  });
+
+  it('keeps home and tools fallback titles distinct to avoid intent overlap', () => {
+    const homeSeo = getHomePageSeo({}, 501);
+    const toolsSeo = getToolsPageSeo({}, 501);
+
+    expect(homeSeo.title).not.toBe(toolsSeo.title);
+    expect(homeSeo.title).toContain('U2Tool');
+    expect(toolsSeo.title).toContain('Browse');
   });
 
   it('falls back to deterministic category SEO copy', () => {

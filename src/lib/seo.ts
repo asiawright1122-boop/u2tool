@@ -212,9 +212,9 @@ export function getHomePageSeo(
   const home = isRecord(baseMessages.home) ? baseMessages.home : {};
   const hero = isRecord(home.hero) ? home.hero : {};
 
-  const fallbackTitle = `${toolCount}+ Free Online Tools for Developers & Designers`;
+  const fallbackTitle = `U2Tool: ${toolCount}+ Free Online Tools, Converters & Generators`;
   const fallbackDescription =
-    `Use ${toolCount}+ free online tools for JSON, PDF, images, text, charts, SEO, and developer workflows. Fast, browser-based, and no signup required.`;
+    `Explore U2Tool's ${toolCount}+ free online tools for JSON, PDF, images, text, charts, SEO, and developer workflows. Fast, browser-based, and no signup required.`;
   const heroTitle = isNonEmptyString(hero.title) ? hero.title.trim() : '';
   const heroDescription = isNonEmptyString(hero.subtitle) ? hero.subtitle.trim() : '';
   const genericHomeTitle = heroTitle === 'Free Online Tools';
