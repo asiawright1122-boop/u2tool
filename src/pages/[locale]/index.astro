@@ -22,7 +22,7 @@ import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
 import { tools, categories, getPopularTools } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
-import { locales, getLocalizedPath } from '@/lib/i18n';
+import { locales, getLocalizedPath, isValidLocale } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadBaseMessages } from '@/lib/translations';
 import { buildCategoryDiscoveryItemList, buildCategoryDiscoverySpotlights } from '@/lib/discovery-surface';
@@ -31,7 +31,7 @@ import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-tr
 import { getPublicSiteUrl } from '@/lib/public-env';
 import { buildLocalizedPageUrl } from '@/lib/seo';
 
-export const prerender = true;
+export const prerender = false;
 
 export const getStaticPaths: GetStaticPaths = () => {
   return locales.map((locale) => ({
@@ -40,7 +40,11 @@ export const getStaticPaths: GetStaticPaths = () => {
   }));
 };
 
-const { locale } = Astro.props as { locale: Locale };
+const localeParam = Astro.params.locale ?? (Astro.props as { locale?: Locale }).locale;
+if (!localeParam || !isValidLocale(localeParam)) {
+  return Astro.redirect('/en/', 302);
+}
+const locale: Locale = localeParam;
 const baseMessages = await loadBaseMessages(locale);
 const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
