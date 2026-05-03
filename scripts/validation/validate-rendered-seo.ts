@@ -3,6 +3,7 @@ const BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace
 interface RenderedSeoCheck {
   name: string;
   path: string;
+  canonicalPath?: string;
   titleIncludes: string;
   descriptionIncludes: string;
   schemaTypes: string[];
@@ -26,6 +27,15 @@ const checks: RenderedSeoCheck[] = [
     descriptionIncludes: 'tools',
     schemaTypes: ['Organization', 'WebSite', 'CollectionPage'],
     bodyMustInclude: ['JSON Formatter', 'Choose the Right'],
+  },
+  {
+    name: 'English tools search results',
+    path: '/en/tools/?q=json',
+    canonicalPath: '/en/tools/',
+    titleIncludes: 'Tools',
+    descriptionIncludes: 'tools',
+    schemaTypes: ['Organization', 'WebSite', 'CollectionPage'],
+    bodyMustInclude: ['data-search-results', 'JSON Formatter', 'https://www.u2tool.com/en/tools/json-formatter/'],
   },
   {
     name: 'JSON Formatter tool page',
@@ -129,6 +139,7 @@ async function validateCheck(check: RenderedSeoCheck): Promise<void> {
   assert((response.headers.get('content-type') || '').includes('text/html'), `${check.name}: response is not HTML`);
 
   const html = await response.text();
+  const canonicalUrl = `${BASE_URL}${check.canonicalPath ?? check.path}`;
   const title = getTagContent(html, 'title');
   const description = getTagContent(html, 'description');
   const canonical = getTagContent(html, 'canonical');
@@ -137,7 +148,7 @@ async function validateCheck(check: RenderedSeoCheck): Promise<void> {
 
   assert(title.includes(check.titleIncludes), `${check.name}: title missing "${check.titleIncludes}"`);
   assert(description.toLowerCase().includes(check.descriptionIncludes.toLowerCase()), `${check.name}: meta description missing "${check.descriptionIncludes}"`);
-  assert(canonical === url, `${check.name}: canonical "${canonical}" does not match "${url}"`);
+  assert(canonical === canonicalUrl, `${check.name}: canonical "${canonical}" does not match "${canonicalUrl}"`);
   assert(robots.includes('index') && robots.includes('follow') && !robots.includes('noindex'), `${check.name}: robots meta is not indexable`);
   assert((html.match(/rel=["']alternate["']\s+hreflang=/g) || []).length >= 10, `${check.name}: missing hreflang alternates`);
 
