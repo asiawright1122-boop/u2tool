@@ -4,8 +4,8 @@
  *
  * Route: /{locale}/tools/{slug}
  *
- * Generates static paths for all tools × all 10 locales (~5,100 pages).
- * Loads tool-specific translations, renders SEO metadata (title, description,
+ * Renders tool pages on Cloudflare SSR to keep deploy builds fast while still
+ * returning complete HTML to crawlers. Loads tool-specific translations, renders SEO metadata (title, description,
  * canonical, hreflang, structured data), and composes the page from:
  * - Breadcrumb navigation (static)
  * - Tool header with icon, name, description (static)
@@ -18,7 +18,6 @@
  * Requirements: 1.4, 1.5, 3.4, 5.1, 5.2, 5.3, 5.4
  */
 
-import type { GetStaticPaths } from 'astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/layout/Header.svelte';
 import StaticSidebar from '@/components/layout/StaticSidebar.astro';
@@ -30,9 +29,8 @@ import ToolWrapper from '@/components/tools/ToolWrapper.svelte';
 import RelatedTools from '@/components/tools/RelatedTools.astro';
 import ToolFAQ from '@/components/tools/ToolFAQ.astro';
 import { tools, categories, getToolsByCategory } from '@/config/tools';
-import type { Tool } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
-import { locales } from '@/lib/i18n';
+import { isValidLocale } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadToolMessages, loadBaseMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
@@ -43,24 +41,24 @@ import { assessSupportContentTrust } from '@/lib/content-trust';
 import { buildSafeFallbackSupportContent } from '@/lib/support-content-fallback';
 import { findComparisonGuideForTool, getComparisonUiCopy } from '@/lib/comparison-surfaces';
 
-export const prerender = true;
-
-// ---------------------------------------------------------------------------
-// Static path generation: all tools × all locales
-// ---------------------------------------------------------------------------
-export const getStaticPaths: GetStaticPaths = () => {
-  return locales.flatMap((locale) =>
-    tools.map((tool) => ({
-      params: { locale, slug: tool.slug },
-      props: { locale, tool },
-    }))
-  );
-};
+export const prerender = false;
 
 // ---------------------------------------------------------------------------
 // Page data loading
 // ---------------------------------------------------------------------------
-const { locale, tool } = Astro.props as { locale: Locale; tool: Tool };
+const localeCandidate = Astro.params.locale;
+if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate)) {
+  return Astro.redirect('/en/tools/', 302);
+}
+const locale: Locale = localeCandidate;
+
+const slugCandidate = Astro.params.slug;
+const tool = typeof slugCandidate === 'string'
+  ? tools.find((candidate) => candidate.slug === slugCandidate)
+  : undefined;
+if (!tool) {
+  return Astro.redirect(`/${locale}/tools/`, 302);
+}
 
 // Load tool-specific translations (merged base + detailed, with English fallback)
 const messages = await loadToolMessages(locale, tool.slug);
