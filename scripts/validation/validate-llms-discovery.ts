@@ -6,6 +6,33 @@ function assert(condition: unknown, message: string): void {
   }
 }
 
+function extractCanonicalRouteViolations(text: string): string[] {
+  const urls = text.match(/https:\/\/www\.u2tool\.com\/[^\s)]+/g) || [];
+  const violations: string[] = [];
+
+  for (const rawValue of urls) {
+    const value = rawValue.replace(/[,.]+$/, '');
+    let url: URL;
+
+    try {
+      url = new URL(value);
+    } catch {
+      violations.push(value);
+      continue;
+    }
+
+    if (!url.pathname.match(/^\/[a-z]{2}\/(?:tools|categories|compare)\//)) {
+      continue;
+    }
+
+    if (!url.pathname.endsWith('/')) {
+      violations.push(value);
+    }
+  }
+
+  return violations;
+}
+
 async function fetchWithRetry(url: string, init: RequestInit = {}, attempts = 3): Promise<Response> {
   let lastError: unknown;
 
@@ -44,8 +71,7 @@ async function main(): Promise<void> {
     assert(text.includes(snippet), `llms.txt missing "${snippet}"`);
   }
 
-  const nonCanonicalUrl = new RegExp(`${BASE_URL.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\/[a-z]{2}\\/(?:tools|categories|compare)\\/[^\\s)]+(?<!\\/)`, 'g');
-  const matches = text.match(nonCanonicalUrl) || [];
+  const matches = extractCanonicalRouteViolations(text);
   assert(matches.length === 0, `llms.txt contains non-canonical URLs without trailing slash: ${matches.slice(0, 5).join(', ')}`);
   assert(!text.includes('${BASE_URL}'), 'llms.txt contains an unresolved BASE_URL placeholder');
   assert(!text.includes('MISSING:'), 'llms.txt contains missing translation placeholders');
