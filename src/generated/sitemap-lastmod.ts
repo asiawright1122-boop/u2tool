@@ -6,8 +6,8 @@ export interface SitemapLastmodManifest {
 }
 
 export const sitemapLastmodManifest: SitemapLastmodManifest = {
-  "ai": "2026-04-08",
-  "pages": "2026-04-08",
-  "site": "2026-04-08",
-  "tools": "2026-04-08"
+  "ai": "2026-05-03",
+  "pages": "2026-05-03",
+  "site": "2026-05-03",
+  "tools": "2026-05-03"
 };
