@@ -118,7 +118,7 @@ Last Updated: ${generatedDate}
 - **Tools Available**: ${TOOL_COUNT}+
 - **Languages Supported**: ${locales.length} (${LOCALE_LIST})
 - **Cost**: Free to use, no registration required
-- **Delivery Model**: Static Astro site with client-side interactive tool components
+- **Delivery Model**: Cloudflare SSR Astro site with client-side interactive tool components
 - **Primary Audience**: Developers, designers, marketers, students, and operations teams
 
 ## Coverage Snapshot

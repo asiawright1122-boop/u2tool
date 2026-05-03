@@ -65,6 +65,7 @@ async function main(): Promise<void> {
     `${BASE_URL}/en/tools/json-formatter/`,
     `${BASE_URL}/en/compare/choose-json-tool/`,
     `${BASE_URL}/en/categories/development/`,
+    'Cloudflare SSR with client-side interactive islands',
   ];
 
   for (const snippet of requiredSnippets) {
@@ -75,6 +76,7 @@ async function main(): Promise<void> {
   assert(matches.length === 0, `llms.txt contains non-canonical URLs without trailing slash: ${matches.slice(0, 5).join(', ')}`);
   assert(!text.includes('${BASE_URL}'), 'llms.txt contains an unresolved BASE_URL placeholder');
   assert(!text.includes('MISSING:'), 'llms.txt contains missing translation placeholders');
+  assert(!text.includes('Static Astro site'), 'llms.txt contains outdated static rendering language');
 
   console.log(`All llms discovery checks passed. BASE_URL=${BASE_URL}`);
 }

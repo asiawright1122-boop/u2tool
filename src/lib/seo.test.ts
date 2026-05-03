@@ -7,6 +7,7 @@ import {
   getToolsPageSeo,
   withBrand,
 } from './seo';
+import { buildPriorityIndexNowUrls } from './seo-discovery';
 
 describe('seo helpers', () => {
   it('reuses localized tools page SEO when available', () => {
@@ -89,5 +90,16 @@ describe('seo helpers', () => {
   it('returns shared hreflang mappings', () => {
     expect(getHreflang('zh')).toBe('zh-CN');
     expect(getHreflang('pt')).toBe('pt');
+  });
+
+  it('builds canonical priority IndexNow URLs with trailing slashes', () => {
+    const urls = buildPriorityIndexNowUrls('https://www.u2tool.com/', {
+      limit: 5,
+      selectedLocales: ['en'],
+    });
+
+    expect(urls).toContain('https://www.u2tool.com/en/');
+    expect(urls.every((url) => url.endsWith('/'))).toBe(true);
+    expect(urls.every((url) => !url.includes('com//'))).toBe(true);
   });
 });

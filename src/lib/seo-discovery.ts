@@ -3,6 +3,7 @@ import { comparisonSurfaceSlugs } from '@/lib/comparison-surfaces';
 import { isAiDiscoveryEnabled } from '@/lib/ai-discovery/feature-flag';
 import { locales, type Locale } from '@/lib/i18n';
 import { getPublicSiteUrl } from '@/lib/public-env';
+import { withPageUrlTrailingSlash } from '@/lib/seo';
 
 const discoveryToolBlocklist = new Set<string>([
   // Add temporarily suppressed tool slugs here when a route should stay out of search feeds.
@@ -129,11 +130,12 @@ export function buildPriorityIndexNowUrls(
   } = {}
 ): string[] {
   const urls = new Set<string>();
+  const normalizedBaseUrl = baseUrl.replace(/\/+$/, '');
   const selectedLocales = options.selectedLocales ?? locales;
 
   for (const locale of selectedLocales) {
     for (const path of buildPriorityRoutePaths(locale)) {
-      urls.add(`${baseUrl}${path}`);
+      urls.add(withPageUrlTrailingSlash(`${normalizedBaseUrl}${path}`));
     }
   }
 
