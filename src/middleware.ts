@@ -1,6 +1,7 @@
 import type { MiddlewareHandler } from 'astro';
 
 const HTML_EDGE_CACHE_CONTROL = 'public, max-age=300, s-maxage=86400, stale-while-revalidate=604800';
+const HTML_EDGE_CACHE_VERSION = '2026-05-04-faq-v1';
 const CACHEABLE_HTML_PATH = /^\/(?:$|(?:en|zh|ja|ko|es|pt|fr|de|ru|ar)(?:\/|$))/;
 
 type CloudflareRuntimeLocals = {
@@ -31,6 +32,7 @@ function isCacheableHtmlRequest(request: Request): boolean {
 
 function getHtmlCacheKey(request: Request): Request {
   const url = new URL(request.url);
+  url.searchParams.set('__u2tool_html_cache', HTML_EDGE_CACHE_VERSION);
   return new Request(url.toString(), { method: 'GET' });
 }
 
