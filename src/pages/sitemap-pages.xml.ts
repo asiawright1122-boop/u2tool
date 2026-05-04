@@ -10,7 +10,6 @@ import { locales } from '@/lib/i18n';
 import { categories } from '@/config/tools';
 import { comparisonSurfaceSlugs } from '@/lib/comparison-surfaces';
 import { sitemapLastmodManifest } from '@/generated/sitemap-lastmod';
-import { isAiDiscoveryEnabled } from '@/lib/ai-discovery/feature-flag';
 import { buildUrl, generateSitemapResponse } from '@/lib/sitemap-utils';
 
 export const prerender = true;
@@ -22,10 +21,8 @@ export const GET: APIRoute = () => {
     // 首页 - 最高优先级
     urls.push(buildUrl(`/${locale}`, '1.0', 'daily', sitemapLastmodManifest.pages));
 
-    // AI 发现页
-    if (isAiDiscoveryEnabled()) {
-      urls.push(buildUrl(`/${locale}/ai`, '0.6', 'weekly', sitemapLastmodManifest.ai));
-    }
+    // AI 发现页 - even when interactive discovery is disabled, the route renders an indexable static fallback.
+    urls.push(buildUrl(`/${locale}/ai`, '0.6', 'weekly', sitemapLastmodManifest.ai));
     
     // 工具列表页 - 高优先级
     urls.push(buildUrl(`/${locale}/tools`, '0.9', 'daily', sitemapLastmodManifest.pages));

@@ -104,6 +104,7 @@ function main() {
   const minimumPriorityCount = buildMinimumPriorityCount(sitemapPriority);
   assert(priorityLocs.length >= minimumPriorityCount, `sitemap-priority.xml URL count is too low: expected at least ${minimumPriorityCount}, got ${priorityLocs.length}.`);
   assert(new Set(priorityLocs).size === priorityLocs.length, 'sitemap-priority.xml must not contain duplicate URLs.');
+  assert(priorityLocs.includes(`${SITE_URL}/en/ai/`), 'sitemap-priority.xml must include /en/ai/.');
   assert(priorityLocs.includes(`${SITE_URL}/en/tools/json-formatter/`), 'sitemap-priority.xml must include /en/tools/json-formatter/.');
   assert(priorityLocs.includes(`${SITE_URL}/zh/tools/json-formatter/`), 'sitemap-priority.xml must include /zh/tools/json-formatter/.');
   console.log(`sitemap-priority.xml OK (${priorityLocs.length} URLs)`);
@@ -111,6 +112,7 @@ function main() {
   assert(sitemapPages.includes('<urlset'), 'sitemap-pages.xml must be a urlset sitemap.');
   const pageLocs = extractLocs(sitemapPages);
   assert(pageLocs.includes(`${SITE_URL}/en/`), 'sitemap-pages.xml must include /en/.');
+  assert(pageLocs.includes(`${SITE_URL}/en/ai/`), 'sitemap-pages.xml must include /en/ai/.');
   assert(pageLocs.includes(`${SITE_URL}/en/compare/`), 'sitemap-pages.xml must include /en/compare/.');
   assert(pageLocs.includes(`${SITE_URL}/en/categories/development/`), 'sitemap-pages.xml must include /en/categories/development/.');
   console.log(`sitemap-pages.xml OK (${pageLocs.length} URLs)`);
