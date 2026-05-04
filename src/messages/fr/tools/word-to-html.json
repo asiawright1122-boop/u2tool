@@ -13,5 +13,15 @@
     "Une entreprise migrée vers Confluence utilise l'outil pour importer 200 fiches produits avec tableaux comparatifs",
     "Un enseignant transforme un polycopié de cours en documentation web accessible aux élèves malvoyants",
     "Un service marketing convertit un rapport d'analyse SEO en newsletter HTML responsive compatible Outlook"
+  ],
+  "faqs": [
+    {
+      "question": "Tous les formats sont-ils préservés ?",
+      "answer": "Les formats de base comme les titres, gras, italique et les listes sont préservés. Les layouts complexes peuvent ne pas se convertir parfaitement."
+    },
+    {
+      "question": "Puis-je éditer le HTML ?",
+      "answer": "Oui, vous pouvez copier le code HTML et l'éditer dans n'importe quel éditeur de texte ou éditeur HTML."
+    }
   ]
 }

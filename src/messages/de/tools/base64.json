@@ -13,5 +13,27 @@
     "Dekodieren des Payloads eines JWT-Tokens zur manuellen Überprüfung von Claims bei der API-Authentifizierung.",
     "Konvertierung einer PDF-Datei in Base64 für die Übertragung per XML-RPC, das nur Textknoten unterstützt.",
     "Analyse von Base64-kodierten Fehlerprotokollen in Serverlogs, um verschlüsselte Metadaten zu extrahieren."
+  ],
+  "faqs": [
+    {
+      "question": "Kann dieses Tool auch Dateien wie Bilder in Base64 kodieren?",
+      "answer": "Nein, dieses Tool ist speziell für die Kodierung von Text-Strings ausgelegt. Für Dateien benötigen Sie ein Tool, das den Dateiinhalt zuerst in einen Binärstring umwandelt."
+    },
+    {
+      "question": "Was passiert, wenn ich versuche, einen ungültigen Base64-String zu dekodieren?",
+      "answer": "Das Tool zeigt eine klare Fehlermeldung an, die darauf hinweist, dass die Eingabe kein gültiges Base64-Format hat."
+    },
+    {
+      "question": "Unterstützt das Tool verschiedene Zeichenkodierungen wie UTF-8?",
+      "answer": "Ja, das Tool verarbeitet Unicode-Zeichen (UTF-8) korrekt, sowohl beim Kodieren als auch beim Dekodieren."
+    },
+    {
+      "question": "Gibt es eine Begrenzung der Textlänge für die Konvertierung?",
+      "answer": "Praktisch gibt es keine feste Grenze, aber extrem lange Texte können die Browserleistung beeinträchtigen. Für normale Anwendungsfälle ist es mehr als ausreichend."
+    },
+    {
+      "question": "Werden meine eingegebenen Daten irgendwo gespeichert oder übertragen?",
+      "answer": "Nein, alle Berechnungen finden lokal in Ihrem Browser statt. Es erfolgt keine Übertragung zu unseren Servern, Ihre Daten bleiben privat."
+    }
   ]
 }

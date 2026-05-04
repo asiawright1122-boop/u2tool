@@ -13,5 +13,27 @@
     "Decodificar o payload de um token JWT para verificar claims de autenticação manualmente",
     "Codificar credenciais para cabeçalho Basic Auth em requisições API sensíveis",
     "Transformar um arquivo PDF de 2KB em sequência Base64 para inclusão em corpo de e-mail multipart"
+  ],
+  "faqs": [
+    {
+      "question": "Esta ferramenta processa os dados no servidor?",
+      "answer": "Não, todo o processamento de codificação e decodificação é feito localmente no seu navegador, garantindo que seus dados nunca saiam do seu dispositivo."
+    },
+    {
+      "question": "É possível codificar arquivos inteiros, como imagens ou PDFs?",
+      "answer": "A ferramenta é otimizada para texto. Para arquivos binários, você precisaria primeiro convertê-los para uma representação textual (como hex) antes de usar o Base64."
+    },
+    {
+      "question": "O que acontece se eu tentar decodificar um texto que não está em Base64 válido?",
+      "answer": "A ferramenta exibirá uma mensagem de erro clara, indicando que a string de entrada não é um código Base64 válido."
+    },
+    {
+      "question": "Existe um limite de caracteres para a conversão?",
+      "answer": "O limite prático é a capacidade de memória do seu navegador. Para textos extremamente longos (acima de vários megabytes), recomendamos dividir a operação."
+    },
+    {
+      "question": "Os meus dados codificados ficam armazenados em algum lugar?",
+      "answer": "Absolutamente não. A ferramenta não armazena, não registra e não transmite os dados que você insere. Tudo é processado na sua sessão atual do navegador."
+    }
   ]
 }

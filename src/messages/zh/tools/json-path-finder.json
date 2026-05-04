@@ -13,5 +13,23 @@
     "分析包含多级嵌套的Kubernetes配置文件，定位容器环境变量配置路径：$.spec.template.spec.containers[0].env[?(@.name=='API_URL')]",
     "在ETL数据转换流程中，映射CRM系统导出的深层嵌套字段到数据仓库表结构",
     "验证物联网设备上报的JSON数据是否包含特定传感器路径：$.device.sensors[?(@.type=='temperature')].readings[-1:]"
+  ],
+  "faqs": [
+    {
+      "question": "Json Path Finder 是免费的吗？",
+      "answer": "是的，Json Path Finder 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Json Path Finder 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Json Path Finder 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Json Path Finder 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
   ]
 }

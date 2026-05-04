@@ -11,5 +11,15 @@
     "Convert Excel data for database import",
     "Create CSV files for data analysis tools",
     "Export spreadsheet data in universal format"
+  ],
+  "faqs": [
+    {
+      "question": "Can I convert multiple sheets?",
+      "answer": "Yes, you can select different sheets and convert them one at a time."
+    },
+    {
+      "question": "Are formulas converted?",
+      "answer": "Only the calculated values are exported, not the formulas themselves."
+    }
   ]
 }

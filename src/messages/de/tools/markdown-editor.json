@@ -13,5 +13,19 @@
     "Blog-Beiträge und Notizen erstellen",
     "Projektdokumentation entwerfen",
     "Markdown-Formatierung schnell vorschauen"
+  ],
+  "faqs": [
+    {
+      "question": "Welche Markdown-Syntax wird unterstützt?",
+      "answer": "Alle Standard-Markdown-Syntax wird unterstützt, einschließlich Überschriften, Fett, Kursiv, Listen, Codeblöcke, Tabellen, Links, Bilder, Zitate und mehr. GFM (GitHub Flavored Markdown) Erweiterungen werden ebenfalls unterstützt."
+    },
+    {
+      "question": "Wird mein Inhalt automatisch gespeichert?",
+      "answer": "Die aktuelle Version speichert Inhalte nicht automatisch. Wir empfehlen, Ihre Datei nach der Bearbeitung zu exportieren. Sie können im .md- oder .html-Format exportieren."
+    },
+    {
+      "question": "Kann ich vorhandene Markdown-Dateien importieren?",
+      "answer": "Sie können vorhandenen Markdown-Inhalt direkt in den Editor kopieren und einfügen. Der Editor erkennt und rendert die Markdown-Syntax automatisch."
+    }
   ]
 }

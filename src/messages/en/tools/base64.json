@@ -13,5 +13,27 @@
     "Extracting payload contents from a JWT token by decoding its Base64Url-encoded middle segment",
     "Preparing HTTP Basic Auth headers by encoding 'username:password' credentials",
     "Debugging email attachments by converting Base64-decoded MIME parts back to readable text"
+  ],
+  "faqs": [
+    {
+      "question": "Does this tool support UTF-8 characters during encoding?",
+      "answer": "Yes, our encoder fully supports UTF-8, ensuring special characters and emojis convert correctly."
+    },
+    {
+      "question": "Is there a limit on the string length I can process?",
+      "answer": "You can process large strings up to 5MB, though performance may vary slightly on slower devices."
+    },
+    {
+      "question": "Can I decode malformed Base64 strings with padding errors?",
+      "answer": "The tool automatically attempts to fix missing padding characters to successfully decode valid data."
+    },
+    {
+      "question": "Does this converter work on mobile browsers?",
+      "answer": "Absolutely, this responsive online tool functions perfectly on iOS, Android, and desktop browsers."
+    },
+    {
+      "question": "Is my data stored on your servers after conversion?",
+      "answer": "No, all encoding and decoding happens locally in your browser; no data is ever sent to our servers."
+    }
   ]
 }

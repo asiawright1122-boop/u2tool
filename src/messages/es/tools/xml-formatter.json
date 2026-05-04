@@ -13,5 +13,27 @@
     "2. Un QA minifica una respuesta XML de API para verificar compatibilidad con cliente Android.",
     "3. Un integrador valida un feed RSS generado mediante XSLT antes de publicarlo en un CMS.",
     "4. Un ingeniero de datos depura un XML de 5GB eliminando bloques de logs innecesarios en CDATA."
+  ],
+  "faqs": [
+    {
+      "question": "¿Mantiene esta herramienta todos los comentarios y espacios de nombres al formatear?",
+      "answer": "Sí, el formateador conserva todos los comentarios (<!-- -->) y declaraciones de espacios de nombres intactas, solo reorganiza la indentación."
+    },
+    {
+      "question": "¿Qué sucede si mi XML tiene un error de sintaxis al intentar validarlo?",
+      "answer": "La herramienta mostrará un mensaje de error claro indicando la línea y el tipo de problema (ej. etiqueta no cerrada, atributo mal formado)."
+    },
+    {
+      "question": "¿Puedo formatear XML que esté en una sola línea (minificado)?",
+      "answer": "Absolutamente. La función principal del formateador es tomar XML minificado o mal indentado y convertirlo en una estructura legible con saltos de línea y sangrías."
+    },
+    {
+      "question": "¿Hay un límite de tamaño para el XML que puedo procesar?",
+      "answer": "El procesamiento se realiza en tu navegador, por lo que el límite práctico depende de la memoria de tu dispositivo. Para archivos extremadamente grandes, recomendamos procesarlos por partes."
+    },
+    {
+      "question": "¿Se envía mi datos XML a un servidor para su procesamiento?",
+      "answer": "No. Todo el procesamiento (formateo, minificación, validación) ocurre localmente en tu navegador web. Tus datos XML nunca abandonan tu computadora, garantizando total privacidad."
+    }
   ]
 }

@@ -13,5 +13,15 @@
     "Un chercheur en sciences sociales convertit une thèse de 300 pages en texte analysable pour un logiciel de traitement statistique",
     "Un comptable récupère les données des factures clients au format PDF pour les importer dans un système ERP",
     "Un professeur convertit un manuel technique PDF avec schémas en texte accessible pour un élève malvoyant utilisant un lecteur d'écran"
+  ],
+  "faqs": [
+    {
+      "question": "Fonctionne-t-il avec les PDF scannés?",
+      "answer": "Cet outil extrait le texte intégré des PDF. Pour les images scannées, vous pourriez avoir besoin de logiciels OCR."
+    },
+    {
+      "question": "Y a-t-il une limite de taille de fichier?",
+      "answer": "Le traitement se fait dans votre navigateur, donc les fichiers très volumineux peuvent être lents. Nous recommandons des fichiers de moins de 50MB."
+    }
   ]
 }

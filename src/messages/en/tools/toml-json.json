@@ -13,5 +13,27 @@
     "Generating JSON payloads from TOML test fixtures to validate API endpoint behavior in Postman during CI/CD pipeline development.",
     "Debugging configuration drift between Kubernetes Helm charts (YAML) and Consul Template (HCL) by converting both to TOML for side-by-side comparison.",
     "Transforming GitHub Actions workflow files (YAML) to JSON for ingestion into AWS CloudFormation templates requiring JSON-formatted parameter blocks."
+  ],
+  "faqs": [
+    {
+      "question": "Does the converter preserve comments from my TOML file?",
+      "answer": "No, JSON does not natively support comments, so they are stripped during TOML-to-JSON conversion."
+    },
+    {
+      "question": "How does the tool handle invalid TOML or JSON syntax?",
+      "answer": "The tool provides clear error messages highlighting the location and nature of any syntax errors it encounters."
+    },
+    {
+      "question": "Can I convert nested structures and arrays between the formats?",
+      "answer": "Yes, the converter fully supports complex nested objects, arrays, and all standard data types in both formats."
+    },
+    {
+      "question": "Is there a file size limit for conversion?",
+      "answer": "The conversion is performed client-side in your browser, so it's limited by your device's available memory."
+    },
+    {
+      "question": "Is my data secure when using this online converter?",
+      "answer": "Yes, all conversion happens locally in your web browser; no data is sent to any server, ensuring complete privacy."
+    }
   ]
 }

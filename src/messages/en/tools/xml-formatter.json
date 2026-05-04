@@ -13,5 +13,27 @@
     "System administrator cleaning up verbose AWS XML logs for SIEM integration by removing comments and whitespace.",
     "Web developer standardizing indentation across multiple RSS feeds to meet CMS ingestion requirements.",
     "Data architect validating XSD (XML Schema Definition) compatibility by testing against multiple DTDs."
+  ],
+  "faqs": [
+    {
+      "question": "Does this tool preserve comments and CDATA sections in my XML?",
+      "answer": "Yes, our formatter retains all XML comments, CDATA blocks, and processing instructions during formatting and minification."
+    },
+    {
+      "question": "What is the maximum file size for XML processing?",
+      "answer": "The tool can handle large XML documents, but for optimal performance, we recommend files under 5MB for quick processing."
+    },
+    {
+      "question": "Can I format XML that is on a single line without any spaces?",
+      "answer": "Absolutely. The tool is designed to parse and properly indent even densely packed, single-line XML strings."
+    },
+    {
+      "question": "Does the validator check against a specific XML Schema (XSD)?",
+      "answer": "No, this validator performs a syntax check for well-formed XML. It does not validate against an external DTD or XSD schema."
+    },
+    {
+      "question": "Is my XML data stored or logged on your servers?",
+      "answer": "No. All processing occurs in real-time within your browser. Your XML data is never transmitted or stored on our servers."
+    }
   ]
 }

@@ -13,5 +13,19 @@
     "Genaue Zeitmessung beim Kochen",
     "Pomodoro-Technik zur Zeitmessung beim Lernen",
     "Teste, wie lange Aufgaben dauern"
+  ],
+  "faqs": [
+    {
+      "question": "Wie genau ist die Stoppuhr?",
+      "answer": "Die Stoppuhr hat eine Genauigkeit von 10 Millisekunden (eine Hundertstelsekunde), angezeigt als Minuten: Sekunden.Zehntelsekunden, ausreichend für alltägliche Zeitmessungsnötigkeiten."
+    },
+    {
+      "question": "Werden Rundenzeiten gespeichert?",
+      "answer": "Rundenzeiten werden gelöscht, wenn die Seite neu geladen wird. Wenn du die Aufzeichnungen speichern möchtest, empfehlen wir, sie manuell aufzuschreiben oder nach der Nutzung Screenshots zu machen."
+    },
+    {
+      "question": "Wie werden die schnellsten und langsamsten Runden markiert?",
+      "answer": "Wenn 2 oder mehr Runden erfasst werden, markiert das System die schnellste Runde mit 🏆 und die langsamste mit 🐢, was dir bei der Analyse deiner Leistung hilft."
+    }
   ]
 }

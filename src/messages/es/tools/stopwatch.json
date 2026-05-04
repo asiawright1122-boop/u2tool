@@ -13,5 +13,19 @@
     "Cronometraje preciso mientras se cocina",
     "Cronometraje de la técnica Pomodoro para estudiar",
     "Probar cuánto tiempo toma completar tareas"
+  ],
+  "faqs": [
+    {
+      "question": "¿Cuál es la precisión del cronómetro?",
+      "answer": "La precisión del cronómetro es de 10 milisegundos (una centésima de segundo), mostrada como minutos:segundos.centésimas, suficiente para las necesidades de cronometraje diarias."
+    },
+    {
+      "question": "¿Se guardan los registros de vueltas?",
+      "answer": "Los registros de vueltas se borran cuando se recarga la página. Si necesitas guardar los registros, recomendamos registrarlos manualmente o tomar capturas de pantalla después de su uso."
+    },
+    {
+      "question": "¿Cómo se marcan las vueltas más rápidas y más lentas?",
+      "answer": "Cuando se graban 2 o más vueltas, el sistema automáticamente marca la vuelta más rápida con 🏆 y la más lenta con 🐢, ayudándote a analizar el rendimiento."
+    }
   ]
 }

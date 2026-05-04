@@ -13,5 +13,15 @@
     "A data analyst is working on a project that involves analyzing text data from multiple sources. The analyst uses the Word to Text tool to convert Word documents into plain text, which can then be imported into a data analysis tool like Python's pandas library for further processing.",
     "A web developer is building a script that automatically updates a website's content based on text from Word documents. The developer uses the Word to Text tool to convert the documents into plain text, which can be easily parsed by the script.",
     "A researcher is compiling a corpus of text data for a natural language processing (NLP) project. The researcher uses the Word to Text tool to convert a large number of Word documents into plain text files, which are then used to train an NLP model."
+  ],
+  "faqs": [
+    {
+      "question": "Does it support .doc files?",
+      "answer": "Currently only .docx format is supported. Please convert .doc files to .docx first."
+    },
+    {
+      "question": "Is formatting preserved?",
+      "answer": "This tool extracts plain text only. Formatting, images, and tables are not preserved."
+    }
   ]
 }

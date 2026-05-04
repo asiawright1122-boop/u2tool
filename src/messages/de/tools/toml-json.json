@@ -13,5 +13,19 @@
     "Ein DevOps-Engineer transformiert JSON-basierte Terraform-Variablen in TOML, um sie mit einem Service zu verwenden, der nur TOML-Konfigurationen akzeptiert",
     "Ein Data Scientist standardisiert Rohdaten aus einer JSON-API in TOML, um sie mit Python-Skripten zu verarbeiten, die TOML als natives Konfigurationsformat nutzen",
     "Ein SRE-Team migriert Legacy-JSON-ConfigMaps in TOML, um sie in Kubernetes-Cluster mit spezifischen Formatvorgaben für ConfigMaps einzuspielen"
+  ],
+  "faqs": [
+    {
+      "q": "Was ist TOML?",
+      "a": "TOML (Tom's Obvious, Minimal Language) ist ein minimales Konfigurationsdateiformat für Konfigurationsdateien."
+    },
+    {
+      "q": "Warum TOML in JSON konvertieren?",
+      "a": "JSON wird breiter unterstützt und kann in vielen Programmiersprachen und Tools verwendet werden."
+    },
+    {
+      "q": "Ist dieses Tool kostenlos?",
+      "a": "Ja, es ist völlig kostenlos und erfordert keine Registrierung."
+    }
   ]
 }

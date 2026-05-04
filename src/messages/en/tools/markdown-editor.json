@@ -13,5 +13,19 @@
     "Create blog posts and notes",
     "Draft project documentation",
     "Preview Markdown formatting quickly"
+  ],
+  "faqs": [
+    {
+      "question": "What Markdown syntax is supported?",
+      "answer": "All standard Markdown syntax is supported, including headings, bold, italic, lists, code blocks, tables, links, images, blockquotes, and more. GFM (GitHub Flavored Markdown) extensions are also supported."
+    },
+    {
+      "question": "Is my content saved automatically?",
+      "answer": "The current version does not auto-save content. We recommend exporting your file after editing. You can export as .md or .html format."
+    },
+    {
+      "question": "Can I import existing Markdown files?",
+      "answer": "You can copy and paste existing Markdown content directly into the editor. The editor will automatically recognize and render the Markdown syntax."
+    }
   ]
 }

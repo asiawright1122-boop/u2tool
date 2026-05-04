@@ -13,5 +13,15 @@
     "A marketing team transforms a sales proposal created in Word into a responsive email template, maintaining brand-specific font stacks and table-based pricing matrices",
     "A web developer migrates user manuals from a SharePoint document library to a React-based knowledge base, using the tool's 'Component Mode' to generate JSX-ready markup",
     "An accessibility consultant converts a government report to HTML with ARIA attributes automatically added to complex tables and figure elements during the conversion process"
+  ],
+  "faqs": [
+    {
+      "question": "Is all formatting preserved?",
+      "answer": "Basic formatting like headings, bold, italic, and lists are preserved. Complex layouts may not convert perfectly."
+    },
+    {
+      "question": "Can I edit the HTML?",
+      "answer": "Yes, you can copy the HTML code and edit it in any text editor or HTML editor."
+    }
   ]
 }

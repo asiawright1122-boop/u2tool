@@ -13,5 +13,19 @@
     "撰写博客文章和笔记",
     "创建项目说明文档",
     "快速预览 Markdown 格式效果"
+  ],
+  "faqs": [
+    {
+      "question": "Markdown 编辑器支持哪些语法？",
+      "answer": "支持所有标准 Markdown 语法，包括标题、粗体、斜体、列表、代码块、表格、链接、图片、引用等。同时支持 GFM（GitHub Flavored Markdown）扩展语法。"
+    },
+    {
+      "question": "编辑的内容会保存吗？",
+      "answer": "当前版本不会自动保存内容。建议您在编辑完成后及时导出文件。您可以导出为 .md 或 .html 格式。"
+    },
+    {
+      "question": "可以导入已有的 Markdown 文件吗？",
+      "answer": "您可以直接复制粘贴已有的 Markdown 内容到编辑器中。编辑器会自动识别并渲染 Markdown 语法。"
+    }
   ]
 }

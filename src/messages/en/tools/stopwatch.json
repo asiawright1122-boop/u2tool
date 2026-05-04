@@ -13,5 +13,19 @@
     "Precise timing while cooking",
     "Pomodoro technique timing for studying",
     "Test how long tasks take to complete"
+  ],
+  "faqs": [
+    {
+      "question": "What is the stopwatch accuracy?",
+      "answer": "The stopwatch accuracy is 10 milliseconds (one-hundredth of a second), displayed as minutes:seconds.centiseconds, sufficient for everyday timing needs."
+    },
+    {
+      "question": "Are lap records saved?",
+      "answer": "Lap records are cleared when the page is refreshed. If you need to save records, we recommend manually recording or taking screenshots after use."
+    },
+    {
+      "question": "How are fastest and slowest laps marked?",
+      "answer": "When 2 or more laps are recorded, the system automatically marks the fastest lap with 🏆 and the slowest with 🐢, helping you analyze performance."
+    }
   ]
 }

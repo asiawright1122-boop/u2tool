@@ -13,5 +13,23 @@
     "后端工程师调试API时发现返回JSON数据的Content-Type错误，通过工具确认应使用'application/json'",
     "系统管理员在配置Nginx服务器时，批量查询WebP图片格式的MIME类型以添加至mime.types配置",
     "移动应用开发者处理用户上传的PDF文件时，通过工具验证上传接口是否接受'application/pdf'类型"
+  ],
+  "faqs": [
+    {
+      "question": "Mime Type Lookup 是免费的吗？",
+      "answer": "是的，Mime Type Lookup 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Mime Type Lookup 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Mime Type Lookup 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Mime Type Lookup 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
   ]
 }

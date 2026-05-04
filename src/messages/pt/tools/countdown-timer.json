@@ -13,5 +13,19 @@
     "Configurar tempos de cozimento para ovos, macarrão, etc.",
     "Controle de tempo para reuniões ou apresentações",
     "Lembretes de pausa para levantar e se movimentar"
+  ],
+  "faqs": [
+    {
+      "question": "Receberei um lembrete quando o countdown terminar?",
+      "answer": "Sim, uma notificação do navegador é enviada quando o countdown termina. Na primeira utilização, o navegador pedirá permissão para notificações - por favor, permita para ativar o recurso de lembrete."
+    },
+    {
+      "question": "Por quanto tempo posso configurar o timer?",
+      "answer": "Suporta qualquer combinação de 0-23 horas, 0-59 minutos e 0-59 segundos. O countdown máximo é 23:59:59."
+    },
+    {
+      "question": "Posso continuar após pausar?",
+      "answer": "Sim. Após clicar em pausa, o countdown mantém seu estado atual. Clique em 'Continuar' para retomar a partir do ponto onde pausou."
+    }
   ]
 }

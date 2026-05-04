@@ -13,5 +13,27 @@
     "Décoder une URL reçue via des logs serveur: \"https://exemple.com/recherche?q=maison+r%C3%A9novation\" → \"https://exemple.com/recherche?q=maison+rénovation\"",
     "Préparer un lien HTML sécurisé avec paramètres: Convertir \"#section?param=1&autre=2\" en \"#section%3Fparam%3D1%26autre%3D2\"",
     "Nettoyer une URL collée depuis un PDF: Décoder les séquences \"%C3%A9t%C3%A9\" en \"été\" pour une utilisation dans un formulaire."
+  ],
+  "faqs": [
+    {
+      "question": "Quelle est la différence entre encoder et décoder une URL ?",
+      "answer": "Encoder convertit les caractères spéciaux en codes %XX pour une transmission web sûre. Décoder fait l'opération inverse pour lire l'URL originale."
+    },
+    {
+      "question": "Cet outil prend-il en charge l'encodage de caractères Unicode ?",
+      "answer": "Oui, l'outil encode correctement les caractères non-ASCII (comme les accents) en UTF-8, le standard pour le web."
+    },
+    {
+      "question": "Puis-je encoder uniquement une partie spécifique d'une URL ?",
+      "answer": "Oui, vous pouvez coller uniquement le paramètre ou la valeur à encoder/décoder. L'outil traite le texte fourni."
+    },
+    {
+      "question": "Y a-t-il une limite de taille pour l'URL à traiter ?",
+      "answer": "La limite pratique dépend de la mémoire de votre navigateur, mais l'outil gère facilement les URL de plusieurs milliers de caractères."
+    },
+    {
+      "question": "Mes données sont-elles envoyées sur un serveur lors de l'encodage ?",
+      "answer": "Non, tout le traitement se fait localement dans votre navigateur. Aucune donnée n'est envoyée à nos serveurs, garantissant votre vie privée."
+    }
   ]
 }

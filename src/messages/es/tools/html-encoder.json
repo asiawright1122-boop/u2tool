@@ -10,5 +10,27 @@
   "usage_examples": [
     "Usa Codificador/Decodificador HTML para procesar tus datos",
     "Obtén resultados de procesamiento rápidamente sin esperar"
+  ],
+  "faqs": [
+    {
+      "question": "¿Qué caracteres convierte exactamente el codificador HTML?",
+      "answer": "Convierte los caracteres reservados en HTML (<, >, &, \", ', y otros) en sus entidades numéricas o con nombre correspondientes."
+    },
+    {
+      "question": "¿Puedo decodificar entidades HTML personalizadas o solo las estándar?",
+      "answer": "Decodifica las entidades HTML estándar definidas por la especificación. Las entidades personalizadas pueden no ser reconocidas."
+    },
+    {
+      "question": "¿El proceso de codificación afecta a los saltos de línea o espacios en blanco?",
+      "answer": "No, los espacios en blanco y saltos de línea se mantienen tal cual, solo se codifican los caracteres especiales."
+    },
+    {
+      "question": "¿Hay un límite de tamaño para el texto que puedo procesar?",
+      "answer": "El procesamiento se realiza en tu navegador, por lo que el límite práctico depende de la memoria disponible de tu dispositivo."
+    },
+    {
+      "question": "¿Se almacena o envía el texto que codifico o decodifico a un servidor?",
+      "answer": "No, toda la conversión ocurre localmente en tu navegador. Tus datos nunca salen de tu ordenador, garantizando máxima privacidad."
+    }
   ]
 }

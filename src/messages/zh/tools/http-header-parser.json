@@ -13,5 +13,23 @@
     "2. 测试工程师分析响应头中的Cache-Control策略以优化CDN缓存效率",
     "3. 安全审计人员验证服务器返回的X-Content-Type-Options头配置强度",
     "4. 网络课程学生通过解析结果对比GET和POST请求的头结构差异"
+  ],
+  "faqs": [
+    {
+      "question": "Http Header Parser 是免费的吗？",
+      "answer": "是的，Http Header Parser 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Http Header Parser 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Http Header Parser 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Http Header Parser 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
   ]
 }
