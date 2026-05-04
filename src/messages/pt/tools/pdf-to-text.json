@@ -13,5 +13,15 @@
     "Um pesquisador digitaliza artigos acadêmicos em formato físico e converte-os para texto editável, aplicando OCR para criar um corpus de análise linguística.",
     "Um contador transforma recibos de despesas escaneados em um arquivo TXT para importar dados em planilhas de controle financeiro.",
     "Um desenvolvedor extrai dados de tabelas de um relatório anual PDF, preservando alinhamento de colunas para alimentar um script de análise estatística."
+  ],
+  "faqs": [
+    {
+      "question": "Funciona com PDFs escaneados?",
+      "answer": "Esta ferramenta extrai texto embutido de PDFs. Para imagens escaneadas, você pode precisar de software OCR."
+    },
+    {
+      "question": "Há um limite de tamanho de arquivo?",
+      "answer": "Os processamentos são feitos no seu navegador, então arquivos muito grandes podem ser lentos. Recomendamos arquivos com menos de 50MB."
+    }
   ]
 }

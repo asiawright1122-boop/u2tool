@@ -13,5 +13,27 @@
     "Example 2: A content manager is editing an article that includes special characters like é, ñ, and ü. To ensure these characters display correctly in the HTML version of the article, the manager uses the tool to encode the text before publishing it.",
     "Example 3: A developer is working on a legacy system that stores data in an encoded format. Before displaying the data on a modern web page, the developer uses the HTML Encoder/Decoder to decode the text, making it readable and correctly formatted.",
     "Example 4: A blogger is writing a post about HTML and needs to include code snippets that contain special characters. To ensure the code is displayed correctly and not interpreted as HTML by the browser, the blogger encodes the snippets using the tool before embedding them in the blog post."
+  ],
+  "faqs": [
+    {
+      "question": "What is the difference between encoding and decoding HTML?",
+      "answer": "Encoding converts special characters (like <) to HTML entities (&lt;). Decoding reverses this process, turning entities back into characters."
+    },
+    {
+      "question": "Does this tool handle all HTML entity references, like numeric codes?",
+      "answer": "Yes, it processes both named entities (e.g., &amp;) and numeric/decimal entities (e.g., &#38;)."
+    },
+    {
+      "question": "Will encoding affect the spaces or line breaks in my text?",
+      "answer": "No, standard spaces and line breaks are preserved. Only characters with specific HTML entities are converted."
+    },
+    {
+      "question": "Is there a limit to the amount of text I can convert at once?",
+      "answer": "The tool is optimized for typical web development tasks. For extremely large documents, processing in sections is recommended."
+    },
+    {
+      "question": "Is my data secure when using this online encoder/decoder?",
+      "answer": "Yes, all processing happens in your browser. Your text is never sent to or stored on our servers."
+    }
   ]
 }

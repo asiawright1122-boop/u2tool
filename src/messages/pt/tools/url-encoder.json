@@ -13,5 +13,27 @@
     "Decodificar um log de acesso Apache contendo '%E2%82%AC' para identificar requisições com o símbolo '€' em relatórios de analytics.",
     "Preparar um URL de callback OAuth2 que inclua caracteres especiais em tokens, como 'access_token=abc#xyz', garantindo que '#' seja codificado como '%23'.",
     "Converter manualmente uma URL quebrada como 'https://exemplo.com/pasta com espaço/arquivo.html' para 'https://exemplo.com/pasta%20com%20espaço/arquivo.html' antes de testes em navegadores."
+  ],
+  "faqs": [
+    {
+      "question": "Qual a diferença entre codificar e decodificar uma URL?",
+      "answer": "Codificar substitui caracteres inseguros (como espaços ou &) por códigos '%XX'. Decodificar faz o inverso, convertendo esses códigos de volta ao caractere original."
+    },
+    {
+      "question": "Esta ferramenta suporta codificação para formulários HTML (application/x-www-form-urlencoded)?",
+      "answer": "Sim, o processo de codificação de URL é compatível com o formato usado em formulários HTML e envios de dados via web."
+    },
+    {
+      "question": "Posso codificar apenas uma parte específica de uma URL, como um parâmetro de consulta?",
+      "answer": "Recomendamos colar apenas a parte que precisa ser processada (ex: o valor do parâmetro) para maior precisão e controle sobre o resultado final."
+    },
+    {
+      "question": "Existe limite de caracteres para usar a ferramenta?",
+      "answer": "Não há um limite rígido, mas para performance ideal recomendamos processar textos muito longos em partes menores."
+    },
+    {
+      "question": "Os dados que eu colo na ferramenta são armazenados ou enviados a servidores?",
+      "answer": "Não. Todo o processamento é feito localmente no seu navegador (client-side), garantindo que seus dados permaneçam privados e seguros."
+    }
   ]
 }

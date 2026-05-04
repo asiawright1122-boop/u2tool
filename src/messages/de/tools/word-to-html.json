@@ -13,5 +13,15 @@
     "Ein Webdesigner verwandelt ein Kunden-Exposé mit Tabellen und Diagrammen in ein responsives Newsletter-Template mit media queries.",
     "Ein Entwickler automatisiert die Migration von Schulungsunterlagen (.docx) in eine LMS-Plattform durch Batch-Konvertierung mit angepassten CSS-Klassen.",
     "Ein Redakteur generiert aus einem Word-Blogbeitrag sauberen HTML-Code für ein Content-Management-System, inklusive alt-Attributen für Bilder."
+  ],
+  "faqs": [
+    {
+      "question": "Wird alle Formatierung erhalten?",
+      "answer": "Grundlegende Formate wie Überschriften, Fett, Kursiv und Listen werden erhalten. Komplexe Layouts könnten nicht perfekt umgewandelt werden."
+    },
+    {
+      "question": "Kann ich das HTML bearbeiten?",
+      "answer": "Ja, Sie können den HTML-Code kopieren und ihn in jedem Texteditor oder HTML-Editor bearbeiten."
+    }
   ]
 }

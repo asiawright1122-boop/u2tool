@@ -13,5 +13,27 @@
     "A frontend developer integrating with third-party APIs can use the tool to beautify and validate the JSON data received from these APIs, making it easier to debug and integrate into their application.",
     "A data analyst working with large JSON datasets can use the JSON Formatter to minify the data for efficient storage and transmission, and then format it for easier analysis and visualization.",
     "A DevOps engineer can use the tool to format and validate the JSON configuration files used in their infrastructure as code (IaC) tools, ensuring that the configurations are correct and consistent across different environments."
+  ],
+  "faqs": [
+    {
+      "question": "What happens if my JSON has a syntax error?",
+      "answer": "The validator will pinpoint the exact line and character of the error, such as a missing comma or bracket, to help you fix it."
+    },
+    {
+      "question": "Does this tool support formatting JSON with custom indentation?",
+      "answer": "Yes, you can choose between 2-space or 4-space indentation levels for your formatted output."
+    },
+    {
+      "question": "Can I format extremely large JSON files with this online tool?",
+      "answer": "It handles most common JSON sizes efficiently, but for massive files (over 1MB), performance may vary based on your browser."
+    },
+    {
+      "question": "Is the JSON data I paste stored on your servers?",
+      "answer": "No, all processing happens client-side in your browser. Your data is never sent to or stored on our servers."
+    },
+    {
+      "question": "Does the tool fix common JSON errors automatically?",
+      "answer": "It identifies and reports errors like trailing commas or mismatched quotes but requires manual correction for data integrity."
+    }
   ]
 }

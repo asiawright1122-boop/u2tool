@@ -13,5 +13,27 @@
     "Un administrateur système optimise des fichiers de configuration XML de 50Mo en activant la minification et la suppression des logs intégrés",
     "Un intégrateur EDI convertit des documents SAP au format XML plié en documents dépliés avec indentation personnalisée pour un partenaire commercial",
     "Un data scientist prépare des données OpenStreetMap pour analyse en nettoyant les balises CDATA et en normalisant l'encodage UTF-8"
+  ],
+  "faqs": [
+    {
+      "question": "Quelle est la différence entre formater et minifier du XML ?",
+      "answer": "Formater ajoute des retours à la ligne et des indentations pour la lisibilité. Minifier supprime tous les espaces inutiles pour réduire la taille du fichier."
+    },
+    {
+      "question": "L'outil conserve-t-il les commentaires et les déclarations DOCTYPE ?",
+      "answer": "Oui, lors du formatage, les commentaires et déclarations sont préservés. La minification peut les supprimer selon l'option choisie."
+    },
+    {
+      "question": "Puis-je valider un XML contre un schéma XSD ou DTD avec cet outil ?",
+      "answer": "Non, cet outil valide uniquement la structure syntaxique de base (balises bien formées). La validation par schéma nécessite un outil spécialisé."
+    },
+    {
+      "question": "Y a-t-il une limite de taille pour le fichier XML traité ?",
+      "answer": "La limite dépend de votre navigateur et de la mémoire disponible. Pour des fichiers très volumineux (>10 Mo), un traitement local est recommandé."
+    },
+    {
+      "question": "Mes données XML sont-elles envoyées à un serveur lors du traitement ?",
+      "answer": "Non, tout le traitement s'effectue localement dans votre navigateur (JavaScript). Vos données ne quittent jamais votre ordinateur."
+    }
   ]
 }

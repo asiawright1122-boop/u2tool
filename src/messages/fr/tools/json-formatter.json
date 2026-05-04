@@ -13,5 +13,27 @@
     "Un data scientist charge un grand fichier JSON contenant des données de recherche. En utilisant l'outil, il formate le JSON pour une meilleure lisibilité, facilitant ainsi l'analyse et le débogage des données.",
     "Un intégrateur web reçoit un fichier JSON mal formatté d'un client. Il utilise le JSON Formatter pour le reformater et le rendre plus présentable avant de le partager avec l'équipe de développement.",
     "Un développeur back-end a besoin de minifier un fichier JSON pour l'optimiser avant de le stocker en base de données. Il utilise l'outil pour supprimer les espaces inutiles et réduire la taille du fichier, améliorant ainsi les performances de l'application."
+  ],
+  "faqs": [
+    {
+      "question": "Comment cet outil gère-t-il les JSON malformés ou invalides ?",
+      "answer": "Le validateur intégré identifie l'emplacement et le type d'erreur (guillemets manquants, virgule incorrecte), facilitant la correction."
+    },
+    {
+      "question": "Puis-je personnaliser l'indentation (espaces vs tabulations) du JSON formaté ?",
+      "answer": "Oui, l'outil offre des options pour choisir entre des espaces (2 ou 4) et des tabulations pour l'indentation."
+    },
+    {
+      "question": "L'outil prend-il en charge la minification (compression) du JSON en plus du formatage ?",
+      "answer": "Absolument, une fonction de minification supprime tous les espaces et sauts de ligne pour obtenir un JSON compact."
+    },
+    {
+      "question": "Y a-t-il une limite de taille pour le JSON que je peux formater avec cet outil ?",
+      "answer": "Pour des raisons de performance navigateur, une limite pratique existe, mais elle est suffisante pour la plupart des fichiers de configuration et réponses API."
+    },
+    {
+      "question": "Mes données JSON sont-elles envoyées à un serveur lors du formatage ?",
+      "answer": "Non, tout le traitement est effectué localement dans votre navigateur (JavaScript côté client), garantissant la confidentialité."
+    }
   ]
 }

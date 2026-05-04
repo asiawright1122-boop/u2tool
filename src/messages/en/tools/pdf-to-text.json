@@ -13,5 +13,15 @@
     "Example 2: An academic researcher extracts tables from a PDF-based journal article to import into statistical analysis software",
     "Example 3: A software engineer migrates legacy documentation from scanned PDF manuals to Markdown format for version control",
     "Example 4: A compliance officer processes redacted PDF reports to verify that sensitive text has been properly removed from all document layers"
+  ],
+  "faqs": [
+    {
+      "question": "Does it work with scanned PDFs?",
+      "answer": "This tool extracts embedded text from PDFs. For scanned images, you may need OCR software."
+    },
+    {
+      "question": "Is there a file size limit?",
+      "answer": "Processing happens in your browser, so very large files may be slow. We recommend files under 50MB."
+    }
   ]
 }

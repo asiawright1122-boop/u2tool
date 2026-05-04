@@ -13,5 +13,27 @@
     "Un administrateur de site web reçoit un fichier HTML généré par un tiers. Il utilise l'outil pour décoder les entités HTML, vérifiant ainsi que le contenu est propre et lisible avant de l'intégrer sur le site.",
     "Un concepteur de formulaires web utilise l'outil pour encoder les valeurs de champ de formulaire avant de les soumettre au serveur, garantissant ainsi que les données sont correctement formatées et sécurisées.",
     "Un développeur travaille sur une application qui affiche des contenus provenant de diverses sources. Il utilise l'outil pour décoder les entités HTML, assurant ainsi que tous les caractères spéciaux sont affichés correctement dans l'interface utilisateur."
+  ],
+  "faqs": [
+    {
+      "question": "Quelle est la différence entre encoder et décoder en HTML ?",
+      "answer": "Encoder convertit les caractères spéciaux (ex: <) en entités sécurisées (&lt;). Décoder fait l'opération inverse."
+    },
+    {
+      "question": "Cet outil gère-t-il l'encodage Unicode et les caractères accentués ?",
+      "answer": "Oui, il encode correctement les caractères au-delà de l'ASCII standard, comme les lettres accentuées (é, è, à)."
+    },
+    {
+      "question": "Puis-je encoder uniquement certaines balises HTML spécifiques ?",
+      "answer": "Non, l'outil encode ou décode tous les caractères spéciaux détectés selon le standard HTML. Pour un contrôle précis, un éditeur de code est recommandé."
+    },
+    {
+      "question": "Y a-t-il une limite de taille pour le texte à traiter ?",
+      "answer": "L'outil fonctionne directement dans votre navigateur sans limite stricte, mais pour des performances optimales, évitez les documents extrêmement longs (> 1 Mo)."
+    },
+    {
+      "question": "Mon texte est-il envoyé sur un serveur lors de la conversion ?",
+      "answer": "Non, tout le traitement est effectué localement dans votre navigateur (JavaScript). Vos données restent privées et ne sont jamais envoyées en ligne."
+    }
   ]
 }

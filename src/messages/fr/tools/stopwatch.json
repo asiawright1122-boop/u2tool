@@ -13,5 +13,19 @@
     "Chronométrer précisément pendant la cuisine",
     "Chronométrer la technique Pomodoro pour les études",
     "Tester combien de temps prennent les tâches à accomplir"
+  ],
+  "faqs": [
+    {
+      "question": "Quelle est l'exactitude du chronomètre?",
+      "answer": "L'exactitude du chronomètre est de 10 millisecondes (centième de seconde), affichée sous forme de minutes:secondes.centisecondes, suffisante pour les besoins de chronométrage quotidiens."
+    },
+    {
+      "question": "Les enregistrements de tours sont-ils sauvegardés?",
+      "answer": "Les enregistrements de tours sont effacés lors de la mise à jour de la page. Si vous avez besoin de sauvegarder les enregistrements, nous recommandons de les enregistrer manuellement ou de prendre des captures d'écran après utilisation."
+    },
+    {
+      "question": "Comment sont marqués les tours les plus rapides et les plus lents?",
+      "answer": "Lorsque 2 ou plus de tours sont enregistrés, le système marque automatiquement le tour le plus rapide avec 🏆 et le plus lent avec 🐢, ce qui vous aide à analyser vos performances."
+    }
   ]
 }

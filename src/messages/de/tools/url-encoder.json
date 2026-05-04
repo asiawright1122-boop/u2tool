@@ -13,5 +13,27 @@
     "2. Eine Marketing-Abteilung erstellt Deep-Links für eine Kampagne mit dem Ziel-Parameter '?produkt=café', das in '%3Fprodukt%3Dcaf%C3%A9' umgewandelt werden muss.",
     "3. Ein Backend-Entwickler decodiert einen von einem Legacy-System übermittelten Query-String 'name=John+Doe%40mail.com' zur Validierung von Benutzereingaben.",
     "4. Ein API-Tester konstruiert manuell einen GET-Request mit dem Suchparameter '?query=100€' und benötigt die korrekte Kodierung als '?query=100%E2%82%AC'."
+  ],
+  "faqs": [
+    {
+      "question": "Was ist der Unterschied zwischen URL-Encoding und URL-Escaping?",
+      "answer": "Es handelt sich um synonyme Begriffe für denselben Prozess: das Umwandeln von Zeichen in einen Prozentzeichen-Code für URLs."
+    },
+    {
+      "question": "Welche Zeichen werden typischerweise von diesem Tool codiert?",
+      "answer": "Leerzeichen, Umlaute (&auml;, &ouml;, &uuml;), Sonderzeichen wie &, ?, =, # und nicht-ASCII-Zeichen."
+    },
+    {
+      "question": "Kann ich auch komplette Query-Strings (nach dem ?) codieren?",
+      "answer": "Ja, das Tool verarbeitet sowohl die Basis-URL als auch komplette Query-String-Parameter zuverlässig."
+    },
+    {
+      "question": "Funktioniert dieses Tool auch auf mobilen Geräten?",
+      "answer": "Ja, es ist vollständig responsiv und funktioniert in jedem modernen Mobilbrowser."
+    },
+    {
+      "question": "Werden meine eingegebenen Daten auf Ihren Servern gespeichert?",
+      "answer": "Nein, alle Berechnungen finden lokal in Ihrem Webbrowser statt, es erfolgt keine Datenspeicherung auf unseren Servern."
+    }
   ]
 }

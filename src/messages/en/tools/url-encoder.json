@@ -13,5 +13,27 @@
     "Decoding server logs: Transform '%D1%82%D0%B5%D1%81%D1%82' back to 'тест' Cyrillic text in access logs",
     "API key handling: Safely encode a base64 'Authorization' header parameter containing '+' characters",
     "Bookmarklet creation: Convert JavaScript code in 'javascript:(function(){...})' to URI-safe format"
+  ],
+  "faqs": [
+    {
+      "question": "What's the difference between URL encoding and decoding?",
+      "answer": "Encoding converts unsafe characters (like spaces or &) into a percent-encoded format (%20). Decoding reverses this process, turning codes back into readable characters."
+    },
+    {
+      "question": "Does this tool handle full URLs or just query string parameters?",
+      "answer": "It handles both complete URLs and individual query string fragments, encoding or decoding the entire input you provide."
+    },
+    {
+      "question": "What character set does the encoder use?",
+      "answer": "It uses UTF-8 encoding by default, following modern web standards to correctly handle international characters."
+    },
+    {
+      "question": "Is there a limit to the amount of text I can process?",
+      "answer": "The tool is designed for practical web use; extremely large inputs may be truncated, but it handles standard URLs and queries with ease."
+    },
+    {
+      "question": "Is my data secure when using this online tool?",
+      "answer": "Yes. All processing happens instantly in your browser. Your URLs are never sent to or stored on our servers."
+    }
   ]
 }

@@ -13,5 +13,27 @@
     "Décoder un token JWT expiré pour inspecter ses claims d'authentification",
     "Encoder un fichier PDF binaire pour l'envoyer via une API REST acceptant uniquement du JSON textuel",
     "Convertir des données de capteurs IoT hexadécimales en Base64 pour transmission MQTT"
+  ],
+  "faqs": [
+    {
+      "question": "Cet outil peut-il encoder des fichiers entiers ?",
+      "answer": "Il encode le texte que vous collez. Pour les fichiers, vous devez d'abord lire leur contenu texte."
+    },
+    {
+      "question": "Le décodage Base64 fonctionne-t-il avec les URL ?",
+      "answer": "Oui, vous pouvez décoder les données Base64 provenant d'URL ou d'attributs de données."
+    },
+    {
+      "question": "Y a-t-il une limite de caractères pour l'encodage ?",
+      "answer": "Non, notre outil en ligne gère de grandes quantités de texte sans limitation."
+    },
+    {
+      "question": "Le résultat est-il compatible avec tous les langages de programmation ?",
+      "answer": "Absolument, le format Base64 est un standard universel reconnu par la plupart des langages."
+    },
+    {
+      "question": "Mes données sont-elles sécurisées lors de l'utilisation de cet outil ?",
+      "answer": "Oui, tout le traitement se fait localement dans votre navigateur, aucune donnée n'est envoyée à nos serveurs."
+    }
   ]
 }

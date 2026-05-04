@@ -13,5 +13,15 @@
     "2. Ein Finanzanalyst extrahiert automatisiert Tabellenwerte aus quartalsweisen PDF-Berichten zur Weiterverarbeitung in Python-Pandas-Dataframes.",
     "3. Ein Archivar wandelt 50 Jahre alte Zeitungsausgaben im PDF/A-Format in korpusfähigen Rohdatenbestand für ein digitales Gedächtnisprojekt.",
     "4. Ein Softwareentwickler migriert Benutzeranleitungen aus PDFs in ein Markdown-basiertes Wiki-System durch batchweise Textextraktion."
+  ],
+  "faqs": [
+    {
+      "question": "Funktioniert das mit gescannten PDFs?",
+      "answer": "Dieses Tool extrahiert eingebetteten Text aus PDFs. Für gescannte Bilder benötigen Sie möglicherweise OCR-Software."
+    },
+    {
+      "question": "Gibt es eine Dateigrößenbegrenzung?",
+      "answer": "Die Verarbeitung erfolgt in Ihrem Browser, daher können sehr große Dateien langsam sein. Wir empfehlen Dateien unter 50MB."
+    }
   ]
 }

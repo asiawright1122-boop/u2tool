@@ -13,5 +13,27 @@
     "Um analista de dados precisa transformar dados brutos em um formato mais legível para análise. O JSON Formatter ajuda a organizar e formatar os dados, tornando-os mais fáceis de trabalhar em ferramentas de análise de dados.",
     "Um integrador de sistemas está configurando uma integração entre dois sistemas que trocam dados em JSON. Ele usa o JSON Formatter para garantir que os dados enviados e recebidos estejam em um formato válido e bem-estruturado.",
     "Um QA Engineer está testando uma aplicação que utiliza JSON extensivamente. O JSON Formatter é usado para validar os dados de entrada e saída, garantindo que a aplicação processe corretamente os dados JSON."
+  ],
+  "faqs": [
+    {
+      "question": "Esta ferramenta pode corrigir automaticamente JSON inválido?",
+      "answer": "Sim, ela tenta corrigir erros comuns, como adicionar vírgulas faltantes ou fechar chaves e colchetes."
+    },
+    {
+      "question": "O destaque de sintaxe funciona com JSON minificado?",
+      "answer": "Sim, após a formatação, a estrutura será expandida e o destaque de sintaxe será aplicado."
+    },
+    {
+      "question": "Posso formatar JSON diretamente de um arquivo?",
+      "answer": "Sim, você pode copiar e colar o conteúdo do arquivo, ou alguns navegadores permitem arrastar e soltar."
+    },
+    {
+      "question": "Há limite de tamanho para o JSON que posso formatar?",
+      "answer": "O limite é baseado na capacidade do seu navegador, mas a ferramenta é otimizada para documentos de tamanho razoável."
+    },
+    {
+      "question": "Os meus dados JSON são armazenados ou enviados para servidores externos?",
+      "answer": "Não, todo o processamento ocorre localmente no seu navegador, garantindo a privacidade dos seus dados."
+    }
   ]
 }

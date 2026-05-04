@@ -13,5 +13,27 @@
     "解析Nginx日志中的[25/Jan/2024:12:34:56 +0800]格式生成对应Unix时间戳",
     "验证区块链交易时间戳是否符合RFC 3339规范格式",
     "批量转换MySQL数据库中的UNIX_TIMESTAMP字段为可视化日期格式"
+  ],
+  "faqs": [
+    {
+      "question": "Epoch Converter 是免费的吗？",
+      "answer": "是的，Epoch Converter 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Epoch Converter 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "支持哪些格式转换？",
+      "answer": "Epoch Converter 支持多种格式之间的转换。您可以在工具页面查看支持的输入和输出格式。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Epoch Converter 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Epoch Converter 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
   ]
 }

@@ -13,5 +13,19 @@
     "Crear publicaciones de blog y notas",
     "Redactar documentación de proyectos",
     "Previsualizar formato Markdown rápidamente"
+  ],
+  "faqs": [
+    {
+      "question": "¿Qué sintaxis Markdown es compatible?",
+      "answer": "Se soporta toda la sintaxis Markdown estándar, incluyendo encabezados, negrita, cursiva, listas, bloques de código, tablas, enlaces, imágenes, citas y más. También se soportan las extensiones GFM (GitHub Flavored Markdown)."
+    },
+    {
+      "question": "¿Mi contenido se guarda automáticamente?",
+      "answer": "La versión actual no guarda el contenido automáticamente. Recomendamos exportar tu archivo después de editar. Puedes exportar en formato .md o .html."
+    },
+    {
+      "question": "¿Puedo importar archivos Markdown existentes?",
+      "answer": "Puedes copiar y pegar contenido Markdown existente directamente en el editor. El editor reconocerá y renderizará automáticamente la sintaxis Markdown."
+    }
   ]
 }

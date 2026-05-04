@@ -13,5 +13,27 @@
     "Um blogueiro precisa exibir um código HTML em um artigo sem que o navegador o interprete como parte da página. Ele usa a ferramenta para codificar o código HTML, garantindo que ele seja exibido corretamente no post.",
     "Um administrador de sistemas está revisando logs de um aplicativo web e encontra mensagens contendo entidades HTML. Para entender melhor o conteúdo, ele usa a ferramenta para decodificar as entidades HTML e visualizar o texto original.",
     "Um designer está criando um template de e-mail HTML e precisa garantir que o conteúdo seja exibido corretamente em diferentes clientes de e-mail. Ele usa a ferramenta para codificar partes específicas do HTML, evitando problemas de interpretação."
+  ],
+  "faqs": [
+    {
+      "question": "Esta ferramenta suporta codificação de todos os caracteres Unicode?",
+      "answer": "Sim, codificamos todos os caracteres Unicode para suas respectivas entidades HTML numéricas ou nomeadas."
+    },
+    {
+      "question": "Posso decodificar múltiplas entidades HTML de uma vez?",
+      "answer": "Sim, a ferramenta processa textos completos com múltiplas entidades simultaneamente."
+    },
+    {
+      "question": "A codificação preserva a formatação original do texto?",
+      "answer": "Sim, espaços, quebras de linha e tabulações são mantidos durante o processo de codificação/decodificação."
+    },
+    {
+      "question": "Existe limite de tamanho para o texto que posso processar?",
+      "answer": "A ferramenta processa textos extensos, mas recomendamos processar documentos muito grandes em partes menores para melhor desempenho."
+    },
+    {
+      "question": "Os dados que eu colo na ferramenta são armazenados em algum servidor?",
+      "answer": "Não, todo o processamento ocorre localmente no seu navegador, sem armazenamento ou envio de dados para servidores externos."
+    }
   ]
 }

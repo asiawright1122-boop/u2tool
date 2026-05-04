@@ -13,5 +13,27 @@
     "Ein Backend-Entwickler verwendet das Tool, um eine JSON-Konfigurationsdatei zu validieren, bevor sie in einer produktiven Umgebung bereitgestellt wird, um Fehlkonfigurationen zu vermeiden.",
     "Ein Datenwissenschaftler nutzt den JSON Formatter, um JSON-Dateien, die von einer Datenquelle stammen, zu analysieren und zu verifizieren, um sicherzustellen, dass die Daten die erwartete Struktur haben.",
     "Ein Systemadministrator verwendet das Tool, um JSON-Logs zu formatieren und zu lesen, die von einem Server generiert werden, um potenzielle Probleme in Anwendungen oder Systemen zu erkennen."
+  ],
+  "faqs": [
+    {
+      "question": "Kann das Tool auch JSON mit Kommentaren verarbeiten?",
+      "answer": "Standard-JSON erlaubt keine Kommentare. Das Tool markiert diese als Fehler, kann sie aber bei der Formatierung entfernen."
+    },
+    {
+      "question": "Was passiert bei sehr großen JSON-Dateien?",
+      "answer": "Die Verarbeitung erfolgt clientseitig im Browser. Sehr große Dateien können die Leistung beeinträchtigen; es gibt ein praktikables Größenlimit."
+    },
+    {
+      "question": "Unterstützt das Tool die Validierung gegen ein JSON-Schema?",
+      "answer": "Nein, der Fokus liegt auf der syntaktischen Validierung und Formatierung, nicht auf der Prüfung gegen ein vordefiniertes Schema."
+    },
+    {
+      "question": "Kann ich das formatierte Ergebnis in verschiedenen Stilen (z.B. 2 oder 4 Leerzeichen Einzug) exportieren?",
+      "answer": "Ja, das Tool bietet in der Regel eine Auswahl gängiger Einzugsstile für die formatierte Ausgabe."
+    },
+    {
+      "question": "Werden meine eingegebenen JSON-Daten auf Ihren Servern gespeichert?",
+      "answer": "Nein, die gesamte Verarbeitung findet lokal in Ihrem Browser statt. Es erfolgt keine Speicherung oder Übertragung Ihrer Daten an unsere Server."
+    }
   ]
 }

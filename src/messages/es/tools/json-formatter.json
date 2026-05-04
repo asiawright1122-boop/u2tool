@@ -13,5 +13,27 @@
     "Un ingeniero de backend necesita enviar un JSON complejo a un servicio externo. Utiliza el JSON Formatter para minimizar el JSON y reducir su tamaño, optimizando así el rendimiento de la transmisión de datos.",
     "Un analista de datos recibe un archivo JSON con múltiples niveles de anidamiento. Utiliza el JSON Formatter para formatear el JSON y resaltar la sintaxis, lo que facilita la comprensión y el análisis de los datos.",
     "Un desarrollador de software está creando un script que genera JSON dinámicamente. Utiliza el JSON Formatter para validar el JSON generado y asegurarse de que no hay errores de sintaxis, lo que garantiza la funcionalidad del script."
+  ],
+  "faqs": [
+    {
+      "question": "¿Puede esta herramienta reparar automáticamente un JSON con errores de sintaxis?",
+      "answer": "La herramienta identifica y señala la ubicación exacta de los errores, pero la corrección debe realizarla manualmente el usuario."
+    },
+    {
+      "question": "¿Qué tipos de errores de JSON detecta el validador?",
+      "answer": "Detecta errores comunes como comas extra o faltantes, llaves o corchetes desequilibrados, y comillas mal colocadas en cadenas."
+    },
+    {
+      "question": "¿Se puede personalizar el estilo de indentación (espacios o tabulaciones)?",
+      "answer": "Sí, la herramienta ofrece opciones para elegir entre indentación con espacios (2 o 4) o con tabuladores."
+    },
+    {
+      "question": "¿Hay un límite de tamaño para el JSON que puedo formatear?",
+      "answer": "Sí, existe un límite práctico basado en la memoria del navegador, pero es suficiente para la mayoría de documentos de desarrollo."
+    },
+    {
+      "question": "¿Los datos JSON que pego en la herramienta se envían a un servidor externo?",
+      "answer": "No, todo el procesamiento de formateo y validación ocurre localmente en tu navegador, garantizando la privacidad de tus datos."
+    }
   ]
 }

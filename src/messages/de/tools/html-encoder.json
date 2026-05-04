@@ -13,5 +13,27 @@
     "Eine Contentmanagerin muss einen Text auf einer Webpage korrigieren, der durch falsche HTML-Entitäten fehlerhaft dargestellt wird. Sie nutzt den HTML Decoder, um die Textpassage in ihre ursprünglichen Zeichen zurückzuwandeln, bevor sie die Korrekturen vornehmen kann.",
     "Ein Sicherheitsexperte testet eine Webanwendung auf XSS-Anfälligkeiten und muss sicherstellen, dass Benutzereingaben korrekt kodiert werden. Er verwendet den HTML Encoder, um Eingaben zu testen und sicherzustellen, dass sie nicht als HTML-Code interpretiert werden.",
     "Ein SEO-Experte optimiert den Inhalt einer Website und muss sicherstellen, dass bestimmte Sonderzeichen korrekt angezeigt werden, ohne dass sie die Suchmaschinenoptimierung beeinträchtigen. Er nutzt den HTML Encoder, um diese Zeichen in HTML-Entitäten umzuwandeln, die von Suchmaschinen korrekt interpretiert werden."
+  ],
+  "faqs": [
+    {
+      "question": "Welche Zeichen werden standardmäßig kodiert?",
+      "answer": "Alle für HTML relevanten Sonderzeichen wie <, >, &, \", ' sowie nicht-ASCII-Zeichen."
+    },
+    {
+      "question": "Kann ich auch ganze HTML-Dateien kodieren?",
+      "answer": "Ja, das Tool verarbeitet beliebig lange Texte, ideal für komplette Code-Blöcke."
+    },
+    {
+      "question": "Worin unterscheidet sich dieses Tool von einem URL-Encoder?",
+      "answer": "Ein HTML-Encoder wandelt Zeichen für HTML-Code um, ein URL-Encoder für Webadressen (z.B. Leerzeichen zu %20)."
+    },
+    {
+      "question": "Gibt es Einschränkungen bei der Zeichenkodierung (UTF-8, etc.)?",
+      "answer": "Nein, das Tool unterstützt vollständig Unicode (UTF-8) und alle darin enthaltenen Zeichen."
+    },
+    {
+      "question": "Werden meine eingegebenen Daten auf Ihren Servern gespeichert?",
+      "answer": "Nein, alle Berechnungen finden lokal in Ihrem Browser statt. Ihre Daten bleiben privat."
+    }
   ]
 }

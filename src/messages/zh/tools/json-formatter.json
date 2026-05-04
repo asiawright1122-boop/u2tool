@@ -13,5 +13,27 @@
     "测试人员在测试应用程序时，需要验证 API 返回的 JSON 数据是否符合预期。JSON Formatter 可以帮助他们检测 JSON 数据的有效性，并快速识别和修复错误。",
     "数据分析师在处理大量 JSON 数据时，需要将数据转换为易于分析的格式。JSON Formatter 可以帮助他们快速格式化数据，便于后续处理。",
     "前端开发人员在配置应用时，需要确保 JSON 配置文件的正确性。使用 JSON Formatter 可以帮助他们检查配置文件的有效性，避免因格式错误导致应用运行异常。"
+  ],
+  "faqs": [
+    {
+      "question": "Json Formatter 是免费的吗？",
+      "answer": "是的，Json Formatter 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Json Formatter 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "Json Formatter 支持哪些格式？",
+      "answer": "Json Formatter 支持多种常见格式，包括 JSON、XML、HTML 等。您可以在工具页面查看支持的完整格式列表。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Json Formatter 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Json Formatter 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
   ]
 }

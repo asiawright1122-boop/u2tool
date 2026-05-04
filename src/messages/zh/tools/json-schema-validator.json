@@ -13,5 +13,23 @@
     "Example 2: 在前端与后端数据交互中，前端开发者可以使用此工具验证从后端收到的 JSON 数据是否符合预定义的 Schema，及时发现数据异常。",
     "Example 3: 在进行数据迁移或数据导入项目中，使用 JSON Schema Validator 检查数据源中的 JSON 数据是否符合目标系统的要求，保证数据迁移过程的顺利进行。",
     "Example 4: 在编写自动化测试脚本时，测试工程师可以利用 JSON Schema Validator 确认测试数据的正确性，提高测试的可靠性和覆盖率。"
+  ],
+  "faqs": [
+    {
+      "question": "Json Schema Validator 是免费的吗？",
+      "answer": "是的，Json Schema Validator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Json Schema Validator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Json Schema Validator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Json Schema Validator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
   ]
 }

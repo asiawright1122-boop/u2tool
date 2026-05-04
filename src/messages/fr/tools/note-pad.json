@@ -14,5 +14,23 @@
     "Enregistrez des idées et des inspirations temporaires",
     "Enregistrez des points de rencontre et des notes de réunion",
     "Enregistrez des informations fréquemment utilisées comme des indices de mots de passe, des contacts, etc."
+  ],
+  "faqs": [
+    {
+      "question": "Les notes sont-elles sauvegardées automatiquement?",
+      "answer": "Oui, toutes les notes sont sauvegardées automatiquement dans le stockage local du navigateur. Même après la fermeture de la page ou du navigateur, les notes sont conservées lors de votre retour."
+    },
+    {
+      "question": "Où sont stockées les données des notes?",
+      "answer": "Les données des notes sont stockées dans le localStorage de votre navigateur, sans être téléchargées sur un serveur. La suppression des données du navigateur peut entraîner la perte des notes, donc nous recommandons des exports réguliers pour la sauvegarde."
+    },
+    {
+      "question": "Comment puis-je sauvegarder mes notes?",
+      "answer": "Cliquez sur le bouton 'Exporter' pour exporter toutes les notes sous forme de fichier JSON. Vous pouvez sauvegarder ce fichier comme une sauvegarde."
+    },
+    {
+      "question": "Combien de notes puis-je créer?",
+      "answer": "Il n'y a pas de limite sur le nombre de notes. Créez-en aussi nombreuses que vous en avez besoin. Notez que le stockage local du navigateur a des limites de capacité (généralement 5-10MB)."
+    }
   ]
 }

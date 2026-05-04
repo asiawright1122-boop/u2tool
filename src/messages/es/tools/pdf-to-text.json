@@ -13,5 +13,15 @@
     "Un abogado convierte contratos físicos escaneados en texto editable para realizar búsquedas de cláusulas específicas",
     "Un desarrollador automatiza la migración de documentación técnica PDF a un sistema CMS con procesamiento posterior",
     "Un analista financiero transforma informes de balances anuales en formato tabular para importarlos a herramientas de BI"
+  ],
+  "faqs": [
+    {
+      "question": "¿Funciona con PDFs escaneados?",
+      "answer": "Esta herramienta extrae texto incrustado en PDFs. Para imágenes escaneadas, puede que necesites software OCR."
+    },
+    {
+      "question": "¿Hay un límite de tamaño de archivo?",
+      "answer": "El procesamiento se realiza en tu navegador, por lo que los archivos muy grandes pueden ser lentos. Recomendamos archivos inferiores a 50MB."
+    }
   ]
 }

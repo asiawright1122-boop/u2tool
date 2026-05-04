@@ -14,5 +14,23 @@
     "Save temporary ideas and inspiration",
     "Record meeting points and notes",
     "Save frequently used info like password hints, contacts, etc."
+  ],
+  "faqs": [
+    {
+      "question": "Are notes saved automatically?",
+      "answer": "Yes, all notes are automatically saved to browser local storage. Even after closing the page or browser, notes are preserved when you return."
+    },
+    {
+      "question": "Where is note data stored?",
+      "answer": "Note data is stored in your browser's localStorage, not uploaded to any server. Clearing browser data may cause notes to be lost, so we recommend regular exports for backup."
+    },
+    {
+      "question": "How do I backup my notes?",
+      "answer": "Click the 'Export' button to export all notes as a JSON file. You can save this file as a backup."
+    },
+    {
+      "question": "How many notes can I create?",
+      "answer": "There's no limit on the number of notes. Create as many as you need. Note that browser local storage has capacity limits (typically 5-10MB)."
+    }
   ]
 }

@@ -13,5 +13,19 @@
     "Créer des articles de blog et des notes",
     "Rédiger de la documentation de projet",
     "Prévisualiser rapidement le formatage Markdown"
+  ],
+  "faqs": [
+    {
+      "question": "Quelle syntaxe Markdown est prise en charge ?",
+      "answer": "Toute la syntaxe Markdown standard est prise en charge, incluant les titres, gras, italique, listes, blocs de code, tableaux, liens, images, citations et plus. Les extensions GFM (GitHub Flavored Markdown) sont également prises en charge."
+    },
+    {
+      "question": "Mon contenu est-il sauvegardé automatiquement ?",
+      "answer": "La version actuelle ne sauvegarde pas automatiquement le contenu. Nous recommandons d'exporter votre fichier après l'édition. Vous pouvez exporter au format .md ou .html."
+    },
+    {
+      "question": "Puis-je importer des fichiers Markdown existants ?",
+      "answer": "Vous pouvez copier et coller du contenu Markdown existant directement dans l'éditeur. L'éditeur reconnaîtra et rendra automatiquement la syntaxe Markdown."
+    }
   ]
 }

@@ -13,5 +13,27 @@
     "Example 2: 一位开发者正在开发一个需要在多个环境中部署的应用，其中一个环境使用 Nginx，另一个环境使用 Apache。通过使用此工具，开发者可以轻松地将 .htaccess 规则转换为 Nginx 配置，确保应用在不同环境中的行为一致。",
     "Example 3: 一个网站管理员需要优化网站的缓存设置，但现有的 .htaccess 文件中包含大量的缓存控制规则。使用 htaccess to Nginx Converter 可以快速将这些规则转换为 Nginx 配置，从而简化配置过程。",
     "Example 4: 一个团队正在进行一个从 PHP 到 Node.js 的项目重构，新的后端将运行在 Nginx 上。团队可以使用 htaccess to Nginx Converter 将现有的 .htaccess 重写规则转换为 Nginx 配置，确保迁移过程中的 URL 结构保持不变。"
+  ],
+  "faqs": [
+    {
+      "question": "Htaccess To Nginx 是免费的吗？",
+      "answer": "是的，Htaccess To Nginx 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Htaccess To Nginx 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "支持哪些格式转换？",
+      "answer": "Htaccess To Nginx 支持多种格式之间的转换。您可以在工具页面查看支持的输入和输出格式。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Htaccess To Nginx 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Htaccess To Nginx 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
   ]
 }

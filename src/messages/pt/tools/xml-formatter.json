@@ -13,5 +13,27 @@
     "Preparar arquivos de configuração Spring Framework com identação consistente para equipes de desenvolvimento.",
     "Minificar payloads XML enviados a APIs de pagamento para reduzir largura de banda.",
     "Validar feeds RSS gerados dinamicamente contra o schema Dublin Core antes de publicação."
+  ],
+  "faqs": [
+    {
+      "question": "Esta ferramenta preserva os comentários dentro do meu XML ao formatar?",
+      "answer": "Sim, a ferramenta é configurada para preservar os comentários originais (<!-- -->) durante o processo de formatação."
+    },
+    {
+      "question": "Qual é a diferença entre 'minificar' e 'formatar' o XML?",
+      "answer": "Formatar adiciona indentação e quebras de linha para melhorar a legibilidade. Minificar remove todos os espaços, quebras e indentações desnecessários para reduzir o tamanho do arquivo."
+    },
+    {
+      "question": "A validação de sintaxe verifica se o XML está bem-formado ou também contra um DTD/Esquema?",
+      "answer": "Nossa validação verifica se o XML está 'bem-formado' (well-formed), com tags balanceadas e sintaxe correta. Não realiza validação contra um DTD ou Esquema (XSD) externo."
+    },
+    {
+      "question": "Existe um limite de tamanho para o XML que posso processar?",
+      "answer": "Por ser uma ferramenta baseada no navegador, o limite prático é a memória disponível do seu dispositivo. Para arquivos extremamente grandes (acima de vários MB), recomendamos processamento em lotes."
+    },
+    {
+      "question": "Os meus dados XML são enviados para um servidor ou processados localmente?",
+      "answer": "Todo o processamento é feito diretamente no seu navegador (client-side). Seus dados XML nunca são enviados para nossos servidores, garantindo total privacidade."
+    }
   ]
 }

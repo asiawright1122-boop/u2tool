@@ -13,5 +13,19 @@
     "Un desarrollador de aplicaciones móviles traduce las configuraciones de Firebase (JSON) a TOML para integrarlas con un sistema de CI/CD basado en GitHub Actions",
     "Un científico de datos transforma logs almacenados en TOML a JSON para su posterior ingestión en herramientas de visualización como Kibana",
     "Un arquitecto de software compara la representación en ambos formatos de un esquema OpenAPI para validar la consistencia de tipos complejos"
+  ],
+  "faqs": [
+    {
+      "q": "¿Qué es TOML?",
+      "a": "TOML (Tom's Obvious, Minimal Language) es un formato de archivo de configuración mínimo para archivos de configuración."
+    },
+    {
+      "q": "¿Por qué convertir TOML a JSON?",
+      "a": "JSON es más ampliamente compatible y se puede usar en muchos lenguajes de programación y herramientas."
+    },
+    {
+      "q": "¿Esta herramienta es gratuita?",
+      "a": "Sí, es completamente gratuita y no requiere registro."
+    }
   ]
 }

@@ -14,5 +14,23 @@
     "Guardar ideas y inspiraciones temporales",
     "Registrar puntos de reunión y notas",
     "Guardar información常用的 como recordatorios de contraseñas, contactos, etc."
+  ],
+  "faqs": [
+    {
+      "question": "¿Se guardan las notas automáticamente?",
+      "answer": "Sí, todas las notas se guardan automáticamente en el almacenamiento local del navegador. Incluso después de cerrar la página o el navegador, las notas se conservan cuando vuelves."
+    },
+    {
+      "question": "¿Dónde se almacena los datos de las notas?",
+      "answer": "Los datos de las notas se almacenan en el localStorage de tu navegador, no se suben a ningún servidor. El borrado de los datos del navegador puede hacer que se pierdan las notas, por lo que recomendamos realizar exports regulares para respaldo."
+    },
+    {
+      "question": "¿Cómo puedo respaldar mis notas?",
+      "answer": "Haz clic en el botón 'Exportar' para exportar todas las notas como un archivo JSON. Puedes guardar este archivo como respaldo."
+    },
+    {
+      "question": "¿Cuántas notas puedo crear?",
+      "answer": "No hay límite en el número de notas. Crea tantas como necesites. Ten en cuenta que el almacenamiento local del navegador tiene límites de capacidad (generalmente 5-10MB)."
+    }
   ]
 }

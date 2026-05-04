@@ -13,5 +13,23 @@
     "在编写一个日志解析脚本时，利用 Regex Visualizer 调试正则表达式，确保能够正确提取日志中的关键信息，如时间戳、IP地址等。",
     "在处理用户输入的文本时，使用 Regex Visualizer 来验证正则表达式是否能够有效地过滤非法字符，提高应用的安全性。",
     "在开发一个 URL 解析器时，使用 Regex Visualizer 来测试正则表达式，确保能够准确解析各种复杂的 URL 结构。"
+  ],
+  "faqs": [
+    {
+      "question": "Regex Visualizer 是免费的吗？",
+      "answer": "是的，Regex Visualizer 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Regex Visualizer 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Regex Visualizer 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Regex Visualizer 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
   ]
 }

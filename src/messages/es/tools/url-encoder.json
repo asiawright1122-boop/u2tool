@@ -13,5 +13,27 @@
     "Decodificar una URL de retorno OAuth2 que incluye un token JWT con caracteres Base64Url como '+', '/', y '='.",
     "Preparar un query string para una búsqueda con filtros complejos: 'color=rojo&size>L' → 'color%3Drojo%26size%3EL'.",
     "Analizar una URL malformada recibida en logs del servidor, identificando caracteres no codificados que causan errores 404."
+  ],
+  "faqs": [
+    {
+      "question": "¿Qué caracteres codifica específicamente esta herramienta?",
+      "answer": "Codifica espacios, símbolos como &, ?, =, #, y caracteres no ASCII, reemplazándolos por su porcentaje de código correspondiente (ej., %20 para un espacio)."
+    },
+    {
+      "question": "¿Puedo decodificar una URL parcialmente codificada?",
+      "answer": "Sí, la herramienta procesará correctamente cualquier cadena de entrada, decodificando solo los códigos de porcentaje válidos que encuentre."
+    },
+    {
+      "question": "¿La herramienta maneja codificación para formularios HTML (application/x-www-form-urlencoded)?",
+      "answer": "Sí, el proceso de codificación es compatible con el formato estándar utilizado en formularios web y parámetros de consulta."
+    },
+    {
+      "question": "¿Existe un límite en la longitud del texto que puedo procesar?",
+      "answer": "No hay un límite práctico para uso normal en el navegador; puede manejar URLs y cadenas de consulta de longitud típica sin problemas."
+    },
+    {
+      "question": "¿Se almacenan o envían mis URLs procesadas a un servidor?",
+      "answer": "No, todo el procesamiento se realiza localmente en tu navegador. Tus datos nunca salen de tu dispositivo, garantizando privacidad total."
+    }
   ]
 }
