@@ -32,7 +32,7 @@ import { tools, categories, getToolsByCategory } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
 import { isValidLocale } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
-import { loadToolMessages, loadBaseMessages } from '@/lib/translations';
+import { loadBaseUiMessages, loadToolPageMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
 import { buildLocalizedPageUrl } from '@/lib/seo';
@@ -60,11 +60,11 @@ if (!tool) {
   return Astro.redirect(`/${locale}/tools/`, 302);
 }
 
-// Load tool-specific translations (merged base + detailed, with English fallback)
-const messages = await loadToolMessages(locale, tool.slug);
+// Load tool-specific translations without parsing every tool's long-form copy.
+const messages = await loadToolPageMessages(locale, tool.slug);
 
-// Load base messages for common UI strings (nav labels, category names, etc.)
-const baseMessages = await loadBaseMessages(locale);
+// Load lightweight base messages for common UI strings (nav labels, category names, etc.)
+const baseMessages = await loadBaseUiMessages(locale);
 const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
 const toolsCommon = (baseMessages.tools as Record<string, unknown>) ?? {};
