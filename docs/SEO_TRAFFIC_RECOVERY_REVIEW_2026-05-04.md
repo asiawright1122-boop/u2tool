@@ -53,6 +53,7 @@ Cloudflare 生产版本已更新到 `765570c1-5c4a-4c21-a7e2-a17b268eab8f`。关
 - 增加 Worker SSR 健康验证，专门检测绕缓存多语言 SSR 是否 200、是否无 1102。
 - 工具索引页现在会 SSR 输出 `?q=` 搜索结果，SearchAction 指向的 URL 不再只是纯客户端空壳。
 - 2026-05-04 新增工具索引页稳定 H1，并让渲染 SEO 验证检查 H1，避免标题层级再次消失。
+- 2026-05-04 bump HTML edge cache version，避免 Cloudflare 继续命中 H1 修复前的旧 HTML。
 
 ## 仍然最可疑的流量阻塞
 
@@ -117,4 +118,3 @@ npm run report:gsc-recovery -- \
   --queries-previous exports/gsc/queries-previous.csv \
   --output docs/GSC_RECOVERY_REPORT.md
 ```
-
