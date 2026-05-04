@@ -1,6 +1,13 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
-import { createTranslator, loadBaseMessages, loadToolMessages } from './translations';
+import { fileURLToPath } from 'node:url';
+import {
+  createTranslator,
+  loadBaseMessages,
+  loadBaseUiMessages,
+  loadToolMessages,
+  loadToolPageMessages,
+} from './translations';
 
 function readSplitToolMessages(slug: string): Record<string, unknown> {
   return JSON.parse(readFileSync(new URL(`../messages/en/tools/${slug}.json`, import.meta.url), 'utf-8'));
@@ -12,6 +19,10 @@ function readAggregateToolMessages(slug: string): Record<string, unknown> {
 }
 
 const splitSupportKeys = ['detailed_description', 'usage_steps', 'usage_examples', 'faqs'];
+const toolDetailPageSource = readFileSync(
+  fileURLToPath(new URL('../pages/[locale]/tools/[slug].astro', import.meta.url)),
+  'utf-8'
+);
 
 describe('translations module', () => {
   describe('createTranslator', () => {
@@ -81,6 +92,27 @@ describe('translations module', () => {
       expect(typeof zhToolMessages.seo_title).toBe('string');
     });
 
+    it('loads lightweight base UI messages without losing shared labels', async () => {
+      const ruMessages = await loadBaseUiMessages('ru');
+
+      expect((ruMessages.nav as Record<string, string>).home).toBe('Главная');
+      expect((ruMessages.categories as Record<string, string>).development).toBeTruthy();
+      expect((ruMessages.tools as Record<string, Record<string, string>>)['json-formatter']?.name)
+        .toContain('JSON');
+    });
+
+    it('loads tool page messages from compact metadata plus split support copy', async () => {
+      const splitJsonFormatter = JSON.parse(
+        readFileSync(new URL('../messages/ru/tools/json-formatter.json', import.meta.url), 'utf-8')
+      ) as Record<string, unknown>;
+      const jsonFormatterMessages = await loadToolPageMessages('ru', 'json-formatter');
+
+      expect(jsonFormatterMessages.name).not.toBe('JSON Formatter');
+      expect(typeof jsonFormatterMessages.seo_title).toBe('string');
+      expect(jsonFormatterMessages.detailed_description).toBe(splitJsonFormatter.detailed_description);
+      expect(jsonFormatterMessages.usage_steps).toEqual(splitJsonFormatter.usage_steps);
+    });
+
     it('deep merges base and root locale namespaces so seo defaults do not disappear', async () => {
       const jaMessages = await loadBaseMessages('ja');
       const categoriesSeo = jaMessages.categories_seo as Record<string, Record<string, string>>;
@@ -137,6 +169,13 @@ describe('translations module', () => {
       expect(jwtDecoderMessages.detailed_description).toBe(splitJwtDecoder.detailed_description);
       expect(String(jwtDecoderMessages.detailed_description)).toContain('JWT Decoder');
       expect(String(jwtDecoderMessages.detailed_description)).not.toContain('JWT Debugger');
+    });
+
+    it('keeps crawler-heavy tool detail pages on lightweight translation loaders', () => {
+      expect(toolDetailPageSource).toContain('loadBaseUiMessages');
+      expect(toolDetailPageSource).toContain('loadToolPageMessages');
+      expect(toolDetailPageSource).not.toContain('loadBaseMessages');
+      expect(toolDetailPageSource).not.toContain('loadToolMessages');
     });
   });
 });

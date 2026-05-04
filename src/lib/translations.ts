@@ -27,7 +27,9 @@ const detailedToolSupportKeys = [
 ];
 
 const baseMessagesCache = new Map<string, MessagesRecord>();
+const baseUiMessagesCache = new Map<string, MessagesRecord>();
 const toolMessagesCache = new Map<string, MessagesRecord>();
+const toolPageMessagesCache = new Map<string, MessagesRecord>();
 const legacyToolIndexCache = new Map<string, MessagesRecord>();
 const legacyToolIndexOverrideSlugs = [...new Set([
   ...Object.keys(toolMessageAliases),
@@ -303,6 +305,49 @@ export async function loadBaseMessages(
 }
 
 /**
+ * Load the lightweight UI translation bundle for SSR-heavy tool detail pages.
+ *
+ * This intentionally avoids the root locale JSON files (`en.json`, `ru.json`,
+ * etc.) because those files contain long-form support copy for every tool and
+ * are multi-megabyte in several locales. Tool detail SSR only needs shared UI
+ * labels plus compact tool metadata from `base.json`; current-tool support copy
+ * is loaded separately from the split per-tool files.
+ */
+export async function loadBaseUiMessages(
+  locale: Locale,
+  assetBaseUrl?: string | URL
+): Promise<MessagesRecord> {
+  const cacheKey = `${locale}:${getAssetCacheKey(assetBaseUrl)}`;
+  const cached = baseUiMessagesCache.get(cacheKey);
+  if (cached) {
+    return cached;
+  }
+
+  const fallbackBase = (await loadMessagesFile(
+    '../messages/en/base.json',
+    '/messages/en/base.json',
+    assetBaseUrl
+  )) ?? {};
+
+  if (locale === 'en') {
+    const normalizedFallbackMessages = await applyToolMessageAliases('en', fallbackBase, assetBaseUrl);
+    baseUiMessagesCache.set(cacheKey, normalizedFallbackMessages);
+    return normalizedFallbackMessages;
+  }
+
+  const localeBase = (await loadMessagesFile(
+    `../messages/${locale}/base.json`,
+    `/messages/${locale}/base.json`,
+    assetBaseUrl
+  )) ?? {};
+
+  const mergedWithFallback = mergeMessageRecords(fallbackBase, localeBase);
+  const normalizedMessages = await applyToolMessageAliases(locale, mergedWithFallback, assetBaseUrl);
+  baseUiMessagesCache.set(cacheKey, normalizedMessages);
+  return normalizedMessages;
+}
+
+/**
  * Load per-tool translations for a specific locale and tool slug.
  * Merges base tool data (from the main locale JSON) with detailed translations
  * (from the split per-tool JSON file). Falls back to English when translations
@@ -347,6 +392,47 @@ export async function loadToolMessages(
   }
 
   toolMessagesCache.set(cacheKey, mergedMessages);
+  return mergedMessages;
+}
+
+/**
+ * Load the current tool's SSR copy without parsing the full aggregate locale
+ * roots. This keeps crawler-heavy tool detail pages from repeatedly loading and
+ * deep-merging multi-megabyte JSON payloads on Cloudflare Workers.
+ */
+export async function loadToolPageMessages(
+  locale: Locale,
+  slug: string,
+  assetBaseUrl?: string | URL
+): Promise<MessagesRecord> {
+  const cacheKey = `${locale}:${slug}:${getAssetCacheKey(assetBaseUrl)}`;
+  const cached = toolPageMessagesCache.get(cacheKey);
+  if (cached) {
+    return cached;
+  }
+
+  const base = await loadBaseUiMessages(locale, assetBaseUrl);
+  const toolsObj = (base.tools as Record<string, unknown>) ?? {};
+  const fallbackSlug = toolMessageAliases[slug];
+  const toolData = ((toolsObj[slug] as Record<string, unknown>) ??
+    (fallbackSlug ? (toolsObj[fallbackSlug] as Record<string, unknown>) : undefined)) ?? {};
+
+  const localeDetailed = await loadDetailedToolMessages(locale, slug, fallbackSlug, assetBaseUrl);
+  const detailed = locale === 'en'
+    ? localeDetailed
+    : mergeMessageRecords(
+        await loadDetailedToolMessages('en', slug, fallbackSlug, assetBaseUrl),
+        localeDetailed
+      );
+
+  const mergedMessages = { ...toolData };
+  for (const key of detailedToolSupportKeys) {
+    if (detailed[key] !== undefined) {
+      mergedMessages[key] = detailed[key];
+    }
+  }
+
+  toolPageMessagesCache.set(cacheKey, mergedMessages);
   return mergedMessages;
 }
 
