@@ -167,7 +167,6 @@ function resolveIndexNowKey(siteUrl) {
 
 function buildPriorityUrls(siteUrl, selectedLocales, limit) {
   const urls = new Set();
-  const aiDiscoveryEnabled = process.env.PUBLIC_AI_DISCOVERY_ENABLED === 'true';
   const addPath = (path) => {
     urls.add(`${siteUrl}${path.endsWith('/') ? path : `${path}/`}`);
   };
@@ -176,10 +175,7 @@ function buildPriorityUrls(siteUrl, selectedLocales, limit) {
     addPath(`/${locale}`);
     addPath(`/${locale}/tools`);
     addPath(`/${locale}/compare`);
-
-    if (aiDiscoveryEnabled) {
-      addPath(`/${locale}/ai`);
-    }
+    addPath(`/${locale}/ai`);
 
     for (const category of CATEGORY_SLUGS) {
       addPath(`/${locale}/categories/${category}`);

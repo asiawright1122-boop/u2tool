@@ -9,7 +9,6 @@ import { locales } from '@/lib/i18n';
 import { categories } from '@/config/tools';
 import { comparisonSurfaceSlugs } from '@/lib/comparison-surfaces';
 import { sitemapLastmodManifest } from '@/generated/sitemap-lastmod';
-import { isAiDiscoveryEnabled } from '@/lib/ai-discovery/feature-flag';
 import { getPriorityTools } from '@/lib/seo-discovery';
 import { buildUrl, generateSitemapResponse } from '@/lib/sitemap-utils';
 
@@ -22,9 +21,7 @@ export const GET: APIRoute = () => {
   for (const locale of locales) {
     urls.push(buildUrl(`/${locale}`, '1.0', 'daily', sitemapLastmodManifest.pages));
 
-    if (isAiDiscoveryEnabled()) {
-      urls.push(buildUrl(`/${locale}/ai`, '0.8', 'daily', sitemapLastmodManifest.ai));
-    }
+    urls.push(buildUrl(`/${locale}/ai`, '0.8', 'daily', sitemapLastmodManifest.ai));
 
     urls.push(buildUrl(`/${locale}/tools`, '0.9', 'daily', sitemapLastmodManifest.pages));
     urls.push(buildUrl(`/${locale}/compare`, '0.8', 'weekly', sitemapLastmodManifest.pages));

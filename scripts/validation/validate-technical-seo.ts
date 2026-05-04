@@ -11,7 +11,7 @@ interface UrlCheck {
 const urlChecks: UrlCheck[] = [
   { name: 'robots.txt', path: '/robots.txt', contentTypeIncludes: 'text/plain', bodyIncludes: ['Sitemap: https://www.u2tool.com/sitemap.xml', 'Disallow: /api/'] },
   { name: 'sitemap index', path: '/sitemap.xml', contentTypeIncludes: 'application/xml', bodyIncludes: ['/sitemap-priority.xml', '/sitemap-pages.xml', '/sitemap-tools.xml'] },
-  { name: 'priority sitemap', path: '/sitemap-priority.xml', contentTypeIncludes: 'application/xml', bodyIncludes: ['/en/tools/json-formatter/', '/en/tools/jwt-decoder/'] },
+  { name: 'priority sitemap', path: '/sitemap-priority.xml', contentTypeIncludes: 'application/xml', bodyIncludes: ['/en/ai/', '/en/tools/json-formatter/', '/en/tools/jwt-decoder/'] },
   { name: 'tools sitemap', path: '/sitemap-tools.xml', contentTypeIncludes: 'application/xml', bodyIncludes: ['/en/tools/json-formatter/', '/en/tools/jwt-decoder/'] },
 ];
 
