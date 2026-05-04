@@ -13,6 +13,7 @@
     "check": "astro check",
     "report:content-trust": "node scripts/validation/content-trust-audit.mjs",
     "report:gsc-coverage": "node --import tsx/esm scripts/seo/gsc-coverage-report.ts",
+    "report:gsc-drilldown": "node --import tsx/esm scripts/seo/gsc-drilldown-url-report.ts",
     "report:gsc-recovery": "node --import tsx/esm scripts/seo/gsc-recovery-report.ts",
     "report:seo-alignment": "node --import tsx/esm scripts/validation/generate-seo-alignment-report.ts",
     "validate:production-routes": "node scripts/validation/verify-production-routes.mjs",
