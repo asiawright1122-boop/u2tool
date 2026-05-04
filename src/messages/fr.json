@@ -1253,15 +1253,29 @@
       "faqs": [
         {
           "q": "Qu'est-ce que TOML ?",
-          "a": "TOML (Tom's Obvious, Minimal Language) est un format de fichier de configuration minimal pour les fichiers de configuration."
+          "a": "TOML (Tom's Obvious, Minimal Language) est un format de fichier de configuration minimal pour les fichiers de configuration.",
+          "question": "Does the converter preserve comments from my TOML file?",
+          "answer": "No, JSON does not natively support comments, so they are stripped during TOML-to-JSON conversion."
         },
         {
           "q": "Pourquoi convertir TOML en JSON ?",
-          "a": "JSON est plus largement pris en charge et peut être utilisé dans de nombreux langages de programmation et outils."
+          "a": "JSON est plus largement pris en charge et peut être utilisé dans de nombreux langages de programmation et outils.",
+          "question": "How does the tool handle invalid TOML or JSON syntax?",
+          "answer": "The tool provides clear error messages highlighting the location and nature of any syntax errors it encounters."
         },
         {
           "q": "Cet outil est-il gratuit ?",
-          "a": "Oui, il est entièrement gratuit et ne nécessite aucune inscription."
+          "a": "Oui, il est entièrement gratuit et ne nécessite aucune inscription.",
+          "question": "Can I convert nested structures and arrays between the formats?",
+          "answer": "Yes, the converter fully supports complex nested objects, arrays, and all standard data types in both formats."
+        },
+        {
+          "question": "Is there a file size limit for conversion?",
+          "answer": "The conversion is performed client-side in your browser, so it's limited by your device's available memory."
+        },
+        {
+          "question": "Is my data secure when using this online converter?",
+          "answer": "Yes, all conversion happens locally in your web browser; no data is sent to any server, ensuring complete privacy."
         }
       ]
     },
@@ -5830,11 +5844,14 @@
         " collez le contenu que vous souhaitez traiter dans la zone de saisie",
         "ajustez les options et paramètres d'outil selon vos besoins",
         "cliquez sur le bouton de traitement pour voir les résultats",
-        "copiez ou téléchargez les résultats traités"
+        "copiez ou téléchargez les résultats traités",
+        "Step 6: Once satisfied, you can copy the JSON output using the 'Copy JSON' button or download it as a file by clicking the 'Download JSON' button."
       ],
       "usage_examples": [
         "Utilisez XML to JSON pour traiter vos données",
-        "Obtenez rapidement les résultats du traitement sans attendre"
+        "Obtenez rapidement les résultats du traitement sans attendre",
+        "Example 3: A data analyst is tasked with analyzing XML data from various sources. The analyst uses the XML to JSON tool to convert the data into JSON, making it easier to manipulate and visualize using modern data analysis tools that are optimized for JSON.",
+        "Example 4: A mobile app developer needs to fetch XML data from a server and display it in a mobile application. The developer uses the XML to JSON tool to convert the XML data into JSON, which is natively supported by the mobile app's framework, ensuring efficient and smooth data handling."
       ],
       "inputPlaceholder": "Coller l'XML ici...",
       "outputPlaceholder": "Les résultats apparaîtront ici..."
@@ -9630,11 +9647,14 @@
         "Saisissez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
         "Ajustez les options et les paramètres de l'outil selon vos besoins",
         "Cliquez sur le bouton de traitement pour visualiser les résultats",
-        "Copiez ou téléchargez les résultats traités"
+        "Copiez ou téléchargez les résultats traités",
+        "Step 6: Once you are satisfied with your chart, click on the 'Export' button to download the visualization as an image or a vector file. You can also share the chart directly from the tool using the 'Share' option."
       ],
       "usage_examples": [
         "Utilisez le Générateur de Graphique à Bulles pour traiter vos données",
-        "Obtenez des résultats de traitement rapidement sans attendre"
+        "Obtenez des résultats de traitement rapidement sans attendre",
+        "Example 3: A public health researcher utilizes the Bubble Chart Generator to map the incidence of a disease (X-axis), the population density (Y-axis), and the number of healthcare facilities (bubble size) to optimize resource allocation in a region.",
+        "Example 4: An environmental scientist uses the tool to visualize the correlation between carbon emissions (X-axis), economic growth (Y-axis), and the area of forest cover (bubble size) to assess the impact of industrial activities on the environment."
       ],
       "png": "PNG",
       "svg": "SVG",
@@ -11029,11 +11049,14 @@
         "Saisissez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
         "Ajustez les options et les paramètres de l'outil comme nécessaire",
         "Cliquez sur le bouton de traitement pour visualiser les résultats",
-        "Copiez ou téléchargez les résultats traités"
+        "Copiez ou téléchargez les résultats traités",
+        "Step 6: Once satisfied, click the 'Generate Chart' button to create your pictorial bar chart, which can then be downloaded as an image or embedded in a webpage."
       ],
       "usage_examples": [
         "Utilisez le Générateur de Diagramme en Barres Illustrées pour traiter vos données",
-        "Obtenez des résultats de traitement rapidement sans attendre"
+        "Obtenez des résultats de traitement rapidement sans attendre",
+        "Example 3: A financial advisor is creating a report on investment returns for various asset classes. The Pictorial Bar Chart Generator can help visualize the returns using dollar symbols, making it clear and engaging for clients who are evaluating their investment options.",
+        "Example 4: A sports coach is analyzing the performance metrics of athletes. The coach can use the tool to create a pictorial bar chart where each bar represents a different metric (e.g., goals scored, assists made) with sports icons (e.g., soccer balls, basketballs) to represent the values. This helps in making the data more visually engaging and easier to interpret."
       ],
       "png": "PNG",
       "svg": "SVG",
@@ -13093,7 +13116,16 @@
         "Un chercheur en sciences humaines a besoin de convertir des transcriptions d’entretiens en format texte pour les utiliser dans un outil d’analyse de texte.",
         "Un graphiste prépare un script pour un projet d’animation et doit convertir un storyboard Word en texte brut pour l’intégrer dans un logiciel de création de scénarios."
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Does it support .doc files?",
+          "answer": "Currently only .docx format is supported. Please convert .doc files to .docx first."
+        },
+        {
+          "question": "Is formatting preserved?",
+          "answer": "This tool extracts plain text only. Formatting, images, and tables are not preserved."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "dropzone": "dropzone",
@@ -13145,12 +13177,25 @@
       "usage_steps": [
         "Télécharger fichier Excel",
         "Sélectionner feuille",
-        "Télécharger CSV"
+        "Télécharger CSV",
+        "Preview the CSV data",
+        "Copy or download the CSV file"
       ],
       "usage_examples": [
-        "Exporter données Excel en CSV"
+        "Exporter données Excel en CSV",
+        "Create CSV files for data analysis tools",
+        "Export spreadsheet data in universal format"
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Can I convert multiple sheets?",
+          "answer": "Yes, you can select different sheets and convert them one at a time."
+        },
+        {
+          "question": "Are formulas converted?",
+          "answer": "Only the calculated values are exported, not the formulas themselves."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "dropzone": "dropzone",
@@ -13176,7 +13221,16 @@
         "3. Un chercheur universitaire transforme des données d'enquête CSV en format Excel pour appliquer des formules statistiques avancées",
         "4. Un service client importe des logs CSV de support technique dans Excel pour générer des rapports SLA avec graphiques temporels"
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Does it handle large files?",
+          "answer": "Yes, but very large files may take longer to process. We recommend files under 10MB for best performance."
+        },
+        {
+          "question": "Are special characters preserved?",
+          "answer": "Yes, UTF-8 encoding is used to preserve special characters and international text."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "errorExport": "errorExport",
@@ -13289,7 +13343,8 @@
       ],
       "usage_examples": [
         "Utiliser Calculateur d'Âge pour traiter vos données",
-        "Obtenir des résultats de traitement rapidement sans attendre"
+        "Obtenir des résultats de traitement rapidement sans attendre",
+        "Calculate age difference between two dates"
       ]
     },
     "tip-calculator": {
@@ -13380,11 +13435,13 @@
         "Entrer ou coller le contenu à traiter dans la zone de saisie",
         "Ajuster les options et paramètres de l'outil selon les besoins",
         "Cliquer sur le bouton de traitement pour voir les résultats",
-        "Copier ou télécharger les résultats traités"
+        "Copier ou télécharger les résultats traités",
+        "View final amount, total interest, and growth chart"
       ],
       "usage_examples": [
         "Utiliser Calculateur d'Intérêts Composés pour traiter vos données",
-        "Obtenir des résultats de traitement rapidement sans attendre"
+        "Obtenir des résultats de traitement rapidement sans attendre",
+        "Understand the impact of compounding frequency"
       ]
     },
     "binary-calculator": {
@@ -13423,7 +13480,8 @@
       ],
       "usage_examples": [
         "Utiliser Calculateur Binaire pour traiter vos données",
-        "Obtenir des résultats de traitement rapidement sans attendre"
+        "Obtenir des résultats de traitement rapidement sans attendre",
+        "Convert between number systems"
       ]
     },
     "hex-calculator": {
@@ -13591,7 +13649,8 @@
       ],
       "usage_examples": [
         "Utiliser Texte vers Image pour traiter vos données",
-        "Obtenir des résultats de traitement rapidement sans attendre"
+        "Obtenir des résultats de traitement rapidement sans attendre",
+        "Make text-based banners"
       ]
     },
     "text-to-handwriting": {
@@ -13763,7 +13822,8 @@
       ],
       "usage_examples": [
         "Utiliser Test de Frappe pour traiter vos données",
-        "Obtenir des résultats de traitement rapidement sans attendre"
+        "Obtenir des résultats de traitement rapidement sans attendre",
+        "Compare typing skills across difficulty levels"
       ]
     },
     "morse-code-player": {
@@ -13801,7 +13861,8 @@
       ],
       "usage_examples": [
         "Utiliser Lecteur Morse pour traiter vos données",
-        "Obtenir des résultats de traitement rapidement sans attendre"
+        "Obtenir des résultats de traitement rapidement sans attendre",
+        "Practice Morse code listening"
       ]
     },
     "currency-converter": {
@@ -16403,12 +16464,14 @@
         "Configurer les options de nom de message et de paquet",
         "Cliquez sur Convertir pour générer le schéma proto",
         "Revue de la définition générée .proto",
-        "Copiez ou téléchargez le fichier proto"
+        "Copiez ou téléchargez le fichier proto",
+        "Click Copy .proto or Download .proto to export, then paste into your codebase or compile with protoc."
       ],
       "usage_examples": [
         "Générer des schémas proto à partir de réponses d'API",
         "Créer des définitions de services gRPC",
-        "Convertir des API REST en gRPC"
+        "Convertir des API REST en gRPC",
+        "Infer a schema from a GraphQL introspection JSON response. The tool creates messages for types and fields, emits oneofs for kind variants, maps repeatable flags to repeated bool, and produces a .proto that mirrors the introspection format, facilitating codegen and static analysis tooling."
       ],
       "jsonInput": "Entrée JSON",
       "protoOutput": "Sortie Proto",

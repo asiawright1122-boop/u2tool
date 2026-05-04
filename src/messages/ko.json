@@ -1253,15 +1253,29 @@
       "faqs": [
         {
           "q": "TOML이란 무엇인가요?",
-          "a": "TOML(Tom's Obvious, Minimal Language)은 구성 파일을 위한 최소한의 구성 파일 형식입니다."
+          "a": "TOML(Tom's Obvious, Minimal Language)은 구성 파일을 위한 최소한의 구성 파일 형식입니다.",
+          "question": "Does the converter preserve comments from my TOML file?",
+          "answer": "No, JSON does not natively support comments, so they are stripped during TOML-to-JSON conversion."
         },
         {
           "q": "TOML을 JSON으로 변환하는 이유는?",
-          "a": "JSON은 더 널리 지원되며 많은 프로그래밍 언어와 도구에서 사용할 수 있습니다."
+          "a": "JSON은 더 널리 지원되며 많은 프로그래밍 언어와 도구에서 사용할 수 있습니다.",
+          "question": "How does the tool handle invalid TOML or JSON syntax?",
+          "answer": "The tool provides clear error messages highlighting the location and nature of any syntax errors it encounters."
         },
         {
           "q": "이 도구는 무료인가요?",
-          "a": "네, 완전히 무료이며 등록이 필요하지 않습니다."
+          "a": "네, 완전히 무료이며 등록이 필요하지 않습니다.",
+          "question": "Can I convert nested structures and arrays between the formats?",
+          "answer": "Yes, the converter fully supports complex nested objects, arrays, and all standard data types in both formats."
+        },
+        {
+          "question": "Is there a file size limit for conversion?",
+          "answer": "The conversion is performed client-side in your browser, so it's limited by your device's available memory."
+        },
+        {
+          "question": "Is my data secure when using this online converter?",
+          "answer": "Yes, all conversion happens locally in your web browser; no data is sent to any server, ensuring complete privacy."
         }
       ]
     },
@@ -2549,11 +2563,14 @@
         "입력 박스에 처리하고자 하는 내용을 입력하거나 붙여넣기",
         "필요에 따라 도구 옵션과 설정 조정",
         "결과를 확인하기 위해 처리 버튼 클릭",
-        "처리 결과 복사하거나 다운로드"
+        "처리 결과 복사하거나 다운로드",
+        "Step 6: Once satisfied, copy the formatted SQL query and paste it into your development environment or database management tool."
       ],
       "usage_examples": [
         "SQL 포맷터를 사용하여 데이터 처리",
-        "대기 시간 없이 처리 결과 빠르게 얻기"
+        "대기 시간 없이 처리 결과 빠르게 얻기",
+        "Example 3: A junior developer is learning to write SQL queries and often struggles with formatting. The SQL Formatter provides a quick and easy way to format their queries, helping them understand best practices and improve their skills.",
+        "Example 4: A data analyst is preparing a report and needs to write a SQL query to extract specific data from a database. By using the SQL Formatter, they can ensure that the query is well-structured and easy to review by their peers or supervisors."
       ],
       "input": "입력",
       "sql": {
@@ -4580,11 +4597,14 @@
         "처리하려는 내용을 입력 상자에 입력하거나 붙여넣기",
         "필요에 따라 도구 옵션과 설정 조정",
         "결과를 확인하기 위해 처리 버튼 클릭",
-        "처리된 결과 복사 또는 다운로드"
+        "처리된 결과 복사 또는 다운로드",
+        "Click 'Generate Favicon Set' to process assets, then download the ZIP package containing icons and implementation-ready HTML code"
       ],
       "usage_examples": [
         "Favicon 생성기를 사용하여 데이터 처리",
-        "기다리지 않고 처리 결과 얻기"
+        "기다리지 않고 처리 결과 얻기",
+        "A WordPress theme developer creates a customizable favicon system that automatically generates all necessary sizes from user-uploaded logos",
+        "An enterprise web application undergoing rebranding updates thousands of favicon instances across environments by generating standardized icon sets programmatically"
       ],
       "sizes": "크기",
       "hint": "정사각형 이미지를 업로드하면 최상의 결과를 얻을 수 있습니다",
@@ -6953,11 +6973,14 @@
         "입력 박스에 처리하려는 내용을 입력하거나 붙여넣기",
         "필요에 따라 도구 옵션과 설정 조정",
         "처리 버튼을 클릭하여 결과 확인",
-        "처리된 결과 복사 또는 다운로드"
+        "처리된 결과 복사 또는 다운로드",
+        "Step 6: Copy the generated `<meta>` tags and paste them into the `<head>` section of your web page's HTML code."
       ],
       "usage_examples": [
         "트위터 카드 생성기를 사용하여 데이터 처리",
-        "대기 시간 없이 빠르게 처리 결과 얻기"
+        "대기 시간 없이 빠르게 처리 결과 얻기",
+        "Example 3: A content creator is hosting a live streaming event. They can use the tool to generate a player card that embeds the live stream directly into the tweet, allowing followers to watch the event without leaving Twitter.",
+        "Example 4: A mobile app developer is promoting a new app. By creating an app card with the Twitter Card Generator, they can provide direct links to download the app from both the App Store and Google Play, streamlining the user experience and driving app installs."
       ],
       "twitterCardGenerator": {
         "cardType": "twitterCardGenerator.cardType",
@@ -7670,11 +7693,14 @@
         "처리하고 싶은 내용을 입력 박스에 입력하거나 붙여넣습니다",
         "필요에 따라 도구 옵션과 설정을 조정합니다",
         "처리 버튼을 클릭하여 결과를 확인합니다",
-        "처리된 결과를 복사하거나 다운로드합니다"
+        "처리된 결과를 복사하거나 다운로드합니다",
+        "Step 6: To save the converted text, select the text in the output area and press 'Ctrl + C' (or 'Cmd + C' on a Mac) to copy it, or click the 'Download Text' button to save the text as a .txt file."
       ],
       "usage_examples": [
         "HTML to Text를 사용하여 데이터를 처리합니다",
-        "처리 결과를 빠르게 얻고 기다림 없이 사용합니다"
+        "처리 결과를 빠르게 얻고 기다림 없이 사용합니다",
+        "Example 3: A data analyst is tasked with analyzing the textual content of a large number of web pages. The analyst uses the HTML to Text tool to convert the HTML content of these pages into plain text, which can then be imported into a data analysis tool for further processing.",
+        "Example 4: A technical writer is creating a documentation guide that includes code snippets and text from online tutorials. The HTML to Text tool helps the writer extract the relevant text from the tutorials, ensuring that the documentation is free from HTML formatting and is consistent in style."
       ]
     },
     "binary-to-decimal": {
@@ -11800,11 +11826,14 @@
         "입력 상자에 처리하려는 내용을 입력하거나 붙여넣습니다",
         "필요에 따라 도구 옵션 및 설정을 조정합니다",
         "처리 버튼을 클릭하여 결과를 봅니다",
-        "처리된 결과를 복사하거나 다운로드합니다"
+        "처리된 결과를 복사하거나 다운로드합니다",
+        "Step 6: Once your resume is complete, click 'Export as PDF' to download a polished, professional document ready for submission."
       ],
       "usage_examples": [
         "이력서 빌더을 사용하여 데이터 처리",
-        "대기 없이 처리 결과를 빠르게 얻기"
+        "대기 없이 처리 결과를 빠르게 얻기",
+        "Example 3: A freelance graphic designer uses the Resume Builder to craft a visually appealing portfolio summary, showcasing their design skills and client testimonials in a format that aligns with their creative style.",
+        "Example 4: A senior executive preparing for a career change uses the tool to create a tailored executive resume that emphasizes leadership experience and strategic accomplishments, positioning them for high-level roles in a new industry."
       ],
       "editTab": "편집",
       "previewTab": "미리보기",
@@ -13088,7 +13117,16 @@
         "Example 3: 번역가들은 워드 문서를 텍스트로 변환하여, 번역 소프트웨어에서 더 효율적으로 작업할 수 있습니다. 이는 번역 프로세스를 가속화하고, 일관성을 유지할 수 있도록 도와줍니다.",
         "Example 4: 학생들은 연구 프로젝트의 참고 문헌을 워드 문서에서 텍스트로 변환하여, 빠르게 요약하거나 인용할 수 있습니다. 이는 연구 자료의 관리와 작성 과정을 간편화합니다."
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Does it support .doc files?",
+          "answer": "Currently only .docx format is supported. Please convert .doc files to .docx first."
+        },
+        {
+          "question": "Is formatting preserved?",
+          "answer": "This tool extracts plain text only. Formatting, images, and tables are not preserved."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "dropzone": "dropzone",
@@ -13114,7 +13152,16 @@
         "3. 학회 논문의 복잡한 표를 웹 포털에 게시하기 위한 HTML5 구조로 변환할 때",
         "4. 기업 내부 시스템에서 생성된 Word 리포트를 Power BI 대시보드 위젯으로 통합할 때"
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Is all formatting preserved?",
+          "answer": "Basic formatting like headings, bold, italic, and lists are preserved. Complex layouts may not convert perfectly."
+        },
+        {
+          "question": "Can I edit the HTML?",
+          "answer": "Yes, you can copy the HTML code and edit it in any text editor or HTML editor."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "dropzone": "dropzone",
@@ -13175,7 +13222,16 @@
         "3. 전자상거래 플랫폼의 주문 CSV를 Excel 매크로 호환 포맷으로 변환하여 자동 정산 시스템과 연동",
         "4. 공공기관의 오픈데이터 CSV를 Excel 템플릿 형식으로 변환해 부서별 보고서 자동 생성 프로세스에 통합"
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Does it handle large files?",
+          "answer": "Yes, but very large files may take longer to process. We recommend files under 10MB for best performance."
+        },
+        {
+          "question": "Are special characters preserved?",
+          "answer": "Yes, UTF-8 encoding is used to preserve special characters and international text."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "errorExport": "errorExport",
@@ -13380,11 +13436,13 @@
         "입력 상자에 처리할 내용 입력 또는 붙여넣기",
         "필요에 따라 도구 옵션 및 설정 조정",
         "처리 버튼을 클릭하여 결과 보기",
-        "처리된 결과 복사 또는 다운로드"
+        "처리된 결과 복사 또는 다운로드",
+        "View final amount, total interest, and growth chart"
       ],
       "usage_examples": [
         "복리 계산기으로 데이터 처리",
-        "대기 시간 없이 빠르게 결과 얻기"
+        "대기 시간 없이 빠르게 결과 얻기",
+        "Understand the impact of compounding frequency"
       ]
     },
     "binary-calculator": {
@@ -13592,7 +13650,8 @@
       ],
       "usage_examples": [
         "텍스트를 이미지로으로 데이터 처리",
-        "대기 시간 없이 빠르게 결과 얻기"
+        "대기 시간 없이 빠르게 결과 얻기",
+        "Make text-based banners"
       ]
     },
     "text-to-handwriting": {
@@ -13617,11 +13676,13 @@
         "입력 상자에 처리할 내용 입력 또는 붙여넣기",
         "필요에 따라 도구 옵션 및 설정 조정",
         "처리 버튼을 클릭하여 결과 보기",
-        "처리된 결과 복사 또는 다운로드"
+        "처리된 결과 복사 또는 다운로드",
+        "Download the handwritten image"
       ],
       "usage_examples": [
         "텍스트를 손글씨로으로 데이터 처리",
-        "대기 시간 없이 빠르게 결과 얻기"
+        "대기 시간 없이 빠르게 결과 얻기",
+        "Make handwriting practice sheets"
       ]
     },
     "screen-resolution-tester": {
@@ -13762,7 +13823,8 @@
       ],
       "usage_examples": [
         "타이핑 속도 테스트으로 데이터 처리",
-        "대기 시간 없이 빠르게 결과 얻기"
+        "대기 시간 없이 빠르게 결과 얻기",
+        "Compare typing skills across difficulty levels"
       ]
     },
     "morse-code-player": {
@@ -13800,7 +13862,8 @@
       ],
       "usage_examples": [
         "모스 부호 플레이어으로 데이터 처리",
-        "대기 시간 없이 빠르게 결과 얻기"
+        "대기 시간 없이 빠르게 결과 얻기",
+        "Practice Morse code listening"
       ]
     },
     "currency-converter": {
@@ -15640,7 +15703,11 @@
       "preview": "미리 보기",
       "detailed_description": "아스펙트 비율 조정기를 사용하면 이미지의 크기를 조정하면서도 아스펙트 비율을 유지하거나 변경할 수 있습니다. 일반적인 비율(16:9, 4:3, 1:1)과 소셜 미디어 플랫폼(인스타그램, 페이스북, 유튜브, 트위터)에 맞는 사전 설정값이 포함되어 있습니다.",
       "usage_steps": [
-        "파일을 통해 이미지를 업로드합니다."
+        "파일을 통해 이미지를 업로드합니다.",
+        "View the original dimensions",
+        "Enter custom width and height or use presets",
+        "Toggle aspect ratio lock as needed",
+        "Click Download to save the resized image"
       ],
       "usage_examples": [
         "소셜 미디어 게시물용 사진 크기 조정",

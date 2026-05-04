@@ -1253,15 +1253,29 @@
       "faqs": [
         {
           "q": "Was ist TOML?",
-          "a": "TOML (Tom's Obvious, Minimal Language) ist ein minimales Konfigurationsdateiformat für Konfigurationsdateien."
+          "a": "TOML (Tom's Obvious, Minimal Language) ist ein minimales Konfigurationsdateiformat für Konfigurationsdateien.",
+          "question": "Does the converter preserve comments from my TOML file?",
+          "answer": "No, JSON does not natively support comments, so they are stripped during TOML-to-JSON conversion."
         },
         {
           "q": "Warum TOML in JSON konvertieren?",
-          "a": "JSON wird breiter unterstützt und kann in vielen Programmiersprachen und Tools verwendet werden."
+          "a": "JSON wird breiter unterstützt und kann in vielen Programmiersprachen und Tools verwendet werden.",
+          "question": "How does the tool handle invalid TOML or JSON syntax?",
+          "answer": "The tool provides clear error messages highlighting the location and nature of any syntax errors it encounters."
         },
         {
           "q": "Ist dieses Tool kostenlos?",
-          "a": "Ja, es ist völlig kostenlos und erfordert keine Registrierung."
+          "a": "Ja, es ist völlig kostenlos und erfordert keine Registrierung.",
+          "question": "Can I convert nested structures and arrays between the formats?",
+          "answer": "Yes, the converter fully supports complex nested objects, arrays, and all standard data types in both formats."
+        },
+        {
+          "question": "Is there a file size limit for conversion?",
+          "answer": "The conversion is performed client-side in your browser, so it's limited by your device's available memory."
+        },
+        {
+          "question": "Is my data secure when using this online converter?",
+          "answer": "Yes, all conversion happens locally in your web browser; no data is sent to any server, ensuring complete privacy."
         }
       ]
     },
@@ -2355,15 +2369,29 @@
       "faqs": [
         {
           "q": "Was ist XML-Formatierung?",
-          "a": "XML-Formatierung ist der Prozess, XML-Code lesbar und gut strukturiert zu machen."
+          "a": "XML-Formatierung ist der Prozess, XML-Code lesbar und gut strukturiert zu machen.",
+          "question": "Does this tool preserve comments and CDATA sections in my XML?",
+          "answer": "Yes, our formatter retains all XML comments, CDATA blocks, and processing instructions during formatting and minification."
         },
         {
           "q": "Warum XML formatieren?",
-          "a": "Formatiertes XML ist einfacher zu lesen, zu debuggen und zu warten."
+          "a": "Formatiertes XML ist einfacher zu lesen, zu debuggen und zu warten.",
+          "question": "What is the maximum file size for XML processing?",
+          "answer": "The tool can handle large XML documents, but for optimal performance, we recommend files under 5MB for quick processing."
         },
         {
           "q": "Ist dieses Tool sicher?",
-          "a": "Ja, alle Verarbeitungen erfolgen in Ihrem Browser und Daten werden nicht übertragen."
+          "a": "Ja, alle Verarbeitungen erfolgen in Ihrem Browser und Daten werden nicht übertragen.",
+          "question": "Can I format XML that is on a single line without any spaces?",
+          "answer": "Absolutely. The tool is designed to parse and properly indent even densely packed, single-line XML strings."
+        },
+        {
+          "question": "Does the validator check against a specific XML Schema (XSD)?",
+          "answer": "No, this validator performs a syntax check for well-formed XML. It does not validate against an external DTD or XSD schema."
+        },
+        {
+          "question": "Is my XML data stored or logged on your servers?",
+          "answer": "No. All processing occurs in real-time within your browser. Your XML data is never transmitted or stored on our servers."
         }
       ],
       "xml": {
@@ -5458,11 +5486,14 @@
         "Geben Sie den zu verarbeitenden Inhalt in das Eingabefeld ein",
         "Passen Sie die Tool-Einstellungen, wenn nötig, an",
         "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-        "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+        "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse",
+        "Step 6: Download the minified JavaScript file by clicking the 'Download Minified Code' button or copy the minified code directly from the results area."
       ],
       "usage_examples": [
         "Verwenden Sie den JavaScript Minifier, um Ihren Daten zu verarbeiten",
-        "Erhalten Sie die Verarbeitungsresultate schnell ohne zu warten"
+        "Erhalten Sie die Verarbeitungsresultate schnell ohne zu warten",
+        "Example 3: A team of developers is working on a mobile app that relies heavily on JavaScript for its user interface. Using the JavaScript Minifier, they can ensure that the app loads quickly on mobile devices with limited bandwidth, improving the overall performance and user satisfaction.",
+        "Example 4: A web developer is optimizing a legacy application that has been in use for several years. The application's JavaScript code is bloated and inefficient. By minifying the code, the developer can reduce the file size, improve loading times, and enhance the overall performance of the application."
       ]
     },
     "box-shadow-generator": {
@@ -7024,11 +7055,14 @@
         "Geben Sie den Inhalt ein oder fügen Sie ihn ein, den Sie verarbeiten möchten",
         "Passen Sie die Tool-Einstellungen und Optionen nach Bedarf an",
         "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-        "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+        "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse",
+        "Step 6: Bookmark the page or use the 'Add to Favorites' button to save the tool for quick reference in the future."
       ],
       "usage_examples": [
         "Verwenden Sie HTTP Status Codes, um Ihren Daten zu verarbeiten",
-        "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+        "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten",
+        "Example 3: A DevOps engineer is monitoring a server that frequently returns a 503 Service Unavailable error during peak traffic times. The tool helps them identify that the server is overloaded and suggests scaling the infrastructure or optimizing resource allocation.",
+        "Example 4: A security analyst is reviewing logs and notices a 401 Unauthorized error. The HTTP Status Codes tool provides a detailed explanation of this status code and suggests reviewing the authentication mechanisms and access control policies to ensure they are correctly configured."
       ]
     },
     "string-obfuscator": {
@@ -12417,11 +12451,14 @@
         "Geben Sie oder fügen Sie den Inhalt ein, den Sie bearbeiten möchten, in das Eingabefeld ein",
         "Passen Sie die Werkzeugeinstellungen und -einstellungen nach Bedarf an",
         "Klicken Sie auf die Bearbeitungstaste, um die Ergebnisse anzuzeigen",
-        "Kopieren oder laden Sie die bearbeiteten Ergebnisse herunter"
+        "Kopieren oder laden Sie die bearbeiteten Ergebnisse herunter",
+        "Step 6: Once satisfied, click the 'Convert to PDF' button to generate the final document, which will be available for download."
       ],
       "usage_examples": [
         "Verwenden Sie Bild zu PDF, um Ihre Daten zu bearbeiten",
-        "Erhalten Sie schnell bearbeitete Ergebnisse ohne zu warten"
+        "Erhalten Sie schnell bearbeitete Ergebnisse ohne zu warten",
+        "Example 3: A student is preparing a research report for a class presentation. They have collected various diagrams and charts as images and use the Image to PDF tool to combine them into a single document, which they can easily share with classmates and instructors.",
+        "Example 4: A photographer wants to create a digital portfolio to showcase their work on a website. They use the tool to convert a selection of their best photos into a PDF, optimizing the resolution for web viewing and ensuring that the document loads quickly."
       ],
       "imageToPdf": {
         "invalidFileType": "imageToPdf.invalidFileType",
@@ -13087,7 +13124,16 @@
         "Ein Datenwissenschaftler verwendet das Tool, um Texte aus verschiedenen Word-Dokumenten in ein NLP-System zu integrieren, das nur reine Textdateien akzeptiert.",
         "Ein Archivar muss Texte aus historischen Word-Dokumenten extrahieren, um sie in eine zentrale Datenbank zu importieren, die keine formatierten Dokumente unterstützt."
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Does it support .doc files?",
+          "answer": "Currently only .docx format is supported. Please convert .doc files to .docx first."
+        },
+        {
+          "question": "Is formatting preserved?",
+          "answer": "This tool extracts plain text only. Formatting, images, and tables are not preserved."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "dropzone": "dropzone",
@@ -13139,12 +13185,25 @@
       "usage_steps": [
         "Excel-Datei hochladen",
         "Blatt auswählen",
-        "CSV herunterladen"
+        "CSV herunterladen",
+        "Preview the CSV data",
+        "Copy or download the CSV file"
       ],
       "usage_examples": [
-        "Excel-Daten als CSV exportieren"
+        "Excel-Daten als CSV exportieren",
+        "Create CSV files for data analysis tools",
+        "Export spreadsheet data in universal format"
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Can I convert multiple sheets?",
+          "answer": "Yes, you can select different sheets and convert them one at a time."
+        },
+        {
+          "question": "Are formulas converted?",
+          "answer": "Only the calculated values are exported, not the formulas themselves."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "dropzone": "dropzone",
@@ -13170,7 +13229,16 @@
         "Ein E-Commerce-Manager transformiert Bestandslisten aus einem ERP-System (CSV-Ausgabe mit Semikolons) in Excel-Dateien, die automatisch per Makro mit Lagerortinformationen verknüpft werden.",
         "Ein Hochschuldozent konvertiert anonymisierte Prüfungsergebnisse aus einem LMS-Export (CSV mit Tabulator-Trennung) in Excel, um Notenstaffelungen per Formeln zu berechnen und per E-Mail an Studierende zu senden."
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Does it handle large files?",
+          "answer": "Yes, but very large files may take longer to process. We recommend files under 10MB for best performance."
+        },
+        {
+          "question": "Are special characters preserved?",
+          "answer": "Yes, UTF-8 encoding is used to preserve special characters and international text."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "errorExport": "errorExport",
@@ -13283,7 +13351,8 @@
       ],
       "usage_examples": [
         "Altersrechner verwenden, um Ihre Daten zu verarbeiten",
-        "Verarbeitungsergebnisse schnell ohne Wartezeit erhalten"
+        "Verarbeitungsergebnisse schnell ohne Wartezeit erhalten",
+        "Calculate age difference between two dates"
       ]
     },
     "tip-calculator": {
@@ -13419,7 +13488,8 @@
       ],
       "usage_examples": [
         "Binärrechner verwenden, um Ihre Daten zu verarbeiten",
-        "Verarbeitungsergebnisse schnell ohne Wartezeit erhalten"
+        "Verarbeitungsergebnisse schnell ohne Wartezeit erhalten",
+        "Convert between number systems"
       ]
     },
     "hex-calculator": {
@@ -13587,7 +13657,8 @@
       ],
       "usage_examples": [
         "Text zu Bild verwenden, um Ihre Daten zu verarbeiten",
-        "Verarbeitungsergebnisse schnell ohne Wartezeit erhalten"
+        "Verarbeitungsergebnisse schnell ohne Wartezeit erhalten",
+        "Make text-based banners"
       ]
     },
     "text-to-handwriting": {
@@ -13759,7 +13830,8 @@
       ],
       "usage_examples": [
         "Tippgeschwindigkeitstest verwenden, um Ihre Daten zu verarbeiten",
-        "Verarbeitungsergebnisse schnell ohne Wartezeit erhalten"
+        "Verarbeitungsergebnisse schnell ohne Wartezeit erhalten",
+        "Compare typing skills across difficulty levels"
       ]
     },
     "morse-code-player": {
@@ -13797,7 +13869,8 @@
       ],
       "usage_examples": [
         "Morsecode-Player verwenden, um Ihre Daten zu verarbeiten",
-        "Verarbeitungsergebnisse schnell ohne Wartezeit erhalten"
+        "Verarbeitungsergebnisse schnell ohne Wartezeit erhalten",
+        "Practice Morse code listening"
       ]
     },
     "currency-converter": {
@@ -16390,12 +16463,14 @@
         "Konfigurieren Sie die Nachrichtennamen und Paketoptionen",
         "Klicken Sie auf 'Konvertieren', um das Proto-Schema zu generieren",
         "Bewerten Sie die generierte .proto-Definition",
-        "Kopieren oder laden Sie die Proto-Datei herunter"
+        "Kopieren oder laden Sie die Proto-Datei herunter",
+        "Click Copy .proto or Download .proto to export, then paste into your codebase or compile with protoc."
       ],
       "usage_examples": [
         "Generieren Sie Proto-Schemata aus API-Antworten",
         "Erstellen Sie gRPC-Dienstdefinitionen",
-        "Konvertieren Sie REST-APIs in gRPC"
+        "Konvertieren Sie REST-APIs in gRPC",
+        "Infer a schema from a GraphQL introspection JSON response. The tool creates messages for types and fields, emits oneofs for kind variants, maps repeatable flags to repeated bool, and produces a .proto that mirrors the introspection format, facilitating codegen and static analysis tooling."
       ],
       "jsonInput": "JSON-Eingabe",
       "protoOutput": "Proto-Ausgabe",
@@ -19284,7 +19359,8 @@
       ],
       "usage_examples": [
         "Verwenden Sie den Docker Compose Ersteller für schnelle Datenverarbeitung",
-        "Integrieren Sie ihn in Ihre Arbeitsabläufe für Effizienz"
+        "Integrieren Sie ihn in Ihre Arbeitsabläufe für Effizienz",
+        "Build microservices stack"
       ],
       "input": "Eingabe",
       "output": "Ausgabe",
@@ -20032,7 +20108,8 @@
       ],
       "usage_examples": [
         "Verwenden Sie den Abfrageausführungsplaner für schnelle Datenverarbeitung",
-        "Integrieren Sie ihn in Ihre Arbeitsabläufe für Effizienz"
+        "Integrieren Sie ihn in Ihre Arbeitsabläufe für Effizienz",
+        "Compare execution plans"
       ],
       "input": "Eingabe",
       "output": "Ausgabe",
@@ -20889,7 +20966,8 @@
       ],
       "usage_examples": [
         "Verwenden Sie den Sprint Geschwindigkeitsrechner für schnelle Datenverarbeitung",
-        "Integrieren Sie ihn in Ihre Arbeitsabläufe für Effizienz"
+        "Integrieren Sie ihn in Ihre Arbeitsabläufe für Effizienz",
+        "Predict release dates"
       ],
       "input": "Eingabe",
       "output": "Ausgabe",
@@ -21238,7 +21316,8 @@
       ],
       "usage_examples": [
         "Verwenden Sie den Zeitzone-Terminplaner für schnelle Datenverarbeitung",
-        "Integrieren Sie ihn in Ihre Arbeitsabläufe für Effizienz"
+        "Integrieren Sie ihn in Ihre Arbeitsabläufe für Effizienz",
+        "Coordinate remote teams"
       ],
       "input": "Eingabe",
       "output": "Ausgabe",
@@ -21697,7 +21776,8 @@
       ],
       "usage_examples": [
         "Verwenden Sie den Kosten-Nutzen-Analyzer für schnelle Datenverarbeitung",
-        "Integrieren Sie ihn in Ihre Arbeitsabläufe für Effizienz"
+        "Integrieren Sie ihn in Ihre Arbeitsabläufe für Effizienz",
+        "Compare vendor proposals"
       ],
       "input": "Eingabe",
       "output": "Ausgabe",
@@ -21784,7 +21864,8 @@
       ],
       "usage_examples": [
         "Verwenden Sie den Finanzprognose-Rechner für schnelle Datenverarbeitung",
-        "Integrieren Sie ihn in Ihre Arbeitsabläufe für Effizienz"
+        "Integrieren Sie ihn in Ihre Arbeitsabläufe für Effizienz",
+        "Create investor projections"
       ],
       "input": "Eingabe",
       "output": "Ausgabe",

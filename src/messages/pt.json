@@ -1253,15 +1253,29 @@
       "faqs": [
         {
           "q": "O que é TOML?",
-          "a": "TOML (Tom's Obvious, Minimal Language) é um formato de arquivo de configuração mínimo para arquivos de configuração."
+          "a": "TOML (Tom's Obvious, Minimal Language) é um formato de arquivo de configuração mínimo para arquivos de configuração.",
+          "question": "Does the converter preserve comments from my TOML file?",
+          "answer": "No, JSON does not natively support comments, so they are stripped during TOML-to-JSON conversion."
         },
         {
           "q": "Por que converter TOML para JSON?",
-          "a": "JSON é mais amplamente suportado e pode ser usado em muitas linguagens de programação e ferramentas."
+          "a": "JSON é mais amplamente suportado e pode ser usado em muitas linguagens de programação e ferramentas.",
+          "question": "How does the tool handle invalid TOML or JSON syntax?",
+          "answer": "The tool provides clear error messages highlighting the location and nature of any syntax errors it encounters."
         },
         {
           "q": "Esta ferramenta é gratuita?",
-          "a": "Sim, é completamente gratuita e não requer registro."
+          "a": "Sim, é completamente gratuita e não requer registro.",
+          "question": "Can I convert nested structures and arrays between the formats?",
+          "answer": "Yes, the converter fully supports complex nested objects, arrays, and all standard data types in both formats."
+        },
+        {
+          "question": "Is there a file size limit for conversion?",
+          "answer": "The conversion is performed client-side in your browser, so it's limited by your device's available memory."
+        },
+        {
+          "question": "Is my data secure when using this online converter?",
+          "answer": "Yes, all conversion happens locally in your web browser; no data is sent to any server, ensuring complete privacy."
         }
       ]
     },
@@ -13102,7 +13116,16 @@
         "Example 3: Uma assistente administrativa precisa preparar um documento para impressão em um dispositivo que suporta apenas arquivos de texto simples. Usando a ferramenta, ela converte o documento Word em .txt e garante que todas as informações sejam impressas corretamente.",
         "Example 4: Um analista de dados recebe um relatório em formato .docx e precisa importar os dados para uma planilha do Excel. Convertendo o documento para .txt, ele pode facilmente copiar e colar os dados na planilha, evitando problemas de formatação."
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Does it support .doc files?",
+          "answer": "Currently only .docx format is supported. Please convert .doc files to .docx first."
+        },
+        {
+          "question": "Is formatting preserved?",
+          "answer": "This tool extracts plain text only. Formatting, images, and tables are not preserved."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "dropzone": "dropzone",
@@ -13128,7 +13151,16 @@
         "3. Um designer converte um boletim institucional do Word em template de email marketing, aproveitando estilos de marca e imagens otimizadas.",
         "4. Um técnico documenta procedimentos em Word e exporta para HTML estático, integrando-o a um sistema de gestão de conhecimento via Jekyll."
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Is all formatting preserved?",
+          "answer": "Basic formatting like headings, bold, italic, and lists are preserved. Complex layouts may not convert perfectly."
+        },
+        {
+          "question": "Can I edit the HTML?",
+          "answer": "Yes, you can copy the HTML code and edit it in any text editor or HTML editor."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "dropzone": "dropzone",
@@ -13145,12 +13177,25 @@
       "usage_steps": [
         "Carregar arquivo Excel",
         "Selecionar planilha",
-        "Baixar CSV"
+        "Baixar CSV",
+        "Preview the CSV data",
+        "Copy or download the CSV file"
       ],
       "usage_examples": [
-        "Exportar dados Excel para CSV"
+        "Exportar dados Excel para CSV",
+        "Create CSV files for data analysis tools",
+        "Export spreadsheet data in universal format"
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Can I convert multiple sheets?",
+          "answer": "Yes, you can select different sheets and convert them one at a time."
+        },
+        {
+          "question": "Are formulas converted?",
+          "answer": "Only the calculated values are exported, not the formulas themselves."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "dropzone": "dropzone",
@@ -13176,7 +13221,16 @@
         "Um profissional de RH padroniza dados de folha de pagamento de múltiplos fornecedores, consolidando CSVs em uma única planilha com formatação de moeda e validações.",
         "Um professor exporta notas de alunos de um sistema acadêmico em CSV e converte para Excel para utilizar recursos de filtragem e criação de gráficos de desempenho."
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Does it handle large files?",
+          "answer": "Yes, but very large files may take longer to process. We recommend files under 10MB for best performance."
+        },
+        {
+          "question": "Are special characters preserved?",
+          "answer": "Yes, UTF-8 encoding is used to preserve special characters and international text."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "errorExport": "errorExport",
@@ -13381,11 +13435,13 @@
         "Inserir ou colar o conteúdo a ser processado na caixa de entrada",
         "Ajustar as opções e configurações da ferramenta conforme necessário",
         "Clicar no botão de processar para ver os resultados",
-        "Copiar ou baixar os resultados processados"
+        "Copiar ou baixar os resultados processados",
+        "View final amount, total interest, and growth chart"
       ],
       "usage_examples": [
         "Usar Calculadora de Juros Compostos para processar seus dados",
-        "Obter resultados de processamento rapidamente sem esperar"
+        "Obter resultados de processamento rapidamente sem esperar",
+        "Understand the impact of compounding frequency"
       ]
     },
     "binary-calculator": {
@@ -13424,7 +13480,8 @@
       ],
       "usage_examples": [
         "Usar Calculadora Binária para processar seus dados",
-        "Obter resultados de processamento rapidamente sem esperar"
+        "Obter resultados de processamento rapidamente sem esperar",
+        "Convert between number systems"
       ]
     },
     "hex-calculator": {
@@ -13592,7 +13649,8 @@
       ],
       "usage_examples": [
         "Usar Texto para Imagem para processar seus dados",
-        "Obter resultados de processamento rapidamente sem esperar"
+        "Obter resultados de processamento rapidamente sem esperar",
+        "Make text-based banners"
       ]
     },
     "text-to-handwriting": {
@@ -13764,7 +13822,8 @@
       ],
       "usage_examples": [
         "Usar Teste de Digitação para processar seus dados",
-        "Obter resultados de processamento rapidamente sem esperar"
+        "Obter resultados de processamento rapidamente sem esperar",
+        "Compare typing skills across difficulty levels"
       ]
     },
     "morse-code-player": {
@@ -13802,7 +13861,8 @@
       ],
       "usage_examples": [
         "Usar Reprodutor Morse para processar seus dados",
-        "Obter resultados de processamento rapidamente sem esperar"
+        "Obter resultados de processamento rapidamente sem esperar",
+        "Practice Morse code listening"
       ]
     },
     "currency-converter": {

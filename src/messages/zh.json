@@ -1265,6 +1265,10 @@
         {
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Toml Json 的处理速度非常快，通常可以在几毫秒内完成。"
+        },
+        {
+          "question": "Is my data secure when using this online converter?",
+          "answer": "Yes, all conversion happens locally in your web browser; no data is sent to any server, ensuring complete privacy."
         }
       ],
       "minified": "压缩"
@@ -1791,6 +1795,10 @@
         {
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Url Encoder 的处理速度非常快，通常可以在几毫秒内完成。"
+        },
+        {
+          "question": "Is my data secure when using this online tool?",
+          "answer": "Yes. All processing happens instantly in your browser. Your URLs are never sent to or stored on our servers."
         }
       ],
       "inputPlaceholder": "在这里输入文本...",
@@ -2183,6 +2191,10 @@
         {
           "question": "处理速度如何？",
           "answer": "由于所有处理都在浏览器本地完成，Html Encoder 的处理速度非常快，通常可以在几毫秒内完成。"
+        },
+        {
+          "question": "Is my data secure when using this online encoder/decoder?",
+          "answer": "Yes, all processing happens in your browser. Your text is never sent to or stored on our servers."
         }
       ],
       "inputPlaceholder": "在此输入文本...",
@@ -6476,7 +6488,8 @@
         "选择 1:1、4:3、16:9 或自由裁剪比例",
         "拖动裁剪框调整位置和范围",
         "预览裁剪后的效果",
-        "下载处理后的图片"
+        "下载处理后的图片",
+        "Click 'Export Image' to download the cropped result with options to adjust compression level and format"
       ],
       "usage_examples": [
         "裁剪头像和个人资料封面图",
@@ -8481,11 +8494,14 @@
         "在输入框中输入或粘贴要处理的内容",
         "根据需要调整工具选项和设置",
         "点击处理按钮查看结果",
-        "复制或下载处理结果"
+        "复制或下载处理结果",
+        "Step 6: Once satisfied, click the 'Generate CSS' button to obtain the CSS code. Copy the generated code and integrate it into your project's stylesheet or HTML file."
       ],
       "usage_examples": [
         "使用CSS渐变文本处理您的数据",
-        "无需等待即可快速获取处理结果"
+        "无需等待即可快速获取处理结果",
+        "Example 3: A content creator is designing a blog post and wants the post title to have a unique look. They use the tool to create a conic gradient that rotates around the text, giving it a modern and dynamic appearance.",
+        "Example 4: A marketing team is developing a promotional banner for a product launch. To make the banner text more engaging, they use the tool to apply a multi-color linear gradient that reflects the product's brand colors, ensuring consistency and brand recognition."
       ],
       "faqs": [
         {
@@ -10587,7 +10603,8 @@
         "输入水印文字内容",
         "调整字体、颜色、透明度和旋转角度",
         "选择水印位置并预览效果",
-        "下载添加水印后的图片"
+        "下载添加水印后的图片",
+        "6. Preview watermark overlay in real-time using the split-screen comparison viewer"
       ],
       "usage_examples": [
         "为摄影作品添加版权说明水印",
@@ -12571,7 +12588,8 @@
         "调整排序、标签显示和漏斗对齐方式",
         "预览各阶段转化率与流失情况",
         "选择颜色主题和图表显示选项",
-        "导出为 PNG 或 SVG 文件"
+        "导出为 PNG 或 SVG 文件",
+        "Export the chart: Once satisfied, use the 'Export' option to download your funnel chart as a PNG or SVG file. These formats are ideal for high-quality prints and web integration."
       ],
       "usage_examples": [
         "分析销售线索到成交的转化漏斗",
@@ -15998,7 +16016,8 @@
         "按需设置地区、格式和数据规则",
         "点击“生成数据”批量创建样本",
         "在预览区检查生成结果",
-        "导出为 JSON、CSV 或 SQL 格式"
+        "导出为 JSON、CSV 或 SQL 格式",
+        "Step 6: If needed, refine your settings and repeat the generation process to create additional datasets for your testing or development project."
       ],
       "usage_examples": [
         "为用户系统批量生成注册测试数据",
@@ -16440,7 +16459,8 @@
         "拖动调整图片播放顺序",
         "设置尺寸、帧间隔和循环次数",
         "预览生成的 GIF 动图效果",
-        "下载导出的 GIF 文件"
+        "下载导出的 GIF 文件",
+        "Step 6: Click the 'Create GIF' button to generate your animated GIF. Once the process is complete, download the file by clicking the 'Download' button."
       ],
       "usage_examples": [
         "制作产品展示和社媒宣传动图",
@@ -16490,7 +16510,8 @@
         "查看所有拆出的帧图片",
         "按需选择需要下载的帧",
         "批量导出或逐帧下载图片",
-        "用于编辑、分析或二次创作"
+        "用于编辑、分析或二次创作",
+        "Step 6: Once the extraction is complete, download the frames by clicking the 'Download All' button or individually by selecting each frame."
       ],
       "usage_examples": [
         "提取动图帧用于逐帧编辑",
@@ -16547,7 +16568,8 @@
         "设置颜色数量、缩放比例和跳帧参数",
         "预览压缩前后的体积变化",
         "确认画质和动画效果",
-        "下载压缩后的 GIF 文件"
+        "下载压缩后的 GIF 文件",
+        "6. Click 'Download' to save the compressed GIF or 'Copy Link' to share via cloud storage."
       ],
       "usage_examples": [
         "压缩教程动图以提升网页加载速度",
@@ -18658,7 +18680,8 @@
       ],
       "usage_examples": [
         "使用小费计算器处理您的数据",
-        "快速获取处理结果，无需等待"
+        "快速获取处理结果，无需等待",
+        "Determine appropriate tip amounts for different service levels"
       ]
     },
     "discount-calculator": {
@@ -18720,11 +18743,13 @@
         "在输入框中输入或粘贴要处理的内容",
         "根据需要调整工具选项和设置",
         "点击处理按钮查看结果",
-        "复制或下载处理后的结果"
+        "复制或下载处理后的结果",
+        "View final amount, total interest, and growth chart"
       ],
       "usage_examples": [
         "使用复利计算器处理您的数据",
-        "快速获取处理结果，无需等待"
+        "快速获取处理结果，无需等待",
+        "Understand the impact of compounding frequency"
       ]
     },
     "binary-calculator": {
@@ -18932,7 +18957,8 @@
       ],
       "usage_examples": [
         "使用文字转图片处理您的数据",
-        "快速获取处理结果，无需等待"
+        "快速获取处理结果，无需等待",
+        "Make text-based banners"
       ]
     },
     "text-to-handwriting": {
@@ -18957,11 +18983,13 @@
         "在输入框中输入或粘贴要处理的内容",
         "根据需要调整工具选项和设置",
         "点击处理按钮查看结果",
-        "复制或下载处理后的结果"
+        "复制或下载处理后的结果",
+        "Download the handwritten image"
       ],
       "usage_examples": [
         "使用文字转手写体处理您的数据",
-        "快速获取处理结果，无需等待"
+        "快速获取处理结果，无需等待",
+        "Make handwriting practice sheets"
       ]
     },
     "screen-resolution-tester": {
@@ -19102,7 +19130,8 @@
       ],
       "usage_examples": [
         "使用打字速度测试处理您的数据",
-        "快速获取处理结果，无需等待"
+        "快速获取处理结果，无需等待",
+        "Compare typing skills across difficulty levels"
       ]
     },
     "morse-code-player": {
@@ -19140,7 +19169,8 @@
       ],
       "usage_examples": [
         "使用摩尔斯电码播放器处理您的数据",
-        "快速获取处理结果，无需等待"
+        "快速获取处理结果，无需等待",
+        "Practice Morse code listening"
       ]
     },
     "currency-converter": {
@@ -21796,7 +21826,8 @@
         "设置性别和生成数量",
         "按需开启避免重复选项",
         "点击“生成姓名”批量创建结果",
-        "复制结果或导出为 JSON、CSV、TSV"
+        "复制结果或导出为 JSON、CSV、TSV",
+        "Export the results as JSON or CSV using the 'Download' button, or copy a code snippet from the 'Export' modal for programmatic integration."
       ],
       "usage_examples": [
         "为注册表单和账户系统生成测试姓名",
@@ -21834,12 +21865,14 @@
         "设置重复次数",
         "复制不可见字符",
         "粘贴到需要的地方",
-        "使用检测器查找隐藏字符"
+        "使用检测器查找隐藏字符",
+        "Switch to the Detector tab, select the normalization form (e.g., NFC) and filters (e.g., Exclude common whitespace), then click Scan to review counts and copy results as JSON or CSV."
       ],
       "usage_examples": [
         "创建空白消息",
         "添加不可见水印",
-        "测试文本处理"
+        "测试文本处理",
+        "UI glyph rendering test: Generate a string with U+200C and U+200D inserted between letters and test ligature and shaping behavior across Android, iOS, and Windows to validate the rendering pipeline."
       ],
       "selectCharacter": "选择字符类型",
       "repeatCount": "重复次数",
@@ -23388,7 +23421,9 @@
         "选择开始年份和结束年份",
         "填写年通货膨胀率",
         "点击计算查看结果",
-        "比较调整后价值和购买力损失"
+        "比较调整后价值和购买力损失",
+        "View the inflation-adjusted value",
+        "See the total percentage change"
       ],
       "usage_examples": [
         "比较过去房租和现在房租的购买力差异",

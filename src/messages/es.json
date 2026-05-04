@@ -1253,15 +1253,29 @@
       "faqs": [
         {
           "q": "¿Qué es TOML?",
-          "a": "TOML (Tom's Obvious, Minimal Language) es un formato de archivo de configuración mínimo para archivos de configuración."
+          "a": "TOML (Tom's Obvious, Minimal Language) es un formato de archivo de configuración mínimo para archivos de configuración.",
+          "question": "Does the converter preserve comments from my TOML file?",
+          "answer": "No, JSON does not natively support comments, so they are stripped during TOML-to-JSON conversion."
         },
         {
           "q": "¿Por qué convertir TOML a JSON?",
-          "a": "JSON es más ampliamente compatible y se puede usar en muchos lenguajes de programación y herramientas."
+          "a": "JSON es más ampliamente compatible y se puede usar en muchos lenguajes de programación y herramientas.",
+          "question": "How does the tool handle invalid TOML or JSON syntax?",
+          "answer": "The tool provides clear error messages highlighting the location and nature of any syntax errors it encounters."
         },
         {
           "q": "¿Esta herramienta es gratuita?",
-          "a": "Sí, es completamente gratuita y no requiere registro."
+          "a": "Sí, es completamente gratuita y no requiere registro.",
+          "question": "Can I convert nested structures and arrays between the formats?",
+          "answer": "Yes, the converter fully supports complex nested objects, arrays, and all standard data types in both formats."
+        },
+        {
+          "question": "Is there a file size limit for conversion?",
+          "answer": "The conversion is performed client-side in your browser, so it's limited by your device's available memory."
+        },
+        {
+          "question": "Is my data secure when using this online converter?",
+          "answer": "Yes, all conversion happens locally in your web browser; no data is sent to any server, ensuring complete privacy."
         }
       ]
     },
@@ -5929,11 +5943,14 @@
         "Ingresa o pega el contenido que quieres procesar en la caja de entrada",
         "Ajusta las opciones y configuraciones del generador según sea necesario",
         "Haz clic en el botón de procesar para ver los resultados",
-        "Copia o descarga los resultados procesados"
+        "Copia o descarga los resultados procesados",
+        "Step 6: Once satisfied, click the 'Download Sitemap' button to save the XML file to your computer. You can then submit this file to search engines or upload it to your website's root directory."
       ],
       "usage_examples": [
         "Usa el Generador de Sitemaps para procesar tus datos",
-        "Obtén rápidamente los resultados del procesamiento sin esperar"
+        "Obtén rápidamente los resultados del procesamiento sin esperar",
+        "Example 3: A content manager for a news website uses the Sitemap Generator to update the sitemap daily. This ensures that breaking news articles and featured stories are immediately indexed by search engines, allowing readers to discover the latest content quickly.",
+        "Example 4: A digital marketing agency uses the Sitemap Generator to create and maintain sitemaps for multiple client websites. By automating this process, they save time and ensure that all client sites have up-to-date sitemaps, which is crucial for SEO and site performance."
       ]
     },
     "json-to-php": {
@@ -10289,11 +10306,14 @@
         "Introduce o pega el contenido que deseas procesar en la caja de entrada",
         "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
         "Haz clic en el botón de procesamiento para ver los resultados",
-        "Copia o descarga los resultados procesados"
+        "Copia o descarga los resultados procesados",
+        "Step 6: Once your chart is complete, click the 'Export' button to download it in your preferred format, such as PNG, SVG, or PDF. You can also share the chart directly via a unique URL."
       ],
       "usage_examples": [
         "Usa el Generador de Gráficos de Línea con Pasos para procesar tus datos",
-        "Obtén resultados de procesamiento rápidamente sin esperar"
+        "Obtén resultados de procesamiento rápidamente sin esperar",
+        "Example 3: A market researcher analyzes survey responses over a series of weeks, using the tool to show the number of respondents who changed their opinions at specific points in time.",
+        "Example 4: An environmental scientist monitors temperature changes in a specific region, plotting daily high and low temperatures to identify patterns and anomalies over a month."
       ],
       "png": "PNG",
       "svg": "SVG",
@@ -13097,7 +13117,16 @@
         "Ejemplo 3: Un escritor de contenido necesita convertir sus borradores en Word a texto plano para facilitar la revisión y edición en un editor de texto simple. Word to Text ayuda a eliminar distracciones como el formateo y permite una revisión más eficiente del contenido.",
         "Ejemplo 4: Una empresa de marketing utiliza Word to Text para convertir informes de campaña de Word a texto plano antes de importarlos a una plataforma de análisis de datos. Esto asegura que los informes se integren sin problemas y que los datos estén listos para ser analizados inmediatamente."
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Does it support .doc files?",
+          "answer": "Currently only .docx format is supported. Please convert .doc files to .docx first."
+        },
+        {
+          "question": "Is formatting preserved?",
+          "answer": "This tool extracts plain text only. Formatting, images, and tables are not preserved."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "dropzone": "dropzone",
@@ -13123,7 +13152,16 @@
         "Un equipo legal digitaliza contratos antiguos en DOCX y los convierte a HTML para implementar un sistema de búsqueda semántica en el código",
         "Un docente crea una página web educativa convirtiendo un libro de texto DOCX con ecuaciones matemáticas en HTML5 compatible con lectores de pantalla"
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Is all formatting preserved?",
+          "answer": "Basic formatting like headings, bold, italic, and lists are preserved. Complex layouts may not convert perfectly."
+        },
+        {
+          "question": "Can I edit the HTML?",
+          "answer": "Yes, you can copy the HTML code and edit it in any text editor or HTML editor."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "dropzone": "dropzone",
@@ -13140,12 +13178,25 @@
       "usage_steps": [
         "Subir archivo Excel",
         "Seleccionar hoja",
-        "Descargar CSV"
+        "Descargar CSV",
+        "Preview the CSV data",
+        "Copy or download the CSV file"
       ],
       "usage_examples": [
-        "Exportar datos Excel a CSV"
+        "Exportar datos Excel a CSV",
+        "Create CSV files for data analysis tools",
+        "Export spreadsheet data in universal format"
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Can I convert multiple sheets?",
+          "answer": "Yes, you can select different sheets and convert them one at a time."
+        },
+        {
+          "question": "Are formulas converted?",
+          "answer": "Only the calculated values are exported, not the formulas themselves."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "dropzone": "dropzone",
@@ -13171,7 +13222,16 @@
         "Un administrador de sistemas migra logs del sistema en CSV a Excel, manteniendo el formato de fecha local específico para auditorías.",
         "Un equipo de ventas integra datos de clientes desde una API externa (formato CSV) a un libro de Excel compartido con filtros avanzados."
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Does it handle large files?",
+          "answer": "Yes, but very large files may take longer to process. We recommend files under 10MB for best performance."
+        },
+        {
+          "question": "Are special characters preserved?",
+          "answer": "Yes, UTF-8 encoding is used to preserve special characters and international text."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "errorExport": "errorExport",
@@ -13376,11 +13436,13 @@
         "Ingresar o pegar el contenido a procesar en el cuadro de entrada",
         "Ajustar las opciones y configuraciones de la herramienta según sea necesario",
         "Hacer clic en el botón de procesar para ver los resultados",
-        "Copiar o descargar los resultados procesados"
+        "Copiar o descargar los resultados procesados",
+        "View final amount, total interest, and growth chart"
       ],
       "usage_examples": [
         "Usar Calculadora de Interés Compuesto para procesar tus datos",
-        "Obtener resultados de procesamiento rápidamente sin esperar"
+        "Obtener resultados de procesamiento rápidamente sin esperar",
+        "Understand the impact of compounding frequency"
       ]
     },
     "binary-calculator": {
@@ -13419,7 +13481,8 @@
       ],
       "usage_examples": [
         "Usar Calculadora Binaria para procesar tus datos",
-        "Obtener resultados de procesamiento rápidamente sin esperar"
+        "Obtener resultados de procesamiento rápidamente sin esperar",
+        "Convert between number systems"
       ]
     },
     "hex-calculator": {
@@ -13587,7 +13650,8 @@
       ],
       "usage_examples": [
         "Usar Texto a Imagen para procesar tus datos",
-        "Obtener resultados de procesamiento rápidamente sin esperar"
+        "Obtener resultados de procesamiento rápidamente sin esperar",
+        "Make text-based banners"
       ]
     },
     "text-to-handwriting": {
@@ -13759,7 +13823,8 @@
       ],
       "usage_examples": [
         "Usar Prueba de Velocidad de Escritura para procesar tus datos",
-        "Obtener resultados de procesamiento rápidamente sin esperar"
+        "Obtener resultados de procesamiento rápidamente sin esperar",
+        "Compare typing skills across difficulty levels"
       ]
     },
     "morse-code-player": {
@@ -13797,7 +13862,8 @@
       ],
       "usage_examples": [
         "Usar Reproductor de Código Morse para procesar tus datos",
-        "Obtener resultados de procesamiento rápidamente sin esperar"
+        "Obtener resultados de procesamiento rápidamente sin esperar",
+        "Practice Morse code listening"
       ]
     },
     "currency-converter": {
@@ -16402,12 +16468,14 @@
         "Establece número de repeticiones",
         "Copia los caracteres invisibles",
         "Pega donde necesites",
-        "Usa el detector para encontrar caracteres ocultos"
+        "Usa el detector para encontrar caracteres ocultos",
+        "Switch to the Detector tab, select the normalization form (e.g., NFC) and filters (e.g., Exclude common whitespace), then click Scan to review counts and copy results as JSON or CSV."
       ],
       "usage_examples": [
         "Crear mensajes en blanco",
         "Agregar marcas de agua invisibles",
-        "Probar procesamiento de texto"
+        "Probar procesamiento de texto",
+        "UI glyph rendering test: Generate a string with U+200C and U+200D inserted between letters and test ligature and shaping behavior across Android, iOS, and Windows to validate the rendering pipeline."
       ],
       "selectCharacter": "Selecciona tipo de carácter",
       "repeatCount": "Número de repeticiones",
