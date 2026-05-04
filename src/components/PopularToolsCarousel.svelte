@@ -46,6 +46,10 @@
     currentPage = index;
   }
 
+  function toolPath(slug: string) {
+    return `${basePath}/tools/${slug}/`;
+  }
+
   $effect(() => {
     if (totalPages <= 1) return;
     intervalId = setInterval(goToNext, rotateInterval);
@@ -67,7 +71,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {#each pageTools as tool}
               <a
-                href="{basePath}/tools/{tool.slug}"
+                href={toolPath(tool.slug)}
                 class="glass-card flex items-center gap-4 p-5 group/card relative overflow-hidden"
               >
                 <div class="absolute inset-0 bg-gradient-to-br from-transparent to-amber-500/5 dark:to-amber-500/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>

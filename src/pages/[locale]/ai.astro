@@ -35,10 +35,7 @@ export const getStaticPaths: GetStaticPaths = () => {
 };
 
 const { locale } = Astro.props as { locale: Locale };
-
-if (!isAiDiscoveryEnabled()) {
-  return Astro.redirect(`/${locale}/tools/`);
-}
+const aiDiscoveryEnabled = isAiDiscoveryEnabled();
 
 const baseMessages = await loadBaseMessages(locale);
 const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
@@ -101,7 +98,21 @@ const comparisonGuides = buildComparisonGuides(locale, categoryMessages, toolNam
 
     <main class="py-6 px-4 lg:px-6">
       <div class="max-w-none mx-0">
-        <DiscoverySearch client:load locale={locale} translations={discoveryTranslations} />
+        {aiDiscoveryEnabled ? (
+          <DiscoverySearch client:load locale={locale} translations={discoveryTranslations} />
+        ) : (
+          <section class="mb-8 rounded-3xl border border-slate-200/60 glass p-8 shadow-2xl backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/40">
+            <p class="mb-3 text-[10px] font-black uppercase tracking-[0.3em] text-amber-600/80 dark:text-amber-500/60">
+              {siteMessages.name || 'U2Tool'}
+            </p>
+            <h1 class="max-w-4xl text-4xl font-black tracking-tight text-slate-900 drop-shadow-sm dark:text-white md:text-5xl">
+              {aiPageTitle}
+            </h1>
+            <p class="mt-4 max-w-3xl text-sm font-medium leading-7 text-slate-500 dark:text-slate-400">
+              {aiMessages.heroDescription || aiPageDescription}
+            </p>
+          </section>
+        )}
         <CategorySpotlightSection
           eyebrow={aiPageTitle}
           title={(homeMessages.categories as string) || 'Tool Categories'}
