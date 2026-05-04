@@ -1253,15 +1253,29 @@
       "faqs": [
         {
           "q": "TOMLとは何ですか？",
-          "a": "TOML（Tom's Obvious, Minimal Language）は、設定ファイル用の最小限の設定ファイル形式です。"
+          "a": "TOML（Tom's Obvious, Minimal Language）は、設定ファイル用の最小限の設定ファイル形式です。",
+          "question": "Does the converter preserve comments from my TOML file?",
+          "answer": "No, JSON does not natively support comments, so they are stripped during TOML-to-JSON conversion."
         },
         {
           "q": "TOMLをJSONに変換する理由は？",
-          "a": "JSONはより広くサポートされており、多くのプログラミング言語やツールで使用できます。"
+          "a": "JSONはより広くサポートされており、多くのプログラミング言語やツールで使用できます。",
+          "question": "How does the tool handle invalid TOML or JSON syntax?",
+          "answer": "The tool provides clear error messages highlighting the location and nature of any syntax errors it encounters."
         },
         {
           "q": "このツールは無料ですか？",
-          "a": "はい、完全に無料で、登録も不要です。"
+          "a": "はい、完全に無料で、登録も不要です。",
+          "question": "Can I convert nested structures and arrays between the formats?",
+          "answer": "Yes, the converter fully supports complex nested objects, arrays, and all standard data types in both formats."
+        },
+        {
+          "question": "Is there a file size limit for conversion?",
+          "answer": "The conversion is performed client-side in your browser, so it's limited by your device's available memory."
+        },
+        {
+          "question": "Is my data secure when using this online converter?",
+          "answer": "Yes, all conversion happens locally in your web browser; no data is sent to any server, ensuring complete privacy."
         }
       ]
     },
@@ -1920,21 +1934,36 @@
       ],
       "usage_examples": [
         "HTMLエンコーダー/デコーダー を使用してデータを処理する",
-        "待機せずに処理結果を迅速に取得"
+        "待機せずに処理結果を迅速に取得",
+        "Preparing user-generated content for web display by encoding quotes and ampersands."
       ],
       "inputPlaceholder": "ここにテキストを入力...",
       "faqs": [
         {
           "q": "HTMLエンコードとは何ですか？",
-          "a": "HTMLエンコードは、特殊文字をHTMLエンティティに変換するプロセスです。"
+          "a": "HTMLエンコードは、特殊文字をHTMLエンティティに変換するプロセスです。",
+          "question": "What is the difference between encoding and decoding HTML?",
+          "answer": "Encoding converts special characters (like <) to HTML entities (&lt;). Decoding reverses this process, turning entities back into characters."
         },
         {
           "q": "なぜHTMLエンコードが必要ですか？",
-          "a": "XSS攻撃を防ぎ、HTMLコードが正しく表示されるようにするためです。"
+          "a": "XSS攻撃を防ぎ、HTMLコードが正しく表示されるようにするためです。",
+          "question": "Does this tool handle all HTML entity references, like numeric codes?",
+          "answer": "Yes, it processes both named entities (e.g., &amp;) and numeric/decimal entities (e.g., &#38;)."
         },
         {
           "q": "このツールは安全ですか？",
-          "a": "はい、すべての処理はブラウザ内で行われ、データは送信されません。"
+          "a": "はい、すべての処理はブラウザ内で行われ、データは送信されません。",
+          "question": "Will encoding affect the spaces or line breaks in my text?",
+          "answer": "No, standard spaces and line breaks are preserved. Only characters with specific HTML entities are converted."
+        },
+        {
+          "question": "Is there a limit to the amount of text I can convert at once?",
+          "answer": "The tool is optimized for typical web development tasks. For extremely large documents, processing in sections is recommended."
+        },
+        {
+          "question": "Is my data secure when using this online encoder/decoder?",
+          "answer": "Yes, all processing happens in your browser. Your text is never sent to or stored on our servers."
         }
       ],
       "input": "入力",
@@ -12596,11 +12625,14 @@
         "入力ボックスに処理したいコンテンツを入力または貼り付けます",
         "必要に応じてツールオプションと設定を調整します",
         "処理ボタンをクリックして結果を表示します",
-        "処理された結果をコピーまたはダウンロードします"
+        "処理された結果をコピーまたはダウンロードします",
+        "Click download button to export as .md or .html file"
       ],
       "usage_examples": [
         "Markdown エディター を使用してデータを処理する",
-        "待機せずに処理結果を迅速に取得"
+        "待機せずに処理結果を迅速に取得",
+        "Draft project documentation",
+        "Preview Markdown formatting quickly"
       ],
       "faqs": [
         {
@@ -12647,11 +12679,14 @@
         "入力ボックスに処理したいコンテンツを入力または貼り付けます",
         "必要に応じてツールオプションと設定を調整します",
         "処理ボタンをクリックして結果を表示します",
-        "処理された結果をコピーまたはダウンロードします"
+        "処理された結果をコピーまたはダウンロードします",
+        "Use top options to toggle 24-hour format or show seconds"
       ],
       "usage_examples": [
         "World Clock を使用してデータを処理する",
-        "待機せずに処理結果を迅速に取得"
+        "待機せずに処理結果を迅速に取得",
+        "Know destination time when traveling abroad",
+        "Confirm time when contacting overseas friends and family"
       ],
       "faqs": [
         {
@@ -12686,11 +12721,14 @@
         "入力ボックスに処理したいコンテンツを入力または貼り付けます",
         "必要に応じてツールオプションと設定を調整します",
         "処理ボタンをクリックして結果を表示します",
-        "処理された結果をコピーまたはダウンロードします"
+        "処理された結果をコピーまたはダウンロードします",
+        "Click 'Reset' to clear all records"
       ],
       "usage_examples": [
         "ストップウォッチ を使用してデータを処理する",
-        "待機せずに処理結果を迅速に取得"
+        "待機せずに処理結果を迅速に取得",
+        "Pomodoro technique timing for studying",
+        "Test how long tasks take to complete"
       ],
       "faqs": [
         {
@@ -13084,7 +13122,16 @@
         "Example 3: ウェブ開発者がクライアントから受け取ったデザイン仕様書（.docx 形式）を、ウェブサイトの開発フローに組み込む必要がある場合、Word to Text を使用してテキストを抽出し、開発チームとの共有や自動化プロセスに利用できます。",
         "Example 4: 法務担当者が契約書（.docx 形式）を検閲する際、Word to Text を使用してテキスト形式に変換し、契約条項の検索や比較を行えるようになります。これにより、契約書の詳細なチェックや修正が効率的に行えます。"
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Does it support .doc files?",
+          "answer": "Currently only .docx format is supported. Please convert .doc files to .docx first."
+        },
+        {
+          "question": "Is formatting preserved?",
+          "answer": "This tool extracts plain text only. Formatting, images, and tables are not preserved."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "dropzone": "dropzone",
@@ -13110,7 +13157,16 @@
         "企業の社内規定書をCMSにインポート可能なHTML形式に一括変換",
         "大学の研究論文をWeb公開用にアクセシビリティ対応のHTML5ドキュメントに変換"
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Is all formatting preserved?",
+          "answer": "Basic formatting like headings, bold, italic, and lists are preserved. Complex layouts may not convert perfectly."
+        },
+        {
+          "question": "Can I edit the HTML?",
+          "answer": "Yes, you can copy the HTML code and edit it in any text editor or HTML editor."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "dropzone": "dropzone",
@@ -13171,7 +13227,16 @@
         "例3: サーバーログのCSVデータをExcelに変換し、条件付き書式で異常値の可視化を実施。",
         "例4: 学術研究の実験結果を共有するため、複数のCSVファイルを統合した.xlsx形式の論文附属資料を作成。"
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Does it handle large files?",
+          "answer": "Yes, but very large files may take longer to process. We recommend files under 10MB for best performance."
+        },
+        {
+          "question": "Are special characters preserved?",
+          "answer": "Yes, UTF-8 encoding is used to preserve special characters and international text."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "errorExport": "errorExport",
@@ -13313,7 +13378,8 @@
       ],
       "usage_examples": [
         "チップ計算機でデータを処理",
-        "待ち時間なしで素早く結果を取得"
+        "待ち時間なしで素早く結果を取得",
+        "Determine appropriate tip amounts for different service levels"
       ]
     },
     "discount-calculator": {
@@ -13375,11 +13441,13 @@
         "入力ボックスに処理したいコンテンツを入力または貼り付け",
         "必要に応じてツールオプションと設定を調整",
         "処理ボタンをクリックして結果を表示",
-        "処理結果をコピーまたはダウンロード"
+        "処理結果をコピーまたはダウンロード",
+        "View final amount, total interest, and growth chart"
       ],
       "usage_examples": [
         "複利計算機でデータを処理",
-        "待ち時間なしで素早く結果を取得"
+        "待ち時間なしで素早く結果を取得",
+        "Understand the impact of compounding frequency"
       ]
     },
     "binary-calculator": {
@@ -13587,7 +13655,8 @@
       ],
       "usage_examples": [
         "テキストから画像でデータを処理",
-        "待ち時間なしで素早く結果を取得"
+        "待ち時間なしで素早く結果を取得",
+        "Make text-based banners"
       ]
     },
     "text-to-handwriting": {
@@ -13612,11 +13681,13 @@
         "入力ボックスに処理したいコンテンツを入力または貼り付け",
         "必要に応じてツールオプションと設定を調整",
         "処理ボタンをクリックして結果を表示",
-        "処理結果をコピーまたはダウンロード"
+        "処理結果をコピーまたはダウンロード",
+        "Download the handwritten image"
       ],
       "usage_examples": [
         "テキストから手書きでデータを処理",
-        "待ち時間なしで素早く結果を取得"
+        "待ち時間なしで素早く結果を取得",
+        "Make handwriting practice sheets"
       ]
     },
     "screen-resolution-tester": {
@@ -13757,7 +13828,8 @@
       ],
       "usage_examples": [
         "タイピング速度テストでデータを処理",
-        "待ち時間なしで素早く結果を取得"
+        "待ち時間なしで素早く結果を取得",
+        "Compare typing skills across difficulty levels"
       ]
     },
     "morse-code-player": {
@@ -13795,7 +13867,8 @@
       ],
       "usage_examples": [
         "モールス信号プレーヤーでデータを処理",
-        "待ち時間なしで素早く結果を取得"
+        "待ち時間なしで素早く結果を取得",
+        "Practice Morse code listening"
       ]
     },
     "currency-converter": {
@@ -16314,12 +16387,14 @@
         "性別の好みを選択",
         "名前の数を設定",
         "生成をクリック",
-        "必要な名前をコピー"
+        "必要な名前をコピー",
+        "Export the results as JSON or CSV using the 'Download' button, or copy a code snippet from the 'Export' modal for programmatic integration."
       ],
       "usage_examples": [
         "テストユーザーデータを作成",
         "架空のキャラクターに名前を付ける",
-        "プライバシー保護"
+        "プライバシー保護",
+        "Localization QA by generating Icelandic surnames and names to test surname-first display, and Spanish compound surnames to verify proper CSV field mapping and hyphen handling."
       ],
       "country": "国/文化",
       "english": "英語（米国/英国）",
@@ -16351,12 +16426,14 @@
         "繰り返し回数を設定",
         "不可視文字をコピー",
         "必要な場所に貼り付け",
-        "検出機能で隠し文字を見つける"
+        "検出機能で隠し文字を見つける",
+        "Switch to the Detector tab, select the normalization form (e.g., NFC) and filters (e.g., Exclude common whitespace), then click Scan to review counts and copy results as JSON or CSV."
       ],
       "usage_examples": [
         "空白メッセージを作成",
         "不可視の透かしを追加",
-        "テキスト処理をテスト"
+        "テキスト処理をテスト",
+        "UI glyph rendering test: Generate a string with U+200C and U+200D inserted between letters and test ligature and shaping behavior across Android, iOS, and Windows to validate the rendering pipeline."
       ],
       "selectCharacter": "文字タイプを選択",
       "repeatCount": "繰り返し回数",
@@ -16384,12 +16461,14 @@
         "メッセージ名とパッケージオプションを設定",
         "「変換」をクリックしてprotoスキーマを生成",
         "生成された.proto定義を確認",
-        "コピーまたはダウンロードしてprotoファイルを取得"
+        "コピーまたはダウンロードしてprotoファイルを取得",
+        "Click Copy .proto or Download .proto to export, then paste into your codebase or compile with protoc."
       ],
       "usage_examples": [
         "APIレスポンスからprotoスキーマを生成",
         "gRPCサービス定義の作成",
-        "REST APIをgRPCに変換"
+        "REST APIをgRPCに変換",
+        "Infer a schema from a GraphQL introspection JSON response. The tool creates messages for types and fields, emits oneofs for kind variants, maps repeatable flags to repeated bool, and produces a .proto that mirrors the introspection format, facilitating codegen and static analysis tooling."
       ],
       "jsonInput": "JSON入力",
       "protoOutput": "Proto出力",

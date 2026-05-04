@@ -1253,15 +1253,29 @@
       "faqs": [
         {
           "q": "Что такое TOML?",
-          "a": "TOML (Tom's Obvious, Minimal Language) - это минимальный формат файла конфигурации для файлов конфигурации."
+          "a": "TOML (Tom's Obvious, Minimal Language) - это минимальный формат файла конфигурации для файлов конфигурации.",
+          "question": "Does the converter preserve comments from my TOML file?",
+          "answer": "No, JSON does not natively support comments, so they are stripped during TOML-to-JSON conversion."
         },
         {
           "q": "Зачем конвертировать TOML в JSON?",
-          "a": "JSON более широко поддерживается и может использоваться во многих языках программирования и инструментах."
+          "a": "JSON более широко поддерживается и может использоваться во многих языках программирования и инструментах.",
+          "question": "How does the tool handle invalid TOML or JSON syntax?",
+          "answer": "The tool provides clear error messages highlighting the location and nature of any syntax errors it encounters."
         },
         {
           "q": "Этот инструмент бесплатный?",
-          "a": "Да, он полностью бесплатный и не требует регистрации."
+          "a": "Да, он полностью бесплатный и не требует регистрации.",
+          "question": "Can I convert nested structures and arrays between the formats?",
+          "answer": "Yes, the converter fully supports complex nested objects, arrays, and all standard data types in both formats."
+        },
+        {
+          "question": "Is there a file size limit for conversion?",
+          "answer": "The conversion is performed client-side in your browser, so it's limited by your device's available memory."
+        },
+        {
+          "question": "Is my data secure when using this online converter?",
+          "answer": "Yes, all conversion happens locally in your web browser; no data is sent to any server, ensuring complete privacy."
         }
       ]
     },
@@ -2355,15 +2369,29 @@
       "faqs": [
         {
           "q": "Что такое форматирование XML?",
-          "a": "Форматирование XML - это процесс создания читаемого и хорошо структурированного XML-кода."
+          "a": "Форматирование XML - это процесс создания читаемого и хорошо структурированного XML-кода.",
+          "question": "Does this tool preserve comments and CDATA sections in my XML?",
+          "answer": "Yes, our formatter retains all XML comments, CDATA blocks, and processing instructions during formatting and minification."
         },
         {
           "q": "Зачем форматировать XML?",
-          "a": "Отформатированный XML легче читать, отлаживать и поддерживать."
+          "a": "Отформатированный XML легче читать, отлаживать и поддерживать.",
+          "question": "What is the maximum file size for XML processing?",
+          "answer": "The tool can handle large XML documents, but for optimal performance, we recommend files under 5MB for quick processing."
         },
         {
           "q": "Этот инструмент безопасен?",
-          "a": "Да, вся обработка происходит в вашем браузере, и данные не передаются."
+          "a": "Да, вся обработка происходит в вашем браузере, и данные не передаются.",
+          "question": "Can I format XML that is on a single line without any spaces?",
+          "answer": "Absolutely. The tool is designed to parse and properly indent even densely packed, single-line XML strings."
+        },
+        {
+          "question": "Does the validator check against a specific XML Schema (XSD)?",
+          "answer": "No, this validator performs a syntax check for well-formed XML. It does not validate against an external DTD or XSD schema."
+        },
+        {
+          "question": "Is my XML data stored or logged on your servers?",
+          "answer": "No. All processing occurs in real-time within your browser. Your XML data is never transmitted or stored on our servers."
         }
       ],
       "xml": {
@@ -2516,11 +2544,14 @@
         "Введите или вставьте содержимое, которое нужно обработать, в поле ввода",
         "Настройте параметры инструмента, если это необходимо",
         "Нажмите кнопку обработки, чтобы просмотреть результаты",
-        "Скопируйте или загрузите обработанные результаты"
+        "Скопируйте или загрузите обработанные результаты",
+        "Step 6: Once the minification is complete, download the optimized file using the 'Download Minified File' button and integrate it into your project."
       ],
       "usage_examples": [
         "Используйте Минифицирователь кода для обработки ваших данных",
-        "Получите результаты обработки быстро без ожидания"
+        "Получите результаты обработки быстро без ожидания",
+        "Example 3: A content manager is tasked with optimizing a company's blog for faster loading times. By minifying the HTML and CSS files of the blog, the manager can achieve faster page load speeds, which can improve the site's search engine rankings and user engagement.",
+        "Example 4: A team of developers is working on a web application that needs to be deployed on a server with limited bandwidth. By using the Code Minifier to reduce the file sizes of the application's resources, the team can ensure that the application performs efficiently even under constrained network conditions."
       ],
       "input": "Ввод",
       "minify": "Минифицировать",
@@ -3292,11 +3323,14 @@
         "Введите или вставьте содержимое, которое хотите обработать, в поле ввода",
         "Настройте параметры инструмента, если необходимо",
         "Нажмите кнопку обработки, чтобы просмотреть результаты",
-        "Скопируйте или скачайте обработанные результаты"
+        "Скопируйте или скачайте обработанные результаты",
+        "Step 6: Once satisfied, click the 'Download Optimized SVG' button to save the optimized file to your computer."
       ],
       "usage_examples": [
         "Используйте Оптимизатор SVG для обработки ваших данных",
-        "Получите результаты обработки быстро без ожидания"
+        "Получите результаты обработки быстро без ожидания",
+        "Example 3: A content manager is updating a company blog and wants to include an SVG chart to illustrate data. The original SVG file is large and slows down the loading time of the blog post. Using the SVG Optimizer, the manager can compress the file, ensuring that the chart loads quickly and the post remains engaging.",
+        "Example 4: An e-commerce platform uses SVGs for product images and icons. During a site audit, it is discovered that the SVG files are contributing to slow load times. By optimizing these files with the SVG Optimizer, the platform can improve its load speed, potentially boosting user satisfaction and conversion rates."
       ],
       "input": "Ввод",
       "svgOptimizer": {
@@ -3985,11 +4019,14 @@
         "Введите или вставьте данные, которые вы хотите обработать, в поле ввода",
         "Настройте параметры инструмента по необходимости",
         "Нажмите кнопку «Обработать», чтобы увидеть результаты",
-        "Скопируйте или скачайте обработанные результаты"
+        "Скопируйте или скачайте обработанные результаты",
+        "Copy the result with the Copy button or Download as .txt; use the Swap arrows to move the output back to input for further processing."
       ],
       "usage_examples": [
         "Используйте Конвертер HTML-символов для обработки ваших данных",
-        "Получайте результаты обработки быстро без ожидания"
+        "Получайте результаты обработки быстро без ожидания",
+        "Build a newsletter template from dynamic content and encode only ASCII symbols while leaving UTF‑8 intact, avoiding double-encoding by selecting Full ASCII scope and leaving Unicode characters unchanged.",
+        "Fix a legacy CMS export that mixes raw and encoded characters by using Detect/Auto-Convert to normalize all entities to a consistent set of named references for the common symbols."
       ],
       "encode": "encode",
       "decode": "decode",
@@ -5763,11 +5800,14 @@
         "Введите или вставьте текст, который вы хотите обработать, в поле ввода",
         "Настройте параметры инструмента по необходимости",
         "Нажмите кнопку обработки, чтобы просмотреть результаты",
-        "Скопируйте или скачайте обработанные результаты"
+        "Скопируйте или скачайте обработанные результаты",
+        "Step 6: Use the 'Copy' button next to each result to easily copy the information for documentation or further analysis."
       ],
       "usage_examples": [
         "Используйте Предварительный просмотр сокращенных ссылок для обработки ваших данных",
-        "Получайте результаты обработки быстро без ожидания"
+        "Получайте результаты обработки быстро без ожидания",
+        "Example 3: A content creator shares a shortened URL to a blog post on Twitter. After noticing a lower-than-expected engagement, they use the tool to check if the URL is functioning correctly and if there are any issues with the redirects.",
+        "Example 4: A web developer is testing a new URL shortening service and needs to validate its performance. They use the URL Shortener Preview tool to ensure that the shortened URLs are resolving efficiently and to gather data on the HTTP response times and status codes."
       ]
     },
     "json-viewer": {
@@ -7015,11 +7055,14 @@
         "Введите или вставьте данные, которые вы хотите обработать, в поле ввода",
         "Настройте параметры инструмента, если это необходимо",
         "Нажмите кнопку обработки для просмотра результатов",
-        "Копируйте или скачивайте обработанные результаты"
+        "Копируйте или скачивайте обработанные результаты",
+        "Step 6: Bookmark the page or use the 'Add to Favorites' button to save the tool for quick reference in the future."
       ],
       "usage_examples": [
         "Используйте HTTP Статус-коды для обработки данных",
-        "Получайте результаты обработки быстро без ожидания"
+        "Получайте результаты обработки быстро без ожидания",
+        "Example 3: A DevOps engineer is monitoring a server that frequently returns a 503 Service Unavailable error during peak traffic times. The tool helps them identify that the server is overloaded and suggests scaling the infrastructure or optimizing resource allocation.",
+        "Example 4: A security analyst is reviewing logs and notices a 401 Unauthorized error. The HTTP Status Codes tool provides a detailed explanation of this status code and suggests reviewing the authentication mechanisms and access control policies to ensure they are correctly configured."
       ]
     },
     "string-obfuscator": {
@@ -8103,11 +8146,14 @@
         "Введите или вставьте содержимое, которое вы хотите обработать, в поле ввода",
         "При необходимости настройте параметры и настройки инструмента",
         "Нажмите кнопку обработки, чтобы просмотреть результаты",
-        "Скопируйте или загрузите обработанные результаты"
+        "Скопируйте или загрузите обработанные результаты",
+        "Step 6: Copy the generated Dart class code and integrate it into your project."
       ],
       "usage_examples": [
         "Используйте JSON в Дарт для обработки ваших данных",
-        "Быстро получайте результаты обработки без ожидания"
+        "Быстро получайте результаты обработки без ожидания",
+        "Example 3: A mobile app developer is working on a chat application that receives JSON messages containing the sender's name, message content, and timestamp. The JSON to Dart tool can be used to create a Dart class for the message model, ensuring that the messages are parsed and displayed correctly.",
+        "Example 4: A developer is building a weather app that fetches JSON data from a weather API, which includes information about the current temperature, humidity, and wind speed. The JSON to Dart tool can generate the necessary Dart classes to handle the weather data, making it easy to update the UI with the latest weather conditions."
       ]
     },
     "sql-to-json": {
@@ -11576,11 +11622,14 @@
         "Введите или вставьте содержимое, которое вы хотите обработать, в поле ввода",
         "При необходимости настройте параметры и настройки инструмента",
         "Нажмите кнопку обработки, чтобы просмотреть результаты",
-        "Скопируйте или загрузите обработанные результаты"
+        "Скопируйте или загрузите обработанные результаты",
+        "Step 6: Once the extraction is complete, download the frames by clicking the 'Download All' button or individually by selecting each frame."
       ],
       "usage_examples": [
         "Используйте Разделитель GIF для обработки ваших данных",
-        "Быстро получайте результаты обработки без ожидания"
+        "Быстро получайте результаты обработки без ожидания",
+        "Example 3: An animator is working on a project and needs to extract specific frames from a reference GIF to use as keyframes in their animation software. GIF Splitter allows them to select and export only the necessary frames.",
+        "Example 4: A social media manager wants to create a series of Instagram stories from an animated GIF. They use GIF Splitter to extract each frame and upload them as individual posts, creating a dynamic and engaging story sequence."
       ]
     },
     "gif-compressor": {
@@ -12402,11 +12451,14 @@
         "Введите или вставьте содержимое, которое вы хотите обработать, в поле ввода",
         "Настройте параметры и параметры инструмента по мере необходимости",
         "Нажмите кнопку обработки, чтобы увидеть результаты",
-        "Скопируйте или загрузите обработанные результаты"
+        "Скопируйте или загрузите обработанные результаты",
+        "Step 6: Once satisfied, click the 'Convert to PDF' button to generate the final document, which will be available for download."
       ],
       "usage_examples": [
         "Используйте Изображение в PDF для обработки ваших данных",
-        "Получите результаты обработки быстро, не等待着"
+        "Получите результаты обработки быстро, не等待着",
+        "Example 3: A student is preparing a research report for a class presentation. They have collected various diagrams and charts as images and use the Image to PDF tool to combine them into a single document, which they can easily share with classmates and instructors.",
+        "Example 4: A photographer wants to create a digital portfolio to showcase their work on a website. They use the tool to convert a selection of their best photos into a PDF, optimizing the resolution for web viewing and ensuring that the document loads quickly."
       ],
       "imageToPdf": {
         "invalidFileType": "imageToPdf.invalidFileType",
@@ -13035,7 +13087,16 @@
         "Студент извлекает цитаты из защищенных PDF-учебников для курсовой работы с сохранением номеров страниц",
         "Разработчик автоматизирует обработку технической документации, объединяя текст из 200+ страниц в один файл с разделителями"
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Does it work with scanned PDFs?",
+          "answer": "This tool extracts embedded text from PDFs. For scanned images, you may need OCR software."
+        },
+        {
+          "question": "Is there a file size limit?",
+          "answer": "Processing happens in your browser, so very large files may be slow. We recommend files under 50MB."
+        }
+      ],
       "page": "page",
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
@@ -13063,7 +13124,16 @@
         "Студент преобразует учебные материалы из формата .docx в формат .txt для удобного чтения на планшете, где отсутствует поддержка Microsoft Word.",
         "Копирайтер использует Word to Text для быстрого извлечения текста из нескольких документов .docx, чтобы проверить их на уникальность с помощью инструментов анализа текста."
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Does it support .doc files?",
+          "answer": "Currently only .docx format is supported. Please convert .doc files to .docx first."
+        },
+        {
+          "question": "Is formatting preserved?",
+          "answer": "This tool extracts plain text only. Formatting, images, and tables are not preserved."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "dropzone": "dropzone",
@@ -13115,12 +13185,25 @@
       "usage_steps": [
         "Загрузить файл Excel",
         "Выбрать лист",
-        "Скачать CSV"
+        "Скачать CSV",
+        "Preview the CSV data",
+        "Copy or download the CSV file"
       ],
       "usage_examples": [
-        "Экспортировать данные Excel в CSV"
+        "Экспортировать данные Excel в CSV",
+        "Create CSV files for data analysis tools",
+        "Export spreadsheet data in universal format"
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Can I convert multiple sheets?",
+          "answer": "Yes, you can select different sheets and convert them one at a time."
+        },
+        {
+          "question": "Are formulas converted?",
+          "answer": "Only the calculated values are exported, not the formulas themselves."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "dropzone": "dropzone",
@@ -13146,7 +13229,16 @@
         "Маркетолог обрабатывает отчет по кликам из Яндекс.Директа, где числовые значения сохраняются с разделителями тысяч.",
         "Ученый преобразует экспериментальные данные с кириллической кодировкой CP1251 в XLSX для публикации в научном журнале."
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Does it handle large files?",
+          "answer": "Yes, but very large files may take longer to process. We recommend files under 10MB for best performance."
+        },
+        {
+          "question": "Are special characters preserved?",
+          "answer": "Yes, UTF-8 encoding is used to preserve special characters and international text."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "errorExport": "errorExport",
@@ -13259,7 +13351,8 @@
       ],
       "usage_examples": [
         "Использовать Калькулятор возраста для обработки данных",
-        "Быстро получить результаты обработки без ожидания"
+        "Быстро получить результаты обработки без ожидания",
+        "Calculate age difference between two dates"
       ]
     },
     "tip-calculator": {
@@ -13395,7 +13488,8 @@
       ],
       "usage_examples": [
         "Использовать Двоичный калькулятор для обработки данных",
-        "Быстро получить результаты обработки без ожидания"
+        "Быстро получить результаты обработки без ожидания",
+        "Convert between number systems"
       ]
     },
     "hex-calculator": {
@@ -13563,7 +13657,8 @@
       ],
       "usage_examples": [
         "Использовать Текст в изображение для обработки данных",
-        "Быстро получить результаты обработки без ожидания"
+        "Быстро получить результаты обработки без ожидания",
+        "Make text-based banners"
       ]
     },
     "text-to-handwriting": {
@@ -13735,7 +13830,8 @@
       ],
       "usage_examples": [
         "Использовать Тест скорости печати для обработки данных",
-        "Быстро получить результаты обработки без ожидания"
+        "Быстро получить результаты обработки без ожидания",
+        "Compare typing skills across difficulty levels"
       ]
     },
     "morse-code-player": {
@@ -13773,7 +13869,8 @@
       ],
       "usage_examples": [
         "Использовать Плеер азбуки Морзе для обработки данных",
-        "Быстро получить результаты обработки без ожидания"
+        "Быстро получить результаты обработки без ожидания",
+        "Practice Morse code listening"
       ]
     },
     "currency-converter": {
@@ -16292,12 +16389,14 @@
         "Выберите предпочтение пола",
         "Установите количество имен",
         "Нажмите Генерировать",
-        "Скопируйте нужные имена"
+        "Скопируйте нужные имена",
+        "Export the results as JSON or CSV using the 'Download' button, or copy a code snippet from the 'Export' modal for programmatic integration."
       ],
       "usage_examples": [
         "Создание тестовых данных пользователей",
         "Именование вымышленных персонажей",
-        "Защита конфиденциальности"
+        "Защита конфиденциальности",
+        "Localization QA by generating Icelandic surnames and names to test surname-first display, and Spanish compound surnames to verify proper CSV field mapping and hyphen handling."
       ],
       "country": "Страна/Культура",
       "english": "Английский (США/Великобритания)",
@@ -16329,12 +16428,14 @@
         "Установите количество повторений",
         "Скопируйте невидимые символы",
         "Вставьте где нужно",
-        "Используйте детектор для поиска скрытых символов"
+        "Используйте детектор для поиска скрытых символов",
+        "Switch to the Detector tab, select the normalization form (e.g., NFC) and filters (e.g., Exclude common whitespace), then click Scan to review counts and copy results as JSON or CSV."
       ],
       "usage_examples": [
         "Создание пустых сообщений",
         "Добавление невидимых водяных знаков",
-        "Тестирование обработки текста"
+        "Тестирование обработки текста",
+        "UI glyph rendering test: Generate a string with U+200C and U+200D inserted between letters and test ligature and shaping behavior across Android, iOS, and Windows to validate the rendering pipeline."
       ],
       "selectCharacter": "Выберите тип символа",
       "repeatCount": "Количество повторений",
@@ -18517,7 +18618,8 @@
       ],
       "usage_examples": [
         "Используйте генератор cURL в Код для быстрой обработки данных",
-        "Интегрируйте с вашей работой для повышения эффективности"
+        "Интегрируйте с вашей работой для повышения эффективности",
+        "Create Go HTTP client from docs"
       ],
       "input": "Ввод",
       "output": "Результат",
@@ -18551,7 +18653,8 @@
       ],
       "usage_examples": [
         "Используйте справочник по HTTP статусным кодам для быстрого обработки данных",
-        "Интегрируйте в свою рабочую схему для повышения эффективности"
+        "Интегрируйте в свою рабочую схему для повышения эффективности",
+        "Understand redirect codes for SEO"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -18586,7 +18689,8 @@
       ],
       "usage_examples": [
         "Используйте Декодер JWT Payload для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Extract user info from tokens"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -18624,7 +18728,8 @@
       ],
       "usage_examples": [
         "Используйте Конвертер изображений Base64 для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Create inline images for emails"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -18685,7 +18790,8 @@
       ],
       "usage_examples": [
         "Используйте URL Запросный Строковый Парсер для быстрого обработки данных",
-        "Интегрируйте его в вашу рабочую схему для повышения эффективности"
+        "Интегрируйте его в вашу рабочую схему для повышения эффективности",
+        "Extract API endpoint params"
       ],
       "input": "Вход",
       "output": "Результат",
@@ -18726,7 +18832,8 @@
       ],
       "usage_examples": [
         "Используйте конструктор заголовков запросов для быстрой обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Generate webhook headers"
       ],
       "input": "Вход",
       "output": "Результат",
@@ -18781,7 +18888,8 @@
       ],
       "usage_examples": [
         "Используйте Тестер Webhook для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Verify Slack webhooks"
       ],
       "input": "Ввод",
       "output": "Вывод",
@@ -18846,7 +18954,8 @@
       ],
       "usage_examples": [
         "Используйте Форматировщик ответов API для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Compare API responses"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -18908,7 +19017,8 @@
       ],
       "usage_examples": [
         "Используйте Конвертер SQL в MongoDB для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Convert WHERE to $match"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -18958,7 +19068,8 @@
       ],
       "usage_examples": [
         "Используйте Конвертер JSON в Protobuf для быстрого обработки данных",
-        "Интегрируйте в свою рабочую схему для повышения эффективности"
+        "Интегрируйте в свою рабочую схему для повышения эффективности",
+        "Convert JSON schemas"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -19018,7 +19129,8 @@
       ],
       "usage_examples": [
         "Используйте Генератор регулярных выражений в код для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Convert to Java Pattern"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -19071,7 +19183,8 @@
       ],
       "usage_examples": [
         "Используйте генератор Swagger к коду для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Build Go HTTP client"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -19121,7 +19234,8 @@
       ],
       "usage_examples": [
         "Используйте Генератор миграции базы данных для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Build index migrations"
       ],
       "input": "Вход",
       "output": "Результат",
@@ -19185,7 +19299,8 @@
       ],
       "usage_examples": [
         "Используйте Генератор переменных окружения для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Build Docker configs"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -19238,7 +19353,8 @@
       ],
       "usage_examples": [
         "Используйте Генератор Docker Compose для быстрой обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Build microservices stack"
       ],
       "input": "Ввод",
       "output": "Результат",
@@ -19280,7 +19396,8 @@
       ],
       "usage_examples": [
         "Используйте Генератор манифестов Kubernetes для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Build ConfigMap resources"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -19350,7 +19467,8 @@
       ],
       "usage_examples": [
         "Используйте Анализатор сложности кода для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Enforce complexity limits"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -19421,7 +19539,8 @@
       ],
       "usage_examples": [
         "Используйте Чекер уязвимостей зависимостей для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Generate security reports"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -19478,7 +19597,8 @@
       ],
       "usage_examples": [
         "Используйте Performance Profiler для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Compare library performance"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -19528,7 +19648,8 @@
       ],
       "usage_examples": [
         "Используйте Детектор утечки памяти для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Identify timer leaks"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -19583,7 +19704,8 @@
       ],
       "usage_examples": [
         "Используйте Найти дублирование кода для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Reduce maintenance burden"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -19646,7 +19768,8 @@
       ],
       "usage_examples": [
         "Используйте Найдчик Неиспользуемых Импортов для быстрого обработки данных",
-        "Интегрируйте с вашей работой для повышения эффективности"
+        "Интегрируйте с вашей работой для повышения эффективности",
+        "Maintain clean imports"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -19701,7 +19824,8 @@
       ],
       "usage_examples": [
         "Используйте Анализатор мёртвого кода для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Clean legacy code"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -19760,7 +19884,8 @@
       ],
       "usage_examples": [
         "Используйте Оптимизатор запросов SQL для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Rewrite subqueries"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -19815,7 +19940,8 @@
       ],
       "usage_examples": [
         "Используйте Визуализатор схем базы данных для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Plan schema changes"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -19871,7 +19997,8 @@
       ],
       "usage_examples": [
         "Используйте тестер SQL инъекций для быстрого обработки данных",
-        "Интегрируйте в свою рабочую схему для повышения эффективности"
+        "Интегрируйте в свою рабочую схему для повышения эффективности",
+        "Learn secure patterns"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -19921,7 +20048,8 @@
       ],
       "usage_examples": [
         "Используйте Тестер соединения с базой данных для быстрого обработки данных",
-        "Интегрируйте с вашей работой для повышения эффективности"
+        "Интегрируйте с вашей работой для повышения эффективности",
+        "Debug connection issues"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -19974,7 +20102,8 @@
       ],
       "usage_examples": [
         "Используйте Планировщик выполнения запросов для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Compare execution plans"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -20024,7 +20153,8 @@
       ],
       "usage_examples": [
         "Используйте Scheduler для резервного копирования базы данных для быстрого обработки данных",
-        "Интегрируйте его в свою рабочую流程 для повышения эффективности"
+        "Интегрируйте его в свою рабочую流程 для повышения эффективности",
+        "Plan retention policies"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -20066,7 +20196,8 @@
       ],
       "usage_examples": [
         "Используйте Генератор сообщений коммитов Git для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Follow semantic versioning"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -20123,7 +20254,8 @@
       ],
       "usage_examples": [
         "Используйте Валидатор названия веток Git для быстрого обработки данных",
-        "Интегрируйте с вашей работой для повышения эффективности"
+        "Интегрируйте с вашей работой для повышения эффективности",
+        "Check in CI/CD"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -20186,7 +20318,8 @@
       ],
       "usage_examples": [
         "Используйте Решатель конфликта слияний для быстрой обработки данных",
-        "Интегрируйте его в свою рабочую схему для повышения эффективности"
+        "Интегрируйте его в свою рабочую схему для повышения эффективности",
+        "Handle package.json conflicts"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -20239,7 +20372,8 @@
       ],
       "usage_examples": [
         "Используйте Визуализатор истории Git для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Visualize merge patterns"
       ],
       "input": "Ввод",
       "output": "Результат",
@@ -20295,7 +20429,8 @@
       ],
       "usage_examples": [
         "Используйте Генератор изменений для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Document version history"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -20355,7 +20490,8 @@
       ],
       "usage_examples": [
         "Используйте Git Tag Manager для быстрой обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Plan version numbering"
       ],
       "input": "Вход",
       "output": "Результат",
@@ -20414,7 +20550,8 @@
       ],
       "usage_examples": [
         "Используйте Конвертер Markdown в HTML для быстрой обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Create styled emails"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -20478,7 +20615,8 @@
       ],
       "usage_examples": [
         "Используйте Генератор содержания документа для быстрого обработки данных",
-        "Интегрируйте в свою рабочую схему для повышения эффективности"
+        "Интегрируйте в свою рабочую схему для повышения эффективности",
+        "Generate navigation menus"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -20532,7 +20670,8 @@
       ],
       "usage_examples": [
         "Используйте Генератор таблиц содержаний для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Generate blog post TOC"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -20589,7 +20728,8 @@
       ],
       "usage_examples": [
         "Используйте счетчик слов в документах для быстрой обработки данных",
-        "Интегрируйте с вашей работой для повышения эффективности"
+        "Интегрируйте с вашей работой для повышения эффективности",
+        "Estimate reading time"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -20636,7 +20776,8 @@
       ],
       "usage_examples": [
         "Используйте Форматировщик документов для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Prepare text for publishing"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -20699,7 +20840,8 @@
       ],
       "usage_examples": [
         "Используйте Форматировщик цитат для быстрого обработки данных",
-        "Интегрируйте его в свою рабочую схему для повышения эффективности"
+        "Интегрируйте его в свою рабочую схему для повышения эффективности",
+        "Create bibliography entries"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -20772,7 +20914,8 @@
       ],
       "usage_examples": [
         "Используйте Калькулятор Оценки Проекта для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Plan timelines with PERT"
       ],
       "input": "Вход",
       "output": "Результат",
@@ -20817,7 +20960,8 @@
       ],
       "usage_examples": [
         "Используйте Калькулятор скорости спринта для быстрого обработки данных",
-        "Интегрируйте его в вашу рабочую схему для повышения эффективности"
+        "Интегрируйте его в вашу рабочую схему для повышения эффективности",
+        "Predict release dates"
       ],
       "input": "Вход",
       "output": "Результат",
@@ -20860,7 +21004,8 @@
       ],
       "usage_examples": [
         "Используйте Планировщик распределения ресурсов для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Identify bottlenecks"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -20905,7 +21050,8 @@
       ],
       "usage_examples": [
         "Используйте Анализатор рисков проекта для быстрого обработки данных",
-        "Интегрируйте в свою рабочую схему для повышения эффективности"
+        "Интегрируйте в свою рабочую схему для повышения эффективности",
+        "Prioritize mitigation"
       ],
       "input": "Вход",
       "output": "Вывод",
@@ -20978,7 +21124,8 @@
       ],
       "usage_examples": [
         "Используйте Milestone Tracker для быстрой обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Report to stakeholders"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -21041,7 +21188,8 @@
       ],
       "usage_examples": [
         "Используйте Планировщик потенциала команды для быстрого обработки данных",
-        "Интегрируйте его в свою рабочую流程 для повышения эффективности"
+        "Интегрируйте его в свою рабочую流程 для повышения эффективности",
+        "Balance workload"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -21089,7 +21237,8 @@
       ],
       "usage_examples": [
         "Используйте Генератор протоколов совещаний для быстрого обработки данных",
-        "Интегрируйте в свою рабочую схему для повышения эффективности"
+        "Интегрируйте в свою рабочую схему для повышения эффективности",
+        "Track action items"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -21161,7 +21310,8 @@
       ],
       "usage_examples": [
         "Используйте Timezone Meeting Scheduler для быстрого обработки данных",
-        "Интегрируйте в свою рабочую схему для повышения эффективности"
+        "Интегрируйте в свою рабочую схему для повышения эффективности",
+        "Coordinate remote teams"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -21198,7 +21348,8 @@
       ],
       "usage_examples": [
         "Используйте Создатель повестки совещания для быстрого обработки данных",
-        "Интегрируйте с вашей работой для повышения эффективности"
+        "Интегрируйте с вашей работой для повышения эффективности",
+        "Structure workshops"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -21266,7 +21417,8 @@
       ],
       "usage_examples": [
         "Используйте Найти доступность календаря для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Coordinate group events"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -21307,7 +21459,8 @@
       ],
       "usage_examples": [
         "Используй Найти Конференц-Зал для быстрого обработки данных",
-        "Интегрируй в свою рабочую流程 для повышения эффективности"
+        "Интегрируй в свою рабочую流程 для повышения эффективности",
+        "Reserve workshop spaces"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -21372,7 +21525,8 @@
       ],
       "usage_examples": [
         "Используйте Генератор шаблонов счетов для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Customize for branding"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -21453,7 +21607,8 @@
       ],
       "usage_examples": [
         "Используйте Генератор отчетов о тратах для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Generate reimbursement requests"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -21540,7 +21695,8 @@
       ],
       "usage_examples": [
         "Используйте Анализатор Разницы в Бюджете для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Report to stakeholders"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -21614,7 +21770,8 @@
       ],
       "usage_examples": [
         "Используйте Анализатор затрат и效益 для быстрого обработки данных",
-        "Интегрируйте с вашей работой для повышения эффективности"
+        "Интегрируйте с вашей работой для повышения эффективности",
+        "Compare vendor proposals"
       ],
       "input": "Вход",
       "output": "Выход",
@@ -21701,7 +21858,8 @@
       ],
       "usage_examples": [
         "Используйте Калькулятор финансового прогнозирования для быстрого обработки данных",
-        "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+        "Интегрируйте с вашей рабочей схемой для повышения эффективности",
+        "Create investor projections"
       ],
       "input": "Вход",
       "output": "Выход",

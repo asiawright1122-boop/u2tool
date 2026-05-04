@@ -1253,15 +1253,29 @@
       "faqs": [
         {
           "q": "ما هو TOML؟",
-          "a": "TOML (Tom's Obvious, Minimal Language) هو تنسيق ملف تكوين بسيط لملفات التكوين."
+          "a": "TOML (Tom's Obvious, Minimal Language) هو تنسيق ملف تكوين بسيط لملفات التكوين.",
+          "question": "Does the converter preserve comments from my TOML file?",
+          "answer": "No, JSON does not natively support comments, so they are stripped during TOML-to-JSON conversion."
         },
         {
           "q": "لماذا تحويل TOML إلى JSON؟",
-          "a": "JSON مدعوم على نطاق أوسع ويمكن استخدامه في العديد من لغات البرمجة والأدوات."
+          "a": "JSON مدعوم على نطاق أوسع ويمكن استخدامه في العديد من لغات البرمجة والأدوات.",
+          "question": "How does the tool handle invalid TOML or JSON syntax?",
+          "answer": "The tool provides clear error messages highlighting the location and nature of any syntax errors it encounters."
         },
         {
           "q": "هل هذه الأداة مجانية؟",
-          "a": "نعم، إنها مجانية تمامًا ولا تتطلب التسجيل."
+          "a": "نعم، إنها مجانية تمامًا ولا تتطلب التسجيل.",
+          "question": "Can I convert nested structures and arrays between the formats?",
+          "answer": "Yes, the converter fully supports complex nested objects, arrays, and all standard data types in both formats."
+        },
+        {
+          "question": "Is there a file size limit for conversion?",
+          "answer": "The conversion is performed client-side in your browser, so it's limited by your device's available memory."
+        },
+        {
+          "question": "Is my data secure when using this online converter?",
+          "answer": "Yes, all conversion happens locally in your web browser; no data is sent to any server, ensuring complete privacy."
         }
       ]
     },
@@ -2110,11 +2124,14 @@
         "أدخل أو الصق المحتوى الذي تريد معالجته في مربع الإدخال",
         "اضبط خيارات وإعدادات الأداة حسب الحاجة",
         "انقر فوق زر المعالجة لعرض النتائج",
-        "انسخ أو قم بتنزيل النتائج المعالجة"
+        "انسخ أو قم بتنزيل النتائج المعالجة",
+        "Step 6: Use the 'Download Report' button to save a detailed report of the differences in a formatted document for future reference."
       ],
       "usage_examples": [
         "استخدم مدقق الاختلافات لمعالجة بياناتك",
-        "احصل على نتائج المعالجة بسرعة دون انتظار"
+        "احصل على نتائج المعالجة بسرعة دون انتظار",
+        "Example 3: A content manager is tasked with merging contributions from multiple authors into a single document. Diff Checker helps them identify overlapping sections and conflicting edits, allowing for a smoother merging process.",
+        "Example 4: A researcher is comparing two versions of a scientific paper to ensure that all reviewer comments have been addressed. By using Diff Checker, they can efficiently track the changes and verify that the final version meets the required standards."
       ],
       "diffChecker": {
         "original": "diffChecker.original",
@@ -2352,15 +2369,29 @@
       "faqs": [
         {
           "q": "ما هو تنسيق XML؟",
-          "a": "تنسيق XML هو عملية جعل كود XML قابلاً للقراءة ومنظمًا بشكل جيد."
+          "a": "تنسيق XML هو عملية جعل كود XML قابلاً للقراءة ومنظمًا بشكل جيد.",
+          "question": "Does this tool preserve comments and CDATA sections in my XML?",
+          "answer": "Yes, our formatter retains all XML comments, CDATA blocks, and processing instructions during formatting and minification."
         },
         {
           "q": "لماذا تنسيق XML؟",
-          "a": "XML المنسق أسهل في القراءة والتصحيح والصيانة."
+          "a": "XML المنسق أسهل في القراءة والتصحيح والصيانة.",
+          "question": "What is the maximum file size for XML processing?",
+          "answer": "The tool can handle large XML documents, but for optimal performance, we recommend files under 5MB for quick processing."
         },
         {
           "q": "هل هذه الأداة آمنة؟",
-          "a": "نعم، تتم جميع المعالجات في متصفحك ولا يتم نقل البيانات."
+          "a": "نعم، تتم جميع المعالجات في متصفحك ولا يتم نقل البيانات.",
+          "question": "Can I format XML that is on a single line without any spaces?",
+          "answer": "Absolutely. The tool is designed to parse and properly indent even densely packed, single-line XML strings."
+        },
+        {
+          "question": "Does the validator check against a specific XML Schema (XSD)?",
+          "answer": "No, this validator performs a syntax check for well-formed XML. It does not validate against an external DTD or XSD schema."
+        },
+        {
+          "question": "Is my XML data stored or logged on your servers?",
+          "answer": "No. All processing occurs in real-time within your browser. Your XML data is never transmitted or stored on our servers."
         }
       ],
       "xml": {
@@ -2866,11 +2897,14 @@
         "إدخال أو نسخ المحتوى الذي تريد معالجته في مربع الإدخال",
         "凋整工具选项和设置",
         "点击处理按钮以查看结果",
-        "复制或下载处理结果"
+        "复制或下载处理结果",
+        "Step 6: Once you have configured the options, click the 'Count Lines' button. The tool will process your text and display the total number of lines, along with the filtered and sorted output in the results section below."
       ],
       "usage_examples": [
         "使用线数工具处理您的数据",
-        "无需等待即可快速获取处理结果"
+        "无需等待即可快速获取处理结果",
+        "Example 3: A content manager is compiling a list of frequently asked questions (FAQs) from multiple sources. The sources contain overlapping questions and some entries are blank. Using the Line Counter with the 'Remove Duplicates' and 'Remove Empty Lines' options, the manager can create a consolidated and well-organized list of FAQs.",
+        "Example 4: A software engineer is writing a script that processes a file containing a list of IP addresses. The script needs to ensure that each IP address is unique and sorted for easy reference. By using the Line Counter's 'Remove Duplicates' and 'Sort Lines' features, the engineer can preprocess the IP address list and ensure that the script runs efficiently."
       ],
       "totalLines": "totalLines",
       "nonEmptyLines": "nonEmptyLines",
@@ -4146,11 +4180,14 @@
         "إدخال أو نسخ المحتوى الذي تريد معالجته في الحقل المخصص",
         "�凋整工具选项和设置，如需",
         "点击处理按钮以查看结果",
-        "复制或下载处理结果"
+        "复制或下载处理结果",
+        "Step 6: Once you have reviewed all the parsed information, you can export the results in JSON format by clicking the 'Export Results' button. This JSON file can be used for further analysis or integration with other tools."
       ],
       "usage_examples": [
         "使用用户代理解析器处理您的数据",
-        "无需等待即可快速获取处理结果"
+        "无需等待即可快速获取处理结果",
+        "Example 3: A security analyst is investigating a potential attack on a web application. By parsing the User Agent strings from the server logs, they can determine the browsers and operating systems used by the attackers, which can provide valuable insights into the attack vectors and help in strengthening security measures.",
+        "Example 4: A UX designer is optimizing a website for different screen sizes. The User Agent Parser helps them identify the most common devices and screen resolutions used by their audience, allowing them to prioritize design adjustments for the most widely used devices."
       ],
       "uaParser": {
         "userAgent": "uaParser.userAgent",
@@ -4866,11 +4903,14 @@
         "أدخل أو قم بنسخ المحتوى الذي تريد معالجته في الحقل",
         "قم بتعديل الخيارات والضبطات حسب الحاجة",
         "انقر على زر العملية لمشاهدة النتائج",
-        "نسخ أو تحميل النتائج المعالجة"
+        "نسخ أو تحميل النتائج المعالجة",
+        "Step 6: Copy the result to your clipboard or save it for further use in your projects or transactions."
       ],
       "usage_examples": [
         "استخدم تحويل Base58 كونديكتر/ديكونديكتر لمعالجة بياناتك",
-        "احصل على النتائج بسرعة دون الانتظار"
+        "احصل على النتائج بسرعة دون الانتظار",
+        "Example 3: A cryptocurrency exchange platform needs to implement a feature that allows users to import their private keys. The Base58 Encoder/Decoder tool helps the platform developers test the import functionality by encoding and decoding sample private keys to ensure the process is seamless and error-free.",
+        "Example 4: An individual is setting up a multisignature Bitcoin wallet and needs to encode the concatenated public keys into a Base58 format to create the wallet address. The tool provides a straightforward interface to perform this task, ensuring the address is correctly formatted and secure."
       ],
       "errorEncoding": "خطأ في التحويل",
       "errorInvalidInput": "الإدخال غير صحيح",
@@ -5910,11 +5950,14 @@
         "إدخال أو تلقيح المحتوى الذي تريد معالجته في الحقل",
         "凋整工具选项和设置",
         "点击处理按钮查看结果",
-        "复制或下载处理结果"
+        "复制或下载处理结果",
+        "Step 6: Once satisfied, click the 'Download Sitemap' button to save the XML file to your computer. You can then submit this file to search engines or upload it to your website's root directory."
       ],
       "usage_examples": [
         "使用Moodle生成器处理您的数据",
-        "无需等待即可快速获得处理结果"
+        "无需等待即可快速获得处理结果",
+        "Example 3: A content manager for a news website uses the Sitemap Generator to update the sitemap daily. This ensures that breaking news articles and featured stories are immediately indexed by search engines, allowing readers to discover the latest content quickly.",
+        "Example 4: A digital marketing agency uses the Sitemap Generator to create and maintain sitemaps for multiple client websites. By automating this process, they save time and ensure that all client sites have up-to-date sitemaps, which is crucial for SEO and site performance."
       ]
     },
     "json-to-php": {
@@ -6937,11 +6980,14 @@
         "أدخل أو الصق المحتوى الذي تريد معالجته في مربع الإدخال",
         "اضبط خيارات وإعدادات الأداة حسب الحاجة",
         "انقر فوق زر المعالجة لعرض النتائج",
-        "انسخ أو قم بتنزيل النتائج المعالجة"
+        "انسخ أو قم بتنزيل النتائج المعالجة",
+        "Step 6: Copy the generated `<meta>` tags and paste them into the `<head>` section of your web page's HTML code."
       ],
       "usage_examples": [
         "استخدم مولد بطاقة تويتر لمعالجة بياناتك",
-        "احصل على نتائج المعالجة بسرعة دون انتظار"
+        "احصل على نتائج المعالجة بسرعة دون انتظار",
+        "Example 3: A content creator is hosting a live streaming event. They can use the tool to generate a player card that embeds the live stream directly into the tweet, allowing followers to watch the event without leaving Twitter.",
+        "Example 4: A mobile app developer is promoting a new app. By creating an app card with the Twitter Card Generator, they can provide direct links to download the app from both the App Store and Google Play, streamlining the user experience and driving app installs."
       ],
       "twitterCardGenerator": {
         "cardType": "twitterCardGenerator.cardType",
@@ -7009,11 +7055,14 @@
         "أدخل أو انسخ المحتوى الذي تريد معالجته في المربع",
         "قم بتعديل الخيارات والضبطات حسب الحاجة",
         "اضغط على زر المعالجة لمشاهدة النتائج",
-        "نسخ أو تحميل النتائج المعالجة"
+        "نسخ أو تحميل النتائج المعالجة",
+        "Step 6: Bookmark the page or use the 'Add to Favorites' button to save the tool for quick reference in the future."
       ],
       "usage_examples": [
         "استخدم كودات الحالة HTTP لمعالجة بياناتك",
-        "احصل على نتائج المعالجة بسرعة دون التردد"
+        "احصل على نتائج المعالجة بسرعة دون التردد",
+        "Example 3: A DevOps engineer is monitoring a server that frequently returns a 503 Service Unavailable error during peak traffic times. The tool helps them identify that the server is overloaded and suggests scaling the infrastructure or optimizing resource allocation.",
+        "Example 4: A security analyst is reviewing logs and notices a 401 Unauthorized error. The HTTP Status Codes tool provides a detailed explanation of this status code and suggests reviewing the authentication mechanisms and access control policies to ensure they are correctly configured."
       ]
     },
     "string-obfuscator": {
@@ -7651,11 +7700,14 @@
         "أدخل أو ألصق المحتوى الذي تريد معالجته في مربع الإدخال",
         "اضبط خيارات الأداة والإعدادات حسب الحاجة",
         "انقر على زر المعالجة لرؤية النتائج",
-        "انسخ أو قم بتحميل النتائج المعالجة"
+        "انسخ أو قم بتحميل النتائج المعالجة",
+        "Step 6: To save the converted text, select the text in the output area and press 'Ctrl + C' (or 'Cmd + C' on a Mac) to copy it, or click the 'Download Text' button to save the text as a .txt file."
       ],
       "usage_examples": [
         "استخدم محو HTML إلى نص لمعالجة بياناتك",
-        "الحصول على نتائج المعالجة بسرعة دون الانتظار"
+        "الحصول على نتائج المعالجة بسرعة دون الانتظار",
+        "Example 3: A data analyst is tasked with analyzing the textual content of a large number of web pages. The analyst uses the HTML to Text tool to convert the HTML content of these pages into plain text, which can then be imported into a data analysis tool for further processing.",
+        "Example 4: A technical writer is creating a documentation guide that includes code snippets and text from online tutorials. The HTML to Text tool helps the writer extract the relevant text from the tutorials, ensuring that the documentation is free from HTML formatting and is consistent in style."
       ]
     },
     "binary-to-decimal": {
@@ -7983,11 +8035,14 @@
         "أدخل أو ألصق المحتوى الذي تريد معالجته في مربع الإدخال",
         "اضبط خيارات الأداة والإعدادات حسب الحاجة",
         "انقر على زر معالجة النموذج لعرض النتائج",
-        "انسخ أو قم بتحميل النتائج المعالجة"
+        "انسخ أو قم بتحميل النتائج المعالجة",
+        "Step 6: Review the rendered text in the output section. If everything looks correct, you can copy the text and use it as needed, or download it as a file for further processing."
       ],
       "usage_examples": [
         "استخدم نموذج النص لمعالجة بياناتك",
-        "الحصول على نتائج المعالجة بسرعة دون الانتظار"
+        "الحصول على نتائج المعالجة بسرعة دون الانتظار",
+        "Example 3: A content creator can use Text Template to generate social media posts with dynamic content. For instance, they can create a template for a series of posts, each highlighting a different product, by defining placeholders for the product name, description, and image URL.",
+        "Example 4: A project manager can use Text Template to create status reports for clients. By defining placeholders for project milestones, completed tasks, and upcoming deliverables, they can generate detailed reports that provide clients with a clear overview of the project's progress."
       ]
     },
     "base-calculator": {
@@ -8640,7 +8695,8 @@
         "الخطوة 2: قم بتحميل ملف بياناتك أو انسخ ولصق البيانات مباشرة في الحقول المخصصة.",
         "الخطوة 3: قم بتحديد عدد المراحل في القناة من القائمة المنسدلة 'عدد المراحل'.",
         "الخطوة 4: قم بتوسيع القسم 'إعدادات القناة' لضبط الألوان والحجم والEEEEEEEEEEEEEEEEEE.\r\n\r\nالخطوة 5: انقر على زر 'إنشاء الرسم البياني' لتصفح الرسم البياني للقناة الخاص بك على الشاشة.",
-        "الخطوة 6: بعد مراجعة الرسم البياني، اضغط على زر 'تصدير' واختر تنسيق PNG أو SVG لحفظ الرسم البياني على جهازك."
+        "الخطوة 6: بعد مراجعة الرسم البياني، اضغط على زر 'تصدير' واختر تنسيق PNG أو SVG لحفظ الرسم البياني على جهازك.",
+        "Export the chart: Once satisfied, use the 'Export' option to download your funnel chart as a PNG or SVG file. These formats are ideal for high-quality prints and web integration."
       ],
       "usage_examples": [
         "مثال 1: مدير تسويق يرغب في تحليل مراحل عملية الشراء للموقع الإلكتروني الخاص به. يستخدم مولد الرسم البياني للقناة لتحميل بيانات الزوار ويشكل القناة لتوضيح النقاط التي يفقد فيها الزوار الاهتمام.",
@@ -9326,11 +9382,14 @@
         "أدخل أو ألصق المحتوى الذي تريد معالجته في حقل الإدخال",
         "اضبط إعدادات الأداة وتعديلاتها حسب الحاجة",
         "انقر على زر المعالجة لرؤية النتائج",
-        "انسخ أو قم بتحميل النتائج المعالجة"
+        "انسخ أو قم بتحميل النتائج المعالجة",
+        "Step 6: Once your graph is complete, click the 'Export' button and select the desired format (PNG or SVG) to download your chart for use in other applications."
       ],
       "usage_examples": [
         "استخدم مولد الرسوم البيانية لمعالجة بياناتك",
-        "الحصول على نتائج المعالجة بسرعة دون الانتظار"
+        "الحصول على نتائج المعالجة بسرعة دون الانتظار",
+        "Example 3: A software developer creates a dependency graph of a complex codebase to understand the relationships between different modules and identify areas for refactoring.",
+        "Example 4: A business analyst uses the tool to visualize customer journey maps, highlighting touchpoints and decision points to improve user experience and conversion rates."
       ],
       "png": "PNG",
       "svg": "SVG",
@@ -11504,11 +11563,14 @@
         "أدخل أو الصق المحتوى الذي تريد معالجته في مربع الإدخال",
         "اضبط خيارات وإعدادات الأداة حسب الحاجة",
         "انقر فوق زر المعالجة لعرض النتائج",
-        "انسخ أو قم بتنزيل النتائج المعالجة"
+        "انسخ أو قم بتنزيل النتائج المعالجة",
+        "6. Download the resulting .ico file with embedded cursor hotspots (for custom cursor creation) or use the copy-to-clipboard feature for base64-encoded output"
       ],
       "usage_examples": [
         "استخدم تحويل الصورة إلى ICO لمعالجة بياناتك",
-        "احصل على نتائج المعالجة بسرعة دون انتظار"
+        "احصل على نتائج المعالجة بسرعة دون انتظار",
+        "Generating high-DPI application icons for an Electron app requiring 1024x1024 source image scaling to Windows-standard sizes",
+        "Converting a transparent PNG design to 32-bit ARGB ICO format for use as a custom mouse cursor in Windows application development"
       ]
     },
     "gif-maker": {
@@ -11783,11 +11845,14 @@
         "أدخل أو الصق المحتوى الذي تريد معالجته في مربع الإدخال",
         "اضبط خيارات وإعدادات الأداة حسب الحاجة",
         "انقر فوق زر المعالجة لعرض النتائج",
-        "انسخ أو قم بتنزيل النتائج المعالجة"
+        "انسخ أو قم بتنزيل النتائج المعالجة",
+        "Step 6: Once your resume is complete, click 'Export as PDF' to download a polished, professional document ready for submission."
       ],
       "usage_examples": [
         "استخدم منشئ السيرة الذاتية لمعالجة بياناتك",
-        "احصل على نتائج المعالجة بسرعة دون انتظار"
+        "احصل على نتائج المعالجة بسرعة دون انتظار",
+        "Example 3: A freelance graphic designer uses the Resume Builder to craft a visually appealing portfolio summary, showcasing their design skills and client testimonials in a format that aligns with their creative style.",
+        "Example 4: A senior executive preparing for a career change uses the tool to create a tailored executive resume that emphasizes leadership experience and strategic accomplishments, positioning them for high-level roles in a new industry."
       ],
       "editTab": "تحرير",
       "previewTab": "معاينة",
@@ -12398,11 +12463,14 @@
         "أدخل أو ألصق المحتوى الذي تريد معالجته في حقل الإدخال",
         "اضبط إعدادات الأداة والتعديلات حسب الحاجة",
         "انقر على زر المعالجة لرؤية النتائج",
-        "انسخ أو قم بتحميل النتائج المعالجة"
+        "انسخ أو قم بتحميل النتائج المعالجة",
+        "Step 6: Once satisfied, click the 'Convert to PDF' button to generate the final document, which will be available for download."
       ],
       "usage_examples": [
         "استخدم تحويل الصور إلى PDF لمعالجة بياناتك",
-        "الحصول على نتائج المعالجة بسرعة دون الانتظار"
+        "الحصول على نتائج المعالجة بسرعة دون الانتظار",
+        "Example 3: A student is preparing a research report for a class presentation. They have collected various diagrams and charts as images and use the Image to PDF tool to combine them into a single document, which they can easily share with classmates and instructors.",
+        "Example 4: A photographer wants to create a digital portfolio to showcase their work on a website. They use the tool to convert a selection of their best photos into a PDF, optimizing the resolution for web viewing and ensuring that the document loads quickly."
       ],
       "imageToPdf": {
         "invalidFileType": "imageToPdf.invalidFileType",
@@ -13031,7 +13099,16 @@
         "مثال 3: مطور مواقع ويب يقوم بتحويل كتالوج منتجات PDF إلى ملف CSV لدمجه في قاعدة بيانات إلكترونية.",
         "مثال 4: مُحرر محتوى يعيد توظيف محتوى مجلة PDF قديمة إلى مقالات HTML مع الحفاظ على تسلسل الصفحات باستخدام علامات التبويب."
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Does it work with scanned PDFs?",
+          "answer": "This tool extracts embedded text from PDFs. For scanned images, you may need OCR software."
+        },
+        {
+          "question": "Is there a file size limit?",
+          "answer": "Processing happens in your browser, so very large files may be slow. We recommend files under 50MB."
+        }
+      ],
       "page": "page",
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
@@ -13059,7 +13136,16 @@
         "المثال 3: باحث علمي يجمع بيانات من عدة مصادر ويحتاج إلى دمجها في ملف نصي واحد للتحليل، مما يتطلب تحويل عدة مستندات Word إلى نص عادي.",
         "المثال 4: شركة تكنولوجيا تعمل على مشروع معالجة لغة الطبيعية ويحتاج فريقها إلى معالجة مجموعة كبيرة من المستندات النصية، مما يتطلب تحويلها من Word إلى نص عادي لتسهيل المعالجة."
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Does it support .doc files?",
+          "answer": "Currently only .docx format is supported. Please convert .doc files to .docx first."
+        },
+        {
+          "question": "Is formatting preserved?",
+          "answer": "This tool extracts plain text only. Formatting, images, and tables are not preserved."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "dropzone": "dropzone",
@@ -13111,12 +13197,25 @@
       "usage_steps": [
         "رفع ملف Excel",
         "اختيار الورقة",
-        "تحميل CSV"
+        "تحميل CSV",
+        "Preview the CSV data",
+        "Copy or download the CSV file"
       ],
       "usage_examples": [
-        "تصدير بيانات Excel إلى CSV"
+        "تصدير بيانات Excel إلى CSV",
+        "Create CSV files for data analysis tools",
+        "Export spreadsheet data in universal format"
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Can I convert multiple sheets?",
+          "answer": "Yes, you can select different sheets and convert them one at a time."
+        },
+        {
+          "question": "Are formulas converted?",
+          "answer": "Only the calculated values are exported, not the formulas themselves."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "dropzone": "dropzone",
@@ -13142,7 +13241,16 @@
         "محاسب يستخدم الأداة لدمج ثلاثة ملفات CSV من فروع مختلفة في ورقة عمل Excel واحدة مع أوراق منفصلة لكل فرع.",
         "باحث بيانات يحول ملف CSV يحتوي على بيانات علمية إلى Excel مع الحفاظ على تنسيقات الخلايا لاستخدامها في نشر بحثي."
       ],
-      "faqs": [],
+      "faqs": [
+        {
+          "question": "Does it handle large files?",
+          "answer": "Yes, but very large files may take longer to process. We recommend files under 10MB for best performance."
+        },
+        {
+          "question": "Are special characters preserved?",
+          "answer": "Yes, UTF-8 encoding is used to preserve special characters and international text."
+        }
+      ],
       "errorParsing": "errorParsing",
       "errorInvalidFile": "errorInvalidFile",
       "errorExport": "errorExport",
@@ -13255,7 +13363,8 @@
       ],
       "usage_examples": [
         "استخدم حاسبة العمر لمعالجة بياناتك",
-        "احصل على نتائج المعالجة بسرعة دون انتظار"
+        "احصل على نتائج المعالجة بسرعة دون انتظار",
+        "Calculate age difference between two dates"
       ]
     },
     "tip-calculator": {
@@ -13391,7 +13500,8 @@
       ],
       "usage_examples": [
         "استخدم حاسبة ثنائية لمعالجة بياناتك",
-        "احصل على نتائج المعالجة بسرعة دون انتظار"
+        "احصل على نتائج المعالجة بسرعة دون انتظار",
+        "Convert between number systems"
       ]
     },
     "hex-calculator": {
@@ -13559,7 +13669,8 @@
       ],
       "usage_examples": [
         "استخدم نص إلى صورة لمعالجة بياناتك",
-        "احصل على نتائج المعالجة بسرعة دون انتظار"
+        "احصل على نتائج المعالجة بسرعة دون انتظار",
+        "Make text-based banners"
       ]
     },
     "text-to-handwriting": {
@@ -13731,7 +13842,8 @@
       ],
       "usage_examples": [
         "استخدم اختبار سرعة الكتابة لمعالجة بياناتك",
-        "احصل على نتائج المعالجة بسرعة دون انتظار"
+        "احصل على نتائج المعالجة بسرعة دون انتظار",
+        "Compare typing skills across difficulty levels"
       ]
     },
     "morse-code-player": {
@@ -13769,7 +13881,8 @@
       ],
       "usage_examples": [
         "استخدم مشغل شفرة مورس لمعالجة بياناتك",
-        "احصل على نتائج المعالجة بسرعة دون انتظار"
+        "احصل على نتائج المعالجة بسرعة دون انتظار",
+        "Practice Morse code listening"
       ]
     },
     "currency-converter": {
@@ -16362,12 +16475,14 @@
         "ضبط خيارات اسم الرسالة والباقة",
         "انقر على تحويل لإنشاء نموذج proto",
         "مراجعة التعريف المُنتج .proto",
-        "نسخ أو تحميل ملف proto"
+        "نسخ أو تحميل ملف proto",
+        "Click Copy .proto or Download .proto to export, then paste into your codebase or compile with protoc."
       ],
       "usage_examples": [
         "إنشاء نماذج proto من استجابات API",
         "إنشاء تعريفات خدمات gRPC",
-        "تحويل APIs REST إلى gRPC"
+        "تحويل APIs REST إلى gRPC",
+        "Infer a schema from a GraphQL introspection JSON response. The tool creates messages for types and fields, emits oneofs for kind variants, maps repeatable flags to repeated bool, and produces a .proto that mirrors the introspection format, facilitating codegen and static analysis tooling."
       ],
       "jsonInput": "إدخال JSON",
       "protoOutput": "مخرجات Proto",
@@ -18515,7 +18630,8 @@
       ],
       "usage_examples": [
         "استخدم مولد cURL إلى الكود لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحقيق كفاءة"
+        "إدخالها في سيرتك العملية لتحقيق كفاءة",
+        "Create Go HTTP client from docs"
       ],
       "input": "إدخال",
       "output": "الناتج",
@@ -18549,7 +18665,8 @@
       ],
       "usage_examples": [
         "استخدم مرجع رموز حالة HTTP لمعالجة البيانات بسرعة",
-        "إدخالها في سير العمل الخاص بك لتحسين الكفاءة"
+        "إدخالها في سير العمل الخاص بك لتحسين الكفاءة",
+        "Understand redirect codes for SEO"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -18584,7 +18701,8 @@
       ],
       "usage_examples": [
         "استخدم مفسر حمولة JWT لمعالجة البيانات بسرعة",
-        "إدخاله في سيرتك العملية لتحسين الكفاءة"
+        "إدخاله في سيرتك العملية لتحسين الكفاءة",
+        "Extract user info from tokens"
       ],
       "input": "المدخل",
       "output": "النتيجة",
@@ -18622,7 +18740,8 @@
       ],
       "usage_examples": [
         "استخدم محوظة Base64 للصور لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحقيق الكفاءة"
+        "إدخالها في سيرتك العملية لتحقيق الكفاءة",
+        "Create inline images for emails"
       ],
       "input": "المدخل",
       "output": "الناتج",
@@ -18683,7 +18802,8 @@
       ],
       "usage_examples": [
         "استخدم مفسّر سلسلة استعلام URL لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحقيق الكفاءة"
+        "إدخالها في سيرتك العملية لتحقيق الكفاءة",
+        "Extract API endpoint params"
       ],
       "input": "المدخل",
       "output": "الناتج",
@@ -18724,7 +18844,8 @@
       ],
       "usage_examples": [
         "استخدم بناء الرأسية الطلبية للمعالجة السريعة للبيانات",
-        "إدخالها في سير العمل لتحقيق الكفاءة"
+        "إدخالها في سير العمل لتحقيق الكفاءة",
+        "Generate webhook headers"
       ],
       "input": "إدخال",
       "output": "الناتج",
@@ -18779,7 +18900,8 @@
       ],
       "usage_examples": [
         "استخدم مستخدمي webhook لمعالجة البيانات بسرعة",
-        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة"
+        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة",
+        "Verify Slack webhooks"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -18844,7 +18966,8 @@
       ],
       "usage_examples": [
         "استخدم معالج استجابة API لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحسين الكفاءة"
+        "إدخالها في سيرتك العملية لتحسين الكفاءة",
+        "Compare API responses"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -18906,7 +19029,8 @@
       ],
       "usage_examples": [
         "استخدم محويف SQL إلى MongoDB لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحقيق الكفاءة"
+        "إدخالها في سيرتك العملية لتحقيق الكفاءة",
+        "Convert WHERE to $match"
       ],
       "input": "إدخال",
       "output": "الناتج",
@@ -18956,7 +19080,8 @@
       ],
       "usage_examples": [
         "استخدم محويف JSON إلى Protobuf للمعالجة السريعة للبيانات",
-        "ت集成 مع سيرتك العملية لتحسين الكفاءة"
+        "ت集成 مع سيرتك العملية لتحسين الكفاءة",
+        "Convert JSON schemas"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -19016,7 +19141,8 @@
       ],
       "usage_examples": [
         "استخدم مولد النمط إلى كود لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحقيق الكفاءة"
+        "إدخالها في سيرتك العملية لتحقيق الكفاءة",
+        "Convert to Java Pattern"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -19069,7 +19195,8 @@
       ],
       "usage_examples": [
         "استخدم مولد Swagger إلى الكود لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحقيق الكفاءة"
+        "إدخالها في سيرتك العملية لتحقيق الكفاءة",
+        "Build Go HTTP client"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -19119,7 +19246,8 @@
       ],
       "usage_examples": [
         "استخدم مولد تحويل قاعدة البيانات لمعالجة البيانات بسرعة",
-        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة"
+        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة",
+        "Build index migrations"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -19183,7 +19311,8 @@
       ],
       "usage_examples": [
         "استخدم مولد متغيرات البيئة لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحسين الكفاءة"
+        "إدخالها في سيرتك العملية لتحسين الكفاءة",
+        "Build Docker configs"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -19236,7 +19365,8 @@
       ],
       "usage_examples": [
         "استخدم مولد Docker Compose لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحقيق الكفاءة"
+        "إدخالها في سيرتك العملية لتحقيق الكفاءة",
+        "Build microservices stack"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -19278,7 +19408,8 @@
       ],
       "usage_examples": [
         "استخدم مولد بيانات Kubernetes لمعالجة بيانات سريعة",
-        "إدخالها في سيرتك العملية لتحقيق كفاءة"
+        "إدخالها في سيرتك العملية لتحقيق كفاءة",
+        "Build ConfigMap resources"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -19348,7 +19479,8 @@
       ],
       "usage_examples": [
         "استخدم محلل تعقيد الكود لمعالجة البيانات بسرعة",
-        "إدخاله في سيرتك العملية لتحسين الكفاءة"
+        "إدخاله في سيرتك العملية لتحسين الكفاءة",
+        "Enforce complexity limits"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -19419,7 +19551,8 @@
       ],
       "usage_examples": [
         "استخدم مفتاح التحقق من الضعف في التبعية لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحقيق الكفاءة"
+        "إدخالها في سيرتك العملية لتحقيق الكفاءة",
+        "Generate security reports"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -19476,7 +19609,8 @@
       ],
       "usage_examples": [
         "استخدم مقياس الأداء للمعالجة السريعة للبيانات",
-        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة"
+        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة",
+        "Compare library performance"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -19526,7 +19660,8 @@
       ],
       "usage_examples": [
         "استخدم مكشف تسرب الذاكرة لمعالجة البيانات بسرعة",
-        "إدخالها في سير العمل الخاص بك لتحقيق كفاءة"
+        "إدخالها في سير العمل الخاص بك لتحقيق كفاءة",
+        "Identify timer leaks"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -19581,7 +19716,8 @@
       ],
       "usage_examples": [
         "استخدم مكتبة البحث عن التكرار البرمجي لمعالجة البيانات بسرعة",
-        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة"
+        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة",
+        "Reduce maintenance burden"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -19644,7 +19780,8 @@
       ],
       "usage_examples": [
         "استخدم مكتبة العناصر غير المستخدمة للمعالجة السريعة للبيانات",
-        "إدخالها في سيرتك العملية لتحسين الكفاءة"
+        "إدخالها في سيرتك العملية لتحسين الكفاءة",
+        "Maintain clean imports"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -19699,7 +19836,8 @@
       ],
       "usage_examples": [
         "استخدم محلل الشيفرة الميتة لمعالجة البيانات بسرعة",
-        "إدخاله في سيرتك العملية لتحقيق الكفاءة"
+        "إدخاله في سيرتك العملية لتحقيق الكفاءة",
+        "Clean legacy code"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -19758,7 +19896,8 @@
       ],
       "usage_examples": [
         "استخدم مزيل تحسين استعلامات SQL لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحسين الكفاءة"
+        "إدخالها في سيرتك العملية لتحسين الكفاءة",
+        "Rewrite subqueries"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -19813,7 +19952,8 @@
       ],
       "usage_examples": [
         "استخدم مخطط قاعدة البيانات المرئي لمعالجة البيانات بسرعة",
-        "إدخاله في سيرتك العملية لتحسين الكفاءة"
+        "إدخاله في سيرتك العملية لتحسين الكفاءة",
+        "Plan schema changes"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -19869,7 +20009,8 @@
       ],
       "usage_examples": [
         "استخدم مختبئ ثقب التدخل SQL لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحقيق كفاءة"
+        "إدخالها في سيرتك العملية لتحقيق كفاءة",
+        "Learn secure patterns"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -19919,7 +20060,8 @@
       ],
       "usage_examples": [
         "استخدم مقياس اتصال قاعدة البيانات لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحسين الكفاءة"
+        "إدخالها في سيرتك العملية لتحسين الكفاءة",
+        "Debug connection issues"
       ],
       "input": "إدخال",
       "output": "الناتج",
@@ -19972,7 +20114,8 @@
       ],
       "usage_examples": [
         "استخدم مخطط تنفيذ الاستعلام لمعالجة البيانات بسرعة",
-        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة"
+        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة",
+        "Compare execution plans"
       ],
       "input": "دخل",
       "output": "خروج",
@@ -20022,7 +20165,8 @@
       ],
       "usage_examples": [
         "استخدم مخطط استعادة قاعدة البيانات لمعالجة البيانات بسرعة",
-        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة"
+        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة",
+        "Plan retention policies"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -20064,7 +20208,8 @@
       ],
       "usage_examples": [
         "استخدم مولد رسائل التزام Git لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحقيق الكفاءة"
+        "إدخالها في سيرتك العملية لتحقيق الكفاءة",
+        "Follow semantic versioning"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -20121,7 +20266,8 @@
       ],
       "usage_examples": [
         "استخدم مvalidر أسم فروع Git لمعالجة البيانات بسرعة",
-        "إدخاله في سيرتك العملية لتحسين الكفاءة"
+        "إدخاله في سيرتك العملية لتحسين الكفاءة",
+        "Check in CI/CD"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -20184,7 +20330,8 @@
       ],
       "usage_examples": [
         "استخدم مزود حل النزاعات في التجميع لمعالجة البيانات بسرعة",
-        "إدخالها في سير العمل لتحقيق الكفاءة"
+        "إدخالها في سير العمل لتحقيق الكفاءة",
+        "Handle package.json conflicts"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -20237,7 +20384,8 @@
       ],
       "usage_examples": [
         "استخدم مستكشف تاريخ Git للمعالجة السريعة للبيانات",
-        "إدخالها في سيرتك العملية لتحقيق الكفاءة"
+        "إدخالها في سيرتك العملية لتحقيق الكفاءة",
+        "Visualize merge patterns"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -20293,7 +20441,8 @@
       ],
       "usage_examples": [
         "استخدم مولد السجلات التغييرية لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحقيق الكفاءة"
+        "إدخالها في سيرتك العملية لتحقيق الكفاءة",
+        "Document version history"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -20353,7 +20502,8 @@
       ],
       "usage_examples": [
         "استخدم مدير علامات Git لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحسين الكفاءة"
+        "إدخالها في سيرتك العملية لتحسين الكفاءة",
+        "Plan version numbering"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -20412,7 +20562,8 @@
       ],
       "usage_examples": [
         "استخدم محوظة إلى HTML محول لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحقيق الكفاءة"
+        "إدخالها في سيرتك العملية لتحقيق الكفاءة",
+        "Create styled emails"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -20476,7 +20627,8 @@
       ],
       "usage_examples": [
         "استخدم مجمع خطة الوثيقة لمعالجة البيانات بسرعة",
-        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة"
+        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة",
+        "Generate navigation menus"
       ],
       "input": "المدخل",
       "output": "الناتج",
@@ -20530,7 +20682,8 @@
       ],
       "usage_examples": [
         "استخدم مولد جدول المحتويات لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحسين الكفاءة"
+        "إدخالها في سيرتك العملية لتحسين الكفاءة",
+        "Generate blog post TOC"
       ],
       "input": "المدخل",
       "output": "الناتج",
@@ -20587,7 +20740,8 @@
       ],
       "usage_examples": [
         "استخدم عداد كلمات المستند لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحسين الكفاءة"
+        "إدخالها في سيرتك العملية لتحسين الكفاءة",
+        "Estimate reading time"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -20634,7 +20788,8 @@
       ],
       "usage_examples": [
         "استخدم محرر المستندات للمعالجة السريعة للبيانات",
-        "إدخاله في سيرتك العملية لتحسين الكفاءة"
+        "إدخاله في سيرتك العملية لتحسين الكفاءة",
+        "Prepare text for publishing"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -20697,7 +20852,8 @@
       ],
       "usage_examples": [
         "استخدم معدل الإشارات لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحسين الكفاءة"
+        "إدخالها في سيرتك العملية لتحسين الكفاءة",
+        "Create bibliography entries"
       ],
       "input": "دخل",
       "output": "خروج",
@@ -20770,7 +20926,8 @@
       ],
       "usage_examples": [
         "استخدم حاسبة تقدير المشروع لمعالجة البيانات بسرعة",
-        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة"
+        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة",
+        "Plan timelines with PERT"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -20815,7 +20972,8 @@
       ],
       "usage_examples": [
         "استخدم حاسبة سرعة السباق للمعالجة السريعة للبيانات",
-        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة"
+        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة",
+        "Predict release dates"
       ],
       "input": "دخل",
       "output": "ناتج",
@@ -20858,7 +21016,8 @@
       ],
       "usage_examples": [
         "استخدم مخطط توزيع الموارد لمعالجة البيانات بسرعة",
-        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة"
+        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة",
+        "Identify bottlenecks"
       ],
       "input": "إدخال",
       "output": "الناتج",
@@ -20903,7 +21062,8 @@
       ],
       "usage_examples": [
         "استخدم مزود تحليل المخاطر المشروعية لمعالجة البيانات بسرعة",
-        "إدخالها في سير العمل الخاص بك لتحقيق كفاءة"
+        "إدخالها في سير العمل الخاص بك لتحقيق كفاءة",
+        "Prioritize mitigation"
       ],
       "input": "دخل",
       "output": "خروج",
@@ -20976,7 +21136,8 @@
       ],
       "usage_examples": [
         "استخدم ملاحظة النقاط المهمة لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحسين الكفاءة"
+        "إدخالها في سيرتك العملية لتحسين الكفاءة",
+        "Report to stakeholders"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -21039,7 +21200,8 @@
       ],
       "usage_examples": [
         "استخدم مخطط قدرة الفريق للمعالجة السريعة للبيانات",
-        "إدخاله في سير العمل الخاص بك لتحسين الكفاءة"
+        "إدخاله في سير العمل الخاص بك لتحسين الكفاءة",
+        "Balance workload"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -21087,7 +21249,8 @@
       ],
       "usage_examples": [
         "استخدم مولد مدونات الاجتماعات لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحقيق الفعالية"
+        "إدخالها في سيرتك العملية لتحقيق الفعالية",
+        "Track action items"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -21159,7 +21322,8 @@
       ],
       "usage_examples": [
         "استخدم مخطط اجتماعات المنطقة الزمنية لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحقيق الكفاءة"
+        "إدخالها في سيرتك العملية لتحقيق الكفاءة",
+        "Coordinate remote teams"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -21196,7 +21360,8 @@
       ],
       "usage_examples": [
         "استخدم بناء جدول الاجتماعات للمعالجة السريعة للبيانات",
-        "إدخاله في سير العمل لتحسين الكفاءة"
+        "إدخاله في سير العمل لتحسين الكفاءة",
+        "Structure workshops"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -21264,7 +21429,8 @@
       ],
       "usage_examples": [
         "استخدم مستكشف توفر التقويم لمعالجة البيانات بسرعة",
-        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة"
+        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة",
+        "Coordinate group events"
       ],
       "input": "المدخل",
       "output": "الناتج",
@@ -21305,7 +21471,8 @@
       ],
       "usage_examples": [
         "استخدم مستكشف غرف الاجتماعات للمعالجة السريعة للبيانات",
-        "إدخاله في سيرتك العملية لتحسين الكفاءة"
+        "إدخاله في سيرتك العملية لتحسين الكفاءة",
+        "Reserve workshop spaces"
       ],
       "input": "المدخل",
       "output": "الناتج",
@@ -21370,7 +21537,8 @@
       ],
       "usage_examples": [
         "استخدم مولد قوالب الفواتير لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحقيق الفعالية"
+        "إدخالها في سيرتك العملية لتحقيق الفعالية",
+        "Customize for branding"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -21451,7 +21619,8 @@
       ],
       "usage_examples": [
         "استخدم مولد تقارير النفقات لمعالجة البيانات بسرعة",
-        "إدخاله في سيرتك العملية لتحسين الكفاءة"
+        "إدخاله في سيرتك العملية لتحسين الكفاءة",
+        "Generate reimbursement requests"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -21538,7 +21707,8 @@
       ],
       "usage_examples": [
         "استخدم مستعرض فروق الميزانية لمعالجة البيانات بسرعة",
-        "إدخالها في سيرتك العملية لتحسين الكفاءة"
+        "إدخالها في سيرتك العملية لتحسين الكفاءة",
+        "Report to stakeholders"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -21612,7 +21782,8 @@
       ],
       "usage_examples": [
         "استخدم محلل الفوائد والتكاليف لمعالجة البيانات بسرعة",
-        "إدخاله في سيرتك العملية لتحقيق الكفاءة"
+        "إدخاله في سيرتك العملية لتحقيق الكفاءة",
+        "Compare vendor proposals"
       ],
       "input": "دخول",
       "output": "خروج",
@@ -21699,7 +21870,8 @@
       ],
       "usage_examples": [
         "استخدم حاسبة التنبؤ المالي لمعالجة البيانات بسرعة",
-        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة"
+        "إدخالها في سير العمل الخاص بك لتحقيق الكفاءة",
+        "Create investor projections"
       ],
       "input": "دخول",
       "output": "خروج",
