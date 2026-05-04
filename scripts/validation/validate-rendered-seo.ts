@@ -6,6 +6,7 @@ interface RenderedSeoCheck {
   canonicalPath?: string;
   titleIncludes: string;
   descriptionIncludes: string;
+  h1Includes?: string;
   schemaTypes: string[];
   bodyMustInclude?: string[];
   bodyMustNotInclude?: string[];
@@ -17,6 +18,7 @@ const checks: RenderedSeoCheck[] = [
     path: '/en/',
     titleIncludes: 'U2Tool',
     descriptionIncludes: 'online tools',
+    h1Includes: 'Free Online Tools',
     schemaTypes: ['Organization', 'WebSite'],
     bodyMustInclude: ['JSON Formatter', 'Text Tools'],
   },
@@ -25,6 +27,7 @@ const checks: RenderedSeoCheck[] = [
     path: '/en/tools/',
     titleIncludes: 'Tools',
     descriptionIncludes: 'tools',
+    h1Includes: 'Free Online Tools',
     schemaTypes: ['Organization', 'WebSite', 'CollectionPage'],
     bodyMustInclude: ['JSON Formatter', 'Choose the Right'],
   },
@@ -34,6 +37,7 @@ const checks: RenderedSeoCheck[] = [
     canonicalPath: '/en/tools/',
     titleIncludes: 'Tools',
     descriptionIncludes: 'tools',
+    h1Includes: 'Free Online Tools',
     schemaTypes: ['Organization', 'WebSite', 'CollectionPage'],
     bodyMustInclude: ['data-search-results', 'JSON Formatter', 'https://www.u2tool.com/en/tools/json-formatter/'],
   },
@@ -42,6 +46,7 @@ const checks: RenderedSeoCheck[] = [
     path: '/en/tools/json-formatter/',
     titleIncludes: 'JSON Formatter',
     descriptionIncludes: 'JSON',
+    h1Includes: 'JSON Formatter',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     bodyMustInclude: ['Choose the Right JSON Tool', '/en/compare/choose-json-tool/'],
   },
@@ -50,6 +55,7 @@ const checks: RenderedSeoCheck[] = [
     path: '/en/tools/jwt-decoder/',
     titleIncludes: 'JWT Decoder',
     descriptionIncludes: 'JWT',
+    h1Includes: 'JWT Decoder',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList'],
     bodyMustInclude: ['The JWT Decoder is a specialized tool', '/en/compare/choose-jwt-tool/'],
     bodyMustNotInclude: ['The JWT Debugger is a specialized tool'],
@@ -59,6 +65,7 @@ const checks: RenderedSeoCheck[] = [
     path: '/en/compare/choose-jwt-tool/',
     titleIncludes: 'JWT',
     descriptionIncludes: 'JWT',
+    h1Includes: 'Choose the Right JWT Tool',
     schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'BreadcrumbList'],
     bodyMustInclude: ['JWT Decoder', 'JWT Generator'],
   },
@@ -144,10 +151,14 @@ async function validateCheck(check: RenderedSeoCheck): Promise<void> {
   const description = getTagContent(html, 'description');
   const canonical = getTagContent(html, 'canonical');
   const robots = getTagContent(html, 'robots');
+  const h1Text = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1]?.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim() || '';
   const schemaTypes = extractJsonLdTypes(html);
 
   assert(title.includes(check.titleIncludes), `${check.name}: title missing "${check.titleIncludes}"`);
   assert(description.toLowerCase().includes(check.descriptionIncludes.toLowerCase()), `${check.name}: meta description missing "${check.descriptionIncludes}"`);
+  if (check.h1Includes) {
+    assert(h1Text.includes(check.h1Includes), `${check.name}: H1 "${h1Text}" missing "${check.h1Includes}"`);
+  }
   assert(canonical === canonicalUrl, `${check.name}: canonical "${canonical}" does not match "${canonicalUrl}"`);
   assert(robots.includes('index') && robots.includes('follow') && !robots.includes('noindex'), `${check.name}: robots meta is not indexable`);
   assert((html.match(/rel=["']alternate["']\s+hreflang=/g) || []).length >= 10, `${check.name}: missing hreflang alternates`);
