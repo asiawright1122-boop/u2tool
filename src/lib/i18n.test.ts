@@ -59,14 +59,19 @@ describe('i18n core module', () => {
 
   describe('getLocalizedPath', () => {
     it('should replace existing locale prefix', () => {
-      expect(getLocalizedPath('zh', '/en/tools/json-formatter')).toBe('/zh/tools/json-formatter');
-      expect(getLocalizedPath('ja', '/en')).toBe('/ja');
-      expect(getLocalizedPath('ar', '/zh/categories/text')).toBe('/ar/categories/text');
+      expect(getLocalizedPath('zh', '/en/tools/json-formatter')).toBe('/zh/tools/json-formatter/');
+      expect(getLocalizedPath('ja', '/en')).toBe('/ja/');
+      expect(getLocalizedPath('ar', '/zh/categories/text')).toBe('/ar/categories/text/');
     });
 
     it('should prepend locale when no locale prefix exists', () => {
-      expect(getLocalizedPath('zh', '/tools/json-formatter')).toBe('/zh/tools/json-formatter');
-      expect(getLocalizedPath('en', '/')).toBe('/en');
+      expect(getLocalizedPath('zh', '/tools/json-formatter')).toBe('/zh/tools/json-formatter/');
+      expect(getLocalizedPath('en', '/')).toBe('/en/');
+    });
+
+    it('should preserve file paths and query strings', () => {
+      expect(getLocalizedPath('en', '/tools-index.json')).toBe('/en/tools-index.json');
+      expect(getLocalizedPath('zh', '/tools?q=json')).toBe('/zh/tools/?q=json');
     });
   });
 

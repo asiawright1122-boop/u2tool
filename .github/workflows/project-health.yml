@@ -1,4 +1,4 @@
-name: Project Health Check
+name: Production Verification
 
 on:
   schedule:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch: # 允许手动触发
 
 jobs:
-  health-check:
+  production-verification:
     runs-on: ubuntu-latest
     
     steps:
@@ -23,15 +23,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
-      - name: Run health check
-        run: npm run health:check
+      - name: Run production verification
+        run: npm run verify:production
       
-      - name: Upload health report
+      - name: Upload production verification artifacts
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: health-report
-          path: docs/PROJECT_HEALTH_REPORT.md
+          name: production-verification-report
+          path: |
+            docs/PROJECT_HEALTH_REPORT.md
+            docs/SEO_ALIGNMENT_PRIORITY_REPORT.md
+            .planning/TRACEABILITY.md
           retention-days: 30
       
       - name: Comment on issues if problems found
@@ -47,10 +50,10 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               state: 'open',
-              labels: ['health-check']
+              labels: ['production-verification']
             });
             
-            const body = `## 🏥 项目健康检查报告\n\n${report}\n\n---\n*自动生成于 ${new Date().toISOString()}*`;
+            const body = `## ✅ 生产验证报告\n\n${report}\n\n---\n*自动生成于 ${new Date().toISOString()}*`;
             
             if (issues.data.length > 0) {
               // 更新现有 issue
@@ -65,8 +68,8 @@ jobs:
               await github.rest.issues.create({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                title: '⚠️ 项目健康检查发现问题',
+                title: '⚠️ 生产验证发现问题',
                 body: body,
-                labels: ['health-check', 'automated']
+                labels: ['production-verification', 'automated']
               });
             }

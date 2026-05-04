@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Timeline Chart Generator is a specialized tool that transforms structured data into interactive temporal visualizations using SVG rendering. Unlike generic chart builders, this tool employs a JSON schema-driven approach to map event sequences against time dimensions, supporting both linear and nonlinear timeline architectures. Developers and data analysts can leverage granular controls for axis scaling, event clustering, and dynamic zooming through D3.js integration. The tool's unique temporal interpolation engine handles irregular time intervals and overlapping event periods, making it ideal for visualizing software version histories, project milestones, or historical chronologies. It supports automated data validation with moment.js date parsing, ensuring temporal accuracy. Users benefit from exportable React components and responsive CSS frameworks for seamless integration into web applications. This tool addresses specific needs in agile project management, academic research, and business intelligence by providing programmatic control over event markers, color-coded annotations, and interactive tooltips with DOM elements.",
+  "detailed_description": "The Timeline Chart Generator creates chronological visuals for events, milestones, and sequences in a simple browser-based workflow. It works well for product roadmaps, release notes, project plans, hiring pipelines, and historical summaries where the ordered events are the main story. You can add dates, labels, descriptions, and styling choices, then export the final timeline as PNG or SVG after reviewing the preview on the page.",
   "usage_steps": [
-    "Access the JSON schema editor to define temporal events with ISO 8601 timestamps and metadata fields",
-    "Configure timeline parameters through the control panel: set temporal range with start/end date pickers and adjust axis granularity (hours to years)",
-    "Customize visual hierarchy using the theme builder: assign color spectrums to event categories via HEX inputs and adjust stroke weights for timeline connectors",
-    "Activate interactive features in the settings menu: enable zoom sliders, keyboard navigation (arrow key controls), and tooltip persistence options",
-    "Preview the rendered SVG in the responsive viewer with device emulation tools for accessibility testing",
-    "Export production-ready code with optimization options: minified SVG, React component format, or embeddable iframe with cross-origin resource sharing (CORS) headers configured"
+    "Enter the dates, labels, and optional notes for each timeline event in the editor.",
+    "Set the timeline title and confirm the events appear in the order you want readers to follow.",
+    "Adjust colors, marker styles, labels, and spacing to match the density of your timeline.",
+    "Review the preview and refine dates or wording where the layout feels crowded.",
+    "Export the completed timeline chart as PNG or SVG for docs, reports, or presentations."
   ],
   "usage_examples": [
-    "Visualizing a software development roadmap with concurrent feature branches and release cycles",
-    "Comparing historical military campaigns across different continents with overlapping time periods",
-    "Mapping academic research timelines with peer review milestones and publication dates",
-    "Displaying customer journey touchpoints across multiple channels with time-stamped analytics data"
+    "Summarize product milestones across a release cycle for an internal roadmap review.",
+    "Visualize a hiring process from sourcing through offer in a people operations update.",
+    "Create an event sequence for a case study, project recap, or launch post."
   ]
 }

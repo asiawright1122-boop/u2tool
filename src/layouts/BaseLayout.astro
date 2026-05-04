@@ -16,9 +16,10 @@ import { isRTL, locales } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { tools } from '@/config/tools';
 import {
+  buildLocalizedPageUrl,
   buildOrganizationSchema,
-  buildSiteDescription,
   buildWebsiteSchema,
+  resolveSiteDescription,
   withBrand,
 } from '@/lib/seo';
 import { getPublicSiteUrl } from '@/lib/public-env';
@@ -38,9 +39,8 @@ const { title, description, locale, canonicalPath, siteDescription } = Astro.pro
 const BASE_URL = getPublicSiteUrl();
 
 // Build canonical URL: base + /locale + path (without locale prefix)
-const pathWithoutLocale = canonicalPath || Astro.url.pathname.replace(new RegExp(`^/${locale}`), '');
-const normalizedCanonicalPath = pathWithoutLocale === '/' ? '' : pathWithoutLocale;
-const canonical = `${BASE_URL}/${locale}${normalizedCanonicalPath}`;
+const pathWithoutLocale = canonicalPath || Astro.url.pathname.replace(new RegExp(`^/${locale}`), '') || '/';
+const canonical = buildLocalizedPageUrl(BASE_URL, locale as Locale, pathWithoutLocale);
 
 const isRtl = isRTL(locale as Locale);
 
@@ -63,7 +63,7 @@ const ogLocale = ogLocaleMap[locale] || 'en_US';
 const alternateLocales = locales
   .filter(l => l !== locale)
   .map(l => ogLocaleMap[l] || l);
-const resolvedSiteDescription = siteDescription || buildSiteDescription(tools.length);
+const resolvedSiteDescription = resolveSiteDescription(siteDescription, tools.length);
 const organizationSchema = buildOrganizationSchema(BASE_URL, resolvedSiteDescription);
 const websiteSchema = buildWebsiteSchema(BASE_URL, locale as Locale, resolvedSiteDescription);
 const themeInitScript = buildThemeInitScript();

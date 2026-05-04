@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Half Doughnut Chart Generator is a specialized data visualization tool that transforms numerical datasets into semicircular charts using SVG rendering technology. Unlike traditional pie charts, this tool leverages polar coordinate systems to map values to 180-degree arcs, enabling asymmetric data distribution visualization. Developers and designers use this tool to emphasize specific data segments in constrained UI spaces, such as dashboard widgets or mobile interfaces where vertical real estate is limited. The generator employs angular data mapping to calculate proportional slice angles, supporting features like inner/outer radius customization, color gradient application, and label positioning algorithms. Technical implementation involves parsing JSON-formatted input data, normalizing values against total sums, and generating corresponding <path> elements with precise d3.js-compatible SVG attributes. The tool's unique value lies in its ability to create visually striking, asymmetrical representations while maintaining accessibility through ARIA-compliant labeling and contrast ratio optimization.",
+  "detailed_description": "The Half Doughnut Chart Generator creates semicircle charts that fit neatly into dashboards, summary cards, and compact presentations. It is useful when you want the familiarity of a doughnut chart but need a lighter layout for progress, split comparisons, or small KPI sections. You can edit segment labels and values, adjust colors and ring thickness, preview the chart on the page, and export the final result as PNG or SVG when it looks right.",
   "usage_steps": [
-    "Open the Data Input Panel and format your dataset as a JSON array of key-value pairs (e.g., [{\"category\": \"A\", \"value\": 30}, {\"category\": \"B\", \"value\": 70}])",
-    "Select the primary segment using the 'Dominant Slice' toggle to highlight specific data points with expanded arc spacing",
-    "Adjust the chart radius and thickness sliders to control the doughnut's visual weight within your interface",
-    "Configure color schemes through the HEX code input fields or activate the gradient generator for multi-hued slices",
-    "Enable the 'Mirror Axis' option to invert the chart's orientation for right-to-left language layouts",
-    "Export the final visualization as SVG code or PNG raster image using the resolution selector (up to 4K)"
+    "Enter the segment labels and values you want to show in the half doughnut chart.",
+    "Set the title and adjust the order of slices so the most important comparison is easy to scan.",
+    "Choose colors, ring thickness, and legend settings that fit your layout or brand style.",
+    "Review the preview to confirm the semicircle chart reads clearly in the space you have.",
+    "Export the finished half doughnut chart as PNG or SVG for a dashboard, slide, or report."
   ],
   "usage_examples": [
-    "Creating a KPI dashboard widget that focuses on a single performance metric while showing contextual comparisons in a semicircle",
-    "Visualizing survey responses with two primary options (e.g., Yes/No) where the chart's open end emphasizes the data's incompleteness",
-    "Designing a budget allocation tracker that emphasizes expense categories against remaining funds in financial applications",
-    "Implementing a progress indicator that shows completion percentage while maintaining a modern, minimal aesthetic in SaaS platforms"
+    "Show completed versus remaining work in a compact project status card.",
+    "Visualize how a budget is split between a few major categories on a dashboard.",
+    "Summarize survey responses in a layout where vertical space is limited."
   ]
 }

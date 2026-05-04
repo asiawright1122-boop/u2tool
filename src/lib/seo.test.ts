@@ -2,10 +2,12 @@ import { describe, expect, it } from 'vitest';
 import {
   buildWebsiteSearchUrlTemplate,
   getCategoryPageSeo,
+  getHomePageSeo,
   getHreflang,
   getToolsPageSeo,
   withBrand,
 } from './seo';
+import { buildPriorityIndexNowUrls } from './seo-discovery';
 
 describe('seo helpers', () => {
   it('reuses localized tools page SEO when available', () => {
@@ -25,6 +27,49 @@ describe('seo helpers', () => {
     expect(seo.description).toBe('Localized tools listing description.');
   });
 
+  it('normalizes outdated numeric claims in tools page SEO copy', () => {
+    const seo = getToolsPageSeo(
+      {
+        pages: {
+          tools: {
+            seo_title: '100+ Free Online Tools for Developers & Designers | U2Tool',
+            seo_description: 'Discover 100+ free online tools for developers and creators.',
+          },
+        },
+      },
+      501
+    );
+
+    expect(seo.title).toBe('501+ Free Online Tools for Developers & Designers | U2Tool');
+    expect(seo.description).toBe('Discover 501+ free online tools for developers and creators.');
+  });
+
+  it('builds stronger homepage SEO copy when no dedicated home metadata exists', () => {
+    const seo = getHomePageSeo(
+      {
+        home: {
+          hero: {
+            title: 'Free Online Tools',
+            subtitle: 'Boost your productivity with our collection of free developer tools.',
+          },
+        },
+      },
+      501
+    );
+
+    expect(seo.title).toBe('U2Tool: 501+ Free Online Tools, Converters & Generators');
+    expect(seo.description).toContain("Explore U2Tool's 501+ free online tools");
+  });
+
+  it('keeps home and tools fallback titles distinct to avoid intent overlap', () => {
+    const homeSeo = getHomePageSeo({}, 501);
+    const toolsSeo = getToolsPageSeo({}, 501);
+
+    expect(homeSeo.title).not.toBe(toolsSeo.title);
+    expect(homeSeo.title).toContain('U2Tool');
+    expect(toolsSeo.title).toContain('Browse');
+  });
+
   it('falls back to deterministic category SEO copy', () => {
     const seo = getCategoryPageSeo({}, 'security', 'Security', 42);
 
@@ -39,11 +84,22 @@ describe('seo helpers', () => {
 
   it('builds a valid search action URL template', () => {
     expect(buildWebsiteSearchUrlTemplate('https://www.u2tool.com', 'en'))
-      .toBe('https://www.u2tool.com/en/tools?q={search_term_string}');
+      .toBe('https://www.u2tool.com/en/tools/?q={search_term_string}');
   });
 
   it('returns shared hreflang mappings', () => {
     expect(getHreflang('zh')).toBe('zh-CN');
     expect(getHreflang('pt')).toBe('pt');
+  });
+
+  it('builds canonical priority IndexNow URLs with trailing slashes', () => {
+    const urls = buildPriorityIndexNowUrls('https://www.u2tool.com/', {
+      limit: 5,
+      selectedLocales: ['en'],
+    });
+
+    expect(urls).toContain('https://www.u2tool.com/en/');
+    expect(urls.every((url) => url.endsWith('/'))).toBe(true);
+    expect(urls.every((url) => !url.includes('com//'))).toBe(true);
   });
 });

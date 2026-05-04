@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import {
   buildComparisonDiscoveryIndex,
   buildComparisonGuides,
+  findComparisonGuideForTool,
   getComparisonGuide,
   getComparisonUiCopy,
 } from './comparison-surfaces';
@@ -113,6 +114,19 @@ describe('comparison surfaces', () => {
 
     expect(guide?.slug).toBe('choose-json-tool');
     expect(guide?.workflows.some((workflow) => workflow.tools.some((tool) => tool.slug === 'json-formatter'))).toBe(true);
+  });
+
+  it('finds the best comparison guide for a tool slug', () => {
+    const guide = findComparisonGuideForTool(
+      'en',
+      'json-formatter',
+      categoryNames,
+      toolNames,
+      toolDescriptions
+    );
+
+    expect(guide?.slug).toBe('choose-json-tool');
+    expect(guide?.representativeTools.some((tool) => tool.slug === 'json-formatter')).toBe(true);
   });
 
   it('exposes compare guides to discovery candidates with href routing', () => {

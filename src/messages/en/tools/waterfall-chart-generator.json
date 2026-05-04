@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Waterfall Chart Generator is a specialized tool for creating sequential cumulative visualizations that decompose transitions between numerical values. Technically, it constructs charts using floating bar segments connected by diagonal connectors, where each bar represents a positive or negative delta between sequential data points. This enables precise visual tracking of how aggregated totals evolve across dimensions like time, categories, or stages. The tool's core functionality addresses the need for transparent quantitative storytelling in financial reconciliations, inventory variance analysis, and performance benchmarking. Built on a D3.js rendering engine, it processes user inputs into layered SVG elements, with color-coded bars (green for positive deltas, red for negative) and interactive tooltips displaying exact numerical changes. Users can customize baseline references, axis scales, and categorical labels to align with specific reporting standards, such as GAAP financial statements or Lean Six Sigma process metrics. The client-side JavaScript architecture ensures zero data retention while enabling real-time DOM updates during parameter adjustments.",
+  "detailed_description": "The Waterfall Chart Generator helps you explain how a starting value changes through a series of positive and negative steps before reaching a final total. It is useful for financial summaries, funnel diagnostics, budget tracking, and performance reviews where each contribution matters. You can enter labeled step values, adjust colors and labels for increases, decreases, and totals, then export the chart as PNG or SVG after reviewing the preview in the browser.",
   "usage_steps": [
-    "Populate the data grid with sequential value pairs (start value, delta, category) to define cumulative transitions",
-    "Select vertical or horizontal orientation using the layout toggle in the configuration panel",
-    "Assign custom color palettes via HEX input fields for positive/negative deltas and baseline segments",
-    "Adjust axis bounds manually by dragging range sliders in the scale editor to emphasize specific value ranges",
-    "Enable connector lines between bars through the 'Path Visualization' checkbox to trace cumulative totals",
-    "Export the final chart in SVG or PNG format with resolution settings up to 4K for presentation use"
+    "Enter the starting value, step labels, and positive or negative changes in the editor.",
+    "Set the chart title and confirm the sequence follows the explanation you want to present.",
+    "Adjust colors for gains, losses, and totals so each step is visually distinct.",
+    "Review the preview and refine labels or values where the progression feels unclear.",
+    "Export the completed waterfall chart as PNG or SVG for a report, deck, or planning doc."
   ],
   "usage_examples": [
-    "Visualizing monthly cash flow movements for a CFO presenting year-over-year liquidity changes to stakeholders",
-    "Mapping budget reallocations across Q3-Q4 for a project manager demonstrating resource shifts to executive leadership",
-    "Tracking warehouse inventory variance between audit cycles for a supply chain analyst identifying shrinkage patterns",
-    "Illustrating profit margin fluctuations during a product lifecycle analysis for a business intelligence dashboard"
+    "Explain how revenue moves from gross bookings to net income through key adjustments.",
+    "Show how a project budget changes as scope, staffing, and tooling costs are added or removed.",
+    "Break down funnel movement from traffic to converted users by showing the impact of each stage."
   ]
 }

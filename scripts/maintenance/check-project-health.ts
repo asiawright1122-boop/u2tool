@@ -124,6 +124,46 @@ async function checkUnusedDependencies() {
       dependencies: unused,
     };
   } catch (error) {
+    const output =
+      error instanceof Error && 'stdout' in error && typeof (error as { stdout?: unknown }).stdout === 'string'
+        ? (error as { stdout: string }).stdout
+        : '';
+
+    if (output.trim()) {
+      try {
+        const result = JSON.parse(output);
+        const invalidFiles = Object.keys((result.invalidFiles as Record<string, unknown> | undefined) ?? {});
+        const missing = Object.keys((result.missing as Record<string, unknown> | undefined) ?? {});
+        const parserIncompatible =
+          invalidFiles.length > 0 &&
+          invalidFiles.every((file) => String((result.invalidFiles as Record<string, unknown>)[file]).includes('warningFilter'));
+
+        if (parserIncompatible) {
+          console.log(`   跳过 depcheck 解析告警（当前 Svelte 编译器与 depcheck 解析器不兼容，影响 ${invalidFiles.length} 个文件）`);
+          return {
+            count: 0,
+            dependencies: [],
+          };
+        }
+
+        if (missing.length > 0) {
+          console.log(`   depcheck 发现 ${missing.length} 个缺失依赖声明，暂不计入未使用依赖统计`);
+        }
+
+        const unused = [
+          ...((result.dependencies as string[] | undefined) ?? []),
+          ...((result.devDependencies as string[] | undefined) ?? []),
+        ];
+
+        return {
+          count: unused.length,
+          dependencies: unused,
+        };
+      } catch {
+        // Fall through to the generic warning below.
+      }
+    }
+
     console.warn('警告: depcheck 执行失败');
     return {
       count: 0,
@@ -209,6 +249,11 @@ export async function generateHealthReport(result: HealthCheckResult): Promise<s
     poor: '🔴',
   };
   lines.push(`${healthEmoji[result.overallHealth]} **${result.overallHealth.toUpperCase()}**\n`);
+  lines.push('## 规范入口\n');
+  lines.push('- **快速健康检查**: `npm run health:check`');
+  lines.push('- **规范发布门禁**: `npm run verify:production`\n');
+  lines.push('- **翻译键完整性检查**: `npm run i18n:check-missing-keys`');
+  lines.push('- **说明**: `qa:seo-governance` 已纳入翻译键缺失检查，发布门禁会阻止缺键回归\n');
   
   // 临时文件
   lines.push('## 临时文件\n');

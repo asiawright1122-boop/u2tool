@@ -17,6 +17,7 @@
 import { tools, getToolsByCategory } from '@/config/tools';
 import type { Tool } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
+import { getLocalizedPath, type Locale } from '@/lib/i18n';
 
 interface Props {
   /** Current tool (to exclude from related list) */
@@ -106,7 +107,7 @@ function getToolName(slug: string): string {
           const toolName = getToolName(tool.slug);
           return (
             <a
-              href={`/${locale}/tools/${tool.slug}`}
+              href={getLocalizedPath(locale as Locale, `/tools/${tool.slug}`)}
               class="flex flex-col items-center p-4 bg-white/40 dark:bg-slate-900/40 border border-slate-200/60 dark:border-slate-800 rounded-2xl hover:border-amber-500/50 hover:shadow-xl dark:hover:border-amber-500/50 transition-all duration-300 group backdrop-blur-sm"
               title={toolName}
             >

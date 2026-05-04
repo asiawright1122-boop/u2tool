@@ -15,6 +15,15 @@ interface ToolItem {
   popular?: boolean;
 }
 
+interface SearchResultItem {
+  slug: string;
+  href: string;
+  name: string;
+  description: string;
+  category: string;
+  categoryName: string;
+}
+
 interface Props {
   locale: string;
   categories: CategoryItem[];
@@ -25,6 +34,8 @@ interface Props {
   previewCount?: number;
   searchIndexPath?: string;
   emptyResultsLabel?: string;
+  initialSearchQuery?: string;
+  initialSearchResults?: SearchResultItem[];
 }
 
 const {
@@ -37,6 +48,8 @@ const {
   previewCount,
   searchIndexPath,
   emptyResultsLabel = 'No tools found',
+  initialSearchQuery = '',
+  initialSearchResults = [],
 } = Astro.props as Props;
 
 const effectivePreviewCount =
@@ -55,6 +68,9 @@ function toolPath(slug: string) {
 function categoryPath(categoryId: string) {
   return getLocalizedPath(locale as Locale, `/categories/${categoryId}`);
 }
+
+const hasInitialSearchQuery = initialSearchQuery.trim().length > 0;
+const hasInitialSearchResults = hasInitialSearchQuery && initialSearchResults.length > 0;
 ---
 
 <div
@@ -65,12 +81,34 @@ function categoryPath(categoryId: string) {
 >
   <div
     data-search-results
-    hidden
+    hidden={!hasInitialSearchResults}
     class="mb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"
-  />
+  >
+    {initialSearchResults.map((item) => (
+      <a
+        href={item.href}
+        class="glass-card flex items-center gap-4 p-5 group/card relative overflow-hidden"
+      >
+        <div class="absolute inset-0 bg-gradient-to-br from-transparent to-amber-500/5 dark:to-amber-500/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10 flex items-center gap-4 w-full">
+          <div class="flex-1 min-w-0">
+            <h3 class="font-bold text-sm text-slate-900 dark:text-white truncate group-hover/card:text-amber-600 dark:group-hover/card:text-amber-400 transition-colors">
+              {item.name}
+            </h3>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 truncate mt-1.5 leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+          <span class="inline-flex items-center px-2 py-0.5 text-[9px] font-black rounded-full bg-slate-100 text-slate-500 dark:bg-white/5 dark:text-slate-500 flex-shrink-0 border border-slate-200 dark:border-white/10 tracking-widest uppercase">
+            {item.categoryName}
+          </span>
+        </div>
+      </a>
+    ))}
+  </div>
   <p
     data-search-empty
-    hidden
+    hidden={!hasInitialSearchQuery || hasInitialSearchResults}
     class="mb-8 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-300"
   >
     {emptyResultsLabel}
@@ -86,7 +124,7 @@ function categoryPath(categoryId: string) {
     }
 
     return (
-      <section class="tools-grid-section mb-12" data-category={category.id} id={category.id}>
+      <section class="tools-grid-section mb-12" data-category={category.id} id={category.id} hidden={hasInitialSearchQuery}>
         <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3 tracking-tight">
           <span
             class="text-slate-900 dark:text-amber-500 inline-flex shadow-sm"
@@ -136,26 +174,38 @@ function categoryPath(categoryId: string) {
   })}
 </div>
 
-<script is:inline>
+<script>
+  import { buildSearchResultHref } from './tools-grid-search';
+
+  interface SearchIndexItem {
+    slug?: string;
+    href?: string;
+    name?: string;
+    description?: string;
+    category?: string;
+    categoryName?: string;
+    score?: number;
+  }
+
   (() => {
     const root = document.getElementById('tools-grid');
     if (!root) return;
 
-    const sections = Array.from(root.querySelectorAll('.tools-grid-section'));
-    const searchResults = root.querySelector('[data-search-results]');
-    const emptyState = root.querySelector('[data-search-empty]');
+    const sections = Array.from(root.querySelectorAll<HTMLElement>('.tools-grid-section'));
+    const searchResults = root.querySelector<HTMLElement>('[data-search-results]');
+    const emptyState = root.querySelector<HTMLElement>('[data-search-empty]');
     const searchIndexPath = root.getAttribute('data-search-index-path') || '';
     const toolsBasePath = root.getAttribute('data-tools-base-path') || '';
     if (!sections.length) return;
 
-    const normalize = (value) =>
+    const normalize = (value: string) =>
       value
         .toLowerCase()
         .normalize('NFKC')
         .replace(/\s+/g, ' ')
         .trim();
 
-    const scoreTool = (tool, query, queryTokens) => {
+    const scoreTool = (tool: SearchIndexItem, query: string, queryTokens: string[]) => {
       let score = 0;
       const name = normalize(tool.name || tool.slug || '');
       const description = normalize(tool.description || '');
@@ -178,7 +228,7 @@ function categoryPath(categoryId: string) {
       return score;
     };
 
-    const renderSearchResults = (items) => {
+    const renderSearchResults = (items: SearchIndexItem[]) => {
       if (!searchResults) return;
 
       searchResults.replaceChildren();
@@ -186,6 +236,7 @@ function categoryPath(categoryId: string) {
       for (const item of items) {
         const link = document.createElement('a');
         link.className = 'glass-card flex items-center gap-4 p-5 group/card relative overflow-hidden';
+        link.href = buildSearchResultHref(item, toolsBasePath);
         
         const overlay = document.createElement('div');
         overlay.className = 'absolute inset-0 bg-gradient-to-br from-transparent to-amber-500/5 dark:to-amber-500/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500';
@@ -205,7 +256,7 @@ function categoryPath(categoryId: string) {
 
         const title = document.createElement('h3');
         title.className = 'font-bold text-sm text-slate-900 dark:text-white truncate group-hover/card:text-amber-600 dark:group-hover/card:text-amber-400 transition-colors';
-        title.textContent = item.name || item.slug;
+        title.textContent = item.name || item.slug || '';
 
         const description = document.createElement('p');
         description.className = 'text-[11px] text-slate-500 dark:text-slate-400 truncate mt-1.5 leading-relaxed';
@@ -225,7 +276,7 @@ function categoryPath(categoryId: string) {
       }
     };
 
-    const showPreviewSections = (activeCategory) => {
+    const showPreviewSections = (activeCategory: string | null) => {
       if (searchResults) {
         searchResults.hidden = true;
         searchResults.replaceChildren();
@@ -271,16 +322,17 @@ function categoryPath(categoryId: string) {
           throw new Error(`Unexpected response: ${response.status}`);
         }
 
-        const toolsIndex = await response.json();
+        const toolsIndex = (await response.json()) as SearchIndexItem[];
         const results = toolsIndex
-          .map((tool) => ({
+          .map((tool: SearchIndexItem) => ({
             ...tool,
             score: scoreTool(tool, query, queryTokens),
           }))
-          .filter((tool) =>
-            tool.score > 0 && (!activeCategory || tool.category === activeCategory)
+          .filter(
+            (tool: SearchIndexItem) =>
+              (tool.score || 0) > 0 && (!activeCategory || tool.category === activeCategory)
           )
-          .sort((a, b) => b.score - a.score)
+          .sort((a: SearchIndexItem, b: SearchIndexItem) => (b.score || 0) - (a.score || 0))
           .slice(0, 24);
 
         for (const section of sections) {

@@ -1,0 +1,194 @@
+const BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
+
+interface RenderedSeoCheck {
+  name: string;
+  path: string;
+  canonicalPath?: string;
+  titleIncludes: string;
+  descriptionIncludes: string;
+  schemaTypes: string[];
+  bodyMustInclude?: string[];
+  bodyMustNotInclude?: string[];
+}
+
+const checks: RenderedSeoCheck[] = [
+  {
+    name: 'English homepage',
+    path: '/en/',
+    titleIncludes: 'U2Tool',
+    descriptionIncludes: 'online tools',
+    schemaTypes: ['Organization', 'WebSite'],
+    bodyMustInclude: ['JSON Formatter', 'Text Tools'],
+  },
+  {
+    name: 'English tools index',
+    path: '/en/tools/',
+    titleIncludes: 'Tools',
+    descriptionIncludes: 'tools',
+    schemaTypes: ['Organization', 'WebSite', 'CollectionPage'],
+    bodyMustInclude: ['JSON Formatter', 'Choose the Right'],
+  },
+  {
+    name: 'English tools search results',
+    path: '/en/tools/?q=json',
+    canonicalPath: '/en/tools/',
+    titleIncludes: 'Tools',
+    descriptionIncludes: 'tools',
+    schemaTypes: ['Organization', 'WebSite', 'CollectionPage'],
+    bodyMustInclude: ['data-search-results', 'JSON Formatter', 'https://www.u2tool.com/en/tools/json-formatter/'],
+  },
+  {
+    name: 'JSON Formatter tool page',
+    path: '/en/tools/json-formatter/',
+    titleIncludes: 'JSON Formatter',
+    descriptionIncludes: 'JSON',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    bodyMustInclude: ['Choose the Right JSON Tool', '/en/compare/choose-json-tool/'],
+  },
+  {
+    name: 'JWT Decoder tool page',
+    path: '/en/tools/jwt-decoder/',
+    titleIncludes: 'JWT Decoder',
+    descriptionIncludes: 'JWT',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList'],
+    bodyMustInclude: ['The JWT Decoder is a specialized tool', '/en/compare/choose-jwt-tool/'],
+    bodyMustNotInclude: ['The JWT Debugger is a specialized tool'],
+  },
+  {
+    name: 'JWT comparison guide',
+    path: '/en/compare/choose-jwt-tool/',
+    titleIncludes: 'JWT',
+    descriptionIncludes: 'JWT',
+    schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'BreadcrumbList'],
+    bodyMustInclude: ['JWT Decoder', 'JWT Generator'],
+  },
+];
+
+async function fetchWithRetry(url: string, init: RequestInit = {}, attempts = 3): Promise<Response> {
+  let lastError: unknown;
+
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    try {
+      return await fetch(url, init);
+    } catch (error) {
+      lastError = error;
+      if (attempt < attempts) {
+        await new Promise((resolve) => setTimeout(resolve, attempt * 500));
+      }
+    }
+  }
+
+  throw lastError;
+}
+
+function assert(condition: unknown, message: string): void {
+  if (!condition) {
+    throw new Error(message);
+  }
+}
+
+function getTagContent(html: string, selector: 'title' | 'description' | 'canonical' | 'robots'): string {
+  if (selector === 'title') {
+    return html.match(/<title>(.*?)<\/title>/is)?.[1]?.trim() || '';
+  }
+
+  if (selector === 'description') {
+    const tag = html.match(/<meta\b(?=[^>]*\bname=["']description["'])[^>]*>/i)?.[0] || '';
+    return tag.match(/\bcontent=(["'])(.*?)\1/i)?.[2]?.trim() || '';
+  }
+
+  if (selector === 'canonical') {
+    const tag = html.match(/<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/i)?.[0] || '';
+    return tag.match(/\bhref=["']([^"']+)["']/i)?.[1]?.trim() || '';
+  }
+
+  const tag = html.match(/<meta\b(?=[^>]*\bname=["']robots["'])[^>]*>/i)?.[0] || '';
+  return tag.match(/\bcontent=(["'])(.*?)\1/i)?.[2]?.trim() || '';
+}
+
+function extractJsonLdTypes(html: string): string[] {
+  const scripts = Array.from(
+    html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)
+  ).map((match) => match[1].trim());
+  const types = new Set<string>();
+
+  for (const script of scripts) {
+    try {
+      const parsed = JSON.parse(script) as unknown;
+      const values = Array.isArray(parsed) ? parsed : [parsed];
+      for (const value of values) {
+        if (value && typeof value === 'object' && '@type' in value) {
+          const type = (value as { '@type'?: unknown })['@type'];
+          if (typeof type === 'string') {
+            types.add(type);
+          }
+        }
+      }
+    } catch {
+      throw new Error(`Invalid JSON-LD block: ${script.slice(0, 120)}`);
+    }
+  }
+
+  return Array.from(types);
+}
+
+async function validateCheck(check: RenderedSeoCheck): Promise<void> {
+  const url = `${BASE_URL}${check.path}`;
+  const response = await fetchWithRetry(url, { redirect: 'follow' });
+  assert(response.status === 200, `${check.name}: expected HTTP 200, got ${response.status}`);
+  assert((response.headers.get('content-type') || '').includes('text/html'), `${check.name}: response is not HTML`);
+
+  const html = await response.text();
+  const canonicalUrl = `${BASE_URL}${check.canonicalPath ?? check.path}`;
+  const title = getTagContent(html, 'title');
+  const description = getTagContent(html, 'description');
+  const canonical = getTagContent(html, 'canonical');
+  const robots = getTagContent(html, 'robots');
+  const schemaTypes = extractJsonLdTypes(html);
+
+  assert(title.includes(check.titleIncludes), `${check.name}: title missing "${check.titleIncludes}"`);
+  assert(description.toLowerCase().includes(check.descriptionIncludes.toLowerCase()), `${check.name}: meta description missing "${check.descriptionIncludes}"`);
+  assert(canonical === canonicalUrl, `${check.name}: canonical "${canonical}" does not match "${canonicalUrl}"`);
+  assert(robots.includes('index') && robots.includes('follow') && !robots.includes('noindex'), `${check.name}: robots meta is not indexable`);
+  assert((html.match(/rel=["']alternate["']\s+hreflang=/g) || []).length >= 10, `${check.name}: missing hreflang alternates`);
+
+  for (const schemaType of check.schemaTypes) {
+    assert(schemaTypes.includes(schemaType), `${check.name}: missing JSON-LD type ${schemaType}`);
+  }
+
+  for (const expected of check.bodyMustInclude || []) {
+    assert(html.includes(expected), `${check.name}: body missing "${expected}"`);
+  }
+
+  for (const forbidden of check.bodyMustNotInclude || []) {
+    assert(!html.includes(forbidden), `${check.name}: body contains forbidden text "${forbidden}"`);
+  }
+}
+
+async function main(): Promise<void> {
+  const failures: string[] = [];
+
+  for (const check of checks) {
+    try {
+      await validateCheck(check);
+      console.log(`OK  ${check.name} ${check.path}`);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      failures.push(message);
+      console.log(`FAIL ${check.name} ${check.path} -> ${message}`);
+    }
+  }
+
+  if (failures.length > 0) {
+    console.log(`\n${failures.length} rendered SEO checks failed. BASE_URL=${BASE_URL}`);
+    process.exitCode = 1;
+    return;
+  }
+
+  console.log(`\nAll rendered SEO checks passed. BASE_URL=${BASE_URL}`);
+}
+
+main().catch((error) => {
+  console.error('Unexpected rendered SEO validation error:', error);
+  process.exitCode = 1;
+});

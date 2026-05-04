@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Sunburst Chart Generator is a specialized data visualization tool that transforms hierarchical datasets into radial partition diagrams. By mapping parent-child relationships through concentric rings, this tool enables users to represent multi-level categorical data with proportional segments whose arc lengths correspond to their quantitative value. Built using D3.js and HTML5 Canvas, it supports real-time rendering of complex hierarchies containing thousands of nodes while maintaining SVG scalability for detailed exports. Users can leverage this tool for business intelligence reporting, system resource analysis, and content taxonomy mapping where spatial relationships between nested categories require visual clarification. The generator implements a weighted recursive partitioning algorithm that calculates radial dimensions based on value ratios at each hierarchy level, allowing precise control over angular distribution and depth perception through gradient color encoding. Technical features include drag-and-drop CSV/JSON file import, custom color palette integration, and adjustable radius scaling to emphasize specific data tiers. Interactive previews with hover tooltips displaying node metadata enhance analytical capabilities before final export.",
+  "detailed_description": "The Sunburst Chart Generator creates radial hierarchy charts that show parent-child relationships in a compact circular layout. It works well for category trees, budget structures, taxonomies, and other nested datasets where viewers need to understand both grouping and relative share. You can enter hierarchical labels and values, adjust colors, spacing, labels, and title settings, then export the result as PNG or SVG after reviewing the preview in the browser.",
   "usage_steps": [
-    "Import structured data via drag-and-drop file uploader (CSV/JSON) containing hierarchical key-value pairs",
-    "Define hierarchy depth using the level configuration panel to assign categorical tiers to concentric rings",
-    "Select color encoding method (categorical, sequential, or diverging) from the palette manager for segment differentiation",
-    "Adjust radius scale multiplier in the layout settings to control visual emphasis on inner/outer hierarchy levels",
-    "Enable interactive features like tooltip display or zoom functionality through the behavior toggle menu",
-    "Export final visualization using resolution-preserving SVG download or PNG screenshot capture buttons"
+    "Enter the hierarchical labels and values you want to display, keeping parent-child relationships consistent.",
+    "Set the chart title and confirm the hierarchy reads from the center outward as intended.",
+    "Adjust colors, labels, and spacing so the nested rings remain clear.",
+    "Review the preview and refine the hierarchy if some branches feel too dense or unclear.",
+    "Export the completed sunburst chart as PNG or SVG for reports, docs, or presentations."
   ],
   "usage_examples": [
-    "Visualizing enterprise organizational structure with departments as primary rings and employee distribution as secondary segments",
-    "Analyzing website traffic sources through nested layers showing referral channels, subdomains, and individual page performance",
-    "Mapping computer storage usage with top-level directories as outer rings and file-type breakdowns in inner segments",
-    "Demonstrating product category sales distribution across multiple geographic regions with color-coded revenue proportionality"
+    "Show how a company budget breaks down from department to team to project level.",
+    "Visualize a content taxonomy so stakeholders can see the distribution of topics and subtopics.",
+    "Present a catalog structure with category, subcategory, and item-level share."
   ]
 }

@@ -168,26 +168,29 @@ function resolveIndexNowKey(siteUrl) {
 function buildPriorityUrls(siteUrl, selectedLocales, limit) {
   const urls = new Set();
   const aiDiscoveryEnabled = process.env.PUBLIC_AI_DISCOVERY_ENABLED === 'true';
+  const addPath = (path) => {
+    urls.add(`${siteUrl}${path.endsWith('/') ? path : `${path}/`}`);
+  };
 
   for (const locale of selectedLocales) {
-    urls.add(`${siteUrl}/${locale}`);
-    urls.add(`${siteUrl}/${locale}/tools`);
-    urls.add(`${siteUrl}/${locale}/compare`);
+    addPath(`/${locale}`);
+    addPath(`/${locale}/tools`);
+    addPath(`/${locale}/compare`);
 
     if (aiDiscoveryEnabled) {
-      urls.add(`${siteUrl}/${locale}/ai`);
+      addPath(`/${locale}/ai`);
     }
 
     for (const category of CATEGORY_SLUGS) {
-      urls.add(`${siteUrl}/${locale}/categories/${category}`);
+      addPath(`/${locale}/categories/${category}`);
     }
 
     for (const slug of COMPARISON_SLUGS) {
-      urls.add(`${siteUrl}/${locale}/compare/${slug}`);
+      addPath(`/${locale}/compare/${slug}`);
     }
 
     for (const slug of PRIORITY_TOOL_SLUGS) {
-      urls.add(`${siteUrl}/${locale}/tools/${slug}`);
+      addPath(`/${locale}/tools/${slug}`);
     }
   }
 

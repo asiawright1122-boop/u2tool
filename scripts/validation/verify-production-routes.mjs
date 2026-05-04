@@ -6,18 +6,22 @@ const checks = [
   { name: 'sitemap pages', url: '/sitemap-pages.xml', expect: { status: 200, contentTypeIncludes: 'application/xml' } },
   { name: 'sitemap tools', url: '/sitemap-tools.xml', expect: { status: 200, contentTypeIncludes: 'application/xml' } },
   { name: 'llms.txt', url: '/llms.txt', expect: { status: 200, contentTypeIncludes: 'text/plain' } },
-  { name: 'home en', url: '/en', expect: { status: 200 }, allowRedirectTo: '/en/' },
-  { name: 'tools en', url: '/en/tools', expect: { status: 200 }, allowRedirectTo: '/en/tools/' },
+  { name: 'messages base en', url: '/messages/en/base.json', expect: { status: 200, contentTypeIncludes: 'application/json' } },
+  { name: 'messages root en', url: '/messages/en.json', expect: { status: 200, contentTypeIncludes: 'application/json' } },
+  { name: 'home en', url: '/en/', expect: { status: 200 } },
+  { name: 'tools en', url: '/en/tools/', expect: { status: 200 } },
   { name: 'home schema placeholders', url: '/en/', expect: { status: 200 }, bodyMustNotInclude: '${BASE_URL}' },
   { name: 'tools schema placeholders', url: '/en/tools/', expect: { status: 200 }, bodyMustNotInclude: '${BASE_URL}' },
-  { name: 'legacy /tools', url: '/tools', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/tools' } },
-  { name: 'legacy /compare', url: '/compare', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/compare' } },
-  { name: 'legacy /ai', url: '/ai', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/ai' } },
-  { name: 'ranking newest', url: '/en/tools/ranking/newest', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/tools' } },
-  { name: 'ranking popular', url: '/en/tools/ranking/popular', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/tools' } },
+  { name: 'home translated tool labels', url: '/en/', expect: { status: 200 }, bodyMustInclude: 'JSON Formatter' },
+  { name: 'home translated category labels', url: '/en/', expect: { status: 200 }, bodyMustInclude: 'Text Tools' },
+  { name: 'legacy /tools', url: '/tools', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/tools/' } },
+  { name: 'legacy /compare', url: '/compare', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/compare/' } },
+  { name: 'legacy /ai', url: '/ai', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/ai/' } },
+  { name: 'ranking newest', url: '/en/tools/ranking/newest', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/tools/' } },
+  { name: 'ranking popular', url: '/en/tools/ranking/popular', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/tools/' } },
   { name: 'missing url', url: '/en/this-route-should-not-exist-xyz', expect: { status: 404 } },
-  { name: 'legacy tool redirect', url: '/tools/jwt-decoder', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/tools/jwt-decoder' } },
-  { name: 'tool page', url: '/en/tools/venn-diagram-generator', expect: { status: 200 }, allowRedirectTo: '/en/tools/venn-diagram-generator/' },
+  { name: 'legacy tool redirect', url: '/tools/jwt-decoder', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/tools/jwt-decoder/' } },
+  { name: 'tool page', url: '/en/tools/venn-diagram-generator/', expect: { status: 200 } },
 ];
 
 function normalizeLocation(location) {
@@ -81,7 +85,20 @@ async function runCheck(check) {
 
   if (check.expect.status === 404) {
     const followed = await fetchFollow(target);
-    if (followed.status === 200 && /\/en\/?$/.test(new URL(followed.finalUrl).pathname)) {
+    const targetPath = new URL(target).pathname;
+    const followedPath = new URL(followed.finalUrl).pathname;
+    const normalized404Path = targetPath.endsWith('/') ? targetPath : `${targetPath}/`;
+
+    if (
+      [301, 302, 307, 308].includes(manual.status)
+      && manual.location === normalized404Path
+      && followed.status === 404
+      && followedPath === normalized404Path
+    ) {
+      return { ok: true, details: [`slash-normalized 404 via ${manual.location}`], manual };
+    }
+
+    if (followed.status === 200 && /\/en\/?$/.test(followedPath)) {
       ok = false;
       details.push(`soft-redirect to ${followed.finalUrl}`);
     }
@@ -92,6 +109,14 @@ async function runCheck(check) {
     if (followed.text.includes(check.bodyMustNotInclude)) {
       ok = false;
       details.push(`body contains "${check.bodyMustNotInclude}"`);
+    }
+  }
+
+  if (check.bodyMustInclude) {
+    const followed = await fetchText(target);
+    if (!followed.text.includes(check.bodyMustInclude)) {
+      ok = false;
+      details.push(`body missing "${check.bodyMustInclude}"`);
     }
   }
 

@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Boxplot Chart Generator is a specialized tool for creating statistical boxplot visualizations that depict the distribution of datasets through quartiles, medians, and outliers. This tool leverages JavaScript-based rendering libraries to generate precise boxplots using Tukey's method for calculating interquartile ranges (IQR), automatically identifying outliers as points beyond 1.5×IQR thresholds. Users benefit from this tool for exploratory data analysis (EDA) in fields like research, finance, and quality control, where comparing multiple datasets' central tendencies and variability is crucial. The generator supports both vertical and horizontal orientations, with customizable parameters for whisker length, color schemes, and axis labels. Data input is handled through a structured CSV-like format where columns represent distinct datasets, enabling side-by-side comparisons. Under the hood, the tool employs D3.js for dynamic SVG rendering, ensuring scalability and resolution independence, while PNG exports utilize HTML5 canvas rasterization for lossless image quality.",
+  "detailed_description": "The Boxplot Chart Generator helps you compare distributions across several groups in a compact visual. It is useful when you want to discuss spread, median position, and unusual values without showing every raw row in a table. You can enter grouped data, switch the orientation, tune labels and colors, and review the chart preview before exporting a PNG or SVG for analysis notes, classroom material, or internal reports.",
   "usage_steps": [
-    "Input data in comma-separated format within the designated textarea, with each column representing a separate dataset.",
-    "Select 'Vertical' or 'Horizontal' orientation from the layout dropdown menu to define plot axis alignment.",
-    "Adjust whisker length using the slider control to override default 1.5×IQR calculations for outlier detection.",
-    "Customize visual elements via the style panel: set color gradients for boxes, adjust axis font sizes, and enable gridlines.",
-    "Toggle outlier visibility using the checkbox to include/exclude extreme values in the visualization.",
-    "Export the final chart by clicking 'Download SVG' or 'PNG' buttons, with options to preserve transparency or set background colors."
+    "Add the grouped values you want to compare, keeping each dataset clearly labeled in the editor.",
+    "Choose the chart orientation and adjust the title so the comparison is easy to understand at a glance.",
+    "Refine axis labels, colors, and visible markers until the distribution summary is readable.",
+    "Review the preview to confirm each group appears in the expected order and scale.",
+    "Export the finished boxplot as PNG or SVG for reports, presentations, or study material."
   ],
   "usage_examples": [
-    "A university researcher comparing final exam score distributions across three different teaching methods using side-by-side boxplots.",
-    "A financial analyst evaluating monthly stock return variability between technology and energy sectors over a 5-year period.",
-    "A manufacturing engineer analyzing production tolerance measurements from three different assembly lines to identify process inconsistencies.",
-    "A climate scientist visualizing annual temperature range distributions across coastal vs inland regions to study climate change impacts."
+    "Compare exam score distributions across several classes in an education report.",
+    "Show delivery time variation between warehouses or shipping methods.",
+    "Review differences in response time ranges across product versions or support queues."
   ]
 }

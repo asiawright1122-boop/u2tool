@@ -4,8 +4,8 @@
  *
  * Route: /{locale}/tools/{slug}
  *
- * Generates static paths for all tools × all 10 locales (~5,100 pages).
- * Loads tool-specific translations, renders SEO metadata (title, description,
+ * Renders tool pages on Cloudflare SSR to keep deploy builds fast while still
+ * returning complete HTML to crawlers. Loads tool-specific translations, renders SEO metadata (title, description,
  * canonical, hreflang, structured data), and composes the page from:
  * - Breadcrumb navigation (static)
  * - Tool header with icon, name, description (static)
@@ -18,7 +18,6 @@
  * Requirements: 1.4, 1.5, 3.4, 5.1, 5.2, 5.3, 5.4
  */
 
-import type { GetStaticPaths } from 'astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/layout/Header.svelte';
 import StaticSidebar from '@/components/layout/StaticSidebar.astro';
@@ -30,33 +29,36 @@ import ToolWrapper from '@/components/tools/ToolWrapper.svelte';
 import RelatedTools from '@/components/tools/RelatedTools.astro';
 import ToolFAQ from '@/components/tools/ToolFAQ.astro';
 import { tools, categories, getToolsByCategory } from '@/config/tools';
-import type { Tool } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
-import { locales } from '@/lib/i18n';
+import { isValidLocale } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadToolMessages, loadBaseMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
+import { buildLocalizedPageUrl } from '@/lib/seo';
 import { sanitizeHtml } from '@/lib/sanitize';
+import { assessSupportContentTrust } from '@/lib/content-trust';
+import { buildSafeFallbackSupportContent } from '@/lib/support-content-fallback';
+import { findComparisonGuideForTool, getComparisonUiCopy } from '@/lib/comparison-surfaces';
 
-export const prerender = true;
-
-// ---------------------------------------------------------------------------
-// Static path generation: all tools × all locales
-// ---------------------------------------------------------------------------
-export const getStaticPaths: GetStaticPaths = () => {
-  return locales.flatMap((locale) =>
-    tools.map((tool) => ({
-      params: { locale, slug: tool.slug },
-      props: { locale, tool },
-    }))
-  );
-};
+export const prerender = false;
 
 // ---------------------------------------------------------------------------
 // Page data loading
 // ---------------------------------------------------------------------------
-const { locale, tool } = Astro.props as { locale: Locale; tool: Tool };
+const localeCandidate = Astro.params.locale;
+if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate)) {
+  return Astro.redirect('/en/tools/', 302);
+}
+const locale: Locale = localeCandidate;
+
+const slugCandidate = Astro.params.slug;
+const tool = typeof slugCandidate === 'string'
+  ? tools.find((candidate) => candidate.slug === slugCandidate)
+  : undefined;
+if (!tool) {
+  return Astro.redirect(`/${locale}/tools/`, 302);
+}
 
 // Load tool-specific translations (merged base + detailed, with English fallback)
 const messages = await loadToolMessages(locale, tool.slug);
@@ -69,16 +71,16 @@ const toolsCommon = (baseMessages.tools as Record<string, unknown>) ?? {};
 const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
 const headerTranslations = buildHeaderTranslations(baseMessages);
 const mobileNavMessages = buildMobileNavMessages(navMessages);
+const comparisonUiCopy = getComparisonUiCopy(locale);
 
 // Extract tool metadata from translations
 const toolName = (messages.name as string) || tool.slug;
 const toolDescription = (messages.description as string) || '';
 const seoTitle = (messages.seo_title as string) || toolName;
 const seoDescription = (messages.seo_description as string) || toolDescription;
-const detailedDescription = (messages.detailed_description as string) || '';
-const safeDetailedDescription = sanitizeHtml(detailedDescription.replace(/\n/g, '<br />'));
-const usageSteps = messages.usage_steps as string[] | undefined;
-const usageExamples = messages.usage_examples as string[] | undefined;
+const rawDetailedDescription = (messages.detailed_description as string) || '';
+const rawUsageSteps = messages.usage_steps as string[] | undefined;
+const rawUsageExamples = messages.usage_examples as string[] | undefined;
 
 // Category name (localized)
 const categoryName = categoryMessages[tool.category] || tool.category;
@@ -108,7 +110,7 @@ const BASE_URL = getPublicSiteUrl();
 const softwareAppData = {
   name: toolName,
   description: seoDescription,
-  url: `${BASE_URL}/${locale}/tools/${tool.slug}`,
+  url: buildLocalizedPageUrl(BASE_URL, locale, `/tools/${tool.slug}`),
   applicationCategory: 'UtilitiesApplication',
   operatingSystem: 'Any',
   offers: {
@@ -116,30 +118,7 @@ const softwareAppData = {
     price: '0',
     priceCurrency: 'USD',
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    ratingCount: '100',
-    bestRating: '5',
-    worstRating: '1',
-  },
 };
-
-// ---------------------------------------------------------------------------
-// Structured data: HowTo (if usage steps are available)
-// ---------------------------------------------------------------------------
-const howToData = usageSteps && usageSteps.length > 0
-  ? {
-      name: `How to use ${toolName}`,
-      description: seoDescription,
-      step: usageSteps.map((step, index) => ({
-        '@type': 'HowToStep',
-        position: index + 1,
-        text: step,
-      })),
-      totalTime: 'PT2M',
-    }
-  : null;
 
 // ---------------------------------------------------------------------------
 // FAQ data: extract from translations if available
@@ -179,7 +158,50 @@ function extractFAQs(msgs: Record<string, unknown>): FAQItem[] {
   return faqs;
 }
 
-const faqs = extractFAQs(messages);
+const rawFaqs = extractFAQs(messages);
+const supportContentTrust = assessSupportContentTrust({
+  slug: tool.slug,
+  locale,
+  name: toolName,
+  description: toolDescription,
+  detailedDescription: rawDetailedDescription,
+  usageSteps: rawUsageSteps,
+  usageExamples: rawUsageExamples,
+  faqs: rawFaqs,
+});
+const supportContentFallback =
+  supportContentTrust.blockSupportContent
+    ? buildSafeFallbackSupportContent(tool.slug, toolName, locale)
+    : null;
+const detailedDescription = supportContentTrust.blockSupportContent
+  ? supportContentFallback?.detailedDescription ?? ''
+  : rawDetailedDescription;
+const safeDetailedDescription = detailedDescription
+  ? sanitizeHtml(detailedDescription.replace(/\n/g, '<br />'))
+  : '';
+const usageSteps = supportContentTrust.blockSupportContent
+  ? supportContentFallback?.usageSteps
+  : rawUsageSteps;
+const usageExamples = supportContentTrust.blockSupportContent
+  ? supportContentFallback?.usageExamples
+  : rawUsageExamples;
+const faqs = supportContentTrust.blockSupportContent ? [] : rawFaqs;
+
+// ---------------------------------------------------------------------------
+// Structured data: HowTo (if usage steps are available)
+// ---------------------------------------------------------------------------
+const howToData = usageSteps && usageSteps.length > 0
+  ? {
+      name: `How to use ${toolName}`,
+      description: seoDescription,
+      step: usageSteps.map((step, index) => ({
+        '@type': 'HowToStep',
+        position: index + 1,
+        text: step,
+      })),
+      totalTime: 'PT2M',
+    }
+  : null;
 
 // ---------------------------------------------------------------------------
 // Build translations object for ToolWrapper
@@ -225,6 +247,29 @@ for (const slug of relatedToolSlugs) {
     allToolTranslations[slug] = toolTrans as Record<string, unknown>;
   }
 }
+
+const allToolNames = Object.fromEntries(
+  tools.map((candidateTool) => {
+    const candidateMessages = toolsCommon[candidateTool.slug] as Record<string, unknown> | undefined;
+    return [candidateTool.slug, (candidateMessages?.name as string) || candidateTool.slug];
+  })
+);
+const allToolDescriptions = Object.fromEntries(
+  tools.map((candidateTool) => {
+    const candidateMessages = toolsCommon[candidateTool.slug] as Record<string, unknown> | undefined;
+    return [
+      candidateTool.slug,
+      (candidateMessages?.seo_description as string) || (candidateMessages?.description as string) || '',
+    ];
+  })
+);
+const comparisonGuide = findComparisonGuideForTool(
+  locale,
+  tool.slug,
+  categoryMessages,
+  allToolNames,
+  allToolDescriptions
+);
 ---
 
 <BaseLayout
@@ -263,7 +308,7 @@ for (const slug of relatedToolSlugs) {
     slot="head"
   />
   <meta property="og:type" content="website" slot="head" />
-  <meta property="og:url" content={`${BASE_URL}/${locale}/tools/${tool.slug}`} slot="head" />
+  <meta property="og:url" content={buildLocalizedPageUrl(BASE_URL, locale, `/tools/${tool.slug}`)} slot="head" />
   <meta property="og:site_name" content="U2Tool" slot="head" />
   <meta name="twitter:card" content="summary_large_image" slot="head" />
   <meta name="twitter:title" content={`${seoTitle} | U2Tool`} slot="head" />
@@ -320,6 +365,48 @@ for (const slug of relatedToolSlugs) {
             />
           </div>
         </div>
+      )}
+
+      {comparisonGuide && (
+        <section class="glass-card p-6 md:p-10 mb-10 relative overflow-hidden group">
+          <div class="absolute inset-0 bg-gradient-to-br from-transparent to-amber-500/5 dark:to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative z-10">
+            <p class="text-[10px] font-black uppercase tracking-[0.24em] text-amber-600/80 dark:text-amber-500/70 mb-3">
+              {comparisonUiCopy.comparisonLabel}
+            </p>
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white tracking-tight mb-4">
+              {comparisonGuide.title}
+            </h2>
+            <p class="text-slate-600 dark:text-slate-400 text-base md:text-lg leading-relaxed max-w-4xl">
+              {comparisonGuide.shortDescription}
+            </p>
+            {comparisonGuide.representativeTools.length > 0 && (
+              <div class="mt-6">
+                <p class="text-[10px] font-black uppercase tracking-[0.22em] text-slate-400 dark:text-slate-500 mb-3">
+                  {comparisonUiCopy.includedToolsLabel}
+                </p>
+                <div class="flex flex-wrap gap-2.5">
+                  {comparisonGuide.representativeTools.map((guideTool) => (
+                    <a
+                      href={guideTool.href}
+                      class="inline-flex items-center rounded-xl border border-slate-200 bg-white/60 px-4 py-2 text-[11px] font-bold text-slate-600 transition-all hover:border-amber-400 hover:text-amber-600 dark:border-white/5 dark:bg-white/[0.02] dark:text-slate-400 dark:hover:border-amber-500/50 dark:hover:text-amber-300 shadow-sm"
+                    >
+                      {guideTool.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+            <div class="mt-8">
+              <a
+                href={comparisonGuide.href}
+                class="btn-primary !px-6 !py-3 !text-[11px] !rounded-2xl active:scale-95 shadow-lg dark:hover:shadow-amber-500/20"
+              >
+                {comparisonUiCopy.guideCtaLabel}
+              </a>
+            </div>
+          </div>
+        </section>
       )}
 
       {/* Tool Component — Island Architecture: hydrate only when visible */}

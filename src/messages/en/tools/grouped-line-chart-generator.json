@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Grouped Line Chart Generator is a specialized tool for rendering comparative multi-series line charts using SVG and JavaScript. Technically, it employs D3.js for dynamic data binding, enabling users to visualize up to 10 datasets simultaneously through interpolated Bézier curves. This tool addresses the need for trend comparison across distinct data groups, such as quarterly sales metrics across regions, stock price fluctuations, or sensor data from IoT devices. Users upload structured data in CSV/JSON format, where each column represents a data series. The generator processes timestamps or numerical values for X/Y axes, with optional color scales (sequential, categorical) and axis label customization. It supports logarithmic scale transformations and tooltip interactivity for data point inspection. Technical features include responsive scaling with domain/range adjustments, gridline alignment, and exportable SVG/PNG outputs compliant with WCAG accessibility standards. The tool's unique value lies in its ability to handle asynchronous time-series data while maintaining visual clarity through stacked or overlaid line configurations.",
+  "detailed_description": "The Grouped Line Chart Generator helps you compare multiple trend lines on the same axes so changes over time or sequence are easy to read. It is useful when you want to show how several teams, products, channels, or scenarios move relative to one another instead of focusing on a single series. You can enter grouped data, adjust titles, colors, legends, and line options, then export the final chart as PNG or SVG after reviewing the live preview in the browser.",
   "usage_steps": [
-    "1. Load data via CSV/JSON upload or manual entry in the tabular editor, specifying delimiter types (commas, tabs, semicolons)",
-    "2. Map columns to data series using the 'Add Series' dropdown, selecting X/Y axis fields and choosing interpolation methods (linear, step, monotone)",
-    "3. Configure visual parameters in the 'Style Panel' including stroke width (1-5px), opacity gradients, and color palettes (RGB/HEX inputs or preset schemes)",
-    "4. Adjust axis scales using the 'Scale Settings' menu - enable logarithmic transforms, set domain boundaries, or lock aspect ratios",
-    "5. Enable interactive features via the 'Tooltip Control' panel, selecting data fields for display and customizing hover effects",
-    "6. Generate chart with the 'Render' button, then use the 'Export Manager' to download SVG/PNG files or copy embedded HTML code"
+    "Add the labels, values, and series names you want to plot in the grouped line chart editor.",
+    "Set the chart title and confirm the line labels clearly identify each series.",
+    "Adjust colors, markers, legend visibility, and other display settings to improve contrast.",
+    "Check the preview to make sure the trend lines are easy to follow and the categories are in the right order.",
+    "Export the finished grouped line chart as PNG or SVG for reports, presentations, or product docs."
   ],
   "usage_examples": [
-    "Comparing monthly website traffic sources (organic, paid, referral) across three years with dual Y-axis for bounce rate overlay",
-    "Visualizing temperature and humidity trends from five IoT sensors in a warehouse with 15-minute interval data points",
-    "Analyzing stock market volatility by plotting daily closing prices of tech companies against NASDAQ composite index",
-    "Tracking A/B test conversion rates across four demographic segments with confidence interval shading between data series"
+    "Compare monthly active users across several regions on a single timeline.",
+    "Show weekly sales trends for multiple product categories in one management update.",
+    "Track response time changes across environments after a rollout or infrastructure update."
   ]
 }

@@ -9,6 +9,7 @@
  */
 
 import { getPublicSiteUrl } from '@/lib/public-env';
+import { withPageUrlTrailingSlash } from '@/lib/seo';
 
 interface BreadcrumbItem {
   label: string;
@@ -32,7 +33,7 @@ const breadcrumbJsonLd = {
     '@type': 'ListItem',
     position: index + 1,
     name: item.label,
-    item: item.href.startsWith('http') ? item.href : `${BASE_URL}${item.href}`,
+    item: item.href.startsWith('http') ? withPageUrlTrailingSlash(item.href) : withPageUrlTrailingSlash(`${BASE_URL}${item.href}`),
   })),
 };
 ---
@@ -58,7 +59,7 @@ const breadcrumbJsonLd = {
           </span>
         ) : (
           <a
-            href={item.href}
+            href={withPageUrlTrailingSlash(item.href)}
             class="hover:text-amber-600 dark:hover:text-amber-400 transition-all duration-300 truncate max-w-[150px] sm:max-w-xs md:max-w-md lg:max-w-none hover:underline hover:underline-offset-4 decoration-amber-500/30"
           >
             {item.label}

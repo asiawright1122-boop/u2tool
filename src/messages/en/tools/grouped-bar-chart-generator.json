@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Grouped Bar Chart Generator enables developers to create multi-series categorical visualizations by rendering scalable vector graphics (SVG) that display parallel data comparisons. This tool specializes in D3.js-based data binding, allowing users to map JSON or CSV inputs to X (categorical), Y (numerical), and Z (grouping) dimensions. Unlike standard charting libraries, it implements nested scales for secondary axis alignment and supports custom color schemes via HEX/RGB inputs. The engine performs automatic domain scaling with optional manual overrides, handles collision detection for clustered bars, and generates interactive legends with click-to-toggle functionality. Developers benefit from its ability to produce publication-quality visualizations for dashboards, research papers, or business intelligence reports where side-by-side metric comparisons across multiple variables are required.",
+  "detailed_description": "The Grouped Bar Chart Generator helps you compare several series side by side within the same category. It is a practical choice for showing differences across teams, regions, plans, or time periods when viewers need clear one-to-one comparisons. You can enter grouped values, adjust titles, legends, colors, and spacing, then preview the result in the browser before exporting it as PNG or SVG for reports, decks, or dashboard mockups.",
   "usage_steps": [
-    "Paste tabular data with headers in CSV or JSON format into the input panel",
-    "Select categorical axis (X) and numerical axis (Y) from detected fields",
-    "Assign grouping dimension (Z) to create clustered bar sets",
-    "Customize bar width, spacing ratios, and color gradients using HEX/RGB pickers",
-    "Enable data labels, error bars, or gridlines through the display settings panel",
-    "Export generated SVG code or download PNG/PDF renderings with specified resolution"
+    "Add category labels and the grouped values you want to compare in the chart editor.",
+    "Set the chart title and series names so each cluster is easy to interpret.",
+    "Adjust colors, legend visibility, and spacing to keep the grouped bars readable.",
+    "Review the preview and refine labels or values if any category feels crowded.",
+    "Export the grouped bar chart as PNG or SVG once the comparison is presentation-ready."
   ],
   "usage_examples": [
-    "Comparing quarterly revenue across three product lines with regional breakdowns",
-    "Visualizing A/B test results showing conversion rates across device types and demographics",
-    "Displaying scientific experiment data with mean values and error margins for multiple trials",
-    "Tracking monthly energy consumption patterns across different building sectors in a sustainability report"
+    "Compare quarterly revenue across product lines within each region.",
+    "Show survey results by audience segment for the same set of questions.",
+    "Present monthly performance by channel so stakeholders can compare categories side by side."
   ]
 }

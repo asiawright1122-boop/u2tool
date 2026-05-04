@@ -7,7 +7,7 @@
 import { sitemapLastmodManifest } from '@/generated/sitemap-lastmod';
 import { locales } from '@/lib/i18n';
 import { getPublicSiteUrl } from '@/lib/public-env';
-import { getHreflang } from '@/lib/seo';
+import { buildLocalizedPageUrl, getHreflang, withPageUrlTrailingSlash } from '@/lib/seo';
 
 const BASE_URL = getPublicSiteUrl();
 export const SITEMAP_LASTMOD = sitemapLastmodManifest.site;
@@ -16,7 +16,7 @@ export const SITEMAP_LASTMOD = sitemapLastmodManifest.site;
  * 构建单个 URL 条目，包含 hreflang 标签
  */
 export function buildUrl(path: string, priority: string, changefreq: string, lastmod = SITEMAP_LASTMOD): string {
-  const loc = esc(`${BASE_URL}${path}`);
+  const loc = esc(withPageUrlTrailingSlash(`${BASE_URL}${path}`));
   // Extract the path part after locale for hreflang alternates
   const parts = path.split('/');
   const pathSegmentsAfterLocale = parts.slice(2).filter(Boolean);
@@ -25,7 +25,7 @@ export function buildUrl(path: string, priority: string, changefreq: string, las
   // Generate hreflang tags with language-region codes
   const alternates = locales.map(l => {
     const hreflang = getHreflang(l);
-    return `    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${esc(`${BASE_URL}/${l}${pathAfterLocale}`)}" />`;
+    return `    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${esc(buildLocalizedPageUrl(BASE_URL, l, pathAfterLocale || '/'))}" />`;
   }).join('\n');
 
   return `  <url>
@@ -34,7 +34,7 @@ export function buildUrl(path: string, priority: string, changefreq: string, las
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
 ${alternates}
-    <xhtml:link rel="alternate" hreflang="x-default" href="${esc(`${BASE_URL}/en${pathAfterLocale}`)}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${esc(buildLocalizedPageUrl(BASE_URL, 'en', pathAfterLocale || '/'))}" />
   </url>`;
 }
 

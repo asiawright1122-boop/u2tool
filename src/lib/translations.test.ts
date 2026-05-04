@@ -1,5 +1,17 @@
 import { describe, it, expect } from 'vitest';
+import { readFileSync } from 'node:fs';
 import { createTranslator, loadBaseMessages, loadToolMessages } from './translations';
+
+function readSplitToolMessages(slug: string): Record<string, unknown> {
+  return JSON.parse(readFileSync(new URL(`../messages/en/tools/${slug}.json`, import.meta.url), 'utf-8'));
+}
+
+function readAggregateToolMessages(slug: string): Record<string, unknown> {
+  const aggregate = JSON.parse(readFileSync(new URL('../messages/en.json', import.meta.url), 'utf-8'));
+  return aggregate.tools[slug] as Record<string, unknown>;
+}
+
+const splitSupportKeys = ['detailed_description', 'usage_steps', 'usage_examples', 'faqs'];
 
 describe('translations module', () => {
   describe('createTranslator', () => {
@@ -102,6 +114,29 @@ describe('translations module', () => {
       expect(tools['jwt-decoder']?.seo_description).toContain('without verification');
       expect(tools['jwt-debugger']?.name).toBe('JWT Debugger');
       expect(tools['jwt-debugger']?.seo_description).toContain('Debug JWT tokens online');
+    });
+
+    it('prefers split tool support copy over stale aggregate locale content', async () => {
+      const aggregateBase64 = readAggregateToolMessages('base64');
+      const splitBase64 = readSplitToolMessages('base64');
+      const base64Messages = await loadToolMessages('en', 'base64');
+
+      expect(base64Messages.name).toBe(aggregateBase64.name);
+      for (const key of splitSupportKeys) {
+        if (splitBase64[key] !== undefined) {
+          expect(base64Messages[key]).toEqual(splitBase64[key]);
+        }
+      }
+    });
+
+    it('keeps JWT decoder support copy aligned to decoder intent instead of debugger copy', async () => {
+      const splitJwtDecoder = readSplitToolMessages('jwt-decoder');
+      const jwtDecoderMessages = await loadToolMessages('en', 'jwt-decoder');
+
+      expect(jwtDecoderMessages.name).toBe('JWT Decoder');
+      expect(jwtDecoderMessages.detailed_description).toBe(splitJwtDecoder.detailed_description);
+      expect(String(jwtDecoderMessages.detailed_description)).toContain('JWT Decoder');
+      expect(String(jwtDecoderMessages.detailed_description)).not.toContain('JWT Debugger');
     });
   });
 });

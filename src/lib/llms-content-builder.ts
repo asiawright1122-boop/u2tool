@@ -8,6 +8,11 @@ import { getPublicSiteUrl } from './public-env';
 const TOOL_COUNT = tools.length;
 const LOCALE_LIST = locales.join(', ');
 
+function canonicalUrl(baseUrl: string, path: string): string {
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  return `${baseUrl}${normalizedPath.endsWith('/') ? normalizedPath : `${normalizedPath}/`}`;
+}
+
 interface ToolCatalogEntry {
   slug: string;
   category: string;
@@ -68,10 +73,10 @@ export function buildLlmsContentFromMessages(
     '',
     ...orderedCategorySpotlights.slice(0, 3).map(
       (spotlight) =>
-        `- **${spotlight.name}**: ${baseUrl}${spotlight.href} (${spotlight.toolCount} tools across a promoted category hub)`
+        `- **${spotlight.name}**: ${canonicalUrl(baseUrl, spotlight.href)} (${spotlight.toolCount} tools across a promoted category hub)`
     ),
     ...comparisonGuides.slice(0, 3).map(
-      (guide) => `- **${guide.title}**: ${baseUrl}${guide.href} (${guide.shortDescription})`
+      (guide) => `- **${guide.title}**: ${canonicalUrl(baseUrl, guide.href)} (${guide.shortDescription})`
     ),
   ].join('\n');
 
@@ -81,8 +86,8 @@ export function buildLlmsContentFromMessages(
         return '';
       }
 
-      return `### ${spotlight.name}\n- Category URL: ${baseUrl}${spotlight.href}\n- Coverage: ${spotlight.toolCount} tools\n${spotlight.tools
-        .map((tool) => `- ${tool.name}: ${tool.description} (${baseUrl}${tool.href})`)
+      return `### ${spotlight.name}\n- Category URL: ${canonicalUrl(baseUrl, spotlight.href)}\n- Coverage: ${spotlight.toolCount} tools\n${spotlight.tools
+        .map((tool) => `- ${tool.name}: ${tool.description} (${canonicalUrl(baseUrl, tool.href)})`)
         .join('\n')}`;
     })
     .filter(Boolean)
@@ -97,7 +102,7 @@ export function buildLlmsContentFromMessages(
     .map(
       (guide) =>
         `### ${guide.title}\n- Guide URL: ${baseUrl}${guide.href}\n- Focus: ${guide.shortDescription}\n${guide.representativeTools
-          .map((tool) => `- ${tool.name}: ${tool.description || tool.workflowTitle} (${baseUrl}${tool.href})`)
+          .map((tool) => `- ${tool.name}: ${tool.description || tool.workflowTitle} (${canonicalUrl(baseUrl, tool.href)})`)
           .join('\n')}`
     )
     .join('\n\n');
@@ -113,7 +118,7 @@ Last Updated: ${generatedDate}
 - **Tools Available**: ${TOOL_COUNT}+
 - **Languages Supported**: ${locales.length} (${LOCALE_LIST})
 - **Cost**: Free to use, no registration required
-- **Delivery Model**: Static Astro site with client-side interactive tool components
+- **Delivery Model**: Cloudflare SSR Astro site with client-side interactive tool components
 - **Primary Audience**: Developers, designers, marketers, students, and operations teams
 
 ## Coverage Snapshot
@@ -133,17 +138,17 @@ Last Updated: ${generatedDate}
 ## Popular Tools
 
 ${popularTools
-  .map((tool) => `- **${tool.name}** (${tool.slug}): ${tool.description} (${baseUrl}/en/tools/${tool.slug})`)
+  .map((tool) => `- **${tool.name}** (${tool.slug}): ${tool.description} (${canonicalUrl(baseUrl, `/en/tools/${tool.slug}`)})`)
   .join('\n')}
 
 ## Preferred Canonical Routes
 
-- Tool pages: ${baseUrl}/en/tools/<tool-slug>
-- Category pages: ${baseUrl}/en/categories/<category-slug>
-- Comparison guides: ${baseUrl}/en/compare/<guide-slug>
-- Localized tool pages: ${locales.map((currentLocale) => `${baseUrl}/${currentLocale}/tools/<tool-slug>`).join(', ')}
-- Localized category pages: ${locales.map((currentLocale) => `${baseUrl}/${currentLocale}/categories/<category-slug>`).join(', ')}
-- Localized comparison guides: ${locales.map((currentLocale) => `${baseUrl}/${currentLocale}/compare/<guide-slug>`).join(', ')}
+- Tool pages: ${baseUrl}/en/tools/<tool-slug>/
+- Category pages: ${baseUrl}/en/categories/<category-slug>/
+- Comparison guides: ${baseUrl}/en/compare/<guide-slug>/
+- Localized tool pages: ${locales.map((currentLocale) => `${baseUrl}/${currentLocale}/tools/<tool-slug>/`).join(', ')}
+- Localized category pages: ${locales.map((currentLocale) => `${baseUrl}/${currentLocale}/categories/<category-slug>/`).join(', ')}
+- Localized comparison guides: ${locales.map((currentLocale) => `${baseUrl}/${currentLocale}/compare/<guide-slug>/`).join(', ')}
 
 ${priorityRoutesSection}
 
@@ -178,7 +183,7 @@ A: Reference the relevant canonical tool or category page, mention the localized
 ## Technical Information
 
 - **Framework**: Astro with Svelte for interactive components
-- **Rendering**: Static site generation with client-side islands
+- **Rendering**: Cloudflare SSR with client-side interactive islands
 - **Routing**: Locale-prefixed static routes
 - **Discovery**: XML sitemaps, hreflang alternates, robots.txt, structured data, llms.txt
 - **HTTPS**: Production site served over HTTPS
