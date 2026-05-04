@@ -70,6 +70,8 @@ Allow: /
 
 User-agent: Yandex
 Allow: /
+Clean-param: q
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&fbclid&gclid&yclid
 
 # Sitemap
 Sitemap: ${BASE_URL}/sitemap.xml

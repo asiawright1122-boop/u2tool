@@ -1,0 +1,237 @@
+const BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
+const SUPPORTED_LOCALES = ['en', 'zh-CN', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'];
+
+interface HtmlCheck {
+  name: string;
+  path: string;
+  canonicalPath?: string;
+  requiredSchema: string[];
+  requiredBody: string[];
+}
+
+const htmlChecks: HtmlCheck[] = [
+  {
+    name: 'Homepage',
+    path: '/en/',
+    requiredSchema: ['Organization', 'WebSite'],
+    requiredBody: ['Free Online Tools', 'Text Tools', 'JSON Formatter'],
+  },
+  {
+    name: 'Tools index',
+    path: '/en/tools/',
+    requiredSchema: ['Organization', 'WebSite', 'CollectionPage'],
+    requiredBody: ['500+ Free Online Tools', 'Text Tools', 'Choose the Right Text Tool'],
+  },
+  {
+    name: 'Tools search canonical',
+    path: '/en/tools/?q=word',
+    canonicalPath: '/en/tools/',
+    requiredSchema: ['Organization', 'WebSite', 'CollectionPage'],
+    requiredBody: ['Word Counter', 'https://www.u2tool.com/en/tools/word-counter/'],
+  },
+  {
+    name: 'AI discovery fallback',
+    path: '/en/ai/',
+    requiredSchema: ['Organization', 'WebSite'],
+    requiredBody: ['AI Tool Discovery', 'Text Tools', 'Choose the Right Text Tool'],
+  },
+  {
+    name: 'Representative tool detail',
+    path: '/en/tools/json-formatter/',
+    requiredSchema: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    requiredBody: ['JSON Formatter', 'Choose the Right JSON Tool'],
+  },
+  {
+    name: 'Representative category',
+    path: '/en/categories/text/',
+    requiredSchema: ['Organization', 'WebSite', 'CollectionPage', 'BreadcrumbList'],
+    requiredBody: ['Text Tools', 'Word Counter', 'Case Converter'],
+  },
+  {
+    name: 'Representative comparison',
+    path: '/en/compare/choose-text-tool/',
+    requiredSchema: ['Organization', 'WebSite', 'CollectionPage', 'BreadcrumbList'],
+    requiredBody: ['Choose the Right Text Tool', 'Word Counter', 'Diff Checker'],
+  },
+];
+
+function assert(condition: unknown, message: string): void {
+  if (!condition) {
+    throw new Error(message);
+  }
+}
+
+async function fetchText(path: string): Promise<{ response: Response; text: string }> {
+  const response = await fetch(`${BASE_URL}${path}`, { redirect: 'follow' });
+  return { response, text: await response.text() };
+}
+
+function getTagContent(html: string, selector: 'title' | 'description' | 'canonical' | 'robots'): string {
+  if (selector === 'title') {
+    return html.match(/<title>(.*?)<\/title>/is)?.[1]?.replace(/\s+/g, ' ').trim() || '';
+  }
+
+  const tagName = selector === 'canonical' ? 'link' : 'meta';
+  const attribute = selector === 'canonical' ? 'rel' : 'name';
+  const tag = html.match(new RegExp(`<${tagName}\\b(?=[^>]*\\b${attribute}=["']${selector}["'])[^>]*>`, 'i'))?.[0] || '';
+  const valueAttribute = selector === 'canonical' ? 'href' : 'content';
+  return tag.match(new RegExp(`\\b${valueAttribute}=(["'])(.*?)\\1`, 'i'))?.[2]?.trim() || '';
+}
+
+function extractJsonLdTypes(html: string): string[] {
+  const scripts = Array.from(
+    html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)
+  ).map((match) => match[1].trim());
+  const types = new Set<string>();
+
+  for (const script of scripts) {
+    const parsed = JSON.parse(script) as unknown;
+    const values = Array.isArray(parsed) ? parsed : [parsed];
+    for (const value of values) {
+      if (value && typeof value === 'object' && '@type' in value) {
+        const type = (value as { '@type'?: unknown })['@type'];
+        if (typeof type === 'string') {
+          types.add(type);
+        }
+      }
+    }
+  }
+
+  return Array.from(types);
+}
+
+function extractLocs(xml: string): string[] {
+  return Array.from(xml.matchAll(/<loc>(.*?)<\/loc>/g)).map((match) => match[1]);
+}
+
+function assertNoLeaks(name: string, text: string): void {
+  assert(!text.includes('${BASE_URL}'), `${name}: unresolved BASE_URL placeholder leaked`);
+  assert(!text.includes('MISSING:'), `${name}: missing translation placeholder leaked`);
+  assert(!text.includes('/en/tools/word-counter"'), `${name}: non-canonical word-counter URL leaked`);
+}
+
+async function validateRobots(): Promise<void> {
+  const { response, text } = await fetchText('/robots.txt');
+  assert(response.status === 200, `robots.txt: expected 200, got ${response.status}`);
+  assert((response.headers.get('content-type') || '').includes('text/plain'), 'robots.txt: expected text/plain');
+  for (const expected of [
+    'User-agent: *',
+    'Allow: /',
+    'Disallow: /api/',
+    `Sitemap: ${BASE_URL}/sitemap.xml`,
+    `Sitemap: ${BASE_URL}/sitemap-priority.xml`,
+    `Sitemap: ${BASE_URL}/sitemap-pages.xml`,
+    `Sitemap: ${BASE_URL}/sitemap-tools.xml`,
+    'User-agent: Yandex',
+    'Clean-param: q',
+    'Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&fbclid&gclid&yclid',
+  ]) {
+    assert(text.includes(expected), `robots.txt: missing "${expected}"`);
+  }
+}
+
+async function validateIndexNowKey(): Promise<void> {
+  const { response, text } = await fetchText('/u2tool2026indexnowkey.txt');
+  assert(response.status === 200, `IndexNow key: expected 200, got ${response.status}`);
+  assert(text.trim() === 'u2tool2026indexnowkey', 'IndexNow key: unexpected key content');
+}
+
+async function validateSitemaps(): Promise<void> {
+  const [{ text: indexXml }, { text: priorityXml }, { text: pagesXml }, { text: toolsXml }] = await Promise.all([
+    fetchText('/sitemap.xml'),
+    fetchText('/sitemap-priority.xml'),
+    fetchText('/sitemap-pages.xml'),
+    fetchText('/sitemap-tools.xml'),
+  ]);
+
+  for (const [name, xml] of [
+    ['sitemap index', indexXml],
+    ['priority sitemap', priorityXml],
+    ['pages sitemap', pagesXml],
+    ['tools sitemap', toolsXml],
+  ] as const) {
+    assertNoLeaks(name, xml);
+    assert(xml.includes('<lastmod>2026-05-04</lastmod>'), `${name}: lastmod is not aligned to the recovery deploy date`);
+  }
+
+  const priorityLocs = extractLocs(priorityXml);
+  const pageLocs = extractLocs(pagesXml);
+  const toolLocs = extractLocs(toolsXml);
+  assert(new Set(priorityLocs).size === priorityLocs.length, 'priority sitemap: duplicate URL');
+  assert(new Set(pageLocs).size === pageLocs.length, 'pages sitemap: duplicate URL');
+  assert(new Set(toolLocs).size === toolLocs.length, 'tools sitemap: duplicate URL');
+  assert(priorityLocs.length < 50_000 && pageLocs.length < 50_000 && toolLocs.length < 50_000, 'sitemap: URL count exceeds per-file limit');
+  assert(priorityLocs.includes(`${BASE_URL}/en/ai/`), 'priority sitemap: missing /en/ai/');
+  assert(pageLocs.includes(`${BASE_URL}/en/ai/`), 'pages sitemap: missing /en/ai/');
+  assert(toolLocs.includes(`${BASE_URL}/en/tools/json-formatter/`), 'tools sitemap: missing JSON Formatter');
+  assert([...priorityLocs, ...pageLocs, ...toolLocs].every((url) => url.startsWith(`${BASE_URL}/`)), 'sitemap: non-canonical host leaked');
+  assert([...priorityLocs, ...pageLocs, ...toolLocs].every((url) => !url.includes('?')), 'sitemap: query URL leaked');
+}
+
+async function validateHtml(check: HtmlCheck): Promise<void> {
+  const { response, text: html } = await fetchText(check.path);
+  assert(response.status === 200, `${check.name}: expected 200, got ${response.status}`);
+  assert((response.headers.get('content-type') || '').includes('text/html'), `${check.name}: expected HTML`);
+  assertNoLeaks(check.name, html);
+
+  const title = getTagContent(html, 'title');
+  const description = getTagContent(html, 'description');
+  const canonical = getTagContent(html, 'canonical');
+  const robots = getTagContent(html, 'robots');
+  const h1 = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1]?.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim() || '';
+  const expectedCanonical = `${BASE_URL}${check.canonicalPath || check.path}`;
+
+  assert(title.length >= 10 && title.length <= 70, `${check.name}: title length ${title.length} outside safe range`);
+  assert(description.length >= 50 && description.length <= 180, `${check.name}: description length ${description.length} outside safe range`);
+  assert(canonical === expectedCanonical, `${check.name}: canonical "${canonical}" does not match "${expectedCanonical}"`);
+  assert(robots.includes('index') && robots.includes('follow') && !robots.includes('noindex'), `${check.name}: robots meta is not indexable`);
+  assert(h1.length > 0, `${check.name}: missing H1`);
+
+  const hreflangValues = Array.from(html.matchAll(/hreflang=["']([^"']+)["']/gi)).map((match) => match[1]);
+  for (const locale of [...SUPPORTED_LOCALES, 'x-default']) {
+    assert(hreflangValues.includes(locale), `${check.name}: missing hreflang ${locale}`);
+  }
+
+  const schemaTypes = extractJsonLdTypes(html);
+  for (const type of check.requiredSchema) {
+    assert(schemaTypes.includes(type), `${check.name}: missing JSON-LD type ${type}`);
+  }
+
+  for (const expected of check.requiredBody) {
+    assert(html.includes(expected), `${check.name}: body missing "${expected}"`);
+  }
+}
+
+async function main(): Promise<void> {
+  const tasks: Array<[string, () => Promise<void>]> = [
+    ['robots.txt', validateRobots],
+    ['IndexNow key', validateIndexNowKey],
+    ['sitemaps', validateSitemaps],
+    ...htmlChecks.map((check): [string, () => Promise<void>] => [check.name, () => validateHtml(check)]),
+  ];
+  const failures: string[] = [];
+
+  for (const [name, task] of tasks) {
+    try {
+      await task();
+      console.log(`OK  ${name}`);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      failures.push(message);
+      console.log(`FAIL ${name} -> ${message}`);
+    }
+  }
+
+  if (failures.length > 0) {
+    console.log(`\n${failures.length} search-engine compliance checks failed. BASE_URL=${BASE_URL}`);
+    process.exitCode = 1;
+    return;
+  }
+
+  console.log(`\nAll search-engine compliance checks passed. BASE_URL=${BASE_URL}`);
+}
+
+main().catch((error) => {
+  console.error(`Unexpected compliance validation error: ${error instanceof Error ? error.message : String(error)}`);
+  process.exitCode = 1;
+});
