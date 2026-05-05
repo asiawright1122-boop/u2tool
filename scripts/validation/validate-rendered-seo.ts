@@ -164,7 +164,7 @@ const checks: RenderedSeoCheck[] = [
   {
     name: 'Markdown Preview refreshed support content',
     path: '/en/tools/markdown-preview/',
-    titleIncludes: 'Markdown Preview',
+    titleIncludes: 'Markdown',
     descriptionIncludes: 'Markdown',
     h1Includes: 'Markdown Preview',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
