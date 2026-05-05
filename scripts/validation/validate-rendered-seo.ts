@@ -12,6 +12,18 @@ interface RenderedSeoCheck {
   bodyMustNotInclude?: string[];
 }
 
+const requiredSocialMeta = [
+  ['property', 'og:title'],
+  ['property', 'og:description'],
+  ['property', 'og:image'],
+  ['property', 'og:url'],
+  ['property', 'og:site_name'],
+  ['name', 'twitter:card'],
+  ['name', 'twitter:title'],
+  ['name', 'twitter:description'],
+  ['name', 'twitter:image'],
+] as const;
+
 const checks: RenderedSeoCheck[] = [
   {
     name: 'English homepage',
@@ -110,6 +122,15 @@ const checks: RenderedSeoCheck[] = [
     bodyMustNotInclude: ['Preserve Transparency', 'target encoding format'],
   },
   {
+    name: 'Comparison guides index',
+    path: '/en/compare/',
+    titleIncludes: 'Choose the Right',
+    descriptionIncludes: 'tool',
+    h1Includes: 'Choose the Right',
+    schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList'],
+    bodyMustInclude: ['JSON', 'JWT'],
+  },
+  {
     name: 'JWT comparison guide',
     path: '/en/compare/choose-jwt-tool/',
     titleIncludes: 'JWT',
@@ -188,6 +209,15 @@ function extractJsonLdTypes(html: string): string[] {
   return Array.from(types);
 }
 
+function hasMetaTag(html: string, attributeName: 'name' | 'property', attributeValue: string): boolean {
+  const escapedValue = attributeValue.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const pattern = new RegExp(
+    `<meta\\b(?=[^>]*\\b${attributeName}=["']${escapedValue}["'])(?=[^>]*\\bcontent=["'][^"']+["'])[^>]*>`,
+    'i'
+  );
+  return pattern.test(html);
+}
+
 async function validateCheck(check: RenderedSeoCheck): Promise<void> {
   const url = `${BASE_URL}${check.path}`;
   const response = await fetchWithRetry(url, { redirect: 'follow' });
@@ -211,6 +241,13 @@ async function validateCheck(check: RenderedSeoCheck): Promise<void> {
   assert(canonical === canonicalUrl, `${check.name}: canonical "${canonical}" does not match "${canonicalUrl}"`);
   assert(robots.includes('index') && robots.includes('follow') && !robots.includes('noindex'), `${check.name}: robots meta is not indexable`);
   assert((html.match(/rel=["']alternate["']\s+hreflang=/g) || []).length >= 10, `${check.name}: missing hreflang alternates`);
+
+  for (const [attributeName, attributeValue] of requiredSocialMeta) {
+    assert(
+      hasMetaTag(html, attributeName, attributeValue),
+      `${check.name}: missing social meta ${attributeName}="${attributeValue}"`
+    );
+  }
 
   for (const schemaType of check.schemaTypes) {
     assert(schemaTypes.includes(schemaType), `${check.name}: missing JSON-LD type ${schemaType}`);

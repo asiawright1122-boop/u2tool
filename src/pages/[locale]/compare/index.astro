@@ -84,7 +84,11 @@ const collectionData = {
   <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
   <meta property="og:type" content="website" slot="head" />
   <meta property="og:url" content={buildLocalizedPageUrl(BASE_URL, locale, '/compare')} slot="head" />
+  <meta property="og:site_name" content="U2Tool" slot="head" />
   <meta name="twitter:card" content="summary_large_image" slot="head" />
+  <meta name="twitter:title" content={`${uiCopy.comparisonSectionTitle} | U2Tool`} slot="head" />
+  <meta name="twitter:description" content={uiCopy.comparisonSectionDescription} slot="head" />
+  <meta name="twitter:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
 
   <StaticSidebar
     locale={locale}

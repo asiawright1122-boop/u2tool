@@ -104,7 +104,11 @@ const collectionData = {
   <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
   <meta property="og:type" content="website" slot="head" />
   <meta property="og:url" content={`${BASE_URL}${guide.href}`} slot="head" />
+  <meta property="og:site_name" content="U2Tool" slot="head" />
   <meta name="twitter:card" content="summary_large_image" slot="head" />
+  <meta name="twitter:title" content={`${guide.title} | U2Tool`} slot="head" />
+  <meta name="twitter:description" content={guide.description} slot="head" />
+  <meta name="twitter:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
 
   <StaticSidebar
     locale={locale}
