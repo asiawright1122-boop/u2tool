@@ -224,7 +224,14 @@ for (const [key, value] of Object.entries(toolsCommon)) {
     }
   }
 }
-const toolTranslations = { tools: { ...genericToolKeys, [tool.slug]: messages } };
+const safeToolMessages: Record<string, unknown> = { ...messages };
+if (supportContentTrust.blockSupportContent) {
+  safeToolMessages.detailed_description = detailedDescription;
+  safeToolMessages.usage_steps = usageSteps ?? [];
+  safeToolMessages.usage_examples = usageExamples ?? [];
+  safeToolMessages.faqs = [];
+}
+const toolTranslations = { tools: { ...genericToolKeys, [tool.slug]: safeToolMessages } };
 const sameCategoryTools = getToolsByCategory(tool.category)
   .filter((t) => t.slug !== tool.slug)
   .slice(0, 6);
