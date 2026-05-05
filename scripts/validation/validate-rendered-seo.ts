@@ -124,9 +124,9 @@ const checks: RenderedSeoCheck[] = [
   {
     name: 'Comparison guides index',
     path: '/en/compare/',
-    titleIncludes: 'Choose the Right',
+    titleIncludes: 'Choose the right',
     descriptionIncludes: 'tool',
-    h1Includes: 'Choose the Right',
+    h1Includes: 'Choose the right',
     schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList'],
     bodyMustInclude: ['JSON', 'JWT'],
   },
