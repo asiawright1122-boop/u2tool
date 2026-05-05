@@ -52,3 +52,44 @@ describe('buildSafeFallbackSupportContent', () => {
     expect(report.blockSupportContent).toBe(false);
   });
 });
+
+describe('assessSupportContentTrust', () => {
+  it('blocks high-confidence Word Counter implementation overclaims', () => {
+    const report = assessSupportContentTrust({
+      slug: 'word-counter',
+      locale: 'en',
+      name: 'Word Counter',
+      description: '',
+      detailedDescription:
+        'The tool backend processes text streams using finite-state automata and a Web Workers implementation.',
+      usageSteps: ['Review sentence boundaries identified via Punkt algorithm.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toEqual(
+      expect.arrayContaining([
+        'word-counter-backend-automata',
+        'web-workers-claim',
+        'punkt-algorithm-claim',
+      ])
+    );
+  });
+
+  it('keeps scoped rules from blocking unrelated tools', () => {
+    const report = assessSupportContentTrust({
+      slug: 'timezone-converter',
+      locale: 'en',
+      name: 'Timezone Converter',
+      description: '',
+      detailedDescription:
+        'The tool uses timezone data and exposes dual timezone selectors for quick planning.',
+      usageSteps: ['Adjust the quality slider when exporting an image in a different workflow.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(false);
+  });
+});

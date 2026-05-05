@@ -30,8 +30,15 @@
  *   issues: ContentTrustIssue[],
  *   score: number,
  * }} ContentTrustReport
+ * @typedef {{
+ *   code: string,
+ *   pattern: RegExp,
+ *   message: string,
+ *   slugs?: string[],
+ * }} ContentTrustRule
  */
 
+/** @type {ContentTrustRule[]} */
 export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
   {
     code: 'imagemagick-runtime',
@@ -73,8 +80,75 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     pattern: /\bauthoritative server IP geolocation metadata\b/i,
     message: 'Claims advanced DNS response enrichment that is not evidenced in the repo.',
   },
+  {
+    code: 'word-counter-backend-automata',
+    pattern: /\bbackend processes text streams using finite-state automata\b/i,
+    message: 'Claims a backend finite-state text engine, but the Word Counter component performs simple browser-side counts.',
+    slugs: ['word-counter'],
+  },
+  {
+    code: 'web-workers-claim',
+    pattern: /\bWeb Workers implementation\b/i,
+    message: 'Claims Web Worker execution that is not evidenced in the current tool implementation.',
+    slugs: ['word-counter'],
+  },
+  {
+    code: 'punkt-algorithm-claim',
+    pattern: /\bPunkt algorithm\b/i,
+    message: 'Claims Punkt sentence detection that is not present in the browser tool implementation.',
+    slugs: ['word-counter'],
+  },
+  {
+    code: 'unsupported-file-upload-claim',
+    pattern: /\bdrag\/drop a \.txt\/\.docx file\b/i,
+    message: 'Claims text/document drag-and-drop upload that is not present in the tool UI.',
+    slugs: ['word-counter'],
+  },
+  {
+    code: 'unsupported-export-dropdown',
+    pattern: /\bExport Data['’]? dropdown\b/i,
+    message: 'Claims an export dropdown that is not present in the current tool UI.',
+    slugs: ['word-counter'],
+  },
+  {
+    code: 'jwt-signature-verification-claim',
+    pattern: /\bvalidate(?:s| the)? token'?s signature\b|\bSignature Verification\b/i,
+    message: 'Claims JWT signature verification, but the current decoder only decodes and displays token parts.',
+    slugs: ['jwt-decoder'],
+  },
+  {
+    code: 'pcre2-runtime-claim',
+    pattern: /\bPCRE2\b/i,
+    message: 'Claims PCRE2 regex support, while the current Regex Tester uses the browser JavaScript RegExp engine.',
+    slugs: ['regex-tester'],
+  },
+  {
+    code: 'regex-replacement-preview-claim',
+    pattern: /\breplacement preview mode\b|\bsimulate substitution operations\b/i,
+    message: 'Claims regex replacement preview functionality that is not present in the current UI.',
+    slugs: ['regex-tester'],
+  },
+  {
+    code: 'webassembly-conversion-engine',
+    pattern: /\bWebAssembly-based conversion engine\b/i,
+    message: 'Claims a WebAssembly conversion engine that is not evidenced in the current timestamp tool.',
+    slugs: ['timestamp-converter'],
+  },
+  {
+    code: 'iana-timezone-picker-claim',
+    pattern: /\bTimezone Offset Picker\b|\bmanual timezone specification\b|\bsearch for specific location via IANA Time Zone Database\b/i,
+    message: 'Claims manual IANA timezone selection that is not present in the current timestamp UI.',
+    slugs: ['timestamp-converter'],
+  },
+  {
+    code: 'image-base64-transcode-claim',
+    pattern: /\bPreserve Transparency\b|\btarget encoding format\b/i,
+    message: 'Claims image transcoding controls that are not present in the current Image to Base64 UI.',
+    slugs: ['image-to-base64'],
+  },
 ];
 
+/** @type {ContentTrustRule[]} */
 export const MEDIUM_CONFIDENCE_SUPPORT_CONTENT_RULES = [
   {
     code: 'rest-api-claim',
@@ -182,6 +256,10 @@ export function assessSupportContentTrust(input) {
   const applyRules = (rules, severity) => {
     for (const entry of entries) {
       for (const rule of rules) {
+        if (Array.isArray(rule.slugs) && !rule.slugs.includes(input.slug)) {
+          continue;
+        }
+
         const match = entry.text.match(rule.pattern);
         if (!match || typeof match.index !== 'number') {
           continue;
