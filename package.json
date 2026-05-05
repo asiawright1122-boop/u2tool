@@ -19,6 +19,7 @@
     "validate:production-routes": "node scripts/validation/verify-production-routes.mjs",
     "validate:seo-alignment": "node --import tsx/esm scripts/validation/seo-alignment-audit.ts",
     "validate:technical-seo": "node --import tsx/esm scripts/validation/validate-technical-seo.ts",
+    "validate:sitemap-url-health": "node --import tsx/esm scripts/validation/validate-sitemap-url-health.ts",
     "validate:llms-discovery": "node --import tsx/esm scripts/validation/validate-llms-discovery.ts",
     "validate:rendered-seo": "node --import tsx/esm scripts/validation/validate-rendered-seo.ts",
     "validate:worker-ssr": "node --import tsx/esm scripts/validation/validate-worker-ssr-health.ts",
