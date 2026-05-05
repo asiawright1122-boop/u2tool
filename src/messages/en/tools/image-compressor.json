@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The Image Compressor tool employs advanced lossy and lossless compression algorithms to reduce image file sizes while preserving visual fidelity. Technically, it leverages discrete cosine transform (DCT) for JPEG optimization, adaptive quantization for PNG compression, and WebP encoding to achieve up to 80% size reduction. Users benefit from faster website loading times, reduced bandwidth usage, and optimized storage efficiency—critical for web developers, photographers, and businesses managing large image repositories. The tool processes images through a multi-stage pipeline: first removing metadata (EXIF, IPTC), then applying format-specific compression (e.g., MozJPEG for JPEGs, OXIPNG for PNGs), and finally enabling quality scaling via a perceptual quality slider. It supports batch processing and maintains alpha transparency in PNGs. Unlike generic tools, it offers granular control over chroma subsampling and allows conversion to next-gen formats like AVIF for modern browser compatibility.",
+  "detailed_description": "The Image Compressor loads a local image in the browser, draws it to a canvas, and exports a compressed JPEG using the selected quality setting. The page shows the original preview, the compressed preview, estimated file sizes, and the percentage reduction before download. It is useful when you need a smaller JPEG for drafts, documentation, uploads, or quick sharing. Because the output is JPEG, transparency is not preserved and some visual loss can occur at lower quality values.",
   "usage_steps": [
-    "1. Drag-and-drop images or click 'Select Files' to upload up to 20 images simultaneously.",
-    "2. Adjust the quality slider (0-100) to balance compression intensity and visual quality.",
-    "3. Enable 'Advanced Mode' to customize chroma subsampling (4:4:4, 4:2:2, 4:2:0) or strip metadata.",
-    "4. Choose output format (JPEG/PNG/WebP/AVIF) or select 'Auto' for format conversion recommendations.",
-    "5. Click 'Compress Images' to initiate parallel processing using WebAssembly-based codecs.",
-    "6. Download the compressed ZIP archive or copy optimized image URLs for direct deployment."
+    "Select or drop an image file into the upload area.",
+    "Use the quality slider to choose the JPEG quality level.",
+    "Click Compress to generate a compressed preview.",
+    "Compare original size, compressed size, and reduction percentage.",
+    "Download the compressed JPG when the result looks acceptable.",
+    "Use Clear if you want to start again with another file."
   ],
   "usage_examples": [
-    "A web developer reduces a 10MB product photo to 2.5MB without visible artifacts for faster page loads.",
-    "A travel blogger compresses 50 high-res landscape photos to meet email attachment size limits.",
-    "An e-commerce store owner converts PNG banners to AVIF format, cutting CDN costs by 60%.",
-    "A graphic designer batch-processes screenshots for a client presentation, maintaining sharp text at 70% compression."
+    "Reduce a large screenshot before adding it to a bug report.",
+    "Create a smaller JPEG preview for a documentation page.",
+    "Compress a photo for an upload form with a size limit.",
+    "Test several quality levels to balance size and visible detail."
+  ],
+  "faqs": [
+    {
+      "question": "What format does the compressed image use?",
+      "answer": "The current tool exports the compressed result as a JPEG file."
+    },
+    {
+      "question": "Will transparency be preserved?",
+      "answer": "No. JPEG does not preserve transparency, so transparent images may be flattened when compressed."
+    },
+    {
+      "question": "Does compression reduce quality?",
+      "answer": "It can. Lower quality settings usually create smaller files but may introduce visible artifacts."
+    },
+    {
+      "question": "Can I preview the result before downloading?",
+      "answer": "Yes. The page shows both the original and compressed previews with estimated sizes."
+    },
+    {
+      "question": "Are uploaded images sent to a server?",
+      "answer": "The visible compression workflow uses the browser FileReader, image, and canvas APIs on the page."
+    }
   ]
 }

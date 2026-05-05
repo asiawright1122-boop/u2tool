@@ -8,8 +8,8 @@ This audit checks tool support content against search-engine quality expectation
 - English tool files scanned: 501
 - Popular English tool files checked for depth: 50
 - Files with high-confidence implementation overclaims: 218
-- Files with medium-confidence claims for future review: 178
-- Popular English files with depth gaps: 40
+- Files with medium-confidence claims for future review: 177
+- Popular English files with depth gaps: 30
 
 Runtime mitigation: high-confidence support-content issues are blocked by `assessSupportContentTrust` and replaced by safe fallback support content on tool detail pages.
 
@@ -28,12 +28,12 @@ Runtime mitigation: high-confidence support-content issues are blocked by `asses
 | `d3-runtime` | high | 186 | Mentions a D3.js chart runtime even though chart tools render through the shared ECharts stack. |
 | `microservices-claim` | medium | 59 | References distributed backend architecture that may be unrelated to the page implementation. |
 | `oauth2-claim` | medium | 43 | References OAuth integrations that should be verified against the actual tool. |
-| `thin-faqs` | depth | 40 | Popular English tool has 0 FAQs; expected at least 3. |
 | `redis-runtime` | medium | 37 | Mentions Redis-specific behavior that should be verified against the actual tool UI. |
 | `print-ready-export` | medium | 35 | Claims print-grade export precision that should be backed by implementation evidence. |
 | `rest-api-claim` | medium | 31 | Describes API/backend capabilities that may not exist on the page implementation. |
+| `thin-faqs` | depth | 30 | Popular English tool has 0 FAQs; expected at least 3. |
 | `imagemagick-runtime` | high | 28 | Mentions ImageMagick-backed processing that the repo does not ship. |
-| `server-side-reference` | medium | 19 | References server-side behavior on a browser-first tool page and should be verified. |
+| `server-side-reference` | medium | 18 | References server-side behavior on a browser-first tool page and should be verified. |
 | `codec-runtime-claim` | high | 8 | Mentions native image codec pipelines that are not part of the browser-first implementation. |
 | `openid-connect-claim` | medium | 7 | References authentication-platform integrations that should be verified against the actual tool. |
 | `svgjs-runtime` | high | 2 | Mentions an SVG.js rendering stack that is not present in this repo. |
@@ -79,36 +79,36 @@ These are not automatic noindex problems. They are prioritization targets for co
 
 | Tool | Detailed Chars | Steps | Examples | FAQs | Gap Codes |
 |---|---:|---:|---:|---:|---|
-| `bmi-calculator` | 1066 | 6 | 4 | 0 | `thin-faqs` |
-| `case-converter` | 1086 | 6 | 4 | 0 | `thin-faqs` |
 | `chinese-converter` | 1457 | 6 | 4 | 0 | `thin-faqs` |
 | `cidr-calculator` | 1247 | 6 | 4 | 0 | `thin-faqs` |
 | `code-minifier` | 1047 | 6 | 4 | 0 | `thin-faqs` |
-| `color-converter` | 1183 | 6 | 4 | 0 | `thin-faqs` |
 | `color-palette` | 1038 | 6 | 4 | 0 | `thin-faqs` |
 | `color-picker` | 1113 | 6 | 4 | 0 | `thin-faqs` |
-| `diff-checker` | 875 | 6 | 4 | 0 | `thin-faqs` |
 | `favicon-generator` | 1114 | 6 | 4 | 0 | `thin-faqs` |
 | `gitignore-generator` | 1243 | 6 | 4 | 0 | `thin-faqs` |
 | `gradient-generator` | 1094 | 6 | 4 | 0 | `thin-faqs` |
-| `hash-generator` | 1124 | 6 | 4 | 0 | `thin-faqs` |
 | `html-preview` | 856 | 5 | 3 | 0 | `thin-faqs` |
-| `image-compressor` | 1007 | 6 | 4 | 0 | `thin-faqs` |
 | `image-converter` | 445 | 5 | 3 | 0 | `thin-faqs` |
 | `ip-lookup` | 1278 | 6 | 4 | 0 | `thin-faqs` |
 | `json-diff` | 1075 | 6 | 4 | 0 | `thin-faqs` |
-| `json-schema-validator` | 857 | 6 | 4 | 0 | `thin-faqs` |
 | `json-to-csv` | 1240 | 6 | 4 | 0 | `thin-faqs` |
 | `json-to-typescript` | 1137 | 6 | 4 | 0 | `thin-faqs` |
 | `json-to-yaml` | 1001 | 6 | 4 | 0 | `thin-faqs` |
 | `loan-calculator` | 896 | 6 | 4 | 0 | `thin-faqs` |
 | `lorem-ipsum` | 1123 | 6 | 4 | 0 | `thin-faqs` |
-| `markdown-preview` | 1136 | 6 | 4 | 0 | `thin-faqs` |
 | `markdown-to-html` | 1132 | 6 | 4 | 0 | `thin-faqs` |
 | `number-base-converter` | 1171 | 6 | 4 | 0 | `thin-faqs` |
-| `password-generator` | 1063 | 6 | 4 | 0 | `thin-faqs` |
 | `percentage-calculator` | 1249 | 6 | 4 | 0 | `thin-faqs` |
-| `qr-generator` | 1027 | 6 | 4 | 0 | `thin-faqs` |
+| `scientific-calculator` | 1106 | 6 | 4 | 0 | `thin-faqs` |
+| `sql-formatter` | 1074 | 6 | 4 | 0 | `thin-faqs` |
+| `ssl-checker` | 1026 | 6 | 4 | 0 | `thin-faqs` |
+| `text-encryption` | 1189 | 6 | 4 | 0 | `thin-faqs` |
+| `text-statistics` | 1091 | 6 | 4 | 0 | `thin-faqs` |
+| `text-to-slug` | 1482 | 6 | 4 | 0 | `thin-faqs` |
+| `timezone-converter` | 1230 | 6 | 4 | 0 | `thin-faqs` |
+| `unicode-converter` | 1137 | 6 | 4 | 0 | `thin-faqs` |
+| `unit-converter` | 1017 | 6 | 4 | 0 | `thin-faqs` |
+| `uuid-generator` | 1285 | 6 | 4 | 0 | `thin-faqs` |
 
 ## Recovery Actions
 

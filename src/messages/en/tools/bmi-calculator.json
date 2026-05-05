@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The BMI Calculator quantifies body mass index through precise mathematical operations, applying the formula weight (kg) divided by height (m) squared. This implementation adheres to WHO standardized classification thresholds, using floating-point arithmetic to ensure calculation accuracy to three decimal places. The tool's backend processes input values through unit conversion algorithms, supporting both metric (kilograms/meters) and imperial (pounds/inches) systems, while its frontend employs form validation to restrict inputs to physiological plausible ranges (e.g., height: 0.5-3.0 meters). Upon calculation, the result is mapped to one of six health categories using conditional logic: Underweight (BMI < 18.5), Normal Weight (18.5-24.9), Overweight (25-29.9), Obese Class I (30-34.9), Obese Class II (35-39.9), and Obese Class III (≥40). This classification system aligns with CDC clinical guidelines, making it valuable for health professionals conducting preliminary metabolic risk assessments or individuals tracking body composition changes over time.",
+  "detailed_description": "The BMI Calculator estimates body mass index from height and weight. It supports metric inputs in kilograms and centimeters, and imperial inputs in pounds and inches. After calculation, the page shows the BMI value, the matching category, and an estimated healthy weight range for the selected unit. The result is meant for quick personal reference and educational use, not medical diagnosis. BMI does not account for body composition, age, pregnancy, athletic build, or clinical context, so users should treat it as a simple screening number.",
   "usage_steps": [
-    "Select preferred unit system (metric/imperial) from the 'Unit System' dropdown menu",
-    "Enter numerical weight value in the 'Weight' input field with precision up to two decimal places",
-    "Input height measurement in the corresponding 'Height' field using format: X'Y\" (imperial) or decimal meters (metric)",
-    "Click 'Calculate BMI' button to trigger client-side JavaScript computation",
-    "Review generated BMI value displayed with three decimal places alongside its WHO classification",
-    "Toggle 'Details' panel to access explanatory text about the health implications of the calculated category"
+    "Choose metric or imperial units.",
+    "Enter your weight in kilograms or pounds.",
+    "Enter your height in centimeters or inches.",
+    "Click Calculate to compute your BMI.",
+    "Review the category shown below the result.",
+    "Use the healthy weight range as a rough reference, not as medical advice."
   ],
   "usage_examples": [
-    "A fitness trainer calculates client BMI before and after a 12-week exercise program to quantify progress",
-    "A nutritionist uses the tool during consultations to explain weight-related health risks using objective metrics",
-    "A researcher converts raw anthropometric data from an epidemiological study into standardized BMI categories",
-    "An individual tracks monthly BMI changes by saving calculation results to compare trends over time"
+    "A person enters 70 kg and 170 cm to estimate BMI in metric units.",
+    "A user enters 154 lb and 67 inches to use the imperial unit mode.",
+    "A wellness coach explains the difference between normal, overweight, and obese BMI categories.",
+    "A student checks how changing height or weight affects the BMI formula."
+  ],
+  "faqs": [
+    {
+      "question": "What does the BMI Calculator measure?",
+      "answer": "It calculates body mass index from weight and height, then shows the standard BMI category for that result."
+    },
+    {
+      "question": "Can I use pounds and inches?",
+      "answer": "Yes. Switch to imperial mode to enter weight in pounds and height in inches."
+    },
+    {
+      "question": "Is BMI a medical diagnosis?",
+      "answer": "No. BMI is a screening estimate and does not replace advice from a qualified health professional."
+    },
+    {
+      "question": "Why can BMI be misleading for athletes?",
+      "answer": "BMI only uses height and weight, so it cannot distinguish muscle, fat, bone density, or other body composition factors."
+    },
+    {
+      "question": "Does the tool send my height or weight to a server?",
+      "answer": "The calculation runs in the browser page. Avoid entering sensitive personal data on shared devices."
+    }
   ]
 }

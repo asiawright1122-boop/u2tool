@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The Hash Generator tool is a powerful utility designed to create cryptographic hashes using industry-standard algorithms such as MD5, SHA-1, and SHA-256. These algorithms transform input text into a fixed-length, seemingly random string of characters, known as a hash. The primary function of the tool is to ensure data integrity and security by providing a mechanism to verify that data has not been altered. By generating a hash from a piece of text, users can compare it to a known hash to confirm that the data remains unchanged. This is particularly useful in scenarios where data needs to be transmitted securely, such as in digital signatures, password storage, and file verification. The Hash Generator employs advanced cryptographic techniques to ensure that the hashes are deterministic (the same input always produces the same output) and irreversible (it is computationally infeasible to derive the original input from the hash). The tool's user interface is designed to be straightforward, allowing users to select the desired hashing algorithm and input their text, with the resulting hash displayed instantly.",
+  "detailed_description": "The Hash Generator creates browser-based digest values for text input using Web Crypto algorithms available in the page: SHA-1, SHA-256, SHA-384, and SHA-512. Enter text, generate hashes, and copy the result you need. It is useful for checksums, examples, documentation, and quick comparisons. The page does not currently generate MD5 and does not validate uploaded files. For security-sensitive workflows, verify algorithm requirements and use a dedicated audited process.",
   "usage_steps": [
-    "Step 1: Open the Hash Generator tool on the website and locate the main input field labeled 'Enter Text'.",
-    "Step 2: Type or paste the text you wish to hash into the 'Enter Text' field.",
-    "Step 3: Select the hashing algorithm you want to use from the dropdown menu labeled 'Hash Algorithm'. Options include MD5, SHA-1, and SHA-256.",
-    "Step 4: Click the 'Generate Hash' button to process the input text using the selected algorithm.",
-    "Step 5: The generated hash will appear in the 'Hash Result' field below the input area. This is the fixed-length string that represents the hashed version of your input text.",
-    "Step 6: Copy the hash result by clicking the 'Copy' button next to the 'Hash Result' field, or save it for later use by clicking 'Download' to export the hash as a text file."
+    "Paste or type the text you want to hash.",
+    "Click Generate Hashes.",
+    "Review the SHA-1, SHA-256, SHA-384, and SHA-512 outputs.",
+    "Click Copy beside the digest you need.",
+    "Compare the copied digest with an expected value when needed.",
+    "Use stronger algorithms such as SHA-256 or SHA-512 for modern examples."
   ],
   "usage_examples": [
-    "Example 1: A software developer needs to ensure that a file has not been tampered with during transmission. They can use the Hash Generator to create a hash of the file's contents before sending it. The recipient can then generate a hash of the received file and compare it to the original hash to verify its integrity.",
-    "Example 2: A system administrator is implementing a secure password storage mechanism. By hashing user passwords with the SHA-256 algorithm, they can store the hashes instead of the actual passwords, enhancing security and preventing unauthorized access in case of a data breach.",
-    "Example 3: A digital signature service needs to verify the authenticity of documents. By generating a hash of the document and signing it with a private key, the service can ensure that any alterations to the document will be detected when the hash is recomputed and compared to the signed version.",
-    "Example 4: A security analyst is conducting a forensic investigation and needs to verify the integrity of evidence files. They can use the Hash Generator to create hashes of the files and compare them to known good hashes to ensure that the evidence has not been altered."
+    "Generate a SHA-256 digest for a documentation example.",
+    "Compare two text snippets by checking whether their hashes match.",
+    "Create a SHA-512 value for a test fixture.",
+    "Show students how small text changes produce different hash outputs."
+  ],
+  "faqs": [
+    {
+      "question": "Which hash algorithms are supported?",
+      "answer": "The page generates SHA-1, SHA-256, SHA-384, and SHA-512 digests for text input."
+    },
+    {
+      "question": "Does this tool generate MD5?",
+      "answer": "No. The current implementation does not output MD5."
+    },
+    {
+      "question": "Can I hash files with this page?",
+      "answer": "No. This page is for text input, not file upload hashing."
+    },
+    {
+      "question": "Are hashes reversible?",
+      "answer": "No. Cryptographic hash functions are designed as one-way digests, not encryption that can be decoded."
+    },
+    {
+      "question": "Should I use SHA-1 for security?",
+      "answer": "Avoid SHA-1 for modern security decisions. Prefer SHA-256 or stronger algorithms when your workflow allows it."
+    }
   ]
 }

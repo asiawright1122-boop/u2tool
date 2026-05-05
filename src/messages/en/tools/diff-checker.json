@@ -1,17 +1,39 @@
 {
-  "detailed_description": "Diff Checker is a sophisticated text comparison tool designed to identify and highlight discrepancies between two versions of text. By leveraging advanced algorithms, this tool performs a line-by-line and character-by-character analysis to pinpoint additions, deletions, and modifications. It is particularly useful for developers, writers, and content managers who need to maintain version control or track changes in documents. For instance, developers can use it to compare different iterations of code to identify bug fixes or feature implementations. Writers can use it to review edits and ensure consistency across multiple drafts. The tool works by accepting two text inputs, which are then parsed and compared using a diff algorithm. The results are displayed with visual indicators that highlight the changes, making it easy to review and understand the differences.",
+  "detailed_description": "The Diff Checker compares two text blocks line by line. Paste the original text on the left, the modified text on the right, and run the comparison to see unchanged, added, and removed lines. It is useful for quick reviews of notes, snippets, configuration changes, or short copy edits. The current page performs a straightforward line comparison rather than a full version-control diff, so it is best for small to medium text checks where a fast visual summary is enough.",
   "usage_steps": [
-    "Step 1: Navigate to the Diff Checker tool on the website and locate the main interface.",
-    "Step 2: In the left text area, labeled 'Original Text,' paste or type the first version of your text.",
-    "Step 3: In the right text area, labeled 'Revised Text,' paste or type the second version of your text.",
-    "Step 4: Click the 'Compare' button located below the text areas to initiate the comparison process.",
-    "Step 5: Once the comparison is complete, review the highlighted differences. Green highlights indicate added text, red highlights indicate deleted text, and yellow highlights show modified text.",
-    "Step 6: Use the 'Download Report' button to save a detailed report of the differences in a formatted document for future reference."
+    "Paste the original text into the first text area.",
+    "Paste the changed text into the second text area.",
+    "Click Compare to generate the diff view.",
+    "Review the added, removed, and unchanged line counts.",
+    "Scan the highlighted output for the exact changed lines.",
+    "Use Clear when you want to reset both inputs."
   ],
   "usage_examples": [
-    "Example 1: A software developer needs to compare two versions of a codebase to identify recent changes and bug fixes. By using Diff Checker, they can quickly pinpoint the specific lines of code that have been modified, added, or removed.",
-    "Example 2: A technical writer is reviewing multiple drafts of a user manual. They can use Diff Checker to highlight the changes made in each draft, ensuring that all necessary updates have been included and that the content remains consistent.",
-    "Example 3: A content manager is tasked with merging contributions from multiple authors into a single document. Diff Checker helps them identify overlapping sections and conflicting edits, allowing for a smoother merging process.",
-    "Example 4: A researcher is comparing two versions of a scientific paper to ensure that all reviewer comments have been addressed. By using Diff Checker, they can efficiently track the changes and verify that the final version meets the required standards."
+    "Compare two versions of a release note before publishing.",
+    "Check which lines changed in a small config snippet.",
+    "Review copy edits from a teammate without opening a full Git tool.",
+    "Compare two pasted API responses at a quick line-by-line level."
+  ],
+  "faqs": [
+    {
+      "question": "What type of diff does this page show?",
+      "answer": "It shows a simple line-by-line comparison with added, removed, and unchanged lines."
+    },
+    {
+      "question": "Is this the same as a Git diff?",
+      "answer": "No. It is a lightweight browser comparison, not a full Git patch or merge tool."
+    },
+    {
+      "question": "Can I compare code snippets?",
+      "answer": "Yes, especially short snippets or configuration blocks where line changes are easy to review."
+    },
+    {
+      "question": "Does it ignore whitespace automatically?",
+      "answer": "No. The comparison uses the text as entered, so whitespace differences can appear as changes."
+    },
+    {
+      "question": "Does the tool upload my text?",
+      "answer": "The visible comparison runs in the browser page. Do not paste secrets or private data on shared devices."
+    }
   ]
 }

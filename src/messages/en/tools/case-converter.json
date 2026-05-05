@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The Case Converter tool provides Unicode-compliant text transformation capabilities for precise case manipulation across diverse character sets. Leveraging ECMAScript Internationalization API and custom normalization algorithms, this tool supports seven case transformations: uppercase (code points U+0041-U+005A), lowercase (U+0061-U+007A), title case (UAX #44-LM2 algorithm), sentence case, camelCase, PascalCase, and snake_case. Unlike basic converters, it maintains diacritic integrity during transformations and preserves whitespace structures through AST-based token parsing. Developers benefit from its ability to handle edge cases like Greek sigma normalization (ς/σ), Turkish dotless i conversions, and CJK ideographic case preservation. The tool's regex engine automatically detects and maintains code identifiers (e.g., HTML entities, programming variables) during case shifts, ensuring code integrity. It's particularly useful for API endpoint standardization, I18N compliance, and preparing training data for NLP models where case consistency affects tokenization accuracy.",
+  "detailed_description": "The Case Converter turns pasted text into common casing formats such as uppercase, lowercase, title case, sentence case, camelCase, PascalCase, snake_case, and kebab-case. It is useful when preparing labels, variable names, URL slugs, headings, or copied text that needs consistent casing. The conversion runs directly in the browser and each result can be copied separately. Some transformations use simple JavaScript rules, so users should review acronyms, names, and language-specific casing before publishing.",
   "usage_steps": [
-    "Navigate to the case-converter interface and locate the dual-pane workspace with syntax-highlighted input field",
-    "Paste UTF-8 encoded text containing mixed-case content and special characters (e.g., 'UserNäme_123')",
-    "Select transformation mode from the dropdown: 'Upper', 'Lower', 'Title', 'Sentence', 'camelCase', 'PascalCase', or 'snake_case'",
-    "Enable 'Smart Conversion' checkbox to activate context-aware casing for programming identifiers",
-    "Use the 'Preview' pane to verify transformations maintain intended meaning (e.g., 'HTTPRequest' → 'http_request')",
-    "Export results via 'Copy' button or download as .txt file with BOM encoding option for Windows compatibility"
+    "Paste or type the text you want to convert.",
+    "Review the generated casing variants.",
+    "Choose the format that matches your target use case.",
+    "Click Copy beside the result you want.",
+    "Check proper names, abbreviations, and non-English text before publishing.",
+    "Repeat with new input when you need another conversion."
   ],
   "usage_examples": [
-    "Convert legacy database column names from COBOL_CASE to camelCase for modern GraphQL API integration",
-    "Normalize multilingual product titles to title case following ISO/IEC 14651 sorting rules for e-commerce SEO",
-    "Transform Python variable names between snake_case and PascalCase during framework migration (e.g., Django to FastAPI)",
-    "Prepare CSV headers for Salesforce import by converting to API-expected uppercase with underscore separators"
+    "Convert a heading into uppercase for a design mockup.",
+    "Turn a phrase into snake_case for a configuration key.",
+    "Create kebab-case text for a URL slug.",
+    "Change pasted all-caps text into a more readable sentence case draft."
+  ],
+  "faqs": [
+    {
+      "question": "Which case formats are available?",
+      "answer": "The page provides uppercase, lowercase, title case, sentence case, camelCase, PascalCase, snake_case, and kebab-case outputs."
+    },
+    {
+      "question": "Can I copy only one converted result?",
+      "answer": "Yes. Each generated result has its own copy button."
+    },
+    {
+      "question": "Will title case handle every style guide perfectly?",
+      "answer": "No. The conversion is a practical browser rule, so review articles, prepositions, acronyms, and names for your preferred style."
+    },
+    {
+      "question": "Is this useful for code identifiers?",
+      "answer": "Yes. camelCase, PascalCase, snake_case, and kebab-case are handy for variables, components, filenames, and config keys."
+    },
+    {
+      "question": "Does the tool store my text?",
+      "answer": "The visible conversion happens in the browser page. Avoid pasting confidential content on shared or untrusted devices."
+    }
   ]
 }

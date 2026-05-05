@@ -1,7 +1,7 @@
 import type { MiddlewareHandler } from 'astro';
 
 const HTML_EDGE_CACHE_CONTROL = 'public, max-age=300, s-maxage=86400, stale-while-revalidate=604800';
-const HTML_EDGE_CACHE_VERSION = '2026-05-05-comparison-h1-v1';
+const HTML_EDGE_CACHE_VERSION = '2026-05-05-second-content-wave-v1';
 const CACHEABLE_HTML_PATH = /^\/(?:$|(?:en|zh|ja|ko|es|pt|fr|de|ru|ar)(?:\/|$))/;
 
 type CloudflareRuntimeLocals = {

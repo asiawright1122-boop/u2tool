@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The Color Converter tool enables precise bidirectional translation between three fundamental color representations: hexadecimal (HEX), red-green-blue (RGB), and hue-saturation-lightness (HSL). Each format serves distinct purposes—HEX codes (e.g., #FF5733) dominate web development, RGB values (0-255 per channel) define screen color output, and HSL (0°-360° hue angles) simplifies color adjustments. Developers and designers frequently require conversions when integrating assets from different tools, debugging UI inconsistencies, or optimizing color workflows. The tool employs standardized conversion algorithms: HEX values undergo hexadecimal-to-decimal decomposition, RGB values are normalized to percentages for HSL cylindrical-coordinate calculations, and all outputs maintain numerical accuracy within ±1 unit. Advanced validation ensures invalid inputs trigger specific error diagnostics (e.g., 'Invalid hex length' or 'Saturation out of range'). Built-in color space normalization handles edge cases like 3-digit HEX shorthand expansion, RGB clamping, and HSL degree wrapping. This eliminates manual calculation errors and accelerates cross-platform color management tasks.",
+  "detailed_description": "The Color Converter keeps HEX, RGB, and HSL color values in sync. You can pick a color, edit the HEX value, or adjust RGB channels, and the page updates the related values for quick copying. It is designed for everyday design and frontend work where a color needs to move between CSS formats. The tool currently focuses on standard 6-digit HEX, RGB channel values, and HSL output. It does not attempt color-profile conversion, accessibility scoring, or palette generation.",
   "usage_steps": [
-    "Select your source color format using the format selector dropdown (HEX/RGB/HSL).",
-    "Enter the color value in the validated input field (e.g., 'FF5733' for HEX, 'rgb(255,87,51)' for RGB).",
-    "Choose target formats via the multi-select checkboxes (convert to one or both alternative formats).",
-    "Click the 'Convert' button to initiate color space transformation pipeline.",
-    "Review converted values displayed in syntax-highlighted output panes with corresponding color swatches.",
-    "Copy specific converted values to clipboard using per-format copy buttons for immediate implementation."
+    "Use the color picker or enter a 6-digit HEX value.",
+    "Edit the RGB channel fields if you prefer numeric input.",
+    "Review the updated HEX, RGB, and HSL values.",
+    "Click Copy beside the format you need.",
+    "Paste the value into CSS, design notes, or a style token file.",
+    "Check contrast separately if the color will be used for text."
   ],
   "usage_examples": [
-    "A web developer translates a designer's HSL palette (hsl(120, 100%, 25%)) to HEX (#006400) for CSS implementation while maintaining color consistency across themes.",
-    "A UX engineer troubleshoots a color contrast accessibility issue by converting a background RGB(34,12,56) to HSL to adjust lightness while preserving hue identity.",
-    "A digital artist migrating from photo editing software converts CMYK-equivalent RGB values to HSL to create graduated color variations programmatically in JavaScript.",
-    "A front-end developer standardizes legacy CSS files by bulk-converting hexadecimal shorthand codes (#444) to normalized 6-digit HEX (#444444) for cross-browser compatibility."
+    "Convert #3b82f6 into RGB and HSL values for CSS.",
+    "Adjust the red, green, and blue fields to explore nearby colors.",
+    "Copy an HSL value for a Tailwind or design-token note.",
+    "Use the preview swatch to confirm the color before copying."
+  ],
+  "faqs": [
+    {
+      "question": "Which color formats does this tool convert?",
+      "answer": "It converts between 6-digit HEX, RGB, and HSL values."
+    },
+    {
+      "question": "Can I copy the converted values?",
+      "answer": "Yes. HEX, RGB, and HSL each have a copy action."
+    },
+    {
+      "question": "Does it support alpha transparency?",
+      "answer": "The current converter focuses on opaque HEX, RGB, and HSL values, not alpha channels."
+    },
+    {
+      "question": "Does the tool check color contrast?",
+      "answer": "No. Use a dedicated contrast checker when you need accessibility validation."
+    },
+    {
+      "question": "Why did my invalid HEX value not update the other formats?",
+      "answer": "The converter expects a complete 6-digit HEX value. Invalid or partial input may not produce RGB and HSL updates."
+    }
   ]
 }
