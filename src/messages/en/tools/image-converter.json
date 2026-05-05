@@ -1,15 +1,39 @@
 {
-  "detailed_description": "The Image Format Converter helps you switch local images between PNG, JPEG, and WebP without leaving the browser. Upload a file, choose the target format, adjust quality for JPEG or WebP, and compare the original with the converted preview before downloading the result. It is useful for preparing lighter website assets, creating email-friendly JPEGs, or checking how the same image looks across common web formats in a quick one-page workflow.",
+  "detailed_description": "The Image Converter changes a local image into PNG, JPEG, or WebP using browser image and canvas APIs. Upload an image, choose the target format, adjust quality for JPEG or WebP, convert, preview the output, and download the converted file. When converting to JPEG, transparent areas are filled before export because JPEG does not support transparency. The tool is useful for quick format changes and previews, but it is not a batch converter or professional image-processing pipeline.",
   "usage_steps": [
-    "Upload an image from your device to load the original preview.",
+    "Upload an image file from your device.",
     "Choose PNG, JPEG, or WebP as the target format.",
-    "If you select JPEG or WebP, adjust the quality slider to balance size and clarity.",
-    "Run the conversion and compare the converted preview with the original image.",
-    "Download the converted file once the result looks right."
+    "Adjust quality when converting to JPEG or WebP.",
+    "Click Convert to create the new image preview.",
+    "Compare the original and converted previews.",
+    "Download the converted file when the result looks right."
   ],
   "usage_examples": [
-    "Convert a PNG screenshot to JPEG for a smaller email attachment.",
-    "Export a logo or UI asset as WebP for a faster landing page.",
-    "Compare PNG, JPEG, and WebP outputs before publishing an image-heavy page."
+    "Convert a PNG screenshot to JPEG for a smaller upload.",
+    "Create a WebP version of an image for a web prototype.",
+    "Convert a JPEG to PNG when a workflow requires PNG input.",
+    "Preview how a transparent image changes when exported as JPEG."
+  ],
+  "faqs": [
+    {
+      "question": "Which output formats are supported?",
+      "answer": "The page can export PNG, JPEG, and WebP."
+    },
+    {
+      "question": "Can I adjust output quality?",
+      "answer": "Yes. Quality is available for JPEG and WebP conversions."
+    },
+    {
+      "question": "What happens to transparency in JPEG output?",
+      "answer": "JPEG does not support transparency, so transparent areas are filled before export."
+    },
+    {
+      "question": "Can I convert multiple images at once?",
+      "answer": "No. The current tool converts one uploaded image at a time."
+    },
+    {
+      "question": "Does the tool upload my image?",
+      "answer": "The visible conversion workflow uses browser FileReader, image, and canvas APIs on the page."
+    }
   ]
 }

@@ -1,17 +1,39 @@
 {
-  "detailed_description": "This Color Picker tool enables precise chromatic selection and conversion through an interactive HSV spectrum interface. Developers can extract hexadecimal, RGB, and HSL values with alpha channel support (RGBA/HSLA), facilitating integration into CSS, JavaScript, and graphics workflows. The tool's technical value lies in its ability to handle color space transformations using gamma-corrected RGB calculations and hue-saturation-value cylindrical geometry conversions. Users benefit from real-time CSS variable output formatting, WCAG 2.1 contrast ratio validation, and CMYK conversion for print workflows. The HTML5 Canvas-based picker employs event listeners for pointer interactions, maintaining 300dpi sampling accuracy. Advanced features include color history stack with LRU caching, named color library with X11/CSS4 standard matches, and spectral density visualization for luminance analysis. Essential for front-end developers ensuring cross-browser color consistency, game developers implementing shader color ramps, and designers creating accessible UI/UX systems requiring AA/AAA contrast compliance.",
+  "detailed_description": "The Color Picker lets you choose a color, view its HEX, RGB, and HSL values, and copy each format. It also keeps a short list of recently selected colors and includes preset swatches for quick selection. The page is useful when moving colors between a design, CSS, documentation, or a code snippet. It focuses on standard opaque colors and simple conversion. It does not include alpha channels, eyedropper capture from the screen, contrast scoring, or color-profile conversion.",
   "usage_steps": [
-    "Access the tool's web interface and click the primary color well to activate the HSV selection ring",
-    "Adjust the chromaticity pointer to select hue/saturation, then use the vertical luminance slider for value control",
-    "Modify alpha channel via dedicated transparency slider or direct RGBA/HSLA input fields",
-    "Click format toggle buttons to convert between HEX8, RGBa%, HSLuv, and CMYK representations",
-    "Use the 'Copy CSS' button to generate ready-to-paste CSS variables or SCSS maps",
-    "Access recent colors from the history grid or lock favorites using the star icon"
+    "Choose a color with the color input or type a HEX value.",
+    "Use preset swatches if you want a quick starting point.",
+    "Review the generated HEX, RGB, and HSL values.",
+    "Click Copy beside the format you need.",
+    "Use recent colors to return to earlier selections.",
+    "Check accessibility separately when the color will be used for text."
   ],
   "usage_examples": [
-    "Converting a client's brand hex color #2C5AAC to HSLuv for more perceptually uniform gradient transitions in a data visualization dashboard",
-    "Fine-tuning a semi-transparent overlay by adjusting RGBA values to achieve exactly 0.73 opacity for a Material Design card component",
-    "Generating accessible text/background color pairs with automated contrast ratio calculations meeting WCAG 2.1 AA standards",
-    "Creating smooth color stops for SVG gradients by sampling HSV values at precise 5° hue intervals with fixed saturation/vibrance"
+    "Pick a UI accent color and copy the CSS RGB value.",
+    "Convert a HEX color into HSL for a theme variable.",
+    "Use preset swatches to compare common color choices.",
+    "Return to a recent color while experimenting with variants."
+  ],
+  "faqs": [
+    {
+      "question": "Which formats does the Color Picker show?",
+      "answer": "It shows HEX, RGB, and HSL values for the selected color."
+    },
+    {
+      "question": "Can I copy values from the page?",
+      "answer": "Yes. Each displayed color format has a copy action."
+    },
+    {
+      "question": "Does it support transparency?",
+      "answer": "No. The current picker works with opaque colors and does not output RGBA or HSLA."
+    },
+    {
+      "question": "Can it sample colors from my screen?",
+      "answer": "No. It uses browser color input and preset swatches, not a screen eyedropper."
+    },
+    {
+      "question": "Does the recent color list persist forever?",
+      "answer": "No. It is a short in-page list for the current session."
+    }
   ]
 }

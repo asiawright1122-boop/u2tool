@@ -1,17 +1,39 @@
 {
-  "detailed_description": "This CIDR Calculator is a specialized utility for network engineers and system administrators to perform precise IP subnet analysis. The tool processes Classless Inter-Domain Routing (CIDR) notations, such as 192.168.1.0/24, and decomposes them into actionable network parameters using bitwise operations and IPv4/IPv6 address space logic. By parsing the CIDR prefix length, it computes the corresponding subnet mask in dotted decimal and hexadecimal formats, identifies network and broadcast addresses via AND/OR bitmask operations, and quantifies usable host addresses considering IPv4's 32-bit or IPv6's 128-bit address constraints. The calculator also determines wildcard masks for access control lists (ACLs) and displays CIDR block ranges in both inclusive and exclusive notation. Network professionals require this tool for tasks like designing hierarchical networks with variable-length subnet masking (VLSM), validating cloud infrastructure configurations (e.g., AWS VPCs), and troubleshooting misconfigured broadcast domains. Its precision in handling overlapping subnets and displaying binary representations of network prefixes makes it indispensable for certification exam preparation (e.g., CCNA, RHCE) and production network audits.",
+  "detailed_description": "The CIDR Calculator analyzes an IPv4 address with a CIDR prefix such as 192.168.1.0/24. It calculates the network address, broadcast address, first and last host, subnet mask, wildcard mask, total hosts, usable hosts, IP class, and binary mask. Common prefix buttons make it quick to compare /24, /26, /30, and other subnet sizes. The tool is intended for quick IPv4 subnet planning and learning. It does not perform routing lookup, DNS checks, or IPv6 subnet analysis.",
   "usage_steps": [
-    "Input a CIDR notation (e.g., 10.0.0.0/22) into the designated text field.",
-    "Toggle between IPv4 and IPv6 modes using the protocol selector to ensure correct address family processing.",
-    "Select preferred output formats (binary, hexadecimal, or decimal) for subnet masks and network ranges via the dropdown menu.",
-    "Click the 'Calculate' button to initiate bitwise computation of network boundaries and host counts.",
-    "Review the results pane displaying network address, broadcast address, wildcard mask, and usable host range.",
-    "Use the 'Export JSON' button to generate structured data for integration with network management systems."
+    "Enter an IPv4 CIDR value such as 192.168.1.0/24.",
+    "Use a common prefix button if you want to switch subnet size quickly.",
+    "Review the calculated network and broadcast addresses.",
+    "Check first host, last host, total hosts, and usable hosts.",
+    "Use the subnet mask, wildcard mask, and binary mask in network notes.",
+    "Correct the input if the page shows an invalid CIDR error."
   ],
   "usage_examples": [
-    "A DevOps engineer configuring AWS VPC subnets validates that a /24 CIDR block provides sufficient IPv4 addresses for auto-scaling EC2 instances.",
-    "A network architect designing a campus network uses the calculator to create non-overlapping /27 subnets for separate departments while maintaining route summarization.",
-    "An IT security analyst troubleshoots firewall rules by converting a 2001:db8::/32 IPv6 CIDR to its hexadecimal subnet mask equivalent for ACL configuration.",
-    "A systems administrator planning a network migration verifies that a /22 CIDR block contains exactly 1,022 usable host addresses to accommodate current and future physical devices."
+    "Check that 192.168.1.0/24 has 254 usable hosts.",
+    "Compare /24 and /26 when planning smaller office subnets.",
+    "Find the wildcard mask for an access-control example.",
+    "Use /30 or /31 to review point-to-point addressing behavior."
+  ],
+  "faqs": [
+    {
+      "question": "Does this CIDR Calculator support IPv6?",
+      "answer": "No. The current calculator supports IPv4 CIDR notation only."
+    },
+    {
+      "question": "What format should I enter?",
+      "answer": "Use an IPv4 address followed by a slash prefix, such as 10.0.0.0/24."
+    },
+    {
+      "question": "What does usable hosts mean?",
+      "answer": "For most prefixes it subtracts the network and broadcast addresses. For /31 and /32, the page follows the implementation's special-case behavior."
+    },
+    {
+      "question": "Can I use this for routing decisions?",
+      "answer": "Use it for address math and planning. It does not inspect live routes, gateways, DNS, or firewall state."
+    },
+    {
+      "question": "Why does invalid input return no result?",
+      "answer": "The page expects four IPv4 octets from 0 to 255 and a prefix from 0 to 32."
+    }
   ]
 }

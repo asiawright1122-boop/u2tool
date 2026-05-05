@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The Color Palette Generator is a web-based algorithmic design tool that computes harmonious color schemes using advanced color theory principles. It employs HSL (Hue, Saturation, Lightness) color space calculations to generate mathematically accurate palettes including complementary (180° hue opposition), analogous (adjacent hues within 30°-60°), and triadic (evenly spaced 120° hues) combinations. The tool leverages the CIE Lab* perceptual color model to ensure optimal contrast ratios and accessibility compliance, automatically adjusting chromatic values through sigmoidal lightness curves to maintain visual consistency across shades. Designers and developers use this tool for creating cohesive UI/UX themes, branding materials, and accessible web content, as it programmatically derives color variations while preserving aesthetic harmony. The core algorithm utilizes vector math to traverse the cylindrical HSV color space, generating tints, shades, and tones with adjustable gamma correction for screen-accurate representation.",
+  "detailed_description": "The Color Palette tool creates related colors from a selected base HEX value. It calculates a range of lightness shades, a complementary color, analogous colors, and triadic colors using HSL conversion in the browser. Each color swatch can be copied for use in CSS, design tokens, mockups, or documentation. The tool is best for quick palette exploration. It does not evaluate accessibility contrast, brand consistency, color-blind safety, or print color profiles.",
   "usage_steps": [
-    "Open the interactive color wheel and select a base hue using the pointer or input HEX/RGB values manually",
-    "Choose a harmony mode from the dropdown: Complementary, Analogous, Triadic, or Monochromatic",
-    "Adjust the saturation spread slider (±30%) and lightness range (10%-90%) to define palette boundaries",
-    "Enable 'Accessibility Check' to validate WCAG 2.1 contrast ratios between color pairs",
-    "Click 'Generate' to create the optimized palette with 5-12 variant swatches per scheme",
-    "Export results as SCSS maps, CSS variables, or download as ACO Photoshop palette file"
+    "Pick a base color or enter a HEX value.",
+    "Review the generated shade scale.",
+    "Check the complementary, analogous, and triadic groups.",
+    "Click a color swatch to copy its HEX value.",
+    "Paste copied colors into CSS, design tokens, or notes.",
+    "Run separate contrast checks before using colors for text."
   ],
   "usage_examples": [
-    "A web developer creating a dark mode interface needs triadic color sets with 4.5:1 minimum contrast against #1A1A1A background",
-    "Brand designer developing a seasonal product line requires analogous hues within 45° of Pantone 18-4052 Classic Blue",
-    "Game UI artist optimizing health/mana bars needs complementary red/cyan variants with equal perceived brightness",
-    "Data visualization engineer generating 12-category diverging color scales for heatmaps with CVD-friendly differentiation"
+    "Generate a light-to-dark shade scale from a brand blue.",
+    "Copy a complementary color for a call-to-action accent.",
+    "Explore analogous colors for a softer UI theme.",
+    "Use triadic colors as a starting point for charts or badges."
+  ],
+  "faqs": [
+    {
+      "question": "What does the Color Palette tool generate?",
+      "answer": "It generates shades, complementary colors, analogous colors, and triadic colors from a base HEX color."
+    },
+    {
+      "question": "Can I copy palette colors?",
+      "answer": "Yes. Click a swatch to copy its HEX value."
+    },
+    {
+      "question": "Does the page check accessibility contrast?",
+      "answer": "No. Use a dedicated contrast checker before choosing text and background colors."
+    },
+    {
+      "question": "Does it support alpha transparency?",
+      "answer": "No. The generated values are standard HEX colors without alpha."
+    },
+    {
+      "question": "Are these colors guaranteed to match a brand system?",
+      "answer": "No. Treat them as starting points and review them against your actual brand guidelines."
+    }
   ]
 }

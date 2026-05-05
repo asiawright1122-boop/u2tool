@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The .gitignore Generator is a precision tool for creating version-control-compliant exclusion rules that prevent unwanted files from entering Git repositories. This utility automates the generation of .gitignore files by combining template-based patterns with user-defined parameters, addressing common pain points in repository management. Developers need this tool to systematically exclude transient files like OS-generated artifacts (e.g., .DS_Store, Thumbs.db), build outputs (e.g., /dist, /tmp), and dependency directories (e.g., node_modules, vendor). The generator leverages Git's pattern matching syntax, supporting wildcards (*), negation (!), and directory-specific rules (/) to create hierarchical exclusion logic. Users select project-specific configurations through a structured interface that maps to canonical .gitignore templates maintained by the Git community. Advanced features include framework-specific boilerplate integration (e.g., React, Django) and cross-platform compatibility checks that account for OS-specific path conventions. The output is a validated .gitignore file that adheres to Git's rule prioritization hierarchy, ensuring that higher-level repository settings don't override critical exclusion patterns.",
+  "detailed_description": "The .gitignore Generator helps build a .gitignore file from common stack templates and optional custom rules. Select the templates you need, add any project-specific ignore patterns, generate the combined output, then copy or download the result as .gitignore. It is useful when starting a repository or documenting standard ignore rules. Always review the generated file before committing it, because every project has different build artifacts, environment files, caches, and secret-handling rules.",
   "usage_steps": [
-    "1. Select your project type from a structured taxonomy (e.g., 'Web App', 'Machine Learning', 'Game Engine')",
-    "2. Check language-specific boxes (JavaScript, Python, Rust) to include corresponding exclusion patterns",
-    "3. Choose framework-specific configurations (React, Django, Unity) for specialized ignore rules",
-    "4. Enable OS-specific exclusions (macOS, Windows, Linux) to filter platform-dependent artifacts",
-    "5. Customize advanced options like version control nesting level and artifact directory depth",
-    "6. Click 'Generate' to compile and download your tailored .gitignore file with syntax validation"
+    "Select one or more language, framework, or operating-system templates.",
+    "Add custom ignore patterns for your project if needed.",
+    "Click Generate to combine the selected rules.",
+    "Review the output for paths you do or do not want ignored.",
+    "Copy the result or download it as a .gitignore file.",
+    "Commit the final .gitignore only after checking it against your repository."
   ],
   "usage_examples": [
-    "1. Full-stack JavaScript developer combines Node.js server and React client templates to exclude both /node_modules and /build directories",
-    "2. Data scientist generates a Python-specific .gitignore that excludes virtual environments (.venv) and Jupyter notebook checkpoints",
-    "3. Game developer using Unity adds engine-specific patterns to ignore Editor.log files and AssetStoreTools directory",
-    "4. DevOps engineer creates a multi-environment .gitignore that excludes both Docker build artifacts and Terraform state files"
+    "Create a Node-focused .gitignore with dependency and build output folders.",
+    "Add macOS and Windows system files to a shared repository ignore list.",
+    "Include custom rules for local environment files.",
+    "Download the result and place it at the root of a new Git repository."
+  ],
+  "faqs": [
+    {
+      "question": "Can I add custom .gitignore rules?",
+      "answer": "Yes. The page includes a custom rules area that is appended to the generated output."
+    },
+    {
+      "question": "Can I download the result?",
+      "answer": "Yes. The download action saves the generated text as a .gitignore file."
+    },
+    {
+      "question": "Should I ignore all environment files?",
+      "answer": "Usually you should ignore files containing local secrets, but keep safe example files such as .env.example when your team needs them."
+    },
+    {
+      "question": "Can a .gitignore remove files already tracked by Git?",
+      "answer": "No. .gitignore affects untracked files. Already tracked files must be removed from the index separately."
+    },
+    {
+      "question": "Should I review generated rules before committing?",
+      "answer": "Yes. Make sure the rules do not hide important source files, lockfiles, or configuration that your project needs."
+    }
   ]
 }

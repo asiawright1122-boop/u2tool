@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The Favicon Generator is a specialized tool that automates the creation of multi-resolution favicon assets from a single source image. Technically, it leverages browser-based image processing to resize, compress, and convert input graphics into standardized dimensions required for modern web browsers and devices. Users upload an image (PNG, JPEG, or SVG), and the tool employs algorithms to generate favicon files in 16x16, 32x32, 48x48, 64x64, 128x128, 256x256, and 512x512 pixel sizes, outputting formats including ICO, PNG, and SVG. It applies adaptive sharpening filters during resizing to maintain clarity on Retina displays and supports aspect ratio preservation or center-cropping for non-square inputs. The generated package includes properly structured HTML markup for immediate implementation, with link tags optimized for cross-browser compatibility, including Apple Touch Icons and Android Chrome metadata. This eliminates manual creation of multiple assets, ensuring consistent brand representation across devices while adhering to performance best practices through lossless compression techniques.",
+  "detailed_description": "The Favicon Generator creates PNG favicon images from a local source image. Upload an image, select output sizes such as 16, 32, 48, or 64 pixels, generate previews, and download each PNG or all generated sizes. The page also creates simple HTML link tags for the generated PNG files so you can copy them into a project template. It is useful for quick favicon assets and prototypes. It does not currently package an ICO file or generate every platform-specific icon size.",
   "usage_steps": [
-    "Upload your source image via the drag-and-drop file input or local file browser",
-    "Select resizing methodology using the 'Aspect Ratio' dropdown (preserve original, crop to square, or stretch to fit)",
-    "Choose target dimensions from predefined presets (16x16-512x512) or input custom sizes in the 'Additional Sizes' field",
-    "Specify output formats using checkboxes (ICO, PNG, SVG) based on browser compatibility requirements",
-    "Adjust advanced settings including sharpening intensity (0-100%) and PNG optimization level (0-9)",
-    "Click 'Generate Favicon Set' to process assets, then download the ZIP package containing icons and implementation-ready HTML code"
+    "Upload a source image from your device.",
+    "Choose the favicon sizes you want to generate.",
+    "Click Generate to create PNG previews.",
+    "Download individual sizes or download all generated PNG files.",
+    "Copy the suggested HTML link tags if they match your filenames.",
+    "Test the icons in your actual site or browser environment."
   ],
   "usage_examples": [
-    "A startup launching a new SaaS platform needs pixel-perfect favicons for Chrome, Firefox, and Safari while ensuring crisp rendering on iOS home screen bookmarks",
-    "A photographer's portfolio site requires high-density favicons that showcase image quality on 4K displays without increasing page load times",
-    "A WordPress theme developer creates a customizable favicon system that automatically generates all necessary sizes from user-uploaded logos",
-    "An enterprise web application undergoing rebranding updates thousands of favicon instances across environments by generating standardized icon sets programmatically"
+    "Create 16x16 and 32x32 PNG favicons from a square logo.",
+    "Generate a 64x64 icon for a browser tab or internal tool.",
+    "Copy link tags for quick insertion into an HTML template.",
+    "Preview whether a logo remains recognizable at small sizes."
+  ],
+  "faqs": [
+    {
+      "question": "What file type does the generator output?",
+      "answer": "It outputs PNG favicon images for the selected sizes."
+    },
+    {
+      "question": "Does it create a .ico file?",
+      "answer": "No. The current page generates PNG files and HTML link snippets, not an ICO package."
+    },
+    {
+      "question": "Which sizes can I generate?",
+      "answer": "The visible options include common square sizes such as 16, 32, 48, and 64 pixels."
+    },
+    {
+      "question": "Can I download all generated icons?",
+      "answer": "Yes. The page can trigger downloads for all generated PNG sizes."
+    },
+    {
+      "question": "Should my source image be square?",
+      "answer": "A square source usually gives the cleanest favicon result because the canvas output is square."
+    }
   ]
 }

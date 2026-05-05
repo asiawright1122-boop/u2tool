@@ -1,15 +1,39 @@
 {
-  "detailed_description": "Our free HTML preview tool lets you write and preview HTML code instantly in your browser. This live HTML viewer renders your code in real-time as you type, showing exactly how your webpage will look. Perfect for web developers testing code snippets, students learning HTML, and designers prototyping layouts. The HTML preview supports full CSS styling and JavaScript execution, so you can test complete web pages including interactive elements. Unlike other HTML editors, this tool runs entirely in your browser - your code never leaves your device, ensuring complete privacy. Use it to debug HTML issues, experiment with new CSS properties, or quickly share code examples. The split-view interface shows your code and preview side by side for efficient development. No installation or signup required - just paste your HTML and see the results instantly.",
+  "detailed_description": "The HTML Preview tool lets you edit HTML and view the rendered result in an iframe-style preview area. The page starts with a sample document, refreshes the preview when requested, and includes a clear action for starting over. It is useful for testing small HTML snippets, learning markup structure, or checking quick layout ideas. The preview is not a full browser development environment: it does not bundle assets, run a build step, or replace cross-browser testing for production pages.",
   "usage_steps": [
-    "Paste or type your HTML code in the editor panel",
-    "View the live preview updating in real-time as you type",
-    "Add CSS styles within <style> tags or inline styles",
-    "Include JavaScript within <script> tags for interactivity",
-    "Click refresh to manually update the preview if needed"
+    "Edit the sample HTML or paste your own snippet.",
+    "Click Refresh Preview when you want to reload the rendered result.",
+    "Inspect the preview area to see how the markup appears.",
+    "Adjust the HTML and refresh again as needed.",
+    "Use Clear to empty the editor.",
+    "Move production code into a real project and test it there before publishing."
   ],
   "usage_examples": [
-    "Test a responsive navigation menu with HTML, CSS, and JavaScript",
-    "Preview an email template before sending to ensure proper rendering",
-    "Debug CSS layout issues by seeing changes instantly as you edit"
+    "Preview a small HTML card before adding it to documentation.",
+    "Test a heading, paragraph, and link structure while learning HTML.",
+    "Check an embed snippet quickly without creating a new file.",
+    "Clear the editor and start a new sample from scratch."
+  ],
+  "faqs": [
+    {
+      "question": "Does the preview update automatically?",
+      "answer": "The page includes a refresh action so you can reload the preview after editing."
+    },
+    {
+      "question": "Can I test complete websites here?",
+      "answer": "It is best for snippets and small examples, not complete production websites."
+    },
+    {
+      "question": "Does it run a build process?",
+      "answer": "No. It previews the HTML you provide directly in the page."
+    },
+    {
+      "question": "Can I clear the editor?",
+      "answer": "Yes. Use the Clear action to empty the HTML input."
+    },
+    {
+      "question": "Should I still test in real browsers?",
+      "answer": "Yes. Use real browser testing for production pages, responsive behavior, and external assets."
+    }
   ]
 }

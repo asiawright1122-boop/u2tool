@@ -8,8 +8,8 @@ This audit checks tool support content against search-engine quality expectation
 - English tool files scanned: 501
 - Popular English tool files checked for depth: 50
 - Files with high-confidence implementation overclaims: 218
-- Files with medium-confidence claims for future review: 177
-- Popular English files with depth gaps: 30
+- Files with medium-confidence claims for future review: 176
+- Popular English files with depth gaps: 20
 
 Runtime mitigation: high-confidence support-content issues are blocked by `assessSupportContentTrust` and replaced by safe fallback support content on tool detail pages.
 
@@ -29,10 +29,10 @@ Runtime mitigation: high-confidence support-content issues are blocked by `asses
 | `microservices-claim` | medium | 59 | References distributed backend architecture that may be unrelated to the page implementation. |
 | `oauth2-claim` | medium | 43 | References OAuth integrations that should be verified against the actual tool. |
 | `redis-runtime` | medium | 37 | Mentions Redis-specific behavior that should be verified against the actual tool UI. |
-| `print-ready-export` | medium | 35 | Claims print-grade export precision that should be backed by implementation evidence. |
+| `print-ready-export` | medium | 34 | Claims print-grade export precision that should be backed by implementation evidence. |
 | `rest-api-claim` | medium | 31 | Describes API/backend capabilities that may not exist on the page implementation. |
-| `thin-faqs` | depth | 30 | Popular English tool has 0 FAQs; expected at least 3. |
 | `imagemagick-runtime` | high | 28 | Mentions ImageMagick-backed processing that the repo does not ship. |
+| `thin-faqs` | depth | 20 | Popular English tool has 0 FAQs; expected at least 3. |
 | `server-side-reference` | medium | 18 | References server-side behavior on a browser-first tool page and should be verified. |
 | `codec-runtime-claim` | high | 8 | Mentions native image codec pipelines that are not part of the browser-first implementation. |
 | `openid-connect-claim` | medium | 7 | References authentication-platform integrations that should be verified against the actual tool. |
@@ -80,16 +80,6 @@ These are not automatic noindex problems. They are prioritization targets for co
 | Tool | Detailed Chars | Steps | Examples | FAQs | Gap Codes |
 |---|---:|---:|---:|---:|---|
 | `chinese-converter` | 1457 | 6 | 4 | 0 | `thin-faqs` |
-| `cidr-calculator` | 1247 | 6 | 4 | 0 | `thin-faqs` |
-| `code-minifier` | 1047 | 6 | 4 | 0 | `thin-faqs` |
-| `color-palette` | 1038 | 6 | 4 | 0 | `thin-faqs` |
-| `color-picker` | 1113 | 6 | 4 | 0 | `thin-faqs` |
-| `favicon-generator` | 1114 | 6 | 4 | 0 | `thin-faqs` |
-| `gitignore-generator` | 1243 | 6 | 4 | 0 | `thin-faqs` |
-| `gradient-generator` | 1094 | 6 | 4 | 0 | `thin-faqs` |
-| `html-preview` | 856 | 5 | 3 | 0 | `thin-faqs` |
-| `image-converter` | 445 | 5 | 3 | 0 | `thin-faqs` |
-| `ip-lookup` | 1278 | 6 | 4 | 0 | `thin-faqs` |
 | `json-diff` | 1075 | 6 | 4 | 0 | `thin-faqs` |
 | `json-to-csv` | 1240 | 6 | 4 | 0 | `thin-faqs` |
 | `json-to-typescript` | 1137 | 6 | 4 | 0 | `thin-faqs` |
