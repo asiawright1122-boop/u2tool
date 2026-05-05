@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The Number Base Converter performs bidirectional radix conversion between binary (base-2), octal (base-8), decimal (base-10), and hexadecimal (base-16) systems using algorithmic parsing and positional numeral calculations. This tool is essential for developers working with low-level systems, network protocols, or embedded hardware where numeric representations must align with specific architectural requirements. Technically, the converter employs Horner's method to efficiently transform values between bases: input strings are first validated against source base constraints (e.g., ensuring octal digits don't exceed '7'), then parsed into intermediate 64-bit signed integers using base-specific polynomial expansions. Negative values are handled via two's complement representation when applicable. Target base conversion occurs through iterative division-remainder methods with hexadecimal outputs automatically capitalized for code compatibility. The tool's precision engine prevents overflow errors by limiting input ranges to ±9.2e18 (safe integer limits in JavaScript), making it suitable for both educational demonstrations and production debugging workflows.",
+  "detailed_description": "The Number Base Converter converts integer values between binary, octal, decimal, and hexadecimal. Enter a number, choose its source base, and the page shows equivalent values in the supported bases. It is useful for programming, debugging bitmasks, checking color or memory values, and learning positional notation. The current tool focuses on integer conversion through JavaScript parsing and is not intended for fractional numbers or arbitrary-precision math.",
   "usage_steps": [
-    "1. Input your numeric value in the 'Source Number' field, supporting digits 0-9 and letters A-F/a-f for hexadecimal entries.",
-    "2. Select the source base from the dropdown menu labeled 'Convert From' (options: BIN, OCT, DEC, HEX).",
-    "3. Choose the target base using the 'Convert To' dropdown (same base options available).",
-    "4. Enable 'Preserve Leading Zeros' checkbox if maintaining insignificant zeros in binary/octal outputs is required for bit alignment.",
-    "5. Click the 'Convert' button to execute the transformation using optimized conversion algorithms.",
-    "6. Copy the result from the output panel using the 'Copy to Clipboard' icon or export as JSON for programmatic use."
+    "Enter the integer value you want to convert.",
+    "Select the base of the input number.",
+    "Click Convert to parse the value.",
+    "Review the binary, octal, decimal, and hexadecimal results.",
+    "Copy any result you need.",
+    "Fix the input if it contains digits that do not belong to the selected base."
   ],
   "usage_examples": [
-    "Example 1: A firmware engineer converts hexadecimal sensor calibration values (e.g., 0x1A3F) to decimal for configuration register initialization in C++ code.",
-    "Example 2: A cybersecurity analyst translates IPv4 addresses from decimal (3232235521) to dotted binary format for subnet mask validation in network security rules.",
-    "Example 3: A game developer converts RGB color codes between decimal (128,64,32) and hexadecimal (804020) representations when implementing shader materials.",
-    "Example 4: A computer science student verifies Booth's algorithm results by cross-converting negative binary numbers (e.g., 11110101) to decimal equivalent values."
+    "Convert decimal 255 to hexadecimal FF.",
+    "Convert a binary flag value into decimal.",
+    "Check an octal permission-style value.",
+    "Compare the same integer across common programming bases."
+  ],
+  "faqs": [
+    {
+      "question": "Which bases are supported?",
+      "answer": "The page supports binary, octal, decimal, and hexadecimal."
+    },
+    {
+      "question": "Does it support fractions?",
+      "answer": "No. The converter is designed for integer values."
+    },
+    {
+      "question": "What happens with invalid digits?",
+      "answer": "If the input cannot be parsed for the selected base, the page shows an error."
+    },
+    {
+      "question": "Can I copy individual results?",
+      "answer": "Yes. Each converted value can be copied from the result area."
+    },
+    {
+      "question": "Is it arbitrary precision?",
+      "answer": "No. It uses JavaScript number parsing, so extremely large integers may not be suitable."
+    }
   ]
 }

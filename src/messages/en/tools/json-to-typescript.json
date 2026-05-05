@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The JSON to TypeScript converter automates type inference by analyzing JSON data structures and generating corresponding TypeScript interfaces with precise type annotations. This tool parses JSON input to identify scalar values, nested objects, arrays, and mixed-type fields, converting them into type-safe TypeScript definitions. It employs recursive type detection to handle deeply nested structures and implements union types when multiple data types appear in arrays or properties. Developers use this tool to eliminate manual type definition errors, accelerate integration of RESTful APIs, and ensure compile-time type safety in large-scale applications. The converter preserves JSON field names while supporting optional property markers (‘?’) and enforces strict null checks by default. Technically, it leverages AST (Abstract Syntax Tree) transformations to map JSON schema elements to TypeScript’s type system, including mapped types and index signatures for dynamic keys. The output includes interface declarations with proper casing, inheritance chains for repeated structures, and JSDoc comments for enhanced IDE integration.",
+  "detailed_description": "The JSON to TypeScript tool infers TypeScript interfaces from a sample JSON object or array. Paste valid JSON, choose or keep the root interface name, and generate interface definitions that reflect strings, numbers, booleans, arrays, null values, and nested objects. It is useful for bootstrapping client types from examples, but generated types should be reviewed before use because one sample cannot prove every possible API response shape.",
   "usage_steps": [
-    "Open the tool in your browser and locate the primary code editor panel.",
-    "Paste your valid JSON data into the left-side input area, ensuring proper syntax with commas and brackets.",
-    "Toggle advanced settings: enable ‘Optional Properties’ to mark fields with undefined values or ‘Strict Null Checks’ for nullable type detection.",
-    "Click the ‘Generate TypeScript’ button to initiate AST analysis and type inference.",
-    "Review the output in the right-side panel, which displays hierarchical interfaces with nested type declarations and union types where applicable.",
-    "Copy the generated TypeScript code using the clipboard icon or keyboard shortcut (Ctrl+C) for immediate use in your project."
+    "Paste a representative JSON sample.",
+    "Enter the root interface name you want to generate.",
+    "Click Convert to parse the JSON.",
+    "Review the generated TypeScript interfaces.",
+    "Rename fields or interfaces if your project style requires it.",
+    "Copy the output into your codebase or type scratchpad."
   ],
   "usage_examples": [
-    "A developer consuming a REST API with complex response structures uses the tool to create type definitions for axios response data, enabling compile-time validation.",
-    "Converting MongoDB document samples into TypeScript interfaces for type-safe aggregation pipeline operations in a Node.js backend.",
-    "Generating interface skeletons from Swagger JSON specifications to enforce contract-first API development in a microservices architecture.",
-    "Creating type definitions for Firebase Realtime Database snapshots to improve query typing and prevent runtime errors in a React Native application."
+    "Generate an interface from a sample REST API response.",
+    "Create nested TypeScript types for a JSON fixture.",
+    "Turn an array of records into an item interface and root interface.",
+    "Bootstrap types before writing a stricter hand-reviewed model."
+  ],
+  "faqs": [
+    {
+      "question": "Does it infer optional fields?",
+      "answer": "It infers from the sample you provide. If a field is missing from the sample, the tool cannot know it exists or should be optional."
+    },
+    {
+      "question": "How are arrays handled?",
+      "answer": "Arrays are inspected from their values and represented as TypeScript array types."
+    },
+    {
+      "question": "Can it generate classes?",
+      "answer": "No. The page generates TypeScript interface-style output, not runtime classes."
+    },
+    {
+      "question": "What happens with invalid JSON?",
+      "answer": "The converter shows an error instead of generating interfaces."
+    },
+    {
+      "question": "Should I review the generated types?",
+      "answer": "Yes. Treat the output as a starting point because real APIs may return cases that are not present in one sample."
+    }
   ]
 }

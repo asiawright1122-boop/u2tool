@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The SQL Formatter is a powerful tool designed to enhance the readability and maintainability of SQL queries. It automatically reformats and indents your SQL code, ensuring that it adheres to consistent and professional standards. This is particularly useful in environments where multiple developers work on the same codebase, as it helps maintain a uniform style, reduces errors, and makes the code easier to understand and debug. The tool supports a wide range of SQL dialects, including MySQL, PostgreSQL, Oracle, and SQL Server, making it versatile for various database systems. Under the hood, the SQL Formatter uses advanced parsing algorithms to analyze the structure of your SQL queries, then applies a set of customizable formatting rules. These rules can be adjusted to match your team's coding standards, such as indentation size, line wrapping, and keyword capitalization. By using the SQL Formatter, developers can focus more on writing efficient and effective queries, rather than worrying about the formatting, thereby improving productivity and code quality.",
+  "detailed_description": "The SQL Formatter reformats SQL text to make queries easier to read, and can also minify SQL by removing extra whitespace. Paste a query, click Format for indentation and line breaks, or click Minify for compact output. It is useful for reviewing SELECT statements, cleaning copied snippets, and preparing examples for documentation. The tool formats text only; it does not connect to a database, execute SQL, validate schema names, or optimize query performance.",
   "usage_steps": [
-    "Step 1: Open the SQL Formatter tool on the website and locate the large text area labeled 'SQL Query'.",
-    "Step 2: Copy and paste your SQL query into the text area. The tool supports queries of any length and complexity.",
-    "Step 3: Click the 'Settings' button to open the formatting options. Here, you can customize settings such as indentation size, line wrapping, and keyword capitalization.",
-    "Step 4: After configuring the settings, click the 'Format' button to process your SQL query. The tool will automatically reformat the query based on the specified rules.",
-    "Step 5: Review the formatted SQL query in the text area. You can make further adjustments to the settings and reformat the query as needed.",
-    "Step 6: Once satisfied, copy the formatted SQL query and paste it into your development environment or database management tool."
+    "Paste SQL into the input editor.",
+    "Click Format to add readable spacing and line breaks.",
+    "Click Minify if you need compact SQL text.",
+    "Review the output for your database dialect.",
+    "Copy the result when it matches your style needs.",
+    "Test important queries in your own database environment."
   ],
   "usage_examples": [
-    "Example 1: A database administrator is working on a complex SQL query that involves multiple joins and subqueries. By using the SQL Formatter, they can quickly organize the query, making it easier to identify and debug any issues.",
-    "Example 2: A team of developers is collaborating on a project and needs to ensure that all SQL queries adhere to a consistent style guide. The SQL Formatter helps them standardize the code, improving readability and maintainability.",
-    "Example 3: A junior developer is learning to write SQL queries and often struggles with formatting. The SQL Formatter provides a quick and easy way to format their queries, helping them understand best practices and improve their skills.",
-    "Example 4: A data analyst is preparing a report and needs to write a SQL query to extract specific data from a database. By using the SQL Formatter, they can ensure that the query is well-structured and easy to review by their peers or supervisors."
+    "Format a long SELECT query before code review.",
+    "Minify a SQL snippet for an environment variable.",
+    "Clean copied SQL before adding it to documentation.",
+    "Make a WHERE clause easier to inspect."
+  ],
+  "faqs": [
+    {
+      "question": "Does it execute SQL?",
+      "answer": "No. It only formats or minifies SQL text in the page."
+    },
+    {
+      "question": "Does it optimize queries?",
+      "answer": "No. It changes readability, not database execution plans."
+    },
+    {
+      "question": "Will every SQL dialect format perfectly?",
+      "answer": "Dialect-specific syntax may need manual review after formatting."
+    },
+    {
+      "question": "Can it minify SQL?",
+      "answer": "Yes. The page includes a minify action."
+    },
+    {
+      "question": "Does it upload my query?",
+      "answer": "The visible formatting runs in the browser page and does not require account login."
+    }
   ]
 }

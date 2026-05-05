@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The Unit Converter tool provides precise multi-domain unit transformations using standardized conversion algorithms. Built on a foundation of SI units and imperial measurement equivalencies, it handles dimensional analysis for 15+ unit categories including length (meters to miles), mass (grams to ounces), thermodynamic temperature (Celsius to Kelvin), and derived units like area (square feet to hectares) and volume. The tool employs IEEE 754 floating-point precision to maintain calculation accuracy up to 15 decimal places, crucial for engineering calculations and scientific research. Users benefit from its ability to manage complex conversions requiring multiple-step dimensional analysis, such as converting BTU/hr to kilowatts for HVAC load calculations or transforming geological measurements between cubic kilometers and acre-feet. The backend uses a matrix-based conversion engine that cross-references over 500 unit pairs, eliminating cumulative conversion errors through direct base-unit normalization.",
+  "detailed_description": "The Unit Converter changes values between common units for length, weight, temperature, area, volume, speed, and digital data. Choose a category, enter a value, select the source and target units, and review the converted result. It uses straightforward conversion factors in the browser and is helpful for everyday estimates, documentation examples, and quick engineering checks. For regulated, laboratory, or safety-critical measurements, verify units and rounding with authoritative references.",
   "usage_steps": [
-    "Select a conversion category from the segmented control: Length, Mass, Temperature, Area, Volume, or Energy",
-    "Enter the source value in the primary input field with up to 15 decimal precision support",
-    "Choose source and target units from the dual-column dropdown menus featuring over 50 unit symbols",
-    "Toggle the 'Bidirectional' switch to enable simultaneous reverse conversion display",
-    "Adjust significant figures using the precision slider (1-15 digits) for engineering notation requirements",
-    "Click 'Copy' to export conversion results in LaTeX-ready format for technical documentation"
+    "Choose the unit category.",
+    "Enter the value to convert.",
+    "Select the source unit.",
+    "Select the target unit.",
+    "Review the converted result.",
+    "Swap units or copy the result if needed."
   ],
   "usage_examples": [
-    "A mechanical engineer converting 3500 psi to megapascals for material stress analysis calculations",
-    "A chef scaling a recipe by transforming 1.25 cups (US customary) to deciliters for metric kitchen equipment",
-    "An astrophysicist converting 14.7 light-years to parsecs for stellar distance calculations",
-    "A land surveyor transforming 220 acres to square kilometers for international property documentation"
+    "Convert kilometers to miles for a travel note.",
+    "Convert pounds to kilograms for a form.",
+    "Convert Celsius to Fahrenheit for a weather comparison.",
+    "Convert megabytes to gigabytes for storage planning."
+  ],
+  "faqs": [
+    {
+      "question": "Which categories are supported?",
+      "answer": "The page supports length, weight, temperature, area, volume, speed, and digital data units."
+    },
+    {
+      "question": "Can I swap units?",
+      "answer": "Yes. The page includes a swap action for source and target units."
+    },
+    {
+      "question": "Are results rounded?",
+      "answer": "Results are displayed for readability, so apply your own precision rules when necessary."
+    },
+    {
+      "question": "Is it suitable for regulated measurements?",
+      "answer": "No. Use authoritative references and calibrated tools for regulated or safety-critical measurements."
+    },
+    {
+      "question": "Does it upload my values?",
+      "answer": "The visible conversion runs in the browser page and does not require account login."
+    }
   ]
 }

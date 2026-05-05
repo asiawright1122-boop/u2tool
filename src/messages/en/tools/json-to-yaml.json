@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The JSON to YAML Converter transforms structured JSON data into YAML format, preserving hierarchical relationships and data types. This tool leverages recursive parsing algorithms to interpret JSON objects, arrays, and primitive values, then maps them to YAML's indentation-based syntax. Developers need this tool for scenarios requiring human-readable configuration files, such as Kubernetes manifests or Ansible playbooks, where YAML's whitespace-sensitive structure offers better maintainability than JSON. The converter handles edge cases like circular references, trailing commas, and Unicode characters, ensuring data integrity during transformation. It also normalizes JSON structures by resolving nested references and converting JSON arrays to YAML block sequences. Technically, the tool uses a two-phase process: first parsing JSON into an abstract syntax tree (AST), then serializing the AST into YAML through a context-aware renderer that adjusts indentation levels based on nesting depth.",
+  "detailed_description": "The JSON to YAML Converter transforms valid JSON into readable YAML-style text directly in the browser. Paste a JSON object, array, string, number, boolean, or null value, convert it, and copy the YAML output. The formatter preserves nested structure with indentation and is useful for configuration drafts, documentation examples, and quick format changes. It is intentionally lightweight and does not replace a full YAML parser or schema validator.",
   "usage_steps": [
-    "Open the converter and paste valid JSON into the 'Source Data' textarea with line numbers enabled",
-    "Toggle the 'Pretty Print' checkbox to control output indentation (2-8 spaces)",
-    "Select 'Single Quotes' or 'Double Quotes' for scalar value formatting",
-    "Click 'Convert' to initiate AST parsing and YAML generation",
-    "Review the 'Conversion Report' for potential data type warnings (e.g. NaN values)",
-    "Copy the YAML output from the 'Result' pane or download as .yaml file"
+    "Paste valid JSON into the input box.",
+    "Click Convert to parse the JSON.",
+    "Review the YAML-style output.",
+    "Fix the JSON if parsing fails.",
+    "Copy the generated YAML when it looks correct.",
+    "Validate the final YAML in your target application if it is production configuration."
   ],
   "usage_examples": [
-    "Migrating AWS CloudFormation templates from JSON to YAML format for team collaboration",
-    "Converting MongoDB document exports to YAML for initializing test databases",
-    "Transforming API gateway response schemas for OpenAPI specification compliance",
-    "Creating Helm chart values.yaml files from JSON-based application configurations"
+    "Convert a package-style JSON snippet into YAML for documentation.",
+    "Turn a simple API example into YAML for a README.",
+    "Draft YAML configuration from a JSON object.",
+    "Inspect nested JSON in a more readable indentation format."
+  ],
+  "faqs": [
+    {
+      "question": "Does it validate YAML schemas?",
+      "answer": "No. It converts JSON into YAML-style text but does not validate against application-specific schemas."
+    },
+    {
+      "question": "Can it convert YAML back to JSON?",
+      "answer": "This page focuses on JSON to YAML conversion. Use a YAML to JSON tool for the reverse direction."
+    },
+    {
+      "question": "What input is required?",
+      "answer": "The input must be valid JSON before conversion can run."
+    },
+    {
+      "question": "How are nested objects handled?",
+      "answer": "Nested objects and arrays are represented with indentation in the generated output."
+    },
+    {
+      "question": "Does it upload my JSON?",
+      "answer": "The visible conversion runs in the browser page and does not require account login."
+    }
   ]
 }

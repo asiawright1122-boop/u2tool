@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The JSON Diff tool performs structural comparison of two JSON objects by analyzing their key-value pairs, nested structures, and data types at multiple levels of granularity. This tool identifies discrepancies in primitive values, array elements, object keys, and hierarchical relationships using recursive traversal algorithms. It leverages a three-way comparison mechanism that evaluates exact matches, type mismatches, and structural divergences with precision. Developers need this tool to validate API response consistency, debug configuration drift in microservices, and track schema evolution in NoSQL databases. The engine employs a diffing algorithm similar to Myers' shortest edit script to highlight minimal changesets, displaying results through interactive, color-coded visualizations that distinguish added, modified, and removed elements. Unlike simple text-based comparisons, this implementation accounts for JSON semantic equivalence by normalizing whitespace, sorting arrays when configured, and preserving key order sensitivity based on RFC 8259 standards.",
+  "detailed_description": "The JSON Diff tool compares two JSON values in the browser and lists changed, added, removed, and type-different paths. Paste the original JSON on the left, paste the changed JSON on the right, and run the comparison to inspect nested object and array differences. It is designed for quick API response checks, configuration reviews, and debugging small to medium JSON payloads. The tool expects valid JSON on both sides and reports parsing errors when the input is not valid JSON.",
   "usage_steps": [
-    "Paste source JSON into the left editor pane using the dedicated 'Original' input field",
-    "Enter modified JSON in the right editor pane labeled 'Revised' with syntax highlighting enabled",
-    "Toggle 'Strict Mode' to enforce type checking or allow type coercion during comparison",
-    "Click the 'Deep Compare' button to initiate recursive structural analysis",
-    "Expand collapsible diff sections in the results panel to examine specific key paths",
-    "Use the 'Export Patch' button to generate a JSON Patch (RFC 6902) document for automated updates"
+    "Paste the original JSON into the first editor.",
+    "Paste the updated JSON into the second editor.",
+    "Click Compare to parse both inputs.",
+    "Review each reported path and difference type.",
+    "Fix invalid JSON if the parser reports an error.",
+    "Copy or use the findings in your review workflow."
   ],
   "usage_examples": [
-    "Comparing API responses from different service versions to identify breaking changes in nested payloads",
-    "Validating cloud infrastructure configuration files (e.g., AWS CloudFormation templates) before deployment",
-    "Debugging inconsistent data structures between client and server in a GraphQL API implementation",
-    "Auditing security policy changes in Azure Resource Manager templates across version control commits"
+    "Compare two API responses after a backend change.",
+    "Find which keys changed between two configuration files.",
+    "Check whether a nested value changed type from string to number.",
+    "Review a small JSON fixture before updating a test."
+  ],
+  "faqs": [
+    {
+      "question": "What kinds of differences are shown?",
+      "answer": "The page reports added keys, removed keys, changed values, and type differences at their JSON paths."
+    },
+    {
+      "question": "Does it accept invalid JSON?",
+      "answer": "No. Both inputs must be valid JSON before the comparison can run."
+    },
+    {
+      "question": "Can it compare arrays?",
+      "answer": "Yes. Arrays are parsed as JSON values, but large reordered arrays may produce many path-level changes."
+    },
+    {
+      "question": "Is this a merge tool?",
+      "answer": "No. It highlights differences; it does not automatically merge the two JSON documents."
+    },
+    {
+      "question": "Does it upload my JSON?",
+      "answer": "The comparison runs in the browser page and does not require account login."
+    }
   ]
 }

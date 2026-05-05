@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The Chinese Converter tool performs bidirectional transformation between Simplified and Traditional Chinese characters using Unicode-compliant algorithms. It leverages the Unicode Standard's Unihan database to maintain glyph accuracy, supporting over 80,000 characters with context-sensitive mapping for ambiguous cases. Unlike basic transliteration tools, this converter preserves semantic integrity through intelligent handling of character compounds and variant forms, such as distinguishing between the Simplified 简 (jiǎn) and Traditional 簡 (jiǎn) in different lexical contexts. Developers and linguists benefit from its round-trip conversion capability, ensuring data consistency when switching between character sets for cross-regional applications. The tool's backend employs a hybrid approach combining rule-based conversion tables with machine learning models trained on multilingual corpora to handle modern vocabulary and technical terms. This technical implementation addresses critical use cases: preparing content for localization in Greater China markets, converting legacy documents for academic research, maintaining codebase compatibility across regions, and ensuring accurate character representation in internationalized domain names (IDNs). The converter also supports batch processing with UTF-8 encoding preservation, making it indispensable for handling large-scale text transformations while maintaining original document structure.",
+  "detailed_description": "The Chinese Converter changes text between Simplified and Traditional Chinese using an in-page character mapping. Paste Chinese text, choose the conversion direction, review the converted output, and copy the result. It is useful for quick interface labels, short messages, and content drafts. The current browser tool focuses on character-level conversion and does not rewrite regional vocabulary, punctuation style, or idiomatic wording, so important publishing work should still be reviewed by a fluent reader.",
   "usage_steps": [
-    "1. Open the tool at chinese-converter.toolsite.com and locate the dual-pane interface",
-    "2. Paste or type your source text into the left input panel labeled 'Simplified Input' or 'Traditional Input' depending on source format",
-    "3. Toggle the 'Conversion Direction' switch to select between 'Simplified → Traditional' or 'Traditional → Simplified' mode",
-    "4. Enable 'Preserve Technical Terms' checkbox to maintain specialized vocabulary in fields like medicine or computing",
-    "5. Click the 'Convert Now' button to initiate the transformation process using the active conversion profile",
-    "6. Review results in the right-hand output panel and use the 'Copy Output' button to save the converted text with original formatting retained"
+    "Paste the Chinese text you want to convert.",
+    "Click Convert to Traditional or Convert to Simplified.",
+    "Review the converted output in the result box.",
+    "Check names, regional terms, and punctuation manually.",
+    "Copy the converted text when it looks right.",
+    "Clear the form before starting a new conversion."
   ],
   "usage_examples": [
-    "A software engineer converting API documentation from Simplified Chinese to Traditional for deployment in Taiwan's enterprise environment",
-    "A historian transforming Ming Dynasty manuscripts digitized in Simplified script back to their original Traditional form for academic publication",
-    "An e-commerce platform normalizing product descriptions between mainland China and Hong Kong market variants during database migration",
-    "A linguistics student analyzing character frequency differences between Simplified and Traditional versions of contemporary Chinese literature"
+    "Convert Simplified Chinese UI labels to Traditional Chinese for a mockup.",
+    "Convert Traditional Chinese text to Simplified Chinese for a draft note.",
+    "Normalize short Chinese snippets before sharing them with a teammate.",
+    "Quickly compare how common characters change between the two writing systems."
+  ],
+  "faqs": [
+    {
+      "question": "Does it translate Chinese into another language?",
+      "answer": "No. It converts between Simplified and Traditional Chinese characters; it does not translate Chinese into English or another language."
+    },
+    {
+      "question": "Will it adapt regional vocabulary?",
+      "answer": "No. The tool focuses on character conversion and does not rewrite regional wording, idioms, or terminology."
+    },
+    {
+      "question": "Can I use it for final publication?",
+      "answer": "Use it as a fast draft helper, then review important text manually because character conversion cannot catch every language nuance."
+    },
+    {
+      "question": "Does it upload my text?",
+      "answer": "The visible conversion runs in the browser page and does not require account login."
+    },
+    {
+      "question": "Why did some characters stay the same?",
+      "answer": "Many Chinese characters are identical in Simplified and Traditional forms, so they do not change during conversion."
+    }
   ]
 }

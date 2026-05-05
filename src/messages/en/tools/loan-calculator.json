@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The Loan Calculator is a computational tool that performs amortization analysis for fixed and variable interest rate loans using standard financial formulas. It calculates monthly payments using the PMT equation: M = P[r(1+r)^n]/[(1+r)^n-1], where P is principal, r is per-period interest rate, and n is total payments. Users benefit from precise breakdowns of principal and interest components across payment schedules, enabling strategic debt management. The tool handles compounding frequencies (monthly, quarterly, annually) and generates dynamic amortization tables showing remaining balances after each payment. Unique features include support for ad-hoc principal pre-payments and exportable CSV schedule generation. This enables financial professionals, homeowners, and borrowers to model debt scenarios with mathematical precision, compare loan offers, and optimize repayment strategies.",
+  "detailed_description": "The Loan Calculator estimates fixed-payment loan costs from principal, annual interest rate, term length, and payment frequency. It calculates the periodic payment, total interest, total amount paid, and an amortization schedule that splits each period into principal, interest, and remaining balance. It is useful for comparing simple repayment scenarios. The result is an estimate and does not include taxes, insurance, lender fees, changing rates, or local financial rules.",
   "usage_steps": [
-    "Input loan principal amount in the 'Principal Value' numeric field",
-    "Enter annual percentage rate (APR) using the rate adjustment slider or manual percentage entry",
-    "Set loan duration using the dual-selector for years/months",
-    "Choose compounding interval via radio buttons (monthly/quarterly/semiannual/annual)",
-    "Activate calculation engine by clicking the 'Generate Amortization Table' button",
-    "Access schedule details in the interactive grid and use 'Export CSV' for permanent records"
+    "Enter the loan principal.",
+    "Enter the annual interest rate as a percentage.",
+    "Enter the loan term in months.",
+    "Choose monthly, biweekly, or weekly payments.",
+    "Click Calculate to create the payment estimate.",
+    "Review the summary and amortization schedule."
   ],
   "usage_examples": [
-    "A mortgage broker calculating monthly payments for a $420,000 home loan at 4.25% APR over 30 years with monthly compounding",
-    "A small business owner comparing 5-year equipment financing options at 6.5% APR versus 7.25% APR with quarterly compounding",
-    "A student loan borrower analyzing the impact of $100 monthly extra payments on a $65,000 loan at 5.8% APR over 15 years",
-    "An automotive buyer evaluating refinancing possibilities for a $22,000 car loan at 8.5% APR versus a new 6.9% APR offer with reduced term"
+    "Estimate a monthly payment for a personal loan.",
+    "Compare total interest for different loan terms.",
+    "See how weekly payments change the number of periods.",
+    "Review how the principal balance decreases over time."
+  ],
+  "faqs": [
+    {
+      "question": "Is this financial advice?",
+      "answer": "No. It is a calculator for estimates and should not replace advice from a qualified financial professional."
+    },
+    {
+      "question": "Does it include taxes or fees?",
+      "answer": "No. The calculation uses principal, interest rate, term, and payment frequency only."
+    },
+    {
+      "question": "What payment frequencies are supported?",
+      "answer": "The page supports monthly, biweekly, and weekly payment estimates."
+    },
+    {
+      "question": "Can it model variable interest rates?",
+      "answer": "No. It assumes one annual interest rate for the calculation."
+    },
+    {
+      "question": "Why is the final balance rounded?",
+      "answer": "Currency formatting and periodic rounding can leave tiny display differences near zero."
+    }
   ]
 }

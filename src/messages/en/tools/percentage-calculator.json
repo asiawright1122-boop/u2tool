@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The Percentage Calculator is a precision-driven tool engineered for mathematical computations involving proportional relationships. It performs three core operations: (1) calculating a percentage of a base value using the formula (percentage × base)/100, (2) determining percentage change via [(new_value - original_value)/|original_value|] × 100, and (3) computing absolute deltas for increases or decreases. This tool caters to financial analysts needing margin calculations, educators grading curved exams, and developers validating numerical edge cases. Built on a JavaScript computational engine, it processes floating-point arithmetic with 15-digit precision, automatically normalizes negative inputs, and enforces input validation through regex patterns. The percentage change function specifically handles zero-division scenarios by returning ±Infinity indicators, while the delta calculation distinguishes between absolute and relative differences. Results display with customizable decimal rounding (up to 8 decimal places) and include directional indicators (+/-) for immediate interpretation. Technical safeguards prevent invalid entries like non-numeric characters, ensuring robustness in both simple and complex mathematical workflows.",
+  "detailed_description": "The Percentage Calculator handles common percentage questions in one page: finding a percentage of a value, finding what percent one number is of another, calculating percentage change, and applying a percentage increase or decrease. Enter the relevant numbers and the results update on the page. It is useful for discounts, growth comparisons, grade checks, reports, and quick proportional math. Results are numeric calculations and should be checked for rounding needs in financial or formal contexts.",
   "usage_steps": [
-    "1. Navigate to the tool interface and select calculation mode via the 'Operation Type' dropdown (Percentage, Change, or Delta)",
-    "2. Enter the base numerical value in the 'Reference Number' field (accepts integers, decimals, and negatives)",
-    "3. Input the comparative value in the 'Secondary Value' field for change/delta operations",
-    "4. Activate the 'Precision Control' slider to set decimal output resolution (0-8 digits)",
-    "5. Click 'Execute Calculation' to trigger the computational engine",
-    "6. Review results displayed in the 'Outcome Panel' with annotated directional indicators and formula breakdowns"
+    "Choose the percentage question that matches your task.",
+    "Enter the values in the relevant fields.",
+    "Review the calculated result.",
+    "Use the copy action if you need to paste the number elsewhere.",
+    "Adjust inputs to compare another scenario.",
+    "Round the result according to your reporting or business rules."
   ],
   "usage_examples": [
-    "Calculate a 17.5% VAT tax on a €239 invoice: Input 239 as base, 17.5 as percentage, select 'Percentage' mode to get €41.83 tax amount",
-    "Analyze stock price fluctuation from $89.50 to $97.25: Use 'Change' mode to determine +8.66% movement with precise decimal output",
-    "Compare year-over-year sales metrics: Input Q1 revenue $125,000 and Q2 revenue $142,300 to calculate 13.84% growth",
-    "Adjust recipe ingredients: Calculate 2/3 reduction of 300g flour using 'Delta' mode with -66.667% input to get precise 100g measurement"
+    "Calculate 15% of a price.",
+    "Find what percent 25 is of 200.",
+    "Measure growth from an old value to a new value.",
+    "Apply a 10% decrease to a starting amount."
+  ],
+  "faqs": [
+    {
+      "question": "What percentage calculations are available?",
+      "answer": "The page covers percentage of a value, part as percent of whole, percentage change, and increase or decrease by percent."
+    },
+    {
+      "question": "Does it round results automatically?",
+      "answer": "The page displays calculated numeric results, but you should apply your own rounding rules when needed."
+    },
+    {
+      "question": "Can it handle negative numbers?",
+      "answer": "The inputs accept numeric values, but interpretation of negative percentages depends on your scenario."
+    },
+    {
+      "question": "Is this suitable for financial decisions?",
+      "answer": "Use it for quick math checks, not as professional financial advice."
+    },
+    {
+      "question": "Can I copy results?",
+      "answer": "Yes. Result fields include copy actions."
+    }
   ]
 }

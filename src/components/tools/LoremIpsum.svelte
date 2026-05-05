@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
-  import { generateParagraph, generateSentence, generateWords } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -29,6 +28,38 @@
   let timerRef = $state(null);  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
+
+  const loremWords = [
+    'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing', 'elit',
+    'sed', 'do', 'eiusmod', 'tempor', 'incididunt', 'ut', 'labore', 'et', 'dolore',
+    'magna', 'aliqua', 'enim', 'ad', 'minim', 'veniam', 'quis', 'nostrud',
+    'exercitation', 'ullamco', 'laboris', 'nisi', 'aliquip', 'ex', 'ea', 'commodo',
+    'consequat', 'duis', 'aute', 'irure', 'reprehenderit', 'voluptate', 'velit',
+    'esse', 'cillum', 'fugiat', 'nulla', 'pariatur',
+  ];
+
+  let wordCursor = 0;
+
+  function nextWord(): string {
+    const word = loremWords[wordCursor % loremWords.length];
+    wordCursor += 1;
+    return word;
+  }
+
+  function generateWords(count: number): string {
+    return Array.from({ length: count }, () => nextWord()).join(' ');
+  }
+
+  function generateSentence(): string {
+    const length = 8 + (wordCursor % 10);
+    const sentence = generateWords(length);
+    return sentence.charAt(0).toUpperCase() + sentence.slice(1) + '.';
+  }
+
+  function generateParagraph(): string {
+    const sentenceCount = 4 + (wordCursor % 3);
+    return Array.from({ length: sentenceCount }, () => generateSentence()).join(' ');
+  }
 
   // Functions
   function generate() {

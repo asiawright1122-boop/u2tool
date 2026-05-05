@@ -99,6 +99,10 @@
         </button>
       </div>
 
+      <div class="rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-100">
+        Demo notice: this browser page shows a certificate-style summary for learning and UI checks. It does not retrieve the live TLS certificate chain for the entered domain.
+      </div>
+
       {#if error}
 <div class="p-4 bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-700 rounded-lg text-red-600 dark:text-red-400">
           {error}
