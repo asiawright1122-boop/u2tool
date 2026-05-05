@@ -1,17 +1,38 @@
 {
-  "detailed_description": "The Word Counter tool performs granular text analysis by leveraging Unicode-aware parsing algorithms to accurately segment input text into lexical units. Utilizing regular expression patterns matching \\b\\w+\\b for word boundaries, sentence detection via punctuation-terminated phrase recognition, and paragraph identification through newline character sequences (\\r\\n\\r\\n), it quantifies text metrics with byte-level precision. This enables developers and content creators to validate content against specific constraints such as SEO meta tags requiring 155-160 character descriptions, academic paper word limits, or content management system formatting rules. The tool's backend processes text streams using finite-state automata to count alphabetic, numeric, and special characters separately, while its frontend employs a Web Workers implementation to prevent UI blocking during large document analysis. Unique features include configurable whitespace sensitivity, multilingual hyphenation handling, and statistical breakdowns showing average word length and paragraph density – crucial for accessibility compliance audits and natural language processing pipeline preprocessing.",
+  "detailed_description": "The Word Counter tool gives writers, students, editors, marketers, and developers a fast way to measure text length directly in the browser. Paste text into the input box and the page updates the core metrics immediately: words, total characters, characters without spaces, sentences, paragraphs, and lines. This is useful when you need to keep a meta description near a target length, check a social post before publishing, estimate a short article draft, or compare multiple versions of copy without opening a full writing suite. The counter is intentionally simple and transparent: it treats whitespace-separated text as words, punctuation marks as sentence boundaries, blank-line groups as paragraphs, and newline characters as line breaks. Because the result is shown beside the input, you can revise a sentence and see the count change as you type.",
   "usage_steps": [
-    "1. Paste raw text into the primary textarea input field or drag/drop a .txt/.docx file onto the designated upload zone",
-    "2. Toggle the 'Advanced Statistics' checkbox to enable detailed metrics including average word length and paragraph distribution",
-    "3. Select specific analysis modes using the segmented control: 'Basic Counts' for simple word/character totals, 'Linguistic Analysis' for sentence complexity metrics, or 'Format Validation' for style guide compliance checks",
-    "4. Click the 'Process Text' button to initiate analysis, which highlights tokenized segments in the source text using colored overlays",
-    "5. Review results displayed in the dedicated metrics panel, including total word count, character count excluding whitespace, sentence boundaries identified via Punkt algorithm, and paragraph clusters detected through blank line segmentation",
-    "6. Use the 'Export Data' dropdown to download results as JSON or CSV, or click 'Copy All Metrics' to clipboard for integration with documentation workflows"
+    "Paste or type your text into the main input area.",
+    "Review the word, character, character-without-spaces, sentence, paragraph, and line cards below the input.",
+    "Edit the text until the counts match your writing, SEO, academic, or product-copy target.",
+    "Use the character-without-spaces count when a platform ignores whitespace, and the total character count when spaces matter.",
+    "Click Clear when you want to remove the current text and start a new count."
   ],
   "usage_examples": [
-    "A technical writer verifies API documentation meets exact word counts for developer portal summaries while maintaining 75-100 words per paragraph for readability",
-    "A digital marketer optimizes product descriptions to Google Shopping's 150-character limit by comparing character counts with and without whitespace",
-    "A computational linguist uses sentence count statistics to train a machine learning model for academic paper abstract detection",
-    "A legal professional validates contract section length requirements by analyzing paragraph distribution patterns in proposed agreements"
+    "A content marketer checks whether a draft meta description is close to a 155-character target before adding it to a CMS.",
+    "A student confirms that an assignment introduction stays within a required word-count range.",
+    "A product manager compares two short feature descriptions and keeps the clearer version under a UI character limit.",
+    "A documentation writer checks paragraph and line counts while trimming release notes for readability."
+  ],
+  "faqs": [
+    {
+      "question": "Does the Word Counter upload or store my text?",
+      "answer": "No. The tool runs in your browser page and updates the counts from the text you enter. Avoid pasting sensitive information into any online page unless your workflow allows it."
+    },
+    {
+      "question": "How does the tool count words?",
+      "answer": "It counts words by trimming the text and splitting it on whitespace. This is a practical count for drafts, SEO copy, notes, and everyday writing checks."
+    },
+    {
+      "question": "What is the difference between characters and characters without spaces?",
+      "answer": "Characters includes every letter, number, symbol, punctuation mark, and space. Characters without spaces removes whitespace first, which is useful for platforms that ignore spaces in limits."
+    },
+    {
+      "question": "Can I use it for SEO titles and meta descriptions?",
+      "answer": "Yes. Paste the title or description and use the character cards as a quick length check before publishing. Search snippets can still vary by query and device, so treat the count as guidance."
+    },
+    {
+      "question": "Why might the sentence count differ from a grammar checker?",
+      "answer": "This page uses punctuation-based sentence counting for speed and clarity. Grammar tools may apply more language-specific rules, so small differences are expected for abbreviations or unusual punctuation."
+    }
   ]
 }

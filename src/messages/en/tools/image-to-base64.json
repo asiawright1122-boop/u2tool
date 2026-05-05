@@ -1,17 +1,39 @@
 {
-  "detailed_description": "This tool converts image files into Base64-encoded strings using MIME-type-aware binary-to-text encoding. By processing image headers and pixel data through a buffer allocation algorithm, it generates RFC 4648-compliant data URIs suitable for direct embedding in HTML, CSS, or JavaScript. Developers require this functionality to optimize page load performance by eliminating HTTP requests for small graphics, inline critical UI assets in single-page applications, or create self-contained email templates. The converter handles JPEG, PNG, and WebP formats by reading their binary structure, detecting color profiles, and applying Base64 alphabet encoding with proper padding. Output strings include the appropriate data URI scheme prefix (e.g., 'data:image/png;base64,') for immediate implementation in web contexts.",
+  "detailed_description": "The Image to Base64 tool converts a local image file into a Base64 data URL in your browser. Choose an image, preview the file details, then copy either the complete data URL or the raw Base64 portion. The page also prepares small HTML and CSS snippets so developers can quickly test an inline image in markup or a background-image rule. This workflow is useful for small icons, email template experiments, quick documentation examples, and prototypes where a self-contained asset is convenient. Base64 increases text size compared with the original binary file, so it is usually best for small images rather than large photos. The tool reads the selected file with the browser FileReader API and does not require an upload step for the conversion.",
   "usage_steps": [
-    "1. Click 'Choose File' to select an image from your device (supports PNG, JPEG, WebP up to 10MB)",
-    "2. Toggle 'Preserve Transparency' for PNG files requiring alpha channel retention",
-    "3. Select target encoding format from dropdown (original format preserved by default)",
-    "4. Adjust quality slider (60-100%) for JPEG compression optimization",
-    "5. Click 'Convert' to process the image through the Base64 encoder",
-    "6. Copy the output URI from the text area or download the encoded string as .txt"
+    "Click the upload area and choose an image file from your device.",
+    "Review the preview, file name, MIME type, and file size shown after selection.",
+    "Copy the full data URL when you need a value that already includes the data:image prefix.",
+    "Copy the raw Base64 value when another tool or API asks for only the encoded data.",
+    "Use the generated HTML image tag or CSS background snippet for quick local testing.",
+    "Click Clear when you want to remove the selected file and convert another image."
   ],
   "usage_examples": [
-    "Embedding a company logo in a transactional email template to ensure display across clients",
-    "Inlining social media icons in a progressive web app's service worker script",
-    "Creating data URI CSS sprites for responsive navigation bars",
-    "Generating embeddable favicons directly in HTML headers for SEO optimization"
+    "Embedding a small logo in a one-off HTML email test without managing a separate image URL.",
+    "Creating a self-contained documentation snippet that shows how a data URL image is used.",
+    "Copying the raw Base64 payload for an API test that accepts an encoded image field.",
+    "Testing a tiny icon as a CSS background image before deciding whether to keep it as a separate asset."
+  ],
+  "faqs": [
+    {
+      "question": "Is the image uploaded to a server?",
+      "answer": "The page reads the selected file in the browser and displays the encoded result. You should still avoid using sensitive images in workflows that are not approved by your organization."
+    },
+    {
+      "question": "Should I use Base64 for every website image?",
+      "answer": "No. Base64 can make content larger and harder to cache separately. It is usually best for small icons, quick tests, or self-contained examples."
+    },
+    {
+      "question": "What is the difference between a data URL and raw Base64?",
+      "answer": "A data URL includes the MIME type and prefix, such as data:image/png;base64,. Raw Base64 is only the encoded data after the comma."
+    },
+    {
+      "question": "Why is my Base64 output longer than the image file?",
+      "answer": "Base64 encoding expands binary data into text, so the output is normally larger than the original file."
+    },
+    {
+      "question": "Which image formats can I choose?",
+      "answer": "The file picker accepts image files supported by your browser. The output keeps the selected file's data URL MIME type rather than converting the image format."
+    }
   ]
 }

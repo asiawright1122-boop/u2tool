@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The Regex Tester is a specialized tool for developers to validate, debug, and optimize regular expressions using live evaluation against custom input. Built on PCRE2 and ECMAScript-compatible engines, it provides real-time feedback on pattern matches, capture groups, and replacement outcomes. Developers can test complex regex patterns involving lookaheads, backreferences, and nested quantifiers while receiving immediate visual feedback through syntax-highlighted matches and error diagnostics. The tool's core functionality includes a dual-pane interface: one for crafting regex patterns with syntax validation, and another for entering test data that triggers instant matching. Technical features include support for modifier flags (global, multiline, dotall), capture group inspection via a dedicated panel, and a replacement preview mode to simulate substitution operations. This tool addresses critical developer needs such as validating form inputs (e.g., phone numbers, email formats), parsing structured logs, extracting data from unformatted text, and troubleshooting regex edge cases that cause catastrophic backtracking. Its technical advantage lies in granular error reporting that identifies specific syntax issues like unterminated character classes or invalid escape sequences, combined with performance metrics showing execution time for benchmarking patterns.",
+  "detailed_description": "The Regex Tester lets developers try JavaScript regular expressions against sample text and see matches immediately. Enter a pattern, adjust the common JavaScript flags, and edit the test string to watch highlighted matches and match indexes update on the page. It is useful for checking form validation patterns, extracting values from logs, testing simple text filters, and confirming how a pattern behaves before copying it into application code. The tester uses the browser's JavaScript RegExp behavior, so it is best for patterns intended for JavaScript, TypeScript, frontend validation, Node.js scripts, and browser-based tools. Syntax errors are shown inline, which makes it easier to catch missing brackets, unsupported flags, or invalid escapes while you work.",
   "usage_steps": [
-    "Access the tool's interface with separate editors for regex patterns and test input",
-    "Enter a regex pattern in the top editor, which automatically validates syntax and highlights errors",
-    "Enable modifier flags (g/m/s/i) via toggle buttons to adjust matching behavior",
-    "Input test data in the lower editor pane, observing live match highlighting in both panels",
-    "Review captured groups and backreferences displayed in the dedicated inspection panel",
-    "Switch to replacement mode to test substitution strings with dynamic group references"
+    "Enter a JavaScript regular expression pattern in the pattern field.",
+    "Set the flags you want to test, such as g for global matches, i for case-insensitive matching, m for multiline mode, or s for dotall mode.",
+    "Paste or edit sample text in the test string area.",
+    "Review the highlighted result and the list of matched strings with their indexes.",
+    "If the pattern is invalid, read the displayed error message and adjust the expression.",
+    "Copy the final pattern into your JavaScript, TypeScript, or Node.js code after testing it with representative input."
   ],
   "usage_examples": [
-    "Validating a JWT token format by testing a regex pattern against base64-encoded strings with embedded periods",
-    "Extracting HTTP status codes from server logs using capturing groups with \\\\b word boundaries",
-    "Debugging a CSV parser regex that fails on quoted fields containing escaped commas",
-    "Benchmarking different phone number validation patterns to optimize backtracking efficiency"
+    "Testing an email-like pattern against a contact form sample before adding client-side validation.",
+    "Extracting HTTP status codes from a few log lines and checking where each match starts.",
+    "Checking whether a case-insensitive flag catches both uppercase and lowercase product IDs.",
+    "Trying a multiline pattern against pasted configuration text before using it in a cleanup script."
+  ],
+  "faqs": [
+    {
+      "question": "Which regex engine does this page use?",
+      "answer": "It uses the browser's JavaScript RegExp behavior. Patterns for other engines may need changes before they work the same way in JavaScript."
+    },
+    {
+      "question": "Why does my pattern show an error?",
+      "answer": "The browser reports errors for invalid JavaScript regex syntax, unsupported flags, missing brackets, or escapes that are not valid in the current pattern."
+    },
+    {
+      "question": "What do the flags mean?",
+      "answer": "g finds all matches, i ignores case, m changes line-boundary behavior, and s allows the dot character to match newlines."
+    },
+    {
+      "question": "Can I test replacement strings here?",
+      "answer": "This page focuses on matching and highlighting. If you need replacement previews, test the replace call in your code or use a dedicated replacement tool."
+    },
+    {
+      "question": "Why are match indexes useful?",
+      "answer": "Indexes show where each match begins in the test string, which helps when debugging parsers, validators, and text extraction logic."
+    }
   ]
 }
