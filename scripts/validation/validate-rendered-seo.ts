@@ -213,9 +213,9 @@ const checks: RenderedSeoCheck[] = [
   {
     name: 'Image Converter refreshed support content',
     path: '/en/tools/image-converter/',
-    titleIncludes: 'Image Converter',
+    titleIncludes: 'Image Format Converter',
     descriptionIncludes: 'image',
-    h1Includes: 'Image Converter',
+    h1Includes: 'Image Format Converter',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     bodyMustInclude: ['The Image Converter changes a local image into PNG, JPEG, or WebP'],
     bodyMustNotInclude: ['without leaving the browser. Upload a file'],
