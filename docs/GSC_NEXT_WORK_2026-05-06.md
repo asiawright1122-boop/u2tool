@@ -22,7 +22,13 @@ This means the next work should not be broad sitemap or IndexNow repetition. Tho
    - `由于遇到其他 4xx 问题而被屏蔽了`
    - `未找到 (404)`
 
-2. Run the existing drilldown classifier once those URL CSVs are available:
+2. Put the exported files under `exports/gsc/coverage-drilldowns/` and put Performance exports under `exports/gsc/`, then run the input checker:
+
+```bash
+npm run check:gsc-recovery-inputs
+```
+
+3. Run the existing drilldown classifier once those URL CSVs are available:
 
 ```bash
 npm run report:gsc-drilldown -- \
@@ -30,18 +36,18 @@ npm run report:gsc-drilldown -- \
   --output docs/GSC_DRILLDOWN_URL_REPORT_2026-05-04.md
 ```
 
-3. Patch only systematic URL patterns:
+4. Patch only systematic URL patterns:
    - Fix live tool/category/compare pages that incorrectly appear in `noindex`, 4xx, or Google-selected canonical mismatch groups.
    - Remove internal links to redirecting or missing URLs.
    - Avoid blanket redirects for random 404 URLs unless there is a clear one-to-one replacement, because that can create soft-404 signals.
 
-4. Export GSC Performance data for `28 days` versus `previous 28 days`:
+5. Export GSC Performance data for `28 days` versus `previous 28 days`:
    - Pages current
    - Pages previous
    - Queries current
    - Queries previous
 
-5. Run the recovery report to split the problem into exposure, CTR, and clicks:
+6. Run the recovery report to split the problem into exposure, CTR, and clicks:
 
 ```bash
 npm run report:gsc-recovery -- \
