@@ -8,35 +8,39 @@ const normalizedPath =
 const segments = normalizedPath.split('/').filter(Boolean);
 const localePattern = /^[a-z]{2}$/;
 
-type RedirectStatus = 301 | 302 | 303 | 307 | 308;
-
-const redirect = (to: string, status: RedirectStatus = 301) => Astro.redirect(to, status);
-
 if (segments.length === 0) {
-  return redirect('/en/', 302);
+  return Astro.redirect('/en/', 302);
 }
 
 const [first, second, third] = segments;
-const rest = segments.slice(1).join('/');
 
 if (first === 'tools') {
-  return redirect(rest ? `/en/tools/${rest}/` : '/en/tools/', 301);
+  return Astro.redirect(
+    segments.length > 1 ? `/en/tools/${segments.slice(1).join('/')}/` : '/en/tools/',
+    301
+  );
 }
 if (first === 'categories') {
-  return redirect(rest ? `/en/categories/${rest}/` : '/en/tools/', 301);
+  return Astro.redirect(
+    segments.length > 1 ? `/en/categories/${segments.slice(1).join('/')}/` : '/en/tools/',
+    301
+  );
 }
 if (first === 'compare') {
-  return redirect(rest ? `/en/compare/${rest}/` : '/en/compare/', 301);
+  return Astro.redirect(
+    segments.length > 1 ? `/en/compare/${segments.slice(1).join('/')}/` : '/en/compare/',
+    301
+  );
 }
 if (first === 'ai') {
-  return redirect('/en/ai/', 301);
+  return Astro.redirect('/en/ai/', 301);
 }
 
 if (localePattern.test(first) && second === 'tools' && third === 'ranking') {
-  return redirect(`/${first}/tools/`, 301);
+  return Astro.redirect(`/${first}/tools/`, 301);
 }
 if (first === 'tools' && second === 'ranking') {
-  return redirect('/en/tools/', 301);
+  return Astro.redirect('/en/tools/', 301);
 }
 
 Astro.response.status = 404;

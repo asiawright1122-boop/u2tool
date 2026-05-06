@@ -1,14 +1,12 @@
 import type { MiddlewareHandler } from 'astro';
 
 const HTML_EDGE_CACHE_CONTROL = 'public, max-age=300, s-maxage=86400, stale-while-revalidate=604800';
-const HTML_EDGE_CACHE_VERSION = '2026-05-06-ctr-jwt-trust-refresh-v1';
+const HTML_EDGE_CACHE_VERSION = '2026-05-06-seo-cfcontext-refresh-v2';
 const CACHEABLE_HTML_PATH = /^\/(?:$|(?:en|zh|ja|ko|es|pt|fr|de|ru|ar)(?:\/|$))/;
 
 type CloudflareRuntimeLocals = {
-  runtime?: {
-    ctx?: {
-      waitUntil?: (promise: Promise<unknown>) => void;
-    };
+  cfContext?: {
+    waitUntil?: (promise: Promise<unknown>) => void;
   };
 };
 
@@ -28,6 +26,15 @@ function isCacheableHtmlRequest(request: Request): boolean {
 
   const url = new URL(request.url);
   return url.search === '' && CACHEABLE_HTML_PATH.test(url.pathname);
+}
+
+function isLocalPreviewRequest(request: Request): boolean {
+  const hostname = new URL(request.url).hostname;
+  return hostname === 'localhost'
+    || hostname === '127.0.0.1'
+    || hostname === '0.0.0.0'
+    || hostname === '[::1]'
+    || hostname === '::1';
 }
 
 function getHtmlCacheKey(request: Request): Request {
@@ -53,8 +60,9 @@ function toCachedGetResponse(response: Response): Response {
 }
 
 export const onRequest: MiddlewareHandler = async (context, next) => {
-  const shouldCacheHtml = isCacheableHtmlRequest(context.request);
-  const cache = shouldCacheHtml ? getDefaultCache() : null;
+  const shouldUseHtmlCache = isCacheableHtmlRequest(context.request)
+    && !isLocalPreviewRequest(context.request);
+  const cache = shouldUseHtmlCache ? getDefaultCache() : null;
   const cacheKey = cache ? getHtmlCacheKey(context.request) : null;
 
   if (cache && cacheKey) {
@@ -73,15 +81,15 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
 
   if (contentType.includes('text/html')) {
     response.headers.set('cache-control', HTML_EDGE_CACHE_CONTROL);
-    response.headers.set('x-u2tool-html-cache', shouldCacheHtml ? 'MISS' : 'BYPASS');
+    response.headers.set('x-u2tool-html-cache', shouldUseHtmlCache ? 'MISS' : 'BYPASS');
 
     if (cache && cacheKey && context.request.method === 'GET' && response.status === 200) {
       const cacheableResponse = response.clone();
       const putPromise = cache.put(cacheKey, cacheableResponse);
-      const runtime = (context.locals as CloudflareRuntimeLocals).runtime;
+      const cfContext = (context.locals as CloudflareRuntimeLocals).cfContext;
 
-      if (runtime?.ctx?.waitUntil) {
-        runtime.ctx.waitUntil(putPromise);
+      if (cfContext?.waitUntil) {
+        cfContext.waitUntil(putPromise);
       } else {
         await putPromise;
       }

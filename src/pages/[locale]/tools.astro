@@ -5,7 +5,6 @@
  * Includes sidebar layout matching the original Next.js design.
  * Supports ?category= filtering via ToolsGrid Svelte component.
  */
-import type { GetStaticPaths } from 'astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/layout/Header.svelte';
 import StaticSidebar from '@/components/layout/StaticSidebar.astro';
@@ -17,7 +16,7 @@ import ComparisonGuideSection from '@/components/discovery/ComparisonGuideSectio
 import StructuredData from '@/components/seo/StructuredData.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import { tools, categories } from '@/config/tools';
-import { locales, isValidLocale } from '@/lib/i18n';
+import { isValidLocale } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadBaseMessages } from '@/lib/translations';
 import { buildCategoryDiscoveryItemList, buildCategoryDiscoverySpotlights } from '@/lib/discovery-surface';
@@ -29,19 +28,12 @@ import { buildLocalizedPageUrl } from '@/lib/seo';
 
 export const prerender = false;
 
-export const getStaticPaths: GetStaticPaths = () => {
-  return locales.map((locale) => ({
-    params: { locale },
-    props: { locale },
-  }));
-};
-
 const localeCandidate = Astro.params.locale ?? (Astro.props as { locale?: Locale }).locale;
 if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate)) {
   return Astro.redirect('/en/tools/', 302);
 }
 const locale: Locale = localeCandidate;
-const baseMessages = await loadBaseMessages(locale);
+const baseMessages = await loadBaseMessages(locale, Astro.url);
 const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
 const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
@@ -236,7 +228,7 @@ const toolsCollectionData = {
           toolNames={toolNames}
           toolDescriptions={toolDescriptions}
           previewCount={6}
-          searchIndexPath={`/${locale}/tools-index.json`}
+          searchIndexPath={`/${locale}/tools-index.json/`}
           emptyResultsLabel={searchMessages.noResults || navMessages.noResults || 'No tools found'}
           initialSearchQuery={searchQuery}
           initialSearchResults={initialSearchResults}

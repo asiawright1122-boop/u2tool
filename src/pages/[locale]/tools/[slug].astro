@@ -61,10 +61,10 @@ if (!tool) {
 }
 
 // Load tool-specific translations without parsing every tool's long-form copy.
-const messages = await loadToolPageMessages(locale, tool.slug);
+const messages = await loadToolPageMessages(locale, tool.slug, Astro.url);
 
 // Load lightweight base messages for common UI strings (nav labels, category names, etc.)
-const baseMessages = await loadBaseUiMessages(locale);
+const baseMessages = await loadBaseUiMessages(locale, Astro.url);
 const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
 const toolsCommon = (baseMessages.tools as Record<string, unknown>) ?? {};

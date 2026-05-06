@@ -9,7 +9,6 @@
  * - Popular tools carousel with auto-rotation
  * - Mobile bottom navigation
  */
-import type { GetStaticPaths } from 'astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/layout/Header.svelte';
 import StaticSidebar from '@/components/layout/StaticSidebar.astro';
@@ -33,19 +32,12 @@ import { buildLocalizedPageUrl, getHomePageSeo } from '@/lib/seo';
 
 export const prerender = false;
 
-export const getStaticPaths: GetStaticPaths = () => {
-  return locales.map((locale) => ({
-    params: { locale },
-    props: { locale },
-  }));
-};
-
 const localeCandidate = Astro.params.locale ?? (Astro.props as { locale?: Locale }).locale;
 if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate)) {
   return Astro.redirect('/en/', 302);
 }
 const locale: Locale = localeCandidate;
-const baseMessages = await loadBaseMessages(locale);
+const baseMessages = await loadBaseMessages(locale, Astro.url);
 const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
 const navMessages = (baseMessages.nav as Record<string, string>) ?? {};

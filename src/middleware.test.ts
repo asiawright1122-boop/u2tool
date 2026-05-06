@@ -35,14 +35,18 @@ function restoreCaches() {
   });
 }
 
-async function runMiddleware(request: Request, next = vi.fn(async () => new Response('<html>ok</html>', {
+async function runMiddleware(
+  request: Request,
+  next = vi.fn(async () => new Response('<html>ok</html>', {
   headers: {
     'content-type': 'text/html; charset=utf-8',
   },
-}))) {
+  })),
+  locals: Record<string, unknown> = {}
+) {
   const response = await onRequest(
     {
-      locals: {},
+      locals,
       request,
     } as never,
     next as never
@@ -96,5 +100,31 @@ describe('html edge cache middleware', () => {
     expect(response.headers.get('x-u2tool-html-cache')).toBe('BYPASS');
     expect(cache.match).not.toHaveBeenCalled();
     expect(cache.put).not.toHaveBeenCalled();
+  });
+
+  it('bypasses persistent cache storage for local preview requests', async () => {
+    const cache = installHtmlCache();
+    const { response } = await runMiddleware(new Request('http://127.0.0.1:4321/en/tools/'));
+
+    expect(response.headers.get('x-u2tool-html-cache')).toBe('BYPASS');
+    expect(cache.match).not.toHaveBeenCalled();
+    expect(cache.put).not.toHaveBeenCalled();
+  });
+
+  it('uses Astro v6 Cloudflare cfContext.waitUntil for background cache writes', async () => {
+    const cache = installHtmlCache();
+    const waitUntil = vi.fn((promise: Promise<unknown>) => {
+      void promise;
+    });
+
+    const { response } = await runMiddleware(
+      new Request('https://www.u2tool.com/en/tools/json-formatter/'),
+      undefined,
+      { cfContext: { waitUntil } }
+    );
+
+    expect(response.headers.get('x-u2tool-html-cache')).toBe('MISS');
+    expect(cache.put).toHaveBeenCalledTimes(1);
+    expect(waitUntil).toHaveBeenCalledTimes(1);
   });
 });
