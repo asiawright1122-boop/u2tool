@@ -149,14 +149,14 @@
   "json-formatter": {
     "name": "JSON Formatter",
     "description": "Format and beautify JSON data with syntax highlighting. Validate JSON and fix common errors.",
-    "seo_title": "Free JSON Formatter & Validator Online",
-    "seo_description": "Format, beautify, and validate JSON data online for free. Syntax highlighting, error detection, and easy copy. Perfect for developers."
+    "seo_title": "Free JSON Formatter, Validator and Minifier Online",
+    "seo_description": "Paste JSON to format, validate, minify, and inspect errors in your browser. Free JSON formatter with highlighting, copy buttons, and no signup."
   },
   "uuid-generator": {
     "name": "UUID Generator",
     "description": "Generate random UUIDs (v4) instantly. Copy single or bulk UUIDs.",
-    "seo_title": "Free UUID Generator Online - Generate UUID v4",
-    "seo_description": "Generate random UUID v4 strings online for free. Supports bulk generation of multiple UUIDs at once. Secure, fast, and works in your browser."
+    "seo_title": "Free UUID v4 Generator for Bulk IDs Online",
+    "seo_description": "Generate one or many UUID v4 values for database IDs, API keys, fixtures, and tests. Fast browser-based UUID generator with easy copy."
   },
   "url-encoder": {
     "name": "URL Encoder/Decoder",
@@ -168,19 +168,19 @@
     "name": "Password Generator",
     "description": "Generate strong, secure random passwords with customizable options.",
     "seo_title": "Free Strong Password Generator Online",
-    "seo_description": "Generate secure random passwords online for free. Customize length, include uppercase, lowercase, numbers, and symbols. No data stored or uploaded."
+    "seo_description": "Create strong random passwords with custom length, uppercase, lowercase, numbers, and symbols. Generate in your browser with no account or upload."
   },
   "hash-generator": {
     "name": "Hash Generator",
     "description": "Generate MD5, SHA-1, SHA-256 hashes from text.",
-    "seo_title": "Free MD5, SHA Hash Generator Online",
-    "seo_description": "Generate MD5, SHA-1, SHA-256, SHA-512 hashes online for free. Secure browser-based hashing with no data upload. Perfect for file integrity checks."
+    "seo_title": "Free MD5 and SHA Hash Generator Online",
+    "seo_description": "Generate MD5, SHA-1, SHA-256, and SHA-512 hashes from text in your browser. Copy digests for checksums, comparisons, and debugging."
   },
   "qr-generator": {
     "name": "QR Code Generator",
     "description": "Generate QR codes from text or URLs. Download as PNG.",
-    "seo_title": "Free QR Code Generator Online",
-    "seo_description": "Generate QR codes from text, URLs, or data online for free. Download as high-quality PNG image. Customize size and error correction level."
+    "seo_title": "Free QR Code Generator for URLs, Text and Contacts",
+    "seo_description": "Turn URLs, plain text, and contact details into downloadable PNG QR codes. Free browser-based QR generator for sharing, print, and quick tests."
   },
   "color-converter": {
     "name": "Color Converter",
@@ -191,14 +191,14 @@
   "timestamp-converter": {
     "name": "Timestamp Converter",
     "description": "Convert Unix timestamps to human-readable dates and vice versa.",
-    "seo_title": "Free Unix Timestamp Converter Online",
-    "seo_description": "Convert Unix timestamps to human-readable dates and dates to timestamps online for free. Support multiple date formats and timezones. For developers."
+    "seo_title": "Free Unix Timestamp Converter for UTC and Local Time",
+    "seo_description": "Convert Unix timestamps to readable local, UTC, and ISO dates, or turn dates back into timestamps. Free browser tool for logs, APIs, and expiry checks."
   },
   "word-counter": {
     "name": "Word Counter",
     "description": "Count words, characters, sentences, and paragraphs in your text.",
-    "seo_title": "Free Word Counter & Character Counter Online",
-    "seo_description": "Count words, characters, sentences, and paragraphs online for free. Get reading time estimates and detailed text statistics. Perfect for writers and editors."
+    "seo_title": "Free Word Counter and Character Counter Online",
+    "seo_description": "Paste text to count words, characters, sentences, paragraphs, and lines instantly. Check reading time and copy length for writing, SEO, and UI drafts."
   },
   "case-converter": {
     "name": "Case Converter",
@@ -215,8 +215,8 @@
   "markdown-preview": {
     "name": "Markdown Preview",
     "description": "Write Markdown and see live preview. Export to HTML.",
-    "seo_title": "Free Markdown Editor & Preview Online",
-    "seo_description": "Write and preview Markdown online for free. Live preview with syntax highlighting and HTML export. Perfect for documentation, README files, and blog posts."
+    "seo_title": "Free Markdown Preview Editor with Live HTML Preview",
+    "seo_description": "Write Markdown and see a live HTML preview in your browser. Quickly review README notes, docs, blog drafts, and copied Markdown before publishing."
   },
   "lorem-ipsum": {
     "name": "Lorem Ipsum Generator",
@@ -227,14 +227,14 @@
   "regex-tester": {
     "name": "Regex Tester",
     "description": "Test regular expressions with real-time matching and highlighting.",
-    "seo_title": "Free Regex Tester & Debugger Online",
-    "seo_description": "Test and debug regular expressions online for free. Real-time matching with syntax highlighting and match groups. Perfect for developers and data processing."
+    "seo_title": "Free Regex Tester and JavaScript Regex Debugger",
+    "seo_description": "Test JavaScript regular expressions with real-time matches, highlighting, and capture groups. Debug regex patterns in your browser with no signup."
   },
   "jwt-decoder": {
     "name": "JWT Decoder",
     "description": "Decode and inspect JWT tokens. View header, payload, and signature.",
-    "seo_title": "Free JWT Decoder Online",
-    "seo_description": "Decode and inspect JWT (JSON Web Tokens) online for free. View header, payload, and signature without verification. Essential for debugging auth."
+    "seo_title": "Free JWT Decoder Online - Inspect Header and Payload",
+    "seo_description": "Decode JWT headers and payloads, inspect claims and expiry, and view the signature segment without verification. Free browser tool for auth debugging."
   },
   "diff-checker": {
     "name": "Diff Checker",
@@ -245,14 +245,14 @@
   "json-to-csv": {
     "name": "JSON to CSV",
     "description": "Convert JSON data to CSV format, or CSV to JSON.",
-    "seo_title": "Free JSON to CSV Converter Online",
-    "seo_description": "Convert JSON to CSV or CSV to JSON online for free. Handle nested objects and arrays with customizable delimiters. Perfect for data export and spreadsheet work."
+    "seo_title": "Free JSON to CSV Converter and CSV to JSON Tool",
+    "seo_description": "Convert JSON arrays or objects to CSV, and parse CSV back to JSON. Free browser tool for API exports, spreadsheet cleanup, and quick data checks."
   },
   "image-to-base64": {
     "name": "Image to Base64",
     "description": "Convert images to Base64 encoding for use in HTML and CSS.",
-    "seo_title": "Free Image to Base64 Converter Online",
-    "seo_description": "Convert images to Base64 encoded strings online for free. Support PNG, JPG, GIF, and SVG formats. Perfect for embedding images in CSS, HTML, and JSON data."
+    "seo_title": "Free Image to Base64 Converter for Data URLs",
+    "seo_description": "Convert local PNG, JPG, GIF, SVG, or WebP files to Base64 data URLs in your browser. Copy HTML and CSS snippets for small embedded assets."
   },
   "cron-generator": {
     "name": "Cron Expression Generator",
@@ -287,8 +287,8 @@
   "chinese-converter": {
     "name": "Chinese Converter",
     "description": "Convert between Simplified and Traditional Chinese characters.",
-    "seo_title": "Free Chinese Simplified/Traditional Converter",
-    "seo_description": "Convert between Simplified and Traditional Chinese online for free. Accurate character conversion with phrase support. Perfect for Chinese content localization."
+    "seo_title": "Free Simplified and Traditional Chinese Converter",
+    "seo_description": "Convert Chinese text between Simplified and Traditional scripts in your browser. Useful for localization checks, content cleanup, and quick copy edits."
   },
   "unit-converter": {
     "name": "Unit Converter",
@@ -707,8 +707,8 @@
   "image-compressor": {
     "name": "Image Compressor",
     "description": "Compress images to reduce file size while maintaining quality.",
-    "seo_title": "Free Image Compressor Online",
-    "seo_description": "Compress images online for free. Reduce PNG, JPEG, WebP file size with adjustable quality. Batch compression support. Perfect for web optimization."
+    "seo_title": "Free Image Compressor for PNG, JPEG and WebP",
+    "seo_description": "Compress PNG, JPEG, and WebP images in your browser with adjustable quality. Reduce file size for websites, uploads, and quick asset cleanup."
   },
   "image-converter": {
     "name": "Image Format Converter",
@@ -810,7 +810,7 @@
     "name": "JWT Generator",
     "description": "Generate JSON Web Tokens with custom payload and secret key.",
     "seo_title": "Free JWT Generator Online",
-    "seo_description": "Generate JWT tokens with custom claims, expiration, and HMAC/RSA signing online for free. Create access tokens for API authentication and authorization testing."
+    "seo_description": "Generate HS256, HS384, or HS512 JWT tokens with custom JSON claims and expiration fields in your browser. Useful for auth demos and API tests."
   },
   "cron-explainer": {
     "name": "Cron Expression Explainer",
@@ -2484,9 +2484,9 @@
   },
   "jwt-debugger": {
     "name": "JWT Debugger",
-    "description": "Debug and verify JWT tokens with signature validation",
-    "seo_title": "Free JWT Debugger Online - Decode and Verify JWT Tokens",
-    "seo_description": "Debug JWT tokens online for free. Decode header and payload, verify signatures with secret or public key. Essential for authentication debugging."
+    "description": "Decode and inspect JWT tokens. View header, payload, and signature.",
+    "seo_title": "Free JWT Debugger Online - Decode JWT Header and Payload",
+    "seo_description": "Debug JWT structure by decoding headers and payloads, checking claims, and viewing the signature segment. This page does not verify token authenticity."
   },
   "csp-generator": {
     "name": "CSP Generator",

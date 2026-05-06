@@ -22,8 +22,8 @@
   },
   "categories_seo": {
     "text": {
-      "seo_title": "Free Text Tools - Word Counter & Case Converter",
-      "seo_description": "Powerful free text processing tools including word counter, case converter, text reverser, line counter, and deduplicator. Process text instantly in your browser."
+      "seo_title": "Free Text Tools for Word Count, Cleanup and Diff",
+      "seo_description": "Count words, clean lines, convert case, compare text, preview Markdown, and prepare publish-ready copy with free browser-based text tools."
     },
     "encoding": {
       "seo_title": "Encoding & Decoding Tools - JSON, Base64, HTML Encoder Online",
@@ -38,28 +38,28 @@
       "seo_description": "Convert colors, dates, units, YAML to JSON, and more with our free online converter tools. Fast, accurate conversions in your browser."
     },
     "development": {
-      "seo_title": "Developer Tools Online - Regex Tester, Code Formatter & More",
-      "seo_description": "Essential developer tools including regex tester, SQL formatter, JSON path tester, code beautifier, and more. Free online tools for programmers."
+      "seo_title": "Developer Tools Online for JSON, Regex, SQL and APIs",
+      "seo_description": "Format JSON, test JavaScript regex, inspect JSONPath, beautify code, and debug API data faster with free browser-based developer tools."
     },
     "security": {
-      "seo_title": "Security Tools Online for Passwords, JWT, HMAC and Checksum Checks",
-      "seo_description": "Generate stronger passwords and TOTP codes, inspect JWT payloads, create HMAC signatures, and verify checksum or hash outputs directly in your browser."
+      "seo_title": "Free Security Tools for Passwords, JWT, HMAC and Hashes",
+      "seo_description": "Generate strong passwords and TOTP codes, decode JWT payloads, create HMAC signatures, calculate hashes, and compare checksum outputs in your browser."
     },
     "network": {
       "seo_title": "Network Tools Online - IP Lookup, URL Encoder & More",
       "seo_description": "Free network utilities including IP lookup, URL encoder/decoder, and more. Check network information and encode URLs instantly online."
     },
     "image": {
-      "seo_title": "Image Tools Online - QR Generator, Base64 Converter & More",
-      "seo_description": "Free online image tools for QR code generation, image to Base64 conversion, placeholder images, and more. Process images in your browser."
+      "seo_title": "Free Image Tools for Compress, Convert and QR Codes",
+      "seo_description": "Compress images, convert formats, create QR codes, generate placeholders, and turn images into Base64 data URLs with fast browser-based tools."
     },
     "math": {
       "seo_title": "Math & Calculator Tools - Number Converter, Aspect Ratio",
       "seo_description": "Free online math tools including number base converter, aspect ratio calculator, and more. Perform calculations instantly in your browser."
     },
     "charts": {
-      "seo_title": "Chart Generator Tools for Bar, Heatmap, Sankey and Gantt Charts",
-      "seo_description": "Choose the right chart generator for bar charts, line charts, heatmap views, Sankey flows, and gantt timelines without turning the page into a generic chart list."
+      "seo_title": "Chart Generator Tools for Bars, Heatmaps and Timelines",
+      "seo_description": "Create bar, line, heatmap, Sankey, Gantt, and timeline charts online. Pick the right visual path, preview results, and export chart graphics."
     },
     "office": {
       "seo_title": "Office Tools Online - PDF, Resume Builder & Productivity",
@@ -80,8 +80,8 @@
   },
   "pages": {
     "tools": {
-      "seo_title": "100+ Free Online Tools for Developers & Designers | U2Tool",
-      "seo_description": "Discover 100+ free online tools for developers, designers, and creators. JSON formatter, image converter, PDF tools, code generator, and more. Fast, secure, no registration."
+      "seo_title": "500+ Free Online Tools for Developers & Creators | U2Tool",
+      "seo_description": "Browse 500+ browser-based tools for JSON, images, text, security, charts, SEO, and more. No signup, fast results, and local processing where possible."
     }
   },
   "ranking_seo": {
@@ -257,8 +257,8 @@
     "json-formatter": {
       "name": "JSON Formatter",
       "description": "Format and beautify JSON data with syntax highlighting. Validate JSON and fix common errors.",
-      "seo_title": "Free JSON Formatter & Validator Online",
-      "seo_description": "Format, beautify, and validate JSON data online for free. Syntax highlighting, error detection, and easy copy. Perfect for developers.",
+      "seo_title": "Free JSON Formatter, Validator and Minifier Online",
+      "seo_description": "Paste JSON to format, validate, minify, and inspect errors in your browser. Free JSON formatter with highlighting, copy buttons, and no signup.",
       "inputPlaceholder": "Enter JSON data here...",
       "outputPlaceholder": "Formatted JSON will appear here..."
     },
@@ -271,8 +271,8 @@
     "uuid-generator": {
       "name": "UUID Generator",
       "description": "Generate random UUIDs (v4) instantly. Copy single or bulk UUIDs.",
-      "seo_title": "Free UUID Generator Online",
-      "seo_description": "Use this free online UUID generator to create random UUID v4 values in bulk for database IDs, API identifiers, and test data."
+      "seo_title": "Free UUID v4 Generator for Bulk IDs Online",
+      "seo_description": "Generate one or many UUID v4 values for database IDs, API keys, fixtures, and tests. Fast browser-based UUID generator with easy copy."
     },
     "url-encoder": {
       "name": "URL Encoder/Decoder",
@@ -283,21 +283,21 @@
     "password-generator": {
       "name": "Password Generator",
       "description": "Generate strong, secure random passwords with customizable options.",
-      "seo_title": "Free Password Generator Online",
-      "seo_description": "Use this free online password generator to create strong random passwords with custom length, uppercase, lowercase, numbers, and symbols.",
+      "seo_title": "Free Strong Password Generator Online",
+      "seo_description": "Create strong random passwords with custom length, uppercase, lowercase, numbers, and symbols. Generate in your browser with no account or upload.",
       "selectOption": "Please select at least one option"
     },
     "hash-generator": {
       "name": "Hash Generator",
       "description": "Generate MD5, SHA-1, SHA-256 hashes from text.",
-      "seo_title": "Free MD5, SHA Hash Generator Online",
-      "seo_description": "Generate MD5, SHA-1, SHA-256, SHA-512 hashes online for free. Secure browser-based hashing with no data upload. Perfect for file integrity checks."
+      "seo_title": "Free MD5 and SHA Hash Generator Online",
+      "seo_description": "Generate MD5, SHA-1, SHA-256, and SHA-512 hashes from text in your browser. Copy digests for checksums, comparisons, and debugging."
     },
     "qr-generator": {
       "name": "QR Code Generator",
       "description": "Generate QR codes from text or URLs. Download as PNG.",
-      "seo_title": "Free QR Code Generator Online",
-      "seo_description": "Use this free online QR code generator to turn text, links, and contact details into downloadable QR codes for sharing, print, and marketing."
+      "seo_title": "Free QR Code Generator for URLs, Text and Contacts",
+      "seo_description": "Turn URLs, plain text, and contact details into downloadable PNG QR codes. Free browser-based QR generator for sharing, print, and quick tests."
     },
     "color-converter": {
       "name": "Color Converter",
@@ -308,14 +308,14 @@
     "timestamp-converter": {
       "name": "Timestamp Converter",
       "description": "Convert Unix timestamps to human-readable dates and vice versa.",
-      "seo_title": "Free Unix Timestamp Converter Online",
-      "seo_description": "Convert Unix timestamps to human-readable dates and dates to timestamps online for free. Support multiple date formats and timezones. For developers."
+      "seo_title": "Free Unix Timestamp Converter for UTC and Local Time",
+      "seo_description": "Convert Unix timestamps to readable local, UTC, and ISO dates, or turn dates back into timestamps. Free browser tool for logs, APIs, and expiry checks."
     },
     "word-counter": {
       "name": "Word Counter",
       "description": "Count words, characters, sentences, and paragraphs in your text.",
-      "seo_title": "Free Word Counter & Character Counter Online",
-      "seo_description": "Count words, characters, sentences, and paragraphs online for free. Get reading time estimates and detailed text statistics. Perfect for writers and editors."
+      "seo_title": "Free Word Counter and Character Counter Online",
+      "seo_description": "Paste text to count words, characters, sentences, paragraphs, and lines instantly. Check reading time and copy length for writing, SEO, and UI drafts."
     },
     "case-converter": {
       "name": "Case Converter",
@@ -332,8 +332,8 @@
     "markdown-preview": {
       "name": "Markdown Preview",
       "description": "Write Markdown and see live preview. Export to HTML.",
-      "seo_title": "Free Markdown Editor & Preview Online",
-      "seo_description": "Write and preview Markdown online for free. Live preview with syntax highlighting and HTML export. Perfect for documentation, README files, and blog posts."
+      "seo_title": "Free Markdown Preview Editor with Live HTML Preview",
+      "seo_description": "Write Markdown and see a live HTML preview in your browser. Quickly review README notes, docs, blog drafts, and copied Markdown before publishing."
     },
     "lorem-ipsum": {
       "name": "Lorem Ipsum Generator",
@@ -344,14 +344,14 @@
     "regex-tester": {
       "name": "Regex Tester",
       "description": "Test regular expressions with real-time matching and highlighting.",
-      "seo_title": "Free Regex Tester Online",
-      "seo_description": "Use this free online regex tester to test regular expressions, inspect match groups, and debug regex patterns with real-time highlighting."
+      "seo_title": "Free Regex Tester and JavaScript Regex Debugger",
+      "seo_description": "Test JavaScript regular expressions with real-time matches, highlighting, and capture groups. Debug regex patterns in your browser with no signup."
     },
     "jwt-decoder": {
       "name": "JWT Decoder",
       "description": "Decode and inspect JWT tokens. View header, payload, and signature.",
-      "seo_title": "Free JWT Debugger and Signature Verifier Online",
-      "seo_description": "Use this free online JWT debugger to decode token headers and payloads, inspect claims, check expiry, and verify JWT signatures for authentication debugging.",
+      "seo_title": "Free JWT Decoder Online - Inspect Header and Payload",
+      "seo_description": "Decode JWT headers and payloads, inspect claims and expiry, and view the signature segment without verification. Free browser tool for auth debugging.",
       "enterToken": "Please enter a JWT token",
       "invalidFormat": "Invalid JWT format",
       "invalidToken": "Invalid JWT token",
@@ -371,14 +371,14 @@
     "json-to-csv": {
       "name": "JSON to CSV",
       "description": "Convert JSON data to CSV format, or CSV to JSON.",
-      "seo_title": "Free JSON to CSV Converter Online",
-      "seo_description": "Convert JSON to CSV or CSV to JSON online for free. Handle nested objects and arrays with customizable delimiters. Perfect for data export and spreadsheet work."
+      "seo_title": "Free JSON to CSV Converter and CSV to JSON Tool",
+      "seo_description": "Convert JSON arrays or objects to CSV, and parse CSV back to JSON. Free browser tool for API exports, spreadsheet cleanup, and quick data checks."
     },
     "image-to-base64": {
       "name": "Image to Base64",
       "description": "Convert images to Base64 encoding for use in HTML and CSS.",
-      "seo_title": "Free Image to Base64 Converter Online",
-      "seo_description": "Convert images to Base64 encoded strings online for free. Support PNG, JPG, GIF, and SVG formats. Perfect for embedding images in CSS, HTML, and JSON data.",
+      "seo_title": "Free Image to Base64 Converter for Data URLs",
+      "seo_description": "Convert local PNG, JPG, GIF, SVG, or WebP files to Base64 data URLs in your browser. Copy HTML and CSS snippets for small embedded assets.",
       "uploadHint": "Click to upload or drag and drop",
       "supportedFormats": "PNG, JPG, GIF, SVG, WebP",
       "copyDataUrl": "Copy Data URL",
@@ -463,8 +463,8 @@
     "chinese-converter": {
       "name": "Chinese Converter",
       "description": "Convert between Simplified and Traditional Chinese characters.",
-      "seo_title": "Free Chinese Simplified/Traditional Converter",
-      "seo_description": "Convert between Simplified and Traditional Chinese online for free. Accurate character conversion with phrase support. Perfect for Chinese content localization."
+      "seo_title": "Free Simplified and Traditional Chinese Converter",
+      "seo_description": "Convert Chinese text between Simplified and Traditional scripts in your browser. Useful for localization checks, content cleanup, and quick copy edits."
     },
     "unit-converter": {
       "name": "Unit Converter",
@@ -948,8 +948,8 @@
     "image-compressor": {
       "name": "Image Compressor",
       "description": "Compress images to reduce file size while maintaining quality.",
-      "seo_title": "Free Image Compressor Online",
-      "seo_description": "Compress images online for free. Reduce PNG, JPEG, WebP file size with adjustable quality. Batch compression support. Perfect for web optimization."
+      "seo_title": "Free Image Compressor for PNG, JPEG and WebP",
+      "seo_description": "Compress PNG, JPEG, and WebP images in your browser with adjustable quality. Reduce file size for websites, uploads, and quick asset cleanup."
     },
     "image-converter": {
       "name": "Image Format Converter",
@@ -1128,7 +1128,7 @@
       "name": "JWT Generator",
       "description": "Generate JSON Web Tokens with custom payload and secret key.",
       "seo_title": "Free JWT Generator Online",
-      "seo_description": "Generate JWT tokens with custom claims, expiration, and HMAC/RSA signing online for free. Create access tokens for API authentication and authorization testing."
+      "seo_description": "Generate HS256, HS384, or HS512 JWT tokens with custom JSON claims and expiration fields in your browser. Useful for auth demos and API tests."
     },
     "cron-explainer": {
       "name": "Cron Expression Explainer",
@@ -3892,16 +3892,16 @@
     "json-formatter": {
       "name": "JSON Formatter",
       "description": "Format and beautify JSON data with syntax highlighting. Validate JSON and fix common errors.",
-      "seo_title": "Free JSON Formatter & Validator Online",
-      "seo_description": "Format, beautify, and validate JSON data online for free. Syntax highlighting, error detection, and easy copy. Perfect for developers.",
+      "seo_title": "Free JSON Formatter, Validator and Minifier Online",
+      "seo_description": "Paste JSON to format, validate, minify, and inspect errors in your browser. Free JSON formatter with highlighting, copy buttons, and no signup.",
       "inputPlaceholder": "Enter JSON data here...",
       "outputPlaceholder": "Formatted JSON will appear here..."
     },
     "uuid-generator": {
       "name": "UUID Generator",
       "description": "Generate random UUIDs (v4) instantly. Copy single or bulk UUIDs.",
-      "seo_title": "Free UUID Generator Online",
-      "seo_description": "Use this free online UUID generator to create random UUID v4 values in bulk for database IDs, API identifiers, and test data."
+      "seo_title": "Free UUID v4 Generator for Bulk IDs Online",
+      "seo_description": "Generate one or many UUID v4 values for database IDs, API keys, fixtures, and tests. Fast browser-based UUID generator with easy copy."
     },
     "url-encoder": {
       "name": "URL Encoder/Decoder",
@@ -3913,8 +3913,8 @@
     "password-generator": {
       "name": "Password Generator",
       "description": "Generate strong, secure random passwords with customizable options.",
-      "seo_title": "Free Password Generator Online",
-      "seo_description": "Use this free online password generator to create strong random passwords with custom length, uppercase, lowercase, numbers, and symbols.",
+      "seo_title": "Free Strong Password Generator Online",
+      "seo_description": "Create strong random passwords with custom length, uppercase, lowercase, numbers, and symbols. Generate in your browser with no account or upload.",
       "selectOption": "Please select at least one option",
       "copied": "Copied!",
       "copy": "Copy",
@@ -3924,15 +3924,15 @@
     "hash-generator": {
       "name": "Hash Generator",
       "description": "Generate MD5, SHA-1, SHA-256 hashes from text.",
-      "seo_title": "Free MD5, SHA Hash Generator Online",
-      "seo_description": "Generate MD5, SHA-1, SHA-256, SHA-512 hashes online for free. Secure browser-based hashing with no data upload. Perfect for file integrity checks.",
+      "seo_title": "Free MD5 and SHA Hash Generator Online",
+      "seo_description": "Generate MD5, SHA-1, SHA-256, and SHA-512 hashes from text in your browser. Copy digests for checksums, comparisons, and debugging.",
       "inputPlaceholder": "Enter text here..."
     },
     "qr-generator": {
       "name": "QR Code Generator",
       "description": "Generate QR codes from text or URLs. Download as PNG.",
-      "seo_title": "Free QR Code Generator Online",
-      "seo_description": "Use this free online QR code generator to turn text, links, and contact details into downloadable QR codes for sharing, print, and marketing.",
+      "seo_title": "Free QR Code Generator for URLs, Text and Contacts",
+      "seo_description": "Turn URLs, plain text, and contact details into downloadable PNG QR codes. Free browser-based QR generator for sharing, print, and quick tests.",
       "inputPlaceholder": "Enter text here..."
     },
     "color-converter": {
@@ -3944,14 +3944,14 @@
     "timestamp-converter": {
       "name": "Timestamp Converter",
       "description": "Convert Unix timestamps to human-readable dates and vice versa.",
-      "seo_title": "Free Unix Timestamp Converter Online",
-      "seo_description": "Convert Unix timestamps to human-readable dates and dates to timestamps online for free. Support multiple date formats and timezones. For developers."
+      "seo_title": "Free Unix Timestamp Converter for UTC and Local Time",
+      "seo_description": "Convert Unix timestamps to readable local, UTC, and ISO dates, or turn dates back into timestamps. Free browser tool for logs, APIs, and expiry checks."
     },
     "word-counter": {
       "name": "Word Counter",
       "description": "Count words, characters, sentences, and paragraphs in your text.",
-      "seo_title": "Free Word Counter & Character Counter Online",
-      "seo_description": "Count words, characters, sentences, and paragraphs online for free. Get reading time estimates and detailed text statistics. Perfect for writers and editors.",
+      "seo_title": "Free Word Counter and Character Counter Online",
+      "seo_description": "Paste text to count words, characters, sentences, paragraphs, and lines instantly. Check reading time and copy length for writing, SEO, and UI drafts.",
       "inputPlaceholder": "Enter text here..."
     },
     "case-converter": {
@@ -3970,8 +3970,8 @@
     "markdown-preview": {
       "name": "Markdown Preview",
       "description": "Write Markdown and see live preview. Export to HTML.",
-      "seo_title": "Free Markdown Editor & Preview Online",
-      "seo_description": "Write and preview Markdown online for free. Live preview with syntax highlighting and HTML export. Perfect for documentation, README files, and blog posts.",
+      "seo_title": "Free Markdown Preview Editor with Live HTML Preview",
+      "seo_description": "Write Markdown and see a live HTML preview in your browser. Quickly review README notes, docs, blog drafts, and copied Markdown before publishing.",
       "inputPlaceholder": "Enter text here..."
     },
     "lorem-ipsum": {
@@ -3983,22 +3983,22 @@
     "regex-tester": {
       "name": "Regex Tester",
       "description": "Test regular expressions with real-time matching and highlighting.",
-      "seo_title": "Free Regex Tester Online",
-      "seo_description": "Use this free online regex tester to test regular expressions, inspect match groups, and debug regex patterns with real-time highlighting."
+      "seo_title": "Free Regex Tester and JavaScript Regex Debugger",
+      "seo_description": "Test JavaScript regular expressions with real-time matches, highlighting, and capture groups. Debug regex patterns in your browser with no signup."
     },
     "jwt-decoder": {
-      "name": "JWT Debugger",
-      "description": "Debug and verify JWT tokens with signature validation",
-      "seo_title": "Free JWT Debugger and Signature Verifier Online",
-      "seo_description": "Use this free online JWT debugger to decode token headers and payloads, inspect claims, check expiry, and verify JWT signatures for authentication debugging.",
+      "name": "JWT Decoder",
+      "description": "Decode and inspect JWT tokens. View header, payload, and signature.",
+      "seo_title": "Free JWT Decoder Online - Inspect Header and Payload",
+      "seo_description": "Decode JWT headers and payloads, inspect claims and expiry, and view the signature segment without verification. Free browser tool for auth debugging.",
       "token": "JWT Token",
       "header": "Header",
       "payload": "Payload",
       "signature": "Signature",
       "secret": "Secret Key",
-      "verify": "Verify Signature",
-      "valid": "Valid Signature",
-      "invalid": "Invalid Signature",
+      "verify": "Review Signature Segment",
+      "valid": "Signature Segment Present",
+      "invalid": "Signature Segment Missing",
       "expired": "Token Expired",
       "tokenPlaceholder": "Paste your JWT token here...",
       "notExpired": "Token Valid",
@@ -4014,10 +4014,10 @@
       "claims": "Claims",
       "copied": "Copied!",
       "copy": "Copy",
-      "secretPlaceholder": "Enter secret key...",
+      "secretPlaceholder": "No secret is needed for decoding",
       "value": "Value",
-      "verifyNote": "Note: Signature verification is done client-side",
-      "verifySignature": "Verify Signature"
+      "verifyNote": "This page decodes and displays the signature segment, but it does not verify authenticity. Check signatures in your application or trusted security tooling.",
+      "verifySignature": "Signature verification is not performed"
     },
     "diff-checker": {
       "name": "Diff Checker",
@@ -4028,14 +4028,14 @@
     "json-to-csv": {
       "name": "JSON to CSV",
       "description": "Convert JSON data to CSV format, or CSV to JSON.",
-      "seo_title": "Free JSON to CSV Converter Online",
-      "seo_description": "Convert JSON to CSV or CSV to JSON online for free. Handle nested objects and arrays with customizable delimiters. Perfect for data export and spreadsheet work."
+      "seo_title": "Free JSON to CSV Converter and CSV to JSON Tool",
+      "seo_description": "Convert JSON arrays or objects to CSV, and parse CSV back to JSON. Free browser tool for API exports, spreadsheet cleanup, and quick data checks."
     },
     "image-to-base64": {
       "name": "Image to Base64",
       "description": "Convert images to Base64 encoding for use in HTML and CSS.",
-      "seo_title": "Free Image to Base64 Converter Online",
-      "seo_description": "Convert images to Base64 encoded strings online for free. Support PNG, JPG, GIF, and SVG formats. Perfect for embedding images in CSS, HTML, and JSON data.",
+      "seo_title": "Free Image to Base64 Converter for Data URLs",
+      "seo_description": "Convert local PNG, JPG, GIF, SVG, or WebP files to Base64 data URLs in your browser. Copy HTML and CSS snippets for small embedded assets.",
       "uploadHint": "Click to upload or drag and drop",
       "supportedFormats": "PNG, JPG, GIF, SVG, WebP",
       "copyDataUrl": "Copy Data URL",
@@ -4130,8 +4130,8 @@
     "chinese-converter": {
       "name": "Chinese Converter",
       "description": "Convert between Simplified and Traditional Chinese characters.",
-      "seo_title": "Free Chinese Simplified/Traditional Converter",
-      "seo_description": "Convert between Simplified and Traditional Chinese online for free. Accurate character conversion with phrase support. Perfect for Chinese content localization."
+      "seo_title": "Free Simplified and Traditional Chinese Converter",
+      "seo_description": "Convert Chinese text between Simplified and Traditional scripts in your browser. Useful for localization checks, content cleanup, and quick copy edits."
     },
     "unit-converter": {
       "name": "Unit Converter",
@@ -4639,8 +4639,8 @@
     "image-compressor": {
       "name": "Image Compressor",
       "description": "Compress images to reduce file size while maintaining quality.",
-      "seo_title": "Free Image Compressor Online",
-      "seo_description": "Compress images online for free. Reduce PNG, JPEG, WebP file size with adjustable quality. Batch compression support. Perfect for web optimization.",
+      "seo_title": "Free Image Compressor for PNG, JPEG and WebP",
+      "seo_description": "Compress PNG, JPEG, and WebP images in your browser with adjustable quality. Reduce file size for websites, uploads, and quick asset cleanup.",
       "quality": "Quality",
       "compressed": "Compressed",
       "saved": "Saved",
@@ -4885,7 +4885,7 @@
       "name": "JWT Generator",
       "description": "Generate JSON Web Tokens with custom payload and secret key.",
       "seo_title": "Free JWT Generator Online",
-      "seo_description": "Generate JWT tokens with custom claims, expiration, and HMAC/RSA signing online for free. Create access tokens for API authentication and authorization testing."
+      "seo_description": "Generate HS256, HS384, or HS512 JWT tokens with custom JSON claims and expiration fields in your browser. Useful for auth demos and API tests."
     },
     "cron-explainer": {
       "name": "Cron Expression Explainer",

@@ -17,8 +17,8 @@ const prioritySeoKeywords = {
       description: ['html', 'entities'],
     },
     'jwt-decoder': {
-      title: ['jwt', 'debugger', 'signature'],
-      description: ['jwt', 'claims', 'signatures'],
+      title: ['jwt', 'decoder'],
+      description: ['jwt', 'claims', 'without verification'],
     },
     'xml-formatter': {
       title: ['xml', 'formatter', 'minifier'],
@@ -1764,6 +1764,32 @@ describe('SEO Governance', () => {
 
         expect(String(seo.title)).not.toMatch(/\p{Extended_Pictographic}/u);
         expect(String(seo.description)).not.toMatch(/\p{Extended_Pictographic}/u);
+      }
+    }
+  });
+
+  it('keeps JWT decoder SEO metadata truthful about signature verification', () => {
+    const forbidden = [
+      /signature verifier/i,
+      /verify jwt signatures/i,
+      /verify signatures/i,
+      /signature validation/i,
+    ];
+    const enRoot = loadRootMessages('en');
+    const enBase = loadBaseMessages('en');
+
+    for (const [label, messages] of [
+      ['root.tools.jwt-decoder', enRoot],
+      ['base.tools.jwt-decoder', enBase],
+      ['root.tool.jwt-decoder', enRoot],
+      ['base.tool.jwt-decoder', enBase],
+    ] as const) {
+      const namespace = label.includes('.tool.') ? 'tool' : 'tools';
+      const seo = getToolSeo(messages, 'jwt-decoder', namespace);
+      const combined = `${String(seo.title)} ${String(seo.description)}`;
+
+      for (const pattern of forbidden) {
+        expect(combined, `${label} should not claim signature verification`).not.toMatch(pattern);
       }
     }
   });

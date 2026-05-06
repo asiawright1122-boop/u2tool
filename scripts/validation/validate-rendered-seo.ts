@@ -73,7 +73,10 @@ const checks: RenderedSeoCheck[] = [
     bodyMustNotInclude: [
       'The JWT Debugger is a specialized tool',
       'Signature Verification',
+      'Verify Signature',
+      'Valid Signature',
       "validate the token's signature",
+      'verify JWT signatures',
     ],
   },
   {

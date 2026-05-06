@@ -263,8 +263,8 @@ const comparisonUiCopy: Record<Locale, ComparisonUiCopy> = {
   en: {
     browseAllLabel: 'All comparison guides',
     comparisonLabel: 'Comparison guide',
-    comparisonSectionDescription: 'Use these pages when you need to choose between adjacent tool workflows before opening a single tool page.',
-    comparisonSectionTitle: 'Choose the right tool path',
+    comparisonSectionDescription: 'Compare adjacent workflows before you open a tool: formatting vs validation, decoding vs generation, compression vs conversion, and more.',
+    comparisonSectionTitle: 'Choose the right online tool',
     guideCtaLabel: 'Open guide',
     includedToolsLabel: 'Included tools',
     relatedCategoriesLabel: 'Related categories',
@@ -490,8 +490,8 @@ const comparisonSurfaceCopy: Record<Locale, Record<ExistingComparisonSurfaceSlug
   en: {
     'choose-image-tool': {
       title: 'Choose the Right Image Tool',
-      description: 'Compare image compression, conversion, resizing, cropping, watermarking, and export workflows before opening a single image tool page.',
-      shortDescription: 'Decide between image optimization, conversion, resizing, and branding workflows.',
+      description: 'Compare image compression, format conversion, resizing, cropping, watermarking, QR, and Base64 workflows before opening a single image tool page.',
+      shortDescription: 'Decide between image compression, conversion, resizing, QR, Base64, and export workflows.',
       aliases: ['choose image tool', 'image converter vs compressor'],
       workflows: {
         'compare-debug': 'Compare and debug',
@@ -508,8 +508,8 @@ const comparisonSurfaceCopy: Record<Locale, Record<ExistingComparisonSurfaceSlug
     },
     'choose-json-tool': {
       title: 'Choose the Right JSON Tool',
-      description: 'Compare JSON formatting, inspection, validation, JSONPath, diff, and export workflows so users and AI systems can land on the correct JSON route faster.',
-      shortDescription: 'Decide between JSON formatting, validation, querying, comparison, and export workflows.',
+      description: 'Compare JSON formatting, validation, JSONPath querying, diff, sorting, minifying, and CSV/YAML export workflows before choosing a tool.',
+      shortDescription: 'Decide between JSON formatting, validation, querying, diff, cleanup, and export workflows.',
       aliases: ['choose json tool', 'json formatter vs validator'],
       workflows: {
         'compare-debug': 'Compare and debug JSON',
@@ -1023,15 +1023,15 @@ const phaseElevenComparisonCopy: Record<Locale, Record<PhaseElevenComparisonSurf
     },
     'choose-jwt-tool': {
       title: 'Choose the Right JWT Tool',
-      description: 'Separate JWT decoding, payload inspection, token debugging, token generation, and signature checks so users can land on the correct auth tool faster.',
-      shortDescription: 'Choose between JWT decoding, payload inspection, token generation, and signature workflows.',
+      description: 'Separate JWT decoding, payload inspection, token debugging, token generation, HMAC creation, and checksum comparison before choosing an auth tool.',
+      shortDescription: 'Choose between JWT decoding, payload inspection, token generation, HMAC, and checksum workflows.',
       aliases: ['choose jwt tool', 'jwt decoder vs debugger'],
       workflows: {
         ...comparisonWorkflowDefaults.en,
         'compare-debug': 'Inspect headers, payloads, and token errors',
         'convert-export': 'Generate tokens and signing inputs',
         'format-inspect': 'Decode and inspect JWT structure',
-        'validate-query': 'Verify signatures and compare outputs',
+        'validate-query': 'Compare hashes and checksum outputs',
       },
     },
   },

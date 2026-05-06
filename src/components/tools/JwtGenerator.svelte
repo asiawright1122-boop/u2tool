@@ -40,6 +40,12 @@
   });
 
   // Functions
+  function getHashName(alg: string): 'SHA-256' | 'SHA-384' | 'SHA-512' {
+    if (alg === 'HS384') return 'SHA-384';
+    if (alg === 'HS512') return 'SHA-512';
+    return 'SHA-256';
+  }
+
   async function generateToken() {
     try {
       const parsedPayload = JSON.parse(payload);
@@ -48,11 +54,8 @@
       const encodedHeader = base64UrlEncode(JSON.stringify(header));
       const encodedPayload = base64UrlEncode(JSON.stringify(parsedPayload));
       
-      // For demo purposes, create a simple signature
-      // In production, use proper crypto libraries
       const data = `${encodedHeader}.${encodedPayload}`;
       
-      // Simple HMAC simulation (not cryptographically secure - for demo only)
       const encoder = new TextEncoder();
       const keyData = encoder.encode(secret);
       const messageData = encoder.encode(data);
@@ -60,7 +63,7 @@
       const key = await crypto.subtle.importKey(
         'raw',
         keyData,
-        { name: 'HMAC', hash: 'SHA-256' },
+        { name: 'HMAC', hash: getHashName(algorithm) },
         false,
         ['sign']
       );

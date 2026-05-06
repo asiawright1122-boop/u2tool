@@ -145,7 +145,7 @@ describe('translations module', () => {
       expect(tools['jwt-decoder']?.name).toBe('JWT Decoder');
       expect(tools['jwt-decoder']?.seo_description).toContain('without verification');
       expect(tools['jwt-debugger']?.name).toBe('JWT Debugger');
-      expect(tools['jwt-debugger']?.seo_description).toContain('Debug JWT tokens online');
+      expect(tools['jwt-debugger']?.seo_description).toContain('does not verify token authenticity');
     });
 
     it('prefers split tool support copy over stale aggregate locale content', async () => {

@@ -35,8 +35,6 @@
 
   let error = $state("");
 
-  let secret = $state("");
-
   let isValid = $state(null);
 
   let copied = $state("");
@@ -284,21 +282,11 @@
           </div>
         {/if}
 
-        <div>
-          <label
-            for="jwt-secret"
-            class="tool-label"
-          >
+        <div class="rounded-lg border border-amber-200 bg-amber-50 p-4 dark:border-amber-800 dark:bg-amber-900/20">
+          <h3 class="text-sm font-semibold text-amber-900 dark:text-amber-100">
             {t("verifySignature")}
-          </label>
-          <input
-            id="jwt-secret"
-            name="secretValue"
-            bind:value={secret}
-            placeholder={t("secretPlaceholder")}
-            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono"
-          />
-          <p class="mt-2 text-xs text-gray-500 dark:text-gray-400">
+          </h3>
+          <p class="mt-2 text-sm text-amber-800 dark:text-amber-200">
             {t("verifyNote")}
           </p>
         </div>
