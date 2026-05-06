@@ -40,3 +40,8 @@ src/generated/
 # Translation fix artifacts
 *-audit-report*.json
 backups/fix-*/
+
+# Local working memory (planning-with-files skill artifacts)
+task_plan.md
+findings.md
+progress.md
