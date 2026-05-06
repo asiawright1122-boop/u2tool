@@ -1,26 +1,125 @@
 import { describe, expect, it } from 'vitest';
 import {
+  applyBitFlags,
   base64UrlEncode,
+  buildCrc32Table,
+  buildOutlineTree,
   calculateBreakEven,
   calculateCapacity,
+  calculateAspectRatio,
+  calculateInflation,
+  calculateMargin,
+  calculateMarkup,
+  calculateProjectEstimation,
   calculateStats,
+  caesarCipher,
+  checkVulnerabilities,
+  convertSqlToMongo,
+  crc32,
   decodeJwt,
+  detectMemoryLeaks,
+  detectFormat,
+  EXAMPLE_CODE,
+  EXAMPLE_PACKAGE_JSON,
+  EXAMPLE_SPEC,
+  EXAMPLE_SQL,
+  extractHeadings,
+  findClosestColor,
+  findDuplicates,
+  findUnusedImports,
+  formatDocument,
   formatJson,
+  formatTime,
   formatSql,
+  fromSeconds,
+  formatMac,
+  generateChangelog,
+  generateCommitMessage,
+  generateDataclass,
+  generateDeployment,
+  generateDockerCompose,
+  generateExampleFile,
+  generateFullSchema,
+  generateGraphQLSchema,
+  generateHashtags,
+  generateHtmlToc,
+  generateHPA,
+  generateIngress,
   generateGo,
+  generateImports,
   generateJava,
+  generateJavaClass,
   generateJavaScript,
+  generateKotlinClass,
+  generateMinutes,
+  generateNamespace,
+  generateOutline,
+  generateOutput,
   generatePhp,
+  generatePrisma,
+  generateProtoFile,
   generatePython,
+  generateRawSQL,
   generateRuby,
+  generateService,
   generateSecret,
+  generateSvg,
   generateTotp,
+  generateToc,
+  generateTypeORM,
+  generateTypeScript,
   getContrastRatio,
+  getDaysUntil,
+  getRiskLevel,
+  getRiskScore,
   getWCAGLevel,
+  isAvailable,
+  isIpAddress,
+  jsonToDart,
+  jsonToProto,
+  jsonToToml,
+  jsonToYaml,
+  minifyHtml,
+  minifyXml,
   minifySql,
+  mergeJsonObjects,
+  normalizePrefix,
+  optimizeSQL,
+  parseEnvContent,
+  parseTimestamp,
   parseCurlCommand,
+  parseDependencies,
+  parseGitLog,
   parseResponse,
+  parseScatterCSV,
+  parseSchema,
+  parseToml,
+  parseTocInput,
+  parseYaml,
   sortObject,
+  sqlToJson,
+  sizeToTailwind,
+  testForInjection,
+  toSeconds,
+  toEnv,
+  toJson,
+  toPinyin,
+  toYaml,
+  tokenizeRegex,
+  formatValue,
+  generateBackupScript,
+  generateCleanedCode,
+  generateCrontab,
+  getSqlType,
+  getMonthRuns,
+  getNextRuns,
+  parseCron,
+  parseCronExpression,
+  quoteIdentifier,
+  randomByte,
+  rot13,
+  validateIP,
+  vigenereCipher,
 } from './tool-stubs';
 
 describe('tool-stubs runtime replacements', () => {
@@ -127,6 +226,66 @@ X-Trace-Id: abc123
     expect(getWCAGLevel(3.2, true)).toEqual({ aa: true, aaa: false });
   });
 
+  it('implements deterministic text, checksum, and IP helpers', () => {
+    expect(caesarCipher('Attack at dawn!', 3)).toBe('Dwwdfn dw gdzq!');
+    expect(caesarCipher('Dwwdfn dw gdzq!', 3, true)).toBe('Attack at dawn!');
+    expect(rot13('Hello, World!')).toBe('Uryyb, Jbeyq!');
+    expect(vigenereCipher('ATTACKATDAWN', 'LEMON')).toBe('LXFOPVEFRNHR');
+    expect(crc32(new TextEncoder().encode('123456789'), buildCrc32Table()).toString(16)).toBe('cbf43926');
+    expect(validateIP('192.168.1.1')).toMatchObject({
+      isValid: true,
+      type: 'IPv4',
+      details: { isPrivate: true, class: 'C' },
+    });
+    expect(validateIP('::1')).toMatchObject({ isValid: true, type: 'IPv6' });
+    expect(isIpAddress('example.com')).toBe(false);
+  });
+
+  it('generates and formats MAC address bytes with secure random input', () => {
+    expect(normalizePrefix('aa:bb:cc')).toEqual([170, 187, 204]);
+    expect(normalizePrefix('0011.2233.4455')).toEqual([0, 17, 34, 51, 68, 85]);
+    expect(normalizePrefix('abc')).toBeNull();
+    expect(applyBitFlags(0x00, true, false)).toBe(0x02);
+    expect(applyBitFlags(0xff, false, false)).toBe(0xfc);
+    expect(formatMac([2, 0, 0, 255, 16, 11], { uppercase: false, separator: '-' })).toBe('02-00-00-ff-10-0b');
+
+    const byte = randomByte();
+    expect(Number.isInteger(byte)).toBe(true);
+    expect(byte).toBeGreaterThanOrEqual(0);
+    expect(byte).toBeLessThanOrEqual(255);
+  });
+
+  it('converts Chinese text to pinyin with and without tones', () => {
+    expect(toPinyin('汉语', true)).toBe('hàn yǔ');
+    expect(toPinyin('汉语', false)).toBe('han yu');
+  });
+
+  it('implements aspect ratio and small finance calculators', () => {
+    expect(calculateAspectRatio(1920, 1080)).toBe('16:9');
+    expect(calculateMarkup(50, 100)).toMatchObject({
+      sellingPrice: 100,
+      profit: 50,
+      profitMargin: 50,
+    });
+    expect(calculateMargin(50, 100)).toMatchObject({
+      profit: 50,
+      grossProfit: 50,
+      profitMargin: 50,
+      markup: 100,
+    });
+    expect(calculateInflation(1000, 2020, 2022, 10)).toMatchObject({
+      adjustedValue: 1210,
+      totalInflation: 21,
+    });
+  });
+
+  it('converts time calculator values to and from seconds', () => {
+    expect(toSeconds({ hours: 1, minutes: 2, seconds: 3 })).toBe(3723);
+    expect(fromSeconds(-90)).toEqual({ hours: 0, minutes: 1, seconds: 30, negative: true });
+    expect(formatTime(fromSeconds(3661), '24h')).toBe('01:01:01');
+    expect(formatTime(fromSeconds(-3661), '24h')).toBe('-01:01:01');
+  });
+
   it('formats and minifies SQL strings', () => {
     const sql =
       "select id, name from users where status = 'active' and created_at > '2024-01-01' order by name desc limit 10";
@@ -136,6 +295,357 @@ X-Trace-Id: abc123
     expect(minifySql(sql)).toBe(
       "SELECT id, name FROM users WHERE status = 'active' AND created_at > '2024-01-01' ORDER BY name DESC LIMIT 10"
     );
+  });
+
+  it('detects SQL injection patterns and returns optimization suggestions', () => {
+    const injection = testForInjection(EXAMPLE_CODE);
+    expect(injection.vulnerable).toBe(true);
+    expect(injection.issues.map((issue) => issue.type)).toContain('String concatenated SQL');
+    expect(injection.score).toBeLessThan(100);
+
+    const safe = testForInjection("db.query('SELECT id FROM users WHERE id = ?', [req.params.id])");
+    expect(safe.vulnerable).toBe(false);
+
+    const optimized = optimizeSQL(EXAMPLE_SQL);
+    expect(optimized.optimized).toContain('SELECT');
+    expect(optimized.score).toBeLessThan(100);
+    expect(optimized.suggestions.map((suggestion) => suggestion.type)).toContain('warning');
+  });
+
+  it('finds duplicate code windows and removes unused imports conservatively', () => {
+    const duplicates = findDuplicates(EXAMPLE_CODE, 3);
+    expect(duplicates.length).toBeGreaterThan(0);
+    expect(duplicates[0].occurrences.length).toBeGreaterThan(1);
+
+    const imports = findUnusedImports(EXAMPLE_CODE) as Array<{ source: string; unused: string[]; used: string[] }>;
+    const promisesImport = imports.find((item) => item.source === 'fs/promises');
+    expect(promisesImport?.unused).toEqual(['unlink']);
+    expect(promisesImport?.used).toEqual(['readFile', 'saveFile']);
+
+    const cleaned = generateCleanedCode(EXAMPLE_CODE, imports);
+    expect(cleaned).toContain("import { readFile, writeFile as saveFile } from 'fs/promises';");
+    expect(cleaned).not.toContain('unlink');
+  });
+
+  it('extracts document headings and renders outlines and tables of contents', () => {
+    const headings = extractHeadings('# Title\n\n## Intro\n\n<h3>Details</h3>');
+    expect(headings.map((heading) => `${heading.level}:${heading.text}`)).toEqual([
+      '1:Title',
+      '2:Intro',
+      '3:Details',
+    ]);
+
+    const tree = buildOutlineTree(headings);
+    expect(generateOutline(tree, { format: 'markdown', includeLinks: true, numbered: true, maxDepth: 3 })).toContain('[1. Title](#title)');
+    expect(generateOutline(tree, { format: 'html', includeLinks: true, numbered: false, maxDepth: 3 })).toContain('<ul>');
+
+    const toc = parseTocInput('Intro | 1\n  Install | 3\nUsage | 5');
+    expect(toc[0].children[0]).toMatchObject({ title: 'Install', page: '3' });
+    expect(generateToc(toc, { style: 'dotted', showPageNumbers: true, indentSize: 2 })).toContain('Intro');
+    expect(generateHtmlToc(toc, { style: 'numbered', showPageNumbers: true })).toContain('<ol>');
+  });
+
+  it('generates Git helper outputs from structured inputs', () => {
+    expect(generateCommitMessage({
+      type: 'feat',
+      scope: 'tools',
+      subject: 'add git helpers',
+      body: 'Generate conventional commit messages.',
+      breaking: true,
+      breakingDescription: 'old format removed',
+      issues: '#123',
+    })).toContain('feat(tools)!: add git helpers');
+
+    const changelog = generateChangelog([
+      { version: '1.2.0', date: '2026-05-06', entries: [{ type: 'added', description: 'Git helpers', issue: '#123' }] },
+    ], 'keepachangelog');
+    expect(changelog).toContain('### Added');
+    expect(changelog).toContain('Git helpers');
+
+    const commits = parseGitLog('abc1234|def5678 9999999|Ada|2026-05-06|Merge branch main');
+    expect(commits[0]).toMatchObject({ shortHash: 'abc1234', isMerge: true, parents: ['def5678', '9999999'] });
+  });
+
+  it('generates Docker Compose and Kubernetes YAML manifests', () => {
+    const compose = generateDockerCompose([
+      { name: 'app', image: 'node:20-alpine', ports: ['3000:3000'], environment: { NODE_ENV: 'production' }, volumes: ['.:/app'], dependsOn: ['db'], restart: 'unless-stopped', command: 'npm start' },
+      { name: 'db', image: 'postgres:16-alpine', volumes: ['postgres_data:/var/lib/postgresql/data'], ports: [], environment: {}, dependsOn: [], restart: 'unless-stopped', command: '' },
+    ]);
+    expect(compose).toContain('services:');
+    expect(compose).toContain('postgres_data:');
+
+    const config = {
+      name: 'api',
+      namespace: 'prod',
+      image: 'example/api:1.0.0',
+      replicas: 2,
+      port: 80,
+      targetPort: 3000,
+      serviceType: 'ClusterIP',
+      resources: { cpuRequest: '100m', cpuLimit: '500m', memoryRequest: '128Mi', memoryLimit: '512Mi' },
+      envVars: [{ key: 'NODE_ENV', value: 'production' }],
+      ingressHost: 'api.example.com',
+      hpaMinReplicas: 2,
+      hpaMaxReplicas: 5,
+      hpaTargetCPU: 75,
+    };
+    expect(generateNamespace('prod')).toContain('kind: Namespace');
+    expect(generateDeployment(config)).toContain('kind: Deployment');
+    expect(generateService(config)).toContain('targetPort: 3000');
+    expect(generateIngress(config)).toContain('api.example.com');
+    expect(generateHPA(config)).toContain('averageUtilization: 75');
+  });
+
+  it('generates social hashtags and meeting minutes text', () => {
+    const tags = generateHashtags('AI developer tools', 'linkedin', 5);
+    expect(tags.hashtags).toHaveLength(5);
+    expect(tags.hashtags[0]).toMatch(/^#/);
+
+    const minutes = generateMinutes({
+      title: 'Planning',
+      date: '2026-05-06',
+      time: '10:00',
+      location: 'Zoom',
+      attendees: 'Ada, Grace',
+      agenda: '1. Roadmap',
+      discussion: 'Reviewed scope.',
+      decisions: 'Ship phase 1.',
+      actionItems: [{ task: 'Write tests', assignee: 'Ada', dueDate: '2026-05-07' }],
+      nextMeeting: 'Next Wednesday',
+    }, 'markdown');
+    expect(minutes).toContain('# Planning');
+    expect(minutes).toContain('Write tests');
+  });
+
+  it('calculates project estimates, risk levels, and room availability', () => {
+    const estimate = calculateProjectEstimation([
+      { optimistic: 2, mostLikely: 3, pessimistic: 5 },
+      { optimistic: 1, mostLikely: 2, pessimistic: 4 },
+    ]);
+    expect(estimate.expected).toBe(5.3);
+    expect(estimate.confidence95.max).toBeGreaterThan(estimate.expected);
+
+    expect(getRiskScore(3, 5)).toBe(15);
+    expect(getRiskLevel(15)).toMatchObject({ level: 'Critical', color: 'red' });
+    expect(isAvailable({ bookings: [{ start: 540, end: 600 }] }, 600, 660)).toBe(true);
+    expect(isAvailable({ bookings: [{ start: 540, end: 600 }] }, 570, 630)).toBe(false);
+  });
+
+  it('generates environment variable files and parses scatter CSV data', () => {
+    const vars = [
+      { key: 'NODE_ENV', value: 'production', description: 'Runtime mode', required: true, secret: false },
+      { key: 'API_KEY', value: 'secret value', description: 'API key', required: true, secret: true },
+    ];
+    expect(generateOutput(vars, 'env')).toContain('API_KEY="secret value"');
+    expect(generateOutput(vars, 'json')).toContain('"NODE_ENV": "production"');
+    expect(generateExampleFile(vars)).toContain('API_KEY=');
+
+    const parsed = parseScatterCSV('series,x,y\nA,1,2\nA,3,4\nB,5,6');
+    expect(parsed).toEqual([
+      { name: 'A', data: [{ x: 1, y: 2 }, { x: 3, y: 4 }] },
+      { name: 'B', data: [{ x: 5, y: 6 }] },
+    ]);
+  });
+
+  it('generates database migrations and parses CREATE TABLE schemas', () => {
+    const columns = [
+      { name: 'id', type: 'SERIAL', nullable: false, primaryKey: true, unique: false, defaultValue: '', foreignKey: '' },
+      { name: 'email', type: 'VARCHAR(255)', nullable: false, primaryKey: false, unique: true, defaultValue: '', foreignKey: '' },
+    ];
+    expect(generateRawSQL('users', columns, 'postgresql', 'create')).toContain('CREATE TABLE "users"');
+    expect(generatePrisma('users', columns)).toContain('model User');
+    expect(generateTypeORM('users', columns)).toContain("@Entity('users')");
+
+    const schema = parseSchema(`CREATE TABLE users (
+      id SERIAL PRIMARY KEY,
+      email VARCHAR(255) UNIQUE NOT NULL,
+      org_id INTEGER REFERENCES organizations(id)
+    );`);
+    expect(schema[0]).toMatchObject({
+      name: 'users',
+      columns: [
+        { name: 'id', pk: true },
+        { name: 'email' },
+        { name: 'org_id', fk: 'organizations.id' },
+      ],
+    });
+  });
+
+  it('converts INSERT SQL rows to JSON objects', () => {
+    expect(
+      sqlToJson("INSERT INTO users (id, name, active) VALUES (1, 'Ada', true), (2, 'Linus', false);")
+    ).toEqual([
+      { id: 1, name: 'Ada', active: true },
+      { id: 2, name: 'Linus', active: false },
+    ]);
+  });
+
+  it('converts common SQL statements to MongoDB shell queries', () => {
+    const select = convertSqlToMongo("SELECT name, email FROM users WHERE age >= 18 AND status = 'active' ORDER BY name LIMIT 10");
+    expect(select).toMatchObject({ collection: 'users', operation: 'find' });
+    expect(select?.query).toContain('db.users.find');
+    expect(select?.query).toContain('"age": {\n    "$gte": 18');
+    expect(select?.query).toContain('.sort(');
+    expect(select?.query).toContain('.limit(10)');
+
+    const insert = convertSqlToMongo("INSERT INTO users (name, age) VALUES ('Ada', 36), ('Linus', 55)");
+    expect(insert).toMatchObject({ operation: 'insertMany' });
+    expect(insert?.query).toContain('db.users.insertMany');
+
+    const update = convertSqlToMongo("UPDATE users SET status = 'inactive' WHERE age < 18");
+    expect(update?.query).toContain('updateMany');
+    expect(update?.query).toContain('"$set"');
+
+    const deletion = convertSqlToMongo("DELETE FROM sessions WHERE last_seen < '2024-01-01'");
+    expect(deletion?.query).toContain('deleteMany');
+  });
+
+  it('minifies HTML and XML without returning empty stubs', () => {
+    expect(minifyHtml('<div>\n  <span>Hello</span>\n</div>')).toBe('<div><span>Hello</span></div>');
+    expect(minifyXml('<root>\n  <item>value</item>\n</root>')).toBe('<root><item>value</item></root>');
+  });
+
+  it('parses env files and exports common formats', () => {
+    const parsed = parseEnvContent('API_KEY=abc123\nEMPTY=\nAPI_KEY=duplicate');
+
+    expect(parsed.entries).toHaveLength(3);
+    expect(parsed.errors[0]).toContain('duplicate key API_KEY');
+    expect(toEnv(parsed.entries)).toContain('API_KEY=abc123');
+    expect(toJson(parsed.entries)).toContain('"EMPTY": ""');
+    expect(toYaml(parsed.entries)).toContain('API_KEY: abc123');
+  });
+
+  it('converts YAML/TOML documents without silent empty outputs', () => {
+    const yamlObject = parseYaml('name: Ada\nactive: true\nskills:\n  - math\n  - code');
+    expect(yamlObject).toEqual({ name: 'Ada', active: true, skills: ['math', 'code'] });
+    expect(jsonToYaml(yamlObject)).toContain('skills:');
+
+    const tomlObject = parseToml('title = "Example"\n[database]\nports = [8001, 8002]\nenabled = true');
+    expect(tomlObject).toEqual({
+      title: 'Example',
+      database: { ports: [8001, 8002], enabled: true },
+    });
+    expect(jsonToToml(tomlObject)).toContain('[database]');
+    expect(() => parseToml('__proto__ = "polluted"')).toThrow(/Unsafe object key/);
+  });
+
+  it('generates schemas and typed model code from JSON samples', () => {
+    const sample = {
+      id: 1,
+      userName: 'ada',
+      active: true,
+      tags: ['admin'],
+      address: { city: 'London' },
+    };
+
+    const python = generateDataclass(sample, 'User', { useDataclass: true, useOptional: true });
+    expect(generateImports({ useDataclass: true, useOptional: true }, false, true)).toContain('dataclass');
+    expect(python.main).toContain('class User');
+    expect(python.main).toContain('user_name: str');
+    expect(python.nested.join('\n')).toContain('class Address');
+
+    expect(generateJavaClass(sample, 'User', { packageName: 'com.example', useGettersSetters: true }).main).toContain('private String userName;');
+    expect(generateKotlinClass(sample, 'User', { useDataClass: true, useNullable: true }).main).toContain('data class User');
+    expect(jsonToDart(JSON.stringify(sample), 'User')).toContain('class User');
+
+    const graphql = generateGraphQLSchema(sample, 'User');
+    expect(graphql).toContain('type User');
+    expect(graphql).toContain('address: Address');
+
+    const proto = jsonToProto(sample, 'User');
+    expect(proto.fields.map((field: { name: string }) => field.name)).toContain('user_name');
+    expect(generateProtoFile(proto, 'example')).toContain('message User');
+
+    const schema = generateFullSchema(sample, { draft: 'draft-07', markAllRequired: true, includeExamples: true });
+    expect(schema).toMatchObject({
+      type: 'object',
+      properties: { id: { type: 'integer' } },
+      required: ['id', 'userName', 'active', 'tags', 'address'],
+    });
+  });
+
+  it('parses dependency manifests and flags known vulnerable package ranges', () => {
+    const dependencies = parseDependencies(EXAMPLE_PACKAGE_JSON);
+    if (!dependencies) throw new Error('Expected example dependencies to parse');
+
+    expect(dependencies).toMatchObject({
+      lodash: '4.17.20',
+      minimist: '1.2.5',
+      webpack: '5.90.0',
+    });
+
+    const vulnerabilities = checkVulnerabilities(dependencies);
+    expect(vulnerabilities.map((item) => `${item.severity}:${item.package}`)).toEqual([
+      'critical:minimist',
+      'high:axios',
+      'high:lodash',
+      'medium:jquery',
+    ]);
+
+    expect(parseDependencies('left-pad@1.3.0\n@scope/pkg: ^2.0.0')).toMatchObject({
+      'left-pad': '1.3.0',
+      '@scope/pkg': '^2.0.0',
+    });
+  });
+
+  it('merges JSON and formats SQL helper values', () => {
+    expect(mergeJsonObjects('{"a":1,"nested":{"x":1}}', '{"b":2,"nested":{"y":2}}', 'deep')).toContain('"y": 2');
+    expect(getSqlType(true, 'postgresql')).toBe('BOOLEAN');
+    expect(quoteIdentifier('user name', 'postgresql')).toBe('"user name"');
+    expect(formatValue("O'Reilly", 'mysql')).toBe("'O''Reilly'");
+  });
+
+  it('supports timestamp, tailwind size, color, and milestone helpers', () => {
+    expect(detectFormat('1700000000')).toBe('seconds');
+    expect(parseTimestamp('1700000000000', 'milliseconds')?.toISOString()).toBe('2023-11-14T22:13:20.000Z');
+    expect(sizeToTailwind('16px', 'p')).toBe('p-4');
+    expect(sizeToTailwind('8px', 'rounded')).toBe('rounded-lg');
+    expect(findClosestColor('#4682B4')[0]).toMatchObject({ name: 'Steel Blue' });
+    expect(getDaysUntil('not-a-date')).toBe(0);
+  });
+
+  it('parses cron schedules and calculates upcoming run times', () => {
+    const parsed = parseCron('*/15 9-17 * * 1-5');
+    if (!parsed) throw new Error('Expected cron expression to parse');
+    if (!parsed.minute || !parsed.hour || !parsed.dayOfWeek) {
+      throw new Error('Expected parsed cron fields to be present');
+    }
+
+    expect(parsed.minute).toMatchObject({ values: [0, 15, 30, 45], all: false });
+    expect(parsed.hour.values).toEqual([9, 10, 11, 12, 13, 14, 15, 16, 17]);
+    expect(parsed.dayOfWeek.values).toEqual([1, 2, 3, 4, 5]);
+
+    const nextRuns = getNextRuns('0 9 * * 1-5', 2, new Date(2026, 4, 4, 8, 58));
+    expect(nextRuns.map((date) => [date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), date.getMinutes()])).toEqual([
+      [2026, 4, 4, 9, 0],
+      [2026, 4, 5, 9, 0],
+    ]);
+
+    const monthRuns = getMonthRuns('0 0 1 * *', 2026, 4);
+    expect(monthRuns.map((date) => date.getDate())).toEqual([1]);
+    expect(parseCronExpression('* * * * *', (key) => key)).toBe('everyMinute');
+  });
+
+  it('generates shell-quoted database backup scripts and crontab entries', () => {
+    const config = {
+      database: 'postgresql',
+      host: 'db.example.com',
+      dbName: "app prod; rm -rf /",
+      username: 'backup-user',
+      schedule: 'daily',
+      retention: 14,
+      compression: true,
+      outputPath: '/tmp/backups',
+    };
+
+    const script = generateBackupScript(config);
+    expect(script).toContain('pg_dump -h "$DB_HOST" -U "$DB_USER" "$DB_NAME"');
+    expect(script).toContain("DB_NAME='app prod; rm -rf /'");
+    expect(script).toContain('gzip -f "$BACKUP_FILE"');
+    expect(script).toContain('find "$BACKUP_DIR" -type f -name "$DB_NAME-*" -mtime +"$RETENTION_DAYS" -delete');
+
+    const crontab = generateCrontab(config);
+    expect(crontab).toBe("0 2 * * * '/tmp/backups/backup-app-prod-rm-rf.sh' >> '/tmp/backups/backup-app-prod-rm-rf.sh.log' 2>&1");
   });
 
   it('parses representative curl commands and generates code for supported languages', () => {
@@ -165,19 +675,150 @@ X-Trace-Id: abc123
     expect(generateRuby(parsed)).toContain("request = Net::HTTP::Post.new(uri.request_uri)");
   });
 
-  it('keeps shared generator exports stable for non-curl shapes', () => {
+  it('generates API clients from OpenAPI specs', () => {
     const openApiLike = {
       openapi: '3.0.0',
+      info: { title: 'Users API', version: '1.0.0' },
+      servers: [{ url: 'https://api.example.com' }],
       paths: {
         '/users': {
           get: {
             operationId: 'listUsers',
+            parameters: [
+              { name: 'limit', in: 'query', schema: { type: 'integer' } },
+            ],
+            responses: {
+              '200': {
+                content: {
+                  'application/json': {
+                    schema: { type: 'array', items: { $ref: '#/components/schemas/User' } },
+                  },
+                },
+              },
+            },
+          },
+          post: {
+            operationId: 'createUser',
+            requestBody: {
+              required: true,
+              content: {
+                'application/json': {
+                  schema: { $ref: '#/components/schemas/CreateUserRequest' },
+                },
+              },
+            },
+            responses: {
+              '201': {
+                content: {
+                  'application/json': {
+                    schema: { $ref: '#/components/schemas/User' },
+                  },
+                },
+              },
+            },
+          },
+        },
+        '/users/{id}': {
+          get: {
+            operationId: 'getUser',
+            parameters: [
+              { name: 'id', in: 'path', required: true, schema: { type: 'string' } },
+            ],
+            responses: {
+              '200': {
+                content: {
+                  'application/json': {
+                    schema: { $ref: '#/components/schemas/User' },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      components: {
+        schemas: {
+          User: {
+            type: 'object',
+            required: ['id', 'email'],
+            properties: {
+              id: { type: 'string' },
+              email: { type: 'string' },
+              active: { type: 'boolean' },
+            },
+          },
+          CreateUserRequest: {
+            type: 'object',
+            required: ['email'],
+            properties: {
+              email: { type: 'string' },
+            },
           },
         },
       },
     };
 
-    expect(generatePython(openApiLike)).toBe('');
-    expect(generateGo(openApiLike)).toBe('');
+    const typeScript = generateTypeScript(openApiLike);
+    expect(typeScript).toContain('export interface User');
+    expect(typeScript).toContain('export async function listUsers');
+    expect(typeScript).toContain('Promise<User[]>');
+    expect(typeScript).toContain('encodeURIComponent(String(id))');
+
+    expect(generateTypeScript(EXAMPLE_SPEC)).toContain('createUser(body: CreateUserRequest');
+    expect(generatePython(openApiLike)).toContain('def list_users(');
+    expect(generatePython(openApiLike)).toContain('requests.request');
+    expect(generateGo(openApiLike)).toContain('func (c *Client) ListUsers');
+  });
+
+  it('formats documents with cleanup options', () => {
+    const formatted = formatDocument(' hello ,world.\r\n\r\n this   is a test ', {
+      trimLines: true,
+      removeExtraSpaces: true,
+      removeBlankLines: true,
+      normalizeLineBreaks: true,
+      capitalizeFirst: true,
+      fixPunctuation: true,
+      lineWidth: 12,
+      indentStyle: 'spaces',
+      indentSize: 2,
+    });
+
+    expect(formatted).toContain('  Hello,');
+    expect(formatted).toContain('  world.');
+    expect(formatted).toContain('  This is a');
+    expect(formatted).not.toContain('\r');
+  });
+
+  it('detects common JavaScript memory leak patterns', () => {
+    const result = detectMemoryLeaks(`
+const cache = [];
+window.addEventListener('resize', () => console.log(cache.length));
+const timer = setInterval(() => cache.push(new Array(1000)), 1000);
+const url = URL.createObjectURL(new Blob(['x']));
+const observer = new MutationObserver(() => {});
+observer.observe(document.body, { childList: true });
+`);
+
+    expect(result.score).toBeLessThan(100);
+    expect(result.issues.map((issue: { type: string }) => issue.type)).toEqual(
+      expect.arrayContaining([
+        'Event listener without cleanup',
+        'Uncleared interval',
+        'Object URL not revoked',
+        'Observer without disconnect',
+      ])
+    );
+  });
+
+  it('tokenizes regex patterns and renders a safe SVG diagram', () => {
+    const tokens = tokenizeRegex('^(user|admin)-\\d{2,4}$');
+    expect(tokens.map((token: { type: string }) => token.type)).toEqual(
+      expect.arrayContaining(['anchor', 'group', 'special', 'quantifier'])
+    );
+
+    const svg = generateSvg(tokens);
+    expect(svg).toContain('<svg');
+    expect(svg).toContain('Regular expression diagram');
+    expect(svg).not.toContain('<script');
   });
 });

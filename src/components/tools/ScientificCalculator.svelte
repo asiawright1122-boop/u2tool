@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { evaluateExpression, factorial } from '@/lib/scientific-calculator';
 
   interface Props {
     locale: string;
@@ -25,15 +26,18 @@
 
   let memory = $state(0);
 
-  let error = $state(null);
+  let error = $state<string | null>(null);
 
   let copied = $state(false);
 
-  let timerRef = $state(null);
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);
 
   function appendToExpression(value: string) {
     error = null;
-    if (display === '0' && !['.','+','-','*','/'].includes(value)) {
+    if (display === 'Error') {
+      display = value;
+      expression = value;
+    } else if (display === '0' && !['.', '+', '-', '−', '*', '×', '/', '÷', '^', '%'].includes(value)) {
       display = value;
       expression = value;
     } else {
@@ -44,21 +48,13 @@
 
   function appendFunction(func: string) {
     error = null;
-    display = display === '0' ? `${func}(` : display + `${func}(`;
+    display = display === '0' || display === 'Error' ? `${func}(` : display + `${func}(`;
     expression = expression + `${func}(`;
   }
 
   function calculate() {
     try {
-      let expr = expression;
-      // 处理角度/弧度转换
-      if (!isRadians) {
-        expr = expr
-          .replace(/sin\(([^)]+)\)/g, (_, arg) => `sin(${degreesToRadians(parseFloat(arg))})`)
-          .replace(/cos\(([^)]+)\)/g, (_, arg) => `cos(${degreesToRadians(parseFloat(arg))})`)
-          .replace(/tan\(([^)]+)\)/g, (_, arg) => `tan(${degreesToRadians(parseFloat(arg))})`);
-      }
-      const result = evaluateExpression(expr);
+      const result = evaluateExpression(expression, { angleMode: isRadians ? 'rad' : 'deg' });
       const formatted = Number.isInteger(result) ? result.toString() : result.toPrecision(10).replace(/\.?0+$/, '');
       display = formatted;
       expression = formatted;
@@ -99,56 +95,6 @@
     if (timerRef) clearTimeout(timerRef);
   });
 
-  // Functions
-  export function evaluateExpression(expr: string): number {
-  // 预处理：替换科学函数
-  const processed = expr
-    .replace(/π/g, String(Math.PI))
-    .replace(/e(?![0-9])/g, String(Math.E))
-    .replace(/sin\(/g, 'Math.sin(')
-    .replace(/cos\(/g, 'Math.cos(')
-    .replace(/tan\(/g, 'Math.tan(')
-    .replace(/asin\(/g, 'Math.asin(')
-    .replace(/acos\(/g, 'Math.acos(')
-    .replace(/atan\(/g, 'Math.atan(')
-    .replace(/log\(/g, 'Math.log10(')
-    .replace(/ln\(/g, 'Math.log(')
-    .replace(/sqrt\(/g, 'Math.sqrt(')
-    .replace(/abs\(/g, 'Math.abs(')
-    .replace(/exp\(/g, 'Math.exp(')
-    .replace(/pow\(/g, 'Math.pow(')
-    .replace(/\^/g, '**')
-    .replace(/×/g, '*')
-    .replace(/÷/g, '/')
-    .replace(/mod/g, '%');
-
-  // 安全检查：只允许数字、运算符和 Math 函数
-  const safePattern = /^[0-9+\-*/().%\s,Math.sincotaglqrtbexpow]+$/;
-  if (!safePattern.test(processed)) {
-    throw new Error('Invalid expression');
-  }
-
-  // 使用 Function 构造器计算（比 eval 更安全）
-  let result = new Function(`return ${processed}`)();
-  if (typeof result !== 'number' || !isFinite(result)) {
-    throw new Error('Invalid result');
-  }
-  return result;
-}
-  export function factorial(n: number): number {
-  if (n < 0 || !Number.isInteger(n)) throw new Error('Invalid input');
-  if (n > 170) throw new Error('Number too large');
-  if (n === 0 || n === 1) return 1;
-  let result = 1;
-  for (let i = 2; i <= n; i++) result *= i;
-  return result;
-}
-  export function degreesToRadians(deg: number): number {
-  return (deg * Math.PI) / 180;
-}
-  export function radiansToDegrees(rad: number): number {
-  return (rad * 180) / Math.PI;
-}
   function memoryStore() { return memory = parseFloat(display) || 0; }
   function memoryRecall() { display = memory.toString(); expression = memory.toString(); }
   function memoryClear() { return memory = 0; }
@@ -160,9 +106,66 @@
     timerRef = setTimeout(() => copied = false, 2000);
   }
 
+  const neutralClass = 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700';
+  const memoryClass = 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600';
+  const functionClass = 'bg-blue-100 dark:bg-blue-900/30 hover:bg-blue-200 dark:hover:bg-blue-900/50 text-blue-900 dark:text-blue-100';
+  const operatorClass = 'bg-amber-100 dark:bg-amber-900/30 hover:bg-amber-200 dark:hover:bg-amber-900/50 text-amber-900 dark:text-amber-100';
+  const equalsClass = 'bg-amber-600 hover:bg-amber-700 text-white col-span-2';
+
+  const calculatorButtons = [
+    { label: 'MC', onClick: memoryClear, className: memoryClass },
+    { label: 'MR', onClick: memoryRecall, className: memoryClass },
+    { label: 'M+', onClick: memoryAdd, className: memoryClass },
+    { label: 'MS', onClick: memoryStore, className: memoryClass },
+    { label: 'C', onClick: clear, className: operatorClass },
+    { label: 'sin', onClick: () => appendFunction('sin'), className: functionClass },
+    { label: 'cos', onClick: () => appendFunction('cos'), className: functionClass },
+    { label: 'tan', onClick: () => appendFunction('tan'), className: functionClass },
+    { label: '(', onClick: () => appendToExpression('('), className: neutralClass },
+    { label: ')', onClick: () => appendToExpression(')'), className: neutralClass },
+    { label: 'ln', onClick: () => appendFunction('ln'), className: functionClass },
+    { label: 'log', onClick: () => appendFunction('log'), className: functionClass },
+    { label: '√', onClick: () => appendFunction('sqrt'), className: functionClass },
+    { label: 'xʸ', onClick: () => appendToExpression('^'), className: functionClass },
+    { label: '⌫', onClick: backspace, className: operatorClass },
+    { label: 'π', onClick: () => appendToExpression('π'), className: functionClass },
+    { label: 'e', onClick: () => appendToExpression('e'), className: functionClass },
+    { label: 'n!', onClick: handleFactorial, className: functionClass },
+    { label: '%', onClick: () => appendToExpression('%'), className: operatorClass },
+    { label: '÷', onClick: () => appendToExpression('÷'), className: operatorClass },
+    { label: '7', onClick: () => appendToExpression('7'), className: neutralClass },
+    { label: '8', onClick: () => appendToExpression('8'), className: neutralClass },
+    { label: '9', onClick: () => appendToExpression('9'), className: neutralClass },
+    { label: '×', onClick: () => appendToExpression('×'), className: operatorClass },
+    { label: '−', onClick: () => appendToExpression('−'), className: operatorClass },
+    { label: '4', onClick: () => appendToExpression('4'), className: neutralClass },
+    { label: '5', onClick: () => appendToExpression('5'), className: neutralClass },
+    { label: '6', onClick: () => appendToExpression('6'), className: neutralClass },
+    { label: '+', onClick: () => appendToExpression('+'), className: operatorClass },
+    { label: '=', onClick: calculate, className: equalsClass },
+    { label: '1', onClick: () => appendToExpression('1'), className: neutralClass },
+    { label: '2', onClick: () => appendToExpression('2'), className: neutralClass },
+    { label: '3', onClick: () => appendToExpression('3'), className: neutralClass },
+    { label: '.', onClick: () => appendToExpression('.'), className: neutralClass },
+    {
+      label: '±',
+      onClick: () => {
+        const num = parseFloat(display);
+        if (!Number.isNaN(num)) {
+          const negated = (-num).toString();
+          display = negated;
+          expression = negated;
+        }
+      },
+      className: neutralClass,
+    },
+    { label: '0', onClick: () => appendToExpression('0'), className: neutralClass },
+    { label: '00', onClick: () => appendToExpression('00'), className: neutralClass },
+  ];
+
 </script>
 
-{#snippet Button(value, onClick, className)}
+{#snippet Button(value: string, onClick: () => void, className: string)}
 <button
       onclick={onClick}
       class={`p-3 rounded-lg font-mono text-sm transition-colors text-gray-900 dark:text-white ${className}`}
@@ -211,62 +214,9 @@
 
       <!-- 按钮区域 -->
       <div class="grid grid-cols-5 gap-2">
-        <!-- 第一行：内存和清除 -->
-        {@render Button("MC", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("MR", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("M+", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("MS", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("C", undefined /* missing: onClick */, undefined /* missing: className */)}
-
-        <!-- 第二行：科学函数 -->
-        {@render Button("sin", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("cos", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("tan", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("(", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button(")", undefined /* missing: onClick */, undefined /* missing: className */)}
-
-        <!-- 第三行：更多函数 -->
-        {@render Button("ln", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("log", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("√", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("xʸ", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("⌫", undefined /* missing: onClick */, undefined /* missing: className */)}
-
-        <!-- 第四行：常数和阶乘 -->
-        {@render Button("π", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("e", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("n!", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("%", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("÷", undefined /* missing: onClick */, undefined /* missing: className */)}
-
-        <!-- 数字键盘 -->
-        {@render Button("7", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("8", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("9", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("×", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("−", undefined /* missing: onClick */, undefined /* missing: className */)}
-
-        {@render Button("4", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("5", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("6", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("+", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("=", undefined /* missing: onClick */, undefined /* missing: className */)}
-
-        {@render Button("1", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("2", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("3", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button(".", undefined /* missing: onClick */, undefined /* missing: className */)}
-
-        {@render Button("0", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button("00", undefined /* missing: onClick */, undefined /* missing: className */)}
-        {@render Button({ value: "±", onclick: () => {
-          const num = parseFloat(display);
-          if (!isNaN(num)) {
-            const negated = (-num).toString();
-            display = negated;
-            expression = negated;
-          }
-        }, class: "bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700" })}
+        {#each calculatorButtons as button (button.label)}
+          {@render Button(button.label, button.onClick, button.className)}
+        {/each}
       </div>
 
       <!-- 快捷公式 -->
