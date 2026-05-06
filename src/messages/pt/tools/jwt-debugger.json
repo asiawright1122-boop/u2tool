@@ -4,7 +4,7 @@
     "Acesse a interface do JWT Debugger e cole o token JWT no campo 'Token Input' com formato xxxx.xxxx.xxxx.",
     "Clique em 'Decode Token' para separar as partes do token (header, payload, signature) e exibi-las em painéis individuais.",
     "Analise o header para identificar o algoritmo (alg) e identificador de chave (kid) utilizados na assinatura.",
-    "Valide a assinatura clicando em 'Verify Signature', inserindo a chave secreta ou certificado público no campo dedicado.",
+    "Use o segmento de assinatura apenas como referência de depuração; valide a autenticidade no seu aplicativo ou em uma ferramenta de segurança confiável.",
     "Verifique o payload para inspecionar claims como 'exp', 'iat' e 'aud', com destaque para datas em formato Unix timestamp.",
     "Use o modo 'Raw Output' para visualizar os bytes decodificados em hexadecimal ou o modo 'Structured JSON' para navegar nos campos aninhados."
   ],

@@ -6,7 +6,7 @@
     "Saisissez votre clé secrète (secret key) dans le champ dédié, ou générez-en une automatiquement avec le bouton 'Generate Secure Key'",
     "Activez l'option 'Add Standard Headers' pour inclure les paramètres JWA recommandés (typ, alg) dans l'en-tête",
     "Cliquez sur 'Generate Token' pour produire le JWT complet avec séparation explicite des trois segments (header.payload.signature)",
-    "Utilisez le bouton 'Verify Signature' pour valider la structure cryptographique avant déploiement en environnement de test"
+    "Relisez le segment de signature uniquement comme information de débogage; vérifiez l'authenticité dans votre application ou avec un outil de sécurité de confiance."
   ],
   "usage_examples": [
     "Simuler un jeton d'authentification pour tester un middleware Node.js utilisant la bibliothèque express-jwt",

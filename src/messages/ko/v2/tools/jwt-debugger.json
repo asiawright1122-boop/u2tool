@@ -39,6 +39,6 @@
   "copy": "복사",
   "secretPlaceholder": "비밀 키 입력...",
   "value": "값",
-  "verifyNote": "참고: 서명 검증은 클라이언트 측에서 수행됩니다",
-  "verifySignature": "서명 검증"
+  "verifyNote": "이 페이지는 서명 세그먼트를 디코딩해 표시하지만 진위 여부를 검증하지 않습니다. 서명 확인은 애플리케이션이나 신뢰할 수 있는 보안 도구에서 수행하세요.",
+  "verifySignature": "서명 검증은 수행되지 않습니다"
 }

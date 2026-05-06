@@ -12059,8 +12059,8 @@
       "copy": "Copiar",
       "secretPlaceholder": "Digite a chave secreta...",
       "value": "Valor",
-      "verifyNote": "Nota: A verificação de assinatura é feita no lado do cliente",
-      "verifySignature": "Verificar assinatura"
+      "verifyNote": "Esta página decodifica e mostra o segmento de assinatura, mas não verifica autenticidade. Verifique assinaturas no seu aplicativo ou em ferramentas de segurança confiáveis.",
+      "verifySignature": "A verificação de assinatura não é realizada"
     },
     "csp-generator": {
       "name": "Gerador CSP",

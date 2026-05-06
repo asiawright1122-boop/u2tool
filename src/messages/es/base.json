@@ -12063,8 +12063,8 @@
       "copy": "Copiar",
       "secretPlaceholder": "Ingrese la clave secreta...",
       "value": "Valor",
-      "verifyNote": "Nota: La verificación de firma se realiza del lado del cliente",
-      "verifySignature": "Verificar firma"
+      "verifyNote": "Esta página decodifica y muestra el segmento de firma, pero no verifica la autenticidad. Comprueba las firmas en tu aplicación o con herramientas de seguridad de confianza.",
+      "verifySignature": "No se realiza verificación de firma"
     },
     "csp-generator": {
       "name": "Generador CSP",

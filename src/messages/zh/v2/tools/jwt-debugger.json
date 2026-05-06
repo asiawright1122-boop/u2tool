@@ -39,6 +39,6 @@
   "copy": "复制",
   "secretPlaceholder": "输入密钥...",
   "value": "值",
-  "verifyNote": "注意：签名验证在客户端完成",
-  "verifySignature": "验证签名"
+  "verifyNote": "此页面只解码并显示签名片段，不执行真实性验证。请在你的应用或可信安全工具中检查签名。",
+  "verifySignature": "不执行签名验证"
 }

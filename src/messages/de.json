@@ -2110,8 +2110,8 @@
       "copy": "Kopieren",
       "secretPlaceholder": "Geheimschlüssel eingeben...",
       "value": "Wert",
-      "verifyNote": "Hinweis: Die Signaturprüfung erfolgt clientseitig",
-      "verifySignature": "Signatur überprüfen"
+      "verifyNote": "Diese Seite dekodiert und zeigt das Signatursegment an, überprüft aber nicht die Authentizität. Prüfen Sie Signaturen in Ihrer Anwendung oder mit vertrauenswürdigen Sicherheitstools.",
+      "verifySignature": "Signaturprüfung wird nicht durchgeführt"
     },
     "diff-checker": {
       "name": "Diff Checker",

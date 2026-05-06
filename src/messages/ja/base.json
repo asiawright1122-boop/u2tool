@@ -11845,8 +11845,8 @@
       "copy": "コピー",
       "secretPlaceholder": "シークレットキーを入力...",
       "value": "値",
-      "verifyNote": "注意：署名検証はクライアント側で行われます",
-      "verifySignature": "署名を検証"
+      "verifyNote": "このページは署名セグメントをデコードして表示しますが、真正性は検証しません。署名の確認はアプリケーションまたは信頼できるセキュリティツールで行ってください。",
+      "verifySignature": "署名検証は実行されません"
     },
     "csp-generator": {
       "name": "CSPジェネレーター",

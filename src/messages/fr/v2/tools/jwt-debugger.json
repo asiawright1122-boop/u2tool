@@ -39,6 +39,6 @@
   "copy": "Copier",
   "secretPlaceholder": "Entrez la clé secrète...",
   "value": "Valeur",
-  "verifyNote": "Note : La vérification de signature est effectuée côté client",
-  "verifySignature": "Vérifier la signature"
+  "verifyNote": "Cette page décode et affiche le segment de signature, mais ne vérifie pas l'authenticité. Vérifiez les signatures dans votre application ou avec des outils de sécurité de confiance.",
+  "verifySignature": "La vérification de signature n'est pas effectuée"
 }
