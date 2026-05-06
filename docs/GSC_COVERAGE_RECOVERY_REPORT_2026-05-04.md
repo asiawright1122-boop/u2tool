@@ -1,6 +1,6 @@
 # GSC Coverage Recovery Report
 
-Generated at: 2026-05-05T07:11:50.815Z
+Generated at: 2026-05-06T03:28:53.086Z
 
 Input directory: /Users/kaka/Downloads/u2tool.com-Coverage-2026-05-04
 
