@@ -1,4 +1,13 @@
-const BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
+const FETCH_BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
+const LOCAL_FETCH_HOSTS = new Set(['localhost', '127.0.0.1', '0.0.0.0', '[::1]', '::1']);
+
+function isLocalFetchBase(): boolean {
+  try {
+    return LOCAL_FETCH_HOSTS.has(new URL(FETCH_BASE_URL).hostname);
+  } catch {
+    return false;
+  }
+}
 
 interface HtmlGrowthCheck {
   name: string;
@@ -112,13 +121,14 @@ function assertCanonicalHtml(path: string, html: string): void {
 }
 
 async function validateHtmlCheck(check: HtmlGrowthCheck): Promise<void> {
-  const response = await fetchWithRetry(`${BASE_URL}${check.path}`, { redirect: 'follow' });
+  const response = await fetchWithRetry(`${FETCH_BASE_URL}${check.path}`, { redirect: 'follow' });
   assert(response.status === 200, `${check.name}: expected HTTP 200, got ${response.status}`);
   assert((response.headers.get('content-type') || '').includes('text/html'), `${check.name}: response is not HTML`);
 
   const cacheHeader = response.headers.get('x-u2tool-html-cache') || '';
   if (check.expectedCacheHeader === 'HIT_OR_MISS') {
-    assert(['HIT', 'MISS'].includes(cacheHeader), `${check.name}: expected HTML cache HIT/MISS, got "${cacheHeader || '(none)'}"`);
+    const allowedHeaders = isLocalFetchBase() ? ['HIT', 'MISS', 'BYPASS'] : ['HIT', 'MISS'];
+    assert(allowedHeaders.includes(cacheHeader), `${check.name}: expected HTML cache ${allowedHeaders.join('/')}, got "${cacheHeader || '(none)'}"`);
   }
   if (check.expectedCacheHeader === 'BYPASS') {
     assert(cacheHeader === 'BYPASS', `${check.name}: expected HTML cache BYPASS, got "${cacheHeader || '(none)'}"`);
@@ -142,7 +152,7 @@ async function validateHtmlCheck(check: HtmlGrowthCheck): Promise<void> {
 }
 
 async function validateLlmsExport(): Promise<void> {
-  const response = await fetchWithRetry(`${BASE_URL}/llms.txt`, { redirect: 'follow' });
+  const response = await fetchWithRetry(`${FETCH_BASE_URL}/llms.txt`, { redirect: 'follow' });
   assert(response.status === 200, `llms.txt: expected HTTP 200, got ${response.status}`);
   assert((response.headers.get('content-type') || '').includes('text/plain'), `llms.txt: unexpected content-type "${response.headers.get('content-type') || ''}"`);
 
@@ -162,7 +172,7 @@ async function validateLlmsExport(): Promise<void> {
 }
 
 async function validateToolsIndexExport(): Promise<void> {
-  const response = await fetchWithRetry(`${BASE_URL}/en/tools-index.json`, { redirect: 'follow' });
+  const response = await fetchWithRetry(`${FETCH_BASE_URL}/en/tools-index.json`, { redirect: 'follow' });
   assert(response.status === 200, `tools-index: expected HTTP 200, got ${response.status}`);
   assert((response.headers.get('content-type') || '').includes('application/json'), `tools-index: unexpected content-type "${response.headers.get('content-type') || ''}"`);
 
@@ -210,12 +220,12 @@ async function main(): Promise<void> {
   }
 
   if (failures.length > 0) {
-    console.log(`\n${failures.length} growth surface checks failed. BASE_URL=${BASE_URL}`);
+    console.log(`\n${failures.length} growth surface checks failed. FETCH_BASE_URL=${FETCH_BASE_URL}`);
     process.exitCode = 1;
     return;
   }
 
-  console.log(`\nAll growth surface checks passed. BASE_URL=${BASE_URL}`);
+  console.log(`\nAll growth surface checks passed. FETCH_BASE_URL=${FETCH_BASE_URL}`);
 }
 
 main().catch((error) => {

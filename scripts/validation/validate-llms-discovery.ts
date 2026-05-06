@@ -1,4 +1,9 @@
-const BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
+const FETCH_BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
+const CANONICAL_BASE_URL = (
+  process.env.CANONICAL_BASE_URL ||
+  process.env.PUBLIC_SITE_URL ||
+  'https://www.u2tool.com'
+).replace(/\/+$/, '');
 
 function assert(condition: unknown, message: string): void {
   if (!condition) {
@@ -51,7 +56,7 @@ async function fetchWithRetry(url: string, init: RequestInit = {}, attempts = 3)
 }
 
 async function main(): Promise<void> {
-  const response = await fetchWithRetry(`${BASE_URL}/llms.txt`, { redirect: 'follow' });
+  const response = await fetchWithRetry(`${FETCH_BASE_URL}/llms.txt`, { redirect: 'follow' });
   assert(response.status === 200, `llms.txt expected HTTP 200, got ${response.status}`);
   assert((response.headers.get('content-type') || '').includes('text/plain'), `llms.txt unexpected content-type "${response.headers.get('content-type') || ''}"`);
 
@@ -61,10 +66,10 @@ async function main(): Promise<void> {
     '## Priority Discovery Routes',
     '## Preferred Canonical Routes',
     '## Catalog by Category',
-    `${BASE_URL}/sitemap.xml`,
-    `${BASE_URL}/en/tools/json-formatter/`,
-    `${BASE_URL}/en/compare/choose-json-tool/`,
-    `${BASE_URL}/en/categories/development/`,
+    `${CANONICAL_BASE_URL}/sitemap.xml`,
+    `${CANONICAL_BASE_URL}/en/tools/json-formatter/`,
+    `${CANONICAL_BASE_URL}/en/compare/choose-json-tool/`,
+    `${CANONICAL_BASE_URL}/en/categories/development/`,
     'Cloudflare SSR with client-side interactive islands',
   ];
 
@@ -78,7 +83,7 @@ async function main(): Promise<void> {
   assert(!text.includes('MISSING:'), 'llms.txt contains missing translation placeholders');
   assert(!text.includes('Static Astro site'), 'llms.txt contains outdated static rendering language');
 
-  console.log(`All llms discovery checks passed. BASE_URL=${BASE_URL}`);
+  console.log(`All llms discovery checks passed. FETCH_BASE_URL=${FETCH_BASE_URL}; CANONICAL_BASE_URL=${CANONICAL_BASE_URL}`);
 }
 
 main().catch((error) => {

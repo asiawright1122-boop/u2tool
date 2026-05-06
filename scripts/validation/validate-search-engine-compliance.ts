@@ -1,4 +1,9 @@
-const BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
+const FETCH_BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
+const CANONICAL_BASE_URL = (
+  process.env.CANONICAL_BASE_URL ||
+  process.env.PUBLIC_SITE_URL ||
+  'https://www.u2tool.com'
+).replace(/\/+$/, '');
 const SUPPORTED_LOCALES = ['en', 'zh-CN', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'];
 
 interface HtmlCheck {
@@ -62,7 +67,7 @@ function assert(condition: unknown, message: string): void {
 }
 
 async function fetchText(path: string): Promise<{ response: Response; text: string }> {
-  const response = await fetch(`${BASE_URL}${path}`, { redirect: 'follow' });
+  const response = await fetch(`${FETCH_BASE_URL}${path}`, { redirect: 'follow' });
   return { response, text: await response.text() };
 }
 
@@ -118,10 +123,10 @@ async function validateRobots(): Promise<void> {
     'User-agent: *',
     'Allow: /',
     'Disallow: /api/',
-    `Sitemap: ${BASE_URL}/sitemap.xml`,
-    `Sitemap: ${BASE_URL}/sitemap-priority.xml`,
-    `Sitemap: ${BASE_URL}/sitemap-pages.xml`,
-    `Sitemap: ${BASE_URL}/sitemap-tools.xml`,
+    `Sitemap: ${CANONICAL_BASE_URL}/sitemap.xml`,
+    `Sitemap: ${CANONICAL_BASE_URL}/sitemap-priority.xml`,
+    `Sitemap: ${CANONICAL_BASE_URL}/sitemap-pages.xml`,
+    `Sitemap: ${CANONICAL_BASE_URL}/sitemap-tools.xml`,
     'User-agent: Yandex',
     'Clean-param: q',
     'Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&fbclid&gclid&yclid',
@@ -161,10 +166,10 @@ async function validateSitemaps(): Promise<void> {
   assert(new Set(pageLocs).size === pageLocs.length, 'pages sitemap: duplicate URL');
   assert(new Set(toolLocs).size === toolLocs.length, 'tools sitemap: duplicate URL');
   assert(priorityLocs.length < 50_000 && pageLocs.length < 50_000 && toolLocs.length < 50_000, 'sitemap: URL count exceeds per-file limit');
-  assert(priorityLocs.includes(`${BASE_URL}/en/ai/`), 'priority sitemap: missing /en/ai/');
-  assert(pageLocs.includes(`${BASE_URL}/en/ai/`), 'pages sitemap: missing /en/ai/');
-  assert(toolLocs.includes(`${BASE_URL}/en/tools/json-formatter/`), 'tools sitemap: missing JSON Formatter');
-  assert([...priorityLocs, ...pageLocs, ...toolLocs].every((url) => url.startsWith(`${BASE_URL}/`)), 'sitemap: non-canonical host leaked');
+  assert(priorityLocs.includes(`${CANONICAL_BASE_URL}/en/ai/`), 'priority sitemap: missing /en/ai/');
+  assert(pageLocs.includes(`${CANONICAL_BASE_URL}/en/ai/`), 'pages sitemap: missing /en/ai/');
+  assert(toolLocs.includes(`${CANONICAL_BASE_URL}/en/tools/json-formatter/`), 'tools sitemap: missing JSON Formatter');
+  assert([...priorityLocs, ...pageLocs, ...toolLocs].every((url) => url.startsWith(`${CANONICAL_BASE_URL}/`)), 'sitemap: non-canonical host leaked');
   assert([...priorityLocs, ...pageLocs, ...toolLocs].every((url) => !url.includes('?')), 'sitemap: query URL leaked');
 }
 
@@ -179,7 +184,7 @@ async function validateHtml(check: HtmlCheck): Promise<void> {
   const canonical = getTagContent(html, 'canonical');
   const robots = getTagContent(html, 'robots');
   const h1 = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1]?.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim() || '';
-  const expectedCanonical = `${BASE_URL}${check.canonicalPath || check.path}`;
+  const expectedCanonical = `${CANONICAL_BASE_URL}${check.canonicalPath || check.path}`;
 
   assert(title.length >= 10 && title.length <= 70, `${check.name}: title length ${title.length} outside safe range`);
   assert(description.length >= 50 && description.length <= 180, `${check.name}: description length ${description.length} outside safe range`);
@@ -223,12 +228,12 @@ async function main(): Promise<void> {
   }
 
   if (failures.length > 0) {
-    console.log(`\n${failures.length} search-engine compliance checks failed. BASE_URL=${BASE_URL}`);
+    console.log(`\n${failures.length} search-engine compliance checks failed. FETCH_BASE_URL=${FETCH_BASE_URL}; CANONICAL_BASE_URL=${CANONICAL_BASE_URL}`);
     process.exitCode = 1;
     return;
   }
 
-  console.log(`\nAll search-engine compliance checks passed. BASE_URL=${BASE_URL}`);
+  console.log(`\nAll search-engine compliance checks passed. FETCH_BASE_URL=${FETCH_BASE_URL}; CANONICAL_BASE_URL=${CANONICAL_BASE_URL}`);
 }
 
 main().catch((error) => {

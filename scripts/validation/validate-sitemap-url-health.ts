@@ -1,4 +1,9 @@
-const BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
+const FETCH_BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
+const CANONICAL_BASE_URL = (
+  process.env.CANONICAL_BASE_URL ||
+  process.env.PUBLIC_SITE_URL ||
+  'https://www.u2tool.com'
+).replace(/\/+$/, '');
 const MAX_URLS = Number(process.env.SITEMAP_URL_HEALTH_MAX_URLS || 600);
 const CONCURRENCY = Number(process.env.SITEMAP_URL_HEALTH_CONCURRENCY || 12);
 
@@ -94,6 +99,15 @@ function expectedCanonical(url: string): string {
   return parsed.toString();
 }
 
+function toFetchUrl(canonicalUrl: string): string {
+  const url = new URL(canonicalUrl);
+  const fetchBase = new URL(FETCH_BASE_URL);
+  url.protocol = fetchBase.protocol;
+  url.hostname = fetchBase.hostname;
+  url.port = fetchBase.port;
+  return url.toString();
+}
+
 function validateSitemapUrlShape(sitemapPath: string, url: string): Finding[] {
   const findings: Finding[] = [];
   let parsed: URL;
@@ -104,7 +118,7 @@ function validateSitemapUrlShape(sitemapPath: string, url: string): Finding[] {
     return [{ sitemapPath, url, reason: 'invalid URL in sitemap' }];
   }
 
-  if (parsed.origin !== BASE_URL) {
+  if (parsed.origin !== CANONICAL_BASE_URL) {
     findings.push({ sitemapPath, url, reason: `non-canonical origin "${parsed.origin}"` });
   }
 
@@ -125,7 +139,8 @@ async function validateLiveUrl(item: SitemapUrl): Promise<Finding[]> {
     return findings;
   }
 
-  const headResponse = await fetchWithRetry(item.url, { method: 'HEAD', redirect: 'manual' });
+  const fetchUrl = toFetchUrl(item.url);
+  const headResponse = await fetchWithRetry(fetchUrl, { method: 'HEAD', redirect: 'manual' });
   if (headResponse.status >= 300 && headResponse.status < 400) {
     findings.push({
       ...item,
@@ -144,7 +159,7 @@ async function validateLiveUrl(item: SitemapUrl): Promise<Finding[]> {
     return findings;
   }
 
-  const getResponse = await fetchWithRetry(item.url, { redirect: 'manual' });
+  const getResponse = await fetchWithRetry(fetchUrl, { redirect: 'manual' });
   if (getResponse.status !== 200) {
     findings.push({ ...item, reason: `HTML sitemap URL GET returns HTTP ${getResponse.status}` });
     return findings;
@@ -192,7 +207,7 @@ async function loadSitemapGroups(): Promise<Record<string, string[]>> {
   const groups: Record<string, string[]> = {};
 
   for (const sitemapPath of sitemapPaths) {
-    const response = await fetchWithRetry(`${BASE_URL}${sitemapPath}`);
+    const response = await fetchWithRetry(`${FETCH_BASE_URL}${sitemapPath}`);
     assert(response.status === 200, `${sitemapPath}: expected HTTP 200, got ${response.status}`);
     const xml = await response.text();
     const locs = extractLocs(xml);
@@ -219,12 +234,12 @@ async function main(): Promise<void> {
     for (const finding of findings.slice(0, 50)) {
       console.log(`FAIL ${finding.sitemapPath} -> ${finding.url}: ${finding.reason}`);
     }
-    console.log(`\n${findings.length} sitemap URL health findings found. BASE_URL=${BASE_URL}; checked=${sample.length}`);
+    console.log(`\n${findings.length} sitemap URL health findings found. FETCH_BASE_URL=${FETCH_BASE_URL}; CANONICAL_BASE_URL=${CANONICAL_BASE_URL}; checked=${sample.length}`);
     process.exitCode = 1;
     return;
   }
 
-  console.log(`\nAll sitemap URL health checks passed. BASE_URL=${BASE_URL}; checked=${sample.length}`);
+  console.log(`\nAll sitemap URL health checks passed. FETCH_BASE_URL=${FETCH_BASE_URL}; CANONICAL_BASE_URL=${CANONICAL_BASE_URL}; checked=${sample.length}`);
 }
 
 main().catch((error) => {

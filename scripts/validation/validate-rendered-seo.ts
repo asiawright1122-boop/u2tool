@@ -1,4 +1,9 @@
-const BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
+const FETCH_BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
+const CANONICAL_BASE_URL = (
+  process.env.CANONICAL_BASE_URL ||
+  process.env.PUBLIC_SITE_URL ||
+  'https://www.u2tool.com'
+).replace(/\/+$/, '');
 
 interface RenderedSeoCheck {
   name: string;
@@ -371,13 +376,13 @@ function hasMetaTag(html: string, attributeName: 'name' | 'property', attributeV
 }
 
 async function validateCheck(check: RenderedSeoCheck): Promise<void> {
-  const url = `${BASE_URL}${check.path}`;
+  const url = `${FETCH_BASE_URL}${check.path}`;
   const response = await fetchWithRetry(url, { redirect: 'follow' });
   assert(response.status === 200, `${check.name}: expected HTTP 200, got ${response.status}`);
   assert((response.headers.get('content-type') || '').includes('text/html'), `${check.name}: response is not HTML`);
 
   const html = await response.text();
-  const canonicalUrl = `${BASE_URL}${check.canonicalPath ?? check.path}`;
+  const canonicalUrl = `${CANONICAL_BASE_URL}${check.canonicalPath ?? check.path}`;
   const title = getTagContent(html, 'title');
   const description = getTagContent(html, 'description');
   const canonical = getTagContent(html, 'canonical');
@@ -429,12 +434,12 @@ async function main(): Promise<void> {
   }
 
   if (failures.length > 0) {
-    console.log(`\n${failures.length} rendered SEO checks failed. BASE_URL=${BASE_URL}`);
+    console.log(`\n${failures.length} rendered SEO checks failed. FETCH_BASE_URL=${FETCH_BASE_URL}; CANONICAL_BASE_URL=${CANONICAL_BASE_URL}`);
     process.exitCode = 1;
     return;
   }
 
-  console.log(`\nAll rendered SEO checks passed. BASE_URL=${BASE_URL}`);
+  console.log(`\nAll rendered SEO checks passed. FETCH_BASE_URL=${FETCH_BASE_URL}; CANONICAL_BASE_URL=${CANONICAL_BASE_URL}`);
 }
 
 main().catch((error) => {

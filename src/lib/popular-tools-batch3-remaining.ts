@@ -49,14 +49,14 @@ export function analyzeKeywordDensity(
   const totalWords = words.length;
   const normalizedMinLength = Math.max(1, Math.floor(minLength) || 1);
 
-  const wordCount: Record<string, number> = {};
+  const wordCount = new Map<string, number>();
   for (const word of words) {
     if (word.length >= normalizedMinLength && (!excludeCommon || !COMMON_WORDS.has(word))) {
-      wordCount[word] = (wordCount[word] || 0) + 1;
+      wordCount.set(word, (wordCount.get(word) ?? 0) + 1);
     }
   }
 
-  const results: KeywordResult[] = Object.entries(wordCount)
+  const results: KeywordResult[] = Array.from(wordCount.entries())
     .map(([word, count]) => ({
       word,
       count,

@@ -80,8 +80,8 @@
   },
   "pages": {
     "tools": {
-      "seo_title": "500+ Free Online Tools for Developers & Creators | U2Tool",
-      "seo_description": "Browse 500+ browser-based tools for JSON, images, text, security, charts, SEO, and more. No signup, fast results, and local processing where possible."
+      "seo_title": "500+ Free Online Tools, Converters & Generators | U2Tool",
+      "seo_description": "Browse 500+ browser-based tools and converters for JSON, images, text, security, charts, SEO, and more. No signup, fast results, and local processing where possible."
     }
   },
   "ranking_seo": {
@@ -2058,8 +2058,8 @@
     "jwt-decoder": {
       "name": "JWT Decoder",
       "description": "Decode and inspect JWT tokens. View header, payload, and signature.",
-      "seo_title": "Free JWT Decoder Online - Inspect Header and Payload",
-      "seo_description": "Decode JWT headers and payloads, inspect claims and expiry, and view the signature segment without verification. Free browser tool for auth debugging.",
+      "seo_title": "Free JWT Decoder for Tokens Online - Inspect Header and Payload",
+      "seo_description": "Decode JWT token headers and payloads, inspect claims and expiry, and view the signature segment without verification. Free browser tool for auth debugging.",
       "detailed_description": "The JWT Decoder helps developers inspect the visible parts of a JSON Web Token without setting up a local script. Paste a token into the input field and the page decodes the Base64URL header and payload, then displays the header, payload, raw signature segment, and claim table in a readable layout. It is useful for debugging authentication flows, checking whether expected claims such as sub, role, iat, or exp are present, and converting Unix-style expiration values into human-readable dates. The page is a decoder and inspection aid, not an authenticity checker: it does not prove that a token is trustworthy. Use it to understand token contents quickly, then check signatures and authorization rules in your application or security tooling.",
       "usage_steps": [
         "Paste a JWT string into the 'Token Input' field; the tool automatically separates header, payload, and signature segments.",
@@ -22099,8 +22099,8 @@
     "jwt-decoder": {
       "name": "JWT Decoder",
       "description": "Decode and inspect JWT tokens. View header, payload, and signature.",
-      "seo_title": "Free JWT Decoder Online - Inspect Header and Payload",
-      "seo_description": "Decode JWT headers and payloads, inspect claims and expiry, and view the signature segment without verification. Free browser tool for auth debugging.",
+      "seo_title": "Free JWT Decoder for Tokens Online - Inspect Header and Payload",
+      "seo_description": "Decode JWT token headers and payloads, inspect claims and expiry, and view the signature segment without verification. Free browser tool for auth debugging.",
       "enterToken": "Please enter a JWT token",
       "invalidFormat": "Invalid JWT format",
       "invalidToken": "Invalid JWT token",

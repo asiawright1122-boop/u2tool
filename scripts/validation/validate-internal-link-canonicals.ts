@@ -1,4 +1,9 @@
-const BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
+const FETCH_BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
+const CANONICAL_BASE_URL = (
+  process.env.CANONICAL_BASE_URL ||
+  process.env.PUBLIC_SITE_URL ||
+  'https://www.u2tool.com'
+).replace(/\/+$/, '');
 const MAX_LINKS = Number(process.env.INTERNAL_LINK_AUDIT_MAX_LINKS || 500);
 
 const seedPaths = [
@@ -87,8 +92,9 @@ function normalizeInternalHref(rawHref: string, sourceUrl: string): string | nul
   }
 
   const parsed = new URL(href, sourceUrl);
-  const base = new URL(BASE_URL);
-  if (parsed.hostname !== base.hostname) {
+  const fetchBase = new URL(FETCH_BASE_URL);
+  const canonicalBase = new URL(CANONICAL_BASE_URL);
+  if (parsed.hostname !== fetchBase.hostname && parsed.hostname !== canonicalBase.hostname) {
     return null;
   }
 
@@ -97,11 +103,14 @@ function normalizeInternalHref(rawHref: string, sourceUrl: string): string | nul
   }
 
   parsed.hash = '';
+  parsed.protocol = canonicalBase.protocol;
+  parsed.hostname = canonicalBase.hostname;
+  parsed.port = canonicalBase.port;
   return parsed.toString();
 }
 
 function extractInternalLinks(html: string, sourcePath: string): string[] {
-  const sourceUrl = `${BASE_URL}${sourcePath}`;
+  const sourceUrl = `${FETCH_BASE_URL}${sourcePath}`;
   const hrefs = Array.from(html.matchAll(/<a\b[^>]*\bhref=(["'])(.*?)\1/gi))
     .map((match) => normalizeInternalHref(match[2], sourceUrl))
     .filter((href): href is string => Boolean(href));
@@ -120,8 +129,17 @@ function expectedCanonical(url: string): string {
   return parsed.toString();
 }
 
+function toFetchUrl(canonicalUrl: string): string {
+  const url = new URL(canonicalUrl);
+  const fetchBase = new URL(FETCH_BASE_URL);
+  url.protocol = fetchBase.protocol;
+  url.hostname = fetchBase.hostname;
+  url.port = fetchBase.port;
+  return url.toString();
+}
+
 async function fetchSeedLinks(sourcePath: string): Promise<string[]> {
-  const response = await fetchWithRetry(`${BASE_URL}${sourcePath}`, { redirect: 'follow' });
+  const response = await fetchWithRetry(`${FETCH_BASE_URL}${sourcePath}`, { redirect: 'follow' });
   assert(response.status === 200, `${sourcePath}: expected seed page HTTP 200, got ${response.status}`);
   assert((response.headers.get('content-type') || '').includes('text/html'), `${sourcePath}: seed page is not HTML`);
 
@@ -141,7 +159,8 @@ async function validateInternalLink(sourcePath: string, href: string): Promise<L
     });
   }
 
-  const headResponse = await fetchWithRetry(href, { method: 'HEAD', redirect: 'manual' });
+  const fetchHref = toFetchUrl(href);
+  const headResponse = await fetchWithRetry(fetchHref, { method: 'HEAD', redirect: 'manual' });
   if (headResponse.status >= 300 && headResponse.status < 400) {
     findings.push({
       sourcePath,
@@ -165,7 +184,7 @@ async function validateInternalLink(sourcePath: string, href: string): Promise<L
     return findings;
   }
 
-  const getResponse = await fetchWithRetry(href, { redirect: 'manual' });
+  const getResponse = await fetchWithRetry(fetchHref, { redirect: 'manual' });
   if (getResponse.status >= 300 && getResponse.status < 400) {
     findings.push({
       sourcePath,
@@ -225,12 +244,12 @@ async function main(): Promise<void> {
     for (const finding of findings.slice(0, 50)) {
       console.log(`FAIL ${finding.sourcePath} -> ${finding.href}: ${finding.reason}`);
     }
-    console.log(`\n${findings.length} internal link canonical findings found. BASE_URL=${BASE_URL}; checked=${pairs.length}`);
+    console.log(`\n${findings.length} internal link canonical findings found. FETCH_BASE_URL=${FETCH_BASE_URL}; CANONICAL_BASE_URL=${CANONICAL_BASE_URL}; checked=${pairs.length}`);
     process.exitCode = 1;
     return;
   }
 
-  console.log(`\nAll internal link canonical checks passed. BASE_URL=${BASE_URL}; checked=${pairs.length}`);
+  console.log(`\nAll internal link canonical checks passed. FETCH_BASE_URL=${FETCH_BASE_URL}; CANONICAL_BASE_URL=${CANONICAL_BASE_URL}; checked=${pairs.length}`);
 }
 
 main().catch((error) => {
