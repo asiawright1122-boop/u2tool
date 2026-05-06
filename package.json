@@ -60,11 +60,7 @@
     "validate:sitemap": "node scripts/validate-sitemap-fix.js"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.0",
-    "@astrojs/cloudflare": "^12.0.0",
-    "@astrojs/svelte": "^7.0.0",
-    "astro": "^5.8.0",
-    "dompurify": "^3.3.1",
+    "dompurify": "^3.4.2",
     "echarts": "^6.0.0",
     "echarts-liquidfill": "^3.1.0",
     "echarts-wordcloud": "^2.1.0",
@@ -75,7 +71,7 @@
     "html2canvas": "^1.4.1",
     "html2pdf.js": "^0.14.0",
     "js-yaml": "^4.1.1",
-    "jspdf": "^4.2.0",
+    "jspdf": "^4.2.1",
     "jszip": "^3.10.1",
     "lucide-svelte": "^0.575.0",
     "mammoth": "^1.11.0",
@@ -85,17 +81,21 @@
     "pdfjs-dist": "^5.4.624",
     "pinyin-pro": "^3.28.1",
     "qrcode": "^1.5.4",
-    "svelte": "^5.0.0",
+    "svelte": "^5.55.5",
     "typescript": "^5.7.0",
-    "uuid": "^13.0.0",
-    "xlsx": "^0.18.5",
+    "uuid": "^13.0.2",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "@astrojs/cloudflare": "^13.3.1",
+    "@astrojs/svelte": "^8.1.0",
     "@tailwindcss/vite": "^4.1.0",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^25.3.5",
     "@types/qrcode": "^1.5.6",
+    "astro": "^6.2.2",
     "depcheck": "^1.4.7",
     "fast-check": "^4.6.0",
     "fs-extra": "^11.3.4",
@@ -103,8 +103,9 @@
     "ignore": "^7.0.5",
     "puppeteer": "^24.38.0",
     "tailwindcss": "^4.1.0",
-    "tsx": "^4.20.6",
     "ts-morph": "^27.0.2",
-    "vitest": "^4.0.18"
+    "tsx": "^4.20.6",
+    "vitest": "^4.0.18",
+    "wrangler": "^4.88.0"
   }
 }

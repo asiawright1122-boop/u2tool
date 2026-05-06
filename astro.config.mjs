@@ -1,9 +1,14 @@
 import { cp, mkdir, rm } from 'node:fs/promises';
+import { EventEmitter } from 'node:events';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 import svelte from '@astrojs/svelte';
 import tailwindcss from '@tailwindcss/vite';
+
+// Svelte's Vite plugin attaches watchers for several config/module files during
+// check/build. Keep Node's leak detector useful without warning on that expected fan-out.
+EventEmitter.defaultMaxListeners = Math.max(EventEmitter.defaultMaxListeners, 30);
 
 const messageSourceDir = new URL('./src/messages/', import.meta.url);
 
