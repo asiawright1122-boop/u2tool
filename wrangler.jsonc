@@ -25,6 +25,12 @@
   "observability": {
     "enabled": true
   },
+  // KV namespace named "SESSION" is auto-detected by @astrojs/cloudflare and
+  // wired as the storage driver for Astro 6's Sessions API (Astro.session).
+  // App code does not yet read/write sessions, but the binding is required
+  // for the adapter to enable the API at all. Removing it would disable
+  // Astro.session for the whole site. Keep until a deliberate decision is
+  // made about whether to ship session-backed features.
   "kv_namespaces": [
     {
       "binding": "SESSION",
