@@ -62,8 +62,11 @@
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Create SVG blob
-    const svgBlob = new Blob([svgCode], { type: 'image/svg+xml;charset=utf-8' });
+    const safeSvgCode = sanitizeSvg(svgCode);
+    if (!safeSvgCode.trim()) return;
+
+    // Create the image from the same sanitized SVG used by the preview.
+    const svgBlob = new Blob([safeSvgCode], { type: 'image/svg+xml;charset=utf-8' });
     const url = URL.createObjectURL(svgBlob);
 
     const img = new Image();

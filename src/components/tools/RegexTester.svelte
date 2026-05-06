@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { escapeHtmlAttribute } from '@/lib/sanitize';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -57,14 +59,19 @@
   });
 
   let highlightedText = $derived.by(() => {
-    if (!pattern || error || matches.length === 0) return testString;
-    
-    try {
-      const regex = new RegExp(pattern, flags);
-      return testString.replace(regex, (match) => `<mark class="bg-yellow-500/50 text-white">${match}</mark>`);
-    } catch {
-      return testString;
+    if (!testString) return '';
+    if (!pattern || error || matches.length === 0) return escapeHtmlAttribute(testString);
+
+    let cursor = 0;
+    let html = '';
+    for (const match of matches) {
+      html += escapeHtmlAttribute(testString.slice(cursor, match.index));
+      html += `<mark class="bg-yellow-500/50 text-white">${escapeHtmlAttribute(match.match)}</mark>`;
+      cursor = match.index + match.match.length;
     }
+    html += escapeHtmlAttribute(testString.slice(cursor));
+
+    return html;
   });
 
   // Functions

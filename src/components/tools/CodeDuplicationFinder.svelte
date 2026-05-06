@@ -46,6 +46,10 @@
 
   function loadExample() { return code = EXAMPLE_CODE; }
 
+  function formatOccurrences(occurrences: DuplicateBlock['occurrences']) {
+    return occurrences.map((occurrence) => `${occurrence.start}-${occurrence.end}`).join(', ');
+  }
+
 </script>
 
 
@@ -101,9 +105,7 @@
                       {dup.lines.length} {t('lines')} × {dup.occurrences.length} {t('occurrences')}
                     </span>
                     <span class="text-xs text-orange-600 dark:text-orange-400">
-                      {t('linesLabel')}: {#each dup.occurrences as o}
-`${o.start}-${o.end}`).join(', '
-{/each}
+                      {t('linesLabel')}: {formatOccurrences(dup.occurrences)}
                     </span>
                   </div>
                   <pre class="p-3 bg-white dark:bg-gray-900 rounded text-xs font-mono text-gray-800 dark:text-gray-200 overflow-x-auto">

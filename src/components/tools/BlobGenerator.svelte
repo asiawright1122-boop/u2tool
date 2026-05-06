@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { normalizeSvgColor } from '@/lib/sanitize';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -72,10 +74,11 @@
   }
 
   // Functions
-  const svgCode = `<svg viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg">
-  <path d="${path}" fill="${color}" />
-</svg>`;
-  const cssCode = `clip-path: path('${path}');`;
+  let safeColor = $derived(normalizeSvgColor(color, '#6366f1'));
+  let svgCode = $derived.by(() => `<svg viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg">
+  <path d="${path}" fill="${safeColor}" />
+</svg>`);
+  let cssCode = $derived.by(() => `clip-path: path('${path}');`);
   async function handleCopySvg() {
     await navigator.clipboard.writeText(svgCode);
     copied = true;
@@ -98,7 +101,7 @@
       <!-- Preview -->
       <div class="flex justify-center p-8 bg-gray-100 dark:bg-gray-800 rounded-lg">
         <svg viewBox={`0 0 ${size} ${size}`} width={size} height={size}>
-          <path d={path} fill={color}></path>
+          <path d={path} fill={safeColor}></path>
         </svg>
       </div>
 

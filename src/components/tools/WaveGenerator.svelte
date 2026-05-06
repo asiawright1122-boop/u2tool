@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { normalizeSvgColor } from '@/lib/sanitize';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -36,10 +38,12 @@
 
   let copied = $state(false);
 
+  let safeColor = $derived(normalizeSvgColor(color, '#6366f1'));
+
   let svgCode = $derived.by(() => {
     const paths = Array.from({ length: layers }, (_, i) => {
       let opacity = 1 - (i * 0.2);
-      return `  <path d="${generateWavePath(i)}" fill="${color}" fill-opacity="${opacity}" />`;
+      return `  <path d="${generateWavePath(i)}" fill="${safeColor}" fill-opacity="${opacity}" />`;
     }).join('\n');
 
     return `<svg viewBox="0 0 1440 ${height}" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">

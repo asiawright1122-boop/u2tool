@@ -40,7 +40,7 @@
 
 </script>
 
-{#snippet StatCard(label, value, percent)}
+{#snippet StatCard(label: string, value: number, percent: string)}
 <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
       <div class="text-2xl font-bold text-gray-900 dark:text-white">{value}</div>
       <div class="text-sm text-gray-600 dark:text-gray-300">{label}</div>
@@ -63,13 +63,13 @@
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {@render StatCard(t('caseCounter.total'), stats.total, undefined /* missing: percent */)}
-        {@render StatCard(t('caseCounter.letters'), stats.letters, undefined /* missing: percent */)}
+        {@render StatCard(t('caseCounter.total'), stats.total, '')}
+        {@render StatCard(t('caseCounter.letters'), stats.letters, '')}
         {@render StatCard(t('caseCounter.uppercase'), stats.uppercase, stats.uppercasePercent)}
         {@render StatCard(t('caseCounter.lowercase'), stats.lowercase, stats.lowercasePercent)}
-        {@render StatCard(t('caseCounter.digits'), stats.digits, undefined /* missing: percent */)}
-        {@render StatCard(t('caseCounter.spaces'), stats.spaces, undefined /* missing: percent */)}
-        {@render StatCard(t('caseCounter.special'), stats.special, undefined /* missing: percent */)}
+        {@render StatCard(t('caseCounter.digits'), stats.digits, '')}
+        {@render StatCard(t('caseCounter.spaces'), stats.spaces, '')}
+        {@render StatCard(t('caseCounter.special'), stats.special, '')}
       </div>
 
       {#if stats.letters > 0}

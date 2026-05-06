@@ -31,7 +31,7 @@
 
   let copied = $state(false);
 
-  let timerRef = $state(null);  onDestroy(() => {
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
 
@@ -41,7 +41,8 @@
       output = '';
       return;
     }
-    output = convertSqlToMongo(input);
+    const conversion = convertSqlToMongo(input) as { query?: string } | string | null;
+    output = typeof conversion === 'string' ? conversion : conversion?.query || '';
   }
   async function copyOutput() {
     await navigator.clipboard.writeText(output);

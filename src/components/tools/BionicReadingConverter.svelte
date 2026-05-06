@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { escapeHtmlAttribute } from '@/lib/sanitize';
 
   interface Props {
     locale: string;
@@ -32,16 +33,19 @@
     const words = text.split(/(\s+)/);
     return words.map(word => {
       if (/^\s+$/.test(word)) return word;
-      if (word.length <= 1) return `<b>${word}</b>`;
+      if (word.length <= 1) return `<b>${escapeHtmlAttribute(word)}</b>`;
       
       const boldLength = Math.ceil(word.length * (fixationStrength / 100));
-      const boldPart = word.slice(0, boldLength);
-      const normalPart = word.slice(boldLength);
+      const boldPart = escapeHtmlAttribute(word.slice(0, boldLength));
+      const normalPart = escapeHtmlAttribute(word.slice(boldLength));
       
       return `<b>${boldPart}</b>${normalPart}`;
     }).join('');
   }
-  const bionicHtml = convertToBionic(input);
+  let bionicHtml = $derived(convertToBionic(input));
+  let previewHtml = $derived(
+    bionicHtml || `<span class="text-gray-400">${escapeHtmlAttribute(t('previewPlaceholder'))}</span>`
+  );
   function copyHtml() {
     navigator.clipboard.writeText(bionicHtml);
     copied = true;
@@ -104,9 +108,7 @@
           </div>
         </div>
         <div
-          class="prose dark:prose-invert max-w-none text-lg leading-relaxed"
-          dangerouslySetInnerHTML={{ __html: bionicHtml || `<span class="text-gray-400">${t('previewPlaceholder')}</span>` }}
-        />
+          class="prose dark:prose-invert max-w-none text-lg leading-relaxed">{@html previewHtml}</div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">

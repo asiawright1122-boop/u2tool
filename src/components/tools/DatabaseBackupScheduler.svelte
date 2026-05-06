@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { K, generateBackupScript, generateCrontab } from '@/lib/tool-stubs';
+  import { generateBackupScript, generateCrontab } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -25,18 +25,18 @@
   }
 
   // Types
-  interface BackupConfig {
+interface BackupConfig {
   database: 'postgresql' | 'mysql' | 'mongodb';
   host: string;
   dbName: string;
   username: string;
-  schedule: string;
+  schedule: 'hourly' | 'daily' | 'weekly' | 'monthly';
   retention: number;
   compression: boolean;
   outputPath: string;
 }
 
-  let config = $state({
+  let config = $state<BackupConfig>({
     database: 'postgresql',
     host: 'localhost',
     dbName: 'mydb',
@@ -47,9 +47,9 @@
     outputPath: '/var/backups/database',
   });
 
-  let copied = $state(null);
+  let copied = $state<string | null>(null);
 
-  function updateConfig(key: K, value: BackupConfig[K]) {
+  function updateConfig<Key extends keyof BackupConfig>(key: Key, value: BackupConfig[Key]) {
     config = ({ ...config, [key]: value });
   }
 
@@ -70,7 +70,7 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div>
           <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('database')}</label>
-          <select value={config.database} onchange={(e) => updateConfig('database', e.target.value as BackupConfig['database'])}
+          <select value={config.database} onchange={(e) => updateConfig('database', (e.currentTarget as HTMLSelectElement).value as BackupConfig['database'])}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm">
             <option value="postgresql">PostgreSQL</option>
             <option value="mysql">MySQL</option>
@@ -93,6 +93,16 @@
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
         </div>
         <div>
+          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1" for="db-schedule">{t('schedule')}</label>
+          <select value={config.schedule} onchange={(e) => updateConfig('schedule', (e.currentTarget as HTMLSelectElement).value as BackupConfig['schedule'])}
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm">
+            <option value="hourly">{t('hourly')}</option>
+            <option value="daily">{t('daily')}</option>
+            <option value="weekly">{t('weekly')}</option>
+            <option value="monthly">{t('monthly')}</option>
+          </select>
+        </div>
+        <div>
           <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1" for="db-retention">{t('retention')}</label>
           <input type="number" id="db-retention" name="retention" bind:value={config.retention} min={1}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
@@ -105,7 +115,7 @@
       </div>
 
       <label class="flex items-center gap-2">
-        <input type="checkbox" id="db-compression" name="compression" checked={config.compression} onchange={(e) => updateConfig('compression', e.target.checked)} class="rounded" />
+        <input type="checkbox" id="db-compression" name="compression" checked={config.compression} onchange={(e) => updateConfig('compression', (e.currentTarget as HTMLInputElement).checked)} class="rounded" />
         <span class="text-sm text-gray-700 dark:text-gray-300">{t('enableCompression')}</span>
       </label>
 

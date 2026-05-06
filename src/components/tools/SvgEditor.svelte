@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { sanitizeSvg } from '@/lib/sanitize';
 
   interface Props {
     locale: string;
@@ -37,19 +38,33 @@
 
   let fileInputRef = $state(null);  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
+    clearPreviewUrl();
   });
 
   // Functions
   const defaultSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <circle cx="50" cy="50" r="40" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>
 </svg>`;
+  function clearPreviewUrl() {
+    if (previewUrl) {
+      URL.revokeObjectURL(previewUrl);
+    }
+    previewUrl = '';
+  }
   function updatePreview(code: string) {
     try {
-      const blob = new Blob([code], { type: 'image/svg+xml' });
+      const safeCode = sanitizeSvg(code);
+      if (!safeCode.trim()) {
+        clearPreviewUrl();
+        return;
+      }
+
+      const blob = new Blob([safeCode], { type: 'image/svg+xml' });
       const url = URL.createObjectURL(blob);
+      clearPreviewUrl();
       previewUrl = url;
     } catch {
-      previewUrl = '';
+      clearPreviewUrl();
     }
   }
   function handleCodeChange(code: string) {
@@ -107,7 +122,10 @@
     timerRef = setTimeout(() => copied = false, 2000);
   }
   function downloadSvg() {
-    const blob = new Blob([svgCode], { type: 'image/svg+xml' });
+    const safeSvgCode = sanitizeSvg(svgCode);
+    if (!safeSvgCode.trim()) return;
+
+    const blob = new Blob([safeSvgCode], { type: 'image/svg+xml' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;

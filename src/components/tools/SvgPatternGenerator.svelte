@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { normalizeSvgColor } from '@/lib/sanitize';
 
   interface Props {
     locale: string;
@@ -41,9 +42,12 @@
 
   let timerRef = $state(null);
 
+  let safeColor = $derived(normalizeSvgColor(color, '#3b82f6'));
+  let safeBgColor = $derived(normalizeSvgColor(bgColor, '#ffffff'));
+
   let generatePattern = $derived.by(() => {
     const s = size;
-    const c = color;
+    const c = safeColor;
     const o = opacity;
 
     switch (patternType) {
@@ -69,7 +73,7 @@
 
   let svgCode = $derived.by(() => {
     return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}">
-  <rect width="100%" height="100%" fill="${bgColor}"/>
+  <rect width="100%" height="100%" fill="${safeBgColor}"/>
   ${generatePattern}
 </svg>`;
   });

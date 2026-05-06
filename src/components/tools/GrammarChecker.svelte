@@ -24,6 +24,7 @@
 
   // Imports
   import { checkGrammar, type GrammarError } from '@/lib/grammar-rules';
+  import { escapeHtmlAttribute } from '@/lib/sanitize';
 
   let input = $state('');
 
@@ -34,19 +35,20 @@
 
   // Functions
   function getHighlightedText() {
-    if (!input || errors.length === 0) return input;
-    
-    let result = input;
-    // 从后往前替换，避免位置偏移
-    const sortedErrors = [...errors].sort((a, b) => b.position.start - a.position.start);
-    
+    if (!input) return '';
+    if (errors.length === 0) return escapeHtmlAttribute(input);
+
+    let cursor = 0;
+    let result = '';
+    const sortedErrors = [...errors].sort((a, b) => a.position.start - b.position.start);
+
     sortedErrors.forEach(error => {
-      const before = result.slice(0, error.position.start);
-      const match = result.slice(error.position.start, error.position.end);
-      const after = result.slice(error.position.end);
-      result = `${before}<mark class="bg-red-200 dark:bg-red-800">${match}</mark>${after}`;
+      result += escapeHtmlAttribute(input.slice(cursor, error.position.start));
+      result += `<mark class="bg-red-200 dark:bg-red-800">${escapeHtmlAttribute(input.slice(error.position.start, error.position.end))}</mark>`;
+      cursor = error.position.end;
     });
-    
+
+    result += escapeHtmlAttribute(input.slice(cursor));
     return result;
   }
   function applyFix(error: GrammarError) {
@@ -95,7 +97,7 @@
         <div>
           <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('preview')}</label>
           <div 
-            class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white overflow-auto">{@html getHighlightedText() || t('noErrors')}</div>
+            class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white overflow-auto">{@html getHighlightedText() || escapeHtmlAttribute(t('noErrors'))}</div>
         </div>
       </div>
 

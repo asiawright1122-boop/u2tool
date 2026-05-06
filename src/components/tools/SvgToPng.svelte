@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { onDestroy } from 'svelte';
+  import { sanitizeSvg } from '@/lib/sanitize';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -27,7 +30,29 @@
 
   let canvasRef = $state(null);
 
+  let previewObjectUrl = '';
+
+  onDestroy(() => {
+    clearPreviewUrl();
+  });
+
   // Functions
+  function clearPreviewUrl() {
+    if (previewObjectUrl) {
+      URL.revokeObjectURL(previewObjectUrl);
+      previewObjectUrl = '';
+    }
+    previewUrl = '';
+  }
+  function createSvgObjectUrl(svg: string): string {
+    const safeSvg = sanitizeSvg(svg);
+    if (!safeSvg.trim()) {
+      return '';
+    }
+
+    const blob = new Blob([safeSvg], { type: 'image/svg+xml' });
+    return URL.createObjectURL(blob);
+  }
   function handleFileUpload(e: Event) {
     const file = e.target.files?.[0];
     if (file) {
@@ -48,9 +73,12 @@
     }
   }
   function generatePreview(svg: string) {
-    const blob = new Blob([svg], { type: 'image/svg+xml' });
-    const url = URL.createObjectURL(blob);
-    previewUrl = url;
+    const url = createSvgObjectUrl(svg);
+    clearPreviewUrl();
+    if (url) {
+      previewObjectUrl = url;
+      previewUrl = url;
+    }
   }
   function convertToPng() {
     if (!svgContent) return;
@@ -62,8 +90,8 @@
     if (!ctx) return;
 
     const img = new Image();
-    const blob = new Blob([svgContent], { type: 'image/svg+xml' });
-    const url = URL.createObjectURL(blob);
+    const url = createSvgObjectUrl(svgContent);
+    if (!url) return;
 
     img.onload = () => {
       const width = img.width * scale;
@@ -90,6 +118,10 @@
         }
       }, 'image/png');
 
+      URL.revokeObjectURL(url);
+    };
+
+    img.onerror = () => {
       URL.revokeObjectURL(url);
     };
 

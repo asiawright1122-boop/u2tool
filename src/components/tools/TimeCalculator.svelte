@@ -28,30 +28,31 @@
   // Types
   type Operation = 'add' | 'subtract' | 'difference';
   interface TimeValue {
-  hours: number;
-  minutes: number;
-  seconds: number;
-}
+    hours: number;
+    minutes: number;
+    seconds: number;
+    negative?: boolean;
+  }
 
-  let time1 = $state({ hours: 0, minutes: 0, seconds: 0 });
+  let time1 = $state<TimeValue>({ hours: 0, minutes: 0, seconds: 0 });
 
-  let time2 = $state({ hours: 0, minutes: 0, seconds: 0 });
+  let time2 = $state<TimeValue>({ hours: 0, minutes: 0, seconds: 0 });
 
-  let operation = $state('add');
+  let operation = $state<Operation>('add');
 
-  let result = $state(null);
+  let result = $state<TimeValue | null>(null);
 
-  let format = $state('24h');
+  let format = $state<'24h' | '12h'>('24h');
 
   let copied = $state(false);
 
-  let timerRef = $state(null);
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);
 
   function handleCalculate() {
     const seconds1 = toSeconds(time1);
     const seconds2 = toSeconds(time2);
     
-    let resultSeconds: number;
+    let resultSeconds = 0;
     
     switch (operation) {
       case 'add':
@@ -65,7 +66,7 @@
         break;
     }
     
-    result = fromSeconds(resultSeconds);
+    result = fromSeconds(resultSeconds) as TimeValue;
   }  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
@@ -88,7 +89,7 @@
 
 </script>
 
-{#snippet TimeInput(value, onChange, label)}
+{#snippet TimeInput(value: TimeValue, onChange: (value: TimeValue) => void, label: string)}
 <div class="space-y-2">
       <label class="tool-label">
         {label}
@@ -101,7 +102,7 @@
             min="0"
             max="999"
             value={value.hours}
-            onchange={(e) => onChange({ ...value, hours: parseInt(e.target.value) || 0 })}
+            onchange={(e) => onChange({ ...value, hours: Math.max(0, parseInt(e.currentTarget.value, 10) || 0) })}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
           />
         </div>
@@ -113,7 +114,7 @@
             min="0"
             max="59"
             value={value.minutes}
-            onchange={(e) => onChange({ ...value, minutes: Math.min(59, parseInt(e.target.value) || 0) })}
+            onchange={(e) => onChange({ ...value, minutes: Math.min(59, Math.max(0, parseInt(e.currentTarget.value, 10) || 0)) })}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
           />
         </div>
@@ -125,7 +126,7 @@
             min="0"
             max="59"
             value={value.seconds}
-            onchange={(e) => onChange({ ...value, seconds: Math.min(59, parseInt(e.target.value) || 0) })}
+            onchange={(e) => onChange({ ...value, seconds: Math.min(59, Math.max(0, parseInt(e.currentTarget.value, 10) || 0)) })}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
           />
         </div>
@@ -137,8 +138,8 @@
     <div class="space-y-6">
       <!-- Time Inputs -->
       <div class="grid md:grid-cols-2 gap-6">
-        {@render TimeInput(time1, undefined /* missing: onChange */, t('time1'))}
-        {@render TimeInput(time2, undefined /* missing: onChange */, t('time2'))}
+        {@render TimeInput(time1, (value) => (time1 = value), t('time1'))}
+        {@render TimeInput(time2, (value) => (time2 = value), t('time2'))}
       </div>
 
       <!-- Operation Selection -->

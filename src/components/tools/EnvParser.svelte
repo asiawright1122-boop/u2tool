@@ -42,15 +42,15 @@
 
   let input = $state('');
 
-  let parseResult = $state({ entries: [], errors: [] });
+  let parseResult = $state<ParseResult>({ entries: [], errors: [] });
 
-  let outputFormat = $state('env');
+  let outputFormat = $state<'env' | 'json' | 'yaml'>('env');
 
   let showValues = $state(false);
 
   let copied = $state(false);
 
-  let timerRef = $state(null);
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);
 
   function handleParse() {
     if (!input.trim()) {
@@ -91,7 +91,14 @@
     input = '';
     parseResult = { entries: [], errors: [] };
   }
-  const output = getOutput();
+  function isSensitiveKey(key: string): boolean {
+    return /(secret|token|password|passwd|api[_-]?key|private|credential)/i.test(key);
+  }
+  function maskValue(value: string): string {
+    if (!value) return '';
+    return value.length <= 4 ? '****' : `${value.slice(0, 2)}${'*'.repeat(Math.min(value.length - 2, 10))}`;
+  }
+  const output = $derived(getOutput());
 
 </script>
 

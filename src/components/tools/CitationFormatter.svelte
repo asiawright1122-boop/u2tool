@@ -1,5 +1,6 @@
 <script lang="ts">
   import { K, formatCitation } from '@/lib/tool-stubs';
+  import { escapeHtmlAttribute } from '@/lib/sanitize';
 
   interface Props {
     locale: string;
@@ -61,6 +62,9 @@
   let copied = $state(false);
 
   let formattedCitation = $derived(formatCitation(citation, style));
+  let formattedCitationHtml = $derived(
+    escapeHtmlAttribute(formattedCitation).replace(/\*([^*]+)\*/g, '<em>$1</em>')
+  );
 
   function updateCitation(key: K, value: Citation[K]) {
     citation = ({ ...citation, [key]: value });
@@ -236,7 +240,7 @@
           </button>
         </div>
         <div class="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
-          <p class="text-sm text-gray-800 dark:text-gray-200">{@html formattedCitation.replace(/\*([^*]+)\*/g, '<em>$1</em>')}</p>
+          <p class="text-sm text-gray-800 dark:text-gray-200">{@html formattedCitationHtml}</p>
         </div>
       </div>
     </div>

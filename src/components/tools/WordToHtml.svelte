@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { escapeHtmlAttribute, sanitizeHtml } from '@/lib/sanitize';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -42,7 +44,7 @@
       const mammoth = await import('mammoth');
       const arrayBuffer = await file.arrayBuffer();
       const result = await mammoth.default.convertToHtml({ arrayBuffer });
-      html = result.value;
+      html = sanitizeHtml(result.value, { forceBody: true });
     } catch {
       error = t('errorParsing');
     } finally {
@@ -69,7 +71,7 @@
   function downloadHtml() {
     const fullHtml = `<!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><title>${fileName}</title></head>
+<head><meta charset="UTF-8"><title>${escapeHtmlAttribute(fileName)}</title></head>
 <body>${html}</body>
 </html>`;
     const blob = new Blob([fullHtml], { type: 'text/html' });

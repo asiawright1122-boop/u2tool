@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { K, generateCommitMessage } from '@/lib/tool-stubs';
+  import { COMMIT_TYPE_KEYS, generateCommitMessage } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -47,7 +47,7 @@
 
   let copied = $state(false);
 
-  function updateConfig(key: K, value: CommitConfig[K]) {
+  function updateConfig<Key extends keyof CommitConfig>(key: Key, value: CommitConfig[Key]) {
     config = ({ ...config, [key]: value });
   }
 

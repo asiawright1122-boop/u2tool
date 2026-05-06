@@ -17,6 +17,7 @@
 
   // Imports
   import { marked } from 'marked';
+  import { sanitizeMarkdownHtml } from '@/lib/sanitize';
 
   let markdown = $state(`# Welcome to Markdown Editor
 
@@ -49,7 +50,8 @@ function hello() {
 
   function getHtml() {
     try {
-      return marked(markdown, { breaks: true, gfm: true });
+      const rawHtml = marked.parse(markdown, { breaks: true, gfm: true }) as string;
+      return sanitizeMarkdownHtml(rawHtml);
     } catch {
       return '<p>Error parsing markdown</p>';
     }

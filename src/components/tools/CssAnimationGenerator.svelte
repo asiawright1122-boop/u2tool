@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
-  import { allKeyframes, presetKeyframes, useEffect } from '@/lib/tool-stubs';
+  import { allKeyframes, presetKeyframes } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -18,7 +18,9 @@
     return typeof value === 'string' ? value : `MISSING: tools.${key}`;
   }
 
-  let animation = $state('bounce');
+  type AnimationName = keyof typeof presetKeyframes;
+
+  let animation = $state<AnimationName>('bounce');
 
   let duration = $state('1');
 
@@ -28,7 +30,9 @@
 
   let copied = $state(false);
 
-  let timerRef = $state(null);
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);
+
+  const presetKeys = Object.keys(presetKeyframes) as AnimationName[];
 
   $effect(() => {
     const styleId = 'css-animation-keyframes';
@@ -38,12 +42,6 @@
       style.textContent = allKeyframes;
       document.head.appendChild(style);
     }
-    useEffect(() => {
-      return () => {
-        if (timerRef) clearTimeout(timerRef);
-      };
-    }, []);
-
     return () => {
       const style = document.getElementById(styleId);
       if (style) style.remove();

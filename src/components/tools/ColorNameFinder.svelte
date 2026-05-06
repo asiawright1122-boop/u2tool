@@ -19,7 +19,7 @@
 
   let color = $state('#4682B4');
 
-  let results = $state([]);
+  let results = $state<Array<{ name: string; hex: string; distance: number }>>([]);
 
   // Functions
   function handleFind() {

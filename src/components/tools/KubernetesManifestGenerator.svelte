@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { K, generateDeployment, generateHPA, generateIngress, generateNamespace, generateService } from '@/lib/tool-stubs';
+  import { generateDeployment, generateHPA, generateIngress, generateNamespace, generateService } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -48,7 +48,7 @@
   hpaTargetCPU: number;
 }
 
-  let config = $state({
+  let config = $state<K8sConfig>({
     name: 'my-app',
     namespace: 'default',
     image: 'nginx:latest',
@@ -68,7 +68,7 @@
 
   let copied = $state(false);
 
-  function updateConfig(key: K, value: K8sConfig[K]) {
+  function updateConfig<Key extends keyof K8sConfig>(key: Key, value: K8sConfig[Key]) {
     config = ({ ...config, [key]: value });
   }
 

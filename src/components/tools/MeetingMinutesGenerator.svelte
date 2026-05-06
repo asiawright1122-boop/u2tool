@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { K, generateMinutes } from '@/lib/tool-stubs';
+  import { generateMinutes } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -45,7 +45,7 @@
   nextMeeting: string;
 }
 
-  let data = $state({
+  let data = $state<MeetingData>({
     title: 'Weekly Team Standup',
     date: new Date().toISOString().split('T')[0],
     time: '10:00 AM',
@@ -59,11 +59,11 @@
     nextMeeting: '',
   });
 
-  let format = $state('markdown');
+  let format = $state<'markdown' | 'text' | 'html'>('markdown');
 
   let copied = $state(false);
 
-  function updateData(key: K, value: MeetingData[K]) {
+  function updateData<Key extends keyof MeetingData>(key: Key, value: MeetingData[Key]) {
     data = ({ ...data, [key]: value });
   }
 

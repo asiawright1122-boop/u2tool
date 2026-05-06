@@ -61,6 +61,13 @@
     topic = '';
     result = null;
   }
+  const PLATFORM_LIMITS: Record<string, number> = {
+    instagram: 30,
+    twitter: 10,
+    tiktok: 5,
+    linkedin: 5,
+    all: 30,
+  };
   const platforms = [
     { id: 'instagram', name: 'Instagram', limit: 30 },
     { id: 'twitter', name: 'Twitter/X', limit: 10 },

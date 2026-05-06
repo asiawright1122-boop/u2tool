@@ -51,6 +51,15 @@
     setTimeout(() => copied = false, 2000);
   }
 
+  function getCommitColor(message: string) {
+    if (/^feat\b/i.test(message)) return 'bg-green-500';
+    if (/^fix\b/i.test(message)) return 'bg-red-500';
+    if (/^docs\b/i.test(message)) return 'bg-amber-500';
+    if (/^refactor\b/i.test(message)) return 'bg-yellow-500';
+    if (/^merge\b/i.test(message)) return 'bg-slate-500';
+    return 'bg-gray-500';
+  }
+
 </script>
 
 

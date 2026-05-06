@@ -64,6 +64,8 @@ function hello() {
     if (timerRef) clearTimeout(timerRef);
   });
 
+  import { sanitizeMarkdownHtml } from '@/lib/sanitize';
+
   // Functions
   function parseMarkdown(md: string): string {
     let html = md
@@ -104,71 +106,92 @@ function hello() {
 
     return html;
   }
+  function renderMarkdownHtml(md: string): string {
+    return sanitizeMarkdownHtml(parseMarkdown(md));
+  }
+  const allowedPageSizes = new Set(['a4', 'letter', 'legal']);
+  const allowedFontSizes = new Set([10, 11, 12, 14, 16]);
+
+  function getPrintTitle(): string {
+    return title.trim() || 'Document';
+  }
+  function getPrintPageSize(): string {
+    return allowedPageSizes.has(pageSize) ? pageSize : 'a4';
+  }
+  function getPrintFontSize(): number {
+    return allowedFontSizes.has(fontSize) ? fontSize : 12;
+  }
+  function getPrintStyles(): string {
+    return `
+      @page { size: ${getPrintPageSize()}; margin: 2cm; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: ${getPrintFontSize()}pt;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 { font-size: 2em; border-bottom: 2px solid #333; padding-bottom: 0.3em; }
+      h2 { font-size: 1.5em; border-bottom: 1px solid #ddd; padding-bottom: 0.3em; }
+      h3 { font-size: 1.25em; }
+      code {
+        background: #f4f4f4;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: 'Courier New', monospace;
+      }
+      pre {
+        background: #f4f4f4;
+        padding: 16px;
+        border-radius: 6px;
+        overflow-x: auto;
+      }
+      pre code { background: none; padding: 0; }
+      blockquote {
+        border-left: 4px solid #ddd;
+        margin: 0;
+        padding-left: 16px;
+        color: #666;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 16px 0;
+      }
+      th, td {
+        border: 1px solid #ddd;
+        padding: 8px 12px;
+        text-align: left;
+      }
+      th { background: #f4f4f4; }
+      hr { border: none; border-top: 1px solid #ddd; margin: 24px 0; }
+      ul { padding-left: 24px; }
+      li { margin: 4px 0; }
+    `;
+  }
   async function generatePdf() {
     const printWindow = window.open('', '_blank');
     if (!printWindow) return;
 
-    const htmlContent = parseMarkdown(markdown);
-    
-    printWindow.document.write(`
-      <!DOCTYPE html>
-      <html>
-      <head>
-        <title>${title}</title>
-        <style>
-          @page { size: ${pageSize}; margin: 2cm; }
-          body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            font-size: ${fontSize}pt;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-          }
-          h1 { font-size: 2em; border-bottom: 2px solid #333; padding-bottom: 0.3em; }
-          h2 { font-size: 1.5em; border-bottom: 1px solid #ddd; padding-bottom: 0.3em; }
-          h3 { font-size: 1.25em; }
-          code { 
-            background: #f4f4f4; 
-            padding: 2px 6px; 
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-          }
-          pre { 
-            background: #f4f4f4; 
-            padding: 16px; 
-            border-radius: 6px;
-            overflow-x: auto;
-          }
-          pre code { background: none; padding: 0; }
-          blockquote { 
-            border-left: 4px solid #ddd; 
-            margin: 0; 
-            padding-left: 16px;
-            color: #666;
-          }
-          table { 
-            border-collapse: collapse; 
-            width: 100%;
-            margin: 16px 0;
-          }
-          th, td { 
-            border: 1px solid #ddd; 
-            padding: 8px 12px;
-            text-align: left;
-          }
-          th { background: #f4f4f4; }
-          hr { border: none; border-top: 1px solid #ddd; margin: 24px 0; }
-          ul { padding-left: 24px; }
-          li { margin: 4px 0; }
-        </style>
-      </head>
-      <body>${htmlContent}</body>
-      </html>
-    `);
-    
-    printWindow.document.close();
+    const htmlContent = renderMarkdownHtml(markdown);
+    const printDocument = printWindow.document;
+    const head = printDocument.head ?? printDocument.documentElement.appendChild(printDocument.createElement('head'));
+    const body = printDocument.body ?? printDocument.documentElement.appendChild(printDocument.createElement('body'));
+
+    head.replaceChildren();
+    body.replaceChildren();
+    printDocument.documentElement.lang = locale;
+    printDocument.title = getPrintTitle();
+
+    const meta = printDocument.createElement('meta');
+    meta.setAttribute('charset', 'utf-8');
+    const style = printDocument.createElement('style');
+    style.textContent = getPrintStyles();
+    head.append(meta, style);
+
+    body.innerHTML = htmlContent;
     printWindow.focus();
     
     setTimeout(() => {
@@ -240,7 +263,7 @@ function hello() {
           <div
             bind:this={previewRef}
             class="w-full h-96 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 overflow-auto prose prose-sm dark:prose-invert max-w-none"
-            style="font-size: {fontSize}px">{@html parseMarkdown(markdown)}</div>
+            style="font-size: {fontSize}px">{@html renderMarkdownHtml(markdown)}</div>
         </div>
       </div>
 

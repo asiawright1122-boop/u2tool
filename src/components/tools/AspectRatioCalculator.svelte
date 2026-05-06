@@ -30,7 +30,16 @@
 
   let copied = $state(false);
 
-  let timerRef = $state(null);
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);
+
+  const commonRatioKeys = [
+    { name: '1:1', w: 1, h: 1, desc: 'Square' },
+    { name: '4:3', w: 4, h: 3, desc: 'Classic' },
+    { name: '3:2', w: 3, h: 2, desc: 'Photo' },
+    { name: '16:9', w: 16, h: 9, desc: 'Widescreen' },
+    { name: '21:9', w: 21, h: 9, desc: 'Cinema' },
+    { name: '9:16', w: 9, h: 16, desc: 'Vertical' },
+  ];
 
   $effect(() => {
     if (lockRatio && width > 0 && height > 0) {
@@ -41,7 +50,7 @@
   });
 
   // Functions
-  const ratio = calculateAspectRatio(width, height);
+  const ratio = $derived(calculateAspectRatio(width, height));
   function handleWidthChange(value: number) {
     width = value;
     if (lockRatio && height > 0) {
@@ -128,7 +137,7 @@
               class="px-3 py-2 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 rounded-lg text-sm text-gray-900 dark:text-white"
             >
               <span class="font-medium">{r.name}</span>
-              <span class="text-gray-600 dark:text-gray-300 ml-1 text-xs">({t(`aspect.${r.descKey}`)})</span>
+              <span class="text-gray-600 dark:text-gray-300 ml-1 text-xs">({r.desc})</span>
             </button>
 {/each}
         </div>

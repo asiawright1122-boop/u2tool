@@ -40,13 +40,13 @@
 
   let includeCreate = $state(true);
 
-  let dialect = $state('mysql');
+  let dialect = $state<JsonToSqlOptions['dialect']>('mysql');
 
-  let error = $state(null);
+  let error = $state<string | null>(null);
 
   let copied = $state(false);
 
-  let timerRef = $state(null);
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);
 
   function handleConvert() {
     error = null;

@@ -28,7 +28,7 @@
   // Types
   type CodeType = 'html' | 'css' | 'js';
 
-  let codeType = $state('html');
+  let codeType = $state<CodeType>('html');
 
   let input = $state('');
 
@@ -36,7 +36,7 @@
 
   let copied = $state(false);
 
-  let timerRef = $state(null);  onDestroy(() => {
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
 
@@ -67,11 +67,11 @@
     if (timerRef) clearTimeout(timerRef);
     timerRef = setTimeout(() => copied = false, 2000);
   }
-  const stats = {
+  const stats = $derived.by(() => ({
     original: input.length,
     minified: output.length,
     saved: input.length > 0 ? Math.round((1 - output.length / input.length) * 100) : 0,
-  };
+  }));
 
 </script>
 

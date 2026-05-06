@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { K, SAMPLE_CONTENT, buildOutlineTree, extractHeadings, generateOutline } from '@/lib/tool-stubs';
+  import { SAMPLE_CONTENT, buildOutlineTree, extractHeadings, generateOutline } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -61,7 +61,7 @@
     setTimeout(() => copied = false, 2000);
   }
 
-  function updateOption(key: K, value: OutlineOptions[K]) {
+  function updateOption<Key extends keyof OutlineOptions>(key: Key, value: OutlineOptions[Key]) {
     options = ({ ...options, [key]: value });
   }
 

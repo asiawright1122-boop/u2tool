@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { generateChangelog } from '@/lib/tool-stubs';
+  import { CHANGE_TYPES, generateChangelog } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;

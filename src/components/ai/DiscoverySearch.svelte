@@ -2,7 +2,7 @@
   import { getLocalizedPath } from '@/lib/i18n';
   import type { Locale } from '@/lib/i18n';
   import { buildDiscoveryEvent, sendDiscoveryEvents } from '@/lib/ai-discovery/telemetry';
-  import { createTranslator } from '@/lib/translations';
+  import { createTranslator } from '@/lib/translator';
   import * as Icon from 'lucide-svelte';
 
   interface DiscoveryMatch {
@@ -137,7 +137,7 @@
     isLoading = true;
     updateQueryInUrl(trimmed);
     try {
-      const response = await fetch(`/api/ai-discovery/search?locale=${encodeURIComponent(locale)}&q=${encodeURIComponent(trimmed)}`);
+      const response = await fetch(`/api/ai-discovery/search/?locale=${encodeURIComponent(locale)}&q=${encodeURIComponent(trimmed)}`);
       const payload = await response.json() as DiscoveryResponse | { error?: string; message?: string };
       if (!response.ok) {
         const errPayload = payload as { error?: string; message?: string };

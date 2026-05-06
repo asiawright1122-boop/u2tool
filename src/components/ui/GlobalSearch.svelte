@@ -8,7 +8,7 @@
   import { getLocalizedPath } from '@/lib/i18n';
   import type { Locale } from '@/lib/i18n';
   import { buildAiDiscoveryLink } from '@/lib/ai-discovery/query-link';
-  import { createTranslator } from '@/lib/translations';
+  import { createTranslator } from '@/lib/translator';
   import * as Icon from 'lucide-svelte';
 
   interface Props {
@@ -59,7 +59,7 @@
     
     isLoading = true;
     try {
-      const response = await fetch(`/${locale}/tools-index.json`);
+      const response = await fetch(`/${locale}/tools-index.json/`);
       if (response.ok) {
         toolsIndex = await response.json();
         // Auto-open results after loading if there's a query

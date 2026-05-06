@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
-  import { useEffect } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -59,7 +58,7 @@
 
   let funnelAlign = $state('center');
 
-  let timerRef = $state(null);
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);
 
   let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
@@ -171,11 +170,6 @@
     const prevValue = data[index - 1].value;
     const currentValue = data[index].value;
     if (prevValue === 0) return '0%';
-    useEffect(() => {
-      return () => {
-        if (timerRef) clearTimeout(timerRef);
-      };
-    }, []);
 
     return ((currentValue / prevValue) * 100).toFixed(1) + '%';
   }

@@ -68,8 +68,8 @@
     svg = svg.replace(/(\d+)\.0+([^\d])/g, '$1$2');
     svg = svg.replace(/0+(\.\d+)/g, '$1');
 
-    // Trim
-    svg = svg.trim();
+    // Trim and sanitize before exposing the optimized SVG for copy/preview.
+    svg = sanitizeSvg(svg.trim());
 
     const optimizedSize = new Blob([svg]).size;
     const savedPercent = originalSize > 0 ? Math.round((1 - optimizedSize / originalSize) * 100) : 0;

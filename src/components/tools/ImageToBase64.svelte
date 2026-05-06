@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
-  import { useEffect } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -29,19 +28,19 @@
 
   let preview = $state('');
 
-  let fileInfo = $state(null);
+  let fileInfo = $state<{ name: string; size: string; type: string } | null>(null);
 
   let copied = $state(false);
 
-  let timerRef = $state(null);
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);
 
-  let fileInputRef = $state(null);  onDestroy(() => {
+  let fileInputRef = $state<HTMLInputElement | null>(null);  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
 
   // Functions
   function handleFileChange(e: Event) {
-    const file = e.target.files?.[0];
+    const file = (e.currentTarget as HTMLInputElement).files?.[0];
     if (!file) return;
 
     const reader = new FileReader();
@@ -60,12 +59,6 @@
   function formatFileSize(bytes: number) {
     if (bytes < 1024) return bytes + ' B';
     if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + ' KB';
-    useEffect(() => {
-      return () => {
-        if (timerRef) clearTimeout(timerRef);
-      };
-    }, []);
-
     return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
   }
   async function copyDataUrl() {
@@ -157,7 +150,7 @@
             <label class="block text-sm font-medium mb-2">{ti('htmlImageTag')}</label>
             <textarea
               class="tool-textarea text-xs"
-              value={`<img src={'${base64}'} alt="image"></textarea>`}
+              value={`<img src="${base64}" alt="image">`}
               readOnly
               rows={2}
             />

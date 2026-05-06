@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { K, SAMPLE_INPUT, generateHtmlToc, generateToc, parseTocInput } from '@/lib/tool-stubs';
+  import { SAMPLE_INPUT, generateHtmlToc, generateToc, parseTocInput } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -63,7 +63,7 @@
     setTimeout(() => copied = false, 2000);
   }
 
-  function updateOption(key: K, value: TocOptions[K]) {
+  function updateOption<Key extends keyof TocOptions>(key: Key, value: TocOptions[Key]) {
     options = ({ ...options, [key]: value });
   }
 

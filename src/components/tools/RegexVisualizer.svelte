@@ -1,5 +1,6 @@
 <script lang="ts">
   import { generateSvg, tokenizeRegex } from '@/lib/tool-stubs';
+  import { sanitizeSvg } from '@/lib/sanitize';
 
   interface Props {
     locale: string;
@@ -100,7 +101,10 @@
   }
   function exportSvg() {
     if (!svg) return;
-    const blob = new Blob([svg], { type: 'image/svg+xml' });
+    const safeSvg = sanitizeSvg(svg);
+    if (!safeSvg.trim()) return;
+
+    const blob = new Blob([safeSvg], { type: 'image/svg+xml' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -115,8 +119,11 @@
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     
+    const safeSvg = sanitizeSvg(svg);
+    if (!safeSvg.trim()) return;
+
     const img = new Image();
-    const svgBlob = new Blob([svg], { type: 'image/svg+xml' });
+    const svgBlob = new Blob([safeSvg], { type: 'image/svg+xml' });
     const url = URL.createObjectURL(svgBlob);
     
     img.onload = () => {
@@ -225,7 +232,7 @@
           </div>
           <div 
             bind:this={svgRef}
-            class="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-x-auto">{@html svg}</div>
+            class="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-x-auto">{@html sanitizeSvg(svg)}</div>
         </div>
 {/if}
 
