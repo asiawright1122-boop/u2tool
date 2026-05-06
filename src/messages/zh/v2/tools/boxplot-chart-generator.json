@@ -45,7 +45,7 @@
     "tip4": "切换为水平",
     "tip5": "导出为PNG或SVG"
   },
-  "detailed_description": "本工具基于D3.js和Canvas技术实现，提供专业的箱线图可视化功能。支持输入JSON/CSV格式的数值型数据集，自动计算四分位间距（IQR）、上下须限值及异常值标记。通过Web Worker进行分位数计算，支持Tukey和SAS两种分位方法切换。用户可自定义箱体颜色渐变、须线样式及离群点标记形状，实时渲染的SVG图表支持CSS动画交互。开发者可直接获取生成的Voronoi图路径数据用于二次开发，教育工作者可通过动态分位数计算演示统计学概念。导出的PNG支持300dpi印刷级分辨率，SVG文件包含完整的metadata注释。",
+  "detailed_description": "本工具基于ECharts-based browser chart rendering和Canvas技术实现，提供专业的箱线图可视化功能。支持输入JSON/CSV格式的数值型数据集，自动计算四分位间距（IQR）、上下须限值及异常值标记。通过Web Worker进行分位数计算，支持Tukey和SAS两种分位方法切换。用户可自定义箱体颜色渐变、须线样式及离群点标记形状，实时渲染的SVG图表支持CSS动画交互。开发者可直接获取生成的Voronoi图路径数据用于二次开发，教育工作者可通过动态分位数计算演示统计学概念。导出的PNG支持300dpi印刷级分辨率，SVG文件包含完整的metadata注释。",
   "usage_steps": [
     "在数据输入区粘贴符合RFC 4180标准的CSV数据，首行为字段名，后续每列对应一个箱体",
     "通过'分位计算'下拉菜单选择Tukey法或SAS Method 15",

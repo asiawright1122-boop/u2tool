@@ -22,7 +22,7 @@
     "前端开发：将设计稿SVG批量转为1x/2x/3x多倍率PNG，适配Retina显示屏",
     "印刷制版：转换SVG为300dpi CMYK色彩模式的TIFF文件，满足专业印刷需求",
     "游戏开发：自动化处理SVG格式的角色动画帧，输出WebP格式的透明背景序列图",
-    "数据可视化：将D3.js生成的动态SVG图表转为JPEG格式，嵌入PDF报告时保持清晰度"
+    "数据可视化：将ECharts-based browser chart rendering生成的动态SVG图表转为JPEG格式，嵌入PDF报告时保持清晰度"
   ],
   "faqs": [
     {

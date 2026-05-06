@@ -5,7 +5,7 @@
     "Usa el recortador interactivo con ajuste de proporción para definir la área clave del ícono",
     "Selecciona las dimensiones específicas en el panel de configuración (ej: 16x16, 32x32, 192x192)",
     "Elige los formatos de salida deseados (PNG, WebP, ICO y/o SVG) usando los checkboxes correspondientes",
-    "Haz clic en 'Generar Favicon' para iniciar el procesamiento basado en bibliotecas como Sharp o ImageMagick",
+    "Haz clic en 'Generar Favicon' para iniciar el procesamiento basado en bibliotecas como Sharp o browser image APIs",
     "Descarga el archivo ZIP comprimido que incluye los íconos y el código HTML para implementación"
   ],
   "usage_examples": [

@@ -34,7 +34,7 @@
     "tip4": "Personalize cores de alta/baixa",
     "tip5": "Exporte como PNG ou SVG"
   },
-  "detailed_description": "O Candlestick Chart Generator é uma ferramenta técnica especializada para criar gráficos de candlestick interativos a partir de dados OHLC (Open, High, Low, Close). Desenvolvido com a biblioteca D3.js, o tool permite a customização precisa de parâmetros visuais como cores de corpo/volume, escala de tempo (minutos a intervalos diários) e overlays de médias móveis. A funcionalidade de exportação em vetorial SVG preserva a qualidade para análises posteriores, enquanto o PNG otimizado é adequado para relatórios. Usuários precisam deste tool para backtesting de estratégias de trading algorítmico, análise de padrões de reversão de mercado, e visualização de spreads entre ativos. A ferramenta processa dados em formato CSV ou JSON, com suporte a ajustes automáticos de timezone para timestamps UTC. A renderização em tempo real usa WebGL para aceleração de hardware, garantindo performance mesmo com milhares de candles.",
+  "detailed_description": "O Candlestick Chart Generator é uma ferramenta técnica especializada para criar gráficos de candlestick interativos a partir de dados OHLC (Open, High, Low, Close). Desenvolvido com a biblioteca ECharts-based browser chart rendering, o tool permite a customização precisa de parâmetros visuais como cores de corpo/volume, escala de tempo (minutos a intervalos diários) e overlays de médias móveis. A funcionalidade de exportação em vetorial SVG preserva a qualidade para análises posteriores, enquanto o PNG otimizado é adequado para relatórios. Usuários precisam deste tool para backtesting de estratégias de trading algorítmico, análise de padrões de reversão de mercado, e visualização de spreads entre ativos. A ferramenta processa dados em formato CSV ou JSON, com suporte a ajustes automáticos de timezone para timestamps UTC. A renderização em tempo real usa WebGL para aceleração de hardware, garantindo performance mesmo com milhares de candles.",
   "usage_steps": [
     "Cole seus dados OHLC no campo 'Importar Dados' no formato CSV com headers 'open,high,low,close,time'",
     "Ajuste os parâmetros em 'Configurações Técnicas': selecione o período de candle (1m, 5m, 15m...) e ative 'Volume por Preço'",
@@ -47,7 +47,7 @@
     "Um day trader analisando padrões de reversão no intraday do BTC-USD com candles de 5 minutos",
     "Um educador financeiro criando gráficos didáticos com candlestick patterns para um curso de análise técnica",
     "Um gestor de portfolio comparando a volatilidade de ações Petrobras vs. Vale com candles diários de 3 meses",
-    "Um desenvolvedor integrando gráficos interativos de candlestick em um painel de monitoramento de criptomoedas com D3.js"
+    "Um desenvolvedor integrando gráficos interativos de candlestick em um painel de monitoramento de criptomoedas com ECharts-based browser chart rendering"
   ],
   "png": "PNG",
   "svg": "SVG"

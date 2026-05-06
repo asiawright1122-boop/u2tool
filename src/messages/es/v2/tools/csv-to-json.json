@@ -10,7 +10,7 @@
   ],
   "usage_examples": [
     "Un desarrollador backend migrando datos de un sistema ERP legacy a una API RESTful, necesitando transformar archivos CSV con delimitadores semicolon (;) a objetos JSON anidados.",
-    "Un analista de datos preparando registros de ventas para visualización en D3.js, convirtiendo CSV con fechas en formato DD/MM/YYYY a JSON con timestamps UNIX.",
+    "Un analista de datos preparando registros de ventas para visualización en ECharts-based browser chart rendering, convirtiendo CSV con fechas en formato DD/MM/YYYY a JSON con timestamps UNIX.",
     "Un ingeniero IoT procesando datos de sensores que envían información en CSV plano sin encabezados, generando un JSON con claves numéricas para su ingestión en Kafka.",
     "Un científico de datos automatizando la preparación de datasets académicos, convirtiendo archivos CSV con campos multilínea a JSON válido manteniendo la coherencia de tipos."
   ]
