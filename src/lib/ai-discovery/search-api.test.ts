@@ -18,7 +18,7 @@ describe('ai discovery search api', () => {
       runDiscoverySearch,
     }));
 
-    const { GET } = await import('./search');
+    const { GET } = await import('../../pages/api/ai-discovery/search');
     const response = await GET({
       request: new Request('https://example.com/api/ai-discovery/search?locale=en&q=json'),
     } as never);
@@ -47,9 +47,10 @@ describe('ai discovery search api', () => {
       runDiscoverySearch,
     }));
 
-    const { GET } = await import('./search');
+    const { GET } = await import('../../pages/api/ai-discovery/search');
+    const requestUrl = 'https://example.com/api/ai-discovery/search?locale=en&q=json';
     const response = await GET({
-      request: new Request('https://example.com/api/ai-discovery/search?locale=en&q=json'),
+      request: new Request(requestUrl),
     } as never);
 
     expect(response.status).toBe(200);
@@ -57,6 +58,7 @@ describe('ai discovery search api', () => {
       locale: 'en',
       query: 'json',
       maxResults: 8,
+      assetBaseUrl: new URL(requestUrl),
     });
   });
 });

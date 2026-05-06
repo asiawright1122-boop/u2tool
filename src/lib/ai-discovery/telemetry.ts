@@ -1,4 +1,5 @@
 import { isAiDiscoveryEnabled } from './feature-flag';
+import { isValidLocale } from '@/lib/i18n';
 import type { DiscoveryDecision } from './types';
 
 export type DiscoveryEventName = 'query_submitted' | 'result_clicked' | 'fallback_viewed';
@@ -22,8 +23,20 @@ interface BuildDiscoveryEventInput {
   confidence?: number;
 }
 
+const MAX_QUERY_LENGTH = 300;
+const MAX_TOOL_SLUG_LENGTH = 128;
+
 function isValidEventName(name: string): name is DiscoveryEventName {
   return name === 'query_submitted' || name === 'result_clicked' || name === 'fallback_viewed';
+}
+
+function isValidDecision(value: unknown): value is DiscoveryDecision {
+  return value === 'direct' || value === 'suggest' || value === 'fallback';
+}
+
+function isValidTimestamp(value: string): boolean {
+  const parsed = Date.parse(value);
+  return Number.isFinite(parsed);
 }
 
 export function isValidDiscoveryEvent(event: unknown): event is DiscoveryTelemetryEvent {
@@ -35,15 +48,43 @@ export function isValidDiscoveryEvent(event: unknown): event is DiscoveryTelemet
   if (typeof obj.name !== 'string' || !isValidEventName(obj.name)) {
     return false;
   }
-  if (typeof obj.locale !== 'string' || obj.locale.trim().length === 0) {
+  if (typeof obj.locale !== 'string' || !isValidLocale(obj.locale.trim())) {
     return false;
   }
-  if (typeof obj.timestamp !== 'string' || obj.timestamp.trim().length === 0) {
+  if (typeof obj.timestamp !== 'string' || !isValidTimestamp(obj.timestamp.trim())) {
     return false;
   }
 
   if (obj.name === 'result_clicked' && typeof obj.toolSlug !== 'string') {
     return false;
+  }
+  if (obj.query !== undefined) {
+    if (typeof obj.query !== 'string' || obj.query.trim().length > MAX_QUERY_LENGTH) {
+      return false;
+    }
+  }
+  if (obj.toolSlug !== undefined) {
+    if (
+      typeof obj.toolSlug !== 'string' ||
+      obj.toolSlug.trim().length === 0 ||
+      obj.toolSlug.trim().length > MAX_TOOL_SLUG_LENGTH ||
+      !/^[a-z0-9-]+$/i.test(obj.toolSlug.trim())
+    ) {
+      return false;
+    }
+  }
+  if (obj.action !== undefined && !isValidDecision(obj.action)) {
+    return false;
+  }
+  if (obj.confidence !== undefined) {
+    if (
+      typeof obj.confidence !== 'number' ||
+      !Number.isFinite(obj.confidence) ||
+      obj.confidence < 0 ||
+      obj.confidence > 1
+    ) {
+      return false;
+    }
   }
 
   return true;
@@ -53,7 +94,8 @@ export function buildDiscoveryEvent(input: BuildDiscoveryEventInput): DiscoveryT
   if (!isValidEventName(input.name)) {
     return null;
   }
-  if (!input.locale || input.locale.trim().length === 0) {
+  const locale = input.locale.trim();
+  if (!isValidLocale(locale)) {
     return null;
   }
   if (input.name === 'result_clicked' && (!input.toolSlug || input.toolSlug.trim().length === 0)) {
@@ -62,12 +104,13 @@ export function buildDiscoveryEvent(input: BuildDiscoveryEventInput): DiscoveryT
 
   const event: DiscoveryTelemetryEvent = {
     name: input.name,
-    locale: input.locale.trim(),
+    locale,
     timestamp: new Date().toISOString(),
   };
 
-  if (input.query && input.query.trim().length > 0) {
-    event.query = input.query.trim();
+  const query = input.query?.trim();
+  if (query && query.length > 0) {
+    event.query = query.slice(0, MAX_QUERY_LENGTH);
   }
   if (input.toolSlug && input.toolSlug.trim().length > 0) {
     event.toolSlug = input.toolSlug.trim();
@@ -75,16 +118,16 @@ export function buildDiscoveryEvent(input: BuildDiscoveryEventInput): DiscoveryT
   if (input.action) {
     event.action = input.action;
   }
-  if (typeof input.confidence === 'number') {
-    event.confidence = input.confidence;
+  if (typeof input.confidence === 'number' && Number.isFinite(input.confidence)) {
+    event.confidence = Math.max(0, Math.min(1, input.confidence));
   }
 
-  return event;
+  return isValidDiscoveryEvent(event) ? event : null;
 }
 
 export async function sendDiscoveryEvents(
   events: DiscoveryTelemetryEvent[],
-  endpoint = '/api/ai-discovery/events'
+  endpoint = '/api/ai-discovery/events/'
 ): Promise<boolean> {
   if (!isAiDiscoveryEnabled()) {
     return false;

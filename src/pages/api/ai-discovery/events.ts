@@ -5,20 +5,27 @@ import { isValidDiscoveryEvent } from '@/lib/ai-discovery/telemetry';
 export const prerender = false;
 
 const MAX_EVENTS_PER_REQUEST = 20;
+const MAX_REQUEST_BYTES = 16 * 1024;
+
+function jsonResponse(
+  payload: Record<string, unknown>,
+  status: number,
+  headers?: Record<string, string>
+): Response {
+  return new Response(JSON.stringify(payload), {
+    status,
+    headers: { 'Content-Type': 'application/json', ...headers },
+  });
+}
 
 export const GET: APIRoute = async () => {
-  return new Response(
-    JSON.stringify({
+  return jsonResponse(
+    {
       error: 'METHOD_NOT_ALLOWED',
       message: 'Use POST to submit telemetry events',
-    }),
-    {
-      status: 405,
-      headers: {
-        Allow: 'POST',
-        'Content-Type': 'application/json',
-      },
-    }
+    },
+    405,
+    { Allow: 'POST' }
   );
 };
 
@@ -27,46 +34,58 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response(null, { status: 204 });
   }
 
+  const contentLength = Number.parseInt(request.headers.get('content-length') ?? '0', 10);
+  if (Number.isFinite(contentLength) && contentLength > MAX_REQUEST_BYTES) {
+    return jsonResponse(
+      {
+        error: 'PAYLOAD_TOO_LARGE',
+        message: `Telemetry payload exceeds ${MAX_REQUEST_BYTES} bytes`,
+      },
+      413
+    );
+  }
+
   let payload: unknown;
   try {
-    payload = await request.json();
+    const rawBody = await request.text();
+    if (new TextEncoder().encode(rawBody).byteLength > MAX_REQUEST_BYTES) {
+      return jsonResponse(
+        {
+          error: 'PAYLOAD_TOO_LARGE',
+          message: `Telemetry payload exceeds ${MAX_REQUEST_BYTES} bytes`,
+        },
+        413
+      );
+    }
+    payload = JSON.parse(rawBody);
   } catch {
-    return new Response(
-      JSON.stringify({
+    return jsonResponse(
+      {
         error: 'INVALID_JSON',
         message: 'Expected JSON payload',
-      }),
-      {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' },
-      }
+      },
+      400
     );
   }
 
   if (!payload || typeof payload !== 'object') {
-    return new Response(
-      JSON.stringify({
+    return jsonResponse(
+      {
         error: 'INVALID_PAYLOAD',
         message: 'Expected object payload',
-      }),
-      {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' },
-      }
+      },
+      400
     );
   }
 
   const eventsRaw = (payload as { events?: unknown }).events;
   if (!Array.isArray(eventsRaw) || eventsRaw.length === 0) {
-    return new Response(
-      JSON.stringify({
+    return jsonResponse(
+      {
         error: 'INVALID_EVENTS',
         message: 'events must be a non-empty array',
-      }),
-      {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' },
-      }
+      },
+      400
     );
   }
 
@@ -74,15 +93,12 @@ export const POST: APIRoute = async ({ request }) => {
   const validEvents = trimmed.filter((item) => isValidDiscoveryEvent(item));
 
   if (validEvents.length === 0) {
-    return new Response(
-      JSON.stringify({
+    return jsonResponse(
+      {
         error: 'NO_VALID_EVENTS',
         message: 'No valid telemetry events found',
-      }),
-      {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' },
-      }
+      },
+      400
     );
   }
 
@@ -91,13 +107,10 @@ export const POST: APIRoute = async ({ request }) => {
     accepted: validEvents.length,
   });
 
-  return new Response(
-    JSON.stringify({
-      accepted: validEvents.length,
-    }),
+  return jsonResponse(
     {
-      status: 202,
-      headers: { 'Content-Type': 'application/json' },
-    }
+      accepted: validEvents.length,
+    },
+    202
   );
 };
