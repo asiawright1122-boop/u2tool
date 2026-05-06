@@ -41,16 +41,23 @@ if [ -n "$JS_TS_FILES" ]; then
   CONSOLE_LOG_FILES=""
   DEBUGGER_FILES=""
   DEBUGGER_PATTERN='(^|[[:space:];{}()])debugger([[:space:]]*;)?[[:space:]]*$'
-  
+
   for file in $JS_TS_FILES; do
     if [ -f "$file" ]; then
-      # 检查 console.log (排除注释)
-      if grep -n 'console\.log' "$file" | grep -v '//' | grep -v '/\*' > /dev/null; then
+      # 只看本次 diff 新增的行（避免对历史 string literal 中的代码示例反复误报）
+      ADDED_LINES=$(git diff --cached -- "$file" | grep -E '^\+[^+]' || true)
+
+      # 检查 console.log：排除注释行和明显的 string literal 行
+      # （行内有反引号、或被单/双引号包裹的 console.log 视为字符串内示例）
+      if echo "$ADDED_LINES" | grep -E 'console\.log' \
+          | grep -vE '^\+\s*(//|\*|/\*)' \
+          | grep -vE '`|"\\?[^"]*console\\.log[^"]*"|'\''[^'\'']*console\\.log[^'\'']*'\''' \
+          > /dev/null 2>&1; then
         CONSOLE_LOG_FILES="$CONSOLE_LOG_FILES\n  $file"
       fi
-      
-      # 只拦截真正的 debugger 语句，避免误伤 jwt-debugger / JwtDebugger 之类的标识符或字符串
-      if grep -nE "$DEBUGGER_PATTERN" "$file" | grep -v '//' | grep -v '/\*' > /dev/null; then
+
+      # 只拦截真正的 debugger 语句（diff 新增行），避免误伤 jwt-debugger / JwtDebugger 等标识符
+      if echo "$ADDED_LINES" | grep -nE "$DEBUGGER_PATTERN" | grep -v '//' | grep -v '/\*' > /dev/null; then
         DEBUGGER_FILES="$DEBUGGER_FILES\n  $file"
       fi
     fi
