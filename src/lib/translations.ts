@@ -14,6 +14,7 @@
  */
 
 import type { Locale } from './i18n';
+export { createTranslator } from './translator';
 
 type MessagesRecord = Record<string, unknown>;
 const toolMessageAliases: Record<string, string> = {
@@ -434,44 +435,4 @@ export async function loadToolPageMessages(
 
   toolPageMessagesCache.set(cacheKey, mergedMessages);
   return mergedMessages;
-}
-
-/**
- * Create a translator function from a flat translations record.
- * Supports dot-notation keys for nested access.
- *
- * Usage:
- *   const t = createTranslator(translations);
- *   t('name')                    // => "JSON Formatter"
- *   t('usage_steps.0')           // => "Step 1: ..."
- *   t('nonexistent', 'Default')  // => "Default"
- *   t('nonexistent')             // => "MISSING: nonexistent"
- */
-export function createTranslator(translations: Record<string, unknown>) {
-  return function t(key: string, fallback?: string): string {
-    const keys = key.split('.');
-    let value: unknown = translations;
-
-    for (const k of keys) {
-      if (value === null || value === undefined || typeof value !== 'object') {
-        return fallback ?? `MISSING: ${key}`;
-      }
-      value = (value as Record<string, unknown>)[k];
-    }
-
-    if (value === undefined || value === null) {
-      return fallback ?? `MISSING: ${key}`;
-    }
-
-    if (typeof value === 'string') {
-      return value;
-    }
-
-    // For arrays or objects, return JSON string representation
-    if (Array.isArray(value)) {
-      return fallback ?? `MISSING: ${key}`;
-    }
-
-    return fallback ?? `MISSING: ${key}`;
-  };
 }

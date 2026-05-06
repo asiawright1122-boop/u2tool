@@ -14,18 +14,12 @@
  * const safeSvg = sanitizeSvg(userSvg);
  */
 
-// 尝试动态导入 DOMPurify（如果已安装）
-let DOMPurify: typeof import('dompurify') | null = null;
+import DOMPurify from 'dompurify';
 
-// 尝试加载 DOMPurify
-if (typeof window !== 'undefined') {
-    try {
-        // eslint-disable-next-line @typescript-eslint/no-require-imports
-        DOMPurify = require('dompurify');
-    } catch {
-        console.warn('DOMPurify not installed. Using basic sanitization. Run: npm install dompurify');
-    }
-}
+type DomPurifySanitizer = {
+    sanitize: (html: string, config?: Record<string, unknown>) => string;
+    isSupported?: boolean;
+};
 
 /**
  * 基础 HTML 转义（作为备选方案）
@@ -46,32 +40,164 @@ function escapeHtml(str: string): string {
  * 基础 HTML 标签白名单净化
  * 仅在 DOMPurify 不可用时使用
  */
-function basicSanitize(html: string): string {
+function isSafeUrlAttribute(value: string): boolean {
+    const trimmed = value.trim().replace(/[\u0000-\u001f\u007f\s]+/g, '');
+    if (!trimmed) {
+        return true;
+    }
+
+    return /^(?:https?:|mailto:|tel:|\/|#|data:image\/(?:png|gif|jpe?g|webp);)/i.test(trimmed);
+}
+
+function normalizeAttributeValue(value: string): string {
+    return escapeHtml(value);
+}
+
+function stripUnsafeSvgAttributeValue(
+    svg: string,
+    attributeNames: string[],
+    isSafeValue: (value: string) => boolean
+): string {
+    const pattern = attributeNames
+        .map((attributeName) => attributeName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+        .join('|');
+    const attributePattern = new RegExp(
+        "\\s(?:" + pattern + ")\\s*=\\s*(?:\"([^\"]*)\"|'([^']*)'|([^\\s\"'=<>`]+))",
+        'gi'
+    );
+
+    return svg.replace(attributePattern, (match, doubleQuoted, singleQuoted, bare) => {
+        const value = doubleQuoted ?? singleQuoted ?? bare ?? '';
+        return isSafeValue(value) ? match : '';
+    });
+}
+
+function normalizeUrlLikeValue(value: string): string {
+    return value.trim().replace(/[\u0000-\u001f\u007f\s]+/g, '');
+}
+
+function isSafeSvgReference(value: string): boolean {
+    const normalized = normalizeUrlLikeValue(value);
+    if (!normalized || normalized.startsWith('#')) {
+        return true;
+    }
+
+    if (/^(?:https?:|data:image\/(?:png|gif|jpe?g|webp);)/i.test(normalized)) {
+        return true;
+    }
+
+    return !/^[a-z][a-z0-9+.-]*:/i.test(normalized);
+}
+
+function isSafeSvgStyleAttribute(value: string): boolean {
+    if (/expression\s*\(|javascript:/i.test(value)) {
+        return false;
+    }
+
+    const urlPattern = /url\(\s*(['"]?)(.*?)\1\s*\)/gi;
+    let match: RegExpExecArray | null;
+    while ((match = urlPattern.exec(value)) !== null) {
+        if (!isSafeSvgReference(match[2] ?? '')) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+function stripUnsafeSvgActiveContent(svg: string): string {
+    let sanitized = svg
+        .replace(/<\?(?:xml-stylesheet|import|processing-instruction)\b[\s\S]*?\?>/gi, '')
+        .replace(/<(script|style|iframe|object|embed|foreignObject)\b[^>]*>[\s\S]*?<\/\1>/gi, '')
+        .replace(/<\/?(script|style|iframe|object|embed|foreignObject|link|meta)\b[^>]*\/?>/gi, '')
+        .replace(/\s+on[a-z0-9:-]+\s*=\s*(?:"[^"]*"|'[^']*'|[^\s"'=<>`]+)/gi, '');
+
+    sanitized = stripUnsafeSvgAttributeValue(
+        sanitized,
+        ['href', 'xlink:href', 'src'],
+        isSafeSvgReference
+    );
+    sanitized = stripUnsafeSvgAttributeValue(sanitized, ['style'], isSafeSvgStyleAttribute);
+
+    return sanitized.replace(/javascript:/gi, '');
+}
+
+function basicSanitize(
+    html: string,
+    options?: {
+        allowedTags?: string[];
+        allowedAttributes?: string[];
+    }
+): string {
     // 允许的标签（基础）
-    const allowedTags = [
+    const allowedTags = new Set((options?.allowedTags ?? [
         'p', 'br', 'b', 'i', 'u', 'strong', 'em', 'span', 'div',
         'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
         'ul', 'ol', 'li', 'a', 'img',
         'table', 'thead', 'tbody', 'tr', 'th', 'td',
         'blockquote', 'pre', 'code',
-    ];
+    ]).map((tag) => tag.toLowerCase()));
+    const allowedAttributes = new Set((options?.allowedAttributes ?? [
+        'href', 'src', 'alt', 'title', 'class', 'id',
+        'target', 'rel', 'width', 'height',
+        'colspan', 'rowspan',
+    ]).map((attr) => attr.toLowerCase()));
 
     // 移除脚本标签和事件处理器
     let sanitized = html
-        .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+        .replace(/<!--[\s\S]*?-->/g, '')
+        .replace(/<(script|style|iframe|object|embed)\b[^>]*>[\s\S]*?<\/\1>/gi, '')
         .replace(/javascript:/gi, '')
         .replace(/on\w+\s*=/gi, 'data-removed=');
 
     // 移除不在白名单中的标签（保留内容）
-    const tagPattern = /<\/?(\w+)[^>]*>/g;
-    sanitized = sanitized.replace(tagPattern, (match, tag) => {
-        if (allowedTags.includes(tag.toLowerCase())) {
-            return match;
+    const tagPattern = /<\/?([a-z][a-z0-9-]*)\b([^>]*)>/gi;
+    sanitized = sanitized.replace(tagPattern, (match, tag, rawAttributes = '') => {
+        const normalizedTag = String(tag).toLowerCase();
+        if (!allowedTags.has(normalizedTag)) {
+            return '';
         }
-        return '';
+
+        if (match.startsWith('</')) {
+            return `</${normalizedTag}>`;
+        }
+
+        const attributes: string[] = [];
+        const attrPattern = /([^\s=/>]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+)))?/g;
+        let attrMatch: RegExpExecArray | null;
+        while ((attrMatch = attrPattern.exec(String(rawAttributes))) !== null) {
+            const attrName = attrMatch[1].toLowerCase();
+            if (attrName.startsWith('on') || !allowedAttributes.has(attrName)) {
+                continue;
+            }
+
+            const attrValue = attrMatch[2] ?? attrMatch[3] ?? attrMatch[4] ?? '';
+            if ((attrName === 'href' || attrName === 'src') && !isSafeUrlAttribute(attrValue)) {
+                continue;
+            }
+
+            attributes.push(`${attrName}="${normalizeAttributeValue(attrValue)}"`);
+        }
+
+        return attributes.length > 0
+            ? `<${normalizedTag} ${attributes.join(' ')}>`
+            : `<${normalizedTag}>`;
     });
 
     return sanitized;
+}
+
+function getDOMPurify(): DomPurifySanitizer | null {
+    const sanitizer = DOMPurify as unknown as DomPurifySanitizer;
+    if (
+        typeof window !== 'undefined' &&
+        typeof sanitizer.sanitize === 'function' &&
+        sanitizer.isSupported !== false
+    ) {
+        return sanitizer;
+    }
+
+    return null;
 }
 
 /**
@@ -96,7 +222,8 @@ export function sanitizeHtml(
     }
 
     // 使用 DOMPurify（推荐）
-    if (DOMPurify && typeof window !== 'undefined') {
+    const sanitizer = getDOMPurify();
+    if (sanitizer) {
         const config: Record<string, unknown> = {
             ALLOWED_TAGS: options?.allowedTags,
             ALLOWED_ATTR: options?.allowedAttributes,
@@ -110,13 +237,11 @@ export function sanitizeHtml(
             }
         });
 
-        return DOMPurify.default
-            ? DOMPurify.default.sanitize(html, config)
-            : (DOMPurify as unknown as { sanitize: (html: string, config: Record<string, unknown>) => string }).sanitize(html, config);
+        return sanitizer.sanitize(html, config);
     }
 
     // 备选：使用基础净化
-    return basicSanitize(html);
+    return basicSanitize(html, options);
 }
 
 /**
@@ -133,24 +258,36 @@ export function sanitizeSvg(svg: string): string {
     }
 
     // 使用 DOMPurify（推荐）
-    if (DOMPurify && typeof window !== 'undefined') {
+    const sanitizer = getDOMPurify();
+    if (sanitizer) {
         const config = {
             USE_PROFILES: { svg: true, svgFilters: true },
             // 移除可能的脚本元素
-            FORBID_TAGS: ['script', 'style'],
+            FORBID_TAGS: ['script', 'style', 'iframe', 'object', 'embed', 'foreignObject'],
             FORBID_ATTR: ['onload', 'onerror', 'onclick', 'onmouseover'],
         };
 
-        return DOMPurify.default
-            ? DOMPurify.default.sanitize(svg, config)
-            : (DOMPurify as unknown as { sanitize: (html: string, config: Record<string, unknown>) => string }).sanitize(svg, config);
+        return stripUnsafeSvgActiveContent(sanitizer.sanitize(svg, config));
     }
 
     // 备选：基础 SVG 净化
-    return svg
-        .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-        .replace(/javascript:/gi, '')
-        .replace(/on\w+\s*=/gi, 'data-removed=');
+    return stripUnsafeSvgActiveContent(svg);
+}
+
+/**
+ * 将 SVG/CSS 颜色输入限制为不会逃逸属性上下文的安全值。
+ */
+export function normalizeSvgColor(value: string, fallback = '#000000'): string {
+    if (typeof value !== 'string') {
+        return fallback;
+    }
+
+    const color = value.trim();
+    if (/^#[0-9a-f]{3,8}$/i.test(color) || /^[a-z]+$/i.test(color)) {
+        return color;
+    }
+
+    return fallback;
 }
 
 /**
@@ -207,5 +344,5 @@ export function escapeHtmlAttribute(str: string): string {
  * @returns 是否使用 DOMPurify
  */
 export function isDOMPurifyAvailable(): boolean {
-    return DOMPurify !== null && typeof window !== 'undefined';
+    return getDOMPurify() !== null;
 }

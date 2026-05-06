@@ -23,6 +23,18 @@ const toolDetailPageSource = readFileSync(
   fileURLToPath(new URL('../pages/[locale]/tools/[slug].astro', import.meta.url)),
   'utf-8'
 );
+const homePageSource = readFileSync(
+  fileURLToPath(new URL('../pages/[locale]/index.astro', import.meta.url)),
+  'utf-8'
+);
+const toolsPageSource = readFileSync(
+  fileURLToPath(new URL('../pages/[locale]/tools.astro', import.meta.url)),
+  'utf-8'
+);
+const llmsPageSource = readFileSync(
+  fileURLToPath(new URL('../pages/llms.txt.ts', import.meta.url)),
+  'utf-8'
+);
 
 describe('translations module', () => {
   describe('createTranslator', () => {
@@ -176,6 +188,14 @@ describe('translations module', () => {
       expect(toolDetailPageSource).toContain('loadToolPageMessages');
       expect(toolDetailPageSource).not.toContain('loadBaseMessages');
       expect(toolDetailPageSource).not.toContain('loadToolMessages');
+    });
+
+    it('loads SSR translation assets from the current request origin', () => {
+      expect(homePageSource).toContain('loadBaseMessages(locale, Astro.url)');
+      expect(toolsPageSource).toContain('loadBaseMessages(locale, Astro.url)');
+      expect(toolDetailPageSource).toContain('loadToolPageMessages(locale, tool.slug, Astro.url)');
+      expect(toolDetailPageSource).toContain('loadBaseUiMessages(locale, Astro.url)');
+      expect(llmsPageSource).toContain("buildLlmsContent('en', new URL(request.url))");
     });
   });
 });

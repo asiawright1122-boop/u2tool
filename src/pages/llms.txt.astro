@@ -1,8 +1,0 @@
----
-import { buildLlmsContent } from '@/lib/llms-content';
-
-const llmsContent = await buildLlmsContent('en');
-Astro.response.headers.set('Content-Type', 'text/plain; charset=utf-8');
-Astro.response.headers.set('Cache-Control', 'public, max-age=86400');
----
-<Fragment set:html={llmsContent} />
