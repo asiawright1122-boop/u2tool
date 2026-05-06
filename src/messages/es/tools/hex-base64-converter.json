@@ -12,6 +12,6 @@
     "Codificar una clave privada SSH en formato PEM a Base64 para incluirla en un archivo de configuración Terraform",
     "Convertir un hash SHA-256 (64 caracteres hex) a Base64 para comparar huellas digitales en herramientas de análisis de malware",
     "Transformar una imagen PNG en Base64 para incrustarla directamente en un documento SVG optimizado",
-    "Decodificar un token OAuth2 en formato JWT que contiene un payload hexadecimal representando credenciales temporales"
+    "Decodificar un token authentication flows en formato JWT que contiene un payload hexadecimal representando credenciales temporales"
   ]
 }

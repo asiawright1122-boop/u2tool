@@ -9,7 +9,7 @@
     "Generieren Sie die finale package.json durch Klick auf 'Exportieren' und laden Sie die validierte JSON-Datei herunter, ergänzt um automatisch generierte .npmignore-Empfehlungen."
   ],
   "usage_examples": [
-    "Ein Entwickler erstellt eine Microservice-Architektur mit mehreren Diensten und nutzt den Generator, um einheitliche Abhängigkeitsversionen und Skriptkonventionen über alle Services zu standardisieren.",
+    "Ein Entwickler erstellt eine service-oriented application-Architektur mit mehreren Diensten und nutzt den Generator, um einheitliche Abhängigkeitsversionen und Skriptkonventionen über alle Services zu standardisieren.",
     "Ein Open-Source-Maintainer konfiguriert eine Bibliothek mit Peer-Dependencies für React 18 und generiert gleichzeitig kompatible package.json-Varianten für ESM- und CommonJS-Module.",
     "Ein DevOps-Engineer automatisiert die Einrichtung von CI/CD-kompatiblen package.json-Dateien mit spezifischen npm-Skripten für Testabläufe und Deployment-Pipelines auf GitHub Actions.",
     "Ein Anfänger erstellt seine erste Node.js-Webapplikation und wählt interaktiv notwendige Dependencies (Express, Mongoose) sowie Sicherheitskonfigurationen (z.B. audit=false für geschützte Dev-Umgebungen)."

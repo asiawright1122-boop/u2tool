@@ -9,9 +9,9 @@
     "Click individual 'Copy' buttons or use the 'Copy All' control to transfer UUIDs to clipboard in selected format."
   ],
   "usage_examples": [
-    "Generating secure API keys for a microservices architecture requiring 256-bit equivalent uniqueness guarantees across distributed nodes.",
+    "Generating secure API keys for a service-oriented applications architecture requiring 256-bit equivalent uniqueness guarantees across distributed nodes.",
     "Creating temporary database records for user verification workflows with collision-resistant primary keys in a PostgreSQL schema.",
-    "Implementing OAuth2 token generation for a SaaS platform with guaranteed uniqueness across millions of daily authentication requests.",
+    "Implementing authentication flows token generation for a SaaS platform with guaranteed uniqueness across millions of daily authentication requests.",
     "Building test datasets for blockchain transaction simulations needing globally unique operation identifiers without centralized registry."
   ]
 }

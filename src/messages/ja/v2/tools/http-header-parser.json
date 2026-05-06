@@ -9,7 +9,7 @@
     "「詳細ヘルプリンク」からヘッダーごとの具体的な仕様文書を参照します。"
   ],
   "usage_examples": [
-    "OAuth2実装時のWWW-Authenticateヘッダーのチャレンジパラメータ検証",
+    "authentication flows実装時のWWW-Authenticateヘッダーのチャレンジパラメータ検証",
     "CDN経由時のCache-Controlディレクティブの有効性確認",
     "CORSプリフライトリクエストのAccess-Control-Allow-Headers内容検証",
     "セキュリティヘッダー(X-Content-Type-Options等)のブラウザ互換性確認"

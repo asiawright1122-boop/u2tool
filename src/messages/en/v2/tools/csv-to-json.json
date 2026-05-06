@@ -10,7 +10,7 @@
   ],
   "usage_examples": [
     "A full-stack developer converts a 200MB sales report CSV into nested JSON for direct ingestion into MongoDB collections with region.country.product hierarchies",
-    "API engineer transforms OAuth2 client credentials spreadsheet into security-validated JSON configuration files for Express.js authentication middleware",
+    "API engineer transforms authentication flows client credentials spreadsheet into security-validated JSON configuration files for Express.js authentication middleware",
     "Data scientist prepares time-series sensor data from CSV to JSON Lines format for AWS Lambda stream processing",
     "Enterprise architect maps LDAP directory exports to JSON objects with relational links for Neo4j graph database import"
   ]

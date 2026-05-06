@@ -972,9 +972,9 @@
     },
     "docker-compose-generator": {
       "name": "Docker Compose Generator",
-      "description": "قم بإنشاء ملفات docker-compose.yml باستخدام الخدمات الشائعة مثل MySQL وRedis وNginx.",
+      "description": "قم بإنشاء ملفات docker-compose.yml باستخدام الخدمات الشائعة مثل MySQL وcache service وNginx.",
       "seo_title": "دوكر يؤلف مولد مجاني على الإنترنت",
-      "seo_description": "أنشئ ملفات docker-compose.yml باستخدام MySQL وPostgreSQL وRedis وNginx والمزيد من الخدمات عبر الإنترنت مجانًا. محرر مرئي مع معاينة YAML والتحقق من صحتها.",
+      "seo_description": "أنشئ ملفات docker-compose.yml باستخدام MySQL وPostgreSQL وcache service وNginx والمزيد من الخدمات عبر الإنترنت مجانًا. محرر مرئي مع معاينة YAML والتحقق من صحتها.",
       "version": "إنشاء الإصدار",
       "databases": "قواعد البيانات",
       "messaging": "المراسلة والبحث",
@@ -1757,7 +1757,7 @@
       "descRdp": "بروتوكول سطح المكتب البعيد",
       "descPostgresql": "PostgreSQL Database",
       "descVnc": "حوسبة الشبكة الافتراضية",
-      "descRedis": "قاعدة بيانات ريديس",
+      "desccache service": "قاعدة بيانات ريديس",
       "descHttpAlt": "HTTP Alternate",
       "descHttpsAlt": "HTTPS Alternate",
       "descMongodb": "MongoDB Database"
@@ -4866,9 +4866,9 @@
     },
     "docker-compose-generator": {
       "name": "مولد ملف docker-compose.yml",
-      "description": "إنشاء ملفات docker-compose.yml مع الخدمات الشائعة مثل MySQL، Redis، Nginx.",
+      "description": "إنشاء ملفات docker-compose.yml مع الخدمات الشائعة مثل MySQL، cache service، Nginx.",
       "seo_title": "مولد Docker Compose مجاني أونلاين",
-      "seo_description": "إنشاء ملفات docker-compose.yml مع MySQL، PostgreSQL، Redis، Nginx، وخدمات أخرى عبر الإنترنت مجانًا. تحرير مصري مع نظرة على YAML وتصحيح الأخطاء.",
+      "seo_description": "إنشاء ملفات docker-compose.yml مع MySQL، PostgreSQL، cache service، Nginx، وخدمات أخرى عبر الإنترنت مجانًا. تحرير مصري مع نظرة على YAML وتصحيح الأخطاء.",
       "version": "إصدار Docker Compose",
       "databases": "ฐานات البيانات",
       "messaging": "الرسائل والبحث",
@@ -5703,7 +5703,7 @@
       "descRdp": "بروتوكول مكتب عن بعد",
       "descPostgresql": "قاعدة بيانات PostgreSQL",
       "descVnc": "حوسبة الشبكة الافتراضية",
-      "descRedis": "قاعدة بيانات Redis",
+      "desccache service": "قاعدة بيانات cache service",
       "descHttpAlt": "HTTP بديل",
       "descHttpsAlt": "HTTPS بديل",
       "descMongodb": "قاعدة بيانات MongoDB"

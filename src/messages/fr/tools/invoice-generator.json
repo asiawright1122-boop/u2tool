@@ -6,7 +6,7 @@
     "Ajouter des articles avec calcul automatique des taxes via le tableau de saisie à colonnes multiples",
     "Appliquer des règles de format conditionnel (ex: couleur d'alerte pour solde impayé) depuis l'éditeur CSS intégré",
     "Exporter en PDF/A avec compression 7-zip pour les archives légales ou en PDF/UA pour accessibilité RGAA",
-    "Transmettre directement la facture via l'intégration SMTP avec authentification OAuth2.0 aux services de messagerie"
+    "Transmettre directement la facture via l'intégration SMTP avec authentification authentication flows aux services de messagerie"
   ],
   "usage_examples": [
     "Un développeur web freelance utilisant le modèle 'Contrat de Service Tech' avec champs dynamiques pour convertir automatiquement les heures de travail en montants en USD/EUR via API de change",

@@ -738,9 +738,9 @@
   },
   "docker-compose-generator": {
     "name": "Docker Compose Generator",
-    "description": "قم بإنشاء ملفات docker-compose.yml باستخدام الخدمات الشائعة مثل MySQL وRedis وNginx.",
+    "description": "قم بإنشاء ملفات docker-compose.yml باستخدام الخدمات الشائعة مثل MySQL وcache service وNginx.",
     "seo_title": "دوكر يؤلف مولد مجاني على الإنترنت",
-    "seo_description": "أنشئ ملفات docker-compose.yml باستخدام MySQL وPostgreSQL وRedis وNginx والمزيد من الخدمات عبر الإنترنت مجانًا. محرر مرئي مع معاينة YAML والتحقق من صحتها."
+    "seo_description": "أنشئ ملفات docker-compose.yml باستخدام MySQL وPostgreSQL وcache service وNginx والمزيد من الخدمات عبر الإنترنت مجانًا. محرر مرئي مع معاينة YAML والتحقق من صحتها."
   },
   "package-json-generator": {
     "name": "مولد الحزمة.json",

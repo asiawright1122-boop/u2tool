@@ -1727,7 +1727,7 @@
       ],
       "usage_examples": [
         "为MongoDB文档批量插入操作生成100个唯一_id",
-        "创建OAuth2.0协议所需的防CSRF攻击随机令牌",
+        "创建authentication flows协议所需的防CSRF攻击随机令牌",
         "模拟物联网设备注册时的MAC地址替代标识",
         "生成分布式事务追踪链路的X-Request-ID头"
       ],
@@ -1764,7 +1764,7 @@
       "description": "安全地编码或解码URL和查询字符串。",
       "seo_title": "免费在线URL编码解码工具 - 安全高效",
       "seo_description": "使用我们的在线工具安全地编码和解码URL及查询字符串。快速、简单、无需安装。立即尝试！",
-      "detailed_description": "本工具基于RFC 3986标准实现URL编码与解码的双向转换，支持对ASCII字符集中的保留字符（:/?#[]@!$&'()*+,;=）及非保留字符进行标准化处理。当开发者需要传输特殊字符（如中文、空格或符号）时，工具会自动将其转换为UTF-8字节序列并进行百分号编码，例如将空格转换为%20而非加号（+），确保符合现代Web服务器的解析规范。解码过程则严格校验编码格式的有效性，对双重编码（如%2521）进行递归解析。特别适用于处理OAuth签名参数、RESTful API路径参数及URLSearchParams对象的序列化场景。与标准库实现不同的是，该工具采用状态机算法预判编码层级，避免重复编码已合规的URL片段。",
+      "detailed_description": "本工具基于RFC 3986标准实现URL编码与解码的双向转换，支持对ASCII字符集中的保留字符（:/?#[]@!$&'()*+,;=）及非保留字符进行标准化处理。当开发者需要传输特殊字符（如中文、空格或符号）时，工具会自动将其转换为UTF-8字节序列并进行百分号编码，例如将空格转换为%20而非加号（+），确保符合现代Web服务器的解析规范。解码过程则严格校验编码格式的有效性，对双重编码（如%2521）进行递归解析。特别适用于处理OAuth签名参数、API路径参数及URLSearchParams对象的序列化场景。与标准库实现不同的是，该工具采用状态机算法预判编码层级，避免重复编码已合规的URL片段。",
       "usage_steps": [
         "1. 在输入框粘贴原始URL或查询字符串（支持中文及特殊字符）",
         "2. 选择操作模式：编码/解码，点击切换按钮触发实时预览",
@@ -2372,7 +2372,7 @@
         "6. 查看验证结果详情（含算法匹配性、签名一致性及时间戳有效性），下载调试报告"
       ],
       "usage_examples": [
-        "开发OAuth2服务时验证生成的JWT是否符合RFC7519规范",
+        "开发authentication flows服务时验证生成的JWT是否符合RFC7519规范",
         "测试环境出现401错误时，检查测试令牌是否因过期时间(exp)设置不当失效",
         "排查微服务间通信时因密钥长度不足导致的HS256签名验证失败",
         "学习JWT结构时通过工具辅助理解嵌套声明（Nested Claims）的解析逻辑"
@@ -2640,7 +2640,7 @@
       "description": "将文本转换为URL友好的slug格式。",
       "seo_title": "免费在线文本转 Slug 工具",
       "seo_description": "使用这款免费在线文本转 Slug 工具快速生成 URL 友好路径，适合文章链接、站点目录和内容发布。",
-      "detailed_description": "“Text to Slug” 工具能够将任何文本转换为URL友好的格式，确保生成的字符串可以在互联网上安全地使用。技术上，该工具会移除所有非字母数字字符，将空格替换为连字符（-），并将所有字符转换为小写。这种处理方式有助于避免URL中的特殊字符导致的问题，如编码不一致和解析错误。用户在创建网站内容、SEO优化、生成友好的URL路径等方面经常需要用到这个工具。例如，博客作者可以使用此工具将文章标题转换为URL路径，确保用户可以直接从标题访问文章，同时提高搜索引擎的可见性。此外，开发人员在构建RESTful API时，也可以利用这个工具生成唯一的资源标识符，确保API的路径清晰且易于管理。",
+      "detailed_description": "“Text to Slug” 工具能够将任何文本转换为URL友好的格式，确保生成的字符串可以在互联网上安全地使用。技术上，该工具会移除所有非字母数字字符，将空格替换为连字符（-），并将所有字符转换为小写。这种处理方式有助于避免URL中的特殊字符导致的问题，如编码不一致和解析错误。用户在创建网站内容、SEO优化、生成友好的URL路径等方面经常需要用到这个工具。例如，博客作者可以使用此工具将文章标题转换为URL路径，确保用户可以直接从标题访问文章，同时提高搜索引擎的可见性。此外，开发人员在构建API时，也可以利用这个工具生成唯一的资源标识符，确保API的路径清晰且易于管理。",
       "usage_steps": [
         "Step 1: 打开“Text to Slug”工具页面。",
         "Step 2: 在“输入文本”框中输入你希望转换的文本内容。",
@@ -4161,7 +4161,7 @@
         "Step 6: 根据错误信息调整 JSON 数据或 Schema，重复验证过程，直至数据完全符合 Schema。"
       ],
       "usage_examples": [
-        "Example 1: 在开发 RESTful API 时，使用 JSON Schema Validator 验证客户端提交的数据是否符合预期的格式和结构，确保数据的完整性和一致性。",
+        "Example 1: 在开发 API 时，使用 JSON Schema Validator 验证客户端提交的数据是否符合预期的格式和结构，确保数据的完整性和一致性。",
         "Example 2: 在前端与后端数据交互中，前端开发者可以使用此工具验证从后端收到的 JSON 数据是否符合预定义的 Schema，及时发现数据异常。",
         "Example 3: 在进行数据迁移或数据导入项目中，使用 JSON Schema Validator 检查数据源中的 JSON 数据是否符合目标系统的要求，保证数据迁移过程的顺利进行。",
         "Example 4: 在编写自动化测试脚本时，测试工程师可以利用 JSON Schema Validator 确认测试数据的正确性，提高测试的可靠性和覆盖率。"
@@ -4888,7 +4888,7 @@
       "description": "查询HTTP状态码及其含义。",
       "seo_title": "免费在线HTTP状态码查询工具 - 易查易懂",
       "seo_description": "快速查询HTTP状态码及其含义，一站式在线工具，助您轻松解决网络问题。立即尝试！",
-      "detailed_description": "HTTP状态码查询工具是一款面向开发者的协议解析辅助系统，基于RFC 7231标准构建完整的状态码知识图谱。该工具通过HTTP/1.1协议规范的1xx-5xx状态码体系，提供状态码与响应机制的深度解析。开发者在处理RESTful API调试、服务器日志分析或构建健壮的网络请求逻辑时，可通过该工具快速定位状态码的技术含义及最佳实践。工具内部采用分层架构设计：前端通过Web Worker实现状态码索引的即时检索，后端采用状态机模式解析请求-响应循环中的状态转换规则。支持按分类（信息响应/成功/重定向/客户端错误/服务器错误）、协议版本（HTTP/1.0、1.1、2.0）进行多维过滤，并提供响应头字段关联分析功能。对于特定状态码（如429 Too Many Requests），系统会智能推荐对应的限流处理策略和重试机制实现方案。",
+      "detailed_description": "HTTP状态码查询工具是一款面向开发者的协议解析辅助系统，基于RFC 7231标准构建完整的状态码知识图谱。该工具通过HTTP/1.1协议规范的1xx-5xx状态码体系，提供状态码与响应机制的深度解析。开发者在处理API调试、服务器日志分析或构建健壮的网络请求逻辑时，可通过该工具快速定位状态码的技术含义及最佳实践。工具内部采用分层架构设计：前端通过Web Worker实现状态码索引的即时检索，后端采用状态机模式解析请求-响应循环中的状态转换规则。支持按分类（信息响应/成功/重定向/客户端错误/服务器错误）、协议版本（HTTP/1.0、1.1、2.0）进行多维过滤，并提供响应头字段关联分析功能。对于特定状态码（如429 Too Many Requests），系统会智能推荐对应的限流处理策略和重试机制实现方案。",
       "usage_steps": [
         "1. 在工具首页下拉选择状态码分类（如「4xx客户端错误」）或直接输入3位数字代码",
         "2. 查看状态码详情面板中显示的协议规范摘要，包括标准定义、常见触发场景及推荐处理方式",
@@ -6577,7 +6577,7 @@
     },
     "docker-compose-generator": {
       "name": "Docker Compose生成器",
-      "description": "生成包含MySQL、Redis、Nginx等常用服务的docker-compose.yml文件。",
+      "description": "生成包含MySQL、cache service、Nginx等常用服务的docker-compose.yml文件。",
       "seo_title": "免费在线 Docker Compose 生成器",
       "seo_description": "使用这款免费在线 Docker Compose 生成器快速创建多容器应用配置文件，适合本地开发、服务编排和部署准备。",
       "version": "Compose版本",
@@ -6590,9 +6590,9 @@
       "download": "下载",
       "outputLabel": "docker-compose.yml",
       "note": "注意：在生产环境中使用前请更改默认密码。",
-      "detailed_description": "Docker Compose Generator是一款面向开发者的YAML配置文件生成工具，通过结构化表单输入实现docker-compose.yml的智能编排。该工具基于容器化应用部署需求，将复杂的服务依赖关系转化为可视化配置，支持MySQL、Redis、Nginx等15+常用服务模板的自动注入。开发者可通过服务发现机制快速建立微服务测试环境，或使用预设的健康检查模板配置容器探针。工具内核采用AST语法树解析技术，将用户输入的环境变量、端口映射、卷挂载等参数转换为符合Compose Schema v3.8规范的配置文件，同时支持自定义Dockerfile构建指令和覆盖网络配置。",
+      "detailed_description": "Docker Compose Generator是一款面向开发者的YAML配置文件生成工具，通过结构化表单输入实现docker-compose.yml的智能编排。该工具基于容器化应用部署需求，将复杂的服务依赖关系转化为可视化配置，支持MySQL、cache service、Nginx等15+常用服务模板的自动注入。开发者可通过服务发现机制快速建立微服务测试环境，或使用预设的健康检查模板配置容器探针。工具内核采用AST语法树解析技术，将用户输入的环境变量、端口映射、卷挂载等参数转换为符合Compose Schema v3.8规范的配置文件，同时支持自定义Dockerfile构建指令和覆盖网络配置。",
       "usage_steps": [
-        "1. 在服务选择面板勾选所需容器组件（如MySQL 8.0、Redis 7.0）",
+        "1. 在服务选择面板勾选所需容器组件（如MySQL 8.0、cache service 7.0）",
         "2. 在配置矩阵中设置每个服务的环境变量（如MYSQL_ROOT_PASSWORD）",
         "3. 通过拓扑图编辑器拖拽建立服务依赖关系",
         "4. 在高级设置中配置自定义网络（custom networks）和卷挂载路径",
@@ -6601,7 +6601,7 @@
       ],
       "usage_examples": [
         "构建LAMP开发环境：配置Apache 2.4服务依赖MySQL 8.0，自动创建数据卷映射/var/www/html",
-        "微服务测试集群：生成包含Redis缓存、MongoDB分片和API网关的多容器拓扑",
+        "微服务测试集群：生成包含cache service缓存、MongoDB分片和API网关的多容器拓扑",
         "生产环境预演：为Jenkins CI/CD流水线生成包含Nginx负载均衡器的测试编排",
         "定制化服务编排：通过command字段覆盖容器启动命令\\\"nginx -g 'daemon off';\\\"实现配置热加载"
       ],
@@ -7305,7 +7305,7 @@
       "description": "自定义负载和密钥生成JSON Web Tokens。",
       "seo_title": "免费JWT生成器在线",
       "seo_description": "在线生成带有自定义声明、过期时间和HMAC/RSA签名的JWT令牌，无需注册。创建API认证和授权测试的访问令牌。",
-      "detailed_description": "JWT生成器是一款面向开发者的专业安全工具，支持创建符合RFC 7519标准的JSON Web Token。该工具通过HMAC SHA256/SHA512或RSA签名算法实现三段式结构（Header.Payload.Signature）的令牌生成，开发者可自定义JWT头部参数（如alg/typ）、有效载荷（claims）及签名密钥。在身份验证场景中，该工具可快速生成带exp过期时间的访问令牌；在系统集成时，能模拟不同加密算法的令牌生成过程。工具内嵌实时调试模式，可查看Base64Url编码前后的原始数据，支持开发者理解JWT的签发验证机制。其独特的多格式导出功能允许保存为JWT字符串、JSON对象或调试报告，特别适合微服务架构下的权限调试、第三方API对接测试以及OAuth2流程验证。",
+      "detailed_description": "JWT生成器是一款面向开发者的专业安全工具，支持创建符合RFC 7519标准的JSON Web Token。该工具通过HMAC SHA256/SHA512或RSA签名算法实现三段式结构（Header.Payload.Signature）的令牌生成，开发者可自定义JWT头部参数（如alg/typ）、有效载荷（claims）及签名密钥。在身份验证场景中，该工具可快速生成带exp过期时间的访问令牌；在系统集成时，能模拟不同加密算法的令牌生成过程。工具内嵌实时调试模式，可查看Base64Url编码前后的原始数据，支持开发者理解JWT的签发验证机制。其独特的多格式导出功能允许保存为JWT字符串、JSON对象或调试报告，特别适合微服务架构下的权限调试、第三方API对接测试以及authentication flows流程验证。",
       "usage_steps": [
         "在算法选择下拉框指定HS256/HS512/RS256等加密方式",
         "输入签名密钥文本框填写自定义密钥或使用自动生成按钮",
@@ -7585,7 +7585,7 @@
       "inputPlaceholder": "粘贴JSON内容...",
       "outputPlaceholder": "C#类将显示在这里...",
       "errorInvalidJson": "// 错误：无效的JSON输入",
-      "detailed_description": "本工具通过解析JSON文档结构自动生成强类型的C#类定义，支持嵌套对象、数组和复杂数据结构的转换。核心采用AST抽象语法树分析技术，对JSON键值进行类型推断并构建对应的CLR类型体系。开发者可通过命名策略配置（如PascalCase/CamelCase转换）、类型映射规则（如number→decimal映射）等高级选项定制生成逻辑。该工具特别适合处理RESTful API响应建模、NoSQL文档结构转换、以及微服务间契约定义等场景，可保持原始JSON的嵌套层级关系并智能处理空值处理策略。转换过程采用内存编译验证机制，确保生成的C#代码通过Roslyn编译器校验。",
+      "detailed_description": "本工具通过解析JSON文档结构自动生成强类型的C#类定义，支持嵌套对象、数组和复杂数据结构的转换。核心采用AST抽象语法树分析技术，对JSON键值进行类型推断并构建对应的CLR类型体系。开发者可通过命名策略配置（如PascalCase/CamelCase转换）、类型映射规则（如number→decimal映射）等高级选项定制生成逻辑。该工具特别适合处理API响应建模、NoSQL文档结构转换、以及微服务间契约定义等场景，可保持原始JSON的嵌套层级关系并智能处理空值处理策略。转换过程采用内存编译验证机制，确保生成的C#代码通过Roslyn编译器校验。",
       "usage_steps": [
         "在编辑器区域粘贴原始JSON内容，点击'格式化'按钮自动美化代码结构",
         "通过'命名策略'下拉菜单选择类型名称转换规则（默认PascalCase）",
@@ -7638,7 +7638,7 @@
       "errorInvalidJson": "// 错误：无效的JSON输入",
       "seo_title": "免费在线 JSON 转 Rust 转换器",
       "seo_description": "JSON 转 Rust 转换器可根据 JSON 数据生成结构体代码，并处理可空字段，适合接口开发与数据建模。",
-      "detailed_description": "JSON to Rust 是一个将 JSON 数据结构自动转换为 Rust 语言结构体（struct）的代码生成工具。其核心功能基于抽象语法树（AST）解析和类型推导算法，通过分析 JSON 的层级结构、字段类型（如字符串、数字、数组、嵌套对象等），生成带有 serde_derive 注解的 Rust 代码，支持序列化/反序列化操作。开发者在构建 RESTful API 客户端或处理配置文件时，可避免手动编写易出错的结构体定义。工具采用递归下降解析法处理嵌套结构，自动将 JSON 键名转换为 snake_case 命名规范，并支持自定义类型映射（如将时间戳字符串映射为 chrono::DateTime）。与同类工具相比，其独特之处在于可生成带 impl 方法的结构体模板，并自动处理可选字段（Option<T>）和枚举类型（enum）的模式匹配逻辑。",
+      "detailed_description": "JSON to Rust 是一个将 JSON 数据结构自动转换为 Rust 语言结构体（struct）的代码生成工具。其核心功能基于抽象语法树（AST）解析和类型推导算法，通过分析 JSON 的层级结构、字段类型（如字符串、数字、数组、嵌套对象等），生成带有 serde_derive 注解的 Rust 代码，支持序列化/反序列化操作。开发者在构建 API 客户端或处理配置文件时，可避免手动编写易出错的结构体定义。工具采用递归下降解析法处理嵌套结构，自动将 JSON 键名转换为 snake_case 命名规范，并支持自定义类型映射（如将时间戳字符串映射为 chrono::DateTime）。与同类工具相比，其独特之处在于可生成带 impl 方法的结构体模板，并自动处理可选字段（Option<T>）和枚举类型（enum）的模式匹配逻辑。",
       "usage_steps": [
         "1. 在输入区域粘贴有效 JSON 文本（支持多行缩进格式）",
         "2. 在 'Struct Name' 输入框指定根结构体标识符（如 UserResponse）",
@@ -8942,7 +8942,7 @@
       "description": "从数据中查找并复制 JSON 路径。",
       "seo_title": "免费在线 JSON 路径查找器",
       "seo_description": "使用这款免费在线 JSON 路径查找器快速定位字段位置并复制路径表达式，适合接口调试、数据提取和结构排查。",
-      "detailed_description": "JSON Path Finder是一款专为开发者设计的JSON路径解析工具，通过递归遍历算法自动解析JSON对象的层级结构。该工具采用AST抽象语法树解析技术，可实时生成符合JSONPath规范的路径表达式，支持dot-notation和bracket-notation两种格式。当用户输入复杂嵌套的JSON数据时，系统会构建可视化结构树，通过事件委托实现节点路径的动态计算。开发者在调试RESTful API响应、处理深度嵌套的配置文件或进行数据清洗时，可通过点击任意节点快速获取精确路径。其核心价值在于解决手动查找路径时易出错且耗时的问题，特别适用于处理包含多层嵌套数组/对象的JSON数据，支持正则表达式过滤和路径别名生成功能。",
+      "detailed_description": "JSON Path Finder是一款专为开发者设计的JSON路径解析工具，通过递归遍历算法自动解析JSON对象的层级结构。该工具采用AST抽象语法树解析技术，可实时生成符合JSONPath规范的路径表达式，支持dot-notation和bracket-notation两种格式。当用户输入复杂嵌套的JSON数据时，系统会构建可视化结构树，通过事件委托实现节点路径的动态计算。开发者在调试API响应、处理深度嵌套的配置文件或进行数据清洗时，可通过点击任意节点快速获取精确路径。其核心价值在于解决手动查找路径时易出错且耗时的问题，特别适用于处理包含多层嵌套数组/对象的JSON数据，支持正则表达式过滤和路径别名生成功能。",
       "usage_steps": [
         "在代码编辑区粘贴或手动输入JSON数据",
         "选择路径模式（点号表示法或方括号表示法）",
@@ -9460,7 +9460,7 @@
       "descRdp": "远程桌面协议",
       "descPostgresql": "PostgreSQL数据库",
       "descVnc": "虚拟网络计算",
-      "descRedis": "Redis数据库",
+      "desccache service": "cache service数据库",
       "descHttpAlt": "HTTP备用",
       "descHttpsAlt": "HTTPS备用",
       "descMongodb": "MongoDB数据库",
@@ -10657,7 +10657,7 @@
       ],
       "usage_examples": [
         "前端开发：将设计稿SVG批量转为1x/2x/3x多倍率PNG，适配Retina显示屏",
-        "印刷制版：转换SVG为300dpi CMYK色彩模式的TIFF文件，满足专业印刷需求",
+        "印刷制版：转换SVG为high-resolution CMYK色彩模式的TIFF文件，满足专业印刷需求",
         "游戏开发：自动化处理SVG格式的角色动画帧，输出WebP格式的透明背景序列图",
         "数据可视化：将ECharts-based browser chart rendering生成的动态SVG图表转为JPEG格式，嵌入PDF报告时保持清晰度"
       ],
@@ -11150,7 +11150,7 @@
       "noPreview": "点击生成以预览图片",
       "info": "信息",
       "infoText": "使用Picsum Photos API。种子值确保结果的一致性。图片ID（0-1084）选择特定的照片。",
-      "detailed_description": "Lorem Picsum 是基于 Picsum Photos 开源项目的动态图片生成工具，通过 RESTful API 接口实现占位图的即时渲染。该工具通过 HTTP 请求接收 width/height 参数，经服务端计算后返回指定尺寸的 JPEG/WebP 格式图片，并在响应头中附加 Cache-Control 信息优化加载性能。开发者在构建响应式布局时，可通过指定 /g/ 路径生成灰度图像，利用 /blur/ 参数创建模糊效果，满足不同设计阶段的视觉需求。其核心价值在于提供无版权争议的随机图片源，特别适用于前端组件测试、设计原型填充以及 UI 动画占位等场景，支持通过 Accept 请求头控制响应格式，实现与现代前端框架的无缝集成。",
+      "detailed_description": "Lorem Picsum 是基于 Picsum Photos 开源项目的动态图片生成工具，通过 API 接口实现占位图的即时渲染。该工具通过 HTTP 请求接收 width/height 参数，经服务端计算后返回指定尺寸的 JPEG/WebP 格式图片，并在响应头中附加 Cache-Control 信息优化加载性能。开发者在构建响应式布局时，可通过指定 /g/ 路径生成灰度图像，利用 /blur/ 参数创建模糊效果，满足不同设计阶段的视觉需求。其核心价值在于提供无版权争议的随机图片源，特别适用于前端组件测试、设计原型填充以及 UI 动画占位等场景，支持通过 Accept 请求头控制响应格式，实现与现代前端框架的无缝集成。",
       "usage_steps": [
         "访问工具页面后，在参数输入框填写目标图片宽度（支持 1-3000px）",
         "在高度输入框设置对应数值，留空则保持默认 3:2 比例",
@@ -11941,7 +11941,7 @@
       "seo_description": "JSON转Dart 可把 JSON 数据转换为 Dart 类，自动生成序列化方法，适合 Flutter 接口模型开发与数据结构整理。",
       "className": "类名",
       "convert": "转换",
-      "detailed_description": "JSON to Dart 是一款专为 Flutter 开发者设计的在线工具，它能够将 JSON 数据结构自动转换成 Dart 语言中的类定义，并生成 `fromJson` 和 `toJson` 方法。这不仅简化了手动编写数据模型类的过程，还大大提高了开发效率。在实际开发中，处理 JSON 数据是非常常见的任务，尤其是在与 RESTful API 交互时。通过使用 JSON to Dart，开发者可以快速生成符合需求的数据模型，减少出错的可能性，同时保持代码的整洁和可维护性。该工具的工作原理是通过解析 JSON 输入，识别数据结构中的各个字段及其类型，然后根据这些信息生成相应的 Dart 类。生成的类不仅包括字段定义，还包括从 JSON 对象解析数据的 `fromJson` 方法和将 Dart 类转换为 JSON 对象的 `toJson` 方法。",
+      "detailed_description": "JSON to Dart 是一款专为 Flutter 开发者设计的在线工具，它能够将 JSON 数据结构自动转换成 Dart 语言中的类定义，并生成 `fromJson` 和 `toJson` 方法。这不仅简化了手动编写数据模型类的过程，还大大提高了开发效率。在实际开发中，处理 JSON 数据是非常常见的任务，尤其是在与 API 交互时。通过使用 JSON to Dart，开发者可以快速生成符合需求的数据模型，减少出错的可能性，同时保持代码的整洁和可维护性。该工具的工作原理是通过解析 JSON 输入，识别数据结构中的各个字段及其类型，然后根据这些信息生成相应的 Dart 类。生成的类不仅包括字段定义，还包括从 JSON 对象解析数据的 `fromJson` 方法和将 Dart 类转换为 JSON 对象的 `toJson` 方法。",
       "usage_steps": [
         "Step 1: 打开 JSON to Dart 工具页面，找到输入框。",
         "Step 2: 将需要转换的 JSON 数据粘贴到输入框中。",
@@ -13269,7 +13269,7 @@
         "tip4": "切换为水平",
         "tip5": "导出为PNG或SVG"
       },
-      "detailed_description": "本工具基于ECharts-based browser chart rendering和Canvas技术实现，提供专业的箱线图可视化功能。支持输入JSON/CSV格式的数值型数据集，自动计算四分位间距（IQR）、上下须限值及异常值标记。通过Web Worker进行分位数计算，支持Tukey和SAS两种分位方法切换。用户可自定义箱体颜色渐变、须线样式及离群点标记形状，实时渲染的SVG图表支持CSS动画交互。开发者可直接获取生成的Voronoi图路径数据用于二次开发，教育工作者可通过动态分位数计算演示统计学概念。导出的PNG支持300dpi印刷级分辨率，SVG文件包含完整的metadata注释。",
+      "detailed_description": "本工具基于ECharts-based browser chart rendering和Canvas技术实现，提供专业的箱线图可视化功能。支持输入JSON/CSV格式的数值型数据集，自动计算四分位间距（IQR）、上下须限值及异常值标记。通过Web Worker进行分位数计算，支持Tukey和SAS两种分位方法切换。用户可自定义箱体颜色渐变、须线样式及离群点标记形状，实时渲染的SVG图表支持CSS动画交互。开发者可直接获取生成的Voronoi图路径数据用于二次开发，教育工作者可通过动态分位数计算演示统计学概念。导出的PNG支持high-resolution印刷级分辨率，SVG文件包含完整的metadata注释。",
       "usage_steps": [
         "在数据输入区粘贴符合RFC 4180标准的CSV数据，首行为字段名，后续每列对应一个箱体",
         "通过'分位计算'下拉菜单选择Tukey法或SAS Method 15",
@@ -13734,7 +13734,7 @@
         "通过右侧属性面板设置轴标签旋转角度（0-90°）及刻度密度（5-20级）",
         "启用'动态刷选'功能框选特定数据区域，联动高亮相关折线轨迹",
         "在'样式库'选择预设主题，或自定义折线透明度（0.1-1.0）及轴间距（20-200px）",
-        "点击'导出'按钮生成SVG矢量图或PNG图片（支持300dpi分辨率）"
+        "点击'导出'按钮生成SVG矢量图或PNG图片（支持high-resolution分辨率）"
       ],
       "usage_examples": [
         "对比不同品牌智能手机的CPU性能、续航时间、屏幕分辨率等12项参数指标",
@@ -19192,7 +19192,7 @@
       "inverseRate": "反向汇率",
       "quickConversions": "快速转换",
       "disclaimer": "汇率仅供参考，可能不反映实时市场汇率。",
-      "detailed_description": "本工具通过集成Open Exchange Rates API与ECB（欧洲央行）实时数据源，实现45种货币的毫秒级汇率同步。采用三层架构设计：前端使用React动态渲染货币矩阵，后端Node.js服务执行汇率插值计算，Redis缓存层实现每分钟汇率数据的TTL优化。用户可选择ISO 4217标准货币代码或智能搜索货币名称，系统自动应用当日Hibor基准利率与银行买入价/卖出价差模型。适用于跨境B2B结算汇率锁定、数字钱包多币种对账、外汇套利机会分析等场景，支持自定义时间戳查询历史汇率，满足国际会计准则IFRS 21的货币折算要求。",
+      "detailed_description": "本工具通过集成Open Exchange Rates API与ECB（欧洲央行）实时数据源，实现45种货币的毫秒级汇率同步。采用三层架构设计：前端使用React动态渲染货币矩阵，后端Node.js服务执行汇率插值计算，cache service缓存层实现每分钟汇率数据的TTL优化。用户可选择ISO 4217标准货币代码或智能搜索货币名称，系统自动应用当日Hibor基准利率与银行买入价/卖出价差模型。适用于跨境B2B结算汇率锁定、数字钱包多币种对账、外汇套利机会分析等场景，支持自定义时间戳查询历史汇率，满足国际会计准则IFRS 21的货币折算要求。",
       "usage_steps": [
         "1. 在左侧货币矩阵选择基准货币（如USD）",
         "2. 输入需要转换的金额（支持科学计数法输入）",
@@ -28266,7 +28266,7 @@
     },
     "docker-compose-generator": {
       "name": "Docker 撰写生成器",
-      "description": "使用 MySQL、Redis、Nginx 等常用服务生成 docker-compose.yml 文件。",
+      "description": "使用 MySQL、cache service、Nginx 等常用服务生成 docker-compose.yml 文件。",
       "seo_title": "免费在线 Docker Compose 生成器",
       "seo_description": "使用这款免费在线 Docker Compose 生成器快速创建多容器应用配置文件，适合本地开发、服务编排和部署准备。",
       "version": "撰写版本",
@@ -29051,7 +29051,7 @@
       "descRdp": "远程桌面协议",
       "descPostgresql": "PostgreSQL Database",
       "descVnc": "虚拟网络计算",
-      "descRedis": "Redis数据库",
+      "desccache service": "cache service数据库",
       "descHttpAlt": "HTTP Alternate",
       "descHttpsAlt": "HTTPS Alternate",
       "descMongodb": "MongoDB Database"

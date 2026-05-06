@@ -2070,7 +2070,7 @@
       "description": "Depure e verifique tokens JWT com validação de assinatura",
       "seo_title": "Grátis: Debugger JWT Online",
       "seo_description": "Use nossa ferramenta online para debugar e validar JWT com validação de assinatura. Teste JSON, Base64 e SVG gratuitamente hoje!",
-      "detailed_description": "O JWT Debugger é uma ferramenta técnica especializada para análise e validação de tokens JWT (JSON Web Token) sob o prisma de segurança e integridade. Internamente, o token JWT é dividido em três partes: header, payload e signature, codificadas em Base64Url. A ferramenta decodifica essas partes, exibindo seus conteúdos em formato JSON, e verifica a assinatura digital por meio de algoritmos HMAC, RSA ou ECDSA, comparando o hash gerado com o valor fornecido no token. Isso permite identificar manipulações ou incompatibilidades na assinatura. Além disso, valida automaticamente claims padrão como 'exp' (expiration time) e 'nbf' (not before), cruciais para tokens de autenticação. Desenvolvedores precisam deste recurso para diagnosticar tokens inválidos em sistemas de autenticação OAuth2/OpenID, auditar tokens recebidos de APIs terceiras ou testar a implementação de serviços que emitem JWTs. O diferencial do JWT Debugger está na exibição detalhada dos metadados criptográficos, como o algoritmo utilizado (ex.: HS256, RS256) e o cabeçalho 'kid' (Key ID), facilitando a depuração de falhas em fluxos de autenticação modernos.",
+      "detailed_description": "O JWT Debugger é uma ferramenta técnica especializada para análise e validação de tokens JWT (JSON Web Token) sob o prisma de segurança e integridade. Internamente, o token JWT é dividido em três partes: header, payload e signature, codificadas em Base64Url. A ferramenta decodifica essas partes, exibindo seus conteúdos em formato JSON, e verifica a assinatura digital por meio de algoritmos HMAC, RSA ou ECDSA, comparando o hash gerado com o valor fornecido no token. Isso permite identificar manipulações ou incompatibilidades na assinatura. Além disso, valida automaticamente claims padrão como 'exp' (expiration time) e 'nbf' (not before), cruciais para tokens de autenticação. Desenvolvedores precisam deste recurso para diagnosticar tokens inválidos em sistemas de autenticação authentication flows/OpenID, auditar tokens recebidos de APIs terceiras ou testar a implementação de serviços que emitem JWTs. O diferencial do JWT Debugger está na exibição detalhada dos metadados criptográficos, como o algoritmo utilizado (ex.: HS256, RS256) e o cabeçalho 'kid' (Key ID), facilitando a depuração de falhas em fluxos de autenticação modernos.",
       "usage_steps": [
         "Acesse a interface do JWT Debugger e cole o token JWT no campo 'Token Input' com formato xxxx.xxxx.xxxx.",
         "Clique em 'Decode Token' para separar as partes do token (header, payload, signature) e exibi-las em painéis individuais.",
@@ -2081,7 +2081,7 @@
       ],
       "usage_examples": [
         "Um desenvolvedor testa um token JWT gerado por um serviço de autenticação e descobre que o horário de expiração ('exp') está definido 5 minutos no passado, causando falhas de login.",
-        "Durante a integração com uma API OAuth2, um engenheiro utiliza a ferramenta para confirmar que o token apresenta o 'aud' (audience) incorreto, bloqueando o acesso ao recurso esperado.",
+        "Durante a integração com uma API authentication flows, um engenheiro utiliza a ferramenta para confirmar que o token apresenta o 'aud' (audience) incorreto, bloqueando o acesso ao recurso esperado.",
         "Em uma auditoria de segurança, um analista detecta que um token está assinado com HS256, mas o servidor espera RS256, expondo uma vulnerabilidade de configuração.",
         "Um DevOps investiga por que tokens emitidos por um cluster Kubernetes são rejeitados, descobrindo que o certificado público usado para verificação não corresponde à chave privada do token."
       ],
@@ -4678,9 +4678,9 @@
     },
     "docker-compose-generator": {
       "name": "Gerador de docker-compose.yml",
-      "description": "Gere arquivos docker-compose.yml com serviços comuns como MySQL, Redis e Nginx.",
+      "description": "Gere arquivos docker-compose.yml com serviços comuns como MySQL, cache service e Nginx.",
       "seo_title": "Gerador Grátis de docker-compose.yml Online",
-      "seo_description": "Use a ferramenta online para gerar docker-compose.yml com MySQL, PostgreSQL, Redis, Nginx e outros serviços. Edição visual com pré-visualização YAML e validação.",
+      "seo_description": "Use a ferramenta online para gerar docker-compose.yml com MySQL, PostgreSQL, cache service, Nginx e outros serviços. Edição visual com pré-visualização YAML e validação.",
       "version": "Versão do Compose",
       "databases": "Bancos de Dados",
       "messaging": "Mensageria & Busca",
@@ -4691,10 +4691,10 @@
       "download": "Baixar",
       "outputLabel": "docker-compose.yml",
       "note": "Nota: Lembre-se de alterar as senhas padrão antes de usar em produção.",
-      "detailed_description": "O Docker Compose Generator é uma ferramenta técnica que automatiza a criação de arquivos docker-compose.yml seguindo padrões de arquitetura de microsserviços. Ele permite definir serviços como MySQL, Redis, Nginx, Postgres, MongoDB e containers personalizados, configurando automaticamente dependências, redes, volumes persistentes e variáveis de ambiente. A ferramenta é essencial para desenvolvedores que precisam acelerar a configuração de ambientes de desenvolvimento, staging ou produção, evitando erros manuais na escrita de YAML e garantindo consistência entre diferentes instâncias de deploy. Funciona através de uma interface GUI onde o usuário seleciona serviços pré-configurados, ajusta parâmetros como portas mapeadas, credenciais e políticas de reinicialização, e a ferramenta gera o manifesto docker-compose na versão especificada (v3.8, v2.4, etc.), incluindo healthchecks, aliases de rede e estratégias de build quando necessário. Diferente de editores genéricos, implementa regras de validação contextual para evitar incompatibilidades entre drivers de storage e sistemas operacionais host.",
+      "detailed_description": "O Docker Compose Generator é uma ferramenta técnica que automatiza a criação de arquivos docker-compose.yml seguindo padrões de arquitetura de microsserviços. Ele permite definir serviços como MySQL, cache service, Nginx, Postgres, MongoDB e containers personalizados, configurando automaticamente dependências, redes, volumes persistentes e variáveis de ambiente. A ferramenta é essencial para desenvolvedores que precisam acelerar a configuração de ambientes de desenvolvimento, staging ou produção, evitando erros manuais na escrita de YAML e garantindo consistência entre diferentes instâncias de deploy. Funciona através de uma interface GUI onde o usuário seleciona serviços pré-configurados, ajusta parâmetros como portas mapeadas, credenciais e políticas de reinicialização, e a ferramenta gera o manifesto docker-compose na versão especificada (v3.8, v2.4, etc.), incluindo healthchecks, aliases de rede e estratégias de build quando necessário. Diferente de editores genéricos, implementa regras de validação contextual para evitar incompatibilidades entre drivers de storage e sistemas operacionais host.",
       "usage_steps": [
-        "Acesse a interface web e selecione os serviços desejados (MySQL, Redis, Nginx, etc.) através de checkboxes categorizados.",
-        "Configure parâmetros específicos para cada serviço: versão da imagem Docker, credenciais (MYSQL_ROOT_PASSWORD, REDIS_PORT), portas expostas e políticas de reinicialização (restart: unless-stopped).",
+        "Acesse a interface web e selecione os serviços desejados (MySQL, cache service, Nginx, etc.) através de checkboxes categorizados.",
+        "Configure parâmetros específicos para cada serviço: versão da imagem Docker, credenciais (MYSQL_ROOT_PASSWORD, cache service_PORT), portas expostas e políticas de reinicialização (restart: unless-stopped).",
         "Defina redes personalizadas e atribua aliases DNS entre containers usando o seletor de dependências interativas.",
         "Ajuste configurações avançadas: mapeamento de volumes persistentes, variáveis de ambiente customizadas e limites de recursos (mem_limit, cpus).",
         "Clique em 'Gerar docker-compose.yml' para obter o arquivo validado com linter integrado que identifica conflitos de portas ou redes.",
@@ -4702,7 +4702,7 @@
       ],
       "usage_examples": [
         "Criar ambiente de desenvolvimento LEMP para aplicação PHP: configurar MySQL 8.0 com volume de persistência, PHP-FPM 8.1 com extensões necessárias e Nginx com proxy reverso.",
-        "Montar infraestrutura de cache para microserviço Node.js: integrar Redis 6.2 com clusterização automática e configurações de timeout ajustadas.",
+        "Montar infraestrutura de cache para microserviço Node.js: integrar cache service 6.2 com clusterização automática e configurações de timeout ajustadas.",
         "Preparar ambiente de CI/CD com Postgres e PgAdmin: definir healthchecks para garantir prontidão do banco antes da execução de testes automatizados.",
         "Configurar stack de análise de logs ELK (Elasticsearch, Logstash, Kibana) com mapeamento de volumes para persistência de índices e regras de segurança (xpack)."
       ]
@@ -5158,7 +5158,7 @@
       "description": " gere tokens JSON Web com carga personalizada e chave secreta.",
       "seo_title": "Gerador de JWT Grátis Online",
       "seo_description": " gere tokens JWT personalizados, com expiração e assinatura HMAC/RSA online. Crie tokens de acesso para teste de autenticação e autorização de API.",
-      "detailed_description": "O JWT Generator é uma ferramenta técnica especializada para criar Tokens Web JSON (JWT) customizáveis, essenciais para autenticação e autorização em sistemas distribuídos. Este gerador permite ao usuário definir manualmente o payload (claims), escolher o algoritmo de assinatura (como HS256, HS384, HS512) e inserir uma chave secreta para gerar tokens válidos. Sua utilidade reside na capacidade de simular tokens para testes de API, debugar fluxos de autenticação OAuth2, ou entender a estrutura criptográfica de JWTs. Internamente, o processo envolve a criação de um header com metadados do token, a composição do payload com dados estruturados em JSON, e a geração de uma assinatura digital através de algoritmos HMAC. A saída é um token trifásico (header.payload.signature) codificado em Base64Url, garantindo integridade e autenticidade. Este recurso é fundamental para desenvolvedores que precisam validar implementações de Single Sign-On (SSO), testar mecanismos de refresh token ou explorar vulnerabilidades em tokens mal configurados.",
+      "detailed_description": "O JWT Generator é uma ferramenta técnica especializada para criar Tokens Web JSON (JWT) customizáveis, essenciais para autenticação e autorização em sistemas distribuídos. Este gerador permite ao usuário definir manualmente o payload (claims), escolher o algoritmo de assinatura (como HS256, HS384, HS512) e inserir uma chave secreta para gerar tokens válidos. Sua utilidade reside na capacidade de simular tokens para testes de API, debugar fluxos de autenticação authentication flows, ou entender a estrutura criptográfica de JWTs. Internamente, o processo envolve a criação de um header com metadados do token, a composição do payload com dados estruturados em JSON, e a geração de uma assinatura digital através de algoritmos HMAC. A saída é um token trifásico (header.payload.signature) codificado em Base64Url, garantindo integridade e autenticidade. Este recurso é fundamental para desenvolvedores que precisam validar implementações de Single Sign-On (SSO), testar mecanismos de refresh token ou explorar vulnerabilidades em tokens mal configurados.",
       "usage_steps": [
         "Acesse a aba 'Payload' e insira um JSON válido com as claims desejadas (ex: {\"sub\":\"1234567890\",\"name\":\"John Doe\"}).",
         "Na seção 'Secret Key', digite ou cole a chave simétrica utilizada para assinar o token.",
@@ -5168,7 +5168,7 @@
         "Valide a saída usando a aba 'Decoder' para verificar a estrutura ou testar a assinatura digital."
       ],
       "usage_examples": [
-        "Simular um token de acesso para testar endpoints protegidos em um microserviço sem configurar o fluxo completo de OAuth2.",
+        "Simular um token de acesso para testar endpoints protegidos em um microserviço sem configurar o fluxo completo de authentication flows.",
         "Gerar tokens com expiração personalizada (ex: exp: 1735689012) para validar mecanismos de refresh token em aplicativos mobile.",
         "Criar tokens com claims customizadas (ex: {\"roles\":[\"admin\",\"auditor\"]}) para testar políticas de autorização RBAC.",
         "Demonstrar falhas de segurança em tokens com algoritmo None ou chaves fracas durante treinamentos de segurança."
@@ -6535,7 +6535,7 @@
       "descRdp": "Protocolo de Desktop Remoto",
       "descPostgresql": "Banco de Dados PostgreSQL",
       "descVnc": "Computação de Rede Virtual",
-      "descRedis": "Banco de Dados Redis",
+      "desccache service": "Banco de Dados cache service",
       "descHttpAlt": "HTTP Alternativo",
       "descHttpsAlt": "HTTPS Alternativo",
       "descMongodb": "Banco de Dados MongoDB",
@@ -9041,7 +9041,7 @@
         "Ajuste a escala de cores através do seletor HSL para diferenciar fluxos por categoria.",
         "Modifique os parâmetros do layout (iterações, distância entre nós) no painel de configurações avançadas.",
         "Utilize a pré-visualização em tempo real para ajustar a opacidade dos links com base em seus valores.",
-        "Exporte o gráfico em SVG ou PNG com resolução ajustável (72-300 DPI) via botão de download."
+        "Exporte o gráfico em SVG ou PNG com resolução ajustável (72-high-resolution) via botão de download."
       ],
       "usage_examples": [
         "Análise de fluxo energético em uma usina termelétrica, mostrando perdas por calor e eficiência em cada etapa.",
@@ -9595,7 +9595,7 @@
         "3. Configure os eixos Y: mantenha pressionado para reordenar dimensões ou clique com botão direito para inverter escala",
         "4. Acesse 'Opções de Renderização' para ativar modo 'Cores por Dimensão' ou 'Agrupamento por Categoria'",
         "5. Use o controle deslizante 'Transparência' para ajustar opacidade das linhas e evitar sobrecarga visual",
-        "6. Clique em 'Exportar' e escolha entre SVG (para edição em Adobe Illustrator) ou PNG a 300dpi"
+        "6. Clique em 'Exportar' e escolha entre SVG (para edição em Adobe Illustrator) ou PNG a high-resolution"
       ],
       "usage_examples": [
         "Comparar especificações técnicas de 10 modelos de smartphones em 8 dimensões (preço, bateria, RAM, etc) para análise de trade-offs",
@@ -12405,13 +12405,13 @@
       "usage_steps": [
         "Clique em 'Selecionar Arquivo' para carregar seu documento PDF do dispositivo ou insira um link direto para o arquivo.",
         "Escolha o formato de saída desejado: PNG para imagens com transparência ou alta qualidade, JPEG para compactação otimizada.",
-        "Defina a resolução (DPI) entre 72 e 600, adequando-a ao uso final (ex.: 300 DPI para impressão, 150 DPI para web).",
+        "Defina a resolução (DPI) entre 72 e 600, adequando-a ao uso final (ex.: high-resolution para impressão, 150 DPI para web).",
         "Selecione as páginas específicas ou insira um intervalo (ex.: '1-3, 5') para converter apenas partes do documento.",
         "Ative a opção 'Manter Proporção' para evitar distorções ou ajuste manualmente as dimensões em pixels no campo fornecido.",
         "Clique em 'Converter' e aguarde a barra de progresso atingir 100% — os arquivos serão compactados em um ZIP e disponibilizados para download."
       ],
       "usage_examples": [
-        "Um designer gráfico extrai páginas de um catálogo PDF para integrar no Canva, utilizando PNG com 300 DPI para garantir nitidez em banners promocionais.",
+        "Um designer gráfico extrai páginas de um catálogo PDF para integrar no Canva, utilizando PNG com high-resolution para garantir nitidez em banners promocionais.",
         "Um estudante transforma anotações de aula em imagens JPEG com 150 DPI para visualizar no e-reader sem sobrecarregar a memória do dispositivo.",
         "Um analista financeiro converte gráficos de um relatório PDF em PNG com fundo transparente para inserir diretamente em apresentações do PowerPoint.",
         "Um desenvolvedor extrai páginas específicas de um contrato digital para alimentar um sistema de OCR, ajustando a resolução para melhorar a precisão da leitura de texto."
@@ -12552,7 +12552,7 @@
         "Acesse a interface do PDF Compressor através do menu 'Escritório' no painel principal.",
         "Arraste e solte o arquivo PDF na área de upload destacada ou clique para selecionar arquivos do seu dispositivo.",
         "Escolha o nível de compressão usando o seletor deslizante: 'Média' (ideal para documentos textuais) ou 'Alta' (recomendado para PDFs com imagens).",
-        "Ative a opção 'Otimizar imagens' para aplicar downsampling automático em imagens acima de 300 DPI.",
+        "Ative a opção 'Otimizar imagens' para aplicar downsampling automático em imagens acima de high-resolution.",
         "Clique no botão 'Processar PDF' e aguarde a barra de progresso indicar 100% de conclusão.",
         "Baixe o arquivo compactado usando o link gerado ou compartilhe diretamente através do botão 'Enviar por e-mail' integrado."
       ],
@@ -22874,9 +22874,9 @@
     },
     "docker-compose-generator": {
       "name": "Gerador Docker Compose",
-      "description": "Gere arquivos docker-compose.yml com serviços comuns como MySQL, Redis, Nginx.",
+      "description": "Gere arquivos docker-compose.yml com serviços comuns como MySQL, cache service, Nginx.",
       "seo_title": "Gerador Docker Compose grátis on-line",
-      "seo_description": "Gere arquivos docker-compose.yml com MySQL, PostgreSQL, Redis, Nginx e mais serviços online gratuitamente. Editor visual com visualização e validação YAML.",
+      "seo_description": "Gere arquivos docker-compose.yml com MySQL, PostgreSQL, cache service, Nginx e mais serviços online gratuitamente. Editor visual com visualização e validação YAML.",
       "version": "Compor versão",
       "databases": "Bancos de dados",
       "messaging": "Mensagens e pesquisa",
@@ -23659,7 +23659,7 @@
       "descRdp": "Protocolo de área de trabalho remota",
       "descPostgresql": "PostgreSQL Database",
       "descVnc": "Computação de rede virtual",
-      "descRedis": "Banco de dados Redis",
+      "desccache service": "Banco de dados cache service",
       "descHttpAlt": "HTTP Alternate",
       "descHttpsAlt": "HTTPS Alternate",
       "descMongodb": "MongoDB Database"

@@ -9,7 +9,7 @@
     "Copiez le schéma dans votre projet TypeScript ou téléchargez-le au format .ts via l'option dédiée"
   ],
   "usage_examples": [
-    "Un développeur backend construit un microservice REST et convertit les exemples de payloads de requêtes en schémas Zod pour valider les entrées utilisateur",
+    "Un développeur backend construit un service-oriented application REST et convertit les exemples de payloads de requêtes en schémas Zod pour valider les entrées utilisateur",
     "Une équipe frontend mappe les réponses d'une API GraphQL en schémas de type Zod pour typer strictement les données avant le rendu UI",
     "Un ingénieur données crée des validateurs automatiques pour des fichiers JSONL contenant des logs système, avec gestion des champs optionnels",
     "Un architecte logiciel convertit un fichier de configuration JSON en schéma Zod pour documenter et valider les paramètres d'environnement"

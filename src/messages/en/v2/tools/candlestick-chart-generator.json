@@ -41,7 +41,7 @@
     "3. Select time aggregation interval (1min/5min/1hr/daily) and set price scale type (linear/logarithmic) in the axis configuration panel",
     "4. Customize candlestick appearance through the style editor: adjust wick thickness (1-5px), set bull/bear color codes (HEX/RGB), and enable volume bars",
     "5. Activate technical overlays by toggling SMA (Simple Moving Average) controls and configuring period lengths (e.g., 9/20/50-day averages)",
-    "6. Export the rendered chart using the download controls, selecting either SVG format for scalable graphics or PNG at 300DPI resolution"
+    "6. Export the rendered chart using the download controls, selecting either SVG format for scalable graphics or PNG at high-resolution resolution"
   ],
   "usage_examples": [
     "A day trader analyzing NASDAQ-100 intraday volatility patterns across multiple trading sessions by generating 5-minute interval charts with volume-weighted price overlays",

@@ -11,7 +11,7 @@
   "usage_examples": [
     "إعداد بيئة مشروع ويب سريع باستخدام Express وHelmet مع نص تشغيل مخصص (npm run serve).",
     "إنشاء ملف تكوين لمشروع React مع تضمين تبعيات التطوير مثل ESLint وJest وPrettier.",
-    "تصميم package.json لواجهة ويب (API) تحتوي على تبعيات قاعدة البيانات (mongoose) وOAuth2.0 (passport).",
+    "تصميم package.json لواجهة ويب (API) تحتوي على تبعيات قاعدة البيانات (mongoose) وauthentication flows (passport).",
     "توليد ملف لوحدة NPM مخصصة مع رخصة MIT ونظام إدارة حزم Yarn ونص بناء مُخصص (build:webpack)."
   ],
   "version": "الإصدار",

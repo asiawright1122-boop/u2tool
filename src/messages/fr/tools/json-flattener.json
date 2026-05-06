@@ -10,7 +10,7 @@
   ],
   "usage_examples": [
     "Transformer une réponse API imbriquée (ex: données géolocalisées) en un format linéaire pour l'import dans une base de données relationnelle.",
-    "Normaliser des logs JSON hétérogènes provenant de microservices pour un pipeline ETL uniforme.",
+    "Normaliser des logs JSON hétérogènes provenant de service-oriented applications pour un pipeline ETL uniforme.",
     "Convertir un schéma JSON complexe en dictionnaire plat pour simplifier la validation avec JSON Schema.",
     "Préparer des données hiérarchiques pour l'analyse dans des outils BI qui requièrent des structures tabulaires."
   ]

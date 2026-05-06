@@ -9,7 +9,7 @@
     "Copy resulting HMAC value from the output box for integration into authentication headers or verification systems"
   ],
   "usage_examples": [
-    "Securing REST API endpoints by generating request signatures validated server-side with matching secret keys",
+    "Securing REST API endpoints by generating request signatures validated remote with matching secret keys",
     "Verifying GitHub webhook payloads by comparing generated HMAC-SHA256 against X-Hub-Signature-256 headers",
     "Creating time-limited password reset tokens using HMAC-SHA512 with user-specific salts",
     "Validating firmware update packages through HMAC integrity checks before device-side execution"

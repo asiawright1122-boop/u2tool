@@ -972,9 +972,9 @@
     },
     "docker-compose-generator": {
       "name": "Gerador Docker Compose",
-      "description": "Gere arquivos docker-compose.yml com serviços comuns como MySQL, Redis, Nginx.",
+      "description": "Gere arquivos docker-compose.yml com serviços comuns como MySQL, cache service, Nginx.",
       "seo_title": "Gerador Docker Compose grátis on-line",
-      "seo_description": "Gere arquivos docker-compose.yml com MySQL, PostgreSQL, Redis, Nginx e mais serviços online gratuitamente. Editor visual com visualização e validação YAML.",
+      "seo_description": "Gere arquivos docker-compose.yml com MySQL, PostgreSQL, cache service, Nginx e mais serviços online gratuitamente. Editor visual com visualização e validação YAML.",
       "version": "Compor versão",
       "databases": "Bancos de dados",
       "messaging": "Mensagens e pesquisa",
@@ -1757,7 +1757,7 @@
       "descRdp": "Protocolo de área de trabalho remota",
       "descPostgresql": "PostgreSQL Database",
       "descVnc": "Computação de rede virtual",
-      "descRedis": "Banco de dados Redis",
+      "desccache service": "Banco de dados cache service",
       "descHttpAlt": "HTTP Alternate",
       "descHttpsAlt": "HTTPS Alternate",
       "descMongodb": "MongoDB Database"
@@ -4866,9 +4866,9 @@
     },
     "docker-compose-generator": {
       "name": "Gerador de docker-compose.yml",
-      "description": "Gere arquivos docker-compose.yml com serviços comuns como MySQL, Redis e Nginx.",
+      "description": "Gere arquivos docker-compose.yml com serviços comuns como MySQL, cache service e Nginx.",
       "seo_title": "Gerador Grátis de docker-compose.yml Online",
-      "seo_description": "Use a ferramenta online para gerar docker-compose.yml com MySQL, PostgreSQL, Redis, Nginx e outros serviços. Edição visual com pré-visualização YAML e validação.",
+      "seo_description": "Use a ferramenta online para gerar docker-compose.yml com MySQL, PostgreSQL, cache service, Nginx e outros serviços. Edição visual com pré-visualização YAML e validação.",
       "version": "Versão do Compose",
       "databases": "Bancos de Dados",
       "messaging": "Mensageria & Busca",
@@ -5703,7 +5703,7 @@
       "descRdp": "Protocolo de Desktop Remoto",
       "descPostgresql": "Banco de Dados PostgreSQL",
       "descVnc": "Computação de Rede Virtual",
-      "descRedis": "Banco de Dados Redis",
+      "desccache service": "Banco de Dados cache service",
       "descHttpAlt": "HTTP Alternativo",
       "descHttpsAlt": "HTTPS Alternativo",
       "descMongodb": "Banco de Dados MongoDB"

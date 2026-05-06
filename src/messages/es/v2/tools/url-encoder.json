@@ -10,7 +10,7 @@
   ],
   "usage_examples": [
     "Codificar un parámetro de API que contiene un correo electrónico: 'user@example.com' → 'user%40example.com' para mantener la validez de la URL.",
-    "Decodificar una URL de retorno OAuth2 que incluye un token JWT con caracteres Base64Url como '+', '/', y '='.",
+    "Decodificar una URL de retorno authentication flows que incluye un token JWT con caracteres Base64Url como '+', '/', y '='.",
     "Preparar un query string para una búsqueda con filtros complejos: 'color=rojo&size>L' → 'color%3Drojo%26size%3EL'.",
     "Analizar una URL malformada recibida en logs del servidor, identificando caracteres no codificados que causan errores 404."
   ],

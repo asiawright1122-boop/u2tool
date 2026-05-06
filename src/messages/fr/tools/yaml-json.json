@@ -11,7 +11,7 @@
   "usage_examples": [
     "Transformer un fichier de configuration Kubernetes (YAML) en JSON pour l'intégrer à une pile serverless AWS nécessitant des templates CloudFormation.",
     "Débuguer une réponse API JSON mal formatée en la convertissant vers YAML pour une lecture structurée des erreurs de syntaxe.",
-    "Migrer les paramètres d'une application héritée utilisant YAML vers un microservice moderne exigeant du JSON pour les variables d'environnement.",
+    "Migrer les paramètres d'une application héritée utilisant YAML vers un service-oriented application moderne exigeant du JSON pour les variables d'environnement.",
     "Valider la cohérence d'un fichier YAML contenant des ancres et alias en générant sa représentation JSON équivalente pour vérifier l'intégrité des références."
   ]
 }

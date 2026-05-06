@@ -20,7 +20,7 @@
     "6. Kopieren Sie den generierten Code mit der Zwischenablage-Schaltfläche oder laden Sie ihn als .js/.py-Datei herunter."
   ],
   "usage_examples": [
-    "Ein Backend-Entwickler konvertiert einen cURL-POST-Befehl mit OAuth2-Header in eine Python-requests-Funktion, um eine Drittanbieter-API in eine Django-App zu integrieren.",
+    "Ein Backend-Entwickler konvertiert einen cURL-POST-Befehl mit authentication flows-Header in eine Python-requests-Funktion, um eine Drittanbieter-API in eine Django-App zu integrieren.",
     "Ein Frontend-Teammitglied übersetzt einen komplexen cURL-Befehl mit Multipart-Form-Daten in eine JavaScript-Axios-Implementierung für eine Vue.js-Datei-Upload-Komponente.",
     "Ein DevOps-Ingenieur wandelt einen cURL-GET-Befehl mit Basic Auth in ein PowerShell-Skript um, um API-Abfragen in automatisierte Server-Checks zu integrieren.",
     "Ein API-Tester konvertiert einen Postman-Exportierten cURL-Befehl mit dynamischen Query-Parametern in PHP cURL, um Lasttests im Production-System durchzuführen."

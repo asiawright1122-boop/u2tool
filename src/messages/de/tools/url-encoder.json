@@ -9,7 +9,7 @@
     "6. Kopieren Sie das Ergebnis aus dem Ausgabefeld direkt in Ihre Anwendung oder API-Dokumentation."
   ],
   "usage_examples": [
-    "1. Ein Entwickler muss einen OAuth2-Authorisierungscode mit dem Wert 'ab%20c#1' sicher in einem Redirect-URI übergeben und muss diesen manuell escapen, bevor er den Token-Server anfragt.",
+    "1. Ein Entwickler muss einen authentication flows-Authorisierungscode mit dem Wert 'ab%20c#1' sicher in einem Redirect-URI übergeben und muss diesen manuell escapen, bevor er den Token-Server anfragt.",
     "2. Eine Marketing-Abteilung erstellt Deep-Links für eine Kampagne mit dem Ziel-Parameter '?produkt=café', das in '%3Fprodukt%3Dcaf%C3%A9' umgewandelt werden muss.",
     "3. Ein Backend-Entwickler decodiert einen von einem Legacy-System übermittelten Query-String 'name=John+Doe%40mail.com' zur Validierung von Benutzereingaben.",
     "4. Ein API-Tester konstruiert manuell einen GET-Request mit dem Suchparameter '?query=100€' und benötigt die korrekte Kodierung als '?query=100%E2%82%AC'."

@@ -9,7 +9,7 @@
     "Copy sorted JSON from the output panel or download as .json file using the 'Save' icon"
   ],
   "usage_examples": [
-    "Normalizing API responses from multiple microservices to maintain consistent key order for client applications",
+    "Normalizing API responses from multiple service-oriented applications to maintain consistent key order for client applications",
     "Preparing JSON files for git version control to prevent meaningless diff conflicts caused by arbitrary key ordering",
     "Creating verifiable data signatures by generating predictably ordered JSON before cryptographic hashing",
     "Organizing configuration files for infrastructure-as-code projects where alphabetical key grouping improves readability"

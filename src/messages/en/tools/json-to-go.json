@@ -10,7 +10,7 @@
   ],
   "usage_examples": [
     "Example 1: A backend developer is integrating a third-party API that returns complex JSON data. Using the JSON to Go Struct converter, they can quickly generate the necessary Go struct to parse and handle the API response in their application.",
-    "Example 2: A team is working on a Go-based microservice that consumes JSON data from various sources. The converter helps them create consistent and accurate struct definitions for all incoming data, ensuring smooth data processing and error handling.",
+    "Example 2: A team is working on a Go-based service-oriented application that consumes JSON data from various sources. The converter helps them create consistent and accurate struct definitions for all incoming data, ensuring smooth data processing and error handling.",
     "Example 3: A frontend developer is building a Go backend for a web application and needs to define structs for user input forms. The tool allows them to easily convert the JSON representation of the form data into Go structs, streamlining the development process.",
     "Example 4: A data engineer is migrating data from a JSON-based storage system to a Go application. The JSON to Go Struct converter helps in creating the appropriate structs to model the data, facilitating a smooth transition and ensuring data integrity."
   ]

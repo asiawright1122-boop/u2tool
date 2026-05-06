@@ -22,7 +22,7 @@
     "Download the PEM-formatted certificate chain or export JSON analysis for audit documentation"
   ],
   "usage_examples": [
-    "A DevOps engineer verifies wildcard certificate coverage across microservices by checking SAN entries for *.api.example.com and associated subdomains",
+    "A DevOps engineer verifies wildcard certificate coverage across service-oriented applications by checking SAN entries for *.api.example.com and associated subdomains",
     "A security auditor confirms HTTP Public Key Pinning (HPKP) headers match the pin-sha256 values extracted from the certificate's SPKI hash",
     "A web developer troubleshoots 'NET::ERR_CERT_COMMON_NAME_INVALID' by cross-referencing the certificate's CN/SAN with the server's DNS records",
     "A compliance officer checks Extended Validation (EV) certificate fields to ensure organization name matches legal entity registered with the CA"

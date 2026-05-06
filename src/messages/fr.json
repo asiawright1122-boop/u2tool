@@ -1307,7 +1307,7 @@
         "Un développeur Spring Boot consomme une API météo externe et doit mapper les réponses JSON complexes (avec données imbriquées comme 'main.temp' ou 'wind.speed') vers des classes Java typées pour la logique métier.",
         "Migration d'un fichier de configuration JSON vers un format Java pour garantir la sécurité de type à la compilation dans une application critique.",
         "Création rapide de modèles de données pour une application Android à partir d'exemples de réponses API fournis par l'équipe backend.",
-        "Génération de DTO (Data Transfer Objects) pour un microservice Java, avec support des listes d'objets imbriqués et des valeurs optionnelles via Optional<T>."
+        "Génération de DTO (Data Transfer Objects) pour un service-oriented application Java, avec support des listes d'objets imbriqués et des valeurs optionnelles via Optional<T>."
       ]
     },
     "json-to-python": {
@@ -1373,7 +1373,7 @@
         "Création automatique de modèles Android à partir de réponses API OpenWeatherMap",
         "Transformation de logs JSON serveur en classes Kotlin pour analyse statistique",
         "Migration d'un projet JavaScript vers Kotlin avec préservation du schéma de données",
-        "Génération de DTO typesafe pour un microservice Kotlin consommant des messages Kafka JSON"
+        "Génération de DTO typesafe pour un service-oriented application Kotlin consommant des messages Kafka JSON"
       ],
       "moshi": "Moshi",
       "gson": "Gson",
@@ -1654,7 +1654,7 @@
       "description": "Générez des UUIDs (v4) aléatoires en un instant. Copiez des UUIDs individuels ou en lots.",
       "seo_title": "Générateur gratuit de UUID en ligne - Outil facile et rapide",
       "seo_description": "Créez instantanément des UUID v4 uniques et copiez-les en ligne. Notre outil vous aide à gérer vos données JSON, Base64 et SVG simplement et efficacement. Commencez dès maintenant !",
-      "detailed_description": "Le générateur UUID (v4) permet de créer des identifiants uniques universels basés sur un algorithme de génération aléatoire utilisant un générateur de nombres pseudo-aléatoires cryptographiquement sécurisé (CSPRNG). Contrairement aux versions 1 à 3 basées sur l'horodatage ou l'adresse MAC, le UUID v4 garantit une entropie maximale avec 122 bits aléatoires intégrés dans un format standardisé (8-4-4-4-12) composé de 32 caractères hexadécimaux. Ce type d'identifiant est essentiel pour les systèmes distribués nécessitant des clés primaires sans collision (bases de données NoSQL, microservices), les jetons de session temporaires ou les identifiants d'objets IoT. L'outil exploite l'algorithme de génération basé sur la norme RFC 4122, avec une option de conversion en majuscules/minuscules pour s'adapter aux conventions d'API spécifiques. La fonction de génération par lots (jusqu'à 1000 UUIDs) permet de remplir des environnements de test avec des données réalistes tout en évitant les doublons grâce à des vérifications de collision intégrées.",
+      "detailed_description": "Le générateur UUID (v4) permet de créer des identifiants uniques universels basés sur un algorithme de génération aléatoire utilisant un générateur de nombres pseudo-aléatoires cryptographiquement sécurisé (CSPRNG). Contrairement aux versions 1 à 3 basées sur l'horodatage ou l'adresse MAC, le UUID v4 garantit une entropie maximale avec 122 bits aléatoires intégrés dans un format standardisé (8-4-4-4-12) composé de 32 caractères hexadécimaux. Ce type d'identifiant est essentiel pour les systèmes distribués nécessitant des clés primaires sans collision (bases de données NoSQL, service-oriented applications), les jetons de session temporaires ou les identifiants d'objets IoT. L'outil exploite l'algorithme de génération basé sur la norme RFC 4122, avec une option de conversion en majuscules/minuscules pour s'adapter aux conventions d'API spécifiques. La fonction de génération par lots (jusqu'à 1000 UUIDs) permet de remplir des environnements de test avec des données réalistes tout en évitant les doublons grâce à des vérifications de collision intégrées.",
       "usage_steps": [
         "1. Définissez le nombre d'UUID souhaités dans le champ 'Quantité' (1 à 1000)",
         "2. Activez/désactivez l'option 'Majuscules' selon vos besoins",
@@ -1744,7 +1744,7 @@
       ],
       "usage_examples": [
         "Un administrateur système génère 20 mots de passe uniques pour configurer des comptes utilisateurs dans un environnement Linux, en exigeant des caractères majuscules et des chiffres pour respecter la politique de l'entreprise.",
-        "Un développeur crée un mot de passe de 64 caractères pour une clé secrète d'API OAuth2, incluant des symboles spéciaux pour répondre aux exigences de l'API Stripe.",
+        "Un développeur crée un mot de passe de 64 caractères pour une clé secrète d'API authentication flows, incluant des symboles spéciaux pour répondre aux exigences de l'API Stripe.",
         "Un utilisateur lambda conçoit un mot de passe réinitialisable pour un compte bancaire en ligne, en désactivant les caractères non supportés par l'interface du site.",
         "Un testeur de pénétration génère une liste de 1000 mots de passe de test pour valider la résistance d'un système d'authentification aux attaques par hybrides."
       ],
@@ -2070,7 +2070,7 @@
       "description": "Déboguez et vérifiez les tokens JWT avec validation de signature",
       "seo_title": "Outil en ligne gratuit pour déboguer JWT",
       "seo_description": "Décodez et vérifiez gratuitement des tokens JWT en ligne. Décryptez la tête et le chargement, vérifiez les signatures avec une clé secrète ou publique. Outil essentiel pour le débogage de l'authentification.",
-      "detailed_description": "Le JWT Debugger est un outil technique spécifiquement conçu pour analyser, valider et diagnostiquer les tokens JSON Web Token (JWT) selon les standards RFC 7519. Il permet de décomposer un token en trois segments (en-tête, payload et signature) et d'effectuer des vérifications cryptographiques sur la signature via des algorithmes comme HMAC-SHA256 ou RSA-SHA256. Les développeurs et administrateurs système peuvent utiliser cet outil pour identifier des problèmes de formatage, valider la provenance d'un token via une clé publique, ou vérifier la validité temporelle (claims 'exp' ou 'nbf'). L'outil affiche des erreurs précises en cas de signature invalide, de clé incorrecte, ou de données corrompues, tout en supportant l'analyse de tokens encodés avec des algorithmes modernes comme ES256 ou RS512. Ce niveau de détail technique en fait un outil indispensable pour déboguer des intégrations OAuth2 ou des systèmes d'authentification basés sur des tokens.",
+      "detailed_description": "Le JWT Debugger est un outil technique spécifiquement conçu pour analyser, valider et diagnostiquer les tokens JSON Web Token (JWT) selon les standards RFC 7519. Il permet de décomposer un token en trois segments (en-tête, payload et signature) et d'effectuer des vérifications cryptographiques sur la signature via des algorithmes comme HMAC-SHA256 ou RSA-SHA256. Les développeurs et administrateurs système peuvent utiliser cet outil pour identifier des problèmes de formatage, valider la provenance d'un token via une clé publique, ou vérifier la validité temporelle (claims 'exp' ou 'nbf'). L'outil affiche des erreurs précises en cas de signature invalide, de clé incorrecte, ou de données corrompues, tout en supportant l'analyse de tokens encodés avec des algorithmes modernes comme ES256 ou RS512. Ce niveau de détail technique en fait un outil indispensable pour déboguer des intégrations authentication flows ou des systèmes d'authentification basés sur des tokens.",
       "usage_steps": [
         "Collez le token JWT complet dans le champ d'entrée à l'étiquette 'Token à analyser'.",
         "Cliquez sur le bouton 'Décoder' pour afficher automatiquement les segments d'en-tête et de payload en clair.",
@@ -2950,7 +2950,7 @@
       "usage_examples": [
         "Transformer un fichier de configuration Kubernetes (YAML) en JSON pour l'intégrer à une pile serverless AWS nécessitant des templates CloudFormation.",
         "Débuguer une réponse API JSON mal formatée en la convertissant vers YAML pour une lecture structurée des erreurs de syntaxe.",
-        "Migrer les paramètres d'une application héritée utilisant YAML vers un microservice moderne exigeant du JSON pour les variables d'environnement.",
+        "Migrer les paramètres d'une application héritée utilisant YAML vers un service-oriented application moderne exigeant du JSON pour les variables d'environnement.",
         "Valider la cohérence d'un fichier YAML contenant des ancres et alias en générant sa représentation JSON équivalente pour vérifier l'intégrité des références."
       ],
       "invalidYaml": "invalidYaml",
@@ -3205,7 +3205,7 @@
         "Un développeur de backend utilise le JSON Schema Validator pour s'assurer que les données d'entrée d'une API REST respectent la structure définie dans le schéma JSON, réduisant ainsi les risques d'erreurs de traitement.",
         "Un ingénieur en systèmes d'information utilise cet outil pour vérifier la cohérence des données de configuration avant de les déployer sur un serveur de production, assurant ainsi la stabilité de l'application.",
         "Un développeur front-end utilise le JSON Schema Validator pour tester la conformité des données de réponse d'une API avant de les intégrer dans une application web, améliorant ainsi l'expérience utilisateur.",
-        "Un architecte logiciel utilise ce validateur pour auditer les échanges de données entre différents services dans un environnement microservices, garantissant que toutes les communications respectent les standards établis."
+        "Un architecte logiciel utilise ce validateur pour auditer les échanges de données entre différents services dans un environnement service-oriented applications, garantissant que toutes les communications respectent les standards établis."
       ],
       "schemaValidator": {
         "loadExample": "schemaValidator.loadExample",
@@ -3291,7 +3291,7 @@
         "Création d'interfaces pour les réponses d'une API météorologique avec gestion des valeurs nullables",
         "Génération de modèles de données à partir de fichiers de configuration JSON pour une application Electron",
         "Transformation de payloads IoT (JSON imbriqué avec timestamps et mesures) en types hiérarchiques",
-        "Conversion de spécifications OpenAPI en interfaces TypeScript pour un projet de microservices"
+        "Conversion de spécifications OpenAPI en interfaces TypeScript pour un projet de service-oriented applications"
       ],
       "json": {
         "invalidJson": "json.invalidJson"
@@ -4078,7 +4078,7 @@
       "usage_examples": [
         "Sécuriser une API REST en générant des signatures HMAC-SHA256 pour authentifier les requêtes d'un client mobile",
         "Valider l'origine des notifications webhook reçues par une plateforme SaaS en comparant les signatures HMAC",
-        "Créer des tokens JWT avec en-tête sécurisé pour l'authentification entre microservices dans une architecture cloud",
+        "Créer des tokens JWT avec en-tête sécurisé pour l'authentification entre service-oriented applications dans une architecture cloud",
         "Vérifier l'intégrité des fichiers de mise à jour firmware avant leur déploiement sur des dispositifs IoT"
       ],
       "hmac": {
@@ -4636,7 +4636,7 @@
         "Un développeur web recadre des images de galerie pour respecter un ratio 3:4 sur un site e-commerce avec mise en page responsive.",
         "Un photographe adapte ses clichés au format 4:5 requis par Instagram Stories tout en conservant les données EXIF techniques.",
         "Un designer crée des vignettes carrées uniformes (1024x1024 px) pour une application portfolio avec prévisualisation instantanée.",
-        "Un graphiste convertit des photos 3:2 en 4x6 pouces (300 DPI) pour impression physique avec marge de sécurité calculée automatiquement."
+        "Un graphiste convertit des photos 3:2 en 4x6 pouces (high-resolution) pour impression physique avec marge de sécurité calculée automatiquement."
       ],
       "aspectRatio": "Rapport d'aspect",
       "selectArea": "Sélectionner la zone",
@@ -4678,9 +4678,9 @@
     },
     "docker-compose-generator": {
       "name": "Générateur de docker-compose.yml",
-      "description": "Générer des fichiers docker-compose.yml avec des services courants comme MySQL, Redis, Nginx.",
+      "description": "Générer des fichiers docker-compose.yml avec des services courants comme MySQL, cache service, Nginx.",
       "seo_title": "Générateur Docker Compose Gratuit en Ligne",
-      "seo_description": "Générer des fichiers docker-compose.yml avec MySQL, PostgreSQL, Redis, Nginx et plus de services en ligne gratuitement. Éditeur visuel avec aperçu YAML et validation.",
+      "seo_description": "Générer des fichiers docker-compose.yml avec MySQL, PostgreSQL, cache service, Nginx et plus de services en ligne gratuitement. Éditeur visuel avec aperçu YAML et validation.",
       "version": "Version Compose",
       "databases": "Bases de Données",
       "messaging": "Messagerie & Recherche",
@@ -4691,9 +4691,9 @@
       "download": "Télécharger",
       "outputLabel": "docker-compose.yml",
       "note": "Note: N'oubliez pas de modifier les mots de passe par défaut avant de les utiliser en production.",
-      "detailed_description": "Le générateur Docker Compose est un outil technique conçu pour automatiser la création de fichiers docker-compose.yml conformes aux standards d'orchestration de conteneurs. Ce générateur permet aux développeurs de configurer précisément des services comme MySQL, Redis, ou Nginx, avec des options avancées telles que la définition de volumes persistants, de réseaux personnalisés, de variables d'environnement, et de contraintes de ressources. L'outil intègre une logique de validation en temps réel pour s'assurer que les ports exposés ne sont pas en conflit et que les dépendances entre services sont correctement déclarées. Les utilisateurs gagnent du temps en évitant les erreurs syntaxiques courantes dans les fichiers YAML, tout en bénéficiant d'une structure optimisée pour le déploiement en environnement de développement ou de production. L'interface intègre un moteur de template basé sur des profils techniques (comme « microservice API » ou « application full-stack ») qui préconfigure des paramètres adaptés à chaque cas d'utilisation.",
+      "detailed_description": "Le générateur Docker Compose est un outil technique conçu pour automatiser la création de fichiers docker-compose.yml conformes aux standards d'orchestration de conteneurs. Ce générateur permet aux développeurs de configurer précisément des services comme MySQL, cache service, ou Nginx, avec des options avancées telles que la définition de volumes persistants, de réseaux personnalisés, de variables d'environnement, et de contraintes de ressources. L'outil intègre une logique de validation en temps réel pour s'assurer que les ports exposés ne sont pas en conflit et que les dépendances entre services sont correctement déclarées. Les utilisateurs gagnent du temps en évitant les erreurs syntaxiques courantes dans les fichiers YAML, tout en bénéficiant d'une structure optimisée pour le déploiement en environnement de développement ou de production. L'interface intègre un moteur de template basé sur des profils techniques (comme « service-oriented application API » ou « application full-stack ») qui préconfigure des paramètres adaptés à chaque cas d'utilisation.",
       "usage_steps": [
-        "1. Sélectionnez les services souhaités (MySQL, Redis, Nginx, etc.) via les cases à cocher dans l'onglet 'Services'.",
+        "1. Sélectionnez les services souhaités (MySQL, cache service, Nginx, etc.) via les cases à cocher dans l'onglet 'Services'.",
         "2. Configurez les paramètres spécifiques pour chaque service : versions des images Docker, ports à mapper, variables d'environnement (ex: MYSQL_ROOT_PASSWORD).",
         "3. Définissez les volumes persistants en spécifiant les chemins d'accès hôte et conteneur dans la section 'Stockage'.",
         "4. Configurez les réseaux personnalisés en créant des sous-réseaux ou en reliant des services via des alias réseau.",
@@ -4702,7 +4702,7 @@
       ],
       "usage_examples": [
         "1. Déployer une stack LAMP complète avec MySQL 8.0 et PHPMyAdmin en configurant les variables d'environnement pour l'accès administrateur.",
-        "2. Créer un environnement de microservices avec Redis pour la mise en cache et un service Node.js connecté via un réseau Docker interne sécurisé.",
+        "2. Créer un environnement de service-oriented applications avec cache service pour la mise en cache et un service Node.js connecté via un réseau Docker interne sécurisé.",
         "3. Configurer un reverse proxy Nginx pour router le trafic vers plusieurs applications React et Django, avec des règles de réécriture d'URL intégrées.",
         "4. Générer un environnement de test avec PostgreSQL et MongoDB simultanés, chacun isolé dans des conteneurs avec des volumes temporaires effacés après exécution."
       ]
@@ -4723,7 +4723,7 @@
       ],
       "usage_examples": [
         "Un développeur frontend génère un package.json avec scripts de build optimisés pour React et Babel.",
-        "Une équipe standardise les configurations de dépendances de développement (ESLint, Prettier) à travers plusieurs microservices.",
+        "Une équipe standardise les configurations de dépendances de développement (ESLint, Prettier) à travers plusieurs service-oriented applications.",
         "Un mainteneur de bibliothèque crée un fichier compatible avec les exigences de publication sur npm, incluant des exports conditionnels.",
         "Un ingénieur DevOps prépare une configuration avec scripts de déploiement CI/CD intégrant Docker et des variables d'environnement."
       ],
@@ -5158,7 +5158,7 @@
       "description": "Générer des jetons JSON Web avec un payload et une clé secrète personnalisés.",
       "seo_title": "Générateur de JWT Gratuit en Ligne",
       "seo_description": "Générer des jetons JWT avec des revendications personnalisées, une expiration et un signe HMAC/RSA en ligne gratuitement. Créez des jetons d'accès pour l'authentification et la test de l'autorisation API.",
-      "detailed_description": "Le générateur JWT permet de créer des jetons Web JSON (JWT) conformes aux normes RFC 7519, intégrant des charges utiles personnalisées et des mécanismes de signature sécurisée. Ce dispositif technique sert à générer des jetons structurés en trois parties (en-tête, payload, signature) utilisant des algorithmes cryptographiques comme HMAC-SHA256 ou RS256. Les développeurs ont besoin de cet outil pour simuler des scénarios d'authentification stateless, tester la gestion des permissions dans les microservices, ou valider le comportement de middleware d'API. Le fonctionnement repose sur la saisie de revendications (claims) personnalisées sous format JSON, la sélection de l'algorithme de signature, et l'application d'une clé secrète (secret key) pour produire un token base64url encodé. L'interface décompose chaque composante du JWT, affichant en temps réel l'en-tête JWA, le payload JWS et la signature cryptographique finale, ce qui permet un débogage précis des en-têtes de sécurité.",
+      "detailed_description": "Le générateur JWT permet de créer des jetons Web JSON (JWT) conformes aux normes RFC 7519, intégrant des charges utiles personnalisées et des mécanismes de signature sécurisée. Ce dispositif technique sert à générer des jetons structurés en trois parties (en-tête, payload, signature) utilisant des algorithmes cryptographiques comme HMAC-SHA256 ou RS256. Les développeurs ont besoin de cet outil pour simuler des scénarios d'authentification stateless, tester la gestion des permissions dans les service-oriented applications, ou valider le comportement de middleware d'API. Le fonctionnement repose sur la saisie de revendications (claims) personnalisées sous format JSON, la sélection de l'algorithme de signature, et l'application d'une clé secrète (secret key) pour produire un token base64url encodé. L'interface décompose chaque composante du JWT, affichant en temps réel l'en-tête JWA, le payload JWS et la signature cryptographique finale, ce qui permet un débogage précis des en-têtes de sécurité.",
       "usage_steps": [
         "Accédez à l'onglet 'Payload' et définissez vos revendications (claims) personnalisées au format JSON (ex: {\"sub\": \"1234567890\", \"exp\": 1593423435})",
         "Sélectionnez l'algorithme de signature désiré via le menu déroulant 'Algorithm' (HS256, HS384, HS512, RS256, etc.)",
@@ -5170,8 +5170,8 @@
       "usage_examples": [
         "Simuler un jeton d'authentification pour tester un middleware Node.js utilisant la bibliothèque express-jwt",
         "Générer un token temporaire pour un système de réinitialisation de mot de passe avec expiration (claim 'exp') définie à 15 minutes",
-        "Créer des jetons de service-to-service avec des revendications de rôle RBAC pour sécuriser une architecture microservices",
-        "Tester la compatibilité d'un reverse proxy (ex: NGINX) avec les JWT lors de l'implémentation de l'authentification OAuth2 introspection"
+        "Créer des jetons de service-to-service avec des revendications de rôle RBAC pour sécuriser une architecture service-oriented applications",
+        "Tester la compatibilité d'un reverse proxy (ex: NGINX) avec les JWT lors de l'implémentation de l'authentification authentication flows introspection"
       ],
       "jwt": {
         "invalidPayload": "jwt.invalidPayload",
@@ -5283,7 +5283,7 @@
       "placeholder": "Entrez un objet JSON...",
       "graphqlOutput": "Schéma GraphQL",
       "typeInference": "Inférence de type",
-      "detailed_description": "L'outil JSON vers GraphQL permet d'automatiser la transformation d'objets JSON en schémas GraphQL typés. Techniquement, il analyse la structure d'un JSON valide pour inférer les types scalaires (String, Int, Boolean) et les types complexes (objets, tableaux), en générant des définitions de type GraphQL (type Query, type Mutation, input types) conformes aux spécifications du langage. Cette conversion est essentielle lorsqu'on migre des API REST vers GraphQL ou qu'on construit des interfaces de requêtes à partir de données existantes. Le processus inclut la détection de relations imbriquées, la gestion des clés primaires potentielles, et la création de champs requis (non-null assertions). L'outil utilise des algorithmes d'inférence statistique pour résoudre les ambiguïtés (ex: déterminer si une valeur numérique doit être un Int ou un Float) et propose des options pour personnaliser les noms de types ou les relations. Cela élimine le travail manuel fastidieux et réduit les erreurs de schéma dans les projets de microservices ou d'intégration de données.",
+      "detailed_description": "L'outil JSON vers GraphQL permet d'automatiser la transformation d'objets JSON en schémas GraphQL typés. Techniquement, il analyse la structure d'un JSON valide pour inférer les types scalaires (String, Int, Boolean) et les types complexes (objets, tableaux), en générant des définitions de type GraphQL (type Query, type Mutation, input types) conformes aux spécifications du langage. Cette conversion est essentielle lorsqu'on migre des API REST vers GraphQL ou qu'on construit des interfaces de requêtes à partir de données existantes. Le processus inclut la détection de relations imbriquées, la gestion des clés primaires potentielles, et la création de champs requis (non-null assertions). L'outil utilise des algorithmes d'inférence statistique pour résoudre les ambiguïtés (ex: déterminer si une valeur numérique doit être un Int ou un Float) et propose des options pour personnaliser les noms de types ou les relations. Cela élimine le travail manuel fastidieux et réduit les erreurs de schéma dans les projets de service-oriented applications ou d'intégration de données.",
       "usage_steps": [
         "Collez votre objet JSON dans la zone de texte 'Entrée JSON' avec formatage indenté ou compact.",
         "Ajustez les options avancées : définissez des préfixes de type (ex: 'UserType') ou forcez des mappings de champ (ex: 'id' → ID).",
@@ -5649,7 +5649,7 @@
       ],
       "usage_examples": [
         "Transformer une réponse API imbriquée (ex: données géolocalisées) en un format linéaire pour l'import dans une base de données relationnelle.",
-        "Normaliser des logs JSON hétérogènes provenant de microservices pour un pipeline ETL uniforme.",
+        "Normaliser des logs JSON hétérogènes provenant de service-oriented applications pour un pipeline ETL uniforme.",
         "Convertir un schéma JSON complexe en dictionnaire plat pour simplifier la validation avec JSON Schema.",
         "Préparer des données hiérarchiques pour l'analyse dans des outils BI qui requièrent des structures tabulaires."
       ]
@@ -6535,7 +6535,7 @@
       "descRdp": "Protocole de bureau à distance",
       "descPostgresql": "Base de données PostgreSQL",
       "descVnc": "Calcul distant virtuel",
-      "descRedis": "Base de données Redis",
+      "desccache service": "Base de données cache service",
       "descHttpAlt": "HTTP alternatif",
       "descHttpsAlt": "HTTPS alternatif",
       "descMongodb": "Base de données MongoDB",
@@ -6838,7 +6838,7 @@
       "usage_examples": [
         "Configurer un reverse proxy pour une application Node.js avec compression Gzip et cache de contenu statique",
         "Créer une configuration optimisée pour servir une application React SPA avec routage client-side",
-        "Mettre en place un load balancing avec health checks pour un cluster de microservices",
+        "Mettre en place un load balancing avec health checks pour un cluster de service-oriented applications",
         "Générer des règles de sécurité renforcées (rate limiting, IP whitelisting) pour un API REST"
       ],
       "exampleDomain": "example.com"
@@ -6869,7 +6869,7 @@
         "Copiez le code produit depuis la section 'Résultat' et collez-le dans votre environnement de développement."
       ],
       "usage_examples": [
-        "Un développeur API convertit une commande cURL d'authentification OAuth2 en code Python utilisant la bibliothèque requests pour l'intégrer dans un microservice.",
+        "Un développeur API convertit une commande cURL d'authentification authentication flows en code Python utilisant la bibliothèque requests pour l'intégrer dans un service-oriented application.",
         "Un testeur QA transforme des scripts cURL de test fonctionnel en requêtes Postman (JavaScript) pour valider des endpoints REST.",
         "Un administrateur système adapte une commande cURL de surveillance réseau en script PHP pour l'intégrer à un tableau de bord existant.",
         "Un enseignant en développement web génère des exemples en Java à partir de commandes cURL pour illustrer les requêtes HTTP synchrones en cours magistraux."
@@ -7309,7 +7309,7 @@
         "6. Téléchargez l'image générée ou copiez le lien partageable avec les paramètres de conversion appliqués."
       ],
       "usage_examples": [
-        "Un développeur convertit un logo SVG en PNG 300 DPI pour l'intégrer dans une brochure PDF destinée à l'impression offset.",
+        "Un développeur convertit un logo SVG en PNG high-resolution pour l'intégrer dans une brochure PDF destinée à l'impression offset.",
         "Un designer web optimise des icônes SVG en format WebP avec compression adaptative pour réduire le poids d'une page mobile.",
         "Un illustrateur transforme une infographie vectorielle complexe en JPEG haute qualité pour un article de blog nécessitant un chargement rapide.",
         "Un intégrateur HTML exporte des diagrammes SVG générés dynamiquement vers le format PNG avec fond transparent pour des présentations PowerPoint."
@@ -8238,7 +8238,7 @@
         "3. Ajuster les paramètres de l'axe Y avec l'option 'Log scale' pour visualiser des écarts exponentiels",
         "4. Sélectionner une palette de couleurs dans l'éditeur HEX ou importer un dégradé personnalisé via l'API CSS",
         "5. Activer les tooltips dynamiques en cochant 'Data labels' et configurer leur positionnement (inside/outside bars)",
-        "6. Générer le graphique et télécharger le résultat en format SVG ou PNG avec une résolution ajustable (72-300 DPI)"
+        "6. Générer le graphique et télécharger le résultat en format SVG ou PNG avec une résolution ajustable (72-high-resolution)"
       ],
       "usage_examples": [
         "Un étudiant en statistiques compare les taux de croissance démographique de 5 pays sur 10 ans, en utilisant une échelle logarithmique pour visualiser les différences exponentielles",
@@ -8543,7 +8543,7 @@
         "Activez le mode 'Échelle logarithmique' dans les paramètres des axes si vos données couvrent plusieurs ordres de grandeur.",
         "Utilisez la palette de personnalisation pour assigner des couleurs par groupe ou ajuster la taille des marqueurs selon une variable Z.",
         "Ajoutez une ligne de tendance en sélectionnant 'Calcul' > 'Régression linéaire' ou 'Modèle polynomial' sur la zone de graphique.",
-        "Exportez en PNG haute résolution (300 DPI) ou SVG vectoriel via le bouton 'Télécharger' en bas à droite."
+        "Exportez en PNG haute résolution (high-resolution) ou SVG vectoriel via le bouton 'Télécharger' en bas à droite."
       ],
       "usage_examples": [
         "Analyse statistique de la corrélation entre le taux de cholestérol et la pression artérielle dans une étude médicale.",
@@ -9114,7 +9114,7 @@
         "Activez/désactivez les étiquettes de segment avec le switch 'Affichage des textes'",
         "Ajustez la palette de couleurs via le sélecteur HSV ou importez un fichier .colormap",
         "Utilisez la roue de zoom pour ajuster le rayon interne/externe du graphique",
-        "Téléchargez le résultat au format SVG ou PNG 300dpi via le bouton 'Exporter avec résolution'"
+        "Téléchargez le résultat au format SVG ou PNG high-resolution via le bouton 'Exporter avec résolution'"
       ],
       "usage_examples": [
         "Visualisation de la structure du capital d'une entreprise avec actionnaires principaux et sous-actions à chaque niveau",
@@ -9243,7 +9243,7 @@
         "Ajustez les paramètres avancés : échelle logarithmique, seuil de détection des outliers, orientation des étiquettes",
         "Personnalisez l'apparence avec l'éditeur de thèmes CSS intégré pour modifier les couleurs des boîtes et les polices",
         "Utilisez le volet de prévisualisation en temps réel pour ajuster la taille du canvas et les marges",
-        "Téléchargez le graphique généré au format SVG ou PNG avec résolution configurable (jusqu'à 300 DPI)"
+        "Téléchargez le graphique généré au format SVG ou PNG avec résolution configurable (jusqu'à high-resolution)"
       ],
       "usage_examples": [
         "Analyser la distribution des notes d'étudiants across 5 sections d'un cours, en identifiant les groupes avec écarts interquartiles anormaux",
@@ -9717,7 +9717,7 @@
         "Un directeur IT modélise l'arborescence d'un datacenter avec 500 serveurs, en utilisant le layout radial pour visualiser la topologie réseau.",
         "Un historien génère un arbre généalogique interactif d'une dynastie royale sur 10 siècles, avec des tooltips affichant dates de naissance/mort au survol.",
         "Un chef de projet développe un organigramme d'équipe avec code couleur par département, intégrant des icônes FontAwesome dans chaque nœud.",
-        "Un développeur documente l'architecture d'une application microservices, en reliant chaque nœud à des URLs de documentation technique via des liens hypertextes."
+        "Un développeur documente l'architecture d'une application service-oriented applications, en reliant chaque nœud à des URLs de documentation technique via des liens hypertextes."
       ],
       "png": "PNG",
       "svg": "SVG"
@@ -9853,7 +9853,7 @@
         "Ajustez les couleurs et opacités des cercles via le sélecteur chromatique en temps réel",
         "Activez/désactivez l'affichage des valeurs d'intersection dans les zones de surbrillance",
         "Utilisez le mode édition interactive pour redimensionner manuellement les cercles avec la souris",
-        "Exportez le diagramme en SVG ou PNG avec résolution personnalisable jusqu'à 300dpi"
+        "Exportez le diagramme en SVG ou PNG avec résolution personnalisable jusqu'à high-resolution"
       ],
       "usage_examples": [
         "Comparaison des gènes différentiellement exprimés entre 3 conditions expérimentales en biologie moléculaire",
@@ -10838,7 +10838,7 @@
         "Ajuster les paramètres de présentation : épaisseur des anneaux (5 à 30px), rayon interne (20 à 80% du canvas) et espace inter-anneaux.",
         "Configurer les étiquettes : activer/désactiver les légendes, ajuster la taille de police et positionner les textes (intérieur/extérieur).",
         "Prévisualiser en temps réel les modifications avec la fonction de rendu dynamique basée sur ECharts-based browser chart rendering.",
-        "Exporter le diagramme généré via le bouton 'Télécharger SVG' ou 'Exporter PNG' avec résolution ajustable (72-300 DPI)."
+        "Exporter le diagramme généré via le bouton 'Télécharger SVG' ou 'Exporter PNG' avec résolution ajustable (72-high-resolution)."
       ],
       "usage_examples": [
         "Un directeur commercial compare les performances trimestrielles de trois équipes en attribuant un anneau par équipe, avec des couleurs dégradées selon la croissance.",
@@ -11781,7 +11781,7 @@
         "Ajouter des articles avec calcul automatique des taxes via le tableau de saisie à colonnes multiples",
         "Appliquer des règles de format conditionnel (ex: couleur d'alerte pour solde impayé) depuis l'éditeur CSS intégré",
         "Exporter en PDF/A avec compression 7-zip pour les archives légales ou en PDF/UA pour accessibilité RGAA",
-        "Transmettre directement la facture via l'intégration SMTP avec authentification OAuth2.0 aux services de messagerie"
+        "Transmettre directement la facture via l'intégration SMTP avec authentification authentication flows aux services de messagerie"
       ],
       "usage_examples": [
         "Un développeur web freelance utilisant le modèle 'Contrat de Service Tech' avec champs dynamiques pour convertir automatiquement les heures de travail en montants en USD/EUR via API de change",
@@ -12412,7 +12412,7 @@
       ],
       "usage_examples": [
         "Un chercheur extrait des graphiques scientifiques vectoriels depuis un article PDF pour les insérer dans un poster de conférence.",
-        "Un designer web convertit un PDF de maquette en images 300 DPI pour un site de portfolio.",
+        "Un designer web convertit un PDF de maquette en images high-resolution pour un site de portfolio.",
         "Un enseignant transforme des exercices PDF en fichiers JPEG optimisés pour un LMS éducatif.",
         "Un comptable archive des factures PDF en images PNG avec compression sans perte pour respecter les normes RGPD."
       ],
@@ -12547,7 +12547,7 @@
       "description": "Compressez des fichiers PDF pour réduire la taille tout en maintenant la qualité.",
       "seo_title": "Compresseur PDF en ligne gratuit",
       "seo_description": "Comprimez vos fichiers PDF en ligne gratuitement. Réduisez la taille tout en conservant la qualité du document avec des niveaux d'compression ajustables.",
-      "detailed_description": "Le compresseur PDF optimise les fichiers en appliquant des algorithmes de compression avancés, réduisant la taille du fichier sans altérer la qualité visuelle des contenus texte et vectoriels. Conçu pour répondre aux besoins des professionnels gestionnaires de documents numériques, cet outil élimine les redondances dans les flux PDF, compresse les images via des méthodes comme JPEG2000 (pour la compression avec perte) ou zlib (pour la compression sans perte), et optimise les polices intégrées. Il permet notamment de réduire les fichiers contenant des images haute résolution (scannés, illustrations vectorielles) en appliquant un échantillonnage adaptatif des images (ex. 300dpi → 150dpi) tout en conservant les propriétés structurelles (signets, hyperliens). Le processus inclut également une réécriture des dictionnaires PDF pour supprimer les objets inutilisés et une recompression des flux avec des algorithmes LZMA pour les documents textuels purs.",
+      "detailed_description": "Le compresseur PDF optimise les fichiers en appliquant des algorithmes de compression avancés, réduisant la taille du fichier sans altérer la qualité visuelle des contenus texte et vectoriels. Conçu pour répondre aux besoins des professionnels gestionnaires de documents numériques, cet outil élimine les redondances dans les flux PDF, compresse les images via des méthodes comme JPEG2000 (pour la compression avec perte) ou zlib (pour la compression sans perte), et optimise les polices intégrées. Il permet notamment de réduire les fichiers contenant des images haute résolution (scannés, illustrations vectorielles) en appliquant un échantillonnage adaptatif des images (ex. high-resolution → 150dpi) tout en conservant les propriétés structurelles (signets, hyperliens). Le processus inclut également une réécriture des dictionnaires PDF pour supprimer les objets inutilisés et une recompression des flux avec des algorithmes LZMA pour les documents textuels purs.",
       "usage_steps": [
         "1. Glissez-déposez votre fichier PDF dans la zone dédiée ou sélectionnez-le via le bouton « Choisir un fichier ».",
         "2. Ajustez le niveau de compression via le curseur à trois positions : « Équilibré » (par défaut), « Maximisé » ou « Sans perte ».",
@@ -16457,8 +16457,8 @@
       "name": "Convertisseur JSON en Protocol Buffers",
       "description": "Convertissez des données JSON en définition de schéma Protocol Buffers",
       "seo_title": "Convertisseur JSON en Protobuf Gratuit En Ligne - Générer un Schéma Proto",
-      "seo_description": "Convertissez des données JSON en schéma Protocol Buffers en ligne gratuitement. Générer automatiquement des fichiers .proto à partir de données JSON. Essentiel pour le développement gRPC et des microservices.",
-      "detailed_description": "Le convertisseur JSON en Protocol Buffers transforme des données JSON en définitions de schéma Protocol Buffers. Idéal pour les développeurs travaillant avec gRPC, les microservices et la sérialisation de données à haute performance.",
+      "seo_description": "Convertissez des données JSON en schéma Protocol Buffers en ligne gratuitement. Générer automatiquement des fichiers .proto à partir de données JSON. Essentiel pour le développement gRPC et des service-oriented applications.",
+      "detailed_description": "Le convertisseur JSON en Protocol Buffers transforme des données JSON en définitions de schéma Protocol Buffers. Idéal pour les développeurs travaillant avec gRPC, les service-oriented applications et la sérialisation de données à haute performance.",
       "usage_steps": [
         "Colléz vos données JSON dans la zone de saisie",
         "Configurer les options de nom de message et de paquet",
@@ -17015,7 +17015,7 @@
         "Copiez le schéma dans votre projet TypeScript ou téléchargez-le au format .ts via l'option dédiée"
       ],
       "usage_examples": [
-        "Un développeur backend construit un microservice REST et convertit les exemples de payloads de requêtes en schémas Zod pour valider les entrées utilisateur",
+        "Un développeur backend construit un service-oriented application REST et convertit les exemples de payloads de requêtes en schémas Zod pour valider les entrées utilisateur",
         "Une équipe frontend mappe les réponses d'une API GraphQL en schémas de type Zod pour typer strictement les données avant le rendu UI",
         "Un ingénieur données crée des validateurs automatiques pour des fichiers JSONL contenant des logs système, avec gestion des champs optionnels",
         "Un architecte logiciel convertit un fichier de configuration JSON en schéma Zod pour documenter et valider les paramètres d'environnement"
@@ -19359,7 +19359,7 @@
       "usage_examples": [
         "Créer un environnement de développement",
         "Générer une configuration de production",
-        "Construire un stack de microservices"
+        "Construire un stack de service-oriented applications"
       ],
       "input": "Entrée",
       "output": "Sortie",
@@ -22840,9 +22840,9 @@
     },
     "docker-compose-generator": {
       "name": "Générateur de composition Docker",
-      "description": "Générez des fichiers docker-compose.yml avec des services courants comme MySQL, Redis, Nginx.",
+      "description": "Générez des fichiers docker-compose.yml avec des services courants comme MySQL, cache service, Nginx.",
       "seo_title": "Générateur Docker Compose gratuit en ligne",
-      "seo_description": "Générez gratuitement des fichiers docker-compose.yml avec MySQL, PostgreSQL, Redis, Nginx et d'autres services en ligne. Éditeur visuel avec prévisualisation et validation YAML.",
+      "seo_description": "Générez gratuitement des fichiers docker-compose.yml avec MySQL, PostgreSQL, cache service, Nginx et d'autres services en ligne. Éditeur visuel avec prévisualisation et validation YAML.",
       "version": "Composer une version",
       "databases": "Bases de données",
       "messaging": "Messagerie et recherche",
@@ -23625,7 +23625,7 @@
       "descRdp": "Protocole de bureau à distance",
       "descPostgresql": "PostgreSQL Database",
       "descVnc": "Informatique en réseau virtuel",
-      "descRedis": "Base de données Redis",
+      "desccache service": "Base de données cache service",
       "descHttpAlt": "HTTP Alternate",
       "descHttpsAlt": "HTTPS Alternate",
       "descMongodb": "MongoDB Database"

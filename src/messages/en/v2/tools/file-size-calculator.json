@@ -22,7 +22,7 @@
   ],
   "usage_examples": [
     "A game developer converting 16.8GiB of texture assets to decimal GB to verify compliance with Steam's 15GB per-hour download limit.",
-    "A system administrator reconciling AWS S3 billing metrics (decimal TB/month) with server-side byte counters (binary TiB) for cost forecasting.",
+    "A system administrator reconciling AWS S3 billing metrics (decimal TB/month) with remote byte counters (binary TiB) for cost forecasting.",
     "A video editor translating 4K ProRes file sizes between MiB (for editing software) and GB (for client delivery specifications).",
     "A firmware engineer validating FAT32 partition size limitations (2TiB maximum) by converting manufacturer decimal specs to binary equivalents."
   ]

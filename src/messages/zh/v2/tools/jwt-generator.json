@@ -1,5 +1,5 @@
 {
-  "detailed_description": "JWT生成器是一款面向开发者的专业安全工具，支持创建符合RFC 7519标准的JSON Web Token。该工具通过HMAC SHA256/SHA512或RSA签名算法实现三段式结构（Header.Payload.Signature）的令牌生成，开发者可自定义JWT头部参数（如alg/typ）、有效载荷（claims）及签名密钥。在身份验证场景中，该工具可快速生成带exp过期时间的访问令牌；在系统集成时，能模拟不同加密算法的令牌生成过程。工具内嵌实时调试模式，可查看Base64Url编码前后的原始数据，支持开发者理解JWT的签发验证机制。其独特的多格式导出功能允许保存为JWT字符串、JSON对象或调试报告，特别适合微服务架构下的权限调试、第三方API对接测试以及OAuth2流程验证。",
+  "detailed_description": "JWT生成器是一款面向开发者的专业安全工具，支持创建符合RFC 7519标准的JSON Web Token。该工具通过HMAC SHA256/SHA512或RSA签名算法实现三段式结构（Header.Payload.Signature）的令牌生成，开发者可自定义JWT头部参数（如alg/typ）、有效载荷（claims）及签名密钥。在身份验证场景中，该工具可快速生成带exp过期时间的访问令牌；在系统集成时，能模拟不同加密算法的令牌生成过程。工具内嵌实时调试模式，可查看Base64Url编码前后的原始数据，支持开发者理解JWT的签发验证机制。其独特的多格式导出功能允许保存为JWT字符串、JSON对象或调试报告，特别适合微服务架构下的权限调试、第三方API对接测试以及authentication flows流程验证。",
   "usage_steps": [
     "在算法选择下拉框指定HS256/HS512/RS256等加密方式",
     "输入签名密钥文本框填写自定义密钥或使用自动生成按钮",

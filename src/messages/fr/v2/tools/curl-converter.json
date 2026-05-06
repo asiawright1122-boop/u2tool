@@ -20,7 +20,7 @@
     "Copiez le code produit depuis la section 'Résultat' et collez-le dans votre environnement de développement."
   ],
   "usage_examples": [
-    "Un développeur API convertit une commande cURL d'authentification OAuth2 en code Python utilisant la bibliothèque requests pour l'intégrer dans un microservice.",
+    "Un développeur API convertit une commande cURL d'authentification authentication flows en code Python utilisant la bibliothèque requests pour l'intégrer dans un service-oriented application.",
     "Un testeur QA transforme des scripts cURL de test fonctionnel en requêtes Postman (JavaScript) pour valider des endpoints REST.",
     "Un administrateur système adapte une commande cURL de surveillance réseau en script PHP pour l'intégrer à un tableau de bord existant.",
     "Un enseignant en développement web génère des exemples en Java à partir de commandes cURL pour illustrer les requêtes HTTP synchrones en cours magistraux."

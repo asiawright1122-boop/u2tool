@@ -22,6 +22,6 @@
     "Un développeur Spring Boot consomme une API météo externe et doit mapper les réponses JSON complexes (avec données imbriquées comme 'main.temp' ou 'wind.speed') vers des classes Java typées pour la logique métier.",
     "Migration d'un fichier de configuration JSON vers un format Java pour garantir la sécurité de type à la compilation dans une application critique.",
     "Création rapide de modèles de données pour une application Android à partir d'exemples de réponses API fournis par l'équipe backend.",
-    "Génération de DTO (Data Transfer Objects) pour un microservice Java, avec support des listes d'objets imbriqués et des valeurs optionnelles via Optional<T>."
+    "Génération de DTO (Data Transfer Objects) pour un service-oriented application Java, avec support des listes d'objets imbriqués et des valeurs optionnelles via Optional<T>."
   ]
 }

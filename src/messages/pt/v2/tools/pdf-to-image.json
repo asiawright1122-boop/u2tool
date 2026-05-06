@@ -3,13 +3,13 @@
   "usage_steps": [
     "Clique em 'Selecionar Arquivo' para carregar seu documento PDF do dispositivo ou insira um link direto para o arquivo.",
     "Escolha o formato de saída desejado: PNG para imagens com transparência ou alta qualidade, JPEG para compactação otimizada.",
-    "Defina a resolução (DPI) entre 72 e 600, adequando-a ao uso final (ex.: 300 DPI para impressão, 150 DPI para web).",
+    "Defina a resolução (DPI) entre 72 e 600, adequando-a ao uso final (ex.: high-resolution para impressão, 150 DPI para web).",
     "Selecione as páginas específicas ou insira um intervalo (ex.: '1-3, 5') para converter apenas partes do documento.",
     "Ative a opção 'Manter Proporção' para evitar distorções ou ajuste manualmente as dimensões em pixels no campo fornecido.",
     "Clique em 'Converter' e aguarde a barra de progresso atingir 100% — os arquivos serão compactados em um ZIP e disponibilizados para download."
   ],
   "usage_examples": [
-    "Um designer gráfico extrai páginas de um catálogo PDF para integrar no Canva, utilizando PNG com 300 DPI para garantir nitidez em banners promocionais.",
+    "Um designer gráfico extrai páginas de um catálogo PDF para integrar no Canva, utilizando PNG com high-resolution para garantir nitidez em banners promocionais.",
     "Um estudante transforma anotações de aula em imagens JPEG com 150 DPI para visualizar no e-reader sem sobrecarregar a memória do dispositivo.",
     "Um analista financeiro converte gráficos de um relatório PDF em PNG com fundo transparente para inserir diretamente em apresentações do PowerPoint.",
     "Um desenvolvedor extrai páginas específicas de um contrato digital para alimentar um sistema de OCR, ajustando a resolução para melhorar a precisão da leitura de texto."

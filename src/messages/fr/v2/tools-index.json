@@ -738,9 +738,9 @@
   },
   "docker-compose-generator": {
     "name": "Générateur de composition Docker",
-    "description": "Générez des fichiers docker-compose.yml avec des services courants comme MySQL, Redis, Nginx.",
+    "description": "Générez des fichiers docker-compose.yml avec des services courants comme MySQL, cache service, Nginx.",
     "seo_title": "Générateur Docker Compose gratuit en ligne",
-    "seo_description": "Générez gratuitement des fichiers docker-compose.yml avec MySQL, PostgreSQL, Redis, Nginx et d'autres services en ligne. Éditeur visuel avec prévisualisation et validation YAML."
+    "seo_description": "Générez gratuitement des fichiers docker-compose.yml avec MySQL, PostgreSQL, cache service, Nginx et d'autres services en ligne. Éditeur visuel avec prévisualisation et validation YAML."
   },
   "package-json-generator": {
     "name": "Générateur package.json",
@@ -2415,7 +2415,7 @@
     "name": "Convertisseur JSON en Protocol Buffers",
     "description": "Convertissez des données JSON en définition de schéma Protocol Buffers",
     "seo_title": "Convertisseur JSON en Protobuf Gratuit En Ligne - Générer un Schéma Proto",
-    "seo_description": "Convertissez des données JSON en schéma Protocol Buffers en ligne gratuitement. Générer automatiquement des fichiers .proto à partir de données JSON. Essentiel pour le développement gRPC et des microservices."
+    "seo_description": "Convertissez des données JSON en schéma Protocol Buffers en ligne gratuitement. Générer automatiquement des fichiers .proto à partir de données JSON. Essentiel pour le développement gRPC et des service-oriented applications."
   },
   "svg-to-png": {
     "name": "Convertisseur SVG en PNG Gratuit",

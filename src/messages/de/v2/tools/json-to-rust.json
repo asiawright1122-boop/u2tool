@@ -22,6 +22,6 @@
     "1. Konvertierung einer GitHub-API-JSON-Antwort mit verschachtelten Commits und Autorinformationen in eine Rust-Struct-Hierarchie für ein CI/CD-Tool.",
     "2. Mapping eines JSON-Konfigurationsdatei-Schemas für eine Systemdienstkonfiguration mit optionalen Timeout-Feldern und numerischen Grenzwerten.",
     "3. Erstellung von Datenmodellen aus OpenWeatherMap-API-Beispieldaten für eine Wetter-App mit komplexen Temperaturbereichen und Prognosearrays.",
-    "4. Automatische Generierung von Test-Fixtures aus JSON-Beispieldaten für unit-tests in einer Microservices-Architektur mit strikter Typenvalidierung."
+    "4. Automatische Generierung von Test-Fixtures aus JSON-Beispieldaten für unit-tests in einer service-oriented applications-Architektur mit strikter Typenvalidierung."
   ]
 }

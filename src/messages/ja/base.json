@@ -972,9 +972,9 @@
     },
     "docker-compose-generator": {
       "name": "Docker Compose ジェネレーター",
-      "description": "MySQL、Redis、Nginx などの一般的なサービスを使用して docker-compose.yml ファイルを生成します。",
+      "description": "MySQL、cache service、Nginx などの一般的なサービスを使用して docker-compose.yml ファイルを生成します。",
       "seo_title": "オンラインの無料 Docker Compose ジェネレーター",
-      "seo_description": "MySQL、PostgreSQL、Redis、Nginx などのサービスをオンラインで無料で docker-compose.yml ファイルを生成します。 YAML プレビューと検証を備えたビジュアル エディター。",
+      "seo_description": "MySQL、PostgreSQL、cache service、Nginx などのサービスをオンラインで無料で docker-compose.yml ファイルを生成します。 YAML プレビューと検証を備えたビジュアル エディター。",
       "version": "バージョンの作成",
       "databases": "データベース",
       "messaging": "メッセージングと検索",
@@ -1757,7 +1757,7 @@
       "descRdp": "リモートデスクトッププロトコル",
       "descPostgresql": "PostgreSQL Database",
       "descVnc": "仮想ネットワークコンピューティング",
-      "descRedis": "Redisデータベース",
+      "desccache service": "cache serviceデータベース",
       "descHttpAlt": "HTTP Alternate",
       "descHttpsAlt": "HTTPS Alternate",
       "descMongodb": "MongoDB Database"
@@ -4686,9 +4686,9 @@
     },
     "docker-compose-generator": {
       "name": "Docker Compose ジェネレーター",
-      "description": "MySQL, Redis, Nginx などの共通サービスを使用して docker-compose.yml ファイルを作成します。",
+      "description": "MySQL, cache service, Nginx などの共通サービスを使用して docker-compose.yml ファイルを作成します。",
       "seo_title": "無料オンラインDocker Compose生成ツール",
-      "seo_description": "MySQL、Redis、Nginxなどの共通サービスを使用したdocker-compose.ymlファイルを無料でオンライン生成。",
+      "seo_description": "MySQL、cache service、Nginxなどの共通サービスを使用したdocker-compose.ymlファイルを無料でオンライン生成。",
       "version": "Compose バージョン",
       "databases": "データベース",
       "messaging": "メッセージング & 検索",
@@ -5523,7 +5523,7 @@
       "descRdp": "リモートデスクトッププロトコル",
       "descPostgresql": "PostgreSQLデータベース",
       "descVnc": "バーチャルネットワークコンピュティング",
-      "descRedis": "Redisデータベース",
+      "desccache service": "cache serviceデータベース",
       "descHttpAlt": "HTTPアルタ",
       "descHttpsAlt": "HTTPSアルタ",
       "descMongodb": "MongoDBデータベース"

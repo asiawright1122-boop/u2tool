@@ -11,7 +11,7 @@
   "usage_examples": [
     "A developer migrating from AWS Elastic Beanstalk (YAML) to Vercel (dotenv) converts configuration files while validating secret keys",
     "DevOps engineer debugging a Kubernetes deployment identifies malformed multiline environment variables in a .env file",
-    "SRE team standardizing configuration across microservices converts legacy JSON configs to YAML while enforcing variable naming policies",
+    "SRE team standardizing configuration across service-oriented applications converts legacy JSON configs to YAML while enforcing variable naming policies",
     "CI pipeline automatically validating and transforming GitHub Actions workflow environment variables to Docker-compose format"
   ]
 }

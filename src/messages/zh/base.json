@@ -977,7 +977,7 @@
     },
     "docker-compose-generator": {
       "name": "Docker 撰写生成器",
-      "description": "使用 MySQL、Redis、Nginx 等常用服务生成 docker-compose.yml 文件。",
+      "description": "使用 MySQL、cache service、Nginx 等常用服务生成 docker-compose.yml 文件。",
       "seo_title": "免费在线 Docker Compose 生成器",
       "seo_description": "使用这款免费在线 Docker Compose 生成器快速创建多容器应用配置文件，适合本地开发、服务编排和部署准备。",
       "version": "撰写版本",
@@ -1762,7 +1762,7 @@
       "descRdp": "远程桌面协议",
       "descPostgresql": "PostgreSQL Database",
       "descVnc": "虚拟网络计算",
-      "descRedis": "Redis数据库",
+      "desccache service": "cache service数据库",
       "descHttpAlt": "HTTP Alternate",
       "descHttpsAlt": "HTTPS Alternate",
       "descMongodb": "MongoDB Database"
@@ -6717,7 +6717,7 @@
     },
     "docker-compose-generator": {
       "name": "Docker Compose生成器",
-      "description": "生成包含MySQL、Redis、Nginx等常用服务的docker-compose.yml文件。",
+      "description": "生成包含MySQL、cache service、Nginx等常用服务的docker-compose.yml文件。",
       "seo_title": "免费在线 Docker Compose 生成器",
       "seo_description": "使用这款免费在线 Docker Compose 生成器快速创建多容器应用配置文件，适合本地开发、服务编排和部署准备。",
       "version": "Compose版本",
@@ -8580,7 +8580,7 @@
       "descRdp": "远程桌面协议",
       "descPostgresql": "PostgreSQL数据库",
       "descVnc": "虚拟网络计算",
-      "descRedis": "Redis数据库",
+      "desccache service": "cache service数据库",
       "descHttpAlt": "HTTP备用",
       "descHttpsAlt": "HTTPS备用",
       "descMongodb": "MongoDB数据库"

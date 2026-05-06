@@ -11,7 +11,7 @@
   "usage_examples": [
     "Migrating a legacy MySQL users table to a MongoDB collection by converting INSERTs into document-insertion JSON arrays.",
     "Generating sample API response payloads from SQL database backups for frontend developers using React Query.",
-    "Creating configuration JSON files for microservices by extracting specific rows from a PostgreSQL settings table.",
+    "Creating configuration JSON files for service-oriented applications by extracting specific rows from a PostgreSQL settings table.",
     "Transforming SQL audit logs into structured JSON for ingestion into Elasticsearch data visualization pipelines."
   ]
 }

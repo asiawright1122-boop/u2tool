@@ -1,5 +1,5 @@
 {
-  "detailed_description": "JSON to Rust 是一个将 JSON 数据结构自动转换为 Rust 语言结构体（struct）的代码生成工具。其核心功能基于抽象语法树（AST）解析和类型推导算法，通过分析 JSON 的层级结构、字段类型（如字符串、数字、数组、嵌套对象等），生成带有 serde_derive 注解的 Rust 代码，支持序列化/反序列化操作。开发者在构建 RESTful API 客户端或处理配置文件时，可避免手动编写易出错的结构体定义。工具采用递归下降解析法处理嵌套结构，自动将 JSON 键名转换为 snake_case 命名规范，并支持自定义类型映射（如将时间戳字符串映射为 chrono::DateTime）。与同类工具相比，其独特之处在于可生成带 impl 方法的结构体模板，并自动处理可选字段（Option<T>）和枚举类型（enum）的模式匹配逻辑。",
+  "detailed_description": "JSON to Rust 是一个将 JSON 数据结构自动转换为 Rust 语言结构体（struct）的代码生成工具。其核心功能基于抽象语法树（AST）解析和类型推导算法，通过分析 JSON 的层级结构、字段类型（如字符串、数字、数组、嵌套对象等），生成带有 serde_derive 注解的 Rust 代码，支持序列化/反序列化操作。开发者在构建 API 客户端或处理配置文件时，可避免手动编写易出错的结构体定义。工具采用递归下降解析法处理嵌套结构，自动将 JSON 键名转换为 snake_case 命名规范，并支持自定义类型映射（如将时间戳字符串映射为 chrono::DateTime）。与同类工具相比，其独特之处在于可生成带 impl 方法的结构体模板，并自动处理可选字段（Option<T>）和枚举类型（enum）的模式匹配逻辑。",
   "usage_steps": [
     "1. 在输入区域粘贴有效 JSON 文本（支持多行缩进格式）",
     "2. 在 'Struct Name' 输入框指定根结构体标识符（如 UserResponse）",

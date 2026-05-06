@@ -1793,7 +1793,7 @@
         "Selecciona colores personalizados para módulos y fondo mediante paletas HEX.",
         "Elige nivel de corrección de errores: L (7%), M (15%), Q (25%) o H (30%).",
         "Haz clic en 'Generar QR' para procesar los datos con biblioteca ZXing optimizada.",
-        "Descarga el resultado en formato PNG con botón de resolución 300dpi."
+        "Descarga el resultado en formato PNG con botón de resolución high-resolution."
       ],
       "usage_examples": [
         "Un restaurante implementa QR en menús físicos para acceso instantáneo a carta digital con precios actualizados.",
@@ -2070,7 +2070,7 @@
       "description": "Depure y verifique tokens JWT con validación de firma",
       "seo_title": "Herramienta gratis para depurar JWT en línea",
       "seo_description": "Depura tokens JWT en línea gratis. Decodifica encabezados y cargamentos, verifica firmas con clave secreta o pública. Esencial para depuración de autenticación.",
-      "detailed_description": "El JWT Debugger es una herramienta técnica para desarrolladores que necesitan analizar, validar y solucionar problemas en tokens JWT (JSON Web Token) desde una perspectiva de seguridad. Este herramienta descompone el token en sus tres componentes principales: encabezado (header), carga útil (payload) y firma digital (signature), permitiendo verificar la integridad criptográfica mediante algoritmos como HMAC-SHA256, RS256 o ES256. Al decodificar las reclamaciones (claims) estándar (ej. exp, nbf, iss, aud) y aplicar validaciones estrictas de formato RFC 7519, los usuarios pueden identificar errores en la configuración de proveedores de autenticación, verificar si un token ha sido manipulado o comprobar coincidencias en claves asimétricas. Es especialmente útil para equipos que implementan OAuth2, OpenID Connect o sistemas de microservicios con tokens de sesión, ya que permite validar la firma sin exponer claves privadas al servidor. La herramienta también incluye un verificador de caducidad temporal (expiración) y análisis de políticas de seguridad (como la validez de la hora de emisión 'iat' o el 'leeway' para sincronización de relojes).",
+      "detailed_description": "El JWT Debugger es una herramienta técnica para desarrolladores que necesitan analizar, validar y solucionar problemas en tokens JWT (JSON Web Token) desde una perspectiva de seguridad. Este herramienta descompone el token en sus tres componentes principales: encabezado (header), carga útil (payload) y firma digital (signature), permitiendo verificar la integridad criptográfica mediante algoritmos como HMAC-SHA256, RS256 o ES256. Al decodificar las reclamaciones (claims) estándar (ej. exp, nbf, iss, aud) y aplicar validaciones estrictas de formato RFC 7519, los usuarios pueden identificar errores en la configuración de proveedores de autenticación, verificar si un token ha sido manipulado o comprobar coincidencias en claves asimétricas. Es especialmente útil para equipos que implementan authentication flows, authentication flows o sistemas de microservicios con tokens de sesión, ya que permite validar la firma sin exponer claves privadas al servidor. La herramienta también incluye un verificador de caducidad temporal (expiración) y análisis de políticas de seguridad (como la validez de la hora de emisión 'iat' o el 'leeway' para sincronización de relojes).",
       "usage_steps": [
         "Pegue el token JWT completo en el campo de texto 'Token de entrada' en la interfaz.",
         "Haga clic en 'Decodificar' para separar y mostrar en paneles individuales el header, payload y signature en formato JSON.",
@@ -2080,7 +2080,7 @@
         "Utilice la sección 'Reclamaciones' para verificar fechas de expiración (exp), emisor (iss), audiencia (aud) y otros metadatos críticos."
       ],
       "usage_examples": [
-        "Un desarrollador implementa OAuth2 y descubre que los tokens generados por su proveedor no pasan la validación debido a un error en el formato de la clave pública RSA.",
+        "Un desarrollador implementa authentication flows y descubre que los tokens generados por su proveedor no pasan la validación debido a un error en el formato de la clave pública RSA.",
         "Un equipo de seguridad identifica tokens con fechas 'nbf' (not before) incorrectas, causando fallos en la autorización de microservicios.",
         "Un ingeniero verifica que una firma ES256 generada por una aplicación móvil coincide con la clave pública del backend para prevenir ataques de suplantación.",
         "Un auditor examina reclamaciones personalizadas en el payload para asegurar que no contienen datos sensibles en texto plano, cumpliendo con políticas de privacidad."
@@ -4132,7 +4132,7 @@
       "description": "Genere contraseñas de un solo uso basadas en el tiempo compatibles con Google Authenticator.",
       "seo_title": "Generador gratuito de TOTP en línea",
       "seo_description": "Genera TOTP one-time passwords en línea de forma gratuita. Soporta códigos compatibles con Google Authenticator con claves secretas personalizadas y intervalos de tiempo.",
-      "detailed_description": "El Generador TOTP (Time-Based One-Time Password) implementa el estándar RFC 6238 para crear contraseñas de un solo uso sincronizadas temporalmente. Este mecanismo utiliza una clave secreta compartida y una marca de tiempo para generar tokens mediante funciones hash criptográficas HMAC-SHA1. El algoritmo divide el tiempo en intervalos de 30 segundos, produciendo un código de 6-8 dígitos que cambia en cada período. Los usuarios necesitan esta herramienta para configurar autenticación de dos factores (2FA) en servicios como GitHub, Google Workspace o plataformas blockchain. Los desarrolladores lo usan para depurar integraciones OAuth2 o probar la resistencia de sistemas de autenticación. Funciona localmente en el navegador mediante Web Crypto API, garantizando que las claves nunca salgan del dispositivo. Al escanear el código QR generado, aplicaciones como Google Authenticator sincronizan su reloj interno con el servidor de autenticación, permitiendo la validación asincrónica de tokens.",
+      "detailed_description": "El Generador TOTP (Time-Based One-Time Password) implementa el estándar RFC 6238 para crear contraseñas de un solo uso sincronizadas temporalmente. Este mecanismo utiliza una clave secreta compartida y una marca de tiempo para generar tokens mediante funciones hash criptográficas HMAC-SHA1. El algoritmo divide el tiempo en intervalos de 30 segundos, produciendo un código de 6-8 dígitos que cambia en cada período. Los usuarios necesitan esta herramienta para configurar autenticación de dos factores (2FA) en servicios como GitHub, Google Workspace o plataformas blockchain. Los desarrolladores lo usan para depurar integraciones authentication flows o probar la resistencia de sistemas de autenticación. Funciona localmente en el navegador mediante Web Crypto API, garantizando que las claves nunca salgan del dispositivo. Al escanear el código QR generado, aplicaciones como Google Authenticator sincronizan su reloj interno con el servidor de autenticación, permitiendo la validación asincrónica de tokens.",
       "usage_steps": [
         "Ingresa una clave secreta en formato Base32 (ej: 'JBSWY3DPEHPK3PXP') en el campo designado",
         "Selecciona el intervalo de tiempo (30s o 60s) según la configuración del servicio destino",
@@ -4143,7 +4143,7 @@
       ],
       "usage_examples": [
         "Configurar 2FA en una cuenta de correo corporativo sin acceso a internet durante viajes",
-        "Depurar un sistema de autenticación OAuth2 en un entorno de desarrollo local aislado",
+        "Depurar un sistema de autenticación authentication flows en un entorno de desarrollo local aislado",
         "Generar códigos de recuperación para cuentas de criptomonedas en dispositivos offline",
         "Comparar resultados entre algoritmos SHA-1, SHA-256 y SHA-512 en entornos de pruebas de seguridad"
       ],
@@ -4678,9 +4678,9 @@
     },
     "docker-compose-generator": {
       "name": "Generador de docker-compose.yml",
-      "description": "Genera archivos docker-compose.yml con servicios comunes como MySQL, Redis, Nginx.",
+      "description": "Genera archivos docker-compose.yml con servicios comunes como MySQL, cache service, Nginx.",
       "seo_title": "Generador gratuito de docker-compose en línea",
-      "seo_description": "Crea archivos docker-compose.yml con MySQL, PostgreSQL, Redis y más servicios en línea. Herramienta visual con vista previa YAML y validación gratis.",
+      "seo_description": "Crea archivos docker-compose.yml con MySQL, PostgreSQL, cache service y más servicios en línea. Herramienta visual con vista previa YAML y validación gratis.",
       "version": "Versión de Compose",
       "databases": "Bases de Datos",
       "messaging": "Mensajería & Búsqueda",
@@ -4693,7 +4693,7 @@
       "note": "Nota: Recuerda cambiar las contraseñas por defecto antes de usar en producción.",
       "detailed_description": "El Generador de Docker Compose permite a desarrolladores definir configuraciones de múltiples contenedores mediante una interfaz especializada, generando archivos docker-compose.yml que incluyen servicios, redes, volúmenes y dependencias con sintaxis validada. Esta herramienta resuelve problemas comunes como errores manuales en la configuración YAML, la falta de consistencia entre entornos de desarrollo y producción, y la complejidad de gestionar dependencias entre servicios. Al seleccionar opciones en la interfaz, el usuario especifica versiones de imágenes, variables de entorno, mapeo de puertos, configuraciones de almacenamiento persistente y políticas de reinicio, mientras el generador aplica convenciones de nombres y buenas prácticas de seguridad automáticamente. La lógica interna convierte las entradas de usuario en bloques YAML estructurados siguiendo las especificaciones de Docker Compose, incluyendo healthchecks predeterminados y limitaciones de recursos para entornos de producción. Es especialmente útil para crear configuraciones reproducibles en proyectos con dependencias complejas, permitiendo a los equipos enfocarse en el desarrollo en lugar de en la infraestructura de contenedores.",
       "usage_steps": [
-        "1. Selecciona los servicios necesarios (MySQL, Redis, Nginx, etc.) desde el panel de opciones predefinidas.",
+        "1. Selecciona los servicios necesarios (MySQL, cache service, Nginx, etc.) desde el panel de opciones predefinidas.",
         "2. Configura parámetros individuales para cada servicio: versión de imagen, variables de entorno (ej. MYSQL_ROOT_PASSWORD), puertos expuestos y directorios montados.",
         "3. Define redes personalizadas y asigna servicios a subredes específicas mediante el editor de redes.",
         "4. Establece dependencias entre contenedores usando el campo 'depends_on' para garantizar el orden de inicio correcto.",
@@ -4702,7 +4702,7 @@
       ],
       "usage_examples": [
         "1. Configurar una pila LAMP completa con Apache, MySQL 8.0 y PHPMyAdmin, incluyendo volúmenes para almacenamiento persistente del directorio /var/www/html.",
-        "2. Implementar una arquitectura de microservicios con dos contenedores de Node.js comunicándose a través de Redis como caché de mensajes.",
+        "2. Implementar una arquitectura de microservicios con dos contenedores de Node.js comunicándose a través de cache service como caché de mensajes.",
         "3. Crear un entorno de desarrollo para una aplicación Django con PostgreSQL 14, configuración de variables de entorno y mapeo de puertos 8000:8000.",
         "4. Generar una configuración para pruebas CI/CD con GitLab Runner, un contenedor de base de datos de prueba y servicios de notificación por correo electrónico."
       ]
@@ -5019,7 +5019,7 @@
       "usage_examples": [
         "Ejemplo 1: Un desarrollador responsable de un blog de noticias necesita asegurarse de que cada nueva publicación se muestre correctamente cuando se comparte en redes sociales. Utiliza Open Graph Preview para verificar que el título, la imagen y la descripción sean atractivos y precisos antes de publicar el artículo.",
         "Ejemplo 2: Un equipo de marketing digital está lanzando una campaña de promoción para un nuevo producto. Quieren asegurarse de que todas las páginas de aterrizaje se muestren de manera consistente en diferentes plataformas. Open Graph Preview les permite revisar y optimizar los metadatos OG para maximizar la engagement.",
-        "Ejemplo 3: Un diseñador web está trabajando en la rediseño de un sitio e-commerce. Durante el proceso, utiliza Open Graph Preview para verificar que las tarjetas de compartir de los productos sigan siendo atractivas y funcionales, incluso después de los cambios en el diseño y la estructura del sitio.",
+        "Ejemplo 3: Un diseñador web está trabajando en la cache serviceeño de un sitio e-commerce. Durante el proceso, utiliza Open Graph Preview para verificar que las tarjetas de compartir de los productos sigan siendo atractivas y funcionales, incluso después de los cambios en el diseño y la estructura del sitio.",
         "Ejemplo 4: Un administrador de contenidos de una organización sin fines de lucro necesita compartir regularmente actualizaciones y campañas de recaudación de fondos en redes sociales. Open Graph Preview le ayuda a asegurarse de que las imágenes y descripciones sean apropiadas y generen el impacto deseado."
       ],
       "openGraphPreview": {
@@ -5159,7 +5159,7 @@
       "description": "Genera JSON Web Tokens con un payload personalizado y una clave secreta.",
       "seo_title": "Generador JWT gratis en línea",
       "seo_description": "Crea tokens JWT personalizados con claims, expiración y firma HMAC/RSA en línea. Herramienta gratuita para autenticación y autorización de API.",
-      "detailed_description": "El generador JWT es una herramienta especializada para crear tokens web JSON (JWT) con configuraciones avanzadas de cabecera, payload y firma. Técnicamente, construye tokens según la especificación RFC 7519 mediante tres componentes críticos: un encabezado que define el algoritmo de cifrado (HS256, RS256, etc.), un payload con claims personalizados (como expiración, permisos o datos de usuario) y una firma digital generada a partir de una clave secreta o par de claves asimétricas. Este instrumento es esencial para desarrolladores que implementan sistemas de autenticación stateless, prueban políticas de expiración de sesiones o simulan flujos OAuth2. Al permitir ajustar parámetros como 'nbf' (not before) o 'aud' (audience), facilita pruebas de seguridad en APIs RESTful. La herramienta aplica codificación Base64Url seguida de firma criptográfica con SHA-256 o RSA, garantizando tokens válidos según estándares industriales. Su utilidad radica en permitir pruebas controladas de flujos de autenticación sin depender de servidores externos.",
+      "detailed_description": "El generador JWT es una herramienta especializada para crear tokens web JSON (JWT) con configuraciones avanzadas de cabecera, payload y firma. Técnicamente, construye tokens según la especificación RFC 7519 mediante tres componentes críticos: un encabezado que define el algoritmo de cifrado (HS256, RS256, etc.), un payload con claims personalizados (como expiración, permisos o datos de usuario) y una firma digital generada a partir de una clave secreta o par de claves asimétricas. Este instrumento es esencial para desarrolladores que implementan sistemas de autenticación stateless, prueban políticas de expiración de sesiones o simulan flujos authentication flows. Al permitir ajustar parámetros como 'nbf' (not before) o 'aud' (audience), facilita pruebas de seguridad en APIs RESTful. La herramienta aplica codificación Base64Url seguida de firma criptográfica con SHA-256 o RSA, garantizando tokens válidos según estándares industriales. Su utilidad radica en permitir pruebas controladas de flujos de autenticación sin depender de servidores externos.",
       "usage_steps": [
         "Completa el formulario de claims en formato JSON con campos como 'sub', 'exp' y 'roles' en el editor de payload.",
         "Selecciona el algoritmo de firma en el dropdown: opciones avanzadas como HS256, HS384, RS256 o None para depuración.",
@@ -6536,7 +6536,7 @@
       "descRdp": "Protocolo de Escritorio Remoto",
       "descPostgresql": "Base de Datos PostgreSQL",
       "descVnc": "Computación de Red Virtual",
-      "descRedis": "Base de Datos Redis",
+      "desccache service": "Base de Datos cache service",
       "descHttpAlt": "HTTP Alternativo",
       "descHttpsAlt": "HTTPS Alternativo",
       "descMongodb": "Base de Datos MongoDB",
@@ -7311,7 +7311,7 @@
       ],
       "usage_examples": [
         "Un desarrollador web convierte iconos SVG a PNG-24 para compatibilidad con aplicaciones móviles híbridas que usan WebView",
-        "Un diseñador gráfico genera versiones rasterizadas de logotipos SVG a 300 DPI para impresión en folletos",
+        "Un diseñador gráfico genera versiones rasterizadas de logotipos SVG a high-resolution para impresión en folletos",
         "Un equipo DevOps automatiza la generación de miniaturas JPEG desde SVGs mediante una API REST para un CMS",
         "Un ingeniero de machine learning exporta visualizaciones vectoriales a WebP para optimizar datasets de entrenamiento de redes neuronales"
       ]
@@ -7343,7 +7343,7 @@
         "Codificar una clave privada SSH en formato PEM a Base64 para incluirla en un archivo de configuración Terraform",
         "Convertir un hash SHA-256 (64 caracteres hex) a Base64 para comparar huellas digitales en herramientas de análisis de malware",
         "Transformar una imagen PNG en Base64 para incrustarla directamente en un documento SVG optimizado",
-        "Decodificar un token OAuth2 en formato JWT que contiene un payload hexadecimal representando credenciales temporales"
+        "Decodificar un token authentication flows en formato JWT que contiene un payload hexadecimal representando credenciales temporales"
       ]
     },
     "pdf-to-base64": {
@@ -9448,7 +9448,7 @@
         "Elije el rango temporal de visualización (anual, trimestral o mensual) y ajusta la orientación del calendario (horizontal/vertical) en el panel de configuración.",
         "Activa la opción 'Mostrar leyenda' para incluir una barra de intensidad o desactívala para representaciones minimalistas.",
         "Usa el zoom ajustable (1x a 4x) para verificar detalles y ajusta los márgenes de celda en píxeles usando el control deslizante de precisión.",
-        "Descarga el resultado en formato SVG con botón derecho → 'Guardar como' o genera una imagen PNG de 300dpi mediante el botón de exportación rasterizada."
+        "Descarga el resultado en formato SVG con botón derecho → 'Guardar como' o genera una imagen PNG de high-resolution mediante el botón de exportación rasterizada."
       ],
       "usage_examples": [
         "Un desarrollador web analiza el tráfico diario de una aplicación, identificando picos estacionales mediante gradientes rojos en fechas de alta actividad.",
@@ -9854,7 +9854,7 @@
         "Personaliza los colores de los círculos y transparencias mediante el selector RGB avanzado en la barra lateral",
         "Activa la opción 'Ajuste automático' para optimizar la posición y tamaño de los elementos según las proporciones de datos",
         "Utiliza la herramienta de anotación para agregar etiquetas matemáticas (como símbolos de intersección ∩ o unión ∪) directamente en el diagrama",
-        "Exporta el resultado en formato SVG, PNG o PDF con opciones de resolución ajustable hasta 300dpi"
+        "Exporta el resultado en formato SVG, PNG o PDF con opciones de resolución ajustable hasta high-resolution"
       ],
       "usage_examples": [
         "Un equipo de marketing analiza solapamientos entre segmentos de clientes que utilizan diferentes canales digitales",
@@ -12406,7 +12406,7 @@
       "usage_steps": [
         "Haz clic en el botón 'Cargar PDF' y selecciona tu archivo desde disco duro o arrástralo al área designada",
         "Elige el formato de salida en el selector: PNG (transparencia alfa soportada) o JPEG (compresión ajustable)",
-        "Configura la resolución DPI en el slider (predefinido: 300 DPI para impresión profesional)",
+        "Configura la resolución DPI en el slider (predefinido: high-resolution para impresión profesional)",
         "Especifica el rango de páginas en el campo de texto usando notación de intervalos (ej: 3,5-8,12)",
         "Presiona 'Iniciar Conversión' y monitorea el progreso en la barra de estado en tiempo real",
         "Descarga los archivos resultantes en un paquete ZIP con estructura de directorios preservada"
@@ -12448,7 +12448,7 @@
         "Una vez que el PDF esté listo, se te ofrecerá la opción de descargarlo directamente a tu dispositivo o compartirlo mediante un enlace de descarga."
       ],
       "usage_examples": [
-        "Un diseñador gráfico necesita convertir una serie de bocetos digitales en un portafolio PDF para una presentación a un cliente. Utiliza Image to PDF para organizar las imágenes en el orden correcto y ajustar la resolución a 300 DPI para una impresión de alta calidad.",
+        "Un diseñador gráfico necesita convertir una serie de bocetos digitales en un portafolio PDF para una presentación a un cliente. Utiliza Image to PDF para organizar las imágenes en el orden correcto y ajustar la resolución a high-resolution para una impresión de alta calidad.",
         "Un estudiante de arquitectura tiene que presentar un proyecto final que incluye varios planos y renderizaciones. Con Image to PDF, puede crear un documento PDF que combine todas las imágenes en un solo archivo, con la orientación adecuada y sin perder calidad.",
         "Un profesor de historia ha recopilado una serie de imágenes históricas y necesita crear un folleto educativo para sus alumnos. Utiliza Image to PDF para ajustar el tamaño del papel a A4 y establecer los márgenes apropiados para que el documento se imprima correctamente.",
         "Un fotógrafo de bodas quiere compartir un álbum digital con sus clientes. Con Image to PDF, puede convertir las fotos seleccionadas en un PDF interactivo, configurando la orientación en paisaje y la resolución a 150 DPI para un equilibrio entre calidad y tamaño del archivo."
@@ -13885,7 +13885,7 @@
       "inverseRate": "Tipo Inverso",
       "quickConversions": "Conversiones Rápidas",
       "disclaimer": "Las tasas de cambio son solo de referencia y pueden no reflejar las tasas de mercado en tiempo real.",
-      "detailed_description": "Nuestra herramienta de conversión monetaria opera mediante la integración de APIs financieros en tiempo real, como XE.com y OANDA, para obtener tasas de cambio actualizadas cada 60 segundos. Soporta 45+ divisas, incluyendo monedas fiduciarias (USD, EUR, JPY) y criptomonedas (BTC, ETH), con precisión de hasta 6 decimales. El motor backend, desarrollado en Node.js, utiliza algoritmos de redondeo bancario (IEEE 8553) para garantizar precisión en transacciones internacionales. La interfaz frontend, construida con React.js, permite a los usuarios seleccionar múltiples divisas objetivo simultáneamente y visualizar diferencias en spreads de compra/venta. Incorporamos un sistema de caché distribuido con Redis para reducir latencia, ideal para profesionales financieros que requieren cálculos masivos de conversión en hojas de presupuesto o liquidaciones aduaneras.",
+      "detailed_description": "Nuestra herramienta de conversión monetaria opera mediante la integración de APIs financieros en tiempo real, como XE.com y OANDA, para obtener tasas de cambio actualizadas cada 60 segundos. Soporta 45+ divisas, incluyendo monedas fiduciarias (USD, EUR, JPY) y criptomonedas (BTC, ETH), con precisión de hasta 6 decimales. El motor backend, desarrollado en Node.js, utiliza algoritmos de redondeo bancario (IEEE 8553) para garantizar precisión en transacciones internacionales. La interfaz frontend, construida con React.js, permite a los usuarios seleccionar múltiples divisas objetivo simultáneamente y visualizar diferencias en spreads de compra/venta. Incorporamos un sistema de caché distribuido con cache service para reducir latencia, ideal para profesionales financieros que requieren cálculos masivos de conversión en hojas de presupuesto o liquidaciones aduaneras.",
       "usage_steps": [
         "1. Selecciona tu moneda base desde el menú desplegable 'Divisa Origen' (ej: USD, BRL, AUD).",
         "2. Ingresa el monto en el campo numérico con soporte para notación científica (ej: 1.25e6).",
@@ -15861,7 +15861,7 @@
       "normal": "Normal",
       "fast": "Rápido",
       "timeUp": "¡Se acabó el tiempo!",
-      "presets": "Prediseñados",
+      "presets": "Pcache serviceeñados",
       "targetDuration": "Duración objetivo",
       "min": "min",
       "words": "palabras",
@@ -22879,9 +22879,9 @@
     },
     "docker-compose-generator": {
       "name": "Generador de composición Docker",
-      "description": "Genere archivos docker-compose.yml con servicios comunes como MySQL, Redis, Nginx.",
+      "description": "Genere archivos docker-compose.yml con servicios comunes como MySQL, cache service, Nginx.",
       "seo_title": "Generador de composición Docker gratuito en línea",
-      "seo_description": "Genere archivos docker-compose.yml con MySQL, PostgreSQL, Redis, Nginx y más servicios en línea de forma gratuita. Editor visual con vista previa y validación de YAML.",
+      "seo_description": "Genere archivos docker-compose.yml con MySQL, PostgreSQL, cache service, Nginx y más servicios en línea de forma gratuita. Editor visual con vista previa y validación de YAML.",
       "version": "Redactar versión",
       "databases": "Bases de datos",
       "messaging": "Mensajería y búsqueda",
@@ -23664,7 +23664,7 @@
       "descRdp": "Protocolo de escritorio remoto",
       "descPostgresql": "PostgreSQL Database",
       "descVnc": "Computación en red virtual",
-      "descRedis": "Base de datos Redis",
+      "desccache service": "Base de datos cache service",
       "descHttpAlt": "HTTP Alternate",
       "descHttpsAlt": "HTTPS Alternate",
       "descMongodb": "MongoDB Database"

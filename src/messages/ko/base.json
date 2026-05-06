@@ -972,9 +972,9 @@
     },
     "docker-compose-generator": {
       "name": "Docker 작성 생성기",
-      "description": "MySQL, Redis, Nginx와 같은 일반적인 서비스를 사용하여 docker-compose.yml 파일을 생성합니다.",
+      "description": "MySQL, cache service, Nginx와 같은 일반적인 서비스를 사용하여 docker-compose.yml 파일을 생성합니다.",
       "seo_title": "무료 Docker Compose 생성기 온라인",
-      "seo_description": "MySQL, PostgreSQL, Redis, Nginx 및 기타 서비스를 사용하여 온라인에서 무료로 docker-compose.yml 파일을 생성하세요. YAML 미리보기 및 유효성 검사 기능을 갖춘 시각적 편집기입니다.",
+      "seo_description": "MySQL, PostgreSQL, cache service, Nginx 및 기타 서비스를 사용하여 온라인에서 무료로 docker-compose.yml 파일을 생성하세요. YAML 미리보기 및 유효성 검사 기능을 갖춘 시각적 편집기입니다.",
       "version": "버전 작성",
       "databases": "데이터베이스",
       "messaging": "메시징 및 검색",
@@ -1757,7 +1757,7 @@
       "descRdp": "원격 데스크톱 프로토콜",
       "descPostgresql": "PostgreSQL Database",
       "descVnc": "가상 네트워크 컴퓨팅",
-      "descRedis": "Redis 데이터베이스",
+      "desccache service": "cache service 데이터베이스",
       "descHttpAlt": "HTTP Alternate",
       "descHttpsAlt": "HTTPS Alternate",
       "descMongodb": "MongoDB Database"
@@ -4686,9 +4686,9 @@
     },
     "docker-compose-generator": {
       "name": "Docker Compose 생성기",
-      "description": "MySQL, Redis, Nginx와 같은 일반적인 서비스를 사용하여 docker-compose.yml 파일을 생성합니다.",
+      "description": "MySQL, cache service, Nginx와 같은 일반적인 서비스를 사용하여 docker-compose.yml 파일을 생성합니다.",
       "seo_title": "무료 Docker Compose 생성기 온라인",
-      "seo_description": "MySQL, PostgreSQL, Redis, Nginx와 같은 다양한 서비스를 사용하여 docker-compose.yml 파일을 온라인에서 무료로 생성하세요. 시각적 편집기와 YAML 미리보기 및 검증 기능을 갖추고 있습니다.",
+      "seo_description": "MySQL, PostgreSQL, cache service, Nginx와 같은 다양한 서비스를 사용하여 docker-compose.yml 파일을 온라인에서 무료로 생성하세요. 시각적 편집기와 YAML 미리보기 및 검증 기능을 갖추고 있습니다.",
       "version": "Compose 버전",
       "databases": "데이터베이스",
       "messaging": "메시지 & 검색",
@@ -5523,7 +5523,7 @@
       "descRdp": "원격 데스크톱 프로토콜",
       "descPostgresql": "PostgreSQL 데이터베이스",
       "descVnc": "가상 네트워크 컴퓨팅",
-      "descRedis": "Redis 데이터베이스",
+      "desccache service": "cache service 데이터베이스",
       "descHttpAlt": "HTTP 대체",
       "descHttpsAlt": "HTTPS 대체",
       "descMongodb": "MongoDB 데이터베이스"

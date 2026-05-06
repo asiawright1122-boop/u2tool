@@ -11,7 +11,7 @@
   "usage_examples": [
     "Ao construir uma API para buscar receitas, encode a query string 'ingrediente=óleo de soja&categoria=café da manhã' para evitar erros no servidor.",
     "Decodificar um log de acesso Apache contendo '%E2%82%AC' para identificar requisições com o símbolo '€' em relatórios de analytics.",
-    "Preparar um URL de callback OAuth2 que inclua caracteres especiais em tokens, como 'access_token=abc#xyz', garantindo que '#' seja codificado como '%23'.",
+    "Preparar um URL de callback authentication flows que inclua caracteres especiais em tokens, como 'access_token=abc#xyz', garantindo que '#' seja codificado como '%23'.",
     "Converter manualmente uma URL quebrada como 'https://exemplo.com/pasta com espaço/arquivo.html' para 'https://exemplo.com/pasta%20com%20espaço/arquivo.html' antes de testes em navegadores."
   ],
   "faqs": [

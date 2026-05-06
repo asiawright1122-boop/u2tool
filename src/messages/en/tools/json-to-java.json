@@ -1,5 +1,5 @@
 {
-  "detailed_description": "This tool transforms JSON data structures into fully annotated Java POJO classes with first-class Lombok integration. It parses JSON input through a recursive descent parser to construct a type inference engine that maps JSON primitives to Java equivalents (e.g., JSON numbers to Double/Integer based on context). The generator creates classes with Jackson-compatible field annotations, optional Lombok's @Data for boilerplate reduction, and supports nested objects/collections through generic type parameters. Developers working on REST API clients, microservices data contracts, or configuration management systems will find this tool indispensable for eliminating manual mapping errors. The transformation engine preserves field naming strategies (camelCase/snake_case conversion) and generates Javadoc stubs from JSON key patterns. All processing occurs client-side using WebAssembly-compiled Java bytecode to ensure data privacy.",
+  "detailed_description": "This tool transforms JSON data structures into fully annotated Java POJO classes with first-class Lombok integration. It parses JSON input through a recursive descent parser to construct a type inference engine that maps JSON primitives to Java equivalents (e.g., JSON numbers to Double/Integer based on context). The generator creates classes with Jackson-compatible field annotations, optional Lombok's @Data for boilerplate reduction, and supports nested objects/collections through generic type parameters. Developers working on REST API clients, service-oriented applications data contracts, or configuration management systems will find this tool indispensable for eliminating manual mapping errors. The transformation engine preserves field naming strategies (camelCase/snake_case conversion) and generates Javadoc stubs from JSON key patterns. All processing occurs client-side using WebAssembly-compiled Java bytecode to ensure data privacy.",
   "usage_steps": [
     "Paste valid JSON into the ACE editor with syntax highlighting",
     "Toggle 'Enable Lombok' to add @Data annotations to generated classes",
@@ -9,7 +9,7 @@
     "Download the artifact or copy individual class codes from the tree view"
   ],
   "usage_examples": [
-    "Creating type-safe API response handlers for Spring Boot microservices",
+    "Creating type-safe API response handlers for Spring Boot service-oriented applications",
     "Generating entity classes from Elasticsearch document schemas",
     "Building configuration loaders for Dropwizard applications using YAML-to-JSON conversion first",
     "Constructing Apache Kafka message POJOs from event schema definitions"

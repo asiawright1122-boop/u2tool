@@ -10,7 +10,7 @@
   ],
   "usage_examples": [
     "Erzeugung von 100 eindeutigen MongoDB-Dokument-IDs für Lasttests auf einem NoSQL-Cluster.",
-    "Generierung von API-Schlüsseln für OAuth2-Clients in einer Microservices-Architektur.",
+    "Generierung von API-Schlüsseln für authentication flows-Clients in einer service-oriented applications-Architektur.",
     "Erstellung von temporären Session-Tokens für eine stateless Web-Anwendung mit JWT-Authentifizierung.",
     "Massenproduktion von Test-UUIDs für ETL-Prozesse in Data-Warehouse-Systemen mit dimensionalen Modellen."
   ]

@@ -7,7 +7,7 @@
   "inputPlaceholder": "Paste JSON here...",
   "outputPlaceholder": "PHP array will appear here...",
   "errorInvalidJson": "// Error: Invalid JSON input",
-  "detailed_description": "The JSON to PHP converter transforms structured JSON data into native PHP array syntax while preserving data types, nesting structures, and special characters. This tool employs recursive parsing algorithms to analyze JSON input, mapping objects to associative arrays and arrays to indexed arrays in PHP. It intelligently handles scalar values (strings, numbers, booleans), null values, and deeply nested structures up to 64 levels by default. Developers frequently use this tool to process API responses from web services (e.g., REST endpoints) that return JSON data requiring server-side manipulation in PHP environments. The converter also resolves Unicode escape sequences and ensures proper quote escaping for PHP compatibility. Technical implementations include validating JSON syntax through multi-pass error checking, maintaining key ordering from JSON objects, and generating output with configurable indentation levels (2-8 spaces) for readability. This tool is particularly valuable when integrating modern JavaScript frameworks with legacy PHP systems, or when migrating configuration files between JSON-based and PHP-based applications.",
+  "detailed_description": "The JSON to PHP converter transforms structured JSON data into native PHP array syntax while preserving data types, nesting structures, and special characters. This tool employs recursive parsing algorithms to analyze JSON input, mapping objects to associative arrays and arrays to indexed arrays in PHP. It intelligently handles scalar values (strings, numbers, booleans), null values, and deeply nested structures up to 64 levels by default. Developers frequently use this tool to process API responses from web services (e.g., REST endpoints) that return JSON data requiring remote manipulation in PHP environments. The converter also resolves Unicode escape sequences and ensures proper quote escaping for PHP compatibility. Technical implementations include validating JSON syntax through multi-pass error checking, maintaining key ordering from JSON objects, and generating output with configurable indentation levels (2-8 spaces) for readability. This tool is particularly valuable when integrating modern JavaScript frameworks with legacy PHP systems, or when migrating configuration files between JSON-based and PHP-based applications.",
   "usage_steps": [
     "Open the input text area and paste valid JSON data (drag-and-drop supported)",
     "Toggle 'Associative Arrays' checkbox to control object conversion behavior",
@@ -20,6 +20,6 @@
     "Converting a Twitter API v2 response containing tweet objects into a PHP array for WordPress plugin processing",
     "Transforming a Firebase Realtime Database JSON export into PHP array syntax for Laravel application seeding",
     "Debugging a malformed JSON string by converting to PHP array to identify syntax issues",
-    "Migrating JavaScript application configuration files (JSON) to PHP arrays for server-side feature flag management"
+    "Migrating JavaScript application configuration files (JSON) to PHP arrays for remote feature flag management"
   ]
 }

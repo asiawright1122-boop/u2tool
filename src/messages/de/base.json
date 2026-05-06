@@ -986,9 +986,9 @@
     },
     "docker-compose-generator": {
       "name": "Docker Compose Generator",
-      "description": "Generieren Sie docker-compose.yml-Dateien mit gängigen Diensten wie MySQL, Redis, Nginx.",
+      "description": "Generieren Sie docker-compose.yml-Dateien mit gängigen Diensten wie MySQL, cache service, Nginx.",
       "seo_title": "Kostenloser Docker Compose Generator online",
-      "seo_description": "Generieren Sie docker-compose.yml-Dateien mit MySQL, PostgreSQL, Redis, Nginx und weiteren Diensten kostenlos online. Visueller Editor mit YAML-Vorschau und Validierung.",
+      "seo_description": "Generieren Sie docker-compose.yml-Dateien mit MySQL, PostgreSQL, cache service, Nginx und weiteren Diensten kostenlos online. Visueller Editor mit YAML-Vorschau und Validierung.",
       "version": "Version verfassen",
       "databases": "Datenbanken",
       "messaging": "Nachrichten und Suche",
@@ -1799,7 +1799,7 @@
       "descRdp": "Remotedesktopprotokoll",
       "descPostgresql": "PostgreSQL Database",
       "descVnc": "Virtuelles Netzwerk-Computing",
-      "descRedis": "Redis-Datenbank",
+      "desccache service": "cache service-Datenbank",
       "descHttpAlt": "HTTP Alternate",
       "descHttpsAlt": "HTTPS Alternate",
       "descMongodb": "MongoDB Database"
@@ -4922,9 +4922,9 @@
     },
     "docker-compose-generator": {
       "name": "Docker Compose Generator",
-      "description": "Erstellen Sie docker-compose.yml-Dateien mit gemeinsamen Diensten wie MySQL, Redis und Nginx.",
+      "description": "Erstellen Sie docker-compose.yml-Dateien mit gemeinsamen Diensten wie MySQL, cache service und Nginx.",
       "seo_title": "Kostenloses Online Docker Compose Generator",
-      "seo_description": "Erstellen Sie docker-compose.yml-Dateien online für MySQL, PostgreSQL, Redis, Nginx und mehr – kostenlos mit visuellem Editor und Validierung.",
+      "seo_description": "Erstellen Sie docker-compose.yml-Dateien online für MySQL, PostgreSQL, cache service, Nginx und mehr – kostenlos mit visuellem Editor und Validierung.",
       "version": "Docker Compose Version",
       "databases": "Datenbanken",
       "messaging": "Nachrichten & Suche",
@@ -5759,7 +5759,7 @@
       "descRdp": "Remote Desktop Protocol",
       "descPostgresql": "PostgreSQL-Datenbank",
       "descVnc": "Virtual Network Computing",
-      "descRedis": "Redis-Datenbank",
+      "desccache service": "cache service-Datenbank",
       "descHttpAlt": "HTTP-Alternative",
       "descHttpsAlt": "HTTPS-Alternative",
       "descMongodb": "MongoDB-Datenbank"

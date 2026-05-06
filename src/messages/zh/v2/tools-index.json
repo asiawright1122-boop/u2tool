@@ -738,9 +738,9 @@
   },
   "docker-compose-generator": {
     "name": "Docker 撰写生成器",
-    "description": "使用 MySQL、Redis、Nginx 等常用服务生成 docker-compose.yml 文件。",
+    "description": "使用 MySQL、cache service、Nginx 等常用服务生成 docker-compose.yml 文件。",
     "seo_title": "免费在线 Docker Compose 生成器",
-    "seo_description": "使用 MySQL、PostgreSQL、Redis、Nginx 和更多在线服务免费生成 docker-compose.yml 文件。具有 YAML 预览和验证功能的可视化编辑器。"
+    "seo_description": "使用 MySQL、PostgreSQL、cache service、Nginx 和更多在线服务免费生成 docker-compose.yml 文件。具有 YAML 预览和验证功能的可视化编辑器。"
   },
   "package-json-generator": {
     "name": "package.json 生成器",

@@ -10,7 +10,7 @@
   ],
   "usage_examples": [
     "为MongoDB文档批量插入操作生成100个唯一_id",
-    "创建OAuth2.0协议所需的防CSRF攻击随机令牌",
+    "创建authentication flows协议所需的防CSRF攻击随机令牌",
     "模拟物联网设备注册时的MAC地址替代标识",
     "生成分布式事务追踪链路的X-Request-ID头"
   ],

@@ -9,9 +9,9 @@
   "download": "下载",
   "outputLabel": "docker-compose.yml",
   "note": "注意：在生产环境中使用前请更改默认密码。",
-  "detailed_description": "Docker Compose Generator是一款面向开发者的YAML配置文件生成工具，通过结构化表单输入实现docker-compose.yml的智能编排。该工具基于容器化应用部署需求，将复杂的服务依赖关系转化为可视化配置，支持MySQL、Redis、Nginx等15+常用服务模板的自动注入。开发者可通过服务发现机制快速建立微服务测试环境，或使用预设的健康检查模板配置容器探针。工具内核采用AST语法树解析技术，将用户输入的环境变量、端口映射、卷挂载等参数转换为符合Compose Schema v3.8规范的配置文件，同时支持自定义Dockerfile构建指令和覆盖网络配置。",
+  "detailed_description": "Docker Compose Generator是一款面向开发者的YAML配置文件生成工具，通过结构化表单输入实现docker-compose.yml的智能编排。该工具基于容器化应用部署需求，将复杂的服务依赖关系转化为可视化配置，支持MySQL、cache service、Nginx等15+常用服务模板的自动注入。开发者可通过服务发现机制快速建立微服务测试环境，或使用预设的健康检查模板配置容器探针。工具内核采用AST语法树解析技术，将用户输入的环境变量、端口映射、卷挂载等参数转换为符合Compose Schema v3.8规范的配置文件，同时支持自定义Dockerfile构建指令和覆盖网络配置。",
   "usage_steps": [
-    "1. 在服务选择面板勾选所需容器组件（如MySQL 8.0、Redis 7.0）",
+    "1. 在服务选择面板勾选所需容器组件（如MySQL 8.0、cache service 7.0）",
     "2. 在配置矩阵中设置每个服务的环境变量（如MYSQL_ROOT_PASSWORD）",
     "3. 通过拓扑图编辑器拖拽建立服务依赖关系",
     "4. 在高级设置中配置自定义网络（custom networks）和卷挂载路径",
@@ -20,7 +20,7 @@
   ],
   "usage_examples": [
     "构建LAMP开发环境：配置Apache 2.4服务依赖MySQL 8.0，自动创建数据卷映射/var/www/html",
-    "微服务测试集群：生成包含Redis缓存、MongoDB分片和API网关的多容器拓扑",
+    "微服务测试集群：生成包含cache service缓存、MongoDB分片和API网关的多容器拓扑",
     "生产环境预演：为Jenkins CI/CD流水线生成包含Nginx负载均衡器的测试编排",
     "定制化服务编排：通过command字段覆盖容器启动命令\\\"nginx -g 'daemon off';\\\"实现配置热加载"
   ],

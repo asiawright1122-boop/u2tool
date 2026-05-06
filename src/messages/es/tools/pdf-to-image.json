@@ -3,7 +3,7 @@
   "usage_steps": [
     "Haz clic en el botón 'Cargar PDF' y selecciona tu archivo desde disco duro o arrástralo al área designada",
     "Elige el formato de salida en el selector: PNG (transparencia alfa soportada) o JPEG (compresión ajustable)",
-    "Configura la resolución DPI en el slider (predefinido: 300 DPI para impresión profesional)",
+    "Configura la resolución DPI en el slider (predefinido: high-resolution para impresión profesional)",
     "Especifica el rango de páginas en el campo de texto usando notación de intervalos (ej: 3,5-8,12)",
     "Presiona 'Iniciar Conversión' y monitorea el progreso en la barra de estado en tiempo real",
     "Descarga los archivos resultantes en un paquete ZIP con estructura de directorios preservada"

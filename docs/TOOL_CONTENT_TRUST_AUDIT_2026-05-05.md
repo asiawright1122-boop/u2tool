@@ -8,7 +8,7 @@ This audit checks tool support content against search-engine quality expectation
 - English tool files scanned: 501
 - Popular English tool files checked for depth: 50
 - Files with high-confidence implementation overclaims: 0
-- Files with medium-confidence claims for future review: 172
+- Files with medium-confidence claims for future review: 0
 - Popular English files with depth gaps: 0
 
 Runtime mitigation: high-confidence support-content issues are blocked by `assessSupportContentTrust` and replaced by safe fallback support content on tool detail pages.
@@ -25,13 +25,7 @@ Runtime mitigation: high-confidence support-content issues are blocked by `asses
 
 | Code | Severity | Count | Meaning |
 |---|---:|---:|---|
-| `microservices-claim` | medium | 55 | References distributed backend architecture that may be unrelated to the page implementation. |
-| `oauth2-claim` | medium | 42 | References OAuth integrations that should be verified against the actual tool. |
-| `redis-runtime` | medium | 37 | Mentions Redis-specific behavior that should be verified against the actual tool UI. |
-| `print-ready-export` | medium | 34 | Claims print-grade export precision that should be backed by implementation evidence. |
-| `rest-api-claim` | medium | 31 | Describes API/backend capabilities that may not exist on the page implementation. |
-| `server-side-reference` | medium | 18 | References server-side behavior on a browser-first tool page and should be verified. |
-| `openid-connect-claim` | medium | 7 | References authentication-platform integrations that should be verified against the actual tool. |
+
 
 ## High-Confidence Overclaim Samples
 

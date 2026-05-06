@@ -2080,7 +2080,7 @@
         "6. '클레임 분석' 탭에서 exp, nbf, iat 등의 클레임 유효성을 자동으로 검사합니다."
       ],
       "usage_examples": [
-        "1. OAuth2 인증 시스템에서 발급된 토큰이 만료되었는지 확인하기 위해 exp 클레임을 검증합니다.",
+        "1. authentication flows 인증 시스템에서 발급된 토큰이 만료되었는지 확인하기 위해 exp 클레임을 검증합니다.",
         "2. 서명 알고리즘 변경 후 생성된 토큰이 정상적으로 검증되는지 테스트합니다.",
         "3. 보안 침해 사고 후 토큰의 서명이 조작되었는지 확인하기 위해 재검증합니다.",
         "4. 공개 키 인프라(PKI)에서 발급된 JWT를 인증 기관(CA)의 공개 키로 검증합니다."
@@ -2435,7 +2435,7 @@
       "seo_description": "단위 변환기는 길이, 무게, 온도 같은 단위를 서로 변환할 수 있는 무료 도구입니다.",
       "enterValue": "값 입력",
       "swapUnits": "단위 교환",
-      "detailed_description": "이 유닛 컨버터는 SI 단위, 영국식 단위, 혼합 단위 간의 정확한 변환을 제공하는 기술 기반 도구입니다. 소프트웨어 내부에서는 IEEE 754 부동소수점 연산을 기반으로 한 고정밀 변환 알고리즘과 NIST(미국표준기술연구소)에서 제공하는 표준 단위 환산 계수 데이터베이스를 활용하여 20개 이상의 범주(길이, 질량, 온도, 면적, 체적, 속도 등)에서 500개 이상의 단위를 지원합니다. 사용자는 수치 입력 시 자동으로 유형 검사를 수행하는 유효성 검사 모듈을 통해 비정상적 데이터 입력을 방지할 수 있습니다. 이 도구는 특히 국제 협업 프로젝트에서 단위 표준화가 필요한 엔지니어, 다중 시스템 데이터를 처리하는 과학자, 또는 IoT 장비의 센서 데이터를 해석하는 개발자에게 필수적입니다. 변환 로직은 RESTful API 구조로 구현되어 실시간 계산을 지원하며, 사용자는 결과를 JSON 형식으로 내보내거나 LaTeX 코드로 복사할 수 있는 기능도 제공됩니다.",
+      "detailed_description": "이 유닛 컨버터는 SI 단위, 영국식 단위, 혼합 단위 간의 정확한 변환을 제공하는 기술 기반 도구입니다. 소프트웨어 내부에서는 IEEE 754 부동소수점 연산을 기반으로 한 고정밀 변환 알고리즘과 NIST(미국표준기술연구소)에서 제공하는 표준 단위 환산 계수 데이터베이스를 활용하여 20개 이상의 범주(길이, 질량, 온도, 면적, 체적, 속도 등)에서 500개 이상의 단위를 지원합니다. 사용자는 수치 입력 시 자동으로 유형 검사를 수행하는 유효성 검사 모듈을 통해 비정상적 데이터 입력을 방지할 수 있습니다. 이 도구는 특히 국제 협업 프로젝트에서 단위 표준화가 필요한 엔지니어, 다중 시스템 데이터를 처리하는 과학자, 또는 IoT 장비의 센서 데이터를 해석하는 개발자에게 필수적입니다. 변환 로직은 API 구조로 구현되어 실시간 계산을 지원하며, 사용자는 결과를 JSON 형식으로 내보내거나 LaTeX 코드로 복사할 수 있는 기능도 제공됩니다.",
       "usage_steps": [
         "웹사이트 상단의 'Unit Converter' 메뉴 클릭하여 도구 페이지로 이동합니다.",
         "왼쪽 패널의 드롭다운 메뉴에서 'Length' 또는 'Temperature' 등 변환할 범주를 선택합니다.",
@@ -2771,7 +2771,7 @@
       "description": "IP 주소 위치, ISP, 기타 정보를 확인합니다.",
       "seo_title": "무료 IP 주소 검색 온라인 도구",
       "seo_description": "무료로 온라인 IP 주소 위치 검색을 이용해보세요. 국가, 도시, ISP, 시간대, 좌표 등을 얻을 수 있습니다. 네트워크 트러블슈팅과 보안 분석에 이상적입니다.",
-      "detailed_description": "IP Lookup 도구는 IPv4/IPv6 주소의 지리적 위치, 소유자(ASN), 네트워크 경로 정보를 정밀 분석하는 고급 기술 도구입니다. 이 도구는 Regional Internet Registries(RIRs)의 WHOIS 데이터베이스와 BGP(Border Gateway Protocol) 라우팅 테이블을 실시간으로 조회하여, 입력된 IP 주소의 CIDR(Classless Inter-Domain Routing) 범위, 역방향 DNS 레코드, 지연 시간 기반 지리 삼각측량 결과를 제공합니다. 네트워크 엔지니어는 DDoS 공격의 출처 추적 시 TTL(Time to Live) 값과 AS(Autonomous System) 경로를 분석해 루팅 이상을 진단할 수 있으며, 웹 개발자는 RESTful API 연동을 통해 사용자 위치 기반 콘텐츠 배포 전략을 수립할 수 있습니다. 내부적으로는 MaxMind GeoIP2 데이터베이스와 RIPE NCC의 RIS( Routing Information Service)를 병렬 쿼리하여, 위도/경도 좌표는 물론, 해당 ISP의 IX(인터넷 교환) 노드 위치 정보를 추출합니다. 이 도구의 핵심 기술적 차별점은 WHOIS 프로토콜 확장인 RDAP(Route Origin Authorization)을 지원해 DNSSEC 기반의 공신성 있는 IP 소유권 검증을 가능하게 한다는 점입니다.",
+      "detailed_description": "IP Lookup 도구는 IPv4/IPv6 주소의 지리적 위치, 소유자(ASN), 네트워크 경로 정보를 정밀 분석하는 고급 기술 도구입니다. 이 도구는 Regional Internet Registries(RIRs)의 WHOIS 데이터베이스와 BGP(Border Gateway Protocol) 라우팅 테이블을 실시간으로 조회하여, 입력된 IP 주소의 CIDR(Classless Inter-Domain Routing) 범위, 역방향 DNS 레코드, 지연 시간 기반 지리 삼각측량 결과를 제공합니다. 네트워크 엔지니어는 DDoS 공격의 출처 추적 시 TTL(Time to Live) 값과 AS(Autonomous System) 경로를 분석해 루팅 이상을 진단할 수 있으며, 웹 개발자는 API 연동을 통해 사용자 위치 기반 콘텐츠 배포 전략을 수립할 수 있습니다. 내부적으로는 MaxMind GeoIP2 데이터베이스와 RIPE NCC의 RIS( Routing Information Service)를 병렬 쿼리하여, 위도/경도 좌표는 물론, 해당 ISP의 IX(인터넷 교환) 노드 위치 정보를 추출합니다. 이 도구의 핵심 기술적 차별점은 WHOIS 프로토콜 확장인 RDAP(Route Origin Authorization)을 지원해 DNSSEC 기반의 공신성 있는 IP 소유권 검증을 가능하게 한다는 점입니다.",
       "usage_steps": [
         "1. 'IP 주소 입력' 필드에 분석할 IPv4/IPv6 주소 또는 도메인명 입력",
         "2. '데이터 포맷' 드롭다운에서 JSON, XML, 또는 CLI 형식 선택",
@@ -2926,7 +2926,7 @@
       "usage_examples": [
         "API 응답의 JSON 본문에 포함된 줄바꿈과 큰따옴표를 안전하게 이스케이프해 테스트용 시나리오를 구성할 때, JSON 모드로 유니코드/제어문자 이스케이프를 적용해 파싱 오류를 방지합니다.",
         "사용자 입력(예: 닉네임)을 HTML 속성값에 주입하기 전 XSS를 막기 위해 HTML 모드로 lt, gt, amp, quot, apos를 변환하고, 속성값 컨텍스트 설정을 맞춘 뒤 템플릿에 안전하게 삽입합니다.",
-        "RESTful API의 쿼리 파라미터로 특수문자(예: ?, &, =)를 포함한 값을 전달할 때, URL 모드 Query로 Percent-encoding을 적용해 서버 측 라우팅 오류를 방지합니다.",
+        "API의 쿼리 파라미터로 특수문자(예: ?, &, =)를 포함한 값을 전달할 때, URL 모드 Query로 Percent-encoding을 적용해 서버 측 라우팅 오류를 방지합니다.",
         "JavaScript 템플릿 리터럴 내부에 외부 데이터를 삽입할 때, 줄바꿈과 역슬래시/따옴표 문제를 피하기 위해 JavaScript 모드로 유니코드/헥스 이스케이프를 적용해 런타임 에러를 방지합니다."
       ],
       "error": "오류",
@@ -3279,7 +3279,7 @@
       "description": "JSON 데이터를 TypeScript 인터페이스 정의로 변환합니다.",
       "seo_title": "무료 JSON to TypeScript 변환기",
       "seo_description": "온라인으로 JSON을 TypeScript 인터페이스와 타입으로 무료로 변환하세요. 선택적 속성과 내부 타입을 포함한 타입 안전 코드를 생성하세요. TS 개발자에게 필수 도구입니다.",
-      "detailed_description": "이 도구는 JSON 데이터를 기반으로 TypeScript 인터페이스를 자동 생성하는 고도로 특화된 변환기입니다. 내부적으로는 JSON 객체의 타입 추론 엔진이 동작하여 원시값(primitive values), 배열, 중첩 객체, 유니온 타입(union types)을 분석하고, 이를 정확한 TypeScript 타입 시스템에 매핑합니다. 특히 선택적 속성(optional properties)과 동적 키(dynamic keys)를 처리할 때, 정적 분석을 통해 최적의 타입 정의를 제공합니다. API 응답으로부터 복잡한 데이터 구조를 안전하게 타이핑하거나, 레거시 JSON 스키마를 TypeScript 프로젝트에 통합할 때 필수적인 도구입니다. 프론트엔드 개발자는 RESTful API의 응답 타입을 정의할 때, 백엔드 팀은 OpenAPI 스펙과 연동된 타입 계약을 생성할 때, 테스트 자동화 엔지니어는 샘플 데이터의 타입 정의를 빠르게 생성할 때 이 도구를 활용할 수 있습니다. 변환 과정에서 AST(Abstract Syntax Tree)를 생성하여 타입 구조를 시각적으로 탐색 가능하게 제공하고, 사용자 지정 네이밍 전략(CamelCase/PascalCase) 및 네임스페이스 옵션을 지원합니다.",
+      "detailed_description": "이 도구는 JSON 데이터를 기반으로 TypeScript 인터페이스를 자동 생성하는 고도로 특화된 변환기입니다. 내부적으로는 JSON 객체의 타입 추론 엔진이 동작하여 원시값(primitive values), 배열, 중첩 객체, 유니온 타입(union types)을 분석하고, 이를 정확한 TypeScript 타입 시스템에 매핑합니다. 특히 선택적 속성(optional properties)과 동적 키(dynamic keys)를 처리할 때, 정적 분석을 통해 최적의 타입 정의를 제공합니다. API 응답으로부터 복잡한 데이터 구조를 안전하게 타이핑하거나, 레거시 JSON 스키마를 TypeScript 프로젝트에 통합할 때 필수적인 도구입니다. 프론트엔드 개발자는 API의 응답 타입을 정의할 때, 백엔드 팀은 OpenAPI 스펙과 연동된 타입 계약을 생성할 때, 테스트 자동화 엔지니어는 샘플 데이터의 타입 정의를 빠르게 생성할 때 이 도구를 활용할 수 있습니다. 변환 과정에서 AST(Abstract Syntax Tree)를 생성하여 타입 구조를 시각적으로 탐색 가능하게 제공하고, 사용자 지정 네이밍 전략(CamelCase/PascalCase) 및 네임스페이스 옵션을 지원합니다.",
       "usage_steps": [
         "1. JSON 입력 섹션에 변환할 데이터를 붙여넣기합니다.",
         "2. '추론 옵션' 패널에서 '선택적 속성 표시', '유니온 타입 감지'를 활성화합니다.",
@@ -3926,7 +3926,7 @@
         "1. 클라우드 서비스 API에서 반환된 JSON 로그를 SIEM 시스템이 요구하는 XML 형식으로 변환",
         "2. MongoDB의 BSON 문서를 XML 기반 EDI(전자문서교환) 시스템에 연동하기 위한 중계 변환",
         "3. IoT 장비의 JSON 구성 파일을 XML 기반 자동화 스크립트에서 사용할 수 있도록 재구성",
-        "4. 금융 규제 보고서 생성 시 RESTful API 데이터를 XBRL(확장가능 비즈니스 보고 언어) 스키마에 맞는 XML로 변환"
+        "4. 금융 규제 보고서 생성 시 API 데이터를 XBRL(확장가능 비즈니스 보고 언어) 스키마에 맞는 XML로 변환"
       ],
       "json": {
         "invalidJson": "json.invalidJson"
@@ -4636,7 +4636,7 @@
       "usage_examples": [
         "1. 인스타그램 스토리용 9:16 비율로 세로 이미지 크롭 시, 자동으로 중심 포커싱 기능 적용",
         "2. 웹사이트 배너 제작 시 1920x480 픽셀 고정 크롭으로 레티나 디스플레이 최적화",
-        "3. 학술 논문 제출용 이미지의 경우 300 DPI 기준으로 CMYK 색공간 변환 후 크롭",
+        "3. 학술 논문 제출용 이미지의 경우 high-resolution 기준으로 CMYK 색공간 변환 후 크롭",
         "4. 제품 사진의 백그라운드 제거 시 자유형 크롭과 마그네틱 엣지 감지 기능 동시 활용"
       ],
       "aspectRatio": "종횡비",
@@ -4679,7 +4679,7 @@
     },
     "docker-compose-generator": {
       "name": "Docker Compose 생성기",
-      "description": "MySQL, Redis, Nginx와 같은 일반적인 서비스를 사용하여 docker-compose.yml 파일을 생성합니다.",
+      "description": "MySQL, cache service, Nginx와 같은 일반적인 서비스를 사용하여 docker-compose.yml 파일을 생성합니다.",
       "seo_title": "무료 온라인 Docker Compose 생성기",
       "seo_description": "Docker Compose 생성기는 여러 서비스를 함께 실행할 수 있는 구성 파일을 만드는 무료 도구입니다.",
       "version": "Compose 버전",
@@ -4692,10 +4692,10 @@
       "download": "다운로드",
       "outputLabel": "docker-compose.yml",
       "note": "참고: 프로덕션 환경에서 사용하기 전에 기본 비밀번호를 변경하세요.",
-      "detailed_description": "도커 컴포즈 제너레이터는 개발자가 복잡한 YAML 구문 없이도 표준 서비스를 포함하는 도커 컴포즈 환경을 구축할 수 있도록 설계된 전문 도구입니다. MySQL 8.0 클러스터링, Redis 인메모리 캐시, Nginx 리버스 프록시 등 12종의 사전 정의된 서비스 템플릿을 제공하며, 각 서비스별 버전 지정, 볼륨 마운트 경로 설정, 환경변수 주입 등 세부적인 컨테이너 구성이 가능합니다. 이 도구는 서비스 의존성 자동 해결, 포트 매핑 충돌 방지 알고리즘, 네트워크 브리지 자동 생성 등의 기능을 통해 수동으로 docker-compose.yml을 작성할 때 발생할 수 있는 구문 오류와 실행 오류를 예방합니다. 특히 CI/CD 파이프라인 구축 초기 단계에서 개발자는 이 도구를 통해 개발/테스트/프로덕션 환경의 일관성을 유지하면서도 5분 이내에 멀티 컨테이너 애플리케이션 아키텍처를 구현할 수 있습니다.",
+      "detailed_description": "도커 컴포즈 제너레이터는 개발자가 복잡한 YAML 구문 없이도 표준 서비스를 포함하는 도커 컴포즈 환경을 구축할 수 있도록 설계된 전문 도구입니다. MySQL 8.0 클러스터링, cache service 인메모리 캐시, Nginx 리버스 프록시 등 12종의 사전 정의된 서비스 템플릿을 제공하며, 각 서비스별 버전 지정, 볼륨 마운트 경로 설정, 환경변수 주입 등 세부적인 컨테이너 구성이 가능합니다. 이 도구는 서비스 의존성 자동 해결, 포트 매핑 충돌 방지 알고리즘, 네트워크 브리지 자동 생성 등의 기능을 통해 수동으로 docker-compose.yml을 작성할 때 발생할 수 있는 구문 오류와 실행 오류를 예방합니다. 특히 CI/CD 파이프라인 구축 초기 단계에서 개발자는 이 도구를 통해 개발/테스트/프로덕션 환경의 일관성을 유지하면서도 5분 이내에 멀티 컨테이너 애플리케이션 아키텍처를 구현할 수 있습니다.",
       "usage_steps": [
         "웹사이트에 접속 후 '시작하기' 버튼 클릭하여 서비스 선택 화면으로 이동합니다.",
-        "필요한 서비스 체크박스(예: MySQL, Redis, Nginx)를 선택하고 '설정' 버튼을 클릭합니다.",
+        "필요한 서비스 체크박스(예: MySQL, cache service, Nginx)를 선택하고 '설정' 버튼을 클릭합니다.",
         "각 서비스의 고급 설정 패널에서 태그 버전, 포트 매핑(예: 3306:3306), 환경변수(KEY=VALUE 형식)를 입력합니다.",
         "YAML 미리보기 창에서 실시간으로 생성되는 코드를 확인하고, 오류 표시가 없을 경우 '검증' 버튼을 클릭합니다.",
         "'의존성 검사 완료' 알림을 확인한 후 '파일 생성' 버튼을 눌러 docker-compose.yml을 생성합니다.",
@@ -4703,7 +4703,7 @@
       ],
       "usage_examples": [
         "LAMP 스택 기반 웹 애플리케이션을 구축할 때 Apache, MySQL, PHPMyAdmin 서비스를 자동 연결하여 로컬 개발 환경을 구축",
-        "마이크로서비스 아키텍처에서 Redis 캐시를 이용한 세션 공유 구현을 위해 Node.js 백엔드와 Redis 컨테이너를 네트워크로 연결",
+        "마이크로서비스 아키텍처에서 cache service 캐시를 이용한 세션 공유 구현을 위해 Node.js 백엔드와 cache service 컨테이너를 네트워크로 연결",
         "워드프레스 사이트 구축 시 MySQL 데이터베이스와 phpMyAdmin 관리 도구를 자동으로 링크하여 초기 설정 시간 단축",
         "Python Flask 애플리케이션에 Nginx 리버스 프록시를 추가해 정적 파일 처리 성능을 개선하는 컨테이너 오케스트레이션 구현"
       ]
@@ -5416,7 +5416,7 @@
       "errorInvalidJson": "// 오류: 유효하지 않은 JSON 입력",
       "seo_title": "무료 온라인 JSON Swift 변환기",
       "seo_description": "JSON Swift 변환기는 JSON 데이터를 Swift 구조체로 변환할 수 있는 무료 도구입니다.",
-      "detailed_description": "이 도구는 JSON 객체의 스키마를 분석하여 Swift 언어의 구조체(struct)로 자동 변환하는 기능을 제공합니다. 내부적으로는 JSON 데이터의 계층적 구조를 파싱하고, 각 필드의 데이터 타입(Boolean, Number, String, Array, Object 등)을 추론하여 Swift 5+의 Codable 프로토콜을 준수하는 코드를 생성합니다. 특히 중첩된 객체나 배열 구조는 재귀적 타입 유추를 통해 정확한 Swift 구조체 계층으로 매핑되며, 키 네이밍 전략(CamelCase, SnakeCase)에 따른 프로퍼티 이름 변환도 지원합니다. iOS 개발자는 RESTful API 통합 시 모델 클래스를 수작업으로 작성하는 번거로움을 피하고, 타입 안정성과 컴파일 타임 검증을 강화할 수 있습니다. 도구는 웹 기반 인터페이스에서 JSON 입력 즉시 AST(Abstract Syntax Tree)를 생성하고, 이를 기반으로 메모리 최적화된 Swift 코드를 출력하여 개발 생산성을 획기적으로 향상시킵니다.",
+      "detailed_description": "이 도구는 JSON 객체의 스키마를 분석하여 Swift 언어의 구조체(struct)로 자동 변환하는 기능을 제공합니다. 내부적으로는 JSON 데이터의 계층적 구조를 파싱하고, 각 필드의 데이터 타입(Boolean, Number, String, Array, Object 등)을 추론하여 Swift 5+의 Codable 프로토콜을 준수하는 코드를 생성합니다. 특히 중첩된 객체나 배열 구조는 재귀적 타입 유추를 통해 정확한 Swift 구조체 계층으로 매핑되며, 키 네이밍 전략(CamelCase, SnakeCase)에 따른 프로퍼티 이름 변환도 지원합니다. iOS 개발자는 API 통합 시 모델 클래스를 수작업으로 작성하는 번거로움을 피하고, 타입 안정성과 컴파일 타임 검증을 강화할 수 있습니다. 도구는 웹 기반 인터페이스에서 JSON 입력 즉시 AST(Abstract Syntax Tree)를 생성하고, 이를 기반으로 메모리 최적화된 Swift 코드를 출력하여 개발 생산성을 획기적으로 향상시킵니다.",
       "usage_steps": [
         "1. 좌측 패널의 텍스트 영역에 유효한 JSON 데이터를 붙여넣기 합니다.",
         "2. 'Struct 이름' 입력란에 원하는 최상위 구조체 식별자를 지정합니다.",
@@ -6536,7 +6536,7 @@
       "descRdp": "원격 데스크톱 프로토콜",
       "descPostgresql": "PostgreSQL 데이터베이스",
       "descVnc": "가상 네트워크 컴퓨팅",
-      "descRedis": "Redis 데이터베이스",
+      "desccache service": "cache service 데이터베이스",
       "descHttpAlt": "HTTP 대체",
       "descHttpsAlt": "HTTPS 대체",
       "descMongodb": "MongoDB 데이터베이스",
@@ -7313,7 +7313,7 @@
         "웹 개발자가 SVG 스프라이트를 2x/3x 해상도의 PNG로 변환해 레티나 디스플레이 대응",
         "그래픽 디자이너가 애니메이션 SVG를 WebP로 변환해 이메일 뉴스레터에 임베드",
         "모바일 앱 개발자가 SVG 아이콘을 JPEG로 일괄 변환해 안드로이드의 mipmap 폴더에 배치",
-        "3D 프린팅 업체가 SVG 도면을 300DPI PNG로 변환해 CMYK 프린터에서 색상 보정 작업"
+        "3D 프린팅 업체가 SVG 도면을 high-resolution PNG로 변환해 CMYK 프린터에서 색상 보정 작업"
       ]
     },
     "hex-base64-converter": {
@@ -7614,7 +7614,7 @@
       "noPreview": "이미지 미리보기를 위해 '생성'을 클릭하세요",
       "info": "정보",
       "infoText": "Picsum Photos API를 사용합니다. 시드는 일관된 결과를 위해 동일한 이미지를 보장합니다. 이미지 ID(0-1084)는 특정 사진을 선택합니다.",
-      "detailed_description": "Lorem Picsum은 RESTful API 기반의 플레이스홀더 이미지 생성 도구로, Picsum Photos의 대규모 오픈소스 이미지 데이터베이스를 활용합니다. 이 도구는 HTTP GET 요청 시 특정 파라미터(width, height, grayscale, blur 등)를 기반으로 무작위 이미지를 동적으로 생성하고, JPEG/PNG 포맷으로 반환합니다. 서버측에서는 CDN 통합과 캐싱 메커니즘을 적용하여 200ms 이내의 저지연 응답을 보장하며, CORS 헤더를 지원해 크로스도메인 요청을 처리할 수 있습니다. 웹 개발자는 프로토타이핑 단계에서 레이아웃 테스트를 위해 실제 콘텐츠 없이 시각적 요소를 구현할 수 있고, 디자이너는 반응형 디자인 검증을 위해 다양한 해상도의 이미지를 자동 생성할 수 있습니다. 내부적으로는 Fisher-Yates 알고리즘을 사용해 이미지 목록에서 무작위 샘플링하며, 파라미터에 따라 Sharp 라이브러리로 이미지 처리를 수행한 후, 최적화된 바이트 스트림을 클라이언트에 전송합니다.",
+      "detailed_description": "Lorem Picsum은 API 기반의 플레이스홀더 이미지 생성 도구로, Picsum Photos의 대규모 오픈소스 이미지 데이터베이스를 활용합니다. 이 도구는 HTTP GET 요청 시 특정 파라미터(width, height, grayscale, blur 등)를 기반으로 무작위 이미지를 동적으로 생성하고, JPEG/PNG 포맷으로 반환합니다. 서버측에서는 CDN 통합과 캐싱 메커니즘을 적용하여 200ms 이내의 저지연 응답을 보장하며, CORS 헤더를 지원해 크로스도메인 요청을 처리할 수 있습니다. 웹 개발자는 프로토타이핑 단계에서 레이아웃 테스트를 위해 실제 콘텐츠 없이 시각적 요소를 구현할 수 있고, 디자이너는 반응형 디자인 검증을 위해 다양한 해상도의 이미지를 자동 생성할 수 있습니다. 내부적으로는 Fisher-Yates 알고리즘을 사용해 이미지 목록에서 무작위 샘플링하며, 파라미터에 따라 Sharp 라이브러리로 이미지 처리를 수행한 후, 최적화된 바이트 스트림을 클라이언트에 전송합니다.",
       "usage_steps": [
         "도구 대시보드의 'Image Dimensions' 섹션에서 너비(px)와 높이(px) 값을 입력합니다.",
         "고급 옵션에서 'Grayscale' 또는 'Blur' 필터 체크박스를 선택하여 이미지 효과를 적용합니다.",
@@ -8239,7 +8239,7 @@
         "3. '스타일 편집기'에서 그라디언트 색상, 바 너비(px), 애니메이션 지속시간(ms)을 설정합니다.",
         "4. '데이터 시리즈' 섹션에서 각 범주에 대한 색상 코드를 HEX 또는 RGBa 형식으로 직접 입력합니다.",
         "5. '미리보기' 영역에서 마우스 오버 시 나타나는 툴팁 값을 검증한 후 '전체 화면' 버튼으로 렌더링 품질을 확인합니다.",
-        "6. '내보내기' 메뉴에서 PNG(72-300dpi) 또는 SVG(XML 형식)를 선택해 로컬 저장소에 다운로드합니다."
+        "6. '내보내기' 메뉴에서 PNG(72-high-resolution) 또는 SVG(XML 형식)를 선택해 로컬 저장소에 다운로드합니다."
       ],
       "usage_examples": [
         "1. 마케팅 팀이 4개 지역별 캠페인 CTR(클릭률)을 비교하기 위해 퍼센트 스택형 바 차트 생성",
@@ -11946,7 +11946,7 @@
       "description": "참석자, 안건, 작업 항목이 정리된 회의록을 작성합니다.",
       "seo_title": "무료 온라인 회의록 작성 도구",
       "seo_description": "참석자, 안건, 할 일 항목을 구조화해 정리하는 무료 온라인 회의록 도구입니다.",
-      "detailed_description": "Meeting Notes는 회의 기록을 구조화하여 참가자, 주제, 행동 계획을 포함한 체계적인 문서를 생성하는 도구입니다. 이 도구는 웹 기반 플랫폼으로, 사용자가 직관적으로 회의 내용을 입력하고 관리할 수 있도록 설계되었습니다. 사용자는 회의 참가자 목록을 추가하고, 회의의 주요 의제를 작성하며, 각 의제에 대한 행동 계획을 세울 수 있습니다. Meeting Notes는 RESTful API를 통해 클라이언트와 서버 간의 원활한 데이터 교환을 지원하며, JSON 형식으로 데이터를 저장하여 빠르고 안정적인 서비스를 제공합니다. 또한, 이 도구는 실시간 협업 기능을 제공하여 여러 사용자가 동시에 회의 내용을 편집하고 업데이트할 수 있습니다. 이를 통해 팀의 의사소통 효율성을 높이고, 회의 결과물을 신속히 공유할 수 있습니다.",
+      "detailed_description": "Meeting Notes는 회의 기록을 구조화하여 참가자, 주제, 행동 계획을 포함한 체계적인 문서를 생성하는 도구입니다. 이 도구는 웹 기반 플랫폼으로, 사용자가 직관적으로 회의 내용을 입력하고 관리할 수 있도록 설계되었습니다. 사용자는 회의 참가자 목록을 추가하고, 회의의 주요 의제를 작성하며, 각 의제에 대한 행동 계획을 세울 수 있습니다. Meeting Notes는 API를 통해 클라이언트와 서버 간의 원활한 데이터 교환을 지원하며, JSON 형식으로 데이터를 저장하여 빠르고 안정적인 서비스를 제공합니다. 또한, 이 도구는 실시간 협업 기능을 제공하여 여러 사용자가 동시에 회의 내용을 편집하고 업데이트할 수 있습니다. 이를 통해 팀의 의사소통 효율성을 높이고, 회의 결과물을 신속히 공유할 수 있습니다.",
       "usage_steps": [
         "1. Meeting Notes 웹사이트에 접속하여 로그인합니다.",
         "2. 상단 메뉴의 '새 회의' 버튼을 클릭하여 새로운 회의를 생성합니다.",
@@ -12413,7 +12413,7 @@
       ],
       "usage_examples": [
         "1. 연구 논문의 특정 페이지를 JPEG 형식으로 변환해 학술 발표 슬라이드에 삽입",
-        "2. 제품 카탈로그 PDF를 300 DPI PNG로 일괄 변환 후 웹사이트 리소스로 활용",
+        "2. 제품 카탈로그 PDF를 high-resolution PNG로 일괄 변환 후 웹사이트 리소스로 활용",
         "3. 스캔된 계약서 PDF를 CMYK 색상 프로파일로 JPEG 변환해 인쇄소에 전달",
         "4. PDF 형식의漫화책을 페이지 단위로 분할해 Instagram 포스트용 1080x1920 이미지 생성"
       ],
@@ -12552,7 +12552,7 @@
       "usage_steps": [
         "1. [파일 업로드] 버튼 클릭 후 처리할 PDF 파일 선택 (최대 500MB까지 지원)",
         "2. '고급 설정' 패널에서 압축 모드 선택: '최소 크기' 또는 '균형 유지' 옵션",
-        "3. 이미지 품질 슬라이더에서 DPI 범위 조정 (150dpi ~ 300dpi)",
+        "3. 이미지 품질 슬라이더에서 DPI 범위 조정 (150dpi ~ high-resolution)",
         "4. '불필요 객체 제거' 체크박스 활성화로 임베디드 썸네일/미리보기 제거",
         "5. '폰트 최적화' 옵션에서 사용되지 않는 글꼴 캐릭터 집합 제외 설정",
         "6. [압축 시작] 버튼 클릭 후 완료 시 다운로드 링크 클릭 (평균 처리 시간: 1.5분/100MB)"
@@ -15075,7 +15075,7 @@
       "banner": "배너",
       "recommended": "권장",
       "minimum": "최소",
-      "detailed_description": "소셜 미디어 사이즈 가이드는 개발자와 디자이너를 위해 플랫폼별 최적의 이미지 해상도, 측면비(Aspect Ratio), 파일 형식을 정밀하게 제공하는 기술 문서화 도구입니다. 이 도구는 각 소셜 미디어 플랫폼의 공식 API 문서와 최신 UX 가이드라인을 기반으로 동적 데이터베이스를 구축하여, 사용자는 이미지 크기 조정 시 발생할 수 있는 왜곡, 잘림, 흐림 현상을 사전에 방지할 수 있습니다. 특히 반응형 미디어 쿼리(Responsive Media Queries)를 적용한 실시간 미리보기 기능을 통해, 사용자는 다양한 디바이스 화면에서의 노출 효과를 즉시 확인할 수 있습니다. 기술적으로는 RESTful API를 통해 플랫폼별 스펙을 JSON 형식으로 반환하며, 사용자는 직접 이미지를 업로드해 크롭(Crop), 리사이징(Resizing), 압축(Compression)을 위한 코드 스니펫을 생성할 수 있습니다. 이 도구는 단순한 참조 표가 아니라, 실제 개발 환경에 바로 적용 가능한 기술적 솔루션을 제공합니다.",
+      "detailed_description": "소셜 미디어 사이즈 가이드는 개발자와 디자이너를 위해 플랫폼별 최적의 이미지 해상도, 측면비(Aspect Ratio), 파일 형식을 정밀하게 제공하는 기술 문서화 도구입니다. 이 도구는 각 소셜 미디어 플랫폼의 공식 API 문서와 최신 UX 가이드라인을 기반으로 동적 데이터베이스를 구축하여, 사용자는 이미지 크기 조정 시 발생할 수 있는 왜곡, 잘림, 흐림 현상을 사전에 방지할 수 있습니다. 특히 반응형 미디어 쿼리(Responsive Media Queries)를 적용한 실시간 미리보기 기능을 통해, 사용자는 다양한 디바이스 화면에서의 노출 효과를 즉시 확인할 수 있습니다. 기술적으로는 API를 통해 플랫폼별 스펙을 JSON 형식으로 반환하며, 사용자는 직접 이미지를 업로드해 크롭(Crop), 리사이징(Resizing), 압축(Compression)을 위한 코드 스니펫을 생성할 수 있습니다. 이 도구는 단순한 참조 표가 아니라, 실제 개발 환경에 바로 적용 가능한 기술적 솔루션을 제공합니다.",
       "usage_steps": [
         "1. 플랫폼 선택 드롭다운 메뉴에서 대상 SNS(예: Instagram, TikTok)를 클릭합니다.",
         "2. 콘텐츠 유형(프로필 사진, 피드 게시물, 스토리, 광고 배너)을 라디오 버튼으로 지정합니다.",
@@ -16967,7 +16967,7 @@
         "6. 'Security Analysis' 섹션에서 서버 응답이 CORS RFC 사양을 준수하는지에 대한 기술적 평가 보고서를 확인합니다."
       ],
       "usage_examples": [
-        "RESTful API 개발 중 'No 'Access-Control-Allow-Origin' header present' 오류 발생 시 서버 CORS 설정 검증",
+        "API 개발 중 'No 'Access-Control-Allow-Origin' header present' 오류 발생 시 서버 CORS 설정 검증",
         "프론트엔드 애플리케이션이 S3 버킷에서 정적 리소스를 로드할 때 발생하는 CORS 블록 문제 디버깅",
         "마이크로서비스 간 인증 토큰 전달을 위한 'Authorization' 헤더가 Access-Control-Allow-Headers에 포함되었는지 확인",
         "CDN을 통한 폰트 파일 로딩 시 'Tainted canvases' 오류 방지를 위한 CORS 헤더 정합성 검사"
@@ -22832,9 +22832,9 @@
     },
     "docker-compose-generator": {
       "name": "Docker 작성 생성기",
-      "description": "MySQL, Redis, Nginx와 같은 일반적인 서비스를 사용하여 docker-compose.yml 파일을 생성합니다.",
+      "description": "MySQL, cache service, Nginx와 같은 일반적인 서비스를 사용하여 docker-compose.yml 파일을 생성합니다.",
       "seo_title": "무료 Docker Compose 생성기 온라인",
-      "seo_description": "MySQL, PostgreSQL, Redis, Nginx 및 기타 서비스를 사용하여 온라인에서 무료로 docker-compose.yml 파일을 생성하세요. YAML 미리보기 및 유효성 검사 기능을 갖춘 시각적 편집기입니다.",
+      "seo_description": "MySQL, PostgreSQL, cache service, Nginx 및 기타 서비스를 사용하여 온라인에서 무료로 docker-compose.yml 파일을 생성하세요. YAML 미리보기 및 유효성 검사 기능을 갖춘 시각적 편집기입니다.",
       "version": "버전 작성",
       "databases": "데이터베이스",
       "messaging": "메시징 및 검색",
@@ -23617,7 +23617,7 @@
       "descRdp": "원격 데스크톱 프로토콜",
       "descPostgresql": "PostgreSQL Database",
       "descVnc": "가상 네트워크 컴퓨팅",
-      "descRedis": "Redis 데이터베이스",
+      "desccache service": "cache service 데이터베이스",
       "descHttpAlt": "HTTP Alternate",
       "descHttpsAlt": "HTTPS Alternate",
       "descMongodb": "MongoDB Database"

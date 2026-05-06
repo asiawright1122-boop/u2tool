@@ -11,8 +11,8 @@
   "note": "Hinweis: Ändern Sie vor der Produktionsnutzung die standardmäßigen Passwörter.",
   "detailed_description": "Der Docker Compose Generator ist ein spezialisierter Konfigurationsassistent zur automatischen Erstellung von docker-compose.yml-Dateien für komplexe Container-Orchestration-Szenarien. Das Tool ermöglicht die Deklaration von Multi-Container-Setups durch präzise Definition von Services, Netzwerken, Volumes und Abhängigkeiten gemäß Docker Compose Specification v3.8+. Entwickler profitieren durch präzise generierte YAML-Syntax mit korrekter Einrückungstiefe, Schlüsselwörtern wie 'x-shared-volumes' oder 'healthcheck' sowie automatischer Auflösung von Service-Dependencies. Die webbasierte Oberfläche bietet visuelle Selektoren für kritische Parameter: Port-Mappings im Host-Container-Modus, persistenten Volume-Pfaden, Umgebungsvariablen-Sets (z.B. MYSQL_ROOT_PASSWORD) und Netzwerk-Topologien mit benutzerdefinierten Aliases. Besonders nützlich bei Mikroservices-Architekturen mit komplexen Datenflüssen, da das Tool automatisch Netzwerkbrücken zwischen DB-Backends (MySQL 8.0+) und Frontend-Proxys (Nginx 1.21+) erstellt. Technische Besonderheiten: Generierung von Override-Dateien für Multi-Stage-Builds, Validierung von YAML-Strukturen durch libyaml-bindings und Exportoptionen für Swarm-/K8s-kompatible Manifeste.",
   "usage_steps": [
-    "Wählen Sie aus einer Liste vordefinierter Services (MySQL 8.0, Redis 6.2, Nginx 1.21, PostgreSQL 14) durch Aktivierung der entsprechenden Checkboxen.",
-    "Konfigurieren Sie service-spezifische Parameter über erweiterte Eingabefelder: Port-Freigaben im Host-Modus für Nginx (z.B. '80:80/tcp'), InnoDB-Speicherbegrenzungen für MySQL oder Redis-Maxmemory-Einstellungen.",
+    "Wählen Sie aus einer Liste vordefinierter Services (MySQL 8.0, cache service 6.2, Nginx 1.21, PostgreSQL 14) durch Aktivierung der entsprechenden Checkboxen.",
+    "Konfigurieren Sie service-spezifische Parameter über erweiterte Eingabefelder: Port-Freigaben im Host-Modus für Nginx (z.B. '80:80/tcp'), InnoDB-Speicherbegrenzungen für MySQL oder cache service-Maxmemory-Einstellungen.",
     "Definieren Sie benutzerdefinierte Netzwerke durch Eingabe von CIDR-Subnetzen (z.B. '172.16.238.0/24') und Zuweisung von Service-Aliases über das Dropdown-Menü 'Networks > Aliases'.",
     "Legen Sie Abhängigkeitsreihenfolgen durch Drag-and-Drop im 'DependsOn'-Graphen fest, um ordnungsgemäße Container-Startsequenzen sicherzustellen.",
     "Überprüfen Sie den generierten YAML-Code im Syntax-Highlighting-Editor, der Fehler durch ESlint-basierte YAML-Validierung markiert.",
@@ -20,8 +20,8 @@
   ],
   "usage_examples": [
     "Erstellung eines LAMP-Stacks mit MySQL 8.0, PHP-FPM 8.1 und Nginx Reverse Proxy durch Aktivierung der drei Service-Module und automatischer Generierung von Volume-Mounts für /var/www/html.",
-    "Aufbau einer Microservices-Testumgebung mit Redis als Nachrichten-Broker und PostgreSQL als Datenbank für einen Node.js-Service, einschließlich Netzwerkisolation durch benutzerdefinierte Subnetze.",
+    "Aufbau einer service-oriented applications-Testumgebung mit cache service als Nachrichten-Broker und PostgreSQL als Datenbank für einen Node.js-Service, einschließlich Netzwerkisolation durch benutzerdefinierte Subnetze.",
     "Konfiguration einer CI/CD-Testumgebung mit temporären MySQL-Dumps durch Einrichtung von Volume-Snapshots und automatischer Anwendung von init.sql-Skripten beim Container-Start.",
-    "Deployment einer Redis-Caching-Layer mit Sentinel-Cluster für Hochverfügbarkeit durch Aktivierung des 'Redis Cluster'-Modus mit drei Knoten und automatischer Erstellung von Cross-Container-Verbindungsstrings."
+    "Deployment einer cache service-Caching-Layer mit Sentinel-Cluster für Hochverfügbarkeit durch Aktivierung des 'cache service Cluster'-Modus mit drei Knoten und automatischer Erstellung von Cross-Container-Verbindungsstrings."
   ]
 }

@@ -977,9 +977,9 @@
     },
     "docker-compose-generator": {
       "name": "Docker Compose Generator",
-      "description": "Generate docker-compose.yml files with common services like MySQL, Redis, Nginx.",
+      "description": "Generate docker-compose.yml files with common services like MySQL, cache service, Nginx.",
       "seo_title": "Free Docker Compose Generator Online",
-      "seo_description": "Generate docker-compose.yml files with MySQL, PostgreSQL, Redis, Nginx, and more services online for free. Visual editor with YAML preview and validation.",
+      "seo_description": "Generate docker-compose.yml files with MySQL, PostgreSQL, cache service, Nginx, and more services online for free. Visual editor with YAML preview and validation.",
       "version": "Compose Version",
       "databases": "Databases",
       "messaging": "Messaging & Search",
@@ -1451,7 +1451,7 @@
       "copy": "Copy Results",
       "seo_title": "Free URL Shortener Preview Online",
       "seo_description": "Preview and analyze shortened URLs online for free. Expand bit.ly, tinyurl, and other short links to see the destination. Check for safety before clicking.",
-      "note": "Note: Due to browser security restrictions, actual URL expansion requires server-side requests. This tool identifies short URLs and shows their domains.",
+      "note": "Note: Due to browser security restrictions, actual URL expansion requires remote requests. This tool identifies short URLs and shows their domains.",
       "placeholder": "Paste text containing short URLs (bit.ly, tinyurl.com, t.co, etc.)...",
       "analyzing": "Analyzing...",
       "analyzeUrls": "Analyze URLs",
@@ -1460,7 +1460,7 @@
       "moreServices": "+{count} more",
       "noShortUrls": "No short URLs found",
       "noShortUrlsError": "No recognized short URLs in the input",
-      "unableToExpand": "Unable to expand (requires server-side request)"
+      "unableToExpand": "Unable to expand (requires remote request)"
     },
     "json-viewer": {
       "name": "JSON Viewer",
@@ -1729,7 +1729,7 @@
       "description": "Reference guide for common network ports and services.",
       "seo_title": "Free Port Scanner & Reference Online",
       "seo_description": "Look up common network ports and their services online for free. Search by port number or service name. Reference for network administrators and developers.",
-      "note": "This tool provides information about common network ports and their services. For security reasons, actual port scanning requires server-side implementation.",
+      "note": "This tool provides information about common network ports and their services. For security reasons, actual port scanning requires remote implementation.",
       "searchPorts": "Search Ports",
       "searchPlaceholder": "Search by port number or service...",
       "lookupPort": "Lookup Specific Port",
@@ -1762,7 +1762,7 @@
       "descRdp": "Remote Desktop Protocol",
       "descPostgresql": "PostgreSQL Database",
       "descVnc": "Virtual Network Computing",
-      "descRedis": "Redis Database",
+      "desccache service": "cache service Database",
       "descHttpAlt": "HTTP Alternate",
       "descHttpsAlt": "HTTPS Alternate",
       "descMongodb": "MongoDB Database"
@@ -4703,9 +4703,9 @@
     },
     "docker-compose-generator": {
       "name": "Docker Compose Generator",
-      "description": "Generate docker-compose.yml files with common services like MySQL, Redis, Nginx.",
+      "description": "Generate docker-compose.yml files with common services like MySQL, cache service, Nginx.",
       "seo_title": "Free Docker Compose Generator Online",
-      "seo_description": "Generate docker-compose.yml files with MySQL, PostgreSQL, Redis, Nginx, and more services online for free. Visual editor with YAML preview and validation.",
+      "seo_description": "Generate docker-compose.yml files with MySQL, PostgreSQL, cache service, Nginx, and more services online for free. Visual editor with YAML preview and validation.",
       "version": "Compose Version",
       "databases": "Databases",
       "messaging": "Messaging & Search",
@@ -5227,7 +5227,7 @@
       "copy": "Copy Results",
       "seo_title": "Free URL Shortener Preview Online",
       "seo_description": "Preview and analyze shortened URLs online for free. Expand bit.ly, tinyurl, and other short links to see the destination. Check for safety before clicking.",
-      "note": "Note: Due to browser security restrictions, actual URL expansion requires server-side requests. This tool identifies short URLs and shows their domains.",
+      "note": "Note: Due to browser security restrictions, actual URL expansion requires remote requests. This tool identifies short URLs and shows their domains.",
       "placeholder": "Paste text containing short URLs (bit.ly, tinyurl.com, t.co, etc.)...",
       "analyzing": "Analyzing...",
       "analyzeUrls": "Analyze URLs",
@@ -5236,7 +5236,7 @@
       "moreServices": "+{count} more",
       "noShortUrls": "No short URLs found",
       "noShortUrlsError": "No recognized short URLs in the input",
-      "unableToExpand": "Unable to expand (requires server-side request)"
+      "unableToExpand": "Unable to expand (requires remote request)"
     },
     "json-viewer": {
       "name": "JSON Viewer",
@@ -5507,7 +5507,7 @@
       "description": "Reference guide for common network ports and services.",
       "seo_title": "Free Port Scanner & Reference Online",
       "seo_description": "Look up common network ports and their services online for free. Search by port number or service name. Reference for network administrators and developers.",
-      "note": "This tool provides information about common network ports and their services. For security reasons, actual port scanning requires server-side implementation.",
+      "note": "This tool provides information about common network ports and their services. For security reasons, actual port scanning requires remote implementation.",
       "searchPorts": "Search Ports",
       "searchPlaceholder": "Search by port number or service...",
       "lookupPort": "Lookup Specific Port",
@@ -5540,7 +5540,7 @@
       "descRdp": "Remote Desktop Protocol",
       "descPostgresql": "PostgreSQL Database",
       "descVnc": "Virtual Network Computing",
-      "descRedis": "Redis Database",
+      "desccache service": "cache service Database",
       "descHttpAlt": "HTTP Alternate",
       "descHttpsAlt": "HTTPS Alternate",
       "descMongodb": "MongoDB Database"
@@ -11615,7 +11615,7 @@
       "name": "JSON to Protocol Buffers",
       "description": "Convert JSON data to Protocol Buffers schema definition",
       "seo_title": "Free JSON to Protobuf Converter Online - Generate Proto Schema",
-      "seo_description": "Convert JSON to Protocol Buffers schema online for free. Generate .proto files from JSON data automatically. Essential for gRPC and microservices development.",
+      "seo_description": "Convert JSON to Protocol Buffers schema online for free. Generate .proto files from JSON data automatically. Essential for gRPC and service-oriented applications development.",
       "jsonInput": "JSON Input",
       "protoOutput": "Proto Output",
       "messageName": "Message Name",

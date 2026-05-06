@@ -1294,7 +1294,7 @@
       "description": "Konvertiere JSON-Daten in Java POJO-Klassen mit Lombok-Unterstützung.",
       "seo_title": "Kostenlos JSON zu Java-Konverter online",
       "seo_description": "Konvertieren Sie JSON in Java-Klassen online kostenlos. Unterstützung für Lombok, getters/setters und Builder-Mode. Perfekt für API-Entwicklung und Datenaufbau.",
-      "detailed_description": "Der JSON zu Java Konverter generiert typsichere POJO-Klassen (Plain Old Java Objects) aus beliebigen JSON-Datenstrukturen, einschließlich geschachtelter Arrays und Objekte. Das Tool verwendet eine kontextsensitive Schema-Inferenz, um präzise Java-Datentypen (z.B. LocalDateTime statt Date, BigDecimal statt Double) abzuleiten. Entwickler profitieren von automatisch generiertem Code, der Lombok-Annotationen wie @Data, @Builder und @NoArgsConstructor verwendet, um Boilerplate-Code zu eliminieren. Die Ausgabe ist kompatibel mit Jackson und Gson, ideal für REST-API-Entwicklung, Konfigurationsdatei-Verarbeitung oder Microservices-Architekturen. Besonders nützlich bei dynamischen JSON-Schemata, da Änderungen durch Re-Generierung schnell abgebildet werden können. Die Implementierung nutzt einen AST-basierten Parser mit Typ-Inferenz-Algorithmus, der auch optionale Felder (via @JsonInclude) und benutzerdefinierte Paketstruktur berücksichtigt.",
+      "detailed_description": "Der JSON zu Java Konverter generiert typsichere POJO-Klassen (Plain Old Java Objects) aus beliebigen JSON-Datenstrukturen, einschließlich geschachtelter Arrays und Objekte. Das Tool verwendet eine kontextsensitive Schema-Inferenz, um präzise Java-Datentypen (z.B. LocalDateTime statt Date, BigDecimal statt Double) abzuleiten. Entwickler profitieren von automatisch generiertem Code, der Lombok-Annotationen wie @Data, @Builder und @NoArgsConstructor verwendet, um Boilerplate-Code zu eliminieren. Die Ausgabe ist kompatibel mit Jackson und Gson, ideal für REST-API-Entwicklung, Konfigurationsdatei-Verarbeitung oder service-oriented applications-Architekturen. Besonders nützlich bei dynamischen JSON-Schemata, da Änderungen durch Re-Generierung schnell abgebildet werden können. Die Implementierung nutzt einen AST-basierten Parser mit Typ-Inferenz-Algorithmus, der auch optionale Felder (via @JsonInclude) und benutzerdefinierte Paketstruktur berücksichtigt.",
       "usage_steps": [
         "1. Fügen Sie Ihr JSON in den markierten Textbereich ein (unterstützt auch URLs via @JsonFormat).",
         "2. Wählen Sie Lombok-Optionen: Aktivieren Sie @Data, @AllArgsConstructor oder @Builder im Checkboxen-Menü.",
@@ -1371,7 +1371,7 @@
       ],
       "usage_examples": [
         "1. Ein Android-Entwickler konvertiert eine OpenAPI-Spezifikation in serialisierbare Datenklassen für Retrofit2-API-Calls.",
-        "2. Ein Backend-Entwickler generiert Kotlin-Modelle aus einer GraphQL-Schema-Definition für einen Ktor-Microservice.",
+        "2. Ein Backend-Entwickler generiert Kotlin-Modelle aus einer GraphQL-Schema-Definition für einen Ktor-service-oriented application.",
         "3. Ein Data-Engineer erstellt automatisch typisierte Klassen für Avro-kodierte Nachrichten aus einem Kafka-Cluster.",
         "4. Ein Cross-Plattform-Entwickler wandelt eine Legacy-XML-API-Antwort (via JSON-Intermediate) in Kotlin/JS-kompatible Modelle um."
       ],
@@ -1665,7 +1665,7 @@
       ],
       "usage_examples": [
         "Erzeugung von 100 eindeutigen MongoDB-Dokument-IDs für Lasttests auf einem NoSQL-Cluster.",
-        "Generierung von API-Schlüsseln für OAuth2-Clients in einer Microservices-Architektur.",
+        "Generierung von API-Schlüsseln für authentication flows-Clients in einer service-oriented applications-Architektur.",
         "Erstellung von temporären Session-Tokens für eine stateless Web-Anwendung mit JWT-Authentifizierung.",
         "Massenproduktion von Test-UUIDs für ETL-Prozesse in Data-Warehouse-Systemen mit dimensionalen Modellen."
       ],
@@ -1743,7 +1743,7 @@
         "Kopieren Sie das Ergebnis per 'Copy to Clipboard'-Button in die Zwischenablage (nutzt Async Clipboard API)."
       ],
       "usage_examples": [
-        "Ein Entwickler generiert ein 64-Zeichen-Secret für eine OAuth2-Client-Authentifizierung mit Base64-kompatiblen Zeichen.",
+        "Ein Entwickler generiert ein 64-Zeichen-Secret für eine authentication flows-Client-Authentifizierung mit Base64-kompatiblen Zeichen.",
         "Ein Systemadministrator erstellt ein temporäres Root-Passwort mit ausgeschlossenen Sonderzeichen für eine CLI-Session.",
         "Ein Finanzdienstleister konfiguriert ein Passwort mit 20 Zeichen, das den PCI-DSS-Vorgaben (mindestens 12 Zeichen, gemischte Zeichensätze) entspricht.",
         "Ein Forscher generiert 100 eindeutige Passwörter im Batch-Modus für eine Studie zur Passwortwiederherstellungsalgorithmik."
@@ -2070,7 +2070,7 @@
       "description": "Debuggen und verifizieren Sie JWT-Tokens mit Signaturvalidierung",
       "seo_title": "Kostenlose JWT Debugger Online-Tool",
       "seo_description": "Debuggen Sie JWT-Token online kostenlos. Entschlüsseln Sie Header und Payload, überprüfen Sie Signaturen mit Secret oder Public Key - essentiell für Authentifizierungsdebugging.",
-      "detailed_description": "Der JWT Debugger ist ein spezialisierter Online-Analyzer für JSON Web Tokens (RFC 7519), der Entwicklern ermöglicht, Token-Strukturen zu dekodieren, deren Integrität zu prüfen und Sicherheitslücken aufzudecken. Das Tool zerlegt Tokens in ihre drei Kernelemente: Header, Payload und Signature, und führt automatisierte Validierungsschritte durch, darunter Base64Url-Decodierung, HMAC-SHA256- oder RSA-Signaturverifikation sowie die Überprüfung kritischer Claims wie 'exp' (Expiration Time) und 'nbf' (Not Before). Entwickler benötigen dieses Instrument, um Authentifizierungsprobleme in OAuth2/OpenID Connect-Flows zu diagnostizieren, sicherzustellen, dass Tokens mit den erwarteten Verschlüsselungsparametern signiert wurden, und zu vermeiden, dass abgelaufene oder manipulierte Tokens in Sicherheitssystemen akzeptiert werden. Technisch arbeitet das Tool mit Echtzeit-Fehlermeldungen, die kryptografische Mismatches, ungültige JWK-Formate oder fehlende Claims präzise identifizieren, und bietet gleichzeitig eine strukturierte Ansicht der dekodierten Nutzdaten im Klartext.",
+      "detailed_description": "Der JWT Debugger ist ein spezialisierter Online-Analyzer für JSON Web Tokens (RFC 7519), der Entwicklern ermöglicht, Token-Strukturen zu dekodieren, deren Integrität zu prüfen und Sicherheitslücken aufzudecken. Das Tool zerlegt Tokens in ihre drei Kernelemente: Header, Payload und Signature, und führt automatisierte Validierungsschritte durch, darunter Base64Url-Decodierung, HMAC-SHA256- oder RSA-Signaturverifikation sowie die Überprüfung kritischer Claims wie 'exp' (Expiration Time) und 'nbf' (Not Before). Entwickler benötigen dieses Instrument, um Authentifizierungsprobleme in authentication flows/authentication flows-Flows zu diagnostizieren, sicherzustellen, dass Tokens mit den erwarteten Verschlüsselungsparametern signiert wurden, und zu vermeiden, dass abgelaufene oder manipulierte Tokens in Sicherheitssystemen akzeptiert werden. Technisch arbeitet das Tool mit Echtzeit-Fehlermeldungen, die kryptografische Mismatches, ungültige JWK-Formate oder fehlende Claims präzise identifizieren, und bietet gleichzeitig eine strukturierte Ansicht der dekodierten Nutzdaten im Klartext.",
       "usage_steps": [
         "Fügen Sie den JWT in das Textfeld 'Token-Eingabe' ein, das automatisch die drei Segmente (Header, Payload, Signature) erkennt.",
         "Wählen Sie im Dropdown-Menü 'Signaturalgorithmus' den erwarteten Verschlüsselungstyp (z.B. HS256, RS256) aus, um Signaturen korrekt zu validieren.",
@@ -2082,7 +2082,7 @@
       "usage_examples": [
         "Ein Backend-Entwickler analysiert einen von einem OAuth-Provider zurückgegebenen JWT, um sicherzustellen, dass die Signatur mit dem konfigurierten JWK-Set übereinstimmt.",
         "Ein QA-Tester identifiziert durch das Tool, dass ein Token trotz gültiger Signatur abgelehnt wird, weil der 'aud' (Audience)-Claim nicht mit dem Zielserver übereinstimmt.",
-        "Ein DevOps-Ingenieur überprüft, ob ein selbstsignierter JWT für ein Microservice-System korrekte 'iss' (Issuer)-Metadaten enthält, um Token-Spoofing zu verhindern.",
+        "Ein DevOps-Ingenieur überprüft, ob ein selbstsignierter JWT für ein service-oriented application-System korrekte 'iss' (Issuer)-Metadaten enthält, um Token-Spoofing zu verhindern.",
         "Ein Sicherheitsanalyst nutzt das Tool, um zu erkennen, dass ein Token eine zu lange Gültigkeitsdauer ('exp') aufweist, was das Risiko bei Schlüsselverlust erhöht."
       ],
       "token": "JWT-Token",
@@ -2946,7 +2946,7 @@
       "description": "Konvertiere zwischen YAML und JSON-Formaten.",
       "seo_title": "Kostenlos Online-Tool: YAML zu JSON konvertieren",
       "seo_description": "Konvertieren Sie YAML in JSON oder umgekehrt online kostenlos. Validieren und formatieren Sie Konfigurationsdateien mit Syntax-Highlighting. Perfekt für DevOps und Konfiguration.",
-      "detailed_description": "Der YAML/JSON-Konverter ermöglicht die präzise bidirektionale Transformation zwischen YAML und JSON, zwei verbreiteten Formaten zur Datenserialisierung. Technisch gesehen analysiert der Konverter den Eingabetext durch einen Parser, der strukturierte Daten in ein intermedial nutzbares Objektmodell (AST) umwandelt. Bei YAML werden dabei komplexe Features wie Aliase, Anker oder verschachtelte Listen unter Berücksichtigung der Einrückungstiefe korrekt interpretiert. JSON-Daten werden hingegen anhand strikter Syntaxregeln validiert, einschließlich der korrekten Darstellung von Datentypen wie Boolean, Null oder numerische Werte. Besonders bei der Integration von Microservices, bei denen YAML häufig für Konfigurationsdateien (z.B. Kubernetes) und JSON für API-Requests verwendet wird, schließt dieser Konverter eine wichtige Lücke. Entwickler profitieren von der konsistenten Übertragung von Datenstrukturen ohne manuelle Umformulierung. Der Konverter behält dabei exakte Datentypen bei und unterstützt Optionen wie Pretty-Print oder Minifikation. Fehlerhafte Syntax führt zu detaillierten Fehlermeldungen, die Zeilen- und Spaltenpositionen im Quelltext referenzieren.",
+      "detailed_description": "Der YAML/JSON-Konverter ermöglicht die präzise bidirektionale Transformation zwischen YAML und JSON, zwei verbreiteten Formaten zur Datenserialisierung. Technisch gesehen analysiert der Konverter den Eingabetext durch einen Parser, der strukturierte Daten in ein intermedial nutzbares Objektmodell (AST) umwandelt. Bei YAML werden dabei komplexe Features wie Aliase, Anker oder verschachtelte Listen unter Berücksichtigung der Einrückungstiefe korrekt interpretiert. JSON-Daten werden hingegen anhand strikter Syntaxregeln validiert, einschließlich der korrekten Darstellung von Datentypen wie Boolean, Null oder numerische Werte. Besonders bei der Integration von service-oriented applications, bei denen YAML häufig für Konfigurationsdateien (z.B. Kubernetes) und JSON für API-Requests verwendet wird, schließt dieser Konverter eine wichtige Lücke. Entwickler profitieren von der konsistenten Übertragung von Datenstrukturen ohne manuelle Umformulierung. Der Konverter behält dabei exakte Datentypen bei und unterstützt Optionen wie Pretty-Print oder Minifikation. Fehlerhafte Syntax führt zu detaillierten Fehlermeldungen, die Zeilen- und Spaltenpositionen im Quelltext referenzieren.",
       "usage_steps": [
         "Wählen Sie die Konvertierungsrichtung mit den Schaltern 'YAML nach JSON' oder 'JSON nach YAML' aus.",
         "Fügen Sie den zu konvertierenden Text in das linke Eingabefeld ein oder laden Sie eine Datei über die Schaltfläche 'Datei importieren' hoch.",
@@ -3442,7 +3442,7 @@
       "compare": "Vergleichen",
       "differences": "Unterschiede",
       "identical": "Beide JSON-Objekte sind identisch",
-      "detailed_description": "Der JSON Diff-Analyzer ist ein präzises Werkzeug zur strukturellen und semantischen Differenzierung von JSON-Daten. Technisch basiert der Vergleich auf einem zweistufigen Prozess: Zunächst werden beide JSON-Objekte durch einen Tokenizer in ein strukturiertes AST (Abstract Syntax Tree) überführt. Anschließend erfolgt eine rekursive Durchmusterung der Baumstrukturen, wobei atomare Werte (Strings, Zahlen), komplexe Typen (Arrays, verschachtelte Objekte) sowie Schlüsselreihenfolgen verglichen werden. Das Ergebnis wird in einem Diff-Report präsentiert, der feingranular zwischen fehlenden Schlüsseln, abweichenden Datentypen und strukturellen Diskrepanzen (z.B. Array-Reihenfolge, Schachtelungstiefe) unterscheidet. Entwickler benötigen dieses Tool, um beispielsweise inkonsistente API-Antworten zu validieren, Konfigurationsdateien in DevOps-Pipelines zu überwachen oder Dateninkonsistenzen zwischen Microservices zu identifizieren. Die Besonderheit liegt in der Unterstützung von JSON-Schema-Validierung während des Vergleichs, wodurch semantische Abweichungen im Kontext definierter Datenmodelle erkannt werden.",
+      "detailed_description": "Der JSON Diff-Analyzer ist ein präzises Werkzeug zur strukturellen und semantischen Differenzierung von JSON-Daten. Technisch basiert der Vergleich auf einem zweistufigen Prozess: Zunächst werden beide JSON-Objekte durch einen Tokenizer in ein strukturiertes AST (Abstract Syntax Tree) überführt. Anschließend erfolgt eine rekursive Durchmusterung der Baumstrukturen, wobei atomare Werte (Strings, Zahlen), komplexe Typen (Arrays, verschachtelte Objekte) sowie Schlüsselreihenfolgen verglichen werden. Das Ergebnis wird in einem Diff-Report präsentiert, der feingranular zwischen fehlenden Schlüsseln, abweichenden Datentypen und strukturellen Diskrepanzen (z.B. Array-Reihenfolge, Schachtelungstiefe) unterscheidet. Entwickler benötigen dieses Tool, um beispielsweise inkonsistente API-Antworten zu validieren, Konfigurationsdateien in DevOps-Pipelines zu überwachen oder Dateninkonsistenzen zwischen service-oriented applications zu identifizieren. Die Besonderheit liegt in der Unterstützung von JSON-Schema-Validierung während des Vergleichs, wodurch semantische Abweichungen im Kontext definierter Datenmodelle erkannt werden.",
       "usage_steps": [
         "1. Öffnen der JSON Diff-Benutzeroberfläche und Eingabe der ersten JSON-Instanz in das Feld 'JSON 1'.",
         "2. Eintragen der zweiten JSON-Daten in das separate 'JSON 2'-Eingabefeld.",
@@ -3756,7 +3756,7 @@
       "structName": "Strukturname",
       "input": "JSON-Eingabe",
       "output": "Go-Struktur",
-      "detailed_description": "Der JSON-to-Go-Struct-Converter ist ein spezialisierter Code-Generator, der JSON-Daten in typisierte Go-Structs übersetzt. Technisch gesehen analysiert das Tool JSON-Objekte, identifiziert Typen (Strings, Zahlen, Arrays, geschachtelte Objekte) und erzeugt entsprechende Go-Strukturen mit korrekten Feldtypen, Struct-Tags und hierarchischen Einbettungen. Der Parser berücksichtigt JSON-Schema-Komplexität, konvertiert Schlüssel in Go-konforme Feldnamen (z.B. camelCase zu PascalCase) und generiert Typaliase für Wiederholungen. Entwickler benötigen dieses Tool, um zeitaufwändige manuelle Codierung zu vermeiden, Typsicherheit in API-Backends (z.B. REST-Response-Handling) zu gewährleisten und komplexe Datenmodelle aus Microservices oder IoT-Sensoren zu validieren. Das Tool nutzt eine Kombination aus JSON-Decodierung, Typinferenz-Algorithmen und Go-Template-Rendering, um präzise Struct-Definitionen mit `json:\"...\"`-Tags zu erzeugen. Besonders bei verschachtelten Arrays ([]struct{}) oder gemischten Datentypen (interface{}) bietet es präzisere Ergebnisse als manuelle Ansätze.",
+      "detailed_description": "Der JSON-to-Go-Struct-Converter ist ein spezialisierter Code-Generator, der JSON-Daten in typisierte Go-Structs übersetzt. Technisch gesehen analysiert das Tool JSON-Objekte, identifiziert Typen (Strings, Zahlen, Arrays, geschachtelte Objekte) und erzeugt entsprechende Go-Strukturen mit korrekten Feldtypen, Struct-Tags und hierarchischen Einbettungen. Der Parser berücksichtigt JSON-Schema-Komplexität, konvertiert Schlüssel in Go-konforme Feldnamen (z.B. camelCase zu PascalCase) und generiert Typaliase für Wiederholungen. Entwickler benötigen dieses Tool, um zeitaufwändige manuelle Codierung zu vermeiden, Typsicherheit in API-Backends (z.B. REST-Response-Handling) zu gewährleisten und komplexe Datenmodelle aus service-oriented applications oder IoT-Sensoren zu validieren. Das Tool nutzt eine Kombination aus JSON-Decodierung, Typinferenz-Algorithmen und Go-Template-Rendering, um präzise Struct-Definitionen mit `json:\"...\"`-Tags zu erzeugen. Besonders bei verschachtelten Arrays ([]struct{}) oder gemischten Datentypen (interface{}) bietet es präzisere Ergebnisse als manuelle Ansätze.",
       "usage_steps": [
         "Navigieren Sie zur Tool-Oberfläche unter /json-to-go",
         "Fügen Sie Ihr JSON in den linken Bearbeitungsbereich ein (unterstützt JSON5-Formatierung)",
@@ -4140,7 +4140,7 @@
       "description": "Generiere zeitbasierte einmalige Kennwörter, die mit Google Authenticator kompatibel sind.",
       "seo_title": "Kostenloses TOTP-Generator-Online-Tool",
       "seo_description": "Generieren Sie kostenlose TOTP-Einsmählpässe online. Unterstützt Google Authenticator-kompatible Codes mit benutzerdefinierten Geheimnissen und Zeitintervallen für 2FA-Tests.",
-      "detailed_description": "Der TOTP-Generator (Time-Based One-Time Password) erstellt kryptografisch sichere Einmalpasswörter, die temporär gültig sind und mit Standards wie RFC 6238 kompatibel sind. Das Tool verwendet den HMAC-SHA1-Algorithmus, um aus einem geheimen Schlüssel (meist Base32-kodiert) und dem aktuellen Unix-Zeitstempel einen dynamischen Code zu generieren. Diese Passwörter sind für 30 Sekunden gültig und werden häufig für Zwei-Faktor-Authentifizierung (2FA) in Anwendungen wie Google Authenticator verwendet. Entwickler und Sicherheitsexperten benötigen dieses Tool, um manuell TOTPs zu erzeugen, etwa bei der Implementierung von Authentifizierungssystemen ohne physische Hardware-Tokens, bei der Fehlersuche in 2FA-Integrationen oder beim Testen von OAuth2-Flows. Die Generierung erfolgt durch die Berechnung des Zeitfensters (Time Step) und die dynamische Trunkierung des Hash-Ergebnisses auf 6-8 Stellen. Ein geheimer Schlüssel im Base32-Format (z.B. 'JBSWY3DPEHPK3PXP') ist erforderlich, um konsistente Codes mit kompatiblen Authenticator-Apps zu erzeugen.",
+      "detailed_description": "Der TOTP-Generator (Time-Based One-Time Password) erstellt kryptografisch sichere Einmalpasswörter, die temporär gültig sind und mit Standards wie RFC 6238 kompatibel sind. Das Tool verwendet den HMAC-SHA1-Algorithmus, um aus einem geheimen Schlüssel (meist Base32-kodiert) und dem aktuellen Unix-Zeitstempel einen dynamischen Code zu generieren. Diese Passwörter sind für 30 Sekunden gültig und werden häufig für Zwei-Faktor-Authentifizierung (2FA) in Anwendungen wie Google Authenticator verwendet. Entwickler und Sicherheitsexperten benötigen dieses Tool, um manuell TOTPs zu erzeugen, etwa bei der Implementierung von Authentifizierungssystemen ohne physische Hardware-Tokens, bei der Fehlersuche in 2FA-Integrationen oder beim Testen von authentication flows-Flows. Die Generierung erfolgt durch die Berechnung des Zeitfensters (Time Step) und die dynamische Trunkierung des Hash-Ergebnisses auf 6-8 Stellen. Ein geheimer Schlüssel im Base32-Format (z.B. 'JBSWY3DPEHPK3PXP') ist erforderlich, um konsistente Codes mit kompatiblen Authenticator-Apps zu erzeugen.",
       "usage_steps": [
         "Geben Sie einen Base32-kodierten geheimen Schlüssel in das Feld 'Geheimer Schlüssel' ein.",
         "Wählen Sie das gewünschte Zeitintervall (Standard: 30 Sekunden) im Dropdown 'Time Step'.",
@@ -4686,9 +4686,9 @@
     },
     "docker-compose-generator": {
       "name": "Docker Compose Generator",
-      "description": "Erstellen Sie docker-compose.yml-Dateien mit gemeinsamen Diensten wie MySQL, Redis und Nginx.",
+      "description": "Erstellen Sie docker-compose.yml-Dateien mit gemeinsamen Diensten wie MySQL, cache service und Nginx.",
       "seo_title": "Kostenloses Online Docker Compose Generator",
-      "seo_description": "Erstellen Sie docker-compose.yml-Dateien online für MySQL, PostgreSQL, Redis, Nginx und mehr – kostenlos mit visuellem Editor und Validierung.",
+      "seo_description": "Erstellen Sie docker-compose.yml-Dateien online für MySQL, PostgreSQL, cache service, Nginx und mehr – kostenlos mit visuellem Editor und Validierung.",
       "version": "Docker Compose Version",
       "databases": "Datenbanken",
       "messaging": "Nachrichten & Suche",
@@ -4701,8 +4701,8 @@
       "note": "Hinweis: Ändern Sie vor der Produktionsnutzung die standardmäßigen Passwörter.",
       "detailed_description": "Der Docker Compose Generator ist ein spezialisierter Konfigurationsassistent zur automatischen Erstellung von docker-compose.yml-Dateien für komplexe Container-Orchestration-Szenarien. Das Tool ermöglicht die Deklaration von Multi-Container-Setups durch präzise Definition von Services, Netzwerken, Volumes und Abhängigkeiten gemäß Docker Compose Specification v3.8+. Entwickler profitieren durch präzise generierte YAML-Syntax mit korrekter Einrückungstiefe, Schlüsselwörtern wie 'x-shared-volumes' oder 'healthcheck' sowie automatischer Auflösung von Service-Dependencies. Die webbasierte Oberfläche bietet visuelle Selektoren für kritische Parameter: Port-Mappings im Host-Container-Modus, persistenten Volume-Pfaden, Umgebungsvariablen-Sets (z.B. MYSQL_ROOT_PASSWORD) und Netzwerk-Topologien mit benutzerdefinierten Aliases. Besonders nützlich bei Mikroservices-Architekturen mit komplexen Datenflüssen, da das Tool automatisch Netzwerkbrücken zwischen DB-Backends (MySQL 8.0+) und Frontend-Proxys (Nginx 1.21+) erstellt. Technische Besonderheiten: Generierung von Override-Dateien für Multi-Stage-Builds, Validierung von YAML-Strukturen durch libyaml-bindings und Exportoptionen für Swarm-/K8s-kompatible Manifeste.",
       "usage_steps": [
-        "Wählen Sie aus einer Liste vordefinierter Services (MySQL 8.0, Redis 6.2, Nginx 1.21, PostgreSQL 14) durch Aktivierung der entsprechenden Checkboxen.",
-        "Konfigurieren Sie service-spezifische Parameter über erweiterte Eingabefelder: Port-Freigaben im Host-Modus für Nginx (z.B. '80:80/tcp'), InnoDB-Speicherbegrenzungen für MySQL oder Redis-Maxmemory-Einstellungen.",
+        "Wählen Sie aus einer Liste vordefinierter Services (MySQL 8.0, cache service 6.2, Nginx 1.21, PostgreSQL 14) durch Aktivierung der entsprechenden Checkboxen.",
+        "Konfigurieren Sie service-spezifische Parameter über erweiterte Eingabefelder: Port-Freigaben im Host-Modus für Nginx (z.B. '80:80/tcp'), InnoDB-Speicherbegrenzungen für MySQL oder cache service-Maxmemory-Einstellungen.",
         "Definieren Sie benutzerdefinierte Netzwerke durch Eingabe von CIDR-Subnetzen (z.B. '172.16.238.0/24') und Zuweisung von Service-Aliases über das Dropdown-Menü 'Networks > Aliases'.",
         "Legen Sie Abhängigkeitsreihenfolgen durch Drag-and-Drop im 'DependsOn'-Graphen fest, um ordnungsgemäße Container-Startsequenzen sicherzustellen.",
         "Überprüfen Sie den generierten YAML-Code im Syntax-Highlighting-Editor, der Fehler durch ESlint-basierte YAML-Validierung markiert.",
@@ -4710,9 +4710,9 @@
       ],
       "usage_examples": [
         "Erstellung eines LAMP-Stacks mit MySQL 8.0, PHP-FPM 8.1 und Nginx Reverse Proxy durch Aktivierung der drei Service-Module und automatischer Generierung von Volume-Mounts für /var/www/html.",
-        "Aufbau einer Microservices-Testumgebung mit Redis als Nachrichten-Broker und PostgreSQL als Datenbank für einen Node.js-Service, einschließlich Netzwerkisolation durch benutzerdefinierte Subnetze.",
+        "Aufbau einer service-oriented applications-Testumgebung mit cache service als Nachrichten-Broker und PostgreSQL als Datenbank für einen Node.js-Service, einschließlich Netzwerkisolation durch benutzerdefinierte Subnetze.",
         "Konfiguration einer CI/CD-Testumgebung mit temporären MySQL-Dumps durch Einrichtung von Volume-Snapshots und automatischer Anwendung von init.sql-Skripten beim Container-Start.",
-        "Deployment einer Redis-Caching-Layer mit Sentinel-Cluster für Hochverfügbarkeit durch Aktivierung des 'Redis Cluster'-Modus mit drei Knoten und automatischer Erstellung von Cross-Container-Verbindungsstrings."
+        "Deployment einer cache service-Caching-Layer mit Sentinel-Cluster für Hochverfügbarkeit durch Aktivierung des 'cache service Cluster'-Modus mit drei Knoten und automatischer Erstellung von Cross-Container-Verbindungsstrings."
       ]
     },
     "package-json-generator": {
@@ -4730,7 +4730,7 @@
         "Generieren Sie die finale package.json durch Klick auf 'Exportieren' und laden Sie die validierte JSON-Datei herunter, ergänzt um automatisch generierte .npmignore-Empfehlungen."
       ],
       "usage_examples": [
-        "Ein Entwickler erstellt eine Microservice-Architektur mit mehreren Diensten und nutzt den Generator, um einheitliche Abhängigkeitsversionen und Skriptkonventionen über alle Services zu standardisieren.",
+        "Ein Entwickler erstellt eine service-oriented application-Architektur mit mehreren Diensten und nutzt den Generator, um einheitliche Abhängigkeitsversionen und Skriptkonventionen über alle Services zu standardisieren.",
         "Ein Open-Source-Maintainer konfiguriert eine Bibliothek mit Peer-Dependencies für React 18 und generiert gleichzeitig kompatible package.json-Varianten für ESM- und CommonJS-Module.",
         "Ein DevOps-Engineer automatisiert die Einrichtung von CI/CD-kompatiblen package.json-Dateien mit spezifischen npm-Skripten für Testabläufe und Deployment-Pipelines auf GitHub Actions.",
         "Ein Anfänger erstellt seine erste Node.js-Webapplikation und wählt interaktiv notwendige Dependencies (Express, Mongoose) sowie Sicherheitskonfigurationen (z.B. audit=false für geschützte Dev-Umgebungen)."
@@ -5166,7 +5166,7 @@
       "description": "Erstellen Sie JSON Web Tokens mit benutzerdefiniertem Payload und geheimem Schlüssel.",
       "seo_title": "Kostenloses JWT-Generator-Tool online",
       "seo_description": "Erstellen Sie JWT-Token mit benutzerdefinierten Ansprüchen, Ablaufdatum und Signatur online – für kostenlose API-Autentifizierungstests.",
-      "detailed_description": "Der JWT Generator ist ein Spezialwerkzeug zur Erstellung von JSON Web Tokens (JWT) mit anpassbarem Payload und geheimem Schlüssel. Technisch gesehen generiert er Tokens gemäß RFC 7519, indem er Header, Payload (claims) und Signatur kombiniert. Der Nutzer kann dabei zwischen verschiedenen Verschlüsselungsalgorithmen wie HS256, RS256 oder ES256 wählen. Die Signatur wird durch kryptografische Hash-Funktionen wie HMACSHA256 berechnet, wobei der geheime Schlüssel als kritischer Sicherheitsparameter dient. Entwickler benötigen dieses Tool für Szenarien wie API-Sicherheit in Microservices-Architekturen, Single-Signon-Implementierungen oder temporäre Zugriffs-Token für IoT-Geräte. Der Generator verarbeitet benutzerdefinierte JSON-Objekte im Payload, unterstützt registrierte Claims wie 'exp' (Ablaufdatum) oder 'nbf' (Not Before) und erlaubt die Einbeziehung von Public Keys für asymmetrische Verschlüsselung. Die interne Validierung prüft automatisch die Formatkonformität der Eingaben und warnt vor unsicheren Konfigurationen wie fehlender TTL.",
+      "detailed_description": "Der JWT Generator ist ein Spezialwerkzeug zur Erstellung von JSON Web Tokens (JWT) mit anpassbarem Payload und geheimem Schlüssel. Technisch gesehen generiert er Tokens gemäß RFC 7519, indem er Header, Payload (claims) und Signatur kombiniert. Der Nutzer kann dabei zwischen verschiedenen Verschlüsselungsalgorithmen wie HS256, RS256 oder ES256 wählen. Die Signatur wird durch kryptografische Hash-Funktionen wie HMACSHA256 berechnet, wobei der geheime Schlüssel als kritischer Sicherheitsparameter dient. Entwickler benötigen dieses Tool für Szenarien wie API-Sicherheit in service-oriented applications-Architekturen, Single-Signon-Implementierungen oder temporäre Zugriffs-Token für IoT-Geräte. Der Generator verarbeitet benutzerdefinierte JSON-Objekte im Payload, unterstützt registrierte Claims wie 'exp' (Ablaufdatum) oder 'nbf' (Not Before) und erlaubt die Einbeziehung von Public Keys für asymmetrische Verschlüsselung. Die interne Validierung prüft automatisch die Formatkonformität der Eingaben und warnt vor unsicheren Konfigurationen wie fehlender TTL.",
       "usage_steps": [
         "Wählen Sie im Dropdown-Menü den gewünschten Signature-Algorithmus (z.B. HS256 oder RS256)",
         "Geben Sie im Payload-Editor benutzerdefinierte Claims als JSON-Objekt ein (z.B. {\"user_id\": 12345, \"role\": \"admin\"})",
@@ -5178,7 +5178,7 @@
       "usage_examples": [
         "Erstellung eines Authentifizierungstokens mit 'exp'-Claim für eine REST-API mit 15-minütiger Gültigkeitsdauer",
         "Generierung eines einmaligen Reset-Token mit eingebetteter E-Mail-Adresse für ein Passwort-Wiederherstellungssystem",
-        "Signierung von Transaktionsdaten zwischen Microservices mit einem RS256-Algorithmus und X.509-Zertifikatsverifikation",
+        "Signierung von Transaktionsdaten zwischen service-oriented applications mit einem RS256-Algorithmus und X.509-Zertifikatsverifikation",
         "Erzeugung eines JWT mit mehrschichtigem Payload für eine mobile App, das Rollen-basierten Zugriffsbeschränkungen implementiert"
       ],
       "jwt": {
@@ -5406,7 +5406,7 @@
         "1. Konvertierung einer GitHub-API-JSON-Antwort mit verschachtelten Commits und Autorinformationen in eine Rust-Struct-Hierarchie für ein CI/CD-Tool.",
         "2. Mapping eines JSON-Konfigurationsdatei-Schemas für eine Systemdienstkonfiguration mit optionalen Timeout-Feldern und numerischen Grenzwerten.",
         "3. Erstellung von Datenmodellen aus OpenWeatherMap-API-Beispieldaten für eine Wetter-App mit komplexen Temperaturbereichen und Prognosearrays.",
-        "4. Automatische Generierung von Test-Fixtures aus JSON-Beispieldaten für unit-tests in einer Microservices-Architektur mit strikter Typenvalidierung."
+        "4. Automatische Generierung von Test-Fixtures aus JSON-Beispieldaten für unit-tests in einer service-oriented applications-Architektur mit strikter Typenvalidierung."
       ]
     },
     "json-to-swift": {
@@ -6543,7 +6543,7 @@
       "descRdp": "Remote Desktop Protocol",
       "descPostgresql": "PostgreSQL-Datenbank",
       "descVnc": "Virtual Network Computing",
-      "descRedis": "Redis-Datenbank",
+      "desccache service": "cache service-Datenbank",
       "descHttpAlt": "HTTP-Alternative",
       "descHttpsAlt": "HTTPS-Alternative",
       "descMongodb": "MongoDB-Datenbank",
@@ -6834,7 +6834,7 @@
       "generate": "Nginx-Konfiguration generieren",
       "copy": "In die Zwischenablage kopieren",
       "output": "Generierte Nginx-Konfiguration",
-      "detailed_description": "Der Nginx Config Generator ist ein spezialisierter Code-Generator zur automatischen Erstellung von Nginx-Konfigurationsdateien. Das Tool abstrahiert komplexe Nginx-Direktiven wie `server`, `location`, `upstream` oder `proxy_pass` durch eine formularbasierte Oberfläche, die technische Anforderungen in syntaktisch korrekte Konfigurationen übersetzt. Entwickler benötigen dieses Werkzeug, um wiederkehrende Setup-Aufgaben zu beschleunigen, menschliche Fehlerquellen (z.B. Syntaxfehler in Konfigurationsdateien) zu minimieren und bewährte Sicherheitspraktiken wie HTTP/2-Unterstützung oder Caching-Header-Optimierungen zu standardisieren. Die zugrunde liegende Logik verarbeitet Benutzereingaben (z.B. Domain-Namen, Port-Zuweisungen, SSL-Zertifikatspfade) und generiert dynamisch zusammengesetzte Konfigurationen, die beispielsweise Reverse-Proxy-Szenarien für Microservices, Lastverteilung mit Round-Robin-Algorithmen oder Content-Delivery-Netzwerke (CDN) abbilden. Besonders bei skalierbaren Infrastrukturen mit dynamischen Backend-Diensten reduziert das Tool die manuelle Konfigurationsarbeit erheblich.",
+      "detailed_description": "Der Nginx Config Generator ist ein spezialisierter Code-Generator zur automatischen Erstellung von Nginx-Konfigurationsdateien. Das Tool abstrahiert komplexe Nginx-Direktiven wie `server`, `location`, `upstream` oder `proxy_pass` durch eine formularbasierte Oberfläche, die technische Anforderungen in syntaktisch korrekte Konfigurationen übersetzt. Entwickler benötigen dieses Werkzeug, um wiederkehrende Setup-Aufgaben zu beschleunigen, menschliche Fehlerquellen (z.B. Syntaxfehler in Konfigurationsdateien) zu minimieren und bewährte Sicherheitspraktiken wie HTTP/2-Unterstützung oder Caching-Header-Optimierungen zu standardisieren. Die zugrunde liegende Logik verarbeitet Benutzereingaben (z.B. Domain-Namen, Port-Zuweisungen, SSL-Zertifikatspfade) und generiert dynamisch zusammengesetzte Konfigurationen, die beispielsweise Reverse-Proxy-Szenarien für service-oriented applications, Lastverteilung mit Round-Robin-Algorithmen oder Content-Delivery-Netzwerke (CDN) abbilden. Besonders bei skalierbaren Infrastrukturen mit dynamischen Backend-Diensten reduziert das Tool die manuelle Konfigurationsarbeit erheblich.",
       "usage_steps": [
         "1. Wählen Sie im Drop-down-Menü den Konfigurationstyp: 'Standard-Webserver', 'Reverse Proxy' oder 'Load Balancer'.",
         "2. Geben Sie die Domäne und den zugehörigen Dokumentenstamm (z.B. '/var/www/html') in die entsprechenden Felder ein.",
@@ -6877,7 +6877,7 @@
         "6. Kopieren Sie den generierten Code mit der Zwischenablage-Schaltfläche oder laden Sie ihn als .js/.py-Datei herunter."
       ],
       "usage_examples": [
-        "Ein Backend-Entwickler konvertiert einen cURL-POST-Befehl mit OAuth2-Header in eine Python-requests-Funktion, um eine Drittanbieter-API in eine Django-App zu integrieren.",
+        "Ein Backend-Entwickler konvertiert einen cURL-POST-Befehl mit authentication flows-Header in eine Python-requests-Funktion, um eine Drittanbieter-API in eine Django-App zu integrieren.",
         "Ein Frontend-Teammitglied übersetzt einen komplexen cURL-Befehl mit Multipart-Form-Daten in eine JavaScript-Axios-Implementierung für eine Vue.js-Datei-Upload-Komponente.",
         "Ein DevOps-Ingenieur wandelt einen cURL-GET-Befehl mit Basic Auth in ein PowerShell-Skript um, um API-Abfragen in automatisierte Server-Checks zu integrieren.",
         "Ein API-Tester konvertiert einen Postman-Exportierten cURL-Befehl mit dynamischen Query-Parametern in PHP cURL, um Lasttests im Production-System durchzuführen."
@@ -7092,7 +7092,7 @@
         "Laden Sie das endgültige Ergebnis über den 'Export as JSON'-Button herunter, inklusive Metadaten zur verwendeten Verschlüsselungssequenz."
       ],
       "usage_examples": [
-        "Ein Frontend-Entwickler obfuscates einen OAuth2-Client-Secret für die Einbettung in JavaScript-Code, um Reverse-Engineering-Angriffe zu erschweren.",
+        "Ein Frontend-Entwickler obfuscates einen authentication flows-Client-Secret für die Einbettung in JavaScript-Code, um Reverse-Engineering-Angriffe zu erschweren.",
         "Ein DevOps-Engineer maskiert Datenbankverbindungsstrings in Kubernetes-Konfigurationsdateien, um ungewollte Enthüllung bei Team-Sharing zu verhindern.",
         "Ein Forschungsteam verschleiert kritische Teile eines maschinellen Lernmodells vor der Veröffentlichung als Open-Source-Code, um geistiges Eigentum zu schützen.",
         "Ein Compliance-Officer anonymisiert personenbezogene Daten (PII) in Debug-Logs durch mehrfache Obfuscation, um DSGVO-konforme Berichte an Dritte zu erstellen."
@@ -7621,7 +7621,7 @@
       "noPreview": "Klicken Sie auf 'Bild generieren', um die Vorschau des Bildes anzuzeigen",
       "info": "Information",
       "infoText": "Verwendet die Picsum Photos API. Seed stellt sicher, dass dasselbe Bild für konsistente Ergebnisse wiedergegeben wird. Bild-ID (0-1084) wählt ein bestimmtes Foto aus.",
-      "detailed_description": "Lorem Picsum ist ein leistungsstarkes Tool zur Integration von zufälligen Platzhalterbildern aus der Open-Source-Datenbank Picsum Photos in Webanwendungen und Prototypen. Technisch gesehen kommuniziert der Dienst über eine RESTful API, die hochauflösende Bilder im JPEG- und PNG-Format über dynamische Endpunkte bereitstellt. Die Bilder werden über ein Content Delivery Network (CDN) ausgeliefert und unterstützen Parameter wie Breite (width), Höhe (height), Unschärfe (blur) und spezifische Kategorien (z.B. Natur, Architektur). Nutzer profitieren von der automatischen Skalierung für responsive Designs und der Einhaltung von Creative Commons Zero-Lizenzen, wodurch rechtliche Risiken durch urheberrechtlich geschützte Inhalte entfallen. Das Tool eignet sich insbesondere für Frontend-Entwickler, die dynamische Mockups erstellen, oder Tester, die Bilder für Lasttests generieren. Die API liefert Metadaten im JSON-Format, darunter Bildabmessungen, Autorinformationen und CDN-Caching-Header, die sich in CI/CD-Pipelines oder Design-Systeme integrieren lassen. Die serverseitige Bildgenerierung minimiert Client-Ressourcen, während optionale Query-Parameter wie `grayscale` oder `random=timestamp` individuelle Stilvorlagen ermöglichen.",
+      "detailed_description": "Lorem Picsum ist ein leistungsstarkes Tool zur Integration von zufälligen Platzhalterbildern aus der Open-Source-Datenbank Picsum Photos in Webanwendungen und Prototypen. Technisch gesehen kommuniziert der Dienst über eine API, die hochauflösende Bilder im JPEG- und PNG-Format über dynamische Endpunkte bereitstellt. Die Bilder werden über ein Content Delivery Network (CDN) ausgeliefert und unterstützen Parameter wie Breite (width), Höhe (height), Unschärfe (blur) und spezifische Kategorien (z.B. Natur, Architektur). Nutzer profitieren von der automatischen Skalierung für responsive Designs und der Einhaltung von Creative Commons Zero-Lizenzen, wodurch rechtliche Risiken durch urheberrechtlich geschützte Inhalte entfallen. Das Tool eignet sich insbesondere für Frontend-Entwickler, die dynamische Mockups erstellen, oder Tester, die Bilder für Lasttests generieren. Die API liefert Metadaten im JSON-Format, darunter Bildabmessungen, Autorinformationen und CDN-Caching-Header, die sich in CI/CD-Pipelines oder Design-Systeme integrieren lassen. Die serverseitige Bildgenerierung minimiert Client-Ressourcen, während optionale Query-Parameter wie `grayscale` oder `random=timestamp` individuelle Stilvorlagen ermöglichen.",
       "usage_steps": [
         "Wählen Sie die gewünschte Bildbreite über den Schieberegler 'Width' (200–4000 px).",
         "Geben Sie die Höhe im Eingabefeld 'Height' ein oder aktivieren Sie 'Aspect Ratio' für proportionale Skalierung.",
@@ -8326,7 +8326,7 @@
         "Fügen Sie bis zu 10 Datensätze hinzu, wobei Sie für jeden die Linienfarbe, Strichstärke (1–5 px) und Markerform (Kreis, Quadrat, Dreieck) anpassen können.",
         "Aktivieren Sie im Reiter 'Erweiterte Einstellungen' die Option 'Legendensortierung' oder passen Sie den Y-Achsen-Bereich manuell für logarithmische Darstellung an.",
         "Nutzen Sie die 'Live-Vorschau'-Funktion, um Tooltips über Datenpunkten zu testen und Achsenbeschriftungen zu optimieren.",
-        "Exportieren Sie das finale Diagramm per Klick auf 'SVG-Download' für Vektorgrafiken oder 'PNG-Export' für hochaufgelöste Rasterbilder (300 DPI)."
+        "Exportieren Sie das finale Diagramm per Klick auf 'SVG-Download' für Vektorgrafiken oder 'PNG-Export' für hochaufgelöste Rasterbilder (high-resolution)."
       ],
       "usage_examples": [
         "Visualisierung von monatlichen Umsatzverläufen mehrerer Produktlinien in einem Unternehmen, um Saisonaleffekte zu identifizieren.",
@@ -8403,7 +8403,7 @@
         "3. Passen Sie das Erscheinungsbild an: Wählen Sie ein Farbschema aus den vordefinierten Optionen oder definieren Sie benutzerdefinierte HEX-Codes über den Farbauswahldialog.",
         "4. Aktivieren Sie die Schaltfläche '3D-Effekt' für eine tiefenwirksame Darstellung oder deaktivieren Sie Einzeltortenstücke über den Transparenzregler.",
         "5. Verwenden Sie das 'Vorschau'-Panel, um die Darstellung in Echtzeit zu prüfen, und passen Sie bei Bedarf die Schriftgrößen für Achsenbeschriftungen und Titel an.",
-        "6. Exportieren Sie das Diagramm über die Schaltfläche 'Download' als PNG mit 300dpi oder als SVG-Datei, wobei zusätzliche Metadaten über die Checkbox 'Berechnungsgrundlage einbetten' hinzugefügt werden können."
+        "6. Exportieren Sie das Diagramm über die Schaltfläche 'Download' als PNG mit high-resolution oder als SVG-Datei, wobei zusätzliche Metadaten über die Checkbox 'Berechnungsgrundlage einbetten' hinzugefügt werden können."
       ],
       "usage_examples": [
         "Ein Marketingteam visualisiert Marktanteile konkurrierender Produkte, indem sie CSV-Daten mit Umsatzwerten hochladen und die resultierenden Tortenstücke farblich nach Markenlogos anpassen.",
@@ -8544,7 +8544,7 @@
       "csvFormat": "CSV-Format: x,y (jede Zeile eine)",
       "csvImportSuccess": "Importiert {count} Zeilen",
       "csvImportError": "Ungültiges CSV-Format",
-      "detailed_description": "Der Scatter Chart Generator ist ein webbasiertes Analysetool zur Erstellung von Streudiagrammen für die visuelle Untersuchung bivariater Verteilungen. Technisch gesehen verarbeitet das Tool CSV- oder tabellarische Daten im Client-Browser mittels JavaScript-Bibliotheken wie ECharts-based browser chart rendering und ermöglicht die Zuordnung numerischer Variablen zu X/Y-Achsen sowie die Kategorisierung durch Farb- und Größenparameter. Die Rendering-Engine generiert dynamisch skalierbare SVG-Elemente mit interaktiven Features wie Tooltip-Anzeige bei Punkthover und Zoomfunktion für Datendichte-Cluster. Benutzer können logarithmische oder lineare Skalierungen wählen, Regressionslinien berechnen lassen und über präzise Axis-Labeling-Optionen Korrelationen bis zu einem Pearson-Koeffizienten von ±1 analysieren. Besonders nützlich für Wissenschaftler zur Mustererkennung in experimentellen Daten, Marketingleiter zur Identifikation von Kundenverhaltens-Trends oder Lehrkräfte zur Demonstration statistischer Zusammenhänge. Die Exportfunktion unterstützt hochaufgelöste PNG-Rasterbilder mit 300dpi und optimierte SVG-Vektorgrafiken mit minimaler Pfaddaten-Kompression für Präsentationen oder wissenschaftliche Publikationen.",
+      "detailed_description": "Der Scatter Chart Generator ist ein webbasiertes Analysetool zur Erstellung von Streudiagrammen für die visuelle Untersuchung bivariater Verteilungen. Technisch gesehen verarbeitet das Tool CSV- oder tabellarische Daten im Client-Browser mittels JavaScript-Bibliotheken wie ECharts-based browser chart rendering und ermöglicht die Zuordnung numerischer Variablen zu X/Y-Achsen sowie die Kategorisierung durch Farb- und Größenparameter. Die Rendering-Engine generiert dynamisch skalierbare SVG-Elemente mit interaktiven Features wie Tooltip-Anzeige bei Punkthover und Zoomfunktion für Datendichte-Cluster. Benutzer können logarithmische oder lineare Skalierungen wählen, Regressionslinien berechnen lassen und über präzise Axis-Labeling-Optionen Korrelationen bis zu einem Pearson-Koeffizienten von ±1 analysieren. Besonders nützlich für Wissenschaftler zur Mustererkennung in experimentellen Daten, Marketingleiter zur Identifikation von Kundenverhaltens-Trends oder Lehrkräfte zur Demonstration statistischer Zusammenhänge. Die Exportfunktion unterstützt hochaufgelöste PNG-Rasterbilder mit high-resolution und optimierte SVG-Vektorgrafiken mit minimaler Pfaddaten-Kompression für Präsentationen oder wissenschaftliche Publikationen.",
       "usage_steps": [
         "Navigieren Sie zur Tool-Seite über den direkten Slug-Link (scatter-chart-generator).",
         "Importieren Sie Daten über den CSV-Uploader oder geben Sie Werte manuell in die zweidimensionale Tabelle ein.",
@@ -8613,7 +8613,7 @@
         "tip4": "Aktivieren Sie 'Glättet', um Kurven zu erzeugen",
         "tip5": "Als PNG oder SVG exportieren"
       },
-      "detailed_description": "Der Area Chart Generator ist ein spezialisierter Web-Editor für die Erstellung von Flächendiagrammen mit interaktiver Datenvisualisierung. Technisch basiert das Tool auf der ECharts-based browser chart rendering-Bibliothek und ermöglicht die Darstellung kumulativer Datenmengen durch interpolierte Kurven unterhalb derer Flächen gefüllt werden. Der Generator unterstützt sowohl überlappende als auch gestapelte Darstellungsmodi, wobei die Y-Achse durch lineare oder logarithmische Skalierung angepasst werden kann. Besonders nützlich ist das Tool für Anwender, die Trends über Zeiträume analysieren oder Ressourcenverteilungen in mehreren Datensätzen vergleichen müssen. Die Datenintegration erfolgt über eine CSV/TSV-Parsing-Engine mit Echtzeit-Validierung, während die Rendering-Engine dynamisch Vorlagen für Linieninterpolation (linear, kubisch, schrittweise) berechnet. Exportfunktionen generieren präzise Rastergrafiken (PNG) mit 300dpi und skalierbare Vektorgrafiken (SVG) mit integrierter CSS-Stilisierung für Web-Anpassungen. Die Implementierung von Tooltips mit Crosshair-Funktion und der exportierbare JSON-Code für die Diagrammkonfiguration unterscheiden dieses Tool von Standard-Chart-Generatoren.",
+      "detailed_description": "Der Area Chart Generator ist ein spezialisierter Web-Editor für die Erstellung von Flächendiagrammen mit interaktiver Datenvisualisierung. Technisch basiert das Tool auf der ECharts-based browser chart rendering-Bibliothek und ermöglicht die Darstellung kumulativer Datenmengen durch interpolierte Kurven unterhalb derer Flächen gefüllt werden. Der Generator unterstützt sowohl überlappende als auch gestapelte Darstellungsmodi, wobei die Y-Achse durch lineare oder logarithmische Skalierung angepasst werden kann. Besonders nützlich ist das Tool für Anwender, die Trends über Zeiträume analysieren oder Ressourcenverteilungen in mehreren Datensätzen vergleichen müssen. Die Datenintegration erfolgt über eine CSV/TSV-Parsing-Engine mit Echtzeit-Validierung, während die Rendering-Engine dynamisch Vorlagen für Linieninterpolation (linear, kubisch, schrittweise) berechnet. Exportfunktionen generieren präzise Rastergrafiken (PNG) mit high-resolution und skalierbare Vektorgrafiken (SVG) mit integrierter CSS-Stilisierung für Web-Anpassungen. Die Implementierung von Tooltips mit Crosshair-Funktion und der exportierbare JSON-Code für die Diagrammkonfiguration unterscheiden dieses Tool von Standard-Chart-Generatoren.",
       "usage_steps": [
         "Öffnen Sie den Area Chart Generator im Browser und wählen Sie im Tab 'Daten' den Importmodus (Manuelle Eingabe oder CSV-Upload).",
         "Geben Sie mindestens zwei numerische Datenspalten ein, wobei die erste Spalte als X-Achsen-Werte interpretiert wird.",
@@ -8968,7 +8968,7 @@
         "tip4": "Beschriftungen aktivieren",
         "tip5": "Als PNG oder SVG exportieren"
       },
-      "detailed_description": "Der Doughnut Chart Generator ist ein spezialisierter Online-Editor zur Erstellung von kreisförmigen Datenvisualisierungen mit hohlem Zentrum. Technisch basiert das Tool auf ECharts-based browser chart rendering-basierten Rendering-Engines, die Proportionen durch segmentierte Bogenabschnitte darstellen. Die Datenbindung erfolgt über CSV-Import oder manuelle Eingabe in einem JSON-kompatiblen Editor. Die Anwendung nutzt clientseitige Canvas-APIs für dynamische Rastergenerierung und SVG-Namespaces für vektorbasierte Exporte. Benutzer können präzise den Innenradius (20-60% des Gesamtdurchmessers), Segmentabstände (mit bis zu 5px Offset) und Farbverläufe (HEX/RGB/CMYK-Support) konfigurieren. Die Exportfunktion erzeugt druckfähige PNGs mit 300dpi und SVGs mit editierbaren Pfaddaten, optimiert für responsive Webdesign durch viewBox-Attribut. Entwickler profitieren von der Integration von ARIA-Rollen für barrierefreie Chart-Darstellungen.",
+      "detailed_description": "Der Doughnut Chart Generator ist ein spezialisierter Online-Editor zur Erstellung von kreisförmigen Datenvisualisierungen mit hohlem Zentrum. Technisch basiert das Tool auf ECharts-based browser chart rendering-basierten Rendering-Engines, die Proportionen durch segmentierte Bogenabschnitte darstellen. Die Datenbindung erfolgt über CSV-Import oder manuelle Eingabe in einem JSON-kompatiblen Editor. Die Anwendung nutzt clientseitige Canvas-APIs für dynamische Rastergenerierung und SVG-Namespaces für vektorbasierte Exporte. Benutzer können präzise den Innenradius (20-60% des Gesamtdurchmessers), Segmentabstände (mit bis zu 5px Offset) und Farbverläufe (HEX/RGB/CMYK-Support) konfigurieren. Die Exportfunktion erzeugt druckfähige PNGs mit high-resolution und SVGs mit editierbaren Pfaddaten, optimiert für responsive Webdesign durch viewBox-Attribut. Entwickler profitieren von der Integration von ARIA-Rollen für barrierefreie Chart-Darstellungen.",
       "usage_steps": [
         "Öffnen Sie das Tool über die URL doughnut-chart-generator.de und wählen Sie den Tab 'Datenimport' aus.",
         "Laden Sie eine CSV-Datei mit Spalten für Kategorien und Werte hoch oder verwenden Sie den manuellen Dateneingabe-Bereich für bis zu 20 Segmente.",
@@ -9115,7 +9115,7 @@
       "categoryB": "Kategorie B",
       "categoryC": "Kategorie C",
       "item": "Artikel",
-      "detailed_description": "Der Sunburst Chart Generator ist ein spezialisierter Online-Editor zur visuellen Analyse hierarchischer Datenstrukturen durch radial partitionierte Kreisdiagramme. Das Tool verwendet ECharts-based browser chart rendering-basierte Rendering-Techniken, um mehrdimensionale Datensätze in konzentrischen Ringen darzustellen, wobei jeder Ring eine Hierarchieebene repräsentiert. Technisch basiert die Visualisierung auf einer TreeMap-Variante, die durch polare Koordinaten transformierte Rechtecke in gekrümmte Segmente umwandelt. Nutzer profitieren besonders bei der Analyse von Dateisystemhierarchien, Organigrammen oder Kategoriestrukturen mit bis zu 5 Ebenen Tiefe. Die Datenimport-Funktion unterstützt CSV- und JSON-Formate mit definierten Parent-Child-Beziehungen, während das Styling-Modul Farbverläufe, Winkeloffsets und dynamische Zoomfunktionen für Detailanalysen ermöglicht. Die Exportfunktion generiert skalierbare Vektorgrafiken (SVG) mit integriertem Tooltip-Interaktivitätscode oder rasterbasierte PNGs mit 300dpi-Auflösung.",
+      "detailed_description": "Der Sunburst Chart Generator ist ein spezialisierter Online-Editor zur visuellen Analyse hierarchischer Datenstrukturen durch radial partitionierte Kreisdiagramme. Das Tool verwendet ECharts-based browser chart rendering-basierte Rendering-Techniken, um mehrdimensionale Datensätze in konzentrischen Ringen darzustellen, wobei jeder Ring eine Hierarchieebene repräsentiert. Technisch basiert die Visualisierung auf einer TreeMap-Variante, die durch polare Koordinaten transformierte Rechtecke in gekrümmte Segmente umwandelt. Nutzer profitieren besonders bei der Analyse von Dateisystemhierarchien, Organigrammen oder Kategoriestrukturen mit bis zu 5 Ebenen Tiefe. Die Datenimport-Funktion unterstützt CSV- und JSON-Formate mit definierten Parent-Child-Beziehungen, während das Styling-Modul Farbverläufe, Winkeloffsets und dynamische Zoomfunktionen für Detailanalysen ermöglicht. Die Exportfunktion generiert skalierbare Vektorgrafiken (SVG) mit integriertem Tooltip-Interaktivitätscode oder rasterbasierte PNGs mit high-resolution-Auflösung.",
       "usage_steps": [
         "Laden Sie eine CSV-Datei mit Spalten für Element-ID, Eltern-ID und numerische Werte in den Datenimport-Editor hoch",
         "Wählen Sie im Hierarchie-Konfigurator die gewünschte Anzahl an Darstellungsebenen (max. 5) über den Schieberegler aus",
@@ -9945,7 +9945,7 @@
         "3. Weisen Sie jedem Ereignis eine Kategorie zu und konfigurieren Sie visuelle Parameter wie Farbpaletten, Linienstärke und Symbolform über das Stil-Editor-Tool.",
         "4. Aktivieren Sie die 'Stacking'-Option im Diagrammmodus, um parallele Prozesse darzustellen, oder verwenden Sie die 'Cluster'-Funktion für gruppierte Ereignisse.",
         "5. Nutzen Sie die interaktive Vorschauansicht, um Zoom-Level zu testen und Klick-Events auf Ereignisblöcke zu verknüpfen, die benutzerdefinierte JavaScript-Funktionen auslösen.",
-        "6. Exportieren Sie das finale Diagramm als SVG mit einbettbaren Metadaten oder generieren Sie einen PNG-Downloadlink mit anpassbarer Auflösung (bis zu 300 DPI)."
+        "6. Exportieren Sie das finale Diagramm als SVG mit einbettbaren Metadaten oder generieren Sie einen PNG-Downloadlink mit anpassbarer Auflösung (bis zu high-resolution)."
       ],
       "usage_examples": [
         "Ein Softwareentwicklerteam erstellt einen iterativen Sprint-Plan mit farbkodierten Phasen (Design, Entwicklung, QA) und synchronisiert Meilensteine mit Jira-API-Daten.",
@@ -10163,7 +10163,7 @@
         "Ordnen Sie Spalten aus Ihrem Datensatz den Diagrammachsen zu: X-Achse für Kategorien, Y-Achse für aggregierte Werte und Serien für individuelle Stapelkomponenten.",
         "Passen Sie die Farbpaletten an, indem Sie benutzerdefinierte HEX-Codes für jede Serie eingeben oder die automatische Gradientengenerierung nutzen.",
         "Aktivieren Sie interaktive Tooltips, um bei Hover-Ereignissen die Rohdatenwerte und prozentualen Anteile jedes Stapelabschnitts anzuzeigen.",
-        "Exportieren Sie das finale Diagramm als SVG-Datei für Vektorqualität oder als PNG mit bis zu 300 DPI für Präsentationen."
+        "Exportieren Sie das finale Diagramm als SVG-Datei für Vektorqualität oder als PNG mit bis zu high-resolution für Präsentationen."
       ],
       "usage_examples": [
         "Ein Einzelhändler visualisiert monatliche Umsätze nach Produktkategorien, wobei jeder Balken eine Region repräsentiert und die Stapelabschnitte Einzelpreise von Bestsellern zeigen.",
@@ -10237,7 +10237,7 @@
         "Passen Sie die Koordinatensysteme an, inklusive logarithmischer Skalierung oder Zeitstempel-basierter Achsenformate.",
         "Wählen Sie pro Serie eine diskrete Farbpalette aus dem HSL-Farbraum oder definieren Sie benutzerdefinierte HEX-Codes.",
         "Testen Sie die interaktive Legende durch Simulation von Hover-Ereignissen zur Überprüfung der Datenpunktabfrage.",
-        "Exportieren Sie das finale Diagramm im SVG-Format für Druckanwendungen oder als PNG mit 300 DPI für digitale Reports."
+        "Exportieren Sie das finale Diagramm im SVG-Format für Druckanwendungen oder als PNG mit high-resolution für digitale Reports."
       ],
       "usage_examples": [
         "Vergleich von Umsatzwachstumsraten verschiedener Produktlinien über drei Geschäftsjahre mit unterschiedlichen Skalierungen auf sekundären Y-Achsen.",
@@ -10391,7 +10391,7 @@
         "Weisen Sie HEX-Farbcodes für steigende (z.B. #4CAF50) und fallende (z.B. #F44336) Balken zu",
         "Passen Sie die X-Achsen-Tick-Dichte anhand der 'Label Density' Auswahl (1:5 bis 1:20)",
         "Nutzen Sie den 'Dynamic Preview' Bereich zur Echtzeit-Validierung von Überlappungen in Mehrfachdatenreihen",
-        "Exportieren Sie das finale Diagramm als SVG mit einbettbaren Metadaten oder als 300dpi PNG für Präsentationen"
+        "Exportieren Sie das finale Diagramm als SVG mit einbettbaren Metadaten oder als high-resolution PNG für Präsentationen"
       ],
       "usage_examples": [
         "Ein Finanzcontroller visualisiert monatliche Cashflow-Veränderungen durch Eingabe von Kontostand-Deltas mit tagesgenauen Zeitstempeln",
@@ -10984,7 +10984,7 @@
         "Passen Sie die Ringdicken mit dem Schieberegler für innere/äußere Segmente an (Standard: 30%/70%).",
         "Wenden Sie einen Farbverlauf über die 'Gradient Palette'-Auswahl an, die 12 vordefinierte Farbschemata enthält.",
         "Aktivieren Sie die 'Tooltips'-Option, um bei Mouseover interaktive Datenannotationen anzuzeigen.",
-        "Exportieren Sie das Diagramm im SVG-Format mit eingebetteten Metadaten oder als PNG mit 300dpi Auflösung."
+        "Exportieren Sie das Diagramm im SVG-Format mit eingebetteten Metadaten oder als PNG mit high-resolution Auflösung."
       ],
       "usage_examples": [
         "Ein Finanzanalyst visualisiert die Umsatzverteilung eines Unternehmens mit inneren Ringen für Produktlinien und äußeren Ringen für Regionen.",
@@ -11827,7 +11827,7 @@
       "description": "Erstellen Sie professionelle Lebensläufe mit mehreren Vorlagen und PDF-Export.",
       "seo_title": "Kostenloser Online-Lebenslauf-Generator",
       "seo_description": "Erstellen Sie mit diesem Lebenslauf-Generator professionelle Lebensläufe mit Vorlagen, Live-Vorschau und PDF-Export direkt online.",
-      "detailed_description": "Der Resume Builder ist eine fortschrittliche Online-Plattform, die es Benutzern ermöglicht, professionelle Lebensläufe mit Hilfe verschiedener Vorlagen zu erstellen und in PDF-Format zu exportieren. Technisch gesehen, nutzt das Tool moderne Web-Technologien, darunter HTML5, CSS3 und JavaScript, um eine reibungslose Benutzererfahrung zu gewährleisten. Die Plattform ist serverseitig mit Node.js entwickelt und verwendet eine RESTful API, um Daten zwischen dem Frontend und dem Backend zu verwalten. Benutzer können verschiedene Vorlagen auswählen, die auf gängigen Designprinzipien basieren und spezifisch auf verschiedene Branchen und Positionen zugeschnitten sind. Jede Vorlage kann individuell angepasst werden, um den individuellen Anforderungen des Benutzers gerecht zu werden. Die PDF-Export-Funktionalität nutzt Bibliotheken wie pdfMake, um eine hohe Qualität des Exportierten Dokuments zu garantieren. Der Resume Builder ist besonders nützlich für Jobbewerber, die ihre Lebensläufe für verschiedene Positionen anpassen müssen oder für Karrierewechsel optimieren möchten.",
+      "detailed_description": "Der Resume Builder ist eine fortschrittliche Online-Plattform, die es Benutzern ermöglicht, professionelle Lebensläufe mit Hilfe verschiedener Vorlagen zu erstellen und in PDF-Format zu exportieren. Technisch gesehen, nutzt das Tool moderne Web-Technologien, darunter HTML5, CSS3 und JavaScript, um eine reibungslose Benutzererfahrung zu gewährleisten. Die Plattform ist serverseitig mit Node.js entwickelt und verwendet eine API, um Daten zwischen dem Frontend und dem Backend zu verwalten. Benutzer können verschiedene Vorlagen auswählen, die auf gängigen Designprinzipien basieren und spezifisch auf verschiedene Branchen und Positionen zugeschnitten sind. Jede Vorlage kann individuell angepasst werden, um den individuellen Anforderungen des Benutzers gerecht zu werden. Die PDF-Export-Funktionalität nutzt Bibliotheken wie pdfMake, um eine hohe Qualität des Exportierten Dokuments zu garantieren. Der Resume Builder ist besonders nützlich für Jobbewerber, die ihre Lebensläufe für verschiedene Positionen anpassen müssen oder für Karrierewechsel optimieren möchten.",
       "usage_steps": [
         "Öffnen Sie die Hauptseite des Resume Builder und wählen Sie die gewünschte Vorlage aus der Vorschau-Galerie aus.",
         "Klicken Sie auf die Schaltfläche 'Vorlage bearbeiten', um in den Bearbeitungsmodus zu wechseln.",
@@ -16457,7 +16457,7 @@
       "description": "Konvertieren Sie JSON-Daten in Protocol Buffers Schema-Definitionen",
       "seo_title": "Kostenlose Online-JSON-to-Protobuf-Umrechnung",
       "seo_description": "Konvertieren Sie JSON online kostenlos in Protobuf-Schemata. Generieren Sie automatisch .proto-Dateien aus JSON-Daten für gRPC und Mikroservices.",
-      "detailed_description": "Der JSON nach Protocol Buffers Konverter wandelt JSON-Daten in Protocol Buffers Schema-Definitionen um. Perfekt für Entwickler, die mit gRPC, Microservices und leistungsfähiger Datenserialisierung arbeiten.",
+      "detailed_description": "Der JSON nach Protocol Buffers Konverter wandelt JSON-Daten in Protocol Buffers Schema-Definitionen um. Perfekt für Entwickler, die mit gRPC, service-oriented applications und leistungsfähiger Datenserialisierung arbeiten.",
       "usage_steps": [
         "Fügen Sie Ihre JSON-Daten im Eingabebereich ein",
         "Konfigurieren Sie die Nachrichtennamen und Paketoptionen",
@@ -19360,7 +19360,7 @@
       "usage_examples": [
         "Verwenden Sie den Docker Compose Ersteller für schnelle Datenverarbeitung",
         "Integrieren Sie ihn in Ihre Arbeitsabläufe für Effizienz",
-        "Build microservices stack"
+        "Build service-oriented applications stack"
       ],
       "input": "Eingabe",
       "output": "Ausgabe",
@@ -22855,9 +22855,9 @@
     },
     "docker-compose-generator": {
       "name": "Docker Compose Generator",
-      "description": "Generieren Sie docker-compose.yml-Dateien mit gängigen Diensten wie MySQL, Redis, Nginx.",
+      "description": "Generieren Sie docker-compose.yml-Dateien mit gängigen Diensten wie MySQL, cache service, Nginx.",
       "seo_title": "Kostenloser Docker Compose Generator online",
-      "seo_description": "Generieren Sie docker-compose.yml-Dateien mit MySQL, PostgreSQL, Redis, Nginx und weiteren Diensten kostenlos online. Visueller Editor mit YAML-Vorschau und Validierung.",
+      "seo_description": "Generieren Sie docker-compose.yml-Dateien mit MySQL, PostgreSQL, cache service, Nginx und weiteren Diensten kostenlos online. Visueller Editor mit YAML-Vorschau und Validierung.",
       "version": "Version verfassen",
       "databases": "Datenbanken",
       "messaging": "Nachrichten und Suche",
@@ -23668,7 +23668,7 @@
       "descRdp": "Remotedesktopprotokoll",
       "descPostgresql": "PostgreSQL Database",
       "descVnc": "Virtuelles Netzwerk-Computing",
-      "descRedis": "Redis-Datenbank",
+      "desccache service": "cache service-Datenbank",
       "descHttpAlt": "HTTP Alternate",
       "descHttpsAlt": "HTTPS Alternate",
       "descMongodb": "MongoDB Database"

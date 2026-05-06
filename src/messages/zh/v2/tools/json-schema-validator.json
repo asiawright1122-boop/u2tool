@@ -9,7 +9,7 @@
     "Step 6: 根据错误信息调整 JSON 数据或 Schema，重复验证过程，直至数据完全符合 Schema。"
   ],
   "usage_examples": [
-    "Example 1: 在开发 RESTful API 时，使用 JSON Schema Validator 验证客户端提交的数据是否符合预期的格式和结构，确保数据的完整性和一致性。",
+    "Example 1: 在开发 API 时，使用 JSON Schema Validator 验证客户端提交的数据是否符合预期的格式和结构，确保数据的完整性和一致性。",
     "Example 2: 在前端与后端数据交互中，前端开发者可以使用此工具验证从后端收到的 JSON 数据是否符合预定义的 Schema，及时发现数据异常。",
     "Example 3: 在进行数据迁移或数据导入项目中，使用 JSON Schema Validator 检查数据源中的 JSON 数据是否符合目标系统的要求，保证数据迁移过程的顺利进行。",
     "Example 4: 在编写自动化测试脚本时，测试工程师可以利用 JSON Schema Validator 确认测试数据的正确性，提高测试的可靠性和覆盖率。"

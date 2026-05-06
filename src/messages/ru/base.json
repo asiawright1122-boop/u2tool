@@ -972,9 +972,9 @@
     },
     "docker-compose-generator": {
       "name": "Генератор Docker Compose",
-      "description": "Создавайте файлы docker-compose.yml с помощью таких общих сервисов, как MySQL, Redis, Nginx.",
+      "description": "Создавайте файлы docker-compose.yml с помощью таких общих сервисов, как MySQL, cache service, Nginx.",
       "seo_title": "Бесплатный онлайн-генератор Docker Compose",
-      "seo_description": "Создавайте файлы docker-compose.yml с помощью MySQL, PostgreSQL, Redis, Nginx и других сервисов онлайн бесплатно. Визуальный редактор с предварительным просмотром и проверкой YAML.",
+      "seo_description": "Создавайте файлы docker-compose.yml с помощью MySQL, PostgreSQL, cache service, Nginx и других сервисов онлайн бесплатно. Визуальный редактор с предварительным просмотром и проверкой YAML.",
       "version": "Создать версию",
       "databases": "Базы данных",
       "messaging": "Обмен сообщениями и поиск",
@@ -1757,7 +1757,7 @@
       "descRdp": "Протокол удаленного рабочего стола",
       "descPostgresql": "PostgreSQL Database",
       "descVnc": "Виртуальные сетевые вычисления",
-      "descRedis": "База данных Redis",
+      "desccache service": "База данных cache service",
       "descHttpAlt": "HTTP Alternate",
       "descHttpsAlt": "HTTPS Alternate",
       "descMongodb": "MongoDB Database"
@@ -4866,9 +4866,9 @@
     },
     "docker-compose-generator": {
       "name": "Генератор Docker Compose",
-      "description": "Создавайте файлы docker-compose.yml с помощью таких общих сервисов, как MySQL, Redis, Nginx.",
+      "description": "Создавайте файлы docker-compose.yml с помощью таких общих сервисов, как MySQL, cache service, Nginx.",
       "seo_title": "Бесплатный генератор Docker Compose онлайн",
-      "seo_description": "Генерируйте файлы docker-compose.yml с MySQL, PostgreSQL, Redis и другими сервисами бесплатно онлайн.",
+      "seo_description": "Генерируйте файлы docker-compose.yml с MySQL, PostgreSQL, cache service и другими сервисами бесплатно онлайн.",
       "version": "Создать версию",
       "databases": "Базы данных",
       "messaging": "Обмен сообщениями и поиск",
@@ -5703,7 +5703,7 @@
       "descRdp": "Протокол удаленного рабочего стола",
       "descPostgresql": "База данных PostgreSQL",
       "descVnc": "Виртуальное сетевое вычисление",
-      "descRedis": "База данных Redis",
+      "desccache service": "База данных cache service",
       "descHttpAlt": "Альтернативный HTTP",
       "descHttpsAlt": "Альтернативный HTTPS",
       "descMongodb": "База данных MongoDB"

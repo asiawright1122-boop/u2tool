@@ -9,7 +9,7 @@
     "Copy the TypeScript code snippet or download as a .ts module with proper imports"
   ],
   "usage_examples": [
-    "Validating third-party API responses in a Node.js microservice by generating Zod schemas from example payloads",
+    "Validating third-party API responses in a Node.js service-oriented application by generating Zod schemas from example payloads",
     "Creating type-safe form validators in React applications using JSON samples from UI design mocks",
     "Converting legacy MongoDB schema definitions to Zod for runtime validation in TypeScript backends",
     "Generating interface guards for WebSocket message brokers to ensure type correctness in real-time systems"

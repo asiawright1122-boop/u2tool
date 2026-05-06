@@ -11,7 +11,7 @@
   "usage_examples": [
     "Sécuriser une API REST en générant des signatures HMAC-SHA256 pour authentifier les requêtes d'un client mobile",
     "Valider l'origine des notifications webhook reçues par une plateforme SaaS en comparant les signatures HMAC",
-    "Créer des tokens JWT avec en-tête sécurisé pour l'authentification entre microservices dans une architecture cloud",
+    "Créer des tokens JWT avec en-tête sécurisé pour l'authentification entre service-oriented applications dans une architecture cloud",
     "Vérifier l'intégrité des fichiers de mise à jour firmware avant leur déploiement sur des dispositifs IoT"
   ]
 }

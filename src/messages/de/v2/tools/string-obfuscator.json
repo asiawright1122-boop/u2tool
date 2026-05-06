@@ -21,7 +21,7 @@
     "Laden Sie das endgültige Ergebnis über den 'Export as JSON'-Button herunter, inklusive Metadaten zur verwendeten Verschlüsselungssequenz."
   ],
   "usage_examples": [
-    "Ein Frontend-Entwickler obfuscates einen OAuth2-Client-Secret für die Einbettung in JavaScript-Code, um Reverse-Engineering-Angriffe zu erschweren.",
+    "Ein Frontend-Entwickler obfuscates einen authentication flows-Client-Secret für die Einbettung in JavaScript-Code, um Reverse-Engineering-Angriffe zu erschweren.",
     "Ein DevOps-Engineer maskiert Datenbankverbindungsstrings in Kubernetes-Konfigurationsdateien, um ungewollte Enthüllung bei Team-Sharing zu verhindern.",
     "Ein Forschungsteam verschleiert kritische Teile eines maschinellen Lernmodells vor der Veröffentlichung als Open-Source-Code, um geistiges Eigentum zu schützen.",
     "Ein Compliance-Officer anonymisiert personenbezogene Daten (PII) in Debug-Logs durch mehrfache Obfuscation, um DSGVO-konforme Berichte an Dritte zu erstellen."

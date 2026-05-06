@@ -9,7 +9,7 @@
     "6. 'Security Analysis' 섹션에서 서버 응답이 CORS RFC 사양을 준수하는지에 대한 기술적 평가 보고서를 확인합니다."
   ],
   "usage_examples": [
-    "RESTful API 개발 중 'No 'Access-Control-Allow-Origin' header present' 오류 발생 시 서버 CORS 설정 검증",
+    "API 개발 중 'No 'Access-Control-Allow-Origin' header present' 오류 발생 시 서버 CORS 설정 검증",
     "프론트엔드 애플리케이션이 S3 버킷에서 정적 리소스를 로드할 때 발생하는 CORS 블록 문제 디버깅",
     "마이크로서비스 간 인증 토큰 전달을 위한 'Authorization' 헤더가 Access-Control-Allow-Headers에 포함되었는지 확인",
     "CDN을 통한 폰트 파일 로딩 시 'Tainted canvases' 오류 방지를 위한 CORS 헤더 정합성 검사"

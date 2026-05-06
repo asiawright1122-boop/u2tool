@@ -6,7 +6,7 @@
     "3. Configure ring separation using the 'Inter-Ring Distance' slider (0-40px) to prevent visual overlap",
     "4. Select color palettes via the 'Segment Color' picker, with options for monochromatic gradients or categorical differentiation",
     "5. Adjust outer ring thickness with the 'Ring Proportion' control (outer:inner ratio from 1:1 to 3:1)",
-    "6. Export as SVG with embedded CSS classes or PNG with 300dpi resolution using the 'Download Visualization' button"
+    "6. Export as SVG with embedded CSS classes or PNG with high-resolution resolution using the 'Download Visualization' button"
   ],
   "usage_examples": [
     "Visualizing corporate expenditure where the outer ring shows department budgets and inner rings break down office supplies, salaries, and travel costs per department",

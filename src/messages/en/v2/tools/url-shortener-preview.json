@@ -1,7 +1,7 @@
 {
   "input": "Input Text",
   "copy": "Copy Results",
-  "note": "Note: Due to browser security restrictions, actual URL expansion requires server-side requests. This tool identifies short URLs and shows their domains.",
+  "note": "Note: Due to browser security restrictions, actual URL expansion requires remote requests. This tool identifies short URLs and shows their domains.",
   "placeholder": "Paste text containing short URLs (bit.ly, tinyurl.com, t.co, etc.)...",
   "analyzing": "Analyzing...",
   "analyzeUrls": "Analyze URLs",
@@ -10,7 +10,7 @@
   "moreServices": "+{count} more",
   "noShortUrls": "No short URLs found",
   "noShortUrlsError": "No recognized short URLs in the input",
-  "unableToExpand": "Unable to expand (requires server-side request)",
+  "unableToExpand": "Unable to expand (requires remote request)",
   "detailed_description": "The URL Shortener Preview tool is designed to provide a comprehensive analysis and preview of shortened URLs, a common feature in digital marketing, link sharing, and social media platforms. Technically, the tool decodes the shortened URL and retrieves the original, full-length URL, along with additional metadata such as the HTTP status code, the final destination URL, and any redirects that occur. This is achieved through a series of HTTP requests and responses, where the tool sends a HEAD request to the shortened URL to avoid triggering the actual content download, which is particularly useful for security and performance reasons. The tool also parses the headers of the response to gather important information such as the content type and server details. Users need this tool to verify the integrity and safety of shortened URLs, especially in scenarios where the destination is not immediately clear. It is invaluable for marketers who need to ensure that their shortened links lead to the correct landing pages, and for security professionals who want to detect potential phishing attempts or other malicious activities. The tool's ability to provide a detailed breakdown of the URL's journey from the shortened form to the final destination makes it a crucial asset in the digital toolkit.",
   "usage_steps": [
     "Step 1: Navigate to the URL Shortener Preview tool page on the website.",

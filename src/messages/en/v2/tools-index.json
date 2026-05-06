@@ -736,9 +736,9 @@
   },
   "docker-compose-generator": {
     "name": "Docker Compose Generator",
-    "description": "Generate docker-compose.yml files with common services like MySQL, Redis, Nginx.",
+    "description": "Generate docker-compose.yml files with common services like MySQL, cache service, Nginx.",
     "seo_title": "Free Docker Compose Generator Online",
-    "seo_description": "Generate docker-compose.yml files with MySQL, PostgreSQL, Redis, Nginx, and more services online for free. Visual editor with YAML preview and validation."
+    "seo_description": "Generate docker-compose.yml files with MySQL, PostgreSQL, cache service, Nginx, and more services online for free. Visual editor with YAML preview and validation."
   },
   "package-json-generator": {
     "name": "package.json Generator",
@@ -2408,7 +2408,7 @@
     "name": "JSON to Protocol Buffers",
     "description": "Convert JSON data to Protocol Buffers schema definition",
     "seo_title": "Free JSON to Protobuf Converter Online - Generate Proto Schema",
-    "seo_description": "Convert JSON to Protocol Buffers schema online for free. Generate .proto files from JSON data automatically. Essential for gRPC and microservices development."
+    "seo_description": "Convert JSON to Protocol Buffers schema online for free. Generate .proto files from JSON data automatically. Essential for gRPC and service-oriented applications development."
   },
   "svg-to-png": {
     "name": "SVG to PNG Converter",
