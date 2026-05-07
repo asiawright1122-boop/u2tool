@@ -1,8 +1,11 @@
 # 0001. v2 message namespace retirement
 
-**Status:** Proposed
+**Status:** Accepted
 **Date:** 2026-05-07
+**Decided:** 2026-05-07
 **Owner:** project-wide
+**Implementation:** commits `50139773`, `7dbba4c3`, `de6d4a99` on
+branch `wip/v2-namespace-retirement` (merged to `main`).
 
 ## Context
 

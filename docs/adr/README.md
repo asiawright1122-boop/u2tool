@@ -67,4 +67,4 @@ plans in `.planning/`.
 
 | # | Title | Status | Date |
 |---|---|---|---|
-| [0001](0001-v2-message-namespace-retirement.md) | v2 message namespace retirement | Proposed | 2026-05-07 |
+| [0001](0001-v2-message-namespace-retirement.md) | v2 message namespace retirement | Accepted | 2026-05-07 |
