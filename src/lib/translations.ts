@@ -31,11 +31,6 @@ const baseMessagesCache = new Map<string, MessagesRecord>();
 const baseUiMessagesCache = new Map<string, MessagesRecord>();
 const toolMessagesCache = new Map<string, MessagesRecord>();
 const toolPageMessagesCache = new Map<string, MessagesRecord>();
-const legacyToolIndexCache = new Map<string, MessagesRecord>();
-const legacyToolIndexOverrideSlugs = [...new Set([
-  ...Object.keys(toolMessageAliases),
-  ...Object.values(toolMessageAliases),
-])];
 
 function getAssetCacheKey(assetBaseUrl?: string | URL): string {
   if (!assetBaseUrl) {
@@ -142,38 +137,15 @@ function mergeMessageRecords(
 async function applyToolMessageAliases(
   locale: Locale,
   messages: MessagesRecord,
-  assetBaseUrl?: string | URL
+  _assetBaseUrl?: string | URL
 ): Promise<MessagesRecord> {
+  void locale;
   const tools = messages.tools;
   if (typeof tools !== 'object' || tools === null || Array.isArray(tools)) {
     return messages;
   }
 
   const nextTools = { ...(tools as Record<string, unknown>) };
-  const missingAliasTargets = Object.keys(toolMessageAliases).filter((slug) => !nextTools[slug]);
-
-  if (legacyToolIndexOverrideSlugs.length > 0) {
-    const legacyToolIndex = await loadLegacyToolIndex(locale, assetBaseUrl);
-
-    for (const slug of legacyToolIndexOverrideSlugs) {
-      const legacyEntry = legacyToolIndex[slug];
-      if (!isMergeableRecord(legacyEntry)) {
-        continue;
-      }
-
-      const currentEntry = nextTools[slug];
-      nextTools[slug] = isMergeableRecord(currentEntry)
-        ? mergeMessageRecords(currentEntry, legacyEntry)
-        : legacyEntry;
-    }
-
-    for (const slug of missingAliasTargets) {
-      const legacyEntry = legacyToolIndex[slug];
-      if (isMergeableRecord(legacyEntry)) {
-        nextTools[slug] = legacyEntry;
-      }
-    }
-  }
 
   for (const [targetSlug, sourceSlug] of Object.entries(toolMessageAliases)) {
     if (!nextTools[targetSlug] && nextTools[sourceSlug]) {
@@ -182,45 +154,6 @@ async function applyToolMessageAliases(
   }
 
   return { ...messages, tools: nextTools };
-}
-
-async function loadLegacyToolIndex(
-  locale: Locale,
-  assetBaseUrl?: string | URL
-): Promise<MessagesRecord> {
-  const cacheKey = `${locale}:${getAssetCacheKey(assetBaseUrl)}`;
-  const cached = legacyToolIndexCache.get(cacheKey);
-  if (cached) {
-    return cached;
-  }
-
-  const primary = await loadMessagesFile(
-    `../messages/${locale}/v2/tools-index.json`,
-    `/messages/${locale}/v2/tools-index.json`,
-    assetBaseUrl
-  );
-
-  if (primary) {
-    legacyToolIndexCache.set(cacheKey, primary);
-    return primary;
-  }
-
-  if (locale !== 'en') {
-    const fallback = await loadMessagesFile(
-      '../messages/en/v2/tools-index.json',
-      '/messages/en/v2/tools-index.json',
-      assetBaseUrl
-    );
-
-    if (fallback) {
-      legacyToolIndexCache.set(cacheKey, fallback);
-      return fallback;
-    }
-  }
-
-  const emptyIndex: MessagesRecord = {};
-  legacyToolIndexCache.set(cacheKey, emptyIndex);
-  return emptyIndex;
 }
 
 async function loadDetailedToolMessages(
