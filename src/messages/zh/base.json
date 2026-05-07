@@ -11226,8 +11226,6 @@
       "svg": "SVG"
     },
     "sunburst-chart-generator": {
-      "name": "太阳系图生成器",
-      "description": "在线创建太阳系图。以辐射方式可视化层次结构数据，并导出为PNG/SVG。",
       "name": "旭日图生成器",
       "description": "在线创建旭日图。以辐射方式可视化层次结构数据，并导出为PNG/SVG。",
       "seo_title": "免费在线旭日图生成器 - 绘制层级占比旭日图",
@@ -21267,6 +21265,12 @@
       "instruction1": "点击\"开始录制\"按钮",
       "instruction2": "选择要录制的屏幕、窗口或标签页",
       "instruction3": "完成后点击\"停止\"，然后下载录制文件"
+    },
+    "jwt-debugger": {
+      "name": "JWT调试器",
+      "description": "调试和验证JWT令牌，支持签名验证",
+      "seo_title": "免费在线JWT调试器 - 快速验证签名",
+      "seo_description": "使用我们的JWT调试器轻松检查和验证JSON Web Tokens。在线免费工具，支持Base64解码和SVG可视化。立即试用！"
     }
   }
 }

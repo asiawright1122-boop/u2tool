@@ -4164,23 +4164,37 @@
       "seo_description": "Use nossa ferramenta online para testar expressões regulares com correspondência em tempo real e destaque. Experimente agora e descubra soluções JSON, Base64 e SVG!"
     },
     "jwt-decoder": {
-      "name": "Decodificador de JWT",
-      "description": "Decodifique e inspecione tokens JWT. Visualize cabeçalho, carga e assinatura.",
-      "seo_title": "Decodificador de JWT Grátis Online",
-      "seo_description": "Use a ferramenta online gratuita para decodificar e examinar JWTs. Visualize header, payload e signature sem verificar.",
-      "enterToken": "Por favor, insira um token JWT",
-      "invalidFormat": "Formato de token JWT inválido",
-      "invalidToken": "Token JWT inválido",
+      "name": "Depurador JWT",
+      "description": "Depure e verifique tokens JWT com validação de assinatura",
+      "seo_title": "Grátis: Debugger JWT Online",
+      "seo_description": "Use nossa ferramenta online para debugar e validar JWT com validação de assinatura. Teste JSON, Base64 e SVG gratuitamente hoje!",
+      "token": "Token JWT",
       "header": "Cabeçalho",
-      "payload": "Carga",
+      "payload": "Payload",
       "signature": "Assinatura",
-      "issuedAt": "Emitido em (iat)",
-      "expires": "Expira em (exp)",
-      "notBefore": "Não antes (nbf)",
-      "input": "Entrada",
-      "decode": "Decodificar",
+      "secret": "Chave Secreta",
+      "verify": "Verificar Assinatura",
+      "valid": "Assinatura Válida",
+      "invalid": "Assinatura Inválida",
+      "expired": "Token Expirado",
+      "tokenPlaceholder": "Cole seu token JWT aqui...",
+      "notExpired": "Token Válido",
+      "expiresAt": "Expira em",
+      "errors": {
+        "invalidFormat": "Formato JWT inválido",
+        "decodeFailed": "Falha ao decodificar token"
+      },
+      "placeholder": "Cole o token JWT aqui...",
+      "loadExample": "Carregar exemplo",
+      "tokenInput": "Entrada de token",
+      "claim": "Reivindicação",
+      "claims": "Reivindicações",
       "copied": "Copiado!",
-      "copy": "Copiar"
+      "copy": "Copiar",
+      "secretPlaceholder": "Digite a chave secreta...",
+      "value": "Valor",
+      "verifyNote": "Esta página decodifica e mostra o segmento de assinatura, mas não verifica autenticidade. Verifique assinaturas no seu aplicativo ou em ferramentas de segurança confiáveis.",
+      "verifySignature": "A verificação de assinatura não é realizada"
     },
     "diff-checker": {
       "name": "Diff Checker",
@@ -12029,39 +12043,6 @@
       "headerNamePlaceholder": "Nome do cabeçalho",
       "headerValuePlaceholder": "Valor"
     },
-    "jwt-decoder": {
-      "name": "Depurador JWT",
-      "description": "Depure e verifique tokens JWT com validação de assinatura",
-      "seo_title": "Grátis: Debugger JWT Online",
-      "seo_description": "Use nossa ferramenta online para debugar e validar JWT com validação de assinatura. Teste JSON, Base64 e SVG gratuitamente hoje!",
-      "token": "Token JWT",
-      "header": "Cabeçalho",
-      "payload": "Payload",
-      "signature": "Assinatura",
-      "secret": "Chave Secreta",
-      "verify": "Verificar Assinatura",
-      "valid": "Assinatura Válida",
-      "invalid": "Assinatura Inválida",
-      "expired": "Token Expirado",
-      "tokenPlaceholder": "Cole seu token JWT aqui...",
-      "notExpired": "Token Válido",
-      "expiresAt": "Expira em",
-      "errors": {
-        "invalidFormat": "Formato JWT inválido",
-        "decodeFailed": "Falha ao decodificar token"
-      },
-      "placeholder": "Cole o token JWT aqui...",
-      "loadExample": "Carregar exemplo",
-      "tokenInput": "Entrada de token",
-      "claim": "Reivindicação",
-      "claims": "Reivindicações",
-      "copied": "Copiado!",
-      "copy": "Copiar",
-      "secretPlaceholder": "Digite a chave secreta...",
-      "value": "Valor",
-      "verifyNote": "Esta página decodifica e mostra o segmento de assinatura, mas não verifica autenticidade. Verifique assinaturas no seu aplicativo ou em ferramentas de segurança confiáveis.",
-      "verifySignature": "A verificação de assinatura não é realizada"
-    },
     "csp-generator": {
       "name": "Gerador CSP",
       "description": "Gere cabeçalhos de Política de Segurança de Conteúdo",
@@ -15744,6 +15725,12 @@
       "instruction1": "Clique em \"Iniciar gravação\"",
       "instruction2": "Selecione a tela, janela ou aba para gravar",
       "instruction3": "Clique em \"Parar\" ao terminar e baixe"
+    },
+    "jwt-debugger": {
+      "name": "Depurador JWT",
+      "description": "Depure e verifique tokens JWT com validação de assinatura",
+      "seo_title": "Grátis: Debugger JWT Online",
+      "seo_description": "Use nossa ferramenta online para debugar e validar JWT com validação de assinatura. Teste JSON, Base64 e SVG gratuitamente hoje!"
     }
   }
 }

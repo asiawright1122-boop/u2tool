@@ -15538,6 +15538,12 @@
       "instruction1": "Click \"Start Recording\" to begin",
       "instruction2": "Select the screen, window, or tab you want to record",
       "instruction3": "Click \"Stop\" when finished, then download your recording"
+    },
+    "jwt-debugger": {
+      "name": "JWT Debugger",
+      "description": "Decode and inspect JWT tokens. View header, payload, and signature.",
+      "seo_title": "Free JWT Debugger Online - Decode JWT Header and Payload",
+      "seo_description": "Debug JWT structure by decoding headers and payloads, checking claims, and viewing the signature segment. This page does not verify token authenticity."
     }
   }
 }

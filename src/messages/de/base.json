@@ -4220,23 +4220,37 @@
       "seo_description": "Mit unserem Regex Tester testen Sie Ihre Regular Expressions online und in Echtzeit. Erkenntnis, Match und Highlighting – jetzt kostenlos ausprobieren!"
     },
     "jwt-decoder": {
-      "name": "JWT Decoder",
-      "description": "Decode und überprüfen Sie JWT Tokens. Header, Payload und Signature anzeigen.",
-      "seo_title": "Kostenloses JWT Decoder Online",
-      "seo_description": "Decode und inspecte JWT online kostenlos. Ohne Verifizierung sieh den Header, Payload und die Signatur. Ein essentieller Tool für die Auth-Debugging.",
-      "enterToken": "Bitte geben Sie einen JWT Token ein",
-      "invalidFormat": "Ungültiger JWT-Format",
-      "invalidToken": "Ungültiger JWT Token",
+      "name": "JWT-Debugger",
+      "description": "Debuggen und verifizieren Sie JWT-Tokens mit Signaturvalidierung",
+      "seo_title": "Kostenlose JWT Debugger Online-Tool",
+      "seo_description": "Debuggen Sie JWT-Token online kostenlos. Entschlüsseln Sie Header und Payload, überprüfen Sie Signaturen mit Secret oder Public Key - essentiell für Authentifizierungsdebugging.",
+      "token": "JWT-Token",
       "header": "Header",
       "payload": "Payload",
-      "signature": "Signature",
-      "issuedAt": "Erfasst am (iat)",
-      "expires": "Ablaufdatum (exp)",
-      "notBefore": "Nicht vor (nbf)",
-      "input": "Eingabe",
-      "decode": "Decode",
+      "signature": "Signatur",
+      "secret": "Geheimer Schlüssel",
+      "verify": "Signatur verifizieren",
+      "valid": "Gültige Signatur",
+      "invalid": "Ungültige Signatur",
+      "expired": "Token abgelaufen",
+      "tokenPlaceholder": "JWT-Token hier einfügen...",
+      "notExpired": "Token Gültig",
+      "expiresAt": "Läuft ab am",
+      "errors": {
+        "invalidFormat": "Ungültiges JWT-Format",
+        "decodeFailed": "Token-Dekodierung fehlgeschlagen"
+      },
+      "placeholder": "JWT-Token hier einfügen...",
+      "loadExample": "Beispiel laden",
+      "tokenInput": "Token-Eingabe",
+      "claim": "Anspruch",
+      "claims": "Ansprüche",
       "copied": "Kopiert!",
-      "copy": "Kopieren"
+      "copy": "Kopieren",
+      "secretPlaceholder": "Geheimschlüssel eingeben...",
+      "value": "Wert",
+      "verifyNote": "Diese Seite dekodiert und zeigt das Signatursegment an, überprüft aber nicht die Authentizität. Prüfen Sie Signaturen in Ihrer Anwendung oder mit vertrauenswürdigen Sicherheitstools.",
+      "verifySignature": "Signaturprüfung wird nicht durchgeführt"
     },
     "diff-checker": {
       "name": "Diff Checker",
@@ -12051,39 +12065,6 @@
       "headerNamePlaceholder": "Header-Name",
       "headerValuePlaceholder": "Wert"
     },
-    "jwt-decoder": {
-      "name": "JWT-Debugger",
-      "description": "Debuggen und verifizieren Sie JWT-Tokens mit Signaturvalidierung",
-      "seo_title": "Kostenlose JWT Debugger Online-Tool",
-      "seo_description": "Debuggen Sie JWT-Token online kostenlos. Entschlüsseln Sie Header und Payload, überprüfen Sie Signaturen mit Secret oder Public Key - essentiell für Authentifizierungsdebugging.",
-      "token": "JWT-Token",
-      "header": "Header",
-      "payload": "Payload",
-      "signature": "Signatur",
-      "secret": "Geheimer Schlüssel",
-      "verify": "Signatur verifizieren",
-      "valid": "Gültige Signatur",
-      "invalid": "Ungültige Signatur",
-      "expired": "Token abgelaufen",
-      "tokenPlaceholder": "JWT-Token hier einfügen...",
-      "notExpired": "Token Gültig",
-      "expiresAt": "Läuft ab am",
-      "errors": {
-        "invalidFormat": "Ungültiges JWT-Format",
-        "decodeFailed": "Token-Dekodierung fehlgeschlagen"
-      },
-      "placeholder": "JWT-Token hier einfügen...",
-      "loadExample": "Beispiel laden",
-      "tokenInput": "Token-Eingabe",
-      "claim": "Anspruch",
-      "claims": "Ansprüche",
-      "copied": "Kopiert!",
-      "copy": "Kopieren",
-      "secretPlaceholder": "Geheimschlüssel eingeben...",
-      "value": "Wert",
-      "verifyNote": "Diese Seite dekodiert und zeigt das Signatursegment an, überprüft aber nicht die Authentizität. Prüfen Sie Signaturen in Ihrer Anwendung oder mit vertrauenswürdigen Sicherheitstools.",
-      "verifySignature": "Signaturprüfung wird nicht durchgeführt"
-    },
     "csp-generator": {
       "name": "CSP-Generator",
       "description": "Generieren Sie Content Security Policy Header",
@@ -15766,6 +15747,12 @@
       "instruction1": "Klicken Sie auf \"Aufnahme starten\"",
       "instruction2": "Wählen Sie den Bildschirm, das Fenster oder den Tab aus",
       "instruction3": "Klicken Sie auf \"Stoppen\" und laden Sie die Aufnahme herunter"
+    },
+    "jwt-debugger": {
+      "name": "JWT-Debugger",
+      "description": "Debuggen und verifizieren Sie JWT-Tokens mit Signaturvalidierung",
+      "seo_title": "Kostenlose JWT Debugger Online-Tool",
+      "seo_description": "Debuggen Sie JWT-Token online kostenlos. Entschlüsseln Sie Header und Payload, überprüfen Sie Signaturen mit Secret oder Public Key - essentiell für Authentifizierungsdebugging."
     }
   }
 }

@@ -3985,22 +3985,36 @@
     },
     "jwt-decoder": {
       "name": "JWTデコーダー",
-      "description": "JWTトークンをデコードして検査します。ヘッダー、ペイロード、サインを確認できます。",
+      "description": "署名検証付きでJWTトークンをデバッグ・検証",
       "seo_title": "無料オンライン JWT デコーダー - トークン解析",
       "seo_description": "JWTデコーダーは、JWTトークンのヘッダー・ペイロード・署名を確認でき、認証まわりのデバッグや検証に役立ちます。",
-      "enterToken": "JWTトークンを入力してください",
-      "invalidFormat": "無効なJWTフォーマット",
-      "invalidToken": "無効なJWTトークン",
+      "token": "JWTトークン",
       "header": "ヘッダー",
       "payload": "ペイロード",
-      "signature": "サイン",
-      "issuedAt": "発行日時 (iat)",
-      "expires": "有効期限 (exp)",
-      "notBefore": "未満 (nbf)",
-      "input": "入力",
-      "decode": "デコード",
+      "signature": "署名",
+      "secret": "シークレットキー",
+      "verify": "署名を検証",
+      "valid": "有効な署名",
+      "invalid": "無効な署名",
+      "expired": "トークン期限切れ",
+      "tokenPlaceholder": "ここにJWTトークンを貼り付け...",
+      "notExpired": "トークン有効",
+      "expiresAt": "有効期限",
+      "errors": {
+        "invalidFormat": "無効なJWT形式",
+        "decodeFailed": "トークンのデコードに失敗"
+      },
+      "placeholder": "JWTトークンをここに貼り付け...",
+      "loadExample": "例を読み込む",
+      "tokenInput": "トークン入力",
+      "claim": "クレーム",
+      "claims": "クレーム",
       "copied": "コピーしました！",
-      "copy": "コピー"
+      "copy": "コピー",
+      "secretPlaceholder": "シークレットキーを入力...",
+      "value": "値",
+      "verifyNote": "このページは署名セグメントをデコードして表示しますが、真正性は検証しません。署名の確認はアプリケーションまたは信頼できるセキュリティツールで行ってください。",
+      "verifySignature": "署名検証は実行されません"
     },
     "diff-checker": {
       "name": "差分チェッカー",
@@ -11815,39 +11829,6 @@
       "headerNamePlaceholder": "ヘッダー名",
       "headerValuePlaceholder": "値"
     },
-    "jwt-decoder": {
-      "name": "JWTデコーダー",
-      "description": "署名検証付きでJWTトークンをデバッグ・検証",
-      "seo_title": "無料オンライン JWT デコーダー - トークン解析",
-      "seo_description": "JWTデコーダーは、JWTトークンのヘッダー・ペイロード・署名を確認でき、認証まわりのデバッグや検証に役立ちます。",
-      "token": "JWTトークン",
-      "header": "ヘッダー",
-      "payload": "ペイロード",
-      "signature": "署名",
-      "secret": "シークレットキー",
-      "verify": "署名を検証",
-      "valid": "有効な署名",
-      "invalid": "無効な署名",
-      "expired": "トークン期限切れ",
-      "tokenPlaceholder": "ここにJWTトークンを貼り付け...",
-      "notExpired": "トークン有効",
-      "expiresAt": "有効期限",
-      "errors": {
-        "invalidFormat": "無効なJWT形式",
-        "decodeFailed": "トークンのデコードに失敗"
-      },
-      "placeholder": "JWTトークンをここに貼り付け...",
-      "loadExample": "例を読み込む",
-      "tokenInput": "トークン入力",
-      "claim": "クレーム",
-      "claims": "クレーム",
-      "copied": "コピーしました！",
-      "copy": "コピー",
-      "secretPlaceholder": "シークレットキーを入力...",
-      "value": "値",
-      "verifyNote": "このページは署名セグメントをデコードして表示しますが、真正性は検証しません。署名の確認はアプリケーションまたは信頼できるセキュリティツールで行ってください。",
-      "verifySignature": "署名検証は実行されません"
-    },
     "csp-generator": {
       "name": "CSPジェネレーター",
       "description": "コンテンツセキュリティポリシーヘッダーを生成",
@@ -15530,6 +15511,12 @@
       "instruction1": "「録画開始」ボタンをクリック",
       "instruction2": "録画する画面、ウィンドウ、またはタブを選択",
       "instruction3": "完了したら「停止」をクリックし、録画をダウンロード"
+    },
+    "jwt-debugger": {
+      "name": "JWTデバッガー",
+      "description": "署名検証付きでJWTトークンをデバッグ・検証",
+      "seo_title": "JWT Debugger：無料オンラインツール",
+      "seo_description": "JWTトークンの署名検証でデバッグと検証。無料でオンラインで使用できます。"
     }
   }
 }

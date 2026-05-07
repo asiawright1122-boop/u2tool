@@ -4164,23 +4164,37 @@
       "seo_description": "Testez et visualisez vos expressions régulières en temps réel sur notre outil en ligne gratuit. Commencez à tester vos JSON, Base64, SVG et plus ! Essayez dès maintenant !"
     },
     "jwt-decoder": {
-      "name": "Décodeur JWT",
-      "description": "Décodez et inspectez des jetons JWT. Visualisez la tête, le chargement et la signature.",
-      "seo_title": "Décodeur JWT Gratuit en Ligne",
-      "seo_description": "Décodez et inspectez des JWT (JSON Web Tokens) en ligne gratuitement. Visualisez la tête, le chargement et la signature sans vérification. Essentiel pour le débogage de l'authentification.",
-      "enterToken": "Veuillez entrer un jeton JWT",
-      "invalidFormat": "Format de jeton JWT invalide",
-      "invalidToken": "Jeton JWT invalide",
-      "header": "Tête",
-      "payload": "Chargement",
+      "name": "Débogueur JWT",
+      "description": "Déboguez et vérifiez les tokens JWT avec validation de signature",
+      "seo_title": "Outil en ligne gratuit pour déboguer JWT",
+      "seo_description": "Décodez et vérifiez gratuitement des tokens JWT en ligne. Décryptez la tête et le chargement, vérifiez les signatures avec une clé secrète ou publique. Outil essentiel pour le débogage de l'authentification.",
+      "token": "Token JWT",
+      "header": "En-tête",
+      "payload": "Payload",
       "signature": "Signature",
-      "issuedAt": "Émis le (iat)",
-      "expires": "Expire le (exp)",
-      "notBefore": "Avant de ne pas (nbf)",
-      "input": "Entrée",
-      "decode": "Décodez",
-      "copied": "Copié !",
-      "copy": "Copier"
+      "secret": "Clé Secrète",
+      "verify": "Vérifier la Signature",
+      "valid": "Signature Valide",
+      "invalid": "Signature Invalide",
+      "expired": "Token Expiré",
+      "tokenPlaceholder": "Collez votre token JWT ici...",
+      "notExpired": "Token Valide",
+      "expiresAt": "Expire le",
+      "errors": {
+        "invalidFormat": "Format JWT invalide",
+        "decodeFailed": "Échec du décodage du token"
+      },
+      "placeholder": "Collez le token JWT ici...",
+      "loadExample": "Charger l'exemple",
+      "tokenInput": "Entrée du token",
+      "claim": "Revendication",
+      "claims": "Revendications",
+      "copied": "Copié !",
+      "copy": "Copier",
+      "secretPlaceholder": "Entrez la clé secrète...",
+      "value": "Valeur",
+      "verifyNote": "Cette page décode et affiche le segment de signature, mais ne vérifie pas l'authenticité. Vérifiez les signatures dans votre application ou avec des outils de sécurité de confiance.",
+      "verifySignature": "La vérification de signature n'est pas effectuée"
     },
     "diff-checker": {
       "name": "Diff Checker",
@@ -12004,39 +12018,6 @@
       "headerNamePlaceholder": "Nom de l'en-tête",
       "headerValuePlaceholder": "Valeur"
     },
-    "jwt-decoder": {
-      "name": "Débogueur JWT",
-      "description": "Déboguez et vérifiez les tokens JWT avec validation de signature",
-      "seo_title": "Outil en ligne gratuit pour déboguer JWT",
-      "seo_description": "Décodez et vérifiez gratuitement des tokens JWT en ligne. Décryptez la tête et le chargement, vérifiez les signatures avec une clé secrète ou publique. Outil essentiel pour le débogage de l'authentification.",
-      "token": "Token JWT",
-      "header": "En-tête",
-      "payload": "Payload",
-      "signature": "Signature",
-      "secret": "Clé Secrète",
-      "verify": "Vérifier la Signature",
-      "valid": "Signature Valide",
-      "invalid": "Signature Invalide",
-      "expired": "Token Expiré",
-      "tokenPlaceholder": "Collez votre token JWT ici...",
-      "notExpired": "Token Valide",
-      "expiresAt": "Expire le",
-      "errors": {
-        "invalidFormat": "Format JWT invalide",
-        "decodeFailed": "Échec du décodage du token"
-      },
-      "placeholder": "Collez le token JWT ici...",
-      "loadExample": "Charger l'exemple",
-      "tokenInput": "Entrée du token",
-      "claim": "Revendication",
-      "claims": "Revendications",
-      "copied": "Copié !",
-      "copy": "Copier",
-      "secretPlaceholder": "Entrez la clé secrète...",
-      "value": "Valeur",
-      "verifyNote": "Cette page décode et affiche le segment de signature, mais ne vérifie pas l'authenticité. Vérifiez les signatures dans votre application ou avec des outils de sécurité de confiance.",
-      "verifySignature": "La vérification de signature n'est pas effectuée"
-    },
     "csp-generator": {
       "name": "Générateur CSP",
       "description": "Générez des en-têtes de Politique de Sécurité du Contenu",
@@ -15719,6 +15700,12 @@
       "instruction1": "Cliquez sur \"Démarrer l'enregistrement\"",
       "instruction2": "Sélectionnez l'écran, la fenêtre ou l'onglet à enregistrer",
       "instruction3": "Cliquez sur \"Arrêter\" une fois terminé et téléchargez"
+    },
+    "jwt-debugger": {
+      "name": "Débogueur JWT",
+      "description": "Déboguez et vérifiez les tokens JWT avec validation de signature",
+      "seo_title": "Outil en ligne gratuit pour déboguer JWT",
+      "seo_description": "Décodez et vérifiez gratuitement des tokens JWT en ligne. Décryptez la tête et le chargement, vérifiez les signatures avec une clé secrète ou publique. Outil essentiel pour le débogage de l'authentification."
     }
   }
 }

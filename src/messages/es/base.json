@@ -4164,23 +4164,37 @@
       "seo_description": "Prueba y corrige expresiones regulares en línea de forma gratuita. Alineación en tiempo real con resaltado de sintaxis y grupos de coincidencia. Perfecto para desarrolladores y procesamiento de datos."
     },
     "jwt-decoder": {
-      "name": "Decodificador de JWT",
-      "description": "Decodifica y examina tokens JWT. Visualiza encabezado, carga útil y firma.",
-      "seo_title": "Decodificador JWT Online Gratis",
-      "seo_description": "Utiliza nuestra herramienta online para decodificar y examinar JWT sin costo. Ver cabecera, carga y firma sin verificar. Útil para depurar autenticación.",
-      "enterToken": "Introduce un token JWT",
-      "invalidFormat": "Formato de token JWT inválido",
-      "invalidToken": "Token JWT inválido",
+      "name": "Depurador JWT",
+      "description": "Depure y verifique tokens JWT con validación de firma",
+      "seo_title": "Herramienta gratis para depurar JWT online",
+      "seo_description": "Depura tokens JWT online gratis. Decodifica encabezados y cargamentos, verifica firmas con clave secreta o pública. Esencial para depuración de autenticación.",
+      "token": "Token JWT",
       "header": "Encabezado",
-      "payload": "Carga útil",
+      "payload": "Payload",
       "signature": "Firma",
-      "issuedAt": "Emisión (iat)",
-      "expires": "Vence (exp)",
-      "notBefore": "No antes (nbf)",
-      "input": "Entrada",
-      "decode": "Decodificar",
-      "copied": "Copiado!",
-      "copy": "Copiar"
+      "secret": "Clave Secreta",
+      "verify": "Verificar Firma",
+      "valid": "Firma Válida",
+      "invalid": "Firma Inválida",
+      "expired": "Token Expirado",
+      "tokenPlaceholder": "Pegue su token JWT aquí...",
+      "notExpired": "Token Válido",
+      "expiresAt": "Expira en",
+      "errors": {
+        "invalidFormat": "Formato JWT inválido",
+        "decodeFailed": "Error al decodificar token"
+      },
+      "placeholder": "Pegue el token JWT aquí...",
+      "loadExample": "Cargar ejemplo",
+      "tokenInput": "Entrada de token",
+      "claim": "Reclamación",
+      "claims": "Reclamaciones",
+      "copied": "¡Copiado!",
+      "copy": "Copiar",
+      "secretPlaceholder": "Ingrese la clave secreta...",
+      "value": "Valor",
+      "verifyNote": "Esta página decodifica y muestra el segmento de firma, pero no verifica la autenticidad. Comprueba las firmas en tu aplicación o con herramientas de seguridad de confianza.",
+      "verifySignature": "No se realiza verificación de firma"
     },
     "diff-checker": {
       "name": "Diff Checker",
@@ -12033,39 +12047,6 @@
       "headerNamePlaceholder": "Nombre del encabezado",
       "headerValuePlaceholder": "Valor"
     },
-    "jwt-decoder": {
-      "name": "Depurador JWT",
-      "description": "Depure y verifique tokens JWT con validación de firma",
-      "seo_title": "Herramienta gratis para depurar JWT online",
-      "seo_description": "Depura tokens JWT online gratis. Decodifica encabezados y cargamentos, verifica firmas con clave secreta o pública. Esencial para depuración de autenticación.",
-      "token": "Token JWT",
-      "header": "Encabezado",
-      "payload": "Payload",
-      "signature": "Firma",
-      "secret": "Clave Secreta",
-      "verify": "Verificar Firma",
-      "valid": "Firma Válida",
-      "invalid": "Firma Inválida",
-      "expired": "Token Expirado",
-      "tokenPlaceholder": "Pegue su token JWT aquí...",
-      "notExpired": "Token Válido",
-      "expiresAt": "Expira en",
-      "errors": {
-        "invalidFormat": "Formato JWT inválido",
-        "decodeFailed": "Error al decodificar token"
-      },
-      "placeholder": "Pegue el token JWT aquí...",
-      "loadExample": "Cargar ejemplo",
-      "tokenInput": "Entrada de token",
-      "claim": "Reclamación",
-      "claims": "Reclamaciones",
-      "copied": "¡Copiado!",
-      "copy": "Copiar",
-      "secretPlaceholder": "Ingrese la clave secreta...",
-      "value": "Valor",
-      "verifyNote": "Esta página decodifica y muestra el segmento de firma, pero no verifica la autenticidad. Comprueba las firmas en tu aplicación o con herramientas de seguridad de confianza.",
-      "verifySignature": "No se realiza verificación de firma"
-    },
     "csp-generator": {
       "name": "Generador CSP",
       "description": "Genere encabezados de Política de Seguridad de Contenido",
@@ -15748,6 +15729,12 @@
       "instruction1": "Haga clic en \"Iniciar grabación\"",
       "instruction2": "Seleccione la pantalla, ventana o pestaña a grabar",
       "instruction3": "Haga clic en \"Detener\" al terminar y descargue"
+    },
+    "jwt-debugger": {
+      "name": "Depurador JWT",
+      "description": "Depure y verifique tokens JWT con validación de firma",
+      "seo_title": "Herramienta gratis para depurar JWT online",
+      "seo_description": "Depura tokens JWT online gratis. Decodifica encabezados y cargamentos, verifica firmas con clave secreta o pública. Esencial para depuración de autenticación."
     }
   }
 }
