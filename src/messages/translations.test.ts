@@ -163,8 +163,8 @@ describe('Translation Property-Based Tests', () => {
         // Always return true to continue sampling - we're collecting data
         return true;
       }),
-      { 
-        numRuns: Math.min(enKeys.length, 1000), // Sample up to 1000 keys
+      {
+        numRuns: enKeys.length, // Exhaustive: every key is checked, no sampling cutoff.
       }
     );
     
@@ -445,21 +445,23 @@ describe('Hardcoded String Detection', () => {
    * instead of hardcoded English strings
    */
   it('Property 2: Tool components should not have hardcoded English placeholders', () => {
-    const files = fs.readdirSync(toolsDir).filter(f => f.endsWith('.tsx') && !f.includes('.test.'));
+    const files = fs.readdirSync(toolsDir).filter(f => f.endsWith('.svelte') && !f.includes('.test.'));
     const hardcodedPattern = /placeholder="[A-Z][^"]*"/g;
-    
+
     const violations: { file: string; matches: string[] }[] = [];
-    
+
     for (const file of files) {
       const filePath = path.join(toolsDir, file);
       const content = fs.readFileSync(filePath, 'utf-8');
       const matches = content.match(hardcodedPattern);
-      
+
       if (matches && matches.length > 0) {
-        // Filter out false positives (technical terms, examples)
-        const realViolations = matches.filter(m => 
-          !m.includes('SSL') && 
-          !m.includes('PHP') && 
+        // Filter out false positives (technical terms, short examples).
+        // Anything matched here is a placeholder showing a value/term that
+        // does not need localization (units, hex, paths, abbreviations).
+        const realViolations = matches.filter(m =>
+          !m.includes('SSL') &&
+          !m.includes('PHP') &&
           !m.includes('My Website') &&
           !m.includes('Path') &&
           !m.includes('Min') &&
@@ -469,18 +471,16 @@ describe('Hardcoded String Detection', () => {
           !m.includes('FF') &&
           !m.includes('0A')
         );
-        
+
         if (realViolations.length > 0) {
           violations.push({ file, matches: realViolations });
         }
       }
     }
-    
-    // Allow a small threshold for edge cases
-    const VIOLATION_THRESHOLD = 5;
+
     expect(
       violations.length,
-      `Found ${violations.length} files with hardcoded placeholders: ${violations.map(v => v.file).join(', ')}`
-    ).toBeLessThanOrEqual(VIOLATION_THRESHOLD);
+      `Found ${violations.length} files with hardcoded placeholders: ${violations.map(v => `${v.file} (${v.matches.join(', ')})`).join('; ')}`
+    ).toBe(0);
   });
 });
