@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { escapeHtmlAttribute } from '@/lib/sanitize';
 
   interface Props {
     locale: string;
@@ -96,12 +97,12 @@
   }
   function getScriptTag(): string {
     if (!hash) return '';
-    const url = inputType === 'url' ? input : 'your-script.js';
+    const url = escapeHtmlAttribute(inputType === 'url' ? input : 'your-script.js');
     return `<script src="${url}" integrity="${hash}" crossorigin="anonymous"><\/script>`;
   }
   function getLinkTag(): string {
     if (!hash) return '';
-    const url = inputType === 'url' ? input : 'your-style.css';
+    const url = escapeHtmlAttribute(inputType === 'url' ? input : 'your-style.css');
     return `<link rel="stylesheet" href="${url}" integrity="${hash}" crossorigin="anonymous">`;
   }
   function loadExample() {

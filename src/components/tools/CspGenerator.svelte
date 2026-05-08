@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { escapeHtmlAttribute } from '@/lib/sanitize';
   import { defaultDirectives } from '@/lib/tool-stubs';
 
   interface Props {
@@ -75,7 +76,7 @@
   function getOutput(): string {
     const csp = generateCsp();
     if (outputFormat === 'meta') {
-      return `<meta http-equiv="Content-Security-Policy" content="${csp}">`;
+      return `<meta http-equiv="Content-Security-Policy" content="${escapeHtmlAttribute(csp)}">`;
     }
     return `Content-Security-Policy: ${csp}`;
   }

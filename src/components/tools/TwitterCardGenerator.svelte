@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { escapeHtmlAttribute } from '@/lib/sanitize';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -32,13 +34,13 @@
   }
   function generateMetaTags() {
     return `<!-- Twitter -->
-<meta name="twitter:card" content="${data.card}" />
-<meta name="twitter:site" content="${data.site}" />
-<meta name="twitter:creator" content="${data.creator}" />
-<meta name="twitter:title" content="${data.title}" />
-<meta name="twitter:description" content="${data.description}" />
-<meta name="twitter:image" content="${data.image}" />
-<meta name="twitter:image:alt" content="${data.alt}" />`;
+<meta name="twitter:card" content="${escapeHtmlAttribute(data.card)}" />
+<meta name="twitter:site" content="${escapeHtmlAttribute(data.site)}" />
+<meta name="twitter:creator" content="${escapeHtmlAttribute(data.creator)}" />
+<meta name="twitter:title" content="${escapeHtmlAttribute(data.title)}" />
+<meta name="twitter:description" content="${escapeHtmlAttribute(data.description)}" />
+<meta name="twitter:image" content="${escapeHtmlAttribute(data.image)}" />
+<meta name="twitter:image:alt" content="${escapeHtmlAttribute(data.alt)}" />`;
   }
 
 </script>

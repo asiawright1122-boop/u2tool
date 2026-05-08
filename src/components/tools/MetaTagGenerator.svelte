@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { escapeHtmlAttribute } from '@/lib/sanitize';
 
   interface Props {
     locale: string;
@@ -47,26 +48,26 @@
   function generateMetaTags() {
     const tags: string[] = [];
     tags.push('<meta charset="UTF-8">');
-    if (viewport) tags.push(`<meta name="viewport" content="${viewport}">`);
-    if (title) tags.push(`<title>${title}</title>`);
-    if (description) tags.push(`<meta name="description" content="${description}">`);
-    if (keywords) tags.push(`<meta name="keywords" content="${keywords}">`);
-    if (author) tags.push(`<meta name="author" content="${author}">`);
-    if (robots) tags.push(`<meta name="robots" content="${robots}">`);
+    if (viewport) tags.push(`<meta name="viewport" content="${escapeHtmlAttribute(viewport)}">`);
+    if (title) tags.push(`<title>${escapeHtmlAttribute(title)}</title>`);
+    if (description) tags.push(`<meta name="description" content="${escapeHtmlAttribute(description)}">`);
+    if (keywords) tags.push(`<meta name="keywords" content="${escapeHtmlAttribute(keywords)}">`);
+    if (author) tags.push(`<meta name="author" content="${escapeHtmlAttribute(author)}">`);
+    if (robots) tags.push(`<meta name="robots" content="${escapeHtmlAttribute(robots)}">`);
     
     // Open Graph
-    if (title) tags.push(`<meta property="og:title" content="${title}">`);
-    if (description) tags.push(`<meta property="og:description" content="${description}">`);
-    if (ogImage) tags.push(`<meta property="og:image" content="${ogImage}">`);
-    if (ogUrl) tags.push(`<meta property="og:url" content="${ogUrl}">`);
+    if (title) tags.push(`<meta property="og:title" content="${escapeHtmlAttribute(title)}">`);
+    if (description) tags.push(`<meta property="og:description" content="${escapeHtmlAttribute(description)}">`);
+    if (ogImage) tags.push(`<meta property="og:image" content="${escapeHtmlAttribute(ogImage)}">`);
+    if (ogUrl) tags.push(`<meta property="og:url" content="${escapeHtmlAttribute(ogUrl)}">`);
     tags.push('<meta property="og:type" content="website">');
     
     // Twitter
-    tags.push(`<meta name="twitter:card" content="${twitterCard}">`);
-    if (title) tags.push(`<meta name="twitter:title" content="${title}">`);
-    if (description) tags.push(`<meta name="twitter:description" content="${description}">`);
-    if (ogImage) tags.push(`<meta name="twitter:image" content="${ogImage}">`);
-    if (twitterSite) tags.push(`<meta name="twitter:site" content="${twitterSite}">`);
+    tags.push(`<meta name="twitter:card" content="${escapeHtmlAttribute(twitterCard)}">`);
+    if (title) tags.push(`<meta name="twitter:title" content="${escapeHtmlAttribute(title)}">`);
+    if (description) tags.push(`<meta name="twitter:description" content="${escapeHtmlAttribute(description)}">`);
+    if (ogImage) tags.push(`<meta name="twitter:image" content="${escapeHtmlAttribute(ogImage)}">`);
+    if (twitterSite) tags.push(`<meta name="twitter:site" content="${escapeHtmlAttribute(twitterSite)}">`);
     
     return tags.join('\n');
   }

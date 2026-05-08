@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { escapeHtmlAttribute } from '@/lib/sanitize';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -31,12 +33,12 @@
   }
   function generateMetaTags() {
     return `<!-- Open Graph / Facebook -->
-<meta property="og:type" content="${data.type}" />
-<meta property="og:url" content="${data.url}" />
-<meta property="og:title" content="${data.title}" />
-<meta property="og:description" content="${data.description}" />
-<meta property="og:image" content="${data.image}" />
-<meta property="og:site_name" content="${data.siteName}" />`;
+<meta property="og:type" content="${escapeHtmlAttribute(data.type)}" />
+<meta property="og:url" content="${escapeHtmlAttribute(data.url)}" />
+<meta property="og:title" content="${escapeHtmlAttribute(data.title)}" />
+<meta property="og:description" content="${escapeHtmlAttribute(data.description)}" />
+<meta property="og:image" content="${escapeHtmlAttribute(data.image)}" />
+<meta property="og:site_name" content="${escapeHtmlAttribute(data.siteName)}" />`;
   }
   const previewHostname = (() => {
     if (!data.url) return 'example.com';
