@@ -57,6 +57,9 @@ if (first === 'tools' && second === 'category') {
     301
   );
 }
+if (first === 'tools' && second === 'ranking') {
+  return Astro.redirect('/en/tools/', 301);
+}
 if (first === 'tools') {
   return Astro.redirect(
     segments.length > 1 ? `/en/tools/${segments.slice(1).join('/')}/` : '/en/tools/',
@@ -99,9 +102,6 @@ if (isValidLocale(first) && second === 'compare' && third && fourth) {
 }
 if (isValidLocale(first) && second === 'tools' && third === 'ranking') {
   return Astro.redirect(`/${first}/tools/`, 301);
-}
-if (first === 'tools' && second === 'ranking') {
-  return Astro.redirect('/en/tools/', 301);
 }
 
 Astro.response.status = 404;

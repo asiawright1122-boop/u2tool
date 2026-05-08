@@ -92,11 +92,11 @@ describe('html edge cache middleware', () => {
     const next = vi.fn(async () => new Response('should not run'));
 
     const blog = await runMiddleware(
-      new Request('https://www.u2tool.com/ru/blog/regex-complete-guide'),
+      new Request('https://www.u2tool.com/de/blog/qr-code-complete-guide'),
       next
     );
     const compare = await runMiddleware(
-      new Request('https://www.u2tool.com/zh/compare/image-border/image-splitter'),
+      new Request('https://www.u2tool.com/zh/compare/url-parser/dns-lookup'),
       next
     );
     const unknownBlog = await runMiddleware(
@@ -105,11 +105,30 @@ describe('html edge cache middleware', () => {
     );
 
     expect(blog.response.status).toBe(301);
-    expect(blog.response.headers.get('location')).toBe('/ru/tools/regex-tester/');
+    expect(blog.response.headers.get('location')).toBe('/de/tools/qr-generator/');
     expect(compare.response.status).toBe(301);
-    expect(compare.response.headers.get('location')).toBe('/zh/compare/choose-image-tool/');
+    expect(compare.response.headers.get('location')).toBe('/zh/tools/url-parser/');
     expect(unknownBlog.response.status).toBe(301);
     expect(unknownBlog.response.headers.get('location')).toBe('/en/blog/unknown-post/');
+  });
+
+  it('redirects localized site info pages and ranking pages to canonical routes', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+
+    const contact = await runMiddleware(
+      new Request('https://www.u2tool.com/pt/contact'),
+      next
+    );
+    const ranking = await runMiddleware(
+      new Request('https://www.u2tool.com/ar/tools/ranking/popular'),
+      next
+    );
+
+    expect(contact.response.status).toBe(301);
+    expect(contact.response.headers.get('location')).toBe('/pt/contact/');
+    expect(ranking.response.status).toBe(301);
+    expect(ranking.response.headers.get('location')).toBe('/ar/tools/');
+    expect(next).not.toHaveBeenCalled();
   });
 
   it('redirects stale favicon ico requests to the canonical SVG asset', async () => {

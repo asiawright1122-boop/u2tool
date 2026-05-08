@@ -23,12 +23,17 @@
 
 # Legacy blog URLs now point at the closest canonical tool or comparison page.
 /blog/base64-encoding-explained /en/tools/base64/ 301
+/blog/best-json-formatter-tools-2025 /en/tools/json-formatter/ 301
+/blog/color-formats-conversion-guide /en/tools/color-converter/ 301
 /blog/hash-algorithms-explained /en/tools/hash-generator/ 301
 /blog/image-optimization-web /en/tools/image-compressor/ 301
 /blog/jwt-tokens-explained /en/compare/choose-jwt-tool/ 301
 /blog/markdown-syntax-guide /en/tools/markdown-preview/ 301
 /blog/password-security-best-practices /en/tools/password-generator/ 301
+/blog/qr-code-complete-guide /en/tools/qr-generator/ 301
 /blog/regex-complete-guide /en/tools/regex-tester/ 301
+/blog/unix-timestamp-guide /en/tools/timestamp-converter/ 301
+/blog/url-encoding-guide /en/tools/url-encoder/ 301
 /blog/uuid-generator-guide /en/tools/uuid-generator/ 301
 
 # Legacy pairwise compare URLs now resolve to a durable guide or primary tool.
@@ -123,12 +128,17 @@
 
 # Localized legacy blog URLs.
 /:locale/blog/base64-encoding-explained /:locale/tools/base64/ 301
+/:locale/blog/best-json-formatter-tools-2025 /:locale/tools/json-formatter/ 301
+/:locale/blog/color-formats-conversion-guide /:locale/tools/color-converter/ 301
 /:locale/blog/hash-algorithms-explained /:locale/tools/hash-generator/ 301
 /:locale/blog/image-optimization-web /:locale/tools/image-compressor/ 301
 /:locale/blog/jwt-tokens-explained /:locale/compare/choose-jwt-tool/ 301
 /:locale/blog/markdown-syntax-guide /:locale/tools/markdown-preview/ 301
 /:locale/blog/password-security-best-practices /:locale/tools/password-generator/ 301
+/:locale/blog/qr-code-complete-guide /:locale/tools/qr-generator/ 301
 /:locale/blog/regex-complete-guide /:locale/tools/regex-tester/ 301
+/:locale/blog/unix-timestamp-guide /:locale/tools/timestamp-converter/ 301
+/:locale/blog/url-encoding-guide /:locale/tools/url-encoder/ 301
 /:locale/blog/uuid-generator-guide /:locale/tools/uuid-generator/ 301
 
 # Localized legacy pairwise compare URLs.
@@ -150,6 +160,62 @@
 /:locale/compare/image-border/image-splitter/ /:locale/compare/choose-image-tool/ 301
 /:locale/compare/json-to-csharp/color-converter /:locale/tools/json-to-csharp/ 301
 /:locale/compare/json-to-csharp/color-converter/ /:locale/tools/json-to-csharp/ 301
+
+# Exact GSC-observed pairwise compare URLs. These avoid an extra asset-layer
+# slash-normalization hop while the Worker middleware remains the source of truth.
+/de/compare/hex-editor/json-minifier /de/tools/hex-editor/ 301
+/de/compare/hex-editor/json-viewer /de/tools/hex-editor/ 301
+/en/compare/json-to-csharp/timestamp-converter /en/tools/json-to-csharp/ 301
+/en/compare/toml-json/date-calculator /en/tools/toml-json/ 301
+/en/compare/toml-json/json-to-csv /en/tools/toml-json/ 301
+/en/compare/toml-json/timestamp-converter /en/tools/toml-json/ 301
+/es/compare/text-hash-comparator/password-generator /es/compare/choose-jwt-tool/ 301
+/pt/compare/base32/base64 /pt/tools/base32/ 301
+/pt/compare/base32/json-formatter /pt/tools/base32/ 301
+/pt/compare/base32/jwt-decoder /pt/tools/base32/ 301
+/pt/compare/countdown-timer/business-days-calculator /pt/tools/countdown-timer/ 301
+/pt/compare/countdown-timer/invoice-generator /pt/tools/countdown-timer/ 301
+/pt/compare/countdown-timer/meeting-notes /pt/tools/countdown-timer/ 301
+/pt/compare/countdown-timer/pomodoro-timer /pt/tools/countdown-timer/ 301
+/pt/compare/countdown-timer/resume-builder /pt/tools/countdown-timer/ 301
+/pt/compare/countdown-timer/signature-pad /pt/tools/countdown-timer/ 301
+/zh/compare/gif-maker/barcode-generator /zh/compare/choose-image-tool/ 301
+/zh/compare/gif-maker/image-collage /zh/compare/choose-image-tool/ 301
+/zh/compare/gif-maker/image-resizer /zh/compare/choose-image-tool/ 301
+/zh/compare/gif-maker/image-splitter /zh/compare/choose-image-tool/ 301
+/zh/compare/gif-maker/qr-generator /zh/compare/choose-image-tool/ 301
+/zh/compare/grouped-bar-chart-generator/bar-chart-generator /zh/compare/choose-chart-type/ 301
+/zh/compare/grouped-bar-chart-generator/radar-chart-generator /zh/compare/choose-chart-type/ 301
+/zh/compare/image-border/image-collage /zh/compare/choose-image-tool/ 301
+/zh/compare/image-collage/barcode-generator /zh/compare/choose-image-tool/ 301
+/zh/compare/image-collage/image-resizer /zh/compare/choose-image-tool/ 301
+/zh/compare/image-collage/image-rounder /zh/compare/choose-image-tool/ 301
+/zh/compare/image-collage/image-splitter /zh/compare/choose-image-tool/ 301
+/zh/compare/image-collage/image-watermark /zh/compare/choose-image-tool/ 301
+/zh/compare/image-collage/qr-generator /zh/compare/choose-image-tool/ 301
+/zh/compare/json-to-yaml/color-converter /zh/tools/json-to-yaml/ 301
+/zh/compare/json-to-yaml/date-calculator /zh/tools/json-to-yaml/ 301
+/zh/compare/json-to-yaml/json-to-csv /zh/tools/json-to-yaml/ 301
+/zh/compare/json-to-yaml/timestamp-converter /zh/tools/json-to-yaml/ 301
+/zh/compare/json-to-yaml/yaml-json /zh/tools/json-to-yaml/ 301
+/zh/compare/liquid-fill-chart-generator/area-chart-generator /zh/compare/choose-chart-type/ 301
+/zh/compare/liquid-fill-chart-generator/line-chart-generator /zh/compare/choose-chart-type/ 301
+/zh/compare/liquid-fill-chart-generator/pie-chart-generator /zh/compare/choose-chart-type/ 301
+/zh/compare/liquid-fill-chart-generator/radar-chart-generator /zh/compare/choose-chart-type/ 301
+/zh/compare/sql-to-mongo/color-converter /zh/tools/sql-to-mongo/ 301
+/zh/compare/sql-to-mongo/date-calculator /zh/tools/sql-to-mongo/ 301
+/zh/compare/sql-to-mongo/json-to-csv /zh/tools/sql-to-mongo/ 301
+/zh/compare/sql-to-mongo/timestamp-converter /zh/tools/sql-to-mongo/ 301
+/zh/compare/sql-to-mongo/unit-converter /zh/tools/sql-to-mongo/ 301
+/zh/compare/sql-to-mongo/yaml-json /zh/tools/sql-to-mongo/ 301
+/zh/compare/treemap-chart-generator/bar-chart-generator /zh/compare/choose-chart-type/ 301
+/zh/compare/url-parser/dns-lookup /zh/tools/url-parser/ 301
+/zh/compare/url-parser/ip-lookup /zh/tools/url-parser/ 301
+/zh/compare/url-parser/ip-validator /zh/tools/url-parser/ 301
+/zh/compare/url-parser/ssl-checker /zh/tools/url-parser/ 301
+/zh/compare/url-parser/url-encoder /zh/tools/url-parser/ 301
+/zh/compare/url-parser/whois-lookup /zh/tools/url-parser/ 301
+/zh/compare/xml-to-json/timestamp-converter /zh/tools/xml-to-json/ 301
 
 # Legacy splat routes.
 /categories/* /en/categories/:splat/ 301

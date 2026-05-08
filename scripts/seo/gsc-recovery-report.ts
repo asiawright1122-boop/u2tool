@@ -151,7 +151,7 @@ function readSheetRows(filePath: string): Record<string, unknown>[] {
     throw new Error(`Input file not found: ${filePath}`);
   }
 
-  const workbook = XLSX.readFile(filePath, { cellDates: false });
+  const workbook = XLSX.read(fs.readFileSync(filePath), { cellDates: false, type: 'buffer' });
   const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
   return XLSX.utils.sheet_to_json<Record<string, unknown>>(firstSheet, {
     defval: '',
