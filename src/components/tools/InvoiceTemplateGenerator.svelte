@@ -1,5 +1,6 @@
 <script lang="ts">
   import { CURRENCIES, K } from '@/lib/tool-stubs';
+  import { escapeHtmlAttribute, safeDownloadFileName } from '@/lib/sanitize';
 
   interface Props {
     locale: string;
@@ -408,12 +409,14 @@
 
   function downloadHTML() {
     if (!previewRef) return;
-    const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Invoice ${invoice.invoiceNumber}</title><style>body{font-family:system-ui,-apple-system,sans-serif;margin:0;padding:40px;background:#fff}${previewRef.querySelector('style')?.textContent || ''}</style></head><body>${previewRef.innerHTML}</body></html>`;
+    const invoiceTitle = escapeHtmlAttribute(invoice.invoiceNumber);
+    const fileName = safeDownloadFileName(`invoice-${invoice.invoiceNumber}`, 'invoice', 'html');
+    const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Invoice ${invoiceTitle}</title><style>body{font-family:system-ui,-apple-system,sans-serif;margin:0;padding:40px;background:#fff}${previewRef.querySelector('style')?.textContent || ''}</style></head><body>${previewRef.innerHTML}</body></html>`;
     const blob = new Blob([html], { type: 'text/html' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `invoice-${invoice.invoiceNumber}.html`;
+    a.download = fileName;
     a.click();
     URL.revokeObjectURL(url);
   }

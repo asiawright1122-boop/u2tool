@@ -1,5 +1,13 @@
 import { describe, expect, it } from 'vitest';
-import { normalizeSvgColor, sanitizeHtml, sanitizeMarkdownHtml, sanitizeSvg } from './sanitize';
+import {
+  decodeHtmlText,
+  escapeHtmlAttribute,
+  normalizeSvgColor,
+  safeDownloadFileName,
+  sanitizeHtml,
+  sanitizeMarkdownHtml,
+  sanitizeSvg,
+} from './sanitize';
 
 describe('sanitize helpers', () => {
   it('removes scripts, event handlers, and javascript urls from html fallback', () => {
@@ -64,5 +72,24 @@ describe('sanitize helpers', () => {
     expect(normalizeSvgColor('#ff00aa')).toBe('#ff00aa');
     expect(normalizeSvgColor('currentColor')).toBe('currentColor');
     expect(normalizeSvgColor('red" onload="alert(1)', '#000000')).toBe('#000000');
+  });
+
+  it('decodes html text without returning active markup from real tags', () => {
+    expect(decodeHtmlText('&lt;img src=x onerror=alert(1)&gt; &amp; &#169;')).toBe(
+      '<img src=x onerror=alert(1)> & ©'
+    );
+    expect(decodeHtmlText('<img src=x onerror=alert(1)>safe &amp; sound')).toBe('safe & sound');
+  });
+
+  it('escapes title text and normalizes download filenames', () => {
+    expect(escapeHtmlAttribute('INV-1"><img src=x onerror=alert(1)>')).toBe(
+      'INV-1&quot;&gt;&lt;img src=x onerror=alert(1)&gt;'
+    );
+
+    const fileName = safeDownloadFileName('../INV-1"><script>alert(1)</script>', 'invoice', 'html');
+    expect(fileName).toMatch(/\.html$/);
+    expect(fileName).not.toMatch(/[<>:"/\\|?*]/);
+    expect(fileName).not.toMatch(/^\./);
+    expect(safeDownloadFileName('   ', 'invoice', 'html')).toBe('invoice.html');
   });
 });

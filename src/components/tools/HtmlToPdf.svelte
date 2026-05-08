@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { sanitizeHtml } from '@/lib/sanitize';
 
   interface Props {
     locale: string;
@@ -46,32 +47,26 @@
   <p>This is a sample HTML document that will be converted to PDF.</p>
 </body>
 </html>`;
-  function generatePdf() {
-    const content = html || defaultHtml;
+  function renderHtml(content: string, onLoad?: () => void) {
     const iframe = iframeRef;
     if (!iframe) return;
 
-    const doc = iframe.contentDocument;
-    if (!doc) return;
+    iframe.onload = () => {
+      iframe.onload = null;
+      onLoad?.();
+    };
+    iframe.srcdoc = sanitizeHtml(content, { forceBody: true });
+  }
 
-    doc.open();
-    doc.write(content);
-    doc.close();
-
-    setTimeout(() => {
-      iframe.contentWindow?.print();
-    }, 500);
+  function generatePdf() {
+    renderHtml(html || defaultHtml, () => {
+      setTimeout(() => {
+        iframeRef?.contentWindow?.print();
+      }, 100);
+    });
   }
   function previewHtml() {
-    const iframe = iframeRef;
-    if (!iframe) return;
-
-    const doc = iframe.contentDocument;
-    if (!doc) return;
-
-    doc.open();
-    doc.write(html || defaultHtml);
-    doc.close();
+    renderHtml(html || defaultHtml);
   }
 
 </script>
@@ -163,6 +158,7 @@
             <iframe
               bind:this={iframeRef}
               class="w-full h-96"
+              sandbox="allow-same-origin allow-modals"
               title="HTML Preview"></iframe>
           </div>
         </div>

@@ -338,6 +338,86 @@ export function escapeHtmlAttribute(str: string): string {
     return escapeHtml(str).replace(/`/g, '&#96;');
 }
 
+const fallbackHtmlEntities: Record<string, string> = {
+    amp: '&',
+    lt: '<',
+    gt: '>',
+    quot: '"',
+    apos: "'",
+    nbsp: '\u00a0',
+    copy: '\u00a9',
+    reg: '\u00ae',
+    trade: '\u2122',
+    hellip: '\u2026',
+    ndash: '\u2013',
+    mdash: '\u2014',
+};
+
+function decodeHtmlEntity(entity: string): string {
+    if (entity.startsWith('#x') || entity.startsWith('#X')) {
+        const codePoint = Number.parseInt(entity.slice(2), 16);
+        return Number.isFinite(codePoint) && codePoint >= 0 && codePoint <= 0x10ffff
+            ? String.fromCodePoint(codePoint)
+            : `&${entity};`;
+    }
+
+    if (entity.startsWith('#')) {
+        const codePoint = Number.parseInt(entity.slice(1), 10);
+        return Number.isFinite(codePoint) && codePoint >= 0 && codePoint <= 0x10ffff
+            ? String.fromCodePoint(codePoint)
+            : `&${entity};`;
+    }
+
+    return fallbackHtmlEntities[entity.toLowerCase()] ?? `&${entity};`;
+}
+
+/**
+ * 将 HTML 文本解码为纯文本。浏览器端使用 inert DOMParser，Node 端保留基础备选。
+ */
+export function decodeHtmlText(html: string): string {
+    if (!html || typeof html !== 'string') {
+        return '';
+    }
+
+    if (typeof DOMParser !== 'undefined') {
+        const document = new DOMParser().parseFromString(html, 'text/html');
+        return document.body.textContent ?? '';
+    }
+
+    return html
+        .replace(/<[^>]*>/g, '')
+        .replace(/&(#x?[0-9a-f]+|[a-z][a-z0-9]+);/gi, (_, entity: string) => decodeHtmlEntity(entity));
+}
+
+/**
+ * 生成不会穿越路径或伪装扩展名的下载文件名。
+ */
+export function safeDownloadFileName(name: string, fallback = 'download', extension?: string): string {
+    const safeExtension = extension?.replace(/^\.+/, '').replace(/[^a-z0-9]/gi, '') ?? '';
+    const extensionSuffix = safeExtension ? `.${safeExtension}` : '';
+    const safeFallback = fallback.trim().replace(/[^a-z0-9._-]/gi, '-') || 'download';
+    const maxStemLength = Math.max(1, 180 - extensionSuffix.length);
+    let stem = (typeof name === 'string' ? name : '')
+        .normalize('NFKC')
+        .trim()
+        .replace(/[\u0000-\u001f\u007f<>:"/\\|?*\u202a-\u202e\u2066-\u2069]/g, '-')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^[.\-]+|[.\-]+$/g, '')
+        .slice(0, maxStemLength)
+        .replace(/[.\-]+$/g, '');
+
+    if (!stem) {
+        stem = safeFallback;
+    }
+
+    if (/^(?:con|prn|aux|nul|com[1-9]|lpt[1-9])$/i.test(stem)) {
+        stem = `${stem}-file`;
+    }
+
+    return `${stem}${extensionSuffix}`;
+}
+
 /**
  * 检查 DOMPurify 是否可用
  * 

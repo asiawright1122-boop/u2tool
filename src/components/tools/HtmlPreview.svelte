@@ -78,7 +78,7 @@
             <iframe
               srcDoc={html}
               class="w-full h-full border-0"
-              sandbox="allow-scripts"
+              sandbox="allow-same-origin"
               title="HTML Preview"></iframe>
           </div>
         </div>

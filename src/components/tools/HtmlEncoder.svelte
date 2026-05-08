@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { decodeHtmlText } from '@/lib/sanitize';
 
   interface Props {
     locale: string;
@@ -42,9 +43,7 @@
       output = '';
       return;
     }
-    const div = document.createElement('div');
-    div.innerHTML = input;
-    output = div.textContent || '';
+    output = decodeHtmlText(input);
   }
 
   function clearAll() {

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { escapeHtmlAttribute } from '@/lib/sanitize';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -86,6 +88,7 @@
   }
 
   function exportToHtml() {
+    const safeTheme = ['light', 'dark', 'gradient'].includes(theme) ? theme : 'light';
     const htmlContent = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -108,11 +111,11 @@
 </head>
 <body>
 ${slides.map(slide => `
-  <div class="slide slide-${theme}">
-    ${slide.title ? `<h1>${slide.title}</h1>` : ''}
+  <div class="slide slide-${safeTheme}">
+    ${slide.title ? `<h1>${escapeHtmlAttribute(slide.title)}</h1>` : ''}
     ${slide.content.some(c => c.startsWith('- ') || c.startsWith('* ')) 
-      ? `<ul>${slide.content.filter(c => c.startsWith('- ') || c.startsWith('* ')).map(c => `<li>${c.replace(/^[-*] /, '')}</li>`).join('')}</ul>`
-      : slide.content.map(c => `<p>${c}</p>`).join('')}
+      ? `<ul>${slide.content.filter(c => c.startsWith('- ') || c.startsWith('* ')).map(c => `<li>${escapeHtmlAttribute(c.replace(/^[-*] /, ''))}</li>`).join('')}</ul>`
+      : slide.content.map(c => `<p>${escapeHtmlAttribute(c)}</p>`).join('')}
   </div>
 `).join('')}
 </body>
