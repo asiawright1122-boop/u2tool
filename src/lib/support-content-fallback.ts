@@ -1,7 +1,13 @@
+export interface SupportFAQItem {
+  question: string;
+  answer: string;
+}
+
 export interface SupportContentFallback {
   detailedDescription: string;
   usageExamples: string[];
   usageSteps: string[];
+  faqs: SupportFAQItem[];
 }
 
 interface LocalizedFallbackCopy {
@@ -39,7 +45,7 @@ const CHART_FALLBACK_SLUGS = new Set([
 ]);
 
 const CHARTISH_FALLBACK_PATTERN =
-  /(chart|heatmap|pie|doughnut|sunburst|sankey|waterfall|timeline|candlestick|radar|venn|treemap|river|ring)/;
+  /(?:^|-)(chart|heatmap|pie|doughnut|sunburst|sankey|waterfall|timeline|candlestick|radar|venn|treemap|river|ring)(?:-|$)/;
 
 const LOCALIZED_FALLBACK_COPY: Record<string, LocalizedFallbackCopy> = {
   en: {
@@ -352,12 +358,247 @@ function isChartFallbackSlug(slug: string): boolean {
   return CHART_FALLBACK_SLUGS.has(slug) || CHARTISH_FALLBACK_PATTERN.test(slug);
 }
 
+function buildFallbackFaqs(
+  toolName: string,
+  locale: string,
+  variant: 'chart' | 'generic'
+): SupportFAQItem[] {
+  if (variant === 'chart') {
+    switch (locale) {
+      case 'zh':
+        return [
+          {
+            question: `${toolName} 适合什么数据？`,
+            answer: `${toolName} 适合标签清晰、规模较小的数据集，例如分类对比、趋势摘要或报告中的关键指标。先保持数据简洁，再根据预览调整标题、标签和配色。`,
+          },
+          {
+            question: `${toolName} 生成图表后应该检查什么？`,
+            answer: '导出或分享前，请检查数值是否正确、标签是否容易理解、颜色对比是否清晰，以及图例和标题是否能准确说明图表含义。',
+          },
+        ];
+      case 'ja':
+        return [
+          {
+            question: `${toolName} にはどのようなデータが向いていますか？`,
+            answer: `${toolName} は、ラベルが明確な小規模データ、カテゴリ比較、傾向の要約、レポート用の主要指標に向いています。まずデータを絞り、プレビューを見ながらタイトル、ラベル、色を調整してください。`,
+          },
+          {
+            question: `${toolName} で作成したチャートを使う前に何を確認すべきですか？`,
+            answer: '書き出しや共有の前に、値が正しいこと、ラベルが読みやすいこと、色のコントラストが十分なこと、凡例とタイトルが内容を正確に説明していることを確認してください。',
+          },
+        ];
+      case 'ko':
+        return [
+          {
+            question: `${toolName}에는 어떤 데이터가 적합한가요?`,
+            answer: `${toolName}은 명확한 라벨이 있는 작은 데이터셋, 범주 비교, 추세 요약, 보고서용 핵심 지표에 적합합니다. 데이터를 간단히 정리한 뒤 미리보기를 보면서 제목, 라벨, 색상을 조정하세요.`,
+          },
+          {
+            question: `${toolName}에서 만든 차트를 사용하기 전에 무엇을 확인해야 하나요?`,
+            answer: '내보내거나 공유하기 전에 값이 정확한지, 라벨이 이해하기 쉬운지, 색상 대비가 충분한지, 범례와 제목이 차트의 의미를 정확히 설명하는지 확인하세요.',
+          },
+        ];
+      case 'es':
+        return [
+          {
+            question: `Que datos funcionan mejor en ${toolName}?`,
+            answer: `${toolName} funciona mejor con conjuntos pequenos y bien etiquetados, como comparaciones por categoria, resumenes de tendencia o metricas clave para informes. Mantén los datos simples y ajusta titulo, etiquetas y colores con la vista previa.`,
+          },
+          {
+            question: `Que debo revisar antes de usar un grafico de ${toolName}?`,
+            answer: 'Antes de exportar o compartir, comprueba que los valores sean correctos, que las etiquetas se entiendan, que el contraste de color sea claro y que la leyenda y el titulo expliquen el mensaje del grafico.',
+          },
+        ];
+      case 'pt':
+        return [
+          {
+            question: `Que dados funcionam melhor em ${toolName}?`,
+            answer: `${toolName} funciona melhor com conjuntos pequenos e bem rotulados, como comparacoes por categoria, resumos de tendencia ou metricas principais para relatorios. Mantenha os dados simples e ajuste titulo, rotulos e cores pela previa.`,
+          },
+          {
+            question: `O que devo revisar antes de usar um grafico de ${toolName}?`,
+            answer: 'Antes de exportar ou compartilhar, confira se os valores estao corretos, se os rotulos sao claros, se o contraste de cores e suficiente e se a legenda e o titulo explicam a mensagem do grafico.',
+          },
+        ];
+      case 'fr':
+        return [
+          {
+            question: `Quels types de donnees conviennent a ${toolName} ?`,
+            answer: `${toolName} convient surtout aux petits jeux de donnees bien libelles, comme des comparaisons par categorie, des tendances resumees ou des indicateurs cles pour un rapport. Gardez les donnees simples, puis ajustez le titre, les libelles et les couleurs dans l apercu.`,
+          },
+          {
+            question: `Que verifier avant d utiliser un graphique cree avec ${toolName} ?`,
+            answer: 'Avant d exporter ou de partager, verifiez que les valeurs sont correctes, que les libelles sont lisibles, que le contraste des couleurs est clair et que la legende et le titre expliquent correctement le message.',
+          },
+        ];
+      case 'de':
+        return [
+          {
+            question: `Welche Daten eignen sich fur ${toolName}?`,
+            answer: `${toolName} eignet sich besonders fur kleine, klar beschriftete Datensatze wie Kategorievergleiche, Trendzusammenfassungen oder Kennzahlen fur Berichte. Halte die Daten ubersichtlich und passe Titel, Labels und Farben in der Vorschau an.`,
+          },
+          {
+            question: `Was sollte ich vor der Nutzung eines Diagramms aus ${toolName} prufen?`,
+            answer: 'Prufe vor dem Export oder Teilen, ob die Werte stimmen, die Labels verstandlich sind, der Farbkontrast klar ist und Legende sowie Titel die Aussage des Diagramms korrekt erklaren.',
+          },
+        ];
+      case 'ru':
+        return [
+          {
+            question: `Какие данные лучше всего подходят для ${toolName}?`,
+            answer: `${toolName} лучше всего подходит для небольших наборов данных с понятными подписями: сравнений по категориям, кратких трендов или ключевых показателей для отчета. Сначала упростите данные, затем настройте заголовок, подписи и цвета по предпросмотру.`,
+          },
+          {
+            question: `Что проверить перед использованием диаграммы из ${toolName}?`,
+            answer: 'Перед экспортом или публикацией проверьте корректность значений, понятность подписей, достаточный контраст цветов, а также то, что легенда и заголовок точно объясняют смысл диаграммы.',
+          },
+        ];
+      case 'ar':
+        return [
+          {
+            question: `ما نوع البيانات المناسب لـ ${toolName}؟`,
+            answer: `${toolName} يناسب مجموعات البيانات الصغيرة ذات التسميات الواضحة مثل المقارنات حسب الفئة او ملخصات الاتجاهات او المؤشرات الرئيسية للتقارير. ابق البيانات بسيطة ثم اضبط العنوان والتسميات والالوان من خلال المعاينة.`,
+          },
+          {
+            question: `ما الذي يجب مراجعته قبل استخدام مخطط من ${toolName}؟`,
+            answer: 'قبل التصدير او المشاركة، راجع صحة القيم ووضوح التسميات وتباين الالوان، وتأكد من ان وسيلة الايضاح والعنوان يشرحان رسالة المخطط بدقة.',
+          },
+        ];
+      default:
+        return [
+          {
+            question: `What data works best in ${toolName}?`,
+            answer: `${toolName} works best with small, clearly labeled datasets such as category comparisons, trend summaries, or key metrics for a report. Keep the data focused, then use the preview to tune the title, labels, and colors.`,
+          },
+          {
+            question: `What should I check before using a chart from ${toolName}?`,
+            answer: 'Before exporting or sharing, check that the values are correct, labels are easy to understand, color contrast is clear, and the legend and title explain the chart message accurately.',
+          },
+        ];
+    }
+  }
+
+  switch (locale) {
+    case 'zh':
+      return [
+        {
+          question: `${toolName} 适合什么时候使用？`,
+          answer: `${toolName} 适合需要在浏览器中快速完成轻量任务的场景，例如检查输入、整理输出、准备原型或处理一次性工作。`,
+        },
+        {
+          question: `使用 ${toolName} 的结果前应该检查什么？`,
+          answer: '复制、下载或导出前，请确认输入内容、选项设置和预览结果都符合你的目标；如果页面提供多种输出方式，选择最适合后续工作流的一种。',
+        },
+      ];
+    case 'ja':
+      return [
+        {
+          question: `${toolName} はどのような場面で使えますか？`,
+          answer: `${toolName} は、入力の確認、出力の整理、プロトタイプ作成、単発作業など、ブラウザ上ですばやく軽量なタスクを処理したい場面に向いています。`,
+        },
+        {
+          question: `${toolName} の結果を使う前に何を確認すべきですか？`,
+          answer: 'コピー、ダウンロード、または書き出しの前に、入力内容、オプション設定、プレビュー結果が目的に合っているか確認してください。複数の出力方法がある場合は、次の作業に合うものを選びます。',
+        },
+      ];
+    case 'ko':
+      return [
+        {
+          question: `${toolName}은 언제 사용하면 좋나요?`,
+          answer: `${toolName}은 입력 확인, 출력 정리, 프로토타입 준비, 일회성 작업처럼 브라우저에서 빠르게 가벼운 작업을 처리해야 할 때 적합합니다.`,
+        },
+        {
+          question: `${toolName}의 결과를 사용하기 전에 무엇을 확인해야 하나요?`,
+          answer: '복사, 다운로드 또는 내보내기 전에 입력 내용, 옵션 설정, 미리보기 결과가 목적에 맞는지 확인하세요. 여러 출력 방식이 있으면 다음 작업에 가장 알맞은 방식을 선택하세요.',
+        },
+      ];
+    case 'es':
+      return [
+        {
+          question: `Cuando conviene usar ${toolName}?`,
+          answer: `${toolName} es util cuando necesitas resolver una tarea ligera en el navegador, como comprobar una entrada, preparar una salida, crear un prototipo o completar un trabajo puntual.`,
+        },
+        {
+          question: `Que debo revisar antes de usar el resultado de ${toolName}?`,
+          answer: 'Antes de copiar, descargar o exportar, confirma que la entrada, las opciones y la vista previa coincidan con tu objetivo. Si hay varias salidas disponibles, elige la que encaje mejor con tu siguiente flujo de trabajo.',
+        },
+      ];
+    case 'pt':
+      return [
+        {
+          question: `Quando devo usar ${toolName}?`,
+          answer: `${toolName} e util quando voce precisa concluir uma tarefa leve no navegador, como verificar uma entrada, preparar uma saida, montar um prototipo ou resolver um trabalho pontual.`,
+        },
+        {
+          question: `O que devo conferir antes de usar o resultado de ${toolName}?`,
+          answer: 'Antes de copiar, baixar ou exportar, confirme se a entrada, as opcoes e a previa correspondem ao seu objetivo. Se houver varias saidas disponiveis, escolha a que melhor se encaixa no proximo fluxo de trabalho.',
+        },
+      ];
+    case 'fr':
+      return [
+        {
+          question: `Quand utiliser ${toolName} ?`,
+          answer: `${toolName} est utile quand vous devez traiter une tache legere dans le navigateur, par exemple verifier une entree, preparer une sortie, creer un prototype ou terminer une action ponctuelle.`,
+        },
+        {
+          question: `Que verifier avant d utiliser le resultat de ${toolName} ?`,
+          answer: 'Avant de copier, telecharger ou exporter, verifiez que l entree, les options et l apercu correspondent a votre objectif. Si plusieurs sorties sont proposees, choisissez celle qui convient le mieux a votre prochain flux de travail.',
+        },
+      ];
+    case 'de':
+      return [
+        {
+          question: `Wann sollte ich ${toolName} verwenden?`,
+          answer: `${toolName} ist hilfreich, wenn du eine leichte Aufgabe direkt im Browser erledigen willst, etwa Eingaben prufen, Ausgaben vorbereiten, einen Prototyp bauen oder eine einmalige Aufgabe abschliessen.`,
+        },
+        {
+          question: `Was sollte ich vor der Nutzung des Ergebnisses aus ${toolName} prufen?`,
+          answer: 'Prufe vor dem Kopieren, Herunterladen oder Exportieren, ob Eingabe, Optionen und Vorschau zu deinem Ziel passen. Wenn mehrere Ausgabewege verfugbar sind, wahle den passenden fur deinen nachsten Arbeitsschritt.',
+        },
+      ];
+    case 'ru':
+      return [
+        {
+          question: `Когда стоит использовать ${toolName}?`,
+          answer: `${toolName} полезен, когда нужно быстро выполнить легкую задачу в браузере: проверить ввод, подготовить результат, собрать прототип или закрыть разовую работу.`,
+        },
+        {
+          question: `Что проверить перед использованием результата из ${toolName}?`,
+          answer: 'Перед копированием, скачиванием или экспортом убедитесь, что исходные данные, настройки и предпросмотр соответствуют вашей цели. Если доступно несколько вариантов вывода, выберите тот, который лучше подходит для следующего шага.',
+        },
+      ];
+    case 'ar':
+      return [
+        {
+          question: `متى يمكن استخدام ${toolName}؟`,
+          answer: `${toolName} مفيد عندما تحتاج الى انجاز مهمة خفيفة داخل المتصفح، مثل التحقق من مدخلات او تجهيز مخرجات او اعداد نموذج اولي او انهاء عمل لمرة واحدة.`,
+        },
+        {
+          question: `ما الذي يجب مراجعته قبل استخدام نتيجة ${toolName}؟`,
+          answer: 'قبل النسخ او التنزيل او التصدير، تأكد من ان المدخلات والخيارات والمعاينة تطابق هدفك. اذا توفرت عدة صيغ اخراج، اختر الصيغة الانسب للخطوة التالية.',
+        },
+      ];
+    default:
+      return [
+        {
+          question: `When should I use ${toolName}?`,
+          answer: `${toolName} is useful when you need to complete a lightweight browser task quickly, such as checking input, preparing output, building a prototype, or handling a one-off utility workflow.`,
+        },
+        {
+          question: `What should I check before using the result from ${toolName}?`,
+          answer: 'Before copying, downloading, or exporting, confirm that the input, options, and preview match your goal. If the page offers multiple output formats, choose the one that best fits your next workflow.',
+        },
+      ];
+  }
+}
+
 function buildChartFallback(toolName: string, locale: string): SupportContentFallback {
   const copy = getLocalizedFallbackCopy(locale);
   return {
     detailedDescription: copy.chartDescription(toolName),
     usageSteps: copy.chartUsageSteps,
     usageExamples: copy.chartUsageExamples,
+    faqs: buildFallbackFaqs(toolName, locale, 'chart'),
   };
 }
 
@@ -375,6 +616,16 @@ function buildImageConverterFallback(toolName: string): SupportContentFallback {
       'Turn a PNG screenshot into JPEG for a lighter email attachment.',
       'Export a transparent design asset as WebP for a faster web page.',
       'Check how the same image looks across common web-friendly formats before publishing.',
+    ],
+    faqs: [
+      {
+        question: `Which formats can ${toolName} create?`,
+        answer: `${toolName} is designed around common browser-friendly formats: PNG, JPEG, and WebP. Choose the format that matches the transparency, file-size, or compatibility needs of your next workflow.`,
+      },
+      {
+        question: `What should I check before downloading from ${toolName}?`,
+        answer: 'Compare the converted preview with the original image and adjust quality for JPEG or WebP exports when you need a smaller file or a clearer result.',
+      },
     ],
   };
 }
@@ -394,6 +645,7 @@ function buildPlaceholderImageFallback(toolName: string): SupportContentFallback
       'Generate card-sized placeholders for a dashboard or CMS list view.',
       'Produce quick image stand-ins for wireframes, UI tests, or design reviews.',
     ],
+    faqs: buildFallbackFaqs(toolName, 'en', 'generic'),
   };
 }
 
@@ -411,6 +663,16 @@ function buildDnsLookupFallback(toolName: string): SupportContentFallback {
       'Confirm that a new MX setup is visible before testing email delivery.',
       'Check whether a CNAME or TXT record has propagated after a DNS update.',
       'Inspect A and AAAA answers during a hosting move or CDN cutover.',
+    ],
+    faqs: [
+      {
+        question: `Which DNS records does ${toolName} check?`,
+        answer: `${toolName} checks common record groups such as A, AAAA, CNAME, MX, NS, and TXT so you can review the current answers returned for a domain.`,
+      },
+      {
+        question: `Why might ${toolName} show different DNS results later?`,
+        answer: 'DNS answers can change as records propagate or caches expire. If you recently changed a record, repeat the lookup after the relevant TTL window.',
+      },
     ],
   };
 }
@@ -430,6 +692,7 @@ function buildImageWatermarkFallback(toolName: string): SupportContentFallback {
       'Place a copyright notice in the corner of a portfolio preview image.',
       'Create tiled review watermarks for internal-only screenshots or design comps.',
     ],
+    faqs: buildFallbackFaqs(toolName, 'en', 'generic'),
   };
 }
 
@@ -448,6 +711,7 @@ function buildLoremPicsumFallback(toolName: string): SupportContentFallback {
       'Create quick Markdown-ready images for internal docs or test content.',
       'Preview different responsive image sizes before real assets are available.',
     ],
+    faqs: buildFallbackFaqs(toolName, 'en', 'generic'),
   };
 }
 
@@ -457,6 +721,7 @@ function buildGenericFallback(toolName: string, locale: string): SupportContentF
     detailedDescription: copy.genericDescription(toolName),
     usageSteps: copy.genericUsageSteps,
     usageExamples: copy.genericUsageExamples,
+    faqs: buildFallbackFaqs(toolName, locale, 'generic'),
   };
 }
 

@@ -64,6 +64,66 @@ afterEach(() => {
 });
 
 describe('html edge cache middleware', () => {
+  it('redirects no-slash localized HTML routes before route handling', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+    const { response } = await runMiddleware(
+      new Request('https://www.u2tool.com/en/tools/json-formatter'),
+      next
+    );
+
+    expect(response.status).toBe(301);
+    expect(response.headers.get('location')).toBe('/en/tools/json-formatter/');
+    expect(next).not.toHaveBeenCalled();
+  });
+
+  it('redirects legacy unlocalized site info pages before invalid-locale home matching', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+    const { response } = await runMiddleware(
+      new Request('https://www.u2tool.com/privacy/'),
+      next
+    );
+
+    expect(response.status).toBe(301);
+    expect(response.headers.get('location')).toBe('/en/privacy/');
+    expect(next).not.toHaveBeenCalled();
+  });
+
+  it('redirects known legacy GSC URL patterns without wildcarding unknown content', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+
+    const blog = await runMiddleware(
+      new Request('https://www.u2tool.com/ru/blog/regex-complete-guide'),
+      next
+    );
+    const compare = await runMiddleware(
+      new Request('https://www.u2tool.com/zh/compare/image-border/image-splitter'),
+      next
+    );
+    const unknownBlog = await runMiddleware(
+      new Request('https://www.u2tool.com/en/blog/unknown-post'),
+      next
+    );
+
+    expect(blog.response.status).toBe(301);
+    expect(blog.response.headers.get('location')).toBe('/ru/tools/regex-tester/');
+    expect(compare.response.status).toBe(301);
+    expect(compare.response.headers.get('location')).toBe('/zh/compare/choose-image-tool/');
+    expect(unknownBlog.response.status).toBe(301);
+    expect(unknownBlog.response.headers.get('location')).toBe('/en/blog/unknown-post/');
+  });
+
+  it('redirects stale favicon ico requests to the canonical SVG asset', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+    const { response } = await runMiddleware(
+      new Request('https://www.u2tool.com/favicon.ico'),
+      next
+    );
+
+    expect(response.status).toBe(301);
+    expect(response.headers.get('location')).toBe('/favicon.svg');
+    expect(next).not.toHaveBeenCalled();
+  });
+
   it('caches GET HTML responses and serves later requests from cache', async () => {
     const cache = installHtmlCache();
     const url = 'https://www.u2tool.com/ru/tools/json-formatter/';

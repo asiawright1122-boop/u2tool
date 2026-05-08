@@ -197,5 +197,20 @@ describe('translations module', () => {
       expect(toolDetailPageSource).toContain('loadBaseUiMessages(locale, Astro.url)');
       expect(llmsPageSource).toContain("buildLlmsContent('en', new URL(request.url))");
     });
+
+    it('keeps tool detail breadcrumbs on canonical trailing-slash paths', () => {
+      expect(toolDetailPageSource).toContain("buildLocalizedPagePath(locale, `/categories/${tool.category}`)");
+      expect(toolDetailPageSource).toContain("buildLocalizedPagePath(locale, `/tools/${tool.slug}`)");
+      expect(toolDetailPageSource).not.toContain('href: `/${locale}/tools/${tool.slug}`');
+      expect(toolDetailPageSource).not.toContain('href: `/${locale}/categories/${tool.category}`');
+    });
+
+    it('fills missing tool detail support copy with safe SSR fallback content', () => {
+      expect(toolDetailPageSource).toContain('shouldUseSupportContentFallback');
+      expect(toolDetailPageSource).toContain('!hasSupportText(rawDetailedDescription)');
+      expect(toolDetailPageSource).toContain('rawFaqs.length === 0');
+      expect(toolDetailPageSource).toContain('supportContentFallback?.faqs ?? []');
+      expect(toolDetailPageSource).toContain('safeToolMessages.faqs = faqs');
+    });
   });
 });

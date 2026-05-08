@@ -1,0 +1,164 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.svelte';
+import StaticSidebar from '@/components/layout/StaticSidebar.astro';
+import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
+import Footer from '@/components/layout/Footer.astro';
+import Breadcrumb from '@/components/layout/Breadcrumb.astro';
+import HreflangTags from '@/components/seo/HreflangTags.astro';
+import StructuredData from '@/components/seo/StructuredData.astro';
+import { categories } from '@/config/tools';
+import type { Locale } from '@/lib/i18n';
+import { loadBaseMessages } from '@/lib/translations';
+import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
+import { getPublicSiteUrl } from '@/lib/public-env';
+import { buildLocalizedPagePath, buildLocalizedPageUrl, getHreflang } from '@/lib/seo';
+import { getSiteInfoPageCopy, type SiteInfoPageSlug } from '@/lib/site-info-pages';
+
+interface Props {
+  locale: Locale;
+  pageSlug: SiteInfoPageSlug;
+}
+
+const { locale, pageSlug } = Astro.props;
+const page = getSiteInfoPageCopy(pageSlug);
+const baseMessages = await loadBaseMessages(locale);
+const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
+const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
+const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
+const headerTranslations = buildHeaderTranslations(baseMessages);
+const mobileNavMessages = buildMobileNavMessages(navMessages);
+const BASE_URL = getPublicSiteUrl();
+const canonicalPath = `/${pageSlug}`;
+const pageUrl = buildLocalizedPageUrl(BASE_URL, locale, canonicalPath);
+const breadcrumbItems = [
+  { label: navMessages.home || 'Home', href: buildLocalizedPagePath(locale, '/') },
+  { label: page.title, href: buildLocalizedPagePath(locale, canonicalPath) },
+];
+const breadcrumbData = {
+  itemListElement: breadcrumbItems.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.label,
+    item: `${BASE_URL}${item.href}`,
+  })),
+};
+const webPageData = {
+  name: page.title,
+  description: page.description,
+  url: pageUrl,
+  inLanguage: getHreflang(locale),
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'U2Tool',
+    url: BASE_URL,
+  },
+};
+const primaryHref = buildLocalizedPagePath(locale, page.primaryLink.href);
+const secondaryHref = buildLocalizedPagePath(locale, page.secondaryLink.href);
+const contactEmail = 'contact@u2tool.com';
+
+function splitContactEmail(paragraph: string): { before: string; after: string } {
+  const [before, ...afterParts] = paragraph.split(contactEmail);
+  return { before, after: afterParts.join(contactEmail) };
+}
+---
+
+<BaseLayout
+  title={page.title}
+  description={page.description}
+  locale={locale}
+  canonicalPath={canonicalPath}
+  siteDescription={siteMessages.description}
+>
+  <HreflangTags path={canonicalPath} slot="head" />
+  <StructuredData type="BreadcrumbList" data={breadcrumbData} slot="head" />
+  <StructuredData type="WebPage" data={webPageData} slot="head" />
+  <meta property="og:title" content={`${page.title} | U2Tool`} slot="head" />
+  <meta property="og:description" content={page.description} slot="head" />
+  <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
+  <meta property="og:type" content="website" slot="head" />
+  <meta property="og:url" content={pageUrl} slot="head" />
+  <meta property="og:site_name" content="U2Tool" slot="head" />
+  <meta name="twitter:card" content="summary_large_image" slot="head" />
+  <meta name="twitter:title" content={`${page.title} | U2Tool`} slot="head" />
+  <meta name="twitter:description" content={page.description} slot="head" />
+  <meta name="twitter:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
+
+  <StaticSidebar
+    locale={locale}
+    categories={categories}
+    categoryNames={categoryMessages}
+    navMessages={navMessages}
+    siteName={siteMessages.name || 'U2Tool'}
+  />
+
+  <div class="main-content-with-sidebar main-content-with-mobile-nav">
+    <Header client:load locale={locale} translations={headerTranslations} />
+
+    <main class="py-6 px-4 lg:px-6">
+      <div class="max-w-5xl">
+        <div class="mb-6">
+          <Breadcrumb locale={locale} items={breadcrumbItems} />
+        </div>
+
+        <section class="mb-8 rounded-3xl border border-slate-200/60 glass p-8 shadow-2xl backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/40">
+          <p class="mb-3 text-[10px] font-black uppercase tracking-[0.3em] text-amber-600/80 dark:text-amber-500/60">
+            {page.eyebrow}
+          </p>
+          <h1 class="text-4xl font-black tracking-tight text-slate-900 dark:text-white md:text-5xl">
+            {page.title}
+          </h1>
+          <p class="mt-4 max-w-3xl text-sm font-medium leading-7 text-slate-500 dark:text-slate-400">
+            {page.description}
+          </p>
+          <p class="mt-5 text-xs font-bold uppercase tracking-[0.18em] text-slate-400 dark:text-slate-600">
+            {page.updated}
+          </p>
+        </section>
+
+        <div class="space-y-5">
+          {page.sections.map((section) => (
+            <section class="rounded-2xl border border-slate-200 bg-white/80 p-6 shadow-sm dark:border-white/10 dark:bg-slate-900/70">
+              <h2 class="text-xl font-black tracking-tight text-slate-900 dark:text-white">
+                {section.title}
+              </h2>
+              <div class="mt-4 space-y-4 text-sm leading-7 text-slate-600 dark:text-slate-400">
+                {section.paragraphs.map((paragraph) => (
+                  paragraph.includes(contactEmail) ? (
+                    <p>
+                      {splitContactEmail(paragraph).before}
+                      <a class="font-bold text-amber-600 hover:text-amber-700 dark:text-amber-400 dark:hover:text-amber-300" href={`mailto:${contactEmail}`}>{contactEmail}</a>
+                      {splitContactEmail(paragraph).after}
+                    </p>
+                  ) : (
+                    <p>{paragraph}</p>
+                  )
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a
+            href={primaryHref}
+            class="inline-flex items-center justify-center rounded-full bg-amber-500 px-5 py-3 text-sm font-black text-white shadow-lg shadow-amber-500/20 transition hover:bg-amber-600"
+          >
+            {page.primaryLink.label}
+          </a>
+          <a
+            href={secondaryHref}
+            class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-black text-slate-700 transition hover:border-amber-400 hover:text-amber-600 dark:border-white/10 dark:bg-slate-900 dark:text-slate-300"
+          >
+            {page.secondaryLink.label}
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <Footer locale={locale} />
+  </div>
+
+  <MobileBottomNav client:load locale={locale} navMessages={mobileNavMessages} />
+</BaseLayout>

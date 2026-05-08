@@ -9,7 +9,7 @@ interface UrlCheck {
 }
 
 const urlChecks: UrlCheck[] = [
-  { name: 'robots.txt', path: '/robots.txt', contentTypeIncludes: 'text/plain', bodyIncludes: ['Sitemap: https://www.u2tool.com/sitemap.xml', 'Disallow: /api/'] },
+  { name: 'robots.txt', path: '/robots.txt', contentTypeIncludes: 'text/plain', bodyIncludes: ['Sitemap: https://www.u2tool.com/sitemap.xml', 'Disallow: /api/', 'Disallow: /_next/', 'Disallow: /dist/'] },
   { name: 'sitemap index', path: '/sitemap.xml', contentTypeIncludes: 'application/xml', bodyIncludes: ['/sitemap-priority.xml', '/sitemap-pages.xml', '/sitemap-tools.xml'] },
   { name: 'priority sitemap', path: '/sitemap-priority.xml', contentTypeIncludes: 'application/xml', bodyIncludes: ['/en/ai/', '/en/tools/json-formatter/', '/en/tools/jwt-decoder/'] },
   { name: 'tools sitemap', path: '/sitemap-tools.xml', contentTypeIncludes: 'application/xml', bodyIncludes: ['/en/tools/json-formatter/', '/en/tools/jwt-decoder/'] },
@@ -82,6 +82,19 @@ async function validateRedirects(): Promise<void> {
   const redirects = [
     ['/tools/json-formatter', '/en/tools/json-formatter/'],
     ['/en/tools/json-formatter', '/en/tools/json-formatter/'],
+    ['/tools/category/text', '/en/categories/text/'],
+    ['/en/tools/category/text', '/en/categories/text/'],
+    ['/privacy', '/en/privacy/'],
+    ['/models', '/en/ai/'],
+    ['/favicon.ico', '/favicon.svg'],
+    ['/ru/blog/regex-complete-guide', '/ru/tools/regex-tester/'],
+    ['/ja/blog/jwt-tokens-explained', '/ja/compare/choose-jwt-tool/'],
+    ['/compare/image-border/image-splitter', '/en/compare/choose-image-tool/'],
+    ['/compare/image-border/image-splitter/', '/en/compare/choose-image-tool/'],
+    ['/zh/compare/image-border/image-splitter', '/zh/compare/choose-image-tool/'],
+    ['/zh/compare/image-border/image-splitter/', '/zh/compare/choose-image-tool/'],
+    ['/en/compare/css-animation-generator/uuid-generator', '/en/tools/css-animation-generator/'],
+    ['/en/compare/css-animation-generator/uuid-generator/', '/en/tools/css-animation-generator/'],
     ['/compare/choose-json-tool', '/en/compare/choose-json-tool/'],
   ];
 

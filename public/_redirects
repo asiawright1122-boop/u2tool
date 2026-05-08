@@ -11,6 +11,45 @@
 /categories /en/tools/ 301
 /compare /en/compare/ 301
 /ai /en/ai/ 301
+/privacy /en/privacy/ 301
+/privacy/ /en/privacy/ 301
+/terms /en/terms/ 301
+/terms/ /en/terms/ 301
+/contact /en/contact/ 301
+/contact/ /en/contact/ 301
+/models /en/ai/ 301
+/models/ /en/ai/ 301
+/favicon.ico /favicon.svg 301
+
+# Legacy blog URLs now point at the closest canonical tool or comparison page.
+/blog/base64-encoding-explained /en/tools/base64/ 301
+/blog/hash-algorithms-explained /en/tools/hash-generator/ 301
+/blog/image-optimization-web /en/tools/image-compressor/ 301
+/blog/jwt-tokens-explained /en/compare/choose-jwt-tool/ 301
+/blog/markdown-syntax-guide /en/tools/markdown-preview/ 301
+/blog/password-security-best-practices /en/tools/password-generator/ 301
+/blog/regex-complete-guide /en/tools/regex-tester/ 301
+/blog/uuid-generator-guide /en/tools/uuid-generator/ 301
+
+# Legacy pairwise compare URLs now resolve to a durable guide or primary tool.
+/compare/css-animation-generator/color-palette /en/tools/css-animation-generator/ 301
+/compare/css-animation-generator/color-palette/ /en/tools/css-animation-generator/ 301
+/compare/css-animation-generator/css-grid-generator /en/tools/css-animation-generator/ 301
+/compare/css-animation-generator/css-grid-generator/ /en/tools/css-animation-generator/ 301
+/compare/css-animation-generator/gradient-generator /en/tools/css-animation-generator/ 301
+/compare/css-animation-generator/gradient-generator/ /en/tools/css-animation-generator/ 301
+/compare/css-animation-generator/markdown-table-generator /en/tools/css-animation-generator/ 301
+/compare/css-animation-generator/markdown-table-generator/ /en/tools/css-animation-generator/ 301
+/compare/css-animation-generator/meta-tag-generator /en/tools/css-animation-generator/ 301
+/compare/css-animation-generator/meta-tag-generator/ /en/tools/css-animation-generator/ 301
+/compare/css-animation-generator/uuid-generator /en/tools/css-animation-generator/ 301
+/compare/css-animation-generator/uuid-generator/ /en/tools/css-animation-generator/ 301
+/compare/grouped-bar-chart-generator/area-chart-generator /en/compare/choose-chart-type/ 301
+/compare/grouped-bar-chart-generator/area-chart-generator/ /en/compare/choose-chart-type/ 301
+/compare/image-border/image-splitter /en/compare/choose-image-tool/ 301
+/compare/image-border/image-splitter/ /en/compare/choose-image-tool/ 301
+/compare/json-to-csharp/color-converter /en/tools/json-to-csharp/ 301
+/compare/json-to-csharp/color-converter/ /en/tools/json-to-csharp/ 301
 
 # Base64 tool aliases (all locales)
 /en/tools/base64-encoder /en/tools/base64/ 301
@@ -62,6 +101,46 @@
 /ar/tools/base64-decoder /ar/tools/base64/ 301
 /ar/tools/base64-encode /ar/tools/base64/ 301
 /ar/tools/base64-decode /ar/tools/base64/ 301
+
+/:locale/privacy /:locale/privacy/ 301
+/:locale/terms /:locale/terms/ 301
+/:locale/contact /:locale/contact/ 301
+
+# Legacy category URLs that were historically exposed under /tools/category/.
+/tools/category/:category /en/categories/:category/ 301
+/tools/category/:category/ /en/categories/:category/ 301
+/:locale/tools/category/:category /:locale/categories/:category/ 301
+/:locale/tools/category/:category/ /:locale/categories/:category/ 301
+
+# Localized legacy blog URLs.
+/:locale/blog/base64-encoding-explained /:locale/tools/base64/ 301
+/:locale/blog/hash-algorithms-explained /:locale/tools/hash-generator/ 301
+/:locale/blog/image-optimization-web /:locale/tools/image-compressor/ 301
+/:locale/blog/jwt-tokens-explained /:locale/compare/choose-jwt-tool/ 301
+/:locale/blog/markdown-syntax-guide /:locale/tools/markdown-preview/ 301
+/:locale/blog/password-security-best-practices /:locale/tools/password-generator/ 301
+/:locale/blog/regex-complete-guide /:locale/tools/regex-tester/ 301
+/:locale/blog/uuid-generator-guide /:locale/tools/uuid-generator/ 301
+
+# Localized legacy pairwise compare URLs.
+/:locale/compare/css-animation-generator/color-palette /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/color-palette/ /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/css-grid-generator /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/css-grid-generator/ /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/gradient-generator /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/gradient-generator/ /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/markdown-table-generator /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/markdown-table-generator/ /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/meta-tag-generator /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/meta-tag-generator/ /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/uuid-generator /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/uuid-generator/ /:locale/tools/css-animation-generator/ 301
+/:locale/compare/grouped-bar-chart-generator/area-chart-generator /:locale/compare/choose-chart-type/ 301
+/:locale/compare/grouped-bar-chart-generator/area-chart-generator/ /:locale/compare/choose-chart-type/ 301
+/:locale/compare/image-border/image-splitter /:locale/compare/choose-image-tool/ 301
+/:locale/compare/image-border/image-splitter/ /:locale/compare/choose-image-tool/ 301
+/:locale/compare/json-to-csharp/color-converter /:locale/tools/json-to-csharp/ 301
+/:locale/compare/json-to-csharp/color-converter/ /:locale/tools/json-to-csharp/ 301
 
 # Legacy splat routes.
 /tools/* /en/tools/:splat/ 301

@@ -10,6 +10,51 @@ export interface DefensiveIssue {
   code: string;
 }
 
+function getFunctionBlock(lines: string[], startIndex: number): string {
+  const block: string[] = [];
+  let depth = 0;
+  let hasOpened = false;
+
+  for (let index = startIndex; index < lines.length; index += 1) {
+    const line = lines[index];
+    block.push(line);
+
+    for (const char of line) {
+      if (char === '{') {
+        depth += 1;
+        hasOpened = true;
+      } else if (char === '}') {
+        depth -= 1;
+      }
+    }
+
+    if (hasOpened && depth <= 0) {
+      break;
+    }
+  }
+
+  return block.join('\n');
+}
+
+function hasChartRefGuard(functionBody: string): boolean {
+  const guardPatterns = [
+    /if\s*\(\s*!\s*chartRef(?:\.current)?\s*\)/,
+    /if\s*\(\s*chartRef(?:\.current)?\s*\)/,
+    /chartRef(?:\.current)?\s*\?/,
+  ];
+
+  return guardPatterns.some((pattern) => pattern.test(functionBody));
+}
+
+function hasEchartInstanceGuard(functionBody: string): boolean {
+  const guardPatterns = [
+    /if\s*\(\s*!\s*e(?:c|C)hartInstance\s*\)/,
+    /if\s*\(\s*e(?:c|C)hartInstance\s*\)/,
+  ];
+
+  return guardPatterns.some((pattern) => pattern.test(functionBody));
+}
+
 /**
  * 验证防御性编程
  */
@@ -29,24 +74,20 @@ export async function validateDefensiveProgramming(): Promise<DefensiveIssue[]> 
       
       // 检查 exportChart 函数
       if (line.includes('const exportChart') || line.includes('function exportChart')) {
-        // 检查接下来的几行是否有防御性检查
-        const nextLines = lines.slice(i, Math.min(i + 15, lines.length)).join('\n');
+        const functionBody = getFunctionBlock(lines, i);
         
-        // 检查是否有 chartRef.current 检查
-        if (!nextLines.includes('if (!chartRef.current)') && 
-            !nextLines.includes('if (chartRef.current)')) {
+        // React 旧组件使用 chartRef.current；Svelte 组件使用 bind:this 后的 chartRef。
+        if (functionBody.includes('chartRef') && !hasChartRefGuard(functionBody)) {
           issues.push({
             file,
             line: lineNumber,
-            issue: 'exportChart 函数缺少 chartRef.current 的 null 检查',
+            issue: 'exportChart 函数缺少 chartRef 的 null 检查',
             code: line.trim(),
           });
         }
         
         // 检查是否有 echartInstance 检查
-        if (nextLines.includes('getEchartsInstance()') && 
-            !nextLines.includes('if (!echartInstance)') &&
-            !nextLines.includes('if (echartInstance)')) {
+        if (functionBody.includes('getEchartsInstance') && !hasEchartInstanceGuard(functionBody)) {
           issues.push({
             file,
             line: lineNumber,
@@ -60,14 +101,13 @@ export async function validateDefensiveProgramming(): Promise<DefensiveIssue[]> 
       // 但排除已经在 exportChart 函数内部且有防御性检查的情况
       if (line.includes('.getEchartsInstance()') && 
           !line.includes('?')) {
-        // 检查前面几行是否有 chartRef.current 的检查
+        // 检查前面几行是否有 chartRef 的检查
         const prevLines = lines.slice(Math.max(0, i - 10), i).join('\n');
         const nextFewLines = lines.slice(i, Math.min(i + 5, lines.length)).join('\n');
         
         // 如果在 exportChart 函数内且有防御性检查，则跳过
         const inExportChart = prevLines.includes('function exportChart') || prevLines.includes('const exportChart');
-        const hasDefensiveCheck = prevLines.includes('if (!chartRef.current)') && 
-                                  nextFewLines.includes('if (!echartInstance)');
+        const hasDefensiveCheck = hasChartRefGuard(prevLines) && hasEchartInstanceGuard(nextFewLines);
         
         if (!inExportChart || !hasDefensiveCheck) {
           issues.push({

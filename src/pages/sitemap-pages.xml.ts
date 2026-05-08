@@ -9,6 +9,7 @@ import type { APIRoute } from 'astro';
 import { locales } from '@/lib/i18n';
 import { categories } from '@/config/tools';
 import { comparisonSurfaceSlugs } from '@/lib/comparison-surfaces';
+import { siteInfoPageSlugs } from '@/lib/site-info-pages';
 import { sitemapLastmodManifest } from '@/generated/sitemap-lastmod';
 import { buildUrl, generateSitemapResponse } from '@/lib/sitemap-utils';
 
@@ -31,6 +32,11 @@ export const GET: APIRoute = () => {
     urls.push(buildUrl(`/${locale}/compare`, '0.8', 'weekly', sitemapLastmodManifest.pages));
     for (const slug of comparisonSurfaceSlugs) {
       urls.push(buildUrl(`/${locale}/compare/${slug}`, '0.7', 'weekly', sitemapLastmodManifest.pages));
+    }
+
+    // 站点信任页
+    for (const slug of siteInfoPageSlugs) {
+      urls.push(buildUrl(`/${locale}/${slug}`, '0.3', 'monthly', sitemapLastmodManifest.pages));
     }
     
     // 分类页面 - 中等优先级

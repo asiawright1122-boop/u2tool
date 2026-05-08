@@ -1,8 +1,37 @@
 import type { MiddlewareHandler } from 'astro';
+import { isValidLocale } from './lib/i18n';
+import {
+  resolveLegacyBlogRedirect,
+  resolveLegacyComparePairRedirect,
+  resolveLegacyUnlocalizedBlogRedirect,
+  resolveLegacyUnlocalizedComparePairRedirect,
+  resolveUnlocalizedSiteInfoRedirect,
+} from './lib/legacy-redirects';
 
 const HTML_EDGE_CACHE_CONTROL = 'public, max-age=300, s-maxage=86400, stale-while-revalidate=604800';
 const HTML_EDGE_CACHE_VERSION = '2026-05-06-seo-cfcontext-refresh-v2';
 const CACHEABLE_HTML_PATH = /^\/(?:$|(?:en|zh|ja|ko|es|pt|fr|de|ru|ar)(?:\/|$))/;
+const LOCALIZED_CANONICAL_SECTIONS = new Set([
+  'ai',
+  'blog',
+  'categories',
+  'compare',
+  'contact',
+  'privacy',
+  'terms',
+  'tools',
+]);
+const LEGACY_UNLOCALIZED_SECTIONS = new Set([
+  'ai',
+  'blog',
+  'categories',
+  'compare',
+  'contact',
+  'models',
+  'privacy',
+  'terms',
+  'tools',
+]);
 
 type CloudflareRuntimeLocals = {
   cfContext?: {
@@ -37,6 +66,130 @@ function isLocalPreviewRequest(request: Request): boolean {
     || hostname === '::1';
 }
 
+function getPathSegments(pathname: string): string[] {
+  return pathname.replace(/^\/+|\/+$/g, '').split('/').filter(Boolean);
+}
+
+function isFileLikePath(pathname: string): boolean {
+  const lastSegment = getPathSegments(pathname).at(-1) || '';
+  return /\.[a-z0-9]+$/i.test(lastSegment);
+}
+
+function redirect(location: string, status = 301): Response {
+  return new Response(null, {
+    status,
+    headers: { location },
+  });
+}
+
+function withSlashAndSearch(pathname: string, search: string): string {
+  return `${pathname.endsWith('/') ? pathname : `${pathname}/`}${search}`;
+}
+
+function resolveCanonicalRedirect(request: Request): string | null {
+  if (request.method !== 'GET' && request.method !== 'HEAD') {
+    return null;
+  }
+
+  const url = new URL(request.url);
+  const normalizedPath = url.pathname !== '/' && url.pathname.endsWith('/')
+    ? url.pathname.slice(0, -1)
+    : url.pathname;
+  const segments = getPathSegments(normalizedPath);
+  const [first, second, third, fourth] = segments;
+
+  if (normalizedPath === '/favicon.ico') {
+    return '/favicon.svg';
+  }
+
+  if (segments.length === 1) {
+    const siteInfoRedirect = resolveUnlocalizedSiteInfoRedirect(first);
+    if (siteInfoRedirect) {
+      return siteInfoRedirect;
+    }
+
+    if (first === 'models') {
+      return '/en/ai/';
+    }
+  }
+
+  if (first === 'blog' && second) {
+    const target = resolveLegacyUnlocalizedBlogRedirect(second);
+    if (target) {
+      return target;
+    }
+  }
+
+  if (first === 'compare' && second && third) {
+    const target = resolveLegacyUnlocalizedComparePairRedirect(second, third);
+    if (target) {
+      return target;
+    }
+  }
+
+  if (first === 'tools' && second === 'category') {
+    return segments.length > 2 ? `/en/categories/${segments.slice(2).join('/')}/` : '/en/tools/';
+  }
+
+  if (first === 'tools' && second === 'ranking') {
+    return '/en/tools/';
+  }
+
+  if (first === 'tools') {
+    return segments.length > 1 ? `/en/tools/${segments.slice(1).join('/')}/` : '/en/tools/';
+  }
+
+  if (first === 'categories') {
+    return segments.length > 1 ? `/en/categories/${segments.slice(1).join('/')}/` : '/en/tools/';
+  }
+
+  if (first === 'compare') {
+    return segments.length > 1 ? `/en/compare/${segments.slice(1).join('/')}/` : '/en/compare/';
+  }
+
+  if (first === 'ai') {
+    return '/en/ai/';
+  }
+
+  if (isValidLocale(first)) {
+    if (second === 'tools' && third === 'category') {
+      return segments.length > 3 ? `/${first}/categories/${segments.slice(3).join('/')}/` : `/${first}/tools/`;
+    }
+
+    if (second === 'tools' && third === 'ranking') {
+      return `/${first}/tools/`;
+    }
+
+    if (second === 'blog' && third) {
+      const target = resolveLegacyBlogRedirect(first, third);
+      if (target) {
+        return target;
+      }
+    }
+
+    if (second === 'compare' && third && fourth) {
+      const target = resolveLegacyComparePairRedirect(first, third, fourth);
+      if (target) {
+        return target;
+      }
+    }
+  }
+
+  if (
+    normalizedPath !== '/'
+    && !url.pathname.endsWith('/')
+    && !isFileLikePath(url.pathname)
+    && (
+      (isValidLocale(first) && LOCALIZED_CANONICAL_SECTIONS.has(second || ''))
+      || LEGACY_UNLOCALIZED_SECTIONS.has(first || '')
+    )
+  ) {
+    return withSlashAndSearch(url.pathname, url.search);
+  }
+
+  return null;
+}
+
 function getHtmlCacheKey(request: Request): Request {
   const url = new URL(request.url);
   url.searchParams.set('__u2tool_html_cache', HTML_EDGE_CACHE_VERSION);
@@ -60,6 +213,11 @@ function toCachedGetResponse(response: Response): Response {
 }
 
 export const onRequest: MiddlewareHandler = async (context, next) => {
+  const canonicalRedirect = resolveCanonicalRedirect(context.request);
+  if (canonicalRedirect) {
+    return redirect(canonicalRedirect);
+  }
+
   const shouldUseHtmlCache = isCacheableHtmlRequest(context.request)
     && !isLocalPreviewRequest(context.request);
   const cache = shouldUseHtmlCache ? getDefaultCache() : null;

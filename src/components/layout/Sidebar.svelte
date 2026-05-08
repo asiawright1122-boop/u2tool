@@ -35,7 +35,7 @@
     return getLocalizedPath(locale as Locale, '/tools');
   }
   function categoryPath(id: string) {
-    return getLocalizedPath(locale as Locale, '/tools') + '?category=' + id;
+    return getLocalizedPath(locale as Locale, `/categories/${id}`);
   }
 
   let collapsed = $state(false);
@@ -52,6 +52,12 @@
 
   $effect(() => {
     if (typeof window === 'undefined') return;
+    const categoryMatch = window.location.pathname.match(/\/categories\/([^/]+)\/?$/);
+    if (categoryMatch) {
+      activeCategory = categoryMatch[1];
+      return;
+    }
+
     const params = new URLSearchParams(window.location.search);
     activeCategory = params.get('category');
   });

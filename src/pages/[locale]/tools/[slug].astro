@@ -35,7 +35,7 @@ import type { Locale } from '@/lib/i18n';
 import { loadBaseUiMessages, loadToolPageMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
-import { buildLocalizedPageUrl } from '@/lib/seo';
+import { buildLocalizedPagePath, buildLocalizedPageUrl, getHreflang } from '@/lib/seo';
 import { sanitizeHtml } from '@/lib/sanitize';
 import { assessSupportContentTrust } from '@/lib/content-trust';
 import { buildSafeFallbackSupportContent } from '@/lib/support-content-fallback';
@@ -97,20 +97,22 @@ const homeLabel = navMessages.home || 'Home';
 // Breadcrumb items
 // ---------------------------------------------------------------------------
 const breadcrumbItems = [
-  { label: homeLabel, href: `/${locale}` },
-  { label: categoryName, href: `/${locale}/categories/${tool.category}` },
-  { label: toolName, href: `/${locale}/tools/${tool.slug}` },
+  { label: homeLabel, href: buildLocalizedPagePath(locale, '/') },
+  { label: categoryName, href: buildLocalizedPagePath(locale, `/categories/${tool.category}`) },
+  { label: toolName, href: buildLocalizedPagePath(locale, `/tools/${tool.slug}`) },
 ];
 
 // ---------------------------------------------------------------------------
 // Structured data: SoftwareApplication
 // ---------------------------------------------------------------------------
 const BASE_URL = getPublicSiteUrl();
+const schemaLanguage = getHreflang(locale);
 
 const softwareAppData = {
   name: toolName,
   description: seoDescription,
   url: buildLocalizedPageUrl(BASE_URL, locale, `/tools/${tool.slug}`),
+  inLanguage: schemaLanguage,
   applicationCategory: 'UtilitiesApplication',
   operatingSystem: 'Any',
   offers: {
@@ -130,6 +132,26 @@ interface FAQItem {
   answer: string;
 }
 
+function hasSupportText(value: unknown): value is string {
+  return typeof value === 'string' && value.trim().length > 0;
+}
+
+function hasSupportList(value: unknown): value is string[] {
+  return Array.isArray(value) && value.some((item) => typeof item === 'string' && item.trim().length > 0);
+}
+
+function pushFAQIfComplete(faqs: FAQItem[], question: unknown, answer: unknown): void {
+  if (typeof question !== 'string' || typeof answer !== 'string') {
+    return;
+  }
+
+  const trimmedQuestion = question.trim();
+  const trimmedAnswer = answer.trim();
+  if (trimmedQuestion && trimmedAnswer) {
+    faqs.push({ question: trimmedQuestion, answer: trimmedAnswer });
+  }
+}
+
 function extractFAQs(msgs: Record<string, unknown>): FAQItem[] {
   const faqs: FAQItem[] = [];
 
@@ -137,10 +159,11 @@ function extractFAQs(msgs: Record<string, unknown>): FAQItem[] {
   if (Array.isArray(msgs.faqs)) {
     for (const item of msgs.faqs) {
       if (item && typeof item === 'object' && 'question' in item && 'answer' in item) {
-        faqs.push({
-          question: String((item as Record<string, unknown>).question),
-          answer: String((item as Record<string, unknown>).answer),
-        });
+        pushFAQIfComplete(
+          faqs,
+          (item as Record<string, unknown>).question,
+          (item as Record<string, unknown>).answer
+        );
       }
     }
     return faqs;
@@ -150,9 +173,7 @@ function extractFAQs(msgs: Record<string, unknown>): FAQItem[] {
   for (let i = 1; i <= 20; i++) {
     const question = msgs[`faq_q${i}`];
     const answer = msgs[`faq_a${i}`];
-    if (typeof question === 'string' && typeof answer === 'string') {
-      faqs.push({ question, answer });
-    }
+    pushFAQIfComplete(faqs, question, answer);
   }
 
   return faqs;
@@ -169,23 +190,31 @@ const supportContentTrust = assessSupportContentTrust({
   usageExamples: rawUsageExamples,
   faqs: rawFaqs,
 });
+const shouldUseSupportContentFallback =
+  supportContentTrust.blockSupportContent ||
+  !hasSupportText(rawDetailedDescription) ||
+  !hasSupportList(rawUsageSteps) ||
+  !hasSupportList(rawUsageExamples) ||
+  rawFaqs.length === 0;
 const supportContentFallback =
-  supportContentTrust.blockSupportContent
+  shouldUseSupportContentFallback
     ? buildSafeFallbackSupportContent(tool.slug, toolName, locale)
     : null;
-const detailedDescription = supportContentTrust.blockSupportContent
+const detailedDescription = supportContentTrust.blockSupportContent || !hasSupportText(rawDetailedDescription)
   ? supportContentFallback?.detailedDescription ?? ''
   : rawDetailedDescription;
 const safeDetailedDescription = detailedDescription
   ? sanitizeHtml(detailedDescription.replace(/\n/g, '<br />'))
   : '';
-const usageSteps = supportContentTrust.blockSupportContent
+const usageSteps = supportContentTrust.blockSupportContent || !hasSupportList(rawUsageSteps)
   ? supportContentFallback?.usageSteps
   : rawUsageSteps;
-const usageExamples = supportContentTrust.blockSupportContent
+const usageExamples = supportContentTrust.blockSupportContent || !hasSupportList(rawUsageExamples)
   ? supportContentFallback?.usageExamples
   : rawUsageExamples;
-const faqs = supportContentTrust.blockSupportContent ? [] : rawFaqs;
+const faqs = supportContentTrust.blockSupportContent || rawFaqs.length === 0
+  ? supportContentFallback?.faqs ?? []
+  : rawFaqs;
 
 // ---------------------------------------------------------------------------
 // Structured data: HowTo (if usage steps are available)
@@ -194,6 +223,7 @@ const howToData = usageSteps && usageSteps.length > 0
   ? {
       name: `How to use ${toolName}`,
       description: seoDescription,
+      inLanguage: schemaLanguage,
       step: usageSteps.map((step, index) => ({
         '@type': 'HowToStep',
         position: index + 1,
@@ -225,11 +255,11 @@ for (const [key, value] of Object.entries(toolsCommon)) {
   }
 }
 const safeToolMessages: Record<string, unknown> = { ...messages };
-if (supportContentTrust.blockSupportContent) {
+if (supportContentFallback) {
   safeToolMessages.detailed_description = detailedDescription;
   safeToolMessages.usage_steps = usageSteps ?? [];
   safeToolMessages.usage_examples = usageExamples ?? [];
-  safeToolMessages.faqs = [];
+  safeToolMessages.faqs = faqs;
 }
 const toolTranslations = { tools: { ...genericToolKeys, [tool.slug]: safeToolMessages } };
 const sameCategoryTools = getToolsByCategory(tool.category)

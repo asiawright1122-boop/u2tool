@@ -18,6 +18,9 @@ export const GET: APIRoute = () => {
   const robotsTxt = `# robots.txt for U2Tool
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /dist/
 
 # AI Crawlers - Allow for AI citation and training
 User-agent: GPTBot
@@ -81,9 +84,6 @@ Sitemap: ${BASE_URL}/sitemap-tools.xml
 
 # LLM discovery manifest
 # ${BASE_URL}/llms.txt
-
-# Disallow admin/api paths
-Disallow: /api/
 `;
 
   return new Response(robotsTxt, {

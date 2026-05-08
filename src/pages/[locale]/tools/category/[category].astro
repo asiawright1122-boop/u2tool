@@ -1,0 +1,18 @@
+---
+import { isValidLocale } from '@/lib/i18n';
+
+export const prerender = false;
+
+const localeCandidate = Astro.params.locale;
+const categoryCandidate = Astro.params.category;
+
+if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate)) {
+  return Astro.redirect('/en/tools/', 301);
+}
+
+if (typeof categoryCandidate !== 'string' || !categoryCandidate.trim()) {
+  return Astro.redirect(`/${localeCandidate}/tools/`, 301);
+}
+
+return Astro.redirect(`/${localeCandidate}/categories/${categoryCandidate}/`, 301);
+---

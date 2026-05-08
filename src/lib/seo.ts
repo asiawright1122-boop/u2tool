@@ -22,6 +22,7 @@ export interface WebsiteSchema {
   name: string;
   url: string;
   description: string;
+  inLanguage: string;
   potentialAction: {
     '@type': 'SearchAction';
     target: {
@@ -174,6 +175,7 @@ export function buildWebsiteSchema(
     name: 'U2Tool',
     url: baseUrl,
     description,
+    inLanguage: getHreflang(locale),
     potentialAction: {
       '@type': 'SearchAction',
       target: {

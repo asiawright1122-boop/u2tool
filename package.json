@@ -55,7 +55,7 @@
     "build:analyze": "npx tsx scripts/build-optimization/analyze-build.ts",
     "perf:benchmark": "npx tsx scripts/performance/benchmark.ts run",
     "perf:compare": "npx tsx scripts/performance/benchmark.ts compare",
-    "deps:audit": "npx tsx scripts/dependency-audit/audit-dependencies.ts",
+    "deps:audit": "npm audit --omit=dev",
     "hooks:install": "npx tsx scripts/git-hooks/install-hooks.ts",
     "health:check:strict": "npm run verify:production",
     "submit:indexnow": "node scripts/submit-indexnow.js",

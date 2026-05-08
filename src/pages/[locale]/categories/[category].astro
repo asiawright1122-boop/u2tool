@@ -21,7 +21,7 @@ import { locales, getLocalizedPath } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadBaseMessages } from '@/lib/translations';
 import { getCategoryPageSeo } from '@/lib/seo';
-import { buildLocalizedPagePath, buildLocalizedPageUrl } from '@/lib/seo';
+import { buildLocalizedPagePath, buildLocalizedPageUrl, getHreflang } from '@/lib/seo';
 import { getCategorySupportContent } from '@/lib/category-support';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
@@ -70,6 +70,7 @@ function getToolDescription(slug: string): string {
 }
 
 const BASE_URL = getPublicSiteUrl();
+const schemaLanguage = getHreflang(locale);
 const categorySeo = getCategoryPageSeo(baseMessages, category, categoryName, categoryTools.length);
 const pageTitle = categorySeo.title;
 const pageDescription = categorySeo.description;
@@ -97,6 +98,7 @@ const collectionData = {
   name: categoryName,
   description: pageDescription,
   url: buildLocalizedPageUrl(BASE_URL, locale, `/categories/${category}`),
+  inLanguage: schemaLanguage,
   numberOfItems: categoryTools.length,
   hasPart: categoryTools.slice(0, 10).map(tool => ({
     '@type': 'SoftwareApplication',

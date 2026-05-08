@@ -4,6 +4,7 @@ import process from 'node:process';
 
 const SUPPORTED_LOCALES = new Set(['en', 'zh', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar']);
 const CANONICAL_HOST = 'www.u2tool.com';
+const SITE_INFO_PAGES = new Set(['privacy', 'terms', 'contact']);
 
 interface Args {
   inputDir?: string;
@@ -148,6 +149,26 @@ function inferIssueFromFilename(filePath: string): string {
     .trim();
 }
 
+function inferIssueFromMetadata(files: string[]): string | null {
+  for (const filePath of files) {
+    const csv = readCsv(filePath);
+    if (csv.length < 2) {
+      continue;
+    }
+
+    for (const row of csv) {
+      const [key, value] = row;
+      const normalizedKey = normalizeHeader(key || '');
+      const issueNameKeys = new Set(['issuename', 'issue', 'reason', '问题名称']);
+      if (issueNameKeys.has(normalizedKey) && value?.trim()) {
+        return value.trim();
+      }
+    }
+  }
+
+  return null;
+}
+
 function looksLikeUrl(value: string): boolean {
   return /^https?:\/\//i.test(value) || value.startsWith('/');
 }
@@ -172,7 +193,7 @@ function findUrlColumn(headers: string[], rows: string[][]): number {
   return 0;
 }
 
-function readDrilldownRows(filePath: string): DrilldownRow[] {
+function readDrilldownRows(filePath: string, issueOverride?: string): DrilldownRow[] {
   const csv = readCsv(filePath);
   if (csv.length < 2) {
     return [];
@@ -180,7 +201,7 @@ function readDrilldownRows(filePath: string): DrilldownRow[] {
 
   const [headers, ...rows] = csv;
   const urlColumn = findUrlColumn(headers, rows);
-  const issue = inferIssueFromFilename(filePath);
+  const issue = issueOverride || inferIssueFromFilename(filePath);
 
   return rows
     .map((row) => String(row[urlColumn] || '').trim())
@@ -233,8 +254,32 @@ function classifyPage(url: URL): string {
     return 'api';
   }
 
+  if (url.pathname.startsWith('/_next/static/')) {
+    return 'legacy-next-asset';
+  }
+
+  if (localizedSegments[0] === 'dist') {
+    return 'build-output-path';
+  }
+
+  if (localizedSegments[0] === 'models') {
+    return 'legacy-info-page';
+  }
+
+  if (SITE_INFO_PAGES.has(localizedSegments[0] || '')) {
+    return 'site-info-page';
+  }
+
+  if (localizedSegments[0] === 'blog') {
+    return 'legacy-blog';
+  }
+
   if (localizedSegments.length === 1 && localizedSegments[0] === 'tools') {
     return 'tools-index';
+  }
+
+  if (localizedSegments[0] === 'tools' && localizedSegments[1] === 'category') {
+    return 'legacy-category-under-tools';
   }
 
   if (localizedSegments[0] === 'tools' && localizedSegments[1] === 'ranking') {
@@ -247,6 +292,10 @@ function classifyPage(url: URL): string {
 
   if (localizedSegments[0] === 'categories') {
     return 'category-page';
+  }
+
+  if (localizedSegments[0] === 'compare' && localizedSegments.length >= 3) {
+    return 'legacy-compare-pair';
   }
 
   if (localizedSegments[0] === 'compare') {
@@ -272,9 +321,30 @@ function classifySignal(url: URL): string {
   const pathname = url.pathname;
   const segments = getSegments(url);
   const last = segments[segments.length - 1] || '';
+  const localizedSegments = SUPPORTED_LOCALES.has(segments[0] || '') ? segments.slice(1) : segments;
 
   if (pathname.startsWith('/api/')) {
     return 'non-html-endpoint';
+  }
+
+  if (pathname.startsWith('/_next/static/')) {
+    return 'stale-build-asset';
+  }
+
+  if (localizedSegments[0] === 'dist') {
+    return 'build-output-path';
+  }
+
+  if (localizedSegments[0] === 'blog') {
+    return 'legacy-blog';
+  }
+
+  if (localizedSegments[0] === 'compare' && localizedSegments.length >= 3) {
+    return 'legacy-compare-pair';
+  }
+
+  if (SITE_INFO_PAGES.has(localizedSegments[0] || '') || localizedSegments[0] === 'models') {
+    return 'legacy-info-page';
   }
 
   if (last.includes('.')) {
@@ -283,6 +353,10 @@ function classifySignal(url: URL): string {
 
   if (url.search) {
     return 'query-parameter';
+  }
+
+  if (localizedSegments[0] === 'tools' && localizedSegments[1] === 'category') {
+    return 'legacy-category-under-tools';
   }
 
   if (url.hash) {
@@ -315,6 +389,30 @@ function recommendAction(classified: Omit<ClassifiedUrl, 'recommendedAction'>): 
 
   if (classified.signalBucket === 'query-parameter') {
     return 'Keep out of sitemap and internal discovery; canonical should point to the clean URL. If this is search/filter traffic, keep it useful but not canonical.';
+  }
+
+  if (classified.signalBucket === 'legacy-category-under-tools') {
+    return 'Redirect legacy /tools/category/* URLs to the matching localized /categories/* page and remove any internal references to the old shape.';
+  }
+
+  if (classified.signalBucket === 'legacy-blog') {
+    return 'Redirect known legacy blog slugs to the closest canonical tool or comparison guide. Keep unknown blog slugs as real 404s.';
+  }
+
+  if (classified.signalBucket === 'legacy-compare-pair') {
+    return 'Redirect known old pairwise comparison URLs to a durable guide or the primary canonical tool. Avoid wildcard redirects for arbitrary pairs.';
+  }
+
+  if (classified.signalBucket === 'legacy-info-page') {
+    return 'Restore stable site information pages or redirect unlocalized legacy paths to the canonical localized page.';
+  }
+
+  if (classified.signalBucket === 'stale-build-asset') {
+    return 'Keep stale framework asset URLs out of indexable surfaces. Do not redirect missing hashed chunks to HTML pages.';
+  }
+
+  if (classified.signalBucket === 'build-output-path') {
+    return 'Keep build-output directories unavailable and blocked from discovery; do not soft-redirect them to indexable pages.';
   }
 
   if (classified.signalBucket === 'missing-trailing-slash' || classified.signalBucket === 'legacy-unlocalized-path') {
@@ -428,9 +526,9 @@ function renderReport(rows: ClassifiedUrl[], files: string[]): string {
     renderSamples(rows),
     '## Next Actions',
     '',
-    '1. Start with `canonical-shape` URLs inside `tool-detail`, because those are likely real content-quality or crawl-trust issues rather than URL-shape cleanup.',
-    '2. For `query-parameter`, `missing-trailing-slash`, `legacy-unlocalized-path`, or host variants, verify redirects/canonicals and remove any internal exposure.',
-    '3. For `api`, assets, or intentional utility files, keep them out of indexable discovery surfaces.',
+    '1. Patch repeated legacy buckets first: `legacy-blog`, `legacy-category-under-tools`, `legacy-compare-pair`, and `legacy-info-page` should have precise redirects or restored canonical pages.',
+    '2. Keep `stale-build-asset`, `build-output-path`, API, and random file-like paths out of indexable discovery surfaces; do not soft-redirect missing assets to HTML pages.',
+    '3. For `query-parameter`, `missing-trailing-slash`, `legacy-unlocalized-path`, or host variants, verify redirects/canonicals and remove any internal references to non-canonical shapes.',
     '4. After patching a repeated pattern, rerun `validate:internal-link-canonicals`, `validate:search-engine-compliance`, and this report on a fresh GSC export.',
     '',
   ].join('\n');
@@ -438,7 +536,8 @@ function renderReport(rows: ClassifiedUrl[], files: string[]): string {
 
 const args = parseArgs(process.argv.slice(2));
 const files = resolveInputFiles(args);
-const rows = files.flatMap(readDrilldownRows).map(classifyRow);
+const issueOverride = inferIssueFromMetadata(files) || undefined;
+const rows = files.flatMap((file) => readDrilldownRows(file, issueOverride)).map(classifyRow);
 
 if (rows.length === 0) {
   throw new Error('No URL rows found. Export issue drilldown CSVs from GSC Coverage and retry.');

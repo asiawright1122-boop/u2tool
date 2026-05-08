@@ -19,7 +19,7 @@ import {
 import { loadBaseMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
-import { buildLocalizedPagePath } from '@/lib/seo';
+import { buildLocalizedPagePath, getHreflang } from '@/lib/seo';
 
 export const prerender = true;
 
@@ -60,6 +60,7 @@ if (!guide) {
 
 const uiCopy = getComparisonUiCopy(locale);
 const BASE_URL = getPublicSiteUrl();
+const schemaLanguage = getHreflang(locale);
 const breadcrumbItems = [
   { label: navMessages.home || 'Home', href: buildLocalizedPagePath(locale, '/') },
   { label: uiCopy.comparisonSectionTitle, href: buildLocalizedPagePath(locale, '/compare') },
@@ -77,6 +78,7 @@ const collectionData = {
   name: guide.title,
   description: guide.description,
   url: `${BASE_URL}${guide.href}`,
+  inLanguage: schemaLanguage,
   numberOfItems: guide.workflows.reduce((count, workflow) => count + workflow.tools.length, 0),
   hasPart: guide.workflows.flatMap((workflow) =>
     workflow.tools.map((tool) => ({

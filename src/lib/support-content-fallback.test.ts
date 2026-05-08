@@ -16,7 +16,7 @@ function buildTrustReport(
     detailedDescription: fallback.detailedDescription,
     usageSteps: fallback.usageSteps,
     usageExamples: fallback.usageExamples,
-    faqs: [],
+    faqs: fallback.faqs,
   });
 }
 
@@ -27,6 +27,7 @@ describe('buildSafeFallbackSupportContent', () => {
 
     expect(fallback.detailedDescription).toContain('Image Converter');
     expect(fallback.usageSteps.length).toBeGreaterThan(0);
+    expect(fallback.faqs.length).toBeGreaterThan(0);
     expect(report.blockSupportContent).toBe(false);
   });
 
@@ -40,6 +41,7 @@ describe('buildSafeFallbackSupportContent', () => {
 
     expect(fallback.detailedDescription).toContain('Parallel Chart Generator');
     expect(fallback.detailedDescription).toContain('ブラウザ');
+    expect(fallback.faqs[0]?.question).toContain('Parallel Chart Generator');
     expect(report.blockSupportContent).toBe(false);
   });
 
@@ -49,7 +51,15 @@ describe('buildSafeFallbackSupportContent', () => {
 
     expect(fallback.detailedDescription).toContain('Favicon Generator');
     expect(fallback.detailedDescription).toContain('浏览器');
+    expect(fallback.faqs[0]?.answer).toContain('浏览器');
     expect(report.blockSupportContent).toBe(false);
+  });
+
+  it('does not misclassify string tools as chart pages', () => {
+    const fallback = buildSafeFallbackSupportContent('string-escape', 'String Escape', 'en');
+
+    expect(fallback.detailedDescription).toContain('quick browser-based workflows');
+    expect(fallback.faqs[0]?.question).toBe('When should I use String Escape?');
   });
 });
 

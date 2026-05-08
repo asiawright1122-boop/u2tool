@@ -1,0 +1,11 @@
+---
+export const prerender = false;
+
+const categoryCandidate = Astro.params.category;
+
+if (typeof categoryCandidate !== 'string' || !categoryCandidate.trim()) {
+  return Astro.redirect('/en/tools/', 301);
+}
+
+return Astro.redirect(`/en/categories/${categoryCandidate}/`, 301);
+---
