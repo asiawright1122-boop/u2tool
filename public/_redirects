@@ -116,6 +116,11 @@
 # Deprecated ranking pages no longer exist as standalone routes.
 /tools/ranking/* /en/tools/ 301
 
+# One-segment legacy tool URLs retain direct canonical redirects without
+# reintroducing the broad /tools/* splat that conflicts with category/ranking.
+/tools/:tool /en/tools/:tool/ 301
+/tools/:tool/ /en/tools/:tool/ 301
+
 # Localized legacy blog URLs.
 /:locale/blog/base64-encoding-explained /:locale/tools/base64/ 301
 /:locale/blog/hash-algorithms-explained /:locale/tools/hash-generator/ 301
@@ -147,7 +152,6 @@
 /:locale/compare/json-to-csharp/color-converter/ /:locale/tools/json-to-csharp/ 301
 
 # Legacy splat routes.
-/tools/* /en/tools/:splat/ 301
 /categories/* /en/categories/:splat/ 301
 /compare/* /en/compare/:splat/ 301
 
