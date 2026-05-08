@@ -15,9 +15,7 @@
     return typeof value === 'string' ? value : `MISSING: tools.${key}`;
   }
 
-  // Imports
-  import { marked } from 'marked';
-  import { sanitizeMarkdownHtml } from '@/lib/sanitize';
+  import { renderMarkdownHtml } from '@/lib/markdown-html';
 
   let markdown = $state(`# Welcome to Markdown Editor
 
@@ -49,12 +47,7 @@ function hello() {
   let viewMode = $state('split');
 
   function getHtml() {
-    try {
-      const rawHtml = marked.parse(markdown, { breaks: true, gfm: true }) as string;
-      return sanitizeMarkdownHtml(rawHtml);
-    } catch {
-      return '<p>Error parsing markdown</p>';
-    }
+    return renderMarkdownHtml(markdown);
   }
 
   // Functions

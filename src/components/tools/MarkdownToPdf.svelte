@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { renderMarkdownHtml } from '@/lib/markdown-html';
 
   interface Props {
     locale: string;
@@ -64,51 +65,7 @@ function hello() {
     if (timerRef) clearTimeout(timerRef);
   });
 
-  import { sanitizeMarkdownHtml } from '@/lib/sanitize';
-
   // Functions
-  function parseMarkdown(md: string): string {
-    let html = md
-      .replace(/^### (.*$)/gim, '<h3>$1</h3>')
-      .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-      .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-      .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
-      .replace(/\*(.*?)\*/gim, '<em>$1</em>')
-      .replace(/`{3}(\w+)?\n([\s\S]*?)`{3}/gim, '<pre><code class="language-$1">$2</code></pre>')
-      .replace(/`(.*?)`/gim, '<code>$1</code>')
-      .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
-      .replace(/^- (.*$)/gim, '<li>$1</li>')
-      .replace(/^\d+\. (.*$)/gim, '<li>$1</li>')
-      .replace(/^---$/gim, '<hr>')
-      .replace(/\n/gim, '<br>');
-
-    html = html.replace(/(<li>.*<\/li>)/gim, '<ul>$1</ul>');
-    html = html.replace(/<\/ul><br><ul>/gim, '');
-
-    const tableRegex = /\|(.+)\|[\r\n]+\|[-:| ]+\|[\r\n]+((?:\|.+\|[\r\n]*)+)/g;
-    html = html.replace(tableRegex, (match, header, body) => {
-      const headers = header.split('|').filter((h: string) => h.trim());
-      const rows = body.trim().split(/[\r\n]+/).map((row: string) => 
-        row.split('|').filter((c: string) => c.trim())
-      );
-      
-      let table = '<table><thead><tr>';
-      headers.forEach((h: string) => { table += `<th>${h.trim()}</th>`; });
-      table += '</tr></thead><tbody>';
-      rows.forEach((row: string[]) => {
-        table += '<tr>';
-        row.forEach((cell: string) => { table += `<td>${cell.trim()}</td>`; });
-        table += '</tr>';
-      });
-      table += '</tbody></table>';
-      return table;
-    });
-
-    return html;
-  }
-  function renderMarkdownHtml(md: string): string {
-    return sanitizeMarkdownHtml(parseMarkdown(md));
-  }
   const allowedPageSizes = new Set(['a4', 'letter', 'legal']);
   const allowedFontSizes = new Set([10, 11, 12, 14, 16]);
 
