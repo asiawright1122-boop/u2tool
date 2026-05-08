@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { normalizeWebSocketUrl } from '@/lib/url-safety';
 
   interface Props {
     locale: string;
@@ -56,11 +57,18 @@
   function connect() {
     if (!url.trim()) return;
 
+    const normalizedUrl = normalizeWebSocketUrl(url);
+    if (!normalizedUrl.ok) {
+      addMessage('system', normalizedUrl.error);
+      return;
+    }
+    url = normalizedUrl.url;
+
     isConnecting = true;
-    addMessage('system', t('connecting', { url }));
+    addMessage('system', t('connecting', { url: normalizedUrl.url }));
 
     try {
-      const ws = new WebSocket(url);
+      const ws = new WebSocket(normalizedUrl.url);
 
       ws.onopen = () => {
         isConnected = true;

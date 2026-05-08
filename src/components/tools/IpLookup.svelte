@@ -41,22 +41,22 @@
     error = '';
     try {
       const url = targetIp 
-        ? `http://ip-api.com/json/${targetIp}`
-        : 'http://ip-api.com/json/';
+        ? `https://ipwho.is/${encodeURIComponent(targetIp)}`
+        : 'https://ipwho.is/';
       
       const response = await fetch(url);
       const data = await response.json();
       
-      if (data.status === 'success') {
+      if (data.success !== false) {
         info = {
-          ip: data.query,
+          ip: data.ip,
           country: data.country,
-          region: data.regionName,
+          region: data.region,
           city: data.city,
-          isp: data.isp,
-          timezone: data.timezone,
-          lat: data.lat,
-          lon: data.lon,
+          isp: data.connection?.isp,
+          timezone: data.timezone?.id,
+          lat: data.latitude,
+          lon: data.longitude,
         };
       } else {
         error = data.message || t('error');

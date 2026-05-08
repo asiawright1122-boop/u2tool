@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { normalizeHttpUrl } from '@/lib/url-safety';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -36,14 +38,27 @@
 
   // Functions
   async function testCors() {
-    if (!url.trim()) return;
+    const normalizedUrl = normalizeHttpUrl(url);
+    if (!normalizedUrl.ok) {
+      results = [
+        {
+          success: false,
+          headers: {},
+          error: normalizedUrl.error,
+          method,
+          url,
+        },
+      ];
+      return;
+    }
+    url = normalizedUrl.url;
 
     loading = true;
     const newResults: CorsResult[] = [];
 
     // Test preflight (OPTIONS)
     try {
-      const preflightResponse = await fetch(url, {
+      const preflightResponse = await fetch(normalizedUrl.url, {
         method: 'OPTIONS',
         headers: {
           'Origin': origin,
@@ -63,7 +78,7 @@
         success: preflightResponse.ok,
         headers: preflightHeaders,
         method: 'OPTIONS (Preflight)',
-        url,
+        url: normalizedUrl.url,
       });
     } catch (e) {
       newResults.push({
@@ -71,13 +86,13 @@
         headers: {},
         error: (e as Error).message,
         method: 'OPTIONS (Preflight)',
-        url,
+        url: normalizedUrl.url,
       });
     }
 
     // Test actual request
     try {
-      const response = await fetch(url, {
+      const response = await fetch(normalizedUrl.url, {
         method,
         headers: {
           'Origin': origin,
@@ -96,7 +111,7 @@
         success: true,
         headers: corsHeaders,
         method,
-        url,
+        url: normalizedUrl.url,
       });
     } catch (e) {
       newResults.push({
@@ -104,7 +119,7 @@
         headers: {},
         error: (e as Error).message,
         method,
-        url,
+        url: normalizedUrl.url,
       });
     }
 

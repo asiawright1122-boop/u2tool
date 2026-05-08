@@ -50,7 +50,7 @@
       // 主 API: ipapi.co (支持 HTTPS，每天 1000 次)
       {
         url: targetIp 
-          ? `https://ipapi.co/${targetIp}/json/`
+          ? `https://ipapi.co/${encodeURIComponent(targetIp)}/json/`
           : `https://ipapi.co/json/`,
         parse: (data: any) => {
           if (data.error) throw new Error(data.reason || 'Invalid IP');
@@ -74,7 +74,7 @@
       // 备用 API: ipwho.is (支持 HTTPS，无限制)
       {
         url: targetIp 
-          ? `https://ipwho.is/${targetIp}`
+          ? `https://ipwho.is/${encodeURIComponent(targetIp)}`
           : `https://ipwho.is/`,
         parse: (data: any) => {
           if (!data.success) throw new Error(data.message || 'Invalid IP');

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { normalizeHttpUrl } from '@/lib/url-safety';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -60,10 +62,12 @@
     headers = headers.filter((_, i) => i !== index);
   }
   async function sendRequest() {
-    if (!url) {
-      error = 'Please enter a URL';
+    const normalizedUrl = normalizeHttpUrl(url);
+    if (!normalizedUrl.ok) {
+      error = normalizedUrl.error;
       return;
     }
+    url = normalizedUrl.url;
 
     loading = true;
     error = '';
@@ -86,7 +90,7 @@
         options.body = body;
       }
 
-      const res = await fetch(url, options);
+      const res = await fetch(normalizedUrl.url, options);
       const endTime = Date.now();
 
       const responseHeaders: Record<string, string> = {};

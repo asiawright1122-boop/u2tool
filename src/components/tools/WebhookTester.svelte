@@ -1,5 +1,6 @@
 <script lang="ts">
   import { SAMPLE_PAYLOADS } from '@/lib/tool-stubs';
+  import { normalizeHttpUrl } from '@/lib/url-safety';
 
   interface Props {
     locale: string;
@@ -81,7 +82,25 @@
   }
 
   async function sendRequest() {
-    if (!url.trim()) return;
+    const normalizedUrl = normalizeHttpUrl(url);
+    if (!normalizedUrl.ok) {
+      const requestId = Date.now().toString();
+      requests = [
+        {
+          id: requestId,
+          timestamp: new Date(),
+          method,
+          url,
+          headers: parseHeaders(headers),
+          body: method !== 'GET' ? body : '',
+          status: 'error',
+          error: normalizedUrl.error,
+        },
+        ...requests,
+      ];
+      return;
+    }
+    url = normalizedUrl.url;
 
     const requestId = Date.now().toString();
     const parsedHeaders = parseHeaders(headers);
@@ -90,7 +109,7 @@
       id: requestId,
       timestamp: new Date(),
       method,
-      url,
+      url: normalizedUrl.url,
       headers: parsedHeaders,
       body: method !== 'GET' ? body : '',
       status: 'pending',
@@ -102,7 +121,7 @@
     const startTime = performance.now();
 
     try {
-      const response = await fetch(url, {
+      const response = await fetch(normalizedUrl.url, {
         method,
         headers: parsedHeaders,
         body: method !== 'GET' ? body : undefined,

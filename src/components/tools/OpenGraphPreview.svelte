@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
   import { escapeHtmlAttribute } from '@/lib/sanitize';
+  import { normalizeHttpUrl, resolveHttpUrl } from '@/lib/url-safety';
 
   interface Props {
     locale: string;
@@ -65,13 +66,20 @@
   // Functions
   async function fetchOgTags() {
     if (!fetchUrl.trim()) return;
+
+    const normalizedFetchUrl = normalizeHttpUrl(fetchUrl);
+    if (!normalizedFetchUrl.ok) {
+      fetchError = normalizedFetchUrl.error;
+      return;
+    }
+    fetchUrl = normalizedFetchUrl.url;
     
     loading = true;
     fetchError = '';
     
     try {
       // 使用 allorigins 代理来绕过 CORS
-      const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(fetchUrl)}`;
+      const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(normalizedFetchUrl.url)}`;
       const response = await fetch(proxyUrl);
       
       if (!response.ok) {
@@ -91,24 +99,17 @@
         || doc.querySelector('meta[name="description"]')?.getAttribute('content') || '';
       const ogImage = doc.querySelector('meta[property="og:image"]')?.getAttribute('content') || '';
       const ogSiteName = doc.querySelector('meta[property="og:site_name"]')?.getAttribute('content') || '';
-      const ogUrl = doc.querySelector('meta[property="og:url"]')?.getAttribute('content') || fetchUrl;
+      const ogUrl = doc.querySelector('meta[property="og:url"]')?.getAttribute('content') || normalizedFetchUrl.url;
       
       // 处理相对路径的图片 URL
-      let finalImage = ogImage;
-      if (ogImage && !ogImage.startsWith('http')) {
-        try {
-          const baseUrl = new URL(fetchUrl);
-          finalImage = new URL(ogImage, baseUrl.origin).href;
-        } catch {
-          finalImage = ogImage;
-        }
-      }
+      const finalImage = ogImage ? resolveHttpUrl(ogImage, normalizedFetchUrl.url) : '';
+      const finalUrl = resolveHttpUrl(ogUrl, normalizedFetchUrl.url) || normalizedFetchUrl.url;
       
       title = ogTitle;
       description = ogDescription;
       image = finalImage;
       siteName = ogSiteName;
-      url = ogUrl;
+      url = finalUrl;
       imageError = false;
       
     } catch (err) {

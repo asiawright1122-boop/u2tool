@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
   import { escapeHtmlAttribute } from '@/lib/sanitize';
+  import { normalizeHttpUrl } from '@/lib/url-safety';
 
   interface Props {
     locale: string;
@@ -60,13 +61,15 @@
       let content = input;
 
       if (inputType === 'url') {
-        if (!input.trim()) {
-          error = 'Please enter a URL';
+        const normalizedUrl = normalizeHttpUrl(input);
+        if (!normalizedUrl.ok) {
+          error = normalizedUrl.error;
           return;
         }
+        input = normalizedUrl.url;
 
         try {
-          const response = await fetch(input);
+          const response = await fetch(normalizedUrl.url);
           if (!response.ok) {
             throw new Error(`HTTP ${response.status}`);
           }
