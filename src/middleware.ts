@@ -10,6 +10,15 @@ import {
 
 const HTML_EDGE_CACHE_CONTROL = 'public, max-age=300, s-maxage=86400, stale-while-revalidate=604800';
 const HTML_EDGE_CACHE_VERSION = '2026-05-06-seo-cfcontext-refresh-v2';
+const SECURITY_HEADERS: Record<string, string> = {
+  'content-security-policy': "frame-ancestors 'none'",
+  'permissions-policy': 'camera=(), microphone=(), geolocation=()',
+  'referrer-policy': 'strict-origin-when-cross-origin',
+  'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+  'x-content-type-options': 'nosniff',
+  'x-frame-options': 'DENY',
+  'x-xss-protection': '1; mode=block',
+};
 const CACHEABLE_HTML_PATH = /^\/(?:$|(?:en|zh|ja|ko|es|pt|fr|de|ru|ar)(?:\/|$))/;
 const LOCALIZED_CANONICAL_SECTIONS = new Set([
   'ai',
@@ -76,10 +85,18 @@ function isFileLikePath(pathname: string): boolean {
 }
 
 function redirect(location: string, status = 301): Response {
-  return new Response(null, {
+  return withSecurityHeaders(new Response(null, {
     status,
     headers: { location },
-  });
+  }));
+}
+
+function withSecurityHeaders(response: Response): Response {
+  for (const [header, value] of Object.entries(SECURITY_HEADERS)) {
+    response.headers.set(header, value);
+  }
+
+  return response;
 }
 
 function withSlashAndSearch(pathname: string, search: string): string {
@@ -230,7 +247,7 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
         ? toHeadResponse(cachedResponse)
         : toCachedGetResponse(cachedResponse);
       response.headers.set('x-u2tool-html-cache', 'HIT');
-      return response;
+      return withSecurityHeaders(response);
     }
   }
 
@@ -254,5 +271,5 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     }
   }
 
-  return context.request.method === 'HEAD' ? toHeadResponse(response) : response;
+  return withSecurityHeaders(context.request.method === 'HEAD' ? toHeadResponse(response) : response);
 };

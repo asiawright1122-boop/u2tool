@@ -64,6 +64,21 @@ afterEach(() => {
 });
 
 describe('html edge cache middleware', () => {
+  it('applies security headers to canonical redirects before route handling', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+    const { response } = await runMiddleware(
+      new Request('https://www.u2tool.com/en/tools/json-formatter'),
+      next
+    );
+
+    expect(response.status).toBe(301);
+    expect(response.headers.get('location')).toBe('/en/tools/json-formatter/');
+    expect(response.headers.get('content-security-policy')).toBe("frame-ancestors 'none'");
+    expect(response.headers.get('x-frame-options')).toBe('DENY');
+    expect(response.headers.get('x-content-type-options')).toBe('nosniff');
+    expect(next).not.toHaveBeenCalled();
+  });
+
   it('redirects no-slash localized HTML routes before route handling', async () => {
     const next = vi.fn(async () => new Response('should not run'));
     const { response } = await runMiddleware(
@@ -154,6 +169,7 @@ describe('html edge cache middleware', () => {
 
     const second = await runMiddleware(new Request(url));
     expect(second.response.headers.get('x-u2tool-html-cache')).toBe('HIT');
+    expect(second.response.headers.get('content-security-policy')).toBe("frame-ancestors 'none'");
     expect(second.text).toBe('<html>ok</html>');
     expect(second.next).not.toHaveBeenCalled();
   });
@@ -205,5 +221,20 @@ describe('html edge cache middleware', () => {
     expect(response.headers.get('x-u2tool-html-cache')).toBe('MISS');
     expect(cache.put).toHaveBeenCalledTimes(1);
     expect(waitUntil).toHaveBeenCalledTimes(1);
+  });
+
+  it('applies security headers to non-html responses without enabling html cache', async () => {
+    const next = vi.fn(async () => new Response('{"ok":true}', {
+      headers: { 'content-type': 'application/json' },
+    }));
+
+    const { response } = await runMiddleware(
+      new Request('https://www.u2tool.com/api/ai-discovery/search?q=json'),
+      next
+    );
+
+    expect(response.headers.get('content-security-policy')).toBe("frame-ancestors 'none'");
+    expect(response.headers.get('referrer-policy')).toBe('strict-origin-when-cross-origin');
+    expect(response.headers.get('x-u2tool-html-cache')).toBeNull();
   });
 });
