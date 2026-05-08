@@ -107,10 +107,14 @@
 /:locale/contact /:locale/contact/ 301
 
 # Legacy category URLs that were historically exposed under /tools/category/.
+/tools/category/* /en/categories/:splat/ 301
 /tools/category/:category /en/categories/:category/ 301
 /tools/category/:category/ /en/categories/:category/ 301
 /:locale/tools/category/:category /:locale/categories/:category/ 301
 /:locale/tools/category/:category/ /:locale/categories/:category/ 301
+
+# Deprecated ranking pages no longer exist as standalone routes.
+/tools/ranking/* /en/tools/ 301
 
 # Localized legacy blog URLs.
 /:locale/blog/base64-encoding-explained /:locale/tools/base64/ 301
@@ -147,7 +151,6 @@
 /categories/* /en/categories/:splat/ 301
 /compare/* /en/compare/:splat/ 301
 
-# Deprecated ranking pages no longer exist as standalone routes.
 /:locale/tools/ranking/newest /:locale/tools/ 301
 /:locale/tools/ranking/popular /:locale/tools/ 301
 
