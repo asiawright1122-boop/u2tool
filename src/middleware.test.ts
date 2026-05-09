@@ -166,6 +166,7 @@ describe('html edge cache middleware', () => {
     expect(first.response.headers.get('x-u2tool-html-cache')).toBe('MISS');
     expect(first.response.headers.get('cache-control')).toContain('s-maxage=86400');
     expect(cache.put).toHaveBeenCalledTimes(1);
+    expect(cache.put.mock.calls[0][0].url).toContain('__u2tool_html_cache=dev');
 
     const second = await runMiddleware(new Request(url));
     expect(second.response.headers.get('x-u2tool-html-cache')).toBe('HIT');

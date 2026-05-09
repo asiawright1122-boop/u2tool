@@ -9,7 +9,9 @@ import {
 } from './lib/legacy-redirects';
 
 const HTML_EDGE_CACHE_CONTROL = 'public, max-age=300, s-maxage=86400, stale-while-revalidate=604800';
-const HTML_EDGE_CACHE_VERSION = '2026-05-09-external-url-hardening-v1';
+const HTML_EDGE_CACHE_VERSION = typeof __U2TOOL_HTML_CACHE_VERSION__ === 'string'
+  ? __U2TOOL_HTML_CACHE_VERSION__
+  : 'dev';
 const SECURITY_HEADERS: Record<string, string> = {
   'content-security-policy': "frame-ancestors 'none'",
   'permissions-policy': 'camera=(), microphone=(), geolocation=()',
