@@ -22,6 +22,8 @@
     return typeof value === 'string' ? value : `MISSING: tools.${key}`;
   }
 
+  const fonts = ['Arial', 'Georgia', 'Times New Roman', 'Courier New', 'Verdana', 'Trebuchet MS', 'Impact'];
+
   let text = $state('Hello World');
 
   let fontSize = $state(48);

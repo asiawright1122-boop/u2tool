@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
-  import { characterCategories } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -18,15 +17,29 @@
     return typeof value === 'string' ? value : `MISSING: tools.character-map.${key}`;
   }
 
-  let selectedCategory = $state('arrows');
+  const characterCategories = {
+    arrows: ['←', '↑', '→', '↓', '↔', '↕', '↖', '↗', '↘', '↙', '⇐', '⇒', '⇑', '⇓'],
+    math: ['±', '×', '÷', '≈', '≠', '≤', '≥', '∞', '√', '∑', '∏', '∫', 'π', '∆'],
+    currency: ['$', '€', '£', '¥', '₹', '₩', '₿', '¢', '₫', '₱', '₦', '₴'],
+    punctuation: ['¿', '¡', '§', '¶', '†', '‡', '•', '…', '‰', '′', '″', '‹', '›'],
+    shapes: ['■', '□', '▲', '△', '▼', '▽', '◆', '◇', '●', '○', '★', '☆', '☐', '☑'],
+    emoji: ['😀', '😁', '😂', '🙂', '😍', '😎', '🤔', '👍', '🔥', '✨', '✅', '⚠'],
+    hands: ['☚', '☛', '☜', '☝', '☞', '☟', '✋', '✌', '🤝', '👏'],
+    hearts: ['♥', '♡', '❤', '❣', '💕', '💙', '💚', '💛', '💜', '🖤'],
+    weather: ['☀', '☁', '☂', '☃', '☄', '☔', '⚡', '❄', '🌈', '🌙'],
+    music: ['♩', '♪', '♫', '♬', '♭', '♮', '♯', '𝄞'],
+    tech: ['⌘', '⌥', '⇧', '⎋', '⌫', '⏎', '␣', '⌦', '⏻', '⏱'],
+  };
 
-  let copied = $state(null);
+  let selectedCategory = $state<keyof typeof characterCategories>('arrows');
+
+  let copied = $state<string | null>(null);
 
   let search = $state('');
 
-  let recentlyUsed = $state([]);
+  let recentlyUsed = $state<string[]>([]);
 
-  let timerRef = $state(null);  onDestroy(() => {
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
 
@@ -34,7 +47,8 @@
   function copyChar(char: string) {
     navigator.clipboard.writeText(char);
     copied = char;
-    setTimeout(() => copied = null, 1000);
+    if (timerRef) clearTimeout(timerRef);
+    timerRef = setTimeout(() => copied = null, 1000);
     
     {
     const filtered = recentlyUsed.filter(c => c !== char);
@@ -42,9 +56,9 @@
   };
   }
   const allChars = Object.values(characterCategories).flat();
-  const filteredChars = search
+  let filteredChars = $derived(search
     ? allChars.filter(char => char.includes(search))
-    : characterCategories[selectedCategory];
+    : characterCategories[selectedCategory]);
   const categoryNames: Record<keyof typeof characterCategories, string> = {
     arrows: t('arrows'),
     math: t('math'),

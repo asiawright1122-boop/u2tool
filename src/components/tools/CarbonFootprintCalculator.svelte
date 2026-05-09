@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { emissionFactors } from '@/lib/tool-stubs';
-
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -29,13 +27,24 @@
   diet: { meat: number; average: number; vegetarian: number; vegan: number };
 }
 
+  const emissionFactors: EmissionFactors = {
+    car: { petrol: 0.192, diesel: 0.171, electric: 0.053, hybrid: 0.12 },
+    flight: { short: 0.255, medium: 0.156, long: 0.15 },
+    train: 0.041,
+    bus: 0.105,
+    electricity: 0.4,
+    naturalGas: 2.0,
+    heating: 2.68,
+    diet: { meat: 7.2, average: 5.0, vegetarian: 3.8, vegan: 2.9 },
+  };
+
   let carKm = $state('0');
 
-  let carType = $state('petrol');
+  let carType = $state<keyof EmissionFactors['car']>('petrol');
 
   let flightHours = $state('0');
 
-  let flightType = $state('medium');
+  let flightType = $state<keyof EmissionFactors['flight']>('medium');
 
   let trainKm = $state('0');
 
@@ -47,7 +56,7 @@
 
   let heatingLiters = $state('0');
 
-  let dietType = $state('average');
+  let dietType = $state<keyof EmissionFactors['diet']>('average');
 
   let period = $state('monthly');
 

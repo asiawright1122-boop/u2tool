@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { handwritingStyles, paperStyles } from '@/lib/tool-stubs';
-
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -23,6 +21,31 @@
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
     return typeof value === 'string' ? value : `MISSING: tools.${key}`;
   }
+
+  interface HandwritingStyle {
+    name: string;
+    fontFamily: string;
+    slant: number;
+  }
+
+  interface PaperStyle {
+    name: string;
+    bg: string;
+    lines: boolean;
+    grid: boolean;
+  }
+
+  const handwritingStyles: HandwritingStyle[] = [
+    { name: 'Casual', fontFamily: 'Comic Sans MS, Bradley Hand, cursive', slant: 4 },
+    { name: 'Print', fontFamily: 'Verdana, sans-serif', slant: 1 },
+    { name: 'Script', fontFamily: 'Brush Script MT, cursive', slant: 8 },
+  ];
+
+  const paperStyles: PaperStyle[] = [
+    { name: 'Plain', bg: '#fffdf7', lines: false, grid: false },
+    { name: 'Lined', bg: '#fffdf7', lines: true, grid: false },
+    { name: 'Grid', bg: '#ffffff', lines: false, grid: true },
+  ];
 
   let text = $state('Hello, this is my handwriting!');
 

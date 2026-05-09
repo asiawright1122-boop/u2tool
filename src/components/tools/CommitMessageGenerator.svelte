@@ -22,6 +22,17 @@
     return typeof value === 'string' ? value : `MISSING: tools.${key}`;
   }
 
+  const COMMIT_TYPES = [
+    { value: 'feat', label: 'feat', description: 'A new feature' },
+    { value: 'fix', label: 'fix', description: 'A bug fix' },
+    { value: 'docs', label: 'docs', description: 'Documentation only changes' },
+    { value: 'style', label: 'style', description: 'Formatting or code style changes' },
+    { value: 'refactor', label: 'refactor', description: 'Code changes that neither fix a bug nor add a feature' },
+    { value: 'perf', label: 'perf', description: 'A performance improvement' },
+    { value: 'test', label: 'test', description: 'Adding or updating tests' },
+    { value: 'chore', label: 'chore', description: 'Maintenance tasks' },
+  ];
+
   let type = $state('feat');
 
   let scope = $state('');
@@ -70,8 +81,8 @@
     copied = true;
     setTimeout(() => copied = false, 2000);
   }
-  const subjectLength = subject.length;
-  const isSubjectTooLong = subjectLength > 50;
+  let subjectLength = $derived(subject.length);
+  let isSubjectTooLong = $derived(subjectLength > 50);
 
 </script>
 

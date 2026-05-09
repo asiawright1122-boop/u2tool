@@ -27,15 +27,27 @@
 
   let operation = $state('+');
 
-  let result = $state(null);
+  let result = $state<{ num: number; den: number } | null>(null);
 
   let copied = $state(false);
 
-  let timerRef = $state(null);  onDestroy(() => {
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
 
   // Functions
+  function setNum1(value: string) {
+    num1 = value;
+  }
+  function setDen1(value: string) {
+    den1 = value;
+  }
+  function setNum2(value: string) {
+    num2 = value;
+  }
+  function setDen2(value: string) {
+    den2 = value;
+  }
   function gcd(a: number, b: number): number {
     a = Math.abs(a);
     b = Math.abs(b);
@@ -54,7 +66,8 @@
     const n2 = parseInt(num2) || 0;
     const d2 = parseInt(den2) || 1;
 
-    let resNum: number, resDen: number;
+    let resNum = 0;
+    let resDen = 1;
     switch (operation) {
       case '+':
         resNum = n1 * d2 + n2 * d1;
@@ -108,7 +121,7 @@
 
     <div class="space-y-6">
       <div class="flex flex-wrap items-center justify-center gap-4">
-        {@render FractionInput({ num: num1, den: den1, setNum: setNum1, setDen: setDen1, label: t('fraction1') })}
+        {@render FractionInput(num1, den1, setNum1, setDen1, t('fraction1'))}
         
         <div class="flex gap-2">
           {#each (['+', '-', '×', '÷'] as const) as op (op)}
@@ -125,7 +138,7 @@
 {/each}
         </div>
 
-        {@render FractionInput({ num: num2, den: den2, setNum: setNum2, setDen: setDen2, label: t('fraction2') })}
+        {@render FractionInput(num2, den2, setNum2, setDen2, t('fraction2'))}
       </div>
 
       <div class="flex justify-center">

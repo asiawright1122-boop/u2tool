@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { COMMON_SPEEDS } from '@/lib/tool-stubs';
-
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -24,13 +22,26 @@
     return typeof value === 'string' ? value : `MISSING: tools.${key}`;
   }
 
+  const FILE_SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB'] as const;
+  const SPEED_UNITS = ['Kbps', 'Mbps', 'Gbps'] as const;
+  type FileSizeUnit = typeof FILE_SIZE_UNITS[number];
+  type SpeedUnit = typeof SPEED_UNITS[number];
+
+  const COMMON_SPEEDS: { name: string; speed: number; unit: SpeedUnit }[] = [
+    { name: 'DSL', speed: 25, unit: 'Mbps' },
+    { name: 'Cable', speed: 100, unit: 'Mbps' },
+    { name: 'Fiber', speed: 1, unit: 'Gbps' },
+    { name: 'Fast Ethernet', speed: 100, unit: 'Mbps' },
+    { name: 'Gigabit LAN', speed: 1, unit: 'Gbps' },
+  ];
+
   let fileSize = $state('1');
 
-  let fileSizeUnit = $state('GB');
+  let fileSizeUnit = $state<FileSizeUnit>('GB');
 
   let speed = $state('100');
 
-  let speedUnit = $state('Mbps');
+  let speedUnit = $state<SpeedUnit>('Mbps');
 
   let copied = $state(false);
 

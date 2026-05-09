@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { PRESETS } from '@/lib/tool-stubs';
-
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -47,6 +45,51 @@
   paths: boolean;
 }
 
+  const PRESETS = [
+    {
+      name: 'Node',
+      target: 'ES2022',
+      module: 'NodeNext',
+      moduleResolution: 'NodeNext',
+      libs: ['ES2022'],
+      jsx: 'none',
+      declaration: true,
+    },
+    {
+      name: 'Browser',
+      target: 'ES2020',
+      module: 'ESNext',
+      moduleResolution: 'bundler',
+      libs: ['ES2020', 'DOM', 'DOM.Iterable'],
+      jsx: 'react-jsx',
+      declaration: false,
+    },
+    {
+      name: 'Library',
+      target: 'ES2020',
+      module: 'ESNext',
+      moduleResolution: 'bundler',
+      libs: ['ES2020', 'DOM'],
+      jsx: 'none',
+      declaration: true,
+    },
+    {
+      name: 'Strict',
+      target: 'ES2022',
+      module: 'ESNext',
+      moduleResolution: 'bundler',
+      libs: ['ES2022', 'DOM', 'DOM.Iterable'],
+      jsx: 'preserve',
+      declaration: false,
+    },
+  ];
+
+  const TARGETS = ['ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', 'ES2021', 'ES2022', 'ES2023', 'ESNext'];
+  const MODULES = ['CommonJS', 'ESNext', 'Node16', 'NodeNext', 'Preserve', 'AMD', 'System', 'UMD'];
+  const MODULE_RESOLUTIONS = ['bundler', 'node', 'node16', 'nodenext', 'classic'];
+  const JSX_OPTIONS = ['none', 'preserve', 'react', 'react-jsx', 'react-jsxdev'];
+  const LIBS = ['ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', 'ES2021', 'ES2022', 'ES2023', 'ESNext', 'DOM', 'DOM.Iterable', 'WebWorker'];
+
   let config = $state({
     target: 'ES2020',
     module: 'ESNext',
@@ -82,7 +125,7 @@
         target: preset.target,
         module: preset.module,
         moduleResolution: preset.moduleResolution,
-        lib: preset.libs,
+        lib: [...preset.libs],
         jsx: preset.jsx || 'none',
         declaration: preset.declaration || false,
       });

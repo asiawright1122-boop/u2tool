@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { LICENSES } from '@/lib/tool-stubs';
-
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -35,6 +33,45 @@
   template: string;
 }
 
+  const LICENSES: LicenseTemplate[] = [
+    {
+      id: 'mit',
+      name: 'MIT License',
+      description: 'A short, permissive license suitable for open source projects.',
+      permissions: ['Commercial use', 'Modification', 'Distribution', 'Private use'],
+      conditions: ['Include copyright notice', 'Include license text'],
+      limitations: ['No liability', 'No warranty'],
+      template: 'MIT License\n\nCopyright (c) {{year}} {{author}}\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.',
+    },
+    {
+      id: 'apache-2.0',
+      name: 'Apache License 2.0',
+      description: 'A permissive license with explicit patent grants.',
+      permissions: ['Commercial use', 'Modification', 'Distribution', 'Patent use', 'Private use'],
+      conditions: ['Include copyright notice', 'Include license text', 'State changes'],
+      limitations: ['No trademark use', 'No liability', 'No warranty'],
+      template: 'Apache License\nVersion 2.0, January 2004\n\nCopyright {{year}} {{author}}\n\nLicensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License.',
+    },
+    {
+      id: 'gpl-3.0',
+      name: 'GNU GPLv3',
+      description: 'A strong copyleft license requiring derivative works to use the same license.',
+      permissions: ['Commercial use', 'Modification', 'Distribution', 'Patent use', 'Private use'],
+      conditions: ['Disclose source', 'Use same license', 'Include copyright notice', 'State changes'],
+      limitations: ['No liability', 'No warranty'],
+      template: 'GNU GENERAL PUBLIC LICENSE\nVersion 3, 29 June 2007\n\nCopyright (C) {{year}} {{author}}\n\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License.',
+    },
+    {
+      id: 'bsd-3-clause',
+      name: 'BSD 3-Clause',
+      description: 'A permissive license with a non-endorsement clause.',
+      permissions: ['Commercial use', 'Modification', 'Distribution', 'Private use'],
+      conditions: ['Include copyright notice', 'Include license text'],
+      limitations: ['No liability', 'No warranty', 'No endorsement'],
+      template: 'BSD 3-Clause License\n\nCopyright (c) {{year}}, {{author}}\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the license conditions are met.',
+    },
+  ];
+
   let selectedLicense = $state('mit');
 
   let author = $state('');
@@ -46,7 +83,7 @@
   let copied = $state(false);
 
   // Functions
-  const currentLicense = LICENSES.find(l => l.id === selectedLicense);
+  let currentLicense = $derived(LICENSES.find(l => l.id === selectedLicense));
   function generateLicense() {
     if (!currentLicense) return;
     

@@ -38,6 +38,17 @@
   cmd: string;
 }
 
+  const BASE_IMAGES = [
+    { value: 'node:20-alpine', label: 'Node.js 20 Alpine' },
+    { value: 'node:22-alpine', label: 'Node.js 22 Alpine' },
+    { value: 'python:3.12-slim', label: 'Python 3.12 Slim' },
+    { value: 'python:3.13-slim', label: 'Python 3.13 Slim' },
+    { value: 'golang:1.23-alpine', label: 'Go 1.23 Alpine' },
+    { value: 'nginx:alpine', label: 'Nginx Alpine' },
+    { value: 'ubuntu:24.04', label: 'Ubuntu 24.04' },
+    { value: 'alpine:latest', label: 'Alpine Latest' },
+  ];
+
   let config = $state({
     baseImage: 'node:20-alpine',
     workdir: '/app',
