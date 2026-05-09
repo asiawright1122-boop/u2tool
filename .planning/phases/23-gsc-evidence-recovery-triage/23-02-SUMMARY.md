@@ -49,3 +49,13 @@ Plan 23-02 is complete for the first evidence-led recovery patch. The remaining 
 - Refreshed Spanish Word Counter metadata/support copy for the `contador de palabras` query cluster and removed unsupported claims about controls, tabs, and report downloads that the page does not implement.
 - Added rendered SEO coverage for the stable production `typing-speed-test` and Spanish `word-counter` pages plus source-rendered strict checks for the refreshed content.
 - Added a content-trust rule to block unsupported Spanish Word Counter UI-control claims from returning.
+
+## 2026-05-09 Long-Tail Recovery Queue
+
+- Re-ranked the raw GSC exports again after the committed follow-up patch; `pixel-density-calculator` and `sitemap-generator` were the next untreated English impression-loss pages.
+- Restored `pixel-density-calculator` runtime presets by replacing the empty `COMMON_RESOLUTIONS` stub with a typed `runtime-integrity/display.ts` table covering HD through 8K resolution presets.
+- Refreshed Pixel Density Calculator support copy to describe custom resolution/diagonal inputs, PPI, pixel pitch, dimensions, and common resolution presets without claiming device-model presets.
+- Refreshed Sitemap Generator support copy to describe the current manual URL-list XML generator and explicitly avoid crawler, automatic fetching, ownership validation, and large sitemap-index claims.
+- Hardened Sitemap Generator output by normalizing base URL/path joining and escaping XML values before rendering, copying, or downloading `sitemap.xml`.
+- Added content-trust rules and rendered SEO source-only checks so unsupported Pixel Density device-preset claims and Sitemap crawler claims do not return.
+- Verification passed with `npx vitest run src/lib/tool-stubs-runtime.test.ts src/lib/support-content-fallback.test.ts`, `npm run i18n:check-missing-keys`, `npm run check`, `npm run build`, and local source-rendered `npm run validate:rendered-seo`.

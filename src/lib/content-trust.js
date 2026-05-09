@@ -117,6 +117,18 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['word-counter'],
   },
   {
+    code: 'sitemap-generator-crawl-claim',
+    pattern: /\bscann?ing your website\b|\bscan website\b|\bfetch(?:ing)? all (?:the )?URLs\b|\brecursively fetching\b|\broot directory\b|\bbreaking the sitemap into multiple files\b/i,
+    message: 'Claims crawler or multi-file sitemap behavior that is not present in the current manual XML generator UI.',
+    slugs: ['sitemap-generator'],
+  },
+  {
+    code: 'pixel-density-device-preset-claim',
+    pattern: /\bpopular devices\b|\bdevice presets\b/i,
+    message: 'Claims device presets, but the current Pixel Density Calculator only ships common resolution presets.',
+    slugs: ['pixel-density-calculator'],
+  },
+  {
     code: 'jwt-signature-verification-claim',
     pattern: /\bvalidate(?:s| the)? token'?s signature\b|\bSignature Verification\b/i,
     message: 'Claims JWT signature verification, but the current decoder only decodes and displays token parts.',

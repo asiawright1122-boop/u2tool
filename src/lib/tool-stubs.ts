@@ -29,6 +29,7 @@ import {
   generateRuby as runtimeGenerateRuby,
   parseCurlCommand as runtimeParseCurlCommand,
 } from './runtime-integrity/curl';
+import { commonResolutions as runtimeCommonResolutions } from './runtime-integrity/display';
 import { ibanSpecs as runtimeIbanSpecs } from './runtime-integrity/iban';
 import { formatSql as runtimeFormatSql, minifySql as runtimeMinifySql } from './runtime-integrity/sql';
 import { marked } from 'marked';
@@ -1908,7 +1909,7 @@ export const COMMON_PATTERNS = [
     "pattern": "^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$"
   }
 ];
-export const COMMON_RESOLUTIONS = {};
+export const COMMON_RESOLUTIONS = runtimeCommonResolutions;
 export const COMMON_SPEEDS = {};
 export const CONCEPTION_OFFSET = 266;
 export const CURRENCIES = [

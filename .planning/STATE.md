@@ -5,7 +5,7 @@
 See: .planning/PROJECT.md (updated 2026-04-06)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** Phase 23 GSC evidence recovery triage plans are executed; Coverage shapes are classified, Performance loss is split, and Hex Editor, IBAN, Typing Speed Test, and Spanish Word Counter follow-up recovery have been tightened. The next safe work is the remaining long-tail queue.
+**Current focus:** Phase 23 GSC evidence recovery triage plans are executed; Coverage shapes are classified, Performance loss is split, and Hex Editor, IBAN, Typing Speed Test, Spanish Word Counter, Pixel Density Calculator, and Sitemap Generator follow-up recovery have been tightened. The next safe work is the remaining long-tail queue.
 
 ## Current Position
 
@@ -14,8 +14,8 @@ Current Phase Name: GSC Evidence Recovery Triage
 Total Phases: 4
 Current Plan: 2
 Total Plans in Phase: 2
-Status: Phase 23 plans executed on 2026-05-09 after GSC Coverage and Performance exports were classified, the confirmed Gantt duplicate-brand title defect was patched, and follow-up recovery candidates were tightened for IBAN, Typing Speed Test, and Spanish Word Counter.
-Last Activity: 2026-05-09 - restored IBAN country specs through `src/lib/runtime-integrity/iban.ts`, fixed live input handling for IBAN and Typing Speed Test, refreshed IBAN/typing/Spanish word-count support copy to avoid unsupported claims, added rendered SEO/content-trust guards, and revalidated the production gate.
+Status: Phase 23 plans executed on 2026-05-09 after GSC Coverage and Performance exports were classified, the confirmed Gantt duplicate-brand title defect was patched, and follow-up recovery candidates were tightened for IBAN, Typing Speed Test, Spanish Word Counter, Pixel Density Calculator, and Sitemap Generator.
+Last Activity: 2026-05-09 - restored Pixel Density Calculator resolution presets through `src/lib/runtime-integrity/display.ts`, refreshed Pixel Density/Sitemap support copy to match current UI, hardened Sitemap XML escaping, added rendered SEO/content-trust guards, and validated the local source-rendered pages.
 Progress: 100%
 Progress Bar: [##########] 100%
 
@@ -103,7 +103,7 @@ Recent decisions affecting current work:
 ### Pending Todos
 
 - Isolate a clean commit/tag boundary if a formal `v0.0.6` release snapshot is still required
-- Continue the remaining recovery queue with lower-priority impression-loss pages such as `pixel-density-calculator`, `sitemap-generator`, or any fresh GSC export deltas.
+- Continue the remaining recovery queue with click-loss candidates such as `de/tools/text-to-handwriting/` and `en/tools/ical-parser/`, impression-loss pages such as `es/tools/document-word-counter/` or `en/tools/compound-interest-calculator/`, or any fresh GSC export deltas.
 
 ### Blockers/Concerns
 
@@ -118,7 +118,7 @@ Recent decisions affecting current work:
 ## Session
 
 Last Date: 2026-05-09
-Stopped At: IBAN, Typing Speed Test, and Spanish Word Counter follow-up recovery passed final lightweight ship hygiene; next resume should continue the remaining long-tail recovery queue.
+Stopped At: Pixel Density Calculator and Sitemap Generator follow-up recovery passed focused tests, build, and local source-rendered SEO validation; next resume should continue the remaining long-tail recovery queue.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.

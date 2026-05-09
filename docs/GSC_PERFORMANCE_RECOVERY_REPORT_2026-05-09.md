@@ -123,6 +123,8 @@ The generated report identifies the bucket-level constraint. A raw-export re-ran
 | `gantt chart maker` | 501 impressions | 12 impressions | -489 impressions | Query-level support for the Gantt cluster. |
 | `https://www.u2tool.com/en/tools/iban-validator/` | 2,336 impressions | 0 impressions | -2,336 impressions | Follow-up candidate; no patch made without page-level inspection. |
 | `https://www.u2tool.com/en/tools/typing-speed-test` | 2,235 impressions | 20 impressions | -2,215 impressions | Also appears in Coverage canonical/alternate buckets for several locales. |
+| `https://www.u2tool.com/en/tools/pixel-density-calculator/` | 1,473 impressions | 0 impressions | -1,473 impressions | Follow-up candidate; runtime preset table was empty before recovery. |
+| `https://www.u2tool.com/en/tools/sitemap-generator/` | 1,340 impressions | 0 impressions | -1,340 impressions | Follow-up candidate; support copy overclaimed crawling/fetching behavior. |
 | `contador de palabras` | 635 impressions | 0 impressions | -635 impressions | Spanish word-count intent is a separate locale recovery track. |
 
 ### Patch Applied From This Queue
@@ -134,6 +136,8 @@ The generated report identifies the bucket-level constraint. A raw-export re-ran
 - `validate:rendered-seo` now includes `en/tools/iban-validator/` and guards against stale claims such as “Supports all European countries”, “show bank code”, and “bank information”.
 - Follow-up: `en/tools/typing-speed-test/` now updates typing progress on `input` events instead of waiting for textarea change/blur, and its support copy now matches the actual WPM, accuracy, character-highlighting, and duration UI.
 - Follow-up: `es/tools/word-counter/` now targets the Spanish `contador de palabras` loss with accurate title/description/support copy, localized count labels, and a content-trust guard against unsupported Spanish controls such as “Ignorar mayúsculas”, “Procesar Texto”, tabs, or report download.
+- Follow-up: `en/tools/pixel-density-calculator/` now has restored common resolution presets via `src/lib/runtime-integrity/display.ts`, refreshed support copy, and rendered/content-trust guards against unsupported device-preset claims.
+- Follow-up: `en/tools/sitemap-generator/` now describes the actual manual URL-list XML generator, escapes generated XML values, and has rendered/content-trust guards against stale crawler, automatic fetching, and large sitemap-index claims.
 
 ## Weekly Summary Draft
 

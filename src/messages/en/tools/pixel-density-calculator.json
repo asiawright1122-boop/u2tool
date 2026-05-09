@@ -1,16 +1,15 @@
 {
-  "detailed_description": "Pixel Density Calculator computes the pixels per inch (PPI) and other display metrics from screen resolution and diagonal size. Understand your display quality by calculating pixel pitch, aspect ratio, and total megapixels. Includes presets for common resolutions from HD to 8K and popular devices.",
+  "detailed_description": "Pixel Density Calculator computes display pixels per inch (PPI) from screen width, screen height, and diagonal size directly in the browser. Enter custom resolution values or choose common HD, Full HD, QHD, ultrawide, 4K, 5K, and 8K presets, then review pixel pitch, aspect ratio, physical width and height, total pixels, megapixels, and a simple sharpness rating. It is useful for comparing monitors, checking whether a display is dense enough for design work, or translating resolution and size specs into practical screen metrics. The tool does not identify a device model; it calculates from the numbers you provide.",
   "usage_steps": [
-    "Enter the screen width in pixels",
-    "Enter the screen height in pixels",
-    "Enter the diagonal screen size in inches",
-    "Or select a common resolution preset",
-    "View PPI, pixel pitch, and other metrics",
-    "Copy the results for reference"
+    "Enter the screen width and height in pixels.",
+    "Enter the diagonal screen size in inches.",
+    "Optionally select a common resolution preset such as Full HD, QHD, 4K, 5K, or 8K.",
+    "Review the calculated PPI, pixel pitch, aspect ratio, physical dimensions, total pixels, and megapixels.",
+    "Use the copy action when you need the PPI, pixel pitch, and resolution in notes or specs."
   ],
   "usage_examples": [
-    "Comparing display quality across monitors",
-    "Evaluating smartphone screen sharpness",
-    "Choosing the right display for design work"
+    "Compare a 24-inch Full HD monitor with a 27-inch QHD monitor before buying.",
+    "Check whether a 4K laptop panel has enough pixel density for detailed design review.",
+    "Translate a product spec sheet into PPI and pixel pitch for documentation."
   ]
 }

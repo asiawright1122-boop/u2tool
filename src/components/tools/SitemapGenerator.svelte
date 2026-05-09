@@ -50,14 +50,34 @@
     newUrls[index] = { ...newUrls[index], [field]: value };
     urls = newUrls;
   }
+  function escapeXml(value: string): string {
+    const entities: Record<string, string> = {
+      '<': '&lt;',
+      '>': '&gt;',
+      '&': '&amp;',
+      "'": '&apos;',
+      '"': '&quot;',
+    };
+    return value.replace(/[<>&'"]/g, (char) => entities[char] || char);
+  }
+  function formatLocation(path: string): string {
+    const trimmedPath = path.trim();
+    if (/^https?:\/\//i.test(trimmedPath)) {
+      return trimmedPath;
+    }
+
+    const normalizedBase = baseUrl.trim().replace(/\/+$/, '');
+    const normalizedPath = trimmedPath.startsWith('/') ? trimmedPath : `/${trimmedPath}`;
+    return `${normalizedBase}${normalizedPath}`;
+  }
   function generate() {
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(url => `  <url>
-    <loc>${baseUrl}${url.loc}</loc>
-    <lastmod>${url.lastmod}</lastmod>
-    <changefreq>${url.changefreq}</changefreq>
-    <priority>${url.priority}</priority>
+    <loc>${escapeXml(formatLocation(url.loc))}</loc>
+    <lastmod>${escapeXml(url.lastmod)}</lastmod>
+    <changefreq>${escapeXml(url.changefreq)}</changefreq>
+    <priority>${escapeXml(url.priority)}</priority>
   </url>`).join('\n')}
 </urlset>`;
     output = xml;
@@ -97,12 +117,12 @@ ${urls.map(url => `  <url>
         <div class="space-y-2 max-h-64 overflow-y-auto">
           {#each urls as url, index (index)}
 <div  class="grid grid-cols-12 gap-2 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg p-2">
-              <input type="text" value={url.loc} oninput={(e) => { urls[index] = { ...urls[index], loc: (e.currentTarget as HTMLInputElement).value }; urls = [...urls]; }}
+              <input type="text" value={url.loc} oninput={(e) => updateUrl(index, 'loc', (e.currentTarget as HTMLInputElement).value)}
                 class="col-span-4 px-2 py-1 bg-white dark:bg-gray-600 border border-gray-300 dark:border-gray-500 rounded text-gray-900 dark:text-white text-sm"
                 placeholder="/path" />
-              <input type="date" value={url.lastmod} oninput={(e) => { urls[index] = { ...urls[index], lastmod: (e.currentTarget as HTMLInputElement).value }; urls = [...urls]; }}
+              <input type="date" value={url.lastmod} oninput={(e) => updateUrl(index, 'lastmod', (e.currentTarget as HTMLInputElement).value)}
                 class="col-span-2 px-2 py-1 bg-white dark:bg-gray-600 border border-gray-300 dark:border-gray-500 rounded text-gray-900 dark:text-white text-sm" />
-              <select value={url.changefreq} onchange={(e) => { urls[index] = { ...urls[index], changefreq: (e.currentTarget as HTMLSelectElement).value }; urls = [...urls]; }}
+              <select value={url.changefreq} onchange={(e) => updateUrl(index, 'changefreq', (e.currentTarget as HTMLSelectElement).value)}
                 class="col-span-2 px-2 py-1 bg-white dark:bg-gray-600 border border-gray-300 dark:border-gray-500 rounded text-gray-900 dark:text-white text-sm">
                 <option value="always">always</option>
                 <option value="hourly">hourly</option>
@@ -112,7 +132,7 @@ ${urls.map(url => `  <url>
                 <option value="yearly">yearly</option>
                 <option value="never">never</option>
               </select>
-              <select value={url.priority} onchange={(e) => { urls[index] = { ...urls[index], priority: (e.currentTarget as HTMLSelectElement).value }; urls = [...urls]; }}
+              <select value={url.priority} onchange={(e) => updateUrl(index, 'priority', (e.currentTarget as HTMLSelectElement).value)}
                 class="col-span-2 px-2 py-1 bg-white dark:bg-gray-600 border border-gray-300 dark:border-gray-500 rounded text-gray-900 dark:text-white text-sm">
                 {#each ['1.0', '0.9', '0.8', '0.7', '0.6', '0.5', '0.4', '0.3', '0.2', '0.1'] as p (p)}
 <option  value={p}>{p}</option>

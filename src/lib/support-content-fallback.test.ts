@@ -106,6 +106,39 @@ describe('assessSupportContentTrust', () => {
     expect(report.issues.map((issue) => issue.code)).toContain('word-counter-unsupported-controls-es');
   });
 
+  it('blocks Sitemap Generator crawler claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'sitemap-generator',
+      locale: 'en',
+      name: 'Sitemap Generator',
+      description: '',
+      detailedDescription:
+        'The tool works by scanning your website root directory and recursively fetching all the URLs.',
+      usageSteps: ['Click Scan Website to fetch all URLs.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain('sitemap-generator-crawl-claim');
+  });
+
+  it('blocks Pixel Density device preset claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'pixel-density-calculator',
+      locale: 'en',
+      name: 'Pixel Density Calculator',
+      description: '',
+      detailedDescription: 'Includes presets for common resolutions and popular devices.',
+      usageSteps: ['Select one of the device presets.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain('pixel-density-device-preset-claim');
+  });
+
   it('blocks Hex Editor UI overclaims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'hex-editor',

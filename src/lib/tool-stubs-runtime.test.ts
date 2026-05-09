@@ -111,6 +111,7 @@ import {
   generateCleanedCode,
   generateCrontab,
   getSqlType,
+  COMMON_RESOLUTIONS,
   ibanSpecs,
   getMonthRuns,
   getNextRuns,
@@ -531,6 +532,17 @@ X-Trace-Id: abc123
       expect(spec.example, countryCode).toHaveLength(spec.length);
       expect(mod97(spec.example), countryCode).toBe(1);
     }
+  });
+
+  it('ships common display resolution presets for the pixel density calculator', () => {
+    expect(COMMON_RESOLUTIONS).toEqual(
+      expect.arrayContaining([
+        { name: 'Full HD 1080p', width: 1920, height: 1080 },
+        { name: '4K UHD', width: 3840, height: 2160 },
+        { name: '8K UHD', width: 7680, height: 4320 },
+      ])
+    );
+    expect(COMMON_RESOLUTIONS).toHaveLength(7);
   });
 
   it('parses env files and exports common formats', () => {

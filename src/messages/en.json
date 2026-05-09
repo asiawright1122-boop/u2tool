@@ -5914,31 +5914,29 @@
     },
     "sitemap-generator": {
       "name": "Sitemap Generator",
-      "description": "Generate XML sitemaps for your website.",
+      "description": "Generate XML sitemap entries from a manual URL list.",
       "output": "Sitemap Output",
       "copy": "Copy",
-      "seo_title": "Free Sitemap Generator Online",
-      "seo_description": "Generate XML sitemaps for your website online for free. Add URLs with priority, change frequency, and last modified date. Essential for SEO and search indexing.",
+      "seo_title": "Free XML Sitemap Generator Online",
+      "seo_description": "Create a simple XML sitemap online from a manual URL list. Set lastmod, changefreq, and priority, then copy or download sitemap.xml.",
       "baseUrl": "Base URL",
       "urls": "URLs",
       "addUrl": "+ Add URL",
       "remove": "Remove",
       "generate": "Generate Sitemap",
       "download": "Download",
-      "detailed_description": "The Sitemap Generator is a powerful tool designed to create XML sitemaps for your website. XML sitemaps are essential for improving your site's visibility in search engine results. They provide a comprehensive list of all the URLs on your site, along with metadata such as the last modified date, change frequency, and priority. This information helps search engines like Google, Bing, and Yahoo to crawl your site more efficiently, ensuring that all your content is indexed and displayed accurately.\n\nUsers need this tool for several reasons. First, it simplifies the process of maintaining an up-to-date sitemap, which is crucial for large and dynamic websites. Second, it enhances SEO by ensuring that search engines have a clear and structured view of your site's content. Third, it can help identify and fix issues with URL structure, improving overall site navigation.\n\nThe Sitemap Generator works by scanning your website's root directory and recursively fetching all the URLs. It then compiles this data into a well-formed XML sitemap. The tool supports various configurations, such as setting the priority and change frequency for different types of pages. Additionally, it can handle large websites by breaking the sitemap into multiple files if necessary, adhering to the sitemap protocol standards. The generated sitemap can be easily submitted to search engines or integrated into your site's XML sitemap file.",
+      "detailed_description": "The Sitemap Generator creates a simple XML sitemap from the URLs you enter in the browser. Start with a base URL, edit the starter rows or add your own paths, set each page's last modified date, change frequency, and priority, then generate well-formed sitemap XML that can be copied or downloaded as sitemap.xml. It is useful when you need a small hand-maintained sitemap, a quick XML sample for a project, or a clean starting point before adding URLs to a CMS or build pipeline. The tool does not crawl a live website, fetch pages automatically, validate ownership, or split large sitemap indexes; it only formats the URL list you provide.",
       "usage_steps": [
-        "Step 1: Navigate to the Sitemap Generator page and click on the 'Start New Sitemap' button.",
-        "Step 2: Enter the root URL of your website in the 'Base URL' field, ensuring it includes the protocol (http or https).",
-        "Step 3: Configure the sitemap settings by selecting the desired options from the dropdown menus. For example, choose the 'Change Frequency' and 'Priority' for different types of pages.",
-        "Step 4: Click on the 'Scan Website' button to begin the sitemap generation process. The tool will scan your site and fetch all the URLs.",
-        "Step 5: Review the generated sitemap in the preview area. You can make adjustments by adding or removing URLs as needed.",
-        "Step 6: Once satisfied, click the 'Download Sitemap' button to save the XML file to your computer. You can then submit this file to search engines or upload it to your website's root directory."
+        "Enter the base URL, including the protocol, such as https://example.com.",
+        "Edit the starter paths or add more URL rows for the pages you want in the sitemap.",
+        "Choose a last modified date, change frequency, and priority for each row.",
+        "Click Generate Sitemap to build the XML output.",
+        "Review the XML, then copy it or download sitemap.xml."
       ],
       "usage_examples": [
-        "Example 1: A small business owner updates their website regularly with new product listings and blog posts. By using the Sitemap Generator, they ensure that all new content is quickly indexed by search engines, improving their online visibility and driving more traffic to their site.",
-        "Example 2: A web developer is building a large e-commerce platform with thousands of product pages. They use the Sitemap Generator to create a comprehensive sitemap, which helps search engines crawl and index the site more efficiently, reducing the risk of important pages being overlooked.",
-        "Example 3: A content manager for a news website uses the Sitemap Generator to update the sitemap daily. This ensures that breaking news articles and featured stories are immediately indexed by search engines, allowing readers to discover the latest content quickly.",
-        "Example 4: A digital marketing agency uses the Sitemap Generator to create and maintain sitemaps for multiple client websites. By automating this process, they save time and ensure that all client sites have up-to-date sitemaps, which is crucial for SEO and site performance."
+        "Create a compact sitemap for a five-page brochure site before uploading it to the site root.",
+        "Draft sitemap XML for a staging project where the final build process is not ready yet.",
+        "Prepare a manual list of priority landing pages for a client review or SEO handoff."
       ]
     },
     "json-to-php": {
@@ -18400,22 +18398,21 @@
     },
     "pixel-density-calculator": {
       "name": "Pixel Density Calculator",
-      "description": "Calculate PPI and pixel pitch from screen resolution and size",
+      "description": "Calculate display PPI, pixel pitch, aspect ratio, and screen dimensions",
       "seo_title": "Free Pixel Density (PPI) Calculator Online - Screen Resolution Tool",
-      "seo_description": "Calculate pixel density (PPI), pixel pitch, and screen dimensions from resolution and display size. Free online tool for display analysis.",
-      "detailed_description": "Pixel Density Calculator computes the pixels per inch (PPI) and other display metrics from screen resolution and diagonal size. Understand your display quality by calculating pixel pitch, aspect ratio, and total megapixels. Includes presets for common resolutions from HD to 8K and popular devices.",
+      "seo_description": "Calculate display pixel density (PPI), pixel pitch, aspect ratio, physical size, and megapixels from resolution and diagonal size.",
+      "detailed_description": "Pixel Density Calculator computes display pixels per inch (PPI) from screen width, screen height, and diagonal size directly in the browser. Enter custom resolution values or choose common HD, Full HD, QHD, ultrawide, 4K, 5K, and 8K presets, then review pixel pitch, aspect ratio, physical width and height, total pixels, megapixels, and a simple sharpness rating. It is useful for comparing monitors, checking whether a display is dense enough for design work, or translating resolution and size specs into practical screen metrics. The tool does not identify a device model; it calculates from the numbers you provide.",
       "usage_steps": [
-        "Enter the screen width in pixels",
-        "Enter the screen height in pixels",
-        "Enter the diagonal screen size in inches",
-        "Or select a common resolution preset",
-        "View PPI, pixel pitch, and other metrics",
-        "Copy the results for reference"
+        "Enter the screen width and height in pixels.",
+        "Enter the diagonal screen size in inches.",
+        "Optionally select a common resolution preset such as Full HD, QHD, 4K, 5K, or 8K.",
+        "Review the calculated PPI, pixel pitch, aspect ratio, physical dimensions, total pixels, and megapixels.",
+        "Use the copy action when you need the PPI, pixel pitch, and resolution in notes or specs."
       ],
       "usage_examples": [
-        "Comparing display quality across monitors",
-        "Evaluating smartphone screen sharpness",
-        "Choosing the right display for design work"
+        "Compare a 24-inch Full HD monitor with a 27-inch QHD monitor before buying.",
+        "Check whether a 4K laptop panel has enough pixel density for detailed design review.",
+        "Translate a product spec sheet into PPI and pixel pitch for documentation."
       ],
       "width": "Width",
       "height": "Height",
@@ -23271,11 +23268,11 @@
     },
     "sitemap-generator": {
       "name": "Sitemap Generator",
-      "description": "Generate XML sitemaps for your website.",
+      "description": "Generate XML sitemap entries from a manual URL list.",
       "output": "Sitemap Output",
       "copy": "Copy",
-      "seo_title": "Free Sitemap Generator Online",
-      "seo_description": "Generate XML sitemaps for your website online for free. Add URLs with priority, change frequency, and last modified date. Essential for SEO and search indexing.",
+      "seo_title": "Free XML Sitemap Generator Online",
+      "seo_description": "Create a simple XML sitemap online from a manual URL list. Set lastmod, changefreq, and priority, then copy or download sitemap.xml.",
       "baseUrl": "Base URL",
       "urls": "URLs",
       "addUrl": "+ Add URL",
