@@ -192,8 +192,10 @@
     <div class="space-y-6">
       <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
         <div class="md:col-span-2">
-          <label class="block text-xs text-gray-500 mb-1">{t('projectName')}</label>
+          <label for="cost-benefit-project-name" class="block text-xs text-gray-500 mb-1">{t('projectName')}</label>
           <input
+            id="cost-benefit-project-name"
+            name="projectName"
             type="text"
             value={data.projectName}
             onchange={(e) => updateData('projectName', e.target.value)}
@@ -201,8 +203,10 @@
           />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('timeframe')}</label>
+          <label for="cost-benefit-timeframe" class="block text-xs text-gray-500 mb-1">{t('timeframe')}</label>
           <input
+            id="cost-benefit-timeframe"
+            name="timeframeYears"
             type="number"
             value={data.timeframeYears}
             onchange={(e) => updateData('timeframeYears', parseInt(e.target.value) || 1)}
@@ -212,8 +216,10 @@
           />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('discountRate')}</label>
+          <label for="cost-benefit-discount-rate" class="block text-xs text-gray-500 mb-1">{t('discountRate')}</label>
           <input
+            id="cost-benefit-discount-rate"
+            name="discountRate"
             type="number"
             value={data.discountRate}
             onchange={(e) => updateData('discountRate', parseFloat(e.target.value) || 0)}
@@ -224,8 +230,10 @@
           />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('currency')}</label>
+          <label for="cost-benefit-currency" class="block text-xs text-gray-500 mb-1">{t('currency')}</label>
           <select
+            id="cost-benefit-currency"
+            name="currency"
             value={data.currency}
             onchange={(e) => updateData('currency', e.target.value)}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -247,6 +255,7 @@
             {#each data.costs as cost (cost.id)}
 <div  class="flex gap-2 items-center">
                 <input
+                  aria-label={`${t('costNamePlaceholder')} ${cost.id}`}
                   type="text"
                   value={cost.name}
                   onchange={(e) => updateCost(cost.id, 'name', e.target.value)}
@@ -254,12 +263,14 @@
                   class="flex-1 px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                 />
                 <input
+                  aria-label={`${t('costs')} ${cost.id}`}
                   type="number"
                   value={cost.amount}
                   onchange={(e) => updateCost(cost.id, 'amount', parseFloat(e.target.value) || 0)}
                   class="w-24 px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                 />
                 <select
+                  aria-label={`${t('costs')} ${cost.id}`}
                   value={cost.type}
                   onchange={(e) => updateCost(cost.id, 'type', e.target.value)}
                   class="w-24 px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -269,6 +280,7 @@
                 </select>
                 {#if cost.type === 'recurring'}
 <select
+                    aria-label={`${t('costs')} ${cost.id}`}
                     value={cost.frequency || 'yearly'}
                     onchange={(e) => updateCost(cost.id, 'frequency', e.target.value)}
                     class="w-24 px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -278,7 +290,7 @@
                     <option value="yearly">Yearly</option>
                   </select>
 {/if}
-                <button onclick={() => removeCost(cost.id)} class="text-red-500 hover:text-red-700">×</button>
+                <button onclick={() => removeCost(cost.id)} class="text-red-500 hover:text-red-700" aria-label={`${t('costs')} ${cost.id}`}>×</button>
               </div>
 {/each}
           </div>
@@ -293,6 +305,7 @@
             {#each data.benefits as benefit (benefit.id)}
 <div  class="flex gap-2 items-center flex-wrap">
                 <input
+                  aria-label={`${t('benefitNamePlaceholder')} ${benefit.id}`}
                   type="text"
                   value={benefit.name}
                   onchange={(e) => updateBenefit(benefit.id, 'name', e.target.value)}
@@ -300,12 +313,14 @@
                   class="flex-1 min-w-32 px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                 />
                 <input
+                  aria-label={`${t('benefits')} ${benefit.id}`}
                   type="number"
                   value={benefit.amount}
                   onchange={(e) => updateBenefit(benefit.id, 'amount', parseFloat(e.target.value) || 0)}
                   class="w-24 px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                 />
                 <select
+                  aria-label={`${t('benefits')} ${benefit.id}`}
                   value={benefit.frequency || 'monthly'}
                   onchange={(e) => updateBenefit(benefit.id, 'frequency', e.target.value)}
                   class="w-24 px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -316,6 +331,7 @@
                 </select>
                 <div class="flex items-center gap-1">
                   <input
+                    aria-label={`${t('benefits')} ${benefit.id}`}
                     type="number"
                     value={benefit.probability}
                     onchange={(e) => updateBenefit(benefit.id, 'probability', Math.min(100, Math.max(0, parseFloat(e.target.value) || 0)))}
@@ -325,7 +341,7 @@
                   />
                   <span class="text-xs text-gray-500">%</span>
                 </div>
-                <button onclick={() => removeBenefit(benefit.id)} class="text-red-500 hover:text-red-700">×</button>
+                <button onclick={() => removeBenefit(benefit.id)} class="text-red-500 hover:text-red-700" aria-label={`${t('benefits')} ${benefit.id}`}>×</button>
               </div>
 {/each}
           </div>

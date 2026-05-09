@@ -258,6 +258,7 @@
             {t('screen-recorder.preview')}
           </h3>
           
+          <!-- svelte-ignore a11y_media_has_caption (Captured screen recordings do not have a caption track available.) -->
           <video
             src={recordedUrl}
             controls

@@ -179,8 +179,10 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('meetingTitle')}</label>
+          <label for="meeting-agenda-title" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('meetingTitle')}</label>
           <input
+            id="meeting-agenda-title"
+            name="meetingTitle"
             type="text"
             value={info.title}
             onchange={(e) => updateInfo('title', e.target.value)}
@@ -188,8 +190,10 @@
           />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('date')}</label>
+          <label for="meeting-agenda-date" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('date')}</label>
           <input
+            id="meeting-agenda-date"
+            name="meetingDate"
             type="date"
             value={info.date}
             onchange={(e) => updateInfo('date', e.target.value)}
@@ -197,8 +201,10 @@
           />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('time')}</label>
+          <label for="meeting-agenda-time" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('time')}</label>
           <input
+            id="meeting-agenda-time"
+            name="meetingTime"
             type="time"
             value={info.startTime}
             onchange={(e) => updateInfo('startTime', e.target.value)}
@@ -206,8 +212,10 @@
           />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('location')}</label>
+          <label for="meeting-agenda-location" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('location')}</label>
           <input
+            id="meeting-agenda-location"
+            name="meetingLocation"
             type="text"
             value={info.location}
             onchange={(e) => updateInfo('location', e.target.value)}
@@ -215,8 +223,10 @@
           />
         </div>
         <div class="md:col-span-2">
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('objectives')}</label>
+          <label for="meeting-agenda-objective" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('objectives')}</label>
           <input
+            id="meeting-agenda-objective"
+            name="meetingObjective"
             type="text"
             value={info.objective}
             onchange={(e) => updateInfo('objective', e.target.value)}
@@ -243,6 +253,7 @@
               </div>
               <span class="text-sm text-gray-500 w-6">{idx + 1}.</span>
               <input
+                aria-label={`${t('topicPlaceholder')} ${idx + 1}`}
                 type="text"
                 value={item.topic}
                 onchange={(e) => updateItem(item.id, 'topic', e.target.value)}
@@ -250,6 +261,7 @@
                 class="flex-1 px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
               />
               <select
+                aria-label={`${t('totalDuration')} ${idx + 1}`}
                 value={item.duration}
                 onchange={(e) => updateItem(item.id, 'duration', parseInt(e.target.value))}
                 class="w-24 px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -259,13 +271,14 @@
 {/each}
               </select>
               <input
+                aria-label={`${t('presenterPlaceholder')} ${idx + 1}`}
                 type="text"
                 value={item.presenter}
                 onchange={(e) => updateItem(item.id, 'presenter', e.target.value)}
                 placeholder={t("presenterPlaceholder")}
                 class="w-28 px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
               />
-              <button onclick={() => removeItem(item.id)} class="text-red-500 hover:text-red-700">✕</button>
+              <button onclick={() => removeItem(item.id)} class="text-red-500 hover:text-red-700" aria-label={`${tCommon('clear')} ${idx + 1}`}>✕</button>
             </div>
 {/each}
         </div>

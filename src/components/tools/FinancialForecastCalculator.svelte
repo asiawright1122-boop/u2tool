@@ -201,20 +201,20 @@
   <!-- Settings -->
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
     <div>
-      <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('forecastMethod')}</label>
-      <select bind:value={settings.method} class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white">
+      <label for="financial-forecast-method" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('forecastMethod')}</label>
+      <select id="financial-forecast-method" name="forecastMethod" bind:value={settings.method} class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white">
         <option value="linear">{t('linearRegression')}</option>
         <option value="exponential">{t('exponentialGrowth')}</option>
         <option value="moving-average">{t('movingAverage')}</option>
       </select>
     </div>
     <div>
-      <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('forecastPeriods')}</label>
-      <input type="number" bind:value={settings.periods} min={1} max={12} class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white" />
+      <label for="financial-forecast-periods" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('forecastPeriods')}</label>
+      <input id="financial-forecast-periods" name="forecastPeriods" type="number" bind:value={settings.periods} min={1} max={12} class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white" />
     </div>
     <div>
-      <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('currency')}</label>
-      <select bind:value={currency} class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white">
+      <label for="financial-forecast-currency" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('currency')}</label>
+      <select id="financial-forecast-currency" name="currency" bind:value={currency} class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white">
         <option value="USD">USD ($)</option>
         <option value="EUR">EUR (€)</option>
         <option value="GBP">GBP (£)</option>
@@ -226,8 +226,8 @@
 
   {#if settings.method === 'exponential'}
     <div>
-      <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('growthRate')} (%)</label>
-      <input type="number" bind:value={settings.growthRate} step={0.5} class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white" />
+      <label for="financial-forecast-growth-rate" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('growthRate')} (%)</label>
+      <input id="financial-forecast-growth-rate" name="growthRate" type="number" bind:value={settings.growthRate} step={0.5} class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white" />
     </div>
   {/if}
 
@@ -240,10 +240,10 @@
     <div class="space-y-2">
       {#each historicalData as item, i}
         <div class="flex gap-2 items-center">
-          <input type="text" value={item.period} oninput={(e) => { historicalData[i] = { ...historicalData[i], period: (e.currentTarget as HTMLInputElement).value }; historicalData = [...historicalData]; }} class="w-28 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-900 dark:text-white" />
-          <input type="number" value={item.revenue} oninput={(e) => { historicalData[i] = { ...historicalData[i], revenue: Number((e.currentTarget as HTMLInputElement).value) || 0 }; historicalData = [...historicalData]; }} class="flex-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-900 dark:text-white" placeholder={t('revenue')} />
-          <input type="number" value={item.expenses} oninput={(e) => { historicalData[i] = { ...historicalData[i], expenses: Number((e.currentTarget as HTMLInputElement).value) || 0 }; historicalData = [...historicalData]; }} class="flex-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-900 dark:text-white" placeholder={t('expenses')} />
-          <button onclick={() => removePeriod(i)} class="text-red-500 hover:text-red-700 text-sm px-2">✕</button>
+          <input type="text" aria-label={`${t('historicalData')} ${i + 1}`} value={item.period} oninput={(e) => { historicalData[i] = { ...historicalData[i], period: (e.currentTarget as HTMLInputElement).value }; historicalData = [...historicalData]; }} class="w-28 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-900 dark:text-white" />
+          <input type="number" aria-label={`${t('revenue')} ${i + 1}`} value={item.revenue} oninput={(e) => { historicalData[i] = { ...historicalData[i], revenue: Number((e.currentTarget as HTMLInputElement).value) || 0 }; historicalData = [...historicalData]; }} class="flex-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-900 dark:text-white" placeholder={t('revenue')} />
+          <input type="number" aria-label={`${t('expenses')} ${i + 1}`} value={item.expenses} oninput={(e) => { historicalData[i] = { ...historicalData[i], expenses: Number((e.currentTarget as HTMLInputElement).value) || 0 }; historicalData = [...historicalData]; }} class="flex-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm text-gray-900 dark:text-white" placeholder={t('expenses')} />
+          <button onclick={() => removePeriod(i)} class="text-red-500 hover:text-red-700 text-sm px-2" aria-label={`${t('historicalData')} ${i + 1}`}>✕</button>
         </div>
       {/each}
     </div>

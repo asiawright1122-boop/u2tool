@@ -33,6 +33,21 @@
   amenities: string[];
   bookings: { start: number; end: number; title: string }[];
 }
+  interface RoomFilters {
+  startTime: number;
+  endTime: number;
+  minCapacity: number;
+  floor: string;
+  requiredAmenities: string[];
+}
+
+  const TIME_OPTIONS = Array.from({ length: 24 }, (_, i) => i * 60);
+
+  function formatTime(minutes: number): string {
+    const hours = Math.floor(minutes / 60);
+    const mins = minutes % 60;
+    return `${String(hours).padStart(2, '0')}:${String(mins).padStart(2, '0')}`;
+  }
 
   let rooms = $state([
     { id: '1', name: 'Conference Room A', capacity: 10, floor: '1st', amenities: ['Projector', 'Whiteboard', 'Video Conference'], bookings: [{ start: 540, end: 600, title: 'Team Standup' }, { start: 780, end: 840, title: 'Client Call' }] },
@@ -42,16 +57,19 @@
     { id: '5', name: 'Training Room', capacity: 30, floor: '3rd', amenities: ['Projector', 'Whiteboard', 'Standing Desk'], bookings: [{ start: 540, end: 720, title: 'Workshop' }] },
   ]);
 
-  let filters = $state({
+  let filters = $state<RoomFilters>({
+    startTime: 540,
+    endTime: 600,
     minCapacity: 1,
+    floor: '',
     requiredAmenities: [] as string[],
   });
 
-  let bookingRoom = $state(null);
+  let bookingRoom = $state<string | null>(null);
 
   let bookingTitle = $state('');
 
-  function updateFilter(key: string, value: any) {
+  function updateFilter<K extends keyof RoomFilters>(key: K, value: RoomFilters[K]) {
     filters = ({ ...filters, [key]: value });
   }
 
@@ -95,6 +113,7 @@
   }
 
   let floors = $derived([...new Set(rooms.map(r => r.floor))]);
+  let amenities = $derived([...new Set(rooms.flatMap(r => r.amenities))].sort());
 
 </script>
 
@@ -102,34 +121,40 @@
     <div class="space-y-6">
       <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('startTime')}</label>
+          <label for="meeting-room-start-time" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('startTime')}</label>
           <select
+            id="meeting-room-start-time"
+            name="startTime"
             value={filters.startTime}
-            onchange={(e) => updateFilter('startTime', parseInt(e.target.value))}
+            onchange={(e) => updateFilter('startTime', parseInt(e.currentTarget.value, 10))}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
           >
-            {#each Array.from({ length: 24 }, (_, i) => i * 60) as m (m)}
+            {#each TIME_OPTIONS as m (m)}
 <option  value={m}>{formatTime(m)}</option>
 {/each}
           </select>
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('endTime')}</label>
+          <label for="meeting-room-end-time" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('endTime')}</label>
           <select
+            id="meeting-room-end-time"
+            name="endTime"
             value={filters.endTime}
-            onchange={(e) => updateFilter('endTime', parseInt(e.target.value))}
+            onchange={(e) => updateFilter('endTime', parseInt(e.currentTarget.value, 10))}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
           >
-            {#each Array.from({ length: 24 }, (_, i) => i * 60) as m (m)}
+            {#each TIME_OPTIONS as m (m)}
 <option  value={m}>{formatTime(m)}</option>
 {/each}
           </select>
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('minCapacity')}</label>
+          <label for="meeting-room-min-capacity" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('minCapacity')}</label>
           <select
+            id="meeting-room-min-capacity"
+            name="minCapacity"
             value={filters.minCapacity}
-            onchange={(e) => updateFilter('minCapacity', parseInt(e.target.value))}
+            onchange={(e) => updateFilter('minCapacity', parseInt(e.currentTarget.value, 10))}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
           >
             {#each [1, 2, 4, 6, 8, 10, 15, 20, 30] as n (n)}
@@ -138,10 +163,12 @@
           </select>
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('floor')}</label>
+          <label for="meeting-room-floor" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('floor')}</label>
           <select
+            id="meeting-room-floor"
+            name="floor"
             value={filters.floor}
-            onchange={(e) => updateFilter('floor', e.target.value)}
+            onchange={(e) => updateFilter('floor', e.currentTarget.value)}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
           >
             <option value="">{t('anyFloor')}</option>
@@ -158,11 +185,12 @@
       </div>
 
       <div>
-        <label class="block text-xs text-gray-500 dark:text-gray-400 mb-2">{t('requiredAmenities')}</label>
-        <div class="flex flex-wrap gap-2">
-          {#each AMENITIES as amenity (amenity)}
+        <p id="meeting-room-amenities-label" class="block text-xs text-gray-500 dark:text-gray-400 mb-2">{t('requiredAmenities')}</p>
+        <div class="flex flex-wrap gap-2" aria-labelledby="meeting-room-amenities-label">
+          {#each amenities as amenity (amenity)}
 <button 
               onclick={() => toggleAmenity(amenity)}
+              aria-pressed={filters.requiredAmenities.includes(amenity)}
               class={`px-3 py-1 text-sm rounded-full ${
                 filters.requiredAmenities.includes(amenity)
                   ? 'bg-amber-600 text-white'
@@ -216,11 +244,14 @@
 {/if}
 
             {#if room.available}
-bookingRoom === room.id ? (
+              {#if bookingRoom === room.id}
                 <div class="flex gap-2">
                   <input
+                    id={`meeting-room-book-title-${room.id}`}
+                    name="bookingTitle"
                     type="text"
                     bind:value={bookingTitle}
+                    aria-label={t("titlePlaceholder")}
                     placeholder={t("titlePlaceholder")}
                     class="flex-1 px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   />
@@ -233,18 +264,19 @@ bookingRoom === room.id ? (
                   <button
                     onclick={() => bookingRoom = null}
                     class="px-2 py-1 text-sm text-gray-500 hover:text-gray-700"
+                    aria-label={tCommon('clear')}
                   >
                     ✕
                   </button>
                 </div>
-              ) : (
+              {:else}
                 <button
                   onclick={() => bookingRoom = room.id}
                   class="w-full px-3 py-1.5 text-sm bg-amber-600 text-white rounded hover:bg-amber-700"
                 >
                   {t('bookRoom')}
                 </button>
-              )
+              {/if}
 {/if}
           </div>
 {/each}

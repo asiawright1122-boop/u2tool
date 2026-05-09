@@ -144,11 +144,13 @@
       <!-- 输入区域 -->
       <form onsubmit={handleSubmit} class="space-y-4">
         <div>
-          <label class="tool-label">
+          <label for="ip-geolocation-address" class="tool-label">
             {t('ip-geolocation.ipAddress')}
           </label>
           <div class="flex gap-2">
             <input
+              id="ip-geolocation-address"
+              name="ipAddress"
               type="text"
               bind:value={ip}
               placeholder={t('ip-geolocation.placeholder')}

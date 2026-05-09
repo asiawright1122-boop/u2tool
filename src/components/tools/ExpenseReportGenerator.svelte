@@ -150,8 +150,10 @@
     <div class="space-y-6">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('reportTitle')}</label>
+          <label for="expense-report-title" class="block text-xs text-gray-500 mb-1">{t('reportTitle')}</label>
           <input
+            id="expense-report-title"
+            name="reportTitle"
             type="text"
             value={report.reportTitle}
             onchange={(e) => updateReport('reportTitle', e.target.value)}
@@ -159,8 +161,10 @@
           />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('employeeName')}</label>
+          <label for="expense-report-employee-name" class="block text-xs text-gray-500 mb-1">{t('employeeName')}</label>
           <input
+            id="expense-report-employee-name"
+            name="employeeName"
             type="text"
             value={report.employeeName}
             onchange={(e) => updateReport('employeeName', e.target.value)}
@@ -169,8 +173,10 @@
           />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('department')}</label>
+          <label for="expense-report-department" class="block text-xs text-gray-500 mb-1">{t('department')}</label>
           <input
+            id="expense-report-department"
+            name="department"
             type="text"
             value={report.department}
             onchange={(e) => updateReport('department', e.target.value)}
@@ -179,8 +185,10 @@
           />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('currency')}</label>
+          <label for="expense-report-currency" class="block text-xs text-gray-500 mb-1">{t('currency')}</label>
           <select
+            id="expense-report-currency"
+            name="currency"
             value={report.currency}
             onchange={(e) => updateReport('currency', e.target.value)}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -194,8 +202,10 @@
 
       <div class="grid grid-cols-2 gap-4">
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('periodStart')}</label>
+          <label for="expense-report-period-start" class="block text-xs text-gray-500 mb-1">{t('periodStart')}</label>
           <input
+            id="expense-report-period-start"
+            name="periodStart"
             type="date"
             value={report.reportPeriod.start}
             onchange={(e) => updateReport('reportPeriod', { ...report.reportPeriod, start: e.target.value })}
@@ -203,8 +213,10 @@
           />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('periodEnd')}</label>
+          <label for="expense-report-period-end" class="block text-xs text-gray-500 mb-1">{t('periodEnd')}</label>
           <input
+            id="expense-report-period-end"
+            name="periodEnd"
             type="date"
             value={report.reportPeriod.end}
             onchange={(e) => updateReport('reportPeriod', { ...report.reportPeriod, end: e.target.value })}
@@ -237,6 +249,7 @@
 <tr  class="border-b border-gray-100 dark:border-gray-800">
                   <td class="py-2 px-2">
                     <input
+                      aria-label={`${t('date')} ${expense.id}`}
                       type="date"
                       value={expense.date}
                       onchange={(e) => updateExpense(expense.id, 'date', e.target.value)}
@@ -245,6 +258,7 @@
                   </td>
                   <td class="py-2 px-2">
                     <select
+                      aria-label={`${t('category')} ${expense.id}`}
                       value={expense.category}
                       onchange={(e) => updateExpense(expense.id, 'category', e.target.value)}
                       class="w-32 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm"
@@ -256,6 +270,7 @@
                   </td>
                   <td class="py-2 px-2">
                     <input
+                      aria-label={`${t('description')} ${expense.id}`}
                       type="text"
                       value={expense.description}
                       onchange={(e) => updateExpense(expense.id, 'description', e.target.value)}
@@ -265,6 +280,7 @@
                   </td>
                   <td class="py-2 px-2">
                     <input
+                      aria-label={`${t('amount')} ${expense.id}`}
                       type="number"
                       value={expense.amount}
                       onchange={(e) => updateExpense(expense.id, 'amount', parseFloat(e.target.value) || 0)}
@@ -275,6 +291,7 @@
                   </td>
                   <td class="py-2 px-2 text-center">
                     <input
+                      aria-label={`${t('receipt')} ${expense.id}`}
                       type="checkbox"
                       checked={expense.receipt}
                       onchange={(e) => updateExpense(expense.id, 'receipt', e.target.checked)}
@@ -283,6 +300,7 @@
                   </td>
                   <td class="py-2 px-2">
                     <input
+                      aria-label={`${t('notes')} ${expense.id}`}
                       type="text"
                       value={expense.notes}
                       onchange={(e) => updateExpense(expense.id, 'notes', e.target.value)}
@@ -291,7 +309,7 @@
                     />
                   </td>
                   <td class="py-2 px-2">
-                    <button onclick={() => removeExpense(expense.id)} class="text-red-500 hover:text-red-700">×</button>
+                    <button onclick={() => removeExpense(expense.id)} class="text-red-500 hover:text-red-700" aria-label={`${t('expenses')} ${expense.id}`}>×</button>
                   </td>
                 </tr>
 {/each}

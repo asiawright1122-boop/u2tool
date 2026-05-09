@@ -162,8 +162,10 @@
     <div class="space-y-6">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('reportTitle')}</label>
+          <label for="budget-variance-title" class="block text-xs text-gray-500 mb-1">{t('reportTitle')}</label>
           <input
+            id="budget-variance-title"
+            name="reportTitle"
             type="text"
             value={data.title}
             onchange={(e) => updateData('title', e.target.value)}
@@ -171,8 +173,10 @@
           />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('period')}</label>
+          <label for="budget-variance-period" class="block text-xs text-gray-500 mb-1">{t('period')}</label>
           <input
+            id="budget-variance-period"
+            name="period"
             type="text"
             value={data.period}
             onchange={(e) => updateData('period', e.target.value)}
@@ -180,8 +184,10 @@
           />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('currency')}</label>
+          <label for="budget-variance-currency" class="block text-xs text-gray-500 mb-1">{t('currency')}</label>
           <select
+            id="budget-variance-currency"
+            name="currency"
             value={data.currency}
             onchange={(e) => updateData('currency', e.target.value)}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -244,6 +250,7 @@
 <tr  class="border-b border-gray-100 dark:border-gray-800">
                 <td class="py-2 px-2">
                   <input
+                    aria-label={`${t('category')} ${item.id}`}
                     type="text"
                     value={item.category}
                     onchange={(e) => updateItem(item.id, 'category', e.target.value)}
@@ -254,6 +261,7 @@
                 </td>
                 <td class="py-2 px-2">
                   <input
+                    aria-label={`${t('budgeted')} ${item.id}`}
                     type="number"
                     value={item.budgeted}
                     onchange={(e) => updateItem(item.id, 'budgeted', parseFloat(e.target.value) || 0)}
@@ -262,6 +270,7 @@
                 </td>
                 <td class="py-2 px-2">
                   <input
+                    aria-label={`${t('actual')} ${item.id}`}
                     type="number"
                     value={item.actual}
                     onchange={(e) => updateItem(item.id, 'actual', parseFloat(e.target.value) || 0)}
@@ -281,6 +290,7 @@
                 </td>
                 <td class="py-2 px-2">
                   <input
+                    aria-label={`${t('notes')} ${item.id}`}
                     type="text"
                     value={item.notes}
                     onchange={(e) => updateItem(item.id, 'notes', e.target.value)}
@@ -289,7 +299,7 @@
                   />
                 </td>
                 <td class="py-2 px-2">
-                  <button onclick={() => removeItem(item.id)} class="text-red-500 hover:text-red-700">×</button>
+                  <button onclick={() => removeItem(item.id)} class="text-red-500 hover:text-red-700" aria-label={`${t('category')} ${item.id}`}>×</button>
                 </td>
               </tr>
 {/each}
