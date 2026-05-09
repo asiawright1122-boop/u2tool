@@ -3585,23 +3585,22 @@
     },
     "hex-editor": {
       "name": "Hex-Editor",
-      "description": "Konvertieren Sie zwischen Text und Hexadezimalzahl, um Byte-Daten anzuzeigen.",
+      "description": "Konvertieren Sie zwischen Text und hexadezimalen Bytes.",
       "seo_title": "Kostenloses Online-Hex-Editor-Tool",
-      "seo_description": "Konvertieren Sie Text in Hexadezimal und umgekehrt online kostenlos. Bearbeiten Sie hexadezimale Daten mit ASCII-Vorschau. Notwendig für Debugging und binäre Datenanalyse.",
-      "detailed_description": "Der Hex Editor ermöglicht präzise Manipulation und Analyse von Binärdaten durch bidirektionale Konvertierung zwischen Klartext und hexadezimaler Darstellung. Technisch gesehen interpretiert das Tool Eingabedaten als Byte-Arrays, kodiert diese entsprechend ASCII-, UTF-8- oder UTF-16-Standarddarstellungen und visualisiert den Hexdump mit Offset-Adressierung. Entwickler nutzen diese Funktionalität, um Speicherabbilder zu analysieren, Dateiheader zu modifizieren oder Netzwerkprotokolle zu debuggen. Besonders bei der Fehlersuche in kompilierten Programmen oder der manuellen Überprüfung von kryptographischen Hashes zeigt sich der praktische Mehrwert. Das Tool nutzt JavaScript-basierte Bit-Level-Operationen, um Zeichencodierungen präzise zu verarbeiten und dabei Endianness-Einstellungen (Big-Endian/Little-Endian) zu berücksichtigen. Die Echtzeit-Dualansicht zeigt sowohl hexadezimale Werte als auch die zugehörige Zeichendarstellung an, wodurch spezifische Muster wie Nullterminatoren oder strukturierte Binärformate leicht identifizierbar werden.",
+      "seo_description": "Konvertieren Sie Text online kostenlos in UTF-8-Hex-Bytes und dekodieren Sie Hex wieder zu Text. Praktisch für Logs, Tests und Debugging.",
+      "detailed_description": "Der Hex Editor ist ein browserbasierter Text- und Hexadezimal-Konverter für schnelle Prüfungen auf Byte-Ebene. Geben Sie Text ein, um ihn als großgeschriebene UTF-8-Hex-Bytes auszugeben, oder fügen Sie eine Hex-Sequenz ein, um sie wieder in lesbaren Text zu dekodieren. Der Ablauf bleibt bewusst einfach: zwei editierbare Textfelder, klare Umwandlungsbuttons und Kopierfunktionen für beide Seiten. Das Tool hilft beim Prüfen von API-Payloads, Logwerten, Teststrings und Lernbeispielen, bei denen sichtbar werden soll, wie Zeichen als hexadezimale Bytes dargestellt werden. Alle Umwandlungen laufen im Browser über Standard-APIs für Text-Encoding und -Decoding, sodass eingegebene Werte auf dem Gerät bleiben.",
       "usage_steps": [
-        "1. Eingabedaten im Textfeld einfügen oder manuell eingeben.",
-        "2. Im Dropdown 'Zeichensatz' die gewünschte Kodierung (ASCII, UTF-8, UTF-16LE/BE) auswählen.",
-        "3. Auf 'Text zu HEX' klicken, um die hexadezimale Repräsentation zu generieren.",
-        "4. HEX-Werte im Hexdump-Editor direkt modifizieren oder per 'HEX zu Text' konvertieren.",
-        "5. Die Option 'Swap Endianness' nutzen, um Byte-Reihenfolge bei 16-Bit-Werten umzukehren.",
-        "6. Export-Funktion verwenden, um bearbeitete Daten als Binärdatei herunterzuladen."
+        "1. Text in das Feld Text eingeben oder einfügen.",
+        "2. Auf In Hex klicken, um den Text als großgeschriebene Hex-Bytes mit Leerzeichen auszugeben.",
+        "3. Eine Hex-Sequenz in das Feld Hexadezimal einfügen, wenn vorhandene Daten dekodiert werden sollen.",
+        "4. Auf In Text klicken, um die Hex-Bytes wieder in Text umzuwandeln.",
+        "5. Kopieren neben einem Feld verwenden, um Text oder Hex-Ergebnis zu übernehmen."
       ],
       "usage_examples": [
-        "Validierung von PNG-Datei-Header-Signaturen durch direkte Hex-Bearbeitung.",
-        "Analyse von Memory-Dumps zur Fehlersuche in Embedded-System-Anwendungen.",
-        "Manuelle Überprüfung von SHA-256-Hash-Darstellungen im Hex-Format.",
-        "Modifikation von Netzwerkpaket-Payloads für Testzwecke im Hexdump-Editor."
+        "Beispiel 1: Einen kurzen API-Token oder Logwert für eine Debugging-Notiz in Hex-Bytes umwandeln.",
+        "Beispiel 2: Prüfen, ob eine Sequenz wie 48 65 6C 6C 6F als lesbarer Text dekodiert wird.",
+        "Beispiel 3: Vergleichen, wie Satzzeichen, Leerzeichen und Nicht-ASCII-Zeichen in UTF-8-Hex erscheinen.",
+        "Beispiel 4: Eine hexadezimale Zeichenfolge für Dokumentation oder Testdaten kopieren, ohne den Browser zu verlassen."
       ],
       "inputPlaceholder": "Hier den Text eingeben...",
       "hexEditor": {
@@ -22593,9 +22592,9 @@
     },
     "hex-editor": {
       "name": "Hex-Editor",
-      "description": "Konvertieren Sie zwischen Text und Hexadezimalzahl und zeigen Sie Byte-Daten an.",
+      "description": "Konvertieren Sie zwischen Text und hexadezimalen Bytes.",
       "seo_title": "Kostenloser Hex-Editor online",
-      "seo_description": "Konvertieren Sie online kostenlos Text in Hexadezimalzahl und Hexadezimalzahl in Text. Hex-Daten mit ASCII-Vorschau anzeigen und bearbeiten. Unverzichtbar für das Debuggen und die Binärdatenanalyse."
+      "seo_description": "Konvertieren Sie Text online kostenlos in UTF-8-Hex-Bytes und dekodieren Sie Hex wieder zu Text. Schnell im Browser für Debugging, Logs und Testdaten."
     },
     "color-palette": {
       "name": "Farbpaletten-Generator",

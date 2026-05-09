@@ -3577,23 +3577,22 @@
     },
     "hex-editor": {
       "name": "Editor de Hexadecimal",
-      "description": "Converta entre texto e hexadecimal, visualize dados de byte.",
+      "description": "Converta texto em bytes hexadecimais e de volta para texto.",
       "seo_title": "Editor de Hexadecimal Grátis Online",
-      "seo_description": "Converta texto para hexadecimal e vice-versa online de graça. Edite dados hex com pré-visualização ASCII. Essencial para depuração e análise de dados binários.",
-      "detailed_description": "O Hex Editor é uma ferramenta técnica projetada para conversão bidirecional entre representações textuais e hexadecimal, além de permitir a análise e manipulação de dados binários em nível de byte. Essa ferramenta é essencial para desenvolvedores que precisam inspecionar ou modificar arquivos binários, depurar protocolos de rede ou entender estruturas de dados complexas. Internamente, o editor utiliza codificações como ASCII, UTF-8 e ISO-8859-1 para mapear caracteres em seus equivalentes hexadecimais (ex: 'A' → 0x41) e vice-versa, mantendo consistência em sistemas com diferentes ordens de bytes (endianness). Sua interface renderiza dados em grades hexadecimais com suporte a edição direta, permitindo alterações precisas em sequências de bytes, úteis para tarefas como correção de checksums ou análise forense digital. Diferentemente de conversores genéricos, este editor suporta visualização de dados binários brutos em formato hexadecimal com opções de exportação em múltiplos formatos, incluindo arrays C ou scripts Python de reconstrução.",
+      "seo_description": "Converta texto em bytes hexadecimais UTF-8 e decodifique hexadecimal de volta para texto no navegador. Prático para logs, testes e depuração.",
+      "detailed_description": "O Hex Editor é um conversor de texto e hexadecimal executado no navegador para inspeções rápidas em nível de byte. Digite um texto para codificá-lo como bytes hexadecimais UTF-8 em maiúsculas, ou cole uma sequência hexadecimal para decodificá-la de volta para texto legível. O fluxo foi mantido simples de propósito: duas áreas de texto editáveis, botões claros de conversão e controles de cópia para cada lado. A ferramenta é útil para conferir payloads de API, valores em logs, strings de teste e exemplos de aprendizado sobre como caracteres aparecem como bytes hexadecimais. Todas as conversões rodam no navegador com APIs padrão de codificação e decodificação de texto, então os valores inseridos permanecem no dispositivo.",
       "usage_steps": [
-        "1. Acesse a página do Hex Editor através do menu da categoria 'Codificação'.",
-        "2. Cole ou digite o texto desejado no campo 'Texto de Entrada' localizado à esquerda da interface.",
-        "3. Clique no botão 'Converter para Hexadecimal' para gerar a representação em pares hexadecimais na grade central.",
-        "4. Edite manualmente os valores hexadecimais diretamente na grade, alterando bytes específicos conforme necessário.",
-        "5. Utilize o seletor de codificação para escolher entre ASCII, UTF-8 ou ISO-8859-1 antes de converter de volta para texto.",
-        "6. Exporte o resultado final usando a opção 'Exportar Bytes' para obter código-fonte ou arquivo binário ajustado."
+        "1. Digite ou cole texto no campo Texto.",
+        "2. Clique em Para Hex para codificar o texto como bytes hexadecimais em maiúsculas separados por espaços.",
+        "3. Cole uma sequência hexadecimal no campo Hexadecimal quando quiser decodificar um valor existente.",
+        "4. Clique em Para Texto para decodificar os bytes hexadecimais de volta para texto.",
+        "5. Use Copiar ao lado do campo desejado para copiar o texto ou o resultado hexadecimal."
       ],
       "usage_examples": [
-        "1. Correção de cabeçalho em arquivos de imagem corrompidos, como ajustar assinaturas PNG manualmente.",
-        "2. Análise de payloads em protocolos de rede personalizados, verificando padrões de bytes em requisições.",
-        "3. Estudo de diferença entre codificações: converter o caractere 'ç' para hex UTF-8 (0xC3 0xA7) versus ISO-8859-1 (0xE7).",
-        "4. Geração de scripts Python que reconstruem payloads binários a partir de valores hexadecimais editados."
+        "Exemplo 1: converter um token curto de API ou valor de log em bytes hexadecimais para uma nota de depuração.",
+        "Exemplo 2: confirmar que uma sequência como 48 65 6C 6C 6F representa texto legível.",
+        "Exemplo 3: comparar como pontuação, espaços e caracteres não ASCII aparecem em forma hexadecimal UTF-8.",
+        "Exemplo 4: copiar uma string codificada em hexadecimal para documentação ou fixtures de teste sem sair do navegador."
       ],
       "inputPlaceholder": "Insira o texto aqui...",
       "hexEditor": {
@@ -22612,9 +22611,9 @@
     },
     "hex-editor": {
       "name": "Editor hexadecimal",
-      "description": "Converta entre texto e hexadecimal, visualize dados de bytes.",
+      "description": "Converta texto em bytes hexadecimais e de volta para texto.",
       "seo_title": "Editor hexadecimal gratuito on-line",
-      "seo_description": "Converta texto em hexadecimal e hexadecimal em texto online gratuitamente. Visualize e edite dados hexadecimais com visualização ASCII. Essencial para depuração e análise de dados binários."
+      "seo_description": "Converta texto em bytes hexadecimais UTF-8 e decodifique hexadecimal de volta para texto no navegador. Prático para logs, testes e depuração."
     },
     "color-palette": {
       "name": "Gerador de Paleta de Cores",

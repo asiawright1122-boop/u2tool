@@ -7,7 +7,7 @@ import { assessSupportContentTrust } from '../../src/lib/content-trust.js';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '../..');
 const messagesRoot = path.join(repoRoot, 'src/messages');
-const toolsConfigPath = path.join(repoRoot, 'src/config/tools.ts');
+const toolsConfigDir = path.join(repoRoot, 'src/config/tools');
 const reportPath = path.join(repoRoot, 'docs/TOOL_CONTENT_TRUST_AUDIT_2026-05-05.md');
 
 const MINIMUMS = {
@@ -56,13 +56,24 @@ function getFaqs(messages) {
 }
 
 function readPopularToolSlugs() {
-  const source = readFileSync(toolsConfigPath, 'utf8');
   const popular = new Set();
-  const toolEntries = source.matchAll(/\{\s*slug:\s*'([^']+)'[\s\S]*?\}/g);
+  const toolConfigFiles = readdirSync(toolsConfigDir, { withFileTypes: true })
+    .filter((entry) =>
+      entry.isFile() &&
+      entry.name.endsWith('.ts') &&
+      !['categories.ts', 'index.ts', 'types.ts'].includes(entry.name)
+    )
+    .map((entry) => path.join(toolsConfigDir, entry.name))
+    .sort((a, b) => a.localeCompare(b));
 
-  for (const match of toolEntries) {
-    if (match[0].includes('popular: true')) {
-      popular.add(match[1]);
+  for (const filePath of toolConfigFiles) {
+    const source = readFileSync(filePath, 'utf8');
+    const toolEntries = source.matchAll(/\{\s*slug:\s*['"]([^'"]+)['"][\s\S]*?\}/g);
+
+    for (const match of toolEntries) {
+      if (/\bpopular:\s*true\b/.test(match[0])) {
+        popular.add(match[1]);
+      }
     }
   }
 

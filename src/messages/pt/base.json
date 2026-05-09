@@ -710,9 +710,9 @@
     },
     "hex-editor": {
       "name": "Editor hexadecimal",
-      "description": "Converta entre texto e hexadecimal, visualize dados de bytes.",
+      "description": "Converta texto em bytes hexadecimais e de volta para texto.",
       "seo_title": "Editor hexadecimal gratuito on-line",
-      "seo_description": "Converta texto em hexadecimal e hexadecimal em texto online gratuitamente. Visualize e edite dados hexadecimais com visualização ASCII. Essencial para depuração e análise de dados binários."
+      "seo_description": "Converta texto em bytes hexadecimais UTF-8 e decodifique hexadecimal de volta para texto no navegador. Prático para logs, testes e depuração."
     },
     "color-palette": {
       "name": "Gerador de Paleta de Cores",
@@ -4602,9 +4602,9 @@
     },
     "hex-editor": {
       "name": "Editor de Hexadecimal",
-      "description": "Converta entre texto e hexadecimal, visualize dados de byte.",
+      "description": "Converta texto em bytes hexadecimais e de volta para texto.",
       "seo_title": "Editor de Hexadecimal Grátis Online",
-      "seo_description": "Converta texto para hexadecimal e vice-versa online de graça. Edite dados hex com pré-visualização ASCII. Essencial para depuração e análise de dados binários.",
+      "seo_description": "Converta texto em bytes hexadecimais UTF-8 e decodifique hexadecimal de volta para texto no navegador. Prático para logs, testes e depuração.",
       "inputPlaceholder": "Insira o texto aqui..."
     },
     "color-palette": {

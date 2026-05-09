@@ -87,6 +87,33 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks Hex Editor UI overclaims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'hex-editor',
+      locale: 'en',
+      name: 'Hex Editor',
+      description: '',
+      detailedDescription:
+        'The interface displays data in a hexadecimal grid with offset addresses and lets users directly modify byte values.',
+      usageSteps: [
+        'Select UTF-16LE/BE and adjust endianness.',
+        'Export modified data using Download as Hex File.',
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toEqual(
+      expect.arrayContaining([
+        'hex-editor-grid-claim',
+        'hex-editor-byte-edit-claim',
+        'hex-editor-unsupported-encoding-claim',
+        'hex-editor-file-export-claim',
+      ])
+    );
+  });
+
   it('keeps scoped rules from blocking unrelated tools', () => {
     const report = assessSupportContentTrust({
       slug: 'timezone-converter',

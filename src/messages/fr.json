@@ -3577,23 +3577,22 @@
     },
     "hex-editor": {
       "name": "Éditeur Hexadécimal",
-      "description": "Convertir entre texte et hexadécimal, visualiser les données de octets.",
+      "description": "Convertissez du texte en octets hexadécimaux et inversement.",
       "seo_title": "Éditeur Hexadécimal Gratuit en Ligne",
-      "seo_description": "Convertissez le texte en hexadécimal et vice versa gratuitement en ligne. Visualisez et modifiez les données hexadécimales avec une prévisualisation ASCII. Essentiel pour le débogage et l'analyse de données binaires.",
-      "detailed_description": "L'éditeur hexadécimal permet une conversion bidirectionnelle entre les représentations textuelles et hexadécimales, tout en offrant une visualisation précise des données binaires au niveau du byte. Ce type d'outil est essentiel pour les développeurs manipulant des formats de fichiers binaires, des protocoles réseau ou des structures de données à faible niveau. Contrairement à des convertisseurs basiques, cet outil gère les encodages Unicode (UTF-8, UTF-16) et ASCII, avec une option pour basculer entre les modes little-endian et big-endian lors de l'interprétation des séquences d'octets. Il inclut également un mode d'édition en temps réel des valeurs hexadécimales, utile pour analyser ou modifier des dumps mémoire, des en-têtes de fichiers (comme les signatures PNG ou PDF), ou des trames réseau capturées via Wireshark. La conversion utilise des algorithmes de mappage direct des points de code Unicode vers leurs représentations hexadécimales, avec validation des séquences invalides. Une fonctionnalité clé est la visualisation des caractères non imprimables via leur notation caret (^A pour SOH, etc.), facilitant le débogage de flux binaires.",
+      "seo_description": "Convertissez du texte en octets hexadécimaux UTF-8 et décodez l'hexadécimal en texte dans le navigateur. Pratique pour les logs, tests et notes de débogage.",
+      "detailed_description": "L'éditeur hexadécimal est un convertisseur de texte et de valeurs hexadécimales exécuté dans le navigateur pour les vérifications rapides au niveau des octets. Saisissez du texte pour l'encoder en octets hexadécimaux UTF-8 en majuscules, ou collez une séquence hexadécimale pour la décoder en texte lisible. Le flux reste volontairement simple : deux zones de texte modifiables, des boutons de conversion explicites et des commandes de copie pour chaque côté. L'outil est pratique pour vérifier des payloads d'API, inspecter des valeurs de logs, préparer des chaînes de test ou montrer comment les caractères se représentent en octets hexadécimaux. Toutes les conversions s'effectuent dans le navigateur via les API standard d'encodage et de décodage de texte, afin que les valeurs saisies restent sur l'appareil.",
       "usage_steps": [
-        "Ouvrir l'éditeur hexadécimal via l'interface web et sélectionner l'onglet 'Convertir Texte → Hex'",
-        "Coller le texte brut dans la zone d'entrée et choisir l'encodage source (ASCII, UTF-8, UTF-16LE/BE) depuis le menu déroulant",
-        "Cliquer sur 'Convertir' pour générer la représentation hexadécimale par paquets de 2 octets",
-        "Basculer vers l'onglet 'Éditer Hex → Texte' et saisir manuellement une séquence hexadécimale (ex: 48656C6C6F)",
-        "Activer l'option 'Afficher non imprimables' pour visualiser les contrôles ASCII (CR, LF, NUL) dans le résultat",
-        "Télécharger le résultat au format .hex ou l'exporter vers un éditeur hexadécimal externe via l'API intégrée"
+        "1. Saisissez ou collez du texte dans le champ Texte.",
+        "2. Cliquez sur Vers hexadécimal pour encoder le texte en octets hexadécimaux en majuscules séparés par des espaces.",
+        "3. Collez une séquence hexadécimale dans le champ Hexadécimal lorsque vous souhaitez décoder une valeur existante.",
+        "4. Cliquez sur Vers texte pour décoder les octets hexadécimaux en texte.",
+        "5. Utilisez Copier à côté du champ voulu pour récupérer le texte ou le résultat hexadécimal."
       ],
       "usage_examples": [
-        "Analyser l'en-tête d'un fichier binaire pour identifier sa signature magique (ex: 504B0304 pour un ZIP)",
-        "Débuguer un payload MQTT en convertissant les flags d'octets de contrôle en valeurs décimales",
-        "Créer manuellement un fichier PCAP avec des trames Ethernet valides via l'édition hexadécimale",
-        "Corriger un fichier de configuration corrompu en modifiant ses octets UTF-8 invalides directement"
+        "Exemple 1 : convertir un court jeton d'API ou une valeur de log en octets hexadécimaux pour une note de débogage.",
+        "Exemple 2 : vérifier qu'une séquence comme 48 65 6C 6C 6F se décode en texte lisible.",
+        "Exemple 3 : comparer la représentation UTF-8 hexadécimale de la ponctuation, des espaces et des caractères non ASCII.",
+        "Exemple 4 : copier une chaîne encodée en hexadécimal dans une documentation ou un jeu de tests sans quitter le navigateur."
       ],
       "inputPlaceholder": "Entrez le texte ici...",
       "hexEditor": {
@@ -22578,9 +22577,9 @@
     },
     "hex-editor": {
       "name": "Éditeur hexadécimal",
-      "description": "Convertissez entre texte et hexadécimal, affichez les données en octets.",
+      "description": "Convertissez du texte en octets hexadécimaux et inversement.",
       "seo_title": "Éditeur hexadécimal gratuit en ligne",
-      "seo_description": "Convertissez gratuitement du texte en hexadécimal et en hexadécimal en texte en ligne. Affichez et modifiez les données hexadécimales avec l'aperçu ASCII. Indispensable pour le débogage et l’analyse des données binaires."
+      "seo_description": "Convertissez du texte en octets hexadécimaux UTF-8 et décodez l'hexadécimal en texte dans le navigateur. Pratique pour les logs, tests et notes de débogage."
     },
     "color-palette": {
       "name": "Générateur de palettes de couleurs",

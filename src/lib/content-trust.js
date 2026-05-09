@@ -146,6 +146,30 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     message: 'Claims image transcoding controls that are not present in the current Image to Base64 UI.',
     slugs: ['image-to-base64'],
   },
+  {
+    code: 'hex-editor-grid-claim',
+    pattern: /\bhex(?:adecimal)? grid\b|\b16-byte columnar\b|\boffset addresses\b|hex-дамп/i,
+    message: 'Claims a hex grid or dump view, but the current Hex Editor exposes two text areas and conversion buttons.',
+    slugs: ['hex-editor'],
+  },
+  {
+    code: 'hex-editor-byte-edit-claim',
+    pattern: /\bdirectly modify byte values\b|\bDouble-click any hex value\b|Измените отдельные байты/i,
+    message: 'Claims direct byte editing that is not present in the current Hex Editor UI.',
+    slugs: ['hex-editor'],
+  },
+  {
+    code: 'hex-editor-unsupported-encoding-claim',
+    pattern: /\bUTF-16LE\/BE\b|\bUTF-16BE\b|\bendianness\b|порядок байтов/i,
+    message: 'Claims encoding or byte-order controls that are not present in the current Hex Editor UI.',
+    slugs: ['hex-editor'],
+  },
+  {
+    code: 'hex-editor-file-export-claim',
+    pattern: /\bDownload as Hex File\b|Сохранить как \.bin/i,
+    message: 'Claims file export that is not present in the current Hex Editor UI.',
+    slugs: ['hex-editor'],
+  },
 ];
 
 /** @type {ContentTrustRule[]} */
