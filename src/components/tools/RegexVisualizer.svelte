@@ -1,6 +1,7 @@
 <script lang="ts">
   import { generateSvg, tokenizeRegex } from '@/lib/tool-stubs';
   import { sanitizeSvg } from '@/lib/sanitize';
+  import { collectRegexMatches } from '@/lib/regex-matching';
 
   interface Props {
     locale: string;
@@ -68,17 +69,11 @@
       
       // Find matches
       if (testString) {
-        const results: MatchResult[] = [];
-        let match;
-        while ((match = regex.exec(testString)) !== null) {
-          results.push({
-            match: match[0],
-            index: match.index,
-            groups: match.slice(1),
-          });
-          if (match[0].length === 0) break; // Prevent infinite loop
-        }
-        matches = results;
+        matches = collectRegexMatches(regex, testString).matches.map((match) => ({
+          match: match.match,
+          index: match.index,
+          groups: match.captures,
+        }));
       } else {
         matches = [];
       }

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { escapeHtmlAttribute } from '@/lib/sanitize';
+  import { collectRegexMatches, type RegexMatchResult } from '@/lib/regex-matching';
 
   interface Props {
     locale: string;
@@ -24,37 +25,27 @@
   let testString = $state('Contact us at hello@example.com or support@test.org for help.');
 
   let error = $state('');
+  let matches = $state<RegexMatchResult[]>([]);
 
-  let matches = $derived.by(() => {
-    if (!pattern) return [];
-    try {
-      const regex = new RegExp(pattern, flags);
+  $effect(() => {
+    const currentPattern = pattern;
+    const currentFlags = flags;
+    const currentTestString = testString;
+
+    if (!currentPattern) {
       error = '';
-      const results: { match: string; index: number; groups?: Record<string, string> }[] = [];
-      let match;
-      
-      if (flags.includes('g')) {
-        while ((match = regex.exec(testString)) !== null) {
-          results.push({
-            match: match[0],
-            index: match.index,
-            groups: match.groups,
-          });
-        }
-      } else {
-        match = regex.exec(testString);
-        if (match) {
-          results.push({
-            match: match[0],
-            index: match.index,
-            groups: match.groups,
-          });
-        }
-      }
-      return results;
+      matches = [];
+      return;
+    }
+
+    try {
+      const regex = new RegExp(currentPattern, currentFlags);
+      const result = collectRegexMatches(regex, currentTestString);
+      error = result.limited ? 'Showing the first 1000 matches.' : '';
+      matches = result.matches;
     } catch (_e) {
       error = (_e as Error).message;
-      return [];
+      matches = [];
     }
   });
 
