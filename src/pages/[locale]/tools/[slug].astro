@@ -35,7 +35,7 @@ import type { Locale } from '@/lib/i18n';
 import { loadBaseUiMessages, loadToolPageMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
-import { buildLocalizedPagePath, buildLocalizedPageUrl, getHreflang } from '@/lib/seo';
+import { buildLocalizedPagePath, buildLocalizedPageUrl, getHreflang, withBrand } from '@/lib/seo';
 import { sanitizeHtml } from '@/lib/sanitize';
 import { assessSupportContentTrust } from '@/lib/content-trust';
 import { buildSafeFallbackSupportContent } from '@/lib/support-content-fallback';
@@ -77,6 +77,7 @@ const comparisonUiCopy = getComparisonUiCopy(locale);
 const toolName = (messages.name as string) || tool.slug;
 const toolDescription = (messages.description as string) || '';
 const seoTitle = (messages.seo_title as string) || toolName;
+const brandedSeoTitle = withBrand(seoTitle);
 const seoDescription = (messages.seo_description as string) || toolDescription;
 const rawDetailedDescription = (messages.detailed_description as string) || '';
 const rawUsageSteps = messages.usage_steps as string[] | undefined;
@@ -310,7 +311,7 @@ const comparisonGuide = findComparisonGuideForTool(
 ---
 
 <BaseLayout
-  title={`${seoTitle} | U2Tool`}
+  title={seoTitle}
   description={seoDescription}
   locale={locale}
   canonicalPath={`/tools/${tool.slug}`}
@@ -338,7 +339,7 @@ const comparisonGuide = findComparisonGuideForTool(
   }} slot="head" />
 
   {/* OG meta tags */}
-  <meta property="og:title" content={`${seoTitle} | U2Tool`} slot="head" />
+  <meta property="og:title" content={brandedSeoTitle} slot="head" />
   <meta property="og:description" content={seoDescription} slot="head" />
   <meta property="og:image"
     content={`${BASE_URL}/og-default.svg`}
@@ -348,7 +349,7 @@ const comparisonGuide = findComparisonGuideForTool(
   <meta property="og:url" content={buildLocalizedPageUrl(BASE_URL, locale, `/tools/${tool.slug}`)} slot="head" />
   <meta property="og:site_name" content="U2Tool" slot="head" />
   <meta name="twitter:card" content="summary_large_image" slot="head" />
-  <meta name="twitter:title" content={`${seoTitle} | U2Tool`} slot="head" />
+  <meta name="twitter:title" content={brandedSeoTitle} slot="head" />
   <meta name="twitter:description" content={seoDescription} slot="head" />
   <meta name="twitter:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
 

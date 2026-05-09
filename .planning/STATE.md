@@ -5,19 +5,19 @@
 See: .planning/PROJECT.md (updated 2026-04-06)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** Phase 23 GSC evidence recovery triage is opening; production SEO gates are green, IndexNow has been submitted, and the next safe work is URL/query evidence classification before any further broad SEO edits.
+**Current focus:** Phase 23 GSC evidence recovery triage plans are executed; Coverage shapes are classified, Performance loss is split, and the next safe work is verify/ship followed by deeper Hex Editor and long-tail recovery inspection.
 
 ## Current Position
 
 Current Phase: 23
 Current Phase Name: GSC Evidence Recovery Triage
 Total Phases: 4
-Current Plan: 1
+Current Plan: 2
 Total Plans in Phase: 2
-Status: Phase 23 planned on 2026-05-06 after live production validation, cache eviction, multilingual JWT trust-copy cleanup, and GSC Coverage baseline reporting.
-Last Activity: 2026-05-06 - pushed CTR/JWT trust fixes, bumped HTML edge cache, passed rendered/search/growth/technical/sitemap/internal-link/content-trust checks, submitted 470 URLs through IndexNow, and created GSC Coverage recovery report/workbook/next-work artifacts.
-Progress: 0%
-Progress Bar: [----------] 0%
+Status: Phase 23 plans executed on 2026-05-09 after GSC Coverage and Performance exports were classified and the confirmed Gantt duplicate-brand title defect was patched.
+Last Activity: 2026-05-09 - generated Coverage and Performance recovery reports, confirmed legacy crawl-shape buckets are already coherently redirected/noindexed/canonicalized, patched tool detail branded titles, and added a rendered SEO regression check for Gantt.
+Progress: 100%
+Progress Bar: [##########] 100%
 
 ## Performance Metrics
 
@@ -103,8 +103,8 @@ Recent decisions affecting current work:
 ### Pending Todos
 
 - Isolate a clean commit/tag boundary if a formal `v0.0.6` release snapshot is still required
-- Export GSC Coverage drilldown URL CSVs for the P0/P1 issue buckets listed in `docs/GSC_NEXT_WORK_2026-05-06.md`.
-- Use GSC Performance page/query exports to split the remaining traffic problem into impressions, CTR, clicks, and average-position movement after Google recrawls the fixed production surfaces.
+- Verify and ship the Phase 23 evidence patch.
+- Continue the recovery queue with Hex Editor snippet/content inspection, then the next highest impression-loss pages (`iban-validator`, `typing-speed-test`, and Spanish word-count intent).
 
 ### Blockers/Concerns
 
@@ -118,8 +118,8 @@ Recent decisions affecting current work:
 
 ## Session
 
-Last Date: 2026-05-06
-Stopped At: Phase 23 is planned; the next blocker is exporting GSC Coverage drilldown URL samples and Performance page/query CSVs so recovery work can be evidence-led.
+Last Date: 2026-05-09
+Stopped At: Phase 23 plans are executed; the next blocker is verify/ship, then follow-up recovery work on the ranked page/query loss queue.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.

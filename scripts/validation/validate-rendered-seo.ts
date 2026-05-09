@@ -267,6 +267,14 @@ const checks: RenderedSeoCheck[] = [
     bodyMustNotInclude: ['seamless transformation'],
   },
   {
+    name: 'Gantt Chart Generator recovery title',
+    path: '/en/tools/gantt-chart-generator/',
+    titleIncludes: 'Gantt Chart',
+    descriptionIncludes: 'Gantt',
+    h1Includes: 'Gantt Chart Maker',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+  },
+  {
     name: 'Lorem Ipsum refreshed support content',
     path: '/en/tools/lorem-ipsum/',
     titleIncludes: 'Lorem',
@@ -409,6 +417,7 @@ async function validateCheck(check: RenderedSeoCheck): Promise<void> {
   const schemaTypes = extractJsonLdTypes(html);
 
   assert(title.includes(check.titleIncludes), `${check.name}: title missing "${check.titleIncludes}"`);
+  assert(!/\bU2Tool\s*\|\s*U2Tool\b/i.test(title), `${check.name}: title duplicates U2Tool brand`);
   assert(description.toLowerCase().includes(check.descriptionIncludes.toLowerCase()), `${check.name}: meta description missing "${check.descriptionIncludes}"`);
   if (check.h1Includes) {
     assert(h1Text.includes(check.h1Includes), `${check.name}: H1 "${h1Text}" missing "${check.h1Includes}"`);

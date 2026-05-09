@@ -6,7 +6,7 @@
 
 This milestone resumes growth after the `v0.0.6` trust-hardening cycle. The next cycle should reclaim natural-traffic momentum by selecting the next highest-yield unsupported authority/discovery gaps already latent in the catalog, shipping those surfaces from shared localized truth, promoting them across browse and AI discovery entry points, and governing the new growth layer through the canonical production gate.
 
-Status: milestone opened on 2026-04-06; Phase 20 completed on 2026-04-06 by selecting the `text` authority wave and implementing shared localized source truth; Phase 21 completed on 2026-04-06 by promoting that wave across browse, compare, AI discovery, `llms.txt`, and tools-index exports; Phase 22 completed on 2026-05-04 by adding production growth-surface governance, clearing stale HTML cache, and restoring the full production QA contract.
+Status: milestone opened on 2026-04-06; Phase 20 completed on 2026-04-06 by selecting the `text` authority wave and implementing shared localized source truth; Phase 21 completed on 2026-04-06 by promoting that wave across browse, compare, AI discovery, `llms.txt`, and tools-index exports; Phase 22 completed on 2026-05-04 by adding production growth-surface governance, clearing stale HTML cache, and restoring the full production QA contract; Phase 23 plans executed on 2026-05-09 by classifying GSC Coverage drilldowns, splitting Performance losses, and patching the confirmed Gantt title-brand defect.
 
 ### Phase 20: Authority Gap Prioritization and Shared Source Truth
 **Goal**: Select the next highest-yield unsupported authority wave and encode it in shared localized source-truth structures instead of ad hoc copy additions.
@@ -61,8 +61,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 23-01: Classify GSC Coverage URL drilldowns and identify systematic crawl/canonical/noindex/4xx patterns
-- [ ] 23-02: Split GSC Performance loss by page/query and patch only proven exposure or CTR bottlenecks
+- [x] 23-01: Classify GSC Coverage URL drilldowns and identify systematic crawl/canonical/noindex/4xx patterns
+- [x] 23-02: Split GSC Performance loss by page/query and patch only proven exposure or CTR bottlenecks
 
 ## Archived Milestones
 
