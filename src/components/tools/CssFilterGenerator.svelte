@@ -38,6 +38,16 @@
   let fileInputRef = $state(null);
 
   // Functions
+  const setBlur = (value: number) => blur = value;
+  const setBrightness = (value: number) => brightness = value;
+  const setContrast = (value: number) => contrast = value;
+  const setGrayscale = (value: number) => grayscale = value;
+  const setHueRotate = (value: number) => hueRotate = value;
+  const setInvert = (value: number) => invert = value;
+  const setSaturate = (value: number) => saturate = value;
+  const setSepia = (value: number) => sepia = value;
+  const setOpacity = (value: number) => opacity = value;
+
   function getFilterString(): string {
     const filters: string[] = [];
     if (blur !== 0) filters.push(`blur(${blur}px)`);

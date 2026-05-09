@@ -31,6 +31,13 @@
 
 </script>
 
+{#snippet StatCard(label: string, value: number)}
+  <div class="p-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-center">
+    <div class="text-2xl font-bold text-amber-600 dark:text-amber-400">{value}</div>
+    <div class="text-sm text-gray-600 dark:text-gray-300">{label}</div>
+  </div>
+{/snippet}
+
 
     <div class="space-y-4">
       <div>
@@ -42,12 +49,12 @@
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <StatCard label={t('wordCounter.words')} value={stats.words} />
-        <StatCard label={t('wordCounter.characters')} value={stats.characters} />
-        <StatCard label={t('wordCounter.characters')} value={stats.charactersNoSpaces} />
-        <StatCard label={t('wordCounter.sentences')} value={stats.sentences} />
-        <StatCard label={t('wordCounter.paragraphs')} value={stats.paragraphs} />
-        <StatCard label="Lines" value={stats.lines} />
+        {@render StatCard(t('wordCounter.words'), stats.words)}
+        {@render StatCard(t('wordCounter.characters'), stats.characters)}
+        {@render StatCard(t('wordCounter.characters'), stats.charactersNoSpaces)}
+        {@render StatCard(t('wordCounter.sentences'), stats.sentences)}
+        {@render StatCard(t('wordCounter.paragraphs'), stats.paragraphs)}
+        {@render StatCard('Lines', stats.lines)}
       </div>
 
       <button

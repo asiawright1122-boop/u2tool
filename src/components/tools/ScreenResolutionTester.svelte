@@ -33,6 +33,15 @@
 
   let customHeight = $state('');
 
+  const commonResolutions = [
+    { name: 'HD', width: 1280, height: 720 },
+    { name: 'Full HD', width: 1920, height: 1080 },
+    { name: 'QHD', width: 2560, height: 1440 },
+    { name: '4K UHD', width: 3840, height: 2160 },
+    { name: 'iPhone 15', width: 393, height: 852 },
+    { name: 'iPad', width: 820, height: 1180 },
+  ];
+
   $effect(() => {
     const updateInfo = () => {
       screenWidth = window.screen.width;

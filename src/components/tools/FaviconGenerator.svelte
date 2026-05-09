@@ -23,9 +23,11 @@
   dataUrl: string;
 }
 
-  let originalImage = $state(null);
+  const FAVICON_SIZES = [16, 24, 32, 48, 64, 128, 180, 192, 256, 512];
 
-  let favicons = $state([]);
+  let originalImage = $state<string | null>(null);
+
+  let favicons = $state<GeneratedFavicon[]>([]);
 
   let fileName = $state('');
 
@@ -33,9 +35,9 @@
 
   let selectedSizes = $state([16, 32, 48, 64]);
 
-  let timerRef = $state(null);
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);
 
-  let fileInputRef = $state(null);  onDestroy(() => {
+  let fileInputRef = $state<HTMLInputElement | null>(null);  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
 

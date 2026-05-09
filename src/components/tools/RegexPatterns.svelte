@@ -25,13 +25,22 @@
   example: string;
 }
 
+  const patterns: Pattern[] = [
+    { name: 'email', pattern: '^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$', description: 'Email address', example: 'hello@example.com' },
+    { name: 'url', pattern: 'https?:\\/\\/[^\\s]+', description: 'HTTP or HTTPS URL', example: 'https://example.com' },
+    { name: 'phone', pattern: '^\\+?[0-9\\s().-]{7,}$', description: 'Phone number', example: '+1 555 0100' },
+    { name: 'ipv4', pattern: '^(?:\\d{1,3}\\.){3}\\d{1,3}$', description: 'IPv4 address', example: '192.168.1.1' },
+    { name: 'hexColor', pattern: '^#(?:[0-9a-fA-F]{3}){1,2}$', description: 'Hex color', example: '#ffcc00' },
+    { name: 'uuid', pattern: '^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$', description: 'UUID', example: '550e8400-e29b-41d4-a716-446655440000' },
+  ];
+
   let testInput = $state('');
 
-  let selectedPattern = $state(null);
+  let selectedPattern = $state<Pattern | null>(null);
 
   let copied = $state('');
 
-  let timerRef = $state(null);  onDestroy(() => {
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
 
@@ -39,15 +48,16 @@
   function copyPattern(pattern: string) {
     navigator.clipboard.writeText(pattern);
     copied = pattern;
-    setTimeout(() => copied = '', 2000);
+    if (timerRef) clearTimeout(timerRef);
+    timerRef = setTimeout(() => copied = '', 2000);
   }
   function testPattern(pattern: Pattern) {
     selectedPattern = pattern;
     testInput = pattern.example;
   }
-  const isMatch = selectedPattern && testInput
+  let isMatch = $derived(selectedPattern && testInput
     ? new RegExp(selectedPattern.pattern).test(testInput)
-    : null;
+    : null);
 
 </script>
 

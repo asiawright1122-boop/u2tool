@@ -19,6 +19,8 @@
 
   let format = $state('code128');
 
+  let bars = $derived(generateCode128(text));
+
   // Functions
   function generateCode128(data: string): string {
     const patterns: Record<string, string> = {
@@ -55,7 +57,9 @@
         <!-- 白色背景确保条码可读 -->
         <rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
         {#each bars.split('') as b, i (i)}
-b === '1' && <rect  x={i * 2} y="10" width="2" height="80" fill="black"></rect>
+          {#if b === '1'}
+            <rect x={i * 2} y="10" width="2" height="80" fill="black"></rect>
+          {/if}
 {/each}
       </svg>
 {/snippet}

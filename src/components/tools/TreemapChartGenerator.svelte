@@ -359,6 +359,34 @@
   }
 </script>
 
+{#snippet renderNodeList(nodes: TreemapNode[], depth = 0)}
+  {#each nodes as node (node.id)}
+    {@const percent = total > 0 ? Math.round((node.value / total) * 100) : 0}
+    <div class="py-1 border-b border-gray-200 dark:border-gray-800 last:border-b-0" style={`margin-left: ${depth * 14}px`}>
+      <div class="flex items-center gap-2">
+        <input
+          class="flex-1 min-w-0 rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-2 py-1 text-xs"
+          value={node.name}
+          oninput={(event) => updateNode(node.id, "name", event.currentTarget.value)}
+        />
+        <input
+          class="w-20 rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-2 py-1 text-xs"
+          type="number"
+          min="0"
+          value={node.value}
+          oninput={(event) => updateNode(node.id, "value", event.currentTarget.value)}
+        />
+        <span class="w-12 text-xs text-gray-500">{percent}%</span>
+        <button class="text-xs text-amber-600 hover:text-amber-700" onclick={() => addNode(node.id)}>+</button>
+        <button class="text-xs text-red-500 hover:text-red-600" onclick={() => deleteNode(node.id)}>x</button>
+      </div>
+      {#if node.children && node.children.length > 0}
+        {@render renderNodeList(node.children, depth + 1)}
+      {/if}
+    </div>
+  {/each}
+{/snippet}
+
 <div class="space-y-4">
   <!-- 工具栏 -->
   <div class="flex flex-wrap gap-2">
@@ -536,7 +564,7 @@
             <span class="w-12">%</span>
             <span class="w-12"></span>
           </div>
-          {renderNodeList(data)}
+          {@render renderNodeList(data)}
         </div>
       </div>
     </div>

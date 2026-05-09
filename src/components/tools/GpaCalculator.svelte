@@ -35,6 +35,8 @@
   grade: string;
 }
 
+  const GRADES = ['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D', 'F'];
+
   let scale = $state('4.0');
 
   let courses = $state([

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
-  import { emojiData } from '@/lib/tool-stubs';
+  import { emojiData as stubEmojiData } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -25,6 +25,32 @@
   name: string;
   category: EmojiCategory;
 }
+
+  const fallbackEmojiData: Emoji[] = [
+    { emoji: '😀', name: 'grinning face', category: 'smileys' },
+    { emoji: '😂', name: 'face with tears of joy', category: 'smileys' },
+    { emoji: '👍', name: 'thumbs up', category: 'people' },
+    { emoji: '👏', name: 'clapping hands', category: 'people' },
+    { emoji: '🐶', name: 'dog face', category: 'animals' },
+    { emoji: '🍕', name: 'pizza', category: 'food' },
+    { emoji: '✈️', name: 'airplane', category: 'travel' },
+    { emoji: '⚽', name: 'soccer ball', category: 'activities' },
+    { emoji: '💡', name: 'light bulb', category: 'objects' },
+    { emoji: '✅', name: 'check mark', category: 'symbols' },
+    { emoji: '🇺🇸', name: 'flag us', category: 'flags' },
+  ];
+  const emojiData: Emoji[] = Array.isArray(stubEmojiData) && stubEmojiData.length > 0 ? stubEmojiData : fallbackEmojiData;
+  const categoryIcons: Record<EmojiCategory, string> = {
+    smileys: '😀',
+    people: '👍',
+    animals: '🐶',
+    food: '🍕',
+    travel: '✈️',
+    activities: '⚽',
+    objects: '💡',
+    symbols: '✅',
+    flags: '🏳️',
+  };
 
   let search = $state('');
 

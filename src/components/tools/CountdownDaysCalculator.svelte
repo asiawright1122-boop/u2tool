@@ -138,86 +138,73 @@
 
 </script>
 
+<div class="space-y-6">
+  <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+      <input bind:value={newName} placeholder={t('eventName')} class="px-4 py-2 border rounded bg-white dark:bg-gray-900" />
+      <input type="date" bind:value={newDate} class="px-4 py-2 border rounded bg-white dark:bg-gray-900" />
+      <button onclick={addCountdown} class="px-4 py-2 bg-amber-600 text-white rounded-lg flex items-center justify-center gap-2">
+        <Plus class="w-4 h-4" /> {t('addCountdown')}
+      </button>
+    </div>
+    <div class="flex flex-wrap gap-2 mt-3">
+      {#each quickAddPresets as preset (preset.name)}
+        <button
+          onclick={() => { newName = preset.name; newDate = preset.getDate(); }}
+          class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded text-sm"
+        >
+          {preset.name}
+        </button>
+      {/each}
+    </div>
+  </div>
 
-              <div
-                class={`p-4 rounded-lg border ${
-                  result.isPast
-                    ? 'bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700'
-                    : 'bg-gradient-to-r from-amber-50 to-slate-50 dark:from-amber-900/20 dark:to-slate-900/20 border-amber-200 dark:border-amber-800'
-                }`}
-              >
-                <div class="flex items-start justify-between mb-4">
-                  <div>
-                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
-                      {countdown.name}
-                    </h4>
-                    <div class="flex items-center gap-2 text-sm text-gray-500">
-                      <Calendar class="w-4 h-4" />
-                      {new Date(countdown.targetDate).toLocaleDateString('en-US', {
-                        weekday: 'long',
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric',
-                      })}
-                    </div>
-                  </div>
-                  <button
-                    onclick={() => removeCountdown(countdown.id)}
-                    class="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg"
-                  >
-                    <Trash2 class="w-4 h-4" />
-                  </button>
-                </div>
+  {#if countdowns.length === 0}
+    <div class="p-6 text-center bg-gray-50 dark:bg-gray-800 rounded-lg text-gray-600 dark:text-gray-300">
+      <Clock class="w-8 h-8 mx-auto mb-2" />
+      {t('emptyState')}
+    </div>
+  {/if}
 
-                <!-- Main Counter -->
-                <div class="text-center mb-4">
-                  <div class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-slate-500">
-                    {result.isPast ? '-' : ''}{result.totalDays}
-                  </div>
-                  <div class="text-gray-500">{t('days')}</div>
-                </div>
+  <div class="space-y-4">
+    {#each countdowns as countdown (countdown.id)}
+      {@const result = calculateCountdown(countdown.targetDate)}
+      <div
+        class={`p-4 rounded-lg border ${
+          result.isPast
+            ? 'bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700'
+            : 'bg-gradient-to-r from-amber-50 to-slate-50 dark:from-amber-900/20 dark:to-slate-900/20 border-amber-200 dark:border-amber-800'
+        }`}
+      >
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">{countdown.name}</h4>
+            <div class="flex items-center gap-2 text-sm text-gray-500">
+              <Calendar class="w-4 h-4" />
+              {new Date(countdown.targetDate).toLocaleDateString(locale)}
+            </div>
+          </div>
+          <button onclick={() => removeCountdown(countdown.id)} class="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg">
+            <Trash2 class="w-4 h-4" />
+          </button>
+        </div>
 
-                <!-- Detailed Breakdown -->
-                <div class="grid grid-cols-4 md:grid-cols-7 gap-2 text-center">
-                  {#if result.years > 0}
-<div class="p-2 bg-white dark:bg-gray-800 rounded-lg">
-                      <div class="text-xl font-bold text-gray-900 dark:text-white">{result.years}</div>
-                      <div class="text-xs text-gray-500">{t('years')}</div>
-                    </div>
-{/if}
-                  {#if result.years > 0 || result.months > 0}
-<div class="p-2 bg-white dark:bg-gray-800 rounded-lg">
-                      <div class="text-xl font-bold text-gray-900 dark:text-white">{result.months}</div>
-                      <div class="text-xs text-gray-500">{t('months')}</div>
-                    </div>
-{/if}
-                  <div class="p-2 bg-white dark:bg-gray-800 rounded-lg">
-                    <div class="text-xl font-bold text-gray-900 dark:text-white">{result.weeks}</div>
-                    <div class="text-xs text-gray-500">{t('weeks')}</div>
-                  </div>
-                  <div class="p-2 bg-white dark:bg-gray-800 rounded-lg">
-                    <div class="text-xl font-bold text-gray-900 dark:text-white">{result.days}</div>
-                    <div class="text-xs text-gray-500">{t('daysShort')}</div>
-                  </div>
-                  <div class="p-2 bg-white dark:bg-gray-800 rounded-lg">
-                    <div class="text-xl font-bold text-gray-900 dark:text-white">{result.hours}</div>
-                    <div class="text-xs text-gray-500">{t('hours')}</div>
-                  </div>
-                  <div class="p-2 bg-white dark:bg-gray-800 rounded-lg">
-                    <div class="text-xl font-bold text-gray-900 dark:text-white">{result.minutes}</div>
-                    <div class="text-xs text-gray-500">{t('minutes')}</div>
-                  </div>
-                  <div class="p-2 bg-white dark:bg-gray-800 rounded-lg">
-                    <div class="text-xl font-bold text-gray-900 dark:text-white">{result.seconds}</div>
-                    <div class="text-xs text-gray-500">{t('seconds')}</div>
-                  </div>
-                </div>
+        <div class="text-center mb-4">
+          <div class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-slate-500">
+            {result.isPast ? '-' : ''}{result.totalDays}
+          </div>
+          <div class="text-gray-500">{t('days')}</div>
+        </div>
 
-                <!-- Status -->
-                {#if result.isPast}
-<div class="mt-4 text-center text-gray-500">
-                    {t('eventPassed')}
-                  </div>
-{/if}
-              </div>
-            
+        <div class="grid grid-cols-3 md:grid-cols-6 gap-2 text-center">
+          <div class="p-2 bg-white dark:bg-gray-800 rounded-lg"><div class="text-xl font-bold">{result.months}</div><div class="text-xs text-gray-500">{t('months')}</div></div>
+          <div class="p-2 bg-white dark:bg-gray-800 rounded-lg"><div class="text-xl font-bold">{result.weeks}</div><div class="text-xs text-gray-500">{t('weeks')}</div></div>
+          <div class="p-2 bg-white dark:bg-gray-800 rounded-lg"><div class="text-xl font-bold">{result.days}</div><div class="text-xs text-gray-500">{t('daysShort')}</div></div>
+          <div class="p-2 bg-white dark:bg-gray-800 rounded-lg"><div class="text-xl font-bold">{result.hours}</div><div class="text-xs text-gray-500">{t('hours')}</div></div>
+          <div class="p-2 bg-white dark:bg-gray-800 rounded-lg"><div class="text-xl font-bold">{result.minutes}</div><div class="text-xs text-gray-500">{t('minutes')}</div></div>
+          <div class="p-2 bg-white dark:bg-gray-800 rounded-lg"><div class="text-xl font-bold">{result.seconds}</div><div class="text-xs text-gray-500">{t('seconds')}</div></div>
+        </div>
+      </div>
+    {/each}
+  </div>
+</div>

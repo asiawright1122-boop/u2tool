@@ -74,14 +74,58 @@
 
 </script>
 
+<div class="space-y-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
+      <label class="tool-label">{t('width')}</label>
+      <input
+        type="number"
+        value={width}
+        oninput={(event) => handleWidthChange(event.currentTarget.value)}
+        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800"
+      />
+    </div>
+    <div>
+      <label class="tool-label">{t('height')}</label>
+      <input
+        type="number"
+        value={height}
+        oninput={(event) => handleHeightChange(event.currentTarget.value)}
+        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800"
+      />
+    </div>
+  </div>
 
-                  <div
-                    class={`p-2 rounded ${matches ? 'bg-green-100 dark:bg-green-900/30' : ''}`}
-                  >
-                    <span class="font-medium">{res.name}</span>
-                    <span class="text-gray-500 ml-2">{res.w}×{res.h}</span>
-                    {#if matches}
-<span class="ml-2">✓</span>
-{/if}
-                  </div>
-                
+  {#if result}
+    <div class="p-5 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+      <div class="text-sm text-gray-600 dark:text-gray-300">{t('ratio')}</div>
+      <div class="text-3xl font-bold text-amber-600 dark:text-amber-400">
+        {result.ratioWidth}:{result.ratioHeight}
+      </div>
+      <div class="text-sm text-gray-600 dark:text-gray-300 mt-1">
+        {width} x {height}
+      </div>
+    </div>
+  {/if}
+
+  <div class="flex flex-wrap gap-2">
+    <button onclick={lockCurrentRatio} class="px-4 py-2 bg-amber-600 text-white rounded-lg">{t('lockRatio')}</button>
+    <button onclick={unlockRatio} class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-lg">{t('unlockRatio')}</button>
+  </div>
+
+  <div>
+    <label class="tool-label">{t('presets')}</label>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+      {#each [
+        { name: '16:9', width: 16, height: 9 },
+        { name: '4:3', width: 4, height: 3 },
+        { name: '1:1', width: 1, height: 1 },
+        { name: '3:2', width: 3, height: 2 },
+      ] as preset (preset.name)}
+        <button onclick={() => applyPreset(preset)} class="p-2 rounded bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">
+          {preset.name}
+        </button>
+      {/each}
+    </div>
+  </div>
+</div>

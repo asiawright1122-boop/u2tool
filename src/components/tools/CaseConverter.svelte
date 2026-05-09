@@ -51,17 +51,28 @@
 
 </script>
 
+<div class="space-y-6">
+  <textarea
+    bind:value={input}
+    class="w-full h-40 px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white"
+    placeholder={tg('inputPlaceholder')}
+  ></textarea>
 
-              <div class="p-3 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
-                <div class="flex justify-between items-center mb-2">
-                  <span class="text-sm font-medium text-amber-600 dark:text-amber-400">{label}</span>
-                  <button
-                    onclick={() => copyResult(id, result)}
-                    class={`text-xs px-2 py-1 rounded ${copied === id ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
-                  >
-                    {copied === id ? tg('copied') : tg('copy')}
-                  </button>
-                </div>
-                <div class="text-sm break-all text-gray-900 dark:text-gray-100">{result}</div>
-              </div>
-            
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+    {#each conversions as conversion (conversion.id)}
+      {@const result = conversion.fn(input)}
+      <div class="p-3 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-sm font-medium text-amber-600 dark:text-amber-400">{conversion.label}</span>
+          <button
+            onclick={() => copyResult(conversion.id, result)}
+            class={`text-xs px-2 py-1 rounded ${copied === conversion.id ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
+          >
+            {copied === conversion.id ? tg('copied') : tg('copy')}
+          </button>
+        </div>
+        <div class="text-sm break-all text-gray-900 dark:text-gray-100">{result}</div>
+      </div>
+    {/each}
+  </div>
+</div>

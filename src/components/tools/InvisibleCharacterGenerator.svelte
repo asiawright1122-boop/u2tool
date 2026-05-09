@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
-  import { invisibleChars } from '@/lib/tool-stubs';
+  import { invisibleChars as stubInvisibleChars } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -17,6 +17,15 @@
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
     return typeof value === 'string' ? value : `MISSING: tools.invisible-character-generator.${key}`;
   }
+
+  const fallbackInvisibleChars = [
+    { name: 'Zero Width Space', unicode: 'U+200B', code: '\u200B', description: 'Invisible word break character' },
+    { name: 'Zero Width Non-Joiner', unicode: 'U+200C', code: '\u200C', description: 'Prevents joining in scripts' },
+    { name: 'Zero Width Joiner', unicode: 'U+200D', code: '\u200D', description: 'Joins adjacent characters' },
+    { name: 'Word Joiner', unicode: 'U+2060', code: '\u2060', description: 'Prevents line breaks' },
+    { name: 'Non-breaking Space', unicode: 'U+00A0', code: '\u00A0', description: 'Space that does not wrap' },
+  ];
+  const invisibleChars = Array.isArray(stubInvisibleChars) && stubInvisibleChars.length > 0 ? stubInvisibleChars : fallbackInvisibleChars;
 
   let selectedChar = $state(invisibleChars[0]);
 

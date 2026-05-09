@@ -8,7 +8,8 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tool']['wordToTxt'] as Record<string, unknown> || {};
+    const toolTranslations = translations['tool'] as Record<string, unknown> | undefined;
+    const scope = (toolTranslations?.['wordToTxt'] as Record<string, unknown> | undefined) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }

@@ -141,6 +141,13 @@
   });
 
   // Functions
+  const COMMON_DISTANCES = [
+    { name: '5K', km: 5 },
+    { name: '10K', km: 10 },
+    { name: 'Half Marathon', km: 21.0975 },
+    { name: 'Marathon', km: 42.195 },
+  ];
+
   function setCommonDistance(km: number) {
     const dist = unit === 'km' ? km : km / 1.60934;
     distance = dist.toFixed(2);
@@ -226,7 +233,7 @@
             <div class="flex flex-wrap gap-2">
               {#each COMMON_DISTANCES as d (d.name)}
 <button 
-                  onclick={() => commonDistance = d.km}
+                  onclick={() => setCommonDistance(d.km)}
                   class="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 rounded hover:bg-gray-300 dark:hover:bg-gray-600"
                 >
                   {d.name}

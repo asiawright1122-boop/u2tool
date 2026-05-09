@@ -106,6 +106,18 @@
 
 </script>
 
+{#snippet ResultCard(label: string, value: string, id: string, copied: string | null, oncopy: (value: string, id: string) => void, copyLabel: string)}
+  <div class="p-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+    <div class="flex items-center justify-between gap-3 mb-2">
+      <span class="text-sm text-gray-600 dark:text-gray-300">{label}</span>
+      <button onclick={() => oncopy(value, id)} class="text-xs px-2 py-1 rounded bg-gray-200 dark:bg-gray-700">
+        {copied === id ? '✓' : copyLabel}
+      </button>
+    </div>
+    <div class="text-xl font-mono font-semibold text-gray-900 dark:text-white break-all">{value}</div>
+  </div>
+{/snippet}
+
 
     <div class="space-y-6">
       <!-- 输入区域 -->
@@ -156,94 +168,31 @@
       <!-- 统计结果 -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <!-- 平均值 -->
-        <ResultCard
-          label={t('stats.mean')}
-          value={formatNumber(mean)}
-          id="mean"
-          copied={copied}
-          oncopy={copyResult}
-          copyLabel={t('copy')}
-        />
+        {@render ResultCard(t('stats.mean'), formatNumber(mean), 'mean', copied, copyResult, t('copy'))}
 
         <!-- 中位数 -->
-        <ResultCard
-          label={t('stats.median')}
-          value={formatNumber(median)}
-          id="median"
-          copied={copied}
-          oncopy={copyResult}
-          copyLabel={t('copy')}
-        />
+        {@render ResultCard(t('stats.median'), formatNumber(median), 'median', copied, copyResult, t('copy'))}
 
         <!-- 众数 -->
-        <ResultCard
-          label={t('stats.mode')}
-          value={mode.length > 0 ? mode.map(formatNumber).join(', ') : t('stats.noMode')}
-          id="mode"
-          copied={copied}
-          oncopy={copyResult}
-          copyLabel={t('copy')}
-        />
+        {@render ResultCard(t('stats.mode'), mode.length > 0 ? mode.map(formatNumber).join(', ') : t('stats.noMode'), 'mode', copied, copyResult, t('copy'))}
 
         <!-- 总和 -->
-        <ResultCard
-          label={t('stats.sum')}
-          value={formatNumber(sum)}
-          id="sum"
-          copied={copied}
-          oncopy={copyResult}
-          copyLabel={t('copy')}
-        />
+        {@render ResultCard(t('stats.sum'), formatNumber(sum), 'sum', copied, copyResult, t('copy'))}
 
         <!-- 最小值 -->
-        <ResultCard
-          label={t('stats.min')}
-          value={formatNumber(min)}
-          id="min"
-          copied={copied}
-          oncopy={copyResult}
-          copyLabel={t('copy')}
-        />
+        {@render ResultCard(t('stats.min'), formatNumber(min), 'min', copied, copyResult, t('copy'))}
 
         <!-- 最大值 -->
-        <ResultCard
-          label={t('stats.max')}
-          value={formatNumber(max)}
-          id="max"
-          copied={copied}
-          oncopy={copyResult}
-          copyLabel={t('copy')}
-        />
+        {@render ResultCard(t('stats.max'), formatNumber(max), 'max', copied, copyResult, t('copy'))}
 
         <!-- 范围 -->
-        <ResultCard
-          label={t('stats.range')}
-          value={formatNumber(range)}
-          id="range"
-          copied={copied}
-          oncopy={copyResult}
-          copyLabel={t('copy')}
-        />
+        {@render ResultCard(t('stats.range'), formatNumber(range), 'range', copied, copyResult, t('copy'))}
 
         <!-- 方差 -->
-        <ResultCard
-          label={isPopulation ? t('stats.populationVariance') : t('stats.sampleVariance')}
-          value={formatNumber(variance)}
-          id="variance"
-          copied={copied}
-          oncopy={copyResult}
-          copyLabel={t('copy')}
-        />
+        {@render ResultCard(isPopulation ? t('stats.populationVariance') : t('stats.sampleVariance'), formatNumber(variance), 'variance', copied, copyResult, t('copy'))}
 
         <!-- 标准差 -->
-        <ResultCard
-          label={isPopulation ? t('stats.populationStdDev') : t('stats.sampleStdDev')}
-          value={formatNumber(stdDev)}
-          id="stddev"
-          copied={copied}
-          oncopy={copyResult}
-          copyLabel={t('copy')}
-        />
+        {@render ResultCard(isPopulation ? t('stats.populationStdDev') : t('stats.sampleStdDev'), formatNumber(stdDev), 'stddev', copied, copyResult, t('copy'))}
       </div>
     </div>
   

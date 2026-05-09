@@ -50,6 +50,27 @@
 
 </script>
 
+{#snippet PlatformCard(platform: PlatformSizes, onCopy: (size: ImageSize) => void, translate: (key: string) => string)}
+  <div class="p-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+    <div class="flex items-center gap-2 mb-3">
+      <span class="text-2xl">{platform.icon}</span>
+      <h3 class="font-semibold text-gray-900 dark:text-white">{platform.platform}</h3>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+      {#each platform.sizes as size (size.name)}
+        <button
+          onclick={() => onCopy(size)}
+          class="flex items-center justify-between gap-3 p-3 bg-white dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-700 text-left hover:border-amber-500"
+          title={translate('copy')}
+        >
+          <span class="text-sm text-gray-700 dark:text-gray-300">{size.name}</span>
+          <span class="font-mono text-sm text-amber-600 dark:text-amber-400">{size.width} x {size.height}</span>
+        </button>
+      {/each}
+    </div>
+  </div>
+{/snippet}
+
 
     <div class="space-y-6">
       <!-- Search -->
@@ -94,7 +115,7 @@
       <div class="space-y-6">
         {#each filteredPlatforms
           .filter(p => !selectedPlatform || p.platform === selectedPlatform) as platform (platform.platform)}
-<PlatformCard  platform={platform} oncopy={copySize} t={t} />
+          {@render PlatformCard(platform, copySize, t)}
 {/each}
       </div>
     </div>

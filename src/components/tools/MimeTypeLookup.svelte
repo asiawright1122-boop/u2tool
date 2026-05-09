@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { commonMimeTypes } from '@/lib/tool-stubs';
+  import { commonMimeTypes as stubMimeTypes } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -17,14 +17,32 @@
     return typeof value === 'string' ? value : `MISSING: tools.${key}`;
   }
 
+  const fallbackMimeTypes = [
+    { ext: '.html', mime: 'text/html', desc: 'HTML document' },
+    { ext: '.css', mime: 'text/css', desc: 'Cascading Style Sheet' },
+    { ext: '.js', mime: 'application/javascript', desc: 'JavaScript file' },
+    { ext: '.json', mime: 'application/json', desc: 'JSON data' },
+    { ext: '.png', mime: 'image/png', desc: 'PNG image' },
+    { ext: '.jpg', mime: 'image/jpeg', desc: 'JPEG image' },
+    { ext: '.pdf', mime: 'application/pdf', desc: 'PDF document' },
+  ];
+
+  const commonMimeTypes = ((Array.isArray(stubMimeTypes) && stubMimeTypes.length > 0 ? stubMimeTypes : fallbackMimeTypes) as Array<Record<string, string>>)
+    .map((item) => ({
+      ext: item.ext || item.extension || '',
+      mime: item.mime || item.type || '',
+      desc: item.desc || item.description || item.mime || item.type || '',
+    }))
+    .filter((item) => item.ext && item.mime);
+
   let search = $state('');
 
   // Functions
-  const filtered = commonMimeTypes.filter(item => 
+  let filtered = $derived(commonMimeTypes.filter(item =>
     item.ext.toLowerCase().includes(search.toLowerCase()) || 
     item.mime.toLowerCase().includes(search.toLowerCase()) ||
     item.desc.toLowerCase().includes(search.toLowerCase())
-  );
+  ));
 
 </script>
 

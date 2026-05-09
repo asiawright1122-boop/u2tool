@@ -8,7 +8,8 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tool']['csvToExcel'] as Record<string, unknown> || {};
+    const toolTranslations = translations['tool'] as Record<string, unknown> | undefined;
+    const scope = (toolTranslations?.['csvToExcel'] as Record<string, unknown> | undefined) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -86,8 +87,8 @@
       const wb = XLSX.utils.book_new();
       XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
       XLSX.writeFile(wb, fileName.replace('.csv', '.xlsx'));
-    } catch (error) {
-      console.error('Failed to export Excel:', error);
+    } catch (exportError) {
+      console.error('Failed to export Excel:', exportError);
       error = t('errorExport');
     }
   }

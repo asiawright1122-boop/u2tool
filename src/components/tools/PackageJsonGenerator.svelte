@@ -31,6 +31,15 @@
   command: string;
 }
 
+  const LICENSES = ['MIT', 'Apache-2.0', 'GPL-3.0', 'BSD-3-Clause', 'ISC', 'UNLICENSED'];
+  const COMMON_SCRIPTS: Script[] = [
+    { name: 'dev', command: 'vite --host 0.0.0.0' },
+    { name: 'build', command: 'vite build' },
+    { name: 'start', command: 'node index.js' },
+    { name: 'lint', command: 'eslint .' },
+    { name: 'test', command: 'vitest run' },
+  ];
+
   let packageInfo = $state({
     name: 'my-project',
     version: '1.0.0',

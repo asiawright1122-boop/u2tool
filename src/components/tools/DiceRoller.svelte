@@ -1,7 +1,5 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
-  import { diceConfig } from '@/lib/tool-stubs';
-
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -34,7 +32,17 @@
   timestamp: number;
 }
 
-  let selectedDice = $state('d6');
+  const diceConfig: Record<DiceType, { sides: number; icon: string; color: string }> = {
+    d4: { sides: 4, icon: 'd4', color: 'from-sky-500 to-blue-600' },
+    d6: { sides: 6, icon: 'd6', color: 'from-amber-500 to-orange-600' },
+    d8: { sides: 8, icon: 'd8', color: 'from-emerald-500 to-green-600' },
+    d10: { sides: 10, icon: 'd10', color: 'from-purple-500 to-violet-600' },
+    d12: { sides: 12, icon: 'd12', color: 'from-pink-500 to-rose-600' },
+    d20: { sides: 20, icon: 'd20', color: 'from-indigo-500 to-blue-700' },
+    d100: { sides: 100, icon: 'd100', color: 'from-slate-500 to-gray-700' },
+  };
+
+  let selectedDice = $state<DiceType>('d6');
 
   let diceCount = $state('1');
 
@@ -42,11 +50,11 @@
 
   let isRolling = $state(false);
 
-  let currentResult = $state(null);
+  let currentResult = $state<RollResult | null>(null);
 
-  let history = $state([]);
+  let history = $state<RollResult[]>([]);
 
-  let timerRef = $state(null);  onDestroy(() => {
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
 
@@ -58,7 +66,7 @@
     
     isRolling = true;
 
-    setTimeout(() => {
+    timerRef = setTimeout(() => {
       const results: number[] = [];
       for (let i = 0; i < count; i++) {
         results.push(Math.floor(Math.random() * config.sides) + 1);

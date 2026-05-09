@@ -26,6 +26,8 @@
   let viewportHeight = $state('1080');
 
   // Functions
+  const UNITS = ['px', 'rem', 'em', 'pt', 'vw', 'vh', '%'];
+
   function convert(toUnit: string): string {
     const val = parseFloat(value);
     const base = parseFloat(baseFontSize);
