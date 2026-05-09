@@ -29,6 +29,7 @@ import {
   generateRuby as runtimeGenerateRuby,
   parseCurlCommand as runtimeParseCurlCommand,
 } from './runtime-integrity/curl';
+import { ibanSpecs as runtimeIbanSpecs } from './runtime-integrity/iban';
 import { formatSql as runtimeFormatSql, minifySql as runtimeMinifySql } from './runtime-integrity/sql';
 import { marked } from 'marked';
 import * as yaml from 'js-yaml';
@@ -3949,7 +3950,7 @@ export function getWCAGLevel(ratio, largeText = false) { return runtimeGetWCAGLe
 export const h = [];
 export const handwritingStyles = {};
 export const headerDescriptions = {};
-export const ibanSpecs = {};
+export const ibanSpecs = runtimeIbanSpecs;
 export const invisibleChars = [];
 export function isAvailable(room = {}, startTime = 540, endTime = 600) {
   const start = Number(startTime);

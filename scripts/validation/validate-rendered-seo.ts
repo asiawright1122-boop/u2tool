@@ -4,6 +4,9 @@ const CANONICAL_BASE_URL = (
   process.env.PUBLIC_SITE_URL ||
   'https://www.u2tool.com'
 ).replace(/\/+$/, '');
+const INCLUDE_SOURCE_RENDERED_CHECKS =
+  process.env.INCLUDE_SOURCE_RENDERED_CHECKS === '1' ||
+  /^https?:\/\/(localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/i.test(FETCH_BASE_URL);
 
 interface RenderedSeoCheck {
   name: string;
@@ -15,6 +18,7 @@ interface RenderedSeoCheck {
   schemaTypes: string[];
   bodyMustInclude?: string[];
   bodyMustNotInclude?: string[];
+  sourceRenderedOnly?: boolean;
 }
 
 const requiredSocialMeta = [
@@ -115,6 +119,30 @@ const checks: RenderedSeoCheck[] = [
       'Web Workers implementation',
       'Punkt algorithm',
       'Export Data',
+    ],
+  },
+  {
+    name: 'Spanish Word Counter tool page',
+    path: '/es/tools/word-counter/',
+    titleIncludes: 'Contador de palabras',
+    descriptionIncludes: 'palabras',
+    h1Includes: 'Contador de Palabras',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+  },
+  {
+    name: 'Spanish Word Counter refreshed support content',
+    path: '/es/tools/word-counter/',
+    titleIncludes: 'Contador de palabras',
+    descriptionIncludes: 'caracteres con y sin espacios',
+    h1Includes: 'Contador de Palabras',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: ['El Contador de Palabras ofrece una forma rápida de medir la longitud de un texto'],
+    bodyMustNotInclude: [
+      'Ignorar mayúsculas',
+      'Excluir números',
+      'Procesar Texto',
+      'Descargar Informe',
     ],
   },
   {
@@ -275,6 +303,24 @@ const checks: RenderedSeoCheck[] = [
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
   },
   {
+    name: 'Typing Speed Test tool page',
+    path: '/en/tools/typing-speed-test/',
+    titleIncludes: 'Typing Speed Test',
+    descriptionIncludes: 'typing speed',
+    h1Includes: 'Typing Speed Test',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+  },
+  {
+    name: 'Typing Speed Test refreshed support content',
+    path: '/en/tools/typing-speed-test/',
+    titleIncludes: 'Typing Speed Test',
+    descriptionIncludes: 'WPM',
+    h1Includes: 'Typing Speed Test',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: ['the page highlights each character as correct or incorrect'],
+  },
+  {
     name: 'Hex Editor refreshed support content',
     path: '/en/tools/hex-editor/',
     titleIncludes: 'Hex Editor',
@@ -290,6 +336,29 @@ const checks: RenderedSeoCheck[] = [
       'developer tools panel',
       'memory-mapped I/O',
       'ASCII preview',
+    ],
+  },
+  {
+    name: 'IBAN Validator tool page',
+    path: '/en/tools/iban-validator/',
+    titleIncludes: 'IBAN Validator',
+    descriptionIncludes: 'checksum',
+    h1Includes: 'IBAN Validator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+  },
+  {
+    name: 'IBAN Validator restored runtime and support content',
+    path: '/en/tools/iban-validator/',
+    titleIncludes: 'IBAN Validator',
+    descriptionIncludes: 'MOD-97 checksum',
+    h1Includes: 'IBAN Validator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: ['IBAN Validator checks International Bank Account Numbers in the browser'],
+    bodyMustNotInclude: [
+      'Supports all European countries',
+      'show bank code',
+      'bank information',
     ],
   },
   {
@@ -468,6 +537,11 @@ async function main(): Promise<void> {
   const failures: string[] = [];
 
   for (const check of checks) {
+    if (check.sourceRenderedOnly && !INCLUDE_SOURCE_RENDERED_CHECKS) {
+      console.log(`SKIP ${check.name} ${check.path} -> source-rendered check not enabled for FETCH_BASE_URL=${FETCH_BASE_URL}`);
+      continue;
+    }
+
     try {
       await validateCheck(check);
       console.log(`OK  ${check.name} ${check.path}`);

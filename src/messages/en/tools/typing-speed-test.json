@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Typing Speed Test measures your typing speed in words per minute (WPM) and accuracy percentage. Choose from easy, medium, or hard difficulty levels with different text samples. Track correct and incorrect characters, duration, and get a skill rating.",
+  "detailed_description": "Typing Speed Test measures words per minute (WPM), accuracy, correct characters, mistakes, and elapsed time directly in the browser. Choose an easy, medium, or hard prompt, then start typing in the text box; the page highlights each character as correct or incorrect while you work. When you finish the prompt, the result cards show your WPM, accuracy percentage, character totals, duration, and a simple skill rating. The test is intentionally lightweight and private: it uses local sample text, does not require an account, and does not upload what you type.",
   "usage_steps": [
-    "Select a difficulty level",
-    "Start typing the displayed text",
-    "Complete the text to see your results",
-    "View WPM, accuracy, and skill rating",
-    "Try again with new text to improve"
+    "Select Easy, Medium, or Hard to choose the length and complexity of the prompt.",
+    "Click inside the typing box and begin entering the displayed text.",
+    "Watch the character highlighting to catch mistakes while you type.",
+    "Finish the prompt to see WPM, accuracy, correct characters, incorrect characters, duration, and rating.",
+    "Use New Text or Try Again to practice with another sample."
   ],
   "usage_examples": [
-    "Measure your typing speed",
-    "Practice to improve typing accuracy",
-    "Compare typing skills across difficulty levels"
+    "A student checks their WPM before an online writing exam.",
+    "A support agent practices accuracy on medium-length sentences before a shift.",
+    "A keyboard reviewer compares typing speed and mistake counts across two keyboard layouts."
   ]
 }

@@ -87,6 +87,25 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks Spanish Word Counter UI controls that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'word-counter',
+      locale: 'es',
+      name: 'Contador de Palabras',
+      description: '',
+      detailedDescription: 'Navega entre las pestañas de estadísticas avanzadas.',
+      usageSteps: [
+        "Activa la opción 'Ignorar mayúsculas'.",
+        "Utiliza el botón 'Descargar Informe' para exportar los resultados.",
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain('word-counter-unsupported-controls-es');
+  });
+
   it('blocks Hex Editor UI overclaims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'hex-editor',

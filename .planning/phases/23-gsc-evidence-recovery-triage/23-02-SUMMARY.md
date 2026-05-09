@@ -34,3 +34,18 @@ Split the GSC Performance loss by page, locale, and query evidence, then patched
 ## Result
 
 Plan 23-02 is complete for the first evidence-led recovery patch. The remaining recovery queue should continue from the ranked page/query losses instead of applying site-wide SEO rewrites.
+
+## 2026-05-09 Follow-Up
+
+- Restored the `iban-validator` follow-up candidate with a real local IBAN country/spec table and valid MOD-97 examples exposed through `tool-stubs.ts`.
+- Updated the IBAN page interaction so input changes are handled immediately, and refreshed English support copy to describe checksum/format validation without claiming bank lookup or account ownership verification.
+- Added rendered SEO coverage for `en/tools/iban-validator/` so unsupported bank-information claims do not return.
+- Verification passed with `npm run check`, targeted Vitest suites, `npm run build`, local `validate:rendered-seo`, `validate:search-engine-compliance`, `validate:technical-seo`, `validate:sitemap-url-health`, and `validate:internal-link-canonicals`.
+
+## 2026-05-09 Additional Recovery Queue
+
+- Patched `typing-speed-test` so the typing textarea updates on `input`, restoring live progress/highlighting instead of waiting for textarea blur/change.
+- Refreshed English Typing Speed Test copy around WPM, accuracy, mistakes, duration, and local browser execution.
+- Refreshed Spanish Word Counter metadata/support copy for the `contador de palabras` query cluster and removed unsupported claims about controls, tabs, and report downloads that the page does not implement.
+- Added rendered SEO coverage for the stable production `typing-speed-test` and Spanish `word-counter` pages plus source-rendered strict checks for the refreshed content.
+- Added a content-trust rule to block unsupported Spanish Word Counter UI-control claims from returning.

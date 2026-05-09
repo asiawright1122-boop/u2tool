@@ -130,6 +130,10 @@ The generated report identifies the bucket-level constraint. A raw-export re-ran
 - Tool detail pages now pass the raw `seoTitle` into `BaseLayout`, letting the shared `withBrand()` helper avoid duplicate brand suffixes.
 - OG and Twitter titles on tool pages now use the same branded title helper.
 - `validate:rendered-seo` now includes `en/tools/gantt-chart-generator/` and fails on duplicate `U2Tool | U2Tool` titles.
+- Follow-up: `en/tools/iban-validator/` now has restored local IBAN country/spec data, valid MOD-97 examples, corrected runtime wiring, and refreshed support copy that avoids unsupported bank-information claims.
+- `validate:rendered-seo` now includes `en/tools/iban-validator/` and guards against stale claims such as “Supports all European countries”, “show bank code”, and “bank information”.
+- Follow-up: `en/tools/typing-speed-test/` now updates typing progress on `input` events instead of waiting for textarea change/blur, and its support copy now matches the actual WPM, accuracy, character-highlighting, and duration UI.
+- Follow-up: `es/tools/word-counter/` now targets the Spanish `contador de palabras` loss with accurate title/description/support copy, localized count labels, and a content-trust guard against unsupported Spanish controls such as “Ignorar mayúsculas”, “Procesar Texto”, tabs, or report download.
 
 ## Weekly Summary Draft
 

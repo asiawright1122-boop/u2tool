@@ -13668,9 +13668,9 @@
     },
     "typing-speed-test": {
       "name": "Typing Speed Test",
-      "description": "Test your typing speed and accuracy.",
+      "description": "Measure WPM, accuracy, and typing mistakes as you type.",
       "seo_title": "Free Typing Speed Test Online - WPM Calculator",
-      "seo_description": "Test your typing speed and accuracy online for free. Measure words per minute (WPM) with different difficulty levels.",
+      "seo_description": "Take a free typing speed test online. Measure WPM, accuracy, correct characters, mistakes, and duration with easy, medium, and hard prompts.",
       "startTyping": "Start typing to begin the test",
       "wpm": "WPM",
       "accuracy": "Accuracy",
@@ -13713,18 +13713,18 @@
           "Sixty zippers were quickly picked from the woven jute bag. The quick onyx goblin jumps over the lazy dwarf."
         ]
       },
-      "detailed_description": "Typing Speed Test measures your typing speed in words per minute (WPM) and accuracy percentage. Choose from easy, medium, or hard difficulty levels with different text samples. Track correct and incorrect characters, duration, and get a skill rating.",
+      "detailed_description": "Typing Speed Test measures words per minute (WPM), accuracy, correct characters, mistakes, and elapsed time directly in the browser. Choose an easy, medium, or hard prompt, then start typing in the text box; the page highlights each character as correct or incorrect while you work. When you finish the prompt, the result cards show your WPM, accuracy percentage, character totals, duration, and a simple skill rating. The test is intentionally lightweight and private: it uses local sample text, does not require an account, and does not upload what you type.",
       "usage_steps": [
-        "Select a difficulty level",
-        "Start typing the displayed text",
-        "Complete the text to see your results",
-        "View WPM, accuracy, and skill rating",
-        "Try again with new text to improve"
+        "Select Easy, Medium, or Hard to choose the length and complexity of the prompt.",
+        "Click inside the typing box and begin entering the displayed text.",
+        "Watch the character highlighting to catch mistakes while you type.",
+        "Finish the prompt to see WPM, accuracy, correct characters, incorrect characters, duration, and rating.",
+        "Use New Text or Try Again to practice with another sample."
       ],
       "usage_examples": [
-        "Measure your typing speed",
-        "Practice to improve typing accuracy",
-        "Compare typing skills across difficulty levels"
+        "A student checks their WPM before an online writing exam.",
+        "A support agent practices accuracy on medium-length sentences before a shift.",
+        "A keyboard reviewer compares typing speed and mistake counts across two keyboard layouts."
       ]
     },
     "morse-code-player": {
@@ -15232,9 +15232,9 @@
     },
     "iban-validator": {
       "name": "IBAN Validator",
-      "description": "Validate and parse IBAN bank account numbers from European countries.",
+      "description": "Validate IBAN format, country length, and checksum in the browser.",
       "seo_title": "Free IBAN Validator Online - Check IBAN Numbers",
-      "seo_description": "Validate IBAN bank account numbers online for free. Check format, country code, and checksum. Supports all European countries. Fast and secure.",
+      "seo_description": "Validate IBAN numbers in your browser with country length and MOD-97 checksum checks. Format IBANs, view country and check digits, and copy results.",
       "inputLabel": "Enter IBAN",
       "placeholder": "e.g., DE89370400440532013000",
       "validate": "Validate",
@@ -15242,7 +15242,7 @@
       "invalid": "Invalid IBAN",
       "country": "Country",
       "checkDigits": "Check Digits",
-      "bankCode": "Bank Code",
+      "bankCode": "BBAN Prefix",
       "bban": "BBAN (Basic Bank Account Number)",
       "formatted": "Formatted IBAN",
       "copy": "Copy",
@@ -15254,18 +15254,18 @@
         "invalidLength": "Invalid length: expected {expected} characters, got {actual}",
         "invalidChecksum": "Invalid checksum - IBAN may be incorrect"
       },
-      "detailed_description": "IBAN Validator is a comprehensive tool for validating International Bank Account Numbers (IBAN). It checks the format, country code, length, and checksum of IBAN numbers from all European countries. The tool also parses the IBAN to show bank code, country information, and BBAN details.",
+      "detailed_description": "IBAN Validator checks International Bank Account Numbers in the browser using the country code, registered IBAN length, and ISO 7064 MOD-97 checksum. It supports a broad local table of IBAN countries and territories, formats valid entries in groups of four, and shows the country, check digits, BBAN, and first BBAN block for quick review. The tool does not contact banks, verify account ownership, or confirm whether a transfer will be accepted by a payment provider.",
       "usage_steps": [
-        "Enter or paste an IBAN number in the input field",
-        "Click the Validate button to check the IBAN",
-        "View validation results including country and bank information",
-        "Use example IBANs to test different country formats",
-        "Copy the formatted IBAN for use in bank transfers"
+        "Enter or paste an IBAN number in the input field.",
+        "Click the Validate button to remove spaces, normalize the country code, and run the length and MOD-97 checksum checks.",
+        "Review the result details: country, check digits, BBAN prefix, BBAN, and formatted IBAN.",
+        "Use the sample IBAN buttons to test common country formats.",
+        "Copy the formatted IBAN when you need grouped spacing for documentation, forms, or manual review."
       ],
       "usage_examples": [
-        "Verify IBAN before making international bank transfers",
-        "Check customer-provided bank account numbers",
-        "Validate IBAN format for payment processing systems"
+        "Check whether a customer-provided IBAN has the right country length and checksum before storing it in a payment form.",
+        "Normalize a pasted IBAN with inconsistent spacing into standard groups of four characters.",
+        "Test validation handling for German, UK, French, Spanish, Italian, Dutch, and other IBAN country formats."
       ]
     },
     "vat-calculator": {

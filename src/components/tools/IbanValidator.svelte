@@ -9,12 +9,16 @@
   let { locale, translations }: Props = $props();
 
   // Translation helpers
-  function t(key: string): string {
+  function t(key: string, params: Record<string, string | number> = {}): string {
     const scope = translations['tools']['iban-validator'] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
-    return typeof value === 'string' ? value : `MISSING: tools.iban-validator.${key}`;
+    const text = typeof value === 'string' ? value : `MISSING: tools.iban-validator.${key}`;
+    return Object.entries(params).reduce(
+      (current, [name, replacement]) => current.replace(new RegExp(`\\{${name}\\}`, 'g'), String(replacement)),
+      text
+    );
   }
 
   let iban = $state('');
@@ -103,7 +107,7 @@
           <input
             type="text"
             value={iban}
-            onchange={handleInputChange}
+            oninput={handleInputChange}
             placeholder={t('placeholder')}
             class="flex-1 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-lg"
           />

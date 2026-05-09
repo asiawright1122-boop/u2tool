@@ -48,9 +48,9 @@
 
   let startTime = $state(0);
 
-  let result = $state(null);
+  let result = $state<TypingTestResult | null>(null);
 
-  let inputRef = $state(null);
+  let inputRef = $state<HTMLTextAreaElement | null>(null);
 
   function getRandomText() {
     const texts = sampleTexts[difficulty];
@@ -70,7 +70,7 @@
     result = null;
     inputRef?.focus();
   }
-  function handleInput(value: string) {
+  function handleTypedText(value: string) {
     if (!isStarted && value.length > 0) {
       isStarted = true;
       startTime = Date.now();
@@ -84,6 +84,9 @@
       result = stats;
       isFinished = true;
     }
+  }
+  function handleInputEvent(event: Event) {
+    handleTypedText((event.currentTarget as HTMLTextAreaElement).value);
   }
 
 </script>
@@ -123,7 +126,7 @@
       <textarea
         bind:this={inputRef}
         value={typedText}
-        onchange={(e) => handleInput(e.target.value)}
+        oninput={handleInputEvent}
         disabled={isFinished}
         class="w-full h-24 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono resize-none"
         placeholder={t('startTyping')}

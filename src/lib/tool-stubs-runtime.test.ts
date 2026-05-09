@@ -111,6 +111,7 @@ import {
   generateCleanedCode,
   generateCrontab,
   getSqlType,
+  ibanSpecs,
   getMonthRuns,
   getNextRuns,
   parseCron,
@@ -503,6 +504,33 @@ X-Trace-Id: abc123
   it('minifies HTML and XML without returning empty stubs', () => {
     expect(minifyHtml('<div>\n  <span>Hello</span>\n</div>')).toBe('<div><span>Hello</span></div>');
     expect(minifyXml('<root>\n  <item>value</item>\n</root>')).toBe('<root><item>value</item></root>');
+  });
+
+  it('ships IBAN country specs with valid MOD-97 examples', () => {
+    expect(Object.keys(ibanSpecs)).toHaveLength(96);
+    expect(ibanSpecs.DE).toMatchObject({
+      name: 'Germany',
+      length: 22,
+      example: 'DE89370400440532013000',
+    });
+    expect(ibanSpecs.GB.example).toBe('GB82WEST12345698765432');
+
+    const mod97 = (iban: string): number => {
+      const rearranged = `${iban.slice(4)}${iban.slice(0, 4)}`;
+      let remainder = 0;
+      for (const char of rearranged) {
+        const value = /[A-Z]/.test(char) ? String(char.charCodeAt(0) - 55) : char;
+        for (const digit of value) {
+          remainder = (remainder * 10 + Number(digit)) % 97;
+        }
+      }
+      return remainder;
+    };
+
+    for (const [countryCode, spec] of Object.entries(ibanSpecs)) {
+      expect(spec.example, countryCode).toHaveLength(spec.length);
+      expect(mod97(spec.example), countryCode).toBe(1);
+    }
   });
 
   it('parses env files and exports common formats', () => {

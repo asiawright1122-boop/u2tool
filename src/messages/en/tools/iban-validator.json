@@ -1,15 +1,15 @@
 {
-  "detailed_description": "IBAN Validator is a comprehensive tool for validating International Bank Account Numbers (IBAN). It checks the format, country code, length, and checksum of IBAN numbers from all European countries. The tool also parses the IBAN to show bank code, country information, and BBAN details.",
+  "detailed_description": "IBAN Validator checks International Bank Account Numbers in the browser using the country code, registered IBAN length, and ISO 7064 MOD-97 checksum. It supports a broad local table of IBAN countries and territories, formats valid entries in groups of four, and shows the country, check digits, BBAN, and first BBAN block for quick review. The tool does not contact banks, verify account ownership, or confirm whether a transfer will be accepted by a payment provider.",
   "usage_steps": [
-    "Enter or paste an IBAN number in the input field",
-    "Click the Validate button to check the IBAN",
-    "View validation results including country and bank information",
-    "Use example IBANs to test different country formats",
-    "Copy the formatted IBAN for use in bank transfers"
+    "Enter or paste an IBAN number in the input field.",
+    "Click the Validate button to remove spaces, normalize the country code, and run the length and MOD-97 checksum checks.",
+    "Review the result details: country, check digits, BBAN prefix, BBAN, and formatted IBAN.",
+    "Use the sample IBAN buttons to test common country formats.",
+    "Copy the formatted IBAN when you need grouped spacing for documentation, forms, or manual review."
   ],
   "usage_examples": [
-    "Verify IBAN before making international bank transfers",
-    "Check customer-provided bank account numbers",
-    "Validate IBAN format for payment processing systems"
+    "Check whether a customer-provided IBAN has the right country length and checksum before storing it in a payment form.",
+    "Normalize a pasted IBAN with inconsistent spacing into standard groups of four characters.",
+    "Test validation handling for German, UK, French, Spanish, Italian, Dutch, and other IBAN country formats."
   ]
 }

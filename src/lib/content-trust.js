@@ -111,6 +111,12 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['word-counter'],
   },
   {
+    code: 'word-counter-unsupported-controls-es',
+    pattern: /\bIgnorar may[uú]sculas\b|\bExcluir n[uú]meros\b|\bProcesar Texto\b|\bpestañas?\b|\bDescargar Informe\b/i,
+    message: 'Claims Spanish Word Counter controls or export surfaces that are not present in the current UI.',
+    slugs: ['word-counter'],
+  },
+  {
     code: 'jwt-signature-verification-claim',
     pattern: /\bvalidate(?:s| the)? token'?s signature\b|\bSignature Verification\b/i,
     message: 'Claims JWT signature verification, but the current decoder only decodes and displays token parts.',

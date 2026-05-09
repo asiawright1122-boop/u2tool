@@ -2854,7 +2854,7 @@
     },
     "wordCounter": {
       "words": "Palabras",
-      "characters": "Personajes",
+      "characters": "Caracteres",
       "sentences": "Oraciones",
       "paragraphs": "Párrafos",
       "readingTime": "Tiempo de lectura",
@@ -4126,9 +4126,9 @@
     },
     "word-counter": {
       "name": "Contador de Palabras",
-      "description": "Cuenta palabras, caracteres, oraciones y párrafos en tu texto.",
-      "seo_title": "¡Contador de palabras online gratis! Herramienta sencilla e instantánea",
-      "seo_description": "Cuenta palabras, caracteres, oraciones y párrafos en tu texto con nuestra herramienta gratuita y en línea. ¡Empieza ahora y mejora tu escritura!",
+      "description": "Cuenta palabras, caracteres, frases, párrafos y líneas al escribir.",
+      "seo_title": "Contador de palabras online gratis - cuenta caracteres y frases",
+      "seo_description": "Usa este contador de palabras online gratis para contar palabras, caracteres con y sin espacios, frases, párrafos y líneas directamente en el navegador.",
       "inputPlaceholder": "Escribe aquí..."
     },
     "case-converter": {
@@ -11080,7 +11080,7 @@
       "invalid": "IBAN no válido",
       "country": "País",
       "checkDigits": "Verificar dígitos",
-      "bankCode": "Código del banco",
+      "bankCode": "Prefijo BBAN",
       "bban": "BBAN (Número básico de cuenta bancaria)",
       "formatted": "IBAN formateado",
       "copy": "Copiar",

@@ -7,12 +7,12 @@
   let { locale, translations }: Props = $props();
 
   // Translation helpers
-  function t(key: string): string {
+  function t(key: string, fallback?: string): string {
     const scope = translations['tools'] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
-    return typeof value === 'string' ? value : `MISSING: tools.${key}`;
+    return typeof value === 'string' ? value : fallback ?? `MISSING: tools.${key}`;
   }
 
   let text = $state('');
@@ -28,6 +28,10 @@
       lines: trimmed ? trimmed.split('\n').length : 0,
     };
   });
+  const charactersNoSpacesLabel = $derived(
+    t('wordCounter.charactersNoSpaces', locale === 'es' ? 'Caracteres sin espacios' : 'Characters without spaces')
+  );
+  const linesLabel = $derived(t('wordCounter.lines', locale === 'es' ? 'Líneas' : 'Lines'));
 
 </script>
 
@@ -51,10 +55,10 @@
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
         {@render StatCard(t('wordCounter.words'), stats.words)}
         {@render StatCard(t('wordCounter.characters'), stats.characters)}
-        {@render StatCard(t('wordCounter.characters'), stats.charactersNoSpaces)}
+        {@render StatCard(charactersNoSpacesLabel, stats.charactersNoSpaces)}
         {@render StatCard(t('wordCounter.sentences'), stats.sentences)}
         {@render StatCard(t('wordCounter.paragraphs'), stats.paragraphs)}
-        {@render StatCard('Lines', stats.lines)}
+        {@render StatCard(linesLabel, stats.lines)}
       </div>
 
       <button
