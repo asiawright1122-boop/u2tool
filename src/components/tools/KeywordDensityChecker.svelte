@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { analyzeKeywordDensity } from '@/lib/popular-tools-batch3-remaining';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -22,13 +24,6 @@
     return typeof value === 'string' ? value : `MISSING: tools.${key}`;
   }
 
-  // Types
-  interface KeywordResult {
-  word: string;
-  count: number;
-  density: number;
-}
-
   let text = $state('');
 
   let minLength = $state('3');
@@ -36,66 +31,10 @@
   let excludeCommon = $state(true);
 
   let analysis = $derived.by(() => {
-    if (!text.trim()) return null;
-
-    const words = text.toLowerCase().match(/\b[a-zA-Z]+\b/g) || [];
-    const totalWords = words.length;
     const minLen = parseInt(minLength) || 3;
 
-    const wordCount: Record<string, number> = {};
-    words.forEach(word => {
-      if (word.length >= minLen && (!excludeCommon || !commonWords.has(word))) {
-        wordCount[word] = (wordCount[word] || 0) + 1;
-      }
-    });
-
-    const results: KeywordResult[] = Object.entries(wordCount)
-      .map(([word, count]) => ({
-        word,
-        count,
-        density: (count / totalWords) * 100,
-      }))
-      .sort((a, b) => b.count - a.count)
-      .slice(0, 50);
-
-    // Phrase analysis (2-3 word phrases)
-    const phrases2: Record<string, number> = {};
-    const phrases3: Record<string, number> = {};
-    
-    for (let i = 0; i < words.length - 1; i++) {
-      const phrase2 = `${words[i]} ${words[i + 1]}`;
-      phrases2[phrase2] = (phrases2[phrase2] || 0) + 1;
-      
-      if (i < words.length - 2) {
-        const phrase3 = `${words[i]} ${words[i + 1]} ${words[i + 2]}`;
-        phrases3[phrase3] = (phrases3[phrase3] || 0) + 1;
-      }
-    }
-
-    const topPhrases2 = Object.entries(phrases2)
-      .filter(([, count]) => count > 1)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 10);
-
-    const topPhrases3 = Object.entries(phrases3)
-      .filter(([, count]) => count > 1)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 10);
-
-    return { totalWords, results, topPhrases2, topPhrases3 };
+    return analyzeKeywordDensity(text, minLen, excludeCommon);
   });
-
-  // Functions
-  const commonWords = new Set([
-    'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with',
-    'by', 'from', 'as', 'is', 'was', 'are', 'were', 'been', 'be', 'have', 'has', 'had',
-    'do', 'does', 'did', 'will', 'would', 'could', 'should', 'may', 'might', 'must',
-    'shall', 'can', 'need', 'dare', 'ought', 'used', 'it', 'its', 'this', 'that',
-    'these', 'those', 'i', 'you', 'he', 'she', 'we', 'they', 'what', 'which', 'who',
-    'whom', 'whose', 'where', 'when', 'why', 'how', 'all', 'each', 'every', 'both',
-    'few', 'more', 'most', 'other', 'some', 'such', 'no', 'nor', 'not', 'only', 'own',
-    'same', 'so', 'than', 'too', 'very', 'just', 'also', 'now', 'here', 'there',
-  ]);
 
 </script>
 

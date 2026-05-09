@@ -63,6 +63,27 @@ describe('popular-tools-batch3 remaining properties', () => {
     );
   });
 
+  it('counts prototype-named keywords without corrupting density', () => {
+    const analysis = analyzeKeywordDensity(
+      'constructor constructor prototype toString normal',
+      1,
+      false
+    );
+
+    expect(analysis).not.toBeNull();
+    expect(analysis!.results).toEqual(
+      expect.arrayContaining([
+        { word: 'constructor', count: 2, density: 40 },
+        { word: 'prototype', count: 1, density: 20 },
+        { word: 'tostring', count: 1, density: 20 },
+      ])
+    );
+    for (const item of analysis!.results) {
+      expect(Number.isFinite(item.count)).toBe(true);
+      expect(Number.isFinite(item.density)).toBe(true);
+    }
+  });
+
   it('Property 12: Number System Conversion Round Trip', () => {
     fc.assert(
       fc.property(
