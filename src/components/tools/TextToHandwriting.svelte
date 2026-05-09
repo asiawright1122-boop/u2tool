@@ -7,12 +7,12 @@
   let { locale, translations }: Props = $props();
 
   // Translation helpers
-  function t(key: string): string {
+  function t(key: string, fallback?: string): string {
     const scope = translations['tools']['text-to-handwriting'] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
-    return typeof value === 'string' ? value : `MISSING: tools.text-to-handwriting.${key}`;
+    return typeof value === 'string' ? value : fallback ?? `MISSING: tools.text-to-handwriting.${key}`;
   }
   function tc(key: string): string {
     const scope = translations['tools'] as Record<string, unknown> || {};
@@ -29,6 +29,7 @@
   }
 
   interface PaperStyle {
+    key: string;
     name: string;
     bg: string;
     lines: boolean;
@@ -42,9 +43,9 @@
   ];
 
   const paperStyles: PaperStyle[] = [
-    { name: 'Plain', bg: '#fffdf7', lines: false, grid: false },
-    { name: 'Lined', bg: '#fffdf7', lines: true, grid: false },
-    { name: 'Grid', bg: '#ffffff', lines: false, grid: true },
+    { key: 'blank', name: 'Plain', bg: '#fffdf7', lines: false, grid: false },
+    { key: 'lined', name: 'Lined', bg: '#fffdf7', lines: true, grid: false },
+    { key: 'grid', name: 'Grid', bg: '#ffffff', lines: false, grid: true },
   ];
 
   let text = $state('Hello, this is my handwriting!');
@@ -202,7 +203,7 @@
                     : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'
                 }`}
               >
-                {p.name}
+                {t(p.key, p.name)}
               </button>
 {/each}
           </div>
@@ -235,7 +236,7 @@
           <input
             type="range"
             value={fontSize}
-            onchange={(e) => fontSize = parseInt(e.target.value)}
+            oninput={(e) => fontSize = parseInt((e.currentTarget as HTMLInputElement).value)}
             min="16"
             max="48"
             class="w-full"

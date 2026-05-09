@@ -139,6 +139,23 @@ describe('assessSupportContentTrust', () => {
     expect(report.issues.map((issue) => issue.code)).toContain('pixel-density-device-preset-claim');
   });
 
+  it('blocks iCal Parser full timezone handling claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'ical-parser',
+      locale: 'en',
+      name: 'iCal Parser',
+      description: '',
+      detailedDescription:
+        'Supports both single events and recurring event series with full timezone handling.',
+      usageSteps: [],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain('ical-full-timezone-claim');
+  });
+
   it('blocks Hex Editor UI overclaims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'hex-editor',

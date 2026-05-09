@@ -129,6 +129,12 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['pixel-density-calculator'],
   },
   {
+    code: 'ical-full-timezone-claim',
+    pattern: /\bfull timezone handling\b|\bcomplete timezone support\b|\btimezone database\b/i,
+    message: 'Claims full timezone handling, but the current iCal parser does not expand timezone identifiers through a timezone database.',
+    slugs: ['ical-parser'],
+  },
+  {
     code: 'jwt-signature-verification-claim',
     pattern: /\bvalidate(?:s| the)? token'?s signature\b|\bSignature Verification\b/i,
     message: 'Claims JWT signature verification, but the current decoder only decodes and displays token parts.',

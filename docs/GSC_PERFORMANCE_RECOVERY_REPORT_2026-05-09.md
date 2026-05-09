@@ -112,8 +112,8 @@ The generated report identifies the bucket-level constraint. A raw-export re-ran
 | `https://www.u2tool.com/ru/tools/hex-editor/` | 20 clicks / 350 impressions | 0 clicks / 9 impressions | -20 clicks | Live page is indexable; no canonical/noindex defect found. Needs snippet/content review, not a redirect patch. |
 | `https://www.u2tool.com/en/tools/hex-editor/` | 18 clicks / 585 impressions | 0 clicks / 6 impressions | -18 clicks | Same cluster as `hex editor online`. |
 | `hex editor online` | 14 clicks / 312 impressions | 0 clicks / 3 impressions | -14 clicks | Query-level evidence confirms the Hex Editor cluster is the highest click-loss candidate. |
-| `https://www.u2tool.com/de/tools/text-to-handwriting/` | 17 clicks / 178 impressions | 0 clicks / 2 impressions | -17 clicks | Follow-up candidate after Hex Editor. |
-| `https://www.u2tool.com/en/tools/ical-parser/` | 14 clicks / 244 impressions | 0 clicks / 0 impressions | -14 clicks | Follow-up candidate; first check coverage/canonical status before copy edits. |
+| `https://www.u2tool.com/de/tools/text-to-handwriting/` | 17 clicks / 178 impressions | 0 clicks / 2 impressions | -17 clicks | Follow-up completed: localized UI labels and corrected German support copy. |
+| `https://www.u2tool.com/en/tools/ical-parser/` | 14 clicks / 244 impressions | 0 clicks / 0 impressions | -14 clicks | Follow-up completed: refreshed parser support copy and removed timezone overclaim. |
 
 ### Biggest Impression Losses
 
@@ -138,6 +138,8 @@ The generated report identifies the bucket-level constraint. A raw-export re-ran
 - Follow-up: `es/tools/word-counter/` now targets the Spanish `contador de palabras` loss with accurate title/description/support copy, localized count labels, and a content-trust guard against unsupported Spanish controls such as “Ignorar mayúsculas”, “Procesar Texto”, tabs, or report download.
 - Follow-up: `en/tools/pixel-density-calculator/` now has restored common resolution presets via `src/lib/runtime-integrity/display.ts`, refreshed support copy, and rendered/content-trust guards against unsupported device-preset claims.
 - Follow-up: `en/tools/sitemap-generator/` now describes the actual manual URL-list XML generator, escapes generated XML values, and has rendered/content-trust guards against stale crawler, automatic fetching, and large sitemap-index claims.
+- Follow-up: `de/tools/text-to-handwriting/` now uses localized paper labels, fixes German text-to-handwriting metadata/support copy, and updates the font-size slider live on input.
+- Follow-up: `en/tools/ical-parser/` now describes the actual paste/upload plus Parse workflow, visible event table, JSON export scope, and lack of full timezone-database expansion.
 
 ## Weekly Summary Draft
 

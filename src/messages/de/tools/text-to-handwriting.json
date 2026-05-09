@@ -1,16 +1,16 @@
 {
-  "detailed_description": "Der Text nach Handschrift-Umconverter wandelt eintippte Texte in Handschriftstilbilder um. Wählen Sie aus verschiedenen Handschriftstilen, personalisieren Sie die Tintenfarbe und wählen Sie Papierhintergründe (leer, gepunktet oder gitter) aus, um authentische handschriftliche Notizen zu erstellen.",
+  "detailed_description": "Mit dem Text-zu-Handschrift-Converter wandelst du eingegebenen Text direkt im Browser in ein PNG-Bild mit handschriftlicher Optik um. Gib deinen Text ein, wähle einen Handschriftstil, stelle Tintenfarbe und Schriftgröße ein und entscheide dich für leeres, liniertes oder kariertes Papier. Die Vorschau wird auf einer Canvas-Fläche gerendert und kann als PNG heruntergeladen werden. Das Tool erkennt keine echte Handschrift und nutzt keine KI-OCR; es erzeugt eine stilisierte Grafik aus dem Text, den du eingibst.",
   "usage_steps": [
-    "Geben Sie Ihren Text ein",
-    "Wählen Sie einen Handschriftstil",
-    "Wählen Sie die Tintenfarbe",
-    "Wählen Sie den Papierstil (leer, gepunktet oder gitter)",
-    "Passen Sie die Schriftgröße an",
-    "Laden Sie das handschriftliche Bild herunter"
+    "Gib den gewünschten Text in das Textfeld ein.",
+    "Wähle einen der Handschriftstile.",
+    "Lege Tintenfarbe, Papierstil und Schriftgröße fest.",
+    "Prüfe die Vorschau auf der Canvas-Fläche.",
+    "Passe den Text oder die Einstellungen bei Bedarf an.",
+    "Lade das Ergebnis als PNG-Bild herunter."
   ],
   "usage_examples": [
-    "Erstellen Sie handschriftliche Notizen",
-    "Erstellen Sie persönliche Briefe",
-    "Erstellen Sie Schreibübungsblätter"
+    "Erstelle eine handschriftlich wirkende Notiz für ein Mockup.",
+    "Gestalte einen kurzen persönlichen Gruß als PNG-Grafik.",
+    "Bereite ein einfaches Schreibübungsblatt mit liniertem oder kariertem Hintergrund vor."
   ]
 }

@@ -59,3 +59,11 @@ Plan 23-02 is complete for the first evidence-led recovery patch. The remaining 
 - Hardened Sitemap Generator output by normalizing base URL/path joining and escaping XML values before rendering, copying, or downloading `sitemap.xml`.
 - Added content-trust rules and rendered SEO source-only checks so unsupported Pixel Density device-preset claims and Sitemap crawler claims do not return.
 - Verification passed with `npx vitest run src/lib/tool-stubs-runtime.test.ts src/lib/support-content-fallback.test.ts`, `npm run i18n:check-missing-keys`, `npm run check`, `npm run build`, and local source-rendered `npm run validate:rendered-seo`.
+
+## 2026-05-09 Click-Loss Follow-Up
+
+- Continued the click-loss queue with `de/tools/text-to-handwriting/` and `en/tools/ical-parser/`, the next untreated page-level click-loss candidates from the raw exports.
+- Localized Text to Handwriting paper option labels through existing `blank`, `lined`, and `grid` keys, corrected the German SEO/support copy, and changed the font-size control to update on `input`.
+- Refreshed iCal Parser support copy to require the Parse action after paste/upload, describe the visible event table plus JSON export accurately, and remove the unsupported full-timezone-handling claim.
+- Added an iCal content-trust rule for full-timezone overclaims and rendered SEO source-only checks for both follow-up pages.
+- Verification passed with `npx vitest run src/lib/support-content-fallback.test.ts`, `npm run i18n:check-missing-keys`, `npm run check`, `npm run build`, local source-rendered `npm run validate:rendered-seo`, and production `npm run validate:rendered-seo`.
