@@ -83,13 +83,14 @@
 
     <div class="space-y-4">
       <div>
-        <label class="block text-sm font-medium mb-2">{t('input')}</label>
+        <label for="xml-formatter-input" class="block text-sm font-medium mb-2">{t('input')}</label>
         <textarea
+          id="xml-formatter-input"
+          name="inputValue"
           class="tool-textarea"
           bind:value={input}
           placeholder='<root><item>value</item></root>'
-          rows={8}
-        />
+          rows={8}></textarea>
       </div>
 
       <div class="flex flex-wrap gap-2">
@@ -113,7 +114,7 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('output')}</label>
+            <label for="xml-formatter-output" class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('output')}</label>
             <button
               onclick={copyOutput}
               class={`text-sm px-3 py-1 rounded ${copied ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
@@ -122,6 +123,8 @@
             </button>
           </div>
           <textarea
+            id="xml-formatter-output"
+            name="outputValue"
             class="tool-textarea"
             value={output}
             readOnly
