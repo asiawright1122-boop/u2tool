@@ -107,60 +107,6 @@
 /ar/tools/base64-encode /ar/tools/base64/ 301
 /ar/tools/base64-decode /ar/tools/base64/ 301
 
-/:locale/privacy /:locale/privacy/ 301
-/:locale/terms /:locale/terms/ 301
-/:locale/contact /:locale/contact/ 301
-
-# Legacy category URLs that were historically exposed under /tools/category/.
-/tools/category/* /en/categories/:splat/ 301
-/tools/category/:category /en/categories/:category/ 301
-/tools/category/:category/ /en/categories/:category/ 301
-/:locale/tools/category/:category /:locale/categories/:category/ 301
-/:locale/tools/category/:category/ /:locale/categories/:category/ 301
-
-# Deprecated ranking pages no longer exist as standalone routes.
-/tools/ranking/* /en/tools/ 301
-
-# One-segment legacy tool URLs retain direct canonical redirects without
-# reintroducing the broad /tools/* splat that conflicts with category/ranking.
-/tools/:tool /en/tools/:tool/ 301
-/tools/:tool/ /en/tools/:tool/ 301
-
-# Localized legacy blog URLs.
-/:locale/blog/base64-encoding-explained /:locale/tools/base64/ 301
-/:locale/blog/best-json-formatter-tools-2025 /:locale/tools/json-formatter/ 301
-/:locale/blog/color-formats-conversion-guide /:locale/tools/color-converter/ 301
-/:locale/blog/hash-algorithms-explained /:locale/tools/hash-generator/ 301
-/:locale/blog/image-optimization-web /:locale/tools/image-compressor/ 301
-/:locale/blog/jwt-tokens-explained /:locale/compare/choose-jwt-tool/ 301
-/:locale/blog/markdown-syntax-guide /:locale/tools/markdown-preview/ 301
-/:locale/blog/password-security-best-practices /:locale/tools/password-generator/ 301
-/:locale/blog/qr-code-complete-guide /:locale/tools/qr-generator/ 301
-/:locale/blog/regex-complete-guide /:locale/tools/regex-tester/ 301
-/:locale/blog/unix-timestamp-guide /:locale/tools/timestamp-converter/ 301
-/:locale/blog/url-encoding-guide /:locale/tools/url-encoder/ 301
-/:locale/blog/uuid-generator-guide /:locale/tools/uuid-generator/ 301
-
-# Localized legacy pairwise compare URLs.
-/:locale/compare/css-animation-generator/color-palette /:locale/tools/css-animation-generator/ 301
-/:locale/compare/css-animation-generator/color-palette/ /:locale/tools/css-animation-generator/ 301
-/:locale/compare/css-animation-generator/css-grid-generator /:locale/tools/css-animation-generator/ 301
-/:locale/compare/css-animation-generator/css-grid-generator/ /:locale/tools/css-animation-generator/ 301
-/:locale/compare/css-animation-generator/gradient-generator /:locale/tools/css-animation-generator/ 301
-/:locale/compare/css-animation-generator/gradient-generator/ /:locale/tools/css-animation-generator/ 301
-/:locale/compare/css-animation-generator/markdown-table-generator /:locale/tools/css-animation-generator/ 301
-/:locale/compare/css-animation-generator/markdown-table-generator/ /:locale/tools/css-animation-generator/ 301
-/:locale/compare/css-animation-generator/meta-tag-generator /:locale/tools/css-animation-generator/ 301
-/:locale/compare/css-animation-generator/meta-tag-generator/ /:locale/tools/css-animation-generator/ 301
-/:locale/compare/css-animation-generator/uuid-generator /:locale/tools/css-animation-generator/ 301
-/:locale/compare/css-animation-generator/uuid-generator/ /:locale/tools/css-animation-generator/ 301
-/:locale/compare/grouped-bar-chart-generator/area-chart-generator /:locale/compare/choose-chart-type/ 301
-/:locale/compare/grouped-bar-chart-generator/area-chart-generator/ /:locale/compare/choose-chart-type/ 301
-/:locale/compare/image-border/image-splitter /:locale/compare/choose-image-tool/ 301
-/:locale/compare/image-border/image-splitter/ /:locale/compare/choose-image-tool/ 301
-/:locale/compare/json-to-csharp/color-converter /:locale/tools/json-to-csharp/ 301
-/:locale/compare/json-to-csharp/color-converter/ /:locale/tools/json-to-csharp/ 301
-
 # Exact GSC-observed pairwise compare URLs. These avoid an extra asset-layer
 # slash-normalization hop while the Worker middleware remains the source of truth.
 /de/compare/hex-editor/json-minifier /de/tools/hex-editor/ 301
@@ -216,6 +162,60 @@
 /zh/compare/url-parser/url-encoder /zh/tools/url-parser/ 301
 /zh/compare/url-parser/whois-lookup /zh/tools/url-parser/ 301
 /zh/compare/xml-to-json/timestamp-converter /zh/tools/xml-to-json/ 301
+
+/:locale/privacy /:locale/privacy/ 301
+/:locale/terms /:locale/terms/ 301
+/:locale/contact /:locale/contact/ 301
+
+# Legacy category URLs that were historically exposed under /tools/category/.
+/tools/category/* /en/categories/:splat/ 301
+/tools/category/:category /en/categories/:category/ 301
+/tools/category/:category/ /en/categories/:category/ 301
+/:locale/tools/category/:category /:locale/categories/:category/ 301
+/:locale/tools/category/:category/ /:locale/categories/:category/ 301
+
+# Deprecated ranking pages no longer exist as standalone routes.
+/tools/ranking/* /en/tools/ 301
+
+# One-segment legacy tool URLs retain direct canonical redirects without
+# reintroducing the broad /tools/* splat that conflicts with category/ranking.
+/tools/:tool /en/tools/:tool/ 301
+/tools/:tool/ /en/tools/:tool/ 301
+
+# Localized legacy blog URLs.
+/:locale/blog/base64-encoding-explained /:locale/tools/base64/ 301
+/:locale/blog/best-json-formatter-tools-2025 /:locale/tools/json-formatter/ 301
+/:locale/blog/color-formats-conversion-guide /:locale/tools/color-converter/ 301
+/:locale/blog/hash-algorithms-explained /:locale/tools/hash-generator/ 301
+/:locale/blog/image-optimization-web /:locale/tools/image-compressor/ 301
+/:locale/blog/jwt-tokens-explained /:locale/compare/choose-jwt-tool/ 301
+/:locale/blog/markdown-syntax-guide /:locale/tools/markdown-preview/ 301
+/:locale/blog/password-security-best-practices /:locale/tools/password-generator/ 301
+/:locale/blog/qr-code-complete-guide /:locale/tools/qr-generator/ 301
+/:locale/blog/regex-complete-guide /:locale/tools/regex-tester/ 301
+/:locale/blog/unix-timestamp-guide /:locale/tools/timestamp-converter/ 301
+/:locale/blog/url-encoding-guide /:locale/tools/url-encoder/ 301
+/:locale/blog/uuid-generator-guide /:locale/tools/uuid-generator/ 301
+
+# Localized legacy pairwise compare URLs.
+/:locale/compare/css-animation-generator/color-palette /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/color-palette/ /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/css-grid-generator /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/css-grid-generator/ /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/gradient-generator /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/gradient-generator/ /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/markdown-table-generator /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/markdown-table-generator/ /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/meta-tag-generator /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/meta-tag-generator/ /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/uuid-generator /:locale/tools/css-animation-generator/ 301
+/:locale/compare/css-animation-generator/uuid-generator/ /:locale/tools/css-animation-generator/ 301
+/:locale/compare/grouped-bar-chart-generator/area-chart-generator /:locale/compare/choose-chart-type/ 301
+/:locale/compare/grouped-bar-chart-generator/area-chart-generator/ /:locale/compare/choose-chart-type/ 301
+/:locale/compare/image-border/image-splitter /:locale/compare/choose-image-tool/ 301
+/:locale/compare/image-border/image-splitter/ /:locale/compare/choose-image-tool/ 301
+/:locale/compare/json-to-csharp/color-converter /:locale/tools/json-to-csharp/ 301
+/:locale/compare/json-to-csharp/color-converter/ /:locale/tools/json-to-csharp/ 301
 
 # Legacy splat routes.
 /categories/* /en/categories/:splat/ 301
