@@ -7,6 +7,10 @@ import {
   resolveLegacyUnlocalizedComparePairRedirect,
   resolveUnlocalizedSiteInfoRedirect,
 } from './lib/legacy-redirects';
+import {
+  createLegacyBuildAssetGoneResponse,
+  isLegacyBuildAssetRequest,
+} from './lib/legacy-build-assets';
 
 const HTML_EDGE_CACHE_CONTROL = 'public, max-age=300, s-maxage=86400, stale-while-revalidate=604800';
 const HTML_EDGE_CACHE_VERSION = typeof __U2TOOL_HTML_CACHE_VERSION__ === 'string'
@@ -232,6 +236,10 @@ function toCachedGetResponse(response: Response): Response {
 }
 
 export const onRequest: MiddlewareHandler = async (context, next) => {
+  if (isLegacyBuildAssetRequest(context.request)) {
+    return withSecurityHeaders(createLegacyBuildAssetGoneResponse(context.request.method));
+  }
+
   const canonicalRedirect = resolveCanonicalRedirect(context.request);
   if (canonicalRedirect) {
     return redirect(canonicalRedirect);

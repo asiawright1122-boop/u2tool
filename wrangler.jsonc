@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "u2tool",
-  "main": "@astrojs/cloudflare/entrypoints/server",
+  "main": "src/worker.ts",
   "compatibility_date": "2026-04-09",
   "compatibility_flags": [
     "nodejs_compat",
@@ -20,7 +20,12 @@
   ],
   "assets": {
     "binding": "ASSETS",
-    "directory": "./dist"
+    "directory": "./dist",
+    "not_found_handling": "none",
+    "run_worker_first": [
+      "/_next/*",
+      "/dist/*"
+    ]
   },
   "observability": {
     "enabled": true

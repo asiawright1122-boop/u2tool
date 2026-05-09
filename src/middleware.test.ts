@@ -158,6 +158,35 @@ describe('html edge cache middleware', () => {
     expect(next).not.toHaveBeenCalled();
   });
 
+  it('returns gone for stale Next.js build assets before route handling', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+    const { response, text } = await runMiddleware(
+      new Request('https://www.u2tool.com/_next/static/chunks/8182cba999306f4b.js?dpl=old'),
+      next
+    );
+
+    expect(response.status).toBe(410);
+    expect(response.headers.get('x-robots-tag')).toBe('noindex, nofollow');
+    expect(response.headers.get('cache-control')).toContain('max-age=86400');
+    expect(response.headers.get('content-type')).toContain('text/plain');
+    expect(response.headers.get('x-frame-options')).toBe('DENY');
+    expect(text).toBe('Gone');
+    expect(next).not.toHaveBeenCalled();
+  });
+
+  it('returns an empty gone response for HEAD requests to stale build assets', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+    const { response, text } = await runMiddleware(
+      new Request('https://www.u2tool.com/dist/', { method: 'HEAD' }),
+      next
+    );
+
+    expect(response.status).toBe(410);
+    expect(response.headers.get('x-robots-tag')).toBe('noindex, nofollow');
+    expect(text).toBe('');
+    expect(next).not.toHaveBeenCalled();
+  });
+
   it('caches GET HTML responses and serves later requests from cache', async () => {
     const cache = installHtmlCache();
     const url = 'https://www.u2tool.com/ru/tools/json-formatter/';
