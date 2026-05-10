@@ -4,6 +4,7 @@ import {
   analyzeComplexity,
   analyzeDeadCode,
   analyzePerformance,
+  ASCII_FONTS,
   base64UrlEncode,
   buildCrc32Table,
   buildOutlineTree,
@@ -32,6 +33,7 @@ import {
   findClosestColor,
   findDuplicates,
   findUnusedImports,
+  flipMap,
   formatDocument,
   formatHour,
   formatJson,
@@ -91,6 +93,9 @@ import {
   minifySql,
   mergeJsonObjects,
   mergeBusySlots,
+  mirrorMap,
+  MORSE_CODE,
+  NATO_ALPHABET,
   normalizePrefix,
   optimizeSQL,
   parseEnvContent,
@@ -129,7 +134,11 @@ import {
   parseConflicts,
   quoteIdentifier,
   randomByte,
+  REVERSE_MORSE,
   rot13,
+  smallCapsMap,
+  subscriptMap,
+  superscriptMap,
   validateIP,
   vigenereCipher,
 } from './tool-stubs';
@@ -251,6 +260,27 @@ X-Trace-Id: abc123
     });
     expect(validateIP('::1')).toMatchObject({ isValid: true, type: 'IPv6' });
     expect(isIpAddress('example.com')).toBe(false);
+  });
+
+  it('provides text utility reference data for visible transforms', () => {
+    expect(ASCII_FONTS.standard.H).toHaveLength(5);
+    const firstAsciiRow = 'HELLO'
+      .split('')
+      .map((character) => ASCII_FONTS.standard[character]?.[0] || ASCII_FONTS.standard[' '][0])
+      .join(' ');
+    expect(firstAsciiRow).toContain('█');
+
+    expect(MORSE_CODE.S).toBe('...');
+    expect(MORSE_CODE.O).toBe('---');
+    expect(REVERSE_MORSE['...']).toBe('S');
+    expect(NATO_ALPHABET.A).toBe('Alpha');
+    expect(NATO_ALPHABET.C).toBe('Charlie');
+
+    expect(smallCapsMap.a).toBe('ᴀ');
+    expect(superscriptMap['2']).toBe('²');
+    expect(subscriptMap['2']).toBe('₂');
+    expect(flipMap.a).toBe('ɐ');
+    expect(mirrorMap.b).toBe('d');
   });
 
   it('generates and formats MAC address bytes with secure random input', () => {

@@ -21,7 +21,7 @@ The strongest immediate candidates are text utility tools that expect reference 
 
 ### Text Utility Runtime Repair
 
-- [ ] RUNTIME-07: Text utility tools that currently depend on empty reference maps or arrays render meaningful ASCII, Morse/NATO, small-text, and flip/mirror output through shared runtime-integrity helpers or populated compatibility exports.
+- [x] RUNTIME-07: Text utility tools that currently depend on empty reference maps or arrays render meaningful ASCII, Morse/NATO, small-text, and flip/mirror output through shared runtime-integrity helpers or populated compatibility exports.
 - [ ] RUNTIME-08: Adjacent validation/reference-data tools selected from the inventory, such as email provider/typo/disposable-domain checks or password common-list checks, stop silently under-reporting because of empty compatibility data.
 
 ### Runtime Governance
@@ -48,7 +48,7 @@ The strongest immediate candidates are text utility tools that expect reference 
 | Requirement | Planned Phase | Status |
 | --- | --- | --- |
 | RUNTIME-06 | Phase 28 | Complete |
-| RUNTIME-07 | Phase 29 | Pending |
+| RUNTIME-07 | Phase 29 | Complete |
 | RUNTIME-08 | Phase 30 | Pending |
 | OPS-12 | Phase 31 | Pending |
 
@@ -59,4 +59,4 @@ The strongest immediate candidates are text utility tools that expect reference 
 
 ---
 *Requirements defined: 2026-05-10*
-*Last updated: 2026-05-10 after Phase 28 verification*
+*Last updated: 2026-05-10 after Phase 29 verification*

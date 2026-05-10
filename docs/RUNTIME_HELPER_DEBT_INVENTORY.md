@@ -1,133 +1,63 @@
 # Runtime Helper Debt Inventory
 
-Generated: 2026-05-10T15:26:25.335Z
+Generated: 2026-05-10T15:30:40.558Z
 
 ## Summary
 
 - Imported compatibility exports scanned: 246
-- Likely broken imported exports: 19
+- Likely broken imported exports: 10
 - Protected or likely false-positive exports: 73
-- Recommended Phase 29 text/reference candidates: 9
+- Selected Phase 29 text/reference candidates still likely broken: 0
 - Recommended Phase 30 validation/reference candidates: 4
 
 ## Top Repair Candidates
 
 | Rank | Export | Category | Score | Signatures | Consumers | Notes |
 | --- | --- | --- | ---: | --- | ---: | --- |
-| 1 | `ASCII_FONTS` | text-reference | 60 | empty-array-const | 1 | - |
-| 2 | `defaultColors` | text-reference | 60 | empty-array-const | 1 | - |
-| 3 | `emojiData` | text-reference | 60 | empty-array-const | 1 | - |
-| 4 | `flipMap` | text-reference | 60 | empty-object-const | 1 | - |
-| 5 | `fontMappings` | text-reference | 60 | empty-object-const | 1 | - |
-| 6 | `fontStyles` | text-reference | 60 | empty-array-const | 1 | - |
-| 7 | `mirrorMap` | text-reference | 60 | empty-object-const | 1 | - |
-| 8 | `MORSE_CODE` | text-reference | 60 | empty-object-const | 1 | - |
-| 9 | `NATO_ALPHABET` | text-reference | 60 | empty-object-const | 1 | - |
-| 10 | `REVERSE_MORSE` | text-reference | 60 | empty-object-const | 1 | - |
-| 11 | `smallCapsMap` | text-reference | 60 | empty-array-const | 1 | - |
-| 12 | `subscriptMap` | text-reference | 60 | empty-array-const | 1 | - |
-| 13 | `superscriptMap` | text-reference | 60 | empty-array-const | 1 | - |
-| 14 | `K` | general | 54 | empty-array-const | 5 | - |
-| 15 | `commonPasswords` | validation-reference | 54 | empty-array-const | 1 | - |
-| 16 | `commonTypos` | validation-reference | 54 | empty-object-const | 1 | - |
-| 17 | `disposableDomains` | validation-reference | 54 | empty-array-const | 1 | - |
-| 18 | `freeProviders` | validation-reference | 54 | empty-array-const | 1 | - |
-| 19 | `bicDatabase` | database-developer | 42 | empty-object-const | 1 | - |
+| 1 | `defaultColors` | text-reference | 60 | empty-array-const | 1 | - |
+| 2 | `emojiData` | text-reference | 60 | empty-array-const | 1 | - |
+| 3 | `fontMappings` | text-reference | 60 | empty-object-const | 1 | - |
+| 4 | `fontStyles` | text-reference | 60 | empty-array-const | 1 | - |
+| 5 | `K` | general | 54 | empty-array-const | 5 | - |
+| 6 | `commonPasswords` | validation-reference | 54 | empty-array-const | 1 | - |
+| 7 | `commonTypos` | validation-reference | 54 | empty-object-const | 1 | - |
+| 8 | `disposableDomains` | validation-reference | 54 | empty-array-const | 1 | - |
+| 9 | `freeProviders` | validation-reference | 54 | empty-array-const | 1 | - |
+| 10 | `bicDatabase` | database-developer | 42 | empty-object-const | 1 | - |
 
 ## Recommended v0.0.9 Waves
 
 ### Phase 29 Text Utility Reference Data
 
-### ASCII_FONTS
-
-- Category: text-reference
-- Source: `src/lib/tool-stubs.ts:1867`
-- Signatures: `empty-array-const`
-- Consumers: `src/components/tools/TextToAsciiArt.svelte`
-
-### flipMap
-
-- Category: text-reference
-- Source: `src/lib/tool-stubs.ts:2980`
-- Signatures: `empty-object-const`
-- Consumers: `src/components/tools/FlipText.svelte`
-
-### mirrorMap
-
-- Category: text-reference
-- Source: `src/lib/tool-stubs.ts:4088`
-- Signatures: `empty-object-const`
-- Consumers: `src/components/tools/FlipText.svelte`
-
-### MORSE_CODE
-
-- Category: text-reference
-- Source: `src/lib/tool-stubs.ts:2210`
-- Signatures: `empty-object-const`
-- Consumers: `src/components/tools/MorseCode.svelte`
-
-### NATO_ALPHABET
-
-- Category: text-reference
-- Source: `src/lib/tool-stubs.ts:2223`
-- Signatures: `empty-object-const`
-- Consumers: `src/components/tools/TextToNato.svelte`
-
-### REVERSE_MORSE
-
-- Category: text-reference
-- Source: `src/lib/tool-stubs.ts:2243`
-- Signatures: `empty-object-const`
-- Consumers: `src/components/tools/MorseCode.svelte`
-
-### smallCapsMap
-
-- Category: text-reference
-- Source: `src/lib/tool-stubs.ts:4546`
-- Signatures: `empty-array-const`
-- Consumers: `src/components/tools/SmallTextGenerator.svelte`
-
-### subscriptMap
-
-- Category: text-reference
-- Source: `src/lib/tool-stubs.ts:4589`
-- Signatures: `empty-array-const`
-- Consumers: `src/components/tools/SmallTextGenerator.svelte`
-
-### superscriptMap
-
-- Category: text-reference
-- Source: `src/lib/tool-stubs.ts:4591`
-- Signatures: `empty-array-const`
-- Consumers: `src/components/tools/SmallTextGenerator.svelte`
+- No selected Phase 29 text utility candidates remain likely broken. Nonselected text/reference candidates may still appear in the top repair table.
 
 ### Phase 30 Validation Reference Data
 
 ### commonPasswords
 
 - Category: validation-reference
-- Source: `src/lib/tool-stubs.ts:2693`
+- Source: `src/lib/tool-stubs.ts:2704`
 - Signatures: `empty-array-const`
 - Consumers: `src/components/tools/PasswordStrength.svelte`
 
 ### commonTypos
 
 - Category: validation-reference
-- Source: `src/lib/tool-stubs.ts:2716`
+- Source: `src/lib/tool-stubs.ts:2727`
 - Signatures: `empty-object-const`
 - Consumers: `src/components/tools/EmailValidator.svelte`
 
 ### disposableDomains
 
 - Category: validation-reference
-- Source: `src/lib/tool-stubs.ts:2882`
+- Source: `src/lib/tool-stubs.ts:2893`
 - Signatures: `empty-array-const`
 - Consumers: `src/components/tools/EmailValidator.svelte`
 
 ### freeProviders
 
 - Category: validation-reference
-- Source: `src/lib/tool-stubs.ts:3111`
+- Source: `src/lib/tool-stubs.ts:3122`
 - Signatures: `empty-array-const`
 - Consumers: `src/components/tools/EmailValidator.svelte`
 

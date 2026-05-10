@@ -6,7 +6,7 @@
 
 This milestone continues the runtime trust line after `v0.0.8`. The focus is to make the remaining `src/lib/tool-stubs.ts` debt measurable, then repair the next user-visible text/reference-data helper wave without broad compatibility churn. It should preserve typed `runtime-integrity` modules as the landing place for real behavior and keep the canonical production gate as the release boundary.
 
-Status: milestone opened on 2026-05-10 after v0.0.8 shipped with scheduling and code-analysis helper repairs plus runtime-placeholder governance. Phase 28 completed on 2026-05-10 with a generated runtime debt inventory and ranked Phase 29/30 repair scope.
+Status: milestone opened on 2026-05-10 after v0.0.8 shipped with scheduling and code-analysis helper repairs plus runtime-placeholder governance. Phase 28 completed on 2026-05-10 with a generated runtime debt inventory and ranked Phase 29/30 repair scope. Phase 29 completed on 2026-05-10 by repairing selected text utility reference data through runtime-integrity exports and smoke tests.
 
 ### Phase 28: Runtime Helper Debt Inventory
 **Goal**: Produce a deterministic inventory of remaining `tool-stubs.ts` imports, placeholder signatures, consumers, false positives, and ranked repair candidates.
@@ -35,8 +35,10 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 29-01: Extract or populate the selected text reference-data helpers
-- [ ] 29-02: Add runtime smoke coverage and component compatibility evidence
+- [x] 29-01: Extract or populate the selected text reference-data helpers
+- [x] 29-02: Add runtime smoke coverage and component compatibility evidence
+
+**Archived outcome:** selected text utility helpers now flow through `src/lib/runtime-integrity/text-reference.ts`, remain compatible through `tool-stubs.ts`, and have runtime smoke coverage plus refreshed inventory evidence.
 
 ### Phase 30: Validation Reference Data Repair
 **Goal**: Repair the adjacent validation/reference-data helper cluster selected from the inventory so security and validation tools stop silently under-reporting known cases.

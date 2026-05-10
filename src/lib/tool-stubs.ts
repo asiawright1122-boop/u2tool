@@ -46,6 +46,17 @@ import {
   parseTimeToMinutes as runtimeParseTimeToMinutes,
 } from './runtime-integrity/scheduling';
 import { formatSql as runtimeFormatSql, minifySql as runtimeMinifySql } from './runtime-integrity/sql';
+import {
+  ASCII_FONTS as runtimeAsciiFonts,
+  flipMap as runtimeFlipMap,
+  mirrorMap as runtimeMirrorMap,
+  MORSE_CODE as runtimeMorseCode,
+  NATO_ALPHABET as runtimeNatoAlphabet,
+  REVERSE_MORSE as runtimeReverseMorse,
+  smallCapsMap as runtimeSmallCapsMap,
+  subscriptMap as runtimeSubscriptMap,
+  superscriptMap as runtimeSuperscriptMap,
+} from './runtime-integrity/text-reference';
 import { marked } from 'marked';
 import * as yaml from 'js-yaml';
 import { pinyin } from 'pinyin-pro';
@@ -1864,7 +1875,7 @@ export const ACTIVITY_MULTIPLIERS = {
   "veryActive": 1.9
 };
 export const AI_PATTERNS = {};
-export const ASCII_FONTS = [];
+export const ASCII_FONTS = runtimeAsciiFonts;
 export const AVAILABLE_TIMEZONES = [
   {
     "name": "New York",
@@ -2207,7 +2218,7 @@ export const LICENSES = [
     "text": "Apache License 2.0\\n\\nCopyright (c) {{year}} {{name}}"
   }
 ];
-export const MORSE_CODE = {};
+export const MORSE_CODE = runtimeMorseCode;
 export const NAMING_CONVENTIONS = [
   {
     "id": "feature",
@@ -2220,7 +2231,7 @@ export const NAMING_CONVENTIONS = [
     "desc": "Bug fix branches"
   }
 ];
-export const NATO_ALPHABET = {};
+export const NATO_ALPHABET = runtimeNatoAlphabet;
 export const PREGNANCY_DAYS = 280;
 export const PRESETS: Record<string, any[]> = {
   node: [
@@ -2240,7 +2251,7 @@ export const PRESETS: Record<string, any[]> = {
   ],
 };
 export const PRINT_SIZES = {};
-export const REVERSE_MORSE = {};
+export const REVERSE_MORSE = runtimeReverseMorse;
 export const ReactNode = [];
 export const SAMPLE_CONFLICT = "<<<<<<< HEAD\\nLocal change\\n=======\\nIncoming change\\n>>>>>>> branch";
 export const SAMPLE_CONTENT = `# Product Guide
@@ -2977,7 +2988,7 @@ export function findUnusedImports(code = '') {
     return { ...item, used, unused };
   });
 }
-export const flipMap = {};
+export const flipMap = runtimeFlipMap;
 export const fontMappings = {};
 export const fontStyles = [];
 export function formatCitation(citation = {}, style = 'apa') {
@@ -4085,7 +4096,7 @@ export function minifyXml(input = '') {
     .replace(/\s{2,}/g, ' ')
     .trim();
 }
-export const mirrorMap = {};
+export const mirrorMap = runtimeMirrorMap;
 export const nameData = {};
 export function normalizePrefix(prefix = '') {
   const raw = String(prefix || '').trim();
@@ -4543,7 +4554,7 @@ export function sizeToTailwind(value = '', prefix = '') {
   const size = parseTailwindSize(raw);
   return size ? `${prefix}-${size}` : `${prefix}-[${raw}]`;
 }
-export const smallCapsMap = [];
+export const smallCapsMap = runtimeSmallCapsMap;
 export function sortObject(value, order = 'asc') { return runtimeSortObject(value, order); }
 export function sqlToJson(input = '') {
   const rows = [];
@@ -4586,9 +4597,9 @@ export const statusCodes = [
     "message": "Internal Server Error"
   }
 ];
-export const subscriptMap = [];
+export const subscriptMap = runtimeSubscriptMap;
 export function suggestBranchName() { return null; }
-export const superscriptMap = [];
+export const superscriptMap = runtimeSuperscriptMap;
 export const synonyms = {};
 export const tailwindToCssMap = {};
 export function testForInjection(code = '') {

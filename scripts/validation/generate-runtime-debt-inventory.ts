@@ -310,7 +310,7 @@ function renderReport(rows: InventoryRow[], generatedAt: string): string {
   lines.push(`- Imported compatibility exports scanned: ${importedRows.length}`);
   lines.push(`- Likely broken imported exports: ${likelyBroken.length}`);
   lines.push(`- Protected or likely false-positive exports: ${falsePositives.length}`);
-  lines.push(`- Recommended Phase 29 text/reference candidates: ${textWave.length}`);
+  lines.push(`- Selected Phase 29 text/reference candidates still likely broken: ${textWave.length}`);
   lines.push(`- Recommended Phase 30 validation/reference candidates: ${validationWave.length}`);
   lines.push('');
   lines.push('## Top Repair Candidates');
@@ -324,8 +324,9 @@ function renderReport(rows: InventoryRow[], generatedAt: string): string {
   if (textWave.length > 0) {
     lines.push(...renderCandidateDetails(textWave));
   } else {
-    lines.push('- No text-reference candidates detected.');
+    lines.push('- No selected Phase 29 text utility candidates remain likely broken. Nonselected text/reference candidates may still appear in the top repair table.');
   }
+  lines.push('');
   lines.push('### Phase 30 Validation Reference Data');
   lines.push('');
   if (validationWave.length > 0) {
