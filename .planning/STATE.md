@@ -5,9 +5,9 @@ milestone_name: Runtime Workflow Integrity Expansion
 current_phase: 25
 current_phase_name: Developer/Data Runtime Repair
 current_plan: 0
-status: ready_for_planning
-stopped_at: "Phase 24 completed and verified; next resume should discuss or plan Phase 25 Developer/Data Runtime Repair."
-last_updated: "2026-05-10T15:01:24+08:00"
+status: planned
+stopped_at: "Phase 25 context, research, and plans are ready; next resume should execute the code-analysis runtime repair wave."
+last_updated: "2026-05-10T15:05:00+08:00"
 last_activity: 2026-05-10
 progress:
   total_phases: 4
@@ -33,7 +33,7 @@ Current Phase Name: Developer/Data Runtime Repair
 Total Phases: 4
 Current Plan: 0
 Total Plans in Phase: 2
-Status: Phase 25 ready for discussion/planning
+Status: Phase 25 planned; ready for execution
 Last Activity: 2026-05-10
 Progress: 25%
 Progress Bar: [###-------] 25%
@@ -126,8 +126,8 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-- Discuss or plan Phase 25 Developer/Data Runtime Repair.
-- Rank the next developer/data runtime helper wave after Phase 24.
+- Execute Phase 25 Developer/Data Runtime Repair plans 25-01 and 25-02.
+- Repair `analyzeComplexity`, `analyzeDeadCode`, and `analyzePerformance` through shared runtime-integrity helpers.
 - Review fresh GSC/Coverage drilldown deltas only after new exports are available.
 
 ### Blockers/Concerns
@@ -142,7 +142,7 @@ Recent decisions affecting current work:
 ## Session
 
 Last Date: 2026-05-10
-Stopped At: Phase 24 completed and verified; next resume should discuss or plan Phase 25 Developer/Data Runtime Repair.
+Stopped At: Phase 25 context, research, and plans created; next resume should execute the code-analysis runtime repair wave.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.
