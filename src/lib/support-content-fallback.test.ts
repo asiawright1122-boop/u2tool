@@ -279,6 +279,25 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks Random Color Generator palette controls that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'random-color-generator',
+      locale: 'en',
+      name: 'Random Color Generator',
+      description: '',
+      detailedDescription:
+        'Create palettes with harmony modes, locked colors, seeded palettes, and a WCAG contrast checker.',
+      usageSteps: ['Export CSS variables or PNG files from the palette history.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'random-color-generator-unsupported-palette-controls'
+    );
+  });
+
   it('blocks Hex Editor UI overclaims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'hex-editor',

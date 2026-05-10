@@ -119,6 +119,7 @@ The generated report identifies the bucket-level constraint. A raw-export re-ran
 | `https://www.u2tool.com/en/tools/morse-code-player/` | 9 clicks / 250 impressions | 0 clicks / 1 impression | -9 clicks | Follow-up completed 2026-05-10: Morse support copy now matches conversion, audio, sliders, visualization, and legend. |
 | `https://www.u2tool.com/en/tools/html-preview/` | 8 clicks / 490 impressions | 0 clicks / 4 impressions | -8 clicks | Follow-up completed 2026-05-10: Refresh Preview now reloads the iframe and English copy no longer claims JavaScript execution. |
 | `https://www.u2tool.com/ru/tools/scientific-calculator/` | 5 clicks / 427 impressions | 0 clicks / 0 impressions | -5 clicks | Follow-up completed 2026-05-10: Russian copy now matches the actual button UI and no longer claims Exp, 2nd, inverse-trig, hyperbolic, RPN, or differential-equation features. |
+| `https://www.u2tool.com/en/tools/random-color-generator/` | 5 clicks / 728 impressions | 0 clicks / 13 impressions | -5 clicks | Follow-up completed 2026-05-10: English copy now matches the swatch count, HEX/RGB/HSL format, copy controls, and palette preview UI. |
 
 ### Biggest Impression Losses
 
@@ -154,6 +155,7 @@ The generated report identifies the bucket-level constraint. A raw-export re-ran
 - Follow-up: `en/tools/compound-interest-calculator/` now describes the actual compound-interest inputs, result cards, total contributions/interest, and yearly balance bars, with guards against stale visual/growth chart claims.
 - Follow-up: `en/tools/html-preview/` now describes the actual HTML/CSS snippet editor, sandboxed iframe preview, Clear action, and iframe reload behavior, fixes Refresh Preview remounting, and guards against stale JavaScript execution claims.
 - Follow-up: `ru/tools/scientific-calculator/` now describes the actual RAD/DEG, sin/cos/tan, ln/log, √, xʸ, constants, factorial, percent, memory, and copy-result controls, with guards against stale Exp, 2nd, inverse-trig, hyperbolic-function, RPN, and differential-equation claims.
+- Follow-up: `en/tools/random-color-generator/` now describes the actual 1-to-20 swatch generator, HEX/RGB/HSL output selector, click-to-copy behavior, Copy All, and Palette Preview, tightens copy-state/input handling, and guards against unsupported palette-harmony, lock, seed, contrast, export, or history claims.
 
 ## Weekly Summary Draft
 

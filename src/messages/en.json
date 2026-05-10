@@ -15979,21 +15979,21 @@
     },
     "random-color-generator": {
       "name": "Random Color Generator",
-      "description": "Generate random colors with HEX, RGB, and HSL values",
-      "seo_title": "Free Random Color Generator Online - Color Palette Generator",
-      "seo_description": "Free online random color generator. Generate random colors with HEX, RGB, and HSL values. Create color palettes for design projects.",
-      "detailed_description": "Random Color Generator creates random colors with multiple format outputs (HEX, RGB, HSL). Generate single colors or entire palettes for design inspiration and creative projects.",
+      "description": "Generate random color palettes with HEX, RGB, and HSL copy output.",
+      "seo_title": "Free Random Color Generator Online - HEX RGB HSL Palette",
+      "seo_description": "Generate 1 to 20 random colors online, switch HEX, RGB, or HSL output, copy individual swatches or the full palette, and preview the palette.",
+      "detailed_description": "The Random Color Generator creates a browser-side palette of random colors with copyable HEX, RGB, or HSL output. Set the number of swatches from 1 to 20, choose the output format, press Generate, and click any color card to copy its current value. Copy All returns the complete palette in the selected format, while Palette Preview shows the generated colors together as a single strip. It is useful for quick design inspiration, placeholder palettes, art prompts, and testing color values without installing a design app.",
       "usage_steps": [
-        "Set the number of colors to generate",
-        "Choose your preferred color format",
-        "Click Generate to create random colors",
-        "Click any color to copy its value",
-        "Use Copy All to get the entire palette"
+        "Set how many random colors to generate, from 1 to 20.",
+        "Choose HEX, RGB, or HSL as the displayed copy format.",
+        "Click Generate to replace the current swatches with a new random palette.",
+        "Click any color card to copy that color value.",
+        "Use Copy All to copy the full palette in the selected format and check Palette Preview to see the colors side by side."
       ],
       "usage_examples": [
-        "Find color inspiration for designs",
-        "Generate color palettes for websites",
-        "Create random color schemes for art"
+        "Generate five HEX colors for a quick website mockup.",
+        "Switch to RGB output before pasting values into a CSS prototype.",
+        "Create a random palette strip for art direction notes or copy all HSL values for a design experiment."
       ],
       "count": "Colors",
       "format": "Format",

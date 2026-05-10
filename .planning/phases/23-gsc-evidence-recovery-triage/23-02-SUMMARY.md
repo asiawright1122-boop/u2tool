@@ -102,3 +102,11 @@ Plan 23-02 is complete for the first evidence-led recovery patch. The remaining 
 - Removed unsupported claims for `Exp`, `2nd`, inverse trigonometric buttons, hyperbolic functions, reverse Polish notation, and solving differential equations.
 - Added content-trust rules and rendered SEO checks so stale unsupported scientific-function claims do not return.
 - Verification passed with `npx vitest run src/lib/support-content-fallback.test.ts src/lib/scientific-calculator.test.ts`, `npm run i18n:check-missing-keys`, `git diff --check`, `npm run check`, `npm run build`, local source-rendered `npm run validate:rendered-seo`, and production `npm run validate:rendered-seo`.
+
+## 2026-05-10 Random Color Generator Follow-Up
+
+- Continued the remaining click-loss queue with `en/tools/random-color-generator/` (previous 5 clicks / 728 impressions, current 0 clicks / 13 impressions) and its color-generator query cluster (`color generator` previous 2 clicks / 116 impressions, current 0 clicks / 11 impressions).
+- Refreshed English Random Color Generator metadata/support copy to describe the actual 1-to-20 swatch count, HEX/RGB/HSL output selector, Generate button, click-to-copy swatches, Copy All, and Palette Preview behavior.
+- Tightened the color count input to update on `input` and centralized copied-state timeout cleanup for individual swatch and Copy All actions.
+- Added content-trust rules and rendered SEO checks so stale palette-harmony, locked-color, seeded-palette, contrast-checker, CSS-variable export, PNG export, and palette-history claims do not return.
+- Verification passed with `npx vitest run src/lib/support-content-fallback.test.ts`, `npm run i18n:check-missing-keys`, `git diff --check`, `npm run check`, `npm run build`, local source-rendered `npm run validate:rendered-seo`, and production `npm run validate:rendered-seo`.

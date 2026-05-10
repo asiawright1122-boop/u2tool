@@ -19,13 +19,13 @@
 
   let colors = $state(['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6']);
 
-  let copied = $state(null);
+  let copied = $state<number | null>(null);
 
   let count = $state(5);
 
-  let format = $state('hex');
+  let format = $state<'hex' | 'rgb' | 'hsl'>('hex');
 
-  let timerRef = $state(null);
+  let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);
 
   function formatColor(hex: string) {
     switch (format) {
@@ -33,7 +33,9 @@
       case 'hsl': return hexToHsl(hex);
       default: return hex;
     }
-  }  onDestroy(() => {
+  }
+
+  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
 
@@ -68,15 +70,21 @@
     const newColors = Array.from({ length: count }, () => generateRandomHex());
     colors = newColors;
   }
+  function markCopied(value: number) {
+    copied = value;
+    if (timerRef) clearTimeout(timerRef);
+    timerRef = setTimeout(() => {
+      copied = null;
+      timerRef = null;
+    }, 2000);
+  }
   function copyColor(index: number) {
-    navigator.clipboard.writeText(formatColor(colors[index]));
-    copied = index;
-    setTimeout(() => copied = null, 2000);
+    void navigator.clipboard.writeText(formatColor(colors[index]));
+    markCopied(index);
   }
   function copyAll() {
-    navigator.clipboard.writeText(colors.map(c => formatColor(c)).join('\n'));
-    copied = -1;
-    setTimeout(() => copied = null, 2000);
+    void navigator.clipboard.writeText(colors.map((color) => formatColor(color)).join('\n'));
+    markCopied(-1);
   }
   function getLuminance(hex: string): number {
     const r = parseInt(hex.slice(1, 3), 16) / 255;
@@ -87,81 +95,85 @@
 
 </script>
 
-
-    <div class="space-y-6">
-      <div class="flex flex-wrap items-center justify-center gap-4">
-        <div class="flex items-center gap-2">
-          <label for="color-count" class="text-sm text-gray-600 dark:text-gray-400">{t('count')}:</label>
-          <input
-            id="color-count"
-            name="colorCount"
-            type="number"
-            min="1"
-            max="20"
-            value={count}
-            onchange={(e) => count = Math.min(20, Math.max(1, parseInt(e.target.value) || 1))}
-            class="w-16 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
-        </div>
-        <div class="flex items-center gap-2">
-          <label for="color-format" class="text-sm text-gray-600 dark:text-gray-400">{t('format')}:</label>
-          <select
-            id="color-format"
-            name="colorFormat"
-            value={format}
-            onchange={(e) => format = e.target.value as 'hex' | 'rgb' | 'hsl'}
-            class="px-3 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
-            <option value="hex">HEX</option>
-            <option value="rgb">RGB</option>
-            <option value="hsl">HSL</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="flex justify-center gap-4">
-        <button
-          onclick={generateColors}
-          class="px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M16 8h.01"/><path d="M8 8h.01"/><path d="M8 16h.01"/><path d="M16 16h.01"/><path d="M12 12h.01"/></svg> {t('generate')}
-        </button>
-        <button
-          onclick={copyAll}
-          class="px-6 py-3 btn-success rounded-lg hover:bg-green-700 transition-colors"
-        >
-          {copied === -1 ? t('copied') : t('copyAll')}
-        </button>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-        {#each colors as color, index (index)}
-<div 
-            onclick={() => copyColor(index)}
-            class="cursor-pointer rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
-          >
-            <div
-              class="h-32 flex items-center justify-center"
-              style="background-color: {color}"
-            >
-              <span class={`text-sm font-mono ${getLuminance(color) > 0.5 ? 'text-gray-900' : 'text-white'}`}>
-                {copied === index ? t('copied') : t('clickToCopy')}
-              </span>
-            </div>
-            <div class="p-3 bg-white dark:bg-gray-800 text-center">
-              <span class="font-mono text-sm text-gray-900 dark:text-white">{formatColor(color)}</span>
-            </div>
-          </div>
-{/each}
-      </div>
-
-      <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-        <h3 class="font-medium text-gray-900 dark:text-white mb-2">{t('palettePreview')}</h3>
-        <div class="flex h-16 rounded-lg overflow-hidden">
-          {#each colors as color, index (index)}
-<div  class="flex-1" style="background-color: {color}"></div>
-{/each}
-        </div>
-      </div>
+<div class="space-y-6">
+  <div class="flex flex-wrap items-center justify-center gap-4">
+    <div class="flex items-center gap-2">
+      <label for="color-count" class="text-sm text-gray-600 dark:text-gray-400">{t('count')}:</label>
+      <input
+        id="color-count"
+        name="colorCount"
+        type="number"
+        min="1"
+        max="20"
+        value={count}
+        oninput={(event) => {
+          const input = event.currentTarget as HTMLInputElement;
+          count = Math.min(20, Math.max(1, parseInt(input.value) || 1));
+        }}
+        class="w-16 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+      />
     </div>
-  
+    <div class="flex items-center gap-2">
+      <label for="color-format" class="text-sm text-gray-600 dark:text-gray-400">{t('format')}:</label>
+      <select
+        id="color-format"
+        name="colorFormat"
+        value={format}
+        onchange={(event) => {
+          const select = event.currentTarget as HTMLSelectElement;
+          format = select.value as 'hex' | 'rgb' | 'hsl';
+        }}
+        class="px-3 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+      >
+        <option value="hex">HEX</option>
+        <option value="rgb">RGB</option>
+        <option value="hsl">HSL</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="flex justify-center gap-4">
+    <button
+      onclick={generateColors}
+      class="px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M16 8h.01"/><path d="M8 8h.01"/><path d="M8 16h.01"/><path d="M16 16h.01"/><path d="M12 12h.01"/></svg> {t('generate')}
+    </button>
+    <button
+      onclick={copyAll}
+      class="px-6 py-3 btn-success rounded-lg hover:bg-green-700 transition-colors"
+    >
+      {copied === -1 ? t('copied') : t('copyAll')}
+    </button>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+    {#each colors as color, index (index)}
+      <div
+        onclick={() => copyColor(index)}
+        class="cursor-pointer rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+      >
+        <div
+          class="h-32 flex items-center justify-center"
+          style="background-color: {color}"
+        >
+          <span class={`text-sm font-mono ${getLuminance(color) > 0.5 ? 'text-gray-900' : 'text-white'}`}>
+            {copied === index ? t('copied') : t('clickToCopy')}
+          </span>
+        </div>
+        <div class="p-3 bg-white dark:bg-gray-800 text-center">
+          <span class="font-mono text-sm text-gray-900 dark:text-white">{formatColor(color)}</span>
+        </div>
+      </div>
+    {/each}
+  </div>
+
+  <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+    <h3 class="font-medium text-gray-900 dark:text-white mb-2">{t('palettePreview')}</h3>
+    <div class="flex h-16 rounded-lg overflow-hidden">
+      {#each colors as color}
+        <div class="flex-1" style="background-color: {color}"></div>
+      {/each}
+    </div>
+  </div>
+</div>

@@ -177,6 +177,12 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['scientific-calculator'],
   },
   {
+    code: 'random-color-generator-unsupported-palette-controls',
+    pattern: /\bharmony modes?\b|\blocked colors?\b|\block colors?\b|\bseeded palettes?\b|\bcontrast checker\b|\bWCAG\b|\bexport(?:s|ing)? (?:CSS variables|PNG|SVG|ASE)\b|\bpalette history\b/i,
+    message: 'Claims random-color palette controls that are not present in the current swatch generator UI.',
+    slugs: ['random-color-generator'],
+  },
+  {
     code: 'jwt-signature-verification-claim',
     pattern: /\bvalidate(?:s| the)? token'?s signature\b|\bSignature Verification\b/i,
     message: 'Claims JWT signature verification, but the current decoder only decodes and displays token parts.',
