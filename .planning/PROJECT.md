@@ -10,9 +10,10 @@ Every localized tool page must render the right topic, the right language, and t
 
 ## Current Status
 
+**Current milestone:** `v0.0.9 Runtime Debt Prioritization and Text Utility Repair`
 **Latest archived milestone:** `v0.0.8 Runtime Workflow Integrity Expansion`
 **Previous archived milestone:** `v0.0.7 Organic Authority Re-Expansion`
-**Current planning state:** No active milestone is open. The next work should start from fresh requirements with `$gsd-new-milestone`; future runtime helper work should rank candidates by real imports, user-visible breakage, and bounded compatibility risk before implementation.
+**Current planning state:** v0.0.9 is open. The next work should build a deterministic inventory of remaining `tool-stubs.ts` helper debt, then repair the most visible text/reference-data cluster with direct runtime evidence.
 
 **Latest completed outcomes:**
 - Repaired the meeting/time scheduling helper cluster through shared runtime-integrity behavior for parsing, formatting, availability, conflicts, and timezone conversion.
@@ -74,9 +75,11 @@ Every localized tool page must render the right topic, the right language, and t
 
 ### Active
 
-- [ ] Start the next milestone from fresh requirements rather than continuing completed v0.0.8 runtime repair phases.
+- [ ] Inventory remaining `tool-stubs.ts` exports imported by tool components and rank repair candidates by user-visible breakage, import coverage, testability, and compatibility risk.
+- [ ] Repair the selected text utility reference-data helper cluster so representative ASCII, Morse/NATO, small-text, and flip/mirror tools produce meaningful output.
+- [ ] Repair the selected adjacent validation/reference-data helper cluster so email/password or similar tools stop silently under-reporting known cases.
+- [ ] Fold the new inventory and repaired-cluster evidence into runtime governance and production verification.
 - [ ] Review fresh GSC Coverage and Performance exports before reopening recovery work.
-- [ ] Rank any future `tool-stubs.ts` helper repair wave by real imports, user-visible breakage, and bounded compatibility risk.
 
 ### Out of Scope
 
@@ -131,10 +134,21 @@ This is a brownfield repository with a very large content surface, heavy localiz
 | Promote new authority waves through shared browse, compare, AI, and export ordering rather than page-specific tweaks | Organic entry surfaces and machine-readable outputs must stay synchronized to one localized discovery truth or promotion quickly drifts | ✓ Good |
 | Repair runtime helpers through typed `src/lib/runtime-integrity/` modules while preserving `tool-stubs.ts` exports | The large shared stub surface needs bounded compatibility-safe repairs, not a risky repo-wide rewrite | ✓ Good |
 | Add runtime smoke and placeholder-regression checks to `qa:production` | Repaired helpers need deterministic evidence inside the canonical release gate or empty fallback regressions can still compile | ✓ Good |
+| Start v0.0.9 with a runtime debt inventory before another repair wave | Heuristic placeholder detection can mistake valid fallback behavior for stubs, so repair candidates need consumer evidence and false-positive notes before governance expands | ✓ Good |
 
 ## Current State
 
-The current baseline now includes promoted discovery ordering for the strongest authority routes, a home-page compare entry point, explicit priority export coverage in `llms.txt`, SEO-aware discovery snippets, restored JWT decoder/debugger metadata in the shared message layer, and a canonical production gate that reflects the real Cloudflare server-build output. `v0.0.5` shipped with lighter browse shells, a first shared runtime-integrity repair wave, and deterministic anti-corruption guardrails. `v0.0.6` then completed the next deferred curl/codegen runtime wave, added representative rendered translation drift governance, introduced a shared theme contract plus shell/chart parity proof, and surfaced that new evidence explicitly inside the canonical production gate. `v0.0.7` selected `text` as the next authority wave, promoted it across browse, compare, AI discovery, `llms.txt`, and tools-index exports, added growth-surface governance, and completed evidence-led GSC recovery triage. `v0.0.8` repaired the next scheduling and code-analysis runtime helper clusters, restored placeholder governance, and closed with a green canonical production gate.
+The current baseline now includes promoted discovery ordering for the strongest authority routes, a home-page compare entry point, explicit priority export coverage in `llms.txt`, SEO-aware discovery snippets, restored JWT decoder/debugger metadata in the shared message layer, and a canonical production gate that reflects the real Cloudflare server-build output. `v0.0.5` shipped with lighter browse shells, a first shared runtime-integrity repair wave, and deterministic anti-corruption guardrails. `v0.0.6` then completed the next deferred curl/codegen runtime wave, added representative rendered translation drift governance, introduced a shared theme contract plus shell/chart parity proof, and surfaced that new evidence explicitly inside the canonical production gate. `v0.0.7` selected `text` as the next authority wave, promoted it across browse, compare, AI discovery, `llms.txt`, and tools-index exports, added growth-surface governance, and completed evidence-led GSC recovery triage. `v0.0.8` repaired the next scheduling and code-analysis runtime helper clusters, restored placeholder governance, and closed with a green canonical production gate. `v0.0.9` is now opened to inventory the remaining runtime helper debt and repair the next text/reference-data wave.
+
+## Current Milestone: v0.0.9 Runtime Debt Prioritization and Text Utility Repair
+
+**Goal:** Make the remaining `tool-stubs.ts` runtime debt measurable, then repair the next user-visible text/reference-data helper wave without broad compatibility churn.
+
+**Target features:**
+- A deterministic inventory ranks imported `tool-stubs.ts` exports by consumer paths, placeholder signatures, false-positive notes, user-visible breakage, and compatibility risk.
+- Text utility tools such as ASCII art, Morse/NATO, small text, and flip/mirror output use meaningful reference data instead of empty compatibility maps.
+- Adjacent validation/reference-data tools selected from the inventory, such as email or password checks, stop under-reporting known cases because of empty data.
+- Runtime smoke tests, placeholder governance, traceability, and production verification show the repaired clusters as release evidence.
 
 ## Most Recent Milestone: v0.0.8 Runtime Workflow Integrity Expansion
 
@@ -163,4 +177,4 @@ The current baseline now includes promoted discovery ordering for the strongest 
 - Continue runtime-integrity expansion beyond v0.0.8 only for clusters with proven user-visible breakage and a bounded compatibility surface.
 
 ---
-*Last updated: 2026-05-10 after the v0.0.8 Runtime Workflow Integrity Expansion audit passed*
+*Last updated: 2026-05-10 after opening v0.0.9 Runtime Debt Prioritization and Text Utility Repair*

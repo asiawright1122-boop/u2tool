@@ -1,18 +1,68 @@
 # Roadmap: U2Tool
 
-## Current Status
+## v0.0.9 Runtime Debt Prioritization and Text Utility Repair
 
-No active milestone is open.
+**Milestone:** v0.0.9 Runtime Debt Prioritization and Text Utility Repair
 
-Latest shipped milestone: `v0.0.8 Runtime Workflow Integrity Expansion`, shipped on 2026-05-10 after the runtime workflow expansion passed audit, `npm run verify:production` was green, traceability showed `4/4` requirements complete with `0` gaps, and project health was `EXCELLENT`.
+This milestone continues the runtime trust line after `v0.0.8`. The focus is to make the remaining `src/lib/tool-stubs.ts` debt measurable, then repair the next user-visible text/reference-data helper wave without broad compatibility churn. It should preserve typed `runtime-integrity` modules as the landing place for real behavior and keep the canonical production gate as the release boundary.
 
-## Next Step
+Status: milestone opened on 2026-05-10 after v0.0.8 shipped with scheduling and code-analysis helper repairs plus runtime-placeholder governance.
 
-Start the next milestone from fresh requirements with `$gsd-new-milestone`.
+### Phase 28: Runtime Helper Debt Inventory
+**Goal**: Produce a deterministic inventory of remaining `tool-stubs.ts` imports, placeholder signatures, consumers, false positives, and ranked repair candidates.
+**Depends on**: Archived v0.0.8 baseline
+**Requirements**: RUNTIME-06
+**Success Criteria** (what must be TRUE):
+  1. Imported `tool-stubs.ts` exports are mapped to consumer components and export definitions.
+  2. Placeholder signatures are classified with false-positive notes so real fallback behavior is not confused with broken stubs.
+  3. The next repair candidates are ranked by user-visible breakage, import coverage, testability, and compatibility risk.
+**Plans**: 2 plans
 
-Do not continue runtime-helper repairs by sweeping `tool-stubs.ts` wholesale. Future runtime work should rank candidate helper families by real imports, user-visible breakage, and bounded compatibility risk before implementation.
+Plans:
+- [ ] 28-01: Build the runtime debt inventory report from actual imports and export signatures
+- [ ] 28-02: Rank the next helper repair waves and select the bounded v0.0.9 implementation scope
 
-Do not continue the May 2026 GSC recovery queue without new GSC Coverage and Performance exports. The v0.0.7 queue is exhausted and the next recovery pass should start from fresh URL/query evidence.
+### Phase 29: Text Utility Runtime Repair
+**Goal**: Repair the selected text utility reference-data cluster so visible text tools render meaningful transformations instead of empty-map fallback output.
+**Depends on**: Phase 28
+**Requirements**: RUNTIME-07
+**Success Criteria** (what must be TRUE):
+  1. ASCII art, Morse/NATO, small-text, and flip/mirror data needed by representative tools is available through shared runtime-integrity code or populated compatibility exports.
+  2. Representative tool behavior is covered by direct runtime smoke tests for normal input and unknown-character fallback.
+  3. Existing component imports remain compatible unless the inventory justifies a local migration.
+**Plans**: 2 plans
+
+Plans:
+- [ ] 29-01: Extract or populate the selected text reference-data helpers
+- [ ] 29-02: Add runtime smoke coverage and component compatibility evidence
+
+### Phase 30: Validation Reference Data Repair
+**Goal**: Repair the adjacent validation/reference-data helper cluster selected from the inventory so security and validation tools stop silently under-reporting known cases.
+**Depends on**: Phase 29
+**Requirements**: RUNTIME-08
+**Success Criteria** (what must be TRUE):
+  1. Selected email/password or similar validation helpers use meaningful reference data instead of empty arrays/objects.
+  2. Representative examples prove typo suggestions, free/disposable classification, or common-password penalties where applicable.
+  3. The repair remains local to the selected cluster and does not create broad runtime or localization churn.
+**Plans**: 2 plans
+
+Plans:
+- [ ] 30-01: Select the validation/reference-data repair slice from the inventory
+- [ ] 30-02: Implement the selected validation data repair with smoke evidence
+
+### Phase 31: Runtime Evidence Gate and Closeout
+**Goal**: Fold v0.0.9 inventory and repair evidence into the existing runtime/production verification path and close the milestone cleanly.
+**Depends on**: Phase 30
+**Requirements**: OPS-12
+**Success Criteria** (what must be TRUE):
+  1. Runtime smoke and placeholder governance cover the newly repaired helper clusters.
+  2. `npm run verify:production` passes after the inventory and repair work.
+  3. Traceability, health, and milestone audit artifacts reflect the v0.0.9 runtime debt reduction.
+**Plans**: 2 plans
+
+Plans:
+- [ ] 31-01: Extend runtime governance for the newly repaired clusters
+- [ ] 31-02: Run production verification and complete milestone closeout
 
 ## Archived Milestones
 
