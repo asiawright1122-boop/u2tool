@@ -156,6 +156,58 @@ describe('assessSupportContentTrust', () => {
     expect(report.issues.map((issue) => issue.code)).toContain('ical-full-timezone-claim');
   });
 
+  it('blocks Barcode Generator output controls that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'barcode-generator',
+      locale: 'ru',
+      name: 'Генератор штрих-кодов',
+      description: '',
+      detailedDescription:
+        'Поддерживает PNG и EPS с настраиваемым разрешением от 72 до 600 DPI.',
+      usageSteps: ['Настройте высоту штрихов, ширину модуля и цветовое оформление.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain('barcode-unsupported-output-claim');
+  });
+
+  it('blocks French File Size Calculator controls that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'file-size-calculator',
+      locale: 'fr',
+      name: 'Calculateur de taille de fichier',
+      description: '',
+      detailedDescription: '',
+      usageSteps: [
+        "Activez les cases à cocher correspondant aux unités de destination souhaitées.",
+        "Cliquez sur le bouton 'Convertir', puis utilisez 'Réinitialiser'.",
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain('file-size-unsupported-fr-controls');
+  });
+
+  it('blocks Morse Code Player reference chart claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'morse-code-player',
+      locale: 'en',
+      name: 'Morse Code Player',
+      description: '',
+      detailedDescription: 'Learn Morse code with the built-in reference chart.',
+      usageSteps: [],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain('morse-reference-chart-claim');
+  });
+
   it('blocks Hex Editor UI overclaims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'hex-editor',

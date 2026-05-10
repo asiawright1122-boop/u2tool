@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Morse Code Player converts text to Morse code and plays audio signals. Convert between text and Morse code, adjust playback speed and frequency, and learn Morse code with the built-in reference chart. Perfect for learning, amateur radio, and educational purposes.",
+  "detailed_description": "Morse Code Player converts text to Morse code and Morse code back to text in the browser. Enter a message, choose Text to Morse or Morse to Text, then use Convert to show the result. For encoded Morse, the player can sound the dots and dashes with adjustable speed and frequency, display a visual dot-dash pattern, and provide a small legend for dot, dash, letter spacing, and word spacing.",
   "usage_steps": [
-    "Enter text to convert to Morse code",
-    "Or enter Morse code to convert to text",
-    "Adjust speed and frequency settings",
-    "Play the Morse code audio",
-    "Use the legend to learn Morse code patterns"
+    "Choose Text to Morse or Morse to Text.",
+    "Enter plain text or Morse symbols in the input box.",
+    "Adjust playback speed and frequency if you plan to listen.",
+    "Click Convert to show the Morse or text output.",
+    "Use Play, the visualization, and the legend to review the dot-dash timing."
   ],
   "usage_examples": [
-    "Learn Morse code",
-    "Convert messages to Morse code",
-    "Practice Morse code listening"
+    "Turn a short practice phrase into Morse code and listen to it.",
+    "Decode a Morse sequence such as .... . .-.. .-.. --- back into text.",
+    "Compare slower and faster playback speeds while practicing recognition."
   ]
 }

@@ -114,6 +114,9 @@ The generated report identifies the bucket-level constraint. A raw-export re-ran
 | `hex editor online` | 14 clicks / 312 impressions | 0 clicks / 3 impressions | -14 clicks | Query-level evidence confirms the Hex Editor cluster is the highest click-loss candidate. |
 | `https://www.u2tool.com/de/tools/text-to-handwriting/` | 17 clicks / 178 impressions | 0 clicks / 2 impressions | -17 clicks | Follow-up completed: localized UI labels and corrected German support copy. |
 | `https://www.u2tool.com/en/tools/ical-parser/` | 14 clicks / 244 impressions | 0 clicks / 0 impressions | -14 clicks | Follow-up completed: refreshed parser support copy and removed timezone overclaim. |
+| `https://www.u2tool.com/ru/tools/barcode-generator/` | 11 clicks / 271 impressions | 0 clicks / 27 impressions | -11 clicks | Follow-up completed 2026-05-10: real multi-format barcode rendering plus corrected Russian support copy. |
+| `https://www.u2tool.com/fr/tools/file-size-calculator/` | 11 clicks / 58 impressions | 0 clicks / 1 impression | -11 clicks | Follow-up completed 2026-05-10: French support copy now matches the instant value/unit/base converter UI. |
+| `https://www.u2tool.com/en/tools/morse-code-player/` | 9 clicks / 250 impressions | 0 clicks / 1 impression | -9 clicks | Follow-up completed 2026-05-10: Morse support copy now matches conversion, audio, sliders, visualization, and legend. |
 
 ### Biggest Impression Losses
 
@@ -140,6 +143,9 @@ The generated report identifies the bucket-level constraint. A raw-export re-ran
 - Follow-up: `en/tools/sitemap-generator/` now describes the actual manual URL-list XML generator, escapes generated XML values, and has rendered/content-trust guards against stale crawler, automatic fetching, and large sitemap-index claims.
 - Follow-up: `de/tools/text-to-handwriting/` now uses localized paper labels, fixes German text-to-handwriting metadata/support copy, and updates the font-size slider live on input.
 - Follow-up: `en/tools/ical-parser/` now describes the actual paste/upload plus Parse workflow, visible event table, JSON export scope, and lack of full timezone-database expansion.
+- Follow-up: `ru/tools/barcode-generator/` now uses JsBarcode for the visible Code 128, Code 39, EAN-13, and UPC-A selector, refreshes Russian support copy around SVG preview behavior, and guards against stale PNG/EPS/DPI export or styling-control claims.
+- Follow-up: `fr/tools/file-size-calculator/` now describes the actual value, source-unit, binary/decimal base, byte conversions, bit conversions, and total-byte UI, with guards against stale destination-checkbox, Convert, and Reset claims.
+- Follow-up: `en/tools/morse-code-player/` now describes the actual text/Morse conversion, Play audio, speed/frequency sliders, visualization, legend, and copy-output behavior, with guards against stale built-in reference-chart claims.
 
 ## Weekly Summary Draft
 

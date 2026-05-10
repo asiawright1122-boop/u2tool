@@ -67,3 +67,13 @@ Plan 23-02 is complete for the first evidence-led recovery patch. The remaining 
 - Refreshed iCal Parser support copy to require the Parse action after paste/upload, describe the visible event table plus JSON export accurately, and remove the unsupported full-timezone-handling claim.
 - Added an iCal content-trust rule for full-timezone overclaims and rendered SEO source-only checks for both follow-up pages.
 - Verification passed with `npx vitest run src/lib/support-content-fallback.test.ts`, `npm run i18n:check-missing-keys`, `npm run check`, `npm run build`, local source-rendered `npm run validate:rendered-seo`, and production `npm run validate:rendered-seo`.
+
+## 2026-05-10 Remaining Long-Tail Recovery Queue
+
+- Continued the remaining raw GSC queue with `ru/tools/barcode-generator/`, `fr/tools/file-size-calculator/`, and `en/tools/morse-code-player/`.
+- Replaced the Barcode Generator's hand-rolled Code128-only renderer with JsBarcode so the visible Code 128, Code 39, EAN-13, and UPC-A format selector now drives real SVG output and shows validation errors for invalid values.
+- Refreshed Russian Barcode Generator support copy to describe the SVG preview and implemented symbologies without claiming PNG/EPS/DPI export or styling controls.
+- Refreshed French File Size Calculator support copy to describe the actual value/unit/base inputs, byte and bit conversion panels, and total bytes without claiming destination checkboxes, Convert, or Reset controls.
+- Refreshed English Morse Code Player support copy to describe text/Morse conversion, Play audio, speed/frequency sliders, visualization, legend, and copy output without claiming a built-in reference chart.
+- Added content-trust rules and rendered SEO coverage for the three pages so unsupported barcode export/styling, French file-size controls, and Morse reference-chart claims do not return.
+- Verification passed with `npx vitest run src/lib/support-content-fallback.test.ts`, `npm run i18n:check-missing-keys`, `git diff --check`, `npm run check`, `npm run build`, local source-rendered `npm run validate:rendered-seo`, and production `npm run validate:rendered-seo`.

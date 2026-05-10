@@ -1,12 +1,12 @@
 {
-  "detailed_description": "Le calculateur de taille de fichier permet de convertir précisément les volumes de données entre les unités de stockage numériques, y compris les systèmes décimaux (octets, kilooctets, mégaoctets, gigaoctets, téraoctets) et binaires (kibioctets, mébioctets, gibioctets, tébioctets). Ce dispositif technique s'adresse particulièrement aux développeurs, administrateurs système et utilisateurs avancés confrontés à des incohérences entre les mesures de stockage affichées par différents systèmes (exemple : un disque dur de 1 To formaté en NTFS affichant 931 Go sous Windows). Le convertisseur traite les opérations mathématiques basées sur les puissances de 1000 (norme SI) ou 1024 (norme IEC) selon le mode sélectionné, avec une gestion précise des virgules flottantes pour éviter les erreurs d'arrondi. Il intègre un mécanisme de conversion parallèle qui permet de traiter plusieurs unités simultanément, utile pour analyser des architectures de stockage hybrides.",
+  "detailed_description": "Le calculateur de taille de fichier convertit une valeur source en octets, Ko, Mo, Go, To et Po directement dans la page. Saisissez une valeur, choisissez son unité, puis sélectionnez la base binaire 1024 ou décimale 1000 pour comparer les résultats. L'outil affiche en même temps les conversions en octets, les équivalents en bits, kilobits, mégabits et gigabits, ainsi que le total exact en octets. Il est utile pour vérifier l'écart entre les unités SI et IEC, préparer des quotas de stockage, estimer des transferts ou expliquer pourquoi une capacité affichée par un système d'exploitation diffère de l'étiquette fabricant.",
   "usage_steps": [
-    "Sélectionnez l'unité d'entrée dans le menu déroulant 'Unité source' (ex: Mébioctets)",
-    "Saisissez la valeur numérique dans le champ texte avec possibilité d'entrées décimales (ex: 4.76)",
-    "Cochez la case 'Mode binaire' pour les conversions IEC ou laissez-la décochée pour le mode SI",
-    "Activez les cases à cocher correspondant aux unités de destination souhaitées (ex: Tébioctets et Gigaoctets)",
-    "Cliquez sur le bouton 'Convertir' pour obtenir les résultats instantanés dans toutes les unités sélectionnées",
-    "Utilisez le bouton 'Réinitialiser' pour effacer les données et effectuer une nouvelle conversion"
+    "Saisissez la taille de départ dans le champ de valeur.",
+    "Choisissez l'unité source, par exemple B, KB, MB, GB, TB ou PB.",
+    "Sélectionnez la base binaire 1024 ou la base décimale 1000.",
+    "Consultez les conversions en octets dans la colonne de gauche.",
+    "Comparez les conversions en bits et le total en octets dans la colonne de droite.",
+    "Modifiez la valeur, l'unité ou la base pour mettre les résultats à jour."
   ],
   "usage_examples": [
     "Un administrateur serveur convertit un quota disque de 500 Go (SI) en Tébioctets (TiB) pour vérifier la compatibilité avec un hyperviseur utilisant des blocs de stockage binaires",

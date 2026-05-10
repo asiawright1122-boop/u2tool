@@ -135,6 +135,24 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['ical-parser'],
   },
   {
+    code: 'barcode-unsupported-output-claim',
+    pattern: /\bEPS\b|\bPNG\b|\bDPI\b|растровых изображений|разрешени[ея]|цветовое оформление|высот[ау] штрихов|ширин[ау] модуля/i,
+    message: 'Claims barcode export or styling controls that are not present in the current SVG preview UI.',
+    slugs: ['barcode-generator'],
+  },
+  {
+    code: 'file-size-unsupported-fr-controls',
+    pattern: /cases? à cocher|unités de destination souhaitées|bouton ['’]Convertir['’]|['’]Réinitialiser['’]|Cochez la case/i,
+    message: 'Claims French File Size Calculator controls that are not present in the current instant conversion UI.',
+    slugs: ['file-size-calculator'],
+  },
+  {
+    code: 'morse-reference-chart-claim',
+    pattern: /\bbuilt-in reference chart\b|\breference chart\b/i,
+    message: 'Claims a Morse reference chart, but the current player shows output visualization and a small legend only.',
+    slugs: ['morse-code-player'],
+  },
+  {
     code: 'jwt-signature-verification-claim',
     pattern: /\bvalidate(?:s| the)? token'?s signature\b|\bSignature Verification\b/i,
     message: 'Claims JWT signature verification, but the current decoder only decodes and displays token parts.',

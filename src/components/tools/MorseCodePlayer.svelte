@@ -154,7 +154,7 @@
         </label>
         <textarea
           value={inputText}
-          onchange={(e) => inputText = e.target.value.toUpperCase()}
+          oninput={(e) => inputText = (e.currentTarget as HTMLTextAreaElement).value.toUpperCase()}
           class="w-full h-24 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono resize-none"
           placeholder={mode === 'encode' ? 'HELLO WORLD' : '.... . .-.. .-.. ---'}
         />
@@ -171,7 +171,7 @@
             max="3"
             step="0.5"
             value={speed}
-            onchange={(e) => speed = parseFloat(e.target.value)}
+            oninput={(e) => speed = parseFloat((e.currentTarget as HTMLInputElement).value)}
             class="w-full"
           />
         </div>
@@ -185,7 +185,7 @@
             max="1000"
             step="50"
             value={frequency}
-            onchange={(e) => frequency = parseInt(e.target.value)}
+            oninput={(e) => frequency = parseInt((e.currentTarget as HTMLInputElement).value)}
             class="w-full"
           />
         </div>
@@ -212,7 +212,6 @@
       </div>
 
       {#if morseCode}
-(
         <div class="space-y-4">
           <div>
             <div class="flex justify-between items-center mb-1">
@@ -232,11 +231,11 @@
           </div>
 
           {#if mode === 'encode'}
-<div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+            <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
               <div class="text-sm text-gray-600 dark:text-gray-400 mb-2">{t('visualization')}</div>
               <div class="flex flex-wrap gap-1">
                 {#each morseCode.split('') as char, index (index)}
-<span 
+                  <span
                     class={`inline-flex items-center justify-center ${
                       char === '.'
                         ? 'w-3 h-3 bg-amber-500 rounded-full'
@@ -248,10 +247,10 @@
                         ? 'w-4'
                         : ''
                     }`}></span>
-{/each}
+                {/each}
               </div>
             </div>
-{/if}
+          {/if}
 
           <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
             <div class="text-sm text-gray-600 dark:text-gray-400 mb-2">{t('legend')}</div>
@@ -275,7 +274,6 @@
             </div>
           </div>
         </div>
-      )
-{/if}
+      {/if}
     </div>
   
