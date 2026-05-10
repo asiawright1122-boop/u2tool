@@ -5,9 +5,9 @@ milestone_name: Runtime Debt Prioritization and Text Utility Repair
 current_phase: 29
 current_phase_name: Text Utility Runtime Repair
 current_plan: 0
-status: ready_for_planning
-stopped_at: "Phase 28 completed and verified; next resume should discuss or plan Phase 29 Text Utility Runtime Repair."
-last_updated: "2026-05-10T23:24:03+08:00"
+status: planned
+stopped_at: "Phase 29 context and plans are ready; next resume should execute the text utility runtime repair."
+last_updated: "2026-05-10T23:27:20+08:00"
 last_activity: 2026-05-10
 progress:
   total_phases: 4
@@ -33,7 +33,7 @@ Current Phase Name: Text Utility Runtime Repair
 Total Phases: 4
 Current Plan: 0
 Total Plans in Phase: 2
-Status: Phase 29 ready for discussion/planning
+Status: Phase 29 planned; ready for execution
 Last Activity: 2026-05-10
 Progress: 25%
 Progress Bar: [###-------] 25%
@@ -59,7 +59,7 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-- Discuss or plan Phase 29 Text Utility Runtime Repair.
+- Execute Phase 29 Text Utility Runtime Repair plans 29-01 and 29-02.
 - Repair selected text utility helpers: `ASCII_FONTS`, `flipMap`, `mirrorMap`, `MORSE_CODE`, `NATO_ALPHABET`, `REVERSE_MORSE`, `smallCapsMap`, `subscriptMap`, and `superscriptMap`.
 - Review fresh GSC/Coverage drilldown deltas only after new exports are available.
 
@@ -73,7 +73,7 @@ Recent decisions affecting current work:
 ## Session
 
 Last Date: 2026-05-10
-Stopped At: Phase 28 completed and verified; next resume should discuss or plan Phase 29 Text Utility Runtime Repair.
+Stopped At: Phase 29 context and plans created; next resume should execute the text utility runtime repair.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.
