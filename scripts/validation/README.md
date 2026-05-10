@@ -23,6 +23,7 @@ does, or is deliberately archived under `_deprecated/`.
 | `validate-runtime-placeholder-regressions.ts` | `validate:runtime-placeholder-regressions` |
 | `validate-sitemap-url-health.ts` | `validate:sitemap-url-health` |
 | `content-trust-audit.mjs` | `report:content-trust` |
+| `generate-runtime-debt-inventory.ts` | `report:runtime-debt` |
 | `generate-seo-alignment-report.ts` | `report:seo-alignment` |
 | `validate-historical-fixes.ts` | `validate:fixes` |
 

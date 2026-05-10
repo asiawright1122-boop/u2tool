@@ -6,7 +6,7 @@
 
 This milestone continues the runtime trust line after `v0.0.8`. The focus is to make the remaining `src/lib/tool-stubs.ts` debt measurable, then repair the next user-visible text/reference-data helper wave without broad compatibility churn. It should preserve typed `runtime-integrity` modules as the landing place for real behavior and keep the canonical production gate as the release boundary.
 
-Status: milestone opened on 2026-05-10 after v0.0.8 shipped with scheduling and code-analysis helper repairs plus runtime-placeholder governance.
+Status: milestone opened on 2026-05-10 after v0.0.8 shipped with scheduling and code-analysis helper repairs plus runtime-placeholder governance. Phase 28 completed on 2026-05-10 with a generated runtime debt inventory and ranked Phase 29/30 repair scope.
 
 ### Phase 28: Runtime Helper Debt Inventory
 **Goal**: Produce a deterministic inventory of remaining `tool-stubs.ts` imports, placeholder signatures, consumers, false positives, and ranked repair candidates.
@@ -19,8 +19,10 @@ Status: milestone opened on 2026-05-10 after v0.0.8 shipped with scheduling and 
 **Plans**: 2 plans
 
 Plans:
-- [ ] 28-01: Build the runtime debt inventory report from actual imports and export signatures
-- [ ] 28-02: Rank the next helper repair waves and select the bounded v0.0.9 implementation scope
+- [x] 28-01: Build the runtime debt inventory report from actual imports and export signatures
+- [x] 28-02: Rank the next helper repair waves and select the bounded v0.0.9 implementation scope
+
+**Archived outcome:** `report:runtime-debt` now generates `docs/RUNTIME_HELPER_DEBT_INVENTORY.md`, scanning imported compatibility exports, separating false positives/protected helpers, and selecting text/reference plus validation/reference data waves for Phases 29 and 30.
 
 ### Phase 29: Text Utility Runtime Repair
 **Goal**: Repair the selected text utility reference-data cluster so visible text tools render meaningful transformations instead of empty-map fallback output.

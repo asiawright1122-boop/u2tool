@@ -17,7 +17,7 @@ The strongest immediate candidates are text utility tools that expect reference 
 
 ### Runtime Debt Intelligence
 
-- [ ] RUNTIME-06: Remaining `tool-stubs.ts` exports imported by tool components are inventoried with consumer paths, placeholder signatures, false-positive notes, and ranked repair candidates.
+- [x] RUNTIME-06: Remaining `tool-stubs.ts` exports imported by tool components are inventoried with consumer paths, placeholder signatures, false-positive notes, and ranked repair candidates.
 
 ### Text Utility Runtime Repair
 
@@ -47,7 +47,7 @@ The strongest immediate candidates are text utility tools that expect reference 
 
 | Requirement | Planned Phase | Status |
 | --- | --- | --- |
-| RUNTIME-06 | Phase 28 | Pending |
+| RUNTIME-06 | Phase 28 | Complete |
 | RUNTIME-07 | Phase 29 | Pending |
 | RUNTIME-08 | Phase 30 | Pending |
 | OPS-12 | Phase 31 | Pending |
@@ -59,4 +59,4 @@ The strongest immediate candidates are text utility tools that expect reference 
 
 ---
 *Requirements defined: 2026-05-10*
-*Last updated: 2026-05-10 after milestone kickoff*
+*Last updated: 2026-05-10 after Phase 28 verification*
