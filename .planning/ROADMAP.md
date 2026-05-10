@@ -6,7 +6,7 @@
 
 This milestone resumes runtime trust work after the `v0.0.7` growth and GSC recovery cycle. The focus is the remaining deferred shared helper surface behind `src/lib/tool-stubs.ts`: replace the next user-visible placeholder-backed clusters with typed runtime-integrity modules, keep compatibility exports stable, and make the repaired behavior visible in deterministic runtime and production evidence.
 
-Status: milestone opened on 2026-05-10. Phase 24 completed on 2026-05-10 by replacing the time/scheduling helper cluster with shared runtime-integrity behavior and direct smoke evidence. Phase 25 completed on 2026-05-10 by selecting and repairing the code-analysis developer helper wave.
+Status: milestone opened on 2026-05-10. Phase 24 completed on 2026-05-10 by replacing the time/scheduling helper cluster with shared runtime-integrity behavior and direct smoke evidence. Phase 25 completed on 2026-05-10 by selecting and repairing the code-analysis developer helper wave. Phase 26 completed on 2026-05-10 by restoring runtime placeholder governance and wiring it into the production gate.
 
 ### Phase 24: Time and Scheduling Runtime Repair
 **Goal**: Replace the meeting/time scheduling helper cluster behind `tool-stubs.ts` with shared runtime-integrity behavior so representative office tools compute real availability and timezone outcomes.
@@ -51,8 +51,10 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 26-01: Add low-noise placeholder regression signatures for repaired runtime clusters
-- [ ] 26-02: Fold the new runtime evidence into the existing QA and production verification path
+- [x] 26-01: Add low-noise placeholder regression signatures for repaired runtime clusters
+- [x] 26-02: Fold the new runtime evidence into the existing QA and production verification path
+
+**Archived outcome:** `qa:runtime-integrity` and `validate:runtime-placeholder-regressions` now protect repaired helper clusters and run through `qa:production`, so the canonical `verify:production` gate inherits runtime placeholder regression failures.
 
 ### Phase 27: Production Trust Revalidation and Closeout
 **Goal**: Revalidate the milestone through traceability, health, and canonical production verification so runtime expansion lands without weakening existing localization, theme, SEO, discovery, or GSC safeguards.

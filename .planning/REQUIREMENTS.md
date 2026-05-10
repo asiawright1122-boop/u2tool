@@ -22,7 +22,7 @@ The strongest immediate evidence is the meeting/time scheduling cluster: `src/li
 
 ### Runtime Governance
 
-- [ ] **OPS-10**: Runtime placeholder governance detects regressions in the v0.0.8 repaired helper clusters, including empty array/object/string fallback signatures that would otherwise pass TypeScript and build checks.
+- [x] **OPS-10**: Runtime placeholder governance detects regressions in the v0.0.8 repaired helper clusters, including empty array/object/string fallback signatures that would otherwise pass TypeScript and build checks.
 - [ ] **OPS-11**: Canonical production verification and traceability evidence include the v0.0.8 runtime-integrity expansion without regressing localization, theme, SEO, discovery, or existing runtime gates.
 
 ## Future Requirements
@@ -46,7 +46,7 @@ The strongest immediate evidence is the meeting/time scheduling cluster: `src/li
 | --- | --- | --- |
 | RUNTIME-04 | Phase 24 | Complete |
 | RUNTIME-05 | Phase 25 | Complete |
-| OPS-10 | Phase 26 | Pending |
+| OPS-10 | Phase 26 | Complete |
 | OPS-11 | Phase 27 | Pending |
 
 **Coverage:**
@@ -56,4 +56,4 @@ The strongest immediate evidence is the meeting/time scheduling cluster: `src/li
 
 ---
 *Requirements defined: 2026-05-10*
-*Last updated: 2026-05-10 after Phase 25 verification*
+*Last updated: 2026-05-10 after Phase 26 verification*

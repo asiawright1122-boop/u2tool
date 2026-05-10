@@ -20,6 +20,7 @@ does, or is deliberately archived under `_deprecated/`.
 | `validate-growth-surfaces.ts` | `validate:growth-surfaces` |
 | `validate-internal-link-canonicals.ts` | `validate:internal-link-canonicals` |
 | `validate-search-engine-compliance.ts` | `validate:search-engine-compliance` |
+| `validate-runtime-placeholder-regressions.ts` | `validate:runtime-placeholder-regressions` |
 | `validate-sitemap-url-health.ts` | `validate:sitemap-url-health` |
 | `content-trust-audit.mjs` | `report:content-trust` |
 | `generate-seo-alignment-report.ts` | `report:seo-alignment` |

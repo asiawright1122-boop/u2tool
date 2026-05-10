@@ -2,19 +2,19 @@
 gsd_state_version: 1.0
 milestone: v0.0.8
 milestone_name: Runtime Workflow Integrity Expansion
-current_phase: 26
-current_phase_name: Runtime Placeholder Governance Expansion
+current_phase: 27
+current_phase_name: Production Trust Revalidation and Closeout
 current_plan: 0
 status: ready_for_planning
-stopped_at: "Phase 25 completed and verified; next resume should discuss or plan Phase 26 Runtime Placeholder Governance Expansion."
-last_updated: "2026-05-10T15:08:28+08:00"
+stopped_at: "Phase 26 completed and verified; next resume should discuss or plan Phase 27 Production Trust Revalidation and Closeout."
+last_updated: "2026-05-10T15:32:13+08:00"
 last_activity: 2026-05-10
 progress:
   total_phases: 4
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 8
-  completed_plans: 4
-  percent: 50
+  completed_plans: 6
+  percent: 75
 ---
 
 # Project State
@@ -24,19 +24,19 @@ progress:
 See: .planning/PROJECT.md (updated 2026-05-10)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** Phase 25 completed the developer code-analysis runtime repair. The next phase should add runtime-placeholder governance for the repaired scheduling and code-analysis clusters.
+**Current focus:** Phase 26 completed runtime-placeholder governance for the repaired helper clusters. The next phase should refresh traceability, health evidence, and canonical production verification for v0.0.8 closeout.
 
 ## Current Position
 
-Current Phase: 26
-Current Phase Name: Runtime Placeholder Governance Expansion
+Current Phase: 27
+Current Phase Name: Production Trust Revalidation and Closeout
 Total Phases: 4
 Current Plan: 0
 Total Plans in Phase: 2
-Status: Phase 26 ready for discussion/planning
+Status: Phase 27 ready for discussion/planning
 Last Activity: 2026-05-10
-Progress: 50%
-Progress Bar: [#####-----] 50%
+Progress: 75%
+Progress Bar: [########--] 75%
 
 ## Performance Metrics
 
@@ -76,8 +76,8 @@ Progress Bar: [#####-----] 50%
 
 **Recent Trend:**
 
-- Last 4 plans: scheduling helper extraction, office scheduling smoke evidence, developer/data wave selection, code-analysis runtime repair
-- Trend: v0.0.8 is restoring user-visible runtime behavior through bounded shared-helper waves and targeted smoke coverage instead of broad placeholder churn
+- Last 4 plans: developer/data wave selection, code-analysis runtime repair, runtime placeholder validator restoration, production gate runtime integration
+- Trend: v0.0.8 has moved from runtime repairs into release governance, keeping repaired helper behavior protected by the canonical gate
 
 ## Accumulated Context
 
@@ -124,11 +124,12 @@ Recent decisions affecting current work:
 - v0.0.8 kickoff: the next leverage area is the deferred `tool-stubs.ts` runtime surface, starting with meeting/time scheduling helpers that still expose empty exports despite representative office tools having real expected behavior.
 - Phase 24: meeting/time scheduling helpers now live in `src/lib/runtime-integrity/scheduling.ts`, flow through `tool-stubs.ts`, and are covered by direct runtime smoke tests.
 - Phase 25: code-analysis helpers now live in `src/lib/runtime-integrity/code-analysis.ts`, flow through `tool-stubs.ts`, and cover complexity, dead-code, and performance profiler outputs.
+- Phase 26: `qa:runtime-integrity` and `validate:runtime-placeholder-regressions` now run through `qa:production`, protecting repaired helper clusters from placeholder fallback regressions.
 
 ### Pending Todos
 
-- Discuss or plan Phase 26 Runtime Placeholder Governance Expansion.
-- Add governance for the repaired scheduling and code-analysis helper clusters.
+- Discuss or plan Phase 27 Production Trust Revalidation and Closeout.
+- Refresh traceability, health evidence, and runtime-integrity summaries for v0.0.8 closeout.
 - Review fresh GSC/Coverage drilldown deltas only after new exports are available.
 
 ### Blockers/Concerns
@@ -143,7 +144,7 @@ Recent decisions affecting current work:
 ## Session
 
 Last Date: 2026-05-10
-Stopped At: Phase 25 completed and verified; next resume should discuss or plan Phase 26 Runtime Placeholder Governance Expansion.
+Stopped At: Phase 26 completed and verified; next resume should discuss or plan Phase 27 Production Trust Revalidation and Closeout.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.
