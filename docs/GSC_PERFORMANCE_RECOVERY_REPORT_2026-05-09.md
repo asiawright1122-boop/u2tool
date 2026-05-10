@@ -118,6 +118,7 @@ The generated report identifies the bucket-level constraint. A raw-export re-ran
 | `https://www.u2tool.com/fr/tools/file-size-calculator/` | 11 clicks / 58 impressions | 0 clicks / 1 impression | -11 clicks | Follow-up completed 2026-05-10: French support copy now matches the instant value/unit/base converter UI. |
 | `https://www.u2tool.com/en/tools/morse-code-player/` | 9 clicks / 250 impressions | 0 clicks / 1 impression | -9 clicks | Follow-up completed 2026-05-10: Morse support copy now matches conversion, audio, sliders, visualization, and legend. |
 | `https://www.u2tool.com/en/tools/html-preview/` | 8 clicks / 490 impressions | 0 clicks / 4 impressions | -8 clicks | Follow-up completed 2026-05-10: Refresh Preview now reloads the iframe and English copy no longer claims JavaScript execution. |
+| `https://www.u2tool.com/ru/tools/scientific-calculator/` | 5 clicks / 427 impressions | 0 clicks / 0 impressions | -5 clicks | Follow-up completed 2026-05-10: Russian copy now matches the actual button UI and no longer claims Exp, 2nd, inverse-trig, hyperbolic, RPN, or differential-equation features. |
 
 ### Biggest Impression Losses
 
@@ -152,6 +153,7 @@ The generated report identifies the bucket-level constraint. A raw-export re-ran
 - Follow-up: `es/tools/document-word-counter/` now describes the actual paste-to-analyze document statistics UI, aligns page estimates to the 250-word label, and guards against stale export-statistics claims.
 - Follow-up: `en/tools/compound-interest-calculator/` now describes the actual compound-interest inputs, result cards, total contributions/interest, and yearly balance bars, with guards against stale visual/growth chart claims.
 - Follow-up: `en/tools/html-preview/` now describes the actual HTML/CSS snippet editor, sandboxed iframe preview, Clear action, and iframe reload behavior, fixes Refresh Preview remounting, and guards against stale JavaScript execution claims.
+- Follow-up: `ru/tools/scientific-calculator/` now describes the actual RAD/DEG, sin/cos/tan, ln/log, √, xʸ, constants, factorial, percent, memory, and copy-result controls, with guards against stale Exp, 2nd, inverse-trig, hyperbolic-function, RPN, and differential-equation claims.
 
 ## Weekly Summary Draft
 

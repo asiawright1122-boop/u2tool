@@ -171,6 +171,12 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['html-preview'],
   },
   {
+    code: 'scientific-calculator-unsupported-function-claim',
+    pattern: /гиперболическ|sinh|cosh|sin⁻¹|cos⁻¹|tan⁻¹|обратн[а-яё]+ тригонометр|клавиш[ау]\s*['’]Exp['’]|функци[яю]\s*['’]2nd['’]|['’]2nd['’]|обратн[а-яё]+ польск[а-яё]+ нотаци|дифференциальных уравнений|\bhyperbolic\b|\breverse polish notation\b/i,
+    message: 'Claims scientific-calculator controls or math modes that are not present in the current button UI.',
+    slugs: ['scientific-calculator'],
+  },
+  {
     code: 'jwt-signature-verification-claim',
     pattern: /\bvalidate(?:s| the)? token'?s signature\b|\bSignature Verification\b/i,
     message: 'Claims JWT signature verification, but the current decoder only decodes and displays token parts.',

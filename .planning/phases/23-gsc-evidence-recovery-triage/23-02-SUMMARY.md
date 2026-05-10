@@ -94,3 +94,11 @@ Plan 23-02 is complete for the first evidence-led recovery patch. The remaining 
 - Fixed `Refresh Preview` so it remounts the iframe instead of only incrementing unused state.
 - Added content-trust rules and rendered SEO checks so stale JavaScript support, JavaScript execution, script-tag interactivity, and complete interactive-page claims do not return.
 - Verification passed with `npx vitest run src/lib/support-content-fallback.test.ts`, `npm run i18n:check-missing-keys`, `git diff --check`, `npm run check`, `npm run build`, local source-rendered `npm run validate:rendered-seo`, and production `npm run validate:rendered-seo`.
+
+## 2026-05-10 Scientific Calculator Follow-Up
+
+- Continued the remaining click-loss queue with `ru/tools/scientific-calculator/` (previous 5 clicks / 427 impressions, absent from the current same-URL export) and its `научный калькулятор` query cluster (previous 3 clicks / 302 impressions, absent from current queries).
+- Refreshed Russian Scientific Calculator metadata/support copy to describe the actual button UI: RAD/DEG, sin/cos/tan, ln/log, √, xʸ, π, e, factorial, percent, sign toggle, memory keys, and result copy.
+- Removed unsupported claims for `Exp`, `2nd`, inverse trigonometric buttons, hyperbolic functions, reverse Polish notation, and solving differential equations.
+- Added content-trust rules and rendered SEO checks so stale unsupported scientific-function claims do not return.
+- Verification passed with `npx vitest run src/lib/support-content-fallback.test.ts src/lib/scientific-calculator.test.ts`, `npm run i18n:check-missing-keys`, `git diff --check`, `npm run check`, `npm run build`, local source-rendered `npm run validate:rendered-seo`, and production `npm run validate:rendered-seo`.

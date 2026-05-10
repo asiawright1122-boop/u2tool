@@ -257,6 +257,28 @@ describe('assessSupportContentTrust', () => {
     expect(report.issues.map((issue) => issue.code)).toContain('html-preview-javascript-claim');
   });
 
+  it('blocks Scientific Calculator function claims that are not implemented in the button UI', () => {
+    const report = assessSupportContentTrust({
+      slug: 'scientific-calculator',
+      locale: 'ru',
+      name: 'Научный калькулятор',
+      description: '',
+      detailedDescription:
+        'Поддерживает обратные тригонометрические функции, гиперболические функции sinh и cosh, а также решение дифференциальных уравнений.',
+      usageSteps: [
+        "Для ввода экспоненциального выражения используйте клавишу 'Exp'.",
+        "Активируйте функцию '2nd' для доступа к sin⁻¹, cos⁻¹ и tan⁻¹.",
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'scientific-calculator-unsupported-function-claim'
+    );
+  });
+
   it('blocks Hex Editor UI overclaims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'hex-editor',
