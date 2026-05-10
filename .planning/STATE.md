@@ -5,9 +5,9 @@ milestone_name: Runtime Workflow Integrity Expansion
 current_phase: 24
 current_phase_name: Time and Scheduling Runtime Repair
 current_plan: 0
-status: planning
-stopped_at: "v0.0.8 milestone opened from fresh requirements; next resume should discuss or plan Phase 24 time/scheduling runtime repair."
-last_updated: "2026-05-10T15:20:00+08:00"
+status: planned
+stopped_at: "Phase 24 context, research, and plans are ready; next resume should execute 24-01 and 24-02 for time/scheduling runtime repair."
+last_updated: "2026-05-10T14:52:00+08:00"
 last_activity: 2026-05-10
 progress:
   total_phases: 4
@@ -33,7 +33,7 @@ Current Phase Name: Time and Scheduling Runtime Repair
 Total Phases: 4
 Current Plan: 0
 Total Plans in Phase: 2
-Status: v0.0.8 milestone opened; Phase 24 ready for discussion/planning
+Status: Phase 24 planned; ready for execution
 Last Activity: 2026-05-10
 Progress: 0%
 Progress Bar: [----------] 0%
@@ -125,7 +125,7 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-- Discuss or plan Phase 24 Time and Scheduling Runtime Repair.
+- Execute Phase 24 Time and Scheduling Runtime Repair plans 24-01 and 24-02.
 - Repair the meeting/time scheduling helper cluster behind `src/lib/tool-stubs.ts`.
 - Rank the next developer/data runtime helper wave after Phase 24.
 - Review fresh GSC/Coverage drilldown deltas only after new exports are available.
@@ -142,7 +142,7 @@ Recent decisions affecting current work:
 ## Session
 
 Last Date: 2026-05-10
-Stopped At: v0.0.8 milestone opened with requirements and roadmap drafted; next resume should discuss or plan Phase 24 time/scheduling runtime repair.
+Stopped At: Phase 24 context, research, and plans created; next resume should execute 24-01 and 24-02.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.
