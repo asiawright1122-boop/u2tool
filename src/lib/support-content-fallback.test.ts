@@ -298,6 +298,28 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks Dice Roller controls that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'dice-roller',
+      locale: 'en',
+      name: 'Dice Roller',
+      description: '',
+      detailedDescription:
+        'Save custom dice sets for future use, configure weighted dice, and use seeded random rolls.',
+      usageSteps: [
+        'Select a die from the drop-down menu.',
+        "Use the History tab and Settings icon to enable advanced statistical tracking.",
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'dice-roller-unsupported-control-claim'
+    );
+  });
+
   it('blocks Hex Editor UI overclaims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'hex-editor',

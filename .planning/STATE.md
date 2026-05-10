@@ -5,7 +5,7 @@
 See: .planning/PROJECT.md (updated 2026-04-06)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** Phase 23 GSC evidence recovery triage plans are executed; Coverage shapes are classified, Performance loss is split, and Hex Editor, IBAN, Typing Speed Test, Spanish Word Counter, Pixel Density Calculator, Sitemap Generator, German Text to Handwriting, iCal Parser, Russian Barcode Generator, French File Size Calculator, English Morse Code Player, Spanish Document Word Counter, Compound Interest Calculator, English HTML Preview, Russian Scientific Calculator, and English Random Color Generator follow-up recovery have been tightened. The next safe work is the remaining long-tail queue.
+**Current focus:** Phase 23 GSC evidence recovery triage plans are executed; Coverage shapes are classified, Performance loss is split, and Hex Editor, IBAN, Typing Speed Test, Spanish Word Counter, Pixel Density Calculator, Sitemap Generator, German Text to Handwriting, iCal Parser, Russian Barcode Generator, French File Size Calculator, English Morse Code Player, Spanish Document Word Counter, Compound Interest Calculator, English HTML Preview, Russian Scientific Calculator, English Random Color Generator, and English Dice Roller follow-up recovery have been tightened. The next safe work is any fresh GSC/Coverage drilldown delta or milestone closeout decision.
 
 ## Current Position
 
@@ -14,8 +14,8 @@ Current Phase Name: GSC Evidence Recovery Triage
 Total Phases: 4
 Current Plan: 2
 Total Plans in Phase: 2
-Status: Phase 23 plans executed on 2026-05-09 after GSC Coverage and Performance exports were classified, the confirmed Gantt duplicate-brand title defect was patched, and follow-up recovery candidates were tightened for IBAN, Typing Speed Test, Spanish Word Counter, Pixel Density Calculator, Sitemap Generator, German Text to Handwriting, iCal Parser, Russian Barcode Generator, French File Size Calculator, English Morse Code Player, Spanish Document Word Counter, Compound Interest Calculator, English HTML Preview, Russian Scientific Calculator, and English Random Color Generator.
-Last Activity: 2026-05-10 - refreshed English Random Color Generator metadata/support copy to match the actual swatch count, HEX/RGB/HSL format, Generate, click-to-copy, Copy All, and Palette Preview UI, tightened copy-state handling, added content-trust/rendered SEO guards against unsupported palette-control claims, and validated build plus local/production rendered SEO checks.
+Status: Phase 23 plans executed on 2026-05-09 after GSC Coverage and Performance exports were classified, the confirmed Gantt duplicate-brand title defect was patched, and follow-up recovery candidates were tightened for IBAN, Typing Speed Test, Spanish Word Counter, Pixel Density Calculator, Sitemap Generator, German Text to Handwriting, iCal Parser, Russian Barcode Generator, French File Size Calculator, English Morse Code Player, Spanish Document Word Counter, Compound Interest Calculator, English HTML Preview, Russian Scientific Calculator, English Random Color Generator, and English Dice Roller.
+Last Activity: 2026-05-10 - refreshed English Dice Roller metadata/support copy to match the actual dice buttons, D100 support, 1-20 dice count, modifier, result, roll history, and Clear History UI; fixed the Roll button so SVG markup is rendered instead of interpolated as text; added content-trust/rendered SEO guards against unsupported dice-control claims; and validated build plus local/production rendered SEO checks.
 Progress: 100%
 Progress Bar: [##########] 100%
 
@@ -103,7 +103,7 @@ Recent decisions affecting current work:
 ### Pending Todos
 
 - Isolate a clean commit/tag boundary if a formal `v0.0.6` release snapshot is still required
-- Continue the remaining recovery queue with untreated click-loss/impression-loss candidates such as `en/tools/dice-roller/` or any fresh GSC/Coverage drilldown deltas.
+- Review fresh GSC/Coverage drilldown deltas or decide whether to close Phase 23/milestone after the current long-tail queue.
 
 ### Blockers/Concerns
 
@@ -118,7 +118,7 @@ Recent decisions affecting current work:
 ## Session
 
 Last Date: 2026-05-10
-Stopped At: English Random Color Generator follow-up recovery passed focused tests, i18n, diff check, Astro check, build, local source-rendered SEO validation, and production rendered SEO validation; next resume should continue the remaining long-tail recovery queue.
+Stopped At: English Dice Roller follow-up recovery passed focused tests, i18n, diff check, Astro check, build, local source-rendered SEO validation, and production rendered SEO validation; next resume should review fresh GSC/Coverage deltas or decide whether to close Phase 23/milestone.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.

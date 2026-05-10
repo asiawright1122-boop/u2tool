@@ -183,6 +183,12 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['random-color-generator'],
   },
   {
+    code: 'dice-roller-unsupported-control-claim',
+    pattern: /\bdrop-?down menu\b|\bQuantity field\b|\bHistory tab\b|\bsav(?:e|ing) (?:specific )?configurations\b|\bsav(?:e|ing) custom dice sets\b|\bSettings icon\b|\bsetting a seed\b|\bseed(?:ed)? random\b|\badvanced statistical tracking\b|\bweighted dice\b|\bcustom dice sets\b/i,
+    message: 'Claims Dice Roller controls that are not present in the current dice button, modifier, result, and history UI.',
+    slugs: ['dice-roller'],
+  },
+  {
     code: 'jwt-signature-verification-claim',
     pattern: /\bvalidate(?:s| the)? token'?s signature\b|\bSignature Verification\b/i,
     message: 'Claims JWT signature verification, but the current decoder only decodes and displays token parts.',

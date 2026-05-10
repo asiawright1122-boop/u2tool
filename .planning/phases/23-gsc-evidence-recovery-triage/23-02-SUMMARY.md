@@ -110,3 +110,11 @@ Plan 23-02 is complete for the first evidence-led recovery patch. The remaining 
 - Tightened the color count input to update on `input` and centralized copied-state timeout cleanup for individual swatch and Copy All actions.
 - Added content-trust rules and rendered SEO checks so stale palette-harmony, locked-color, seeded-palette, contrast-checker, CSS-variable export, PNG export, and palette-history claims do not return.
 - Verification passed with `npx vitest run src/lib/support-content-fallback.test.ts`, `npm run i18n:check-missing-keys`, `git diff --check`, `npm run check`, `npm run build`, local source-rendered `npm run validate:rendered-seo`, and production `npm run validate:rendered-seo`.
+
+## 2026-05-10 Dice Roller Follow-Up
+
+- Continued the remaining click-loss queue with `en/tools/dice-roller/` (previous 3 clicks / 837 impressions, absent from the current English page export) and its `online dice` / `dice roller online` query cluster.
+- Refreshed English Dice Roller metadata/support copy to describe the actual D4, D6, D8, D10, D12, D20, D100 dice buttons, 1-to-20 dice count, optional modifier, individual results, total, roll history, and Clear History behavior.
+- Fixed the Roll button so its dice SVG is rendered as markup with localized `Rolling...` / `Roll Dice` text instead of interpolating an SVG string into the button.
+- Added content-trust rules and rendered SEO checks so stale drop-down, Quantity field, History tab, save-configurations, Settings/seed, weighted dice, custom dice set, and advanced-statistical-tracking claims do not return.
+- Verification passed with `npx vitest run src/lib/support-content-fallback.test.ts`, `npm run i18n:check-missing-keys`, `git diff --check`, `npm run check`, `npm run build`, local source-rendered `npm run validate:rendered-seo`, and production `npm run validate:rendered-seo`.
