@@ -19,6 +19,7 @@ interface RuntimePlaceholderRegressionIssue {
 }
 
 interface ProtectedRuntimeHelper {
+  kind?: 'const' | 'function';
   exportName: string;
   aliasName: string;
   modulePath: string;
@@ -58,6 +59,19 @@ const PROTECTED_RUNTIME_HELPERS: ProtectedRuntimeHelper[] = [
   { exportName: 'analyzeComplexity', aliasName: 'runtimeAnalyzeComplexity', modulePath: './runtime-integrity/code-analysis' },
   { exportName: 'analyzeDeadCode', aliasName: 'runtimeAnalyzeDeadCode', modulePath: './runtime-integrity/code-analysis' },
   { exportName: 'analyzePerformance', aliasName: 'runtimeAnalyzePerformance', modulePath: './runtime-integrity/code-analysis' },
+  { kind: 'const', exportName: 'ASCII_FONTS', aliasName: 'runtimeAsciiFonts', modulePath: './runtime-integrity/text-reference' },
+  { kind: 'const', exportName: 'MORSE_CODE', aliasName: 'runtimeMorseCode', modulePath: './runtime-integrity/text-reference' },
+  { kind: 'const', exportName: 'REVERSE_MORSE', aliasName: 'runtimeReverseMorse', modulePath: './runtime-integrity/text-reference' },
+  { kind: 'const', exportName: 'NATO_ALPHABET', aliasName: 'runtimeNatoAlphabet', modulePath: './runtime-integrity/text-reference' },
+  { kind: 'const', exportName: 'smallCapsMap', aliasName: 'runtimeSmallCapsMap', modulePath: './runtime-integrity/text-reference' },
+  { kind: 'const', exportName: 'subscriptMap', aliasName: 'runtimeSubscriptMap', modulePath: './runtime-integrity/text-reference' },
+  { kind: 'const', exportName: 'superscriptMap', aliasName: 'runtimeSuperscriptMap', modulePath: './runtime-integrity/text-reference' },
+  { kind: 'const', exportName: 'flipMap', aliasName: 'runtimeFlipMap', modulePath: './runtime-integrity/text-reference' },
+  { kind: 'const', exportName: 'mirrorMap', aliasName: 'runtimeMirrorMap', modulePath: './runtime-integrity/text-reference' },
+  { kind: 'const', exportName: 'commonPasswords', aliasName: 'runtimeCommonPasswords', modulePath: './runtime-integrity/validation-reference' },
+  { kind: 'const', exportName: 'commonTypos', aliasName: 'runtimeCommonTypos', modulePath: './runtime-integrity/validation-reference' },
+  { kind: 'const', exportName: 'disposableDomains', aliasName: 'runtimeDisposableDomains', modulePath: './runtime-integrity/validation-reference' },
+  { kind: 'const', exportName: 'freeProviders', aliasName: 'runtimeFreeProviders', modulePath: './runtime-integrity/validation-reference' },
 ];
 const PLACEHOLDER_RETURN_PATTERNS = [
   /return\s+null\b/,
@@ -113,6 +127,10 @@ function runtimeModuleFile(modulePath: string): string {
   return path.join('src', 'lib', `${modulePath.replace(/^\.\//, '')}.ts`);
 }
 
+function helperKind(helper: ProtectedRuntimeHelper): 'const' | 'function' {
+  return helper.kind || 'function';
+}
+
 function addIssue(
   issues: RuntimePlaceholderRegressionIssue[],
   helper: ProtectedRuntimeHelper,
@@ -146,45 +164,61 @@ export async function validateRuntimePlaceholderRegressions(): Promise<RuntimePl
       continue;
     }
 
-    const functionSource = extractFunctionSource(toolStubsSource, helper.exportName);
-    if (!functionSource) {
-      addIssue(
-        issues,
-        helper,
-        TOOL_STUBS_PATH,
-        'missing-runtime-delegation',
-        'Protected helper no longer has an exported wrapper in tool-stubs.ts.',
-        helper.exportName
-      );
-    } else {
-      if (!functionSource.includes(`${helper.aliasName}(`)) {
+    if (helperKind(helper) === 'function') {
+      const functionSource = extractFunctionSource(toolStubsSource, helper.exportName);
+      if (!functionSource) {
         addIssue(
           issues,
           helper,
           TOOL_STUBS_PATH,
           'missing-runtime-delegation',
-          `Protected helper is no longer delegated to ${helper.aliasName}.`,
-          functionSource.split(/\r?\n/, 1)[0] || helper.exportName
+          'Protected helper no longer has an exported wrapper in tool-stubs.ts.',
+          helper.exportName
         );
-      }
+      } else {
+        if (!functionSource.includes(`${helper.aliasName}(`)) {
+          addIssue(
+            issues,
+            helper,
+            TOOL_STUBS_PATH,
+            'missing-runtime-delegation',
+            `Protected helper is no longer delegated to ${helper.aliasName}.`,
+            functionSource.split(/\r?\n/, 1)[0] || helper.exportName
+          );
+        }
 
-      if (PLACEHOLDER_RETURN_PATTERNS.some((pattern) => pattern.test(functionSource))) {
+        if (PLACEHOLDER_RETURN_PATTERNS.some((pattern) => pattern.test(functionSource))) {
+          addIssue(
+            issues,
+            helper,
+            TOOL_STUBS_PATH,
+            'placeholder-fallback',
+            'Protected helper appears to have fallen back to a placeholder return value.',
+            functionSource.split(/\r?\n/).slice(0, 4).join(' ').trim()
+          );
+        }
+      }
+    } else {
+      const constDelegationPattern = new RegExp(
+        `export\\s+const\\s+${escapeRegex(helper.exportName)}\\s*=\\s*${escapeRegex(helper.aliasName)}\\s*;`
+      );
+      if (!constDelegationPattern.test(toolStubsSource)) {
         addIssue(
           issues,
           helper,
           TOOL_STUBS_PATH,
-          'placeholder-fallback',
-          'Protected helper appears to have fallen back to a placeholder return value.',
-          functionSource.split(/\r?\n/).slice(0, 4).join(' ').trim()
+          'missing-runtime-delegation',
+          `Protected const helper is no longer delegated to ${helper.aliasName}.`,
+          helper.exportName
         );
       }
     }
 
     const runtimePath = runtimeModuleFile(helper.modulePath);
     const runtimeSource = await readFile(runtimePath, 'utf8');
-    const runtimeExportPattern = new RegExp(
-      `export\\s+(?:async\\s+)?function\\s+${escapeRegex(helper.exportName)}\\b`
-    );
+    const runtimeExportPattern = helperKind(helper) === 'function'
+      ? new RegExp(`export\\s+(?:async\\s+)?function\\s+${escapeRegex(helper.exportName)}\\b`)
+      : new RegExp(`export\\s+const\\s+${escapeRegex(helper.exportName)}\\b`);
     if (!runtimeExportPattern.test(runtimeSource)) {
       addIssue(
         issues,
