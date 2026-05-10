@@ -1,20 +1,20 @@
 ---
 gsd_state_version: 1.0
-milestone: v0.0.7
-milestone_name: Organic Authority Re-Expansion
-current_phase: 23
-current_phase_name: GSC Evidence Recovery Triage
-current_plan: 2
-status: completed
-stopped_at: "v0.0.7 milestone archived after a PASS audit, green `npm run verify:production`, traceability at `5/5`, and `EXCELLENT` project health; next resume should start a fresh milestone or wait for new GSC exports before another recovery pass."
-last_updated: "2026-05-10T06:34:07.970Z"
+milestone: v0.0.8
+milestone_name: Runtime Workflow Integrity Expansion
+current_phase: 24
+current_phase_name: Time and Scheduling Runtime Repair
+current_plan: 0
+status: planning
+stopped_at: "v0.0.8 milestone opened from fresh requirements; next resume should discuss or plan Phase 24 time/scheduling runtime repair."
+last_updated: "2026-05-10T15:20:00+08:00"
 last_activity: 2026-05-10
 progress:
   total_phases: 4
-  completed_phases: 4
+  completed_phases: 0
   total_plans: 8
-  completed_plans: 8
-  percent: 100
+  completed_plans: 0
+  percent: 0
 ---
 
 # Project State
@@ -24,19 +24,19 @@ progress:
 See: .planning/PROJECT.md (updated 2026-05-10)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** v0.0.7 is archived after Phase 23 GSC evidence recovery triage passed verification and OPS-09 completed. The current long-tail GSC recovery queue is exhausted; the next safe work is a fresh milestone or a later GSC/Coverage export review with new data.
+**Current focus:** v0.0.8 is open. The first phase repairs the meeting/time scheduling helper cluster behind `src/lib/tool-stubs.ts` so representative office tools use real shared runtime behavior instead of empty exported placeholders or duplicated component-local algorithms.
 
 ## Current Position
 
-Current Phase: 23
-Current Phase Name: GSC Evidence Recovery Triage
+Current Phase: 24
+Current Phase Name: Time and Scheduling Runtime Repair
 Total Phases: 4
-Current Plan: 2
+Current Plan: 0
 Total Plans in Phase: 2
-Status: v0.0.7 milestone archived
+Status: v0.0.8 milestone opened; Phase 24 ready for discussion/planning
 Last Activity: 2026-05-10
-Progress: 100%
-Progress Bar: [##########] 100%
+Progress: 0%
+Progress Bar: [----------] 0%
 
 ## Performance Metrics
 
@@ -72,11 +72,12 @@ Progress Bar: [##########] 100%
 | 20 | 2 | session-managed | session-managed |
 | 21 | 2 | session-managed | session-managed |
 | 22 | 2 | session-managed | session-managed |
+| 23 | 2 | session-managed | session-managed |
 
 **Recent Trend:**
 
-- Last 4 plans: browse/compare promotion, AI/export promotion, growth-surface validation, production evidence/cache/i18n recovery
-- Trend: work stayed inside shared control planes and canonical release evidence instead of drifting into page-local ranking tweaks or generic SEO churn
+- Last 4 plans: growth-surface validation, production evidence/cache/i18n recovery, GSC coverage classification, GSC performance recovery patching
+- Trend: work stayed inside shared control planes and canonical release evidence; v0.0.8 now turns that same discipline back toward user-visible runtime helper trust
 
 ## Accumulated Context
 
@@ -120,18 +121,19 @@ Recent decisions affecting current work:
 - Phase 22: missing i18n keys are a production QA blocker because they can produce placeholder drift or prevent the aggregate SEO gate from reaching deployed-surface validation.
 - Phase 23: GSC Coverage shows impressions collapsed while indexed pages stayed high, so the next phase must classify URL/query evidence before making more SEO copy, sitemap, or IndexNow changes.
 - Phase 23: `已抓取 - 尚未编入索引`, Google-selected canonical mismatch, noindex exclusions, and 4xx/404 samples are the first URL drilldown exports needed for systematic fixes.
+- v0.0.8 kickoff: the next leverage area is the deferred `tool-stubs.ts` runtime surface, starting with meeting/time scheduling helpers that still expose empty exports despite representative office tools having real expected behavior.
 
 ### Pending Todos
 
-- Isolate a clean commit/tag boundary if a formal `v0.0.6` release snapshot is still required
-- Start the next milestone from fresh requirements when ready.
+- Discuss or plan Phase 24 Time and Scheduling Runtime Repair.
+- Repair the meeting/time scheduling helper cluster behind `src/lib/tool-stubs.ts`.
+- Rank the next developer/data runtime helper wave after Phase 24.
 - Review fresh GSC/Coverage drilldown deltas only after new exports are available.
 
 ### Blockers/Concerns
 
-- Repository still has unrelated local changes; avoid overwriting user work
 - `src/lib/tool-stubs.ts` is still referenced broadly, so future runtime repairs need prioritization instead of naive repo-wide replacement
-- The repository remains heavily dirty outside this phase, so milestone closeout must avoid overwriting unrelated work
+- Worktree state can change between sessions; avoid overwriting unrelated user work if new local edits appear
 - Full multi-locale production verification is still expensive, so future gate recovery work should prefer fixing contract drift before triggering another complete rerun
 - Additional corruption signatures may still be worth governing later, but they are intentionally outside the deterministic Phase 16 guardrail baseline
 - Rendered translation/theme validation must stay representative and deterministic; a full-site visual test matrix would be too noisy for the current release gate
@@ -140,7 +142,7 @@ Recent decisions affecting current work:
 ## Session
 
 Last Date: 2026-05-10
-Stopped At: v0.0.7 milestone archived with Phase 23 verified, OPS-09 complete, traceability at `5/5`, and `npm run verify:production` green; next resume should start a new milestone or wait for fresh GSC exports before another recovery pass.
+Stopped At: v0.0.8 milestone opened with requirements and roadmap drafted; next resume should discuss or plan Phase 24 time/scheduling runtime repair.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.

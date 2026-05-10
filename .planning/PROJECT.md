@@ -10,9 +10,10 @@ Every localized tool page must render the right topic, the right language, and t
 
 ## Current Status
 
+**Current milestone:** `v0.0.8 Runtime Workflow Integrity Expansion`
 **Latest archived milestone:** `v0.0.7 Organic Authority Re-Expansion`
 **Previous archived milestone:** `v0.0.6 Drift Governance and Runtime Expansion`
-**Current planning state:** No active milestone is open. The next work should start from fresh requirements with `$gsd-new-milestone`; the current GSC recovery queue should pause until fresh Coverage/Performance exports are available.
+**Current planning state:** v0.0.8 is open. The next work should repair the highest-leverage remaining shared runtime helper clusters behind `src/lib/tool-stubs.ts`, starting with meeting/time scheduling helpers that still include empty exported implementations.
 
 **Latest completed outcomes:**
 - Selected and shipped the `text` authority wave through shared localized source truth, category support, compare routing, AI discovery, `llms.txt`, and tools-index exports.
@@ -74,7 +75,10 @@ Every localized tool page must render the right topic, the right language, and t
 
 ### Active
 
-- [ ] Start the next milestone from fresh requirements rather than continuing the exhausted v0.0.7 GSC queue.
+- [ ] Replace the next high-leverage meeting/time scheduling helper cluster with shared runtime-integrity implementations and direct behavioral smoke coverage.
+- [ ] Repair or explicitly govern the next selected developer/data helper cluster still exposed through `src/lib/tool-stubs.ts` placeholders.
+- [ ] Expand runtime-placeholder governance so repaired helper clusters cannot silently regress to empty arrays, empty objects, or placeholder strings.
+- [ ] Revalidate production trust evidence after the runtime workflow expansion lands.
 
 ### Out of Scope
 
@@ -130,7 +134,16 @@ This is a brownfield repository with a very large content surface, heavy localiz
 
 ## Current State
 
-The current baseline now includes promoted discovery ordering for the strongest authority routes, a home-page compare entry point, explicit priority export coverage in `llms.txt`, SEO-aware discovery snippets, restored JWT decoder/debugger metadata in the shared message layer, and a canonical production gate that reflects the real Cloudflare server-build output. `v0.0.5` shipped with lighter browse shells, a first shared runtime-integrity repair wave, and deterministic anti-corruption guardrails. `v0.0.6` then completed the next deferred curl/codegen runtime wave, added representative rendered translation drift governance, introduced a shared theme contract plus shell/chart parity proof, and surfaced that new evidence explicitly inside the canonical production gate. `v0.0.7` selected `text` as the next authority wave, promoted it across browse, compare, AI discovery, `llms.txt`, and tools-index exports, added growth-surface governance, and completed evidence-led GSC recovery triage.
+The current baseline now includes promoted discovery ordering for the strongest authority routes, a home-page compare entry point, explicit priority export coverage in `llms.txt`, SEO-aware discovery snippets, restored JWT decoder/debugger metadata in the shared message layer, and a canonical production gate that reflects the real Cloudflare server-build output. `v0.0.5` shipped with lighter browse shells, a first shared runtime-integrity repair wave, and deterministic anti-corruption guardrails. `v0.0.6` then completed the next deferred curl/codegen runtime wave, added representative rendered translation drift governance, introduced a shared theme contract plus shell/chart parity proof, and surfaced that new evidence explicitly inside the canonical production gate. `v0.0.7` selected `text` as the next authority wave, promoted it across browse, compare, AI discovery, `llms.txt`, and tools-index exports, added growth-surface governance, and completed evidence-led GSC recovery triage. `v0.0.8` is now opened to resume runtime trust work against the still-deferred shared helper surface.
+
+## Current Milestone: v0.0.8 Runtime Workflow Integrity Expansion
+
+**Goal:** Expand runtime trust by replacing the next high-leverage placeholder-backed workflow helpers with typed shared implementations, then governing those repaired clusters through deterministic runtime and release evidence.
+
+**Target features:**
+- Meeting and time scheduling tools compute timezone conversions, working-hour windows, availability slots, and conflicts from shared runtime helpers instead of empty `tool-stubs.ts` exports or component-local duplication.
+- A second selected developer/data helper wave is repaired or explicitly excluded based on real imports, user-visible breakage, and shared-helper leverage.
+- Runtime placeholder checks and production verification surface the repaired clusters as first-class release evidence.
 
 ## Most Recent Milestone: v0.0.7 Organic Authority Re-Expansion
 
@@ -144,10 +157,9 @@ The current baseline now includes promoted discovery ordering for the strongest 
 
 ## Future Milestone Goals
 
-- Start the next milestone from fresh requirements rather than continuing stale GSC recovery data.
-- Expand the next deferred runtime repair wave only where user-visible breakage and shared-helper leverage are both high.
-- Keep any new discovery or recovery surfaces governed through shared rendered or structured audits before release.
 - Review fresh GSC Coverage and Performance exports before launching another recovery pass.
+- Revisit deeper shell/chart token unification only if the shared theme contract becomes a practical maintenance bottleneck.
+- Continue runtime-integrity expansion beyond v0.0.8 only for clusters with proven user-visible breakage and a bounded compatibility surface.
 
 ---
-*Last updated: 2026-05-10 after the v0.0.7 Organic Authority Re-Expansion audit passed*
+*Last updated: 2026-05-10 after opening v0.0.8 Runtime Workflow Integrity Expansion*
