@@ -5,9 +5,9 @@ milestone_name: Runtime Debt Prioritization and Text Utility Repair
 current_phase: 30
 current_phase_name: Validation Reference Data Repair
 current_plan: 0
-status: ready_for_planning
-stopped_at: "Phase 29 completed and verified; next resume should discuss or plan Phase 30 Validation Reference Data Repair."
-last_updated: "2026-05-10T23:31:25+08:00"
+status: planned
+stopped_at: "Phase 30 context and plans are ready; next resume should execute the validation reference data repair."
+last_updated: "2026-05-10T23:35:09+08:00"
 last_activity: 2026-05-10
 progress:
   total_phases: 4
@@ -24,7 +24,7 @@ progress:
 See: .planning/PROJECT.md (updated 2026-05-10)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** Phase 29 completed the selected text utility reference-data repair. The next phase should repair the selected email/password validation reference data from the inventory.
+**Current focus:** Phase 30 is planned to repair the selected email/password validation reference data from the inventory.
 
 ## Current Position
 
@@ -33,7 +33,7 @@ Current Phase Name: Validation Reference Data Repair
 Total Phases: 4
 Current Plan: 0
 Total Plans in Phase: 2
-Status: Phase 30 ready for discussion/planning
+Status: Phase 30 planned; ready for execution
 Last Activity: 2026-05-10
 Progress: 50%
 Progress Bar: [#####-----] 50%
@@ -41,7 +41,7 @@ Progress Bar: [#####-----] 50%
 ## Recent Trend
 
 - Last 4 completed plans: runtime debt inventory generation, helper-wave ranking, text reference-data extraction, text runtime smoke coverage.
-- Trend: v0.0.9 has moved from inventory into bounded reference-data repairs, keeping `tool-stubs.ts` compatibility stable.
+- Trend: v0.0.9 has moved from inventory into the second bounded reference-data repair, keeping `tool-stubs.ts` compatibility stable.
 
 ## Accumulated Context
 
@@ -60,7 +60,7 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-- Discuss or plan Phase 30 Validation Reference Data Repair.
+- Execute Phase 30 Validation Reference Data Repair plans 30-01 and 30-02.
 - Repair selected validation reference helpers: `commonPasswords`, `commonTypos`, `disposableDomains`, and `freeProviders`.
 - Review fresh GSC/Coverage drilldown deltas only after new exports are available.
 
@@ -74,7 +74,7 @@ Recent decisions affecting current work:
 ## Session
 
 Last Date: 2026-05-10
-Stopped At: Phase 29 completed and verified; next resume should discuss or plan Phase 30 Validation Reference Data Repair.
+Stopped At: Phase 30 context and plans created; next resume should execute the validation reference data repair.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.
