@@ -77,3 +77,12 @@ Plan 23-02 is complete for the first evidence-led recovery patch. The remaining 
 - Refreshed English Morse Code Player support copy to describe text/Morse conversion, Play audio, speed/frequency sliders, visualization, legend, and copy output without claiming a built-in reference chart.
 - Added content-trust rules and rendered SEO coverage for the three pages so unsupported barcode export/styling, French file-size controls, and Morse reference-chart claims do not return.
 - Verification passed with `npx vitest run src/lib/support-content-fallback.test.ts`, `npm run i18n:check-missing-keys`, `git diff --check`, `npm run check`, `npm run build`, local source-rendered `npm run validate:rendered-seo`, and production `npm run validate:rendered-seo`.
+
+## 2026-05-10 Impression-Loss Follow-Up
+
+- Continued the remaining impression-loss queue with `es/tools/document-word-counter/` (previous 1,248 impressions, absent from current export) and `en/tools/compound-interest-calculator/` (previous 949 impressions, current 2 impressions on the no-slash URL).
+- Refreshed Spanish Document Word Counter metadata/support copy to describe the current paste-to-analyze workflow, live counts, detailed statistics, reading/speaking estimates, and frequent words without claiming export behavior.
+- Aligned Document Word Counter page estimates with the UI label by using a 250-words-per-page constant instead of the old 500-word calculation.
+- Refreshed Compound Interest Calculator support copy to describe the actual initial balance, annual rate, years, compounding frequency, regular contribution, final amount, total contributions, total interest, and yearly balance bars without claiming a visual/growth chart.
+- Added content-trust rules and rendered SEO checks so stale Document Word Counter export claims and Compound Interest chart claims do not return.
+- Verification passed with `npx vitest run src/lib/support-content-fallback.test.ts`, `npm run i18n:check-missing-keys`, `git diff --check`, `npm run check`, `npm run build`, local source-rendered `npm run validate:rendered-seo`, and production `npm run validate:rendered-seo`.

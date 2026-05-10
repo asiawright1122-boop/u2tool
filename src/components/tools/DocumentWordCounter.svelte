@@ -26,21 +26,23 @@
 
   // Types
   interface DocumentStats {
-  characters: number;
-  charactersNoSpaces: number;
-  words: number;
-  sentences: number;
-  paragraphs: number;
-  lines: number;
-  pages: number;
-  readingTime: number;
-  speakingTime: number;
-  uniqueWords: number;
-  avgWordLength: number;
-  avgSentenceLength: number;
-  longestWord: string;
-  mostFrequentWords: { word: string; count: number }[];
-}
+    characters: number;
+    charactersNoSpaces: number;
+    words: number;
+    sentences: number;
+    paragraphs: number;
+    lines: number;
+    pages: number;
+    readingTime: number;
+    speakingTime: number;
+    uniqueWords: number;
+    avgWordLength: number;
+    avgSentenceLength: number;
+    longestWord: string;
+    mostFrequentWords: { word: string; count: number }[];
+  }
+
+  const WORDS_PER_PAGE = 250;
 
   function analyzeDocumentText(content: string): DocumentStats {
     const text = content ?? '';
@@ -74,7 +76,7 @@
       sentences: sentences.length,
       paragraphs: paragraphs.length,
       lines,
-      pages: Math.max(1, Math.ceil(words.length / 500)),
+      pages: Math.max(1, Math.ceil(words.length / WORDS_PER_PAGE)),
       readingTime: Math.max(1, Math.ceil(words.length / 220)),
       speakingTime: Math.max(1, Math.ceil(words.length / 130)),
       uniqueWords,

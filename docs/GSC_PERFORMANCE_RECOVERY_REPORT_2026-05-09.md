@@ -129,6 +129,8 @@ The generated report identifies the bucket-level constraint. A raw-export re-ran
 | `https://www.u2tool.com/en/tools/pixel-density-calculator/` | 1,473 impressions | 0 impressions | -1,473 impressions | Follow-up candidate; runtime preset table was empty before recovery. |
 | `https://www.u2tool.com/en/tools/sitemap-generator/` | 1,340 impressions | 0 impressions | -1,340 impressions | Follow-up candidate; support copy overclaimed crawling/fetching behavior. |
 | `contador de palabras` | 635 impressions | 0 impressions | -635 impressions | Spanish word-count intent is a separate locale recovery track. |
+| `https://www.u2tool.com/es/tools/document-word-counter/` | 1,248 impressions | 0 impressions | -1,248 impressions | Follow-up completed 2026-05-10: Spanish support copy now matches live counts/statistics and no longer claims export. |
+| `https://www.u2tool.com/en/tools/compound-interest-calculator/` | 949 impressions | 2 impressions | -947 impressions | Follow-up completed 2026-05-10: English support copy now matches numeric result cards and yearly balance bars. |
 
 ### Patch Applied From This Queue
 
@@ -146,6 +148,8 @@ The generated report identifies the bucket-level constraint. A raw-export re-ran
 - Follow-up: `ru/tools/barcode-generator/` now uses JsBarcode for the visible Code 128, Code 39, EAN-13, and UPC-A selector, refreshes Russian support copy around SVG preview behavior, and guards against stale PNG/EPS/DPI export or styling-control claims.
 - Follow-up: `fr/tools/file-size-calculator/` now describes the actual value, source-unit, binary/decimal base, byte conversions, bit conversions, and total-byte UI, with guards against stale destination-checkbox, Convert, and Reset claims.
 - Follow-up: `en/tools/morse-code-player/` now describes the actual text/Morse conversion, Play audio, speed/frequency sliders, visualization, legend, and copy-output behavior, with guards against stale built-in reference-chart claims.
+- Follow-up: `es/tools/document-word-counter/` now describes the actual paste-to-analyze document statistics UI, aligns page estimates to the 250-word label, and guards against stale export-statistics claims.
+- Follow-up: `en/tools/compound-interest-calculator/` now describes the actual compound-interest inputs, result cards, total contributions/interest, and yearly balance bars, with guards against stale visual/growth chart claims.
 
 ## Weekly Summary Draft
 

@@ -153,6 +153,18 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['morse-code-player'],
   },
   {
+    code: 'document-word-counter-export-claim',
+    pattern: /\bExport stats\b|Exporta las estadísticas|Exportar estadísticas/i,
+    message: 'Claims Document Word Counter export behavior that is not present in the current live statistics UI.',
+    slugs: ['document-word-counter'],
+  },
+  {
+    code: 'compound-interest-visual-chart-claim',
+    pattern: /Visual charts help you understand|View final amount, total interest, and growth chart/i,
+    message: 'Claims a visual chart, but the current Compound Interest Calculator shows numeric result cards and yearly balance bars.',
+    slugs: ['compound-interest-calculator'],
+  },
+  {
     code: 'jwt-signature-verification-claim',
     pattern: /\bvalidate(?:s| the)? token'?s signature\b|\bSignature Verification\b/i,
     message: 'Claims JWT signature verification, but the current decoder only decodes and displays token parts.',

@@ -208,6 +208,38 @@ describe('assessSupportContentTrust', () => {
     expect(report.issues.map((issue) => issue.code)).toContain('morse-reference-chart-claim');
   });
 
+  it('blocks Document Word Counter export claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'document-word-counter',
+      locale: 'es',
+      name: 'Contador de Palabras de Documentos',
+      description: '',
+      detailedDescription: '',
+      usageSteps: ['Exporta las estadísticas'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain('document-word-counter-export-claim');
+  });
+
+  it('blocks Compound Interest Calculator visual chart claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'compound-interest-calculator',
+      locale: 'en',
+      name: 'Compound Interest Calculator',
+      description: '',
+      detailedDescription: 'Visual charts help you understand the impact of different investment strategies.',
+      usageSteps: ['View final amount, total interest, and growth chart'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain('compound-interest-visual-chart-claim');
+  });
+
   it('blocks Hex Editor UI overclaims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'hex-editor',
