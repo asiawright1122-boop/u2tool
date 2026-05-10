@@ -1,77 +1,26 @@
 # Roadmap: U2Tool
 
-## v0.0.8 Runtime Workflow Integrity Expansion
+## Current Status
 
-**Milestone:** v0.0.8 Runtime Workflow Integrity Expansion
+No active milestone is open.
 
-This milestone resumes runtime trust work after the `v0.0.7` growth and GSC recovery cycle. The focus is the remaining deferred shared helper surface behind `src/lib/tool-stubs.ts`: replace the next user-visible placeholder-backed clusters with typed runtime-integrity modules, keep compatibility exports stable, and make the repaired behavior visible in deterministic runtime and production evidence.
+Latest shipped milestone: `v0.0.8 Runtime Workflow Integrity Expansion`, shipped on 2026-05-10 after the runtime workflow expansion passed audit, `npm run verify:production` was green, traceability showed `4/4` requirements complete with `0` gaps, and project health was `EXCELLENT`.
 
-Status: milestone opened on 2026-05-10. Phase 24 completed on 2026-05-10 by replacing the time/scheduling helper cluster with shared runtime-integrity behavior and direct smoke evidence. Phase 25 completed on 2026-05-10 by selecting and repairing the code-analysis developer helper wave. Phase 26 completed on 2026-05-10 by restoring runtime placeholder governance and wiring it into the production gate.
+## Next Step
 
-### Phase 24: Time and Scheduling Runtime Repair
-**Goal**: Replace the meeting/time scheduling helper cluster behind `tool-stubs.ts` with shared runtime-integrity behavior so representative office tools compute real availability and timezone outcomes.
-**Depends on**: Archived v0.0.7 baseline
-**Requirements**: RUNTIME-04
-**Success Criteria** (what must be TRUE):
-  1. `findAvailableSlots`, `parseTimeToMinutes`, conflict parsing, timezone conversion, and time formatting behavior are implemented in typed shared runtime code and re-exported through `tool-stubs.ts`.
-  2. `TimezoneMeetingScheduler` and `CalendarAvailabilityFinder` use the shared helper behavior or remain behaviorally equivalent through a documented compatibility path.
-  3. Direct runtime smoke tests cover normal workday slots, overlapping busy windows, invalid time input, cross-timezone conversion, and overnight or boundary-hour cases.
-**Plans**: 2 plans
+Start the next milestone from fresh requirements with `$gsd-new-milestone`.
 
-Plans:
-- [x] 24-01: Map the time/scheduling helper surface and extract shared runtime behavior
-- [x] 24-02: Wire representative office tools to the repaired helpers and add behavioral smoke evidence
+Do not continue runtime-helper repairs by sweeping `tool-stubs.ts` wholesale. Future runtime work should rank candidate helper families by real imports, user-visible breakage, and bounded compatibility risk before implementation.
 
-**Archived outcome:** meeting/time scheduling helpers now run through `src/lib/runtime-integrity/scheduling.ts`, remain compatible through `tool-stubs.ts`, and have direct smoke coverage for parsing, formatting, availability, conflict, and timezone conversion behavior.
-
-### Phase 25: Developer/Data Runtime Repair
-**Goal**: Select and repair the next high-leverage developer/data helper family still exposed through placeholder exports, using real imports and user-visible behavior as the scope boundary.
-**Depends on**: Phase 24
-**Requirements**: RUNTIME-05
-**Success Criteria** (what must be TRUE):
-  1. Candidate helper families are ranked by actual component imports, placeholder severity, expected user output, and compatibility risk before implementation.
-  2. The selected family is moved into typed shared runtime-integrity code or marked as an explicit governed exclusion with rationale.
-  3. Representative consumers produce meaningful output for common examples instead of empty arrays, empty objects, zero scores, or placeholder strings.
-**Plans**: 2 plans
-
-Plans:
-- [x] 25-01: Rank remaining developer/data placeholder helper families and select the bounded repair wave
-- [x] 25-02: Implement the selected repair wave with compatibility exports and targeted tests
-
-**Archived outcome:** `analyzeComplexity`, `analyzeDeadCode`, and `analyzePerformance` now run through `src/lib/runtime-integrity/code-analysis.ts`, preserve the `tool-stubs.ts` compatibility seam, and have direct smoke coverage for representative developer-tool output.
-
-### Phase 26: Runtime Placeholder Governance Expansion
-**Goal**: Extend deterministic runtime-placeholder governance so the v0.0.8 repaired clusters cannot silently regress to compiling shells.
-**Depends on**: Phase 25
-**Requirements**: OPS-10
-**Success Criteria** (what must be TRUE):
-  1. Placeholder detection covers the repaired helper clusters with low-noise signatures tied to real exported behavior.
-  2. `npm run qa:runtime-integrity` or the canonical production gate fails if repaired helpers return the known empty fallback shapes again.
-  3. Governance output points maintainers to the owning helper cluster and representative test path.
-**Plans**: 2 plans
-
-Plans:
-- [x] 26-01: Add low-noise placeholder regression signatures for repaired runtime clusters
-- [x] 26-02: Fold the new runtime evidence into the existing QA and production verification path
-
-**Archived outcome:** `qa:runtime-integrity` and `validate:runtime-placeholder-regressions` now protect repaired helper clusters and run through `qa:production`, so the canonical `verify:production` gate inherits runtime placeholder regression failures.
-
-### Phase 27: Production Trust Revalidation and Closeout
-**Goal**: Revalidate the milestone through traceability, health, and canonical production verification so runtime expansion lands without weakening existing localization, theme, SEO, discovery, or GSC safeguards.
-**Depends on**: Phase 26
-**Requirements**: OPS-11
-**Success Criteria** (what must be TRUE):
-  1. Traceability maps all v0.0.8 requirements to completed phase evidence with zero gaps.
-  2. `npm run verify:production` passes after the runtime workflow expansion.
-  3. Milestone audit records the repaired runtime surface, residual deferred helper risk, and any follow-up candidates for future milestones.
-**Plans**: 2 plans
-
-Plans:
-- [ ] 27-01: Refresh traceability, health evidence, and runtime-integrity summaries
-- [ ] 27-02: Run canonical production verification and complete the v0.0.8 audit
+Do not continue the May 2026 GSC recovery queue without new GSC Coverage and Performance exports. The v0.0.7 queue is exhausted and the next recovery pass should start from fresh URL/query evidence.
 
 ## Archived Milestones
 
+- [x] v0.0.8 Runtime Workflow Integrity Expansion
+  Archive: [.planning/milestones/v0.0.8-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-ROADMAP.md)
+  Requirements: [.planning/milestones/v0.0.8-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-REQUIREMENTS.md)
+  Audit: [.planning/milestones/v0.0.8-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-MILESTONE-AUDIT.md)
+  Status: shipped on 2026-05-10 with scheduling and code-analysis runtime helpers repaired, runtime placeholder governance restored, and canonical production verification green.
 - [x] v0.0.7 Organic Authority Re-Expansion
   Archive: [.planning/milestones/v0.0.7-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.7-ROADMAP.md)
   Requirements: [.planning/milestones/v0.0.7-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.7-REQUIREMENTS.md)

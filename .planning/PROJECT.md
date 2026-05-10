@@ -10,34 +10,33 @@ Every localized tool page must render the right topic, the right language, and t
 
 ## Current Status
 
-**Current milestone:** `v0.0.8 Runtime Workflow Integrity Expansion`
-**Latest archived milestone:** `v0.0.7 Organic Authority Re-Expansion`
-**Previous archived milestone:** `v0.0.6 Drift Governance and Runtime Expansion`
-**Current planning state:** v0.0.8 is open. The next work should repair the highest-leverage remaining shared runtime helper clusters behind `src/lib/tool-stubs.ts`, starting with meeting/time scheduling helpers that still include empty exported implementations.
+**Latest archived milestone:** `v0.0.8 Runtime Workflow Integrity Expansion`
+**Previous archived milestone:** `v0.0.7 Organic Authority Re-Expansion`
+**Current planning state:** No active milestone is open. The next work should start from fresh requirements with `$gsd-new-milestone`; future runtime helper work should rank candidates by real imports, user-visible breakage, and bounded compatibility risk before implementation.
 
 **Latest completed outcomes:**
-- Selected and shipped the `text` authority wave through shared localized source truth, category support, compare routing, AI discovery, `llms.txt`, and tools-index exports.
-- Added representative growth-surface governance so the new authority/discovery layer stays covered by the canonical production gate.
-- Converted GSC Coverage and Performance exports into an evidence-led recovery queue, patched only proven defects or stale claims, and closed Phase 23 with OPS-09 complete.
-- Revalidated v0.0.7 with green traceability (`5/5`, `0` gaps), green `npm run verify:production`, and `EXCELLENT` project health.
+- Repaired the meeting/time scheduling helper cluster through shared runtime-integrity behavior for parsing, formatting, availability, conflicts, and timezone conversion.
+- Repaired the selected code-analysis helper wave for complexity, dead-code, and performance analysis output.
+- Restored runtime-placeholder regression governance and wired it plus runtime smoke tests into the canonical production gate.
+- Revalidated v0.0.8 with green traceability (`4/4`, `0` gaps), green `npm run verify:production`, and `EXCELLENT` project health.
 
 **Latest archived milestone evidence:**
-- Audit: [.planning/milestones/v0.0.7-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.7-MILESTONE-AUDIT.md)
-- Roadmap archive: [.planning/milestones/v0.0.7-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.7-ROADMAP.md)
-- Requirements archive: [.planning/milestones/v0.0.7-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.7-REQUIREMENTS.md)
+- Audit: [.planning/milestones/v0.0.8-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.8-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.8-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-REQUIREMENTS.md)
 - Traceability: [.planning/TRACEABILITY.md](/Users/kaka/Dev/u2tool/.planning/TRACEABILITY.md)
 - Health report: [docs/PROJECT_HEALTH_REPORT.md](/Users/kaka/Dev/u2tool/docs/PROJECT_HEALTH_REPORT.md)
 
 **Earlier archived milestone evidence:**
-- Audit: [.planning/v0.0.6-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.6-MILESTONE-AUDIT.md)
-- Roadmap archive: [.planning/milestones/v0.0.6-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.6-ROADMAP.md)
-- Requirements archive: [.planning/milestones/v0.0.6-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.6-REQUIREMENTS.md)
+- Audit: [.planning/milestones/v0.0.7-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.7-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.7-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.7-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.7-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.7-REQUIREMENTS.md)
 - Milestone index: [.planning/MILESTONES.md](/Users/kaka/Dev/u2tool/.planning/MILESTONES.md)
 
-**Most recent milestone focus (`v0.0.7`):**
-- Selected and implemented `text` as the next shared authority wave.
-- Promoted that wave through browse, compare, AI discovery, `llms.txt`, and localized tools-index exports.
-- Added representative growth-surface governance and completed evidence-led GSC recovery triage from exported Coverage and Performance data.
+**Most recent milestone focus (`v0.0.8`):**
+- Repaired bounded runtime helper clusters instead of sweeping the large shared stub surface.
+- Preserved compatibility exports while moving real behavior into typed `src/lib/runtime-integrity/` modules.
+- Added runtime smoke and placeholder-regression evidence to the production release path.
 
 ## Requirements
 
@@ -75,10 +74,9 @@ Every localized tool page must render the right topic, the right language, and t
 
 ### Active
 
-- [ ] Replace the next high-leverage meeting/time scheduling helper cluster with shared runtime-integrity implementations and direct behavioral smoke coverage.
-- [ ] Repair or explicitly govern the next selected developer/data helper cluster still exposed through `src/lib/tool-stubs.ts` placeholders.
-- [ ] Expand runtime-placeholder governance so repaired helper clusters cannot silently regress to empty arrays, empty objects, or placeholder strings.
-- [ ] Revalidate production trust evidence after the runtime workflow expansion lands.
+- [ ] Start the next milestone from fresh requirements rather than continuing completed v0.0.8 runtime repair phases.
+- [ ] Review fresh GSC Coverage and Performance exports before reopening recovery work.
+- [ ] Rank any future `tool-stubs.ts` helper repair wave by real imports, user-visible breakage, and bounded compatibility risk.
 
 ### Out of Scope
 
@@ -131,21 +129,23 @@ This is a brownfield repository with a very large content surface, heavy localiz
 | Select the curl parser/code-generator family as the first Phase 17 deferred runtime wave | It restores real user-visible behavior with bounded scope because the repo already contains a local reference implementation and the compatibility seam is explicit | ✓ Good |
 | Select `text` as the next `v0.0.7` authority wave instead of broader categories such as `generators` or `encoding` | Growth should expand where the existing catalog has the strongest bounded leverage and the clearest workflow intent, not where page count is merely large | ✓ Good |
 | Promote new authority waves through shared browse, compare, AI, and export ordering rather than page-specific tweaks | Organic entry surfaces and machine-readable outputs must stay synchronized to one localized discovery truth or promotion quickly drifts | ✓ Good |
+| Repair runtime helpers through typed `src/lib/runtime-integrity/` modules while preserving `tool-stubs.ts` exports | The large shared stub surface needs bounded compatibility-safe repairs, not a risky repo-wide rewrite | ✓ Good |
+| Add runtime smoke and placeholder-regression checks to `qa:production` | Repaired helpers need deterministic evidence inside the canonical release gate or empty fallback regressions can still compile | ✓ Good |
 
 ## Current State
 
-The current baseline now includes promoted discovery ordering for the strongest authority routes, a home-page compare entry point, explicit priority export coverage in `llms.txt`, SEO-aware discovery snippets, restored JWT decoder/debugger metadata in the shared message layer, and a canonical production gate that reflects the real Cloudflare server-build output. `v0.0.5` shipped with lighter browse shells, a first shared runtime-integrity repair wave, and deterministic anti-corruption guardrails. `v0.0.6` then completed the next deferred curl/codegen runtime wave, added representative rendered translation drift governance, introduced a shared theme contract plus shell/chart parity proof, and surfaced that new evidence explicitly inside the canonical production gate. `v0.0.7` selected `text` as the next authority wave, promoted it across browse, compare, AI discovery, `llms.txt`, and tools-index exports, added growth-surface governance, and completed evidence-led GSC recovery triage. `v0.0.8` is now opened to resume runtime trust work against the still-deferred shared helper surface.
+The current baseline now includes promoted discovery ordering for the strongest authority routes, a home-page compare entry point, explicit priority export coverage in `llms.txt`, SEO-aware discovery snippets, restored JWT decoder/debugger metadata in the shared message layer, and a canonical production gate that reflects the real Cloudflare server-build output. `v0.0.5` shipped with lighter browse shells, a first shared runtime-integrity repair wave, and deterministic anti-corruption guardrails. `v0.0.6` then completed the next deferred curl/codegen runtime wave, added representative rendered translation drift governance, introduced a shared theme contract plus shell/chart parity proof, and surfaced that new evidence explicitly inside the canonical production gate. `v0.0.7` selected `text` as the next authority wave, promoted it across browse, compare, AI discovery, `llms.txt`, and tools-index exports, added growth-surface governance, and completed evidence-led GSC recovery triage. `v0.0.8` repaired the next scheduling and code-analysis runtime helper clusters, restored placeholder governance, and closed with a green canonical production gate.
 
-## Current Milestone: v0.0.8 Runtime Workflow Integrity Expansion
+## Most Recent Milestone: v0.0.8 Runtime Workflow Integrity Expansion
 
 **Goal:** Expand runtime trust by replacing the next high-leverage placeholder-backed workflow helpers with typed shared implementations, then governing those repaired clusters through deterministic runtime and release evidence.
 
-**Target features:**
+**Delivered features:**
 - Meeting and time scheduling tools compute timezone conversions, working-hour windows, availability slots, and conflicts from shared runtime helpers instead of empty `tool-stubs.ts` exports or component-local duplication.
-- A second selected developer/data helper wave is repaired or explicitly excluded based on real imports, user-visible breakage, and shared-helper leverage.
+- The selected code-analysis developer helper wave now returns meaningful complexity, dead-code, and performance analysis output.
 - Runtime placeholder checks and production verification surface the repaired clusters as first-class release evidence.
 
-## Most Recent Milestone: v0.0.7 Organic Authority Re-Expansion
+## Previous Milestone: v0.0.7 Organic Authority Re-Expansion
 
 **Goal:** Resume natural-traffic growth after the trust-hardening cycle by selecting the next highest-yield unsupported authority/discovery wave and promoting it through shared localized surfaces without regressing translation, theme, runtime, or GSC recovery trust.
 
@@ -157,9 +157,10 @@ The current baseline now includes promoted discovery ordering for the strongest 
 
 ## Future Milestone Goals
 
+- Start the next milestone from fresh requirements rather than continuing completed runtime or GSC queues by inertia.
 - Review fresh GSC Coverage and Performance exports before launching another recovery pass.
 - Revisit deeper shell/chart token unification only if the shared theme contract becomes a practical maintenance bottleneck.
 - Continue runtime-integrity expansion beyond v0.0.8 only for clusters with proven user-visible breakage and a bounded compatibility surface.
 
 ---
-*Last updated: 2026-05-10 after opening v0.0.8 Runtime Workflow Integrity Expansion*
+*Last updated: 2026-05-10 after the v0.0.8 Runtime Workflow Integrity Expansion audit passed*

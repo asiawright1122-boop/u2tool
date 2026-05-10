@@ -1,5 +1,25 @@
 # Milestones
 
+## v0.0.8 Runtime Workflow Integrity Expansion (Shipped: 2026-05-10)
+
+**Phases completed:** 4 phases, 8 plans
+
+**Key accomplishments:**
+
+- Repaired the meeting/time scheduling helper cluster through shared `runtime-integrity` code while preserving `tool-stubs.ts` compatibility exports.
+- Repaired the selected code-analysis helper wave for complexity, dead-code, and performance output.
+- Restored runtime-placeholder regression governance and folded it plus runtime smoke tests into `qa:production`.
+- Revalidated the release through canonical production verification, traceability, and project health evidence.
+- Closed at `EXCELLENT` project health with `4/4` requirements complete, `0` traceability gaps, and green `npm run verify:production`.
+
+**Archive files:**
+
+- Roadmap: [.planning/milestones/v0.0.8-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-ROADMAP.md)
+- Requirements: [.planning/milestones/v0.0.8-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-REQUIREMENTS.md)
+- Audit: [.planning/milestones/v0.0.8-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-MILESTONE-AUDIT.md)
+
+---
+
 ## v0.0.7 Organic Authority Re-Expansion (Shipped: 2026-05-10)
 
 **Phases completed:** 4 phases, 8 plans
