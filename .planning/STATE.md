@@ -6,8 +6,8 @@ current_phase: 31
 current_phase_name: Runtime Evidence Gate and Closeout
 current_plan: 0
 status: ready_for_planning
-stopped_at: "Phase 30 completed and verified; next resume should discuss or plan Phase 31 Runtime Evidence Gate and Closeout."
-last_updated: "2026-05-10T23:38:30+08:00"
+stopped_at: "Phase 31 context and plans are ready; next resume should execute runtime governance and closeout."
+last_updated: "2026-05-10T23:42:10+08:00"
 last_activity: 2026-05-10
 progress:
   total_phases: 4
@@ -33,7 +33,7 @@ Current Phase Name: Runtime Evidence Gate and Closeout
 Total Phases: 4
 Current Plan: 0
 Total Plans in Phase: 2
-Status: Phase 31 ready for discussion/planning
+Status: Phase 31 planned; ready for execution
 Last Activity: 2026-05-10
 Progress: 75%
 Progress Bar: [########--] 75%
@@ -61,7 +61,7 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-- Discuss or plan Phase 31 Runtime Evidence Gate and Closeout.
+- Execute Phase 31 Runtime Evidence Gate and Closeout plans 31-01 and 31-02.
 - Extend or confirm runtime governance for the newly repaired reference-data clusters.
 - Run closeout production verification for v0.0.9.
 - Review fresh GSC/Coverage drilldown deltas only after new exports are available.
@@ -76,7 +76,7 @@ Recent decisions affecting current work:
 ## Session
 
 Last Date: 2026-05-10
-Stopped At: Phase 30 completed and verified; next resume should discuss or plan Phase 31 Runtime Evidence Gate and Closeout.
+Stopped At: Phase 31 context and plans created; next resume should execute runtime governance and closeout.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.
