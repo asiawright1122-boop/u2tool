@@ -1,4 +1,11 @@
 <script lang="ts">
+  import {
+    findAvailableSlots,
+    formatMinutesToTime,
+    mergeBusySlots,
+    parseTimeToMinutes,
+  } from '@/lib/tool-stubs';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -42,82 +49,6 @@
     }
 
     return typeof value === 'string' ? value : `MISSING: tools.${key}`;
-  }
-
-  function parseTimeToMinutes(value: string): number {
-    const [hours, minutes] = value.split(':').map((part) => Number.parseInt(part, 10));
-    if (!Number.isFinite(hours) || !Number.isFinite(minutes)) {
-      return 0;
-    }
-
-    return hours * 60 + minutes;
-  }
-
-  function formatMinutesToTime(value: number): string {
-    const safeValue = Math.max(0, Math.min(24 * 60, Math.round(value)));
-    const hours = Math.floor(safeValue / 60)
-      .toString()
-      .padStart(2, '0');
-    const minutes = (safeValue % 60).toString().padStart(2, '0');
-    return `${hours}:${minutes}`;
-  }
-
-  function mergeBusySlots(slots: TimeSlot[]): TimeSlot[] {
-    const sorted = [...slots]
-      .filter((slot) => slot.end > slot.start)
-      .sort((left, right) => left.start - right.start);
-
-    if (sorted.length === 0) {
-      return [];
-    }
-
-    const merged: TimeSlot[] = [sorted[0]];
-    for (const slot of sorted.slice(1)) {
-      const current = merged[merged.length - 1];
-      if (slot.start <= current.end) {
-        current.end = Math.max(current.end, slot.end);
-      } else {
-        merged.push({ ...slot });
-      }
-    }
-
-    return merged;
-  }
-
-  function findAvailableSlots(
-    people: Person[],
-    workStart: number,
-    workEnd: number,
-    minimumDuration: number
-  ): TimeSlot[] {
-    const dayStart = Math.min(workStart, workEnd);
-    const dayEnd = Math.max(workStart, workEnd);
-    const mergedBusy = mergeBusySlots(
-      people.flatMap((person) =>
-        person.busySlots
-          .map((slot) => ({
-            start: Math.max(slot.start, dayStart),
-            end: Math.min(slot.end, dayEnd),
-          }))
-          .filter((slot) => slot.end > slot.start)
-      )
-    );
-
-    const available: TimeSlot[] = [];
-    let cursor = dayStart;
-
-    for (const slot of mergedBusy) {
-      if (slot.start - cursor >= minimumDuration) {
-        available.push({ start: cursor, end: slot.start });
-      }
-      cursor = Math.max(cursor, slot.end);
-    }
-
-    if (dayEnd - cursor >= minimumDuration) {
-      available.push({ start: cursor, end: dayEnd });
-    }
-
-    return available;
   }
 
   let people = $state<Person[]>([

@@ -14,6 +14,7 @@ import {
   calculateStats,
   caesarCipher,
   checkVulnerabilities,
+  convertTime,
   convertSqlToMongo,
   crc32,
   decodeJwt,
@@ -24,15 +25,18 @@ import {
   EXAMPLE_SPEC,
   EXAMPLE_SQL,
   extractHeadings,
+  findAvailableSlots,
   findClosestColor,
   findDuplicates,
   findUnusedImports,
   formatDocument,
+  formatHour,
   formatJson,
   formatTime,
   formatSql,
   fromSeconds,
   formatMac,
+  formatMinutesToTime,
   generateChangelog,
   generateCommitMessage,
   generateDataclass,
@@ -83,6 +87,7 @@ import {
   minifyXml,
   minifySql,
   mergeJsonObjects,
+  mergeBusySlots,
   normalizePrefix,
   optimizeSQL,
   parseEnvContent,
@@ -93,6 +98,7 @@ import {
   parseResponse,
   parseScatterCSV,
   parseSchema,
+  parseTimeToMinutes,
   parseToml,
   parseTocInput,
   parseYaml,
@@ -117,6 +123,7 @@ import {
   getNextRuns,
   parseCron,
   parseCronExpression,
+  parseConflicts,
   quoteIdentifier,
   randomByte,
   rot13,
@@ -642,6 +649,58 @@ X-Trace-Id: abc123
     expect(sizeToTailwind('8px', 'rounded')).toBe('rounded-lg');
     expect(findClosestColor('#4682B4')[0]).toMatchObject({ name: 'Steel Blue' });
     expect(getDaysUntil('not-a-date')).toBe(0);
+  });
+
+  it('computes scheduling helpers without placeholder fallbacks', () => {
+    expect(parseTimeToMinutes('09:30')).toBe(570);
+    expect(parseTimeToMinutes('9 pm')).toBe(1260);
+    expect(parseTimeToMinutes('invalid')).toBe(0);
+    expect(formatMinutesToTime(1440)).toBe('24:00');
+    expect(formatHour(25)).toBe('01:00');
+    expect(formatHour(-1)).toBe('23:00');
+
+    expect(
+      mergeBusySlots([
+        { start: 540, end: 600 },
+        { start: 590, end: 660 },
+        { start: 800, end: 820 },
+      ])
+    ).toEqual([
+      { start: 540, end: 660, label: undefined, source: undefined },
+      { start: 800, end: 820, label: undefined, source: undefined },
+    ]);
+
+    const conflicts = parseConflicts('09:00-10:00 Standup\n13:30 to 14:00 Review');
+    expect(conflicts).toMatchObject([
+      { start: 540, end: 600 },
+      { start: 810, end: 840 },
+    ]);
+
+    const available = findAvailableSlots(
+      [
+        {
+          name: 'Alice',
+          busySlots: [
+            { start: 540, end: 600 },
+            { start: 780, end: 840 },
+          ],
+        },
+        { name: 'Bob', busySlots: [{ start: '10:00', end: '11:00' }] },
+      ],
+      '09:00',
+      '12:00',
+      30
+    );
+    expect(available).toEqual([{ start: 660, end: 720 }]);
+
+    expect(
+      convertTime(
+        '09:00',
+        'America/New_York',
+        'Europe/London',
+        new Date('2026-01-15T12:00:00Z')
+      )
+    ).toBe('14:00');
   });
 
   it('parses cron schedules and calculates upcoming run times', () => {

@@ -2,19 +2,19 @@
 gsd_state_version: 1.0
 milestone: v0.0.8
 milestone_name: Runtime Workflow Integrity Expansion
-current_phase: 24
-current_phase_name: Time and Scheduling Runtime Repair
+current_phase: 25
+current_phase_name: Developer/Data Runtime Repair
 current_plan: 0
-status: planned
-stopped_at: "Phase 24 context, research, and plans are ready; next resume should execute 24-01 and 24-02 for time/scheduling runtime repair."
-last_updated: "2026-05-10T14:52:00+08:00"
+status: ready_for_planning
+stopped_at: "Phase 24 completed and verified; next resume should discuss or plan Phase 25 Developer/Data Runtime Repair."
+last_updated: "2026-05-10T15:01:24+08:00"
 last_activity: 2026-05-10
 progress:
   total_phases: 4
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 8
-  completed_plans: 0
-  percent: 0
+  completed_plans: 2
+  percent: 25
 ---
 
 # Project State
@@ -24,19 +24,19 @@ progress:
 See: .planning/PROJECT.md (updated 2026-05-10)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** v0.0.8 is open. The first phase repairs the meeting/time scheduling helper cluster behind `src/lib/tool-stubs.ts` so representative office tools use real shared runtime behavior instead of empty exported placeholders or duplicated component-local algorithms.
+**Current focus:** Phase 24 completed the meeting/time scheduling runtime repair. The next phase should rank and repair the next developer/data helper wave still exposed through `src/lib/tool-stubs.ts` placeholders.
 
 ## Current Position
 
-Current Phase: 24
-Current Phase Name: Time and Scheduling Runtime Repair
+Current Phase: 25
+Current Phase Name: Developer/Data Runtime Repair
 Total Phases: 4
 Current Plan: 0
 Total Plans in Phase: 2
-Status: Phase 24 planned; ready for execution
+Status: Phase 25 ready for discussion/planning
 Last Activity: 2026-05-10
-Progress: 0%
-Progress Bar: [----------] 0%
+Progress: 25%
+Progress Bar: [###-------] 25%
 
 ## Performance Metrics
 
@@ -76,8 +76,8 @@ Progress Bar: [----------] 0%
 
 **Recent Trend:**
 
-- Last 4 plans: growth-surface validation, production evidence/cache/i18n recovery, GSC coverage classification, GSC performance recovery patching
-- Trend: work stayed inside shared control planes and canonical release evidence; v0.0.8 now turns that same discipline back toward user-visible runtime helper trust
+- Last 4 plans: GSC coverage classification, GSC performance recovery patching, scheduling helper extraction, office scheduling smoke evidence
+- Trend: v0.0.8 is restoring user-visible runtime behavior through shared helpers and targeted smoke coverage instead of broad placeholder churn
 
 ## Accumulated Context
 
@@ -122,11 +122,11 @@ Recent decisions affecting current work:
 - Phase 23: GSC Coverage shows impressions collapsed while indexed pages stayed high, so the next phase must classify URL/query evidence before making more SEO copy, sitemap, or IndexNow changes.
 - Phase 23: `已抓取 - 尚未编入索引`, Google-selected canonical mismatch, noindex exclusions, and 4xx/404 samples are the first URL drilldown exports needed for systematic fixes.
 - v0.0.8 kickoff: the next leverage area is the deferred `tool-stubs.ts` runtime surface, starting with meeting/time scheduling helpers that still expose empty exports despite representative office tools having real expected behavior.
+- Phase 24: meeting/time scheduling helpers now live in `src/lib/runtime-integrity/scheduling.ts`, flow through `tool-stubs.ts`, and are covered by direct runtime smoke tests.
 
 ### Pending Todos
 
-- Execute Phase 24 Time and Scheduling Runtime Repair plans 24-01 and 24-02.
-- Repair the meeting/time scheduling helper cluster behind `src/lib/tool-stubs.ts`.
+- Discuss or plan Phase 25 Developer/Data Runtime Repair.
 - Rank the next developer/data runtime helper wave after Phase 24.
 - Review fresh GSC/Coverage drilldown deltas only after new exports are available.
 
@@ -142,7 +142,7 @@ Recent decisions affecting current work:
 ## Session
 
 Last Date: 2026-05-10
-Stopped At: Phase 24 context, research, and plans created; next resume should execute 24-01 and 24-02.
+Stopped At: Phase 24 completed and verified; next resume should discuss or plan Phase 25 Developer/Data Runtime Repair.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.

@@ -31,6 +31,15 @@ import {
 } from './runtime-integrity/curl';
 import { commonResolutions as runtimeCommonResolutions } from './runtime-integrity/display';
 import { ibanSpecs as runtimeIbanSpecs } from './runtime-integrity/iban';
+import {
+  convertTime as runtimeConvertTime,
+  findAvailableSlots as runtimeFindAvailableSlots,
+  formatHour as runtimeFormatHour,
+  formatMinutesToTime as runtimeFormatMinutesToTime,
+  mergeBusySlots as runtimeMergeBusySlots,
+  parseConflicts as runtimeParseConflicts,
+  parseTimeToMinutes as runtimeParseTimeToMinutes,
+} from './runtime-integrity/scheduling';
 import { formatSql as runtimeFormatSql, minifySql as runtimeMinifySql } from './runtime-integrity/sql';
 import { marked } from 'marked';
 import * as yaml from 'js-yaml';
@@ -2713,14 +2722,9 @@ export function convertMarkdownToHtml(markdown = '', options = {}) {
 export function convertSqlToMongo(sql = '') {
   return buildMongoConversion(sql);
 }
-export function convertTime(time, fromTz, toTz) {
-    try {
-      const base = new Date();
-      const [h,m] = String(time || '00:00').split(':').map(n=>parseInt(n,10));
-      base.setHours(h||0, m||0, 0, 0);
-      return base.toLocaleTimeString('en-US', { timeZone: toTz || 'UTC', hour: '2-digit', minute: '2-digit', hour12: false });
-    } catch { return time || '00:00'; }
-  }
+export function convertTime(time: any, fromTz: any, toTz: any, referenceDate?: any) {
+  return runtimeConvertTime(time, fromTz, toTz, referenceDate);
+}
 export const countryFormats = [];
 export const countryNames = {};
 export function crc32(input = new Uint8Array(), table = buildCrc32Table()) {
@@ -2901,7 +2905,10 @@ export function extractVariables(template = '') {
     while ((m = re.exec(template))) vars.add(m[1]);
     return Array.from(vars);
   }
-export function findAvailableSlots() { return []; }
+export function findAvailableSlots(peopleOrSlots: any = [], workStart: any = '09:00', workEnd: any = '17:00', minimumDuration: any = 30) {
+  return runtimeFindAvailableSlots(peopleOrSlots, workStart, workEnd, minimumDuration);
+}
+export function mergeBusySlots(slots: any = []) { return runtimeMergeBusySlots(slots); }
 export function findClosestColor(color = '') {
   const rgb = parseHexColor(color);
   if (!rgb) return [];
@@ -3075,7 +3082,7 @@ export function formatDocument(input = '', options = {}) {
 
   return lines.join('\n');
 }
-export function formatHour(hour) { return String(hour).padStart(2,'0') + ':00'; }
+export function formatHour(hour: any) { return runtimeFormatHour(hour); }
 export function formatJson(value, indentSize = 2) { return runtimeFormatJson(value, indentSize); }
 export function formatMac(bytes: number[] = [], options: { separator?: ':' | '-' | ''; uppercase?: boolean } = {}) {
   const separator = options.separator === '-' || options.separator === '' ? options.separator : ':';
@@ -3084,7 +3091,7 @@ export function formatMac(bytes: number[] = [], options: { separator?: ':' | '-'
   const text = parts.join(separator);
   return options.uppercase === false ? text.toLowerCase() : text.toUpperCase();
 }
-export function formatMinutesToTime() { return ''; }
+export function formatMinutesToTime(value: any = 0) { return runtimeFormatMinutesToTime(value); }
 export function formatSql(sql = '') { return runtimeFormatSql(sql); }
 export function formatValue(value, dialect = 'mysql') {
   if (value === null || value === undefined) return 'NULL';
@@ -4146,7 +4153,7 @@ export function optimizeSQL(sql = '') {
   };
 }
 export const paperStyles = {};
-export function parseConflicts() { return {}; }
+export function parseConflicts(input: any = []) { return runtimeParseConflicts(input); }
 export function parseCron(expression = '') {
   const parts = String(expression || '').trim().split(/\s+/);
   if (parts.length !== 5) return null;
@@ -4381,7 +4388,7 @@ export function parseSemver(version = '') {
     if (!m) return null;
     return { major: Number(m[1]), minor: Number(m[2]), patch: Number(m[3]), prerelease: m[4] || '' };
   }
-export function parseTimeToMinutes() { return {}; }
+export function parseTimeToMinutes(value: any = '') { return runtimeParseTimeToMinutes(value); }
 export function parseTimestamp(value = '', format = detectFormat(value)) {
   const text = String(value || '').trim();
   let date;

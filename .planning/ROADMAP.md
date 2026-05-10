@@ -6,7 +6,7 @@
 
 This milestone resumes runtime trust work after the `v0.0.7` growth and GSC recovery cycle. The focus is the remaining deferred shared helper surface behind `src/lib/tool-stubs.ts`: replace the next user-visible placeholder-backed clusters with typed runtime-integrity modules, keep compatibility exports stable, and make the repaired behavior visible in deterministic runtime and production evidence.
 
-Status: milestone opened on 2026-05-10. Phase numbering continues from the archived v0.0.7 milestone.
+Status: milestone opened on 2026-05-10. Phase 24 completed on 2026-05-10 by replacing the time/scheduling helper cluster with shared runtime-integrity behavior and direct smoke evidence.
 
 ### Phase 24: Time and Scheduling Runtime Repair
 **Goal**: Replace the meeting/time scheduling helper cluster behind `tool-stubs.ts` with shared runtime-integrity behavior so representative office tools compute real availability and timezone outcomes.
@@ -19,8 +19,10 @@ Status: milestone opened on 2026-05-10. Phase numbering continues from the archi
 **Plans**: 2 plans
 
 Plans:
-- [ ] 24-01: Map the time/scheduling helper surface and extract shared runtime behavior
-- [ ] 24-02: Wire representative office tools to the repaired helpers and add behavioral smoke evidence
+- [x] 24-01: Map the time/scheduling helper surface and extract shared runtime behavior
+- [x] 24-02: Wire representative office tools to the repaired helpers and add behavioral smoke evidence
+
+**Archived outcome:** meeting/time scheduling helpers now run through `src/lib/runtime-integrity/scheduling.ts`, remain compatible through `tool-stubs.ts`, and have direct smoke coverage for parsing, formatting, availability, conflict, and timezone conversion behavior.
 
 ### Phase 25: Developer/Data Runtime Repair
 **Goal**: Select and repair the next high-leverage developer/data helper family still exposed through placeholder exports, using real imports and user-visible behavior as the scope boundary.
