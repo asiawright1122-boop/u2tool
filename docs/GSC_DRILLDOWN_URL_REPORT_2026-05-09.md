@@ -1,6 +1,6 @@
 # GSC Drilldown URL Report
 
-Generated at: 2026-05-09T07:44:30.917Z
+Generated at: 2026-05-10T06:14:04.172Z
 
 Files: /Users/kaka/Dev/u2tool/exports/gsc/coverage-drilldowns/alternate-with-proper-canonical.csv, /Users/kaka/Dev/u2tool/exports/gsc/coverage-drilldowns/blocked-4xx.csv, /Users/kaka/Dev/u2tool/exports/gsc/coverage-drilldowns/crawled-not-indexed.csv, /Users/kaka/Dev/u2tool/exports/gsc/coverage-drilldowns/google-selected-canonical.csv, /Users/kaka/Dev/u2tool/exports/gsc/coverage-drilldowns/noindex.csv, /Users/kaka/Dev/u2tool/exports/gsc/coverage-drilldowns/not-found-404.csv, /Users/kaka/Dev/u2tool/exports/gsc/coverage-drilldowns/page-with-redirect.csv
 

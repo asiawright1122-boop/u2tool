@@ -24,7 +24,7 @@ The next milestone should focus on the highest-yield unsupported authority and d
 ### Release Operations
 
 - [x] OPS-08: Canonical production verification includes representative rendered/exported governance for the new authority/discovery wave so growth surfaces cannot ship with topic, locale, or discovery drift.
-- [ ] OPS-09: GSC recovery work is driven by exported Coverage URL drilldowns and Performance page/query data, with code changes limited to systematic crawl, canonical, noindex, 4xx, content-depth, or CTR patterns proven by those exports.
+- [x] OPS-09: GSC recovery work is driven by exported Coverage URL drilldowns and Performance page/query data, with code changes limited to systematic crawl, canonical, noindex, 4xx, content-depth, or CTR patterns proven by those exports.
 
 ## Future Requirements
 
@@ -50,4 +50,4 @@ The next milestone should focus on the highest-yield unsupported authority and d
 | AUTH-04 | Phase 21 | Complete |
 | DISC-03 | Phase 21 | Complete |
 | OPS-08 | Phase 22 | Complete |
-| OPS-09 | Phase 23 | Planned |
+| OPS-09 | Phase 23 | Complete |

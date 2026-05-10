@@ -2,10 +2,10 @@
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-04-06)
+See: .planning/PROJECT.md (updated 2026-05-10)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** Phase 23 GSC evidence recovery triage plans are executed; Coverage shapes are classified, Performance loss is split, and Hex Editor, IBAN, Typing Speed Test, Spanish Word Counter, Pixel Density Calculator, Sitemap Generator, German Text to Handwriting, iCal Parser, Russian Barcode Generator, French File Size Calculator, English Morse Code Player, Spanish Document Word Counter, Compound Interest Calculator, English HTML Preview, Russian Scientific Calculator, English Random Color Generator, and English Dice Roller follow-up recovery have been tightened. The next safe work is any fresh GSC/Coverage drilldown delta or milestone closeout decision.
+**Current focus:** Phase 23 GSC evidence recovery triage has passed verification, OPS-09 is complete, and the v0.0.7 milestone audit is PASS. The current long-tail GSC recovery queue is exhausted; the next safe work is v0.0.7 milestone archival/tagging or a later fresh GSC/Coverage export review.
 
 ## Current Position
 
@@ -14,8 +14,8 @@ Current Phase Name: GSC Evidence Recovery Triage
 Total Phases: 4
 Current Plan: 2
 Total Plans in Phase: 2
-Status: Phase 23 plans executed on 2026-05-09 after GSC Coverage and Performance exports were classified, the confirmed Gantt duplicate-brand title defect was patched, and follow-up recovery candidates were tightened for IBAN, Typing Speed Test, Spanish Word Counter, Pixel Density Calculator, Sitemap Generator, German Text to Handwriting, iCal Parser, Russian Barcode Generator, French File Size Calculator, English Morse Code Player, Spanish Document Word Counter, Compound Interest Calculator, English HTML Preview, Russian Scientific Calculator, English Random Color Generator, and English Dice Roller.
-Last Activity: 2026-05-10 - refreshed English Dice Roller metadata/support copy to match the actual dice buttons, D100 support, 1-20 dice count, modifier, result, roll history, and Clear History UI; fixed the Roll button so SVG markup is rendered instead of interpolated as text; added content-trust/rendered SEO guards against unsupported dice-control claims; and validated build plus local/production rendered SEO checks.
+Status: v0.0.7 milestone audit passed after Phase 23 verified the GSC evidence recovery work and `npm run verify:production` completed green.
+Last Activity: 2026-05-10 - completed Phase 23 verification, marked OPS-09 complete, refreshed traceability to `5/5` milestone requirements complete with `0` gaps, generated the v0.0.7 milestone audit, and revalidated with the full canonical production gate at `EXCELLENT` health.
 Progress: 100%
 Progress Bar: [##########] 100%
 
@@ -103,7 +103,8 @@ Recent decisions affecting current work:
 ### Pending Todos
 
 - Isolate a clean commit/tag boundary if a formal `v0.0.6` release snapshot is still required
-- Review fresh GSC/Coverage drilldown deltas or decide whether to close Phase 23/milestone after the current long-tail queue.
+- Archive/tag the completed v0.0.7 milestone when ready.
+- Review fresh GSC/Coverage drilldown deltas only after new exports are available.
 
 ### Blockers/Concerns
 
@@ -118,7 +119,7 @@ Recent decisions affecting current work:
 ## Session
 
 Last Date: 2026-05-10
-Stopped At: English Dice Roller follow-up recovery passed focused tests, i18n, diff check, Astro check, build, local source-rendered SEO validation, and production rendered SEO validation; next resume should review fresh GSC/Coverage deltas or decide whether to close Phase 23/milestone.
+Stopped At: v0.0.7 milestone audit passed with Phase 23 verified, OPS-09 complete, traceability at `5/5`, and `npm run verify:production` green; next resume should archive/tag v0.0.7 or wait for fresh GSC exports before starting another recovery pass.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.
