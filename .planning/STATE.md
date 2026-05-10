@@ -1,3 +1,22 @@
+---
+gsd_state_version: 1.0
+milestone: v0.0.7
+milestone_name: Organic Authority Re-Expansion
+current_phase: 23
+current_phase_name: GSC Evidence Recovery Triage
+current_plan: 2
+status: completed
+stopped_at: "v0.0.7 milestone archived after a PASS audit, green `npm run verify:production`, traceability at `5/5`, and `EXCELLENT` project health; next resume should start a fresh milestone or wait for new GSC exports before another recovery pass."
+last_updated: "2026-05-10T06:34:07.970Z"
+last_activity: 2026-05-10
+progress:
+  total_phases: 4
+  completed_phases: 4
+  total_plans: 8
+  completed_plans: 8
+  percent: 100
+---
+
 # Project State
 
 ## Project Reference
@@ -5,7 +24,7 @@
 See: .planning/PROJECT.md (updated 2026-05-10)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** Phase 23 GSC evidence recovery triage has passed verification, OPS-09 is complete, and the v0.0.7 milestone audit is PASS. The current long-tail GSC recovery queue is exhausted; the next safe work is v0.0.7 milestone archival/tagging or a later fresh GSC/Coverage export review.
+**Current focus:** v0.0.7 is archived after Phase 23 GSC evidence recovery triage passed verification and OPS-09 completed. The current long-tail GSC recovery queue is exhausted; the next safe work is a fresh milestone or a later GSC/Coverage export review with new data.
 
 ## Current Position
 
@@ -14,14 +33,15 @@ Current Phase Name: GSC Evidence Recovery Triage
 Total Phases: 4
 Current Plan: 2
 Total Plans in Phase: 2
-Status: v0.0.7 milestone audit passed after Phase 23 verified the GSC evidence recovery work and `npm run verify:production` completed green.
-Last Activity: 2026-05-10 - completed Phase 23 verification, marked OPS-09 complete, refreshed traceability to `5/5` milestone requirements complete with `0` gaps, generated the v0.0.7 milestone audit, and revalidated with the full canonical production gate at `EXCELLENT` health.
+Status: v0.0.7 milestone archived
+Last Activity: 2026-05-10
 Progress: 100%
 Progress Bar: [##########] 100%
 
 ## Performance Metrics
 
 **Velocity:**
+
 - Total plans completed: 41
 - Average duration: session-managed
 - Total execution time: session-managed
@@ -54,6 +74,7 @@ Progress Bar: [##########] 100%
 | 22 | 2 | session-managed | session-managed |
 
 **Recent Trend:**
+
 - Last 4 plans: browse/compare promotion, AI/export promotion, growth-surface validation, production evidence/cache/i18n recovery
 - Trend: work stayed inside shared control planes and canonical release evidence instead of drifting into page-local ranking tweaks or generic SEO churn
 
@@ -103,7 +124,7 @@ Recent decisions affecting current work:
 ### Pending Todos
 
 - Isolate a clean commit/tag boundary if a formal `v0.0.6` release snapshot is still required
-- Archive/tag the completed v0.0.7 milestone when ready.
+- Start the next milestone from fresh requirements when ready.
 - Review fresh GSC/Coverage drilldown deltas only after new exports are available.
 
 ### Blockers/Concerns
@@ -119,7 +140,7 @@ Recent decisions affecting current work:
 ## Session
 
 Last Date: 2026-05-10
-Stopped At: v0.0.7 milestone audit passed with Phase 23 verified, OPS-09 complete, traceability at `5/5`, and `npm run verify:production` green; next resume should archive/tag v0.0.7 or wait for fresh GSC exports before starting another recovery pass.
+Stopped At: v0.0.7 milestone archived with Phase 23 verified, OPS-09 complete, traceability at `5/5`, and `npm run verify:production` green; next resume should start a new milestone or wait for fresh GSC exports before another recovery pass.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.
