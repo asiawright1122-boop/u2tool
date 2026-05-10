@@ -5,7 +5,7 @@
 See: .planning/PROJECT.md (updated 2026-04-06)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** Phase 23 GSC evidence recovery triage plans are executed; Coverage shapes are classified, Performance loss is split, and Hex Editor, IBAN, Typing Speed Test, Spanish Word Counter, Pixel Density Calculator, Sitemap Generator, German Text to Handwriting, iCal Parser, Russian Barcode Generator, French File Size Calculator, English Morse Code Player, Spanish Document Word Counter, and Compound Interest Calculator follow-up recovery have been tightened. The next safe work is the remaining long-tail queue.
+**Current focus:** Phase 23 GSC evidence recovery triage plans are executed; Coverage shapes are classified, Performance loss is split, and Hex Editor, IBAN, Typing Speed Test, Spanish Word Counter, Pixel Density Calculator, Sitemap Generator, German Text to Handwriting, iCal Parser, Russian Barcode Generator, French File Size Calculator, English Morse Code Player, Spanish Document Word Counter, Compound Interest Calculator, and English HTML Preview follow-up recovery have been tightened. The next safe work is the remaining long-tail queue.
 
 ## Current Position
 
@@ -14,8 +14,8 @@ Current Phase Name: GSC Evidence Recovery Triage
 Total Phases: 4
 Current Plan: 2
 Total Plans in Phase: 2
-Status: Phase 23 plans executed on 2026-05-09 after GSC Coverage and Performance exports were classified, the confirmed Gantt duplicate-brand title defect was patched, and follow-up recovery candidates were tightened for IBAN, Typing Speed Test, Spanish Word Counter, Pixel Density Calculator, Sitemap Generator, German Text to Handwriting, iCal Parser, Russian Barcode Generator, French File Size Calculator, English Morse Code Player, Spanish Document Word Counter, and Compound Interest Calculator.
-Last Activity: 2026-05-10 - refreshed Spanish Document Word Counter and English Compound Interest Calculator copy to match implemented UI, aligned Document Word Counter page estimates with its 250-word label, added content-trust/rendered SEO guards for both pages, and validated build plus local/production rendered SEO checks.
+Status: Phase 23 plans executed on 2026-05-09 after GSC Coverage and Performance exports were classified, the confirmed Gantt duplicate-brand title defect was patched, and follow-up recovery candidates were tightened for IBAN, Typing Speed Test, Spanish Word Counter, Pixel Density Calculator, Sitemap Generator, German Text to Handwriting, iCal Parser, Russian Barcode Generator, French File Size Calculator, English Morse Code Player, Spanish Document Word Counter, Compound Interest Calculator, and English HTML Preview.
+Last Activity: 2026-05-10 - refreshed English HTML Preview metadata/support copy to match the sandboxed iframe editor, fixed Refresh Preview so it remounts the iframe, added content-trust/rendered SEO guards against JavaScript execution overclaims, and validated build plus local/production rendered SEO checks.
 Progress: 100%
 Progress Bar: [##########] 100%
 
@@ -103,7 +103,7 @@ Recent decisions affecting current work:
 ### Pending Todos
 
 - Isolate a clean commit/tag boundary if a formal `v0.0.6` release snapshot is still required
-- Continue the remaining recovery queue with untreated click-loss/impression-loss candidates such as `en/tools/html-preview/`, `ru/tools/scientific-calculator/`, `en/tools/random-color-generator/`, `en/tools/dice-roller/`, or any fresh GSC/Coverage drilldown deltas.
+- Continue the remaining recovery queue with untreated click-loss/impression-loss candidates such as `ru/tools/scientific-calculator/`, `en/tools/random-color-generator/`, `en/tools/dice-roller/`, or any fresh GSC/Coverage drilldown deltas.
 
 ### Blockers/Concerns
 
@@ -118,7 +118,7 @@ Recent decisions affecting current work:
 ## Session
 
 Last Date: 2026-05-10
-Stopped At: Spanish Document Word Counter and English Compound Interest Calculator follow-up recovery passed focused tests, i18n, diff check, Astro check, build, local source-rendered SEO validation, and production rendered SEO validation; next resume should continue the remaining long-tail recovery queue.
+Stopped At: English HTML Preview follow-up recovery passed focused tests, i18n, diff check, Astro check, build, local source-rendered SEO validation, and production rendered SEO validation; next resume should continue the remaining long-tail recovery queue.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.

@@ -2734,21 +2734,21 @@
     },
     "html-preview": {
       "name": "HTML Preview",
-      "description": "Preview HTML code in real-time with CSS and JavaScript support.",
-      "seo_title": "Free HTML Preview Online - Live HTML Viewer & Editor | U2Tool",
-      "seo_description": "Preview HTML code in real-time with our free HTML preview tool. Live rendering with CSS and JavaScript support. Perfect for web development, learning HTML, and quick prototyping.",
-      "detailed_description": "Our free HTML preview tool lets you write and preview HTML code instantly in your browser. This live HTML viewer renders your code in real-time as you type, showing exactly how your webpage will look. Perfect for web developers testing code snippets, students learning HTML, and designers prototyping layouts. The HTML preview supports full CSS styling and JavaScript execution, so you can test complete web pages including interactive elements. Unlike other HTML editors, this tool runs entirely in your browser - your code never leaves your device, ensuring complete privacy. Use it to debug HTML issues, experiment with new CSS properties, or quickly share code examples. The split-view interface shows your code and preview side by side for efficient development. No installation or signup required - just paste your HTML and see the results instantly.",
+      "description": "Preview HTML and CSS snippets in a live sandboxed iframe.",
+      "seo_title": "Free HTML Preview Online - Live HTML Viewer | U2Tool",
+      "seo_description": "Preview HTML and CSS snippets online in a live sandboxed iframe. Edit code, refresh the preview, clear the editor, and test small markup ideas.",
+      "detailed_description": "The HTML Preview tool lets you edit HTML and CSS snippets and view the rendered result in a sandboxed iframe-style preview area. The page starts with a sample document, updates the preview as the HTML changes, reloads the iframe when Refresh Preview is used, and includes a Clear action for starting over. It is useful for testing small HTML snippets, learning markup structure, or checking quick layout ideas. Scripts are not enabled in the sandboxed preview, and the tool does not bundle assets, run a build step, or replace cross-browser testing for production pages.",
       "usage_steps": [
-        "Paste or type your HTML code in the editor panel",
-        "View the live preview updating in real-time as you type",
-        "Add CSS styles within <style> tags or inline styles",
-        "Include JavaScript within <script> tags for interactivity",
-        "Click refresh to manually update the preview if needed"
+        "Edit the sample HTML or paste your own snippet.",
+        "Use inline styles or a <style> block when you need CSS.",
+        "Watch the sandboxed preview update as the HTML changes.",
+        "Click Refresh Preview when you want to reload the iframe preview.",
+        "Use Clear to empty the editor."
       ],
       "usage_examples": [
-        "Test a responsive navigation menu with HTML, CSS, and JavaScript",
-        "Preview an email template before sending to ensure proper rendering",
-        "Debug CSS layout issues by seeing changes instantly as you edit"
+        "Preview a small HTML card before adding it to documentation.",
+        "Test a heading, paragraph, and link structure while learning HTML.",
+        "Check a static embed snippet quickly without creating a new file."
       ],
       "refresh": "Refresh",
       "htmlCode": "HTML Code",
@@ -22280,9 +22280,9 @@
     },
     "html-preview": {
       "name": "HTML Preview",
-      "description": "Preview HTML code in real-time with CSS and JavaScript support.",
+      "description": "Preview HTML and CSS snippets in a live sandboxed iframe.",
       "seo_title": "Free HTML Preview Online",
-      "seo_description": "Preview HTML code in real-time online for free. Live rendering with instant updates as you type. Perfect for web development and quick prototyping."
+      "seo_description": "Preview HTML and CSS snippets online in a live sandboxed iframe. Edit code, refresh the preview, clear the editor, and test small markup ideas."
     },
     "ip-lookup": {
       "name": "IP Lookup",

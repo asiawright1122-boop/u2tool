@@ -165,6 +165,12 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['compound-interest-calculator'],
   },
   {
+    code: 'html-preview-javascript-claim',
+    pattern: /\bJavaScript support\b|\bJavaScript execution\b|<script>\s*tags for interactivity|\bscript tags for interactivity\b|\bcomplete web pages including interactive elements\b|\bfull CSS styling and JavaScript execution\b/i,
+    message: 'Claims JavaScript execution, but the current HTML Preview renders snippets in a sandboxed iframe without scripts enabled.',
+    slugs: ['html-preview'],
+  },
+  {
     code: 'jwt-signature-verification-claim',
     pattern: /\bvalidate(?:s| the)? token'?s signature\b|\bSignature Verification\b/i,
     message: 'Claims JWT signature verification, but the current decoder only decodes and displays token parts.',

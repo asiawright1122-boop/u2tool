@@ -240,6 +240,23 @@ describe('assessSupportContentTrust', () => {
     expect(report.issues.map((issue) => issue.code)).toContain('compound-interest-visual-chart-claim');
   });
 
+  it('blocks HTML Preview JavaScript execution claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'html-preview',
+      locale: 'en',
+      name: 'HTML Preview',
+      description: 'Preview HTML code in real-time with CSS and JavaScript support.',
+      detailedDescription:
+        'The HTML preview supports full CSS styling and JavaScript execution, so you can test complete web pages including interactive elements.',
+      usageSteps: ['Include JavaScript within <script> tags for interactivity.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain('html-preview-javascript-claim');
+  });
+
   it('blocks Hex Editor UI overclaims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'hex-editor',

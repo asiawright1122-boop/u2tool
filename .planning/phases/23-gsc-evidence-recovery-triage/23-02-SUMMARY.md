@@ -86,3 +86,11 @@ Plan 23-02 is complete for the first evidence-led recovery patch. The remaining 
 - Refreshed Compound Interest Calculator support copy to describe the actual initial balance, annual rate, years, compounding frequency, regular contribution, final amount, total contributions, total interest, and yearly balance bars without claiming a visual/growth chart.
 - Added content-trust rules and rendered SEO checks so stale Document Word Counter export claims and Compound Interest chart claims do not return.
 - Verification passed with `npx vitest run src/lib/support-content-fallback.test.ts`, `npm run i18n:check-missing-keys`, `git diff --check`, `npm run check`, `npm run build`, local source-rendered `npm run validate:rendered-seo`, and production `npm run validate:rendered-seo`.
+
+## 2026-05-10 HTML Preview Follow-Up
+
+- Continued the remaining click-loss queue with `en/tools/html-preview/` (previous 8 clicks / 490 impressions, current no-slash URL 0 clicks / 4 impressions).
+- Refreshed English HTML Preview metadata/support copy to describe the actual HTML/CSS snippet editor, sandboxed iframe-style preview, Clear action, and Refresh Preview behavior without claiming JavaScript execution.
+- Fixed `Refresh Preview` so it remounts the iframe instead of only incrementing unused state.
+- Added content-trust rules and rendered SEO checks so stale JavaScript support, JavaScript execution, script-tag interactivity, and complete interactive-page claims do not return.
+- Verification passed with `npx vitest run src/lib/support-content-fallback.test.ts`, `npm run i18n:check-missing-keys`, `git diff --check`, `npm run check`, `npm run build`, local source-rendered `npm run validate:rendered-seo`, and production `npm run validate:rendered-seo`.

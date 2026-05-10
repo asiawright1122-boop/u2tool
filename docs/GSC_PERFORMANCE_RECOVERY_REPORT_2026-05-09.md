@@ -117,6 +117,7 @@ The generated report identifies the bucket-level constraint. A raw-export re-ran
 | `https://www.u2tool.com/ru/tools/barcode-generator/` | 11 clicks / 271 impressions | 0 clicks / 27 impressions | -11 clicks | Follow-up completed 2026-05-10: real multi-format barcode rendering plus corrected Russian support copy. |
 | `https://www.u2tool.com/fr/tools/file-size-calculator/` | 11 clicks / 58 impressions | 0 clicks / 1 impression | -11 clicks | Follow-up completed 2026-05-10: French support copy now matches the instant value/unit/base converter UI. |
 | `https://www.u2tool.com/en/tools/morse-code-player/` | 9 clicks / 250 impressions | 0 clicks / 1 impression | -9 clicks | Follow-up completed 2026-05-10: Morse support copy now matches conversion, audio, sliders, visualization, and legend. |
+| `https://www.u2tool.com/en/tools/html-preview/` | 8 clicks / 490 impressions | 0 clicks / 4 impressions | -8 clicks | Follow-up completed 2026-05-10: Refresh Preview now reloads the iframe and English copy no longer claims JavaScript execution. |
 
 ### Biggest Impression Losses
 
@@ -150,6 +151,7 @@ The generated report identifies the bucket-level constraint. A raw-export re-ran
 - Follow-up: `en/tools/morse-code-player/` now describes the actual text/Morse conversion, Play audio, speed/frequency sliders, visualization, legend, and copy-output behavior, with guards against stale built-in reference-chart claims.
 - Follow-up: `es/tools/document-word-counter/` now describes the actual paste-to-analyze document statistics UI, aligns page estimates to the 250-word label, and guards against stale export-statistics claims.
 - Follow-up: `en/tools/compound-interest-calculator/` now describes the actual compound-interest inputs, result cards, total contributions/interest, and yearly balance bars, with guards against stale visual/growth chart claims.
+- Follow-up: `en/tools/html-preview/` now describes the actual HTML/CSS snippet editor, sandboxed iframe preview, Clear action, and iframe reload behavior, fixes Refresh Preview remounting, and guards against stale JavaScript execution claims.
 
 ## Weekly Summary Draft
 
