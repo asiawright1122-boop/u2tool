@@ -6,7 +6,7 @@
 
 This milestone continues the runtime trust line after `v0.0.8`. The focus is to make the remaining `src/lib/tool-stubs.ts` debt measurable, then repair the next user-visible text/reference-data helper wave without broad compatibility churn. It should preserve typed `runtime-integrity` modules as the landing place for real behavior and keep the canonical production gate as the release boundary.
 
-Status: milestone opened on 2026-05-10 after v0.0.8 shipped with scheduling and code-analysis helper repairs plus runtime-placeholder governance. Phase 28 completed on 2026-05-10 with a generated runtime debt inventory and ranked Phase 29/30 repair scope. Phase 29 completed on 2026-05-10 by repairing selected text utility reference data through runtime-integrity exports and smoke tests.
+Status: milestone opened on 2026-05-10 after v0.0.8 shipped with scheduling and code-analysis helper repairs plus runtime-placeholder governance. Phase 28 completed on 2026-05-10 with a generated runtime debt inventory and ranked Phase 29/30 repair scope. Phase 29 completed on 2026-05-10 by repairing selected text utility reference data through runtime-integrity exports and smoke tests. Phase 30 completed on 2026-05-10 by repairing selected validation reference data and reducing likely broken imported exports to 6.
 
 ### Phase 28: Runtime Helper Debt Inventory
 **Goal**: Produce a deterministic inventory of remaining `tool-stubs.ts` imports, placeholder signatures, consumers, false positives, and ranked repair candidates.
@@ -51,8 +51,10 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 30-01: Select the validation/reference-data repair slice from the inventory
-- [ ] 30-02: Implement the selected validation data repair with smoke evidence
+- [x] 30-01: Select the validation/reference-data repair slice from the inventory
+- [x] 30-02: Implement the selected validation data repair with smoke evidence
+
+**Archived outcome:** selected password/email validation reference helpers now flow through `src/lib/runtime-integrity/validation-reference.ts`, remain compatible through `tool-stubs.ts`, and have runtime smoke coverage plus refreshed inventory evidence.
 
 ### Phase 31: Runtime Evidence Gate and Closeout
 **Goal**: Fold v0.0.9 inventory and repair evidence into the existing runtime/production verification path and close the milestone cleanly.

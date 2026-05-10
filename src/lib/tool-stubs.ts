@@ -57,6 +57,12 @@ import {
   subscriptMap as runtimeSubscriptMap,
   superscriptMap as runtimeSuperscriptMap,
 } from './runtime-integrity/text-reference';
+import {
+  commonPasswords as runtimeCommonPasswords,
+  commonTypos as runtimeCommonTypos,
+  disposableDomains as runtimeDisposableDomains,
+  freeProviders as runtimeFreeProviders,
+} from './runtime-integrity/validation-reference';
 import { marked } from 'marked';
 import * as yaml from 'js-yaml';
 import { pinyin } from 'pinyin-pro';
@@ -2701,7 +2707,7 @@ export const commonMimeTypes = [
     "type": "image/png"
   }
 ];
-export const commonPasswords = [];
+export const commonPasswords = runtimeCommonPasswords;
 export const commonPorts = [
   {
     "port": 80,
@@ -2724,7 +2730,7 @@ export const commonPorts = [
     "descKey": "portScanner.dns"
   }
 ];
-export const commonTypos = {};
+export const commonTypos = runtimeCommonTypos;
 export const conversions = {};
 export function convertMarkdownToHtml(markdown = '', options = {}) {
   try {
@@ -2890,7 +2896,7 @@ export function detectMemoryLeaks(code = '') {
 }
 export const diceConfig = {};
 export const dictionary = [];
-export const disposableDomains = [];
+export const disposableDomains = runtimeDisposableDomains;
 export const emissionFactors = [];
 export const emojiData = [];
 export function encodeBase58() { return null; }
@@ -3119,7 +3125,7 @@ export function formatValue(value, dialect = 'mysql') {
   if (typeof value === 'object') return `'${JSON.stringify(value).replace(/'/g, "''")}'`;
   return `'${String(value).replace(/'/g, "''")}'`;
 }
-export const freeProviders = [];
+export const freeProviders = runtimeFreeProviders;
 export function fromSeconds(totalSeconds = 0) {
   const total = Math.trunc(Number(totalSeconds) || 0);
   const negative = total < 0;

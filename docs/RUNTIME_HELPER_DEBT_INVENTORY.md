@@ -1,14 +1,14 @@
 # Runtime Helper Debt Inventory
 
-Generated: 2026-05-10T15:30:40.558Z
+Generated: 2026-05-10T15:37:27.016Z
 
 ## Summary
 
 - Imported compatibility exports scanned: 246
-- Likely broken imported exports: 10
+- Likely broken imported exports: 6
 - Protected or likely false-positive exports: 73
 - Selected Phase 29 text/reference candidates still likely broken: 0
-- Recommended Phase 30 validation/reference candidates: 4
+- Selected Phase 30 validation/reference candidates still likely broken: 0
 
 ## Top Repair Candidates
 
@@ -19,11 +19,7 @@ Generated: 2026-05-10T15:30:40.558Z
 | 3 | `fontMappings` | text-reference | 60 | empty-object-const | 1 | - |
 | 4 | `fontStyles` | text-reference | 60 | empty-array-const | 1 | - |
 | 5 | `K` | general | 54 | empty-array-const | 5 | - |
-| 6 | `commonPasswords` | validation-reference | 54 | empty-array-const | 1 | - |
-| 7 | `commonTypos` | validation-reference | 54 | empty-object-const | 1 | - |
-| 8 | `disposableDomains` | validation-reference | 54 | empty-array-const | 1 | - |
-| 9 | `freeProviders` | validation-reference | 54 | empty-array-const | 1 | - |
-| 10 | `bicDatabase` | database-developer | 42 | empty-object-const | 1 | - |
+| 6 | `bicDatabase` | database-developer | 42 | empty-object-const | 1 | - |
 
 ## Recommended v0.0.9 Waves
 
@@ -33,33 +29,7 @@ Generated: 2026-05-10T15:30:40.558Z
 
 ### Phase 30 Validation Reference Data
 
-### commonPasswords
-
-- Category: validation-reference
-- Source: `src/lib/tool-stubs.ts:2704`
-- Signatures: `empty-array-const`
-- Consumers: `src/components/tools/PasswordStrength.svelte`
-
-### commonTypos
-
-- Category: validation-reference
-- Source: `src/lib/tool-stubs.ts:2727`
-- Signatures: `empty-object-const`
-- Consumers: `src/components/tools/EmailValidator.svelte`
-
-### disposableDomains
-
-- Category: validation-reference
-- Source: `src/lib/tool-stubs.ts:2893`
-- Signatures: `empty-array-const`
-- Consumers: `src/components/tools/EmailValidator.svelte`
-
-### freeProviders
-
-- Category: validation-reference
-- Source: `src/lib/tool-stubs.ts:3122`
-- Signatures: `empty-array-const`
-- Consumers: `src/components/tools/EmailValidator.svelte`
+- No selected Phase 30 validation/reference candidates remain likely broken. Nonselected validation candidates may still appear in the top repair table.
 
 ## False Positives and Protected Helpers
 

@@ -1,12 +1,12 @@
 # Milestone Traceability Report
 
-Generated: 2026-05-10T15:32:03.779Z
+Generated: 2026-05-10T15:39:01.749Z
 Milestone: v0.0.9 Runtime Debt Prioritization and Text Utility Repair
 
 ## Summary
 
 - Total requirements: 4
-- Completed requirements: 2
+- Completed requirements: 3
 - Unmapped requirements: 0
 - Completed requirements missing evidence: 0
 
@@ -16,7 +16,7 @@ Milestone: v0.0.9 Runtime Debt Prioritization and Text Utility Repair
 | --- | --- | --- | --- | --- | --- |
 | RUNTIME-06 | Runtime Debt Intelligence | complete | complete | Phase 28 | [28-01-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/28-runtime-helper-debt-inventory/28-01-SUMMARY.md)<br>[28-02-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/28-runtime-helper-debt-inventory/28-02-SUMMARY.md) |
 | RUNTIME-07 | Text Utility Runtime Repair | complete | complete | Phase 29 | [29-01-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/29-text-utility-runtime-repair/29-01-SUMMARY.md)<br>[29-02-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/29-text-utility-runtime-repair/29-02-SUMMARY.md) |
-| RUNTIME-08 | Text Utility Runtime Repair | pending | planned | Phase 30 | None |
+| RUNTIME-08 | Text Utility Runtime Repair | complete | complete | Phase 30 | [30-01-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/30-validation-reference-data-repair/30-01-SUMMARY.md)<br>[30-02-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/30-validation-reference-data-repair/30-02-SUMMARY.md) |
 | OPS-12 | Runtime Governance | pending | planned | Phase 31 | None |
 
 ## Phase Coverage
@@ -25,7 +25,7 @@ Milestone: v0.0.9 Runtime Debt Prioritization and Text Utility Repair
 | --- | --- | --- | --- |
 | Phase 28 Runtime Helper Debt Inventory | RUNTIME-06 | x 28-01<br>x 28-02 | [28-01-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/28-runtime-helper-debt-inventory/28-01-SUMMARY.md)<br>[28-02-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/28-runtime-helper-debt-inventory/28-02-SUMMARY.md) |
 | Phase 29 Text Utility Runtime Repair | RUNTIME-07 | x 29-01<br>x 29-02 | [29-01-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/29-text-utility-runtime-repair/29-01-SUMMARY.md)<br>[29-02-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/29-text-utility-runtime-repair/29-02-SUMMARY.md) |
-| Phase 30 Validation Reference Data Repair | RUNTIME-08 |   30-01<br>  30-02 | None |
+| Phase 30 Validation Reference Data Repair | RUNTIME-08 | x 30-01<br>x 30-02 | [30-01-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/30-validation-reference-data-repair/30-01-SUMMARY.md)<br>[30-02-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/30-validation-reference-data-repair/30-02-SUMMARY.md) |
 | Phase 31 Runtime Evidence Gate and Closeout | OPS-12 |   31-01<br>  31-02 | None |
 
 ## Gaps

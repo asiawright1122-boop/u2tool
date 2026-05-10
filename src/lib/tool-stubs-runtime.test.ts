@@ -18,11 +18,14 @@ import {
   calculateStats,
   caesarCipher,
   checkVulnerabilities,
+  commonPasswords,
+  commonTypos,
   convertTime,
   convertSqlToMongo,
   crc32,
   decodeJwt,
   detectMemoryLeaks,
+  disposableDomains,
   detectFormat,
   EXAMPLE_CODE,
   EXAMPLE_PACKAGE_JSON,
@@ -121,6 +124,7 @@ import {
   toYaml,
   tokenizeRegex,
   formatValue,
+  freeProviders,
   generateBackupScript,
   generateCleanedCode,
   generateCrontab,
@@ -281,6 +285,20 @@ X-Trace-Id: abc123
     expect(subscriptMap['2']).toBe('₂');
     expect(flipMap.a).toBe('ɐ');
     expect(mirrorMap.b).toBe('d');
+  });
+
+  it('provides validation reference data for password and email tools', () => {
+    expect(commonPasswords).toContain('password');
+    expect(commonPasswords).toContain('123456');
+
+    expect(commonTypos['gamil.com']).toBe('gmail.com');
+    expect(commonTypos['hotmial.com']).toBe('hotmail.com');
+
+    expect(freeProviders).toContain('gmail.com');
+    expect(freeProviders).toContain('proton.me');
+
+    expect(disposableDomains.some((domain) => 'mailinator.com'.includes(domain))).toBe(true);
+    expect(disposableDomains.some((domain) => '10minutemail.com'.includes(domain))).toBe(true);
   });
 
   it('generates and formats MAC address bytes with secure random input', () => {

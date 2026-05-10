@@ -311,7 +311,7 @@ function renderReport(rows: InventoryRow[], generatedAt: string): string {
   lines.push(`- Likely broken imported exports: ${likelyBroken.length}`);
   lines.push(`- Protected or likely false-positive exports: ${falsePositives.length}`);
   lines.push(`- Selected Phase 29 text/reference candidates still likely broken: ${textWave.length}`);
-  lines.push(`- Recommended Phase 30 validation/reference candidates: ${validationWave.length}`);
+  lines.push(`- Selected Phase 30 validation/reference candidates still likely broken: ${validationWave.length}`);
   lines.push('');
   lines.push('## Top Repair Candidates');
   lines.push('');
@@ -332,8 +332,9 @@ function renderReport(rows: InventoryRow[], generatedAt: string): string {
   if (validationWave.length > 0) {
     lines.push(...renderCandidateDetails(validationWave));
   } else {
-    lines.push('- No validation-reference candidates detected.');
+    lines.push('- No selected Phase 30 validation/reference candidates remain likely broken. Nonselected validation candidates may still appear in the top repair table.');
   }
+  lines.push('');
   lines.push('## False Positives and Protected Helpers');
   lines.push('');
   lines.push(...renderTable(falsePositives, 30));
