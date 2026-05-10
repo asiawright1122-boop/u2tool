@@ -6,7 +6,7 @@
 
 This milestone resumes runtime trust work after the `v0.0.7` growth and GSC recovery cycle. The focus is the remaining deferred shared helper surface behind `src/lib/tool-stubs.ts`: replace the next user-visible placeholder-backed clusters with typed runtime-integrity modules, keep compatibility exports stable, and make the repaired behavior visible in deterministic runtime and production evidence.
 
-Status: milestone opened on 2026-05-10. Phase 24 completed on 2026-05-10 by replacing the time/scheduling helper cluster with shared runtime-integrity behavior and direct smoke evidence.
+Status: milestone opened on 2026-05-10. Phase 24 completed on 2026-05-10 by replacing the time/scheduling helper cluster with shared runtime-integrity behavior and direct smoke evidence. Phase 25 completed on 2026-05-10 by selecting and repairing the code-analysis developer helper wave.
 
 ### Phase 24: Time and Scheduling Runtime Repair
 **Goal**: Replace the meeting/time scheduling helper cluster behind `tool-stubs.ts` with shared runtime-integrity behavior so representative office tools compute real availability and timezone outcomes.
@@ -35,8 +35,10 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 25-01: Rank remaining developer/data placeholder helper families and select the bounded repair wave
-- [ ] 25-02: Implement the selected repair wave with compatibility exports and targeted tests
+- [x] 25-01: Rank remaining developer/data placeholder helper families and select the bounded repair wave
+- [x] 25-02: Implement the selected repair wave with compatibility exports and targeted tests
+
+**Archived outcome:** `analyzeComplexity`, `analyzeDeadCode`, and `analyzePerformance` now run through `src/lib/runtime-integrity/code-analysis.ts`, preserve the `tool-stubs.ts` compatibility seam, and have direct smoke coverage for representative developer-tool output.
 
 ### Phase 26: Runtime Placeholder Governance Expansion
 **Goal**: Extend deterministic runtime-placeholder governance so the v0.0.8 repaired clusters cannot silently regress to compiling shells.

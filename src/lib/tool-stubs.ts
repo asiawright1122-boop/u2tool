@@ -21,6 +21,11 @@ import {
   getWCAGLevel as runtimeGetWCAGLevel,
 } from './runtime-integrity/calculators';
 import {
+  analyzeComplexity as runtimeAnalyzeComplexity,
+  analyzeDeadCode as runtimeAnalyzeDeadCode,
+  analyzePerformance as runtimeAnalyzePerformance,
+} from './runtime-integrity/code-analysis';
+import {
   generateGo as runtimeGenerateGo,
   generateJava as runtimeGenerateJava,
   generateJavaScript as runtimeGenerateJavaScript,
@@ -2323,11 +2328,13 @@ export const presetKeyframes = {
   flip: '@keyframes flip { from { transform: rotateY(0); } to { transform: rotateY(360deg); } }',
 };
 export const allKeyframes = Object.values(presetKeyframes).join('\n');
-export function analyzeComplexity() { return { score: 0, issues: [] }; }
-export function analyzeDeadCode() { return { score: 0, issues: [] }; }
+export function analyzeComplexity(code: any = '', language: any = 'javascript') {
+  return runtimeAnalyzeComplexity(code, language);
+}
+export function analyzeDeadCode(code: any = '') { return runtimeAnalyzeDeadCode(code); }
 export function analyzeDocument() { return { score: 0, issues: [] }; }
 export function analyzeFrequency() { return { score: 0, issues: [] }; }
-export function analyzePerformance() { return { score: 0, issues: [] }; }
+export function analyzePerformance(code: any = '') { return runtimeAnalyzePerformance(code); }
 export function analyzeQuery() { return { score: 0, issues: [] }; }
 export function applyBitFlags(byte = 0, locallyAdministered = true, multicast = false) {
   let value = Number(byte) & 0xff;

@@ -18,7 +18,7 @@ The strongest immediate evidence is the meeting/time scheduling cluster: `src/li
 ### Runtime Repair
 
 - [x] **RUNTIME-04**: User-facing meeting and time scheduling tools compute timezone conversions, working-hour windows, availability slots, and conflicts through shared runtime-integrity helpers instead of empty `tool-stubs.ts` exports or component-local duplicated algorithms.
-- [ ] **RUNTIME-05**: The next selected developer/data helper cluster still exposed through `src/lib/tool-stubs.ts` placeholders is repaired with typed shared implementations or explicitly governed exclusions, based on user-visible breakage, import coverage, and bounded compatibility risk.
+- [x] **RUNTIME-05**: The next selected developer/data helper cluster still exposed through `src/lib/tool-stubs.ts` placeholders is repaired with typed shared implementations or explicitly governed exclusions, based on user-visible breakage, import coverage, and bounded compatibility risk.
 
 ### Runtime Governance
 
@@ -45,7 +45,7 @@ The strongest immediate evidence is the meeting/time scheduling cluster: `src/li
 | Requirement | Planned Phase | Status |
 | --- | --- | --- |
 | RUNTIME-04 | Phase 24 | Complete |
-| RUNTIME-05 | Phase 25 | Pending |
+| RUNTIME-05 | Phase 25 | Complete |
 | OPS-10 | Phase 26 | Pending |
 | OPS-11 | Phase 27 | Pending |
 
@@ -56,4 +56,4 @@ The strongest immediate evidence is the meeting/time scheduling cluster: `src/li
 
 ---
 *Requirements defined: 2026-05-10*
-*Last updated: 2026-05-10 after Phase 24 verification*
+*Last updated: 2026-05-10 after Phase 25 verification*

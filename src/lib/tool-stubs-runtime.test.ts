@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import {
   applyBitFlags,
+  analyzeComplexity,
+  analyzeDeadCode,
+  analyzePerformance,
   base64UrlEncode,
   buildCrc32Table,
   buildOutlineTree,
@@ -334,6 +337,41 @@ X-Trace-Id: abc123
     const cleaned = generateCleanedCode(EXAMPLE_CODE, imports);
     expect(cleaned).toContain("import { readFile, writeFile as saveFile } from 'fs/promises';");
     expect(cleaned).not.toContain('unlink');
+  });
+
+  it('analyzes code complexity, dead code, and performance heuristics', () => {
+    const complexity = analyzeComplexity(EXAMPLE_CODE, 'javascript');
+    expect(complexity.totalLines).toBeGreaterThan(10);
+    expect(complexity.codeLines).toBeGreaterThan(5);
+    expect(complexity.functions.map((item: { name: string }) => item.name)).toEqual(
+      expect.arrayContaining(['normalizeUser', 'normalizeAdmin'])
+    );
+    expect(complexity.overallComplexity).toBeGreaterThan(0);
+    expect(complexity.maintainabilityIndex).toBeGreaterThan(0);
+
+    const deadCode = analyzeDeadCode(`
+function used() { return 1; }
+function unused() { return 2; }
+const orphan = 3;
+console.log(used());
+`);
+    expect(deadCode.map((item: { name: string }) => item.name)).toEqual(
+      expect.arrayContaining(['unused', 'orphan'])
+    );
+
+    const performance = analyzePerformance(`
+for (const user of users) {
+  for (const order of orders) console.log(user.id, order.id);
+}
+const parsed = JSON.parse(payload);
+document.querySelectorAll('.row').forEach((row) => row.remove());
+`);
+    expect(performance.totalTime).toBeGreaterThan(0);
+    expect(performance.operations.map((item: { name: string }) => item.name)).toEqual(
+      expect.arrayContaining(['Nested loop penalty', 'JSON serialization work'])
+    );
+    expect(performance.hotspots.length).toBeGreaterThan(0);
+    expect(performance.suggestions.length).toBeGreaterThan(0);
   });
 
   it('extracts document headings and renders outlines and tables of contents', () => {

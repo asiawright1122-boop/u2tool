@@ -2,19 +2,19 @@
 gsd_state_version: 1.0
 milestone: v0.0.8
 milestone_name: Runtime Workflow Integrity Expansion
-current_phase: 25
-current_phase_name: Developer/Data Runtime Repair
+current_phase: 26
+current_phase_name: Runtime Placeholder Governance Expansion
 current_plan: 0
-status: planned
-stopped_at: "Phase 25 context, research, and plans are ready; next resume should execute the code-analysis runtime repair wave."
-last_updated: "2026-05-10T15:05:00+08:00"
+status: ready_for_planning
+stopped_at: "Phase 25 completed and verified; next resume should discuss or plan Phase 26 Runtime Placeholder Governance Expansion."
+last_updated: "2026-05-10T15:08:28+08:00"
 last_activity: 2026-05-10
 progress:
   total_phases: 4
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 8
-  completed_plans: 2
-  percent: 25
+  completed_plans: 4
+  percent: 50
 ---
 
 # Project State
@@ -24,19 +24,19 @@ progress:
 See: .planning/PROJECT.md (updated 2026-05-10)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** Phase 24 completed the meeting/time scheduling runtime repair. The next phase should rank and repair the next developer/data helper wave still exposed through `src/lib/tool-stubs.ts` placeholders.
+**Current focus:** Phase 25 completed the developer code-analysis runtime repair. The next phase should add runtime-placeholder governance for the repaired scheduling and code-analysis clusters.
 
 ## Current Position
 
-Current Phase: 25
-Current Phase Name: Developer/Data Runtime Repair
+Current Phase: 26
+Current Phase Name: Runtime Placeholder Governance Expansion
 Total Phases: 4
 Current Plan: 0
 Total Plans in Phase: 2
-Status: Phase 25 planned; ready for execution
+Status: Phase 26 ready for discussion/planning
 Last Activity: 2026-05-10
-Progress: 25%
-Progress Bar: [###-------] 25%
+Progress: 50%
+Progress Bar: [#####-----] 50%
 
 ## Performance Metrics
 
@@ -76,8 +76,8 @@ Progress Bar: [###-------] 25%
 
 **Recent Trend:**
 
-- Last 4 plans: GSC coverage classification, GSC performance recovery patching, scheduling helper extraction, office scheduling smoke evidence
-- Trend: v0.0.8 is restoring user-visible runtime behavior through shared helpers and targeted smoke coverage instead of broad placeholder churn
+- Last 4 plans: scheduling helper extraction, office scheduling smoke evidence, developer/data wave selection, code-analysis runtime repair
+- Trend: v0.0.8 is restoring user-visible runtime behavior through bounded shared-helper waves and targeted smoke coverage instead of broad placeholder churn
 
 ## Accumulated Context
 
@@ -123,11 +123,12 @@ Recent decisions affecting current work:
 - Phase 23: `已抓取 - 尚未编入索引`, Google-selected canonical mismatch, noindex exclusions, and 4xx/404 samples are the first URL drilldown exports needed for systematic fixes.
 - v0.0.8 kickoff: the next leverage area is the deferred `tool-stubs.ts` runtime surface, starting with meeting/time scheduling helpers that still expose empty exports despite representative office tools having real expected behavior.
 - Phase 24: meeting/time scheduling helpers now live in `src/lib/runtime-integrity/scheduling.ts`, flow through `tool-stubs.ts`, and are covered by direct runtime smoke tests.
+- Phase 25: code-analysis helpers now live in `src/lib/runtime-integrity/code-analysis.ts`, flow through `tool-stubs.ts`, and cover complexity, dead-code, and performance profiler outputs.
 
 ### Pending Todos
 
-- Execute Phase 25 Developer/Data Runtime Repair plans 25-01 and 25-02.
-- Repair `analyzeComplexity`, `analyzeDeadCode`, and `analyzePerformance` through shared runtime-integrity helpers.
+- Discuss or plan Phase 26 Runtime Placeholder Governance Expansion.
+- Add governance for the repaired scheduling and code-analysis helper clusters.
 - Review fresh GSC/Coverage drilldown deltas only after new exports are available.
 
 ### Blockers/Concerns
@@ -142,7 +143,7 @@ Recent decisions affecting current work:
 ## Session
 
 Last Date: 2026-05-10
-Stopped At: Phase 25 context, research, and plans created; next resume should execute the code-analysis runtime repair wave.
+Stopped At: Phase 25 completed and verified; next resume should discuss or plan Phase 26 Runtime Placeholder Governance Expansion.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.
