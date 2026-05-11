@@ -21,6 +21,7 @@ does, or is deliberately archived under `_deprecated/`.
 | `validate-internal-link-canonicals.ts` | `validate:internal-link-canonicals` |
 | `validate-search-engine-compliance.ts` | `validate:search-engine-compliance` |
 | `validate-runtime-placeholder-regressions.ts` | `validate:runtime-placeholder-regressions` |
+| `validate-tool-svg-rendering.ts` | `validate:tool-svg-rendering` |
 | `validate-sitemap-url-health.ts` | `validate:sitemap-url-health` |
 | `content-trust-audit.mjs` | `report:content-trust` |
 | `generate-runtime-debt-inventory.ts` | `report:runtime-debt` |
