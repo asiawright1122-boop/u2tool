@@ -12,6 +12,7 @@ Status: milestone opened on 2026-05-11 from existing GSC exports. Baseline repor
 **Goal**: Convert existing GSC Coverage and Performance exports into a deterministic validation action matrix that explains why previous broad validation attempts failed and what should be validated next.
 **Depends on**: Archived v0.0.9 baseline
 **Requirements**: GSC-13
+**Status**: Complete on 2026-05-11 with `docs/GSC_VALIDATION_ACTION_MATRIX_2026-05-11.md` and `docs/GSC_VALIDATION_PLAYBOOK_2026-05-11.md`.
 **Success Criteria** (what must be TRUE):
   1. Existing GSC exports are checked and regenerated into current baseline reports.
   2. URL groups are labeled as `do-not-validate`, `fix-before-validate`, `request-indexing-after-enhancement`, or `monitor`.
@@ -19,8 +20,8 @@ Status: milestone opened on 2026-05-11 from existing GSC exports. Baseline repor
 **Plans**: 2 plans
 
 Plans:
-- [ ] 32-01: Generate the GSC validation action matrix from existing exports
-- [ ] 32-02: Document the validation/request-indexing playbook for the current GSC state
+- [x] 32-01: Generate the GSC validation action matrix from existing exports
+- [x] 32-02: Document the validation/request-indexing playbook for the current GSC state
 
 ### Phase 33: Technical URL Blocker Repair
 **Goal**: Fix only high-confidence technical blockers that prevent indexable pages from passing live inspection, while marking expected exclusions as intentional.

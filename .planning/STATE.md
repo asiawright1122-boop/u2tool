@@ -2,19 +2,19 @@
 gsd_state_version: 1.0
 milestone: v0.0.10
 milestone_name: GSC Evidence Intake and High-Value URL Recovery
-current_phase: 32
-current_phase_name: GSC Validation Action Matrix
+current_phase: 33
+current_phase_name: Technical URL Blocker Repair
 current_plan: 0
 status: ready_for_planning
-stopped_at: "v0.0.10 opened from existing GSC exports; next resume should plan or execute Phase 32 GSC Validation Action Matrix."
-last_updated: "2026-05-11T10:16:00+08:00"
+stopped_at: "Phase 32 completed with the GSC validation action matrix and playbook; next resume should plan or execute Phase 33 Technical URL Blocker Repair."
+last_updated: "2026-05-11T10:26:44+08:00"
 last_activity: 2026-05-11
 progress:
   total_phases: 4
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 8
-  completed_plans: 0
-  percent: 0
+  completed_plans: 2
+  percent: 25
 ---
 
 # Project State
@@ -24,24 +24,24 @@ progress:
 See: .planning/PROJECT.md (updated 2026-05-11)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** v0.0.10 is using existing GSC exports to separate expected exclusions from technical blockers and high-value recovery candidates.
+**Current focus:** v0.0.10 has separated expected GSC exclusions from technical blockers and high-value recovery candidates; next is live-checking blocker samples before any validation retry.
 
 ## Current Position
 
-Current Phase: 32
-Current Phase Name: GSC Validation Action Matrix
+Current Phase: 33
+Current Phase Name: Technical URL Blocker Repair
 Total Phases: 4
 Current Plan: 0
 Total Plans in Phase: 2
-Status: Phase 32 ready for planning/execution
+Status: Phase 33 ready for planning/execution
 Last Activity: 2026-05-11
-Progress: 0%
-Progress Bar: [----------] 0%
+Progress: 25%
+Progress Bar: [###-------] 25%
 
 ## Recent Trend
 
-- Last 4 completed plans: validation reference-data extraction, validation runtime smoke coverage, reference-data governance extension, production verification and closeout.
-- Trend: runtime trust work closed cleanly; search recovery now needs evidence-based triage instead of broad GSC validation retries.
+- Last 4 completed plans: reference-data governance extension, production verification and closeout, GSC validation action matrix generation, GSC validation/request-indexing playbook.
+- Trend: runtime trust work closed cleanly; search recovery now has an evidence-based validation matrix and needs live blocker inspection before retries.
 
 ## Accumulated Context
 
@@ -59,11 +59,12 @@ Recent decisions affecting current work:
 - Phase 29: selected text utility helpers now live in `src/lib/runtime-integrity/text-reference.ts`, flow through `tool-stubs.ts`, and have direct runtime smoke coverage.
 - Phase 30: selected validation helpers now live in `src/lib/runtime-integrity/validation-reference.ts`, flow through `tool-stubs.ts`, and have direct runtime smoke coverage.
 - Phase 31: runtime placeholder governance now protects the repaired const helpers, `npm run verify:production` passed, traceability has `4/4` complete requirements with `0` gaps, and health is `EXCELLENT`.
+- Phase 32: `docs/GSC_VALIDATION_ACTION_MATRIX_2026-05-11.md` and `docs/GSC_VALIDATION_PLAYBOOK_2026-05-11.md` separate `do-not-validate`, `fix-before-validate`, `request-indexing-after-enhancement`, and `monitor` groups from existing GSC exports.
 
 ### Pending Todos
 
-- Execute Phase 32 GSC Validation Action Matrix.
-- Produce a user-facing playbook for which GSC rows to validate, request indexing, monitor, or ignore.
+- Execute Phase 33 Technical URL Blocker Repair.
+- Live-check the 206 `fix-before-validate` URL samples from `docs/GSC_VALIDATION_ACTION_MATRIX_2026-05-11.md`.
 - Keep broad validation requests paused until fixed URL groups are isolated.
 
 ### Blockers/Concerns
@@ -76,7 +77,7 @@ Recent decisions affecting current work:
 ## Session
 
 Last Date: 2026-05-10
-Stopped At: v0.0.10 opened from existing GSC exports; next resume should plan or execute Phase 32 GSC Validation Action Matrix.
+Stopped At: Phase 32 completed; next resume should plan or execute Phase 33 Technical URL Blocker Repair.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.

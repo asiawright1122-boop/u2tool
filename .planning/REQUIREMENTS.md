@@ -17,7 +17,7 @@ The strongest signal from the existing exports is that many high-volume Coverage
 
 ### GSC Evidence Intake
 
-- [ ] GSC-13: Existing Coverage drilldown and Performance exports are converted into a deterministic action matrix that separates "do not validate", "fix before validating", and "high-value request indexing/content recovery" URL groups.
+- [x] GSC-13: Existing Coverage drilldown and Performance exports are converted into a deterministic action matrix that separates "do not validate", "fix before validating", and "high-value request indexing/content recovery" URL groups.
 
 ### Technical Validation Recovery
 

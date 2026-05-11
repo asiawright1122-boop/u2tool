@@ -13,7 +13,7 @@ Every localized tool page must render the right topic, the right language, and t
 **Current milestone:** `v0.0.10 GSC Evidence Intake and High-Value URL Recovery`
 **Latest archived milestone:** `v0.0.9 Runtime Debt Prioritization and Text Utility Repair`
 **Previous archived milestone:** `v0.0.8 Runtime Workflow Integrity Expansion`
-**Current planning state:** v0.0.10 is open. Existing GSC Coverage drilldown and Performance exports are present, and the next work is to separate expected exclusions from true blockers and high-value recovery candidates before making any validation requests.
+**Current planning state:** v0.0.10 is open. Phase 32 is complete with a GSC validation action matrix and playbook; the next work is Phase 33 live inspection of technical blocker samples before making any validation requests.
 
 **Latest completed outcomes:**
 - Added a deterministic runtime debt inventory for imported `tool-stubs.ts` compatibility exports.
@@ -21,6 +21,7 @@ Every localized tool page must render the right topic, the right language, and t
 - Repaired selected validation reference data for common-password, typo-correction, disposable-domain, and free-provider checks.
 - Extended runtime-placeholder regression governance to protect repaired const reference-data helpers.
 - Revalidated v0.0.9 with green traceability (`4/4`, `0` gaps), green `npm run verify:production`, and `EXCELLENT` project health.
+- Generated `docs/GSC_VALIDATION_ACTION_MATRIX_2026-05-11.md` and `docs/GSC_VALIDATION_PLAYBOOK_2026-05-11.md` from existing GSC exports, showing that broad validation should stay paused.
 
 **Latest archived milestone evidence:**
 - Audit: [.planning/milestones/v0.0.9-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.9-MILESTONE-AUDIT.md)
@@ -78,10 +79,10 @@ Every localized tool page must render the right topic, the right language, and t
 - ✓ Selected text utility reference-data helpers render meaningful ASCII, Morse/NATO, small-text, and flip/mirror behavior — v0.0.9.
 - ✓ Selected validation reference-data helpers cover representative common-password, provider-typo, disposable-domain, and free-provider cases — v0.0.9.
 - ✓ Runtime governance and production verification now protect repaired const reference-data helpers — v0.0.9.
+- ✓ Existing GSC Coverage drilldown and Performance exports now generate a deterministic validation action matrix and user playbook — v0.0.10.
 
 ### Active
 
-- [ ] Convert existing GSC Coverage drilldown and Performance exports into a validation action matrix.
 - [ ] Fix only high-confidence technical blockers that prevent indexable URLs from passing live inspection.
 - [ ] Prioritize high-value tool-detail recovery candidates by lost clicks/impressions and content/internal-link opportunity.
 - [ ] End the milestone with exact GSC validation/request-indexing guidance and green production evidence.
@@ -142,10 +143,11 @@ This is a brownfield repository with a very large content surface, heavy localiz
 | Start v0.0.9 with a runtime debt inventory before another repair wave | Heuristic placeholder detection can mistake valid fallback behavior for stubs, so repair candidates need consumer evidence and false-positive notes before governance expands | ✓ Good |
 | Keep repaired text and validation reference data in typed runtime-integrity modules behind `tool-stubs.ts` compatibility exports | The site can repair user-visible behavior without forcing broad component import churn | ✓ Good |
 | Extend placeholder governance to const reference-data helpers | Empty data regressions can compile successfully, so the release gate must verify const delegation, runtime exports, and smoke references | ✓ Good |
+| Split GSC validation decisions into action labels before retrying Search Console validation | Previous validation attempts failed because GSC rows mix expected exclusions with real blockers, so validation must be scoped to fixed URL groups | ✓ Good |
 
 ## Current State
 
-The current baseline now includes promoted discovery ordering for the strongest authority routes, a home-page compare entry point, explicit priority export coverage in `llms.txt`, SEO-aware discovery snippets, restored JWT decoder/debugger metadata in the shared message layer, and a canonical production gate that reflects the real Cloudflare server-build output. `v0.0.5` shipped with lighter browse shells, a first shared runtime-integrity repair wave, and deterministic anti-corruption guardrails. `v0.0.6` then completed the next deferred curl/codegen runtime wave, added representative rendered translation drift governance, introduced a shared theme contract plus shell/chart parity proof, and surfaced that new evidence explicitly inside the canonical production gate. `v0.0.7` selected `text` as the next authority wave, promoted it across browse, compare, AI discovery, `llms.txt`, and tools-index exports, added growth-surface governance, and completed evidence-led GSC recovery triage. `v0.0.8` repaired the next scheduling and code-analysis runtime helper clusters, restored placeholder governance, and closed with a green canonical production gate. `v0.0.9` inventoried remaining imported runtime helper debt, repaired selected text and validation reference-data clusters, extended const-helper governance, and closed with green canonical production verification. `v0.0.10` is now opened to turn existing GSC exports into a targeted validation and high-value recovery queue.
+The current baseline now includes promoted discovery ordering for the strongest authority routes, a home-page compare entry point, explicit priority export coverage in `llms.txt`, SEO-aware discovery snippets, restored JWT decoder/debugger metadata in the shared message layer, and a canonical production gate that reflects the real Cloudflare server-build output. `v0.0.5` shipped with lighter browse shells, a first shared runtime-integrity repair wave, and deterministic anti-corruption guardrails. `v0.0.6` then completed the next deferred curl/codegen runtime wave, added representative rendered translation drift governance, introduced a shared theme contract plus shell/chart parity proof, and surfaced that new evidence explicitly inside the canonical production gate. `v0.0.7` selected `text` as the next authority wave, promoted it across browse, compare, AI discovery, `llms.txt`, and tools-index exports, added growth-surface governance, and completed evidence-led GSC recovery triage. `v0.0.8` repaired the next scheduling and code-analysis runtime helper clusters, restored placeholder governance, and closed with a green canonical production gate. `v0.0.9` inventoried remaining imported runtime helper debt, repaired selected text and validation reference-data clusters, extended const-helper governance, and closed with green canonical production verification. `v0.0.10` has completed the GSC validation action matrix and is now ready for targeted technical blocker live checks.
 
 ## Current Milestone: v0.0.10 GSC Evidence Intake and High-Value URL Recovery
 
@@ -194,4 +196,4 @@ The current baseline now includes promoted discovery ordering for the strongest 
 - Continue runtime-integrity expansion beyond v0.0.8 only for clusters with proven user-visible breakage and a bounded compatibility surface.
 
 ---
-*Last updated: 2026-05-11 after opening v0.0.10 GSC Evidence Intake and High-Value URL Recovery*
+*Last updated: 2026-05-11 after completing Phase 32 GSC Validation Action Matrix*
