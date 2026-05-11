@@ -21,7 +21,7 @@ The strongest signal from the existing exports is that many high-volume Coverage
 
 ### Technical Validation Recovery
 
-- [ ] GSC-14: High-confidence technical blockers from GSC exports, especially true 4xx/noindex/robots/5xx cases on indexable pages, are live-checked and either fixed or explicitly marked as expected exclusion.
+- [x] GSC-14: High-confidence technical blockers from GSC exports, especially true 4xx/noindex/robots/5xx cases on indexable pages, are live-checked and either fixed or explicitly marked as expected exclusion.
 
 ### High-Value URL Recovery
 

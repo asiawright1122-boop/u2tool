@@ -27,6 +27,7 @@ Plans:
 **Goal**: Fix only high-confidence technical blockers that prevent indexable pages from passing live inspection, while marking expected exclusions as intentional.
 **Depends on**: Phase 32
 **Requirements**: GSC-14
+**Status**: Complete on 2026-05-11 with representative live checks in `docs/GSC_TECHNICAL_BLOCKER_LIVE_CHECK_2026-05-11.md`; no code patch required.
 **Success Criteria** (what must be TRUE):
   1. True 4xx/noindex/robots/5xx blockers on indexable pages are live-checked and patched when the repository owns the issue.
   2. Expected exclusions such as stale build assets, canonical alternates, redirects, and query-parameter variants are documented as not worth validation.
@@ -34,8 +35,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 33-01: Live-check high-confidence technical blocker samples and classify fixability
-- [ ] 33-02: Patch owned URL-shape defects and verify canonical/internal-link gates
+- [x] 33-01: Live-check high-confidence technical blocker samples and classify fixability
+- [x] 33-02: Patch owned URL-shape defects and verify canonical/internal-link gates
 
 ### Phase 34: High-Value Tool Detail Recovery
 **Goal**: Prioritize and repair the highest-value tool-detail recovery candidates using Performance evidence rather than broad catalog rewrites.

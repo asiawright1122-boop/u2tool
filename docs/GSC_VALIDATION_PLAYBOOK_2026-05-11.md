@@ -84,7 +84,20 @@ Do this now:
 
 1. Keep current exports. No re-export needed.
 2. Do not retry broad validation.
-3. Execute Phase 33 live checks for the 206 `fix-before-validate` URLs.
+3. Use `docs/GSC_TECHNICAL_BLOCKER_LIVE_CHECK_2026-05-11.md` as the Phase 33 technical blocker evidence.
 4. Execute Phase 34 enhancement work for the selected high-value tool-detail URLs.
 
 Re-export GSC later only after fixes have been deployed and Google has had crawl time.
+
+## Phase 33 Live-Check Update
+
+The representative `fix-before-validate` samples have now been checked live:
+
+- 12 representative URLs checked.
+- 12 resolved as `expected-monitor`.
+- 0 true blockers found.
+- 0 reruns needed.
+- `npm run validate:internal-link-canonicals` passed with `checked=264`.
+- `npm run validate:search-engine-compliance` passed.
+
+Current instruction: do not validate the broad `4xx`, `404`, or `noindex` rows from these mixed historical groups. Monitor recrawl and continue to high-value tool-detail recovery.
