@@ -1,62 +1,64 @@
-# Requirements: v0.0.9 Runtime Debt Prioritization and Text Utility Repair
+# Requirements: v0.0.10 GSC Evidence Intake and High-Value URL Recovery
 
-**Defined:** 2026-05-10
+**Defined:** 2026-05-11
 **Core Value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
 
 ## Status
 
-Closed
+Open
 
 ## Why This Exists
 
-`v0.0.8` repaired two bounded helper clusters and added runtime-placeholder governance, but `src/lib/tool-stubs.ts` is still a broad compatibility surface with many imported constants and functions. The next safe move is not a repo-wide rewrite. It is to make the remaining debt measurable, then repair the next obvious user-visible text/reference-data cluster where empty maps or arrays directly produce broken tool output.
+`v0.0.9` closed the runtime-reference repair cycle with green production verification, but Google Search Console still shows failed validation attempts and a large excluded-page surface. The existing GSC exports are already present locally, so the next safe move is not to export again or repeatedly click "Validate fix." The next move is to convert those exports into an action plan that separates normal exclusions from actual technical blockers and from high-value content recovery candidates.
 
-The strongest immediate candidates are text utility tools that expect reference data from `tool-stubs.ts`: ASCII art fonts, Morse/NATO maps, small-text superscript/subscript maps, flip/mirror maps, and adjacent validation dictionaries. These are visible, deterministic, and easy to smoke-test without network or browser-only dependencies.
+The strongest signal from the existing exports is that many high-volume Coverage rows are expected canonical/redirect/stale-asset states, while Performance evidence still shows `tool-detail` pages and English traffic carrying the largest exposure loss. This milestone should prioritize only URL groups where validation or code changes can reasonably change Google's state.
 
 ## In Scope
 
-### Runtime Debt Intelligence
+### GSC Evidence Intake
 
-- [x] RUNTIME-06: Remaining `tool-stubs.ts` exports imported by tool components are inventoried with consumer paths, placeholder signatures, false-positive notes, and ranked repair candidates.
+- [ ] GSC-13: Existing Coverage drilldown and Performance exports are converted into a deterministic action matrix that separates "do not validate", "fix before validating", and "high-value request indexing/content recovery" URL groups.
 
-### Text Utility Runtime Repair
+### Technical Validation Recovery
 
-- [x] RUNTIME-07: Text utility tools that currently depend on empty reference maps or arrays render meaningful ASCII, Morse/NATO, small-text, and flip/mirror output through shared runtime-integrity helpers or populated compatibility exports.
-- [x] RUNTIME-08: Adjacent validation/reference-data tools selected from the inventory, such as email provider/typo/disposable-domain checks or password common-list checks, stop silently under-reporting because of empty compatibility data.
+- [ ] GSC-14: High-confidence technical blockers from GSC exports, especially true 4xx/noindex/robots/5xx cases on indexable pages, are live-checked and either fixed or explicitly marked as expected exclusion.
 
-### Runtime Governance
+### High-Value URL Recovery
 
-- [x] OPS-12: Runtime governance and production verification include the new inventory/repair evidence without regressing localization, theme, SEO, discovery, or existing runtime gates.
+- [ ] GSC-15: Highest-value `tool-detail` recovery candidates from Performance evidence are prioritized by lost clicks/impressions, current indexability, content/support-copy fit, and internal-link opportunity before editing.
+
+### Validation Guidance and Closeout
+
+- [ ] OPS-13: The milestone ends with a clear GSC validation/request-indexing playbook, refreshed evidence reports, traceability, and production verification so future validation requests target only fixed URL groups.
 
 ## Future Requirements
 
-- [ ] Repair additional developer, database, finance, image, or generator helper families only after inventory ranking shows high import coverage and user-visible breakage.
-- [ ] Revisit fresh GSC/Coverage recovery only after new exports are available.
-- [ ] Consider replacing the generated `tool-stubs.ts` compatibility surface only after enough helper clusters have migrated into typed runtime-integrity modules.
+- [ ] Re-export GSC Coverage/Performance only after new fixes have had enough crawl time to change data.
+- [ ] Continue runtime helper repair only if fresh ranking shows user-visible breakage stronger than the GSC recovery queue.
+- [ ] Add new authority or comparison pages only when the recovery evidence identifies a clear demand gap, not as broad page-count growth.
 
 ## Out Of Scope
 
 | Feature | Reason |
 | --- | --- |
-| Repo-wide `tool-stubs.ts` rewrite | Too risky for a large compatibility surface; this milestone should rank and repair bounded clusters. |
-| New catalog/tool expansion | The current leverage is making existing tools honest, not increasing page count. |
-| Fresh GSC recovery edits | Existing May 2026 exports were already consumed; new search work needs new evidence. |
-| Full visual redesign of affected tools | Runtime behavior and deterministic evidence are the goal; UI redesign can wait. |
+| Repeated whole-issue GSC validation requests | Prior attempts failed because mixed URL groups still contain expected exclusions; this milestone narrows requests to fixed groups only. |
+| Redirecting stale hashed assets to HTML pages | That risks soft-404 signals; `_next/static` historical assets should remain excluded/noindex/410 when applicable. |
+| Broad title/description rewrites across the catalog | Frequent broad SEO edits muddy recovery attribution and can regress already-governed copy. |
+| New GSC export requirement before starting | Required exports are already present and `check:gsc-recovery-inputs` passes. |
 
 ## Traceability
 
 | Requirement | Planned Phase | Status |
 | --- | --- | --- |
-| RUNTIME-06 | Phase 28 | Complete |
-| RUNTIME-07 | Phase 29 | Complete |
-| RUNTIME-08 | Phase 30 | Complete |
-| OPS-12 | Phase 31 | Complete |
+| GSC-13 | Phase 32 | Pending |
+| GSC-14 | Phase 33 | Pending |
+| GSC-15 | Phase 34 | Pending |
+| OPS-13 | Phase 35 | Pending |
 
 **Coverage:**
-- v0.0.9 requirements: 4 total
+- v0.0.10 requirements: 4 total
 - Mapped to phases: 4
 - Unmapped: 0 ✓
 
 ---
-*Requirements defined: 2026-05-10*
-*Last updated: 2026-05-11 after v0.0.9 verification*
+*Requirements defined: 2026-05-11*

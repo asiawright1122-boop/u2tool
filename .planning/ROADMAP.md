@@ -1,76 +1,68 @@
 # Roadmap: U2Tool
 
-## v0.0.9 Runtime Debt Prioritization and Text Utility Repair
+## v0.0.10 GSC Evidence Intake and High-Value URL Recovery
 
-**Milestone:** v0.0.9 Runtime Debt Prioritization and Text Utility Repair
+**Milestone:** v0.0.10 GSC Evidence Intake and High-Value URL Recovery
 
-This milestone continues the runtime trust line after `v0.0.8`. The focus is to make the remaining `src/lib/tool-stubs.ts` debt measurable, then repair the next user-visible text/reference-data helper wave without broad compatibility churn. It should preserve typed `runtime-integrity` modules as the landing place for real behavior and keep the canonical production gate as the release boundary.
+This milestone resumes natural-search recovery after `v0.0.9` closed the runtime debt cycle. The focus is to stop treating GSC validation as a single giant button: use the existing Coverage drilldown and Performance exports to identify which URL groups should not be validated, which technical blockers need code fixes first, and which high-value tool pages deserve content/internal-link recovery and individual request-indexing treatment.
 
-Status: milestone shipped on 2026-05-11 after completing the runtime debt inventory, selected text and validation reference-data repairs, const-helper governance, and green canonical production verification.
+Status: milestone opened on 2026-05-11 from existing GSC exports. Baseline reports regenerated as `docs/GSC_DRILLDOWN_URL_REPORT_2026-05-11.md` and `docs/GSC_PERFORMANCE_RECOVERY_REPORT_2026-05-11.md`.
 
-### Phase 28: Runtime Helper Debt Inventory
-**Goal**: Produce a deterministic inventory of remaining `tool-stubs.ts` imports, placeholder signatures, consumers, false positives, and ranked repair candidates.
-**Depends on**: Archived v0.0.8 baseline
-**Requirements**: RUNTIME-06
+### Phase 32: GSC Validation Action Matrix
+**Goal**: Convert existing GSC Coverage and Performance exports into a deterministic validation action matrix that explains why previous broad validation attempts failed and what should be validated next.
+**Depends on**: Archived v0.0.9 baseline
+**Requirements**: GSC-13
 **Success Criteria** (what must be TRUE):
-  1. Imported `tool-stubs.ts` exports are mapped to consumer components and export definitions.
-  2. Placeholder signatures are classified with false-positive notes so real fallback behavior is not confused with broken stubs.
-  3. The next repair candidates are ranked by user-visible breakage, import coverage, testability, and compatibility risk.
+  1. Existing GSC exports are checked and regenerated into current baseline reports.
+  2. URL groups are labeled as `do-not-validate`, `fix-before-validate`, `request-indexing-after-enhancement`, or `monitor`.
+  3. The action matrix includes exact examples and user-facing guidance for which GSC rows to leave alone versus retry.
 **Plans**: 2 plans
 
 Plans:
-- [x] 28-01: Build the runtime debt inventory report from actual imports and export signatures
-- [x] 28-02: Rank the next helper repair waves and select the bounded v0.0.9 implementation scope
+- [ ] 32-01: Generate the GSC validation action matrix from existing exports
+- [ ] 32-02: Document the validation/request-indexing playbook for the current GSC state
 
-**Archived outcome:** `report:runtime-debt` now generates `docs/RUNTIME_HELPER_DEBT_INVENTORY.md`, scanning imported compatibility exports, separating false positives/protected helpers, and selecting text/reference plus validation/reference data waves for Phases 29 and 30.
-
-### Phase 29: Text Utility Runtime Repair
-**Goal**: Repair the selected text utility reference-data cluster so visible text tools render meaningful transformations instead of empty-map fallback output.
-**Depends on**: Phase 28
-**Requirements**: RUNTIME-07
+### Phase 33: Technical URL Blocker Repair
+**Goal**: Fix only high-confidence technical blockers that prevent indexable pages from passing live inspection, while marking expected exclusions as intentional.
+**Depends on**: Phase 32
+**Requirements**: GSC-14
 **Success Criteria** (what must be TRUE):
-  1. ASCII art, Morse/NATO, small-text, and flip/mirror data needed by representative tools is available through shared runtime-integrity code or populated compatibility exports.
-  2. Representative tool behavior is covered by direct runtime smoke tests for normal input and unknown-character fallback.
-  3. Existing component imports remain compatible unless the inventory justifies a local migration.
+  1. True 4xx/noindex/robots/5xx blockers on indexable pages are live-checked and patched when the repository owns the issue.
+  2. Expected exclusions such as stale build assets, canonical alternates, redirects, and query-parameter variants are documented as not worth validation.
+  3. Internal-link and search-engine compliance checks remain green after any redirect/canonical/sitemap changes.
 **Plans**: 2 plans
 
 Plans:
-- [x] 29-01: Extract or populate the selected text reference-data helpers
-- [x] 29-02: Add runtime smoke coverage and component compatibility evidence
+- [ ] 33-01: Live-check high-confidence technical blocker samples and classify fixability
+- [ ] 33-02: Patch owned URL-shape defects and verify canonical/internal-link gates
 
-**Archived outcome:** selected text utility helpers now flow through `src/lib/runtime-integrity/text-reference.ts`, remain compatible through `tool-stubs.ts`, and have runtime smoke coverage plus refreshed inventory evidence.
-
-### Phase 30: Validation Reference Data Repair
-**Goal**: Repair the adjacent validation/reference-data helper cluster selected from the inventory so security and validation tools stop silently under-reporting known cases.
-**Depends on**: Phase 29
-**Requirements**: RUNTIME-08
+### Phase 34: High-Value Tool Detail Recovery
+**Goal**: Prioritize and repair the highest-value tool-detail recovery candidates using Performance evidence rather than broad catalog rewrites.
+**Depends on**: Phase 33
+**Requirements**: GSC-15
 **Success Criteria** (what must be TRUE):
-  1. Selected email/password or similar validation helpers use meaningful reference data instead of empty arrays/objects.
-  2. Representative examples prove typo suggestions, free/disposable classification, or common-password penalties where applicable.
-  3. The repair remains local to the selected cluster and does not create broad runtime or localization churn.
+  1. Candidate pages are ranked by lost clicks, lost impressions, current indexability, content mismatch, and internal-link opportunity.
+  2. Only selected high-value pages receive content/runtime/internal-link fixes.
+  3. Rendered SEO and content-trust checks cover each edited page.
 **Plans**: 2 plans
 
 Plans:
-- [x] 30-01: Select the validation/reference-data repair slice from the inventory
-- [x] 30-02: Implement the selected validation data repair with smoke evidence
+- [ ] 34-01: Rank high-value `tool-detail` recovery candidates from Performance evidence
+- [ ] 34-02: Patch the selected recovery slice with rendered/content-trust evidence
 
-**Archived outcome:** selected password/email validation reference helpers now flow through `src/lib/runtime-integrity/validation-reference.ts`, remain compatible through `tool-stubs.ts`, and have runtime smoke coverage plus refreshed inventory evidence.
-
-### Phase 31: Runtime Evidence Gate and Closeout
-**Goal**: Fold v0.0.9 inventory and repair evidence into the existing runtime/production verification path and close the milestone cleanly.
-**Depends on**: Phase 30
-**Requirements**: OPS-12
+### Phase 35: GSC Recovery Evidence Gate and Closeout
+**Goal**: Fold the GSC action matrix and selected fixes into production verification and close the milestone with clear next validation instructions.
+**Depends on**: Phase 34
+**Requirements**: OPS-13
 **Success Criteria** (what must be TRUE):
-  1. Runtime smoke and placeholder governance cover the newly repaired helper clusters.
-  2. `npm run verify:production` passes after the inventory and repair work.
-  3. Traceability, health, and milestone audit artifacts reflect the v0.0.9 runtime debt reduction.
+  1. Production verification passes after GSC recovery changes.
+  2. Traceability, health, and milestone audit artifacts reflect which GSC validation groups are ready for retry.
+  3. The final playbook tells the user exactly which GSC issue rows to validate, which URLs to request indexing for, and which rows to monitor without clicking validate.
 **Plans**: 2 plans
 
 Plans:
-- [x] 31-01: Extend runtime governance for the newly repaired clusters
-- [x] 31-02: Run production verification and complete milestone closeout
-
-**Archived outcome:** runtime placeholder governance now protects the repaired const reference-data helpers, internal-link validation has stronger live-fetch diagnostics/retry behavior, and `npm run verify:production` passed with `EXCELLENT` project health.
+- [ ] 35-01: Extend evidence gates for the GSC recovery slice
+- [ ] 35-02: Run production verification and complete GSC recovery closeout
 
 ## Archived Milestones
 
@@ -83,39 +75,9 @@ Plans:
   Archive: [.planning/milestones/v0.0.8-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-ROADMAP.md)
   Requirements: [.planning/milestones/v0.0.8-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-REQUIREMENTS.md)
   Audit: [.planning/milestones/v0.0.8-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-MILESTONE-AUDIT.md)
-  Status: shipped on 2026-05-10 with scheduling and code-analysis runtime helpers repaired, runtime placeholder governance restored, and canonical production verification green.
+  Status: shipped on 2026-05-10 with scheduling and code-analysis runtime helper repairs plus runtime-placeholder governance.
 - [x] v0.0.7 Organic Authority Re-Expansion
   Archive: [.planning/milestones/v0.0.7-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.7-ROADMAP.md)
   Requirements: [.planning/milestones/v0.0.7-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.7-REQUIREMENTS.md)
   Audit: [.planning/milestones/v0.0.7-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.7-MILESTONE-AUDIT.md)
   Status: shipped on 2026-05-10 with the `text` authority wave selected, promoted, governed, and followed by evidence-led GSC recovery triage.
-- [x] v0.0.6 Drift Governance and Runtime Expansion
-  Archive: [.planning/milestones/v0.0.6-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.6-ROADMAP.md)
-  Requirements: [.planning/milestones/v0.0.6-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.6-REQUIREMENTS.md)
-  Audit: [.planning/v0.0.6-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.6-MILESTONE-AUDIT.md)
-  Status: shipped on 2026-04-06 with curl/codegen runtime expansion, representative rendered drift governance, shared theme-contract hardening, and explicit rendered/theme release evidence in the canonical production gate complete.
-- [x] v0.0.5 Runtime Integrity and Performance Trust
-  Archive: [.planning/milestones/v0.0.5-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.5-ROADMAP.md)
-  Requirements: [.planning/milestones/v0.0.5-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.5-REQUIREMENTS.md)
-  Audit: [.planning/v0.0.5-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.5-MILESTONE-AUDIT.md)
-  Status: shipped on 2026-04-04 with browse-shell performance hardening, representative runtime-integrity repair, and anti-corruption guardrails complete.
-- [x] v0.0.4 Intent Depth and Citation Consolidation
-  Archive: [.planning/milestones/v0.0.4-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.4-ROADMAP.md)
-  Requirements: [.planning/milestones/v0.0.4-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.4-REQUIREMENTS.md)
-  Audit: [.planning/v0.0.4-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.4-MILESTONE-AUDIT.md)
-  Status: shipped on 2026-04-04 with third-wave authority expansion, discovery-priority consolidation, and canonical production verification complete.
-- [x] v0.0.3 Authority Coverage Expansion
-  Archive: [.planning/milestones/v0.0.3-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.3-ROADMAP.md)
-  Requirements: [.planning/milestones/v0.0.3-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.3-REQUIREMENTS.md)
-  Audit: [.planning/v0.0.3-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.3-MILESTONE-AUDIT.md)
-  Status: shipped on 2026-04-02 with second-wave authority coverage, comparison discovery, and release-health traceability hardening complete.
-- [x] v0.0.2 Search Trust Expansion
-  Archive: [.planning/milestones/v0.0.2-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.2-ROADMAP.md)
-  Requirements: [.planning/milestones/v0.0.2-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.2-REQUIREMENTS.md)
-  Audit: [.planning/v0.0.2-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.2-MILESTONE-AUDIT.md)
-  Status: shipped on 2026-04-02 with rendered SEO verification, long-tail topical authority expansion, and AI / GEO discovery governance complete.
-- [x] v0.0.1 Quality Hardening Baseline
-  Archive: [.planning/milestones/v0.0.1-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.1-ROADMAP.md)
-  Requirements: [.planning/milestones/v0.0.1-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.1-REQUIREMENTS.md)
-  Audit: [.planning/v0.0.1-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.1-MILESTONE-AUDIT.md)
-  Status: shipped on 2026-04-02 with localization, theme, SEO governance, and technical SEO hardening complete.

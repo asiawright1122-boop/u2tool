@@ -1,12 +1,12 @@
 # Milestone Traceability Report
 
-Generated: 2026-05-11T01:58:52.565Z
-Milestone: v0.0.9 Runtime Debt Prioritization and Text Utility Repair
+Generated: 2026-05-11T02:17:20.404Z
+Milestone: v0.0.10 GSC Evidence Intake and High-Value URL Recovery
 
 ## Summary
 
 - Total requirements: 4
-- Completed requirements: 4
+- Completed requirements: 0
 - Unmapped requirements: 0
 - Completed requirements missing evidence: 0
 
@@ -14,19 +14,19 @@ Milestone: v0.0.9 Runtime Debt Prioritization and Text Utility Repair
 
 | Requirement | Area | Status | Roadmap | Mapped Phases | Evidence |
 | --- | --- | --- | --- | --- | --- |
-| RUNTIME-06 | Runtime Debt Intelligence | complete | complete | Phase 28 | [28-01-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/28-runtime-helper-debt-inventory/28-01-SUMMARY.md)<br>[28-02-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/28-runtime-helper-debt-inventory/28-02-SUMMARY.md) |
-| RUNTIME-07 | Text Utility Runtime Repair | complete | complete | Phase 29 | [29-01-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/29-text-utility-runtime-repair/29-01-SUMMARY.md)<br>[29-02-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/29-text-utility-runtime-repair/29-02-SUMMARY.md) |
-| RUNTIME-08 | Text Utility Runtime Repair | complete | complete | Phase 30 | [30-01-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/30-validation-reference-data-repair/30-01-SUMMARY.md)<br>[30-02-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/30-validation-reference-data-repair/30-02-SUMMARY.md) |
-| OPS-12 | Runtime Governance | complete | complete | Phase 31 | [31-01-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/31-runtime-evidence-gate-and-closeout/31-01-SUMMARY.md)<br>[31-02-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/31-runtime-evidence-gate-and-closeout/31-02-SUMMARY.md) |
+| GSC-13 | GSC Evidence Intake | pending | planned | Phase 32 | None |
+| GSC-14 | Technical Validation Recovery | pending | planned | Phase 33 | None |
+| GSC-15 | High-Value URL Recovery | pending | planned | Phase 34 | None |
+| OPS-13 | Validation Guidance and Closeout | pending | planned | Phase 35 | None |
 
 ## Phase Coverage
 
 | Phase | Requirements | Plans | Summaries |
 | --- | --- | --- | --- |
-| Phase 28 Runtime Helper Debt Inventory | RUNTIME-06 | x 28-01<br>x 28-02 | [28-01-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/28-runtime-helper-debt-inventory/28-01-SUMMARY.md)<br>[28-02-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/28-runtime-helper-debt-inventory/28-02-SUMMARY.md) |
-| Phase 29 Text Utility Runtime Repair | RUNTIME-07 | x 29-01<br>x 29-02 | [29-01-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/29-text-utility-runtime-repair/29-01-SUMMARY.md)<br>[29-02-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/29-text-utility-runtime-repair/29-02-SUMMARY.md) |
-| Phase 30 Validation Reference Data Repair | RUNTIME-08 | x 30-01<br>x 30-02 | [30-01-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/30-validation-reference-data-repair/30-01-SUMMARY.md)<br>[30-02-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/30-validation-reference-data-repair/30-02-SUMMARY.md) |
-| Phase 31 Runtime Evidence Gate and Closeout | OPS-12 | x 31-01<br>x 31-02 | [31-01-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/31-runtime-evidence-gate-and-closeout/31-01-SUMMARY.md)<br>[31-02-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/31-runtime-evidence-gate-and-closeout/31-02-SUMMARY.md) |
+| Phase 32 GSC Validation Action Matrix | GSC-13 |   32-01<br>  32-02 | None |
+| Phase 33 Technical URL Blocker Repair | GSC-14 |   33-01<br>  33-02 | None |
+| Phase 34 High-Value Tool Detail Recovery | GSC-15 |   34-01<br>  34-02 | None |
+| Phase 35 GSC Recovery Evidence Gate and Closeout | OPS-13 |   35-01<br>  35-02 | None |
 
 ## Gaps
 

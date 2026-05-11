@@ -10,10 +10,10 @@ Every localized tool page must render the right topic, the right language, and t
 
 ## Current Status
 
-**Current milestone:** None - `v0.0.9 Runtime Debt Prioritization and Text Utility Repair` shipped on 2026-05-11
+**Current milestone:** `v0.0.10 GSC Evidence Intake and High-Value URL Recovery`
 **Latest archived milestone:** `v0.0.9 Runtime Debt Prioritization and Text Utility Repair`
 **Previous archived milestone:** `v0.0.8 Runtime Workflow Integrity Expansion`
-**Current planning state:** v0.0.9 is complete. The next work should start from fresh requirements or fresh GSC/Coverage exports rather than extending completed runtime debt work by inertia.
+**Current planning state:** v0.0.10 is open. Existing GSC Coverage drilldown and Performance exports are present, and the next work is to separate expected exclusions from true blockers and high-value recovery candidates before making any validation requests.
 
 **Latest completed outcomes:**
 - Added a deterministic runtime debt inventory for imported `tool-stubs.ts` compatibility exports.
@@ -81,8 +81,10 @@ Every localized tool page must render the right topic, the right language, and t
 
 ### Active
 
-- [ ] Start the next milestone from fresh requirements.
-- [ ] Review fresh GSC Coverage and Performance exports before reopening recovery work.
+- [ ] Convert existing GSC Coverage drilldown and Performance exports into a validation action matrix.
+- [ ] Fix only high-confidence technical blockers that prevent indexable URLs from passing live inspection.
+- [ ] Prioritize high-value tool-detail recovery candidates by lost clicks/impressions and content/internal-link opportunity.
+- [ ] End the milestone with exact GSC validation/request-indexing guidance and green production evidence.
 
 ### Out of Scope
 
@@ -143,7 +145,17 @@ This is a brownfield repository with a very large content surface, heavy localiz
 
 ## Current State
 
-The current baseline now includes promoted discovery ordering for the strongest authority routes, a home-page compare entry point, explicit priority export coverage in `llms.txt`, SEO-aware discovery snippets, restored JWT decoder/debugger metadata in the shared message layer, and a canonical production gate that reflects the real Cloudflare server-build output. `v0.0.5` shipped with lighter browse shells, a first shared runtime-integrity repair wave, and deterministic anti-corruption guardrails. `v0.0.6` then completed the next deferred curl/codegen runtime wave, added representative rendered translation drift governance, introduced a shared theme contract plus shell/chart parity proof, and surfaced that new evidence explicitly inside the canonical production gate. `v0.0.7` selected `text` as the next authority wave, promoted it across browse, compare, AI discovery, `llms.txt`, and tools-index exports, added growth-surface governance, and completed evidence-led GSC recovery triage. `v0.0.8` repaired the next scheduling and code-analysis runtime helper clusters, restored placeholder governance, and closed with a green canonical production gate. `v0.0.9` inventoried remaining imported runtime helper debt, repaired selected text and validation reference-data clusters, extended const-helper governance, and closed with green canonical production verification.
+The current baseline now includes promoted discovery ordering for the strongest authority routes, a home-page compare entry point, explicit priority export coverage in `llms.txt`, SEO-aware discovery snippets, restored JWT decoder/debugger metadata in the shared message layer, and a canonical production gate that reflects the real Cloudflare server-build output. `v0.0.5` shipped with lighter browse shells, a first shared runtime-integrity repair wave, and deterministic anti-corruption guardrails. `v0.0.6` then completed the next deferred curl/codegen runtime wave, added representative rendered translation drift governance, introduced a shared theme contract plus shell/chart parity proof, and surfaced that new evidence explicitly inside the canonical production gate. `v0.0.7` selected `text` as the next authority wave, promoted it across browse, compare, AI discovery, `llms.txt`, and tools-index exports, added growth-surface governance, and completed evidence-led GSC recovery triage. `v0.0.8` repaired the next scheduling and code-analysis runtime helper clusters, restored placeholder governance, and closed with a green canonical production gate. `v0.0.9` inventoried remaining imported runtime helper debt, repaired selected text and validation reference-data clusters, extended const-helper governance, and closed with green canonical production verification. `v0.0.10` is now opened to turn existing GSC exports into a targeted validation and high-value recovery queue.
+
+## Current Milestone: v0.0.10 GSC Evidence Intake and High-Value URL Recovery
+
+**Goal:** Stop broad failed GSC validation retries by converting existing exports into a targeted action plan, fixing true blockers, and improving only high-value recovery pages.
+
+**Target features:**
+- A deterministic GSC action matrix labels URL groups as do-not-validate, fix-before-validate, request-indexing-after-enhancement, or monitor.
+- High-confidence technical blockers are live-checked and patched only when the repository owns the issue.
+- Highest-value tool-detail recovery candidates are ranked from Performance evidence before editing.
+- The final closeout tells the user exactly what to validate, what to request indexing for, and what to leave alone.
 
 ## Most Recent Milestone: v0.0.9 Runtime Debt Prioritization and Text Utility Repair
 
@@ -182,4 +194,4 @@ The current baseline now includes promoted discovery ordering for the strongest 
 - Continue runtime-integrity expansion beyond v0.0.8 only for clusters with proven user-visible breakage and a bounded compatibility surface.
 
 ---
-*Last updated: 2026-05-11 after shipping v0.0.9 Runtime Debt Prioritization and Text Utility Repair*
+*Last updated: 2026-05-11 after opening v0.0.10 GSC Evidence Intake and High-Value URL Recovery*

@@ -1,47 +1,47 @@
 ---
 gsd_state_version: 1.0
-milestone: v0.0.9
-milestone_name: Runtime Debt Prioritization and Text Utility Repair
-current_phase: 31
-current_phase_name: Runtime Evidence Gate and Closeout
-current_plan: 2
-status: milestone_complete
-stopped_at: "v0.0.9 completed and verified; next resume should start a new milestone or review fresh GSC exports."
-last_updated: "2026-05-11T09:54:35+08:00"
+milestone: v0.0.10
+milestone_name: GSC Evidence Intake and High-Value URL Recovery
+current_phase: 32
+current_phase_name: GSC Validation Action Matrix
+current_plan: 0
+status: ready_for_planning
+stopped_at: "v0.0.10 opened from existing GSC exports; next resume should plan or execute Phase 32 GSC Validation Action Matrix."
+last_updated: "2026-05-11T10:16:00+08:00"
 last_activity: 2026-05-11
 progress:
   total_phases: 4
-  completed_phases: 4
+  completed_phases: 0
   total_plans: 8
-  completed_plans: 8
-  percent: 100
+  completed_plans: 0
+  percent: 0
 ---
 
 # Project State
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-05-10)
+See: .planning/PROJECT.md (updated 2026-05-11)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** v0.0.9 completed the runtime debt inventory, selected reference-data repairs, governance extension, and production closeout. The next work should start a fresh milestone or review fresh GSC exports.
+**Current focus:** v0.0.10 is using existing GSC exports to separate expected exclusions from technical blockers and high-value recovery candidates.
 
 ## Current Position
 
-Current Phase: 31
-Current Phase Name: Runtime Evidence Gate and Closeout
+Current Phase: 32
+Current Phase Name: GSC Validation Action Matrix
 Total Phases: 4
-Current Plan: 2
+Current Plan: 0
 Total Plans in Phase: 2
-Status: v0.0.9 complete and verified
+Status: Phase 32 ready for planning/execution
 Last Activity: 2026-05-11
-Progress: 100%
-Progress Bar: [##########] 100%
+Progress: 0%
+Progress Bar: [----------] 0%
 
 ## Recent Trend
 
 - Last 4 completed plans: validation reference-data extraction, validation runtime smoke coverage, reference-data governance extension, production verification and closeout.
-- Trend: v0.0.9 completed a measured runtime-debt reduction cycle and closed with green production verification.
+- Trend: runtime trust work closed cleanly; search recovery now needs evidence-based triage instead of broad GSC validation retries.
 
 ## Accumulated Context
 
@@ -62,8 +62,9 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-- Start the next milestone from fresh requirements instead of extending completed runtime work by inertia.
-- Review fresh GSC/Coverage drilldown deltas only after new exports are available.
+- Execute Phase 32 GSC Validation Action Matrix.
+- Produce a user-facing playbook for which GSC rows to validate, request indexing, monitor, or ignore.
+- Keep broad validation requests paused until fixed URL groups are isolated.
 
 ### Blockers/Concerns
 
@@ -75,7 +76,7 @@ Recent decisions affecting current work:
 ## Session
 
 Last Date: 2026-05-10
-Stopped At: v0.0.9 completed and verified; next resume should start a new milestone or review fresh GSC exports.
+Stopped At: v0.0.10 opened from existing GSC exports; next resume should plan or execute Phase 32 GSC Validation Action Matrix.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.
