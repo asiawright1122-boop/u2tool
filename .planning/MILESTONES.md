@@ -1,5 +1,25 @@
 # Milestones
 
+## v0.0.9 Runtime Debt Prioritization and Text Utility Repair (Shipped: 2026-05-11)
+
+**Phases completed:** 4 phases, 8 plans
+
+**Key accomplishments:**
+
+- Added a deterministic runtime debt inventory for imported `tool-stubs.ts` compatibility exports, including consumers, placeholder signatures, false-positive notes, and ranked repair waves.
+- Repaired selected text utility reference data through `src/lib/runtime-integrity/text-reference.ts` while preserving compatibility exports.
+- Repaired selected password/email validation reference data through `src/lib/runtime-integrity/validation-reference.ts`.
+- Extended runtime placeholder governance to protect const reference-data helpers from silent fallback regressions.
+- Closed with green `npm run verify:production`, `4/4` requirements complete, `0` traceability gaps, and `EXCELLENT` project health.
+
+**Archive files:**
+
+- Roadmap: [.planning/milestones/v0.0.9-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.9-ROADMAP.md)
+- Requirements: [.planning/milestones/v0.0.9-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.9-REQUIREMENTS.md)
+- Audit: [.planning/milestones/v0.0.9-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.9-MILESTONE-AUDIT.md)
+
+---
+
 ## v0.0.8 Runtime Workflow Integrity Expansion (Shipped: 2026-05-10)
 
 **Phases completed:** 4 phases, 8 plans

@@ -5,6 +5,7 @@ const CANONICAL_BASE_URL = (
   'https://www.u2tool.com'
 ).replace(/\/+$/, '');
 const MAX_LINKS = Number(process.env.INTERNAL_LINK_AUDIT_MAX_LINKS || 500);
+const FETCH_ATTEMPTS = Number(process.env.INTERNAL_LINK_AUDIT_FETCH_ATTEMPTS || 5);
 
 const seedPaths = [
   '/en/',
@@ -33,8 +34,9 @@ function assert(condition: unknown, message: string): void {
   }
 }
 
-async function fetchWithRetry(url: string, init: RequestInit = {}, attempts = 3): Promise<Response> {
+async function fetchWithRetry(url: string, init: RequestInit = {}, attempts = FETCH_ATTEMPTS): Promise<Response> {
   let lastError: unknown;
+  const method = init.method || 'GET';
 
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
     try {
@@ -42,12 +44,13 @@ async function fetchWithRetry(url: string, init: RequestInit = {}, attempts = 3)
     } catch (error) {
       lastError = error;
       if (attempt < attempts) {
-        await new Promise((resolve) => setTimeout(resolve, attempt * 500));
+        await new Promise((resolve) => setTimeout(resolve, attempt * 1000));
       }
     }
   }
 
-  throw lastError;
+  const message = lastError instanceof Error ? lastError.message : String(lastError);
+  throw new Error(`${method} ${url} failed after ${attempts} attempts: ${message}`);
 }
 
 function decodeHtmlAttribute(value: string): string {

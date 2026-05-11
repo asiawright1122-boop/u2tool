@@ -4,17 +4,17 @@ milestone: v0.0.9
 milestone_name: Runtime Debt Prioritization and Text Utility Repair
 current_phase: 31
 current_phase_name: Runtime Evidence Gate and Closeout
-current_plan: 1
-status: in_progress
-stopped_at: "Phase 31 plan 31-01 completed; next resume should run production verification and closeout."
-last_updated: "2026-05-10T23:42:55+08:00"
-last_activity: 2026-05-10
+current_plan: 2
+status: milestone_complete
+stopped_at: "v0.0.9 completed and verified; next resume should start a new milestone or review fresh GSC exports."
+last_updated: "2026-05-11T09:54:35+08:00"
+last_activity: 2026-05-11
 progress:
   total_phases: 4
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 8
-  completed_plans: 6
-  percent: 75
+  completed_plans: 8
+  percent: 100
 ---
 
 # Project State
@@ -24,24 +24,24 @@ progress:
 See: .planning/PROJECT.md (updated 2026-05-10)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** Phase 30 completed the selected email/password validation reference-data repair. The next phase should fold the new evidence into runtime governance and close the milestone.
+**Current focus:** v0.0.9 completed the runtime debt inventory, selected reference-data repairs, governance extension, and production closeout. The next work should start a fresh milestone or review fresh GSC exports.
 
 ## Current Position
 
 Current Phase: 31
 Current Phase Name: Runtime Evidence Gate and Closeout
 Total Phases: 4
-Current Plan: 1
+Current Plan: 2
 Total Plans in Phase: 2
-Status: Phase 31 planned; ready for execution
-Last Activity: 2026-05-10
-Progress: 75%
-Progress Bar: [########--] 75%
+Status: v0.0.9 complete and verified
+Last Activity: 2026-05-11
+Progress: 100%
+Progress Bar: [##########] 100%
 
 ## Recent Trend
 
-- Last 4 completed plans: text runtime smoke coverage, validation reference-data extraction, validation runtime smoke coverage, reference-data governance extension.
-- Trend: v0.0.9 has completed both selected reference-data repair waves and now protects them in runtime placeholder governance.
+- Last 4 completed plans: validation reference-data extraction, validation runtime smoke coverage, reference-data governance extension, production verification and closeout.
+- Trend: v0.0.9 completed a measured runtime-debt reduction cycle and closed with green production verification.
 
 ## Accumulated Context
 
@@ -58,11 +58,11 @@ Recent decisions affecting current work:
 - Phase 28: `report:runtime-debt` now generates `docs/RUNTIME_HELPER_DEBT_INVENTORY.md`, selecting text utility reference data for Phase 29 and email/password validation data for Phase 30.
 - Phase 29: selected text utility helpers now live in `src/lib/runtime-integrity/text-reference.ts`, flow through `tool-stubs.ts`, and have direct runtime smoke coverage.
 - Phase 30: selected validation helpers now live in `src/lib/runtime-integrity/validation-reference.ts`, flow through `tool-stubs.ts`, and have direct runtime smoke coverage.
+- Phase 31: runtime placeholder governance now protects the repaired const helpers, `npm run verify:production` passed, traceability has `4/4` complete requirements with `0` gaps, and health is `EXCELLENT`.
 
 ### Pending Todos
 
-- Execute Phase 31 Runtime Evidence Gate and Closeout plan 31-02.
-- Run closeout production verification for v0.0.9.
+- Start the next milestone from fresh requirements instead of extending completed runtime work by inertia.
 - Review fresh GSC/Coverage drilldown deltas only after new exports are available.
 
 ### Blockers/Concerns
@@ -75,7 +75,7 @@ Recent decisions affecting current work:
 ## Session
 
 Last Date: 2026-05-10
-Stopped At: Phase 31 plan 31-01 completed; next resume should run production verification and closeout.
+Stopped At: v0.0.9 completed and verified; next resume should start a new milestone or review fresh GSC exports.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.
