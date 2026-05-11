@@ -12,5 +12,27 @@
     "Example 2: Decode a pasted sequence such as 48 65 6C 6C 6F to confirm it represents readable text.",
     "Example 3: Compare how punctuation, whitespace, and non-ASCII characters appear in UTF-8 hex form.",
     "Example 4: Copy a hex-encoded string into documentation or a test fixture without leaving the browser."
+  ],
+  "faqs": [
+    {
+      "question": "Is this a full binary file editor?",
+      "answer": "No. The current Hex Editor is a browser text-to-hex and hex-to-text converter for small strings. It does not provide an offset table, per-byte editing controls, upload handling, or saved binary output."
+    },
+    {
+      "question": "Which encoding does text-to-hex use?",
+      "answer": "Text input is encoded as UTF-8 bytes with the browser TextEncoder API, then shown as uppercase hexadecimal pairs separated by spaces."
+    },
+    {
+      "question": "Can I paste hex values with spaces?",
+      "answer": "Yes. The decoder removes whitespace, reads the remaining characters as byte pairs, and decodes them back to text in the browser."
+    },
+    {
+      "question": "Is my text uploaded to a server?",
+      "answer": "No. Conversion runs in the browser, so pasted text and hex values stay on your device."
+    },
+    {
+      "question": "What is this tool best for?",
+      "answer": "It is best for quick checks of logs, payloads, and test fixtures, plus UTF-8 byte examples and copying small hex strings into docs or tickets."
+    }
   ]
 }

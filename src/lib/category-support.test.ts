@@ -6,12 +6,14 @@ import { getCategorySupportContent, phaseSixPriorityClusters } from './category-
 import { phaseEightPriorityClusters } from './category-support-phase8';
 import { phaseElevenPriorityClusters } from './category-support-phase11';
 import { phaseTwentyPriorityClusters } from './category-support-phase20';
+import { phaseThirtyFourPriorityClusters } from './category-support-phase34';
 
 const allPriorityClusters = [
   ...phaseSixPriorityClusters,
   ...phaseEightPriorityClusters,
   ...phaseElevenPriorityClusters,
   ...phaseTwentyPriorityClusters,
+  ...phaseThirtyFourPriorityClusters,
 ];
 
 function isMergeableRecord(value: unknown): value is Record<string, unknown> {
@@ -88,6 +90,7 @@ describe('category support governance', () => {
       'de/office': ['pdf', 'lebenslauf', 'meetings'],
       'de/security': ['passwort', 'jwt', 'hmac', 'checksum'],
       'en/charts': ['bar', 'heatmap', 'gantt', 'sankey'],
+      'en/encoding': ['json', 'base64', 'hex', 'html'],
       'en/security': ['password', 'jwt', 'hmac', 'checksum'],
       'en/text': ['word', 'case', 'line', 'text'],
       'es/charts': ['barras', 'heatmap', 'gantt', 'sankey'],
@@ -116,6 +119,7 @@ describe('category support governance', () => {
       'pt/finance': ['cambio', 'roi', 'faturas'],
       'pt/network': ['dns', 'ssl', 'ip'],
       'pt/office': ['pdf', 'curriculo', 'planilhas'],
+      'ru/encoding': ['json', 'base64', 'hex', 'html'],
       'zh/charts': ['柱状图', '热力图', '甘特', 'sankey'],
       'zh/security': ['密码', 'jwt', 'hmac', '校验'],
       'zh/text': ['字数', '大小写', '行数', '文本'],

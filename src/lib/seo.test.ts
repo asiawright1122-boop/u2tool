@@ -77,6 +77,45 @@ describe('seo helpers', () => {
     expect(seo.description).toBe('42+ free Security tools online.');
   });
 
+  it('keeps encoding category SEO pinned to Hex intent when message assets are stale', () => {
+    const seo = getCategoryPageSeo(
+      {
+        categories_seo: {
+          encoding: {
+            seo_title: 'Encoding & Decoding Tools - JSON, Base64, HTML Encoder Online',
+            seo_description: 'Free online encoding tools for JSON formatting, Base64 encoding/decoding, HTML entity encoding, and more.',
+          },
+        },
+      },
+      'encoding',
+      'Encoding & Decoding',
+      33
+    );
+
+    expect(seo.title).toContain('Hex');
+    expect(seo.description).toContain('hex');
+  });
+
+  it('normalizes stale Russian encoding category titles for rendered SEO checks', () => {
+    const seo = getCategoryPageSeo(
+      {
+        categories_seo: {
+          encoding: {
+            seo_title: '\u0418\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u044b \u041a\u043e\u0434\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f - JSON, Base64, HTML \u041a\u043e\u0434\u0438\u0440\u043e\u0432\u0449\u0438\u043a \u041e\u043d\u043b\u0430\u0439\u043d',
+            seo_description: '\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0435 \u043e\u043d\u043b\u0430\u0439\u043d \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u044b \u043a\u043e\u0434\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u0434\u043b\u044f JSON, Base64 \u0438 HTML.',
+          },
+        },
+      },
+      'encoding',
+      '\u041a\u043e\u0434\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435',
+      33
+    );
+
+    expect(seo.title).toContain('\u043a\u043e\u0434\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f');
+    expect(seo.title).toContain('Hex');
+    expect(seo.description).toContain('hex');
+  });
+
   it('does not duplicate the brand in titles', () => {
     expect(withBrand('Free Tools | U2Tool')).toBe('Free Tools | U2Tool');
     expect(withBrand('Free Tools')).toBe('Free Tools | U2Tool');

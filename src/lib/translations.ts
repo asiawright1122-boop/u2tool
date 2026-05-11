@@ -31,6 +31,13 @@ const baseMessagesCache = new Map<string, MessagesRecord>();
 const baseUiMessagesCache = new Map<string, MessagesRecord>();
 const toolMessagesCache = new Map<string, MessagesRecord>();
 const toolPageMessagesCache = new Map<string, MessagesRecord>();
+const bundledBaseMessageModules: Record<string, MessagesRecord> =
+  typeof import.meta.glob === 'function'
+    ? import.meta.glob<MessagesRecord>('../messages/*/base.json', {
+        eager: true,
+        import: 'default',
+      })
+    : {};
 
 function getAssetCacheKey(assetBaseUrl?: string | URL): string {
   if (!assetBaseUrl) {
@@ -46,16 +53,64 @@ function getAssetCacheKey(assetBaseUrl?: string | URL): string {
 
 async function readJsonFromFile(relativePath: string): Promise<MessagesRecord | null> {
   try {
-    const [{ readFile }, { fileURLToPath }] = await Promise.all([
+    const [{ readFile }, { fileURLToPath }, { dirname, resolve }] = await Promise.all([
       import('node:fs/promises'),
       import('node:url'),
+      import('node:path'),
     ]);
-    const filePath = fileURLToPath(new URL(relativePath, import.meta.url));
-    const content = await readFile(filePath, 'utf-8');
-    return JSON.parse(content) as MessagesRecord;
+
+    const modulePath = fileURLToPath(import.meta.url);
+    const candidatePaths = new Set<string>([
+      fileURLToPath(new URL(relativePath, import.meta.url)),
+    ]);
+
+    const sourceMessagesPrefix = '../messages/';
+    if (relativePath.startsWith(sourceMessagesPrefix)) {
+      const sourceMessagePath = `src/messages/${relativePath.slice(sourceMessagesPrefix.length)}`;
+      const searchRoots = new Set<string>([dirname(modulePath)]);
+
+      if (typeof process !== 'undefined') {
+        if (typeof process.cwd === 'function') {
+          searchRoots.add(process.cwd());
+        }
+        if (process.env.INIT_CWD) {
+          searchRoots.add(process.env.INIT_CWD);
+        }
+        if (process.env.PWD) {
+          searchRoots.add(process.env.PWD);
+        }
+      }
+
+      for (const root of searchRoots) {
+        let currentRoot = root;
+        for (let depth = 0; depth < 8; depth++) {
+          candidatePaths.add(resolve(currentRoot, sourceMessagePath));
+          const parentRoot = resolve(currentRoot, '..');
+          if (parentRoot === currentRoot) {
+            break;
+          }
+          currentRoot = parentRoot;
+        }
+      }
+    }
+
+    for (const filePath of candidatePaths) {
+      try {
+        const content = await readFile(filePath, 'utf-8');
+        return JSON.parse(content) as MessagesRecord;
+      } catch {
+        // Try the next source path before falling back to public message assets.
+      }
+    }
+
+    return null;
   } catch {
     return null;
   }
+}
+
+function readBundledJson(relativePath: string): MessagesRecord | null {
+  return bundledBaseMessageModules[relativePath] ?? null;
 }
 
 function resolveAssetUrl(
@@ -106,6 +161,11 @@ async function loadMessagesFile(
   const fileMessages = await readJsonFromFile(relativePath);
   if (fileMessages) {
     return fileMessages;
+  }
+
+  const bundledMessages = readBundledJson(relativePath);
+  if (bundledMessages) {
+    return bundledMessages;
   }
 
   return readJsonFromAsset(assetPath, assetBaseUrl);

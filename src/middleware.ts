@@ -245,7 +245,8 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     return redirect(canonicalRedirect);
   }
 
-  const shouldUseHtmlCache = isCacheableHtmlRequest(context.request)
+  const shouldUseHtmlCache = !context.isPrerendered
+    && isCacheableHtmlRequest(context.request)
     && !isLocalPreviewRequest(context.request);
   const cache = shouldUseHtmlCache ? getDefaultCache() : null;
   const cacheKey = cache ? getHtmlCacheKey(context.request) : null;

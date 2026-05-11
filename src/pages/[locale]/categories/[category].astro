@@ -19,7 +19,7 @@ import type { ToolCategory } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
 import { locales, getLocalizedPath } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
-import { loadBaseMessages } from '@/lib/translations';
+import { loadBaseUiMessages } from '@/lib/translations';
 import { getCategoryPageSeo } from '@/lib/seo';
 import { buildLocalizedPagePath, buildLocalizedPageUrl, getHreflang } from '@/lib/seo';
 import { getCategorySupportContent } from '@/lib/category-support';
@@ -46,7 +46,7 @@ export const getStaticPaths: GetStaticPaths = () => {
 
 const { locale, category } = Astro.props as { locale: Locale; category: ToolCategory };
 
-const baseMessages = await loadBaseMessages(locale);
+const baseMessages = await loadBaseUiMessages(locale, Astro.url);
 const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
 const navMessages = (baseMessages.nav as Record<string, string>) ?? {};

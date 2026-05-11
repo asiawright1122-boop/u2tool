@@ -42,6 +42,7 @@ Plans:
 **Goal**: Prioritize and repair the highest-value tool-detail recovery candidates using Performance evidence rather than broad catalog rewrites.
 **Depends on**: Phase 33
 **Requirements**: GSC-15
+**Status**: Complete on 2026-05-11 with the English/Russian Hex Editor recovery slice selected, patched, and covered by rendered SEO plus content-trust evidence.
 **Success Criteria** (what must be TRUE):
   1. Candidate pages are ranked by lost clicks, lost impressions, current indexability, content mismatch, and internal-link opportunity.
   2. Only selected high-value pages receive content/runtime/internal-link fixes.
@@ -49,8 +50,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 34-01: Rank high-value `tool-detail` recovery candidates from Performance evidence
-- [ ] 34-02: Patch the selected recovery slice with rendered/content-trust evidence
+- [x] 34-01: Rank high-value `tool-detail` recovery candidates from Performance evidence
+- [x] 34-02: Patch the selected recovery slice with rendered/content-trust evidence
 
 ### Phase 35: GSC Recovery Evidence Gate and Closeout
 **Goal**: Fold the GSC action matrix and selected fixes into production verification and close the milestone with clear next validation instructions.

@@ -25,7 +25,7 @@ The strongest signal from the existing exports is that many high-volume Coverage
 
 ### High-Value URL Recovery
 
-- [ ] GSC-15: Highest-value `tool-detail` recovery candidates from Performance evidence are prioritized by lost clicks/impressions, current indexability, content/support-copy fit, and internal-link opportunity before editing.
+- [x] GSC-15: Highest-value `tool-detail` recovery candidates from Performance evidence are prioritized by lost clicks/impressions, current indexability, content/support-copy fit, and internal-link opportunity before editing.
 
 ### Validation Guidance and Closeout
 
@@ -50,9 +50,9 @@ The strongest signal from the existing exports is that many high-volume Coverage
 
 | Requirement | Planned Phase | Status |
 | --- | --- | --- |
-| GSC-13 | Phase 32 | Pending |
-| GSC-14 | Phase 33 | Pending |
-| GSC-15 | Phase 34 | Pending |
+| GSC-13 | Phase 32 | Complete |
+| GSC-14 | Phase 33 | Complete |
+| GSC-15 | Phase 34 | Complete |
 | OPS-13 | Phase 35 | Pending |
 
 **Coverage:**

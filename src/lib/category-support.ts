@@ -3,6 +3,7 @@ import type { Locale } from './i18n';
 import { phaseEightSupportContent } from './category-support-phase8';
 import { phaseElevenSupportContent } from './category-support-phase11';
 import { phaseTwentySupportContent } from './category-support-phase20';
+import { phaseThirtyFourSupportContent } from './category-support-phase34';
 
 export interface CategorySupportWorkflow {
   description: string;
@@ -26,13 +27,14 @@ type SupportedCategory =
   | 'charts'
   | 'converters'
   | 'development'
+  | 'encoding'
   | 'finance'
   | 'image'
   | 'network'
   | 'office'
   | 'security'
   | 'text';
-type SupportedLocale = 'ar' | 'de' | 'en' | 'es' | 'fr' | 'ja' | 'ko' | 'pt' | 'zh';
+type SupportedLocale = 'ar' | 'de' | 'en' | 'es' | 'fr' | 'ja' | 'ko' | 'pt' | 'ru' | 'zh';
 type SupportMap = Partial<Record<SupportedLocale, Partial<Record<SupportedCategory, CategorySupportContent>>>>;
 
 export const phaseSixPriorityClusters: Array<{ category: SupportedCategory; locale: SupportedLocale }> = [
@@ -546,6 +548,13 @@ for (const [locale, localeContent] of Object.entries(phaseElevenSupportContent))
 }
 
 for (const [locale, localeContent] of Object.entries(phaseTwentySupportContent)) {
+  supportContent[locale as SupportedLocale] = {
+    ...(supportContent[locale as SupportedLocale] ?? {}),
+    ...(localeContent as Partial<Record<SupportedCategory, CategorySupportContent>>),
+  };
+}
+
+for (const [locale, localeContent] of Object.entries(phaseThirtyFourSupportContent)) {
   supportContent[locale as SupportedLocale] = {
     ...(supportContent[locale as SupportedLocale] ?? {}),
     ...(localeContent as Partial<Record<SupportedCategory, CategorySupportContent>>),

@@ -236,6 +236,25 @@ describe('html edge cache middleware', () => {
     expect(cache.put).not.toHaveBeenCalled();
   });
 
+  it('bypasses persistent cache storage while Astro prerenders static routes', async () => {
+    const cache = installHtmlCache();
+    const response = await onRequest(
+      {
+        isPrerendered: true,
+        locals: {},
+        request: new Request('https://www.u2tool.com/en/categories/encoding/'),
+      } as never,
+      vi.fn(async () => new Response('<html>fresh prerender</html>', {
+        headers: { 'content-type': 'text/html; charset=utf-8' },
+      })) as never
+    ) as Response;
+
+    expect(response.headers.get('x-u2tool-html-cache')).toBe('BYPASS');
+    expect(cache.match).not.toHaveBeenCalled();
+    expect(cache.put).not.toHaveBeenCalled();
+    expect(await response.text()).toBe('<html>fresh prerender</html>');
+  });
+
   it('uses Astro v6 Cloudflare cfContext.waitUntil for background cache writes', async () => {
     const cache = installHtmlCache();
     const waitUntil = vi.fn((promise: Promise<unknown>) => {

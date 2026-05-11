@@ -2,19 +2,19 @@
 gsd_state_version: 1.0
 milestone: v0.0.10
 milestone_name: GSC Evidence Intake and High-Value URL Recovery
-current_phase: 34
-current_phase_name: High-Value Tool Detail Recovery
+current_phase: 35
+current_phase_name: GSC Recovery Evidence Gate and Closeout
 current_plan: 0
 status: ready_for_planning
-stopped_at: "Phase 33 completed with representative live checks showing no current true blockers; next resume should plan or execute Phase 34 High-Value Tool Detail Recovery."
-last_updated: "2026-05-11T10:36:27+08:00"
+stopped_at: "Phase 34 completed with the English/Russian Hex Editor recovery slice patched and rendered SEO green; next resume should plan or execute Phase 35 GSC Recovery Evidence Gate and Closeout."
+last_updated: "2026-05-11T11:49:50+08:00"
 last_activity: 2026-05-11
 progress:
   total_phases: 4
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 8
-  completed_plans: 4
-  percent: 50
+  completed_plans: 6
+  percent: 75
 ---
 
 # Project State
@@ -24,24 +24,24 @@ progress:
 See: .planning/PROJECT.md (updated 2026-05-11)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** v0.0.10 has separated expected GSC exclusions, live-checked technical blocker samples, and is ready to recover selected high-value tool-detail pages before individual request-indexing.
+**Current focus:** v0.0.10 has separated expected GSC exclusions, live-checked technical blocker samples, and recovered the selected high-value Hex Editor tool-detail slice before final GSC closeout guidance.
 
 ## Current Position
 
-Current Phase: 34
-Current Phase Name: High-Value Tool Detail Recovery
+Current Phase: 35
+Current Phase Name: GSC Recovery Evidence Gate and Closeout
 Total Phases: 4
 Current Plan: 0
 Total Plans in Phase: 2
-Status: Phase 34 ready for planning/execution
+Status: Phase 35 ready for planning/execution
 Last Activity: 2026-05-11
-Progress: 50%
-Progress Bar: [#####-----] 50%
+Progress: 75%
+Progress Bar: [#######---] 75%
 
 ## Recent Trend
 
-- Last 4 completed plans: GSC validation action matrix generation, GSC validation/request-indexing playbook, technical blocker live-check reporting, URL-shape defect review and compliance gates.
-- Trend: search recovery now has an evidence-based validation matrix and live technical blocker evidence; next leverage is selected high-value page recovery.
+- Last 4 completed plans: technical blocker live-check reporting, URL-shape defect review and compliance gates, high-value tool-detail ranking, selected Hex Editor recovery patch.
+- Trend: search recovery now has evidence-based validation guidance, live blocker evidence, and a verified high-value page recovery slice; next leverage is final production evidence and exact GSC instructions.
 
 ## Accumulated Context
 
@@ -61,12 +61,13 @@ Recent decisions affecting current work:
 - Phase 31: runtime placeholder governance now protects the repaired const helpers, `npm run verify:production` passed, traceability has `4/4` complete requirements with `0` gaps, and health is `EXCELLENT`.
 - Phase 32: `docs/GSC_VALIDATION_ACTION_MATRIX_2026-05-11.md` and `docs/GSC_VALIDATION_PLAYBOOK_2026-05-11.md` separate `do-not-validate`, `fix-before-validate`, `request-indexing-after-enhancement`, and `monitor` groups from existing GSC exports.
 - Phase 33: `docs/GSC_TECHNICAL_BLOCKER_LIVE_CHECK_2026-05-11.md` checked representative `fix-before-validate` samples; 12/12 were `expected-monitor`, 0 true blockers, and canonical/search-engine gates passed.
+- Phase 34: `docs/GSC_HIGH_VALUE_TOOL_DETAIL_RECOVERY_2026-05-11.md` selected the English/Russian Hex Editor cluster, refreshed support copy/internal links, added rendered SEO evidence, and fixed prerender-time HTML cache reuse.
 
 ### Pending Todos
 
-- Execute Phase 34 High-Value Tool Detail Recovery.
-- Rank and patch selected high-value tool-detail candidates from the Phase 32 Performance queue.
-- Keep broad validation requests paused until fixed URL groups are isolated.
+- Execute Phase 35 GSC Recovery Evidence Gate and Closeout.
+- Run final traceability/health/production evidence after the Phase 34 recovery slice.
+- Keep broad validation requests paused; request indexing individually only for enhanced Hex Editor URLs after deployment.
 
 ### Blockers/Concerns
 
@@ -77,8 +78,8 @@ Recent decisions affecting current work:
 
 ## Session
 
-Last Date: 2026-05-10
-Stopped At: Phase 33 completed; next resume should plan or execute Phase 34 High-Value Tool Detail Recovery.
+Last Date: 2026-05-11
+Stopped At: Phase 34 completed; next resume should plan or execute Phase 35 GSC Recovery Evidence Gate and Closeout.
 Resume File: None
 
 Forensics Note: 2026-04-07 - report `./.planning/forensics/report-20260407-221832.md` confirms production still serves the old static routing contract from `origin/main`; the route/schema hotfix remains local-only inside a large dirty worktree.

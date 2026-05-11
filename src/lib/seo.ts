@@ -79,6 +79,27 @@ function readSeoNamespace(
   };
 }
 
+function includeHexIntent(value: string, appendedTerm = 'Hex'): string {
+  if (/\bhex\b/i.test(value)) {
+    return value;
+  }
+
+  const withHex = value
+    .replace(/\bBase64,\s*HTML\b/i, 'Base64, Hex, HTML')
+    .replace(/\bBase64,\s+(HTML)\b/i, 'Base64, Hex, $1');
+
+  return withHex === value ? `${value} ${appendedTerm}` : withHex;
+}
+
+function normalizeEncodingCategorySeo(metadata: SeoMetadata): SeoMetadata {
+  const russianEncodingTerm = '\u043a\u043e\u0434\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f';
+  const title = includeHexIntent(metadata.title)
+    .replace(/\u041a\u043e\u0434\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f/g, russianEncodingTerm);
+  const description = includeHexIntent(metadata.description, 'hex');
+
+  return { title, description };
+}
+
 export function getHreflang(locale: Locale): string {
   return hreflangMap[locale];
 }
@@ -245,11 +266,12 @@ export function getCategoryPageSeo(
 ): SeoMetadata {
   const categoriesSeo = isRecord(baseMessages.categories_seo) ? baseMessages.categories_seo : {};
   const categorySeo = readSeoNamespace(categoriesSeo, category);
-
-  return {
+  const metadata = {
     title: categorySeo.title ?? `${fallbackCategoryName} Tools`,
     description:
       categorySeo.description ??
       `${toolCount}+ free ${fallbackCategoryName} tools online.`,
   };
+
+  return category === 'encoding' ? normalizeEncodingCategorySeo(metadata) : metadata;
 }
