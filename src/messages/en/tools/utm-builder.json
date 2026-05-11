@@ -1,0 +1,30 @@
+{
+  "detailed_description": "UTM Builder creates campaign tracking URLs by adding standardized UTM parameters to any landing page URL. Marketers, founders, and analysts can prepare clean links for ads, email, social posts, affiliates, and launch campaigns without manually editing query strings. Existing URL parameters are preserved, empty UTM fields are omitted, and the final link is generated locally in the browser.",
+  "usage_steps": [
+    "Enter the landing page URL for the campaign destination",
+    "Fill in the required source, medium, and campaign fields",
+    "Optionally add term and content values for keyword or creative tracking",
+    "Review the generated campaign URL",
+    "Copy the URL and use it in ads, emails, social posts, or analytics tests"
+  ],
+  "usage_examples": [
+    "Build a Google Ads URL with utm_source=google, utm_medium=cpc, and a launch campaign name",
+    "Create an email newsletter link that keeps newsletter traffic separate from organic visits",
+    "Generate two content variants for A/B testing by changing utm_content values",
+    "Add campaign tracking to an existing URL that already has product or referral parameters"
+  ],
+  "faqs": [
+    {
+      "question": "What UTM fields are required?",
+      "answer": "Most analytics setups expect utm_source, utm_medium, and utm_campaign. UTM term and content are optional fields for paid keywords, audiences, creative names, or A/B test variants."
+    },
+    {
+      "question": "Does this tool send my campaign URLs to a server?",
+      "answer": "No. The UTM URL is built in your browser, and the values you enter are not uploaded by the tool."
+    },
+    {
+      "question": "Can I use an existing URL with query parameters?",
+      "answer": "Yes. Existing parameters are preserved, and UTM parameters are added or replaced with the values you enter."
+    }
+  ]
+}

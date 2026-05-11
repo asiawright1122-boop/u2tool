@@ -33,6 +33,8 @@ export const TEXT_TOOLS: Tool[] = [
   { slug: 'typing-speed-test', category: 'text', icon: 'type', component: 'TypingSpeedTest' },
   { slug: 'instagram-font-generator', category: 'text', icon: 'type', component: 'InstagramFontGenerator' },
   { slug: 'keyword-density-checker', category: 'text', icon: 'type', component: 'KeywordDensityChecker' },
+  { slug: 'ai-prompt-generator', category: 'text', icon: 'sparkle', component: 'PopularUtilityTool', popular: true },
+  { slug: 'title-capitalization-tool', category: 'text', icon: 'type', component: 'PopularUtilityTool' },
   { slug: 'text-summarizer', category: 'text', icon: 'type', component: 'TextSummarizer' },
   { slug: 'paraphrase-tool', category: 'text', icon: 'type', component: 'ParaphraseTool' },
   { slug: 'phone-formatter', category: 'text', icon: 'type', component: 'PhoneFormatter' },

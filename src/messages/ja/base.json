@@ -5474,10 +5474,10 @@
       "note": "💡 注意: デモ版です。本番環境での使用には、WHOIS API サービスとの統合が必要です。"
     },
     "websocket-tester": {
-      "name": "WebSocketテスタ",
-      "description": "WebSocket接続をテストし、メッセージを送信/受信します。",
-      "seo_title": "無料のWebSocketオンラインツール",
-      "seo_description": "WebSocket接続をテストし、メッセージの送受信を実行。無料でオンラインで利用可能です。",
+      "name": "WebSocket テスター",
+      "description": "WebSocket 接続をテストし、メッセージを送受信します。",
+      "seo_title": "無料オンライン WebSocket テスター",
+      "seo_description": "WebSocket 接続を無料でテストし、メッセージの送受信をブラウザで確認できます。",
       "serverUrl": "WebSocketサーバーURL",
       "connect": "接続",
       "disconnect": "切断",
@@ -15517,6 +15517,218 @@
       "description": "署名検証付きでJWTトークンをデバッグ・検証",
       "seo_title": "JWT Debugger：無料オンラインツール",
       "seo_description": "JWTトークンの署名検証でデバッグと検証。無料でオンラインで使用できます。"
+    },
+    "utm-builder": {
+      "name": "UTM ビルダー",
+      "description": "UTM パラメータ付きのキャンペーン計測 URL を作成します。",
+      "seo_title": "無料オンライン UTM ビルダー",
+      "seo_description": "source、medium、campaign、term、content を追加した UTM 計測リンクをブラウザで無料作成できます。",
+      "baseUrl": "Landing Page URL",
+      "source": "Campaign Source",
+      "medium": "Campaign Medium",
+      "campaign": "Campaign Name",
+      "term": "Campaign Term",
+      "content": "Campaign Content",
+      "loadExample": "Load Example",
+      "copyUrl": "Copy URL",
+      "copied": "Copied!",
+      "clear": "Clear",
+      "requiredFields": "Required UTM Fields",
+      "filled": "Filled",
+      "missing": "Missing",
+      "generatedUrl": "Generated URL",
+      "invalidUrl": "Enter a valid landing page URL",
+      "parameter": "Parameter",
+      "value": "Value"
+    },
+    "stock-average-calculator": {
+      "name": "株式平均取得単価計算機",
+      "description": "平均取得単価、総コスト、損益、ROI を計算します。",
+      "seo_title": "無料オンライン株式平均取得単価計算機",
+      "seo_description": "株式の平均取得単価、総株数、損益分岐点、評価額、損益、ROI を無料で計算できます。",
+      "currency": "Currency",
+      "currentPrice": "Current Price",
+      "purchaseLots": "Purchase Lots",
+      "loadExample": "Load Example",
+      "addLot": "Add Lot",
+      "quantity": "Quantity",
+      "buyPrice": "Buy Price",
+      "fees": "Fees",
+      "remove": "Remove",
+      "reset": "Reset",
+      "averagePrice": "Average Price",
+      "totalShares": "Total Shares",
+      "totalCost": "Total Cost",
+      "breakEvenPrice": "Break-even Price",
+      "marketValue": "Market Value",
+      "profitLoss": "Profit / Loss",
+      "roi": "ROI",
+      "emptyState": "Enter at least one purchase lot with quantity and buy price."
+    },
+    "stock-profit-calculator": {
+      "name": "株式損益計算機",
+      "description": "株式取引の損益、ROI、手数料を計算します。",
+      "seo_title": "無料オンライン株式損益計算機",
+      "seo_description": "株数、買値、売値、手数料を入力して、株式取引の純損益と ROI を無料で計算できます。"
+    },
+    "dividend-yield-calculator": {
+      "name": "配当利回り計算機",
+      "description": "配当利回りと年間配当収入を計算します。",
+      "seo_title": "無料オンライン配当利回り計算機",
+      "seo_description": "株価、1株当たり年間配当、保有株数から配当利回りと年間配当収入を計算できます。"
+    },
+    "market-cap-calculator": {
+      "name": "時価総額計算機",
+      "description": "株価と発行済株式数から時価総額を計算します。",
+      "seo_title": "無料オンライン時価総額計算機",
+      "seo_description": "株価と発行済株式数を掛けて、時価総額を無料で計算できます。"
+    },
+    "cagr-calculator": {
+      "name": "CAGR 計算機",
+      "description": "年平均成長率と総リターンを計算します。",
+      "seo_title": "無料オンライン CAGR 計算機",
+      "seo_description": "開始値、終了値、年数から CAGR、総リターン、成長倍率を無料で計算できます。"
+    },
+    "position-size-calculator": {
+      "name": "ポジションサイズ計算機",
+      "description": "口座リスクとストップ幅から取引サイズを計算します。",
+      "seo_title": "無料オンラインポジションサイズ計算機",
+      "seo_description": "口座残高、リスク率、エントリー価格、ストップ価格からポジションサイズを計算できます。"
+    },
+    "youtube-thumbnail-generator": {
+      "name": "YouTube サムネイル生成ツール",
+      "description": "YouTube リンクまたは ID からサムネイル URL とプレビューを生成します。",
+      "seo_title": "無料オンライン YouTube サムネイル生成ツール",
+      "seo_description": "YouTube 動画リンクまたは ID から複数品質のサムネイル URL を生成してプレビューできます。"
+    },
+    "ai-prompt-generator": {
+      "name": "AI プロンプト生成ツール",
+      "description": "文章、コード、分析、マーケティング向けの構造化プロンプトを作成します。",
+      "seo_title": "無料オンライン AI プロンプト生成ツール",
+      "seo_description": "タスク、対象読者、トーン、形式、制約から構造化された AI プロンプトを無料作成できます。"
+    },
+    "title-capitalization-tool": {
+      "name": "タイトル大文字変換ツール",
+      "description": "タイトルを Title Case、sentence case、大文字、小文字に変換します。",
+      "seo_title": "無料オンラインタイトル大文字変換ツール",
+      "seo_description": "見出しを Title Case、sentence case、大文字、小文字へ無料で変換できます。"
+    },
+    "meta-description-generator": {
+      "name": "メタディスクリプション生成ツール",
+      "description": "ページ内容とキーワードから SEO メタディスクリプション案を生成します。",
+      "seo_title": "無料オンラインメタディスクリプション生成ツール",
+      "seo_description": "ページ、キーワード、価値、対象読者から SEO メタディスクリプション案を無料生成できます。"
+    },
+    "wifi-qr-code-generator": {
+      "name": "WiFi QR コード生成ツール",
+      "description": "SSID、パスワード、暗号化方式から読み取り可能な WiFi QR を生成します。",
+      "seo_title": "無料オンライン WiFi QR コード生成ツール",
+      "seo_description": "ネットワーク名、パスワード、暗号化方式、非公開設定から WiFi QR コードを無料生成できます。"
+    },
+    "popularUtility": {
+      "actions": {
+        "copy": "結果をコピー",
+        "copied": "コピー済み",
+        "clear": "クリア",
+        "output": "結果",
+        "preview": "プレビュー",
+        "downloadQr": "QRコードをダウンロード"
+      },
+      "errors": {
+        "invalidYoutube": "有効な YouTube リンクまたは動画 ID を入力してください",
+        "invalidNumbers": "有効な数値を入力してください",
+        "wifiSsid": "WiFi 名を入力してください",
+        "missingConfig": "ツール設定が見つかりません"
+      },
+      "fields": {
+        "shares": "株数",
+        "buyPrice": "買値",
+        "sellPrice": "売値",
+        "buyFees": "購入手数料",
+        "sellFees": "売却手数料",
+        "sharePrice": "株価",
+        "annualDividend": "1株当たり年間配当",
+        "sharesOwned": "保有株数",
+        "sharesOutstanding": "発行済株式数",
+        "startValue": "開始値",
+        "endValue": "終了値",
+        "years": "年数",
+        "accountSize": "口座残高",
+        "riskPercent": "リスク率",
+        "entryPrice": "エントリー価格",
+        "stopPrice": "ストップ価格",
+        "youtubeVideo": "YouTube URL または動画 ID",
+        "task": "タスク",
+        "topic": "トピック",
+        "audience": "対象読者",
+        "tone": "トーン",
+        "format": "出力形式",
+        "constraints": "制約",
+        "title": "タイトル",
+        "style": "スタイル",
+        "page": "ページまたは製品",
+        "keyword": "対象キーワード",
+        "benefit": "主な価値",
+        "ssid": "WiFi 名",
+        "password": "パスワード",
+        "encryption": "暗号化",
+        "hidden": "非公開ネットワーク"
+      },
+      "options": {
+        "writing": "文章作成",
+        "coding": "コード",
+        "analysis": "分析",
+        "marketing": "マーケティング",
+        "professional": "プロフェッショナル",
+        "concise": "簡潔",
+        "friendly": "親しみやすい",
+        "persuasive": "説得力のある",
+        "titleCase": "Title Case",
+        "sentenceCase": "Sentence case",
+        "uppercase": "大文字",
+        "lowercase": "小文字",
+        "no": "いいえ",
+        "yes": "はい",
+        "noPassword": "パスワードなし"
+      },
+      "results": {
+        "totalCost": "総コスト",
+        "saleProceeds": "売却代金",
+        "profitLoss": "損益",
+        "profit": "損益",
+        "dividendYield": "配当利回り",
+        "annualIncome": "年間収入",
+        "dividendPerShare": "配当 / 株",
+        "marketCap": "時価総額",
+        "compact": "短縮表示",
+        "totalReturn": "総リターン",
+        "growthMultiple": "成長倍率",
+        "riskAmount": "リスク金額",
+        "riskPerShare": "1株リスク",
+        "positionSize": "ポジションサイズ",
+        "positionValue": "ポジション金額",
+        "videoId": "動画 ID",
+        "encryption": "暗号化",
+        "hidden": "非公開",
+        "option": "案",
+        "maxResolution": "最大解像度",
+        "highQuality": "高画質",
+        "mediumQuality": "中画質",
+        "defaultQuality": "デフォルト"
+      },
+      "placeholders": {
+        "aiTopic": "オンラインツールサイトのローンチ文",
+        "aiAudience": "開発者とマーケター",
+        "aiFormat": "箇条書きと例",
+        "aiConstraints": "架空のデータは避け、簡潔にする",
+        "title": "how to build better online tools",
+        "page": "UTM Builder",
+        "keyword": "無料 UTM ビルダー",
+        "benefit": "キャンペーン追跡リンクをすばやく作成する",
+        "metaAudience": "マーケターと創業者",
+        "ssid": "Office WiFi",
+        "password": "correct-horse-battery-staple"
+      }
     }
   }
 }

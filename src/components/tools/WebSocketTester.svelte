@@ -8,14 +8,21 @@
   }
 
   let { locale, translations }: Props = $props();
+  void locale;
 
   // Translation helpers
-  function t(key: string): string {
-    const scope = translations['tools']['websocket-tester'] as Record<string, unknown> || {};
+  function t(key: string, replacements: Record<string, string> = {}): string {
+    const scope = ((translations.tools as Record<string, unknown> | undefined)?.['websocket-tester'] as Record<string, unknown> | undefined) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
-    return typeof value === 'string' ? value : `MISSING: tools.websocket-tester.${key}`;
+    if (typeof value !== 'string') {
+      return `MISSING: tools.websocket-tester.${key}`;
+    }
+    return Object.entries(replacements).reduce(
+      (message, [name, replacement]) => message.replaceAll(`{${name}}`, replacement),
+      value
+    );
   }
 
   // Types
@@ -26,21 +33,21 @@
   timestamp: Date;
 }
 
-  let url = $state('wss://echo.websocket.org');
+  let url = $state('wss://ws.postman-echo.com/raw');
 
   let message = $state('');
 
-  let messages = $state([]);
+  let messages = $state<Message[]>([]);
 
   let isConnected = $state(false);
 
   let isConnecting = $state(false);
 
-  let wsRef = $state(null);
+  let wsRef = $state<WebSocket | null>(null);
 
   let messageIdRef = $state(0);
 
-  let messagesEndRef = $state(null);
+  let messagesEndRef = $state<HTMLDivElement | null>(null);
 
   function addMessage(type: Message['type'], content: string) {
     messages = [
@@ -139,7 +146,7 @@
     });
   }
   const sampleUrls = [
-    { label: 'Echo Server', url: 'wss://echo.websocket.org' },
+    { label: 'Postman Echo', url: 'wss://ws.postman-echo.com/raw' },
     { label: 'Binance BTC/USDT', url: 'wss://stream.binance.com:9443/ws/btcusdt@trade' },
   ];
 

@@ -15544,6 +15544,218 @@
       "description": "Decode and inspect JWT tokens. View header, payload, and signature.",
       "seo_title": "Free JWT Debugger Online - Decode JWT Header and Payload",
       "seo_description": "Debug JWT structure by decoding headers and payloads, checking claims, and viewing the signature segment. This page does not verify token authenticity."
+    },
+    "utm-builder": {
+      "name": "UTM Builder",
+      "description": "Build campaign tracking URLs with UTM parameters.",
+      "seo_title": "Free UTM Builder Online",
+      "seo_description": "Create UTM tracking links online for free. Add source, medium, campaign, term, and content parameters to campaign URLs in your browser.",
+      "baseUrl": "Landing Page URL",
+      "source": "Campaign Source",
+      "medium": "Campaign Medium",
+      "campaign": "Campaign Name",
+      "term": "Campaign Term",
+      "content": "Campaign Content",
+      "loadExample": "Load Example",
+      "copyUrl": "Copy URL",
+      "copied": "Copied!",
+      "clear": "Clear",
+      "requiredFields": "Required UTM Fields",
+      "filled": "Filled",
+      "missing": "Missing",
+      "generatedUrl": "Generated URL",
+      "invalidUrl": "Enter a valid landing page URL",
+      "parameter": "Parameter",
+      "value": "Value"
+    },
+    "stock-average-calculator": {
+      "name": "Stock Average Calculator",
+      "description": "Calculate average stock price, total cost, profit/loss, and ROI.",
+      "seo_title": "Free Stock Average Calculator Online",
+      "seo_description": "Calculate stock average price, total shares, break-even price, market value, profit/loss, and ROI online for free.",
+      "currency": "Currency",
+      "currentPrice": "Current Price",
+      "purchaseLots": "Purchase Lots",
+      "loadExample": "Load Example",
+      "addLot": "Add Lot",
+      "quantity": "Quantity",
+      "buyPrice": "Buy Price",
+      "fees": "Fees",
+      "remove": "Remove",
+      "reset": "Reset",
+      "averagePrice": "Average Price",
+      "totalShares": "Total Shares",
+      "totalCost": "Total Cost",
+      "breakEvenPrice": "Break-even Price",
+      "marketValue": "Market Value",
+      "profitLoss": "Profit / Loss",
+      "roi": "ROI",
+      "emptyState": "Enter at least one purchase lot with quantity and buy price."
+    },
+    "stock-profit-calculator": {
+      "name": "Stock Profit Calculator",
+      "description": "Calculate stock trade profit, loss, ROI, and fees.",
+      "seo_title": "Free Stock Profit Calculator Online",
+      "seo_description": "Calculate stock profit or loss online for free. Enter shares, buy price, sell price, and fees to estimate total cost, proceeds, ROI, and net profit."
+    },
+    "dividend-yield-calculator": {
+      "name": "Dividend Yield Calculator",
+      "description": "Calculate dividend yield and annual dividend income.",
+      "seo_title": "Free Dividend Yield Calculator Online",
+      "seo_description": "Calculate dividend yield online for free. Enter share price, annual dividend per share, and shares owned to estimate yield and annual income."
+    },
+    "market-cap-calculator": {
+      "name": "Market Cap Calculator",
+      "description": "Calculate company market capitalization from share price and shares outstanding.",
+      "seo_title": "Free Market Cap Calculator Online",
+      "seo_description": "Calculate market capitalization online for free. Multiply share price by shares outstanding and view full and compact market cap values instantly."
+    },
+    "cagr-calculator": {
+      "name": "CAGR Calculator",
+      "description": "Calculate compound annual growth rate and total return.",
+      "seo_title": "Free CAGR Calculator Online",
+      "seo_description": "Calculate CAGR online for free. Enter starting value, ending value, and years to estimate compound annual growth rate, total return, and growth multiple."
+    },
+    "position-size-calculator": {
+      "name": "Position Size Calculator",
+      "description": "Calculate trade position size from account risk and stop distance.",
+      "seo_title": "Free Position Size Calculator Online",
+      "seo_description": "Calculate position size online for free. Enter account size, risk percent, entry price, and stop price to estimate risk amount, shares, and position value."
+    },
+    "youtube-thumbnail-generator": {
+      "name": "YouTube Thumbnail Generator",
+      "description": "Generate YouTube thumbnail image URLs and previews from a video link or ID.",
+      "seo_title": "Free YouTube Thumbnail Generator Online",
+      "seo_description": "Generate YouTube thumbnail URLs online for free. Paste a video link or ID to preview max resolution, high quality, medium, and default thumbnail images."
+    },
+    "ai-prompt-generator": {
+      "name": "AI Prompt Generator",
+      "description": "Create structured prompts for writing, coding, analysis, and marketing tasks.",
+      "seo_title": "Free AI Prompt Generator Online",
+      "seo_description": "Generate structured AI prompts online for free. Build prompts for writing, coding, analysis, and marketing with audience, tone, format, and constraints."
+    },
+    "title-capitalization-tool": {
+      "name": "Title Capitalization Tool",
+      "description": "Convert titles to title case, sentence case, uppercase, or lowercase.",
+      "seo_title": "Free Title Capitalization Tool Online",
+      "seo_description": "Capitalize titles online for free. Convert headlines to title case, sentence case, uppercase, or lowercase with a fast browser-based tool."
+    },
+    "meta-description-generator": {
+      "name": "Meta Description Generator",
+      "description": "Generate concise SEO meta description options from a page topic and keyword.",
+      "seo_title": "Free Meta Description Generator Online",
+      "seo_description": "Generate SEO meta descriptions online for free. Enter a page, keyword, benefit, and audience to create concise description options for search snippets."
+    },
+    "wifi-qr-code-generator": {
+      "name": "WiFi QR Code Generator",
+      "description": "Generate a WiFi QR code payload and scannable QR image.",
+      "seo_title": "Free WiFi QR Code Generator Online",
+      "seo_description": "Generate WiFi QR codes online for free. Enter network name, password, encryption type, and hidden network setting to create a scannable QR code."
+    },
+    "popularUtility": {
+      "actions": {
+        "copy": "Copy Result",
+        "copied": "Copied",
+        "clear": "Clear",
+        "output": "Output",
+        "preview": "Preview",
+        "downloadQr": "Download QR Code"
+      },
+      "errors": {
+        "invalidYoutube": "Enter a valid YouTube video URL or video ID",
+        "invalidNumbers": "Enter valid numbers",
+        "wifiSsid": "Enter a WiFi name",
+        "missingConfig": "Tool configuration not found"
+      },
+      "fields": {
+        "shares": "Shares",
+        "buyPrice": "Buy Price",
+        "sellPrice": "Sell Price",
+        "buyFees": "Buy Fees",
+        "sellFees": "Sell Fees",
+        "sharePrice": "Share Price",
+        "annualDividend": "Annual Dividend Per Share",
+        "sharesOwned": "Shares Owned",
+        "sharesOutstanding": "Shares Outstanding",
+        "startValue": "Starting Value",
+        "endValue": "Ending Value",
+        "years": "Years",
+        "accountSize": "Account Size",
+        "riskPercent": "Risk Percent",
+        "entryPrice": "Entry Price",
+        "stopPrice": "Stop Price",
+        "youtubeVideo": "YouTube URL or Video ID",
+        "task": "Task",
+        "topic": "Topic",
+        "audience": "Audience",
+        "tone": "Tone",
+        "format": "Output Format",
+        "constraints": "Constraints",
+        "title": "Title",
+        "style": "Style",
+        "page": "Page or Product",
+        "keyword": "Target Keyword",
+        "benefit": "Main Benefit",
+        "ssid": "WiFi Name",
+        "password": "Password",
+        "encryption": "Encryption",
+        "hidden": "Hidden Network"
+      },
+      "options": {
+        "writing": "Writing",
+        "coding": "Coding",
+        "analysis": "Analysis",
+        "marketing": "Marketing",
+        "professional": "Professional",
+        "concise": "Concise",
+        "friendly": "Friendly",
+        "persuasive": "Persuasive",
+        "titleCase": "Title Case",
+        "sentenceCase": "Sentence case",
+        "uppercase": "UPPERCASE",
+        "lowercase": "lowercase",
+        "no": "No",
+        "yes": "Yes",
+        "noPassword": "No password"
+      },
+      "results": {
+        "totalCost": "Total Cost",
+        "saleProceeds": "Sale Proceeds",
+        "profitLoss": "Profit / Loss",
+        "profit": "Profit",
+        "dividendYield": "Dividend Yield",
+        "annualIncome": "Annual Income",
+        "dividendPerShare": "Dividend / Share",
+        "marketCap": "Market Cap",
+        "compact": "Compact",
+        "totalReturn": "Total Return",
+        "growthMultiple": "Growth Multiple",
+        "riskAmount": "Risk Amount",
+        "riskPerShare": "Risk / Share",
+        "positionSize": "Position Size",
+        "positionValue": "Position Value",
+        "videoId": "Video ID",
+        "encryption": "Encryption",
+        "hidden": "Hidden",
+        "option": "Option",
+        "maxResolution": "Max Resolution",
+        "highQuality": "High Quality",
+        "mediumQuality": "Medium Quality",
+        "defaultQuality": "Default"
+      },
+      "placeholders": {
+        "aiTopic": "launch copy for an online tools site",
+        "aiAudience": "developers and marketers",
+        "aiFormat": "bullet list with examples",
+        "aiConstraints": "avoid invented data, keep it short",
+        "title": "how to build better online tools",
+        "page": "UTM Builder",
+        "keyword": "free UTM builder",
+        "benefit": "build campaign tracking links fast",
+        "metaAudience": "marketers and founders",
+        "ssid": "Office WiFi",
+        "password": "correct-horse-battery-staple"
+      }
     }
   }
 }

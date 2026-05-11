@@ -1,28 +1,59 @@
 /**
- * Generate ToolImportMap.ts from tools.ts config
- * Maps each tool slug to its dynamic import function
+ * Generate ToolImportMap.ts from the split tools config.
+ * Existing map order is preserved to keep generated diffs reviewable.
  */
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
+import { tools } from '../src/config/tools/index';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const toolsPath = path.resolve(__dirname, '../src/config/tools.ts');
-const content = fs.readFileSync(toolsPath, 'utf8');
 
-// Extract slug → component mappings
-const regex = /slug:\s*'([^']+)'.*?component:\s*'([^']+)'/g;
-const entries: { slug: string; component: string }[] = [];
-let match: RegExpExecArray | null;
-while ((match = regex.exec(content)) !== null) {
-  entries.push({ slug: match[1], component: match[2] });
+type ToolImportEntry = { slug: string; component: string };
+
+const configuredEntries: ToolImportEntry[] = tools.map((tool) => ({
+  slug: tool.slug,
+  component: tool.component,
+}));
+
+const configuredBySlug = new Map(
+  configuredEntries.map((entry) => [entry.slug, entry])
+);
+const outputPath = path.join(__dirname, '../src/components/tools/ToolImportMap.ts');
+const existingEntries: ToolImportEntry[] = [];
+
+if (fs.existsSync(outputPath)) {
+  const existingContent = fs.readFileSync(outputPath, 'utf8');
+  const existingRegex = /'([^']+)':\s*\(\)\s*=>\s*import\('\.\/([^']+)\.svelte'\)/g;
+  let existingMatch: RegExpExecArray | null;
+  while ((existingMatch = existingRegex.exec(existingContent)) !== null) {
+    existingEntries.push({ slug: existingMatch[1], component: existingMatch[2] });
+  }
 }
 
-const dedupedEntries = Array.from(
-  new Map(entries.map((entry) => [entry.slug, entry])).values()
-);
+const seenSlugs = new Set<string>();
+const orderedEntries: ToolImportEntry[] = [];
 
-console.log(`Found ${entries.length} tools`);
+for (const existingEntry of existingEntries) {
+  const configuredEntry = configuredBySlug.get(existingEntry.slug);
+  if (!configuredEntry || seenSlugs.has(existingEntry.slug)) {
+    continue;
+  }
+  orderedEntries.push(configuredEntry);
+  seenSlugs.add(configuredEntry.slug);
+}
+
+for (const configuredEntry of configuredEntries) {
+  if (seenSlugs.has(configuredEntry.slug)) {
+    continue;
+  }
+  orderedEntries.push(configuredEntry);
+  seenSlugs.add(configuredEntry.slug);
+}
+
+const dedupedEntries = orderedEntries;
+
+console.log(`Found ${configuredEntries.length} tools`);
 console.log(`Deduped to ${dedupedEntries.length} unique tool slugs`);
 
 // Check which svelte files exist
@@ -56,6 +87,5 @@ lines.push('');
 lines.push('export default TOOL_IMPORT_MAP;');
 lines.push('');
 
-const outputPath = path.join(toolsDir, 'ToolImportMap.ts');
 fs.writeFileSync(outputPath, lines.join('\n'));
 console.log(`Generated ${outputPath}`);

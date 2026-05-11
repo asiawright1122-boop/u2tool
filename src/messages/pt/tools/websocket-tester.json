@@ -1,17 +1,28 @@
 {
-  "detailed_description": "WebSocket Tester é uma ferramenta online poderosa para teste e depuração de conexões WebSocket em tempo real. Permite que desenvolvedores se conectem a qualquer servidor WebSocket, enviem mensagens e vejam as respostas recebidas instantaneamente. A ferramenta suporta o protocolo WebSocket padrão (ws:// e wss://), tornando-se perfeita para teste de aplicações de chat, feeds de dados ao vivo, servidores de jogos e outros sistemas de comunicação em tempo real. Com funcionalidades como monitoramento do status da conexão, histórico de mensagens e conexão rápida para servidores de teste, esta ferramenta é essencial para qualquer desenvolvedor trabalhando com aplicações baseadas em WebSocket. Todos os testes acontecem diretamente no seu navegador, sem envio de dados para servidores externos.",
+  "detailed_description": "Testador WebSocket — Teste conexões WebSocket e envie/receba mensagens. Revise o resultado calculado ou gerado.",
   "usage_steps": [
-    "Insira a URL do servidor WebSocket (ws:// ou wss://)",
-    "Clique em Conectar para estabelecer a conexão WebSocket",
-    "Escreva sua mensagem no campo de entrada",
-    "Clique em Enviar para transmitir a mensagem para o servidor",
-    "Visualize as mensagens recebidas no painel de histórico de mensagens",
-    "Clique em Desconectar quando terminar de testar"
+    "Digite os valores necessários no formulário",
+    "Revise o resultado calculado ou gerado",
+    "Copie o resultado ou use a prévia exibida",
+    "Ajuste os valores para comparar outro cenário"
   ],
   "usage_examples": [
-    "Teste servidores de eco WebSocket para verificar a funcionalidade de conexão",
-    "Depure o manuseio de mensagens em aplicações de chat em tempo real",
-    "Monitore feeds de dados ao vivo de APIs WebSocket",
-    "Verifique respostas do servidor WebSocket durante o desenvolvimento"
+    "Use em uma revisão ou planejamento rápido",
+    "Compare cenários sem criar uma planilha",
+    "Crie resultados prontos para relatórios, campanhas ou notas"
+  ],
+  "faqs": [
+    {
+      "question": "Testador WebSocket é gratuito?",
+      "answer": "Sim. A ferramenta é gratuita no navegador e não exige conta."
+    },
+    {
+      "question": "A ferramenta envia meus dados?",
+      "answer": "Não. O cálculo ou geração roda localmente no navegador."
+    },
+    {
+      "question": "Há alguma observação importante?",
+      "answer": "Não. Usa modelos e lógica local no navegador; não chama um modelo de IA."
+    }
   ]
 }

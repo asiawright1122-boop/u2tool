@@ -21271,6 +21271,218 @@
       "description": "调试和验证JWT令牌，支持签名验证",
       "seo_title": "免费在线JWT调试器 - 快速验证签名",
       "seo_description": "使用我们的JWT调试器轻松检查和验证JSON Web Tokens。在线免费工具，支持Base64解码和SVG可视化。立即试用！"
+    },
+    "utm-builder": {
+      "name": "UTM 构建器",
+      "description": "使用 UTM 参数生成广告和营销活动追踪链接。",
+      "seo_title": "免费在线 UTM 构建器",
+      "seo_description": "免费在线创建 UTM 追踪链接，为活动 URL 添加 source、medium、campaign、term 和 content 参数。所有处理都在浏览器中完成。",
+      "baseUrl": "落地页 URL",
+      "source": "活动来源",
+      "medium": "活动媒介",
+      "campaign": "活动名称",
+      "term": "活动关键词",
+      "content": "活动内容",
+      "loadExample": "载入示例",
+      "copyUrl": "复制 URL",
+      "copied": "已复制！",
+      "clear": "清空",
+      "requiredFields": "必填 UTM 字段",
+      "filled": "已填写",
+      "missing": "缺失",
+      "generatedUrl": "生成的 URL",
+      "invalidUrl": "请输入有效的落地页 URL",
+      "parameter": "参数",
+      "value": "值"
+    },
+    "stock-average-calculator": {
+      "name": "股票均价计算器",
+      "description": "计算股票平均成本、总成本、盈亏和 ROI。",
+      "seo_title": "免费在线股票均价计算器",
+      "seo_description": "免费在线计算股票平均买入价、总股数、盈亏平衡价、市值、盈亏和 ROI。适合分批买入后的成本核算。",
+      "currency": "货币",
+      "currentPrice": "当前价格",
+      "purchaseLots": "买入批次",
+      "loadExample": "载入示例",
+      "addLot": "添加批次",
+      "quantity": "数量",
+      "buyPrice": "买入价",
+      "fees": "费用",
+      "remove": "删除",
+      "reset": "重置",
+      "averagePrice": "平均成本",
+      "totalShares": "总股数",
+      "totalCost": "总成本",
+      "breakEvenPrice": "盈亏平衡价",
+      "marketValue": "当前市值",
+      "profitLoss": "盈亏",
+      "roi": "ROI",
+      "emptyState": "请至少输入一个包含数量和买入价的买入批次。"
+    },
+    "stock-profit-calculator": {
+      "name": "股票盈亏计算器",
+      "description": "计算股票交易盈亏、ROI 和交易费用。",
+      "seo_title": "免费在线股票盈亏计算器",
+      "seo_description": "免费在线计算股票盈亏。输入股数、买入价、卖出价和费用，即可估算总成本、卖出收入、ROI 和净利润。"
+    },
+    "dividend-yield-calculator": {
+      "name": "股息率计算器",
+      "description": "计算股息率和年度股息收入。",
+      "seo_title": "免费在线股息率计算器",
+      "seo_description": "免费在线计算股息率。输入股价、每股年度股息和持有股数，即可估算股息率和年度股息收入。"
+    },
+    "market-cap-calculator": {
+      "name": "市值计算器",
+      "description": "根据股价和发行股数计算公司市值。",
+      "seo_title": "免费在线市值计算器",
+      "seo_description": "免费在线计算公司市值。输入股价和发行/流通股数，立即得到完整市值和简写市值。"
+    },
+    "cagr-calculator": {
+      "name": "CAGR 计算器",
+      "description": "计算复合年增长率、总回报和增长倍数。",
+      "seo_title": "免费在线 CAGR 计算器",
+      "seo_description": "免费在线计算 CAGR。输入起始价值、结束价值和年数，即可估算复合年增长率、总回报和增长倍数。"
+    },
+    "position-size-calculator": {
+      "name": "仓位大小计算器",
+      "description": "根据账户风险和止损距离计算交易仓位。",
+      "seo_title": "免费在线仓位大小计算器",
+      "seo_description": "免费在线计算仓位大小。输入账户金额、风险百分比、入场价和止损价，估算风险金额、股数和仓位金额。"
+    },
+    "youtube-thumbnail-generator": {
+      "name": "YouTube 缩略图生成器",
+      "description": "从 YouTube 链接或视频 ID 生成缩略图地址和预览。",
+      "seo_title": "免费在线 YouTube 缩略图生成器",
+      "seo_description": "免费在线生成 YouTube 缩略图 URL。粘贴视频链接或 ID，预览最高分辨率、高质量、中等和默认缩略图。"
+    },
+    "ai-prompt-generator": {
+      "name": "AI 提示词生成器",
+      "description": "为写作、代码、分析和营销任务生成结构化提示词。",
+      "seo_title": "免费在线 AI 提示词生成器",
+      "seo_description": "免费在线生成结构化 AI 提示词。按任务、受众、语气、输出格式和约束快速构建可复制的提示词。"
+    },
+    "title-capitalization-tool": {
+      "name": "标题大小写转换工具",
+      "description": "将标题转换为标题式、句首大写、全大写或全小写。",
+      "seo_title": "免费在线标题大小写转换工具",
+      "seo_description": "免费在线转换标题大小写。快速把标题处理为 Title Case、句首大写、全大写或全小写。"
+    },
+    "meta-description-generator": {
+      "name": "Meta 描述生成器",
+      "description": "根据页面主题和关键词生成 SEO meta description 选项。",
+      "seo_title": "免费在线 Meta 描述生成器",
+      "seo_description": "免费在线生成 SEO meta description。输入页面、关键词、价值点和受众，快速创建适合搜索摘要的描述文案。"
+    },
+    "wifi-qr-code-generator": {
+      "name": "WiFi 二维码生成器",
+      "description": "生成 WiFi 连接二维码内容和可扫描二维码图片。",
+      "seo_title": "免费在线 WiFi 二维码生成器",
+      "seo_description": "免费在线生成 WiFi 二维码。输入网络名称、密码、加密类型和隐藏网络设置，创建可扫描的 WiFi 连接二维码。"
+    },
+    "popularUtility": {
+      "actions": {
+        "copy": "复制结果",
+        "copied": "已复制",
+        "clear": "清空",
+        "output": "结果",
+        "preview": "预览",
+        "downloadQr": "下载二维码"
+      },
+      "errors": {
+        "invalidYoutube": "请输入有效的 YouTube 视频链接或视频 ID",
+        "invalidNumbers": "请输入有效数字",
+        "wifiSsid": "请输入 WiFi 名称",
+        "missingConfig": "未找到工具配置"
+      },
+      "fields": {
+        "shares": "股数",
+        "buyPrice": "买入价",
+        "sellPrice": "卖出价",
+        "buyFees": "买入费用",
+        "sellFees": "卖出费用",
+        "sharePrice": "股价",
+        "annualDividend": "每股年度股息",
+        "sharesOwned": "持有股数",
+        "sharesOutstanding": "流通/发行股数",
+        "startValue": "起始价值",
+        "endValue": "结束价值",
+        "years": "年数",
+        "accountSize": "账户金额",
+        "riskPercent": "单笔风险百分比",
+        "entryPrice": "入场价",
+        "stopPrice": "止损价",
+        "youtubeVideo": "YouTube 链接或视频 ID",
+        "task": "任务",
+        "topic": "主题",
+        "audience": "受众",
+        "tone": "语气",
+        "format": "输出格式",
+        "constraints": "约束",
+        "title": "标题",
+        "style": "格式",
+        "page": "页面/产品",
+        "keyword": "目标关键词",
+        "benefit": "核心价值",
+        "ssid": "WiFi 名称",
+        "password": "密码",
+        "encryption": "加密类型",
+        "hidden": "隐藏网络"
+      },
+      "options": {
+        "writing": "写作",
+        "coding": "代码",
+        "analysis": "分析",
+        "marketing": "营销",
+        "professional": "专业",
+        "concise": "简洁",
+        "friendly": "友好",
+        "persuasive": "有说服力",
+        "titleCase": "标题式大小写",
+        "sentenceCase": "句首大写",
+        "uppercase": "全部大写",
+        "lowercase": "全部小写",
+        "no": "否",
+        "yes": "是",
+        "noPassword": "无密码"
+      },
+      "results": {
+        "totalCost": "总成本",
+        "saleProceeds": "卖出收入",
+        "profitLoss": "盈亏",
+        "profit": "盈亏",
+        "dividendYield": "股息率",
+        "annualIncome": "年度股息收入",
+        "dividendPerShare": "每股股息",
+        "marketCap": "市值",
+        "compact": "简写",
+        "totalReturn": "总回报",
+        "growthMultiple": "增长倍数",
+        "riskAmount": "风险金额",
+        "riskPerShare": "每股风险",
+        "positionSize": "仓位股数",
+        "positionValue": "仓位金额",
+        "videoId": "视频 ID",
+        "encryption": "加密",
+        "hidden": "隐藏网络",
+        "option": "版本",
+        "maxResolution": "最高分辨率",
+        "highQuality": "高清",
+        "mediumQuality": "中等质量",
+        "defaultQuality": "默认"
+      },
+      "placeholders": {
+        "aiTopic": "一个在线工具网站的发布文案",
+        "aiAudience": "开发者和营销人员",
+        "aiFormat": "要点列表 + 示例",
+        "aiConstraints": "不要编造数据，保持简短",
+        "title": "how to build better online tools",
+        "page": "UTM Builder",
+        "keyword": "free UTM builder",
+        "benefit": "快速生成活动追踪链接",
+        "metaAudience": "营销人员和创业者",
+        "ssid": "Office WiFi",
+        "password": "correct-horse-battery-staple"
+      }
     }
   }
 }

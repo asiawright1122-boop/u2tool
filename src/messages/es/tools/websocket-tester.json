@@ -1,17 +1,28 @@
 {
-  "detailed_description": "WebSocket Tester es una herramienta en línea potente para probar y depurar conexiones WebSocket en tiempo real. Permite a los desarrolladores conectarse a cualquier servidor WebSocket, enviar mensajes y ver las respuestas entrantes instantáneamente. La herramienta admite el protocolo WebSocket estándar (ws:// y wss://), lo que la hace perfecta para probar aplicaciones de chat, fuentes de datos en vivo, servidores de juegos y otros sistemas de comunicación en tiempo real. Con características como monitoreo de estado de conexión, historial de mensajes y conexión rápida a servidores de prueba, esta herramienta es esencial para cualquier desarrollador que trabaje con aplicaciones basadas en WebSocket. Todo el proceso de prueba ocurre directamente en tu navegador sin enviar datos a servidores externos.",
+  "detailed_description": "Probador WebSocket — Prueba conexiones WebSocket y envía/recibe mensajes. Revisa el resultado calculado o generado.",
   "usage_steps": [
-    "Ingresa la URL del servidor WebSocket (ws:// o wss://)",
-    "Haz clic en Conectar para establecer la conexión WebSocket",
-    "Escribe tu mensaje en el campo de entrada",
-    "Haz clic en Enviar para transmitir el mensaje al servidor",
-    "Verifica los mensajes recibidos en el panel de historial de mensajes",
-    "Haz clic en Desconectar cuando hayas terminado de probar"
+    "Introduce los valores requeridos en el formulario",
+    "Revisa el resultado calculado o generado",
+    "Copia el resultado o usa la vista previa mostrada",
+    "Ajusta los valores para comparar otro escenario"
   ],
   "usage_examples": [
-    "Prueba servidores de eco WebSocket para verificar la funcionalidad de conexión",
-    "Depura el manejo de mensajes en aplicaciones de chat en tiempo real",
-    "Monitorea fuentes de datos en vivo de APIs WebSocket",
-    "Verifica las respuestas del servidor WebSocket durante el desarrollo"
+    "Úsalo durante una revisión o planificación rápida",
+    "Compara escenarios sin crear una hoja de cálculo",
+    "Crea resultados listos para informes, campañas o notas"
+  ],
+  "faqs": [
+    {
+      "question": "Probador WebSocket es gratis?",
+      "answer": "Sí. La herramienta es gratuita en el navegador y no requiere cuenta."
+    },
+    {
+      "question": "¿La herramienta sube mis datos?",
+      "answer": "No. El cálculo o la generación se ejecuta localmente en el navegador."
+    },
+    {
+      "question": "¿Hay alguna nota importante?",
+      "answer": "No. Usa plantillas y lógica local en el navegador; no llama a un modelo de IA."
+    }
   ]
 }

@@ -10,7 +10,11 @@
 
   let { slug, locale, translations }: Props = $props();
 
-  type ToolComponent = Component<{ locale: string; translations: Record<string, unknown> }>;
+  type ToolComponent = Component<{
+    slug?: string;
+    locale: string;
+    translations: Record<string, unknown>;
+  }>;
 
   let loadedComponent = $state<ToolComponent | null>(null);
   let loading = $state(true);
@@ -66,5 +70,5 @@
   </div>
 {:else if loadedComponent}
   {@const Component = loadedComponent}
-  <Component {locale} {translations} />
+  <Component {slug} {locale} {translations} />
 {/if}

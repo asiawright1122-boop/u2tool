@@ -1,17 +1,28 @@
 {
-  "detailed_description": "WebSocket-Tester ist ein leistungsstarkes Online-Tool zur Echtzeit-Prüfung und Fehlerbehebung von WebSocket-Verbindungen. Entwickler können sich mit jedem WebSocket-Server verbinden, Nachrichten senden und eingehende Antworten sofort anzeigen lassen. Das Tool unterstützt das Standard-WebSocket-Protokoll (ws:// und wss://), was es perfekt für den Test von Chat-Anwendungen, Live-Datenfeeds, Gaming-Servern und anderen Echtzeit-Kommunikationssystemen macht. Mit Funktionen wie Überwachung des Verbindungszustands, Nachrichtenverlauf und schnellem Verbindungsaufbau zu Testservern ist dieses Tool unverzichtbar für jeden Entwickler, der mit WebSocket-basierten Anwendungen arbeitet. Alle Tests erfolgen direkt in Ihrem Browser, ohne dass Daten an externe Server gesendet werden.",
+  "detailed_description": "WebSocket-Tester — Teste WebSocket-Verbindungen und sende/empfange Nachrichten. Prüfe das berechnete oder generierte Ergebnis.",
   "usage_steps": [
-    "Geben Sie die WebSocket-Server-URL (ws:// oder wss://) ein",
-    "Klicken Sie auf 'Verbinden', um die WebSocket-Verbindung herzustellen",
-    "Geben Sie Ihre Nachricht im Eingabefeld ein",
-    "Klicken Sie auf 'Senden', um die Nachricht an den Server zu senden",
-    "Sehen Sie empfangene Nachrichten im Nachrichtenverlauf-Panel",
-    "Klicken Sie auf 'Trennen', wenn Sie das Testen beenden"
+    "Gib die erforderlichen Werte in das Formular ein",
+    "Prüfe das berechnete oder generierte Ergebnis",
+    "Kopiere das Ergebnis oder nutze die Vorschau",
+    "Passe Eingaben an, um ein weiteres Szenario zu vergleichen"
   ],
   "usage_examples": [
-    "Testen Sie WebSocket Echo-Server, um die Verbindungsfunktion zu überprüfen",
-    "Fehlersuchen in der Nachrichtenverarbeitung von Echtzeit-Chat-Anwendungen",
-    "Überwachen Sie Live-Datenfeeds von WebSocket-APIs",
-    "Überprüfen Sie WebSocket-Server-Antworten während der Entwicklung"
+    "Nutze das Tool für schnelle Planung oder Prüfung",
+    "Vergleiche Szenarien ohne Tabellenkalkulation",
+    "Erstelle kopierfertige Ergebnisse für Berichte, Kampagnen oder Notizen"
+  ],
+  "faqs": [
+    {
+      "question": "WebSocket-Tester ist kostenlos?",
+      "answer": "Ja. Das Tool ist im Browser kostenlos nutzbar und benötigt kein Konto."
+    },
+    {
+      "question": "Werden meine Eingaben hochgeladen?",
+      "answer": "Nein. Berechnung oder Generierung laufen lokal im Browser."
+    },
+    {
+      "question": "Gibt es wichtige Hinweise?",
+      "answer": "Nein. Es nutzt lokale Vorlagen und Formatierungslogik im Browser; kein KI-Modell wird aufgerufen."
+    }
   ]
 }

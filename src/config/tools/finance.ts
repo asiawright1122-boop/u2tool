@@ -3,6 +3,12 @@ import type { Tool } from './types';
 export const FINANCE_TOOLS: Tool[] = [
   { slug: 'currency-converter', category: 'finance', icon: 'wallet', component: 'CurrencyConverter' },
   { slug: 'roi-calculator', category: 'finance', icon: 'wallet', component: 'RoiCalculator' },
+  { slug: 'stock-average-calculator', category: 'finance', icon: 'trending-up', component: 'StockAverageCalculator', popular: true },
+  { slug: 'stock-profit-calculator', category: 'finance', icon: 'trending-up', component: 'PopularUtilityTool', popular: true },
+  { slug: 'dividend-yield-calculator', category: 'finance', icon: 'percent', component: 'PopularUtilityTool' },
+  { slug: 'market-cap-calculator', category: 'finance', icon: 'bar-chart-3', component: 'PopularUtilityTool' },
+  { slug: 'cagr-calculator', category: 'finance', icon: 'trending-up', component: 'PopularUtilityTool', popular: true },
+  { slug: 'position-size-calculator', category: 'finance', icon: 'target', component: 'PopularUtilityTool' },
   { slug: 'mortgage-calculator', category: 'finance', icon: 'wallet', component: 'MortgageCalculator' },
   { slug: 'tax-calculator', category: 'finance', icon: 'wallet', component: 'TaxCalculator' },
   { slug: 'iban-validator', category: 'finance', icon: 'wallet', component: 'IbanValidator' },

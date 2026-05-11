@@ -1,0 +1,30 @@
+{
+  "detailed_description": "Stock Average Calculator helps investors calculate their average buy price across multiple purchase lots. Enter each buy quantity, price, and optional fees, then add the current market price to estimate total cost, break-even price, market value, profit/loss, and ROI. It is useful when averaging into a position, checking whether a new purchase changes your cost basis, or reviewing a stock position after several trades.",
+  "usage_steps": [
+    "Choose the currency used for the stock position",
+    "Enter the current market price if you want profit/loss and ROI estimates",
+    "Add each purchase lot with quantity, buy price, and fees",
+    "Review the weighted average price and total cost",
+    "Compare current market value, profit/loss, and ROI"
+  ],
+  "usage_examples": [
+    "Calculate the average buy price after buying the same stock in three separate orders",
+    "Estimate the break-even price including brokerage or transaction fees",
+    "Check profit/loss after a share price move without opening a spreadsheet",
+    "Compare how adding another purchase lot would change the average cost"
+  ],
+  "faqs": [
+    {
+      "question": "Does the calculator include fees?",
+      "answer": "Yes. Fees are added to the total cost for each lot, so the average price and break-even price include the transaction costs you enter."
+    },
+    {
+      "question": "Is this financial advice?",
+      "answer": "No. The calculator only performs arithmetic based on your inputs. It does not recommend buying, selling, or holding any security."
+    },
+    {
+      "question": "Can I calculate profit without a current price?",
+      "answer": "You can calculate average cost and break-even price without a current price. Profit/loss and ROI appear when a current market price is entered."
+    }
+  ]
+}

@@ -60,6 +60,7 @@ export const DEVELOPMENT_TOOLS: Tool[] = [
   { slug: 'curl-to-code-generator', category: 'development', icon: 'terminal', component: 'CurlToCodeGenerator' },
   { slug: 'request-header-builder', category: 'development', icon: 'list-plus', component: 'RequestHeaderBuilder' },
   { slug: 'webhook-tester', category: 'development', icon: 'webhook', component: 'WebhookTester' },
+  { slug: 'websocket-tester', category: 'development', icon: 'radio', component: 'WebSocketTester', popular: true },
   { slug: 'api-response-formatter', category: 'development', icon: 'braces', component: 'ApiResponseFormatter' },
   { slug: 'sql-to-mongodb-converter', category: 'development', icon: 'database-zap', component: 'SqlToMongodbConverter' },
   { slug: 'regex-to-code-generator', category: 'development', icon: 'wand-2', component: 'RegexToCodeGenerator' },

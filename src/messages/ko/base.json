@@ -5474,10 +5474,10 @@
       "note": "💡 주의: 이는 프로토타입 버전입니다. 실제 사용을 위해서는 WHOIS API 서비스를 통합하세요."
     },
     "websocket-tester": {
-      "name": "웹소켓 테스터",
-      "description": "웹소켓 연결을 테스트하고 메시지를 보내받습니다.",
-      "seo_title": "WebSocket Tester - 무료 온라인 도구",
-      "seo_description": "WebSocket 연결 테스트와 메시지 송수신을 간편하게! 무료 온라인 WebSocket Tester로 실시간 응답 확인하세요. 지금 무료로 사용하기!",
+      "name": "WebSocket 테스터",
+      "description": "WebSocket 연결을 테스트하고 메시지를 송수신합니다.",
+      "seo_title": "무료 온라인 WebSocket 테스터",
+      "seo_description": "WebSocket 연결을 무료로 테스트하고 브라우저에서 메시지를 주고받을 수 있습니다.",
       "serverUrl": "웹소켓 서버 URL",
       "connect": "연결",
       "disconnect": "연결 끊기",
@@ -15517,6 +15517,218 @@
       "description": "서명 검증으로 JWT 토큰 디버그 및 확인",
       "seo_title": "무료 JWT Debugger 온라인 도구: JSON Web Token 검증 및 디버그",
       "seo_description": "JSON Web Token의 문제를 빠르게 해결하세요. 무료 JWT Debugger는 온라인으로 JSON, Base64, SVG를 사용해 JWT 토큰을 검증하고 디버그합니다. 지금 시작하기!"
+    },
+    "utm-builder": {
+      "name": "UTM 빌더",
+      "description": "UTM 매개변수로 캠페인 추적 URL을 만듭니다.",
+      "seo_title": "무료 온라인 UTM 빌더",
+      "seo_description": "브라우저에서 source, medium, campaign, term, content가 포함된 UTM 추적 링크를 무료로 만드세요.",
+      "baseUrl": "Landing Page URL",
+      "source": "Campaign Source",
+      "medium": "Campaign Medium",
+      "campaign": "Campaign Name",
+      "term": "Campaign Term",
+      "content": "Campaign Content",
+      "loadExample": "Load Example",
+      "copyUrl": "Copy URL",
+      "copied": "Copied!",
+      "clear": "Clear",
+      "requiredFields": "Required UTM Fields",
+      "filled": "Filled",
+      "missing": "Missing",
+      "generatedUrl": "Generated URL",
+      "invalidUrl": "Enter a valid landing page URL",
+      "parameter": "Parameter",
+      "value": "Value"
+    },
+    "stock-average-calculator": {
+      "name": "주식 평균단가 계산기",
+      "description": "평균 매수가, 총비용, 손익, ROI를 계산합니다.",
+      "seo_title": "무료 온라인 주식 평균단가 계산기",
+      "seo_description": "주식 평균 매수가, 총 주식 수, 손익분기 가격, 시장가치, 손익, ROI를 무료로 계산하세요.",
+      "currency": "Currency",
+      "currentPrice": "Current Price",
+      "purchaseLots": "Purchase Lots",
+      "loadExample": "Load Example",
+      "addLot": "Add Lot",
+      "quantity": "Quantity",
+      "buyPrice": "Buy Price",
+      "fees": "Fees",
+      "remove": "Remove",
+      "reset": "Reset",
+      "averagePrice": "Average Price",
+      "totalShares": "Total Shares",
+      "totalCost": "Total Cost",
+      "breakEvenPrice": "Break-even Price",
+      "marketValue": "Market Value",
+      "profitLoss": "Profit / Loss",
+      "roi": "ROI",
+      "emptyState": "Enter at least one purchase lot with quantity and buy price."
+    },
+    "stock-profit-calculator": {
+      "name": "주식 수익 계산기",
+      "description": "주식 거래 수익, 손실, ROI, 수수료를 계산합니다.",
+      "seo_title": "무료 온라인 주식 수익 계산기",
+      "seo_description": "주식 수량, 매수가, 매도가, 수수료를 입력해 순손익과 ROI를 계산하세요."
+    },
+    "dividend-yield-calculator": {
+      "name": "배당수익률 계산기",
+      "description": "배당수익률과 연간 배당수입을 계산합니다.",
+      "seo_title": "무료 온라인 배당수익률 계산기",
+      "seo_description": "주가, 주당 연간 배당금, 보유 주식 수로 배당수익률과 연간 수입을 계산하세요."
+    },
+    "market-cap-calculator": {
+      "name": "시가총액 계산기",
+      "description": "주가와 발행주식 수로 시가총액을 계산합니다.",
+      "seo_title": "무료 온라인 시가총액 계산기",
+      "seo_description": "주가와 발행주식 수를 곱해 시가총액을 무료로 계산하세요."
+    },
+    "cagr-calculator": {
+      "name": "CAGR 계산기",
+      "description": "연평균 성장률과 총수익률을 계산합니다.",
+      "seo_title": "무료 온라인 CAGR 계산기",
+      "seo_description": "시작값, 종료값, 기간으로 CAGR, 총수익률, 성장 배수를 계산하세요."
+    },
+    "position-size-calculator": {
+      "name": "포지션 크기 계산기",
+      "description": "계좌 위험과 손절 폭으로 거래 포지션 크기를 계산합니다.",
+      "seo_title": "무료 온라인 포지션 크기 계산기",
+      "seo_description": "계좌 규모, 위험 비율, 진입가, 손절가로 포지션 크기를 계산하세요."
+    },
+    "youtube-thumbnail-generator": {
+      "name": "YouTube 썸네일 생성기",
+      "description": "YouTube 링크 또는 ID로 썸네일 URL과 미리보기를 생성합니다.",
+      "seo_title": "무료 온라인 YouTube 썸네일 생성기",
+      "seo_description": "YouTube 동영상 링크 또는 ID로 여러 품질의 썸네일 URL을 생성하고 미리보세요."
+    },
+    "ai-prompt-generator": {
+      "name": "AI 프롬프트 생성기",
+      "description": "글쓰기, 코드, 분석, 마케팅용 구조화 프롬프트를 만듭니다.",
+      "seo_title": "무료 온라인 AI 프롬프트 생성기",
+      "seo_description": "작업, 대상, 톤, 형식, 제약 조건으로 구조화된 AI 프롬프트를 무료로 생성하세요."
+    },
+    "title-capitalization-tool": {
+      "name": "제목 대소문자 변환 도구",
+      "description": "제목을 title case, sentence case, 대문자 또는 소문자로 변환합니다.",
+      "seo_title": "무료 온라인 제목 대소문자 변환 도구",
+      "seo_description": "제목을 title case, sentence case, 대문자 또는 소문자로 무료 변환하세요."
+    },
+    "meta-description-generator": {
+      "name": "메타 설명 생성기",
+      "description": "페이지와 키워드로 SEO 메타 설명 후보를 생성합니다.",
+      "seo_title": "무료 온라인 메타 설명 생성기",
+      "seo_description": "페이지, 키워드, 이점, 대상 정보를 바탕으로 SEO 메타 설명을 무료로 생성하세요."
+    },
+    "wifi-qr-code-generator": {
+      "name": "WiFi QR 코드 생성기",
+      "description": "네트워크 이름, 비밀번호, 암호화 방식으로 스캔 가능한 WiFi QR을 만듭니다.",
+      "seo_title": "무료 온라인 WiFi QR 코드 생성기",
+      "seo_description": "네트워크 이름, 비밀번호, 암호화 방식, 숨김 네트워크 설정으로 WiFi QR 코드를 생성하세요."
+    },
+    "popularUtility": {
+      "actions": {
+        "copy": "결과 복사",
+        "copied": "복사됨",
+        "clear": "지우기",
+        "output": "결과",
+        "preview": "미리보기",
+        "downloadQr": "QR 코드 다운로드"
+      },
+      "errors": {
+        "invalidYoutube": "올바른 YouTube 링크 또는 동영상 ID를 입력하세요",
+        "invalidNumbers": "올바른 숫자를 입력하세요",
+        "wifiSsid": "WiFi 이름을 입력하세요",
+        "missingConfig": "도구 설정을 찾을 수 없습니다"
+      },
+      "fields": {
+        "shares": "주식 수",
+        "buyPrice": "매수가",
+        "sellPrice": "매도가",
+        "buyFees": "매수 수수료",
+        "sellFees": "매도 수수료",
+        "sharePrice": "주가",
+        "annualDividend": "주당 연간 배당금",
+        "sharesOwned": "보유 주식 수",
+        "sharesOutstanding": "발행주식 수",
+        "startValue": "시작값",
+        "endValue": "종료값",
+        "years": "년수",
+        "accountSize": "계좌 규모",
+        "riskPercent": "위험 비율",
+        "entryPrice": "진입가",
+        "stopPrice": "손절가",
+        "youtubeVideo": "YouTube URL 또는 동영상 ID",
+        "task": "작업",
+        "topic": "주제",
+        "audience": "대상",
+        "tone": "톤",
+        "format": "출력 형식",
+        "constraints": "제약 조건",
+        "title": "제목",
+        "style": "스타일",
+        "page": "페이지 또는 제품",
+        "keyword": "대상 키워드",
+        "benefit": "핵심 이점",
+        "ssid": "WiFi 이름",
+        "password": "비밀번호",
+        "encryption": "암호화",
+        "hidden": "숨김 네트워크"
+      },
+      "options": {
+        "writing": "글쓰기",
+        "coding": "코딩",
+        "analysis": "분석",
+        "marketing": "마케팅",
+        "professional": "전문적",
+        "concise": "간결함",
+        "friendly": "친근함",
+        "persuasive": "설득력",
+        "titleCase": "Title Case",
+        "sentenceCase": "Sentence case",
+        "uppercase": "대문자",
+        "lowercase": "소문자",
+        "no": "아니요",
+        "yes": "예",
+        "noPassword": "비밀번호 없음"
+      },
+      "results": {
+        "totalCost": "총비용",
+        "saleProceeds": "매도 금액",
+        "profitLoss": "손익",
+        "profit": "손익",
+        "dividendYield": "배당수익률",
+        "annualIncome": "연간 수입",
+        "dividendPerShare": "배당금 / 주",
+        "marketCap": "시가총액",
+        "compact": "간략 표시",
+        "totalReturn": "총수익률",
+        "growthMultiple": "성장 배수",
+        "riskAmount": "위험 금액",
+        "riskPerShare": "주당 위험",
+        "positionSize": "포지션 크기",
+        "positionValue": "포지션 금액",
+        "videoId": "동영상 ID",
+        "encryption": "암호화",
+        "hidden": "숨김",
+        "option": "옵션",
+        "maxResolution": "최대 해상도",
+        "highQuality": "고화질",
+        "mediumQuality": "중간 품질",
+        "defaultQuality": "기본"
+      },
+      "placeholders": {
+        "aiTopic": "온라인 도구 사이트 출시 문구",
+        "aiAudience": "개발자와 마케터",
+        "aiFormat": "예시가 포함된 글머리표 목록",
+        "aiConstraints": "꾸며낸 데이터는 피하고 짧게 유지",
+        "title": "how to build better online tools",
+        "page": "UTM Builder",
+        "keyword": "무료 UTM 빌더",
+        "benefit": "캠페인 추적 링크를 빠르게 만들기",
+        "metaAudience": "마케터와 창업자",
+        "ssid": "Office WiFi",
+        "password": "correct-horse-battery-staple"
+      }
     }
   }
 }
