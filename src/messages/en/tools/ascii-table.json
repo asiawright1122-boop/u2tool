@@ -1,15 +1,38 @@
 {
-  "detailed_description": "Our comprehensive ASCII table provides a complete reference for all 128 standard ASCII characters plus extended ASCII (128-255). ASCII (American Standard Code for Information Interchange) is the fundamental character encoding standard used in computers and electronic devices. This ASCII code chart displays each character with its decimal, hexadecimal, octal, and binary values - essential for programmers working with low-level data, network protocols, or file formats. The table includes control characters (0-31) like NULL, TAB, and newline; printable characters including letters, numbers, and symbols; and extended ASCII characters for special symbols. Use the search function to quickly find any character by its code or description. Perfect for debugging character encoding issues, understanding escape sequences, or learning about computer character representation. Bookmark this ASCII reference chart for quick access during development.",
+  "detailed_description": "The ASCII Table is a browser reference for character codes and byte-style representations. Browse standard ASCII values from 0 to 127, optionally show the 128 to 255 extended range, and search by decimal value, hex value, displayed character, or description. Each row shows decimal, hexadecimal, octal, binary, character, and a short label; clicking a row opens a selected-character panel with the same values. Printable characters can be copied directly from the character button. It is a quick reference for control characters, printable symbols, logs, tests, and encoding lessons.",
   "usage_steps": [
-    "Browse the ASCII table to find character codes",
-    "Use the search box to find specific characters by code or description",
-    "Click on any character to see all its code representations",
-    "Toggle 'Show Extended ASCII' to view characters 128-255",
-    "Use quick reference sections to jump to specific character ranges"
+    "Browse the table to find a character or code value.",
+    "Search by decimal number, hex value, character, or description.",
+    "Click a row to open the selected-character details panel.",
+    "Use Show Extended ASCII if you also want to display values 128-255.",
+    "Click a printable character button to copy that character to the clipboard."
   ],
   "usage_examples": [
-    "Find the ASCII code for newline character (decimal 10, hex 0A)",
-    "Look up the hex value for uppercase 'A' (decimal 65, hex 41)",
-    "Check control character codes for parsing text files and protocols"
+    "Find the newline character as decimal 10 and hex 0A.",
+    "Look up uppercase A as decimal 65, hex 41, octal 101, and binary 01000001.",
+    "Check control character labels when reading protocol or log documentation.",
+    "Copy a printable punctuation mark from the table while preparing test data."
+  ],
+  "faqs": [
+    {
+      "question": "What values are shown by default?",
+      "answer": "The default table shows standard ASCII values from 0 to 127."
+    },
+    {
+      "question": "Can I show values 128 to 255?",
+      "answer": "Yes. Enable Show Extended ASCII to add the 128-255 range displayed by the browser."
+    },
+    {
+      "question": "Which code formats are included?",
+      "answer": "Each row includes decimal, hexadecimal, octal, binary, the character display, and a short description."
+    },
+    {
+      "question": "Can I copy characters?",
+      "answer": "Yes. Printable characters can be copied by clicking the character button in the table."
+    },
+    {
+      "question": "Is extended ASCII the same in every encoding?",
+      "answer": "No. Values above 127 vary by code page, so treat the extended range as a convenient browser display, not a universal standard."
+    }
   ]
 }

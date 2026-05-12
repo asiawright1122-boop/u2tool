@@ -13,5 +13,27 @@
     "Roll a D20 with a +5 modifier for a game action.",
     "Use D100 for a percentile result during a role-playing session.",
     "Show students several D6 rolls while discussing random outcomes."
+  ],
+  "faqs": [
+    {
+      "question": "Which dice are available?",
+      "answer": "The tool includes D4, D6, D8, D10, D12, D20, and D100."
+    },
+    {
+      "question": "How many dice can I roll at once?",
+      "answer": "You can enter up to 20 dice for a single roll."
+    },
+    {
+      "question": "Can I add a modifier?",
+      "answer": "Yes. Enter a positive or negative modifier, and it will be included in the total."
+    },
+    {
+      "question": "Does it show individual results?",
+      "answer": "Yes. Each die result is shown separately, along with the final total."
+    },
+    {
+      "question": "How long is the roll history?",
+      "answer": "The page keeps the most recent rolls in the session history and shows the latest entries. You can clear it at any time."
+    }
   ]
 }

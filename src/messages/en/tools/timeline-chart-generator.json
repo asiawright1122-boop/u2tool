@@ -11,5 +11,27 @@
     "Summarize product milestones across a release cycle for an internal roadmap review.",
     "Visualize a hiring process from sourcing through offer in a people operations update.",
     "Create an event sequence for a case study, project recap, or launch post."
+  ],
+  "faqs": [
+    {
+      "question": "Can I add and remove events?",
+      "answer": "Yes. Use Add Event to insert another item and the remove button on an event card to delete it."
+    },
+    {
+      "question": "Which fields does each event use?",
+      "answer": "Each event has a year or date label, a title, and an optional description used in the chart tooltip."
+    },
+    {
+      "question": "Can the timeline be horizontal?",
+      "answer": "Yes. The direction control switches between vertical and horizontal timeline layouts."
+    },
+    {
+      "question": "What style options are available?",
+      "answer": "You can set a chart title and choose from built-in color themes such as default, ocean, sunset, and forest."
+    },
+    {
+      "question": "Can I export the timeline?",
+      "answer": "Yes. The current chart can be downloaded as PNG or SVG."
+    }
   ]
 }

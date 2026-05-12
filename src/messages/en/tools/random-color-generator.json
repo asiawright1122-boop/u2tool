@@ -11,5 +11,27 @@
     "Generate five HEX colors for a quick website mockup.",
     "Switch to RGB output before pasting values into a CSS prototype.",
     "Create a random palette strip for art direction notes or copy all HSL values for a design experiment."
+  ],
+  "faqs": [
+    {
+      "question": "How many colors can I generate?",
+      "answer": "You can generate 1 to 20 random color swatches at a time."
+    },
+    {
+      "question": "Which color formats are supported?",
+      "answer": "The same palette can be copied as HEX, RGB, or HSL values."
+    },
+    {
+      "question": "Can I copy one color instead of the whole palette?",
+      "answer": "Yes. Click an individual color card to copy that value, or use Copy All for the full list."
+    },
+    {
+      "question": "Does it check color contrast?",
+      "answer": "No. This generator only creates random colors and copyable values, so review readability separately before using a palette in a final interface."
+    },
+    {
+      "question": "Are palettes saved?",
+      "answer": "No. Generate and copy the values you want before leaving the page."
+    }
   ]
 }

@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The Candlestick Chart Generator is a specialized data visualization tool that transforms OHLC (Open-High-Low-Close) financial data into interactive candlestick charts using HTML5 Canvas and SVG rendering. Designed for algorithmic traders, quantitative analysts, and finance students, this tool supports technical analysis by rendering precise bullish and bearish patterns through customizable parameters. Users input time-series data in CSV/JSON formats containing timestamp, open, high, low, and close columns, then apply transformations like logarithmic scaling or volume-weighted average price overlays. The engine processes data points to generate candle bodies and wicks with pixel-accurate proportions, supporting intraday intervals down to 1-minute granularity. Advanced features include bidirectional scrolling for multi-year datasets, automatic pattern recognition highlighting Doji and Engulfing formations, and stylesheet-driven color schemes for differentiating uptrends/downtrends. Generated charts maintain vector fidelity for publication-quality exports in SVG format or rasterized PNG at 4K resolution, with optional embedding of metadata annotations directly into the image canvas.",
+  "detailed_description": "The Candlestick Chart Generator builds an interactive OHLC chart from editable rows in the browser. Start with the sample data or add your own date, open, close, low, and high values one row at a time. You can set a chart title, choose up and down candle colors, toggle MA5, MA10, and MA20 moving-average lines, zoom through the chart with the built-in ECharts data zoom, and export the current chart as PNG or SVG. It does not import CSV files, fetch market data, detect candlestick patterns, or provide investment advice.",
   "usage_steps": [
-    "1. Upload structured financial data via CSV/JSON containing columns: timestamp (ISO 8601), open, high, low, close, and optional volume values",
-    "2. Map input fields to chart parameters using the schema binding interface, specifying date parsing format (e.g., YYYY-MM-DD HH:mm)",
-    "3. Select time aggregation interval (1min/5min/1hr/daily) and set price scale type (linear/logarithmic) in the axis configuration panel",
-    "4. Customize candlestick appearance through the style editor: adjust wick thickness (1-5px), set bull/bear color codes (HEX/RGB), and enable volume bars",
-    "5. Activate technical overlays by toggling SMA (Simple Moving Average) controls and configuring period lengths (e.g., 9/20/50-day averages)",
-    "6. Export the rendered chart using the download controls, selecting either SVG format for scalable graphics or PNG at high-resolution resolution"
+    "Edit the chart title and choose the up and down candle colors.",
+    "Use the existing OHLC rows or click Add Data to insert another date.",
+    "Enter open, close, low, and high values for each row.",
+    "Toggle MA5, MA10, or MA20 moving-average lines as needed.",
+    "Review the chart preview and use the zoom slider for denser datasets.",
+    "Download the current chart as PNG or SVG."
   ],
   "usage_examples": [
-    "A day trader analyzing NASDAQ-100 intraday volatility patterns across multiple trading sessions by generating 5-minute interval charts with volume-weighted price overlays",
-    "A quantitative analyst backtesting a mean-reversion strategy by comparing historical candlestick formations against algorithmic buy/sell signals rendered as annotation markers",
-    "A financial educator creating textbook-quality chart examples that demonstrate specific reversal patterns like Hammer or Dark Cloud Cover with precise mathematical annotations",
-    "A portfolio manager evaluating sector rotation dynamics by generating synchronized weekly charts for technology, energy, and consumer staples ETFs with comparative scaling"
+    "Create a small sample price chart for a finance lesson.",
+    "Compare a few manually entered OHLC rows before adding the image to a report.",
+    "Export a simple candlestick SVG for documentation or a presentation.",
+    "Use MA5 and MA10 overlays to illustrate moving-average basics."
+  ],
+  "faqs": [
+    {
+      "question": "Can I upload CSV or JSON data?",
+      "answer": "No. This version uses an on-page row editor and a sample-data button."
+    },
+    {
+      "question": "Does it fetch live stock prices?",
+      "answer": "No. Enter the OHLC values yourself or load generated sample data."
+    },
+    {
+      "question": "Which moving averages are available?",
+      "answer": "You can toggle MA5, MA10, and MA20 lines calculated from the close values."
+    },
+    {
+      "question": "Can I export the chart?",
+      "answer": "Yes. The current ECharts preview can be downloaded as PNG or SVG."
+    },
+    {
+      "question": "Does it identify trading patterns?",
+      "answer": "No. It only visualizes the OHLC data you enter and is not investment advice."
+    }
   ]
 }

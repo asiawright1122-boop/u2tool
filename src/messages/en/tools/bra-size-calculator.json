@@ -1,17 +1,39 @@
 {
-  "detailed_description": "The Bra Size Calculator is a precision tool that converts anatomical chest measurements into standardized bra sizes using international sizing formulas. It employs two key inputs: band measurement (underbust circumference in inches or centimeters) and bust measurement (fullest point circumference). The algorithm subtracts band measurement from bust measurement to determine cup volume, then maps this against band size increments to output standardized sizes like 34B or 75C. Users require this tool for critical applications such as online lingerie purchases, medical garment fittings, and costume design where dimensional accuracy matters. The tool accounts for variations in sizing systems (US, EU, UK) and provides fractional band size adjustments for precision. Technical implementation uses adaptive calculation matrices to handle regional size chart discrepancies, ensuring proper fit metrics for diverse body geometries.",
+  "detailed_description": "The Bra Size Calculator estimates a starting bra size from two measurements: underbust and bust. Enter the values in centimeters or inches, and the tool rounds the band to a supported range, estimates the cup from the bust-underbust difference, and shows converted sizes for US, UK, EU, FR, AU, and JP systems. You can also switch to conversion mode, choose an existing band and cup, and compare the equivalent regional labels. Use the result as a shopping and fitting reference, not as a guaranteed fit for every brand or body shape.",
   "usage_steps": [
-    "Access the measurement interface and select preferred units (imperial or metric)",
-    "Enter underbust measurement in the 'Band Size' input field using precise tape measure positioning",
-    "Input bust circumference at the bust apex in the designated 'Bust Measurement' field",
-    "Choose desired sizing standard (US/EU/UK) from the dropdown menu for regional accuracy",
-    "Click 'Calculate' to execute the band-bust differential algorithm",
-    "Review size recommendation with cup letter conversion and band size tolerance indicators"
+    "Choose Calculate Mode when you want to estimate a size from measurements.",
+    "Select centimeters or inches before entering underbust and bust values.",
+    "Enter the underbust measurement and the fullest-bust measurement.",
+    "Review the estimated size and regional conversions.",
+    "Switch to Convert Mode if you already know a band and cup and want equivalent labels.",
+    "Use the fitting tips and compare the result with brand-specific size charts."
   ],
   "usage_examples": [
-    "A fashion designer verifying European size conversions for a US-based lingerie production run",
-    "A post-surgical patient determining compression garment sizing using medical tape measurements",
-    "A cosplayer creating armor components that require precise chest dimension mapping",
-    "A vintage clothing restorer adapting 1950s patterns to modern sizing specifications using original measurements"
+    "Estimate a starting size before comparing product pages from different regions.",
+    "Convert a US size into EU, FR, AU, JP, and UK labels for shopping research.",
+    "Check how a cup label changes when switching between common sizing systems.",
+    "Use the calculator as a quick reference before confirming fit with a brand chart."
+  ],
+  "faqs": [
+    {
+      "question": "Is the result a guaranteed fit?",
+      "answer": "No. It is an estimate based on two measurements. Brand sizing, style, fabric, and personal fit preferences can change the best size."
+    },
+    {
+      "question": "Which measurements do I need?",
+      "answer": "Use underbust and bust measurements, entered either in centimeters or inches."
+    },
+    {
+      "question": "Which size systems are shown?",
+      "answer": "The result includes US, UK, EU, FR, AU, and JP labels when the band and cup are available in the conversion table."
+    },
+    {
+      "question": "Can I convert an existing size?",
+      "answer": "Yes. Switch to Convert Mode, choose the band and cup, and the tool will show the regional equivalents."
+    },
+    {
+      "question": "Should I use this for medical garments?",
+      "answer": "No. For post-surgical or medical garments, follow professional fitting guidance and product-specific instructions."
+    }
   ]
 }
