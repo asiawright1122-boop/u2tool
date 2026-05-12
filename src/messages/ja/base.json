@@ -15638,7 +15638,10 @@
         "invalidYoutube": "有効な YouTube リンクまたは動画 ID を入力してください",
         "invalidNumbers": "有効な数値を入力してください",
         "wifiSsid": "WiFi 名を入力してください",
-        "missingConfig": "ツール設定が見つかりません"
+        "missingConfig": "ツール設定が見つかりません",
+        "invalidData": "有効なデータを入力してください",
+        "invalidCsv": "連絡先ヘッダー付きのCSV行を入力してください",
+        "unpayableDebt": "返済計画を作るには月々の支払いを増やすか利率を下げてください"
       },
       "fields": {
         "shares": "株数",
@@ -15672,7 +15675,38 @@
         "ssid": "WiFi 名",
         "password": "パスワード",
         "encryption": "暗号化",
-        "hidden": "非公開ネットワーク"
+        "hidden": "非公開ネットワーク",
+        "unit": "単位体系",
+        "weight": "体重",
+        "height": "身長",
+        "age": "年齢",
+        "sex": "性別",
+        "activity": "活動レベル",
+        "goal": "目標",
+        "debts": "借入",
+        "extraPayment": "毎月の追加返済",
+        "maintenanceCalories": "維持カロリー",
+        "dailyCalories": "1日の摂取カロリー",
+        "days": "日数",
+        "jobTitle": "職種",
+        "company": "会社",
+        "experience": "経験",
+        "skills": "スキル",
+        "achievement": "実績",
+        "reps": "回数",
+        "preset": "プリセット",
+        "widthMm": "幅（mm）",
+        "heightMm": "高さ（mm）",
+        "dpi": "DPI",
+        "background": "背景",
+        "amount": "金額",
+        "feePercent": "手数料率",
+        "fixedFee": "固定手数料",
+        "currency": "通貨",
+        "headers": "HTTPレスポンスヘッダー",
+        "csv": "CSV連絡先",
+        "delimiter": "区切り文字",
+        "vcardVersion": "vCardバージョン"
       },
       "options": {
         "writing": "文章作成",
@@ -15689,7 +15723,34 @@
         "lowercase": "小文字",
         "no": "いいえ",
         "yes": "はい",
-        "noPassword": "パスワードなし"
+        "noPassword": "パスワードなし",
+        "metric": "メートル法",
+        "imperial": "ヤード・ポンド法",
+        "male": "男性",
+        "female": "女性",
+        "sedentary": "座りがち",
+        "light": "軽い活動",
+        "moderate": "中程度",
+        "active": "活動的",
+        "veryActive": "非常に活動的",
+        "fatLoss": "減量",
+        "maintain": "維持",
+        "leanGain": "リーン増量",
+        "muscleGain": "筋量増加",
+        "usPassport": "米国パスポート 2 x 2インチ",
+        "euPassport": "EU 35 x 45 mm",
+        "ukPassport": "英国 35 x 45 mm",
+        "indiaPassport": "インド 51 x 51 mm",
+        "chinaVisa": "中国ビザ 33 x 48 mm",
+        "custom": "カスタム",
+        "white": "白",
+        "offWhite": "オフホワイト",
+        "lightBlue": "ライトブルー",
+        "comma": "カンマ",
+        "semicolon": "セミコロン",
+        "tab": "タブ",
+        "vcard3": "vCard 3.0",
+        "vcard4": "vCard 4.0"
       },
       "results": {
         "totalCost": "総コスト",
@@ -15714,7 +15775,38 @@
         "maxResolution": "最大解像度",
         "highQuality": "高画質",
         "mediumQuality": "中画質",
-        "defaultQuality": "デフォルト"
+        "defaultQuality": "デフォルト",
+        "calories": "カロリー",
+        "protein": "たんぱく質",
+        "carbs": "炭水化物",
+        "fat": "脂質",
+        "bmr": "BMR",
+        "tdee": "TDEE",
+        "dailyDeficit": "1日の赤字",
+        "weeklyDeficit": "週間赤字",
+        "estimatedChange": "推定変化",
+        "payoffMonths": "完済月数",
+        "totalInterest": "総利息",
+        "totalPaid": "総支払額",
+        "payoffOrder": "返済順",
+        "nextDebt": "次の借入",
+        "averageOneRepMax": "平均1RM",
+        "epley": "Epley",
+        "brzycki": "Brzycki",
+        "lombardi": "Lombardi",
+        "fee": "手数料",
+        "netReceived": "受取額",
+        "grossToReceive": "目標受取に必要な総額",
+        "pixelSize": "ピクセルサイズ",
+        "printSize": "印刷サイズ",
+        "aspectRatio": "アスペクト比",
+        "background": "背景",
+        "checklist": "チェックリスト",
+        "score": "スコア",
+        "passed": "合格",
+        "missing": "不足",
+        "contacts": "連絡先",
+        "vcardVersion": "vCardバージョン"
       },
       "placeholders": {
         "aiTopic": "オンラインツールサイトのローンチ文",
@@ -15727,8 +15819,79 @@
         "benefit": "キャンペーン追跡リンクをすばやく作成する",
         "metaAudience": "マーケターと創業者",
         "ssid": "Office WiFi",
-        "password": "correct-horse-battery-staple"
+        "password": "correct-horse-battery-staple",
+        "debtsCsv": "カードA,1200,24.9,40\nローンB,5000,8.5,120\nストアカード,450,29.9,25",
+        "jobTitle": "プロダクトマーケティングマネージャー",
+        "company": "Northstar Labs",
+        "experience": "B2B SaaS成長に5年携わった経験",
+        "skills": "ポジショニング、ライフサイクル施策、分析",
+        "achievement": "有望なパイプラインを32%増加",
+        "youtubeTopic": "小規模ビジネス向けAIツール",
+        "youtubeKeyword": "AI生産性ツール",
+        "youtubeAudience": "忙しい創業者",
+        "headers": "strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff",
+        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder"
       }
+    },
+    "calorie-deficit-calculator": {
+      "name": "カロリー赤字計算機",
+      "description": "摂取カロリーと維持カロリーから、日次赤字、週次赤字、体重変化の目安を計算します。",
+      "seo_title": "無料オンラインカロリー赤字計算機",
+      "seo_description": "摂取カロリーと維持カロリーから、日次赤字、週次赤字、体重変化の目安を計算します。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "cover-letter-generator": {
+      "name": "カバーレター生成ツール",
+      "description": "職種、会社、スキル、実績から簡潔なカバーレター草案を生成します。",
+      "seo_title": "無料オンラインカバーレター生成ツール",
+      "seo_description": "職種、会社、スキル、実績から簡潔なカバーレター草案を生成します。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "csv-to-vcard-converter": {
+      "name": "CSVからvCardへの変換ツール",
+      "description": "連絡先CSV行をアドレス帳やCRMインポート用のvCardテキストに変換します。",
+      "seo_title": "無料オンラインCSVからvCardへの変換ツール",
+      "seo_description": "連絡先CSV行をアドレス帳やCRMインポート用のvCardテキストに変換します。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "debt-snowball-calculator": {
+      "name": "借金スノーボール計算機",
+      "description": "スノーボール方式で返済順、月別スケジュール、利息見込みを計画します。",
+      "seo_title": "無料オンライン借金スノーボール計算機",
+      "seo_description": "スノーボール方式で返済順、月別スケジュール、利息見込みを計画します。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "macro-calculator": {
+      "name": "マクロ栄養計算機",
+      "description": "身体データと目標から、1日のカロリー、たんぱく質、炭水化物、脂質の目安を計算します。",
+      "seo_title": "無料オンラインマクロ栄養計算機",
+      "seo_description": "身体データと目標から、1日のカロリー、たんぱく質、炭水化物、脂質の目安を計算します。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "one-rep-max-calculator": {
+      "name": "1RM計算機",
+      "description": "重量と回数から一般的な筋力公式で1回最大重量を推定します。",
+      "seo_title": "無料オンライン1RM計算機",
+      "seo_description": "重量と回数から一般的な筋力公式で1回最大重量を推定します。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "passport-photo-maker": {
+      "name": "パスポート写真メーカー",
+      "description": "一般的な証明写真プリセットの寸法、ピクセルサイズ、背景チェックリストを計算します。",
+      "seo_title": "無料オンラインパスポート写真メーカー",
+      "seo_description": "一般的な証明写真プリセットの寸法、ピクセルサイズ、背景チェックリストを計算します。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "paypal-fee-calculator": {
+      "name": "PayPal手数料計算機",
+      "description": "一般的な料率でPayPal系の手数料、受取額、逆算金額を見積もります。",
+      "seo_title": "無料オンラインPayPal手数料計算機",
+      "seo_description": "一般的な料率でPayPal系の手数料、受取額、逆算金額を見積もります。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "security-headers-checker": {
+      "name": "セキュリティヘッダーチェッカー",
+      "description": "HTTPレスポンスヘッダーを貼り付け、一般的なセキュリティヘッダーと不足項目を確認します。",
+      "seo_title": "無料オンラインセキュリティヘッダーチェッカー",
+      "seo_description": "HTTPレスポンスヘッダーを貼り付け、一般的なセキュリティヘッダーと不足項目を確認します。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "youtube-title-generator": {
+      "name": "YouTubeタイトル生成ツール",
+      "description": "トピック、キーワード、視聴者、トーンからYouTubeタイトル案を生成します。",
+      "seo_title": "無料オンラインYouTubeタイトル生成ツール",
+      "seo_description": "トピック、キーワード、視聴者、トーンからYouTubeタイトル案を生成します。 登録不要でブラウザ上で無料で使えます。"
     }
   }
 }

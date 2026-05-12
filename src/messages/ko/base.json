@@ -15638,7 +15638,10 @@
         "invalidYoutube": "올바른 YouTube 링크 또는 동영상 ID를 입력하세요",
         "invalidNumbers": "올바른 숫자를 입력하세요",
         "wifiSsid": "WiFi 이름을 입력하세요",
-        "missingConfig": "도구 설정을 찾을 수 없습니다"
+        "missingConfig": "도구 설정을 찾을 수 없습니다",
+        "invalidData": "올바른 데이터를 입력하세요",
+        "invalidCsv": "연락처 헤더가 있는 CSV 행을 입력하세요",
+        "unpayableDebt": "상환 계획을 만들려면 월 납입액을 늘리거나 이자율을 낮추세요"
       },
       "fields": {
         "shares": "주식 수",
@@ -15672,7 +15675,38 @@
         "ssid": "WiFi 이름",
         "password": "비밀번호",
         "encryption": "암호화",
-        "hidden": "숨김 네트워크"
+        "hidden": "숨김 네트워크",
+        "unit": "단위 체계",
+        "weight": "체중",
+        "height": "키",
+        "age": "나이",
+        "sex": "성별",
+        "activity": "활동 수준",
+        "goal": "목표",
+        "debts": "부채",
+        "extraPayment": "월 추가 상환액",
+        "maintenanceCalories": "유지 칼로리",
+        "dailyCalories": "일일 섭취 칼로리",
+        "days": "일수",
+        "jobTitle": "직무명",
+        "company": "회사",
+        "experience": "경험",
+        "skills": "기술",
+        "achievement": "성과",
+        "reps": "반복 횟수",
+        "preset": "프리셋",
+        "widthMm": "너비(mm)",
+        "heightMm": "높이(mm)",
+        "dpi": "DPI",
+        "background": "배경",
+        "amount": "금액",
+        "feePercent": "수수료율",
+        "fixedFee": "고정 수수료",
+        "currency": "통화",
+        "headers": "HTTP 응답 헤더",
+        "csv": "CSV 연락처",
+        "delimiter": "구분자",
+        "vcardVersion": "vCard 버전"
       },
       "options": {
         "writing": "글쓰기",
@@ -15689,7 +15723,34 @@
         "lowercase": "소문자",
         "no": "아니요",
         "yes": "예",
-        "noPassword": "비밀번호 없음"
+        "noPassword": "비밀번호 없음",
+        "metric": "미터법",
+        "imperial": "영미식",
+        "male": "남성",
+        "female": "여성",
+        "sedentary": "좌식",
+        "light": "가벼운 활동",
+        "moderate": "보통 활동",
+        "active": "활동적",
+        "veryActive": "매우 활동적",
+        "fatLoss": "감량",
+        "maintain": "유지",
+        "leanGain": "린 벌크",
+        "muscleGain": "근육 증가",
+        "usPassport": "미국 여권 2 x 2인치",
+        "euPassport": "EU 35 x 45 mm",
+        "ukPassport": "영국 35 x 45 mm",
+        "indiaPassport": "인도 51 x 51 mm",
+        "chinaVisa": "중국 비자 33 x 48 mm",
+        "custom": "사용자 지정",
+        "white": "흰색",
+        "offWhite": "오프 화이트",
+        "lightBlue": "연한 파랑",
+        "comma": "쉼표",
+        "semicolon": "세미콜론",
+        "tab": "탭",
+        "vcard3": "vCard 3.0",
+        "vcard4": "vCard 4.0"
       },
       "results": {
         "totalCost": "총비용",
@@ -15714,7 +15775,38 @@
         "maxResolution": "최대 해상도",
         "highQuality": "고화질",
         "mediumQuality": "중간 품질",
-        "defaultQuality": "기본"
+        "defaultQuality": "기본",
+        "calories": "칼로리",
+        "protein": "단백질",
+        "carbs": "탄수화물",
+        "fat": "지방",
+        "bmr": "BMR",
+        "tdee": "TDEE",
+        "dailyDeficit": "일일 적자",
+        "weeklyDeficit": "주간 적자",
+        "estimatedChange": "예상 변화",
+        "payoffMonths": "상환 개월",
+        "totalInterest": "총 이자",
+        "totalPaid": "총 지불액",
+        "payoffOrder": "상환 순서",
+        "nextDebt": "다음 부채",
+        "averageOneRepMax": "평균 1RM",
+        "epley": "Epley",
+        "brzycki": "Brzycki",
+        "lombardi": "Lombardi",
+        "fee": "수수료",
+        "netReceived": "순수령액",
+        "grossToReceive": "목표 수령 총액",
+        "pixelSize": "픽셀 크기",
+        "printSize": "인쇄 크기",
+        "aspectRatio": "화면비",
+        "background": "배경",
+        "checklist": "체크리스트",
+        "score": "점수",
+        "passed": "통과",
+        "missing": "누락",
+        "contacts": "연락처",
+        "vcardVersion": "vCard 버전"
       },
       "placeholders": {
         "aiTopic": "온라인 도구 사이트 출시 문구",
@@ -15727,8 +15819,79 @@
         "benefit": "캠페인 추적 링크를 빠르게 만들기",
         "metaAudience": "마케터와 창업자",
         "ssid": "Office WiFi",
-        "password": "correct-horse-battery-staple"
+        "password": "correct-horse-battery-staple",
+        "debtsCsv": "카드A,1200,24.9,40\n대출B,5000,8.5,120\n스토어카드,450,29.9,25",
+        "jobTitle": "제품 마케팅 매니저",
+        "company": "Northstar Labs",
+        "experience": "B2B SaaS 성장 5년 경험",
+        "skills": "포지셔닝, 라이프사이클 캠페인, 분석",
+        "achievement": "검증된 파이프라인을 32% 늘림",
+        "youtubeTopic": "소규모 비즈니스를 위한 AI 도구",
+        "youtubeKeyword": "AI 생산성 도구",
+        "youtubeAudience": "바쁜 창업자",
+        "headers": "strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff",
+        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder"
       }
+    },
+    "calorie-deficit-calculator": {
+      "name": "칼로리 적자 계산기",
+      "description": "섭취 칼로리와 유지 칼로리로 일일 적자, 주간 적자, 예상 체중 변화를 계산합니다.",
+      "seo_title": "무료 온라인 칼로리 적자 계산기",
+      "seo_description": "섭취 칼로리와 유지 칼로리로 일일 적자, 주간 적자, 예상 체중 변화를 계산합니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "cover-letter-generator": {
+      "name": "커버레터 생성기",
+      "description": "직무, 회사, 역량, 성과를 바탕으로 간결한 커버레터 초안을 만듭니다.",
+      "seo_title": "무료 온라인 커버레터 생성기",
+      "seo_description": "직무, 회사, 역량, 성과를 바탕으로 간결한 커버레터 초안을 만듭니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "csv-to-vcard-converter": {
+      "name": "CSV to vCard 변환기",
+      "description": "연락처 CSV 행을 주소록과 CRM 가져오기에 쓸 vCard 텍스트로 변환합니다.",
+      "seo_title": "무료 온라인 CSV to vCard 변환기",
+      "seo_description": "연락처 CSV 행을 주소록과 CRM 가져오기에 쓸 vCard 텍스트로 변환합니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "debt-snowball-calculator": {
+      "name": "부채 스노볼 계산기",
+      "description": "스노볼 방식으로 상환 순서, 월별 일정, 이자 추정치를 계획합니다.",
+      "seo_title": "무료 온라인 부채 스노볼 계산기",
+      "seo_description": "스노볼 방식으로 상환 순서, 월별 일정, 이자 추정치를 계획합니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "macro-calculator": {
+      "name": "매크로 계산기",
+      "description": "신체 정보와 목표를 바탕으로 일일 칼로리와 단백질, 탄수화물, 지방 목표를 계산합니다.",
+      "seo_title": "무료 온라인 매크로 계산기",
+      "seo_description": "신체 정보와 목표를 바탕으로 일일 칼로리와 단백질, 탄수화물, 지방 목표를 계산합니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "one-rep-max-calculator": {
+      "name": "1회 최대 중량 계산기",
+      "description": "중량과 반복 횟수로 일반적인 근력 공식을 사용해 1RM을 추정합니다.",
+      "seo_title": "무료 온라인 1회 최대 중량 계산기",
+      "seo_description": "중량과 반복 횟수로 일반적인 근력 공식을 사용해 1RM을 추정합니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "passport-photo-maker": {
+      "name": "여권 사진 제작 도우미",
+      "description": "일반 문서 사진 규격의 치수, 픽셀 크기, 배경 체크리스트를 계산합니다.",
+      "seo_title": "무료 온라인 여권 사진 제작 도우미",
+      "seo_description": "일반 문서 사진 규격의 치수, 픽셀 크기, 배경 체크리스트를 계산합니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "paypal-fee-calculator": {
+      "name": "PayPal 수수료 계산기",
+      "description": "일반 요율로 PayPal식 처리 수수료, 순수령액, 역산 청구액을 추정합니다.",
+      "seo_title": "무료 온라인 PayPal 수수료 계산기",
+      "seo_description": "일반 요율로 PayPal식 처리 수수료, 순수령액, 역산 청구액을 추정합니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "security-headers-checker": {
+      "name": "보안 헤더 검사기",
+      "description": "HTTP 응답 헤더를 붙여 넣어 일반 보안 헤더, 누락된 보호, 빠른 수정점을 확인합니다.",
+      "seo_title": "무료 온라인 보안 헤더 검사기",
+      "seo_description": "HTTP 응답 헤더를 붙여 넣어 일반 보안 헤더, 누락된 보호, 빠른 수정점을 확인합니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "youtube-title-generator": {
+      "name": "YouTube 제목 생성기",
+      "description": "주제, 키워드, 시청자, 톤을 바탕으로 YouTube 제목 아이디어를 만듭니다.",
+      "seo_title": "무료 온라인 YouTube 제목 생성기",
+      "seo_description": "주제, 키워드, 시청자, 톤을 바탕으로 YouTube 제목 아이디어를 만듭니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
     }
   }
 }

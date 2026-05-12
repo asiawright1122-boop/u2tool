@@ -50,6 +50,42 @@ const POPULAR_UTILITY_PROBES: Record<string, ToolProbe> = {
     fields: ['accountSize', 'riskPercent'],
     results: ['riskAmount', 'positionSize'],
   },
+  'macro-calculator': {
+    fields: ['weight', 'goal'],
+    results: ['calories', 'protein'],
+  },
+  'debt-snowball-calculator': {
+    fields: ['debts', 'extraPayment'],
+    results: ['payoffMonths', 'totalInterest'],
+  },
+  'calorie-deficit-calculator': {
+    fields: ['maintenanceCalories', 'dailyCalories'],
+    results: ['dailyDeficit', 'estimatedChange'],
+  },
+  'cover-letter-generator': {
+    fields: ['jobTitle', 'company'],
+    actions: ['copy'],
+  },
+  'one-rep-max-calculator': {
+    fields: ['weight', 'reps'],
+    results: ['averageOneRepMax', 'epley'],
+  },
+  'passport-photo-maker': {
+    fields: ['preset', 'dpi'],
+    results: ['pixelSize', 'printSize'],
+  },
+  'paypal-fee-calculator': {
+    fields: ['amount', 'feePercent'],
+    results: ['fee', 'netReceived'],
+  },
+  'security-headers-checker': {
+    fields: ['headers'],
+    results: ['score', 'missing'],
+  },
+  'csv-to-vcard-converter': {
+    fields: ['csv', 'delimiter'],
+    results: ['contacts', 'vcardVersion'],
+  },
   'youtube-thumbnail-generator': {
     fields: ['youtubeVideo'],
     results: ['maxResolution', 'highQuality'],
@@ -67,6 +103,10 @@ const POPULAR_UTILITY_PROBES: Record<string, ToolProbe> = {
   'meta-description-generator': {
     fields: ['page', 'keyword'],
     results: ['option'],
+  },
+  'youtube-title-generator': {
+    fields: ['topic', 'keyword'],
+    actions: ['copy'],
   },
   'wifi-qr-code-generator': {
     fields: ['ssid', 'encryption'],

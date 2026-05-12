@@ -15856,7 +15856,10 @@
         "invalidYoutube": "Introduce un enlace o ID de YouTube válido",
         "invalidNumbers": "Introduce números válidos",
         "wifiSsid": "Introduce el nombre de la WiFi",
-        "missingConfig": "No se encontró la configuración de la herramienta"
+        "missingConfig": "No se encontró la configuración de la herramienta",
+        "invalidData": "Introduce datos válidos",
+        "invalidCsv": "Introduce filas CSV con encabezados de contacto",
+        "unpayableDebt": "Aumenta el pago mensual o reduce la tasa para crear un plan de pago"
       },
       "fields": {
         "shares": "Acciones",
@@ -15890,7 +15893,38 @@
         "ssid": "Nombre WiFi",
         "password": "Contraseña",
         "encryption": "Cifrado",
-        "hidden": "Red oculta"
+        "hidden": "Red oculta",
+        "unit": "Sistema de unidades",
+        "weight": "Peso",
+        "height": "Altura",
+        "age": "Edad",
+        "sex": "Sexo",
+        "activity": "Nivel de actividad",
+        "goal": "Objetivo",
+        "debts": "Deudas",
+        "extraPayment": "Pago mensual adicional",
+        "maintenanceCalories": "Calorías de mantenimiento",
+        "dailyCalories": "Calorías diarias",
+        "days": "Días",
+        "jobTitle": "Puesto",
+        "company": "Empresa",
+        "experience": "Experiencia",
+        "skills": "Habilidades",
+        "achievement": "Logro",
+        "reps": "Repeticiones",
+        "preset": "Formato",
+        "widthMm": "Ancho (mm)",
+        "heightMm": "Alto (mm)",
+        "dpi": "DPI",
+        "background": "Fondo",
+        "amount": "Importe",
+        "feePercent": "Porcentaje de comisión",
+        "fixedFee": "Comisión fija",
+        "currency": "Moneda",
+        "headers": "Encabezados HTTP de respuesta",
+        "csv": "Contactos CSV",
+        "delimiter": "Delimitador",
+        "vcardVersion": "Versión vCard"
       },
       "options": {
         "writing": "Escritura",
@@ -15907,7 +15941,34 @@
         "lowercase": "minúsculas",
         "no": "No",
         "yes": "Sí",
-        "noPassword": "Sin contraseña"
+        "noPassword": "Sin contraseña",
+        "metric": "Métrico",
+        "imperial": "Imperial",
+        "male": "Hombre",
+        "female": "Mujer",
+        "sedentary": "Sedentario",
+        "light": "Ligero",
+        "moderate": "Moderado",
+        "active": "Activo",
+        "veryActive": "Muy activo",
+        "fatLoss": "Pérdida de grasa",
+        "maintain": "Mantener",
+        "leanGain": "Ganancia magra",
+        "muscleGain": "Ganar músculo",
+        "usPassport": "Pasaporte EE. UU. 2 x 2 in",
+        "euPassport": "UE 35 x 45 mm",
+        "ukPassport": "Reino Unido 35 x 45 mm",
+        "indiaPassport": "India 51 x 51 mm",
+        "chinaVisa": "Visa China 33 x 48 mm",
+        "custom": "Personalizado",
+        "white": "Blanco",
+        "offWhite": "Blanco roto",
+        "lightBlue": "Azul claro",
+        "comma": "Coma",
+        "semicolon": "Punto y coma",
+        "tab": "Tabulador",
+        "vcard3": "vCard 3.0",
+        "vcard4": "vCard 4.0"
       },
       "results": {
         "totalCost": "Coste total",
@@ -15932,7 +15993,38 @@
         "maxResolution": "Resolución máxima",
         "highQuality": "Alta calidad",
         "mediumQuality": "Calidad media",
-        "defaultQuality": "Predeterminada"
+        "defaultQuality": "Predeterminada",
+        "calories": "Calorías",
+        "protein": "Proteína",
+        "carbs": "Carbohidratos",
+        "fat": "Grasa",
+        "bmr": "BMR",
+        "tdee": "TDEE",
+        "dailyDeficit": "Déficit diario",
+        "weeklyDeficit": "Déficit semanal",
+        "estimatedChange": "Cambio estimado",
+        "payoffMonths": "Meses para pagar",
+        "totalInterest": "Interés total",
+        "totalPaid": "Total pagado",
+        "payoffOrder": "Orden de pago",
+        "nextDebt": "Siguiente deuda",
+        "averageOneRepMax": "1RM promedio",
+        "epley": "Epley",
+        "brzycki": "Brzycki",
+        "lombardi": "Lombardi",
+        "fee": "Comisión",
+        "netReceived": "Neto recibido",
+        "grossToReceive": "Bruto para recibir objetivo",
+        "pixelSize": "Tamaño en píxeles",
+        "printSize": "Tamaño de impresión",
+        "aspectRatio": "Relación de aspecto",
+        "background": "Fondo",
+        "checklist": "Lista de verificación",
+        "score": "Puntuación",
+        "passed": "Correctos",
+        "missing": "Faltantes",
+        "contacts": "Contactos",
+        "vcardVersion": "Versión vCard"
       },
       "placeholders": {
         "aiTopic": "texto de lanzamiento para un sitio de herramientas online",
@@ -15945,8 +16037,79 @@
         "benefit": "crear enlaces de seguimiento de campañas rápido",
         "metaAudience": "especialistas en marketing y fundadores",
         "ssid": "WiFi Oficina",
-        "password": "correct-horse-battery-staple"
+        "password": "correct-horse-battery-staple",
+        "debtsCsv": "Tarjeta A,1200,24.9,40\nPréstamo B,5000,8.5,120\nTarjeta tienda,450,29.9,25",
+        "jobTitle": "Gerente de marketing de producto",
+        "company": "Northstar Labs",
+        "experience": "5 años impulsando productos B2B SaaS",
+        "skills": "posicionamiento, campañas de ciclo de vida, analítica",
+        "achievement": "aumenté el pipeline calificado un 32%",
+        "youtubeTopic": "herramientas de IA para pequeñas empresas",
+        "youtubeKeyword": "herramientas de productividad con IA",
+        "youtubeAudience": "fundadores ocupados",
+        "headers": "strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff",
+        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder"
       }
+    },
+    "calorie-deficit-calculator": {
+      "name": "Calculadora de déficit calórico",
+      "description": "Estima el déficit diario, semanal y el cambio de peso proyectado desde calorías de mantenimiento e ingesta.",
+      "seo_title": "Calculadora de déficit calórico gratis en línea",
+      "seo_description": "Estima el déficit diario, semanal y el cambio de peso proyectado desde calorías de mantenimiento e ingesta. Herramienta gratuita en el navegador, sin registro."
+    },
+    "cover-letter-generator": {
+      "name": "Generador de carta de presentación",
+      "description": "Genera un borrador breve de carta de presentación a partir del puesto, empresa, habilidades y logro.",
+      "seo_title": "Generador de carta de presentación gratis en línea",
+      "seo_description": "Genera un borrador breve de carta de presentación a partir del puesto, empresa, habilidades y logro. Herramienta gratuita en el navegador, sin registro."
+    },
+    "csv-to-vcard-converter": {
+      "name": "Convertidor de CSV a vCard",
+      "description": "Convierte filas CSV de contactos en texto vCard para libretas de direcciones e importaciones CRM.",
+      "seo_title": "Convertidor de CSV a vCard gratis en línea",
+      "seo_description": "Convierte filas CSV de contactos en texto vCard para libretas de direcciones e importaciones CRM. Herramienta gratuita en el navegador, sin registro."
+    },
+    "debt-snowball-calculator": {
+      "name": "Calculadora bola de nieve de deudas",
+      "description": "Planifica el orden de pago, la línea de tiempo mensual y el interés estimado con el método bola de nieve.",
+      "seo_title": "Calculadora bola de nieve de deudas gratis en línea",
+      "seo_description": "Planifica el orden de pago, la línea de tiempo mensual y el interés estimado con el método bola de nieve. Herramienta gratuita en el navegador, sin registro."
+    },
+    "macro-calculator": {
+      "name": "Calculadora de macros",
+      "description": "Calcula calorías diarias y objetivos de proteína, carbohidratos y grasa según tus datos y meta.",
+      "seo_title": "Calculadora de macros gratis en línea",
+      "seo_description": "Calcula calorías diarias y objetivos de proteína, carbohidratos y grasa según tus datos y meta. Herramienta gratuita en el navegador, sin registro."
+    },
+    "one-rep-max-calculator": {
+      "name": "Calculadora de una repetición máxima",
+      "description": "Estima tu 1RM con fórmulas comunes de fuerza a partir del peso y las repeticiones.",
+      "seo_title": "Calculadora de una repetición máxima gratis en línea",
+      "seo_description": "Estima tu 1RM con fórmulas comunes de fuerza a partir del peso y las repeticiones. Herramienta gratuita en el navegador, sin registro."
+    },
+    "passport-photo-maker": {
+      "name": "Creador de foto de pasaporte",
+      "description": "Calcula dimensiones, tamaño en píxeles y lista de fondo para formatos comunes de documentos.",
+      "seo_title": "Creador de foto de pasaporte gratis en línea",
+      "seo_description": "Calcula dimensiones, tamaño en píxeles y lista de fondo para formatos comunes de documentos. Herramienta gratuita en el navegador, sin registro."
+    },
+    "paypal-fee-calculator": {
+      "name": "Calculadora de comisiones PayPal",
+      "description": "Estima comisiones de procesamiento tipo PayPal, importe neto y monto bruto necesario.",
+      "seo_title": "Calculadora de comisiones PayPal gratis en línea",
+      "seo_description": "Estima comisiones de procesamiento tipo PayPal, importe neto y monto bruto necesario. Herramienta gratuita en el navegador, sin registro."
+    },
+    "security-headers-checker": {
+      "name": "Comprobador de encabezados de seguridad",
+      "description": "Pega encabezados HTTP y revisa protecciones comunes, faltantes y correcciones rápidas.",
+      "seo_title": "Comprobador de encabezados de seguridad gratis en línea",
+      "seo_description": "Pega encabezados HTTP y revisa protecciones comunes, faltantes y correcciones rápidas. Herramienta gratuita en el navegador, sin registro."
+    },
+    "youtube-title-generator": {
+      "name": "Generador de títulos para YouTube",
+      "description": "Genera ideas de títulos para YouTube a partir de tema, palabra clave, audiencia y tono.",
+      "seo_title": "Generador de títulos para YouTube gratis en línea",
+      "seo_description": "Genera ideas de títulos para YouTube a partir de tema, palabra clave, audiencia y tono. Herramienta gratuita en el navegador, sin registro."
     }
   }
 }

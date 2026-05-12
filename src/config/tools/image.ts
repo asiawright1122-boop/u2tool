@@ -41,4 +41,5 @@ export const IMAGE_TOOLS: Tool[] = [
   { slug: 'pixel-density-calculator', category: 'image', icon: 'image', component: 'PixelDensityCalculator' },
   { slug: 'dpi-calculator', category: 'image', icon: 'image', component: 'DpiCalculator' },
   { slug: 'base64-image-converter', category: 'image', icon: 'image', component: 'Base64ImageConverter' },
+  { slug: 'passport-photo-maker', category: 'image', icon: 'image', component: 'PopularUtilityTool', popular: true },
 ];

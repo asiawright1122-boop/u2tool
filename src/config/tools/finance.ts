@@ -24,4 +24,6 @@ export const FINANCE_TOOLS: Tool[] = [
   { slug: 'budget-variance-analyzer', category: 'finance', icon: 'wallet', component: 'BudgetVarianceAnalyzer' },
   { slug: 'cost-benefit-analyzer', category: 'finance', icon: 'wallet', component: 'CostBenefitAnalyzer' },
   { slug: 'financial-forecast-calculator', category: 'finance', icon: 'wallet', component: 'FinancialForecastCalculator' },
+  { slug: 'debt-snowball-calculator', category: 'finance', icon: 'wallet', component: 'PopularUtilityTool', popular: true },
+  { slug: 'paypal-fee-calculator', category: 'finance', icon: 'percent', component: 'PopularUtilityTool', popular: true },
 ];

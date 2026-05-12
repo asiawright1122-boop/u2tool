@@ -21392,7 +21392,10 @@
         "invalidYoutube": "请输入有效的 YouTube 视频链接或视频 ID",
         "invalidNumbers": "请输入有效数字",
         "wifiSsid": "请输入 WiFi 名称",
-        "missingConfig": "未找到工具配置"
+        "missingConfig": "未找到工具配置",
+        "invalidData": "请输入有效数据",
+        "invalidCsv": "请输入带联系人表头的 CSV 行",
+        "unpayableDebt": "请提高每月还款额或降低利率，才能生成还款计划"
       },
       "fields": {
         "shares": "股数",
@@ -21426,7 +21429,38 @@
         "ssid": "WiFi 名称",
         "password": "密码",
         "encryption": "加密类型",
-        "hidden": "隐藏网络"
+        "hidden": "隐藏网络",
+        "unit": "单位体系",
+        "weight": "体重",
+        "height": "身高",
+        "age": "年龄",
+        "sex": "性别",
+        "activity": "活动水平",
+        "goal": "目标",
+        "debts": "债务",
+        "extraPayment": "每月额外还款",
+        "maintenanceCalories": "维持热量",
+        "dailyCalories": "每日摄入热量",
+        "days": "天数",
+        "jobTitle": "职位名称",
+        "company": "公司",
+        "experience": "经验",
+        "skills": "技能",
+        "achievement": "成就",
+        "reps": "次数",
+        "preset": "预设",
+        "widthMm": "宽度（毫米）",
+        "heightMm": "高度（毫米）",
+        "dpi": "DPI",
+        "background": "背景",
+        "amount": "金额",
+        "feePercent": "手续费百分比",
+        "fixedFee": "固定费用",
+        "currency": "货币",
+        "headers": "HTTP 响应头",
+        "csv": "CSV 联系人",
+        "delimiter": "分隔符",
+        "vcardVersion": "vCard 版本"
       },
       "options": {
         "writing": "写作",
@@ -21443,7 +21477,34 @@
         "lowercase": "全部小写",
         "no": "否",
         "yes": "是",
-        "noPassword": "无密码"
+        "noPassword": "无密码",
+        "metric": "公制",
+        "imperial": "英制",
+        "male": "男性",
+        "female": "女性",
+        "sedentary": "久坐",
+        "light": "轻度活动",
+        "moderate": "中等活动",
+        "active": "高活动",
+        "veryActive": "非常活跃",
+        "fatLoss": "减脂",
+        "maintain": "维持",
+        "leanGain": "精益增肌",
+        "muscleGain": "增肌",
+        "usPassport": "美国护照 2 x 2 英寸",
+        "euPassport": "欧盟 35 x 45 毫米",
+        "ukPassport": "英国 35 x 45 毫米",
+        "indiaPassport": "印度 51 x 51 毫米",
+        "chinaVisa": "中国签证 33 x 48 毫米",
+        "custom": "自定义",
+        "white": "白色",
+        "offWhite": "近白色",
+        "lightBlue": "浅蓝色",
+        "comma": "逗号",
+        "semicolon": "分号",
+        "tab": "制表符",
+        "vcard3": "vCard 3.0",
+        "vcard4": "vCard 4.0"
       },
       "results": {
         "totalCost": "总成本",
@@ -21468,7 +21529,38 @@
         "maxResolution": "最高分辨率",
         "highQuality": "高清",
         "mediumQuality": "中等质量",
-        "defaultQuality": "默认"
+        "defaultQuality": "默认",
+        "calories": "热量",
+        "protein": "蛋白质",
+        "carbs": "碳水",
+        "fat": "脂肪",
+        "bmr": "基础代谢",
+        "tdee": "每日总消耗",
+        "dailyDeficit": "每日缺口",
+        "weeklyDeficit": "每周缺口",
+        "estimatedChange": "预计变化",
+        "payoffMonths": "还清月数",
+        "totalInterest": "总利息",
+        "totalPaid": "总支付",
+        "payoffOrder": "偿还顺序",
+        "nextDebt": "下一笔债务",
+        "averageOneRepMax": "平均 1RM",
+        "epley": "Epley",
+        "brzycki": "Brzycki",
+        "lombardi": "Lombardi",
+        "fee": "手续费",
+        "netReceived": "实际到账",
+        "grossToReceive": "达到目标需收款",
+        "pixelSize": "像素尺寸",
+        "printSize": "打印尺寸",
+        "aspectRatio": "宽高比",
+        "background": "背景",
+        "checklist": "检查清单",
+        "score": "得分",
+        "passed": "通过",
+        "missing": "缺失",
+        "contacts": "联系人",
+        "vcardVersion": "vCard 版本"
       },
       "placeholders": {
         "aiTopic": "一个在线工具网站的发布文案",
@@ -21481,8 +21573,79 @@
         "benefit": "快速生成活动追踪链接",
         "metaAudience": "营销人员和创业者",
         "ssid": "Office WiFi",
-        "password": "correct-horse-battery-staple"
+        "password": "correct-horse-battery-staple",
+        "debtsCsv": "信用卡A,1200,24.9,40\n贷款B,5000,8.5,120\n商店卡,450,29.9,25",
+        "jobTitle": "产品营销经理",
+        "company": "北星实验室",
+        "experience": "5 年 B2B SaaS 增长经验",
+        "skills": "定位、生命周期活动、数据分析",
+        "achievement": "将合格销售线索提升 32%",
+        "youtubeTopic": "适合小企业的 AI 工具",
+        "youtubeKeyword": "AI 效率工具",
+        "youtubeAudience": "忙碌的创业者",
+        "headers": "strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff",
+        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder"
       }
+    },
+    "calorie-deficit-calculator": {
+      "name": "热量缺口计算器",
+      "description": "根据摄入热量和维持热量估算每日缺口、每周缺口和体重变化。",
+      "seo_title": "免费在线热量缺口计算器",
+      "seo_description": "根据摄入热量和维持热量估算每日缺口、每周缺口和体重变化。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "cover-letter-generator": {
+      "name": "求职信生成器",
+      "description": "根据职位、公司、技能和成就生成简洁的求职信草稿。",
+      "seo_title": "免费在线求职信生成器",
+      "seo_description": "根据职位、公司、技能和成就生成简洁的求职信草稿。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "csv-to-vcard-converter": {
+      "name": "CSV 转 vCard 转换器",
+      "description": "将联系人 CSV 行转换为适用于通讯录和 CRM 导入的 vCard 文本。",
+      "seo_title": "免费在线CSV 转 vCard 转换器",
+      "seo_description": "将联系人 CSV 行转换为适用于通讯录和 CRM 导入的 vCard 文本。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "debt-snowball-calculator": {
+      "name": "债务雪球计算器",
+      "description": "用雪球法规划债务偿还顺序、月度时间线和利息估算。",
+      "seo_title": "免费在线债务雪球计算器",
+      "seo_description": "用雪球法规划债务偿还顺序、月度时间线和利息估算。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "macro-calculator": {
+      "name": "宏量营养计算器",
+      "description": "根据身体数据和目标计算每日热量、蛋白质、碳水和脂肪目标。",
+      "seo_title": "免费在线宏量营养计算器",
+      "seo_description": "根据身体数据和目标计算每日热量、蛋白质、碳水和脂肪目标。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "one-rep-max-calculator": {
+      "name": "一次最大重量计算器",
+      "description": "根据重量和次数，用常见力量公式估算一次最大重量。",
+      "seo_title": "免费在线一次最大重量计算器",
+      "seo_description": "根据重量和次数，用常见力量公式估算一次最大重量。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "passport-photo-maker": {
+      "name": "证件照制作助手",
+      "description": "计算常见证件照规格、像素尺寸和背景检查清单。",
+      "seo_title": "免费在线证件照制作助手",
+      "seo_description": "计算常见证件照规格、像素尺寸和背景检查清单。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "paypal-fee-calculator": {
+      "name": "PayPal 手续费计算器",
+      "description": "估算 PayPal 类处理费、实际到账和反推收款金额。",
+      "seo_title": "免费在线PayPal 手续费计算器",
+      "seo_description": "估算 PayPal 类处理费、实际到账和反推收款金额。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "security-headers-checker": {
+      "name": "安全响应头检查器",
+      "description": "粘贴 HTTP 响应头，检查常见安全头、缺失保护和快速修复建议。",
+      "seo_title": "免费在线安全响应头检查器",
+      "seo_description": "粘贴 HTTP 响应头，检查常见安全头、缺失保护和快速修复建议。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "youtube-title-generator": {
+      "name": "YouTube 标题生成器",
+      "description": "根据主题、关键词、受众和语气生成 YouTube 标题创意。",
+      "seo_title": "免费在线YouTube 标题生成器",
+      "seo_description": "根据主题、关键词、受众和语气生成 YouTube 标题创意。 免费在线使用，无需注册，直接在浏览器中完成。"
     }
   }
 }

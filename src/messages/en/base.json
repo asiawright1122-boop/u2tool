@@ -15665,7 +15665,10 @@
         "invalidYoutube": "Enter a valid YouTube video URL or video ID",
         "invalidNumbers": "Enter valid numbers",
         "wifiSsid": "Enter a WiFi name",
-        "missingConfig": "Tool configuration not found"
+        "missingConfig": "Tool configuration not found",
+        "invalidData": "Enter valid data",
+        "invalidCsv": "Enter CSV rows with contact headers",
+        "unpayableDebt": "Increase the monthly payment or lower the interest rate to create a payoff plan"
       },
       "fields": {
         "shares": "Shares",
@@ -15699,7 +15702,38 @@
         "ssid": "WiFi Name",
         "password": "Password",
         "encryption": "Encryption",
-        "hidden": "Hidden Network"
+        "hidden": "Hidden Network",
+        "unit": "Unit System",
+        "weight": "Weight",
+        "height": "Height",
+        "age": "Age",
+        "sex": "Sex",
+        "activity": "Activity Level",
+        "goal": "Goal",
+        "debts": "Debts",
+        "extraPayment": "Extra Monthly Payment",
+        "maintenanceCalories": "Maintenance Calories",
+        "dailyCalories": "Daily Calories",
+        "days": "Days",
+        "jobTitle": "Job Title",
+        "company": "Company",
+        "experience": "Experience",
+        "skills": "Skills",
+        "achievement": "Achievement",
+        "reps": "Reps",
+        "preset": "Preset",
+        "widthMm": "Width (mm)",
+        "heightMm": "Height (mm)",
+        "dpi": "DPI",
+        "background": "Background",
+        "amount": "Amount",
+        "feePercent": "Fee Percent",
+        "fixedFee": "Fixed Fee",
+        "currency": "Currency",
+        "headers": "HTTP Response Headers",
+        "csv": "CSV Contacts",
+        "delimiter": "Delimiter",
+        "vcardVersion": "vCard Version"
       },
       "options": {
         "writing": "Writing",
@@ -15716,7 +15750,34 @@
         "lowercase": "lowercase",
         "no": "No",
         "yes": "Yes",
-        "noPassword": "No password"
+        "noPassword": "No password",
+        "metric": "Metric",
+        "imperial": "Imperial",
+        "male": "Male",
+        "female": "Female",
+        "sedentary": "Sedentary",
+        "light": "Light",
+        "moderate": "Moderate",
+        "active": "Active",
+        "veryActive": "Very active",
+        "fatLoss": "Fat loss",
+        "maintain": "Maintain",
+        "leanGain": "Lean gain",
+        "muscleGain": "Muscle gain",
+        "usPassport": "US passport 2 x 2 in",
+        "euPassport": "EU 35 x 45 mm",
+        "ukPassport": "UK 35 x 45 mm",
+        "indiaPassport": "India 51 x 51 mm",
+        "chinaVisa": "China visa 33 x 48 mm",
+        "custom": "Custom",
+        "white": "White",
+        "offWhite": "Off-white",
+        "lightBlue": "Light blue",
+        "comma": "Comma",
+        "semicolon": "Semicolon",
+        "tab": "Tab",
+        "vcard3": "vCard 3.0",
+        "vcard4": "vCard 4.0"
       },
       "results": {
         "totalCost": "Total Cost",
@@ -15741,7 +15802,38 @@
         "maxResolution": "Max Resolution",
         "highQuality": "High Quality",
         "mediumQuality": "Medium Quality",
-        "defaultQuality": "Default"
+        "defaultQuality": "Default",
+        "calories": "Calories",
+        "protein": "Protein",
+        "carbs": "Carbs",
+        "fat": "Fat",
+        "bmr": "BMR",
+        "tdee": "TDEE",
+        "dailyDeficit": "Daily Deficit",
+        "weeklyDeficit": "Weekly Deficit",
+        "estimatedChange": "Estimated Change",
+        "payoffMonths": "Payoff Months",
+        "totalInterest": "Total Interest",
+        "totalPaid": "Total Paid",
+        "payoffOrder": "Payoff Order",
+        "nextDebt": "Next Debt",
+        "averageOneRepMax": "Average 1RM",
+        "epley": "Epley",
+        "brzycki": "Brzycki",
+        "lombardi": "Lombardi",
+        "fee": "Fee",
+        "netReceived": "Net Received",
+        "grossToReceive": "Gross to Receive Target",
+        "pixelSize": "Pixel Size",
+        "printSize": "Print Size",
+        "aspectRatio": "Aspect Ratio",
+        "background": "Background",
+        "checklist": "Checklist",
+        "score": "Score",
+        "passed": "Passed",
+        "missing": "Missing",
+        "contacts": "Contacts",
+        "vcardVersion": "vCard Version"
       },
       "placeholders": {
         "aiTopic": "launch copy for an online tools site",
@@ -15754,8 +15846,79 @@
         "benefit": "build campaign tracking links fast",
         "metaAudience": "marketers and founders",
         "ssid": "Office WiFi",
-        "password": "correct-horse-battery-staple"
+        "password": "correct-horse-battery-staple",
+        "debtsCsv": "Card A,1200,24.9,40\nLoan B,5000,8.5,120\nStore Card,450,29.9,25",
+        "jobTitle": "Product Marketing Manager",
+        "company": "Northstar Labs",
+        "experience": "5 years growing B2B SaaS products",
+        "skills": "positioning, lifecycle campaigns, analytics",
+        "achievement": "increased qualified pipeline by 32%",
+        "youtubeTopic": "AI tools for small business",
+        "youtubeKeyword": "AI productivity tools",
+        "youtubeAudience": "busy founders",
+        "headers": "strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff",
+        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder"
       }
+    },
+    "calorie-deficit-calculator": {
+      "name": "Calorie Deficit Calculator",
+      "description": "Estimate daily calorie deficit, weekly deficit, and projected weight change from intake and maintenance calories.",
+      "seo_title": "Free Calorie Deficit Calculator Online",
+      "seo_description": "Estimate daily calorie deficit, weekly deficit, and projected weight change from intake and maintenance calories. Free browser-based calorie deficit calculator with no signup required."
+    },
+    "cover-letter-generator": {
+      "name": "Cover Letter Generator",
+      "description": "Generate a concise cover letter draft from a role, company, skills, and achievement.",
+      "seo_title": "Free Cover Letter Generator Online",
+      "seo_description": "Generate a concise cover letter draft from a role, company, skills, and achievement. Free browser-based cover letter generator with no signup required."
+    },
+    "csv-to-vcard-converter": {
+      "name": "CSV to vCard Converter",
+      "description": "Convert contact CSV rows into vCard text for address books and CRM imports.",
+      "seo_title": "Free CSV to vCard Converter Online",
+      "seo_description": "Convert contact CSV rows into vCard text for address books and CRM imports. Free browser-based csv to vcard converter with no signup required."
+    },
+    "debt-snowball-calculator": {
+      "name": "Debt Snowball Calculator",
+      "description": "Plan a debt payoff order, monthly timeline, and interest estimate with the snowball method.",
+      "seo_title": "Free Debt Snowball Calculator Online",
+      "seo_description": "Plan a debt payoff order, monthly timeline, and interest estimate with the snowball method. Free browser-based debt snowball calculator with no signup required."
+    },
+    "macro-calculator": {
+      "name": "Macro Calculator",
+      "description": "Calculate daily calories and protein, carbs, and fat targets from your body stats and goal.",
+      "seo_title": "Free Macro Calculator Online",
+      "seo_description": "Calculate daily calories and protein, carbs, and fat targets from your body stats and goal. Free browser-based macro calculator with no signup required."
+    },
+    "one-rep-max-calculator": {
+      "name": "One Rep Max Calculator",
+      "description": "Estimate your one-rep max using common strength formulas from weight and reps.",
+      "seo_title": "Free One Rep Max Calculator Online",
+      "seo_description": "Estimate your one-rep max using common strength formulas from weight and reps. Free browser-based one rep max calculator with no signup required."
+    },
+    "passport-photo-maker": {
+      "name": "Passport Photo Maker",
+      "description": "Calculate passport photo dimensions, pixel size, and background checklist for common document presets.",
+      "seo_title": "Free Passport Photo Maker Online",
+      "seo_description": "Calculate passport photo dimensions, pixel size, and background checklist for common document presets. Free browser-based passport photo maker with no signup required."
+    },
+    "paypal-fee-calculator": {
+      "name": "PayPal Fee Calculator",
+      "description": "Estimate PayPal-style processing fees, net received, and gross-up amounts for common rates.",
+      "seo_title": "Free PayPal Fee Calculator Online",
+      "seo_description": "Estimate PayPal-style processing fees, net received, and gross-up amounts for common rates. Free browser-based paypal fee calculator with no signup required."
+    },
+    "security-headers-checker": {
+      "name": "Security Headers Checker",
+      "description": "Paste HTTP response headers and check common security headers, missing protections, and quick fixes.",
+      "seo_title": "Free Security Headers Checker Online",
+      "seo_description": "Paste HTTP response headers and check common security headers, missing protections, and quick fixes. Free browser-based security headers checker with no signup required."
+    },
+    "youtube-title-generator": {
+      "name": "YouTube Title Generator",
+      "description": "Generate YouTube title ideas from a topic, keyword, audience, and tone.",
+      "seo_title": "Free YouTube Title Generator Online",
+      "seo_description": "Generate YouTube title ideas from a topic, keyword, audience, and tone. Free browser-based youtube title generator with no signup required."
     }
   }
 }

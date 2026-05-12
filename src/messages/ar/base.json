@@ -15814,7 +15814,10 @@
         "invalidYoutube": "أدخل رابط YouTube أو معرّف فيديو صالحًا",
         "invalidNumbers": "أدخل أرقامًا صالحة",
         "wifiSsid": "أدخل اسم شبكة WiFi",
-        "missingConfig": "لم يتم العثور على إعدادات الأداة"
+        "missingConfig": "لم يتم العثور على إعدادات الأداة",
+        "invalidData": "أدخل بيانات صالحة",
+        "invalidCsv": "أدخل صفوف CSV مع رؤوس جهات الاتصال",
+        "unpayableDebt": "زِد الدفعة الشهرية أو خفّض الفائدة لإنشاء خطة سداد"
       },
       "fields": {
         "shares": "عدد الأسهم",
@@ -15848,7 +15851,38 @@
         "ssid": "اسم WiFi",
         "password": "كلمة المرور",
         "encryption": "التشفير",
-        "hidden": "شبكة مخفية"
+        "hidden": "شبكة مخفية",
+        "unit": "نظام الوحدات",
+        "weight": "الوزن",
+        "height": "الطول",
+        "age": "العمر",
+        "sex": "الجنس",
+        "activity": "مستوى النشاط",
+        "goal": "الهدف",
+        "debts": "الديون",
+        "extraPayment": "دفعة شهرية إضافية",
+        "maintenanceCalories": "سعرات الثبات",
+        "dailyCalories": "السعرات اليومية",
+        "days": "الأيام",
+        "jobTitle": "المسمى الوظيفي",
+        "company": "الشركة",
+        "experience": "الخبرة",
+        "skills": "المهارات",
+        "achievement": "الإنجاز",
+        "reps": "التكرارات",
+        "preset": "القالب",
+        "widthMm": "العرض (مم)",
+        "heightMm": "الارتفاع (مم)",
+        "dpi": "DPI",
+        "background": "الخلفية",
+        "amount": "المبلغ",
+        "feePercent": "نسبة الرسوم",
+        "fixedFee": "رسوم ثابتة",
+        "currency": "العملة",
+        "headers": "رؤوس استجابة HTTP",
+        "csv": "جهات اتصال CSV",
+        "delimiter": "الفاصل",
+        "vcardVersion": "إصدار vCard"
       },
       "options": {
         "writing": "كتابة",
@@ -15865,7 +15899,34 @@
         "lowercase": "أحرف صغيرة",
         "no": "لا",
         "yes": "نعم",
-        "noPassword": "بدون كلمة مرور"
+        "noPassword": "بدون كلمة مرور",
+        "metric": "متري",
+        "imperial": "إمبراطوري",
+        "male": "ذكر",
+        "female": "أنثى",
+        "sedentary": "قليل الحركة",
+        "light": "نشاط خفيف",
+        "moderate": "نشاط متوسط",
+        "active": "نشط",
+        "veryActive": "نشط جدًا",
+        "fatLoss": "خسارة الدهون",
+        "maintain": "ثبات",
+        "leanGain": "زيادة صافية",
+        "muscleGain": "زيادة عضلية",
+        "usPassport": "جواز أمريكي 2 x 2 بوصة",
+        "euPassport": "الاتحاد الأوروبي 35 x 45 مم",
+        "ukPassport": "المملكة المتحدة 35 x 45 مم",
+        "indiaPassport": "الهند 51 x 51 مم",
+        "chinaVisa": "تأشيرة الصين 33 x 48 مم",
+        "custom": "مخصص",
+        "white": "أبيض",
+        "offWhite": "أبيض مائل",
+        "lightBlue": "أزرق فاتح",
+        "comma": "فاصلة",
+        "semicolon": "فاصلة منقوطة",
+        "tab": "تبويب",
+        "vcard3": "vCard 3.0",
+        "vcard4": "vCard 4.0"
       },
       "results": {
         "totalCost": "التكلفة الإجمالية",
@@ -15890,7 +15951,38 @@
         "maxResolution": "أعلى دقة",
         "highQuality": "جودة عالية",
         "mediumQuality": "جودة متوسطة",
-        "defaultQuality": "افتراضي"
+        "defaultQuality": "افتراضي",
+        "calories": "السعرات",
+        "protein": "البروتين",
+        "carbs": "الكربوهيدرات",
+        "fat": "الدهون",
+        "bmr": "BMR",
+        "tdee": "TDEE",
+        "dailyDeficit": "العجز اليومي",
+        "weeklyDeficit": "العجز الأسبوعي",
+        "estimatedChange": "التغير المقدر",
+        "payoffMonths": "أشهر السداد",
+        "totalInterest": "إجمالي الفائدة",
+        "totalPaid": "إجمالي المدفوع",
+        "payoffOrder": "ترتيب السداد",
+        "nextDebt": "الدين التالي",
+        "averageOneRepMax": "متوسط 1RM",
+        "epley": "Epley",
+        "brzycki": "Brzycki",
+        "lombardi": "Lombardi",
+        "fee": "الرسوم",
+        "netReceived": "الصافي المستلم",
+        "grossToReceive": "الإجمالي للوصول للهدف",
+        "pixelSize": "حجم البكسل",
+        "printSize": "حجم الطباعة",
+        "aspectRatio": "نسبة العرض",
+        "background": "الخلفية",
+        "checklist": "قائمة التحقق",
+        "score": "النتيجة",
+        "passed": "ناجح",
+        "missing": "ناقص",
+        "contacts": "جهات الاتصال",
+        "vcardVersion": "إصدار vCard"
       },
       "placeholders": {
         "aiTopic": "نص إطلاق لموقع أدوات عبر الإنترنت",
@@ -15903,8 +15995,79 @@
         "benefit": "إنشاء روابط تتبع الحملات بسرعة",
         "metaAudience": "المسوقون والمؤسسون",
         "ssid": "Office WiFi",
-        "password": "correct-horse-battery-staple"
+        "password": "correct-horse-battery-staple",
+        "debtsCsv": "بطاقة أ,1200,24.9,40\nقرض ب,5000,8.5,120\nبطاقة متجر,450,29.9,25",
+        "jobTitle": "مدير تسويق المنتج",
+        "company": "Northstar Labs",
+        "experience": "5 سنوات في تنمية منتجات B2B SaaS",
+        "skills": "التموضع، حملات دورة الحياة، التحليلات",
+        "achievement": "رفعت خط الفرص المؤهلة بنسبة 32%",
+        "youtubeTopic": "أدوات AI للشركات الصغيرة",
+        "youtubeKeyword": "أدوات إنتاجية AI",
+        "youtubeAudience": "مؤسسون مشغولون",
+        "headers": "strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff",
+        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder"
       }
+    },
+    "calorie-deficit-calculator": {
+      "name": "حاسبة عجز السعرات",
+      "description": "قدّر العجز اليومي والأسبوعي والتغير المتوقع في الوزن من سعرات الثبات والتناول.",
+      "seo_title": "حاسبة عجز السعرات مجاني عبر الإنترنت",
+      "seo_description": "قدّر العجز اليومي والأسبوعي والتغير المتوقع في الوزن من سعرات الثبات والتناول. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "cover-letter-generator": {
+      "name": "مولد خطاب التقديم",
+      "description": "أنشئ مسودة خطاب تقديم موجزة من الوظيفة والشركة والمهارات والإنجاز.",
+      "seo_title": "مولد خطاب التقديم مجاني عبر الإنترنت",
+      "seo_description": "أنشئ مسودة خطاب تقديم موجزة من الوظيفة والشركة والمهارات والإنجاز. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "csv-to-vcard-converter": {
+      "name": "محول CSV إلى vCard",
+      "description": "حوّل صفوف جهات الاتصال CSV إلى نص vCard لدفاتر العناوين واستيراد CRM.",
+      "seo_title": "محول CSV إلى vCard مجاني عبر الإنترنت",
+      "seo_description": "حوّل صفوف جهات الاتصال CSV إلى نص vCard لدفاتر العناوين واستيراد CRM. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "debt-snowball-calculator": {
+      "name": "حاسبة كرة الثلج للديون",
+      "description": "خطط ترتيب سداد الديون والجدول الشهري وتقدير الفوائد بطريقة كرة الثلج.",
+      "seo_title": "حاسبة كرة الثلج للديون مجاني عبر الإنترنت",
+      "seo_description": "خطط ترتيب سداد الديون والجدول الشهري وتقدير الفوائد بطريقة كرة الثلج. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "macro-calculator": {
+      "name": "حاسبة الماكروز",
+      "description": "احسب السعرات اليومية وأهداف البروتين والكربوهيدرات والدهون بناءً على بيانات جسمك وهدفك.",
+      "seo_title": "حاسبة الماكروز مجاني عبر الإنترنت",
+      "seo_description": "احسب السعرات اليومية وأهداف البروتين والكربوهيدرات والدهون بناءً على بيانات جسمك وهدفك. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "one-rep-max-calculator": {
+      "name": "حاسبة الحد الأقصى لتكرار واحد",
+      "description": "قدّر 1RM باستخدام صيغ قوة شائعة من الوزن وعدد التكرارات.",
+      "seo_title": "حاسبة الحد الأقصى لتكرار واحد مجاني عبر الإنترنت",
+      "seo_description": "قدّر 1RM باستخدام صيغ قوة شائعة من الوزن وعدد التكرارات. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "passport-photo-maker": {
+      "name": "صانع صورة الجواز",
+      "description": "احسب أبعاد صورة الجواز وحجم البكسل وقائمة تحقق الخلفية للقياسات الشائعة.",
+      "seo_title": "صانع صورة الجواز مجاني عبر الإنترنت",
+      "seo_description": "احسب أبعاد صورة الجواز وحجم البكسل وقائمة تحقق الخلفية للقياسات الشائعة. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "paypal-fee-calculator": {
+      "name": "حاسبة رسوم PayPal",
+      "description": "قدّر رسوم معالجة شبيهة بـ PayPal وصافي الاستلام والمبلغ الإجمالي المطلوب.",
+      "seo_title": "حاسبة رسوم PayPal مجاني عبر الإنترنت",
+      "seo_description": "قدّر رسوم معالجة شبيهة بـ PayPal وصافي الاستلام والمبلغ الإجمالي المطلوب. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "security-headers-checker": {
+      "name": "فاحص رؤوس الأمان",
+      "description": "الصق رؤوس استجابة HTTP وافحص رؤوس الأمان الشائعة والحمايات الناقصة والإصلاحات السريعة.",
+      "seo_title": "فاحص رؤوس الأمان مجاني عبر الإنترنت",
+      "seo_description": "الصق رؤوس استجابة HTTP وافحص رؤوس الأمان الشائعة والحمايات الناقصة والإصلاحات السريعة. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "youtube-title-generator": {
+      "name": "مولد عناوين YouTube",
+      "description": "أنشئ أفكار عناوين YouTube من الموضوع والكلمة المفتاحية والجمهور والنبرة.",
+      "seo_title": "مولد عناوين YouTube مجاني عبر الإنترنت",
+      "seo_description": "أنشئ أفكار عناوين YouTube من الموضوع والكلمة المفتاحية والجمهور والنبرة. أداة مجانية في المتصفح بدون تسجيل."
     }
   }
 }

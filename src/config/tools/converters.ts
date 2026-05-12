@@ -59,4 +59,5 @@ export const CONVERTERS_TOOLS: Tool[] = [
   { slug: 'vcard-parser', category: 'converters', icon: 'arrow-left-right', component: 'VcardParser' },
   { slug: 'json-to-protobuf-converter', category: 'converters', icon: 'arrow-left-right', component: 'JsonToProtobufConverter' },
   { slug: 'markdown-to-html-converter', category: 'converters', icon: 'arrow-left-right', component: 'MarkdownToHtmlConverter' },
+  { slug: 'csv-to-vcard-converter', category: 'converters', icon: 'arrow-left-right', component: 'PopularUtilityTool', popular: true },
 ];

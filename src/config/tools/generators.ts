@@ -54,4 +54,5 @@ export const GENERATORS_TOOLS: Tool[] = [
   { slug: 'changelog-generator-advanced', category: 'generators', icon: 'zap', component: 'ChangelogGeneratorAdvanced' },
   { slug: 'document-outline-generator', category: 'generators', icon: 'zap', component: 'DocumentOutlineGenerator' },
   { slug: 'table-of-contents-generator', category: 'generators', icon: 'zap', component: 'TableOfContentsGenerator' },
+  { slug: 'youtube-title-generator', category: 'generators', icon: 'text', component: 'PopularUtilityTool', popular: true },
 ];
