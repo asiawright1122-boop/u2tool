@@ -2,6 +2,50 @@
 
 This workflow keeps new tools from becoming a manual 10-locale copy job.
 
+## Fast Path: Batch Launch Pipeline
+
+Use the batch pipeline when launching one or more SEO tool pages from a candidate list:
+
+```bash
+npm run tools:launch -- --input path/to/tool-launch-batch.json
+```
+
+The input can be a single tool object, an array of tool objects, or:
+
+```json
+{
+  "tools": []
+}
+```
+
+See `docs/examples/tool-launch-batch.example.json` for the full 10-locale shape.
+
+The pipeline runs these steps in order:
+
+- writes run artifacts to `.tmp/tool-launches/<batch-name>-<timestamp>/`
+- normalizes each spec with `tools:localize-spec`
+- stops before file changes if any locale copy is missing and writes AI/content briefs in the run directory
+- onboards every localized spec with `tools:onboard`
+- regenerates `src/components/tools/ToolImportMap.ts` once per batch
+- writes `indexnow-urls.txt` containing every launched locale URL
+- writes `report.md` with the release commands for QA, build, Cloudflare deploy, and IndexNow
+
+QA modes:
+
+```bash
+npm run tools:launch -- --input path/to/batch.json --qa=none
+npm run tools:launch -- --input path/to/batch.json --qa=light
+npm run tools:launch -- --input path/to/batch.json --qa=full
+```
+
+`light` is the default and runs missing-key checks, content trust audit, `git diff --check`, and changed-tool detection. `full` additionally runs Astro check, SEO/runtime governance, localized rendering for the changed tools, build, rendered SEO, and Worker SSR validation.
+
+After a successful launch and deployment, submit only the generated URLs:
+
+```bash
+npm run submit:indexnow -- --urls-file .tmp/tool-launches/<run>/indexnow-urls.txt
+```
+
 ## 1. Create a Tool Spec
 
 Create a JSON file with one tool entry and all 10 locale copies. Shortened example:

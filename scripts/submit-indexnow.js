@@ -67,9 +67,12 @@ function parseArgs(argv) {
     limit: DEFAULT_LIMIT,
     selectedLocales: DEFAULT_LOCALES,
     siteUrl: DEFAULT_SITE_URL,
+    urlsFile: '',
+    explicitUrls: [],
   };
 
-  for (const rawArg of argv) {
+  for (let index = 0; index < argv.length; index += 1) {
+    const rawArg = argv[index];
     if (rawArg === '--dry-run') {
       args.dryRun = true;
       continue;
@@ -101,6 +104,41 @@ function parseArgs(argv) {
       if (siteUrl) {
         args.siteUrl = siteUrl;
       }
+      continue;
+    }
+
+    if (rawArg.startsWith('--urls-file=')) {
+      args.urlsFile = rawArg.slice('--urls-file='.length).trim();
+      continue;
+    }
+
+    if (rawArg === '--urls-file') {
+      const urlsFile = argv[index + 1] || '';
+      if (!urlsFile || urlsFile.startsWith('-')) {
+        throw new Error('Use --urls-file=path/to/urls.txt or --urls-file path/to/urls.txt');
+      }
+      args.urlsFile = urlsFile;
+      index += 1;
+      continue;
+    }
+
+    if (rawArg.startsWith('--url=')) {
+      const url = rawArg.slice('--url='.length).trim();
+      if (url) {
+        args.explicitUrls.push(url);
+      }
+      continue;
+    }
+
+    if (rawArg === '--url') {
+      const url = (argv[index + 1] || '').trim();
+      if (!url || url.startsWith('-')) {
+        throw new Error('Use --url=https://example.com/page/ or --url https://example.com/page/');
+      }
+      if (url) {
+        args.explicitUrls.push(url);
+      }
+      index += 1;
     }
   }
 
@@ -193,6 +231,66 @@ function buildPriorityUrls(siteUrl, selectedLocales, limit) {
   return Array.from(urls).slice(0, limit);
 }
 
+function parseUrlsFile(filePath) {
+  const absolutePath = path.resolve(process.cwd(), filePath);
+  const content = fs.readFileSync(absolutePath, 'utf8').trim();
+  if (!content) {
+    return [];
+  }
+
+  if (content.startsWith('[')) {
+    const parsed = JSON.parse(content);
+    if (!Array.isArray(parsed)) {
+      throw new Error(`URLs file must contain a JSON array or newline-delimited URLs: ${filePath}`);
+    }
+    return parsed.map((item) => String(item).trim()).filter(Boolean);
+  }
+
+  return content
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => line && !line.startsWith('#'));
+}
+
+function resolveSubmitUrls(args) {
+  const fileUrls = args.urlsFile ? parseUrlsFile(args.urlsFile) : [];
+  if (args.urlsFile && fileUrls.length === 0) {
+    throw new Error(`URLs file is empty: ${args.urlsFile}`);
+  }
+
+  const customUrls = [
+    ...fileUrls,
+    ...args.explicitUrls,
+  ];
+
+  if (customUrls.length === 0) {
+    return {
+      source: 'priority',
+      urls: buildPriorityUrls(args.siteUrl, args.selectedLocales, args.limit),
+    };
+  }
+
+  const siteHost = new URL(args.siteUrl).host;
+  const deduped = [];
+  const seen = new Set();
+  for (const rawUrl of customUrls) {
+    const url = new URL(rawUrl);
+    if (url.host !== siteHost) {
+      throw new Error(`Custom URL host must match ${siteHost}: ${rawUrl}`);
+    }
+    const normalized = url.toString();
+    if (!seen.has(normalized)) {
+      seen.add(normalized);
+      deduped.push(normalized);
+    }
+  }
+
+  return {
+    source: args.urlsFile ? `urls-file:${args.urlsFile}` : 'explicit-urls',
+    urls: deduped.slice(0, args.limit),
+  };
+}
+
 function chunkUrls(urls, chunkSize = MAX_URLS_PER_REQUEST) {
   const chunks = [];
   for (let index = 0; index < urls.length; index += chunkSize) {
@@ -281,13 +379,15 @@ function submitUrlBatch(engine, keyConfig, host, urls) {
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   const keyConfig = resolveIndexNowKey(args.siteUrl);
-  const urls = buildPriorityUrls(args.siteUrl, args.selectedLocales, args.limit);
+  const submitUrls = resolveSubmitUrls(args);
+  const urls = submitUrls.urls;
   const host = new URL(args.siteUrl).host;
 
   console.log('=== IndexNow Recovery Submit ===\n');
   console.log(`Site URL: ${args.siteUrl}`);
   console.log(`Key location: ${keyConfig.keyLocation}`);
   console.log(`Locales: ${args.selectedLocales.join(', ')}`);
+  console.log(`URL source: ${submitUrls.source}`);
   console.log(`URLs prepared: ${urls.length}`);
   console.log(`Mode: ${args.dryRun ? 'dry-run' : 'submit'}\n`);
 

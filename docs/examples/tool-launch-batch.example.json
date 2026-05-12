@@ -1,0 +1,54 @@
+{
+  "tools": [
+    {
+      "slug": "example-calculator",
+      "category": "finance",
+      "icon": "calculator",
+      "component": "PopularUtilityTool",
+      "popular": true,
+      "search_intent": "free example calculator online",
+      "locales": {
+        "en": {
+          "name": "Example Calculator",
+          "description": "Calculate an example result in your browser."
+        },
+        "zh": {
+          "name": "示例计算器",
+          "description": "直接在浏览器中计算示例结果。"
+        },
+        "ja": {
+          "name": "サンプル計算機",
+          "description": "ブラウザでサンプル結果を計算します。"
+        },
+        "ko": {
+          "name": "예제 계산기",
+          "description": "브라우저에서 예제 결과를 계산합니다."
+        },
+        "es": {
+          "name": "Calculadora de ejemplo",
+          "description": "Calcula un resultado de ejemplo en el navegador."
+        },
+        "pt": {
+          "name": "Calculadora de exemplo",
+          "description": "Calcule um resultado de exemplo no navegador."
+        },
+        "fr": {
+          "name": "Calculateur d’exemple",
+          "description": "Calculez un résultat d’exemple dans le navigateur."
+        },
+        "de": {
+          "name": "Beispielrechner",
+          "description": "Berechne ein Beispielergebnis direkt im Browser."
+        },
+        "ru": {
+          "name": "Пример калькулятора",
+          "description": "Рассчитайте примерный результат прямо в браузере."
+        },
+        "ar": {
+          "name": "حاسبة مثال",
+          "description": "احسب نتيجة مثال مباشرة في المتصفح."
+        }
+      }
+    }
+  ]
+}

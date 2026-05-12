@@ -57,6 +57,7 @@
     "i18n:check-missing-keys": "npx tsx scripts/maintenance/fill-missing-translation-keys.ts --check",
     "tools:localize-spec": "npx tsx scripts/tools/localize-tool-spec.ts",
     "tools:onboard": "npx tsx scripts/tools/onboard-tool.ts",
+    "tools:launch": "npx tsx scripts/tools/launch-tool-batch.ts",
     "tools:generate-import-map": "npx tsx scripts/generate-tool-import-map.ts",
     "spec:list": "npx tsx scripts/spec-lifecycle/list-active-specs.ts",
     "spec:archive": "npx tsx scripts/spec-lifecycle/archive-spec.ts",
