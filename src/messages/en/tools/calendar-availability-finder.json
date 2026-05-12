@@ -1,15 +1,34 @@
 {
-  "detailed_description": "Calendar Availability Finder helps find common free time slots when scheduling with multiple people.",
+  "detailed_description": "Calendar Availability Finder compares each participant's busy blocks against shared work hours and a minimum meeting length. Rename the sample participants, add or remove busy times, and the tool merges overlaps to show common open slots plus a visual timeline. It runs in the browser and does not connect to Google Calendar, Outlook, or any external calendar account.",
   "usage_steps": [
-    "Add participant availability",
-    "Set meeting duration",
-    "Specify date range",
-    "View common slots",
-    "Select meeting time"
+    "Set the workday start and end time for the schedule you want to compare.",
+    "Choose the minimum meeting duration, using at least 15 minutes.",
+    "Rename, add, or remove participants as needed.",
+    "Select a participant and add busy start and end times for meetings, interviews, or breaks.",
+    "Review the available slots and timeline, then copy the open times if you need to share them."
   ],
   "usage_examples": [
-    "Find team meeting times",
-    "Schedule interviews",
-    "Coordinate group events"
+    "Find a 30-minute team meeting window after entering everyone's busy blocks.",
+    "Compare interview panel availability without connecting private calendars.",
+    "Plan office hours around lunch breaks and existing calls.",
+    "Copy the remaining free slots into an email or chat thread."
+  ],
+  "faqs": [
+    {
+      "question": "Does it sync with Google Calendar or Outlook?",
+      "answer": "No. It is a manual availability calculator. Enter busy times yourself, and the calculation stays in the browser."
+    },
+    {
+      "question": "Can I add more than the sample participants?",
+      "answer": "Yes. Use Add Person to create more participants, then rename them and add their busy slots."
+    },
+    {
+      "question": "How are overlapping busy times handled?",
+      "answer": "Overlapping or adjacent busy blocks are merged before the tool searches for common open time."
+    },
+    {
+      "question": "What if no slots are found?",
+      "answer": "Try widening the work hours, shortening the minimum duration, or removing busy blocks that do not apply."
+    }
   ]
 }

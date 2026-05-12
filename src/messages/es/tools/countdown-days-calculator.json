@@ -1,17 +1,34 @@
 {
-  "detailed_description": "El Calculador de Días de Cuenta Regresiva es una herramienta técnica que permite determinar con precisión la diferencia en días entre una fecha de referencia y la fecha actual o una fecha futura. Internamente, el sistema utiliza algoritmos de procesamiento de fechas basados en el estándar ISO 8601, manejando conversiones entre zonas horarias (UTC/GMT) y ajustando automáticamente fechas inválidas mediante técnicas de validación de calendario gregoriano. La herramienta es indispensable para desarrolladores que necesitan calcular plazos en aplicaciones de gestión de proyectos, estudiantes que planifican exámenes o equipos que monitorean ciclos de producción. Su motor matemático considera años bisiestos, horas no triviales (con opciones de ajuste de horario de verano) y realiza cálculos en milisegundos para garantizar una precisión del 100%. Al integrar un parser de fechas robusto, acepta entradas en formatos como YYYY-MM-DD, DD/MM/YYYY o incluso descripciones textuales relativas ('próximo lunes'), convirtiéndolas en objetos Date de JavaScript para su procesamiento posterior.",
+  "detailed_description": "La calculadora de días de cuenta regresiva te permite guardar varios eventos con nombre y ver cuántos días faltan para cada fecha objetivo, o cuántos días han pasado si la fecha ya quedó atrás. Escribe el nombre del evento y selecciona una fecha, o usa los accesos rápidos para Año Nuevo, Navidad y San Valentín. La página se actualiza cada segundo, guarda las cuentas regresivas en el almacenamiento local del navegador y muestra días, meses y semanas aproximados, horas, minutos y segundos.",
   "usage_steps": [
-    "Selecciona la fecha objetivo usando el selector de calendario o introduce manualmente en formato DD/MM/YYYY.",
-    "Elige entre las opciones 'Contar días hasta esta fecha' o 'Contar días desde esta fecha' mediante botones de radio.",
-    "Activa la casilla 'Ajustar horario de verano' si requieres cálculos precisos con cambios de zona horaria.",
-    "Haz clic en 'Calcular Diferencia' para ejecutar el algoritmo de comparación de marcas de tiempo.",
-    "Consulta el resultado detallado en el panel de salida, que muestra días totales, semanas y horas restantes.",
-    "Usa el botón 'Copiar al Portapapeles' para exportar el resultado en formato JSON o CSV compatible con scripts."
+    "Escribe un nombre claro para el evento, por ejemplo Lanzamiento o Examen final.",
+    "Selecciona la fecha objetivo con el selector de fecha.",
+    "Haz clic en Añadir cuenta regresiva para guardarla en la página.",
+    "Usa los botones rápidos de Año Nuevo, Navidad o San Valentín cuando te sirvan.",
+    "Revisa la actualización en vivo de días, horas, minutos y segundos, o elimina una cuenta cuando ya no la necesites."
   ],
   "usage_examples": [
-    "Un desarrollador web calcula 42 días restantes hasta la fecha límite de entrega de un proyecto (2023-12-15).",
-    "Un estudiante determina que faltan 18 días hábiles para su examen final programado el 2023-11-30.",
-    "Una agencia de viajes implementa el tool para mostrar '87 días para reservar con descuento' antes de un viaje a Cancún.",
-    "Un ingeniero de datos usa el calculador para verificar que un servidor lleva 135 días activo desde su última actualización (2023-07-01)."
+    "Seguir los días que faltan para el lanzamiento de un proyecto.",
+    "Guardar cuentas separadas para exámenes, viajes, renovaciones y cumpleaños.",
+    "Comprobar cuánto tiempo ha pasado desde un hito anterior.",
+    "Mantener una lista simple de eventos en el navegador sin crear una cuenta."
+  ],
+  "faqs": [
+    {
+      "question": "¿Las cuentas se guardan al cerrar la página?",
+      "answer": "Sí. Se guardan en el almacenamiento local del navegador en el mismo dispositivo y navegador."
+    },
+    {
+      "question": "¿Calcula días laborables?",
+      "answer": "No. Muestra días naturales y un desglose de tiempo en vivo, no calendarios laborales ni festivos."
+    },
+    {
+      "question": "¿Por qué los meses y semanas son aproximados?",
+      "answer": "La herramienta divide los días totales en meses simples de 30 días y semanas de 7 días para que el resultado sea fácil de leer."
+    },
+    {
+      "question": "¿Puedo llevar varias cuentas regresivas?",
+      "answer": "Sí. Puedes añadir varios eventos con nombre y eliminar los que ya no necesites."
+    }
   ]
 }

@@ -1,15 +1,34 @@
 {
-  "detailed_description": "SQL Query Optimizer analyzes your SQL queries and provides optimization suggestions for better performance.",
+  "detailed_description": "SQL Query Optimizer gives a quick browser-side review of a SQL statement. Paste a query or load the example to get a score, formatted SQL, and practical suggestions for common patterns such as SELECT *, unbounded SELECT results, UPDATE or DELETE without WHERE, leading-wildcard LIKE filters, functions in WHERE clauses, OR-heavy filters, and columns that may deserve index review. It is a static helper, not a database EXPLAIN plan or a replacement for testing against your real schema and data.",
   "usage_steps": [
-    "Paste SQL query",
-    "Select database type",
-    "Click Optimize",
-    "View suggestions",
-    "Apply changes"
+    "Paste a SQL statement into the editor or click Load Example.",
+    "Review the performance score that appears automatically.",
+    "Read each warning, improvement, or info suggestion.",
+    "Compare the formatted query output with your original SQL.",
+    "Copy the formatted query and test any changes in your own database environment."
   ],
   "usage_examples": [
-    "Optimize slow SELECT",
-    "Get index recommendations",
-    "Rewrite subqueries"
+    "Spot a SELECT * query before it reaches a production API endpoint.",
+    "Catch a DELETE statement that is missing a WHERE clause.",
+    "Notice when LOWER(email) in a WHERE filter may prevent a normal index from helping.",
+    "Format a query before adding it to a pull request or ticket."
+  ],
+  "faqs": [
+    {
+      "question": "Does this run my query against a database?",
+      "answer": "No. It only scans the SQL text in the browser and returns static suggestions."
+    },
+    {
+      "question": "Can it replace EXPLAIN ANALYZE?",
+      "answer": "No. Use your database's EXPLAIN tools for real execution plans, row estimates, and timing."
+    },
+    {
+      "question": "What kind of index advice does it provide?",
+      "answer": "It extracts fields from WHERE and ORDER BY clauses and suggests reviewing matching indexes. It cannot verify whether an index exists."
+    },
+    {
+      "question": "Is the optimized query guaranteed to be faster?",
+      "answer": "No. Treat the output as a checklist and always test changes with your real schema, data volume, and workload."
+    }
   ]
 }

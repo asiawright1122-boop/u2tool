@@ -1,17 +1,34 @@
 {
-  "detailed_description": "The Countdown Days Calculator is a precision-driven date differential engine that computes intervals between two calendar timestamps while accounting for complex temporal variables. This tool leverages JavaScript's Date API augmented with IANA Time Zone data to handle UTC normalization, daylight saving adjustments, and Gregorian calendar irregularities like leap years and variable month lengths. Unlike simple date counters, it processes inputs in ISO 8601 format, performs epoch conversion, and calculates compound differences in years/months/weeks/days with millisecond-level accuracy. Users require this tool for scenarios demanding rigorous time tracking: software development sprint planning, clinical trial duration monitoring, historical chronology analysis, and legal compliance deadline calculations. The backend uses binary time comparison algorithms to resolve ambiguous periods caused by calendar shifts, ensuring precise differential outputs even across era transitions (e.g., BC/AD calculations). Results are presented in multiple temporal units with clear indication of directionality (past/future) and timezone-aware timestamps.",
+  "detailed_description": "Countdown Days Calculator lets you save multiple named countdowns and see how many days remain until each target date, or how many days have passed if the date is already over. Enter an event name and date, or use quick presets for New Year, Christmas, and Valentine's Day. The page updates every second, stores countdowns in your browser's local storage, and breaks the remaining time into days, approximate months and weeks, hours, minutes, and seconds.",
   "usage_steps": [
-    "Navigate to the tool's interface featuring synchronized calendar widgets and timezone controls",
-    "Enter start date in ISO 8601 format using the left-side date-picker or manual text input",
-    "Input end date in corresponding right-side calendar component with real-time format validation",
-    "Select target timezone from IANA-compliant dropdown (e.g., America/New_York)",
-    "Toggle calculation mode between 'Days Until' or 'Days Since' using the directional switch",
-    "Click 'Compute' to trigger the temporal differential algorithm and view results in the output panel"
+    "Type a clear event name, such as Product launch or Final exam.",
+    "Choose the target date with the date picker.",
+    "Click Add Countdown to save it to the page.",
+    "Use the quick add buttons for New Year, Christmas, or Valentine's Day when useful.",
+    "Watch the live days, hours, minutes, and seconds update, or remove a countdown when it is no longer needed."
   ],
   "usage_examples": [
-    "Calculating exact days remaining until GDPR compliance deadline (2023-12-31 UTC)",
-    "Tracking post-operative recovery duration (Days since 2023-03-15 surgery in Asia/Tokyo timezone)",
-    "University semester planning: Determining instructional days between 2024-01-16 and 2024-05-10",
-    "Historical research: Measuring days between Treaty of Versailles (1919-06-28) and UN founding (1945-10-24)"
+    "Track the number of days left before a project launch.",
+    "Save separate countdowns for exams, trips, renewals, and birthdays.",
+    "Check how long it has been since a past milestone.",
+    "Keep a simple event list in the browser without creating an account."
+  ],
+  "faqs": [
+    {
+      "question": "Are countdowns saved after I close the page?",
+      "answer": "Yes. They are saved in your browser's local storage on the same device and browser."
+    },
+    {
+      "question": "Does it calculate business days?",
+      "answer": "No. It shows calendar days and a live time breakdown, not workdays or holiday-aware schedules."
+    },
+    {
+      "question": "Why are months and weeks approximate?",
+      "answer": "The tool breaks the total days into simple 30-day months and 7-day weeks for readability."
+    },
+    {
+      "question": "Can I track more than one countdown?",
+      "answer": "Yes. Add multiple named countdowns and remove the ones you no longer need."
+    }
   ]
 }

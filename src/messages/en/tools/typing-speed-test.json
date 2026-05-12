@@ -11,5 +11,23 @@
     "A student checks their WPM before an online writing exam.",
     "A support agent practices accuracy on medium-length sentences before a shift.",
     "A keyboard reviewer compares typing speed and mistake counts across two keyboard layouts."
+  ],
+  "faqs": [
+    {
+      "question": "How is WPM calculated?",
+      "answer": "The test measures how long it takes to finish the prompt and converts the typed character count into a words-per-minute estimate."
+    },
+    {
+      "question": "Does the test upload what I type?",
+      "answer": "No. The prompts and scoring run in the browser, and the tool does not require an account."
+    },
+    {
+      "question": "Can I choose the difficulty?",
+      "answer": "Yes. Easy, Medium, and Hard choose different built-in prompts with different lengths and complexity."
+    },
+    {
+      "question": "What happens if I make mistakes?",
+      "answer": "Characters are highlighted as you type, and the final result includes correct characters, incorrect characters, accuracy, duration, and WPM."
+    }
   ]
 }

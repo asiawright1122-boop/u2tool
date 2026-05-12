@@ -2321,7 +2321,35 @@ export const SERVICE_TEMPLATES: Record<string, any> = {
   },
 };
 export const SLEEP_CYCLE_MINUTES = 90;
-export const SYNONYMS = {};
+export const SYNONYMS: Record<string, string[]> = {
+  quick: ['rapid', 'fast', 'speedy'],
+  fast: ['rapid', 'quick', 'speedy'],
+  slow: ['gradual', 'slower', 'delayed'],
+  good: ['beneficial', 'great', 'useful'],
+  bad: ['unfavorable', 'poor', 'weak'],
+  easy: ['straightforward', 'simple', 'clear'],
+  difficult: ['challenging', 'hard', 'tricky'],
+  important: ['significant', 'key', 'main'],
+  improve: ['enhance', 'upgrade', 'make better'],
+  create: ['produce', 'make', 'build'],
+  use: ['utilize', 'use', 'apply'],
+  help: ['assist', 'help', 'support'],
+  check: ['verify', 'check', 'review'],
+  analyze: ['examine', 'study', 'look at'],
+  optimize: ['improve', 'tune', 'refine'],
+  change: ['modify', 'change', 'adjust'],
+  make: ['create', 'make', 'build'],
+  need: ['require', 'need', 'want'],
+  result: ['outcome', 'result', 'answer'],
+  text: ['content', 'text', 'writing'],
+  content: ['material', 'content', 'text'],
+  query: ['statement', 'query', 'request'],
+  large: ['substantial', 'big', 'large'],
+  small: ['compact', 'small', 'little'],
+  start: ['begin', 'start', 'open'],
+  finish: ['complete', 'finish', 'end'],
+  clear: ['remove', 'clear', 'empty'],
+};
 export const TEMPLATES = [];
 export const TIMEZONES = [
   { value: 'UTC', label: 'UTC' },
@@ -4620,7 +4648,7 @@ export const statusCodes = [
 export const subscriptMap = runtimeSubscriptMap;
 export function suggestBranchName() { return null; }
 export const superscriptMap = runtimeSuperscriptMap;
-export const synonyms = {};
+export const synonyms = SYNONYMS;
 export const tailwindToCssMap = {};
 export function testForInjection(code = '') {
   const source = String(code || '');

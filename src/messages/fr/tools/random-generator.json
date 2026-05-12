@@ -1,17 +1,34 @@
 {
-  "detailed_description": "Le générateur de nombres aléatoires est un outil technique conçu pour produire des séquences de valeurs numériques dans des plages définies par l'utilisateur, avec des options avancées pour la génération massive et l'unicité. Basé sur un algorithme hybride combinant des sources d'entropie système et un générateur de nombres pseudo-aléatoires (PRNG) de type Mersenne Twister, il garantit à la fois rapidité et qualité statistique. Les développeurs peuvent spécifier des paramètres précis comme la borne inférieure/supérieure, le nombre d'échantillons souhaités, et activer une vérification d'unicité pour éviter les doublons. La fonctionnalité de graine (seed) permet de reproduire des séquences déterministes, utile pour les tests reproductibles ou les simulations Monte Carlo. Ce outil répond aux besoins critiques de création de jeux de données synthétiques pour tests de charge, d'échantillonnage statistique, de génération de jetons de sécurité, ou de prototypage d'expériences aléatoires en recherche. Sa capacité à exporter en formats structurés (CSV, JSON, XML) le rend compatible avec les workflows d'analyse automatique.",
+  "detailed_description": "Le générateur de nombres aléatoires produit des entiers dans une plage que vous définissez. Saisissez une valeur minimale, une valeur maximale et une quantité, puis générez jusqu'à 1000 résultats. L'option Valeurs uniques évite les doublons lorsque la plage contient assez de nombres disponibles, et le bouton Copier place les résultats dans le presse-papiers. L'outil utilise la génération aléatoire du navigateur pour des tirages simples; il ne fournit pas de graine reproductible, de décimales, de UUID ni de nombres cryptographiquement sûrs.",
   "usage_steps": [
-    "Ajustez les curseurs pour définir la borne minimale et maximale (ex: 1 à 1000)",
-    "Entrez le nombre de valeurs désirées dans le champ 'Quantité'",
-    "Cochez l'option 'Valeurs uniques' pour activer le filtrage des doublons",
-    "Optionnel : Saisissez une valeur de graine personnalisée dans le champ 'Seed'",
-    "Cliquez sur 'Générer' pour exécuter l'algorithme PRNG avec les paramètres sélectionnés",
-    "Sélectionnez le format d'export (CSV, JSON, XML) et téléchargez les résultats"
+    "Entrez la valeur minimale et la valeur maximale de l'intervalle.",
+    "Choisissez combien de nombres générer, jusqu'à 1000.",
+    "Cochez Valeurs uniques si chaque résultat doit être différent.",
+    "Cliquez sur Générer pour afficher les nombres.",
+    "Utilisez Copier pour récupérer la liste dans le presse-papiers."
   ],
   "usage_examples": [
-    "Un développeur génère 1000 identifiants uniques pour tester un système de gestion de tickets avant le déploiement",
-    "Un chercheur en sciences sociales crée un échantillon aléatoire de 200 numéros de téléphone pour une étude démographique",
-    "Un organisateur de concours utilise le mode graine verrouillée pour produire une liste de gagnants 100% reproductible",
-    "Un ingénieur sécurité génère des valeurs aléatoires de 256 bits pour initialiser des clés de chiffrement temporelles"
+    "Tirer un nombre entre 1 et 100 pour un jeu ou une activité de classe.",
+    "Créer une liste de 20 numéros uniques pour répartir des participants.",
+    "Générer des valeurs de test simples pour une feuille de calcul.",
+    "Copier rapidement une série d'entiers dans un document ou un tableur."
+  ],
+  "faqs": [
+    {
+      "question": "Puis-je générer des nombres uniques ?",
+      "answer": "Oui, si la quantité demandée ne dépasse pas le nombre de valeurs disponibles dans l'intervalle."
+    },
+    {
+      "question": "Quelle est la quantité maximale ?",
+      "answer": "Le champ quantité est limité à 1000 résultats."
+    },
+    {
+      "question": "Est-ce adapté aux mots de passe ou aux clés de sécurité ?",
+      "answer": "Non. Utilisez un générateur cryptographique dédié pour les secrets, mots de passe ou clés."
+    },
+    {
+      "question": "Puis-je définir une graine pour reproduire la même série ?",
+      "answer": "Non. Cette version ne propose pas de seed reproductible."
+    }
   ]
 }

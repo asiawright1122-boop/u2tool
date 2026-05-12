@@ -162,7 +162,7 @@
   {#if countdowns.length === 0}
     <div class="p-6 text-center bg-gray-50 dark:bg-gray-800 rounded-lg text-gray-600 dark:text-gray-300">
       <Clock class="w-8 h-8 mx-auto mb-2" />
-      {t('emptyState')}
+      {t('noCountdowns')}
     </div>
   {/if}
 
