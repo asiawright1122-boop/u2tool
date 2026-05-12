@@ -15906,7 +15906,33 @@
         "siteName": "اسم الموقع",
         "siteUrl": "رابط الموقع",
         "summary": "ملخص",
-        "priorityPages": "الصفحات ذات الأولوية"
+        "priorityPages": "الصفحات ذات الأولوية",
+        "targetAmount": "المبلغ المستهدف",
+        "currentSavings": "المدخرات الحالية",
+        "monthlyContribution": "الإيداع الشهري",
+        "annualRate": "معدل الفائدة السنوي",
+        "months": "أشهر التوقع",
+        "defaultSrc": "default-src",
+        "scriptSrc": "script-src",
+        "styleSrc": "style-src",
+        "imgSrc": "img-src",
+        "connectSrc": "connect-src",
+        "frameAncestors": "frame-ancestors",
+        "reportUri": "رابط التقرير",
+        "upgradeInsecureRequests": "ترقية الطلبات غير الآمنة",
+        "startDate": "تاريخ البداية",
+        "startTime": "وقت البداية",
+        "endDate": "تاريخ النهاية",
+        "endTime": "وقت النهاية",
+        "location": "الموقع",
+        "description": "الوصف",
+        "timezone": "المنطقة الزمنية",
+        "subject": "الموضوع",
+        "lighting": "الإضاءة",
+        "composition": "التكوين",
+        "aspectRatio": "نسبة العرض",
+        "negativePrompt": "المطالبة السلبية",
+        "details": "التفاصيل"
       },
       "options": {
         "writing": "كتابة",
@@ -16024,7 +16050,19 @@
         "service": "الخدمة",
         "ports": "المنافذ",
         "envVars": "متغيرات البيئة",
-        "pages": "الصفحات"
+        "pages": "الصفحات",
+        "amountNeeded": "المبلغ المطلوب",
+        "projectedSavings": "المدخرات المتوقعة",
+        "gapOrSurplus": "الفجوة / الفائض",
+        "monthsToGoal": "الأشهر حتى الهدف",
+        "notReached": "لم يتحقق",
+        "cspHeader": "ترويسة CSP",
+        "directives": "التوجيهات",
+        "eventDate": "تاريخ الحدث",
+        "duration": "المدة",
+        "promptVariants": "صيغ المطالبة",
+        "positivePrompt": "المطالبة الإيجابية",
+        "settingNotes": "ملاحظات الإعداد"
       },
       "placeholders": {
         "aiTopic": "نص إطلاق لموقع أدوات عبر الإنترنت",
@@ -16061,7 +16099,24 @@
         "siteUrl": "https://www.u2tool.com",
         "siteSummary": "مجموعة مجانية من الأدوات التي تعمل في المتصفح للمطورين والمسوقين وفرق التشغيل.",
         "dockerRun": "docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest",
-        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD"
+        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD",
+        "cspDefaultSrc": "'self'",
+        "cspScriptSrc": "'self' https://cdn.jsdelivr.net",
+        "cspStyleSrc": "'self' 'unsafe-inline'",
+        "cspImgSrc": "'self' data: https:",
+        "cspConnectSrc": "'self'",
+        "cspFrameAncestors": "'none'",
+        "reportUri": "https://example.com/csp-report",
+        "eventTitle": "اجتماع تخطيط المنتج",
+        "eventLocation": "قاعة الاجتماعات A",
+        "eventDescription": "مراجعة قائمة الإطلاق والمعالم التالية.",
+        "timezone": "UTC",
+        "promptSubject": "مساحة عمل حديثة بضوء طبيعي",
+        "promptStyle": "صورة تحريرية، تكوين نظيف",
+        "promptLighting": "ضوء صباحي ناعم",
+        "promptComposition": "زاوية واسعة، موضوع في الوسط",
+        "negativePrompt": "ضبابي، جودة منخفضة، أيد مشوهة، أصابع إضافية",
+        "promptDetails": "تفاصيل عالية، خامات واقعية، تباين لوني لطيف"
       }
     },
     "calorie-deficit-calculator": {
@@ -16183,6 +16238,36 @@
       "description": "أنشئ وصف فيديو YouTube منظمًا بالكلمات المفتاحية والجمهور والروابط والدعوة للإجراء.",
       "seo_title": "مولد وصف YouTube مجاني عبر الإنترنت",
       "seo_description": "أنشئ وصف فيديو YouTube منظمًا بالكلمات المفتاحية والجمهور والروابط والدعوة للإجراء. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "savings-goal-calculator": {
+      "name": "حاسبة هدف الادخار",
+      "description": "قدّر مدة الوصول إلى هدف ادخاري من المدخرات الحالية والإيداعات الشهرية والفائدة.",
+      "seo_title": "حاسبة هدف الادخار مجانًا",
+      "seo_description": "قدّر مدة الوصول إلى هدف ادخاري من المدخرات الحالية والإيداعات الشهرية والفائدة. استخدم هذه الأداة المجانية عبر الإنترنت في المتصفح بدون تسجيل."
+    },
+    "csp-header-generator": {
+      "name": "مولد ترويسة CSP",
+      "description": "أنشئ ترويسة Content-Security-Policy من توجيهات المصادر الشائعة وخيارات التقارير.",
+      "seo_title": "مولد ترويسة CSP مجانًا",
+      "seo_description": "أنشئ ترويسة Content-Security-Policy من توجيهات المصادر الشائعة وخيارات التقارير. استخدم هذه الأداة المجانية عبر الإنترنت في المتصفح بدون تسجيل."
+    },
+    "ics-file-generator": {
+      "name": "مولد ملف ICS",
+      "description": "أنشئ نص حدث iCalendar ICS من العنوان والوقت والموقع والوصف والمنطقة الزمنية.",
+      "seo_title": "مولد ملف ICS مجانًا",
+      "seo_description": "أنشئ نص حدث iCalendar ICS من العنوان والوقت والموقع والوصف والمنطقة الزمنية. استخدم هذه الأداة المجانية عبر الإنترنت في المتصفح بدون تسجيل."
+    },
+    "midjourney-prompt-generator": {
+      "name": "مولد مطالبات Midjourney",
+      "description": "أنشئ صيغ مطالبات بأسلوب Midjourney من الموضوع والأسلوب والإضاءة ونسبة العرض والاستثناءات.",
+      "seo_title": "مولد مطالبات Midjourney مجانًا",
+      "seo_description": "أنشئ صيغ مطالبات بأسلوب Midjourney من الموضوع والأسلوب والإضاءة ونسبة العرض والاستثناءات. استخدم هذه الأداة المجانية عبر الإنترنت في المتصفح بدون تسجيل."
+    },
+    "stable-diffusion-prompt-generator": {
+      "name": "مولد مطالبات Stable Diffusion",
+      "description": "أنشئ كتل مطالبات Stable Diffusion مع مطالبة إيجابية وسلبية ونسبة عرض وملاحظات إعداد.",
+      "seo_title": "مولد مطالبات Stable Diffusion مجانًا",
+      "seo_description": "أنشئ كتل مطالبات Stable Diffusion مع مطالبة إيجابية وسلبية ونسبة عرض وملاحظات إعداد. استخدم هذه الأداة المجانية عبر الإنترنت في المتصفح بدون تسجيل."
     }
   }
 }

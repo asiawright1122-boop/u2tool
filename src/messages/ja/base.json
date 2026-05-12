@@ -15730,7 +15730,33 @@
         "siteName": "サイト名",
         "siteUrl": "サイトURL",
         "summary": "概要",
-        "priorityPages": "優先ページ"
+        "priorityPages": "優先ページ",
+        "targetAmount": "目標金額",
+        "currentSavings": "現在の貯蓄額",
+        "monthlyContribution": "毎月の積立額",
+        "annualRate": "年利",
+        "months": "予測月数",
+        "defaultSrc": "default-src",
+        "scriptSrc": "script-src",
+        "styleSrc": "style-src",
+        "imgSrc": "img-src",
+        "connectSrc": "connect-src",
+        "frameAncestors": "frame-ancestors",
+        "reportUri": "レポート URI",
+        "upgradeInsecureRequests": "安全でないリクエストをアップグレード",
+        "startDate": "開始日",
+        "startTime": "開始時刻",
+        "endDate": "終了日",
+        "endTime": "終了時刻",
+        "location": "場所",
+        "description": "説明",
+        "timezone": "タイムゾーン",
+        "subject": "被写体",
+        "lighting": "照明",
+        "composition": "構図",
+        "aspectRatio": "アスペクト比",
+        "negativePrompt": "ネガティブプロンプト",
+        "details": "詳細"
       },
       "options": {
         "writing": "文章作成",
@@ -15848,7 +15874,19 @@
         "service": "サービス",
         "ports": "ポート",
         "envVars": "環境変数",
-        "pages": "ページ"
+        "pages": "ページ",
+        "amountNeeded": "必要額",
+        "projectedSavings": "予測貯蓄額",
+        "gapOrSurplus": "不足 / 余剰",
+        "monthsToGoal": "目標までの月数",
+        "notReached": "未達成",
+        "cspHeader": "CSP ヘッダー",
+        "directives": "ディレクティブ数",
+        "eventDate": "イベント日時",
+        "duration": "所要時間",
+        "promptVariants": "プロンプト案",
+        "positivePrompt": "ポジティブプロンプト",
+        "settingNotes": "設定メモ"
       },
       "placeholders": {
         "aiTopic": "オンラインツールサイトのローンチ文",
@@ -15885,7 +15923,24 @@
         "siteUrl": "https://www.u2tool.com",
         "siteSummary": "開発者、マーケター、運用担当者向けの無料ブラウザツール集です。",
         "dockerRun": "docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest",
-        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD"
+        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD",
+        "cspDefaultSrc": "'self'",
+        "cspScriptSrc": "'self' https://cdn.jsdelivr.net",
+        "cspStyleSrc": "'self' 'unsafe-inline'",
+        "cspImgSrc": "'self' data: https:",
+        "cspConnectSrc": "'self'",
+        "cspFrameAncestors": "'none'",
+        "reportUri": "https://example.com/csp-report",
+        "eventTitle": "プロダクト計画ミーティング",
+        "eventLocation": "会議室 A",
+        "eventDescription": "ローンチチェックリストと次のマイルストーンを確認します。",
+        "timezone": "UTC",
+        "promptSubject": "自然光の入るモダンなワークスペース",
+        "promptStyle": "エディトリアル写真、すっきりした構図",
+        "promptLighting": "柔らかな朝の光",
+        "promptComposition": "広角、中央に被写体",
+        "negativePrompt": "ぼやけ、低品質、手の歪み、余分な指",
+        "promptDetails": "高精細、リアルな質感、繊細な色のコントラスト"
       }
     },
     "calorie-deficit-calculator": {
@@ -16007,6 +16062,36 @@
       "description": "キーワード、視聴者、リンク、CTAを使って構成されたYouTube動画説明文を作成します。",
       "seo_title": "無料オンラインYouTube説明文生成ツール",
       "seo_description": "キーワード、視聴者、リンク、CTAを使って構成されたYouTube動画説明文を作成します。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "savings-goal-calculator": {
+      "name": "貯蓄目標計算機",
+      "description": "現在の貯蓄、毎月の積立、利率から、貯蓄目標に届くまでの期間を見積もります。",
+      "seo_title": "無料オンライン 貯蓄目標計算機",
+      "seo_description": "現在の貯蓄、毎月の積立、利率から、貯蓄目標に届くまでの期間を見積もります。 ブラウザで無料で使え、登録は不要です。"
+    },
+    "csp-header-generator": {
+      "name": "CSP ヘッダー生成ツール",
+      "description": "一般的なソースディレクティブとレポート設定から Content-Security-Policy ヘッダーを作成します。",
+      "seo_title": "無料オンライン CSP ヘッダー生成ツール",
+      "seo_description": "一般的なソースディレクティブとレポート設定から Content-Security-Policy ヘッダーを作成します。 ブラウザで無料で使え、登録は不要です。"
+    },
+    "ics-file-generator": {
+      "name": "ICS ファイル生成ツール",
+      "description": "タイトル、時間、場所、説明、タイムゾーンから iCalendar ICS イベントテキストを生成します。",
+      "seo_title": "無料オンライン ICS ファイル生成ツール",
+      "seo_description": "タイトル、時間、場所、説明、タイムゾーンから iCalendar ICS イベントテキストを生成します。 ブラウザで無料で使え、登録は不要です。"
+    },
+    "midjourney-prompt-generator": {
+      "name": "Midjourney プロンプト生成ツール",
+      "description": "被写体、スタイル、照明、アスペクト比、除外項目から Midjourney 向けのプロンプト案を作成します。",
+      "seo_title": "無料オンライン Midjourney プロンプト生成ツール",
+      "seo_description": "被写体、スタイル、照明、アスペクト比、除外項目から Midjourney 向けのプロンプト案を作成します。 ブラウザで無料で使え、登録は不要です。"
+    },
+    "stable-diffusion-prompt-generator": {
+      "name": "Stable Diffusion プロンプト生成ツール",
+      "description": "ポジティブプロンプト、ネガティブプロンプト、比率、設定メモを含む Stable Diffusion 用プロンプトを作成します。",
+      "seo_title": "無料オンライン Stable Diffusion プロンプト生成ツール",
+      "seo_description": "ポジティブプロンプト、ネガティブプロンプト、比率、設定メモを含む Stable Diffusion 用プロンプトを作成します。 ブラウザで無料で使え、登録は不要です。"
     }
   }
 }

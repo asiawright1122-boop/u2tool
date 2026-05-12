@@ -3,13 +3,13 @@ import { tools } from '@/config/tools';
 import { discoveryCategoryPriority } from '@/lib/discovery-surface';
 import { getLocalizedPath, locales } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
-import { loadBaseMessages } from '@/lib/translations';
+import { loadBaseUiMessages } from '@/lib/translations';
 
 export const prerender = true;
 
-export const GET: APIRoute = async ({ params }) => {
+export const GET: APIRoute = async ({ params, url }) => {
   const locale = params.locale as Locale;
-  const baseMessages = await loadBaseMessages(locale);
+  const baseMessages = await loadBaseUiMessages(locale, url);
   const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
   const categories = (baseMessages.categories as Record<string, unknown>) ?? {};
   const categoryPriority = new Map(

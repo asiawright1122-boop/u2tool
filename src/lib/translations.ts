@@ -31,10 +31,9 @@ const baseMessagesCache = new Map<string, MessagesRecord>();
 const baseUiMessagesCache = new Map<string, MessagesRecord>();
 const toolMessagesCache = new Map<string, MessagesRecord>();
 const toolPageMessagesCache = new Map<string, MessagesRecord>();
-const bundledBaseMessageModules: Record<string, MessagesRecord> =
+const bundledBaseMessageModules: Record<string, () => Promise<MessagesRecord>> =
   typeof import.meta.glob === 'function'
     ? import.meta.glob<MessagesRecord>('../messages/*/base.json', {
-        eager: true,
         import: 'default',
       })
     : {};
@@ -109,8 +108,17 @@ async function readJsonFromFile(relativePath: string): Promise<MessagesRecord | 
   }
 }
 
-function readBundledJson(relativePath: string): MessagesRecord | null {
-  return bundledBaseMessageModules[relativePath] ?? null;
+async function readBundledJson(relativePath: string): Promise<MessagesRecord | null> {
+  const loadBundledMessages = bundledBaseMessageModules[relativePath];
+  if (!loadBundledMessages) {
+    return null;
+  }
+
+  try {
+    return await loadBundledMessages();
+  } catch {
+    return null;
+  }
 }
 
 function resolveAssetUrl(
@@ -158,14 +166,14 @@ async function loadMessagesFile(
   assetPath: string,
   assetBaseUrl?: string | URL
 ): Promise<MessagesRecord | null> {
+  const bundledMessages = await readBundledJson(relativePath);
+  if (bundledMessages) {
+    return bundledMessages;
+  }
+
   const fileMessages = await readJsonFromFile(relativePath);
   if (fileMessages) {
     return fileMessages;
-  }
-
-  const bundledMessages = readBundledJson(relativePath);
-  if (bundledMessages) {
-    return bundledMessages;
   }
 
   return readJsonFromAsset(assetPath, assetBaseUrl);
@@ -189,6 +197,53 @@ function mergeMessageRecords(
     }
 
     merged[key] = value;
+  }
+
+  return merged;
+}
+
+function shallowMergeRecordSection(
+  base: unknown,
+  override: unknown
+): unknown {
+  if (isMergeableRecord(base) && isMergeableRecord(override)) {
+    return { ...base, ...override };
+  }
+
+  return override ?? base;
+}
+
+function mergeBaseUiRecords(
+  base: MessagesRecord,
+  override: MessagesRecord
+): MessagesRecord {
+  const merged: MessagesRecord = { ...base, ...override };
+
+  for (const section of [
+    'site',
+    'categories',
+    'categories_seo',
+    'pages',
+    'ranking_seo',
+    'nav',
+    'search',
+    'home',
+    'footer',
+    'common',
+    'about',
+    'blog',
+    'errors',
+    'theme',
+    'tool',
+    'privacy',
+    'terms',
+    'compare',
+    'countries',
+    'tax',
+    'aiDiscovery',
+    'tools',
+  ]) {
+    merged[section] = shallowMergeRecordSection(base[section], override[section]);
   }
 
   return merged;
@@ -335,7 +390,7 @@ export async function loadBaseUiMessages(
     assetBaseUrl
   )) ?? {};
 
-  const mergedWithFallback = mergeMessageRecords(fallbackBase, localeBase);
+  const mergedWithFallback = mergeBaseUiRecords(fallbackBase, localeBase);
   const normalizedMessages = await applyToolMessageAliases(locale, mergedWithFallback, assetBaseUrl);
   baseUiMessagesCache.set(cacheKey, normalizedMessages);
   return normalizedMessages;

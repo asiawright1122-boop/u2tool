@@ -50,6 +50,10 @@ const POPULAR_UTILITY_PROBES: Record<string, ToolProbe> = {
     fields: ['accountSize', 'riskPercent'],
     results: ['riskAmount', 'positionSize'],
   },
+  'savings-goal-calculator': {
+    fields: ['targetAmount', 'monthlyContribution'],
+    results: ['projectedSavings', 'monthsToGoal'],
+  },
   'macro-calculator': {
     fields: ['weight', 'goal'],
     results: ['calories', 'protein'],
@@ -82,6 +86,10 @@ const POPULAR_UTILITY_PROBES: Record<string, ToolProbe> = {
     fields: ['headers'],
     results: ['score', 'missing'],
   },
+  'csp-header-generator': {
+    fields: ['defaultSrc', 'scriptSrc'],
+    results: ['cspHeader', 'directives'],
+  },
   'csv-to-vcard-converter': {
     fields: ['csv', 'delimiter'],
     results: ['contacts', 'vcardVersion'],
@@ -89,6 +97,10 @@ const POPULAR_UTILITY_PROBES: Record<string, ToolProbe> = {
   'youtube-thumbnail-generator': {
     fields: ['youtubeVideo'],
     results: ['maxResolution', 'highQuality'],
+  },
+  'ics-file-generator': {
+    fields: ['startDate', 'timezone'],
+    results: ['eventDate', 'duration'],
   },
   'ai-prompt-generator': {
     fields: ['task', 'topic'],
@@ -103,6 +115,14 @@ const POPULAR_UTILITY_PROBES: Record<string, ToolProbe> = {
   'meta-description-generator': {
     fields: ['page', 'keyword'],
     results: ['option'],
+  },
+  'midjourney-prompt-generator': {
+    fields: ['subject', 'aspectRatio'],
+    results: ['promptVariants', 'option'],
+  },
+  'stable-diffusion-prompt-generator': {
+    fields: ['subject', 'negativePrompt'],
+    results: ['positivePrompt', 'settingNotes'],
   },
   'youtube-title-generator': {
     fields: ['topic', 'keyword'],
@@ -327,7 +347,7 @@ async function launchBrowser(): Promise<Browser> {
 async function waitForLocalizedTool(page: Page, expectedTexts: string[], timeoutMs: number) {
   const startedAt = Date.now();
   while (Date.now() - startedAt < timeoutMs) {
-    const bodyText = await page.evaluate(() => document.body.innerText || '');
+    const bodyText = await page.evaluate(() => document.body?.innerText || '');
     const body = foldForComparison(bodyText);
     const loaded = !body.includes('initialising engine') && !body.includes('initializing engine');
     const expectedVisible = expectedTexts.every((text) => body.includes(foldForComparison(text)));
@@ -352,8 +372,8 @@ async function validatePage(page: Page, args: ValidationArgs, slug: string, loca
     const raw = await page.evaluate(() => ({
       title: document.title,
       h1: document.querySelector('h1')?.textContent?.trim() || '',
-      bodyText: document.body.innerText || '',
-      sample: document.body.innerText.slice(0, 1600),
+      bodyText: document.body?.innerText || '',
+      sample: (document.body?.innerText || '').slice(0, 1600),
     }));
     const body = foldForComparison(raw.bodyText);
     const actual = {
@@ -382,8 +402,8 @@ async function validatePage(page: Page, args: ValidationArgs, slug: string, loca
     const diagnostic = await page.evaluate(() => ({
         title: document.title,
         h1: document.querySelector('h1')?.textContent?.trim() || '',
-        bodyText: document.body.innerText || '',
-        sample: document.body.innerText.slice(0, 1600),
+        bodyText: document.body?.innerText || '',
+        sample: (document.body?.innerText || '').slice(0, 1600),
       })).then((raw) => {
         const body = foldForComparison(raw.bodyText);
         return {

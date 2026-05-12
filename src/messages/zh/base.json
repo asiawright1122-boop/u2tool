@@ -21484,7 +21484,33 @@
         "siteName": "网站名称",
         "siteUrl": "网站 URL",
         "summary": "摘要",
-        "priorityPages": "重点页面"
+        "priorityPages": "重点页面",
+        "targetAmount": "目标金额",
+        "currentSavings": "当前存款",
+        "monthlyContribution": "每月存入",
+        "annualRate": "年化利率",
+        "months": "预测月数",
+        "defaultSrc": "default-src",
+        "scriptSrc": "script-src",
+        "styleSrc": "style-src",
+        "imgSrc": "img-src",
+        "connectSrc": "connect-src",
+        "frameAncestors": "frame-ancestors",
+        "reportUri": "报告 URI",
+        "upgradeInsecureRequests": "升级不安全请求",
+        "startDate": "开始日期",
+        "startTime": "开始时间",
+        "endDate": "结束日期",
+        "endTime": "结束时间",
+        "location": "地点",
+        "description": "描述",
+        "timezone": "时区",
+        "subject": "主体",
+        "lighting": "光线",
+        "composition": "构图",
+        "aspectRatio": "宽高比",
+        "negativePrompt": "反向提示词",
+        "details": "细节"
       },
       "options": {
         "writing": "写作",
@@ -21602,7 +21628,19 @@
         "service": "服务",
         "ports": "端口",
         "envVars": "环境变量",
-        "pages": "页面"
+        "pages": "页面",
+        "amountNeeded": "还需金额",
+        "projectedSavings": "预计存款",
+        "gapOrSurplus": "差额/盈余",
+        "monthsToGoal": "达成月数",
+        "notReached": "未达成",
+        "cspHeader": "CSP 响应头",
+        "directives": "指令数量",
+        "eventDate": "事件日期",
+        "duration": "时长",
+        "promptVariants": "提示词版本",
+        "positivePrompt": "正向提示词",
+        "settingNotes": "设置备注"
       },
       "placeholders": {
         "aiTopic": "一个在线工具网站的发布文案",
@@ -21639,7 +21677,24 @@
         "siteUrl": "https://www.u2tool.com",
         "siteSummary": "一个面向开发者、营销人员和运营人员的免费浏览器工具集合。",
         "dockerRun": "docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest",
-        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD"
+        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD",
+        "cspDefaultSrc": "'self'",
+        "cspScriptSrc": "'self' https://cdn.jsdelivr.net",
+        "cspStyleSrc": "'self' 'unsafe-inline'",
+        "cspImgSrc": "'self' data: https:",
+        "cspConnectSrc": "'self'",
+        "cspFrameAncestors": "'none'",
+        "reportUri": "https://example.com/csp-report",
+        "eventTitle": "产品规划会议",
+        "eventLocation": "会议室 A",
+        "eventDescription": "复盘发布清单和下一阶段里程碑。",
+        "timezone": "UTC",
+        "promptSubject": "自然光下的现代工作空间",
+        "promptStyle": "编辑风摄影，简洁构图",
+        "promptLighting": "柔和晨光",
+        "promptComposition": "广角，主体居中",
+        "negativePrompt": "模糊，低质量，手部变形，多余手指",
+        "promptDetails": "高细节，真实材质，微妙色彩对比"
       }
     },
     "calorie-deficit-calculator": {
@@ -21761,6 +21816,36 @@
       "description": "使用关键词、受众、链接和 CTA 生成结构化 YouTube 视频描述。",
       "seo_title": "免费在线YouTube 描述生成器",
       "seo_description": "使用关键词、受众、链接和 CTA 生成结构化 YouTube 视频描述。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "savings-goal-calculator": {
+      "name": "储蓄目标计算器",
+      "description": "根据当前存款、每月存入金额和利率，估算达到储蓄目标所需时间。",
+      "seo_title": "免费在线储蓄目标计算器",
+      "seo_description": "根据当前存款、每月存入金额和利率，估算达到储蓄目标所需时间。 直接在浏览器中免费使用，无需注册。"
+    },
+    "csp-header-generator": {
+      "name": "CSP 响应头生成器",
+      "description": "根据常见来源指令和报告选项生成 Content-Security-Policy 响应头。",
+      "seo_title": "免费在线CSP 响应头生成器",
+      "seo_description": "根据常见来源指令和报告选项生成 Content-Security-Policy 响应头。 直接在浏览器中免费使用，无需注册。"
+    },
+    "ics-file-generator": {
+      "name": "ICS 日历文件生成器",
+      "description": "根据标题、时间、地点、描述和时区生成 iCalendar ICS 事件文本。",
+      "seo_title": "免费在线ICS 日历文件生成器",
+      "seo_description": "根据标题、时间、地点、描述和时区生成 iCalendar ICS 事件文本。 直接在浏览器中免费使用，无需注册。"
+    },
+    "midjourney-prompt-generator": {
+      "name": "Midjourney 提示词生成器",
+      "description": "根据主体、风格、光线、宽高比和排除项生成 Midjourney 风格提示词变体。",
+      "seo_title": "免费在线Midjourney 提示词生成器",
+      "seo_description": "根据主体、风格、光线、宽高比和排除项生成 Midjourney 风格提示词变体。 直接在浏览器中免费使用，无需注册。"
+    },
+    "stable-diffusion-prompt-generator": {
+      "name": "Stable Diffusion 提示词生成器",
+      "description": "生成 Stable Diffusion 提示词块，包括正向提示词、反向提示词、宽高比和设置备注。",
+      "seo_title": "免费在线Stable Diffusion 提示词生成器",
+      "seo_description": "生成 Stable Diffusion 提示词块，包括正向提示词、反向提示词、宽高比和设置备注。 直接在浏览器中免费使用，无需注册。"
     }
   }
 }

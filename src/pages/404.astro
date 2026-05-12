@@ -6,13 +6,13 @@ import StaticSidebar from '@/components/layout/StaticSidebar.astro';
 import Footer from '@/components/layout/Footer.astro';
 import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
 import { categories } from '@/config/tools';
-import { loadBaseMessages } from '@/lib/translations';
+import { loadBaseUiMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 
 export const prerender = true;
 
 const locale = 'en'; // Default for 404
-const baseMessages = await loadBaseMessages(locale);
+const baseMessages = await loadBaseUiMessages(locale, Astro.url);
 const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
 const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};

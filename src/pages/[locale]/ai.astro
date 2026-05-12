@@ -1,5 +1,4 @@
 ---
-import type { GetStaticPaths } from 'astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/layout/Header.svelte';
 import StaticSidebar from '@/components/layout/StaticSidebar.astro';
@@ -11,9 +10,9 @@ import DiscoverySearch from '@/components/ai/DiscoverySearch.svelte';
 import CategorySpotlightSection from '@/components/discovery/CategorySpotlightSection.astro';
 import ComparisonGuideSection from '@/components/discovery/ComparisonGuideSection.astro';
 import { tools, categories } from '@/config/tools';
-import { locales } from '@/lib/i18n';
+import { isValidLocale } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
-import { loadBaseMessages } from '@/lib/translations';
+import { loadBaseUiMessages } from '@/lib/translations';
 import { isAiDiscoveryEnabled } from '@/lib/ai-discovery/feature-flag';
 import { buildCategoryDiscoveryItemList, buildCategoryDiscoverySpotlights } from '@/lib/discovery-surface';
 import { buildComparisonGuides, getComparisonUiCopy } from '@/lib/comparison-surfaces';
@@ -25,19 +24,16 @@ import {
 import { getPublicSiteUrl } from '@/lib/public-env';
 import { buildLocalizedPageUrl } from '@/lib/seo';
 
-export const prerender = true;
+export const prerender = false;
 
-export const getStaticPaths: GetStaticPaths = () => {
-  return locales.map((locale) => ({
-    params: { locale },
-    props: { locale },
-  }));
-};
-
-const { locale } = Astro.props as { locale: Locale };
+const localeCandidate = Astro.params.locale ?? (Astro.props as { locale?: Locale }).locale;
+if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate)) {
+  return Astro.redirect('/en/ai/', 302);
+}
+const locale: Locale = localeCandidate;
 const aiDiscoveryEnabled = isAiDiscoveryEnabled();
 
-const baseMessages = await loadBaseMessages(locale);
+const baseMessages = await loadBaseUiMessages(locale, Astro.url);
 const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
 const navMessages = (baseMessages.nav as Record<string, string>) ?? {};

@@ -778,16 +778,22 @@ const checks: RenderedSeoCheck[] = [
   },
 ];
 
-async function fetchWithRetry(url: string, init: RequestInit = {}, attempts = 3): Promise<Response> {
+async function fetchHtmlWithRetry(
+  url: string,
+  init: RequestInit = {},
+  attempts = 4
+): Promise<{ html: string; response: Response }> {
   let lastError: unknown;
 
   for (let attempt = 1; attempt <= attempts; attempt++) {
     try {
-      return await fetch(url, init);
+      const response = await fetch(url, init);
+      const html = await response.text();
+      return { response, html };
     } catch (error) {
       lastError = error;
       if (attempt < attempts) {
-        await new Promise((resolve) => setTimeout(resolve, attempt * 500));
+        await new Promise((resolve) => setTimeout(resolve, attempt * 750));
       }
     }
   }
@@ -857,11 +863,10 @@ function hasMetaTag(html: string, attributeName: 'name' | 'property', attributeV
 
 async function validateCheck(check: RenderedSeoCheck): Promise<void> {
   const url = `${FETCH_BASE_URL}${check.path}`;
-  const response = await fetchWithRetry(url, { redirect: 'follow' });
+  const { response, html } = await fetchHtmlWithRetry(url, { redirect: 'follow' });
   assert(response.status === 200, `${check.name}: expected HTTP 200, got ${response.status}`);
   assert((response.headers.get('content-type') || '').includes('text/html'), `${check.name}: response is not HTML`);
 
-  const html = await response.text();
   const canonicalUrl = `${CANONICAL_BASE_URL}${check.canonicalPath ?? check.path}`;
   const title = getTagContent(html, 'title');
   const description = getTagContent(html, 'description');

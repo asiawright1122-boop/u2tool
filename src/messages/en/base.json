@@ -15757,7 +15757,33 @@
         "siteName": "Site Name",
         "siteUrl": "Site URL",
         "summary": "Summary",
-        "priorityPages": "Priority Pages"
+        "priorityPages": "Priority Pages",
+        "targetAmount": "Target Amount",
+        "currentSavings": "Current Savings",
+        "monthlyContribution": "Monthly Contribution",
+        "annualRate": "Annual Interest Rate",
+        "months": "Projection Months",
+        "defaultSrc": "default-src",
+        "scriptSrc": "script-src",
+        "styleSrc": "style-src",
+        "imgSrc": "img-src",
+        "connectSrc": "connect-src",
+        "frameAncestors": "frame-ancestors",
+        "reportUri": "Report URI",
+        "upgradeInsecureRequests": "Upgrade Insecure Requests",
+        "startDate": "Start Date",
+        "startTime": "Start Time",
+        "endDate": "End Date",
+        "endTime": "End Time",
+        "location": "Location",
+        "description": "Description",
+        "timezone": "Timezone",
+        "subject": "Subject",
+        "lighting": "Lighting",
+        "composition": "Composition",
+        "aspectRatio": "Aspect Ratio",
+        "negativePrompt": "Negative Prompt",
+        "details": "Details"
       },
       "options": {
         "writing": "Writing",
@@ -15875,7 +15901,19 @@
         "service": "Service",
         "ports": "Ports",
         "envVars": "Environment Variables",
-        "pages": "Pages"
+        "pages": "Pages",
+        "amountNeeded": "Amount Needed",
+        "projectedSavings": "Projected Savings",
+        "gapOrSurplus": "Gap / Surplus",
+        "monthsToGoal": "Months to Goal",
+        "notReached": "Not reached",
+        "cspHeader": "CSP Header",
+        "directives": "Directives",
+        "eventDate": "Event Date",
+        "duration": "Duration",
+        "promptVariants": "Prompt Variants",
+        "positivePrompt": "Positive Prompt",
+        "settingNotes": "Setting Notes"
       },
       "placeholders": {
         "aiTopic": "launch copy for an online tools site",
@@ -15912,7 +15950,24 @@
         "siteUrl": "https://www.u2tool.com",
         "siteSummary": "A free collection of browser-based tools for developers, marketers, and operators.",
         "dockerRun": "docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest",
-        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD"
+        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD",
+        "cspDefaultSrc": "'self'",
+        "cspScriptSrc": "'self' https://cdn.jsdelivr.net",
+        "cspStyleSrc": "'self' 'unsafe-inline'",
+        "cspImgSrc": "'self' data: https:",
+        "cspConnectSrc": "'self'",
+        "cspFrameAncestors": "'none'",
+        "reportUri": "https://example.com/csp-report",
+        "eventTitle": "Product planning meeting",
+        "eventLocation": "Conference Room A",
+        "eventDescription": "Review launch checklist and next milestones.",
+        "timezone": "UTC",
+        "promptSubject": "a modern workspace with natural light",
+        "promptStyle": "editorial photo, clean composition",
+        "promptLighting": "soft morning light",
+        "promptComposition": "wide angle, centered subject",
+        "negativePrompt": "blurry, low quality, distorted hands, extra fingers",
+        "promptDetails": "high detail, realistic materials, subtle color contrast"
       }
     },
     "calorie-deficit-calculator": {
@@ -16034,6 +16089,36 @@
       "description": "Create a structured YouTube video description with keywords, audience, links, and CTA.",
       "seo_title": "Free YouTube Description Generator Online",
       "seo_description": "Create a structured YouTube video description with keywords, audience, links, and CTA. Free browser-based youtube description generator with no signup required."
+    },
+    "savings-goal-calculator": {
+      "name": "Savings Goal Calculator",
+      "description": "Estimate how long it takes to reach a savings goal from current savings, monthly deposits, and interest.",
+      "seo_title": "Free Savings Goal Calculator Online",
+      "seo_description": "Estimate how long it takes to reach a savings goal from current savings, monthly deposits, and interest. Use this free online tool in your browser with no signup required."
+    },
+    "csp-header-generator": {
+      "name": "CSP Header Generator",
+      "description": "Build a Content-Security-Policy header from common source directives and reporting options.",
+      "seo_title": "Free CSP Header Generator Online",
+      "seo_description": "Build a Content-Security-Policy header from common source directives and reporting options. Use this free online tool in your browser with no signup required."
+    },
+    "ics-file-generator": {
+      "name": "ICS File Generator",
+      "description": "Generate iCalendar ICS event text from a title, time, location, description, and timezone.",
+      "seo_title": "Free ICS File Generator Online",
+      "seo_description": "Generate iCalendar ICS event text from a title, time, location, description, and timezone. Use this free online tool in your browser with no signup required."
+    },
+    "midjourney-prompt-generator": {
+      "name": "Midjourney Prompt Generator",
+      "description": "Create structured Midjourney-style prompt variants with subject, style, lighting, aspect ratio, and exclusions.",
+      "seo_title": "Free Midjourney Prompt Generator Online",
+      "seo_description": "Create structured Midjourney-style prompt variants with subject, style, lighting, aspect ratio, and exclusions. Use this free online tool in your browser with no signup required."
+    },
+    "stable-diffusion-prompt-generator": {
+      "name": "Stable Diffusion Prompt Generator",
+      "description": "Create Stable Diffusion prompt blocks with positive prompt, negative prompt, aspect ratio, and setting notes.",
+      "seo_title": "Free Stable Diffusion Prompt Generator Online",
+      "seo_description": "Create Stable Diffusion prompt blocks with positive prompt, negative prompt, aspect ratio, and setting notes. Use this free online tool in your browser with no signup required."
     }
   }
 }

@@ -15948,7 +15948,33 @@
         "siteName": "Nombre del sitio",
         "siteUrl": "URL del sitio",
         "summary": "Resumen",
-        "priorityPages": "Páginas prioritarias"
+        "priorityPages": "Páginas prioritarias",
+        "targetAmount": "Importe objetivo",
+        "currentSavings": "Ahorro actual",
+        "monthlyContribution": "Aporte mensual",
+        "annualRate": "Tasa anual",
+        "months": "Meses de proyección",
+        "defaultSrc": "default-src",
+        "scriptSrc": "script-src",
+        "styleSrc": "style-src",
+        "imgSrc": "img-src",
+        "connectSrc": "connect-src",
+        "frameAncestors": "frame-ancestors",
+        "reportUri": "URI de reporte",
+        "upgradeInsecureRequests": "Actualizar solicitudes inseguras",
+        "startDate": "Fecha de inicio",
+        "startTime": "Hora de inicio",
+        "endDate": "Fecha de fin",
+        "endTime": "Hora de fin",
+        "location": "Ubicación",
+        "description": "Descripción",
+        "timezone": "Zona horaria",
+        "subject": "Tema",
+        "lighting": "Iluminación",
+        "composition": "Composición",
+        "aspectRatio": "Relación de aspecto",
+        "negativePrompt": "Prompt negativo",
+        "details": "Detalles"
       },
       "options": {
         "writing": "Escritura",
@@ -16066,7 +16092,19 @@
         "service": "Servicio",
         "ports": "Puertos",
         "envVars": "Variables de entorno",
-        "pages": "Páginas"
+        "pages": "Páginas",
+        "amountNeeded": "Importe necesario",
+        "projectedSavings": "Ahorro proyectado",
+        "gapOrSurplus": "Diferencia / superávit",
+        "monthsToGoal": "Meses hasta la meta",
+        "notReached": "No alcanzado",
+        "cspHeader": "Encabezado CSP",
+        "directives": "Directivas",
+        "eventDate": "Fecha del evento",
+        "duration": "Duración",
+        "promptVariants": "Variantes de prompt",
+        "positivePrompt": "Prompt positivo",
+        "settingNotes": "Notas de configuración"
       },
       "placeholders": {
         "aiTopic": "texto de lanzamiento para un sitio de herramientas online",
@@ -16103,7 +16141,24 @@
         "siteUrl": "https://www.u2tool.com",
         "siteSummary": "Una colección gratuita de herramientas en el navegador para desarrolladores, marketers y equipos operativos.",
         "dockerRun": "docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest",
-        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD"
+        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD",
+        "cspDefaultSrc": "'self'",
+        "cspScriptSrc": "'self' https://cdn.jsdelivr.net",
+        "cspStyleSrc": "'self' 'unsafe-inline'",
+        "cspImgSrc": "'self' data: https:",
+        "cspConnectSrc": "'self'",
+        "cspFrameAncestors": "'none'",
+        "reportUri": "https://example.com/csp-report",
+        "eventTitle": "Reunión de planificación de producto",
+        "eventLocation": "Sala de conferencias A",
+        "eventDescription": "Revisar la lista de lanzamiento y los próximos hitos.",
+        "timezone": "UTC",
+        "promptSubject": "un espacio de trabajo moderno con luz natural",
+        "promptStyle": "foto editorial, composición limpia",
+        "promptLighting": "luz suave de la mañana",
+        "promptComposition": "gran angular, sujeto centrado",
+        "negativePrompt": "borroso, baja calidad, manos distorsionadas, dedos extra",
+        "promptDetails": "alto detalle, materiales realistas, contraste de color sutil"
       }
     },
     "calorie-deficit-calculator": {
@@ -16225,6 +16280,36 @@
       "description": "Crea una descripción estructurada para YouTube con palabras clave, audiencia, enlaces y CTA.",
       "seo_title": "Generador de descripciones para YouTube gratis en línea",
       "seo_description": "Crea una descripción estructurada para YouTube con palabras clave, audiencia, enlaces y CTA. Herramienta gratuita en el navegador, sin registro."
+    },
+    "savings-goal-calculator": {
+      "name": "Calculadora de meta de ahorro",
+      "description": "Estima cuánto tiempo necesitas para alcanzar una meta de ahorro con depósitos mensuales e intereses.",
+      "seo_title": "Calculadora de meta de ahorro gratis",
+      "seo_description": "Estima cuánto tiempo necesitas para alcanzar una meta de ahorro con depósitos mensuales e intereses. Usa esta herramienta online gratuita en el navegador, sin registro."
+    },
+    "csp-header-generator": {
+      "name": "Generador de encabezado CSP",
+      "description": "Crea un encabezado Content-Security-Policy con directivas de origen y opciones de reporte.",
+      "seo_title": "Generador de encabezado CSP gratis",
+      "seo_description": "Crea un encabezado Content-Security-Policy con directivas de origen y opciones de reporte. Usa esta herramienta online gratuita en el navegador, sin registro."
+    },
+    "ics-file-generator": {
+      "name": "Generador de archivo ICS",
+      "description": "Genera texto de evento iCalendar ICS desde título, hora, ubicación, descripción y zona horaria.",
+      "seo_title": "Generador de archivo ICS gratis",
+      "seo_description": "Genera texto de evento iCalendar ICS desde título, hora, ubicación, descripción y zona horaria. Usa esta herramienta online gratuita en el navegador, sin registro."
+    },
+    "midjourney-prompt-generator": {
+      "name": "Generador de prompts para Midjourney",
+      "description": "Crea variantes de prompt estilo Midjourney con tema, estilo, iluminación, relación de aspecto y exclusiones.",
+      "seo_title": "Generador de prompts para Midjourney gratis",
+      "seo_description": "Crea variantes de prompt estilo Midjourney con tema, estilo, iluminación, relación de aspecto y exclusiones. Usa esta herramienta online gratuita en el navegador, sin registro."
+    },
+    "stable-diffusion-prompt-generator": {
+      "name": "Generador de prompts para Stable Diffusion",
+      "description": "Crea bloques de prompt para Stable Diffusion con prompt positivo, negativo, relación de aspecto y notas.",
+      "seo_title": "Generador de prompts para Stable Diffusion gratis",
+      "seo_description": "Crea bloques de prompt para Stable Diffusion con prompt positivo, negativo, relación de aspecto y notas. Usa esta herramienta online gratuita en el navegador, sin registro."
     }
   }
 }

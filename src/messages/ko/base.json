@@ -15730,7 +15730,33 @@
         "siteName": "사이트 이름",
         "siteUrl": "사이트 URL",
         "summary": "요약",
-        "priorityPages": "우선 페이지"
+        "priorityPages": "우선 페이지",
+        "targetAmount": "목표 금액",
+        "currentSavings": "현재 저축액",
+        "monthlyContribution": "월 납입액",
+        "annualRate": "연 이율",
+        "months": "예상 개월 수",
+        "defaultSrc": "default-src",
+        "scriptSrc": "script-src",
+        "styleSrc": "style-src",
+        "imgSrc": "img-src",
+        "connectSrc": "connect-src",
+        "frameAncestors": "frame-ancestors",
+        "reportUri": "보고 URI",
+        "upgradeInsecureRequests": "안전하지 않은 요청 업그레이드",
+        "startDate": "시작 날짜",
+        "startTime": "시작 시간",
+        "endDate": "종료 날짜",
+        "endTime": "종료 시간",
+        "location": "장소",
+        "description": "설명",
+        "timezone": "시간대",
+        "subject": "주제",
+        "lighting": "조명",
+        "composition": "구도",
+        "aspectRatio": "화면 비율",
+        "negativePrompt": "부정 프롬프트",
+        "details": "세부 정보"
       },
       "options": {
         "writing": "글쓰기",
@@ -15848,7 +15874,19 @@
         "service": "서비스",
         "ports": "포트",
         "envVars": "환경 변수",
-        "pages": "페이지"
+        "pages": "페이지",
+        "amountNeeded": "필요 금액",
+        "projectedSavings": "예상 저축액",
+        "gapOrSurplus": "부족 / 초과",
+        "monthsToGoal": "목표까지 개월 수",
+        "notReached": "미달성",
+        "cspHeader": "CSP 헤더",
+        "directives": "지시문 수",
+        "eventDate": "이벤트 날짜",
+        "duration": "소요 시간",
+        "promptVariants": "프롬프트 변형",
+        "positivePrompt": "긍정 프롬프트",
+        "settingNotes": "설정 메모"
       },
       "placeholders": {
         "aiTopic": "온라인 도구 사이트 출시 문구",
@@ -15885,7 +15923,24 @@
         "siteUrl": "https://www.u2tool.com",
         "siteSummary": "개발자, 마케터, 운영자를 위한 무료 브라우저 기반 도구 모음입니다.",
         "dockerRun": "docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest",
-        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD"
+        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD",
+        "cspDefaultSrc": "'self'",
+        "cspScriptSrc": "'self' https://cdn.jsdelivr.net",
+        "cspStyleSrc": "'self' 'unsafe-inline'",
+        "cspImgSrc": "'self' data: https:",
+        "cspConnectSrc": "'self'",
+        "cspFrameAncestors": "'none'",
+        "reportUri": "https://example.com/csp-report",
+        "eventTitle": "제품 기획 회의",
+        "eventLocation": "회의실 A",
+        "eventDescription": "출시 체크리스트와 다음 마일스톤을 검토합니다.",
+        "timezone": "UTC",
+        "promptSubject": "자연광이 들어오는 현대적인 작업 공간",
+        "promptStyle": "에디토리얼 사진, 깔끔한 구도",
+        "promptLighting": "부드러운 아침빛",
+        "promptComposition": "광각, 중앙 피사체",
+        "negativePrompt": "흐림, 낮은 품질, 왜곡된 손, 여분의 손가락",
+        "promptDetails": "높은 디테일, 사실적인 재질, 은은한 색 대비"
       }
     },
     "calorie-deficit-calculator": {
@@ -16007,6 +16062,36 @@
       "description": "키워드, 시청자, 링크, CTA를 활용해 구조화된 YouTube 영상 설명을 만듭니다.",
       "seo_title": "무료 온라인 YouTube 설명 생성기",
       "seo_description": "키워드, 시청자, 링크, CTA를 활용해 구조화된 YouTube 영상 설명을 만듭니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "savings-goal-calculator": {
+      "name": "저축 목표 계산기",
+      "description": "현재 저축액, 월 납입액, 이자율을 바탕으로 저축 목표 달성 기간을 추정합니다.",
+      "seo_title": "무료 온라인 저축 목표 계산기",
+      "seo_description": "현재 저축액, 월 납입액, 이자율을 바탕으로 저축 목표 달성 기간을 추정합니다. 브라우저에서 무료로 사용할 수 있으며 가입이 필요 없습니다."
+    },
+    "csp-header-generator": {
+      "name": "CSP 헤더 생성기",
+      "description": "일반적인 소스 지시문과 보고 옵션으로 Content-Security-Policy 헤더를 만듭니다.",
+      "seo_title": "무료 온라인 CSP 헤더 생성기",
+      "seo_description": "일반적인 소스 지시문과 보고 옵션으로 Content-Security-Policy 헤더를 만듭니다. 브라우저에서 무료로 사용할 수 있으며 가입이 필요 없습니다."
+    },
+    "ics-file-generator": {
+      "name": "ICS 파일 생성기",
+      "description": "제목, 시간, 장소, 설명, 시간대를 바탕으로 iCalendar ICS 이벤트 텍스트를 생성합니다.",
+      "seo_title": "무료 온라인 ICS 파일 생성기",
+      "seo_description": "제목, 시간, 장소, 설명, 시간대를 바탕으로 iCalendar ICS 이벤트 텍스트를 생성합니다. 브라우저에서 무료로 사용할 수 있으며 가입이 필요 없습니다."
+    },
+    "midjourney-prompt-generator": {
+      "name": "Midjourney 프롬프트 생성기",
+      "description": "주제, 스타일, 조명, 화면 비율, 제외 항목으로 Midjourney 스타일 프롬프트 변형을 만듭니다.",
+      "seo_title": "무료 온라인 Midjourney 프롬프트 생성기",
+      "seo_description": "주제, 스타일, 조명, 화면 비율, 제외 항목으로 Midjourney 스타일 프롬프트 변형을 만듭니다. 브라우저에서 무료로 사용할 수 있으며 가입이 필요 없습니다."
+    },
+    "stable-diffusion-prompt-generator": {
+      "name": "Stable Diffusion 프롬프트 생성기",
+      "description": "긍정 프롬프트, 부정 프롬프트, 화면 비율, 설정 메모를 포함한 Stable Diffusion 프롬프트 블록을 만듭니다.",
+      "seo_title": "무료 온라인 Stable Diffusion 프롬프트 생성기",
+      "seo_description": "긍정 프롬프트, 부정 프롬프트, 화면 비율, 설정 메모를 포함한 Stable Diffusion 프롬프트 블록을 만듭니다. 브라우저에서 무료로 사용할 수 있으며 가입이 필요 없습니다."
     }
   }
 }

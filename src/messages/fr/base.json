@@ -15919,7 +15919,33 @@
         "siteName": "Nom du site",
         "siteUrl": "URL du site",
         "summary": "Résumé",
-        "priorityPages": "Pages prioritaires"
+        "priorityPages": "Pages prioritaires",
+        "targetAmount": "Montant cible",
+        "currentSavings": "Épargne actuelle",
+        "monthlyContribution": "Versement mensuel",
+        "annualRate": "Taux annuel",
+        "months": "Mois de projection",
+        "defaultSrc": "default-src",
+        "scriptSrc": "script-src",
+        "styleSrc": "style-src",
+        "imgSrc": "img-src",
+        "connectSrc": "connect-src",
+        "frameAncestors": "frame-ancestors",
+        "reportUri": "URI de rapport",
+        "upgradeInsecureRequests": "Mettre à niveau les requêtes non sécurisées",
+        "startDate": "Date de début",
+        "startTime": "Heure de début",
+        "endDate": "Date de fin",
+        "endTime": "Heure de fin",
+        "location": "Lieu",
+        "description": "Description",
+        "timezone": "Fuseau horaire",
+        "subject": "Sujet",
+        "lighting": "Lumière",
+        "composition": "Composition",
+        "aspectRatio": "Ratio",
+        "negativePrompt": "Prompt négatif",
+        "details": "Détails"
       },
       "options": {
         "writing": "Rédaction",
@@ -16037,7 +16063,19 @@
         "service": "Service",
         "ports": "Ports",
         "envVars": "Variables d’environnement",
-        "pages": "Pages"
+        "pages": "Pages",
+        "amountNeeded": "Montant nécessaire",
+        "projectedSavings": "Épargne projetée",
+        "gapOrSurplus": "Écart / surplus",
+        "monthsToGoal": "Mois jusqu’à l’objectif",
+        "notReached": "Non atteint",
+        "cspHeader": "En-tête CSP",
+        "directives": "Directives",
+        "eventDate": "Date de l’événement",
+        "duration": "Durée",
+        "promptVariants": "Variantes de prompt",
+        "positivePrompt": "Prompt positif",
+        "settingNotes": "Notes de réglage"
       },
       "placeholders": {
         "aiTopic": "texte de lancement pour un site d’outils en ligne",
@@ -16074,7 +16112,24 @@
         "siteUrl": "https://www.u2tool.com",
         "siteSummary": "Une collection gratuite d’outils dans le navigateur pour développeurs, marketeurs et équipes opérationnelles.",
         "dockerRun": "docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest",
-        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD"
+        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD",
+        "cspDefaultSrc": "'self'",
+        "cspScriptSrc": "'self' https://cdn.jsdelivr.net",
+        "cspStyleSrc": "'self' 'unsafe-inline'",
+        "cspImgSrc": "'self' data: https:",
+        "cspConnectSrc": "'self'",
+        "cspFrameAncestors": "'none'",
+        "reportUri": "https://example.com/csp-report",
+        "eventTitle": "Réunion de planification produit",
+        "eventLocation": "Salle de réunion A",
+        "eventDescription": "Vérifier la liste de lancement et les prochains jalons.",
+        "timezone": "UTC",
+        "promptSubject": "un espace de travail moderne avec lumière naturelle",
+        "promptStyle": "photo éditoriale, composition nette",
+        "promptLighting": "lumière douce du matin",
+        "promptComposition": "grand angle, sujet centré",
+        "negativePrompt": "flou, basse qualité, mains déformées, doigts en trop",
+        "promptDetails": "haut niveau de détail, matériaux réalistes, contraste subtil"
       }
     },
     "calorie-deficit-calculator": {
@@ -16196,6 +16251,36 @@
       "description": "Créez une description YouTube structurée avec mots-clés, public, liens et CTA.",
       "seo_title": "Générateur de descriptions YouTube gratuit en ligne",
       "seo_description": "Créez une description YouTube structurée avec mots-clés, public, liens et CTA. Outil gratuit dans le navigateur, sans inscription."
+    },
+    "savings-goal-calculator": {
+      "name": "Calculateur d'objectif d'épargne",
+      "description": "Estimez le temps nécessaire pour atteindre un objectif d'épargne avec versements mensuels et intérêts.",
+      "seo_title": "Calculateur d'objectif d'épargne gratuit",
+      "seo_description": "Estimez le temps nécessaire pour atteindre un objectif d'épargne avec versements mensuels et intérêts. Utilisez cet outil en ligne gratuit dans le navigateur, sans inscription."
+    },
+    "csp-header-generator": {
+      "name": "Générateur d'en-tête CSP",
+      "description": "Créez un en-tête Content-Security-Policy à partir de directives de sources et d'options de rapport.",
+      "seo_title": "Générateur d'en-tête CSP gratuit",
+      "seo_description": "Créez un en-tête Content-Security-Policy à partir de directives de sources et d'options de rapport. Utilisez cet outil en ligne gratuit dans le navigateur, sans inscription."
+    },
+    "ics-file-generator": {
+      "name": "Générateur de fichier ICS",
+      "description": "Générez un événement iCalendar ICS avec titre, horaire, lieu, description et fuseau horaire.",
+      "seo_title": "Générateur de fichier ICS gratuit",
+      "seo_description": "Générez un événement iCalendar ICS avec titre, horaire, lieu, description et fuseau horaire. Utilisez cet outil en ligne gratuit dans le navigateur, sans inscription."
+    },
+    "midjourney-prompt-generator": {
+      "name": "Générateur de prompts Midjourney",
+      "description": "Créez des variantes de prompts style Midjourney avec sujet, style, lumière, ratio et exclusions.",
+      "seo_title": "Générateur de prompts Midjourney gratuit",
+      "seo_description": "Créez des variantes de prompts style Midjourney avec sujet, style, lumière, ratio et exclusions. Utilisez cet outil en ligne gratuit dans le navigateur, sans inscription."
+    },
+    "stable-diffusion-prompt-generator": {
+      "name": "Générateur de prompts Stable Diffusion",
+      "description": "Créez des blocs de prompts Stable Diffusion avec prompt positif, négatif, ratio et notes de réglage.",
+      "seo_title": "Générateur de prompts Stable Diffusion gratuit",
+      "seo_description": "Créez des blocs de prompts Stable Diffusion avec prompt positif, négatif, ratio et notes de réglage. Utilisez cet outil en ligne gratuit dans le navigateur, sans inscription."
     }
   }
 }

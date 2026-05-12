@@ -16,7 +16,7 @@ import {
   getComparisonGuide,
   getComparisonUiCopy,
 } from '@/lib/comparison-surfaces';
-import { loadBaseMessages } from '@/lib/translations';
+import { loadBaseUiMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
 import { buildLocalizedPagePath, getHreflang } from '@/lib/seo';
@@ -32,7 +32,7 @@ export const getStaticPaths: GetStaticPaths = () =>
   );
 
 const { locale, slug } = Astro.props as { locale: Locale; slug: string };
-const baseMessages = await loadBaseMessages(locale);
+const baseMessages = await loadBaseUiMessages(locale, Astro.url);
 const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
 const navMessages = (baseMessages.nav as Record<string, string>) ?? {};

@@ -11,7 +11,7 @@
   type Field = {
     key: string;
     label: string;
-    type?: 'text' | 'number' | 'textarea' | 'select';
+    type?: 'text' | 'number' | 'textarea' | 'select' | 'date' | 'time';
     placeholder?: string;
     options?: Array<{ label: string; value: string }>;
   };
@@ -140,6 +140,32 @@
         priorityPages: 'Priority Pages',
         delimiter: 'Delimiter',
         vcardVersion: 'vCard Version',
+        targetAmount: 'Target Amount',
+        currentSavings: 'Current Savings',
+        monthlyContribution: 'Monthly Contribution',
+        annualRate: 'Annual Interest Rate',
+        months: 'Projection Months',
+        defaultSrc: 'default-src',
+        scriptSrc: 'script-src',
+        styleSrc: 'style-src',
+        imgSrc: 'img-src',
+        connectSrc: 'connect-src',
+        frameAncestors: 'frame-ancestors',
+        reportUri: 'Report URI',
+        upgradeInsecureRequests: 'Upgrade Insecure Requests',
+        startDate: 'Start Date',
+        startTime: 'Start Time',
+        endDate: 'End Date',
+        endTime: 'End Time',
+        location: 'Location',
+        description: 'Description',
+        timezone: 'Timezone',
+        subject: 'Subject',
+        lighting: 'Lighting',
+        composition: 'Composition',
+        aspectRatio: 'Aspect Ratio',
+        negativePrompt: 'Negative Prompt',
+        details: 'Details',
       },
       options: {
         writing: 'Writing',
@@ -258,6 +284,18 @@
         missing: 'Missing',
         contacts: 'Contacts',
         vcardVersion: 'vCard Version',
+        amountNeeded: 'Amount Needed',
+        projectedSavings: 'Projected Savings',
+        gapOrSurplus: 'Gap / Surplus',
+        monthsToGoal: 'Months to Goal',
+        notReached: 'Not reached',
+        cspHeader: 'CSP Header',
+        directives: 'Directives',
+        eventDate: 'Event Date',
+        duration: 'Duration',
+        promptVariants: 'Prompt Variants',
+        positivePrompt: 'Positive Prompt',
+        settingNotes: 'Setting Notes',
       },
       placeholders: {
         aiTopic: 'launch copy for an online tools site',
@@ -295,6 +333,23 @@
         vcardContacts: 'BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD',
         headers: 'strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff',
         csvContacts: 'first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder',
+        cspDefaultSrc: "'self'",
+        cspScriptSrc: "'self' https://cdn.jsdelivr.net",
+        cspStyleSrc: "'self' 'unsafe-inline'",
+        cspImgSrc: "'self' data: https:",
+        cspConnectSrc: "'self'",
+        cspFrameAncestors: "'none'",
+        reportUri: 'https://example.com/csp-report',
+        eventTitle: 'Product planning meeting',
+        eventLocation: 'Conference Room A',
+        eventDescription: 'Review launch checklist and next milestones.',
+        timezone: 'UTC',
+        promptSubject: 'a modern workspace with natural light',
+        promptStyle: 'editorial photo, clean composition',
+        promptLighting: 'soft morning light',
+        promptComposition: 'wide angle, centered subject',
+        negativePrompt: 'blurry, low quality, distorted hands, extra fingers',
+        promptDetails: 'high detail, realistic materials, subtle color contrast',
       },
     },
     zh: {
@@ -402,6 +457,32 @@
         priorityPages: '重点页面',
         delimiter: '分隔符',
         vcardVersion: 'vCard 版本',
+        targetAmount: '目标金额',
+        currentSavings: '当前存款',
+        monthlyContribution: '每月存入',
+        annualRate: '年化利率',
+        months: '预测月数',
+        defaultSrc: 'default-src',
+        scriptSrc: 'script-src',
+        styleSrc: 'style-src',
+        imgSrc: 'img-src',
+        connectSrc: 'connect-src',
+        frameAncestors: 'frame-ancestors',
+        reportUri: '报告 URI',
+        upgradeInsecureRequests: '升级不安全请求',
+        startDate: '开始日期',
+        startTime: '开始时间',
+        endDate: '结束日期',
+        endTime: '结束时间',
+        location: '地点',
+        description: '描述',
+        timezone: '时区',
+        subject: '主体',
+        lighting: '光线',
+        composition: '构图',
+        aspectRatio: '宽高比',
+        negativePrompt: '反向提示词',
+        details: '细节',
       },
       options: {
         writing: '写作',
@@ -520,6 +601,18 @@
         missing: '缺失',
         contacts: '联系人',
         vcardVersion: 'vCard 版本',
+        amountNeeded: '还需金额',
+        projectedSavings: '预计存款',
+        gapOrSurplus: '差额/盈余',
+        monthsToGoal: '达成月数',
+        notReached: '未达成',
+        cspHeader: 'CSP 响应头',
+        directives: '指令数量',
+        eventDate: '事件日期',
+        duration: '时长',
+        promptVariants: '提示词版本',
+        positivePrompt: '正向提示词',
+        settingNotes: '设置备注',
       },
       placeholders: {
         aiTopic: '一个在线工具网站的发布文案',
@@ -557,6 +650,23 @@
         vcardContacts: 'BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD',
         headers: 'strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff',
         csvContacts: 'first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder',
+        cspDefaultSrc: "'self'",
+        cspScriptSrc: "'self' https://cdn.jsdelivr.net",
+        cspStyleSrc: "'self' 'unsafe-inline'",
+        cspImgSrc: "'self' data: https:",
+        cspConnectSrc: "'self'",
+        cspFrameAncestors: "'none'",
+        reportUri: 'https://example.com/csp-report',
+        eventTitle: '产品规划会议',
+        eventLocation: '会议室 A',
+        eventDescription: '复盘发布清单和下一阶段里程碑。',
+        timezone: 'UTC',
+        promptSubject: '自然光下的现代工作空间',
+        promptStyle: '编辑风摄影，简洁构图',
+        promptLighting: '柔和晨光',
+        promptComposition: '广角，主体居中',
+        negativePrompt: '模糊，低质量，手部变形，多余手指',
+        promptDetails: '高细节，真实材质，微妙色彩对比',
       },
     },
   };
@@ -658,6 +768,23 @@
           { key: 'entryPrice', label: text('fields', 'entryPrice'), type: 'number', placeholder: '50' },
           { key: 'stopPrice', label: text('fields', 'stopPrice'), type: 'number', placeholder: '47.5' },
         ];
+      case 'savings-goal-calculator':
+        return [
+          { key: 'targetAmount', label: text('fields', 'targetAmount'), type: 'number', placeholder: '25000' },
+          { key: 'currentSavings', label: text('fields', 'currentSavings'), type: 'number', placeholder: '5000' },
+          { key: 'monthlyContribution', label: text('fields', 'monthlyContribution'), type: 'number', placeholder: '750' },
+          { key: 'annualRate', label: text('fields', 'annualRate'), type: 'number', placeholder: '4' },
+          { key: 'months', label: text('fields', 'months'), type: 'number', placeholder: '24' },
+          { key: 'currency', label: text('fields', 'currency'), type: 'select', options: [
+            { label: 'USD', value: 'USD' },
+            { label: 'EUR', value: 'EUR' },
+            { label: 'GBP', value: 'GBP' },
+            { label: 'CAD', value: 'CAD' },
+            { label: 'AUD', value: 'AUD' },
+            { label: 'JPY', value: 'JPY' },
+            { label: 'CNY', value: 'CNY' },
+          ] },
+        ];
       case 'macro-calculator':
         return [
           { key: 'unit', label: text('fields', 'unit'), type: 'select', options: [
@@ -710,6 +837,17 @@
             { label: text('options', 'concise'), value: 'concise' },
           ] },
         ];
+      case 'ics-file-generator':
+        return [
+          { key: 'title', label: text('fields', 'title'), type: 'text', placeholder: text('placeholders', 'eventTitle') },
+          { key: 'startDate', label: text('fields', 'startDate'), type: 'date', placeholder: '2026-06-01' },
+          { key: 'startTime', label: text('fields', 'startTime'), type: 'time', placeholder: '09:00' },
+          { key: 'endDate', label: text('fields', 'endDate'), type: 'date', placeholder: '2026-06-01' },
+          { key: 'endTime', label: text('fields', 'endTime'), type: 'time', placeholder: '10:00' },
+          { key: 'timezone', label: text('fields', 'timezone'), type: 'text', placeholder: text('placeholders', 'timezone') },
+          { key: 'location', label: text('fields', 'location'), type: 'text', placeholder: text('placeholders', 'eventLocation') },
+          { key: 'description', label: text('fields', 'description'), type: 'textarea', placeholder: text('placeholders', 'eventDescription') },
+        ];
       case 'one-rep-max-calculator':
         return [
           { key: 'unit', label: text('fields', 'unit'), type: 'select', options: [
@@ -756,6 +894,20 @@
       case 'security-headers-checker':
         return [
           { key: 'headers', label: text('fields', 'headers'), type: 'textarea', placeholder: text('placeholders', 'headers') },
+        ];
+      case 'csp-header-generator':
+        return [
+          { key: 'defaultSrc', label: text('fields', 'defaultSrc'), type: 'text', placeholder: text('placeholders', 'cspDefaultSrc') },
+          { key: 'scriptSrc', label: text('fields', 'scriptSrc'), type: 'text', placeholder: text('placeholders', 'cspScriptSrc') },
+          { key: 'styleSrc', label: text('fields', 'styleSrc'), type: 'text', placeholder: text('placeholders', 'cspStyleSrc') },
+          { key: 'imgSrc', label: text('fields', 'imgSrc'), type: 'text', placeholder: text('placeholders', 'cspImgSrc') },
+          { key: 'connectSrc', label: text('fields', 'connectSrc'), type: 'text', placeholder: text('placeholders', 'cspConnectSrc') },
+          { key: 'frameAncestors', label: text('fields', 'frameAncestors'), type: 'text', placeholder: text('placeholders', 'cspFrameAncestors') },
+          { key: 'reportUri', label: text('fields', 'reportUri'), type: 'text', placeholder: text('placeholders', 'reportUri') },
+          { key: 'upgradeInsecureRequests', label: text('fields', 'upgradeInsecureRequests'), type: 'select', options: [
+            { label: text('options', 'yes'), value: 'yes' },
+            { label: text('options', 'no'), value: 'no' },
+          ] },
         ];
       case 'csv-to-vcard-converter':
         return [
@@ -809,6 +961,36 @@
           { key: 'keyword', label: text('fields', 'keyword'), type: 'text', placeholder: text('placeholders', 'keyword') },
           { key: 'benefit', label: text('fields', 'benefit'), type: 'text', placeholder: text('placeholders', 'benefit') },
           { key: 'audience', label: text('fields', 'audience'), type: 'text', placeholder: text('placeholders', 'metaAudience') },
+        ];
+      case 'midjourney-prompt-generator':
+        return [
+          { key: 'subject', label: text('fields', 'subject'), type: 'text', placeholder: text('placeholders', 'promptSubject') },
+          { key: 'style', label: text('fields', 'style'), type: 'text', placeholder: text('placeholders', 'promptStyle') },
+          { key: 'lighting', label: text('fields', 'lighting'), type: 'text', placeholder: text('placeholders', 'promptLighting') },
+          { key: 'composition', label: text('fields', 'composition'), type: 'text', placeholder: text('placeholders', 'promptComposition') },
+          { key: 'aspectRatio', label: text('fields', 'aspectRatio'), type: 'select', options: [
+            { label: '1:1', value: '1:1' },
+            { label: '16:9', value: '16:9' },
+            { label: '9:16', value: '9:16' },
+            { label: '4:5', value: '4:5' },
+            { label: '3:2', value: '3:2' },
+          ] },
+          { key: 'negativePrompt', label: text('fields', 'negativePrompt'), type: 'textarea', placeholder: text('placeholders', 'negativePrompt') },
+        ];
+      case 'stable-diffusion-prompt-generator':
+        return [
+          { key: 'subject', label: text('fields', 'subject'), type: 'text', placeholder: text('placeholders', 'promptSubject') },
+          { key: 'style', label: text('fields', 'style'), type: 'text', placeholder: text('placeholders', 'promptStyle') },
+          { key: 'details', label: text('fields', 'details'), type: 'textarea', placeholder: text('placeholders', 'promptDetails') },
+          { key: 'lighting', label: text('fields', 'lighting'), type: 'text', placeholder: text('placeholders', 'promptLighting') },
+          { key: 'aspectRatio', label: text('fields', 'aspectRatio'), type: 'select', options: [
+            { label: '1:1', value: '1:1' },
+            { label: '16:9', value: '16:9' },
+            { label: '9:16', value: '9:16' },
+            { label: '4:5', value: '4:5' },
+            { label: '3:2', value: '3:2' },
+          ] },
+          { key: 'negativePrompt', label: text('fields', 'negativePrompt'), type: 'textarea', placeholder: text('placeholders', 'negativePrompt') },
         ];
       case 'youtube-title-generator':
         return [
@@ -968,6 +1150,8 @@
         return { startValue: '10000', endValue: '18000', years: '5' };
       case 'position-size-calculator':
         return { accountSize: '10000', riskPercent: '1', entryPrice: '50', stopPrice: '47.5' };
+      case 'savings-goal-calculator':
+        return { targetAmount: '25000', currentSavings: '5000', monthlyContribution: '750', annualRate: '4', months: '24', currency: 'USD' };
       case 'macro-calculator':
         return { unit: 'metric', weight: '75', height: '178', age: '32', sex: 'male', activity: 'moderate', goal: 'fatLoss' };
       case 'debt-snowball-calculator':
@@ -983,6 +1167,17 @@
           achievement: text('placeholders', 'achievement'),
           tone: 'professional',
         };
+      case 'ics-file-generator':
+        return {
+          title: text('placeholders', 'eventTitle'),
+          startDate: '2026-06-01',
+          startTime: '09:00',
+          endDate: '2026-06-01',
+          endTime: '10:00',
+          timezone: text('placeholders', 'timezone'),
+          location: text('placeholders', 'eventLocation'),
+          description: text('placeholders', 'eventDescription'),
+        };
       case 'one-rep-max-calculator':
         return { unit: 'metric', weight: '100', reps: '5' };
       case 'passport-photo-maker':
@@ -991,6 +1186,17 @@
         return { amount: '100', feePercent: '3.49', fixedFee: '0.49', currency: 'USD' };
       case 'security-headers-checker':
         return { headers: text('placeholders', 'headers') };
+      case 'csp-header-generator':
+        return {
+          defaultSrc: text('placeholders', 'cspDefaultSrc'),
+          scriptSrc: text('placeholders', 'cspScriptSrc'),
+          styleSrc: text('placeholders', 'cspStyleSrc'),
+          imgSrc: text('placeholders', 'cspImgSrc'),
+          connectSrc: text('placeholders', 'cspConnectSrc'),
+          frameAncestors: text('placeholders', 'cspFrameAncestors'),
+          reportUri: '',
+          upgradeInsecureRequests: 'yes',
+        };
       case 'csv-to-vcard-converter':
         return { csv: text('placeholders', 'csvContacts'), delimiter: 'comma', vcardVersion: '3.0' };
       case 'youtube-thumbnail-generator':
@@ -1001,6 +1207,10 @@
         return { title: text('placeholders', 'title'), style: 'title' };
       case 'meta-description-generator':
         return { page: text('placeholders', 'page'), keyword: text('placeholders', 'keyword'), benefit: text('placeholders', 'benefit'), audience: text('placeholders', 'metaAudience') };
+      case 'midjourney-prompt-generator':
+        return { subject: text('placeholders', 'promptSubject'), style: text('placeholders', 'promptStyle'), lighting: text('placeholders', 'promptLighting'), composition: text('placeholders', 'promptComposition'), aspectRatio: '16:9', negativePrompt: text('placeholders', 'negativePrompt') };
+      case 'stable-diffusion-prompt-generator':
+        return { subject: text('placeholders', 'promptSubject'), style: text('placeholders', 'promptStyle'), details: text('placeholders', 'promptDetails'), lighting: text('placeholders', 'promptLighting'), aspectRatio: '1:1', negativePrompt: text('placeholders', 'negativePrompt') };
       case 'youtube-title-generator':
         return { topic: text('placeholders', 'youtubeTopic'), keyword: text('placeholders', 'youtubeKeyword'), audience: text('placeholders', 'youtubeAudience'), tone: 'professional' };
       case 'instagram-bio-generator':
@@ -1902,6 +2112,183 @@
     return `# ${siteName}\n\n> ${summary}\n\nOfficial site: ${siteUrl}\nAudience: ${audience}\n\n## Key Pages\n${pageLines.join('\n')}\n\n## Usage Notes\n- Prefer the canonical URLs above when citing or linking to ${siteName}.\n- Summarize tools by their input, output, and whether they run in the browser.\n- Do not invent pricing, account requirements, or supported formats beyond the linked pages.\n`;
   }
 
+  function cleanDirectiveValue(value: string): string {
+    return value
+      .split(/[;\r\n]+/)
+      .map((part) => part.trim())
+      .filter(Boolean)
+      .join(' ');
+  }
+
+  function cspHeaderOutput(): Result {
+    const directives: string[] = [];
+    const addDirective = (name: string, value: string) => {
+      const cleaned = cleanDirectiveValue(value);
+      if (cleaned) {
+        directives.push(`${name} ${cleaned}`);
+      }
+    };
+
+    addDirective('default-src', inputs.defaultSrc || text('placeholders', 'cspDefaultSrc'));
+    addDirective('script-src', inputs.scriptSrc || '');
+    addDirective('style-src', inputs.styleSrc || '');
+    addDirective('img-src', inputs.imgSrc || '');
+    addDirective('connect-src', inputs.connectSrc || '');
+    addDirective('frame-ancestors', inputs.frameAncestors || '');
+    if (inputs.upgradeInsecureRequests !== 'no') {
+      directives.push('upgrade-insecure-requests');
+    }
+    addDirective('report-uri', inputs.reportUri || '');
+
+    if (!directives.length) {
+      return { error: text('errors', 'invalidData') };
+    }
+
+    const policy = directives.join('; ');
+    const output = `Content-Security-Policy: ${policy}`;
+    return {
+      cards: [
+        { label: text('results', 'cspHeader'), value: 'Content-Security-Policy', tone: 'good' },
+        { label: text('results', 'directives'), value: integer(directives.length) },
+      ],
+      output,
+      copyText: output,
+    };
+  }
+
+  function compactIcsDate(date: string, time: string): string {
+    const [year = '2026', month = '01', day = '01'] = date.split('-');
+    const [hour = '00', minute = '00'] = time.split(':');
+    return `${year}${month}${day}T${hour}${minute}00`;
+  }
+
+  function safeTimezone(value: string): string {
+    return (value || 'UTC').trim().replace(/[^A-Za-z0-9_+\-/]/g, '') || 'UTC';
+  }
+
+  function icsEscape(value: string): string {
+    return value
+      .replace(/\\/g, '\\\\')
+      .replace(/\r?\n/g, '\\n')
+      .replace(/;/g, '\\;')
+      .replace(/,/g, '\\,');
+  }
+
+  function icsDateLine(key: string, date: string, time: string, timezone: string): string {
+    const value = compactIcsDate(date, time);
+    if (timezone.toUpperCase() === 'UTC') {
+      return `${key}:${value}Z`;
+    }
+    return `${key};TZID=${timezone}:${value}`;
+  }
+
+  function eventMinutes(startDate: string, startTime: string, endDate: string, endTime: string): number {
+    const start = Date.parse(`${startDate}T${startTime || '00:00'}:00`);
+    const end = Date.parse(`${endDate}T${endTime || '00:00'}:00`);
+    if (!Number.isFinite(start) || !Number.isFinite(end) || end <= start) {
+      return 0;
+    }
+    return Math.round((end - start) / 60000);
+  }
+
+  function icsOutput(): Result {
+    const title = inputs.title || text('placeholders', 'eventTitle');
+    const startDate = inputs.startDate || '2026-06-01';
+    const startTime = inputs.startTime || '09:00';
+    const endDate = inputs.endDate || startDate;
+    const endTime = inputs.endTime || '10:00';
+    const timezone = safeTimezone(inputs.timezone || text('placeholders', 'timezone'));
+    const location = inputs.location || text('placeholders', 'eventLocation');
+    const description = inputs.description || text('placeholders', 'eventDescription');
+    const minutes = eventMinutes(startDate, startTime, endDate, endTime);
+
+    if (!title || !startDate || !startTime || !endDate || !endTime || !minutes) {
+      return { error: text('errors', 'invalidData') };
+    }
+
+    const uidBase = `${title}-${startDate}-${startTime}`
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+    const lines = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//U2Tool//ICS File Generator//EN',
+      'CALSCALE:GREGORIAN',
+      'METHOD:PUBLISH',
+      'BEGIN:VEVENT',
+      `UID:${uidBase || 'event'}@u2tool.com`,
+      `DTSTAMP:${startDate.replace(/-/g, '')}T000000Z`,
+      icsDateLine('DTSTART', startDate, startTime, timezone),
+      icsDateLine('DTEND', endDate, endTime, timezone),
+      `SUMMARY:${icsEscape(title)}`,
+      `LOCATION:${icsEscape(location)}`,
+      `DESCRIPTION:${icsEscape(description)}`,
+      'END:VEVENT',
+      'END:VCALENDAR',
+    ];
+    const output = lines.join('\r\n');
+    return {
+      cards: [
+        { label: text('results', 'eventDate'), value: `${startDate} ${startTime}` },
+        { label: text('results', 'duration'), value: `${integer(minutes)} min`, tone: 'good' },
+        { label: text('fields', 'timezone'), value: timezone },
+      ],
+      output,
+      copyText: output,
+    };
+  }
+
+  function promptPhrase(value: string): string {
+    return value.replace(/\s+/g, ' ').replace(/\s*,\s*/g, ', ').trim();
+  }
+
+  function midjourneyPromptOptions(): string[] {
+    const subject = promptPhrase(inputs.subject || text('placeholders', 'promptSubject'));
+    const style = promptPhrase(inputs.style || text('placeholders', 'promptStyle'));
+    const lighting = promptPhrase(inputs.lighting || text('placeholders', 'promptLighting'));
+    const composition = promptPhrase(inputs.composition || text('placeholders', 'promptComposition'));
+    const aspectRatio = inputs.aspectRatio || '16:9';
+    const negative = promptPhrase(inputs.negativePrompt || '');
+    const noBlock = negative ? ` --no ${negative}` : '';
+    const base = [subject, style, lighting, composition].filter(Boolean).join(', ');
+
+    return [
+      `${base}, high detail, refined color grading --ar ${aspectRatio}${noBlock}`,
+      `${subject}, ${style}, ${lighting}, cinematic depth, ${composition} --ar ${aspectRatio}${noBlock}`,
+      `${subject}, premium editorial aesthetic, ${style}, ${lighting}, crisp details --ar ${aspectRatio}${noBlock}`,
+      `${subject}, ${composition}, layered scene, clean background, ${style} --ar ${aspectRatio}${noBlock}`,
+      `${subject}, realistic texture, balanced contrast, ${lighting}, professional finish --ar ${aspectRatio}${noBlock}`,
+      `${subject}, concept art direction, ${style}, strong focal point, ${composition} --ar ${aspectRatio}${noBlock}`,
+    ];
+  }
+
+  function stableDiffusionOutput(): Result {
+    const subject = promptPhrase(inputs.subject || text('placeholders', 'promptSubject'));
+    const style = promptPhrase(inputs.style || text('placeholders', 'promptStyle'));
+    const details = promptPhrase(inputs.details || text('placeholders', 'promptDetails'));
+    const lighting = promptPhrase(inputs.lighting || text('placeholders', 'promptLighting'));
+    const aspectRatio = inputs.aspectRatio || '1:1';
+    const negative = promptPhrase(inputs.negativePrompt || text('placeholders', 'negativePrompt'));
+    const positive = [subject, style, details, lighting, 'sharp focus', 'high quality'].filter(Boolean).join(', ');
+    const notes = [
+      `${text('fields', 'aspectRatio')}: ${aspectRatio}`,
+      'Use your model defaults first, then tune steps, CFG, and sampler after the first preview.',
+      'Keep seed fixed when comparing prompt changes.',
+    ];
+    const output = `${text('results', 'positivePrompt')}:\n${positive}\n\n${text('fields', 'negativePrompt')}:\n${negative}\n\n${text('results', 'settingNotes')}:\n${notes.join('\n')}`;
+
+    return {
+      cards: [
+        { label: text('results', 'positivePrompt'), value: 'Ready', tone: 'good' },
+        { label: text('fields', 'aspectRatio'), value: aspectRatio },
+        { label: text('results', 'settingNotes'), value: integer(notes.length) },
+      ],
+      output,
+      copyText: output,
+    };
+  }
+
   function calculate(): Result {
     switch (slug) {
       case 'stock-profit-calculator': {
@@ -1988,6 +2375,50 @@
             { label: text('results', 'positionValue'), value: money(positionValue) },
           ],
           copyText: `${text('results', 'positionSize')}: ${compact(units)}`,
+        };
+      }
+      case 'savings-goal-calculator': {
+        const targetAmount = num('targetAmount');
+        const currentSavings = Math.max(0, num('currentSavings'));
+        const monthlyContribution = Math.max(0, num('monthlyContribution'));
+        const annualRate = Math.max(0, num('annualRate'));
+        const projectionMonths = Math.max(1, Math.round(num('months') || 1));
+        const currency = inputs.currency || 'USD';
+        if (!targetAmount || targetAmount < 0) return { error: labels.invalidNumbers };
+
+        const monthlyRate = annualRate / 100 / 12;
+        let projectedSavings = currentSavings;
+        for (let month = 0; month < projectionMonths; month += 1) {
+          projectedSavings = projectedSavings * (1 + monthlyRate) + monthlyContribution;
+        }
+
+        let balance = currentSavings;
+        let monthsToGoal = currentSavings >= targetAmount ? 0 : -1;
+        for (let month = 1; month <= 1200 && monthsToGoal < 0; month += 1) {
+          balance = balance * (1 + monthlyRate) + monthlyContribution;
+          if (balance >= targetAmount) {
+            monthsToGoal = month;
+          }
+          if (monthlyContribution === 0 && monthlyRate === 0) {
+            break;
+          }
+        }
+
+        const gapOrSurplus = projectedSavings - targetAmount;
+        const amountNeeded = Math.max(0, targetAmount - currentSavings);
+        return {
+          cards: [
+            { label: text('results', 'amountNeeded'), value: moneyFor(amountNeeded, currency) },
+            { label: text('results', 'projectedSavings'), value: moneyFor(projectedSavings, currency), tone: projectedSavings >= targetAmount ? 'good' : 'neutral' },
+            { label: text('results', 'gapOrSurplus'), value: moneyFor(gapOrSurplus, currency), tone: gapOrSurplus >= 0 ? 'good' : 'bad' },
+            { label: text('results', 'monthsToGoal'), value: monthsToGoal >= 0 ? compactMonths(monthsToGoal) : text('results', 'notReached'), tone: monthsToGoal >= 0 ? 'good' : 'bad' },
+          ],
+          rows: [
+            { label: text('fields', 'targetAmount'), value: moneyFor(targetAmount, currency) },
+            { label: text('fields', 'monthlyContribution'), value: moneyFor(monthlyContribution, currency) },
+            { label: text('fields', 'annualRate'), value: plainPercent(annualRate) },
+          ],
+          copyText: `${text('results', 'projectedSavings')}: ${moneyFor(projectedSavings, currency)}; ${text('results', 'monthsToGoal')}: ${monthsToGoal >= 0 ? compactMonths(monthsToGoal) : text('results', 'notReached')}`,
         };
       }
       case 'macro-calculator': {
@@ -2127,6 +2558,8 @@
         const output = coverLetterOutput();
         return { output, copyText: output };
       }
+      case 'ics-file-generator':
+        return icsOutput();
       case 'one-rep-max-calculator': {
         const weight = num('weight');
         const reps = Math.max(1, Math.round(num('reps')));
@@ -2223,6 +2656,8 @@
           copyText: `${text('results', 'score')}: ${score}% (${passed}/${checks.length})`,
         };
       }
+      case 'csp-header-generator':
+        return cspHeaderOutput();
       case 'csv-to-vcard-converter': {
         const delimiter = delimiterValue(inputs.delimiter || 'comma');
         const rows = parseDelimitedRows(inputs.csv || '', delimiter);
@@ -2317,6 +2752,21 @@
           copyText: options[0],
         };
       }
+      case 'midjourney-prompt-generator': {
+        const options = midjourneyPromptOptions();
+        const output = numberedOutput(options);
+        return {
+          cards: [
+            { label: text('results', 'promptVariants'), value: integer(options.length), tone: 'good' },
+            { label: text('fields', 'aspectRatio'), value: inputs.aspectRatio || '16:9' },
+          ],
+          output,
+          rows: options.slice(0, 4).map((value, index) => ({ label: `${text('results', 'option')} ${index + 1}`, value })),
+          copyText: output,
+        };
+      }
+      case 'stable-diffusion-prompt-generator':
+        return stableDiffusionOutput();
       case 'youtube-title-generator': {
         const options = youtubeTitleOptions();
         const output = options.map((value, index) => `${index + 1}. ${value}`).join('\n');

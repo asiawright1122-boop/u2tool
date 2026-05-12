@@ -46,4 +46,5 @@ export const OFFICE_TOOLS: Tool[] = [
   { slug: 'cover-letter-generator', category: 'office', icon: 'file-text', component: 'PopularUtilityTool', popular: true },
   { slug: 'linkedin-headline-generator', category: 'office', icon: 'file-text', component: 'PopularUtilityTool', popular: true },
   { slug: 'linkedin-summary-generator', category: 'office', icon: 'file-text', component: 'PopularUtilityTool', popular: true },
+  { slug: 'ics-file-generator', category: 'office', icon: 'calendar', component: 'PopularUtilityTool', popular: true },
 ];

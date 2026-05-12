@@ -4,12 +4,12 @@
 
 This audit checks tool support content against search-engine quality expectations and the actual U2Tool browser-first implementation. The primary recovery risk addressed here is not raw indexability: GSC Coverage showed indexed pages continued to rise while impressions collapsed. The next defensible layer is content trust, overclaiming, and thin support content.
 
-- Tool message files scanned: 5330
-- English tool files scanned: 533
-- Popular English tool files checked for depth: 79
+- Tool message files scanned: 5380
+- English tool files scanned: 538
+- Popular English tool files checked for depth: 84
 - Files with high-confidence implementation overclaims: 15
 - Files with medium-confidence claims for future review: 2
-- Popular English files with depth gaps: 11
+- Popular English files with depth gaps: 16
 
 Runtime mitigation: high-confidence support-content issues are blocked by `assessSupportContentTrust` and replaced by safe fallback support content on tool detail pages.
 
@@ -26,7 +26,7 @@ Runtime mitigation: high-confidence support-content issues are blocked by `asses
 | Code | Severity | Count | Meaning |
 |---|---:|---:|---|
 | `barcode-unsupported-output-claim` | high | 22 | Claims barcode export or styling controls that are not present in the current SVG preview UI. |
-| `thin-detailed-description` | depth | 10 | Popular English tool has a short detailed_description (...). |
+| `thin-detailed-description` | depth | 15 | Popular English tool has a short detailed_description (...). |
 | `scientific-calculator-unsupported-function-claim` | high | 8 | Claims scientific-calculator controls or math modes that are not present in the current button UI. |
 | `redis-runtime` | medium | 3 | Mentions Redis-specific behavior that should be verified against the actual tool UI. |
 | `dice-roller-unsupported-control-claim` | high | 1 | Claims Dice Roller controls that are not present in the current dice button, modifier, result, and history UI. |
@@ -77,13 +77,18 @@ These are not automatic noindex problems. They are prioritization targets for co
 |---|---:|---:|---:|---:|---|
 | `calorie-deficit-calculator` | 185 | 4 | 3 | 3 | `thin-detailed-description` |
 | `cover-letter-generator` | 152 | 4 | 3 | 3 | `thin-detailed-description` |
+| `csp-header-generator` | 157 | 4 | 3 | 3 | `thin-detailed-description` |
 | `csv-to-vcard-converter` | 143 | 4 | 3 | 3 | `thin-detailed-description` |
 | `debt-snowball-calculator` | 161 | 4 | 3 | 3 | `thin-detailed-description` |
+| `ics-file-generator` | 154 | 4 | 3 | 3 | `thin-detailed-description` |
 | `macro-calculator` | 153 | 4 | 3 | 3 | `thin-detailed-description` |
+| `midjourney-prompt-generator` | 184 | 4 | 3 | 3 | `thin-detailed-description` |
 | `one-rep-max-calculator` | 146 | 4 | 3 | 3 | `thin-detailed-description` |
 | `passport-photo-maker` | 168 | 4 | 3 | 3 | `thin-detailed-description` |
 | `paypal-fee-calculator` | 158 | 4 | 3 | 3 | `thin-detailed-description` |
+| `savings-goal-calculator` | 173 | 4 | 3 | 3 | `thin-detailed-description` |
 | `security-headers-checker` | 170 | 4 | 3 | 3 | `thin-detailed-description` |
+| `stable-diffusion-prompt-generator` | 188 | 4 | 3 | 3 | `thin-detailed-description` |
 | `websocket-tester` | 679 | 6 | 4 | 0 | `thin-faqs` |
 | `youtube-title-generator` | 140 | 4 | 3 | 3 | `thin-detailed-description` |
 

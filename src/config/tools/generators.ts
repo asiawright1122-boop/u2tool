@@ -58,4 +58,6 @@ export const GENERATORS_TOOLS: Tool[] = [
   { slug: 'email-subject-line-generator', category: 'generators', icon: 'text', component: 'PopularUtilityTool', popular: true },
   { slug: 'instagram-bio-generator', category: 'generators', icon: 'text', component: 'PopularUtilityTool', popular: true },
   { slug: 'youtube-description-generator', category: 'generators', icon: 'text', component: 'PopularUtilityTool', popular: true },
+  { slug: 'midjourney-prompt-generator', category: 'generators', icon: 'wand-2', component: 'PopularUtilityTool', popular: true },
+  { slug: 'stable-diffusion-prompt-generator', category: 'generators', icon: 'wand-2', component: 'PopularUtilityTool', popular: true },
 ];
