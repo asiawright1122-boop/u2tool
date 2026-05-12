@@ -1,0 +1,69 @@
+---
+import { getIconSvg } from '@/lib/icon-svg';
+import type { ToolLaunchItem } from '@/lib/tool-launches';
+
+interface Props {
+  ctaLabel: string;
+  description?: string;
+  eyebrow?: string;
+  title: string;
+  tools: ToolLaunchItem[];
+}
+
+const { ctaLabel, description, eyebrow, title, tools } = Astro.props as Props;
+---
+
+{tools.length > 0 && (
+  <section data-discovery-surface="recent-tool-launches" class="mb-10">
+    <div class="mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+      <div class="max-w-3xl">
+        {eyebrow && (
+          <p class="mb-3 text-[10px] font-black uppercase tracking-[0.3em] text-amber-600/80 dark:text-amber-500/60">
+            {eyebrow}
+          </p>
+        )}
+        <h2 class="flex items-center gap-3 text-2xl font-black tracking-tight text-slate-900 dark:text-white md:text-3xl">
+          <span class="h-8 w-1 rounded-full bg-amber-500 dark:shadow-[0_0_12px_rgba(245,158,11,0.6)]"></span>
+          {title}
+        </h2>
+        {description && (
+          <p class="mt-3 text-sm font-medium leading-7 text-slate-500 dark:text-slate-400">
+            {description}
+          </p>
+        )}
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5">
+      {tools.map((tool) => (
+        <a
+          href={tool.href}
+          data-launch-tool={tool.slug}
+          class="glass-card group/card relative flex min-h-[176px] flex-col overflow-hidden p-5"
+        >
+          <div class="absolute inset-0 bg-gradient-to-br from-transparent to-amber-500/5 opacity-0 transition-opacity duration-500 group-hover/card:opacity-100 dark:to-amber-500/10"></div>
+          <div class="relative z-10 flex h-full flex-col">
+            <div class="mb-5 flex items-start justify-between gap-3">
+              <span
+                class="inline-flex flex-shrink-0 text-slate-400 transition-all duration-500 group-hover/card:scale-110 group-hover/card:text-amber-500 dark:text-slate-500 dark:group-hover/card:drop-shadow-[0_0_8px_rgba(245,158,11,0.5)]"
+                set:html={getIconSvg(tool.icon, 24)}
+              />
+              <span class="rounded-full border border-slate-200 bg-white/50 px-2.5 py-1 text-[9px] font-black uppercase tracking-wider text-slate-500 dark:border-white/10 dark:bg-white/5 dark:text-slate-400">
+                {tool.categoryName}
+              </span>
+            </div>
+            <h3 class="text-sm font-black leading-snug text-slate-900 transition-colors group-hover/card:text-amber-600 dark:text-white dark:group-hover/card:text-amber-400">
+              {tool.name}
+            </h3>
+            <p class="mt-2 line-clamp-3 text-xs leading-5 text-slate-500 dark:text-slate-400">
+              {tool.description}
+            </p>
+            <span class="mt-auto pt-5 text-[10px] font-black uppercase tracking-[0.22em] text-amber-600 dark:text-amber-400">
+              {ctaLabel}
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+)}

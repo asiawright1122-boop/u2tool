@@ -13,6 +13,7 @@ import Footer from '@/components/layout/Footer.astro';
 import ToolsGrid from '@/components/tools/ToolsGrid.astro';
 import CategorySpotlightSection from '@/components/discovery/CategorySpotlightSection.astro';
 import ComparisonGuideSection from '@/components/discovery/ComparisonGuideSection.astro';
+import ToolLaunchSection from '@/components/discovery/ToolLaunchSection.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import { tools, categories } from '@/config/tools';
@@ -21,6 +22,7 @@ import type { Locale } from '@/lib/i18n';
 import { loadBaseMessages } from '@/lib/translations';
 import { buildCategoryDiscoveryItemList, buildCategoryDiscoverySpotlights } from '@/lib/discovery-surface';
 import { buildComparisonGuides, getComparisonUiCopy } from '@/lib/comparison-surfaces';
+import { buildRecentToolLaunches, buildToolLaunchItemList } from '@/lib/tool-launches';
 import { getToolsPageSeo } from '@/lib/seo';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
@@ -38,6 +40,7 @@ const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
 const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
 const homeMessages = (baseMessages.home as Record<string, unknown>) ?? {};
+const heroMessages = (homeMessages.hero as Record<string, string>) ?? {};
 const searchMessages = (baseMessages.search as Record<string, string>) ?? {};
 const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
 const toolsMessages = (baseMessages.tools as Record<string, string>) ?? {};
@@ -115,6 +118,13 @@ const discoverySpotlights = buildCategoryDiscoverySpotlights(
   toolDescriptions
 );
 const discoveryItemListData = buildCategoryDiscoveryItemList(baseUrl, discoverySpotlights);
+const recentLaunchTools = buildRecentToolLaunches(
+  locale,
+  categoryMessages,
+  toolNames,
+  toolDescriptions
+);
+const launchItemListData = buildToolLaunchItemList(baseUrl, recentLaunchTools);
 const comparisonUiCopy = getComparisonUiCopy(locale);
 const comparisonGuides = buildComparisonGuides(locale, categoryMessages, toolNames, toolDescriptions);
 const normalizedSearchQuery = normalizeSearchText(searchQuery);
@@ -164,6 +174,7 @@ const toolsCollectionData = {
   <HreflangTags path="/tools" slot="head" />
   <StructuredData type="CollectionPage" data={toolsCollectionData} slot="head" />
   <StructuredData type="ItemList" data={discoveryItemListData} slot="head" />
+  <StructuredData type="ItemList" data={launchItemListData} slot="head" />
 
   <meta property="og:title" content={toolsPageSeo.title} slot="head" />
   <meta property="og:description" content={toolsPageSeo.description} slot="head" />
@@ -200,6 +211,13 @@ const toolsCollectionData = {
             {toolsPageSeo.description}
           </p>
         </section>
+        <ToolLaunchSection
+          eyebrow={navMessages.launches || 'Launches'}
+          title={(homeMessages.recentTools as string) || 'Recent Tools'}
+          description={(homeMessages.recentToolsDesc as string) || ''}
+          ctaLabel={heroMessages.tryTool || 'Try'}
+          tools={recentLaunchTools}
+        />
         <CategorySpotlightSection
           eyebrow={siteMessages.name || 'U2Tool'}
           title={(homeMessages.categories as string) || 'Tool Categories'}

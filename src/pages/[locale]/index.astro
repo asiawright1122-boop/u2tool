@@ -17,6 +17,7 @@ import Footer from '@/components/layout/Footer.astro';
 import PopularToolsCarousel from '@/components/PopularToolsCarousel.svelte';
 import CategorySpotlightSection from '@/components/discovery/CategorySpotlightSection.astro';
 import ComparisonGuideSection from '@/components/discovery/ComparisonGuideSection.astro';
+import ToolLaunchSection from '@/components/discovery/ToolLaunchSection.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
 import { tools, categories, getPopularTools } from '@/config/tools';
@@ -26,6 +27,7 @@ import type { Locale } from '@/lib/i18n';
 import { loadBaseMessages } from '@/lib/translations';
 import { buildCategoryDiscoveryItemList, buildCategoryDiscoverySpotlights } from '@/lib/discovery-surface';
 import { buildComparisonGuides, getComparisonUiCopy } from '@/lib/comparison-surfaces';
+import { buildRecentToolLaunches, buildToolLaunchItemList } from '@/lib/tool-launches';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
 import { buildLocalizedPageUrl, getHomePageSeo } from '@/lib/seo';
@@ -89,6 +91,13 @@ const discoverySpotlights = buildCategoryDiscoverySpotlights(
   toolDescriptions
 );
 const discoveryItemListData = buildCategoryDiscoveryItemList(BASE_URL, discoverySpotlights);
+const recentLaunchTools = buildRecentToolLaunches(
+  locale,
+  categoryMessages,
+  toolNames,
+  toolDescriptions
+);
+const launchItemListData = buildToolLaunchItemList(BASE_URL, recentLaunchTools);
 const toolsMessages = (baseMessages.tools as Record<string, string>) ?? {};
 const comparisonUiCopy = getComparisonUiCopy(locale);
 const comparisonGuides = buildComparisonGuides(
@@ -109,6 +118,7 @@ const comparisonGuides = buildComparisonGuides(
   {/* SEO: Hreflang tags */}
   <HreflangTags path="/" slot="head" />
   <StructuredData type="ItemList" data={discoveryItemListData} slot="head" />
+  <StructuredData type="ItemList" data={launchItemListData} slot="head" />
 
   {/* OG meta tags */}
   <meta property="og:title" content={homePageSeo.title} slot="head" />
@@ -217,6 +227,14 @@ const comparisonGuides = buildComparisonGuides(
             </div>
           </div>
         </section>
+
+        <ToolLaunchSection
+          eyebrow={navMessages.launches || 'Launches'}
+          title={(homeMessages.recentTools as string) || 'Recent Tools'}
+          description={(homeMessages.recentToolsDesc as string) || ''}
+          ctaLabel={(heroMessages.tryTool as string) || 'Try'}
+          tools={recentLaunchTools}
+        />
 
         <CategorySpotlightSection
           eyebrow={siteMessages.name || 'U2Tool'}
