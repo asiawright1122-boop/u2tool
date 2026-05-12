@@ -1,28 +1,32 @@
 {
-  "detailed_description": "Calculadora de taxa freelance — Calcule valor por hora e diária a partir de metas de renda, despesas, impostos e horas faturáveis. Revise o resultado calculado ou gerado.",
+  "detailed_description": "Calculadora de taxa freelance é um calculadora de valor no navegador para converter metas de renda, despesas, reserva de impostos, horas faturáveis e folgas em valores freelance. Informe renda líquida desejada, despesas anuais, reserva de impostos, horas faturáveis, semanas de folga e moeda; a ferramenta retorna valor por hora, diária, meta mensal e meta anual de receita. Use para criar um primeiro rascunho, comparar premissas e copiar um resultado limpo sem enviar seus dados para um servidor.",
   "usage_steps": [
-    "Digite os valores necessários no formulário",
-    "Revise o resultado calculado ou gerado",
-    "Copie o resultado ou use a prévia exibida",
-    "Ajuste os valores para comparar outro cenário"
+    "Informe renda líquida desejada, despesas anuais, reserva de impostos, horas faturáveis, semanas de folga e moeda.",
+    "Revise valor por hora, diária, meta mensal e meta anual de receita e ajuste as premissas que afetam o resultado.",
+    "Copie a melhor versão para seu perfil, campanha, planilha, código ou documentação.",
+    "Gere outra variação quando público, preço, formato ou dados de origem mudarem."
   ],
   "usage_examples": [
-    "Use em uma revisão ou planejamento rápido",
-    "Compare cenários sem criar uma planilha",
-    "Crie resultados prontos para relatórios, campanhas ou notas"
+    "Use quando precisar de converter metas de renda, despesas, reserva de impostos, horas faturáveis e folgas em valores freelance e quiser um ponto de partida editável.",
+    "Compare entradas diferentes antes de publicar ou compartilhar o resultado.",
+    "Crie um resultado pronto para copiar em nota para cliente, checklist interno, loja, perfil ou entrega técnica."
   ],
   "faqs": [
     {
       "question": "Calculadora de taxa freelance é grátis?",
-      "answer": "Sim. A ferramenta é gratuita no navegador e não exige conta."
+      "answer": "Sim. Calculadora de taxa freelance funciona gratuitamente no navegador e não exige conta."
     },
     {
       "question": "A ferramenta envia meus dados?",
-      "answer": "Não. O cálculo ou a geração roda localmente no navegador."
+      "answer": "Não. Ela foi pensada para rascunhos, cálculos ou conversões rápidas no navegador."
     },
     {
-      "question": "Há alguma observação importante?",
-      "answer": "Use o resultado como apoio prático e revise-o antes de publicar ou depender dele."
+      "question": "O que devo revisar antes de usar o resultado?",
+      "answer": "Confira premissas, taxas, moeda e custos reais antes de usar os números para preço ou planejamento."
+    },
+    {
+      "question": "Para quem Calculadora de taxa freelance é indicado?",
+      "answer": "Para freelancers, consultores, agências e profissionais solo planejando preços sustentáveis."
     }
   ]
 }

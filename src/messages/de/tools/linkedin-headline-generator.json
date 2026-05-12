@@ -1,28 +1,32 @@
 {
-  "detailed_description": "LinkedIn-Headline-Generator — Erstelle LinkedIn-Headline-Optionen aus Rolle, Fähigkeiten, Zielgruppe und Erfolg. Prüfe das berechnete oder generierte Ergebnis.",
+  "detailed_description": "LinkedIn-Headline-Generator ist ein browserbasiertes Headline-Generator für LinkedIn-Headlines zu erstellen, die Rolle, Skills, Zielgruppe und Beleg erklären. Gib Jobtitel, Skills, Zielgruppe, Erfolg und Ton ein; das Tool liefert Headline-Varianten mit Keyword, Klarheit und Glaubwürdigkeit. Nutze es, um einen ersten Entwurf zu erstellen, Annahmen zu vergleichen und ein sauberes Ergebnis zu kopieren, ohne Eingaben an einen Server zu senden.",
   "usage_steps": [
-    "Gib die erforderlichen Werte in das Formular ein",
-    "Prüfe das berechnete oder generierte Ergebnis",
-    "Kopiere das Ergebnis oder nutze die Vorschau",
-    "Passe Eingaben an, um ein weiteres Szenario zu vergleichen"
+    "Gib Jobtitel, Skills, Zielgruppe, Erfolg und Ton ein.",
+    "Prüfe Headline-Varianten mit Keyword, Klarheit und Glaubwürdigkeit und passe Annahmen an, die das Ergebnis beeinflussen.",
+    "Kopiere die beste Version in Profil, Kampagne, Tabelle, Codebasis oder Dokumentation.",
+    "Erzeuge eine neue Variante, wenn Zielgruppe, Preis, Format oder Quelldaten wechseln."
   ],
   "usage_examples": [
-    "Nutze das Tool für schnelle Planung oder Prüfung",
-    "Vergleiche Szenarien ohne Tabellenkalkulation",
-    "Erstelle kopierfertige Ergebnisse für Berichte, Kampagnen oder Notizen"
+    "Nutze es, wenn du LinkedIn-Headlines zu erstellen, die Rolle, Skills, Zielgruppe und Beleg erklären brauchst und einen editierbaren Startpunkt möchtest.",
+    "Vergleiche unterschiedliche Eingaben, bevor du das Ergebnis veröffentlichst oder teilst.",
+    "Erstelle ein kopierfertiges Ergebnis für Kundennotiz, interne Checkliste, Shop, Profil oder technische Übergabe."
   ],
   "faqs": [
     {
       "question": "Ist LinkedIn-Headline-Generator kostenlos?",
-      "answer": "Ja. Das Tool ist im Browser kostenlos nutzbar und benötigt kein Konto."
+      "answer": "Ja. LinkedIn-Headline-Generator läuft kostenlos im Browser und erfordert kein Konto."
     },
     {
-      "question": "Werden meine Eingaben hochgeladen?",
-      "answer": "Nein. Die Berechnung oder Generierung läuft lokal im Browser."
+      "question": "Lädt das Tool meine Eingaben hoch?",
+      "answer": "Nein. Es ist für schnelle Entwürfe, Berechnungen oder Konvertierungen im Browser gedacht."
     },
     {
-      "question": "Gibt es wichtige Hinweise?",
-      "answer": "Nutze das Ergebnis als praktische Hilfe und prüfe es, bevor du es veröffentlichst oder dich darauf verlässt."
+      "question": "Was sollte ich vor der Nutzung prüfen?",
+      "answer": "Prüfe Formulierungen, Aussagen, Länge, Markenstimme und Plattformregeln vor der Veröffentlichung."
+    },
+    {
+      "question": "Für wen ist LinkedIn-Headline-Generator geeignet?",
+      "answer": "Für Jobsuchende, Berater, Gründer, Sales-Profile und Operatoren mit mehr LinkedIn-Sichtbarkeit."
     }
   ]
 }

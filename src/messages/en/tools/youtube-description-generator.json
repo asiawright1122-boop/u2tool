@@ -1,28 +1,32 @@
 {
-  "detailed_description": "YouTube Description Generator — Create a structured YouTube video description with keywords, audience, links, and CTA. Review the calculated or generated result.",
+  "detailed_description": "YouTube Description Generator is a browser-based description generator for turning a video title, keyword, audience, links, and CTA into a structured YouTube description. Add the video title, target keyword, audience, CTA, and resource links; the tool returns an intro, learning bullets, link section, CTA, and hashtags. Use it to create a stronger first draft, compare assumptions, and copy a clean result without sending your inputs to a server.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter the video title, target keyword, audience, CTA, and resource links.",
+    "Review an intro, learning bullets, link section, CTA, and hashtags and adjust any assumptions that affect the result.",
+    "Copy the strongest version into your profile, campaign, spreadsheet, codebase, or documentation.",
+    "Run another variation when your audience, pricing, format, or source data changes."
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Use it when you need turning a video title, keyword, audience, links, and CTA into a structured YouTube description and want a practical starting point.",
+    "Compare different inputs to see how the result changes before publishing or sharing it.",
+    "Create a copy-ready result for a client note, internal checklist, storefront, profile, or technical handoff."
   ],
   "faqs": [
     {
-      "question": "YouTube Description Generator is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is YouTube Description Generator free?",
+      "answer": "Yes. YouTube Description Generator runs free in your browser and does not require an account."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "Does YouTube Description Generator upload my inputs?",
+      "answer": "No. The tool is designed to run locally in the browser for quick drafting, calculation, or conversion."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "What should I review before using the result?",
+      "answer": "Review wording, claims, length, brand voice, and any platform rules before publishing."
+    },
+    {
+      "question": "Who is YouTube Description Generator best for?",
+      "answer": "YouTubers, marketers, educators, founders, and teams publishing repeatable video content."
     }
   ]
 }

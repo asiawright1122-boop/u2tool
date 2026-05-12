@@ -1,28 +1,32 @@
 {
-  "detailed_description": "llms.txt Generator — Generate an llms.txt draft with site summary, priority pages, and AI discovery notes. Review the calculated or generated result.",
+  "detailed_description": "llms.txt Generator is a browser-based llms.txt generator for drafting an llms.txt file that summarizes a site and points AI systems to priority pages. Add site name, canonical URL, summary, audience, and priority page list; the tool returns a structured llms.txt draft with summary, key pages, and usage notes. Use it to create a stronger first draft, compare assumptions, and copy a clean result without sending your inputs to a server.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter site name, canonical URL, summary, audience, and priority page list.",
+    "Review a structured llms.txt draft with summary, key pages, and usage notes and adjust any assumptions that affect the result.",
+    "Copy the strongest version into your profile, campaign, spreadsheet, codebase, or documentation.",
+    "Run another variation when your audience, pricing, format, or source data changes."
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Use it when you need drafting an llms.txt file that summarizes a site and points AI systems to priority pages and want a practical starting point.",
+    "Compare different inputs to see how the result changes before publishing or sharing it.",
+    "Create a copy-ready result for a client note, internal checklist, storefront, profile, or technical handoff."
   ],
   "faqs": [
     {
-      "question": "llms.txt Generator is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is llms.txt Generator free?",
+      "answer": "Yes. llms.txt Generator runs free in your browser and does not require an account."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "Does llms.txt Generator upload my inputs?",
+      "answer": "No. The tool is designed to run locally in the browser for quick drafting, calculation, or conversion."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "What should I review before using the result?",
+      "answer": "Review wording, claims, length, brand voice, and any platform rules before publishing."
+    },
+    {
+      "question": "Who is llms.txt Generator best for?",
+      "answer": "Site owners, SEO teams, documentation teams, and developers improving AI discovery surfaces."
     }
   ]
 }

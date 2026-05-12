@@ -1,28 +1,32 @@
 {
-  "detailed_description": "Gerador de llms.txt — Gere um rascunho llms.txt com resumo do site, páginas prioritárias e notas para descoberta por IA. Revise o resultado calculado ou gerado.",
+  "detailed_description": "Gerador de llms.txt é um gerador de llms.txt no navegador para redigir um llms.txt que resume um site e orienta sistemas de IA para páginas prioritárias. Informe nome do site, URL canônica, resumo, público e lista de páginas prioritárias; a ferramenta retorna um rascunho llms.txt estruturado com resumo, páginas-chave e notas de uso. Use para criar um primeiro rascunho, comparar premissas e copiar um resultado limpo sem enviar seus dados para um servidor.",
   "usage_steps": [
-    "Digite os valores necessários no formulário",
-    "Revise o resultado calculado ou gerado",
-    "Copie o resultado ou use a prévia exibida",
-    "Ajuste os valores para comparar outro cenário"
+    "Informe nome do site, URL canônica, resumo, público e lista de páginas prioritárias.",
+    "Revise um rascunho llms.txt estruturado com resumo, páginas-chave e notas de uso e ajuste as premissas que afetam o resultado.",
+    "Copie a melhor versão para seu perfil, campanha, planilha, código ou documentação.",
+    "Gere outra variação quando público, preço, formato ou dados de origem mudarem."
   ],
   "usage_examples": [
-    "Use em uma revisão ou planejamento rápido",
-    "Compare cenários sem criar uma planilha",
-    "Crie resultados prontos para relatórios, campanhas ou notas"
+    "Use quando precisar de redigir um llms.txt que resume um site e orienta sistemas de IA para páginas prioritárias e quiser um ponto de partida editável.",
+    "Compare entradas diferentes antes de publicar ou compartilhar o resultado.",
+    "Crie um resultado pronto para copiar em nota para cliente, checklist interno, loja, perfil ou entrega técnica."
   ],
   "faqs": [
     {
       "question": "Gerador de llms.txt é grátis?",
-      "answer": "Sim. A ferramenta é gratuita no navegador e não exige conta."
+      "answer": "Sim. Gerador de llms.txt funciona gratuitamente no navegador e não exige conta."
     },
     {
       "question": "A ferramenta envia meus dados?",
-      "answer": "Não. O cálculo ou a geração roda localmente no navegador."
+      "answer": "Não. Ela foi pensada para rascunhos, cálculos ou conversões rápidas no navegador."
     },
     {
-      "question": "Há alguma observação importante?",
-      "answer": "Use o resultado como apoio prático e revise-o antes de publicar ou depender dele."
+      "question": "O que devo revisar antes de usar o resultado?",
+      "answer": "Revise texto, promessas, tamanho, voz da marca e regras da plataforma antes de publicar."
+    },
+    {
+      "question": "Para quem Gerador de llms.txt é indicado?",
+      "answer": "Para donos de sites, equipes SEO, documentação e desenvolvedores melhorando descoberta por IA."
     }
   ]
 }

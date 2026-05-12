@@ -1,28 +1,32 @@
 {
-  "detailed_description": "Calculadora de taxas Etsy — Estime taxas, receita líquida e lucro com premissas editáveis estilo Etsy. Revise o resultado calculado ou gerado.",
+  "detailed_description": "Calculadora de taxas Etsy é um calculadora de taxas no navegador para estimar taxas, receita líquida, lucro e margem com premissas editáveis estilo Etsy. Informe preço, frete, custos, taxa de anúncio, transação, pagamento e anúncios; a ferramenta retorna detalhamento de taxas, receita líquida, lucro estimado e margem. Use para criar um primeiro rascunho, comparar premissas e copiar um resultado limpo sem enviar seus dados para um servidor.",
   "usage_steps": [
-    "Digite os valores necessários no formulário",
-    "Revise o resultado calculado ou gerado",
-    "Copie o resultado ou use a prévia exibida",
-    "Ajuste os valores para comparar outro cenário"
+    "Informe preço, frete, custos, taxa de anúncio, transação, pagamento e anúncios.",
+    "Revise detalhamento de taxas, receita líquida, lucro estimado e margem e ajuste as premissas que afetam o resultado.",
+    "Copie a melhor versão para seu perfil, campanha, planilha, código ou documentação.",
+    "Gere outra variação quando público, preço, formato ou dados de origem mudarem."
   ],
   "usage_examples": [
-    "Use em uma revisão ou planejamento rápido",
-    "Compare cenários sem criar uma planilha",
-    "Crie resultados prontos para relatórios, campanhas ou notas"
+    "Use quando precisar de estimar taxas, receita líquida, lucro e margem com premissas editáveis estilo Etsy e quiser um ponto de partida editável.",
+    "Compare entradas diferentes antes de publicar ou compartilhar o resultado.",
+    "Crie um resultado pronto para copiar em nota para cliente, checklist interno, loja, perfil ou entrega técnica."
   ],
   "faqs": [
     {
       "question": "Calculadora de taxas Etsy é grátis?",
-      "answer": "Sim. A ferramenta é gratuita no navegador e não exige conta."
+      "answer": "Sim. Calculadora de taxas Etsy funciona gratuitamente no navegador e não exige conta."
     },
     {
       "question": "A ferramenta envia meus dados?",
-      "answer": "Não. O cálculo ou a geração roda localmente no navegador."
+      "answer": "Não. Ela foi pensada para rascunhos, cálculos ou conversões rápidas no navegador."
     },
     {
-      "question": "Há alguma observação importante?",
-      "answer": "Use o resultado como apoio prático e revise-o antes de publicar ou depender dele."
+      "question": "O que devo revisar antes de usar o resultado?",
+      "answer": "Confira premissas, taxas, moeda e custos reais antes de usar os números para preço ou planejamento."
+    },
+    {
+      "question": "Para quem Calculadora de taxas Etsy é indicado?",
+      "answer": "Para vendedores de marketplace testando preço, recuperação de frete e premissas de taxas."
     }
   ]
 }

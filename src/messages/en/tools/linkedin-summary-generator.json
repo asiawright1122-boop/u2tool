@@ -1,28 +1,32 @@
 {
-  "detailed_description": "LinkedIn Summary Generator — Draft a LinkedIn About section from your experience, skills, achievement, and target audience. Review the calculated or generated result.",
+  "detailed_description": "LinkedIn Summary Generator is a browser-based summary generator for drafting a LinkedIn About section that connects experience, skills, achievement, and audience. Add your role, experience, skills, achievement, audience, and tone; the tool returns a concise About section draft with positioning, proof, and collaboration angle. Use it to create a stronger first draft, compare assumptions, and copy a clean result without sending your inputs to a server.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter your role, experience, skills, achievement, audience, and tone.",
+    "Review a concise About section draft with positioning, proof, and collaboration angle and adjust any assumptions that affect the result.",
+    "Copy the strongest version into your profile, campaign, spreadsheet, codebase, or documentation.",
+    "Run another variation when your audience, pricing, format, or source data changes."
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Use it when you need drafting a LinkedIn About section that connects experience, skills, achievement, and audience and want a practical starting point.",
+    "Compare different inputs to see how the result changes before publishing or sharing it.",
+    "Create a copy-ready result for a client note, internal checklist, storefront, profile, or technical handoff."
   ],
   "faqs": [
     {
-      "question": "LinkedIn Summary Generator is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is LinkedIn Summary Generator free?",
+      "answer": "Yes. LinkedIn Summary Generator runs free in your browser and does not require an account."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "Does LinkedIn Summary Generator upload my inputs?",
+      "answer": "No. The tool is designed to run locally in the browser for quick drafting, calculation, or conversion."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "What should I review before using the result?",
+      "answer": "Review wording, claims, length, brand voice, and any platform rules before publishing."
+    },
+    {
+      "question": "Who is LinkedIn Summary Generator best for?",
+      "answer": "Professionals rewriting their profile, preparing for job search, or clarifying their positioning."
     }
   ]
 }

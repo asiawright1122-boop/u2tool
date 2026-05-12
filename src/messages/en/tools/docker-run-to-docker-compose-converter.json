@@ -1,28 +1,32 @@
 {
-  "detailed_description": "Docker Run to Docker Compose Converter — Convert a docker run command into a starter Docker Compose YAML service. Review the calculated or generated result.",
+  "detailed_description": "Docker Run to Docker Compose Converter is a browser-based Docker converter for turning a docker run command into a starter Docker Compose service. Add a docker run command with image, name, ports, environment variables, volumes, and restart policy; the tool returns Compose YAML with service name, image, ports, environment, volumes, restart, and command fields. Use it to create a stronger first draft, compare assumptions, and copy a clean result without sending your inputs to a server.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter a docker run command with image, name, ports, environment variables, volumes, and restart policy.",
+    "Review Compose YAML with service name, image, ports, environment, volumes, restart, and command fields and adjust any assumptions that affect the result.",
+    "Copy the strongest version into your profile, campaign, spreadsheet, codebase, or documentation.",
+    "Run another variation when your audience, pricing, format, or source data changes."
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Use it when you need turning a docker run command into a starter Docker Compose service and want a practical starting point.",
+    "Compare different inputs to see how the result changes before publishing or sharing it.",
+    "Create a copy-ready result for a client note, internal checklist, storefront, profile, or technical handoff."
   ],
   "faqs": [
     {
-      "question": "Docker Run to Docker Compose Converter is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is Docker Run to Docker Compose Converter free?",
+      "answer": "Yes. Docker Run to Docker Compose Converter runs free in your browser and does not require an account."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "Does Docker Run to Docker Compose Converter upload my inputs?",
+      "answer": "No. The tool is designed to run locally in the browser for quick drafting, calculation, or conversion."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "What should I review before using the result?",
+      "answer": "Validate the converted output with the destination app, importer, or runtime before using it in production."
+    },
+    {
+      "question": "Who is Docker Run to Docker Compose Converter best for?",
+      "answer": "Developers, DevOps teams, students, and anyone documenting a container setup."
     }
   ]
 }

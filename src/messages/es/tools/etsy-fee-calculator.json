@@ -1,28 +1,32 @@
 {
-  "detailed_description": "Calculadora de comisiones Etsy — Estima comisiones, ingresos netos y beneficio con supuestos editables tipo Etsy. Revisa el resultado calculado o generado.",
+  "detailed_description": "Calculadora de comisiones Etsy es un calculadora de comisiones en el navegador para estimar comisiones, ingresos netos, beneficio y margen con supuestos tipo Etsy editables. Añade precio, envío, costos, tarifa de publicación, comisión de transacción, pago y anuncios; la herramienta devuelve desglose de comisiones, ingresos netos, beneficio estimado y margen. Úsala para crear un primer borrador, comparar supuestos y copiar un resultado limpio sin enviar tus datos a un servidor.",
   "usage_steps": [
-    "Introduce los valores requeridos en el formulario",
-    "Revisa el resultado calculado o generado",
-    "Copia el resultado o usa la vista previa mostrada",
-    "Ajusta los valores para comparar otro escenario"
+    "Introduce precio, envío, costos, tarifa de publicación, comisión de transacción, pago y anuncios.",
+    "Revisa desglose de comisiones, ingresos netos, beneficio estimado y margen y ajusta los supuestos que afectan al resultado.",
+    "Copia la mejor versión en tu perfil, campaña, hoja de cálculo, código o documentación.",
+    "Genera otra variación cuando cambien la audiencia, el precio, el formato o los datos de origen."
   ],
   "usage_examples": [
-    "Úsalo durante una revisión o planificación rápida",
-    "Compara escenarios sin crear una hoja de cálculo",
-    "Crea resultados listos para informes, campañas o notas"
+    "Úsalo cuando necesites estimar comisiones, ingresos netos, beneficio y margen con supuestos tipo Etsy editables y quieras un punto de partida editable.",
+    "Compara diferentes entradas antes de publicar o compartir el resultado.",
+    "Crea un resultado listo para copiar en una nota de cliente, checklist interno, tienda, perfil o entrega técnica."
   ],
   "faqs": [
     {
       "question": "¿Calculadora de comisiones Etsy es gratis?",
-      "answer": "Sí. La herramienta es gratuita en el navegador y no requiere cuenta."
+      "answer": "Sí. Calculadora de comisiones Etsy funciona gratis en el navegador y no requiere cuenta."
     },
     {
       "question": "¿La herramienta sube mis datos?",
-      "answer": "No. El cálculo o la generación se ejecuta localmente en el navegador."
+      "answer": "No. Está diseñada para hacer borradores, cálculos o conversiones rápidas en el navegador."
     },
     {
-      "question": "¿Hay alguna nota importante?",
-      "answer": "Usa el resultado como ayuda práctica y revísalo antes de publicarlo o depender de él."
+      "question": "¿Qué debo revisar antes de usar el resultado?",
+      "answer": "Comprueba supuestos, tasas, moneda y costos reales antes de usar los números para precios o planificación."
+    },
+    {
+      "question": "¿Para quién es mejor Calculadora de comisiones Etsy?",
+      "answer": "Para vendedores de marketplace que prueban precios, recuperación de envío y supuestos de comisiones."
     }
   ]
 }
