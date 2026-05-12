@@ -1,17 +1,35 @@
 {
-  "detailed_description": "The CRC32 Calculator implements the IEEE 802.3 32-bit cyclic redundancy check algorithm to generate checksums for arbitrary data inputs. This tool performs polynomial division over GF(2) using the generator polynomial 0x04C11DB7, processing data through a precomputed 256-entry lookup table with deferred endian conversion. Unlike simple checksums, CRC32 detects burst errors up to 32 bits through its algebraic properties, making it ideal for verifying data integrity during network transfers, storage operations, or firmware updates. Developers use this tool to validate file consistency in systems without native CRC support, debug data corruption issues in embedded systems, or verify patch file authenticity. The calculator supports both ASCII/UTF-8 text inputs and binary file uploads, processing data in 4KB chunks with progressive hashing to handle large files efficiently. The result is presented as a 32-bit hexadecimal value in both traditional CRC-32 and CRC-32/MPEG-2 formats, with optional byte-swapped output for hardware-specific implementations.",
+  "detailed_description": "The CRC32 Calculator generates a standard CRC-32 checksum for text or an uploaded file directly in the browser. Choose Text mode to hash a UTF-8 string, or File mode to read a local file and calculate its checksum from the file bytes. The result is shown in both hexadecimal and decimal form, with copy buttons for each value. A sample input is available when you want to confirm the workflow quickly. This tool is useful for comparing expected checksums in documentation, checking whether a downloaded or exported file changed, and creating test fixtures for software that stores CRC32 values. It calculates one standard CRC-32 value and does not offer multiple CRC variants, streaming progress, batch processing, or server-side file verification.",
   "usage_steps": [
-    "1. Select 'Text' or 'File' tab based on input source type",
-    "2. For text input: Paste content into the UTF-8 encoded text area with line-ending normalization",
-    "3. For file input: Drag-and-drop or use the 'Browse' button to select files up to 2GB in size",
-    "4. Choose 'Calculate' to process data using the selected CRC-32 variant (standard or MPEG-2)",
-    "5. Review the 8-character hex digest with bit-length confirmation and match status",
-    "6. Use the 'Copy' icon to save results or 'Reset' for batch processing multiple files"
+    "Select Text or File as the input mode.",
+    "In Text mode, paste or type the text you want to check.",
+    "In File mode, choose a local file from your device.",
+    "Click Calculate to generate the CRC32 value.",
+    "Review the hexadecimal and decimal results.",
+    "Use Copy beside either result when you need to paste the checksum elsewhere."
   ],
   "usage_examples": [
-    "Validating firmware image integrity before flashing embedded devices",
-    "Detecting transmission errors in game ROMs transferred over unstable serial connections",
-    "Matching file hashes in software license verification systems",
-    "Debugging packet corruption in custom network protocol implementations"
+    "Compare a downloaded file against a CRC32 value listed in release notes.",
+    "Generate the CRC32 of a short string for a unit test fixture.",
+    "Check whether two exported files likely differ by comparing their CRC32 results.",
+    "Copy the decimal checksum into a debugging note or support ticket."
+  ],
+  "faqs": [
+    {
+      "question": "Does the file upload leave my browser?",
+      "answer": "No. The file is read locally in the browser and the checksum is calculated from the bytes on your device."
+    },
+    {
+      "question": "Which CRC variant does this use?",
+      "answer": "It uses the common reflected CRC-32 calculation with the standard lookup table and returns one hexadecimal and one decimal value."
+    },
+    {
+      "question": "Can it process multiple files at once?",
+      "answer": "No. The current interface calculates one text input or one file at a time."
+    },
+    {
+      "question": "Is CRC32 a security hash?",
+      "answer": "No. CRC32 is useful for error detection and quick comparisons, but it is not a cryptographic hash."
+    }
   ]
 }

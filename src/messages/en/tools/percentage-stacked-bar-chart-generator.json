@@ -1,17 +1,35 @@
 {
-  "detailed_description": "The Percentage Stacked Bar Chart Generator is a specialized data visualization tool that transforms categorical datasets into normalized, proportional bar charts where each bar represents 100% of its category. This tool enables developers and analysts to visualize part-to-whole relationships across multiple groups using Cartesian coordinates with segmented bars scaled to 100% height. Users need this tool to analyze compositional differences in datasets like demographic distributions, sales channel contributions, or survey response breakdowns. The generator employs data normalization algorithms to convert raw values into relative percentages, then renders SVG elements with precise path calculations for each segment. Technical features include dynamic axis scaling, color encoding for categorical differentiation, and responsive container adjustments for accessibility. The backend processes JSON or CSV inputs, mapping dimensions to X/Y axes while maintaining aspect ratio consistency. Unique capabilities include automated legend generation based on color palettes and exportable SVG/PNG with embedded metadata tags for traceability.",
+  "detailed_description": "The Percentage Stacked Bar Chart Generator creates 100% stacked bar charts from editable categories and series values. Each row represents one category, and each series value is treated as a percentage segment, so the chart is best when every row adds up to 100%. You can rename series, add or remove series, add or remove category rows, edit values inline, choose a color theme, show or hide the legend, switch between vertical and horizontal layout, load sample device-usage data, and export the chart as PNG or SVG. This is useful for comparing composition across groups, such as channel mix by quarter, survey responses by audience, or device share by year. The tool does not import CSV, normalize raw values automatically, generate embed code, or store charts on a backend.",
   "usage_steps": [
-    "1. Select 'Upload CSV' or 'Manual Input' to load structured data with at least two numeric series",
-    "2. Map columns to 'Category Axis' (X-axis) and 'Value Series' using the field selector dropdown",
-    "3. Enable 'Percentage Mode' toggle to activate 100% normalization of values",
-    "4. Customize segment colors via the HEX code picker or predefined palettes",
-    "5. Adjust 'Axis Labels' and 'Legend Position' in the layout settings panel",
-    "6. Click 'Generate Chart' and use the 'Download SVG' or 'Copy Embed Code' buttons for implementation"
+    "Load the sample data or start editing the default rows.",
+    "Rename each series to match the segments you want to compare.",
+    "Edit each category row and enter percentage values for every series.",
+    "Add rows or series if your chart needs more categories or segments.",
+    "Choose a color theme and toggle the horizontal layout or legend.",
+    "Download the finished chart as PNG or SVG."
   ],
   "usage_examples": [
-    "Marketing analysts comparing channel contribution percentages across quarterly campaigns",
-    "Academic researchers visualizing demographic composition differences between study groups",
-    "SaaS companies tracking feature adoption rates across customer segments",
-    "Environmental scientists displaying pollutant composition ratios in water samples"
+    "Compare mobile, tablet, and desktop traffic share across several years.",
+    "Show survey answer percentages for different customer segments.",
+    "Visualize sales channel contribution by quarter when each row totals 100%.",
+    "Export a PNG for a report or an SVG for a presentation deck."
+  ],
+  "faqs": [
+    {
+      "question": "Does the tool normalize raw values automatically?",
+      "answer": "No. Enter percentage values directly and keep each category row close to 100% for a correct 100% stacked chart."
+    },
+    {
+      "question": "Can I add more than three series?",
+      "answer": "Yes. You can add series up to the limit in the interface and rename each one."
+    },
+    {
+      "question": "Can I switch chart orientation?",
+      "answer": "Yes. The Horizontal option switches between vertical stacked columns and horizontal stacked bars."
+    },
+    {
+      "question": "Which export formats are available?",
+      "answer": "The chart can be downloaded as PNG or SVG."
+    }
   ]
 }

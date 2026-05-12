@@ -11139,9 +11139,9 @@
     },
     "credit-card-validator": {
       "name": "Credit Card Validator",
-      "description": "Validate credit card numbers using the Luhn algorithm and detect card type.",
+      "description": "Check test card numbers with Luhn and detect common card networks.",
       "seo_title": "Free Credit Card Validator Online - Luhn Check",
-      "seo_description": "Validate credit card numbers online for free. Uses Luhn algorithm to verify card numbers. Detects Visa, Mastercard, Amex, and more.",
+      "seo_description": "Check test card numbers online with the Luhn algorithm, digit length, and common card network detection. Does not verify real card accounts.",
       "cardNumber": "Card Number",
       "inputPlaceholder": "Enter card number...",
       "validate": "Validate",

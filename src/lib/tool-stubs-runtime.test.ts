@@ -17,6 +17,7 @@ import {
   calculateProjectEstimation,
   calculateStats,
   caesarCipher,
+  cardPatterns,
   checkVulnerabilities,
   commonPasswords,
   commonTypos,
@@ -257,6 +258,12 @@ X-Trace-Id: abc123
     expect(rot13('Hello, World!')).toBe('Uryyb, Jbeyq!');
     expect(vigenereCipher('ATTACKATDAWN', 'LEMON')).toBe('LXFOPVEFRNHR');
     expect(crc32(new TextEncoder().encode('123456789'), buildCrc32Table()).toString(16)).toBe('cbf43926');
+    const detectCard = (value: string) => cardPatterns.find((card) => card.pattern.test(value))?.type;
+    expect(detectCard('4111111111111111')).toBe('Visa');
+    expect(detectCard('5555555555554444')).toBe('Mastercard');
+    expect(detectCard('378282246310005')).toBe('American Express');
+    expect(detectCard('6011111111111117')).toBe('Discover');
+    expect(cardPatterns.length).toBeGreaterThanOrEqual(8);
     expect(validateIP('192.168.1.1')).toMatchObject({
       isValid: true,
       type: 'IPv4',

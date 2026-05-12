@@ -2654,7 +2654,21 @@ export function calculateSummary(resources = [], projects = []) {
     const utilizationRate = totalAvailable ? Math.round((totalAllocated / totalAvailable) * 100) : 0;
     return { totalAvailable, totalAllocated, utilizationRate, totalCost, overallocated: [], underutilized: [] };
   }
-export const cardPatterns = [];
+export const cardPatterns = [
+  { type: 'Visa', icon: 'V', issuer: 'Visa', pattern: /^4\d{12}(?:\d{3})?(?:\d{3})?$/ },
+  {
+    type: 'Mastercard',
+    icon: 'MC',
+    issuer: 'Mastercard',
+    pattern: /^(?:5[1-5]\d{14}|2(?:2[2-9]\d|[3-6]\d{2}|7[01]\d|720)\d{12})$/,
+  },
+  { type: 'American Express', icon: 'AMEX', issuer: 'American Express', pattern: /^3[47]\d{13}$/ },
+  { type: 'Discover', icon: 'DISC', issuer: 'Discover', pattern: /^(?:6011\d{12}|65\d{14}|64[4-9]\d{13})$/ },
+  { type: 'Diners Club', icon: 'DC', issuer: 'Diners Club', pattern: /^3(?:0[0-5]|[68]\d)\d{11}$/ },
+  { type: 'JCB', icon: 'JCB', issuer: 'JCB', pattern: /^(?:2131|1800|35\d{14})$/ },
+  { type: 'UnionPay', icon: 'UP', issuer: 'UnionPay', pattern: /^62\d{14,17}$/ },
+  { type: 'Maestro', icon: 'MST', issuer: 'Maestro', pattern: /^(?:50|5[6-9]|6\d)\d{10,17}$/ },
+];
 export const characterCategories = {};
 export function checkVulnerabilities(dependencies = {}) {
   const vulnerabilities = [];

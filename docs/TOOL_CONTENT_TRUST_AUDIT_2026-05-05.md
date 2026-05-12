@@ -8,7 +8,7 @@ This audit checks tool support content against search-engine quality expectation
 - English tool files scanned: 533
 - Popular English tool files checked for depth: 79
 - Files with high-confidence implementation overclaims: 15
-- Files with medium-confidence claims for future review: 1
+- Files with medium-confidence claims for future review: 2
 - Popular English files with depth gaps: 11
 
 Runtime mitigation: high-confidence support-content issues are blocked by `assessSupportContentTrust` and replaced by safe fallback support content on tool detail pages.
@@ -31,6 +31,7 @@ Runtime mitigation: high-confidence support-content issues are blocked by `asses
 | `redis-runtime` | medium | 3 | Mentions Redis-specific behavior that should be verified against the actual tool UI. |
 | `dice-roller-unsupported-control-claim` | high | 1 | Claims Dice Roller controls that are not present in the current dice button, modifier, result, and history UI. |
 | `document-word-counter-export-claim` | high | 1 | Claims Document Word Counter export behavior that is not present in the current live statistics UI. |
+| `server-side-reference` | medium | 1 | References server-side behavior on a browser-first tool page and should be verified. |
 | `thin-faqs` | depth | 1 | Popular English tool has 0 FAQs; expected at least 3. |
 
 ## High-Confidence Overclaim Samples

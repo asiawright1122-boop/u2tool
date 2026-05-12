@@ -11315,9 +11315,9 @@
     },
     "credit-card-validator": {
       "name": "Validador de Tarjetas de Crédito",
-      "description": "Valida números de tarjetas de crédito utilizando el algoritmo Luhn y detecta el tipo de tarjeta.",
+      "description": "Comprueba números de prueba con Luhn y detecta redes de tarjeta comunes.",
       "seo_title": "Validador de Tarjetas de Crédito Gratuito en Línea - Verificación Luhn",
-      "seo_description": "Valida números de tarjetas de crédito en línea de forma gratuita. Utiliza el algoritmo Luhn para verificar los números de tarjeta. Detecta tarjetas Visa, Mastercard, Amex, entre otras.",
+      "seo_description": "Comprueba números de tarjeta de prueba con Luhn, longitud de dígitos y detección de redes comunes. No verifica cuentas reales.",
       "cardNumber": "Número de Tarjeta",
       "inputPlaceholder": "Introduzca el número de la tarjeta...",
       "validate": "Validar",

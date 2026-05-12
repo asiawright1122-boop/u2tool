@@ -1,17 +1,35 @@
 {
-  "detailed_description": "Der CRC32 Calculator implementiert den IEEE 802.3 Standard zur Erzeugung von 32-Bit Prüfsummen durch polynomiale Division im Galois-Feld GF(2). Diese mathematische Methode detektiert zyklische Redundanzfehler in binären Datenströmen, indem sie Nachrichtenpolynome durch das Generatorpolynom 0x04C11DB7 teilt. Entwickler benötigen diese Funktionalität für Datenintegritätsprüfungen in Netzwerkprotokollen (z.B. Ethernet Frames), Dateiübertragungen oder Firmware-Updates. Die Tool-Logik konvertiert Eingabetexte in ihre hexadezimale Darstellung, berechnet den CRC32-Wert durch bitweise XOR-Operationen und Bitshifting, und stellt das Ergebnis als 8-stellige Hex-Zahl dar. Bei Dateiberechnungen erfolgt die Verarbeitung blockweise mit kryptografischem Padding für Daten, die nicht durch 4 Byte teilbar sind. Die Implementierung nutzt einen Lookup-Table-Ansatz mit vorberechneten CRC32-Werten für alle 8-Bit-Kombinationen zur Optimierung der Rechenleistung.",
+  "detailed_description": "Der CRC32-Rechner erzeugt eine Standard-CRC32-Prüfsumme für Text oder eine hochgeladene Datei direkt im Browser. Wählen Sie den Textmodus, um eine UTF-8-Zeichenfolge zu prüfen, oder den Dateimodus, um eine lokale Datei einzulesen und den CRC32-Wert aus den Dateibytes zu berechnen. Das Ergebnis wird als Hex- und Dezimalwert angezeigt, jeweils mit einer Kopierfunktion. Ein Beispieltext ist verfügbar, wenn Sie den Ablauf schnell testen möchten. Das Tool eignet sich zum Vergleichen erwarteter Prüfsummen in Dokumentation, zum Prüfen geänderter Downloads oder Exporte und zum Erstellen kleiner Testdaten. Es berechnet einen Standard-CRC32-Wert und bietet keine mehreren CRC-Varianten, keinen Fortschrittsbalken, keine Stapelverarbeitung und keine serverseitige Dateiprüfung.",
   "usage_steps": [
-    "Wählen Sie im Interface zwischen 'Text eingeben' und 'Datei hochladen' basierend auf Ihrer Eingabequelle.",
-    "Aktivieren Sie bei Texteingabe die Schaltfläche 'Erweiterte Einstellungen' und legen Sie die Zeichenkodierung (UTF-8/ASCII) fest.",
-    "Klicken Sie auf 'CRC32 berechnen' um den Algorithmus auf Ihre Daten anzuwenden.",
-    "Analysieren Sie das Ergebnis im Hexadezimal-Feld, das in Big-Endian Reihenfolge angezeigt wird.",
-    "Kopieren Sie den Prüfsummenwert über die integrierte Clipboard-Funktion in Ihre Zwischenablage.",
-    "Nutzen Sie die 'Vergleichsansicht' um mehrere CRC32-Hashes direkt miteinander zu evaluieren."
+    "Wählen Sie Text oder Datei als Eingabemodus.",
+    "Fügen Sie im Textmodus den zu prüfenden Text ein oder tippen Sie ihn ein.",
+    "Wählen Sie im Dateimodus eine lokale Datei von Ihrem Gerät.",
+    "Klicken Sie auf Berechnen, um den CRC32-Wert zu erzeugen.",
+    "Prüfen Sie den Hex- und Dezimalwert.",
+    "Kopieren Sie den gewünschten Wert, wenn Sie ihn in Dokumentation, Tests oder Tickets verwenden möchten."
   ],
   "usage_examples": [
-    "Validierung von Bootloader-Dateien in Embedded-Systemen vor Mikrocontroller-Programmierung",
-    "Überprüfung der Integrität von JSON-API-Antworten in RESTful Webdiensten",
-    "Erkennung von Datenkorruption bei UDP-Paketübertragungen in Echtzeitanwendungen",
-    "Vergleich von Versionsunterschieden in Konfigurationsdateien durch Hash-Differenzanalyse"
+    "Eine heruntergeladene Datei mit einem CRC32-Wert aus Release Notes vergleichen.",
+    "Den CRC32-Wert einer kurzen Zeichenfolge für einen Unit-Test erzeugen.",
+    "Prüfen, ob zwei exportierte Dateien wahrscheinlich unterschiedlich sind.",
+    "Den Dezimalwert der Prüfsumme in eine Debug-Notiz oder ein Support-Ticket kopieren."
+  ],
+  "faqs": [
+    {
+      "question": "Wird die Datei hochgeladen?",
+      "answer": "Nein. Die Datei wird lokal im Browser gelesen und die Prüfsumme wird auf Ihrem Gerät berechnet."
+    },
+    {
+      "question": "Welche CRC-Variante wird verwendet?",
+      "answer": "Das Tool verwendet die übliche reflektierte CRC-32-Berechnung und gibt einen Hex- sowie einen Dezimalwert aus."
+    },
+    {
+      "question": "Kann ich mehrere Dateien gleichzeitig prüfen?",
+      "answer": "Nein. Die aktuelle Oberfläche berechnet jeweils einen Text oder eine Datei."
+    },
+    {
+      "question": "Ist CRC32 ein Sicherheits-Hash?",
+      "answer": "Nein. CRC32 ist für Fehlererkennung und schnelle Vergleiche gedacht, aber nicht kryptografisch sicher."
+    }
   ]
 }
