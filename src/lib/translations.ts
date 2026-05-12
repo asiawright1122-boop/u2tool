@@ -271,7 +271,7 @@ export async function loadBaseMessages(
     '/messages/en.json',
     assetBaseUrl
   )) ?? {};
-  const fallbackMessages = mergeMessageRecords(fallbackBase, fallbackRoot);
+  const fallbackMessages = mergeMessageRecords(fallbackRoot, fallbackBase);
 
   if (locale === 'en') {
     const normalizedFallbackMessages = await applyToolMessageAliases('en', fallbackMessages, assetBaseUrl);
@@ -289,7 +289,7 @@ export async function loadBaseMessages(
     `/messages/${locale}.json`,
     assetBaseUrl
   )) ?? {};
-  const localeMessages = mergeMessageRecords(localeBase, localeRoot);
+  const localeMessages = mergeMessageRecords(localeRoot, localeBase);
 
   // Per-key English fallback to avoid exposing MISSING for partially translated locales.
   const mergedWithFallback = mergeMessageRecords(fallbackMessages, localeMessages);

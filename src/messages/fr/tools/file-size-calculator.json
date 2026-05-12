@@ -13,5 +13,23 @@
     "Un développeur Android convertit la taille d'une vidéo 4K de 1,200 MégaOctets (Mo) en Gigaoctets (Go) pour s'assurer qu'elle respecte les limites d'installation sur appareils mobiles",
     "Un photographe professionnel calcule la capacité requise pour stocker 800 fichiers RAW de 25 Mo chacun en téraoctets, en tenant compte des 5% d'espace système réservé",
     "Un ingénieur cloud convertit 4096 Mo de mémoire vive en Gibioctets (GiB) pour configurer correctement les paramètres d'une machine virtuelle AWS EC2"
+  ],
+  "faqs": [
+    {
+      "question": "Quelle est la différence entre base 1024 et base 1000 ?",
+      "answer": "La base 1024 correspond aux unités binaires souvent utilisées par les systèmes d'exploitation, tandis que la base 1000 correspond aux unités décimales souvent utilisées dans les fiches fabricant."
+    },
+    {
+      "question": "Quelles unités sont disponibles ?",
+      "answer": "L'outil convertit entre B, KB, MB, GB, TB et PB, puis affiche aussi les équivalents en bits, kilobits, mégabits et gigabits."
+    },
+    {
+      "question": "Faut-il cliquer sur un bouton Convertir ?",
+      "answer": "Non. Les résultats se mettent à jour lorsque vous modifiez la valeur, l'unité source ou la base."
+    },
+    {
+      "question": "L'outil analyse-t-il un vrai fichier ?",
+      "answer": "Non. Il convertit une valeur numérique saisie manuellement. Il ne lit pas de fichier local et ne téléverse rien."
+    }
   ]
 }

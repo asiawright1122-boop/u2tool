@@ -11,5 +11,23 @@
     "Turn a short practice phrase into Morse code and listen to it.",
     "Decode a Morse sequence such as .... . .-.. .-.. --- back into text.",
     "Compare slower and faster playback speeds while practicing recognition."
+  ],
+  "faqs": [
+    {
+      "question": "Can this tool play Morse audio?",
+      "answer": "Yes. After converting text to Morse, use Play to hear dots and dashes with the selected speed and frequency."
+    },
+    {
+      "question": "Can it decode Morse back to text?",
+      "answer": "Yes. Switch to Morse to Text, paste a dot-dash sequence, and click Convert to decode supported characters."
+    },
+    {
+      "question": "What do spaces and slashes mean?",
+      "answer": "Spaces separate letters, and slashes represent word breaks in the Morse sequence."
+    },
+    {
+      "question": "Does it include a full alphabet table?",
+      "answer": "No. The page shows the output, visualization, and a small legend for timing symbols, but not a full Morse alphabet table."
+    }
   ]
 }

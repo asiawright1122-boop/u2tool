@@ -13,9 +13,9 @@ function readSplitToolMessages(slug: string): Record<string, unknown> {
   return JSON.parse(readFileSync(new URL(`../messages/en/tools/${slug}.json`, import.meta.url), 'utf-8'));
 }
 
-function readAggregateToolMessages(slug: string): Record<string, unknown> {
-  const aggregate = JSON.parse(readFileSync(new URL('../messages/en.json', import.meta.url), 'utf-8'));
-  return aggregate.tools[slug] as Record<string, unknown>;
+function readBaseToolMessages(slug: string): Record<string, unknown> {
+  const base = JSON.parse(readFileSync(new URL('../messages/en/base.json', import.meta.url), 'utf-8'));
+  return base.tools[slug] as Record<string, unknown>;
 }
 
 const splitSupportKeys = ['detailed_description', 'usage_steps', 'usage_examples', 'faqs'];
@@ -133,6 +133,18 @@ describe('translations module', () => {
       expect(categoriesSeo.security.seo_title.toLowerCase()).toContain('jwt');
     });
 
+    it('keeps compact base metadata authoritative over stale aggregate tool metadata', async () => {
+      const enMessages = await loadBaseMessages('en');
+      const tools = enMessages.tools as Record<string, Record<string, string>>;
+
+      expect(tools['database-connection-tester']?.seo_title).toBe(
+        'Free Database Connection String Builder Online | U2Tool'
+      );
+      expect(tools['database-connection-tester']?.description).toBe(
+        'Build and review database connection strings and code snippets.'
+      );
+    });
+
     it('fills missing locale keys with English fallback to prevent runtime MISSING labels', async () => {
       const jaMessages = await loadBaseMessages('ja');
       const search = jaMessages.search as Record<string, string>;
@@ -161,11 +173,11 @@ describe('translations module', () => {
     });
 
     it('prefers split tool support copy over stale aggregate locale content', async () => {
-      const aggregateBase64 = readAggregateToolMessages('base64');
+      const baseBase64 = readBaseToolMessages('base64');
       const splitBase64 = readSplitToolMessages('base64');
       const base64Messages = await loadToolMessages('en', 'base64');
 
-      expect(base64Messages.name).toBe(aggregateBase64.name);
+      expect(base64Messages.name).toBe(baseBase64.name);
       for (const key of splitSupportKeys) {
         if (splitBase64[key] !== undefined) {
           expect(base64Messages[key]).toEqual(splitBase64[key]);

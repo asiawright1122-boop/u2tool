@@ -1,17 +1,35 @@
 {
-  "detailed_description": "The Crontab Calendar is a specialized visualization tool that translates cron schedule expressions into interactive calendar representations. This tool parses standard cron syntax (including Vixie, AIX, and systemd variants) and maps scheduled execution times onto a navigable monthly or weekly calendar grid. It addresses the critical need for schedule verification in automated system maintenance, batch processing, and DevOps workflows where timing conflicts or misconfigurations can cause service disruptions. The engine employs precise timezone-aware date calculations using the system's locale settings and IANA Time Zone Database references to ensure accuracy across daylight saving transitions. Technical users benefit from granular controls like minute-level precision adjustment, recurrence rule expansion (e.g., handling '@hourly' macros), and conflict detection algorithms that highlight overlapping job executions. The interface renders ISO week-numbering calendar views alongside Gregorian dates, enabling alignment with enterprise scheduling standards. Advanced features include cron field validation, error margin visualization for system clock drift, and integration with CI/CD pipelines via programmatic output formats like JSON and iCalendar.",
+  "detailed_description": "Crontab Calendar turns a standard five-field cron expression into a simple browser preview. Enter a schedule such as 0 9 * * 1-5, parse it, then switch between a monthly calendar view and a next-runs list. The calendar highlights days with scheduled runs for the selected month, while the list shows the next upcoming execution times using the browser locale. It is useful for sanity-checking daily, weekly, weekday, and range-based cron expressions before copying them into a server, CI job, or maintenance note. The tool focuses on visual review and does not export iCal or JSON files.",
   "usage_steps": [
-    "Input cron expression into the multi-line text area using standard syntax (e.g., '0 2 * * 1-5')",
-    "Adjust date range using the dual-month calendar picker to set visualization window",
-    "Select target timezone from 593+ IANA-compliant options in the dropdown menu",
-    "Click 'Parse & Render' to generate schedule visualization with color-coded job slots",
-    "Use the timeline slider to drill down into specific hourly intervals and view execution stacks",
-    "Export calendar data via 'Download as iCal' or 'Copy JSON' buttons for integration with scheduling systems"
+    "Enter a five-field cron expression such as 0 9 * * 1-5.",
+    "Click Parse or press Enter to validate and render the schedule preview.",
+    "Use Calendar view to see which days in the selected month contain a run.",
+    "Move to the previous or next month to check nearby schedule dates.",
+    "Switch to List view to read the next 10 run times.",
+    "Clear the expression when you want to test another schedule."
   ],
   "usage_examples": [
-    "Validating biweekly database backups at 02:00 AM during daylight saving transitions across EC2 instances",
-    "Coordinating containerized service-oriented applications deployments across three AWS regions with staggered maintenance windows",
-    "Auditing legacy cron job overlaps in a high-frequency trading system's market data ingestion pipeline",
-    "Debugging a misconfigured 'first Sunday of quarter' ETL process causing duplicate data ingestion incidents"
+    "Check that a weekday report runs Monday through Friday at 09:00.",
+    "Preview a monthly maintenance cron before adding it to a server crontab.",
+    "Compare a daily schedule and a weekly schedule by parsing each expression and reviewing the highlighted days.",
+    "Use the next-runs list to explain a cron expression in a deployment ticket."
+  ],
+  "faqs": [
+    {
+      "question": "Which cron syntax does this calendar support?",
+      "answer": "It supports the common five-field cron shape for minute, hour, day of month, month, and day of week."
+    },
+    {
+      "question": "Does it execute the job?",
+      "answer": "No. It only parses and previews schedule times. It does not run commands, connect to servers, or edit your crontab."
+    },
+    {
+      "question": "Why do I see calendar and list views?",
+      "answer": "The calendar is best for seeing which dates are active, while the list is best for checking exact upcoming run timestamps."
+    },
+    {
+      "question": "Should I still test cron in production-like timezones?",
+      "answer": "Yes. Use this as a quick preview, then confirm timezone and daylight-saving behavior in the environment where the job will actually run."
+    }
   ]
 }

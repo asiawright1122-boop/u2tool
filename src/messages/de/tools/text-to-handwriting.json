@@ -12,5 +12,23 @@
     "Erstelle eine handschriftlich wirkende Notiz für ein Mockup.",
     "Gestalte einen kurzen persönlichen Gruß als PNG-Grafik.",
     "Bereite ein einfaches Schreibübungsblatt mit liniertem oder kariertem Hintergrund vor."
+  ],
+  "faqs": [
+    {
+      "question": "Erkennt das Tool echte Handschrift?",
+      "answer": "Nein. Es wandelt eingegebenen Text in eine stilisierte Canvas-Grafik um und nutzt keine Handschrifterkennung."
+    },
+    {
+      "question": "Welche Papierstile gibt es?",
+      "answer": "Du kannst zwischen leerem Papier, liniertem Papier und kariertem Papier wählen."
+    },
+    {
+      "question": "Kann ich das Ergebnis herunterladen?",
+      "answer": "Ja. Die Vorschau kann als PNG-Bild heruntergeladen werden."
+    },
+    {
+      "question": "Warum sieht der Text bei jeder Änderung etwas anders aus?",
+      "answer": "Die Canvas-Ausgabe nutzt leichte zufällige Abweichungen bei Position, Drehung und Zeichengröße, damit die Schrift weniger mechanisch wirkt."
+    }
   ]
 }

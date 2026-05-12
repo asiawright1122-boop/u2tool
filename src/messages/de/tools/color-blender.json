@@ -1,17 +1,35 @@
 {
-  "detailed_description": "Color Blender ist ein fortschrittliches Online-Tool, das es Benutzern ermöglicht, zwei Farben zu mischen und daraus einen Farbverlauf mit definierbaren Schritten zu generieren. Technisch basiert der Vorgang auf der Interpolation von Farbwerten im RGB-Farbraum. Die Farbmischung kann in verschiedenen Farbmodellen wie HEX, RGB oder HSL ausgeführt werden, je nach Bedarf des Benutzers. Dieses Tool ist besonders nützlich für Designer, Webentwickler und Künstler, die eine nahtlose Transition von einer Farbe zur anderen benötigen, z.B. für Hintergründe, Gradienten oder Farbschemata. Die genaue Kontrolle über die Anzahl der Farbschritte ermöglicht es, komplexere visuelle Effekte zu erstellen, die in Grafikdesign, Webentwicklung und anderen Bereichen der visuellen Kommunikation oft gefragt sind. Die benutzerfreundliche Oberfläche von Color Blender vereinfacht den Prozess, sodass auch Anfänger schnell die gewünschten Ergebnisse erzielen können, während fortgeschrittene Benutzer über die Möglichkeit verfügen, die Farbmischung detailliert zu kontrollieren und anzupassen.",
+  "detailed_description": "Color Blender erstellt eine Liste von Zwischenfarben zwischen zwei ausgewahlten HEX-Farben. Wahlen Sie die erste und zweite Farbe uber den Farbauswahler oder geben Sie den HEX-Code manuell ein, legen Sie die Anzahl der Zwischenschritte fest und das Tool zeigt sofort eine gleichmassige Ubergangsskala. Jede Farbe kann einzeln kopiert werden, und mit Kopieren Alle lasst sich die komplette HEX-Liste auf einmal ubernehmen. Das ist praktisch fur UI-Paletten, Hover-Zustande, Design-Dokumentation, schnelle CSS-Vorbereitung oder zum Prufen, wie zwei Markenfarben visuell ineinander ubergehen. Das Tool arbeitet mit einfachem RGB-Mischen und exportiert keine CSS-, SVG- oder PNG-Dateien.",
   "usage_steps": [
-    "Wählen Sie die erste Farbe, indem Sie im Farbauswahlbereich auf den gewünschten Farbton klicken oder den HEX-Code manuell eingeben.",
-    "Wählen Sie die zweite Farbe auf die gleiche Weise wie die erste Farbe, wobei Sie den Farbauswahlbereich oder den HEX-Code verwenden können.",
-    "Geben Sie die Anzahl der gewünschten Farbschritte in das Eingabefeld ein, das unter dem Bereich für die Farbselection angezeigt wird.",
-    "Klicken Sie auf die Schaltfläche 'Gradient generieren', um den Farbverlauf basierend auf den ausgewählten Farben und der Anzahl der Schritte zu erstellen.",
-    "Bewegen Sie die Schieberegler unter dem generierten Gradienten, um die Helligkeit, Sättigung oder Transparenz der Farben zu adjustieren.",
-    "Klicken Sie auf 'Code kopieren', um den generierten CSS-Code für den Gradienten zu kopieren, der dann direkt in Ihre Projektdateien eingefügt werden kann."
+    "Wahlen Sie die erste Farbe uber den Farbauswahler oder geben Sie einen HEX-Code ein.",
+    "Wahlen Sie die zweite Farbe auf die gleiche Weise.",
+    "Legen Sie die Anzahl der Zwischenschritte zwischen 1 und 20 fest.",
+    "Prufen Sie die generierte Farbreihe in der Vorschau.",
+    "Klicken Sie auf eine einzelne Farbe, um ihren HEX-Wert zu kopieren.",
+    "Nutzen Sie Kopieren Alle, um die komplette HEX-Liste zeilenweise zu kopieren."
   ],
   "usage_examples": [
-    "Ein Webdesigner plant ein responsives Website-Design und benötigt einen nahtlosen Farbverlauf als Hintergrund. Mit Color Blender erstellt er einen farblichen Übergang von Hellblau zu Dunkelblau, um ein beruhigendes und professionelles Erscheinungsbild zu erzielen.",
-    "Ein Grafikdesigner arbeitet an einem Markenstyling-Buch und braucht eine Palette von Farbschattierungen, die harmonisch zueinander passen. Er verwendet Color Blender, um von einem warmen Rosa zu einem sanften Lila zu interpolieren und verschiedene Schattierungen für den Farbton zu generieren.",
-    "Ein UI-Entwickler plant die Benutzeroberfläche für eine neue App und benötigt ein Farbschema, das sowohl visuell ansprechend als auch barrierefrei ist. Mit Color Blender erstellt er einen Gradienten von einem hellen Grau zu einem dunkleren Grau, um ein konturloses und zugängliches Design zu gewährleisten.",
-    "Ein Künstler erstellt ein digitales Kunstwerk, das aus mehreren farbigen Schichten besteht. Mit Color Blender mischt er zwei Primärfarben, um eine Palette von Sekundärfarben zu erstellen, die in seinem Kunstwerk verwendet werden können, um Tiefe und Komplexität hinzuzufügen."
+    "Zwischen einer Markenfarbe und einer Button-Hover-Farbe passende Zwischenwerte finden.",
+    "Eine kurze HEX-Palette fur einen CSS-Gradienten vorbereiten, bevor der Stil manuell ausgearbeitet wird.",
+    "Vergleichen, wie zwei HEX-Farben bei unterschiedlicher Schrittzahl ineinander ubergehen.",
+    "Eine Reihe von HEX-Werten in ein Designdokument oder ein Frontend-Ticket ubernehmen."
+  ],
+  "faqs": [
+    {
+      "question": "Welche Farbformate werden unterstutzt?",
+      "answer": "Die Oberflache arbeitet mit HEX-Farben. Sie konnen eine Farbe visuell auswahlen oder den HEX-Code direkt eingeben."
+    },
+    {
+      "question": "Kann ich alle Farben auf einmal kopieren?",
+      "answer": "Ja. Kopieren Alle kopiert alle erzeugten HEX-Werte zeilenweise in die Zwischenablage."
+    },
+    {
+      "question": "Exportiert das Tool CSS oder Bilder?",
+      "answer": "Nein. Die aktuelle Version zeigt und kopiert HEX-Werte, erstellt aber keine CSS-Datei, kein SVG und kein PNG."
+    },
+    {
+      "question": "Wofur eignet sich Color Blender am besten?",
+      "answer": "Es eignet sich fur schnelle Zwischenfarben, UI-Paletten, Gradient-Ideen und Farbdokumentation."
+    }
   ]
 }
