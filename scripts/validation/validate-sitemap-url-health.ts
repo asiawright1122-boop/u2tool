@@ -30,7 +30,7 @@ function assert(condition: unknown, message: string): void {
   }
 }
 
-async function fetchWithRetry(url: string, init: RequestInit = {}, attempts = 3): Promise<Response> {
+async function fetchWithRetry(url: string, init: RequestInit = {}, attempts = 4): Promise<Response> {
   let lastError: unknown;
 
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
@@ -39,7 +39,30 @@ async function fetchWithRetry(url: string, init: RequestInit = {}, attempts = 3)
     } catch (error) {
       lastError = error;
       if (attempt < attempts) {
-        await new Promise((resolve) => setTimeout(resolve, attempt * 500));
+        await new Promise((resolve) => setTimeout(resolve, attempt * 750));
+      }
+    }
+  }
+
+  throw lastError;
+}
+
+async function fetchTextWithRetry(
+  url: string,
+  init: RequestInit = {},
+  attempts = 4
+): Promise<{ response: Response; text: string }> {
+  let lastError: unknown;
+
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      const response = await fetch(url, init);
+      const text = await response.text();
+      return { response, text };
+    } catch (error) {
+      lastError = error;
+      if (attempt < attempts) {
+        await new Promise((resolve) => setTimeout(resolve, attempt * 750));
       }
     }
   }
@@ -140,7 +163,17 @@ async function validateLiveUrl(item: SitemapUrl): Promise<Finding[]> {
   }
 
   const fetchUrl = toFetchUrl(item.url);
-  const headResponse = await fetchWithRetry(fetchUrl, { method: 'HEAD', redirect: 'manual' });
+  let headResponse: Response;
+  try {
+    headResponse = await fetchWithRetry(fetchUrl, { method: 'HEAD', redirect: 'manual' });
+  } catch (error) {
+    findings.push({
+      ...item,
+      reason: `sitemap URL HEAD request failed: ${error instanceof Error ? error.message : String(error)}`,
+    });
+    return findings;
+  }
+
   if (headResponse.status >= 300 && headResponse.status < 400) {
     findings.push({
       ...item,
@@ -159,13 +192,23 @@ async function validateLiveUrl(item: SitemapUrl): Promise<Finding[]> {
     return findings;
   }
 
-  const getResponse = await fetchWithRetry(fetchUrl, { redirect: 'manual' });
+  let getResponse: Response;
+  let html: string;
+  try {
+    ({ response: getResponse, text: html } = await fetchTextWithRetry(fetchUrl, { redirect: 'manual' }));
+  } catch (error) {
+    findings.push({
+      ...item,
+      reason: `sitemap URL GET request failed: ${error instanceof Error ? error.message : String(error)}`,
+    });
+    return findings;
+  }
+
   if (getResponse.status !== 200) {
     findings.push({ ...item, reason: `HTML sitemap URL GET returns HTTP ${getResponse.status}` });
     return findings;
   }
 
-  const html = await getResponse.text();
   const canonical = getCanonical(html);
   const robots = getRobotsMeta(html);
 
@@ -207,9 +250,8 @@ async function loadSitemapGroups(): Promise<Record<string, string[]>> {
   const groups: Record<string, string[]> = {};
 
   for (const sitemapPath of sitemapPaths) {
-    const response = await fetchWithRetry(`${FETCH_BASE_URL}${sitemapPath}`);
+    const { response, text: xml } = await fetchTextWithRetry(`${FETCH_BASE_URL}${sitemapPath}`);
     assert(response.status === 200, `${sitemapPath}: expected HTTP 200, got ${response.status}`);
-    const xml = await response.text();
     const locs = extractLocs(xml);
     assert(locs.length > 0, `${sitemapPath}: no <loc> entries found`);
     groups[sitemapPath] = locs;
