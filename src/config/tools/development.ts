@@ -84,4 +84,6 @@ export const DEVELOPMENT_TOOLS: Tool[] = [
   { slug: 'merge-conflict-resolver', category: 'development', icon: 'code-2', component: 'MergeConflictResolver' },
   { slug: 'git-history-visualizer', category: 'development', icon: 'history', component: 'GitHistoryVisualizer' },
   { slug: 'git-tag-manager', category: 'development', icon: 'code-2', component: 'GitTagManager' },
+  { slug: 'docker-run-to-docker-compose-converter', category: 'development', icon: 'code-2', component: 'PopularUtilityTool', popular: true },
+  { slug: 'llms-txt-generator', category: 'development', icon: 'file-text', component: 'PopularUtilityTool', popular: true },
 ];

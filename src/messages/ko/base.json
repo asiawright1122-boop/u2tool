@@ -15641,7 +15641,9 @@
         "missingConfig": "도구 설정을 찾을 수 없습니다",
         "invalidData": "올바른 데이터를 입력하세요",
         "invalidCsv": "연락처 헤더가 있는 CSV 행을 입력하세요",
-        "unpayableDebt": "상환 계획을 만들려면 월 납입액을 늘리거나 이자율을 낮추세요"
+        "unpayableDebt": "상환 계획을 만들려면 월 납입액을 늘리거나 이자율을 낮추세요",
+        "invalidVcard": "유효한 vCard 연락처를 하나 이상 입력하세요",
+        "invalidDockerRun": "이미지 이름이 포함된 docker run 명령을 입력하세요"
       },
       "fields": {
         "shares": "주식 수",
@@ -15706,7 +15708,28 @@
         "headers": "HTTP 응답 헤더",
         "csv": "CSV 연락처",
         "delimiter": "구분자",
-        "vcardVersion": "vCard 버전"
+        "vcardVersion": "vCard 버전",
+        "cta": "행동 유도 문구",
+        "links": "링크",
+        "salePrice": "판매가",
+        "shippingCharge": "청구 배송비",
+        "itemCost": "상품 원가",
+        "shippingCost": "실제 배송비",
+        "listingFee": "리스팅 수수료",
+        "transactionPercent": "거래 수수료율",
+        "paymentPercent": "결제 처리 수수료율",
+        "offsiteAdsPercent": "외부 광고 수수료율",
+        "targetIncome": "목표 실수령 소득",
+        "expenses": "연간 사업 비용",
+        "taxPercent": "세금 예비율",
+        "billableHours": "주당 청구 가능 시간",
+        "weeksOff": "연간 휴가 주수",
+        "vcard": "vCard 연락처",
+        "dockerRun": "docker run 명령",
+        "siteName": "사이트 이름",
+        "siteUrl": "사이트 URL",
+        "summary": "요약",
+        "priorityPages": "우선 페이지"
       },
       "options": {
         "writing": "글쓰기",
@@ -15750,7 +15773,9 @@
         "semicolon": "세미콜론",
         "tab": "탭",
         "vcard3": "vCard 3.0",
-        "vcard4": "vCard 4.0"
+        "vcard4": "vCard 4.0",
+        "playful": "경쾌한",
+        "bold": "강렬한"
       },
       "results": {
         "totalCost": "총비용",
@@ -15806,7 +15831,23 @@
         "passed": "통과",
         "missing": "누락",
         "contacts": "연락처",
-        "vcardVersion": "vCard 버전"
+        "vcardVersion": "vCard 버전",
+        "totalFees": "총 수수료",
+        "transactionFee": "거래 수수료",
+        "paymentFee": "결제 수수료",
+        "offsiteAdsFee": "외부 광고 수수료",
+        "netRevenue": "순매출",
+        "grossRevenue": "총매출",
+        "profitMargin": "이익률",
+        "hourlyRate": "시간당 요금",
+        "dayRate": "일일 요금",
+        "monthlyRevenue": "월 매출 목표",
+        "yearlyRevenue": "연 매출 목표",
+        "csvRows": "CSV 행",
+        "service": "서비스",
+        "ports": "포트",
+        "envVars": "환경 변수",
+        "pages": "페이지"
       },
       "placeholders": {
         "aiTopic": "온라인 도구 사이트 출시 문구",
@@ -15830,7 +15871,20 @@
         "youtubeKeyword": "AI 생산성 도구",
         "youtubeAudience": "바쁜 창업자",
         "headers": "strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff",
-        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder"
+        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder",
+        "instagramTopic": "혼자 떠나는 여행 사진",
+        "instagramKeyword": "여행 팁",
+        "creatorAudience": "새 크리에이터",
+        "cta": "매주 아이디어를 팔로우하세요",
+        "youtubeLinks": "https://example.com/resources\nhttps://example.com/newsletter",
+        "emailTopic": "봄 제품 출시",
+        "emailBenefit": "매주 3시간 절약",
+        "priorityPages": "홈, https://example.com/\n가격, https://example.com/pricing\n문서, https://example.com/docs",
+        "siteName": "U2Tool",
+        "siteUrl": "https://www.u2tool.com",
+        "siteSummary": "개발자, 마케터, 운영자를 위한 무료 브라우저 기반 도구 모음입니다.",
+        "dockerRun": "docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest",
+        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD"
       }
     },
     "calorie-deficit-calculator": {
@@ -15892,6 +15946,66 @@
       "description": "주제, 키워드, 시청자, 톤을 바탕으로 YouTube 제목 아이디어를 만듭니다.",
       "seo_title": "무료 온라인 YouTube 제목 생성기",
       "seo_description": "주제, 키워드, 시청자, 톤을 바탕으로 YouTube 제목 아이디어를 만듭니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "docker-run-to-docker-compose-converter": {
+      "name": "Docker Run to Docker Compose 변환기",
+      "description": "docker run 명령을 Docker Compose YAML 서비스 초안으로 변환합니다.",
+      "seo_title": "무료 온라인 Docker Run to Docker Compose 변환기",
+      "seo_description": "docker run 명령을 Docker Compose YAML 서비스 초안으로 변환합니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "email-subject-line-generator": {
+      "name": "이메일 제목 생성기",
+      "description": "캠페인, 콜드 아웃리치, 출시, 뉴스레터용 이메일 제목 아이디어를 만듭니다.",
+      "seo_title": "무료 온라인 이메일 제목 생성기",
+      "seo_description": "캠페인, 콜드 아웃리치, 출시, 뉴스레터용 이메일 제목 아이디어를 만듭니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "etsy-fee-calculator": {
+      "name": "Etsy 수수료 계산기",
+      "description": "편집 가능한 Etsy식 수수료 가정으로 플랫폼 수수료, 순수익, 이익을 추정합니다.",
+      "seo_title": "무료 온라인 Etsy 수수료 계산기",
+      "seo_description": "편집 가능한 Etsy식 수수료 가정으로 플랫폼 수수료, 순수익, 이익을 추정합니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "freelance-rate-calculator": {
+      "name": "프리랜서 요율 계산기",
+      "description": "수입 목표, 비용, 세금, 청구 가능 시간으로 시간당 요율과 일일 요율을 계산합니다.",
+      "seo_title": "무료 온라인 프리랜서 요율 계산기",
+      "seo_description": "수입 목표, 비용, 세금, 청구 가능 시간으로 시간당 요율과 일일 요율을 계산합니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "instagram-bio-generator": {
+      "name": "Instagram 소개글 생성기",
+      "description": "키워드, 대상, 톤, 행동 유도를 바탕으로 짧은 Instagram 소개글을 만듭니다.",
+      "seo_title": "무료 온라인 Instagram 소개글 생성기",
+      "seo_description": "키워드, 대상, 톤, 행동 유도를 바탕으로 짧은 Instagram 소개글을 만듭니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "linkedin-headline-generator": {
+      "name": "LinkedIn 헤드라인 생성기",
+      "description": "직무, 역량, 대상, 성과를 바탕으로 LinkedIn 헤드라인 옵션을 만듭니다.",
+      "seo_title": "무료 온라인 LinkedIn 헤드라인 생성기",
+      "seo_description": "직무, 역량, 대상, 성과를 바탕으로 LinkedIn 헤드라인 옵션을 만듭니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "linkedin-summary-generator": {
+      "name": "LinkedIn 요약 생성기",
+      "description": "경험, 역량, 성과, 대상 독자를 바탕으로 LinkedIn 소개 섹션 초안을 만듭니다.",
+      "seo_title": "무료 온라인 LinkedIn 요약 생성기",
+      "seo_description": "경험, 역량, 성과, 대상 독자를 바탕으로 LinkedIn 소개 섹션 초안을 만듭니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "llms-txt-generator": {
+      "name": "llms.txt 생성기",
+      "description": "사이트 요약, 주요 페이지, AI 발견 메모를 포함한 llms.txt 초안을 만듭니다.",
+      "seo_title": "무료 온라인 llms.txt 생성기",
+      "seo_description": "사이트 요약, 주요 페이지, AI 발견 메모를 포함한 llms.txt 초안을 만듭니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "vcard-to-csv-converter": {
+      "name": "vCard to CSV 변환기",
+      "description": "붙여 넣은 vCard 또는 VCF 연락처를 스프레드시트와 CRM 가져오기용 CSV 행으로 변환합니다.",
+      "seo_title": "무료 온라인 vCard to CSV 변환기",
+      "seo_description": "붙여 넣은 vCard 또는 VCF 연락처를 스프레드시트와 CRM 가져오기용 CSV 행으로 변환합니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
+    },
+    "youtube-description-generator": {
+      "name": "YouTube 설명 생성기",
+      "description": "키워드, 시청자, 링크, CTA를 활용해 구조화된 YouTube 영상 설명을 만듭니다.",
+      "seo_title": "무료 온라인 YouTube 설명 생성기",
+      "seo_description": "키워드, 시청자, 링크, CTA를 활용해 구조화된 YouTube 영상 설명을 만듭니다. 가입 없이 브라우저에서 무료로 사용할 수 있습니다."
     }
   }
 }

@@ -108,6 +108,47 @@ const POPULAR_UTILITY_PROBES: Record<string, ToolProbe> = {
     fields: ['topic', 'keyword'],
     actions: ['copy'],
   },
+  'instagram-bio-generator': {
+    fields: ['topic', 'cta'],
+    options: ['friendly', 'playful'],
+    actions: ['copy'],
+  },
+  'youtube-description-generator': {
+    fields: ['title', 'links'],
+    actions: ['copy'],
+  },
+  'linkedin-headline-generator': {
+    fields: ['jobTitle', 'skills'],
+    actions: ['copy'],
+  },
+  'linkedin-summary-generator': {
+    fields: ['jobTitle', 'experience'],
+    actions: ['copy'],
+  },
+  'email-subject-line-generator': {
+    fields: ['topic', 'benefit'],
+    actions: ['copy'],
+  },
+  'etsy-fee-calculator': {
+    fields: ['salePrice', 'transactionPercent'],
+    results: ['totalFees', 'profitMargin'],
+  },
+  'freelance-rate-calculator': {
+    fields: ['targetIncome', 'billableHours'],
+    results: ['hourlyRate', 'yearlyRevenue'],
+  },
+  'vcard-to-csv-converter': {
+    fields: ['vcard', 'delimiter'],
+    results: ['contacts', 'csvRows'],
+  },
+  'docker-run-to-docker-compose-converter': {
+    fields: ['dockerRun'],
+    results: ['service', 'ports'],
+  },
+  'llms-txt-generator': {
+    fields: ['siteName', 'priorityPages'],
+    results: ['pages'],
+  },
   'wifi-qr-code-generator': {
     fields: ['ssid', 'encryption'],
     results: ['encryption', 'hidden'],

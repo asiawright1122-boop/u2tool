@@ -15668,7 +15668,9 @@
         "missingConfig": "Tool configuration not found",
         "invalidData": "Enter valid data",
         "invalidCsv": "Enter CSV rows with contact headers",
-        "unpayableDebt": "Increase the monthly payment or lower the interest rate to create a payoff plan"
+        "unpayableDebt": "Increase the monthly payment or lower the interest rate to create a payoff plan",
+        "invalidVcard": "Enter one or more valid vCard contacts",
+        "invalidDockerRun": "Enter a docker run command with an image name"
       },
       "fields": {
         "shares": "Shares",
@@ -15733,7 +15735,28 @@
         "headers": "HTTP Response Headers",
         "csv": "CSV Contacts",
         "delimiter": "Delimiter",
-        "vcardVersion": "vCard Version"
+        "vcardVersion": "vCard Version",
+        "cta": "Call to Action",
+        "links": "Links",
+        "salePrice": "Sale Price",
+        "shippingCharge": "Shipping Charged",
+        "itemCost": "Item Cost",
+        "shippingCost": "Shipping Cost",
+        "listingFee": "Listing Fee",
+        "transactionPercent": "Transaction Fee Percent",
+        "paymentPercent": "Payment Processing Percent",
+        "offsiteAdsPercent": "Offsite Ads Percent",
+        "targetIncome": "Target Take-Home Income",
+        "expenses": "Annual Business Expenses",
+        "taxPercent": "Tax Reserve Percent",
+        "billableHours": "Billable Hours per Week",
+        "weeksOff": "Weeks Off per Year",
+        "vcard": "vCard Contacts",
+        "dockerRun": "docker run Command",
+        "siteName": "Site Name",
+        "siteUrl": "Site URL",
+        "summary": "Summary",
+        "priorityPages": "Priority Pages"
       },
       "options": {
         "writing": "Writing",
@@ -15777,7 +15800,9 @@
         "semicolon": "Semicolon",
         "tab": "Tab",
         "vcard3": "vCard 3.0",
-        "vcard4": "vCard 4.0"
+        "vcard4": "vCard 4.0",
+        "playful": "Playful",
+        "bold": "Bold"
       },
       "results": {
         "totalCost": "Total Cost",
@@ -15833,7 +15858,23 @@
         "passed": "Passed",
         "missing": "Missing",
         "contacts": "Contacts",
-        "vcardVersion": "vCard Version"
+        "vcardVersion": "vCard Version",
+        "totalFees": "Total Fees",
+        "transactionFee": "Transaction Fee",
+        "paymentFee": "Payment Fee",
+        "offsiteAdsFee": "Offsite Ads Fee",
+        "netRevenue": "Net Revenue",
+        "grossRevenue": "Gross Revenue",
+        "profitMargin": "Profit Margin",
+        "hourlyRate": "Hourly Rate",
+        "dayRate": "Day Rate",
+        "monthlyRevenue": "Monthly Revenue Target",
+        "yearlyRevenue": "Yearly Revenue Target",
+        "csvRows": "CSV Rows",
+        "service": "Service",
+        "ports": "Ports",
+        "envVars": "Environment Variables",
+        "pages": "Pages"
       },
       "placeholders": {
         "aiTopic": "launch copy for an online tools site",
@@ -15857,7 +15898,20 @@
         "youtubeKeyword": "AI productivity tools",
         "youtubeAudience": "busy founders",
         "headers": "strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff",
-        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder"
+        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder",
+        "instagramTopic": "solo travel photography",
+        "instagramKeyword": "travel tips",
+        "creatorAudience": "new creators",
+        "cta": "follow for weekly ideas",
+        "youtubeLinks": "https://example.com/resources\nhttps://example.com/newsletter",
+        "emailTopic": "spring product launch",
+        "emailBenefit": "save 3 hours every week",
+        "priorityPages": "Home, https://example.com/\nPricing, https://example.com/pricing\nDocs, https://example.com/docs",
+        "siteName": "U2Tool",
+        "siteUrl": "https://www.u2tool.com",
+        "siteSummary": "A free collection of browser-based tools for developers, marketers, and operators.",
+        "dockerRun": "docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest",
+        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD"
       }
     },
     "calorie-deficit-calculator": {
@@ -15919,6 +15973,66 @@
       "description": "Generate YouTube title ideas from a topic, keyword, audience, and tone.",
       "seo_title": "Free YouTube Title Generator Online",
       "seo_description": "Generate YouTube title ideas from a topic, keyword, audience, and tone. Free browser-based youtube title generator with no signup required."
+    },
+    "docker-run-to-docker-compose-converter": {
+      "name": "Docker Run to Docker Compose Converter",
+      "description": "Convert a docker run command into a starter Docker Compose YAML service.",
+      "seo_title": "Free Docker Run to Docker Compose Converter Online",
+      "seo_description": "Convert a docker run command into a starter Docker Compose YAML service. Free browser-based docker run to docker compose converter with no signup required."
+    },
+    "email-subject-line-generator": {
+      "name": "Email Subject Line Generator",
+      "description": "Generate email subject line ideas for campaigns, cold outreach, launches, and newsletters.",
+      "seo_title": "Free Email Subject Line Generator Online",
+      "seo_description": "Generate email subject line ideas for campaigns, cold outreach, launches, and newsletters. Free browser-based email subject line generator with no signup required."
+    },
+    "etsy-fee-calculator": {
+      "name": "Etsy Fee Calculator",
+      "description": "Estimate marketplace fees, net revenue, and profit with editable Etsy-style fee assumptions.",
+      "seo_title": "Free Etsy Fee Calculator Online",
+      "seo_description": "Estimate marketplace fees, net revenue, and profit with editable Etsy-style fee assumptions. Free browser-based etsy fee calculator with no signup required."
+    },
+    "freelance-rate-calculator": {
+      "name": "Freelance Rate Calculator",
+      "description": "Calculate a freelance hourly rate and day rate from income goals, expenses, taxes, and billable hours.",
+      "seo_title": "Free Freelance Rate Calculator Online",
+      "seo_description": "Calculate a freelance hourly rate and day rate from income goals, expenses, taxes, and billable hours. Free browser-based freelance rate calculator with no signup required."
+    },
+    "instagram-bio-generator": {
+      "name": "Instagram Bio Generator",
+      "description": "Generate short Instagram bio ideas with keywords, audience, tone, and call to action.",
+      "seo_title": "Free Instagram Bio Generator Online",
+      "seo_description": "Generate short Instagram bio ideas with keywords, audience, tone, and call to action. Free browser-based instagram bio generator with no signup required."
+    },
+    "linkedin-headline-generator": {
+      "name": "LinkedIn Headline Generator",
+      "description": "Generate LinkedIn headline options from your role, skills, audience, and achievement.",
+      "seo_title": "Free LinkedIn Headline Generator Online",
+      "seo_description": "Generate LinkedIn headline options from your role, skills, audience, and achievement. Free browser-based linkedin headline generator with no signup required."
+    },
+    "linkedin-summary-generator": {
+      "name": "LinkedIn Summary Generator",
+      "description": "Draft a LinkedIn About section from your experience, skills, achievement, and target audience.",
+      "seo_title": "Free LinkedIn Summary Generator Online",
+      "seo_description": "Draft a LinkedIn About section from your experience, skills, achievement, and target audience. Free browser-based linkedin summary generator with no signup required."
+    },
+    "llms-txt-generator": {
+      "name": "llms.txt Generator",
+      "description": "Generate an llms.txt draft with site summary, priority pages, and AI discovery notes.",
+      "seo_title": "Free llms.txt Generator Online",
+      "seo_description": "Generate an llms.txt draft with site summary, priority pages, and AI discovery notes. Free browser-based llms.txt generator with no signup required."
+    },
+    "vcard-to-csv-converter": {
+      "name": "vCard to CSV Converter",
+      "description": "Convert pasted vCard or VCF contacts into CSV rows for spreadsheets and CRM imports.",
+      "seo_title": "Free vCard to CSV Converter Online",
+      "seo_description": "Convert pasted vCard or VCF contacts into CSV rows for spreadsheets and CRM imports. Free browser-based vcard to csv converter with no signup required."
+    },
+    "youtube-description-generator": {
+      "name": "YouTube Description Generator",
+      "description": "Create a structured YouTube video description with keywords, audience, links, and CTA.",
+      "seo_title": "Free YouTube Description Generator Online",
+      "seo_description": "Create a structured YouTube video description with keywords, audience, links, and CTA. Free browser-based youtube description generator with no signup required."
     }
   }
 }

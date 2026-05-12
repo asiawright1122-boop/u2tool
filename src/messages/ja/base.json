@@ -15641,7 +15641,9 @@
         "missingConfig": "ツール設定が見つかりません",
         "invalidData": "有効なデータを入力してください",
         "invalidCsv": "連絡先ヘッダー付きのCSV行を入力してください",
-        "unpayableDebt": "返済計画を作るには月々の支払いを増やすか利率を下げてください"
+        "unpayableDebt": "返済計画を作るには月々の支払いを増やすか利率を下げてください",
+        "invalidVcard": "有効な vCard 連絡先を1件以上入力してください",
+        "invalidDockerRun": "イメージ名を含む docker run コマンドを入力してください"
       },
       "fields": {
         "shares": "株数",
@@ -15706,7 +15708,28 @@
         "headers": "HTTPレスポンスヘッダー",
         "csv": "CSV連絡先",
         "delimiter": "区切り文字",
-        "vcardVersion": "vCardバージョン"
+        "vcardVersion": "vCardバージョン",
+        "cta": "行動喚起",
+        "links": "リンク",
+        "salePrice": "販売価格",
+        "shippingCharge": "請求送料",
+        "itemCost": "商品原価",
+        "shippingCost": "実送料",
+        "listingFee": "出品手数料",
+        "transactionPercent": "取引手数料率",
+        "paymentPercent": "決済処理手数料率",
+        "offsiteAdsPercent": "外部広告手数料率",
+        "targetIncome": "目標手取り収入",
+        "expenses": "年間事業経費",
+        "taxPercent": "税金留保率",
+        "billableHours": "週の請求可能時間",
+        "weeksOff": "年間休暇週数",
+        "vcard": "vCard 連絡先",
+        "dockerRun": "docker run コマンド",
+        "siteName": "サイト名",
+        "siteUrl": "サイトURL",
+        "summary": "概要",
+        "priorityPages": "優先ページ"
       },
       "options": {
         "writing": "文章作成",
@@ -15750,7 +15773,9 @@
         "semicolon": "セミコロン",
         "tab": "タブ",
         "vcard3": "vCard 3.0",
-        "vcard4": "vCard 4.0"
+        "vcard4": "vCard 4.0",
+        "playful": "遊び心",
+        "bold": "大胆"
       },
       "results": {
         "totalCost": "総コスト",
@@ -15806,7 +15831,23 @@
         "passed": "合格",
         "missing": "不足",
         "contacts": "連絡先",
-        "vcardVersion": "vCardバージョン"
+        "vcardVersion": "vCardバージョン",
+        "totalFees": "手数料合計",
+        "transactionFee": "取引手数料",
+        "paymentFee": "決済手数料",
+        "offsiteAdsFee": "外部広告手数料",
+        "netRevenue": "純収益",
+        "grossRevenue": "総収益",
+        "profitMargin": "利益率",
+        "hourlyRate": "時間単価",
+        "dayRate": "日単価",
+        "monthlyRevenue": "月間売上目標",
+        "yearlyRevenue": "年間売上目標",
+        "csvRows": "CSV行数",
+        "service": "サービス",
+        "ports": "ポート",
+        "envVars": "環境変数",
+        "pages": "ページ"
       },
       "placeholders": {
         "aiTopic": "オンラインツールサイトのローンチ文",
@@ -15830,7 +15871,20 @@
         "youtubeKeyword": "AI生産性ツール",
         "youtubeAudience": "忙しい創業者",
         "headers": "strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff",
-        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder"
+        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder",
+        "instagramTopic": "一人旅写真",
+        "instagramKeyword": "旅行のコツ",
+        "creatorAudience": "新しいクリエイター",
+        "cta": "毎週のアイデアをフォロー",
+        "youtubeLinks": "https://example.com/resources\nhttps://example.com/newsletter",
+        "emailTopic": "春の製品ローンチ",
+        "emailBenefit": "毎週3時間を節約",
+        "priorityPages": "ホーム, https://example.com/\n料金, https://example.com/pricing\nドキュメント, https://example.com/docs",
+        "siteName": "U2Tool",
+        "siteUrl": "https://www.u2tool.com",
+        "siteSummary": "開発者、マーケター、運用担当者向けの無料ブラウザツール集です。",
+        "dockerRun": "docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest",
+        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD"
       }
     },
     "calorie-deficit-calculator": {
@@ -15892,6 +15946,66 @@
       "description": "トピック、キーワード、視聴者、トーンからYouTubeタイトル案を生成します。",
       "seo_title": "無料オンラインYouTubeタイトル生成ツール",
       "seo_description": "トピック、キーワード、視聴者、トーンからYouTubeタイトル案を生成します。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "docker-run-to-docker-compose-converter": {
+      "name": "Docker RunからDocker Composeへの変換ツール",
+      "description": "docker runコマンドをDocker Compose YAMLサービスのひな形に変換します。",
+      "seo_title": "無料オンラインDocker RunからDocker Composeへの変換ツール",
+      "seo_description": "docker runコマンドをDocker Compose YAMLサービスのひな形に変換します。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "email-subject-line-generator": {
+      "name": "メール件名生成ツール",
+      "description": "キャンペーン、営業メール、ローンチ、ニュースレター向けの件名案を生成します。",
+      "seo_title": "無料オンラインメール件名生成ツール",
+      "seo_description": "キャンペーン、営業メール、ローンチ、ニュースレター向けの件名案を生成します。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "etsy-fee-calculator": {
+      "name": "Etsy手数料計算機",
+      "description": "編集可能なEtsy風手数料前提で、手数料、純収益、利益を見積もります。",
+      "seo_title": "無料オンラインEtsy手数料計算機",
+      "seo_description": "編集可能なEtsy風手数料前提で、手数料、純収益、利益を見積もります。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "freelance-rate-calculator": {
+      "name": "フリーランス料金計算機",
+      "description": "収入目標、経費、税率、請求可能時間から時給と日額を計算します。",
+      "seo_title": "無料オンラインフリーランス料金計算機",
+      "seo_description": "収入目標、経費、税率、請求可能時間から時給と日額を計算します。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "instagram-bio-generator": {
+      "name": "Instagramプロフィール生成ツール",
+      "description": "キーワード、対象者、トーン、行動喚起から短いInstagramプロフィール案を生成します。",
+      "seo_title": "無料オンラインInstagramプロフィール生成ツール",
+      "seo_description": "キーワード、対象者、トーン、行動喚起から短いInstagramプロフィール案を生成します。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "linkedin-headline-generator": {
+      "name": "LinkedInヘッドライン生成ツール",
+      "description": "職種、スキル、対象者、実績からLinkedInヘッドライン案を生成します。",
+      "seo_title": "無料オンラインLinkedInヘッドライン生成ツール",
+      "seo_description": "職種、スキル、対象者、実績からLinkedInヘッドライン案を生成します。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "linkedin-summary-generator": {
+      "name": "LinkedIn自己紹介生成ツール",
+      "description": "経験、スキル、実績、対象者からLinkedIn About欄の草案を作成します。",
+      "seo_title": "無料オンラインLinkedIn自己紹介生成ツール",
+      "seo_description": "経験、スキル、実績、対象者からLinkedIn About欄の草案を作成します。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "llms-txt-generator": {
+      "name": "llms.txt生成ツール",
+      "description": "サイト概要、重要ページ、AI発見用メモを含むllms.txt草案を生成します。",
+      "seo_title": "無料オンラインllms.txt生成ツール",
+      "seo_description": "サイト概要、重要ページ、AI発見用メモを含むllms.txt草案を生成します。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "vcard-to-csv-converter": {
+      "name": "vCardからCSVへの変換ツール",
+      "description": "貼り付けたvCard/VCF連絡先をスプレッドシートやCRM用CSV行に変換します。",
+      "seo_title": "無料オンラインvCardからCSVへの変換ツール",
+      "seo_description": "貼り付けたvCard/VCF連絡先をスプレッドシートやCRM用CSV行に変換します。 登録不要でブラウザ上で無料で使えます。"
+    },
+    "youtube-description-generator": {
+      "name": "YouTube説明文生成ツール",
+      "description": "キーワード、視聴者、リンク、CTAを使って構成されたYouTube動画説明文を作成します。",
+      "seo_title": "無料オンラインYouTube説明文生成ツール",
+      "seo_description": "キーワード、視聴者、リンク、CTAを使って構成されたYouTube動画説明文を作成します。 登録不要でブラウザ上で無料で使えます。"
     }
   }
 }

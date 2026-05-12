@@ -26,4 +26,6 @@ export const FINANCE_TOOLS: Tool[] = [
   { slug: 'financial-forecast-calculator', category: 'finance', icon: 'wallet', component: 'FinancialForecastCalculator' },
   { slug: 'debt-snowball-calculator', category: 'finance', icon: 'wallet', component: 'PopularUtilityTool', popular: true },
   { slug: 'paypal-fee-calculator', category: 'finance', icon: 'percent', component: 'PopularUtilityTool', popular: true },
+  { slug: 'etsy-fee-calculator', category: 'finance', icon: 'percent', component: 'PopularUtilityTool', popular: true },
+  { slug: 'freelance-rate-calculator', category: 'finance', icon: 'calculator', component: 'PopularUtilityTool', popular: true },
 ];

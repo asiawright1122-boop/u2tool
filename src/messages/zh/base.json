@@ -21395,7 +21395,9 @@
         "missingConfig": "未找到工具配置",
         "invalidData": "请输入有效数据",
         "invalidCsv": "请输入带联系人表头的 CSV 行",
-        "unpayableDebt": "请提高每月还款额或降低利率，才能生成还款计划"
+        "unpayableDebt": "请提高每月还款额或降低利率，才能生成还款计划",
+        "invalidVcard": "请输入一个或多个有效 vCard 联系人",
+        "invalidDockerRun": "请输入包含镜像名称的 docker run 命令"
       },
       "fields": {
         "shares": "股数",
@@ -21460,7 +21462,28 @@
         "headers": "HTTP 响应头",
         "csv": "CSV 联系人",
         "delimiter": "分隔符",
-        "vcardVersion": "vCard 版本"
+        "vcardVersion": "vCard 版本",
+        "cta": "行动号召",
+        "links": "链接",
+        "salePrice": "销售价格",
+        "shippingCharge": "向买家收取的运费",
+        "itemCost": "商品成本",
+        "shippingCost": "实际运费成本",
+        "listingFee": "刊登费",
+        "transactionPercent": "交易费百分比",
+        "paymentPercent": "支付处理费百分比",
+        "offsiteAdsPercent": "站外广告费百分比",
+        "targetIncome": "目标到手收入",
+        "expenses": "年度业务支出",
+        "taxPercent": "预留税费百分比",
+        "billableHours": "每周可计费小时",
+        "weeksOff": "每年休假周数",
+        "vcard": "vCard 联系人",
+        "dockerRun": "docker run 命令",
+        "siteName": "网站名称",
+        "siteUrl": "网站 URL",
+        "summary": "摘要",
+        "priorityPages": "重点页面"
       },
       "options": {
         "writing": "写作",
@@ -21504,7 +21527,9 @@
         "semicolon": "分号",
         "tab": "制表符",
         "vcard3": "vCard 3.0",
-        "vcard4": "vCard 4.0"
+        "vcard4": "vCard 4.0",
+        "playful": "活泼",
+        "bold": "鲜明"
       },
       "results": {
         "totalCost": "总成本",
@@ -21560,7 +21585,23 @@
         "passed": "通过",
         "missing": "缺失",
         "contacts": "联系人",
-        "vcardVersion": "vCard 版本"
+        "vcardVersion": "vCard 版本",
+        "totalFees": "总费用",
+        "transactionFee": "交易费",
+        "paymentFee": "支付处理费",
+        "offsiteAdsFee": "站外广告费",
+        "netRevenue": "净收入",
+        "grossRevenue": "总收入",
+        "profitMargin": "利润率",
+        "hourlyRate": "小时费率",
+        "dayRate": "日费率",
+        "monthlyRevenue": "月收入目标",
+        "yearlyRevenue": "年收入目标",
+        "csvRows": "CSV 行数",
+        "service": "服务",
+        "ports": "端口",
+        "envVars": "环境变量",
+        "pages": "页面"
       },
       "placeholders": {
         "aiTopic": "一个在线工具网站的发布文案",
@@ -21584,7 +21625,20 @@
         "youtubeKeyword": "AI 效率工具",
         "youtubeAudience": "忙碌的创业者",
         "headers": "strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff",
-        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder"
+        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder",
+        "instagramTopic": "个人旅行摄影",
+        "instagramKeyword": "旅行技巧",
+        "creatorAudience": "新手创作者",
+        "cta": "关注获取每周灵感",
+        "youtubeLinks": "https://example.com/resources\nhttps://example.com/newsletter",
+        "emailTopic": "春季产品发布",
+        "emailBenefit": "每周节省 3 小时",
+        "priorityPages": "首页, https://example.com/\n价格, https://example.com/pricing\n文档, https://example.com/docs",
+        "siteName": "U2Tool",
+        "siteUrl": "https://www.u2tool.com",
+        "siteSummary": "一个面向开发者、营销人员和运营人员的免费浏览器工具集合。",
+        "dockerRun": "docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest",
+        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD"
       }
     },
     "calorie-deficit-calculator": {
@@ -21646,6 +21700,66 @@
       "description": "根据主题、关键词、受众和语气生成 YouTube 标题创意。",
       "seo_title": "免费在线YouTube 标题生成器",
       "seo_description": "根据主题、关键词、受众和语气生成 YouTube 标题创意。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "docker-run-to-docker-compose-converter": {
+      "name": "Docker Run 转 Docker Compose 转换器",
+      "description": "将 docker run 命令转换为 Docker Compose YAML 服务起点。",
+      "seo_title": "免费在线Docker Run 转 Docker Compose 转换器",
+      "seo_description": "将 docker run 命令转换为 Docker Compose YAML 服务起点。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "email-subject-line-generator": {
+      "name": "邮件主题行生成器",
+      "description": "为活动、冷邮件、发布和简报生成邮件主题行创意。",
+      "seo_title": "免费在线邮件主题行生成器",
+      "seo_description": "为活动、冷邮件、发布和简报生成邮件主题行创意。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "etsy-fee-calculator": {
+      "name": "Etsy 费用计算器",
+      "description": "用可编辑的 Etsy 类费用假设估算平台费用、净收入和利润。",
+      "seo_title": "免费在线Etsy 费用计算器",
+      "seo_description": "用可编辑的 Etsy 类费用假设估算平台费用、净收入和利润。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "freelance-rate-calculator": {
+      "name": "自由职业报价计算器",
+      "description": "根据收入目标、费用、税率和可计费工时计算自由职业时薪和日薪。",
+      "seo_title": "免费在线自由职业报价计算器",
+      "seo_description": "根据收入目标、费用、税率和可计费工时计算自由职业时薪和日薪。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "instagram-bio-generator": {
+      "name": "Instagram 简介生成器",
+      "description": "根据关键词、受众、语气和行动号召生成简短 Instagram 简介。",
+      "seo_title": "免费在线Instagram 简介生成器",
+      "seo_description": "根据关键词、受众、语气和行动号召生成简短 Instagram 简介。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "linkedin-headline-generator": {
+      "name": "LinkedIn 标题生成器",
+      "description": "根据职位、技能、受众和成就生成 LinkedIn 个人标题选项。",
+      "seo_title": "免费在线LinkedIn 标题生成器",
+      "seo_description": "根据职位、技能、受众和成就生成 LinkedIn 个人标题选项。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "linkedin-summary-generator": {
+      "name": "LinkedIn 简介生成器",
+      "description": "根据经验、技能、成就和目标受众生成 LinkedIn About 简介草稿。",
+      "seo_title": "免费在线LinkedIn 简介生成器",
+      "seo_description": "根据经验、技能、成就和目标受众生成 LinkedIn About 简介草稿。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "llms-txt-generator": {
+      "name": "llms.txt 生成器",
+      "description": "生成包含站点摘要、重点页面和 AI 发现说明的 llms.txt 草稿。",
+      "seo_title": "免费在线llms.txt 生成器",
+      "seo_description": "生成包含站点摘要、重点页面和 AI 发现说明的 llms.txt 草稿。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "vcard-to-csv-converter": {
+      "name": "vCard 转 CSV 转换器",
+      "description": "将粘贴的 vCard/VCF 联系人转换为适合表格和 CRM 导入的 CSV 行。",
+      "seo_title": "免费在线vCard 转 CSV 转换器",
+      "seo_description": "将粘贴的 vCard/VCF 联系人转换为适合表格和 CRM 导入的 CSV 行。 免费在线使用，无需注册，直接在浏览器中完成。"
+    },
+    "youtube-description-generator": {
+      "name": "YouTube 描述生成器",
+      "description": "使用关键词、受众、链接和 CTA 生成结构化 YouTube 视频描述。",
+      "seo_title": "免费在线YouTube 描述生成器",
+      "seo_description": "使用关键词、受众、链接和 CTA 生成结构化 YouTube 视频描述。 免费在线使用，无需注册，直接在浏览器中完成。"
     }
   }
 }

@@ -15859,7 +15859,9 @@
         "missingConfig": "No se encontró la configuración de la herramienta",
         "invalidData": "Introduce datos válidos",
         "invalidCsv": "Introduce filas CSV con encabezados de contacto",
-        "unpayableDebt": "Aumenta el pago mensual o reduce la tasa para crear un plan de pago"
+        "unpayableDebt": "Aumenta el pago mensual o reduce la tasa para crear un plan de pago",
+        "invalidVcard": "Introduce uno o más contactos vCard válidos",
+        "invalidDockerRun": "Introduce un comando docker run con nombre de imagen"
       },
       "fields": {
         "shares": "Acciones",
@@ -15924,7 +15926,28 @@
         "headers": "Encabezados HTTP de respuesta",
         "csv": "Contactos CSV",
         "delimiter": "Delimitador",
-        "vcardVersion": "Versión vCard"
+        "vcardVersion": "Versión vCard",
+        "cta": "Llamada a la acción",
+        "links": "Enlaces",
+        "salePrice": "Precio de venta",
+        "shippingCharge": "Envío cobrado",
+        "itemCost": "Costo del artículo",
+        "shippingCost": "Costo de envío",
+        "listingFee": "Tarifa de publicación",
+        "transactionPercent": "Porcentaje de comisión por transacción",
+        "paymentPercent": "Porcentaje de procesamiento de pago",
+        "offsiteAdsPercent": "Porcentaje de anuncios externos",
+        "targetIncome": "Ingreso neto objetivo",
+        "expenses": "Gastos anuales del negocio",
+        "taxPercent": "Porcentaje reservado para impuestos",
+        "billableHours": "Horas facturables por semana",
+        "weeksOff": "Semanas libres por año",
+        "vcard": "Contactos vCard",
+        "dockerRun": "Comando docker run",
+        "siteName": "Nombre del sitio",
+        "siteUrl": "URL del sitio",
+        "summary": "Resumen",
+        "priorityPages": "Páginas prioritarias"
       },
       "options": {
         "writing": "Escritura",
@@ -15968,7 +15991,9 @@
         "semicolon": "Punto y coma",
         "tab": "Tabulador",
         "vcard3": "vCard 3.0",
-        "vcard4": "vCard 4.0"
+        "vcard4": "vCard 4.0",
+        "playful": "Divertido",
+        "bold": "Directo"
       },
       "results": {
         "totalCost": "Coste total",
@@ -16024,7 +16049,23 @@
         "passed": "Correctos",
         "missing": "Faltantes",
         "contacts": "Contactos",
-        "vcardVersion": "Versión vCard"
+        "vcardVersion": "Versión vCard",
+        "totalFees": "Comisiones totales",
+        "transactionFee": "Comisión por transacción",
+        "paymentFee": "Comisión de pago",
+        "offsiteAdsFee": "Comisión de anuncios externos",
+        "netRevenue": "Ingresos netos",
+        "grossRevenue": "Ingresos brutos",
+        "profitMargin": "Margen de beneficio",
+        "hourlyRate": "Tarifa por hora",
+        "dayRate": "Tarifa diaria",
+        "monthlyRevenue": "Objetivo mensual de ingresos",
+        "yearlyRevenue": "Objetivo anual de ingresos",
+        "csvRows": "Filas CSV",
+        "service": "Servicio",
+        "ports": "Puertos",
+        "envVars": "Variables de entorno",
+        "pages": "Páginas"
       },
       "placeholders": {
         "aiTopic": "texto de lanzamiento para un sitio de herramientas online",
@@ -16048,7 +16089,20 @@
         "youtubeKeyword": "herramientas de productividad con IA",
         "youtubeAudience": "fundadores ocupados",
         "headers": "strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff",
-        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder"
+        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder",
+        "instagramTopic": "fotografía de viajes en solitario",
+        "instagramKeyword": "consejos de viaje",
+        "creatorAudience": "nuevos creadores",
+        "cta": "sígueme para ideas semanales",
+        "youtubeLinks": "https://example.com/resources\nhttps://example.com/newsletter",
+        "emailTopic": "lanzamiento de producto de primavera",
+        "emailBenefit": "ahorrar 3 horas cada semana",
+        "priorityPages": "Inicio, https://example.com/\nPrecios, https://example.com/pricing\nDocs, https://example.com/docs",
+        "siteName": "U2Tool",
+        "siteUrl": "https://www.u2tool.com",
+        "siteSummary": "Una colección gratuita de herramientas en el navegador para desarrolladores, marketers y equipos operativos.",
+        "dockerRun": "docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest",
+        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD"
       }
     },
     "calorie-deficit-calculator": {
@@ -16110,6 +16164,66 @@
       "description": "Genera ideas de títulos para YouTube a partir de tema, palabra clave, audiencia y tono.",
       "seo_title": "Generador de títulos para YouTube gratis en línea",
       "seo_description": "Genera ideas de títulos para YouTube a partir de tema, palabra clave, audiencia y tono. Herramienta gratuita en el navegador, sin registro."
+    },
+    "docker-run-to-docker-compose-converter": {
+      "name": "Convertidor de Docker Run a Docker Compose",
+      "description": "Convierte un comando docker run en un servicio YAML inicial de Docker Compose.",
+      "seo_title": "Convertidor de Docker Run a Docker Compose gratis en línea",
+      "seo_description": "Convierte un comando docker run en un servicio YAML inicial de Docker Compose. Herramienta gratuita en el navegador, sin registro."
+    },
+    "email-subject-line-generator": {
+      "name": "Generador de asuntos de email",
+      "description": "Genera ideas de asuntos para campañas, prospección, lanzamientos y boletines.",
+      "seo_title": "Generador de asuntos de email gratis en línea",
+      "seo_description": "Genera ideas de asuntos para campañas, prospección, lanzamientos y boletines. Herramienta gratuita en el navegador, sin registro."
+    },
+    "etsy-fee-calculator": {
+      "name": "Calculadora de comisiones Etsy",
+      "description": "Estima comisiones, ingresos netos y beneficio con supuestos editables tipo Etsy.",
+      "seo_title": "Calculadora de comisiones Etsy gratis en línea",
+      "seo_description": "Estima comisiones, ingresos netos y beneficio con supuestos editables tipo Etsy. Herramienta gratuita en el navegador, sin registro."
+    },
+    "freelance-rate-calculator": {
+      "name": "Calculadora de tarifas freelance",
+      "description": "Calcula tarifa por hora y día desde metas de ingresos, gastos, impuestos y horas facturables.",
+      "seo_title": "Calculadora de tarifas freelance gratis en línea",
+      "seo_description": "Calcula tarifa por hora y día desde metas de ingresos, gastos, impuestos y horas facturables. Herramienta gratuita en el navegador, sin registro."
+    },
+    "instagram-bio-generator": {
+      "name": "Generador de biografía para Instagram",
+      "description": "Genera ideas breves de biografía para Instagram con palabras clave, audiencia, tono y llamada a la acción.",
+      "seo_title": "Generador de biografía para Instagram gratis en línea",
+      "seo_description": "Genera ideas breves de biografía para Instagram con palabras clave, audiencia, tono y llamada a la acción. Herramienta gratuita en el navegador, sin registro."
+    },
+    "linkedin-headline-generator": {
+      "name": "Generador de titulares para LinkedIn",
+      "description": "Genera opciones de titular de LinkedIn a partir de rol, habilidades, audiencia y logro.",
+      "seo_title": "Generador de titulares para LinkedIn gratis en línea",
+      "seo_description": "Genera opciones de titular de LinkedIn a partir de rol, habilidades, audiencia y logro. Herramienta gratuita en el navegador, sin registro."
+    },
+    "linkedin-summary-generator": {
+      "name": "Generador de resumen para LinkedIn",
+      "description": "Redacta una sección Acerca de LinkedIn desde experiencia, habilidades, logro y audiencia objetivo.",
+      "seo_title": "Generador de resumen para LinkedIn gratis en línea",
+      "seo_description": "Redacta una sección Acerca de LinkedIn desde experiencia, habilidades, logro y audiencia objetivo. Herramienta gratuita en el navegador, sin registro."
+    },
+    "llms-txt-generator": {
+      "name": "Generador de llms.txt",
+      "description": "Genera un borrador llms.txt con resumen del sitio, páginas prioritarias y notas para descubrimiento IA.",
+      "seo_title": "Generador de llms.txt gratis en línea",
+      "seo_description": "Genera un borrador llms.txt con resumen del sitio, páginas prioritarias y notas para descubrimiento IA. Herramienta gratuita en el navegador, sin registro."
+    },
+    "vcard-to-csv-converter": {
+      "name": "Convertidor de vCard a CSV",
+      "description": "Convierte contactos vCard o VCF pegados en filas CSV para hojas de cálculo e importaciones CRM.",
+      "seo_title": "Convertidor de vCard a CSV gratis en línea",
+      "seo_description": "Convierte contactos vCard o VCF pegados en filas CSV para hojas de cálculo e importaciones CRM. Herramienta gratuita en el navegador, sin registro."
+    },
+    "youtube-description-generator": {
+      "name": "Generador de descripciones para YouTube",
+      "description": "Crea una descripción estructurada para YouTube con palabras clave, audiencia, enlaces y CTA.",
+      "seo_title": "Generador de descripciones para YouTube gratis en línea",
+      "seo_description": "Crea una descripción estructurada para YouTube con palabras clave, audiencia, enlaces y CTA. Herramienta gratuita en el navegador, sin registro."
     }
   }
 }

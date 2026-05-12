@@ -15806,7 +15806,9 @@
         "missingConfig": "Конфигурация инструмента не найдена",
         "invalidData": "Введите корректные данные",
         "invalidCsv": "Введите строки CSV с заголовками контактов",
-        "unpayableDebt": "Увеличьте ежемесячный платеж или снизьте ставку, чтобы составить план погашения"
+        "unpayableDebt": "Увеличьте ежемесячный платеж или снизьте ставку, чтобы составить план погашения",
+        "invalidVcard": "Введите один или несколько корректных контактов vCard",
+        "invalidDockerRun": "Введите команду docker run с именем образа"
       },
       "fields": {
         "shares": "Акции",
@@ -15871,7 +15873,28 @@
         "headers": "HTTP-заголовки ответа",
         "csv": "CSV контактов",
         "delimiter": "Разделитель",
-        "vcardVersion": "Версия vCard"
+        "vcardVersion": "Версия vCard",
+        "cta": "Призыв к действию",
+        "links": "Ссылки",
+        "salePrice": "Цена продажи",
+        "shippingCharge": "Оплаченная доставка",
+        "itemCost": "Себестоимость товара",
+        "shippingCost": "Стоимость доставки",
+        "listingFee": "Плата за размещение",
+        "transactionPercent": "Процент комиссии за транзакцию",
+        "paymentPercent": "Процент обработки платежа",
+        "offsiteAdsPercent": "Процент внешней рекламы",
+        "targetIncome": "Целевой чистый доход",
+        "expenses": "Годовые расходы бизнеса",
+        "taxPercent": "Процент резерва на налоги",
+        "billableHours": "Оплачиваемые часы в неделю",
+        "weeksOff": "Недель отдыха в год",
+        "vcard": "Контакты vCard",
+        "dockerRun": "Команда docker run",
+        "siteName": "Название сайта",
+        "siteUrl": "URL сайта",
+        "summary": "Краткое описание",
+        "priorityPages": "Приоритетные страницы"
       },
       "options": {
         "writing": "Текст",
@@ -15915,7 +15938,9 @@
         "semicolon": "Точка с запятой",
         "tab": "Табуляция",
         "vcard3": "vCard 3.0",
-        "vcard4": "vCard 4.0"
+        "vcard4": "vCard 4.0",
+        "playful": "Игривый",
+        "bold": "Смелый"
       },
       "results": {
         "totalCost": "Общая стоимость",
@@ -15971,7 +15996,23 @@
         "passed": "Пройдено",
         "missing": "Отсутствует",
         "contacts": "Контакты",
-        "vcardVersion": "Версия vCard"
+        "vcardVersion": "Версия vCard",
+        "totalFees": "Всего комиссий",
+        "transactionFee": "Комиссия за транзакцию",
+        "paymentFee": "Платежная комиссия",
+        "offsiteAdsFee": "Комиссия внешней рекламы",
+        "netRevenue": "Чистая выручка",
+        "grossRevenue": "Валовая выручка",
+        "profitMargin": "Маржа прибыли",
+        "hourlyRate": "Почасовая ставка",
+        "dayRate": "Дневная ставка",
+        "monthlyRevenue": "Месячная цель выручки",
+        "yearlyRevenue": "Годовая цель выручки",
+        "csvRows": "Строки CSV",
+        "service": "Сервис",
+        "ports": "Порты",
+        "envVars": "Переменные окружения",
+        "pages": "Страницы"
       },
       "placeholders": {
         "aiTopic": "текст запуска для сайта онлайн-инструментов",
@@ -15995,7 +16036,20 @@
         "youtubeKeyword": "AI-инструменты продуктивности",
         "youtubeAudience": "занятые основатели",
         "headers": "strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff",
-        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder"
+        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder",
+        "instagramTopic": "фотография одиночных путешествий",
+        "instagramKeyword": "советы для путешествий",
+        "creatorAudience": "новые авторы",
+        "cta": "подписывайтесь на идеи каждую неделю",
+        "youtubeLinks": "https://example.com/resources\nhttps://example.com/newsletter",
+        "emailTopic": "весенний запуск продукта",
+        "emailBenefit": "экономить 3 часа каждую неделю",
+        "priorityPages": "Главная, https://example.com/\nЦены, https://example.com/pricing\nДокументация, https://example.com/docs",
+        "siteName": "U2Tool",
+        "siteUrl": "https://www.u2tool.com",
+        "siteSummary": "Бесплатная коллекция браузерных инструментов для разработчиков, маркетологов и операционных команд.",
+        "dockerRun": "docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest",
+        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD"
       }
     },
     "calorie-deficit-calculator": {
@@ -16057,6 +16111,66 @@
       "description": "Создавайте идеи названий YouTube по теме, ключевому слову, аудитории и тону.",
       "seo_title": "Бесплатный Генератор названий YouTube онлайн",
       "seo_description": "Создавайте идеи названий YouTube по теме, ключевому слову, аудитории и тону. Бесплатный инструмент в браузере, без регистрации."
+    },
+    "docker-run-to-docker-compose-converter": {
+      "name": "Конвертер Docker Run в Docker Compose",
+      "description": "Преобразуйте команду docker run в стартовый сервис Docker Compose YAML.",
+      "seo_title": "Бесплатный Конвертер Docker Run в Docker Compose онлайн",
+      "seo_description": "Преобразуйте команду docker run в стартовый сервис Docker Compose YAML. Бесплатный инструмент в браузере, без регистрации."
+    },
+    "email-subject-line-generator": {
+      "name": "Генератор тем писем",
+      "description": "Создавайте темы писем для кампаний, холодных рассылок, запусков и новостных писем.",
+      "seo_title": "Бесплатный Генератор тем писем онлайн",
+      "seo_description": "Создавайте темы писем для кампаний, холодных рассылок, запусков и новостных писем. Бесплатный инструмент в браузере, без регистрации."
+    },
+    "etsy-fee-calculator": {
+      "name": "Калькулятор комиссий Etsy",
+      "description": "Оцените комиссии, чистую выручку и прибыль с редактируемыми допущениями в стиле Etsy.",
+      "seo_title": "Бесплатный Калькулятор комиссий Etsy онлайн",
+      "seo_description": "Оцените комиссии, чистую выручку и прибыль с редактируемыми допущениями в стиле Etsy. Бесплатный инструмент в браузере, без регистрации."
+    },
+    "freelance-rate-calculator": {
+      "name": "Калькулятор ставки фрилансера",
+      "description": "Рассчитайте почасовую и дневную ставку по цели дохода, расходам, налогам и оплачиваемым часам.",
+      "seo_title": "Бесплатный Калькулятор ставки фрилансера онлайн",
+      "seo_description": "Рассчитайте почасовую и дневную ставку по цели дохода, расходам, налогам и оплачиваемым часам. Бесплатный инструмент в браузере, без регистрации."
+    },
+    "instagram-bio-generator": {
+      "name": "Генератор био для Instagram",
+      "description": "Создавайте короткие варианты био Instagram по ключевым словам, аудитории, тону и призыву.",
+      "seo_title": "Бесплатный Генератор био для Instagram онлайн",
+      "seo_description": "Создавайте короткие варианты био Instagram по ключевым словам, аудитории, тону и призыву. Бесплатный инструмент в браузере, без регистрации."
+    },
+    "linkedin-headline-generator": {
+      "name": "Генератор заголовка LinkedIn",
+      "description": "Создавайте варианты заголовка LinkedIn по роли, навыкам, аудитории и достижению.",
+      "seo_title": "Бесплатный Генератор заголовка LinkedIn онлайн",
+      "seo_description": "Создавайте варианты заголовка LinkedIn по роли, навыкам, аудитории и достижению. Бесплатный инструмент в браузере, без регистрации."
+    },
+    "linkedin-summary-generator": {
+      "name": "Генератор резюме LinkedIn",
+      "description": "Подготовьте раздел About LinkedIn по опыту, навыкам, достижению и целевой аудитории.",
+      "seo_title": "Бесплатный Генератор резюме LinkedIn онлайн",
+      "seo_description": "Подготовьте раздел About LinkedIn по опыту, навыкам, достижению и целевой аудитории. Бесплатный инструмент в браузере, без регистрации."
+    },
+    "llms-txt-generator": {
+      "name": "Генератор llms.txt",
+      "description": "Создайте черновик llms.txt с описанием сайта, приоритетными страницами и заметками для AI-обнаружения.",
+      "seo_title": "Бесплатный Генератор llms.txt онлайн",
+      "seo_description": "Создайте черновик llms.txt с описанием сайта, приоритетными страницами и заметками для AI-обнаружения. Бесплатный инструмент в браузере, без регистрации."
+    },
+    "vcard-to-csv-converter": {
+      "name": "Конвертер vCard в CSV",
+      "description": "Преобразуйте вставленные контакты vCard или VCF в строки CSV для таблиц и CRM-импорта.",
+      "seo_title": "Бесплатный Конвертер vCard в CSV онлайн",
+      "seo_description": "Преобразуйте вставленные контакты vCard или VCF в строки CSV для таблиц и CRM-импорта. Бесплатный инструмент в браузере, без регистрации."
+    },
+    "youtube-description-generator": {
+      "name": "Генератор описаний YouTube",
+      "description": "Создавайте структурированное описание видео YouTube с ключевыми словами, аудиторией, ссылками и CTA.",
+      "seo_title": "Бесплатный Генератор описаний YouTube онлайн",
+      "seo_description": "Создавайте структурированное описание видео YouTube с ключевыми словами, аудиторией, ссылками и CTA. Бесплатный инструмент в браузере, без регистрации."
     }
   }
 }

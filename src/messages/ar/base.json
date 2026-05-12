@@ -15817,7 +15817,9 @@
         "missingConfig": "لم يتم العثور على إعدادات الأداة",
         "invalidData": "أدخل بيانات صالحة",
         "invalidCsv": "أدخل صفوف CSV مع رؤوس جهات الاتصال",
-        "unpayableDebt": "زِد الدفعة الشهرية أو خفّض الفائدة لإنشاء خطة سداد"
+        "unpayableDebt": "زِد الدفعة الشهرية أو خفّض الفائدة لإنشاء خطة سداد",
+        "invalidVcard": "أدخل جهة اتصال vCard صالحة واحدة أو أكثر",
+        "invalidDockerRun": "أدخل أمر docker run يحتوي على اسم صورة"
       },
       "fields": {
         "shares": "عدد الأسهم",
@@ -15882,7 +15884,28 @@
         "headers": "رؤوس استجابة HTTP",
         "csv": "جهات اتصال CSV",
         "delimiter": "الفاصل",
-        "vcardVersion": "إصدار vCard"
+        "vcardVersion": "إصدار vCard",
+        "cta": "دعوة لاتخاذ إجراء",
+        "links": "روابط",
+        "salePrice": "سعر البيع",
+        "shippingCharge": "الشحن المحصّل",
+        "itemCost": "تكلفة المنتج",
+        "shippingCost": "تكلفة الشحن",
+        "listingFee": "رسوم الإدراج",
+        "transactionPercent": "نسبة رسوم المعاملة",
+        "paymentPercent": "نسبة معالجة الدفع",
+        "offsiteAdsPercent": "نسبة إعلانات خارج الموقع",
+        "targetIncome": "الدخل الصافي المستهدف",
+        "expenses": "مصروفات العمل السنوية",
+        "taxPercent": "نسبة احتياطي الضرائب",
+        "billableHours": "الساعات القابلة للفوترة أسبوعيًا",
+        "weeksOff": "أسابيع الإجازة سنويًا",
+        "vcard": "جهات اتصال vCard",
+        "dockerRun": "أمر docker run",
+        "siteName": "اسم الموقع",
+        "siteUrl": "رابط الموقع",
+        "summary": "ملخص",
+        "priorityPages": "الصفحات ذات الأولوية"
       },
       "options": {
         "writing": "كتابة",
@@ -15926,7 +15949,9 @@
         "semicolon": "فاصلة منقوطة",
         "tab": "تبويب",
         "vcard3": "vCard 3.0",
-        "vcard4": "vCard 4.0"
+        "vcard4": "vCard 4.0",
+        "playful": "مرح",
+        "bold": "جريء"
       },
       "results": {
         "totalCost": "التكلفة الإجمالية",
@@ -15982,7 +16007,23 @@
         "passed": "ناجح",
         "missing": "ناقص",
         "contacts": "جهات الاتصال",
-        "vcardVersion": "إصدار vCard"
+        "vcardVersion": "إصدار vCard",
+        "totalFees": "إجمالي الرسوم",
+        "transactionFee": "رسوم المعاملة",
+        "paymentFee": "رسوم الدفع",
+        "offsiteAdsFee": "رسوم إعلانات خارج الموقع",
+        "netRevenue": "صافي الإيراد",
+        "grossRevenue": "إجمالي الإيراد",
+        "profitMargin": "هامش الربح",
+        "hourlyRate": "السعر بالساعة",
+        "dayRate": "السعر اليومي",
+        "monthlyRevenue": "هدف الإيراد الشهري",
+        "yearlyRevenue": "هدف الإيراد السنوي",
+        "csvRows": "صفوف CSV",
+        "service": "الخدمة",
+        "ports": "المنافذ",
+        "envVars": "متغيرات البيئة",
+        "pages": "الصفحات"
       },
       "placeholders": {
         "aiTopic": "نص إطلاق لموقع أدوات عبر الإنترنت",
@@ -16006,7 +16047,20 @@
         "youtubeKeyword": "أدوات إنتاجية AI",
         "youtubeAudience": "مؤسسون مشغولون",
         "headers": "strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff",
-        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder"
+        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder",
+        "instagramTopic": "تصوير السفر الفردي",
+        "instagramKeyword": "نصائح السفر",
+        "creatorAudience": "منشئون جدد",
+        "cta": "تابع للحصول على أفكار أسبوعية",
+        "youtubeLinks": "https://example.com/resources\nhttps://example.com/newsletter",
+        "emailTopic": "إطلاق منتج الربيع",
+        "emailBenefit": "توفير 3 ساعات كل أسبوع",
+        "priorityPages": "الرئيسية, https://example.com/\nالأسعار, https://example.com/pricing\nالمستندات, https://example.com/docs",
+        "siteName": "U2Tool",
+        "siteUrl": "https://www.u2tool.com",
+        "siteSummary": "مجموعة مجانية من الأدوات التي تعمل في المتصفح للمطورين والمسوقين وفرق التشغيل.",
+        "dockerRun": "docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest",
+        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD"
       }
     },
     "calorie-deficit-calculator": {
@@ -16068,6 +16122,66 @@
       "description": "أنشئ أفكار عناوين YouTube من الموضوع والكلمة المفتاحية والجمهور والنبرة.",
       "seo_title": "مولد عناوين YouTube مجاني عبر الإنترنت",
       "seo_description": "أنشئ أفكار عناوين YouTube من الموضوع والكلمة المفتاحية والجمهور والنبرة. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "docker-run-to-docker-compose-converter": {
+      "name": "محول Docker Run إلى Docker Compose",
+      "description": "حوّل أمر docker run إلى خدمة Docker Compose YAML كبداية.",
+      "seo_title": "محول Docker Run إلى Docker Compose مجاني عبر الإنترنت",
+      "seo_description": "حوّل أمر docker run إلى خدمة Docker Compose YAML كبداية. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "email-subject-line-generator": {
+      "name": "مولد عناوين البريد الإلكتروني",
+      "description": "أنشئ أفكار عناوين بريد للحملات والتواصل البارد والإطلاقات والنشرات.",
+      "seo_title": "مولد عناوين البريد الإلكتروني مجاني عبر الإنترنت",
+      "seo_description": "أنشئ أفكار عناوين بريد للحملات والتواصل البارد والإطلاقات والنشرات. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "etsy-fee-calculator": {
+      "name": "حاسبة رسوم Etsy",
+      "description": "قدّر رسوم السوق وصافي الإيراد والربح باستخدام افتراضات رسوم قابلة للتعديل على نمط Etsy.",
+      "seo_title": "حاسبة رسوم Etsy مجاني عبر الإنترنت",
+      "seo_description": "قدّر رسوم السوق وصافي الإيراد والربح باستخدام افتراضات رسوم قابلة للتعديل على نمط Etsy. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "freelance-rate-calculator": {
+      "name": "حاسبة سعر العمل الحر",
+      "description": "احسب سعر الساعة واليوم للعمل الحر من أهداف الدخل والمصاريف والضرائب والساعات القابلة للفوترة.",
+      "seo_title": "حاسبة سعر العمل الحر مجاني عبر الإنترنت",
+      "seo_description": "احسب سعر الساعة واليوم للعمل الحر من أهداف الدخل والمصاريف والضرائب والساعات القابلة للفوترة. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "instagram-bio-generator": {
+      "name": "مولد نبذة Instagram",
+      "description": "أنشئ أفكار نبذة قصيرة لـ Instagram باستخدام الكلمات المفتاحية والجمهور والنبرة والدعوة للإجراء.",
+      "seo_title": "مولد نبذة Instagram مجاني عبر الإنترنت",
+      "seo_description": "أنشئ أفكار نبذة قصيرة لـ Instagram باستخدام الكلمات المفتاحية والجمهور والنبرة والدعوة للإجراء. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "linkedin-headline-generator": {
+      "name": "مولد عنوان LinkedIn",
+      "description": "أنشئ خيارات عنوان LinkedIn من الدور والمهارات والجمهور والإنجاز.",
+      "seo_title": "مولد عنوان LinkedIn مجاني عبر الإنترنت",
+      "seo_description": "أنشئ خيارات عنوان LinkedIn من الدور والمهارات والجمهور والإنجاز. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "linkedin-summary-generator": {
+      "name": "مولد ملخص LinkedIn",
+      "description": "اكتب مسودة قسم نبذة LinkedIn من الخبرة والمهارات والإنجاز والجمهور المستهدف.",
+      "seo_title": "مولد ملخص LinkedIn مجاني عبر الإنترنت",
+      "seo_description": "اكتب مسودة قسم نبذة LinkedIn من الخبرة والمهارات والإنجاز والجمهور المستهدف. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "llms-txt-generator": {
+      "name": "مولد llms.txt",
+      "description": "أنشئ مسودة llms.txt بملخص الموقع والصفحات المهمة وملاحظات اكتشاف الذكاء الاصطناعي.",
+      "seo_title": "مولد llms.txt مجاني عبر الإنترنت",
+      "seo_description": "أنشئ مسودة llms.txt بملخص الموقع والصفحات المهمة وملاحظات اكتشاف الذكاء الاصطناعي. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "vcard-to-csv-converter": {
+      "name": "محول vCard إلى CSV",
+      "description": "حوّل جهات اتصال vCard أو VCF الملصقة إلى صفوف CSV للجداول واستيراد CRM.",
+      "seo_title": "محول vCard إلى CSV مجاني عبر الإنترنت",
+      "seo_description": "حوّل جهات اتصال vCard أو VCF الملصقة إلى صفوف CSV للجداول واستيراد CRM. أداة مجانية في المتصفح بدون تسجيل."
+    },
+    "youtube-description-generator": {
+      "name": "مولد وصف YouTube",
+      "description": "أنشئ وصف فيديو YouTube منظمًا بالكلمات المفتاحية والجمهور والروابط والدعوة للإجراء.",
+      "seo_title": "مولد وصف YouTube مجاني عبر الإنترنت",
+      "seo_description": "أنشئ وصف فيديو YouTube منظمًا بالكلمات المفتاحية والجمهور والروابط والدعوة للإجراء. أداة مجانية في المتصفح بدون تسجيل."
     }
   }
 }

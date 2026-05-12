@@ -55,4 +55,7 @@ export const GENERATORS_TOOLS: Tool[] = [
   { slug: 'document-outline-generator', category: 'generators', icon: 'zap', component: 'DocumentOutlineGenerator' },
   { slug: 'table-of-contents-generator', category: 'generators', icon: 'zap', component: 'TableOfContentsGenerator' },
   { slug: 'youtube-title-generator', category: 'generators', icon: 'text', component: 'PopularUtilityTool', popular: true },
+  { slug: 'email-subject-line-generator', category: 'generators', icon: 'text', component: 'PopularUtilityTool', popular: true },
+  { slug: 'instagram-bio-generator', category: 'generators', icon: 'text', component: 'PopularUtilityTool', popular: true },
+  { slug: 'youtube-description-generator', category: 'generators', icon: 'text', component: 'PopularUtilityTool', popular: true },
 ];

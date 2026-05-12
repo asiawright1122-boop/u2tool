@@ -44,4 +44,6 @@ export const OFFICE_TOOLS: Tool[] = [
   { slug: 'meeting-room-finder', category: 'office', icon: 'file-text', component: 'MeetingRoomFinder' },
   { slug: 'screen-recorder', category: 'office', icon: 'file-text', component: 'ScreenRecorder', popular: true },
   { slug: 'cover-letter-generator', category: 'office', icon: 'file-text', component: 'PopularUtilityTool', popular: true },
+  { slug: 'linkedin-headline-generator', category: 'office', icon: 'file-text', component: 'PopularUtilityTool', popular: true },
+  { slug: 'linkedin-summary-generator', category: 'office', icon: 'file-text', component: 'PopularUtilityTool', popular: true },
 ];

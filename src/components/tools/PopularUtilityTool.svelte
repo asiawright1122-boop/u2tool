@@ -49,6 +49,8 @@
         invalidNumbers: 'Enter valid numbers',
         invalidData: 'Enter valid data',
         invalidCsv: 'Enter CSV rows with contact headers',
+        invalidVcard: 'Enter one or more valid vCard contacts',
+        invalidDockerRun: 'Enter a docker run command with an image name',
         unpayableDebt: 'Increase the monthly payment or lower the interest rate to create a payoff plan',
         wifiSsid: 'Enter a WiFi name',
         missingConfig: 'Tool configuration not found',
@@ -103,6 +105,8 @@
         experience: 'Experience',
         skills: 'Skills',
         achievement: 'Achievement',
+        cta: 'Call to Action',
+        links: 'Links',
         reps: 'Reps',
         preset: 'Preset',
         widthMm: 'Width (mm)',
@@ -110,11 +114,30 @@
         dpi: 'DPI',
         background: 'Background',
         amount: 'Amount',
+        salePrice: 'Sale Price',
+        shippingCharge: 'Shipping Charged',
+        itemCost: 'Item Cost',
+        shippingCost: 'Shipping Cost',
+        listingFee: 'Listing Fee',
+        transactionPercent: 'Transaction Fee Percent',
+        paymentPercent: 'Payment Processing Percent',
+        offsiteAdsPercent: 'Offsite Ads Percent',
+        targetIncome: 'Target Take-Home Income',
+        expenses: 'Annual Business Expenses',
+        taxPercent: 'Tax Reserve Percent',
+        billableHours: 'Billable Hours per Week',
+        weeksOff: 'Weeks Off per Year',
         feePercent: 'Fee Percent',
         fixedFee: 'Fixed Fee',
         currency: 'Currency',
         headers: 'HTTP Response Headers',
         csv: 'CSV Contacts',
+        vcard: 'vCard Contacts',
+        dockerRun: 'docker run Command',
+        siteName: 'Site Name',
+        siteUrl: 'Site URL',
+        summary: 'Summary',
+        priorityPages: 'Priority Pages',
         delimiter: 'Delimiter',
         vcardVersion: 'vCard Version',
       },
@@ -127,6 +150,8 @@
         concise: 'Concise',
         friendly: 'Friendly',
         persuasive: 'Persuasive',
+        playful: 'Playful',
+        bold: 'Bold',
         titleCase: 'Title Case',
         sentenceCase: 'Sentence case',
         uppercase: 'UPPERCASE',
@@ -205,8 +230,24 @@
         brzycki: 'Brzycki',
         lombardi: 'Lombardi',
         fee: 'Fee',
+        totalFees: 'Total Fees',
+        transactionFee: 'Transaction Fee',
+        paymentFee: 'Payment Fee',
+        offsiteAdsFee: 'Offsite Ads Fee',
         netReceived: 'Net Received',
+        netRevenue: 'Net Revenue',
         grossToReceive: 'Gross to Receive Target',
+        grossRevenue: 'Gross Revenue',
+        profitMargin: 'Profit Margin',
+        hourlyRate: 'Hourly Rate',
+        dayRate: 'Day Rate',
+        monthlyRevenue: 'Monthly Revenue Target',
+        yearlyRevenue: 'Yearly Revenue Target',
+        csvRows: 'CSV Rows',
+        service: 'Service',
+        ports: 'Ports',
+        envVars: 'Environment Variables',
+        pages: 'Pages',
         pixelSize: 'Pixel Size',
         printSize: 'Print Size',
         aspectRatio: 'Aspect Ratio',
@@ -236,9 +277,22 @@
         experience: '5 years growing B2B SaaS products',
         skills: 'positioning, lifecycle campaigns, analytics',
         achievement: 'increased qualified pipeline by 32%',
+        instagramTopic: 'solo travel photography',
+        instagramKeyword: 'travel tips',
+        creatorAudience: 'new creators',
+        cta: 'follow for weekly ideas',
         youtubeTopic: 'AI tools for small business',
         youtubeKeyword: 'AI productivity tools',
         youtubeAudience: 'busy founders',
+        youtubeLinks: 'https://example.com/resources\nhttps://example.com/newsletter',
+        emailTopic: 'spring product launch',
+        emailBenefit: 'save 3 hours every week',
+        priorityPages: 'Home, https://example.com/\nPricing, https://example.com/pricing\nDocs, https://example.com/docs',
+        siteName: 'U2Tool',
+        siteUrl: 'https://www.u2tool.com',
+        siteSummary: 'A free collection of browser-based tools for developers, marketers, and operators.',
+        dockerRun: 'docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest',
+        vcardContacts: 'BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD',
         headers: 'strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff',
         csvContacts: 'first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder',
       },
@@ -257,6 +311,8 @@
         invalidNumbers: '请输入有效数字',
         invalidData: '请输入有效数据',
         invalidCsv: '请输入带联系人表头的 CSV 行',
+        invalidVcard: '请输入一个或多个有效 vCard 联系人',
+        invalidDockerRun: '请输入包含镜像名称的 docker run 命令',
         unpayableDebt: '请提高每月还款额或降低利率，才能生成还款计划',
         wifiSsid: '请输入 WiFi 名称',
         missingConfig: '未找到工具配置',
@@ -311,6 +367,8 @@
         experience: '经验',
         skills: '技能',
         achievement: '成就',
+        cta: '行动号召',
+        links: '链接',
         reps: '次数',
         preset: '预设',
         widthMm: '宽度（毫米）',
@@ -318,11 +376,30 @@
         dpi: 'DPI',
         background: '背景',
         amount: '金额',
+        salePrice: '销售价格',
+        shippingCharge: '向买家收取的运费',
+        itemCost: '商品成本',
+        shippingCost: '实际运费成本',
+        listingFee: '刊登费',
+        transactionPercent: '交易费百分比',
+        paymentPercent: '支付处理费百分比',
+        offsiteAdsPercent: '站外广告费百分比',
+        targetIncome: '目标到手收入',
+        expenses: '年度业务支出',
+        taxPercent: '预留税费百分比',
+        billableHours: '每周可计费小时',
+        weeksOff: '每年休假周数',
         feePercent: '手续费百分比',
         fixedFee: '固定费用',
         currency: '货币',
         headers: 'HTTP 响应头',
         csv: 'CSV 联系人',
+        vcard: 'vCard 联系人',
+        dockerRun: 'docker run 命令',
+        siteName: '网站名称',
+        siteUrl: '网站 URL',
+        summary: '摘要',
+        priorityPages: '重点页面',
         delimiter: '分隔符',
         vcardVersion: 'vCard 版本',
       },
@@ -335,6 +412,8 @@
         concise: '简洁',
         friendly: '友好',
         persuasive: '有说服力',
+        playful: '活泼',
+        bold: '鲜明',
         titleCase: '标题式大小写',
         sentenceCase: '句首大写',
         uppercase: '全部大写',
@@ -413,8 +492,24 @@
         brzycki: 'Brzycki',
         lombardi: 'Lombardi',
         fee: '手续费',
+        totalFees: '总费用',
+        transactionFee: '交易费',
+        paymentFee: '支付处理费',
+        offsiteAdsFee: '站外广告费',
         netReceived: '实际到账',
+        netRevenue: '净收入',
         grossToReceive: '达到目标需收款',
+        grossRevenue: '总收入',
+        profitMargin: '利润率',
+        hourlyRate: '小时费率',
+        dayRate: '日费率',
+        monthlyRevenue: '月收入目标',
+        yearlyRevenue: '年收入目标',
+        csvRows: 'CSV 行数',
+        service: '服务',
+        ports: '端口',
+        envVars: '环境变量',
+        pages: '页面',
         pixelSize: '像素尺寸',
         printSize: '打印尺寸',
         aspectRatio: '宽高比',
@@ -444,9 +539,22 @@
         experience: '5 年 B2B SaaS 增长经验',
         skills: '定位、生命周期活动、数据分析',
         achievement: '将合格销售线索提升 32%',
+        instagramTopic: '个人旅行摄影',
+        instagramKeyword: '旅行技巧',
+        creatorAudience: '新手创作者',
+        cta: '关注获取每周灵感',
         youtubeTopic: '适合小企业的 AI 工具',
         youtubeKeyword: 'AI 效率工具',
         youtubeAudience: '忙碌的创业者',
+        youtubeLinks: 'https://example.com/resources\nhttps://example.com/newsletter',
+        emailTopic: '春季产品发布',
+        emailBenefit: '每周节省 3 小时',
+        priorityPages: '首页, https://example.com/\n价格, https://example.com/pricing\n文档, https://example.com/docs',
+        siteName: 'U2Tool',
+        siteUrl: 'https://www.u2tool.com',
+        siteSummary: '一个面向开发者、营销人员和运营人员的免费浏览器工具集合。',
+        dockerRun: 'docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest',
+        vcardContacts: 'BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD',
         headers: 'strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff',
         csvContacts: 'first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder',
       },
@@ -714,6 +822,121 @@
             { label: text('options', 'concise'), value: 'concise' },
           ] },
         ];
+      case 'instagram-bio-generator':
+        return [
+          { key: 'topic', label: text('fields', 'topic'), type: 'text', placeholder: text('placeholders', 'instagramTopic') },
+          { key: 'keyword', label: text('fields', 'keyword'), type: 'text', placeholder: text('placeholders', 'instagramKeyword') },
+          { key: 'audience', label: text('fields', 'audience'), type: 'text', placeholder: text('placeholders', 'creatorAudience') },
+          { key: 'cta', label: text('fields', 'cta'), type: 'text', placeholder: text('placeholders', 'cta') },
+          { key: 'tone', label: text('fields', 'tone'), type: 'select', options: [
+            { label: text('options', 'friendly'), value: 'friendly' },
+            { label: text('options', 'professional'), value: 'professional' },
+            { label: text('options', 'playful'), value: 'playful' },
+            { label: text('options', 'bold'), value: 'bold' },
+          ] },
+        ];
+      case 'youtube-description-generator':
+        return [
+          { key: 'title', label: text('fields', 'title'), type: 'text', placeholder: text('placeholders', 'youtubeTopic') },
+          { key: 'keyword', label: text('fields', 'keyword'), type: 'text', placeholder: text('placeholders', 'youtubeKeyword') },
+          { key: 'audience', label: text('fields', 'audience'), type: 'text', placeholder: text('placeholders', 'youtubeAudience') },
+          { key: 'cta', label: text('fields', 'cta'), type: 'text', placeholder: text('placeholders', 'cta') },
+          { key: 'links', label: text('fields', 'links'), type: 'textarea', placeholder: text('placeholders', 'youtubeLinks') },
+        ];
+      case 'linkedin-headline-generator':
+        return [
+          { key: 'jobTitle', label: text('fields', 'jobTitle'), type: 'text', placeholder: text('placeholders', 'jobTitle') },
+          { key: 'skills', label: text('fields', 'skills'), type: 'text', placeholder: text('placeholders', 'skills') },
+          { key: 'audience', label: text('fields', 'audience'), type: 'text', placeholder: text('placeholders', 'metaAudience') },
+          { key: 'achievement', label: text('fields', 'achievement'), type: 'text', placeholder: text('placeholders', 'achievement') },
+          { key: 'tone', label: text('fields', 'tone'), type: 'select', options: [
+            { label: text('options', 'professional'), value: 'professional' },
+            { label: text('options', 'concise'), value: 'concise' },
+            { label: text('options', 'persuasive'), value: 'persuasive' },
+            { label: text('options', 'friendly'), value: 'friendly' },
+          ] },
+        ];
+      case 'linkedin-summary-generator':
+        return [
+          { key: 'jobTitle', label: text('fields', 'jobTitle'), type: 'text', placeholder: text('placeholders', 'jobTitle') },
+          { key: 'experience', label: text('fields', 'experience'), type: 'text', placeholder: text('placeholders', 'experience') },
+          { key: 'skills', label: text('fields', 'skills'), type: 'text', placeholder: text('placeholders', 'skills') },
+          { key: 'achievement', label: text('fields', 'achievement'), type: 'text', placeholder: text('placeholders', 'achievement') },
+          { key: 'audience', label: text('fields', 'audience'), type: 'text', placeholder: text('placeholders', 'metaAudience') },
+          { key: 'tone', label: text('fields', 'tone'), type: 'select', options: [
+            { label: text('options', 'professional'), value: 'professional' },
+            { label: text('options', 'friendly'), value: 'friendly' },
+            { label: text('options', 'concise'), value: 'concise' },
+            { label: text('options', 'persuasive'), value: 'persuasive' },
+          ] },
+        ];
+      case 'email-subject-line-generator':
+        return [
+          { key: 'topic', label: text('fields', 'topic'), type: 'text', placeholder: text('placeholders', 'emailTopic') },
+          { key: 'audience', label: text('fields', 'audience'), type: 'text', placeholder: text('placeholders', 'metaAudience') },
+          { key: 'benefit', label: text('fields', 'benefit'), type: 'text', placeholder: text('placeholders', 'emailBenefit') },
+          { key: 'tone', label: text('fields', 'tone'), type: 'select', options: [
+            { label: text('options', 'professional'), value: 'professional' },
+            { label: text('options', 'friendly'), value: 'friendly' },
+            { label: text('options', 'persuasive'), value: 'persuasive' },
+            { label: text('options', 'playful'), value: 'playful' },
+          ] },
+        ];
+      case 'etsy-fee-calculator':
+        return [
+          { key: 'salePrice', label: text('fields', 'salePrice'), type: 'number', placeholder: '35' },
+          { key: 'shippingCharge', label: text('fields', 'shippingCharge'), type: 'number', placeholder: '5' },
+          { key: 'itemCost', label: text('fields', 'itemCost'), type: 'number', placeholder: '9' },
+          { key: 'shippingCost', label: text('fields', 'shippingCost'), type: 'number', placeholder: '4' },
+          { key: 'listingFee', label: text('fields', 'listingFee'), type: 'number', placeholder: '0.20' },
+          { key: 'transactionPercent', label: text('fields', 'transactionPercent'), type: 'number', placeholder: '6.5' },
+          { key: 'paymentPercent', label: text('fields', 'paymentPercent'), type: 'number', placeholder: '3' },
+          { key: 'fixedFee', label: text('fields', 'fixedFee'), type: 'number', placeholder: '0.25' },
+          { key: 'offsiteAdsPercent', label: text('fields', 'offsiteAdsPercent'), type: 'number', placeholder: '0' },
+          { key: 'currency', label: text('fields', 'currency'), type: 'select', options: [
+            { label: 'USD', value: 'USD' },
+            { label: 'EUR', value: 'EUR' },
+            { label: 'GBP', value: 'GBP' },
+            { label: 'CAD', value: 'CAD' },
+            { label: 'AUD', value: 'AUD' },
+          ] },
+        ];
+      case 'freelance-rate-calculator':
+        return [
+          { key: 'targetIncome', label: text('fields', 'targetIncome'), type: 'number', placeholder: '90000' },
+          { key: 'expenses', label: text('fields', 'expenses'), type: 'number', placeholder: '12000' },
+          { key: 'taxPercent', label: text('fields', 'taxPercent'), type: 'number', placeholder: '25' },
+          { key: 'billableHours', label: text('fields', 'billableHours'), type: 'number', placeholder: '25' },
+          { key: 'weeksOff', label: text('fields', 'weeksOff'), type: 'number', placeholder: '6' },
+          { key: 'currency', label: text('fields', 'currency'), type: 'select', options: [
+            { label: 'USD', value: 'USD' },
+            { label: 'EUR', value: 'EUR' },
+            { label: 'GBP', value: 'GBP' },
+            { label: 'CAD', value: 'CAD' },
+            { label: 'AUD', value: 'AUD' },
+          ] },
+        ];
+      case 'vcard-to-csv-converter':
+        return [
+          { key: 'vcard', label: text('fields', 'vcard'), type: 'textarea', placeholder: text('placeholders', 'vcardContacts') },
+          { key: 'delimiter', label: text('fields', 'delimiter'), type: 'select', options: [
+            { label: text('options', 'comma'), value: 'comma' },
+            { label: text('options', 'semicolon'), value: 'semicolon' },
+            { label: text('options', 'tab'), value: 'tab' },
+          ] },
+        ];
+      case 'docker-run-to-docker-compose-converter':
+        return [
+          { key: 'dockerRun', label: text('fields', 'dockerRun'), type: 'textarea', placeholder: text('placeholders', 'dockerRun') },
+        ];
+      case 'llms-txt-generator':
+        return [
+          { key: 'siteName', label: text('fields', 'siteName'), type: 'text', placeholder: text('placeholders', 'siteName') },
+          { key: 'siteUrl', label: text('fields', 'siteUrl'), type: 'text', placeholder: text('placeholders', 'siteUrl') },
+          { key: 'summary', label: text('fields', 'summary'), type: 'textarea', placeholder: text('placeholders', 'siteSummary') },
+          { key: 'audience', label: text('fields', 'audience'), type: 'text', placeholder: text('placeholders', 'metaAudience') },
+          { key: 'priorityPages', label: text('fields', 'priorityPages'), type: 'textarea', placeholder: text('placeholders', 'priorityPages') },
+        ];
       case 'wifi-qr-code-generator':
         return [
           { key: 'ssid', label: text('fields', 'ssid'), type: 'text', placeholder: text('placeholders', 'ssid') },
@@ -780,6 +1003,26 @@
         return { page: text('placeholders', 'page'), keyword: text('placeholders', 'keyword'), benefit: text('placeholders', 'benefit'), audience: text('placeholders', 'metaAudience') };
       case 'youtube-title-generator':
         return { topic: text('placeholders', 'youtubeTopic'), keyword: text('placeholders', 'youtubeKeyword'), audience: text('placeholders', 'youtubeAudience'), tone: 'professional' };
+      case 'instagram-bio-generator':
+        return { topic: text('placeholders', 'instagramTopic'), keyword: text('placeholders', 'instagramKeyword'), audience: text('placeholders', 'creatorAudience'), cta: text('placeholders', 'cta'), tone: 'friendly' };
+      case 'youtube-description-generator':
+        return { title: text('placeholders', 'youtubeTopic'), keyword: text('placeholders', 'youtubeKeyword'), audience: text('placeholders', 'youtubeAudience'), cta: text('placeholders', 'cta'), links: text('placeholders', 'youtubeLinks') };
+      case 'linkedin-headline-generator':
+        return { jobTitle: text('placeholders', 'jobTitle'), skills: text('placeholders', 'skills'), audience: text('placeholders', 'metaAudience'), achievement: text('placeholders', 'achievement'), tone: 'professional' };
+      case 'linkedin-summary-generator':
+        return { jobTitle: text('placeholders', 'jobTitle'), experience: text('placeholders', 'experience'), skills: text('placeholders', 'skills'), achievement: text('placeholders', 'achievement'), audience: text('placeholders', 'metaAudience'), tone: 'professional' };
+      case 'email-subject-line-generator':
+        return { topic: text('placeholders', 'emailTopic'), audience: text('placeholders', 'metaAudience'), benefit: text('placeholders', 'emailBenefit'), tone: 'persuasive' };
+      case 'etsy-fee-calculator':
+        return { salePrice: '35', shippingCharge: '5', itemCost: '9', shippingCost: '4', listingFee: '0.20', transactionPercent: '6.5', paymentPercent: '3', fixedFee: '0.25', offsiteAdsPercent: '0', currency: 'USD' };
+      case 'freelance-rate-calculator':
+        return { targetIncome: '90000', expenses: '12000', taxPercent: '25', billableHours: '25', weeksOff: '6', currency: 'USD' };
+      case 'vcard-to-csv-converter':
+        return { vcard: text('placeholders', 'vcardContacts'), delimiter: 'comma' };
+      case 'docker-run-to-docker-compose-converter':
+        return { dockerRun: text('placeholders', 'dockerRun') };
+      case 'llms-txt-generator':
+        return { siteName: text('placeholders', 'siteName'), siteUrl: text('placeholders', 'siteUrl'), summary: text('placeholders', 'siteSummary'), audience: text('placeholders', 'metaAudience'), priorityPages: text('placeholders', 'priorityPages') };
       case 'wifi-qr-code-generator':
         return { ssid: text('placeholders', 'ssid'), password: text('placeholders', 'password'), encryption: 'WPA', hidden: 'false' };
       default:
@@ -1218,6 +1461,146 @@
     }
   }
 
+  function numberedOutput(values: string[]): string {
+    return values.map((value, index) => `${index + 1}. ${value}`).join('\n');
+  }
+
+  function splitNonEmptyLines(value: string): string[] {
+    return value
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter(Boolean);
+  }
+
+  function instagramBioOptions(): string[] {
+    const topic = inputs.topic || text('placeholders', 'instagramTopic');
+    const keyword = inputs.keyword || text('placeholders', 'instagramKeyword');
+    const audience = inputs.audience || text('placeholders', 'creatorAudience');
+    const cta = inputs.cta || text('placeholders', 'cta');
+    const tone = text('options', inputs.tone || 'friendly');
+
+    if (language() === 'zh') {
+      return [
+        `${topic}｜给${audience}的${keyword}灵感｜${cta}`,
+        `把${keyword}讲清楚，也把${topic}拍好。${cta}`,
+        `${tone}分享${topic}：路线、技巧和真实经验。${cta}`,
+        `${audience}的${topic}笔记｜${keyword} / 灵感 / 避坑`,
+        `用镜头记录${topic}，用实用建议帮你少走弯路。${cta}`,
+        `${keyword} + ${topic}｜每周更新可直接用的小方法`,
+        `为${audience}整理${topic}灵感。收藏、实践、再出发。`,
+        `${topic}创作者｜专注${keyword}｜${cta}`,
+      ];
+    }
+
+    return [
+      `${topic} for ${audience} | ${keyword} | ${cta}`,
+      `Making ${topic} simpler with practical ${keyword}. ${cta}.`,
+      `${tone} notes on ${topic}: ideas, lessons, and useful finds.`,
+      `${keyword} + ${topic} for ${audience}. Save this for later.`,
+      `Helping ${audience} turn ${topic} into repeatable wins.`,
+      `${topic} ideas, honest experiments, and quick ${keyword}.`,
+      `For ${audience} who want better ${topic}. ${cta}.`,
+      `${topic} creator | ${keyword} | practical, weekly, useful`,
+    ];
+  }
+
+  function youtubeDescriptionOutput(): string {
+    const title = inputs.title || text('placeholders', 'youtubeTopic');
+    const keyword = inputs.keyword || text('placeholders', 'youtubeKeyword');
+    const audience = inputs.audience || text('placeholders', 'youtubeAudience');
+    const cta = inputs.cta || text('placeholders', 'cta');
+    const links = splitNonEmptyLines(inputs.links || text('placeholders', 'youtubeLinks'));
+    const linkBlock = links.length
+      ? links.map((link) => `- ${link}`).join('\n')
+      : '- Add your resources, product page, or newsletter link';
+
+    if (language() === 'zh') {
+      return `${title}\n\n这期视频面向${audience}，用简单方式拆解 ${keyword}，帮助你更快判断哪些方法值得尝试。\n\n你会看到：\n- ${title} 的核心思路\n- 适合${audience}的实用场景\n- 常见误区和更稳妥的做法\n- 下一步可以直接执行的清单\n\n相关链接：\n${linkBlock}\n\n${cta}\n\n#${keyword.replace(/\s+/g, '')} #效率工具 #实用教程`;
+    }
+
+    return `${title}\n\nIn this video, we break down ${keyword} for ${audience} so you can decide what is useful, what to skip, and what to try next.\n\nWhat you'll learn:\n- The main idea behind ${title}\n- Practical examples for ${audience}\n- Common mistakes to avoid\n- A simple next-step checklist\n\nLinks and resources:\n${linkBlock}\n\n${cta}\n\n#${keyword.replace(/\s+/g, '')} #productivity #tutorial`;
+  }
+
+  function linkedinHeadlineOptions(): string[] {
+    const jobTitle = inputs.jobTitle || text('placeholders', 'jobTitle');
+    const skills = inputs.skills || text('placeholders', 'skills');
+    const audience = inputs.audience || text('placeholders', 'metaAudience');
+    const achievement = inputs.achievement || text('placeholders', 'achievement');
+
+    if (language() === 'zh') {
+      return [
+        `${jobTitle}｜专注${skills}｜帮助${audience}获得可衡量增长`,
+        `${jobTitle}｜用${skills}把策略转化为结果`,
+        `${jobTitle}，曾${achievement}｜${skills}`,
+        `帮助${audience}提升转化与效率的${jobTitle}`,
+        `${skills}专家｜${jobTitle}｜${achievement}`,
+        `${jobTitle}｜增长、协作与可执行策略｜${skills}`,
+        `为${audience}打造更清晰增长路径的${jobTitle}`,
+        `${jobTitle} | ${skills} | ${achievement}`,
+      ];
+    }
+
+    return [
+      `${jobTitle} | ${skills} | Helping ${audience} grow with measurable systems`,
+      `${jobTitle} turning ${skills} into practical business outcomes`,
+      `${jobTitle} | ${achievement} | ${skills}`,
+      `Helping ${audience} improve conversion and clarity through ${skills}`,
+      `${skills} specialist | ${jobTitle} | Practical growth operator`,
+      `${jobTitle} focused on positioning, execution, and measurable wins`,
+      `Building sharper growth systems for ${audience} | ${jobTitle}`,
+      `${jobTitle} | ${skills} | ${achievement}`,
+    ];
+  }
+
+  function linkedinSummaryOutput(): string {
+    const jobTitle = inputs.jobTitle || text('placeholders', 'jobTitle');
+    const experience = inputs.experience || text('placeholders', 'experience');
+    const skills = inputs.skills || text('placeholders', 'skills');
+    const achievement = inputs.achievement || text('placeholders', 'achievement');
+    const audience = inputs.audience || text('placeholders', 'metaAudience');
+    const tone = text('options', inputs.tone || 'professional');
+
+    if (language() === 'zh') {
+      return `我是一名${jobTitle}，拥有${experience}，长期围绕${skills}解决增长和协作问题。\n\n我擅长把模糊目标拆成可执行计划，并用清晰指标验证进展。过去我曾${achievement}，这让我更重视策略、执行和复盘之间的闭环。\n\n我希望与${audience}合作，用${tone}、务实的方式推动更高质量的结果。`;
+    }
+
+    return `I am a ${jobTitle} with ${experience}, focused on ${skills}.\n\nI like turning ambiguous goals into clear operating plans, then using practical metrics to learn quickly. In previous work, I ${achievement}, which shaped how I connect strategy, execution, and measurable outcomes.\n\nI enjoy partnering with ${audience} and bringing a ${tone.toLowerCase()} approach to work that needs clarity, momentum, and results.`;
+  }
+
+  function emailSubjectOptions(): string[] {
+    const topic = inputs.topic || text('placeholders', 'emailTopic');
+    const audience = inputs.audience || text('placeholders', 'metaAudience');
+    const benefit = inputs.benefit || text('placeholders', 'emailBenefit');
+
+    if (language() === 'zh') {
+      return [
+        `${topic}：帮你${benefit}`,
+        `${audience}的新方法：${benefit}`,
+        `今天发布：${topic}`,
+        `更快完成${topic}的实用方案`,
+        `${benefit}，从这个小改动开始`,
+        `给${audience}的${topic}清单`,
+        `别错过：${topic}已经上线`,
+        `用更少时间获得更好结果`,
+        `${audience}正在关注的${topic}`,
+        `本周值得尝试：${topic}`,
+      ];
+    }
+
+    return [
+      `${topic}: ${benefit}`,
+      `A faster way for ${audience} to ${benefit}`,
+      `Now live: ${topic}`,
+      `Your practical ${topic} checklist`,
+      `Start here if you want to ${benefit}`,
+      `${audience}: try this before your next ${topic}`,
+      `The simple version of ${topic}`,
+      `New: ${benefit} without extra busywork`,
+      `What changed in ${topic}`,
+      `Steal this ${topic} workflow`,
+    ];
+  }
+
   type Debt = {
     name: string;
     balance: number;
@@ -1273,6 +1656,250 @@
 
   function vcardEscape(value: string): string {
     return value.replace(/\\/g, '\\\\').replace(/\n/g, '\\n').replace(/;/g, '\\;').replace(/,/g, '\\,');
+  }
+
+  function unfoldVcardLines(raw: string): string[] {
+    const lines: string[] = [];
+    for (const line of raw.replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n')) {
+      if (/^[ \t]/.test(line) && lines.length > 0) {
+        lines[lines.length - 1] += line.slice(1);
+      } else {
+        lines.push(line);
+      }
+    }
+    return lines;
+  }
+
+  function splitVcardBlocks(raw: string): string[][] {
+    const blocks: string[][] = [];
+    let current: string[] = [];
+    for (const line of unfoldVcardLines(raw)) {
+      const trimmed = line.trim();
+      if (/^BEGIN:VCARD$/i.test(trimmed)) {
+        current = [trimmed];
+        continue;
+      }
+      if (current.length > 0) {
+        current.push(trimmed);
+      }
+      if (/^END:VCARD$/i.test(trimmed) && current.length > 0) {
+        blocks.push(current);
+        current = [];
+      }
+    }
+    return blocks;
+  }
+
+  function vcardValue(lines: string[], key: string): string {
+    const upperKey = key.toUpperCase();
+    const line = lines.find((candidate) => {
+      const property = candidate.slice(0, candidate.indexOf(':')).split(';')[0].toUpperCase();
+      return property === upperKey;
+    });
+    const colonIndex = line?.indexOf(':') ?? -1;
+    return colonIndex >= 0 ? (line || '').slice(colonIndex + 1).replace(/\\n/g, '\n').replace(/\\([,;\\])/g, '$1') : '';
+  }
+
+  function csvCell(value: string, delimiter: string): string {
+    if (value.includes('"') || value.includes('\n') || value.includes('\r') || value.includes(delimiter)) {
+      return `"${value.replace(/"/g, '""')}"`;
+    }
+    return value;
+  }
+
+  function vcardToCsv(): { output: string; count: number } | null {
+    const delimiter = delimiterValue(inputs.delimiter || 'comma');
+    const blocks = splitVcardBlocks(inputs.vcard || '');
+    const headers = ['first_name', 'last_name', 'full_name', 'email', 'phone', 'company', 'title', 'address'];
+    const rows = blocks.map((block) => {
+      const nameParts = vcardValue(block, 'N').split(';');
+      const fullName = vcardValue(block, 'FN') || [nameParts[1], nameParts[0]].filter(Boolean).join(' ');
+      return [
+        nameParts[1] || '',
+        nameParts[0] || '',
+        fullName,
+        vcardValue(block, 'EMAIL'),
+        vcardValue(block, 'TEL'),
+        vcardValue(block, 'ORG'),
+        vcardValue(block, 'TITLE'),
+        vcardValue(block, 'ADR').split(';').filter(Boolean).join(' '),
+      ];
+    }).filter((row) => row.some(Boolean));
+
+    if (rows.length === 0) {
+      return null;
+    }
+
+    const output = [headers, ...rows]
+      .map((row) => row.map((cell) => csvCell(cell, delimiter)).join(delimiter))
+      .join('\n');
+    return { output, count: rows.length };
+  }
+
+  function splitShellArgs(command: string): string[] {
+    const args: string[] = [];
+    let current = '';
+    let quote = '';
+    let escaped = false;
+
+    for (const char of command.trim()) {
+      if (escaped) {
+        current += char;
+        escaped = false;
+        continue;
+      }
+      if (char === '\\') {
+        escaped = true;
+        continue;
+      }
+      if ((char === '"' || char === "'") && !quote) {
+        quote = char;
+        continue;
+      }
+      if (char === quote) {
+        quote = '';
+        continue;
+      }
+      if (/\s/.test(char) && !quote) {
+        if (current) {
+          args.push(current);
+          current = '';
+        }
+        continue;
+      }
+      current += char;
+    }
+
+    if (current) {
+      args.push(current);
+    }
+    return args;
+  }
+
+  function yamlQuote(value: string): string {
+    return `"${value.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
+  }
+
+  function serviceNameFromImage(image: string): string {
+    return image
+      .split('/').pop()
+      ?.split(':')[0]
+      ?.replace(/[^a-zA-Z0-9_-]/g, '-')
+      ?.replace(/^-+|-+$/g, '')
+      || 'app';
+  }
+
+  function dockerRunToCompose(): Result {
+    const args = splitShellArgs(inputs.dockerRun || '');
+    let index = 0;
+    if (args[index] === 'docker') index += 1;
+    if (args[index] === 'run') index += 1;
+
+    const ports: string[] = [];
+    const env: string[] = [];
+    const volumes: string[] = [];
+    let name = '';
+    let restart = '';
+    let network = '';
+    let image = '';
+    let command: string[] = [];
+
+    const readFlagValue = (arg: string) => {
+      const equalsIndex = arg.indexOf('=');
+      if (equalsIndex >= 0) {
+        return arg.slice(equalsIndex + 1);
+      }
+      index += 1;
+      return args[index] || '';
+    };
+
+    while (index < args.length) {
+      const arg = args[index];
+      if (!arg.startsWith('-')) {
+        image = arg;
+        command = args.slice(index + 1);
+        break;
+      }
+
+      if (arg === '-d' || arg === '--detach' || arg === '--rm' || arg === '-i' || arg === '-t' || arg === '-it' || arg === '-ti') {
+        index += 1;
+        continue;
+      }
+      if (arg === '--name' || arg.startsWith('--name=')) {
+        name = readFlagValue(arg);
+      } else if (arg === '-p' || arg === '--publish' || arg.startsWith('--publish=')) {
+        ports.push(readFlagValue(arg));
+      } else if (arg.startsWith('-p') && arg.length > 2) {
+        ports.push(arg.slice(2));
+      } else if (arg === '-e' || arg === '--env' || arg.startsWith('--env=')) {
+        env.push(readFlagValue(arg));
+      } else if (arg.startsWith('-e') && arg.length > 2) {
+        env.push(arg.slice(2));
+      } else if (arg === '-v' || arg === '--volume' || arg.startsWith('--volume=')) {
+        volumes.push(readFlagValue(arg));
+      } else if (arg.startsWith('-v') && arg.length > 2) {
+        volumes.push(arg.slice(2));
+      } else if (arg === '--restart' || arg.startsWith('--restart=')) {
+        restart = readFlagValue(arg);
+      } else if (arg === '--network' || arg.startsWith('--network=')) {
+        network = readFlagValue(arg);
+      } else if (arg.includes('=')) {
+        readFlagValue(arg);
+      }
+      index += 1;
+    }
+
+    if (!image) {
+      return { error: text('errors', 'invalidDockerRun') };
+    }
+
+    const service = name || serviceNameFromImage(image);
+    const lines = ['services:', `  ${service}:`, `    image: ${yamlQuote(image)}`];
+    if (name) lines.push(`    container_name: ${yamlQuote(name)}`);
+    if (restart) lines.push(`    restart: ${yamlQuote(restart)}`);
+    if (network) lines.push(`    network_mode: ${yamlQuote(network)}`);
+    if (ports.length) {
+      lines.push('    ports:');
+      for (const port of ports) lines.push(`      - ${yamlQuote(port)}`);
+    }
+    if (env.length) {
+      lines.push('    environment:');
+      for (const item of env) lines.push(`      - ${yamlQuote(item)}`);
+    }
+    if (volumes.length) {
+      lines.push('    volumes:');
+      for (const volume of volumes) lines.push(`      - ${yamlQuote(volume)}`);
+    }
+    if (command.length) {
+      lines.push(`    command: [${command.map(yamlQuote).join(', ')}]`);
+    }
+
+    const output = lines.join('\n');
+    return {
+      cards: [
+        { label: text('results', 'service'), value: service },
+        { label: text('results', 'ports'), value: integer(ports.length) },
+        { label: text('results', 'envVars'), value: integer(env.length) },
+      ],
+      output,
+      copyText: output,
+    };
+  }
+
+  function llmsTxtOutput(): string {
+    const siteName = inputs.siteName || text('placeholders', 'siteName');
+    const siteUrl = inputs.siteUrl || text('placeholders', 'siteUrl');
+    const summary = inputs.summary || text('placeholders', 'siteSummary');
+    const audience = inputs.audience || text('placeholders', 'metaAudience');
+    const pages = splitNonEmptyLines(inputs.priorityPages || text('placeholders', 'priorityPages'));
+    const pageLines = pages.map((line) => {
+      const [title, url, note] = line.split(',').map((part) => part.trim());
+      const safeTitle = title || url || siteName;
+      const safeUrl = url || title || siteUrl;
+      return `- [${safeTitle}](${safeUrl})${note ? `: ${note}` : ''}`;
+    });
+
+    return `# ${siteName}\n\n> ${summary}\n\nOfficial site: ${siteUrl}\nAudience: ${audience}\n\n## Key Pages\n${pageLines.join('\n')}\n\n## Usage Notes\n- Prefer the canonical URLs above when citing or linking to ${siteName}.\n- Summarize tools by their input, output, and whether they run in the browser.\n- Do not invent pricing, account requirements, or supported formats beyond the linked pages.\n`;
   }
 
   function calculate(): Result {
@@ -1696,6 +2323,142 @@
         return {
           output,
           rows: options.slice(0, 6).map((value, index) => ({ label: `${text('results', 'option')} ${index + 1}`, value })),
+          copyText: output,
+        };
+      }
+      case 'instagram-bio-generator': {
+        const options = instagramBioOptions();
+        const output = numberedOutput(options);
+        return {
+          output,
+          rows: options.slice(0, 6).map((value, index) => ({ label: `${text('results', 'option')} ${index + 1}`, value })),
+          copyText: output,
+        };
+      }
+      case 'youtube-description-generator': {
+        const output = youtubeDescriptionOutput();
+        return {
+          output,
+          copyText: output,
+        };
+      }
+      case 'linkedin-headline-generator': {
+        const options = linkedinHeadlineOptions();
+        const output = numberedOutput(options);
+        return {
+          output,
+          rows: options.slice(0, 6).map((value, index) => ({ label: `${text('results', 'option')} ${index + 1}`, value })),
+          copyText: output,
+        };
+      }
+      case 'linkedin-summary-generator': {
+        const output = linkedinSummaryOutput();
+        return { output, copyText: output };
+      }
+      case 'email-subject-line-generator': {
+        const options = emailSubjectOptions();
+        const output = numberedOutput(options);
+        return {
+          output,
+          rows: options.slice(0, 6).map((value, index) => ({ label: `${text('results', 'option')} ${index + 1}`, value })),
+          copyText: output,
+        };
+      }
+      case 'etsy-fee-calculator': {
+        const salePrice = num('salePrice');
+        const shippingCharge = Math.max(0, num('shippingCharge'));
+        const itemCost = Math.max(0, num('itemCost'));
+        const shippingCost = Math.max(0, num('shippingCost'));
+        const listingFee = Math.max(0, num('listingFee'));
+        const transactionPercent = Math.max(0, num('transactionPercent'));
+        const paymentPercent = Math.max(0, num('paymentPercent'));
+        const fixedFee = Math.max(0, num('fixedFee'));
+        const offsiteAdsPercent = Math.max(0, num('offsiteAdsPercent'));
+        const currency = inputs.currency || 'USD';
+        if (!salePrice || transactionPercent >= 100 || paymentPercent >= 100 || offsiteAdsPercent >= 100) {
+          return { error: labels.invalidNumbers };
+        }
+
+        const grossRevenue = salePrice + shippingCharge;
+        const transactionFee = grossRevenue * (transactionPercent / 100);
+        const paymentFee = grossRevenue * (paymentPercent / 100) + fixedFee;
+        const offsiteAdsFee = grossRevenue * (offsiteAdsPercent / 100);
+        const totalFees = listingFee + transactionFee + paymentFee + offsiteAdsFee;
+        const netRevenue = grossRevenue - totalFees;
+        const profit = netRevenue - itemCost - shippingCost;
+        const margin = grossRevenue ? (profit / grossRevenue) * 100 : 0;
+
+        return {
+          cards: [
+            { label: text('results', 'totalFees'), value: moneyFor(totalFees, currency), tone: totalFees > 0 ? 'bad' : 'neutral' },
+            { label: text('results', 'netRevenue'), value: moneyFor(netRevenue, currency), tone: 'good' },
+            { label: text('results', 'profit'), value: moneyFor(profit, currency), tone: profit >= 0 ? 'good' : 'bad' },
+            { label: text('results', 'profitMargin'), value: plainPercent(margin), tone: margin >= 0 ? 'good' : 'bad' },
+          ],
+          rows: [
+            { label: text('results', 'grossRevenue'), value: moneyFor(grossRevenue, currency) },
+            { label: text('fields', 'listingFee'), value: moneyFor(listingFee, currency) },
+            { label: text('results', 'transactionFee'), value: moneyFor(transactionFee, currency) },
+            { label: text('results', 'paymentFee'), value: moneyFor(paymentFee, currency) },
+            { label: text('results', 'offsiteAdsFee'), value: moneyFor(offsiteAdsFee, currency) },
+          ],
+          copyText: `${text('results', 'totalFees')}: ${moneyFor(totalFees, currency)}; ${text('results', 'profit')}: ${moneyFor(profit, currency)} (${plainPercent(margin)})`,
+        };
+      }
+      case 'freelance-rate-calculator': {
+        const targetIncome = num('targetIncome');
+        const expenses = Math.max(0, num('expenses'));
+        const taxPercent = Math.max(0, Math.min(95, num('taxPercent')));
+        const billableHours = num('billableHours');
+        const weeksOff = Math.max(0, Math.min(51, num('weeksOff')));
+        const currency = inputs.currency || 'USD';
+        if (!targetIncome || !billableHours) return { error: labels.invalidNumbers };
+
+        const workingWeeks = 52 - weeksOff;
+        const annualBillableHours = billableHours * workingWeeks;
+        const yearlyRevenue = (targetIncome + expenses) / (1 - taxPercent / 100);
+        const hourlyRate = yearlyRevenue / annualBillableHours;
+        const dayRate = hourlyRate * 8;
+        const monthlyRevenue = yearlyRevenue / 12;
+
+        return {
+          cards: [
+            { label: text('results', 'hourlyRate'), value: moneyFor(hourlyRate, currency), tone: 'good' },
+            { label: text('results', 'dayRate'), value: moneyFor(dayRate, currency) },
+            { label: text('results', 'monthlyRevenue'), value: moneyFor(monthlyRevenue, currency) },
+            { label: text('results', 'yearlyRevenue'), value: moneyFor(yearlyRevenue, currency) },
+          ],
+          rows: [
+            { label: text('fields', 'billableHours'), value: `${integer(annualBillableHours)} / yr` },
+            { label: text('fields', 'taxPercent'), value: plainPercent(taxPercent) },
+            { label: text('fields', 'expenses'), value: moneyFor(expenses, currency) },
+          ],
+          copyText: `${text('results', 'hourlyRate')}: ${moneyFor(hourlyRate, currency)}; ${text('results', 'yearlyRevenue')}: ${moneyFor(yearlyRevenue, currency)}`,
+        };
+      }
+      case 'vcard-to-csv-converter': {
+        const converted = vcardToCsv();
+        if (!converted) return { error: text('errors', 'invalidVcard') };
+        return {
+          cards: [
+            { label: text('results', 'contacts'), value: integer(converted.count), tone: 'good' },
+            { label: text('results', 'csvRows'), value: integer(converted.count + 1) },
+          ],
+          output: converted.output,
+          copyText: converted.output,
+        };
+      }
+      case 'docker-run-to-docker-compose-converter':
+        return dockerRunToCompose();
+      case 'llms-txt-generator': {
+        const output = llmsTxtOutput();
+        const pages = splitNonEmptyLines(inputs.priorityPages || text('placeholders', 'priorityPages')).length;
+        return {
+          cards: [
+            { label: text('results', 'pages'), value: integer(pages), tone: 'good' },
+            { label: text('fields', 'siteName'), value: inputs.siteName || text('placeholders', 'siteName') },
+          ],
+          output,
           copyText: output,
         };
       }

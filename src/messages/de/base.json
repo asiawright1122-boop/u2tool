@@ -15877,7 +15877,9 @@
         "missingConfig": "Tool-Konfiguration nicht gefunden",
         "invalidData": "Gib gültige Daten ein",
         "invalidCsv": "Gib CSV-Zeilen mit Kontaktüberschriften ein",
-        "unpayableDebt": "Erhöhe die Monatszahlung oder senke den Zinssatz, um einen Tilgungsplan zu erstellen"
+        "unpayableDebt": "Erhöhe die Monatszahlung oder senke den Zinssatz, um einen Tilgungsplan zu erstellen",
+        "invalidVcard": "Gib einen oder mehrere gültige vCard-Kontakte ein",
+        "invalidDockerRun": "Gib einen docker run-Befehl mit Image-Namen ein"
       },
       "fields": {
         "shares": "Aktien",
@@ -15942,7 +15944,28 @@
         "headers": "HTTP-Antwortheader",
         "csv": "CSV-Kontakte",
         "delimiter": "Trennzeichen",
-        "vcardVersion": "vCard-Version"
+        "vcardVersion": "vCard-Version",
+        "cta": "Handlungsaufforderung",
+        "links": "Links",
+        "salePrice": "Verkaufspreis",
+        "shippingCharge": "Berechneter Versand",
+        "itemCost": "Artikelkosten",
+        "shippingCost": "Versandkosten",
+        "listingFee": "Einstellgebühr",
+        "transactionPercent": "Transaktionsgebühr in Prozent",
+        "paymentPercent": "Zahlungsabwicklung in Prozent",
+        "offsiteAdsPercent": "Offsite-Ads-Prozent",
+        "targetIncome": "Ziel-Nettoeinkommen",
+        "expenses": "Jährliche Geschäftsausgaben",
+        "taxPercent": "Steuerrücklage in Prozent",
+        "billableHours": "Abrechenbare Stunden pro Woche",
+        "weeksOff": "Freie Wochen pro Jahr",
+        "vcard": "vCard-Kontakte",
+        "dockerRun": "docker run-Befehl",
+        "siteName": "Site-Name",
+        "siteUrl": "Site-URL",
+        "summary": "Zusammenfassung",
+        "priorityPages": "Priorisierte Seiten"
       },
       "options": {
         "writing": "Schreiben",
@@ -15986,7 +16009,9 @@
         "semicolon": "Semikolon",
         "tab": "Tabulator",
         "vcard3": "vCard 3.0",
-        "vcard4": "vCard 4.0"
+        "vcard4": "vCard 4.0",
+        "playful": "Verspielt",
+        "bold": "Markant"
       },
       "results": {
         "totalCost": "Gesamtkosten",
@@ -16042,7 +16067,23 @@
         "passed": "Bestanden",
         "missing": "Fehlend",
         "contacts": "Kontakte",
-        "vcardVersion": "vCard-Version"
+        "vcardVersion": "vCard-Version",
+        "totalFees": "Gebühren gesamt",
+        "transactionFee": "Transaktionsgebühr",
+        "paymentFee": "Zahlungsgebühr",
+        "offsiteAdsFee": "Offsite-Ads-Gebühr",
+        "netRevenue": "Nettoerlös",
+        "grossRevenue": "Bruttoerlös",
+        "profitMargin": "Gewinnmarge",
+        "hourlyRate": "Stundensatz",
+        "dayRate": "Tagessatz",
+        "monthlyRevenue": "Monatliches Umsatzziel",
+        "yearlyRevenue": "Jährliches Umsatzziel",
+        "csvRows": "CSV-Zeilen",
+        "service": "Service",
+        "ports": "Ports",
+        "envVars": "Umgebungsvariablen",
+        "pages": "Seiten"
       },
       "placeholders": {
         "aiTopic": "Launch-Text für eine Online-Tool-Website",
@@ -16066,7 +16107,20 @@
         "youtubeKeyword": "KI-Produktivitätstools",
         "youtubeAudience": "beschäftigte Gründer",
         "headers": "strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff",
-        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder"
+        "csvContacts": "first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder",
+        "instagramTopic": "Solo-Reisefotografie",
+        "instagramKeyword": "Reisetipps",
+        "creatorAudience": "neue Creator",
+        "cta": "folge für wöchentliche Ideen",
+        "youtubeLinks": "https://example.com/resources\nhttps://example.com/newsletter",
+        "emailTopic": "Frühjahrs-Produktlaunch",
+        "emailBenefit": "jede Woche 3 Stunden sparen",
+        "priorityPages": "Startseite, https://example.com/\nPreise, https://example.com/pricing\nDocs, https://example.com/docs",
+        "siteName": "U2Tool",
+        "siteUrl": "https://www.u2tool.com",
+        "siteSummary": "Eine kostenlose Sammlung browserbasierter Tools für Entwickler, Marketing und Operations.",
+        "dockerRun": "docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest",
+        "vcardContacts": "BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD"
       }
     },
     "calorie-deficit-calculator": {
@@ -16128,6 +16182,66 @@
       "description": "Erstelle YouTube-Titelideen aus Thema, Keyword, Zielgruppe und Ton.",
       "seo_title": "Kostenloser YouTube-Titelgenerator online",
       "seo_description": "Erstelle YouTube-Titelideen aus Thema, Keyword, Zielgruppe und Ton. Kostenlos im Browser nutzbar, ohne Anmeldung."
+    },
+    "docker-run-to-docker-compose-converter": {
+      "name": "Docker-Run-zu-Docker-Compose-Konverter",
+      "description": "Wandle einen docker run Befehl in einen Docker-Compose-YAML-Service um.",
+      "seo_title": "Kostenloser Docker-Run-zu-Docker-Compose-Konverter online",
+      "seo_description": "Wandle einen docker run Befehl in einen Docker-Compose-YAML-Service um. Kostenlos im Browser nutzbar, ohne Anmeldung."
+    },
+    "email-subject-line-generator": {
+      "name": "E-Mail-Betreff-Generator",
+      "description": "Erstelle Betreffzeilen für Kampagnen, Kaltakquise, Launches und Newsletter.",
+      "seo_title": "Kostenloser E-Mail-Betreff-Generator online",
+      "seo_description": "Erstelle Betreffzeilen für Kampagnen, Kaltakquise, Launches und Newsletter. Kostenlos im Browser nutzbar, ohne Anmeldung."
+    },
+    "etsy-fee-calculator": {
+      "name": "Etsy-Gebührenrechner",
+      "description": "Schätze Marktplatzgebühren, Nettoerlös und Gewinn mit editierbaren Etsy-ähnlichen Annahmen.",
+      "seo_title": "Kostenloser Etsy-Gebührenrechner online",
+      "seo_description": "Schätze Marktplatzgebühren, Nettoerlös und Gewinn mit editierbaren Etsy-ähnlichen Annahmen. Kostenlos im Browser nutzbar, ohne Anmeldung."
+    },
+    "freelance-rate-calculator": {
+      "name": "Freelance-Stundensatzrechner",
+      "description": "Berechne Stunden- und Tagessatz aus Einkommensziel, Kosten, Steuern und abrechenbaren Stunden.",
+      "seo_title": "Kostenloser Freelance-Stundensatzrechner online",
+      "seo_description": "Berechne Stunden- und Tagessatz aus Einkommensziel, Kosten, Steuern und abrechenbaren Stunden. Kostenlos im Browser nutzbar, ohne Anmeldung."
+    },
+    "instagram-bio-generator": {
+      "name": "Instagram-Bio-Generator",
+      "description": "Erstelle kurze Instagram-Bio-Ideen mit Keywords, Zielgruppe, Ton und Handlungsaufforderung.",
+      "seo_title": "Kostenloser Instagram-Bio-Generator online",
+      "seo_description": "Erstelle kurze Instagram-Bio-Ideen mit Keywords, Zielgruppe, Ton und Handlungsaufforderung. Kostenlos im Browser nutzbar, ohne Anmeldung."
+    },
+    "linkedin-headline-generator": {
+      "name": "LinkedIn-Headline-Generator",
+      "description": "Erstelle LinkedIn-Headline-Optionen aus Rolle, Fähigkeiten, Zielgruppe und Erfolg.",
+      "seo_title": "Kostenloser LinkedIn-Headline-Generator online",
+      "seo_description": "Erstelle LinkedIn-Headline-Optionen aus Rolle, Fähigkeiten, Zielgruppe und Erfolg. Kostenlos im Browser nutzbar, ohne Anmeldung."
+    },
+    "linkedin-summary-generator": {
+      "name": "LinkedIn-Zusammenfassungsgenerator",
+      "description": "Entwirf einen LinkedIn-Info-Abschnitt aus Erfahrung, Fähigkeiten, Erfolg und Zielgruppe.",
+      "seo_title": "Kostenloser LinkedIn-Zusammenfassungsgenerator online",
+      "seo_description": "Entwirf einen LinkedIn-Info-Abschnitt aus Erfahrung, Fähigkeiten, Erfolg und Zielgruppe. Kostenlos im Browser nutzbar, ohne Anmeldung."
+    },
+    "llms-txt-generator": {
+      "name": "llms.txt-Generator",
+      "description": "Erstelle einen llms.txt-Entwurf mit Website-Zusammenfassung, Prioritätsseiten und KI-Hinweisen.",
+      "seo_title": "Kostenloser llms.txt-Generator online",
+      "seo_description": "Erstelle einen llms.txt-Entwurf mit Website-Zusammenfassung, Prioritätsseiten und KI-Hinweisen. Kostenlos im Browser nutzbar, ohne Anmeldung."
+    },
+    "vcard-to-csv-converter": {
+      "name": "vCard-zu-CSV-Konverter",
+      "description": "Wandle eingefügte vCard- oder VCF-Kontakte in CSV-Zeilen für Tabellen und CRM-Importe um.",
+      "seo_title": "Kostenloser vCard-zu-CSV-Konverter online",
+      "seo_description": "Wandle eingefügte vCard- oder VCF-Kontakte in CSV-Zeilen für Tabellen und CRM-Importe um. Kostenlos im Browser nutzbar, ohne Anmeldung."
+    },
+    "youtube-description-generator": {
+      "name": "YouTube-Beschreibungsgenerator",
+      "description": "Erstelle eine strukturierte YouTube-Videobeschreibung mit Keywords, Zielgruppe, Links und CTA.",
+      "seo_title": "Kostenloser YouTube-Beschreibungsgenerator online",
+      "seo_description": "Erstelle eine strukturierte YouTube-Videobeschreibung mit Keywords, Zielgruppe, Links und CTA. Kostenlos im Browser nutzbar, ohne Anmeldung."
     }
   }
 }
