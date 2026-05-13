@@ -14,6 +14,7 @@ const checks = [
   { name: 'developer data formatters en', url: '/en/tools/developer-data-formatters/', expect: { status: 200 }, bodyMustInclude: 'Developer Data Formatters, Converters &amp; Validators' },
   { name: 'image editing converters en', url: '/en/tools/image-editing-converters/', expect: { status: 200 }, bodyMustInclude: 'Image Editing &amp; Conversion Tools' },
   { name: 'online calculators en', url: '/en/tools/online-calculators/', expect: { status: 200 }, bodyMustInclude: 'Online Calculators for Finance, Math, Work &amp; Daily Life' },
+  { name: 'security password hash tools en', url: '/en/tools/security-password-hash-tools/', expect: { status: 200 }, bodyMustInclude: 'Security, Password, Hash &amp; JWT Tools' },
   { name: 'chart generators en', url: '/en/tools/chart-generators/', expect: { status: 200 }, bodyMustInclude: 'Chart Generators &amp; Data Visualization Tools' },
   { name: 'privacy en', url: '/en/privacy/', expect: { status: 200 } },
   { name: 'terms en', url: '/en/terms/', expect: { status: 200 } },

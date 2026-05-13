@@ -123,6 +123,20 @@ const checks: RenderedSeoCheck[] = [
     ],
   },
   {
+    name: 'English security password hash tools cluster',
+    path: '/en/tools/security-password-hash-tools/',
+    titleIncludes: 'Security',
+    descriptionIncludes: 'password',
+    h1Includes: 'Security',
+    schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList', 'BreadcrumbList'],
+    bodyMustInclude: [
+      'Security, Password, Hash &amp; JWT Tools',
+      '/en/tools/password-generator/',
+      '/en/tools/hash-generator/',
+      '/en/categories/security/',
+    ],
+  },
+  {
     name: 'English privacy page',
     path: '/en/privacy/',
     titleIncludes: 'Privacy Policy',
@@ -223,6 +237,19 @@ const checks: RenderedSeoCheck[] = [
       'data-online-calculator-cluster',
       '/en/tools/online-calculators/',
       '/en/tools/roi-calculator/',
+    ],
+  },
+  {
+    name: 'Security tool cluster backlink',
+    path: '/en/tools/password-generator/',
+    titleIncludes: 'Password Generator',
+    descriptionIncludes: 'password',
+    h1Includes: 'Password Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    bodyMustInclude: [
+      'data-security-tool-cluster',
+      '/en/tools/security-password-hash-tools/',
+      '/en/tools/password-strength/',
     ],
   },
   {

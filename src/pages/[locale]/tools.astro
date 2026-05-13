@@ -18,6 +18,7 @@ import CreatorSeoClusterSection from '@/components/discovery/CreatorSeoClusterSe
 import DeveloperDataToolClusterSection from '@/components/discovery/DeveloperDataToolClusterSection.astro';
 import ImageToolClusterSection from '@/components/discovery/ImageToolClusterSection.astro';
 import OnlineCalculatorClusterSection from '@/components/discovery/OnlineCalculatorClusterSection.astro';
+import SecurityToolClusterSection from '@/components/discovery/SecurityToolClusterSection.astro';
 import ToolLaunchSection from '@/components/discovery/ToolLaunchSection.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
@@ -52,6 +53,11 @@ import {
   getOnlineCalculatorClusterCopy,
   onlineCalculatorClusterPath,
 } from '@/lib/online-calculator-cluster';
+import {
+  buildSecurityToolClusterGroups,
+  getSecurityToolClusterCopy,
+  securityToolClusterPath,
+} from '@/lib/security-tool-cluster';
 import { buildRecentToolLaunches, buildToolLaunchItemList } from '@/lib/tool-launches';
 import { getToolsPageSeo } from '@/lib/seo';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
@@ -180,6 +186,13 @@ const imageToolGroups = buildImageToolClusterGroups(
 );
 const onlineCalculatorCopy = getOnlineCalculatorClusterCopy(locale);
 const onlineCalculatorGroups = buildOnlineCalculatorClusterGroups(
+  locale,
+  categoryMessages,
+  toolNames,
+  toolDescriptions
+);
+const securityToolCopy = getSecurityToolClusterCopy(locale);
+const securityToolGroups = buildSecurityToolClusterGroups(
   locale,
   categoryMessages,
   toolNames,
@@ -322,6 +335,16 @@ const toolsCollectionData = {
           href={buildLocalizedPagePath(locale, onlineCalculatorClusterPath)}
           groups={onlineCalculatorGroups}
           toolCountLabel={onlineCalculatorCopy.toolCountLabel}
+        />
+        <SecurityToolClusterSection
+          compact
+          eyebrow={securityToolCopy.eyebrow}
+          title={securityToolCopy.title}
+          description={securityToolCopy.description}
+          ctaLabel={securityToolCopy.ctaLabel}
+          href={buildLocalizedPagePath(locale, securityToolClusterPath)}
+          groups={securityToolGroups}
+          toolCountLabel={securityToolCopy.toolCountLabel}
         />
         <ChartToolClusterSection
           compact

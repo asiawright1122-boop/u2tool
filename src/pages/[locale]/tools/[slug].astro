@@ -33,6 +33,7 @@ import CreatorSeoToolClusterCard from '@/components/tools/CreatorSeoToolClusterC
 import DeveloperDataToolClusterCard from '@/components/tools/DeveloperDataToolClusterCard.astro';
 import ImageToolClusterCard from '@/components/tools/ImageToolClusterCard.astro';
 import OnlineCalculatorClusterCard from '@/components/tools/OnlineCalculatorClusterCard.astro';
+import SecurityToolClusterCard from '@/components/tools/SecurityToolClusterCard.astro';
 import { tools, categories, getToolsByCategory } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
 import { isValidLocale } from '@/lib/i18n';
@@ -70,6 +71,11 @@ import {
   getOnlineCalculatorClusterCopy,
   onlineCalculatorClusterPath,
 } from '@/lib/online-calculator-cluster';
+import {
+  buildSecurityToolClusterGroupForTool,
+  getSecurityToolClusterCopy,
+  securityToolClusterPath,
+} from '@/lib/security-tool-cluster';
 
 export const prerender = false;
 
@@ -107,6 +113,7 @@ const creatorSeoCopy = getCreatorSeoClusterCopy(locale);
 const developerDataToolCopy = getDeveloperDataToolClusterCopy(locale);
 const imageToolCopy = getImageToolClusterCopy(locale);
 const onlineCalculatorCopy = getOnlineCalculatorClusterCopy(locale);
+const securityToolCopy = getSecurityToolClusterCopy(locale);
 
 // Extract tool metadata from translations
 const toolName = (messages.name as string) || tool.slug;
@@ -371,6 +378,13 @@ const onlineCalculatorGroup = buildOnlineCalculatorClusterGroupForTool(
   allToolNames,
   allToolDescriptions
 );
+const securityToolGroup = buildSecurityToolClusterGroupForTool(
+  locale,
+  tool.slug,
+  categoryMessages,
+  allToolNames,
+  allToolDescriptions
+);
 const chartToolGroup = buildChartToolClusterGroupForTool(
   locale,
   tool.slug,
@@ -551,6 +565,15 @@ const chartToolGroup = buildChartToolClusterGroupForTool(
           copy={onlineCalculatorCopy}
           currentSlug={tool.slug}
           group={onlineCalculatorGroup}
+        />
+      )}
+
+      {securityToolGroup && (
+        <SecurityToolClusterCard
+          clusterHref={buildLocalizedPagePath(locale, securityToolClusterPath)}
+          copy={securityToolCopy}
+          currentSlug={tool.slug}
+          group={securityToolGroup}
         />
       )}
 
