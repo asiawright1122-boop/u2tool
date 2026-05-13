@@ -53,6 +53,20 @@ const checks: RenderedSeoCheck[] = [
     bodyMustInclude: ['JSON Formatter', 'Choose the Right'],
   },
   {
+    name: 'English creator SEO generators cluster',
+    path: '/en/tools/creator-seo-generators/',
+    titleIncludes: 'Creator',
+    descriptionIncludes: 'YouTube',
+    h1Includes: 'Creator',
+    schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList', 'BreadcrumbList'],
+    bodyMustInclude: [
+      'Creator &amp; SEO Generators',
+      '/en/tools/youtube-tags-generator/',
+      '/en/tools/seo-title-generator/',
+      '/en/categories/generators/',
+    ],
+  },
+  {
     name: 'English privacy page',
     path: '/en/privacy/',
     titleIncludes: 'Privacy Policy',

@@ -34,15 +34,15 @@
 
 <header class="w-full glass-nav sticky top-0 z-50 transition-all duration-300">
   <div class="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent dark:via-amber-500/20"></div>
-  <div class="w-full px-4 sm:px-8 lg:pl-0 lg:pr-8">
-    <div class="flex items-center justify-between h-16">
-      <div class="flex-1 max-w-2xl">
+  <div class="w-full px-3 sm:px-8 lg:pl-0 lg:pr-8">
+    <div class="flex h-16 items-center justify-between gap-2 sm:gap-4">
+      <div class="min-w-0 flex-1 max-w-2xl">
         <GlobalSearch {locale} translations={translations} />
       </div>
 
-      <div class="flex items-center gap-4 shrink-0">
+      <div class="flex items-center gap-1.5 shrink-0 sm:gap-4">
         <LanguageSelector {locale} {currentPath} />
-        <div class="w-px h-6 bg-slate-200 dark:bg-white/10"></div>
+        <div class="hidden h-6 w-px bg-slate-200 dark:bg-white/10 sm:block"></div>
         <ThemeToggle />
       </div>
     </div>

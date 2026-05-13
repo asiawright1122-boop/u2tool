@@ -17,6 +17,7 @@ import Footer from '@/components/layout/Footer.astro';
 import PopularToolsCarousel from '@/components/PopularToolsCarousel.svelte';
 import CategorySpotlightSection from '@/components/discovery/CategorySpotlightSection.astro';
 import ComparisonGuideSection from '@/components/discovery/ComparisonGuideSection.astro';
+import CreatorSeoClusterSection from '@/components/discovery/CreatorSeoClusterSection.astro';
 import ToolLaunchSection from '@/components/discovery/ToolLaunchSection.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
@@ -27,10 +28,15 @@ import type { Locale } from '@/lib/i18n';
 import { loadBaseMessages } from '@/lib/translations';
 import { buildCategoryDiscoveryItemList, buildCategoryDiscoverySpotlights } from '@/lib/discovery-surface';
 import { buildComparisonGuides, getComparisonUiCopy } from '@/lib/comparison-surfaces';
+import {
+  buildCreatorSeoClusterGroups,
+  creatorSeoClusterPath,
+  getCreatorSeoClusterCopy,
+} from '@/lib/creator-seo-cluster';
 import { buildRecentToolLaunches, buildToolLaunchItemList } from '@/lib/tool-launches';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
-import { buildLocalizedPageUrl, getHomePageSeo } from '@/lib/seo';
+import { buildLocalizedPagePath, buildLocalizedPageUrl, getHomePageSeo } from '@/lib/seo';
 
 export const prerender = false;
 
@@ -106,6 +112,13 @@ const comparisonGuides = buildComparisonGuides(
   toolNames,
   toolDescriptions
 ).slice(0, 3);
+const creatorSeoCopy = getCreatorSeoClusterCopy(locale);
+const creatorSeoGroups = buildCreatorSeoClusterGroups(
+  locale,
+  categoryMessages,
+  toolNames,
+  toolDescriptions
+);
 ---
 
 <BaseLayout
@@ -234,6 +247,17 @@ const comparisonGuides = buildComparisonGuides(
           description={(homeMessages.recentToolsDesc as string) || ''}
           ctaLabel={(heroMessages.tryTool as string) || 'Try'}
           tools={recentLaunchTools}
+        />
+
+        <CreatorSeoClusterSection
+          compact
+          eyebrow={creatorSeoCopy.eyebrow}
+          title={creatorSeoCopy.title}
+          description={creatorSeoCopy.description}
+          ctaLabel={creatorSeoCopy.ctaLabel}
+          href={buildLocalizedPagePath(locale, creatorSeoClusterPath)}
+          groups={creatorSeoGroups}
+          toolCountLabel={creatorSeoCopy.toolCountLabel}
         />
 
         <CategorySpotlightSection

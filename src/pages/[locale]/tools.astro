@@ -13,6 +13,7 @@ import Footer from '@/components/layout/Footer.astro';
 import ToolsGrid from '@/components/tools/ToolsGrid.astro';
 import CategorySpotlightSection from '@/components/discovery/CategorySpotlightSection.astro';
 import ComparisonGuideSection from '@/components/discovery/ComparisonGuideSection.astro';
+import CreatorSeoClusterSection from '@/components/discovery/CreatorSeoClusterSection.astro';
 import ToolLaunchSection from '@/components/discovery/ToolLaunchSection.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
@@ -22,11 +23,16 @@ import type { Locale } from '@/lib/i18n';
 import { loadBaseMessages } from '@/lib/translations';
 import { buildCategoryDiscoveryItemList, buildCategoryDiscoverySpotlights } from '@/lib/discovery-surface';
 import { buildComparisonGuides, getComparisonUiCopy } from '@/lib/comparison-surfaces';
+import {
+  buildCreatorSeoClusterGroups,
+  creatorSeoClusterPath,
+  getCreatorSeoClusterCopy,
+} from '@/lib/creator-seo-cluster';
 import { buildRecentToolLaunches, buildToolLaunchItemList } from '@/lib/tool-launches';
 import { getToolsPageSeo } from '@/lib/seo';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
-import { buildLocalizedPageUrl } from '@/lib/seo';
+import { buildLocalizedPagePath, buildLocalizedPageUrl } from '@/lib/seo';
 
 export const prerender = false;
 
@@ -127,6 +133,13 @@ const recentLaunchTools = buildRecentToolLaunches(
 const launchItemListData = buildToolLaunchItemList(baseUrl, recentLaunchTools);
 const comparisonUiCopy = getComparisonUiCopy(locale);
 const comparisonGuides = buildComparisonGuides(locale, categoryMessages, toolNames, toolDescriptions);
+const creatorSeoCopy = getCreatorSeoClusterCopy(locale);
+const creatorSeoGroups = buildCreatorSeoClusterGroups(
+  locale,
+  categoryMessages,
+  toolNames,
+  toolDescriptions
+);
 const normalizedSearchQuery = normalizeSearchText(searchQuery);
 const searchTokens = normalizedSearchQuery ? normalizedSearchQuery.split(' ').filter(Boolean) : [];
 const initialSearchResults = normalizedSearchQuery
@@ -217,6 +230,16 @@ const toolsCollectionData = {
           description={(homeMessages.recentToolsDesc as string) || ''}
           ctaLabel={heroMessages.tryTool || 'Try'}
           tools={recentLaunchTools}
+        />
+        <CreatorSeoClusterSection
+          compact
+          eyebrow={creatorSeoCopy.eyebrow}
+          title={creatorSeoCopy.title}
+          description={creatorSeoCopy.description}
+          ctaLabel={creatorSeoCopy.ctaLabel}
+          href={buildLocalizedPagePath(locale, creatorSeoClusterPath)}
+          groups={creatorSeoGroups}
+          toolCountLabel={creatorSeoCopy.toolCountLabel}
         />
         <CategorySpotlightSection
           eyebrow={siteMessages.name || 'U2Tool'}

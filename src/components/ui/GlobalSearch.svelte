@@ -209,7 +209,7 @@
   }
 </script>
 
-<div class="relative flex-1 max-w-xl mx-6 min-w-0 group/search">
+<div class="relative mx-1 min-w-0 flex-1 group/search sm:mx-6 sm:max-w-xl">
   <div class="relative flex items-center">
     <input
       type="text"
@@ -221,18 +221,18 @@
       onkeydown={handleKeydown}
       onfocus={handleFocus}
       onblur={handleBlur}
-      class="w-full h-10 pl-4 pr-32 text-sm rounded-xl border border-slate-200 dark:border-white/10
+      class="w-full h-10 pl-4 pr-12 text-sm rounded-xl border border-slate-200 dark:border-white/10
              bg-white/60 dark:bg-slate-900 text-slate-900 dark:text-white backdrop-blur-md
              focus:outline-none focus:ring-4 focus:ring-amber-500/10 focus:border-amber-500/30
-             transition-all duration-300 group-hover/search:border-slate-300 dark:group-hover/search:border-white/20 shadow-sm"
+             transition-all duration-300 group-hover/search:border-slate-300 dark:group-hover/search:border-white/20 shadow-sm sm:pr-32"
     />
     <button
       onclick={() => void handleSearchClick()}
-      class="absolute right-1 top-1/2 -translate-y-1/2 h-8 px-4 rounded-lg bg-slate-950 dark:bg-amber-500 hover:bg-black dark:hover:bg-amber-400
-             text-white dark:text-slate-950 text-[10px] font-black uppercase tracking-widest transition-all duration-300 flex items-center gap-2 shadow-lg dark:shadow-amber-500/10"
+      class="absolute right-1 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-lg bg-slate-950 dark:bg-amber-500 hover:bg-black dark:hover:bg-amber-400
+             text-white dark:text-slate-950 text-[10px] font-black uppercase tracking-widest transition-all duration-300 gap-2 shadow-lg dark:shadow-amber-500/10 sm:w-auto sm:px-4"
     >
       <Icon.Search class="w-3.5 h-3.5" />
-      <span>{searchButtonLabel}</span>
+      <span class="hidden sm:inline">{searchButtonLabel}</span>
     </button>
   </div>
 

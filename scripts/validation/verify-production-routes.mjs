@@ -10,6 +10,7 @@ const checks = [
   { name: 'messages root en', url: '/messages/en.json', expect: { status: 200, contentTypeIncludes: 'application/json' } },
   { name: 'home en', url: '/en/', expect: { status: 200 } },
   { name: 'tools en', url: '/en/tools/', expect: { status: 200 } },
+  { name: 'creator seo generators en', url: '/en/tools/creator-seo-generators/', expect: { status: 200 }, bodyMustInclude: 'Creator &amp; SEO Generators' },
   { name: 'privacy en', url: '/en/privacy/', expect: { status: 200 } },
   { name: 'terms en', url: '/en/terms/', expect: { status: 200 } },
   { name: 'contact en', url: '/en/contact/', expect: { status: 200 } },

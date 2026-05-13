@@ -11,6 +11,7 @@ import StaticSidebar from '@/components/layout/StaticSidebar.astro';
 import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
 import Footer from '@/components/layout/Footer.astro';
 import CategorySupportSection from '@/components/categories/CategorySupportSection.astro';
+import CreatorSeoClusterSection from '@/components/discovery/CreatorSeoClusterSection.astro';
 import Breadcrumb from '@/components/layout/Breadcrumb.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
@@ -25,6 +26,11 @@ import { buildLocalizedPagePath, buildLocalizedPageUrl, getHreflang } from '@/li
 import { getCategorySupportContent } from '@/lib/category-support';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
+import {
+  buildCreatorSeoClusterGroups,
+  creatorSeoClusterPath,
+  getCreatorSeoClusterCopy,
+} from '@/lib/creator-seo-cluster';
 
 export const prerender = true;
 
@@ -77,6 +83,10 @@ const pageDescription = categorySeo.description;
 const categorySupport = getCategorySupportContent(locale, category);
 const categoryToolNames = Object.fromEntries(categoryTools.map((tool) => [tool.slug, getToolName(tool.slug)]));
 const categoryToolDescriptions = Object.fromEntries(categoryTools.map((tool) => [tool.slug, getToolDescription(tool.slug)]));
+const creatorSeoCopy = getCreatorSeoClusterCopy(locale);
+const creatorSeoGroups = category === 'generators'
+  ? buildCreatorSeoClusterGroups(locale, categoryMessages, categoryToolNames, categoryToolDescriptions)
+  : [];
 
 const breadcrumbItems = [
   { label: navMessages.home || 'Home', href: buildLocalizedPagePath(locale, '/') },
@@ -163,6 +173,18 @@ const collectionData = {
             locale={locale}
             toolNames={categoryToolNames}
             toolDescriptions={categoryToolDescriptions}
+          />
+        )}
+
+        {category === 'generators' && (
+          <CreatorSeoClusterSection
+            eyebrow={creatorSeoCopy.eyebrow}
+            title={creatorSeoCopy.title}
+            description={creatorSeoCopy.description}
+            ctaLabel={creatorSeoCopy.ctaLabel}
+            href={buildLocalizedPagePath(locale, creatorSeoClusterPath)}
+            groups={creatorSeoGroups}
+            toolCountLabel={creatorSeoCopy.toolCountLabel}
           />
         )}
 
