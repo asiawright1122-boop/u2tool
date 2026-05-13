@@ -28,6 +28,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb.astro';
 import ToolWrapper from '@/components/tools/ToolWrapper.svelte';
 import RelatedTools from '@/components/tools/RelatedTools.astro';
 import ToolFAQ from '@/components/tools/ToolFAQ.astro';
+import ChartToolClusterCard from '@/components/tools/ChartToolClusterCard.astro';
 import CreatorSeoToolClusterCard from '@/components/tools/CreatorSeoToolClusterCard.astro';
 import ImageToolClusterCard from '@/components/tools/ImageToolClusterCard.astro';
 import { tools, categories, getToolsByCategory } from '@/config/tools';
@@ -41,6 +42,11 @@ import { buildLocalizedPagePath, buildLocalizedPageUrl, getHreflang, withBrand }
 import { sanitizeHtml } from '@/lib/sanitize';
 import { assessSupportContentTrust } from '@/lib/content-trust';
 import { buildSafeFallbackSupportContent } from '@/lib/support-content-fallback';
+import {
+  buildChartToolClusterGroupForTool,
+  chartToolClusterPath,
+  getChartToolClusterCopy,
+} from '@/lib/chart-tool-cluster';
 import { findComparisonGuideForTool, getComparisonUiCopy } from '@/lib/comparison-surfaces';
 import {
   buildCreatorSeoClusterGroupForTool,
@@ -84,6 +90,7 @@ const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
 const headerTranslations = buildHeaderTranslations(baseMessages);
 const mobileNavMessages = buildMobileNavMessages(navMessages);
 const comparisonUiCopy = getComparisonUiCopy(locale);
+const chartToolCopy = getChartToolClusterCopy(locale);
 const creatorSeoCopy = getCreatorSeoClusterCopy(locale);
 const imageToolCopy = getImageToolClusterCopy(locale);
 
@@ -336,6 +343,13 @@ const imageToolGroup = buildImageToolClusterGroupForTool(
   allToolNames,
   allToolDescriptions
 );
+const chartToolGroup = buildChartToolClusterGroupForTool(
+  locale,
+  tool.slug,
+  categoryMessages,
+  allToolNames,
+  allToolDescriptions
+);
 ---
 
 <BaseLayout
@@ -491,6 +505,15 @@ const imageToolGroup = buildImageToolClusterGroupForTool(
           copy={imageToolCopy}
           currentSlug={tool.slug}
           group={imageToolGroup}
+        />
+      )}
+
+      {chartToolGroup && (
+        <ChartToolClusterCard
+          clusterHref={buildLocalizedPagePath(locale, chartToolClusterPath)}
+          copy={chartToolCopy}
+          currentSlug={tool.slug}
+          group={chartToolGroup}
         />
       )}
 

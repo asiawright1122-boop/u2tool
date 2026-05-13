@@ -1,0 +1,309 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.svelte';
+import StaticSidebar from '@/components/layout/StaticSidebar.astro';
+import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
+import Footer from '@/components/layout/Footer.astro';
+import Breadcrumb from '@/components/layout/Breadcrumb.astro';
+import HreflangTags from '@/components/seo/HreflangTags.astro';
+import StructuredData from '@/components/seo/StructuredData.astro';
+import { tools, categories } from '@/config/tools';
+import { getIconSvg } from '@/lib/icon-svg';
+import { isValidLocale } from '@/lib/i18n';
+import type { Locale } from '@/lib/i18n';
+import { loadBaseUiMessages } from '@/lib/translations';
+import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
+import { getPublicSiteUrl } from '@/lib/public-env';
+import { buildLocalizedPagePath, buildLocalizedPageUrl } from '@/lib/seo';
+import {
+  buildChartToolClusterCollectionData,
+  buildChartToolClusterGroups,
+  buildChartToolClusterItemList,
+  buildChartToolClusterItems,
+  chartToolClusterPath,
+  getChartToolClusterCopy,
+} from '@/lib/chart-tool-cluster';
+
+export const prerender = false;
+
+const localeCandidate = Astro.params.locale;
+if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate)) {
+  return Astro.redirect('/en/tools/chart-generators/', 302);
+}
+const locale: Locale = localeCandidate;
+
+const baseMessages = await loadBaseUiMessages(locale, Astro.url);
+const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
+const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
+const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
+const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
+const headerTranslations = buildHeaderTranslations(baseMessages);
+const mobileNavMessages = buildMobileNavMessages(navMessages);
+const copy = getChartToolClusterCopy(locale);
+const statLabels: Record<Locale, { groups: string; exports: string }> = {
+  en: { groups: 'workflows', exports: 'browser charts' },
+  zh: { groups: '组流程', exports: '浏览器图表' },
+  ja: { groups: 'ワークフロー', exports: 'ブラウザチャート' },
+  ko: { groups: '워크플로', exports: '브라우저 차트' },
+  es: { groups: 'flujos', exports: 'graficos web' },
+  pt: { groups: 'fluxos', exports: 'graficos web' },
+  fr: { groups: 'workflows', exports: 'graphiques web' },
+  de: { groups: 'Workflows', exports: 'Browser-Charts' },
+  ru: { groups: 'процесса', exports: 'браузерные графики' },
+  ar: { groups: 'مسارات', exports: 'مخططات المتصفح' },
+};
+const statCopy = statLabels[locale] ?? statLabels.en;
+
+function getToolName(slug: string): string {
+  const toolMessages = toolsObj[slug] as Record<string, unknown> | undefined;
+  return (toolMessages?.name as string) || slug;
+}
+
+function getToolDescription(slug: string): string {
+  const toolMessages = toolsObj[slug] as Record<string, unknown> | undefined;
+  return (toolMessages?.seo_description as string) || (toolMessages?.description as string) || '';
+}
+
+const toolNames = Object.fromEntries(tools.map((tool) => [tool.slug, getToolName(tool.slug)]));
+const toolDescriptions = Object.fromEntries(tools.map((tool) => [tool.slug, getToolDescription(tool.slug)]));
+const groups = buildChartToolClusterGroups(locale, categoryMessages, toolNames, toolDescriptions);
+const clusterTools = buildChartToolClusterItems(locale, categoryMessages, toolNames, toolDescriptions);
+const clusterToolBySlug = new Map(clusterTools.map((tool) => [tool.slug, tool]));
+const BASE_URL = getPublicSiteUrl();
+
+const breadcrumbItems = [
+  { label: navMessages.home || 'Home', href: buildLocalizedPagePath(locale, '/') },
+  { label: navMessages.tools || 'Tools', href: buildLocalizedPagePath(locale, '/tools') },
+  { label: copy.title, href: buildLocalizedPagePath(locale, chartToolClusterPath) },
+];
+
+const breadcrumbData = {
+  itemListElement: breadcrumbItems.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.label,
+    item: `${BASE_URL}${item.href}`,
+  })),
+};
+
+const collectionData = buildChartToolClusterCollectionData(BASE_URL, locale, groups);
+const itemListData = buildChartToolClusterItemList(BASE_URL, locale, groups);
+const chartCategoryLabel = categoryMessages.charts || 'Charts';
+const allToolsLabel = navMessages.tools || 'Tools';
+const relatedLinks = [
+  {
+    href: buildLocalizedPagePath(locale, '/tools'),
+    label: allToolsLabel,
+    text: `${tools.length}+ ${allToolsLabel}`,
+    icon: 'grid-3x3',
+  },
+  {
+    href: buildLocalizedPagePath(locale, '/categories/charts'),
+    label: chartCategoryLabel,
+    text: `${clusterTools.length} ${copy.toolCountLabel}`,
+    icon: 'bar-chart-3',
+  },
+  {
+    href: buildLocalizedPagePath(locale, '/compare/choose-chart-type'),
+    label: navMessages.compare || 'Compare',
+    text: navMessages.relatedTools || 'Related tools',
+    icon: 'radar',
+  },
+];
+---
+
+<BaseLayout
+  title={copy.seoTitle}
+  description={copy.seoDescription}
+  locale={locale}
+  canonicalPath={chartToolClusterPath}
+  siteDescription={siteMessages.description}
+>
+  <HreflangTags path={chartToolClusterPath} slot="head" />
+  <StructuredData type="BreadcrumbList" data={breadcrumbData} slot="head" />
+  <StructuredData type="CollectionPage" data={collectionData} slot="head" />
+  <StructuredData type="ItemList" data={itemListData} slot="head" />
+
+  <meta property="og:title" content={`${copy.seoTitle} | U2Tool`} slot="head" />
+  <meta property="og:description" content={copy.seoDescription} slot="head" />
+  <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
+  <meta property="og:type" content="website" slot="head" />
+  <meta property="og:url" content={buildLocalizedPageUrl(BASE_URL, locale, chartToolClusterPath)} slot="head" />
+  <meta property="og:site_name" content="U2Tool" slot="head" />
+  <meta name="twitter:card" content="summary_large_image" slot="head" />
+  <meta name="twitter:title" content={`${copy.seoTitle} | U2Tool`} slot="head" />
+  <meta name="twitter:description" content={copy.seoDescription} slot="head" />
+  <meta name="twitter:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
+
+  <StaticSidebar
+    locale={locale}
+    categories={categories}
+    categoryNames={categoryMessages}
+    navMessages={navMessages}
+    siteName={siteMessages.name || 'U2Tool'}
+  />
+
+  <div class="main-content-with-sidebar main-content-with-mobile-nav">
+    <Header client:load locale={locale} translations={headerTranslations} />
+
+    <main class="py-6 px-4 lg:px-6">
+      <div class="max-w-none mx-0">
+        <div class="mb-6">
+          <Breadcrumb locale={locale} items={breadcrumbItems} />
+        </div>
+
+        <section class="mb-10 rounded-3xl border border-slate-200/60 glass p-8 shadow-2xl backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/40">
+          <p class="mb-3 text-[10px] font-black uppercase tracking-[0.3em] text-amber-600/80 dark:text-amber-500/60">
+            {copy.eyebrow}
+          </p>
+          <div class="grid gap-8 xl:grid-cols-[minmax(0,1fr)_360px] xl:items-end">
+            <div>
+              <h1 class="max-w-4xl text-4xl font-black tracking-tight text-slate-900 drop-shadow-sm dark:text-white md:text-5xl">
+                {copy.h1}
+              </h1>
+              <p class="mt-4 max-w-4xl text-sm font-medium leading-7 text-slate-500 dark:text-slate-400">
+                {copy.seoDescription}
+              </p>
+              <p class="mt-4 max-w-4xl text-sm leading-7 text-slate-600 dark:text-slate-300">
+                {copy.intro}
+              </p>
+            </div>
+            <div class="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
+              <div class="rounded-2xl border border-slate-200/60 bg-white/55 p-4 dark:border-white/10 dark:bg-white/[0.04]">
+                <div class="text-3xl font-black text-slate-900 dark:text-white">{clusterTools.length}</div>
+                <div class="mt-1 text-[10px] font-black uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">{copy.toolCountLabel}</div>
+              </div>
+              <div class="rounded-2xl border border-slate-200/60 bg-white/55 p-4 dark:border-white/10 dark:bg-white/[0.04]">
+                <div class="text-3xl font-black text-slate-900 dark:text-white">{groups.length}</div>
+                <div class="mt-1 text-[10px] font-black uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">{statCopy.groups}</div>
+              </div>
+              <div class="rounded-2xl border border-slate-200/60 bg-white/55 p-4 dark:border-white/10 dark:bg-white/[0.04]">
+                <div class="text-3xl font-black text-slate-900 dark:text-white">100%</div>
+                <div class="mt-1 text-[10px] font-black uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">{statCopy.exports}</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-10">
+          <div class="mb-6 max-w-4xl">
+            <h2 class="flex items-center gap-3 text-2xl font-black tracking-tight text-slate-900 dark:text-white md:text-3xl">
+              <span class="h-8 w-1 rounded-full bg-amber-500 dark:shadow-[0_0_12px_rgba(245,158,11,0.6)]"></span>
+              {copy.title}
+            </h2>
+            <p class="mt-3 text-sm font-medium leading-7 text-slate-500 dark:text-slate-400">
+              {copy.summary}
+            </p>
+          </div>
+
+          <div class="grid gap-5 xl:grid-cols-4">
+            {groups.map((group) => (
+              <article class="glass-card group/card relative flex min-h-[420px] flex-col overflow-hidden p-6">
+                <div class="absolute inset-0 bg-gradient-to-br from-transparent to-amber-500/5 opacity-0 transition-opacity duration-500 group-hover/card:opacity-100 dark:to-amber-500/10"></div>
+                <div class="relative z-10 flex h-full flex-col">
+                  <div class="mb-5">
+                    <p class="mb-2 text-[10px] font-black uppercase tracking-[0.22em] text-amber-600/80 dark:text-amber-500/70">
+                      {group.tools.length} {copy.toolCountLabel}
+                    </p>
+                    <h3 class="text-xl font-black tracking-tight text-slate-900 dark:text-white">{group.title}</h3>
+                    <p class="mt-3 text-sm leading-7 text-slate-500 dark:text-slate-400">{group.description}</p>
+                  </div>
+
+                  <div class="grid gap-2">
+                    {group.tools.map((tool) => (
+                      <a
+                        href={tool.href}
+                        data-chart-tool={tool.slug}
+                        class="group/tool flex min-h-[54px] items-center gap-3 rounded-2xl border border-slate-200/60 bg-white/45 px-3.5 py-3 transition-all hover:border-amber-400 hover:bg-white/80 dark:border-slate-700/80 dark:bg-slate-900/35 dark:hover:border-amber-500/50 dark:hover:bg-white/5"
+                      >
+                        <span
+                          class="inline-flex shrink-0 text-slate-400 transition-all duration-300 group-hover/tool:scale-110 group-hover/tool:text-amber-500 dark:text-slate-500"
+                          set:html={getIconSvg(tool.icon, 19)}
+                        />
+                        <span class="min-w-0 flex-1">
+                          <span class="block truncate text-sm font-bold text-slate-800 transition-colors group-hover/tool:text-amber-700 dark:text-slate-100 dark:group-hover/tool:text-amber-400">
+                            {tool.name}
+                          </span>
+                          <span class="mt-1 block truncate text-[11px] text-slate-500 dark:text-slate-400">
+                            {tool.categoryName}
+                          </span>
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="mb-10">
+          <div class="mb-6 max-w-4xl">
+            <h2 class="flex items-center gap-3 text-2xl font-black tracking-tight text-slate-900 dark:text-white md:text-3xl">
+              <span class="h-8 w-1 rounded-full bg-amber-500 dark:shadow-[0_0_12px_rgba(245,158,11,0.6)]"></span>
+              {copy.workflow.title}
+            </h2>
+          </div>
+          <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {copy.workflow.items.map((item, index) => (
+              <article class="rounded-3xl border border-slate-200/60 bg-white/60 p-5 shadow-sm backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/40">
+                <div class="mb-4 flex items-center justify-between gap-3">
+                  <h3 class="text-sm font-black uppercase tracking-[0.16em] text-slate-900 dark:text-white">{item.label}</h3>
+                  <span class="rounded-full bg-amber-100 px-2.5 py-1 text-[10px] font-black text-amber-700 dark:bg-amber-500/10 dark:text-amber-400">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                </div>
+                <p class="min-h-[72px] text-xs font-medium leading-6 text-slate-500 dark:text-slate-400">{item.text}</p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  {item.slugs.map((slug) => {
+                    const tool = clusterToolBySlug.get(slug);
+                    return tool ? (
+                      <a
+                        href={tool.href}
+                        class="inline-flex max-w-full items-center gap-1.5 rounded-full border border-slate-200 bg-white/70 px-3 py-1.5 text-xs font-bold text-slate-700 transition-colors hover:border-amber-400 hover:text-amber-700 dark:border-slate-700 dark:bg-slate-800/70 dark:text-slate-200 dark:hover:border-amber-500/50 dark:hover:text-amber-400"
+                      >
+                        <span class="inline-flex shrink-0 text-slate-400 dark:text-slate-500" set:html={getIconSvg(tool.icon, 14)} />
+                        <span class="truncate">{tool.name}</span>
+                      </a>
+                    ) : null;
+                  })}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="mb-10 rounded-3xl border border-slate-200/60 glass p-6 shadow-xl backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/40">
+          <div class="mb-5 flex items-center justify-between gap-4">
+            <h2 class="text-xl font-black tracking-tight text-slate-900 dark:text-white">{copy.relatedLinksTitle}</h2>
+          </div>
+          <div class="grid gap-3 md:grid-cols-3">
+            {relatedLinks.map((link) => (
+              <a
+                href={link.href}
+                class="group/link flex items-center gap-4 rounded-2xl border border-slate-200/60 bg-white/50 p-4 transition-all hover:border-amber-400 hover:bg-white/80 dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-amber-500/50 dark:hover:bg-white/[0.06]"
+              >
+                <span
+                  class="inline-flex shrink-0 text-slate-400 transition-all group-hover/link:scale-110 group-hover/link:text-amber-500 dark:text-slate-500"
+                  set:html={getIconSvg(link.icon, 20)}
+                />
+                <span class="min-w-0">
+                  <span class="block truncate text-sm font-black text-slate-900 transition-colors group-hover/link:text-amber-700 dark:text-white dark:group-hover/link:text-amber-400">
+                    {link.label}
+                  </span>
+                  <span class="mt-1 block truncate text-[11px] font-medium text-slate-500 dark:text-slate-400">
+                    {link.text}
+                  </span>
+                </span>
+              </a>
+            ))}
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <Footer locale={locale} />
+  </div>
+
+  <MobileBottomNav client:load locale={locale} navMessages={mobileNavMessages} />
+</BaseLayout>

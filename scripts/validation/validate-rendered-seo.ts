@@ -81,6 +81,20 @@ const checks: RenderedSeoCheck[] = [
     ],
   },
   {
+    name: 'English chart generators cluster',
+    path: '/en/tools/chart-generators/',
+    titleIncludes: 'Chart',
+    descriptionIncludes: 'chart',
+    h1Includes: 'Chart',
+    schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList', 'BreadcrumbList'],
+    bodyMustInclude: [
+      'Chart Generators &amp; Data Visualization Tools',
+      '/en/tools/bar-chart-generator/',
+      '/en/tools/line-chart-generator/',
+      '/en/categories/charts/',
+    ],
+  },
+  {
     name: 'English privacy page',
     path: '/en/privacy/',
     titleIncludes: 'Privacy Policy',
@@ -142,6 +156,19 @@ const checks: RenderedSeoCheck[] = [
       'data-image-tool-cluster',
       '/en/tools/image-editing-converters/',
       '/en/tools/image-converter/',
+    ],
+  },
+  {
+    name: 'Chart tool cluster backlink',
+    path: '/en/tools/bar-chart-generator/',
+    titleIncludes: 'Bar Chart',
+    descriptionIncludes: 'chart',
+    h1Includes: 'Bar Chart',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    bodyMustInclude: [
+      'data-chart-tool-cluster',
+      '/en/tools/chart-generators/',
+      '/en/tools/line-chart-generator/',
     ],
   },
   {

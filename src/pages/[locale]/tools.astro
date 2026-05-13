@@ -12,6 +12,7 @@ import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
 import Footer from '@/components/layout/Footer.astro';
 import ToolsGrid from '@/components/tools/ToolsGrid.astro';
 import CategorySpotlightSection from '@/components/discovery/CategorySpotlightSection.astro';
+import ChartToolClusterSection from '@/components/discovery/ChartToolClusterSection.astro';
 import ComparisonGuideSection from '@/components/discovery/ComparisonGuideSection.astro';
 import CreatorSeoClusterSection from '@/components/discovery/CreatorSeoClusterSection.astro';
 import ImageToolClusterSection from '@/components/discovery/ImageToolClusterSection.astro';
@@ -23,6 +24,11 @@ import { isValidLocale } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadBaseMessages } from '@/lib/translations';
 import { buildCategoryDiscoveryItemList, buildCategoryDiscoverySpotlights } from '@/lib/discovery-surface';
+import {
+  buildChartToolClusterGroups,
+  chartToolClusterPath,
+  getChartToolClusterCopy,
+} from '@/lib/chart-tool-cluster';
 import { buildComparisonGuides, getComparisonUiCopy } from '@/lib/comparison-surfaces';
 import {
   buildCreatorSeoClusterGroups,
@@ -153,6 +159,13 @@ const imageToolGroups = buildImageToolClusterGroups(
   toolNames,
   toolDescriptions
 );
+const chartToolCopy = getChartToolClusterCopy(locale);
+const chartToolGroups = buildChartToolClusterGroups(
+  locale,
+  categoryMessages,
+  toolNames,
+  toolDescriptions
+);
 const normalizedSearchQuery = normalizeSearchText(searchQuery);
 const searchTokens = normalizedSearchQuery ? normalizedSearchQuery.split(' ').filter(Boolean) : [];
 const initialSearchResults = normalizedSearchQuery
@@ -263,6 +276,16 @@ const toolsCollectionData = {
           href={buildLocalizedPagePath(locale, imageToolClusterPath)}
           groups={imageToolGroups}
           toolCountLabel={imageToolCopy.toolCountLabel}
+        />
+        <ChartToolClusterSection
+          compact
+          eyebrow={chartToolCopy.eyebrow}
+          title={chartToolCopy.title}
+          description={chartToolCopy.description}
+          ctaLabel={chartToolCopy.ctaLabel}
+          href={buildLocalizedPagePath(locale, chartToolClusterPath)}
+          groups={chartToolGroups}
+          toolCountLabel={chartToolCopy.toolCountLabel}
         />
         <CategorySpotlightSection
           eyebrow={siteMessages.name || 'U2Tool'}

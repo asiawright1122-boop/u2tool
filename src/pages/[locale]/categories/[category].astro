@@ -11,6 +11,7 @@ import StaticSidebar from '@/components/layout/StaticSidebar.astro';
 import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
 import Footer from '@/components/layout/Footer.astro';
 import CategorySupportSection from '@/components/categories/CategorySupportSection.astro';
+import ChartToolClusterSection from '@/components/discovery/ChartToolClusterSection.astro';
 import CreatorSeoClusterSection from '@/components/discovery/CreatorSeoClusterSection.astro';
 import ImageToolClusterSection from '@/components/discovery/ImageToolClusterSection.astro';
 import Breadcrumb from '@/components/layout/Breadcrumb.astro';
@@ -25,6 +26,11 @@ import { loadBaseUiMessages } from '@/lib/translations';
 import { getCategoryPageSeo } from '@/lib/seo';
 import { buildLocalizedPagePath, buildLocalizedPageUrl, getHreflang } from '@/lib/seo';
 import { getCategorySupportContent } from '@/lib/category-support';
+import {
+  buildChartToolClusterGroups,
+  chartToolClusterPath,
+  getChartToolClusterCopy,
+} from '@/lib/chart-tool-cluster';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
 import {
@@ -96,6 +102,10 @@ const creatorSeoGroups = category === 'generators'
 const imageToolCopy = getImageToolClusterCopy(locale);
 const imageToolGroups = category === 'image'
   ? buildImageToolClusterGroups(locale, categoryMessages, categoryToolNames, categoryToolDescriptions)
+  : [];
+const chartToolCopy = getChartToolClusterCopy(locale);
+const chartToolGroups = category === 'charts'
+  ? buildChartToolClusterGroups(locale, categoryMessages, categoryToolNames, categoryToolDescriptions)
   : [];
 
 const breadcrumbItems = [
@@ -207,6 +217,18 @@ const collectionData = {
             href={buildLocalizedPagePath(locale, imageToolClusterPath)}
             groups={imageToolGroups}
             toolCountLabel={imageToolCopy.toolCountLabel}
+          />
+        )}
+
+        {category === 'charts' && (
+          <ChartToolClusterSection
+            eyebrow={chartToolCopy.eyebrow}
+            title={chartToolCopy.title}
+            description={chartToolCopy.description}
+            ctaLabel={chartToolCopy.ctaLabel}
+            href={buildLocalizedPagePath(locale, chartToolClusterPath)}
+            groups={chartToolGroups}
+            toolCountLabel={chartToolCopy.toolCountLabel}
           />
         )}
 
