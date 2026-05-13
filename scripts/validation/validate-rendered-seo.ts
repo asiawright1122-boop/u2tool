@@ -114,6 +114,7 @@ const checks: RenderedSeoCheck[] = [
       'data-creator-seo-tool-cluster',
       '/en/tools/creator-seo-generators/',
       '/en/tools/youtube-title-generator/',
+      '/en/tools/youtube-thumbnail-generator/',
     ],
   },
   {
