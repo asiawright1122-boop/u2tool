@@ -4,9 +4,9 @@
 
 This audit checks tool support content against search-engine quality expectations and the actual U2Tool browser-first implementation. The primary recovery risk addressed here is not raw indexability: GSC Coverage showed indexed pages continued to rise while impressions collapsed. The next defensible layer is content trust, overclaiming, and thin support content.
 
-- Tool message files scanned: 5380
-- English tool files scanned: 538
-- Popular English tool files checked for depth: 84
+- Tool message files scanned: 5480
+- English tool files scanned: 548
+- Popular English tool files checked for depth: 94
 - Files with high-confidence implementation overclaims: 15
 - Files with medium-confidence claims for future review: 2
 - Popular English files with depth gaps: 16

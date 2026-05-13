@@ -137,6 +137,53 @@ const POPULAR_UTILITY_PROBES: Record<string, ToolProbe> = {
     fields: ['title', 'links'],
     actions: ['copy'],
   },
+  'youtube-tags-generator': {
+    fields: ['topic', 'keyword'],
+    actions: ['copy'],
+  },
+  'tiktok-hashtag-generator': {
+    fields: ['topic', 'keyword'],
+    options: ['playful', 'bold'],
+    actions: ['copy'],
+  },
+  'instagram-caption-generator': {
+    fields: ['topic', 'cta'],
+    options: ['friendly', 'playful'],
+    actions: ['copy'],
+  },
+  'linkedin-post-generator': {
+    fields: ['topic', 'benefit'],
+    options: ['professional', 'concise'],
+    actions: ['copy'],
+  },
+  'blog-title-generator': {
+    fields: ['topic', 'keyword'],
+    options: ['professional', 'concise'],
+    actions: ['copy'],
+  },
+  'product-description-generator': {
+    fields: ['page', 'benefit'],
+    options: ['persuasive', 'concise'],
+    actions: ['copy'],
+  },
+  'email-preview-text-generator': {
+    fields: ['topic', 'benefit'],
+    options: ['persuasive', 'playful'],
+    actions: ['copy'],
+  },
+  'faq-generator': {
+    fields: ['topic', 'benefit'],
+    actions: ['copy'],
+  },
+  'seo-title-generator': {
+    fields: ['page', 'keyword'],
+    results: ['option'],
+  },
+  'tweet-generator': {
+    fields: ['topic', 'cta'],
+    options: ['concise', 'bold'],
+    actions: ['copy'],
+  },
   'linkedin-headline-generator': {
     fields: ['jobTitle', 'skills'],
     actions: ['copy'],

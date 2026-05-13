@@ -1025,6 +1025,114 @@
           { key: 'cta', label: text('fields', 'cta'), type: 'text', placeholder: text('placeholders', 'cta') },
           { key: 'links', label: text('fields', 'links'), type: 'textarea', placeholder: text('placeholders', 'youtubeLinks') },
         ];
+      case 'youtube-tags-generator':
+        return [
+          { key: 'topic', label: text('fields', 'topic'), type: 'text', placeholder: text('placeholders', 'youtubeTopic') },
+          { key: 'keyword', label: text('fields', 'keyword'), type: 'text', placeholder: text('placeholders', 'youtubeKeyword') },
+          { key: 'audience', label: text('fields', 'audience'), type: 'text', placeholder: text('placeholders', 'youtubeAudience') },
+        ];
+      case 'tiktok-hashtag-generator':
+        return [
+          { key: 'topic', label: text('fields', 'topic'), type: 'text', placeholder: text('placeholders', 'instagramTopic') },
+          { key: 'keyword', label: text('fields', 'keyword'), type: 'text', placeholder: text('placeholders', 'instagramKeyword') },
+          { key: 'audience', label: text('fields', 'audience'), type: 'text', placeholder: text('placeholders', 'creatorAudience') },
+          { key: 'tone', label: text('fields', 'tone'), type: 'select', options: [
+            { label: text('options', 'friendly'), value: 'friendly' },
+            { label: text('options', 'playful'), value: 'playful' },
+            { label: text('options', 'bold'), value: 'bold' },
+            { label: text('options', 'concise'), value: 'concise' },
+          ] },
+        ];
+      case 'instagram-caption-generator':
+        return [
+          { key: 'topic', label: text('fields', 'topic'), type: 'text', placeholder: text('placeholders', 'instagramTopic') },
+          { key: 'keyword', label: text('fields', 'keyword'), type: 'text', placeholder: text('placeholders', 'instagramKeyword') },
+          { key: 'audience', label: text('fields', 'audience'), type: 'text', placeholder: text('placeholders', 'creatorAudience') },
+          { key: 'cta', label: text('fields', 'cta'), type: 'text', placeholder: text('placeholders', 'cta') },
+          { key: 'tone', label: text('fields', 'tone'), type: 'select', options: [
+            { label: text('options', 'friendly'), value: 'friendly' },
+            { label: text('options', 'playful'), value: 'playful' },
+            { label: text('options', 'bold'), value: 'bold' },
+            { label: text('options', 'professional'), value: 'professional' },
+          ] },
+        ];
+      case 'linkedin-post-generator':
+        return [
+          { key: 'topic', label: text('fields', 'topic'), type: 'text', placeholder: text('placeholders', 'emailTopic') },
+          { key: 'audience', label: text('fields', 'audience'), type: 'text', placeholder: text('placeholders', 'metaAudience') },
+          { key: 'benefit', label: text('fields', 'benefit'), type: 'text', placeholder: text('placeholders', 'emailBenefit') },
+          { key: 'cta', label: text('fields', 'cta'), type: 'text', placeholder: text('placeholders', 'cta') },
+          { key: 'tone', label: text('fields', 'tone'), type: 'select', options: [
+            { label: text('options', 'professional'), value: 'professional' },
+            { label: text('options', 'friendly'), value: 'friendly' },
+            { label: text('options', 'persuasive'), value: 'persuasive' },
+            { label: text('options', 'concise'), value: 'concise' },
+          ] },
+        ];
+      case 'blog-title-generator':
+        return [
+          { key: 'topic', label: text('fields', 'topic'), type: 'text', placeholder: text('placeholders', 'youtubeTopic') },
+          { key: 'keyword', label: text('fields', 'keyword'), type: 'text', placeholder: text('placeholders', 'youtubeKeyword') },
+          { key: 'audience', label: text('fields', 'audience'), type: 'text', placeholder: text('placeholders', 'metaAudience') },
+          { key: 'tone', label: text('fields', 'tone'), type: 'select', options: [
+            { label: text('options', 'professional'), value: 'professional' },
+            { label: text('options', 'friendly'), value: 'friendly' },
+            { label: text('options', 'persuasive'), value: 'persuasive' },
+            { label: text('options', 'concise'), value: 'concise' },
+          ] },
+        ];
+      case 'product-description-generator':
+        return [
+          { key: 'page', label: text('fields', 'page'), type: 'text', placeholder: text('placeholders', 'page') },
+          { key: 'keyword', label: text('fields', 'keyword'), type: 'text', placeholder: text('placeholders', 'keyword') },
+          { key: 'audience', label: text('fields', 'audience'), type: 'text', placeholder: text('placeholders', 'metaAudience') },
+          { key: 'benefit', label: text('fields', 'benefit'), type: 'text', placeholder: text('placeholders', 'benefit') },
+          { key: 'tone', label: text('fields', 'tone'), type: 'select', options: [
+            { label: text('options', 'persuasive'), value: 'persuasive' },
+            { label: text('options', 'professional'), value: 'professional' },
+            { label: text('options', 'friendly'), value: 'friendly' },
+            { label: text('options', 'concise'), value: 'concise' },
+          ] },
+        ];
+      case 'email-preview-text-generator':
+        return [
+          { key: 'topic', label: text('fields', 'topic'), type: 'text', placeholder: text('placeholders', 'emailTopic') },
+          { key: 'audience', label: text('fields', 'audience'), type: 'text', placeholder: text('placeholders', 'metaAudience') },
+          { key: 'benefit', label: text('fields', 'benefit'), type: 'text', placeholder: text('placeholders', 'emailBenefit') },
+          { key: 'tone', label: text('fields', 'tone'), type: 'select', options: [
+            { label: text('options', 'professional'), value: 'professional' },
+            { label: text('options', 'friendly'), value: 'friendly' },
+            { label: text('options', 'persuasive'), value: 'persuasive' },
+            { label: text('options', 'playful'), value: 'playful' },
+          ] },
+        ];
+      case 'faq-generator':
+        return [
+          { key: 'topic', label: text('fields', 'topic'), type: 'text', placeholder: text('placeholders', 'page') },
+          { key: 'keyword', label: text('fields', 'keyword'), type: 'text', placeholder: text('placeholders', 'keyword') },
+          { key: 'audience', label: text('fields', 'audience'), type: 'text', placeholder: text('placeholders', 'metaAudience') },
+          { key: 'benefit', label: text('fields', 'benefit'), type: 'text', placeholder: text('placeholders', 'benefit') },
+        ];
+      case 'seo-title-generator':
+        return [
+          { key: 'page', label: text('fields', 'page'), type: 'text', placeholder: text('placeholders', 'page') },
+          { key: 'keyword', label: text('fields', 'keyword'), type: 'text', placeholder: text('placeholders', 'keyword') },
+          { key: 'audience', label: text('fields', 'audience'), type: 'text', placeholder: text('placeholders', 'metaAudience') },
+          { key: 'benefit', label: text('fields', 'benefit'), type: 'text', placeholder: text('placeholders', 'benefit') },
+        ];
+      case 'tweet-generator':
+        return [
+          { key: 'topic', label: text('fields', 'topic'), type: 'text', placeholder: text('placeholders', 'emailTopic') },
+          { key: 'audience', label: text('fields', 'audience'), type: 'text', placeholder: text('placeholders', 'metaAudience') },
+          { key: 'benefit', label: text('fields', 'benefit'), type: 'text', placeholder: text('placeholders', 'emailBenefit') },
+          { key: 'cta', label: text('fields', 'cta'), type: 'text', placeholder: text('placeholders', 'cta') },
+          { key: 'tone', label: text('fields', 'tone'), type: 'select', options: [
+            { label: text('options', 'concise'), value: 'concise' },
+            { label: text('options', 'friendly'), value: 'friendly' },
+            { label: text('options', 'persuasive'), value: 'persuasive' },
+            { label: text('options', 'bold'), value: 'bold' },
+          ] },
+        ];
       case 'linkedin-headline-generator':
         return [
           { key: 'jobTitle', label: text('fields', 'jobTitle'), type: 'text', placeholder: text('placeholders', 'jobTitle') },
@@ -1217,6 +1325,26 @@
         return { topic: text('placeholders', 'instagramTopic'), keyword: text('placeholders', 'instagramKeyword'), audience: text('placeholders', 'creatorAudience'), cta: text('placeholders', 'cta'), tone: 'friendly' };
       case 'youtube-description-generator':
         return { title: text('placeholders', 'youtubeTopic'), keyword: text('placeholders', 'youtubeKeyword'), audience: text('placeholders', 'youtubeAudience'), cta: text('placeholders', 'cta'), links: text('placeholders', 'youtubeLinks') };
+      case 'youtube-tags-generator':
+        return { topic: text('placeholders', 'youtubeTopic'), keyword: text('placeholders', 'youtubeKeyword'), audience: text('placeholders', 'youtubeAudience') };
+      case 'tiktok-hashtag-generator':
+        return { topic: text('placeholders', 'instagramTopic'), keyword: text('placeholders', 'instagramKeyword'), audience: text('placeholders', 'creatorAudience'), tone: 'playful' };
+      case 'instagram-caption-generator':
+        return { topic: text('placeholders', 'instagramTopic'), keyword: text('placeholders', 'instagramKeyword'), audience: text('placeholders', 'creatorAudience'), cta: text('placeholders', 'cta'), tone: 'friendly' };
+      case 'linkedin-post-generator':
+        return { topic: text('placeholders', 'emailTopic'), audience: text('placeholders', 'metaAudience'), benefit: text('placeholders', 'emailBenefit'), cta: text('placeholders', 'cta'), tone: 'professional' };
+      case 'blog-title-generator':
+        return { topic: text('placeholders', 'youtubeTopic'), keyword: text('placeholders', 'youtubeKeyword'), audience: text('placeholders', 'metaAudience'), tone: 'professional' };
+      case 'product-description-generator':
+        return { page: text('placeholders', 'page'), keyword: text('placeholders', 'keyword'), audience: text('placeholders', 'metaAudience'), benefit: text('placeholders', 'benefit'), tone: 'persuasive' };
+      case 'email-preview-text-generator':
+        return { topic: text('placeholders', 'emailTopic'), audience: text('placeholders', 'metaAudience'), benefit: text('placeholders', 'emailBenefit'), tone: 'persuasive' };
+      case 'faq-generator':
+        return { topic: text('placeholders', 'page'), keyword: text('placeholders', 'keyword'), audience: text('placeholders', 'metaAudience'), benefit: text('placeholders', 'benefit') };
+      case 'seo-title-generator':
+        return { page: text('placeholders', 'page'), keyword: text('placeholders', 'keyword'), audience: text('placeholders', 'metaAudience'), benefit: text('placeholders', 'benefit') };
+      case 'tweet-generator':
+        return { topic: text('placeholders', 'emailTopic'), audience: text('placeholders', 'metaAudience'), benefit: text('placeholders', 'emailBenefit'), cta: text('placeholders', 'cta'), tone: 'concise' };
       case 'linkedin-headline-generator':
         return { jobTitle: text('placeholders', 'jobTitle'), skills: text('placeholders', 'skills'), audience: text('placeholders', 'metaAudience'), achievement: text('placeholders', 'achievement'), tone: 'professional' };
       case 'linkedin-summary-generator':
@@ -1809,6 +1937,358 @@
       `What changed in ${topic}`,
       `Steal this ${topic} workflow`,
     ];
+  }
+
+  function cleanKeywordPart(value: string): string {
+    return value
+      .replace(/[^\p{L}\p{N}\s_-]+/gu, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function uniqueStrings(values: string[]): string[] {
+    const seen = new Set<string>();
+    const output: string[] = [];
+    for (const value of values.map((item) => item.trim()).filter(Boolean)) {
+      const key = value.toLocaleLowerCase();
+      if (seen.has(key)) continue;
+      seen.add(key);
+      output.push(value);
+    }
+    return output;
+  }
+
+  function hashtagFrom(value: string): string {
+    const compacted = cleanKeywordPart(value).replace(/[\s_-]+/g, '');
+    return compacted ? `#${compacted}` : '';
+  }
+
+  function youtubeTagOptions(): string[] {
+    const topic = inputs.topic || text('placeholders', 'youtubeTopic');
+    const keyword = inputs.keyword || text('placeholders', 'youtubeKeyword');
+    const audience = inputs.audience || text('placeholders', 'youtubeAudience');
+
+    const shared = [keyword, topic, audience, `${keyword} tips`, `${topic} guide`, `${audience} tools`];
+    const localized: Record<string, string[]> = {
+      zh: [`${keyword} 教程`, `${topic} 指南`, `${audience} 工具`, `${keyword} 入门`, `${topic} 实战`, '效率工具', '实用教程'],
+      ja: [`${keyword} 使い方`, `${topic} ガイド`, `${audience} ツール`, `${keyword} 入門`, `${topic} 実践`, '効率化ツール', 'チュートリアル'],
+      ko: [`${keyword} 사용법`, `${topic} 가이드`, `${audience} 도구`, `${keyword} 입문`, `${topic} 실전`, '생산성도구', '튜토리얼'],
+      es: [`${keyword} consejos`, `${topic} guía`, `herramientas para ${audience}`, `${keyword} fácil`, `${topic} tutorial`, 'productividad', 'tutorial'],
+      pt: [`${keyword} dicas`, `${topic} guia`, `ferramentas para ${audience}`, `${keyword} fácil`, `${topic} tutorial`, 'produtividade', 'tutorial'],
+      fr: [`${keyword} conseils`, `${topic} guide`, `outils pour ${audience}`, `${keyword} simple`, `${topic} tutoriel`, 'productivité', 'tutoriel'],
+      de: [`${keyword} Tipps`, `${topic} Anleitung`, `Tools für ${audience}`, `${keyword} einfach`, `${topic} Tutorial`, 'Produktivität', 'Tutorial'],
+      ru: [`${keyword} советы`, `${topic} руководство`, `инструменты для ${audience}`, `${keyword} просто`, `${topic} урок`, 'продуктивность', 'обучение'],
+      ar: [`نصائح ${keyword}`, `دليل ${topic}`, `أدوات لـ ${audience}`, `${keyword} للمبتدئين`, `شرح ${topic}`, 'إنتاجية', 'شرح عملي'],
+    };
+
+    return uniqueStrings([...shared, ...(localized[language()] || ['how to', 'tutorial', 'productivity', 'workflow', 'beginner guide'])])
+      .map(cleanKeywordPart)
+      .filter(Boolean)
+      .slice(0, 18);
+  }
+
+  function tiktokHashtagOptions(): string[] {
+    const topic = inputs.topic || text('placeholders', 'instagramTopic');
+    const keyword = inputs.keyword || text('placeholders', 'instagramKeyword');
+    const audience = inputs.audience || text('placeholders', 'creatorAudience');
+
+    const localized: Record<string, string[]> = {
+      zh: [topic, keyword, audience, `${keyword}技巧`, `${topic}日常`, `${audience}必看`, '新手创作者', '涨粉技巧', '内容创作', '实用分享'],
+      ja: [topic, keyword, audience, `${keyword}のコツ`, `${topic}日記`, `${audience}向け`, '初心者クリエイター', 'コンテンツ作成', 'おすすめ'],
+      ko: [topic, keyword, audience, `${keyword}팁`, `${topic}일상`, `${audience}추천`, '초보크리에이터', '콘텐츠제작', '실전팁'],
+      es: [topic, keyword, audience, `${keyword}tips`, `${topic}diario`, `para${audience}`, 'creadores', 'contenido', 'viral'],
+      pt: [topic, keyword, audience, `${keyword}dicas`, `${topic}diario`, `para${audience}`, 'criadores', 'conteudo', 'viral'],
+      fr: [topic, keyword, audience, `${keyword}astuces`, `${topic}quotidien`, `pour${audience}`, 'createurs', 'contenu', 'viral'],
+      de: [topic, keyword, audience, `${keyword}tipps`, `${topic}alltag`, `für${audience}`, 'creator', 'contentideen', 'viral'],
+      ru: [topic, keyword, audience, `${keyword}советы`, `${topic}каждыйдень`, `для${audience}`, 'создатели', 'контент', 'viral'],
+      ar: [topic, keyword, audience, `نصائح${keyword}`, `يوميات${topic}`, `لـ${audience}`, 'صناعالمحتوى', 'محتوى', 'انتشار'],
+    };
+
+    return uniqueStrings((localized[language()] || [topic, keyword, audience, `${keyword}tips`, `${topic}ideas`, 'creator', 'content', 'viral'])
+      .map(hashtagFrom))
+      .slice(0, 18);
+  }
+
+  function instagramCaptionOptions(): string[] {
+    const topic = inputs.topic || text('placeholders', 'instagramTopic');
+    const keyword = inputs.keyword || text('placeholders', 'instagramKeyword');
+    const audience = inputs.audience || text('placeholders', 'creatorAudience');
+    const cta = inputs.cta || text('placeholders', 'cta');
+    const tone = text('options', inputs.tone || 'friendly');
+    const tags = tiktokHashtagOptions().slice(0, 4).join(' ');
+
+    switch (language()) {
+      case 'zh':
+        return [
+          `如果你也在研究${topic}，先收藏这份${keyword}思路。\n\n适合${audience}快速上手：先找一个小场景，做一次真实尝试，再复盘哪里可以改进。\n\n${cta}\n\n${tags}`,
+          `${topic}不需要一开始就复杂。\n\n今天这个角度适合${audience}：用${keyword}把灵感变成可执行清单，然后持续迭代。\n\n${cta}\n\n${tags}`,
+          `${tone}提醒：真正有用的${topic}，往往来自可重复的小动作。\n\n给${audience}的建议：先做、再记录、最后优化。\n\n${cta}\n\n${tags}`,
+        ];
+      case 'ja':
+        return [
+          `${topic}をもっと実用的にしたいなら、この${keyword}の考え方を保存してください。\n\n${audience}は小さな場面から試し、結果を見て改善すると続けやすくなります。\n\n${cta}\n\n${tags}`,
+          `${topic}は最初から複雑にしなくて大丈夫。\n\n${keyword}を使って、アイデアをすぐ動けるチェックリストに変えましょう。\n\n${cta}\n\n${tags}`,
+          `${tone}なメモ：良い${topic}は、繰り返せる小さな習慣から生まれます。\n\n${audience}向けに、試す、記録する、改善する流れを作りましょう。\n\n${cta}\n\n${tags}`,
+        ];
+      case 'ko':
+        return [
+          `${topic}를 더 실용적으로 만들고 싶다면 이 ${keyword} 아이디어를 저장해 두세요.\n\n${audience}은 작은 상황에서 먼저 시도하고 결과를 보며 개선하면 꾸준히 이어가기 쉽습니다.\n\n${cta}\n\n${tags}`,
+          `${topic}는 처음부터 복잡할 필요가 없습니다.\n\n${keyword}로 아이디어를 바로 실행할 수 있는 체크리스트로 바꿔보세요.\n\n${cta}\n\n${tags}`,
+          `${tone} 메모: 좋은 ${topic}는 반복 가능한 작은 행동에서 나옵니다.\n\n${audience}에게는 시도, 기록, 개선의 흐름이 가장 중요합니다.\n\n${cta}\n\n${tags}`,
+        ];
+      case 'es':
+        return [
+          `Si estás trabajando en ${topic}, guarda esta idea de ${keyword}.\n\nPara ${audience}, empieza con una situación pequeña, prueba algo real y ajusta con lo aprendido.\n\n${cta}\n\n${tags}`,
+          `${topic} no tiene que ser complicado desde el inicio.\n\nConvierte ${keyword} en una lista accionable y repítela con intención.\n\n${cta}\n\n${tags}`,
+          `Nota ${tone}: el mejor ${topic} suele venir de hábitos pequeños y repetibles.\n\nPrueba, mide y mejora.\n\n${cta}\n\n${tags}`,
+        ];
+      case 'pt':
+        return [
+          `Se você está trabalhando com ${topic}, salve esta ideia de ${keyword}.\n\nPara ${audience}, comece com um cenário pequeno, teste algo real e ajuste com o aprendizado.\n\n${cta}\n\n${tags}`,
+          `${topic} não precisa ser complicado no começo.\n\nTransforme ${keyword} em uma lista acionável e repita com intenção.\n\n${cta}\n\n${tags}`,
+          `Nota ${tone}: o melhor ${topic} costuma vir de hábitos pequenos e repetíveis.\n\nTeste, registre e melhore.\n\n${cta}\n\n${tags}`,
+        ];
+      case 'fr':
+        return [
+          `Si vous travaillez sur ${topic}, gardez cette idée ${keyword} sous la main.\n\nPour ${audience}, commencez par un cas simple, testez en vrai, puis améliorez.\n\n${cta}\n\n${tags}`,
+          `${topic} n'a pas besoin d'être compliqué au départ.\n\nTransformez ${keyword} en checklist actionnable et répétez ce qui fonctionne.\n\n${cta}\n\n${tags}`,
+          `Note ${tone} : le meilleur ${topic} vient souvent de petites habitudes répétables.\n\nTestez, observez, améliorez.\n\n${cta}\n\n${tags}`,
+        ];
+      case 'de':
+        return [
+          `Wenn du an ${topic} arbeitest, speichere dir diese ${keyword}-Idee.\n\nFür ${audience}: Starte mit einem kleinen Szenario, teste es echt und verbessere danach.\n\n${cta}\n\n${tags}`,
+          `${topic} muss am Anfang nicht kompliziert sein.\n\nMach aus ${keyword} eine umsetzbare Checkliste und wiederhole, was funktioniert.\n\n${cta}\n\n${tags}`,
+          `${tone}er Hinweis: Gutes ${topic} entsteht oft aus kleinen, wiederholbaren Routinen.\n\nTesten, notieren, verbessern.\n\n${cta}\n\n${tags}`,
+        ];
+      case 'ru':
+        return [
+          `Если вы работаете над ${topic}, сохраните эту идею про ${keyword}.\n\nДля ${audience}: начните с небольшого сценария, проверьте на практике и улучшайте по результату.\n\n${cta}\n\n${tags}`,
+          `${topic} не обязан быть сложным с самого начала.\n\nПревратите ${keyword} в понятный список действий и повторяйте то, что работает.\n\n${cta}\n\n${tags}`,
+          `${tone} заметка: сильный ${topic} часто строится на маленьких повторяемых шагах.\n\nПробуйте, фиксируйте, улучшайте.\n\n${cta}\n\n${tags}`,
+        ];
+      case 'ar':
+        return [
+          `إذا كنت تعمل على ${topic}، فاحتفظ بفكرة ${keyword} هذه.\n\nلـ ${audience}: ابدأ بحالة صغيرة، جرّب شيئًا حقيقيًا، ثم حسّن بناءً على النتيجة.\n\n${cta}\n\n${tags}`,
+          `${topic} لا يجب أن يكون معقدًا من البداية.\n\nحوّل ${keyword} إلى قائمة خطوات قابلة للتنفيذ وكرر ما ينجح.\n\n${cta}\n\n${tags}`,
+          `ملاحظة بنبرة ${tone}: أفضل ${topic} يأتي غالبًا من خطوات صغيرة قابلة للتكرار.\n\nجرّب، سجّل، حسّن.\n\n${cta}\n\n${tags}`,
+        ];
+      default:
+        return [
+          `If you are working on ${topic}, save this ${keyword} idea.\n\nFor ${audience}, start with one small use case, test it in the real world, then improve what worked.\n\n${cta}\n\n${tags}`,
+          `${topic} does not need to be complicated at the start.\n\nTurn ${keyword} into a short action list, repeat the useful parts, and keep refining.\n\n${cta}\n\n${tags}`,
+          `${tone} reminder: useful ${topic} usually comes from small repeatable moves.\n\nTry it, track it, improve it.\n\n${cta}\n\n${tags}`,
+        ];
+    }
+  }
+
+  function blogTitleOptions(): string[] {
+    const topic = inputs.topic || text('placeholders', 'youtubeTopic');
+    const keyword = inputs.keyword || text('placeholders', 'youtubeKeyword');
+    const audience = inputs.audience || text('placeholders', 'metaAudience');
+
+    switch (language()) {
+      case 'zh':
+        return [`${audience}如何开始使用${topic}`, `${keyword}完整指南：从基础到实战`, `${topic}的 9 个实用方法`, `选择${keyword}前需要知道的事`, `${audience}提升效率的${topic}清单`, `${topic}常见错误与修正方法`, `为什么${keyword}值得重新评估`, `${topic}入门：简单但有效的步骤`];
+      case 'ja':
+        return [`${audience}が${topic}を始める方法`, `${keyword}完全ガイド：基礎から実践まで`, `${topic}を活用する9つの方法`, `${keyword}を選ぶ前に知るべきこと`, `${audience}向け${topic}チェックリスト`, `${topic}のよくある失敗と直し方`, `${keyword}を見直すべき理由`, `${topic}入門：シンプルで効果的な手順`];
+      case 'ko':
+        return [`${audience}이 ${topic}를 시작하는 방법`, `${keyword} 완전 가이드: 기초부터 실전까지`, `${topic}를 활용하는 9가지 방법`, `${keyword} 선택 전에 알아야 할 것`, `${audience}을 위한 ${topic} 체크리스트`, `${topic}의 흔한 실수와 해결법`, `${keyword}를 다시 검토해야 하는 이유`, `${topic} 입문: 단순하지만 효과적인 단계`];
+      case 'es':
+        return [`Cómo ${audience} puede empezar con ${topic}`, `${keyword}: guía completa de lo básico a lo práctico`, `9 formas útiles de aplicar ${topic}`, `Qué saber antes de elegir ${keyword}`, `Checklist de ${topic} para ${audience}`, `Errores comunes en ${topic} y cómo corregirlos`, `Por qué vale la pena revisar ${keyword}`, `${topic} para principiantes: pasos simples que funcionan`];
+      case 'pt':
+        return [`Como ${audience} pode começar com ${topic}`, `${keyword}: guia completo do básico ao prático`, `9 formas úteis de aplicar ${topic}`, `O que saber antes de escolher ${keyword}`, `Checklist de ${topic} para ${audience}`, `Erros comuns em ${topic} e como corrigir`, `Por que vale revisar ${keyword}`, `${topic} para iniciantes: passos simples que funcionam`];
+      case 'fr':
+        return [`Comment ${audience} peut commencer avec ${topic}`, `${keyword} : guide complet du débutant à la pratique`, `9 façons utiles d’appliquer ${topic}`, `Ce qu’il faut savoir avant de choisir ${keyword}`, `Checklist ${topic} pour ${audience}`, `Erreurs courantes avec ${topic} et corrections`, `Pourquoi réévaluer ${keyword}`, `${topic} pour débuter : étapes simples et utiles`];
+      case 'de':
+        return [`Wie ${audience} mit ${topic} startet`, `${keyword}: Vollständiger Leitfaden von Grundlagen bis Praxis`, `9 nützliche Wege für ${topic}`, `Was du vor der Wahl von ${keyword} wissen solltest`, `${topic}-Checkliste für ${audience}`, `Häufige ${topic}-Fehler und wie du sie behebst`, `Warum du ${keyword} neu bewerten solltest`, `${topic} für Einsteiger: einfache Schritte mit Wirkung`];
+      case 'ru':
+        return [`Как ${audience} начать с ${topic}`, `${keyword}: полное руководство от основ к практике`, `9 полезных способов использовать ${topic}`, `Что знать перед выбором ${keyword}`, `Чеклист ${topic} для ${audience}`, `Частые ошибки в ${topic} и как их исправить`, `Почему стоит пересмотреть ${keyword}`, `${topic} для новичков: простые и рабочие шаги`];
+      case 'ar':
+        return [`كيف يبدأ ${audience} مع ${topic}`, `${keyword}: دليل كامل من الأساسيات إلى التطبيق`, `9 طرق مفيدة لاستخدام ${topic}`, `ما يجب معرفته قبل اختيار ${keyword}`, `قائمة ${topic} لـ ${audience}`, `أخطاء شائعة في ${topic} وكيفية إصلاحها`, `لماذا يستحق ${keyword} إعادة التقييم`, `${topic} للمبتدئين: خطوات بسيطة وفعالة`];
+      default:
+        return [`How ${audience} can start with ${topic}`, `${keyword}: the complete guide from basics to practice`, `9 useful ways to apply ${topic}`, `What to know before choosing ${keyword}`, `A ${topic} checklist for ${audience}`, `Common ${topic} mistakes and how to fix them`, `Why ${keyword} is worth revisiting`, `${topic} for beginners: simple steps that work`];
+    }
+  }
+
+  function linkedinPostOptions(): string[] {
+    const topic = inputs.topic || text('placeholders', 'emailTopic');
+    const audience = inputs.audience || text('placeholders', 'metaAudience');
+    const benefit = inputs.benefit || text('placeholders', 'emailBenefit');
+    const cta = inputs.cta || text('placeholders', 'cta');
+    const tone = text('options', inputs.tone || 'professional');
+
+    switch (language()) {
+      case 'zh':
+        return [`${topic}最容易被忽略的一点：它不只是发布动作，而是帮助${audience}${benefit}的系统。\n\n我会从三个问题开始：\n1. 谁最需要这个变化？\n2. 哪个步骤能最快证明价值？\n3. 如何让下一次更容易复用？\n\n${cta}`, `给${audience}的一个${tone}建议：做${topic}时，先把承诺缩小到能验证的结果。\n\n如果它能${benefit}，再扩大流程和内容投入。\n\n${cta}`];
+      case 'ja':
+        return [`${topic}で見落としやすい点：単なる発信ではなく、${audience}が${benefit}ための仕組みです。\n\n最初に確認したいこと：\n1. 誰が一番必要としているか\n2. どの一歩で価値を早く示せるか\n3. 次回どう再利用しやすくするか\n\n${cta}`, `${audience}への${tone}な提案：${topic}は、まず検証できる成果まで小さく始めましょう。\n\n${benefit}ことが見えたら、仕組みと発信を広げます。\n\n${cta}`];
+      case 'ko':
+        return [`${topic}에서 놓치기 쉬운 점: 단순한 발행이 아니라 ${audience}이 ${benefit}하도록 돕는 시스템이라는 것입니다.\n\n먼저 확인할 질문:\n1. 누가 가장 필요로 하는가?\n2. 어떤 단계가 가치를 가장 빨리 보여주는가?\n3. 다음번에 어떻게 재사용하기 쉽게 만들까?\n\n${cta}`, `${audience}에게 주는 ${tone} 제안: ${topic}는 검증 가능한 결과까지 작게 시작하세요.\n\n${benefit}할 수 있다는 신호가 보이면 흐름과 콘텐츠 투자를 넓히면 됩니다.\n\n${cta}`];
+      case 'es':
+        return [`Una parte subestimada de ${topic}: no es solo publicar, es crear un sistema que ayude a ${audience} a ${benefit}.\n\nEmpiezo con tres preguntas:\n1. ¿Quién necesita más este cambio?\n2. ¿Qué paso demuestra valor más rápido?\n3. ¿Cómo lo hacemos más reutilizable?\n\n${cta}`, `Una recomendación ${tone} para ${audience}: en ${topic}, reduce la promesa hasta un resultado verificable.\n\nSi ayuda a ${benefit}, escala el proceso y el contenido.\n\n${cta}`];
+      case 'pt':
+        return [`Um ponto subestimado em ${topic}: não é só publicar, é criar um sistema que ajuda ${audience} a ${benefit}.\n\nComeço com três perguntas:\n1. Quem mais precisa dessa mudança?\n2. Qual passo mostra valor mais rápido?\n3. Como tornar isso reutilizável?\n\n${cta}`, `Uma recomendação ${tone} para ${audience}: em ${topic}, reduza a promessa até um resultado verificável.\n\nSe ajudar a ${benefit}, amplie o processo e o conteúdo.\n\n${cta}`];
+      case 'fr':
+        return [`Un point souvent sous-estimé dans ${topic} : ce n’est pas seulement publier, c’est créer un système qui aide ${audience} à ${benefit}.\n\nJe pars de trois questions :\n1. Qui a le plus besoin de ce changement ?\n2. Quelle étape prouve la valeur le plus vite ?\n3. Comment le rendre réutilisable ?\n\n${cta}`, `Conseil ${tone} pour ${audience} : avec ${topic}, réduisez la promesse à un résultat vérifiable.\n\nSi cela aide à ${benefit}, développez ensuite le processus et le contenu.\n\n${cta}`];
+      case 'de':
+        return [`Ein oft übersehener Punkt bei ${topic}: Es geht nicht nur ums Veröffentlichen, sondern um ein System, das ${audience} hilft, ${benefit}.\n\nIch starte mit drei Fragen:\n1. Wer braucht diese Veränderung am meisten?\n2. Welcher Schritt zeigt am schnellsten Wert?\n3. Wie wird es wiederverwendbar?\n\n${cta}`, `${tone}er Rat für ${audience}: Reduziere ${topic} zuerst auf ein überprüfbares Ergebnis.\n\nWenn es hilft, ${benefit}, kannst du Prozess und Content ausbauen.\n\n${cta}`];
+      case 'ru':
+        return [`Недооцененная часть ${topic}: это не просто публикация, а система, которая помогает ${audience} ${benefit}.\n\nНачните с трех вопросов:\n1. Кому это нужно больше всего?\n2. Какой шаг быстрее всего покажет ценность?\n3. Как сделать это повторяемым?\n\n${cta}`, `${tone} совет для ${audience}: в ${topic} сначала сузьте обещание до проверяемого результата.\n\nЕсли это помогает ${benefit}, масштабируйте процесс и контент.\n\n${cta}`];
+      case 'ar':
+        return [`نقطة لا ينتبه لها كثيرون في ${topic}: الأمر ليس مجرد نشر، بل نظام يساعد ${audience} على ${benefit}.\n\nابدأ بثلاثة أسئلة:\n1. من يحتاج هذا التغيير أكثر؟\n2. أي خطوة تثبت القيمة أسرع؟\n3. كيف نجعلها قابلة للتكرار؟\n\n${cta}`, `نصيحة بنبرة ${tone} لـ ${audience}: في ${topic}، اجعل الوعد صغيرًا حتى يصبح قابلًا للتحقق.\n\nإذا ساعد على ${benefit}، وسّع العملية والمحتوى.\n\n${cta}`];
+      default:
+        return [`One underrated part of ${topic}: it is not just publishing, it is building a system that helps ${audience} ${benefit}.\n\nI would start with three questions:\n1. Who needs this change most?\n2. Which step proves value fastest?\n3. How can we make it easier to reuse next time?\n\n${cta}`, `A ${tone} recommendation for ${audience}: when working on ${topic}, shrink the promise until the result is easy to verify.\n\nIf it helps ${benefit}, then scale the process and the content.\n\n${cta}`];
+    }
+  }
+
+  function productDescriptionOutput(): string {
+    const product = inputs.page || text('placeholders', 'page');
+    const keyword = inputs.keyword || text('placeholders', 'keyword');
+    const audience = inputs.audience || text('placeholders', 'metaAudience');
+    const benefit = inputs.benefit || text('placeholders', 'benefit');
+    const tone = text('options', inputs.tone || 'persuasive');
+
+    switch (language()) {
+      case 'zh':
+        return `${product} 是一款面向${audience}的${keyword}工具，帮助你${benefit}。\n\n亮点：\n- 快速开始，不需要复杂设置\n- 适合日常工作、活动和内容流程\n- 结果清晰，方便复制和复核\n\n${tone}版本：用 ${product} 更快完成${keyword}相关任务，把注意力放回真正重要的决策上。`;
+      case 'ja':
+        return `${product} は${audience}向けの${keyword}ツールで、${benefit}ことを支援します。\n\n特徴：\n- 複雑な設定なしですぐ使える\n- 日常業務、キャンペーン、コンテンツ作成に便利\n- 結果が分かりやすく、コピーして確認しやすい\n\n${tone}版：${product}で${keyword}関連の作業を短時間で整え、重要な判断に集中できます。`;
+      case 'ko':
+        return `${product}는 ${audience}을 위한 ${keyword} 도구로, ${benefit}할 수 있도록 돕습니다.\n\n장점:\n- 복잡한 설정 없이 빠르게 시작\n- 일상 업무, 캠페인, 콘텐츠 흐름에 적합\n- 결과가 명확해 복사하고 검토하기 쉬움\n\n${tone} 버전: ${product}로 ${keyword} 관련 작업을 더 빠르게 정리하고 중요한 판단에 집중하세요.`;
+      case 'es':
+        return `${product} es una herramienta de ${keyword} para ${audience} que ayuda a ${benefit}.\n\nPuntos clave:\n- Empieza rápido sin configuración compleja\n- Útil para trabajo diario, campañas y contenido\n- Resultados claros, fáciles de copiar y revisar\n\nVersión ${tone}: usa ${product} para resolver tareas de ${keyword} más rápido y volver a las decisiones importantes.`;
+      case 'pt':
+        return `${product} é uma ferramenta de ${keyword} para ${audience} que ajuda a ${benefit}.\n\nDestaques:\n- Comece rápido, sem configuração complexa\n- Útil para trabalho diário, campanhas e conteúdo\n- Resultados claros, fáceis de copiar e revisar\n\nVersão ${tone}: use ${product} para concluir tarefas de ${keyword} mais rápido e voltar às decisões importantes.`;
+      case 'fr':
+        return `${product} est un outil ${keyword} pour ${audience} qui aide à ${benefit}.\n\nPoints forts :\n- Démarrage rapide, sans configuration complexe\n- Utile pour le travail quotidien, les campagnes et le contenu\n- Résultats clairs, faciles à copier et vérifier\n\nVersion ${tone} : utilisez ${product} pour traiter les tâches ${keyword} plus vite et revenir aux décisions importantes.`;
+      case 'de':
+        return `${product} ist ein ${keyword}-Tool für ${audience}, das hilft, ${benefit}.\n\nHighlights:\n- Schneller Start ohne komplexe Einrichtung\n- Nützlich für Alltag, Kampagnen und Content-Workflows\n- Klare Ergebnisse zum Kopieren und Prüfen\n\n${tone}e Version: Mit ${product} erledigst du ${keyword}-Aufgaben schneller und konzentrierst dich wieder auf wichtige Entscheidungen.`;
+      case 'ru':
+        return `${product} — это инструмент ${keyword} для ${audience}, который помогает ${benefit}.\n\nПреимущества:\n- Быстрый старт без сложной настройки\n- Подходит для ежедневной работы, кампаний и контента\n- Понятный результат, который легко скопировать и проверить\n\n${tone} версия: используйте ${product}, чтобы быстрее решать задачи ${keyword} и вернуться к важным решениям.`;
+      case 'ar':
+        return `${product} هي أداة ${keyword} موجهة إلى ${audience} وتساعد على ${benefit}.\n\nالمزايا:\n- بداية سريعة بدون إعدادات معقدة\n- مناسبة للعمل اليومي والحملات وتدفقات المحتوى\n- نتائج واضحة يسهل نسخها ومراجعتها\n\nنسخة بنبرة ${tone}: استخدم ${product} لإنجاز مهام ${keyword} بسرعة أكبر والعودة إلى القرارات الأهم.`;
+      default:
+        return `${product} is a ${keyword} tool for ${audience} that helps ${benefit}.\n\nHighlights:\n- Start quickly without complex setup\n- Useful for daily work, campaigns, and content workflows\n- Clear output that is easy to copy and review\n\n${tone} version: Use ${product} to handle ${keyword} tasks faster and get back to the decisions that matter.`;
+    }
+  }
+
+  function emailPreviewTextOptions(): string[] {
+    const topic = inputs.topic || text('placeholders', 'emailTopic');
+    const audience = inputs.audience || text('placeholders', 'metaAudience');
+    const benefit = inputs.benefit || text('placeholders', 'emailBenefit');
+
+    switch (language()) {
+      case 'zh':
+        return [`为${audience}准备的新内容，帮助你${benefit}。`, `${topic}已上线：更快获得清晰结果。`, `打开邮件，查看这份可直接使用的${topic}清单。`, `少一点反复，多一点进展：${benefit}。`, `${audience}本周可以马上尝试的${topic}方法。`];
+      case 'ja':
+        return [`${audience}向けに、${benefit}ための新しい内容です。`, `${topic}が公開されました。より早く明確な結果へ。`, `メールを開いて、すぐ使える${topic}チェックリストを確認しましょう。`, `迷いを減らし、前進を増やす：${benefit}。`, `${audience}が今週試せる${topic}の方法です。`];
+      case 'ko':
+        return [`${audience}이 ${benefit}할 수 있도록 준비한 새 내용입니다.`, `${topic}가 공개되었습니다: 더 빠르게 명확한 결과를 얻으세요.`, `메일을 열고 바로 쓸 수 있는 ${topic} 체크리스트를 확인하세요.`, `반복 작업은 줄이고 진전은 늘리세요: ${benefit}.`, `${audience}이 이번 주 바로 시도할 수 있는 ${topic} 방법입니다.`];
+      case 'es':
+        return [`Nuevo para ${audience}: una forma práctica de ${benefit}.`, `${topic} ya está listo: consigue resultados claros más rápido.`, `Abre el email y revisa esta checklist de ${topic} lista para usar.`, `Menos vueltas, más avance: ${benefit}.`, `Un método de ${topic} que ${audience} puede probar esta semana.`];
+      case 'pt':
+        return [`Novo para ${audience}: uma forma prática de ${benefit}.`, `${topic} já está pronto: obtenha resultados claros mais rápido.`, `Abra o email e veja esta checklist de ${topic} pronta para usar.`, `Menos retrabalho, mais avanço: ${benefit}.`, `Um método de ${topic} que ${audience} pode testar esta semana.`];
+      case 'fr':
+        return [`Nouveau pour ${audience} : une façon concrète de ${benefit}.`, `${topic} est prêt : obtenez des résultats clairs plus vite.`, `Ouvrez l’e-mail et consultez cette checklist ${topic} prête à l’emploi.`, `Moins d’allers-retours, plus d’avancée : ${benefit}.`, `Une méthode ${topic} que ${audience} peut tester cette semaine.`];
+      case 'de':
+        return [`Neu für ${audience}: ein praktischer Weg, ${benefit}.`, `${topic} ist bereit: schneller zu klaren Ergebnissen.`, `Öffne die E-Mail und nutze diese ${topic}-Checkliste.`, `Weniger Umwege, mehr Fortschritt: ${benefit}.`, `Eine ${topic}-Methode, die ${audience} diese Woche testen kann.`];
+      case 'ru':
+        return [`Новое для ${audience}: практичный способ ${benefit}.`, `${topic} готов: быстрее получайте понятный результат.`, `Откройте письмо и проверьте готовый чеклист ${topic}.`, `Меньше лишних шагов, больше прогресса: ${benefit}.`, `Метод ${topic}, который ${audience} может попробовать на этой неделе.`];
+      case 'ar':
+        return [`جديد لـ ${audience}: طريقة عملية من أجل ${benefit}.`, `${topic} جاهز: احصل على نتائج أوضح بسرعة أكبر.`, `افتح البريد وراجع قائمة ${topic} الجاهزة للاستخدام.`, `مراجعات أقل وتقدم أكثر: ${benefit}.`, `طريقة ${topic} يمكن لـ ${audience} تجربتها هذا الأسبوع.`];
+      default:
+        return [`New for ${audience}: a practical way to ${benefit}.`, `${topic} is ready: get clearer results faster.`, `Open the email for a copy-ready ${topic} checklist.`, `Less back-and-forth, more progress: ${benefit}.`, `A ${topic} method ${audience} can try this week.`];
+    }
+  }
+
+  function faqOutput(): string {
+    const topic = inputs.topic || text('placeholders', 'page');
+    const keyword = inputs.keyword || text('placeholders', 'keyword');
+    const audience = inputs.audience || text('placeholders', 'metaAudience');
+    const benefit = inputs.benefit || text('placeholders', 'benefit');
+
+    switch (language()) {
+      case 'zh':
+        return `问：${topic} 适合谁使用？\n答：它适合${audience}，尤其适合想要${benefit}的人。\n\n问：${keyword} 的核心价值是什么？\n答：核心价值是把输入整理成更清晰、可执行、方便复核的结果。\n\n问：使用前需要准备什么？\n答：准备主题、目标受众和你希望强调的价值即可。\n\n问：生成结果可以直接发布吗？\n答：可以作为草稿使用，但建议结合真实产品、品牌语气和事实再复核。`;
+      case 'ja':
+        return `Q: ${topic} は誰に向いていますか？\nA: ${audience}、特に${benefit}したい人に向いています。\n\nQ: ${keyword} の主な価値は何ですか？\nA: 入力を分かりやすく、実行しやすく、確認しやすい結果に整えることです。\n\nQ: 使う前に何が必要ですか？\nA: トピック、対象読者、強調したい価値を用意してください。\n\nQ: 結果をそのまま公開できますか？\nA: 草稿として使えますが、事実、ブランドのトーン、文脈に合わせて確認してください。`;
+      case 'ko':
+        return `Q: ${topic}는 누구에게 적합한가요?\nA: ${audience}, 특히 ${benefit}하고 싶은 사람에게 적합합니다.\n\nQ: ${keyword}의 핵심 가치는 무엇인가요?\nA: 입력을 더 명확하고 실행 가능하며 검토하기 쉬운 결과로 정리하는 것입니다.\n\nQ: 사용 전에 무엇을 준비해야 하나요?\nA: 주제, 대상, 강조할 가치를 준비하면 됩니다.\n\nQ: 생성된 결과를 바로 게시해도 되나요?\nA: 초안으로 사용할 수 있지만 사실, 브랜드 톤, 맥락에 맞게 검토하세요.`;
+      case 'es':
+        return `P: ¿Para quién es ${topic}?\nR: Es útil para ${audience}, especialmente si quieren ${benefit}.\n\nP: ¿Cuál es el valor principal de ${keyword}?\nR: Convertir los datos de entrada en un resultado más claro, accionable y fácil de revisar.\n\nP: ¿Qué necesito antes de usarlo?\nR: Tema, audiencia objetivo y el beneficio que quieres destacar.\n\nP: ¿Puedo publicar el resultado directamente?\nR: Úsalo como borrador y revísalo con tus datos reales, tono de marca y contexto.`;
+      case 'pt':
+        return `P: Para quem serve ${topic}?\nR: É útil para ${audience}, especialmente para quem quer ${benefit}.\n\nP: Qual é o valor principal de ${keyword}?\nR: Transformar entradas em um resultado mais claro, acionável e fácil de revisar.\n\nP: O que preciso antes de usar?\nR: Tema, público-alvo e o benefício que você quer destacar.\n\nP: Posso publicar o resultado direto?\nR: Use como rascunho e revise com dados reais, tom da marca e contexto.`;
+      case 'fr':
+        return `Q : À qui s’adresse ${topic} ?\nR : À ${audience}, surtout si l’objectif est de ${benefit}.\n\nQ : Quelle est la valeur principale de ${keyword} ?\nR : Transformer les entrées en résultat plus clair, actionnable et facile à vérifier.\n\nQ : Que faut-il préparer ?\nR : Un sujet, un public cible et le bénéfice à mettre en avant.\n\nQ : Le résultat peut-il être publié tel quel ?\nR : Utilisez-le comme brouillon et vérifiez les faits, le ton de marque et le contexte.`;
+      case 'de':
+        return `F: Für wen eignet sich ${topic}?\nA: Für ${audience}, besonders wenn sie ${benefit} möchten.\n\nF: Was ist der Kernnutzen von ${keyword}?\nA: Eingaben werden in ein klareres, umsetzbares und leichter prüfbares Ergebnis verwandelt.\n\nF: Was brauche ich vor der Nutzung?\nA: Thema, Zielgruppe und den Nutzen, den du betonen willst.\n\nF: Kann ich das Ergebnis direkt veröffentlichen?\nA: Nutze es als Entwurf und prüfe Fakten, Markenton und Kontext.`;
+      case 'ru':
+        return `В: Кому подходит ${topic}?\nО: Это полезно для ${audience}, особенно если цель — ${benefit}.\n\nВ: В чем главная ценность ${keyword}?\nО: Превратить вводные данные в более понятный, практичный и проверяемый результат.\n\nВ: Что нужно подготовить?\nО: Тему, целевую аудиторию и выгоду, которую нужно подчеркнуть.\n\nВ: Можно ли сразу публиковать результат?\nО: Используйте как черновик и проверьте факты, тон бренда и контекст.`;
+      case 'ar':
+        return `س: لمن يناسب ${topic}؟\nج: يناسب ${audience}، خصوصًا من يريد ${benefit}.\n\nس: ما القيمة الأساسية لـ ${keyword}؟\nج: تحويل المدخلات إلى نتيجة أوضح وقابلة للتنفيذ وأسهل في المراجعة.\n\nس: ماذا أحتاج قبل الاستخدام؟\nج: الموضوع والجمهور المستهدف والفائدة التي تريد إبرازها.\n\nس: هل يمكن نشر النتيجة مباشرة؟\nج: استخدمها كمسودة وراجع الحقائق ونبرة العلامة والسياق قبل النشر.`;
+      default:
+        return `Q: Who is ${topic} for?\nA: It is useful for ${audience}, especially when they want to ${benefit}.\n\nQ: What is the main value of ${keyword}?\nA: It turns inputs into a clearer, more actionable result that is easier to review.\n\nQ: What should I prepare first?\nA: Bring a topic, target audience, and the benefit you want to emphasize.\n\nQ: Can I publish the result directly?\nA: Use it as a draft, then review it against real facts, brand voice, and context.`;
+    }
+  }
+
+  function seoTitleOptions(): string[] {
+    const page = inputs.page || text('placeholders', 'page');
+    const keyword = inputs.keyword || text('placeholders', 'keyword');
+    const audience = inputs.audience || text('placeholders', 'metaAudience');
+    const benefit = inputs.benefit || text('placeholders', 'benefit');
+
+    switch (language()) {
+      case 'zh':
+        return [`${page}：免费在线${keyword}`, `${keyword}工具｜${page}`, `${page} - 帮助${audience}${benefit}`, `免费${keyword}生成器｜快速在线使用`, `${audience}适用的${page}`];
+      case 'ja':
+        return [`${page}：無料オンライン${keyword}`, `${keyword}ツール｜${page}`, `${page} - ${audience}が${benefit}ために`, `無料${keyword}生成ツール｜すぐ使える`, `${audience}向け${page}`];
+      case 'ko':
+        return [`${page}: 무료 온라인 ${keyword}`, `${keyword} 도구 | ${page}`, `${page} - ${audience}이 ${benefit}하도록 지원`, `무료 ${keyword} 생성기 | 바로 사용`, `${audience}을 위한 ${page}`];
+      case 'es':
+        return [`${page}: ${keyword} gratis online`, `Herramienta de ${keyword} | ${page}`, `${page} para ${audience}: ${benefit}`, `Generador de ${keyword} gratis | Uso rápido`, `${page} para ${audience}`];
+      case 'pt':
+        return [`${page}: ${keyword} grátis online`, `Ferramenta de ${keyword} | ${page}`, `${page} para ${audience}: ${benefit}`, `Gerador de ${keyword} grátis | Uso rápido`, `${page} para ${audience}`];
+      case 'fr':
+        return [`${page} : ${keyword} gratuit en ligne`, `Outil ${keyword} | ${page}`, `${page} pour ${audience} : ${benefit}`, `Générateur ${keyword} gratuit | Utilisation rapide`, `${page} pour ${audience}`];
+      case 'de':
+        return [`${page}: ${keyword} kostenlos online`, `${keyword}-Tool | ${page}`, `${page} für ${audience}: ${benefit}`, `Kostenloser ${keyword}-Generator | Schnell nutzbar`, `${page} für ${audience}`];
+      case 'ru':
+        return [`${page}: ${keyword} бесплатно онлайн`, `Инструмент ${keyword} | ${page}`, `${page} для ${audience}: ${benefit}`, `Бесплатный генератор ${keyword} | Быстрый старт`, `${page} для ${audience}`];
+      case 'ar':
+        return [`${page}: ${keyword} مجاني عبر الإنترنت`, `أداة ${keyword} | ${page}`, `${page} لـ ${audience}: ${benefit}`, `مولد ${keyword} مجاني | استخدام سريع`, `${page} لـ ${audience}`];
+      default:
+        return [`${page}: Free ${keyword} Online`, `${keyword} Tool | ${page}`, `${page} for ${audience}: ${benefit}`, `Free ${keyword} Generator | Fast Online Tool`, `${page} for ${audience}`];
+    }
+  }
+
+  function tweetOptions(): string[] {
+    const topic = inputs.topic || text('placeholders', 'emailTopic');
+    const audience = inputs.audience || text('placeholders', 'metaAudience');
+    const benefit = inputs.benefit || text('placeholders', 'emailBenefit');
+    const cta = inputs.cta || text('placeholders', 'cta');
+
+    switch (language()) {
+      case 'zh':
+        return [`${topic}的重点不是做更多，而是让${audience}${benefit}。`, `给${audience}：如果${topic}太复杂，先找到一个能验证价值的小步骤。`, `${benefit}，往往从更清晰的${topic}流程开始。${cta}`, `做${topic}时，先写下目标、受众和下一步。复杂度会自然下降。`];
+      case 'ja':
+        return [`${topic}で大事なのは量ではなく、${audience}が${benefit}ことです。`, `${audience}へ：${topic}が複雑なら、価値を検証できる小さな一歩から。`, `${benefit}ことは、より明確な${topic}の流れから始まります。${cta}`, `${topic}では、目的、読者、次の一歩を先に書き出しましょう。`];
+      case 'ko':
+        return [`${topic}의 핵심은 더 많이 하는 것이 아니라 ${audience}이 ${benefit}하도록 만드는 것입니다.`, `${audience}에게: ${topic}가 복잡하다면 가치를 검증할 작은 단계부터 시작하세요.`, `${benefit}하는 일은 더 명확한 ${topic} 흐름에서 시작됩니다. ${cta}`, `${topic}를 할 때는 목표, 대상, 다음 단계를 먼저 적어보세요.`];
+      case 'es':
+        return [`El punto de ${topic} no es hacer más, sino ayudar a ${audience} a ${benefit}.`, `${audience}: si ${topic} se siente grande, empieza con un paso pequeño que pruebe valor.`, `${benefit} suele empezar con un flujo de ${topic} más claro. ${cta}`, `Antes de hacer ${topic}, escribe objetivo, audiencia y próximo paso. Baja la complejidad.`];
+      case 'pt':
+        return [`O ponto de ${topic} não é fazer mais, é ajudar ${audience} a ${benefit}.`, `${audience}: se ${topic} parece grande, comece com um passo pequeno que prove valor.`, `${benefit} costuma começar com um fluxo de ${topic} mais claro. ${cta}`, `Antes de fazer ${topic}, escreva objetivo, público e próximo passo. A complexidade cai.`];
+      case 'fr':
+        return [`L’enjeu de ${topic} n’est pas d’en faire plus, mais d’aider ${audience} à ${benefit}.`, `${audience} : si ${topic} semble trop large, commencez par une petite étape qui prouve la valeur.`, `${benefit} commence souvent par un flux ${topic} plus clair. ${cta}`, `Avant ${topic}, écrivez l’objectif, le public et la prochaine étape. La complexité baisse.`];
+      case 'de':
+        return [`Bei ${topic} geht es nicht darum, mehr zu tun, sondern ${audience} zu helfen, ${benefit}.`, `${audience}: Wenn ${topic} zu groß wirkt, starte mit einem kleinen Schritt, der Wert beweist.`, `${benefit} beginnt oft mit einem klareren ${topic}-Ablauf. ${cta}`, `Vor ${topic}: Ziel, Zielgruppe und nächsten Schritt notieren. Dann sinkt die Komplexität.`];
+      case 'ru':
+        return [`Смысл ${topic} не в том, чтобы делать больше, а в том, чтобы помочь ${audience} ${benefit}.`, `${audience}: если ${topic} кажется большим, начните с маленького шага, который покажет ценность.`, `${benefit} часто начинается с более понятного процесса ${topic}. ${cta}`, `Перед ${topic} запишите цель, аудиторию и следующий шаг. Сложность снизится.`];
+      case 'ar':
+        return [`هدف ${topic} ليس فعل المزيد، بل مساعدة ${audience} على ${benefit}.`, `لـ ${audience}: إذا بدا ${topic} كبيرًا، ابدأ بخطوة صغيرة تثبت القيمة.`, `${benefit} يبدأ غالبًا من تدفق ${topic} أوضح. ${cta}`, `قبل ${topic}: اكتب الهدف والجمهور والخطوة التالية. ستنخفض التعقيدات.`];
+      default:
+        return [`The point of ${topic} is not doing more. It is helping ${audience} ${benefit}.`, `${audience}: if ${topic} feels too big, start with one small step that proves value.`, `${benefit} usually starts with a clearer ${topic} workflow. ${cta}`, `Before doing ${topic}, write the goal, audience, and next step. Complexity drops fast.`];
+    }
   }
 
   type Debt = {
@@ -2811,6 +3291,86 @@
         return {
           output,
           rows: options.slice(0, 6).map((value, index) => ({ label: `${text('results', 'option')} ${index + 1}`, value })),
+          copyText: output,
+        };
+      }
+      case 'youtube-tags-generator': {
+        const options = youtubeTagOptions();
+        const output = options.join(', ');
+        return {
+          output,
+          rows: options.slice(0, 10).map((value, index) => ({ label: `${text('results', 'option')} ${index + 1}`, value })),
+          copyText: output,
+        };
+      }
+      case 'tiktok-hashtag-generator': {
+        const options = tiktokHashtagOptions();
+        const output = options.join(' ');
+        return {
+          output,
+          rows: options.slice(0, 10).map((value, index) => ({ label: `${text('results', 'option')} ${index + 1}`, value })),
+          copyText: output,
+        };
+      }
+      case 'instagram-caption-generator': {
+        const options = instagramCaptionOptions();
+        const output = options.map((value, index) => `${index + 1}. ${value}`).join('\n\n');
+        return {
+          output,
+          rows: options.map((value, index) => ({ label: `${text('results', 'option')} ${index + 1}`, value })),
+          copyText: output,
+        };
+      }
+      case 'linkedin-post-generator': {
+        const options = linkedinPostOptions();
+        const output = options.map((value, index) => `${index + 1}. ${value}`).join('\n\n');
+        return {
+          output,
+          rows: options.map((value, index) => ({ label: `${text('results', 'option')} ${index + 1}`, value })),
+          copyText: output,
+        };
+      }
+      case 'blog-title-generator': {
+        const options = blogTitleOptions();
+        const output = numberedOutput(options);
+        return {
+          output,
+          rows: options.slice(0, 6).map((value, index) => ({ label: `${text('results', 'option')} ${index + 1}`, value })),
+          copyText: output,
+        };
+      }
+      case 'product-description-generator': {
+        const output = productDescriptionOutput();
+        return { output, copyText: output };
+      }
+      case 'email-preview-text-generator': {
+        const options = emailPreviewTextOptions();
+        const output = numberedOutput(options);
+        return {
+          output,
+          rows: options.map((value, index) => ({ label: `${text('results', 'option')} ${index + 1}`, value })),
+          copyText: output,
+        };
+      }
+      case 'faq-generator': {
+        const output = faqOutput();
+        return { output, copyText: output };
+      }
+      case 'seo-title-generator': {
+        const options = seoTitleOptions();
+        const output = numberedOutput(options);
+        return {
+          output,
+          rows: options.map((value, index) => ({ label: `${text('results', 'option')} ${index + 1}`, value })),
+          copyText: output,
+        };
+      }
+      case 'tweet-generator': {
+        const options = tweetOptions();
+        const output = numberedOutput(options);
+        return {
+          output,
+          rows: options.map((value, index) => ({ label: `${text('results', 'option')} ${index + 1}`, value })),
           copyText: output,
         };
       }
