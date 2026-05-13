@@ -13,11 +13,12 @@ import Footer from '@/components/layout/Footer.astro';
 import CategorySupportSection from '@/components/categories/CategorySupportSection.astro';
 import ChartToolClusterSection from '@/components/discovery/ChartToolClusterSection.astro';
 import CreatorSeoClusterSection from '@/components/discovery/CreatorSeoClusterSection.astro';
+import DeveloperDataToolClusterSection from '@/components/discovery/DeveloperDataToolClusterSection.astro';
 import ImageToolClusterSection from '@/components/discovery/ImageToolClusterSection.astro';
 import Breadcrumb from '@/components/layout/Breadcrumb.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
-import { categories, getToolsByCategory } from '@/config/tools';
+import { categories, getToolsByCategory, tools as allTools } from '@/config/tools';
 import type { ToolCategory } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
 import { locales, getLocalizedPath } from '@/lib/i18n';
@@ -38,6 +39,11 @@ import {
   creatorSeoClusterPath,
   getCreatorSeoClusterCopy,
 } from '@/lib/creator-seo-cluster';
+import {
+  buildDeveloperDataToolClusterGroups,
+  developerDataToolClusterPath,
+  getDeveloperDataToolClusterCopy,
+} from '@/lib/developer-data-tool-cluster';
 import {
   buildImageToolClusterGroups,
   getImageToolClusterCopy,
@@ -95,9 +101,16 @@ const pageDescription = categorySeo.description;
 const categorySupport = getCategorySupportContent(locale, category);
 const categoryToolNames = Object.fromEntries(categoryTools.map((tool) => [tool.slug, getToolName(tool.slug)]));
 const categoryToolDescriptions = Object.fromEntries(categoryTools.map((tool) => [tool.slug, getToolDescription(tool.slug)]));
+const allToolNames = Object.fromEntries(allTools.map((tool) => [tool.slug, getToolName(tool.slug)]));
+const allToolDescriptions = Object.fromEntries(allTools.map((tool) => [tool.slug, getToolDescription(tool.slug)]));
 const creatorSeoCopy = getCreatorSeoClusterCopy(locale);
 const creatorSeoGroups = category === 'generators'
   ? buildCreatorSeoClusterGroups(locale, categoryMessages, categoryToolNames, categoryToolDescriptions)
+  : [];
+const developerDataToolCopy = getDeveloperDataToolClusterCopy(locale);
+const developerDataClusterCategories: ToolCategory[] = ['encoding', 'converters', 'development'];
+const developerDataToolGroups = developerDataClusterCategories.includes(category)
+  ? buildDeveloperDataToolClusterGroups(locale, categoryMessages, allToolNames, allToolDescriptions)
   : [];
 const imageToolCopy = getImageToolClusterCopy(locale);
 const imageToolGroups = category === 'image'
@@ -217,6 +230,18 @@ const collectionData = {
             href={buildLocalizedPagePath(locale, imageToolClusterPath)}
             groups={imageToolGroups}
             toolCountLabel={imageToolCopy.toolCountLabel}
+          />
+        )}
+
+        {developerDataClusterCategories.includes(category) && (
+          <DeveloperDataToolClusterSection
+            eyebrow={developerDataToolCopy.eyebrow}
+            title={developerDataToolCopy.title}
+            description={developerDataToolCopy.description}
+            ctaLabel={developerDataToolCopy.ctaLabel}
+            href={buildLocalizedPagePath(locale, developerDataToolClusterPath)}
+            groups={developerDataToolGroups}
+            toolCountLabel={developerDataToolCopy.toolCountLabel}
           />
         )}
 

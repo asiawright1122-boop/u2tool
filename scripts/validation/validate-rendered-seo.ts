@@ -95,6 +95,20 @@ const checks: RenderedSeoCheck[] = [
     ],
   },
   {
+    name: 'English developer data formatters cluster',
+    path: '/en/tools/developer-data-formatters/',
+    titleIncludes: 'Developer Data',
+    descriptionIncludes: 'JSON',
+    h1Includes: 'Developer Data',
+    schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList', 'BreadcrumbList'],
+    bodyMustInclude: [
+      'Developer Data Formatters, Converters &amp; Validators',
+      '/en/tools/json-formatter/',
+      '/en/tools/json-to-typescript/',
+      '/en/categories/development/',
+    ],
+  },
+  {
     name: 'English privacy page',
     path: '/en/privacy/',
     titleIncludes: 'Privacy Policy',
@@ -169,6 +183,19 @@ const checks: RenderedSeoCheck[] = [
       'data-chart-tool-cluster',
       '/en/tools/chart-generators/',
       '/en/tools/line-chart-generator/',
+    ],
+  },
+  {
+    name: 'Developer data tool cluster backlink',
+    path: '/en/tools/json-formatter/',
+    titleIncludes: 'JSON Formatter',
+    descriptionIncludes: 'JSON',
+    h1Includes: 'JSON Formatter',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    bodyMustInclude: [
+      'data-developer-data-tool-cluster',
+      '/en/tools/developer-data-formatters/',
+      '/en/tools/json-viewer/',
     ],
   },
   {

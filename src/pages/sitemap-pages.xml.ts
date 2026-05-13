@@ -11,6 +11,7 @@ import { categories } from '@/config/tools';
 import { comparisonSurfaceSlugs } from '@/lib/comparison-surfaces';
 import { chartToolClusterPath } from '@/lib/chart-tool-cluster';
 import { creatorSeoClusterPath } from '@/lib/creator-seo-cluster';
+import { developerDataToolClusterPath } from '@/lib/developer-data-tool-cluster';
 import { imageToolClusterPath } from '@/lib/image-tool-cluster';
 import { siteInfoPageSlugs } from '@/lib/site-info-pages';
 import { sitemapLastmodManifest } from '@/generated/sitemap-lastmod';
@@ -31,6 +32,7 @@ export const GET: APIRoute = () => {
     // 工具列表页 - 高优先级
     urls.push(buildUrl(`/${locale}/tools`, '0.9', 'daily', sitemapLastmodManifest.pages));
     urls.push(buildUrl(`/${locale}${creatorSeoClusterPath}`, '0.8', 'weekly', sitemapLastmodManifest.pages));
+    urls.push(buildUrl(`/${locale}${developerDataToolClusterPath}`, '0.8', 'weekly', sitemapLastmodManifest.pages));
     urls.push(buildUrl(`/${locale}${imageToolClusterPath}`, '0.8', 'weekly', sitemapLastmodManifest.pages));
     urls.push(buildUrl(`/${locale}${chartToolClusterPath}`, '0.8', 'weekly', sitemapLastmodManifest.pages));
 

@@ -30,6 +30,7 @@ import RelatedTools from '@/components/tools/RelatedTools.astro';
 import ToolFAQ from '@/components/tools/ToolFAQ.astro';
 import ChartToolClusterCard from '@/components/tools/ChartToolClusterCard.astro';
 import CreatorSeoToolClusterCard from '@/components/tools/CreatorSeoToolClusterCard.astro';
+import DeveloperDataToolClusterCard from '@/components/tools/DeveloperDataToolClusterCard.astro';
 import ImageToolClusterCard from '@/components/tools/ImageToolClusterCard.astro';
 import { tools, categories, getToolsByCategory } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
@@ -53,6 +54,11 @@ import {
   creatorSeoClusterPath,
   getCreatorSeoClusterCopy,
 } from '@/lib/creator-seo-cluster';
+import {
+  buildDeveloperDataToolClusterGroupForTool,
+  developerDataToolClusterPath,
+  getDeveloperDataToolClusterCopy,
+} from '@/lib/developer-data-tool-cluster';
 import {
   buildImageToolClusterGroupForTool,
   getImageToolClusterCopy,
@@ -92,6 +98,7 @@ const mobileNavMessages = buildMobileNavMessages(navMessages);
 const comparisonUiCopy = getComparisonUiCopy(locale);
 const chartToolCopy = getChartToolClusterCopy(locale);
 const creatorSeoCopy = getCreatorSeoClusterCopy(locale);
+const developerDataToolCopy = getDeveloperDataToolClusterCopy(locale);
 const imageToolCopy = getImageToolClusterCopy(locale);
 
 // Extract tool metadata from translations
@@ -336,6 +343,13 @@ const creatorSeoGroup = buildCreatorSeoClusterGroupForTool(
   allToolNames,
   allToolDescriptions
 );
+const developerDataToolGroup = buildDeveloperDataToolClusterGroupForTool(
+  locale,
+  tool.slug,
+  categoryMessages,
+  allToolNames,
+  allToolDescriptions
+);
 const imageToolGroup = buildImageToolClusterGroupForTool(
   locale,
   tool.slug,
@@ -496,6 +510,15 @@ const chartToolGroup = buildChartToolClusterGroupForTool(
           copy={creatorSeoCopy}
           currentSlug={tool.slug}
           group={creatorSeoGroup}
+        />
+      )}
+
+      {developerDataToolGroup && (
+        <DeveloperDataToolClusterCard
+          clusterHref={buildLocalizedPagePath(locale, developerDataToolClusterPath)}
+          copy={developerDataToolCopy}
+          currentSlug={tool.slug}
+          group={developerDataToolGroup}
         />
       )}
 

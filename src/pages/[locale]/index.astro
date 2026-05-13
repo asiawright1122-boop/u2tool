@@ -19,6 +19,7 @@ import CategorySpotlightSection from '@/components/discovery/CategorySpotlightSe
 import ChartToolClusterSection from '@/components/discovery/ChartToolClusterSection.astro';
 import ComparisonGuideSection from '@/components/discovery/ComparisonGuideSection.astro';
 import CreatorSeoClusterSection from '@/components/discovery/CreatorSeoClusterSection.astro';
+import DeveloperDataToolClusterSection from '@/components/discovery/DeveloperDataToolClusterSection.astro';
 import ImageToolClusterSection from '@/components/discovery/ImageToolClusterSection.astro';
 import ToolLaunchSection from '@/components/discovery/ToolLaunchSection.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
@@ -40,6 +41,11 @@ import {
   creatorSeoClusterPath,
   getCreatorSeoClusterCopy,
 } from '@/lib/creator-seo-cluster';
+import {
+  buildDeveloperDataToolClusterGroups,
+  developerDataToolClusterPath,
+  getDeveloperDataToolClusterCopy,
+} from '@/lib/developer-data-tool-cluster';
 import {
   buildImageToolClusterGroups,
   getImageToolClusterCopy,
@@ -126,6 +132,13 @@ const comparisonGuides = buildComparisonGuides(
 ).slice(0, 3);
 const creatorSeoCopy = getCreatorSeoClusterCopy(locale);
 const creatorSeoGroups = buildCreatorSeoClusterGroups(
+  locale,
+  categoryMessages,
+  toolNames,
+  toolDescriptions
+);
+const developerDataToolCopy = getDeveloperDataToolClusterCopy(locale);
+const developerDataToolGroups = buildDeveloperDataToolClusterGroups(
   locale,
   categoryMessages,
   toolNames,
@@ -284,6 +297,17 @@ const chartToolGroups = buildChartToolClusterGroups(
           href={buildLocalizedPagePath(locale, creatorSeoClusterPath)}
           groups={creatorSeoGroups}
           toolCountLabel={creatorSeoCopy.toolCountLabel}
+        />
+
+        <DeveloperDataToolClusterSection
+          compact
+          eyebrow={developerDataToolCopy.eyebrow}
+          title={developerDataToolCopy.title}
+          description={developerDataToolCopy.description}
+          ctaLabel={developerDataToolCopy.ctaLabel}
+          href={buildLocalizedPagePath(locale, developerDataToolClusterPath)}
+          groups={developerDataToolGroups}
+          toolCountLabel={developerDataToolCopy.toolCountLabel}
         />
 
         <ImageToolClusterSection

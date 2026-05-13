@@ -11,6 +11,7 @@ const checks = [
   { name: 'home en', url: '/en/', expect: { status: 200 } },
   { name: 'tools en', url: '/en/tools/', expect: { status: 200 } },
   { name: 'creator seo generators en', url: '/en/tools/creator-seo-generators/', expect: { status: 200 }, bodyMustInclude: 'Creator &amp; SEO Generators' },
+  { name: 'developer data formatters en', url: '/en/tools/developer-data-formatters/', expect: { status: 200 }, bodyMustInclude: 'Developer Data Formatters, Converters &amp; Validators' },
   { name: 'image editing converters en', url: '/en/tools/image-editing-converters/', expect: { status: 200 }, bodyMustInclude: 'Image Editing &amp; Conversion Tools' },
   { name: 'chart generators en', url: '/en/tools/chart-generators/', expect: { status: 200 }, bodyMustInclude: 'Chart Generators &amp; Data Visualization Tools' },
   { name: 'privacy en', url: '/en/privacy/', expect: { status: 200 } },
