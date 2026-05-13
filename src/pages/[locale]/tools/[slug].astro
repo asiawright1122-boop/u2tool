@@ -32,6 +32,7 @@ import ChartToolClusterCard from '@/components/tools/ChartToolClusterCard.astro'
 import CreatorSeoToolClusterCard from '@/components/tools/CreatorSeoToolClusterCard.astro';
 import DeveloperDataToolClusterCard from '@/components/tools/DeveloperDataToolClusterCard.astro';
 import ImageToolClusterCard from '@/components/tools/ImageToolClusterCard.astro';
+import OnlineCalculatorClusterCard from '@/components/tools/OnlineCalculatorClusterCard.astro';
 import { tools, categories, getToolsByCategory } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
 import { isValidLocale } from '@/lib/i18n';
@@ -64,6 +65,11 @@ import {
   getImageToolClusterCopy,
   imageToolClusterPath,
 } from '@/lib/image-tool-cluster';
+import {
+  buildOnlineCalculatorClusterGroupForTool,
+  getOnlineCalculatorClusterCopy,
+  onlineCalculatorClusterPath,
+} from '@/lib/online-calculator-cluster';
 
 export const prerender = false;
 
@@ -100,6 +106,7 @@ const chartToolCopy = getChartToolClusterCopy(locale);
 const creatorSeoCopy = getCreatorSeoClusterCopy(locale);
 const developerDataToolCopy = getDeveloperDataToolClusterCopy(locale);
 const imageToolCopy = getImageToolClusterCopy(locale);
+const onlineCalculatorCopy = getOnlineCalculatorClusterCopy(locale);
 
 // Extract tool metadata from translations
 const toolName = (messages.name as string) || tool.slug;
@@ -357,6 +364,13 @@ const imageToolGroup = buildImageToolClusterGroupForTool(
   allToolNames,
   allToolDescriptions
 );
+const onlineCalculatorGroup = buildOnlineCalculatorClusterGroupForTool(
+  locale,
+  tool.slug,
+  categoryMessages,
+  allToolNames,
+  allToolDescriptions
+);
 const chartToolGroup = buildChartToolClusterGroupForTool(
   locale,
   tool.slug,
@@ -528,6 +542,15 @@ const chartToolGroup = buildChartToolClusterGroupForTool(
           copy={imageToolCopy}
           currentSlug={tool.slug}
           group={imageToolGroup}
+        />
+      )}
+
+      {onlineCalculatorGroup && (
+        <OnlineCalculatorClusterCard
+          clusterHref={buildLocalizedPagePath(locale, onlineCalculatorClusterPath)}
+          copy={onlineCalculatorCopy}
+          currentSlug={tool.slug}
+          group={onlineCalculatorGroup}
         />
       )}
 

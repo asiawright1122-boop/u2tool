@@ -13,6 +13,7 @@ import { chartToolClusterPath } from '@/lib/chart-tool-cluster';
 import { creatorSeoClusterPath } from '@/lib/creator-seo-cluster';
 import { developerDataToolClusterPath } from '@/lib/developer-data-tool-cluster';
 import { imageToolClusterPath } from '@/lib/image-tool-cluster';
+import { onlineCalculatorClusterPath } from '@/lib/online-calculator-cluster';
 import { siteInfoPageSlugs } from '@/lib/site-info-pages';
 import { sitemapLastmodManifest } from '@/generated/sitemap-lastmod';
 import { buildUrl, generateSitemapResponse } from '@/lib/sitemap-utils';
@@ -34,6 +35,7 @@ export const GET: APIRoute = () => {
     urls.push(buildUrl(`/${locale}${creatorSeoClusterPath}`, '0.8', 'weekly', sitemapLastmodManifest.pages));
     urls.push(buildUrl(`/${locale}${developerDataToolClusterPath}`, '0.8', 'weekly', sitemapLastmodManifest.pages));
     urls.push(buildUrl(`/${locale}${imageToolClusterPath}`, '0.8', 'weekly', sitemapLastmodManifest.pages));
+    urls.push(buildUrl(`/${locale}${onlineCalculatorClusterPath}`, '0.8', 'weekly', sitemapLastmodManifest.pages));
     urls.push(buildUrl(`/${locale}${chartToolClusterPath}`, '0.8', 'weekly', sitemapLastmodManifest.pages));
 
     // 比较/选型页

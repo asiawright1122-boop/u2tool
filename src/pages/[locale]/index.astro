@@ -21,6 +21,7 @@ import ComparisonGuideSection from '@/components/discovery/ComparisonGuideSectio
 import CreatorSeoClusterSection from '@/components/discovery/CreatorSeoClusterSection.astro';
 import DeveloperDataToolClusterSection from '@/components/discovery/DeveloperDataToolClusterSection.astro';
 import ImageToolClusterSection from '@/components/discovery/ImageToolClusterSection.astro';
+import OnlineCalculatorClusterSection from '@/components/discovery/OnlineCalculatorClusterSection.astro';
 import ToolLaunchSection from '@/components/discovery/ToolLaunchSection.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
@@ -51,6 +52,11 @@ import {
   getImageToolClusterCopy,
   imageToolClusterPath,
 } from '@/lib/image-tool-cluster';
+import {
+  buildOnlineCalculatorClusterGroups,
+  getOnlineCalculatorClusterCopy,
+  onlineCalculatorClusterPath,
+} from '@/lib/online-calculator-cluster';
 import { buildRecentToolLaunches, buildToolLaunchItemList } from '@/lib/tool-launches';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
@@ -146,6 +152,13 @@ const developerDataToolGroups = buildDeveloperDataToolClusterGroups(
 );
 const imageToolCopy = getImageToolClusterCopy(locale);
 const imageToolGroups = buildImageToolClusterGroups(
+  locale,
+  categoryMessages,
+  toolNames,
+  toolDescriptions
+);
+const onlineCalculatorCopy = getOnlineCalculatorClusterCopy(locale);
+const onlineCalculatorGroups = buildOnlineCalculatorClusterGroups(
   locale,
   categoryMessages,
   toolNames,
@@ -319,6 +332,17 @@ const chartToolGroups = buildChartToolClusterGroups(
           href={buildLocalizedPagePath(locale, imageToolClusterPath)}
           groups={imageToolGroups}
           toolCountLabel={imageToolCopy.toolCountLabel}
+        />
+
+        <OnlineCalculatorClusterSection
+          compact
+          eyebrow={onlineCalculatorCopy.eyebrow}
+          title={onlineCalculatorCopy.title}
+          description={onlineCalculatorCopy.description}
+          ctaLabel={onlineCalculatorCopy.ctaLabel}
+          href={buildLocalizedPagePath(locale, onlineCalculatorClusterPath)}
+          groups={onlineCalculatorGroups}
+          toolCountLabel={onlineCalculatorCopy.toolCountLabel}
         />
 
         <ChartToolClusterSection

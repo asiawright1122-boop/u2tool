@@ -15,6 +15,7 @@ import ChartToolClusterSection from '@/components/discovery/ChartToolClusterSect
 import CreatorSeoClusterSection from '@/components/discovery/CreatorSeoClusterSection.astro';
 import DeveloperDataToolClusterSection from '@/components/discovery/DeveloperDataToolClusterSection.astro';
 import ImageToolClusterSection from '@/components/discovery/ImageToolClusterSection.astro';
+import OnlineCalculatorClusterSection from '@/components/discovery/OnlineCalculatorClusterSection.astro';
 import Breadcrumb from '@/components/layout/Breadcrumb.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
@@ -49,6 +50,11 @@ import {
   getImageToolClusterCopy,
   imageToolClusterPath,
 } from '@/lib/image-tool-cluster';
+import {
+  buildOnlineCalculatorClusterGroups,
+  getOnlineCalculatorClusterCopy,
+  onlineCalculatorClusterPath,
+} from '@/lib/online-calculator-cluster';
 
 export const prerender = true;
 
@@ -115,6 +121,11 @@ const developerDataToolGroups = developerDataClusterCategories.includes(category
 const imageToolCopy = getImageToolClusterCopy(locale);
 const imageToolGroups = category === 'image'
   ? buildImageToolClusterGroups(locale, categoryMessages, categoryToolNames, categoryToolDescriptions)
+  : [];
+const onlineCalculatorCopy = getOnlineCalculatorClusterCopy(locale);
+const onlineCalculatorCategories: ToolCategory[] = ['finance', 'math', 'lifestyle', 'office', 'network', 'converters'];
+const onlineCalculatorGroups = onlineCalculatorCategories.includes(category)
+  ? buildOnlineCalculatorClusterGroups(locale, categoryMessages, allToolNames, allToolDescriptions)
   : [];
 const chartToolCopy = getChartToolClusterCopy(locale);
 const chartToolGroups = category === 'charts'
@@ -242,6 +253,18 @@ const collectionData = {
             href={buildLocalizedPagePath(locale, developerDataToolClusterPath)}
             groups={developerDataToolGroups}
             toolCountLabel={developerDataToolCopy.toolCountLabel}
+          />
+        )}
+
+        {onlineCalculatorCategories.includes(category) && (
+          <OnlineCalculatorClusterSection
+            eyebrow={onlineCalculatorCopy.eyebrow}
+            title={onlineCalculatorCopy.title}
+            description={onlineCalculatorCopy.description}
+            ctaLabel={onlineCalculatorCopy.ctaLabel}
+            href={buildLocalizedPagePath(locale, onlineCalculatorClusterPath)}
+            groups={onlineCalculatorGroups}
+            toolCountLabel={onlineCalculatorCopy.toolCountLabel}
           />
         )}
 

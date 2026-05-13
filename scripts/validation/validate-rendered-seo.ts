@@ -109,6 +109,20 @@ const checks: RenderedSeoCheck[] = [
     ],
   },
   {
+    name: 'English online calculators cluster',
+    path: '/en/tools/online-calculators/',
+    titleIncludes: 'Online Calculators',
+    descriptionIncludes: 'calculators',
+    h1Includes: 'Online Calculators',
+    schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList', 'BreadcrumbList'],
+    bodyMustInclude: [
+      'Online Calculators for Finance, Math, Work &amp; Daily Life',
+      '/en/tools/mortgage-calculator/',
+      '/en/tools/percentage-calculator/',
+      '/en/categories/finance/',
+    ],
+  },
+  {
     name: 'English privacy page',
     path: '/en/privacy/',
     titleIncludes: 'Privacy Policy',
@@ -196,6 +210,19 @@ const checks: RenderedSeoCheck[] = [
       'data-developer-data-tool-cluster',
       '/en/tools/developer-data-formatters/',
       '/en/tools/json-viewer/',
+    ],
+  },
+  {
+    name: 'Online calculator cluster backlink',
+    path: '/en/tools/mortgage-calculator/',
+    titleIncludes: 'Mortgage',
+    descriptionIncludes: 'mortgage',
+    h1Includes: 'Mortgage',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    bodyMustInclude: [
+      'data-online-calculator-cluster',
+      '/en/tools/online-calculators/',
+      '/en/tools/roi-calculator/',
     ],
   },
   {
