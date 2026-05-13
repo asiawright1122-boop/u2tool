@@ -104,6 +104,19 @@ const checks: RenderedSeoCheck[] = [
     bodyMustInclude: ['Choose the Right JSON Tool', '/en/compare/choose-json-tool/'],
   },
   {
+    name: 'Creator SEO tool cluster backlink',
+    path: '/en/tools/youtube-tags-generator/',
+    titleIncludes: 'YouTube Tags',
+    descriptionIncludes: 'YouTube',
+    h1Includes: 'YouTube Tags',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    bodyMustInclude: [
+      'data-creator-seo-tool-cluster',
+      '/en/tools/creator-seo-generators/',
+      '/en/tools/youtube-title-generator/',
+    ],
+  },
+  {
     name: 'JWT Decoder tool page',
     path: '/en/tools/jwt-decoder/',
     titleIncludes: 'JWT Decoder',

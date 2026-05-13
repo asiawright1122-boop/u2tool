@@ -103,6 +103,16 @@ const groupSlugs: Array<{
   },
 ];
 
+const creatorSeoClusterSlugSet = new Set<string>(creatorSeoClusterSlugs);
+
+export function isCreatorSeoClusterSlug(slug: string): boolean {
+  return creatorSeoClusterSlugSet.has(slug);
+}
+
+export function getCreatorSeoClusterGroupIdForSlug(slug: string): CreatorSeoClusterGroup['id'] | null {
+  return groupSlugs.find((group) => group.slugs.includes(slug))?.id ?? null;
+}
+
 const groupCopy: Record<Locale, Record<CreatorSeoClusterGroup['id'], { title: string; description: string }>> = {
   en: {
     'video-social-discovery': {
@@ -510,6 +520,22 @@ export function buildCreatorSeoClusterGroups(
     description: copy[group.id].description,
     tools: buildCreatorSeoToolItems(locale, categoryNames, toolNames, toolDescriptions, group.slugs),
   }));
+}
+
+export function buildCreatorSeoClusterGroupForTool(
+  locale: Locale,
+  slug: string,
+  categoryNames: Record<string, string>,
+  toolNames: Record<string, string>,
+  toolDescriptions: Record<string, string>
+): CreatorSeoClusterGroup | null {
+  const groupId = getCreatorSeoClusterGroupIdForSlug(slug);
+  if (!groupId) {
+    return null;
+  }
+
+  return buildCreatorSeoClusterGroups(locale, categoryNames, toolNames, toolDescriptions)
+    .find((group) => group.id === groupId) ?? null;
 }
 
 export function buildCreatorSeoClusterItemList(

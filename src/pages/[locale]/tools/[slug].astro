@@ -28,6 +28,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb.astro';
 import ToolWrapper from '@/components/tools/ToolWrapper.svelte';
 import RelatedTools from '@/components/tools/RelatedTools.astro';
 import ToolFAQ from '@/components/tools/ToolFAQ.astro';
+import CreatorSeoToolClusterCard from '@/components/tools/CreatorSeoToolClusterCard.astro';
 import { tools, categories, getToolsByCategory } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
 import { isValidLocale } from '@/lib/i18n';
@@ -40,6 +41,11 @@ import { sanitizeHtml } from '@/lib/sanitize';
 import { assessSupportContentTrust } from '@/lib/content-trust';
 import { buildSafeFallbackSupportContent } from '@/lib/support-content-fallback';
 import { findComparisonGuideForTool, getComparisonUiCopy } from '@/lib/comparison-surfaces';
+import {
+  buildCreatorSeoClusterGroupForTool,
+  creatorSeoClusterPath,
+  getCreatorSeoClusterCopy,
+} from '@/lib/creator-seo-cluster';
 
 export const prerender = false;
 
@@ -72,6 +78,7 @@ const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
 const headerTranslations = buildHeaderTranslations(baseMessages);
 const mobileNavMessages = buildMobileNavMessages(navMessages);
 const comparisonUiCopy = getComparisonUiCopy(locale);
+const creatorSeoCopy = getCreatorSeoClusterCopy(locale);
 
 // Extract tool metadata from translations
 const toolName = (messages.name as string) || tool.slug;
@@ -308,6 +315,13 @@ const comparisonGuide = findComparisonGuideForTool(
   allToolNames,
   allToolDescriptions
 );
+const creatorSeoGroup = buildCreatorSeoClusterGroupForTool(
+  locale,
+  tool.slug,
+  categoryMessages,
+  allToolNames,
+  allToolDescriptions
+);
 ---
 
 <BaseLayout
@@ -446,6 +460,15 @@ const comparisonGuide = findComparisonGuideForTool(
             </div>
           </div>
         </section>
+      )}
+
+      {creatorSeoGroup && (
+        <CreatorSeoToolClusterCard
+          clusterHref={buildLocalizedPagePath(locale, creatorSeoClusterPath)}
+          copy={creatorSeoCopy}
+          currentSlug={tool.slug}
+          group={creatorSeoGroup}
+        />
       )}
 
       {/* Tool Component — Island Architecture: hydrate only when visible */}
