@@ -67,6 +67,20 @@ const checks: RenderedSeoCheck[] = [
     ],
   },
   {
+    name: 'English image editing converters cluster',
+    path: '/en/tools/image-editing-converters/',
+    titleIncludes: 'Image',
+    descriptionIncludes: 'compression',
+    h1Includes: 'Image',
+    schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList', 'BreadcrumbList'],
+    bodyMustInclude: [
+      'Image Editing &amp; Conversion Tools',
+      '/en/tools/image-compressor/',
+      '/en/tools/image-converter/',
+      '/en/categories/image/',
+    ],
+  },
+  {
     name: 'English privacy page',
     path: '/en/privacy/',
     titleIncludes: 'Privacy Policy',
@@ -115,6 +129,19 @@ const checks: RenderedSeoCheck[] = [
       '/en/tools/creator-seo-generators/',
       '/en/tools/youtube-title-generator/',
       '/en/tools/youtube-thumbnail-generator/',
+    ],
+  },
+  {
+    name: 'Image tool cluster backlink',
+    path: '/en/tools/image-compressor/',
+    titleIncludes: 'Image Compressor',
+    descriptionIncludes: 'image',
+    h1Includes: 'Image Compressor',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    bodyMustInclude: [
+      'data-image-tool-cluster',
+      '/en/tools/image-editing-converters/',
+      '/en/tools/image-converter/',
     ],
   },
   {

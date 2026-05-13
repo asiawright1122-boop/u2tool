@@ -29,6 +29,7 @@ import ToolWrapper from '@/components/tools/ToolWrapper.svelte';
 import RelatedTools from '@/components/tools/RelatedTools.astro';
 import ToolFAQ from '@/components/tools/ToolFAQ.astro';
 import CreatorSeoToolClusterCard from '@/components/tools/CreatorSeoToolClusterCard.astro';
+import ImageToolClusterCard from '@/components/tools/ImageToolClusterCard.astro';
 import { tools, categories, getToolsByCategory } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
 import { isValidLocale } from '@/lib/i18n';
@@ -46,6 +47,11 @@ import {
   creatorSeoClusterPath,
   getCreatorSeoClusterCopy,
 } from '@/lib/creator-seo-cluster';
+import {
+  buildImageToolClusterGroupForTool,
+  getImageToolClusterCopy,
+  imageToolClusterPath,
+} from '@/lib/image-tool-cluster';
 
 export const prerender = false;
 
@@ -79,6 +85,7 @@ const headerTranslations = buildHeaderTranslations(baseMessages);
 const mobileNavMessages = buildMobileNavMessages(navMessages);
 const comparisonUiCopy = getComparisonUiCopy(locale);
 const creatorSeoCopy = getCreatorSeoClusterCopy(locale);
+const imageToolCopy = getImageToolClusterCopy(locale);
 
 // Extract tool metadata from translations
 const toolName = (messages.name as string) || tool.slug;
@@ -322,6 +329,13 @@ const creatorSeoGroup = buildCreatorSeoClusterGroupForTool(
   allToolNames,
   allToolDescriptions
 );
+const imageToolGroup = buildImageToolClusterGroupForTool(
+  locale,
+  tool.slug,
+  categoryMessages,
+  allToolNames,
+  allToolDescriptions
+);
 ---
 
 <BaseLayout
@@ -468,6 +482,15 @@ const creatorSeoGroup = buildCreatorSeoClusterGroupForTool(
           copy={creatorSeoCopy}
           currentSlug={tool.slug}
           group={creatorSeoGroup}
+        />
+      )}
+
+      {imageToolGroup && (
+        <ImageToolClusterCard
+          clusterHref={buildLocalizedPagePath(locale, imageToolClusterPath)}
+          copy={imageToolCopy}
+          currentSlug={tool.slug}
+          group={imageToolGroup}
         />
       )}
 

@@ -14,6 +14,7 @@ import ToolsGrid from '@/components/tools/ToolsGrid.astro';
 import CategorySpotlightSection from '@/components/discovery/CategorySpotlightSection.astro';
 import ComparisonGuideSection from '@/components/discovery/ComparisonGuideSection.astro';
 import CreatorSeoClusterSection from '@/components/discovery/CreatorSeoClusterSection.astro';
+import ImageToolClusterSection from '@/components/discovery/ImageToolClusterSection.astro';
 import ToolLaunchSection from '@/components/discovery/ToolLaunchSection.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
@@ -28,6 +29,11 @@ import {
   creatorSeoClusterPath,
   getCreatorSeoClusterCopy,
 } from '@/lib/creator-seo-cluster';
+import {
+  buildImageToolClusterGroups,
+  getImageToolClusterCopy,
+  imageToolClusterPath,
+} from '@/lib/image-tool-cluster';
 import { buildRecentToolLaunches, buildToolLaunchItemList } from '@/lib/tool-launches';
 import { getToolsPageSeo } from '@/lib/seo';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
@@ -140,6 +146,13 @@ const creatorSeoGroups = buildCreatorSeoClusterGroups(
   toolNames,
   toolDescriptions
 );
+const imageToolCopy = getImageToolClusterCopy(locale);
+const imageToolGroups = buildImageToolClusterGroups(
+  locale,
+  categoryMessages,
+  toolNames,
+  toolDescriptions
+);
 const normalizedSearchQuery = normalizeSearchText(searchQuery);
 const searchTokens = normalizedSearchQuery ? normalizedSearchQuery.split(' ').filter(Boolean) : [];
 const initialSearchResults = normalizedSearchQuery
@@ -240,6 +253,16 @@ const toolsCollectionData = {
           href={buildLocalizedPagePath(locale, creatorSeoClusterPath)}
           groups={creatorSeoGroups}
           toolCountLabel={creatorSeoCopy.toolCountLabel}
+        />
+        <ImageToolClusterSection
+          compact
+          eyebrow={imageToolCopy.eyebrow}
+          title={imageToolCopy.title}
+          description={imageToolCopy.description}
+          ctaLabel={imageToolCopy.ctaLabel}
+          href={buildLocalizedPagePath(locale, imageToolClusterPath)}
+          groups={imageToolGroups}
+          toolCountLabel={imageToolCopy.toolCountLabel}
         />
         <CategorySpotlightSection
           eyebrow={siteMessages.name || 'U2Tool'}

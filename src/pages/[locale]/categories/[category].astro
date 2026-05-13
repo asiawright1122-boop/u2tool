@@ -12,6 +12,7 @@ import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
 import Footer from '@/components/layout/Footer.astro';
 import CategorySupportSection from '@/components/categories/CategorySupportSection.astro';
 import CreatorSeoClusterSection from '@/components/discovery/CreatorSeoClusterSection.astro';
+import ImageToolClusterSection from '@/components/discovery/ImageToolClusterSection.astro';
 import Breadcrumb from '@/components/layout/Breadcrumb.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
@@ -31,6 +32,11 @@ import {
   creatorSeoClusterPath,
   getCreatorSeoClusterCopy,
 } from '@/lib/creator-seo-cluster';
+import {
+  buildImageToolClusterGroups,
+  getImageToolClusterCopy,
+  imageToolClusterPath,
+} from '@/lib/image-tool-cluster';
 
 export const prerender = true;
 
@@ -86,6 +92,10 @@ const categoryToolDescriptions = Object.fromEntries(categoryTools.map((tool) => 
 const creatorSeoCopy = getCreatorSeoClusterCopy(locale);
 const creatorSeoGroups = category === 'generators'
   ? buildCreatorSeoClusterGroups(locale, categoryMessages, categoryToolNames, categoryToolDescriptions)
+  : [];
+const imageToolCopy = getImageToolClusterCopy(locale);
+const imageToolGroups = category === 'image'
+  ? buildImageToolClusterGroups(locale, categoryMessages, categoryToolNames, categoryToolDescriptions)
   : [];
 
 const breadcrumbItems = [
@@ -185,6 +195,18 @@ const collectionData = {
             href={buildLocalizedPagePath(locale, creatorSeoClusterPath)}
             groups={creatorSeoGroups}
             toolCountLabel={creatorSeoCopy.toolCountLabel}
+          />
+        )}
+
+        {category === 'image' && (
+          <ImageToolClusterSection
+            eyebrow={imageToolCopy.eyebrow}
+            title={imageToolCopy.title}
+            description={imageToolCopy.description}
+            ctaLabel={imageToolCopy.ctaLabel}
+            href={buildLocalizedPagePath(locale, imageToolClusterPath)}
+            groups={imageToolGroups}
+            toolCountLabel={imageToolCopy.toolCountLabel}
           />
         )}
 

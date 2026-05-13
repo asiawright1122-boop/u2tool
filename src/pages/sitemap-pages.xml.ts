@@ -10,6 +10,7 @@ import { locales } from '@/lib/i18n';
 import { categories } from '@/config/tools';
 import { comparisonSurfaceSlugs } from '@/lib/comparison-surfaces';
 import { creatorSeoClusterPath } from '@/lib/creator-seo-cluster';
+import { imageToolClusterPath } from '@/lib/image-tool-cluster';
 import { siteInfoPageSlugs } from '@/lib/site-info-pages';
 import { sitemapLastmodManifest } from '@/generated/sitemap-lastmod';
 import { buildUrl, generateSitemapResponse } from '@/lib/sitemap-utils';
@@ -29,6 +30,7 @@ export const GET: APIRoute = () => {
     // 工具列表页 - 高优先级
     urls.push(buildUrl(`/${locale}/tools`, '0.9', 'daily', sitemapLastmodManifest.pages));
     urls.push(buildUrl(`/${locale}${creatorSeoClusterPath}`, '0.8', 'weekly', sitemapLastmodManifest.pages));
+    urls.push(buildUrl(`/${locale}${imageToolClusterPath}`, '0.8', 'weekly', sitemapLastmodManifest.pages));
 
     // 比较/选型页
     urls.push(buildUrl(`/${locale}/compare`, '0.8', 'weekly', sitemapLastmodManifest.pages));
