@@ -7,7 +7,7 @@ This audit checks tool support content against search-engine quality expectation
 - Tool message files scanned: 5480
 - English tool files scanned: 548
 - Popular English tool files checked for depth: 94
-- Files with high-confidence implementation overclaims: 2
+- Files with high-confidence implementation overclaims: 0
 - Files with medium-confidence claims for future review: 2
 - Popular English files with depth gaps: 16
 
@@ -27,8 +27,6 @@ Runtime mitigation: high-confidence support-content issues are blocked by `asses
 |---|---:|---:|---|
 | `thin-detailed-description` | depth | 15 | Popular English tool has a short detailed_description (...). |
 | `redis-runtime` | medium | 3 | Mentions Redis-specific behavior that should be verified against the actual tool UI. |
-| `dice-roller-unsupported-control-claim` | high | 1 | Claims Dice Roller controls that are not present in the current dice button, modifier, result, and history UI. |
-| `document-word-counter-export-claim` | high | 1 | Claims Document Word Counter export behavior that is not present in the current live statistics UI. |
 | `server-side-reference` | medium | 1 | References server-side behavior on a browser-first tool page and should be verified. |
 | `thin-faqs` | depth | 1 | Popular English tool has 0 FAQs; expected at least 3. |
 
@@ -36,8 +34,7 @@ Runtime mitigation: high-confidence support-content issues are blocked by `asses
 
 | Locale | Tool | Field | Rule | Excerpt |
 |---|---|---|---|---|
-| en | `document-word-counter` | `usage_steps[4]` | `document-word-counter-export-claim` | Export stats |
-| pt | `dice-roller` | `usage_steps[1]` | `dice-roller-unsupported-control-claim` | Selecione o tipo de dado que deseja lançar using the dropdown menu (por exemplo, D6, D20). |
+| - | - | - | - | No high-confidence overclaims found. |
 
 ## Popular English Depth Gaps
 

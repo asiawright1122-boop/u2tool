@@ -20637,18 +20637,18 @@
       "description": "Count words, characters, sentences, and paragraphs",
       "seo_title": "Free Document Word Counter Online - Character Count | U2Tool",
       "seo_description": "Count words, characters, sentences, paragraphs in documents. Reading time estimation.",
-      "detailed_description": "Document Word Counter provides detailed statistics including word count, character count, and reading time.",
+      "detailed_description": "Document Word Counter analyzes pasted text directly in the browser and updates the statistics as you edit. It shows words, characters, sentences, paragraphs, characters without spaces, lines, estimated pages, unique words, average word length, average sentence length, the longest word, frequent words, reading time, and speaking time. It is useful for essays, articles, reports, scripts, and long drafts when you need quick text metrics without uploading content to a server.",
       "usage_steps": [
-        "Paste document text",
-        "View real-time counts",
-        "Check statistics",
-        "See reading time",
-        "Export stats"
+        "Paste or type the document text into the text area.",
+        "Review the live totals for words, characters, sentences, and paragraphs.",
+        "Check detailed statistics such as lines, estimated pages, unique words, and averages.",
+        "Use the reading and speaking time estimates to plan reviews or presentations.",
+        "Edit the text and watch the counts, frequent words, and longest word update immediately."
       ],
       "usage_examples": [
-        "Check essay word count",
-        "Verify article length",
-        "Estimate reading time"
+        "Check whether an essay meets a required word limit.",
+        "Measure article length before publishing.",
+        "Estimate the reading or speaking time of a report, script, or draft."
       ],
       "input": "Input",
       "output": "Output",
@@ -20678,7 +20678,21 @@
       "speakingTime": "Speaking Time",
       "topWords": "Top Words",
       "chars": "chars",
-      "min": "min"
+      "min": "min",
+      "faqs": [
+        {
+          "question": "What does the tool count?",
+          "answer": "It counts words, characters, sentences, paragraphs, lines, estimated pages, unique words, and common word-frequency details."
+        },
+        {
+          "question": "Does it estimate reading time?",
+          "answer": "Yes. It shows reading time and speaking time estimates based on the current word count."
+        },
+        {
+          "question": "Is my document uploaded?",
+          "answer": "No. The analysis runs in the browser as you type or paste text."
+        }
+      ]
     },
     "document-formatter": {
       "name": "Document Formatter",

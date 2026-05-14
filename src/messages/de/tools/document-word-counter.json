@@ -1,15 +1,29 @@
 {
-  "detailed_description": "Der Dokument-Wortzähler bietet detaillierte Statistiken einschließlich Wortzählung, Zeichenzählung und Lesedauer.",
+  "detailed_description": "Der Dokument-Wortzähler analysiert eingefügten Text direkt im Browser und aktualisiert die Statistiken während der Bearbeitung. Er zeigt Wörter, Zeichen, Sätze, Absätze, Zeichen ohne Leerzeichen, Zeilen, geschätzte Seiten, eindeutige Wörter, durchschnittliche Wortlänge, durchschnittliche Satzlänge, längstes Wort, häufige Wörter, Lesezeit und Sprechzeit. Das ist hilfreich für Aufsätze, Artikel, Berichte, Skripte und lange Entwürfe, ohne Inhalte auf einen Server hochzuladen.",
   "usage_steps": [
-    "Text in das Dokument einfügen",
-    "Realzeit-Zählung anzeigen",
-    "Statistiken überprüfen",
-    "Lesedauer anzeigen",
-    "Statistiken exportieren"
+    "Fügen Sie den Dokumenttext in das Textfeld ein oder tippen Sie ihn ein.",
+    "Prüfen Sie die Live-Summen für Wörter, Zeichen, Sätze und Absätze.",
+    "Sehen Sie Detailwerte wie Zeilen, geschätzte Seiten, eindeutige Wörter und Durchschnittswerte an.",
+    "Nutzen Sie die geschätzte Lese- und Sprechzeit für Korrektur oder Präsentation.",
+    "Bearbeiten Sie den Text und beobachten Sie, wie Zähler, häufige Wörter und längstes Wort sofort aktualisiert werden."
   ],
   "usage_examples": [
-    "Zählung der Wortzahl in einer Arbeit überprüfen",
-    "Artikel-Länge überprüfen",
-    "Lesedauer schätzen"
+    "Prüfen, ob ein Aufsatz eine vorgegebene Wortgrenze einhält.",
+    "Die Länge eines Artikels vor der Veröffentlichung messen.",
+    "Lese- oder Sprechzeit eines Berichts, Skripts oder Entwurfs schätzen."
+  ],
+  "faqs": [
+    {
+      "question": "Was zählt das Tool?",
+      "answer": "Es zählt Wörter, Zeichen, Sätze, Absätze, Zeilen, geschätzte Seiten, eindeutige Wörter und häufige Wörter."
+    },
+    {
+      "question": "Schätzt es die Lesezeit?",
+      "answer": "Ja. Es zeigt Lesezeit und Sprechzeit anhand der aktuellen Wortzahl."
+    },
+    {
+      "question": "Wird mein Dokument hochgeladen?",
+      "answer": "Nein. Die Analyse läuft im Browser, während Sie Text eingeben oder einfügen."
+    }
   ]
 }

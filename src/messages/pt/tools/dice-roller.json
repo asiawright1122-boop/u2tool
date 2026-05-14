@@ -1,17 +1,35 @@
 {
-  "detailed_description": "O Dice Roller é uma ferramenta online que simula o lançamento de dados virtuais, oferecendo uma variedade de tipos de dados e opções de quantidade. Esta ferramenta é perfeitamente adequada para entusiastas de jogos de tabuleiro, RPGs e desenvolvedores que precisam de uma fonte confiável de números aleatórios. O Dice Roller utiliza algoritmos de geração de números pseudoaleatórios (PRNG) para garantir que cada lançamento de dado seja imprevisível e justo. Usuários podem escolher entre diferentes tipos de dados, como D4, D6, D8, D10, D12, D20 e D100, e especificar a quantidade de dados a serem lançados. A ferramenta também oferece opções para personalizar as regras de lançamento, como a capacidade de ignorar resultados específicos ou somar bônus. Isso torna o Dice Roller uma ferramenta versátil para uma ampla gama de aplicações, desde jogos casuais até simulações mais complexas.",
+  "detailed_description": "O Dice Roller fornece dados virtuais para verificações rápidas de mesa, aulas e probabilidade no navegador. Escolha um dos botões visíveis para D4, D6, D8, D10, D12, D20 ou D100, informe de 1 a 20 dados, adicione um modificador numérico opcional e pressione Role Dados. O resultado mostra o total, cada dado individual e o modificador quando aplicado. O histórico de rolagens mantém os resultados recentes visíveis e pode ser limpo quando você quiser iniciar uma nova sessão.",
   "usage_steps": [
-    "Abra a página do Dice Roller no seu navegador.",
-    "Selecione o tipo de dado que deseja lançar using the dropdown menu (por exemplo, D6, D20).",
-    "Especifique a quantidade de dados a serem lançados no campo 'Quantidade'.",
-    "Caso necessário, personalize as regras de lançamento, como ignorar resultados específicos ou adicionar bônus, usando as opções avançadas.",
-    "Clique no botão 'Rolar Dados' para iniciar o lançamento.",
-    "Os resultados serão exibidos na tela, mostrando cada dado individualmente e o resultado total, se aplicável."
+    "Selecione D4, D6, D8, D10, D12, D20 ou D100 nos botões de dados.",
+    "Digite quantos dados deseja rolar, até 20 por vez.",
+    "Adicione um modificador positivo ou negativo quando a partida ou aula precisar.",
+    "Clique em Role Dados para gerar as rolagens individuais e o total.",
+    "Revise os resultados recentes no painel Histórico de Rolos.",
+    "Use Limpar Histórico quando quiser remover o histórico da sessão atual."
   ],
   "usage_examples": [
-    "Um mestre de RPG pode usar o Dice Roller para simular combates e desafios em uma sessão de Dungeons & Dragons, garantindo que os resultados sejam justos e imprevisíveis.",
-    "Desenvolvedores de jogos podem utilizar o Dice Roller durante o teste de funcionalidades que dependem de números aleatórios, como eventos aleatórios ou drop rates de itens.",
-    "Em uma partida de backgammon, o Dice Roller pode ser usado para determinar os movimentos dos jogadores, especialmente quando não há dados físicos disponíveis.",
-    "Estudantes de estatística podem usar o Dice Roller para realizar experimentos de probabilidade, analisando a distribuição de resultados ao lançar múltiplos dados."
+    "Role 3D6 para uma verificação de atributo em RPG de mesa.",
+    "Role um D20 com modificador +5 para uma ação de jogo.",
+    "Use D100 para obter um resultado percentual durante uma sessão de RPG.",
+    "Mostre várias rolagens de D6 a estudantes ao falar sobre resultados aleatórios."
+  ],
+  "faqs": [
+    {
+      "question": "Quais dados estão disponíveis?",
+      "answer": "A ferramenta inclui D4, D6, D8, D10, D12, D20 e D100."
+    },
+    {
+      "question": "Quantos dados posso rolar de uma vez?",
+      "answer": "Você pode informar até 20 dados em uma única rolagem."
+    },
+    {
+      "question": "Posso adicionar um modificador?",
+      "answer": "Sim. Digite um modificador positivo ou negativo para incluí-lo no total."
+    },
+    {
+      "question": "Ela mostra resultados individuais?",
+      "answer": "Sim. Cada dado aparece separadamente junto com o total final."
+    }
   ]
 }

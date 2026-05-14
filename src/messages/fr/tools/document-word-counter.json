@@ -1,15 +1,29 @@
 {
-  "detailed_description": "Le Compteur de Mots de Document fournit des statistiques détaillées, y compris le nombre de mots, le nombre de caractères et l'estimation du temps de lecture.",
+  "detailed_description": "Le compteur de mots de document analyse le texte collé directement dans le navigateur et met à jour les statistiques pendant la saisie. Il affiche mots, caractères, phrases, paragraphes, caractères sans espaces, lignes, pages estimées, mots uniques, longueur moyenne des mots, longueur moyenne des phrases, mot le plus long, mots fréquents, temps de lecture et temps de parole. Il convient aux essais, articles, rapports, scripts et longs brouillons sans envoyer le contenu à un serveur.",
   "usage_steps": [
-    "Coller le texte du document",
-    "Voir les comptages en temps réel",
-    "Vérifier les statistiques",
-    "Voir l'estimation du temps de lecture",
-    "Exporter les statistiques"
+    "Collez ou saisissez le texte du document dans la zone de texte.",
+    "Consultez les totaux en direct des mots, caractères, phrases et paragraphes.",
+    "Vérifiez les statistiques détaillées comme les lignes, pages estimées, mots uniques et moyennes.",
+    "Utilisez les estimations de lecture et de parole pour préparer une relecture ou une présentation.",
+    "Modifiez le texte et observez la mise à jour des compteurs, mots fréquents et mot le plus long."
   ],
   "usage_examples": [
-    "Vérifier le nombre de mots d'un essai",
-    "Vérifier la longueur d'un article",
-    "Estimer le temps de lecture"
+    "Vérifier si un essai respecte une limite de mots.",
+    "Mesurer la longueur d’un article avant publication.",
+    "Estimer le temps de lecture ou de parole d’un rapport, script ou brouillon."
+  ],
+  "faqs": [
+    {
+      "question": "Que compte cet outil ?",
+      "answer": "Il compte les mots, caractères, phrases, paragraphes, lignes, pages estimées, mots uniques et mots fréquents."
+    },
+    {
+      "question": "Estime-t-il le temps de lecture ?",
+      "answer": "Oui. Il affiche une estimation du temps de lecture et du temps de parole selon le nombre de mots actuel."
+    },
+    {
+      "question": "Mon document est-il envoyé ?",
+      "answer": "Non. L’analyse s’exécute dans le navigateur lorsque vous saisissez ou collez du texte."
+    }
   ]
 }

@@ -1,15 +1,29 @@
 {
-  "detailed_description": "O Contador de Palavras de Documentos oferece estatísticas detalhadas, incluindo contagem de palavras, contagem de caracteres e estimativa de tempo de leitura.",
+  "detailed_description": "O Contador de Palavras de Documentos analisa o texto colado diretamente no navegador e atualiza as estatísticas enquanto você edita. Ele mostra palavras, caracteres, frases, parágrafos, caracteres sem espaços, linhas, páginas estimadas, palavras únicas, comprimento médio das palavras, comprimento médio das frases, palavra mais longa, palavras frequentes, tempo de leitura e tempo de fala. É útil para ensaios, artigos, relatórios, roteiros e rascunhos longos sem enviar o conteúdo para um servidor.",
   "usage_steps": [
-    "Cole o texto do documento",
-    "Veja as contagens em tempo real",
-    "Verifique as estatísticas",
-    "Veja o tempo de leitura",
-    "Exporte as estatísticas"
+    "Cole ou digite o texto do documento na área de texto.",
+    "Veja os totais em tempo real de palavras, caracteres, frases e parágrafos.",
+    "Confira estatísticas detalhadas como linhas, páginas estimadas, palavras únicas e médias.",
+    "Use as estimativas de leitura e fala para planejar revisões ou apresentações.",
+    "Edite o texto e veja as contagens, palavras frequentes e palavra mais longa atualizarem imediatamente."
   ],
   "usage_examples": [
-    "Verifique o número de palavras de um ensaio",
-    "Verifique o comprimento de um artigo",
-    "Estime o tempo de leitura"
+    "Verifique se um ensaio cumpre um limite de palavras.",
+    "Meça o comprimento de um artigo antes de publicar.",
+    "Estime o tempo de leitura ou fala de um relatório, roteiro ou rascunho."
+  ],
+  "faqs": [
+    {
+      "question": "O que a ferramenta conta?",
+      "answer": "Ela conta palavras, caracteres, frases, parágrafos, linhas, páginas estimadas, palavras únicas e frequência de palavras."
+    },
+    {
+      "question": "Ela estima tempo de leitura?",
+      "answer": "Sim. A página mostra estimativas de tempo de leitura e de fala com base na contagem atual de palavras."
+    },
+    {
+      "question": "Meu documento é enviado?",
+      "answer": "Não. A análise roda no navegador enquanto você digita ou cola o texto."
+    }
   ]
 }

@@ -20796,18 +20796,18 @@
       "description": "Contador de palabras, caracteres, oraciones y párrafos",
       "seo_title": "Contador de palabras de documentos online - U2Tool",
       "seo_description": "Cuenta palabras, caracteres, oraciones y párrafos en documentos. Revisa páginas aproximadas, palabras frecuentes y tiempo de lectura.",
-      "detailed_description": "El Contador de Palabras de Documentos analiza el texto pegado directamente en el navegador. Muestra palabras, caracteres, oraciones y párrafos, además de estadísticas detalladas como caracteres sin espacios, líneas, páginas aproximadas, palabras únicas, longitud media, palabra más larga y palabras frecuentes. También estima el tiempo de lectura y de habla para revisar ensayos, artículos, informes o borradores largos sin subir el contenido a un servidor.",
+      "detailed_description": "El Contador de Palabras de Documentos analiza el texto pegado directamente en el navegador y actualiza las estadísticas mientras editas. Muestra palabras, caracteres, oraciones, párrafos, caracteres sin espacios, líneas, páginas aproximadas, palabras únicas, longitud media de palabra, longitud media de oración, palabra más larga, palabras frecuentes, tiempo de lectura y tiempo de habla. Es útil para ensayos, artículos, informes, guiones y borradores largos sin subir el contenido a un servidor.",
       "usage_steps": [
-        "Pega el texto del documento en el área de entrada.",
-        "Revisa los totales de palabras, caracteres, oraciones y párrafos.",
-        "Consulta las estadísticas detalladas de líneas, páginas, palabras únicas y promedios.",
-        "Comprueba las estimaciones de tiempo de lectura y de habla.",
-        "Edita el texto para actualizar los recuentos y las palabras frecuentes."
+        "Pega o escribe el texto del documento en el área de entrada.",
+        "Revisa los totales en vivo de palabras, caracteres, oraciones y párrafos.",
+        "Consulta estadísticas detalladas como líneas, páginas aproximadas, palabras únicas y promedios.",
+        "Usa las estimaciones de lectura y habla para planificar revisiones o presentaciones.",
+        "Edita el texto y observa cómo se actualizan los recuentos, palabras frecuentes y palabra más larga."
       ],
       "usage_examples": [
         "Verificar si un ensayo cumple un límite mínimo o máximo de palabras.",
         "Medir la longitud de un artículo antes de publicarlo.",
-        "Estimar el tiempo de lectura de un informe o guion."
+        "Estimar el tiempo de lectura o habla de un informe, guion o borrador."
       ],
       "input": "Entrada",
       "output": "Salida",
@@ -20837,7 +20837,21 @@
       "speakingTime": "Tiempo de Habla",
       "topWords": "Palabras Principales",
       "chars": "caracteres",
-      "min": "min"
+      "min": "min",
+      "faqs": [
+        {
+          "question": "¿Qué cuenta la herramienta?",
+          "answer": "Cuenta palabras, caracteres, oraciones, párrafos, líneas, páginas aproximadas, palabras únicas y frecuencia de palabras."
+        },
+        {
+          "question": "¿Estima el tiempo de lectura?",
+          "answer": "Sí. Muestra tiempo de lectura y de habla según el recuento actual de palabras."
+        },
+        {
+          "question": "¿Se sube mi documento?",
+          "answer": "No. El análisis se ejecuta en el navegador mientras escribes o pegas texto."
+        }
+      ]
     },
     "document-formatter": {
       "name": "Formateador de Documentos",

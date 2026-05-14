@@ -245,6 +245,43 @@ describe('assessSupportContentTrust', () => {
     expect(report.issues.map((issue) => issue.code)).toContain('document-word-counter-export-claim');
   });
 
+  it('blocks multilingual Document Word Counter export claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'document-word-counter',
+      locale: 'zh',
+      name: '文档字数统计',
+      description: '',
+      detailedDescription: '',
+      usageSteps: ['导出统计结果', '統計をエクスポートする', '통계 내보내기'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain('document-word-counter-export-claim');
+  });
+
+  it('allows Document Word Counter copy that matches the current live statistics UI', () => {
+    const report = assessSupportContentTrust({
+      slug: 'document-word-counter',
+      locale: 'en',
+      name: 'Document Word Counter',
+      description: '',
+      detailedDescription:
+        'The tool analyzes pasted text in the browser and shows words, characters, sentences, paragraphs, lines, estimated pages, frequent words, reading time, and speaking time.',
+      usageSteps: [
+        'Paste or type document text into the text area.',
+        'Review the live totals and detailed statistics.',
+        'Edit the text and watch the counts update immediately.',
+      ],
+      usageExamples: ['Check whether an essay meets a required word limit.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(false);
+    expect(report.issues).toEqual([]);
+  });
+
   it('blocks Compound Interest Calculator visual chart claims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'compound-interest-calculator',

@@ -154,7 +154,7 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
   },
   {
     code: 'document-word-counter-export-claim',
-    pattern: /\bExport stats\b|Exporta las estadísticas|Exportar estadísticas/i,
+    pattern: /\bExport stats\b|Exporta las estadísticas|Exportar estadísticas|Exporte as estatísticas|Exportar estatísticas|Exporter les statistiques|Statistiken exportieren|导出统计结果|統計をエクスポート|통계 내보내기|Скопируйте или скачайте результат|نسخ أو تنزيل الناتج/i,
     message: 'Claims Document Word Counter export behavior that is not present in the current live statistics UI.',
     slugs: ['document-word-counter'],
   },
