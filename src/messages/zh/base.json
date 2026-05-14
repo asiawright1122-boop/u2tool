@@ -779,9 +779,9 @@
     },
     "barcode-generator": {
       "name": "条码生成器",
-      "description": "生成 Code 128、Code 39、EAN-13 和 UPC 格式的条形码。",
+      "description": "在浏览器中生成 Code 128、Code 39、EAN-13 和 UPC-A 的 SVG 条码预览。",
       "seo_title": "免费在线条形码生成器",
-      "seo_description": "使用这款免费在线条形码生成器快速生成商品、库存和物流标签所需的条形码，支持常见编码格式并可导出为图片或矢量文件。"
+      "seo_description": "在线生成适合商品、库存和物流标签草稿的条形码 SVG 预览。输入内容、选择格式并即时查看常见条码渲染结果。"
     },
     "text-to-speech": {
       "name": "文字转语音",
@@ -5995,9 +5995,9 @@
     },
     "barcode-generator": {
       "name": "条形码生成器",
-      "description": "生成Code 128、Code 39、EAN-13和UPC格式的条形码。",
+      "description": "在浏览器中生成 Code 128、Code 39、EAN-13 和 UPC-A 的 SVG 条码预览。",
       "seo_title": "免费在线条形码生成器",
-      "seo_description": "使用这款免费在线条形码生成器快速生成商品、库存和物流标签所需的条形码，支持常见编码格式并可导出为图片或矢量文件。",
+      "seo_description": "在线生成适合商品、库存和物流标签草稿的条形码 SVG 预览。输入内容、选择格式并即时查看常见条码渲染结果。",
       "faqs": [
         {
           "question": "Barcode Generator 是免费的吗？",
@@ -6008,8 +6008,8 @@
           "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
         },
         {
-          "question": "可以批量生成吗？",
-          "answer": "是的，Barcode Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+          "question": "支持哪些条码类型？",
+          "answer": "当前 Barcode Generator 支持 Code 128、Code 39、EAN-13 和 UPC-A。"
         },
         {
           "question": "需要安装软件吗？",

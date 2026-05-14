@@ -3829,28 +3829,46 @@
     },
     "barcode-generator": {
       "name": "Barcode-Generator",
-      "description": "Generiere Barcodes im Format Code 128, Code 39, EAN-13 und UPC.",
+      "description": "Erstellen Sie eine SVG-Vorschau für Code 128, Code 39, EAN-13 und UPC-A.",
       "seo_title": "Kostenlose Online-Tool zur Barcode-Generierung",
-      "seo_description": "Generieren Sie kostenlos Barcodes online. Unterstützung für Code128, Code39, EAN-13, UPC-A und mehr. Als PNG oder SVG herunterladen. Ideal für Lagerhaltung und Produktetikettierung.",
-      "detailed_description": "Der Barcode Generator ist ein technisch präzises Werkzeug zur Erstellung von Strichcodes in den Industriestandards Code 128, Code 39, EAN-13 und UPC. Das Tool implementiert spezifische Algorithmen zur Codierung von alphanumerischen und numerischen Daten in binäre Muster, die durch Balkenbreiten-Modulation (BWM) dargestellt werden. Für EAN-13 und UPC erfolgt die Generierung mit obligatorischem Prüfziffern-Berechnung nach Modulo-10-Algorithmus. Code 128 unterstützt automatischen Moduswechsel zwischen Kodierungsmodi A/B/C zur Optimierung der Dichte. Die Ausgabe erfolgt als Vektorgrafik (SVG) mit exakter Rasterung, was eine verlustfreie Skalierung für Druck- und Scanning-Anwendungen ermöglicht. Entwickler nutzen dieses Tool für die Integration in E-Commerce-Systeme, Logistik-Software oder Lagerverwaltungen, da manuelle Implementierung komplexer Barcode-Standards zeitaufwendig wäre. Die serverlose Architektur ermöglicht Instant-Rendering ohne Datenpersistenz, garantierend Datenschutzkonformität bei sensiblen Produktcodes.",
+      "seo_description": "Erstellen Sie im Browser SVG-Vorschauen für Code 128, Code 39, EAN-13 und UPC-A. Wert eingeben, Format wählen und Live-Vorschau prüfen.",
+      "detailed_description": "Der Barcode-Generator erstellt eine Live-SVG-Vorschau eines linearen Barcodes direkt im Browser. Geben Sie den Wert ein, wählen Sie Code 128, Code 39, EAN-13 oder UPC-A, und die Vorschau wird nach den Regeln der gewählten Symbologie neu gerendert. Für EAN-13 und UPC-A sollten numerische Werte mit passender Länge verwendet werden; passt der Wert nicht zum Format, zeigt die Seite eine Fehlermeldung statt eines falschen Barcodes. Das Tool eignet sich für schnelle Testcodes, Etikettenentwürfe und den Vergleich kurzer Werte in gängigen Barcode-Formaten. Es ist für die Browser-Vorschau gedacht, ohne Bilddatei-Export, Druckauflösungsregler, Styling-Optionen oder druckfertige Etikettenprüfung.",
       "usage_steps": [
-        "Wählen Sie den gewünschten Barcode-Standard (Code 128, Code 39, EAN-13 oder UPC) aus dem Auswahldropdownmenü.",
-        "Geben Sie die zu kodierende Zeichenfolge ein – beachten Sie Längenbeschränkungen (z.B. 12 Ziffern für UPC ohne Prüfziffer).",
-        "Konfigurieren Sie die Modulbreite (X-Dimension) und Gesamthöhe in Pixeln über die Schieberegler für Ihre Anwendungsoberfläche.",
-        "Aktivieren Sie das 'Prüfziffer berechnen'-Checkbox für EAN/UPC, um automatische Validierung sicherzustellen.",
-        "Klicken Sie auf 'Barcode generieren', um das SVG-Dokument im Echtzeit-Vorschau-Feld anzuzeigen.",
-        "Laden Sie die generierte SVG-Datei herunter oder kopieren Sie den XML-Quellcode für die Integration in Ihre Softwareumgebung."
+        "Wählen Sie ein Barcode-Format: Code 128, Code 39, EAN-13 oder UPC-A.",
+        "Geben Sie den Text oder numerischen Wert in das Inhaltsfeld ein.",
+        "Prüfen Sie bei EAN-13 oder UPC-A, dass der Wert den numerischen Anforderungen entspricht.",
+        "Sehen Sie sich die SVG-Vorschau des Barcodes auf der Seite an.",
+        "Wenn eine Fehlermeldung erscheint, ändern Sie den Wert oder wählen Sie ein anderes Format.",
+        "Aktualisieren Sie Wert oder Format, wenn Sie eine neue Vorschau benötigen."
       ],
       "usage_examples": [
-        "Ein Einzelhändler erstellt UPC-Codes für Eigenmarkenprodukte, um sie in Warenwirtschaftssysteme wie SAP zu integrieren.",
-        "Ein Bibliothekar generiert EAN-13-Codes für antiquarische Bücher ohne ISBN, einschließlich automatisch berechneter Prüfziffern.",
-        "Ein Logistikunternehmen verwendet Code 128 zur Kennzeichnung von Versandpaletten mit GS1-Datenstrukturen für internationale Transporte.",
-        "Ein Softwareentwickler implementiert den Generator in eine PWA zur Inventarisierung von Laborgeräten mit Code-39-Kompatibilität zu legacy Scannerhardware."
+        "Einen internen Lagercode als Code 128 für einen Etikettenentwurf prüfen.",
+        "Eine Beispiel-EAN-13 für den Entwurf einer Produktkarte anzeigen.",
+        "Code 39 und Code 128 für eine kurze Testmarke im Lager vergleichen.",
+        "Einen Demo-UPC-A-Wert vor der Verwendung in einer Präsentationsvorlage prüfen."
       ],
       "barcode": {
         "text": "barcode.text",
         "format": "Formatieren"
-      }
+      },
+      "faqs": [
+        {
+          "question": "Welche Barcode-Typen werden unterstützt?",
+          "answer": "Die aktuelle Oberfläche unterstützt Code 128, Code 39, EAN-13 und UPC-A."
+        },
+        {
+          "question": "Warum zeigt EAN-13 oder UPC-A einen Fehler?",
+          "answer": "Diese Formate benötigen einen gültigen numerischen Wert. Wenn die Eingabe nicht passt, zeigt der Generator eine Fehlermeldung."
+        },
+        {
+          "question": "Kann ich den Barcode als Bilddatei herunterladen?",
+          "answer": "Nein. Die aktuelle Seite zeigt eine SVG-Vorschau im Browser, enthält aber keine separate Download-Schaltfläche."
+        },
+        {
+          "question": "Reicht das für finale Produktetiketten?",
+          "answer": "Nutzen Sie es für schnelle Prüfungen und Entwürfe. Für Produktionsetiketten sollten Scanneranforderungen, Größe, Kontrast und der relevante Etikettenstandard geprüft werden."
+        }
+      ]
     },
     "text-to-speech": {
       "name": "Text in Sprache umwandeln",
@@ -22655,9 +22673,9 @@
     },
     "barcode-generator": {
       "name": "Barcode-Generator",
-      "description": "Generieren Sie Barcodes in den Formaten Code 128, Code 39, EAN-13 und UPC.",
+      "description": "Erstellen Sie eine SVG-Vorschau für Code 128, Code 39, EAN-13 und UPC-A.",
       "seo_title": "Kostenloser Barcode-Generator online",
-      "seo_description": "Generieren Sie kostenlos Barcodes online. Unterstützt Code128, Code39, EAN-13, UPC-A und weitere Formate. Als PNG oder SVG herunterladen. Perfekt für die Inventar- und Produktkennzeichnung."
+      "seo_description": "Erstellen Sie im Browser SVG-Vorschauen für Code 128, Code 39, EAN-13 und UPC-A. Wert eingeben, Format wählen und Live-Vorschau prüfen."
     },
     "text-to-speech": {
       "name": "Text-zu-Sprache",

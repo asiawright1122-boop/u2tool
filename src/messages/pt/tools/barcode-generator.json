@@ -1,17 +1,35 @@
 {
-  "detailed_description": "O Gerador de Códigos de Barras é uma ferramenta técnica especializada para criar representações gráficas de códigos de barras nos formatos Code 128 (alta densidade, caracteres alfanuméricos), Code 39 (alfanumérico com verificação de redundância cíclica), EAN-13 (padrão global para produtos de varejo) e UPC (código universal de produtos). Desenvolvido com algoritmos de codificação linear e bibliotecas de renderização vetorial, converte dados textuais em padrões de barras e espaços seguindo especificações ISO/IEC. Ideal para sistemas de gestão de estoque, automação comercial, logística e identificação de ativos. Funciona através de um mecanismo que aplica fórmulas matemáticas para mapear caracteres em larguras de barras, calcula dígitos verificadores para integridade e exporta imagens PNG ou SVG com resolução ajustável (DPI), permitindo personalização de dimensões, cores e margens (quiet zones). Tecnologia especialmente útil para desenvolvedores que precisam integrar geração de códigos em aplicativos ou validar conformidade de códigos existentes.",
+  "detailed_description": "O Gerador de Código de Barras cria uma prévia SVG ao vivo de um código de barras linear diretamente no navegador. Digite o valor, escolha Code 128, Code 39, EAN-13 ou UPC-A, e a prévia será atualizada de acordo com as regras da simbologia selecionada. Para EAN-13 e UPC-A, use valores numéricos com o comprimento esperado; se o valor não combinar com o formato, a página mostra um erro em vez de renderizar um código incorreto. A ferramenta é útil para testes rápidos, rascunhos de etiquetas e para verificar como um valor curto aparece em formatos comuns. Ela é voltada para prévia no navegador, sem exportação de arquivo de imagem, controles de resolução de impressão, opções de estilo ou validação de etiquetas prontas para impressão.",
   "usage_steps": [
-    "1. Acesse o painel de configurações e selecione o formato desejado (Code 128, Code 39, EAN-13 ou UPC) no seletor dropdown.",
-    "2. Preencha o campo 'Dados de Entrada' com a sequência alfanumérica a ser codificada (atenção às regras específicas de cada formato).",
-    "3. Ajuste os parâmetros técnicos: largura do módulo (X-dimension), altura total, proporção barras/espaços e margens laterais.",
-    "4. Ative a opção 'Exibir Texto' para sobrepor o valor legível abaixo das barras ou desative para layout minimalista.",
-    "5. Clique em 'Gerar Código' e aguarde o processador interno renderizar a imagem em tempo real usando Canvas 2D API.",
-    "6. Baixe o resultado nos formatos PNG (raster) ou SVG (vetorial) ou copie o código embeddable para integração web."
+    "Escolha um formato de código de barras: Code 128, Code 39, EAN-13 ou UPC-A.",
+    "Digite o texto ou valor numérico no campo de conteúdo.",
+    "Para EAN-13 ou UPC-A, confirme que o valor atende aos requisitos numéricos do formato.",
+    "Revise a prévia SVG do código de barras na página.",
+    "Se aparecer um erro, ajuste o valor ou escolha outro formato.",
+    "Altere o valor ou o formato sempre que precisar de uma nova prévia."
   ],
   "usage_examples": [
-    "1. Uma loja de varejo gera EAN-13 para etiquetas de produtos eletrônicos, garantindo compatibilidade com leitores de código de barras de supermercados.",
-    "2. Um laboratório clínico utiliza Code 128 para identificar tubos de amostras biológicas, aproveitando a capacidade de codificar ASCII estendido.",
-    "3. Um sistema de gestão de biblioteca implementa Code 39 para catalogar livros, usando caracteres alfanuméricos sem necessidade de checksum adicional.",
-    "4. Um desenvolvedor de software de gestão de frotas cria códigos UPC personalizados para identificação de veículos em pátios, integrando com PDAs de leitura industrial."
+    "Pré-visualizar um código interno de inventário em Code 128 antes de colocá-lo em um rascunho de etiqueta.",
+    "Verificar como um valor EAN-13 de exemplo aparece em um rascunho de ficha de produto.",
+    "Comparar Code 39 e Code 128 para uma etiqueta curta de teste de armazém.",
+    "Validar um valor UPC-A de demonstração antes de usá-lo em um mockup de apresentação."
+  ],
+  "faqs": [
+    {
+      "question": "Quais tipos de código de barras são aceitos?",
+      "answer": "A interface atual aceita Code 128, Code 39, EAN-13 e UPC-A."
+    },
+    {
+      "question": "Por que EAN-13 ou UPC-A mostra erro?",
+      "answer": "Esses formatos exigem um valor numérico válido. Se a entrada não combinar com o formato, o gerador mostra um erro."
+    },
+    {
+      "question": "Posso baixar o código de barras como imagem?",
+      "answer": "Não. A página atual mostra uma prévia SVG no navegador, mas não inclui um botão separado de download de imagem."
+    },
+    {
+      "question": "Isso serve para etiquetas finais de produto?",
+      "answer": "Use para verificações rápidas e mockups. Para etiquetas de produção, confira requisitos do scanner, tamanho, contraste e o padrão de rotulagem aplicável."
+    }
   ]
 }

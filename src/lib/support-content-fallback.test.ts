@@ -173,6 +173,27 @@ describe('assessSupportContentTrust', () => {
     expect(report.issues.map((issue) => issue.code)).toContain('barcode-unsupported-output-claim');
   });
 
+  it('keeps accurate Barcode Generator preview-only support copy visible', () => {
+    const report = assessSupportContentTrust({
+      slug: 'barcode-generator',
+      locale: 'en',
+      name: 'Barcode Generator',
+      description: '',
+      detailedDescription:
+        'The Barcode Generator creates a live SVG preview of a linear barcode directly in the browser. It is intended for browser preview only, without image-file export, print-resolution controls, styling controls, or print-grade label validation.',
+      usageSteps: ['Choose Code 128, Code 39, EAN-13, or UPC-A and review the SVG preview.'],
+      usageExamples: ['Preview an internal inventory code in Code 128 before placing it in a mock label.'],
+      faqs: [
+        {
+          question: 'Which barcode types are supported?',
+          answer: 'The current interface supports Code 128, Code 39, EAN-13, and UPC-A.',
+        },
+      ],
+    });
+
+    expect(report.blockSupportContent).toBe(false);
+  });
+
   it('blocks French File Size Calculator controls that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'file-size-calculator',
