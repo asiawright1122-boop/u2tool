@@ -123,6 +123,20 @@ const checks: RenderedSeoCheck[] = [
     ],
   },
   {
+    name: 'English PDF document converters cluster',
+    path: '/en/tools/pdf-document-converters/',
+    titleIncludes: 'PDF',
+    descriptionIncludes: 'PDF',
+    h1Includes: 'PDF',
+    schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList', 'BreadcrumbList'],
+    bodyMustInclude: [
+      'PDF, Document &amp; Spreadsheet Tools',
+      '/en/tools/pdf-merger/',
+      '/en/tools/excel-to-json/',
+      '/en/categories/office/',
+    ],
+  },
+  {
     name: 'English security password hash tools cluster',
     path: '/en/tools/security-password-hash-tools/',
     titleIncludes: 'Security',
@@ -237,6 +251,19 @@ const checks: RenderedSeoCheck[] = [
       'data-online-calculator-cluster',
       '/en/tools/online-calculators/',
       '/en/tools/roi-calculator/',
+    ],
+  },
+  {
+    name: 'PDF document tool cluster backlink',
+    path: '/en/tools/pdf-merger/',
+    titleIncludes: 'PDF Merger',
+    descriptionIncludes: 'PDF',
+    h1Includes: 'PDF Merger',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    bodyMustInclude: [
+      'data-pdf-document-tool-cluster',
+      '/en/tools/pdf-document-converters/',
+      '/en/tools/pdf-splitter/',
     ],
   },
   {

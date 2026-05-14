@@ -14,6 +14,7 @@ import { creatorSeoClusterPath } from '@/lib/creator-seo-cluster';
 import { developerDataToolClusterPath } from '@/lib/developer-data-tool-cluster';
 import { imageToolClusterPath } from '@/lib/image-tool-cluster';
 import { onlineCalculatorClusterPath } from '@/lib/online-calculator-cluster';
+import { pdfDocumentToolClusterPath } from '@/lib/pdf-document-tool-cluster';
 import { securityToolClusterPath } from '@/lib/security-tool-cluster';
 import { siteInfoPageSlugs } from '@/lib/site-info-pages';
 import { sitemapLastmodManifest } from '@/generated/sitemap-lastmod';
@@ -37,6 +38,7 @@ export const GET: APIRoute = () => {
     urls.push(buildUrl(`/${locale}${developerDataToolClusterPath}`, '0.8', 'weekly', sitemapLastmodManifest.pages));
     urls.push(buildUrl(`/${locale}${imageToolClusterPath}`, '0.8', 'weekly', sitemapLastmodManifest.pages));
     urls.push(buildUrl(`/${locale}${onlineCalculatorClusterPath}`, '0.8', 'weekly', sitemapLastmodManifest.pages));
+    urls.push(buildUrl(`/${locale}${pdfDocumentToolClusterPath}`, '0.8', 'weekly', sitemapLastmodManifest.pages));
     urls.push(buildUrl(`/${locale}${securityToolClusterPath}`, '0.8', 'weekly', sitemapLastmodManifest.pages));
     urls.push(buildUrl(`/${locale}${chartToolClusterPath}`, '0.8', 'weekly', sitemapLastmodManifest.pages));
 

@@ -18,6 +18,7 @@ import CreatorSeoClusterSection from '@/components/discovery/CreatorSeoClusterSe
 import DeveloperDataToolClusterSection from '@/components/discovery/DeveloperDataToolClusterSection.astro';
 import ImageToolClusterSection from '@/components/discovery/ImageToolClusterSection.astro';
 import OnlineCalculatorClusterSection from '@/components/discovery/OnlineCalculatorClusterSection.astro';
+import PdfDocumentToolClusterSection from '@/components/discovery/PdfDocumentToolClusterSection.astro';
 import SecurityToolClusterSection from '@/components/discovery/SecurityToolClusterSection.astro';
 import ToolLaunchSection from '@/components/discovery/ToolLaunchSection.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
@@ -53,6 +54,11 @@ import {
   getOnlineCalculatorClusterCopy,
   onlineCalculatorClusterPath,
 } from '@/lib/online-calculator-cluster';
+import {
+  buildPdfDocumentToolClusterGroups,
+  getPdfDocumentToolClusterCopy,
+  pdfDocumentToolClusterPath,
+} from '@/lib/pdf-document-tool-cluster';
 import {
   buildSecurityToolClusterGroups,
   getSecurityToolClusterCopy,
@@ -186,6 +192,13 @@ const imageToolGroups = buildImageToolClusterGroups(
 );
 const onlineCalculatorCopy = getOnlineCalculatorClusterCopy(locale);
 const onlineCalculatorGroups = buildOnlineCalculatorClusterGroups(
+  locale,
+  categoryMessages,
+  toolNames,
+  toolDescriptions
+);
+const pdfDocumentToolCopy = getPdfDocumentToolClusterCopy(locale);
+const pdfDocumentToolGroups = buildPdfDocumentToolClusterGroups(
   locale,
   categoryMessages,
   toolNames,
@@ -335,6 +348,16 @@ const toolsCollectionData = {
           href={buildLocalizedPagePath(locale, onlineCalculatorClusterPath)}
           groups={onlineCalculatorGroups}
           toolCountLabel={onlineCalculatorCopy.toolCountLabel}
+        />
+        <PdfDocumentToolClusterSection
+          compact
+          eyebrow={pdfDocumentToolCopy.eyebrow}
+          title={pdfDocumentToolCopy.title}
+          description={pdfDocumentToolCopy.description}
+          ctaLabel={pdfDocumentToolCopy.ctaLabel}
+          href={buildLocalizedPagePath(locale, pdfDocumentToolClusterPath)}
+          groups={pdfDocumentToolGroups}
+          toolCountLabel={pdfDocumentToolCopy.toolCountLabel}
         />
         <SecurityToolClusterSection
           compact

@@ -2,9 +2,9 @@
 /**
  * Category page for each category × each locale
  * Route: /{locale}/categories/{category}
- * Generates static paths for all 14 categories × all 10 locales
+ * Renders on Cloudflare SSR so localized category copy stays aligned with the
+ * current message assets in every locale.
  */
-import type { GetStaticPaths } from 'astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/layout/Header.svelte';
 import StaticSidebar from '@/components/layout/StaticSidebar.astro';
@@ -16,6 +16,7 @@ import CreatorSeoClusterSection from '@/components/discovery/CreatorSeoClusterSe
 import DeveloperDataToolClusterSection from '@/components/discovery/DeveloperDataToolClusterSection.astro';
 import ImageToolClusterSection from '@/components/discovery/ImageToolClusterSection.astro';
 import OnlineCalculatorClusterSection from '@/components/discovery/OnlineCalculatorClusterSection.astro';
+import PdfDocumentToolClusterSection from '@/components/discovery/PdfDocumentToolClusterSection.astro';
 import SecurityToolClusterSection from '@/components/discovery/SecurityToolClusterSection.astro';
 import Breadcrumb from '@/components/layout/Breadcrumb.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
@@ -23,7 +24,7 @@ import StructuredData from '@/components/seo/StructuredData.astro';
 import { categories, getToolsByCategory, tools as allTools } from '@/config/tools';
 import type { ToolCategory } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
-import { locales, getLocalizedPath } from '@/lib/i18n';
+import { getLocalizedPath, isValidLocale } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadBaseUiMessages } from '@/lib/translations';
 import { getCategoryPageSeo } from '@/lib/seo';
@@ -57,30 +58,30 @@ import {
   onlineCalculatorClusterPath,
 } from '@/lib/online-calculator-cluster';
 import {
+  buildPdfDocumentToolClusterGroups,
+  getPdfDocumentToolClusterCopy,
+  pdfDocumentToolClusterPath,
+} from '@/lib/pdf-document-tool-cluster';
+import {
   buildSecurityToolClusterGroups,
   getSecurityToolClusterCopy,
   securityToolClusterPath,
 } from '@/lib/security-tool-cluster';
 
-export const prerender = true;
+export const prerender = false;
 
-export const getStaticPaths: GetStaticPaths = () => {
-  const categoryIds: ToolCategory[] = [
-    'text', 'encoding', 'generators', 'converters',
-    'development', 'security', 'network', 'image',
-    'math', 'charts', 'office', 'lifestyle',
-    'finance', 'fun',
-  ];
+const localeCandidate = Astro.params.locale;
+if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate)) {
+  return Astro.redirect('/en/categories/text/', 302);
+}
+const locale: Locale = localeCandidate;
 
-  return locales.flatMap((locale) =>
-    categoryIds.map((category) => ({
-      params: { locale, category },
-      props: { locale, category },
-    }))
-  );
-};
-
-const { locale, category } = Astro.props as { locale: Locale; category: ToolCategory };
+const categoryCandidate = Astro.params.category;
+const categoryIds = categories.map((candidate) => candidate.id);
+if (typeof categoryCandidate !== 'string' || !categoryIds.includes(categoryCandidate as ToolCategory)) {
+  return Astro.redirect(`/${locale}/tools/`, 302);
+}
+const category = categoryCandidate as ToolCategory;
 
 const baseMessages = await loadBaseUiMessages(locale, Astro.url);
 const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
@@ -132,6 +133,11 @@ const onlineCalculatorCopy = getOnlineCalculatorClusterCopy(locale);
 const onlineCalculatorCategories: ToolCategory[] = ['finance', 'math', 'lifestyle', 'office', 'network', 'converters'];
 const onlineCalculatorGroups = onlineCalculatorCategories.includes(category)
   ? buildOnlineCalculatorClusterGroups(locale, categoryMessages, allToolNames, allToolDescriptions)
+  : [];
+const pdfDocumentToolCopy = getPdfDocumentToolClusterCopy(locale);
+const pdfDocumentClusterCategories: ToolCategory[] = ['office', 'converters', 'finance'];
+const pdfDocumentToolGroups = pdfDocumentClusterCategories.includes(category)
+  ? buildPdfDocumentToolClusterGroups(locale, categoryMessages, allToolNames, allToolDescriptions)
   : [];
 const securityToolCopy = getSecurityToolClusterCopy(locale);
 const securityClusterCategories: ToolCategory[] = ['security', 'network', 'encoding'];
@@ -276,6 +282,18 @@ const collectionData = {
             href={buildLocalizedPagePath(locale, onlineCalculatorClusterPath)}
             groups={onlineCalculatorGroups}
             toolCountLabel={onlineCalculatorCopy.toolCountLabel}
+          />
+        )}
+
+        {pdfDocumentClusterCategories.includes(category) && (
+          <PdfDocumentToolClusterSection
+            eyebrow={pdfDocumentToolCopy.eyebrow}
+            title={pdfDocumentToolCopy.title}
+            description={pdfDocumentToolCopy.description}
+            ctaLabel={pdfDocumentToolCopy.ctaLabel}
+            href={buildLocalizedPagePath(locale, pdfDocumentToolClusterPath)}
+            groups={pdfDocumentToolGroups}
+            toolCountLabel={pdfDocumentToolCopy.toolCountLabel}
           />
         )}
 

@@ -33,6 +33,7 @@ import CreatorSeoToolClusterCard from '@/components/tools/CreatorSeoToolClusterC
 import DeveloperDataToolClusterCard from '@/components/tools/DeveloperDataToolClusterCard.astro';
 import ImageToolClusterCard from '@/components/tools/ImageToolClusterCard.astro';
 import OnlineCalculatorClusterCard from '@/components/tools/OnlineCalculatorClusterCard.astro';
+import PdfDocumentToolClusterCard from '@/components/tools/PdfDocumentToolClusterCard.astro';
 import SecurityToolClusterCard from '@/components/tools/SecurityToolClusterCard.astro';
 import { tools, categories, getToolsByCategory } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
@@ -71,6 +72,11 @@ import {
   getOnlineCalculatorClusterCopy,
   onlineCalculatorClusterPath,
 } from '@/lib/online-calculator-cluster';
+import {
+  buildPdfDocumentToolClusterGroupForTool,
+  getPdfDocumentToolClusterCopy,
+  pdfDocumentToolClusterPath,
+} from '@/lib/pdf-document-tool-cluster';
 import {
   buildSecurityToolClusterGroupForTool,
   getSecurityToolClusterCopy,
@@ -113,6 +119,7 @@ const creatorSeoCopy = getCreatorSeoClusterCopy(locale);
 const developerDataToolCopy = getDeveloperDataToolClusterCopy(locale);
 const imageToolCopy = getImageToolClusterCopy(locale);
 const onlineCalculatorCopy = getOnlineCalculatorClusterCopy(locale);
+const pdfDocumentToolCopy = getPdfDocumentToolClusterCopy(locale);
 const securityToolCopy = getSecurityToolClusterCopy(locale);
 
 // Extract tool metadata from translations
@@ -378,6 +385,13 @@ const onlineCalculatorGroup = buildOnlineCalculatorClusterGroupForTool(
   allToolNames,
   allToolDescriptions
 );
+const pdfDocumentToolGroup = buildPdfDocumentToolClusterGroupForTool(
+  locale,
+  tool.slug,
+  categoryMessages,
+  allToolNames,
+  allToolDescriptions
+);
 const securityToolGroup = buildSecurityToolClusterGroupForTool(
   locale,
   tool.slug,
@@ -565,6 +579,15 @@ const chartToolGroup = buildChartToolClusterGroupForTool(
           copy={onlineCalculatorCopy}
           currentSlug={tool.slug}
           group={onlineCalculatorGroup}
+        />
+      )}
+
+      {pdfDocumentToolGroup && (
+        <PdfDocumentToolClusterCard
+          clusterHref={buildLocalizedPagePath(locale, pdfDocumentToolClusterPath)}
+          copy={pdfDocumentToolCopy}
+          currentSlug={tool.slug}
+          group={pdfDocumentToolGroup}
         />
       )}
 
