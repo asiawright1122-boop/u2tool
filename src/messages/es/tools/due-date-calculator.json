@@ -1,17 +1,35 @@
 {
-  "detailed_description": "El Calculador de Fecha de Parto es una herramienta técnica que implementa algoritmos basados en la regla de Naegele y ajustes médicos para determinar con precisión la fecha probable de parto (FPP) y monitorear hitos claves durante el embarazo. Este calculador integra múltiples parámetros clínicos, incluyendo la fecha de última menstruación (FUM), longitud del ciclo menstrual, datos ecográficos y métodos de concepción (como FIV). Al procesar estos inputs mediante lógica de ajuste de intervalos de gestación, el sistema genera no solo la FPP, sino también una cronología detallada de etapas críticas: viabilidad fetal, desarrollo embrionario y umbilical, además de alertas para pruebas diagnósticas según la semana de gestación. Su valor radica en su capacidad para manejar escenarios complejos como ciclos irregulares, embarazos múltiples o concepciones asistidas, ofreciendo cálculos alternativos basados en mediciones ecográficas de vértice-nalgas (CRL) o fechas de transferencia embrionaria.",
+  "detailed_description": "La calculadora de fecha de parto ofrece una estimación sencilla a partir de tres métodos: fecha de última menstruación, fecha de concepción o fecha de transferencia FIV. Después de elegir el método y escribir la fecha, la página muestra una fecha estimada de parto, semana y día de embarazo, trimestre, días restantes, progreso e hitos orientativos. El resultado es solo una referencia de calendario; no sustituye una ecografía, una consulta médica ni el seguimiento de una matrona u obstetra. Úsala para preparar una conversación, revisar una fecha aproximada o entender mejor la línea de tiempo del embarazo.",
   "usage_steps": [
-    "1. Introduce la fecha de última menstruación (FUM) usando el selector de calendario desplegable.",
-    "2. Ajusta la duración del ciclo menstrual mediante el campo numérico (por defecto: 28 días, rango: 21-35 días).",
-    "3. Ingresa la fecha y medida de la ecografía de primer trimestre (CRL en mm) si está disponible para recalculo.",
-    "4. Selecciona el método de concepción (natural, FIV, ICSI) desde el menú desplegable de opciones avanzadas.",
-    "5. Haz clic en 'Calcular FPP' para generar el resultado con intervalo de confianza de ±3 días.",
-    "6. Descarga el informe PDF con cronograma de hitos (screening de 12 semanas, morfológica, test de O'Sullivan)."
+    "Elige el método de cálculo: última menstruación, concepción o FIV.",
+    "Introduce la fecha correspondiente en el campo de fecha.",
+    "Revisa la fecha estimada de parto en el panel de resultados.",
+    "Consulta la semana, el día, el trimestre y los días restantes.",
+    "Usa los hitos como guía general, no como indicación médica.",
+    "Confirma cualquier decisión de salud con un profesional médico."
   ],
   "usage_examples": [
-    "1. Una usuaria con ciclo irregular de 32 días introduce su FUM y datos de ecografía de 7 semanas (CRL: 12.5mm) para obtener una FPP ajustada.",
-    "2. Paciente que realizó FIV con transferencia de blastocisto el 15/03/2024 selecciona esta opción para calcular la FPP sumando 266 días a esa fecha.",
-    "3. Médico obstetra utiliza la herramienta para validar la edad gestacional mediante datos ecográficos antes del screening de aneuploidías.",
-    "4. Futura madre primeriza consulta el cronograma de hitos para programar estudios de sangre materna (BIOPAPP-A) y controles de crecimiento fetal."
+    "Estimar una fecha de parto a partir de la última menstruación.",
+    "Comparar una estimación basada en concepción con la de última menstruación.",
+    "Usar una fecha de transferencia FIV para obtener una referencia de calendario.",
+    "Preparar preguntas para una cita médica con una fecha aproximada calculada."
+  ],
+  "faqs": [
+    {
+      "question": "¿La fecha calculada es definitiva?",
+      "answer": "No. Es una estimación orientativa. Una ecografía y el criterio de un profesional de salud pueden ajustar la fecha."
+    },
+    {
+      "question": "¿Qué métodos admite la calculadora?",
+      "answer": "Puedes calcular a partir de la última menstruación, la fecha de concepción o una fecha de transferencia FIV."
+    },
+    {
+      "question": "¿Por qué mi médico puede dar otra fecha?",
+      "answer": "La duración del ciclo, la ovulación, los datos clínicos y las ecografías pueden cambiar la estimación."
+    },
+    {
+      "question": "¿Qué muestra además de la fecha?",
+      "answer": "Muestra semana y día de embarazo, trimestre, días restantes, progreso e hitos orientativos."
+    }
   ]
 }

@@ -2767,10 +2767,10 @@
       "placeholder": "여기에 텍스트 입력..."
     },
     "ip-lookup": {
-      "name": "IP Lookup",
-      "description": "IP 주소 위치, ISP, 기타 정보를 확인합니다.",
-      "seo_title": "무료 IP 주소 검색 온라인 도구",
-      "seo_description": "무료로 온라인 IP 주소 위치 검색을 이용해보세요. 국가, 도시, ISP, 시간대, 좌표 등을 얻을 수 있습니다. 네트워크 트러블슈팅과 보안 분석에 이상적입니다.",
+      "name": "IP 주소 조회",
+      "description": "IP 주소의 국가, 도시, ISP, 시간대, 좌표 정보를 빠르게 조회합니다.",
+      "seo_title": "IP 주소 조회 온라인 - 위치와 ISP 확인",
+      "seo_description": "IP 주소를 온라인으로 조회해 국가, 지역, 도시, ISP, 시간대와 좌표를 확인하세요. 현재 내 IP도 바로 확인할 수 있습니다.",
       "detailed_description": "IP Lookup 도구는 IPv4/IPv6 주소의 지리적 위치, 소유자(ASN), 네트워크 경로 정보를 정밀 분석하는 고급 기술 도구입니다. 이 도구는 Regional Internet Registries(RIRs)의 WHOIS 데이터베이스와 BGP(Border Gateway Protocol) 라우팅 테이블을 실시간으로 조회하여, 입력된 IP 주소의 CIDR(Classless Inter-Domain Routing) 범위, 역방향 DNS 레코드, 지연 시간 기반 지리 삼각측량 결과를 제공합니다. 네트워크 엔지니어는 DDoS 공격의 출처 추적 시 TTL(Time to Live) 값과 AS(Autonomous System) 경로를 분석해 루팅 이상을 진단할 수 있으며, 웹 개발자는 API 연동을 통해 사용자 위치 기반 콘텐츠 배포 전략을 수립할 수 있습니다. 내부적으로는 MaxMind GeoIP2 데이터베이스와 RIPE NCC의 RIS( Routing Information Service)를 병렬 쿼리하여, 위도/경도 좌표는 물론, 해당 ISP의 IX(인터넷 교환) 노드 위치 정보를 추출합니다. 이 도구의 핵심 기술적 차별점은 WHOIS 프로토콜 확장인 RDAP(Route Origin Authorization)을 지원해 DNSSEC 기반의 공신성 있는 IP 소유권 검증을 가능하게 한다는 점입니다.",
       "usage_steps": [
         "1. 'IP 주소 입력' 필드에 분석할 IPv4/IPv6 주소 또는 도메인명 입력",

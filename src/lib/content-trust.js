@@ -248,6 +248,30 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     message: 'Claims file export that is not present in the current Hex Editor UI.',
     slugs: ['hex-editor'],
   },
+  {
+    code: 'ip-validator-unsupported-workflow-claim',
+    pattern: /список через запятую|вкладке «Options»|фильтр «Advanced»|Скачайте отч[её]т|JSON или CSV|CI\/CD-пайплайны/i,
+    message: 'Claims IP Validator bulk, advanced, export, or pipeline workflows that are not present in the current single-address UI.',
+    slugs: ['ip-validator'],
+  },
+  {
+    code: 'ip-lookup-unsupported-network-intel-claim',
+    pattern: /GeoIP2|BGP-маршрутизац|Показать BGP-маршрут|Download Data|обратных DNS-записей \(PTR\)|Round-Trip Time|парсинг[ае] WHOIS/i,
+    message: 'Claims IP Lookup WHOIS, BGP, PTR, RTT, or export features that are not present in the current ipwho.is lookup UI.',
+    slugs: ['ip-lookup'],
+  },
+  {
+    code: 'due-date-unsupported-medical-precision-claim',
+    pattern: /curseur de longueur du cycle|Importez les données d['’]échographie|CRL en mm|Modèle probabiliste|SFMP|intervalle de confiance|ultra-précise/i,
+    message: 'Claims pregnancy calculator controls or clinical precision that are not present in the current date-estimation UI.',
+    slugs: ['due-date-calculator'],
+  },
+  {
+    code: 'graph-chart-unsupported-editor-claim',
+    pattern: /propriétés de lien|algorithmes de mise en page avancés|personnaliser les couleurs, les formes|copier le code HTML|intégration des graphes dans/i,
+    message: 'Claims graph editor controls or embed export behavior that are not present in the current ECharts graph UI.',
+    slugs: ['graph-chart-generator'],
+  },
 ];
 
 /** @type {ContentTrustRule[]} */

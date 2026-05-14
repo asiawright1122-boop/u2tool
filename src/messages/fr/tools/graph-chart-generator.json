@@ -1,17 +1,35 @@
 {
-  "detailed_description": "Le Graph Chart Generator est une plateforme en ligne dédiée à la création de graphes et de diagrammes de réseau. Techniquement, il permet aux utilisateurs de modéliser des ensembles de nœuds et de liens, ainsi que de visualiser des relations complexes. Ce outil est particulièrement utile pour les développeurs, les ingenieurs de données, et les chercheurs qui ont besoin de visualiser des structures de données, des réseaux sociaux, ou des systèmes distribués. Il supporte des formats de sortie tels que PNG et SVG, facilitant l'intégration des graphes dans des présentations, des rapports, ou des applications web. La plateforme utilise des algorithmes de mise en page avancés pour optimiser la lisibilité des graphes, même lorsque le nombre de nœuds et de liens est important. Les utilisateurs peuvent également personnaliser les couleurs, les formes, et les tailles des nœuds et des liens, ce qui permet d'ajouter des couches de signification supplémentaires à leurs visualisations. Grâce à ses fonctionnalités robustes et sa flexibilité, le Graph Chart Generator est un outil indispensable pour quiconque a besoin de représenter des données relationnelles de manière claire et efficace.",
+  "detailed_description": "Le générateur de graphes crée une visualisation réseau à partir de nœuds, de liens et de catégories modifiables. Vous pouvez ajouter ou retirer des nœuds, ajuster leur nom, leur taille et leur catégorie, créer des liens entre deux nœuds, puis choisir une disposition force ou circulaire. La prévisualisation utilise ECharts avec zoom et déplacement, ce qui permet de vérifier rapidement une structure de dépendances, une carte de relations ou un petit schéma de réseau. Le résultat peut être exporté en PNG ou SVG depuis la page. L'outil est adapté aux graphes légers et aux diagrammes de communication, mais il ne remplace pas une plateforme d'analyse réseau complète.",
   "usage_steps": [
-    "Ouvrez le site du Graph Chart Generator et accédez à l'éditeur de graphes.",
-    "Dans la section 'Nodes', ajoutez les nœuds de votre graphe en spécifiant leur identifiant unique et toute information supplémentaire telle que le label ou les propriétés.",
-    "Passez à la section 'Edges' pour définir les liens entre les nœuds. Entrez l'identifiant du nœud source et du nœud cible, et ajoutez des propriétés de lien si nécessaire.",
-    "Utilisez les options de style dans le panneau latéral pour personnaliser l'apparence des nœuds et des liens. Vous pouvez modifier les couleurs, les formes, et les tailles selon vos besoins.",
-    "Cliquez sur 'Layout' pour choisir un algorithme de mise en page qui optimisera l'organisation des nœuds et des liens. Expérimentez avec différents algorithmes pour trouver celui qui convient le mieux à votre graphe.",
-    "Une fois que votre graphe est prêt, utilisez l'option 'Export' pour télécharger l'image au format PNG ou SVG, ou copier le code HTML pour intégrer le graphe dans une application web."
+    "Ajoutez ou renommez les nœuds du graphe.",
+    "Modifiez la taille et la catégorie d'un nœud pour rendre la relation plus lisible.",
+    "Ajoutez des liens entre les nœuds source et cible.",
+    "Choisissez une disposition force ou circulaire, puis ajustez la répulsion si nécessaire.",
+    "Activez ou masquez les étiquettes selon la densité du graphe.",
+    "Exportez le résultat en PNG ou SVG lorsque la prévisualisation est correcte."
   ],
   "usage_examples": [
-    "Un ingénieur réseau utilise le Graph Chart Generator pour visualiser l'architecture d'un réseau informatique, en mettant en évidence les routeurs, les switches, et les serveurs. Cela aide à identifier rapidement les points de connexion et les potentiels points de faillance.",
-    "Un chercheur en sociologie crée un graphe de réseau social pour analyser les interactions entre les membres d'une communauté en ligne. En utilisant différentes couleurs et tailles de nœuds, il peut représenter le degré d'influence de chaque membre.",
-    "Un développeur de logiciels modélise les dépendances entre les modules d'une application complexe. Le graphe permet de visualiser clairement les relations et les interactions entre les différents composants, facilitant la gestion du projet.",
-    "Un analyste financier utilise le Graph Chart Generator pour représenter les liens entre les entreprises dans un secteur particulier, en montrant les fusions, les acquisitions, et les partenariats. Cette visualisation aide à comprendre les dynamiques du marché et à prendre des décisions éclairées."
+    "Dessiner les dépendances entre quelques modules d'une application.",
+    "Créer une carte simple de relations entre équipes, services ou composants.",
+    "Préparer un schéma de réseau léger pour une documentation technique.",
+    "Exporter un graphe PNG ou SVG pour une présentation ou un ticket de projet."
+  ],
+  "faqs": [
+    {
+      "question": "Puis-je ajouter mes propres nœuds et liens ?",
+      "answer": "Oui. L'interface permet d'ajouter des nœuds, de modifier leur nom et leur taille, puis de créer des liens entre des nœuds existants."
+    },
+    {
+      "question": "Quelles dispositions sont disponibles ?",
+      "answer": "La page propose une disposition force et une disposition circulaire. La répulsion peut être ajustée pour la disposition force."
+    },
+    {
+      "question": "Quels formats d'export sont disponibles ?",
+      "answer": "Vous pouvez exporter la visualisation en PNG ou en SVG depuis la prévisualisation ECharts."
+    },
+    {
+      "question": "Cet outil convient-il aux très grands graphes ?",
+      "answer": "Il est surtout pensé pour des graphes légers et des schémas rapides. Pour de très grands réseaux, utilisez un outil d'analyse spécialisé."
+    }
   ]
 }

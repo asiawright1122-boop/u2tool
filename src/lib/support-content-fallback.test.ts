@@ -347,6 +347,93 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks IP Validator bulk and export claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'ip-validator',
+      locale: 'ru',
+      name: 'Проверка IP адреса',
+      description: '',
+      detailedDescription: 'Поддерживаются одиночные адреса или список через запятую.',
+      usageSteps: [
+        'Выберите режим проверки на вкладке «Options».',
+        'Скачайте отчёт в формате JSON или CSV для CI/CD-пайплайны.',
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'ip-validator-unsupported-workflow-claim'
+    );
+  });
+
+  it('blocks IP Lookup WHOIS, BGP, PTR, and export claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'ip-lookup',
+      locale: 'ru',
+      name: 'Поиск IP адреса',
+      description: '',
+      detailedDescription:
+        'Инструмент использует GeoIP2, WHOIS и BGP-маршрутизацию для анализа Round-Trip Time.',
+      usageSteps: [
+        'Отметьте «Показать BGP-маршрут».',
+        'Экспортируйте результат через Download Data.',
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'ip-lookup-unsupported-network-intel-claim'
+    );
+  });
+
+  it('blocks Due Date Calculator medical precision claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'due-date-calculator',
+      locale: 'fr',
+      name: "Calculateur de date d'accouchement",
+      description: '',
+      detailedDescription:
+        "Utilise un Modèle probabiliste SFMP avec intervalle de confiance pour une estimation ultra-précise.",
+      usageSteps: [
+        "Réglez le curseur de longueur du cycle.",
+        "Importez les données d'échographie avec CRL en mm.",
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'due-date-unsupported-medical-precision-claim'
+    );
+  });
+
+  it('blocks Graph Chart editor and embed claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'graph-chart-generator',
+      locale: 'fr',
+      name: 'Générateur de graphes',
+      description: '',
+      detailedDescription:
+        'Utilise des algorithmes de mise en page avancés et permet de personnaliser les couleurs, les formes.',
+      usageSteps: [
+        'Ajoutez les propriétés de lien.',
+        'Copier le code HTML pour intégrer le graphe dans une application web.',
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'graph-chart-unsupported-editor-claim'
+    );
+  });
+
   it('keeps scoped rules from blocking unrelated tools', () => {
     const report = assessSupportContentTrust({
       slug: 'timezone-converter',
