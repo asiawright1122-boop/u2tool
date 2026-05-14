@@ -1,17 +1,35 @@
 {
-  "detailed_description": "L'outil Excel Merger permet de combiner des classeurs Excel multiples en un seul fichier structuré, avec deux modes de fusion techniques : verticale (ajout de lignes) ou horizontale (ajout de colonnes). Ce processus est essentiel pour les professionnels traitant des données hétérogènes issues de systèmes disparates, comme la consolidation de rapports financiers inter-entreprises, l'intégration de bases clients fragmentées ou l'analyse comparative de données scientifiques. L'outil analyse chaque fichier chargé via une bibliothèque de traitement binaire (POI-Excel), identifie les structures matricielles des feuilles sélectionnées, puis exécute la fusion en alignant les colonnes par correspondance de noms ou position. La fusion verticale implémente un algorithme de validation de schéma pour garantir l'homogénéité des types de données, tandis que la fusion horizontale utilise un système de jointure basé sur les index de lignes. Les formules, styles et métadonnées sont conservés grâce à une reconstitution précise de l'arborescence XML interne d'Excel. La sortie est un classeur unique optimisé pour l'analyse Power BI ou les exports SQL, avec option de nettoyage automatique des doublons.",
+  "detailed_description": "Excel Merger combine les feuilles sélectionnées de plusieurs fichiers XLSX ou XLS directement dans le navigateur. Après le chargement, vous pouvez conserver uniquement les feuilles utiles, choisir une fusion verticale pour ajouter les lignes les unes sous les autres, ou une fusion horizontale pour placer les colonnes côte à côte selon la position des lignes. En mode vertical, l'outil crée un ensemble commun d'en-têtes et laisse les cellules vides quand une valeur manque. En mode horizontal, les noms de colonnes reçoivent un préfixe basé sur le nom de la feuille lorsque plusieurs sources sont sélectionnées. Le résultat est téléchargé sous forme de nouveau fichier XLSX. L'outil convient aux regroupements rapides et aux brouillons de reporting, mais il ne rapproche pas les lignes par identifiant et ne conserve pas la mise en forme complexe du classeur.",
   "usage_steps": [
-    "Cliquez sur 'Ajouter des fichiers' pour charger 2 à 50 classeurs Excel (.xlsx/.xls) depuis votre appareil ou un service cloud.",
-    "Sélectionnez les feuilles à fusionner via l'interface à onglets, avec possibilité de filtrer par nom ou plage de cellules.",
-    "Choisissez le mode de fusion dans le menu déroulant : 'Empiler verticalement' (ajout de lignes) ou 'Joindre horizontalement' (ajout de colonnes).",
-    "Activez 'Aligner colonnes par en-tête' pour la fusion verticale ou 'Compléter colonnes manquantes' pour la fusion horizontale.",
-    "Cochez 'Supprimer doublons' pour éliminer les lignes identiques ou 'Conserver formats' pour maintenir styles conditionnels.",
-    "Cliquez sur 'Générer fichier fusionné' et téléchargez le résultat compressé au format .xlsx optimisé."
+    "Chargez un ou plusieurs fichiers XLSX ou XLS.",
+    "Vérifiez les feuilles détectées et désactivez celles qui ne doivent pas être fusionnées.",
+    "Choisissez le mode vertical pour ajouter les lignes les unes sous les autres.",
+    "Choisissez le mode horizontal pour ajouter les colonnes côte à côte par position de ligne.",
+    "Indiquez le nom du fichier de sortie.",
+    "Lancez la fusion et téléchargez le fichier XLSX généré."
   ],
   "usage_examples": [
-    "Un comptable consolide 12 rapports mensuels de trésorerie (un par filiale) en un seul classeur annuel, avec fusion verticale et agrégation automatique des totaux.",
-    "Un chef de projet assemble les données de tests qualité provenant de 3 laboratoires, en fusionnant horizontalement les colonnes communes (température, pression) tout en maintenant les mesures spécifiques de chaque site.",
-    "Un marketeur combine des bases clients CRM (nom, email, date d'achat) de différentes régions, en utilisant la fusion verticale avec nettoyage des doublons par clé de contact.",
-    "Un data scientist fusionne des résultats expérimentaux stockés dans des fichiers Excel structurés différemment, en alignant les colonnes via un dictionnaire de mappage personnalisé dans l'interface."
+    "Regrouper plusieurs rapports de ventes hebdomadaires dans un seul classeur avant nettoyage.",
+    "Rassembler des feuilles choisies depuis plusieurs fichiers Excel pour préparer un brouillon de rapport.",
+    "Comparer deux petits tableaux côte à côte avec le mode horizontal.",
+    "Créer un fichier consolidé simple avant une importation dans un outil d'analyse."
+  ],
+  "faqs": [
+    {
+      "question": "Quels types de fichiers sont pris en charge ?",
+      "answer": "La page actuelle accepte les fichiers XLSX et XLS et télécharge le résultat en XLSX."
+    },
+    {
+      "question": "Quelle est la différence entre les modes vertical et horizontal ?",
+      "answer": "Le mode vertical ajoute les lignes et aligne les en-têtes disponibles. Le mode horizontal place les colonnes côte à côte selon la position des lignes."
+    },
+    {
+      "question": "L'outil rapproche-t-il les lignes avec un identifiant ?",
+      "answer": "Non. La fusion horizontale suit l'ordre des lignes."
+    },
+    {
+      "question": "Les fichiers sont-ils envoyés vers un serveur ?",
+      "answer": "Les fichiers sont lus dans le navigateur avec une bibliothèque locale de feuilles de calcul. Vérifiez votre propre environnement avant d'utiliser des classeurs confidentiels."
+    }
   ]
 }

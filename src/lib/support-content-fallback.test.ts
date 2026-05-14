@@ -512,6 +512,28 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks multilingual Excel Merger advanced workflow claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'excel-merger',
+      locale: 'zh',
+      name: 'Excel合并器',
+      description: '',
+      detailedDescription:
+        '使用 WorkbookConcatenator 和 XSSFCellStyler，通过字段映射和主键字段实现 SQL JOIN。',
+      usageSteps: [
+        '点击预览结果后调整字段映射。',
+        'فعّل كشف التكرار وسجل تغييرات قبل التحميل.',
+      ],
+      usageExamples: ['Process VLOOKUP and INDEX-MATCH cells during merge.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'excel-merger-unsupported-advanced-merge-claim'
+    );
+  });
+
   it('blocks Russian Color Blender export and mode claims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'color-blender',

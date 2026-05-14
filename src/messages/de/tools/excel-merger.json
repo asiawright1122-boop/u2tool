@@ -1,17 +1,35 @@
 {
-  "detailed_description": "Der Excel Merger ist ein spezialisierter Online-Converter, der mehrere XLSX- oder CSV-Dateien technisch präzise zu einer einzigen Arbeitsmappe kombiniert. Vertikales Merging appendiert Tabellenzeilen (UNION ALL-Logik), während horizontales Merging Spalten basierend auf Schlüsselspalten verknüpft (JOIN-Operation). Das Tool analysiert dabei komplexe Zellformate, behält Diagramme und berechnete Felder bei und minimiert Formatverluste durch automatische Kompatibilitätsanpassung. Entwickler benötigen diese Lösung zur Datenkonsolidierung aus heterogenen Quellen, etwa für Finanzreports mit variabler Spaltenstruktur oder IoT-Sensordaten mit unterschiedlichen Zeitstempeln. Technisch erfolgt die Verarbeitung serverseitig mit Apache POI (Java) für XLSX-Manipulation, unterstützt UTF-8-Codierung und erlaubt Spaltenmapping via Drag-and-Drop. Besonders bei verschachtelten Indizes oder inkonsistenten Header-Zeilenzahlen gewährleistet der Algorithmus eine fehlerfreie Datenintegration.",
+  "detailed_description": "Excel-Zusammenführung kombiniert ausgewählte Arbeitsblätter aus mehreren XLSX- oder XLS-Dateien direkt im Browser. Nach dem Laden der Dateien können Sie nur die benötigten Blätter aktiv lassen, eine vertikale Zusammenführung für untereinander angehängte Zeilen wählen oder eine horizontale Zusammenführung nutzen, bei der Spalten nach Zeilenposition nebeneinander gesetzt werden. Im vertikalen Modus wird ein gemeinsamer Satz von Überschriften aufgebaut und fehlende Werte bleiben leer. Im horizontalen Modus erhalten Spalten bei mehreren Quellen einen Blattnamen-Präfix. Das Ergebnis wird als neue XLSX-Datei heruntergeladen. Das Werkzeug eignet sich für schnelle Entwürfe und einfache Tabellenkonsolidierung, führt aber keine Zuordnung über Suchfelder aus und bewahrt keine komplexe Arbeitsmappen-Gestaltung.",
   "usage_steps": [
-    "1. Laden Sie bis zu 10 Excel/CSV-Dateien per Drag-and-Drop in den Upload-Bereich",
-    "2. Wählen Sie im Optionspanel 'Vertikal' (untereinander) oder 'Horizontal' (seitlich) als Merge-Strategie",
-    "3. Aktivieren Sie die Checkbox 'Header-Zeilen überspringen' für inkonsistente Tabellenköpfe",
-    "4. Nutzen Sie den Spalten-Mapper, um Join-Spalten manuell zu verknüpfen (z.B. 'Auftragsnummer' ↔ 'OrderID')",
-    "5. Aktivieren Sie 'Formelkonvertierung' zur Sicherstellung von relativen Referenzen in berechneten Zellen",
-    "6. Klicken Sie auf 'Merge & Download' und wählen Sie das Ausgabeformat XLSX oder CSV mit benutzerdefinierter Trennzeichen"
+    "Laden Sie eine oder mehrere XLSX- oder XLS-Dateien hoch.",
+    "Prüfen Sie die gefundenen Arbeitsblätter und deaktivieren Sie Blätter, die nicht übernommen werden sollen.",
+    "Wählen Sie den vertikalen Modus, wenn Zeilen untereinander angehängt werden sollen.",
+    "Wählen Sie den horizontalen Modus, wenn Spalten nach Zeilenposition nebeneinander stehen sollen.",
+    "Geben Sie den Namen der Ausgabedatei ein.",
+    "Starten Sie die Zusammenführung und laden Sie die erzeugte XLSX-Datei herunter."
   ],
   "usage_examples": [
-    "Konsolidierung monatlicher Umsatzstatistiken aus verschiedenen Filialen mit unterschiedlichen Kassen-Systemen",
-    "Zusammenführen von Maschinendaten aus Produktionsanlagen mit variierender Sensor-Konfiguration",
-    "Erstellung einer zentralen Fehlerdatenbank durch Vertikal-Merging von CSV-Logs aus verschiedenen Testphasen",
-    "Kombination von Excel-Vorlagen für internationale Berichte mit lokal angepassten Währungsformaten"
+    "Mehrere Wochenberichte zu einer Arbeitsmappe bündeln, bevor die Daten weiter bereinigt werden.",
+    "Ausgewählte Blätter aus verschiedenen Excel-Dateien für einen Berichtsentwurf zusammenstellen.",
+    "Zwei einfache Tabellen im horizontalen Modus nebeneinander vergleichen.",
+    "Eine grobe Sammeldatei vorbereiten, bevor die Daten in ein Analysewerkzeug importiert werden."
+  ],
+  "faqs": [
+    {
+      "question": "Welche Dateitypen werden unterstützt?",
+      "answer": "Die aktuelle Seite akzeptiert XLSX- und XLS-Dateien und lädt das Ergebnis als XLSX herunter."
+    },
+    {
+      "question": "Worin unterscheiden sich vertikaler und horizontaler Modus?",
+      "answer": "Der vertikale Modus hängt Zeilen untereinander an und richtet vorhandene Überschriften aus. Der horizontale Modus setzt Spalten nach Zeilenposition nebeneinander."
+    },
+    {
+      "question": "Ordnet das Tool Zeilen über ein gemeinsames Feld zu?",
+      "answer": "Nein. Die horizontale Zusammenführung folgt der Zeilenreihenfolge."
+    },
+    {
+      "question": "Werden Dateien auf einen Server hochgeladen?",
+      "answer": "Die Dateien werden im Browser mit einer lokalen Tabellenbibliothek gelesen. Prüfen Sie Ihre eigene Umgebung, bevor Sie vertrauliche Arbeitsmappen verwenden."
+    }
   ]
 }

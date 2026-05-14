@@ -1,17 +1,35 @@
 {
-  "detailed_description": "El Excel Merger es una herramienta especializada para consolidar múltiples archivos XLSX en un único documento, manteniendo la integridad de tipos de datos, fórmulas y formatos avanzados. Permite fusionar hojas de cálculo de manera vertical (agregando filas) o horizontal (concatenando columnas), ideal para integrar datasets heterogéneos. Los usuarios necesitan esta herramienta para evitar errores manuales en tareas como consolidar reportes financieros, unificar registros de ventas o combinar bases de datos de recursos humanos. Técnicamente, el proceso implica parsear cada libro Excel, normalizar estructuras de datos mediante algoritmos de mapeo de columnas, y aplicar técnicas de alineación de esquemas para operaciones horizontales. Soporta archivos con múltiples hojas, filtros personalizados y celdas combinadas, con opciones para gestionar conflictos de formato y conservar referencias externas.",
+  "detailed_description": "Excel Merger combina hojas seleccionadas de varios archivos XLSX o XLS directamente en el navegador. Después de cargar los archivos, puedes dejar activas solo las hojas necesarias, elegir una fusión vertical para apilar filas o una fusión horizontal para colocar columnas lado a lado según la posición de cada fila. En el modo vertical, la herramienta crea un conjunto común de encabezados y deja celdas vacías cuando faltan valores. En el modo horizontal, los nombres de columnas reciben un prefijo con el nombre de la hoja cuando hay varias fuentes. El resultado se descarga como un nuevo archivo XLSX. La herramienta es útil para borradores rápidos, reportes sencillos y preparación inicial de tablas, pero no cruza registros por un campo identificador ni conserva estilos complejos del libro.",
   "usage_steps": [
-    "1. Haz clic en 'Cargar Archivos' para seleccionar hasta 10 archivos XLSX desde tu dispositivo.",
-    "2. En el panel de configuración, elige 'Fusión Vertical' para apilar tablas con estructura idéntica o 'Fusión Horizontal' para unir por columnas con coincidencia de filas.",
-    "3. Especifica el número de filas de encabezado a conservar en cada archivo fuente usando el selector 'Filas de Título'.",
-    "4. Activa la opción 'Detectar Valores Duplicados' para eliminar registros repetidos durante la fusión.",
-    "5. Configura parámetros avanzados como codificación de caracteres, separadores decimales y preservación de fórmulas en el menú 'Opciones Técnicas'.",
-    "6. Presiona 'Iniciar Fusión' y descarga el archivo consolidado en formato XLSX optimizado."
+    "Carga uno o varios archivos XLSX o XLS.",
+    "Revisa las hojas detectadas y desactiva las que no quieras incluir.",
+    "Elige el modo vertical si quieres agregar filas una debajo de otra.",
+    "Elige el modo horizontal si quieres agregar columnas una junto a otra por posición de fila.",
+    "Escribe el nombre del archivo de salida.",
+    "Pulsa el botón de fusión y descarga el XLSX generado."
   ],
   "usage_examples": [
-    "Un analista financiero fusiona estados de cuenta mensuales de diferentes sucursales mediante fusión vertical, preservando formatos contables.",
-    "Un investigador combina datos demográficos de múltiples regiones usando fusión horizontal, alineando columnas por código postal.",
-    "Un coordinador de logística integra hojas de inventario de almacenes distintos, eliminando duplicados de productos durante la fusión.",
-    "Un desarrollador extrae y consolida registros de pruebas automatizadas de varios archivos XLSX para generar informes técnicos unificados."
+    "Unir varios reportes semanales de ventas en una sola hoja antes de limpiar los datos.",
+    "Recolectar hojas seleccionadas de distintos archivos Excel en un XLSX para un borrador de informe.",
+    "Comparar dos tablas simples lado a lado usando el modo horizontal.",
+    "Preparar un archivo consolidado básico antes de importar los datos a una herramienta de análisis."
+  ],
+  "faqs": [
+    {
+      "question": "¿Qué tipos de archivo admite?",
+      "answer": "La página actual acepta archivos XLSX y XLS y descarga el resultado como XLSX."
+    },
+    {
+      "question": "¿Cuál es la diferencia entre fusión vertical y horizontal?",
+      "answer": "La fusión vertical agrega filas y alinea encabezados disponibles. La fusión horizontal agrega columnas por posición de fila."
+    },
+    {
+      "question": "¿La herramienta cruza filas por un identificador?",
+      "answer": "No. La fusión horizontal sigue el orden de las filas, por lo que para cruces por identificador conviene usar una hoja de cálculo o una herramienta de datos."
+    },
+    {
+      "question": "¿Los archivos se suben a un servidor?",
+      "answer": "Los archivos se leen en el navegador con una biblioteca local de hojas de cálculo. Revisa tu propio entorno antes de usar libros confidenciales."
+    }
   ]
 }

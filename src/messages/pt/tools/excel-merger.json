@@ -1,17 +1,35 @@
 {
-  "detailed_description": "O Excel Merger é uma ferramenta técnica especializada na fusão precisa de múltiplos arquivos Excel (XLSX) e CSV, permitindo combinações verticais (por linhas) ou horizontais (por colunas) com controle avançado de integridade dos dados. Para operações verticais, o algoritmo alinha colunas com base em cabeçalhos correspondentes, enquanto fusões horizontais utilizam uma coluna-chave (como IDs ou códigos únicos) para correlacionar registros. A ferramenta processa arquivos localmente no navegador, garantindo segurança, e suporta tipos de dados heterogêneos, preservando formatação condicional, fórmulas e metadados. É essencial para profissionais que lidam com consolidação de relatórios financeiros de diferentes departamentos, integração de bases de dados de CRM, preparação de conjuntos de dados para machine learning ou auditorias que exijam verificação cruzada de informações. Sua engine de processamento otimizada evita duplicidades através de estratégias configuráveis (ignorar, destacar ou somar valores numéricos), enquanto permite mapeamento manual de colunas em casos de divergências estruturais entre as planilhas.",
+  "detailed_description": "O Excel Merger combina planilhas selecionadas de vários arquivos XLSX ou XLS diretamente no navegador. Depois de carregar os arquivos, você pode manter apenas as abas necessárias, escolher a fusão vertical para acrescentar linhas uma abaixo da outra ou escolher a fusão horizontal para colocar colunas lado a lado pela posição das linhas. No modo vertical, a ferramenta cria um conjunto comum de cabeçalhos e deixa células em branco quando faltam valores. No modo horizontal, os nomes das colunas recebem o prefixo da aba quando há várias fontes. O resultado é baixado como um novo arquivo XLSX. A ferramenta é útil para consolidações rápidas, rascunhos de relatório e preparação inicial de tabelas, mas não relaciona registros por um campo identificador nem preserva estilos complexos da pasta de trabalho.",
   "usage_steps": [
-    "1. Acesse a interface e clique em 'Selecionar Arquivos' para carregar até 20 planilhas XLSX ou CSV simultaneamente.",
-    "2. Escolha o modo de fusão no seletor 'Vertical' (empilhar linhas) ou 'Horizontal' (juntar colunas via chave primária).",
-    "3. Para fusão vertical, ative a opção 'Alinhar por Cabeçalho' e selecione colunas críticas no menu suspenso para garantir consistência estrutural.",
-    "4. No modo horizontal, especifique a coluna-chave comum usando o campo 'Definir ID de Junção' e selecione o tipo de correspondência (exata ou parcial).",
-    "5. Ajuste regras de tratamento de duplicatas no painel 'Opções Avançadas', escolhendo entre manter primeiras ocorrências, somar valores numéricos ou marcar conflitos.",
-    "6. Clique em 'Gerar Arquivo' e escolha o formato de saída (XLSX, CSV ou JSON) antes de baixar o resultado consolidado."
+    "Carregue um ou mais arquivos XLSX ou XLS.",
+    "Revise as abas detectadas e desative as que não deseja incluir.",
+    "Escolha o modo vertical para adicionar linhas uma abaixo da outra.",
+    "Escolha o modo horizontal para adicionar colunas lado a lado pela posição da linha.",
+    "Informe o nome do arquivo de saída.",
+    "Clique no botão de fusão e baixe o XLSX gerado."
   ],
   "usage_examples": [
-    "Uma equipe de vendas integra relatórios mensais de cinco regiões distintas, alinhando dados em uma única planilha vertical para análise de tendências trimestrais.",
-    "Um cientista de dados une bases de clientes (com CPF como chave) de três sistemas legados em uma única tabela horizontal para treinamento de modelo preditivo.",
-    "Um contador consolida balanços semestrais de filiais, configurando o modo vertical com alinhamento automático de contas contábeis e soma de valores duplicados.",
-    "Um pesquisador acadêmico mescla respostas de questionários coletados em diferentes formatos CSV, usando mapeamento manual de colunas para homogeneizar variáveis qualitativas."
+    "Combinar relatórios semanais de vendas em uma única planilha antes de limpar os dados.",
+    "Reunir abas selecionadas de diferentes arquivos Excel em um XLSX para rascunho de relatório.",
+    "Comparar duas tabelas simples lado a lado usando o modo horizontal.",
+    "Preparar um arquivo consolidado básico antes de importar os dados para uma ferramenta de análise."
+  ],
+  "faqs": [
+    {
+      "question": "Quais tipos de arquivo são aceitos?",
+      "answer": "A página atual aceita arquivos XLSX e XLS e baixa o resultado como XLSX."
+    },
+    {
+      "question": "Qual é a diferença entre fusão vertical e horizontal?",
+      "answer": "A fusão vertical adiciona linhas e alinha cabeçalhos disponíveis. A fusão horizontal adiciona colunas pela posição das linhas."
+    },
+    {
+      "question": "A ferramenta relaciona linhas por um identificador?",
+      "answer": "Não. A fusão horizontal segue a ordem das linhas."
+    },
+    {
+      "question": "Os arquivos são enviados para um servidor?",
+      "answer": "Os arquivos são lidos no navegador por uma biblioteca local de planilhas. Revise seu próprio ambiente antes de usar pastas de trabalho confidenciais."
+    }
   ]
 }

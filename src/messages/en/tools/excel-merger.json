@@ -1,17 +1,35 @@
 {
-  "detailed_description": "Excel Merger is a specialized data consolidation tool that programmatically combines multiple Excel workbooks or CSV files through vertical (appended rows) or horizontal (joined columns) merge strategies. Designed for analysts and developers, it employs in-memory parsing using optimized libraries to handle XLSX/CSV formats, preserving data types, formula dependencies, and cell formatting. Vertical merging aligns identical schema structures to aggregate rows, ideal for time-series data consolidation, while horizontal merging uses user-defined key columns to perform SQL-like JOIN operations, enabling relational data combination across datasets. The tool's differential header processing identifies and maps mismatched column names using Levenshtein distance algorithms, automatically suggesting schema alignments. Built-in deduplication leverages hash-based indexing to remove redundant records during merge operations. Developers benefit from client-side processing that avoids remote data storage, ensuring sensitive dataset confidentiality. Technical use cases include ETL pipeline prototyping, financial report consolidation across departments, and merging IoT sensor data with varying collection intervals.",
+  "detailed_description": "Excel Merger combines selected worksheets from multiple XLSX or XLS files directly in the browser. After loading files, you can keep only the sheets you need, choose a vertical merge to append rows, or choose a horizontal merge to place columns side by side by row position. The vertical mode builds a shared set of headers and fills missing cells with blanks. The horizontal mode prefixes column names with the sheet name when multiple sources are selected. The tool downloads a new XLSX file and is best for quick spreadsheet consolidation, draft reporting, and preparing simple tables for later cleanup. It does not match rows by a lookup field, remove duplicates, or preserve complex workbook styling.",
   "usage_steps": [
-    "1. Access the drag-and-drop upload zone to import source files (XLSX/CSV, up to 50MB total)",
-    "2. Select merge orientation using radio buttons: 'Append Rows' (vertical) or 'Join Columns' (horizontal)",
-    "3. Configure schema mapping: choose 'Strict Match' for identical headers or 'Fuzzy Match' with 75-100% similarity threshold",
-    "4. For horizontal merges: designate primary key columns using dropdown selectors to define JOIN relationships",
-    "5. Enable 'Smart Dedupe' toggle to activate byte-level duplicate detection in output worksheet",
-    "6. Choose output format (XLSX with multiple sheets or flattened CSV) and initiate merge with 'Process Data' button"
+    "Upload one or more XLSX or XLS files.",
+    "Review the detected worksheets and turn off any sheet you do not want to merge.",
+    "Choose vertical mode when you want rows from selected sheets stacked together.",
+    "Choose horizontal mode when you want columns placed side by side by row position.",
+    "Enter the output file name.",
+    "Click the merge button and download the generated XLSX file."
   ],
   "usage_examples": [
-    "Example 1: Financial analysts merge quarterly sales reports from 12 regional offices, using vertical merge to aggregate 15,000+ rows while maintaining pivot table references",
-    "Example 2: Marketing teams combine customer transaction data (CSV) with CRM contact lists (XLSX) via email address key column for targeted campaign segmentation",
-    "Example 3: Logistics managers horizontally merge equipment inventory spreadsheets from three warehouses, resolving header discrepancies like 'Asset_ID' vs 'EquipmentTag'",
-    "Example 4: Data scientists vertically merge IoT sensor readings from temperature and humidity devices with 15-minute intervals into a unified training dataset"
+    "Combine weekly sales sheets into one workbook before cleaning the data in a spreadsheet app.",
+    "Collect selected worksheets from several simple Excel files into one XLSX for a reporting draft.",
+    "Place two small tables next to each other with horizontal mode for a quick comparison.",
+    "Prepare a rough merged workbook before importing the data into an analytics workflow."
+  ],
+  "faqs": [
+    {
+      "question": "Which file types are supported?",
+      "answer": "The current page accepts XLSX and XLS files and downloads the merged result as XLSX."
+    },
+    {
+      "question": "What is the difference between vertical and horizontal merge?",
+      "answer": "Vertical mode appends rows and aligns available headers. Horizontal mode places columns side by side by row position."
+    },
+    {
+      "question": "Does Excel Merger match rows by an ID or lookup field?",
+      "answer": "No. Horizontal merging follows row order, so use a spreadsheet or data tool when you need lookup-based matching."
+    },
+    {
+      "question": "Are files uploaded to a server?",
+      "answer": "Files are read in the browser through a local spreadsheet library. Review your own environment before using real confidential workbooks."
+    }
   ]
 }
