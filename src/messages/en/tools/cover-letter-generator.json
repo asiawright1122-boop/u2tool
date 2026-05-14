@@ -1,28 +1,28 @@
 {
-  "detailed_description": "Cover Letter Generator — Generate a concise cover letter draft from a role, company, skills, and achievement. Review the calculated or generated result.",
+  "detailed_description": "Cover Letter Generator - Create a concise first draft for a specific role using the job title, company name, experience summary, skills, one achievement, and a selected tone. The tool turns those fields into a structured letter with an opening, evidence paragraph, and closing line, giving applicants a quick base to edit for the exact job posting rather than starting from a blank page.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter the job title, company, relevant experience, skills, and one measurable achievement",
+    "Choose a tone such as professional, friendly, persuasive, or concise",
+    "Review the generated letter draft in the output area",
+    "Copy the draft and personalize names, facts, and role-specific details before sending"
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Draft a short cover letter for a product manager application",
+    "Turn a resume achievement into a more persuasive application paragraph",
+    "Compare a concise version with a friendlier tone before editing the final letter"
   ],
   "faqs": [
     {
-      "question": "Cover Letter Generator is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is the Cover Letter Generator free?",
+      "answer": "Yes. The generator runs in the browser and does not require an account."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "Does this submit my application anywhere?",
+      "answer": "No. It only creates text on the page. You decide where to copy, edit, and send the final version."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Do I still need to edit the draft?",
+      "answer": "Yes. Review the draft for accuracy, add job-specific details, and remove anything that does not match your real experience."
     }
   ]
 }

@@ -1,28 +1,28 @@
 {
-  "detailed_description": "PayPal Fee Calculator — Estimate PayPal-style processing fees, net received, and gross-up amounts for common rates. Review the calculated or generated result.",
+  "detailed_description": "PayPal Fee Calculator - Estimate PayPal-style processing costs from amount, percentage fee, fixed fee, and currency. The calculator reports the fee, net received, gross amount needed to receive your target, and the rate used, so sellers and freelancers can compare scenarios when fees vary by country, product, payment type, or account terms.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter the transaction amount, percentage fee, fixed fee, and currency",
+    "Review estimated fee, net received, gross-to-receive amount, and fee rate",
+    "Copy the summary if you need it for notes or pricing checks",
+    "Adjust the fee fields to match the payment scenario you want to model"
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Estimate net revenue on a 100 USD invoice with a percentage and fixed fee",
+    "Calculate how much to charge so a target amount remains after fees",
+    "Compare different fee rates across currencies or payment contexts"
   ],
   "faqs": [
     {
-      "question": "PayPal Fee Calculator is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is the PayPal Fee Calculator free?",
+      "answer": "Yes. The calculator runs in the browser and does not require an account."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "Are the fee rates automatically updated?",
+      "answer": "No. Enter the percentage and fixed fee you want to model, then verify the current official fee schedule for your account and region."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "What does gross-to-receive mean?",
+      "answer": "It estimates the gross charge needed so the entered amount remains after applying the percentage fee and fixed fee."
     }
   ]
 }

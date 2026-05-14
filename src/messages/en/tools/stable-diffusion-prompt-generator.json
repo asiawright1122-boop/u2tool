@@ -1,28 +1,28 @@
 {
-  "detailed_description": "Stable Diffusion Prompt Generator — Create Stable Diffusion prompt blocks with positive prompt, negative prompt, aspect ratio, and setting notes. Review the calculated or generated result.",
+  "detailed_description": "Stable Diffusion Prompt Generator - Build a copy-ready prompt block from subject, style, details, lighting, aspect ratio, and negative prompt terms. The output separates positive prompt, negative prompt, and setting notes, including reminders to start with model defaults, tune steps and CFG after a preview, and keep the seed fixed when comparing prompt changes.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter the subject, style, visual details, and lighting direction",
+    "Choose an aspect ratio and edit the negative prompt terms",
+    "Review the positive prompt, negative prompt, and setting notes",
+    "Copy the block into your own Stable Diffusion workflow and refine after testing"
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Create a clean product-style image prompt with a matching negative prompt",
+    "Prepare a prompt note that keeps seed fixed while comparing changes",
+    "Switch aspect ratios before testing the same concept in another composition"
   ],
   "faqs": [
     {
-      "question": "Stable Diffusion Prompt Generator is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is the Stable Diffusion Prompt Generator free?",
+      "answer": "Yes. The generator runs in the browser and does not require an account."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "Does this generate images?",
+      "answer": "No. It generates prompt text and setting notes only. Use the copied output in your own image generation setup."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Why are setting notes included?",
+      "answer": "They give a short reminder for controlled prompt testing, such as starting with model defaults and keeping seed fixed when comparing changes."
     }
   ]
 }

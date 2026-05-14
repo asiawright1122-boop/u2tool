@@ -1,28 +1,28 @@
 {
-  "detailed_description": "Security Headers Checker — Paste HTTP response headers and check common security headers, missing protections, and quick fixes. Review the calculated or generated result.",
+  "detailed_description": "Security Headers Checker - Paste raw HTTP response headers and review a browser-side checklist for common protections. The tool parses header lines locally, checks for Strict-Transport-Security, Content-Security-Policy, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, and frame protection, then shows a score, passed count, missing count, and suggested header values.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Paste the response headers from a site, API response, or curl output",
+    "Review the score, passed checks, missing checks, and per-header rows",
+    "Copy the summary if you need to share the current checklist result",
+    "Add or change header lines to compare a proposed configuration"
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Check whether HSTS, CSP, and nosniff are present in a response",
+    "Compare current headers with a proposed Permissions-Policy value",
+    "Prepare a quick remediation checklist before editing server configuration"
   ],
   "faqs": [
     {
-      "question": "Security Headers Checker is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is the Security Headers Checker free?",
+      "answer": "Yes. The checker runs in the browser and does not require an account."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "Does it fetch headers from a live URL?",
+      "answer": "No. Paste the headers yourself. The page analyzes the text you provide rather than making a network request to the site."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Is the score a full security audit?",
+      "answer": "No. It is a checklist for common response headers. Review the recommendations in the context of your application and threat model."
     }
   ]
 }

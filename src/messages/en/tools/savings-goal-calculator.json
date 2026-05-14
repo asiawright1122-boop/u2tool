@@ -1,28 +1,28 @@
 {
-  "detailed_description": "Savings Goal Calculator — Estimate how long it takes to reach a savings goal from current savings, monthly deposits, and interest. Review the calculated or generated result.",
+  "detailed_description": "Savings Goal Calculator - Estimate progress toward a savings target from current savings, monthly contribution, annual interest rate, projection length, and currency. The calculator compounds monthly, shows the amount still needed, projected savings for the selected period, gap or surplus, and estimated months to goal when the inputs can reach the target.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter your target amount, current savings, monthly contribution, annual rate, projection months, and currency",
+    "Review projected savings, remaining amount, gap or surplus, and months to goal",
+    "Copy the summary for your notes if the scenario looks useful",
+    "Change contribution, rate, or timeline to compare another savings plan"
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Estimate whether a 24-month emergency fund target is on track",
+    "Compare monthly contributions needed for a home deposit goal",
+    "See how a modest annual interest rate changes the projected balance"
   ],
   "faqs": [
     {
-      "question": "Savings Goal Calculator is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is the Savings Goal Calculator free?",
+      "answer": "Yes. The calculator runs in the browser and does not require an account."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "How is interest calculated?",
+      "answer": "The calculator uses the annual rate you enter and applies it as a monthly compounding rate during the projection."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Why does it sometimes show not reached?",
+      "answer": "If the monthly contribution and interest assumptions cannot reach the target within the modeled search window, the result reports that the goal is not reached."
     }
   ]
 }

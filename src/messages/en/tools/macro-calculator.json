@@ -1,28 +1,28 @@
 {
-  "detailed_description": "Macro Calculator — Calculate daily calories and protein, carbs, and fat targets from your body stats and goal. Review the calculated or generated result.",
+  "detailed_description": "Macro Calculator - Estimate daily calories and macro targets from unit system, weight, height, age, sex, activity level, and goal. The calculator derives BMR and TDEE, then applies a goal factor for fat loss, maintenance, lean gain, or muscle gain before splitting the result into protein, carbs, and fat grams. Use it as a planning estimate, not a nutrition prescription.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Choose metric or imperial units and enter weight, height, age, and sex",
+    "Select your activity level and goal",
+    "Review daily calories plus protein, carbs, fat, BMR, and TDEE",
+    "Copy the summary or change the goal to compare another macro target"
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Compare maintenance macros with a fat-loss target",
+    "Estimate protein, carb, and fat grams for a moderate activity profile",
+    "Switch between lean gain and muscle gain to see how the calorie target changes"
   ],
   "faqs": [
     {
-      "question": "Macro Calculator is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is the Macro Calculator free?",
+      "answer": "Yes. The calculator runs in the browser and does not require an account."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "Which formulas does the page use?",
+      "answer": "The page estimates BMR from weight, height, age, and sex, applies an activity multiplier for TDEE, then adjusts calories by the selected goal."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Are the macros medical or diet advice?",
+      "answer": "No. They are planning estimates. Adjust for your real progress and consult a qualified professional for medical or dietary needs."
     }
   ]
 }

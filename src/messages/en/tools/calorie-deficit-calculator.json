@@ -1,28 +1,28 @@
 {
-  "detailed_description": "Calorie Deficit Calculator — Estimate daily calorie deficit, weekly deficit, and projected weight change from intake and maintenance calories. Review the calculated or generated result.",
+  "detailed_description": "Calorie Deficit Calculator - Estimate daily calorie deficit, weekly deficit, and projected weight change from maintenance calories, planned daily intake, and the number of days you want to model. The page shows the daily and weekly calorie gap plus estimated change in both kilograms and pounds, so you can compare a small deficit with a more aggressive plan before adjusting your inputs. It is a planning aid, not medical advice.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter your estimated maintenance calories, target daily calories, and planning period in days",
+    "Review the daily deficit, weekly deficit, and estimated weight change cards",
+    "Copy the summary if you want to keep the current scenario",
+    "Change the intake or number of days to compare a slower or faster plan"
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Compare a 300 kcal deficit with a 500 kcal deficit before choosing a weekly target",
+    "Estimate the expected change over a 30-day cut using your current maintenance calories",
+    "Check whether a planned intake creates a surplus instead of a deficit"
   ],
   "faqs": [
     {
-      "question": "Calorie Deficit Calculator is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is the Calorie Deficit Calculator free?",
+      "answer": "Yes. The calculator runs in the browser and does not require an account."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "What inputs do I need?",
+      "answer": "You need an estimated maintenance calorie value, a planned daily calorie intake, and the number of days to project."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Should I treat the weight change as exact?",
+      "answer": "No. The estimate uses common calorie-to-weight conversions and does not account for water weight, metabolic adaptation, health conditions, or individual nutrition needs."
     }
   ]
 }

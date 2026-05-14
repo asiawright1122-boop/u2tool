@@ -1,28 +1,28 @@
 {
-  "detailed_description": "One Rep Max Calculator — Estimate your one-rep max using common strength formulas from weight and reps. Review the calculated or generated result.",
+  "detailed_description": "One Rep Max Calculator - Estimate a strength training one-rep max from lifted weight, completed reps, and metric or imperial units. The calculator shows Epley, Brzycki, and Lombardi estimates, then averages them into a single headline value so you can compare training loads without manually running each formula. Use the result conservatively and prioritize safe lifting technique.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Choose metric or imperial units",
+    "Enter the weight lifted and the number of reps completed",
+    "Review the average one-rep max plus Epley, Brzycki, and Lombardi values",
+    "Copy the estimate or adjust reps and weight to compare another set"
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Estimate a max from a 5-rep working set",
+    "Compare how different rep counts change the formula average",
+    "Plan conservative training percentages without testing a true max"
   ],
   "faqs": [
     {
-      "question": "One Rep Max Calculator is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is the One Rep Max Calculator free?",
+      "answer": "Yes. The calculator runs in the browser and does not require an account."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "Which formulas are included?",
+      "answer": "The result includes Epley, Brzycki, and Lombardi estimates, plus an average of the three."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Is the estimate safe to use as my actual max?",
+      "answer": "Treat it as an estimate only. Fatigue, form, exercise choice, and training history can change what is safe on a given day."
     }
   ]
 }

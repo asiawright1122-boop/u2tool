@@ -1,28 +1,28 @@
 {
-  "detailed_description": "ICS File Generator — Generate iCalendar ICS event text from a title, time, location, description, and timezone. Review the calculated or generated result.",
+  "detailed_description": "ICS File Generator - Generate iCalendar event text from a title, start and end date, start and end time, timezone, location, and description. The tool formats a VCALENDAR and VEVENT block with DTSTART, DTEND, SUMMARY, LOCATION, DESCRIPTION, and a deterministic UID, then shows the event date, duration, and timezone before you copy the text.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter the event title, start and end date, start and end time, and timezone",
+    "Add optional location and description details",
+    "Review the generated iCalendar text, event date, duration, and timezone",
+    "Copy the output and test it with your calendar workflow before sharing widely"
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Draft an ICS block for a product planning meeting",
+    "Check that a one-hour UTC event has the expected DTSTART and DTEND values",
+    "Prepare calendar event text for an email, documentation page, or internal note"
   ],
   "faqs": [
     {
-      "question": "ICS File Generator is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is the ICS File Generator free?",
+      "answer": "Yes. The generator runs in the browser and does not require an account."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "Does the page download a calendar file?",
+      "answer": "No. It generates iCalendar text on the page. Copy the output and save or import it with your own calendar tools."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "How are timezones handled?",
+      "answer": "The timezone field is included in the generated DTSTART and DTEND lines unless you use UTC, which is written with a Z suffix."
     }
   ]
 }

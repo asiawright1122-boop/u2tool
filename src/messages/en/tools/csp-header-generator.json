@@ -1,28 +1,28 @@
 {
-  "detailed_description": "CSP Header Generator — Build a Content-Security-Policy header from common source directives and reporting options. Review the calculated or generated result.",
+  "detailed_description": "CSP Header Generator - Build a Content-Security-Policy header from common directive fields such as default-src, script-src, style-src, img-src, connect-src, frame-ancestors, report-uri, and upgrade-insecure-requests. The tool cleans each directive value, combines the non-empty fields into one header line, and lets you copy the result for review in your web server or application configuration.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Fill in the source lists you want for each CSP directive",
+    "Choose whether to include upgrade-insecure-requests",
+    "Review the generated Content-Security-Policy header and directive count",
+    "Copy the header and test it carefully before using it on a production site"
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Create a starter policy with default-src 'self' and a CDN in script-src",
+    "Add frame-ancestors 'none' while reviewing clickjacking protection",
+    "Include a report-uri value when drafting a policy for staged CSP reporting"
   ],
   "faqs": [
     {
-      "question": "CSP Header Generator is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is the CSP Header Generator free?",
+      "answer": "Yes. The tool runs in the browser and does not require an account."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "Does it validate my whole website policy?",
+      "answer": "No. It builds a header string from the values you enter. You should still test the policy against your real pages and browser console reports."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Can I copy the generated header directly?",
+      "answer": "You can copy it as a draft, but review each directive first because a strict CSP can block scripts, styles, images, or frames your site depends on."
     }
   ]
 }

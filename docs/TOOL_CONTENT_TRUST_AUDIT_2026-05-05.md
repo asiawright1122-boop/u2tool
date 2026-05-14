@@ -9,7 +9,7 @@ This audit checks tool support content against search-engine quality expectation
 - Popular English tool files checked for depth: 94
 - Files with high-confidence implementation overclaims: 0
 - Files with medium-confidence claims for future review: 2
-- Popular English files with depth gaps: 16
+- Popular English files with depth gaps: 0
 
 Runtime mitigation: high-confidence support-content issues are blocked by `assessSupportContentTrust` and replaced by safe fallback support content on tool detail pages.
 
@@ -25,10 +25,8 @@ Runtime mitigation: high-confidence support-content issues are blocked by `asses
 
 | Code | Severity | Count | Meaning |
 |---|---:|---:|---|
-| `thin-detailed-description` | depth | 15 | Popular English tool has a short detailed_description (...). |
 | `redis-runtime` | medium | 3 | Mentions Redis-specific behavior that should be verified against the actual tool UI. |
 | `server-side-reference` | medium | 1 | References server-side behavior on a browser-first tool page and should be verified. |
-| `thin-faqs` | depth | 1 | Popular English tool has 0 FAQs; expected at least 3. |
 
 ## High-Confidence Overclaim Samples
 
@@ -42,22 +40,7 @@ These are not automatic noindex problems. They are prioritization targets for co
 
 | Tool | Detailed Chars | Steps | Examples | FAQs | Gap Codes |
 |---|---:|---:|---:|---:|---|
-| `calorie-deficit-calculator` | 185 | 4 | 3 | 3 | `thin-detailed-description` |
-| `cover-letter-generator` | 152 | 4 | 3 | 3 | `thin-detailed-description` |
-| `csp-header-generator` | 157 | 4 | 3 | 3 | `thin-detailed-description` |
-| `csv-to-vcard-converter` | 143 | 4 | 3 | 3 | `thin-detailed-description` |
-| `debt-snowball-calculator` | 161 | 4 | 3 | 3 | `thin-detailed-description` |
-| `ics-file-generator` | 154 | 4 | 3 | 3 | `thin-detailed-description` |
-| `macro-calculator` | 153 | 4 | 3 | 3 | `thin-detailed-description` |
-| `midjourney-prompt-generator` | 184 | 4 | 3 | 3 | `thin-detailed-description` |
-| `one-rep-max-calculator` | 146 | 4 | 3 | 3 | `thin-detailed-description` |
-| `passport-photo-maker` | 168 | 4 | 3 | 3 | `thin-detailed-description` |
-| `paypal-fee-calculator` | 158 | 4 | 3 | 3 | `thin-detailed-description` |
-| `savings-goal-calculator` | 173 | 4 | 3 | 3 | `thin-detailed-description` |
-| `security-headers-checker` | 170 | 4 | 3 | 3 | `thin-detailed-description` |
-| `stable-diffusion-prompt-generator` | 188 | 4 | 3 | 3 | `thin-detailed-description` |
-| `websocket-tester` | 679 | 6 | 4 | 0 | `thin-faqs` |
-| `youtube-title-generator` | 140 | 4 | 3 | 3 | `thin-detailed-description` |
+| - | - | - | - | - | No popular English depth gaps found. |
 
 ## Recovery Actions
 

@@ -1,28 +1,28 @@
 {
-  "detailed_description": "CSV to vCard Converter — Convert contact CSV rows into vCard text for address books and CRM imports. Review the calculated or generated result.",
+  "detailed_description": "CSV to vCard Converter - Convert pasted contact rows into vCard text using a header row and common fields such as first name, last name, full name, email, phone, company, title, and address. You can choose comma, semicolon, or tab delimiters and output vCard 3.0 or 4.0 text, making it easier to prepare contacts for address book or CRM import workflows.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Paste CSV contact data with a header row",
+    "Select the delimiter used by your data and the vCard version you need",
+    "Review the contact count and generated vCard output",
+    "Copy the vCard text and test it with your target address book or CRM import flow"
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Convert a small spreadsheet export into vCard 3.0 contact blocks",
+    "Prepare tab-delimited contact rows for an address book import",
+    "Check whether name, email, phone, company, and title columns map cleanly"
   ],
   "faqs": [
     {
-      "question": "CSV to vCard Converter is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is the CSV to vCard Converter free?",
+      "answer": "Yes. The converter runs in the browser and does not require an account."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "Which CSV columns are recognized?",
+      "answer": "The converter looks for common contact headers including first name, last name, full name, email, phone, company, title, and address."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Does it import contacts into my address book automatically?",
+      "answer": "No. It generates vCard text on the page. Copy the output and import or save it using the tools you already use."
     }
   ]
 }

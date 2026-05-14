@@ -1,28 +1,28 @@
 {
-  "detailed_description": "Debt Snowball Calculator — Plan a debt payoff order, monthly timeline, and interest estimate with the snowball method. Review the calculated or generated result.",
+  "detailed_description": "Debt Snowball Calculator - Model a debt payoff plan from pasted debt rows, minimum payments, interest rates, and an optional extra monthly payment. The calculator sorts active debts by balance, applies monthly interest and required payments, then rolls remaining budget toward the smallest balance first. Results show estimated payoff time, total interest, total paid, and payoff order.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Paste debt rows with name, balance, annual interest rate, and minimum payment",
+    "Enter any extra monthly amount you can add to the payoff budget",
+    "Review estimated payoff months, total interest, total paid, and next debt",
+    "Adjust the extra payment to compare how the timeline changes"
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Estimate how long three credit balances could take with an extra monthly payment",
+    "Compare minimum-only payoff with a larger snowball budget",
+    "Create a simple payoff order before building a more detailed budget"
   ],
   "faqs": [
     {
-      "question": "Debt Snowball Calculator is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is the Debt Snowball Calculator free?",
+      "answer": "Yes. The calculator runs in the browser and does not require an account."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "What debt row format should I use?",
+      "answer": "Use rows with debt name, balance, annual rate, and minimum payment. The sample placeholder shows the expected CSV-style structure."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Is this financial advice?",
+      "answer": "No. It is a planning calculator. Verify your real balances, rates, fees, and lender rules before making decisions."
     }
   ]
 }

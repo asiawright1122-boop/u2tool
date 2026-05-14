@@ -1,28 +1,28 @@
 {
-  "detailed_description": "Passport Photo Maker — Calculate passport photo dimensions, pixel size, and background checklist for common document presets. Review the calculated or generated result.",
+  "detailed_description": "Passport Photo Maker - Calculate passport or visa photo dimensions from a preset or custom millimeter size, DPI, and background choice. The page converts print size into pixel dimensions, reports the aspect ratio, and creates a short checklist covering size, pixels, DPI, and background. It helps prepare specifications, but it does not crop, retouch, or verify an uploaded photo.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Choose a document preset or select custom dimensions",
+    "Enter width, height, DPI, and background color when needed",
+    "Review pixel size, print size, DPI, aspect ratio, and checklist details",
+    "Copy the checklist and compare it with the official document photo rules"
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Convert a 35 x 45 mm passport photo requirement into pixels at 300 DPI",
+    "Compare US passport and EU passport preset dimensions",
+    "Create a quick background and size checklist before editing a photo elsewhere"
   ],
   "faqs": [
     {
-      "question": "Passport Photo Maker is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is the Passport Photo Maker free?",
+      "answer": "Yes. The calculator runs in the browser and does not require an account."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "Does it edit or crop my photo?",
+      "answer": "No. This page calculates dimensions and checklist text. It does not upload, crop, retouch, or validate an image."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Are the presets official requirements?",
+      "answer": "Use the presets as a practical reference and always compare the final photo against the current rules from the issuing authority."
     }
   ]
 }

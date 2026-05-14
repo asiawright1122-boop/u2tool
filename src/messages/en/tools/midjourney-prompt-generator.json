@@ -1,28 +1,28 @@
 {
-  "detailed_description": "Midjourney Prompt Generator — Create structured Midjourney-style prompt variants with subject, style, lighting, aspect ratio, and exclusions. Review the calculated or generated result.",
+  "detailed_description": "Midjourney Prompt Generator - Create structured prompt variants from a subject, visual style, lighting note, composition, aspect ratio, and optional exclusions. The generator combines those inputs into several copy-ready prompt lines with --ar aspect ratio syntax and an optional --no block, helping image creators compare phrasing directions before using the prompt in their own workflow.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Describe the subject, style, lighting, and composition you want",
+    "Pick an aspect ratio and add any negative prompt terms if needed",
+    "Review the generated prompt variants and option rows",
+    "Copy the full set or one variant, then refine it in your image workflow"
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Generate six prompt angles for an editorial workspace scene",
+    "Compare square, widescreen, and vertical aspect ratio prompts",
+    "Add exclusions for unwanted visual elements before testing a prompt"
   ],
   "faqs": [
     {
-      "question": "Midjourney Prompt Generator is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is the Midjourney Prompt Generator free?",
+      "answer": "Yes. The generator runs in the browser and does not require an account."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "Does this create images?",
+      "answer": "No. It creates text prompt variants only. Use the copied prompt in the image tool or creative workflow you choose."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "What does the negative prompt field do?",
+      "answer": "If you enter exclusions, the generator appends them as a --no block in each prompt variant."
     }
   ]
 }
