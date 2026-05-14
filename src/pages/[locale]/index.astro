@@ -24,6 +24,7 @@ import ImageToolClusterSection from '@/components/discovery/ImageToolClusterSect
 import OnlineCalculatorClusterSection from '@/components/discovery/OnlineCalculatorClusterSection.astro';
 import PdfDocumentToolClusterSection from '@/components/discovery/PdfDocumentToolClusterSection.astro';
 import SecurityToolClusterSection from '@/components/discovery/SecurityToolClusterSection.astro';
+import TextWritingToolClusterSection from '@/components/discovery/TextWritingToolClusterSection.astro';
 import ToolLaunchSection from '@/components/discovery/ToolLaunchSection.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
@@ -69,6 +70,11 @@ import {
   getSecurityToolClusterCopy,
   securityToolClusterPath,
 } from '@/lib/security-tool-cluster';
+import {
+  buildTextWritingToolClusterGroups,
+  getTextWritingToolClusterCopy,
+  textWritingToolClusterPath,
+} from '@/lib/text-writing-tool-cluster';
 import { buildRecentToolLaunches, buildToolLaunchItemList } from '@/lib/tool-launches';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
@@ -185,6 +191,13 @@ const pdfDocumentToolGroups = buildPdfDocumentToolClusterGroups(
 );
 const securityToolCopy = getSecurityToolClusterCopy(locale);
 const securityToolGroups = buildSecurityToolClusterGroups(
+  locale,
+  categoryMessages,
+  toolNames,
+  toolDescriptions
+);
+const textWritingToolCopy = getTextWritingToolClusterCopy(locale);
+const textWritingToolGroups = buildTextWritingToolClusterGroups(
   locale,
   categoryMessages,
   toolNames,
@@ -380,6 +393,17 @@ const chartToolGroups = buildChartToolClusterGroups(
           href={buildLocalizedPagePath(locale, pdfDocumentToolClusterPath)}
           groups={pdfDocumentToolGroups}
           toolCountLabel={pdfDocumentToolCopy.toolCountLabel}
+        />
+
+        <TextWritingToolClusterSection
+          compact
+          eyebrow={textWritingToolCopy.eyebrow}
+          title={textWritingToolCopy.title}
+          description={textWritingToolCopy.description}
+          ctaLabel={textWritingToolCopy.ctaLabel}
+          href={buildLocalizedPagePath(locale, textWritingToolClusterPath)}
+          groups={textWritingToolGroups}
+          toolCountLabel={textWritingToolCopy.toolCountLabel}
         />
 
         <SecurityToolClusterSection

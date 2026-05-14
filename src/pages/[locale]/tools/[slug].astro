@@ -35,6 +35,7 @@ import ImageToolClusterCard from '@/components/tools/ImageToolClusterCard.astro'
 import OnlineCalculatorClusterCard from '@/components/tools/OnlineCalculatorClusterCard.astro';
 import PdfDocumentToolClusterCard from '@/components/tools/PdfDocumentToolClusterCard.astro';
 import SecurityToolClusterCard from '@/components/tools/SecurityToolClusterCard.astro';
+import TextWritingToolClusterCard from '@/components/tools/TextWritingToolClusterCard.astro';
 import { tools, categories, getToolsByCategory } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
 import { isValidLocale } from '@/lib/i18n';
@@ -82,6 +83,11 @@ import {
   getSecurityToolClusterCopy,
   securityToolClusterPath,
 } from '@/lib/security-tool-cluster';
+import {
+  buildTextWritingToolClusterGroupForTool,
+  getTextWritingToolClusterCopy,
+  textWritingToolClusterPath,
+} from '@/lib/text-writing-tool-cluster';
 
 export const prerender = false;
 
@@ -121,6 +127,7 @@ const imageToolCopy = getImageToolClusterCopy(locale);
 const onlineCalculatorCopy = getOnlineCalculatorClusterCopy(locale);
 const pdfDocumentToolCopy = getPdfDocumentToolClusterCopy(locale);
 const securityToolCopy = getSecurityToolClusterCopy(locale);
+const textWritingToolCopy = getTextWritingToolClusterCopy(locale);
 
 // Extract tool metadata from translations
 const toolName = (messages.name as string) || tool.slug;
@@ -399,6 +406,13 @@ const securityToolGroup = buildSecurityToolClusterGroupForTool(
   allToolNames,
   allToolDescriptions
 );
+const textWritingToolGroup = buildTextWritingToolClusterGroupForTool(
+  locale,
+  tool.slug,
+  categoryMessages,
+  allToolNames,
+  allToolDescriptions
+);
 const chartToolGroup = buildChartToolClusterGroupForTool(
   locale,
   tool.slug,
@@ -597,6 +611,15 @@ const chartToolGroup = buildChartToolClusterGroupForTool(
           copy={securityToolCopy}
           currentSlug={tool.slug}
           group={securityToolGroup}
+        />
+      )}
+
+      {textWritingToolGroup && (
+        <TextWritingToolClusterCard
+          clusterHref={buildLocalizedPagePath(locale, textWritingToolClusterPath)}
+          copy={textWritingToolCopy}
+          currentSlug={tool.slug}
+          group={textWritingToolGroup}
         />
       )}
 

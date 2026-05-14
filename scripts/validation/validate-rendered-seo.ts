@@ -151,6 +151,20 @@ const checks: RenderedSeoCheck[] = [
     ],
   },
   {
+    name: 'English text writing editing tools cluster',
+    path: '/en/tools/text-writing-editing-tools/',
+    titleIncludes: 'Text',
+    descriptionIncludes: 'writing',
+    h1Includes: 'Text',
+    schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList', 'BreadcrumbList'],
+    bodyMustInclude: [
+      'Text, Writing &amp; Editing Tools',
+      '/en/tools/word-counter/',
+      '/en/tools/grammar-checker/',
+      '/en/categories/text/',
+    ],
+  },
+  {
     name: 'English privacy page',
     path: '/en/privacy/',
     titleIncludes: 'Privacy Policy',
@@ -277,6 +291,19 @@ const checks: RenderedSeoCheck[] = [
       'data-security-tool-cluster',
       '/en/tools/security-password-hash-tools/',
       '/en/tools/password-strength/',
+    ],
+  },
+  {
+    name: 'Text writing tool cluster backlink',
+    path: '/en/tools/word-counter/',
+    titleIncludes: 'Word Counter',
+    descriptionIncludes: 'word',
+    h1Includes: 'Word Counter',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    bodyMustInclude: [
+      'data-text-writing-tool-cluster',
+      '/en/tools/text-writing-editing-tools/',
+      '/en/tools/document-word-counter/',
     ],
   },
   {

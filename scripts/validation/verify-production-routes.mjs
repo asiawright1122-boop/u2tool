@@ -16,6 +16,7 @@ const checks = [
   { name: 'online calculators en', url: '/en/tools/online-calculators/', expect: { status: 200 }, bodyMustInclude: 'Online Calculators for Finance, Math, Work &amp; Daily Life' },
   { name: 'pdf document converters en', url: '/en/tools/pdf-document-converters/', expect: { status: 200 }, bodyMustInclude: 'PDF, Document &amp; Spreadsheet Tools' },
   { name: 'security password hash tools en', url: '/en/tools/security-password-hash-tools/', expect: { status: 200 }, bodyMustInclude: 'Security, Password, Hash &amp; JWT Tools' },
+  { name: 'text writing editing tools en', url: '/en/tools/text-writing-editing-tools/', expect: { status: 200 }, bodyMustInclude: 'Text, Writing &amp; Editing Tools' },
   { name: 'chart generators en', url: '/en/tools/chart-generators/', expect: { status: 200 }, bodyMustInclude: 'Chart Generators &amp; Data Visualization Tools' },
   { name: 'privacy en', url: '/en/privacy/', expect: { status: 200 } },
   { name: 'terms en', url: '/en/terms/', expect: { status: 200 } },

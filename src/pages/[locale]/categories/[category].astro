@@ -18,6 +18,7 @@ import ImageToolClusterSection from '@/components/discovery/ImageToolClusterSect
 import OnlineCalculatorClusterSection from '@/components/discovery/OnlineCalculatorClusterSection.astro';
 import PdfDocumentToolClusterSection from '@/components/discovery/PdfDocumentToolClusterSection.astro';
 import SecurityToolClusterSection from '@/components/discovery/SecurityToolClusterSection.astro';
+import TextWritingToolClusterSection from '@/components/discovery/TextWritingToolClusterSection.astro';
 import Breadcrumb from '@/components/layout/Breadcrumb.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
@@ -67,6 +68,11 @@ import {
   getSecurityToolClusterCopy,
   securityToolClusterPath,
 } from '@/lib/security-tool-cluster';
+import {
+  buildTextWritingToolClusterGroups,
+  getTextWritingToolClusterCopy,
+  textWritingToolClusterPath,
+} from '@/lib/text-writing-tool-cluster';
 
 export const prerender = false;
 
@@ -143,6 +149,11 @@ const securityToolCopy = getSecurityToolClusterCopy(locale);
 const securityClusterCategories: ToolCategory[] = ['security', 'network', 'encoding'];
 const securityToolGroups = securityClusterCategories.includes(category)
   ? buildSecurityToolClusterGroups(locale, categoryMessages, allToolNames, allToolDescriptions)
+  : [];
+const textWritingToolCopy = getTextWritingToolClusterCopy(locale);
+const textWritingClusterCategories: ToolCategory[] = ['text', 'generators'];
+const textWritingToolGroups = textWritingClusterCategories.includes(category)
+  ? buildTextWritingToolClusterGroups(locale, categoryMessages, allToolNames, allToolDescriptions)
   : [];
 const chartToolCopy = getChartToolClusterCopy(locale);
 const chartToolGroups = category === 'charts'
@@ -306,6 +317,18 @@ const collectionData = {
             href={buildLocalizedPagePath(locale, securityToolClusterPath)}
             groups={securityToolGroups}
             toolCountLabel={securityToolCopy.toolCountLabel}
+          />
+        )}
+
+        {textWritingClusterCategories.includes(category) && (
+          <TextWritingToolClusterSection
+            eyebrow={textWritingToolCopy.eyebrow}
+            title={textWritingToolCopy.title}
+            description={textWritingToolCopy.description}
+            ctaLabel={textWritingToolCopy.ctaLabel}
+            href={buildLocalizedPagePath(locale, textWritingToolClusterPath)}
+            groups={textWritingToolGroups}
+            toolCountLabel={textWritingToolCopy.toolCountLabel}
           />
         )}
 
