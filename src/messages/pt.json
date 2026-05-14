@@ -4352,30 +4352,44 @@
     },
     "scientific-calculator": {
       "name": "Calculadora Científica",
-      "description": "Realize cálculos científicos com funções trigonométricas, logarítmicas e exponenciais.",
-      "seo_title": "Calculadora Científica Grátis Online",
-      "seo_description": "Calculadora científica online gratuita com sin, cos, tan, log, ln, sqrt, potência e mais funções. Suporta parênteses e expressões complexas. Para estudantes.",
-      "detailed_description": "O Calculadora Científica é uma ferramenta técnica projetada para executar operações matemáticas complexas com precisão, incluindo funções trigonométricas (seno, cosseno, tangente e suas inversas), logarítmicas (base e, 10 e personalizadas), exponenciais (e^x, 10^x) e hiperbólicas. Desenvolvida com motor de cálculo em JavaScript que utiliza aritmética de ponto flutuante de dupla precisão, garante resultados com até 15 dígitos significativos. Essencial para engenheiros, físicos e estudantes de ciências exatas que precisam resolver equações diferenciais, analisar dados experimentais ou converter unidades angulares (graus/radianos) em cálculos de dinâmica rotacional. A interface permite ajustar o modo de entrada (graus ou radianos), selecionar notação científica e acessar um histórico de operações para revisão de cálculos anteriores, tudo sem recarregar a página graças ao processamento cliente-side em tempo real.",
+      "description": "Calcule no navegador com sin, cos, tan, ln, log, raízes, potências, constantes, porcentagens e memória.",
+      "seo_title": "Calculadora científica online grátis",
+      "seo_description": "Calculadora científica grátis com sin, cos, tan, ln, log, sqrt, potência, pi, e, fatorial, porcentagem, RAD/DEG e memória MC/MR.",
+      "detailed_description": "A Calculadora Científica avalia operações aritméticas e funções científicas comuns no navegador a partir do teclado visível. Ela aceita soma, subtração, multiplicação, divisão, parênteses, potências com x^y, raiz quadrada, sin, cos e tan com modos RAD/DEG, ln e log, constantes pi e e, fatorial, porcentagem, troca de sinal, teclas de memória MC, MR, M+ e MS, e cópia do resultado. É útil para estudo, estimativas técnicas e conferência de fórmulas, mas não substitui software numérico auditado em cálculos críticos.",
       "usage_steps": [
-        "1. Acesse o seletor de funções no painel esquerdo e escolha 'Trigonométrica', 'Logarítmica' ou 'Exponencial' conforme sua necessidade.",
-        "2. Insira o valor numérico no campo de input principal usando o teclado virtual ou digitando diretamente (suporta notação com ponto decimal).",
-        "3. Ative o modo 'Rad' ou 'Deg' para definir se o cálculo trigonométrico usará radianos ou graus.",
-        "4. Arraste o controle deslizante 'Precisão' para selecionar entre 5 a 15 dígitos significativos no resultado.",
-        "5. Clique em 'Histórico' para visualizar e reutilizar expressões calculadas anteriormente.",
-        "6. Utilize o botão 'Copiar Fórmula' para exportar a expressão matemática em formato LaTeX diretamente para relatórios científicos."
+        "Escolha RAD ou DEG antes de usar sin, cos ou tan.",
+        "Monte a expressão com teclas numéricas, operadores, parênteses, pi ou e.",
+        "Use ln, log, raiz quadrada, x^y, n!, %, e troca de sinal para operações científicas comuns.",
+        "Pressione = para calcular ou retrocesso para apagar a última entrada.",
+        "Guarde ou reutilize um valor intermediário com MC, MR, M+ e MS.",
+        "Copie o resultado exibido quando precisar usá-lo em notas ou outra ferramenta."
       ],
       "usage_examples": [
-        "Um engenheiro civil calculando a tensão em um cabo de sustentação usando seno inverso com ângulo em radianos.",
-        "Um químico determinando o pH de uma solução através de logaritmo na base 10 de concentração iônica.",
-        "Um estudante de física resolvendo equações de decaimento radioativo com função exponencial negativa.",
-        "Um programador convertendo coordenadas cartesianas para polares usando tangente inversa ajustada por quadrante."
+        "Um estudante confere (3+4)*sin(30) depois de mudar a calculadora para DEG.",
+        "Uma engenheira estima sqrt(12^2 + 5^2) antes de levar o valor para suas notas de trabalho.",
+        "Um professor compara RAD e DEG com sin(pi/2) e sin(90).",
+        "Uma pessoa armazena um valor intermediário na memória e continua um cálculo em várias etapas."
       ],
       "sci": {
         "error": "Erro",
         "angleMode": "sci.angleMode",
         "quickFormulas": "sci.quickFormulas"
       },
-      "copy": "Copiar"
+      "copy": "Copiar",
+      "faqs": [
+        {
+          "question": "Quais funções científicas estão disponíveis?",
+          "answer": "O teclado inclui sin, cos, tan, ln, log, raiz quadrada, x^y, fatorial, porcentagem, parênteses, pi, e e modos RAD/DEG."
+        },
+        {
+          "question": "Posso guardar um valor intermediário?",
+          "answer": "Sim. Use MC, MR, M+ e MS para limpar, recuperar, somar ou armazenar o valor atual da memória."
+        },
+        {
+          "question": "A calculadora envia minhas expressões?",
+          "answer": "Não. Os cálculos rodam no navegador e o botão de cópia apenas coloca o valor exibido na área de transferência."
+        }
+      ]
     },
     "text-sorter": {
       "name": "Text Sorter",
@@ -22800,9 +22814,9 @@
     },
     "scientific-calculator": {
       "name": "Calculadora Científica",
-      "description": "Execute cálculos científicos com funções trigonométricas, logarítmicas e exponenciais.",
-      "seo_title": "Calculadora Científica Gratuita Online",
-      "seo_description": "Calculadora científica online gratuita com sin, cos, tan, log, ln, sqrt, power e mais funções. Parênteses de suporte e expressões complexas. Para estudantes."
+      "description": "Calcule no navegador com sin, cos, tan, ln, log, raízes, potências, constantes, porcentagens e memória.",
+      "seo_title": "Calculadora científica online grátis",
+      "seo_description": "Calculadora científica grátis com sin, cos, tan, ln, log, sqrt, potência, pi, e, fatorial, porcentagem, RAD/DEG e memória MC/MR."
     },
     "text-sorter": {
       "name": "Ordenador de Texto",

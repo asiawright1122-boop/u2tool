@@ -1,17 +1,31 @@
 {
-  "detailed_description": "La Calculatrice Scientifique est un outil logiciel conçu pour exécuter des opérations mathématiques avancées, incluant les fonctions trigonométriques (sin, cos, tan), logarithmiques (log, ln), exponentielles (e^x, a^x), ainsi que les calculs avec des nombres complexes et les conversions entre systèmes numériques (binaire, octal, décimal). Elle intègre un moteur de calcul en précision flottante IEEE 754, permettant de gérer des expressions algébriques complexes avec priorité des opérateurs et parenthèses imbriquées. Ce dispositif est indispensable pour les étudiants en sciences, les ingénieurs ou les chercheurs confrontés à des modélisations mathématiques exigeant des calculs précis : résolution d'équations différentielles, analyse statistique multivariée, ou simulation de circuits électriques. Son interface utilise un algorithme de parsing d'expressions mathématiques en temps réel, validant la syntaxe via des règles de grammaire formelle et affichant les erreurs de parenthésage ou de domaines de définition (ex. logarithme négatif).",
+  "detailed_description": "La calculatrice scientifique évalue les opérations arithmétiques et les fonctions scientifiques courantes dans le navigateur à partir du clavier visible. Elle prend en charge addition, soustraction, multiplication, division, parenthèses, puissances avec x^y, racine carrée, sin, cos et tan avec modes RAD/DEG, ln et log, constantes pi et e, factorielle, pourcentage, changement de signe, touches mémoire MC, MR, M+ et MS, ainsi que la copie du résultat. Elle convient aux études, aux estimations techniques et à la vérification de formules, sans remplacer un logiciel numérique audité pour les calculs critiques.",
   "usage_steps": [
-    "Sélectionnez le mode d'angle (degrés, radians ou grades) via le bouton 'Angle' en haut du clavier.",
-    "Saisissez une expression mathématique en utilisant les touches spécialisées : 'sinh' pour sinus hyperbolique, 'log₂' pour logarithme base 2, ou 'i' pour unité imaginaire.",
-    "Utilisez la fonction 'Ans' pour récupérer le dernier résultat dans de nouveaux calculs.",
-    "Appuyez sur 'Shift' puis 'STO' pour stocker un résultat intermédiaire dans l'une des 10 mémoires disponibles (A-J).",
-    "Activez le mode 'Equation' pour résoudre des systèmes linéaires ou des équations quadratiques en entrant les coefficients.",
-    "Consultez l'historique des calculs via le menu déroulant à gauche de l'écran pour revoir les 50 dernières opérations."
+    "Choisissez RAD ou DEG avant d’utiliser sin, cos ou tan.",
+    "Composez l’expression avec les touches numériques, les opérateurs, les parenthèses, pi ou e.",
+    "Utilisez ln, log, racine carrée, x^y, n!, %, et le changement de signe pour les opérations scientifiques courantes.",
+    "Appuyez sur = pour calculer ou sur retour arrière pour supprimer la dernière entrée.",
+    "Enregistrez ou réutilisez une valeur intermédiaire avec MC, MR, M+ et MS.",
+    "Copiez le résultat affiché si vous devez l’utiliser dans des notes ou un autre outil."
   ],
   "usage_examples": [
-    "Calculer l'impédance complexe Z = √(R² + (Lω - 1/Cω)²) pour un circuit RLC avec R=100Ω, L=0.1H, C=10μF à 50Hz.",
-    "Déterminer la croissance exponentielle d'une population avec la formule N(t) = N₀e^(rt) où N₀=1000, r=0.05, t=20 ans.",
-    "Résoudre l'équation différentielle y'' + 4y' + 13y = 0 en utilisant les racines complexes du polynôme caractéristique.",
-    "Convertir un angle de 3π/4 radians en degrés et calculer son sinus hyperbolique pour une application en géométrie non euclidienne."
+    "Un étudiant vérifie (3+4)*sin(30) après avoir placé la calculatrice en mode DEG.",
+    "Une ingénieure estime sqrt(12^2 + 5^2) avant de reporter la valeur dans ses notes.",
+    "Un enseignant compare RAD et DEG avec sin(pi/2) et sin(90).",
+    "Une personne stocke une valeur intermédiaire en mémoire puis continue un calcul en plusieurs étapes."
+  ],
+  "faqs": [
+    {
+      "question": "Quelles fonctions scientifiques sont disponibles ?",
+      "answer": "Le clavier comprend sin, cos, tan, ln, log, racine carrée, x^y, factorielle, pourcentage, parenthèses, pi, e et les modes RAD/DEG."
+    },
+    {
+      "question": "Puis-je mémoriser une valeur intermédiaire ?",
+      "answer": "Oui. MC, MR, M+ et MS permettent d’effacer, rappeler, ajouter ou enregistrer la valeur mémoire actuelle."
+    },
+    {
+      "question": "Mes expressions sont-elles envoyées ailleurs ?",
+      "answer": "Non. Les calculs s’exécutent dans le navigateur, et le bouton de copie place seulement la valeur affichée dans le presse-papiers."
+    }
   ]
 }

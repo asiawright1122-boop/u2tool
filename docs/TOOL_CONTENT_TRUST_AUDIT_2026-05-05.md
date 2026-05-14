@@ -7,7 +7,7 @@ This audit checks tool support content against search-engine quality expectation
 - Tool message files scanned: 5480
 - English tool files scanned: 548
 - Popular English tool files checked for depth: 94
-- Files with high-confidence implementation overclaims: 7
+- Files with high-confidence implementation overclaims: 2
 - Files with medium-confidence claims for future review: 2
 - Popular English files with depth gaps: 16
 
@@ -26,7 +26,6 @@ Runtime mitigation: high-confidence support-content issues are blocked by `asses
 | Code | Severity | Count | Meaning |
 |---|---:|---:|---|
 | `thin-detailed-description` | depth | 15 | Popular English tool has a short detailed_description (...). |
-| `scientific-calculator-unsupported-function-claim` | high | 8 | Claims scientific-calculator controls or math modes that are not present in the current button UI. |
 | `redis-runtime` | medium | 3 | Mentions Redis-specific behavior that should be verified against the actual tool UI. |
 | `dice-roller-unsupported-control-claim` | high | 1 | Claims Dice Roller controls that are not present in the current dice button, modifier, result, and history UI. |
 | `document-word-counter-export-claim` | high | 1 | Claims Document Word Counter export behavior that is not present in the current live statistics UI. |
@@ -39,14 +38,6 @@ Runtime mitigation: high-confidence support-content issues are blocked by `asses
 |---|---|---|---|---|
 | en | `document-word-counter` | `usage_steps[4]` | `document-word-counter-export-claim` | Export stats |
 | pt | `dice-roller` | `usage_steps[1]` | `dice-roller-unsupported-control-claim` | Selecione o tipo de dado que deseja lançar using the dropdown menu (por exemplo, D6, D20). |
-| ar | `scientific-calculator` | `usage_steps[2]` | `scientific-calculator-unsupported-function-claim` | استخدم زر 'sinh' أو 'cosh' لحساب الدوال الزائدية، أو زر 'ln' للوغاريتم |
-| de | `scientific-calculator` | `usage_steps[0]` | `scientific-calculator-unsupported-function-claim` | zwischen Standard- und inversen Funktionen (z.B. sin → sin⁻¹). |
-| de | `scientific-calculator` | `usage_examples[1]` | `scientific-calculator-unsupported-function-claim` | Bestimmung der Phasendifferenz in der Optik: tan⁻¹((λ/d)) für Interferenzmuster mit Wellenlänge λ und Gitt |
-| es | `scientific-calculator` | `detailed_description` | `scientific-calculator-unsupported-function-claim` | enciales (e^x, 10^x), y operaciones hiperbólicas (senh, cosh, tanh). Su motor de cálculo interpreta expresiones mate |
-| fr | `scientific-calculator` | `usage_steps[1]` | `scientific-calculator-unsupported-function-claim` | n mathématique en utilisant les touches spécialisées : 'sinh' pour sinus hyperbolique, 'log₂' pour logarithme base 2 |
-| ko | `scientific-calculator` | `detailed_description` | `scientific-calculator-unsupported-function-claim` | 산기는 고급 수학 연산을 위한 웹 기반 도구로, 삼각 함수(sin, cos, tan), 쌍곡선 함수(sinh, cosh), 로그 함수(log, ln), 지수 함수(e^x, 10^x) 및 복잡한 수식 해석 기능 |
-| ko | `scientific-calculator` | `usage_steps[4]` | `scientific-calculator-unsupported-function-claim` | 5. 'hyp' 모드 전환 버튼을 활성화해 쌍곡선 함수(sinh, cosh) 연산을 실행합니다. |
-| ko | `scientific-calculator` | `usage_examples[2]` | `scientific-calculator-unsupported-function-claim` | 3. 건축 설계 시 삼각측량을 이용해 높이 30m, 수평거리 50m인 건물의 경사각을 tan⁻¹(30/50)로 계산합니다. |
 
 ## Popular English Depth Gaps
 

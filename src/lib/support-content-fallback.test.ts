@@ -300,6 +300,53 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks multilingual Scientific Calculator mode and export claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'scientific-calculator',
+      locale: 'zh',
+      name: '科学计算器',
+      description: '',
+      detailedDescription:
+        '支持复数模式、逆波兰表示法、WebAssembly 执行、56种数学运算和矩阵模式。',
+      usageSteps: [
+        '点击历史记录查看计算过程。',
+        'Export results as CSV or LaTeX for reports.',
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'scientific-calculator-unsupported-function-claim'
+    );
+  });
+
+  it('allows Scientific Calculator copy that matches the current button UI', () => {
+    const report = assessSupportContentTrust({
+      slug: 'scientific-calculator',
+      locale: 'en',
+      name: 'Scientific Calculator',
+      description: '',
+      detailedDescription:
+        'The calculator supports sin, cos and tan with RAD/DEG, ln and log, square root, x^y, pi, e, factorial, percent, sign change, memory keys MC, MR, M+ and MS, and result copying.',
+      usageSteps: [
+        'Choose RAD or DEG before using sin, cos, or tan.',
+        'Use ln, log, square root, x^y, n!, %, and sign change for common scientific operations.',
+      ],
+      usageExamples: ['A student checks (3+4)*sin(30) in DEG mode.'],
+      faqs: [
+        {
+          question: 'Can I store an intermediate value?',
+          answer: 'Yes. Use MC, MR, M+, and MS for memory actions.',
+        },
+      ],
+    });
+
+    expect(report.blockSupportContent).toBe(false);
+    expect(report.issues).toEqual([]);
+  });
+
   it('blocks Random Color Generator palette controls that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'random-color-generator',

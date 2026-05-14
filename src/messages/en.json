@@ -4342,30 +4342,44 @@
     },
     "scientific-calculator": {
       "name": "Scientific Calculator",
-      "description": "Perform scientific calculations with trigonometric, logarithmic, and exponential functions.",
+      "description": "Perform browser-based calculations with sin, cos, tan, ln, log, roots, powers, constants, percentages, and memory keys.",
       "seo_title": "Free Scientific Calculator Online",
-      "seo_description": "Free online scientific calculator with sin, cos, tan, log, ln, sqrt, power, and more functions. Support parentheses and complex expressions. For students.",
-      "detailed_description": "The Scientific Calculator is a precision-engineered tool designed for executing advanced mathematical computations beyond basic arithmetic. It supports trigonometric functions (sine, cosine, tangent, and their inverses), logarithmic operations (base 10, base e, and custom bases), and exponential calculations (including e^x and power towers). The calculator handles complex expressions with nested parentheses, adhering to strict operator precedence (PEMDAS/BODMAS rules) and maintains floating-point precision up to 15 decimal places. Its core engine leverages JavaScript's Math library augmented with custom algorithms for hyperbolic functions and degree-radian conversions. Engineers can use it for signal processing calculations, data scientists for statistical modeling, and students for calculus problems involving limits or parametric equations. Input parsing includes real-time syntax validation with error highlighting, and results can be copied in scientific notation. The tool uniquely supports direct entry of π, τ, and Euler's number (e) via dedicated keys, eliminating manual approximations.",
+      "seo_description": "Free online scientific calculator with sin, cos, tan, ln, log, sqrt, power, pi, e, factorial, percent, RAD/DEG, and MC/MR memory keys.",
+      "detailed_description": "The Scientific Calculator evaluates arithmetic and common scientific functions in the browser from the visible keypad. It supports addition, subtraction, multiplication, division, parentheses, powers with x^y, square roots, sin, cos and tan with RAD/DEG angle modes, ln and log, constants pi and e, factorial, percent, sign change, memory keys MC, MR, M+ and MS, and result copying. It is useful for study, engineering scratch work, and formula checks, but it should not replace audited numerical software for high-stakes calculations.",
       "usage_steps": [
-        "1. Toggle the DEG/RAD switch to set angular measurement mode for trigonometric calculations.",
-        "2. Input complex expressions using the virtual keypad, including nested parentheses for operation grouping.",
-        "3. Press the 'sinh⁻¹' or 'cos⁻¹' buttons for inverse hyperbolic/trigonometric functions with automatic domain validation.",
-        "4. Use the 'logₐᵇ' function to specify custom logarithmic bases by entering values in the dedicated input fields.",
-        "5. Calculate exponential expressions using the 'eˣ' button for natural exponentiation or 'xʸ' for arbitrary powers.",
-        "6. Access the calculation history panel to review previous expressions and results with timestamp annotations."
+        "Choose RAD or DEG before using sin, cos, or tan.",
+        "Build the expression with number keys, operators, parentheses, pi, or e.",
+        "Use ln, log, square root, x^y, n!, %, and sign change for common scientific operations.",
+        "Press = to calculate or backspace to remove the last entry.",
+        "Store or reuse an intermediate value with MC, MR, M+, and MS.",
+        "Copy the displayed result when you need it in notes or another tool."
       ],
       "usage_examples": [
-        "Example 1: Calculate the impedance phase angle in an AC circuit using arctangent( (Xʟ - Xc)/R ) with values Xʟ=150Ω, Xc=50Ω, R=100Ω.",
-        "Example 2: Model bacterial growth with N(t) = N₀e^(kt) where N₀=500, k=0.03/min, t=20 minutes.",
-        "Example 3: Convert 50°C to Fahrenheit using the formula F = (C × 9/5) + 32, then calculate its Kelvin equivalent.",
-        "Example 4: Solve for earthquake magnitude on the Richter scale using M = log₁₀(A/A₀) with amplitude ratio A/A₀=800."
+        "A student checks (3+4)*sin(30) after switching the calculator to DEG mode.",
+        "An engineer estimates sqrt(12^2 + 5^2) before moving the value into working notes.",
+        "A teacher compares RAD and DEG with sin(pi/2) and sin(90).",
+        "A user stores an intermediate value in memory and continues a multi-step calculation."
       ],
       "sci": {
         "error": "Error",
         "angleMode": "Angle Mode",
         "quickFormulas": "Quick Formulas"
       },
-      "copy": "Copy"
+      "copy": "Copy",
+      "faqs": [
+        {
+          "question": "Which scientific functions are available?",
+          "answer": "The keypad includes sin, cos, tan, ln, log, square root, x^y, factorial, percent, parentheses, pi, e, and RAD/DEG angle modes."
+        },
+        {
+          "question": "Can I store an intermediate value?",
+          "answer": "Yes. Use MC, MR, M+, and MS to clear, recall, add to, or store the current memory value."
+        },
+        {
+          "question": "Does the calculator upload my expressions?",
+          "answer": "No. Calculations run in the browser, and the copy button only places the current display value on your clipboard."
+        }
+      ]
     },
     "text-sorter": {
       "name": "Text Sorter",
@@ -22649,9 +22663,9 @@
     },
     "scientific-calculator": {
       "name": "Scientific Calculator",
-      "description": "Perform scientific calculations with trigonometric, logarithmic, and exponential functions.",
+      "description": "Perform browser-based calculations with sin, cos, tan, ln, log, roots, powers, constants, percentages, and memory keys.",
       "seo_title": "Free Scientific Calculator Online",
-      "seo_description": "Free online scientific calculator with sin, cos, tan, log, ln, sqrt, power, and more functions. Support parentheses and complex expressions. For students."
+      "seo_description": "Free online scientific calculator with sin, cos, tan, ln, log, sqrt, power, pi, e, factorial, percent, RAD/DEG, and MC/MR memory keys."
     },
     "text-sorter": {
       "name": "Text Sorter",

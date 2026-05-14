@@ -172,7 +172,7 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
   },
   {
     code: 'scientific-calculator-unsupported-function-claim',
-    pattern: /гиперболическ|sinh|cosh|sin⁻¹|cos⁻¹|tan⁻¹|обратн[а-яё]+ тригонометр|клавиш[ау]\s*['’]Exp['’]|функци[яю]\s*['’]2nd['’]|['’]2nd['’]|обратн[а-яё]+ польск[а-яё]+ нотаци|дифференциальных уравнений|\bhyperbolic\b|\breverse polish notation\b/i,
+    pattern: /гиперболическ|sinh|cosh|tanh|senh|sin⁻¹|cos⁻¹|tan⁻¹|обратн[а-яё]+ тригонометр|клавиш[ау]\s*['’]Exp['’]|функци[яю]\s*['’]2nd['’]|['’]2nd['’]|\bShift\b|\bAns\b|\bSTO\b|\bEquation\b|\bExp\b|обратн[а-яё]+ польск[а-яё]+ нотаци|дифференциальных уравнений|\bhyperbolic\b|hiperb[oó]lic|hiperb[oó]licas|\breverse polish notation\b|\bRPN\b|逆波兰|逆ポーランド|复数|複素|복소수|الأعداد المركبة|nombres complexes|números complejos|números complexos|matriz|matrices|矩阵|行列|매트릭스|WebAssembly|Wasm|56种|56\s+opera|log10|log₂|logₐ|graficaci[oó]n|graphiques?\s+2D|\bgraphing\b|\bHistory\b|Historial|Historique|Histórico|历史记录|履歴|\bCSV\b|\bLaTeX\b/i,
     message: 'Claims scientific-calculator controls or math modes that are not present in the current button UI.',
     slugs: ['scientific-calculator'],
   },

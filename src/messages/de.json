@@ -4359,31 +4359,45 @@
       "copy": "Kopieren"
     },
     "scientific-calculator": {
-      "name": "Wissenschaftliche Rechner",
-      "description": "Führen Sie wissenschaftliche Berechnungen mit trigonometrischen, logarithmischen und exponentiellen Funktionen durch.",
-      "seo_title": "Kostenlos Online-Scientific Calculator",
-      "seo_description": "Kostenlos online scientific Calculator mit sin, cos, tan, log, ln, sqrt und mehr. Unterstützung für Klammern und komplexe Ausdrücke. Für Schüler.",
-      "detailed_description": "Der Scientific Calculator ermöglicht präzise Berechnungen komplexer mathematischer Ausdrücke mit Unterstützung für trigonometrische Funktionen (sin, cos, tan, Arkusfunktionen), logarithmische Operationen (ln, log10, log mit beliebiger Basis), Exponentialfunktionen (e^x, 10^x) sowie hyperbolische Funktionen. Er verarbeitet Eingaben mit Operatorpräzedenz, Klammern und Konstanten wie π oder e, wobei Ergebnisse mit IEEE-754-Doppelgenauigkeitsarithmetik berechnet werden. Der Tool nutzt einen LL(1)-Parser zur Auswertung algebraischer Ausdrücke und unterstützt sowohl Grad- als auch Bogenmaßmodi für winkelbasierte Berechnungen. Ingenieure benötigen ihn für Strukturmechanik-Analysen, Physiker für Welleninterferenzberechnungen, Finanzanalysten für kontinuierliche Zinsmodelle. Die Echtzeit-Präfixnotation-Anzeige zeigt Zwischenresultate bei verschachtelten Operationen an, während die Speicherfunktion 'M+'/'M-' kumulative Berechnungen ermöglicht. Die Implementierung umfasst eine benutzerdefinierte Fehlerbehandlung für Divisionen durch Null oder ungültige Domänen bei Logarithmen.",
+      "name": "Wissenschaftlicher Rechner",
+      "description": "Rechnen Sie im Browser mit sin, cos, tan, ln, log, Wurzeln, Potenzen, Konstanten, Prozenten und Speichertasten.",
+      "seo_title": "Wissenschaftlicher Rechner online kostenlos",
+      "seo_description": "Kostenloser wissenschaftlicher Rechner mit sin, cos, tan, ln, log, sqrt, Potenz, pi, e, Fakultät, Prozent, RAD/DEG und MC/MR-Speicher.",
+      "detailed_description": "Der wissenschaftliche Rechner wertet arithmetische Ausdrücke und gängige wissenschaftliche Funktionen direkt im Browser über die sichtbare Tastatur aus. Unterstützt werden Addition, Subtraktion, Multiplikation, Division, Klammern, Potenzen mit x^y, Quadratwurzel, sin, cos und tan mit RAD/DEG-Winkelmodus, ln und log, die Konstanten pi und e, Fakultät, Prozent, Vorzeichenwechsel, die Speichertasten MC, MR, M+ und MS sowie das Kopieren des Ergebnisses. Er eignet sich für Studium, technische Überschlagsrechnungen und Formelprüfungen, ersetzt aber keine geprüfte Numeriksoftware für kritische Berechnungen.",
       "usage_steps": [
-        "Wechseln Sie durch Klick auf die 'Shift'-Taste zwischen Standard- und inversen Funktionen (z.B. sin → sin⁻¹).",
-        "Verwenden Sie den 'Ans'-Knopf, um das letzte Ergebnis in nachfolgenden Berechnungen zu referenzieren.",
-        "Geben Sie Exponenten über die 'Exp'-Taste ein (z.B. 3Exp5 für 3×10⁵) und nutzen Sie 'x!' für Fakultäten.",
-        "Gruppieren Sie Terme mit Klammern '(', ')', um Prioritätsregeln für komplexe Formeln zu definieren.",
-        "Wählen Sie im Dropdown-Menü zwischen 'DEG' (Gradmaß) und 'RAD' (Bogenmaß) für winkelabhängige Berechnungen.",
-        "Rufen Sie über den 'History'-Button gespeicherte Berechnungsverläufe ab, um Fehler zu korrigieren oder Modellparameter zu iterieren."
+        "Wählen Sie RAD oder DEG, bevor Sie sin, cos oder tan verwenden.",
+        "Erstellen Sie den Ausdruck mit Zifferntasten, Operatoren, Klammern, pi oder e.",
+        "Nutzen Sie ln, log, Quadratwurzel, x^y, n!, %, und Vorzeichenwechsel für typische wissenschaftliche Rechenschritte.",
+        "Drücken Sie = für das Ergebnis oder die Rücktaste, um den letzten Eintrag zu löschen.",
+        "Speichern oder verwenden Sie Zwischenwerte mit MC, MR, M+ und MS.",
+        "Kopieren Sie das angezeigte Ergebnis, wenn Sie es in Notizen oder einem anderen Tool brauchen."
       ],
       "usage_examples": [
-        "Berechnung der Resultierendenkraft in einem Trägersystem: 500*sin(30°) + 800*cos(45°) für Ingenieuranalysen.",
-        "Bestimmung der Phasendifferenz in der Optik: tan⁻¹((λ/d)) für Interferenzmuster mit Wellenlänge λ und Gitterabstand d.",
-        "Modellierung exponentieller Abnutzung in der Materialwissenschaft: A = A₀*e^(-kt) mit Relaxationszeitkonstante k.",
-        "Konvertierung einer Dezimalzahl in eine IEEE-754-Gleitkommadarstellung durch Eingabe 'Bin'-Modus und 123.45 für digitale Systeme."
+        "Ein Student prüft (3+4)*sin(30), nachdem der Rechner auf DEG gestellt wurde.",
+        "Eine Ingenieurin schätzt sqrt(12^2 + 5^2), bevor sie den Wert in Arbeitsnotizen übernimmt.",
+        "Ein Lehrer vergleicht RAD und DEG mit sin(pi/2) und sin(90).",
+        "Ein Nutzer speichert einen Zwischenwert und setzt anschließend eine mehrstufige Rechnung fort."
       ],
       "sci": {
         "error": "Fehler",
         "angleMode": "sci.angleMode",
         "quickFormulas": "sci.quickFormulas"
       },
-      "copy": "Kopieren"
+      "copy": "Kopieren",
+      "faqs": [
+        {
+          "question": "Welche wissenschaftlichen Funktionen gibt es?",
+          "answer": "Die Tastatur enthält sin, cos, tan, ln, log, Quadratwurzel, x^y, Fakultät, Prozent, Klammern, pi, e und RAD/DEG-Winkelmodi."
+        },
+        {
+          "question": "Kann ich einen Zwischenwert speichern?",
+          "answer": "Ja. Mit MC, MR, M+ und MS löschen, laden, addieren oder speichern Sie den aktuellen Speicherwert."
+        },
+        {
+          "question": "Werden meine Formeln hochgeladen?",
+          "answer": "Nein. Die Berechnung läuft im Browser, und die Kopiertaste legt nur den aktuellen Anzeigewert in die Zwischenablage."
+        }
+      ]
     },
     "text-sorter": {
       "name": "Text Sorter",
@@ -22781,9 +22795,9 @@
     },
     "scientific-calculator": {
       "name": "Wissenschaftlicher Rechner",
-      "description": "Führen Sie wissenschaftliche Berechnungen mit trigonometrischen, logarithmischen und exponentiellen Funktionen durch.",
-      "seo_title": "Kostenloser wissenschaftlicher Rechner online",
-      "seo_description": "Kostenloser wissenschaftlicher Online-Rechner mit Sin-, Cos-, Tan-, Log-, LN-, Quadrat-, Leistungs- und weiteren Funktionen. Unterstützt Klammern und komplexe Ausdrücke. Für Studenten."
+      "description": "Rechnen Sie im Browser mit sin, cos, tan, ln, log, Wurzeln, Potenzen, Konstanten, Prozenten und Speichertasten.",
+      "seo_title": "Wissenschaftlicher Rechner online kostenlos",
+      "seo_description": "Kostenloser wissenschaftlicher Rechner mit sin, cos, tan, ln, log, sqrt, Potenz, pi, e, Fakultät, Prozent, RAD/DEG und MC/MR-Speicher."
     },
     "text-sorter": {
       "name": "Textsortierer",

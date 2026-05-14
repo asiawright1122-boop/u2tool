@@ -4355,30 +4355,44 @@
     },
     "scientific-calculator": {
       "name": "Calculadora Científica",
-      "description": "Realiza cálculos científicos con funciones trigonométricas, logarítmicas y exponenciales.",
-      "seo_title": "Calculadora Científica en línea Gratis",
-      "seo_description": "Calculadora científica en línea gratuita con funciones de sin, cos, tan, log, ln, raíz cuadrada, potencia y más. Soporta paréntesis y expresiones complejas. Para estudiantes.",
-      "detailed_description": "La Calculadora Científica es una herramienta técnica que permite ejecutar operaciones matemáticas avanzadas utilizando algoritmos de precisión en coma flotante IEEE 754. Incorpora funciones trigonométricas (seno, coseno, tangente y sus inversas), logarítmicas (base natural y variable), exponenciales (e^x, 10^x), y operaciones hiperbólicas (senh, cosh, tanh). Su motor de cálculo interpreta expresiones matemáticas complejas mediante un parser sintáctico que prioriza el orden de operaciones y admite paréntesis anidados. Los usuarios necesitan esta herramienta para resolver problemas en ingeniería estructural (cálculo de fuerzas vectoriales), química analítica (determinación de pH mediante logaritmos), física cuántica (funciones de onda exponenciales) y finanzas (interés compuesto con exponentes). La interfaz incluye un modo gráfico para visualizar funciones en 2D/3D y un historial de cálculos persistente que almacena hasta 50 operaciones previas. Soporta entrada en grados sexagesimales y radianes, con precisión ajustable hasta 15 decimales.",
+      "description": "Haz cálculos en el navegador con sin, cos, tan, ln, log, raíces, potencias, constantes, porcentajes y memoria.",
+      "seo_title": "Calculadora científica online gratis",
+      "seo_description": "Calculadora científica gratis con sin, cos, tan, ln, log, sqrt, potencia, pi, e, factorial, porcentaje, RAD/DEG y memoria MC/MR.",
+      "detailed_description": "La Calculadora Científica evalúa operaciones aritméticas y funciones científicas comunes en el navegador desde el teclado visible. Admite suma, resta, multiplicación, división, paréntesis, potencias con x^y, raíz cuadrada, sin, cos y tan con modos RAD/DEG, ln y log, constantes pi y e, factorial, porcentaje, cambio de signo, teclas de memoria MC, MR, M+ y MS, y copia del resultado. Es útil para estudiar, hacer cálculos técnicos rápidos y revisar fórmulas, pero no sustituye software numérico auditado en cálculos críticos.",
       "usage_steps": [
-        "Selecciona el modo angular (grados, radianes o gradiantes) desde el menú desplegable 'Configuración'.",
-        "Accede a funciones avanzadas (logaritmo natural, factorial, raíz cúbica) mediante la pestaña 'Funciones Especiales'.",
-        "Introduce expresiones complejas como 'sin(π/4)^2 + ln(5)' en el campo de entrada principal, utilizando la tecla π para insertar constantes.",
-        "Utiliza la herramienta de graficación 2D para trazar funciones ingresadas, ajustando el rango de visualización con los controles X/Y.",
-        "Recupera cálculos anteriores desde el panel 'Historial' y modifica parámetros para reutilizar fórmulas sin repetir entradas manuales.",
-        "Exporta resultados en formato CSV o copia directamente al portapapeles con el botón 'Compartir' para integrarlos en proyectos científicos."
+        "Elige RAD o DEG antes de usar sin, cos o tan.",
+        "Construye la expresión con las teclas numéricas, operadores, paréntesis, pi o e.",
+        "Usa ln, log, raíz cuadrada, x^y, n!, %, y cambio de signo para operaciones científicas comunes.",
+        "Pulsa = para calcular o retroceso para borrar la última entrada.",
+        "Guarda o reutiliza un valor intermedio con MC, MR, M+ y MS.",
+        "Copia el resultado mostrado si necesitas usarlo en notas u otra herramienta."
       ],
       "usage_examples": [
-        "Un ingeniero civil calcula la tensión máxima en una viga usando la fórmula σ = (M*y)/I, combinando operaciones aritméticas y trigonométricas para ángulos de carga específicos.",
-        "Un estudiante de química determina el pH de una solución con [H+] = 1.5×10⁻³ M aplicando log₁₀(1.5e-3) y corrigiendo el resultado con la función de valor absoluto.",
-        "Un físico simula el decaimiento radiactivo mediante la ecuación N(t) = N₀*e^(-λt), ajustando λ para diferentes isótopos y visualizando la curva exponencial en 2D.",
-        "Un analista financiero modela el crecimiento de una inversión con interés compuesto usando A = P(1 + r/n)^(nt), comparando escenarios con distintas frecuencias de capitalización."
+        "Un estudiante comprueba (3+4)*sin(30) después de cambiar la calculadora a DEG.",
+        "Una ingeniera estima sqrt(12^2 + 5^2) antes de pasar el valor a sus notas de trabajo.",
+        "Un profesor compara RAD y DEG con sin(pi/2) y sin(90).",
+        "Una persona guarda un valor intermedio en memoria y continúa un cálculo de varios pasos."
       ],
       "sci": {
         "error": "Error",
         "angleMode": "sci.angleMode",
         "quickFormulas": "sci.quickFormulas"
       },
-      "copy": "Copiar"
+      "copy": "Copiar",
+      "faqs": [
+        {
+          "question": "¿Qué funciones científicas incluye?",
+          "answer": "El teclado incluye sin, cos, tan, ln, log, raíz cuadrada, x^y, factorial, porcentaje, paréntesis, pi, e y modos RAD/DEG."
+        },
+        {
+          "question": "¿Puedo guardar un valor intermedio?",
+          "answer": "Sí. Usa MC, MR, M+ y MS para borrar, recuperar, sumar o guardar el valor de memoria actual."
+        },
+        {
+          "question": "¿La calculadora sube mis expresiones?",
+          "answer": "No. Los cálculos se ejecutan en el navegador y el botón de copia solo coloca el valor visible en el portapapeles."
+        }
+      ]
     },
     "text-sorter": {
       "name": "Ordenador de Texto",
@@ -22807,10 +22821,10 @@
       "seo_description": "Calcule medidas estadísticas en línea de forma gratuita. Obtenga media, mediana, moda, desviación estándar, varianza y más. Esencial para el análisis y la investigación de datos."
     },
     "scientific-calculator": {
-      "name": "Calculadora científica",
-      "description": "Realizar cálculos científicos con funciones trigonométricas, logarítmicas y exponenciales.",
-      "seo_title": "Calculadora científica gratuita en línea",
-      "seo_description": "Calculadora científica en línea gratuita con funciones sin, cos, tan, log, ln, sqrt, power y más. Admite paréntesis y expresiones complejas. Para estudiantes."
+      "name": "Calculadora Científica",
+      "description": "Haz cálculos en el navegador con sin, cos, tan, ln, log, raíces, potencias, constantes, porcentajes y memoria.",
+      "seo_title": "Calculadora científica online gratis",
+      "seo_description": "Calculadora científica gratis con sin, cos, tan, ln, log, sqrt, potencia, pi, e, factorial, porcentaje, RAD/DEG y memoria MC/MR."
     },
     "text-sorter": {
       "name": "Clasificador de texto",
