@@ -8,7 +8,7 @@ This audit checks tool support content against search-engine quality expectation
 - English tool files scanned: 548
 - Popular English tool files checked for depth: 94
 - Files with high-confidence implementation overclaims: 0
-- Files with medium-confidence claims for future review: 2
+- Files with medium-confidence claims for future review: 0
 - Popular English files with depth gaps: 0
 
 Runtime mitigation: high-confidence support-content issues are blocked by `assessSupportContentTrust` and replaced by safe fallback support content on tool detail pages.
@@ -25,8 +25,7 @@ Runtime mitigation: high-confidence support-content issues are blocked by `asses
 
 | Code | Severity | Count | Meaning |
 |---|---:|---:|---|
-| `redis-runtime` | medium | 3 | Mentions Redis-specific behavior that should be verified against the actual tool UI. |
-| `server-side-reference` | medium | 1 | References server-side behavior on a browser-first tool page and should be verified. |
+| - | - | - | No issues found. |
 
 ## High-Confidence Overclaim Samples
 

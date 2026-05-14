@@ -236,7 +236,7 @@ Runtime mitigation: high-confidence support-content issues are blocked by \`asse
 
 | Code | Severity | Count | Meaning |
 |---|---:|---:|---|
-${issueCounts.map((issue) => `| \`${issue.code}\` | ${issue.severity} | ${issue.count} | ${issue.message.replace(/\|/g, '\\|')} |`).join('\n')}
+${issueCounts.map((issue) => `| \`${issue.code}\` | ${issue.severity} | ${issue.count} | ${issue.message.replace(/\|/g, '\\|')} |`).join('\n') || '| - | - | - | No issues found. |'}
 
 ## High-Confidence Overclaim Samples
 

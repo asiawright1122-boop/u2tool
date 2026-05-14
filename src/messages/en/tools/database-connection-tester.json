@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Database Connection Tester helps you build and review database connection settings before pasting them into an app, config file, or deployment note. Choose PostgreSQL, MySQL, MongoDB, or Redis, then fill in the host, port, database name, username, password, and SSL option. The page generates a connection string and a matching code snippet that you can copy. It does not open a network socket or authenticate against a live database; the value is in quickly checking the shape of common connection details and preparing a clean string locally in the browser.",
+  "detailed_description": "Database Connection Tester helps you build and review database connection settings before pasting them into an app, config file, or deployment note. Choose a database type from the selector, then fill in the host, port, database name, username, password, and SSL option. The page generates a connection string and a matching code snippet that you can copy. It does not open a network socket or authenticate against a live database; the value is in quickly checking the shape of common connection details and preparing a clean string locally in the browser.",
   "usage_steps": [
     "Select the database type you want to configure.",
     "Enter the host, port, database name, username, and password fields.",
@@ -10,7 +10,7 @@
   "usage_examples": [
     "Prepare a PostgreSQL connection string for a staging environment before adding it to an .env file.",
     "Compare how MySQL and MongoDB connection strings change when host, port, or database values are edited.",
-    "Create a Redis connection snippet for a setup guide without exposing real production credentials."
+    "Create a key-value database connection snippet for a setup guide without exposing real production credentials."
   ],
   "faqs": [
     {
@@ -19,7 +19,7 @@
     },
     {
       "question": "Which databases are supported?",
-      "answer": "The current UI supports PostgreSQL, MySQL, MongoDB, and Redis connection string patterns."
+      "answer": "The current UI supports the connection string patterns exposed by the database type selector, including relational, document, and key-value database formats."
     },
     {
       "question": "Can I use real passwords here?",

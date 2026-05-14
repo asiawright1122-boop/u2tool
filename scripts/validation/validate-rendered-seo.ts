@@ -713,7 +713,7 @@ const checks: RenderedSeoCheck[] = [
     bodyMustInclude: [
       'Database Connection Tester helps you build and review database connection settings',
       'It does not make a network request',
-      'PostgreSQL, MySQL, MongoDB, and Redis',
+      'the connection string patterns exposed by the database type selector',
     ],
     bodyMustNotInclude: [
       'Click Parse',
