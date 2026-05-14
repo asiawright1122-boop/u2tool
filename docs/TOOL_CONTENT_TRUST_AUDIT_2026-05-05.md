@@ -7,7 +7,7 @@ This audit checks tool support content against search-engine quality expectation
 - Tool message files scanned: 5480
 - English tool files scanned: 548
 - Popular English tool files checked for depth: 94
-- Files with high-confidence implementation overclaims: 15
+- Files with high-confidence implementation overclaims: 21
 - Files with medium-confidence claims for future review: 2
 - Popular English files with depth gaps: 16
 
@@ -26,6 +26,7 @@ Runtime mitigation: high-confidence support-content issues are blocked by `asses
 | Code | Severity | Count | Meaning |
 |---|---:|---:|---|
 | `barcode-unsupported-output-claim` | high | 22 | Claims barcode export or styling controls that are not present in the current SVG preview UI. |
+| `excel-merger-unsupported-advanced-merge-claim` | high | 16 | Claims CSV, key-based matching, formatting preservation, or backend spreadsheet processing that is not present in the current Excel Merger UI. |
 | `thin-detailed-description` | depth | 15 | Popular English tool has a short detailed_description (...). |
 | `scientific-calculator-unsupported-function-claim` | high | 8 | Claims scientific-calculator controls or math modes that are not present in the current button UI. |
 | `redis-runtime` | medium | 3 | Mentions Redis-specific behavior that should be verified against the actual tool UI. |
@@ -42,6 +43,10 @@ Runtime mitigation: high-confidence support-content issues are blocked by `asses
 | en | `barcode-generator` | `usage_steps[2]` | `barcode-unsupported-output-claim` | range), quiet zone (2.3-4.6mm), and resolution (150-600 DPI) |
 | en | `barcode-generator` | `usage_steps[5]` | `barcode-unsupported-output-claim` | Download the output as PNG (with adjustable anti-aliasing) or SVG (with XML struct |
 | en | `document-word-counter` | `usage_steps[4]` | `document-word-counter-export-claim` | Export stats |
+| en | `excel-merger` | `detailed_description` | `excel-merger-unsupported-advanced-merge-claim` | t programmatically combines multiple Excel workbooks or CSV files through vertical (appended rows) or horizontal (j |
+| en | `excel-merger` | `usage_steps[0]` | `excel-merger-unsupported-advanced-merge-claim` | s the drag-and-drop upload zone to import source files (XLSX/CSV, up to 50MB total) |
+| en | `excel-merger` | `usage_steps[5]` | `excel-merger-unsupported-advanced-merge-claim` | e output format (XLSX with multiple sheets or flattened CSV) and initiate merge with 'Process Data' button |
+| en | `excel-merger` | `usage_examples[1]` | `excel-merger-unsupported-advanced-merge-claim` | e 2: Marketing teams combine customer transaction data (CSV) with CRM contact lists (XLSX) via email address key co |
 | ar | `barcode-generator` | `detailed_description` | `barcode-unsupported-output-claim` | ت باستخدام معايير الصناعة، مع إمكانية تحديد دقة الصورة (DPI)، وضبط نسب الأبعاد (العرض/الارتفاع)، وإضافة مناطق هادئة |
 | ar | `barcode-generator` | `usage_steps[3]` | `barcode-unsupported-output-claim` | صورة (Resolution) من القائمة المنسدلة (150، 300، أو 600 DPI) حسب استخدام الطباعة. |
 | ar | `barcode-generator` | `usage_steps[5]` | `barcode-unsupported-output-claim` | انقر على زر 'إنشاء الباركود' لتنزيل الملف النهائي بصيغة PNG أو JPEG. |
@@ -62,12 +67,8 @@ Runtime mitigation: high-confidence support-content issues are blocked by `asses
 | zh | `barcode-generator` | `detailed_description` | `barcode-unsupported-output-claim` | ）及UPC-A（通用商品代码）四种编码体系。采用HTML5 Canvas动态渲染技术实现无损缩放，生成的SVG/PNG图像可直接用于商业打印。开发者通过ISO/IEC 15417标准校验算法确保生成的条码可通过激光/CCD扫描设备 |
 | zh | `barcode-generator` | `usage_steps[5]` | `barcode-unsupported-output-claim` | 点击生成按钮后下载SVG矢量文件或PNG位图（分辨率可选300/600/1200dpi） |
 | pt | `dice-roller` | `usage_steps[1]` | `dice-roller-unsupported-control-claim` | Selecione o tipo de dado que deseja lançar using the dropdown menu (por exemplo, D6, D20). |
-| ar | `scientific-calculator` | `usage_steps[2]` | `scientific-calculator-unsupported-function-claim` | استخدم زر 'sinh' أو 'cosh' لحساب الدوال الزائدية، أو زر 'ln' للوغاريتم |
-| de | `scientific-calculator` | `usage_steps[0]` | `scientific-calculator-unsupported-function-claim` | zwischen Standard- und inversen Funktionen (z.B. sin → sin⁻¹). |
-| de | `scientific-calculator` | `usage_examples[1]` | `scientific-calculator-unsupported-function-claim` | Bestimmung der Phasendifferenz in der Optik: tan⁻¹((λ/d)) für Interferenzmuster mit Wellenlänge λ und Gitt |
-| es | `scientific-calculator` | `detailed_description` | `scientific-calculator-unsupported-function-claim` | enciales (e^x, 10^x), y operaciones hiperbólicas (senh, cosh, tanh). Su motor de cálculo interpreta expresiones mate |
-| fr | `scientific-calculator` | `usage_steps[1]` | `scientific-calculator-unsupported-function-claim` | n mathématique en utilisant les touches spécialisées : 'sinh' pour sinus hyperbolique, 'log₂' pour logarithme base 2 |
-| ko | `scientific-calculator` | `detailed_description` | `scientific-calculator-unsupported-function-claim` | 산기는 고급 수학 연산을 위한 웹 기반 도구로, 삼각 함수(sin, cos, tan), 쌍곡선 함수(sinh, cosh), 로그 함수(log, ln), 지수 함수(e^x, 10^x) 및 복잡한 수식 해석 기능 |
+| de | `excel-merger` | `detailed_description` | `excel-merger-unsupported-advanced-merge-claim` | pezialisierter Online-Converter, der mehrere XLSX- oder CSV-Dateien technisch präzise zu einer einzigen Arbeitsmapp |
+| de | `excel-merger` | `usage_steps[0]` | `excel-merger-unsupported-advanced-merge-claim` | 1. Laden Sie bis zu 10 Excel/CSV-Dateien per Drag-and-Drop in den Upload-Bereich |
 
 ## Popular English Depth Gaps
 

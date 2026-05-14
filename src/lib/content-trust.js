@@ -272,6 +272,36 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     message: 'Claims graph editor controls or embed export behavior that are not present in the current ECharts graph UI.',
     slugs: ['graph-chart-generator'],
   },
+  {
+    code: 'gantt-chart-unsupported-project-management-claim',
+    pattern: /\bmanage dependencies\b|\bidentify task dependencies\b/i,
+    message: 'Claims project-management behavior that is not present in the current Gantt chart maker.',
+    slugs: ['gantt-chart-generator'],
+  },
+  {
+    code: 'crontab-calendar-unsupported-export-timezone-claim',
+    pattern: /\bVixie, AIX, and systemd variants\b|\bIANA Time Zone Database\b|\b@hourly\b|\bconflict detection\b|\bDownload as iCal\b|\bCopy JSON\b|\bprogrammatic output formats\b/i,
+    message: 'Claims cron dialect, timezone database, conflict detection, or export behavior that is not present in the current calendar preview UI.',
+    slugs: ['crontab-calendar'],
+  },
+  {
+    code: 'database-connection-tester-live-claim',
+    pattern: /\btests? live database connections?\b|\bvalidate live database credentials\b|\bverify live database credentials\b|\bClick Parse\b|\bView parsed details\b|\bValidate format\b/i,
+    message: 'Claims live database testing or parser controls that are not present in the current connection string builder UI.',
+    slugs: ['database-connection-tester'],
+  },
+  {
+    code: 'excel-merger-unsupported-advanced-merge-claim',
+    pattern: /Apache POI|XLSX\/CSV|CSV|многоуровневые заголовки|условные форматы|Автоопределение ключевых полей|первичных ключей|100 тыс\. строк|сохраненными форматами и формулами/i,
+    message: 'Claims CSV, key-based matching, formatting preservation, or backend spreadsheet processing that is not present in the current Excel Merger UI.',
+    slugs: ['excel-merger'],
+  },
+  {
+    code: 'color-blender-unsupported-export-mode-claim',
+    pattern: /RGB, HSL или HEX|режим(?:ы|ов)? смешивания|линейн(?:ый|ого).*экспоненциальн|настройк[а-яё]+ прозрачности|Экспортируйте результат|экспортировать результаты/i,
+    message: 'Claims color formats, blend modes, transparency controls, or export workflows that are not present in the current HEX color blender UI.',
+    slugs: ['color-blender'],
+  },
 ];
 
 /** @type {ContentTrustRule[]} */

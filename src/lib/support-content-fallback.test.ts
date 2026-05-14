@@ -434,6 +434,103 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks Gantt Chart project-management claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'gantt-chart-generator',
+      locale: 'en',
+      name: 'Gantt Chart Maker',
+      description: '',
+      detailedDescription:
+        'The visual timeline helps identify task dependencies for project delivery planning.',
+      usageSteps: ['Use the tool to manage dependencies before export.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'gantt-chart-unsupported-project-management-claim'
+    );
+  });
+
+  it('blocks Crontab Calendar export and timezone-database claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'crontab-calendar',
+      locale: 'en',
+      name: 'Crontab Calendar',
+      description: '',
+      detailedDescription:
+        'Supports Vixie, AIX, and systemd variants with IANA Time Zone Database handling and conflict detection.',
+      usageSteps: ['Use Download as iCal or Copy JSON for programmatic output formats.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'crontab-calendar-unsupported-export-timezone-claim'
+    );
+  });
+
+  it('blocks Database Connection Tester live testing claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'database-connection-tester',
+      locale: 'en',
+      name: 'Database Connection Tester',
+      description: '',
+      detailedDescription: 'This tool tests live database connections and can validate live database credentials.',
+      usageSteps: ['Click Parse, View parsed details, and Validate format.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'database-connection-tester-live-claim'
+    );
+  });
+
+  it('blocks Russian Excel Merger advanced merge claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'excel-merger',
+      locale: 'ru',
+      name: 'Объединить Excel',
+      description: '',
+      detailedDescription:
+        'Использует Apache POI для XLSX/CSV, поддерживает многоуровневые заголовки и условные форматы.',
+      usageSteps: [
+        'Активируйте Автоопределение ключевых полей для сопоставления на основе первичных ключей.',
+        'Скачайте XLSX с сохраненными форматами и формулами.',
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'excel-merger-unsupported-advanced-merge-claim'
+    );
+  });
+
+  it('blocks Russian Color Blender export and mode claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'color-blender',
+      locale: 'ru',
+      name: 'Смешать цвета',
+      description: '',
+      detailedDescription:
+        'Смешивайте значения RGB, HSL или HEX, выбирайте режимы смешивания и настройку прозрачности.',
+      usageSteps: ['Экспортируйте результат в CSS, SVG или PNG.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'color-blender-unsupported-export-mode-claim'
+    );
+  });
+
   it('keeps scoped rules from blocking unrelated tools', () => {
     const report = assessSupportContentTrust({
       slug: 'timezone-converter',
