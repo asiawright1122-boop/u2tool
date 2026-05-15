@@ -1,15 +1,15 @@
 {
-  "detailed_description": "LinkedIn Headline Generator is a browser-based headline generator for creating LinkedIn headlines that explain your role, skills, audience, and proof point. Add your job title, skills, target audience, achievement, and tone; the tool returns headline variations that balance keywords, clarity, and credibility. Use it to create a stronger first draft, compare assumptions, and copy a clean result without sending your inputs to a server.",
+  "detailed_description": "LinkedIn Headline Generator creates numbered headline options from your role, skills, audience, achievement, and tone. The variations combine professional keywords with a clear proof point, helping you compare role-led, outcome-led, and specialist positioning before editing your profile manually.",
   "usage_steps": [
-    "Enter your job title, skills, target audience, achievement, and tone.",
-    "Review headline variations that balance keywords, clarity, and credibility and adjust any assumptions that affect the result.",
-    "Copy the strongest version into your profile, campaign, spreadsheet, codebase, or documentation.",
-    "Run another variation when your audience, pricing, format, or source data changes."
+    "Enter your current role or target role.",
+    "Add the skills, target audience, measurable achievement, and tone you want reflected.",
+    "Compare the numbered headline options for keyword clarity, credibility, and fit with your profile.",
+    "Copy one option into LinkedIn manually, then trim wording around your real experience."
   ],
   "usage_examples": [
-    "Use it when you need creating LinkedIn headlines that explain your role, skills, audience, and proof point and want a practical starting point.",
-    "Compare different inputs to see how the result changes before publishing or sharing it.",
-    "Create a copy-ready result for a client note, internal checklist, storefront, profile, or technical handoff."
+    "Draft headlines for a job search profile that needs role, skill, and achievement signals.",
+    "Compare consultant positioning for different audiences before updating a profile.",
+    "Create a concise founder or sales headline that explains who you help and why it matters."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Yes. LinkedIn Headline Generator runs free in your browser and does not require an account."
     },
     {
-      "question": "Does LinkedIn Headline Generator upload my inputs?",
-      "answer": "No. The tool is designed to run locally in the browser for quick drafting, calculation, or conversion."
+      "question": "Does this update my LinkedIn profile automatically?",
+      "answer": "No. It only creates text options. You choose and edit a headline before pasting it into LinkedIn."
     },
     {
-      "question": "What should I review before using the result?",
-      "answer": "Review wording, claims, length, brand voice, and any platform rules before publishing."
+      "question": "What should I put in the achievement field?",
+      "answer": "Use a truthful proof point such as revenue influenced, process improved, team led, product shipped, or a measurable customer outcome."
     },
     {
-      "question": "Who is LinkedIn Headline Generator best for?",
-      "answer": "Job seekers, consultants, founders, sales profiles, and operators improving LinkedIn visibility."
+      "question": "How should I choose between the options?",
+      "answer": "Pick the version that matches your current goal: recruiter search, buyer trust, founder clarity, or niche expertise."
     }
   ]
 }

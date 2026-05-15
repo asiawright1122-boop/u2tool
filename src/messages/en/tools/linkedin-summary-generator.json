@@ -1,15 +1,15 @@
 {
-  "detailed_description": "LinkedIn Summary Generator is a browser-based summary generator for drafting a LinkedIn About section that connects experience, skills, achievement, and audience. Add your role, experience, skills, achievement, audience, and tone; the tool returns a concise About section draft with positioning, proof, and collaboration angle. Use it to create a stronger first draft, compare assumptions, and copy a clean result without sending your inputs to a server.",
+  "detailed_description": "LinkedIn Summary Generator drafts one editable About section that connects experience, skills, achievement, and audience. Enter your job title, background, skills, proof point, target audience, and tone to create a concise profile summary you can fact-check, personalize, and paste manually.",
   "usage_steps": [
-    "Enter your role, experience, skills, achievement, audience, and tone.",
-    "Review a concise About section draft with positioning, proof, and collaboration angle and adjust any assumptions that affect the result.",
-    "Copy the strongest version into your profile, campaign, spreadsheet, codebase, or documentation.",
-    "Run another variation when your audience, pricing, format, or source data changes."
+    "Enter your job title, experience, core skills, achievement, audience, and tone.",
+    "Review the generated About section for positioning, proof, and collaboration angle.",
+    "Replace vague phrases with specific projects, industries, tools, or outcomes from your real background.",
+    "Paste the edited summary into LinkedIn manually after checking length and accuracy."
   ],
   "usage_examples": [
-    "Use it when you need drafting a LinkedIn About section that connects experience, skills, achievement, and audience and want a practical starting point.",
-    "Compare different inputs to see how the result changes before publishing or sharing it.",
-    "Create a copy-ready result for a client note, internal checklist, storefront, profile, or technical handoff."
+    "Rewrite an About section before a job search so role, experience, and proof align.",
+    "Draft a consultant profile summary that explains skills, audience, and measurable outcomes.",
+    "Create a cleaner founder or operator bio before tailoring it to a real profile."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Yes. LinkedIn Summary Generator runs free in your browser and does not require an account."
     },
     {
-      "question": "Does LinkedIn Summary Generator upload my inputs?",
-      "answer": "No. The tool is designed to run locally in the browser for quick drafting, calculation, or conversion."
+      "question": "Does it invent achievements for me?",
+      "answer": "No. It uses the achievement text you enter. Replace placeholders with truthful, verifiable examples from your own work."
     },
     {
-      "question": "What should I review before using the result?",
-      "answer": "Review wording, claims, length, brand voice, and any platform rules before publishing."
+      "question": "Does this update my LinkedIn About section automatically?",
+      "answer": "No. It only generates text. You review, edit, and paste the summary into LinkedIn yourself."
     },
     {
-      "question": "Who is LinkedIn Summary Generator best for?",
-      "answer": "Professionals rewriting their profile, preparing for job search, or clarifying their positioning."
+      "question": "What should I review before publishing?",
+      "answer": "Check factual accuracy, remove overclaims, make the opening sound like you, and align the summary with the jobs or clients you want."
     }
   ]
 }

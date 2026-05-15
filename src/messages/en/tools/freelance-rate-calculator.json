@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Freelance Rate Calculator is a browser-based rate calculator for turning income goals, expenses, tax reserve, billable hours, and time off into freelance rates. Add target take-home income, annual expenses, tax reserve, billable hours, weeks off, and currency; the tool returns hourly rate, day rate, monthly revenue target, and yearly revenue target. Use it to create a stronger first draft, compare assumptions, and copy a clean result without sending your inputs to a server.",
+  "detailed_description": "Freelance Rate Calculator turns target take-home income, annual expenses, tax reserve, billable hours per week, weeks off, and currency into estimated hourly rate, day rate, monthly revenue, and yearly revenue. Use it to pressure-test pricing assumptions before you turn them into proposals or retainers.",
   "usage_steps": [
-    "Enter target take-home income, annual expenses, tax reserve, billable hours, weeks off, and currency.",
-    "Review hourly rate, day rate, monthly revenue target, and yearly revenue target and adjust any assumptions that affect the result.",
-    "Copy the strongest version into your profile, campaign, spreadsheet, codebase, or documentation.",
-    "Run another variation when your audience, pricing, format, or source data changes."
+    "Enter the annual take-home income you want after expenses and tax reserve.",
+    "Add annual business expenses, tax percentage, billable hours per week, weeks off, and currency.",
+    "Review the estimated hourly rate, day rate, monthly revenue target, yearly revenue target, and annual billable hours.",
+    "Adjust billable hours or weeks off to see how capacity changes the rate you need to charge."
   ],
   "usage_examples": [
-    "Use it when you need turning income goals, expenses, tax reserve, billable hours, and time off into freelance rates and want a practical starting point.",
-    "Compare different inputs to see how the result changes before publishing or sharing it.",
-    "Create a copy-ready result for a client note, internal checklist, storefront, profile, or technical handoff."
+    "Estimate a consulting hourly rate when you know your annual income goal and planned time off.",
+    "Compare a 20-hour and 30-hour billable week before setting a day rate.",
+    "Build a quick pricing note for a proposal, then refine it with your real costs and market positioning."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Yes. Freelance Rate Calculator runs free in your browser and does not require an account."
     },
     {
-      "question": "Does Freelance Rate Calculator upload my inputs?",
-      "answer": "No. The tool is designed to run locally in the browser for quick drafting, calculation, or conversion."
+      "question": "Does this replace tax or accounting advice?",
+      "answer": "No. It is a planning calculator for rate assumptions. Ask a qualified professional about taxes, legal structure, and accounting rules."
     },
     {
-      "question": "What should I review before using the result?",
-      "answer": "Check the assumptions, rates, currency, and your real costs before using the numbers for pricing or planning."
+      "question": "What counts as billable hours?",
+      "answer": "Billable hours are hours you expect clients to pay for, not every hour you work. Admin, sales, learning, and unpaid support usually reduce billable capacity."
     },
     {
-      "question": "Who is Freelance Rate Calculator best for?",
-      "answer": "Freelancers, consultants, agencies, and solo operators planning sustainable pricing."
+      "question": "Why does the rate rise when I take more weeks off?",
+      "answer": "The calculator spreads the same annual revenue need across fewer billable weeks, so the hourly and day rate increase."
     }
   ]
 }

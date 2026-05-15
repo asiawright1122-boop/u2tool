@@ -39,6 +39,13 @@ const genericSupportCopyMustNotInclude = [
   'Create copy-ready results for reports, campaigns, or notes',
 ];
 
+const longTailToolSupportCopyMustNotInclude = [
+  ...genericSupportCopyMustNotInclude,
+  'Use it to create a stronger first draft',
+  'Copy the strongest version into your profile, campaign, spreadsheet, codebase, or documentation',
+  'Run another variation when your audience, pricing, format, or source data changes',
+];
+
 const popularEnglishDepthRecoveryChecks: RenderedSeoCheck[] = [
   {
     name: 'Calorie Deficit Calculator deep support content',
@@ -286,6 +293,159 @@ const popularEnglishDepthRecoveryChecks: RenderedSeoCheck[] = [
   },
 ];
 
+const longTailToolSupportDepthChecks: RenderedSeoCheck[] = [
+  {
+    name: 'vCard to CSV Converter long-tail support content',
+    path: '/en/tools/vcard-to-csv-converter/',
+    titleIncludes: 'vCard to CSV Converter',
+    descriptionIncludes: 'vCard',
+    h1Includes: 'vCard to CSV Converter',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'BEGIN:VCARD blocks',
+      'first_name,last_name,full_name,email,phone,company,title,address',
+      'Does it import contacts into a CRM automatically?',
+    ],
+    bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
+  },
+  {
+    name: 'Docker Run to Docker Compose Converter long-tail support content',
+    path: '/en/tools/docker-run-to-docker-compose-converter/',
+    titleIncludes: 'Docker Run to Docker Compose Converter',
+    descriptionIncludes: 'Docker',
+    h1Includes: 'Docker Run to Docker Compose Converter',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'common flags such as --name',
+      'starter Compose service, not a complete production deployment',
+      'Does it run or validate Docker containers?',
+    ],
+    bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
+  },
+  {
+    name: 'llms.txt Generator long-tail support content',
+    path: '/en/tools/llms-txt-generator/',
+    titleIncludes: 'llms.txt Generator',
+    descriptionIncludes: 'llms.txt',
+    h1Includes: 'llms.txt Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'creates an editable llms.txt draft',
+      'does not guarantee that any crawler or AI system will read the file',
+      'Does this publish llms.txt to my site?',
+    ],
+    bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
+  },
+  {
+    name: 'Etsy Fee Calculator long-tail support content',
+    path: '/en/tools/etsy-fee-calculator/',
+    titleIncludes: 'Etsy Fee Calculator',
+    descriptionIncludes: 'Etsy',
+    h1Includes: 'Etsy Fee Calculator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'editable Etsy-style fee assumptions',
+      'listing fee, transaction rate, payment rate, fixed fee, and offsite ads rate',
+      'Are these official current Etsy rates?',
+    ],
+    bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
+  },
+  {
+    name: 'Freelance Rate Calculator long-tail support content',
+    path: '/en/tools/freelance-rate-calculator/',
+    titleIncludes: 'Freelance Rate Calculator',
+    descriptionIncludes: 'freelance',
+    h1Includes: 'Freelance Rate Calculator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'target take-home income, annual expenses, tax reserve',
+      'billable hours per week, weeks off, and currency',
+      'Does this replace tax or accounting advice?',
+    ],
+    bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
+  },
+  {
+    name: 'LinkedIn Headline Generator long-tail support content',
+    path: '/en/tools/linkedin-headline-generator/',
+    titleIncludes: 'LinkedIn Headline Generator',
+    descriptionIncludes: 'LinkedIn',
+    h1Includes: 'LinkedIn Headline Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'role, skills, audience, achievement, and tone',
+      'numbered headline options',
+      'Does this update my LinkedIn profile automatically?',
+    ],
+    bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
+  },
+  {
+    name: 'LinkedIn Summary Generator long-tail support content',
+    path: '/en/tools/linkedin-summary-generator/',
+    titleIncludes: 'LinkedIn Summary Generator',
+    descriptionIncludes: 'LinkedIn',
+    h1Includes: 'LinkedIn Summary Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'one editable About section',
+      'connects experience, skills, achievement, and audience',
+      'Does it invent achievements for me?',
+    ],
+    bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
+  },
+  {
+    name: 'Email Subject Line Generator long-tail support content',
+    path: '/en/tools/email-subject-line-generator/',
+    titleIncludes: 'Email Subject Line Generator',
+    descriptionIncludes: 'email',
+    h1Includes: 'Email Subject Line Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'campaign topic, audience, benefit, and tone',
+      'numbered subject line options',
+      'Does it send emails or measure open rates?',
+    ],
+    bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
+  },
+  {
+    name: 'Instagram Bio Generator long-tail support content',
+    path: '/en/tools/instagram-bio-generator/',
+    titleIncludes: 'Instagram Bio Generator',
+    descriptionIncludes: 'Instagram',
+    h1Includes: 'Instagram Bio Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'topic, keyword, audience, call to action, and tone',
+      'numbered short bio options',
+      'Does it connect to Instagram?',
+    ],
+    bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
+  },
+  {
+    name: 'YouTube Description Generator long-tail support content',
+    path: '/en/tools/youtube-description-generator/',
+    titleIncludes: 'YouTube Description Generator',
+    descriptionIncludes: 'YouTube',
+    h1Includes: 'YouTube Description Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'video title, keyword, audience, call to action, and resource links',
+      'intro, learning bullets, links, CTA, and hashtags',
+      'Does it upload or edit my YouTube video?',
+    ],
+    bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
+  },
+];
+
 const checks: RenderedSeoCheck[] = [
   {
     name: 'English homepage',
@@ -455,6 +615,7 @@ const checks: RenderedSeoCheck[] = [
     bodyMustInclude: ['Choose the Right JSON Tool', '/en/compare/choose-json-tool/'],
   },
   ...popularEnglishDepthRecoveryChecks,
+  ...longTailToolSupportDepthChecks,
   {
     name: 'Creator SEO tool cluster backlink',
     path: '/en/tools/youtube-tags-generator/',

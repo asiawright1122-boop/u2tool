@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Etsy Fee Calculator is a browser-based fee calculator for estimating marketplace fees, net revenue, profit, and margin from editable Etsy-style assumptions. Add sale price, shipping, costs, listing fee, transaction rate, payment rate, and ad fee rate; the tool returns fee breakdown, net revenue, estimated profit, and profit margin. Use it to create a stronger first draft, compare assumptions, and copy a clean result without sending your inputs to a server.",
+  "detailed_description": "Etsy Fee Calculator estimates total fees, net revenue, profit, and margin from editable Etsy-style fee assumptions. Enter sale price, shipping charge, item cost, shipping cost, listing fee, transaction rate, payment rate, fixed fee, offsite ads rate, and currency to model pricing before you compare it with current marketplace rules.",
   "usage_steps": [
-    "Enter sale price, shipping, costs, listing fee, transaction rate, payment rate, and ad fee rate.",
-    "Review fee breakdown, net revenue, estimated profit, and profit margin and adjust any assumptions that affect the result.",
-    "Copy the strongest version into your profile, campaign, spreadsheet, codebase, or documentation.",
-    "Run another variation when your audience, pricing, format, or source data changes."
+    "Enter the item sale price, shipping charge, item cost, and shipping cost.",
+    "Set the listing fee, transaction rate, payment rate, fixed fee, and offsite ads rate you want to model.",
+    "Review gross revenue, total fees, net revenue, estimated profit, and profit margin.",
+    "Compare the assumptions with your real seller account, region, taxes, and current marketplace fee schedule before pricing."
   ],
   "usage_examples": [
-    "Use it when you need estimating marketplace fees, net revenue, profit, and margin from editable Etsy-style assumptions and want a practical starting point.",
-    "Compare different inputs to see how the result changes before publishing or sharing it.",
-    "Create a copy-ready result for a client note, internal checklist, storefront, profile, or technical handoff."
+    "Check whether a handmade product still has margin after item cost, shipping cost, and processing assumptions.",
+    "Compare the effect of changing shipping charge or offsite ads percentage on estimated profit.",
+    "Model a new listing price before updating your shop spreadsheet or seller notes."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Yes. Etsy Fee Calculator runs free in your browser and does not require an account."
     },
     {
-      "question": "Does Etsy Fee Calculator upload my inputs?",
-      "answer": "No. The tool is designed to run locally in the browser for quick drafting, calculation, or conversion."
+      "question": "Are these official current Etsy rates?",
+      "answer": "No. The calculator uses editable Etsy-style fee assumptions. Check Etsy's current fee schedule and your seller account before making pricing decisions."
     },
     {
-      "question": "What should I review before using the result?",
-      "answer": "Check the assumptions, rates, currency, and your real costs before using the numbers for pricing or planning."
+      "question": "What costs should I include?",
+      "answer": "Include item cost and shipping cost separately so the profit estimate reflects both product production and fulfillment assumptions."
     },
     {
-      "question": "Who is Etsy Fee Calculator best for?",
-      "answer": "Marketplace sellers testing product pricing, shipping recovery, and fee assumptions before listing."
+      "question": "Does it include taxes or every seller-specific charge?",
+      "answer": "No. It is a planning calculator for common fee and cost inputs, not tax, accounting, or platform policy advice."
     }
   ]
 }

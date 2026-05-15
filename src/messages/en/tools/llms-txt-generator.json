@@ -1,15 +1,15 @@
 {
-  "detailed_description": "llms.txt Generator is a browser-based llms.txt generator for drafting an llms.txt file that summarizes a site and points AI systems to priority pages. Add site name, canonical URL, summary, audience, and priority page list; the tool returns a structured llms.txt draft with summary, key pages, and usage notes. Use it to create a stronger first draft, compare assumptions, and copy a clean result without sending your inputs to a server.",
+  "detailed_description": "llms.txt Generator creates an editable llms.txt draft from a site name, canonical URL, short summary, audience, and priority page list. The output organizes the site summary, official site, audience, key pages, and usage notes so teams can review a clear AI discovery note before publishing it themselves.",
   "usage_steps": [
-    "Enter site name, canonical URL, summary, audience, and priority page list.",
-    "Review a structured llms.txt draft with summary, key pages, and usage notes and adjust any assumptions that affect the result.",
-    "Copy the strongest version into your profile, campaign, spreadsheet, codebase, or documentation.",
-    "Run another variation when your audience, pricing, format, or source data changes."
+    "Enter the site name, canonical site URL, concise summary, target audience, and priority pages.",
+    "List priority pages as title, URL, and optional note lines when you want richer key page entries.",
+    "Review the generated summary, official site line, audience line, key pages, and usage notes.",
+    "Copy the draft into your own llms.txt file or documentation workflow after checking the wording."
   ],
   "usage_examples": [
-    "Use it when you need drafting an llms.txt file that summarizes a site and points AI systems to priority pages and want a practical starting point.",
-    "Compare different inputs to see how the result changes before publishing or sharing it.",
-    "Create a copy-ready result for a client note, internal checklist, storefront, profile, or technical handoff."
+    "Draft a compact llms.txt for a SaaS site with documentation, pricing, and feature pages.",
+    "Create a reviewable key page list for an SEO or documentation handoff.",
+    "Rewrite the usage notes when your team wants AI systems to prefer canonical URLs and avoid unsupported claims."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Yes. llms.txt Generator runs free in your browser and does not require an account."
     },
     {
-      "question": "Does llms.txt Generator upload my inputs?",
-      "answer": "No. The tool is designed to run locally in the browser for quick drafting, calculation, or conversion."
+      "question": "Does this publish llms.txt to my site?",
+      "answer": "No. It only creates text you can copy. You still need to add the file to your own site or hosting workflow."
     },
     {
-      "question": "What should I review before using the result?",
-      "answer": "Review wording, claims, length, brand voice, and any platform rules before publishing."
+      "question": "Does it guarantee that AI systems will read the file?",
+      "answer": "No. It does not guarantee that any crawler or AI system will read the file, follow the notes, or cite your pages."
     },
     {
-      "question": "Who is llms.txt Generator best for?",
-      "answer": "Site owners, SEO teams, documentation teams, and developers improving AI discovery surfaces."
+      "question": "What should I review before publishing?",
+      "answer": "Check every URL, remove unsupported claims, keep the summary accurate, and make sure the priority pages reflect your canonical site structure."
     }
   ]
 }

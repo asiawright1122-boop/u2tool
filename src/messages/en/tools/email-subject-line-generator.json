@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Email Subject Line Generator is a browser-based subject line generator for brainstorming email subject lines around a campaign, audience, benefit, and tone. Add the campaign topic, audience, benefit, and tone; the tool returns subject line ideas for launches, newsletters, promos, and nurture emails. Use it to create a stronger first draft, compare assumptions, and copy a clean result without sending your inputs to a server.",
+  "detailed_description": "Email Subject Line Generator creates numbered subject line options from a campaign topic, audience, benefit, and tone. It helps marketers compare direct, curiosity-led, checklist, launch, and benefit-first angles before selecting a line to test in their own email platform.",
   "usage_steps": [
-    "Enter the campaign topic, audience, benefit, and tone.",
-    "Review subject line ideas for launches, newsletters, promos, and nurture emails and adjust any assumptions that affect the result.",
-    "Copy the strongest version into your profile, campaign, spreadsheet, codebase, or documentation.",
-    "Run another variation when your audience, pricing, format, or source data changes."
+    "Enter the campaign topic, target audience, main benefit, and tone.",
+    "Review the numbered subject line options and identify the angle each one uses.",
+    "Edit names, claims, urgency, and offer language so the subject matches the actual email.",
+    "Test the final subject line in your own email platform with your audience and deliverability rules."
   ],
   "usage_examples": [
-    "Use it when you need brainstorming email subject lines around a campaign, audience, benefit, and tone and want a practical starting point.",
-    "Compare different inputs to see how the result changes before publishing or sharing it.",
-    "Create a copy-ready result for a client note, internal checklist, storefront, profile, or technical handoff."
+    "Brainstorm launch subject lines for a new feature, course, template, or product update.",
+    "Create newsletter subject options that focus on a reader benefit instead of a vague topic.",
+    "Compare cold outreach angles before rewriting the line for a specific segment."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Yes. Email Subject Line Generator runs free in your browser and does not require an account."
     },
     {
-      "question": "Does Email Subject Line Generator upload my inputs?",
-      "answer": "No. The tool is designed to run locally in the browser for quick drafting, calculation, or conversion."
+      "question": "Does it send emails or measure open rates?",
+      "answer": "No. It only generates subject line text. Sending, A/B testing, and analytics happen in your own email platform."
     },
     {
-      "question": "What should I review before using the result?",
-      "answer": "Review wording, claims, length, brand voice, and any platform rules before publishing."
+      "question": "What should I put in the benefit field?",
+      "answer": "Use the outcome the reader cares about, such as saving time, learning a workflow, reducing cost, or getting a clearer answer."
     },
     {
-      "question": "Who is Email Subject Line Generator best for?",
-      "answer": "Marketers, founders, newsletters, ecommerce teams, and anyone testing email angles."
+      "question": "Can I use the options exactly as written?",
+      "answer": "You can, but review claims, personalization, compliance language, and brand voice before sending to a real list."
     }
   ]
 }

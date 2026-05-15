@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Docker Run to Docker Compose Converter is a browser-based Docker converter for turning a docker run command into a starter Docker Compose service. Add a docker run command with image, name, ports, environment variables, volumes, and restart policy; the tool returns Compose YAML with service name, image, ports, environment, volumes, restart, and command fields. Use it to create a stronger first draft, compare assumptions, and copy a clean result without sending your inputs to a server.",
+  "detailed_description": "Docker Run to Docker Compose Converter turns a single docker run command into starter Compose YAML. It parses common flags such as --name, -p/--publish, -e/--env, -v/--volume, --restart, and --network, then writes service name, image, ports, environment, volumes, restart, network_mode, and command fields for review.",
   "usage_steps": [
-    "Enter a docker run command with image, name, ports, environment variables, volumes, and restart policy.",
-    "Review Compose YAML with service name, image, ports, environment, volumes, restart, and command fields and adjust any assumptions that affect the result.",
-    "Copy the strongest version into your profile, campaign, spreadsheet, codebase, or documentation.",
-    "Run another variation when your audience, pricing, format, or source data changes."
+    "Paste the docker run command you want to translate.",
+    "Review the generated service name, image, ports, environment variables, volumes, restart policy, and command array.",
+    "Add unsupported flags, secrets, health checks, or multi-service wiring manually in your Compose file.",
+    "Run your own Docker Compose validation before using the YAML in a real environment."
   ],
   "usage_examples": [
-    "Use it when you need turning a docker run command into a starter Docker Compose service and want a practical starting point.",
-    "Compare different inputs to see how the result changes before publishing or sharing it.",
-    "Create a copy-ready result for a client note, internal checklist, storefront, profile, or technical handoff."
+    "Convert a one-off container command into a Compose service for local development notes.",
+    "Move published ports, environment variables, and volume mounts from a README command into YAML.",
+    "Create a starter Compose service, not a complete production deployment, before adding project-specific settings."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Yes. Docker Run to Docker Compose Converter runs free in your browser and does not require an account."
     },
     {
-      "question": "Does Docker Run to Docker Compose Converter upload my inputs?",
-      "answer": "No. The tool is designed to run locally in the browser for quick drafting, calculation, or conversion."
+      "question": "Does it run or validate Docker containers?",
+      "answer": "No. It only converts text into starter Compose YAML. Validate the result with Docker Compose in your own environment."
     },
     {
-      "question": "What should I review before using the result?",
-      "answer": "Validate the converted output with the destination app, importer, or runtime before using it in production."
+      "question": "Which docker run flags are recognized?",
+      "answer": "The parser handles common name, port, environment, volume, restart, network, image, and command fields. More advanced Docker flags should be added manually."
     },
     {
-      "question": "Who is Docker Run to Docker Compose Converter best for?",
-      "answer": "Developers, DevOps teams, students, and anyone documenting a container setup."
+      "question": "Can it convert a full multi-container setup?",
+      "answer": "No. It converts one docker run command at a time, so multi-service Compose files still need manual design."
     }
   ]
 }
