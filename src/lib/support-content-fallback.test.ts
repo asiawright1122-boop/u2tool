@@ -213,6 +213,28 @@ describe('assessSupportContentTrust', () => {
     expect(report.issues.map((issue) => issue.code)).toContain('file-size-unsupported-fr-controls');
   });
 
+  it('blocks Boxplot import and style controls that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'boxplot-chart-generator',
+      locale: 'ru',
+      name: 'Генератор диаграмм Boxplot',
+      description: '',
+      detailedDescription:
+        'Инструмент принимает данные в формате CSV/JSON и парсит их с учетом пользовательских настроек разделителей.',
+      usageSteps: [
+        "Переключитесь на вкладку 'Настройки' и задайте минимальное/максимальное значение для отсечения выбросов.",
+        "Настройте цветовую палитру через селектор HSL или HEX-код.",
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'boxplot-unsupported-import-style-claim'
+    );
+  });
+
   it('blocks Morse Code Player reference chart claims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'morse-code-player',

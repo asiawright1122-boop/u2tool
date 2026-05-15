@@ -273,6 +273,12 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['graph-chart-generator'],
   },
   {
+    code: 'boxplot-unsupported-import-style-claim',
+    pattern: /\bCSV\/JSON\b|с учетом пользовательских настроек разделителей|символ табуляции|минимальн[а-яё/]+максимальн[а-яё ]+значени[ея].*выброс|отсечени[ея] выброс|селектор HSL|HEX-код|вкладк[аеу]\s*['’«](?:Данные|Настройки|Стили)|\bcustom delimiter\b|\bmanual outlier threshold\b|\boutlier cutoff\b|\bHSL selector\b/i,
+    message: 'Claims Boxplot import, delimiter, manual outlier, or style controls that are not present in the current comma-separated value editor.',
+    slugs: ['boxplot-chart-generator'],
+  },
+  {
     code: 'gantt-chart-unsupported-project-management-claim',
     pattern: /\bmanage dependencies\b|\bidentify task dependencies\b/i,
     message: 'Claims project-management behavior that is not present in the current Gantt chart maker.',
