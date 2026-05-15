@@ -18,6 +18,7 @@
   // Imports
   import JSZip from 'jszip';
   import { saveAs } from 'file-saver';
+  import pdfWorkerUrl from 'pdfjs-dist/build/pdf.worker.mjs?url';
 
   // Types
   interface PagePreview {
@@ -38,23 +39,36 @@
 
   let fileName = $state('');
 
+  let pdfFileData = $state<ArrayBuffer | null>(null);
+
+  async function loadPdfJs() {
+    const pdfjsLib = await import('pdfjs-dist');
+    pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
+    return pdfjsLib;
+  }
+
   async function handleFileUpload(e: Event) {
     const file = e.target.files?.[0];
     if (!file) return;
 
     if (!file.name.toLowerCase().endsWith('.pdf')) {
       error = t('pdfToImage.invalidFileType');
+      pdfFileData = null;
+      pages = [];
       return;
     }
 
     loading = true;
     error = '';
-    fileName = file.name.replace('.pdf', '');
+    pages = [];
+    pdfFileData = null;
+    fileName = file.name.replace(/\.pdf$/i, '');
 
     try {
-      const pdfjsLib = await import('pdfjs-dist');
+      const pdfjsLib = await loadPdfJs();
       const arrayBuffer = await file.arrayBuffer();
-      const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+      pdfFileData = arrayBuffer.slice(0);
+      const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer.slice(0)) }).promise;
       const previews: PagePreview[] = [];
 
       for (let i = 1; i <= pdf.numPages; i++) {
@@ -81,9 +95,7 @@
   }
 
   $effect(() => {
-    import('pdfjs-dist').then((pdfjsLib) => {
-      pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
-    });
+    void loadPdfJs();
   });
 
   // Functions
@@ -101,12 +113,14 @@
 
     loading = true;
     try {
-      const pdfjsLib = await import('pdfjs-dist');
-      const file = document.querySelector<HTMLInputElement>('#pdf-upload')?.files?.[0];
-      if (!file) return;
+      const pdfjsLib = await loadPdfJs();
+      const sourceData = pdfFileData;
+      if (!sourceData) {
+        error = t('pdfToImage.parseError');
+        return;
+      }
 
-      const arrayBuffer = await file.arrayBuffer();
-      const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+      const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(sourceData.slice(0)) }).promise;
       const scale = dpi / 72;
 
       if (selectedPages.length === 1) {
@@ -145,7 +159,7 @@
       loading = false;
     }
   }
-  const selectedCount = pages.filter(p => p.selected).length;
+  let selectedCount = $derived(pages.filter((p) => p.selected).length);
 
 </script>
 

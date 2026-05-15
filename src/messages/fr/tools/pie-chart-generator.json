@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Le générateur de diagrammes en camembert transforme une petite table de noms et de valeurs en graphique proportionnel. Vous pouvez modifier le titre, choisir un thème de couleur, afficher ou masquer la légende, les étiquettes et les pourcentages, puis basculer entre un camembert classique, un anneau ou un diagramme de type rose. Le tableau intégré calcule le total et les pourcentages pendant que vous saisissez les valeurs. Vous pouvez aussi importer un fichier CSV simple au format nom,valeur, charger un exemple, supprimer les lignes inutiles et exporter le graphique final en PNG ou en SVG. L'outil est adapté aux rapports rapides, aux présentations, aux répartitions de budget, aux parts de marché et aux aperçus de composition. Il ne propose pas de projection 3D, d'API, de paramètres GET, de métadonnées EXIF ni d'édition avancée du SVG après export.",
+  "detailed_description": "Le générateur de diagrammes en camembert transforme une petite table de noms et de valeurs en graphique proportionnel. Vous pouvez modifier le titre, choisir un thème de couleur, afficher ou masquer la légende, les étiquettes et les pourcentages, puis basculer entre un camembert classique, un anneau ou un diagramme de type rose. Le tableau intégré calcule le total et les pourcentages pendant que vous saisissez les valeurs, ce qui rend les écarts visibles avant l'export. Vous pouvez aussi importer un fichier CSV simple au format nom,valeur, charger un exemple, supprimer les lignes inutiles et exporter le graphique final en PNG ou en SVG. L'outil est adapté aux rapports rapides, aux présentations, aux répartitions de budget, aux parts de marché et aux aperçus de composition. Il ne propose pas de projection 3D, d'API, de paramètres GET, de métadonnées EXIF ni d'édition avancée du SVG après export.",
   "usage_steps": [
     "Chargez un exemple, importez un CSV simple ou ajoutez vos lignes manuellement.",
     "Modifiez le nom et la valeur de chaque catégorie dans le tableau.",
     "Définissez le titre du graphique et choisissez un thème de couleur.",
     "Activez ou désactivez la légende, les étiquettes, les pourcentages, le mode anneau ou le mode rose.",
-    "Vérifiez l'aperçu du graphique et les pourcentages calculés.",
+    "Vérifiez l'aperçu du graphique, le total et les pourcentages calculés.",
     "Téléchargez le résultat en PNG ou en SVG."
   ],
   "usage_examples": [
-    "Créer un graphique de répartition du budget pour une note interne.",
+    "Créer un graphique de répartition du budget avec total et pourcentages visibles.",
     "Comparer les parts de trafic par canal marketing dans une présentation.",
     "Transformer un petit fichier CSV nom,valeur en camembert exportable.",
     "Exporter un SVG pour l'insérer dans une diapositive ou un document."

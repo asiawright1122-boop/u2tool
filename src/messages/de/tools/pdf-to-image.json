@@ -1,17 +1,33 @@
 {
-  "detailed_description": "Der PDF zu Bild Konverter ermöglicht die präzise Rasterisierung von Vektorinhalten aus PDF-Dokumenten in hochwertige Rasterformate wie PNG oder JPEG. Technisch basiert der Prozess auf einer serverseitigen PDF-Engine, die jede Seite als XObject extrahiert, die Farbprofile in RGB/CMYK umwandelt und mit anpassbaren DPI-Werten (bis zu 600 DPI) renderiert. Der Toolset nutzt hardwarebeschleunigte Grafikbibliotheken zur Optimierung von Kompression und Farbtreue. Nutzer benötigen dieses Tool für spezifische Workflows wie die Vorbereitung von Dokumenten für OCR-Verarbeitung, die Einbettung von Diagrammen in Präsentationen oder das Archivieren von Signaturen in pixelgenauen Formaten. Die Batch-Verarbeitungsfunktion erlaubt das gleichzeitige Konvertieren mehrerer Seiten mit konsistenten Metadaten. Technisch relevant sind die Unterstützung von PDF 1.7 Spezifikationen, die Aufteilung von Multipage-Dokumenten und die Anpassung von Gamma-Werten für optimale Darstellung auf verschiedenen Bildschirmen.",
+  "detailed_description": "Der PDF zu Bild Konverter rendert Seiten einer lokalen PDF-Datei im Browser und lädt sie als PNG- oder JPEG-Bilder herunter. Nach dem Hochladen zeigt die Seite Vorschaubilder aller PDF-Seiten an, markiert sie standardmäßig als ausgewählt und erlaubt das einzelne An- oder Abwählen. Für den Export können Sie PNG oder JPEG sowie 72, 150 oder 300 DPI wählen. Wenn eine Seite ausgewählt ist, wird ein einzelnes Bild gespeichert; bei mehreren Seiten erstellt das Tool ein ZIP-Archiv mit je einer Bilddatei pro Seite. Die Verarbeitung eignet sich für schnelle Dokumentvorschauen, Präsentationsbilder oder manuelle Weitergabe einzelner PDF-Seiten. Das Tool bietet keine OCR-Erkennung, keine Seitenbereich-Eingabe, keine Graustufen-Option und keine Bearbeitung des PDF-Inhalts.",
   "usage_steps": [
-    "Ziehen Sie das PDF-Dokument in den markierten Upload-Bereich oder verwenden Sie den 'Datei auswählen' Button.",
-    "Wählen Sie im Format-Panel zwischen PNG-24 für verlustfreie Kompression oder JPEG-8 für fotorealistische Darstellung.",
-    "Geben Sie im DPI-Einstellungsfeld den gewünschten Auflösungswert zwischen 72 und 600 ein.",
-    "Definieren Sie im Seitenbereich entweder 'Alle Seiten' oder geben Sie einen benutzerdefinierten Seitenbereich (z.B. 3-7,9) an.",
-    "Aktivieren Sie im Farbmodus-Schalter 'Graustufen' für Dokumente mit Textinhalten oder belassen Sie es auf 'Originalfarben'.",
-    "Klicken Sie auf 'Konvertieren' und laden Sie das Ergebnis als ZIP-Archiv mit strukturierter Ordnerhierarchie herunter."
+    "Wählen Sie eine PDF-Datei über den Upload-Bereich aus.",
+    "Prüfen Sie die automatisch erzeugten Seitenvorschauen.",
+    "Wählen Sie einzelne Seiten ab oder nutzen Sie Alle auswählen und Auswahl aufheben.",
+    "Legen Sie PNG oder JPEG und 72, 150 oder 300 DPI fest.",
+    "Klicken Sie auf Konvertieren, um ein einzelnes Bild oder bei mehreren Seiten ein ZIP-Archiv herunterzuladen."
   ],
   "usage_examples": [
-    "Ein Architekt wandelt mehrseitige Baupläne in 300-DPI-PNGs um, um diese als Hintergrundbilder in CAD-Software zu importieren.",
-    "Ein Marketing-Team konvertiert eine PDF-Infografik in JPEG-Format mit optimierter Kompression für E-Mail-Newsletter.",
-    "Ein Rechtsanwalt extrahiert einzelne Seiten aus einem Vertrag als Graustufenbilder für digitale Gerichtsdokumente.",
-    "Ein Entwickler nutzt das Tool, um Testdaten im PDF-Format in maschinenlesbare Bilder für ein OCR-Training-Set zu transformieren."
+    "Eine einzelne PDF-Seite als PNG für eine Präsentation speichern.",
+    "Mehrere Seiten eines Dokuments als JPEG-Dateien in einem ZIP herunterladen.",
+    "Vor dem Weitergeben schnell prüfen, welche Seiten eines PDF-Dokuments als Bilder benötigt werden."
+  ],
+  "faqs": [
+    {
+      "question": "Ist der PDF zu Bild Konverter kostenlos?",
+      "answer": "Ja. Die Seite funktioniert kostenlos im Browser und benötigt kein Konto."
+    },
+    {
+      "question": "Welche Bildformate sind verfügbar?",
+      "answer": "Sie können die ausgewählten PDF-Seiten als PNG oder JPEG exportieren."
+    },
+    {
+      "question": "Kann ich nur bestimmte Seiten konvertieren?",
+      "answer": "Ja. Nach dem Laden der Vorschauen können Sie einzelne Seiten an- oder abwählen."
+    },
+    {
+      "question": "Erkennt das Tool Text per OCR?",
+      "answer": "Nein. Es rendert sichtbare PDF-Seiten als Bilder und extrahiert keinen Text."
+    }
   ]
 }

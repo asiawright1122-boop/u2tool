@@ -1,17 +1,33 @@
 {
-  "detailed_description": "Der IP Lookup-Tool bietet eine präzise Analyse von IP-Adressen durch die Integration mehrerer technischer Quellen, darunter WHOIS-Datenbanken, BGP-Routing-Tabellen und geografische Geolocation-Dienste. Technisch gesehen extrahiert das Tool Informationen wie geografische Koordinaten (Breiten- und Längengrad), ASN (Autonomous System Number), ISP-Details (z.B. AS15169 für Google) sowie Netzwerkblock-Eigentümer (CIDR-Notation) in Echtzeit. Besonders ist die Einbindung von DNSBL-Abfragen zur Identifizierung von Spam- oder Malware-assoziierten IPs. Anwender benötigen dieses Werkzeug für spezifische Szenarien wie das Debugging von CDN-Routing-Problemen, die Analyse von Traffic-Quellen für gezielte Werbung oder die Überprüfung von Compliance-Standards (z.B. DSGVO-konforme Datenverarbeitung). Das Tool funktioniert durch API-Anfragen an georedundante Endpunkte, die Ergebnisse werden mit clientseitigem JavaScript gerendert, einschließlich einer interaktiven Karte (Leaflet.js) und einer tabellarischen Breakdown der ASN-Hierarchie. Ein Caching-Mechanismus minimiert API-Rate-Limits durch zeitgesteuerte Speicherung häufig abgefragter IPs.",
+  "detailed_description": "Der IP Lookup ruft grundlegende Geolokationsdaten fuer eine IP-Adresse ab. Sie koennen eine IPv4- oder IPv6-Adresse eingeben oder mit Meine IP die aktuelle Adresse des Browsers pruefen. Die Seite fragt ipwho.is ab und zeigt, sofern verfuegbar, IP-Adresse, Land, Region, Stadt, Internetanbieter, Zeitzone sowie Breiten- und Laengengrad an. Das ist hilfreich fuer eine schnelle Plausibilitaetspruefung von Logeintraegen, Supportfaellen oder Netzwerknotizen. Die Ergebnisse sind nur so genau wie die externe Geolokationsdatenbank und ersetzen keine WHOIS-, BGP-, DNSBL- oder Sicherheitsanalyse. Es gibt keine Karte, keinen Export und keine API-Dokumentation auf dieser Seite.",
   "usage_steps": [
-    "Geben Sie die zu untersuchende IP-Adresse in das Eingabefeld \"IP-Adresse eingeben\" ein.",
-    "Wählen Sie im Dropdown-Menü \"Tiefgang der Abfrage\" zwischen Standard- oder Expertenmodus (inkl. DNSBL-Prüfung).",
-    "Klicken Sie auf \"Visualisierungsoptionen\", um zwischen Kartenansicht, Tabellenansicht oder JSON-Rohdaten zu wechseln.",
-    "Nutzen Sie die Schaltfläche \"Ergebnisse exportieren\", um die Daten als CSV oder GeoJSON herunterzuladen.",
-    "Aktivieren Sie das Kontrollkästchen \"Historische Daten vergleichen\", um Änderungen im Zeitverlauf anzuzeigen.",
-    "Für API-Integration: Kopieren Sie den cURL-Befehl aus dem Abschnitt \"API-Dokumentation\" für automatisierte Abfragen."
+    "Geben Sie eine IP-Adresse in das Eingabefeld ein.",
+    "Klicken Sie auf Lookup, um die Adresse ueber ipwho.is abzufragen.",
+    "Nutzen Sie Meine IP, wenn Sie die aktuelle Browser-IP pruefen moechten.",
+    "Pruefen Sie Land, Region, Stadt, ISP, Zeitzone und Koordinaten in der Ergebnisbox.",
+    "Behandeln Sie die Geolokation als Naeherungswert, besonders bei Mobilfunk, VPNs oder Proxys."
   ],
   "usage_examples": [
-    "Ein Entwickler analysiert Traffic-Logs und identifiziert mit der ASN-Information (z.B. AS13335 von Cloudflare), ob Anfragen über einen CDN-Anbieter geleitet werden.",
-    "Ein Netzwerkadministrator nutzt die geografische Auswertung, um Anomalien im BGP-Routing zu erkennen, z.B. wenn IP-Blöcke unerwartet in einem anderen Kontinent registriert sind.",
-    "Ein Sicherheitsteam prüft eine verdächtige IP-Adresse und stellt durch die DNSBL-Integration fest, dass sie auf einer RBL-Blacklist (z.B. Spamhaus) steht.",
-    "Ein Compliance-Officer validiert mithilfe der genauen Standortdaten, ob Serverstandorte der EU-Datenschutzrichtlinie entsprechen."
+    "Eine IP-Adresse aus einem Serverlog grob nach Land, Stadt und ISP einordnen.",
+    "Bei einem Supportfall pruefen, ob die gemeldete IP zu einer erwarteten Region passt.",
+    "Die eigene oeffentliche IP-Adresse und Zeitzone fuer eine Netzwerknotiz erfassen."
+  ],
+  "faqs": [
+    {
+      "question": "Ist der IP Lookup kostenlos?",
+      "answer": "Ja. Die Seite kann kostenlos ohne Konto genutzt werden."
+    },
+    {
+      "question": "Welche Daten zeigt der Lookup?",
+      "answer": "Je nach Antwort von ipwho.is zeigt er IP, Land, Region, Stadt, ISP, Zeitzone und Koordinaten."
+    },
+    {
+      "question": "Wie genau ist die Geolokation?",
+      "answer": "Sie ist eine Schaetzung aus einer externen Datenbank und kann bei VPNs, Mobilfunknetzen oder Proxys abweichen."
+    },
+    {
+      "question": "Prueft das Tool WHOIS, BGP oder Blacklists?",
+      "answer": "Nein. Es zeigt einfache Geolokationsdaten und fuehrt keine WHOIS-, BGP- oder DNSBL-Pruefung aus."
+    }
   ]
 }
