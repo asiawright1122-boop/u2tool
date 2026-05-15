@@ -359,6 +359,102 @@ describe('assessSupportContentTrust', () => {
     expect(report.issues.map((issue) => issue.code)).toContain('html-preview-javascript-claim');
   });
 
+  it('blocks Spanish HTML Preview JavaScript execution claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'html-preview',
+      locale: 'es',
+      name: 'Vista Previa HTML',
+      description: 'Previsualiza el código HTML en tiempo real con soporte para CSS y JavaScript.',
+      detailedDescription: 'La herramienta ejecuta JavaScript para probar páginas interactivas completas.',
+      usageSteps: [],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain('html-preview-javascript-claim');
+  });
+
+  it('blocks Half Doughnut Chart controls that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'half-doughnut-chart-generator',
+      locale: 'ja',
+      name: '半ドーナツチャートジェネレータ',
+      description: '',
+      detailedDescription:
+        'JSON形式でデータを入力し、内半径・外半径の比率、回転オフセット角度、グラデーションカラーリングを設定できます。',
+      usageSteps: ['コード生成タブからスクリプトをコピーします。'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'half-doughnut-unsupported-editor-claim'
+    );
+  });
+
+  it('blocks Text to ASCII Art font and export claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'text-to-ascii-art',
+      locale: 'ru',
+      name: 'Текст в ASCII-арт',
+      description: '',
+      detailedDescription: 'Инструмент поддерживает настройку шрифтов, стилей и размеров.',
+      usageSteps: [
+        "Выберите шрифт ASCII из списка 'Standard', 'Banner', и 'Slant'.",
+        "Нажмите 'Download as Text' или 'Download as Image'.",
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'text-ascii-unsupported-export-font-claim'
+    );
+  });
+
+  it('blocks Image Splitter advanced output controls that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'image-splitter',
+      locale: 'ar',
+      name: 'مقسم الصور',
+      description: '',
+      detailedDescription:
+        'تحافظ الأداة على بيانات EXIF وتدعم PNG/JPEG/BMP مع إمكانية ضبط التداخل البكسل بين القطع.',
+      usageSteps: [
+        "ضع علامة اختيار على 'التفاف الحافة'.",
+        'اختر تنسيق الإخراج المفضل PNG لجودة أعلى أو JPEG لملفات أصغر.',
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'image-splitter-unsupported-advanced-claim'
+    );
+  });
+
+  it('blocks Credit Card Validator live verification claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'credit-card-validator',
+      locale: 'ru',
+      name: 'Проверщик кредитных карт',
+      description: '',
+      detailedDescription: 'Проверяет CVV и доступный баланс перед оплатой.',
+      usageSteps: ['Run real-time authorization to authorize a card.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'credit-card-validator-live-verification-claim'
+    );
+  });
+
   it('blocks Scientific Calculator function claims that are not implemented in the button UI', () => {
     const report = assessSupportContentTrust({
       slug: 'scientific-calculator',

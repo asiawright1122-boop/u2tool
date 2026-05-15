@@ -166,9 +166,33 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
   },
   {
     code: 'html-preview-javascript-claim',
-    pattern: /\bJavaScript support\b|\bJavaScript execution\b|<script>\s*tags for interactivity|\bscript tags for interactivity\b|\bcomplete web pages including interactive elements\b|\bfull CSS styling and JavaScript execution\b/i,
+    pattern: /\bJavaScript support\b|\bJavaScript execution\b|<script>\s*tags for interactivity|\bscript tags for interactivity\b|\bcomplete web pages including interactive elements\b|\bfull CSS styling and JavaScript execution\b|soporte para CSS y JavaScript|soporte para JavaScript|ejecuta JavaScript/i,
     message: 'Claims JavaScript execution, but the current HTML Preview renders snippets in a sandboxed iframe without scripts enabled.',
     slugs: ['html-preview'],
+  },
+  {
+    code: 'half-doughnut-unsupported-editor-claim',
+    pattern: /270度|JSON形式|半円方向|左半分|右半分|内半径|外半径|回転オフセット|コード生成|スクリプトをコピー|50〜200px|12〜24px|グラデーションカラーリング|アニメーション効果/i,
+    message: 'Claims half-doughnut JSON, angle, radius, code, or granular style controls that are not present in the current ECharts table editor UI.',
+    slugs: ['half-doughnut-chart-generator'],
+  },
+  {
+    code: 'text-ascii-unsupported-export-font-claim',
+    pattern: /['’]Standard['’].*['’]Banner['’].*['’]Slant['’]|Font Selection|Convert to ASCII Art|Download as Text|Download as Image|Скачать как текст|Скачать как изображение|слайдер ['’]Size['’]|выберите шрифт ASCII|настройку шрифтов, стилей и размеров/i,
+    message: 'Claims ASCII font, size, or file/image export controls that are not present in the current single-font copy-only UI.',
+    slugs: ['text-to-ascii-art'],
+  },
+  {
+    code: 'image-splitter-unsupported-advanced-claim',
+    pattern: /\bBMP\b|التداخل البكسل|التفاف الحافة|تنسيق الإخراج المفضل|PNG لجودة أعلى|JPEG لملفات أصغر|20 ميجا|الحفاظ على بيانات EXIF|preserves? .*EXIF|maintaining .*EXIF|slice overlap percentage|Maintain Aspect Ratio|coordinate overlays|bi-linear interpolation|percentage-based/i,
+    message: 'Claims image splitter overlap, output-format, EXIF, or advanced slicing controls that are not present in the current rows/columns PNG grid UI.',
+    slugs: ['image-splitter'],
+  },
+  {
+    code: 'credit-card-validator-live-verification-claim',
+    pattern: /real-time authorization|balance check|CVV verification|authori[sz]e a card|available balance|авторизац[а-яё ]+реальн|провер(?:ка|яет)[а-яё ]+CVV|доступн[а-яё ]+баланс/i,
+    message: 'Claims live card authorization, CVV, or balance checks that are not present in the current local Luhn validator.',
+    slugs: ['credit-card-validator'],
   },
   {
     code: 'scientific-calculator-unsupported-function-claim',

@@ -1,17 +1,34 @@
 {
-  "detailed_description": "El Image Splitter es una herramienta técnica especializada en la segmentación de imágenes rasterizadas mediante un algoritmo de división matricial. Permite particionar una imagen original en un conjunto de sub-imágenes organizadas en filas y columnas personalizables, preservando las propiedades de resolución y profundidad de color originales. La herramienta opera mediante un motor de procesamiento basado en coordenadas cartesianas que calcula las dimensiones de cada fragmento según el número de divisiones especificadas, manteniendo la proporción del aspecto mediante interpolación bilineal cuando es necesario. Su utilidad radica en casos prácticos como la creación de mosaicos para interfaces responsivas, preparación de spritesheets en desarrollo de videojuegos, generación de plantillas para impresión 3D, o análisis forense de imágenes mediante segmentación contextual. El proceso se basa en la manipulación de mapas de bits mediante operaciones de crop geométrico, sin alterar los valores RGB de los píxeles, asegurando integridad visual en cada fragmento generado.",
+  "detailed_description": "Image Splitter divide una imagen subida en una cuadrícula simple de filas y columnas dentro del navegador. Puedes usar presets como 2x2, 3x3, 4x4, 2x3 o 3x2, o introducir manualmente valores de 1 a 10 para filas y columnas. Después de cargar la imagen, la página muestra una cuadrícula superpuesta, el tamaño original y el tamaño calculado de cada parte. Al hacer clic en Split, la herramienta recorta las piezas con Canvas y permite descargar una pieza individual o todas juntas en un archivo ZIP.",
   "usage_steps": [
-    "Arrastra tu imagen al área de carga o selecciona un archivo desde tu dispositivo (formatos admitidos: JPEG, PNG, BMP, WEBP).",
-    "Especifica el número de filas y columnas usando los controles numéricos con rango entre 1 y 20 divisiones por eje.",
-    "Ajusta las opciones avanzadas: activa 'Mantener proporción' para evitar deformaciones o 'Incluir borde' para añadir márgenes de corte.",
-    "Previsualiza la cuadrícula de partición superpuesta a la imagen original con indicadores de coordenadas X/Y en cada celda.",
-    "Haz clic en 'Generar fragmentos' para iniciar el procesamiento basado en canvas HTML5 con soporte de alta resolución (hasta 8K).",
-    "Descarga los archivos divididos en formato ZIP o selecciona individualmente cada fragmento para exportación personalizada."
+    "Selecciona una imagen desde el campo de carga.",
+    "Elige un preset de cuadrícula o define filas y columnas manualmente.",
+    "Revisa la cuadrícula superpuesta y el tamaño de cada parte.",
+    "Haz clic en Split para crear las piezas en el navegador.",
+    "Descarga una pieza desde la vista previa o usa Download All para guardar un ZIP."
   ],
   "usage_examples": [
-    "Un diseñador web crea 12 fragmentos de 3 columnas × 4 filas para implementar una galería responsiva con efecto parallax en CSS Grid.",
-    "Un desarrollador de juegos divide una textura de 2048x2048 px en 16 sprites de 512x512 px para animaciones frame-by-frame en Unity.",
-    "Un artista digital genera 9 cuadrantes para compartir una ilustración en Instagram Stories manteniendo secuencialidad visual mediante numeración de capas.",
-    "Un ingeniero de QA segmenta capturas de pantalla de 4K para documentar bugs específicos en distintas secciones de una interfaz de usuario."
+    "Dividir un banner en una cuadrícula 3x2 para una maqueta visual.",
+    "Crear piezas iguales de una imagen para una actividad o rompecabezas sencillo.",
+    "Separar una ilustración grande en partes PNG más pequeñas para revisarlas.",
+    "Descargar todas las piezas generadas en un ZIP después de comprobar la vista previa."
+  ],
+  "faqs": [
+    {
+      "question": "¿Puedo descargar todas las piezas a la vez?",
+      "answer": "Sí. Después de dividir la imagen, usa Download All para guardar las piezas en un archivo ZIP."
+    },
+    {
+      "question": "¿Qué tamaños de cuadrícula puedo usar?",
+      "answer": "La página incluye presets 2x2, 3x3, 4x4, 2x3 y 3x2, además de campos manuales de 1 a 10."
+    },
+    {
+      "question": "¿Dónde se procesa la imagen?",
+      "answer": "La carga, vista previa, división y descarga se realizan en el navegador."
+    },
+    {
+      "question": "¿Puedo descargar una sola parte?",
+      "answer": "Sí. Pasa el cursor sobre una pieza generada y usa la acción de descarga de esa parte."
+    }
   ]
 }

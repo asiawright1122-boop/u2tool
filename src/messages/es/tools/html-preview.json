@@ -15,7 +15,7 @@
   ],
   "faqs": [
     {
-      "question": "¿La vista previa ejecuta JavaScript?",
+      "question": "¿Qué ocurre con los scripts?",
       "answer": "No. El iframe está sandboxed y no habilita scripts, así que está pensado para HTML y CSS estáticos."
     },
     {
