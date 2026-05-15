@@ -19,8 +19,8 @@
       "answer": "Yes. They are saved in your browser's local storage on the same device and browser."
     },
     {
-      "question": "Does it calculate business days?",
-      "answer": "No. It shows calendar days and a live time breakdown, not workdays or holiday-aware schedules."
+      "question": "Does it skip weekends or public holidays?",
+      "answer": "No. It shows calendar days and a live time breakdown without adjusting for office calendars."
     },
     {
       "question": "Why are months and weeks approximate?",

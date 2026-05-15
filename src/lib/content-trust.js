@@ -225,6 +225,12 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['image-to-base64'],
   },
   {
+    code: 'image-frosted-glass-unsupported-control-claim',
+    pattern: /WebGL-ускорени|альфа-канал|RGBA-формат|прозрачн[а-яё ]+сло[йя]|прозрачн[а-яё ]+област|Invert Matte|Selection Area|обратн[а-яё ]+маск|выделени[ея] области|\bWebGL acceleration\b|\bopacity layer\b|\binvert matte\b|\bselection area\b/i,
+    message: 'Claims frosted-glass layer, mask, selection, or WebGL controls that are not present in the current whole-image canvas blur UI.',
+    slugs: ['image-frosted-glass'],
+  },
+  {
     code: 'hex-editor-grid-claim',
     pattern: /\bhex(?:adecimal)? grid\b|\b16-byte columnar\b|\boffset addresses\b|hex-дамп/i,
     message: 'Claims a hex grid or dump view, but the current Hex Editor exposes two text areas and conversion buttons.',

@@ -235,6 +235,28 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks Frosted Glass image controls that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'image-frosted-glass',
+      locale: 'ru',
+      name: 'Эффект туманного стекла',
+      description: '',
+      detailedDescription:
+        'Используется WebGL-ускорение, прозрачный слой и изменение альфа-канала в RGBA-формате.',
+      usageSteps: [
+        "Активируйте опцию 'Invert Matte'.",
+        "Выберите область применения эффекта через инструмент выделения 'Selection Area'.",
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'image-frosted-glass-unsupported-control-claim'
+    );
+  });
+
   it('blocks Morse Code Player reference chart claims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'morse-code-player',
