@@ -1,15 +1,15 @@
 {
-  "detailed_description": "E-Mail-Betreff-Generator ist ein browserbasiertes Betreffzeilen-Generator für E-Mail-Betreffzeilen nach Kampagne, Zielgruppe, Nutzen und Ton zu entwickeln. Gib Kampagnenthema, Zielgruppe, Nutzen und Ton ein; das Tool liefert Betreffideen für Launches, Newsletter, Promotions und Nurturing-Mails. Nutze es, um einen ersten Entwurf zu erstellen, Annahmen zu vergleichen und ein sauberes Ergebnis zu kopieren, ohne Eingaben an einen Server zu senden.",
+  "detailed_description": "E-Mail-Betreff-Generator erstellt nummerierte subject line Ideen aus campaign topic, audience, benefit und tone. Vergleiche direkte, neugierige, checklist-, launch- und benefit-first Winkel vor Tests in deiner Email-Plattform.",
   "usage_steps": [
-    "Gib Kampagnenthema, Zielgruppe, Nutzen und Ton ein.",
-    "Prüfe Betreffideen für Launches, Newsletter, Promotions und Nurturing-Mails und passe Annahmen an, die das Ergebnis beeinflussen.",
-    "Kopiere die beste Version in Profil, Kampagne, Tabelle, Codebasis oder Dokumentation.",
-    "Erzeuge eine neue Variante, wenn Zielgruppe, Preis, Format oder Quelldaten wechseln."
+    "Gib Kampagnenthema, audience, benefit und tone ein.",
+    "Prüfe die subject lines und ihren jeweiligen Winkel.",
+    "Passe Namen, claims, Dringlichkeit und Angebot an den echten Inhalt an.",
+    "Teste final in deiner Plattform inklusive A/B testing."
   ],
   "usage_examples": [
-    "Nutze es, wenn du E-Mail-Betreffzeilen nach Kampagne, Zielgruppe, Nutzen und Ton zu entwickeln brauchst und einen editierbaren Startpunkt möchtest.",
-    "Vergleiche unterschiedliche Eingaben, bevor du das Ergebnis veröffentlichst oder teilst.",
-    "Erstelle ein kopierfertiges Ergebnis für Kundennotiz, interne Checkliste, Shop, Profil oder technische Übergabe."
+    "Nutze es für einen konkreten Workflow vor Import, Versand oder Veröffentlichung.",
+    "Vergleiche Eingaben und Ergebnis mit echten Daten, bevor du es weiterverwendest.",
+    "Halte URLs, Zahlen, claims und Plattformregeln mit deinen Quellen abgestimmt."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Ja. E-Mail-Betreff-Generator läuft kostenlos im Browser und erfordert kein Konto."
     },
     {
-      "question": "Lädt das Tool meine Eingaben hoch?",
-      "answer": "Nein. Es ist für schnelle Entwürfe, Berechnungen oder Konvertierungen im Browser gedacht."
+      "question": "Veröffentlicht oder verbindet es automatisch?",
+      "answer": "Nein. Es erstellt Text oder Berechnungen, die du selbst prüfst und verwendest."
     },
     {
-      "question": "Was sollte ich vor der Nutzung prüfen?",
-      "answer": "Prüfe Formulierungen, Aussagen, Länge, Markenstimme und Plattformregeln vor der Veröffentlichung."
+      "question": "Was sollte ich kontrollieren?",
+      "answer": "Kontrolliere Felder, URLs, Zahlen, claims und Regeln deines Zielsystems."
     },
     {
-      "question": "Für wen ist E-Mail-Betreff-Generator geeignet?",
-      "answer": "Für Marketer, Gründer, Newsletter, E-Commerce-Teams und alle, die E-Mail-Angles testen."
+      "question": "Kann ich das Ergebnis direkt nutzen?",
+      "answer": "Nutze es als Arbeitsgrundlage und passe es an echte Daten an."
     }
   ]
 }

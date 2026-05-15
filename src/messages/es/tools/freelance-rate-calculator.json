@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Calculadora de tarifas freelance es un calculadora de tarifas en el navegador para convertir metas de ingreso, gastos, reserva fiscal, horas facturables y vacaciones en tarifas freelance. Añade ingreso neto objetivo, gastos anuales, reserva fiscal, horas facturables, semanas libres y moneda; la herramienta devuelve tarifa por hora, tarifa diaria, objetivo mensual y objetivo anual de ingresos. Úsala para crear un primer borrador, comparar supuestos y copiar un resultado limpio sin enviar tus datos a un servidor.",
+  "detailed_description": "Calculadora de tarifas freelance convierte ingreso neto objetivo, gastos anuales, reserva fiscal, billable hours por semana, semanas libres y moneda en hourly rate, day rate, monthly revenue y yearly revenue. Sirve para revisar supuestos de capacidad antes de propuestas, consultoría o retainers.",
   "usage_steps": [
-    "Introduce ingreso neto objetivo, gastos anuales, reserva fiscal, horas facturables, semanas libres y moneda.",
-    "Revisa tarifa por hora, tarifa diaria, objetivo mensual y objetivo anual de ingresos y ajusta los supuestos que afectan al resultado.",
-    "Copia la mejor versión en tu perfil, campaña, hoja de cálculo, código o documentación.",
-    "Genera otra variación cuando cambien la audiencia, el precio, el formato o los datos de origen."
+    "Introduce el ingreso anual que quieres conservar.",
+    "Añade gastos anuales, porcentaje fiscal, billable hours semanales, semanas libres y moneda.",
+    "Revisa hourly rate, day rate, monthly revenue, yearly revenue y horas facturables anuales.",
+    "Ajusta horas o vacaciones para ver cómo cambia la tarifa necesaria."
   ],
   "usage_examples": [
-    "Úsalo cuando necesites convertir metas de ingreso, gastos, reserva fiscal, horas facturables y vacaciones en tarifas freelance y quieras un punto de partida editable.",
-    "Compara diferentes entradas antes de publicar o compartir el resultado.",
-    "Crea un resultado listo para copiar en una nota de cliente, checklist interno, tienda, perfil o entrega técnica."
+    "Estima una tarifa por hora de consultoría desde un objetivo anual.",
+    "Compara una semana de 20 y 30 horas facturables antes de fijar day rate.",
+    "Prepara una nota de precio para una propuesta y ajústala con costes reales."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Sí. Calculadora de tarifas freelance funciona gratis en el navegador y no requiere cuenta."
     },
     {
-      "question": "¿La herramienta sube mis datos?",
-      "answer": "No. Está diseñada para hacer borradores, cálculos o conversiones rápidas en el navegador."
+      "question": "¿Sustituye asesoría fiscal o contable?",
+      "answer": "No. Es una calculadora de planificación; consulta a un profesional para impuestos y estructura legal."
     },
     {
-      "question": "¿Qué debo revisar antes de usar el resultado?",
-      "answer": "Comprueba supuestos, tasas, moneda y costos reales antes de usar los números para precios o planificación."
+      "question": "¿Qué son billable hours?",
+      "answer": "Son horas que el cliente pagará, no todas las horas de administración, ventas o soporte no facturado."
     },
     {
-      "question": "¿Para quién es mejor Calculadora de tarifas freelance?",
-      "answer": "Para freelancers, consultores, agencias y profesionales independientes que planifican precios sostenibles."
+      "question": "¿Por qué sube la tarifa al tomar más semanas libres?",
+      "answer": "El mismo objetivo anual se reparte entre menos semanas facturables."
     }
   ]
 }

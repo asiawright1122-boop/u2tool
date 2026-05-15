@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Docker-Run-zu-Docker-Compose-Konverter ist ein browserbasiertes Docker-Konverter für einen docker run-Befehl in einen Docker-Compose-Service als Startpunkt zu verwandeln. Gib einen docker run-Befehl mit Image, Name, Ports, Umgebungsvariablen, Volumes und Restart-Policy ein; das Tool liefert Compose-YAML mit Service, Image, Ports, Environment, Volumes, Restart und Command. Nutze es, um einen ersten Entwurf zu erstellen, Annahmen zu vergleichen und ein sauberes Ergebnis zu kopieren, ohne Eingaben an einen Server zu senden.",
+  "detailed_description": "Docker-Run-zu-Docker-Compose-Konverter wandelt einen einzelnen docker run Befehl in ein erstes Compose YAML um. Er erkennt --name, -p/--publish, -e/--env, -v/--volume, --restart, --network, image und command und ordnet sie service, image, ports, environment, volumes, restart und network_mode zu.",
   "usage_steps": [
-    "Gib einen docker run-Befehl mit Image, Name, Ports, Umgebungsvariablen, Volumes und Restart-Policy ein.",
-    "Prüfe Compose-YAML mit Service, Image, Ports, Environment, Volumes, Restart und Command und passe Annahmen an, die das Ergebnis beeinflussen.",
-    "Kopiere die beste Version in Profil, Kampagne, Tabelle, Codebasis oder Dokumentation.",
-    "Erzeuge eine neue Variante, wenn Zielgruppe, Preis, Format oder Quelldaten wechseln."
+    "Füge den docker run Befehl ein.",
+    "Prüfe service, image, ports, environment, volumes, restart und command.",
+    "Ergänze nicht erkannte flags, secrets, health checks oder Multi-Service-Abhängigkeiten manuell.",
+    "Validiere YAML mit Docker Compose in deiner Umgebung."
   ],
   "usage_examples": [
-    "Nutze es, wenn du einen docker run-Befehl in einen Docker-Compose-Service als Startpunkt zu verwandeln brauchst und einen editierbaren Startpunkt möchtest.",
-    "Vergleiche unterschiedliche Eingaben, bevor du das Ergebnis veröffentlichst oder teilst.",
-    "Erstelle ein kopierfertiges Ergebnis für Kundennotiz, interne Checkliste, Shop, Profil oder technische Übergabe."
+    "Nutze es für einen konkreten Workflow vor Import, Versand oder Veröffentlichung.",
+    "Vergleiche Eingaben und Ergebnis mit echten Daten, bevor du es weiterverwendest.",
+    "Halte URLs, Zahlen, claims und Plattformregeln mit deinen Quellen abgestimmt."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Ja. Docker-Run-zu-Docker-Compose-Konverter läuft kostenlos im Browser und erfordert kein Konto."
     },
     {
-      "question": "Lädt das Tool meine Eingaben hoch?",
-      "answer": "Nein. Es ist für schnelle Entwürfe, Berechnungen oder Konvertierungen im Browser gedacht."
+      "question": "Veröffentlicht oder verbindet es automatisch?",
+      "answer": "Nein. Es erstellt Text oder Berechnungen, die du selbst prüfst und verwendest."
     },
     {
-      "question": "Was sollte ich vor der Nutzung prüfen?",
-      "answer": "Validiere die konvertierte Ausgabe mit Ziel-App, Importer oder Runtime, bevor du sie produktiv nutzt."
+      "question": "Was sollte ich kontrollieren?",
+      "answer": "Kontrolliere Felder, URLs, Zahlen, claims und Regeln deines Zielsystems."
     },
     {
-      "question": "Für wen ist Docker-Run-zu-Docker-Compose-Konverter geeignet?",
-      "answer": "Für Entwickler, DevOps-Teams, Studierende und alle, die Container-Setups dokumentieren."
+      "question": "Kann ich das Ergebnis direkt nutzen?",
+      "answer": "Nutze es als Arbeitsgrundlage und passe es an echte Daten an."
     }
   ]
 }

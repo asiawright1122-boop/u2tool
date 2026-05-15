@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Calculadora de taxa freelance é um calculadora de valor no navegador para converter metas de renda, despesas, reserva de impostos, horas faturáveis e folgas em valores freelance. Informe renda líquida desejada, despesas anuais, reserva de impostos, horas faturáveis, semanas de folga e moeda; a ferramenta retorna valor por hora, diária, meta mensal e meta anual de receita. Use para criar um primeiro rascunho, comparar premissas e copiar um resultado limpo sem enviar seus dados para um servidor.",
+  "detailed_description": "Calculadora de taxa freelance transforma renda líquida desejada, despesas anuais, reserva de impostos, billable hours por semana, semanas de folga e moeda em hourly rate, day rate, monthly revenue e yearly revenue. Use para testar capacidade antes de propostas, consultoria ou retainers.",
   "usage_steps": [
-    "Informe renda líquida desejada, despesas anuais, reserva de impostos, horas faturáveis, semanas de folga e moeda.",
-    "Revise valor por hora, diária, meta mensal e meta anual de receita e ajuste as premissas que afetam o resultado.",
-    "Copie a melhor versão para seu perfil, campanha, planilha, código ou documentação.",
-    "Gere outra variação quando público, preço, formato ou dados de origem mudarem."
+    "Informe a renda anual que deseja manter.",
+    "Adicione despesas anuais, percentual de impostos, billable hours semanais, semanas de folga e moeda.",
+    "Revise hourly rate, day rate, monthly revenue, yearly revenue e horas faturáveis anuais.",
+    "Ajuste horas ou folgas para ver como a tarifa necessária muda."
   ],
   "usage_examples": [
-    "Use quando precisar de converter metas de renda, despesas, reserva de impostos, horas faturáveis e folgas em valores freelance e quiser um ponto de partida editável.",
-    "Compare entradas diferentes antes de publicar ou compartilhar o resultado.",
-    "Crie um resultado pronto para copiar em nota para cliente, checklist interno, loja, perfil ou entrega técnica."
+    "Estime uma tarifa de consultoria a partir de uma meta anual.",
+    "Compare 20 e 30 horas faturáveis por semana antes de definir day rate.",
+    "Prepare uma nota de preço para proposta e refine com custos reais."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Sim. Calculadora de taxa freelance funciona gratuitamente no navegador e não exige conta."
     },
     {
-      "question": "A ferramenta envia meus dados?",
-      "answer": "Não. Ela foi pensada para rascunhos, cálculos ou conversões rápidas no navegador."
+      "question": "Substitui orientação fiscal ou contábil?",
+      "answer": "Não. É uma calculadora de planejamento; consulte profissionais para impostos e estrutura legal."
     },
     {
-      "question": "O que devo revisar antes de usar o resultado?",
-      "answer": "Confira premissas, taxas, moeda e custos reais antes de usar os números para preço ou planejamento."
+      "question": "O que são billable hours?",
+      "answer": "São horas pagas pelo cliente, não todo o tempo gasto com vendas, administração ou suporte não faturado."
     },
     {
-      "question": "Para quem Calculadora de taxa freelance é indicado?",
-      "answer": "Para freelancers, consultores, agências e profissionais solo planejando preços sustentáveis."
+      "question": "Por que a tarifa sobe com mais folgas?",
+      "answer": "A mesma meta anual é distribuída por menos semanas faturáveis."
     }
   ]
 }

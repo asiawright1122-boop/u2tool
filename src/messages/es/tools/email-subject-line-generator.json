@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Generador de asuntos de email es un generador de asuntos en el navegador para idear asuntos de email según campaña, audiencia, beneficio y tono. Añade tema de campaña, audiencia, beneficio y tono; la herramienta devuelve ideas de asuntos para lanzamientos, newsletters, promociones y nurturing. Úsala para crear un primer borrador, comparar supuestos y copiar un resultado limpio sin enviar tus datos a un servidor.",
+  "detailed_description": "Generador de asuntos de email crea opciones numeradas de subject line desde campaign topic, audience, benefit y tone. Ayuda a comparar ángulos directos, de curiosidad, checklist, lanzamiento y benefit-first antes de probarlos en tu plataforma de email.",
   "usage_steps": [
-    "Introduce tema de campaña, audiencia, beneficio y tono.",
-    "Revisa ideas de asuntos para lanzamientos, newsletters, promociones y nurturing y ajusta los supuestos que afectan al resultado.",
-    "Copia la mejor versión en tu perfil, campaña, hoja de cálculo, código o documentación.",
-    "Genera otra variación cuando cambien la audiencia, el precio, el formato o los datos de origen."
+    "Introduce el tema de campaña, audiencia, beneficio principal y tono.",
+    "Revisa las subject lines numeradas e identifica el ángulo de cada una.",
+    "Ajusta nombres, claims, urgencia y oferta según el email real.",
+    "Prueba la versión final en tu plataforma con sus reglas de envío y A/B testing."
   ],
   "usage_examples": [
-    "Úsalo cuando necesites idear asuntos de email según campaña, audiencia, beneficio y tono y quieras un punto de partida editable.",
-    "Compara diferentes entradas antes de publicar o compartir el resultado.",
-    "Crea un resultado listo para copiar en una nota de cliente, checklist interno, tienda, perfil o entrega técnica."
+    "Genera asuntos para un lanzamiento de feature, curso, plantilla o producto.",
+    "Convierte un tema de newsletter en una promesa más clara para el lector.",
+    "Compara ángulos de cold outreach antes de segmentar."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Sí. Generador de asuntos de email funciona gratis en el navegador y no requiere cuenta."
     },
     {
-      "question": "¿La herramienta sube mis datos?",
-      "answer": "No. Está diseñada para hacer borradores, cálculos o conversiones rápidas en el navegador."
+      "question": "¿Envía emails o mide open rates?",
+      "answer": "No. Solo genera subject lines; el envío y analytics ocurren en tu plataforma."
     },
     {
-      "question": "¿Qué debo revisar antes de usar el resultado?",
-      "answer": "Revisa redacción, promesas, longitud, tono de marca y reglas de la plataforma antes de publicar."
+      "question": "¿Qué escribo en benefit?",
+      "answer": "El resultado que le importa al lector: ahorrar tiempo, aprender un flujo, reducir coste o decidir mejor."
     },
     {
-      "question": "¿Para quién es mejor Generador de asuntos de email?",
-      "answer": "Para marketers, founders, newsletters, ecommerce y equipos que prueban ángulos de email."
+      "question": "¿Puedo usar una opción tal cual?",
+      "answer": "Revísala antes: claims, cumplimiento, personalización y voz de marca."
     }
   ]
 }

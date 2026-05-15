@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Générateur d’objets d’email est un générateur d’objet dans le navigateur pour trouver des objets d’e-mail selon campagne, audience, bénéfice et ton. Ajoutez sujet de campagne, audience, bénéfice et ton ; l’outil renvoie idées d’objets pour lancements, newsletters, promotions et nurturing. Utilisez-le pour créer un premier brouillon, comparer des hypothèses et copier un résultat propre sans envoyer vos données à un serveur.",
+  "detailed_description": "Générateur d’objets d’email crée des subject lines numérotées depuis campaign topic, audience, benefit et tone. Il aide à comparer angles directs, curiosité, checklist, lancement et benefit-first avant test dans votre plateforme email.",
   "usage_steps": [
-    "Saisissez sujet de campagne, audience, bénéfice et ton.",
-    "Vérifiez idées d’objets pour lancements, newsletters, promotions et nurturing et ajustez les hypothèses qui influencent le résultat.",
-    "Copiez la meilleure version dans votre profil, campagne, feuille de calcul, code ou documentation.",
-    "Générez une autre variante quand l’audience, le prix, le format ou les données sources changent."
+    "Saisissez sujet de campagne, audience, benefit principal et tone.",
+    "Relisez les subject lines et identifiez l’angle de chaque option.",
+    "Ajustez noms, claims, urgence et offre selon l’email réel.",
+    "Testez dans votre plateforme avec ses règles d’envoi et A/B testing."
   ],
   "usage_examples": [
-    "Utilisez-le quand vous devez trouver des objets d’e-mail selon campagne, audience, bénéfice et ton et voulez un point de départ modifiable.",
-    "Comparez plusieurs entrées avant de publier ou partager le résultat.",
-    "Créez un résultat prêt à copier pour une note client, une checklist interne, une boutique, un profil ou une transmission technique."
+    "Utilisez-le dans un workflow réel avant import, envoi ou publication.",
+    "Comparez les champs et le résultat avec vos données avant de le réutiliser.",
+    "Gardez URLs, chiffres, claims et règles de plateforme alignés avec vos sources."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Oui. Générateur d’objets d’email fonctionne gratuitement dans le navigateur et ne nécessite pas de compte."
     },
     {
-      "question": "L’outil envoie-t-il mes données ?",
-      "answer": "Non. Il est conçu pour faire des brouillons, calculs ou conversions rapides dans le navigateur."
+      "question": "Automatise-t-il la publication ?",
+      "answer": "Non. Il génère un texte ou un calcul à vérifier, puis vous l’utilisez dans votre propre outil."
     },
     {
-      "question": "Que faut-il vérifier avant d’utiliser le résultat ?",
-      "answer": "Vérifiez le texte, les promesses, la longueur, le ton de marque et les règles de la plateforme avant publication."
+      "question": "Que faut-il contrôler ?",
+      "answer": "Contrôlez les champs, URLs, montants, claims et règles propres à votre contexte."
     },
     {
-      "question": "À qui s’adresse Générateur d’objets d’email ?",
-      "answer": "Pour marketeurs, fondateurs, newsletters, ecommerce et équipes testant des angles e-mail."
+      "question": "Puis-je utiliser le résultat tel quel ?",
+      "answer": "Utilisez-le comme base de travail et adaptez-le à vos données réelles."
     }
   ]
 }

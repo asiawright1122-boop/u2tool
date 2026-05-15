@@ -1,15 +1,15 @@
 {
-  "detailed_description": "llms.txt-Generator ist ein browserbasiertes llms.txt-Generator für eine llms.txt-Datei zu entwerfen, die eine Site zusammenfasst und KI-Systeme zu priorisierten Seiten führt. Gib Site-Name, kanonische URL, Zusammenfassung, Zielgruppe und Prioritätsseiten ein; das Tool liefert einen strukturierten llms.txt-Entwurf mit Zusammenfassung, Seiten und Nutzungshinweisen. Nutze es, um einen ersten Entwurf zu erstellen, Annahmen zu vergleichen und ein sauberes Ergebnis zu kopieren, ohne Eingaben an einen Server zu senden.",
+  "detailed_description": "llms.txt-Generator erstellt aus Site-Name, canonical URL, Zusammenfassung, Zielgruppe und priority pages einen editierbaren llms.txt Entwurf. Die Ausgabe enthält Official site, Audience, Key Pages und Usage Notes zur Prüfung vor der Veröffentlichung.",
   "usage_steps": [
-    "Gib Site-Name, kanonische URL, Zusammenfassung, Zielgruppe und Prioritätsseiten ein.",
-    "Prüfe einen strukturierten llms.txt-Entwurf mit Zusammenfassung, Seiten und Nutzungshinweisen und passe Annahmen an, die das Ergebnis beeinflussen.",
-    "Kopiere die beste Version in Profil, Kampagne, Tabelle, Codebasis oder Dokumentation.",
-    "Erzeuge eine neue Variante, wenn Zielgruppe, Preis, Format oder Quelldaten wechseln."
+    "Gib Site-Name, canonical URL, Zusammenfassung, Zielgruppe und Prioritätsseiten ein.",
+    "Erfasse priority pages als Titel, URL und optionale Notiz.",
+    "Prüfe Key Pages, Usage Notes und canonical URLs.",
+    "Übernimm den Text erst nach Kontrolle in deinen Publishing-Prozess."
   ],
   "usage_examples": [
-    "Nutze es, wenn du eine llms.txt-Datei zu entwerfen, die eine Site zusammenfasst und KI-Systeme zu priorisierten Seiten führt brauchst und einen editierbaren Startpunkt möchtest.",
-    "Vergleiche unterschiedliche Eingaben, bevor du das Ergebnis veröffentlichst oder teilst.",
-    "Erstelle ein kopierfertiges Ergebnis für Kundennotiz, interne Checkliste, Shop, Profil oder technische Übergabe."
+    "Nutze es für einen konkreten Workflow vor Import, Versand oder Veröffentlichung.",
+    "Vergleiche Eingaben und Ergebnis mit echten Daten, bevor du es weiterverwendest.",
+    "Halte URLs, Zahlen, claims und Plattformregeln mit deinen Quellen abgestimmt."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Ja. llms.txt-Generator läuft kostenlos im Browser und erfordert kein Konto."
     },
     {
-      "question": "Lädt das Tool meine Eingaben hoch?",
-      "answer": "Nein. Es ist für schnelle Entwürfe, Berechnungen oder Konvertierungen im Browser gedacht."
+      "question": "Veröffentlicht oder verbindet es automatisch?",
+      "answer": "Nein. Es erstellt Text oder Berechnungen, die du selbst prüfst und verwendest."
     },
     {
-      "question": "Was sollte ich vor der Nutzung prüfen?",
-      "answer": "Prüfe Formulierungen, Aussagen, Länge, Markenstimme und Plattformregeln vor der Veröffentlichung."
+      "question": "Was sollte ich kontrollieren?",
+      "answer": "Kontrolliere Felder, URLs, Zahlen, claims und Regeln deines Zielsystems."
     },
     {
-      "question": "Für wen ist llms.txt-Generator geeignet?",
-      "answer": "Für Site-Betreiber, SEO-Teams, Doku-Teams und Entwickler mit Fokus auf KI-Auffindbarkeit."
+      "question": "Kann ich das Ergebnis direkt nutzen?",
+      "answer": "Nutze es als Arbeitsgrundlage und passe es an echte Daten an."
     }
   ]
 }

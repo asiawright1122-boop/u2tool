@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Convertidor de vCard a CSV es un conversor de contactos en el navegador para convertir bloques de contactos vCard en filas CSV para hojas de cálculo. Añade uno o más contactos vCard y el delimitador preferido; la herramienta devuelve cabeceras y filas CSV para nombre, email, teléfono, empresa, cargo y dirección. Úsala para crear un primer borrador, comparar supuestos y copiar un resultado limpio sin enviar tus datos a un servidor.",
+  "detailed_description": "Convertidor de vCard a CSV convierte bloques BEGIN:VCARD pegados en filas CSV listas para revisar en una hoja de cálculo. Elige coma, punto y coma o tabulación, y comprueba columnas como first_name,last_name,full_name,email,phone,company,title,address antes de importar a una hoja, CRM o flujo de limpieza.",
   "usage_steps": [
-    "Introduce uno o más contactos vCard y el delimitador preferido.",
-    "Revisa cabeceras y filas CSV para nombre, email, teléfono, empresa, cargo y dirección y ajusta los supuestos que afectan al resultado.",
-    "Copia la mejor versión en tu perfil, campaña, hoja de cálculo, código o documentación.",
-    "Genera otra variación cuando cambien la audiencia, el precio, el formato o los datos de origen."
+    "Pega uno o varios bloques BEGIN:VCARD desde una exportación .vcf.",
+    "Elige el delimitador CSV: coma, punto y coma o tabulación.",
+    "Revisa el número de contactos y las columnas de nombre, email, teléfono, empresa, cargo y dirección.",
+    "Copia el CSV y pruébalo primero con una hoja de cálculo o importador CRM."
   ],
   "usage_examples": [
-    "Úsalo cuando necesites convertir bloques de contactos vCard en filas CSV para hojas de cálculo y quieras un punto de partida editable.",
-    "Compara diferentes entradas antes de publicar o compartir el resultado.",
-    "Crea un resultado listo para copiar en una nota de cliente, checklist interno, tienda, perfil o entrega técnica."
+    "Convierte una exportación VCF del teléfono en filas que puedas inspeccionar.",
+    "Comprueba si email, phone, company, title y address se conservan antes de importar a un CRM.",
+    "Prepara un CSV rápido para entregar una pequeña lista de contactos."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Sí. Convertidor de vCard a CSV funciona gratis en el navegador y no requiere cuenta."
     },
     {
-      "question": "¿La herramienta sube mis datos?",
-      "answer": "No. Está diseñada para hacer borradores, cálculos o conversiones rápidas en el navegador."
+      "question": "¿Importa contactos automáticamente en un CRM?",
+      "answer": "No. Solo crea texto CSV; después debes copiarlo y usar el importador de tu CRM u hoja de cálculo."
     },
     {
-      "question": "¿Qué debo revisar antes de usar el resultado?",
-      "answer": "Valida la salida convertida con la app, importador o runtime de destino antes de usarla en producción."
+      "question": "¿Qué campos exporta?",
+      "answer": "Exporta first_name,last_name,full_name,email,phone,company,title,address a partir de campos vCard comunes."
     },
     {
-      "question": "¿Para quién es mejor Convertidor de vCard a CSV?",
-      "answer": "Para equipos que llevan contactos a hojas de cálculo, CRM, herramientas de email o flujos de limpieza."
+      "question": "¿Qué pasa con vCards complejas?",
+      "answer": "Revisa el resultado si hay campos personalizados, varios teléfonos o direcciones con formato poco común."
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Freelance-Stundensatzrechner ist ein browserbasiertes Honorarrechner für Einkommensziel, Ausgaben, Steuerrücklage, abrechenbare Stunden und Urlaub in Freelance-Sätze umzuwandeln. Gib Ziel-Nettoeinkommen, Jahresausgaben, Steuerrücklage, abrechenbare Stunden, freie Wochen und Währung ein; das Tool liefert Stundensatz, Tagessatz, monatliches und jährliches Umsatzziel. Nutze es, um einen ersten Entwurf zu erstellen, Annahmen zu vergleichen und ein sauberes Ergebnis zu kopieren, ohne Eingaben an einen Server zu senden.",
+  "detailed_description": "Freelance-Stundensatzrechner macht aus Ziel-Nettoeinkommen, Jahreskosten, Steuerrücklage, wöchentlichen billable hours, freien Wochen und Währung hourly rate, day rate, monthly revenue und yearly revenue. So prüfst du Kapazität vor Angeboten oder retainers.",
   "usage_steps": [
-    "Gib Ziel-Nettoeinkommen, Jahresausgaben, Steuerrücklage, abrechenbare Stunden, freie Wochen und Währung ein.",
-    "Prüfe Stundensatz, Tagessatz, monatliches und jährliches Umsatzziel und passe Annahmen an, die das Ergebnis beeinflussen.",
-    "Kopiere die beste Version in Profil, Kampagne, Tabelle, Codebasis oder Dokumentation.",
-    "Erzeuge eine neue Variante, wenn Zielgruppe, Preis, Format oder Quelldaten wechseln."
+    "Gib gewünschtes Jahresnetto ein.",
+    "Füge Kosten, Steuerprozentsatz, billable hours pro Woche, freie Wochen und Währung hinzu.",
+    "Prüfe hourly rate, day rate, monthly revenue, yearly revenue und Jahresstunden.",
+    "Ändere Stunden oder freie Wochen, um den Effekt auf den Satz zu sehen."
   ],
   "usage_examples": [
-    "Nutze es, wenn du Einkommensziel, Ausgaben, Steuerrücklage, abrechenbare Stunden und Urlaub in Freelance-Sätze umzuwandeln brauchst und einen editierbaren Startpunkt möchtest.",
-    "Vergleiche unterschiedliche Eingaben, bevor du das Ergebnis veröffentlichst oder teilst.",
-    "Erstelle ein kopierfertiges Ergebnis für Kundennotiz, interne Checkliste, Shop, Profil oder technische Übergabe."
+    "Nutze es für einen konkreten Workflow vor Import, Versand oder Veröffentlichung.",
+    "Vergleiche Eingaben und Ergebnis mit echten Daten, bevor du es weiterverwendest.",
+    "Halte URLs, Zahlen, claims und Plattformregeln mit deinen Quellen abgestimmt."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Ja. Freelance-Stundensatzrechner läuft kostenlos im Browser und erfordert kein Konto."
     },
     {
-      "question": "Lädt das Tool meine Eingaben hoch?",
-      "answer": "Nein. Es ist für schnelle Entwürfe, Berechnungen oder Konvertierungen im Browser gedacht."
+      "question": "Veröffentlicht oder verbindet es automatisch?",
+      "answer": "Nein. Es erstellt Text oder Berechnungen, die du selbst prüfst und verwendest."
     },
     {
-      "question": "Was sollte ich vor der Nutzung prüfen?",
-      "answer": "Prüfe Annahmen, Sätze, Währung und echte Kosten, bevor du die Zahlen für Preise oder Planung nutzt."
+      "question": "Was sollte ich kontrollieren?",
+      "answer": "Kontrolliere Felder, URLs, Zahlen, claims und Regeln deines Zielsystems."
     },
     {
-      "question": "Für wen ist Freelance-Stundensatzrechner geeignet?",
-      "answer": "Für Freelancer, Berater, Agenturen und Solo-Operatoren mit nachhaltiger Preisplanung."
+      "question": "Kann ich das Ergebnis direkt nutzen?",
+      "answer": "Nutze es als Arbeitsgrundlage und passe es an echte Daten an."
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Gerador de llms.txt é um gerador de llms.txt no navegador para redigir um llms.txt que resume um site e orienta sistemas de IA para páginas prioritárias. Informe nome do site, URL canônica, resumo, público e lista de páginas prioritárias; a ferramenta retorna um rascunho llms.txt estruturado com resumo, páginas-chave e notas de uso. Use para criar um primeiro rascunho, comparar premissas e copiar um resultado limpo sem enviar seus dados para um servidor.",
+  "detailed_description": "Gerador de llms.txt cria um rascunho editável de llms.txt a partir do nome do site, canonical URL, resumo, público e priority pages. A saída organiza resumo, site oficial, público, Key Pages e Usage Notes para revisão antes da publicação.",
   "usage_steps": [
-    "Informe nome do site, URL canônica, resumo, público e lista de páginas prioritárias.",
-    "Revise um rascunho llms.txt estruturado com resumo, páginas-chave e notas de uso e ajuste as premissas que afetam o resultado.",
-    "Copie a melhor versão para seu perfil, campanha, planilha, código ou documentação.",
-    "Gere outra variação quando público, preço, formato ou dados de origem mudarem."
+    "Insira nome do site, canonical URL, resumo, público e páginas prioritárias.",
+    "Adicione priority pages como linhas com título, URL e nota opcional.",
+    "Revise Key Pages, Usage Notes e a orientação sobre canonical URLs.",
+    "Copie para seu próprio fluxo de publicação somente depois de conferir."
   ],
   "usage_examples": [
-    "Use quando precisar de redigir um llms.txt que resume um site e orienta sistemas de IA para páginas prioritárias e quiser um ponto de partida editável.",
-    "Compare entradas diferentes antes de publicar ou compartilhar o resultado.",
-    "Crie um resultado pronto para copiar em nota para cliente, checklist interno, loja, perfil ou entrega técnica."
+    "Rascunhe um llms.txt compacto para SaaS com documentação, preços e páginas de produto.",
+    "Prepare uma lista revisável de páginas-chave para SEO ou documentação.",
+    "Explique quando sistemas AI devem preferir canonical URLs e evitar claims sem suporte."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Sim. Gerador de llms.txt funciona gratuitamente no navegador e não exige conta."
     },
     {
-      "question": "A ferramenta envia meus dados?",
-      "answer": "Não. Ela foi pensada para rascunhos, cálculos ou conversões rápidas no navegador."
+      "question": "Publica llms.txt no meu site?",
+      "answer": "Não. Ele só gera texto; você ainda precisa adicionar o arquivo ao site ou hosting."
     },
     {
-      "question": "O que devo revisar antes de usar o resultado?",
-      "answer": "Revise texto, promessas, tamanho, voz da marca e regras da plataforma antes de publicar."
+      "question": "Garante que sistemas AI vão ler?",
+      "answer": "Não. Não garante leitura, obediência ou citação por crawlers ou sistemas AI."
     },
     {
-      "question": "Para quem Gerador de llms.txt é indicado?",
-      "answer": "Para donos de sites, equipes SEO, documentação e desenvolvedores melhorando descoberta por IA."
+      "question": "O que revisar antes de publicar?",
+      "answer": "Confira cada URL, remova claims sem suporte e alinhe as páginas à estrutura canônica."
     }
   ]
 }

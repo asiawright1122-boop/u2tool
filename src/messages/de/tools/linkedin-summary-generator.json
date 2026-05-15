@@ -1,15 +1,15 @@
 {
-  "detailed_description": "LinkedIn-Zusammenfassungsgenerator ist ein browserbasiertes Zusammenfassungs-Generator für einen LinkedIn-Info-Abschnitt zu entwerfen, der Erfahrung, Skills, Erfolg und Zielgruppe verbindet. Gib Rolle, Erfahrung, Skills, Erfolg, Zielgruppe und Ton ein; das Tool liefert einen kompakten Info-Entwurf mit Positionierung, Beleg und Kollaborationswinkel. Nutze es, um einen ersten Entwurf zu erstellen, Annahmen zu vergleichen und ein sauberes Ergebnis zu kopieren, ohne Eingaben an einen Server zu senden.",
+  "detailed_description": "LinkedIn-Zusammenfassungsgenerator formuliert einen editierbaren LinkedIn About Abschnitt aus experience, skills, achievement und audience. Gib Rolle, Hintergrund, Beleg und tone ein und prüfe den Text vor dem Einfügen.",
   "usage_steps": [
-    "Gib Rolle, Erfahrung, Skills, Erfolg, Zielgruppe und Ton ein.",
-    "Prüfe einen kompakten Info-Entwurf mit Positionierung, Beleg und Kollaborationswinkel und passe Annahmen an, die das Ergebnis beeinflussen.",
-    "Kopiere die beste Version in Profil, Kampagne, Tabelle, Codebasis oder Dokumentation.",
-    "Erzeuge eine neue Variante, wenn Zielgruppe, Preis, Format oder Quelldaten wechseln."
+    "Gib Rolle, Erfahrung, skills, achievement, audience und tone ein.",
+    "Prüfe Positionierung, Beleg und Kooperationswinkel.",
+    "Ersetze vage Aussagen durch reale Projekte, Branchen, Tools oder Ergebnisse.",
+    "Füge den geprüften Text manuell in LinkedIn ein."
   ],
   "usage_examples": [
-    "Nutze es, wenn du einen LinkedIn-Info-Abschnitt zu entwerfen, der Erfahrung, Skills, Erfolg und Zielgruppe verbindet brauchst und einen editierbaren Startpunkt möchtest.",
-    "Vergleiche unterschiedliche Eingaben, bevor du das Ergebnis veröffentlichst oder teilst.",
-    "Erstelle ein kopierfertiges Ergebnis für Kundennotiz, interne Checkliste, Shop, Profil oder technische Übergabe."
+    "Nutze es für einen konkreten Workflow vor Import, Versand oder Veröffentlichung.",
+    "Vergleiche Eingaben und Ergebnis mit echten Daten, bevor du es weiterverwendest.",
+    "Halte URLs, Zahlen, claims und Plattformregeln mit deinen Quellen abgestimmt."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Ja. LinkedIn-Zusammenfassungsgenerator läuft kostenlos im Browser und erfordert kein Konto."
     },
     {
-      "question": "Lädt das Tool meine Eingaben hoch?",
-      "answer": "Nein. Es ist für schnelle Entwürfe, Berechnungen oder Konvertierungen im Browser gedacht."
+      "question": "Veröffentlicht oder verbindet es automatisch?",
+      "answer": "Nein. Es erstellt Text oder Berechnungen, die du selbst prüfst und verwendest."
     },
     {
-      "question": "Was sollte ich vor der Nutzung prüfen?",
-      "answer": "Prüfe Formulierungen, Aussagen, Länge, Markenstimme und Plattformregeln vor der Veröffentlichung."
+      "question": "Was sollte ich kontrollieren?",
+      "answer": "Kontrolliere Felder, URLs, Zahlen, claims und Regeln deines Zielsystems."
     },
     {
-      "question": "Für wen ist LinkedIn-Zusammenfassungsgenerator geeignet?",
-      "answer": "Für Fachleute, die ihr Profil überarbeiten, Jobsuche vorbereiten oder Positionierung schärfen."
+      "question": "Kann ich das Ergebnis direkt nutzen?",
+      "answer": "Nutze es als Arbeitsgrundlage und passe es an echte Daten an."
     }
   ]
 }

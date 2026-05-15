@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Etsy 费用计算器 是一个浏览器内运行的费用计算器，用于用可编辑的 Etsy 类假设估算平台费用、净收入、利润和利润率。输入售价、运费、成本、刊登费、交易费率、支付费率和广告费率后，工具会生成费用拆分、净收入、预估利润和利润率。适合快速起草、比较假设并复制可用结果，输入内容不会上传到服务器。",
+  "detailed_description": "Etsy 费用计算器 使用可编辑的 Etsy-style fee assumptions 估算 total fees、net revenue、profit 和 profit margin。输入售价、运费收入、商品成本、发货成本、listing fee、transaction rate、payment rate、fixed fee、offsite ads rate 和币种，用来做定价前的情景测算。",
   "usage_steps": [
-    "输入售价、运费、成本、刊登费、交易费率、支付费率和广告费率。",
-    "查看费用拆分、净收入、预估利润和利润率，并调整会影响结果的关键假设。",
-    "把最合适的结果复制到资料页、活动、表格、代码库或文档中。",
-    "当受众、价格、格式或源数据变化时，再生成一个新版本进行比较。"
+    "输入商品售价、运费收入、商品成本和发货成本。",
+    "设置 listing fee、transaction rate、payment rate、fixed fee 和 offsite ads rate。",
+    "查看 gross revenue、total fees、net revenue、profit 和 profit margin。",
+    "定价前请对照你的卖家账户、地区、税费和平台当前费用规则。"
   ],
   "usage_examples": [
-    "当你需要用可编辑的 Etsy 类假设估算平台费用、净收入、利润和利润率时，用它先得到可编辑的起点。",
-    "调整不同输入，比较发布或分享前的结果差异。",
-    "为客户说明、内部清单、店铺、个人资料或技术交接生成可复制结果。"
+    "估算手工商品扣除成本、发货和处理费用后的利润。",
+    "比较调整运费收入或 offsite ads rate 后的 profit margin。",
+    "把新 listing 的价格先放入测算，再更新店铺表格。"
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "是的。Etsy 费用计算器 可直接在浏览器中免费使用，无需注册账户。"
     },
     {
-      "question": "工具会上传我的输入吗？",
-      "answer": "不会。该工具用于在浏览器本地完成快速起草、计算或转换。"
+      "question": "这些是 Etsy 官方实时费率吗？",
+      "answer": "不是。工具使用可编辑的 Etsy-style 假设，请以 Etsy 当前费用说明和你的卖家账户为准。"
     },
     {
-      "question": "使用结果前应该检查什么？",
-      "answer": "用于定价或规划前，请检查假设、费率、货币和真实成本。"
+      "question": "应该填哪些成本？",
+      "answer": "建议把 item cost 和 shipping cost 分开填写，这样 profit 更接近真实履约成本。"
     },
     {
-      "question": "Etsy 费用计算器 适合谁使用？",
-      "answer": "适合在上架前测试商品定价、运费回收和费用假设的平台卖家。"
+      "question": "包含税务或所有卖家费用吗？",
+      "answer": "不包含。它是规划计算器，不是税务、会计或平台政策建议。"
     }
   ]
 }

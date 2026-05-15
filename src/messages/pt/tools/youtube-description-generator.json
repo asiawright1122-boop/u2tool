@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Gerador de descrições para YouTube é um gerador de descrições no navegador para transformar título, palavra-chave, público, links e CTA em uma descrição estruturada do YouTube. Informe título do vídeo, palavra-chave, público, CTA e links de recursos; a ferramenta retorna introdução, tópicos de aprendizado, seção de links, CTA e hashtags. Use para criar um primeiro rascunho, comparar premissas e copiar um resultado limpo sem enviar seus dados para um servidor.",
+  "detailed_description": "Gerador de descrições para YouTube transforma video title, keyword, audience, CTA e resource links em um rascunho estruturado de YouTube description. A saída inclui intro, learning bullets, links, CTA e hashtags para preparar descrições repetíveis antes de editar no YouTube Studio.",
   "usage_steps": [
-    "Informe título do vídeo, palavra-chave, público, CTA e links de recursos.",
-    "Revise introdução, tópicos de aprendizado, seção de links, CTA e hashtags e ajuste as premissas que afetam o resultado.",
-    "Copie a melhor versão para seu perfil, campanha, planilha, código ou documentação.",
-    "Gere outra variação quando público, preço, formato ou dados de origem mudarem."
+    "Informe título, keyword, público, CTA e um resource link por linha.",
+    "Revise intro, learning bullets, links, CTA e hashtags.",
+    "Substitua bullets genéricos por seções, timestamps, recursos ou ofertas reais.",
+    "Cole a descrição editada no YouTube Studio e confira links antes de publicar."
   ],
   "usage_examples": [
-    "Use quando precisar de transformar título, palavra-chave, público, links e CTA em uma descrição estruturada do YouTube e quiser um ponto de partida editável.",
-    "Compare entradas diferentes antes de publicar ou compartilhar o resultado.",
-    "Crie um resultado pronto para copiar em nota para cliente, checklist interno, loja, perfil ou entrega técnica."
+    "Crie formato repetível para tutoriais, demos ou vídeos educativos.",
+    "Transforme lista de recursos em uma seção de links mais limpa.",
+    "Prepare rascunho para calendário de conteúdo e ajuste ao vídeo final."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Sim. Gerador de descrições para YouTube funciona gratuitamente no navegador e não exige conta."
     },
     {
-      "question": "A ferramenta envia meus dados?",
-      "answer": "Não. Ela foi pensada para rascunhos, cálculos ou conversões rápidas no navegador."
+      "question": "Envia ou edita meu vídeo do YouTube?",
+      "answer": "Não. Só cria texto; upload, edição e publicação acontecem no YouTube Studio."
     },
     {
-      "question": "O que devo revisar antes de usar o resultado?",
-      "answer": "Revise texto, promessas, tamanho, voz da marca e regras da plataforma antes de publicar."
+      "question": "Como trata resource links?",
+      "answer": "Cada linha não vazia vira um item na seção de links e recursos."
     },
     {
-      "question": "Para quem Gerador de descrições para YouTube é indicado?",
-      "answer": "Para YouTubers, profissionais de marketing, educadores, founders e equipes que publicam vídeos com frequência."
+      "question": "O que revisar antes de publicar?",
+      "answer": "Se combina com o vídeo, links funcionam, hashtags são relevantes e claims estão corretos."
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
-  "detailed_description": "YouTube 描述生成器 是一个浏览器内运行的描述生成器，用于把视频标题、关键词、受众、链接和 CTA 组织成结构化 YouTube 描述。输入视频标题、目标关键词、受众、行动号召和资源链接后，工具会生成开头简介、学习要点、链接区、CTA 和话题标签。适合快速起草、比较假设并复制可用结果，输入内容不会上传到服务器。",
+  "detailed_description": "YouTube 描述生成器 会把 video title、keyword、audience、CTA 和 resource links 整理成 YouTube description 草稿。输出包含 intro、learning bullets、links、CTA 和 hashtags，方便创作者在 YouTube Studio 发布前统一描述结构。",
   "usage_steps": [
-    "输入视频标题、目标关键词、受众、行动号召和资源链接。",
-    "查看开头简介、学习要点、链接区、CTA 和话题标签，并调整会影响结果的关键假设。",
-    "把最合适的结果复制到资料页、活动、表格、代码库或文档中。",
-    "当受众、价格、格式或源数据变化时，再生成一个新版本进行比较。"
+    "输入视频标题、目标 keyword、受众、CTA，并每行添加一个 resource link。",
+    "查看生成的 intro、learning bullets、links、CTA 和 hashtags。",
+    "用真实章节、时间戳、资源或 offer 替换泛化项目。",
+    "发布前在 YouTube Studio 中检查链接、标签和描述是否匹配视频内容。"
   ],
   "usage_examples": [
-    "当你需要把视频标题、关键词、受众、链接和 CTA 组织成结构化 YouTube 描述时，用它先得到可编辑的起点。",
-    "调整不同输入，比较发布或分享前的结果差异。",
-    "为客户说明、内部清单、店铺、个人资料或技术交接生成可复制结果。"
+    "为教程、产品演示或教育视频建立可复用描述格式。",
+    "把资源列表整理为更清晰的 links section。",
+    "先为内容日历生成描述草稿，再按最终视频调整。"
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "是的。YouTube 描述生成器 可直接在浏览器中免费使用，无需注册账户。"
     },
     {
-      "question": "工具会上传我的输入吗？",
-      "answer": "不会。该工具用于在浏览器本地完成快速起草、计算或转换。"
+      "question": "会上传或编辑我的 YouTube 视频吗？",
+      "answer": "不会。它只生成描述文本，上传、编辑和发布仍在 YouTube Studio 完成。"
     },
     {
-      "question": "使用结果前应该检查什么？",
-      "answer": "发布前请检查措辞、承诺、长度、品牌语气以及平台规则。"
+      "question": "resource links 如何处理？",
+      "answer": "链接字段中的每个非空行都会变成 links and resources 区块中的一个项目。"
     },
     {
-      "question": "YouTube 描述生成器 适合谁使用？",
-      "answer": "适合 YouTuber、营销人员、教育者、创业者和持续发布视频内容的团队。"
+      "question": "发布前要检查什么？",
+      "answer": "确认描述符合实际视频、链接正确、hashtags 相关，并删除不准确的声明。"
     }
   ]
 }

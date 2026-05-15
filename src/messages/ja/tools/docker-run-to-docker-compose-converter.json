@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Docker RunからDocker Composeへの変換ツール は、docker runコマンドをDocker Composeサービスの出発点に変換するためのブラウザ内Docker変換ツールです。イメージ、名前、ポート、環境変数、ボリューム、再起動ポリシーを含むdocker runコマンドを入力すると、サービス名、イメージ、ポート、環境変数、ボリューム、再起動、commandを含むCompose YAMLを生成します。下書き作成、前提の比較、コピーしやすい結果の作成に使え、入力内容はサーバーへ送信されません。",
+  "detailed_description": "Docker RunからDocker Composeへの変換ツール は、1 つの docker run コマンドを初期 Compose YAML に変換します。--name、-p/--publish、-e/--env、-v/--volume、--restart、--network、image、command を読み取り、service、image、ports、environment、volumes、restart、network_mode に整理します。",
   "usage_steps": [
-    "イメージ、名前、ポート、環境変数、ボリューム、再起動ポリシーを含むdocker runコマンドを入力します。",
-    "サービス名、イメージ、ポート、環境変数、ボリューム、再起動、commandを含むCompose YAMLを確認し、結果に影響する前提を調整します。",
-    "最適な結果をプロフィール、キャンペーン、表計算、コード、またはドキュメントへコピーします。",
-    "対象者、価格、形式、元データが変わったら別バージョンを生成します。"
+    "変換したい docker run コマンドを貼り付けます。",
+    "service、image、ports、environment、volumes、restart、command を確認します。",
+    "未対応の flags、secrets、health checks、複数サービスの依存関係は手動で追加します。",
+    "実際に使う前に、自分の環境で Docker Compose の検証を行います。"
   ],
   "usage_examples": [
-    "docker runコマンドをDocker Composeサービスの出発点に変換する必要があるとき、編集可能な出発点として使えます。",
-    "公開や共有の前に入力を変えて結果の違いを比較できます。",
-    "クライアントメモ、社内チェックリスト、ストア、プロフィール、技術引き継ぎ用の結果を作れます。"
+    "README の単一コンテナ起動コマンドをローカル開発用 Compose service にします。",
+    "ports、environment、volume を docker run から YAML へ移します。",
+    "プロジェクト固有設定を加える前の starter Compose を作ります。"
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "はい。Docker RunからDocker Composeへの変換ツール はブラウザで無料で使え、アカウントは不要です。"
     },
     {
-      "question": "入力内容はアップロードされますか？",
-      "answer": "いいえ。素早い下書き、計算、変換をブラウザ内で行う設計です。"
+      "question": "Docker コンテナを実行または検証しますか？",
+      "answer": "いいえ。テキストを初期 YAML に変換するだけです。Docker Compose で別途検証してください。"
     },
     {
-      "question": "結果を使う前に何を確認すべきですか？",
-      "answer": "本番利用の前に、変換結果を対象アプリ、インポーター、実行環境で検証してください。"
+      "question": "複数コンテナ構成に対応しますか？",
+      "answer": "いいえ。1 回に 1 つの docker run を処理します。multi-service 構成は手動設計が必要です。"
     },
     {
-      "question": "Docker RunからDocker Composeへの変換ツール は誰に向いていますか？",
-      "answer": "開発者、DevOpsチーム、学生、コンテナ設定を文書化する人向けです。"
+      "question": "認識する flags は何ですか？",
+      "answer": "name、publish、env、volume、restart、network、image、command を中心に扱います。"
     }
   ]
 }

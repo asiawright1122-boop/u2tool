@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Calculateur de frais Etsy est un calculateur de frais dans le navigateur pour estimer frais, revenu net, bénéfice et marge avec des hypothèses Etsy modifiables. Ajoutez prix, livraison, coûts, frais de mise en ligne, taux de transaction, paiement et publicité ; l’outil renvoie détail des frais, revenu net, bénéfice estimé et marge. Utilisez-le pour créer un premier brouillon, comparer des hypothèses et copier un résultat propre sans envoyer vos données à un serveur.",
+  "detailed_description": "Calculateur de frais Etsy estime total fees, net revenue, profit et profit margin avec des Etsy-style fee assumptions modifiables. Renseignez prix, livraison facturée, coût produit, coût d’expédition, listing fee, transaction rate, payment rate, fixed fee, offsite ads rate et devise.",
   "usage_steps": [
-    "Saisissez prix, livraison, coûts, frais de mise en ligne, taux de transaction, paiement et publicité.",
-    "Vérifiez détail des frais, revenu net, bénéfice estimé et marge et ajustez les hypothèses qui influencent le résultat.",
-    "Copiez la meilleure version dans votre profil, campagne, feuille de calcul, code ou documentation.",
-    "Générez une autre variante quand l’audience, le prix, le format ou les données sources changent."
+    "Renseignez prix de vente, livraison facturée, coût produit et coût d’expédition.",
+    "Configurez listing fee, transaction rate, payment rate, fixed fee et offsite ads rate.",
+    "Vérifiez gross revenue, total fees, net revenue, profit et profit margin.",
+    "Comparez avec votre compte vendeur, pays, taxes et grille de frais actuelle."
   ],
   "usage_examples": [
-    "Utilisez-le quand vous devez estimer frais, revenu net, bénéfice et marge avec des hypothèses Etsy modifiables et voulez un point de départ modifiable.",
-    "Comparez plusieurs entrées avant de publier ou partager le résultat.",
-    "Créez un résultat prêt à copier pour une note client, une checklist interne, une boutique, un profil ou une transmission technique."
+    "Utilisez-le dans un workflow réel avant import, envoi ou publication.",
+    "Comparez les champs et le résultat avec vos données avant de le réutiliser.",
+    "Gardez URLs, chiffres, claims et règles de plateforme alignés avec vos sources."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Oui. Calculateur de frais Etsy fonctionne gratuitement dans le navigateur et ne nécessite pas de compte."
     },
     {
-      "question": "L’outil envoie-t-il mes données ?",
-      "answer": "Non. Il est conçu pour faire des brouillons, calculs ou conversions rapides dans le navigateur."
+      "question": "Automatise-t-il la publication ?",
+      "answer": "Non. Il génère un texte ou un calcul à vérifier, puis vous l’utilisez dans votre propre outil."
     },
     {
-      "question": "Que faut-il vérifier avant d’utiliser le résultat ?",
-      "answer": "Vérifiez les hypothèses, taux, devise et coûts réels avant d’utiliser les chiffres pour fixer un prix ou planifier."
+      "question": "Que faut-il contrôler ?",
+      "answer": "Contrôlez les champs, URLs, montants, claims et règles propres à votre contexte."
     },
     {
-      "question": "À qui s’adresse Calculateur de frais Etsy ?",
-      "answer": "Pour vendeurs marketplace qui testent prix, récupération des frais de livraison et hypothèses de frais."
+      "question": "Puis-je utiliser le résultat tel quel ?",
+      "answer": "Utilisez-le comme base de travail et adaptez-le à vos données réelles."
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
-  "detailed_description": "YouTube-Beschreibungsgenerator ist ein browserbasiertes Beschreibungs-Generator für Videotitel, Keyword, Zielgruppe, Links und CTA in eine strukturierte YouTube-Beschreibung zu verwandeln. Gib Videotitel, Ziel-Keyword, Zielgruppe, CTA und Ressourcenlinks ein; das Tool liefert Einleitung, Lernpunkte, Linkbereich, CTA und Hashtags. Nutze es, um einen ersten Entwurf zu erstellen, Annahmen zu vergleichen und ein sauberes Ergebnis zu kopieren, ohne Eingaben an einen Server zu senden.",
+  "detailed_description": "YouTube-Beschreibungsgenerator macht aus video title, keyword, audience, CTA und resource links einen strukturierten YouTube description Entwurf. Enthalten sind intro, learning bullets, links, CTA und hashtags für die Bearbeitung in YouTube Studio.",
   "usage_steps": [
-    "Gib Videotitel, Ziel-Keyword, Zielgruppe, CTA und Ressourcenlinks ein.",
-    "Prüfe Einleitung, Lernpunkte, Linkbereich, CTA und Hashtags und passe Annahmen an, die das Ergebnis beeinflussen.",
-    "Kopiere die beste Version in Profil, Kampagne, Tabelle, Codebasis oder Dokumentation.",
-    "Erzeuge eine neue Variante, wenn Zielgruppe, Preis, Format oder Quelldaten wechseln."
+    "Gib Titel, keyword, audience, CTA und je Zeile einen resource link ein.",
+    "Prüfe intro, learning bullets, links, CTA und hashtags.",
+    "Ersetze generische Punkte durch Kapitel, timestamps, Ressourcen oder echte Angebote.",
+    "Füge in YouTube Studio ein und prüfe Links vor Veröffentlichung."
   ],
   "usage_examples": [
-    "Nutze es, wenn du Videotitel, Keyword, Zielgruppe, Links und CTA in eine strukturierte YouTube-Beschreibung zu verwandeln brauchst und einen editierbaren Startpunkt möchtest.",
-    "Vergleiche unterschiedliche Eingaben, bevor du das Ergebnis veröffentlichst oder teilst.",
-    "Erstelle ein kopierfertiges Ergebnis für Kundennotiz, interne Checkliste, Shop, Profil oder technische Übergabe."
+    "Nutze es für einen konkreten Workflow vor Import, Versand oder Veröffentlichung.",
+    "Vergleiche Eingaben und Ergebnis mit echten Daten, bevor du es weiterverwendest.",
+    "Halte URLs, Zahlen, claims und Plattformregeln mit deinen Quellen abgestimmt."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Ja. YouTube-Beschreibungsgenerator läuft kostenlos im Browser und erfordert kein Konto."
     },
     {
-      "question": "Lädt das Tool meine Eingaben hoch?",
-      "answer": "Nein. Es ist für schnelle Entwürfe, Berechnungen oder Konvertierungen im Browser gedacht."
+      "question": "Veröffentlicht oder verbindet es automatisch?",
+      "answer": "Nein. Es erstellt Text oder Berechnungen, die du selbst prüfst und verwendest."
     },
     {
-      "question": "Was sollte ich vor der Nutzung prüfen?",
-      "answer": "Prüfe Formulierungen, Aussagen, Länge, Markenstimme und Plattformregeln vor der Veröffentlichung."
+      "question": "Was sollte ich kontrollieren?",
+      "answer": "Kontrolliere Felder, URLs, Zahlen, claims und Regeln deines Zielsystems."
     },
     {
-      "question": "Für wen ist YouTube-Beschreibungsgenerator geeignet?",
-      "answer": "Für YouTuber, Marketer, Lehrende, Gründer und Teams mit regelmäßigem Video-Content."
+      "question": "Kann ich das Ergebnis direkt nutzen?",
+      "answer": "Nutze es als Arbeitsgrundlage und passe es an echte Daten an."
     }
   ]
 }

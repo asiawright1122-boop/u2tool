@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Generador de descripciones para YouTube es un generador de descripciones en el navegador para convertir título, palabra clave, audiencia, enlaces y CTA en una descripción de YouTube estructurada. Añade título del video, palabra clave, audiencia, CTA y enlaces de recursos; la herramienta devuelve introducción, puntos de aprendizaje, sección de enlaces, CTA y hashtags. Úsala para crear un primer borrador, comparar supuestos y copiar un resultado limpio sin enviar tus datos a un servidor.",
+  "detailed_description": "Generador de descripciones para YouTube convierte video title, keyword, audience, CTA y resource links en un borrador estructurado de YouTube description. La salida incluye intro, learning bullets, links, CTA y hashtags para preparar descripciones repetibles antes de editar en YouTube Studio.",
   "usage_steps": [
-    "Introduce título del video, palabra clave, audiencia, CTA y enlaces de recursos.",
-    "Revisa introducción, puntos de aprendizaje, sección de enlaces, CTA y hashtags y ajusta los supuestos que afectan al resultado.",
-    "Copia la mejor versión en tu perfil, campaña, hoja de cálculo, código o documentación.",
-    "Genera otra variación cuando cambien la audiencia, el precio, el formato o los datos de origen."
+    "Introduce título, keyword, audiencia, CTA y un resource link por línea.",
+    "Revisa intro, learning bullets, links, CTA y hashtags.",
+    "Sustituye bullets genéricos por secciones, timestamps, recursos u ofertas reales.",
+    "Pega la descripción editada en YouTube Studio y comprueba enlaces antes de publicar."
   ],
   "usage_examples": [
-    "Úsalo cuando necesites convertir título, palabra clave, audiencia, enlaces y CTA en una descripción de YouTube estructurada y quieras un punto de partida editable.",
-    "Compara diferentes entradas antes de publicar o compartir el resultado.",
-    "Crea un resultado listo para copiar en una nota de cliente, checklist interno, tienda, perfil o entrega técnica."
+    "Crea un formato repetible para tutoriales, demos o videos educativos.",
+    "Convierte una lista de recursos en una sección de links más limpia.",
+    "Prepara un borrador para calendario de contenido y ajústalo al video final."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Sí. Generador de descripciones para YouTube funciona gratis en el navegador y no requiere cuenta."
     },
     {
-      "question": "¿La herramienta sube mis datos?",
-      "answer": "No. Está diseñada para hacer borradores, cálculos o conversiones rápidas en el navegador."
+      "question": "¿Sube o edita mi video de YouTube?",
+      "answer": "No. Solo crea texto; subir, editar y publicar ocurre en YouTube Studio."
     },
     {
-      "question": "¿Qué debo revisar antes de usar el resultado?",
-      "answer": "Revisa redacción, promesas, longitud, tono de marca y reglas de la plataforma antes de publicar."
+      "question": "¿Cómo trata los resource links?",
+      "answer": "Cada línea no vacía se convierte en un punto de la sección de links y recursos."
     },
     {
-      "question": "¿Para quién es mejor Generador de descripciones para YouTube?",
-      "answer": "Para YouTubers, marketers, educadores, founders y equipos que publican video con frecuencia."
+      "question": "¿Qué reviso antes de publicar?",
+      "answer": "Que coincida con el video, los enlaces funcionen, los hashtags sean relevantes y los claims sean correctos."
     }
   ]
 }

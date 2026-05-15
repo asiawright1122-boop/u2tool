@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Docker Run 转 Docker Compose 转换器 是一个浏览器内运行的Docker 转换器，用于把 docker run 命令转换成 Docker Compose 服务起点。输入包含镜像、名称、端口、环境变量、卷和重启策略的 docker run 命令后，工具会生成包含服务名、镜像、端口、环境变量、卷、重启和 command 字段的 Compose YAML。适合快速起草、比较假设并复制可用结果，输入内容不会上传到服务器。",
+  "detailed_description": "Docker Run 转 Docker Compose 转换器 会把单条 docker run 命令转换成起步版 Compose YAML。它识别 --name、-p/--publish、-e/--env、-v/--volume、--restart、--network、镜像和 command，并把它们整理为 service、image、ports、environment、volumes、restart、network_mode 等字段。",
   "usage_steps": [
-    "输入包含镜像、名称、端口、环境变量、卷和重启策略的 docker run 命令。",
-    "查看包含服务名、镜像、端口、环境变量、卷、重启和 command 字段的 Compose YAML，并调整会影响结果的关键假设。",
-    "把最合适的结果复制到资料页、活动、表格、代码库或文档中。",
-    "当受众、价格、格式或源数据变化时，再生成一个新版本进行比较。"
+    "粘贴需要转换的 docker run 命令。",
+    "检查生成的 service 名称、image、ports、environment、volumes、restart 和 command。",
+    "把未识别的 Docker 参数、secrets、healthcheck 或多服务依赖手动补到 Compose 文件。",
+    "在真实环境使用前，用你自己的 Docker Compose 工具验证 YAML。"
   ],
   "usage_examples": [
-    "当你需要把 docker run 命令转换成 Docker Compose 服务起点时，用它先得到可编辑的起点。",
-    "调整不同输入，比较发布或分享前的结果差异。",
-    "为客户说明、内部清单、店铺、个人资料或技术交接生成可复制结果。"
+    "把 README 里的单容器启动命令整理成本地开发用 Compose 服务。",
+    "把端口、环境变量和挂载路径从 docker run 转为 YAML。",
+    "先得到起步版 Compose 服务，再加入项目专属配置。"
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "是的。Docker Run 转 Docker Compose 转换器 可直接在浏览器中免费使用，无需注册账户。"
     },
     {
-      "question": "工具会上传我的输入吗？",
-      "answer": "不会。该工具用于在浏览器本地完成快速起草、计算或转换。"
+      "question": "会运行或验证 Docker 容器吗？",
+      "answer": "不会。它只转换文本，不会启动容器，也不会检查镜像是否可用。"
     },
     {
-      "question": "使用结果前应该检查什么？",
-      "answer": "投入生产或正式导入前，请用目标应用、导入器或运行环境验证转换结果。"
+      "question": "能转换完整的多容器项目吗？",
+      "answer": "不能。它一次处理一条 docker run 命令，多服务编排仍需要手动设计。"
     },
     {
-      "question": "Docker Run 转 Docker Compose 转换器 适合谁使用？",
-      "answer": "适合开发者、DevOps 团队、学生，以及需要记录容器配置的人。"
+      "question": "哪些参数会被识别？",
+      "answer": "主要识别 name、publish、env、volume、restart、network、image 和 command，复杂参数请手动补充。"
     }
   ]
 }

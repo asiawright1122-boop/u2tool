@@ -1,32 +1,32 @@
 {
-  "detailed_description": "YouTube 설명 생성기는 영상 제목, 키워드, 대상, 링크, CTA를 구조화된 YouTube 설명으로 변환에 쓰는 브라우저 기반 설명 생성기입니다. 영상 제목, 타깃 키워드, 대상, CTA, 리소스 링크을 입력하면 도입문, 학습 포인트, 링크 섹션, CTA, 해시태그을 반환합니다. 초안을 빠르게 만들고 가정을 비교하며 복사하기 쉬운 결과를 만들 수 있고, 입력값은 서버로 전송되지 않습니다.",
+  "detailed_description": "YouTube 설명 생성기는 video title, keyword, audience, CTA, resource links를 구조화된 YouTube description 초안으로 바꿉니다. 출력에는 intro, learning bullets, links, CTA, hashtags가 포함되어 YouTube Studio에서 편집하기 전 반복 가능한 설명 형식을 만들 수 있습니다.",
   "usage_steps": [
-    "영상 제목, 타깃 키워드, 대상, CTA, 리소스 링크을 입력하세요.",
-    "도입문, 학습 포인트, 링크 섹션, CTA, 해시태그을 확인하고 결과에 영향을 주는 가정을 조정하세요.",
-    "가장 적합한 결과를 프로필, 캠페인, 스프레드시트, 코드베이스 또는 문서에 복사하세요.",
-    "대상, 가격, 형식 또는 원본 데이터가 바뀌면 다른 버전을 생성하세요."
+    "영상 제목, keyword, audience, CTA와 줄마다 하나의 resource link를 입력합니다.",
+    "intro, learning bullets, links, CTA, hashtags를 확인합니다.",
+    "일반 문구를 실제 섹션, timestamps, resources, offer로 바꿉니다.",
+    "YouTube Studio에 붙여넣기 전에 링크와 영상 내용 일치를 확인합니다."
   ],
   "usage_examples": [
-    "영상 제목, 키워드, 대상, 링크, CTA를 구조화된 YouTube 설명으로 변환이 필요할 때 편집 가능한 시작점으로 사용하세요.",
-    "게시하거나 공유하기 전에 입력을 바꿔 결과 차이를 비교하세요.",
-    "고객 메모, 내부 체크리스트, 스토어, 프로필 또는 기술 인수인계용 결과를 만드세요."
+    "tutorial, product demo, educational video 설명 형식을 만듭니다.",
+    "리소스 목록을 더 깔끔한 links section으로 정리합니다.",
+    "content calendar용 초안을 만든 뒤 최종 영상에 맞게 조정합니다."
   ],
   "faqs": [
     {
       "question": "YouTube 설명 생성기는 무료인가요?",
-      "answer": "네. YouTube 설명 생성기는 브라우저에서 무료로 사용할 수 있으며 계정이 필요 없습니다."
+      "answer": "네. YouTube 설명 생성기는 브라우저에서 무료로 사용할 수 있으며 계정이 필요하지 않습니다."
     },
     {
-      "question": "입력값이 업로드되나요?",
-      "answer": "아니요. 빠른 초안 작성, 계산 또는 변환을 브라우저 안에서 수행하도록 설계되었습니다."
+      "question": "YouTube 영상을 업로드하거나 편집하나요?",
+      "answer": "아니요. 설명 텍스트만 만들며 업로드, 편집, 게시 작업은 YouTube Studio에서 합니다."
     },
     {
-      "question": "결과를 사용하기 전에 무엇을 확인해야 하나요?",
-      "answer": "게시 전 문구, 주장, 길이, 브랜드 톤, 플랫폼 규칙을 확인하세요."
+      "question": "resource links는 어떻게 처리되나요?",
+      "answer": "links 입력란의 비어 있지 않은 각 줄이 links and resources 섹션의 항목이 됩니다."
     },
     {
-      "question": "YouTube 설명 생성기는 누구에게 적합한가요?",
-      "answer": "YouTuber, 마케터, 교육자, 창업자, 반복적으로 영상을 게시하는 팀에 적합합니다."
+      "question": "게시 전 무엇을 확인하나요?",
+      "answer": "설명이 실제 영상과 맞는지, 링크가 올바른지, hashtags가 관련 있는지, claims가 정확한지 확인하세요."
     }
   ]
 }

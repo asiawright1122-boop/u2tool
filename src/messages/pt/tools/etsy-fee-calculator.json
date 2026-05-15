@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Calculadora de taxas Etsy é um calculadora de taxas no navegador para estimar taxas, receita líquida, lucro e margem com premissas editáveis estilo Etsy. Informe preço, frete, custos, taxa de anúncio, transação, pagamento e anúncios; a ferramenta retorna detalhamento de taxas, receita líquida, lucro estimado e margem. Use para criar um primeiro rascunho, comparar premissas e copiar um resultado limpo sem enviar seus dados para um servidor.",
+  "detailed_description": "Calculadora de taxas Etsy estima total fees, net revenue, profit e profit margin com Etsy-style fee assumptions editáveis. Informe preço, frete cobrado, custo do item, custo de envio, listing fee, transaction rate, payment rate, fixed fee, offsite ads rate e moeda antes de comparar com as regras atuais do marketplace.",
   "usage_steps": [
-    "Informe preço, frete, custos, taxa de anúncio, transação, pagamento e anúncios.",
-    "Revise detalhamento de taxas, receita líquida, lucro estimado e margem e ajuste as premissas que afetam o resultado.",
-    "Copie a melhor versão para seu perfil, campanha, planilha, código ou documentação.",
-    "Gere outra variação quando público, preço, formato ou dados de origem mudarem."
+    "Informe preço de venda, frete cobrado, custo do item e custo de envio.",
+    "Configure listing fee, transaction rate, payment rate, fixed fee e offsite ads rate.",
+    "Revise gross revenue, total fees, net revenue, profit e profit margin.",
+    "Compare as premissas com sua conta, região, impostos e tabela atual de taxas antes de definir preço."
   ],
   "usage_examples": [
-    "Use quando precisar de estimar taxas, receita líquida, lucro e margem com premissas editáveis estilo Etsy e quiser um ponto de partida editável.",
-    "Compare entradas diferentes antes de publicar ou compartilhar o resultado.",
-    "Crie um resultado pronto para copiar em nota para cliente, checklist interno, loja, perfil ou entrega técnica."
+    "Verifique se um produto ainda tem margem após custos e taxas.",
+    "Compare como offsite ads rate ou frete alteram profit margin.",
+    "Modele um novo preço antes de atualizar sua planilha da loja."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Sim. Calculadora de taxas Etsy funciona gratuitamente no navegador e não exige conta."
     },
     {
-      "question": "A ferramenta envia meus dados?",
-      "answer": "Não. Ela foi pensada para rascunhos, cálculos ou conversões rápidas no navegador."
+      "question": "Usa taxas oficiais atuais da Etsy?",
+      "answer": "Não. Usa premissas editáveis estilo Etsy; confira a tabela vigente e sua conta de vendedor."
     },
     {
-      "question": "O que devo revisar antes de usar o resultado?",
-      "answer": "Confira premissas, taxas, moeda e custos reais antes de usar os números para preço ou planejamento."
+      "question": "Quais custos devo incluir?",
+      "answer": "Separe item cost e shipping cost para que o profit reflita produção e envio."
     },
     {
-      "question": "Para quem Calculadora de taxas Etsy é indicado?",
-      "answer": "Para vendedores de marketplace testando preço, recuperação de frete e premissas de taxas."
+      "question": "Inclui impostos ou todos os encargos?",
+      "answer": "Não. É uma calculadora de planejamento, não aconselhamento fiscal, contábil ou de política da plataforma."
     }
   ]
 }

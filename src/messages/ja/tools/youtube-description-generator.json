@@ -1,15 +1,15 @@
 {
-  "detailed_description": "YouTube説明文生成ツール は、動画タイトル、キーワード、対象者、リンク、CTAを構造化されたYouTube説明文にするためのブラウザ内説明文生成ツールです。動画タイトル、ターゲットキーワード、対象者、CTA、参考リンクを入力すると、導入文、学べる内容、リンク欄、CTA、ハッシュタグを生成します。下書き作成、前提の比較、コピーしやすい結果の作成に使え、入力内容はサーバーへ送信されません。",
+  "detailed_description": "YouTube説明文生成ツール は、video title、keyword、audience、CTA、resource links から構造化された YouTube description 草稿を作ります。intro、learning bullets、links、CTA、hashtags を含み、YouTube Studio で編集する前の型を整えます。",
   "usage_steps": [
-    "動画タイトル、ターゲットキーワード、対象者、CTA、参考リンクを入力します。",
-    "導入文、学べる内容、リンク欄、CTA、ハッシュタグを確認し、結果に影響する前提を調整します。",
-    "最適な結果をプロフィール、キャンペーン、表計算、コード、またはドキュメントへコピーします。",
-    "対象者、価格、形式、元データが変わったら別バージョンを生成します。"
+    "動画タイトル、keyword、audience、CTA、resource link を 1 行ずつ入力します。",
+    "intro、learning bullets、links、CTA、hashtags を確認します。",
+    "実際の章、timestamps、resources、offer に置き換えます。",
+    "YouTube Studio に貼り付ける前にリンクと内容一致を確認します。"
   ],
   "usage_examples": [
-    "動画タイトル、キーワード、対象者、リンク、CTAを構造化されたYouTube説明文にする必要があるとき、編集可能な出発点として使えます。",
-    "公開や共有の前に入力を変えて結果の違いを比較できます。",
-    "クライアントメモ、社内チェックリスト、ストア、プロフィール、技術引き継ぎ用の結果を作れます。"
+    "tutorial、product demo、educational video の説明形式を作ります。",
+    "リソース一覧を読みやすい links section にします。",
+    "content calendar 用の説明草稿を作り、最終動画に合わせて調整します。"
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "はい。YouTube説明文生成ツール はブラウザで無料で使え、アカウントは不要です。"
     },
     {
-      "question": "入力内容はアップロードされますか？",
-      "answer": "いいえ。素早い下書き、計算、変換をブラウザ内で行う設計です。"
+      "question": "YouTube 動画をアップロードまたは編集しますか？",
+      "answer": "いいえ。説明テキストを作るだけです。アップロード、編集、公開は YouTube Studio で行います。"
     },
     {
-      "question": "結果を使う前に何を確認すべきですか？",
-      "answer": "公開前に表現、主張、長さ、ブランドトーン、各プラットフォームのルールを確認してください。"
+      "question": "resource links はどう扱いますか？",
+      "answer": "links 欄の空でない各行が links and resources セクションの項目になります。"
     },
     {
-      "question": "YouTube説明文生成ツール は誰に向いていますか？",
-      "answer": "YouTuber、マーケター、教育者、創業者、継続的に動画を公開するチーム向けです。"
+      "question": "公開前に何を確認しますか？",
+      "answer": "動画内容との一致、リンク、hashtags の関連性、claim の正確性を確認します。"
     }
   ]
 }

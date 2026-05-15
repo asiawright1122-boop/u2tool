@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Calculateur de tarif freelance est un calculateur de tarif dans le navigateur pour transformer objectifs de revenu, dépenses, réserve fiscale, heures facturables et congés en tarifs freelance. Ajoutez revenu net cible, dépenses annuelles, réserve fiscale, heures facturables, semaines de congé et devise ; l’outil renvoie taux horaire, tarif journalier, objectif mensuel et objectif annuel. Utilisez-le pour créer un premier brouillon, comparer des hypothèses et copier un résultat propre sans envoyer vos données à un serveur.",
+  "detailed_description": "Calculateur de tarif freelance transforme revenu net cible, dépenses annuelles, réserve fiscale, billable hours hebdomadaires, semaines off et devise en hourly rate, day rate, monthly revenue et yearly revenue. Il sert à tester la capacité avant propositions ou retainers.",
   "usage_steps": [
-    "Saisissez revenu net cible, dépenses annuelles, réserve fiscale, heures facturables, semaines de congé et devise.",
-    "Vérifiez taux horaire, tarif journalier, objectif mensuel et objectif annuel et ajustez les hypothèses qui influencent le résultat.",
-    "Copiez la meilleure version dans votre profil, campagne, feuille de calcul, code ou documentation.",
-    "Générez une autre variante quand l’audience, le prix, le format ou les données sources changent."
+    "Indiquez le revenu annuel net souhaité.",
+    "Ajoutez dépenses, pourcentage fiscal, billable hours par semaine, semaines off et devise.",
+    "Vérifiez hourly rate, day rate, monthly revenue, yearly revenue et heures facturables annuelles.",
+    "Modifiez heures ou congés pour voir l’effet sur le tarif."
   ],
   "usage_examples": [
-    "Utilisez-le quand vous devez transformer objectifs de revenu, dépenses, réserve fiscale, heures facturables et congés en tarifs freelance et voulez un point de départ modifiable.",
-    "Comparez plusieurs entrées avant de publier ou partager le résultat.",
-    "Créez un résultat prêt à copier pour une note client, une checklist interne, une boutique, un profil ou une transmission technique."
+    "Utilisez-le dans un workflow réel avant import, envoi ou publication.",
+    "Comparez les champs et le résultat avec vos données avant de le réutiliser.",
+    "Gardez URLs, chiffres, claims et règles de plateforme alignés avec vos sources."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Oui. Calculateur de tarif freelance fonctionne gratuitement dans le navigateur et ne nécessite pas de compte."
     },
     {
-      "question": "L’outil envoie-t-il mes données ?",
-      "answer": "Non. Il est conçu pour faire des brouillons, calculs ou conversions rapides dans le navigateur."
+      "question": "Automatise-t-il la publication ?",
+      "answer": "Non. Il génère un texte ou un calcul à vérifier, puis vous l’utilisez dans votre propre outil."
     },
     {
-      "question": "Que faut-il vérifier avant d’utiliser le résultat ?",
-      "answer": "Vérifiez les hypothèses, taux, devise et coûts réels avant d’utiliser les chiffres pour fixer un prix ou planifier."
+      "question": "Que faut-il contrôler ?",
+      "answer": "Contrôlez les champs, URLs, montants, claims et règles propres à votre contexte."
     },
     {
-      "question": "À qui s’adresse Calculateur de tarif freelance ?",
-      "answer": "Pour freelances, consultants, agences et indépendants qui planifient une tarification durable."
+      "question": "Puis-je utiliser le résultat tel quel ?",
+      "answer": "Utilisez-le comme base de travail et adaptez-le à vos données réelles."
     }
   ]
 }

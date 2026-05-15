@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Etsy手数料計算機 は、編集可能なEtsy風の前提から手数料、純収益、利益、利益率を見積もるためのブラウザ内手数料計算ツールです。販売価格、送料、原価、出品料、取引料率、決済料率、広告料率を入力すると、手数料内訳、純収益、推定利益、利益率を生成します。下書き作成、前提の比較、コピーしやすい結果の作成に使え、入力内容はサーバーへ送信されません。",
+  "detailed_description": "Etsy手数料計算機 は、編集可能な Etsy-style fee assumptions から total fees、net revenue、profit、profit margin を見積もります。価格、送料請求、商品原価、発送費、listing fee、transaction rate、payment rate、fixed fee、offsite ads rate、通貨を入力します。",
   "usage_steps": [
-    "販売価格、送料、原価、出品料、取引料率、決済料率、広告料率を入力します。",
-    "手数料内訳、純収益、推定利益、利益率を確認し、結果に影響する前提を調整します。",
-    "最適な結果をプロフィール、キャンペーン、表計算、コード、またはドキュメントへコピーします。",
-    "対象者、価格、形式、元データが変わったら別バージョンを生成します。"
+    "販売価格、送料請求、商品原価、発送費を入力します。",
+    "listing fee、transaction rate、payment rate、fixed fee、offsite ads rate を設定します。",
+    "gross revenue、total fees、net revenue、profit、profit margin を確認します。",
+    "価格決定前に、販売者アカウント、地域、税、最新 fee schedule と照合します。"
   ],
   "usage_examples": [
-    "編集可能なEtsy風の前提から手数料、純収益、利益、利益率を見積もる必要があるとき、編集可能な出発点として使えます。",
-    "公開や共有の前に入力を変えて結果の違いを比較できます。",
-    "クライアントメモ、社内チェックリスト、ストア、プロフィール、技術引き継ぎ用の結果を作れます。"
+    "ハンドメイド商品のコストと手数料後の margin を確認します。",
+    "送料や offsite ads rate の変更が profit margin に与える影響を比べます。",
+    "新しい listing 価格をショップ用スプレッドシートへ入れる前に試算します。"
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "はい。Etsy手数料計算機 はブラウザで無料で使え、アカウントは不要です。"
     },
     {
-      "question": "入力内容はアップロードされますか？",
-      "answer": "いいえ。素早い下書き、計算、変換をブラウザ内で行う設計です。"
+      "question": "Etsy の公式最新料率ですか？",
+      "answer": "いいえ。編集可能な Etsy-style assumptions です。最新の fee schedule と自分のアカウントを確認してください。"
     },
     {
-      "question": "結果を使う前に何を確認すべきですか？",
-      "answer": "価格設定や計画に使う前に、前提、料率、通貨、実際のコストを確認してください。"
+      "question": "どのコストを含めますか？",
+      "answer": "item cost と shipping cost を分けると、profit が製造と発送の両方を反映しやすくなります。"
     },
     {
-      "question": "Etsy手数料計算機 は誰に向いていますか？",
-      "answer": "出品前に価格、送料回収、手数料前提を検討するマーケットプレイス販売者向けです。"
+      "question": "税や全ての手数料を含みますか？",
+      "answer": "いいえ。計画用計算であり、税務、会計、プラットフォーム規約の助言ではありません。"
     }
   ]
 }

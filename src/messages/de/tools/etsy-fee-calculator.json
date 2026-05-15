@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Etsy-Gebührenrechner ist ein browserbasiertes Gebührenrechner für Marktplatzgebühren, Nettoerlös, Gewinn und Marge mit editierbaren Etsy-ähnlichen Annahmen zu schätzen. Gib Verkaufspreis, Versand, Kosten, Einstellgebühr, Transaktionssatz, Zahlungssatz und Anzeigengebühr ein; das Tool liefert Gebührenaufschlüsselung, Nettoerlös, geschätzter Gewinn und Marge. Nutze es, um einen ersten Entwurf zu erstellen, Annahmen zu vergleichen und ein sauberes Ergebnis zu kopieren, ohne Eingaben an einen Server zu senden.",
+  "detailed_description": "Etsy-Gebührenrechner schätzt total fees, net revenue, profit und profit margin mit editierbaren Etsy-style fee assumptions. Gib Preis, Versandbetrag, Warenkosten, Versandkosten, listing fee, transaction rate, payment rate, fixed fee, offsite ads rate und Währung ein.",
   "usage_steps": [
-    "Gib Verkaufspreis, Versand, Kosten, Einstellgebühr, Transaktionssatz, Zahlungssatz und Anzeigengebühr ein.",
-    "Prüfe Gebührenaufschlüsselung, Nettoerlös, geschätzter Gewinn und Marge und passe Annahmen an, die das Ergebnis beeinflussen.",
-    "Kopiere die beste Version in Profil, Kampagne, Tabelle, Codebasis oder Dokumentation.",
-    "Erzeuge eine neue Variante, wenn Zielgruppe, Preis, Format oder Quelldaten wechseln."
+    "Gib Verkaufspreis, Versandbetrag, Warenkosten und Versandkosten ein.",
+    "Setze listing fee, transaction rate, payment rate, fixed fee und offsite ads rate.",
+    "Prüfe gross revenue, total fees, net revenue, profit und profit margin.",
+    "Vergleiche vor Preisentscheidungen mit Konto, Region, Steuern und aktuellen Gebühren."
   ],
   "usage_examples": [
-    "Nutze es, wenn du Marktplatzgebühren, Nettoerlös, Gewinn und Marge mit editierbaren Etsy-ähnlichen Annahmen zu schätzen brauchst und einen editierbaren Startpunkt möchtest.",
-    "Vergleiche unterschiedliche Eingaben, bevor du das Ergebnis veröffentlichst oder teilst.",
-    "Erstelle ein kopierfertiges Ergebnis für Kundennotiz, interne Checkliste, Shop, Profil oder technische Übergabe."
+    "Nutze es für einen konkreten Workflow vor Import, Versand oder Veröffentlichung.",
+    "Vergleiche Eingaben und Ergebnis mit echten Daten, bevor du es weiterverwendest.",
+    "Halte URLs, Zahlen, claims und Plattformregeln mit deinen Quellen abgestimmt."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Ja. Etsy-Gebührenrechner läuft kostenlos im Browser und erfordert kein Konto."
     },
     {
-      "question": "Lädt das Tool meine Eingaben hoch?",
-      "answer": "Nein. Es ist für schnelle Entwürfe, Berechnungen oder Konvertierungen im Browser gedacht."
+      "question": "Veröffentlicht oder verbindet es automatisch?",
+      "answer": "Nein. Es erstellt Text oder Berechnungen, die du selbst prüfst und verwendest."
     },
     {
-      "question": "Was sollte ich vor der Nutzung prüfen?",
-      "answer": "Prüfe Annahmen, Sätze, Währung und echte Kosten, bevor du die Zahlen für Preise oder Planung nutzt."
+      "question": "Was sollte ich kontrollieren?",
+      "answer": "Kontrolliere Felder, URLs, Zahlen, claims und Regeln deines Zielsystems."
     },
     {
-      "question": "Für wen ist Etsy-Gebührenrechner geeignet?",
-      "answer": "Für Marketplace-Verkäufer, die Preis, Versanddeckung und Gebührenannahmen vor dem Listing testen."
+      "question": "Kann ich das Ergebnis direkt nutzen?",
+      "answer": "Nutze es als Arbeitsgrundlage und passe es an echte Daten an."
     }
   ]
 }

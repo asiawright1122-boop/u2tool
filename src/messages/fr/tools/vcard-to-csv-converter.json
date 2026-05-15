@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Convertisseur vCard vers CSV est un convertisseur de contacts dans le navigateur pour convertir des blocs de contacts vCard en lignes CSV compatibles tableur. Ajoutez un ou plusieurs contacts vCard et le délimiteur souhaité ; l’outil renvoie en-têtes et lignes CSV pour nom, e-mail, téléphone, entreprise, poste et adresse. Utilisez-le pour créer un premier brouillon, comparer des hypothèses et copier un résultat propre sans envoyer vos données à un serveur.",
+  "detailed_description": "Convertisseur vCard vers CSV transforme des blocs BEGIN:VCARD collés en lignes CSV prêtes à vérifier dans un tableur. Choisissez virgule, point-virgule ou tabulation, puis contrôlez first_name,last_name,full_name,email,phone,company,title,address avant import dans un tableur, CRM ou workflow de nettoyage.",
   "usage_steps": [
-    "Saisissez un ou plusieurs contacts vCard et le délimiteur souhaité.",
-    "Vérifiez en-têtes et lignes CSV pour nom, e-mail, téléphone, entreprise, poste et adresse et ajustez les hypothèses qui influencent le résultat.",
-    "Copiez la meilleure version dans votre profil, campagne, feuille de calcul, code ou documentation.",
-    "Générez une autre variante quand l’audience, le prix, le format ou les données sources changent."
+    "Collez un ou plusieurs blocs BEGIN:VCARD depuis une exportation .vcf.",
+    "Choisissez le séparateur CSV : virgule, point-virgule ou tabulation.",
+    "Vérifiez le nombre de contacts et les colonnes nom, email, téléphone, société, titre et adresse.",
+    "Copiez le CSV et testez-le d’abord dans le tableur ou l’importateur CRM cible."
   ],
   "usage_examples": [
-    "Utilisez-le quand vous devez convertir des blocs de contacts vCard en lignes CSV compatibles tableur et voulez un point de départ modifiable.",
-    "Comparez plusieurs entrées avant de publier ou partager le résultat.",
-    "Créez un résultat prêt à copier pour une note client, une checklist interne, une boutique, un profil ou une transmission technique."
+    "Utilisez-le dans un workflow réel avant import, envoi ou publication.",
+    "Comparez les champs et le résultat avec vos données avant de le réutiliser.",
+    "Gardez URLs, chiffres, claims et règles de plateforme alignés avec vos sources."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Oui. Convertisseur vCard vers CSV fonctionne gratuitement dans le navigateur et ne nécessite pas de compte."
     },
     {
-      "question": "L’outil envoie-t-il mes données ?",
-      "answer": "Non. Il est conçu pour faire des brouillons, calculs ou conversions rapides dans le navigateur."
+      "question": "Automatise-t-il la publication ?",
+      "answer": "Non. Il génère un texte ou un calcul à vérifier, puis vous l’utilisez dans votre propre outil."
     },
     {
-      "question": "Que faut-il vérifier avant d’utiliser le résultat ?",
-      "answer": "Validez la sortie convertie avec l’application, l’importateur ou le runtime cible avant un usage en production."
+      "question": "Que faut-il contrôler ?",
+      "answer": "Contrôlez les champs, URLs, montants, claims et règles propres à votre contexte."
     },
     {
-      "question": "À qui s’adresse Convertisseur vCard vers CSV ?",
-      "answer": "Pour équipes qui déplacent des contacts vers tableurs, CRM, outils e-mail ou workflows de nettoyage."
+      "question": "Puis-je utiliser le résultat tel quel ?",
+      "answer": "Utilisez-le comme base de travail et adaptez-le à vos données réelles."
     }
   ]
 }

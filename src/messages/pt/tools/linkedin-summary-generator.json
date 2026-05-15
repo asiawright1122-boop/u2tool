@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Gerador de resumo para LinkedIn é um gerador de resumo no navegador para redigir uma seção Sobre do LinkedIn que conecte experiência, habilidades, conquista e público. Informe função, experiência, habilidades, conquista, público e tom; a ferramenta retorna um rascunho conciso de Sobre com posicionamento, prova e ângulo de colaboração. Use para criar um primeiro rascunho, comparar premissas e copiar um resultado limpo sem enviar seus dados para um servidor.",
+  "detailed_description": "Gerador de resumo para LinkedIn redige uma seção About editável para LinkedIn conectando experience, skills, achievement e audience. Informe cargo, histórico, habilidades, prova, público e tone para criar um resumo que você pode verificar, personalizar e colar manualmente.",
   "usage_steps": [
-    "Informe função, experiência, habilidades, conquista, público e tom.",
-    "Revise um rascunho conciso de Sobre com posicionamento, prova e ângulo de colaboração e ajuste as premissas que afetam o resultado.",
-    "Copie a melhor versão para seu perfil, campanha, planilha, código ou documentação.",
-    "Gere outra variação quando público, preço, formato ou dados de origem mudarem."
+    "Informe cargo, experiência, skills, achievement, público e tom.",
+    "Revise se o About traz posicionamento, prova e ângulo de colaboração.",
+    "Troque frases vagas por projetos, setores, ferramentas ou resultados reais.",
+    "Cole o resumo editado no LinkedIn depois de verificar tamanho e precisão."
   ],
   "usage_examples": [
-    "Use quando precisar de redigir uma seção Sobre do LinkedIn que conecte experiência, habilidades, conquista e público e quiser um ponto de partida editável.",
-    "Compare entradas diferentes antes de publicar ou compartilhar o resultado.",
-    "Crie um resultado pronto para copiar em nota para cliente, checklist interno, loja, perfil ou entrega técnica."
+    "Reescreva o About antes de uma busca de emprego.",
+    "Explique skills, público e resultados em um perfil de consultor.",
+    "Crie uma base para founder ou operator e ajuste com experiência real."
   ],
   "faqs": [
     {
@@ -17,16 +17,16 @@
       "answer": "Sim. Gerador de resumo para LinkedIn funciona gratuitamente no navegador e não exige conta."
     },
     {
-      "question": "A ferramenta envia meus dados?",
-      "answer": "Não. Ela foi pensada para rascunhos, cálculos ou conversões rápidas no navegador."
+      "question": "Inventa conquistas?",
+      "answer": "Não. Usa o achievement que você digitar; substitua por exemplos verdadeiros e verificáveis."
     },
     {
-      "question": "O que devo revisar antes de usar o resultado?",
-      "answer": "Revise texto, promessas, tamanho, voz da marca e regras da plataforma antes de publicar."
+      "question": "Edita o LinkedIn automaticamente?",
+      "answer": "Não. Gera texto para revisar, editar e colar manualmente."
     },
     {
-      "question": "Para quem Gerador de resumo para LinkedIn é indicado?",
-      "answer": "Para profissionais que reescrevem o perfil, preparam busca de emprego ou clarificam posicionamento."
+      "question": "O que revisar antes de publicar?",
+      "answer": "Precisão factual, claims, voz pessoal e alinhamento com vagas ou clientes desejados."
     }
   ]
 }
