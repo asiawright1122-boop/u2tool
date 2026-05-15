@@ -446,6 +446,110 @@ const longTailToolSupportDepthChecks: RenderedSeoCheck[] = [
   },
 ];
 
+const visibleLocalizedCtrRecoveryChecks: RenderedSeoCheck[] = [
+  {
+    name: 'Spanish IBAN Validator CTR recovery content',
+    path: '/es/tools/iban-validator/',
+    titleIncludes: 'IBAN',
+    descriptionIncludes: 'IBAN',
+    h1Includes: 'IBAN',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'checksum ISO 7064 MOD-97',
+      'bloque inicial del BBAN',
+      'no consulta bancos',
+    ],
+    bodyMustNotInclude: [
+      'todos los países europeos',
+      'código del banco',
+      'detalles de la cuenta bancaria',
+      'transferencias bancarias',
+    ],
+  },
+  {
+    name: 'French IBAN Validator CTR recovery content',
+    path: '/fr/tools/iban-validator/',
+    titleIncludes: 'IBAN',
+    descriptionIncludes: 'IBAN',
+    h1Includes: 'IBAN',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'checksum ISO 7064 MOD-97',
+      'premier bloc du BBAN',
+      'ne contacte pas les banques',
+    ],
+    bodyMustNotInclude: [
+      'outil complet',
+      'virements internationaux',
+      'systèmes de paiement',
+    ],
+  },
+  {
+    name: 'German Excel Viewer CTR recovery content',
+    path: '/de/tools/excel-viewer/',
+    titleIncludes: 'Excel',
+    descriptionIncludes: 'Excel',
+    h1Includes: 'Excel',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      '.xlsx- und .xls-Dateien',
+      'einzelne Spalten per Texteingabe filtern',
+      'keine Bearbeitung der Originaldatei',
+    ],
+    bodyMustNotInclude: [
+      'SheetJS',
+      'Quicksort',
+      'regulären Ausdrücken',
+      'Web Workers',
+      'HTML5 Canvas',
+      'Speichern als',
+    ],
+  },
+  {
+    name: 'Portuguese Typing Speed Test CTR recovery content',
+    path: '/pt/tools/typing-speed-test/',
+    titleIncludes: 'Digitação',
+    descriptionIncludes: 'digitação',
+    h1Includes: 'Digitação',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'mede palavras por minuto (WPM)',
+      'verde para acertos, vermelho para erros',
+      'não exige conta',
+    ],
+    bodyMustNotInclude: [
+      'processar facilmente vários dados',
+      'Clicar no botão de processar',
+      'Copiar ou baixar os resultados',
+    ],
+  },
+  {
+    name: 'Russian Salary Calculator CTR recovery content',
+    path: '/ru/tools/salary-calculator/',
+    titleIncludes: 'зарплаты',
+    descriptionIncludes: 'зарплату',
+    h1Includes: 'зарплаты',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'почасовым, дневным, недельным, двухнедельным, месячным и годовым',
+      'часы в неделю можно изменить вручную',
+      'не заменяет расчет бухгалтерии',
+    ],
+    bodyMustNotInclude: [
+      '21.67',
+      'переключение между gross',
+      'net-зарплатами',
+      'иконками',
+      'фрилансеров предусмотрена функция',
+    ],
+  },
+];
+
 const checks: RenderedSeoCheck[] = [
   {
     name: 'English homepage',
@@ -616,6 +720,7 @@ const checks: RenderedSeoCheck[] = [
   },
   ...popularEnglishDepthRecoveryChecks,
   ...longTailToolSupportDepthChecks,
+  ...visibleLocalizedCtrRecoveryChecks,
   {
     name: 'Creator SEO tool cluster backlink',
     path: '/en/tools/youtube-tags-generator/',

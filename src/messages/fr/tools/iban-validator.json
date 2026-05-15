@@ -1,15 +1,33 @@
 {
-  "detailed_description": "Le Validateur IBAN est un outil complet pour valider les numéros de compte bancaire internationaux.",
+  "detailed_description": "Le Validateur IBAN vérifie un International Bank Account Number directement dans le navigateur. Il supprime les espaces, met les lettres en majuscules, contrôle le format de base, le code pays, la longueur enregistrée pour ce pays et le checksum ISO 7064 MOD-97. Si l'IBAN est valide, la page affiche le pays détecté, les chiffres de contrôle, le BBAN, le premier bloc du BBAN et l'IBAN regroupé par quatre caractères. L'outil sert à contrôler la structure et la clé de contrôle ; il ne contacte pas les banques, ne confirme pas le titulaire du compte et ne garantit pas l'acceptation d'un paiement.",
   "usage_steps": [
-    "Entrez ou collez un numéro IBAN",
-    "Cliquez sur Valider",
-    "Consultez les résultats",
-    "Utilisez les exemples pour tester",
-    "Copiez l'IBAN formaté"
+    "Saisissez ou collez un IBAN dans le champ de saisie.",
+    "Cliquez sur Valider pour normaliser la saisie et lancer les contrôles de longueur et MOD-97.",
+    "Consultez le pays, les chiffres de contrôle, le BBAN, le premier bloc du BBAN et l'IBAN formaté.",
+    "Utilisez les exemples intégrés pour tester des formats de pays courants.",
+    "Copiez l'IBAN formaté si vous avez besoin d'un affichage lisible par groupes de quatre caractères."
   ],
   "usage_examples": [
-    "Vérifier l'IBAN avant les virements internationaux",
-    "Vérifier les numéros de compte bancaire des clients",
-    "Valider le format IBAN pour les systèmes de paiement"
+    "Vérifier qu'un IBAN collé depuis un formulaire a une longueur et une clé cohérentes.",
+    "Nettoyer un IBAN avec des espaces irréguliers avant une revue manuelle.",
+    "Tester la validation pour des formats allemands, britanniques, français, espagnols, italiens ou néerlandais."
+  ],
+  "faqs": [
+    {
+      "question": "Le Validateur IBAN est-il gratuit ?",
+      "answer": "Oui. Il fonctionne gratuitement dans le navigateur et ne demande pas de compte."
+    },
+    {
+      "question": "Vérifie-t-il que le compte existe ?",
+      "answer": "Non. Il vérifie le format, le pays, la longueur et le checksum MOD-97, mais ne consulte pas les banques."
+    },
+    {
+      "question": "Que voit-on pour un IBAN valide ?",
+      "answer": "La page affiche le pays, les chiffres de contrôle, le BBAN, le premier bloc du BBAN et une version formatée."
+    },
+    {
+      "question": "Puis-je coller un IBAN avec des espaces ?",
+      "answer": "Oui. Les espaces sont retirés pour le contrôle, puis l'IBAN est affiché en groupes lisibles."
+    }
   ]
 }

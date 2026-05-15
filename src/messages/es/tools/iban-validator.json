@@ -1,15 +1,33 @@
 {
-  "detailed_description": "El Validador de IBAN es una herramienta completa para verificar números de cuentas bancarias internacionales (IBAN). Comprueba el formato, el código del país, la longitud y el chequeo de suma de los números de IBAN de todos los países europeos. La herramienta también analiza el IBAN para mostrar el código del banco, la información del país y los detalles de la cuenta bancaria (BBAN)",
+  "detailed_description": "El Validador de IBAN comprueba números International Bank Account Number directamente en el navegador. El campo elimina espacios, normaliza letras en mayúsculas y valida el patrón básico, el código de país, la longitud registrada para ese país y el checksum ISO 7064 MOD-97. Cuando el IBAN pasa las comprobaciones, la página muestra el país detectado, los dígitos de control, el BBAN, el primer bloque del BBAN y el IBAN formateado en grupos de cuatro. La herramienta sirve para revisar estructura y checksum; no consulta bancos, no confirma titularidad de cuenta y no garantiza que un proveedor de pagos acepte una operación.",
   "usage_steps": [
-    "Introduce o pega un número de IBAN en el campo de entrada",
-    "Haz clic en el botón de Validar para comprobar el IBAN",
-    "Visualiza los resultados de la validación, incluyendo la información del país y del banco",
-    "Usa los ejemplos de IBAN para probar diferentes formatos de países",
-    "Copia el IBAN formateado para usarlo en transferencias bancarias"
+    "Introduce o pega un IBAN en el campo de entrada.",
+    "Haz clic en Validar para quitar espacios, normalizar el país y ejecutar las comprobaciones de longitud y MOD-97.",
+    "Revisa el resultado con país, dígitos de control, BBAN, bloque inicial del BBAN e IBAN formateado.",
+    "Usa los ejemplos incluidos para probar formatos de países habituales.",
+    "Copia el IBAN formateado si necesitas grupos de cuatro caracteres para documentación o revisión manual."
   ],
   "usage_examples": [
-    "Verifica el IBAN antes de realizar transferencias bancarias internacionales",
-    "Comprueba los números de cuentas bancarias proporcionados por los clientes",
-    "Valida el formato del IBAN para los sistemas de procesamiento de pagos"
+    "Revisar si un IBAN pegado desde un formulario tiene longitud y checksum coherentes.",
+    "Normalizar un IBAN con espacios irregulares antes de guardarlo en una ficha interna.",
+    "Probar cómo responde una validación ante formatos de Alemania, Reino Unido, Francia, España, Italia o Países Bajos."
+  ],
+  "faqs": [
+    {
+      "question": "¿El Validador de IBAN es gratis?",
+      "answer": "Sí. Funciona gratis en el navegador y no requiere cuenta."
+    },
+    {
+      "question": "¿Comprueba si la cuenta existe?",
+      "answer": "No. Comprueba formato, país, longitud y checksum MOD-97; no contacta con bancos ni verifica titularidad."
+    },
+    {
+      "question": "¿Qué muestra cuando el IBAN es válido?",
+      "answer": "Muestra país, dígitos de control, BBAN, bloque inicial del BBAN y una versión formateada del IBAN."
+    },
+    {
+      "question": "¿Puedo pegar el IBAN con espacios?",
+      "answer": "Sí. La herramienta elimina espacios para validar y después muestra el IBAN agrupado de forma legible."
+    }
   ]
 }

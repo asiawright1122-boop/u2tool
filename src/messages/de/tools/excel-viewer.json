@@ -1,17 +1,33 @@
 {
-  "detailed_description": "Der Excel Viewer ist ein webbasiertes Werkzeug zur Analyse und Manipulation von XLSX- und CSV-Dateien direkt im Browser. Technisch basiert das Tool auf clientseitiger Verarbeitung mittels JavaScript-Bibliotheken wie SheetJS (xlsx.js), die strukturierte Daten ohne Serverkommunikation im DOM rendern. Unterstützt werden komplexe Operationen wie Spaltensortierung durch stabilisierte Quicksort-Algorithmen, dynamische Filterung per regulären Ausdrücken und Blattnavigation über ein virtuelles Tabellenmodell. Die Daten werden ausschließlich im Arbeitsspeicher (RAM) verarbeitet, was Sicherheit und Geschwindigkeit gewährleistet. Entwickler profitieren von der Integration von Web Workers zur Parallelisierung von Berechnungen, während Endnutzer von der Offline-Funktionalität unabhängig von Microsoft Office oder Add-Ins wie Excel Online profitieren. Besonders bei temporären Analysen, Datenvalidierung oder Cross-Plattform-Kollaboration ohne Software-Installation bietet das Tool einen präzisen Workflow. Die Implementierung nutzt HTML5 Canvas für die Darstellung großer Datensätze und vermeidet dadurch Rendering-Engpässe bei umfangreichen Tabellen.",
+  "detailed_description": "Der Excel Viewer öffnet .xlsx- und .xls-Dateien direkt im Browser, damit Tabellen schnell geprüft werden können, ohne ein Office-Programm zu starten. Nach dem Hochladen liest die Seite die Arbeitsblätter aus, zeigt verfügbare Blatt-Tabs an und rendert die Zeilen in einer scrollbaren Tabelle. Für die schnelle Kontrolle lassen sich einzelne Spalten per Texteingabe filtern und Spaltenüberschriften zwischen aufsteigender, absteigender und neutraler Sortierung umschalten. Die Datei wird über den Browser eingelesen; die Seite bietet eine Ansicht, Filterung und Sortierung, aber keine Bearbeitung der Originaldatei und keinen Export gespeicherter Änderungen.",
   "usage_steps": [
-    "Klicken Sie auf den 'Datei auswählen'-Button, um eine XLSX- oder CSV-Datei hochzuladen.",
-    "Wählen Sie im Blatt-Auswahlmenü rechts den gewünschten Arbeitsblatt-Tab aus.",
-    "Aktivieren Sie das Filter-Panel über das Sägezahnradsymbol und definieren Sie Filterkriterien per Spaltenauswahl.",
-    "Nutzen Sie Doppelklick auf Spaltenüberschriften für A-Z/Z-A-Sortierung oder halten Sie die STRG-Taste zum mehrfachen Sortieren.",
-    "Blättern Sie durch Datensätze mit dem Scrollbalken oder verwenden Sie die Tastenkombination STRG+Pfeiltasten.",
-    "Exportieren Sie bearbeitete Daten über den 'Speichern als'-Button im JSON-, CSV- oder XLSX-Format."
+    "Wählen Sie eine .xlsx- oder .xls-Datei von Ihrem Gerät aus.",
+    "Wechseln Sie bei Arbeitsmappen mit mehreren Blättern über die sichtbaren Blatt-Tabs.",
+    "Wählen Sie eine Spalte aus und geben Sie einen Suchtext ein, um passende Zeilen zu filtern.",
+    "Klicken Sie auf eine Spaltenüberschrift, um die angezeigten Zeilen aufsteigend oder absteigend zu sortieren.",
+    "Nutzen Sie Filter zurücksetzen, wenn Sie wieder alle Zeilen des ausgewählten Blatts sehen möchten."
   ],
   "usage_examples": [
-    "Ein Finanzanalyst vergleicht mehrere Quartalsberichte, indem er die Dateien nacheinander im Viewer öffnet und per Tabellenfilter Zellwerte über 100.000 € isoliert.",
-    "Ein Projektmanager wendet eine Regex-Filterung auf eine CSV-Liste an, um alle Tasks mit dem Status 'Overdue' zu markieren, ohne Excel zu öffnen.",
-    "Ein Data Scientist analysiert Rohdaten auf einem Chromebook, exportiert selektierte Spalten als JSON und integriert diese direkt in ein Jupyter Notebook.",
-    "Ein Team verwendet das Tool zum synchronisierten Review von Testdaten: Ein Mitglied sortiert Spalten alphabetisch, ein anderes exportiert gefilterte Ergebnisse als CSV."
+    "Eine Finanzdatei kurz öffnen und die Umsatztabelle nach einer Region filtern.",
+    "Ein Projekt-Sheet prüfen und Aufgaben nach Status oder verantwortlicher Person sortieren.",
+    "Eine erhaltene .xls-Datei auf einem Gerät ohne Tabellenkalkulation ansehen."
+  ],
+  "faqs": [
+    {
+      "question": "Ist der Excel Viewer kostenlos?",
+      "answer": "Ja. Der Viewer funktioniert kostenlos im Browser und benötigt kein Konto."
+    },
+    {
+      "question": "Welche Dateien werden unterstützt?",
+      "answer": "Der Upload akzeptiert .xlsx- und .xls-Dateien."
+    },
+    {
+      "question": "Kann ich die Datei bearbeiten?",
+      "answer": "Nein. Die Seite ist zum Anzeigen, Filtern und Sortieren gedacht; sie speichert keine Änderungen an der Originaldatei."
+    },
+    {
+      "question": "Wie funktioniert der Filter?",
+      "answer": "Sie wählen eine Spalte aus und geben Text ein. Angezeigt werden Zeilen, deren Zellwert in dieser Spalte den Text enthält."
+    }
   ]
 }
