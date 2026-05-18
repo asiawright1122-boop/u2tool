@@ -1,17 +1,32 @@
 {
-  "detailed_description": "O conversor binário-decimal-hexadecimal é uma ferramenta de processamento numérico que realiza transformações precisas entre três sistemas de numeração fundamentais na computação. Tecnologicamente, ele implementa algoritmos de análise léxica para validar padrões binários (base 2), decimais (base 10) e hexadecimais (base 16), aplicando métodos matemáticos como notação posicional ponderada para conversões binário-decimal, divisão sucessiva por 16 com manipulação de restos para transformações decimal-hexa, e mapeamento nibble (4 bits) para equivalências binário-hexa. O software detecta automaticamente overflow em representações com sinal (notação complemento a dois) e ajusta a saída conforme configurações de endianness definidas pelo usuário. Profissionais de redes precisam desta ferramenta para calcular máscaras de sub-rede em notação CIDR, desenvolvedores de sistemas embarcados a utilizam para interpretar valores de conversores ADC, e analistas de segurança empregam-na para decifrar payloads em shellcodes hexadecimais. O núcleo do processamento utiliza bibliotecas de aritmética de precisão arbitrária para garantir exatidão em números de até 64 bits, incluindo tratamento especial para números em ponto flutuante segundo o padrão IEEE 754 quando necessário.",
+  "detailed_description": "O conversor Binary to Decimal trabalha com quatro modos visiveis: binario para decimal, decimal para binario, binario para hexadecimal e hexadecimal para binario. Digite o valor de origem, escolha o modo e clique em Convert para preencher a caixa de resultado. Nos modos que geram binario, o seletor de tamanho preenche a saida com 8, 16, 32 ou 64 bits, facilitando a comparacao de bytes, palavras e valores de registrador. A ferramenta valida caracteres binarios, decimais e hexadecimais, mostra erro quando a entrada nao combina com o modo escolhido e inclui Load Sample, Copy e uma referencia rapida de 0 a F. Ela nao interpreta numeros assinados, nao alterna endianess e nao exibe todas as bases ao mesmo tempo.",
   "usage_steps": [
-    "Acesse a interface e selecione o modo de conversão desejado (Binário → Decimal, Decimal → Hexa, etc.) no seletor de operação",
-    "Insira o valor numérico no campo apropriado utilizando o teclado virtual ou colando diretamente (ex: '11001010' para binário)",
-    "Ative a opção 'Número com Sinal' se estiver convertendo valores em complemento a dois de 8/16/32 bits",
-    "Para números hexadecimais, escolha a formatação de saída (maiúscula/minúscula) e o prefixo (0x ou $)",
-    "Use o controle deslizante 'Precisão' para definir casas decimais em conversões fracionárias (até 12 dígitos)",
-    "Clique no botão 'Copiar' para exportar o resultado ou expanda a seção 'Resultado Detalhado' para ver cálculos intermediários"
+    "Selecione binario para decimal, decimal para binario, binario para hex ou hex para binario.",
+    "Digite o valor de origem ou use Load Sample para preencher um exemplo do modo atual.",
+    "Quando a saida for binaria, escolha 8, 16, 32 ou 64 bits para aplicar preenchimento.",
+    "Clique em Convert, revise o resultado e use Copy se precisar colar o valor em outro lugar."
   ],
   "usage_examples": [
-    "Um administrador de redes convertendo uma máscara de sub-rede binária (11111111.11111111.11110000.00000000) para notação decimal pontuada (255.255.240.0)",
-    "Um engenheiro de firmware interpretando o valor hexadecimal de um registrador de status (0x1A) para binário (00011010) durante depuração",
-    "Um desenvolvedor de jogos convertendo coordenadas de textura em ponto flutuante para representação hexadecimal IEEE 754-32bits",
-    "Um estudante de eletrônica convertendo o valor lido de um ADC de 12 bits (101011011001) para decimal (2777) para calibrar um sensor IoT"
+    "Converter 11111111 para 255 ao conferir um valor de byte.",
+    "Converter 255 decimal para uma string binaria preenchida com 8 ou 16 bits.",
+    "Converter FF para binario e comparar os nibbles com a referencia rapida."
+  ],
+  "faqs": [
+    {
+      "question": "Quais conversoes estao disponiveis?",
+      "answer": "O seletor oferece binario para decimal, decimal para binario, binario para hex e hex para binario."
+    },
+    {
+      "question": "Para que serve o tamanho em bits?",
+      "answer": "Nos modos decimal para binario e hex para binario, ele preenche a saida com 8, 16, 32 ou 64 bits."
+    },
+    {
+      "question": "A ferramenta interpreta numeros assinados?",
+      "answer": "Nao. A entrada decimal deve ser nao negativa e nao ha modo de interpretacao assinada."
+    },
+    {
+      "question": "Posso ver todas as bases de uma vez?",
+      "answer": "Nao. Escolha um modo por vez e copie o resultado exibido na caixa de saida."
+    }
   ]
 }

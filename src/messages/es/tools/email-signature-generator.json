@@ -1,18 +1,32 @@
 {
-  "detailed_description": "El Generador de Firmas de Correo Electrónico te ayuda a crear firmas de correo electrónico profesionales para Gmail, Outlook, Apple Mail y otros clientes de correo electrónico. Ingresa tu nombre, título laboral, empresa, número de teléfono, correo electrónico, sitio web y enlaces de redes sociales. Elige entre múltiples plantillas de diseño y personaliza colores. La herramienta genera versiones en HTML (para formato rico) y texto plano de tu firma, listas para copiar y pegar en tus configuraciones de correo electrónico.",
+  "detailed_description": "El Generador de Firmas de Correo Electronico crea una firma lista para copiar a partir de los datos que escribes en el formulario. Puedes incluir nombre, cargo, empresa, correo, telefono, sitio web y usuarios de LinkedIn, Twitter o GitHub. La herramienta ofrece tres estilos visibles, Professional, Modern y Minimal, ademas de colores predefinidos o un selector de color personalizado. Al generar la firma veras una vista previa, el HTML y una version de texto plano en pestanas separadas. No instala ni sincroniza la firma en Gmail, Outlook o Apple Mail automaticamente; copia el HTML o el texto y pegalo en la configuracion del cliente de correo que uses.",
   "usage_steps": [
-    "Ingresa tu nombre y título laboral",
-    "Agrega el nombre de tu empresa",
-    "Ingresa información de contacto (teléfono, correo electrónico)",
-    "Agrega la URL de tu sitio web",
-    "Incluye enlaces de redes sociales",
-    "Elige una plantilla de diseño",
-    "Copia la firma en HTML o texto plano"
+    "Introduce tu nombre, cargo, empresa, correo, telefono y sitio web.",
+    "Agrega usuarios de LinkedIn, Twitter o GitHub si quieres mostrarlos en la firma.",
+    "Elige Professional, Modern o Minimal y ajusta el color principal.",
+    "Pulsa Generar, revisa la vista previa y copia la version HTML o texto plano."
   ],
   "usage_examples": [
-    "Crea una firma de negocios profesional",
-    "Diseña una firma con enlaces sociales",
-    "Crea una firma de correo electrónico minimalista",
-    "Genera firmas para miembros del equipo"
+    "Preparar una firma corporativa con nombre, puesto, empresa y telefono.",
+    "Crear una firma minimalista con correo, sitio web y LinkedIn.",
+    "Generar una version de texto plano para clientes de correo que no aceptan HTML."
+  ],
+  "faqs": [
+    {
+      "question": "¿La herramienta instala la firma automaticamente?",
+      "answer": "No. Genera HTML y texto plano para copiar, pero debes pegar la firma manualmente en Gmail, Outlook, Apple Mail u otro cliente."
+    },
+    {
+      "question": "¿Que estilos estan disponibles?",
+      "answer": "Puedes elegir Professional, Modern o Minimal y cambiar el color principal con botones de color o el selector personalizado."
+    },
+    {
+      "question": "¿Puedo copiar solo texto plano?",
+      "answer": "Si. Despues de generar la firma, la pestana de texto muestra una version sin HTML que se puede copiar."
+    },
+    {
+      "question": "¿Se envian mis datos a un servidor?",
+      "answer": "La firma se genera en el navegador con los campos que introduces en la pagina."
+    }
   ]
 }

@@ -1,17 +1,32 @@
 {
-  "detailed_description": "The Binary to Decimal tool provides precise bidirectional conversion between binary, decimal, and hexadecimal number systems using direct positional notation calculations. This tool is essential for developers working with low-level systems programming, embedded hardware, network protocols, and reverse engineering tasks where understanding base-2, base-10, and base-16 representations is critical. The conversion engine employs bitwise operations for binary-to-decimal transformations, leveraging exponentiation of base values for exact integer representations. Hexadecimal conversions utilize 4-bit nybble grouping, maintaining strict adherence to IEEE 754 standards for numerical accuracy. Unlike basic conversion tools that rely on browser-native parsing, this implementation handles edge cases like signed integers (two's complement notation), overflow detection, and invalid character validation with detailed error diagnostics. The tool's value lies in its ability to process complex binary patterns (up to 32-bit words) commonly encountered in memory addressing, device register configuration, and protocol analysis workflows.",
+  "detailed_description": "Binary to Decimal converts common base representations with four visible modes: binary to decimal, decimal to binary, binary to hex, and hex to binary. Type a value, choose the conversion mode, and press Convert to place the result in the output box. For decimal-to-binary and hex-to-binary output, the bit-length selector pads the result to 8, 16, 32, or 64 bits, which is useful when comparing byte, word, or register-sized values. The tool validates binary, decimal, and hexadecimal input and shows an error for invalid characters. It also includes a Load Sample shortcut, a copy action for the result, and a quick reference table from 0 to F. It does not interpret signed two's-complement values, detect overflow, or show every base at once.",
   "usage_steps": [
-    "1. Select input format type using the format radio buttons (Binary, Decimal, or Hexadecimal)",
-    "2. Enter numeric value in the corresponding input field (e.g., '11001010' for binary)",
-    "3. Click 'Convert' to process input through the base translation engine",
-    "4. View results in all three bases displayed in the output matrix with bit-length indicators",
-    "5. Use 'Swap' button to exchange input/output values for reverse conversion verification",
-    "6. Toggle 'Signed Mode' checkbox to enable two's complement interpretation for negative values"
+    "Select one of the four modes: binary to decimal, decimal to binary, binary to hex, or hex to binary.",
+    "Enter the source value, or use Load Sample to fill a matching example.",
+    "For binary output, choose an 8, 16, 32, or 64 bit length if you want padded groups.",
+    "Press Convert, review the output, and use Copy when you need the result elsewhere."
   ],
   "usage_examples": [
-    "A firmware engineer converting 16-bit ADC register values between hex and decimal for sensor calibration tables",
-    "A cybersecurity analyst translating IP subnet masks from dotted decimal to binary for network segmentation analysis",
-    "A game developer debugging sprite graphics by converting hexadecimal color codes to RGB decimal values",
-    "An electrical engineering student validating Hamming code parity bits through iterative binary-decimal-hex round-trip conversions"
+    "Convert 11111111 to 255 when checking a byte value.",
+    "Convert decimal 255 to a padded 8-bit or 16-bit binary string.",
+    "Convert FF to binary and compare it with the quick reference table."
+  ],
+  "faqs": [
+    {
+      "question": "Which conversions are supported?",
+      "answer": "The mode selector supports binary to decimal, decimal to binary, binary to hex, and hex to binary."
+    },
+    {
+      "question": "What does the bit length setting do?",
+      "answer": "For decimal-to-binary and hex-to-binary modes, it pads the binary output to 8, 16, 32, or 64 bits."
+    },
+    {
+      "question": "Does it handle signed two's-complement numbers?",
+      "answer": "No. The current converter treats decimal input as non-negative and does not include signed interpretation."
+    },
+    {
+      "question": "Can I see all bases at once?",
+      "answer": "No. Choose one conversion mode at a time, then copy the result from the output box."
+    }
   ]
 }

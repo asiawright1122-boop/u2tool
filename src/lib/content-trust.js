@@ -399,6 +399,30 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['calorie-calculator'],
   },
   {
+    code: 'database-schema-visualizer-unsupported-er-export-claim',
+    pattern: /\bvisual ER diagrams?\b|\bClick Visualize\b|\bDrag to arrange\b|\bExport as PNG\/SVG\b|\bExport as PNG\b|\bExport as SVG\b/i,
+    message: 'Claims ER canvas, export, manual visualize button, or live database behavior that is not present in the current SQL table-card visualizer.',
+    slugs: ['database-schema-visualizer'],
+  },
+  {
+    code: 'binary-to-decimal-unsupported-signed-matrix-claim',
+    pattern: /\bformat radio buttons?\b|\boutput matrix\b|\ball three bases\b|\bSwap button\b|\bSigned Mode\b|\benable two'?s complement\b|\bhandles edge cases like signed integers\b|\boverflow detection\b|\bIEEE 754\b|\bSupport large numbers\b/i,
+    message: 'Claims signed-mode, output-matrix, swap, large-number, or overflow behavior that is not present in the current mode-by-mode base converter.',
+    slugs: ['binary-to-decimal'],
+  },
+  {
+    code: 'image-flip-rotate-unsupported-metadata-format-claim',
+    pattern: /EXIF-Orientierungsinformationen|Metadatenstruktur|Qualitätsmodus|Bilinear-Interpolation|JPEG\/PNG\/BMP\/WEBP|Alphakanäle|perspektivische Verzerrungen|Printmedien|Vorschau'-Button|Speichern unter/i,
+    message: 'Claims EXIF, metadata, quality, format picker, or separate preview controls that are not present in the current canvas flip/rotate tool.',
+    slugs: ['image-flip-rotate'],
+  },
+  {
+    code: 'email-signature-generator-unsupported-email-client-claim',
+    pattern: /autom[aá]ticamente instala|instala autom[aá]ticamente|sincroniza con Gmail|sincroniza con Outlook|env[ií]a correos?|send(?:s|ing)? emails?|auto-install(?:s|ed)? signature/i,
+    message: 'Claims automatic email-client installation, sync, or sending behavior that is not present in the current copy-only signature generator.',
+    slugs: ['email-signature-generator'],
+  },
+  {
     code: 'screen-recorder-unsupported-output-claim',
     pattern: /\bMP4\b|\bGIF\b|\bcloud upload\b|\buploads? recordings? to\b|\bwebcam overlay\b|\btrim(?:ming)?\b|\bvideo editor\b|\bscheduled recording\b|subir a la nube|recortar|superposici[oó]n de webcam/i,
     message: 'Claims screen recorder output, upload, overlay, editing, or scheduling features that are not present in the current browser recorder.',

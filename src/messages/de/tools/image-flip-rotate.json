@@ -1,17 +1,32 @@
 {
-  "detailed_description": "Der Image Flip & Rotate-Tool ermöglicht präzise geometrische Transformationen von Rasterbildern durch Manipulation der Pixelmatrix. Technisch gesehen führt das Tool affine Transformationen durch, die entweder horizontale/vertikale Spiegelungen (Reflection) oder beliebige Rotationswinkel (Rotation) um den Koordinatenursprung beinhalten. Bei der Rotation wird eine Bilinear-Interpolation angewendet, um Qualitätsverluste durch Neuberechnung der Pixelwerte zu minimieren. Besonders nützlich ist dies, um kamerainterne EXIF-Orientierungsinformationen zu überschreiben, perspektivische Verzerrungen zu korrigieren oder Bildkompositionen für Printmedien vorzubereiten. Das Tool verarbeitet gängige Formate wie JPEG, PNG, BMP und WEBP mit Unterstützung für Alphakanäle. Die Transformationen erfolgen in Echtzeit auf Basis der Canvas-API, wobei der Benutzer die Option hat, die ursprüngliche Metadatenstruktur beizubehalten oder zu bereinigen.",
+  "detailed_description": "Bild Drehen & Spiegeln verarbeitet ein hochgeladenes Bild direkt im Browser auf einer Canvas-Flache. Nach dem Upload kannst du die Vorschau horizontal oder vertikal spiegeln, feste Winkel von 0, 90, 180 oder 270 Grad waehlen oder den Schieberegler fuer einen Winkel zwischen 0 und 360 Grad verwenden. Zusaetzlich gibt es Tasten fuer minus 90 und plus 90 Grad sowie einen Reset, der Spiegelung und Rotation wieder auf den Ausgangszustand setzt. Der Download speichert das aktuell transformierte Canvas als PNG-Datei. Das Tool bietet keine EXIF-Bearbeitung, keine Qualitaetsstufe, kein Zielformat-Menue und keinen separaten Vorschau-Button; die sichtbare Canvas aktualisiert sich nach deinen Einstellungen.",
   "usage_steps": [
-    "Klicken Sie auf 'Datei hochladen', um ein Bild im JPEG/PNG/BMP/WEBP-Format auszuwählen.",
-    "Wählen Sie im Bedienfeld 'Transformation' zwischen 'Horizontal spiegeln', 'Vertikal spiegeln' oder 'Winkelrotation' aus.",
-    "Geben Sie bei Winkelrotation einen Wert zwischen -360° und +360° in das Eingabefeld ein oder nutzen Sie den Drehregler.",
-    "Aktivieren Sie den 'Qualitätsmodus' für bilineare Interpolation bei Rotationen oder deaktivieren Sie ihn für schnellere, aber kantigere Transformationen.",
-    "Verwenden Sie den 'Vorschau'-Button, um die Transformation vor der Anwendung zu überprüfen.",
-    "Klicken Sie auf 'Speichern unter', wählen Sie das Zielformat und laden Sie das transformierte Bild herunter."
+    "Lade ein Bild ueber das Dateifeld hoch und warte, bis die Canvas-Vorschau erscheint.",
+    "Aktiviere Horizontal oder Vertikal, wenn du das Bild spiegeln moechtest.",
+    "Waehle 0, 90, 180 oder 270 Grad, nutze plus/minus 90 Grad oder bewege den Rotationsregler.",
+    "Lade das transformierte Ergebnis als PNG herunter oder setze die Werte mit Reset zurueck."
   ],
   "usage_examples": [
-    "Ein Fotograf korrigiert die vertikale Ausrichtung eines Landschaftsbildes, das versehentlich im Hochformat aufgenommen wurde.",
-    "Ein Grafikdesigner erstellt ein symmetrisches Muster, indem er ein PNG-Bild horizontal spiegelt und kachelweise anordnet.",
-    "Ein Social-Media-Manager dreht ein Produktfoto um 90°, um es für eine Instagram-Story im Hochformat zu optimieren.",
-    "Ein Archivar passt den Winkel gescannter Dokumente an, um perspektivische Verzerrungen durch schrägen Scan auszugleichen."
+    "Ein Foto um 90 Grad drehen, bevor es in eine Praesentation eingefuegt wird.",
+    "Ein Bild horizontal spiegeln, damit die Blickrichtung besser zum Layout passt.",
+    "Eine schnelle PNG-Version mit kombinierter Spiegelung und Rotation herunterladen."
+  ],
+  "faqs": [
+    {
+      "question": "Welche Drehwinkel sind moeglich?",
+      "answer": "Du kannst 0, 90, 180 oder 270 Grad direkt waehlen oder den Regler fuer Werte von 0 bis 360 Grad verwenden."
+    },
+    {
+      "question": "Kann ich horizontal und vertikal gleichzeitig spiegeln?",
+      "answer": "Ja. Die beiden Schalter lassen sich unabhaengig aktivieren und mit der Rotation kombinieren."
+    },
+    {
+      "question": "Welches Format wird heruntergeladen?",
+      "answer": "Der Download erzeugt eine PNG-Datei aus der aktuellen Canvas-Vorschau."
+    },
+    {
+      "question": "Bearbeitet das Tool EXIF-Daten oder Metadaten?",
+      "answer": "Nein. Es transformiert die sichtbaren Pixel auf der Canvas und bietet keine EXIF- oder Metadatensteuerung."
+    }
   ]
 }

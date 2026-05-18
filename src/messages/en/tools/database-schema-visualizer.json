@@ -1,15 +1,32 @@
 {
-  "detailed_description": "Database Schema Visualizer creates visual ER diagrams from SQL CREATE TABLE statements.",
+  "detailed_description": "Database Schema Visualizer parses SQL CREATE TABLE statements in the browser and turns them into readable table cards. Paste one or more table definitions, use Load Example when you need a starting point, and the page lists each table with its columns, data types, primary key markers, and detected foreign-key references. Relationships appear as text links such as orders.user_id to users.id when the parser can read a REFERENCES clause. The current tool does not draw a draggable ER canvas or export diagrams; it is a quick schema-reading aid for reviewing table structure before documenting, refactoring, or discussing a database model.",
   "usage_steps": [
-    "Paste CREATE TABLE statements",
-    "Click Visualize",
-    "View relationships",
-    "Drag to arrange",
-    "Export as PNG/SVG"
+    "Paste SQL CREATE TABLE statements into the schema editor.",
+    "Use Load Example if you want to see the expected SQL shape.",
+    "Review the generated table cards, column types, and primary-key markers.",
+    "Check the relationship list for detected foreign-key references."
   ],
   "usage_examples": [
-    "Document database structure",
-    "Understand legacy databases",
-    "Plan schema changes"
+    "Summarize a small SQL schema before adding it to project documentation.",
+    "Review legacy CREATE TABLE statements and spot primary keys or foreign keys.",
+    "Prepare a schema discussion by sharing the parsed table and relationship list."
+  ],
+  "faqs": [
+    {
+      "question": "Does this create a full ER diagram?",
+      "answer": "No. It renders table cards and a relationship list from CREATE TABLE statements, but it does not provide a draggable ER canvas."
+    },
+    {
+      "question": "What SQL input works best?",
+      "answer": "Simple CREATE TABLE statements with column definitions, primary keys, and REFERENCES clauses work best."
+    },
+    {
+      "question": "Can I export the visualization as PNG or SVG?",
+      "answer": "No. The current page is for browser-based review and does not include PNG, SVG, or PDF export controls."
+    },
+    {
+      "question": "Does it connect to my database?",
+      "answer": "No. Paste SQL text into the page; the tool does not connect to a live database or inspect credentials."
+    }
   ]
 }

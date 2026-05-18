@@ -1086,6 +1086,83 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks Database Schema Visualizer ER canvas and export claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'database-schema-visualizer',
+      locale: 'en',
+      name: 'Database Schema Visualizer',
+      description: '',
+      detailedDescription: 'Database Schema Visualizer creates visual ER diagrams from SQL.',
+      usageSteps: ['Click Visualize, Drag to arrange, then Export as PNG/SVG.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'database-schema-visualizer-unsupported-er-export-claim'
+    );
+  });
+
+  it('blocks Binary to Decimal signed-mode and output-matrix claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'binary-to-decimal',
+      locale: 'en',
+      name: 'Binary to Decimal',
+      description: '',
+      detailedDescription:
+        'View results in all three bases displayed in the output matrix with overflow detection.',
+      usageSteps: ["Use the Swap button and toggle 'Signed Mode' to enable two's complement."],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'binary-to-decimal-unsupported-signed-matrix-claim'
+    );
+  });
+
+  it('blocks German Image Flip Rotate metadata and format claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'image-flip-rotate',
+      locale: 'de',
+      name: 'Bild Drehen & Spiegeln',
+      description: '',
+      detailedDescription:
+        'Ueberschreibt EXIF-Orientierungsinformationen und bewahrt die Metadatenstruktur.',
+      usageSteps: [
+        "Aktivieren Sie den Qualitaetsmodus und verwenden Sie den Vorschau'-Button.",
+        "Klicken Sie auf 'Speichern unter' und waehlen Sie JPEG/PNG/BMP/WEBP.",
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'image-flip-rotate-unsupported-metadata-format-claim'
+    );
+  });
+
+  it('blocks Email Signature Generator client sync claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'email-signature-generator',
+      locale: 'es',
+      name: 'Generador de Firmas de Correo Electronico',
+      description: '',
+      detailedDescription: 'La herramienta sincroniza con Gmail y Outlook automaticamente.',
+      usageSteps: ['Instala automaticamente la firma y envia correos de prueba.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'email-signature-generator-unsupported-email-client-claim'
+    );
+  });
+
   it('blocks Screen Recorder output, upload, overlay, and editing claims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'screen-recorder',
