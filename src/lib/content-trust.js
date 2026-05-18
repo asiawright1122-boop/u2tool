@@ -315,6 +315,24 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['gantt-chart-generator'],
   },
   {
+    code: 'timeline-chart-unsupported-style-controls',
+    pattern: /marker styles, labels, and spacing|custom marker styles|manual spacing controls|spacing to match the density/i,
+    message: 'Claims timeline marker or spacing controls that are not present in the current chart editor.',
+    slugs: ['timeline-chart-generator'],
+  },
+  {
+    code: 'mortgage-calculator-fr-unsupported-loan-claim',
+    pattern: /Cochez les options complémentaires|taxes foncières, assurance habitation, frais de dossier|onglet ['’«]Analyse|conditions variables|modalités d['’]amortissement linéaire ou dégressif|prêt à taux variable/i,
+    message: 'Claims French mortgage taxes, insurance, variable-rate comparison, or analysis-tab behavior that is not present in the current calculator.',
+    slugs: ['mortgage-calculator'],
+  },
+  {
+    code: 'gpa-calculator-en-unsupported-policy-claim',
+    pattern: /honors\/AP designations|pass\/fail options|repeated courses|non-traditional grading scales|honors courses add 0\.5|hypothetical scenarios|course type \(Standard, Honors, AP\)|percentage-based input|Excluded from GPA/i,
+    message: 'Claims GPA weighting, exclusion, replacement, percentage, or policy behavior that is not present in the current course-row calculator.',
+    slugs: ['gpa-calculator'],
+  },
+  {
     code: 'calorie-calculator-unsupported-medical-macro-claim',
     pattern: /الثيروكسين|التغيرات الهرمونية|مرض السكري|مقاومة الإنسولين|توزيع البروتينات والدهون والكربوهيدرات|البروتينات والدهون والكربوهيدرات|كتلة العضلات|نسب كتلة العضلات|مؤشر كتلة الجسم\s*\(BMI\)|\bBMI\b|2\.4|الرياضيين المحترفين|غير ثنائي|Hamwi|micronutrient|macro(?:nutrient)?(?: distribution)?|body composition|diabetes/i,
     message: 'Claims medical, body-composition, or macro-planning behavior that is not present in the current calorie calculator.',

@@ -1,18 +1,35 @@
 {
-  "detailed_description": "Margin Calculator helps you understand the profitability of your products or services. Enter the cost and selling price to calculate gross profit margin (profit as percentage of selling price) and markup percentage (profit as percentage of cost). The tool also shows the absolute profit amount. Essential for pricing strategy, competitive analysis, and financial planning.",
+  "detailed_description": "Margin Calculator helps you compare cost, selling price, gross profit, profit margin, and markup in one browser-based worksheet. Enter a cost and a selling price to calculate profit as a currency amount, profit margin as a percentage of selling price, and markup as a percentage of cost. The quick target margin and target markup shortcuts can also fill the selling price from your current cost. Use it for simple pricing checks and scenario comparisons; it does not import product catalogs, apply taxes or discounts, or pull live supplier data.",
   "usage_steps": [
-    "Enter the cost price",
-    "Enter the selling price",
-    "Click Calculate to see results",
-    "View the profit amount",
-    "See the profit margin percentage",
-    "See the markup percentage",
-    "Compare margin vs markup"
+    "Enter the cost amount for the item or service.",
+    "Enter the selling price you want to test.",
+    "Click Calculate to show profit, profit margin, markup, and gross profit.",
+    "Use a target margin shortcut if you want the tool to calculate a selling price from cost.",
+    "Use a target markup shortcut when your pricing rule starts from cost plus a markup percentage.",
+    "Review the formula section to confirm whether you need margin or markup for your workflow."
   ],
   "usage_examples": [
-    "Analyze product profitability",
-    "Compare margins across products",
-    "Set competitive pricing",
-    "Evaluate supplier pricing"
+    "Check whether a $50 cost and $100 selling price produces the expected margin.",
+    "Find the selling price needed for a 30% margin on a known cost.",
+    "Compare margin and markup before sharing a price estimate.",
+    "Explain the difference between margin and markup in a small business worksheet."
+  ],
+  "faqs": [
+    {
+      "question": "What is the difference between margin and markup?",
+      "answer": "Margin compares profit to selling price. Markup compares profit to cost. The same cost and price can produce very different percentages."
+    },
+    {
+      "question": "Can it calculate a price from a target margin?",
+      "answer": "Yes. Keep the cost field set, then click one of the target margin buttons to fill the selling price and update the results."
+    },
+    {
+      "question": "Does it include taxes, fees, or discounts?",
+      "answer": "No. The current calculation uses only the cost and selling price fields, so add those adjustments to your inputs if they matter."
+    },
+    {
+      "question": "Does this connect to accounting or inventory data?",
+      "answer": "No. It is a manual calculator for quick pricing scenarios in the browser."
+    }
   ]
 }

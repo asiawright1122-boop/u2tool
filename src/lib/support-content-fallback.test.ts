@@ -717,6 +717,106 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks Timeline Chart style controls that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'timeline-chart-generator',
+      locale: 'en',
+      name: 'Timeline Chart Generator',
+      description: '',
+      detailedDescription: '',
+      usageSteps: ['Adjust colors, marker styles, labels, and spacing to match the density of your timeline.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'timeline-chart-unsupported-style-controls'
+    );
+  });
+
+  it('blocks French Mortgage Calculator loan-cost and analysis-tab claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'mortgage-calculator',
+      locale: 'fr',
+      name: "Calculatrice d'emprunt immobilier",
+      description: '',
+      detailedDescription:
+        "Il intègre des paramètres comme les taxes foncières, assurance habitation, frais de dossier.",
+      usageSteps: [
+        "Cochez les options complémentaires.",
+        "Consultez l'onglet « Analyse » pour comparer un prêt à taux variable.",
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'mortgage-calculator-fr-unsupported-loan-claim'
+    );
+  });
+
+  it('keeps accurate French Mortgage Calculator support copy visible', () => {
+    const report = assessSupportContentTrust({
+      slug: 'mortgage-calculator',
+      locale: 'fr',
+      name: "Calculatrice d'emprunt immobilier",
+      description: '',
+      detailedDescription:
+        "La calculatrice estime un versement mensuel avec le prix du logement, l'apport, le taux annuel, la durée du prêt et un versement mensuel supplémentaire.",
+      usageSteps: [
+        "Saisissez le prix du logement et l'apport.",
+        "Affichez le tableau d'amortissement pour consulter les premières lignes mensuelles.",
+      ],
+      usageExamples: ['Un acheteur compare deux durées de prêt avec le même apport.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(false);
+  });
+
+  it('blocks GPA Calculator policy and weighting claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'gpa-calculator',
+      locale: 'en',
+      name: 'GPA Calculator',
+      description: '',
+      detailedDescription:
+        'It supports honors/AP designations, pass/fail options, repeated courses, and hypothetical scenarios.',
+      usageSteps: [
+        'Select course type (Standard, Honors, AP).',
+        "Toggle 'Excluded from GPA' checkbox or choose percentage-based input.",
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'gpa-calculator-en-unsupported-policy-claim'
+    );
+  });
+
+  it('keeps accurate GPA Calculator course-row support copy visible', () => {
+    const report = assessSupportContentTrust({
+      slug: 'gpa-calculator',
+      locale: 'en',
+      name: 'GPA Calculator',
+      description: '',
+      detailedDescription:
+        'The GPA Calculator computes a grade point average from editable course rows with a course name, credit value, and letter grade.',
+      usageSteps: [
+        'Choose the 4.0 or 5.0 GPA scale.',
+        'Review the GPA result, total credits, total points, and percentage summary.',
+      ],
+      usageExamples: ['A student estimates a semester GPA from four letter-graded courses.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(false);
+  });
+
   it('blocks Calorie Calculator medical and macro-planning claims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'calorie-calculator',
