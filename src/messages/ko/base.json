@@ -5657,7 +5657,7 @@
       "name": "독서 시간 계산기",
       "description": "어떤 텍스트나 글도 독서 시간을 계산합니다.",
       "seo_title": "무료 온라인 읽기 시간 계산기 - 간편하고 정확한 결과",
-      "seo_description": "이 도구를 사용하여 글의 읽기 시간을 쉽게 계산하세요. 정확한 결과와 간편한 사용을 위해 온라인으로 텍스트나 글을 입력하세요. 지금 시작하세요!",
+      "seo_description": "텍스트를 붙여넣고 단어 수, 문자 수, 문장 수, 단락 수와 읽기 시간을 WPM 속도로 추정하세요.",
       "pasteText": "텍스트 붙여넣기",
       "placeholder": "텍스트, 블로그 포스트 등을 붙여넣어 독서 시간을 계산하세요...",
       "readingSpeed": "독서 속도:",
@@ -9170,7 +9170,7 @@
       "name": "이미지를 PDF로",
       "description": "여러 이미지를 단일 PDF 문서로 변환. 페이지 설정 지원.",
       "seo_title": "무료 온라인 이미지를 PDF로 변환기",
-      "seo_description": "이미지를 PDF로 무료 온라인 변환. 다중 이미지, 드래그 앤 드롭 정렬, 페이지 크기 및 방향 설정."
+      "seo_description": "PNG, JPEG, JPG, WebP 이미지를 PDF로 변환합니다. 순서, A4, Letter, 이미지 맞춤, 여백과 방향을 설정하세요."
     },
     "pdf-merger": {
       "name": "PDF 병합기",
@@ -11721,9 +11721,9 @@
     },
     "xml-validator": {
       "name": "XML 검사기",
-      "description": "XML 문법 및 정형성 검사",
+      "description": "붙여넣은 XML이 브라우저에서 파싱되는지 확인",
       "seo_title": "XML Validator - 무료 온라인 도구로 XML 유효성 검사",
-      "seo_description": "XML Validator는 온라인으로 XML 문법과 잘-formed 여부를 검사하는 무료 도구입니다. 지금 검사하고 문제를 해결하세요!",
+      "seo_description": "XML을 붙여넣고 브라우저 파싱 결과, 오류 메시지, Format 및 Load Example 기능을 바로 확인하세요.",
       "xmlInput": "XML 입력",
       "validate": "검사",
       "valid": "정확한 XML",

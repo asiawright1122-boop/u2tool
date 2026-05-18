@@ -1,17 +1,34 @@
 {
-  "detailed_description": "Le Calculateur de Temps de Lecture est un outil avancé d'analyse de texte qui combine algorithmes de traitement du langage naturel (NLP) et modèles statistiques pour déterminer avec précision la durée nécessaire à la lecture d'un contenu. Techniquement, il décompose le texte en tokens, identifie les structures syntaxiques complexes (comme les propositions subordonnées ou les tournures idiomatiques) et applique des coefficients de difficulté variables selon le domaine (scientifique, littéraire, technique). Il intègre également des paramètres de typographie (taille des paragraphes, présence de listes, emphases en gras/italique) qui influencent le rythme de lecture. Cet outil s'adresse aux rédacteurs professionnels souhaitant optimiser la densité informationnelle de leurs articles, aux enseignants concevant des supports pédagogiques adaptés aux durées imparties, ou aux étudiants planifiant leur travail personnel. Contrairement aux solutions basiques basées sur un ratio fixe mots/minute, notre algorithme utilise des données réelles de lectures oculaires (eye-tracking studies) pour modéliser les pauses naturelles entre les phrases et les variations de vitesse selon la complexité lexicale mesurée via l'indice Flesch-Kincaid. Le calcul final intègre également une correction pour les contenus multimédias intégrés (liens, images) qui interrompent la lecture linéaire.",
+  "detailed_description": "Le Calculateur de temps de lecture estime la duree necessaire pour lire un texte colle dans la page a partir du nombre de mots et d'une vitesse reglable en mots par minute. L'interface met a jour dans le navigateur le nombre de mots, caracteres, phrases et paragraphes, ainsi que le temps de lecture et une estimation pour une lecture a voix haute. Le curseur de vitesse va de 100 a 400 mots par minute, ce qui permet de comparer une lecture lente, moyenne ou rapide sans installer de logiciel.",
   "usage_steps": [
-    "Collez votre texte dans la zone d'analyse ou chargez un fichier .TXT/.HTML via le bouton 'Importer Fichier'",
-    "Sélectionnez le public cible à l'aide des curseurs : 'Expert' (vitesse moyenne 250 mots/minute) à 'Débutant' (100 mots/minute)",
-    "Activez/désactivez les options de correction avancée : 'Texte technique' (ajout 15% de temps) ou 'Lecture intensive' (doublement des pauses)",
-    "Choisissez le format de sortie : estimation brute, chronologie détaillée par section ou graphique de charge cognitive",
-    "Cliquez sur 'Calculer' pour lancer l'analyse sémantique en temps réel",
-    "Téléchargez le rapport PDF ou copiez le code d'intégration pour afficher l'estimation sur votre site"
+    "Collez ou saisissez le texte dans la zone principale.",
+    "Reglez la vitesse de lecture entre 100 et 400 mots par minute.",
+    "Consultez les compteurs de mots, caracteres, phrases et paragraphes.",
+    "Comparez le temps de lecture avec l'estimation de lecture a voix haute.",
+    "Modifiez le texte ou la vitesse et observez la mise a jour immediate des resultats."
   ],
   "usage_examples": [
-    "Un rédacteur technique évalue si sa documentation de 1800 mots nécessitera un briefing oral complémentaire en fonction de l'estimation de 8 minutes 23 secondes",
-    "Une chargée de communication ajuste les sous-titres de son article de blog pour respecter la durée moyenne de scroll de 2 minutes sur son audience cible",
-    "Un enseignant conçoit une fiche de lecture de 3 pages en tenant compte des 12 minutes supplémentaires nécessaires pour les passages avec vocabulaire spécialisé",
-    "Un UX designer compare les temps de lecture estimés entre deux versions d'un formulaire d'inscription pour optimiser le taux de conversion"
+    "Un redacteur verifie si un article reste proche de cinq minutes de lecture.",
+    "Un enseignant estime le temps necessaire pour lire une consigne avant un exercice.",
+    "Un createur compare deux versions d'un script avant l'enregistrement.",
+    "Un editeur controle la longueur d'un resume avant publication."
+  ],
+  "faqs": [
+    {
+      "question": "Comment le temps de lecture est-il calcule?",
+      "answer": "L'outil divise le nombre de mots par la vitesse selectionnee en mots par minute."
+    },
+    {
+      "question": "Puis-je modifier la vitesse de lecture?",
+      "answer": "Oui. Le curseur permet de choisir une vitesse entre 100 et 400 mots par minute."
+    },
+    {
+      "question": "Le texte est-il envoye ailleurs?",
+      "answer": "Non. Les compteurs sont calcules dans le navigateur."
+    },
+    {
+      "question": "A quoi sert l'estimation de lecture a voix haute?",
+      "answer": "Elle donne un second repere base sur une vitesse de parole approximative."
+    }
   ]
 }

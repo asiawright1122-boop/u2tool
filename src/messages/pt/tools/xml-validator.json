@@ -1,17 +1,35 @@
 {
-  "detailed_description": "O XML Validator é uma ferramenta técnica especializada para verificação rigorosa de documentos XML, garantindo conformidade com padrões de sintaxe e estrutura. Ele analisa documentos para validar elementos como fechamento correto de tags, aninhamento hierárquico, atributos bem definidos, uso adequado de seções CDATA, e referências a entidades. Além da verificação básica de bem-formação (well-formedness), suporta validações avançadas contra esquemas DTD, XSD ou RelaxNG, essencial para garantir que dados estruturados em XML atendam a contratos específicos em sistemas de integração. Profissionais precisam deste recurso para depurar erros em configurações de aplicações, validar respostas de APIs REST/SOAP, ou preparar dados para transformações XSLT. O funcionamento baseia-se em parser SAX ou DOM, que percorre o documento em tempo real, identificando inconsistências como tags não fechadas, uso incorreto de namespaces, ou violações de esquema. Diferente de ferramentas genéricas, oferece análise detalhada com localização precisa de erros (linha/coluna), sugestões contextuais de correção e exportação de relatórios em formato estruturado para auditorias.",
+  "detailed_description": "O XML Validator verifica se o XML colado na pagina esta bem formado usando o analisador XML do navegador. Cole o conteudo na area de texto, clique em Validate e a pagina mostra se a analise foi bem-sucedida ou exibe a mensagem de erro retornada pelo navegador. Quando o navegador informa linha ou coluna, esses dados aparecem no resultado. A acao Format reorganiza um XML que ja pode ser analisado com quebras de linha e indentacao; Load Example insere um catalogo XML de exemplo para teste rapido.",
   "usage_steps": [
-    "Cole o código XML no editor de texto com suporte a realce de sintaxe ou faça upload do arquivo através do botão 'Importar XML'.",
-    "Selecione o modo de validação desejado no campo 'Esquema de Validação': Well-Formedness Only, DTD, XSD ou RelaxNG.",
-    "Ative a opção 'Mostrar Detalhes de Erro' para visualizar mensagens técnicas com código de erro e localização exata no documento.",
-    "Clique em 'Validar' para iniciar a análise, que ocorre em tempo real com barra de progresso e indicação de status por cores.",
-    "Navegue pelos resultados no painel lateral, onde erros são agrupados por categoria (estrutura, sintaxe, esquema) com explicações técnicas.",
-    "Use o botão 'Exportar Relatório' para gerar arquivo JSON ou CSV com detalhamento das inconsistências encontradas para documentação."
+    "Cole o XML na area de entrada.",
+    "Clique em Validate para executar a analise no navegador.",
+    "Revise o status valido ou invalido e a mensagem de erro exibida.",
+    "Use Format quando o XML puder ser analisado e precisar ficar mais legivel.",
+    "Use Load Example para inserir um exemplo rapido.",
+    "Edite o XML e valide novamente ate corrigir os erros."
   ],
   "usage_examples": [
-    "Um desenvolvedor identificando inconsistências em um arquivo de configuração Spring Boot após migração de versão do framework.",
-    "Um arquiteto de dados validando a integridade de um feed XML gerado por sistema legado antes de integração com pipeline Apache NiFi.",
-    "Um QA engineer verificando conformidade de resposta SOAP de um serviço financeiro contra WSDL publicado.",
-    "Um administrador de sistemas corrigindo problemas de codificação em logs XML gerados por aplicações Java com charset inválido."
+    "Verificar se um fragmento XML pequeno tem uma tag de fechamento ausente.",
+    "Formatar uma configuracao XML antes de cola-la em documentacao.",
+    "Entender um erro em um trecho RSS pela mensagem do navegador.",
+    "Carregar o exemplo para confirmar o funcionamento antes de testar seu proprio conteudo."
+  ],
+  "faqs": [
+    {
+      "question": "O validador confere regras externas?",
+      "answer": "Nao. A pagina atual verifica se o XML colado pode ser analisado pelo navegador."
+    },
+    {
+      "question": "Posso enviar um arquivo XML?",
+      "answer": "Nao. Cole o texto XML diretamente no editor."
+    },
+    {
+      "question": "Format corrige XML invalido?",
+      "answer": "Nao. Format funciona quando o XML ja pode ser analisado."
+    },
+    {
+      "question": "Onde a verificacao acontece?",
+      "answer": "Ela acontece no navegador, sem servico de backend."
+    }
   ]
 }

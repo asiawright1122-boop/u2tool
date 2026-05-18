@@ -1,17 +1,35 @@
 {
-  "detailed_description": "Le validateur XML effectue une analyse syntaxique rigoureuse des documents XML en appliquant les règles des spécifications XML 1.0 et 1.1. Il identifie les erreurs de structure telles que les balises non fermées, les attributs mal formés, les espaces de noms non déclarés, les sections CDATA mal délimitées ou les entités non résolues. Contrairement aux validateurs basiques, cet outil inclut un moteur de détection des erreurs de validation DTD (Document Type Definition) et signale précisément les lignes et colonnes concernées avec des codes d'erreur standardisés (ex: XML_ERR_NAME_REQUIRED). Les développeurs ont besoin de cet outil pour garantir l'intégrité des données lors de l'échange entre systèmes hétérogènes, éviter les pannes critiques dans les applications consommant du XML (comme les services web SOAP), et corriger les erreurs de configuration dans des fichiers tels que les descriptors J2EE ou les fichiers de mapping ORM. Le processus utilise un analyseur SAX (Simple API for XML) pour détecter les erreurs de bien-forméness sans nécessiter de schéma externe, et un analyseur DOM en mode validation lorsqu'un DTD ou XSD est fourni. Les résultats incluent des détails techniques comme les codes d'erreur libxml2 ou les messages du validateur Apache Xerces, permettant une résolution précise des problèmes.",
+  "detailed_description": "Le validateur XML verifie si le XML colle dans la page est bien forme en utilisant l'analyseur XML du navigateur. Collez le contenu dans la zone de texte, cliquez sur Validate, puis la page indique si l'analyse a reussi ou affiche le message d'erreur renvoye par le navigateur. Lorsque le navigateur fournit une ligne ou une colonne, ces informations sont affichees. L'action Format reformate un XML deja analysable avec des retours a la ligne et des indentations; Load Example insere un exemple de catalogue XML.",
   "usage_steps": [
-    "Chargez votre fichier XML en utilisant le bouton 'Parcourir' ou collez directement le code dans l'éditeur monospace.",
-    "Activez l'option 'Validation stricte' pour appliquer les règles XML 1.1 ou sélectionnez un DTD personnalisé via le menu déroulant.",
-    "Cliquez sur le bouton 'Valider' pour lancer l'analyse syntaxique et sémantique.",
-    "Examinez la liste des erreurs dans le panneau inférieur, triée par niveau de criticité (erreur fatale, avertissement, info).",
-    "Utilisez les liens cliquables 'Ligne:Colonne' pour accéder directement aux segments problématiques dans l'éditeur.",
-    "Téléchargez le XML corrigé au format .xml ou exportez le rapport d'erreurs en .txt avec les codes de spécification officiels."
+    "Collez le XML dans la zone de saisie.",
+    "Cliquez sur Validate pour lancer l'analyse dans le navigateur.",
+    "Consultez le statut valide ou invalide et le message d'erreur.",
+    "Utilisez Format lorsque le XML est analysable et doit etre plus lisible.",
+    "Utilisez Load Example pour inserer un exemple rapide.",
+    "Modifiez le XML puis relancez la verification."
   ],
   "usage_examples": [
-    "Un développeur Java corrige un fichier web.xml mal formé causant le déploiement échoué d'une application WAR sur Tomcat.",
-    "Un intégrateur de données vérifie un flux XML généré par un ETL avant son ingestion dans une base MarkLogic.",
-    "Un administrateur système valide les fichiers de configuration XML des routeurs réseau avant application en production.",
-    "Un rédacteur technique debugge un fichier DocBook XML contenant des entités personnalisées non déclarées dans le DTD."
+    "Verifier qu'un fragment XML ne contient pas de balise de fermeture manquante.",
+    "Mettre en forme une petite configuration XML avant de la coller dans une documentation.",
+    "Comprendre une erreur dans un extrait RSS grace au message du navigateur.",
+    "Charger l'exemple integre pour tester rapidement l'interface."
+  ],
+  "faqs": [
+    {
+      "question": "Le validateur verifie-t-il des regles externes?",
+      "answer": "Non. La page actuelle verifie seulement si le XML colle peut etre analyse par le navigateur."
+    },
+    {
+      "question": "Puis-je importer un fichier XML?",
+      "answer": "Non. Collez le texte XML directement dans l'editeur."
+    },
+    {
+      "question": "Format corrige-t-il un XML invalide?",
+      "answer": "Non. Format fonctionne lorsque le XML est deja analysable."
+    },
+    {
+      "question": "Ou se fait la verification?",
+      "answer": "Elle se fait dans le navigateur, sans service backend."
+    }
   ]
 }
