@@ -1,15 +1,33 @@
 {
-  "detailed_description": "Database Migration Generator creates migration scripts for common database operations supporting multiple databases.",
+  "detailed_description": "The Database Migration Generator creates starter schema migration snippets from a table form. Choose PostgreSQL, MySQL, or SQLite, select raw SQL, Prisma, or TypeORM output, then define a table and column rows with names, data types, primary-key, nullable, and unique settings. The generated result updates in the browser so you can copy it into a migration file, review it in your editor, and adapt it to your project's conventions. This is best for quick CREATE TABLE or ALTER TABLE scaffolding, not for inspecting a live database, running migrations, comparing environments, or guaranteeing that a production migration is safe without review.",
   "usage_steps": [
-    "Select migration type",
-    "Choose database type",
-    "Define schema changes",
-    "Generate up/down scripts",
-    "Copy or download"
+    "Enter the table name you want to scaffold, such as users, invoices, or audit_events.",
+    "Choose PostgreSQL, MySQL, or SQLite, then choose raw SQL, Prisma, or TypeORM as the output style.",
+    "Add or edit column rows and set each column name, data type, primary key, nullable, and unique options.",
+    "Switch between create-table and alter-table output when you need a fresh table definition or add-column statements.",
+    "Copy the generated migration text and review it in your project before applying it with your migration runner."
   ],
   "usage_examples": [
-    "Generate CREATE TABLE migrations",
-    "Create ALTER TABLE scripts",
-    "Build index migrations"
+    "A backend developer drafts a PostgreSQL CREATE TABLE script for a small users table before adding project-specific indexes by hand.",
+    "A TypeScript developer sketches a TypeORM entity from column rows and then moves the code into the application's migration folder.",
+    "A prototype owner generates an SQLite table definition for a local proof of concept before hardening the schema."
+  ],
+  "faqs": [
+    {
+      "question": "Does it connect to my database or run the migration?",
+      "answer": "No. It only generates copyable migration text in the browser. You still run, test, and roll back migrations with your own database tooling."
+    },
+    {
+      "question": "Which outputs are available?",
+      "answer": "The current page offers raw SQL, Prisma, and TypeORM output styles with PostgreSQL, MySQL, and SQLite database choices."
+    },
+    {
+      "question": "Can I use this for production migrations?",
+      "answer": "Use it as a first draft only. Review naming, indexes, constraints, data backfills, transactions, and rollback strategy before applying anything to production."
+    },
+    {
+      "question": "Does it generate full up and down migration files?",
+      "answer": "No. It generates the visible schema snippet. Add framework-specific file wrappers, down steps, and safety checks in your application."
+    }
   ]
 }

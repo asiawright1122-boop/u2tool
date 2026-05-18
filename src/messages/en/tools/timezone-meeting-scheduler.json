@@ -1,15 +1,33 @@
 {
-  "detailed_description": "Timezone Meeting Scheduler helps find optimal meeting times for participants across different time zones.",
+  "detailed_description": "The Timezone Meeting Scheduler compares eight common IANA time zones and ranks candidate meeting hours against each participant's local working window. Start with the sample participants or add your own, choose a base time zone, set meeting duration, and adjust each person's work start and end hour. The page scores each hour against every participant, highlights the top options, shows local times side by side, and lets you copy the best time summary. It is useful for remote-team planning, support handoffs, interview loops, and recurring standups. It does not send calendar invitations, sync external calendars, handle date-specific holidays, or replace a final check in Google Calendar, Outlook, or your scheduling system.",
   "usage_steps": [
-    "Add participant locations",
-    "Set meeting duration",
-    "View time comparison",
-    "Find overlapping hours",
-    "Select and share time"
+    "Choose the base time zone that you want to use for the suggested meeting hours.",
+    "Set the meeting duration in half-hour increments so the scoring respects the full meeting length.",
+    "Add, rename, or remove participants and choose a time zone for each person.",
+    "Adjust each participant's work start and end hour to reflect the practical meeting window.",
+    "Review the ranked meeting times, compare local times, and copy the best-time summary for a calendar draft."
   ],
   "usage_examples": [
-    "Schedule international calls",
-    "Find US-Europe meeting times",
-    "Coordinate remote teams"
+    "A remote team lead compares New York, London, and Tokyo work windows before proposing a weekly standup.",
+    "A support manager checks a handoff time that is reasonable for Los Angeles, Shanghai, and Sydney teammates.",
+    "A recruiter drafts interview options across Europe and Asia before confirming the final invite in a calendar app."
+  ],
+  "faqs": [
+    {
+      "question": "Which time zones are available?",
+      "answer": "The current scheduler includes UTC, New York, Los Angeles, London, Berlin, Shanghai, Tokyo, and Sydney."
+    },
+    {
+      "question": "How are the best times ranked?",
+      "answer": "Each candidate hour is scored against participant working windows, with stronger scores when more people are inside their configured work hours."
+    },
+    {
+      "question": "Does it send calendar invitations?",
+      "answer": "No. It copies a text summary for planning. Create and verify the actual calendar invite in your calendar system."
+    },
+    {
+      "question": "Does it account for every holiday or company schedule?",
+      "answer": "No. It uses the time zones and working-hour ranges you enter, so check holidays, PTO, and date-specific daylight-saving edge cases before sending."
+    }
   ]
 }

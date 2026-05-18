@@ -1671,6 +1671,64 @@ describe('assessSupportContentTrust', () => {
     }
   });
 
+  it('blocks Keyboard Tester event export claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'keyboard-tester',
+      locale: 'en',
+      name: 'Keyboard Tester',
+      description: '',
+      detailedDescription:
+        'Use the Copy button beneath the matrix to export raw event data including isTrusted flag and event timestamp.',
+      usageSteps: ['Compare output against keylogger detection mechanisms.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'keyboard-tester-unsupported-event-export-claim'
+    );
+  });
+
+  it('keeps accurate Keyboard Tester browser-event support copy visible', () => {
+    const report = assessSupportContentTrust({
+      slug: 'keyboard-tester',
+      locale: 'en',
+      name: 'Keyboard Tester',
+      description: '',
+      detailedDescription:
+        'The Keyboard Tester listens for keydown and keyup events, highlights matching keys on the visual keyboard, and shows the latest key, code, and keyCode values.',
+      usageSteps: ['Press a key and review the browser-reported key, code, and keyCode values.'],
+      usageExamples: ['Check whether a browser shortcut reaches the page before wiring it into an app.'],
+      faqs: [
+        {
+          question: 'Can it certify keyboard ghosting?',
+          answer: 'No. It only shows which browser key events reach the page.',
+        },
+      ],
+    });
+
+    expect(report.blockSupportContent).toBe(false);
+  });
+
+  it('blocks Database Migration Generator download and full-file claims', () => {
+    const report = assessSupportContentTrust({
+      slug: 'database-migration-generator',
+      locale: 'en',
+      name: 'Database Migration Generator',
+      description: '',
+      detailedDescription: 'Create full up and down migration files with downloadable migration output.',
+      usageSteps: ['Copy or download the migration after generation.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'database-migration-unsupported-download-claim'
+    );
+  });
+
   it('keeps scoped rules from blocking unrelated tools', () => {
     const report = assessSupportContentTrust({
       slug: 'timezone-converter',

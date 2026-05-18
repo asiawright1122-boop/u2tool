@@ -1,15 +1,33 @@
 {
-  "detailed_description": "Base64 Image Converter encodes images (PNG, JPG, GIF, SVG, WebP) to Base64 data URI strings and decodes Base64 back to images.",
+  "detailed_description": "The Base64 Image Converter handles two small browser workflows: image to Base64 and Base64 to image preview. In encode mode, upload or drag an image file, then the page reads the selected image with the browser FileReader API, shows file name, size, MIME type, preview, and a copyable data URL. In decode mode, paste a raw Base64 image string or a full data URL, preview the decoded image, and download the preview when it loads. This is useful for small icons, email template experiments, API payload checks, CSS background-image snippets, and self-contained HTML examples. It is not an image compressor, batch converter, metadata editor, or format-transcoding tool; Base64 text is usually about one third larger than the original binary file.",
   "usage_steps": [
-    "Upload image or paste Base64",
-    "For encoding: drag image",
-    "For decoding: paste Base64",
-    "Preview result",
-    "Copy or download"
+    "Choose Image to Base64 when you want a copyable data URL from a local image file.",
+    "Drop an image onto the upload area or click the area to select an image from your device.",
+    "Review the preview, file name, file size, MIME type, and generated Base64 output before copying it.",
+    "Switch to Base64 to Image when you want to inspect a raw Base64 string or a full data:image URL.",
+    "Paste the Base64 value, decode it, and use the preview to confirm that the image loads before downloading or reusing it."
   ],
   "usage_examples": [
-    "Embed icons in CSS as data URIs",
-    "Convert API Base64 images",
-    "Create inline images for emails"
+    "A frontend developer turns a tiny SVG or PNG icon into a data URL for a quick CSS prototype.",
+    "An API tester pastes a Base64 image response to confirm that it decodes into the expected visual asset.",
+    "An email designer checks whether a small inline image data URL renders before moving it into a template."
+  ],
+  "faqs": [
+    {
+      "question": "Should I Base64-encode every image on a website?",
+      "answer": "Usually no. Base64 increases text size and can make caching harder, so it is best for small assets, prototypes, tests, or special embed cases."
+    },
+    {
+      "question": "Can it decode Base64 without a data:image prefix?",
+      "answer": "Yes. If the prefix is missing, the page tries common image signatures such as JPEG, PNG, GIF, and WebP before previewing the result."
+    },
+    {
+      "question": "Does it compress or resize the image?",
+      "answer": "No. It reads the selected file into a Base64 data URL or previews pasted Base64. It does not resize, compress, crop, or change image quality."
+    },
+    {
+      "question": "Is the file uploaded during conversion?",
+      "answer": "The visible conversion uses the browser FileReader workflow from the selected file. Avoid using private files in online workflows unless your own policy permits it."
+    }
   ]
 }

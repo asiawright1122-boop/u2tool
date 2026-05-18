@@ -501,6 +501,18 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['database-connection-tester'],
   },
   {
+    code: 'database-migration-unsupported-download-claim',
+    pattern: /\bCopy or download\b|\bdownload(?:able)? migration\b|\bgenerate(?:s|d)? complete migration files?\b/i,
+    message: 'Claims database migration download or complete migration-file generation that is not present in the current copy-only migration snippet UI.',
+    slugs: ['database-migration-generator'],
+  },
+  {
+    code: 'keyboard-tester-unsupported-event-export-claim',
+    pattern: /\bCopy button beneath the matrix\b|\bisTrusted flag\b|\bevent timestamp\b|\bUI5 Events specification\b|\braw event data\b|\bkeylogger detection\b/i,
+    message: 'Claims Keyboard Tester event export or browser-internal event diagnostics that are not present in the current key/code/keyCode viewer UI.',
+    slugs: ['keyboard-tester'],
+  },
+  {
     code: 'excel-merger-unsupported-advanced-merge-claim',
     pattern: /Apache POI|OpenXML SDK|WorkbookConcatenator|XSSFCellStyler|XLSX\/CSV|CSV|многоуровневые заголовки|условные форматы|Автоопределение ключевых полей|первичных ключей|100 тыс\. строк|сохраненными форматами и формулами|重複検出|主キー列|最大2GB|VLOOKUP|HLOOKUP|INDEX-MATCH|열 매핑|고급 설정|coluna-chave|chave primária|主键字段|字段映射|预览结果|توحيد الصيغ|كشف التكرار|سجل تغييرات|تعيين الأعمدة|50 ميجابايت/i,
     message: 'Claims CSV, key-based matching, formatting preservation, or backend spreadsheet processing that is not present in the current Excel Merger UI.',
