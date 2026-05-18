@@ -1,13 +1,32 @@
 {
-  "detailed_description": "Nuestro girador de texto es una herramienta en línea que reescribe texto utilizando sinónimos para crear variaciones únicas. Diseñado para desarrolladores, diseñadores y creadores de contenido que buscan evitar el plagio y mejorar la SEO de sus textos. ¡Sin registro ni costo, obtén resultados instantáneos!",
+  "detailed_description": "El Text Spinner crea variaciones simples reemplazando algunas palabras por sinonimos incluidos en la herramienta. Pega un texto, elige Conservative, Moderate o Aggressive y pulsa Girar para generar una version alternativa. El porcentaje de unicidad compara cuantas palabras cambiaron respecto al texto original y el boton Copiar lleva el resultado al portapapeles. La lista de sinonimos actual esta pensada sobre todo para palabras comunes en ingles, por lo que los textos en espanol pueden cambiar poco si no hay coincidencias. La herramienta no exporta JSON, Base64 ni SVG, no comprueba plagio y no promete contenido SEO listo para publicar.",
   "usage_steps": [
-    "Pega texto",
-    "Selecciona nivel",
-    "Haz clic en Girar",
-    "Copia resultado"
+    "Pega el texto que quieres variar en el cuadro de entrada.",
+    "Selecciona Conservative, Moderate o Aggressive para controlar la probabilidad de reemplazo.",
+    "Pulsa Girar y revisa el texto generado junto al porcentaje de unicidad.",
+    "Copia el resultado o usa Clear para empezar de nuevo."
   ],
   "usage_examples": [
-    "Crea variaciones de descripciones de productos",
-    "Genera artículos únicos"
+    "Probar variaciones rapidas de una frase corta en ingles.",
+    "Comparar como cambia el texto con niveles Conservative, Moderate y Aggressive.",
+    "Generar una version de borrador para editar manualmente despues."
+  ],
+  "faqs": [
+    {
+      "question": "¿Funciona igual con texto en espanol?",
+      "answer": "No siempre. La lista de sinonimos disponible es limitada y funciona mejor con palabras comunes en ingles."
+    },
+    {
+      "question": "¿El porcentaje de unicidad detecta plagio?",
+      "answer": "No. Solo compara cuantas palabras del resultado son distintas de las palabras en la misma posicion del texto original."
+    },
+    {
+      "question": "¿Exporta JSON, Base64 o SVG?",
+      "answer": "No. La herramienta muestra texto plano y permite copiarlo al portapapeles."
+    },
+    {
+      "question": "¿El resultado esta listo para SEO?",
+      "answer": "No. Usalo como borrador y revisa manualmente tono, precision y naturalidad antes de publicar."
+    }
   ]
 }

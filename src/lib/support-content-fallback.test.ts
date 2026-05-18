@@ -1163,6 +1163,97 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks Text Spinner SEO, plagiarism, and export claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'text-spinner',
+      locale: 'es',
+      name: 'Girador de Texto',
+      description: '',
+      detailedDescription: 'Diseñado para evitar el plagio y mejorar la SEO de tus textos.',
+      usageSteps: ['Obtén versiones JSON, Base64 y SVG de tu contenido.'],
+      usageExamples: ['Genera artículos únicos.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'text-spinner-unsupported-seo-export-claim'
+    );
+  });
+
+  it('blocks TypeScript Playground compiler and runtime claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'typescript-playground',
+      locale: 'en',
+      name: 'TypeScript Playground',
+      description: '',
+      detailedDescription: 'Developers can write, compile, and test TypeScript code in the browser.',
+      usageSteps: ['Configure options and debug code.'],
+      usageExamples: ['Test type definitions and share code snippets.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'typescript-playground-unsupported-compiler-runtime-claim'
+    );
+  });
+
+  it('blocks Financial Forecast cash-flow and investor claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'financial-forecast-calculator',
+      locale: 'en',
+      name: 'Financial Forecast Calculator',
+      description: '',
+      detailedDescription: 'Create investor projections with seasonal adjustment.',
+      usageSteps: ['Project cash flow and run Monte Carlo analysis.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'financial-forecast-unsupported-cashflow-investor-claim'
+    );
+  });
+
+  it('blocks Graph Chart advanced editor claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'graph-chart-generator',
+      locale: 'en',
+      name: 'Graph Chart Generator',
+      description: '',
+      detailedDescription:
+        'It leverages advanced graph theory algorithms and supports directed and undirected graphs.',
+      usageSteps: ['Switch to the Edges tab, specify the edge type, and choose a Tree layout.'],
+      usageExamples: ['Find potential bottlenecks in a network map.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'graph-chart-unsupported-editor-claim'
+    );
+  });
+
+  it('blocks Binary to Text file and encoding claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'binary-to-text',
+      locale: 'en',
+      name: 'Binary to Text',
+      description: '',
+      detailedDescription: 'Upload binary files and run full Unicode encoding analysis.',
+      usageSteps: ['Use base64 conversion or decode encrypted data.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'binary-to-text-unsupported-file-encoding-claim'
+    );
+  });
+
   it('blocks Screen Recorder output, upload, overlay, and editing claims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'screen-recorder',

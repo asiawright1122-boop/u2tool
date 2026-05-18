@@ -1,14 +1,32 @@
 {
-  "detailed_description": "The TypeScript Playground is an online coding environment where developers can write, compile, and test TypeScript code in the browser. Perfect for web developers, designers, and content creators, this free tool allows you to experiment with TypeScript syntax, test code snippets, and see instant results without any setup or registration. Use it to learn TypeScript, debug code, or quickly prototype ideas.",
+  "detailed_description": "TypeScript Playground provides a lightweight browser editor for turning simple TypeScript-like snippets into JavaScript by removing common type syntax. The tool starts with an interface and typed function example, lets you choose a target label, and exposes Compile and Copy buttons. The current implementation is intentionally small: it removes interface blocks, simple type annotations, generic-looking angle brackets, and basic `as Type` assertions with string replacements. It does not run the official TypeScript compiler, perform type checking, execute JavaScript, load npm packages, or make the ES5, ES2015, ES2020, and ESNext target selector change the emitted syntax. Use it for quick demonstrations, not production compilation.",
   "usage_steps": [
-    "Write TypeScript",
-    "Configure options",
-    "View compiled JS",
-    "Copy output"
+    "Paste or edit a small TypeScript-like snippet in the left editor.",
+    "Leave or change the target label if it helps your note-taking workflow.",
+    "Click Compile to remove common type syntax and view JavaScript in the right editor.",
+    "Copy the generated JavaScript and review it before using it anywhere else."
   ],
   "usage_examples": [
-    "Learn TypeScript",
-    "Test type definitions",
-    "Share code snippets"
+    "Strip simple type annotations from a short teaching example.",
+    "Show how an interface declaration disappears from runtime JavaScript.",
+    "Create a quick draft snippet before checking it with a real TypeScript compiler."
+  ],
+  "faqs": [
+    {
+      "question": "Does this use the official TypeScript compiler?",
+      "answer": "No. It uses simple browser-side string replacements and does not perform full TypeScript compilation."
+    },
+    {
+      "question": "Does the target selector change the output?",
+      "answer": "No. The selector is visible, but the current conversion does not emit different JavaScript for ES5, ES2015, ES2020, or ESNext."
+    },
+    {
+      "question": "Can it type-check or run code?",
+      "answer": "No. It does not type-check, execute JavaScript, show console output, or load packages."
+    },
+    {
+      "question": "When should I use it?",
+      "answer": "Use it for quick learning examples and drafts, then verify important code with `tsc` or a full development setup."
+    }
   ]
 }

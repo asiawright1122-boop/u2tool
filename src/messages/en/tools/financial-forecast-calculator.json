@@ -1,15 +1,32 @@
 {
-  "detailed_description": "Financial Forecast Calculator creates projections using historical data and growth models.",
+  "detailed_description": "Financial Forecast Calculator estimates future revenue, expenses, and profit from editable quarterly history. Start with the sample periods or add your own rows, choose USD, EUR, GBP, CNY, or JPY, then select Linear Regression, Exponential Growth, or Moving Average. Linear Regression extends the trend from historical values, Exponential Growth uses the visible growth-rate field, and Moving Average repeats the recent average. The page shows historical and forecast bars, average revenue, average expenses, average profit, revenue growth, expense change, and profit margin. Export Forecast Report downloads a JSON file with the historical data, forecast values, settings, statistics, and generation time. It is a planning calculator, not a bookkeeping system, cash-timing model, investor-grade valuation, or financial advice.",
   "usage_steps": [
-    "Enter historical data",
-    "Select forecast model",
-    "Set forecast period",
-    "Adjust assumptions",
-    "View projections"
+    "Review the sample quarterly revenue and expense rows or replace them with your own data.",
+    "Choose a forecast method, forecast period count, and currency.",
+    "Adjust the growth rate when using Exponential Growth.",
+    "Review the forecast visualization, statistics cards, and exported JSON report if needed."
   ],
   "usage_examples": [
-    "Forecast revenue",
-    "Project cash flow",
-    "Create investor projections"
+    "Estimate the next four quarters of revenue, expenses, and profit from recent history.",
+    "Compare a linear trend with a fixed exponential growth assumption.",
+    "Export a JSON snapshot for a planning note or spreadsheet follow-up."
+  ],
+  "faqs": [
+    {
+      "question": "Which forecast methods are available?",
+      "answer": "The selector includes Linear Regression, Exponential Growth, and Moving Average."
+    },
+    {
+      "question": "What does the export contain?",
+      "answer": "The JSON export includes historical rows, forecast periods, revenue, expenses, profit, settings, statistics, and generatedAt."
+    },
+    {
+      "question": "Does this forecast cash flow or valuation?",
+      "answer": "No. It works with revenue, expenses, and profit only; it does not model cash timing, debt, taxes, valuation, or investor scenarios."
+    },
+    {
+      "question": "Is this financial advice?",
+      "answer": "No. It is a lightweight planning aid for simple projections and should be checked against real financial records."
+    }
   ]
 }

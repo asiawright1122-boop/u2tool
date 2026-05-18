@@ -112,7 +112,8 @@
           <textarea
             id="binary-text-input"
             name="inputValue"
-            onchange={(e) => mode === 'toText' ? binary = e.target.value : text = e.target.value}
+            value={mode === 'toText' ? binary : text}
+            oninput={(e) => mode === 'toText' ? binary = (e.currentTarget as HTMLTextAreaElement).value : text = (e.currentTarget as HTMLTextAreaElement).value}
             placeholder={mode === 'toText' ? t('binaryPlaceholder') : t('textPlaceholder')}
             class="w-full h-40 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono"
           />
@@ -125,6 +126,7 @@
           <textarea
             id="binary-text-output"
             name="outputValue"
+            value={mode === 'toText' ? text : binary}
             readOnly
             placeholder={t('outputPlaceholder')}
             class="w-full h-40 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono"></textarea>

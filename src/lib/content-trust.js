@@ -298,9 +298,33 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
   },
   {
     code: 'graph-chart-unsupported-editor-claim',
-    pattern: /propriétés de lien|algorithmes de mise en page avancés|personnaliser les couleurs, les formes|copier le code HTML|intégration des graphes dans/i,
+    pattern: /propriétés de lien|algorithmes de mise en page avancés|personnaliser les couleurs, les formes|copier le code HTML|intégration des graphes dans|advanced graph theory algorithms|directed and undirected graphs|Edges tab|edge type|Tree layout|Style settings|customer journey maps|potential bottlenecks/i,
     message: 'Claims graph editor controls or embed export behavior that are not present in the current ECharts graph UI.',
     slugs: ['graph-chart-generator'],
+  },
+  {
+    code: 'text-spinner-unsupported-seo-export-claim',
+    pattern: /Obt[eé]n versiones JSON, Base64 y SVG|evitar el plagio y mejorar la SEO|Genera art[ií]culos [uú]nicos|plagiarism checker|SEO-ready content/i,
+    message: 'Claims text-spinner export, plagiarism, or SEO-publishing behavior that is not present in the current synonym replacement tool.',
+    slugs: ['text-spinner'],
+  },
+  {
+    code: 'typescript-playground-unsupported-compiler-runtime-claim',
+    pattern: /compile, and test TypeScript code|test TypeScript code|debug code|Test type definitions|Share code snippets|Configure options|see instant results without any setup/i,
+    message: 'Claims TypeScript compiler, testing, debugging, sharing, or configurable compiler behavior that is not present in the current string-rewrite playground.',
+    slugs: ['typescript-playground'],
+  },
+  {
+    code: 'financial-forecast-unsupported-cashflow-investor-claim',
+    pattern: /Project cash flow|Create investor projections|investor projections|seasonalAdjustment|seasonal adjustment|Monte Carlo|valuation model|accounting software/i,
+    message: 'Claims cash-flow, investor, seasonal, valuation, or accounting behavior that is not present in the current revenue/expense/profit forecast calculator.',
+    slugs: ['financial-forecast-calculator'],
+  },
+  {
+    code: 'binary-to-text-unsupported-file-encoding-claim',
+    pattern: /decode files?|encrypted data|base64 conversion|full Unicode encoding|UTF-8 inspector|upload binary/i,
+    message: 'Claims file, encryption, base64, or full Unicode analysis behavior that is not present in the current typed binary/text converter.',
+    slugs: ['binary-to-text'],
   },
   {
     code: 'boxplot-unsupported-import-style-claim',

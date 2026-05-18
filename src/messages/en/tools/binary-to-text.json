@@ -1,15 +1,32 @@
 {
-  "detailed_description": "Binary to Text Converter translates between binary code and readable text. Convert binary sequences like 01001000 01101001 to text, or encode your messages into binary format.",
+  "detailed_description": "Binary to Text converts between 8-bit binary byte groups and readable text in the browser. In Binary to Text mode, paste a sequence such as 01001000 01100101 01101100 01101100 01101111 and press Convert to decode it into text. In Text to Binary mode, type text and the tool converts each character into a padded binary value separated by spaces. The converter ignores spacing in binary input, requires the cleaned binary length to be a multiple of 8, shows an error for invalid byte length, and includes Swap and Copy controls. It is best for simple ASCII-style learning, debugging, and examples rather than file processing, encryption workflows, or complete character-set analysis.",
   "usage_steps": [
-    "Select conversion mode (Binary to Text or Text to Binary)",
-    "Enter binary code or text in the input field",
-    "Click Convert to see the result",
-    "Copy the converted output",
-    "Use swap button to quickly switch modes"
+    "Choose Binary to Text or Text to Binary at the top of the tool.",
+    "Paste binary byte groups or type plain text in the input box.",
+    "Click Convert and review the result in the output box.",
+    "Use Swap to change direction or Copy to copy the current output."
   ],
   "usage_examples": [
-    "Decode binary messages",
-    "Learn binary encoding",
-    "Create secret binary messages"
+    "Decode 01001000 01100101 01101100 01101100 01101111 into Hello.",
+    "Turn a short classroom example into spaced binary byte groups.",
+    "Check whether pasted binary contains a complete set of 8-bit bytes."
+  ],
+  "faqs": [
+    {
+      "question": "What binary format does it expect?",
+      "answer": "Use 0 and 1 characters in 8-bit groups. Spaces are fine because the converter removes non-binary separators before decoding."
+    },
+    {
+      "question": "Why do I see an invalid binary error?",
+      "answer": "After spaces and separators are removed, the binary length must divide evenly into 8-bit bytes."
+    },
+    {
+      "question": "Can I use uploaded files?",
+      "answer": "No. It converts typed text and binary strings only; there is no file picker or cipher workflow."
+    },
+    {
+      "question": "Does Text to Binary support every Unicode character?",
+      "answer": "It uses browser character codes and works best for simple text examples. It is not a complete character-set analyzer."
+    }
   ]
 }

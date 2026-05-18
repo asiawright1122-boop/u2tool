@@ -1,17 +1,32 @@
 {
-  "detailed_description": "The Graph Chart Generator is a powerful web-based application designed to create and visualize complex graph and network charts. It leverages advanced graph theory algorithms and data visualization techniques to help users represent and analyze relationships and connections within datasets. Whether you are a data scientist, a network engineer, or a business analyst, this tool can significantly enhance your ability to understand and communicate intricate data relationships. The tool supports various graph types, including directed and undirected graphs, and allows for the customization of nodes and edges to meet specific visualization needs. Users can export their charts in high-quality PNG and SVG formats, making it easy to integrate these visuals into reports, presentations, and web applications. The Graph Chart Generator is particularly useful for tasks such as network topology mapping, social network analysis, and dependency visualization in software development.",
+  "detailed_description": "Graph Chart Generator builds an ECharts network chart from editable nodes and links. You can load sample data, edit node names, node sizes, and categories, add or remove nodes, connect source and target nodes, and choose a Force or Circular layout. Chart settings include title, color theme, label visibility, and force-layout repulsion. The preview supports pan and zoom through ECharts roam behavior, and the download buttons export the rendered chart as PNG or SVG. The tool does not include edge weights, directed-edge modes, hierarchy layouts, HTML embed export, CSV import, automatic graph analysis, or separate style controls for every individual node and edge.",
   "usage_steps": [
-    "Step 1: Navigate to the Graph Chart Generator website and click on the 'Create New Graph' button to start a new project.",
-    "Step 2: In the 'Nodes' section, use the 'Add Node' button to create new nodes. Enter a unique identifier and any additional properties for each node.",
-    "Step 3: Switch to the 'Edges' tab to define the relationships between nodes. Click 'Add Edge', select the source and target nodes, and specify the edge type (directed or undirected).",
-    "Step 4: Customize your graph by adjusting the layout using the 'Layout' options. Choose from various algorithms such as 'Force Directed', 'Circle', or 'Tree' to arrange your nodes and edges effectively.",
-    "Step 5: Use the 'Style' settings to modify the appearance of nodes and edges. You can change colors, sizes, and labels to enhance the visual clarity of your chart.",
-    "Step 6: Once your graph is complete, click the 'Export' button and select the desired format (PNG or SVG) to download your chart for use in other applications."
+    "Use Load Sample or edit the default nodes and links directly.",
+    "Set the chart title, color theme, Force or Circular layout, label visibility, and repulsion if Force is selected.",
+    "Add nodes or links, then choose each link source and target from the visible node list.",
+    "Review the ECharts preview and download the finished chart as PNG or SVG."
   ],
   "usage_examples": [
-    "Example 1: A network engineer uses the Graph Chart Generator to map the topology of a corporate network, identifying critical nodes and potential bottlenecks to optimize network performance.",
-    "Example 2: A social media analyst visualizes the connections between users in a social network to identify key influencers and community clusters for targeted marketing campaigns.",
-    "Example 3: A software developer creates a dependency graph of a complex codebase to understand the relationships between different modules and identify areas for refactoring.",
-    "Example 4: A business analyst uses the tool to visualize customer journey maps, highlighting touchpoints and decision points to improve user experience and conversion rates."
+    "Sketch a small dependency graph for a project discussion.",
+    "Create a simple network map with categories and node sizes.",
+    "Export a relationship chart as PNG or SVG for a report or slide."
+  ],
+  "faqs": [
+    {
+      "question": "Which layouts are available?",
+      "answer": "The layout selector offers Force and Circular layouts."
+    },
+    {
+      "question": "Can I import CSV or JSON data?",
+      "answer": "No. Edit nodes and links in the visible form or load the built-in sample data."
+    },
+    {
+      "question": "Can I set per-link details?",
+      "answer": "No. Links connect a source and target node, but the current UI does not expose link weight, arrow, or custom property controls."
+    },
+    {
+      "question": "Which export formats are supported?",
+      "answer": "The chart preview can be downloaded as PNG or SVG."
+    }
   ]
 }
