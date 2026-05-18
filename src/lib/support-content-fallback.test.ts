@@ -956,6 +956,117 @@ describe('assessSupportContentTrust', () => {
     }
   });
 
+  it('blocks unsupported claims for the next high-impression recovery batch', () => {
+    const examples = [
+      {
+        slug: 'api-tester',
+        name: 'API Tester',
+        detailedDescription:
+          'This client can send requests to any API endpoint, bypass CORS with a CORS proxy, store request history, and organize collections with environment variables.',
+        usageSteps: ['Configure OAuth flows and secret storage.'],
+        expectedCode: 'api-tester-unsupported-client-claim',
+      },
+      {
+        slug: 'radar-chart-generator',
+        name: 'Radar Chart Generator',
+        detailedDescription:
+          'Click the Add Data button, use advanced CSV formulas, trend lines, custom marker controls, and gradient fill styles.',
+        usageSteps: ['Share the chart directly from the tool.'],
+        expectedCode: 'radar-chart-unsupported-editor-claim',
+      },
+      {
+        slug: 'meeting-agenda-builder',
+        name: 'Meeting Agenda Builder',
+        detailedDescription:
+          'Export and share agendas, send calendar invitations, download PDF files, and manage a shared workspace meeting library.',
+        usageSteps: ['Push the agenda to Google Calendar and Outlook.'],
+        expectedCode: 'meeting-agenda-unsupported-export-share-claim',
+      },
+      {
+        slug: 'carbon-footprint-calculator',
+        name: 'Carbon Footprint Calculator',
+        detailedDescription:
+          'Provides a comprehensive breakdown for Scope 1, Scope 2, and Scope 3 with country-specific electricity and regional grid factors.',
+        usageSteps: ['Plan carbon offset strategies for individuals or businesses.'],
+        expectedCode: 'carbon-footprint-unsupported-audit-offset-claim',
+      },
+      {
+        slug: 'png-to-svg',
+        name: 'PNG to SVG Converter',
+        detailedDescription:
+          'The tool traces raster images and converts them to scalable vector graphics for resolution-independent logos with Bezier curves.',
+        usageSteps: ['Fine-tune colors and paths, vectorize logos, and create vector art from photos.'],
+        expectedCode: 'png-to-svg-unsupported-vectorization-claim',
+      },
+    ];
+
+    for (const example of examples) {
+      const report = assessSupportContentTrust({
+        slug: example.slug,
+        locale: 'en',
+        name: example.name,
+        description: '',
+        detailedDescription: example.detailedDescription,
+        usageSteps: example.usageSteps,
+        usageExamples: [],
+        faqs: [],
+      });
+
+      expect(report.blockSupportContent, example.slug).toBe(true);
+      expect(report.issues.map((issue) => issue.code), example.slug).toContain(
+        example.expectedCode
+      );
+    }
+  });
+
+  it('keeps accurate support copy for the next high-impression recovery batch visible', () => {
+    const examples = [
+      {
+        slug: 'api-tester',
+        name: 'API Tester',
+        detailedDescription:
+          'API Tester sends browser-based HTTP requests with a method selector, editable headers, optional body, response status, elapsed time, response headers, and response body.',
+      },
+      {
+        slug: 'radar-chart-generator',
+        name: 'Radar Chart Generator',
+        detailedDescription:
+          'Radar Chart Generator creates an editable ECharts radar chart with indicator rows, series rows, four color themes, shape, fill opacity, legend visibility, and PNG or SVG download.',
+      },
+      {
+        slug: 'meeting-agenda-builder',
+        name: 'Meeting Agenda Builder',
+        detailedDescription:
+          'Meeting Agenda Builder creates a structured agenda with meeting details, item durations, item ordering, and Markdown, plain text, or HTML copy output.',
+      },
+      {
+        slug: 'carbon-footprint-calculator',
+        name: 'Carbon Footprint Calculator',
+        detailedDescription:
+          'Carbon Footprint Calculator estimates annualized CO2 emissions from visible transportation, home energy, and diet inputs using fixed emission factors.',
+      },
+      {
+        slug: 'png-to-svg',
+        name: 'PNG to SVG Converter',
+        detailedDescription:
+          'PNG to SVG Converter creates an SVG file in Embed mode or Simple Trace mode with a brightness threshold and copy or download output.',
+      },
+    ];
+
+    for (const example of examples) {
+      const report = assessSupportContentTrust({
+        ...example,
+        locale: 'en',
+        description: '',
+        usageSteps: ['Use the visible controls, review the output, and copy or download where available.'],
+        usageExamples: ['Use the tool for a quick browser-based workflow.'],
+        faqs: [],
+      });
+
+      expect(report.blockSupportContent, example.slug).toBe(false);
+    }
+  });
+
   it('blocks Calorie Calculator medical and macro-planning claims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'calorie-calculator',

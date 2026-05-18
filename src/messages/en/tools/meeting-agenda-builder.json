@@ -1,15 +1,35 @@
 {
-  "detailed_description": "Meeting Agenda Builder helps create structured, time-boxed meeting agendas.",
+  "detailed_description": "Meeting Agenda Builder creates a structured, time-boxed agenda from editable meeting details and agenda items. Set the meeting title, date, start time, location, and objective, then add, remove, reorder, and time-box agenda topics. Each item can include a presenter name and duration. The preview automatically calculates start and end times from the meeting start time and total duration, then formats the agenda as Markdown, plain text, or HTML. Use the copy button to copy the generated agenda; the tool does not create calendar events, keep a saved agenda list, or download files.",
   "usage_steps": [
-    "Set meeting title/duration",
-    "Add agenda items",
-    "Assign presenters",
-    "Add objectives",
-    "Export and share"
+    "Set the meeting title, date, start time, location, and objective.",
+    "Edit the default agenda items or add new topics.",
+    "Choose a duration for each agenda item and optionally add a presenter.",
+    "Move items up or down until the sequence matches the meeting flow.",
+    "Switch between Markdown, Text, and HTML output formats.",
+    "Copy the generated agenda for use in email, notes, docs, or chat."
   ],
   "usage_examples": [
-    "Plan team meetings",
-    "Create client agendas",
-    "Structure workshops"
+    "Build a 60-minute weekly team meeting with review, updates, discussion, and next steps.",
+    "Draft a client agenda with timed discovery topics and presenter names.",
+    "Create a workshop outline that keeps each section inside a fixed time box.",
+    "Copy an HTML agenda into a document or internal wiki draft."
+  ],
+  "faqs": [
+    {
+      "question": "Does it create calendar events?",
+      "answer": "No. It only generates agenda text in the browser."
+    },
+    {
+      "question": "Can I export a file?",
+      "answer": "No. The current output can be copied as Markdown, plain text, or HTML."
+    },
+    {
+      "question": "How are agenda times calculated?",
+      "answer": "The preview starts from the meeting start time and adds each item duration in order."
+    },
+    {
+      "question": "Are meetings saved?",
+      "answer": "No. The current page state is not stored as a reusable agenda collection or team account."
+    }
   ]
 }

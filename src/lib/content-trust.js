@@ -363,6 +363,36 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['gif-maker'],
   },
   {
+    code: 'api-tester-unsupported-client-claim',
+    pattern: /\bany API endpoint\b|\bbypass(?:es)? CORS\b|\bCORS proxy\b|\brequest history\b|\bcollections?\b|\benvironment variables?\b|\bOAuth flows?\b|\bsecret storage\b/i,
+    message: 'Claims API client, CORS, history, collection, environment, or auth management behavior that is not present in the current browser-fetch tester.',
+    slugs: ['api-tester'],
+  },
+  {
+    code: 'radar-chart-unsupported-editor-claim',
+    pattern: /\bAdd Data button\b|\bshare the chart directly\b|\badvanced CSV\b|\bformulas?\b|\btrend lines?\b|\bcustom marker\b|\bbackground image\b|\bgradient fill\b/i,
+    message: 'Claims radar chart import, sharing, or advanced styling behavior that is not present in the current ECharts radar editor.',
+    slugs: ['radar-chart-generator'],
+  },
+  {
+    code: 'meeting-agenda-unsupported-export-share-claim',
+    pattern: /\bExport and share\b|\bsend(?:s|ing)? calendar invitations?\b|\bGoogle Calendar\b|\bOutlook\b|\bdownload(?:able)? PDF\b|\bshared workspace\b|\bmeeting library\b/i,
+    message: 'Claims meeting agenda export, calendar, sharing, or saved-library behavior that is not present in the current copy-only agenda builder.',
+    slugs: ['meeting-agenda-builder'],
+  },
+  {
+    code: 'carbon-footprint-unsupported-audit-offset-claim',
+    pattern: /\bcomprehensive breakdown\b|\bcarbon offset strategies\b|\bfor individuals or businesses\b|\bcountry-specific electricity\b|\bregional grid factors?\b|\bScope 1\b|\bScope 2\b|\bScope 3\b/i,
+    message: 'Claims carbon audit, offset strategy, business, regional grid, or GHG-scope behavior that is not present in the current fixed-factor personal estimator.',
+    slugs: ['carbon-footprint-calculator'],
+  },
+  {
+    code: 'png-to-svg-unsupported-vectorization-claim',
+    pattern: /\bresolution-independent logos\b|\bFine-tune colors and paths\b|\bCreate vector art from photos\b|\btraces raster images and converts them to scalable vector graphics\b|\bvectorize logos\b|\bmulti-color tracing\b|\bBezier curves?\b/i,
+    message: 'Claims polished vectorization, color/path editing, photo tracing, or curve extraction that is not present in the current embed/simple-threshold PNG to SVG tool.',
+    slugs: ['png-to-svg'],
+  },
+  {
     code: 'calorie-calculator-unsupported-medical-macro-claim',
     pattern: /الثيروكسين|التغيرات الهرمونية|مرض السكري|مقاومة الإنسولين|توزيع البروتينات والدهون والكربوهيدرات|البروتينات والدهون والكربوهيدرات|كتلة العضلات|نسب كتلة العضلات|مؤشر كتلة الجسم\s*\(BMI\)|\bBMI\b|2\.4|الرياضيين المحترفين|غير ثنائي|Hamwi|micronutrient|macro(?:nutrient)?(?: distribution)?|body composition|diabetes/i,
     message: 'Claims medical, body-composition, or macro-planning behavior that is not present in the current calorie calculator.',

@@ -1,15 +1,15 @@
 {
-  "detailed_description": "La Calculadora de Huella de Carbono te ayuda a medir tu impacto ambiental calculando las emisiones de CO2 del transporte, el uso de energía en el hogar y las elecciones dietéticas. La herramienta proporciona un desglose completo de tu huella de carbono y muestra cuántos árboles serían necesarios para compensar tus emisiones.",
+  "detailed_description": "La Calculadora de Huella de Carbono estima emisiones anualizadas de CO2 a partir de los campos visibles de transporte, energía del hogar y dieta. Elige si los datos son mensuales o anuales, introduce distancia en coche por tipo de combustible, horas de vuelo por tipo de trayecto, kilómetros en tren y autobús, electricidad, gas natural, calefacción y tipo de dieta. La herramienta usa factores fijos, agrupa el resultado en transporte, energía y estilo de vida, muestra toneladas totales de CO2 y calcula árboles aproximados con una suposición fija.",
   "usage_steps": [
-    "Select monthly or yearly calculation period",
-    "Enter your transportation data (car, flights, train, bus)",
-    "Input your home energy consumption (electricity, gas, heating)",
-    "Select your diet type",
-    "View your total carbon footprint and emission breakdown"
+    "Selecciona si los datos introducidos son mensuales o anuales.",
+    "Introduce distancia en coche y elige gasolina, diésel, híbrido o eléctrico.",
+    "Añade horas de vuelo, kilómetros en tren, kilómetros en autobús y energía del hogar cuando corresponda.",
+    "Selecciona el tipo de dieta.",
+    "Revisa transporte, energía del hogar, estilo de vida, CO2 total y estimación de árboles."
   ],
   "usage_examples": [
-    "Track personal environmental impact over time",
-    "Compare carbon footprint of different lifestyle choices",
-    "Plan carbon offset strategies for individuals or businesses"
+    "Estimar cómo cambia el total al reducir kilómetros mensuales en coche.",
+    "Comparar de forma aproximada la opción de dieta media con vegetariana o vegana.",
+    "Identificar si el mayor peso viene de transporte o energía del hogar."
   ]
 }

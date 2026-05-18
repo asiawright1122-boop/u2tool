@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Conversor PNG para SVG traça imagens rasterizadas e as converte em gráficos vetoriais escalonáveis. Ideal para criar logotipos e ícones independentes da resolução a partir de imagens em mapa de bits.",
+  "detailed_description": "O Conversor PNG para SVG cria um arquivo SVG a partir de uma imagem enviada em dois modos no navegador. O modo Incorporar coloca o PNG, JPEG ou GIF original dentro de um elemento image no SVG. O modo Traçado simples desenha a imagem em um canvas, aplica um limite de brilho e cria pequenos segmentos pretos para pixels escuros. Você pode escolher o modo, ajustar o limite no traçado, copiar o SVG gerado ou baixar o arquivo.",
   "usage_steps": [
-    "Carregue sua imagem PNG",
-    "Ajuste as configurações de rastreamento",
-    "Visualize o resultado vetorial",
-    "Ajuste cores e caminhos",
-    "Baixe o arquivo SVG"
+    "Selecione uma imagem PNG, JPEG ou GIF do dispositivo.",
+    "Escolha Incorporar para manter a imagem raster dentro do SVG.",
+    "Escolha Traçado simples para criar um caminho preto baseado no limite de brilho.",
+    "Ajuste o limite quando usar o modo de traçado.",
+    "Copie o código SVG ou baixe o arquivo gerado."
   ],
   "usage_examples": [
-    "Vectorize logos para escala",
-    "Converta ícones para o formato SVG",
-    "Crie arte vetorial a partir de fotos"
+    "Colocar um pequeno PNG dentro de um contêiner SVG para documentação.",
+    "Criar uma silhueta preta aproximada a partir de um ícone de alto contraste.",
+    "Baixar um SVG que contém a imagem enviada como elemento image."
   ]
 }

@@ -1,15 +1,35 @@
 {
-  "detailed_description": "Carbon Footprint Calculator helps you measure your environmental impact by calculating CO2 emissions from transportation, home energy use, and dietary choices. The tool provides a comprehensive breakdown of your carbon footprint and shows how many trees would be needed to offset your emissions.",
+  "detailed_description": "Carbon Footprint Calculator estimates annualized CO2 emissions from visible transportation, home energy, and diet inputs. Choose monthly or yearly input mode, then enter car distance by fuel type, flight hours by haul type, train distance, bus distance, electricity use, natural gas, heating oil, and diet type. The calculator applies built-in emission factors, groups the result into transportation, home energy, and lifestyle totals, shows the combined tonnes of CO2, assigns a simple low-to-very-high level, and estimates trees needed using a fixed 21 kg CO2 per tree per year assumption. Treat the result as a rough planning estimate, not a certified greenhouse-gas inventory.",
   "usage_steps": [
-    "Select monthly or yearly calculation period",
-    "Enter your transportation data (car, flights, train, bus)",
-    "Input your home energy consumption (electricity, gas, heating)",
-    "Select your diet type",
-    "View your total carbon footprint and emission breakdown"
+    "Choose whether your entered activity data is monthly or yearly.",
+    "Enter car distance and select petrol, diesel, hybrid, or electric.",
+    "Enter flight hours and choose short, medium, or long haul.",
+    "Add train distance, bus distance, electricity, natural gas, and heating oil values where relevant.",
+    "Select meat, average, vegetarian, or vegan diet type.",
+    "Review transportation, home energy, lifestyle, total CO2, emission level, and tree estimate."
   ],
   "usage_examples": [
-    "Track personal environmental impact over time",
-    "Compare carbon footprint of different lifestyle choices",
-    "Plan carbon offset strategies for individuals or businesses"
+    "Estimate how changing monthly car distance affects your annualized total.",
+    "Compare a meat-heavy diet setting with vegetarian or vegan settings for a rough lifestyle difference.",
+    "Approximate the effect of flight hours on a personal travel footprint.",
+    "Use the breakdown to identify whether transport or home energy dominates the estimate."
+  ],
+  "faqs": [
+    {
+      "question": "Is this a certified carbon audit?",
+      "answer": "No. It is a simple calculator with fixed emission factors for rough personal planning."
+    },
+    {
+      "question": "Why does monthly mode multiply some values by 12?",
+      "answer": "Monthly transportation and energy inputs are annualized so the result can be shown as yearly tonnes of CO2."
+    },
+    {
+      "question": "What does the tree estimate mean?",
+      "answer": "It divides the estimated kilograms of CO2 by a fixed 21 kg per tree per year assumption."
+    },
+    {
+      "question": "Can it model local electricity mixes?",
+      "answer": "No. The current tool uses one built-in electricity factor rather than location-based energy data."
+    }
   ]
 }

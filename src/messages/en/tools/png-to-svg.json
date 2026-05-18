@@ -1,15 +1,35 @@
 {
-  "detailed_description": "PNG to SVG Converter traces raster images and converts them to scalable vector graphics. Ideal for creating resolution-independent logos and icons from bitmap images.",
+  "detailed_description": "PNG to SVG Converter creates an SVG file from an uploaded image in one of two browser-side modes. Embed mode wraps the uploaded PNG, JPEG, or GIF data URL inside an SVG image element, preserving the raster image inside an SVG container. Trace mode draws the image to a canvas, applies a brightness threshold, and creates simple black 1-pixel square path segments for pixels darker than the threshold. You can preview the uploaded image, choose Embed or Simple Trace mode, adjust the threshold in trace mode, copy the generated SVG markup, or download the SVG file. It is useful for quick SVG wrapping and rough monochrome masks, but it is not a professional vectorizer and does not edit colors, smooth curves, simplify paths, or trace multi-color artwork.",
   "usage_steps": [
-    "Upload your PNG image",
-    "Adjust tracing settings",
-    "Preview the vector result",
-    "Fine-tune colors and paths",
-    "Download the SVG file"
+    "Select a PNG, JPEG, or GIF image from your device.",
+    "Preview the uploaded raster image in the browser.",
+    "Choose Embed mode to place the original raster image inside SVG markup.",
+    "Choose Simple Trace mode to create a black threshold-based SVG path.",
+    "Adjust the threshold slider when using Simple Trace mode.",
+    "Copy the SVG markup or download the generated SVG file."
   ],
   "usage_examples": [
-    "Vectorize logos for scaling",
-    "Convert icons to SVG format",
-    "Create vector art from photos"
+    "Wrap a small PNG mockup in an SVG container for a quick documentation example.",
+    "Create a rough black silhouette from a high-contrast icon using Simple Trace mode.",
+    "Copy SVG markup for a small embedded image test.",
+    "Download an SVG file that contains the uploaded raster image as an image element."
+  ],
+  "faqs": [
+    {
+      "question": "Does this create clean vector logos?",
+      "answer": "No. Embed mode keeps the raster image, and Simple Trace mode creates rough black pixel paths."
+    },
+    {
+      "question": "Can I edit colors or paths?",
+      "answer": "No. The current controls only switch mode and, for tracing, adjust the brightness threshold."
+    },
+    {
+      "question": "Why is the traced SVG very large?",
+      "answer": "Simple Trace mode can create one tiny path segment per dark pixel, so large images can produce large SVG markup."
+    },
+    {
+      "question": "Which file types can I upload?",
+      "answer": "The file input accepts PNG, JPEG, and GIF images, although the page is primarily intended for PNG-to-SVG workflows."
+    }
   ]
 }

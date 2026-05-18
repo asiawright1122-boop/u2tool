@@ -1,15 +1,35 @@
 {
-  "detailed_description": "API Tester allows you to send HTTP requests to any API endpoint. Supports all HTTP methods, custom headers, request body, and displays formatted responses.",
+  "detailed_description": "API Tester sends browser-based HTTP requests to an endpoint you enter. Choose GET, POST, PUT, PATCH, DELETE, HEAD, or OPTIONS, edit enabled request headers, add a request body for methods that support one, and press Send to view the response status, elapsed time, response headers, and response body. JSON responses are formatted for easier reading when the browser can read the body. The tool also includes a JSONPlaceholder example for a quick smoke test. Because requests are made with the browser Fetch API, target servers still control CORS access, authentication, cookies, rate limits, and whether response bodies are readable.",
   "usage_steps": [
-    "Enter the API endpoint URL",
-    "Select HTTP method",
-    "Add headers if needed",
-    "Enter request body for POST/PUT",
-    "Send request and view response"
+    "Enter an http or https endpoint URL, or load the JSONPlaceholder example.",
+    "Select the request method from GET, POST, PUT, PATCH, DELETE, HEAD, or OPTIONS.",
+    "Use the Headers tab to enable, edit, add, or remove request headers.",
+    "Use the Body tab when sending a POST, PUT, or PATCH request body.",
+    "Press Send and review the response tab with status, response time, headers, and body.",
+    "If a request fails, check the displayed browser error and the target server's CORS policy."
   ],
   "usage_examples": [
-    "Test API endpoints",
-    "Debug API responses",
-    "Explore third-party APIs"
+    "Smoke-test a public JSON endpoint and confirm the status code and formatted response body.",
+    "Try a POST request body against a local development API that allows browser requests.",
+    "Compare response headers while changing an Accept or Content-Type header.",
+    "Document a simple API example by copying the endpoint, method, and visible response details."
+  ],
+  "faqs": [
+    {
+      "question": "Can API Tester ignore browser CORS rules?",
+      "answer": "No. It uses browser fetch, so the target API must allow the browser origin before the response can be read."
+    },
+    {
+      "question": "Does it keep a saved request log?",
+      "answer": "No. The current tool keeps the current request and response in the page only."
+    },
+    {
+      "question": "Can I test authenticated APIs?",
+      "answer": "You can manually add headers such as Authorization when appropriate, but the tool does not manage interactive sign-in flows, cookie sessions, or stored secrets."
+    },
+    {
+      "question": "Why is the response body blank or blocked?",
+      "answer": "Some methods, redirects, opaque responses, and CORS policies prevent the browser from exposing a readable body."
+    }
   ]
 }

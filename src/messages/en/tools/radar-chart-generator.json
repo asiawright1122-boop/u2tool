@@ -1,17 +1,35 @@
 {
-  "detailed_description": "The Radar Chart Generator is a powerful tool designed to help data analysts, researchers, and professionals visualize multi-dimensional data in a clear and intuitive way. Technically, this tool allows you to create radar charts, also known as spider charts or web charts, which are particularly useful for comparing multiple quantitative variables. By plotting data points along axes that radiate from a central point, the tool helps users identify patterns, similarities, and outliers in complex datasets. The tool supports the customization of various chart elements, such as axis labels, data series, and color schemes, ensuring that the final output is tailored to your specific needs. Users can easily export the generated radar charts in PNG or SVG formats, making it simple to integrate these visuals into reports, presentations, or web content. The Radar Chart Generator is particularly valuable in fields such as market research, performance analysis, and data-driven decision-making, where the ability to quickly compare multiple dimensions is crucial.",
+  "detailed_description": "Radar Chart Generator creates an editable ECharts radar chart for comparing multiple dimensions across one or more data series. Start from the sample budget-versus-actual data, add or remove indicators, set each indicator name and max value, add or remove series, edit series values in the table, and choose a chart title. The settings panel includes four color themes, polygon or circle radar shape, fill opacity, and a legend toggle. You can import a simple comma-separated CSV file where the first row contains indicator names and later rows contain series values, then download the rendered chart as PNG or SVG.",
   "usage_steps": [
-    "Step 1: Open the Radar Chart Generator and click on the 'Add Data' button to input your dataset. You can paste your data from a spreadsheet or enter it manually.",
-    "Step 2: Define the number of axes by specifying the dimensions you want to compare. Each dimension will correspond to an axis on the radar chart.",
-    "Step 3: Label each axis by entering the names of the dimensions in the 'Axis Labels' section. This will help in clearly identifying what each axis represents.",
-    "Step 4: Input the data values for each dimension in the respective rows. You can add multiple data series to compare different sets of data on the same chart.",
-    "Step 5: Customize the appearance of your chart by adjusting the colors, line styles, and background. Use the 'Chart Settings' panel to fine-tune these options.",
-    "Step 6: Once your chart is ready, click on the 'Export' button to download the radar chart in PNG or SVG format. You can also share the chart directly from the tool."
+    "Load the sample data or edit the default indicator and series tables directly.",
+    "Use Add Indicator to create another radar axis and set its max value.",
+    "Use Add Series to compare another group of values across the same indicators.",
+    "Optionally import a simple CSV file with a first label column and indicator columns.",
+    "Choose a color theme, polygon or circle shape, fill opacity, and legend visibility.",
+    "Download the rendered radar chart as PNG or SVG when the preview looks right."
   ],
   "usage_examples": [
-    "Example 1: A marketing analyst uses the Radar Chart Generator to compare the performance of different marketing campaigns across various metrics such as engagement rate, conversion rate, and cost per click. The chart helps identify which campaign is most effective in each area.",
-    "Example 2: A sports coach utilizes the tool to analyze the performance of athletes in different physical attributes, such as speed, agility, and strength. The radar chart provides a comprehensive view of each athlete's strengths and areas for improvement.",
-    "Example 3: A product manager uses the Radar Chart Generator to evaluate customer satisfaction across multiple product features. By comparing ratings, the manager can prioritize which features to enhance or fix.",
-    "Example 4: A financial analyst employs the tool to compare the financial health of several companies in the same industry, focusing on key financial ratios like profitability, liquidity, and leverage. The radar chart highlights the relative strengths and weaknesses of each company."
+    "Compare budget and actual performance across sales, administration, technology, support, development, and marketing.",
+    "Create a product-feature scorecard with one series per competitor or release option.",
+    "Import a small CSV export from a spreadsheet and download the radar chart for a report.",
+    "Switch between polygon and circle shapes to see which chart reads better for a presentation."
+  ],
+  "faqs": [
+    {
+      "question": "What CSV format works best?",
+      "answer": "Use a simple comma-separated file. The first row should contain a blank or series label column followed by indicator names, and each later row should contain a series name followed by numeric values."
+    },
+    {
+      "question": "Can I export the chart?",
+      "answer": "Yes. The visible chart can be downloaded as PNG or SVG."
+    },
+    {
+      "question": "Does it support complex spreadsheet CSV features?",
+      "answer": "No. The importer is a lightweight comma splitter and is best for simple plain-text data."
+    },
+    {
+      "question": "Can I edit line styles individually?",
+      "answer": "No. The current controls cover theme, shape, fill opacity, legend visibility, indicators, series names, and values."
+    }
   ]
 }

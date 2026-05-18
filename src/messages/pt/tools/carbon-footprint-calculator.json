@@ -1,15 +1,15 @@
 {
-  "detailed_description": "A Calculadora de Pegada de Carbono ajuda você a medir seu impacto ambiental calculando as emissões de CO2 do transporte, uso de energia doméstica e escolhas alimentares. A ferramenta fornece uma análise completa da sua pegada de carbono e mostra quantas árvores seriam necessárias para compensar suas emissões.",
+  "detailed_description": "A Calculadora de Pegada de Carbono estima emissões anualizadas de CO2 com base nos campos visíveis de transporte, energia doméstica e dieta. Escolha se os dados inseridos são mensais ou anuais, informe distância de carro por tipo de combustível, horas de voo por tipo de trajeto, distância de trem e ônibus, eletricidade, gás natural, aquecimento e tipo de dieta. A ferramenta usa fatores fixos, agrupa o resultado em transporte, energia e estilo de vida, mostra toneladas totais de CO2 e calcula uma estimativa de árvores com uma suposição fixa.",
   "usage_steps": [
-    "Select monthly or yearly calculation period",
-    "Enter your transportation data (car, flights, train, bus)",
-    "Input your home energy consumption (electricity, gas, heating)",
-    "Select your diet type",
-    "View your total carbon footprint and emission breakdown"
+    "Selecione se os dados inseridos são mensais ou anuais.",
+    "Informe distância de carro e escolha gasolina, diesel, híbrido ou elétrico.",
+    "Adicione horas de voo, distância de trem, distância de ônibus e energia doméstica quando relevante.",
+    "Selecione o tipo de dieta.",
+    "Revise transporte, energia doméstica, estilo de vida, CO2 total e estimativa de árvores."
   ],
   "usage_examples": [
-    "Track personal environmental impact over time",
-    "Compare carbon footprint of different lifestyle choices",
-    "Plan carbon offset strategies for individuals or businesses"
+    "Estimar como o total muda ao reduzir a distância mensal de carro.",
+    "Comparar de forma aproximada dieta média, vegetariana e vegana.",
+    "Identificar se transporte ou energia doméstica domina a estimativa."
   ]
 }
