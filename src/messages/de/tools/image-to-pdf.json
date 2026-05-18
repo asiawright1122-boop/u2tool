@@ -1,14 +1,35 @@
 {
-  "detailed_description": "Bild zu PDF ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Bild zu PDF können Sie verschiedene Daten einfach verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient nutzen können. Ob Sie ein Entwickler, Designer oder allgemeiner Benutzer sind, Bild zu PDF kann Ihnen dabei helfen, die Arbeitsproduktivität zu steigern. Alle Bearbeitungen werden lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie Bild zu PDF sofort, um schnelle, sichere und kostenlose Online-Dienstleistungen zu erleben.",
+  "detailed_description": "Bild zu PDF erstellt aus hochgeladenen PNG-, JPEG-, JPG- oder WebP-Bildern eine PDF-Datei direkt im Browser. Jedes Bild wird als eigene PDF-Seite eingefuegt, die Reihenfolge kann per Pfeiltasten angepasst werden. Sie koennen A4, Letter oder An Bild anpassen waehlen, Hoch- oder Querformat nutzen, wenn eine feste Seitengroesse aktiv ist, den Rand in Punkten setzen und den Dateinamen vor dem Download bearbeiten. Die Umwandlung laeuft lokal mit browserseitiger PDF-Erzeugung; die Seite fuehrt keine Texterkennung, keine Bildkomprimierung und keinen Upload zu einem Server aus.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Bild zu PDF-Tools",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie bearbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Werkzeugeinstellungen und -einstellungen nach Bedarf an",
-    "Klicken Sie auf die Bearbeitungstaste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die bearbeiteten Ergebnisse herunter"
+    "Klicken Sie auf den Upload-Bereich und waehlen Sie PNG-, JPEG-, JPG- oder WebP-Bilder aus.",
+    "Pruefen Sie die Bildliste und verschieben oder entfernen Sie Bilder bei Bedarf.",
+    "Waehlen Sie A4, Letter oder An Bild anpassen als Seitengroesse.",
+    "Stellen Sie Hochformat oder Querformat ein, wenn nicht An Bild anpassen gewaehlt ist.",
+    "Setzen Sie den Rand und bearbeiten Sie den Ausgabedateinamen.",
+    "Klicken Sie auf In PDF umwandeln und laden Sie die erzeugte PDF-Datei herunter."
   ],
   "usage_examples": [
-    "Verwenden Sie Bild zu PDF, um Ihre Daten zu bearbeiten",
-    "Erhalten Sie schnell bearbeitete Ergebnisse ohne zu warten"
+    "Mehrere gescannte Quittungsbilder zu einer einfachen PDF-Datei zusammenfassen.",
+    "Produktfotos in eine PDF-Unterlage mit einer Seite pro Bild umwandeln.",
+    "Screenshots in der richtigen Reihenfolge sortieren und als PDF an ein Team weitergeben.",
+    "Ein einzelnes WebP-Bild auf eine A4- oder Letter-Seite legen und mit Rand exportieren."
+  ],
+  "faqs": [
+    {
+      "question": "Welche Bildformate werden unterstuetzt?",
+      "answer": "Der Upload akzeptiert PNG, JPEG, JPG und WebP."
+    },
+    {
+      "question": "Kann ich die Reihenfolge der Seiten aendern?",
+      "answer": "Ja. Verschieben Sie die hochgeladenen Bilder in der Liste nach oben oder unten, bevor Sie die PDF erstellen."
+    },
+    {
+      "question": "Wird Text in den Bildern erkannt?",
+      "answer": "Nein. Das Tool bettet Bilder in PDF-Seiten ein und fuehrt keine OCR-Erkennung aus."
+    },
+    {
+      "question": "Werden die Bilder hochgeladen?",
+      "answer": "Nein. Die PDF-Erstellung findet im Browser statt."
+    }
   ]
 }

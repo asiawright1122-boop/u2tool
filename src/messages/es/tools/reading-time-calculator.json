@@ -1,17 +1,34 @@
 {
-  "detailed_description": "El Calculador de Tiempo de Lectura es una herramienta basada en algoritmos de procesamiento de lenguaje natural que estima la duración de lectura de textos mediante análisis léxico y estadísticas de velocidad media de lectura (palabras por minuto). Utiliza técnicas de tokenización para segmentar el texto en unidades procesables, aplicando después modelos probabilísticos que consideran variables como la complejidad léxica y la estructura sintáctica. La herramienta permite ajustar parámetros como el perfil del lector (novato/experto) y el modo de lectura (superficial/analítico), lo que modula la ponderación de elementos como signos de puntuación, términos técnicos y patrones de concordancia. Su motor interno implementa algoritmos de estimación adaptativa que combinan el recuento básico de palabras con análisis semántico contextual, ofreciendo cálculos diferenciados para distintos dominios temáticos. Es especialmente útil para autores que necesitan validar la extensión efectiva de sus contenidos, educadores que diseñan materiales didácticos, y desarrolladores que implementan sistemas de gestión de contenido con restricciones temporales.",
+  "detailed_description": "La Calculadora de Tiempo de Lectura estima cuanto tardara una persona en leer un texto a partir del recuento de palabras y una velocidad ajustable en palabras por minuto. Pegue o escriba el contenido y la pagina actualiza en el navegador el numero de palabras, caracteres, frases y parrafos, ademas del tiempo de lectura y una estimacion de tiempo de lectura en voz alta. El control de velocidad permite probar desde 100 hasta 400 palabras por minuto, por lo que sirve para comparar una lectura lenta, media o rapida sin instalar software ni enviar el texto a un servidor.",
   "usage_steps": [
-    "Pega tu texto en el área de edición con soporte para formato Markdown",
-    "Selecciona el idioma del texto en el menú desplegable (detecta automáticamente si se deja en automático)",
-    "Ajusta el parámetro de velocidad base (180-300 PPM) según el perfil del lector objetivo",
-    "Activa la opción 'Análisis contextual' para considerar la densidad terminológica",
-    "Haz clic en el botón 'Calcular' para ejecutar el algoritmo de estimación adaptativa",
-    "Revisa el desglose detallado por secciones y el tiempo total estimado en el panel de resultados"
+    "Pegue o escriba el texto en el area principal.",
+    "Mueva el control de velocidad de lectura entre 100 y 400 palabras por minuto.",
+    "Revise los contadores de palabras, caracteres, frases y parrafos.",
+    "Compare el tiempo estimado de lectura con el tiempo estimado para leer en voz alta.",
+    "Edite el texto o cambie la velocidad y observe como los resultados se actualizan al instante."
   ],
   "usage_examples": [
-    "Un redactor técnico calcula el tiempo de lectura para un manual de usuario, activando el modo 'Densidad terminológica' para ajustar el cálculo a contenido técnico",
-    "Un profesor universitario determina la carga lectiva semanal asignando 3 artículos académicos, comparando los tiempos con y sin análisis contextual",
-    "Un desarrollador de CMS integra la API para mostrar automáticamente el tiempo de lectura en artículos de un portal educativo",
-    "Un traductor profesional estima la duración de lectura de un documento técnico antes y después de la traducción para validar la concisión del contenido"
+    "Un redactor revisa si una publicacion de blog queda cerca de cinco minutos de lectura.",
+    "Un profesor estima cuanto tardaran los estudiantes en leer una consigna antes de una actividad.",
+    "Un creador compara una version corta y una version larga de un guion antes de grabarlo.",
+    "Un editor comprueba si el resumen de un informe se mantiene dentro de una duracion razonable."
+  ],
+  "faqs": [
+    {
+      "question": "Como calcula el tiempo de lectura?",
+      "answer": "Divide el numero de palabras entre la velocidad seleccionada en palabras por minuto y redondea el resultado para mostrar minutos utiles."
+    },
+    {
+      "question": "Puedo cambiar la velocidad de lectura?",
+      "answer": "Si. El control permite elegir una velocidad entre 100 y 400 palabras por minuto."
+    },
+    {
+      "question": "El texto se sube a un servidor?",
+      "answer": "No. Los recuentos se calculan en el navegador mientras escribe o pega el contenido."
+    },
+    {
+      "question": "Por que aparece tambien tiempo de lectura en voz alta?",
+      "answer": "La pagina muestra una segunda estimacion usando una velocidad de habla aproximada para comparar lectura silenciosa y lectura en voz alta."
+    }
   ]
 }

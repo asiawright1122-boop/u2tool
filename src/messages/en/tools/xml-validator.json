@@ -1,17 +1,35 @@
 {
-  "detailed_description": "The XML Validator tool performs precise syntactic and structural analysis of XML documents, ensuring compliance with W3C specifications for well-formedness and validity. It checks for critical errors including mismatched start/end tags, improper nesting, invalid character encoding, and incorrect namespace declarations. The validator leverages a SAX2 parser engine to stream-document validation, supporting DTD, XSD schema validation, and namespace-aware processing. Developers benefit from granular error reporting that identifies byte-offset positions of malformed entities, undefined entities, or violated schema constraints. This tool becomes essential when integrating XML with API endpoints, configuring enterprise systems requiring strict schema adherence, or debugging data interchange issues between heterogeneous systems. The backend employs libxml2's validation framework combined with custom error handlers to provide both verbose diagnostic output and machine-readable validation results in JSON format for CI/CD pipeline integration.",
+  "detailed_description": "XML Validator checks whether pasted XML is well-formed by using the browser's XML parser. Paste XML into the text area, validate it, and the page reports whether parsing succeeded or shows the parser error text, with line and column details when the browser includes them. The Format action serializes valid XML and inserts line breaks and indentation for a more readable view, while Load Example fills the editor with sample catalog XML. This is a quick browser-side checker for malformed tags, nesting mistakes, and basic parsing errors; it does not check external schemas or contact a backend service.",
   "usage_steps": [
-    "Access the validator interface and open the 'Input' tab to paste raw XML content or upload a .xml file",
-    "Enable advanced options like 'XSD Validation' or 'Namespace Checking' using the toggle switches",
-    "Click the 'Validate' button to initiate SAX parsing with real-time progress tracking",
-    "Review the 'Error Panel' displaying line numbers, error codes, and XML specification references",
-    "Use the 'Quick Fix' buttons to automatically correct common issues like missing closing tags or escaped characters",
-    "Download the validated XML with optional pretty-print formatting via the 'Output' tab"
+    "Paste XML into the XML input text area.",
+    "Click Validate to run the browser parser.",
+    "Review the valid or invalid result message and any parser error text.",
+    "Use Format when the XML parses successfully and you want a more readable layout.",
+    "Use Load Example to insert sample XML for a quick smoke test.",
+    "Edit the XML and validate again until the parser accepts it."
   ],
   "usage_examples": [
-    "Validating a REST API's XML response payload against its XSD schema before deployment to production",
-    "Debugging malformed RSS feeds in a content management system by identifying invalid CDATA sections",
-    "Ensuring enterprise application configuration files maintain proper namespace declarations across versions",
-    "Verifying EDI document exchanges meet trading partner schema requirements during B2B integration"
+    "Check whether a copied XML snippet has mismatched opening and closing tags.",
+    "Format a small XML configuration file before pasting it into documentation.",
+    "Debug a broken RSS or sitemap fragment by reading the browser parser error.",
+    "Load the example XML to confirm the validator is working before testing your own input."
+  ],
+  "faqs": [
+    {
+      "question": "Does XML Validator check XSD or DTD schemas?",
+      "answer": "No. The current page checks browser XML well-formedness only."
+    },
+    {
+      "question": "Can I upload an XML file?",
+      "answer": "No. Paste XML text into the editor."
+    },
+    {
+      "question": "Does Format fix invalid XML?",
+      "answer": "No. Format works after the XML parses successfully; invalid XML still needs manual correction."
+    },
+    {
+      "question": "Where does validation happen?",
+      "answer": "Validation happens in the browser with DOMParser, without sending the XML to a backend."
+    }
   ]
 }

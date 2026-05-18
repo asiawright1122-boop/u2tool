@@ -1248,6 +1248,135 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks unsupported claims for the document and parser recovery batch', () => {
+    const examples = [
+      {
+        slug: 'reading-time-calculator',
+        name: 'Calculadora de Tiempo de Lectura',
+        locale: 'es',
+        detailedDescription:
+          'Usa procesamiento de lenguaje natural, analisis lexico, perfil del lector y analisis contextual.',
+        usageSteps: [
+          'Pega texto con soporte para formato Markdown y elige el idioma en el menu desplegable.',
+          "Haz clic en el boton 'Calcular' para ver el desglose detallado por secciones.",
+        ],
+        expectedCode: 'reading-time-unsupported-analysis-claim',
+      },
+      {
+        slug: 'image-collage',
+        name: 'Montagem de Imagens',
+        locale: 'pt',
+        detailedDescription:
+          'Escolha layouts predefinidos, adicionar bordas, aplicar filtros e efeitos visuais.',
+        usageSteps: ['Pre-visualize no visor ao vivo e baixe em PNG ou JPEG.'],
+        expectedCode: 'image-collage-unsupported-editor-claim',
+      },
+      {
+        slug: 'image-to-pdf',
+        name: 'Bild zu PDF',
+        locale: 'de',
+        detailedDescription:
+          'Geben Sie oder fuegen Sie Inhalt in ein Eingabefeld ein, nutzen Sie quality slider, OCR recognition und DPI controls.',
+        usageSteps: ['Kopieren oder laden Sie die bearbeiteten Ergebnisse herunter.'],
+        expectedCode: 'image-to-pdf-unsupported-workflow-claim',
+      },
+      {
+        slug: 'text-to-pdf',
+        name: 'Text to PDF',
+        locale: 'en',
+        detailedDescription:
+          'Use PDF templates, custom margin controls, landscape orientation, page numbers, and watermark settings.',
+        usageSteps: ['Insert images, add headers and footers, then export.'],
+        expectedCode: 'text-to-pdf-unsupported-layout-claim',
+      },
+      {
+        slug: 'xml-validator',
+        name: 'XML Validator',
+        locale: 'en',
+        detailedDescription:
+          'The validator uses SAX2 and libxml2 with XSD Validation, DTD validation, namespace-aware processing, and JSON format for CI/CD.',
+        usageSteps: ['Upload a .xml file, use Quick Fix, then Download the validated XML.'],
+        expectedCode: 'xml-validator-unsupported-schema-claim',
+      },
+    ];
+
+    for (const example of examples) {
+      const report = assessSupportContentTrust({
+        slug: example.slug,
+        locale: example.locale,
+        name: example.name,
+        description: '',
+        detailedDescription: example.detailedDescription,
+        usageSteps: example.usageSteps,
+        usageExamples: [],
+        faqs: [],
+      });
+
+      expect(report.blockSupportContent, example.slug).toBe(true);
+      expect(report.issues.map((issue) => issue.code), example.slug).toContain(
+        example.expectedCode
+      );
+    }
+  });
+
+  it('keeps accurate support copy for the document and parser recovery batch visible', () => {
+    const examples = [
+      {
+        slug: 'reading-time-calculator',
+        name: 'Calculadora de Tiempo de Lectura',
+        locale: 'es',
+        detailedDescription:
+          'La Calculadora de Tiempo de Lectura estima cuanto tardara una persona en leer un texto a partir del recuento de palabras y una velocidad ajustable en palabras por minuto.',
+      },
+      {
+        slug: 'image-collage',
+        name: 'Montagem de Imagens',
+        locale: 'pt',
+        detailedDescription:
+          'O Image Collage combina imagens carregadas em uma unica imagem PNG diretamente no navegador com direcao horizontal ou vertical, espacamento e cor de fundo.',
+      },
+      {
+        slug: 'image-to-pdf',
+        name: 'Bild zu PDF',
+        locale: 'de',
+        detailedDescription:
+          'Bild zu PDF erstellt aus hochgeladenen PNG-, JPEG-, JPG- oder WebP-Bildern eine PDF-Datei direkt im Browser.',
+      },
+      {
+        slug: 'text-to-pdf',
+        name: 'Text to PDF',
+        locale: 'en',
+        detailedDescription:
+          'Text to PDF Converter turns typed or pasted plain text into a downloadable PDF in the browser with an optional title, font family, font size, and A4 or Letter page size.',
+      },
+      {
+        slug: 'xml-validator',
+        name: 'XML Validator',
+        locale: 'en',
+        detailedDescription:
+          "XML Validator checks whether pasted XML is well-formed by using the browser's XML parser and shows parser error text when available.",
+      },
+    ];
+
+    for (const example of examples) {
+      const report = assessSupportContentTrust({
+        ...example,
+        description: '',
+        usageSteps: ['Use the visible controls, review the result, and adjust the input if needed.'],
+        usageExamples: ['Use the tool for a quick browser-based workflow.'],
+        faqs: [
+          {
+            question: `Where does ${example.name} run?`,
+            answer: 'The current tool runs in the browser.',
+          },
+        ],
+      });
+
+      expect(report.blockSupportContent, example.slug).toBe(false);
+      expect(report.issues, example.slug).toEqual([]);
+    }
+  });
+
   it('keeps scoped rules from blocking unrelated tools', () => {
     const report = assessSupportContentTrust({
       slug: 'timezone-converter',

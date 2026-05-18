@@ -1,17 +1,35 @@
 {
-  "detailed_description": "O Image Collage é uma ferramenta avançada de manipulação de imagens que permite aos usuários combinar várias imagens em uma única colagem, oferecendo uma variedade de opções de layout. Técnicamente, a ferramenta utiliza algoritmos de layout para organizar as imagens de maneira eficiente e esteticamente agradável. Os usuários podem escolher entre diferentes layouts predefinidos, ajustar o espaçamento entre as imagens, adicionar bordas e até mesmo aplicar filtros e efeitos visuais. A ferramenta é particularmente útil para designers gráficos, fotógrafos e qualquer pessoa que precise criar colagens para projetos de marketing, relatórios, ou apresentações. A capacidade de personalizar cada aspecto da colagem, desde o tamanho das imagens até a cor de fundo, torna o Image Collage uma solução versátil para uma ampla gama de necessidades criativas.",
+  "detailed_description": "O Image Collage combina imagens carregadas em uma unica imagem PNG diretamente no navegador. Voce pode adicionar varias imagens, reorganizar a ordem, escolher direcao horizontal ou vertical, ajustar o espacamento entre 0 e 50 pixels e definir a cor de fundo antes de criar a colagem. A ferramenta preserva as dimensoes originais de cada imagem no canvas gerado, centraliza imagens de alturas ou larguras diferentes e mostra uma pre-visualizacao do resultado depois que a colagem e criada. E uma opcao simples para juntar capturas, fotos de referencia ou pequenas composicoes sem instalar um editor de imagens.",
   "usage_steps": [
-    "Acesse a página do Image Collage no site e clique no botão 'Carregar Imagens'.",
-    "Selecione as imagens que deseja usar na colagem a partir do seu computador. Você pode carregar até 20 imagens de uma vez.",
-    "Na seção 'Layout', escolha um dos layouts predefinidos disponíveis ou personalize o seu próprio layout ajustando as opções de espaçamento, bordas e fundo.",
-    "Na aba 'Efeitos', adicione filtros e efeitos visuais às suas imagens para aprimorar a aparência da colagem.",
-    "Pré-visualize a colagem no visor ao vivo para garantir que tudo esteja conforme o desejado. Faça ajustes adicionais, se necessário.",
-    "Quando estiver satisfeito com o resultado, clique no botão 'Baixar Colagem' para salvar a imagem no seu computador em formato PNG ou JPEG."
+    "Clique na area de upload e selecione duas ou mais imagens do seu computador.",
+    "Escolha a direcao horizontal ou vertical para definir como as imagens serao alinhadas.",
+    "Ajuste o espacamento em pixels e escolha a cor de fundo.",
+    "Use os botoes de ordem para mover imagens para frente ou para tras, ou remova imagens que nao devem entrar.",
+    "Clique em Criar colagem para gerar o canvas final.",
+    "Revise a pre-visualizacao gerada e baixe a colagem em PNG."
   ],
   "usage_examples": [
-    "Um fotógrafo de casamentos deseja criar uma colagem visualmente atraente para usar em seus portfólios online, combinando as melhores fotos de diferentes casamentos para apresentar sua gama de habilidades.",
-    "Uma empresa de marketing precisa desenvolver um pôster promocional para um evento, combinando imagens de produtos, logotipos e fotografias de cenários relevantes para criar uma composição dinâmica e envolvente.",
-    "Um designer de interiores quer criar um mood board para apresentar a um cliente, combinando imagens de móveis, tecidos e layouts de espaços para visualizar a concepção geral do projeto.",
-    "Um blogueiro de viagem deseja produzir uma capa de postagem que combine fotos de diferentes destinos visitados em uma única imagem, destacando a diversidade e beleza das locações."
+    "Juntar antes e depois de uma imagem em uma faixa horizontal para uma publicacao rapida.",
+    "Combinar capturas de tela em uma unica imagem vertical para documentar um fluxo.",
+    "Montar uma referencia visual simples com varias fotos de produto lado a lado.",
+    "Criar uma imagem PNG com fundo branco ou colorido para inserir em uma apresentacao."
+  ],
+  "faqs": [
+    {
+      "question": "Quais layouts estao disponiveis?",
+      "answer": "A interface atual oferece direcao horizontal ou vertical, com controle de espacamento e cor de fundo."
+    },
+    {
+      "question": "Posso reorganizar as imagens?",
+      "answer": "Sim. Depois do upload, use os controles sobre cada miniatura para alterar a ordem ou remover uma imagem."
+    },
+    {
+      "question": "Qual formato e baixado?",
+      "answer": "A colagem gerada e baixada como PNG."
+    },
+    {
+      "question": "As imagens sao enviadas para o servidor?",
+      "answer": "Nao. O carregamento, a montagem no canvas e o download acontecem no navegador."
+    }
   ]
 }

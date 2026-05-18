@@ -51,16 +51,16 @@
       
       const currentFont = fontFamily === 'Arial' ? 'helvetica' : fontFamily === 'Times New Roman' ? 'times' : 'courier';
       doc.setFont(currentFont);
-      doc.fontSize = fontSize;
+      doc.setFontSize(fontSize);
 
       // Add title if provided
       let yPosition = margin;
       if (title.trim()) {
-        doc.fontSize = fontSize + 4;
+        doc.setFontSize(fontSize + 4);
         doc.setFont(currentFont, 'bold');
         doc.text(title, pageWidth / 2, yPosition, { align: 'center' });
         yPosition += 10;
-        doc.fontSize = fontSize;
+        doc.setFontSize(fontSize);
         doc.setFont(currentFont, 'normal');
       }
 

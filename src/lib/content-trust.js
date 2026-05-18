@@ -434,6 +434,36 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     message: 'Claims color formats, blend modes, transparency controls, or export workflows that are not present in the current HEX color blender UI.',
     slugs: ['color-blender'],
   },
+  {
+    code: 'reading-time-unsupported-analysis-claim',
+    pattern: /\bNLP\b|\bnatural language processing\b|procesamiento de lenguaje natural|an[aá]lisis l[eé]xico|complejidad l[eé]xica|estructura sint[aá]ctica|modelos probabil[ií]sticos|perfil del lector|modo de lectura|an[aá]lisis contextual|soporte para formato Markdown|formato Markdown|men[uú] desplegable|bot[oó]n ['’]?Calcular|integra la API|API para mostrar|desglose detallado por secciones/i,
+    message: 'Claims Reading Time Calculator NLP, Markdown, language, API, or section-analysis behavior that is not present in the current counter UI.',
+    slugs: ['reading-time-calculator'],
+  },
+  {
+    code: 'image-collage-unsupported-editor-claim',
+    pattern: /layouts? predefinidos?|predefined layouts?|adicionar bordas|add borders?|bordes\b|filtros|effects? visual|efeitos visuais|visor ao vivo|live preview|PNG ou JPEG|download.*JPEG|crop(?:ping)?|resize(?:s| images?)?|redimensionar|at[eé]\s+20 imagens|up to 20 images|p[oô]ster promocional|exporte em JSON ou Base64/i,
+    message: 'Claims collage layouts, effects, border, JPEG, live preview, or advanced image-editing controls that are not present in the current horizontal/vertical PNG collage UI.',
+    slugs: ['image-collage'],
+  },
+  {
+    code: 'image-to-pdf-unsupported-workflow-claim',
+    pattern: /Geben Sie oder f[uü]gen Sie|Eingabefeld|Kopieren oder laden|copy the processed result|quality slider|compression quality|mit Bildkomprimierung|batch compression|resolution controls|\bDPI\b|perform(?:s)? OCR|OCR (?:extraction|recognition|processing)|Texterkennung (?:durchf[uü]hren|extrahieren)|erkennt Text in Bildern|\bGIF\b|server upload|uploaded to a server|auf .*Server hochgeladen/i,
+    message: 'Claims image-to-PDF paste/copy, OCR, quality, GIF, server-upload, or advanced output controls that are not present in the current upload-to-PDF UI.',
+    slugs: ['image-to-pdf'],
+  },
+  {
+    code: 'text-to-pdf-unsupported-layout-claim',
+    pattern: /choose (?:custom )?margins?|custom margin controls?|select (?:portrait|landscape)|landscape orientation|add headers? and footers?|PDF templates?|rich text editor|insert images?|page numbers?|watermark/i,
+    message: 'Claims text-to-PDF layout, template, image, header/footer, or watermark controls that are not present in the current plain-text PDF UI.',
+    slugs: ['text-to-pdf'],
+  },
+  {
+    code: 'xml-validator-unsupported-schema-claim',
+    pattern: /\bSAX2?\b|\blibxml2\b|XSD Validation|DTD validation|schema validation|namespace-aware processing|Namespace Checking|Quick Fix|upload a \.xml file|machine-readable validation results|JSON format for CI\/CD|real-time progress tracking|error codes|Output tab|Download the validated XML/i,
+    message: 'Claims XML schema, upload, SAX/libxml2, quick-fix, download, JSON, or CI output behavior that is not present in the current DOMParser UI.',
+    slugs: ['xml-validator'],
+  },
 ];
 
 /** @type {ContentTrustRule[]} */

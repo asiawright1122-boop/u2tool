@@ -1,15 +1,35 @@
 {
-  "detailed_description": "Text to PDF Converter transforms your plain text into professional PDF documents. Customize font, size, and page format to create documents that look exactly how you want.",
+  "detailed_description": "Text to PDF Converter turns typed or pasted plain text into a downloadable PDF in the browser. Add an optional centered title, choose Arial, Times, or Courier, set the font size from 10 to 24 pt, and select A4 or Letter page size before generating the file. The preview mirrors the selected font size so you can check rough length before download. The generated PDF uses a fixed portrait layout with simple line wrapping and page breaks; it is best for notes, drafts, plain reports, and quick printable text rather than complex desktop publishing.",
   "usage_steps": [
-    "Enter or paste your text",
-    "Add an optional title",
-    "Choose font and size settings",
-    "Select page size (A4 or Letter)",
-    "Click Download PDF"
+    "Enter or paste the plain text you want to export.",
+    "Add an optional title if the PDF needs a heading.",
+    "Choose the font size and font family.",
+    "Select A4 or Letter page size.",
+    "Review the on-page preview.",
+    "Click Download PDF to create and save the document."
   ],
   "usage_examples": [
-    "Create printable documents",
-    "Save notes as PDF",
-    "Generate simple reports"
+    "Save meeting notes as a simple PDF before sharing them.",
+    "Create a printable draft from copied plain text.",
+    "Export a short policy, checklist, or classroom handout.",
+    "Turn a plain text report into a PDF with a centered title."
+  ],
+  "faqs": [
+    {
+      "question": "Can I change margins or orientation?",
+      "answer": "No. The current tool uses a fixed portrait layout with built-in margins and offers A4 or Letter page size."
+    },
+    {
+      "question": "Can I add images, headers, or footers?",
+      "answer": "No. This converter is designed for plain text plus an optional title."
+    },
+    {
+      "question": "Where is the PDF generated?",
+      "answer": "The PDF is generated in your browser and downloaded from the page."
+    },
+    {
+      "question": "Which fonts are available?",
+      "answer": "The interface offers Arial, Times, and Courier, mapped to the standard fonts supported by the PDF generator."
+    }
   ]
 }
