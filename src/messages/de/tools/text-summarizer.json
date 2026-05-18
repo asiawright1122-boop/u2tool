@@ -1,17 +1,16 @@
 {
-  "detailed_description": "Der Text-Summarizer extrahiert durch kontextuelle Analyse und semantische Bewertung die wichtigsten Sätze aus längeren Texten. Das Tool nutzt Natural Language Processing (NLP)-Techniken wie Satz-Tokenisierung, Part-of-Speech-Tagging und Keyword-Ranking durch TF-IDF- oder BERT-basierte Modelle, um die inhaltliche Relevanz zu bewerten. Anwender benötigen dieses Instrument zur effizienten Informationsverdichtung, z.B. für akademische Literaturrecherche, Content-Curation in sozialen Medien oder zur Generierung von Executive Summaries für Geschäftsberichte. Die Algorithmen analysieren die Satzstruktur, identifizieren Hauptargumente durch syntaktische Mustererkennung und gewichten Schlüsselsätze basierend auf ihrer Position im Textkörper sowie der Häufigkeit kontextspezifischer Begriffe. Dabei wird redundanter Inhalt eliminiert, während kausale Beziehungen und zentrale Thesen erhalten bleiben. Die Zusammenfassung erfolgt adaptiv, wobei die Ausgabelänge parametrierbar ist, um zwischen konzisen Highlights und detaillierten Abstracts zu unterscheiden.",
+  "detailed_description": "Der Text-Summarizer erstellt direkt im Browser eine extraktive Zusammenfassung. Fügen Sie Text ein, wählen Sie Short, Medium oder Long, und die Seite wählt repräsentative Sätze anhand von Worthäufigkeit, Satzposition und Satzlänge aus. Das hilft bei Notizen, Entwürfen, Artikeln oder langen Nachrichten, die Sie vor der manuellen Überarbeitung kürzen möchten. Die aktuelle Oberfläche arbeitet mit eingefügtem Text und erstellt keine frei umformulierten Absätze.",
   "usage_steps": [
-    "Text im mehrzeiligen Eingabefeld per Drag-and-Drop oder STRG+V einfügen.",
-    "Zusammenfassungsmodus wählen: 'Kurz' (3 Sätze) oder 'Erweitert' (bis zu 15% der Originaltextlänge).",
-    "Sprachmodell auswählen: Standard (TF-IDF) oder Deep-Learning-Modell (BERT) für komplexe Texte.",
-    "Klick auf 'Zusammenfassen' aktiviert die Textanalyse-Pipeline mit POS-Tagging und Satzbewertung.",
-    "Im Ergebnisbereich die farblich hervorgehobenen Schlüsselsätze sowie das generierte Abstract überprüfen.",
-    "Zusammenfassung per Klick auf 'Kopieren' exportieren oder im TXT-Format herunterladen."
+    "Fügen Sie den Text in das große Eingabefeld ein.",
+    "Wählen Sie Short, Medium oder Long für die gewünschte Länge.",
+    "Prüfen Sie Wortzahlen, Satzanzahl und Reduktionswert.",
+    "Lesen Sie die Zusammenfassung und ändern Sie die Länge, falls Kontext fehlt.",
+    "Kopieren Sie das Ergebnis in Ihr Dokument, Ihre Notiz oder Ihren Editor."
   ],
   "usage_examples": [
-    "Ein Student fasst eine 20-seitige wissenschaftliche Studie über Klimawandel zur Abgabe einer Seminararbeit zusammen.",
-    "Ein Marketingleiter analysiert Kundenzufriedenheitsbefragungen, indem er mehrere tausend Freitextantworten automatisiert verdichtet.",
-    "Ein Nachrichtenredakteur erstellt aus einem 5000-Wörter-Interview mit einem Politiker die Einleitung für eine Online-Zusammenfassung.",
-    "Ein Jurist überprüft mehrere Vertragswerke gleichzeitig, indem er Klauselzusammenfassungen generiert, um Diskrepanzen zu erkennen."
+    "Meetingnotizen vor dem Teilen auf die wichtigsten Sätze kürzen.",
+    "Einen langen Entwurf schnell verdichten, bevor er neu geschrieben wird.",
+    "Zentrale Aussagen aus einer Produktbeschreibung oder Supportnachricht herausziehen.",
+    "Eine lange E-Mail in eine kurze Prüfnote umwandeln."
   ]
 }

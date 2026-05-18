@@ -1,17 +1,30 @@
 {
-  "detailed_description": "El Text Summarizer es una herramienta de procesamiento de lenguaje natural (NLP) que implementa algoritmos de extracción de frases clave basados en modelos transformer y técnicas de análisis semántico. Utiliza métricas como la frecuencia inversa de documento (TF-IDF) y la relevancia contextual para identificar oraciones con mayor densidad informativa. Esta herramienta es esencial para profesionales que necesitan reducir documentos extensos manteniendo su esencia, como investigadores que sintetizan revisiones de literatura científica, desarrolladores que optimizan contenido para APIs o especialistas en big data que procesan registros textuales no estructurados. Su motor analiza patrones gramaticales mediante árboles de dependencia y calcula similitud coseno entre oraciones para generar resúmenes coherentes. La salida incluye un índice de compresión que muestra el porcentaje de reducción del texto original, permitiendo ajustes iterativos mediante un control deslizante de precisión.",
+  "detailed_description": "El Resumidor de Texto crea un resumen extractivo directamente en el navegador. Pega un texto, elige longitud corta, media o larga, y la herramienta selecciona oraciones representativas segun frecuencia de palabras, posicion dentro del texto y longitud de cada frase. Es util para reducir notas, borradores, articulos o mensajes largos antes de revisarlos manualmente. No usa modelos generativos remotos ni carga archivos; trabaja con el texto que pegas en el area de entrada.",
   "usage_steps": [
-    "1. Accede a la herramienta a través de la URL: [text-summarizer] y localiza el área de carga de texto.",
-    "2. Pega tu documento en el campo de texto o arrastra un archivo .txt/.docx a la zona designada.",
-    "3. Configura el parámetro de 'longitud del resumen' usando el control deslizante (opciones: 20%, 40%, 60%, 80% del texto original).",
-    "4. Activa la opción 'Resaltado de términos clave' para visualizar palabras con mayor peso semántico en el análisis.",
-    "5. Haz clic en 'Procesar con modelo BERT' para activar el algoritmo de comprensión contextual avanzada.",
-    "6. Revisa el resumen generado en el panel de salida y descarga el resultado en formato .json con metadatos incluidos."
+    "Pega el texto en el campo principal.",
+    "Elige Short, Medium o Long segun el nivel de detalle que necesitas.",
+    "Revisa los contadores de palabras originales, palabras del resumen, oraciones y reduccion.",
+    "Lee el resumen generado y ajusta la longitud si falta contexto.",
+    "Usa Copy para llevar el resumen a tu documento, nota o editor."
   ],
   "usage_examples": [
-    "1. Un académico procesa un artículo científico de 10 páginas para crear un abstract de 150 palabras manteniendo los conceptos metodológicos clave.",
-    "2. Un community manager resume noticias técnicas de 800 palabras a 140 caracteres para tweets optimizados con hashtags automáticos.",
-    "3. Un abogado analiza un contrato de 50 cláusulas generando un documento ejecutivo con los 10 puntos críticos de negociación.",
-    "4. Un data scientist preprocesa 10,000 reseñas de usuarios para extraer frases recurrentes y alimentar un modelo de análisis de sentimientos."
+    "Reducir notas de reunion a las frases principales antes de enviarlas al equipo.",
+    "Crear una version breve de un borrador largo para revisar su estructura.",
+    "Extraer los puntos centrales de una descripcion de producto antes de reescribirla.",
+    "Preparar un resumen rapido de un correo largo sin salir del navegador."
+  ],
+  "faqs": [
+    {
+      "question": "El resumidor usa inteligencia artificial generativa?",
+      "answer": "No. La pagina usa una seleccion extractiva de oraciones en el navegador; no genera texto nuevo con un modelo remoto."
+    },
+    {
+      "question": "Puedo subir documentos DOCX o PDF?",
+      "answer": "No. La interfaz actual acepta texto pegado en el area de entrada y no incluye carga de archivos."
+    },
+    {
+      "question": "Por que debo revisar el resultado?",
+      "answer": "El resumen conserva oraciones del texto original, pero puede omitir matices. Conviene revisarlo antes de publicarlo o compartirlo."
+    }
   ]
 }

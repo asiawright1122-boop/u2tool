@@ -1,15 +1,30 @@
 {
-  "detailed_description": "Aspect Ratio Resizer helps you resize images to specific dimensions while maintaining or changing the aspect ratio. Includes presets for common ratios (16:9, 4:3, 1:1) and social media platforms (Instagram, Facebook, YouTube, Twitter).",
+  "detailed_description": "Aspect Ratio Resizer resamples an uploaded image in the browser and downloads the result as a PNG file. You can keep the original ratio while changing width or height, unlock the ratio for a custom canvas, or choose visible presets such as 1:1, 4:3, 16:9, 9:16, Instagram Square, YouTube Thumbnail, Facebook Post, X Post, and LinkedIn Post. The preview uses object-cover behavior, so it is best for quick visual resizing and thumbnail preparation rather than archival photo editing.",
   "usage_steps": [
-    "Upload an image using the file input",
-    "View the original dimensions",
-    "Enter custom width and height or use presets",
-    "Toggle aspect ratio lock as needed",
-    "Click Download to save the resized image"
+    "Upload an image from your device.",
+    "Review the original pixel dimensions shown on the page.",
+    "Keep Lock Aspect Ratio enabled for proportional resizing, or disable it for a fixed target canvas.",
+    "Choose a ratio or social preset, or type custom width and height values.",
+    "Click Download to save the resized PNG."
   ],
   "usage_examples": [
-    "Resize photos for social media posts",
-    "Create thumbnails with specific dimensions",
-    "Prepare images for website banners"
+    "Create a 1280 x 720 thumbnail from a larger screenshot.",
+    "Resize a product image to a square canvas for a catalog draft.",
+    "Prepare a vertical 9:16 preview for a story layout.",
+    "Make a quick website banner mockup without opening a full image editor."
+  ],
+  "faqs": [
+    {
+      "question": "Which format does the download use?",
+      "answer": "The current browser canvas export downloads a PNG file."
+    },
+    {
+      "question": "Does it preserve camera file details?",
+      "answer": "No. The image is redrawn to a canvas, so original camera and file details are not preserved."
+    },
+    {
+      "question": "What happens if the target ratio differs from the image?",
+      "answer": "The preview and export use a cover-style crop to fill the target canvas."
+    }
   ]
 }

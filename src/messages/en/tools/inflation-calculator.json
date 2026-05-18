@@ -1,18 +1,30 @@
 {
-  "detailed_description": "Inflation Calculator helps you understand how inflation affects the value of money over time. Enter an amount, select start and end years, and specify an inflation rate to see the equivalent value. Calculate how much past money is worth in today's dollars, or estimate how much you'll need in the future to maintain the same purchasing power. The tool shows both the adjusted value and the total percentage change.",
+  "detailed_description": "Inflation Calculator estimates how a fixed annual inflation rate changes an amount across a year range. Enter an amount, start year, end year, and annual rate, then review the adjusted value, cumulative inflation, purchasing power loss, formula, and year-by-year breakdown. This is a simple compound-rate calculator, not a historical price-index database, personal planning model, or official rate feed.",
   "usage_steps": [
-    "Enter the original amount",
-    "Select the start year",
-    "Select the end year",
-    "Enter the annual inflation rate",
-    "Click Calculate to see results",
-    "View the inflation-adjusted value",
-    "See the total percentage change"
+    "Enter the starting amount you want to model.",
+    "Set the start year and end year for the calculation window.",
+    "Enter an annual inflation rate or choose one of the quick rate buttons.",
+    "Click Calculate to generate the adjusted value and yearly table.",
+    "Use the formula and cumulative inflation values to sanity-check the assumption."
   ],
   "usage_examples": [
-    "Calculate what $100 from 1990 is worth today",
-    "Estimate future retirement savings needs",
-    "Compare historical prices to current values",
-    "Plan for inflation in long-term investments"
+    "Model how a 3 percent annual inflation assumption changes a budget over 10 years.",
+    "Compare two scenarios by recalculating with different annual rates.",
+    "Estimate a simple future price target before doing deeper financial planning.",
+    "Explain purchasing power loss in a report using a transparent compound-rate assumption."
+  ],
+  "faqs": [
+    {
+      "question": "Does this use government price-index data?",
+      "answer": "No. The calculator uses the annual rate you enter and compounds it across the selected years."
+    },
+    {
+      "question": "Can I use it for financial advice?",
+      "answer": "Use it as a simple estimate only. It does not provide personal financial advice or model changing rates over time."
+    },
+    {
+      "question": "Why is the year-by-year table useful?",
+      "answer": "It shows how the same rate compounds over time, which makes the assumption easier to audit or explain."
+    }
   ]
 }

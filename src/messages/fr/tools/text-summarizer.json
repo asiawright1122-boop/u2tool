@@ -1,17 +1,16 @@
 {
-  "detailed_description": "Notre outil Text Summarizer utilise des algorithmes avancés de traitement du langage naturel (NLP) pour extraire les phrases clés d'un texte long. Techniquement, il combine des techniques de tokenisation des phrases, d'analyse sémantique par TF-IDF (Term Frequency-Inverse Document Frequency) et de pondération contextuelle basée sur les réseaux neuronaux. Contrairement aux méthodes classiques, il intègre un modèle d'embedding de phrases (comme BERT ou FastText) pour mesurer la similarité cosinus entre les segments de texte. Ce processus permet de préserver la cohérence thématique tout en réduisant la longueur du contenu initial. Les utilisateurs trouveront cet outil indispensable pour analyser rapidement des documents académiques, générer des résumés de rapports professionnels, ou extraire des informations critiques à partir de grands volumes de données textuelles. Il est particulièrement utile pour les chercheurs confrontés à des articles scientifiques complexes, les journalistes traitant des entretiens verbeux, ou les équipes marketing synthétisant des retours clients. L'algorithme adapte dynamiquement la longueur du résumé en fonction de la densité informationnelle, garantissant un équilibre optimal entre concision et exhaustivité.",
+  "detailed_description": "Le Text Summarizer crée un résumé extractif directement dans le navigateur. Collez un texte, choisissez Short, Medium ou Long, et la page sélectionne des phrases représentatives selon la fréquence des mots, la position des phrases et leur longueur. Il convient aux notes, brouillons, articles ou longs messages que vous voulez réduire avant une relecture humaine. L'interface actuelle travaille avec du texte collé et ne rédige pas de nouveaux paragraphes reformulés.",
   "usage_steps": [
-    "Collez votre texte dans la zone d'édition multiligne, qui prend en charge jusqu'à 50 000 caractères.",
-    "Ajustez le curseur 'Longueur du résumé' pour définir le ratio de compression (20% à 70% du texte original).",
-    "Sélectionnez l'option 'Préserver les termes techniques' si votre texte contient un vocabulaire spécialisé.",
-    "Cliquez sur le bouton 'Générer le résumé' pour déclencher le traitement par notre API NLP optimisée.",
-    "Examinez les phrases mises en évidence dans le résultat, chacune annotée avec son score de pertinence.",
-    "Utilisez les boutons 'Exporter au format Markdown' ou 'Copier dans le presse-papiers' pour récupérer votre résumé."
+    "Collez le texte dans la zone de saisie principale.",
+    "Choisissez Short, Medium ou Long selon le niveau de détail voulu.",
+    "Consultez les compteurs de mots, de phrases et de réduction.",
+    "Relisez le résumé et changez la longueur si du contexte manque.",
+    "Copiez le résultat dans votre document, note ou éditeur."
   ],
   "usage_examples": [
-    "Un doctorant résume un article scientifique de 10 pages en un paragraphe synthétique pour sa revue de littérature.",
-    "Un journaliste transforme une transcription d'interview de 5000 mots en un article concis pour publication web.",
-    "Une équipe de veille concurrentielle extrait les points clés de rapports sectoriels de plusieurs centaines de pages.",
-    "Un développeur documente automatiquement des blocs de code en générant des commentaires synthétiques à partir de descriptions techniques."
+    "Réduire des notes de réunion aux phrases les plus représentatives.",
+    "Créer une version courte d'un brouillon long avant de le réécrire.",
+    "Extraire les points centraux d'une description produit ou d'un message support.",
+    "Convertir un long e-mail en note de revue rapide."
   ]
 }

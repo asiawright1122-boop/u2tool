@@ -22,6 +22,26 @@
   height: number;
 }
 
+  const presetRatios: AspectRatio[] = [
+    { name: '1:1', width: 1, height: 1 },
+    { name: '4:3', width: 4, height: 3 },
+    { name: '3:2', width: 3, height: 2 },
+    { name: '16:9', width: 16, height: 9 },
+    { name: '21:9', width: 21, height: 9 },
+    { name: '9:16', width: 9, height: 16 },
+    { name: '2:3', width: 2, height: 3 },
+    { name: '5:4', width: 5, height: 4 },
+  ];
+
+  const socialMediaSizes = [
+    { name: 'Instagram Square', width: 1080, height: 1080 },
+    { name: 'Instagram Story', width: 1080, height: 1920 },
+    { name: 'YouTube Thumbnail', width: 1280, height: 720 },
+    { name: 'Facebook Post', width: 1200, height: 630 },
+    { name: 'X Post', width: 1600, height: 900 },
+    { name: 'LinkedIn Post', width: 1200, height: 627 },
+  ];
+
   let image = $state(null);
 
   let originalSize = $state({ width: 0, height: 0 });
@@ -239,7 +259,7 @@
             <div class="p-4 flex justify-center bg-gray-100 dark:bg-gray-900">
               <div
                 class="relative bg-white dark:bg-gray-800 shadow-lg overflow-hidden"
-                style="width: Math.min(targetWidth, 400); height: Math.min(targetHeight, 300); aspect-ratio: {targetWidth}/{targetHeight}"
+                style={`width: ${Math.min(targetWidth, 400)}px; height: ${Math.min(targetHeight, 300)}px; aspect-ratio: ${targetWidth}/${targetHeight};`}
               >
                 <img
                   src={image}

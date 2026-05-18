@@ -1545,6 +1545,132 @@ describe('assessSupportContentTrust', () => {
     }
   });
 
+  it('blocks unsupported claims for the next recovery content batch', () => {
+    const examples = [
+      {
+        slug: 'text-summarizer',
+        name: 'Resumidor de Texto',
+        locale: 'es',
+        detailedDescription:
+          'Procesa documentos con BERT, transformer, TF-IDF y similitud coseno.',
+        usageSteps: ['Arrastre un archivo .docx y descarga el resultado en .json con metadatos.'],
+        expectedCode: 'text-summarizer-unsupported-ai-file-export-claim',
+      },
+      {
+        slug: 'inflation-calculator',
+        name: 'Inflation Calculator',
+        locale: 'en',
+        detailedDescription:
+          'Use official CPI, historical prices, retirement savings, investments, taxes, and market risk.',
+        usageSteps: [],
+        expectedCode: 'inflation-calculator-unsupported-cpi-investment-claim',
+      },
+      {
+        slug: 'ip-geolocation',
+        name: 'IP Geolocation',
+        locale: 'en',
+        detailedDescription:
+          'Shows accurate results with exact location, GPS, WHOIS, BGP, reverse DNS, and PTR.',
+        usageSteps: [],
+        expectedCode: 'ip-geolocation-unsupported-precision-network-claim',
+      },
+      {
+        slug: 'aspect-ratio-resizer',
+        name: 'Aspect Ratio Resizer',
+        locale: 'en',
+        detailedDescription:
+          'Preserves EXIF metadata, supports JPEG export, quality slider, crop handles, and batch resize.',
+        usageSteps: [],
+        expectedCode: 'aspect-ratio-resizer-unsupported-editor-claim',
+      },
+      {
+        slug: 'wordcloud-generator',
+        name: 'Word Cloud Generator',
+        locale: 'en',
+        detailedDescription:
+          'Upload Text files and use NLP sentiment analysis, custom font settings, custom color, and Freeform layout.',
+        usageSteps: [],
+        expectedCode: 'wordcloud-unsupported-nlp-upload-font-claim',
+      },
+    ];
+
+    for (const example of examples) {
+      const report = assessSupportContentTrust({
+        slug: example.slug,
+        locale: example.locale,
+        name: example.name,
+        description: '',
+        detailedDescription: example.detailedDescription,
+        usageSteps: example.usageSteps,
+        usageExamples: [],
+        faqs: [],
+      });
+
+      expect(report.blockSupportContent, example.slug).toBe(true);
+      expect(report.issues.map((issue) => issue.code), example.slug).toContain(
+        example.expectedCode
+      );
+    }
+  });
+
+  it('keeps accurate support copy for the next recovery content batch visible', () => {
+    const examples = [
+      {
+        slug: 'text-summarizer',
+        name: 'Resumidor de Texto',
+        locale: 'es',
+        detailedDescription:
+          'El Resumidor de Texto crea un resumen extractivo directamente en el navegador.',
+      },
+      {
+        slug: 'inflation-calculator',
+        name: 'Inflation Calculator',
+        locale: 'en',
+        detailedDescription:
+          'Inflation Calculator estimates how a fixed annual inflation rate changes an amount across a year range.',
+      },
+      {
+        slug: 'ip-geolocation',
+        name: 'IP Geolocation',
+        locale: 'en',
+        detailedDescription:
+          'IP Geolocation looks up approximate network location details for an IPv4 or IPv6 address from public HTTPS geolocation APIs.',
+      },
+      {
+        slug: 'aspect-ratio-resizer',
+        name: 'Aspect Ratio Resizer',
+        locale: 'en',
+        detailedDescription:
+          'Aspect Ratio Resizer resamples an uploaded image in the browser and downloads the result as a PNG file.',
+      },
+      {
+        slug: 'wordcloud-generator',
+        name: 'Word Cloud Generator',
+        locale: 'en',
+        detailedDescription:
+          'Word Cloud Generator turns a short list of weighted terms, or text pasted into the Text Input box, into an ECharts word-cloud preview.',
+      },
+    ];
+
+    for (const example of examples) {
+      const report = assessSupportContentTrust({
+        ...example,
+        description: '',
+        usageSteps: ['Use the visible controls, review the result, and adjust the input if needed.'],
+        usageExamples: ['Use the tool for a quick browser-based workflow.'],
+        faqs: [
+          {
+            question: `Where does ${example.name} run?`,
+            answer: 'The current tool runs in the browser.',
+          },
+        ],
+      });
+
+      expect(report.blockSupportContent, example.slug).toBe(false);
+      expect(report.issues, example.slug).toEqual([]);
+    }
+  });
+
   it('keeps scoped rules from blocking unrelated tools', () => {
     const report = assessSupportContentTrust({
       slug: 'timezone-converter',

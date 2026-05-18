@@ -1,17 +1,30 @@
 {
-  "detailed_description": "The Word Cloud Generator is a powerful online application designed to transform textual data into visually engaging word clouds. By using advanced algorithms, this tool analyzes input text, identifies the frequency of words, and arranges them in a visually appealing cloud format. The tool supports customization options such as font styles, color palettes, and layout configurations, allowing users to tailor the word cloud to their specific needs. The resulting cloud can be exported in PNG or SVG formats, making it suitable for presentations, reports, and web content. Users benefit from this tool in various scenarios, such as content analysis, market research, and educational projects, where visualizing textual data can provide deeper insights. The technical backend of the Word Cloud Generator leverages natural language processing (NLP) techniques to filter and process text, ensuring that the output is both accurate and meaningful.",
+  "detailed_description": "Word Cloud Generator turns a short list of weighted terms, or text pasted into the Text Input box, into an ECharts word-cloud preview. You can edit individual words and weights, load sample data, change the title, choose Default, Ocean, Sunset, or Rainbow colors, pick a shape such as Circle, Cardioid, Diamond, Triangle, or Star, adjust font-size and rotation ranges, then download the chart as PNG or SVG. The text parser performs simple browser-side word-frequency counting; it does not accept document imports, evaluate sentiment, or choose typefaces.",
   "usage_steps": [
-    "Step 1: Open the Word Cloud Generator tool and click on the 'Upload Text' button to import your text file or paste the text directly into the input box.",
-    "Step 2: Adjust the 'Word Frequency' settings to filter out common words or specify a minimum word count for inclusion in the cloud.",
-    "Step 3: Choose a layout option from the 'Layout' dropdown menu, such as 'Circular,' 'Rectangular,' or 'Freeform,' to define the shape of your word cloud.",
-    "Step 4: Select a color palette from the 'Color Scheme' section to customize the appearance of your word cloud. You can also choose a custom color by clicking on the 'Custom' option.",
-    "Step 5: Use the 'Font' settings to select a font style and size range that best suits your design preferences.",
-    "Step 6: Once you are satisfied with the word cloud, click on the 'Generate' button. The tool will process your settings and display the final word cloud. You can then download it as a PNG or SVG file by clicking on the respective export button."
+    "Start from the sample data or edit the word and weight rows manually.",
+    "Optionally paste text into Text Input and click Generate from Text to create weighted terms.",
+    "Set the chart title, color theme, shape, font-size range, and rotation range.",
+    "Review the live chart preview and adjust terms or weights until the layout is readable.",
+    "Download the finished word cloud as PNG or SVG."
   ],
   "usage_examples": [
-    "Example 1: A marketing analyst wants to understand the most frequently mentioned topics in customer feedback. By uploading the feedback text to the Word Cloud Generator, the analyst can quickly identify key themes and sentiments, which can inform strategic decisions.",
-    "Example 2: An educator is preparing a lesson on Shakespeare's plays. By creating a word cloud from the text of a play, the educator can highlight important characters and themes, making the lesson more engaging and interactive for students.",
-    "Example 3: A content creator is analyzing the most common keywords in a series of blog posts to optimize SEO. The Word Cloud Generator helps visualize the keyword frequency, allowing the creator to refine content and improve search rankings.",
-    "Example 4: A journalist is writing a report on social media trends. By generating a word cloud from recent tweets, the journalist can visually represent the most discussed topics and provide readers with a clear overview of current social media conversations."
+    "Visualize common themes from a short customer-feedback sample.",
+    "Create a keyword cloud for a classroom slide or internal workshop.",
+    "Turn a list of campaign terms into a quick presentation graphic.",
+    "Compare how different weights affect emphasis before exporting a chart."
+  ],
+  "faqs": [
+    {
+      "question": "Can I import a document?",
+      "answer": "No. The current page accepts pasted text and manual word rows; it does not include a document import control."
+    },
+    {
+      "question": "How does Generate from Text work?",
+      "answer": "It lowercases the pasted text, removes punctuation, counts repeated terms, and uses the counts as chart weights."
+    },
+    {
+      "question": "Which export formats are available?",
+      "answer": "The visible export buttons download PNG or SVG from the chart preview."
+    }
   ]
 }

@@ -1,0 +1,30 @@
+{
+  "detailed_description": "IP Geolocation looks up approximate network location details for an IPv4 or IPv6 address from public HTTPS geolocation APIs. Enter an IP address, or leave the field empty and choose My IP Address, then review fields such as country, region, city, postal code, timezone, coordinates, ISP, organization, and ASN when the provider returns them. Results are useful for quick diagnostics and content localization checks, but they are approximate network metadata, not a street address, device position, registry record, or investigation-grade evidence.",
+  "usage_steps": [
+    "Enter an IP address such as 8.8.8.8, or leave the field empty to look up your current public IP.",
+    "Click Lookup or My IP Address.",
+    "Wait for the browser to request data from the configured geolocation providers.",
+    "Review the returned country, region, city, timezone, coordinates, ISP, organization, and ASN fields.",
+    "Use View on Map only as an approximate coordinate reference."
+  ],
+  "usage_examples": [
+    "Check whether a test IP resolves to the expected country or region.",
+    "Confirm the public IP and ISP shown by your current network.",
+    "Debug localization logic by comparing approximate timezone and country fields.",
+    "Collect a quick network-location snapshot before escalating to a more authoritative source."
+  ],
+  "faqs": [
+    {
+      "question": "Is IP geolocation exact?",
+      "answer": "No. IP location is approximate and depends on provider data. It may point to an ISP, data center, city, or region rather than a user's street-level location."
+    },
+    {
+      "question": "Does this tool perform registry or routing lookup?",
+      "answer": "No. The current page requests public geolocation API data and displays the returned fields; it does not parse registry, routing, or reverse-name records."
+    },
+    {
+      "question": "Why can results differ between services?",
+      "answer": "Geolocation providers maintain separate databases and refresh schedules, so country, city, organization, or coordinate fields can vary."
+    }
+  ]
+}

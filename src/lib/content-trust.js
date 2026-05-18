@@ -327,6 +327,36 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['binary-to-text'],
   },
   {
+    code: 'text-summarizer-unsupported-ai-file-export-claim',
+    pattern: /\bBERT\b|\btransformer\b|\bTF-IDF\b|similitud coseno|[aá]rboles de dependencia|arrastr[ae] un archivo|\.docx|\.json con metadatos|descarga el resultado|Resaltado de t[eé]rminos clave|modelo de comprensi[oó]n contextual|NLP/i,
+    message: 'Claims AI model, file upload, highlighting, JSON export, or advanced NLP behavior that is not present in the current extractive text summarizer.',
+    slugs: ['text-summarizer'],
+  },
+  {
+    code: 'inflation-calculator-unsupported-cpi-investment-claim',
+    pattern: /\bhistorical CPI\b|\bofficial CPI\b|\bcountry-specific inflation\b|\bretirement savings\b|\binvestment(?:s)?\b|\bhistorical prices\b|\bpast money is worth\b|\bfuture retirement\b|\btaxes\b|\bmarket risk\b/i,
+    message: 'Claims CPI data, retirement, investment, tax, or market modeling that is not present in the current fixed-rate inflation calculator.',
+    slugs: ['inflation-calculator'],
+  },
+  {
+    code: 'ip-geolocation-unsupported-precision-network-claim',
+    pattern: /\baccurate results\b|\bexact location\b|\bprecise physical address\b|\bGPS\b|\bWHOIS\b|\bBGP\b|\breverse DNS\b|\bPTR\b|\bsecurity investigation\b/i,
+    message: 'Claims exact location, WHOIS/BGP/PTR, or investigation-grade behavior that is not present in the current approximate geolocation lookup.',
+    slugs: ['ip-geolocation'],
+  },
+  {
+    code: 'aspect-ratio-resizer-unsupported-editor-claim',
+    pattern: /\bEXIF\b|\bmetadata\b|\bJPEG export\b|\bWebP export\b|\bquality slider\b|\bcrop handles?\b|\bmanual crop\b|\bbackground color picker\b|\bwatermark\b|\bbatch resize\b/i,
+    message: 'Claims metadata preservation, alternate exports, batch editing, crop handles, or styling controls that are not present in the current PNG canvas resizer.',
+    slugs: ['aspect-ratio-resizer'],
+  },
+  {
+    code: 'wordcloud-unsupported-nlp-upload-font-claim',
+    pattern: /\bUpload Text\b|\btext file\b|\bNLP\b|\bnatural language processing\b|\bsentiment analysis\b|\bcustom font\b|\bFont settings\b|\bminimum word count\b|\bCustom color\b|\bFreeform\b|\bRectangular\b/i,
+    message: 'Claims word-cloud upload, NLP, custom font/color, or unsupported layout controls that are not present in the current ECharts word-cloud editor.',
+    slugs: ['wordcloud-generator'],
+  },
+  {
     code: 'boxplot-unsupported-import-style-claim',
     pattern: /\bCSV\/JSON\b|с учетом пользовательских настроек разделителей|символ табуляции|минимальн[а-яё/]+максимальн[а-яё ]+значени[ея].*выброс|отсечени[ея] выброс|селектор HSL|HEX-код|вкладк[аеу]\s*['’«](?:Данные|Настройки|Стили)|\bcustom delimiter\b|\bmanual outlier threshold\b|\boutlier cutoff\b|\bHSL selector\b/i,
     message: 'Claims Boxplot import, delimiter, manual outlier, or style controls that are not present in the current comma-separated value editor.',
