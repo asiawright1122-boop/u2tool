@@ -310,9 +310,27 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
   },
   {
     code: 'gantt-chart-unsupported-project-management-claim',
-    pattern: /\bmanage dependencies\b|\bidentify task dependencies\b/i,
+    pattern: /\bmanage dependencies\b|\bidentify task dependencies\b|gestiona(?:r)? las dependencias|identificar dependencias|cuellos de botella|ruta cr[ií]tica|asignaci[oó]n de recursos|seguimiento en vivo/i,
     message: 'Claims project-management behavior that is not present in the current Gantt chart maker.',
     slugs: ['gantt-chart-generator'],
+  },
+  {
+    code: 'calorie-calculator-unsupported-medical-macro-claim',
+    pattern: /الثيروكسين|التغيرات الهرمونية|مرض السكري|مقاومة الإنسولين|توزيع البروتينات والدهون والكربوهيدرات|البروتينات والدهون والكربوهيدرات|كتلة العضلات|نسب كتلة العضلات|مؤشر كتلة الجسم\s*\(BMI\)|\bBMI\b|2\.4|الرياضيين المحترفين|غير ثنائي|Hamwi|micronutrient|macro(?:nutrient)?(?: distribution)?|body composition|diabetes/i,
+    message: 'Claims medical, body-composition, or macro-planning behavior that is not present in the current calorie calculator.',
+    slugs: ['calorie-calculator'],
+  },
+  {
+    code: 'screen-recorder-unsupported-output-claim',
+    pattern: /\bMP4\b|\bGIF\b|\bcloud upload\b|\buploads? recordings? to\b|\bwebcam overlay\b|\btrim(?:ming)?\b|\bvideo editor\b|\bscheduled recording\b|subir a la nube|recortar|superposici[oó]n de webcam/i,
+    message: 'Claims screen recorder output, upload, overlay, editing, or scheduling features that are not present in the current browser recorder.',
+    slugs: ['screen-recorder'],
+  },
+  {
+    code: 'calendar-availability-external-calendar-claim',
+    pattern: /\bdate range\b|\bSelect meeting time\b|\bacross calendars\b|\bsync across calendars\b|\bautomatic calendar sync\b|\breal-time calendar availability\b/i,
+    message: 'Claims external calendar sync or date-range controls that are not present in the current manual availability calculator.',
+    slugs: ['calendar-availability-finder'],
   },
   {
     code: 'crontab-calendar-unsupported-export-timezone-claim',

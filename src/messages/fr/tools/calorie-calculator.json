@@ -1,17 +1,34 @@
 {
-  "detailed_description": "Le Calculateur de Calories est un outil technique basé sur l'équation de Mifflin-St Jeor, qui estime les besoins caloriques quotidiens en tenant compte de paramètres physiologiques précis : âge, poids, taille, sexe, niveau d'activité physique et objectif personnel (perte, maintien ou prise de masse). Contrairement aux méthodes simplifiées, cet outil intègre la variation du métabolisme de base (BMR) selon la composition corporelle, en appliquant des coefficients ajustés pour les sportifs ou les sédentaires. Il utilise un algorithme hybride combinant les références de l'OMS (indice de masse corporelle) et les données de dépense énergétique totale (TDEE) via des facteurs d'activité modulaires (1.2 à 2.4). La précision est améliorée par une gestion différenciée des ratios macronutriments en sortie, adaptée aux régimes spécifiques (cétogène, hypocalorique, etc.). Ce calculateur sert à optimiser la planification nutritionnelle pour des objectifs médicaux, sportifs ou de bien-être, en évitant les erreurs d'estimation liées aux formules obsolètes comme celle de Harris-Benedict.",
+  "detailed_description": "Le calculateur de calories estime les besoins énergétiques quotidiens à partir de l'âge, du sexe, de la taille, du poids et du niveau d'activité. Il utilise l'équation de Mifflin-St Jeor pour calculer le BMR, puis applique l'un des cinq multiplicateurs d'activité afin d'estimer les calories de maintien. Les résultats affichent aussi des objectifs simples pour réduire ou augmenter les calories, ce qui permet de comparer rapidement plusieurs scénarios. La page accepte les unités métriques et impériales et fonctionne dans le navigateur. Les chiffres sont des estimations générales, pas un avis médical ni un plan nutritionnel personnalisé.",
   "usage_steps": [
-    "Sélectionnez votre sexe dans un menu déroulant (homme/femme/non binaire) avec options de préférence de langage incluses.",
-    "Saisissez votre date de naissance dans un champ de sélection calendaire interactif pour calculer l'âge exact en années décimales.",
-    "Ajustez les curseurs dynamiques pour entrer votre poids actuel (kg) avec précision au gramme près et votre taille (cm) via un champ incrémentiel.",
-    "Choisissez votre niveau d'activité physique quotidienne parmi 6 catégories détaillées (ex: 'travail sédentaire + entraînement modéré 3x/semaine').",
-    "Cliquez sur le bouton 'Calculer' pour déclencher l'algorithme de traitement asynchrone en JavaScript, affichant les résultats en 0.5 seconde.",
-    "Consultez le tableau de résultats interactif affichant les calories journalières, la distribution macronutriments recommandée, et un code QR téléchargeable pour suivi nutritionnel mobile."
+    "Choisissez homme ou femme pour le calcul.",
+    "Saisissez l'âge, la taille et le poids en unités métriques ou impériales.",
+    "Sélectionnez le niveau d'activité qui correspond le mieux à votre semaine habituelle.",
+    "Consultez le BMR et les calories de maintien après application du multiplicateur.",
+    "Comparez les objectifs plus bas ou plus hauts comme fourchettes de planification."
   ],
   "usage_examples": [
-    "Un coureur débutant préparant son premier marathon ajuste ses apports en glucides grâce aux recommandations détaillées en % de macronutriments.",
-    "Un nutritionniste utilise l'outil pour créer un plan hypocalorique personnalisé pour un patient diabétique de type 2, en modifiant manuellement le ratio glucides/protéines.",
-    "Un culturiste calcule ses besoins caloriques post-compétition avec un facteur d'activité de 2.4, intégrant une phase de 'bulking' avec surplus de 500 kcal/jour.",
-    "Une personne ayant subi une chirurgie bariatrique surveille son apport protéique quotidien via l'export PDF des résultats, partagé avec son chirurgien."
+    "Estimer les calories de maintien avant de modifier une routine quotidienne.",
+    "Passer des unités métriques aux unités impériales pour comparer des mesures.",
+    "Voir comment une semaine légère, modérée ou active change l'estimation.",
+    "Comparer un changement quotidien de 250 ou 500 calories avant de le suivre ailleurs."
+  ],
+  "faqs": [
+    {
+      "question": "Quelle formule est utilisée ?",
+      "answer": "La page utilise l'équation de Mifflin-St Jeor pour le BMR, puis le multiplicateur d'activité sélectionné."
+    },
+    {
+      "question": "Quels niveaux d'activité sont disponibles ?",
+      "answer": "Les niveaux disponibles sont sédentaire, léger, modéré, actif et très actif."
+    },
+    {
+      "question": "Puis-je utiliser des unités impériales ?",
+      "answer": "Oui. Vous pouvez passer des centimètres et kilogrammes aux pieds, pouces et livres."
+    },
+    {
+      "question": "Est-ce un plan nutritionnel personnel ?",
+      "answer": "Non. Il fournit des estimations générales de calories pour planifier et comparer."
+    }
   ]
 }

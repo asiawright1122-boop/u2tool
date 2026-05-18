@@ -698,6 +698,106 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks Spanish Gantt Chart project-management claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'gantt-chart-generator',
+      locale: 'es',
+      name: 'Generador de diagramas de Gantt',
+      description: '',
+      detailedDescription:
+        'La línea de tiempo visual ayuda a identificar dependencias y posibles cuellos de botella.',
+      usageSteps: ['Use el panel para gestionar las dependencias y revisar la ruta crítica.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'gantt-chart-unsupported-project-management-claim'
+    );
+  });
+
+  it('blocks Calorie Calculator medical and macro-planning claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'calorie-calculator',
+      locale: 'ar',
+      name: 'حاسبة السعرات الحرارية',
+      description: '',
+      detailedDescription:
+        'تدمج الحاسبة مستويات الثيروكسين وكتلة العضلات ومؤشر كتلة الجسم (BMI) في الحسابات.',
+      usageSteps: ['اعرض توزيع البروتينات والدهون والكربوهيدرات المقترح.'],
+      usageExamples: ['خطة غذائية للتحكم في مرض السكري.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'calorie-calculator-unsupported-medical-macro-claim'
+    );
+  });
+
+  it('blocks Screen Recorder output, upload, overlay, and editing claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'screen-recorder',
+      locale: 'en',
+      name: 'Screen Recorder',
+      description: '',
+      detailedDescription:
+        'Record webcam overlay videos, trim the result in a video editor, and export MP4 or GIF files.',
+      usageSteps: ['Use cloud upload after scheduled recording.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'screen-recorder-unsupported-output-claim'
+    );
+  });
+
+  it('keeps accurate Screen Recorder browser permission copy visible', () => {
+    const report = assessSupportContentTrust({
+      slug: 'screen-recorder',
+      locale: 'en',
+      name: 'Screen Recorder',
+      description: '',
+      detailedDescription:
+        'Screen Recorder uses the browser screen-sharing permission to record the screen, window, or tab you select in the prompt.',
+      usageSteps: [
+        'Use Pause and Resume if you need to temporarily stop adding to the recording.',
+        'Download the result as a WebM file or start a new recording.',
+      ],
+      usageExamples: ['Capture a quick product walkthrough from a browser tab.'],
+      faqs: [
+        {
+          question: 'Which file type is downloaded?',
+          answer: 'The current recording is downloaded as a WebM file.',
+        },
+      ],
+    });
+
+    expect(report.blockSupportContent).toBe(false);
+  });
+
+  it('blocks Calendar Availability external sync and date-range claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'calendar-availability-finder',
+      locale: 'en',
+      name: 'Calendar Availability Finder',
+      description: '',
+      detailedDescription:
+        'Find real-time calendar availability across calendars for a selected date range.',
+      usageSteps: ['Use Select meeting time after automatic calendar sync finishes.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'calendar-availability-external-calendar-claim'
+    );
+  });
+
   it('blocks Crontab Calendar export and timezone-database claims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'crontab-calendar',

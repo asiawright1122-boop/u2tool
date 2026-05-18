@@ -1,17 +1,34 @@
 {
-  "detailed_description": "O Calorie Calculator é uma ferramenta técnica que estima as necessidades calóricas diárias utilizando algoritmos baseados em equações científicas validadas, como a equação de Mifflin-St Jeor para o cálculo do metabolismo basal (MB) e o fator de atividade física (FAF). Ao receber dados antropométricos (idade, peso, altura, sexo) e padrões de atividade (nível de exercício, termogênese induzida pela dieta), o sistema aplica coeficientes específicos para gerar o TDEE (Total Daily Energy Expenditure). A precisão do cálculo considera variações como a composição corporal (índice de massa muscular) e objetivos personalizados (perda de gordura, manutenção ou hipertrofia). Essa abordagem híbrida entre biometria e nutrição esportiva permite planejamento dietético fundamentado, essencial para profissionais de saúde, atletas e indivíduos em jornadas de bem-estar. Diferentemente de métodos genéricos, o algoritmo ajusta dinamicamente os fatores de correção conforme a faixa etária e níveis hormonais, garantindo resultados com margem de erro inferior a 5% em comparação com medições por calorimetria indireta.",
+  "detailed_description": "A calculadora de calorias estima a necessidade diária de energia a partir de idade, sexo, altura, peso e nível de atividade. Ela usa a equação de Mifflin-St Jeor para calcular o BMR e depois aplica um dos cinco multiplicadores de atividade para estimar calorias de manutenção. Os resultados também mostram metas simples para reduzir ou aumentar calorias, permitindo comparar cenários rapidamente. A página aceita unidades métricas e imperiais e roda no navegador. Use os números como estimativas gerais de planejamento, não como aconselhamento médico nem plano nutricional personalizado.",
   "usage_steps": [
-    "1. Selecione seu sexo biológico (masculino/feminino) no seletor dropdown",
-    "2. Insira sua idade em anos completos no campo numérico específico",
-    "3. Preencha seu peso atual em quilogramas com uma casa decimal (ex: 72,5kg)",
-    "4. Indique sua altura em centímetros usando o slider ajustável",
-    "5. Escolha seu nível de atividade física (sedentário, leve, moderado, intenso ou muito intenso) baseado na escala WHO",
-    "6. Clique no botão 'Calcular' para obter resultados detalhados em kcal/dia, incluindo MB, EGP (expendício calórico da digestão) e sugestão de distribuição macronutricional"
+    "Escolha masculino ou feminino para o cálculo.",
+    "Digite idade, altura e peso usando unidades métricas ou imperiais.",
+    "Selecione o nível de atividade que melhor representa sua semana normal.",
+    "Revise o BMR e as calorias de manutenção após aplicar o multiplicador.",
+    "Compare metas menores ou maiores de calorias como faixas aproximadas."
   ],
   "usage_examples": [
-    "1. Uma mulher de 35 anos com IMC 28,5 deseja perder 0,5kg/semana: insere dados e obtém déficit calórico recomendado de 1.850kcal/dia",
-    "2. Um fisiculturista masculino de 28 anos com 12% de gordura corporal calcula necessidades para fase de cutting, recebendo orientação de 2.400kcal/dia com 40% proteínas",
-    "3. Nutricionista utiliza a ferramenta para ajustar plano alimentar de paciente diabético, considerando fator de atividade 1,55 para rotina de trabalho moderado",
-    "4. Corredor de endurance insere treinos de 90 minutos/dia e recebe plano nutricional com ajuste de carboidratos complexos para otimizar performance"
+    "Estimar calorias de manutenção antes de ajustar uma rotina diária.",
+    "Alternar entre unidades métricas e imperiais ao comparar medidas.",
+    "Ver como uma semana leve, moderada ou ativa muda a estimativa.",
+    "Comparar uma mudança diária de 250 ou 500 calorias antes de acompanhar em outro lugar."
+  ],
+  "faqs": [
+    {
+      "question": "Qual fórmula é usada?",
+      "answer": "A página usa a equação de Mifflin-St Jeor para BMR e aplica o multiplicador de atividade escolhido."
+    },
+    {
+      "question": "Quais níveis de atividade estão disponíveis?",
+      "answer": "Há níveis sedentário, leve, moderado, ativo e muito ativo."
+    },
+    {
+      "question": "Posso usar unidades imperiais?",
+      "answer": "Sim. Você pode alternar entre centímetros e quilogramas ou pés, polegadas e libras."
+    },
+    {
+      "question": "Isso é um plano nutricional pessoal?",
+      "answer": "Não. A página fornece estimativas gerais de calorias para planejamento e comparação."
+    }
   ]
 }

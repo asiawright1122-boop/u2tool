@@ -1,0 +1,34 @@
+{
+  "detailed_description": "Screen Recorder uses the browser screen-sharing permission to record the screen, window, or tab you select in the prompt. Start a recording, pause and resume when needed, stop the capture, preview the result on the page, and download the result as a WebM file. It runs from the browser MediaRecorder and getDisplayMedia APIs, so support depends on the browser and the permissions you grant during the session.",
+  "usage_steps": [
+    "Click Start Recording and approve the browser screen-sharing permission.",
+    "Choose the screen, window, or tab you want the browser to capture.",
+    "Use Pause and Resume if you need to temporarily stop adding to the recording.",
+    "Click Stop when the session is finished and review the video preview.",
+    "Download the result as a WebM file or start a new recording."
+  ],
+  "usage_examples": [
+    "Capture a quick product walkthrough from a browser tab.",
+    "Record a short bug reproduction to attach to an issue.",
+    "Save a browser-based demo for teammates who cannot join live.",
+    "Pause during setup, resume for the important steps, then download the WebM result."
+  ],
+  "faqs": [
+    {
+      "question": "What permission does it use?",
+      "answer": "It uses the browser screen-sharing prompt. You choose what to share before recording starts."
+    },
+    {
+      "question": "Which file type is downloaded?",
+      "answer": "The current recording is downloaded as a WebM file."
+    },
+    {
+      "question": "Can I pause a recording?",
+      "answer": "Yes. The interface includes Start, Pause, Resume, Stop, New Recording, and Download controls."
+    },
+    {
+      "question": "Why might recording fail to start?",
+      "answer": "The browser must support getDisplayMedia and MediaRecorder, and the screen-sharing permission must be allowed."
+    }
+  ]
+}

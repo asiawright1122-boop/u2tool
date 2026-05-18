@@ -1,17 +1,34 @@
 {
-  "detailed_description": "The Calorie Calculator is a precision tool that estimates daily caloric requirements using the Mifflin-St Jeor Equation to determine Basal Metabolic Rate (BMR), then applies activity-specific multipliers to account for energy expenditure. Users input biometric data (age, weight, height) and select from seven activity factors ranging from sedentary (1.2x BMR) to extreme exercise (2.4x BMR). Advanced features include body composition goals adjustment, allowing users to specify weight loss, maintenance, or gain objectives with 500-calorie increment options. The tool also incorporates Hamwi formula calculations for ideal body weight estimation, providing dual reference points for personalized nutrition planning. This tool addresses specific use cases like athletic performance optimization, postpartum weight management, and metabolic disorder dietary planning, offering both macro and micronutrient baseline suggestions based on calculated TDEE (Total Daily Energy Expenditure).",
+  "detailed_description": "The Calorie Calculator estimates daily energy needs from age, sex, height, weight, and activity level. It uses the Mifflin-St Jeor equation to calculate BMR, then applies one of five activity multipliers to estimate maintenance calories. The results also show simple calorie targets for mild or stronger weight loss and weight gain, so you can compare scenarios quickly. The page supports metric and imperial inputs and runs in the browser. Use the numbers as general planning estimates, not as medical advice or a personalized nutrition plan.",
   "usage_steps": [
-    "1. Select biological sex from the gender dropdown menu (Male/Female/Non-binary)",
-    "2. Enter chronological age in years using the numerical input field",
-    "3. Input current weight in kilograms or pounds using the unit toggle switch",
-    "4. Specify height through either metric (cm) or imperial (ft/in) measurement selectors",
-    "5. Choose activity level from the validated dropdown: 1.2 (sedentary) to 2.4 (extreme)",
-    "6. Adjust goal settings using the +/- calorie buttons for precise 500-calorie increments"
+    "Choose male or female for the calculation.",
+    "Enter age, height, and weight using metric or imperial units.",
+    "Select the activity level that best matches your normal week.",
+    "Review BMR and maintenance calories after the activity multiplier is applied.",
+    "Compare the suggested lower or higher calorie targets as rough planning ranges."
   ],
   "usage_examples": [
-    "Example 1: A 28-year-old female triathlete (5'7\", 135lbs) calculates her 2,850 TDEE to plan competition season macros",
-    "Example 2: Post-bariatric surgery patient tracks maintenance calories after losing 40lbs using adjusted BMR formulas",
-    "Example 3: Vegan bodybuilder modifies his 3,200-calorie bulk plan using the tool's protein distribution calculator",
-    "Example 4: Diabetes patient establishes baseline carb cycling targets through consecutive day calculations with varying activity factors"
+    "Estimate maintenance calories before adjusting a daily eating routine.",
+    "Switch between metric and imperial inputs when comparing measurements.",
+    "Check how a light, moderate, or active week changes the maintenance estimate.",
+    "Compare a 250 or 500 calorie daily change before deciding what to track elsewhere."
+  ],
+  "faqs": [
+    {
+      "question": "Which formula does it use?",
+      "answer": "It uses the Mifflin-St Jeor equation for BMR, then applies the selected activity multiplier."
+    },
+    {
+      "question": "Which activity levels are available?",
+      "answer": "The calculator includes sedentary, light, moderate, active, and very active levels."
+    },
+    {
+      "question": "Can I use imperial units?",
+      "answer": "Yes. You can switch between centimeters and kilograms or feet, inches, and pounds."
+    },
+    {
+      "question": "Is this a personal nutrition plan?",
+      "answer": "No. It provides general calorie estimates for planning and comparison only."
+    }
   ]
 }

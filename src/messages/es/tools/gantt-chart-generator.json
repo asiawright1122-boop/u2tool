@@ -1,15 +1,34 @@
 {
-  "detailed_description": "Nuestro generador gratuito de diagramas de Gantt ayuda a los gerentes de proyectos y equipos a visualizar cronogramas de proyectos con facilidad. Un diagrama de Gantt es un gráfico de barras horizontal que muestra las tareas del proyecto en el tiempo, esencial para la planificación y seguimiento de proyectos. Con este generador, puede crear cronogramas profesionales agregando tareas con fechas de inicio, fin y porcentajes de progreso. La línea de tiempo visual ayuda a identificar dependencias de tareas, actividades superpuestas y posibles cuellos de botella. Perfecto para sprints ágiles, proyectos de construcción, campañas de marketing y ciclos de desarrollo de software. Exporte sus diagramas de Gantt como PNG o SVG para presentaciones e informes.",
+  "detailed_description": "El generador de diagramas de Gantt convierte una lista corta de tareas en una línea de tiempo visual directamente en el navegador. Añade el nombre de la tarea, la fecha de inicio, la fecha de fin y el porcentaje de progreso; después elige un tema de color y revisa la vista previa creada con ECharts. Es útil para presentar planes simples, sprints, campañas, trabajos de clase o cronogramas internos cuando necesitas una imagen clara sin abrir una herramienta de gestión de proyectos completa. La página se centra en crear y exportar el gráfico como PNG o SVG.",
   "usage_steps": [
-    "Haga clic en 'Agregar tarea' para crear su primera tarea del proyecto",
-    "Ingrese el nombre de la tarea, fecha de inicio y fecha de fin para cada tarea",
-    "Establezca el porcentaje de progreso para rastrear el estado de finalización",
-    "Elija un tema de color que coincida con el estilo de su proyecto",
-    "Previsualice su diagrama de Gantt y descárguelo como PNG o SVG"
+    "Escribe un título para el gráfico si quieres personalizar la vista previa.",
+    "Añade o edita tareas con nombre de la tarea, fecha de inicio, fecha de fin y progreso.",
+    "Elige un tema de color para adaptar la visualización al informe o presentación.",
+    "Revisa el diagrama generado y ajusta fechas o porcentajes si algo no se ve claro.",
+    "Descarga el resultado como PNG o SVG para usarlo en documentos, diapositivas o mensajes."
   ],
   "usage_examples": [
-    "Cree una línea de tiempo de sprint de desarrollo de software con fases de Planificación, Desarrollo, Pruebas y Despliegue",
-    "Construya un diagrama de Gantt de campaña de marketing mostrando fechas de creación de contenido, revisión y lanzamiento",
-    "Planifique un proyecto de construcción con hitos para cimientos, estructura, electricidad y acabados"
+    "Preparar una línea de tiempo de sprint con planificación, desarrollo, pruebas y lanzamiento.",
+    "Visualizar una campaña de marketing con fechas para contenido, revisión y publicación.",
+    "Crear un cronograma académico simple para investigación, redacción, revisión y entrega.",
+    "Exportar un diagrama PNG o SVG para incluirlo en una actualización semanal del equipo."
+  ],
+  "faqs": [
+    {
+      "question": "¿Qué datos necesita cada tarea?",
+      "answer": "Cada fila usa nombre de la tarea, fecha de inicio, fecha de fin y porcentaje de progreso."
+    },
+    {
+      "question": "¿Puedo cambiar el estilo del gráfico?",
+      "answer": "Sí. Puedes elegir entre temas de color predefinidos y cambiar el título del gráfico."
+    },
+    {
+      "question": "¿Qué formatos de exportación incluye?",
+      "answer": "Puedes descargar el diagrama terminado como PNG o SVG."
+    },
+    {
+      "question": "¿Es una herramienta completa de gestión de proyectos?",
+      "answer": "No. Está pensada para crear una línea de tiempo visual sencilla a partir de tareas, fechas y progreso."
+    }
   ]
 }

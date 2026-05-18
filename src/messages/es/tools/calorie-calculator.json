@@ -1,17 +1,34 @@
 {
-  "detailed_description": "El Calorie Calculator es una herramienta técnica que estima las necesidades calóricas diarias mediante algoritmos basados en ecuaciones validadas como la de Mifflin-St Jeor y Harris-Benedict. Esta calculadora determina la Tasa Metabólica Basal (TMB) utilizando parámetros antropométricos (peso, altura) y factores demográficos (edad, género), aplicando posteriormente multiplicadores de actividad física (rango de 1.2 a 2.4 según nivel de ejercicio). Su utilidad radica en permitir a usuarios personalizar planes nutricionales con precisión, ya sea para déficit calórico controlado, mantenimiento de masa muscular o hiperplasia. Integra el efecto térmico de los alimentos (aproximadamente 10% del total) y considera variaciones en composición corporal mediante ajustes manuales. La interfaz procesa los datos en tiempo real, generando un balance energético ajustado a objetivos específicos.",
+  "detailed_description": "La calculadora de calorías estima las necesidades diarias de energía a partir de edad, sexo, altura, peso y nivel de actividad. Usa la ecuación de Mifflin-St Jeor para calcular el BMR y después aplica uno de cinco multiplicadores de actividad para estimar las calorías de mantenimiento. Los resultados también muestran objetivos sencillos para bajar o subir calorías, de modo que puedas comparar escenarios rápidamente. La página admite unidades métricas e imperiales y funciona en el navegador. Usa los números como estimaciones generales, no como consejo médico ni como plan nutricional personalizado.",
   "usage_steps": [
-    "1. Selecciona tu género biológico en el menú desplegable (masculino/femenino)",
-    "2. Ingresa tu edad exacta en el campo numérico (rango válido: 18-80 años)",
-    "3. Introduce tu peso actual en kilogramos o libras usando el selector de unidades",
-    "4. Elige tu nivel de actividad física entre seis opciones predefinidas (sedentario, ligero, moderado, activo, muy activo, atleta)",
-    "5. Ajusta manualmente el porcentaje de grasa corporal si deseas cálculos más precisos",
-    "6. Haz clic en el botón 'Calcular' para obtener resultados detallados en kcal/día con desglose por componentes"
+    "Elige hombre o mujer para el cálculo.",
+    "Introduce edad, altura y peso con unidades métricas o imperiales.",
+    "Selecciona el nivel de actividad que mejor describa tu semana habitual.",
+    "Revisa el BMR y las calorías de mantenimiento tras aplicar el multiplicador.",
+    "Compara los objetivos de menos o más calorías como rangos orientativos."
   ],
   "usage_examples": [
-    "Un corredor de ultra trail que necesita calcular su ingesta para un periodo de carga de 160km semanales",
-    "Una mujer menopáusica que desea ajustar su dieta para prevenir aumento de peso relacionado con cambios hormonales",
-    "Un culturista en fase de definición que requiere un déficit calórico del 15% manteniendo nitrógeno positivo",
-    "Un desarrollador de software con síndrome metabólico que diseña un plan nutricional para reducir 0.5kg/mes bajo supervisión médica"
+    "Estimar calorías de mantenimiento antes de ajustar una rutina diaria.",
+    "Cambiar entre unidades métricas e imperiales al comparar medidas.",
+    "Ver cómo una semana ligera, moderada o activa cambia la estimación.",
+    "Comparar un cambio diario de 250 o 500 calorías antes de registrarlo en otro lugar."
+  ],
+  "faqs": [
+    {
+      "question": "¿Qué fórmula utiliza?",
+      "answer": "Usa la ecuación de Mifflin-St Jeor para el BMR y luego aplica el multiplicador de actividad elegido."
+    },
+    {
+      "question": "¿Qué niveles de actividad hay?",
+      "answer": "Incluye sedentario, ligero, moderado, activo y muy activo."
+    },
+    {
+      "question": "¿Puedo usar unidades imperiales?",
+      "answer": "Sí. Puedes cambiar entre centímetros y kilogramos o pies, pulgadas y libras."
+    },
+    {
+      "question": "¿Es un plan nutricional personal?",
+      "answer": "No. Proporciona estimaciones generales de calorías para planificación y comparación."
+    }
   ]
 }
