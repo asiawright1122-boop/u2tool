@@ -2256,7 +2256,14 @@ export const PRESETS: Record<string, any[]> = {
     { key: 'SECRET_KEY_BASE', value: '', description: 'Rails secret key base', required: true, secret: true },
   ],
 };
-export const PRINT_SIZES = {};
+export const PRINT_SIZES = [
+  { name: '4 x 6 in', width: 4, height: 6 },
+  { name: '5 x 7 in', width: 5, height: 7 },
+  { name: '8 x 10 in', width: 8, height: 10 },
+  { name: 'A4', width: 8.27, height: 11.69 },
+  { name: 'Letter', width: 8.5, height: 11 },
+  { name: 'Poster 18 x 24 in', width: 18, height: 24 },
+];
 export const REVERSE_MORSE = runtimeReverseMorse;
 export const ReactNode = [];
 export const SAMPLE_CONFLICT = "<<<<<<< HEAD\\nLocal change\\n=======\\nIncoming change\\n>>>>>>> branch";

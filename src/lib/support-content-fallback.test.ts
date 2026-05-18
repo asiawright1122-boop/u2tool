@@ -817,6 +817,145 @@ describe('assessSupportContentTrust', () => {
     expect(report.blockSupportContent).toBe(false);
   });
 
+  it('blocks Tile Calculator layout controls that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'tile-calculator',
+      locale: 'en',
+      name: 'Tile Calculator',
+      description: '',
+      detailedDescription:
+        'Supports asymmetric layout adjustments, protrusions or recesses, hexagonal tile shape, and substrate irregularity.',
+      usageSteps: ["Activate 'Obstruction Adjustment' to subtract fixed elements."],
+      usageExamples: ['Plan dry vs. wet areas requiring waterproof membranes.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'tile-calculator-unsupported-layout-claim'
+    );
+  });
+
+  it('blocks DPI Calculator image inspection claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'dpi-calculator',
+      locale: 'en',
+      name: 'DPI Calculator',
+      description: '',
+      detailedDescription: 'Upload an image and read image metadata from the EXIF and ICC profile.',
+      usageSteps: ['Detect image dimensions and resize images for print.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'dpi-calculator-unsupported-image-inspection-claim'
+    );
+  });
+
+  it('blocks Roman Numeral strict validation claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'roman-numeral-converter',
+      locale: 'en',
+      name: 'Roman Numeral Converter',
+      description: '',
+      detailedDescription: 'A strict validator that rejects invalid Roman numerals and historical variants.',
+      usageSteps: [],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'roman-numeral-unsupported-validation-claim'
+    );
+  });
+
+  it('blocks IP Subnet live network claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'ip-subnet-calculator',
+      locale: 'en',
+      name: 'IP Subnet Calculator',
+      description: '',
+      detailedDescription: 'Supports IPv6 and scans the network to detect devices.',
+      usageSteps: ['Ping hosts and query routers to find live devices.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'ip-subnet-unsupported-live-network-claim'
+    );
+  });
+
+  it('blocks GIF Maker editor controls that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'gif-maker',
+      locale: 'en',
+      name: 'GIF Maker',
+      description: '',
+      detailedDescription: 'Use a Frame Rate slider in fps, Dimensions fields, and text overlays.',
+      usageSteps: ['Use Fit to Width, Fit to Height, Loop Count, and video files before export.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'gif-maker-unsupported-editor-claim'
+    );
+  });
+
+  it('keeps accurate support copy for this recovery batch visible', () => {
+    const examples = [
+      {
+        slug: 'tile-calculator',
+        name: 'Tile Calculator',
+        detailedDescription:
+          'The Tile Calculator estimates tiles for a rectangular floor or wall area with metric or imperial units, grout width, waste percentage, pattern, and optional tiles per box.',
+      },
+      {
+        slug: 'dpi-calculator',
+        name: 'DPI Calculator',
+        detailedDescription:
+          'DPI Calculator connects pixel dimensions, print size, and print resolution from manual inputs.',
+      },
+      {
+        slug: 'roman-numeral-converter',
+        name: 'Roman Numeral Converter',
+        detailedDescription:
+          'Roman Numeral Converter switches between Arabic numbers from 1 to 3999 and Roman symbols such as I, V, X, L, C, D, and M.',
+      },
+      {
+        slug: 'ip-subnet-calculator',
+        name: 'IP Subnet Calculator',
+        detailedDescription:
+          'IP Subnet Calculator calculates IPv4 subnet details from an IP address and subnet mask in the browser.',
+      },
+      {
+        slug: 'gif-maker',
+        name: 'GIF Maker',
+        detailedDescription:
+          'GIF Maker turns two or more uploaded images into a browser-generated animated GIF with frame delay and quality settings.',
+      },
+    ];
+
+    for (const example of examples) {
+      const report = assessSupportContentTrust({
+        ...example,
+        locale: 'en',
+        description: '',
+        usageSteps: ['Use the visible controls, review the result, and copy or download where available.'],
+        usageExamples: ['Use the tool for a quick browser-based planning task.'],
+        faqs: [],
+      });
+
+      expect(report.blockSupportContent, example.slug).toBe(false);
+    }
+  });
+
   it('blocks Calorie Calculator medical and macro-planning claims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'calorie-calculator',

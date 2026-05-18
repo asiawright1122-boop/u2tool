@@ -1,17 +1,35 @@
 {
-  "detailed_description": "GIF Maker is a powerful online tool designed to transform a series of images into a single, seamless animated GIF. This process involves advanced image processing techniques, including frame-by-frame optimization, palette reduction, and dithering, to ensure the resulting GIF is both visually appealing and optimized for web use. Users can leverage GIF Maker for a variety of applications, from creating engaging content for social media to animating graphics for presentations. The tool supports multiple image formats, such as PNG, JPEG, and BMP, and allows for precise control over the animation's frame rate, loop count, and dimensions. By utilizing GIF Maker, creators can enhance their visual storytelling capabilities, making their content more dynamic and interactive. The tool's intuitive interface and robust feature set make it an essential addition to any digital artist's toolkit.",
+  "detailed_description": "GIF Maker turns two or more uploaded images into a browser-generated animated GIF. Add image frames, reorder or remove frames, set the frame delay in milliseconds, choose the GIF quality setting, and decide whether the animation should loop forever. The tool centers each frame on a canvas sized to the largest uploaded image, uses a white background, previews the generated result, and downloads the finished file as a GIF. It is designed for quick image-sequence animations; it does not trim media, change frame dimensions, add text layers, or process videos.",
   "usage_steps": [
-    "Step 1: Navigate to the GIF Maker tool on the website and click on the 'Upload Images' button to select the images you want to convert into a GIF.",
-    "Step 2: Once the images are uploaded, use the 'Sort' function to arrange them in the desired sequence for the animation.",
-    "Step 3: Adjust the 'Frame Rate' slider to set the speed of the animation, measured in frames per second (fps).",
-    "Step 4: Customize the GIF size by entering the desired width and height in the 'Dimensions' fields, or use the 'Fit to Width' or 'Fit to Height' options to maintain aspect ratio.",
-    "Step 5: Set the 'Loop Count' to determine how many times the GIF should repeat. Choose 'Infinite' for continuous playback or specify a number for a finite loop.",
-    "Step 6: Click the 'Create GIF' button to generate your animated GIF. Once the process is complete, download the file by clicking the 'Download' button."
+    "Click the upload area and select two or more image files.",
+    "Use the frame arrows to move images earlier or later in the sequence, or remove frames you do not need.",
+    "Set frame delay in milliseconds to control the animation speed.",
+    "Adjust the quality slider; lower values produce higher quality with larger files.",
+    "Choose whether the GIF should loop forever.",
+    "Click Create GIF, preview the result, then download the generated animation."
   ],
   "usage_examples": [
-    "Example 1: A social media manager can use GIF Maker to create a dynamic promotional GIF for a new product launch, combining multiple images to showcase the product's features in a visually engaging way.",
-    "Example 2: A graphic designer can animate a series of logo variations to demonstrate different design options to a client, making the presentation more interactive and informative.",
-    "Example 3: A teacher can create educational animations by combining diagrams and illustrations to explain complex concepts, enhancing student engagement and understanding.",
-    "Example 4: A content creator can use GIF Maker to compile a series of screenshots from a video game or movie, creating an animated montage to share on social platforms like Twitter or Reddit."
+    "Create a simple before-and-after animation from two screenshots.",
+    "Turn a few product photos into a looping preview for a draft post.",
+    "Combine diagram frames into a short educational animation.",
+    "Make a quick UI walkthrough from exported image frames."
+  ],
+  "faqs": [
+    {
+      "question": "How many images do I need?",
+      "answer": "You need at least two frames before the Create GIF button appears."
+    },
+    {
+      "question": "Can I reorder frames?",
+      "answer": "Yes. Use the arrow buttons on each frame thumbnail to move it earlier or later."
+    },
+    {
+      "question": "How are different frame sizes handled?",
+      "answer": "No. The output canvas uses the largest uploaded width and height, and smaller frames are centered on a white background."
+    },
+    {
+      "question": "Can it process movie files?",
+      "answer": "No. The current tool creates GIFs from uploaded image files, not from movie files."
+    }
   ]
 }

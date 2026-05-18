@@ -333,6 +333,36 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['gpa-calculator'],
   },
   {
+    code: 'tile-calculator-unsupported-layout-claim',
+    pattern: /Obstruction Adjustment|asymmetric layout adjustments|protrusions or recesses|subtract fixed elements|tile shape|hexagonal|substrate irregularity|dry vs\. wet areas|waterproof membranes|floor heating pipes|pattern-specific waste calculation/i,
+    message: 'Claims tile layout, obstruction, shape, substrate, or wet-area controls that are not present in the current rectangular tile calculator.',
+    slugs: ['tile-calculator'],
+  },
+  {
+    code: 'dpi-calculator-unsupported-image-inspection-claim',
+    pattern: /\bread(?:s|ing)? image metadata\b|\bEXIF\b|\bupload(?:s| an)? image\b|\bdetect(?:s|ing)? image dimensions\b|\bICC profile\b|\bresampl(?:e|ing)\b|\bresize(?:s| images?)?\b/i,
+    message: 'Claims DPI image upload, metadata inspection, or resizing behavior that is not present in the current manual-input calculator.',
+    slugs: ['dpi-calculator'],
+  },
+  {
+    code: 'roman-numeral-unsupported-validation-claim',
+    pattern: /\bstrict validator\b|\bvalidates strict Roman\b|\bgrammar validator\b|\brejects invalid Roman numerals\b|\bhistorical variants?\b/i,
+    message: 'Claims strict Roman numeral validation that is not present in the current symbol-value converter.',
+    slugs: ['roman-numeral-converter'],
+  },
+  {
+    code: 'ip-subnet-unsupported-live-network-claim',
+    pattern: /\bIPv6\b|\bscan(?:s|ning)? (?:the )?network\b|\bping(?:s)? hosts\b|\bdetect(?:s)? devices\b|\bquery(?:ing|ies)? routers\b|\blive devices\b|\bassigned on your network\b/i,
+    message: 'Claims IPv6 or live network probing behavior that is not present in the current IPv4 subnet math tool.',
+    slugs: ['ip-subnet-calculator'],
+  },
+  {
+    code: 'gif-maker-unsupported-editor-claim',
+    pattern: /\bFrame Rate slider\b|\bframes per second\b|\bfps\b|\bDimensions fields\b|\bFit to Width\b|\bFit to Height\b|\bLoop Count\b|\bfinite loop\b|\bSort function\b|\btext overlays?\b|\bedit video clips?\b|\bvideo files?\b|\bcrop(?:s|ping)?\b|\bresize(?:s| images?)?\b|\bdithering\b/i,
+    message: 'Claims GIF editor, sizing, video, or FPS controls that are not present in the current image-frame GIF maker.',
+    slugs: ['gif-maker'],
+  },
+  {
     code: 'calorie-calculator-unsupported-medical-macro-claim',
     pattern: /الثيروكسين|التغيرات الهرمونية|مرض السكري|مقاومة الإنسولين|توزيع البروتينات والدهون والكربوهيدرات|البروتينات والدهون والكربوهيدرات|كتلة العضلات|نسب كتلة العضلات|مؤشر كتلة الجسم\s*\(BMI\)|\bBMI\b|2\.4|الرياضيين المحترفين|غير ثنائي|Hamwi|micronutrient|macro(?:nutrient)?(?: distribution)?|body composition|diabetes/i,
     message: 'Claims medical, body-composition, or macro-planning behavior that is not present in the current calorie calculator.',

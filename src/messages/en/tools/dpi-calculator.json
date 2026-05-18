@@ -1,16 +1,35 @@
 {
-  "detailed_description": "DPI Calculator helps you determine the print quality of your images or calculate the required resolution for a target DPI. Switch between two modes: calculate DPI from existing image dimensions and print size, or calculate required pixel dimensions for a specific DPI and print size. Essential for photographers, designers, and print professionals.",
+  "detailed_description": "DPI Calculator helps you connect pixel dimensions, print size, and print resolution. In Calculate DPI mode, enter image width and height in pixels plus the intended print width and height in inches to estimate horizontal, vertical, and average DPI. In Calculate Pixels mode, enter a target DPI and print size to estimate the required pixel dimensions and megapixels. Built-in DPI and print-size presets make common checks faster, and the copy button saves the current result text for notes or print planning.",
   "usage_steps": [
-    "Choose calculation mode: DPI or Pixels",
-    "For DPI mode: enter image resolution and print size",
-    "For Pixels mode: enter target DPI and print size",
-    "Select a common print size preset if needed",
-    "View the calculated results",
-    "Copy the results for reference"
+    "Choose Calculate DPI when you already know the image pixel dimensions.",
+    "Enter image width and height in pixels, then enter the print width and height in inches.",
+    "Switch to Calculate Pixels when you need a target resolution for a chosen DPI.",
+    "Use DPI presets such as 72, 150, 200, 300, or 600 when useful.",
+    "Use common print size presets such as 4 x 6, 5 x 7, 8 x 10, A4, Letter, or 18 x 24.",
+    "Copy the calculated DPI or required pixel result."
   ],
   "usage_examples": [
-    "Checking if an image is suitable for printing",
-    "Calculating required resolution for large prints",
-    "Planning photo book image requirements"
+    "Check whether a 3000 x 2000 image is sharp enough for a 10 x 8 inch print.",
+    "Estimate pixel dimensions needed for a 300 DPI poster or flyer.",
+    "Compare the same image across small photo prints and larger display prints.",
+    "Copy a required resolution result before sending specifications to a designer."
+  ],
+  "faqs": [
+    {
+      "question": "Do I need to enter dimensions manually?",
+      "answer": "No. Enter the pixel dimensions manually. The calculator does not load a file or inspect stored camera metadata."
+    },
+    {
+      "question": "Why are horizontal and vertical DPI different?",
+      "answer": "They differ when the image aspect ratio and print size aspect ratio do not match exactly."
+    },
+    {
+      "question": "What does Calculate Pixels do?",
+      "answer": "It multiplies target DPI by print width and height to estimate the pixel dimensions required for that print size."
+    },
+    {
+      "question": "Are the quality labels a print guarantee?",
+      "answer": "No. They are simple DPI bands. Real output also depends on printer, paper, viewing distance, scaling, and image sharpness."
+    }
   ]
 }

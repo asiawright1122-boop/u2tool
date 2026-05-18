@@ -1,15 +1,34 @@
 {
-  "detailed_description": "Roman Numeral Converter translates between Roman numerals (I, V, X, L, C, D, M) and Arabic numbers (1-3999). Perfect for history students, clock makers, and anyone working with Roman numerals.",
+  "detailed_description": "Roman Numeral Converter switches between Arabic numbers and Roman numerals in a simple two-mode interface. Enter a number from 1 to 3999 to produce a standard Roman numeral, or switch modes and enter symbols such as I, V, X, L, C, D, and M to calculate the numeric value. The page includes a reference chart and a copy button for the result. It is useful for dates, outlines, learning exercises, and quick decoding, but it is not a complete grammar checker for every nonstandard Roman numeral style.",
   "usage_steps": [
-    "Select conversion direction",
-    "Enter a Roman numeral or Arabic number",
-    "Click Convert to see the result",
-    "Copy the converted value",
-    "Use the reference chart for help"
+    "Choose Arabic to Roman or Roman to Arabic.",
+    "Enter an Arabic number from 1 to 3999, or enter a Roman numeral using I, V, X, L, C, D, and M.",
+    "Click Convert to update the result field.",
+    "Use the reference chart if you need to check symbol values.",
+    "Copy the converted value when you want to paste it elsewhere."
   ],
   "usage_examples": [
-    "Convert years to Roman numerals",
-    "Decode Roman numerals on clocks",
-    "Learn Roman numeral system"
+    "Convert a year such as 2026 into Roman numerals.",
+    "Decode a Roman numeral from a title page, outline, or inscription.",
+    "Practice the relationship between I, V, X, L, C, D, and M.",
+    "Create a Roman numeral label for a chapter or event."
+  ],
+  "faqs": [
+    {
+      "question": "What number range is supported?",
+      "answer": "Arabic to Roman conversion supports whole numbers from 1 to 3999."
+    },
+    {
+      "question": "Which Roman symbols are recognized?",
+      "answer": "The converter recognizes I, V, X, L, C, D, and M and ignores other characters in Roman-to-Arabic mode."
+    },
+    {
+      "question": "Does it validate strict Roman numeral grammar?",
+      "answer": "No. It calculates values from Roman symbols, but it is not a full grammar checker for every invalid or nonstandard form."
+    },
+    {
+      "question": "Can I copy the result?",
+      "answer": "Yes. Use the Copy button after converting."
+    }
   ]
 }

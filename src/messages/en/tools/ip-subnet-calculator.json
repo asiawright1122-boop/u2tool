@@ -1,15 +1,35 @@
 {
-  "detailed_description": "IP Subnet Calculator helps network administrators calculate subnet information from IP addresses and subnet masks. Get network address, broadcast address, first and last usable hosts, and total usable host count. Essential for network planning and troubleshooting.",
+  "detailed_description": "IP Subnet Calculator calculates IPv4 subnet details from an IP address and subnet mask. Enter an address, choose CIDR or dotted-decimal mask input, and the tool returns the network address, broadcast address, first usable host, last usable host, subnet mask, wildcard mask, CIDR prefix, and usable host count. Common CIDR buttons make frequent masks quick to select. The calculation runs in the browser and is intended for IPv4 planning and checks; it does not contact equipment or verify real-world address usage.",
   "usage_steps": [
-    "Enter an IP address",
-    "Select or enter the subnet mask (CIDR notation supported)",
-    "View calculated network information",
-    "See usable host range and count",
-    "Check wildcard mask for ACL configuration"
+    "Enter an IPv4 address such as 192.168.1.100.",
+    "Choose CIDR or dotted decimal mask input.",
+    "Select a common CIDR button or type the subnet mask manually.",
+    "Click Calculate to generate the subnet details.",
+    "Copy individual values such as network address, broadcast address, or wildcard mask.",
+    "Use the usable host count and host range for planning notes."
   ],
   "usage_examples": [
-    "Plan network subnets",
-    "Calculate usable IP ranges",
-    "Configure network devices"
+    "Find the network and broadcast address for 192.168.1.100/24.",
+    "Convert a dotted decimal mask into the equivalent CIDR prefix.",
+    "Check the usable host range before documenting a small office subnet.",
+    "Copy a wildcard mask for an ACL planning worksheet."
+  ],
+  "faqs": [
+    {
+      "question": "Which address format is supported?",
+      "answer": "No. The current calculator is for IPv4 addresses and masks."
+    },
+    {
+      "question": "Can I use CIDR notation?",
+      "answer": "Yes. Use the CIDR mode and enter a prefix from 0 to 32, or click one of the common CIDR buttons."
+    },
+    {
+      "question": "Does it contact my network?",
+      "answer": "No. It only performs subnet math in the browser. It does not contact hosts, discover equipment, or read router configuration."
+    },
+    {
+      "question": "What is the wildcard mask for?",
+      "answer": "Wildcard masks are often used in access-control and routing configuration notes as the inverse of the subnet mask."
+    }
   ]
 }

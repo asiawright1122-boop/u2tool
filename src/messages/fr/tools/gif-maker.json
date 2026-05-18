@@ -1,17 +1,35 @@
 {
-  "detailed_description": "Le GIF Maker est un outil en ligne dédié à la création d'animations GIF à partir de plusieurs images. Techniquement, l'outil utilise des algorithmes de compression spécifiques au format GIF pour combiner des images statiques en une séquence animée. Les utilisateurs peuvent ajuster des paramètres tels que la vitesse d'animation, la taille du fichier final, et le nombre de frames par seconde (FPS). Cet outil est particulièrement utile pour les développeurs, les designers web, et les créateurs de contenu qui ont besoin de créer des mini-tutoriels, des présentations visuelles, ou des éléments d'interface utilisateur animés. Il permet de convertir des séquences d'images en un format facilement partageable et compatible avec la plupart des navigateurs web. Grâce à son interface intuitive, il est possible de personnaliser l'animation, d'ajouter des filtres, et de prévisualiser le résultat avant de finaliser le fichier GIF.",
+  "detailed_description": "Le GIF Maker crée une animation GIF à partir de deux images ou plus directement dans le navigateur. Ajoutez des images, réorganisez ou supprimez les frames, réglez le délai entre les frames en millisecondes, choisissez la qualité et indiquez si l'animation doit boucler en continu. L'outil centre chaque image sur un canevas basé sur la plus grande image importée, ajoute un fond blanc, affiche un aperçu et permet de télécharger le GIF final. Il convient aux animations rapides à partir d'images; il ne modifie pas les dimensions des frames, n'ajoute pas de texte et ne traite pas les fichiers vidéo.",
   "usage_steps": [
-    "Accédez à la page de l'outil GIF Maker et cliquez sur le bouton 'Charger des images'.",
-    "Sélectionnez plusieurs images à partir de votre appareil ou glissez-les directement dans la zone de chargement.",
-    "Une fois les images chargées, utilisez la barre de défilement pour ajuster la vitesse d'animation (FPS).",
-    "Cliquez sur l'icône 'Filtres' pour appliquer des effets visuels tels que du sépia, noir et blanc, ou du flou.",
-    "Prévisualisez l'animation en cliquant sur le bouton 'Aperçu'.",
-    "Une fois satisfait du résultat, cliquez sur 'Créer GIF' pour générer et télécharger le fichier final."
+    "Cliquez dans la zone de dépôt et sélectionnez au moins deux images.",
+    "Utilisez les flèches de chaque vignette pour modifier l'ordre des frames ou supprimer une image.",
+    "Réglez le délai entre les frames en millisecondes.",
+    "Ajustez le paramètre de qualité selon le compromis souhaité entre netteté et taille de fichier.",
+    "Choisissez si l'animation doit boucler en continu.",
+    "Cliquez sur Créer GIF, vérifiez l'aperçu, puis téléchargez le résultat."
   ],
   "usage_examples": [
-    "Un développeur souhaite créer une courte démonstration animée d'une nouvelle fonctionnalité d'application pour la présenter lors d'une réunion de sprint.",
-    "Un graphiste a besoin de transformer une série de captures d'écran en une animation GIF pour illustrer un guide utilisateur.",
-    "Un créateur de contenu sur les réseaux sociaux veut animer une série de photos prises lors d'un événement pour captiver son public.",
-    "Un enseignant en ligne veut convertir une série de diapositives en une animation GIF pour créer un mini-tutoriel interactif."
+    "Créer une animation avant/après à partir de deux captures d'écran.",
+    "Assembler quelques images de produit dans un aperçu animé.",
+    "Transformer des images exportées d'un tutoriel en courte séquence GIF.",
+    "Préparer une animation simple pour une note, une présentation ou un brouillon de publication."
+  ],
+  "faqs": [
+    {
+      "question": "Combien d'images faut-il?",
+      "answer": "Il faut au moins deux images pour générer une animation GIF."
+    },
+    {
+      "question": "Puis-je changer l'ordre des frames?",
+      "answer": "Oui. Les boutons fléchés sur les vignettes permettent de déplacer une frame plus tôt ou plus tard."
+    },
+    {
+      "question": "Comment les tailles différentes sont-elles gérées?",
+      "answer": "Le canevas utilise la plus grande largeur et hauteur importées, puis centre les images plus petites sur fond blanc."
+    },
+    {
+      "question": "L'outil traite-t-il les fichiers vidéo?",
+      "answer": "Non. Cette page crée des GIF à partir de fichiers image."
+    }
   ]
 }

@@ -1,17 +1,35 @@
 {
-  "detailed_description": "Le Calculateur de Carrelage est un outil mathématique spécialisé permettant de déterminer avec précision le nombre de carreaux nécessaires pour recouvrir des surfaces horizontales ou verticales, en intégrant un coefficient de gaspillage. Il prend en compte les dimensions des espaces, les formats de carreaux (rectangulaire, hexagonal, etc.), et les pertes liées aux découpes. Ce calculateur est indispensable pour les professionnels et bricoleurs confrontés à des problèmes de planification de chantier, évitant sous-achat ou surstockage coûteux. Techniquement, il utilise des algorithmes de partitionnement de surfaces modulaires et des formules d'optimisation matricielle pour calculer la surface totale à couvrir, appliquer le facteur de perte (exprimé en pourcentage), puis déterminer le nombre de carreaux par division entière avec arrondi supérieur. L'outil gère également les configurations complexes comme les surfaces en L, les ouvertures (fenêtres, portes) et les motifs de pose décalés ou en diagonale.",
+  "detailed_description": "Le Calculateur de Carrelage estime le nombre de carreaux nécessaires pour une surface rectangulaire de sol ou de mur. Choisissez les unités métriques ou impériales, saisissez la longueur et la largeur de la pièce, les dimensions du carreau, la largeur du joint, le pourcentage de perte, le motif de pose et, si utile, le nombre de carreaux par boîte. L'outil convertit les mesures dans une même unité, applique un facteur pour une pose droite, diagonale ou en chevrons, ajoute la perte et arrondit au carreau entier supérieur. Il sert à préparer rapidement une commande; il ne soustrait pas automatiquement les meubles, fenêtres, portes ou zones découpées.",
   "usage_steps": [
-    "Sélectionnez le type de surface (sol ou mur) dans le menu déroulant",
-    "Entrez les dimensions en mètres (longueur, largeur, hauteur) ou utilisez l'option 'Surface irrégulière' pour zones polygonales",
-    "Spécifiez les dimensions du carreau (en cm) ou choisissez un format standard (ex: 60x60 cm, 30x45 cm)",
-    "Choisissez le motif de pose : droit, décalé, diagonale 45° ou motif hexagonal",
-    "Ajustez le pourcentage de gaspillage (5-15%) selon la complexité des découpes et l'expérience de l'ouvrier",
-    "Cliquez sur 'Calculer' pour obtenir le résultat avec détails des rangs nécessaires et estimation des joints"
+    "Choisissez métrique ou impérial selon vos mesures.",
+    "Entrez la longueur et la largeur de la zone rectangulaire à carreler.",
+    "Saisissez la longueur et la largeur du carreau, la largeur du joint et le pourcentage de perte.",
+    "Choisissez une pose droite, diagonale ou en chevrons.",
+    "Ajoutez le nombre de carreaux par boîte si vous voulez estimer le nombre de boîtes.",
+    "Consultez la surface, la surface d'un carreau, le nombre de carreaux et les boîtes nécessaires."
   ],
   "usage_examples": [
-    "Calcul d'un mur de salle de bain de 3m x 2.5m avec carreaux 25x40cm, en tenant compte d'une fenêtre de 0.8x0.5m et d'un gaspillage de 12%",
-    "Planification d'un sol de cuisine de 4.2m x 2.8m avec pose en diagonale de carreaux carrés 50x50cm et un coefficient de perte de 10%",
-    "Détermination des carreaux hexagonaux nécessaires pour un dosseret de 1.5m x 0.6m avec joints de 2mm",
-    "Calcul d'un sol commercial de 12m x 8m en format 60x120cm avec motif en chevrons et perte de 8%"
+    "Estimer les carreaux pour un sol de salle de bain rectangulaire.",
+    "Comparer une pose droite et une pose diagonale avant de choisir le pourcentage de perte.",
+    "Calculer le nombre de boîtes quand chaque carton contient un nombre fixe de carreaux.",
+    "Préparer une commande de carreaux avec une marge de perte manuelle."
+  ],
+  "faqs": [
+    {
+      "question": "L'outil gère-t-il les pièces irrégulières?",
+      "answer": "Non. Il utilise une seule longueur et une seule largeur. Divisez une pièce irrégulière en rectangles et additionnez les résultats."
+    },
+    {
+      "question": "Comment le motif change-t-il le résultat?",
+      "answer": "La pose droite utilise le calcul de base, la diagonale ajoute un facteur plus élevé et les chevrons ajoutent le facteur le plus important."
+    },
+    {
+      "question": "Puis-je inclure les joints?",
+      "answer": "Oui. La largeur du joint est saisie en millimètres et incluse dans l'estimation de couverture."
+    },
+    {
+      "question": "Faut-il retirer les zones non carrelées?",
+      "answer": "Oui. Si certaines zones ne doivent pas être carrelées, retirez-les de vos mesures avant de les saisir."
+    }
   ]
 }

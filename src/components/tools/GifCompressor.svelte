@@ -6,6 +6,8 @@
 
   let { locale, translations }: Props = $props();
 
+  import gifWorkerUrl from 'gif.js/dist/gif.worker.js?url';
+
   // Translation helpers
   function t(key: string): string {
     const scope = translations['tools']['gif-compressor'] as Record<string, unknown> || {};
@@ -82,7 +84,7 @@
         quality: colorReduction ? Math.floor(maxColors / 10) : 10,
         width: newWidth,
         height: newHeight,
-        workerScript: '/gif.worker.js',
+        workerScript: gifWorkerUrl,
       });
 
       for (const frame of frames) {

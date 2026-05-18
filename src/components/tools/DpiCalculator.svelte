@@ -42,6 +42,8 @@
 
   let copied = $state(false);
 
+  const DPI_PRESETS = [72, 150, 200, 300, 600];
+
   let dpiResults = $derived.by(() => {
     const pw = parseFloat(pixelWidth) || 0;
     const ph = parseFloat(pixelHeight) || 0;

@@ -6,6 +6,8 @@
 
   let { locale, translations }: Props = $props();
 
+  import gifWorkerUrl from 'gif.js/dist/gif.worker.js?url';
+
   // Translation helpers
   function t(key: string): string {
     const scope = translations['tools']['gif-maker'] as Record<string, unknown> || {};
@@ -101,9 +103,10 @@
       const gif = new GIF({
         workers: 2,
         quality,
+        repeat: loop ? 0 : -1,
         width: maxWidth,
         height: maxHeight,
-        workerScript: '/gif.worker.js',
+        workerScript: gifWorkerUrl,
       });
 
       // Add frames
