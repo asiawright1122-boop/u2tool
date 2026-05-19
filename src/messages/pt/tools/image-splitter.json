@@ -1,17 +1,30 @@
 {
-  "detailed_description": "O Image Splitter é uma ferramenta de processamento de imagens raster que permite dividir uma imagem em uma grade parametrizável de linhas e colunas. O algoritmo calcula automaticamente as dimensões de cada célula com base nas proporções da imagem original, garantindo preservação da taxa de aspecto quando necessário. Técnicas de amostragem bilinear são aplicadas para evitar distorções nos fragmentos gerados. A ferramenta suporta formatos PNG e JPEG, com opção de manter transparência em PNGs. Ideal para desenvolvedores que precisam criar assets para layouts responsivos, designers preparando imagens para impressão em mosaicos ou criando sprites para jogos. Funciona através de uma engine em JavaScript que processa a imagem no navegador, sem enviar dados para servidores, garantindo privacidade. Após upload, o usuário define o número de divisões, ajusta margens opcionais entre peças e seleciona o formato de saída. Cada fragmento é exportado como arquivo individual ou em pacote ZIP.",
+  "detailed_description": "O Image Splitter divide uma imagem carregada no navegador em uma grade simples de linhas e colunas. Voce pode escolher presets como 2x2, 3x3, 4x4, 2x3 e 3x2, ou definir manualmente de 1 a 10 linhas e colunas. A pagina mostra a imagem original com uma sobreposicao de grade, calcula o tamanho aproximado de cada peca e gera partes PNG a partir das areas iguais da imagem. Depois da divisao, cada peca pode ser baixada separadamente, ou todas podem ser reunidas em um arquivo ZIP. O processamento acontece no navegador e e voltado para cortes rapidos de rascunhos, layouts sociais e referencias visuais.",
   "usage_steps": [
-    "1. Clique em 'Selecionar Imagem' para carregar o arquivo raster (PNG/JPEG) até 20MB.",
-    "2. Defina o número de linhas e colunas nos campos numéricos abaixo da pré-visualização.",
-    "3. Ajuste a 'Margem de Corte' em pixels para adicionar espaçamento entre fragmentos.",
-    "4. Escolha o formato de saída no dropdown 'Formato Final' (PNG ou JPEG com qualidade ajustável).",
-    "5. Ative o checkbox 'Manter Transparência' para preservar fundos transparentes em PNGs.",
-    "6. Clique em 'Gerar Fragmentos' e depois em 'Baixar Todos' para obter os arquivos em ZIP."
+    "1. Clique ou arraste uma imagem para a area de upload.",
+    "2. Escolha um preset de grade ou informe manualmente o numero de linhas e colunas.",
+    "3. Confira a sobreposicao de grade e o tamanho estimado de cada peca.",
+    "4. Clique em Dividir para gerar as partes PNG no navegador.",
+    "5. Baixe uma peca individual passando o cursor sobre ela, ou use Baixar Tudo para obter um ZIP."
   ],
   "usage_examples": [
-    "Desenvolvedor criando um layout CSS Grid responsivo com imagens fragmentadas em 3 colunas para otimizar carregamento.",
-    "Designer produzindo sprites de animação para um jogo 2D, dividindo uma imagem em 8 colunas e 4 linhas.",
-    "Fotógrafo preparando um banner para impressão em 4 partes A4, adicionando margens de 10mm para facilitar montagem.",
-    "Criador de conteúdo dividindo um infográfico em 9 quadrantes para postagens sequenciais no Instagram Stories."
+    "Criador de conteudo dividindo uma imagem quadrada em 3x3 para planejar uma grade de publicacoes.",
+    "Designer separando um mockup em quatro partes iguais para revisar detalhes com a equipe.",
+    "Professor preparando partes de uma imagem para uma atividade visual simples em sala.",
+    "Desenvolvedor gerando pecas PNG de referencia para testar um layout de grade."
+  ],
+  "faqs": [
+    {
+      "question": "As partes sao baixadas em qual formato?",
+      "answer": "As partes geradas pela ferramenta sao PNG. Voce pode baixar cada peca separadamente ou todas juntas em um ZIP."
+    },
+    {
+      "question": "Posso definir margens ou sobreposicao entre as pecas?",
+      "answer": "Nao. A versao atual divide a imagem em areas iguais de acordo com as linhas e colunas escolhidas."
+    },
+    {
+      "question": "A imagem e enviada para um servidor?",
+      "answer": "Nao. O upload e lido pelo navegador e a divisao acontece localmente na pagina."
+    }
   ]
 }

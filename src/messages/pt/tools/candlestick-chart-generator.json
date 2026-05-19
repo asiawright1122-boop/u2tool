@@ -1,17 +1,31 @@
 {
-  "detailed_description": "O Candlestick Chart Generator é uma ferramenta técnica especializada para criar gráficos de candlestick interativos a partir de dados OHLC (Open, High, Low, Close). Desenvolvido com a biblioteca ECharts-based browser chart rendering, o tool permite a customização precisa de parâmetros visuais como cores de corpo/volume, escala de tempo (minutos a intervalos diários) e overlays de médias móveis. A funcionalidade de exportação em vetorial SVG preserva a qualidade para análises posteriores, enquanto o PNG otimizado é adequado para relatórios. Usuários precisam deste tool para backtesting de estratégias de trading algorítmico, análise de padrões de reversão de mercado, e visualização de spreads entre ativos. A ferramenta processa dados em formato CSV ou JSON, com suporte a ajustes automáticos de timezone para timestamps UTC. A renderização em tempo real usa WebGL para aceleração de hardware, garantindo performance mesmo com milhares de candles.",
+  "detailed_description": "O Candlestick Chart Generator cria um grafico de velas a partir de linhas OHLC preenchidas manualmente no navegador. Cada linha inclui data, abertura, fechamento, minima e maxima, e voce pode adicionar ou remover pontos conforme revisa uma pequena serie de precos. A pagina permite editar o titulo, escolher as cores de alta e baixa, alternar linhas MA5, MA10 e MA20 calculadas a partir dos fechamentos, usar o controle de zoom do grafico e baixar a visualizacao como PNG ou SVG. A ferramenta e adequada para aulas, exemplos de relatorio, prototipos de dashboard e revisoes visuais simples; ela nao busca cotacoes, nao importa arquivos e nao fornece recomendacoes financeiras.",
   "usage_steps": [
-    "Cole seus dados OHLC no campo 'Importar Dados' no formato CSV com headers 'open,high,low,close,time'",
-    "Ajuste os parâmetros em 'Configurações Técnicas': selecione o período de candle (1m, 5m, 15m...) e ative 'Volume por Preço'",
-    "Personalize a paleta de cores em 'Estilo Visual' usando HEX codes para bullish/bearish e fundo do gráfico",
-    "Use a ferramenta de 'Zoom Dinâmico' para isolar períodos específicos de análise",
-    "Exporte o gráfico como SVG clicando em 'Baixar Vetorial' ou capture PNG com resolução 4K via 'Renderizar Alta Qualidade'",
-    "Copie o código de incorporação HTML para integrar o gráfico interativo em dashboards usando iframe"
+    "Edite o titulo do grafico para identificar a serie que voce esta montando.",
+    "Preencha ou ajuste as linhas com data, abertura, fechamento, minima e maxima.",
+    "Use Adicionar Dados para criar novas linhas ou remova pontos que nao devem aparecer.",
+    "Ative ou desative MA5, MA10 e MA20 conforme a serie tiver dados suficientes.",
+    "Escolha as cores de alta e baixa e use o zoom do grafico para revisar periodos mais densos.",
+    "Baixe o resultado como PNG ou SVG quando a visualizacao estiver pronta."
   ],
   "usage_examples": [
-    "Um day trader analisando padrões de reversão no intraday do BTC-USD com candles de 5 minutos",
-    "Um educador financeiro criando gráficos didáticos com candlestick patterns para um curso de análise técnica",
-    "Um gestor de portfolio comparando a volatilidade de ações Petrobras vs. Vale com candles diários de 3 meses",
-    "Um desenvolvedor integrando gráficos interativos de candlestick em um painel de monitoramento de criptomoedas com ECharts-based browser chart rendering"
+    "Um professor criando uma pequena serie OHLC ficticia para explicar abertura, fechamento, maxima e minima.",
+    "Um analista montando um exemplo visual para um relatorio interno sem conectar dados externos.",
+    "Um desenvolvedor prototipando a aparencia de um grafico financeiro antes de ligar uma fonte propria de dados.",
+    "Um estudante testando como medias moveis simples mudam quando novos fechamentos sao adicionados."
+  ],
+  "faqs": [
+    {
+      "question": "Posso importar dados automaticamente?",
+      "answer": "Nao. A versao atual usa linhas editadas manualmente no navegador; copie os valores relevantes para os campos de data, abertura, fechamento, minima e maxima."
+    },
+    {
+      "question": "O grafico mostra dados financeiros em tempo real?",
+      "answer": "Nao. A pagina nao consulta cotacoes nem conecta fontes externas. Ela apenas desenha os valores que voce informar."
+    },
+    {
+      "question": "Quais formatos posso baixar?",
+      "answer": "Voce pode baixar a visualizacao atual como PNG ou SVG usando os botoes da barra de ferramentas."
+    }
   ]
 }

@@ -1492,6 +1492,20 @@ describe('assessSupportContentTrust', () => {
         faqs: [],
       }),
       assessSupportContentTrust({
+        slug: 'image-splitter',
+        locale: 'pt',
+        name: 'Divisor de Imagens',
+        description: '',
+        detailedDescription:
+          'O Image Splitter divide uma imagem carregada no navegador em uma grade simples de linhas e colunas, gera partes PNG e permite baixar cada peca ou um ZIP.',
+        usageSteps: [
+          'Escolha um preset ou informe linhas e colunas de 1 a 10.',
+          'Clique em Dividir e baixe as partes PNG geradas.',
+        ],
+        usageExamples: ['Dividir uma imagem quadrada em 3x3 para planejar uma grade de publicacoes.'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
         slug: 'hex-base64-converter',
         locale: 'ko',
         name: '16진수 Base64 변환기',
@@ -1517,6 +1531,20 @@ describe('assessSupportContentTrust', () => {
           'Use the zoom slider for dense manual rows.',
         ],
         usageExamples: ['Create a small sample price chart for a finance lesson.'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
+        slug: 'candlestick-chart-generator',
+        locale: 'pt',
+        name: 'Gerador de Graficos de Velas',
+        description: '',
+        detailedDescription:
+          'Monte um grafico de velas com linhas OHLC editadas manualmente, alterne MA5, MA10 e MA20, ajuste cores e baixe PNG ou SVG.',
+        usageSteps: [
+          'Preencha data, abertura, fechamento, minima e maxima.',
+          'Use o controle de zoom para revisar uma serie manual mais densa.',
+        ],
+        usageExamples: ['Criar uma pequena serie OHLC ficticia para uma aula de financas.'],
         faqs: [],
       }),
       assessSupportContentTrust({
