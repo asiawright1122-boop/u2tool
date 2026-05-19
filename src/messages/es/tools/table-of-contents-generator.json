@@ -1,15 +1,34 @@
 {
-  "detailed_description": "El Generador de Tabla de Contenido crea una tabla de contenido navegable a partir de los títulos del documento con enlaces ancla.",
+  "detailed_description": "El generador de tabla de contenido convierte una lista estructurada en formato Titulo | Pagina en un indice legible. Dos espacios al inicio de una linea crean un nivel hijo. Puedes elegir estilo punteado, con linea, simple o numerado, mostrar u ocultar paginas, ajustar la sangria y copiar salida en texto o HTML. La herramienta trabaja con la lista que escribes y no modifica documentos externos.",
   "usage_steps": [
-    "Pegue Markdown/HTML",
-    "Establezca la profundidad del título",
-    "Elija el formato de salida",
-    "Haga clic en Generar",
-    "Copia e inserte"
+    "Escribe una entrada por linea con el formato Titulo | Pagina.",
+    "Agrega dos espacios al inicio para crear un elemento secundario.",
+    "Elige el estilo, los numeros de pagina y la sangria.",
+    "Selecciona salida de texto o HTML.",
+    "Copia la tabla generada en tu documento."
   ],
   "usage_examples": [
-    "Añadir TOC a README",
-    "Crear navegación de documentos",
-    "Generar TOC para publicaciones de blog"
+    "Preparar un indice simple para el esquema de un PDF.",
+    "Crear una estructura de capitulos y subsecciones para material de clase.",
+    "Generar una version sin paginas para una ayuda en linea.",
+    "Copiar una lista HTML desde titulos ya preparados."
+  ],
+  "faqs": [
+    {
+      "question": "Que formato de entrada debo usar?",
+      "answer": "Usa una linea por entrada, por ejemplo Introduccion | 1. Dos espacios al inicio crean un nivel secundario."
+    },
+    {
+      "question": "Puedo ocultar los numeros de pagina?",
+      "answer": "Si. Desactiva la opcion de paginas antes de copiar el resultado."
+    },
+    {
+      "question": "Modifica mi documento original?",
+      "answer": "No. Solo genera un bloque copiable a partir de las lineas que introduces."
+    },
+    {
+      "question": "Se suben los datos?",
+      "answer": "No. El procesamiento se realiza en el navegador."
+    }
   ]
 }

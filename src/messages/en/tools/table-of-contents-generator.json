@@ -1,15 +1,34 @@
 {
-  "detailed_description": "Table of Contents Generator creates navigable TOC from document headings with anchor links.",
+  "detailed_description": "Table of Contents Generator turns a structured Title | Page list into a readable table of contents. Indent a line with two spaces to create a child level, then choose dotted, lined, simple, or numbered styling. You can keep or hide page numbers, adjust indentation, and copy plain text or HTML output. The tool starts from the list you type and does not update source files for you.",
   "usage_steps": [
-    "Paste Markdown/HTML",
-    "Set heading depth",
-    "Choose output format",
-    "Click Generate",
-    "Copy and insert"
+    "Enter one item per line using the Title | Page format.",
+    "Add two leading spaces to create a nested entry.",
+    "Choose the table style and whether page numbers should appear.",
+    "Select plain text or HTML output.",
+    "Copy the generated table of contents into your document."
   ],
   "usage_examples": [
-    "Add TOC to README",
-    "Create doc navigation",
-    "Generate blog post TOC"
+    "Prepare a simple contents page for a PDF outline.",
+    "Create a nested course handout structure from chapter names.",
+    "Generate a text-only contents block without page numbers.",
+    "Copy an HTML list from a prepared set of section titles."
+  ],
+  "faqs": [
+    {
+      "question": "What input format should I use?",
+      "answer": "Use one line per entry, such as Introduction | 1. Add two spaces before a line to make it a child item."
+    },
+    {
+      "question": "Can I hide page numbers?",
+      "answer": "Yes. Turn off the page-number option before copying the result."
+    },
+    {
+      "question": "Does it change my original document?",
+      "answer": "No. It only generates a copyable contents block from the lines you enter."
+    },
+    {
+      "question": "Is the text sent to a server?",
+      "answer": "No. The list parsing and output generation run in your browser."
+    }
   ]
 }

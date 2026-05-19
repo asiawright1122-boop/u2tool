@@ -20693,21 +20693,40 @@
     },
     "table-of-contents-generator": {
       "name": "Générateur de Table des Matières",
-      "description": "Créez une table des matières à partir des titres de votre document",
-      "seo_title": "Générateur gratuit de sommaire en ligne - Simplifiez votre travail !",
-      "seo_description": "Convertissez vos documents en sommaires professionnels en quelques clics avec notre outil en ligne. Facilitez la navigation et améliorez l'expérience utilisateur de votre contenu. Commencez dès maintenant !",
-      "detailed_description": "Le Générateur de Table des Matières crée une table des matières navigable à partir des titres de votre document avec des liens ancre.",
+      "description": "Créez un sommaire texte ou HTML depuis une liste Titre | Page indentée.",
+      "seo_title": "Générateur de sommaire texte et HTML gratuit",
+      "seo_description": "Transformez une liste Titre | Page en table des matières texte ou HTML, avec styles pointillé, ligne, simple ou numéroté et niveaux par indentation.",
+      "detailed_description": "Le générateur de table des matières transforme une liste structurée en sommaire lisible. Chaque ligne suit le format « Titre | Page », et l'indentation avec deux espaces crée les niveaux enfants. Vous pouvez choisir un style pointillé, ligne, simple ou numéroté, activer ou masquer les numéros de page, régler l'indentation et copier une sortie en texte brut ou en HTML. L'outil part de la liste que vous saisissez et ne met pas à jour votre document source ou votre CMS.",
       "usage_steps": [
-        "Coller Markdown/HTML",
-        "Définir la profondeur des titres",
-        "Choisir le format de sortie",
-        "Cliquez sur Générer",
-        "Copier et insérer"
+        "Saisissez une ligne par entrée avec le format Titre | Page.",
+        "Ajoutez deux espaces au début d'une ligne pour créer un niveau enfant.",
+        "Choisissez le style du sommaire: pointillé, ligne, simple ou numéroté.",
+        "Sélectionnez la sortie texte ou HTML et ajustez l'indentation si nécessaire.",
+        "Copiez le résultat généré et collez-le dans votre document."
       ],
       "usage_examples": [
-        "Ajouter une TOC à un README",
-        "Créer une navigation de document",
-        "Générer une table des matières pour un article de blog"
+        "Préparer un sommaire simple pour un guide PDF avant la mise en page.",
+        "Créer une table des matières HTML à partir d'une liste de chapitres déjà préparée.",
+        "Transformer un plan de formation avec sous-sections en sommaire indenté.",
+        "Générer une version sans numéros de page pour une page d'aide en ligne."
+      ],
+      "faqs": [
+        {
+          "question": "Puis-je coller directement un document source complet ?",
+          "answer": "Non. Cette version attend une liste structurée avec une entrée par ligne, par exemple « Introduction | 1 »."
+        },
+        {
+          "question": "Comment créer un sous-niveau ?",
+          "answer": "Ajoutez deux espaces avant la ligne. Quatre espaces créent un niveau encore plus profond."
+        },
+        {
+          "question": "La sortie HTML modifie-t-elle mon document ?",
+          "answer": "Non. Elle génère seulement une structure de sommaire à partir des lignes fournies; vous décidez ensuite où la placer."
+        },
+        {
+          "question": "Les données sont-elles envoyées au serveur ?",
+          "answer": "Non. La génération et la copie du sommaire se font dans le navigateur."
+        }
       ],
       "input": "Entrée",
       "output": "Sortie",

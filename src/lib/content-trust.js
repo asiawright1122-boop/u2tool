@@ -261,6 +261,36 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['anagram-solver'],
   },
   {
+    code: 'sql-injection-tester-unsupported-live-security-claim',
+    pattern: /测试输入|点击测试|快速检测和修复|确保应用安全|发送(?:攻击)?payload|连接数据库/i,
+    message: 'Claims SQL Injection Tester live testing, remediation, payload, or database behavior that is not present in the current static browser-side checker.',
+    slugs: ['sql-injection-tester'],
+  },
+  {
+    code: 'toc-generator-unsupported-document-parser-claim',
+    pattern: /Markdown\/HTML|fichier Markdown|fichier HTML|titres de votre document|liens? ancre|ancres? automatiques|parse(?:s)? headings|anchor links/i,
+    message: 'Claims Table of Contents Generator document parsing or automatic anchor behavior that is not present in the current Title | Page list generator.',
+    slugs: ['table-of-contents-generator'],
+  },
+  {
+    code: 'speech-timer-unsupported-transcript-alert-claim',
+    pattern: /演讲文本|粘贴演讲|字数统计|时间快到|提醒音|播放提醒|保存历史|真实语速/i,
+    message: 'Claims Speech Timer transcript analysis, alerts, history, or real speech-pace detection that is not present in the current timer and estimate UI.',
+    slugs: ['speech-timer'],
+  },
+  {
+    code: 'merge-conflict-resolver-unsupported-visual-diff-claim',
+    pattern: /visual diff|side[- ]by[- ]side|highlighted conflicts|per-conflict|Edit merged result|Compare conflicting changes/i,
+    message: 'Claims Merge Conflict Resolver visual diff, per-conflict choices, or editable merged-result behavior that is not present in the current marker cleaner.',
+    slugs: ['merge-conflict-resolver'],
+  },
+  {
+    code: 'flip-text-unsupported-creative-output-claim',
+    pattern: /創造的|クリエイティブ|様々な効果|SNS投稿を作成/i,
+    message: 'Claims broad creative output for Flip Text instead of the current upside-down, mirror, and reverse text transforms.',
+    slugs: ['flip-text'],
+  },
+  {
     code: 'jwt-signature-verification-claim',
     pattern: /\bvalidate(?:s| the)? token'?s signature\b|\bSignature Verification\b/i,
     message: 'Claims JWT signature verification, but the current decoder only decodes and displays token parts.',

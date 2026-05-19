@@ -1,15 +1,34 @@
 {
-  "detailed_description": "Der Inhaltsverzeichnis-Generator erstellt ein navigierbares Inhaltsverzeichnis aus Dokumentüberschriften mit Ankerlinks.",
+  "detailed_description": "Der Inhaltsverzeichnis-Generator verwandelt eine strukturierte Liste im Format Titel | Seite in ein lesbares Inhaltsverzeichnis. Zwei führende Leerzeichen erzeugen eine untergeordnete Ebene. Sie können punktierte, linierte, einfache oder nummerierte Darstellung wählen, Seitenzahlen ein- oder ausblenden, den Einzug anpassen und Text- oder HTML-Ausgabe kopieren. Das Tool arbeitet nur mit der eingegebenen Liste und ändert keine Quelldatei.",
   "usage_steps": [
-    "Markdown/HTML einfügen",
-    "Überschriften Tiefe einstellen",
-    "Ausgabeformat wählen",
-    "Erstellen klicken",
-    "Kopieren und einfügen"
+    "Geben Sie pro Zeile einen Eintrag im Format Titel | Seite ein.",
+    "Fügen Sie zwei Leerzeichen am Zeilenanfang hinzu, um eine Unterebene zu erstellen.",
+    "Wählen Sie Stil, Seitenzahlen und Einzug.",
+    "Wählen Sie Text- oder HTML-Ausgabe.",
+    "Kopieren Sie das erzeugte Inhaltsverzeichnis in Ihr Dokument."
   ],
   "usage_examples": [
-    "TOC in README hinzufügen",
-    "Dokumentnavigation erstellen",
-    "Blogbeitrag TOC generieren"
+    "Ein einfaches Inhaltsverzeichnis für eine PDF-Gliederung vorbereiten.",
+    "Kapitel und Unterkapitel eines Schulungsdokuments strukturieren.",
+    "Eine Version ohne Seitenzahlen für Online-Hilfen erzeugen.",
+    "Eine HTML-Liste aus vorbereiteten Abschnittstiteln kopieren."
+  ],
+  "faqs": [
+    {
+      "question": "Welches Eingabeformat wird erwartet?",
+      "answer": "Verwenden Sie eine Zeile pro Eintrag, zum Beispiel Einleitung | 1. Zwei führende Leerzeichen erzeugen eine Unterebene."
+    },
+    {
+      "question": "Kann ich Seitenzahlen ausblenden?",
+      "answer": "Ja. Deaktivieren Sie die Seitenzahlen, bevor Sie das Ergebnis kopieren."
+    },
+    {
+      "question": "Ändert das Tool mein Originaldokument?",
+      "answer": "Nein. Es erzeugt nur einen kopierbaren Inhaltsblock aus den eingegebenen Zeilen."
+    },
+    {
+      "question": "Werden die Daten hochgeladen?",
+      "answer": "Nein. Die Verarbeitung läuft im Browser."
+    }
   ]
 }

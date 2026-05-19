@@ -1691,6 +1691,119 @@ describe('assessSupportContentTrust', () => {
     expect(reports.every((report) => report.blockSupportContent === false)).toBe(true);
   });
 
+  it('blocks unsupported claims from the next GSC thin-content recovery batch', () => {
+    const cases = [
+      {
+        slug: 'sql-injection-tester',
+        locale: 'zh',
+        detailedDescription: '使用我们的在线 SQL 注入测试工具，快速检测和修复 SQL 查询漏洞，确保应用安全。',
+        expectedCode: 'sql-injection-tester-unsupported-live-security-claim',
+      },
+      {
+        slug: 'table-of-contents-generator',
+        locale: 'fr',
+        detailedDescription: 'Le générateur lit un fichier Markdown/HTML et crée des liens ancre depuis les titres de votre document.',
+        expectedCode: 'toc-generator-unsupported-document-parser-claim',
+      },
+      {
+        slug: 'speech-timer',
+        locale: 'zh',
+        detailedDescription: '可选输入演讲文本计算字数，时间快到时播放提醒音并保存历史。',
+        expectedCode: 'speech-timer-unsupported-transcript-alert-claim',
+      },
+      {
+        slug: 'merge-conflict-resolver',
+        locale: 'en',
+        detailedDescription: 'Resolve Git merge conflicts visually with side-by-side highlighted conflicts and per-conflict choices.',
+        expectedCode: 'merge-conflict-resolver-unsupported-visual-diff-claim',
+      },
+      {
+        slug: 'flip-text',
+        locale: 'ja',
+        detailedDescription: 'テキストを創造的に変換し、SNS投稿を作成します。',
+        expectedCode: 'flip-text-unsupported-creative-output-claim',
+      },
+    ];
+
+    for (const testCase of cases) {
+      const report = assessSupportContentTrust({
+        slug: testCase.slug,
+        locale: testCase.locale,
+        name: testCase.slug,
+        description: '',
+        detailedDescription: testCase.detailedDescription,
+        usageSteps: [],
+        usageExamples: [],
+        faqs: [],
+      });
+
+      expect(report.blockSupportContent).toBe(true);
+      expect(report.issues.map((issue) => issue.code)).toContain(testCase.expectedCode);
+    }
+  });
+
+  it('keeps accurate support copy for the next GSC thin-content recovery batch visible', () => {
+    const reports = [
+      assessSupportContentTrust({
+        slug: 'sql-injection-tester',
+        locale: 'zh',
+        name: 'SQL注入测试工具',
+        description: '',
+        detailedDescription:
+          'SQL 注入测试工具会在浏览器中静态扫描粘贴的 SQL 或后端代码片段，提示模板字符串插值、字符串拼接和请求参数风险。',
+        usageSteps: ['粘贴包含 SQL 查询或数据库调用的代码片段。', '查看安全分数和修复方向。'],
+        usageExamples: ['检查 Node.js 代码中是否把 req.query 直接拼进 SQL 字符串。'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
+        slug: 'table-of-contents-generator',
+        locale: 'fr',
+        name: 'Générateur de Table des Matières',
+        description: '',
+        detailedDescription:
+          'Le générateur de table des matières transforme une liste structurée au format Titre | Page en sommaire texte ou HTML.',
+        usageSteps: ['Saisissez une ligne par entrée.', 'Copiez le résultat généré.'],
+        usageExamples: ['Préparer un sommaire simple pour un guide PDF.'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
+        slug: 'speech-timer',
+        locale: 'zh',
+        name: '演讲计时器',
+        description: '',
+        detailedDescription:
+          '演讲计时器用于练习演讲时长，显示已用时间、剩余时间、进度条颜色以及按当前用时估算的已说字数。',
+        usageSteps: ['输入目标演讲时长。', '点击开始计时。'],
+        usageExamples: ['练习 5 分钟课堂展示。'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
+        slug: 'merge-conflict-resolver',
+        locale: 'en',
+        name: 'Merge Conflict Resolver',
+        description: '',
+        detailedDescription:
+          'Merge Conflict Resolver removes Git conflict markers by keeping the current chunk, incoming chunk, or both chunks in order.',
+        usageSteps: ['Paste file content that contains Git conflict markers.', 'Choose Use current, Use incoming, or Keep both.'],
+        usageExamples: ['Remove conflict markers from a small README conflict.'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
+        slug: 'flip-text',
+        locale: 'ja',
+        name: 'テキスト反転',
+        description: '',
+        detailedDescription:
+          'テキスト反転ツールは、入力した文字列から上下逆さま、ミラー、逆順の3つの結果をブラウザ内で生成します。',
+        usageSteps: ['入力欄に変換したい短いテキストを入力します。', '必要な結果のコピー ボタンを押します。'],
+        usageExamples: ['短い見出しを上下逆さまの Unicode 文字に変換する。'],
+        faqs: [],
+      }),
+    ];
+
+    expect(reports.every((report) => report.blockSupportContent === false)).toBe(true);
+  });
+
   it('blocks Calendar Availability external sync and date-range claims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'calendar-availability-finder',
