@@ -527,6 +527,27 @@ const longTailToolSupportDepthChecks: RenderedSeoCheck[] = [
     ],
     bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
   },
+  {
+    name: 'TypeScript to JSON sample-data recovery content',
+    path: '/en/tools/typescript-to-json/',
+    titleIncludes: 'TypeScript to JSON',
+    descriptionIncludes: 'sample JSON',
+    h1Includes: 'TypeScript to JSON',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'sample JSON data',
+      'lightweight browser parser',
+      'Copy the JSON output',
+    ],
+    bodyMustNotInclude: [
+      'JSON Schema document',
+      'not a JSON Schema generator',
+      'TypeScript compiler',
+      'download files',
+      'download the result',
+    ],
+  },
 ];
 
 const visibleLocalizedCtrRecoveryChecks: RenderedSeoCheck[] = [
@@ -1010,6 +1031,80 @@ const visibleLocalizedCtrRecoveryChecks: RenderedSeoCheck[] = [
     sourceRenderedOnly: true,
     bodyMustInclude: ['浏览器的 XML 解析能力'],
     bodyMustNotInclude: ['DTD', 'XSD', 'SAX流式校验'],
+  },
+  {
+    name: 'Russian Image Splitter recovery content',
+    path: '/ru/tools/image-splitter/',
+    titleIncludes: 'разделения изображений',
+    descriptionIncludes: 'PNG',
+    h1Includes: 'Разделитель',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      '2×2, 3×3, 4×4',
+      'от 1 до 10',
+      'ZIP-архив',
+    ],
+    bodyMustNotInclude: [
+      'EXIF/IPTC',
+      'JPEG/BMP',
+      'exact/fill/contain',
+      'серверную',
+    ],
+  },
+  {
+    name: 'Portuguese Tile Calculator recovery content',
+    path: '/pt/tools/tile-calculator/',
+    titleIncludes: 'Azulejos',
+    descriptionIncludes: 'azulejos',
+    h1Includes: 'Azulejos',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'reto, diagonal ou espinha de peixe',
+      'peças por caixa',
+      'não subtrai',
+    ],
+    bodyMustNotInclude: [
+      'Exportar Relatório',
+      'múltiplas zonas',
+      'otimização de layout',
+    ],
+  },
+  {
+    name: 'Russian Screen Recorder recovery content',
+    path: '/ru/tools/screen-recorder/',
+    titleIncludes: 'запись',
+    descriptionIncludes: 'экран',
+    h1Includes: 'Запись',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'разрешение браузера',
+      'Пауза',
+      'WebM',
+      'getDisplayMedia',
+    ],
+    bodyMustNotInclude: [
+      'MP4 или GIF',
+      'в облако',
+      'веб-камеру',
+    ],
+  },
+  {
+    name: 'Spanish Text Repeater recovery content',
+    path: '/es/tools/text-repeater/',
+    titleIncludes: 'Repetidor',
+    descriptionIncludes: 'texto',
+    h1Includes: 'Repetidor',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      '1 y 1000',
+      'nueva línea, espacio, coma',
+      'repeated-text.txt',
+    ],
+    bodyMustNotInclude: ['JSON, Base64 y SVG'],
   },
 ];
 

@@ -321,6 +321,12 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['typescript-playground'],
   },
   {
+    code: 'typescript-json-unsupported-schema-compiler-claim',
+    pattern: /\bJSON Schema\b|\bJSON-Schema\b|JSON[-\s]?схем|مخطط JSON|JSON\s*スキーマ|JSON\s*模式|schema options|validation schemas|cross-language validation|TypeScript compiler|compile(?:s|d)? TypeScript|complex generics|generic validation|download(?: the)? result|download files?|скач(?:айте|ать|ивает)|параметр[а-яё\s]+схем|схем[аы]\s+валидац|межъязыков[а-яё\s]+валидац|خيارات المخطط|مخططات التحقق|التحقق عبر اللغات|حمل النتيجة/i,
+    message: 'Claims JSON-schema, compiler, advanced validation, or file-download behavior that is not present in the current TypeScript-to-JSON sample-data tool.',
+    slugs: ['typescript-to-json'],
+  },
+  {
     code: 'financial-forecast-unsupported-cashflow-investor-claim',
     pattern: /Project cash flow|Create investor projections|investor projections|seasonalAdjustment|seasonal adjustment|Monte Carlo|valuation model|accounting software/i,
     message: 'Claims cash-flow, investor, seasonal, valuation, or accounting behavior that is not present in the current revenue/expense/profit forecast calculator.',
@@ -394,7 +400,7 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
   },
   {
     code: 'tile-calculator-unsupported-layout-claim',
-    pattern: /Obstruction Adjustment|asymmetric layout adjustments|protrusions or recesses|subtract fixed elements|tile shape|hexagonal|substrate irregularity|dry vs\. wet areas|waterproof membranes|floor heating pipes|pattern-specific waste calculation/i,
+    pattern: /Obstruction Adjustment|asymmetric layout adjustments|protrusions or recesses|subtract fixed elements|tile shape|hexagonal|substrate irregularity|dry vs\. wet areas|waterproof membranes|floor heating pipes|pattern-specific waste calculation|Exportar Relat[oó]rio|m[uú]ltiplas zonas|otimiza[cç][aã]o de layout/i,
     message: 'Claims tile layout, obstruction, shape, substrate, or wet-area controls that are not present in the current rectangular tile calculator.',
     slugs: ['tile-calculator'],
   },
@@ -490,7 +496,7 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
   },
   {
     code: 'screen-recorder-unsupported-output-claim',
-    pattern: /\bMP4\b|\bGIF\b|\bcloud upload\b|\buploads? recordings? to\b|\bwebcam overlay\b|\btrim(?:ming)?\b|\bvideo editor\b|\bscheduled recording\b|subir a la nube|recortar|superposici[oó]n de webcam/i,
+    pattern: /\bMP4\b|\bGIF\b|\bcloud upload\b|\buploads? recordings? to\b|\bwebcam overlay\b|\btrim(?:ming)?\b|\bvideo editor\b|\bscheduled recording\b|subir a la nube|recortar|superposici[oó]n de webcam|облако|веб-камер|обрез(?:ать|ка|ает)|расписани/i,
     message: 'Claims screen recorder output, upload, overlay, editing, or scheduling features that are not present in the current browser recorder.',
     slugs: ['screen-recorder'],
   },

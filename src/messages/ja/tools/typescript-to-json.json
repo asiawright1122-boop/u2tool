@@ -1,15 +1,34 @@
 {
-  "detailed_description": "TypeScript to JSONコンバーターはTypeScriptインターフェースと型をJSONスキーマ形式に変換します。APIドキュメントと言語間検証に便利です。",
+  "detailed_description": "TypeScript to JSONは、シンプルなTypeScript interfaceまたはtypeオブジェクトからブラウザ内でサンプルJSONデータを生成します。コードを貼り付けて変換すると、string、number、boolean、Date、配列、文字列リテラル、数値リテラル、any、unknown、null、undefinedなどにプレースホルダー値を入れます。任意プロパティは省略されることがあり、ユニオン型は軽量パーサーが読める最初の非null型を使います。API例、mock payload、ドキュメント下書き、テストfixtureのたたき台に便利です。サンプルデータと単純な構造向けの補助ツールなので、高度な型解析やファイル保存はエディタまたはビルド環境で行ってください。",
   "usage_steps": [
-    "TypeScriptインターフェースを貼り付け",
-    "変換をクリックしてJSONを生成",
-    "JSONスキーマを確認",
-    "スキーマオプションを調整",
-    "結果をコピーまたはダウンロード"
+    "小さなTypeScript interfaceまたはtypeオブジェクトを入力欄に貼り付けます。",
+    "対応する形を確認したい場合は、サンプルを読み込みます。",
+    "JSONに変換をクリックしてサンプルJSONを生成します。",
+    "sample string、42、true、配列、ISO日付などの値を確認します。",
+    "JSON出力をコピーし、実際のAPIやテスト用に手で調整します。"
   ],
   "usage_examples": [
-    "APIドキュメントの生成",
-    "検証スキーマの作成",
-    "言語間での型共有"
+    "User interfaceからAPIドキュメント用のmock responseを作る。",
+    "フロントエンド統合テスト前に小さなfixtureオブジェクトを作る。",
+    "正式な契約を固める前に、チームへJSON payload例を共有する。",
+    "任意項目やユニオン型の近似結果を確認してから手で修正する。"
+  ],
+  "faqs": [
+    {
+      "question": "検証用の契約を作成しますか？",
+      "answer": "いいえ。現在のページは、短い例やmock payload向けのサンプルJSONデータを生成します。"
+    },
+    {
+      "question": "TypeScriptの完全な型解析を行いますか？",
+      "answer": "いいえ。シンプルなinterfaceとtypeオブジェクト向けの軽量なブラウザ内パーサーを使います。"
+    },
+    {
+      "question": "複雑なTypeScript型に対応していますか？",
+      "answer": "一部のみです。基本型、配列、リテラル、ユニオン、Date、any、unknownは扱えますが、複雑なジェネリックやmapped typeは手作業で調整してください。"
+    },
+    {
+      "question": "ページからファイルとして保存できますか？",
+      "answer": "このページはコピー可能な出力に集中しています。必要な場合はコピーして、自分のエディタで保存してください。"
+    }
   ]
 }

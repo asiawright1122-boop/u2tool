@@ -1,15 +1,34 @@
 {
-  "detailed_description": "TypeScript to JSON Converter transforms TypeScript interfaces and types into JSON schema format. Useful for API documentation and cross-language validation.",
+  "detailed_description": "TypeScript to JSON creates sample JSON data from a simple TypeScript interface or type literal in the browser. Paste an interface, click Convert to JSON, and the page fills a JSON object with placeholder values for common types such as string, number, boolean, Date, arrays, string literals, number literals, any, unknown, null, and undefined. Optional properties may be skipped, and union types use the first non-null option the simple parser can read. This is useful for quick API examples, mock payloads, docs drafts, and fixture sketches. It is a sample-data helper for straightforward shapes, so advanced type analysis and file saving should be handled in your editor or build tooling.",
   "usage_steps": [
-    "Paste TypeScript interface",
-    "Click Convert to generate JSON",
-    "Review the JSON schema",
-    "Adjust schema options",
-    "Copy or download the result"
+    "Paste a small TypeScript interface or type with object properties into the input box.",
+    "Use Load Example if you want to see the supported shape before editing.",
+    "Click Convert to JSON to generate sample JSON output.",
+    "Review placeholder values such as sample string, 42, true, arrays, and ISO dates.",
+    "Copy the JSON output and adjust it manually for your real API or test case."
   ],
   "usage_examples": [
-    "Generate API documentation",
-    "Create validation schemas",
-    "Share types across languages"
+    "Turn a User interface into a quick mock response for API documentation.",
+    "Create a small fixture object before writing frontend integration tests.",
+    "Share an example JSON payload with a teammate before formalizing a contract.",
+    "Check how optional or union fields are approximated before editing the sample by hand."
+  ],
+  "faqs": [
+    {
+      "question": "Does this create a validation contract?",
+      "answer": "No. The current page creates sample JSON data for quick examples and mock payloads."
+    },
+    {
+      "question": "Does it run full TypeScript analysis?",
+      "answer": "No. It uses a lightweight browser parser for simple interface and type-object shapes."
+    },
+    {
+      "question": "Can it handle nested or advanced TypeScript types?",
+      "answer": "Only partially. Simple arrays, literals, unions, primitives, Date, any, and unknown are supported; advanced generics and mapped types should be handled manually."
+    },
+    {
+      "question": "Can I save the result as a file from this page?",
+      "answer": "The page focuses on copyable output. Use the copy button, then save the JSON in your editor if you need a file."
+    }
   ]
 }

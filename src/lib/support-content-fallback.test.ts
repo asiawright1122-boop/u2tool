@@ -1199,6 +1199,49 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks TypeScript to JSON schema, compiler, and file-output claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'typescript-to-json',
+      locale: 'en',
+      name: 'TypeScript to JSON',
+      description: '',
+      detailedDescription:
+        'Convert TypeScript interfaces into JSON Schema with TypeScript compiler support.',
+      usageSteps: ['Adjust schema options and download the result.'],
+      usageExamples: ['Create validation schemas for cross-language validation.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'typescript-json-unsupported-schema-compiler-claim'
+    );
+  });
+
+  it('keeps accurate TypeScript to JSON sample-data copy visible', () => {
+    const report = assessSupportContentTrust({
+      slug: 'typescript-to-json',
+      locale: 'en',
+      name: 'TypeScript to JSON',
+      description: '',
+      detailedDescription:
+        'TypeScript to JSON creates sample JSON data from a simple TypeScript interface or type literal in the browser.',
+      usageSteps: [
+        'Paste a small interface or type with object properties into the input box.',
+        'Copy the JSON output and adjust it manually for your real API or test case.',
+      ],
+      usageExamples: ['Turn a User interface into a quick mock response for API documentation.'],
+      faqs: [
+        {
+          question: 'Does this create a validation contract?',
+          answer: 'No. The current page creates sample JSON data for quick examples and mock payloads.',
+        },
+      ],
+    });
+
+    expect(report.blockSupportContent).toBe(false);
+  });
+
   it('blocks Financial Forecast cash-flow and investor claims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'financial-forecast-calculator',
@@ -1295,6 +1338,69 @@ describe('assessSupportContentTrust', () => {
     });
 
     expect(report.blockSupportContent).toBe(false);
+  });
+
+  it('keeps current multilingual recovery copy aligned with implemented tool behavior', () => {
+    const reports = [
+      assessSupportContentTrust({
+        slug: 'image-splitter',
+        locale: 'ru',
+        name: 'Image Splitter',
+        description: '',
+        detailedDescription:
+          'Image Splitter разделяет выбранное изображение на равные PNG-фрагменты прямо в браузере с пресетами 2×2, 3×3, 4×4, 2×3 и 3×2.',
+        usageSteps: [
+          'Задайте строки и столбцы вручную от 1 до 10.',
+          'Скачайте отдельную часть или всю сетку ZIP-архивом.',
+        ],
+        usageExamples: ['Разделить квадратное изображение на сетку 3×3 для черновика постов.'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
+        slug: 'tile-calculator',
+        locale: 'pt',
+        name: 'Calculadora de Azulejos',
+        description: '',
+        detailedDescription:
+          'A Calculadora de Azulejos estima uma área retangular com padrão reto, diagonal e espinha de peixe; não subtrai armários, portas ou obstáculos.',
+        usageSteps: [
+          'Digite comprimento e largura do cômodo.',
+          'Preencha peças por caixa se quiser calcular caixas necessárias.',
+        ],
+        usageExamples: ['Comparar o impacto de padrão reto e diagonal antes de comprar material.'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
+        slug: 'screen-recorder',
+        locale: 'ru',
+        name: 'Запись экрана',
+        description: '',
+        detailedDescription:
+          'Запись экрана использует разрешение браузера, getDisplayMedia, кнопки Пауза, Продолжить и Остановить, а результат сохраняется как WebM.',
+        usageSteps: [
+          'Выберите экран, окно или вкладку в системном окне браузера.',
+          'Проверьте видеопредпросмотр и скачайте WebM-файл.',
+        ],
+        usageExamples: ['Записать короткий walkthrough продукта из вкладки браузера.'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
+        slug: 'text-repeater',
+        locale: 'es',
+        name: 'Repetidor de Texto',
+        description: '',
+        detailedDescription:
+          'El Repetidor de Texto permite repetir texto entre 1 y 1000 veces con separadores de nueva línea, espacio, coma, punto y coma, tabulación o ninguno.',
+        usageSteps: [
+          'Activa Agregar numeración si cada repetición debe llevar un índice.',
+          'Copia el resultado o descárgalo como repeated-text.txt.',
+        ],
+        usageExamples: ['Crear 50 líneas iguales para probar un área de texto.'],
+        faqs: [],
+      }),
+    ];
+
+    expect(reports.every((report) => report.blockSupportContent === false)).toBe(true);
   });
 
   it('blocks Calendar Availability external sync and date-range claims that are not implemented', () => {

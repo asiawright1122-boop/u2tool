@@ -1,17 +1,35 @@
 {
-  "detailed_description": "O Tile Calculator é uma ferramenta matemática especializada que realiza cálculos precisos para determinar a quantidade exata de revestimentos cerâmicos ou porcelanatos necessários em projetos de pisos e paredes. Além de calcular a área total dividida pelo tamanho individual de cada peça, o algoritmo incorpora um fator de perda ajustável (geralmente entre 5% e 15%) que considera cortes irregulares, sobreposição em bordas e possíveis erros durante a instalação. A ferramenta também diferencia entre padrões de assentamento retilíneo ou diagonal, que impactam diretamente no número de peças requeridas devido à geometria dos cortes. Desenvolvida para profissionais de arquitetura e construção civil, permite calcular múltiplas zonas com dimensões variáveis simultaneamente, ideal para ambientes com diferentes níveis de complexidade. Sua engine matemática utiliza fórmulas de otimização de layout que minimizam desperdícios, crucial para orçamentos de obras comerciais onde precisão é essencial.",
+  "detailed_description": "A Calculadora de Azulejos estima quantas peças são necessárias para uma área retangular usando os campos visíveis da página. Informe comprimento e largura do cômodo, comprimento e largura do azulejo, largura da junta, percentual de desperdício e, se quiser, a quantidade de peças por caixa. A ferramenta alterna entre unidades métricas e imperiais, aplica um fator fixo para padrão reto, diagonal ou espinha de peixe, e mostra área do cômodo, área da peça, total de azulejos e caixas necessárias quando esse campo foi preenchido. Ela é uma calculadora de planejamento simples: não subtrai armários, portas ou obstáculos, trabalha com uma área retangular por vez, não desenha cortes reais e não substitui a medição de obra.",
   "usage_steps": [
-    "Insira as dimensões do ambiente em metros (comprimento e largura) nos campos específicos para área de piso ou altura/largura para paredes.",
-    "Selecione o formato e tamanho das peças (ex: 60x60cm, 30x45cm) no menu dropdown de especificações técnicas.",
-    "Escolha o padrão de assentamento desejado: retilíneo ou diagonal, considerando o impacto no cálculo de sobreposição.",
-    "Ajuste o fator de perda com base na complexidade do projeto usando o controle deslizante (recomenda-se 7-10% para layouts simples e 12-15% para geometrias irregulares).",
-    "Clique em 'Calcular' para obter o número total de peças necessárias e metros quadrados líquidos e brutos.",
-    "Utilize a opção 'Exportar Relatório' para gerar uma planilha com detalhes de cada zona calculada e recomendações de estoque adicional."
+    "Escolha unidade métrica ou imperial conforme as medidas que você tem.",
+    "Selecione o padrão reto, diagonal ou espinha de peixe.",
+    "Digite comprimento e largura do cômodo.",
+    "Digite comprimento e largura do azulejo, além da largura da junta.",
+    "Ajuste o percentual de desperdício e preencha peças por caixa se quiser calcular caixas.",
+    "Revise os cartões de resultado para área, quantidade de peças e caixas necessárias."
   ],
   "usage_examples": [
-    "Determinar quantidade de porcelanato 80x80cm para um banheiro de 3,2m x 1,8m com layout diagonal e 12% de perda para corte em volta do vaso sanitário.",
-    "Calcular azulejos 15x30cm para uma cozinha americana com ilha central, considerando paredes de diferentes alturas e necessidade de recortes em torno de tomadas.",
-    "Planejar revestimento de parede de destaque em sala com layout xadrez combinando peças de 40x40cm e 20x20cm, gerando relatório de proporção de materiais.",
-    "Otimizar compra de pastilhas de vidro para piscina com dimensões irregulares, aplicando fator de perda de 15% devido à necessidade de cortes curvos e sobreposição em ralos."
+    "Estimar azulejos para um banheiro retangular usando medidas em metros e peças em centímetros.",
+    "Comparar o impacto de padrão reto e diagonal antes de comprar material.",
+    "Calcular quantas caixas comprar quando cada caixa informa uma quantidade fixa de peças.",
+    "Adicionar 10% ou 15% de desperdício para uma estimativa inicial antes de validar com o instalador."
+  ],
+  "faqs": [
+    {
+      "question": "A calculadora subtrai portas, armários ou obstáculos?",
+      "answer": "Não. Ela calcula uma área retangular simples a partir de comprimento e largura."
+    },
+    {
+      "question": "Quais padrões estão disponíveis?",
+      "answer": "A interface atual oferece reto, diagonal e espinha de peixe, com fatores fixos aplicados ao total."
+    },
+    {
+      "question": "Posso calcular caixas?",
+      "answer": "Sim. Preencha o campo peças por caixa para ver o número de caixas necessárias."
+    },
+    {
+      "question": "Isto substitui uma medição profissional?",
+      "answer": "Não. Use o resultado como estimativa inicial e confirme medidas, cortes e perdas no local."
+    }
   ]
 }

@@ -1,17 +1,34 @@
 {
-  "detailed_description": "...",
+  "detailed_description": "TypeScript to JSON crée des données JSON d'exemple à partir d'une interface ou d'un type simple directement dans le navigateur. Collez le code, cliquez sur Convertir en JSON, et la page remplit un objet avec des valeurs d'exemple pour les types courants comme string, number, boolean, Date, les tableaux, les littéraux texte, les littéraux numériques, any, unknown, null et undefined. Les propriétés optionnelles peuvent être omises, et les unions utilisent la première option non nulle que le petit analyseur peut lire. C'est utile pour des exemples d'API rapides, des mock payloads, des brouillons de documentation et des fixtures de test. C'est une aide pour données d'exemple et structures simples; l'analyse avancée des types et l'enregistrement en fichier doivent se faire dans votre éditeur ou votre chaîne de build.",
   "usage_steps": [
-    "Étape 1...",
-    "Étape 2...",
-    "Étape 3...",
-    "Étape 4...",
-    "Étape 5...",
-    "Étape 6..."
+    "Collez une petite interface ou un type avec des propriétés d'objet dans le champ d'entrée.",
+    "Utilisez Charger un exemple si vous voulez voir d'abord la forme acceptée.",
+    "Cliquez sur Convertir en JSON pour créer une sortie JSON d'exemple.",
+    "Vérifiez les valeurs comme sample string, 42, true, les tableaux et les dates ISO.",
+    "Copiez la sortie JSON et ajustez-la manuellement pour votre API ou votre cas de test."
   ],
   "usage_examples": [
-    "Exemple 1...",
-    "Exemple 2...",
-    "Exemple 3...",
-    "Exemple 4..."
+    "Transformer une interface User en réponse mock pour une documentation d'API.",
+    "Créer un petit objet fixture avant d'écrire des tests d'intégration frontend.",
+    "Partager un payload JSON d'exemple avec l'équipe avant de figer le contrat formel.",
+    "Voir comment les champs optionnels ou les unions sont approximés avant de corriger l'exemple à la main."
+  ],
+  "faqs": [
+    {
+      "question": "Crée-t-il un contrat de validation?",
+      "answer": "Non. La page crée des données JSON d'exemple pour des exemples rapides et des mock payloads."
+    },
+    {
+      "question": "Fait-il une analyse complète de TypeScript?",
+      "answer": "Non. Elle utilise un analyseur léger dans le navigateur pour les interfaces et types d'objet simples."
+    },
+    {
+      "question": "Peut-il gérer des types TypeScript complexes?",
+      "answer": "Partiellement seulement. Les types de base, tableaux, littéraux, unions simples, Date, any et unknown conviennent mieux; les génériques avancés demandent un ajustement manuel."
+    },
+    {
+      "question": "Puis-je enregistrer le résultat comme fichier depuis la page?",
+      "answer": "La page privilégie une sortie copiable. Utilisez le bouton de copie puis enregistrez le JSON dans votre éditeur si vous avez besoin d'un fichier."
+    }
   ]
 }

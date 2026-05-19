@@ -1,15 +1,34 @@
 {
-  "detailed_description": "El repetidor de texto duplica tu texto tantas veces como necesites. Elige entre varios separadores y opcionalmente agrega numeración.",
+  "detailed_description": "El Repetidor de Texto repite el texto que escribes directamente en el navegador. Puedes elegir un número de repeticiones entre 1 y 1000, seleccionar separador de nueva línea, espacio, coma, punto y coma, tabulación o ninguno, y activar numeración automática con el formato 1., 2., 3. La página también incluye accesos rápidos para ×5, ×10, ×25, ×50 y ×100, muestra el conteo de caracteres y líneas, permite copiar el resultado o descargarlo como repeated-text.txt. Es útil para datos de prueba, listas repetidas, patrones de texto y borradores de contenido. No genera valores aleatorios, no aplica plantillas con variables y no convierte el texto a otros formatos.",
   "usage_steps": [
-    "Ingresa texto a repetir",
-    "Establece el número de repeticiones",
-    "Elige tipo de separador",
-    "Opcionalmente agrega numeración",
-    "Copia o descarga el resultado"
+    "Escribe o pega el texto que quieres repetir.",
+    "Define el número de repeticiones o usa uno de los botones rápidos.",
+    "Elige el separador: nueva línea, espacio, coma, punto y coma, tabulación o ninguno.",
+    "Activa Agregar numeración si cada repetición debe llevar un índice.",
+    "Revisa caracteres y líneas, luego copia el resultado o descarga el archivo TXT."
   ],
   "usage_examples": [
-    "Crear datos de prueba",
-    "Llenar contenido de marcador",
-    "Generar patrones"
+    "Crear 50 líneas iguales para probar un área de texto.",
+    "Repetir una palabra con separador de coma para una lista temporal.",
+    "Generar frases numeradas para un borrador o una prueba visual.",
+    "Descargar un archivo TXT con texto repetido para una fixture manual."
+  ],
+  "faqs": [
+    {
+      "question": "Cuál es el límite de repeticiones?",
+      "answer": "El campo acepta valores entre 1 y 1000."
+    },
+    {
+      "question": "Qué separadores puedo usar?",
+      "answer": "Nueva línea, espacio, coma, punto y coma, tabulación o ningún separador."
+    },
+    {
+      "question": "Puedo numerar cada línea?",
+      "answer": "Sí. La opción Agregar numeración antepone 1., 2., 3. y así sucesivamente."
+    },
+    {
+      "question": "El resultado se puede descargar?",
+      "answer": "Sí. El botón Descargar guarda el resultado como repeated-text.txt."
+    }
   ]
 }
