@@ -196,9 +196,33 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
   },
   {
     code: 'html-table-unsupported-editor-export-claim',
-    pattern: /드래그|재정렬|CSS 클래스|인라인 스타일|셀 병합|콜럼 그룹|다운로드|반응형|브레이크포인트/i,
+    pattern: /드래그|재정렬|CSS 클래스|인라인 스타일|셀 병합|콜럼 그룹|다운로드|반응형|브레이크포인트|пользовательских CSS-классов|инлайновых стилей|кастомных данных-атрибутов|атрибут(?:ов|ы) colspan\/rowspan|контекстное меню|панель форматирования|формате HTML или JSON|минификац/i,
     message: 'Claims HTML table drag/drop, styling, merge, colgroup/ARIA, download, or responsive-test controls that are not present in the current basic table-code UI.',
     slugs: ['html-table-generator'],
+  },
+  {
+    code: 'go-formatter-unsupported-gofmt-import-claim',
+    pattern: /official gofmt|goimports|automatically organize imports|organizes imports|organises imports|sorts imports|compile code validation|compiles Go code|AST-based formatting/i,
+    message: 'Claims official gofmt/goimports, import organization, compilation, or project-grade formatting that is not present in the current lightweight browser formatter.',
+    slugs: ['go-formatter'],
+  },
+  {
+    code: 'wave-generator-unsupported-animation-responsive-claim',
+    pattern: /animation controls?|animated SVG waves?|responsive breakpoint presets?|breakpoint presets?|CSS keyframes/i,
+    message: 'Claims wave animation or responsive-breakpoint tooling that is not present in the current static SVG wave generator.',
+    slugs: ['wave-generator'],
+  },
+  {
+    code: 'countdown-timer-unsupported-preset-claim',
+    pattern: /15 minutes?, 30 minutes? and 1 hour|15\s*мин(?:ут[аы]?)?,\s*30\s*мин(?:ут[аы]?)?\s*и\s*1\s*час|предустановлен[а-яё ]{0,80}(?:15\s*мин|30\s*мин|1\s*час)/i,
+    message: 'Claims countdown timer presets beyond the current 1, 5, 10, and 25 minute buttons.',
+    slugs: ['countdown-timer'],
+  },
+  {
+    code: 'polar-bar-unsupported-live-import-claim',
+    pattern: /CSV import|JSON import|paste a TSV\/CSV|upload data|API feed|real-time data|supports live data/i,
+    message: 'Claims live data, upload, or CSV/JSON import features that are not present in the current manual polar bar chart editor.',
+    slugs: ['polar-bar-chart-generator'],
   },
   {
     code: 'love-calculator-unsupported-algorithm-social-claim',

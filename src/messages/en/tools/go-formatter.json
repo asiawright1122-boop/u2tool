@@ -1,12 +1,30 @@
 {
-  "detailed_description": "Go Formatter is an online tool that formats your Go code following the official gofmt conventions used by the Go community. It ensures your code adheres to Go's strict formatting standards, making it easier to read and maintain. The tool handles indentation, alignment, spacing, and import organization automatically. Whether you're working on a small script or a large Go project, this formatter helps maintain consistent code style across your codebase. Simply paste your Go code and get perfectly formatted output in seconds.",
+  "detailed_description": "Go Formatter is a browser-based helper for cleaning up pasted Go snippets. It applies lightweight indentation, spacing around common operators, comma spacing, and brace-based line structure, then gives you a copy-ready output pane. It is useful for small examples, documentation snippets, and quick readability cleanup before you run your normal Go tooling. The formatter does not compile code, sort imports, rewrite packages, or replace the Go command-line formatter for production code.",
   "usage_steps": [
-    "Paste Go code",
-    "Click Format",
-    "Copy formatted code"
+    "Paste a short Go snippet into the input editor.",
+    "Click Format to apply browser-side indentation and spacing cleanup.",
+    "Review the output and fix any syntax or semantic issues in your own editor.",
+    "Copy the formatted snippet when it looks right.",
+    "Run your normal Go toolchain before committing production code."
   ],
   "usage_examples": [
-    "Format Go packages",
-    "Clean up code before commit"
+    "Clean up a small function before sharing it in documentation.",
+    "Make pasted sample code easier to read in a code review note.",
+    "Normalize spacing around assignments, comparisons, and commas in a short snippet.",
+    "Prepare a quick example before running the official Go tools locally."
+  ],
+  "faqs": [
+    {
+      "question": "Does this replace the Go command-line formatter?",
+      "answer": "No. It is a lightweight browser formatter for pasted snippets. Use the Go toolchain for project-grade formatting and verification."
+    },
+    {
+      "question": "Does it organize imports?",
+      "answer": "No. The current tool only adjusts indentation and common spacing. It does not sort, add, or remove imports."
+    },
+    {
+      "question": "Is my Go code uploaded?",
+      "answer": "No. Formatting runs in the browser for the text you paste into the page."
+    }
   ]
 }

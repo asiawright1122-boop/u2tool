@@ -1,16 +1,30 @@
 {
-  "detailed_description": "Wave Generator creates smooth, customizable SVG wave patterns perfect for section dividers, headers, and footers. Generate single or multi-layer waves with adjustable height, frequency, and amplitude. The generated SVG is optimized for web use and can be positioned at the top or bottom of sections.",
+  "detailed_description": "Wave Generator creates static SVG wave dividers directly in the browser. Adjust the wave height, frequency, amplitude, layer count, color, and top or bottom position, then preview the generated SVG before copying or downloading it. The tool is built for section separators, simple header or footer shapes, and reusable SVG snippets in web layouts. It does not create animations or manage responsive breakpoints for you.",
   "usage_steps": [
-    "Set the wave height in pixels",
-    "Adjust frequency for wave count",
-    "Configure amplitude for wave intensity",
-    "Add multiple layers for depth effect",
-    "Choose top or bottom position",
-    "Copy or download the SVG code"
+    "Set the wave height in pixels.",
+    "Adjust frequency and amplitude until the curve has the shape you need.",
+    "Choose one to four layers and pick a fill color.",
+    "Select whether the wave should sit at the top or bottom of the SVG.",
+    "Review the preview, then copy or download the SVG code."
   ],
   "usage_examples": [
-    "Creating section dividers between content",
-    "Designing wave headers for landing pages",
-    "Building animated wave backgrounds"
+    "Create a static wave divider between two page sections.",
+    "Generate a simple SVG header or footer shape for a landing page.",
+    "Build a multi-layer decorative wave for a prototype.",
+    "Copy an SVG snippet into a design system or component demo."
+  ],
+  "faqs": [
+    {
+      "question": "Can I download the wave?",
+      "answer": "Yes. Use the download button to save the current SVG as wave.svg."
+    },
+    {
+      "question": "Does it generate animated waves?",
+      "answer": "No. The current tool generates static SVG markup. Add animation separately in your own CSS or JavaScript if needed."
+    },
+    {
+      "question": "Which parts of the wave can I customize?",
+      "answer": "You can adjust height, frequency, amplitude, layer count, color, and whether the wave is aligned to the top or bottom."
+    }
   ]
 }

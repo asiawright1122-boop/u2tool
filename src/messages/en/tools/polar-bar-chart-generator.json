@@ -11,5 +11,19 @@
     "Compare seasonal or cyclical values in a radial layout for a presentation.",
     "Turn a short list of category scores into a circular chart for documentation or dashboards.",
     "Experiment with labels, ranges, and themes before exporting a chart for sharing."
+  ],
+  "faqs": [
+    {
+      "question": "Can I edit the data directly?",
+      "answer": "Yes. You can add, remove, rename, and update values in the data editor before exporting the chart."
+    },
+    {
+      "question": "Which export formats are available?",
+      "answer": "The chart can be exported as PNG or SVG from the buttons above the preview."
+    },
+    {
+      "question": "Does this connect to live data sources?",
+      "answer": "No. The current tool uses manual rows and sample data in the browser."
+    }
   ]
 }

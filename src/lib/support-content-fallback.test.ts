@@ -1691,6 +1691,124 @@ describe('assessSupportContentTrust', () => {
     expect(reports.every((report) => report.blockSupportContent === false)).toBe(true);
   });
 
+  it('blocks unsupported claims for the GSC recovery tool pages', () => {
+    const cases = [
+      {
+        slug: 'go-formatter',
+        locale: 'en',
+        detailedDescription:
+          'Official gofmt compatibility with goimports, compile code validation, and project-grade formatting.',
+        expectedCode: 'go-formatter-unsupported-gofmt-import-claim',
+      },
+      {
+        slug: 'wave-generator',
+        locale: 'en',
+        detailedDescription:
+          'Create animated SVG waves with animation controls, CSS keyframes, and responsive breakpoint presets.',
+        expectedCode: 'wave-generator-unsupported-animation-responsive-claim',
+      },
+      {
+        slug: 'countdown-timer',
+        locale: 'ru',
+        detailedDescription:
+          'Предоставляет стандартные предустановленные значения: 1 минута, 5 минут, 10 минут, 15 минут, 30 минут и 1 час.',
+        expectedCode: 'countdown-timer-unsupported-preset-claim',
+      },
+      {
+        slug: 'html-table-generator',
+        locale: 'ru',
+        detailedDescription:
+          'Поддерживает добавление пользовательских CSS-классов, инлайновых стилей, drag-and-drop и экспорт в формате HTML или JSON.',
+        expectedCode: 'html-table-unsupported-editor-export-claim',
+      },
+      {
+        slug: 'polar-bar-chart-generator',
+        locale: 'en',
+        detailedDescription:
+          'Paste a TSV/CSV with header rows, connect an API feed, and use real-time data in the polar bar chart.',
+        expectedCode: 'polar-bar-unsupported-live-import-claim',
+      },
+    ];
+
+    for (const testCase of cases) {
+      const report = assessSupportContentTrust({
+        slug: testCase.slug,
+        locale: testCase.locale,
+        name: testCase.slug,
+        description: '',
+        detailedDescription: testCase.detailedDescription,
+        usageSteps: [],
+        usageExamples: [],
+        faqs: [],
+      });
+
+      expect(report.blockSupportContent).toBe(true);
+      expect(report.issues.map((issue) => issue.code)).toContain(testCase.expectedCode);
+    }
+  });
+
+  it('keeps accurate support copy for the GSC recovery tool pages visible', () => {
+    const reports = [
+      assessSupportContentTrust({
+        slug: 'go-formatter',
+        locale: 'en',
+        name: 'Go Formatter',
+        description: '',
+        detailedDescription:
+          'Go Formatter applies lightweight indentation, spacing around common operators, comma spacing, and brace-based line structure for pasted snippets.',
+        usageSteps: ['Paste a short Go snippet.', 'Review the output and run your normal Go toolchain before production use.'],
+        usageExamples: ['Clean up a small function before sharing it in documentation.'],
+        faqs: [{ question: 'Does it organize imports?', answer: 'No. It only adjusts indentation and common spacing.' }],
+      }),
+      assessSupportContentTrust({
+        slug: 'wave-generator',
+        locale: 'en',
+        name: 'Wave Generator',
+        description: '',
+        detailedDescription:
+          'Wave Generator creates static SVG wave dividers with adjustable height, frequency, amplitude, layer count, color, and position.',
+        usageSteps: ['Review the preview, then copy or download the SVG code.'],
+        usageExamples: ['Create a static wave divider between two page sections.'],
+        faqs: [{ question: 'Does it generate animated waves?', answer: 'No. The current tool generates static SVG markup.' }],
+      }),
+      assessSupportContentTrust({
+        slug: 'countdown-timer',
+        locale: 'ru',
+        name: 'Таймер обратного отсчета',
+        description: '',
+        detailedDescription:
+          'Можно выбрать быстрые пресеты 1, 5, 10 или 25 минут либо вручную задать значение до 23:59:59.',
+        usageSteps: ['Выберите пресет или введите часы, минуты и секунды вручную.'],
+        usageExamples: ['Запустить 25-минутный фокус-таймер.'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
+        slug: 'html-table-generator',
+        locale: 'ru',
+        name: 'Генератор HTML таблиц',
+        description: '',
+        detailedDescription:
+          'Инструмент генерирует базовую разметку table, thead, tbody, tr, th и td, которую можно скопировать в буфер обмена.',
+        usageSteps: ['Заполните текстовые поля ячеек.', 'Нажмите копировать, чтобы перенести готовую разметку.'],
+        usageExamples: ['Создать небольшую сравнительную таблицу для статьи.'],
+        faqs: [{ question: 'Можно ли объединять ячейки через colspan или rowspan?', answer: 'Нет. Объединение ячеек нужно добавить вручную после копирования HTML.' }],
+      }),
+      assessSupportContentTrust({
+        slug: 'polar-bar-chart-generator',
+        locale: 'en',
+        name: 'Polar Bar Chart Generator',
+        description: '',
+        detailedDescription:
+          'The Polar Bar Chart Generator turns small manual datasets into a radial bar chart directly in your browser.',
+        usageSteps: ['Update the chart title, then add, remove, or rename data points and values.'],
+        usageExamples: ['Compare seasonal or cyclical values in a radial layout.'],
+        faqs: [{ question: 'Does this connect to live data sources?', answer: 'No. The current tool uses manual rows and sample data.' }],
+      }),
+    ];
+
+    expect(reports.every((report) => report.blockSupportContent === false)).toBe(true);
+  });
+
   it('blocks unsupported claims from the next GSC thin-content recovery batch', () => {
     const cases = [
       {
