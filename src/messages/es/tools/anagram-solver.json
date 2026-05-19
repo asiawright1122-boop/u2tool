@@ -1,17 +1,30 @@
 {
-  "detailed_description": "El Anagram Solver es una herramienta especializada que descompone combinaciones aleatorias de letras para generar todas las palabras válidas según reglas lingüísticas. Utiliza algoritmos de permutación combinatoria para explorar todas las combinaciones posibles, aplicando después un filtrado morfológico contra diccionarios precompilados en formatos como AHD, SOWPODS o TWL. Su motor interno implementa estructuras de datos trie para optimizar búsquedas de prefijos, permitiendo resolver anagramas de hasta 15 letras en milisegundos. Esta herramienta es crucial para jugadores de Scrabble que necesitan validar jugadas, crucigramistas que buscan soluciones a pistas complejas, o desarrolladores que prueban sistemas de procesamiento de lenguaje natural. Su capacidad de excluir palabras no deseadas mediante máscaras booleanas y ajustar parámetros como longitud mínima/maxima de salida lo convierte en una solución técnica avanzada, no solo un generador básico de palabras.",
+  "detailed_description": "El solucionador de anagramas compara las letras introducidas con una lista integrada de palabras comunes y muestra coincidencias que usan exactamente las mismas letras. Escribe de 2 a 15 caracteres, sin espacios si quieres una busqueda limpia, y la pagina ordena internamente las letras para encontrar palabras de la misma longitud. Los resultados aparecen como etiquetas y se pueden copiar juntos con un boton. La herramienta es util para juegos de palabras informales, ideas rapidas y comprobaciones sencillas; no permite elegir una lista por idioma ni valida reglas oficiales de juegos.",
   "usage_steps": [
-    "Introduce las letras desordenadas en el campo de texto 'Letras de entrada' utilizando minúsculas o mayúsculas indistintamente",
-    "Selecciona el idioma del diccionario de referencia (español, inglés, francés) desde el menú desplegable 'Diccionario base'",
-    "Activa la opción 'Excluir palabras inválidas' para filtrar términos técnicos o propios no aceptados en juegos oficiales",
-    "Ajusta los cursores 'Longitud mínima' y 'Longitud máxima' para restringir el tamaño de las palabras generadas",
-    "Haz clic en 'Resolver anagrama' para iniciar el cálculo basado en algoritmos de backtracking optimizado",
-    "Revisa los resultados en la tabla interactiva, donde cada palabra muestra su puntuación en sistemas como Scrabble o Words with Friends"
+    "Introduce las letras mezcladas en el campo principal.",
+    "Mantén la entrada entre 2 y 15 caracteres para obtener resultados.",
+    "Revisa las palabras encontradas debajo del contador de resultados.",
+    "Si no aparece nada, prueba otra combinacion o una palabra mas comun.",
+    "Usa el boton Copiar para llevar todos los resultados al portapapeles."
   ],
   "usage_examples": [
-    "Un crucigramista profesional descifra la palabra 'interrumpir' a partir de las letras 'rtpiimrune' para completar una pista difícil",
-    "Un jugador de Scrabble valida si 'zahorí' es una palabra aceptable según reglas internacionales antes de colocarla en el tablero",
-    "Un desarrollador de apps lingüísticas prueba su sistema de detección de anagramas comparando resultados con el motor de esta herramienta",
-    "Un escritor experimenta combinaciones creativas para generar nombres de marca a partir de las letras 'creativasoluciones'"
+    "Probar si un conjunto corto de letras puede formar una palabra comun.",
+    "Buscar ideas rapidas para un juego casual de letras.",
+    "Copiar una lista pequena de coincidencias para revisarla en una nota.",
+    "Comparar dos combinaciones parecidas cambiando una letra cada vez."
+  ],
+  "faqs": [
+    {
+      "question": "La herramienta busca palabras parciales?",
+      "answer": "No. La coincidencia actual usa exactamente las mismas letras y la misma longitud que la entrada."
+    },
+    {
+      "question": "Que pasa si no hay resultados?",
+      "answer": "Puede que la combinacion no exista en la lista integrada de palabras comunes. Prueba con menos letras o una combinacion mas habitual."
+    },
+    {
+      "question": "Los resultados sirven como validacion oficial?",
+      "answer": "No. La pagina es una ayuda rapida para anagramas informales, no una autoridad para reglas de competicion."
+    }
   ]
 }

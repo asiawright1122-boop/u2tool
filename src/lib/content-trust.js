@@ -237,6 +237,30 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['dice-roller'],
   },
   {
+    code: 'loan-calculator-unsupported-payment-export-claim',
+    pattern: /дифференцирован|досрочн|переменн[а-яё]+ ставк/i,
+    message: 'Claims loan-calculator payment modes, currencies, variable-rate planning, or export/print features that are not present in the current fixed-payment UI.',
+    slugs: ['loan-calculator'],
+  },
+  {
+    code: 'line-counter-unsupported-file-output-claim',
+    pattern: /загруз[а-яё\s-]*(?:файл|лог)|выпадающем меню|кнопк[ау]\s*['’]Обработать['’]|нижней части страницы/i,
+    message: 'Claims Line Counter file loading, menu-based processing, or separate output surfaces that are not present in the current text-area workflow.',
+    slugs: ['line-counter'],
+  },
+  {
+    code: 'password-generator-unsupported-export-ambiguity-claim',
+    pattern: /системн[а-яё]+ таймер|128\s+символ|неоднозначн|формате\s+TXT/i,
+    message: 'Claims password-generator entropy sources, range, ambiguity filters, or export formats that are not present in the current Web Crypto copy-only UI.',
+    slugs: ['password-generator'],
+  },
+  {
+    code: 'anagram-solver-unsupported-dictionary-scoring-claim',
+    pattern: /diccionarios?|puntuaci[oó]n|m[aá]scaras|longitud m[ií]nima|longitud m[aá]xima|idioma del diccionario|franc[eé]s/i,
+    message: 'Claims Anagram Solver dictionary selection, game scoring, partial-length filtering, or advanced linguistic search not present in the current exact-length word-list matcher.',
+    slugs: ['anagram-solver'],
+  },
+  {
     code: 'jwt-signature-verification-claim',
     pattern: /\bvalidate(?:s| the)? token'?s signature\b|\bSignature Verification\b/i,
     message: 'Claims JWT signature verification, but the current decoder only decodes and displays token parts.',

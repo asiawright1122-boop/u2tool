@@ -1580,6 +1580,117 @@ describe('assessSupportContentTrust', () => {
     expect(reports.every((report) => report.blockSupportContent === false)).toBe(true);
   });
 
+  it('blocks unsupported claims for the next long-tail recovery batch', () => {
+    const cases = [
+      {
+        slug: 'loan-calculator',
+        locale: 'ru',
+        detailedDescription:
+          'Калькулятор поддерживает дифференцированные платежи, досрочные погашения, RUB/EUR и экспорт CSV.',
+        expectedCode: 'loan-calculator-unsupported-payment-export-claim',
+      },
+      {
+        slug: 'line-counter',
+        locale: 'ru',
+        detailedDescription:
+          "Загрузите лог-файл, выберите сортировку в выпадающем меню и нажмите кнопку 'Обработать'.",
+        expectedCode: 'line-counter-unsupported-file-output-claim',
+      },
+      {
+        slug: 'password-generator',
+        locale: 'ru',
+        detailedDescription:
+          'Поддерживает 8-128 символов, исключает неоднозначные символы и сохраняет результат в формате TXT.',
+        expectedCode: 'password-generator-unsupported-export-ambiguity-claim',
+      },
+      {
+        slug: 'anagram-solver',
+        locale: 'es',
+        detailedDescription:
+          'Selecciona diccionarios SOWPODS o TWL, calcula puntuación Scrabble y ajusta longitud mínima.',
+        expectedCode: 'anagram-solver-unsupported-dictionary-scoring-claim',
+      },
+    ];
+
+    for (const testCase of cases) {
+      const report = assessSupportContentTrust({
+        slug: testCase.slug,
+        locale: testCase.locale,
+        name: testCase.slug,
+        description: '',
+        detailedDescription: testCase.detailedDescription,
+        usageSteps: [],
+        usageExamples: [],
+        faqs: [],
+      });
+
+      expect(report.blockSupportContent).toBe(true);
+      expect(report.issues.map((issue) => issue.code)).toContain(testCase.expectedCode);
+    }
+  });
+
+  it('keeps accurate support copy for the next long-tail recovery batch visible', () => {
+    const reports = [
+      assessSupportContentTrust({
+        slug: 'loan-calculator',
+        locale: 'ru',
+        name: 'Кредитный калькулятор',
+        description: '',
+        detailedDescription:
+          'Кредитный калькулятор рассчитывает регулярный платеж по сумме кредита, годовой ставке, сроку в месяцах и выбранной частоте платежей.',
+        usageSteps: ['Введите сумму, ставку и срок.', 'Выберите ежемесячный, двухнедельный или еженедельный вариант.'],
+        usageExamples: ['Оценить ежемесячный платеж для крупной покупки.'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
+        slug: 'line-counter',
+        locale: 'ru',
+        name: 'Подсчет строк',
+        description: '',
+        detailedDescription:
+          'Подсчет строк показывает всего строк, непустые строки, пустые строки и уникальные непустые строки для текста в поле ввода.',
+        usageSteps: ['Вставьте текст.', 'Удалите дубликаты, пустые строки или отсортируйте список.'],
+        usageExamples: ['Очистить список URL, где часть строк повторяется.'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
+        slug: 'password-generator',
+        locale: 'ru',
+        name: 'Генератор паролей',
+        description: '',
+        detailedDescription:
+          'Генератор паролей создает случайную строку в браузере с помощью Web Crypto API, длиной от 8 до 64 символов.',
+        usageSteps: ['Выберите наборы символов.', 'Сгенерируйте и скопируйте результат.'],
+        usageExamples: ['Создать пароль длиной 16 символов для новой учетной записи.'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
+        slug: 'flip-text',
+        locale: 'ru',
+        name: 'Перевернутый текст',
+        description: '',
+        detailedDescription:
+          'Перевернутый текст создает три варианта: текст вверх дном, зеркальный вариант и обратный порядок символов.',
+        usageSteps: ['Введите текст.', 'Скопируйте нужный результат.'],
+        usageExamples: ['Сделать короткий перевернутый заголовок для поста.'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
+        slug: 'anagram-solver',
+        locale: 'es',
+        name: 'Solucionador de Anagramas',
+        description: '',
+        detailedDescription:
+          'El solucionador de anagramas compara las letras introducidas con una lista integrada de palabras comunes y muestra coincidencias de la misma longitud.',
+        usageSteps: ['Introduce de 2 a 15 caracteres.', 'Copia los resultados encontrados.'],
+        usageExamples: ['Probar si un conjunto corto de letras puede formar una palabra comun.'],
+        faqs: [],
+      }),
+    ];
+
+    expect(reports.every((report) => report.blockSupportContent === false)).toBe(true);
+  });
+
   it('blocks Calendar Availability external sync and date-range claims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'calendar-availability-finder',
