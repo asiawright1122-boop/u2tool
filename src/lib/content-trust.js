@@ -621,6 +621,36 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['color-blender'],
   },
   {
+    code: 'image-resizer-unsupported-mode-export-claim',
+    pattern: /mode de redimensionnement|Pourcentage|dimensions précises en pixels, en pourcentage|formats de fichiers tels que|incluyendo JPEG, PNG, GIF|JPEG, PNG, GIF|GIF, et BMP|Formato de salida|quality slider|batch resize|multi-format export/i,
+    message: 'Claims image-resizer modes, batch workflows, quality controls, or non-PNG exports that are not present in the current single-image canvas resizer UI.',
+    slugs: ['image-resizer'],
+  },
+  {
+    code: 'random-generator-unsupported-seed-export-security-claim',
+    pattern: /CSPRNG|Web Crypto|SHA-256|Mersenne Twister|fonctionnalité de graine|valeur de graine|graine verrouillée|semilla de entropía|seed.+reproduire|reproduire.+seed|CSV|JSON|XML|jetons? de sécurité|clés? de chiffrement|Monte Carlo|PRNG/i,
+    message: 'Claims seeded generation, structured exports, cryptographic/security use, or advanced PRNG behavior that is not present in the current browser integer generator UI.',
+    slugs: ['random-generator'],
+  },
+  {
+    code: 'paraphrase-tool-unsupported-ai-semantic-claim',
+    pattern: /BERT|transformer|deep learning|глубокого обучения|семантическ|предобученн|fine-tuning|антиплагиат|плагиат|SEO-контент|Markdown|косинусн|3-х альтернатив|уровень перефразирования|сравнительный режим/i,
+    message: 'Claims AI, semantic rewriting, plagiarism/SEO, Markdown, multi-variant, or similarity-analysis behavior that is not present in the current local synonym replacement UI.',
+    slugs: ['paraphrase-tool'],
+  },
+  {
+    code: 'sql-query-optimizer-unsupported-database-rewrite-claim',
+    pattern: /Select database type|Click Optimize|query rewrites?|rewrite subqueries|database-specific|verify indexes/i,
+    message: 'Claims database-specific optimization, EXPLAIN/runtime plans, query rewriting, or missing UI controls that are not present in the current static SQL text helper.',
+    slugs: ['sql-query-optimizer'],
+  },
+  {
+    code: 'countdown-days-unsupported-calendar-export-claim',
+    pattern: /Ajustar horario de verano|zona horaria|UTC\/GMT|resultado en formato JSON o CSV|Copiar al Portapapeles|DD\/MM\/YYYY|descripciones textuales|pr[oó]ximo lunes|precisi[oó]n del 100%|d[ií]as h[aá]biles|business days|holiday-aware/i,
+    message: 'Claims business-day, holiday, timezone/DST, flexible date parsing, or export behavior that is not present in the current local countdown list UI.',
+    slugs: ['countdown-days-calculator'],
+  },
+  {
     code: 'reading-time-unsupported-analysis-claim',
     pattern: /\bNLP\b|\bnatural language processing\b|procesamiento de lenguaje natural|an[aá]lisis l[eé]xico|complejidad l[eé]xica|estructura sint[aá]ctica|modelos probabil[ií]sticos|perfil del lector|modo de lectura|an[aá]lisis contextual|soporte para formato Markdown|formato Markdown|men[uú] desplegable|bot[oó]n ['’]?Calcular|integra la API|API para mostrar|desglose detallado por secciones/i,
     message: 'Claims Reading Time Calculator NLP, Markdown, language, API, or section-analysis behavior that is not present in the current counter UI.',

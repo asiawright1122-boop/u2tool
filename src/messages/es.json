@@ -2833,27 +2833,44 @@
     },
     "random-generator": {
       "name": "Generador de Números Aleatorios",
-      "description": "Genera números aleatorios dentro de un rango especificado, con la opción de generación en masa y números únicos.",
-      "seo_title": "Generador de Números Aleatorios en línea - Herramienta Gratuita",
-      "seo_description": "Crea números aleatorios personalizados en línea con nuestra herramienta gratuita. Genera en masa y asegúrate de unicas. ¡Prueba ahora!",
-      "detailed_description": "El Generador de Números Aleatorios es una herramienta técnica basada en algoritmos criptográficamente seguros (como el uso de funciones de hash SHA-256) que permite crear secuencias numéricas con control preciso sobre rango, cardinalidad y propiedades estadísticas. Su núcleo utiliza un generador de números pseudoaleatorios (PRNG) inicializado con una semilla de entropía variable, lo que garantiza distribuciones uniformes o sesgadas según la configuración. Los usuarios pueden especificar límites inferior/superior (inclusive valores negativos), cantidad de dígitos decimales, y activar opciones como 'valores únicos' para evitar repeticiones mediante tablas de dispersión (hash tables). Soporta generación masiva de hasta 10,000 números con exportación en formatos estructurados (CSV, JSON, XML). Es esencial para pruebas de estrés en sistemas financieros, simulaciones Monte Carlo, generación de tokens de autenticación y muestreo estadístico con control de varianza.",
+      "description": "Genera enteros aleatorios en un rango personalizado, con opción de valores únicos.",
+      "seo_title": "Generador de números aleatorios gratis online",
+      "seo_description": "Genera hasta 1000 enteros aleatorios en un rango personalizado, evita duplicados si quieres y copia la lista desde el navegador.",
+      "detailed_description": "El generador de números aleatorios produce enteros dentro del rango que definas. Escribe un valor mínimo, un valor máximo y una cantidad, y genera hasta 1000 resultados. La opción Valores únicos evita duplicados cuando el rango contiene suficientes números disponibles. Los resultados aparecen en la página y pueden copiarse como una lista de texto simple. La herramienta sirve para juegos, actividades de clase, datos de prueba, sorteos sencillos y muestreos rápidos. No ofrece decimales, UUID, semillas repetibles, exportaciones estructuradas ni aleatoriedad para usos de seguridad.",
       "usage_steps": [
-        "1. Ingresa los valores 'Mínimo' y 'Máximo' en los campos numéricos correspondientes, incluyendo decimales si es necesario.",
-        "2. Activa la casilla 'Valores Únicos' para generar una secuencia sin duplicados o desactívala para permitir repeticiones.",
-        "3. Selecciona la cantidad de números a generar usando el control deslizante 'Cantidad' (1-10,000).",
-        "4. Introduce una semilla personalizada en el campo 'Semilla Aleatoria' para reproducir secuencias específicas.",
-        "5. Haz clic en el botón 'Generar' para ejecutar el algoritmo basado en el motor CSPRNG (Cryptographically Secure PRNG).",
-        "6. Descarga los resultados mediante el enlace de exportación en el formato deseado (CSV, JSON o XML)."
+        "Introduce el valor mínimo y el valor máximo del rango.",
+        "Elige cuántos números quieres generar, hasta 1000.",
+        "Activa Valores únicos si no quieres duplicados.",
+        "Haz clic en Generar para mostrar los números.",
+        "Usa Copiar para llevar la lista al portapapeles."
       ],
       "usage_examples": [
-        "Un desarrollador de sistemas bancarios generando 500 números aleatorios entre -1,000,000 y 1,000,000 para simular transacciones extremas.",
-        "Un profesor de estadística creando 25 IDs únicos con 4 dígitos decimales para asignar proyectos de investigación.",
-        "Un diseñador de juegos configurando una tabla de probabilidades para drops de items raros usando valores entre 0 y 1 con 6 decimales.",
-        "Un científico de datos extrayendo una muestra aleatoria de 1,200 registros de un dataset de 1 millón usando semillas reproducibles."
+        "Elegir un número entre 1 y 100 para un juego o actividad de clase.",
+        "Crear 20 números únicos para repartir participantes.",
+        "Generar valores de prueba simples para una hoja de cálculo.",
+        "Copiar una lista corta de enteros en un documento rápidamente."
       ],
       "min": "min",
       "max": "max",
-      "unique": "unique"
+      "unique": "unique",
+      "faqs": [
+        {
+          "question": "¿Puedo generar números únicos?",
+          "answer": "Sí, siempre que la cantidad solicitada no supere los valores disponibles en el rango."
+        },
+        {
+          "question": "¿Cuál es la cantidad máxima?",
+          "answer": "El campo de cantidad está limitado a 1000 resultados."
+        },
+        {
+          "question": "¿Sirve para contraseñas o claves de seguridad?",
+          "answer": "No. Usa una herramienta de seguridad dedicada para secretos, contraseñas o claves."
+        },
+        {
+          "question": "¿Puedo repetir la misma serie más tarde?",
+          "answer": "No. Esta versión no incluye una semilla repetible."
+        }
+      ]
     },
     "text-reverser": {
       "name": "Reversor de Texto",
@@ -6396,23 +6413,23 @@
     },
     "image-resizer": {
       "name": "Redimensionador de Imágenes",
-      "description": "Redimensiona imágenes a dimensiones personalizadas.",
-      "seo_title": "Redimensionador de Imágenes en línea Gratis",
-      "seo_description": "Ajusta tus imágenes a dimensiones personalizadas en línea de forma gratuita. Mantiene el aspecto o establece anchura y altura exactas. Soporta formatos PNG, JPEG y WebP. Descarga instantáneamente.",
-      "detailed_description": "El Image Resizer es una herramienta de procesamiento de imágenes que permite a los usuarios cambiar el tamaño de sus archivos de imagen a dimensiones personalizadas. Esta herramienta utiliza algoritmos de reescalado avanzados para asegurar que las imágenes mantengan su calidad y nitidez, incluso al redimensionarlas a tamaños muy diferentes de su resolución original. El Image Resizer es especialmente útil para desarrolladores y diseñadores que necesitan adaptar imágenes para diferentes plataformas y dispositivos, como sitios web, aplicaciones móviles y redes sociales. Además, la herramienta ofrece opciones para ajustar la calidad de la imagen y el formato de salida, lo que permite un control preciso sobre el resultado final. El Image Resizer soporta una amplia variedad de formatos de imagen, incluyendo JPEG, PNG, GIF y BMP, y es capaz de procesar múltiples imágenes de manera simultánea, lo que ahorra tiempo y esfuerzo en tareas repetitivas.",
+      "description": "Redimensiona una imagen por ancho y alto en píxeles, con bloqueo de proporción.",
+      "seo_title": "Redimensionador de imágenes gratis online",
+      "seo_description": "Carga una imagen, define ancho y alto en píxeles, conserva la proporción si quieres y descarga el resultado en PNG.",
+      "detailed_description": "El redimensionador de imágenes permite cargar una imagen, leer sus dimensiones originales y escribir un nuevo ancho y alto en píxeles. La opción de bloquear proporción ajusta automáticamente la otra dimensión para evitar deformaciones accidentales. El cambio de tamaño se realiza en el navegador con un canvas, muestra una vista previa y descarga la imagen redimensionada como PNG. La herramienta no incluye recorte, procesamiento por lotes, control de calidad JPEG ni exportación en varios formatos.",
       "usage_steps": [
-        "Abra la página de Image Resizer en su navegador y haga clic en el botón 'Cargar Imagen' para seleccionar el archivo que desea redimensionar.",
-        "Una vez que la imagen esté cargada, use el deslizador 'Ancho' y 'Alto' para establecer las nuevas dimensiones en píxeles. También puede introducir valores numéricos directamente en los campos de entrada.",
-        "Si lo desea, active la opción 'Mantener relación de aspecto' para asegurarse de que la imagen no se distorsione durante el proceso de redimensionamiento.",
-        "En la sección 'Calidad de la imagen', ajuste el nivel de compresión utilizando el deslizador. Un valor más alto resultará en una imagen de mayor calidad, pero con un tamaño de archivo mayor.",
-        "Seleccione el formato de salida deseado desde el menú desplegable 'Formato de salida', que ofrece opciones como JPEG, PNG, GIF y BMP.",
-        "Finalmente, haga clic en 'Aplicar Cambios' para procesar la imagen. El Image Resizer generará la imagen redimensionada, que podrá descargar haciendo clic en el botón 'Descargar Imagen'."
+        "Haz clic en la zona de carga y elige una imagen de tu dispositivo.",
+        "Revisa las dimensiones originales que aparecen junto a la vista previa.",
+        "Escribe el ancho o la altura deseada en píxeles.",
+        "Mantén bloqueada la proporción si quieres conservar el aspecto original.",
+        "Haz clic en Redimensionar para generar la vista previa y descarga el PNG resultante.",
+        "Usa Limpiar si quieres cargar otra imagen y empezar de nuevo."
       ],
       "usage_examples": [
-        "Un diseñador gráfico necesita crear versiones de diferentes tamaños de un logotipo para usar en un sitio web, una aplicación móvil y tarjetas de visita. Utiliza Image Resizer para generar rápidamente las versiones necesarias, asegurándose de que todas mantengan la calidad y la proporción correcta.",
-        "Un fotógrafo profesional debe subir sus imágenes a una plataforma de redes sociales que requiere un tamaño específico. Con Image Resizer, puede ajustar el tamaño de las imágenes a las dimensiones requeridas sin perder calidad, y descargarlas directamente para subirlas.",
-        "Un desarrollador de software está creando un juego para dispositivos móviles y necesita optimizar las imágenes de los personajes y elementos del juego. Usa Image Resizer para reducir el tamaño de las imágenes sin comprometer la calidad, mejorando así el rendimiento del juego en dispositivos con recursos limitados.",
-        "Un bloguero necesita preparar imágenes para una entrada de blog, y quiere asegurarse de que las imágenes se carguen rápidamente en la página. Con Image Resizer, puede ajustar el tamaño y la calidad de las imágenes para que sean óptimas para la web, mejorando la experiencia del usuario."
+        "Reducir una captura grande antes de añadirla a un artículo.",
+        "Crear una miniatura cuadrada indicando el mismo ancho y alto.",
+        "Adaptar una imagen a un ancho exacto para una página web.",
+        "Conservar la proporción de una foto cambiando solo el ancho."
       ],
       "imageResizer": {
         "dropzone": "imageResizer.dropzone",
@@ -6424,7 +6441,25 @@
         "resized": "imageResizer.resized"
       },
       "clear": "Limpiar",
-      "download": "Descargar"
+      "download": "Descargar",
+      "faqs": [
+        {
+          "question": "¿El archivo se sube a un servidor?",
+          "answer": "No. La carga, el redimensionado y la vista previa se realizan en el navegador."
+        },
+        {
+          "question": "¿Qué formato se descarga?",
+          "answer": "El resultado se descarga como PNG con un nombre que incluye las nuevas dimensiones."
+        },
+        {
+          "question": "¿Puedo redimensionar varias imágenes a la vez?",
+          "answer": "No. Esta página procesa una imagen por vez."
+        },
+        {
+          "question": "¿Puede mantener la proporción automáticamente?",
+          "answer": "Sí, si está activada la opción de bloquear proporción. Puedes desactivarla para introducir ancho y alto independientes."
+        }
+      ]
     },
     "ssl-checker": {
       "name": "Verificador de Certificados SSL",
@@ -14536,10 +14571,10 @@
       "teamNamesPlaceholder": "Espacio para Nombres de Equipos"
     },
     "countdown-days-calculator": {
-      "name": "Calculador de Días del Cuenta Regresivo",
-      "description": "Calcula los días hasta o desde una fecha específica.",
-      "seo_title": "Calculadora de Días en Línea - Herramienta Gratuita para Contar Días",
-      "seo_description": "Contar días hasta o desde una fecha específica nunca fue tan fácil. Nuestra calculadora en línea te ayuda gratis. ¡Prueba ahora y simplifica tus cálculos de fecha!",
+      "name": "Calculadora de Días de Cuenta Regresiva",
+      "description": "Sigue varias cuentas regresivas con días, horas, minutos y segundos en vivo.",
+      "seo_title": "Calculadora de Días de Cuenta Regresiva Gratis Online",
+      "seo_description": "Crea varias cuentas regresivas, calcula días hasta o desde una fecha y guarda eventos en tu navegador con actualización en vivo.",
       "targetDate": "Fecha Objetivo",
       "eventName": "Nombre del Evento",
       "daysUntil": "Días Hasta",
@@ -14550,20 +14585,20 @@
       "years": "Años",
       "workdays": "Días Laborables",
       "weekends": "Fines de Semana",
-      "detailed_description": "El Calculador de Días de Cuenta Regresiva es una herramienta técnica que permite determinar con precisión la diferencia en días entre una fecha de referencia y la fecha actual o una fecha futura. Internamente, el sistema utiliza algoritmos de procesamiento de fechas basados en el estándar ISO 8601, manejando conversiones entre zonas horarias (UTC/GMT) y ajustando automáticamente fechas inválidas mediante técnicas de validación de calendario gregoriano. La herramienta es indispensable para desarrolladores que necesitan calcular plazos en aplicaciones de gestión de proyectos, estudiantes que planifican exámenes o equipos que monitorean ciclos de producción. Su motor matemático considera años bisiestos, horas no triviales (con opciones de ajuste de horario de verano) y realiza cálculos en milisegundos para garantizar una precisión del 100%. Al integrar un parser de fechas robusto, acepta entradas en formatos como YYYY-MM-DD, DD/MM/YYYY o incluso descripciones textuales relativas ('próximo lunes'), convirtiéndolas en objetos Date de JavaScript para su procesamiento posterior.",
+      "detailed_description": "La calculadora de días de cuenta regresiva te permite guardar varios eventos con nombre y ver cuántos días faltan para cada fecha objetivo, o cuántos días han pasado si la fecha ya quedó atrás. Escribe el nombre del evento y selecciona una fecha, o usa los accesos rápidos para Año Nuevo, Navidad y San Valentín. La página se actualiza cada segundo, guarda las cuentas regresivas en el almacenamiento local del navegador y muestra días, meses y semanas aproximados, horas, minutos y segundos.",
       "usage_steps": [
-        "Selecciona la fecha objetivo usando el selector de calendario o introduce manualmente en formato DD/MM/YYYY.",
-        "Elige entre las opciones 'Contar días hasta esta fecha' o 'Contar días desde esta fecha' mediante botones de radio.",
-        "Activa la casilla 'Ajustar horario de verano' si requieres cálculos precisos con cambios de zona horaria.",
-        "Haz clic en 'Calcular Diferencia' para ejecutar el algoritmo de comparación de marcas de tiempo.",
-        "Consulta el resultado detallado en el panel de salida, que muestra días totales, semanas y horas restantes.",
-        "Usa el botón 'Copiar al Portapapeles' para exportar el resultado en formato JSON o CSV compatible con scripts."
+        "Escribe un nombre claro para el evento, por ejemplo Lanzamiento o Examen final.",
+        "Selecciona la fecha objetivo con el selector de fecha.",
+        "Haz clic en Añadir cuenta regresiva para guardarla en la página.",
+        "Usa los botones rápidos de Año Nuevo, Navidad o San Valentín cuando te sirvan.",
+        "Revisa la actualización en vivo de días, horas, minutos y segundos, o elimina una cuenta cuando ya no la necesites.",
+        "Elimina las cuentas que ya no necesites para mantener limpia la lista."
       ],
       "usage_examples": [
-        "Un desarrollador web calcula 42 días restantes hasta la fecha límite de entrega de un proyecto (2023-12-15).",
-        "Un estudiante determina que faltan 18 días hábiles para su examen final programado el 2023-11-30.",
-        "Una agencia de viajes implementa el tool para mostrar '87 días para reservar con descuento' antes de un viaje a Cancún.",
-        "Un ingeniero de datos usa el calculador para verificar que un servidor lleva 135 días activo desde su última actualización (2023-07-01)."
+        "Seguir los días que faltan para el lanzamiento de un proyecto.",
+        "Guardar cuentas separadas para exámenes, viajes, renovaciones y cumpleaños.",
+        "Comprobar cuánto tiempo ha pasado desde un hito anterior.",
+        "Mantener una lista simple de eventos en el navegador sin crear una cuenta."
       ],
       "newYear": "Año Nuevo",
       "christmas": "Navidad",
@@ -14577,7 +14612,25 @@
       "minutes": "Minutos",
       "seconds": "Segundos",
       "eventPassed": "El evento ha pasado",
-      "noCountdowns": "Aún sin cuenta regresivos. Añade uno arriba!"
+      "noCountdowns": "Aún sin cuenta regresivos. Añade uno arriba!",
+      "faqs": [
+        {
+          "question": "¿Las cuentas se guardan al cerrar la página?",
+          "answer": "Sí. Se guardan en el almacenamiento local del navegador en el mismo dispositivo y navegador."
+        },
+        {
+          "question": "¿Calcula días laborables?",
+          "answer": "No. Muestra días naturales y un desglose de tiempo en vivo, no calendarios laborales ni festivos."
+        },
+        {
+          "question": "¿Por qué los meses y semanas son aproximados?",
+          "answer": "La herramienta divide los días totales en meses simples de 30 días y semanas de 7 días para que el resultado sea fácil de leer."
+        },
+        {
+          "question": "¿Puedo llevar varias cuentas regresivas?",
+          "answer": "Sí. Puedes añadir varios eventos con nombre y eliminar los que ya no necesites."
+        }
+      ]
     },
     "fuel-cost-calculator": {
       "name": "Calculador de Costo de Combustible",
@@ -15207,9 +15260,9 @@
     },
     "paraphrase-tool": {
       "name": "Herramienta de Paráfrasis",
-      "description": "Reescribe texto en diferentes estilos manteniendo el significado.",
-      "seo_title": "Herramienta en línea gratis para reescribir texto en español",
-      "seo_description": "Transforma tu texto en español con nuestro herramienta en línea gratis. Reescribe en diferentes estilos manteniendo el significado original. ¡Prueba ahora y descubre nuevas formas de expresión!",
+      "description": "Crea borradores alternativos con reemplazo local de sinónimos y estilos.",
+      "seo_title": "Herramienta de paráfrasis gratis online",
+      "seo_description": "Pega texto, elige un estilo y obtiene un borrador basado en sinónimos en el navegador. Revísalo antes de publicar.",
       "enterText": "Ingresa Texto para Parafrasear",
       "paraphrase": "Parafrasear",
       "style": "Estilo de Escritura",
@@ -15220,20 +15273,19 @@
       "simplified": "Simplificado",
       "result": "Texto Parafraseado",
       "originalText": "Texto Original",
-      "detailed_description": "El Paráfrasis Tool utiliza técnicas avanzadas de procesamiento de lenguaje natural (NLP) basadas en modelos transformer bidireccionales y embeddings contextuales para reescribir texto manteniendo su significado semántico. Esta herramienta implementa algoritmos de generación de lenguaje mediante redes neuronales profundas que analizan la estructura sintáctica y semántica del texto original, identifican sinónimos contextualmente apropiados, y reconfiguran la estructura gramatical mediante técnicas de análisis de dependencias. Los usuarios necesitan esta herramienta para tareas como: optimizar contenido para SEO manteniendo la densidad de keywords, adaptar textos académicos a diferentes niveles de complejidad lectora, evitar redundancias en documentación técnica, o transformar tonos narrativos en creación literaria. Su motor emplea un sistema híbrido de reglas lingüísticas y aprendizaje automático supervisado, permitiendo ajustar parámetros como el nivel de formalidad, complejidad léxica y profundidad semántica. La tecnología subyacente combina modelos BERT multilingües con redes de atención secuencial para garantizar coherencia contextual y preservar la intención comunicativa original.",
+      "detailed_description": "La herramienta de paráfrasis ayuda a crear un borrador rápido con una redacción alternativa. Pega el texto, elige estilo formal, casual, simple o creativo y ejecuta la paráfrasis. La versión actual funciona localmente en el navegador con una lista integrada de sinónimos para palabras comunes en inglés y algunas reglas de contracciones. No es un modelo de lenguaje ni entiende el significado como un asistente de escritura, por lo que siempre conviene revisar el resultado antes de usarlo.",
       "usage_steps": [
-        "Pega tu texto en el área de edición con soporte para formato RTF y plain text.",
-        "Selecciona el nivel de paráfrasis usando el control deslizante 'Intensidad' (bajo/media/alta).",
-        "Activa la opción 'Preservar términos técnicos' si tu texto contiene jerga especializada.",
-        "Elige el estilo lingüístico deseado en el menú desplegable: académico, conversacional, técnico o creativo.",
-        "Haz clic en 'Generar variantes' para obtener tres versiones con diferentes estructuras sintácticas.",
-        "Usa el comparador lateral para evaluar diferencias semánticas y seleccionar la mejor opción."
+        "Pega el texto original en el cuadro de entrada.",
+        "Elige un estilo: formal, casual, simple o creativo.",
+        "Haz clic en Parafrasear para generar un borrador.",
+        "Lee la salida con cuidado y edítala si hace falta.",
+        "Copia el resultado solo después de revisarlo."
       ],
       "usage_examples": [
-        "Reescribir un abstract de investigación para cumplir con directrices de revistas indexadas sin perder precisión técnica.",
-        "Adaptar un contenido de marketing para múltiples segmentos demográficos manteniendo consistencia de marca.",
-        "Simplificar documentación médica para pacientes sin formación científica previa.",
-        "Transformar un relato literario de primera persona a narrativa objetiva manteniendo la tensión dramática."
+        "Probar una versión más formal de una descripción breve en inglés.",
+        "Simplificar una frase de correo antes de editarla manualmente.",
+        "Comparar alternativas para una nota o frase de documentación.",
+        "Cambiar algunas palabras comunes por sinónimos y pulir el texto a mano."
       ],
       "selectStyle": "Seleccionar estilo",
       "paraphrasedText": "Paraphrased Text",
@@ -15241,7 +15293,25 @@
       "tip1": "Diferentes estilos producen diferentes resultados",
       "tip2": "La herramienta usa reemplazo de sinónimos",
       "tip3": "Revise la salida para verificar la precisión",
-      "simple": "Simple"
+      "simple": "Simple",
+      "faqs": [
+        {
+          "question": "¿Es paráfrasis con IA?",
+          "answer": "No. Usa reemplazo local de sinónimos y algunas reglas simples para contracciones."
+        },
+        {
+          "question": "¿Qué idioma funciona mejor?",
+          "answer": "La interfaz está localizada, pero la lista actual de sinónimos funciona mejor con palabras en inglés."
+        },
+        {
+          "question": "¿Conserva el significado original?",
+          "answer": "Puede cambiar palabras individuales, pero no razona sobre el significado. Revisa siempre el resultado manualmente."
+        },
+        {
+          "question": "¿Mi texto se envía a un servidor?",
+          "answer": "No. El proceso de paráfrasis se ejecuta en el navegador."
+        }
+      ]
     },
     "graphql-formatter": {
       "name": "Formateador GraphQL",

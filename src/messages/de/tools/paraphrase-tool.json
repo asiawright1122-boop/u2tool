@@ -1,17 +1,34 @@
 {
-  "detailed_description": "Der Paraphrase-Tool nutzt fortschrittliche NLP-Algorithmen zur semantischen Umstrukturierung von Texten. Technisch basiert er auf Transformer-Modellen, die durch kontextuelle Embedding-Verfahren wie BERT kontextsensitive Synonymersetzung und Satzrestrukturierung ermöglichen. Der Tool analysiert die syntaktische Struktur des Eingabetextes, identifiziert semantisch redundante Phrasen und generiert alternative Formulierungen durch Permutationsmatrizen, wobei die koreferenzielle Kohärenz erhalten bleibt. Benutzer benötigen diesen Tool für präzise Textmodifikationen bei wissenschaftlichen Arbeiten, um Plagiate zu vermeiden, oder für die Optimierung von SEO-Inhalten durch diversifizierte Keyword-Phrasierung. Ein weiterer Anwendungsfall liegt in der sprachlichen Adaptation von Fachtexten für unterschiedliche Zielgruppen (z.B. medizinische Inhalte für Laien). Der Prozess erfolgt in drei Stufen: Tokenisierung, kontextuelle Disambiguierung und Generierung durch beam search-Optimierung, wobei Nutzer individuelle Parameter wie Formalitätsgrad oder Vokabularkomplexität anpassen können.",
+  "detailed_description": "Das Paraphrase-Tool erstellt schnell einen alternativen Formulierungsentwurf. Füge Text ein, wähle formell, locker, einfach oder kreativ und starte die Umformulierung. Die aktuelle Version arbeitet lokal im Browser mit einer eingebauten Synonymliste für häufige englische Wörter sowie einigen Regeln für Kurzformen. Es ist kein Sprachmodell und versteht Bedeutung nicht wie ein Schreibassistent, deshalb sollte jedes Ergebnis vor der Veröffentlichung manuell geprüft werden.",
   "usage_steps": [
-    "1. Einfügen des Originaltexts in das mehrzeilige Eingabefeld unterhalb der Registerkarte 'Quelltext'.",
-    "2. Auswahl des gewünschten Paraphrasemodus (akademisch, kreativ, technisch) über die Schaltfläche 'Stilvorlage'.",
-    "3. Anpassen des Synonymdichte-Schiebereglers zwischen 30% und 80% je nach gewünschter Textdiversität.",
-    "4. Aktivieren der 'Deep Restructure'-Option für komplexe Satzumstellungen im erweiterten Modus.",
-    "5. Klicken auf 'Generieren' und visuelles Vergleichen der Ergebnisse in der geteilten Oberfläche mit Farbmarkierungen für Änderungen.",
-    "6. Exportieren des bearbeiteten Textes im gewünschten Format (TXT, DOCX, LaTeX) über die Download-Schaltfläche."
+    "Füge den Ausgangstext in das Eingabefeld ein.",
+    "Wähle einen Stil: formell, locker, einfach oder kreativ.",
+    "Klicke auf Paraphrasieren, um einen Entwurf zu erzeugen.",
+    "Lies die Ausgabe sorgfältig und bearbeite sie bei Bedarf.",
+    "Kopiere das Ergebnis erst nach deiner Prüfung."
   ],
   "usage_examples": [
-    "Ein Wissenschaftler paraphrasiert Methodenbeschreibungen, um die Textoriginalität für eine Fachzeitschrift zu erhöhen, während die terminologische Präzision erhalten bleibt.",
-    "Ein Content-Marketer transformiert Produktbeschreibungen für verschiedene Zielgruppen durch Anpassung des Formalitätsniveaus und Integration spezifischer Branchenbegriffe.",
-    "Ein Softwareentwickler vereinfacht technische Dokumentation für Einsteiger durch kontextuelle Umsetzung komplexer Begriffe in alltägliche Sprache.",
-    "Ein Student vermeidet versehentliches Plagiat in Hausarbeiten durch strukturelle Umformulierung von Zitaten mit Erhaltung des wissenschaftlichen Kontextes."
+    "Eine kurze englische Produktbeschreibung formeller formulieren.",
+    "Einen E-Mail-Satz vereinfachen, bevor du ihn manuell überarbeitest.",
+    "Alternative Formulierungen für eine Notiz oder Dokumentation vergleichen.",
+    "Einige häufige Wörter durch Synonyme ersetzen und den Text danach polieren."
+  ],
+  "faqs": [
+    {
+      "question": "Ist das KI-Paraphrasierung?",
+      "answer": "Nein. Das Tool nutzt lokale Synonym-Ersetzung und einige einfache Regeln für Kurzformen."
+    },
+    {
+      "question": "Welche Sprache funktioniert am besten?",
+      "answer": "Die Oberfläche ist lokalisiert, aber die aktuelle Synonymliste funktioniert am besten mit englischen Wörtern."
+    },
+    {
+      "question": "Bleibt die ursprüngliche Bedeutung erhalten?",
+      "answer": "Das Tool kann einzelne Wörter ersetzen, bewertet aber keine Bedeutung. Prüfe das Ergebnis immer manuell."
+    },
+    {
+      "question": "Wird mein Text an einen Server gesendet?",
+      "answer": "Nein. Die Umformulierung läuft im Browser."
+    }
   ]
 }

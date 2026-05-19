@@ -2821,27 +2821,44 @@
     },
     "random-generator": {
       "name": "Random Number Generator",
-      "description": "Generate random numbers within a specified range, with bulk generation and unique options.",
+      "description": "Generate random integers in a custom range, with optional unique values.",
       "seo_title": "Free Random Number Generator Online",
-      "seo_description": "Generate random numbers online for free. Support custom range, unique numbers, and multiple results. Perfect for games, lotteries, and random selection tasks.",
-      "detailed_description": "The Random Number Generator is a cryptographic-grade tool that produces uniformly distributed integers within customizable ranges using a cryptographically secure pseudorandom number generator (CSPRNG). Unlike basic implementations relying on system time seeds, this tool incorporates entropy from hardware sources (when available) and employs AES-256-CTR_DRBG algorithms to ensure unpredictability. Developers can generate single values or bulk batches up to 10,000 numbers with precision controls for min/max bounds, duplicate prevention via Fisher-Yates shuffle validation, and optional seed replay functionality. The tool's uniqueness lies in its hybrid entropy model that combines OS-level randomness (via Crypto.getRandomValues() in browsers or getrandom() syscall on Linux) with user-provided seed entropy, making it suitable for security-sensitive applications. Use cases include generating test datasets for database stress-testing, creating cryptographically sound salts for password hashing, simulating dice rolls in gaming algorithms, and producing verifiable random sequences for blockchain applications. Output maintains strict numerical distribution compliance through chi-squared distribution testing before delivery.",
+      "seo_description": "Generate up to 1000 random integers in a custom range, optionally unique, then copy the list from your browser.",
+      "detailed_description": "The Random Number Generator creates integer values inside a range you choose. Enter the minimum value, maximum value, and quantity, then generate up to 1000 results. Enable the unique option when every number should be different and the range is large enough. Results appear on the page and can be copied as a simple line-by-line list. This browser tool is useful for games, classroom activities, test data, raffles, and quick sampling. It does not provide decimal generation, UUIDs, repeatable seeds, structured exports, or cryptographic randomness.",
       "usage_steps": [
-        "Set integer boundaries using dual numeric inputs: specify minimum (-1,000,000 to 1,000,000) and maximum values",
-        "Configure batch parameters with quantity selector (1–10,000) and enable 'Unique Values Only' toggle for permutation-based output",
-        "Optional: Enter custom seed entropy (hexadecimal or base64) to reproduce specific sequences or verify randomness sources",
-        "Select output format: plain text, CSV column, or JSON array with configurable delimiter characters",
-        "Initiate generation with 'Cryptographic Entropy Boost' button to prioritize hardware entropy sources",
-        "Validate results through built-in statistical analysis panel showing distribution histograms and entropy metrics"
+        "Enter the minimum and maximum values for the range.",
+        "Choose how many integers to generate, up to 1000.",
+        "Enable Unique values if duplicates should be avoided.",
+        "Click Generate to show the random numbers.",
+        "Use Copy to place the result list on your clipboard."
       ],
       "usage_examples": [
-        "Creating 200 unique API keys with 8-digit numerical components for rate-limiting tests",
-        "Simulating 10,000 dice rolls with 3-sided virtual dice for board game probability analysis",
-        "Generating 500MB of test data with controlled numerical variance for database index fragmentation studies",
-        "Producing verifiable randomness for NFT loot box algorithms requiring auditable entropy sources"
+        "Pick a number between 1 and 100 for a game or classroom activity.",
+        "Create 20 unique participant numbers for a simple draw.",
+        "Generate sample integer values for a spreadsheet or test note.",
+        "Copy a short list of random numbers into a document without installing software."
       ],
       "min": "Min",
       "max": "Max",
-      "unique": "Unique"
+      "unique": "Unique",
+      "faqs": [
+        {
+          "question": "Can I generate unique numbers?",
+          "answer": "Yes, as long as the requested quantity is not larger than the number of available values in the range."
+        },
+        {
+          "question": "What is the maximum quantity?",
+          "answer": "The quantity field is limited to 1000 generated integers."
+        },
+        {
+          "question": "Is this suitable for passwords or security keys?",
+          "answer": "No. Use a dedicated security tool for secrets, passwords, tokens, or keys."
+        },
+        {
+          "question": "Can I reproduce the same sequence later?",
+          "answer": "No. This version does not include a repeatable seed option."
+        }
+      ]
     },
     "text-reverser": {
       "name": "Text Reverser",
@@ -15099,9 +15116,9 @@
     },
     "paraphrase-tool": {
       "name": "Paraphrase Tool",
-      "description": "Rewrite text in different styles while keeping the meaning.",
-      "seo_title": "Free Paraphrase Tool Online - Text Rewriter",
-      "seo_description": "Paraphrase and rewrite text online for free. Multiple writing styles available.",
+      "description": "Draft alternate wording with local synonym replacement and style presets.",
+      "seo_title": "Free Paraphrase Tool Online",
+      "seo_description": "Paste text, choose a style, and get a browser-side synonym-based draft. Review the result before publishing.",
       "enterText": "Enter Text to Paraphrase",
       "paraphrase": "Paraphrase",
       "style": "Writing Style",
@@ -15112,20 +15129,19 @@
       "simplified": "Simplified",
       "result": "Paraphrased Text",
       "originalText": "Original Text",
-      "detailed_description": "The Paraphrase Tool leverages advanced natural language processing (NLP) algorithms to semantically restructure text while preserving core intent and factual integrity. By employing transformer-based models (e.g., BERT, T5) for contextual understanding, the tool analyzes syntactic patterns, identifies semantic relationships between entities, and generates alternative phrasings through a multi-step process: first tokenizing input text, then applying part-of-speech tagging and dependency parsing to deconstruct sentence architecture. Users benefit from specialized modes like 'Academic Rewriting' for plagiarism avoidance in research papers, 'Audience Adaptation' to modify technical complexity for specific demographics, and 'SEO Optimization' that strategically incorporates keyword variations without compromising readability. The tool's unique 'Context Lock' feature ensures critical terminology remains unchanged during paraphrasing, crucial for maintaining domain-specific accuracy in fields like legal documentation or medical literature. Technical implementation includes beam search algorithms for optimal synonym selection and discourse coherence modeling to maintain logical flow across rewritten paragraphs.",
+      "detailed_description": "The Paraphrase Tool helps create a quick draft of alternate wording. Paste text, choose formal, casual, simple, or creative style, then run the paraphrase action. The current version works locally in the browser with a built-in synonym list for common English words and a few contraction rules such as do not and cannot. It is not a language model and does not understand meaning like a writing assistant, so every result should be reviewed before use.",
       "usage_steps": [
-        "Open the tool and paste unstructured text into the primary editing pane (labeled 'Input Text')",
-        "Select a rewriting mode from the dropdown menu: Options include 'Creative Restructuring', 'Formal Synonym Replacement', or 'Technical Simplification'",
-        "Adjust the 'Complexity Slider' to specify output sophistication level (0-100 scale affecting lexical density and sentence length)",
-        "Enable 'Keyword Preservation' toggle to lock specific terms that must remain unchanged",
-        "Click 'Generate Paraphrase' to initiate the multi-pass rewriting algorithm",
-        "Review side-by-side comparison of original and rewritten text in the split-view interface before exporting"
+        "Paste the source text into the input box.",
+        "Choose a style: formal, casual, simple, or creative.",
+        "Click Paraphrase to generate a draft result.",
+        "Read the output carefully and edit it as needed.",
+        "Copy the result only after you have checked the wording."
       ],
       "usage_examples": [
-        "A graduate student rewording methodology sections in a thesis to ensure originality while maintaining scientific precision",
-        "A technical writer converting API documentation from developer-centric language to executive-friendly summaries",
-        "A content strategist adapting blog posts for different regional dialects (e.g., US vs. UK English) without losing SEO value",
-        "A patent attorney restructuring legal claims to avoid prior art overlaps while preserving technical specifications"
+        "Try a more formal version of a short English product description.",
+        "Make a draft email sentence simpler before editing it by hand.",
+        "Compare alternate wording for a note or documentation sentence.",
+        "Replace some common words with synonyms, then polish the text manually."
       ],
       "selectStyle": "Select Style",
       "paraphrasedText": "Paraphrased Text",
@@ -15133,7 +15149,25 @@
       "tip1": "Different styles produce different results",
       "tip2": "The tool uses synonym replacement",
       "tip3": "Review the output for accuracy",
-      "simple": "Simple"
+      "simple": "Simple",
+      "faqs": [
+        {
+          "question": "Is this AI paraphrasing?",
+          "answer": "No. It uses local synonym replacement and a few simple contraction rules."
+        },
+        {
+          "question": "Which language works best?",
+          "answer": "The interface is localized, but the current synonym list works best with English words."
+        },
+        {
+          "question": "Does it preserve the original meaning?",
+          "answer": "It can change individual words, but it does not reason about meaning. Always review the result manually."
+        },
+        {
+          "question": "Is my text sent to a server?",
+          "answer": "No. The paraphrasing step runs in the browser."
+        }
+      ]
     },
     "graphql-formatter": {
       "name": "GraphQL Formatter",
@@ -19790,21 +19824,21 @@
     },
     "sql-query-optimizer": {
       "name": "SQL Query Optimizer",
-      "description": "Analyze and optimize SQL queries for better performance",
+      "description": "Review SQL text for common performance and safety issues.",
       "seo_title": "Free SQL Query Optimizer Online - Performance Tips | U2Tool",
-      "seo_description": "Optimize SQL queries for better performance. Get index suggestions, query rewrites.",
-      "detailed_description": "SQL Query Optimizer analyzes your SQL queries and provides optimization suggestions for better performance.",
+      "seo_description": "Review SQL text for SELECT *, missing WHERE clauses, LIKE patterns, index fields, and formatting tips. Static browser-side SQL helper.",
+      "detailed_description": "SQL Query Optimizer gives a quick browser-side review of a SQL statement. Paste a query or load the example to get a score, formatted SQL, and practical suggestions for common patterns such as SELECT *, unbounded SELECT results, UPDATE or DELETE without WHERE, leading-wildcard LIKE filters, functions in WHERE clauses, OR-heavy filters, and columns that may deserve index review. It is a static helper, not a database EXPLAIN plan or a replacement for testing against your real schema and data.",
       "usage_steps": [
-        "Paste SQL query",
-        "Select database type",
-        "Click Optimize",
-        "View suggestions",
-        "Apply changes"
+        "Paste a SQL statement into the editor or click Load Example.",
+        "Review the performance score that appears automatically.",
+        "Read each warning, improvement, or info suggestion.",
+        "Compare the formatted query output with your original SQL.",
+        "Copy the formatted query and test any changes in your own database environment."
       ],
       "usage_examples": [
-        "Optimize slow SELECT",
-        "Get index recommendations",
-        "Rewrite subqueries"
+        "Spot a SELECT * query before it reaches a production API endpoint.",
+        "Catch a DELETE statement that is missing a WHERE clause.",
+        "Notice when LOWER(email) in a WHERE filter may prevent a normal index from helping."
       ],
       "input": "Input",
       "output": "Output",

@@ -2839,27 +2839,44 @@
     },
     "random-generator": {
       "name": "Zufallszahlengenerator",
-      "description": "Generiere zufällige Zahlen innerhalb eines angegebenen Bereichs, mit Massenerzeugung und einzigartigen Optionen.",
-      "seo_title": "Kostenloser Online-Zufallszahlengenerator",
-      "seo_description": "Erzeugen Sie zufällige Zahlen in Echtzeit mit diesem Zufallszahlengenerator und definieren Sie Bereich sowie Anzahl direkt online.",
-      "detailed_description": "Der Random Number Generator ist ein präzises Instrument zur algorithmischen Erzeugung gleichmäßig verteilter Zufallszahlen innerhalb benutzerdefinierter Grenzen. Technisch basiert das Tool auf kryptografisch sicheren Pseudo-Zufallszahlengeneratoren (CSPRNG), die in JavaScript implementiert sind und die Web Crypto API nutzen, um deterministische Ergebnisse mit hoher Entropie zu gewährleisten. Nutzer können den Wertebereich (min/max) definieren, die Anzahl der zu generierenden Werte festlegen und optional Duplikate ausschließen, wodurch der Generator eine Permutationsmatrix erstellt. Die Bulk-Generierung erfolgt durch iterative Aufrufe des Mersenne-Twister-Algorithmus, der für seine Ausgewogenheit zwischen Geschwindigkeit und statistischer Qualität bekannt ist. Entwickler benötigen dieses Tool für Szenarien wie z.B. die Erstellung von Testdaten mit spezifischen Verteilungseigenschaften, Simulationen von Wahrscheinlichkeitsverteilungen oder die Erzeugung eindeutiger Identifikatoren ohne Kollisionen. Im Vergleich zu Standard-Zufallsgeneratoren bietet dieser Generator zusätzliche Kontrolle über die statistischen Eigenschaften der Ausgabe durch anpassbare Seed-Werte und eine deterministische Wiederholbarkeit der Ergebnisse.",
+      "description": "Generiere zufällige Ganzzahlen in einem eigenen Bereich, optional ohne Duplikate.",
+      "seo_title": "Kostenloser Zufallszahlengenerator online",
+      "seo_description": "Erzeuge bis zu 1000 zufällige Ganzzahlen in einem Bereich, optional eindeutig, und kopiere die Liste im Browser.",
+      "detailed_description": "Der Zufallszahlengenerator erstellt ganze Zahlen innerhalb eines Bereichs, den du festlegst. Gib Mindestwert, Höchstwert und Menge ein und erzeuge bis zu 1000 Ergebnisse. Aktiviere eindeutige Werte, wenn keine Zahl doppelt vorkommen soll und der Bereich groß genug ist. Die Ergebnisse erscheinen direkt auf der Seite und können als einfache Liste kopiert werden. Das Tool eignet sich für Spiele, Unterricht, einfache Testdaten, Verlosungen und schnelle Stichproben. Es erzeugt keine Dezimalzahlen, UUIDs, wiederholbaren Startwerte, strukturierten Exportdateien oder sicherheitskritische Zufallswerte.",
       "usage_steps": [
-        "Rufen Sie die Tool-Seite unter /generators/random-generator auf.",
-        "Geben Sie im Eingabefeld 'Minimum' den Startwert des gewünschten Zahlenbereichs ein (z.B. 100).",
-        "Legen Sie im Feld 'Maximum' den Obergrenzenwert fest (z.B. 999).",
-        "Aktivieren Sie die Checkbox 'Einzigartige Werte', um Duplikate zu vermeiden, falls erforderlich.",
-        "Geben Sie im Zahlenfeld 'Anzahl' die gewünschte Menge an Zufallszahlen ein (maximal 10.000).",
-        "Klicken Sie auf 'Generieren', um das Ergebnis im Textbereich anzuzeigen oder als CSV-Datei herunterzuladen."
+        "Gib den Mindestwert und Höchstwert des Bereichs ein.",
+        "Wähle die gewünschte Anzahl von Zahlen, maximal 1000.",
+        "Aktiviere Eindeutige Werte, wenn Duplikate vermieden werden sollen.",
+        "Klicke auf Generieren, um die Zahlen anzuzeigen.",
+        "Nutze Kopieren, um die Ergebnisliste in die Zwischenablage zu übernehmen."
       ],
       "usage_examples": [
-        "Ein Data Scientist generiert 1000 eindeutige Test-IDs für eine klinische Studie mit strengen Randomisierungsanforderungen.",
-        "Ein Spieleentwickler erstellt zehntausend unterschiedliche Lootbox-Codes mit 8-stelligen Zahlen für ein MMORPG.",
-        "Ein Kryptografie-Student vergleicht die Verteilungsmuster von CSPRNG- versus Mersenne-Twister-Ausgaben bei 1 Million Iterationen.",
-        "Ein Lehrer erzeugt 30 individuelle Klausurcodes für Studierende, die über ein LMS-System verteilt werden."
+        "Eine Zahl zwischen 1 und 100 für ein Spiel oder eine Unterrichtsaktivität ziehen.",
+        "20 eindeutige Teilnehmernummern für eine einfache Auslosung erzeugen.",
+        "Einfache Ganzzahlen als Testwerte für eine Tabelle erstellen.",
+        "Eine kurze Zahlenliste schnell in ein Dokument kopieren."
       ],
       "min": "min",
       "max": "max",
-      "unique": "unique"
+      "unique": "unique",
+      "faqs": [
+        {
+          "question": "Kann ich eindeutige Zahlen erzeugen?",
+          "answer": "Ja, solange die gewünschte Menge nicht größer ist als die Anzahl verfügbarer Werte im Bereich."
+        },
+        {
+          "question": "Wie viele Zahlen kann ich maximal erzeugen?",
+          "answer": "Das Mengenfeld ist auf 1000 Ergebnisse begrenzt."
+        },
+        {
+          "question": "Ist das für Passwörter oder Schlüssel geeignet?",
+          "answer": "Nein. Für Geheimnisse, Passwörter oder Schlüssel solltest du ein spezielles Sicherheitstool verwenden."
+        },
+        {
+          "question": "Kann ich dieselbe Folge später reproduzieren?",
+          "answer": "Nein. Diese Version bietet keinen wiederholbaren Startwert."
+        }
+      ]
     },
     "text-reverser": {
       "name": "Text Reverser",
@@ -15211,9 +15228,9 @@
     },
     "paraphrase-tool": {
       "name": "Paraphrasierungs-Tool",
-      "description": "Schreiben Sie Text in verschiedenen Stilen um und behalten Sie die Bedeutung bei.",
-      "seo_title": "Kostenloses Online-Paraphrasierungs-Tool",
-      "seo_description": "Formulieren Sie mit diesem Paraphrasierungs-Tool Texte in verschiedenen Schreibstilen direkt online neu.",
+      "description": "Erstelle Textentwürfe mit lokaler Synonym-Ersetzung und Stiloptionen.",
+      "seo_title": "Kostenloses Paraphrase-Tool online",
+      "seo_description": "Füge Text ein, wähle einen Stil und erhalte einen browserseitigen Entwurf mit Synonymen. Prüfe das Ergebnis vor der Nutzung.",
       "enterText": "Text zum Paraphrasieren eingeben",
       "paraphrase": "Paraphrasieren",
       "style": "Schreibstil",
@@ -15224,20 +15241,19 @@
       "simplified": "Vereinfacht",
       "result": "Paraphrasierter Text",
       "originalText": "Originaltext",
-      "detailed_description": "Der Paraphrase-Tool nutzt fortschrittliche NLP-Algorithmen zur semantischen Umstrukturierung von Texten. Technisch basiert er auf Transformer-Modellen, die durch kontextuelle Embedding-Verfahren wie BERT kontextsensitive Synonymersetzung und Satzrestrukturierung ermöglichen. Der Tool analysiert die syntaktische Struktur des Eingabetextes, identifiziert semantisch redundante Phrasen und generiert alternative Formulierungen durch Permutationsmatrizen, wobei die koreferenzielle Kohärenz erhalten bleibt. Benutzer benötigen diesen Tool für präzise Textmodifikationen bei wissenschaftlichen Arbeiten, um Plagiate zu vermeiden, oder für die Optimierung von SEO-Inhalten durch diversifizierte Keyword-Phrasierung. Ein weiterer Anwendungsfall liegt in der sprachlichen Adaptation von Fachtexten für unterschiedliche Zielgruppen (z.B. medizinische Inhalte für Laien). Der Prozess erfolgt in drei Stufen: Tokenisierung, kontextuelle Disambiguierung und Generierung durch beam search-Optimierung, wobei Nutzer individuelle Parameter wie Formalitätsgrad oder Vokabularkomplexität anpassen können.",
+      "detailed_description": "Das Paraphrase-Tool erstellt schnell einen alternativen Formulierungsentwurf. Füge Text ein, wähle formell, locker, einfach oder kreativ und starte die Umformulierung. Die aktuelle Version arbeitet lokal im Browser mit einer eingebauten Synonymliste für häufige englische Wörter sowie einigen Regeln für Kurzformen. Es ist kein Sprachmodell und versteht Bedeutung nicht wie ein Schreibassistent, deshalb sollte jedes Ergebnis vor der Veröffentlichung manuell geprüft werden.",
       "usage_steps": [
-        "1. Einfügen des Originaltexts in das mehrzeilige Eingabefeld unterhalb der Registerkarte 'Quelltext'.",
-        "2. Auswahl des gewünschten Paraphrasemodus (akademisch, kreativ, technisch) über die Schaltfläche 'Stilvorlage'.",
-        "3. Anpassen des Synonymdichte-Schiebereglers zwischen 30% und 80% je nach gewünschter Textdiversität.",
-        "4. Aktivieren der 'Deep Restructure'-Option für komplexe Satzumstellungen im erweiterten Modus.",
-        "5. Klicken auf 'Generieren' und visuelles Vergleichen der Ergebnisse in der geteilten Oberfläche mit Farbmarkierungen für Änderungen.",
-        "6. Exportieren des bearbeiteten Textes im gewünschten Format (TXT, DOCX, LaTeX) über die Download-Schaltfläche."
+        "Füge den Ausgangstext in das Eingabefeld ein.",
+        "Wähle einen Stil: formell, locker, einfach oder kreativ.",
+        "Klicke auf Paraphrasieren, um einen Entwurf zu erzeugen.",
+        "Lies die Ausgabe sorgfältig und bearbeite sie bei Bedarf.",
+        "Kopiere das Ergebnis erst nach deiner Prüfung."
       ],
       "usage_examples": [
-        "Ein Wissenschaftler paraphrasiert Methodenbeschreibungen, um die Textoriginalität für eine Fachzeitschrift zu erhöhen, während die terminologische Präzision erhalten bleibt.",
-        "Ein Content-Marketer transformiert Produktbeschreibungen für verschiedene Zielgruppen durch Anpassung des Formalitätsniveaus und Integration spezifischer Branchenbegriffe.",
-        "Ein Softwareentwickler vereinfacht technische Dokumentation für Einsteiger durch kontextuelle Umsetzung komplexer Begriffe in alltägliche Sprache.",
-        "Ein Student vermeidet versehentliches Plagiat in Hausarbeiten durch strukturelle Umformulierung von Zitaten mit Erhaltung des wissenschaftlichen Kontextes."
+        "Eine kurze englische Produktbeschreibung formeller formulieren.",
+        "Einen E-Mail-Satz vereinfachen, bevor du ihn manuell überarbeitest.",
+        "Alternative Formulierungen für eine Notiz oder Dokumentation vergleichen.",
+        "Einige häufige Wörter durch Synonyme ersetzen und den Text danach polieren."
       ],
       "selectStyle": "Stil auswählen",
       "paraphrasedText": "Paraphrased Text",
@@ -15245,7 +15261,25 @@
       "tip1": "Verschiedene Stile erzeugen verschiedene Ergebnisse",
       "tip2": "Das Tool verwendet Synonymersetzung",
       "tip3": "Überprüfen Sie die Ausgabe auf Genauigkeit",
-      "simple": "Simple"
+      "simple": "Simple",
+      "faqs": [
+        {
+          "question": "Ist das KI-Paraphrasierung?",
+          "answer": "Nein. Das Tool nutzt lokale Synonym-Ersetzung und einige einfache Regeln für Kurzformen."
+        },
+        {
+          "question": "Welche Sprache funktioniert am besten?",
+          "answer": "Die Oberfläche ist lokalisiert, aber die aktuelle Synonymliste funktioniert am besten mit englischen Wörtern."
+        },
+        {
+          "question": "Bleibt die ursprüngliche Bedeutung erhalten?",
+          "answer": "Das Tool kann einzelne Wörter ersetzen, bewertet aber keine Bedeutung. Prüfe das Ergebnis immer manuell."
+        },
+        {
+          "question": "Wird mein Text an einen Server gesendet?",
+          "answer": "Nein. Die Umformulierung läuft im Browser."
+        }
+      ]
     },
     "graphql-formatter": {
       "name": "GraphQL-Formatierer",

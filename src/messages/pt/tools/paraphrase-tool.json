@@ -1,17 +1,34 @@
 {
-  "detailed_description": "O Paraphrase Tool é uma solução avançada baseada em técnicas de processamento de linguagem natural (NLP) que reescreve textos aplicando transformações semânticas e sintáticas enquanto preserva o significado original. Seu algoritmo utiliza modelos de transformer pré-treinados em múltiplos idiomas, combinados com estratégias de diversificação léxica e reestruturação gramatical dinâmica. A ferramenta emprega análise de dependência sintática para identificar relações entre palavras e vetores de contexto semântico para substituir termos por sinônimos apropriados ao campo semântico do texto. Além disso, implementa ajuste adaptativo de complexidade linguística, permitindo reescrever conteúdos para diferentes níveis de leitura. Este recurso é essencial para profissionais que necessitam de variação textual em contextos acadêmicos (evitando autoplágio), marketing digital (otimização de conteúdo para SEO) e desenvolvimento de documentação técnica (criação de explicações alternativas para conceitos complexos). Sua arquitetura híbrida combina aprendizado profundo com regras linguísticas específicas do português brasileiro, garantindo precisão em construções como regência verbal, concordância e uso de conectivos.",
+  "detailed_description": "A ferramenta de paráfrase ajuda a criar rapidamente um rascunho com uma formulação alternativa. Cole o texto, escolha o estilo formal, casual, simples ou criativo e execute a paráfrase. A versão atual funciona localmente no navegador com uma lista integrada de sinônimos para palavras comuns em inglês e algumas regras de contração. Ela não é um modelo de linguagem e não entende significado como um assistente de escrita, por isso todo resultado deve ser revisado manualmente antes do uso.",
   "usage_steps": [
-    "Cole o texto no campo 'Texto Original' com até 5000 caracteres",
-    "Selecione o nível de transformação no seletor deslizante: 'Leve', 'Moderado' ou 'Agresivo'",
-    "Ative/desative a opção 'Manter termos técnicos' para preservar jargões específicos",
-    "Escolha o estilo desejado no dropdown: 'Acadêmico', 'Coloquial', 'Técnico' ou 'Criativo'",
-    "Ajuste o parâmetro 'Densidade Léxica' para controlar a proporção de sinônimos utilizados",
-    "Clique em 'Gerar Paráfrase' e revise as sugestões no painel de resultados com comparação side-by-side"
+    "Cole o texto original no campo de entrada.",
+    "Escolha um estilo: formal, casual, simples ou criativo.",
+    "Clique em Parafrasear para gerar um rascunho.",
+    "Leia a saída com atenção e edite se necessário.",
+    "Copie o resultado apenas depois de revisar."
   ],
   "usage_examples": [
-    "Um estudante reescreve partes de seu TCC para evitar repetição de estruturas em diferentes capítulos",
-    "Um profissional de marketing adapta descrições de produtos para criar variações de landing pages otimizadas para diferentes palavras-chave",
-    "Um desenvolvedor documenta a mesma API em estilos técnico-formal e informal para diferentes públicos-alvo",
-    "Um tradutor ajusta textos traduzidos automaticamente para naturalizar expressões idiomáticas em português do Brasil"
+    "Testar uma versão mais formal de uma breve descrição em inglês.",
+    "Simplificar uma frase de e-mail antes de editar manualmente.",
+    "Comparar alternativas para uma nota ou documentação.",
+    "Trocar algumas palavras comuns por sinônimos e depois polir o texto."
+  ],
+  "faqs": [
+    {
+      "question": "É paráfrase com IA?",
+      "answer": "Não. A ferramenta usa troca local de sinônimos e algumas regras simples para contrações."
+    },
+    {
+      "question": "Qual idioma funciona melhor?",
+      "answer": "A interface é localizada, mas a lista atual de sinônimos funciona melhor com palavras em inglês."
+    },
+    {
+      "question": "O significado original é preservado?",
+      "answer": "Ela pode trocar palavras individuais, mas não raciocina sobre o significado. Sempre revise manualmente."
+    },
+    {
+      "question": "Meu texto é enviado para um servidor?",
+      "answer": "Não. A paráfrase roda no navegador."
+    }
   ]
 }

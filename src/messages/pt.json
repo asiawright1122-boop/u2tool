@@ -2831,27 +2831,44 @@
     },
     "random-generator": {
       "name": "Gerador de Números Aleatórios",
-      "description": "Gerar números aleatórios dentro de um intervalo especificado, com geração em massa e opções únicas.",
-      "seo_title": "Gerador de Números Aleatórios Online Grátis - Ferramenta Versátil",
-      "seo_description": "Gere números aleatórios personalizados em lote com opções únicas. Nossa ferramenta online gratuita facilita sua tarefa. Comece agora!",
-      "detailed_description": "O Gerador de Números Aleatórios é uma ferramenta técnica projetada para produzir valores numéricos não previsíveis dentro de parâmetros definidos, utilizando algoritmos de geração pseudoaleatória (PRNG) ou métodos baseados em entropia criptográfica. O usuário pode especificar intervalos personalizados (mínimo/máximo), optar por geração única ou em lote (até 10.000 números simultâneos) e garantir exclusividade nos resultados via verificação de duplicatas. A ferramenta é essencial para desenvolvedores que precisam de dados para testes estatísticos, simulações de Monte Carlo, geração de seeds para criptografia, ou criação de identificadores temporários. Internamente, o sistema utiliza uma função de distribuição uniforme discreta, com opção de semente (seed) customizável para reprodutibilidade. Os resultados são exportáveis em formatos estruturados como JSON ou CSV, ideal para integração em pipelines de análise ou ambientes de desenvolvimento.",
+      "description": "Gere inteiros aleatórios em um intervalo personalizado, com opção de valores únicos.",
+      "seo_title": "Gerador de números aleatórios grátis online",
+      "seo_description": "Gere até 1000 inteiros aleatórios em um intervalo, evite duplicados se quiser e copie a lista no navegador.",
+      "detailed_description": "O Gerador de Números Aleatórios cria inteiros dentro do intervalo que você define. Informe valor mínimo, valor máximo e quantidade para gerar até 1000 resultados. A opção de valores únicos evita duplicados quando o intervalo tem números suficientes. Os resultados aparecem na página e podem ser copiados como uma lista de texto simples. A ferramenta é útil para jogos, atividades de aula, dados de teste, sorteios simples e amostras rápidas. Ela não oferece decimais, UUID, semente repetível, exportações estruturadas ou aleatoriedade para usos de segurança.",
       "usage_steps": [
-        "Acesse a interface web e defina os valores mínimo e máximo nos campos numéricos 'De' e 'Até'.",
-        "Marque a opção 'Únicos' se necessitar de valores não repetidos ou 'Bulk' para geração em massa.",
-        "Insira a quantidade desejada de números no campo 'Quantidade' (máximo 10.000).",
-        "Escolha o formato de saída no seletor: 'JSON', 'CSV' ou 'Lista Simples'.",
-        "Clique no botão 'Gerar' para executar o algoritmo de aleatorização baseado em semente criptográfica.",
-        "Copie o resultado gerado na seção 'Saída' ou faça download do arquivo via botão 'Exportar'."
+        "Digite o valor mínimo e o valor máximo do intervalo.",
+        "Escolha quantos números gerar, até 1000.",
+        "Ative valores únicos se quiser evitar duplicados.",
+        "Clique em Gerar para mostrar os números.",
+        "Use Copiar para levar a lista ao clipboard."
       ],
       "usage_examples": [
-        "Criar um conjunto de 500 IDs únicos para simular registros de usuários em um banco de dados de teste.",
-        "Gerar 20 códigos promocionais aleatórios de 6 dígitos para campanhas de marketing.",
-        "Simular lançamentos de dados de 1000 jogadas para análise de probabilidade em um projeto acadêmico.",
-        "Produzir senhas temporárias de 8 números para autenticação em sistemas de acesso restrito."
+        "Escolher um número entre 1 e 100 para um jogo ou atividade.",
+        "Criar 20 números únicos para distribuir participantes.",
+        "Gerar valores de teste simples para uma planilha.",
+        "Copiar rapidamente uma lista curta de inteiros para um documento."
       ],
       "min": "min",
       "max": "max",
-      "unique": "unique"
+      "unique": "unique",
+      "faqs": [
+        {
+          "question": "Posso gerar números únicos?",
+          "answer": "Sim, desde que a quantidade solicitada não ultrapasse os valores disponíveis no intervalo."
+        },
+        {
+          "question": "Qual é a quantidade máxima?",
+          "answer": "O campo de quantidade é limitado a 1000 resultados."
+        },
+        {
+          "question": "Serve para senhas ou chaves de segurança?",
+          "answer": "Não. Use uma ferramenta de segurança dedicada para segredos, senhas ou chaves."
+        },
+        {
+          "question": "Posso repetir a mesma sequência depois?",
+          "answer": "Não. Esta versão não inclui uma semente repetível."
+        }
+      ]
     },
     "text-reverser": {
       "name": "Reversor de Texto",
@@ -15221,9 +15238,9 @@
     },
     "paraphrase-tool": {
       "name": "Ferramenta de Paráfrase",
-      "description": "Reescreve texto em diferentes estilos mantendo o significado.",
-      "seo_title": "Ferramenta de paráfrase online grátis - reescreva textos",
-      "seo_description": "Redija textos de diferentes estilos mantendo o significado original. Use nossa ferramenta online gratuita para melhorar a visibilidade do seu conteúdo. Tente agora!",
+      "description": "Crie rascunhos alternativos com troca local de sinônimos e estilos.",
+      "seo_title": "Ferramenta de paráfrase grátis online",
+      "seo_description": "Cole um texto, escolha um estilo e receba um rascunho baseado em sinônimos no navegador. Revise antes de usar.",
       "enterText": "Digite Texto para Parafrasear",
       "paraphrase": "Parafrasear",
       "style": "Estilo de Escrita",
@@ -15234,20 +15251,19 @@
       "simplified": "Simplificado",
       "result": "Texto Parafraseado",
       "originalText": "Texto Original",
-      "detailed_description": "O Paraphrase Tool é uma solução avançada baseada em técnicas de processamento de linguagem natural (NLP) que reescreve textos aplicando transformações semânticas e sintáticas enquanto preserva o significado original. Seu algoritmo utiliza modelos de transformer pré-treinados em múltiplos idiomas, combinados com estratégias de diversificação léxica e reestruturação gramatical dinâmica. A ferramenta emprega análise de dependência sintática para identificar relações entre palavras e vetores de contexto semântico para substituir termos por sinônimos apropriados ao campo semântico do texto. Além disso, implementa ajuste adaptativo de complexidade linguística, permitindo reescrever conteúdos para diferentes níveis de leitura. Este recurso é essencial para profissionais que necessitam de variação textual em contextos acadêmicos (evitando autoplágio), marketing digital (otimização de conteúdo para SEO) e desenvolvimento de documentação técnica (criação de explicações alternativas para conceitos complexos). Sua arquitetura híbrida combina aprendizado profundo com regras linguísticas específicas do português brasileiro, garantindo precisão em construções como regência verbal, concordância e uso de conectivos.",
+      "detailed_description": "A ferramenta de paráfrase ajuda a criar rapidamente um rascunho com uma formulação alternativa. Cole o texto, escolha o estilo formal, casual, simples ou criativo e execute a paráfrase. A versão atual funciona localmente no navegador com uma lista integrada de sinônimos para palavras comuns em inglês e algumas regras de contração. Ela não é um modelo de linguagem e não entende significado como um assistente de escrita, por isso todo resultado deve ser revisado manualmente antes do uso.",
       "usage_steps": [
-        "Cole o texto no campo 'Texto Original' com até 5000 caracteres",
-        "Selecione o nível de transformação no seletor deslizante: 'Leve', 'Moderado' ou 'Agresivo'",
-        "Ative/desative a opção 'Manter termos técnicos' para preservar jargões específicos",
-        "Escolha o estilo desejado no dropdown: 'Acadêmico', 'Coloquial', 'Técnico' ou 'Criativo'",
-        "Ajuste o parâmetro 'Densidade Léxica' para controlar a proporção de sinônimos utilizados",
-        "Clique em 'Gerar Paráfrase' e revise as sugestões no painel de resultados com comparação side-by-side"
+        "Cole o texto original no campo de entrada.",
+        "Escolha um estilo: formal, casual, simples ou criativo.",
+        "Clique em Parafrasear para gerar um rascunho.",
+        "Leia a saída com atenção e edite se necessário.",
+        "Copie o resultado apenas depois de revisar."
       ],
       "usage_examples": [
-        "Um estudante reescreve partes de seu TCC para evitar repetição de estruturas em diferentes capítulos",
-        "Um profissional de marketing adapta descrições de produtos para criar variações de landing pages otimizadas para diferentes palavras-chave",
-        "Um desenvolvedor documenta a mesma API em estilos técnico-formal e informal para diferentes públicos-alvo",
-        "Um tradutor ajusta textos traduzidos automaticamente para naturalizar expressões idiomáticas em português do Brasil"
+        "Testar uma versão mais formal de uma breve descrição em inglês.",
+        "Simplificar uma frase de e-mail antes de editar manualmente.",
+        "Comparar alternativas para uma nota ou documentação.",
+        "Trocar algumas palavras comuns por sinônimos e depois polir o texto."
       ],
       "selectStyle": "Selecionar estilo",
       "paraphrasedText": "Paraphrased Text",
@@ -15255,7 +15271,25 @@
       "tip1": "Estilos diferentes produzem resultados diferentes",
       "tip2": "A ferramenta usa substituição de sinônimos",
       "tip3": "Revise a saída para verificar a precisão",
-      "simple": "Simple"
+      "simple": "Simple",
+      "faqs": [
+        {
+          "question": "É paráfrase com IA?",
+          "answer": "Não. A ferramenta usa troca local de sinônimos e algumas regras simples para contrações."
+        },
+        {
+          "question": "Qual idioma funciona melhor?",
+          "answer": "A interface é localizada, mas a lista atual de sinônimos funciona melhor com palavras em inglês."
+        },
+        {
+          "question": "O significado original é preservado?",
+          "answer": "Ela pode trocar palavras individuais, mas não raciocina sobre o significado. Sempre revise manualmente."
+        },
+        {
+          "question": "Meu texto é enviado para um servidor?",
+          "answer": "Não. A paráfrase roda no navegador."
+        }
+      ]
     },
     "graphql-formatter": {
       "name": "Formatador GraphQL",

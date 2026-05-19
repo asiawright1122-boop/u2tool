@@ -1923,6 +1923,105 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks French Image Resizer unsupported modes and export claims', () => {
+    const report = assessSupportContentTrust({
+      slug: 'image-resizer',
+      locale: 'fr',
+      name: "Redimensionneur d'image",
+      description: '',
+      detailedDescription:
+        "Choisissez le mode de redimensionnement Pourcentage ou Ratio, puis exportez en JPEG, WebP, GIF ou BMP.",
+      usageSteps: ['Activez le traitement par lot et le réglage de qualité avant export multi-format.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'image-resizer-unsupported-mode-export-claim'
+    );
+  });
+
+  it('blocks French Random Generator seed, export, and security claims', () => {
+    const report = assessSupportContentTrust({
+      slug: 'random-generator',
+      locale: 'fr',
+      name: 'Générateur de nombres aléatoires',
+      description: '',
+      detailedDescription:
+        'Basé sur Mersenne Twister avec une graine reproductible pour Monte Carlo et jetons de sécurité.',
+      usageSteps: ['Exportez les résultats en CSV, JSON ou XML pour des clés de chiffrement.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'random-generator-unsupported-seed-export-security-claim'
+    );
+  });
+
+  it('blocks Russian Paraphrase Tool AI and semantic rewriting claims', () => {
+    const report = assessSupportContentTrust({
+      slug: 'paraphrase-tool',
+      locale: 'ru',
+      name: 'Инструмент перефразирования',
+      description: '',
+      detailedDescription:
+        'Использует BERT, transformer и глубокого обучения для семантического SEO-контент перефразирования.',
+      usageSteps: [
+        'Вставьте Markdown, выберите уровень перефразирования и получите 3-х альтернатив через сравнительный режим.',
+      ],
+      usageExamples: ['Проверьте антиплагиат через индекс косинусн сходства.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'paraphrase-tool-unsupported-ai-semantic-claim'
+    );
+  });
+
+  it('blocks SQL Query Optimizer database-specific rewrite claims', () => {
+    const report = assessSupportContentTrust({
+      slug: 'sql-query-optimizer',
+      locale: 'en',
+      name: 'SQL Query Optimizer',
+      description: '',
+      detailedDescription:
+        'Select database type to get database-specific rewrite guidance for each SQL engine.',
+      usageSteps: ['Click Optimize to rewrite subqueries and verify indexes for guaranteed faster queries.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'sql-query-optimizer-unsupported-database-rewrite-claim'
+    );
+  });
+
+  it('blocks Spanish Countdown Days Calculator calendar and export claims', () => {
+    const report = assessSupportContentTrust({
+      slug: 'countdown-days-calculator',
+      locale: 'es',
+      name: 'Calculadora de Días de Cuenta Regresiva',
+      description: '',
+      detailedDescription:
+        'Calcula días laborables, fines de semana, festivos, zona horaria UTC/GMT y horario de verano con precisión del 100%.',
+      usageSteps: [
+        "Introduce DD/MM/YYYY o descripciones textuales como 'próximo lunes', luego usa Copiar al Portapapeles para exportar JSON o CSV.",
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'countdown-days-unsupported-calendar-export-claim'
+    );
+  });
+
   it('blocks unsupported claims for the document and parser recovery batch', () => {
     const examples = [
       {

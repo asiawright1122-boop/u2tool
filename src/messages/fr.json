@@ -2831,27 +2831,44 @@
     },
     "random-generator": {
       "name": "Générateur de Nombres Aléatoires",
-      "description": "Générer des nombres aléatoires dans un intervalle spécifié, avec une génération en masse et des options uniques.",
-      "seo_title": "Générateur de nombres aléatoires gratuit en ligne",
-      "seo_description": "Créez des nombres aléatoires personnalisés en ligne avec notre outil. Générez en masse et assurez-vous de l'unicité. Commencez dès maintenant !",
-      "detailed_description": "Le générateur de nombres aléatoires est un outil technique conçu pour produire des séquences de valeurs numériques dans des plages définies par l'utilisateur, avec des options avancées pour la génération massive et l'unicité. Basé sur un algorithme hybride combinant des sources d'entropie système et un générateur de nombres pseudo-aléatoires (PRNG) de type Mersenne Twister, il garantit à la fois rapidité et qualité statistique. Les développeurs peuvent spécifier des paramètres précis comme la borne inférieure/supérieure, le nombre d'échantillons souhaités, et activer une vérification d'unicité pour éviter les doublons. La fonctionnalité de graine (seed) permet de reproduire des séquences déterministes, utile pour les tests reproductibles ou les simulations Monte Carlo. Ce outil répond aux besoins critiques de création de jeux de données synthétiques pour tests de charge, d'échantillonnage statistique, de génération de jetons de sécurité, ou de prototypage d'expériences aléatoires en recherche. Sa capacité à exporter en formats structurés (CSV, JSON, XML) le rend compatible avec les workflows d'analyse automatique.",
+      "description": "Générez des entiers aléatoires dans une plage, avec option de valeurs uniques.",
+      "seo_title": "Outil en ligne gratuit pour générer des nombres aléatoires - Random Number Generator",
+      "seo_description": "Générez jusqu'à 1000 entiers aléatoires dans une plage personnalisée, avec option de résultats uniques et copie rapide.",
+      "detailed_description": "Le générateur de nombres aléatoires produit des entiers dans une plage que vous définissez. Saisissez une valeur minimale, une valeur maximale et une quantité, puis générez jusqu'à 1000 résultats. L'option Valeurs uniques évite les doublons lorsque la plage contient assez de nombres disponibles, et le bouton Copier place les résultats dans le presse-papiers. L'outil utilise la génération aléatoire du navigateur pour des tirages simples; il ne fournit pas de graine reproductible, de décimales, de UUID ni de nombres cryptographiquement sûrs.",
       "usage_steps": [
-        "Ajustez les curseurs pour définir la borne minimale et maximale (ex: 1 à 1000)",
-        "Entrez le nombre de valeurs désirées dans le champ 'Quantité'",
-        "Cochez l'option 'Valeurs uniques' pour activer le filtrage des doublons",
-        "Optionnel : Saisissez une valeur de graine personnalisée dans le champ 'Seed'",
-        "Cliquez sur 'Générer' pour exécuter l'algorithme PRNG avec les paramètres sélectionnés",
-        "Sélectionnez le format d'export (CSV, JSON, XML) et téléchargez les résultats"
+        "Entrez la valeur minimale et la valeur maximale de l'intervalle.",
+        "Choisissez combien de nombres générer, jusqu'à 1000.",
+        "Cochez Valeurs uniques si chaque résultat doit être différent.",
+        "Cliquez sur Générer pour afficher les nombres.",
+        "Utilisez Copier pour récupérer la liste dans le presse-papiers."
       ],
       "usage_examples": [
-        "Un développeur génère 1000 identifiants uniques pour tester un système de gestion de tickets avant le déploiement",
-        "Un chercheur en sciences sociales crée un échantillon aléatoire de 200 numéros de téléphone pour une étude démographique",
-        "Un organisateur de concours utilise le mode graine verrouillée pour produire une liste de gagnants 100% reproductible",
-        "Un ingénieur sécurité génère des valeurs aléatoires de 256 bits pour initialiser des clés de chiffrement temporelles"
+        "Tirer un nombre entre 1 et 100 pour un jeu ou une activité de classe.",
+        "Créer une liste de 20 numéros uniques pour répartir des participants.",
+        "Générer des valeurs de test simples pour une feuille de calcul.",
+        "Copier rapidement une série d'entiers dans un document ou un tableur."
       ],
       "min": "min",
       "max": "max",
-      "unique": "unique"
+      "unique": "unique",
+      "faqs": [
+        {
+          "question": "Puis-je générer des nombres uniques ?",
+          "answer": "Oui, si la quantité demandée ne dépasse pas le nombre de valeurs disponibles dans l'intervalle."
+        },
+        {
+          "question": "Quelle est la quantité maximale ?",
+          "answer": "Le champ quantité est limité à 1000 résultats."
+        },
+        {
+          "question": "Est-ce adapté aux mots de passe ou aux clés de sécurité ?",
+          "answer": "Non. Utilisez un générateur cryptographique dédié pour les secrets, mots de passe ou clés."
+        },
+        {
+          "question": "Puis-je définir une graine pour reproduire la même série ?",
+          "answer": "Non. Cette version ne propose pas de seed reproductible."
+        }
+      ]
     },
     "text-reverser": {
       "name": "Inverseur de Texte",
@@ -6391,24 +6408,24 @@
       }
     },
     "image-resizer": {
-      "name": "Redimensionneuse d'Images",
-      "description": "Redimensionnez des images à des dimensions personnalisées.",
+      "name": "Redimensionneur d'image",
+      "description": "Redimensionnez une image en pixels, avec option de ratio verrouillé.",
       "seo_title": "Outil gratuit en ligne pour redimensionner des images",
-      "seo_description": "Redimensionnez vos images en ligne gratuitement. Maintenez le rapport d'aspect ou définissez des dimensions exactes. Formats supportés : PNG, JPEG, WebP. Téléchargement instantané.",
-      "detailed_description": "L'outil Image Resizer est conçu pour redimensionner les images selon des dimensions personnalisées. Il s'adresse principalement aux développeurs, aux designers et à toute personne travaillant avec des images numériques. Ce redimensionnement peut être crucial dans de nombreux scénarios, comme l'optimisation des images pour le web, la création de miniatures, ou l'adaptation d'images à des formats spécifiques. Techniquement, l'outil utilise des algorithmes de rééchantillonnage pour ajuster la taille de l'image tout en préservant la qualité d'origine. Les utilisateurs peuvent spécifier des dimensions précises en pixels, en pourcentage, ou evenement utiliser des options de redimensionnement automatique basées sur des ratios. L'outil prend en charge divers formats de fichiers tels que JPEG, PNG, GIF, et BMP, et offre la possibilité d'exporter les images redimensionnées dans ces mêmes formats ou d'autres, selon les besoins. La facilité d'utilisation, combinée à la flexibilité des paramètres, en fait un outil indispensable pour la manipulation d'images dans des projets numériques.",
+      "seo_description": "Chargez une image, définissez largeur et hauteur en pixels, conservez le ratio si besoin, puis téléchargez le résultat en PNG.",
+      "detailed_description": "Le redimensionneur d'image permet de charger une image, de lire ses dimensions d'origine, puis de saisir une nouvelle largeur et une nouvelle hauteur en pixels. L'option de verrouillage du ratio ajuste automatiquement l'autre dimension pour éviter une déformation accidentelle. Le redimensionnement se fait dans le navigateur avec un canvas, affiche un aperçu du résultat et télécharge l'image redimensionnée en PNG. L'outil ne propose pas de recadrage, de traitement par lot, de réglage de qualité JPEG ou d'export multi-format.",
       "usage_steps": [
-        "Accédez à l'outil Image Resizer via l'URL fournie et chargez votre image en cliquant sur le bouton 'Télécharger une image'.",
-        "Une fois l'image chargée, sélectionnez le mode de redimensionnement en utilisant le menu déroulant 'Mode de redimensionnement'. Les options disponibles incluent 'Largeur et hauteur', 'Pourcentage', et 'Ratio'.",
-        "Si vous avez choisi 'Largeur et hauteur', entrez les valeurs souhaitées en pixels dans les champs 'Nouvelle largeur' et 'Nouvelle hauteur'.",
-        "Si vous avez choisi 'Pourcentage', entrez le pourcentage de redimensionnement dans le champ correspondant.",
-        "Si vous avez choisi 'Ratio', sélectionnez le ratio souhaité dans le menu déroulant 'Ratio'.",
-        "Après avoir configuré les paramètres, cliquez sur le bouton 'Redimensionner' pour appliquer les modifications. L'image redimensionnée sera affichée, et vous pourrez la télécharger en cliquant sur 'Télécharger l'image redimensionnée'."
+        "Cliquez sur la zone de dépôt et choisissez une image depuis votre appareil.",
+        "Vérifiez les dimensions d'origine affichées sous l'aperçu.",
+        "Saisissez la largeur ou la hauteur souhaitée en pixels.",
+        "Gardez l'option de ratio verrouillé si vous voulez conserver les proportions.",
+        "Cliquez sur Redimensionner pour générer l'aperçu, puis téléchargez le PNG redimensionné.",
+        "Utilisez Effacer si vous voulez charger une autre image et recommencer."
       ],
       "usage_examples": [
-        "Un développeur web souhaite optimiser les images d'un site pour améliorer les temps de chargement. Il utilise l'outil Image Resizer pour réduire la taille des images tout en conservant une qualité acceptable.",
-        "Un designer graphique crée des miniatures pour une galerie d'art en ligne. Il redimensionne les images d'art originales en utilisant l'outil pour les adapter à une taille uniforme de 200x200 pixels.",
-        "Un blogueur veut ajouter des images à son article mais les images sont trop grandes. Il utilise l'outil Image Resizer pour les redimensionner à 800 pixels de largeur, la taille maximale recommandée pour son blog.",
-        "Un photographe professionnel prépare des images pour une exposition en ligne. Il utilise l'outil pour redimensionner les images à différentes tailles en fonction des exigences de la plateforme d'exposition, tout en maintenant la qualité originale."
+        "Réduire une grande capture d'écran avant de l'ajouter à un article.",
+        "Créer une miniature carrée en saisissant une largeur et une hauteur identiques.",
+        "Adapter une image à une largeur précise pour une page web.",
+        "Conserver les proportions d'une photo en modifiant seulement la largeur."
       ],
       "imageResizer": {
         "dropzone": "imageResizer.dropzone",
@@ -6420,7 +6437,25 @@
         "resized": "imageResizer.resized"
       },
       "clear": "Effacer",
-      "download": "Télécharger"
+      "download": "Télécharger",
+      "faqs": [
+        {
+          "question": "Le fichier est-il envoyé sur un serveur ?",
+          "answer": "Non. Le chargement, le redimensionnement et l'aperçu se font dans le navigateur."
+        },
+        {
+          "question": "Quel format est téléchargé ?",
+          "answer": "Le résultat est téléchargé en PNG avec le nom contenant les nouvelles dimensions."
+        },
+        {
+          "question": "Puis-je redimensionner plusieurs images à la fois ?",
+          "answer": "Non. Cette page traite une image à la fois."
+        },
+        {
+          "question": "L'outil conserve-t-il automatiquement le ratio ?",
+          "answer": "Oui, si l'option de verrouillage du ratio est cochée. Vous pouvez la décocher pour saisir une largeur et une hauteur indépendantes."
+        }
+      ]
     },
     "ssl-checker": {
       "name": "Vérificateur de Certificat SSL",
@@ -15203,9 +15238,9 @@
     },
     "paraphrase-tool": {
       "name": "Outil de Paraphrase",
-      "description": "Réécrivez le texte dans différents styles tout en gardant le sens.",
-      "seo_title": "Outil de Paraphrase Gratuit en Ligne - Réécriture de Texte",
-      "seo_description": "Paraphrasez et réécrivez du texte gratuitement en ligne. Plusieurs styles d'écriture disponibles.",
+      "description": "Créez un brouillon alternatif avec remplacement local de synonymes et styles.",
+      "seo_title": "Outil de paraphrase gratuit en ligne",
+      "seo_description": "Collez un texte, choisissez un style et obtenez un brouillon basé sur des synonymes dans le navigateur. Relisez avant publication.",
       "enterText": "Entrez le Texte à Paraphraser",
       "paraphrase": "Paraphraser",
       "style": "Style d'Écriture",
@@ -15216,20 +15251,19 @@
       "simplified": "Simplifié",
       "result": "Texte Paraphrasé",
       "originalText": "Texte Original",
-      "detailed_description": "Le Paraphrase Tool est un outil avancé de traitement du langage naturel (NLP) qui permet de réécrire du texte en préservant son sens tout en modifiant sa structure syntaxique et lexicalement. Contrairement aux simples outils de remplacement de synonymes, il utilise des modèles basés sur des transformers (comme BERT ou T5) pour analyser le contexte sémantique global et générer des reformulations adaptatives. Cet outil répond à des besoins spécifiques comme l'optimisation de contenus académiques pour éviter le plagiat, la simplification de textes techniques pour un public non expert, ou encore l'adaptation de tonalité pour du marketing ciblé. Son moteur intègre des algorithmes de détection de relations logiques entre propositions, permettant des restructurations profondes plutôt que des modifications superficielles. Les utilisateurs peuvent ajuster la complexité linguistique et le niveau de créativité des reformulations via des paramètres précis, ce qui le rend particulièrement utile pour les développeurs souhaitant automatiser des tâches de réécriture dans des pipelines NLP.",
+      "detailed_description": "L'outil de paraphrase aide à obtenir rapidement un brouillon avec une formulation différente. Collez le texte, choisissez un style formel, familier, simple ou créatif, puis lancez la paraphrase. La version actuelle fonctionne localement dans le navigateur avec une liste intégrée de synonymes pour des mots anglais courants et quelques règles de contractions. Ce n'est pas un modèle de langage et il ne comprend pas le sens comme un assistant de rédaction; le résultat doit donc toujours être relu avant utilisation.",
       "usage_steps": [
-        "1. Collez votre texte dans la zone d'entrée multiligne avec compteur de mots dynamique.",
-        "2. Sélectionnez un style prédéfini (formel, académique, technique, créatif) ou personnalisé via le menu déroulant contextuel.",
-        "3. Ajustez le curseur de complexité linguistique (1-5) pour contrôler le niveau de sophistication du vocabulaire.",
-        "4. Activez/désactivez l'option « Maintenir termes techniques » selon que vous souhaitez conserver le jargon spécifique.",
-        "5. Cliquez sur « Générer reformulation » pour déclencher le traitement par le modèle NLP optimisé.",
-        "6. Comparez les versions originales et paraphrasées dans la vue parallèle avec mise en évidence des modifications syntaxiques."
+        "Collez le texte source dans le champ d'entrée.",
+        "Choisissez un style : formel, familier, simple ou créatif.",
+        "Cliquez sur Paraphraser pour générer un brouillon.",
+        "Relisez la sortie attentivement et corrigez-la si nécessaire.",
+        "Copiez le résultat seulement après vérification."
       ],
       "usage_examples": [
-        "Un doctorant réécrit son mémoire en mode académique pour éviter les redondances avant soumission à une revue scientifique.",
-        "Un UX writer adapte les microcopies d'une application pour un public adolescent en utilisant le style informel et le niveau de complexité 2.",
-        "Un ingénieur en IA reformule un document technique pour le rendre compréhensible par des décideurs non techniques, en conservant les termes clés.",
-        "Un rédacteur web optimise un article pour le SEO en générant plusieurs variantes de phrases tout en maintenant la densité sémantique."
+        "Essayer une version plus formelle d’une courte description en anglais.",
+        "Simplifier une phrase d’e-mail avant une correction manuelle.",
+        "Comparer plusieurs formulations pour une note ou une documentation.",
+        "Remplacer quelques mots courants par des synonymes, puis polir le texte à la main."
       ],
       "selectStyle": "Sélectionner le style",
       "paraphrasedText": "Paraphrased Text",
@@ -15237,7 +15271,25 @@
       "tip1": "Différents styles produisent différents résultats",
       "tip2": "L'outil utilise le remplacement de synonymes",
       "tip3": "Vérifiez la sortie pour la précision",
-      "simple": "Simple"
+      "simple": "Simple",
+      "faqs": [
+        {
+          "question": "Est-ce une paraphrase par IA ?",
+          "answer": "Non. L'outil utilise un remplacement local de synonymes et quelques règles simples pour les contractions."
+        },
+        {
+          "question": "Quelle langue fonctionne le mieux ?",
+          "answer": "L'interface est traduite, mais la liste actuelle de synonymes fonctionne surtout avec des mots anglais."
+        },
+        {
+          "question": "Le sens original est-il conservé ?",
+          "answer": "L'outil peut remplacer des mots isolés, mais il ne raisonne pas sur le sens. Relisez toujours le résultat."
+        },
+        {
+          "question": "Mon texte est-il envoyé à un serveur ?",
+          "answer": "Non. La paraphrase se fait dans le navigateur."
+        }
+      ]
     },
     "graphql-formatter": {
       "name": "Formateur GraphQL",
