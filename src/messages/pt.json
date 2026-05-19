@@ -6130,23 +6130,21 @@
     },
     "css-clip-path-generator": {
       "name": "Gerador de CSS Clip Path",
-      "description": "Crie formas de CSS clip-path com editor visual.",
+      "description": "Crie valores CSS clip-path com predefinições ou entrada manual.",
       "seo_title": "Gerador de CSS Clip Path Grátis Online",
-      "seo_description": "Crie formas CSS clip-path com editor visual online. Designe polígonos, círculos, elipses e caminhos personalizados. Copie o código CSS para layouts criativos.",
-      "detailed_description": "O CSS Clip Path Generator é uma ferramenta técnica para desenvolvedores que desejam criar e manipular caminhos de recorte CSS de forma visual e precisa. Ele permite gerar formas complexas — como polígonos, círculos, elipses e retângulos personalizados — utilizando um editor baseado em SVG interativo. Internamente, a ferramenta converte interações do usuário em instruções CSS válidas, como `clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)`, ajustando coordenadas em tempo real. Desenvolvedores precisam dessa ferramenta para evitar codificação manual de caminhos SVG ou cálculos manuais de porcentagens, especialmente em layouts responsivos. O editor suporta ajustes finos com pontos de controle Bézier, transformações geométricas (rotação, escala) e seleção de unidades relativas (%) ou absolutas (px). A pré-visualização instantânea reflete como a forma se comportará em diferentes resoluções, graças à integração com um sistema de coordenadas dinâmico. Além disso, a ferramenta exporta código otimizado para uso direto em folhas de estilo, ideal para projetos modernos com design não retangular.",
+      "seo_description": "Crie valores CSS clip-path com predefinições ou uma caixa de texto, veja uma forma simples e copie a declaração CSS pronta.",
+      "detailed_description": "O CSS Clip Path Generator ajuda a montar uma declaração CSS clip-path com um fluxo rápido de predefinições e texto. Escolha Triangle, Diamond, Star, Circle ou Inset, ou digite seu próprio valor circle(), ellipse(), polygon() ou inset() na área de texto. O quadrado de pré-visualização atualiza para você conferir a forma básica, e a área de saída mostra a linha clip-path exata para copiar. Use em máscaras simples de layout, recortes de imagem e formas de seções quando quiser refinar um valor CSS rapidamente.",
       "usage_steps": [
-        "1. Escolha o tipo de forma no painel lateral (polígono, círculo, elipse ou retângulo recortado).",
-        "2. Adicione ou ajuste pontos de controle arrastando no canvas SVG ou digitando coordenadas manuais nos campos X/Y.",
-        "3. Utilize as alças Bézier para curvar arestas e criar transições suaves entre vértices.",
-        "4. Aplique transformações globais (rotação, escala) usando os controles deslizantes no menu de propriedades.",
-        "5. Ative a pré-visualização responsiva para testar como a forma se ajusta a diferentes tamanhos de tela.",
-        "6. Copie o código CSS gerado ou exporte como snippet pronto para incorporar ao projeto."
+        "Escolha uma predefinição para começar com um valor clip-path comum.",
+        "Edite o texto diretamente se precisar de um circle(), ellipse(), polygon() ou inset() personalizado.",
+        "Confira o quadrado de pré-visualização para validar a forma básica.",
+        "Copie a declaração clip-path gerada e cole no seu CSS."
       ],
       "usage_examples": [
-        "Criar uma seção hero com recorte diagonal para destacar conteúdo em uma landing page.",
-        "Gerar máscaras circulares para avatares em perfis de usuários, garantindo bordas suaves em qualquer resolução.",
-        "Desenvolver banners dinâmicos com formas poligonais irregulares que se adaptam a grids responsivos.",
-        "Implementar efeitos de hover que revelam conteúdo gradualmente através de animações de clip-path."
+        "Criar uma máscara triangular ou em diamante para dividir uma seção.",
+        "Testar um valor polygon() antes de aplicá-lo a uma imagem hero ou card.",
+        "Copiar um clip-path circle() ou inset() simples para um protótipo.",
+        "Guardar pequenos snippets de formas CSS para experimentos de layout."
       ],
       "clipPath": {
         "preview": "clipPath.preview",
@@ -6160,7 +6158,21 @@
       },
       "output": "Saída",
       "copied": "Copiado!",
-      "copy": "Copiar"
+      "copy": "Copiar",
+      "faqs": [
+        {
+          "question": "Posso editar o valor clip-path manualmente?",
+          "answer": "Sim. A área de texto aceita valores CSS como circle(), ellipse(), polygon() e inset()."
+        },
+        {
+          "question": "O que o botão copiar inclui?",
+          "answer": "Ele copia uma declaração CSS no formato clip-path: valor; usando o valor atual."
+        },
+        {
+          "question": "A ferramenta exporta arquivos de imagem?",
+          "answer": "Não. Ela gera uma declaração CSS clip-path para usar na sua folha de estilos."
+        }
+      ]
     },
     "uuid-validator": {
       "name": "Validador UUID",
@@ -23598,10 +23610,37 @@
       "confidence": "confiança"
     },
     "css-clip-path-generator": {
-      "name": "Gerador de Clip Path CSS",
-      "description": "Crie formas de clip-path CSS com editor visual.",
-      "seo_title": "Gerador de caminho de clipe CSS gratuito on-line",
-      "seo_description": "Crie formas de clip-path CSS com editor visual online gratuitamente. Projete polígonos, círculos, elipses e caminhos personalizados. Copie o código CSS para layouts criativos."
+      "name": "Gerador de CSS Clip Path",
+      "description": "Crie valores CSS clip-path com predefinições ou entrada manual.",
+      "seo_title": "Gerador de CSS Clip Path Grátis Online",
+      "seo_description": "Crie valores CSS clip-path com predefinições ou uma caixa de texto, veja uma forma simples e copie a declaração CSS pronta.",
+      "detailed_description": "O CSS Clip Path Generator ajuda a montar uma declaração CSS clip-path com um fluxo rápido de predefinições e texto. Escolha Triangle, Diamond, Star, Circle ou Inset, ou digite seu próprio valor circle(), ellipse(), polygon() ou inset() na área de texto. O quadrado de pré-visualização atualiza para você conferir a forma básica, e a área de saída mostra a linha clip-path exata para copiar. Use em máscaras simples de layout, recortes de imagem e formas de seções quando quiser refinar um valor CSS rapidamente.",
+      "usage_steps": [
+        "Escolha uma predefinição para começar com um valor clip-path comum.",
+        "Edite o texto diretamente se precisar de um circle(), ellipse(), polygon() ou inset() personalizado.",
+        "Confira o quadrado de pré-visualização para validar a forma básica.",
+        "Copie a declaração clip-path gerada e cole no seu CSS."
+      ],
+      "usage_examples": [
+        "Criar uma máscara triangular ou em diamante para dividir uma seção.",
+        "Testar um valor polygon() antes de aplicá-lo a uma imagem hero ou card.",
+        "Copiar um clip-path circle() ou inset() simples para um protótipo.",
+        "Guardar pequenos snippets de formas CSS para experimentos de layout."
+      ],
+      "faqs": [
+        {
+          "question": "Posso editar o valor clip-path manualmente?",
+          "answer": "Sim. A área de texto aceita valores CSS como circle(), ellipse(), polygon() e inset()."
+        },
+        {
+          "question": "O que o botão copiar inclui?",
+          "answer": "Ele copia uma declaração CSS no formato clip-path: valor; usando o valor atual."
+        },
+        {
+          "question": "A ferramenta exporta arquivos de imagem?",
+          "answer": "Não. Ela gera uma declaração CSS clip-path para usar na sua folha de estilos."
+        }
+      ]
     },
     "uuid-validator": {
       "name": "UUID Validator",

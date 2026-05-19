@@ -6118,23 +6118,21 @@
     },
     "css-clip-path-generator": {
       "name": "CSS Clip Path Generator",
-      "description": "Create CSS clip-path shapes with visual editor.",
+      "description": "Create CSS clip-path values from presets or manual input.",
       "seo_title": "Free CSS Clip Path Generator Online",
-      "seo_description": "Create CSS clip-path shapes with visual editor online for free. Design polygons, circles, ellipses, and custom paths. Copy CSS code for creative layouts.",
-      "detailed_description": "The CSS Clip Path Generator is a specialized tool that enables developers to create complex CSS shapes using a WYSIWYG editor by manipulating vector path data. It converts interactive Bézier curve adjustments into optimized `clip-path` CSS syntax supporting polygons, ellipses, and custom SVG paths. Developers need this tool to bypass manual coordinate calculations and browser rendering inconsistencies when implementing non-rectangular layouts, image masks, or animated transitions. The editor uses a coordinate system grid with snapping functionality to ensure precision, while its path simplification algorithm reduces anchor points for maintainable code. Real-time visual feedback shows how shapes render across different viewport sizes, and the tool generates both standard CSS and SVG fallbacks for cross-browser compatibility.",
+      "seo_description": "Create CSS clip-path values online from presets or a manual textarea. Preview a simple shape and copy the ready clip-path CSS declaration.",
+      "detailed_description": "CSS Clip Path Generator helps you assemble a CSS clip-path declaration with a fast preset-and-text workflow. Choose a preset such as Triangle, Diamond, Star, Circle, or Inset, or type your own circle(), ellipse(), polygon(), or inset() value in the textarea. The preview square updates so you can check the basic shape, and the output area shows the exact clip-path line to copy. Use it for quick layout masks, image crops, and hero-section shapes when you already know the value you want to refine.",
       "usage_steps": [
-        "1. Select a base shape (polygon, circle, or custom path) from the shape library panel",
-        "2. Drag control handles to adjust Bézier curve segments or click to add/remove anchor points",
-        "3. Use the coordinate inspector to input exact X/Y values for precision alignment",
-        "4. Switch between absolute/relative units in the settings panel to control sizing behavior",
-        "5. Apply path simplification to reduce complexity while maintaining shape integrity",
-        "6. Export generated CSS with browser-specific prefixes and SVG path data simultaneously"
+        "Choose one of the built-in presets to start with a common clip-path value.",
+        "Edit the clip-path text directly if you need a custom circle(), ellipse(), polygon(), or inset() shape.",
+        "Check the preview square to confirm the shape looks close to what you need.",
+        "Copy the generated clip-path declaration and paste it into your CSS."
       ],
       "usage_examples": [
-        "Create a diagonal hero section with a clipped polygon shape that reveals a background gradient",
-        "Generate a circular profile image mask with a customizable border-radius equivalent in CSS",
-        "Design an animated SVG path transition between two complex shapes for a data visualization",
-        "Build a responsive magazine-style text wrap around a custom SVG shape for editorial layouts"
+        "Create a triangle or diamond mask for a decorative section divider.",
+        "Test a polygon value before adding it to a hero image or card design.",
+        "Copy a simple circle or inset clip-path for a prototype without writing the declaration from scratch.",
+        "Keep a set of quick CSS shape snippets for layout experiments."
       ],
       "clipPath": {
         "preview": "Preview",
@@ -11767,23 +11765,22 @@
     },
     "resume-builder": {
       "name": "Resume Builder",
-      "description": "Build professional resumes with multiple templates and PDF export.",
+      "description": "Build resumes with three templates, preview, photo upload, skills, languages, and PDF export.",
       "seo_title": "Free Online Resume Builder - Create Professional CV",
-      "seo_description": "Build professional resumes online for free. Multiple templates, real-time preview, and PDF export. No signup required.",
-      "detailed_description": "The Resume Builder is a sophisticated web application designed to streamline the creation of professional resumes. It leverages a user-friendly interface and advanced templating engine to produce polished, industry-standard documents. The tool supports multiple layout templates, each optimized for different career fields and levels of experience. Users can customize these templates with their personal information, skills, and work history, and the tool automatically formats the content to ensure readability and visual appeal. The Resume Builder also includes a robust PDF export feature, allowing users to generate high-quality, print-ready documents that can be easily shared with potential employers. For developers and job seekers, this tool is invaluable for crafting resumes that stand out in a competitive job market. The technical underpinnings include client-side JavaScript for dynamic content manipulation and remote processing for PDF generation, ensuring a seamless and efficient user experience.",
+      "seo_description": "Build a resume in your browser with three templates, accent color, photo upload, experience, education, skills, languages, preview, and PDF export.",
+      "detailed_description": "Resume Builder helps you assemble a resume directly in the browser. Add your name, title, contact details, summary, work experience, education, skills with levels, languages, and an optional photo. Choose from three templates: professional, minimal, and creative, then adjust the accent color. Use the edit and preview tabs to check the document before exporting it as a PDF. The tool provides structure and export, while the final wording, accuracy, and proofreading remain under your control.",
       "usage_steps": [
-        "Step 1: Open the Resume Builder and select 'Start New Resume' from the homepage.",
-        "Step 2: Choose a template from the available options, such as 'Modern Tech Professional' or 'Classic Executive.'",
-        "Step 3: Fill in the required fields in the 'Personal Information' section, including your name, address, email, and phone number.",
-        "Step 4: Navigate to the 'Work Experience' tab and add your job history, including company names, dates of employment, and key responsibilities.",
-        "Step 5: Move to the 'Skills' section to list your technical and soft skills, and use the 'Education' tab to detail your academic background.",
-        "Step 6: Once your resume is complete, click 'Export as PDF' to download a polished, professional document ready for submission."
+        "Fill in your personal details, title, contact fields, and short summary.",
+        "Add work experience, education, skills, and languages as needed.",
+        "Upload a photo if you want one, then choose professional, minimal, or creative styling.",
+        "Open the preview tab to inspect the finished resume layout.",
+        "Use Export PDF when the resume is ready to save or share."
       ],
       "usage_examples": [
-        "Example 1: A recent computer science graduate uses the Resume Builder to create a modern, clean resume that highlights their projects, skills, and academic achievements, making it easier to stand out in tech job applications.",
-        "Example 2: A mid-level marketing professional leverages the tool to update their resume with new certifications and recent successful campaigns, ensuring their document reflects their current qualifications and impact.",
-        "Example 3: A freelance graphic designer uses the Resume Builder to craft a visually appealing portfolio summary, showcasing their design skills and client testimonials in a format that aligns with their creative style.",
-        "Example 4: A senior executive preparing for a career change uses the tool to create a tailored executive resume that emphasizes leadership experience and strategic accomplishments, positioning them for high-level roles in a new industry."
+        "Create a first resume for an internship with education, projects, skills, and contact details.",
+        "Refresh a job-search resume by updating recent work experience and exporting a new PDF.",
+        "Prepare a clean one-page resume draft before manually proofreading every section.",
+        "Use the accent color and template selector to match a simple personal style."
       ],
       "editTab": "Edit",
       "previewTab": "Preview",
@@ -11972,23 +11969,22 @@
     },
     "salary-calculator": {
       "name": "Salary Calculator",
-      "description": "Convert salary between hourly, daily, weekly, monthly, and annual rates.",
+      "description": "Convert hourly, daily, weekly, biweekly, monthly, and annual pay with a simple tax-rate estimate.",
       "seo_title": "Free Salary Calculator - Convert Pay Rates",
-      "seo_description": "Convert salary between different pay frequencies online for free. Calculate hourly, daily, weekly, monthly, and annual rates with tax deductions.",
-      "detailed_description": "The Salary Calculator is a precision tool for converting compensation across different pay periods using standardized financial formulas. It performs bidirectional conversions between hourly, daily, weekly, monthly, and annual rates while accounting for variables like standard work hours (e.g., 40-hour weeks), overtime multipliers (1.5x/2x rates), and prorated adjustments for partial periods. Technically, it calculates equivalent salaries using annualization formulas (e.g., hourly_rate × 2080 annual hours) and inverse operations for reverse conversions. Users need this for accurate financial modeling when comparing job offers with different pay structures, calculating contractor retainers, or aligning payroll systems across international offices with varying pay periods. The backend uses floating-point arithmetic with 15-digit precision to handle fractional currency values and supports optional adjustments for tax brackets, benefits deductions, and state-specific overtime rules through toggle switches. Results include both gross and net estimates based on configurable withholdings, with debug mode showing the exact calculation steps for transparency.",
+      "seo_description": "Convert pay between hourly, daily, weekly, biweekly, monthly, and annual rates online, with adjustable weekly hours and a simple tax-rate estimate.",
+      "detailed_description": "Salary Calculator converts a single pay amount between hourly, daily, weekly, biweekly, monthly, and annual views in the browser. Choose the input pay frequency, currency display, weekly hours, and an optional tax rate to compare before-tax and after-tax estimates side by side. The calculation uses 52 weeks, 5 workdays per week, and 12 months as simple assumptions. It is useful for quick job-offer comparisons, freelance planning, and household budgeting, but it is only a planning estimate and does not model extra compensation rules, benefits, local tax law, or rate conversion.",
       "usage_steps": [
-        "1. Select input pay period from the dropdown (hourly/daily/weekly/monthly/annual)",
-        "2. Enter numeric salary value in the primary input field (e.g., 75.50)",
-        "3. Activate optional parameters via checkboxes: include overtime (1.5x), bonuses, or deductions",
-        "4. Choose target output period using the conversion direction arrows (→) between period buttons",
-        "5. Adjust work calendar settings: specify weekly hours, holidays, or leap year status if needed",
-        "6. Click 'Calculate' to execute conversion and view formula-derived results with 2-decimal currency precision"
+        "Enter the pay amount and choose whether it is hourly, daily, weekly, biweekly, monthly, or annual.",
+        "Select the currency used for display. The selected currency does not convert exchange rates.",
+        "Adjust weekly hours if the default 40-hour week does not match your situation.",
+        "Set a tax-rate percentage if you want a rough after-tax estimate.",
+        "Compare the before-tax and after-tax results across all supported pay periods."
       ],
       "usage_examples": [
-        "A freelance developer converts $45/hour (40 hrs/wk) to annual salary, including 10% overtime pay for 12 weeks/year",
-        "An HR manager calculates monthly equivalent of a $98,000 annual package with 25% tax withholdings",
-        "A part-time worker compares $18.75/hour (25 hrs/wk) vs a $36,000/year full-time offer including benefits",
-        "A startup founder converts 150 contracted hours/month to annual FTE cost including 30% overhead for benefits"
+        "Convert a $95,000 annual offer into monthly, biweekly, weekly, daily, and hourly estimates.",
+        "Estimate the annual equivalent of a part-time hourly rate with fewer than 40 hours per week.",
+        "Compare two offers by putting both into the same monthly or annual view.",
+        "Use a rough tax percentage to plan take-home income before checking official payroll numbers."
       ],
       "salary": {
         "amount": "Amount",
@@ -17618,24 +17614,22 @@
     },
     "prettier-config-generator": {
       "name": "Prettier Config Generator",
-      "description": "Generate Prettier configuration files for code formatting",
+      "description": "Generate a .prettierrc JSON file from common Prettier options.",
       "seo_title": "Free Prettier Config Generator Online - Create .prettierrc Configuration",
-      "seo_description": "Generate Prettier configuration files easily with our free online tool. Customize tab width, quotes, semicolons, trailing commas, and more. Create consistent code formatting across your team.",
-      "detailed_description": "Prettier Config Generator helps you create customized Prettier configuration files for consistent code formatting. Configure all major options including print width, tab width, single vs double quotes, semicolons, trailing commas, bracket spacing, and more. Preview how your code will be formatted with different settings. The tool generates .prettierrc files in JSON format ready to use in any JavaScript, TypeScript, CSS, or HTML project.",
+      "seo_description": "Create a .prettierrc JSON config online. Set print width, tabs, quotes, semicolons, trailing commas, line endings, prose wrap, and copy or download the result.",
+      "detailed_description": "Prettier Config Generator builds a .prettierrc JSON file from the options visible on the page. Set print width, tab width, tabs vs spaces, semicolons, quote style, trailing commas, bracket spacing, bracket-same-line, arrow parentheses, end-of-line, prose wrap, and HTML whitespace sensitivity. The generator includes only non-default values until every option is still at its default, then it shows a complete default config so you have something copyable. Use it when you need a clean config file to copy into a project or download as .prettierrc.",
       "usage_steps": [
-        "Set your preferred print width (default 80)",
-        "Choose tab width and whether to use tabs or spaces",
-        "Select single or double quotes",
-        "Configure semicolon usage",
-        "Set trailing comma preference",
-        "Adjust bracket spacing and other options",
-        "Click Generate and copy the configuration"
+        "Set print width and tab width for the style you want.",
+        "Choose tabs or spaces, quote style, semicolons, trailing commas, brackets, arrow parentheses, line endings, prose wrap, and HTML whitespace behavior.",
+        "Click Generate to create the JSON configuration.",
+        "Copy the output or download it as a .prettierrc file.",
+        "Place the config in your project and run Prettier in your own development workflow."
       ],
       "usage_examples": [
-        "Create a Prettier config for a team project",
-        "Set up consistent formatting for a monorepo",
-        "Configure Prettier for a React project",
-        "Customize formatting for legacy codebase migration"
+        "Create a starter .prettierrc for a new JavaScript or TypeScript project.",
+        "Share a small formatting policy with a team before adding it to a repository.",
+        "Generate a config that changes only the options that differ from Prettier defaults.",
+        "Download a ready .prettierrc file for a quick prototype or documentation example."
       ],
       "none": "None",
       "all": "All",
@@ -23430,9 +23424,9 @@
     },
     "css-clip-path-generator": {
       "name": "CSS Clip Path Generator",
-      "description": "Create CSS clip-path shapes with visual editor.",
+      "description": "Create CSS clip-path values from presets or manual input.",
       "seo_title": "Free CSS Clip Path Generator Online",
-      "seo_description": "Create CSS clip-path shapes with visual editor online for free. Design polygons, circles, ellipses, and custom paths. Copy CSS code for creative layouts."
+      "seo_description": "Create CSS clip-path values online from presets or a manual textarea. Preview a simple shape and copy the ready clip-path CSS declaration."
     },
     "uuid-validator": {
       "name": "UUID Validator",

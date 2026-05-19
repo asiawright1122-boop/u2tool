@@ -1,18 +1,30 @@
 {
-  "detailed_description": "Prettier Config Generator helps you create customized Prettier configuration files for consistent code formatting. Configure all major options including print width, tab width, single vs double quotes, semicolons, trailing commas, bracket spacing, and more. Preview how your code will be formatted with different settings. The tool generates .prettierrc files in JSON format ready to use in any JavaScript, TypeScript, CSS, or HTML project.",
+  "detailed_description": "Prettier Config Generator builds a .prettierrc JSON file from the options visible on the page. Set print width, tab width, tabs vs spaces, semicolons, quote style, trailing commas, bracket spacing, bracket-same-line, arrow parentheses, end-of-line, prose wrap, and HTML whitespace sensitivity. The generator includes only non-default values until every option is still at its default, then it shows a complete default config so you have something copyable. Use it when you need a clean config file to copy into a project or download as .prettierrc.",
   "usage_steps": [
-    "Set your preferred print width (default 80)",
-    "Choose tab width and whether to use tabs or spaces",
-    "Select single or double quotes",
-    "Configure semicolon usage",
-    "Set trailing comma preference",
-    "Adjust bracket spacing and other options",
-    "Click Generate and copy the configuration"
+    "Set print width and tab width for the style you want.",
+    "Choose tabs or spaces, quote style, semicolons, trailing commas, brackets, arrow parentheses, line endings, prose wrap, and HTML whitespace behavior.",
+    "Click Generate to create the JSON configuration.",
+    "Copy the output or download it as a .prettierrc file.",
+    "Place the config in your project and run Prettier in your own development workflow."
   ],
   "usage_examples": [
-    "Create a Prettier config for a team project",
-    "Set up consistent formatting for a monorepo",
-    "Configure Prettier for a React project",
-    "Customize formatting for legacy codebase migration"
+    "Create a starter .prettierrc for a new JavaScript or TypeScript project.",
+    "Share a small formatting policy with a team before adding it to a repository.",
+    "Generate a config that changes only the options that differ from Prettier defaults.",
+    "Download a ready .prettierrc file for a quick prototype or documentation example."
+  ],
+  "faqs": [
+    {
+      "question": "Does this tool format my source code?",
+      "answer": "No. It only generates the Prettier configuration JSON. Apply the config with Prettier in your editor, package script, or CI workflow."
+    },
+    {
+      "question": "Why are some default options missing from the output?",
+      "answer": "The tool keeps the config compact by including changed values. If every option is still at its default, it shows the full default config so the output is not empty."
+    },
+    {
+      "question": "Can I download the generated config?",
+      "answer": "Yes. After generating the JSON, use the download button to save it as .prettierrc or copy the text directly."
+    }
   ]
 }

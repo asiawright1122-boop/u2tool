@@ -2545,41 +2545,35 @@
     },
     "note-pad": {
       "name": "Bloc de Notas",
-      "description": "Crea y organiza notas adhesivas coloridas. Guardado automático en el almacenamiento del navegador.",
-      "seo_title": "Bloc de Notas Gratuito en Línea - Notas Adhesivas",
-      "seo_description": "Crea y organiza notas adhesivas coloridas en línea gratis. Guardado automático en el navegador, busca notas, exporta a JSON. Toma de notas simple y efectiva.",
-      "detailed_description": "El Bloc de Notas en Línea es una herramienta de toma de notas simple y práctica para crear y gestionar rápidamente notas adhesivas coloridas. Soporta 6 colores (amarillo, verde, azul, rosa, morado, naranja) para hacer tus notas más visibles y organizadas. Cada nota puede tener un título y contenido, con marcas de tiempo de creación y actualización automáticas. Todas las notas se guardan automáticamente en el almacenamiento local del navegador, preservadas incluso después de cerrar la página. Soporta funcionalidad de búsqueda para encontrar notas rápidamente. Exporta a formato JSON para respaldo y migración. Interfaz limpia con operación intuitiva.",
+      "description": "Crea notas de colores con búsqueda, guardado local automático y exportación JSON.",
+      "seo_title": "Bloc de Notas Gratis Online - Notas adhesivas locales",
+      "seo_description": "Crea y organiza notas de colores en el navegador. Se guardan en localStorage, permiten búsqueda por título o contenido y se exportan como JSON.",
+      "detailed_description": "El Bloc de Notas Online permite crear notas rápidas con título y contenido, asignarles un color y volver a editarlas desde una cuadrícula de tarjetas. Las notas se guardan automáticamente en el localStorage del navegador, por lo que permanecen en el mismo dispositivo mientras no borres los datos del sitio. Puedes buscar por título o contenido, eliminar notas que ya no necesitas y exportar todo como un archivo notes.json para tener una copia. No sincroniza entre dispositivos ni sube el contenido a un servidor.",
       "usage_steps": [
-        "Abre la página de la herramienta Bloc de Notas",
-        "Haz clic en el botón 'Nueva Nota' para crear una nueva nota",
-        "Ingresa el título y contenido de la nota",
-        "Haz clic en los botones de color para cambiar el color de la nota",
-        "Haz clic en una tarjeta de nota para editar su contenido",
-        "Usa el cuadro de búsqueda para encontrar notas rápidamente",
-        "Haz clic en 'Exportar' para respaldar todas las notas"
+        "Haz clic en «Nueva Nota» para crear una tarjeta vacía.",
+        "Escribe un título y el contenido de la nota en el editor.",
+        "Elige un color para diferenciar tareas, ideas o recordatorios.",
+        "Usa la búsqueda para filtrar notas por título o contenido.",
+        "Exporta tus notas como JSON si quieres guardar una copia fuera del navegador."
       ],
       "usage_examples": [
-        "Registrar elementos pendientes y listas de tareas",
-        "Guardar ideas e inspiración temporal",
-        "Registrar puntos de reuniones y notas",
-        "Guardar información de uso frecuente como pistas de contraseñas, contactos, etc."
+        "Crear una lista rápida de tareas para el día.",
+        "Guardar ideas temporales durante una sesión de trabajo.",
+        "Tomar notas breves de una reunión y buscarlas después por palabra clave.",
+        "Separar recordatorios por color antes de exportar una copia JSON."
       ],
       "faqs": [
         {
-          "question": "¿Las notas se guardan automáticamente?",
-          "answer": "Sí, todas las notas se guardan automáticamente en el almacenamiento local del navegador. Incluso después de cerrar la página o el navegador, las notas se preservan cuando regresas."
+          "question": "¿Se guardan las notas automáticamente?",
+          "answer": "Sí. Las notas se guardan en el localStorage del navegador del mismo dispositivo."
         },
         {
-          "question": "¿Dónde se almacenan los datos de las notas?",
-          "answer": "Los datos de las notas se almacenan en el localStorage de tu navegador, no se suben a ningún servidor. Borrar los datos del navegador puede causar que las notas se pierdan, por lo que recomendamos exportaciones regulares para respaldo."
+          "question": "¿Las notas se suben a un servidor?",
+          "answer": "No. El contenido permanece en el navegador. Si borras los datos del sitio o cambias de dispositivo, las notas pueden no estar disponibles."
         },
         {
-          "question": "¿Cómo respaldo mis notas?",
-          "answer": "Haz clic en el botón 'Exportar' para exportar todas las notas como un archivo JSON. Puedes guardar este archivo como respaldo."
-        },
-        {
-          "question": "¿Cuántas notas puedo crear?",
-          "answer": "No hay límite en el número de notas. Crea tantas como necesites. Ten en cuenta que el almacenamiento local del navegador tiene límites de capacidad (típicamente 5-10MB)."
+          "question": "¿Cómo puedo hacer una copia de seguridad?",
+          "answer": "Usa el botón «Exportar» para descargar todas las notas como un archivo JSON."
         }
       ]
     },
@@ -9661,10 +9655,10 @@
       ]
     },
     "note-pad": {
-      "name": "Block de Notas",
-      "description": "Crea y organiza notas adhesivas coloridas. Guarda automáticamente en el almacenamiento del navegador.",
-      "seo_title": "Herramienta gratis online de notas adhesivas",
-      "seo_description": "Crea y organiza notas adhesivas coloridas online de forma gratuita. Guarda automáticamente en el navegador, busca notas y exporta a JSON. Una herramienta sencilla y efectiva para tomar notas.",
+      "name": "Bloc de Notas",
+      "description": "Crea notas de colores con búsqueda, guardado local automático y exportación JSON.",
+      "seo_title": "Bloc de Notas Gratis Online - Notas adhesivas locales",
+      "seo_description": "Crea y organiza notas de colores en el navegador. Se guardan en localStorage, permiten búsqueda por título o contenido y se exportan como JSON.",
       "faqs": [
         {
           "question": "¿Se guardan las notas automáticamente?",

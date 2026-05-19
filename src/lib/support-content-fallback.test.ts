@@ -2208,6 +2208,41 @@ describe('assessSupportContentTrust', () => {
         expectedCode: 'pdf-base64-unsupported-ru-controls',
       },
       {
+        slug: 'salary-calculator',
+        name: '給与計算機',
+        locale: 'ja',
+        detailedDescription:
+          '複利計算、残業手当、ボーナス、通貨換算、ISO 8601、日本標準時、年間240日、カスタム勤務日数、源泉徴収税額を処理します。',
+        usageSteps: [],
+        expectedCode: 'salary-calculator-unsupported-payroll-claim',
+      },
+      {
+        slug: 'prettier-config-generator',
+        name: 'Prettier Config Generator',
+        locale: 'en',
+        detailedDescription:
+          'Preview how your code will be formatted and scan project settings before generating config.',
+        usageSteps: [],
+        expectedCode: 'prettier-config-unsupported-preview-claim',
+      },
+      {
+        slug: 'resume-builder',
+        name: 'Конструктор резюме',
+        locale: 'ru',
+        detailedDescription:
+          'Выберите из множества шаблонов, добавьте рекомендации и используйте валидаторы данных на панели инструментов.',
+        usageSteps: [],
+        expectedCode: 'resume-builder-unsupported-guidance-validation-claim',
+      },
+      {
+        slug: 'note-pad',
+        name: 'Bloc de Notas',
+        locale: 'es',
+        detailedDescription: 'Guardar información常用的 como recordatorios de contraseñas.',
+        usageSteps: [],
+        expectedCode: 'note-pad-mixed-language-residue',
+      },
+      {
         slug: 'css-clip-path-generator',
         name: 'Генератор CSS Clip-Path',
         locale: 'ru',
@@ -2308,6 +2343,41 @@ describe('assessSupportContentTrust', () => {
         locale: 'ru',
         detailedDescription:
           'CSS Clip Path Generator помогает быстро собрать значение CSS clip-path и увидеть результат на простой форме предпросмотра.',
+      },
+      {
+        slug: 'salary-calculator',
+        name: '給与計算機',
+        locale: 'ja',
+        detailedDescription:
+          '給与計算機は、入力した金額を時給、日給、週給、隔週、月給、年収に換算するブラウザ内計算ツールです。',
+      },
+      {
+        slug: 'prettier-config-generator',
+        name: 'Prettier Config Generator',
+        locale: 'en',
+        detailedDescription:
+          'Prettier Config Generator builds a .prettierrc JSON file from the options visible on the page.',
+      },
+      {
+        slug: 'resume-builder',
+        name: 'Конструктор резюме',
+        locale: 'ru',
+        detailedDescription:
+          'Конструктор резюме помогает собрать резюме прямо в браузере с тремя вариантами оформления и экспортом в PDF.',
+      },
+      {
+        slug: 'note-pad',
+        name: 'Bloc de Notas',
+        locale: 'es',
+        detailedDescription:
+          'El Bloc de Notas Online permite crear notas rápidas con título y contenido, búsqueda local y exportación JSON.',
+      },
+      {
+        slug: 'css-clip-path-generator',
+        name: 'CSS Clip Path Generator',
+        locale: 'en',
+        detailedDescription:
+          'CSS Clip Path Generator helps you assemble a CSS clip-path declaration with a fast preset-and-text workflow.',
       },
     ];
 

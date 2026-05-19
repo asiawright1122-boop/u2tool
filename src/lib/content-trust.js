@@ -568,9 +568,33 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
   },
   {
     code: 'css-clip-path-unsupported-editor-export-claim',
-    pattern: /drag-and-drop|вендорн[а-яё]+ префикс|SVG-патч|ZIP-архив|Retina|интерактивн[а-яё ]+редактор[а-яё ]+координат|преобразованием SVG-путей|окне предварительного просмотра с возможностью масштабирования/i,
+    pattern: /drag-and-drop|WYSIWYG|B[eé]zier|vector path data|custom SVG paths?|grid with snapping|path simplification|SVG fallbacks?|browser-specific prefixes|control handles?|coordinate inspector|вендорн[а-яё]+ префикс|SVG-патч|ZIP-архив|Retina|интерактивн[а-яё ]+редактор[а-яё ]+координат|преобразованием SVG-путей|окне предварительного просмотра с возможностью масштабирования/i,
     message: 'Claims CSS clip-path point editing, vendor-prefix controls, SVG/ZIP export, or advanced preview behavior that is not present in the current preset-and-textarea UI.',
     slugs: ['css-clip-path-generator'],
+  },
+  {
+    code: 'salary-calculator-unsupported-payroll-claim',
+    pattern: /複利計算|残業手当|ボーナス|通貨換算|ISO 8601|日本標準時|JST|年間240日|カスタム勤務日数|源泉徴収税額|乖離率|overtime multipliers?|bonus(?:es)?|currency conversion|custom working days?|withholding tax/i,
+    message: 'Claims payroll, bonus, overtime, exchange-rate, custom workday, or statutory-tax behavior that is not present in the current simple salary converter.',
+    slugs: ['salary-calculator'],
+  },
+  {
+    code: 'prettier-config-unsupported-preview-claim',
+    pattern: /Preview how your code will be formatted|formatting preview|live code preview|scan(?:s|ning)? (?:a )?project|detect(?:s|ing)? existing Prettier settings/i,
+    message: 'Claims code-formatting preview, project scanning, or automatic config detection that is not present in the current .prettierrc JSON generator.',
+    slugs: ['prettier-config-generator'],
+  },
+  {
+    code: 'resume-builder-unsupported-guidance-validation-claim',
+    pattern: /множества шаблонов|рекомендац[а-яё]*|валидатор[а-яё]*|проверя[а-яё]+ корректность|шрифты|панел[а-яё ]+инструмент|custom sections?|many (?:layout )?templates optimized|data validators?|recommendations?|optimized for different career fields|left toolbar/i,
+    message: 'Claims resume recommendations, validation, arbitrary section styling, or more templates than the current three-template resume builder provides.',
+    slugs: ['resume-builder'],
+  },
+  {
+    code: 'note-pad-mixed-language-residue',
+    pattern: /常用的|informaci[oó]n\s*[\u4E00-\u9FFF]+/i,
+    message: 'Contains mixed-language residue in Note Pad support copy.',
+    slugs: ['note-pad'],
   },
   {
     code: 'screen-recorder-unsupported-output-claim',

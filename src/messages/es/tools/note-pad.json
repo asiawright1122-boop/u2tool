@@ -1,36 +1,36 @@
 {
-  "detailed_description": "El Block de Notas Online es una herramienta sencilla y práctica para crear y gestionar rápidamente notas adhesivas coloridas. Soporta 6 colores (amarillo, verde, azul, rosa, púrpura, naranja) para que tus notas sean más visibles y organizadas. Cada nota puede tener un título y contenido, con marcas de tiempo de creación y actualización automáticas. Todas las notas se guardan automáticamente en el almacenamiento local del navegador, incluso después de cerrar la página. Soporta la función de búsqueda para encontrar notas rápidamente. Exporta a formato JSON para respaldo y migración. Interfaz limpia con operación intuitiva.",
+  "detailed_description": "El Bloc de Notas Online permite crear notas rápidas con título y contenido, asignarles un color y volver a editarlas desde una cuadrícula de tarjetas. Las notas se guardan automáticamente en el localStorage del navegador, por lo que permanecen en el mismo dispositivo mientras no borres los datos del sitio. Puedes buscar por título o contenido, eliminar notas que ya no necesitas y exportar todo como un archivo notes.json para tener una copia. No sincroniza entre dispositivos ni sube el contenido a un servidor.",
   "usage_steps": [
-    "Abre la página de la herramienta Block de Notas",
-    "Haz clic en el botón 'Nueva Nota' para crear una nueva nota",
-    "Introduce el título y el contenido de la nota",
-    "Haz clic en los botones de color para cambiar el color de la nota",
-    "Haz clic en una tarjeta de nota para editar su contenido",
-    "Usa la caja de búsqueda para encontrar notas rápidamente",
-    "Haz clic en 'Exportar' para respaldar todas las notas"
+    "Haz clic en «Nueva Nota» para crear una tarjeta vacía.",
+    "Escribe un título y el contenido de la nota en el editor.",
+    "Elige un color para diferenciar tareas, ideas o recordatorios.",
+    "Haz clic en una tarjeta existente para volver a editarla.",
+    "Usa la búsqueda para filtrar notas por título o contenido.",
+    "Elimina las notas que ya no necesitas desde el botón de borrar.",
+    "Exporta tus notas como JSON si quieres guardar una copia fuera del navegador."
   ],
   "usage_examples": [
-    "Registrar elementos por hacer y listas de tareas",
-    "Guardar ideas y inspiraciones temporales",
-    "Registrar puntos de reunión y notas",
-    "Guardar información常用的 como recordatorios de contraseñas, contactos, etc."
+    "Crear una lista rápida de tareas para el día.",
+    "Guardar ideas temporales durante una sesión de trabajo.",
+    "Tomar notas breves de una reunión y buscarlas después por palabra clave.",
+    "Separar recordatorios por color antes de exportar una copia JSON."
   ],
   "faqs": [
     {
       "question": "¿Se guardan las notas automáticamente?",
-      "answer": "Sí, todas las notas se guardan automáticamente en el almacenamiento local del navegador. Incluso después de cerrar la página o el navegador, las notas se conservan cuando vuelves."
+      "answer": "Sí. Las notas se guardan en el localStorage del navegador del mismo dispositivo."
     },
     {
-      "question": "¿Dónde se almacena los datos de las notas?",
-      "answer": "Los datos de las notas se almacenan en el localStorage de tu navegador, no se suben a ningún servidor. El borrado de los datos del navegador puede hacer que se pierdan las notas, por lo que recomendamos realizar exports regulares para respaldo."
+      "question": "¿Las notas se suben a un servidor?",
+      "answer": "No. El contenido permanece en el navegador. Si borras los datos del sitio o cambias de dispositivo, las notas pueden no estar disponibles."
     },
     {
-      "question": "¿Cómo puedo respaldar mis notas?",
-      "answer": "Haz clic en el botón 'Exportar' para exportar todas las notas como un archivo JSON. Puedes guardar este archivo como respaldo."
+      "question": "¿Cómo puedo hacer una copia de seguridad?",
+      "answer": "Usa el botón «Exportar» para descargar todas las notas como un archivo JSON."
     },
     {
       "question": "¿Cuántas notas puedo crear?",
-      "answer": "No hay límite en el número de notas. Crea tantas como necesites. Ten en cuenta que el almacenamiento local del navegador tiene límites de capacidad (generalmente 5-10MB)."
+      "answer": "No hay un límite fijo en la herramienta, pero el almacenamiento local del navegador tiene una capacidad limitada."
     }
   ]
 }

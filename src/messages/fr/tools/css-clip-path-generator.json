@@ -1,17 +1,29 @@
 {
-  "detailed_description": "Le générateur CSS Clip Path est un outil technique permettant de créer et d'optimiser des formes CSS avec une précision géométrique. Il permet de définir des zones de découpage personnalisées via la propriété CSS `clip-path`, en générant des valeurs polygonales, elliptiques ou personnalisées. Ce tool est indispensable pour les développeurs souhaitant intégrer des designs non rectangulaires sans recourir à des images ou SVG. Il simplifie la manipulation de coordonnées cartésiennes, de courbes de Bézier ou de pourcentages relatifs au viewport. Grâce à son éditeur visuel, les utilisateurs peuvent ajuster des points d'ancrage, des angles et des unités (px, %, vw/vh), tout en visualisant en temps réel le rendu sur un élément HTML de référence. L'outil intègre également des options avancées comme la gestion de `inset()` pour les masquages rectangulaires avec arrondis, et la compatibilité cross-browsers avec préfixes automatiques (-webkit-, -moz-). Cela élimine les erreurs manuelles dans le calcul des coordonnées et garantit des résultats réactifs, adaptés aux différentes résolutions d'écran.",
+  "detailed_description": "Le générateur CSS Clip Path aide à composer une déclaration CSS clip-path avec un flux basé sur des préréglages et un champ texte. Choisissez Triangle, Diamond, Star, Circle ou Inset, ou saisissez votre propre valeur circle(), ellipse(), polygon() ou inset(). Le carré de prévisualisation se met à jour pour vérifier la forme de base, puis la zone de sortie affiche la ligne clip-path à copier. Utilisez-le pour préparer rapidement des masques de mise en page, des découpes d’image simples et des formes de section.",
   "usage_steps": [
-    "Sélectionnez un type de forme de base (polygon, ellipse, inset) dans le menu déroulant 'Shape Type'.",
-    "Utilisez la grille interactive pour déplacer/ajouter des points de contrôle en cliquant sur le canvas.",
-    "Ajustez les paramètres avancés comme 'stroke-width' ou 'border-radius' pour les formes inset via les sliders dédiés.",
-    "Activez le mode 'Path Editor' pour modifier les courbes de Bézier en manipulant les poignées de tangente.",
-    "Générez le code CSS dans la section 'Output' avec options de préfixes navigateurs et unités personnalisables.",
-    "Testez la réactivité en redimensionnant la fenêtre de prévisualisation et ajustez les breakpoints si nécessaire."
+    "Choisissez un préréglage pour commencer avec une valeur clip-path courante.",
+    "Modifiez directement le texte si vous avez besoin d’une valeur circle(), ellipse(), polygon() ou inset().",
+    "Vérifiez la forme dans le carré de prévisualisation.",
+    "Copiez la déclaration clip-path générée et collez-la dans votre CSS."
   ],
   "usage_examples": [
-    "Créer un header en zigzag responsive en combinant plusieurs formes polygonales pour un design moderne.",
-    "Découper une image de galerie en hexagones parfaits avec des marges dynamiques adaptées au viewport.",
-    "Implémenter un effet de survol où un élément se découvre progressivement via une transition `clip-path` animée.",
-    "Générer une forme de masquage complexe pour un SVG intégré, en évitant les calculs manuels de points de chemin."
+    "Créer un masque triangulaire ou en losange pour une séparation de section.",
+    "Tester rapidement une valeur polygon() avant de l’utiliser sur une image.",
+    "Copier une forme circle() ou inset() simple pour un prototype.",
+    "Conserver quelques extraits CSS de formes pour des essais de mise en page."
+  ],
+  "faqs": [
+    {
+      "question": "Puis-je modifier la valeur clip-path à la main ?",
+      "answer": "Oui. Le champ texte accepte des valeurs CSS comme circle(), ellipse(), polygon() et inset()."
+    },
+    {
+      "question": "Que copie le bouton de copie ?",
+      "answer": "Il copie une déclaration CSS de la forme clip-path: valeur; avec la valeur actuelle."
+    },
+    {
+      "question": "L’outil exporte-t-il des fichiers image ?",
+      "answer": "Non. Il produit une déclaration CSS clip-path à utiliser dans votre feuille de style."
+    }
   ]
 }

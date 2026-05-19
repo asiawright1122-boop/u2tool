@@ -1,17 +1,30 @@
 {
-  "detailed_description": "The Salary Calculator is a precision tool for converting compensation across different pay periods using standardized financial formulas. It performs bidirectional conversions between hourly, daily, weekly, monthly, and annual rates while accounting for variables like standard work hours (e.g., 40-hour weeks), overtime multipliers (1.5x/2x rates), and prorated adjustments for partial periods. Technically, it calculates equivalent salaries using annualization formulas (e.g., hourly_rate × 2080 annual hours) and inverse operations for reverse conversions. Users need this for accurate financial modeling when comparing job offers with different pay structures, calculating contractor retainers, or aligning payroll systems across international offices with varying pay periods. The backend uses floating-point arithmetic with 15-digit precision to handle fractional currency values and supports optional adjustments for tax brackets, benefits deductions, and state-specific overtime rules through toggle switches. Results include both gross and net estimates based on configurable withholdings, with debug mode showing the exact calculation steps for transparency.",
+  "detailed_description": "Salary Calculator converts a single pay amount between hourly, daily, weekly, biweekly, monthly, and annual views in the browser. Choose the input pay frequency, currency display, weekly hours, and an optional tax rate to compare before-tax and after-tax estimates side by side. The calculation uses 52 weeks, 5 workdays per week, and 12 months as simple assumptions. It is useful for quick job-offer comparisons, freelance planning, and household budgeting, but it is only a planning estimate and does not model extra compensation rules, benefits, local tax law, or rate conversion.",
   "usage_steps": [
-    "1. Select input pay period from the dropdown (hourly/daily/weekly/monthly/annual)",
-    "2. Enter numeric salary value in the primary input field (e.g., 75.50)",
-    "3. Activate optional parameters via checkboxes: include overtime (1.5x), bonuses, or deductions",
-    "4. Choose target output period using the conversion direction arrows (→) between period buttons",
-    "5. Adjust work calendar settings: specify weekly hours, holidays, or leap year status if needed",
-    "6. Click 'Calculate' to execute conversion and view formula-derived results with 2-decimal currency precision"
+    "Enter the pay amount and choose whether it is hourly, daily, weekly, biweekly, monthly, or annual.",
+    "Select the currency used for display. The selected currency does not convert exchange rates.",
+    "Adjust weekly hours if the default 40-hour week does not match your situation.",
+    "Set a tax-rate percentage if you want a rough after-tax estimate.",
+    "Compare the before-tax and after-tax results across all supported pay periods."
   ],
   "usage_examples": [
-    "A freelance developer converts $45/hour (40 hrs/wk) to annual salary, including 10% overtime pay for 12 weeks/year",
-    "An HR manager calculates monthly equivalent of a $98,000 annual package with 25% tax withholdings",
-    "A part-time worker compares $18.75/hour (25 hrs/wk) vs a $36,000/year full-time offer including benefits",
-    "A startup founder converts 150 contracted hours/month to annual FTE cost including 30% overhead for benefits"
+    "Convert a $95,000 annual offer into monthly, biweekly, weekly, daily, and hourly estimates.",
+    "Estimate the annual equivalent of a part-time hourly rate with fewer than 40 hours per week.",
+    "Compare two offers by putting both into the same monthly or annual view.",
+    "Use a rough tax percentage to plan take-home income before checking official payroll numbers."
+  ],
+  "faqs": [
+    {
+      "question": "Does this calculate official payroll taxes?",
+      "answer": "No. The tax-rate field is a simple percentage estimate. Official payroll, benefits, and local tax rules should be checked separately."
+    },
+    {
+      "question": "Does the currency selector convert exchange rates?",
+      "answer": "No. It only changes number formatting. Enter an amount that is already in the currency you want to compare."
+    },
+    {
+      "question": "What assumptions are used for conversions?",
+      "answer": "The calculator uses 52 weeks per year, 5 workdays per week, and 12 months per year, with weekly hours controlled by your input."
+    }
   ]
 }
