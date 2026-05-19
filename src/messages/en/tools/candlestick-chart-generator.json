@@ -1,11 +1,11 @@
 {
-  "detailed_description": "The Candlestick Chart Generator builds an interactive OHLC chart from editable rows in the browser. Start with the sample data or add your own date, open, close, low, and high values one row at a time. You can set a chart title, choose up and down candle colors, toggle MA5, MA10, and MA20 moving-average lines, zoom through the chart with the built-in ECharts data zoom, and export the current chart as PNG or SVG. It does not import CSV files, fetch market data, detect candlestick patterns, or provide investment advice.",
+  "detailed_description": "The Candlestick Chart Generator builds an interactive chart from manual OHLC rows in the browser. Start with the sample data or add your own date, open, close, low, and high values one row at a time. You can set a chart title, choose up and down candle colors, toggle MA5, MA10, and MA20 moving-average lines, zoom through the chart with the built-in ECharts slider, and export the current chart as PNG or SVG. It does not connect to outside sources or make trading recommendations; it is not investment advice.",
   "usage_steps": [
     "Edit the chart title and choose the up and down candle colors.",
     "Use the existing OHLC rows or click Add Data to insert another date.",
     "Enter open, close, low, and high values for each row.",
     "Toggle MA5, MA10, or MA20 moving-average lines as needed.",
-    "Review the chart preview and use the zoom slider for denser datasets.",
+    "Review the chart preview and use the zoom slider for denser manual rows.",
     "Download the current chart as PNG or SVG."
   ],
   "usage_examples": [
@@ -16,12 +16,12 @@
   ],
   "faqs": [
     {
-      "question": "Can I upload CSV or JSON data?",
+      "question": "Can I import a file?",
       "answer": "No. This version uses an on-page row editor and a sample-data button."
     },
     {
-      "question": "Does it fetch live stock prices?",
-      "answer": "No. Enter the OHLC values yourself or load generated sample data."
+      "question": "Does it connect to price services?",
+      "answer": "No. Enter the OHLC values yourself or load the sample data."
     },
     {
       "question": "Which moving averages are available?",
@@ -32,7 +32,7 @@
       "answer": "Yes. The current ECharts preview can be downloaded as PNG or SVG."
     },
     {
-      "question": "Does it identify trading patterns?",
+      "question": "Does it identify chart formations?",
       "answer": "No. It only visualizes the OHLC data you enter and is not investment advice."
     }
   ]

@@ -184,9 +184,33 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
   },
   {
     code: 'image-splitter-unsupported-advanced-claim',
-    pattern: /\bBMP\b|التداخل البكسل|التفاف الحافة|تنسيق الإخراج المفضل|PNG لجودة أعلى|JPEG لملفات أصغر|20 ميجا|الحفاظ على بيانات EXIF|preserves? .*EXIF|maintaining .*EXIF|slice overlap percentage|Maintain Aspect Ratio|coordinate overlays|bi-linear interpolation|percentage-based/i,
+    pattern: /\bBMP\b|التداخل البكسل|التفاف الحافة|تنسيق الإخراج المفضل|PNG لجودة أعلى|JPEG لملفات أصغر|20 ميجا|الحفاظ على بيانات EXIF|preserves? .*EXIF|maintaining .*EXIF|slice overlap percentage|Maintain Aspect Ratio|coordinate overlays|bi-linear interpolation|bi-?linear|percentage-based|バイリニア|CSSスプライト|余白削除|出力形式ドロップダウン|トリミング/i,
     message: 'Claims image splitter overlap, output-format, EXIF, or advanced slicing controls that are not present in the current rows/columns PNG grid UI.',
     slugs: ['image-splitter'],
+  },
+  {
+    code: 'hex-base64-unsupported-options-history-claim',
+    pattern: /최근 기록|대문자\/소문자|대소문자|파일로 재구성|JSON 웹 토큰|recent history|file reconstruction|reconstruct(?:s|ed|ing)? files?|prefix removal|case toggle/i,
+    message: 'Claims Hex/Base64 prefix, case, history, JWT, or file-reconstruction features that are not present in the current two-way text converter UI.',
+    slugs: ['hex-base64-converter'],
+  },
+  {
+    code: 'html-table-unsupported-editor-export-claim',
+    pattern: /드래그|재정렬|CSS 클래스|인라인 스타일|셀 병합|콜럼 그룹|다운로드|반응형|브레이크포인트/i,
+    message: 'Claims HTML table drag/drop, styling, merge, colgroup/ARIA, download, or responsive-test controls that are not present in the current basic table-code UI.',
+    slugs: ['html-table-generator'],
+  },
+  {
+    code: 'love-calculator-unsupported-algorithm-social-claim',
+    pattern: /خوارزمية|تحليل|رموز لونية|منصات التواصل|mathematical analysis|text analysis|relationship model/i,
+    message: 'Claims Love Calculator algorithms, text analysis, color-coded relationship models, or social-platform integrations that are not present in the current entertainment UI.',
+    slugs: ['love-calculator'],
+  },
+  {
+    code: 'candlestick-unsupported-volume-market-claim',
+    pattern: /volume bars?|live stock prices?|candlestick patterns?|CSV import|JSON import|upload CSV|market data|price feeds?|trading signals?/i,
+    message: 'Claims candlestick volume bars, imports, live/feed data, pattern detection, or trading signals that are not present in the current manual OHLC chart UI.',
+    slugs: ['candlestick-chart-generator'],
   },
   {
     code: 'credit-card-validator-live-verification-claim',

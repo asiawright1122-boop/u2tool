@@ -4333,9 +4333,9 @@
     },
     "html-table-generator": {
       "name": "HTML 표 생성기",
-      "description": "자유롭게 행과 열을 조정하여 HTML 표를 시각적으로 생성합니다.",
+      "description": "행과 열을 입력해 기본 HTML 표 코드를 생성합니다.",
       "seo_title": "무료 HTML 표 생성기 온라인",
-      "seo_description": "자유롭게 HTML 표를 생성하고 수정할 수 있는 온라인 편집기를 이용해보세요. 행, 열, 헤더, 스타일을 쉽게 조정할 수 있습니다. 처리된 결과를 깔끔한 HTML 코드로 내보내세요."
+      "seo_description": "행 1~20개와 열 1~10개로 HTML 표를 만들고, 헤더 행을 선택해 thead/tbody 구조가 있는 코드를 복사하세요."
     },
     "json-schema-validator": {
       "name": "JSON 스키마 검증기",
@@ -5839,8 +5839,8 @@
     "hex-base64-converter": {
       "name": "16진수 Base64 변환기",
       "description": "16진수와 Base64 인코딩 간을 변환합니다.",
-      "seo_title": "무료 온라인 Hex Base64 변환기",
-      "seo_description": "Hex와 Base64를 무료로 온라인 상호 변환. 16진수를 Base64로 인코딩하거나 Base64를 16진수로 디코딩. 암호화와 데이터 인코딩에 필수.",
+      "seo_title": "무료 온라인 16진수 Base64 변환기",
+      "seo_description": "Hex와 Base64를 무료로 온라인 상호 변환하세요. 공백을 제거한 16진수를 검사하고 Base64 결과나 대문자 16진수 바이트를 클립보드로 복사할 수 있습니다.",
       "hexToBase64": "16진수 → Base64",
       "base64ToHex": "Base64 → 16진수",
       "swap": "교환",

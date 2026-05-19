@@ -23,8 +23,9 @@
 
   let hasHeader = $state(true);
 
-  let data = $state(() => 
-    Array(3).fill(null).map(() => Array(3).fill('')));
+  let data = $state(
+    Array(3).fill(null).map(() => Array(3).fill(''))
+  );
 
   let copied = $state(false);
 

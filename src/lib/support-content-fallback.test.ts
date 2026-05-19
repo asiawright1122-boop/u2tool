@@ -437,6 +437,85 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks Hex Base64 options and history claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'hex-base64-converter',
+      locale: 'ko',
+      name: '16진수 Base64 변환기',
+      description: '',
+      detailedDescription:
+        'JSON 웹 토큰(JWT)을 디코딩하고 파일로 재구성할 수 있습니다.',
+      usageSteps: [
+        "'0x' 접두사 제거와 대문자/소문자 출력 옵션을 선택합니다.",
+        "하단의 '최근 기록' 섹션에서 이전 결과를 확인합니다.",
+      ],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'hex-base64-unsupported-options-history-claim'
+    );
+  });
+
+  it('blocks HTML Table Generator editor and export claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'html-table-generator',
+      locale: 'ko',
+      name: 'HTML 표 생성기',
+      description: '',
+      detailedDescription:
+        '드래그 앤 드롭으로 셀을 재정렬하고 CSS 클래스, 인라인 스타일, 셀 병합, colgroup, aria- 속성을 설정합니다.',
+      usageSteps: ['반응형 브레이크포인트를 테스트하고 .html 파일로 다운로드합니다.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'html-table-unsupported-editor-export-claim'
+    );
+  });
+
+  it('blocks Love Calculator algorithm and social-platform claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'love-calculator',
+      locale: 'ar',
+      name: 'حاسبة الحب',
+      description: '',
+      detailedDescription:
+        'تستخدم خوارزمية FLAMES مع تحليل Unicode لإنتاج رموز لونية ونموذج علاقة.',
+      usageSteps: ['شارك التحليل عبر منصات التواصل الاجتماعي.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'love-calculator-unsupported-algorithm-social-claim'
+    );
+  });
+
+  it('blocks Candlestick Chart feed, import, pattern, and volume claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'candlestick-chart-generator',
+      locale: 'en',
+      name: 'Candlestick Chart Generator',
+      description: '',
+      detailedDescription:
+        'Upload CSV or JSON import files, fetch live stock prices, show volume bars, and detect candlestick patterns.',
+      usageSteps: ['Use trading signals from the market data feed.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'candlestick-unsupported-volume-market-claim'
+    );
+  });
+
   it('blocks Credit Card Validator live verification claims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'credit-card-validator',
@@ -1396,6 +1475,76 @@ describe('assessSupportContentTrust', () => {
           'Copia el resultado o descárgalo como repeated-text.txt.',
         ],
         usageExamples: ['Crear 50 líneas iguales para probar un área de texto.'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
+        slug: 'image-splitter',
+        locale: 'ja',
+        name: '画像分割ツール',
+        description: '',
+        detailedDescription:
+          'Image Splitterは画像を2×2、3×3、4×4、2×3、3×2のプリセット、または1から10の行数と列数でPNGピースに分割し、ZIPでまとめて保存できます。',
+        usageSteps: [
+          '画像をアップロードし、行数と列数を選びます。',
+          'プレビューを確認して個別のPNGまたはZIPを保存します。',
+        ],
+        usageExamples: ['SNS投稿用に1枚の画像を3×3へ分ける。'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
+        slug: 'hex-base64-converter',
+        locale: 'ko',
+        name: '16진수 Base64 변환기',
+        description: '',
+        detailedDescription:
+          'Hex 입력은 공백을 제거하고 짝수 길이인지 확인한 뒤 Base64로 변환하며, 결과를 클립보드로 복사할 수 있습니다.',
+        usageSteps: [
+          '변환 방향을 선택합니다.',
+          '16진수 또는 Base64 문자열을 붙여넣고 결과를 복사합니다.',
+        ],
+        usageExamples: ['API 문서의 인코딩 예시를 빠르게 확인하기.'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
+        slug: 'candlestick-chart-generator',
+        locale: 'en',
+        name: 'Candlestick Chart Generator',
+        description: '',
+        detailedDescription:
+          'Build a candlestick chart from manual OHLC rows, toggle MA5, MA10, and MA20 lines, and export PNG or SVG. It is not investment advice.',
+        usageSteps: [
+          'Enter date, open, close, low, and high values.',
+          'Use the zoom slider for dense manual rows.',
+        ],
+        usageExamples: ['Create a small sample price chart for a finance lesson.'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
+        slug: 'html-table-generator',
+        locale: 'ko',
+        name: 'HTML 표 생성기',
+        description: '',
+        detailedDescription:
+          '행 1~20개와 열 1~10개로 기본 HTML 표를 만들고 <thead>와 <tbody> 구조가 있는 코드를 복사할 수 있습니다.',
+        usageSteps: [
+          '행과 열 수를 입력합니다.',
+          '셀 텍스트를 채운 뒤 HTML 코드를 복사합니다.',
+        ],
+        usageExamples: ['블로그 글에 넣을 3열 비교표 마크업 만들기.'],
+        faqs: [],
+      }),
+      assessSupportContentTrust({
+        slug: 'love-calculator',
+        locale: 'ar',
+        name: 'حاسبة الحب',
+        description: '',
+        detailedDescription:
+          'حاسبة الحب تعرض نتيجة مرحة بين 50 و100، ويمكن مشاركة النتيجة عند توفر المشاركة في المتصفح. الصفحة للترفيه فقط.',
+        usageSteps: [
+          'اكتب اسمين واضغط زر الحساب.',
+          'اقرأ النتيجة أو اضغط إعادة تعيين لتجربة جديدة.',
+        ],
+        usageExamples: ['لعبة سريعة بين الأصدقاء.'],
         faqs: [],
       }),
     ];

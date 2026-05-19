@@ -7,7 +7,7 @@ This audit checks tool support content against search-engine quality expectation
 - Tool message files scanned: 5483
 - English tool files scanned: 550
 - Popular English tool files checked for depth: 96
-- Files with high-confidence implementation overclaims: 0
+- Files with high-confidence implementation overclaims: 2
 - Files with medium-confidence claims for future review: 0
 - Popular English files with depth gaps: 0
 
@@ -25,13 +25,15 @@ Runtime mitigation: high-confidence support-content issues are blocked by `asses
 
 | Code | Severity | Count | Meaning |
 |---|---:|---:|---|
-| - | - | - | No issues found. |
+| `candlestick-unsupported-volume-market-claim` | high | 1 | Claims candlestick volume bars, imports, live/feed data, pattern detection, or trading signals that are not present in the current manual OHLC chart UI. |
+| `image-splitter-unsupported-advanced-claim` | high | 1 | Claims image splitter overlap, output-format, EXIF, or advanced slicing controls that are not present in the current rows/columns PNG grid UI. |
 
 ## High-Confidence Overclaim Samples
 
 | Locale | Tool | Field | Rule | Excerpt |
 |---|---|---|---|---|
-| - | - | - | - | No high-confidence overclaims found. |
+| pt | `candlestick-chart-generator` | `usage_examples[1]` | `candlestick-unsupported-volume-market-claim` | Um educador financeiro criando gráficos didáticos com candlestick patterns para um curso de análise técnica |
+| pt | `image-splitter` | `detailed_description` | `image-splitter-unsupported-advanced-claim` | xa de aspecto quando necessário. Técnicas de amostragem bilinear são aplicadas para evitar distorções nos fragmentos ger |
 
 ## Popular English Depth Gaps
 
