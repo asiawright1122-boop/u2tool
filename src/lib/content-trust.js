@@ -249,6 +249,12 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['image-to-base64'],
   },
   {
+    code: 'pdf-base64-unsupported-ru-controls',
+    pattern: /Удалить метаданные|произвольного значения|настройк[а-яё]+ MIME|Web Worker|Download Result|автоматически копир/i,
+    message: 'Claims PDF to Base64 metadata, MIME customization, worker, download, or auto-copy controls that are not present in the current browser FileReader UI.',
+    slugs: ['pdf-to-base64'],
+  },
+  {
     code: 'image-frosted-glass-unsupported-control-claim',
     pattern: /WebGL-ускорени|альфа-канал|RGBA-формат|прозрачн[а-яё ]+сло[йя]|прозрачн[а-яё ]+област|Invert Matte|Selection Area|обратн[а-яё ]+маск|выделени[ея] области|\bWebGL acceleration\b|\bopacity layer\b|\binvert matte\b|\bselection area\b/i,
     message: 'Claims frosted-glass layer, mask, selection, or WebGL controls that are not present in the current whole-image canvas blur UI.',
@@ -475,6 +481,12 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     pattern: /autom[aá]ticamente instala|instala autom[aá]ticamente|sincroniza con Gmail|sincroniza con Outlook|env[ií]a correos?|send(?:s|ing)? emails?|auto-install(?:s|ed)? signature/i,
     message: 'Claims automatic email-client installation, sync, or sending behavior that is not present in the current copy-only signature generator.',
     slugs: ['email-signature-generator'],
+  },
+  {
+    code: 'css-clip-path-unsupported-editor-export-claim',
+    pattern: /drag-and-drop|вендорн[а-яё]+ префикс|SVG-патч|ZIP-архив|Retina|интерактивн[а-яё ]+редактор[а-яё ]+координат|преобразованием SVG-путей|окне предварительного просмотра с возможностью масштабирования/i,
+    message: 'Claims CSS clip-path point editing, vendor-prefix controls, SVG/ZIP export, or advanced preview behavior that is not present in the current preset-and-textarea UI.',
+    slugs: ['css-clip-path-generator'],
   },
   {
     code: 'screen-recorder-unsupported-output-claim',

@@ -1,17 +1,33 @@
 {
-  "detailed_description": "Der CSS Clip Path Generator ist ein visueller Editor zur Erstellung komplexer CSS-Clip-Path-Formen mit präziser Kontrolle über die Geometrie. Technisch basiert das Tool auf SVG-basierten Echtzeit-Berechnungen, die polygonale Formen, Kreise oder Ellipsen durch interaktive Koordinatenanpassung ermöglichen. Entwickler benötigen dieses Tool, um beispielsweise responsiv gestaltete Formen für moderne Webdesigns zu generieren, die mit reinem CSS umsetzbar sind, ohne auf Bilddateien zurückzugreifen. Die Hauptfunktionen umfassen die dynamische Manipulation von Ankerpunkten, die automatische Umrechnung von SVG-Koordinaten in CSS-Syntax sowie die Optimierung von Pfadkomplexität durch intelligente Punktreduktion. Die Echtzeitvorschau renderet die Form über ein HTML5-Canvas-Overlay, während der generierte Code alle relevanten -webkit- und standardisierten CSS-Properties enthält. Besonders nützlich ist die Möglichkeit, responsive Prozentwerte statt fester Pixelwerte zu verwenden, was die Integration in flexible Layouts vereinfacht.",
+  "detailed_description": "Der CSS Clip Path Generator hilft dabei, einen CSS-clip-path-Wert schnell zu erstellen und auf einer einfachen Vorschauform zu prüfen. Die aktuelle Oberfläche enthält die Presets Triangle, Diamond, Star, Circle und Inset, ein Textfeld zum manuellen Bearbeiten des clip-path-Werts, eine fertige CSS-Zeile und eine Kopierfunktion. Das eignet sich für diagonale Bereiche, Bildmasken, Karten, dekorative Abschnitte und schnelle Experimente mit polygon(), circle(), ellipse() und inset(). Das Tool ist kein grafischer Punkteditor: Punkte werden nicht mit der Maus verschoben, zusätzliche Dateien werden nicht erzeugt, Browser-Präfixe werden nicht separat gesteuert und die Browserunterstützung wird nicht geprüft. Testen Sie den kopierten CSS-Wert daher im echten Layout und in den Zielbrowsern.",
   "usage_steps": [
-    "Wählen Sie im Form-Auswahldropdown zwischen Polygon, Kreis oder Ellipse als Basisform",
-    "Platzieren Sie Ankerpunkte durch Klicks auf den bearbeitbaren Bereich und justieren Sie deren Position mit Drag-and-Drop-Handles",
-    "Passen Sie im Eingabefeld-Panel die Koordinaten manuell im Prozent- oder Pixelmodus an",
-    "Aktivieren Sie die \"Responsive Vorschau\" für eine Simulation der Formdarstellung bei unterschiedlichen Viewportgrößen",
-    "Kopieren Sie den generierten CSS-Code aus dem Exportbereich, der automatisch optimierte path()-Werte und Browser-Präfixe enthält",
-    "Nutzen Sie den \"Form-Export\"-Button, um SVG-Pfade für weitere Bearbeitung in Design-Tools herunterzuladen"
+    "Wählen Sie eines der Presets Triangle, Diamond, Star, Circle oder Inset als Startform.",
+    "Bearbeiten Sie den clip-path-Wert bei Bedarf direkt im Textfeld.",
+    "Prüfen Sie in der Vorschau, wie die Form den Demo-Block beschneidet.",
+    "Kopieren Sie die CSS-Zeile und fügen Sie sie in Ihre Styles ein.",
+    "Testen Sie das Ergebnis im echten Layout, besonders bei mobilen Breiten und in den Zielbrowsern."
   ],
   "usage_examples": [
-    "Erstellung einer hexagonalen Bildmaske für eine interaktive Team-Mitglieder-Galerie mit hover-Animationen",
-    "Design eines responsiven diagonalen Hero-Bereichs mit abgeschnittenem Hintergrundbild für moderne Layouts",
-    "Generierung eines kreisförmigen Ladeindikators durch animierte Clip-Path-Transformation",
-    "Umsetzung einer trapezförmigen Call-to-Action-Box mit schrägen Kanten ohne zusätzliche HTML-Elemente"
+    "Eine diagonale Hero-Sektion mit polygon() vorbereiten und die CSS-Zeile kopieren.",
+    "Eine Circle- oder Inset-Maske für eine Bildkarte prüfen.",
+    "Eine dekorative Stern- oder Rautenform für einen Promo-Block erstellen."
+  ],
+  "faqs": [
+    {
+      "question": "Welche Presets gibt es?",
+      "answer": "Die aktuelle Oberfläche enthält Triangle, Diamond, Star, Circle und Inset."
+    },
+    {
+      "question": "Kann ich Punkte mit der Maus verschieben?",
+      "answer": "Nein. Der Wert wird im Textfeld bearbeitet, und die Vorschau zeigt das Ergebnis."
+    },
+    {
+      "question": "Erzeugt das Tool zusätzliche Dateien?",
+      "answer": "Nein. Es zeigt und kopiert nur die CSS-Zeile für clip-path."
+    },
+    {
+      "question": "Muss ich die Browserunterstützung prüfen?",
+      "answer": "Ja. Unterschiedliche clip-path-Werte können sich je nach Browser und Layoutgröße anders verhalten."
+    }
   ]
 }

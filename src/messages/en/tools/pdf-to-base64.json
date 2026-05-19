@@ -1,17 +1,33 @@
 {
-  "detailed_description": "The PDF to Base64 tool converts binary PDF documents into Base64-encoded ASCII strings, enabling efficient transmission of binary data through systems designed for text handling. Base64 encoding maps 8-bit binary data to 6-bit ASCII characters using a 64-character alphabet (A-Z, a-z, 0-9, '+', '/'), with padding ('=') to align data lengths. Users often require this conversion when embedding PDFs directly into JSON payloads, XML documents, or HTML data URLs, where binary content would otherwise corrupt formatting. For example, attaching a PDF to an SMTP email (which traditionally handles ASCII) or storing a PDF signature in a database field restricted to text requires Base64 encoding. The tool processes files client-side via JavaScript FileReader API, parsing PDF headers (e.g., %PDF-1.7) and binary streams, then applying Base64 encoding without intermediate server transfers. This ensures sensitive documents remain private. Technical considerations include MIME type preservation (application/pdf) and handling PDF cross-reference tables during encoding. Output strings can exceed the original file size by ~33%, a tradeoff for text compatibility.",
+  "detailed_description": "PDF to Base64 converts a selected PDF file into Base64 text directly in the browser. Drop or choose a PDF, and the page reads it with the FileReader API, shows the file name, original size, and generated text size, then displays the result in a text area. The Data URI toggle keeps the data:application/pdf;base64, prefix when you need a full inline value, or strips it when an API, JSON field, fixture, or documentation example needs only the raw Base64 portion. This is useful for temporary test payloads, HTML prototypes, API examples, and developer notes where a text representation of a PDF is enough. The tool does not compress PDFs, remove metadata, verify signatures, decode Base64 back into a file, or upload the visible conversion to a server. Base64 output is usually about one third larger than the original PDF.",
   "usage_steps": [
-    "Click 'Choose File' to select a PDF from your device (max size 50MB).",
-    "Toggle 'Preserve MIME Header' to include 'data:application/pdf;base64,' prefix for data URLs.",
-    "Click 'Convert' to initiate client-side Base64 encoding via Web Worker thread.",
-    "Review encoded output in the text area, which auto-copies to clipboard on completion.",
-    "Use 'Download Result' to save the Base64 string as a .txt file for integration into code.",
-    "Optionally verify integrity by re-decoding with browser DevTools console (atob(BASE64_STRING))."
+    "Click the file picker area or drop a PDF onto the upload zone.",
+    "Confirm the selected file is a PDF; other file types are rejected by the page.",
+    "Keep the Data URI toggle on when you need the data:application/pdf;base64, prefix.",
+    "Turn the toggle off when you need only the raw Base64 text after the comma.",
+    "Copy the text area output into your test payload, code sample, or documentation draft."
   ],
   "usage_examples": [
-    "Embedding a 10KB invoice PDF into a JSON API request body for a document management system.",
-    "Creating a data URL for a PDF brochure to inline in a single-file HTML email template.",
-    "Transmitting a digitally signed PDF through a legacy EDI system that only accepts ASCII characters.",
-    "Storing a PDF thumbnail preview inside an SQLite database's TEXT column for an offline app."
+    "Prepare a quick JSON fixture with a PDF field for local API testing.",
+    "Paste a short Data URI into an HTML iframe example while writing documentation.",
+    "Compare the original PDF size with the generated Base64 text before sending a temporary payload."
+  ],
+  "faqs": [
+    {
+      "question": "Is the PDF uploaded to a server?",
+      "answer": "The visible conversion runs in the browser with FileReader. Follow your own security policy before using any online tool with confidential documents."
+    },
+    {
+      "question": "What does the Data URI toggle do?",
+      "answer": "When enabled, the result starts with data:application/pdf;base64,. When disabled, the output contains only the Base64 text."
+    },
+    {
+      "question": "Does this reduce PDF size?",
+      "answer": "No. Base64 is an encoding, not compression, and the text output is usually about 33 percent larger than the original file."
+    },
+    {
+      "question": "Can this page decode Base64 back to PDF?",
+      "answer": "No. This page only creates Base64 text from a PDF file. Use a separate decoder or project code if you need to rebuild the file."
+    }
   ]
 }

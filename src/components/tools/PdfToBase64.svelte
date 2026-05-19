@@ -99,10 +99,10 @@
   function toggleDataUri() {
     includeDataUri = !includeDataUri;
     if (base64) {
-      if (!includeDataUri) {
-        base64 = 'data:application/pdf;base64,' + base64;
+      if (includeDataUri) {
+        base64 = base64.startsWith('data:') ? base64 : `data:application/pdf;base64,${base64}`;
       } else {
-        base64 = base64.split(',')[1] || '';
+        base64 = base64.split(',')[1] || base64;
       }
     }
   }

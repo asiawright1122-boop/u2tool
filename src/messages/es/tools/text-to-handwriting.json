@@ -1,16 +1,33 @@
 {
-  "detailed_description": "El convertidor de Texto a Caligrafía transforma texto escrito en imágenes de estilo de caligrafía. Elige entre varios estilos de caligrafía, personaliza el color de la tinta y selecciona fondos de papel (en blanco, con líneas o cuadrícula) para crear notas de estilo handwritten auténticas.",
+  "detailed_description": "Text to Handwriting convierte texto escrito en una imagen PNG con apariencia de nota manuscrita usando un canvas del navegador. La interfaz actual ofrece tres estilos visibles, Casual, Print y Script, además de color de tinta, tamaño de fuente y fondo de papel Plain, Lined o Grid. El resultado se renderiza como una imagen de 600 px de ancho y puede descargarse como handwriting.png. Sirve para bocetos visuales, notas decorativas, ejemplos educativos, tarjetas sencillas y materiales de práctica donde basta una apariencia manuscrita. No reconoce escritura real, no imita la letra de una persona concreta, no exporta PDF y no garantiza que todos los alfabetos se vean igual en cada sistema porque depende de las fuentes disponibles en el navegador.",
   "usage_steps": [
-    "Introduce tu texto",
-    "Elige un estilo de caligrafía",
-    "Elije el color de la tinta",
-    "Selecciona el estilo de papel (en blanco, con líneas o cuadrícula)",
-    "Ajusta el tamaño de la fuente",
-    "Descarga la imagen handwritten"
+    "Escribe o pega el texto que quieres convertir en la caja de entrada.",
+    "Elige uno de los estilos visibles: Casual, Print o Script.",
+    "Selecciona el fondo de papel Plain, Lined o Grid según el aspecto que necesitas.",
+    "Ajusta el color de tinta y el tamaño de fuente antes de revisar el canvas.",
+    "Descarga el resultado como PNG cuando la vista previa se vea correcta."
   ],
   "usage_examples": [
-    "Crea notas de estilo handwritten",
-    "Genera cartas personalizadas",
-    "Crea hojas de práctica de caligrafía"
+    "Crear una nota manuscrita decorativa para una maqueta de producto.",
+    "Preparar una tarjeta simple con fondo de papel rayado.",
+    "Generar una hoja visual de práctica con texto grande y fondo de cuadrícula."
+  ],
+  "faqs": [
+    {
+      "question": "Qué estilos incluye?",
+      "answer": "La página actual incluye Casual, Print y Script. La apariencia exacta puede variar según las fuentes disponibles en el navegador."
+    },
+    {
+      "question": "Puedo descargar el resultado?",
+      "answer": "Sí. El botón de descarga guarda la vista previa del canvas como un archivo PNG."
+    },
+    {
+      "question": "Imita mi letra real?",
+      "answer": "No. Solo aplica estilos de fuente, color, variación ligera y fondo de papel para crear una imagen con aspecto manuscrito."
+    },
+    {
+      "question": "Funciona para textos largos?",
+      "answer": "Funciona mejor con notas cortas o párrafos moderados. Para textos muy largos conviene dividir el contenido en varias imágenes."
+    }
   ]
 }

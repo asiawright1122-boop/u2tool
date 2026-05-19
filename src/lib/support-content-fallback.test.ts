@@ -1592,6 +1592,24 @@ describe('assessSupportContentTrust', () => {
         usageSteps: [],
         expectedCode: 'wordcloud-unsupported-nlp-upload-font-claim',
       },
+      {
+        slug: 'pdf-to-base64',
+        name: 'PDF to Base64',
+        locale: 'ru',
+        detailedDescription:
+          'Настройте MIME произвольного значения, включите Web Worker и нажмите Download Result.',
+        usageSteps: ['Включите опцию Удалить метаданные и дождитесь автоматического копирования.'],
+        expectedCode: 'pdf-base64-unsupported-ru-controls',
+      },
+      {
+        slug: 'css-clip-path-generator',
+        name: 'Генератор CSS Clip-Path',
+        locale: 'ru',
+        detailedDescription:
+          'Используйте drag-and-drop, SVG-патч, ZIP-архив и отдельные вендорные префиксы.',
+        usageSteps: ['Откройте интерактивный редактор координат и окно предварительного просмотра с возможностью масштабирования.'],
+        expectedCode: 'css-clip-path-unsupported-editor-export-claim',
+      },
     ];
 
     for (const example of examples) {
@@ -1649,6 +1667,41 @@ describe('assessSupportContentTrust', () => {
         locale: 'en',
         detailedDescription:
           'Word Cloud Generator turns a short list of weighted terms, or text pasted into the Text Input box, into an ECharts word-cloud preview.',
+      },
+      {
+        slug: 'pdf-to-base64',
+        name: 'PDF to Base64',
+        locale: 'ru',
+        detailedDescription:
+          'PDF to Base64 преобразует выбранный PDF-файл в Base64-строку прямо в браузере через FileReader.',
+      },
+      {
+        slug: 'license-generator',
+        name: 'Generador de Licencias',
+        locale: 'es',
+        detailedDescription:
+          'El Generador de Licencias crea un texto inicial para MIT License, Apache License 2.0, GNU GPLv3 o BSD 3-Clause.',
+      },
+      {
+        slug: 'text-to-handwriting',
+        name: 'Texto a Caligrafía',
+        locale: 'es',
+        detailedDescription:
+          'Text to Handwriting convierte texto escrito en una imagen PNG con apariencia de nota manuscrita usando un canvas del navegador.',
+      },
+      {
+        slug: 'text-to-handwriting',
+        name: 'تحويل النص إلى خط يدوي',
+        locale: 'ar',
+        detailedDescription:
+          'يحوّل Text to Handwriting النص المكتوب إلى صورة PNG بمظهر قريب من الملاحظات اليدوية داخل المتصفح.',
+      },
+      {
+        slug: 'css-clip-path-generator',
+        name: 'Генератор CSS Clip-Path',
+        locale: 'ru',
+        detailedDescription:
+          'CSS Clip Path Generator помогает быстро собрать значение CSS clip-path и увидеть результат на простой форме предпросмотра.',
       },
     ];
 

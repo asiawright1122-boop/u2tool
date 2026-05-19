@@ -1,17 +1,35 @@
 {
-  "detailed_description": "El Generador de Licencias te ayuda a crear archivos de licencia para tus proyectos de código abierto. Elige entre licencias populares como MIT, Apache 2.0, GPL 3.0, BSD 2-Clause, BSD 3-Clause, ISC, Mozilla Public License, y más. Ingresa tu nombre y la herramienta llena automáticamente el año y genera el texto de licencia completo. Cada licencia incluye una breve descripción de sus términos para ayudarte a elegir la adecuada para tu proyecto.",
+  "detailed_description": "El Generador de Licencias crea un texto inicial de licencia para proyectos de software desde un formulario simple. La interfaz actual permite elegir MIT License, Apache License 2.0, GNU GPLv3 o BSD 3-Clause, revisar un resumen de permisos, condiciones y limitaciones, escribir el autor u organización y ajustar el año. Después de pulsar Generate, el texto aparece en la página y se puede copiar o descargar como archivo LICENSE. Es útil para preparar repositorios de GitHub, paquetes npm, prototipos internos y ejemplos de documentación. La herramienta no sustituye asesoría legal, no cubre todas las licencias existentes y no verifica si una licencia es compatible con dependencias, marcas comerciales o políticas de tu empresa.",
   "usage_steps": [
-    "Explora las licencias disponibles y sus descripciones",
-    "Selecciona la licencia que se adapte a tus necesidades",
-    "Ingresa tu nombre o organización",
-    "El año actual se llena automáticamente",
-    "Haz clic en Generar para crear la licencia",
-    "Copia el texto de la licencia en tu archivo LICENSE"
+    "Revisa las cuatro opciones visibles: MIT, Apache 2.0, GNU GPLv3 y BSD 3-Clause.",
+    "Lee el resumen de permisos, condiciones y limitaciones para entender el punto de partida.",
+    "Escribe el nombre del autor, equipo u organización que debe aparecer en el copyright.",
+    "Confirma o cambia el año antes de generar el texto.",
+    "Pulsa Generate y copia el resultado o descárgalo como archivo LICENSE.",
+    "Revisa el texto con tu equipo antes de publicarlo en un proyecto importante."
   ],
   "usage_examples": [
-    "Agrega una licencia MIT a un nuevo paquete npm",
-    "Elige Apache 2.0 para un proyecto de código abierto corporativo",
-    "Selecciona GPL para un proyecto de copyleft",
-    "Utiliza ISC para una licencia permisiva simple"
+    "Crear un archivo LICENSE rápido para un paquete npm pequeño con MIT.",
+    "Preparar un borrador Apache 2.0 para un repositorio corporativo antes de revisión interna.",
+    "Generar un texto GPLv3 inicial para un proyecto que quiere mantener términos copyleft.",
+    "Descargar un LICENSE BSD 3-Clause para un prototipo que se moverá a GitHub."
+  ],
+  "faqs": [
+    {
+      "question": "Qué licencias incluye la página actual?",
+      "answer": "La interfaz actual incluye MIT License, Apache License 2.0, GNU GPLv3 y BSD 3-Clause."
+    },
+    {
+      "question": "La herramienta decide cuál licencia debo usar?",
+      "answer": "No. Muestra resúmenes y genera texto, pero la decisión depende del proyecto, tus dependencias, tus objetivos y cualquier revisión legal necesaria."
+    },
+    {
+      "question": "Puedo descargar el resultado?",
+      "answer": "Sí. Después de generar la licencia puedes copiar el texto o descargarlo como un archivo llamado LICENSE."
+    },
+    {
+      "question": "Es asesoría legal?",
+      "answer": "No. Es una ayuda de redacción para licencias comunes; consulta a una persona experta si el proyecto tiene riesgos comerciales, patentes o requisitos de cumplimiento."
+    }
   ]
 }

@@ -57,7 +57,7 @@
           <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-8 flex items-center justify-center min-h-[300px]">
             <div
               class="w-48 h-48 bg-gradient-to-br from-amber-500 to-slate-600"
-              style="clipPath"></div>
+              style={`clip-path: ${clipPath}; -webkit-clip-path: ${clipPath};`}></div>
           </div>
         </div>
 
