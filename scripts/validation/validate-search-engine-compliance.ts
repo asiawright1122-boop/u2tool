@@ -11,7 +11,7 @@ interface HtmlCheck {
   path: string;
   canonicalPath?: string;
   requiredSchema: string[];
-  requiredBody: string[];
+  requiredBody: Array<string | RegExp>;
 }
 
 const htmlChecks: HtmlCheck[] = [
@@ -25,7 +25,7 @@ const htmlChecks: HtmlCheck[] = [
     name: 'Tools index',
     path: '/en/tools/',
     requiredSchema: ['Organization', 'WebSite', 'CollectionPage'],
-    requiredBody: ['500+ Free Online Tools', 'Text Tools', 'Choose the Right Text Tool'],
+    requiredBody: [/\b\d[\d,]*\+\s+Free\s+Online\s+Tools/, 'Text Tools', 'Choose the Right Text Tool'],
   },
   {
     name: 'Tools search canonical',
@@ -203,7 +203,11 @@ async function validateHtml(check: HtmlCheck): Promise<void> {
   }
 
   for (const expected of check.requiredBody) {
-    assert(html.includes(expected), `${check.name}: body missing "${expected}"`);
+    if (expected instanceof RegExp) {
+      assert(expected.test(html), `${check.name}: body missing pattern ${expected.toString()}`);
+    } else {
+      assert(html.includes(expected), `${check.name}: body missing "${expected}"`);
+    }
   }
 }
 

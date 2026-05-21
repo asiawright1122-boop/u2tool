@@ -57,6 +57,8 @@ Create a JSON file with one tool entry and all 10 locale copies. Shortened examp
   "icon": "calculator",
   "component": "PopularUtilityTool",
   "popular": true,
+  "search_intent": "calculate an example result",
+  "aliases": ["example result calculator", "sample calculation"],
   "locales": {
     "en": {
       "name": "Example Calculator",
@@ -75,6 +77,8 @@ Create a JSON file with one tool entry and all 10 locale copies. Shortened examp
 ```
 
 The spec must include `en`, `zh`, `ja`, `ko`, `es`, `pt`, `fr`, `de`, `ru`, and `ar`.
+
+`search_intent` and `aliases` are optional but recommended. The batch launch pipeline uses them to generate AI Discovery aliases so natural-language searches can find the new tool immediately after launch.
 
 ## 2. Normalize SEO Copy
 
@@ -102,6 +106,7 @@ The script updates:
 - `src/messages/<locale>/base.json`
 - `src/messages/<locale>/tools/<slug>.json`
 - `src/components/tools/ToolImportMap.ts`
+- `src/lib/ai-discovery/generated-aliases.ts` when launched through `tools:launch`
 
 Use `--dry-run` to preview changes without writing files.
 

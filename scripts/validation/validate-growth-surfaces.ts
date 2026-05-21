@@ -12,7 +12,7 @@ function isLocalFetchBase(): boolean {
 interface HtmlGrowthCheck {
   name: string;
   path: string;
-  requiredText: string[];
+  requiredText: Array<string | RegExp>;
   forbiddenText?: string[];
   schemaTypes?: string[];
   expectedCacheHeader?: 'HIT_OR_MISS' | 'BYPASS';
@@ -36,14 +36,14 @@ const htmlChecks: HtmlGrowthCheck[] = [
   {
     name: 'Tools index discovery promotes text wave',
     path: '/en/tools/',
-    requiredText: ['500+ Free Online Tools', ...textWaveTerms, 'Choose the Right Text Tool'],
+    requiredText: [/\b\d[\d,]*\+\s+Free\s+Online\s+Tools/, ...textWaveTerms, 'Choose the Right Text Tool'],
     schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList'],
     expectedCacheHeader: 'HIT_OR_MISS',
   },
   {
     name: 'Tools search preserves SSR text result contract',
     path: '/en/tools/?q=word',
-    requiredText: ['500+ Free Online Tools', 'Word Counter', 'https://www.u2tool.com/en/tools/word-counter/'],
+    requiredText: [/\b\d[\d,]*\+\s+Free\s+Online\s+Tools/, 'Word Counter', 'https://www.u2tool.com/en/tools/word-counter/'],
     schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList'],
     expectedCacheHeader: 'BYPASS',
   },
@@ -138,7 +138,11 @@ async function validateHtmlCheck(check: HtmlGrowthCheck): Promise<void> {
   assertCanonicalHtml(check.path, html);
 
   for (const required of check.requiredText) {
-    assert(html.includes(required), `${check.name}: body missing "${required}"`);
+    if (required instanceof RegExp) {
+      assert(required.test(html), `${check.name}: body missing pattern ${required.toString()}`);
+    } else {
+      assert(html.includes(required), `${check.name}: body missing "${required}"`);
+    }
   }
 
   for (const forbidden of check.forbiddenText || []) {
