@@ -6,6 +6,10 @@ import {
   resolveLegacyUnlocalizedBlogRedirect,
   resolveLegacyUnlocalizedComparePairRedirect,
   resolveUnlocalizedSiteInfoRedirect,
+  resolveLegacyBlogFallback,
+  resolveLegacyUnlocalizedBlogFallback,
+  resolveLegacyComparePairFallback,
+  resolveLegacyUnlocalizedComparePairFallback,
 } from './lib/legacy-redirects';
 import {
   createLegacyBuildAssetGoneResponse,
@@ -26,16 +30,6 @@ const SECURITY_HEADERS: Record<string, string> = {
   'x-xss-protection': '1; mode=block',
 };
 const CACHEABLE_HTML_PATH = /^\/(?:$|(?:en|zh|ja|ko|es|pt|fr|de|ru|ar)(?:\/|$))/;
-const LOCALIZED_CANONICAL_SECTIONS = new Set([
-  'ai',
-  'blog',
-  'categories',
-  'compare',
-  'contact',
-  'privacy',
-  'terms',
-  'tools',
-]);
 const LEGACY_UNLOCALIZED_SECTIONS = new Set([
   'ai',
   'blog',
@@ -115,6 +109,10 @@ function resolveCanonicalRedirect(request: Request): string | null {
   }
 
   const url = new URL(request.url);
+  if (url.pathname === '/api' || url.pathname.startsWith('/api/')) {
+    return null;
+  }
+
   const normalizedPath = url.pathname !== '/' && url.pathname.endsWith('/')
     ? url.pathname.slice(0, -1)
     : url.pathname;
@@ -136,11 +134,14 @@ function resolveCanonicalRedirect(request: Request): string | null {
     }
   }
 
-  if (first === 'blog' && second) {
-    const target = resolveLegacyUnlocalizedBlogRedirect(second);
-    if (target) {
-      return target;
+  if (first === 'blog') {
+    if (second) {
+      const target = resolveLegacyUnlocalizedBlogRedirect(second);
+      if (target) {
+        return target;
+      }
     }
+    return resolveLegacyUnlocalizedBlogFallback();
   }
 
   if (first === 'compare' && second && third) {
@@ -148,6 +149,7 @@ function resolveCanonicalRedirect(request: Request): string | null {
     if (target) {
       return target;
     }
+    return resolveLegacyUnlocalizedComparePairFallback();
   }
 
   if (first === 'tools' && second === 'category') {
@@ -183,11 +185,15 @@ function resolveCanonicalRedirect(request: Request): string | null {
       return `/${first}/tools/`;
     }
 
-    if (second === 'blog' && third) {
-      const target = resolveLegacyBlogRedirect(first, third);
-      if (target) {
-        return target;
+    if (second === 'blog') {
+      if (third) {
+        const target = resolveLegacyBlogRedirect(first, third);
+        if (target) {
+          return target;
+        }
+        return !url.pathname.endsWith('/') ? `/${first}/blog/${third}/` : null;
       }
+      return resolveLegacyBlogFallback(first);
     }
 
     if (second === 'compare' && third && fourth) {
@@ -195,6 +201,11 @@ function resolveCanonicalRedirect(request: Request): string | null {
       if (target) {
         return target;
       }
+      return resolveLegacyComparePairFallback(first);
+    }
+
+    if (!second && !url.pathname.endsWith('/')) {
+      return `/${first}/`;
     }
   }
 
@@ -203,7 +214,7 @@ function resolveCanonicalRedirect(request: Request): string | null {
     && !url.pathname.endsWith('/')
     && !isFileLikePath(url.pathname)
     && (
-      (isValidLocale(first) && LOCALIZED_CANONICAL_SECTIONS.has(second || ''))
+      isValidLocale(first)
       || LEGACY_UNLOCALIZED_SECTIONS.has(first || '')
     )
   ) {

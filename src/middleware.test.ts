@@ -286,4 +286,19 @@ describe('html edge cache middleware', () => {
     expect(response.headers.get('referrer-policy')).toBe('strict-origin-when-cross-origin');
     expect(response.headers.get('x-u2tool-html-cache')).toBeNull();
   });
+
+  it('does not redirect API routes through localized canonical handling', async () => {
+    const next = vi.fn(async () => new Response('{"ok":true}', {
+      headers: { 'content-type': 'application/json' },
+    }));
+
+    const { response } = await runMiddleware(
+      new Request('https://www.u2tool.com/api/ai-discovery/events/?limit=10'),
+      next
+    );
+
+    expect(response.status).toBe(200);
+    expect(next).toHaveBeenCalledTimes(1);
+    expect(response.headers.get('location')).toBeNull();
+  });
 });

@@ -128,3 +128,25 @@ export function isSiteInfoPageSlug(value: string): value is SiteInfoPageSlug {
 export function resolveUnlocalizedSiteInfoRedirect(slug: string): string | null {
   return isSiteInfoPageSlug(slug) ? withLocale('en', `/${slug}`) : null;
 }
+
+export function resolveLegacyBlogFallback(locale: string): string | null {
+  if (!isValidLocale(locale)) {
+    return null;
+  }
+  return withLocale(locale, '/tools');
+}
+
+export function resolveLegacyUnlocalizedBlogFallback(): string {
+  return withLocale('en', '/tools');
+}
+
+export function resolveLegacyComparePairFallback(locale: string): string | null {
+  if (!isValidLocale(locale)) {
+    return null;
+  }
+  return withLocale(locale, '/compare');
+}
+
+export function resolveLegacyUnlocalizedComparePairFallback(): string {
+  return withLocale('en', '/compare');
+}
