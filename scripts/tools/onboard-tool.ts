@@ -30,6 +30,8 @@ type ToolSpec = {
   icon: string;
   component?: string;
   popular?: boolean;
+  search_intent?: string;
+  aliases?: string[];
   locales: Partial<Record<Locale, LocaleToolCopy>>;
 };
 

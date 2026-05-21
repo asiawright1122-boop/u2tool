@@ -42,6 +42,14 @@ const CANDIDATES: DiscoveryCandidate[] = [
     category: 'text',
     categoryName: 'Text Tools',
   },
+  {
+    slug: 'sitemap-generator',
+    name: '网站地图生成器',
+    description: '生成 XML 网站地图，帮助搜索引擎抓取与索引。',
+    category: 'generators',
+    categoryName: '生成器',
+    aliases: ['xml 网站地图'],
+  },
 ];
 
 const INTENTS: IntentDictionary = {
@@ -69,6 +77,10 @@ describe('tokenizeQuery', () => {
   it('splits normalized query into tokens', () => {
     expect(tokenizeQuery('  make   cron expression! ')).toEqual(['make', 'cron', 'expression']);
   });
+
+  it('builds CJK n-grams for queries without spaces', () => {
+    expect(tokenizeQuery('网站地图')).toEqual(expect.arrayContaining(['网站地图', '网站', '地图', '网站地']));
+  });
 });
 
 describe('matchTools', () => {
@@ -86,5 +98,11 @@ describe('matchTools', () => {
     const results = matchTools('sample tool', CANDIDATES, INTENTS);
     expect(results[0]?.slug).toBe('alpha-tool');
     expect(results[1]?.slug).toBe('beta-tool');
+  });
+
+  it('matches CJK queries without spaces through n-gram tokens', () => {
+    const results = matchTools('网站地图', CANDIDATES, INTENTS);
+    expect(results[0]?.slug).toBe('sitemap-generator');
+    expect(results[0]?.score).toBeGreaterThan(0);
   });
 });

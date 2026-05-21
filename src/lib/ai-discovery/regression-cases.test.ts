@@ -116,8 +116,43 @@ const ZH_REGRESSION_CANDIDATES: DiscoveryCandidate[] = [
   },
 ];
 
+const JA_REGRESSION_CANDIDATES: DiscoveryCandidate[] = [
+  {
+    slug: 'sitemap-generator',
+    name: 'サイトマップ生成ツール',
+    description: 'XMLサイトマップを生成して検索エンジンのクロールを支援します。',
+    seoTitle: '無料オンラインサイトマップ生成ツール',
+    seoDescription: 'XMLサイトマップを生成し、URLの優先度、更新頻度、最終更新日を整理できます。',
+    category: 'generators',
+    categoryName: '生成ツール',
+    aliases: ['xml サイトマップ'],
+  },
+];
+
+const KO_REGRESSION_CANDIDATES: DiscoveryCandidate[] = [
+  {
+    slug: 'sitemap-generator',
+    name: '사이트맵 생성기',
+    description: '검색 엔진 크롤링과 색인을 돕는 XML 사이트맵을 생성합니다.',
+    seoTitle: '무료 온라인 사이트맵 생성기',
+    seoDescription: 'XML 사이트맵을 만들고 URL 우선순위, 업데이트 빈도, 마지막 수정일을 정리합니다.',
+    category: 'generators',
+    categoryName: '생성기',
+    aliases: ['xml 사이트맵'],
+  },
+];
+
 function getRegressionCandidates(locale: string): DiscoveryCandidate[] {
-  return locale === 'zh' ? ZH_REGRESSION_CANDIDATES : EN_REGRESSION_CANDIDATES;
+  if (locale === 'zh') {
+    return ZH_REGRESSION_CANDIDATES;
+  }
+  if (locale === 'ja') {
+    return JA_REGRESSION_CANDIDATES;
+  }
+  if (locale === 'ko') {
+    return KO_REGRESSION_CANDIDATES;
+  }
+  return EN_REGRESSION_CANDIDATES;
 }
 
 describe('ai discovery regression cases', () => {

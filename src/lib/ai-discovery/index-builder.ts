@@ -1,4 +1,5 @@
 import type { DiscoveryCandidate } from './types';
+import { GENERATED_DISCOVERY_ALIASES } from './generated-aliases';
 
 interface ToolLike {
   slug: string;
@@ -12,6 +13,15 @@ export const DISCOVERY_ALIASES: Record<string, string[]> = {
   'gitignore-generator': ['git ignore', '.gitignore'],
   'meta-tag-generator': ['meta tags', 'seo meta'],
 };
+
+function getAliases(slug: string): string[] | undefined {
+  const aliases = new Set([
+    ...(DISCOVERY_ALIASES[slug] ?? []),
+    ...(GENERATED_DISCOVERY_ALIASES[slug] ?? []),
+  ]);
+
+  return aliases.size > 0 ? Array.from(aliases) : undefined;
+}
 
 function readToolString(
   toolsObj: Record<string, unknown>,
@@ -47,7 +57,7 @@ export function buildDiscoveryIndex(
       seoDescription,
       category: tool.category,
       categoryName,
-      aliases: DISCOVERY_ALIASES[tool.slug],
+      aliases: getAliases(tool.slug),
     };
   });
 }

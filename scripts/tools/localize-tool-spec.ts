@@ -21,6 +21,7 @@ type LocalizeSpec = {
   component?: string;
   popular?: boolean;
   search_intent?: string;
+  aliases?: string[];
   locales: Partial<Record<Locale, LocaleSeedCopy>>;
 };
 
@@ -241,6 +242,7 @@ function normalizeSpec(spec: LocalizeSpec): CompleteSpec {
     ...(spec.component ? { component: spec.component } : {}),
     ...(spec.popular !== undefined ? { popular: spec.popular } : {}),
     ...(spec.search_intent ? { search_intent: spec.search_intent } : {}),
+    ...(spec.aliases ? { aliases: spec.aliases } : {}),
     locales: normalizedLocales,
   };
 }

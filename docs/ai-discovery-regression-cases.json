@@ -36,6 +36,30 @@
     "minConfidence": 0.35
   },
   {
+    "id": "zh-sitemap-generator-basic",
+    "locale": "zh",
+    "query": "网站地图生成器",
+    "expectedTopSlug": "sitemap-generator",
+    "expectedAction": "direct",
+    "minConfidence": 0.5
+  },
+  {
+    "id": "ja-sitemap-generator-basic",
+    "locale": "ja",
+    "query": "サイトマップ生成",
+    "expectedTopSlug": "sitemap-generator",
+    "expectedAction": "direct",
+    "minConfidence": 0.5
+  },
+  {
+    "id": "ko-sitemap-generator-basic",
+    "locale": "ko",
+    "query": "사이트맵생성기",
+    "expectedTopSlug": "sitemap-generator",
+    "expectedAction": "direct",
+    "minConfidence": 0.45
+  },
+  {
     "id": "nonsense-fallback",
     "locale": "en",
     "query": "qzvptm kkzzxx",

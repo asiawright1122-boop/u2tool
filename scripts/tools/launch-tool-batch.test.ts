@@ -23,6 +23,25 @@ describe('launch-tool-batch', () => {
     expect(specs[0].slug).toBe('example-calculator');
   });
 
+  it('preserves AI discovery aliases from launch input', () => {
+    const specs = normalizeLaunchInput({
+      slug: 'example-calculator',
+      category: 'finance',
+      icon: 'calculator',
+      search_intent: 'calculate an example result',
+      aliases: ['example result calculator'],
+      locales: {
+        en: {
+          name: 'Example Calculator',
+          description: 'Calculate an example result.',
+        },
+      },
+    });
+
+    expect(specs[0].search_intent).toBe('calculate an example result');
+    expect(specs[0].aliases).toEqual(['example result calculator']);
+  });
+
   it('builds one URL per locale for every launched tool', () => {
     const urls = buildToolUrls(['example-calculator'], 'https://www.u2tool.com/');
 

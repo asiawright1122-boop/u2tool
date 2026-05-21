@@ -23,6 +23,7 @@ type LaunchToolSpec = {
   component?: string;
   popular?: boolean;
   search_intent?: string;
+  aliases?: string[];
   locales: Partial<Record<Locale, LocaleSeedCopy>>;
 };
 
@@ -311,6 +312,14 @@ function maybeGenerateImportMap(skipImportMap: boolean, dryRun: boolean) {
   runCommand('npx', ['tsx', 'scripts/generate-tool-import-map.ts']);
 }
 
+function maybeGenerateAiDiscoveryAliases(inputPath: string, dryRun: boolean) {
+  if (dryRun) {
+    return;
+  }
+
+  runCommand('npx', ['tsx', 'scripts/generate-ai-discovery-aliases.ts', '--input', inputPath]);
+}
+
 function relative(filePath: string) {
   return path.relative(process.cwd(), filePath).split(path.sep).join('/');
 }
@@ -393,6 +402,7 @@ export function runToolLaunchBatch(argv = process.argv.slice(2)) {
   }
 
   maybeGenerateImportMap(args.skipImportMap, args.dryRun);
+  maybeGenerateAiDiscoveryAliases(args.inputPath, args.dryRun);
 
   const urls = buildToolUrls(slugs, args.siteUrl);
   const indexNowPath = path.join(args.outDir, 'indexnow-urls.txt');
