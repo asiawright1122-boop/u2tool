@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The SQL to MongoDB Converter is a specialized tool designed to translate Structured Query Language (SQL) operations into MongoDB's document-based query language. Technically, it parses SQL syntax elements like JOINs, subqueries, and aggregate functions into equivalent MongoDB operations using $lookup stages, embedded documents, and $group accumulators. This tool is essential for developers transitioning from relational databases to MongoDB's NoSQL architecture, enabling seamless data access patterns while preserving query logic. The converter employs a context-aware parser that identifies SQL clauses (SELECT, WHERE, GROUP BY) and maps them to MongoDB's CRUD methods and aggregation pipeline stages. For instance, SQL's WHERE clause converts to MongoDB's query operators ($eq, $gt), while COUNT() aggregates become $sum accumulators in $group stages. Advanced features include handling correlated subqueries through $graphLookup and converting composite primary keys into MongoDB's compound index structures. The tool's parser differentiates between SQL dialects (MySQL, PostgreSQL) and adapts to MongoDB versions (4.4+), ensuring compatibility with modern features like window functions mapped to $setWindowFields.",
+  "detailed_description": "The SQL to MongoDB Converter is a browser-side helper for trying simple SQL-to-MongoDB query conversions. Paste a SQL statement, click Convert, and the tool calls a lightweight local converter to produce a MongoDB-style query string when the input matches supported patterns. It includes example SELECT, INSERT, UPDATE, and DELETE statements, plus Copy and Clear controls. The tool is best for quick examples and does not parse joins, subqueries, SQL dialect differences, MongoDB version features, schema diagrams, or migration-ready aggregation pipelines.",
   "usage_steps": [
-    "Paste your SQL query into the syntax-aware editor with real-time error highlighting",
-    "Select target MongoDB version (4.4/5.0/6.0) from a dropdown menu to ensure operator compatibility",
-    "Map SQL tables to MongoDB collections using the auto-detected schema visualization panel",
-    "Configure join strategy: choose between $lookup with localField/foreignField or manual document embedding",
-    "Adjust output formatting: enable/disable pretty-print, specify indentation level, or generate shell-executable scripts",
-    "Copy the translated MongoDB query or export as JSON to your clipboard with one-click"
+    "Paste a supported SQL statement into the SQL textarea or choose one of the examples.",
+    "Click Convert to generate a MongoDB-style query output.",
+    "Review the generated query in the output panel.",
+    "Copy the output when needed or use Clear to reset the textareas."
   ],
   "usage_examples": [
-    "Migrating a legacy financial system's account_balance SQL view into MongoDB's materialized view equivalent using $merge stages",
-    "Converting a multi-table hospital management SQL query (patients JOIN appointments JOIN physicians) into a denormalized MongoDB collection query",
-    "Transforming a time-series sales report SQL query with DATE_TRUNC() into MongoDB's $dateTrunc aggregation pipeline for real-time analytics",
-    "Optimizing a social media platform's user feed query by converting SQL's LIMIT/OFFSET to MongoDB's $skip/$limit with index-aware cursor handling"
+    "Convert a simple SELECT statement with a WHERE clause into a MongoDB-style find query.",
+    "Try the provided INSERT example to see how a basic document insert might be represented.",
+    "Use the UPDATE or DELETE examples to compare simple SQL operations with MongoDB-style syntax.",
+    "Copy a generated query snippet for a local note or prototype."
   ]
 }

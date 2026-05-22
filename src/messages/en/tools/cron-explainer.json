@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Cron Expression Explainer deciphers cron syntax into plain-language schedules and calculates future execution times using precise temporal logic. This tool parses standard cron expressions (including extended formats with seconds field) by analyzing each positional field—seconds, minutes, hours, day-of-month, month, day-of-week, and year (optional). It employs a finite-state machine algorithm to validate cron patterns against IETF RFC 867 cron standards while supporting popular extensions like Vixie cron syntax. Developers benefit from its ability to resolve ambiguous cron constructs (e.g., 'L', 'W', '#') into explicit calendar dates, and it uniquely handles timezone conversions using IANA Time Zone Database integration. The tool's core engine performs bitwise operations on cron field descriptors to generate timestamp sequences, applying croniter-based iteration logic to determine the next five scheduled execution times in both UTC and local time contexts.",
+  "detailed_description": "The Cron Expression Explainer turns a five-field cron expression into a simple plain-language explanation in the browser. As you edit the expression, the tool displays the minute, hour, day, month, and weekday fields, shows a generated explanation, and lists upcoming run times from the local calculation helper when available. It also includes clickable example expressions and a short reference for common cron characters. It does not support seconds or year fields, timezone selection, share links, or advanced cron extensions such as L, W, or #.",
   "usage_steps": [
-    "Enter a cron expression in the syntax-aware text editor, which highlights invalid fields in real-time",
-    "Toggle the 'Seconds field' switch to enable/disable parsing of 6/7-field cron formats",
-    "Select your target timezone from the dropdown menu to adjust schedule calculations",
-    "Click the 'Parse Expression' button to generate the natural language explanation",
-    "Review the 'Next Execution Times' grid showing ISO 8601 timestamps with daylight saving adjustments",
-    "Use the 'Shareable Link' feature to export your cron analysis for team collaboration"
+    "Enter a five-field cron expression in the input field.",
+    "Review the field cards for minute, hour, day, month, and weekday.",
+    "Read the generated explanation and upcoming run times when available.",
+    "Click an example expression or use the special-character reference for quick reminders."
   ],
   "usage_examples": [
-    "Debugging a misconfigured cron job that runs daily at midnight: '0 0 * * *' vs '0 0 0/2 * *' causing unintended every-2-day execution",
-    "Validating a complex deployment schedule: '30 4-6/2 * 12 1-5' to confirm it triggers at 4:30, 6:30 AM on workdays in December",
-    "Explaining legacy cron syntax '0 22 * * 0-6' to a new team member unfamiliar with Sunday (0/7) day-of-week conventions",
-    "Calculating AWS Lambda cron execution windows with 'rate(5 minutes)' conversions to standard cron format for compliance audits"
+    "Check that 0 9 * * 1-5 represents a weekday morning schedule.",
+    "Click the every-15-minutes example to see how step values are explained.",
+    "Compare daily, hourly, and weekly examples while learning the five cron fields.",
+    "Use the reference panel to remember what *, commas, ranges, and step values mean."
   ]
 }
