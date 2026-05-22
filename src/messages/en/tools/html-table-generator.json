@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The HTML Table Generator enables developers to create semantically correct, responsive HTML tables through an interactive visual interface. This tool leverages client-side JavaScript to dynamically generate TABLE structures with precise control over THEAD, TBODY, TR, TH, and TD elements. Users can adjust row and column counts, define header/footer sections, and apply custom CSS classes for styling. The tool's core functionality includes automatic generation of accessibility attributes (like scope=\"col\"), support for rowspan/colspan configurations, and built-in responsive design features using CSS Grid or Flexbox frameworks. Developers benefit from real-time code preview with syntax highlighting, allowing immediate validation of markup validity. The generated code includes optimized table-layout: fixed for better rendering performance and supports data sorting through clickable column headers. This tool addresses common pain points in manual table creation, particularly for data-heavy applications like dashboards, comparison charts, and database exports where pixel-perfect alignment and cross-browser compatibility are critical.",
+  "detailed_description": "The HTML Table Generator creates a basic HTML table from an editable grid. Choose the number of rows and columns, decide whether the first row should be a header, fill in each cell, and review both the generated HTML and a simple table preview. The tool outputs plain table markup with thead and tbody when headers are enabled, and you can copy the generated HTML to the clipboard.",
   "usage_steps": [
-    "1. Launch the tool and set initial dimensions using the row/column sliders in the Configuration Panel",
-    "2. Toggle header/footer sections using the 'Add Header' and 'Add Footer' checkboxes to define THEAD and TFOOT elements",
-    "3. Customize cell properties in the right sidebar by selecting individual TD/TH elements to apply CSS classes, text alignment, and border styles",
-    "4. Enable responsive features by activating the 'Mobile Breakpoint' slider and specifying min-width values for column visibility thresholds",
-    "5. Use the 'Sort Controls' toggle to add clickable sorting functionality to column headers with automatic arrow indicator rendering",
-    "6. Export the final output using the 'Copy Code' button or download as .html file with embedded CSS stylesheets for immediate implementation"
+    "Set the row and column counts with the number inputs.",
+    "Enable or disable the header-row checkbox.",
+    "Enter text into each cell in the editable grid.",
+    "Review the generated HTML and the table preview.",
+    "Copy the HTML markup to use it elsewhere."
   ],
   "usage_examples": [
-    "1. Creating a responsive pricing comparison table for SaaS products with sticky header rows and alternating row colors",
-    "2. Generating a database query results viewer with dynamic column sorting and customizable cell padding for enterprise dashboards",
-    "3. Building accessible data tables for government websites with automatic scope attributes and screen reader-friendly caption elements",
-    "4. Developing an e-commerce product inventory template with fixed column widths and text-overflow: ellipsis handling for long descriptions"
+    "Create a small static comparison table for documentation.",
+    "Draft a simple product or feature matrix before styling it in your own CSS.",
+    "Generate starter table markup with a header row and body rows.",
+    "Copy plain HTML table code for a prototype or content page."
   ]
 }

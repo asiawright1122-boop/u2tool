@@ -1,18 +1,17 @@
 {
-  "detailed_description": "The Treemap Chart Generator is a powerful web-based tool designed to help users visualize hierarchical data in a compact and space-efficient manner. By dividing a rectangle into smaller rectangles, each representing a node in the hierarchy, this tool allows for the intuitive representation of data at various levels of detail. The size and color of each rectangle can be configured to reflect different attributes, such as the value of the node or its category, making it ideal for complex datasets. Users can leverage this tool to gain insights into financial portfolios, organizational structures, file systems, and more. The generator supports both PNG and SVG export formats, ensuring that the visualizations are suitable for both digital and print media. Under the hood, the tool utilizes advanced algorithms to optimize the layout and ensure that the treemap is both aesthetically pleasing and informative. The customizable color schemes and tooltips further enhance the user's ability to interpret the data effectively.",
+  "detailed_description": "The Treemap Chart Generator helps you build a browser-side treemap from manually edited hierarchical nodes. Start with the default data or load the sample dataset, then edit node names and values, add child nodes, remove nodes, and watch the ECharts preview update. The chart settings include a title field, color theme selector, leaf depth slider, label toggle, and breadcrumb toggle. When the chart is ready, download it as PNG or SVG from the toolbar.",
   "usage_steps": [
-    "Step 1: Navigate to the Treemap Chart Generator page and click on the 'Upload Data' button to import your dataset. The tool supports CSV and JSON file formats.",
-    "Step 2: Once the data is uploaded, use the 'Data Mapping' section to specify which columns correspond to the hierarchy levels, sizes, and colors of the treemap nodes.",
-    "Step 3: Customize the appearance of your treemap by adjusting the settings in the 'Chart Settings' panel. Options include color schemes, label visibility, and tooltip content.",
-    "Step 4: Preview the treemap to ensure it meets your requirements. Use the 'Zoom' and 'Pan' tools to explore different parts of the hierarchy.",
-    "Step 5: If needed, refine the treemap by making additional adjustments in the 'Advanced Settings' section, such as adjusting the layout algorithm or setting minimum and maximum size limits for nodes.",
-    "Step 6: Once satisfied, export your treemap by clicking the 'Export' button. Choose between PNG for a raster image or SVG for a vector graphic, and download the file for further use."
+    "Load the sample data or edit the default nodes directly in the data editor.",
+    "Change node names and values, then use the plus button to add child nodes when you need hierarchy.",
+    "Set the chart title, choose a color theme, adjust leaf depth, and toggle labels or breadcrumbs.",
+    "Review the live treemap preview on the right side of the tool.",
+    "Download the finished chart as PNG or SVG."
   ],
   "usage_examples": [
-    "Example 1: A financial analyst uses the Treemap Chart Generator to visualize the asset allocation of a client's investment portfolio. By mapping the hierarchy to different asset classes and the size to the value of each investment, the analyst can quickly identify the most significant holdings and areas for diversification.",
-    "Example 2: A project manager employs the tool to represent the organizational structure of a large company. Each department and sub-department is mapped as a node, with the size reflecting the number of employees. This visualization helps in understanding the distribution of resources across the company.",
-    "Example 3: A data scientist uses the Treemap Chart Generator to analyze the file system of a server. The hierarchy is set to directories and subdirectories, with the size of each rectangle representing the disk usage. This helps in identifying large files or directories that may need to be optimized.",
-    "Example 4: A marketing team utilizes the tool to visualize the performance of different product categories. The hierarchy is based on product lines, and the size of each node is determined by the revenue generated. This visualization aids in strategic decision-making and resource allocation."
+    "Sketch a category breakdown by entering each category name and value.",
+    "Create a simple budget or portfolio overview with parent categories and child line items.",
+    "Build a product mix visualization from manually entered product groups.",
+    "Export a PNG or SVG treemap for a report, slide, or internal note."
   ],
   "sampleData": {
     "tech": "Technology",

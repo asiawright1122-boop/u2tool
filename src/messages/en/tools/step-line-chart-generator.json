@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The Step Line Chart Generator is a specialized online tool designed to create step line charts, which are particularly useful for visualizing discrete changes in data over time. Unlike traditional line charts that connect data points with straight lines, step line charts use horizontal and vertical lines to connect data points, creating a step-like appearance. This makes it easier to see when changes occur and how values persist over specific intervals. Users can input their data and customize various aspects of the chart, such as the axis labels, color schemes, and data point markers. The tool is ideal for financial analysts, project managers, and researchers who need to present data that changes at distinct points in time, ensuring clarity and precision in their visual representations. The generator supports real-time data updates and allows for the export of charts in multiple formats, making it a versatile and powerful tool for data visualization.",
+  "detailed_description": "The Step Line Chart Generator creates an ECharts step line chart from a small editable table. You can enter category and value rows manually, load sample data, or import a simple CSV or TXT file where each line contains a label and a numeric value separated by a comma or tab. Chart settings include title, color theme, step position, legend, grid, and area fill. The live preview can be downloaded as PNG or SVG.",
   "usage_steps": [
-    "Step 1: Open the Step Line Chart Generator on your web browser and click on the 'Upload Data' button to import your dataset in CSV or Excel format.",
-    "Step 2: In the 'Data Preview' section, review your uploaded data to ensure it is correctly formatted. Adjust column mappings if necessary by selecting the appropriate data type for each column.",
-    "Step 3: Navigate to the 'Chart Settings' panel and choose the 'Step Line' chart type from the dropdown menu. Customize the chart title, axis labels, and legend as needed.",
-    "Step 4: Under the 'Data Series' tab, select the columns that represent your x-axis (time) and y-axis (values). You can add multiple data series by clicking the 'Add Series' button.",
-    "Step 5: Fine-tune the appearance of your chart by adjusting the line color, thickness, and marker styles. Use the 'Background' section to set the chart background color and grid lines.",
-    "Step 6: Once your chart is complete, click the 'Export' button to download it in your preferred format, such as PNG, SVG, or PDF. You can also share the chart directly via a unique URL."
+    "Edit the category and value rows in the data table, or load the included sample data.",
+    "Optionally import a simple CSV or TXT file with two columns: label and value.",
+    "Set the chart title, color theme, step position, legend, grid, and area fill options.",
+    "Check the live chart preview as the data and settings change.",
+    "Download the chart as PNG or SVG."
   ],
   "usage_examples": [
-    "Example 1: A financial analyst uses the Step Line Chart Generator to visualize stock prices at the close of each trading day, highlighting the exact points where prices changed.",
-    "Example 2: A project manager tracks the progress of a software development project by plotting the number of completed tasks over discrete time intervals, ensuring stakeholders can see clear milestones.",
-    "Example 3: A market researcher analyzes survey responses over a series of weeks, using the tool to show the number of respondents who changed their opinions at specific points in time.",
-    "Example 4: An environmental scientist monitors temperature changes in a specific region, plotting daily high and low temperatures to identify patterns and anomalies over a month."
+    "Show a value that stays constant between scheduled updates.",
+    "Plot milestone counts across a sequence of project stages.",
+    "Compare weekly inventory levels from a two-column CSV export.",
+    "Create a PNG or SVG step chart for a status report."
   ]
 }
