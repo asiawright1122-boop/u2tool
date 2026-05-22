@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The JSON to Zod Schema converter transforms raw JSON data into a type-safe Zod validation schema, enabling developers to enforce strict type checking in TypeScript applications. This tool parses JSON structures to automatically generate corresponding Zod primitives (e.g., z.string(), z.number()), composite types (z.array(), z.object()), and advanced constructs like discriminated unions or recursive references. Developers need this tool to bridge the gap between untyped JSON payloads (API responses, config files) and compile-time type safety in TypeScript ecosystems. By converting JSON to Zod schemas, teams reduce runtime errors caused by malformed data, streamline backend validation logic, and create self-documenting type definitions aligned with OpenAPI/Swagger specs. The converter employs a recursive descent parser to analyze nested JSON hierarchies, inferring optional properties through null-awareness, detecting potential union types via value variance, and preserving field metadata. It outputs idiomatic Zod code with properly chained modifiers (e.g., .optional(), .default()) and supports customization through parsing flags like 'strictNullChecks' or 'dateCoercion'. Unique technical features include automatic detection of candidate discriminators for union types and generation of refinement predicates for complex validation rules.",
+  "detailed_description": "The JSON to Zod converter turns pasted JSON into a basic Zod schema snippet in the browser. You can set the exported schema name, paste JSON or load the sample, click Convert, and copy the generated TypeScript output. The converter uses JSON.parse and maps values to simple Zod expressions such as strings, numbers, integer numbers, booleans, null, arrays, objects, and a few string patterns for email, URL, datetime, and UUID. It also exports an inferred TypeScript type using z.infer. The tool does not import files, download `.ts` modules, offer strict-mode flags, detect discriminated unions, generate refinements, infer optional fields from missing examples, or align output with OpenAPI or Swagger specs.",
   "usage_steps": [
-    "Open the code editor panel and paste your JSON sample data into the 'Input JSON' textarea",
-    "Toggle 'Strict Mode' to enforce exact object matching or allow extra properties",
-    "Enable 'Detect Discriminated Unions' to identify potential tagged unions in nested structures",
-    "Adjust 'Date String Handling' to coerce ISO date strings to Date objects automatically",
-    "Click 'Generate Schema' to create the Zod validation schema in the output panel",
-    "Copy the TypeScript code snippet or download as a .ts module with proper imports"
+    "Enter a schema name in the schema name field.",
+    "Paste JSON into the input textarea or click Load Example.",
+    "Click Convert to generate the Zod schema and inferred type.",
+    "Review any empty-input or invalid-JSON error message.",
+    "Copy the generated TypeScript code from the output panel."
   ],
   "usage_examples": [
-    "Validating third-party API responses in a Node.js service-oriented application by generating Zod schemas from example payloads",
-    "Creating type-safe form validators in React applications using JSON samples from UI design mocks",
-    "Converting legacy MongoDB schema definitions to Zod for runtime validation in TypeScript backends",
-    "Generating interface guards for WebSocket message brokers to ensure type correctness in real-time systems"
+    "Generate a starter Zod object schema from a small API response sample.",
+    "Create a quick schema snippet for a nested object while prototyping TypeScript code.",
+    "Use the sample JSON to see how email, URL, datetime, UUID, arrays, and nested objects are mapped.",
+    "Copy the generated schema and z.infer type for manual review in a local project."
   ]
 }

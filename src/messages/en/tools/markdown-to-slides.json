@@ -1,17 +1,16 @@
 {
-  "detailed_description": "Markdown to Slides is a client-side conversion tool that transforms markdown-formatted text into interactive HTML presentations using advanced parsing algorithms. The application leverages the PEG.js parser to analyze markdown syntax, identifying header hierarchies to segment content into discrete slides. It supports two rendering engines: Reveal.js for HTML-based presentations with CSS3 transitions and Deck.js for nested slide structures. Users can embed YAML front matter to customize slide properties like background images, transition effects, and code syntax highlighting through Prism.js integrations. This tool addresses the specific needs of developers who need to rapidly prototype technical presentations from existing documentation, educators creating lecture slides from research notes, and open-source contributors preparing conference talks without leaving their preferred text editors. The processing pipeline includes automatic table of contents generation, responsive design adaptation via Bootstrap 5, and optional PDF export through headless browser rendering.",
+  "detailed_description": "Markdown to Slides converts pasted Markdown-style text into a simple browser-side slide deck. Slides are split on lines containing only `---`; lines beginning with `# ` or `## ` become slide titles, bullet lines beginning with `- ` or `* ` are shown as bullets, and `Notes:` or `Speaker Notes:` lines are displayed as speaker notes for the current slide. You can load a sample, choose light, dark, or gradient themes, convert the text, navigate slides with buttons or arrow keys, open a fullscreen presentation mode, and export the generated slides as a single HTML file. The tool does not import `.md` files, use Reveal.js or Deck.js, parse YAML front matter, upload custom CSS, provide code highlighting, generate PDFs, or build automatic tables of contents.",
   "usage_steps": [
-    "1. Paste markdown content into the editor window or load a .md file using the file picker",
-    "2. Select preferred rendering engine (Reveal.js or Deck.js) from the framework dropdown",
-    "3. Choose from 12 built-in themes or upload a custom CSS file for presentation styling",
-    "4. Set slide transition effects using the animation controls (available options: fade, slide, convex)",
-    "5. Use the YAML editor to define slide-specific metadata like speaker notes and background images",
-    "6. Click 'Generate Presentation' to process content and download results as HTML or PDF"
+    "Paste slide text into the Markdown textarea or click Load Sample.",
+    "Separate slides with a line containing only `---`.",
+    "Choose the light, dark, or gradient theme.",
+    "Click Convert to create the slide preview.",
+    "Navigate slides with the previous and next buttons, use presentation mode, or export the deck as HTML."
   ],
   "usage_examples": [
-    "A developer converts a GitHub README.md containing API documentation into a presentation with code block highlighting and animated diagram transitions",
-    "A technical writer repurposes a software user manual into a sales demonstration by adding branded themes and speaker notes through YAML metadata",
-    "A university professor transforms research notes written in markdown into a responsive HTML lecture presentation with embedded equations using KaTeX",
-    "An open-source contributor creates a conference talk from version-controlled markdown slides that automatically update with git hooks and CI pipelines"
+    "Turn a short outline separated by `---` into a browser-side slide preview.",
+    "Create a simple bullet-list presentation with light, dark, or gradient styling.",
+    "Add `Notes:` text to keep speaker notes visible below the current slide.",
+    "Export a small generated presentation as an HTML file for local use."
   ]
 }
