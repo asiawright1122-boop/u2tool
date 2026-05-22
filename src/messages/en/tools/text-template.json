@@ -1,17 +1,15 @@
 {
-  "detailed_description": "Text Template is a powerful tool designed to dynamically replace variables within text templates with specified values. This process, known as template rendering, is essential in various scenarios where personalized or dynamic text content is required. The tool leverages a simple yet sophisticated syntax, allowing users to define placeholders within their templates that are then populated with actual data. This is particularly useful in generating personalized emails, creating dynamic content for web pages, and automating the creation of reports or documents. By automating the replacement of variables, Text Template significantly reduces the manual effort and potential for errors in text manipulation. The tool supports a wide range of data types and can handle complex templates, making it a versatile solution for developers and content creators alike. Under the hood, Text Template uses a parser to identify and replace placeholders, ensuring that the final output is accurate and formatted correctly.",
+  "detailed_description": "Text Template is a browser-side placeholder replacement helper for simple text templates. Edit the template textarea using placeholders such as {{ name }}, fill in the automatically detected variable fields, and click Process to generate the rendered text. The result appears below the form and can be copied. The tool is intended for quick plain-text substitution and does not import JSON files, download output files, support complex data types, or run a full template language with loops and conditionals.",
   "usage_steps": [
-    "Step 1: Navigate to the Text Template tool page and click on the 'Create Template' button to start a new template.",
-    "Step 2: In the template editor, input your base text, including placeholders for the variables you want to replace. Use the syntax {{variable_name}} for each placeholder.",
-    "Step 3: Click on the 'Add Data' button to open the data input section. Here, you can enter the values for the variables you defined in your template.",
-    "Step 4: For each variable, enter the desired value in the corresponding field. You can also import values from a JSON file by clicking on the 'Import JSON' option.",
-    "Step 5: Once all the variables are populated, click the 'Render Template' button. The tool will process the template and replace the placeholders with the provided values.",
-    "Step 6: Review the rendered text in the output section. If everything looks correct, you can copy the text and use it as needed, or download it as a file for further processing."
+    "Edit the template text and include placeholders using double braces, such as {{ name }}.",
+    "Fill in the detected variable value fields below the template.",
+    "Click Process to replace placeholders with the entered values.",
+    "Review the generated result and copy it when needed."
   ],
   "usage_examples": [
-    "Example 1: A marketing team can use Text Template to generate personalized email campaigns. By defining placeholders for the recipient's name, recent purchases, and special offers, they can create a single template that generates unique emails for each customer.",
-    "Example 2: A developer can automate the creation of API documentation by using Text Template. By defining placeholders for API endpoints, parameters, and example responses, they can generate comprehensive and consistent documentation with minimal manual effort.",
-    "Example 3: A content creator can use Text Template to generate social media posts with dynamic content. For instance, they can create a template for a series of posts, each highlighting a different product, by defining placeholders for the product name, description, and image URL.",
-    "Example 4: A project manager can use Text Template to create status reports for clients. By defining placeholders for project milestones, completed tasks, and upcoming deliverables, they can generate detailed reports that provide clients with a clear overview of the project's progress."
+    "Example 1: Fill a short greeting template with a name, company, and role.",
+    "Example 2: Create a reusable plain-text message and change a few detected values before copying it.",
+    "Example 3: Test how placeholder names are detected from a copied template.",
+    "Example 4: Generate a simple note or snippet from manually entered values."
   ]
 }
