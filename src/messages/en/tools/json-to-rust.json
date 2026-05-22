@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The JSON to Rust converter transforms JSON data structures into idiomatic Rust structs with Serde serialization support. This tool parses JSON input through a recursive descent parser to construct an abstract syntax tree (AST), analyzing field types including primitive values, arrays, and nested objects. It employs type inference algorithms to determine appropriate Rust types - distinguishing between i32/u64 for numbers, handling special cases like UUID strings, and preserving nullability. The generated code incorporates Serde's derive macros with #[derive(Serialize, Deserialize)] and implements the Deserialize trait for seamless integration with Rust's ecosystem. Users benefit from automated schema generation when building REST API clients, processing configuration files, or modeling database responses. The converter handles edge cases like special characters in keys through Serde's #[serde(rename)] attributes and maintains type consistency across complex hierarchies. It supports Rust editions 2018 and 2021, generating struct definitions with appropriate visibility modifiers and implementing From traits for enum variants derived from JSON arrays. The output includes module-ready code with proper use statements and documentation comments derived from JSON structure metadata.",
+  "detailed_description": "The JSON to Rust converter generates simple Rust struct definitions from pasted JSON in the browser. You can edit the root struct name, toggle Serde derives, and choose whether null values become Option<serde_json::Value>. The converter parses JSON with JSON.parse, uses the first item of an array when the input is an array of objects, creates nested structs for nested objects, infers basic Rust types such as String, i64, f64, bool, Vec, and serde_json::Value, and adds serde rename attributes when field names are converted to snake_case. The generated code appears in a readonly textarea and can be copied. It does not import JSON files, validate schemas, choose Rust editions, configure visibility, generate enums or From traits, or add documentation comments.",
   "usage_steps": [
-    "Paste JSON payload into the input text area or load from file using the 'Import JSON' button",
-    "Click 'Validate JSON' to check syntax and confirm structural integrity",
-    "Enter root struct name in the 'Struct Name' field (default: 'Root')",
-    "Adjust visibility settings via dropdown (options: pub, pub(crate), private)",
-    "Configure Serde attributes in the options panel (rename policy, tag/content fields, skip serialization)",
-    "Click 'Generate Structs' to produce Rust code with nested type definitions and copy results via the clipboard icon"
+    "Paste JSON into the input textarea or edit the sample object.",
+    "Set the root struct name.",
+    "Choose whether to include Serde derives and whether null values should use Option.",
+    "Click Convert to generate Rust struct code.",
+    "Review the output textarea and copy the generated code when needed."
   ],
   "usage_examples": [
-    "Converting REST API response JSON into typed structs for a Rust web application consuming external services",
-    "Transforming MongoDB document dumps into schema definitions for Rust-based data processing pipelines",
-    "Generating configuration struct templates from sample JSON configs for CLI applications",
-    "Creating test fixtures by converting sample JSON payloads into compile-time verified Rust types"
+    "Generate a starter Rust struct from a small API response sample.",
+    "Create nested structs from a pasted object that contains a child object.",
+    "Compare output with and without Serde derives before copying the code.",
+    "Use the first object in a sample array to scaffold a basic Rust struct."
   ]
 }
