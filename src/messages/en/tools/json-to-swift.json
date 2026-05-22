@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The JSON to Swift tool automates the generation of type-safe Swift structs from JSON payloads using advanced type inference algorithms. By analyzing JSON structure and value patterns, the tool accurately maps primitive types (String, Int, Double, Bool), array collections, and nested objects to corresponding Swift data models. It leverages Swift's Codable protocol architecture to create structs with proper type annotations, including optional handling (T?), array generics ([T]), and enum representations for fixed-value fields. Developers benefit from reduced manual coding errors when implementing API response models, local data persistence structures, or third-party SDK integrations. The tool's intelligent schema detection resolves ambiguous type cases through context-aware analysis, while preserving JSON key naming conventions through customizable coding keys. Output includes properly indented Swift syntax with configurable access modifiers (public/internal/private) and optional documentation comment stubs, ensuring seamless integration into Xcode projects targeting iOS, macOS, or remote Swift environments.",
+  "detailed_description": "The JSON to Swift tool generates simple Swift struct definitions from pasted JSON in the browser. You can edit the root struct name, toggle whether generated structs conform to Codable, click Convert, and copy the output. The converter parses JSON with JSON.parse, uses the first item of an array when the input is an array of objects, creates nested structs for nested objects, converts underscore-separated keys to camelCase property names, and infers basic Swift types such as String, Int, Double, Bool, arrays, nested structs, Any, and Any?. It does not provide syntax highlighting, configurable visibility, documentation comments, CodingKeys, enum generation, schema analysis, file import, or Xcode project integration.",
   "usage_steps": [
-    "Paste raw JSON data into the syntax-highlighted input editor",
-    "Adjust the 'Struct Prefix' field to add custom命名空间 identifiers",
-    "Select desired access control level from the 'Visibility' dropdown menu",
-    "Toggle 'Include Documentation Comments' for empty comment templates",
-    "Click the 'Generate Swift Struct' button to execute conversion",
-    "Copy the formatted Swift code from the output panel using the clipboard icon"
+    "Paste JSON into the input textarea or edit the sample object.",
+    "Set the root struct name.",
+    "Choose whether generated structs should include Codable conformance.",
+    "Click Convert to generate Swift struct code.",
+    "Review the output textarea and copy the generated code when needed."
   ],
   "usage_examples": [
-    "Creating type-safe models for REST API responses in an iOS weather application",
-    "Generating data transfer objects (DTOs) for Firebase Firestore document mapping",
-    "Converting complex nested JSON from a GraphQL API into queryable Swift structs",
-    "Building configuration models from dynamic JSON settings files in macOS apps"
+    "Generate a starter Swift struct from a small API response sample.",
+    "Create nested structs from a pasted object that contains a child object.",
+    "Compare output with and without Codable conformance before copying the code.",
+    "Use the first object in a sample array to scaffold a basic Swift struct."
   ]
 }

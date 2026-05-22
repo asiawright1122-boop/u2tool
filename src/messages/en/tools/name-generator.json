@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The Name Generator is a sophisticated tool that leverages a hybrid algorithm combining phoneme sequence analysis, cultural etymology databases, and entropy-driven randomness to produce contextually relevant names. Unlike basic name generators, this tool integrates Markov chain models trained on multilingual name corpuses to ensure linguistic authenticity while allowing parameter-driven customization. Developers and creatives can generate names tailored to specific requirements by adjusting phonetic patterns, cultural origins, syllable counts, and stylistic modifiers. The backend employs a weighted probability system where user inputs dynamically adjust the entropy values of name components, enabling outputs that range from realistic historical names to completely fantastical constructs. This tool addresses critical use cases including game development character creation, brand identity ideation, literary character naming, and personal projects requiring unique identifiers. Its technical architecture combines API calls to precomputed name databases with client-side JavaScript entropy calculation, ensuring both speed and customization. The inclusion of cultural filtering and phonetic stress pattern controls provides granularity absent in most competitors' offerings, making it particularly valuable for projects demanding cultural sensitivity or speculative fiction world-building.",
+  "detailed_description": "The Name Generator creates a browser-side list of names from the built-in name data set. You can choose a gender filter, choose one of the available origin filters, select a result count of 1, 5, 10, 20, or 50, click Generate, and copy one generated name or copy the whole list. The tool uses the local generateNames helper and available origin list, but it does not provide phonetic controls, Markov mutations, syllable sliders, seed input, cultural etymology analysis, API-backed databases, entropy scores, CSV export, or linguistic metadata.",
   "usage_steps": [
-    "Open the Name Generator interface and select 'Advanced Options' to access phonetic controls",
-    "Choose a cultural origin from the dropdown (e.g., Nordic, Yoruba, Edo-period Japanese)",
-    "Adjust the 'Syllabic Complexity' slider to set name length and structure",
-    "Enable 'Markov Mutation' for evolutionary name variations based on initial seed input",
-    "Click 'Generate Batch' to produce 10 names with entropy values displayed in hexadecimal",
-    "Use the 'CSV Export' button to download results with metadata including linguistic roots"
+    "Choose a gender filter or leave it set to any gender.",
+    "Choose an available origin filter or leave it set to any origin.",
+    "Select how many names to generate.",
+    "Click Generate to create the list.",
+    "Copy a single name or copy all generated names when needed."
   ],
   "usage_examples": [
-    "A game developer creates 50 unique fantasy race names by combining Celtic phonemes with algorithmic mutations",
-    "A biotech startup uses medical terminology filters to generate patent-pending product names",
-    "A historical novelist develops period-accurate character names using 19th-century American census data filters",
-    "A linguistics professor tests the tool's Markov model by generating Proto-Indo-European name reconstructions"
+    "Generate a short list of names for placeholder users in a prototype.",
+    "Filter by gender and origin to narrow a brainstorming list.",
+    "Create up to 50 sample names and copy the whole list into notes.",
+    "Copy one generated name for a mock profile, story draft, or test fixture."
   ]
 }
