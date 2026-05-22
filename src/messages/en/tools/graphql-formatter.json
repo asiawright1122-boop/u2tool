@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The GraphQL Formatter is a specialized tool that parses, validates, and reformats raw GraphQL operations or schema definitions (SDL) into human-readable syntax. It leverages a lexer-parser combination to analyze input, constructing an abstract syntax tree (AST) that identifies type definitions, directives, fragments, and nested selections. The formatter applies configurable rules for indentation, line breaks, and token spacing, ensuring alignment with common style guides like those from Apollo or Facebook. It also detects syntax errors, such as mismatched brackets or invalid directives, and highlights them during validation. Developers need this tool to debug obfuscated queries (e.g., minified API payloads), standardize team workflows, or prepare schemas for documentation. Unlike generic beautifiers, it maintains GraphQL-specific structures like union types and input objects, preventing misinterpretation. The tool's engine uses the official GraphQL specification (June 2018 or later) to ensure compliance, supporting modern features like schema stitching and directive-based validation. Output is a clean, standardized document with collapsible regions for large queries, enhancing readability in IDEs or code reviews.",
+  "detailed_description": "The GraphQL Formatter works with pasted GraphQL text in the browser. Click Format to apply simple two-space indentation around braces, brackets, commas, strings, and whitespace, or click Minify to remove comments and compact common GraphQL punctuation. The formatted or minified text appears in a readonly output textarea and can be copied. This is a lightweight text formatter, not a full GraphQL parser or validator, and it does not import files, inspect schemas, enforce GraphQL specifications, or provide collapsible AST views.",
   "usage_steps": [
-    "Open the tool and paste your GraphQL code into the primary text area or click 'Upload File' to import a .graphql file.",
-    "Toggle the 'Operation Type' selector to specify whether your input is a query/mutation or a schema definition (SDL).",
-    "Adjust formatting rules using the 'Indentation' slider (2-8 spaces) and check/uncheck 'Compact Lists' for array formatting preferences.",
-    "Enable 'Syntax Validation' to catch errors like undeclared variables or invalid directives before formatting.",
-    "Click the 'Format GraphQL' button to process the input and generate the structured output in the results pane.",
-    "Copy the formatted code using the 'Clipboard' icon or download it as a .graphql file with the 'Save' button."
+    "Paste GraphQL text into the input textarea.",
+    "Click Format to add simple line breaks and indentation.",
+    "Click Minify when you want to remove comments and compact whitespace.",
+    "Review the output textarea and copy the generated text when needed."
   ],
   "usage_examples": [
-    "Debugging a production API error: A developer receives a compressed mutation from server logs and formats it to identify a missing required field.",
-    "Team collaboration: A front-end engineer standardizes query formatting across a repository using the tool's consistent indentation settings.",
-    "Schema documentation: A technical writer formats a schema with nested interfaces and directives to generate visually clear documentation.",
-    "Learning GraphQL: A student reformats a complex example from a tutorial, using 'Compact Lists' to reduce visual clutter in arrays of scalar types."
+    "Example 1: Add readable indentation to a compact GraphQL query pasted from logs.",
+    "Example 2: Remove comments and extra whitespace from a small query before copying it.",
+    "Example 3: Reformat a tutorial query while learning the shape of nested selections.",
+    "Example 4: Compare pasted GraphQL text with the generated output during a quick review."
   ]
 }

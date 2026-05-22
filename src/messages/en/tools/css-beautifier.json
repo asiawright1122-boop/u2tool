@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The CSS Beautifier is a powerful web-based utility designed to enhance the readability and maintainability of CSS code. Technically, this tool parses the input CSS, reorganizes it according to specified formatting rules, and outputs the beautified code. It supports both minification and beautification, allowing developers to either compress their CSS for production use or expand it for easier debugging and collaboration. The tool leverages advanced parsing algorithms to ensure that the output is syntactically correct and adheres to the latest CSS standards. By using this tool, developers can quickly transform messy or minified CSS into a well-structured and readable format, which is crucial for maintaining large codebases and ensuring consistent styling across web projects. Additionally, the minification feature helps optimize CSS files for faster load times, enhancing user experience on the front end.",
+  "detailed_description": "The CSS Beautifier formats pasted CSS text in the browser. Choose an indentation option, then click Beautify to add simple line breaks and indentation around braces and declarations, or click Minify to remove comments and extra spacing around common CSS punctuation. The result appears in a readonly output textarea and can be copied. It is a lightweight text formatter and does not validate CSS syntax, guarantee standards compliance, parse every CSS edge case, or provide production build optimization.",
   "usage_steps": [
-    "Step 1: Visit the CSS Beautifier tool page on the developer website.",
-    "Step 2: Click on the 'Paste CSS Code' button to open the text area.",
-    "Step 3: Copy and paste your CSS code into the provided text area.",
-    "Step 4: Select the desired action from the dropdown menu: 'Beautify' for readable formatting or 'Minify' for compressed output.",
-    "Step 5: Adjust additional settings if needed, such as indentation size and line break options, using the controls below the dropdown.",
-    "Step 6: Click the 'Process' button to generate the formatted CSS, which will appear in the output area below."
+    "Paste CSS into the input textarea.",
+    "Select the indentation option you want to use for beautified output.",
+    "Click Beautify for readable formatting or Minify for compact output.",
+    "Review the generated CSS in the output textarea and copy it when needed."
   ],
   "usage_examples": [
-    "Example 1: A frontend developer is working on a large web application and needs to debug a specific CSS file. By using the CSS Beautifier, they can quickly convert the minified CSS into a readable format, making it easier to identify and fix styling issues.",
-    "Example 2: A junior developer is tasked with maintaining an old website's CSS files, which are poorly formatted and difficult to navigate. The CSS Beautifier helps them reformat the CSS, improving code readability and maintainability.",
-    "Example 3: A web designer is preparing a website for launch and wants to ensure the CSS files are optimized for performance. They use the CSS Beautifier's minification feature to compress the CSS, reducing file size and improving page load times.",
-    "Example 4: A team of developers is collaborating on a project and needs to standardize their CSS formatting. The CSS Beautifier's customizable settings allow them to define a consistent formatting style, ensuring uniformity across the project's CSS files."
+    "Example 1: Add line breaks and indentation to a compact CSS snippet before reviewing it.",
+    "Example 2: Remove comments and extra spacing from a small CSS block for a quick local test.",
+    "Example 3: Compare pasted CSS with the formatted output while checking selector structure.",
+    "Example 4: Copy a cleaned-up snippet into another editor after choosing an indentation size."
   ]
 }
