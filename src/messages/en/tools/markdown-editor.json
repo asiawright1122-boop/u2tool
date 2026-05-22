@@ -1,27 +1,26 @@
 {
-  "detailed_description": "Markdown Editor is a powerful online document editing tool with real-time preview functionality. Write Markdown syntax on the left side and instantly see the rendered result on the right. Supports all standard Markdown syntax including headings, lists, code blocks, tables, links, images, and more. Offers three view modes: split, edit-only, and preview-only. Export your work as .md or .html files with one click. Built-in quick-insert buttons for common formatting. All editing happens locally in your browser, ensuring data security.",
+  "detailed_description": "Markdown Editor is a browser-side Markdown textarea with a rendered preview. You can edit the sample Markdown, switch between edit, split, and preview modes, insert small snippets for common syntax such as bold, italic, headings, lists, code blocks, links, images, and tables, copy Markdown or rendered HTML, clear the editor, and download the current content as `.md` or `.html`. The preview is generated locally with the site's Markdown renderer, but the tool does not import files, auto-save drafts, provide collaborative editing, or guarantee support for every Markdown or GFM extension.",
   "usage_steps": [
-    "Open the Markdown Editor tool page",
-    "Enter or paste Markdown content in the left editing area",
-    "The right preview area shows the rendered result in real-time",
-    "Use the toolbar buttons to quickly insert common formatting",
-    "Choose view mode: split, edit, or preview",
-    "Click download button to export as .md or .html file"
+    "Enter or paste Markdown content in the editor textarea.",
+    "Use the snippet buttons to append common Markdown examples when useful.",
+    "Switch between edit, split, and preview modes.",
+    "Copy the Markdown or rendered HTML if needed.",
+    "Download the current content as a `.md` or `.html` file, or clear the editor."
   ],
   "usage_examples": [
-    "Write technical documentation and README files",
-    "Create blog posts and notes",
-    "Draft project documentation",
-    "Preview Markdown formatting quickly"
+    "Preview a README draft while editing Markdown in the browser.",
+    "Copy rendered HTML from a small Markdown note.",
+    "Use the table, code, link, or image snippets as quick formatting starters.",
+    "Download the current Markdown draft or HTML output for local use."
   ],
   "faqs": [
     {
       "question": "What Markdown syntax is supported?",
-      "answer": "All standard Markdown syntax is supported, including headings, bold, italic, lists, code blocks, tables, links, images, blockquotes, and more. GFM (GitHub Flavored Markdown) extensions are also supported."
+      "answer": "The editor supports the Markdown features handled by the site's renderer, including common syntax such as headings, bold, italic, lists, code blocks, tables, links, images, and blockquotes. It is intended for quick previewing rather than as a guarantee of every Markdown or GFM extension."
     },
     {
       "question": "Is my content saved automatically?",
-      "answer": "The current version does not auto-save content. We recommend exporting your file after editing. You can export as .md or .html format."
+      "answer": "The current version does not auto-save content. You can copy the Markdown or HTML, or download the current content as `.md` or `.html`."
     },
     {
       "question": "Can I import existing Markdown files?",

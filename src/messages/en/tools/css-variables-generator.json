@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The CSS Variables Generator is a specialized tool for creating and managing CSS custom properties (variables) through an interactive visual interface. Technically, it enables developers to define dynamic values that can be reused across stylesheets using the `--variable-name` syntax and `var()` function. This tool addresses common pain points in manual variable management, such as maintaining consistency in large-scale projects, implementing theme switching, and ensuring valid value types during cascading operations. The generator provides real-time parsing of variable relationships, supports nested `var()` references with fallback values, and validates CSS syntax to prevent runtime errors. Developers can visually map variable hierarchies, convert static CSS values into modular variables, and preview live CSSOM updates as they adjust values. Key features include color space conversion (HSL/RGB/HEX), unit-aware numerical inputs, and export options for CSS, SCSS, or JSON formats. It's particularly useful for creating design system tokens, responsive design variables, and accessible color systems where programmatic control of CSS values is critical.",
+  "detailed_description": "The CSS Variables Generator helps you build small sets of design tokens in the browser. You can edit variable names, values, and simple type labels, add or remove rows, choose a prefix, choose a scope such as :root or theme classes, load light, dark, or brand presets, and copy generated CSS, SCSS, or JavaScript output. Color rows include a color picker and text value field, while other rows use a plain text value field. The tool does not parse variable dependency graphs, validate CSS syntax, convert color spaces, calculate accessibility contrast, support nested fallback relationships, or export JSON files.",
   "usage_steps": [
-    "Launch the tool and use the '+' button to create a new variable group for organizational scoping.",
-    "Click 'Add Variable' to generate a custom property, specifying its name (e.g., '--primary-hue') in the dedicated input field.",
-    "Select a value type (color, number, length, or custom string) from the dropdown menu to enforce format validation.",
-    "Adjust values using the color picker or numerical slider while observing real-time updates in the CSS preview panel.",
-    "Enable 'Chained References' to create dependent variables that use `var(--base-variable, fallback)` syntax automatically.",
-    "Export the final CSS output with minified variables or copy individual variable declarations to your clipboard."
+    "Optionally choose a prefix and CSS scope.",
+    "Load a light, dark, or brand preset, or add variable rows manually.",
+    "Edit each variable name, type label, and value.",
+    "Review the generated CSS, SCSS, and JavaScript output panels.",
+    "Copy the output format you want to reuse."
   ],
   "usage_examples": [
-    "Creating a design system theme with 10+ color variables that update automatically across 100+ component stylesheets when adjusted.",
-    "Implementing responsive typography by defining `--font-scale` variables tied to `clamp()` functions for fluid heading sizes.",
-    "Building an accessible dark mode toggle that inverts 15 color variables while maintaining WCAG contrast ratios through HSL adjustments.",
-    "Generating spacing tokens (e.g., `--spacing-xs: 0.5rem`) that create a consistent 8pt grid system across a multi-page application."
+    "Create a small :root token block for colors and spacing.",
+    "Load the dark preset and copy CSS variables for a quick theme draft.",
+    "Generate SCSS variables from the same names and values used in the CSS output.",
+    "Copy a JavaScript object for a simple prototype that needs matching token values."
   ]
 }
