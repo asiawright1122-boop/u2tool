@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Pictorial Bar Chart Generator is a specialized online application designed to transform raw numerical data into visually engaging pictorial bar charts. Unlike traditional bar charts, which use simple bars to represent data, this tool utilizes repeated symbols or icons to illustrate values, making the data more intuitive and engaging for viewers. This feature is particularly beneficial for presentations, reports, and educational materials where visual appeal and clarity are crucial. The tool supports various data input formats and allows users to customize the appearance of their charts, including the choice of symbols, colors, and layout. By leveraging this tool, users can effectively communicate complex data in a simple, visually appealing manner, enhancing the overall impact of their content. The Pictorial Bar Chart Generator operates by parsing the input data, calculating the number of symbols needed for each bar, and rendering the chart in real-time. It supports dynamic data updates, making it ideal for live data visualization projects.",
+  "detailed_description": "The Pictorial Bar Chart Generator builds an ECharts pictorial bar chart from editable category and value rows. You can load sample data, add or delete rows, choose from built-in symbol shapes, switch color themes, set a chart title, toggle horizontal layout and legend display, and preview the chart in the browser. The finished chart can be downloaded as PNG or SVG.",
   "usage_steps": [
-    "Step 1: Open the Pictorial Bar Chart Generator and click on the 'Upload Data' button to import your dataset in CSV or JSON format.",
-    "Step 2: In the 'Data Mapping' section, assign the columns from your dataset to the X-axis (categories) and Y-axis (values).",
-    "Step 3: Navigate to the 'Symbol Selection' panel and choose the icon or symbol that will represent the data points in your chart.",
-    "Step 4: Customize the appearance of your chart by adjusting settings in the 'Chart Settings' section, such as bar color, background, and title.",
-    "Step 5: Preview your chart using the 'Preview' button to ensure it meets your requirements. Make any necessary adjustments in the settings.",
-    "Step 6: Once satisfied, click the 'Generate Chart' button to create your pictorial bar chart, which can then be downloaded as an image or embedded in a webpage."
+    "Start from the default rows or click Load Sample to reset the sample chart.",
+    "Edit category names and numeric values in the data table.",
+    "Choose a symbol shape, color theme, chart title, horizontal layout, and legend setting.",
+    "Preview the chart and download it as PNG or SVG."
   ],
   "usage_examples": [
-    "Example 1: A marketing analyst wants to present the number of social media engagements for different campaigns. By using the Pictorial Bar Chart Generator, the analyst can create a chart where each bar is composed of social media icons (e.g., likes, shares, comments) corresponding to the engagement count for each campaign.",
-    "Example 2: An educator is preparing a lesson on population statistics. The tool can be used to create a pictorial bar chart where each bar represents the population of a different country, with people icons used to illustrate the population size. This makes the data more relatable and easier to understand for students.",
-    "Example 3: A financial advisor is creating a report on investment returns for various asset classes. The Pictorial Bar Chart Generator can help visualize the returns using dollar symbols, making it clear and engaging for clients who are evaluating their investment options.",
-    "Example 4: A sports coach is analyzing the performance metrics of athletes. The coach can use the tool to create a pictorial bar chart where each bar represents a different metric (e.g., goals scored, assists made) with sports icons (e.g., soccer balls, basketballs) to represent the values. This helps in making the data more visually engaging and easier to interpret."
+    "Example 1: Create a quick visual comparison of product counts using repeated rounded-rectangle symbols.",
+    "Example 2: Build a classroom chart with categories and values to make a simple dataset easier to scan.",
+    "Example 3: Try different built-in symbol shapes such as circle, diamond, triangle, arrow, or pin before exporting.",
+    "Example 4: Download a pictorial bar chart as PNG or SVG for a presentation, report, or article."
   ]
 }
