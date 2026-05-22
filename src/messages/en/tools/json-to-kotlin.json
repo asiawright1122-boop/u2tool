@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The JSON to Kotlin converter automates the generation of type-safe Kotlin data classes from arbitrary JSON structures, incorporating serialization frameworks like Kotlinx.serialization and Jackson. Developers need this tool to eliminate manual mapping of JSON payloads to object models, which is error-prone and time-consuming during API client development, data pipeline implementation, or Android app architecture setup. The tool parses JSON input through a recursive descent parser to construct an abstract syntax tree (AST) representing nested objects, arrays, and primitive types. It infers Kotlin types using heuristics for ambiguous JSON values (e.g., distinguishing between Long and String timestamps) and applies configurable naming strategies for properties. Generated classes include companion objects with deserialization methods, null safety annotations for optional fields, and default value placeholders for missing properties. Advanced features include support for sealed class hierarchies in polymorphic JSON structures and custom type adapters for domain-specific formats like ISO 8601 dates.",
+  "detailed_description": "The JSON to Kotlin converter turns a pasted top-level JSON object into Kotlin class code in the browser. You can set the root class name, package name, choose no serializer or Moshi, Gson, or Kotlinx Serialization annotations, and toggle data class and nullable output options. The tool includes a Load Sample button, parses the JSON with JSON.parse, generates the code, shows errors for invalid input or non-object input, and lets you copy the output. It is intended for quick model scaffolding and does not analyze OpenAPI files, create sealed class hierarchies, infer domain-specific adapters, or download `.kt` files.",
   "usage_steps": [
-    "Paste your JSON payload into the input text area, ensuring valid syntax with proper escaping for special characters.",
-    "Configure generation options in the settings panel: select target serialization library (Kotlinx.serialization or Jackson), enable strict null-safety enforcement, and specify root class name.",
-    "Adjust advanced parameters like property naming strategy (snake_case, kebab-case, PascalCase), default value insertion for missing fields, and sealed class generation for polymorphic data.",
-    "Click the 'Generate Kotlin Classes' button to execute the AST traversal algorithm that maps JSON nodes to Kotlin class members.",
-    "Review the generated code in the output pane, which displays hierarchical data classes with inline type comments and serialization annotations.",
-    "Copy the Kotlin code to your clipboard or download it as a .kt file for immediate integration into your project."
+    "Paste a valid top-level JSON object into the input textarea or click Load Sample.",
+    "Set the class name and package name fields if needed.",
+    "Choose a serializer option and toggle data class or nullable output options.",
+    "Click Convert to generate Kotlin code and review the output or error message.",
+    "Copy the generated Kotlin code from the output textarea."
   ],
   "usage_examples": [
-    "Android developers converting a REST API response with nested pagination metadata into Parcelable data classes for ViewModel binding.",
-    "Backend engineers creating type-safe DTOs from Elasticsearch query responses with dynamic key structures and union types.",
-    "Mobile teams generating Kotlin models from OpenAPI/Swagger specifications with vendor extensions like x-android-binding.",
-    "Data engineers implementing Apache Beam pipelines that require strict schema definitions for JSON records in Google Cloud Dataflow."
+    "Generate a starter Kotlin data class from a small API response object.",
+    "Compare Moshi, Gson, and Kotlinx annotation output for the same JSON sample.",
+    "Create nullable Kotlin fields from a pasted JSON object while prototyping a model.",
+    "Load the sample JSON and adjust the root class or package name before copying the code."
   ]
 }

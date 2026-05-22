@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The Image Flip & Rotate tool performs pixel-level affine transformations on raster images using HTML5 Canvas and JavaScript-based processing. It supports lossless manipulation of JPEG, PNG, BMP, and WEBP formats through browser-side computation, preserving EXIF metadata during orientation adjustments. Technically, horizontal/vertical flips modify the image matrix by inverting pixel coordinates along the X/Y axis, while arbitrary rotation applies a 2D transformation matrix with cosine/sine angle calculations. This enables precise 90° increments or custom degree adjustments (0-360°) with bilinear interpolation to prevent jagged edges. Developers and designers benefit from its EXIF-aware rotation, which corrects camera-generated orientation flags without altering pixel data when possible. The tool's zero-dependency architecture ensures fast client-side execution without server uploads, ideal for privacy-sensitive workflows or batch processing.",
+  "detailed_description": "The Image Flip & Rotate tool applies browser-side canvas transformations to one selected image. After uploading an image file, you can toggle horizontal or vertical flipping, choose 0, 90, 180, or 270 degree presets, adjust a 0-360 degree rotation slider, rotate by -90 or +90, reset the controls, preview the transformed canvas, and download the canvas as a PNG file. The tool works locally in the browser but does not preserve EXIF metadata, offer drag-and-drop upload, batch processing, original-format export, or lossless rotation guarantees.",
   "usage_steps": [
-    "Click 'Choose Image' to select a file from your device (drag/drop supported)",
-    "Toggle 'Horizontal Flip' or 'Vertical Flip' switches to invert image axes",
-    "Enter exact rotation degrees (e.g., 45, 90, 270) or use the slider for manual adjustment",
-    "View real-time transformations in the high-resolution preview window",
-    "Click 'Apply Transformations' to process the image in-memory",
-    "Download the output as a compressed PNG or original format using the 'Save As' button"
+    "Choose one image file from your device.",
+    "Use the horizontal and vertical flip buttons when needed.",
+    "Select a rotation preset, use the rotation slider, or rotate by -90 or +90 degrees.",
+    "Preview the transformed image on the canvas.",
+    "Download the transformed canvas as a PNG file."
   ],
   "usage_examples": [
-    "Correcting portrait orientation in mobile photos with embedded EXIF rotation tags",
-    "Generating symmetrical patterns for graphic design by flipping logo elements",
-    "Preparing architectural blueprints for printing by rotating 180°",
-    "Creating mirrored website buttons by horizontally flipping UI element screenshots"
+    "Rotate a selected image by 90 or 180 degrees before downloading a PNG copy.",
+    "Create a mirrored version of a small graphic with the horizontal flip button.",
+    "Flip an image vertically and preview the result on the canvas.",
+    "Experiment with a custom rotation angle using the slider before exporting."
   ]
 }

@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The CSS Minifier is a specialized development tool designed to optimize and reduce the size of CSS files. By removing unnecessary characters such as spaces, comments, and line breaks, the tool ensures that the CSS code is as compact as possible, which can significantly improve the loading time of web pages. This is particularly crucial for web developers working on large-scale projects where efficiency and performance are paramount. The tool not only helps in reducing the file size but also in maintaining the integrity and functionality of the CSS code. It employs advanced algorithms to parse and compress the CSS, ensuring that the output is both efficient and standards-compliant. Developers can use this tool to streamline their CSS files, making them faster to load and easier to manage, especially in production environments. The CSS Minifier supports a wide range of input formats and provides options for customizing the output, such as preserving specific comments or formatting the output for better readability.",
+  "detailed_description": "The CSS Minifier compresses pasted CSS text in the browser with simple string replacements. It removes block comments, collapses whitespace, removes spacing around common CSS punctuation, drops trailing semicolons before closing braces, removes units from zero values, and shortens matching six-digit hex colors when possible. After clicking Minify, the tool shows original size, minified size, and percentage saved, then lets you copy the readonly output. It does not parse CSS with a full standards engine, preserve selected comments, validate syntax, or provide production build optimization.",
   "usage_steps": [
-    "Navigate to the CSS Minifier tool page on the website.",
-    "Locate the 'Input CSS' text area and paste your CSS code into it.",
-    "If you want to preserve certain comments, check the 'Preserve Comments' checkbox and specify the comment types you wish to keep.",
-    "Select any additional formatting options, such as 'Beautify Output' to format the minified CSS for readability.",
-    "Click the 'Minify CSS' button to process your code.",
-    "Review the minified CSS in the 'Output CSS' text area and copy it to use in your project."
+    "Paste CSS into the input textarea or edit the sample code.",
+    "Click Minify to remove comments and compact common CSS spacing.",
+    "Review the original size, minified size, and size reduction statistics.",
+    "Copy the minified CSS from the output textarea when needed."
   ],
   "usage_examples": [
-    "A front-end developer is working on a large e-commerce website and needs to optimize the CSS files to reduce page load times. By using the CSS Minifier, they can compress the CSS without losing any functionality, ensuring a faster and more efficient user experience.",
-    "A web designer is creating a responsive website and wants to ensure that the mobile version loads quickly. By minifying the CSS using this tool, they can reduce the data that needs to be downloaded, making the site more accessible on mobile devices.",
-    "A developer is collaborating on an open-source project and needs to ensure that the CSS files are as compact as possible for version control. The CSS Minifier helps them maintain a clean and efficient codebase, making it easier to manage and distribute.",
-    "A digital agency is building a high-traffic website and needs to optimize all assets for performance. The CSS Minifier is used to compress the CSS files, reducing the overall load time and improving the site's SEO ranking, which is critical for client satisfaction."
+    "Compact a small CSS snippet before pasting it into a demo or documentation page.",
+    "Remove comments and extra whitespace from copied CSS while checking the size difference.",
+    "Test how simple zero-unit and hex-color shortening affect a local CSS sample.",
+    "Copy a minified version of pasted CSS for a quick prototype after reviewing the output."
   ]
 }
