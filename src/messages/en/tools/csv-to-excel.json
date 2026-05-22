@@ -1,27 +1,24 @@
 {
-  "detailed_description": "The CSV to Excel converter transforms comma-separated values (CSV) files into Office Open XML (.xlsx) spreadsheets through a multi-step parsing and serialization process. This tool employs a streaming CSV parser to handle large datasets efficiently, automatically detecting delimiters (commas, tabs, semicolons) and encoding formats (UTF-8, UTF-16). It constructs a normalized data matrix in memory, preserving numeric types, date formats, and text qualifiers while resolving edge cases like embedded line breaks within quoted fields. The conversion engine leverages the Open Packaging Conventions to generate XLSX files with multiple worksheets, maintaining original column widths and cell formatting through ECMA-376 standard compliance. Users require this tool for scenarios demanding Excel's advanced formula capabilities, pivot table analysis, or integration with enterprise systems requiring strict OOXML validation. Unlike basic converters, this implementation supports RFC 4180-compliant parsing, custom delimiter mapping, and preserves metadata like column headers and whitespace indentation. Technical advantages include client-side processing via WebAssembly modules for speed, with MIME type verification during download to ensure browser compatibility.",
+  "detailed_description": "The CSV to Excel converter reads a local .csv file in the browser, parses comma-separated rows, previews the first rows, and downloads the result as an XLSX workbook. It is designed for quick conversions from simple CSV exports into a spreadsheet file. The parser is intentionally basic: it uses commas as separators, supports simple quoted cells, and writes one worksheet named Sheet1. It does not auto-detect delimiters or encodings, preserve original formatting, create multiple worksheets, add formulas, or provide pivot table features.",
   "usage_steps": [
-    "1. Click 'Choose File' to upload your CSV (max 50MB) with UTF-8/BOM encoding support",
-    "2. Select delimiter type from dropdown (auto-detected values shown in preview panel)",
-    "3. Toggle 'First Row Header' to preserve column metadata during worksheet creation",
-    "4. Use 'Data Type Mapping' grid to specify numeric/date formats for each column",
-    "5. Adjust worksheet name and tab color via sidebar options before conversion",
-    "6. Click 'Generate XLSX' to compile binary file, then download with verified Content-Type header"
+    "1. Drag and drop a .csv file or choose one from your device.",
+    "2. Review the parsed rows in the preview table.",
+    "3. Click Download XLSX to save the generated Excel file."
   ],
   "usage_examples": [
-    "Financial analysts converting bank transaction exports (with comma-separated thousand separators) to Excel for pivot table analysis",
-    "Research teams migrating survey responses (containing text fields with embedded commas) to XLSX for statistical analysis add-ins",
-    "Accountants transforming UTF-16 encoded payroll CSVs into Excel workbooks with currency formatting preserved",
-    "Developers automating conversion of API-generated CSV reports to XLSX for clients requiring macro-enabled templates"
+    "Convert a simple CSV export into an XLSX file for spreadsheet review.",
+    "Preview comma-separated rows before downloading them as a workbook.",
+    "Turn a small report CSV into a single-sheet Excel file.",
+    "Prepare a quick XLSX copy of tabular data from a CSV download."
   ],
   "faqs": [
     {
       "question": "Does it handle large files?",
-      "answer": "Yes, but very large files may take longer to process. We recommend files under 10MB for best performance."
+      "answer": "Very large files may take longer to process in the browser. We recommend small to moderate CSV files for best performance."
     },
     {
       "question": "Are special characters preserved?",
-      "answer": "Yes, UTF-8 encoding is used to preserve special characters and international text."
+      "answer": "The file is read as browser text. Check the preview before downloading when your CSV uses unusual encodings or special characters."
     }
   ]
 }

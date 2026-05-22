@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The Image Rounder tool enables pixel-level manipulation of image boundaries using advanced raster processing techniques. By leveraging alpha channel transparency and Bézier curve interpolation, it allows developers to precisely define corner radii from 1px up to 50% of the image dimensions. This tool uniquely supports elliptical rounding through customizable X/Y axis ratios, enabling creation of oval-shaped images while maintaining original aspect ratios. Developers can choose between hard-edged clipping paths for flat designs or anti-aliased edges optimized for retina displays. The backend employs WebAssembly-powered image processing to handle upscaling/downscaling with Lanczos filtering, ensuring sharp edges remain crisp during resolution adjustments. This level of control is critical for creating responsive design elements like profile cards, floating UI components, or CSS-shape-compatible assets, particularly valuable for web applications requiring WCAG 2.1 accessibility compliance through proper border-radius implementations.",
+  "detailed_description": "The Image Rounder tool applies rounded corners or a circle crop to an uploaded image in the browser. Choose an image file, enable circle mode or adjust the corner radius slider, then preview the result on a canvas. The processed image can be downloaded as a PNG. It is useful for quick avatar, thumbnail, and UI mockup preparation, but it does not provide separate X/Y radius controls, output format selection, anti-aliasing settings, or batch processing.",
   "usage_steps": [
-    "Upload a PNG, JPEG, or WebP image through the HTML5 canvas-powered file dropper",
-    "Select shape mode using the radial toggle: Square with Rounded Corners, Elliptical Crop, or Custom Radius",
-    "Adjust corner curvature via the X/Y axis sliders (0-100% range with 0.1% precision)",
-    "Enable Anti-Alias Edge Enhancement checkbox to smooth jagged diagonals",
-    "Choose output format from dropdown: PNG-24 with transparency, JPEG-optimized, or SVG path data",
-    "Click 'Process Image' to apply non-destructive changes and download the modified asset"
+    "Choose an image file from your device.",
+    "Enable Circle Mode if you want a circular crop.",
+    "For rounded corners, adjust the radius slider.",
+    "Review the canvas preview.",
+    "Click Download PNG to save the processed image."
   ],
   "usage_examples": [
-    "A React developer creating a user profile grid where all avatars must have 8px rounded corners matching Material Design specifications",
-    "An iOS app designer generating adaptive launch icons with perfect circles across multiple device resolutions",
-    "An e-commerce platform standardizing product images with 15% corner radius for visual consistency",
-    "A data visualization engineer preparing circular progress indicators with transparent backgrounds for web animations"
+    "Create a circular avatar preview from a square profile image.",
+    "Round the corners of a product thumbnail before adding it to a mockup.",
+    "Prepare a PNG with softer corners for a design note.",
+    "Compare different corner radius values for a small UI asset."
   ]
 }

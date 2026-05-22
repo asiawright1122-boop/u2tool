@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The PDF Rotator enables granular manipulation of PDF page orientation through direct modification of page rotation matrices within the PDF document structure. Unlike generic tools that apply uniform transformations, this utility allows precise 90° clockwise, counterclockwise, or 180° rotation at the page level using Adobe Portable Document Format specification-compliant matrix operations. Users require this tool for correcting misaligned scanned documents, optimizing print layouts, adjusting image-heavy PDFs with inconsistent EXIF orientation data, or preparing presentation materials with mixed portrait/landscape content. The backend employs Poppler's rendering engine to parse page objects, applies affine transformations to the PDF's internal coordinate system, and preserves original metadata, annotations, and layer structures during rotation. Batch processing leverages parallelized worker threads to maintain performance with multi-page documents while retaining individual page control through a thumbnail-based interface.",
+  "detailed_description": "The PDF Rotator lets you upload a PDF, preview page thumbnails, rotate individual pages left or right by 90 degrees, or apply 90, 180, or 270 degree rotation to all pages. It uses PDF.js for browser previews and pdf-lib to save a new PDF with the selected page rotations. You can reset all changes before saving, then download a rotated copy of the file. This is useful for fixing pages that appear sideways or upside down before sharing or printing. It does not analyze orientation automatically, provide keyboard shortcuts, or guarantee preservation of every advanced PDF feature.",
   "usage_steps": [
-    "Access the tool via browser and click 'Upload PDF' to select your document (max 100MB) using the drag-and-drop interface",
-    "Review pages in the thumbnail grid where red indicators mark orientation inconsistencies based on embedded rotation flags",
-    "Click individual page thumbnails or use Shift+Click to select multiple pages requiring adjustment",
-    "Choose rotation direction (CW/CCW 90° or 180°) from the context toolbar or use keyboard shortcuts (R/L/X)",
-    "Verify changes in the dual-pane preview that highlights transformation matrices before and after rotation",
-    "Click 'Download Modified PDF' to generate and save the updated document with preserved OCR layers and bookmark structure"
+    "Click the upload area and choose a PDF file from your device",
+    "Wait for page thumbnails to load in the browser",
+    "Use the left or right rotate buttons on a page to adjust it by 90 degrees",
+    "Use Rotate All to apply 90, 180, or 270 degrees to every page when needed",
+    "Click Reset All if you want to clear the pending rotations",
+    "Click Save Rotated PDF to download the updated copy"
   ],
   "usage_examples": [
-    "A researcher corrects 180° inverted pages from a two-sided document feeder scan while maintaining original annotation layers",
-    "A graphic designer rotates 12 landscape-oriented figures in a 50-page technical report without affecting embedded vector diagrams",
-    "An office worker standardizes orientation of 30 mixed-receipt scans with inconsistent mobile camera angles before archiving",
-    "A student adjusts a 10-chapter thesis PDF where chapters imported from different sources have conflicting portrait/landscape layouts"
+    "A researcher rotates upside-down pages in a scanned article before reading",
+    "An office worker fixes sideways receipt pages before archiving a PDF",
+    "A student rotates landscape pages in a class handout before printing",
+    "A team member corrects mixed page orientations in a shared PDF packet"
   ]
 }

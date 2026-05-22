@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Document Formatter cleans and formats text documents with whitespace removal and formatting options.",
+  "detailed_description": "Document Formatter cleans pasted plain text with browser-side formatting options. You can trim line edges, remove extra spaces, remove blank lines, normalize line breaks, capitalize sentence starts, fix spacing before punctuation, wrap lines to a selected width, and add spaces or tabs as indentation. The formatted output updates beside the input and can be copied to the clipboard.",
   "usage_steps": [
-    "Paste document text",
-    "Select formatting options",
-    "Preview result",
-    "Adjust settings",
-    "Copy cleaned document"
+    "Paste text into the input area",
+    "Toggle whitespace, line break, capitalization, punctuation, wrapping, and indentation options",
+    "Review the formatted output beside the original text",
+    "Adjust options until the output looks right",
+    "Copy the formatted text"
   ],
   "usage_examples": [
-    "Clean PDF text",
-    "Normalize formatting",
-    "Prepare text for publishing"
+    "Clean copied text with inconsistent spacing",
+    "Remove extra blank lines from notes",
+    "Wrap long plain-text paragraphs to a chosen line width"
   ]
 }

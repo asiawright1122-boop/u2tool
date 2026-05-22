@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The Image Cropper tool enables precise pixel-level manipulation of raster graphics through a browser-based interface powered by HTML5 Canvas rendering. Users can perform lossless cropping operations while maintaining original image metadata and color profiles. The tool supports fixed aspect ratios (1:1, 4:3, 16:9) and custom dimensions with sub-pixel accuracy, utilizing bilinear interpolation algorithms to preserve image quality during boundary adjustments. Built-in grid overlays with 3x3 and golden ratio compositions assist in implementing design principles like the rule of thirds. Technically, the tool processes image data through a WebAssembly-powered pipeline that handles JPEG, PNG, and WebP formats with embedded color space conversion. Developers benefit from the tool's ability to generate exact CSS background-position values and responsive image breakpoints during the cropping process, which is particularly valuable for creating optimized assets in design systems. The undo/redo stack maintains non-destructive editing capabilities through temporary canvas state snapshots, allowing iterative refinement without data degradation.",
+  "detailed_description": "The Image Cropper lets you select an image, choose a free or preset aspect ratio, move the crop area, and set crop width or height values before generating a PNG preview. After cropping, the result can be downloaded as a PNG file. The tool is useful for quick browser-based crops of common image files, but it does not preserve original metadata, offer grid overlays, provide undo/redo history, or expose compression and output-format options.",
   "usage_steps": [
-    "Click 'Upload Image' to select a file from your device or drag/drop directly into the workspace",
-    "Choose aspect ratio from the dropdown menu or enter custom dimensions in the WxH input fields",
-    "Drag the corner handles of the selection box to adjust crop boundaries while holding Shift for aspect lock",
-    "Use the alignment grid toggle to visualize composition guidelines during adjustment",
-    "Preview cropped result in the right-hand panel with resolution and file size metrics displayed",
-    "Click 'Export Image' to download the cropped result with options to adjust compression level and format"
+    "Click the upload area and choose an image file from your device.",
+    "Choose Free, 1:1, 4:3, 16:9, or 9:16 as the aspect ratio.",
+    "Drag the crop selection to reposition it.",
+    "Adjust width or height values if you need a specific crop size.",
+    "Click Crop to generate the preview.",
+    "Click Download to save the cropped PNG."
   ],
   "usage_examples": [
-    "Preparing Instagram story assets by cropping 1080x1920 vertical videos to 9:16 aspect ratio with pixel-perfect alignment",
-    "Optimizing e-commerce product photos for responsive web galleries by generating multiple 4:5 crops for portrait layouts",
-    "Creating retina-ready favicon sets by extracting 512x512px squares from larger source images with transparent backgrounds",
-    "Converting landscape architectural blueprints to 3:2 print ratios while maintaining critical dimensional annotations in the crop area"
+    "Crop a profile photo to a square preview.",
+    "Prepare a 16:9 image crop for a presentation slide.",
+    "Create a vertical 9:16 crop from a wider source image.",
+    "Download a quick PNG crop for a documentation screenshot."
   ]
 }

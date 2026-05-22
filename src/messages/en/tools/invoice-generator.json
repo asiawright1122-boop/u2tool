@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The Invoice Generator is a web-based application built with HTML5, CSS3, and JavaScript that enables developers and business users to create programmable invoices with precision. Technically, it leverages a JSON-driven template engine to render dynamic content, supporting advanced features like automated tax calculations, multi-currency conversion via API integrations (e.g., XE.com), and line-item validation using regex patterns. Users benefit from a drag-and-drop WYSIWYG editor powered by React.js, which manipulates a virtual DOM for smooth UI updates. The tool generates PDFs using a headless browser engine (Puppeteer) to ensure pixel-perfect layouts, embedding custom fonts via @font-face declarations. It’s essential for developers needing to automate billing workflows, accountants requiring audit-ready documentation, or freelancers managing recurring payments. Unique features include conditional logic rules for field visibility, bulk generation via CSV imports, and blockchain-based timestamping for legal verification. By separating template logic from presentation layers, it adheres to MVC architecture, ensuring scalability for enterprise use.",
+  "detailed_description": "The Invoice Generator helps you create a simple invoice in the browser. Fill in the invoice number, invoice date, due date, currency, sender and client details, line items, tax rate, and optional notes. The preview updates with subtotal, tax, and total amounts, and the PDF export captures the preview with html2canvas and saves it with jsPDF. It is useful for preparing a quick invoice draft or downloadable PDF, but it does not provide templates, live exchange rates, CSV import, cloud storage, encryption, recurring billing, or legal verification.",
   "usage_steps": [
-    "1. Open the Template Gallery and select a JSON-backed invoice structure (e.g., 'IT Services' or 'Retail Sales').",
-    "2. Use the drag-and-drop editor to add/reposition elements like tax tables or QR code generators in the canvas area.",
-    "3. Configure dynamic fields in the right-side panel: set formula-based totals (e.g., '=QTY*RATE*1.08' for tax-inclusive pricing).",
-    "4. Enable conditional logic by clicking the 'Rule Engine' tab and defining triggers (e.g., 'Show discount field if subtotal > $5000').",
-    "5. Adjust PDF export settings in the 'Export' modal: choose compression level (Low/Medium/High) and enable 256-bit encryption.",
-    "6. Click 'Generate' to compile the invoice, then use the version control dropdown to save incremental revisions to AWS S3 or Google Drive."
+    "1. Enter the invoice number, dates, and currency.",
+    "2. Fill in sender and client names and addresses.",
+    "3. Add one or more line items with description, quantity, and unit price.",
+    "4. Set a tax rate and optional notes if needed.",
+    "5. Review the invoice preview with subtotal, tax, and total.",
+    "6. Click Download PDF to save the invoice."
   ],
   "usage_examples": [
-    "A software developer generates client-specific invoices with embedded Git commit hashes as proof of work delivered.",
-    "An import/export company creates dual-currency invoices automatically converting USD to EUR using real-time API rates.",
-    "A marketing agency configures conditional payment terms: 2% discount if paid within 10 days, enforced via PDF form field validation.",
-    "An event planner batches 200 vendor invoices from a CSV, applying unique tax IDs and automating sequential numbering with regex masks."
+    "A freelancer creates a one-off invoice for a completed project.",
+    "A small business prepares a PDF invoice with line items and tax.",
+    "A consultant drafts an invoice with notes before sending it to a client.",
+    "A team member creates a quick invoice preview to check totals before downloading."
   ]
 }

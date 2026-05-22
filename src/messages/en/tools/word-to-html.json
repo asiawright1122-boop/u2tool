@@ -1,18 +1,17 @@
 {
-  "detailed_description": "The Word to HTML converter transforms Microsoft Word (.docx) documents into standards-compliant HTML markup while maintaining complex formatting through precise parsing of Word's XML-based structure. The tool unpacks the document's ZIP container to extract constituent elements—text runs, styles.xml, table grids, and embedded objects—then maps WordML tags to semantic HTML equivalents using a rules engine that preserves typographic hierarchy (e.g., heading levels, list nesting), table structures, and inline styling. Advanced conversion logic handles Word-specific features like content controls and field codes by converting them to appropriate HTML form elements or data attributes. This tool addresses critical use cases: migrating legacy documentation to web platforms without manual reformatting, generating responsive email templates from Word layouts, and preparing content for CMS ingestion where raw HTML is required. The converter implements CSS-in-JS methodology to inline critical styles while generating external stylesheets for reusable classes, ensuring cross-browser rendering consistency. Technical professionals benefit from the tool's ability to retain document integrity through its handling of OOXML elements like drawingML objects and customXML parts, which are converted to SVG or JSON-LD equivalents where applicable.",
+  "detailed_description": "The Word to HTML converter turns a .docx file into browser-rendered HTML using mammoth. You can drop or choose a DOCX file, preview the converted HTML, switch to the HTML code view, copy the generated markup, or download a single .html file. The output is sanitized before display and is best for extracting readable document content with basic structure such as headings, paragraphs, lists, links, and simple formatting. Complex Word layouts, embedded objects, revision marks, custom style mapping, and multi-file asset archives may not be preserved.",
   "usage_steps": [
-    "Drag-and-drop your .docx file into the designated workspace or click 'Select Document' to browse your device",
-    "Enable 'Advanced Mode' to configure conversion parameters like CSS output style (BEM or SMACSS), image embedding (base64 or external URLs), and table wrapping behavior",
-    "Use the 'Style Mapping' panel to remap Word styles (e.g., 'Heading 1') to custom HTML classes or semantic elements (e.g., <h2 class='section-title'>)",
-    "Preview the rendered HTML in the split-pane viewer, which highlights converted elements with interactive DOM inspection tools",
-    "Adjust character encoding settings (UTF-8, UTF-16) and choose whether to preserve Word's revision marks as HTML comments",
-    "Click 'Generate Archive' to download a ZIP containing the HTML file, associated CSS/JS assets, and extracted media in an organized directory structure"
+    "Drop a .docx file onto the upload area or choose one from your device",
+    "Wait while the browser converts the document with mammoth",
+    "Review the rendered HTML preview",
+    "Switch to code view if you want to inspect the generated markup",
+    "Copy the HTML or download it as a single .html file"
   ],
   "usage_examples": [
-    "A technical writer converts a 200-page API documentation .docx into HTML5 for integration with a static site generator, preserving code block syntax highlighting and cross-references",
-    "A marketing team transforms a sales proposal created in Word into a responsive email template, maintaining brand-specific font stacks and table-based pricing matrices",
-    "A web developer migrates user manuals from a SharePoint document library to a React-based knowledge base, using the tool's 'Component Mode' to generate JSX-ready markup",
-    "An accessibility consultant converts a government report to HTML with ARIA attributes automatically added to complex tables and figure elements during the conversion process"
+    "Convert a DOCX draft into HTML for quick review in a CMS editor",
+    "Extract readable HTML from a simple Word handout",
+    "Copy generated markup from a document outline into a web page draft",
+    "Download a single HTML file from a DOCX note for local editing"
   ],
   "faqs": [
     {

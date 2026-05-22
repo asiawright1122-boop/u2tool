@@ -1,12 +1,11 @@
 {
-  "detailed_description": "The Excel to JSON tool is a powerful utility designed to streamline the conversion of Excel files into JSON format. This process is particularly useful for developers and data scientists who need to integrate Excel data into web applications, APIs, or databases that require JSON-formatted data. The tool supports multi-sheet Excel files, allowing users to select specific sheets for conversion, and provides a real-time data preview to ensure accuracy and completeness. By leveraging this tool, users can save time and reduce the risk of manual errors that often occur during data transformation. The tool utilizes advanced parsing algorithms to handle complex Excel structures, including nested tables and formulas, ensuring that the output JSON is both accurate and structured correctly for various applications.",
+  "detailed_description": "The Excel to JSON tool reads XLSX or XLS files in the browser and converts one selected worksheet into JSON. After upload, it lists available sheets, shows a preview of the selected sheet, and displays formatted JSON that you can copy or download. It is useful for quick spreadsheet-to-JSON tasks, sample data extraction, and preparing simple tabular data for development workflows. The output is based on worksheet cell values parsed by the browser spreadsheet library; complex workbook styling, formulas, charts, and nested table relationships are not preserved.",
   "usage_steps": [
     "Step 1: Navigate to the Excel to JSON tool page and click the 'Upload Excel File' button to select the Excel file you want to convert.",
-    "Step 2: Once the file is uploaded, a list of all available sheets in the Excel file will be displayed. Use the checkboxes to select the sheets you wish to convert to JSON.",
-    "Step 3: Click on the 'Data Preview' tab to see a real-time preview of the selected sheet data. This step allows you to verify that the data is structured correctly before conversion.",
-    "Step 4: If the data preview looks correct, proceed to the 'Conversion Settings' section. Here, you can specify any custom JSON formatting options, such as key naming conventions or data type conversions.",
-    "Step 5: After configuring the settings, click the 'Convert to JSON' button. The tool will process the selected sheets and generate the JSON output.",
-    "Step 6: Once the conversion is complete, the JSON output will be displayed in the 'JSON Output' section. You can either copy the JSON text directly or download it as a file by clicking the 'Download JSON' button."
+    "Step 2: Once the file is loaded, choose the worksheet you want to convert if the workbook has multiple sheets.",
+    "Step 3: Review the table preview for the selected sheet.",
+    "Step 4: Check the formatted JSON output generated from the selected worksheet.",
+    "Step 5: Copy the JSON text or download it as a .json file."
   ],
   "usage_examples": [
     "Example 1: A web developer needs to integrate customer data from an Excel spreadsheet into a new e-commerce platform. The developer uses the Excel to JSON tool to convert the data, ensuring it is in the correct format for the platform's API.",

@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The URL Shortener Preview tool is designed to provide a comprehensive analysis and preview of shortened URLs, a common feature in digital marketing, link sharing, and social media platforms. Technically, the tool decodes the shortened URL and retrieves the original, full-length URL, along with additional metadata such as the HTTP status code, the final destination URL, and any redirects that occur. This is achieved through a series of HTTP requests and responses, where the tool sends a HEAD request to the shortened URL to avoid triggering the actual content download, which is particularly useful for security and performance reasons. The tool also parses the headers of the response to gather important information such as the content type and server details. Users need this tool to verify the integrity and safety of shortened URLs, especially in scenarios where the destination is not immediately clear. It is invaluable for marketers who need to ensure that their shortened links lead to the correct landing pages, and for security professionals who want to detect potential phishing attempts or other malicious activities. The tool's ability to provide a detailed breakdown of the URL's journey from the shortened form to the final destination makes it a crucial asset in the digital toolkit.",
+  "detailed_description": "URL Shortener Preview scans pasted text for URLs that use common shortener domains such as bit.ly, tinyurl.com, t.co, is.gd, lnkd.in, and others listed on the page. Click Analyze URLs to extract matching short links and display them in the results list. The current browser-only tool does not send network requests, follow redirects, retrieve the final destination, inspect HTTP status codes, or verify whether a link is safe. Results can be copied as a simple short-url-to-result list.",
   "usage_steps": [
-    "Step 1: Navigate to the URL Shortener Preview tool page on the website.",
-    "Step 2: Locate the input field labeled 'Shortened URL' and paste the shortened URL you want to analyze.",
-    "Step 3: Click the 'Analyze' button to start the URL decoding and data retrieval process.",
-    "Step 4: Wait for the tool to process the request, which typically takes a few seconds.",
-    "Step 5: Review the results displayed in the 'Analysis Results' section, including the original URL, HTTP status code, and any redirects.",
-    "Step 6: Use the 'Copy' button next to each result to easily copy the information for documentation or further analysis."
+    "Paste text that may contain one or more shortened URLs.",
+    "Click Analyze URLs to extract URLs from supported shortener domains.",
+    "Review the result list to see which short URLs were detected.",
+    "If no supported short URLs are found, read the error message shown in the results area.",
+    "Use Copy to copy the displayed results."
   ],
   "usage_examples": [
-    "Example 1: A digital marketer is running a campaign with shortened URLs shared on social media. Before the campaign launch, they use the URL Shortener Preview tool to verify that each shortened URL correctly redirects to the intended landing page, ensuring a seamless user experience and accurate tracking.",
-    "Example 2: A security analyst receives a suspicious email with a shortened URL. They use the tool to analyze the URL and discover that it leads to a phishing site, allowing them to take preventive measures and warn their organization.",
-    "Example 3: A content creator shares a shortened URL to a blog post on Twitter. After noticing a lower-than-expected engagement, they use the tool to check if the URL is functioning correctly and if there are any issues with the redirects.",
-    "Example 4: A web developer is testing a new URL shortening service and needs to validate its performance. They use the URL Shortener Preview tool to ensure that the shortened URLs are resolving efficiently and to gather data on the HTTP response times and status codes."
+    "Find bit.ly or t.co links inside a copied social media draft.",
+    "Check whether a note contains URLs from known shortener services.",
+    "Copy a list of detected short links for manual follow-up elsewhere.",
+    "Confirm that pasted text does not include any supported shortener domains."
   ]
 }

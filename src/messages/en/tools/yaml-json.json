@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The YAML/JSON Converter is a precision tool for transforming structured data between YAML (YAML Ain't Markup Language) and JSON (JavaScript Object Notation) formats while preserving complex data hierarchies and type integrity. This converter leverages parser libraries like PyYAML and json5 to accurately interpret scalar values, sequences, mappings, and nested structures during bidirectional conversion. Developers working with configuration files, API payloads, or infrastructure-as-code templates will benefit from its ability to maintain semantic equivalence while handling edge cases like multi-line strings, anchor/alias references, and special character escaping. The converter normalizes whitespace sensitivity in YAML with JSON's explicit bracket notation, ensuring type fidelity for numbers, booleans, and null values. It operates entirely client-side using WebAssembly-compiled parsing modules for sub-second conversion speeds, eliminating server roundtrips and protecting sensitive data.",
+  "detailed_description": "The YAML/JSON Converter provides two side-by-side text areas for converting simple YAML to formatted JSON and JSON back to YAML in the browser. Paste YAML on the left and click the JSON button, or paste JSON on the right and click the YAML button. The tool shows a basic validation error when the input cannot be parsed and includes copy buttons for both text areas. It is useful for quick configuration snippets and small structured examples, but complex YAML features may not round-trip exactly.",
   "usage_steps": [
-    "Select conversion direction using the toggle button (YAML to JSON or JSON to YAML)",
-    "Paste source data into the syntax-highlighted editor with line numbers",
-    "Adjust indentation level (2-8 spaces) for YAML output formatting",
-    "Enable 'Preserve Comments' checkbox to retain non-structural metadata",
-    "Click 'Convert' button to execute transformation with real-time error reporting",
-    "Copy results from the split-pane viewer showing original and converted data side-by-side"
+    "Paste YAML into the YAML text area or JSON into the JSON text area.",
+    "Click the arrow button for the conversion direction you need.",
+    "Review the converted output in the opposite text area.",
+    "If an error appears, fix the YAML or JSON syntax and try again.",
+    "Use the copy button beside either text area to copy the current content."
   ],
   "usage_examples": [
-    "A DevOps engineer converts Kubernetes YAML manifests to JSON for AWS CloudFormation template integration",
-    "A front-end developer transforms JSON API responses into YAML fixtures for Ember.js application testing",
-    "A data scientist reformats hierarchical research data between Jupyter Notebook JSON outputs and Pandas YAML imports",
-    "A systems architect migrates legacy Ansible playbooks (YAML) to Azure ARM templates (JSON) during cloud provider transition"
+    "Convert a small YAML configuration snippet into formatted JSON.",
+    "Turn a JSON example object into YAML for documentation.",
+    "Check whether a simple YAML sample parses before adding it to a config file.",
+    "Copy converted YAML or JSON into a test fixture or technical note."
   ]
 }

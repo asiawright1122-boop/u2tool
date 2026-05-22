@@ -1,14 +1,17 @@
 {
-  "detailed_description": "PDF Merger is a practical online tool that helps you quickly complete various tasks. Using PDF Merger, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, PDF Merger can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use PDF Merger immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The PDF Merger combines two or more PDF files into one document in your browser. It uses pdf-lib to read each uploaded PDF, count pages, copy all pages in the order shown, and save a new merged PDF. After selecting files, you can review file names and page counts, move files up or down to set the merge order, remove files you do not want, and choose the output file name before downloading. This is useful for joining reports, invoices, scanned packets, or related documents without installing desktop software.",
   "usage_steps": [
-    "Open the PDF Merger tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Click the upload area and select two or more PDF files",
+    "Review each file name and page count in the file list",
+    "Use the up and down buttons to arrange the merge order",
+    "Remove any PDF you do not want to include",
+    "Enter the output file name if you want to change the default",
+    "Click Merge PDFs to download the combined PDF"
   ],
   "usage_examples": [
-    "Use PDF Merger to process your data",
-    "Get processing results quickly without waiting"
+    "Combine monthly invoice PDFs into one file before sending them to accounting",
+    "Merge several scanned forms into a single packet for archiving",
+    "Join report sections exported as separate PDFs into one document",
+    "Reorder uploaded PDFs before creating a combined handout"
   ]
 }

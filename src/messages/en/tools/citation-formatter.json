@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Citation Formatter generates properly formatted citations and bibliography entries in various styles.",
+  "detailed_description": "Citation Formatter builds a citation string from manually entered source details. Choose APA, MLA, Chicago, Harvard, or IEEE style, select a source type, and fill in fields such as authors, title, year, publisher, journal, volume, issue, pages, DOI, URL, and access date when relevant. The formatted citation updates on the page and can be copied. It is a lightweight helper, so review the result against your required style guide before submission.",
   "usage_steps": [
-    "Select source type",
-    "Enter source details",
-    "Choose citation style",
-    "Click Format",
-    "Copy citation"
+    "Choose APA, MLA, Chicago, Harvard, or IEEE style",
+    "Select book, journal article, article, or website source type",
+    "Enter the available source details",
+    "Review the generated citation preview",
+    "Copy the citation text"
   ],
   "usage_examples": [
-    "Format book citations",
-    "Generate website citations",
-    "Create bibliography entries"
+    "Draft a book citation from author, title, year, and publisher fields",
+    "Create a website citation with URL and access date",
+    "Format a journal article with volume, issue, pages, and DOI"
   ]
 }

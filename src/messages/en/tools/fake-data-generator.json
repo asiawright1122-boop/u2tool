@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The Fake Data Generator is a robust online utility designed to produce realistic and diverse synthetic data for a wide range of testing and development needs. At its core, the tool leverages advanced algorithms to generate data that mimics real-world patterns, ensuring that the output is both credible and useful. Whether you need to populate a database, test a new application, or simulate user interactions, the Fake Data Generator provides a flexible and powerful solution. Users can select from a variety of data types, including names, emails, addresses, phone numbers, and more. The tool supports customization, allowing developers to specify data formats, ranges, and distributions, making it ideal for both simple and complex testing scenarios. By using the Fake Data Generator, developers can streamline their testing processes, reduce the risk of data breaches, and ensure that their applications perform optimally under realistic conditions.",
+  "detailed_description": "Fake Data Generator creates small browser-side test datasets from editable field definitions. Choose a row count from 1 to 1000, select a locale, add or remove fields, name each column, and choose field types such as name, first name, last name, email, phone, address, city, country, company, job title, date, number, UUID, URL, or username. After generating data, you can preview the first rows, edit visible cells inline, copy the JSON output, or export the dataset as JSON, CSV, or SQL using the table name field.",
   "usage_steps": [
-    "Step 1: Access the Fake Data Generator tool on the website and navigate to the 'Data Types' section.",
-    "Step 2: Choose the type of data you need to generate from the dropdown menu, such as 'Names', 'Emails', or 'Addresses'.",
-    "Step 3: Customize your data generation by setting parameters in the 'Options' panel. For example, specify the number of entries, format, and any specific rules or constraints.",
-    "Step 4: Click the 'Generate' button to produce the synthetic data based on your selected criteria.",
-    "Step 5: Review the generated data in the 'Output' section. You can copy the data directly from the interface or download it as a CSV file for further use.",
-    "Step 6: If needed, refine your settings and repeat the generation process to create additional datasets for your testing or development project."
+    "Set the number of rows you want to generate.",
+    "Choose the locale used for the built-in sample names and places.",
+    "Add, remove, rename, and configure fields with the available field type dropdowns.",
+    "Optionally set a table name for SQL export.",
+    "Click Generate to create the dataset and preview the first rows.",
+    "Copy the generated JSON or export the data as JSON, CSV, or SQL."
   ],
   "usage_examples": [
-    "Example 1: A software development team is building a new e-commerce platform and needs to populate their database with realistic customer information. They use the Fake Data Generator to create a comprehensive list of customer names, addresses, and email addresses, ensuring that their application can handle real-world data volumes and formats.",
-    "Example 2: A marketing analyst is testing a new email campaign and requires a list of fake email addresses to simulate a realistic user base. The Fake Data Generator allows the analyst to generate a large set of unique email addresses, which can be used to test the campaign's performance and delivery rates.",
-    "Example 3: A data scientist is developing a machine learning model to predict housing prices and needs a dataset with realistic property addresses and values. The Fake Data Generator provides the necessary synthetic data, allowing the data scientist to train and validate the model without using actual property data, which may be confidential.",
-    "Example 4: A web developer is creating a new online form and wants to ensure it can handle various input formats and edge cases. The developer uses the Fake Data Generator to create a set of test inputs, including names with special characters, addresses with varying lengths, and phone numbers from different regions, to thoroughly test the form's functionality."
+    "Create sample users with name, email, phone, and username columns for a UI mockup.",
+    "Generate a small CSV of companies, cities, and countries for spreadsheet testing.",
+    "Export SQL insert statements for a simple demo table.",
+    "Edit a generated preview cell before copying the JSON for a fixture."
   ]
 }

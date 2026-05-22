@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The File Size Calculator is a precision tool engineered to handle bidirectional conversions between binary (base-2) and decimal (base-10) storage units, resolving a critical pain point in digital storage management. Technically, it processes inputs through a dual-logic conversion engine: for binary units (KiB, MiB, GiB), it applies powers of 1024, while decimal units (KB, MB, GB) use powers of 1000. This distinction addresses the long-standing industry ambiguity between disk drive manufacturers' decimal reporting and operating systems' binary calculations. Users require this tool for tasks like optimizing cloud storage costs (where providers bill on decimal TB units), validating RAID array capacity allocations, or debugging application memory constraints. The backend employs a unit-agnostic parsing algorithm that normalizes inputs to bytes before converting to target units, with precision maintained through 64-bit floating-point arithmetic. Unique features include a visual discrepancy indicator that highlights conversion differences between binary/decimal representations, crucial for DevOps engineers provisioning infrastructure or developers validating app distribution package sizes.",
+  "detailed_description": "The File Size Calculator converts a storage value across common byte units in the browser. Enter a value, choose the source unit, then switch between binary 1024-based conversion and decimal 1000-based conversion. The page shows equivalent byte-unit values from B through PB, bit-based equivalents, and the total byte count. It is useful for comparing operating-system style binary sizes with storage-manufacturer decimal sizes when planning uploads, estimating package sizes, checking media files, or explaining why the same file size may appear differently across tools.",
   "usage_steps": [
-    "1. Open the calculator and locate the 'Source Unit' dropdown menu containing 12 storage units (B, KiB, KB, MiB, MB, GiB, GB, TiB, TB, PiB, PB, EiB).",
-    "2. Enter the numerical value in the input field, supporting scientific notation (e.g., 2.5e6 for 2.5 million bytes).",
-    "3. Select the target unit from the 'Convert To' dropdown, which dynamically filters incompatible unit types.",
-    "4. Toggle the 'Precision Mode' switch to choose between standard (2 decimal places) or extended (6 decimal places) output formatting.",
-    "5. Review conversion results displayed in both binary and decimal equivalents simultaneously using the split-view panel.",
-    "6. Use the 'Swap Units' button to reverse source/target configurations for comparative analysis without re-entry."
+    "Enter the file size value in the input field.",
+    "Choose the source unit: B, KB, MB, GB, TB, or PB.",
+    "Select Binary for 1024-based units or Decimal for 1000-based units.",
+    "Review the byte conversion list for equivalent values in each unit.",
+    "Check the bit conversion panel for bits, kilobits, megabits, and gigabits.",
+    "Use the total bytes value when you need a normalized byte count."
   ],
   "usage_examples": [
-    "A game developer converting 16.8GiB of texture assets to decimal GB to verify compliance with Steam's 15GB per-hour download limit.",
-    "A system administrator reconciling AWS S3 billing metrics (decimal TB/month) with remote byte counters (binary TiB) for cost forecasting.",
-    "A video editor translating 4K ProRes file sizes between MiB (for editing software) and GB (for client delivery specifications).",
-    "A firmware engineer validating FAT32 partition size limitations (2TiB maximum) by converting manufacturer decimal specs to binary equivalents."
+    "Convert 1 GB using binary mode to see the byte count an operating system may use.",
+    "Switch to decimal mode to compare a storage-device size against manufacturer units.",
+    "Estimate how many megabytes or gigabytes a media file represents before upload.",
+    "Convert a package size to total bytes for a technical note or test case."
   ]
 }

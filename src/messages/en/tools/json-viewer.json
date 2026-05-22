@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The JSON Viewer is a powerful tool designed to help developers and data analysts efficiently parse and navigate through complex JSON data structures. Unlike a simple text editor, this tool provides a hierarchical, tree-based view of JSON objects, making it easier to understand the relationships between nested elements. This is particularly useful when dealing with large or deeply nested JSON files, where a flat view can quickly become overwhelming. The JSON Viewer supports real-time updates, allowing users to see changes as they make modifications to the data. Additionally, it includes features like syntax highlighting and error detection, ensuring that the JSON structure remains valid and error-free. For developers working with APIs, this tool is indispensable for debugging and testing, as it allows for quick inspection and manipulation of JSON responses. It is also valuable for data scientists who need to explore and validate JSON datasets before further processing.",
+  "detailed_description": "The JSON Viewer helps you paste JSON text, parse it in the browser, and inspect the result as a collapsible tree. It starts with a sample JSON object and shows parsing errors when the input is not valid JSON. After parsing, nested objects and arrays can be expanded or collapsed one node at a time, or expanded and collapsed together with the toolbar buttons. This makes it useful for quickly checking the structure of API responses, configuration snippets, or copied JSON payloads without editing the original data.",
   "usage_steps": [
-    "Step 1: Open the JSON Viewer by navigating to the 'Tools' section and selecting 'JSON Viewer' from the 'Encoding' category.",
-    "Step 2: Click on the 'Load JSON' button to either paste your JSON data directly into the input box or upload a JSON file from your device.",
-    "Step 3: Once the JSON data is loaded, the tool will automatically parse and display it in a tree structure on the right-hand side of the screen.",
-    "Step 4: Use the expand and collapse icons next to each node to explore the nested elements of your JSON data. Click on any node to see its value and key in the details panel.",
-    "Step 5: If you need to make changes, click on the 'Edit' icon next to the node you want to modify. You can edit the key, value, or add new nodes as needed.",
-    "Step 6: After making your changes, click on the 'Validate' button to ensure that the JSON structure is still valid. If there are any errors, the tool will highlight them and provide suggestions for correction."
+    "Paste JSON text into the input area or edit the sample JSON already shown",
+    "Click Parse & View to parse the text in the browser",
+    "If the JSON is invalid, read the parsing error shown below the buttons",
+    "Explore the parsed tree by expanding or collapsing nested objects and arrays",
+    "Use Expand All or Collapse All when you want to open or reset the whole parsed tree"
   ],
   "usage_examples": [
-    "Example 1: A web developer is testing an API endpoint that returns a JSON response. They use the JSON Viewer to quickly inspect the structure and content of the response, ensuring that all expected data points are present and correctly formatted.",
-    "Example 2: A data analyst is working with a large JSON dataset containing user information. They use the JSON Viewer to explore the data, identify any inconsistencies, and validate the structure before integrating it into their analysis tools.",
-    "Example 3: A frontend developer is working on a web application that receives configuration settings in JSON format. They use the JSON Viewer to validate the JSON files and ensure that the configuration is correctly structured before deploying the application.",
-    "Example 4: A backend developer is troubleshooting an issue with a service that processes JSON messages. They use the JSON Viewer to parse and inspect the messages, identify the problematic data, and fix the issue without having to write additional code."
+    "A web developer pastes an API response to inspect nested objects and arrays in a tree view.",
+    "A frontend developer checks a JSON configuration snippet before copying it into a project.",
+    "A support engineer pastes a JSON payload from a log and expands only the relevant branches.",
+    "A data analyst quickly confirms whether copied JSON text parses before using it elsewhere."
   ]
 }

@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The Cron Expression Generator is a specialized utility for creating and interpreting cron syntax used in Unix-based task scheduling. This tool addresses the complexity of cron patterns by providing a visual interface that maps directly to cron fields (minute, hour, day of month, month, day of week). Developers and system administrators use this tool to avoid syntax errors when automating scripts, backups, or maintenance tasks. Unlike manual configuration, which requires precise knowledge of cron's five-field format and special characters like asterisks (*), slashes (/), and commas (,), this tool validates input against cron standards (Vixie cron or Quartz specifications) in real time. It supports advanced configurations such as step values (e.g., '*/15' for every 15 minutes), ranges (e.g., '9-17' for business hours), and day-of-week/month abbreviations. The tool also resolves ambiguities like 'L' for last day of the month or 'W' for nearest weekday, ensuring compatibility across cron implementations. Generated expressions can be exported for integration into crontab files, systemd timers, or cloud-based schedulers like AWS EventBridge.",
+  "detailed_description": "The Cron Expression Generator helps you assemble a standard five-field cron expression in the browser. Choose one of the quick presets or edit the minute, hour, day of month, month, and weekday fields directly, then review the generated expression and a simple human-readable summary. A small reference explains common cron characters such as asterisks, commas, ranges, and step values, and the final expression can be copied to your clipboard for use in schedulers that accept five-field cron syntax.",
   "usage_steps": [
-    "Select minute values using the dedicated minute field dropdown, supporting single values, ranges, or intervals (e.g., '0 15 30 45' or '*/5')",
-    "Adjust the hour field with a time-range slider to specify specific hours or continuous periods (e.g., '8-18' for 8AM to 6PM)",
-    "Configure day-of-month constraints with a calendar picker that highlights active days based on numeric input or wildcards",
-    "Define month patterns via checkboxes that allow multiple selections (e.g., 'Jan,Apr,Jul,Oct') for quarterly schedules",
-    "Toggle between Sunday-first and Monday-first week formats in the day-of-week section to align with regional conventions",
-    "Click 'Generate & Validate' to receive immediate feedback on syntax errors and obtain the final cron expression"
+    "Start from a quick preset such as every minute, every hour, every weekday, or every 5 minutes",
+    "Edit the minute, hour, day, month, and weekday text fields when you need a custom cron expression",
+    "Review the generated five-field expression and the simple readable description below it",
+    "Use the special-character reference for wildcards, lists, ranges, and step values",
+    "Click Copy to copy the cron expression to your clipboard"
   ],
   "usage_examples": [
     "A system administrator creates a nightly database backup cron job that runs at 02:30 AM on weekdays: '30 2 * * 1-5'",
     "A developer schedules a CI/CD pipeline to trigger every 15 minutes during work hours: '*/15 9-17 * * 1-5'",
-    "An IT engineer configures a monthly security patch deployment for the last day of each month: '0 0 L * *'",
-    "A data analyst automates an ETL process to execute at 1:15 AM on the first Monday of every quarter: '15 1 * 1,4,7,10 1#1'"
+    "An IT engineer prepares a first-day-of-month maintenance schedule: '0 0 1 * *'",
+    "A data analyst prepares a quarterly ETL schedule by entering the month field manually: '15 1 * 1,4,7,10 *'"
   ]
 }

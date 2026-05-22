@@ -1,18 +1,17 @@
 {
-  "detailed_description": "This tool leverages advanced PDF parsing libraries to extract raw text streams from Portable Document Format files while preserving document structure through intelligent page marker insertion. By decoding PDF content streams and handling complex elements like embedded fonts, vector graphics, and layered annotations, it produces clean text output with configurable delimiters between pages. Developers and researchers benefit from its ability to handle scanned documents through integrated OCR processing, making it essential for converting legacy documents into machine-readable formats. The tool's backend employs a multi-threaded parsing engine that processes large PDFs (up to 10,000 pages) 30% faster than conventional converters by utilizing WebAssembly-based PDF.js components. Technical users can access advanced features like text encoding selection (UTF-8/ASCII), page range specification, and metadata stripping through a dedicated configuration panel. Unlike basic converters, this implementation maintains positional accuracy of extracted text through character coordinate mapping, ensuring compatibility with document analysis workflows.",
+  "detailed_description": "This PDF to Text tool extracts embedded text from PDF files in your browser using PDF.js. It reads each page, joins the text items into plain text, and adds a simple page marker before each page so multi-page output is easier to scan. After extraction, you can copy the text to the clipboard or download it as a .txt file. It is best suited for digital PDFs that already contain selectable text. Scanned PDFs or image-only pages may require separate OCR software before meaningful text can be extracted.",
   "usage_steps": [
-    "1. Drag-and-drop your PDF file into the designated upload area or click 'Choose File' to select from your device",
-    "2. Enable 'Smart Page Breaks' to insert [PAGE: X] markers between extracted content from different pages",
-    "3. Toggle 'OCR Processing' for scanned documents or 'Raw Text Extraction' for digital PDFs",
-    "4. Adjust text encoding settings using the dropdown menu (UTF-8 recommended for special characters)",
-    "5. Click 'Process PDF' to initiate the multi-stage extraction pipeline with real-time progress visualization",
-    "6. Copy the structured output to clipboard or download as .txt file with embedded page markers preserved"
+    "1. Drag-and-drop a PDF file into the upload area or click the area to choose a file",
+    "2. Wait while the browser loads the PDF and extracts text from each page",
+    "3. Review the extracted plain text with page markers in the output box",
+    "4. Copy the extracted text to the clipboard if you need to paste it elsewhere",
+    "5. Download the result as a .txt file when you want to save a local copy"
   ],
   "usage_examples": [
-    "Example 1: A legal analyst converts a 500-page court transcript PDF into searchable text for keyword analysis in litigation preparation",
-    "Example 2: An academic researcher extracts tables from a PDF-based journal article to import into statistical analysis software",
-    "Example 3: A software engineer migrates legacy documentation from scanned PDF manuals to Markdown format for version control",
-    "Example 4: A compliance officer processes redacted PDF reports to verify that sensitive text has been properly removed from all document layers"
+    "Example 1: A researcher extracts selectable text from a PDF article for note-taking",
+    "Example 2: A student converts a digital handout into plain text for easier quoting",
+    "Example 3: A support agent copies text from a PDF manual into a knowledge-base draft",
+    "Example 4: An office worker saves text from a multi-page PDF as a .txt file with page markers"
   ],
   "faqs": [
     {

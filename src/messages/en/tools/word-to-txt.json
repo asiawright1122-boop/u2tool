@@ -1,18 +1,17 @@
 {
-  "detailed_description": "The Word to Text tool is designed to streamline the process of converting Microsoft Word documents (.docx) into plain text format. This conversion is achieved through a sophisticated parsing algorithm that extracts textual content while discarding formatting elements, images, and embedded objects. The tool is particularly useful for developers, writers, and data professionals who need to work with text data in a format that is easily processed by other applications or scripts. For instance, when integrating text data into a database, performing text analysis, or preparing content for web scraping, having a plain text version of a Word document can significantly simplify the workflow. The tool ensures that the output is clean and free from any extraneous formatting, making it ideal for scenarios where text integrity and simplicity are paramount. Under the hood, the tool leverages libraries such as Apache POI to parse the .docx file and extract the text content efficiently, ensuring that the conversion process is both fast and accurate.",
+  "detailed_description": "The Word to Text tool extracts raw text from .docx files in your browser using mammoth. Drop or choose a DOCX file, wait for the extraction to finish, then review the plain text in a read-only output area. You can copy the text to the clipboard or download it as a .txt file. The tool is designed for selectable document text and does not preserve formatting, images, tables, comments, or embedded objects. It does not support legacy .doc files.",
   "usage_steps": [
-    "Navigate to the Word to Text tool page on the website.",
-    "Click on the 'Choose File' button to select the .docx file you want to convert from your local storage.",
-    "Once the file is selected, the tool will automatically detect the file format and prepare it for conversion.",
-    "Review the file name and size displayed below the 'Choose File' button to ensure the correct file has been selected.",
-    "Click the 'Convert to Text' button to initiate the conversion process. The tool will process the document and extract the text content.",
-    "Once the conversion is complete, the plain text will be displayed in the output area. You can then copy the text or download it as a .txt file by clicking the 'Download Text' button."
+    "Drop a .docx file onto the upload area or choose one from your device",
+    "Wait while the browser extracts raw text with mammoth",
+    "Review the extracted plain text in the output area",
+    "Copy the text if you need to paste it elsewhere",
+    "Download the result as a .txt file if you need a local copy"
   ],
   "usage_examples": [
-    "A content writer needs to extract the body text from several Word documents to create a consolidated plain text file for a client's website. The Word to Text tool allows the writer to quickly convert each document and copy the text into a single file.",
-    "A data analyst is working on a project that involves analyzing text data from multiple sources. The analyst uses the Word to Text tool to convert Word documents into plain text, which can then be imported into a data analysis tool like Python's pandas library for further processing.",
-    "A web developer is building a script that automatically updates a website's content based on text from Word documents. The developer uses the Word to Text tool to convert the documents into plain text, which can be easily parsed by the script.",
-    "A researcher is compiling a corpus of text data for a natural language processing (NLP) project. The researcher uses the Word to Text tool to convert a large number of Word documents into plain text files, which are then used to train an NLP model."
+    "Extract copy from a DOCX draft before editing it in a plain text editor",
+    "Save the readable text from a Word handout as a .txt file",
+    "Copy text from a document into notes without Word formatting",
+    "Prepare simple document text for manual cleanup or review"
   ],
   "faqs": [
     {

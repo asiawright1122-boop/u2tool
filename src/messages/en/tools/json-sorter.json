@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The JSON Sorter is a specialized encoding utility that systematically organizes JSON objects by recursively sorting their key-value pairs based on lexicographical ordering. This tool addresses the inherent lack of standardized key ordering in JSON specifications, which can lead to inconsistencies across API responses, configuration files, and data exports. By implementing a depth-first traversal algorithm, the tool ensures that all nested objects and arrays maintain structural integrity while keys at every level are reordered alphabetically. Unlike superficial formatting tools, this implementation preserves original data types (strings, numbers, booleans, null values) and handles complex structures like multi-dimensional arrays and circular references. Developers will appreciate its deterministic output, which becomes crucial when comparing JSON files for version control diffs, generating consistent hash signatures for data integrity checks, or preparing payloads for APIs requiring alphabetical key sequences. The tool's engine performs in-memory parsing using a non-destructive approach, maintaining original whitespace and comment structures (when enabled), making it suitable for both development and production environments where reliability and precision are paramount.",
+  "detailed_description": "The JSON Sorter parses valid JSON and outputs a formatted version with object keys sorted in ascending or descending order. Paste JSON into the input area, choose the sort direction, then click Sort to generate the result. Nested objects are sorted as part of the conversion, while arrays keep their item order. Because the tool uses standard JSON parsing, comments and invalid JSON syntax are not preserved.",
   "usage_steps": [
-    "Paste your unsorted JSON into the primary text area labeled 'Input JSON'",
-    "Select sorting direction using the radio buttons: 'Ascending (A→Z)' or 'Descending (Z→A)'",
-    "Toggle 'Preserve Comments' switch if your JSON contains documentation comments",
-    "Adjust 'Indentation Level' slider to set output formatting between 0-8 spaces",
-    "Click 'Sort & Validate' button to process the JSON and check for syntax errors",
-    "Copy sorted JSON from the output panel or download as .json file using the 'Save' icon"
+    "Paste valid JSON into the input text area.",
+    "Choose ascending or descending key order.",
+    "Click Sort to parse and reorder object keys.",
+    "Review the formatted JSON in the output area.",
+    "If an error appears, fix the JSON syntax and try again.",
+    "Use Copy to copy the sorted JSON output."
   ],
   "usage_examples": [
-    "Normalizing API responses from multiple service-oriented applications to maintain consistent key order for client applications",
-    "Preparing JSON files for git version control to prevent meaningless diff conflicts caused by arbitrary key ordering",
-    "Creating verifiable data signatures by generating predictably ordered JSON before cryptographic hashing",
-    "Organizing configuration files for infrastructure-as-code projects where alphabetical key grouping improves readability"
+    "Sort a small API response so object keys are easier to compare.",
+    "Normalize a JSON config snippet before pasting it into documentation.",
+    "Reorder nested object keys while keeping array item order unchanged.",
+    "Create a consistent formatted JSON sample for a test fixture."
   ]
 }

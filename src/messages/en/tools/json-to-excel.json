@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The JSON to Excel converter transforms structured JSON data into Excel spreadsheets by recursively parsing hierarchical data and mapping it to a two-dimensional grid. This tool leverages a schema inference engine to automatically detect nested arrays, objects, and primitive values, creating columns for atomic values while preserving relationships through row alignment. Developers and analysts benefit from this tool when migrating data from APIs, databases, or configuration files into Excel for reporting, visualization, or legacy system integration. The converter handles complex structures like multi-dimensional arrays and deeply nested objects by flattening paths using dot notation (e.g., \"user.address.city\") and inferring data types (numbers, strings, dates) to ensure proper Excel formatting. During processing, the tool constructs a columnar alignment matrix to optimize spreadsheet readability, supporting features like merged headers for parent-child relationships and automatic type casting for numeric/date fields. Output files maintain data integrity through Base64-encoded serialization, ensuring special characters and large datasets remain intact.",
+  "detailed_description": "The JSON to Excel converter turns a JSON object or array into a single XLSX worksheet in the browser. It flattens nested objects with dot notation, detects columns from the available keys, shows a short preview, and lets you choose the output file name and sheet name before download. It works best for simple records, API samples, configuration exports, and other tabular JSON data. It does not create multiple related sheets, merged headers, pivot tables, formulas, or advanced Excel formatting.",
   "usage_steps": [
-    "1. Open the JSON editor panel and paste your validated JSON data (supports arrays, nested objects, and key-value pairs)",
-    "2. Click 'Detect Schema' to activate the automatic column generation algorithm, which maps JSON paths to spreadsheet columns",
-    "3. Use the mapping configuration grid to modify column headers, merge related fields, or exclude specific JSON paths",
-    "4. Select 'Single Sheet' for flat structures or 'Multiple Sheets' to generate separate tabs for nested objects",
-    "5. Adjust data type settings in the Type Inference panel to enforce numeric/date formatting for specific columns",
-    "6. Click 'Generate Excel' to create the XLSX file with optimized column widths and structured data layout"
+    "1. Paste a JSON object or array into the input panel.",
+    "2. Review the detected columns and preview rows.",
+    "3. Enter the output file name and sheet name.",
+    "4. Click Download Excel to generate and save the XLSX file."
   ],
   "usage_examples": [
-    "Example 1: Converting REST API responses containing customer order hierarchies into auditable financial reports with merged invoice headers",
-    "Example 2: Transforming MongoDB document arrays with geographic coordinates into Excel tables for sales territory analysis",
-    "Example 3: Migrating IoT sensor data stored in JSON time-series format to Excel sheets with automatic date column detection",
-    "Example 4: Creating HR onboarding spreadsheets by flattening employee profile JSON with embedded organizational chart structures"
+    "Example 1: Convert a simple REST API response array into an XLSX worksheet for review.",
+    "Example 2: Flatten nested profile fields into dot-notated columns for a spreadsheet handoff.",
+    "Example 3: Turn sample analytics JSON into a quick Excel file for a teammate.",
+    "Example 4: Export configuration records from JSON into one worksheet for manual checking."
   ]
 }

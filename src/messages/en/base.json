@@ -537,8 +537,8 @@
     "html-preview": {
       "name": "HTML Preview",
       "description": "Preview HTML and CSS snippets in a live sandboxed iframe.",
-      "seo_title": "Free HTML Preview Online",
-      "seo_description": "Preview HTML and CSS snippets online in a live sandboxed iframe. Edit code, refresh the preview, clear the editor, and test small markup ideas."
+      "seo_title": "HTML Preview and Viewer Online",
+      "seo_description": "Preview and view HTML/CSS snippets online in a sandboxed iframe. Edit markup, refresh the rendered preview, clear the editor, and test small static HTML ideas."
     },
     "ip-lookup": {
       "name": "IP Lookup",
@@ -716,9 +716,9 @@
     },
     "hex-editor": {
       "name": "Hex Editor",
-      "description": "Convert between text and hexadecimal bytes.",
-      "seo_title": "Free Hex Editor Online",
-      "seo_description": "Convert text to UTF-8 hex bytes and decode hex back to text online for free. Copy browser-only results for debugging, logs, and test data."
+      "description": "Convert text to UTF-8 hex bytes and decode hex back to text.",
+      "seo_title": "Text to Hex and Hex to Text Converter Online",
+      "seo_description": "Convert text to UTF-8 hexadecimal bytes and decode hex back to readable text online. Browser-only converter for logs, payloads, and test data."
     },
     "color-palette": {
       "name": "Color Palette Generator",
@@ -780,8 +780,8 @@
     "barcode-generator": {
       "name": "Barcode Generator",
       "description": "Generate an SVG barcode preview for Code 128, Code 39, EAN-13, and UPC-A.",
-      "seo_title": "Free Barcode Generator Online",
-      "seo_description": "Create browser SVG previews for Code 128, Code 39, EAN-13, and UPC-A barcodes. Enter a value, choose a format, and check the live preview."
+      "seo_title": "Barcode Generator Online",
+      "seo_description": "Generate browser SVG barcode previews for Code 128, Code 39, EAN-13, and UPC-A. Enter a value, choose a format, and check the live preview."
     },
     "text-to-speech": {
       "name": "Text to Speech",
@@ -1820,7 +1820,7 @@
       "name": "CSV Viewer",
       "description": "View and parse CSV data in a table format.",
       "seo_title": "Free CSV Viewer Online",
-      "seo_description": "View and parse CSV data in a table format online for free. Support custom delimiters, headers, and large files. Sort, filter, and search your data easily."
+      "seo_description": "Paste CSV data and preview it as a table online for free. Choose comma, semicolon, tab, or pipe delimiters, toggle header rows, and download the CSV text."
     },
     "htaccess-generator": {
       "name": ".htaccess Generator",
@@ -2079,7 +2079,7 @@
       "name": "PDF to Base64",
       "description": "Convert PDF files to Base64 encoding.",
       "seo_title": "Free PDF to Base64 Converter Online",
-      "seo_description": "Convert PDF files to Base64 encoding online for free. Embed PDFs in HTML, JSON, or data URIs. Secure browser-based conversion with no file upload to servers.",
+      "seo_description": "Convert PDF files to Base64 encoding online for free. Create raw Base64 or data URI output in your browser with FileReader.",
       "dropzone": "Drop PDF file here or click to upload",
       "acceptedFormat": "Accepted format: PDF",
       "errorNotPdf": "Please select a PDF file",
@@ -2129,9 +2129,9 @@
     },
     "file-size-calculator": {
       "name": "File Size Calculator",
-      "description": "Convert between different file size units.",
+      "description": "Convert file sizes between bytes, KB, MB, GB, TB, and PB.",
       "seo_title": "Free File Size Calculator Online",
-      "seo_description": "Convert between bytes, KB, MB, GB, TB and more online for free. Calculate file sizes with binary (1024) or decimal (1000) units. Essential for storage planning.",
+      "seo_description": "Convert file sizes between bytes, KB, MB, GB, TB, and PB online. Switch between binary 1024-based units and decimal 1000-based units.",
       "inputValue": "Input Value",
       "unit": "Unit",
       "base": "Base",
@@ -4215,8 +4215,8 @@
     "html-preview": {
       "name": "HTML Preview",
       "description": "Preview HTML and CSS snippets in a live sandboxed iframe.",
-      "seo_title": "Free HTML Preview Online - Live HTML Viewer | U2Tool",
-      "seo_description": "Preview HTML and CSS snippets online in a live sandboxed iframe. Edit code, refresh the preview, clear the editor, and test small markup ideas.",
+      "seo_title": "HTML Preview and Viewer Online",
+      "seo_description": "Preview and view HTML/CSS snippets online in a sandboxed iframe. Edit markup, refresh the rendered preview, clear the editor, and test small static HTML ideas.",
       "refresh": "Refresh",
       "htmlCode": "HTML Code",
       "preview": "Preview"
@@ -4494,8 +4494,8 @@
     "barcode-generator": {
       "name": "Barcode Generator",
       "description": "Generate an SVG barcode preview for Code 128, Code 39, EAN-13, and UPC-A.",
-      "seo_title": "Free Barcode Generator Online",
-      "seo_description": "Create browser SVG previews for Code 128, Code 39, EAN-13, and UPC-A barcodes. Enter a value, choose a format, and check the live preview."
+      "seo_title": "Barcode Generator Online",
+      "seo_description": "Generate browser SVG barcode previews for Code 128, Code 39, EAN-13, and UPC-A. Enter a value, choose a format, and check the live preview."
     },
     "text-to-speech": {
       "name": "Text to Speech",
@@ -4762,7 +4762,7 @@
     "color-contrast-checker": {
       "name": "Color Contrast Checker",
       "description": "Check color contrast ratio for WCAG accessibility compliance.",
-      "seo_title": "Free Color Contrast Checker Online - WCAG AA/AAA Accessibility | U2Tool",
+      "seo_title": "Free Color Contrast Checker Online - WCAG AA/AAA Accessibility",
       "seo_description": "Check color contrast ratio for WCAG AA and AAA accessibility compliance with our free color contrast checker. Test foreground and background colors with instant pass/fail results.",
       "swapColors": "Swap colors",
       "sampleText": "The quick brown fox jumps over the lazy dog.",
@@ -4857,7 +4857,7 @@
     "css-grid-generator": {
       "name": "CSS Grid Generator",
       "description": "Visual CSS Grid layout generator with live preview.",
-      "seo_title": "Free CSS Grid Generator Online - Visual Layout Builder | U2Tool",
+      "seo_title": "Free CSS Grid Generator Online - Visual Layout Builder",
       "seo_description": "Generate CSS Grid layouts visually with our free CSS grid generator. Customize rows, columns, gaps, and alignment with live preview. Copy responsive CSS code instantly.",
       "columns": "Columns",
       "rows": "Rows",
@@ -5598,7 +5598,7 @@
       "name": "CSV Viewer",
       "description": "View and parse CSV data in a table format.",
       "seo_title": "Free CSV Viewer Online",
-      "seo_description": "View and parse CSV data in a table format online for free. Support custom delimiters, headers, and large files. Sort, filter, and search your data easily."
+      "seo_description": "Paste CSV data and preview it as a table online for free. Choose comma, semicolon, tab, or pipe delimiters, toggle header rows, and download the CSV text."
     },
     "htaccess-generator": {
       "name": ".htaccess Generator",
@@ -5858,7 +5858,7 @@
       "name": "PDF to Base64",
       "description": "Convert PDF files to Base64 encoding.",
       "seo_title": "Free PDF to Base64 Converter Online",
-      "seo_description": "Convert PDF files to Base64 encoding online for free. Embed PDFs in HTML, JSON, or data URIs. Secure browser-based conversion with no file upload to servers.",
+      "seo_description": "Convert PDF files to Base64 encoding online for free. Create raw Base64 or data URI output in your browser with FileReader.",
       "dropzone": "Drop PDF file here or click to upload",
       "acceptedFormat": "Accepted format: PDF",
       "errorNotPdf": "Please select a PDF file",
@@ -5908,9 +5908,9 @@
     },
     "file-size-calculator": {
       "name": "File Size Calculator",
-      "description": "Convert between different file size units.",
+      "description": "Convert file sizes between bytes, KB, MB, GB, TB, and PB.",
       "seo_title": "Free File Size Calculator Online",
-      "seo_description": "Convert between bytes, KB, MB, GB, TB and more online for free. Calculate file sizes with binary (1024) or decimal (1000) units. Essential for storage planning.",
+      "seo_description": "Convert file sizes between bytes, KB, MB, GB, TB, and PB online. Switch between binary 1024-based units and decimal 1000-based units.",
       "inputValue": "Input Value",
       "unit": "Unit",
       "base": "Base",
@@ -5927,7 +5927,7 @@
     "ascii-table": {
       "name": "ASCII Table",
       "description": "Search ASCII character codes with decimal, hex, octal, and binary values.",
-      "seo_title": "ASCII Table - Complete Character Code Reference Chart | U2Tool",
+      "seo_title": "ASCII Table - Complete Character Code Reference Chart",
       "seo_description": "Search standard ASCII codes, inspect decimal, hex, octal, and binary values, optionally show 128-255, and copy printable characters.",
       "searchPlaceholder": "Search by character, code, or description...",
       "showExtended": "Show Extended ASCII (128-255)",
@@ -7539,10 +7539,10 @@
     },
     "gantt-chart-generator": {
       "name": "Gantt Chart Maker",
-      "seo_title": "Free Gantt Chart Maker Online - Create Project Timelines | U2Tool",
-      "seo_description": "Create Gantt charts online with editable tasks, start and end dates, progress bars, color themes, and PNG/SVG export for project timeline visuals.",
+      "seo_title": "Free Gantt Chart Maker Online",
+      "seo_description": "Create a Gantt chart online with editable tasks, start and end dates, progress bars, color themes, and PNG/SVG export for simple project timeline visuals.",
       "title": "Gantt Chart Maker",
-      "description": "Create Gantt charts to visualize project progress and schedules.",
+      "description": "Create simple Gantt charts with task dates, progress bars, and PNG/SVG export.",
       "defaultTitle": "Project Schedule",
       "chartSettings": "Chart Settings",
       "chartTitle": "Title",
@@ -8566,7 +8566,7 @@
     "crontab-calendar": {
       "name": "Crontab Calendar",
       "description": "Visualize cron schedules on a calendar. See when jobs will run.",
-      "seo_title": "Free Cron Calendar Visualizer Online - Next Run Times | U2Tool",
+      "seo_title": "Cron Calendar Visualizer Online",
       "seo_description": "Preview five-field cron expressions on a monthly calendar, check the next 10 run times, and sanity-check schedules before copying them to crontab.",
       "expression": "Cron Expression",
       "expressionPlaceholder": "0 9 * * 1-5",
@@ -8865,9 +8865,9 @@
     },
     "invoice-generator": {
       "name": "Invoice Generator",
-      "description": "Create professional invoices with customizable templates and PDF export.",
+      "description": "Create a simple invoice with line items, tax, preview, and PDF export.",
       "seo_title": "Free Online Invoice Generator - Create Professional Invoices",
-      "seo_description": "Generate professional invoices online for free. Customize templates, add items, calculate taxes, and export to PDF. No signup required."
+      "seo_description": "Generate simple invoices online for free. Add sender and client details, line items, tax, notes, preview totals, and export to PDF."
     },
     "resume-builder": {
       "name": "Resume Builder",
@@ -9155,7 +9155,7 @@
       "name": "Excel Viewer",
       "description": "View Excel files online with sorting, filtering, and sheet navigation.",
       "seo_title": "Free Online Excel Viewer",
-      "seo_description": "View Excel files online for free without Microsoft Office. Support sorting, filtering, and multiple sheet navigation."
+      "seo_description": "View Excel files online for free without Microsoft Office. Open XLSX or XLS files, switch sheets, filter by column text, and sort columns in the browser."
     },
     "excel-merger": {
       "name": "Excel Merger",
@@ -9165,7 +9165,7 @@
     },
     "pdf-to-image": {
       "name": "PDF to Image",
-      "description": "Convert PDF pages to high-quality PNG or JPEG images.",
+      "description": "Convert selected PDF pages to PNG or JPEG images.",
       "seo_title": "Free PDF to Image Converter Online",
       "seo_description": "Convert PDF pages to PNG or JPEG images online for free. Adjustable DPI, page selection, and batch download as ZIP."
     },
@@ -9173,13 +9173,13 @@
       "name": "Image to PDF",
       "description": "Convert multiple images to a single PDF document with page settings.",
       "seo_title": "Free Image to PDF Converter Online",
-      "seo_description": "Convert images to PDF online for free. Support multiple images, drag-and-drop ordering, page size and orientation settings."
+      "seo_description": "Convert PNG, JPEG, JPG, or WebP images to PDF online for free. Reorder images with up/down buttons and set page size, orientation, and margins."
     },
     "pdf-merger": {
       "name": "PDF Merger",
-      "description": "Merge multiple PDF files into a single document with drag-and-drop ordering.",
+      "description": "Merge multiple PDF files into a single document with button-based ordering.",
       "seo_title": "Free PDF Merger Online",
-      "seo_description": "Merge multiple PDF files into one online for free. Drag-and-drop ordering, page count preview, and instant download."
+      "seo_description": "Merge multiple PDF files into one online for free. Reorder files with up/down buttons, preview page counts, and download instantly."
     },
     "pdf-splitter": {
       "name": "PDF Splitter",
@@ -9188,10 +9188,10 @@
       "seo_description": "Split PDF files online for free. Extract specific pages, page ranges, or split into individual pages with ZIP download."
     },
     "pdf-compressor": {
-      "name": "PDF Compressor",
-      "description": "Compress PDF files to reduce file size while maintaining quality.",
-      "seo_title": "Free PDF Compressor Online",
-      "seo_description": "Compress PDF files online for free. Reduce file size with adjustable compression levels while maintaining document quality."
+      "name": "PDF Size Reducer",
+      "description": "Try reducing PDF file size by saving a new browser-generated copy.",
+      "seo_title": "Free PDF Size Reducer Online",
+      "seo_description": "Try reducing PDF file size online for free. Rewrite PDFs in your browser, compare output size, and download a new copy."
     },
     "pdf-rotator": {
       "name": "PDF Rotator",
@@ -9438,18 +9438,18 @@
     "pdfCompressor": {
       "uploadPdf": "Upload PDF File",
       "originalSize": "Original Size",
-      "compressedSize": "Compressed Size",
-      "compressionLevel": "Compression Level",
+      "compressedSize": "New Size",
+      "compressionLevel": "Rewrite Setting",
       "low": "Low",
       "medium": "Medium",
       "high": "High",
-      "compress": "Compress PDF",
-      "compressing": "Compressing...",
-      "compressionComplete": "Compression Complete",
-      "reduced": "reduced",
-      "download": "Download Compressed PDF",
+      "compress": "Rewrite PDF",
+      "compressing": "Rewriting...",
+      "compressionComplete": "New Copy Ready",
+      "reduced": "size change",
+      "download": "Download New PDF",
       "invalidFileType": "Please upload a valid PDF file",
-      "compressError": "Failed to compress PDF file"
+      "compressError": "Failed to rewrite PDF file"
     },
     "pdfRotator": {
       "uploadPdf": "Upload PDF File",
@@ -9522,7 +9522,7 @@
       "name": "PDF to Text",
       "description": "Extract text content from PDF files. Supports multi-page PDFs with page markers.",
       "seo_title": "Free PDF to Text Converter Online",
-      "seo_description": "Extract text from PDF files online for free. Supports multi-page PDFs, preserves formatting, instant download as TXT file.",
+      "seo_description": "Extract embedded text from PDF files online for free. Supports multi-page PDFs with page markers and TXT download.",
       "faqs": [
         {
           "question": "Does it work with scanned PDFs?",
@@ -9552,9 +9552,9 @@
     },
     "word-to-html": {
       "name": "Word to HTML",
-      "description": "Convert Word documents (.docx) to HTML format with formatting preserved.",
+      "description": "Convert DOCX files to sanitized HTML with preview, copy, and download.",
       "seo_title": "Free Word to HTML Converter Online",
-      "seo_description": "Convert Word documents to HTML online for free. Preserves formatting, headings, and lists. Download clean HTML code.",
+      "seo_description": "Convert DOCX files to HTML online for free. Preview sanitized output, copy the generated markup, or download a single HTML file.",
       "faqs": [
         {
           "question": "Is all formatting preserved?",
@@ -9590,11 +9590,11 @@
       "faqs": [
         {
           "question": "Does it handle large files?",
-          "answer": "Yes, but very large files may take longer to process. We recommend files under 10MB for best performance."
+          "answer": "Very large files may take longer to process in the browser. We recommend small to moderate CSV files for best performance."
         },
         {
           "question": "Are special characters preserved?",
-          "answer": "Yes, UTF-8 encoding is used to preserve special characters and international text."
+          "answer": "The file is read as browser text. Check the preview before downloading when your CSV uses unusual encodings or special characters."
         }
       ]
     },
@@ -9845,9 +9845,9 @@
     },
     "text-to-handwriting": {
       "name": "Text to Handwriting",
-      "description": "Convert text to handwriting-style images.",
-      "seo_title": "Free Text to Handwriting Converter Online",
-      "seo_description": "Convert text to handwriting-style images online for free. Choose from multiple handwriting styles and customize ink color.",
+      "description": "Convert typed text into handwriting-style images with paper and ink options.",
+      "seo_title": "Text to Handwriting Converter Online",
+      "seo_description": "Convert typed text into handwriting-style images online. Choose a handwriting style, ink color, paper background, font size, and download the result.",
       "text": "Text",
       "style": "Handwriting Style",
       "inkColor": "Ink Color",
@@ -9961,9 +9961,9 @@
     },
     "morse-code-player": {
       "name": "Morse Code Player",
-      "description": "Convert text to Morse code and play audio.",
-      "seo_title": "Free Morse Code Player Online - Audio Generator",
-      "seo_description": "Convert text to Morse code and play audio online for free. Adjust speed and frequency for learning or fun.",
+      "description": "Convert text to Morse code, decode Morse, and play dot-dash audio.",
+      "seo_title": "Morse Code Player and Audio Generator Online",
+      "seo_description": "Convert text to Morse code, decode Morse back to text, and play dot-dash audio online with adjustable speed and frequency.",
       "text": "Text",
       "morseCode": "Morse Code",
       "play": "Play",
@@ -11193,9 +11193,9 @@
     },
     "markdown-to-pdf": {
       "name": "Markdown to PDF",
-      "description": "Convert Markdown documents to PDF with customizable styling.",
+      "description": "Preview Markdown and use the browser print dialog to save as PDF.",
       "seo_title": "Free Markdown to PDF Converter Online",
-      "seo_description": "Convert Markdown to PDF online for free. Support for headings, lists, tables, code blocks. Customizable font size and page size. No upload required.",
+      "seo_description": "Convert Markdown to PDF online for free. Preview rendered Markdown, choose font size and page size, then save with your browser print dialog.",
       "documentTitle": "Document Title",
       "fontSize": "Font Size",
       "pageSize": "Page Size",
@@ -11691,9 +11691,9 @@
     },
     "html-to-pdf": {
       "name": "HTML to PDF Converter",
-      "description": "Convert HTML content to PDF documents",
+      "description": "Preview HTML and use the browser print dialog to save as PDF",
       "seo_title": "Free HTML to PDF Converter Online - Generate PDF from HTML",
-      "seo_description": "Convert HTML to PDF online for free. Generate PDF documents from HTML code with CSS styling support. Perfect for reports and documentation.",
+      "seo_description": "Preview sanitized HTML online and use your browser print dialog to save it as a PDF. Supports page size, orientation, and margin settings.",
       "htmlInput": "HTML Content",
       "cssInput": "CSS Styles (Optional)",
       "pageSize": "Page Size",
@@ -12866,7 +12866,7 @@
     "curl-to-code-generator": {
       "name": "cURL to Code Generator",
       "description": "Convert cURL commands to code in Python, JavaScript, Go, PHP and more",
-      "seo_title": "Free cURL to Code Converter Online - Python, JS, Go | U2Tool",
+      "seo_title": "Free cURL to Code Converter Online - Python, JS, Go",
       "seo_description": "Convert cURL commands to Python, JavaScript, Go, PHP code instantly. Free online tool for API development.",
       "input": "Input",
       "output": "Output",
@@ -12882,7 +12882,7 @@
     "http-status-code-reference": {
       "name": "HTTP Status Code Reference",
       "description": "Complete HTTP status code reference with explanations and solutions",
-      "seo_title": "HTTP Status Codes Reference - Complete List & Solutions | U2Tool",
+      "seo_title": "HTTP Status Codes Reference - Complete List & Solutions",
       "seo_description": "Complete HTTP status code reference with explanations, causes, and solutions. Search 1xx-5xx codes instantly.",
       "input": "Input",
       "output": "Output",
@@ -12898,7 +12898,7 @@
     "jwt-payload-decoder": {
       "name": "JWT Payload Decoder",
       "description": "Decode and inspect JWT token payloads without verification",
-      "seo_title": "Free JWT Decoder Online - Decode Token Payload | U2Tool",
+      "seo_title": "Free JWT Decoder Online - Decode Token Payload",
       "seo_description": "Decode JWT tokens instantly and inspect payload claims. Free online JWT decoder, view header, payload, expiration.",
       "input": "Input",
       "output": "Output",
@@ -12914,7 +12914,7 @@
     "base64-image-converter": {
       "name": "Base64 Image Converter",
       "description": "Convert images to Base64 strings and Base64 to images",
-      "seo_title": "Free Base64 Image Converter Online - Encode/Decode | U2Tool",
+      "seo_title": "Free Base64 Image Converter Online - Encode/Decode",
       "seo_description": "Convert images to Base64 data URIs and decode Base64 to images. Free tool for embedding images in HTML/CSS.",
       "input": "Input",
       "output": "Output",
@@ -12963,7 +12963,7 @@
     "url-query-string-parser": {
       "name": "URL Query String Parser",
       "description": "Parse and analyze URL query parameters into key-value pairs",
-      "seo_title": "Free URL Query String Parser Online - Decode Parameters | U2Tool",
+      "seo_title": "Free URL Query String Parser Online - Decode Parameters",
       "seo_description": "Parse URL query strings into readable key-value pairs. Decode URL-encoded parameters instantly.",
       "input": "Input",
       "output": "Output",
@@ -12979,7 +12979,7 @@
     "request-header-builder": {
       "name": "HTTP Request Header Builder",
       "description": "Build and format HTTP request headers for API testing",
-      "seo_title": "Free HTTP Header Builder Online - API Testing Tool | U2Tool",
+      "seo_title": "Free HTTP Header Builder Online - API Testing Tool",
       "seo_description": "Build HTTP request headers easily. Add Authorization, Content-Type, custom headers. Export for cURL, Postman.",
       "input": "Input",
       "output": "Output",
@@ -13022,7 +13022,7 @@
     "webhook-tester": {
       "name": "Webhook Tester",
       "description": "Test and debug webhook endpoints with custom payloads",
-      "seo_title": "Free Webhook Tester Online - Test Endpoints | U2Tool",
+      "seo_title": "Free Webhook Tester Online - Test Endpoints",
       "seo_description": "Test webhook endpoints with custom JSON payloads. Debug webhook integrations with request/response logging.",
       "input": "Input",
       "output": "Output",
@@ -13075,7 +13075,7 @@
     "api-response-formatter": {
       "name": "API Response Formatter",
       "description": "Format and beautify API responses (JSON, XML) for readability",
-      "seo_title": "Free API Response Formatter Online - JSON/XML Beautifier | U2Tool",
+      "seo_title": "Free API Response Formatter Online - JSON/XML Beautifier",
       "seo_description": "Format and beautify API responses instantly. Support for JSON and XML with syntax highlighting.",
       "input": "Input",
       "output": "Output",
@@ -13125,7 +13125,7 @@
     "sql-to-mongodb-converter": {
       "name": "SQL to MongoDB Converter",
       "description": "Convert SQL queries to MongoDB query syntax",
-      "seo_title": "Free SQL to MongoDB Converter Online - Query Translator | U2Tool",
+      "seo_title": "Free SQL to MongoDB Converter Online - Query Translator",
       "seo_description": "Convert SQL queries to MongoDB syntax instantly. Support SELECT, INSERT, UPDATE, DELETE.",
       "input": "Input",
       "output": "Output",
@@ -13163,7 +13163,7 @@
     "json-to-protobuf-converter": {
       "name": "JSON to Protobuf Converter",
       "description": "Generate Protocol Buffer definitions from JSON data",
-      "seo_title": "Free JSON to Protobuf Converter Online - Proto Generator | U2Tool",
+      "seo_title": "Free JSON to Protobuf Converter Online - Proto Generator",
       "seo_description": "Generate Protocol Buffer (.proto) definitions from JSON data. Automatic type inference for gRPC.",
       "input": "Input",
       "output": "Output",
@@ -13211,7 +13211,7 @@
     "regex-to-code-generator": {
       "name": "Regex to Code Generator",
       "description": "Generate code snippets for regex patterns in multiple languages",
-      "seo_title": "Free Regex to Code Generator Online - Pattern to Code | U2Tool",
+      "seo_title": "Free Regex to Code Generator Online - Pattern to Code",
       "seo_description": "Generate regex code for Python, JavaScript, Java, Go. Convert patterns to working code snippets.",
       "input": "Input",
       "output": "Output",
@@ -13252,7 +13252,7 @@
     "swagger-to-code-generator": {
       "name": "Swagger to Code Generator",
       "description": "Generate API client code from Swagger/OpenAPI specifications",
-      "seo_title": "Free Swagger to Code Generator Online - OpenAPI Client | U2Tool",
+      "seo_title": "Free Swagger to Code Generator Online - OpenAPI Client",
       "seo_description": "Generate API client code from Swagger/OpenAPI specs. Support TypeScript, Python, Go.",
       "input": "Input",
       "output": "Output",
@@ -13290,7 +13290,7 @@
     "database-migration-generator": {
       "name": "Database Migration Generator",
       "description": "Generate database migration scripts for schema changes",
-      "seo_title": "Free Database Migration Generator Online - SQL Scripts | U2Tool",
+      "seo_title": "Free Database Migration Generator Online - SQL Scripts",
       "seo_description": "Generate database migration scripts for MySQL, PostgreSQL, SQLite. Create tables, add columns, indexes.",
       "input": "Input",
       "output": "Output",
@@ -13342,7 +13342,7 @@
     "environment-variables-generator": {
       "name": "Environment Variables Generator",
       "description": "Generate .env files and environment variable configurations",
-      "seo_title": "Free .env File Generator Online - Environment Variables | U2Tool",
+      "seo_title": "Free .env File Generator Online - Environment Variables",
       "seo_description": "Generate .env files with proper formatting. Create environment variable templates.",
       "input": "Input",
       "output": "Output",
@@ -13383,7 +13383,7 @@
     "docker-compose-generator-advanced": {
       "name": "Docker Compose Generator",
       "description": "Generate Docker Compose configurations for multi-container apps",
-      "seo_title": "Free Docker Compose Generator Online - YAML Config | U2Tool",
+      "seo_title": "Free Docker Compose Generator Online - YAML Config",
       "seo_description": "Generate Docker Compose YAML files easily. Configure services, networks, volumes.",
       "input": "Input",
       "output": "Output",
@@ -13413,7 +13413,7 @@
     "kubernetes-manifest-generator": {
       "name": "Kubernetes Manifest Generator",
       "description": "Generate Kubernetes deployment manifests (YAML)",
-      "seo_title": "Free Kubernetes YAML Generator Online - K8s Manifests | U2Tool",
+      "seo_title": "Free Kubernetes YAML Generator Online - K8s Manifests",
       "seo_description": "Generate Kubernetes deployment, service, and ingress manifests. Create K8s YAML files easily.",
       "input": "Input",
       "output": "Output",
@@ -13471,7 +13471,7 @@
     "code-complexity-analyzer": {
       "name": "Code Complexity Analyzer",
       "description": "Analyze code complexity metrics (cyclomatic complexity, LOC)",
-      "seo_title": "Free Code Complexity Analyzer Online - Metrics Tool | U2Tool",
+      "seo_title": "Free Code Complexity Analyzer Online - Metrics Tool",
       "seo_description": "Analyze code complexity with cyclomatic complexity, lines of code, maintainability index.",
       "input": "Input",
       "output": "Output",
@@ -13575,7 +13575,7 @@
     "performance-profiler": {
       "name": "Code Performance Profiler",
       "description": "Profile code performance and identify bottlenecks",
-      "seo_title": "Free Code Performance Profiler Online - Benchmark Tool | U2Tool",
+      "seo_title": "Free Code Performance Profiler Online - Benchmark Tool",
       "seo_description": "Profile JavaScript code performance. Measure execution time, identify bottlenecks.",
       "input": "Input",
       "output": "Output",
@@ -13613,7 +13613,7 @@
     "memory-leak-detector": {
       "name": "Memory Leak Detector",
       "description": "Detect potential memory leaks in code patterns",
-      "seo_title": "Free Memory Leak Detector Online - Code Analysis | U2Tool",
+      "seo_title": "Free Memory Leak Detector Online - Code Analysis",
       "seo_description": "Detect potential memory leaks in JavaScript code. Find event listener leaks, closure issues.",
       "input": "Input",
       "output": "Output",
@@ -13656,7 +13656,7 @@
     "code-duplication-finder": {
       "name": "Code Duplication Finder",
       "description": "Find duplicate code blocks and suggest refactoring",
-      "seo_title": "Free Code Duplication Finder Online - DRY Analysis | U2Tool",
+      "seo_title": "Free Code Duplication Finder Online - DRY Analysis",
       "seo_description": "Find duplicate code blocks in your codebase. Identify copy-paste code for refactoring.",
       "input": "Input",
       "output": "Output",
@@ -13707,7 +13707,7 @@
     "unused-imports-finder": {
       "name": "Unused Imports Finder",
       "description": "Identify unused imports and dependencies in code",
-      "seo_title": "Free Unused Imports Finder Online - Code Cleanup | U2Tool",
+      "seo_title": "Free Unused Imports Finder Online - Code Cleanup",
       "seo_description": "Find unused imports in JavaScript, TypeScript, Python code. Clean up dead imports.",
       "input": "Input",
       "output": "Output",
@@ -13750,7 +13750,7 @@
     "dead-code-analyzer": {
       "name": "Dead Code Analyzer",
       "description": "Find unreachable or dead code that can be removed",
-      "seo_title": "Free Dead Code Analyzer Online - Unreachable Code Finder | U2Tool",
+      "seo_title": "Free Dead Code Analyzer Online - Unreachable Code Finder",
       "seo_description": "Find dead and unreachable code in your codebase. Identify unused functions and variables.",
       "input": "Input",
       "output": "Output",
@@ -13797,7 +13797,7 @@
     "sql-query-optimizer": {
       "name": "SQL Query Optimizer",
       "description": "Review SQL text for common performance and safety issues.",
-      "seo_title": "Free SQL Query Optimizer Online - Performance Tips | U2Tool",
+      "seo_title": "Free SQL Query Optimizer Online - Performance Tips",
       "seo_description": "Review SQL text for SELECT *, missing WHERE clauses, LIKE patterns, index fields, and formatting tips. Static browser-side SQL helper.",
       "input": "Input",
       "output": "Output",
@@ -13884,7 +13884,7 @@
     "sql-injection-tester": {
       "name": "SQL Injection Tester",
       "description": "Test SQL queries for injection vulnerabilities",
-      "seo_title": "Free SQL Injection Tester Online - Security Scanner | U2Tool",
+      "seo_title": "Free SQL Injection Tester Online - Security Scanner",
       "seo_description": "Test SQL queries for injection vulnerabilities. Identify security risks in database queries.",
       "input": "Input",
       "output": "Output",
@@ -13922,8 +13922,8 @@
     "database-connection-tester": {
       "name": "Database Connection Tester",
       "description": "Build and review database connection strings and code snippets.",
-      "seo_title": "Free Database Connection String Builder Online | U2Tool",
-      "seo_description": "Generate PostgreSQL, MySQL, MongoDB, and key-value database connection strings with code snippets from host, port, database, username, password, and SSL settings.",
+      "seo_title": "Database Connection String Builder Online",
+      "seo_description": "Generate PostgreSQL, MySQL, MongoDB, and Redis connection strings with code snippets from host, port, database, username, password, and SSL settings.",
       "input": "Input",
       "output": "Output",
       "process": "Process",
@@ -13949,7 +13949,7 @@
     "query-execution-planner": {
       "name": "Query Execution Planner",
       "description": "Analyze query execution plans and suggest optimizations",
-      "seo_title": "Free Query Execution Plan Analyzer Online | U2Tool",
+      "seo_title": "Free Query Execution Plan Analyzer Online",
       "seo_description": "Analyze SQL query execution plans. Understand EXPLAIN output. Get optimization tips.",
       "input": "Input",
       "output": "Output",
@@ -13987,7 +13987,7 @@
     "database-backup-scheduler": {
       "name": "Database Backup Scheduler",
       "description": "Generate backup schedules and scripts for databases",
-      "seo_title": "Free Database Backup Scheduler Online - Cron Generator | U2Tool",
+      "seo_title": "Free Database Backup Scheduler Online - Cron Generator",
       "seo_description": "Generate database backup schedules and scripts. Create cron jobs for MySQL, PostgreSQL backups.",
       "input": "Input",
       "output": "Output",
@@ -14017,7 +14017,7 @@
     "git-commit-message-generator": {
       "name": "Git Commit Message Generator",
       "description": "Generate conventional commit messages following best practices",
-      "seo_title": "Free Git Commit Message Generator Online - Conventional Commits | U2Tool",
+      "seo_title": "Free Git Commit Message Generator Online - Conventional Commits",
       "seo_description": "Generate conventional commit messages. Follow best practices for git commits.",
       "input": "Input",
       "output": "Output",
@@ -14062,7 +14062,7 @@
     "git-branch-naming-validator": {
       "name": "Git Branch Naming Validator",
       "description": "Validate Git branch names against naming conventions",
-      "seo_title": "Free Git Branch Name Validator Online - Naming Rules | U2Tool",
+      "seo_title": "Free Git Branch Name Validator Online - Naming Rules",
       "seo_description": "Validate Git branch names against conventions. Check feature, bugfix, release branch formats.",
       "input": "Input",
       "output": "Output",
@@ -14151,7 +14151,7 @@
     "git-history-visualizer": {
       "name": "Git History Visualizer",
       "description": "Visualize Git commit history and branch structure",
-      "seo_title": "Free Git History Visualizer Online - Commit Graph | U2Tool",
+      "seo_title": "Free Git History Visualizer Online - Commit Graph",
       "seo_description": "Visualize Git commit history as a graph. See branch structure and merges.",
       "input": "Input",
       "output": "Output",
@@ -14195,7 +14195,7 @@
     "changelog-generator-advanced": {
       "name": "Changelog Generator",
       "description": "Generate changelogs from Git commits in various formats",
-      "seo_title": "Free Changelog Generator Online - From Git Commits | U2Tool",
+      "seo_title": "Free Changelog Generator Online - From Git Commits",
       "seo_description": "Generate changelogs from Git commits. Support Keep a Changelog format.",
       "input": "Input",
       "output": "Output",
@@ -14243,7 +14243,7 @@
     "git-tag-manager": {
       "name": "Git Tag Manager",
       "description": "Manage and organize Git tags for releases",
-      "seo_title": "Free Git Tag Manager Online - Version Tags | U2Tool",
+      "seo_title": "Free Git Tag Manager Online - Version Tags",
       "seo_description": "Manage Git tags for releases. Generate semantic version tags.",
       "input": "Input",
       "output": "Output",
@@ -14290,7 +14290,7 @@
     "markdown-to-html-converter": {
       "name": "Markdown to HTML Converter",
       "description": "Convert Markdown documents to HTML with styling options",
-      "seo_title": "Free Markdown to HTML Converter Online - MD to HTML | U2Tool",
+      "seo_title": "Free Markdown to HTML Converter Online - MD to HTML",
       "seo_description": "Convert Markdown to HTML instantly. Support GFM, tables, code blocks.",
       "input": "Input",
       "output": "Output",
@@ -14342,7 +14342,7 @@
     "document-outline-generator": {
       "name": "Document Outline Generator",
       "description": "Generate document outlines from headings and structure",
-      "seo_title": "Free Document Outline Generator Online - Structure Extractor | U2Tool",
+      "seo_title": "Free Document Outline Generator Online - Structure Extractor",
       "seo_description": "Generate document outlines from headings. Extract structure from Markdown, HTML.",
       "input": "Input",
       "output": "Output",
@@ -14384,7 +14384,7 @@
     "table-of-contents-generator": {
       "name": "Table of Contents Generator",
       "description": "Create table of contents from document headings",
-      "seo_title": "Free Table of Contents Generator Online - TOC Creator | U2Tool",
+      "seo_title": "Free Table of Contents Generator Online - TOC Creator",
       "seo_description": "Generate table of contents from Markdown headings. Create TOC with anchor links.",
       "input": "Input",
       "output": "Output",
@@ -14429,7 +14429,7 @@
     "document-word-counter": {
       "name": "Document Word Counter",
       "description": "Count words, characters, sentences, and paragraphs",
-      "seo_title": "Free Document Word Counter Online - Character Count | U2Tool",
+      "seo_title": "Free Document Word Counter Online - Character Count",
       "seo_description": "Count words, characters, sentences, paragraphs in documents. Reading time estimation.",
       "input": "Input",
       "output": "Output",
@@ -14464,7 +14464,7 @@
     "document-formatter": {
       "name": "Document Formatter",
       "description": "Format and clean up document text with various options",
-      "seo_title": "Free Document Formatter Online - Text Cleanup Tool | U2Tool",
+      "seo_title": "Free Document Formatter Online - Text Cleanup Tool",
       "seo_description": "Format and clean up document text. Remove extra spaces, fix line breaks.",
       "input": "Input",
       "output": "Output",
@@ -14514,9 +14514,9 @@
     },
     "citation-formatter": {
       "name": "Citation Formatter",
-      "description": "Format citations in APA, MLA, Chicago, and other styles",
-      "seo_title": "Free Citation Formatter Online - APA, MLA, Chicago | U2Tool",
-      "seo_description": "Format citations in APA, MLA, Chicago, Harvard styles. Generate bibliography entries.",
+      "description": "Build citation strings for APA, MLA, Chicago, Harvard, and IEEE styles",
+      "seo_title": "Free Citation Formatter Online - APA, MLA, Chicago",
+      "seo_description": "Create citation strings online for APA, MLA, Chicago, Harvard, and IEEE styles from manually entered source details.",
       "input": "Input",
       "output": "Output",
       "process": "Process",
@@ -14576,7 +14576,7 @@
     "project-estimation-calculator": {
       "name": "Project Estimation Calculator",
       "description": "Calculate project effort estimates using PERT and story points",
-      "seo_title": "Free Project Estimation Calculator Online - PERT Tool | U2Tool",
+      "seo_title": "Free Project Estimation Calculator Online - PERT Tool",
       "seo_description": "Calculate project estimates using PERT, story points. Estimate development time.",
       "input": "Input",
       "output": "Output",
@@ -14609,7 +14609,7 @@
     "sprint-velocity-calculator": {
       "name": "Sprint Velocity Calculator",
       "description": "Calculate and track sprint velocity for agile teams",
-      "seo_title": "Free Sprint Velocity Calculator Online - Agile Metrics | U2Tool",
+      "seo_title": "Free Sprint Velocity Calculator Online - Agile Metrics",
       "seo_description": "Calculate sprint velocity for agile teams. Track story points completed.",
       "input": "Input",
       "output": "Output",
@@ -14640,7 +14640,7 @@
     "resource-allocation-planner": {
       "name": "Resource Allocation Planner",
       "description": "Plan and optimize resource allocation across projects",
-      "seo_title": "Free Resource Allocation Planner Online - Team Planning | U2Tool",
+      "seo_title": "Free Resource Allocation Planner Online - Team Planning",
       "seo_description": "Plan resource allocation across projects. Optimize team utilization.",
       "input": "Input",
       "output": "Output",
@@ -14673,7 +14673,7 @@
     "project-risk-analyzer": {
       "name": "Project Risk Analyzer",
       "description": "Identify and assess project risks with mitigation strategies",
-      "seo_title": "Free Project Risk Analyzer Online - Risk Assessment | U2Tool",
+      "seo_title": "Free Project Risk Analyzer Online - Risk Assessment",
       "seo_description": "Analyze project risks with probability and impact assessment. Create risk matrices.",
       "input": "Input",
       "output": "Output",
@@ -14734,7 +14734,7 @@
     "milestone-tracker": {
       "name": "Milestone Tracker",
       "description": "Track project milestones and deadlines",
-      "seo_title": "Free Milestone Tracker Online - Project Timeline | U2Tool",
+      "seo_title": "Free Milestone Tracker Online - Project Timeline",
       "seo_description": "Track project milestones and deadlines. Visualize project timeline.",
       "input": "Input",
       "output": "Output",
@@ -14785,7 +14785,7 @@
     "team-capacity-planner": {
       "name": "Team Capacity Planner",
       "description": "Plan team capacity and workload distribution",
-      "seo_title": "Free Team Capacity Planner Online - Workload Planning | U2Tool",
+      "seo_title": "Free Team Capacity Planner Online - Workload Planning",
       "seo_description": "Plan team capacity and workload. Calculate available hours.",
       "input": "Input",
       "output": "Output",
@@ -14821,7 +14821,7 @@
     "meeting-minutes-generator": {
       "name": "Meeting Minutes Generator",
       "description": "Generate structured meeting minutes from notes",
-      "seo_title": "Free Meeting Minutes Generator Online - Notes Template | U2Tool",
+      "seo_title": "Free Meeting Minutes Generator Online - Notes Template",
       "seo_description": "Generate professional meeting minutes. Structured templates for notes.",
       "input": "Input",
       "output": "Output",
@@ -14881,7 +14881,7 @@
     "timezone-meeting-scheduler": {
       "name": "Timezone Meeting Scheduler",
       "description": "Schedule meetings across multiple time zones",
-      "seo_title": "Free Timezone Meeting Scheduler Online - World Clock | U2Tool",
+      "seo_title": "Free Timezone Meeting Scheduler Online - World Clock",
       "seo_description": "Schedule meetings across time zones. Find best meeting times globally.",
       "input": "Input",
       "output": "Output",
@@ -14906,7 +14906,7 @@
     "meeting-agenda-builder": {
       "name": "Meeting Agenda Builder",
       "description": "Create structured meeting agendas with time allocations",
-      "seo_title": "Free Meeting Agenda Builder Online - Agenda Template | U2Tool",
+      "seo_title": "Free Meeting Agenda Builder Online - Agenda Template",
       "seo_description": "Create professional meeting agendas. Set time allocations for topics.",
       "input": "Input",
       "output": "Output",
@@ -14962,7 +14962,7 @@
     "calendar-availability-finder": {
       "name": "Calendar Availability Finder",
       "description": "Find common free slots from manual busy times and work hours.",
-      "seo_title": "Free Calendar Availability Finder Online - Meeting Time Tool | U2Tool",
+      "seo_title": "Free Calendar Availability Finder Online - Meeting Time Tool",
       "seo_description": "Find common meeting times from manual busy slots, work hours, and minimum duration. No calendar account or sync required.",
       "input": "Input",
       "output": "Output",
@@ -14991,7 +14991,7 @@
     "meeting-room-finder": {
       "name": "Meeting Room Finder",
       "description": "Find and book available meeting rooms",
-      "seo_title": "Free Meeting Room Finder Online - Room Booking | U2Tool",
+      "seo_title": "Free Meeting Room Finder Online - Room Booking",
       "seo_description": "Find available meeting rooms by capacity and amenities. Plan room bookings.",
       "input": "Input",
       "output": "Output",
@@ -15043,9 +15043,9 @@
     },
     "invoice-template-generator": {
       "name": "Invoice Template Generator",
-      "description": "Description",
-      "seo_title": "Free Invoice Generator Online - Professional Templates | U2Tool",
-      "seo_description": "Generate professional invoices with customizable templates. Add logo, items, taxes.",
+      "description": "Create an invoice preview with three styles and download it as HTML.",
+      "seo_title": "Free Invoice Generator Online - Professional Templates",
+      "seo_description": "Create invoice previews online with modern, classic, or minimal styles. Add company details, client details, line items, tax, notes, and download HTML.",
       "input": "Input",
       "output": "Output",
       "process": "Process",
@@ -15113,7 +15113,7 @@
     "expense-report-generator": {
       "name": "Expense Report Generator",
       "description": "Description",
-      "seo_title": "Free Expense Report Generator Online - Expense Tracker | U2Tool",
+      "seo_title": "Free Expense Report Generator Online - Expense Tracker",
       "seo_description": "Create expense reports with categories and totals. Track business expenses.",
       "input": "Input",
       "output": "Output",
@@ -15188,7 +15188,7 @@
     "budget-variance-analyzer": {
       "name": "Budget Variance Analyzer",
       "description": "Analyze budget vs actual spending variances",
-      "seo_title": "Free Budget Variance Analyzer Online - Financial Analysis | U2Tool",
+      "seo_title": "Free Budget Variance Analyzer Online - Financial Analysis",
       "seo_description": "Analyze budget vs actual spending. Calculate variances and percentages.",
       "input": "Input",
       "output": "Output",
@@ -15250,7 +15250,7 @@
     "cost-benefit-analyzer": {
       "name": "Cost-Benefit Analyzer",
       "description": "Description",
-      "seo_title": "Free Cost-Benefit Analyzer Online - ROI Calculator | U2Tool",
+      "seo_title": "Free Cost-Benefit Analyzer Online - ROI Calculator",
       "seo_description": "Calculate ROI and cost-benefit ratios. Analyze investment decisions.",
       "input": "Input",
       "output": "Output",

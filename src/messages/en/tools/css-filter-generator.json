@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The CSS Filter Generator is a specialized tool that enables developers to create and fine-tune complex CSS filter effects through an interactive visual interface. Technically, it leverages the browser's rendering engine to apply real-time adjustments to elements using CSS filter functions like blur(), brightness(), contrast(), saturate(), and hue-rotate(). Developers can layer multiple filters simultaneously, with the tool generating optimized shorthand syntax that combines these effects into a single filter property. This is particularly valuable for creating responsive visual enhancements without modifying the underlying HTML or requiring JavaScript. The tool's visual editor includes precision controls for numerical input, live preview canvases, and performance metrics that highlight potential layout thrashing or composite layer issues. Advanced users can inspect the generated SVG filter equivalents for deeper customization. It addresses use cases like prototyping hover states, debugging rendering artifacts, and optimizing GPU-accelerated effects while maintaining accessibility standards through contrast ratio analysis.",
+  "detailed_description": "The CSS Filter Generator helps you build a single CSS filter declaration with a browser preview. Use presets such as grayscale, sepia, vintage, dramatic, faded, or inverted, then adjust sliders for blur, brightness, contrast, grayscale, hue-rotate, invert, saturate, sepia, and opacity. The preview applies the current filter to a default image or to an image you upload, and the output panel shows the ready filter property for copying. This is useful for quickly prototyping image effects, hover states, muted thumbnails, or simple visual treatments before moving the CSS into a project.",
   "usage_steps": [
-    "Launch the tool and select 'New Filter' to initialize an empty filter stack in the editor panel.",
-    "Adjust the blur slider to set Gaussian blur radius in real-time while monitoring performance impact indicators.",
-    "Use the color picker to define hue-rotate values or input exact degree measurements for precise color transformations.",
-    "Toggle the 'Compare' feature to split-view original and filtered outputs for visual regression testing.",
-    "Open the 'Advanced' tab to modify filter function order, as stacking context affects final visual output.",
-    "Click 'Export Code' to copy the optimized filter property with browser-prefixed versions for cross-platform compatibility."
+    "Choose a preset or start from the default unfiltered state.",
+    "Optionally upload an image to replace the default preview image.",
+    "Adjust the sliders for blur, brightness, contrast, grayscale, hue rotation, invert, saturate, sepia, and opacity.",
+    "Review the image preview as the filter changes.",
+    "Check the generated CSS output.",
+    "Click Copy CSS to copy the filter declaration."
   ],
   "usage_examples": [
-    "A front-end developer creates a performance-optimized glassmorphism effect by combining blur and contrast filters while monitoring FPS metrics.",
-    "A UI designer prototypes a dark mode toggle by generating invert() and brightness() combinations that maintain WCAG color contrast ratios.",
-    "An e-commerce team builds interactive product gallery hover effects using saturate() and drop-shadow() filters without JavaScript.",
-    "A data visualization engineer debugs chart rendering artifacts by isolating specific filter functions in the layered editor."
+    "A front-end developer tests a muted thumbnail style with grayscale and lower opacity.",
+    "A designer previews a vintage image treatment with sepia, contrast, and brightness adjustments.",
+    "An e-commerce team creates a simple hover effect by increasing saturation and contrast.",
+    "A blogger copies a CSS filter declaration for styling article images."
   ]
 }

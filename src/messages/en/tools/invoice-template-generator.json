@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Invoice Template Generator creates professional invoices with customizable templates.",
+  "detailed_description": "Invoice Template Generator helps you prepare an invoice preview with three built-in styles: modern, classic, and minimal. Enter company and client details, dates, currency, line items, tax rate, and notes, then review the live invoice preview. The download button saves the rendered invoice as a standalone HTML file. It does not add logos, generate PDFs, send invoices, store recurring invoices, or connect to payment or accounting systems.",
   "usage_steps": [
-    "Enter business info",
-    "Add client details",
-    "List products/services",
-    "Configure taxes",
-    "Generate and download"
+    "Choose modern, classic, or minimal style",
+    "Enter company, client, invoice date, due date, and currency details",
+    "Add line items with description, quantity, and unit price",
+    "Set the tax rate and optional notes",
+    "Review the live preview and download the invoice as HTML"
   ],
   "usage_examples": [
-    "Create freelance invoices",
-    "Generate recurring invoices",
-    "Customize for branding"
+    "Create a simple HTML invoice draft for a freelance project",
+    "Compare modern, classic, and minimal invoice layouts",
+    "Prepare an invoice preview with line items, tax, and notes"
   ]
 }

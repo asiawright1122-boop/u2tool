@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The Regex Visualizer transforms regular expressions into interactive railroad diagrams by parsing pattern syntax into directed graph structures. This tool leverages finite automaton theory to map capture groups, quantifiers, and alternations into visual components, displaying regex logic as interconnected nodes and edges. Developers benefit from concrete visualization of abstract pattern logic, particularly useful for debugging complex expressions with nested lookaheads or balancing groups. The tool supports multiple regex engines (PCRE, Python, JavaScript) and includes real-time matching analysis against test strings, highlighting capture group boundaries and failure points. Built with a WebAssembly-powered regex parser, it provides instant feedback without remote processing, ensuring sensitive patterns remain client-local.",
+  "detailed_description": "The Regex Visualizer turns a JavaScript regular expression pattern into a simple SVG diagram and can test the pattern against sample text. Enter a pattern, add an optional test string, then visualize the result to see the generated diagram and a list of matches. The diagram can be exported as SVG or PNG. The tool validates patterns with the browser JavaScript RegExp engine, so behavior may differ from PCRE, Python, or other regex engines.",
   "usage_steps": [
-    "Input regex pattern in the syntax-highlighted editor, with dropdown selection for target engine (PCRE/Python/JS)",
-    "Toggle 'Debug View' to display state transitions in the automaton diagram",
-    "Enter test strings in the parallel input panel to see match visualizations with colored path tracing",
-    "Click specific nodes in the diagram to highlight corresponding regex tokens and capture groups",
-    "Adjust quantifier bounds using interactive sliders to experiment with pattern variations",
-    "Export SVG diagram or copy analysis report with match details and engine compatibility notes"
+    "Enter a JavaScript regex pattern in the pattern field.",
+    "Optionally enter sample text in the test string area.",
+    "Click Visualize to generate the diagram and match results.",
+    "Review any validation error if the pattern cannot be parsed.",
+    "Export the generated diagram as SVG or PNG if needed.",
+    "Use Clear to reset the pattern, test string, diagram, and matches."
   ],
   "usage_examples": [
-    "Validating email address patterns by visualizing RFC 5322-compliant regex structure",
-    "Optimizing log parsing expressions through visual identification of backtracking hotspots",
-    "Teaching regex syntax to junior developers using interactive diagram annotations",
-    "Reverse-engineering complex validation patterns from legacy codebases through visual decomposition"
+    "Visualize a simple email-like pattern before adding it to a form validation note.",
+    "Check which parts of a sample log line match a JavaScript regex.",
+    "Export a small regex diagram for documentation or a code review comment.",
+    "Clear and compare a few alternative patterns while learning regex syntax."
   ]
 }

@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The PDF Compressor optimizes PDF files by implementing advanced stream compression algorithms and object-level deduplication. It employs FlateDecode compression for text-based content, JPEG2000 compression for raster images, and CCITT Group 4 compression for monochrome documents, reducing file size by up to 70% without compromising visual fidelity. The tool intelligently resamples embedded images to a configurable DPI threshold, removes redundant embedded fonts, and compresses XMP metadata streams. Users benefit from maintaining PDF/A compliance while achieving smaller sizes for faster email transfers, cloud storage efficiency, and improved web loading times. It utilizes a two-pass optimization process: first analyzing object structures for redundant data, then applying lossless compression with adjustable quality parameters. The tool supports PDF 1.7 specification compliance, preserves form fields and annotations, and includes an option to downsample color profiles to sRGB for cross-device consistency.",
+  "detailed_description": "The PDF Compressor loads a PDF in your browser and saves a new copy with pdf-lib. You can choose a low, medium, or high setting; the high setting enables PDF object streams during saving, which may reduce file size for some documents. The result shows the original size, new size, and calculated reduction before you download the new PDF. This is useful for trying a quick browser-based rewrite of a PDF before sharing or archiving it. It does not downsample images, remove fonts, guarantee a smaller output, or preserve every advanced PDF feature in all documents.",
   "usage_steps": [
-    "Upload PDF file using the drag-and-drop interface or 'Choose File' button",
-    "Adjust compression level using the quality slider (High/Medium/Low presets available)",
-    "Enable 'Image Optimization' to activate automatic DPI adjustment (200-high-resolution range)",
-    "Toggle 'Remove Embedded Fonts' to substitute with standard font equivalents",
-    "Click 'Compress PDF' to initiate the two-stage optimization process",
-    "Download optimized file with embedded checksum verification for data integrity"
+    "Click the upload area and choose a PDF file from your device",
+    "Review the original file size shown after upload",
+    "Select Low, Medium, or High rewrite setting",
+    "Click Rewrite PDF to create a new saved copy in the browser",
+    "Compare the original and new sizes shown in the result",
+    "Download the new PDF if the output size is useful for your workflow"
   ],
   "usage_examples": [
-    "A graphic designer compressing a 25MB portfolio PDF to 8MB for email submission without losing print-quality images",
-    "An academic researcher reducing a 500-page thesis PDF from 120MB to 35MB to meet university repository upload requirements",
-    "A real estate agent optimizing a 50MB property catalog PDF for Instagram story sharing with interactive form fields intact",
-    "A small business owner shrinking 100 invoice PDFs (total 800MB) to 220MB for cost-effective cloud storage backup"
+    "An office worker tries to reduce a PDF before attaching it to an email",
+    "A student checks whether a class handout can be saved as a smaller copy",
+    "A support agent rewrites a PDF manual and compares the new size before sharing",
+    "A small business owner prepares a lighter copy of a PDF invoice for upload"
   ]
 }

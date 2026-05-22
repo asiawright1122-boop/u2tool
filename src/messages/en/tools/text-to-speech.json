@@ -1,17 +1,17 @@
 {
-  "detailed_description": "Our Text to Speech converter employs advanced speech synthesis technology using the Web Speech API framework to transform written text into natural-sounding audio. The tool processes input text through a multi-stage pipeline: first normalizing Unicode characters, then applying language-specific tokenization to identify phonemes and prosody markers. Users can select from 37 voice profiles across 12 languages, each with distinct spectral characteristics and formant frequencies. Technical controls allow precise adjustment of articulation rate (80-220 words per minute), pitch modulation (0.5-2.0 frequency scale), and amplitude envelope shaping. The synthesis engine supports SSML (Speech Synthesis Markup Language) tags for advanced users to implement custom pauses, emphasis, and phonetic spellings. This tool addresses critical needs for accessibility compliance (WCAG 2.1 AA audio conversion), language acquisition through auditory reinforcement, and content repurposing for podcasting platforms. All processing occurs client-side in WebAssembly modules, ensuring data privacy and eliminating remote storage risks.",
+  "detailed_description": "The Text to Speech tool uses the browser speech synthesis API to read typed text aloud. Enter text, choose one of the voices exposed by your browser, then adjust rate and pitch before clicking Speak. The available voices and languages depend on the operating system and browser. The tool can stop active playback, but it does not export MP3 files, edit SSML, or generate server-side audio.",
   "usage_steps": [
-    "Enter or paste UTF-8 encoded text in the 'Source Text' textarea, supporting special characters and diacritics.",
-    "Choose voice characteristics using the Voice Profile Dropdown (e.g., 'en-GB-Wavenet-B-Female' or 'ja-JP-Wavenet-D-Male').",
-    "Adjust the Rate Slider to set words per minute with precision markers at 10-word increments.",
-    "Use the Pitch Control Knob to modify fundamental frequency between 85Hz (bass) to 255Hz (soprano).",
-    "Click 'Preview Audio' to render and listen to the first 60 seconds of synthesized speech in real-time.",
-    "Export complete audio using the 'Download MP3' button or copy SSML-optimized text from the 'Code View' tab."
+    "Enter or paste text into the text area.",
+    "Choose an available browser voice from the voice dropdown.",
+    "Adjust the rate slider if you want faster or slower speech.",
+    "Adjust the pitch slider if you want a higher or lower voice.",
+    "Click Speak to start playback.",
+    "Click Stop to cancel the current speech."
   ],
   "usage_examples": [
-    "An educational designer converts medical textbooks into variable-speed audio lectures for visually impaired students.",
-    "A localization specialist creates multilingual voiceovers for software UI elements using regional language variants.",
-    "A podcast host generates royalty-free intro/outro segments from transcribed show notes with consistent vocal tone.",
-    "A cognitive researcher tests speech comprehension rates by systematically varying phoneme duration and stress patterns."
+    "Listen to a short note before using it in a presentation.",
+    "Compare how different installed browser voices pronounce the same phrase.",
+    "Slow down speech while practicing pronunciation or listening comprehension.",
+    "Preview accessibility-friendly wording by hearing the text aloud."
   ]
 }

@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The Env File Parser is a precision tool for handling environment configuration files through advanced lexing and parsing techniques. It ingests raw .env content, applies formal grammar rules to construct an abstract syntax tree (AST), and validates key-value pairs against POSIX-compliant naming conventions and escape sequences. Unlike basic parsers, this tool enforces strict validation of quoted values, multiline entries, and comment handling while supporting cross-format transformation through bidirectional serialization. Developers require this tool to resolve inconsistencies in environment variables across development, staging, and production environments, particularly when migrating between infrastructure-as-code systems requiring YAML, cloud platform manifests needing JSON, or containerized apps using dotenv files. The parser leverages lex-based tokenization to identify invalid characters, missing assignments, and improperly escaped spaces, while its conversion engine utilizes YAML 1.2 specification compliance and JSON5 parsing to maintain data integrity during format transformations. Technical teams benefit from AST-based validation that catches subtle syntax errors before deployment, and DevOps engineers use the tool to programmatically audit configuration drift between environment files.",
+  "detailed_description": "The Env File Parser reads pasted dotenv-style KEY=value lines and displays parsed entries with line numbers, duplicate-key warnings, empty-value indicators, and masked sensitive values. After parsing, you can copy the entries back as dotenv text or convert them to simple JSON or YAML output. Comment and blank lines are ignored, and unsupported lines are reported as issues.",
   "usage_steps": [
-    "Upload .env file or paste raw content into the multi-line editor pane",
-    "Select source format (dotenv, JSON5, or YAML) from the input format dropdown",
-    "Toggle 'Strict Validation' checkbox to enable syntax error detection",
-    "Choose target format (JSON, YAML, or dotenv) from the conversion dropdown",
-    "Enable 'Preserve Comments' option to retain metadata during transformation",
-    "Click 'Process File' to generate output and download converted configuration"
+    "Paste dotenv-style KEY=value content into the input text area.",
+    "Click Parse to inspect the entries.",
+    "Review issues such as invalid lines or duplicate keys.",
+    "Use Show Values if you need to reveal masked sensitive values.",
+    "Choose ENV, JSON, or YAML as the output format.",
+    "Copy the generated output when ready."
   ],
   "usage_examples": [
-    "A developer migrating from AWS Elastic Beanstalk (YAML) to Vercel (dotenv) converts configuration files while validating secret keys",
-    "DevOps engineer debugging a Kubernetes deployment identifies malformed multiline environment variables in a .env file",
-    "SRE team standardizing configuration across service-oriented applications converts legacy JSON configs to YAML while enforcing variable naming policies",
-    "CI pipeline automatically validating and transforming GitHub Actions workflow environment variables to Docker-compose format"
+    "Inspect a small .env snippet for duplicate variable names.",
+    "Convert parsed dotenv entries into JSON for a local note or fixture.",
+    "Copy a YAML version of simple environment variables for documentation.",
+    "Check which keys look sensitive before sharing a sanitized example."
   ]
 }

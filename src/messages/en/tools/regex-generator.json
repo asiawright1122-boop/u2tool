@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The Regex Generator is a precision tool designed to construct and validate regular expressions through pattern composition and iterative testing. Developers can combine prebuilt regex components like character classes, quantifiers, and anchors to create complex expressions without manual syntax errors. The tool's core functionality leverages JavaScript's RegExp engine to provide real-time matching feedback against user-provided test strings. Unique features include a pattern library with categorized templates (e.g., email validation, URL parsing), automatic escaping of special characters, and visualization of capture group boundaries. This tool addresses critical developer needs: validating form inputs against specific formats, extracting structured data from unstructured text, sanitizing logs by redacting sensitive information, and debugging complex regex patterns through interactive testing. The interface employs syntax highlighting for regex components and displays match indices to aid in pattern refinement.",
+  "detailed_description": "The Regex Generator helps you start from common JavaScript regular expression patterns or type your own custom pattern. Choose a preset such as email, URL, phone, IPv4, date, time, hex color, username, password, ZIP code, credit card, or slug, then test it against sample text with the global, case-insensitive, and multiline flags. Matching text is listed below the test area, and the current pattern can be copied to your clipboard.",
   "usage_steps": [
-    "Select a base pattern category (Email/URL/Phone/Custom) from the pattern library dropdown",
-    "Adjust quantifier settings using the visual slider to specify repetition counts",
-    "Toggle case sensitivity and Unicode flags in the options panel",
-    "Combine multiple regex fragments using the drag-and-drop composition canvas",
-    "Enter test strings in the dedicated pane to see live match highlighting",
-    "Export validated expressions in raw regex format or as language-specific code snippets"
+    "Select one of the common pattern buttons or type a custom regular expression",
+    "Toggle the global, case-insensitive, or multiline flags as needed",
+    "Enter sample text in the test string area",
+    "Click Test Pattern to run the pattern with JavaScript RegExp",
+    "Review the matching text listed below the test area",
+    "Click Copy Pattern to copy the current regular expression"
   ],
   "usage_examples": [
-    "Validating user registration emails with domain-specific rules for corporate onboarding",
-    "Extracting transaction IDs from server logs using custom pattern combinations",
-    "Creating URL route matchers for single-page application routing configurations",
-    "Building data sanitization pipelines that redact PCI data from customer support transcripts"
+    "Pick the email preset and test it against a short list of sample addresses",
+    "Try a custom pattern against pasted log text to see which substrings match",
+    "Compare case-sensitive and case-insensitive matches with the same test string",
+    "Copy a URL, IPv4, date, or slug pattern as a starting point for manual refinement"
   ]
 }

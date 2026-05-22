@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The CSS Gradient Text tool is a sophisticated generator designed to help developers and designers create visually stunning gradient text effects using pure CSS. Unlike traditional methods that often rely on images or complex code, this tool simplifies the process by providing a user-friendly interface to craft and customize gradient text styles. Users can leverage this tool to enhance the aesthetic appeal of their web projects, making text elements stand out with smooth, professional gradients. This is particularly useful for creating dynamic headlines, call-to-action buttons, and other prominent text elements on a website. The tool works by allowing users to input their desired text and select or customize gradient colors, angles, and other properties. Under the hood, it generates the necessary CSS code, including the `background-image`, `background-clip`, and `text-fill-color` properties, to apply the gradient effect. This ensures that the text remains fully scalable and responsive, maintaining its quality across different devices and screen sizes.",
+  "detailed_description": "CSS Gradient Text creates a live preview and CSS snippet for linear gradient text. Enter the text to preview, choose two required colors and an optional third color, adjust the gradient angle, font size, and font weight, or apply one of the built-in presets such as Sunset, Ocean, Purple, Fire, Mint, or Night. The generated CSS uses a `linear-gradient`, background clipping, transparent text fill, and the selected font settings, then can be copied from the page.",
   "usage_steps": [
-    "Step 1: Open the CSS Gradient Text tool and enter the text you want to apply the gradient effect to in the 'Text Input' field.",
-    "Step 2: Choose the gradient type from the 'Gradient Type' dropdown menu. Options include 'Linear', 'Radial', and 'Conic'.",
-    "Step 3: Customize the gradient colors by selecting or entering hexadecimal color codes in the 'Color 1' and 'Color 2' fields. You can add more colors by clicking the '+ Add Color' button.",
-    "Step 4: Adjust the gradient angle using the 'Angle' slider or input a specific value in degrees. This controls the direction of the gradient.",
-    "Step 5: Fine-tune the gradient effect by modifying the 'Background Clip' and 'Text Fill Color' settings. Use the provided options to control how the gradient is applied to the text.",
-    "Step 6: Once satisfied, click the 'Generate CSS' button to obtain the CSS code. Copy the generated code and integrate it into your project's stylesheet or HTML file."
+    "Enter the text you want to preview.",
+    "Pick the first and second gradient colors, and optionally set a third color.",
+    "Adjust the angle slider to change the linear gradient direction.",
+    "Set the preview font size and font weight.",
+    "Optionally apply one of the built-in color presets.",
+    "Review the preview and copy the generated CSS snippet."
   ],
   "usage_examples": [
-    "Example 1: A web designer wants to create a striking headline for a landing page. Using the CSS Gradient Text tool, they can generate a linear gradient that transitions from a bright orange to a deep red, enhancing the visual impact of the headline.",
-    "Example 2: A front-end developer is working on a portfolio website and needs to highlight the 'Contact Me' button. By applying a radial gradient with a soft blue-to-white transition, the button stands out and encourages user interaction.",
-    "Example 3: A content creator is designing a blog post and wants the post title to have a unique look. They use the tool to create a conic gradient that rotates around the text, giving it a modern and dynamic appearance.",
-    "Example 4: A marketing team is developing a promotional banner for a product launch. To make the banner text more engaging, they use the tool to apply a multi-color linear gradient that reflects the product's brand colors, ensuring consistency and brand recognition."
+    "Create a linear gradient headline style for a landing page mockup.",
+    "Try the Ocean or Purple preset before copying CSS for a portfolio heading.",
+    "Adjust font weight and size to test how a gradient title reads at different scales.",
+    "Use three colors to draft a simple brand-style text effect."
   ]
 }
