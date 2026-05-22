@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Reading Time Calculator precisely estimates the duration required to consume written content by analyzing lexical density, syntactic complexity, and formatting elements. This tool employs tokenization algorithms to count words while excluding non-content elements like headers and code blocks. It calculates time based on adjustable parameters: default WPM (words per minute) rates for different audiences (200 WPM for casual readers, 300 for professionals), with modifiers for technical content (+15% for dense terminology) and markdown syntax. Unlike basic calculators, it parses HTML/XML structures to ignore tags and processes LaTeX equations as single reading units. The algorithm weights paragraphs differently than lists, applying cognitive load theory to estimate comprehension time. Technical writers use this to optimize documentation length, educators validate assignment feasibility, and content marketers ensure reader engagement metrics align with SEO strategies.",
+  "detailed_description": "The Reading Time Calculator estimates reading and speaking time from pasted plain text in the browser. It counts words, characters, sentences, and paragraphs, updates the results as the text changes, and lets you adjust the reading speed with a words-per-minute slider. Reading time uses the selected WPM value, while speaking time uses a fixed average speaking rate. The reference panel shows slow, average, and fast WPM ranges for quick comparison.",
   "usage_steps": [
-    "Paste formatted text into the syntax-aware editor window",
-    "Click 'Process Document' to activate content parsing engine",
-    "Adjust baseline WPM using the slider (150-450 range)",
-    "Toggle 'Technical Content' mode for STEM documents",
-    "Select output format: simple timer, segmented analysis, or CSV breakdown",
-    "Export results via 'Download Timing Report' button"
+    "Paste text into the textarea.",
+    "Adjust the reading speed slider if you want to use a different WPM value.",
+    "Review the word, character, sentence, and paragraph counts.",
+    "Check the estimated reading time and speaking time cards."
   ],
   "usage_examples": [
-    "A technical documentation specialist verifies that API reference material falls under 8-minute reading threshold for developer tutorials",
-    "Graduate student quantifies time investment for literature review sections across 12 research papers",
-    "UX writer optimizes onboarding flow text to maintain 45-second first-read experience",
-    "Podcast producer cross-references transcript reading time with audio duration metrics"
+    "Estimate how long a blog intro may take to read at 200 words per minute.",
+    "Compare reading time after shortening a help article draft.",
+    "Adjust the WPM slider to model slower or faster reading speeds.",
+    "Check speaking time for a pasted script before recording a short narration."
   ]
 }

@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The URL Parser is a specialized tool that deconstructs Uniform Resource Locators into their standardized components, enabling developers to analyze and validate URL structures programmatically. This tool processes URLs according to RFC 3986 specifications, extracting elements such as scheme (protocol), authentication credentials, subdomains, domain hierarchy, port numbers, path segments, query string parameters (with proper decoding), and fragment identifiers. Developers benefit from precise parsing capabilities when debugging redirect chains, constructing API endpoints, or auditing SEO-friendly URL structures. The tool employs a two-phase parsing algorithm: first tokenizing the input string using regex-based pattern matching, then reconstructing the components into a hierarchical object model. Advanced features include handling internationalized domain names (IDN), detecting top-level domains (TLDs), and normalizing URL encoding. By exposing the underlying structure of URLs, this tool helps identify security risks in redirect parameters, validate domain ownership for webhooks, and ensure compliance with API design principles.",
+  "detailed_description": "The URL Parser breaks one URL into browser-parsed components using the built-in URL API. Enter or edit a URL and the tool displays protocol, hostname, port, pathname, search string, hash, origin, host, and query parameters when present. Invalid URLs show a simple error message, and each displayed value has its own copy button. It is a quick inspection helper rather than a redirect checker, security scanner, or full RFC compliance validator.",
   "usage_steps": [
-    "Enter the target URL into the primary input field labeled 'URL Source'",
-    "Toggle 'Strict Parsing Mode' to enforce RFC compliance or allow lenient parsing for malformed URLs",
-    "Select output format preference: JSON tree view or tab-separated key-value pairs",
-    "Click 'Parse URL' to generate component breakdown in the results panel",
-    "Review highlighted validation flags (e.g., invalid port numbers, unsafe characters)",
-    "Use the 'Copy Raw Output' button to transfer results to IDEs or documentation tools"
+    "Enter or edit a complete URL in the input field.",
+    "Review the parsed protocol, hostname, port, pathname, search, hash, origin, and host values.",
+    "Check the query parameters section when the URL includes a query string.",
+    "Copy any displayed component with its adjacent copy button."
   ],
   "usage_examples": [
-    "Debugging authentication flows redirect URIs by validating callback domains against registered endpoints",
-    "Analyzing search engine crawl patterns through query parameter decomposition",
-    "Auditing affiliate marketing links for tracking parameter consistency across domains",
-    "Verifying CDN asset URL structures for proper versioned path segmentation"
+    "Inspect the query parameters in a copied tracking URL.",
+    "Check whether a URL includes an explicit port, path, search string, or hash fragment.",
+    "Copy the hostname or origin from a long URL while preparing notes.",
+    "Compare a few edited URL variants by changing the input field."
   ]
 }
