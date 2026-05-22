@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The Image Resizer tool is designed for developers and designers who need to efficiently adjust the dimensions of image files. Technically, it leverages advanced image processing algorithms to maintain the quality and aspect ratio of the original image while resizing it to the desired dimensions. This is particularly useful for optimizing images for web and mobile applications, where file size and load times are critical. The tool supports a wide range of image formats, including JPEG, PNG, and GIF, and allows users to specify both the width and height in pixels. Additionally, it offers options to maintain the aspect ratio, which prevents distortion of the image. The Image Resizer is invaluable for tasks such as creating thumbnails, preparing images for social media, and ensuring consistent image sizes across a website or application. By using this tool, users can enhance the user experience and improve the performance of their digital products.",
+  "detailed_description": "The Image Resizer resizes one selected image in the browser with FileReader and an HTML canvas. After choosing an image file, the tool shows the original dimensions, fills width and height inputs with the source size, optionally keeps the aspect ratio locked while editing either dimension, and draws the resized result to a canvas. The resized preview can be downloaded as a PNG file. It does not provide output format selection, batch resizing, compression quality controls, GIF animation preservation, metadata handling, advanced resampling options, or image optimization guarantees.",
   "usage_steps": [
-    "Step 1: Navigate to the Image Resizer tool on the website and click the 'Choose File' button to upload the image you want to resize.",
-    "Step 2: Once the image is uploaded, locate the 'Width' and 'Height' input fields and enter the desired dimensions in pixels. Ensure the values are appropriate for your use case.",
-    "Step 3: Check the 'Maintain Aspect Ratio' box if you want to keep the original proportions of the image. This prevents the image from becoming distorted during the resizing process.",
-    "Step 4: Select the output format from the dropdown menu. The tool supports JPEG, PNG, and GIF formats, allowing you to choose the best format for your needs.",
-    "Step 5: Click the 'Resize Image' button to apply the changes. The tool will process the image and display a preview of the resized version.",
-    "Step 6: Once you are satisfied with the resized image, click the 'Download' button to save the file to your device. The image will be downloaded in the selected format."
+    "Choose one image file from your device.",
+    "Review the original width and height shown beside the preview.",
+    "Enter the target width or height, leaving the aspect ratio lock enabled when needed.",
+    "Click Resize to draw the resized image preview.",
+    "Download the resized result as a PNG file, or clear the image and start over."
   ],
   "usage_examples": [
-    "Example 1: A web developer is creating a portfolio site and needs to ensure all project images are uniformly sized for a consistent layout. They use the Image Resizer to set a specific width and height for each image, maintaining the aspect ratio to prevent distortion.",
-    "Example 2: A social media manager is preparing images for a marketing campaign on Instagram. They use the Image Resizer to resize the images to the exact dimensions required by Instagram, ensuring that the images look perfect on the platform.",
-    "Example 3: A mobile app designer is optimizing images for an app interface. They need to reduce the file size of images to improve app performance. Using the Image Resizer, they resize the images to smaller dimensions while maintaining quality.",
-    "Example 4: A photographer is creating a digital gallery and needs to generate thumbnail images for a quick overview. They use the Image Resizer to create small, low-resolution versions of their full-sized photos, ensuring that the thumbnails load quickly and provide a good preview."
+    "Resize a single screenshot to a smaller PNG for a quick prototype.",
+    "Change an uploaded image width while keeping the original aspect ratio.",
+    "Create a simple thumbnail preview from one selected image.",
+    "Test different pixel dimensions locally before downloading the resized PNG."
   ]
 }
