@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Octal Converter is a specialized utility for translating numerical values between octal (base-8) and other numeral systems including decimal (base-10), binary (base-2), and hexadecimal (base-16). This tool employs positional notation algorithms to process input values, leveraging mathematical principles to decompose or reconstruct numbers across bases. For octal-to-decimal conversion, it calculates weighted sums of digits multiplied by 8^n, while decimal-to-octal transformations use successive division with remainder tracking. Binary conversions rely on 3-bit grouping alignments, exploiting octal's direct correspondence with three-bit binary sequences. Hexadecimal conversions first translate input to binary intermediates before final base transformation. Developers working with legacy computing systems, embedded firmware, or Unix/Linux file permission modes (where octal directly maps to read/write/execute flags) will find this tool indispensable. It supports precise manipulation of octal literals in programming contexts, debugging hardware register configurations, and educational demonstrations of numeral system relationships. The converter's engine validates input formats, handles negative values via two's complement representations, and maintains precision for integers up to 64 bits.",
+  "detailed_description": "The Octal Converter converts one pasted number at a time between octal, decimal, binary, and hexadecimal using selectable conversion modes. Choose a mode such as octal to decimal, decimal to octal, octal to binary, binary to octal, octal to hex, or hex to octal, enter the value, and click Convert. The tool validates basic input characters for the selected mode, displays a single converted result, and lets you copy the output.",
   "usage_steps": [
-    "Select conversion mode using the 'Convert From' dropdown (options: Octal, Decimal, Binary, Hexadecimal)",
-    "Enter the numerical value in the input field, ensuring proper format (e.g., '0o755' for octal literals)",
-    "Choose target base from the 'Convert To' dropdown menu",
-    "Adjust advanced settings (if needed) for signed/unsigned interpretation or bit-length constraints",
-    "Click the 'Convert' button to execute base transformation",
-    "Review output in the results panel, which displays conversions in all supported bases simultaneously"
+    "Select one conversion mode from the mode dropdown.",
+    "Enter the value in the input textarea, using digits valid for that mode.",
+    "Click Convert to generate the converted value.",
+    "Use Load Sample for a quick example or copy the output after conversion."
   ],
   "usage_examples": [
-    "System administrators converting Unix file permission codes (e.g., translating octal 0777 to decimal 511 for ACL configurations)",
-    "Reverse-engineering legacy PDP-8 assembly code by converting octal machine instructions to hexadecimal equivalents",
-    "Calibrating sensor data from embedded devices that output measurements in octal-formatted binary streams",
-    "Teaching positional numeral system concepts in computer science courses using interactive base conversion demonstrations"
+    "Convert an octal permission value such as 755 to its decimal equivalent.",
+    "Turn a decimal number into octal while checking a simple programming example.",
+    "Convert binary bits to octal for a quick base-notation exercise.",
+    "Translate an octal value to hexadecimal when comparing number representations."
   ]
 }

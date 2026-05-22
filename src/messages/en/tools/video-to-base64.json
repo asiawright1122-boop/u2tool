@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Video to Base64 tool performs binary-to-text encoding of video files using Base64 MIME encoding standards. This process converts raw binary video data into an ASCII string format suitable for transmission over media designed to handle textual data. The tool leverages JavaScript's FileReader API to process files client-side, preserving original video metadata and container formats (e.g., MP4, AVI, MOV) while transforming their binary content into RFC 4648-compliant Base64 strings. Developers need this tool for scenarios requiring video embedding in JSON payloads, CSS data URIs, or XML documents where binary data transmission is restricted. The encoding process maintains exact byte alignment through padding and proper MIME type handling, ensuring decoded videos retain full integrity. Unlike simple text encoders, this tool handles large file segmentation with Web Worker threads to prevent browser freezes during processing.",
+  "detailed_description": "The Video to Base64 tool converts a selected video file to a Base64 string in the browser with the FileReader API. You can choose or drag and drop a video file up to 10 MB, preview the selected video, see the original file size and Base64 output size, include or remove the data URI prefix, and copy the generated output. It is best suited for quick tests with small video files rather than production video delivery.",
   "usage_steps": [
-    "Navigate to the Video to Base64 tool interface and locate the 'Select Video File' input field.",
-    "Click 'Choose File' to browse and select your source video in MP4, AVI, MOV, or WebM format.",
-    "Adjust the advanced settings dropdown to specify custom MIME type parameters if required.",
-    "Initiate conversion by clicking the 'Start Base64 Encoding' button, which triggers FileReader API operations.",
-    "Monitor the progress bar displaying binary chunk processing status during large file conversion.",
-    "Copy the generated Base64 string from the output text area or download it as a .b64 file using the export button."
+    "Choose a video file or drag and drop it into the upload area.",
+    "Wait while the browser reads the file and generates the Base64 output.",
+    "Preview the selected video and check the displayed file size information.",
+    "Use the data URI checkbox to include or remove the prefix, then copy the Base64 output."
   ],
   "usage_examples": [
-    "Embedding short tutorial videos directly into HTML emails using data URIs for client demonstrations.",
-    "Preparing video attachments for API requests requiring Base64 payloads in JSON-RPC endpoints.",
-    "Converting surveillance footage for storage in blockchain transaction metadata fields with strict text requirements.",
-    "Creating self-contained SVG animations by embedding Base64 video streams in XML elements for web applications."
+    "Convert a small MP4 clip to a data URI for a quick HTML prototype.",
+    "Copy a short test video as Base64 for trying an API payload format.",
+    "Compare the original file size with the larger Base64 text output before deciding whether to use it.",
+    "Remove the data URI prefix when only the raw Base64 text is needed."
   ]
 }

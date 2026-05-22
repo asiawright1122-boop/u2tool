@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Cookie Policy Generator is a specialized tool that automates the creation of legally compliant cookie policies for websites. Technically, it parses regulatory requirements from frameworks like GDPR, CCPA, and ePrivacy into structured policy language by analyzing user-defined parameters such as cookie categories (e.g., strictly necessary, performance, analytics), data retention periods, and third-party integrations. It employs a rules engine to cross-reference selected options against jurisdiction-specific mandates, dynamically generating clauses about consent mechanisms, opt-out processes, and data processor disclosures. This tool addresses critical use cases: developers needing to implement IAB Transparency & Consent Framework v2.0 compliance, e-commerce platforms handling cross-border transactions, or startups avoiding legal penalties during audits. The backend uses a templating system with merge tags for variables like domain names and cookie durations, while the frontend provides a decision-tree interface to simplify complex legal logic into user-friendly selections.",
+  "detailed_description": "The Cookie Policy Generator creates a starter cookie policy template from a few website details and cookie type checkboxes. Enter the website name, website URL, and contact email, choose whether to include functional, analytics, and marketing cookie sections, then generate a Markdown-style policy in the browser. The output includes sample cookie tables, browser settings guidance, opt-out links for included services, and a reminder to customize the template for your own site.",
   "usage_steps": [
-    "Select cookie categories from a checklist (Strictly Necessary, Targeting, Preference, Performance)",
-    "Input domain-specific details via text fields (e.g., website URL, business name, Data Protection Officer contact)",
-    "Choose jurisdiction checkboxes (GDPR, CCPA, Brazil LGPD) to auto-populate required disclosures",
-    "Configure consent banner behavior using toggle switches for features like granular opt-in/out and cookie lifespan controls",
-    "Customize third-party integrations by selecting from a dropdown list (Google Analytics, Meta Pixel, Hotjar)",
-    "Generate and download the policy document in HTML or plain text format with embedded compliance timestamps"
+    "Enter the website name, website URL, and contact email.",
+    "Keep essential cookies enabled and choose whether to include functional, analytics, and marketing cookie sections.",
+    "Click Generate to create the cookie policy text.",
+    "Review the generated template, customize it for your site, and copy the output."
   ],
   "usage_examples": [
-    "A SaaS startup generates a policy with opt-out links for EU users while enabling CCPA-compliant deletion requests for California customers",
-    "A food blog owner selects 'Performance Cookies' to automatically include MaxMind geolocation compliance clauses",
-    "An enterprise DevOps team integrates the API endpoint into their CI/CD pipeline to auto-update policies when new tracking scripts are deployed",
-    "A digital marketing agency creates customized policies for multiple clients with varying third-party ad tech stacks using bulk generation mode"
+    "A personal website owner creates a first draft that lists essential and functional cookies.",
+    "A small blog adds analytics cookies to include basic Google Analytics sample rows and an opt-out link.",
+    "A landing page owner enables marketing cookies to include a Facebook Pixel sample row.",
+    "A developer copies the generated Markdown-style text and edits it before publishing a cookie policy page."
   ]
 }
