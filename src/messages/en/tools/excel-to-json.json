@@ -1,16 +1,15 @@
 {
   "detailed_description": "The Excel to JSON tool reads XLSX or XLS files in the browser and converts one selected worksheet into JSON. After upload, it lists available sheets, shows a preview of the selected sheet, and displays formatted JSON that you can copy or download. It is useful for quick spreadsheet-to-JSON tasks, sample data extraction, and preparing simple tabular data for development workflows. The output is based on worksheet cell values parsed by the browser spreadsheet library; complex workbook styling, formulas, charts, and nested table relationships are not preserved.",
   "usage_steps": [
-    "Step 1: Navigate to the Excel to JSON tool page and click the 'Upload Excel File' button to select the Excel file you want to convert.",
-    "Step 2: Once the file is loaded, choose the worksheet you want to convert if the workbook has multiple sheets.",
-    "Step 3: Review the table preview for the selected sheet.",
-    "Step 4: Check the formatted JSON output generated from the selected worksheet.",
-    "Step 5: Copy the JSON text or download it as a .json file."
+    "Select an XLSX or XLS file with the upload area.",
+    "If the workbook has multiple sheets, choose the sheet you want to convert.",
+    "Review the preview table, which shows the first rows from the selected worksheet.",
+    "Copy the formatted JSON output or download it as a .json file."
   ],
   "usage_examples": [
-    "Example 1: A web developer needs to integrate customer data from an Excel spreadsheet into a new e-commerce platform. The developer uses the Excel to JSON tool to convert the data, ensuring it is in the correct format for the platform's API.",
-    "Example 2: A data analyst is tasked with creating a dashboard that visualizes sales data from multiple Excel sheets. The analyst uses the tool to convert the sheets into JSON, which can then be easily consumed by the dashboard application.",
-    "Example 3: A software engineer is building a mobile app that requires data from an Excel file containing product information. The engineer uses the tool to convert the data to JSON, making it easier to parse and display within the app.",
-    "Example 4: A project manager needs to sync resource allocation data from an Excel file to a project management tool that only accepts JSON input. The project manager uses the tool to convert the data, ensuring seamless integration and up-to-date information in the project management system."
+    "Example 1: Convert a simple product worksheet into formatted JSON for a prototype.",
+    "Example 2: Preview the first rows of a spreadsheet before copying its selected sheet as JSON.",
+    "Example 3: Extract one worksheet from a multi-sheet workbook into a downloadable .json file.",
+    "Example 4: Turn tabular sample data from an XLSX file into JSON for a local development test."
   ]
 }

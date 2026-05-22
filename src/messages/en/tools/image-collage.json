@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The Image Collage tool is a sophisticated web application designed to merge multiple image files into a single, cohesive collage. Technically, it leverages advanced image processing algorithms to align and blend images seamlessly, ensuring that the final output maintains high resolution and clarity. Users can select from a variety of layout templates, each optimized for different aesthetic and practical purposes, such as creating social media posts, designing promotional materials, or compiling visual reports. The tool supports a wide range of image formats, including JPEG, PNG, and GIF, and it allows for precise control over image positioning, scaling, and rotation. Additionally, it includes features like background color customization and the ability to add text overlays, making it a versatile solution for both amateur and professional users. The Image Collage tool is particularly useful for content creators, marketers, and designers who need to quickly and efficiently create visually appealing collages for various projects.",
+  "detailed_description": "The Image Collage tool combines selected images into a single PNG collage in the browser. You can upload multiple images, choose a horizontal or vertical layout, adjust spacing, set a solid background color, reorder or remove images from the list, generate the collage on a canvas, preview the result, and download the finished PNG. The tool keeps the original image dimensions when placing images and does not include freeform dragging, text overlays, rotation controls, or layout templates beyond horizontal and vertical stacking.",
   "usage_steps": [
-    "Step 1: Visit the Image Collage tool page and click on the 'Upload Images' button to select the images you want to include in your collage.",
-    "Step 2: Once the images are uploaded, choose a layout template from the 'Layout' dropdown menu. Options include 'Grid', 'Mosaic', 'Stack', and 'Freestyle'.",
-    "Step 3: Adjust the size and position of each image by dragging and dropping them within the collage canvas. Use the zoom controls to fine-tune the placement.",
-    "Step 4: Customize the background color or upload a custom background image by selecting the 'Background' tab and choosing your preferred option.",
-    "Step 5: Add text overlays by clicking the 'Text' button and entering your desired text. You can adjust the font, size, color, and position of the text.",
-    "Step 6: Preview your collage and make any final adjustments. When you are satisfied, click the 'Download' button to save your collage in your preferred format."
+    "Select one or more image files with the upload area.",
+    "Choose horizontal or vertical layout, then adjust spacing and background color.",
+    "Reorder images with the arrow buttons or remove any image you do not want to include.",
+    "Click Create Collage to generate the preview, then download the result as a PNG."
   ],
   "usage_examples": [
-    "Example 1: A social media manager is creating a promotional post for a new product launch. They use the Image Collage tool to combine multiple product images into a single, visually appealing collage that can be shared across various social media platforms.",
-    "Example 2: A photographer wants to showcase a series of landscape photos in a single image for a client presentation. They use the 'Mosaic' layout to create a balanced and aesthetically pleasing collage that highlights the beauty of each photo.",
-    "Example 3: A marketing team is designing a flyer for an upcoming event. They use the Image Collage tool to merge images of the event venue, speakers, and activities into a single flyer, adding text overlays for important details like date, time, and location.",
-    "Example 4: A blogger is writing a travel diary and wants to include a collage of photos from their trip. They use the 'Freestyle' layout to arrange the photos in a creative and personalized way, enhancing the storytelling aspect of their blog post."
+    "Example 1: Combine several screenshots into one horizontal PNG for a quick bug report.",
+    "Example 2: Stack before-and-after images vertically with a small gap between them.",
+    "Example 3: Set a white or colored background behind images that have transparent areas.",
+    "Example 4: Reorder uploaded photos and generate a simple contact-sheet style image."
   ]
 }
