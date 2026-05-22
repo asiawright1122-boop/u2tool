@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The Meta Tag Generator is a precision tool for creating comprehensive metadata essential for modern web development. This tool generates three critical categories of tags: SEO metadata (title, description, robots directives), Open Graph tags (og:title, og:image, og:type) for social media rendering, and Twitter Card tags (twitter:card, twitter:site) with support for advanced properties like video metadata and app links. Users require this tool to optimize their websites for search engine crawlers and social media platforms, ensuring accurate content representation across digital ecosystems. Technically, the generator implements HTML5-compliant syntax with automatic character encoding (UTF-8), viewport configuration, and schema.org integration. It validates input against W3C standards, prevents tag duplication through DOM parsing, and provides real-time preview of generated markup. The backend leverages a content negotiation algorithm to prioritize meta tag hierarchy while maintaining cross-platform compatibility. Developers benefit from built-in best practices like description length optimization (150-160 characters) and Open Graph version detection.",
+  "detailed_description": "The Meta Tag Generator builds a simple block of HTML meta tags from browser form fields. You can enter a page title, description, keywords, author, Open Graph image URL, page URL, Twitter card type, Twitter site handle, robots option, and viewport value, then copy the generated markup. The output includes charset, viewport, title, description, keywords, author, robots, basic Open Graph tags with `og:type` fixed to `website`, and basic Twitter Card tags. Values are escaped before being inserted into attributes. The tool does not validate against W3C rules, check duplicate tags, preview social cards, generate schema.org markup, support dynamic Open Graph types, process existing pages, or provide batch CSV import/export.",
   "usage_steps": [
-    "Enter your page title in the 'Primary SEO Title' field (max 60 characters with fallback ellipsis handling)",
-    "Input canonical URL in the 'Preferred Domain' section for duplicate content prevention",
-    "Select content type from the 'Open Graph Type' dropdown (e.g., article, product, website) with dynamic property fields",
-    "Configure Twitter Card settings using the dedicated builder with username validation and image dimension guidance",
-    "Adjust advanced parameters in the 'Extended Metadata' panel including language codes, robots directives, and schema markup",
-    "Click 'Generate & Validate' to produce error-checked markup with inline suggestions for improvement"
+    "Enter the page title, description, and any optional keywords or author.",
+    "Add an Open Graph image URL and page URL if needed.",
+    "Choose a Twitter card type and enter a Twitter site handle when useful.",
+    "Choose the robots option and edit the viewport value if needed.",
+    "Copy the generated meta tag markup from the output panel."
   ],
   "usage_examples": [
-    "E-commerce developer generating product-specific Open Graph tags with price and availability structured data for Facebook Shop integration",
-    "Content marketer creating Twitter Card summaries with lead magnet PDF attachments for LinkedIn article promotion",
-    "Frontend engineer implementing responsive viewport tags with device-width directives for mobile-first indexing compliance",
-    "SEO specialist auditing existing meta tags across multiple pages using the batch processing feature with CSV import/export"
+    "Generate starter title and description tags for a small static page.",
+    "Create basic Open Graph and Twitter Card tags from one page title and image URL.",
+    "Copy a viewport and robots meta tag block for a prototype HTML document.",
+    "Draft simple metadata markup before manually reviewing it in your project."
   ]
 }
