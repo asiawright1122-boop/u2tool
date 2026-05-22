@@ -1,17 +1,15 @@
 {
-  "detailed_description": "This JSON-to-XML converter transforms hierarchical JSON data structures into valid XML documents by mapping key-value pairs to element nodes, array values to sequential tags, and nested objects to child elements. The tool employs a recursive descent parser to process JSON syntax, converting primitive types (strings, numbers, booleans) into text nodes while preserving complex structures through XML namespace declarations and CDATA encapsulation for special characters. Developers require this tool when integrating modern JSON-based APIs with legacy systems requiring XML input, such as enterprise EDI platforms, Java-based configuration frameworks, or document management systems using XSLT processing. The conversion engine supports advanced XML features including DTD schema generation, attribute-value encoding, and customizable root element definitions. During processing, the tool normalizes JSON arrays into XML collections using pluralization rules (e.g., \"items\" → <item>), handles date-time values via ISO 8601 formatting, and maintains document order through SAX parser implementation. Security features include schema validation against provided XSD definitions and automatic escaping of invalid XML characters like '<' and '&'. The output XML maintains strict well-formedness compliance using Unicode normalization checks and balanced tag closure verification.",
+  "detailed_description": "The JSON to XML converter turns pasted JSON into a simple XML string in the browser. It parses the JSON textarea, wraps the result with an XML declaration, converts object keys into element names, converts arrays into repeated item elements, and writes primitive values as text content. Invalid JSON shows an error message, and the generated XML can be copied from the output textarea. The tool is best suited for quick formatting tests with simple JSON structures rather than schema-driven XML generation.",
   "usage_steps": [
-    "Paste valid JSON into the syntax-highlighted textarea, with real-time validation feedback",
-    "Enter a custom root element name in the 'XML Root' field (default: <root>)",
-    "Toggle 'Array Pluralization' to enable automatic singular tag generation for array elements",
-    "Select 'Attribute Encoding' mode to convert key-value pairs into XML attributes instead of child nodes",
-    "Enable 'Pretty Print' with indentation level selector (2-8 spaces) for human-readable formatting",
-    "Download result as .xml file or copy formatted XML from the preview panel"
+    "Paste valid JSON into the JSON textarea.",
+    "Click Convert to parse the input and generate XML.",
+    "Review the XML output or the invalid JSON error message.",
+    "Copy the generated XML from the output textarea."
   ],
   "usage_examples": [
-    "Converting OpenAPI JSON specifications to Swagger XML format for legacy API documentation systems",
-    "Transforming Firebase Realtime Database JSON exports into XML feeds for SharePoint list imports",
-    "Migrating MQTT IoT sensor data streams from JSON payloads to XML archives for compliance reporting",
-    "Generating Android XML resource files from translated JSON strings in internationalization workflows"
+    "Convert a small JSON object into XML for a quick example.",
+    "Turn a simple array into repeated item elements while testing data formats.",
+    "Check how nested JSON objects are represented as child XML elements.",
+    "Copy generated XML from a pasted JSON sample for a local prototype."
   ]
 }
