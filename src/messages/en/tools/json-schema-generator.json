@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The JSON Schema Generator automates the creation of JSON Schema documents (Draft-07 and Draft-2020-12 compliant) from sample JSON data. This tool performs structural analysis to infer data types, required fields, and nested object relationships, producing schemas that enforce data integrity through validation keywords like `type`, `format`, `minItems`, and `oneOf`. Developers use it to standardize API request/response formats, validate data pipelines, or document database models. The tool's type-inference engine handles ambiguous data by detecting patterns across multiple samples, supporting advanced features like recursive schema references (`$recursiveRef`) and conditional validation. By analyzing value distributions and nesting hierarchies, it generates precise schemas that balance strict typing with extensibility, crucial for preventing schema drift in service-oriented applications architectures or ensuring compatibility during data migrations.",
+  "detailed_description": "The JSON Schema Generator creates a JSON Schema document from one pasted JSON value in the browser. It parses the input with JSON.parse, calls the local generateFullSchema helper, and writes a formatted schema to the output textarea. You can choose Draft-07 or Draft-2020-12, optionally include examples, optionally mark all fields as required, clear the tool, and copy the generated schema. The tool does not accept multiple samples, import files, validate other data against the generated schema, detect date-time formats, perform strict-null analysis, generate recursive references, infer conditional schemas, or guarantee full draft compliance for every advanced JSON Schema feature.",
   "usage_steps": [
-    "Navigate to the JSON Schema Generator interface and locate the 'Input Data' text area",
-    "Paste 1-5 valid JSON instances representing your data's expected variations",
-    "Select schema draft version (Draft-07 or Draft-2020-12) from the version dropdown",
-    "Toggle advanced options: enable 'Strict Null Checking' or 'Detect Date-Time Formats'",
-    "Click 'Generate Schema' to initiate recursive structure analysis",
-    "Review generated schema in the output panel, using the 'Validation Test' tab to verify against additional samples"
+    "Paste one valid JSON value into the input textarea.",
+    "Choose Draft-07 or Draft-2020-12 from the draft dropdown.",
+    "Optionally enable examples or mark all fields as required.",
+    "Click Generate to create the formatted schema output.",
+    "Copy the generated schema, or clear the input and output."
   ],
   "usage_examples": [
-    "Creating OpenAPI-compliant request schemas for REST endpoints by analyzing example payloads",
-    "Building Firestore security rules by reverse-engineering client data structures",
-    "Validating IoT device telemetry formats across different hardware versions",
-    "Generating Avro schema mappings for JSON-to-Parquet conversion pipelines"
+    "Generate a starter schema from a pasted API response sample.",
+    "Compare output with and without example values included.",
+    "Mark all fields as required for a stricter draft before manual review.",
+    "Copy the formatted schema as a starting point for documentation or validation work."
   ]
 }

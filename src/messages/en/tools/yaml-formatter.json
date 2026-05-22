@@ -1,13 +1,16 @@
 {
-  "detailed_description": "YAML Formatter is a comprehensive online tool for formatting and validating YAML files. It automatically fixes indentation issues, validates syntax, and beautifies your YAML configuration files. The tool supports complex nested structures, arrays, multi-line strings, and multi-document YAML files. Perfect for DevOps engineers working with Kubernetes manifests, CI/CD pipelines, or any YAML-based configuration. Get instant feedback on syntax errors and produce clean, properly indented YAML output.",
+  "detailed_description": "YAML Formatter formats pasted YAML text in the browser using js-yaml. You can edit the sample YAML, choose 2-space or 4-space indentation, click Format, review parse errors when js-yaml rejects the input, copy the formatted output, or clear the input, output, and error message. It does not upload YAML files, automatically repair invalid YAML, provide schema-aware validation for Kubernetes or CI/CD files, preserve comments, offer multi-document controls, or guarantee support for every YAML edge case.",
   "usage_steps": [
-    "Paste YAML",
-    "Set indent size",
-    "Click Format",
-    "Copy result"
+    "Paste YAML into the input textarea or edit the built-in sample.",
+    "Choose 2-space or 4-space indentation.",
+    "Click Format to parse and dump the YAML.",
+    "Review any parse error shown above the textareas.",
+    "Copy the formatted result or clear the tool."
   ],
   "usage_examples": [
-    "Format config files",
-    "Validate Kubernetes manifests"
+    "Reformat a small pasted YAML configuration with 2-space indentation.",
+    "Switch to 4-space indentation before copying the formatted output.",
+    "Check whether js-yaml reports a parse error for a short YAML snippet.",
+    "Clear the sample and format another browser-side YAML value."
   ]
 }
