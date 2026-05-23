@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The SQL Generator is a precision tool for creating syntactically correct SQL queries tailored to specific database schemas and operational requirements. This tool addresses the need for rapid query construction in environments where manual coding risks syntax errors or inefficiencies. Developers working with complex JOIN operations, subqueries, or database migrations can automate query generation while maintaining control over execution plans. The tool parses user-defined schema structures, validates column references against table definitions, and applies dialect-specific optimizations for MySQL, PostgreSQL, and SQLite. By accepting structured input formats like JSON schema definitions or ER diagrams, it eliminates manual query drafting while ensuring referential integrity and proper use of constraints like FOREIGN KEYs and INDEXes. Advanced features include batch operation support for bulk inserts and transaction-safe ALTER TABLE statements for schema evolution.",
+  "detailed_description": "The SQL Generator creates a simple SQL snippet from visible browser-side form fields. You can choose SELECT, INSERT, UPDATE, DELETE, or CREATE TABLE, edit the table name and relevant fields, and copy the generated text. SELECT includes columns, WHERE, ORDER BY, and LIMIT fields. INSERT uses columns and values. UPDATE uses a SET clause and WHERE clause. DELETE uses a WHERE clause. CREATE TABLE uses a freeform schema definition textarea. The tool does not choose SQL dialects, validate schema references, upload database schemas, build JOINs or subqueries, analyze execution plans, provide syntax highlighting, export files, create transaction wrappers, or guarantee production-ready SQL.",
   "usage_steps": [
-    "Select target SQL dialect (MySQL/PostgreSQL/SQLite) from the dropdown menu",
-    "Choose operation type: SELECT with JOINs, INSERT BATCH, CREATE TABLE with constraints, or UPDATE with subqueries",
-    "Upload database schema file or manually input table/column relationships in the Schema Builder interface",
-    "Define query parameters using the condition matrix with operators (=, IN, BETWEEN, LIKE) and logical groupings",
-    "Preview generated query with syntax highlighting and execution plan analysis in the Output Panel",
-    "Export query or copy directly to clipboard with optional transaction wrapper (BEGIN/COMMIT)"
+    "Choose SELECT, INSERT, UPDATE, DELETE, or CREATE TABLE.",
+    "Enter the table name and edit the fields shown for that command.",
+    "For SELECT, edit columns, WHERE, ORDER BY, and LIMIT values.",
+    "For CREATE TABLE, edit the schema definition textarea.",
+    "Review the generated SQL text and copy it when it is useful as a starting point."
   ],
   "usage_examples": [
-    "Migrating data from MySQL to PostgreSQL by generating dialect-specific INSERT statements with type casting",
-    "Creating daily reports with complex JOINs across 5+ tables using point-and-click column selection",
-    "Building audit trails through automated UPDATE triggers with BEFORE/AFTER image capture",
-    "Optimizing slow queries by generating covering indexes with INCLUDE() clauses for PostgreSQL"
+    "Draft a simple SELECT query for one table while prototyping.",
+    "Create a basic INSERT statement from pasted column and value lists.",
+    "Generate an UPDATE or DELETE statement with a manually written WHERE clause.",
+    "Sketch a starter CREATE TABLE statement before reviewing it in your database tool."
   ]
 }
