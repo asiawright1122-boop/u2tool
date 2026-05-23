@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The JSON Merger tool enables developers to programmatically combine multiple JSON objects using customizable merge strategies, supporting deep merging of nested structures, array concatenation, and conflict resolution. Unlike basic concatenation tools, this implementation parses JSON inputs into abstract syntax trees (ASTs), then applies recursive merging algorithms to handle nested key collisions. Users can select strategies like 'overwrite' (prioritize last-value wins), 'recursive merge' (combine nested objects), or 'array union' (de-duplicated array merging). This tool addresses critical use cases in API development, configuration management, and schema migration where manual merging would risk human error. For instance, when integrating service-oriented applications that return fragmented datasets, the tool's AST-based approach ensures type consistency across merged values while preserving original data hierarchies. Developers working with IoT telemetry streams can utilize array union operations to consolidate sensor readings without duplicate entries. The implementation uses ECMA-404 compliant parsing with strict mode validation to maintain data integrity, and all operations execute client-side to prevent sensitive data exposure.",
+  "detailed_description": "The JSON Merger combines two pasted JSON values in the browser with a selected merge strategy. You can edit the JSON 1 and JSON 2 textareas, choose shallow, deep, or concat, click Merge, review an error for invalid JSON, copy the formatted output, and read the short strategy descriptions below the result. The tool calls the local mergeJsonObjects helper and is meant for quick two-input merging. It does not support more than two inputs, reordering panes, strict type checking controls, AST inspection, conflict markers, syntax-highlighted editing, array union de-duplication guarantees, or JSON file download.",
   "usage_steps": [
-    "1. Select merge strategy from dropdown: 'overwrite', 'recursive', or 'array union'",
-    "2. Paste 2+ JSON objects into input panes labeled JSON 1, JSON 2, etc.",
-    "3. Use arrow buttons to reorder input priority for conflict resolution",
-    "4. Toggle 'strict type checking' to enforce data type consistency during merge",
-    "5. Review merged output in syntax-highlighted preview panel with conflict markers",
-    "6. Click 'Download JSON' to save result or 'Copy to Clipboard' for immediate use"
+    "Paste or edit the first JSON value in the JSON 1 textarea.",
+    "Paste or edit the second JSON value in the JSON 2 textarea.",
+    "Choose shallow, deep, or concat from the strategy dropdown.",
+    "Click Merge and review the output or any invalid JSON error.",
+    "Copy the formatted result when it looks useful."
   ],
   "usage_examples": [
-    "Merging user profile data from separate authentication services where address fields require deep merging while subscription status should use last-write-wins",
-    "Combining environment-specific configuration files (dev/staging/prod) while preserving nested database connection strings",
-    "Aggregating real-time sensor data from multiple IoT gateways using array union to eliminate duplicate timestamp entries",
-    "Migrating legacy API responses to new schemas by merging deprecated fields with current endpoint structures using recursive strategy"
+    "Combine two small configuration objects while comparing shallow and deep behavior.",
+    "Merge a sample override object into a base JSON object during prototyping.",
+    "Test concat behavior for values where the local helper supports concatenation.",
+    "Copy the merged browser-side output for manual review."
   ]
 }

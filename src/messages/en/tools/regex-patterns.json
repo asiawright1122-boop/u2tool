@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The Regex Patterns Library is a curated repository of battle-tested regular expressions designed to address common data validation and extraction challenges in software development. This tool provides ready-to-implement PCRE-compatible patterns for email addresses (RFC 5322 compliant), internationalized URLs (supporting IDN and IPv6), E.164 phone number formats, semantic versioning, and more. Developers benefit from rigorously tested patterns that handle edge cases often overlooked in custom implementations, such as proper TLD validation in emails or handling URI encoded characters in URLs. The tool's interactive sandbox allows real-time testing with live match highlighting, capture group inspection, and performance profiling. Technical teams reduce regex-related vulnerabilities like ReDoS by using optimized patterns with bounded quantifiers and atomic grouping where appropriate. Each pattern includes syntax breakdowns showing character classes, anchors, and lookahead assertions, with language-specific adjustments for JavaScript, Python, and Java implementations.",
+  "detailed_description": "The Regex Patterns Library shows a small set of common browser-side regular expression examples. The available patterns include email, HTTP/HTTPS URL, phone number, IPv4 address, hex color, and UUID. You can click Try It to load a pattern with its example text, edit the test input, see a simple match or no-match result from JavaScript RegExp.test, close the tester, or copy a raw pattern. It does not provide search, categories, PCRE guarantees, RFC-complete validation, capture group inspection, match highlighting, regex flags, performance profiling, language-specific code generation, or export options.",
   "usage_steps": [
-    "Use the search bar to find patterns by keyword (e.g., 'ISBN') or select from primary categories like 'Networking' or 'Data Formats'",
-    "Click 'Show Pattern Details' to view syntax breakdown with explanations of components like lookbehind assertions or octal escapes",
-    "Input sample data in the sandbox's multi-line editor to test matches with real-time result visualization",
-    "Adjust regex modifiers using the flags panel (e.g., enabling 'Unicode' or 'Case-Insensitive' modes)",
-    "Select target language from the code generator dropdown to obtain properly escaped implementation examples",
-    "Export results as code snippets or copy raw regex patterns with included whitespace normalization instructions"
+    "Choose one of the built-in patterns from the list.",
+    "Click Try It to open the simple tester with example input.",
+    "Edit the test input and review whether the JavaScript regex matches.",
+    "Copy the raw pattern when it is useful as a starting point.",
+    "Close the tester or try another built-in pattern."
   ],
   "usage_examples": [
-    "Validating user registration emails with strict MX record format checking during form submission in a Node.js application",
-    "Extracting timestamped error codes from multi-line server logs using grouped captures with configurable delimiters",
-    "Implementing phone number formatting for 150+ countries in a React form component using E.164 normalization patterns",
-    "Sanitizing user-generated content in a Python API by removing unwanted HTML tags while preserving allowed formatting"
+    "Copy a simple email regex as a starter for a prototype form.",
+    "Test whether a sample string matches the built-in URL or phone pattern.",
+    "Compare a hex color or UUID value against the included example pattern.",
+    "Use the match result as a quick browser-side sanity check before manual review."
   ]
 }
