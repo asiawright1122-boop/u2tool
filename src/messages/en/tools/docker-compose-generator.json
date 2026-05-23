@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The Docker Compose Generator is a specialized utility for automating the creation of complex docker-compose.yml files through a structured configuration interface. This tool parses user-defined parameters for services like MySQL, cache service, Nginx, and application containers, then generates YAML manifests compliant with Docker Compose Specification Version 3.8. It addresses common challenges in manual Docker configuration, including inconsistent port mapping, incorrect volume binding syntax, and network dependency misconfigurations. By providing predefined service templates with adjustable parameters (e.g., root password hashes, volume mount paths, environment variable injection), the tool ensures consistent container orchestration across development, staging, and production environments. The generator's backend validates configurations against Docker's schema requirements, preventing invalid YAML structures that could cause deployment failures. Developers can customize service-level properties such as build contexts, restart policies, and resource constraints through a guided UI, eliminating the need for manual syntax memorization. This is particularly valuable for teams managing service-oriented applications architectures where inter-service communication and persistent storage require precise network and volume declarations.",
+  "detailed_description": "The Docker Compose Generator creates a simple docker-compose.yml file from a small set of predefined service buttons. You can choose a Compose version, select services such as MySQL, PostgreSQL, MongoDB, Redis, RabbitMQ, Elasticsearch, Nginx, MinIO, Adminer, or MailHog, generate YAML, copy it, download it, or clear the selection. The output uses fixed images, ports, environment values, restart settings, and named volumes from the local service definitions. The tool does not provide editable service parameters, custom app containers, dependency graphs, schema validation, syntax highlighting, Docker security hardening, resource limits, build contexts, health checks, or production deployment guarantees.",
   "usage_steps": [
-    "1. Select required base services (MySQL 8.0, cache service 7.0, Nginx 1.25, etc.) using the multi-select service panel",
-    "2. Configure service-specific parameters through expandable forms: set MySQL root password, cache service maxmemory, or Nginx custom ports (e.g., 8080:80)",
-    "3. Define volume mounts by specifying host paths and container bind points in the persistent storage section",
-    "4. Configure network settings using the drag-and-drop dependency graph to establish service communication rules",
-    "5. Review automatically generated YAML in the live preview pane, with syntax highlighting and error indicators",
-    "6. Click 'Export Compose File' to download the validated docker-compose.yml or copy the content to clipboard"
+    "Choose the Compose version from the dropdown.",
+    "Select one or more predefined services from the grouped service buttons.",
+    "Click Generate to create the docker-compose.yml text.",
+    "Review the generated YAML and adjust it manually outside the tool if needed.",
+    "Copy the output or download it as docker-compose.yml."
   ],
   "usage_examples": [
-    "Example 1: Creating a LAMP stack with PHP 8.2-FPM, MySQL 8.0, and Adminer UI by selecting services, mapping port 8080:80, and setting database credentials",
-    "Example 2: Configuring a cache service-backed Python application with a cache service-py client, exposing port 6379 and persistent storage at /data/cache service",
-    "Example 3: Generating a CI/CD environment with PostgreSQL 15 and Jenkins containers, including volume mounts for Jenkins home directory",
-    "Example 4: Building a WordPress multisite configuration with Nginx reverse proxy, Let's Encrypt certificate support, and cache service object caching"
+    "Generate a starter Compose file with PostgreSQL and Adminer for local testing.",
+    "Select Redis or RabbitMQ to copy a basic service snippet into a prototype stack.",
+    "Create a simple Nginx or MinIO service entry from the built-in defaults.",
+    "Download the generated YAML and edit ports, passwords, or volumes manually before use."
   ]
 }

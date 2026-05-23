@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The Terms of Service Generator is a dynamic tool that automates the creation of legally compliant website policies by combining modular legal clauses with user-specific business parameters. Technically, it uses a JSON schema to collect structured inputs (e.g., data collection practices, jurisdiction requirements, service limitations) and merges them with pre-vetted legal templates using a Handlebars.js rendering engine. Users benefit from automated generation of critical sections like indemnification clauses, disclaimers of warranties, and governing law provisions tailored to their operational geography. The tool's value lies in its ability to reduce manual legal drafting costs while ensuring compliance with frameworks like GDPR Article 6(1) for EU data processing or California's CCPA §1798.100. Advanced features include dynamic variable replacement for company names/addresses, cookie policy generation with consent banner code snippets, and optional arbitration clause insertion based on user-selected dispute resolution preferences. Output documents are produced in both plain text and downloadable .docx formats with tracked changes for legal review.",
+  "detailed_description": "The Terms of Service Generator creates a plain text terms template from a small browser-side form. You can enter website name, website URL, company name, contact email, and governing law country, then optionally include sections for user-generated content, subscriptions, and refunds. The Generate button fills a markdown-style textarea with a general template and the Copy button copies that output. The generated text includes an explicit reminder to review and customize it and consult a legal professional. The tool does not provide legal advice, guarantee compliance with GDPR/CCPA/HIPAA or other laws, offer industry templates, use jurisdiction maps, generate cookie banners, insert arbitration options, produce DOCX files, or track legal changes.",
   "usage_steps": [
-    "1. Select your industry-specific base template (E-commerce, SaaS, Content Platform) from the template gallery",
-    "2. Configure jurisdiction settings using the interactive map interface to auto-populate regional compliance clauses",
-    "3. Toggle technical switches for data processing activities (e.g., 'Collects EU personal data' or 'Sells California consumer information')",
-    "4. Input business metadata through structured fields: company name, DBA variations, registered address coordinates",
-    "5. Customize enforcement mechanisms by selecting dispute resolution methods (arbitration, small claims court) via dropdown menus",
-    "6. Generate and review the document's JSON source code alongside rendered output for clause-specific modifications"
+    "Enter the website name, website URL, company name, contact email, and governing law country.",
+    "Select whether the template should include user-generated content, subscription, or refund sections.",
+    "Click Generate to create the markdown-style terms template.",
+    "Review and edit the generated text for your situation.",
+    "Copy the output when you are ready to move it into another editor for legal review."
   ],
   "usage_examples": [
-    "A fintech startup creating GDPR-compliant terms with embedded PSD2 regulatory references for EU payment services",
-    "A gaming company generating Korean-specified policies under South Korea's Act on Promotion of Information and Communications Network",
-    "An edtech platform building FERPA-compliant sections for student data handling in US educational software",
-    "A health tech firm generating HIPAA-compliant Business Associate Agreements as policy addendums"
+    "Draft a starting terms template for a small website before professional review.",
+    "Include a basic user-generated content section when a site accepts submissions.",
+    "Add simple subscription and refund language for a product prototype.",
+    "Copy the generated markdown-style text into a document for manual editing."
   ]
 }
