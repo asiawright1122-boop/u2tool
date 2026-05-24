@@ -1,18 +1,17 @@
 {
-  "detailed_description": "The HTML Encoder/Decoder is a powerful utility designed to facilitate the conversion of special characters into HTML entities and vice versa. This process is essential for ensuring that web content is displayed correctly and securely in various contexts. By encoding special characters, the tool prevents issues such as HTML injection, which can lead to security vulnerabilities like Cross-Site Scripting (XSS) attacks. Conversely, decoding HTML entities is useful when you need to revert the encoded text back to its original form for further processing or display. The tool leverages a comprehensive set of HTML entity mappings, ensuring that a wide range of special characters, including accented letters, symbols, and punctuation marks, are accurately converted. This is particularly valuable for developers working on web applications, content management systems, and any platform that involves user-generated content. The HTML Encoder/Decoder operates by taking the input text, analyzing it for special characters, and then applying the appropriate encoding or decoding rules based on the selected operation. The result is a string that is safe for use in HTML contexts, enhancing both the functionality and security of web applications.",
+  "detailed_description": "The HTML Encoder/Decoder converts text between raw characters and HTML entities directly in your browser. Paste text into the input area, then click Encode HTML to convert characters such as `<`, `>`, `&`, `\"`, and similar markup characters into entities like `&lt;`, `&gt;`, `&amp;`, and `&quot;` using the browser's built-in `textContent` to `innerHTML` conversion, or click Decode HTML to turn named and numeric entities (such as `&amp;`, `&#38;`, `&#x26;`) back into their original characters. The result appears in a read-only output box that you can copy with one click, and a Clear button resets both fields. The tool does not transform code into safe HTML, sanitize against XSS by itself, validate against any HTML specification, support batch file processing, or download results as files.",
   "usage_steps": [
-    "Step 1: Navigate to the HTML Encoder/Decoder tool page on the website.",
-    "Step 2: Locate the input text box labeled 'Enter Text' and paste or type the text you want to encode or decode.",
-    "Step 3: Select the operation you wish to perform from the dropdown menu: 'Encode' or 'Decode'.",
-    "Step 4: If you choose 'Encode', the tool will convert special characters to their corresponding HTML entities. If you choose 'Decode', it will convert HTML entities back to their original characters.",
-    "Step 5: Click the 'Process' button to execute the selected operation.",
-    "Step 6: The processed text will appear in the output text box below. You can then copy the result and use it as needed."
+    "Paste or type the text you want to convert into the input textarea.",
+    "Click Encode HTML to turn raw characters into HTML entities, or Decode HTML to turn entities back into characters.",
+    "Read the result in the output textarea below the buttons.",
+    "Click Copy to put the output on your clipboard.",
+    "Click Clear when you want to reset both the input and the output."
   ],
   "usage_examples": [
-    "Example 1: A web developer is creating a form that allows users to submit comments. To prevent XSS attacks, the developer uses the HTML Encoder/Decoder to encode user input before storing it in the database. This ensures that any potentially harmful characters are converted to safe HTML entities.",
-    "Example 2: A content manager is editing an article that includes special characters like é, ñ, and ü. To ensure these characters display correctly in the HTML version of the article, the manager uses the tool to encode the text before publishing it.",
-    "Example 3: A developer is working on a legacy system that stores data in an encoded format. Before displaying the data on a modern web page, the developer uses the HTML Encoder/Decoder to decode the text, making it readable and correctly formatted.",
-    "Example 4: A blogger is writing a post about HTML and needs to include code snippets that contain special characters. To ensure the code is displayed correctly and not interpreted as HTML by the browser, the blogger encodes the snippets using the tool before embedding them in the blog post."
+    "Encode a snippet that contains `<div class=\"hero\">` so it can be shown literally in a tutorial.",
+    "Decode an `&amp;quot;` and `&amp;#38;` mixed string to inspect what the original text looks like.",
+    "Convert a small block of HTML before pasting it into a Markdown code example.",
+    "Round-trip a string by encoding it and then decoding the result to confirm it matches the source."
   ],
   "faqs": [
     {

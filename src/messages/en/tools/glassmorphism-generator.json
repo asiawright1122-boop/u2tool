@@ -1,16 +1,16 @@
 {
-  "detailed_description": "Glassmorphism Generator is a powerful CSS tool that helps you create stunning frosted glass effects for modern UI designs. This technique, popularized by Apple and Microsoft, creates a sense of depth and hierarchy in your interfaces. Our generator provides real-time preview and customizable parameters including blur intensity, background transparency, border opacity, and shadow effects. Perfect for creating cards, modals, navigation bars, and other UI components with a contemporary aesthetic.",
+  "detailed_description": "The Glassmorphism Generator builds a frosted-glass CSS snippet from sliders and a colour picker in the browser. You set the blur radius (0-30px), background transparency (0-100%), border opacity (0-100%), shadow opacity (0-50%), and a base hex colour, and the page combines them into a `background`, `backdrop-filter`, `-webkit-backdrop-filter`, `border-radius`, `border`, and `box-shadow` block with a 16px corner radius. A live preview card sits on a fixed purple-to-blue gradient so you can see how the effect looks against a non-uniform background, and a copy button puts the CSS on your clipboard. The tool does not let you change the corner radius, background gradient, preview content, or generated property list, and it does not apply browser fallbacks for environments that do not support `backdrop-filter`.",
   "usage_steps": [
-    "Adjust the blur slider to control the frosted glass intensity",
-    "Set the transparency level for the background",
-    "Configure border opacity for subtle edge definition",
-    "Customize the shadow opacity for depth",
-    "Choose your preferred background color",
-    "Copy the generated CSS code to use in your project"
+    "Move the blur slider to set how strong the frosted-glass effect feels.",
+    "Adjust transparency, border opacity, and shadow opacity for the layered look you want.",
+    "Pick a base colour with the colour picker or paste a hex value into the text input.",
+    "Watch the preview card on the gradient background update as you change the values.",
+    "Click Copy to put the generated CSS block on your clipboard for use in your stylesheet."
   ],
   "usage_examples": [
-    "Creating modern card components with glass effect",
-    "Designing navigation bars with frosted glass background",
-    "Building modal dialogs with glassmorphism style"
+    "Draft a frosted card style with high transparency and a soft shadow for a hero section.",
+    "Reduce the blur and transparency to sketch a subtle glass effect for a navigation bar.",
+    "Tint the base colour to match a brand palette before pasting the CSS into a component.",
+    "Test how the snippet behaves on a colourful background by reviewing it on the gradient preview."
   ]
 }
