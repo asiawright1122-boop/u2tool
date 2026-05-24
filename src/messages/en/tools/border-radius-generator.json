@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The Border Radius Generator is a specialized tool for creating precise CSS border-radius values using a WYSIWYG editor. It enables developers to define both horizontal and vertical radii for each corner of an element, supporting pixel, percentage, and CSS variable inputs. Technically, it generates standardized shorthand notation (e.g., 10px / 20px) while maintaining control over individual corner properties (border-top-left-radius, border-bottom-right-radius, etc.). This tool addresses the complexity of visualizing non-uniform curves and ensures pixel-perfect control for implementing modern UI designs like card components, floating panels, and custom buttons. Developers can manipulate elliptical curves through interactive handles, view real-time element rendering, and access the underlying CSS code for immediate implementation. The tool's technical value lies in its ability to synchronize visual adjustments with CSS syntax, eliminating guesswork in responsive design scenarios where fluid border radii are required.",
+  "detailed_description": "The Border Radius Generator creates a simple CSS `border-radius` declaration from four slider values. You can link all corners together or edit top-left, top-right, bottom-right, and bottom-left separately, switch between px and percent units, apply preset shapes, choose the preview box color, view the generated CSS, and copy it. The output is either a single-value declaration when all corners match or a four-value shorthand. The tool does not support separate horizontal and vertical radii, CSS variable inputs, draggable corner handles, elliptical slash syntax, individual longhand property output, responsive rules, or pixel-perfect design guarantees.",
   "usage_steps": [
-    "Adjust horizontal and vertical radius sliders to set base curvature values for all corners simultaneously.",
-    "Click individual corner handles to modify specific radii independently while maintaining visual proportion.",
-    "Enable the 'Sync Corners' button to apply uniform values across all four corners instantly.",
-    "Input custom CSS variables (e.g., var(--radius)) in numeric fields to create theme-aware stylesheets.",
-    "Toggle between 'px' and '%' units to define relative or absolute border curvature measurements.",
-    "Copy the generated CSS code snippet from the output panel and apply it to target elements in your stylesheet."
+    "Keep Link All enabled when you want all four corners to share one value.",
+    "Turn Link All off to adjust each corner slider separately.",
+    "Switch between px and percent units as needed.",
+    "Apply a preset or choose a preview box color to inspect the shape.",
+    "Copy the generated `border-radius` declaration from the output panel."
   ],
   "usage_examples": [
-    "Designing a pill-shaped navigation tab with fully rounded ends using 999px radius values and horizontal symmetry.",
-    "Creating a card component with 8px top corners and 0px bottom corners to match Material Design specifications.",
-    "Implementing a circular profile avatar with 50% border-radius while maintaining aspect ratio in responsive layouts.",
-    "Producing a diagonal ribbon effect by applying contrasting radii values (e.g., 15px 5px / 30px 10px) to a rotated element."
+    "Create a rounded card shape with the same radius on every corner.",
+    "Use a preset such as pill, leaf, drop, or message bubble as a starting point.",
+    "Set top corners and bottom corners differently for a simple panel design.",
+    "Copy a four-value `border-radius` shorthand for manual CSS review."
   ]
 }

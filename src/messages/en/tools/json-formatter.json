@@ -1,31 +1,30 @@
 {
-  "detailed_description": "The JSON Formatter is a powerful tool designed to help developers format, beautify, and validate JSON data. It employs advanced parsing techniques to ensure that the JSON data is not only properly formatted but also free from common syntax errors. The tool leverages syntax highlighting to make the JSON structure more readable, which is particularly useful for debugging and reviewing complex data structures. By converting JSON data into a human-readable format, the JSON Formatter enhances the development workflow, making it easier to work with APIs, configuration files, and data interchange formats. It supports both formatting and minifying JSON, catering to different use cases such as preparing data for production environments or improving readability during development. The tool is web-based and compatible with modern browsers, ensuring that developers can use it on any device with an internet connection. While the tool is highly effective, it is important to note that it should not be used for sensitive data without proper security measures in place.",
+  "detailed_description": "The JSON Formatter formats or minifies pasted JSON in the browser. Paste JSON into the input textarea, click Format to parse it with JSON.parse and output two-space indented JSON, or click Minify to output compact JSON. If parsing fails, the page shows the browser JSON.parse error message. You can copy the generated output or clear both fields. The tool does not provide syntax highlighting, custom indentation controls, file upload, automatic JSON repair, schema validation, line-and-column diagnostics beyond the parser message, or large-file processing guarantees.",
   "usage_steps": [
-    "Paste your JSON data into the 'Input' text area located at the top of the tool interface.",
-    "Click the 'Format' button to convert your JSON data into a well-structured, indented format with syntax highlighting.",
-    "If you need to validate your JSON data, click the 'Validate' button. Any syntax errors will be displayed in the 'Error' section below the output.",
-    "For a compact version of your JSON data, click the 'Minify' button. This will remove all unnecessary whitespace and line breaks.",
-    "Once you are satisfied with the formatted or minified JSON, click the 'Copy to Clipboard' button to copy the output to your clipboard.",
-    "To start over, click the 'Clear All' button to reset the input and output fields."
+    "Paste JSON data into the input textarea.",
+    "Click Format to create a two-space indented JSON output.",
+    "Click Minify when you need compact JSON without extra whitespace.",
+    "Review any JSON.parse error message if the input is invalid.",
+    "Copy the output or use Clear to reset the fields."
   ],
   "usage_examples": [
-    "A backend developer working on a REST API can use the JSON Formatter to validate and format the JSON responses from their API endpoints, ensuring that the data is correctly structured and free of errors before it is consumed by client applications.",
-    "A frontend developer integrating with third-party APIs can use the tool to beautify and validate the JSON data received from these APIs, making it easier to debug and integrate into their application.",
-    "A data analyst working with large JSON datasets can use the JSON Formatter to minify the data for efficient storage and transmission, and then format it for easier analysis and visualization.",
-    "A DevOps engineer can use the tool to format and validate the JSON configuration files used in their infrastructure as code (IaC) tools, ensuring that the configurations are correct and consistent across different environments."
+    "Format a pasted API response before reading nested fields.",
+    "Minify a small JSON sample before adding it to a code snippet.",
+    "Check whether pasted JSON can be parsed by the browser.",
+    "Clear the input and output fields before testing another sample."
   ],
   "faqs": [
     {
       "question": "What happens if my JSON has a syntax error?",
-      "answer": "The validator will pinpoint the exact line and character of the error, such as a missing comma or bracket, to help you fix it."
+      "answer": "The page shows the error message returned by JSON.parse and clears the output."
     },
     {
       "question": "Does this tool support formatting JSON with custom indentation?",
-      "answer": "Yes, you can choose between 2-space or 4-space indentation levels for your formatted output."
+      "answer": "No. The Format button outputs two-space indentation."
     },
     {
       "question": "Can I format extremely large JSON files with this online tool?",
-      "answer": "It handles most common JSON sizes efficiently, but for massive files (over 1MB), performance may vary based on your browser."
+      "answer": "There is no special large-file mode. Very large pasted JSON may be slow or fail depending on your browser."
     },
     {
       "question": "Is the JSON data I paste stored on your servers?",
@@ -33,7 +32,7 @@
     },
     {
       "question": "Does the tool fix common JSON errors automatically?",
-      "answer": "It identifies and reports errors like trailing commas or mismatched quotes but requires manual correction for data integrity."
+      "answer": "No. Invalid JSON must be corrected manually before it can be formatted or minified."
     }
   ]
 }
