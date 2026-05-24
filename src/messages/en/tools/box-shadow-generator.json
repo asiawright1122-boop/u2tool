@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The Box Shadow Generator is a web-based utility that enables developers to create and customize CSS box-shadow properties through an interactive visual interface. Technically, it generates syntax-compliant CSS3 code using the box-shadow shorthand property, which accepts horizontal/vertical offset values, blur radius, spread radius, color formats (RGBA, HSLA, HEX), and inset positioning. This tool addresses common developer challenges in manually iterating shadow effects for UI elements like cards, buttons, and modal dialogs. Unlike static code templates, it provides real-time visual feedback by rendering shadow previews using HTML5 canvas technology, allowing pixel-perfect adjustments. The tool's backend parses parameter inputs to construct valid CSS declarations, including support for multiple layered shadows separated by commas. Key technical advantages include precise control over z-axis depth simulation, responsive shadow scaling via relative units (em/rem), and cross-browser compatibility checks for legacy vendor prefixes. Developers can export results as standalone CSS classes or integrate generated code directly into component-based frameworks like React or Vue.js.",
+  "detailed_description": "The Box Shadow Generator builds a CSS `box-shadow` declaration from sliders and color inputs in the browser. You can add or remove shadow layers, edit each layer's X offset, Y offset, blur, spread, color, opacity, and inset checkbox, change the preview box color and border radius, and copy the generated declaration. Each layer's color and opacity are converted to an `rgba()` value, and multiple layers are joined with commas in a single shorthand. The tool does not include vendor prefixes, HSL or CSS variable inputs, presets, an HSV color picker, responsive unit modes such as em or rem, framework-specific export, or a downloadable CSS file.",
   "usage_steps": [
-    "Select 'Outer Shadow' or 'Inset Shadow' using the toggle switch to define shadow directionality",
-    "Adjust X/Y Offset sliders to position the shadow relative to the element (values range from -100px to +100px)",
-    "Set Blur Radius (0-100px) and Spread Radius (-50% to +50%) using precision input fields for diffusion control",
-    "Click the color swatch to open an HSV color picker for selecting semi-transparent shadows with alpha channel support",
-    "Enable 'Multiple Shadows' mode to layer up to five distinct shadows with individual parameter sets",
-    "Copy the generated CSS code from the output panel or download as a .css file for immediate project integration"
+    "Adjust the X offset, Y offset, blur, and spread sliders for the current shadow layer.",
+    "Pick a shadow color and set the opacity slider, and toggle Inset when an inner shadow is needed.",
+    "Use Add Layer or the per-layer Remove button to manage how many shadows are combined.",
+    "Edit the preview box color and border radius to inspect the shadow against different shapes.",
+    "Copy the generated `box-shadow` declaration from the output panel."
   ],
   "usage_examples": [
-    "Creating a 3D card component with a subtle 2px offset shadow that maintains readability on patterned backgrounds",
-    "Designing a button hover effect that transitions between 0px and 8px blur radius for micro-interaction feedback",
-    "Implementing a modal window with an inset shadow to create depth separation from page content",
-    "Generating responsive shadow variants using em units for a fluid grid layout that adapts to different screen sizes"
+    "Create a soft drop shadow for a card by adjusting offset, blur, and opacity.",
+    "Combine an outer and an inset layer to sketch a simple inner highlight effect.",
+    "Pick a brand color and reduce opacity to draft a subtle accent shadow.",
+    "Copy a multi-layer `box-shadow` shorthand for manual review in your stylesheet."
   ]
 }

@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The cURL Converter is a specialized tool that transforms raw cURL command-line statements into executable code across multiple programming languages, preserving the original request's complexity. Technically, it parses cURL's command-line arguments—such as HTTP methods, headers, cookies, authentication parameters, and data payloads—into equivalent syntax structures in languages like Python, JavaScript (Fetch/Axios), Ruby, and PHP. This tool addresses a critical need for developers who must integrate API interactions into applications without manually rewriting cURL commands. For instance, when debugging a complex API endpoint tested via cURL, developers can instantly generate production-ready code for frameworks like Django or Node.js. The converter leverages a context-aware parser that identifies cURL's flag-based syntax (e.g., -H for headers, -d for data) and maps them to language-specific libraries such as Python's 'requests' or JavaScript's 'node-fetch'. Advanced features like cookie jar handling and TLS verification flags are translated into appropriate session management objects or security configurations, ensuring fidelity in the converted code.",
+  "detailed_description": "The cURL Converter turns a pasted curl command into equivalent request code in JavaScript (fetch), Python (requests), PHP (curl_setopt), Go (net/http), or Java (java.net.http). A small regex-based parser reads the `-X` method, `-H` headers, and `-d` or `--data` body from the command and emits a template snippet for the chosen language, which you can copy from the output area. The tool covers basic HTTP requests only and does not handle cookies, `--cookie-jar`, file uploads, multipart forms, `-u` basic auth, client certificates, `-L` follow-redirect, query string flags such as `-G`, Ruby or Node Axios output, or syntax highlighting and downloadable files.",
   "usage_steps": [
-    "Paste your complete cURL command into the input textarea, ensuring all flags (e.g., -X, -H) are included.",
-    "Select the target programming language from the dropdown menu (options include Python, JavaScript, Ruby, PHP, and Go).",
-    "Toggle advanced settings to customize output, such as choosing 'requests' vs 'http.client' in Python or 'Fetch' vs 'XMLHttpRequest' in JavaScript.",
-    "Click the 'Convert' button to trigger the AST-based parsing engine, which deconstructs the cURL command into HTTP primitives.",
-    "Review the generated code in the syntax-highlighted output panel, which includes comments explaining non-obvious conversions (e.g., cURL's -L flag translated into 'max_redirects' in PHP).",
-    "Copy the converted code to your clipboard using the 'Copy Code' button or export it directly as a .js/.py file."
+    "Paste a curl command into the textarea, including the URL and any `-X`, `-H`, or `-d` flags.",
+    "Pick an output language from the dropdown: JavaScript, Python, PHP, Go, or Java.",
+    "Click Convert to generate the request code from the parsed method, headers, and body.",
+    "Review the generated code in the output panel.",
+    "Click Copy Code to copy the snippet to your clipboard for manual review."
   ],
   "usage_examples": [
-    "Automating API testing: Convert a cURL POST request with custom headers into Python for integration with pytest test suites.",
-    "Legacy system modernization: Translate a shell script containing multiple cURL calls into a Node.js application using Axios.",
-    "Security audit documentation: Convert a cURL command using client certificates (--cert) into PHP code for audit trail records.",
-    "Web scraping workflow: Transform a cURL -c cookie jar command into a Ruby script that maintains session state with Mechanize."
+    "Convert a simple `curl -X POST -H 'Content-Type: application/json' -d '{...}'` command into a JavaScript `fetch` snippet.",
+    "Generate a Python `requests` call from a curl command with a Bearer authorization header.",
+    "Translate a GET request with custom headers into a Go `net/http` example.",
+    "Produce a Java `HttpClient` snippet from a curl POST as a starting point before manual edits."
   ]
 }
