@@ -1,15 +1,16 @@
 {
-  "detailed_description": "API Response Formatter beautifies raw API responses in JSON or XML format with syntax highlighting and collapsible tree view.",
+  "detailed_description": "API Response Formatter formats pasted JSON, raw HTTP responses, or XML text in the browser. You can paste a response or load a JSON, HTTP, or XML example, choose 2-space, 4-space, or minified JSON indentation, optionally sort JSON object keys, view parsed HTTP status and headers when present, and copy the formatted body. JSON is parsed through the local response parser and formatted with JSON output helpers; XML receives simple line-break and indentation formatting. The tool does not provide syntax highlighting, a collapsible tree view, manual format selection beyond the examples, side-by-side response comparison, schema validation, request execution, or file import/export.",
   "usage_steps": [
-    "Paste API response",
-    "Auto-detect or select format",
-    "View formatted output",
-    "Expand/collapse nodes",
-    "Copy formatted version"
+    "Paste JSON, XML, or a raw HTTP response into the input textarea.",
+    "Optionally load one of the JSON, HTTP, or XML examples.",
+    "Choose the indentation size and enable key sorting for JSON objects if needed.",
+    "Review parsed status and headers when the input includes an HTTP response.",
+    "Copy the formatted body output."
   ],
   "usage_examples": [
-    "Format minified JSON",
-    "Beautify XML SOAP responses",
-    "Compare API responses"
+    "Format a minified JSON API response with two or four spaces.",
+    "Paste a raw HTTP response and inspect its status, headers, and formatted body.",
+    "Apply simple indentation to a compact XML response.",
+    "Sort JSON keys alphabetically before copying the formatted body."
   ]
 }

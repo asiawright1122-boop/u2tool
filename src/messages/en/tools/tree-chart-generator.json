@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The Tree Chart Generator creates dynamic hierarchical visualizations using orthogonal and radial tree layouts, rendering complex parent-child relationships through SVG path calculations. This tool leverages the Reingold-Tilford algorithm to generate tidy tree diagrams that optimize spatial distribution while maintaining node alignment. Developers and data analysts can input hierarchical data in JSON, CSV, or YAML formats to produce interactive charts with collapsible branches and customizable node styling. The radial layout employs polar coordinate transformations to display data in concentric circles, ideal for organizational charts or file system visualizations. Built-in support for weighted edges and conditional formatting enables semantic highlighting of critical paths. Unlike conventional chart builders, this tool implements Web Workers for client-side data processing, eliminating server latency when handling structures with thousands of nodes. The resulting visualizations maintain accessibility standards through ARIA-labeled nodes and keyboard navigation support.",
+  "detailed_description": "The Tree Chart Generator builds an ECharts tree chart from an editable browser-side node table. You can edit node names, numeric values, and parent relationships, add nodes, delete non-root nodes with their descendants, clear the data back to a single root, set a chart title, choose a color theme, select orthogonal or radial layout, choose orientation for orthogonal charts, preview the chart, and download it as PNG or SVG. The tool starts with sample nodes and turns the flat node list into a simple hierarchy for the chart. It does not import JSON, CSV, YAML, URLs, or file-system data, does not provide a schema builder, weighted edges, conditional formatting, custom node styling, Web Worker processing, embeddable HTML export, accessibility auditing, or guarantees for very large trees.",
   "usage_steps": [
-    "Open the tool and select 'Create New Chart' to activate the workspace",
-    "Import hierarchical data via JSON/CSV upload, URL import, or manual entry in the Schema Builder",
-    "Choose orthogonal or radial layout using the Layout Presets panel with real-time preview",
-    "Customize node appearance in the Style Editor: modify stroke widths, apply color gradients based on depth levels, and configure label positioning",
-    "Enable interactivity features like dynamic zoom (mousewheel) and node collapse/expand (click)",
-    "Export the chart as SVG, PNG, or embeddable HTML/JS using the responsive Export dropdown with size presets"
+    "Edit the sample node names, values, and parent selections in the data table.",
+    "Use Add Node to create more entries or delete non-root nodes you no longer need.",
+    "Set the chart title, color theme, layout, and orthogonal orientation if applicable.",
+    "Review the ECharts preview as the node table changes.",
+    "Download the chart as PNG or SVG when the preview is ready."
   ],
   "usage_examples": [
-    "Mapping corporate organizational structure with 500+ employees using CSV import and departmental color coding",
-    "Visualizing server directory contents by converting Linux 'ls -R' output to interactive radial tree",
-    "Creating genealogical charts from GEDCOM data with birth/death date annotations on nodes",
-    "Debugging software dependency trees by importing package.json and highlighting version conflicts through edge thickness"
+    "Sketch a small organization chart by editing parent relationships manually.",
+    "Create a radial tree from a short hierarchy of categories and subcategories.",
+    "Adjust orientation for a simple left-to-right or top-to-bottom tree preview.",
+    "Download a PNG or SVG chart for a presentation draft."
   ]
 }
