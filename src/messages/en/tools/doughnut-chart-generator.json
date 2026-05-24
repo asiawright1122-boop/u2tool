@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The Doughnut Chart Generator is a specialized data visualization tool that creates proportional representations of categorical data using concentric circular segments with a customizable hollow center. Built with HTML5 Canvas and SVG rendering capabilities, this tool enables users to transform tabular numerical data into interactive visual formats by calculating segment angles via trigonometric functions and rendering paths using the SVG path element's arc commands. The hollow center percentage adjusts dynamically to optimize data density perception, addressing the 'pie chart angle estimation problem' identified in visualization research. Developers and analysts can leverage this tool for applications requiring precise proportional representation, such as financial portfolio breakdowns, resource allocation visualization, and A/B test distribution analysis. The tool's dual export functionality supports raster PNG outputs for presentation use and vector SVG for scalable web integration, while its client-side processing ensures data privacy through browser-only computation.",
+  "detailed_description": "Doughnut Chart Generator renders an ECharts doughnut (pie with inner hole) chart from a small editable browser-side data table. Use Load Sample to fill example browser-share data or edit name/value rows yourself with add/remove buttons. Configure chart title, color theme (default, ocean, sunset, forest), rose type (none, radius, area), inner radius slider 0-60%, outer radius slider 40-90%, and toggles for legend and labels. The preview updates reactively and PNG or SVG can be downloaded at 2x pixel ratio via ECharts getDataURL. The tool does not import CSV/JSON files, fetch live data, run statistical analysis, embed dashboards, or output editable SVG metadata beyond the ECharts export.",
   "usage_steps": [
-    "1. Open the Data Input Grid and enter numerical values in the 'Amount' column with corresponding labels in the adjacent field",
-    "2. Adjust the Inner Radius Slider to define the hollow center's proportional size (20-60% of chart diameter)",
-    "3. Select color schemes from predefined palettes or input custom HEX codes for each segment",
-    "4. Enable the 'Percentage Labels' toggle to display calculated segment proportions or 'Value Labels' for absolute numbers",
-    "5. Configure Chart Dimensions using precise pixel inputs for width and height in the Layout Settings panel",
-    "6. Click 'Export as PNG' for lossless raster images or 'Export as SVG' to download editable vector paths with embedded metadata"
+    "Click Load Sample to fill the data table, or edit name and value cells directly",
+    "Use + Add Item or the row delete button to manage entries (at least one row is kept)",
+    "Set the chart title and pick a color theme: default, ocean, sunset, or forest",
+    "Pick a rose type (none, radius, area) and drag inner radius 0-60% and outer radius 40-90%",
+    "Toggle Show Legend and Show Label to control the legend and slice labels",
+    "Click Download PNG or Download SVG to export the current ECharts view"
   ],
   "usage_examples": [
-    "A financial analyst visualizing departmental budget allocations with 35% hollow center for executive presentations",
-    "A healthcare researcher comparing patient demographic distributions across clinical trial phases using color-coded segments",
-    "An IT manager monitoring server resource usage metrics with real-time SVG updates embedded in a dashboard",
-    "An educator demonstrating statistical probability distributions to students with interactive label toggling during lectures"
+    "Show the browser share sample data and download a PNG for a slide deck",
+    "Edit name/value rows to chart a small budget breakdown and export an SVG",
+    "Switch on rose type radius for a Nightingale-style variant of the same data",
+    "Tighten the inner radius and toggle labels to fit the chart into a tight dashboard tile"
   ]
 }

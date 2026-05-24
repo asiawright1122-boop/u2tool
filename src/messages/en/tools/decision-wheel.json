@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The Decision Wheel is a dynamic, web-based application designed to facilitate random decision-making through a visually engaging interface. Technically, it leverages a combination of JavaScript for interactivity, CSS for styling, and HTML for structure. The tool employs a pseudo-random number generator to ensure that each spin of the wheel produces a fair and unbiased outcome. Users can input a list of options, each of which is represented as a segment on the wheel. The application uses a canvas element to render the wheel and animate the spinning effect, providing a smooth and interactive experience. The Decision Wheel is particularly useful in scenarios where making a choice can be challenging, such as deciding on a group activity, selecting a winner for a contest, or choosing a topic for a project. By automating the decision process, it helps reduce indecision and adds an element of fun and excitement.",
+  "detailed_description": "Decision Wheel is a browser spinner over a small list of named options. It starts with three labeled options drawn as colored slices on a canvas wheel, with one option per slice and a pointer at the right. Edit option labels inline, add another option, or remove any extra slice (minimum two). Click Spin and a short cubic ease-out animation rotates the wheel, then the slice under the pointer is shown as the winner. A sound toggle plays a short sound when a winner is chosen if enabled, and Reset returns to the starting three options. The tool does not import lists, assign weighted probabilities, support image or video slices, export results, or persist options across page reloads.",
   "usage_steps": [
-    "Step 1: Open the Decision Wheel tool on your web browser.",
-    "Step 2: Click the 'Edit Options' button to input your choices. Each choice will be a separate segment on the wheel.",
-    "Step 3: Enter your options in the text boxes provided, one per line. You can add or remove options using the '+' and '-' buttons.",
-    "Step 4: Once you have entered all your options, click the 'Save' button to apply the changes and return to the main screen.",
-    "Step 5: Click the 'Spin' button to start the wheel. The wheel will spin and eventually come to a stop on one of the segments.",
-    "Step 6: The selected option will be highlighted, and a notification will appear at the top of the screen. You can choose to spin again or reset the wheel using the 'Reset' button."
+    "Edit each option label inline in the list on the right",
+    "Click Add Option to add slices, or the trash icon to remove a slice (minimum two)",
+    "Optionally toggle the sound icon to enable or mute the win sound",
+    "Click Spin to start the animation",
+    "Read the winner shown in the highlighted card once the wheel stops",
+    "Click Reset to clear the result and restore the three default options"
   ],
   "usage_examples": [
-    "Example 1: A group of friends is deciding where to go for dinner. Each person suggests a restaurant, and they use the Decision Wheel to randomly select one of the options, ensuring everyone has an equal say in the final decision.",
-    "Example 2: A teacher wants to randomly select a student to answer a question in class. She lists all the students' names and uses the Decision Wheel to pick a student, making the selection process fair and transparent.",
-    "Example 3: An event organizer needs to choose a winner for a raffle. By entering the names of all participants into the Decision Wheel, the organizer can randomly select a winner, adding an element of excitement to the event.",
-    "Example 4: A content creator is trying to decide on the topic for their next blog post. They list several potential topics and use the Decision Wheel to randomly select one, providing a fun and unbiased way to make the decision."
+    "Pick a restaurant from a list of three to six options for a group dinner",
+    "Choose which task to start next from a small set of labelled options",
+    "Randomly pick a team member's name from a short list during a meeting",
+    "Decide between a handful of possible blog post topics with a quick spin"
   ]
 }
