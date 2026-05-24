@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The CSP Generator is a specialized tool for creating and refining Content Security Policy (CSP) HTTP headers to mitigate cross-site scripting (XSS), data injection attacks, and unauthorized resource loading. It enables developers to define granular source whitelists for scripts, styles, images, and other assets through a structured interface that maps directly to CSP directive syntax. Users input domain-specific policies using a combinatorial approach, combining keywords (e.g., 'self', 'unsafe-inline'), nonces, hashes, and URI schemes to construct robust security boundaries. The tool's engine validates directive compatibility across CSP levels 1-3, automatically escaping special characters in source expressions while providing warnings for deprecated practices like 'unsafe-eval'. By generating policies with precise 'strict-dynamic' token propagation and 'report-uri' endpoint configurations, it addresses modern web application security requirements while maintaining backward compatibility with legacy browsers. This eliminates manual errors in header composition and ensures consistent enforcement of least-privilege principles across complex content delivery networks.",
+  "detailed_description": "The CSP Generator builds a `Content-Security-Policy` string from a fixed list of directives in the browser. Each directive has an enable checkbox, the values you have added so far as removable chips, and a small dropdown of common keywords (such as `'self'`, `'none'`, `'unsafe-inline'`, `https:`, `data:`) for adding new values. You can reset to the default directive list, switch the output between an HTTP header line and a `<meta http-equiv>` tag, and copy the result. The tool does not validate nonces, hashes, or URLs against any CSP level, warn about deprecated keywords, support `Content-Security-Policy-Report-Only` mode, accept free-form custom values outside the dropdown, or test the generated policy against a real page.",
   "usage_steps": [
-    "Select content categories via multi-select checkboxes (e.g., scripts, styles, images) to activate corresponding policy directives",
-    "Configure source lists using the domain input matrix with automatic syntax validation for tokens like 'nonce-...', 'sha256-...', and scheme sources",
-    "Enable advanced protections by toggling features like 'require-trusted-types-for', 'block-all-mixed-content', and 'upgrade-insecure-requests'",
-    "Specify report collection endpoints in the 'report-uri' field with support for batch URIs separated by spaces",
-    "Adjust policy mode from 'enforce' to 'report-only' using the header behavior switcher",
-    "Copy the generated header string with automatic header name ('Content-Security-Policy') and semicolon-delimited directive formatting"
+    "Toggle the enable checkbox on each directive you want to include in the policy.",
+    "Use the per-directive dropdown to add common values, and remove existing chips with the × button.",
+    "Switch the output format between HTTP header and meta tag using the dropdown above the result panel.",
+    "Review the generated `Content-Security-Policy` line in the output area.",
+    "Click Copy to put the result on your clipboard, or Reset Defaults to restore the starting directive set."
   ],
   "usage_examples": [
-    "A SaaS platform hardening its dashboard against XSS by creating a script-src directive that combines 'self' with specific CDN domains and a nonce for inline initialization scripts",
-    "An e-commerce site implementing strict subresource integrity for payment gateway iframes using connect-src restrictions paired with 'strict-dynamic' tokens",
-    "A media streaming service configuring media-src directives with data: scheme allowances for legacy browser support while maintaining secure context requirements",
-    "A government portal generating audit-compliant CSP headers with mandatory 'no-unsafe-inline' policies and report-uri endpoints for security event monitoring"
+    "Draft a starter `script-src 'self'` and `style-src 'self'` policy for a small static site.",
+    "Add `data:` and `https:` to `img-src` for a page that loads images from CDNs and inline data URIs.",
+    "Switch the output to a meta tag to embed a basic policy directly in an HTML document for testing.",
+    "Reset the directives and rebuild a minimal policy when you want to start from a clean baseline."
   ]
 }

@@ -1,18 +1,16 @@
 {
-  "detailed_description": "Dockerfile Generator is a comprehensive online tool that helps you create Dockerfile configurations for containerizing your applications. Select from popular base images like Node.js, Python, Go, or custom images. Configure working directories, copy commands, run commands, exposed ports, and environment variables. The tool generates optimized, production-ready Dockerfiles following best practices. Perfect for developers new to Docker or those who want to quickly scaffold container configurations.",
+  "detailed_description": "The Dockerfile Generator builds a single-stage Dockerfile from form fields in the browser. You pick a base image from a small fixed list (Node.js 20/22 Alpine, Python 3.12/3.13 Slim, Go 1.23 Alpine, Nginx Alpine, Ubuntu 24.04, Alpine Latest), set the WORKDIR, add ENV pairs, COPY lines, and RUN lines, type EXPOSE, ENTRYPOINT, and CMD values, then click Generate to assemble a Dockerfile and copy it or download it as `Dockerfile`. The tool does not validate the resulting file, support custom base images, multi-stage builds, ARG, HEALTHCHECK, USER, VOLUME, ONBUILD, or label directives, and it does not claim production readiness.",
   "usage_steps": [
-    "Select a base image from the dropdown or enter a custom image",
-    "Configure the working directory for your application",
-    "Add COPY and RUN commands as needed",
-    "Specify ports to expose",
-    "Add environment variables if required",
-    "Click Generate to create your Dockerfile",
-    "Copy or download the generated Dockerfile"
+    "Pick a base image from the dropdown and set the WORKDIR.",
+    "Add ENV pairs, COPY entries, and RUN entries with the per-row Add and Remove buttons.",
+    "Fill in the EXPOSE port, ENTRYPOINT, and CMD fields as needed.",
+    "Click Generate to assemble the Dockerfile and review the output.",
+    "Copy the result with Copy or save it locally with Download."
   ],
   "usage_examples": [
-    "Create a Node.js application container",
-    "Build a Python Flask/Django container",
-    "Set up a multi-stage build for Go applications",
-    "Configure a development environment container"
+    "Scaffold a basic Node.js container with `npm install` and `npm start` for a small project.",
+    "Draft a Python container that copies `requirements.txt`, installs packages, and runs a script.",
+    "Sketch an Nginx Alpine setup that copies static files and exposes port 80.",
+    "Generate a starter Dockerfile to review and edit by hand before committing."
   ]
 }

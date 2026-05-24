@@ -1,18 +1,17 @@
 {
-  "detailed_description": "The Bar Chart Generator is a client-side web application that enables programmatic creation of vertical/horizontal bar charts using HTML5 Canvas and SVG rendering. Built on a reactive JavaScript framework, it accepts JSON/CSV data inputs, maps numeric values to visual dimensions (bar height/width), and supports multi-series comparisons with stacked/grouped configurations. Professionals use this tool to visualize quantitative comparisons across categorical variables for business intelligence dashboards, academic research papers, and technical documentation. The engine supports logarithmic scaling, axis reversal, and custom color mapping via HEX/RGB inputs with real-time DOM updates. Charts are exported as resolution-independent SVG vectors or raster PNGs with adjustable DPI. Data validation occurs through schema parsing, ensuring correct dimensionality before rendering.",
+  "detailed_description": "The Bar Chart Generator renders a single-series bar chart with ECharts in the browser. You can edit the category and value rows in a small data table, type a chart title, pick one of four color themes (default, ocean, sunset, forest), toggle the legend, gridlines, and horizontal layout, import a basic two-column CSV (category,value) to replace the data, and export the chart as PNG or SVG. The tool does not support stacked or grouped series, JSON input, logarithmic axes, axis reversal, custom HEX or RGB colors per bar, multi-axis configurations, DPI selection, or schema validation.",
   "usage_steps": [
-    "Select data format (JSON array or CSV) in the Input Format dropdown menu",
-    "Enter comma-separated values in the Data Input panel using format: category,value[,series]",
-    "Map X/Y axes using the Dimension Selector with categorical/numerical axis toggles",
-    "Customize bar styling through the Color Configuration panel using HEX codes",
-    "Adjust chart layout using the Axis Scaling slider for linear/logarithmic transforms",
-    "Export final visualization via PNG Export Button or SVG Code Copy function"
+    "Edit the rows in the data table to set each category label and numeric value, or use Add Row and the delete button to change the row count.",
+    "Type a chart title and pick a color theme from the dropdown.",
+    "Toggle the legend, gridlines, and horizontal layout checkboxes as needed.",
+    "Optionally click Import CSV to load a two-column file with `category,value` rows after a header line.",
+    "Click Download PNG or Download SVG to save the rendered chart, and use Load Sample or Clear when you want to start over."
   ],
   "usage_examples": [
-    "Marketing teams visualizing monthly sales comparisons across regional branches",
-    "Data scientists demonstrating algorithm performance benchmarks in research papers",
-    "Web developers integrating responsive SVG charts into documentation portals",
-    "Financial analysts comparing quarterly revenue across multiple business units"
+    "Compare a few product sales numbers using the default theme and a vertical layout.",
+    "Switch to horizontal mode to display a short ranking with longer category labels.",
+    "Import a small `category,value` CSV exported from a spreadsheet for a quick visual check.",
+    "Download the PNG version of a draft chart for a slide deck or document."
   ],
   "sampleData": {
     "productA": "Product A",
