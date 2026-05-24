@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The Fuel Cost Calculator is a precision-engineered web tool that computes trip expenses by integrating distance metrics, vehicle fuel efficiency (MPG or L/100km), and dynamic fuel pricing. This tool addresses the critical need for accurate budget forecasting among commuters, fleet managers, and eco-conscious travelers by factoring in regional fuel tax variations and currency conversion rates. At its core, the calculator employs a multi-variable formula: (Distance ÷ Fuel Efficiency) × Fuel Price × Currency Exchange Rate, with optional CO2 emission calculations based on fuel type. The backend processes real-time fuel price APIs for 15+ countries, while the frontend uses progressive input validation to handle unit conversions seamlessly. Users benefit from precise cost breakdowns per segment, making it invaluable for optimizing logistics operations, comparing vehicle efficiency, or planning cross-border travel budgets with fluctuating exchange rates.",
+  "detailed_description": "Fuel Cost Calculator estimates trip fuel and cost in the browser. Choose Metric (km, L/100km) or Imperial (mi, MPG), then enter distance, fuel efficiency, fuel price, and pick One Way or Round Trip. Results update reactively: fuel needed in liters or gallons, total cost shown with a fixed US dollar sign, cost per kilometer and cost per mile, and a short trip summary. Round trip simply doubles the entered distance. The tool does not fetch live fuel prices, convert between currencies, calculate CO2 emissions, support per-segment trips, or save trip history.",
   "usage_steps": [
-    "Enter trip distance in kilometers or miles using the dual-unit input field",
-    "Select vehicle type from dropdown (gasoline/diesel/EV) to auto-populate fuel efficiency standards",
-    "Input current fuel price per liter/gallon or enable 'Auto Fetch' for live market rates",
-    "Choose destination currency from 20+ options to apply real-time exchange rate adjustments",
-    "Toggle 'Advanced Mode' to specify CO2 conversion factors per fuel type",
-    "Click 'Calculate' to generate detailed report showing total cost, per-km rate, and carbon footprint"
+    "Pick the Metric or Imperial unit toggle",
+    "Enter the trip distance in km or miles",
+    "Enter the vehicle's fuel efficiency in L/100km or MPG",
+    "Enter the fuel price per liter or per gallon",
+    "Pick One Way or Round Trip; round trip doubles the distance",
+    "Read the fuel needed, total cost, cost per kilometer, cost per mile, and trip summary"
   ],
   "usage_examples": [
-    "A European delivery driver comparing diesel costs between Paris and Berlin using live exchange rates",
-    "An overland adventurer estimating overlanding fuel expenses across 5 countries with varying tax structures",
-    "A car leasing company evaluating total cost of ownership between hybrid and traditional vehicles",
-    "A sustainability consultant calculating CO2 reduction potential by switching to biodiesel"
+    "Estimate fuel cost for a 200 km commute given a 7 L/100km car and a current pump price",
+    "Compare the cost per mile of two cars by entering different MPG values with the same fuel price",
+    "Plan a round trip drive by entering a one-way distance and toggling Round Trip to double it",
+    "Sanity-check a quoted travel reimbursement using the cost-per-kilometer breakdown"
   ]
 }
