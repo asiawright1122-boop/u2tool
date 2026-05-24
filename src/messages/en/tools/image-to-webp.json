@@ -1,17 +1,17 @@
 {
-  "detailed_description": "Image to WebP is a powerful online utility designed to convert images from various formats into the WebP format, a modern image format developed by Google. WebP offers superior compression, often reducing file sizes by up to 30% compared to JPEG, PNG, and GIF formats, without compromising image quality. This makes it ideal for web developers and content creators looking to optimize website performance and enhance user experience. The tool supports a wide range of input formats, including JPEG, PNG, GIF, and BMP, and provides options for adjusting the quality and compression settings to suit different needs. Under the hood, Image to WebP leverages advanced algorithms to efficiently encode images, ensuring that the output retains the visual quality while minimizing file size. This is particularly useful for mobile devices and slow internet connections, where smaller file sizes can significantly reduce load times and improve overall performance.",
+  "detailed_description": "Image to WebP converts JPEG, PNG, or GIF files into static WebP images in the browser. Pick one or more images, drag the quality slider between 10 and 100, then click Convert to draw each image to a canvas and call canvas.toDataURL('image/webp', quality). The list shows each image with its original size and, after conversion, the converted size and savings percentage; a total savings percentage is shown above the list. Per-file Download saves a single .webp, and Download All saves multiple converted files together as a ZIP via JSZip. Animated GIFs are flattened to a single WebP frame; the tool does not preserve GIF animation, does not offer a lossless toggle, and does not accept other formats like BMP, TIFF, or SVG.",
   "usage_steps": [
-    "Step 1: Visit the Image to WebP tool page on the developer website.",
-    "Step 2: Click on the 'Choose File' button to select the image you want to convert from your device.",
-    "Step 3: Once the image is uploaded, use the 'Quality' slider to adjust the compression level. Higher values preserve more detail but result in larger file sizes.",
-    "Step 4: Optionally, check the 'Lossless' box if you want to convert the image without any loss of quality.",
-    "Step 5: Click the 'Convert to WebP' button to start the conversion process.",
-    "Step 6: Download the converted WebP image by clicking the 'Download' button once the process is complete."
+    "Drag the quality slider between 10 and 100",
+    "Click the upload area and select one or more JPEG, PNG, or GIF files",
+    "Review the list of images with their original sizes",
+    "Click Convert to encode each file as WebP via canvas.toDataURL",
+    "Read per-file converted size and savings, plus the total savings above the list",
+    "Click Download on a row for a single .webp, or Download All to save multiple files as a ZIP"
   ],
   "usage_examples": [
-    "Example 1: A web developer is optimizing a portfolio website for faster load times. They use Image to WebP to convert high-resolution JPEG images to WebP, reducing the total page load time by 20%.",
-    "Example 2: An e-commerce platform manager is tasked with improving the mobile user experience. They use Image to WebP to convert product images to WebP, ensuring that the site loads quickly even on slower mobile networks.",
-    "Example 3: A graphic designer is creating a digital portfolio and wants to ensure that the images are of high quality but also load quickly. They use Image to WebP to convert PNG images to WebP, achieving a balance between quality and performance.",
-    "Example 4: A content creator is preparing images for a blog post. They use Image to WebP to convert GIFs to WebP, reducing the file size and improving the blog's overall performance without losing the animation quality."
+    "Re-encode a folder of JPEG photos as WebP to cut the size before uploading to a blog",
+    "Convert a single PNG screenshot to WebP at quality 80 for use in a documentation page",
+    "Try a few quality settings on the same image and compare the savings percentages",
+    "Pack a small batch of converted WebP files into a single ZIP for sharing"
   ]
 }

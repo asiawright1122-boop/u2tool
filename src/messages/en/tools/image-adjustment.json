@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The Image Adjustment tool provides granular control over raster image processing through a web interface, enabling manipulation of luminance values, color channels, and spatial filters. Technically, it leverages HTML5 Canvas for client-side pixel manipulation and WebGL shaders for real-time rendering of adjustments. Users can modify brightness via luminance channel scaling, adjust contrast using sigmoidal transfer functions, and manipulate saturation through HSL color space conversion. Advanced features include per-channel RGB curve adjustments, unsharp masking for sharpening, and gamma correction for display calibration. This tool addresses needs across photography (post-processing RAW conversions), UI/UX design (asset optimization), and digital marketing (visual consistency). All operations occur in-browser via WebAssembly modules, preserving privacy and supporting non-destructive editing through layer composites. Histogram analysis tools help users identify clipping points and dynamic range issues.",
+  "detailed_description": "Image Adjustment applies the standard browser canvas filter chain to one uploaded image and lets you download the result as PNG. Pick an image file, then drag seven sliders: brightness 0-200%, contrast 0-200%, saturation 0-200%, hue rotate 0-360deg, blur 0-20px, grayscale 0-100%, and sepia 0-100%. The canvas redraws the original image with the combined ctx.filter string in real time. Reset returns all sliders to defaults, Download exports the current canvas as PNG. There are no per-channel RGB curves, unsharp masking, RAW or SVG support, WebGL/WebAssembly pipelines, histogram analysis, layer composites, or DPI/compression controls.",
   "usage_steps": [
-    "1. Click 'Upload Image' to load a bitmap (PNG/JPEG/WebP) or vector (SVG) file up to 25MB",
-    "2. Use the 'Brightness' slider to adjust luminance values with real-time preview in the split-view comparator",
-    "3. Engage 'Advanced Mode' to access individual RGB channel curves and CMYK color space conversion",
-    "4. Apply unsharp masking via the 'Sharpen' panel with customizable radius (0.3-5.0px) and amount (50-150%)",
-    "5. Utilize the 'Histogram Equalization' toggle to automatically balance tonal distribution",
-    "6. Click 'Download Adjusted Image' to export with custom DPI settings (72-1200) and compression level"
+    "Click Upload Image and pick a raster image file",
+    "Drag the brightness, contrast, and saturation sliders between 0% and 200%",
+    "Drag the hue rotate slider between 0 and 360 degrees",
+    "Drag the blur slider between 0 and 20 pixels",
+    "Drag the grayscale and sepia sliders between 0% and 100%",
+    "Click Download to save the current canvas as a PNG, or Reset to restore default sliders"
   ],
   "usage_examples": [
-    "Example 1: A photographer normalizes exposure across a product shoot by matching histograms and applying lens correction profiles",
-    "Example 2: A web designer reduces image file size by adjusting JPEG quality to 85 while maintaining visual fidelity",
-    "Example 3: A social media manager creates Instagram stories with consistent color grading using HSL presets",
-    "Example 4: An OCR specialist enhances document scans by increasing contrast and applying adaptive thresholding"
+    "Lighten a slightly dark photo by pushing brightness and contrast",
+    "Turn a color image into a quick black-and-white version with the grayscale slider",
+    "Apply a soft vintage feel by mixing partial sepia with a gentle hue rotate",
+    "Add a subtle blur to a background image before downloading the PNG"
   ]
 }
