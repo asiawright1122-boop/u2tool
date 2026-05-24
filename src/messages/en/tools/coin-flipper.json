@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The Coin Flipper is a physics-driven virtual coin simulation tool built with JavaScript, HTML5 Canvas, and CSS3 animations. It employs a pseudo-random number generator (PRNG) algorithm with a seed derived from cryptographic entropy sources to ensure statistically balanced outcomes. The tool renders a 3D coin rotation using requestAnimationFrame for smooth animation, incorporating Euler angles for realistic axis rotation and gravity-based deceleration curves. Users can analyze real-time probability distributions through dynamic statistics that track cumulative heads/tails ratios, flip streaks, and deviation percentages from theoretical expectations. This tool serves developers testing randomization algorithms, educators demonstrating probability theory, and decision-makers requiring impartial binary outcomes. The client-side implementation stores usage data in localStorage for persistent statistics across sessions, while allowing customization of flip count (1-1000 per batch) and coin bias parameters.",
+  "detailed_description": "The Coin Flipper is a simple browser-side coin toss tool. Set a flip count between 1 and 100, click Flip, and the tool runs a short spin animation, then uses Math.random with a 50/50 split to produce that many heads or tails results. The latest result is shown as a large coin face and label, with a running history of up to 100 flips, heads/tails counts and percentages, a percentage bar, and the most recent 50 flips as small chips. Clear resets the current result and history. It does not use cryptographic randomness, weighted bias, 3D physics, seeds, sessions, localStorage persistence, or CSV export.",
   "usage_steps": [
-    "Click the 'Flip' button to initiate a single coin toss with default settings.",
-    "Adjust the 'Flips per Batch' slider to simulate multiple tosses (1-1000) at once.",
-    "Select 'Heads Bias' or 'Tails Bias' from the dropdown menu to create weighted probabilities.",
-    "Observe the 3D coin animation in the viewport, rendered using CSS3 transform matrices.",
-    "Review live statistics displayed in the dashboard, including current streaks and distribution graphs.",
-    "Export results by clicking 'Download CSV' to save comma-separated outcome data."
+    "Set the flip count between 1 and 100",
+    "Click Flip to run a short spin animation and generate that many heads or tails outcomes",
+    "Read the latest result shown as the large coin face with the heads or tails label",
+    "Review the statistics card with heads count, tails count, total flips, and percentages",
+    "Scan the recent flips strip showing the latest 50 results as H or T chips",
+    "Click Clear to reset the current result and the stored history"
   ],
   "usage_examples": [
-    "A game developer testing random loot drop algorithms by analyzing 10,000 simulated flips.",
-    "A statistics teacher demonstrating the law of large numbers through classroom live demonstrations.",
-    "A startup team deciding between two product names using 100 sequential flips for consensus.",
-    "A parent teaching children about probability by comparing manual flip records to digital simulations."
+    "Make a quick yes-or-no decision by flipping a single coin in the browser",
+    "Run a small batch of up to 100 flips and read how the heads and tails percentages compare",
+    "Show a child how repeated coin tosses approach an even split using the percentage bar",
+    "Pick who goes first in a casual game by sharing the on-screen result"
   ]
 }

@@ -1,17 +1,17 @@
 {
-  "detailed_description": "Checksum Verifier is a comprehensive tool for calculating and verifying file checksums using multiple hash algorithms. Upload any file to calculate its MD5, SHA-1, SHA-256, and SHA-512 hashes simultaneously. Compare calculated hashes against expected values to verify file integrity. The tool processes files entirely in your browser using the Web Crypto API, ensuring your files are never uploaded to any server.",
+  "detailed_description": "Checksum Verifier calculates file hashes in the browser and compares them with an expected value. Pick a file up to 100 MB through the file picker, optionally paste an expected checksum, then click Calculate to compute MD5, SHA-1, SHA-256, and SHA-512 in parallel using the Web Crypto API. If an expected value is set, the tool automatically reports which of those four algorithms it matches, or that there is no match. Each calculated hash can be copied to the clipboard, and Clear resets the file and result. It does not provide drag-and-drop upload, algorithm selection, hashing of pasted text, batch files, or HMAC variants.",
   "usage_steps": [
-    "Upload a file by clicking or dragging",
-    "Wait for hash calculation to complete",
-    "View MD5, SHA-1, SHA-256, and SHA-512 hashes",
-    "Optionally enter an expected checksum",
-    "The tool will indicate if checksums match",
-    "Copy any hash value to clipboard"
+    "Click the upload area and select a file up to 100 MB",
+    "Optionally paste an expected checksum into the input field",
+    "Click Calculate and wait for the browser to finish hashing",
+    "Review the MD5, SHA-1, SHA-256, and SHA-512 values listed in the results",
+    "Check the match banner that names the matched algorithm or reports no match",
+    "Copy any individual hash with its Copy button, or click Clear to reset"
   ],
   "usage_examples": [
-    "Verify downloaded software integrity",
-    "Check if a file was corrupted during transfer",
-    "Compare file versions using hashes",
-    "Validate backup file integrity"
+    "Verify a downloaded installer against a SHA-256 value published on the vendor's site",
+    "Check whether a file was corrupted after a transfer by recomputing its hash locally",
+    "Compare two copies of a file by hashing each and comparing the SHA-512 values",
+    "Quickly tell which algorithm a published checksum uses by letting the tool match against MD5, SHA-1, SHA-256, or SHA-512"
   ]
 }

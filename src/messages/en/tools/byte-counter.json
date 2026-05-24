@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The Byte Counter tool provides precise byte measurement for text across multiple character encodings (UTF-8, UTF-16LE, UTF-16BE, and ASCII). This tool calculates byte length by converting input text into the selected encoding's binary representation, accounting for encoding-specific mechanics like Unicode code point transformations and endianness in UTF-16 variants. For UTF-8, it applies RFC 3629-compliant encoding rules where characters from U+0000 to U+10FFFF occupy 1-4 bytes. UTF-16 calculations handle surrogate pairs (0xD800-0xDFFF) correctly, using 4 bytes for code points beyond U+FFFF. ASCII mode strictly measures 7-bit characters at 1 byte each, truncating extended ASCII values. Developers working with constrained memory environments, network protocols requiring exact byte counts, or file format specifications (e.g., FITS headers with 80-byte records) will find this tool essential for verifying text payloads. The algorithm operates client-side using JavaScript's TextEncoder API for accurate browser-based encoding simulation, displaying real-time hexadecimal byte representations for educational purposes.",
+  "detailed_description": "The Byte Counter shows how many bytes a piece of text takes up in the browser. Paste or type text into the textarea and the tool reactively reports the character count, the UTF-8 byte count from the browser's TextEncoder, an approximate UTF-16 byte count using two bytes per JavaScript code unit, the ASCII byte count using one byte per code unit, the line count, and the UTF-8 size rendered in bytes or kilobytes. It does not provide encoding dropdowns, hex dumps, copy/reset buttons, surrogate-pair analysis, file uploads, or downloads.",
   "usage_steps": [
-    "Type or paste text into the primary input text area with line wrapping enabled",
-    "Select target encoding from the dropdown menu (UTF-8, UTF-16LE, UTF-16BE, ASCII)",
-    "Observe the calculated byte count displayed in the status panel with precision to individual bytes",
-    "Toggle the 'Show Hex' switch to visualize the hexadecimal representation of encoded bytes",
-    "Click the 'Copy Hex' button to copy the byte sequence for debugging in hex editors or packet analyzers",
-    "Use the 'Reset' button to clear input and start fresh while preserving encoding selection"
+    "Type or paste text into the input textarea",
+    "Read the character count card for the JavaScript string length",
+    "Read the UTF-8 bytes card computed with the browser's TextEncoder",
+    "Read the UTF-16 bytes card, which assumes two bytes per JavaScript code unit",
+    "Read the ASCII bytes card, which assumes one byte per code unit",
+    "Read the line count and the UTF-8 size card that switches to KB above 1024 bytes"
   ],
   "usage_examples": [
-    "A firmware engineer verifying string resources fit within a 256-byte EEPROM allocation using UTF-16LE encoding",
-    "A web developer optimizing JSON API payloads to stay under HTTP/2 frame size limits (typically 16KB)",
-    "A data scientist preparing UTF-8 encoded CSV files that must not exceed 1,048,576 bytes for legacy system ingestion",
-    "A security analyst comparing ASCII vs UTF-8 byte counts to detect potential encoding-based obfuscation in log entries"
+    "Check how many UTF-8 bytes a short tweet or meta description will take",
+    "Compare UTF-8 and approximate UTF-16 byte counts for the same string while writing notes about encodings",
+    "Estimate whether a configuration value fits a small text field by reading the UTF-8 size in bytes or KB",
+    "Quickly count characters and lines of pasted text without opening another editor"
   ]
 }
