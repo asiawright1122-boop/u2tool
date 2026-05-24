@@ -1,17 +1,17 @@
 {
-  "detailed_description": "GIF Splitter is a powerful image tool designed to deconstruct animated GIFs into their individual frames. This process, known as frame extraction, allows users to isolate and manipulate each frame independently, opening up a wide range of creative and technical possibilities. For graphic designers and animators, the ability to extract frames can be crucial for editing, optimizing, or reusing specific parts of an animation. Developers and web designers can benefit from this tool by breaking down GIFs to optimize loading times or to create more dynamic web content. The tool employs advanced image processing algorithms to ensure that each frame is accurately and cleanly separated, maintaining the original quality and resolution. Users can specify the output format, such as PNG or JPEG, and adjust settings like frame rate and size to meet their specific needs. GIF Splitter is built with a user-friendly interface that simplifies the process of frame extraction, making it accessible to both beginners and professionals.",
+  "detailed_description": "GIF Splitter extracts each frame of an animated GIF into a PNG. Upload a GIF, the tool parses it with gifuct-js and decompresses every frame at its original dimensions to a canvas, then renders all frames as a numbered thumbnail grid. By default every frame is selected; click thumbnails to toggle, or use Select All / Deselect All. Click Download Selected to package the chosen PNGs into a single ZIP file produced with JSZip. The tool keeps the original frame size and exports PNG only; it does not output JPEG, change frame rate, resize frames, edit timing, or download a single frame on its own.",
   "usage_steps": [
-    "Step 1: Navigate to the GIF Splitter tool page and click the 'Upload GIF' button to select the animated GIF you want to split.",
-    "Step 2: Once the GIF is uploaded, use the 'Frame Selection' slider to choose the specific frames you want to extract. You can select all frames or a specific range.",
-    "Step 3: Adjust the 'Output Format' dropdown menu to select the file format for the extracted frames (PNG, JPEG, etc.).",
-    "Step 4: Set the 'Frame Size' if you need to resize the frames. You can enter custom dimensions or use predefined sizes.",
-    "Step 5: Click the 'Extract Frames' button to start the process. The tool will process the GIF and generate the selected frames.",
-    "Step 6: Once the extraction is complete, download the frames by clicking the 'Download All' button or individually by selecting each frame."
+    "Click the upload area and select an animated GIF",
+    "Wait for the spinner while frames are decoded with gifuct-js",
+    "Review the numbered thumbnail grid and the total/selected frame counts",
+    "Click thumbnails to toggle them, or use Select All or Deselect All",
+    "Click Download Selected to download the chosen PNGs in a single ZIP",
+    "Click Clear to remove the GIF and start over"
   ],
   "usage_examples": [
-    "Example 1: A graphic designer needs to create a series of static images from a client's animated logo for a print campaign. They use GIF Splitter to extract each frame and refine them for high-quality print.",
-    "Example 2: A web developer is optimizing a website's loading time and decides to replace a large animated GIF with a series of smaller images. They use GIF Splitter to break down the GIF and implement a JavaScript slideshow to display the frames sequentially.",
-    "Example 3: An animator is working on a project and needs to extract specific frames from a reference GIF to use as keyframes in their animation software. GIF Splitter allows them to select and export only the necessary frames.",
-    "Example 4: A social media manager wants to create a series of Instagram stories from an animated GIF. They use GIF Splitter to extract each frame and upload them as individual posts, creating a dynamic and engaging story sequence."
+    "Pull a single hero frame out of an animated meme to use as a thumbnail PNG",
+    "Export a few keyframes from a reference animation by toggling specific thumbnails before downloading",
+    "Save every frame of a short loop as PNGs to import into another editor as a sprite sheet source",
+    "Inspect each frame in the grid to find which step of an animation has a glitch"
   ]
 }

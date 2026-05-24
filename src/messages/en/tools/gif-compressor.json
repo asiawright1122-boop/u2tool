@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The GIF Compressor reduces file sizes of animated GIFs through advanced lossy and lossless compression techniques while preserving visual integrity. By analyzing frame sequences and optimizing color tables, it eliminates redundant pixel data using LZW compression and delta encoding for inter-frame differences. Users often face challenges with GIFs consuming excessive bandwidth on web pages, exceeding social media upload limits, or causing slow email delivery. This tool addresses these issues by allowing granular control over color depth (1-256 colors), dithering patterns, and frame rate adjustments. Technical features include palette quantization to minimize color counts, metadata stripping, and smart frame blending to remove duplicate or near-identical frames. The algorithm prioritizes perceptual quality by adjusting error diffusion during color reduction, ensuring animations remain smooth even after aggressive compression.",
+  "detailed_description": "GIF Compressor re-encodes an animated GIF in the browser at a smaller pixel size. Upload a GIF, set the compression level slider (which here acts as a scale factor between 20% and 100% of the original width and height), optionally enable color reduction with a maximum color slider (16-256 in steps of 16) that biases the gif.js quality setting, then click Compress. Frames are parsed with gifuct-js, downscaled on a canvas, and re-encoded with gif.js using a Web Worker, producing a new GIF that can be previewed and downloaded with size and savings percentage shown. The tool does not pick lossy vs lossless modes, remove duplicate frames, change frame rate, strip metadata, or guarantee perceptual quality preservation.",
   "usage_steps": [
-    "1. Drag-and-drop your GIF onto the upload interface or click 'Select File' to browse.",
-    "2. Choose compression mode: 'Lossless' for exact pixel replication or 'Lossy' for aggressive size reduction with adjustable quality sliders.",
-    "3. Adjust the color depth selector (default: 128 colors) to balance quality and file size.",
-    "4. Enable 'Frame Optimization' to automatically detect and remove redundant animation frames.",
-    "5. Preview compressed output using the split-screen viewer to compare original and optimized versions.",
-    "6. Click 'Download' to save the compressed GIF or 'Copy Link' to share via cloud storage."
+    "Click the upload area and select an animated GIF",
+    "Drag the compression level slider between 20% and 100% to scale frame width and height",
+    "Optionally tick Reduce Colors and pick a max color count between 16 and 256 in steps of 16",
+    "Click Compress and wait while frames are decoded and re-encoded with gif.js",
+    "Compare the original and compressed previews side by side with size and savings percentage",
+    "Click Download to save the compressed GIF or Clear to start over"
   ],
   "usage_examples": [
-    "A web developer optimizes hero section GIFs to meet 2MB page weight budgets while maintaining smooth 15fps animation.",
-    "A social media manager compresses a 12MB product demo GIF to under 5MB for Twitter's file size restrictions.",
-    "An email marketer reduces animated newsletter headers to prevent email client image blocking.",
-    "A mobile app designer streamlines 30-frame loading animations by 40% to meet app store download speed requirements."
+    "Shrink a screen recording GIF to half size so it fits a chat attachment limit",
+    "Re-encode an oversized hero GIF at 60% scale to lower the page weight before publishing",
+    "Use Reduce Colors to trade extra size savings against the slight color banding it introduces",
+    "Compare the original and compressed previews to decide whether the smaller file still looks acceptable"
   ]
 }
