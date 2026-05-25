@@ -1,17 +1,15 @@
 {
-  "detailed_description": "The List Randomizer employs a cryptographically secure Fisher-Yates shuffle algorithm to generate uniformly random permutations of list elements. This tool accepts input in multiple formats including plain text, CSV, and JSON arrays, and processes data using UTF-8 encoding to maintain character integrity. Internally, it leverages JavaScript's Web Crypto API for entropy generation, ensuring statistically unbiased output distributions. Users can control randomization parameters through a UI that exposes seed value customization and delimiter specification options. The tool's streaming architecture handles large datasets efficiently by processing input line-by-line rather than loading entire files into memory. This makes it particularly valuable for applications requiring reproducible randomness in data science workflows, A/B testing scenarios, and security-sensitive operations where predictable patterns must be eliminated. Unlike basic shufflers, this implementation preserves Unicode normalization forms and provides output in both downloadable file formats and copyable text blocks.",
+  "detailed_description": "The List Randomizer shuffles pasted line-based text in the browser. Paste one item per line, click Shuffle List, and the tool removes blank lines before returning the items in a randomized order. The result appears in a read-only textarea and can be copied to the clipboard. It uses a simple Fisher-Yates shuffle with Math.random; it does not support file upload, CSV or JSON parsing, seed values, delimiter controls, cryptographic randomness, reproducible shuffles, or downloads.",
   "usage_steps": [
-    "Paste raw data into the input text area or upload a .txt/.csv file",
-    "Select input delimiter type (comma, tab, newline, or custom regex)",
-    "Choose shuffle algorithm variant (standard Fisher-Yates or Durstenfeld-Knuth)",
-    "Adjust entropy source settings (browser crypto API or custom seed value)",
-    "Preview randomized output in the interactive grid display",
-    "Export results via 'Download as CSV' button or clipboard copy function"
+    "Paste the items you want to shuffle into the original list textarea, one item per line.",
+    "Click Shuffle List to randomize the non-empty lines.",
+    "Review the randomized list in the output textarea.",
+    "Use Copy Result to copy the shuffled list, or Clear to empty the original list."
   ],
   "usage_examples": [
-    "A teacher creating randomized student group assignments for lab rotations",
-    "A data engineer generating synthetic test datasets with controlled variance",
-    "A marketing team selecting contest winners from email subscriber lists",
-    "A UX researcher randomizing survey question order to eliminate sequence bias"
+    "Shuffle a short list of student names for a classroom activity.",
+    "Randomize a pasted checklist before assigning tasks.",
+    "Reorder survey questions that are already listed one per line.",
+    "Create a quick randomized list for a draft or note."
   ]
 }

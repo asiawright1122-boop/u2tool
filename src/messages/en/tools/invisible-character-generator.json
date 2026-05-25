@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The Invisible Character Generator is a Unicode-aware utility that inserts and detects zero-width and formatting characters—among them the zero-width space (U+200B), zero-width non-joiner (U+200C), zero-width joiner (U+200D), word joiner (U+2060), soft hyphen (U+00AD), zero-width no-break space (U+FEFF), and object replacement character (U+FFFC). It supports copy-and-paste of raw codepoints, ranges, and decimal values. The generator operates in two modes: Insert Mode places selected characters into your source string at the caret position, and Bulk Mode builds strings by concatenating sequences with optional separators. A robust detector scans text for invisibles, reports counts per character, shows code points (hex and decimal), and highlights characters via escaped glyphs. It can normalize text to NFC, NFD, NFKC, or NFKD to expose hidden compositions or compatibility transformations. Context-aware filters exclude common whitespace or restrict scanning to code points ≥ U+0080. Results can be exported as JSON or CSV, and a sandbox displays your text with visual markers to distinguish invisible characters. The tool is client-side only, ensuring no data leaves your browser.",
+  "detailed_description": "The Invisible Character Generator lets you choose from the invisible characters bundled in the page, set a repeat count from 1 to 100, and copy the generated character sequence. It also shows a grid of available characters so you can copy one character at a time. A simple detector textarea counts occurrences of those same bundled characters in pasted text. It does not provide source-text insertion at the caret, bulk sequences with separators, Unicode normalization controls, codepoint range input, JSON or CSV export, or a full Unicode forensic scanner.",
   "usage_steps": [
-    "Open the Invisible Character Generator page and, if you plan to work from existing text, paste it into the Source Text field.",
-    "Switch to the Generator tab and, if you need to alter your source, enable the 'Append to Source' option.",
-    "In the Character Palette, check the invisible characters you want to insert—such as Zero-width space (U+200B), Zero-width non-joiner (U+200C), Word joiner (U+2060), and Soft hyphen (U+00AD).",
-    "If you selected the soft hyphen, click its Options control to set a custom glyph substitution string.",
-    "Click the Insert button to inject the chosen characters at the caret in Source Text, or use Bulk Mode to generate a sequence with a chosen separator.",
-    "Switch to the Detector tab, select the normalization form (e.g., NFC) and filters (e.g., Exclude common whitespace), then click Scan to review counts and copy results as JSON or CSV."
+    "Choose an invisible character from the select menu.",
+    "Set the repeat count between 1 and 100.",
+    "Copy the generated sequence from the preview area.",
+    "Optionally click an individual character card to copy that single character.",
+    "Paste text into the detector textarea to count supported invisible characters found in that text."
   ],
   "usage_examples": [
-    "Email header protection: Insert a soft hyphen (U+00AD) into a long email address to break the line without displaying a hyphen, ensuring clients do not split the address across multiple headers.",
-    "API payload debugging: Detect a zero-width no-break space (U+FEFF) or zero-width joiner (U+200D) in a JSON string that causes a parser error, then remove it using the Detector and copy the cleaned payload.",
-    "Database import hygiene: Scan a CSV with the Detector, export the results as CSV, and use the counts per invisible character to run a purge script before loading data into a warehouse.",
-    "UI glyph rendering test: Generate a string with U+200C and U+200D inserted between letters and test ligature and shaping behavior across Android, iOS, and Windows to validate the rendering pipeline."
+    "Copy a zero-width space for a small formatting test.",
+    "Generate several repeated invisible characters for a browser UI experiment.",
+    "Paste text into the detector to see whether supported zero-width characters are present.",
+    "Copy one bundled invisible character from the character grid."
   ]
 }
