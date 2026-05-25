@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The UUID Validator tool performs deep structural validation and metadata extraction of Universally Unique Identifiers (UUIDs) across versions 1-5. It verifies adherence to RFC 4122 standards by analyzing hexadecimal format, version-specific patterns, and variant identifiers. Technically, the tool parses the 36-character string into its five components (time_low, time_mid, time_high_and_version, clock_seq_and_variant, node), cross-checking each against the UUID specification. For version 1 UUIDs, it decodes the embedded timestamp (in 100-nanosecond increments since 1582) and MAC address. Version 3 and 5 validation includes checking MD5/SHA-1 namespace hashing. Developers need this tool to debug malformed UUIDs in distributed systems, validate API payloads, verify database entries, and ensure compliance during security audits. The analyzer also detects potential UUID collisions by examining node values and timestamp sequences, providing insights into generation patterns that could expose system vulnerabilities.",
+  "detailed_description": "UUID Validator checks one or more pasted UUID strings in the browser. Paste UUIDs one per line, click Validate, and the tool reports how many entries are valid or invalid. Valid entries show the detected version from v1 to v5 and the RFC 4122 variant; invalid entries are marked as invalid format. The validator accepts standard dashed UUIDs and 32-character hexadecimal UUIDs without dashes. It does not decode timestamps or MAC addresses, verify namespace hashes, detect collisions, highlight characters in real time, or export validation metadata.",
   "usage_steps": [
-    "Enter the UUID string in the input field, which automatically highlights invalid characters in real-time",
-    "Select the expected UUID version (1-5) from the dropdown menu to enable version-specific validation",
-    "Click 'Validate' to trigger the parser, which dissects the UUID into its binary representation",
-    "Review the validation report showing format validity, version/variant compliance, and component breakdown",
-    "Expand the 'Timestamp Analysis' section to view decoded timestamps (version 1) or 'Namespace Check' for versions 3/5",
-    "Use the 'Export Results' button to download validation metadata in JSON format for automated testing pipelines"
+    "Paste one UUID or multiple UUIDs, one per line, into the textarea.",
+    "Click Validate to check the current input.",
+    "Review the valid and invalid counts.",
+    "For valid entries, read the detected UUID version and RFC 4122 variant label.",
+    "Use Clear to reset the input and validation results."
   ],
   "usage_examples": [
-    "Verifying UUIDs in a REST API response to ensure they match version 4 generation requirements",
-    "Detecting version 1 UUIDs containing duplicate MAC addresses that expose internal network topology",
-    "Validating UUIDs in a NoSQL database to identify version mismatches causing data partition issues",
-    "Auditing version 5 UUIDs in a security token system to confirm proper SHA-1 namespace implementation"
+    "Paste a list of API IDs to quickly find entries with invalid UUID formatting.",
+    "Check whether a copied identifier is a v4 UUID.",
+    "Validate 32-character UUID strings copied from logs without dashes.",
+    "Separate valid and invalid values before adding sample IDs to a test fixture."
   ]
 }

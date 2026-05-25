@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The Encoding Detector identifies character encoding schemes in text streams and binary files by analyzing byte patterns, linguistic heuristics, and format signatures. This tool employs probabilistic models to determine encodings like UTF-8, UTF-16LE, ISO-8859-1, Windows-1252, and over 200 others through statistical analysis of byte frequency distributions and byte order marks (BOMs). Developers need this tool to resolve character corruption issues when integrating legacy systems, processing user-generated content, or handling internationalized text. For example, when XML parsers fail due to undetected UTF-8-BOM headers or JSON imports produce mojibake artifacts, this tool provides actionable insights. The detector combines deterministic checks (e.g., BOM validation) with machine learning-driven heuristics to analyze multi-byte sequences, offering confidence scores for each detected encoding. It supports both raw binary analysis and text content evaluation, making it suitable for debugging protocol buffers, fixing CSV imports, and validating file metadata.",
+  "detailed_description": "Encoding Detector checks pasted text or one selected file in the browser and reports likely encodings from simple byte-pattern checks. It detects common byte order marks for UTF-8 with BOM, UTF-16 LE/BE, and UTF-32 LE/BE, checks whether the bytes form valid UTF-8, identifies all-ASCII input, and falls back to ISO-8859-1 when the bytes are not valid UTF-8. Results show the detected encoding, a confidence percentage, and a short detail message. It does not use machine learning, deep statistical language models, drag-and-drop upload, hundreds of code pages, candidate dropdowns, or downloadable reports.",
   "usage_steps": [
-    "Upload a file via drag-and-drop or click 'Select File' to analyze binary content",
-    "Enter text directly in the editable textarea for content analysis",
-    "Toggle 'Deep Scan' mode to enable statistical analysis of ambiguous encodings",
-    "View the confidence score percentage and primary encoding detection result",
-    "Access alternative encoding possibilities in the 'Candidates' dropdown",
-    "Export detection report in JSON format using the 'Download Results' button"
+    "Paste text into the textarea and click Analyze Text to check the encoded bytes produced by the browser.",
+    "Or click Upload File and choose one local file to analyze its raw bytes.",
+    "Review the file name and size when a file is selected.",
+    "Read each detected encoding result with its confidence percentage and detail message.",
+    "Use the results as a lightweight hint for UTF and ASCII style encoding issues."
   ],
   "usage_examples": [
-    "A developer troubleshooting a CSV file where Swedish characters appear as � symbols by detecting Windows-1252 encoding in a UTF-8 parser",
-    "Data analysts resolving encoding mismatches in a PostgreSQL database dump containing mixed Latin-1 and UTF-8MB4 sequences",
-    "Web application engineers validating character encoding consistency across API endpoints accepting multipart/form-data submissions",
-    "System administrators decoding legacy EBCDIC mainframe logs converted to ASCII with incorrect code page mapping"
+    "Check whether a pasted snippet is plain ASCII or valid UTF-8.",
+    "Inspect a small text file for a UTF-8 or UTF-16 byte order mark.",
+    "Confirm that a file with garbled characters is not being recognized as valid UTF-8.",
+    "Use the confidence and detail text as a quick browser-side diagnostic before trying a dedicated encoding library."
   ]
 }

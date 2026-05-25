@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The Nightingale Rose Chart Generator is a web-based tool designed to create polar area diagrams, commonly known as Nightingale rose charts. These charts are an elegant way to visualize data with varying radii, making them particularly useful for representing cyclical data or data with a natural circular structure. The tool leverages SVG (Scalable Vector Graphics) and JavaScript to ensure high-quality, responsive charts that can be easily integrated into various projects. Users can customize the appearance of their charts by adjusting parameters such as color schemes, labels, and data series. The Nightingale Rose Chart Generator is ideal for data analysts, researchers, and designers who need to present complex data in a visually appealing and comprehensible manner. By using this tool, users can quickly transform raw data into insightful visual representations, enhancing the clarity and impact of their presentations or reports.",
+  "detailed_description": "Nightingale Rose Chart Generator creates an ECharts rose chart from editable category and value rows in the browser. Start from the default data, load a product sample, add or remove rows, edit names and numeric values, or import a simple CSV/TXT file with name and value columns. You can set the chart title, choose a color theme, switch the rose type between area and radius, toggle legend and labels, preview the chart, clear the data, and download the rendered chart as PNG or SVG. It does not provide zoom and pan controls, share links, embed code, custom chart dimensions, or multi-series statistical analysis.",
   "usage_steps": [
-    "Step 1: Open the Nightingale Rose Chart Generator on your web browser. The tool's interface will display a blank canvas and a sidebar with various configuration options.",
-    "Step 2: Click on the 'Data Input' section in the sidebar. Here, you can upload a CSV file containing your data or manually enter data by specifying the categories and corresponding values in the provided table.",
-    "Step 3: After entering your data, navigate to the 'Chart Type' section. Select 'Nightingale Rose Chart' from the dropdown menu to ensure the correct chart type is used.",
-    "Step 4: Customize your chart by adjusting the settings in the 'Chart Options' section. You can choose from various color palettes, modify the chart's dimensions, and add labels and legends to enhance readability.",
-    "Step 5: Preview your chart in the main canvas. Use the 'Zoom' and 'Pan' tools to explore different parts of the chart and ensure it meets your requirements.",
-    "Step 6: Once you are satisfied with the chart, click the 'Export' button to download the chart as an SVG file or a PNG image. You can also share the chart directly via a link or embed it in a webpage using the provided embed code."
+    "Use the default rows, click Load Sample, or import a simple CSV/TXT file with category names and values.",
+    "Edit category names and numeric values directly in the data table.",
+    "Add rows or remove rows when you need a different number of slices.",
+    "Set the chart title, color theme, rose type, legend visibility, and label visibility.",
+    "Preview the ECharts rose chart in the chart panel.",
+    "Download the current chart as PNG or SVG when you need an image copy."
   ],
   "usage_examples": [
-    "Example 1: A marketing analyst wants to visualize the monthly sales distribution of a product over a year. By using the Nightingale Rose Chart Generator, they can create a chart that clearly shows the cyclical nature of sales, highlighting peak and low periods.",
-    "Example 2: A financial researcher is analyzing the quarterly revenue of multiple companies in the same sector. The Nightingale Rose Chart Generator helps them compare the revenue distribution across companies, making it easier to identify trends and outliers.",
-    "Example 3: An environmental scientist is studying the seasonal variations in air quality. By plotting the data on a Nightingale rose chart, they can visually represent the changes in pollutant levels throughout the year, aiding in the identification of seasonal patterns.",
-    "Example 4: A sports analyst is comparing the performance metrics of athletes in a circular track event. Using the Nightingale Rose Chart Generator, they can create a chart that displays the varying performance data, such as speed and endurance, in a clear and intuitive manner."
+    "Create a product share chart from manually entered product names and values.",
+    "Import a two-column CSV of monthly values and download a PNG for a report draft.",
+    "Switch between area and radius rose types to compare the visual emphasis.",
+    "Turn labels or the legend on and off before exporting an SVG for further editing."
   ]
 }
