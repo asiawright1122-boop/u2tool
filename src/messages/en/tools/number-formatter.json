@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The Number Formatter tool leverages Unicode CLDR data and JavaScript's Intl.NumberFormat API to transform numeric values into localized representations adhering to specific cultural conventions. This tool handles three primary formatting strategies: decimal (adjusting thousand/decimal separators), currency (applying symbol placement, minor unit precision), and percent (scaling values by 100 and appending locale-specific indicators). Developers require this solution for internationalization tasks where numerical data must comply with regional standards, such as e-commerce platforms displaying prices in JPY ¥ versus EUR €, or financial dashboards converting decimal commas to periods for German-speaking users. The tool parses user input through a locale selector that references IETF language tags (e.g., 'de-DE' for German/Germany), then applies formatting rules that govern minimum/maximum integer digits, significant digits, and rounding modes. Advanced controls let users specify currency codes (ISO 4217), set custom decimal precision (0-20 digits), and enforce notation styles (compact, scientific, or engineering). All transformations occur client-side using Web APIs, ensuring zero remote processing and immediate feedback for iterative development.",
+  "detailed_description": "Number Formatter previews how a number renders across nine fixed locales using the browser's Intl.NumberFormat API. Type a number, pick a style of decimal, currency, or percent, and (for currency only) pick one of five currencies: USD, EUR, GBP, JPY, or CNY. The page shows a card per locale (en-US, zh-CN, ja-JP, de-DE, fr-FR, es-ES, pt-BR, ar-SA, hi-IN) with the formatted output, and clicking a card copies that value to the clipboard. Percent input is treated as a value in percent and divided by 100 before formatting. The tool does not let you add custom locales, choose accounting/compact/scientific/engineering notation, set decimal precision, batch-export results, or pick currencies beyond the five built-in options.",
   "usage_steps": [
-    "Select target locale from dropdown containing 500+ IETF language tags (e.g., 'ar-SA' for Arabic/Saudi Arabia)",
-    "Enter raw numerical value in the input field (supports integers, floats, and exponential notation)",
-    "Choose format type: decimal, currency, percent, or accounting (with negative value brackets)",
-    "Adjust advanced settings: toggle grouping separators, set decimal places (0-20), specify currency symbol",
-    "Click 'Apply Formatting' button to execute transformation using Intl.NumberFormat",
-    "Copy formatted output from the results panel or download as JSON for batch processing"
+    "Type a number into the input box (e.g. 1234567.89)",
+    "Pick a style: decimal, currency, or percent",
+    "If currency, pick one of USD, EUR, GBP, JPY, or CNY",
+    "Read the formatted output for each of the nine built-in locales",
+    "Click any locale card to copy that formatted value to the clipboard"
   ],
   "usage_examples": [
-    "An e-commerce developer formats product prices to display as '1.000,50 €' for German users while maintaining '1,000.50 USD' for American customers",
-    "A financial analyst converts quarterly revenue figures to localized formats for multinational board presentations, including Japanese yen with no decimal places",
-    "A data scientist standardizes survey response percentages across 15 languages for a global market research report",
-    "A localization engineer validates number formatting consistency across mobile app metrics when transitioning from Latin American Spanish to Russian interfaces"
+    "Compare how 1234567.89 formats in en-US vs de-DE vs fr-FR for a quick UI sanity check",
+    "Preview a price across the five built-in currencies before pasting one into a mockup",
+    "Render a percent value across the locale set to spot which ones use a thin space or no space",
+    "Click the Japanese card to grab the JPY-formatted string for a screenshot"
   ]
 }
