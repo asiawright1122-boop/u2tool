@@ -1,0 +1,16 @@
+{
+  "detailed_description": "Invisible Character Generator permite elegir entre los caracteres invisibles incluidos en la página, fijar una repetición de 1 a 100 y copiar la secuencia generada. También muestra una cuadrícula de caracteres disponibles para copiar uno por uno. Un detector simple cuenta apariciones de esos mismos caracteres en texto pegado. No ofrece inserción en la posición del cursor, secuencias masivas con separadores, controles de normalización Unicode, entrada por rango de puntos de código, exportación JSON o CSV ni un escáner forense Unicode completo.",
+  "usage_steps": [
+    "Elige un carácter invisible en el menú.",
+    "Fija el conteo de repetición entre 1 y 100.",
+    "Copia la secuencia generada desde la vista previa.",
+    "Opcionalmente haz clic en una tarjeta para copiar un solo carácter.",
+    "Pega texto en el detector para contar los caracteres invisibles admitidos."
+  ],
+  "usage_examples": [
+    "Copiar un espacio de ancho cero para una prueba pequeña de formato.",
+    "Generar varios caracteres invisibles repetidos para un experimento de interfaz.",
+    "Pegar texto en el detector para ver si contiene caracteres de ancho cero admitidos.",
+    "Copiar un carácter invisible incluido desde la cuadrícula."
+  ]
+}

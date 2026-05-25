@@ -1,0 +1,14 @@
+{
+  "detailed_description": "List Randomizer embaralha no navegador texto colado linha por linha. Cole um item por linha, clique em Shuffle List e a ferramenta remove linhas vazias antes de devolver a ordem aleatória. O resultado pode ser copiado. Usa Fisher-Yates simples com Math.random; não suporta upload de arquivos, CSV/JSON, sementes, delimitadores, aleatoriedade criptográfica, embaralhamento reproduzível nem downloads.",
+  "usage_steps": [
+    "Paste one item per line.",
+    "Click Shuffle List.",
+    "Review the randomized output.",
+    "Copy the result or clear the input."
+  ],
+  "usage_examples": [
+    "Shuffle a small list for a classroom or draft.",
+    "Randomize checklist items before assignment.",
+    "Reorder one-item-per-line survey questions."
+  ]
+}

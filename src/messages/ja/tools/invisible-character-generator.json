@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Invisible Character Generator は、ページに含まれる不可視文字から選択し、1〜100 回の繰り返しを設定して生成結果をコピーできます。簡易検出欄では、貼り付けたテキスト内の同じ内蔵文字の出現数を数えます。完全な Unicode フォレンジックスキャナーではなく、JSON/CSV エクスポートもありません。",
+  "usage_steps": [
+    "Choose a bundled invisible character.",
+    "Set a repeat count from 1 to 100.",
+    "Copy the generated sequence.",
+    "Optionally copy one character from the grid.",
+    "Paste text into the detector to count supported characters."
+  ],
+  "usage_examples": [
+    "Copy a zero-width space for a formatting test.",
+    "Generate repeated invisible characters for UI testing.",
+    "Check pasted text for bundled zero-width characters."
+  ]
+}

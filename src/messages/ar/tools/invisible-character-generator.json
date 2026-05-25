@@ -1,0 +1,15 @@
+{
+  "detailed_description": "تتيح أداة Invisible Character Generator اختيار أحد الأحرف غير المرئية المضمنة في الصفحة، وتحديد تكرار من 1 إلى 100، ثم نسخ التسلسل الناتج. يحسب كاشف بسيط هذه الأحرف نفسها في النص الملصق. ليست ماسح Unicode جنائيًا كاملًا ولا توفر تصدير JSON أو CSV.",
+  "usage_steps": [
+    "Choose a bundled invisible character.",
+    "Set a repeat count from 1 to 100.",
+    "Copy the generated sequence.",
+    "Optionally copy one character from the grid.",
+    "Paste text into the detector to count supported characters."
+  ],
+  "usage_examples": [
+    "Copy a zero-width space for a formatting test.",
+    "Generate repeated invisible characters for UI testing.",
+    "Check pasted text for bundled zero-width characters."
+  ]
+}

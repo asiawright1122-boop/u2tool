@@ -1,0 +1,14 @@
+{
+  "detailed_description": "List Randomizer は、貼り付けた行単位のテキストをブラウザ内でシャッフルします。1 行に 1 項目を入力し、Shuffle List をクリックすると、空行を除外してランダム順の結果を表示します。結果はコピーできます。単純な Fisher-Yates シャッフルと Math.random を使用しており、ファイルアップロード、CSV/JSON 解析、シード値、区切り文字設定、暗号学的乱数、再現可能なシャッフル、ダウンロードには対応していません。",
+  "usage_steps": [
+    "Paste one item per line.",
+    "Click Shuffle List.",
+    "Review the randomized output.",
+    "Copy the result or clear the input."
+  ],
+  "usage_examples": [
+    "Shuffle a small list for a classroom or draft.",
+    "Randomize checklist items before assignment.",
+    "Reorder one-item-per-line survey questions."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Invisible Character Generator позволяет выбрать один из невидимых символов, встроенных в страницу, задать повтор от 1 до 100 и скопировать последовательность. Простой детектор считает эти же символы во вставленном тексте. Это не полный Unicode forensic scanner и без экспорта JSON/CSV.",
+  "usage_steps": [
+    "Choose a bundled invisible character.",
+    "Set a repeat count from 1 to 100.",
+    "Copy the generated sequence.",
+    "Optionally copy one character from the grid.",
+    "Paste text into the detector to count supported characters."
+  ],
+  "usage_examples": [
+    "Copy a zero-width space for a formatting test.",
+    "Generate repeated invisible characters for UI testing.",
+    "Check pasted text for bundled zero-width characters."
+  ]
+}

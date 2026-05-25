@@ -1,0 +1,15 @@
+{
+  "detailed_description": "List Randomizer mezcla texto pegado línea por línea en el navegador. Pega un elemento por línea, haz clic en Shuffle List y la herramienta elimina líneas vacías antes de devolver los elementos en orden aleatorio. El resultado aparece en un área de texto de solo lectura y se puede copiar al portapapeles. Usa un Fisher-Yates simple con Math.random; no admite carga de archivos, análisis CSV o JSON, semillas, controles de delimitador, aleatoriedad criptográfica, mezclas reproducibles ni descargas.",
+  "usage_steps": [
+    "Pega los elementos que quieres mezclar en el área de lista original, uno por línea.",
+    "Haz clic en Shuffle List para mezclar las líneas no vacías.",
+    "Revisa la lista aleatorizada en el área de salida.",
+    "Usa Copy Result para copiar el resultado, o Clear para vaciar la lista original."
+  ],
+  "usage_examples": [
+    "Mezclar una lista corta de nombres de estudiantes para una actividad de clase.",
+    "Aleatorizar una lista de tareas pegada antes de asignarlas.",
+    "Reordenar preguntas de una encuesta que ya están una por línea.",
+    "Crear rápidamente una lista aleatoria para un borrador o nota."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Invisible Character Generator는 페이지에 포함된 보이지 않는 문자 중 하나를 선택하고 1~100회 반복한 문자열을 복사할 수 있게 합니다. 간단한 탐지기는 붙여 넣은 텍스트에서 같은 내장 문자의 개수를 셉니다. 전체 Unicode 포렌식 스캐너가 아니며 JSON/CSV 내보내기를 제공하지 않습니다.",
+  "usage_steps": [
+    "Choose a bundled invisible character.",
+    "Set a repeat count from 1 to 100.",
+    "Copy the generated sequence.",
+    "Optionally copy one character from the grid.",
+    "Paste text into the detector to count supported characters."
+  ],
+  "usage_examples": [
+    "Copy a zero-width space for a formatting test.",
+    "Generate repeated invisible characters for UI testing.",
+    "Check pasted text for bundled zero-width characters."
+  ]
+}

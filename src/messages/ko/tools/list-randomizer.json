@@ -1,0 +1,14 @@
+{
+  "detailed_description": "List Randomizer는 브라우저에서 줄 단위로 붙여 넣은 텍스트 목록을 섞습니다. 한 줄에 하나씩 입력하고 Shuffle List를 누르면 빈 줄을 제거한 뒤 무작위 순서로 결과를 보여 줍니다. 결과는 복사할 수 있습니다. 단순 Fisher-Yates 방식과 Math.random을 사용하며 파일 업로드, CSV/JSON 파싱, 시드값, 구분자 설정, 암호학적 난수, 재현 가능한 셔플, 다운로드는 지원하지 않습니다.",
+  "usage_steps": [
+    "Paste one item per line.",
+    "Click Shuffle List.",
+    "Review the randomized output.",
+    "Copy the result or clear the input."
+  ],
+  "usage_examples": [
+    "Shuffle a small list for a classroom or draft.",
+    "Randomize checklist items before assignment.",
+    "Reorder one-item-per-line survey questions."
+  ]
+}

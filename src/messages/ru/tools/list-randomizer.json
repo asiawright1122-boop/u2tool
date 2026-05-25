@@ -1,0 +1,14 @@
+{
+  "detailed_description": "List Randomizer перемешивает построчный текст прямо в браузере. Вставьте по одному элементу в строке, нажмите Shuffle List, и инструмент удалит пустые строки перед выводом случайного порядка. Результат можно скопировать. Используется простой Fisher-Yates с Math.random; загрузка файлов, CSV/JSON, seed-значения, разделители, криптографическая случайность, воспроизводимое перемешивание и скачивание не поддерживаются.",
+  "usage_steps": [
+    "Paste one item per line.",
+    "Click Shuffle List.",
+    "Review the randomized output.",
+    "Copy the result or clear the input."
+  ],
+  "usage_examples": [
+    "Shuffle a small list for a classroom or draft.",
+    "Randomize checklist items before assignment.",
+    "Reorder one-item-per-line survey questions."
+  ]
+}
