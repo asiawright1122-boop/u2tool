@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The Character Frequency Analyzer performs granular statistical analysis of textual input by calculating the occurrence distribution of Unicode characters, glyphs, and byte values. This tool leverages UTF-8 encoding validation, case-insensitive comparison flags, and customizable whitespace handling to generate multi-dimensional frequency metrics. Developers and researchers use this tool for cryptanalysis of classical ciphers, linguistic pattern recognition, data quality assessment, and algorithm optimization. It processes input through a three-stage pipeline: first normalizing text using Unicode Normalization Form C, then constructing a hash table mapping character code points to counters, and finally applying entropy calculation algorithms to determine distribution patterns. The output includes raw counts, percentage weights, and visual heatmaps that highlight statistical outliers in the character distribution.",
+  "detailed_description": "Character Frequency counts how often each character appears in pasted text. Paste or edit text in the input textarea, toggle Ignore Spaces and Case Sensitive checkboxes as needed, then click Analyze to run a local frequency count. The results panel shows the unique-character count, total character count, and a scrollable list where each row displays the character, a bar sized by its share of the maximum count, the count, and the percentage to one decimal place. It does not drag-and-drop files, choose Unicode normalization forms, compute entropy, render heatmaps, or export JSON or TSV files.",
   "usage_steps": [
-    "Paste UTF-8 encoded text into the resizable input textarea or drag-and-drop a .txt/.csv file",
-    "Toggle 'Case-Sensitive Mode' to differentiate uppercase/lowercase characters",
-    "Select 'Whitespace Handling' options: include/exclude spaces, tabs, newlines, or Unicode whitespace",
-    "Click 'Analyze' to initiate the multi-threaded processing engine",
-    "Review interactive histogram showing frequency distribution and entropy metrics",
-    "Export results via JSON download or copy-paste the tab-separated values table"
+    "Paste or type text into the input textarea (a sample sentence is preloaded)",
+    "Tick Ignore Spaces to skip whitespace characters in the count",
+    "Tick Case Sensitive to treat uppercase and lowercase as different characters",
+    "Click Analyze to run the frequency count in the browser",
+    "Read the unique-character count and total-character count above the list",
+    "Scroll the result list to see each character with its bar, count, and percentage"
   ],
   "usage_examples": [
-    "Cryptographers analyzing Vigenère cipher outputs to detect key length patterns through periodic frequency spikes",
-    "Linguists comparing vowel consonant ratios across different language corpora for phonetic research",
-    "Data engineers validating JSON log files by checking for anomalous ASCII control character frequencies",
-    "Game developers optimizing text rendering performance by identifying most-used glyphs in UI strings"
+    "Check which letters dominate a short paragraph while studying a substitution cipher",
+    "Compare the share of vowels and consonants in a sample of writing",
+    "Spot an unexpected character (for example a stray punctuation mark) inside a pasted snippet",
+    "See which glyphs are most common in a short UI string before designing an icon font sample"
   ]
 }

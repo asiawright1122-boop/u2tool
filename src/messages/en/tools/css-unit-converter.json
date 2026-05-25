@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The CSS Unit Converter is a precision tool for web developers that programmatically translates values between CSS length units, accounting for contextual dependencies. It handles conversions between absolute units (px, pt) and relative units (em, rem, vw, vh) by applying calculation formulas rooted in CSS specification standards. For rem/em conversions, the tool factors in user-defined root or parent font sizes to accurately resolve inherited values. Viewport units (vw/vh) are recalculated based on hypothetical viewport dimensions, while pt-to-px conversions use the standard 1pt=1.333px ratio. Developers need this tool to solve responsive design challenges, maintain typographic hierarchy across component trees, and ensure cross-browser consistency. The backend engine uses JavaScript to dynamically compute values in real-time, with an optional base font size input field that adjusts rem/em calculations globally. This tool stands out by visualizing conversion contexts through unit-specific tooltips and displaying technical notes about potential rounding discrepancies.",
+  "detailed_description": "CSS Unit Converter converts one value into every other supported CSS length unit at once. Type a numeric value, pick the source unit from px, rem, em, pt, vw, vh, or %, then set the base font size (default 16) and assumed viewport width and height (default 1920 x 1080). The result panel reactively shows the same value rendered in all seven units, using the fixed conversions px<->rem/em via base font size, 1pt = 1.333px, vw/vh = percent of the viewport dimensions, and % treated against the base font size. There is no Convert button, target-unit checkboxes, copy button, tooltips, multi-row conversion matrix, or media-query/container-context simulation.",
   "usage_steps": [
-    "Open the converter and select your source unit from the dropdown (px, rem, em, pt, vw, vh).",
-    "Enter the numeric value in the primary input field.",
-    "Adjust the optional 'Base Font Size' field (default: 16px) for precise rem/em calculations.",
-    "Choose target units from the conversion matrix checkboxes.",
-    "Click the 'Convert' button to populate results with technical annotations.",
-    "Copy converted values via the clipboard icon or drag-drop into CSS files."
+    "Type the numeric value into the value input",
+    "Pick the source unit from the dropdown (px, rem, em, pt, vw, vh, or %)",
+    "Set the base font size in px (default 16) used for rem, em, and % conversions",
+    "Set the viewport width and height in px (default 1920 and 1080) used for vw and vh conversions",
+    "Read the result panel, which shows the same value converted into every supported unit",
+    "Note that em and rem share the same base font size and that % is computed against that base"
   ],
   "usage_examples": [
-    "Convert 1.5rem to px with a custom base font size of 10px to implement accessible spacing in a design system.",
-    "Transform 30em font-size to vw units for a hero heading that scales fluidly between device widths.",
-    "Calculate 24pt line-height to pixel equivalent for print stylesheet compatibility.",
-    "Convert 75vh container height to percentage-based units to create scroll-driven animations that work across viewport sizes."
+    "See what 1.5rem becomes in px when the base font size is set to 10",
+    "Convert 24pt to px using the fixed 1pt = 1.333px ratio",
+    "Compare how 50vw maps to px at a 1920-wide vs 768-wide viewport",
+    "Translate a px value into rem and em while keeping the base font size aligned with your stylesheet"
   ]
 }
