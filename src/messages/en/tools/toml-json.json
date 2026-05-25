@@ -1,18 +1,18 @@
 {
-  "detailed_description": "The TOML/JSON Converter is a precision tool for bidirectional translation between TOML (Tom's Obvious, Minimal Language) and JSON (JavaScript Object Notation) formats, enabling seamless data interchange in software development workflows. This tool preserves data types during conversion, including arrays, nested objects, timestamps (via ISO 8601 in JSON), and TOML's explicit key-value pairs. Developers working with configuration files (e.g., Docker Compose, Rust projects) or API services requiring JSON payloads will find this tool essential for maintaining data integrity across ecosystems. The converter uses a two-phase parsing strategy: first constructing an abstract syntax tree (AST) from the source format to normalize structure, then serializing it into the target format while enforcing schema validity. Error handling includes line-numbered syntax validation for TOML and JSON, with specific feedback for invalid date-time formats, missing commas, or mismatched brackets. For JSON-to-TOML conversions, it automatically flattens dot-separated keys into TOML table headers while preserving array-of-tables structures. The tool's zero-IO architecture performs all processing client-side via WebAssembly, eliminating remote data retention risks. This makes it ideal for handling sensitive configurations in compliance-critical environments.",
+  "detailed_description": "The TOML/JSON Converter provides a lightweight browser-side conversion between simple TOML and JSON. Choose TOML to JSON or JSON to TOML, paste text into the input textarea, optionally choose 2 spaces, 4 spaces, or minified JSON indentation for TOML-to-JSON output, then click Convert. TOML parsing supports comments, basic key=value assignments, dotted keys, simple section headers, quoted strings, booleans, numbers, and inline arrays. JSON-to-TOML parses with JSON.parse and writes scalar values plus nested plain objects as TOML tables. Load Sample, Swap, Copy, and Clear are available. It does not use WebAssembly, build an AST, validate schemas, preserve TOML comments, support array-of-tables or every TOML data type, provide line-numbered diagnostics, or download files.",
   "usage_steps": [
-    "Open the converter and select 'TOML to JSON' or 'JSON to TOML' using the format toggle button above the text area.",
-    "Paste or type your structured data into the input panel, ensuring valid syntax (e.g., TOML's '=' separators or JSON's key quotes).",
-    "Enable 'Strict Validation' checkbox to catch format-specific errors like TOML's missing table brackets or JSON's trailing commas.",
-    "Click 'Convert' to execute the transformation, which will populate the output panel with the translated structure and data types.",
-    "Review the 'Conversion Report' showing preserved data types, converted line counts, and any warnings about implicit type coercion.",
-    "Download the result as a file using the format-specific .toml or .json extension button or copy the output directly to clipboard."
+    "Select TOML to JSON or JSON to TOML from the mode dropdown.",
+    "If converting TOML to JSON, choose 2 spaces, 4 spaces, or Minified indentation.",
+    "Paste text into the input textarea or click Load Sample.",
+    "Click Convert to generate the output textarea.",
+    "Use Swap to move the output back into the input when you want to reverse direction.",
+    "Click Copy to copy the generated output, or Clear to reset both textareas."
   ],
   "usage_examples": [
-    "Migrating a legacy Python project's JSON configuration to TOML for compatibility with modern Rust-based service-oriented applications.",
-    "Generating JSON payloads from TOML test fixtures to validate API endpoint behavior in Postman during CI/CD pipeline development.",
-    "Debugging configuration drift between Kubernetes Helm charts (YAML) and Consul Template (HCL) by converting both to TOML for side-by-side comparison.",
-    "Transforming GitHub Actions workflow files (YAML) to JSON for ingestion into AWS CloudFormation templates requiring JSON-formatted parameter blocks."
+    "Convert a small TOML config with sections and arrays into JSON for quick inspection.",
+    "Turn a simple JSON object into TOML table output for a draft configuration file.",
+    "Load the sample TOML, convert it, then switch indentation between 2 spaces and minified output.",
+    "Use Swap after conversion to make a quick round-trip check on a simple snippet."
   ],
   "faqs": [
     {

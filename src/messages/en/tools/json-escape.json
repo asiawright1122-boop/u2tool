@@ -1,17 +1,17 @@
 {
-  "detailed_description": "This tool performs lexical transformation of JSON strings by encoding special characters into escaped sequences or decoding them back into their original form. It implements ECMA-404 JSON standard compliance, handling control characters (\\n, \\t, \\r), quotation marks (\"), backslashes (\\), and Unicode code points (\\uFFFF). Developers need this when constructing API payloads with embedded JSON structures, sanitizing user input for JSON injection risks, or debugging malformed JSON data. The tool's parser distinguishes between string content and structural JSON elements through abstract syntax tree (AST) analysis, ensuring only character data within string values gets processed. Escaping converts characters to UTF-8 byte sequences where necessary, while unescaping validates and transforms escaped sequences back to their canonical representations. Advanced functionality includes optional pretty-printing with customizable indentation levels and strict mode validation that enforces JSON syntax rules during processing.",
+  "detailed_description": "JSON Escape/Unescape is a small browser-side text helper. Paste text into the input textarea and click Escape to run JSON.stringify on the whole input string, producing a quoted JSON string with escaped control characters, quotes, and backslashes where needed. Click Unescape to run JSON.parse on the input; if the parsed value is a string it is shown directly, otherwise it is formatted with JSON.stringify(value, null, 2). The output textarea is read-only and can be copied. The tool does not provide AST analysis, line numbers, syntax highlighting, preserve-whitespace options, strict mode toggles, custom indentation controls, injection protection, or file import/export.",
   "usage_steps": [
-    "Navigate to the JSON Escape/Unescape tool interface at /json-escape",
-    "Select 'Escape' or 'Unescape' operation using the toggle switch in the header",
-    "Paste raw JSON content into the left-side editor panel with line numbers enabled",
-    "Check 'Preserve Whitespace' checkbox if maintaining original formatting is required",
-    "Click the 'Process JSON' button to execute transformation",
-    "Review the output in the right-side editor with syntax highlighting, then copy the result using the 'Copy' button"
+    "Paste text or a quoted JSON string into the input textarea",
+    "Click Escape to wrap the input with JSON.stringify and escape special characters",
+    "Click Unescape to parse a JSON string or JSON value with JSON.parse",
+    "Review the read-only output textarea",
+    "If processing fails, the output shows a generic error message",
+    "Click Copy to copy the generated output"
   ],
   "usage_examples": [
-    "An API developer needs to embed a JSON string within a query parameter, requiring all quotes and special characters to be escaped for proper URL encoding",
-    "A DevOps engineer processes JSON configuration files containing Unicode characters that must be converted to escape sequences for legacy system compatibility",
-    "A frontend developer debugging a malformed JSON response from an HTTP API uses unescaping to visualize control characters embedded in error messages",
-    "A data engineer prepares CSV-to-JSON conversion output by escaping special characters in user-generated content fields before bulk ingestion into a document database"
+    "Escape a multiline text snippet before pasting it as a JSON string value",
+    "Unescape a quoted JSON string to read the original line breaks and tabs",
+    "Parse a JSON value and format non-string output with two-space indentation",
+    "Copy the escaped output for a quick test payload"
   ]
 }

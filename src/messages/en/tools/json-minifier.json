@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The JSON Minifier eliminates all non-essential whitespace, comments, and formatting from JSON documents while preserving their lexical structure and syntactic validity. This tool employs a streaming parser that tokenizes JSON elements (objects, arrays, strings, and primitives) then reconstructs the output without spaces between delimiters, line breaks, or indentation. By reducing redundant characters, the minified JSON achieves up to 60% smaller file sizes, improving compression efficiency for HTTP payloads and CDN caching. Developers optimizing REST API responses for mobile clients, embedded systems engineers minimizing storage footprint in IoT devices, and DevOps teams streamlining AWS Lambda environment variables will benefit from this tool. Advanced features include JSON validity checking with error position highlighting, base64 encoding compatibility for binary data, and preservation of special Unicode characters. The minification process follows ECMA-404 JSON standard compliance, ensuring interoperability with JSON parsers across modern browsers and server environments.",
+  "detailed_description": "JSON Minifier is a browser-side JSON.parse and JSON.stringify helper. Paste JSON into the textarea, click Minify to parse it and output JSON.stringify(parsed) without indentation, or click Beautify to output JSON.stringify(parsed, null, 2). Load Sample fills a small example object, Clear resets input, output, errors, and stats, and Copy appears when output exists. After minifying, the page shows original length, minified length, and a simple saved percentage based on JavaScript string length. It does not support comments, JSON5, streaming parsing, syntax highlighting, error positions, validation options, base64 features, downloads, or guaranteed file-size savings.",
   "usage_steps": [
-    "Open the JSON Minifier tool in your browser and locate the dual-pane interface",
-    "Paste your JSON content into the left-hand input panel with syntax highlighting",
-    "Toggle the 'Validate JSON' checkbox to enable pre-minification syntax checking",
-    "Click the 'Minify' button to process the document through the streaming parser",
-    "Review the compacted output in the right-hand panel showing byte count reduction",
-    "Copy the minified JSON using the clipboard icon or download as .json file"
+    "Paste valid JSON into the input textarea or click Load Sample",
+    "Click Minify to parse the JSON and output compact JSON.stringify text",
+    "Click Beautify to format the parsed JSON with two-space indentation",
+    "Review the invalid JSON error if parsing fails",
+    "After minifying, read the original length, minified length, and saved percentage cards",
+    "Click Copy when output exists, or Clear to reset the tool"
   ],
   "usage_examples": [
-    "Optimizing 200KB JSON configuration files for Arduino-based edge devices with limited flash memory",
-    "Reducing 5MB+ GeoJSON map data files for faster client-side rendering in Leaflet.js web apps",
-    "Preparing JSON Web Tokens (JWTs) by removing whitespace before Base64Url encoding",
-    "Minifying package.json dependencies lists to meet AWS Lambda's 4KB environment variable size limit"
+    "Compact a small JSON API sample before pasting it into a test request",
+    "Beautify minified JSON from a log line so it is easier to read",
+    "Use Load Sample to see the difference between minified and two-space formatted output",
+    "Check the simple saved percentage before copying compact JSON into a config field"
   ]
 }
