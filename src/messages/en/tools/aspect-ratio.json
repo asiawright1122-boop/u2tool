@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The Aspect Ratio Calculator is a powerful tool designed to help users accurately determine and maintain the aspect ratio of images, videos, and other visual media. Technically, the tool performs calculations based on the width and height of the media, ensuring that the proportional relationship between these dimensions remains consistent even when resizing. This is crucial for maintaining visual integrity and avoiding distortion. Users can input specific dimensions, and the tool will compute the corresponding values to maintain the desired aspect ratio. The calculator is particularly useful for web developers, graphic designers, and videographers who need to ensure that their visual content looks perfect across different devices and platforms. By using this tool, professionals can quickly and accurately resize images and videos without the risk of stretching or compressing them, which is a common issue when manually adjusting dimensions.",
+  "detailed_description": "Aspect Ratio Calculator is a small browser-side helper for finding and applying simple width-to-height ratios. Enter the original width and height as numbers, and the tool shows the simplified ratio (such as 16:9) computed locally. Six common preset buttons (1:1, 4:3, 3:2, 16:9, 21:9, 9:16) fill both the original and the new dimensions when clicked. In the resize section enter a new width or new height; with Lock Ratio enabled, the other value updates to keep the same ratio as the original dimensions. The result panel shows the final width x height with a Copy button. It does not import images or videos, read EXIF metadata, support physical units like inches, run through a Calculate button, or export reports.",
   "usage_steps": [
-    "Step 1: Open the Aspect Ratio Calculator tool on the website and locate the input fields for Width and Height.",
-    "Step 2: Enter the current dimensions of your media in the Width and Height fields. Ensure that the units are consistent (e.g., pixels, inches).",
-    "Step 3: Select the desired output format from the dropdown menu, which includes options like 'New Width' or 'New Height'. This will determine which dimension you want to calculate.",
-    "Step 4: Input the new dimension in the corresponding field. For example, if you selected 'New Width', enter the desired width.",
-    "Step 5: Click the 'Calculate' button to compute the new dimension that maintains the original aspect ratio.",
-    "Step 6: Review the calculated dimension in the output field. Use this value to resize your media while preserving its aspect ratio."
+    "Enter the original width and height as numbers",
+    "Read the simplified ratio shown in the highlighted display",
+    "Optionally click a common ratio preset (1:1, 4:3, 3:2, 16:9, 21:9, 9:16) to fill both sets of dimensions",
+    "Tick or untick Lock Ratio to control whether the other new dimension follows automatically",
+    "Type a new width or new height; with Lock Ratio on, the other value adjusts to match the original ratio",
+    "Click Copy to copy the resulting width x height string"
   ],
   "usage_examples": [
-    "Example 1: A web developer needs to resize an image from 1920x1080 pixels to fit a smaller section of a website that is 800 pixels wide. Using the Aspect Ratio Calculator, they can quickly determine the new height to keep the image from distorting.",
-    "Example 2: A graphic designer is creating a series of social media posts and needs to ensure that all images maintain a consistent 16:9 aspect ratio. The tool helps them calculate the correct dimensions for each image, regardless of the original size.",
-    "Example 3: A videographer is preparing a 4K video (3840x2160) for a platform that requires a 1080p resolution (1920x1080). The Aspect Ratio Calculator ensures that the video is resized correctly without changing its aspect ratio, maintaining the visual quality.",
-    "Example 4: A photographer is printing a series of landscape photos and needs to resize them to fit a standard 8x10 inch frame. The tool helps them calculate the new dimensions while keeping the aspect ratio consistent, ensuring that the photos look perfect in the frames."
+    "Find that 1920x1080 simplifies to 16:9 and copy a downscaled 1280x720 value",
+    "Pick the 4:3 preset and type a new width to read the matching new height",
+    "Lock the ratio of an existing thumbnail size and try a few new widths to see the corresponding heights",
+    "Copy the resulting width x height string into a layout note or CSS comment"
   ]
 }

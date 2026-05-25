@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The Base58 Encoder/Decoder tool facilitates the conversion of data into and from Base58 strings, a format widely used in the realm of cryptocurrencies, particularly Bitcoin. Base58 is a compact, URL-safe encoding that avoids the ambiguity of similar-looking characters, such as '0' (zero), 'O' (capital o), 'I' (capital i), and 'l' (lowercase L). This makes it ideal for encoding public addresses and private keys in a human-readable format. Users of this tool can ensure the integrity and readability of their data when integrating with blockchain technologies. The tool employs the Base58 algorithm, which involves a series of mathematical operations to transform binary data into a string of 58 possible characters. This encoding method is crucial for developers working with Bitcoin and other cryptocurrencies, as it helps prevent errors during data transmission and storage. The Base58 Encoder/Decoder is a powerful utility for anyone involved in blockchain development, cryptocurrency transactions, or data encoding in a secure and readable format.",
+  "detailed_description": "Base58 Encoder/Decoder converts text to and from a Base58 string in the browser using the standard alphabet that omits 0, O, I, and l. Paste text or a Base58 string into the textarea, then click Encode to UTF-8 encode the input and convert it to Base58 (preserving leading zero bytes as leading 1 characters), or Decode to parse a Base58 string back into bytes and decode them as UTF-8. Invalid Base58 characters during decoding show an error message. The output appears in a read-only textarea with a Copy button, and Clear resets both fields. The shown alphabet is for reference only. The tool does not validate Bitcoin or other cryptocurrency address checksums (Base58Check), handle binary file input, support Base58Check or alphabet variants, or sign or verify keys.",
   "usage_steps": [
-    "Step 1: Navigate to the Base58 Encoder/Decoder tool page on the website.",
-    "Step 2: Locate the 'Input' section and enter the text or data you wish to encode or decode.",
-    "Step 3: Choose the 'Encode' or 'Decode' option from the dropdown menu adjacent to the input field.",
-    "Step 4: If encoding, your input will be transformed into a Base58 string; if decoding, the Base58 string will be converted back to its original form.",
-    "Step 5: Review the output in the 'Result' section, which will display the encoded or decoded data.",
-    "Step 6: Copy the result to your clipboard or save it for further use in your projects or transactions."
+    "Paste plain text or a Base58 string into the input textarea",
+    "Click Encode to UTF-8 encode the input and produce a Base58 string",
+    "Or click Decode to convert a Base58 string back to UTF-8 text",
+    "Read the output textarea or the inline error if the input contains characters outside the alphabet",
+    "Click Copy to copy the output, or Clear to reset both fields",
+    "Refer to the displayed alphabet panel to check which characters are valid"
   ],
   "usage_examples": [
-    "Example 1: A software developer is creating a Bitcoin wallet application and needs to encode a user's public key into a Base58 format to generate a readable and secure address. The Base58 Encoder/Decoder tool quickly converts the key, ensuring it is correctly formatted for the wallet.",
-    "Example 2: A blockchain researcher is analyzing a dataset of Bitcoin transactions and encounters a series of Base58 encoded addresses. Using the tool, they can decode these addresses to verify the identities of the transaction participants and validate the data.",
-    "Example 3: A cryptocurrency exchange platform needs to implement a feature that allows users to import their private keys. The Base58 Encoder/Decoder tool helps the platform developers test the import functionality by encoding and decoding sample private keys to ensure the process is seamless and error-free.",
-    "Example 4: An individual is setting up a multisignature Bitcoin wallet and needs to encode the concatenated public keys into a Base58 format to create the wallet address. The tool provides a straightforward interface to perform this task, ensuring the address is correctly formatted and secure."
+    "Encode a short identifier into a Base58 string that avoids look-alike characters",
+    "Decode a Base58 string back into the original text to inspect what it represents",
+    "Round-trip a sample value through Encode then Decode to confirm the alphabet handles it",
+    "Check why a pasted Base58 string fails to decode by reading the invalid character message"
   ]
 }
