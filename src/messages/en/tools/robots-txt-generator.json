@@ -1,17 +1,17 @@
 {
-  "detailed_description": "This tool programmatically constructs robots.txt files that dictate how search engine crawlers interact with web content. Technically, it generates standardized directives adhering to the Robots Exclusion Protocol (REP), supporting User-agent identification, path-based Disallow/Allow rules, crawl delay parameters, and Sitemap references. Developers require this utility to precisely control spider access for SEO optimization, prevent overloading servers with excessive requests, or blocking sensitive directories from public search indexes. The generator parses user input through form fields mapping directly to REP syntax elements, automatically resolving conflicting rules using crawler-specific precedence logic. Advanced features include wildcard pattern matching for dynamic URL structures, HTTP status code validation for referenced assets, and automatic canonicalization of absolute/relative paths. Unlike basic editors, this tool enforces proper directive sequencing and escapes special characters in path definitions to prevent syntax errors that could cause unintended access permissions.",
+  "detailed_description": "Robots.txt Generator builds a plain-text robots.txt block from form fields. You can stack one or more rules, each with a single User-agent string and newline-separated Allow and Disallow path lists, plus an optional sitemap URL and an optional crawl delay (which is only emitted on the '*' rule). Four one-click presets fill the rules: Allow All, Block All, Standard (admin/api/private blocked), and WordPress. The output panel shows the assembled robots.txt and a Copy button sends it to the clipboard. The tool does not validate URLs against your live site, check rule conflicts, resolve wildcard precedence between bots, or download a .txt file.",
   "usage_steps": [
-    "Select default template based on common use cases (e.g., 'Full Access', 'Development Block', 'E-commerce Restrictions')",
-    "Add custom rules by specifying User-agent strings, path patterns, and crawl permissions using the multi-field rule builder",
-    "Configure crawl delay values in milliseconds for specific bots to prevent server overload",
-    "Use the 'Wildcard Assistant' to create pattern-matching rules for dynamic URLs containing query parameters",
-    "Validate rule conflicts using the built-in analyzer that highlights overlapping directives",
-    "Download the final robots.txt after reviewing the syntax-highlighted preview with line-numbered annotations"
+    "Optionally click Allow All, Block All, Standard, or WordPress to load a starting preset",
+    "For each rule set the User-agent and edit the Allow and Disallow lists (one path per line)",
+    "Use Add Rule to add another rule block, or Remove to delete an extra rule",
+    "Enter a Sitemap URL if you want a Sitemap: line appended to the output",
+    "Enter a Crawl-delay number to apply it to the '*' rule",
+    "Read the assembled robots.txt in the output panel and click Copy to copy it"
   ],
   "usage_examples": [
-    "Blocking search engines from indexing a staging environment at /staging/ while allowing production content",
-    "Preventing duplicate content penalties by disallowing crawler access to printer-friendly page versions ending with ?print=1",
-    "Rate-limiting Googlebot to 5,000 requests/day on a budget hosting plan using the crawl delay and request limit calculator",
-    "Creating bot-specific rules to allow image crawlers access to /media/ while restricting general web archiving bots"
+    "Start from the Standard preset and add a sitemap URL before copying the result into a new project",
+    "Build a Block All robots.txt for a staging site by clicking the Block All preset",
+    "Tweak the WordPress preset to also disallow a /staging/ path before copying it",
+    "Add a second rule block to grant a specific bot extra Disallow paths"
   ]
 }

@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The Text Extractor employs advanced lexical analysis and pattern recognition to isolate specific data types from unstructured text. Using a combination of precompiled regular expressions, contextual tokenization, and grammar-based parsing, it identifies atomic elements like RFC 5322-compliant email addresses, URI-normalized URLs, E.164-formatted phone numbers, and CIDR-notation IP addresses. The tool's engine performs Unicode normalization (NFKC) to handle special characters and diacritics, while maintaining positional metadata for accurate extraction. Developers and analysts use this tool to automate data curation tasks, such as sanitizing PII from logs, generating contact lists from documents, or building training datasets for ML models. Unlike basic extractors, this implementation supports custom delimiter handling and preserves original text context through offset tracking, making it suitable for forensic text analysis or compliance auditing workflows.",
+  "detailed_description": "Text Extractor pulls common token types out of pasted text using a small set of fixed regular expressions. Pick a type from email, URL, phone, IP, number, hashtag, mention, or All, click Extract, and the tool runs the matching pattern (or all patterns) over the input and shows deduplicated results. Each result has a Copy button, single-type results have a Copy All button, and All mode groups results by type with per-type counts. Load Example fills in a sample multi-language string, Clear empties the input. The tool does not do RFC 5322 / E.164 validation, Unicode normalization, custom delimiters, capture-group editing, file upload, or CSV/JSON export.",
   "usage_steps": [
-    "Paste raw text into the ACE editor panel with syntax highlighting enabled for structured visibility",
-    "Select target data types using the segmented control interface (emails/URLs/phones/IPv4/IPv6)",
-    "Adjust advanced settings in the sidebar: toggle case sensitivity, specify custom delimiters, or enable regex capture groups",
-    "Click 'Process' to initiate multi-threaded analysis, with progress shown in the status meter",
-    "Review extracted results in the interactive grid with column sorting and regex filtering capabilities",
-    "Export selections via the format dropdown (CSV, JSON-LD, or TSV) with optional header inclusion"
+    "Paste or type raw text into the input textarea, or click Load Example for sample data",
+    "Pick a type from the dropdown: email, URL, phone, IP, number, hashtag, mention, or All",
+    "Click Extract to run the matching regex and deduplicate results",
+    "Hover any result to see its Copy button and copy a single value",
+    "In single-type mode, use Copy All to copy every result joined by newlines",
+    "Click Clear to reset the input and results"
   ],
   "usage_examples": [
-    "A cybersecurity analyst extracts C2 server IP addresses from malware sample reports using CIDR range validation",
-    "An investigative journalist identifies embedded tracking URLs in leaked documents with domain categorization",
-    "A data engineer cleans phone number formats across 10,000 customer records using E.164 standardization",
-    "A digital forensics specialist recovers deleted email addresses from memory dumps through pattern entropy analysis"
+    "Pull every email out of a long support ticket dump for follow-up",
+    "Grab every URL from a markdown article to feed into a link checker",
+    "Run All mode on a chat log to see hashtags, mentions, and phone numbers grouped together",
+    "Extract IP addresses from a server log snippet before pasting them into another tool"
   ]
 }

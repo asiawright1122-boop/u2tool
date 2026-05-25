@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The HTML to Text tool is designed to transform HTML content into plain text by systematically removing all HTML tags and formatting. This process, known as HTML stripping, ensures that the resulting text is free from any HTML-specific elements, making it suitable for a variety of applications. The tool is particularly valuable for developers and content creators who need to extract clean, readable text from web pages or HTML documents. It can be used to prepare content for plain text formats, such as emails, articles, or data processing tasks. The tool operates by parsing the input HTML, identifying and removing all tags, and then presenting the remaining text. This is achieved through a combination of regular expressions and DOM manipulation techniques, ensuring that the output is both accurate and clean. The tool is also useful for those who need to analyze the raw content of a webpage without the interference of HTML tags, which can sometimes obscure the actual text content.",
+  "detailed_description": "HTML to Text strips HTML markup to plain text in the browser using a small set of regular expressions. Paste HTML into the left textarea, toggle three options (preserve links rewrites <a> as 'text (url)' otherwise links keep only the inner text; preserve line breaks turns <br>, </p>, </div>, </h*>, </tr>, </td>/</th> into newlines or tabs; preserve lists turns <li> into bullet lines and <ul>/<ol> into surrounding blank lines), then click Convert. The tool also drops script/style content, decodes common named and numeric HTML entities, collapses runs of spaces, and trims excessive blank lines. A Copy button copies the output and Load Sample inserts an example HTML page. The tool is regex-based, not a full DOM parser, and does not render tables, images, or CSS; there is no file upload or .txt download.",
   "usage_steps": [
-    "Step 1: Navigate to the HTML to Text tool page on the website.",
-    "Step 2: Click on the 'Paste HTML' button to open the input area, or drag and drop your HTML file directly into the designated drop zone.",
-    "Step 3: If you are pasting HTML, press 'Ctrl + V' (or 'Cmd + V' on a Mac) to insert the HTML content into the input box.",
-    "Step 4: Once your HTML content is in the input box, click the 'Convert to Text' button to start the conversion process.",
-    "Step 5: The tool will process the HTML, stripping all tags and leaving only the plain text. The result will appear in the output area below the button.",
-    "Step 6: To save the converted text, select the text in the output area and press 'Ctrl + C' (or 'Cmd + C' on a Mac) to copy it, or click the 'Download Text' button to save the text as a .txt file."
+    "Paste HTML into the left textarea, or click Load Sample for example markup",
+    "Toggle Preserve Links to keep link URLs as 'text (url)' instead of just the text",
+    "Toggle Preserve Line Breaks to keep paragraph and block element line breaks",
+    "Toggle Preserve Lists to turn <li> items into bullet lines",
+    "Click Convert to strip the markup and produce plain text",
+    "Click Copy in the output panel to copy the text to the clipboard"
   ],
   "usage_examples": [
-    "Example 1: A web developer is working on a project that involves extracting the text content from multiple HTML files to generate a summary for a client. By using the HTML to Text tool, the developer can quickly convert the HTML files to plain text, which can then be used to create the summary document.",
-    "Example 2: A content marketer needs to prepare an email newsletter that includes text from a blog post. The blog post is written in HTML, and the email service only accepts plain text. The marketer uses the HTML to Text tool to strip the HTML tags and obtain the clean text for the newsletter.",
-    "Example 3: A data analyst is tasked with analyzing the textual content of a large number of web pages. The analyst uses the HTML to Text tool to convert the HTML content of these pages into plain text, which can then be imported into a data analysis tool for further processing.",
-    "Example 4: A technical writer is creating a documentation guide that includes code snippets and text from online tutorials. The HTML to Text tool helps the writer extract the relevant text from the tutorials, ensuring that the documentation is free from HTML formatting and is consistent in style."
+    "Convert a blog post's HTML body into a plain-text version for an email newsletter",
+    "Strip markup from a saved HTML snippet to paste into a note-taking app",
+    "Keep links as 'text (url)' to make a plain-text reference list out of an article",
+    "Quickly turn HTML lists into bullet lines for a meeting summary"
   ]
 }
