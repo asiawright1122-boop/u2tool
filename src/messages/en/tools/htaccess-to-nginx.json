@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The htaccess to Nginx Converter is a specialized tool designed to streamline the transition from Apache to Nginx web servers. It translates Apache .htaccess rules into equivalent Nginx configuration directives. This process is crucial for developers who are migrating their websites or applications to a more efficient and scalable Nginx environment. The tool is particularly useful for those managing complex rewrite rules, URL redirections, and access controls, which are often heavily utilized in .htaccess files. By automating the conversion, it reduces the risk of human error and ensures that the new Nginx configuration accurately reflects the original Apache settings. The converter supports a wide range of .htaccess directives, including RewriteRule, RewriteCond, and ErrorDocument, among others. It also provides insights into potential issues and suggestions for optimizing the Nginx configuration for better performance and security.",
+  "detailed_description": "The htaccess to Nginx Converter performs a lightweight line-by-line conversion for pasted .htaccess text. Load the sample or paste rules, then click Convert to wrap converted lines in a basic Nginx server block using example.com and /var/www/html placeholders. It recognizes a limited set of common patterns such as RewriteEngine On, RewriteBase, selected RewriteCond and RewriteRule forms, ErrorDocument, DirectoryIndex, Options +/-Indexes, Header set, ExpiresByType, Deny/Allow from, SetEnvIf, and php_value/php_flag comments. Lines that do not match a known pattern are kept as TODO comments for manual review. The tool does not validate Nginx syntax, preserve every Apache behavior, convert full virtual hosts, generate optimized production configs, or test the result on a server.",
   "usage_steps": [
-    "Navigate to the htaccess to Nginx Converter page on the website.",
-    "Locate the 'Input .htaccess Rules' text area and paste your existing .htaccess content into it.",
-    "Click the 'Convert' button to initiate the translation process.",
-    "Review the generated Nginx configuration in the 'Output Nginx Configuration' section.",
-    "Check for any warnings or recommendations provided by the tool to ensure all rules are accurately converted.",
-    "Copy the Nginx configuration and paste it into your Nginx server block configuration file, then save and test the configuration."
+    "Click Load Sample or paste .htaccess rules into the input textarea",
+    "Click Convert to run the browser-side pattern converter",
+    "Review the generated Nginx server block and placeholder server_name/root values",
+    "Look for TODO comments where a line was not recognized",
+    "Click Copy to copy the output",
+    "Test and adjust the configuration with your own Nginx tooling before deploying"
   ],
   "usage_examples": [
-    "A web developer is moving a WordPress site from an Apache server to an Nginx server and needs to convert the .htaccess file to ensure all permalinks and custom rewrite rules work correctly.",
-    "An e-commerce platform is optimizing its server infrastructure by switching to Nginx. The platform uses extensive .htaccess rules for URL redirections and caching, which need to be accurately converted to maintain site functionality.",
-    "A system administrator is tasked with consolidating multiple Apache virtual hosts into a single Nginx server. The tool helps in converting the .htaccess rules from each virtual host into a unified Nginx configuration.",
-    "A content management system (CMS) uses .htaccess rules for security settings, such as blocking IP addresses and limiting access to certain directories. The tool ensures these security rules are correctly implemented in the Nginx configuration to maintain the site's security posture."
+    "Convert a simple HTTPS redirect rule into a starting Nginx return block",
+    "Turn ErrorDocument lines into error_page directives for manual review",
+    "Translate basic Header set rules into add_header directives",
+    "Identify unsupported .htaccess lines as TODO comments before writing a real Nginx config"
   ]
 }
