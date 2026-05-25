@@ -1,18 +1,18 @@
 {
-  "detailed_description": "ESLint Config Generator helps you create customized ESLint configuration files for your JavaScript and TypeScript projects. Choose from popular style guides including Airbnb, Standard, Google, and more. Configure framework-specific rules for React, Vue, Angular, or Node.js. Enable TypeScript support, set up Prettier integration, and customize individual rules. The tool generates a complete .eslintrc.json file ready to use in your project.",
+  "detailed_description": "ESLint Config Generator creates a starter .eslintrc.json file in the browser from a small set of form controls. Choose a framework from Vanilla JavaScript, React, Vue, or Next.js; choose a style guide from ESLint Recommended, Airbnb, Standard, or Google; optionally enable TypeScript; toggle Browser, Node.js, and ES2021 environments; and set five common rules (no-console, no-debugger, eqeqeq, curly, semi) to Off, Warn, or Error. Click Generate to preview formatted JSON, then copy it or download .eslintrc.json. The tool does not inspect your project, install packages, validate plugin compatibility, support Angular, configure Prettier, or expose arbitrary ESLint rules.",
   "usage_steps": [
-    "Select your preferred style guide (Airbnb, Standard, Google, etc.)",
-    "Choose your framework (React, Vue, Angular, Node.js)",
-    "Enable TypeScript support if needed",
-    "Configure Prettier integration",
-    "Customize individual rules as needed",
-    "Click Generate to create your ESLint config",
-    "Copy the configuration to your project"
+    "Choose a framework: Vanilla JavaScript, React, Vue, or Next.js",
+    "Choose a style guide: ESLint Recommended, Airbnb, Standard, or Google",
+    "Optionally enable TypeScript support",
+    "Toggle Browser, Node.js, and ES2021 environment flags",
+    "Set the listed common rules to Off, Warn, or Error",
+    "Click Generate to create the .eslintrc.json preview",
+    "Copy the JSON or download it as .eslintrc.json"
   ],
   "usage_examples": [
-    "Set up ESLint for a React TypeScript project",
-    "Configure ESLint with Airbnb style guide",
-    "Create a Node.js backend linting configuration",
-    "Set up ESLint with Prettier integration"
+    "Create a starter React config with TypeScript and react recommended settings",
+    "Generate an Airbnb-based config for a small browser project",
+    "Turn on the Node.js environment flag for a backend starter config",
+    "Set no-console to warn before copying the JSON into your project"
   ]
 }

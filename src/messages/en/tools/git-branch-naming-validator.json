@@ -1,15 +1,16 @@
 {
-  "detailed_description": "Git Branch Naming Validator checks branch names against common naming conventions like GitFlow.",
+  "detailed_description": "Git Branch Naming Validator checks one branch name in the browser against three built-in prefix conventions: feature/*, bugfix/*, and hotfix/*. It validates lowercase URL-safe characters, no spaces, no trailing slash, the selected prefix, and the selected convention regex such as feature/add-login-flow. When the input is invalid, it suggests a sanitized branch name and lets you copy the suggestion. A small reference list also shows other common prefixes, but those are informational only. The tool does not integrate with Git, enforce repository policies, run in CI/CD, or support custom regex rules.",
   "usage_steps": [
-    "Enter branch name",
-    "Select convention",
-    "Click Validate",
-    "View results",
-    "Copy corrected name"
+    "Select one built-in convention: feature/*, bugfix/*, or hotfix/*",
+    "Enter a branch name in the input field",
+    "Review the automatic rule checks for lowercase characters, spaces, trailing slash, and prefix",
+    "Check whether the branch matches the selected convention pattern",
+    "If a suggested name appears, copy it with the Copy button"
   ],
   "usage_examples": [
-    "Validate feature branches",
-    "Enforce team standards",
-    "Check in CI/CD"
+    "Check that feature/add-login-flow matches the feature/* convention",
+    "Turn Fix Timezone Bug into a lowercase bugfix/fix-timezone-bug suggestion",
+    "Spot a trailing slash or whitespace issue before creating a local branch",
+    "Use the prefix reference as a reminder while naming a hotfix branch"
   ]
 }

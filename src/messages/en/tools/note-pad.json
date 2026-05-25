@@ -1,10 +1,10 @@
 {
-  "detailed_description": "Online Note Pad is a simple and practical note-taking tool for quickly creating and managing colorful sticky notes. Supports 6 colors (yellow, green, blue, pink, purple, orange) to make your notes more visible and organized. Each note can have a title and content, with automatic creation and update timestamps. All notes auto-save to browser local storage, preserved even after closing the page. Supports search functionality to quickly find notes. Export to JSON format for backup and migration. Clean interface with intuitive operation.",
+  "detailed_description": "Online Note Pad is a browser-side sticky note tool for creating, editing, searching, deleting, and exporting notes. Click New Note to add a note with title, content, color, created time, and updated time. Choose from six color styles, search by title or content, and click a note card to edit it. Notes are saved to browser localStorage after hydration and can be exported as notes.json. The tool does not provide import, sync, encryption, accounts, collaboration, reminders, rich text formatting, or cloud backup.",
   "usage_steps": [
     "Open the Note Pad tool page",
     "Click 'New Note' button to create a new note",
     "Enter note title and content",
-    "Click color buttons to change note color",
+    "Click color buttons to choose or change a note color style",
     "Click a note card to edit its content",
     "Use the search box to quickly find notes",
     "Click 'Export' to backup all notes"
@@ -13,7 +13,7 @@
     "Record to-do items and task lists",
     "Save temporary ideas and inspiration",
     "Record meeting points and notes",
-    "Save frequently used info like password hints, contacts, etc."
+    "Save frequently used non-sensitive snippets, links, or contact notes"
   ],
   "faqs": [
     {
