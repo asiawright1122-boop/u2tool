@@ -1,21 +1,21 @@
 {
-  "detailed_description": "The Polar Bar Chart Generator helps you turn small datasets into a radial bar chart directly in your browser. You can edit labels and values, adjust the title, color theme, legend visibility, inner radius, and other layout controls, then review the live preview before exporting the result as PNG or SVG. It works well for quick reporting, dashboard mockups, presentations, and documentation when you want a circular chart without leaving the page.",
+  "detailed_description": "The Polar Bar Chart Generator helps you turn small datasets into a radial bar chart directly in your browser. Use Load Sample or edit the default name/value rows, add or remove items, and adjust the chart title, color theme, inner radius, legend visibility, round caps, and stack mode. The ECharts preview updates from the current rows and settings, and the toolbar can export the rendered chart as PNG or SVG. The tool does not import CSV or JSON files, fetch live data, support per-bar styling, or run statistical analysis.",
   "usage_steps": [
-    "Load the sample dataset or start with the default rows in the editor.",
-    "Update the chart title, then add, remove, or rename data points and values.",
-    "Adjust theme, legend visibility, inner radius, and other chart controls.",
-    "Review the live preview and refine the data until the visual matches your message.",
-    "Export the finished chart as PNG or SVG for slides, docs, or sharing."
+    "Click Load Sample or edit the default name and value rows.",
+    "Use Add Item or the row delete button to manage the data points.",
+    "Update the chart title and choose a color theme: default, ocean, sunset, or forest.",
+    "Adjust the inner radius slider and toggle legend visibility, round caps, or stack mode.",
+    "Review the ECharts preview and download the current chart as PNG or SVG."
   ],
   "usage_examples": [
-    "Compare seasonal or cyclical values in a radial layout for a presentation.",
-    "Turn a short list of category scores into a circular chart for documentation or dashboards.",
-    "Experiment with labels, ranges, and themes before exporting a chart for sharing."
+    "Load the monthly sample data and export a radial bar chart for a presentation.",
+    "Turn a short list of category scores into a circular chart for documentation.",
+    "Compare the default, ocean, sunset, and forest themes before downloading an SVG."
   ],
   "faqs": [
     {
       "question": "Can I edit the data directly?",
-      "answer": "Yes. You can add, remove, rename, and update values in the data editor before exporting the chart."
+      "answer": "Yes. You can add or remove rows and edit each row's name and numeric value before exporting the chart."
     },
     {
       "question": "Which export formats are available?",
