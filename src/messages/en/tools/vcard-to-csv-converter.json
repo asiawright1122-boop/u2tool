@@ -1,14 +1,15 @@
 {
-  "detailed_description": "vCard to CSV Converter turns pasted BEGIN:VCARD blocks into spreadsheet-ready CSV rows. Paste one or more VCF contacts, choose comma, semicolon, or tab output, and review columns for first_name,last_name,full_name,email,phone,company,title,address before importing the result into a spreadsheet, CRM, or cleanup workflow.",
+  "detailed_description": "vCard to CSV Converter turns pasted BEGIN:VCARD blocks into spreadsheet-ready CSV text in the browser. Paste one or more VCF contacts into the textarea, choose comma, semicolon, or tab output, and the tool extracts common N, FN, EMAIL, TEL, ORG, TITLE, and ADR lines into first_name,last_name,full_name,email,phone,company,title,address columns. It shows contact and CSV row counts plus the generated CSV output with a copy action. It does not upload .vcf files, parse every vCard extension, keep multiple phone or email fields, create a downloadable CSV file, or import contacts into a CRM.",
   "usage_steps": [
-    "Paste one or more BEGIN:VCARD blocks from a .vcf export.",
+    "Paste one or more BEGIN:VCARD blocks from a .vcf export into the vCard textarea.",
     "Choose comma, semicolon, or tab as the CSV delimiter.",
-    "Review the contact count and the generated columns for names, email, phone, company, title, and address.",
+    "Review the contact count and CSV row count.",
+    "Check the generated first_name,last_name,full_name,email,phone,company,title,address columns.",
     "Copy the CSV text and test it with your spreadsheet or CRM importer before a bulk import."
   ],
   "usage_examples": [
     "Turn a phone or address book VCF export into rows you can inspect in a spreadsheet.",
-    "Check whether email, phone, company, title, and address fields survive before a CRM import.",
+    "Check whether the first email, phone, company, title, and address fields survive before a CRM import.",
     "Convert a small batch of contacts when you need a quick CSV handoff without setting up a desktop converter."
   ],
   "faqs": [
@@ -26,7 +27,7 @@
     },
     {
       "question": "Does it support every vCard property?",
-      "answer": "It focuses on common contact fields. Review the CSV if your VCF includes custom properties, multiple phone numbers, or unusual address formatting."
+      "answer": "It focuses on common contact fields and keeps one value for each output column. Review the CSV if your VCF includes custom properties, multiple phone numbers, multiple emails, or unusual address formatting."
     }
   ]
 }

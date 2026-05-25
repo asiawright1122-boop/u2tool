@@ -1,16 +1,16 @@
 {
-  "detailed_description": "The JSON Diff tool compares two JSON values in the browser and lists changed, added, removed, and type-different paths. Paste the original JSON on the left, paste the changed JSON on the right, and run the comparison to inspect nested object and array differences. It is designed for quick API response checks, configuration reviews, and debugging small to medium JSON payloads. The tool expects valid JSON on both sides and reports parsing errors when the input is not valid JSON.",
+  "detailed_description": "The JSON Diff tool compares two pasted JSON values in the browser and lists path-level differences. Paste the first JSON value on the left, paste the second JSON value on the right, and click Compare. The tool parses both inputs with JSON.parse, recursively walks objects and arrays by key/index, and reports added paths, removed paths, changed primitive values, and type differences in a scrollable result panel. It shows an invalid JSON error when either input cannot be parsed. It does not provide syntax highlighting, file upload, copy/export buttons, merge controls, move detection, or special handling for reordered arrays.",
   "usage_steps": [
-    "Paste the original JSON into the first editor.",
-    "Paste the updated JSON into the second editor.",
+    "Paste the first JSON value into the left textarea.",
+    "Paste the second JSON value into the right textarea.",
     "Click Compare to parse both inputs.",
-    "Review each reported path and difference type.",
+    "Review each reported path and difference type in the result panel.",
     "Fix invalid JSON if the parser reports an error.",
-    "Copy or use the findings in your review workflow."
+    "Use the displayed findings in your review workflow."
   ],
   "usage_examples": [
-    "Compare two API responses after a backend change.",
-    "Find which keys changed between two configuration files.",
+    "Compare two pasted API response samples after a backend change.",
+    "Find which keys changed between two small configuration snippets.",
     "Check whether a nested value changed type from string to number.",
     "Review a small JSON fixture before updating a test."
   ],

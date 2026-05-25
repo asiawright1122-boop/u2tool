@@ -1,18 +1,18 @@
 {
-  "detailed_description": "The JSON to YAML Converter transforms valid JSON into readable YAML-style text directly in the browser. Paste a JSON object, array, string, number, boolean, or null value, convert it, and copy the YAML output. The formatter preserves nested structure with indentation and is useful for configuration drafts, documentation examples, and quick format changes. It is intentionally lightweight and does not replace a full YAML parser or schema validator.",
+  "detailed_description": "The JSON to YAML Converter transforms valid JSON into lightweight YAML-style text directly in the browser. Paste JSON into the left textarea, click Convert, and the tool parses it with JSON.parse, then recursively writes objects, arrays, strings, numbers, booleans, and null with two-space indentation. The generated text appears in a read-only YAML textarea and can be copied. This is a small formatter, not a full YAML emitter: it does not preserve comments, anchors, tags, custom quoting rules, multi-document YAML, file upload, download, schema validation, or round-trip guarantees.",
   "usage_steps": [
-    "Paste valid JSON into the input box.",
-    "Click Convert to parse the JSON.",
-    "Review the YAML-style output.",
-    "Fix the JSON if parsing fails.",
-    "Copy the generated YAML when it looks correct.",
+    "Paste valid JSON into the JSON textarea.",
+    "Click Convert to parse the input with JSON.parse.",
+    "Review the generated YAML-style text in the read-only output textarea.",
+    "Fix the JSON if the invalid JSON error appears.",
+    "Click Copy to copy the generated output.",
     "Validate the final YAML in your target application if it is production configuration."
   ],
   "usage_examples": [
     "Convert a package-style JSON snippet into YAML for documentation.",
     "Turn a simple API example into YAML for a README.",
-    "Draft YAML configuration from a JSON object.",
-    "Inspect nested JSON in a more readable indentation format."
+    "Draft simple YAML-style configuration from a JSON object.",
+    "Inspect nested JSON in a readable two-space indentation format."
   ],
   "faqs": [
     {
