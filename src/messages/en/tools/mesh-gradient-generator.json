@@ -1,16 +1,16 @@
 {
-  "detailed_description": "Mesh Gradient Generator creates complex, multi-color gradient backgrounds using radial gradients positioned at different points. Unlike linear gradients, mesh gradients create organic, flowing color transitions that add depth and visual interest to your designs. Customize each color point position and color to create unique gradient effects.",
+  "detailed_description": "Mesh Gradient Generator creates a CSS background from four editable radial-gradient color points. Use the browser color pickers and X/Y sliders to position each point, adjust the shared blur percentage, preview the background, randomize the point colors, and copy the generated CSS. It does not add or remove points, export images, animate gradients, or provide per-breakpoint responsive settings.",
   "usage_steps": [
-    "Click on color swatches to change colors",
-    "Drag X and Y sliders to position each color point",
-    "Adjust blur for gradient softness",
-    "Click Randomize for new color combinations",
-    "Preview the result in real-time",
-    "Copy the CSS code for your project"
+    "Choose colors for the four gradient points.",
+    "Move each point with its X and Y percentage sliders.",
+    "Adjust the shared blur slider for softer or sharper transitions.",
+    "Click Randomize to replace the point colors with preset choices.",
+    "Review the preview area.",
+    "Copy the generated CSS background code."
   ],
   "usage_examples": [
-    "Creating vibrant hero section backgrounds",
-    "Designing colorful card backgrounds",
-    "Building gradient overlays for images"
+    "Create a CSS background for a hero section.",
+    "Draft a colorful card or panel background.",
+    "Copy a radial-gradient stack into a stylesheet for further editing."
   ]
 }

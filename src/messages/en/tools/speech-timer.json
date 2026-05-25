@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Speech Timer is a professional presentation timing tool that helps speakers practice and deliver speeches effectively. It provides real-time countdown, word count estimation based on speaking pace, and visual alerts when time is running low.",
+  "detailed_description": "Speech Timer is a browser-side practice timer for talks and presentations. Set a target duration in minutes, adjust the words-per-minute estimate, then start, pause, or reset the timer. The page shows elapsed time, remaining time, a progress bar that changes color near and after the target, and an estimated word count based on elapsed time and the selected pace. It does not analyze pasted speech text, play alert sounds, save history, or detect your actual speaking speed.",
   "usage_steps": [
-    "Set your target speech duration",
-    "Optionally enter your speech text for word count",
-    "Click start to begin the countdown",
-    "Monitor the visual progress indicator",
-    "Receive alerts when time is almost up"
+    "Set the target duration in minutes.",
+    "Adjust the words-per-minute value if needed.",
+    "Click Start to begin timing, then Pause or Reset as needed.",
+    "Watch elapsed time, remaining time, and the progress bar.",
+    "Use the 3, 5, or 10 minute preset buttons for common practice sessions."
   ],
   "usage_examples": [
-    "Practice TED-style presentations",
-    "Time academic conference talks",
-    "Prepare for job interview presentations"
+    "Practice a short presentation against a fixed time limit.",
+    "Estimate how many words you have spoken at a chosen pace.",
+    "Run a simple rehearsal timer for classroom or meeting talks."
   ]
 }
