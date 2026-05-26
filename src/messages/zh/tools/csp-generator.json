@@ -1,17 +1,16 @@
 {
-  "detailed_description": "CSP Generator是一款面向Web开发者的安全策略构建工具，通过可视化界面生成符合W3C标准的Content-Security-Policy HTTP头。该工具采用AST抽象语法树解析技术，将开发者配置的策略规则转化为精确的CSP指令。用户可通过细粒度控制指令（如script-src、style-src等）的源表达式，实现对DOM操作、外部资源加载、Web Worker创建等关键安全环节的精准管控。工具内置的策略优化引擎可自动检测指令冲突，例如当设置strict-dynamic时自动补充nonce值依赖。对于需要符合GDPR或等保三级要求的金融类网站，该工具可快速生成审计合规的CSP配置，避免因XSS注入导致的数据泄露风险。高级用户可使用策略继承功能，在基础模板上叠加自定义规则，提升大型应用的配置效率。",
+  "detailed_description": "CSP Generator 在浏览器中从固定的指令列表构建 `Content-Security-Policy` 字符串。每个指令都有一个启用复选框、已添加的值显示为可移除的标签，以及一个包含常用关键词（如 `'self'`、`'none'`、`'unsafe-inline'`、`https:`、`data:`）的小下拉菜单用于添加新值。你可以重置为默认指令列表，在 HTTP 头行和 `<meta http-equiv>` 标签之间切换输出格式，并复制结果。本工具不验证 nonce、hash 或 URL 是否符合任何 CSP 级别，不对已弃用关键词发出警告，不支持 `Content-Security-Policy-Report-Only` 模式，不接受下拉菜单之外的自由输入值，也不针对真实页面测试生成的策略。",
   "usage_steps": [
-    "Step 1：访问CSP Generator页面并选择策略模板（如默认阻止、允许内联脚本等）。",
-    "Step 2：在指令配置面板中设置各资源类型的源规则（如script-src添加'this-site.com'）。",
-    "Step 3：启用'nonce自动生成'功能为内联脚本创建唯一标识符，或手动输入现有nonce值。",
-    "Step 4：在预览面板查看实时生成的CSP头内容，注意检查'Content-Security-Policy-Report-Only'模式的差异。",
-    "Step 5：调整违规报告配置，指定report-uri路径并设置发送间隔阈值（如每小时批量上报）。",
-    "Step 6：点击'导出配置'下载JSON格式策略文件，或复制HTTP头配置代码到服务器配置段。"
+    "切换每个指令的启用复选框来决定是否包含在策略中。",
+    "使用每个指令的下拉菜单添加常用值，通过 × 按钮移除已有标签。",
+    "使用结果面板上方的下拉菜单在 HTTP 头和 meta 标签之间切换输出格式。",
+    "在输出区域查看生成的 `Content-Security-Policy` 行。",
+    "点击 Copy 将结果复制到剪贴板，或 Reset Defaults 恢复初始指令集。"
   ],
   "usage_examples": [
-    "电商网站在支付页面启用strict-dynamic策略，防止第三方脚本窃取支付信息",
-    "SaaS平台为不同租户生成差异化CSP策略，限制白标域名的资源加载权限",
-    "政府网站通过nonce机制允许特定统计代码执行，同时阻止其他内联脚本",
-    "Web应用集成CSP违规上报接口，通过生成的report-to策略收集XSS攻击尝试日志"
+    "为小型静态站点起草一个入门级 `script-src 'self'` 和 `style-src 'self'` 策略。",
+    "为从 CDN 和内联 data URI 加载图片的页面在 `img-src` 中添加 `data:` 和 `https:`。",
+    "将输出切换为 meta 标签，以便在 HTML 文档中直接嵌入基础策略进行测试。",
+    "重置指令并从干净的基线重新构建一个最小策略。"
   ]
 }
