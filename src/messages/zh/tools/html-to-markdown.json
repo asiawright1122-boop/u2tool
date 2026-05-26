@@ -1,39 +1,17 @@
 {
-  "detailed_description": "HTML到Markdown转换工具通过解析HTML文档结构树（DOM），将标准HTML5标签映射为对应的Markdown语法。该工具采用基于正则表达式的标记识别算法，配合递归节点遍历技术，能够精准处理嵌套表格、代码块、自定义属性等复杂结构。对于前端开发者而言，该工具解决了从静态网页提取结构化内容时的手动转换痛点，特别适用于迁移技术文档、转换CMS内容或处理爬虫采集的HTML数据。转换过程支持保留原始HTML中的内联样式注释，并提供自定义标签映射规则配置。通过智能白名单过滤机制，可自动移除冗余的DOM属性，生成符合CommonMark规范的简洁Markdown代码。",
+  "detailed_description": "HTML to Markdown converter tool 通过解析 HTML 结构并将元素映射为对应的 Markdown 语法，把 HTML 文档转换为 Markdown。该工具使用稳健的解析引擎分析 HTML DOM 树，识别块级和行内元素，并生成相应的 Markdown 格式。它处理嵌套列表、保留对齐的表格转换，以及将行内样式转换为 Markdown（例如将 strong 标签转为粗体语法）等复杂 HTML 结构。开发者在将内容从 WYSIWYG 编辑器迁移到静态站点生成器、从网页归档创建文档，或为要求 Markdown 的平台准备 HTML 文章时会用到该工具。转换过程通过智能处理标题层级、链接引用和代码块保留来维持语义一致性。技术实现利用有状态遍历算法递归处理 HTML 节点，并根据元素类型应用转换规则，同时过滤浏览器特定元数据和内联脚本以确保输出干净。",
   "usage_steps": [
-    "访问工具页面后，在主界面拖放HTML文件或点击「粘贴代码」按钮输入文本",
-    "选择「转换模式」：基础转换或严格DOM解析（处理复杂嵌套结构）",
-    "在「高级选项」中配置标签映射规则（如将<div class=\"note\">映射为> [!NOTE]）",
-    "启用「保留样式」开关以保留内联CSS，关闭则自动剥离样式代码",
-    "点击「开始转换」后，左侧显示原始HTML，右侧实时更新Markdown预览",
-    "使用「一键复制」按钮导出结果，或通过「下载文件」保存.md格式文件"
+    "进入 html-to-markdown 转换器界面，找到 Source HTML 文本区域。",
+    "将 HTML 内容粘贴到左侧编辑面板，该面板支持 HTML 语法高亮。",
+    "在 Options 折叠菜单中调整转换设置，包括 GitHub Flavored Markdown 开关和换行偏好。",
+    "点击 Convert 按钮启动 DOM 解析和转换流程。",
+    "在右侧预览面板查看转换后的 Markdown，该面板使用内置 Markdown 解释器实时渲染更新。",
+    "使用 Copy to Clipboard 按钮保存输出，或使用 Download .md File 将转换后的文档保存到本地。"
   ],
   "usage_examples": [
-    "将HTML格式的技术文档批量转换为GitHub兼容的Markdown格式，保留代码块高亮配置",
-    "处理网页爬虫采集的电商商品详情页，提取核心文本内容生成Markdown格式的产品手册",
-    "自动化构建流程中，将React组件生成的静态HTML快照转换为可编辑的Markdown文案",
-    "在跨平台内容分发场景下，将HTML新闻稿转换为适合Notion的Markdown格式并保留信息架构"
-  ],
-  "faqs": [
-    {
-      "question": "Html To Markdown 是免费的吗？",
-      "answer": "是的，Html To Markdown 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
-    },
-    {
-      "question": "使用 Html To Markdown 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
-    },
-    {
-      "question": "支持哪些格式转换？",
-      "answer": "Html To Markdown 支持多种格式之间的转换。您可以在工具页面查看支持的输入和输出格式。"
-    },
-    {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Html To Markdown 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
-    },
-    {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Html To Markdown 的处理速度非常快，通常可以在几毫秒内完成。"
-    }
+    "将多页产品文档网站的 HTML 输出转换为 Markdown 文件，用于 Docusaurus 集成。",
+    "将带嵌入 CSS 的邮件 newsletter 模板转换为干净 Markdown，用于文档门户。",
+    "将包含代码块和表格的 WordPress 博客文章迁移为 Jekyll 兼容的 Markdown 格式。",
+    "将 HTML 格式的 API 响应处理为 Markdown 表格，用于技术报告和规格文档。"
   ]
 }
