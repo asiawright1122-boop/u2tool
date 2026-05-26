@@ -1,39 +1,15 @@
 {
-  "detailed_description": "本工具通过自动化解析网站源码及用户交互行为，生成符合中国《个人信息保护法》与欧盟GDPR双重要求的Cookie政策文档。其核心采用AST抽象语法树分析技术，深度扫描网页JavaScript代码与HTTP请求头，精准识别Session Cookie、Persistent Cookie及Third-party Cookie的生命周期与数据采集范围。开发者可自定义Cookie分类规则引擎，通过正则表达式匹配特定域名的跟踪行为，并利用机器学习模型预判数据敏感等级。生成的政策文档包含技术参数说明（如SameSite属性设置）、数据流向图示及合规性条款自检功能，特别适用于需要处理跨境数据传输的Web应用。",
+  "detailed_description": "Cookie Policy Generator 从几个网站详情和 Cookie 类型复选框创建入门级 Cookie 政策模板。输入网站名称、网站 URL 和联系邮箱，选择是否包含功能性、分析和营销 Cookie 部分，然后在浏览器中生成 Markdown 风格的政策。输出包含示例 Cookie 表格、浏览器设置指南、所包含服务的退出链接，以及自定义模板以适配你自己网站的提醒。",
   "usage_steps": [
-    "1. 在输入框填写目标网站完整域名（含HTTPS协议标识）",
-    "2. 选择扫描模式：自动抓取全站资源 或 上传包含Cookie设置的HTTP Archive (.har) 文件",
-    "3. 在规则配置面板勾选适用的监管框架（GB/T 35273-2020、GDPR、CCPA）",
-    "4. 调整Cookie分类阈值滑块，设置最大追踪深度（1-5级）与排除路径黑名单",
-    "5. 在预览窗口查看生成的政策文本，点击高亮标记查看对应的技术检测依据",
-    "6. 导出时选择JSON Schema格式或标准化XML文档，并获取SHA-256校验指纹"
+    "输入网站名称、网站 URL 和联系邮箱。",
+    "保持必要 Cookie 启用，并选择是否包含功能性、分析和营销 Cookie 部分。",
+    "点击 Generate 创建 Cookie 政策文本。",
+    "查看生成的模板，为你的网站进行自定义，然后复制输出。"
   ],
   "usage_examples": [
-    "1. 电商SaaS平台需为入驻商家生成定制化Cookie政策，自动适配不同店铺的支付网关与营销工具",
-    "2. 金融科技APP在灰度发布阶段，通过上传测试环境.har文件快速生成合规声明",
-    "3. 跨境运营的游戏网站需同步生成中英双语政策文档，自动标注数据本地化存储节点",
-    "4. 政府采购系统升级时，通过设置Cookie追踪深度为1级，严格限制非必要跟踪行为"
-  ],
-  "faqs": [
-    {
-      "question": "Cookie Policy Generator 是免费的吗？",
-      "answer": "是的，Cookie Policy Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
-    },
-    {
-      "question": "使用 Cookie Policy Generator 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
-    },
-    {
-      "question": "可以批量生成吗？",
-      "answer": "是的，Cookie Policy Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
-    },
-    {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Cookie Policy Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
-    },
-    {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Cookie Policy Generator 的处理速度非常快，通常可以在几毫秒内完成。"
-    }
+    "个人网站站长创建列出必要和功能性 Cookie 的初稿。",
+    "小型博客添加分析 Cookie 以包含基本的 Google Analytics 示例行和退出链接。",
+    "落地页站长启用营销 Cookie 以包含 Facebook Pixel 示例行。",
+    "开发者复制生成的 Markdown 风格文本，在发布 Cookie 政策页面前进行编辑。"
   ]
 }
