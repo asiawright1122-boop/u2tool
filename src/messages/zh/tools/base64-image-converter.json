@@ -1,15 +1,33 @@
 {
-  "detailed_description": "Base64图像转换器将图像（PNG、JPG、GIF、SVG、WebP）编码为Base64数据URI字符串，并将Base64解码回图像。",
+  "detailed_description": "Base64 Image Converter 处理两个小型浏览器工作流：图像转 Base64 和 Base64 转图像预览。编码模式下，上传或拖拽图像文件，页面使用浏览器 FileReader API 读取选定的图像，显示文件名、大小、MIME 类型、预览和可复制的 data URL。解码模式下，粘贴原始 Base64 图像字符串或完整的 data URL，预览解码后的图像，加载完成后可下载预览。适合小图标、邮件模板实验、API 载荷检查、CSS background-image 代码片段和自包含 HTML 示例。它不是图像压缩器、批量转换器、元数据编辑器或格式转码工具；Base64 文本通常比原始二进制文件大约三分之一。",
   "usage_steps": [
-    "上传图像或粘贴Base64",
-    "编码时：拖动图像",
-    "解码时：粘贴Base64",
-    "预览结果",
-    "复制或下载"
+    "需要从本地图像文件获取可复制的 data URL 时选择 Image to Base64。",
+    "将图像拖拽到上传区域或点击区域从设备选择图像。",
+    "复制前查看预览、文件名、文件大小、MIME 类型和生成的 Base64 输出。",
+    "需要检查原始 Base64 字符串或完整 data:image URL 时切换到 Base64 to Image。",
+    "粘贴 Base64 值，解码它，使用预览确认图像加载正常后再下载或重新使用。"
   ],
   "usage_examples": [
-    "将图标作为数据URI嵌入CSS",
-    "转换API Base64图像",
-    "为电子邮件创建内嵌图像"
+    "前端开发者将小型 SVG 或 PNG 图标转为 data URL 用于快速 CSS 原型。",
+    "API 测试人员粘贴 Base64 图像响应以确认它解码为预期的视觉资源。",
+    "邮件设计师检查小型内联图像 data URL 是否能正确渲染后再放入模板。"
+  ],
+  "faqs": [
+    {
+      "question": "应该对网站上的每张图片都进行 Base64 编码吗？",
+      "answer": "通常不建议。Base64 会增加文本大小并使缓存更困难，因此最适合小型资源、原型、测试或特殊嵌入场景。"
+    },
+    {
+      "question": "可以解码没有 data:image 前缀的 Base64 吗？",
+      "answer": "可以。如果缺少前缀，页面会在预览结果前尝试常见的图像签名，如 JPEG、PNG、GIF 和 WebP。"
+    },
+    {
+      "question": "它会压缩或调整图像大小吗？",
+      "answer": "不会。它将选定的文件读取为 Base64 data URL 或预览粘贴的 Base64。不调整大小、压缩、裁剪或更改图像质量。"
+    },
+    {
+      "question": "转换时文件会上传吗？",
+      "answer": "可见的转换使用浏览器 FileReader 工作流处理选定的文件。除非你自己的策略允许，否则避免在在线工作流中使用私密文件。"
+    }
   ]
 }
