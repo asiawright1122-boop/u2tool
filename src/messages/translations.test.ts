@@ -45,6 +45,120 @@ function loadTranslations(lang: string): Record<string, unknown> {
   return deepMerge(baseMessages, rootMessages);
 }
 
+function getJsonFiles(dir: string): string[] {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  return entries.flatMap(entry => {
+    const entryPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      return getJsonFiles(entryPath);
+    }
+    return entry.isFile() && entry.name.endsWith('.json') ? [entryPath] : [];
+  });
+}
+
+function findDuplicateJsonMemberKeys(source: string): string[] {
+  const duplicates: string[] = [];
+  let i = 0;
+  let line = 1;
+  let col = 1;
+  const step = () => {
+    const ch = source[i++];
+    if (ch === '\n') {
+      line++;
+      col = 1;
+    } else {
+      col++;
+    }
+    return ch;
+  };
+  const peek = () => source[i];
+  const skipWs = () => {
+    while (/\s/.test(peek() ?? '')) step();
+  };
+  const parseString = () => {
+    const startLine = line;
+    const startCol = col;
+    let value = '';
+    step();
+    while (i < source.length) {
+      const ch = step();
+      if (ch === '"') {
+        return { value, line: startLine, col: startCol };
+      }
+      if (ch === '\\') {
+        const escaped = step();
+        if (escaped === 'u') {
+          value += source.slice(i, i + 4);
+          for (let n = 0; n < 4; n++) step();
+        } else {
+          value += escaped;
+        }
+      } else {
+        value += ch;
+      }
+    }
+    return { value, line: startLine, col: startCol };
+  };
+  const parseValue = (pathPrefix: string): void => {
+    skipWs();
+    const ch = peek();
+    if (ch === '{') {
+      parseObject(pathPrefix);
+      return;
+    }
+    if (ch === '[') {
+      parseArray(pathPrefix);
+      return;
+    }
+    if (ch === '"') {
+      parseString();
+      return;
+    }
+    while (i < source.length && !/[\s,\]}]/.test(peek() ?? '')) step();
+  };
+  const parseArray = (pathPrefix: string): void => {
+    step();
+    skipWs();
+    let index = 0;
+    while (i < source.length && peek() !== ']') {
+      parseValue(`${pathPrefix}[${index}]`);
+      skipWs();
+      if (peek() === ',') {
+        step();
+        index++;
+        skipWs();
+      }
+    }
+    if (peek() === ']') step();
+  };
+  const parseObject = (pathPrefix: string): void => {
+    step();
+    skipWs();
+    const seen = new Map<string, { line: number; col: number }>();
+    while (i < source.length && peek() !== '}') {
+      const key = parseString();
+      const keyPath = `${pathPrefix}.${key.value}`;
+      const previous = seen.get(key.value);
+      if (previous) {
+        duplicates.push(`${keyPath} at ${key.line}:${key.col} duplicates ${previous.line}:${previous.col}`);
+      } else {
+        seen.set(key.value, { line: key.line, col: key.col });
+      }
+      skipWs();
+      if (peek() === ':') step();
+      parseValue(keyPath);
+      skipWs();
+      if (peek() === ',') {
+        step();
+        skipWs();
+      }
+    }
+    if (peek() === '}') step();
+  };
+  parseValue('$');
+  return duplicates;
+}
+
 function getAllKeys(obj: Record<string, unknown>, prefix = ''): string[] {
   const keys: string[] = [];
   for (const [key, value] of Object.entries(obj)) {
@@ -72,6 +186,15 @@ describe('Translation Files', () => {
     languages.forEach(lang => {
       expect(() => loadTranslations(lang)).not.toThrow();
     });
+  });
+
+  it('should not have duplicate JSON member keys in message files', () => {
+    const duplicateEntries = getJsonFiles(messagesDir).flatMap(filePath => {
+      const duplicates = findDuplicateJsonMemberKeys(fs.readFileSync(filePath, 'utf-8'));
+      return duplicates.map(duplicate => `${path.relative(process.cwd(), filePath)} ${duplicate}`);
+    });
+
+    expect(duplicateEntries).toEqual([]);
   });
 
   it('should have all keys from English in other languages', () => {
