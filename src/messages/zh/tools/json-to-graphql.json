@@ -1,39 +1,16 @@
 {
-  "detailed_description": "本工具通过深度解析JSON对象的结构特征，自动生成符合GraphQL规范的Schema类型定义。其核心功能基于类型推断算法，能够递归遍历JSON的嵌套结构，识别标量类型（String/Int/Float/Boolean）、数组维度、嵌套对象关系，并智能判断是否生成接口（Interface）或联合类型（Union）。当开发者需要将REST API响应快速转化为GraphQL服务模型时，该工具能自动处理字段命名规范转换（如驼峰转蛇形）、空值容错处理以及字段验证规则生成。区别于传统转换器的是，本工具采用AST节点映射技术，在解析阶段即构建抽象语法树，确保生成的Schema符合GraphQL SDL规范。对于复杂嵌套结构，工具内置智能拆分机制，可自动提取子类型并建立引用关系，特别适用于电商平台商品数据、社交网络关系图谱等复杂数据模型的转换场景。",
+  "detailed_description": "JSON to GraphQL 转换器会在浏览器中从粘贴的 JSON 生成一个 GraphQL schema 起点。你可以设置根类型名称、加载示例对象、粘贴 JSON、点击 Convert、查看无效 JSON 的错误，并复制生成的 schema。组件使用 JSON.parse 解析输入，并将解析后的值和类型名称发送给本地 schema 生成辅助函数。可见的类型参考显示了对字符串、整数、浮点数、布尔值、类似 UUID 的值和 ISO 日期字符串的基础推断。该工具不会上传 JSON 文件，不选择严格或宽松推断模式，不添加 directive，不下载 .graphql 文件，不生成 TypeScript 接口，不保证 Apollo/Express/AppSync 集成，也不处理递归引用、多态类型、接口或生产级非空建模等高级 schema 设计问题。",
   "usage_steps": [
-    "打开JSON编辑器面板，粘贴原始JSON数据（支持拖拽文件上传）",
-    "在转换设置区选择类型推断模式：严格模式（精确匹配字段类型）或宽松模式（自动添加可空修饰符）",
-    "点击『生成Schema』按钮触发转换引擎，系统将实时显示AST解析树",
-    "在预览窗口查看生成的GraphQL Type定义，手动调整字段类型或添加自定义Directive",
-    "启用『自动补全』功能，工具会根据常见命名惯例补充缺失的字段描述",
-    "导出结果支持三种格式：SDL文件、TypeScript类型定义或直接复制到剪贴板"
+    "输入生成 schema 的根类型名称。",
+    "将 JSON 粘贴到文本区域，或点击 Load Sample。",
+    "点击 Convert 生成 GraphQL 输出。",
+    "如果输入无法解析，请查看错误消息。",
+    "当生成的 schema 可作为起点时，复制它。"
   ],
   "usage_examples": [
-    "电商平台前端团队将商品详情页的REST API响应转换为GraphQL Query类型，用于构建联邦网关",
-    "数据迁移项目中，将遗留系统的JSON日志格式自动转换为GraphQL订阅事件模型",
-    "社交应用后端开发者根据用户关系图谱的JSON样本，快速生成GraphQL接口定义",
-    "教育机构在GraphQL教学实验中，通过实时转换演示动态类型系统的特性"
-  ],
-  "faqs": [
-    {
-      "question": "Json To Graphql 是免费的吗？",
-      "answer": "是的，Json To Graphql 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
-    },
-    {
-      "question": "使用 Json To Graphql 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
-    },
-    {
-      "question": "支持哪些格式转换？",
-      "answer": "Json To Graphql 支持多种格式之间的转换。您可以在工具页面查看支持的输入和输出格式。"
-    },
-    {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Json To Graphql 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
-    },
-    {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Json To Graphql 的处理速度非常快，通常可以在几毫秒内完成。"
-    }
+    "从小型 JSON API 响应样本生成 GraphQL 类型起点。",
+    "加载示例数据，查看标量推断在输出中的表现。",
+    "从 mock JSON 创建草稿 schema，然后手动细化字段名和可空性。",
+    "将生成的输出复制到笔记或原型中，以便后续审查。"
   ]
 }
