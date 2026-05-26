@@ -1,39 +1,16 @@
 {
-  "detailed_description": "Docker Compose Generator是一款面向开发者的YAML配置文件生成工具，通过结构化表单输入实现docker-compose.yml的智能编排。该工具基于容器化应用部署需求，将复杂的服务依赖关系转化为可视化配置，支持MySQL、cache service、Nginx等15+常用服务模板的自动注入。开发者可通过服务发现机制快速建立微服务测试环境，或使用预设的健康检查模板配置容器探针。工具内核采用AST语法树解析技术，将用户输入的环境变量、端口映射、卷挂载等参数转换为符合Compose Schema v3.8规范的配置文件，同时支持自定义Dockerfile构建指令和覆盖网络配置。",
+  "detailed_description": "Docker Compose Generator 基于一小组预定义服务按钮创建简单的 docker-compose.yml 文件。你可以选择 Compose 版本，选择 MySQL、PostgreSQL、MongoDB、Redis、RabbitMQ、Elasticsearch、Nginx、MinIO、Adminer 或 MailHog 等服务，生成 YAML、复制、下载或清空选择。输出使用本地服务定义中的固定镜像、端口、环境变量值、重启设置和命名卷。本工具不提供可编辑的服务参数、自定义应用容器、依赖关系图、Schema 校验、语法高亮、Docker 安全加固、资源限制、构建上下文、健康检查或生产部署保证。",
   "usage_steps": [
-    "1. 在服务选择面板勾选所需容器组件（如MySQL 8.0、cache service 7.0）",
-    "2. 在配置矩阵中设置每个服务的环境变量（如MYSQL_ROOT_PASSWORD）",
-    "3. 通过拓扑图编辑器拖拽建立服务依赖关系",
-    "4. 在高级设置中配置自定义网络（custom networks）和卷挂载路径",
-    "5. 选择Compose版本规范（v3.7/v3.8/v2.4）并启用资源限制（CPU/内存）",
-    "6. 点击生成按钮获取经过Lint校验的完整YAML文件"
+    "从下拉菜单选择 Compose 版本。",
+    "从分组服务按钮中选择一个或多个预定义服务。",
+    "点击 Generate 创建 docker-compose.yml 文本。",
+    "查看生成的 YAML，如有需要在工具外手动调整。",
+    "复制输出或下载为 docker-compose.yml。"
   ],
   "usage_examples": [
-    "构建LAMP开发环境：配置Apache 2.4服务依赖MySQL 8.0，自动创建数据卷映射/var/www/html",
-    "微服务测试集群：生成包含cache service缓存、MongoDB分片和API网关的多容器拓扑",
-    "生产环境预演：为Jenkins CI/CD流水线生成包含Nginx负载均衡器的测试编排",
-    "定制化服务编排：通过command字段覆盖容器启动命令\\\"nginx -g 'daemon off';\\\"实现配置热加载"
-  ],
-  "faqs": [
-    {
-      "question": "Docker Compose Generator 是免费的吗？",
-      "answer": "是的，Docker Compose Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
-    },
-    {
-      "question": "使用 Docker Compose Generator 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
-    },
-    {
-      "question": "可以批量生成吗？",
-      "answer": "是的，Docker Compose Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
-    },
-    {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Docker Compose Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
-    },
-    {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Docker Compose Generator 的处理速度非常快，通常可以在几毫秒内完成。"
-    }
+    "为本地测试生成包含 PostgreSQL 和 Adminer 的起始 Compose 文件。",
+    "选择 Redis 或 RabbitMQ，将基础服务片段复制到原型堆栈中。",
+    "从内置默认值创建简单的 Nginx 或 MinIO 服务条目。",
+    "下载生成的 YAML，并在使用前手动编辑端口、密码或卷。"
   ]
 }
