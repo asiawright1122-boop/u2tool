@@ -1,39 +1,39 @@
 {
-  "detailed_description": "Favicon Generator 是面向Web开发者的专业图像处理工具，可将任意源图像（PNG/JPG/SVG）转换为符合W3C标准的多尺寸favicon图标集。该工具通过HTML5 Canvas实现无损图像缩放算法，自动输出16x16、32x32、48x48、64x64、128x128、256x256等6种主流分辨率，并封装为包含ICO、PNG、Apple Touch Icon的完整解决方案。开发者无需手动处理Photoshop图层或使用命令行工具，通过浏览器端实时渲染引擎即可获得经过WebP压缩优化的矢量图标。特别适用于响应式网站开发、PWA应用部署及跨浏览器兼容性调试，解决传统favicon制作流程中尺寸适配繁琐、格式转换复杂等痛点问题。",
+  "detailed_description": "Favicon Generator 从本地源图像创建 PNG 格式的 favicon 图标。上传图像，选择 16、32、48 或 64 像素等输出尺寸，生成预览，然后下载每个 PNG 或所有生成的尺寸。页面还会为生成的 PNG 文件创建简单的 HTML link 标签，你可以将它们复制到项目模板中。适用于快速 favicon 素材和原型。当前不打包 ICO 文件，也不生成所有平台特定的图标尺寸。",
   "usage_steps": [
-    "点击'选择文件'按钮上传源图像（支持PNG透明背景或SVG矢量图）",
-    "在尺寸配置面板勾选需要生成的分辨率（默认全选6种标准尺寸）",
-    "调整压缩参数：选择PNG-24或WebP格式，设置DPI适配选项（72/96/144）",
-    "通过实时预览窗口查看不同尺寸图标的显示效果，拖动裁剪框调整焦点区域",
-    "点击'生成图标集'触发异步处理，进度条完成后获取ZIP压缩包下载链接",
-    "复制HTML代码段到网页<head>区域，自动适配不同设备的浏览器解析需求"
+    "从设备上传源图像。",
+    "选择要生成的 favicon 尺寸。",
+    "点击 Generate 创建 PNG 预览。",
+    "下载单个尺寸或下载所有生成的 PNG 文件。",
+    "如果建议的 HTML link 标签与你的文件名匹配，复制它们。",
+    "在实际站点或浏览器环境中测试图标。"
   ],
   "usage_examples": [
-    "前端团队在重构企业官网时，需快速将设计稿中的SVG logo转换为多分辨率favicon",
-    "电商平台开发者为商品详情页生成带有动态水印的192x192尺寸PWA图标",
-    "个人博客站长通过批量压缩PNG图片优化favicon加载性能，提升PageSpeed评分",
-    "移动应用开发者将同一套图标资源适配Apple Touch Icon和Android Chrome两种规范"
+    "从方形 logo 创建 16x16 和 32x32 的 PNG favicon。",
+    "为浏览器标签页或内部工具生成 64x64 的图标。",
+    "复制 link 标签以快速插入 HTML 模板。",
+    "预览 logo 在小尺寸下是否仍然可辨认。"
   ],
   "faqs": [
     {
-      "question": "Favicon Generator 是免费的吗？",
-      "answer": "是的，Favicon Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+      "question": "生成器输出什么文件类型？",
+      "answer": "它为选定的尺寸输出 PNG 格式的 favicon 图像。"
     },
     {
-      "question": "使用 Favicon Generator 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+      "question": "会创建 .ico 文件吗？",
+      "answer": "不会。当前页面生成 PNG 文件和 HTML link 代码片段，而非 ICO 包。"
     },
     {
-      "question": "可以批量生成吗？",
-      "answer": "是的，Favicon Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+      "question": "可以生成哪些尺寸？",
+      "answer": "可见选项包括常见的方形尺寸，如 16、32、48 和 64 像素。"
     },
     {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Favicon Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+      "question": "可以下载所有生成的图标吗？",
+      "answer": "可以。页面可以触发下载所有生成的 PNG 尺寸。"
     },
     {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Favicon Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+      "question": "源图像应该是方形的吗？",
+      "answer": "方形源图像通常能产生最干净的 favicon 效果，因为画布输出是方形的。"
     }
   ]
 }
