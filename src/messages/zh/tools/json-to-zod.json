@@ -1,17 +1,16 @@
 {
-  "detailed_description": "JSON to Zod Schema工具通过静态类型推导技术，将输入的JSON数据结构自动转换为Zod验证模式。该工具采用AST解析器对JSON进行语法分析，构建抽象语法树后执行类型映射策略，精准识别基础类型、嵌套对象、数组及联合类型。针对可选字段采用启发式算法判断，支持深度嵌套结构的递归处理。开发者在构建TypeScript应用时，可借此工具快速生成运行时校验逻辑，特别适用于API请求体校验、配置文件解析、第三方数据接口契约定义等场景。工具内置类型推断优化器，可处理包含null值的复杂结构，并自动生成符合Zod v3语法的验证模式，包括z.object、z.array、z.union等组合类型。",
+  "detailed_description": "JSON to Zod 转换器在浏览器中将粘贴的 JSON 转换为基础 Zod Schema 代码片段。你可以设置导出的 Schema 名称，粘贴 JSON 或加载示例，点击 Convert，然后复制生成的 TypeScript 输出。转换器使用 JSON.parse 并将值映射为简单的 Zod 表达式，如字符串、数字、整数、布尔值、null、数组、对象，以及 email、URL、datetime 和 UUID 等字符串模式。还会使用 z.infer 导出推断的 TypeScript 类型。本工具不提供文件导入、.ts 模块下载、严格模式标志、判别联合类型检测、精炼生成、从缺失示例推断可选字段，也不会对齐 OpenAPI 或 Swagger 规范。",
   "usage_steps": [
-    "在代码编辑区粘贴或输入目标JSON数据，支持拖拽上传.json文件",
-    "选择类型解析模式：严格模式（精确匹配字段类型）或松散模式（自动识别潜在联合类型）",
-    "在类型映射面板中自定义特殊字段的类型转换规则（如将特定number字段映射为z.number().int()）",
-    "点击'生成Schema'按钮触发解析引擎，实时渲染生成的Zod代码预览",
-    "通过选项卡切换查看字段详细校验规则，手动调整字段可选性（.optional()）或默认值（.default()）",
-    "复制生成的TypeScript代码或下载.d.ts类型定义文件集成到项目中"
+    "在 Schema 名称字段中输入名称。",
+    "将 JSON 粘贴到输入文本区域或点击 Load Example。",
+    "点击 Convert 生成 Zod Schema 和推断类型。",
+    "查看空输入或无效 JSON 错误消息。",
+    "从输出面板复制生成的 TypeScript 代码。"
   ],
   "usage_examples": [
-    "前端开发中将后端API响应示例转换为Zod schema，配合React Hook Form实现类型安全的表单验证",
-    "微服务架构下生成gRPC接口数据校验规则，确保服务间通信的数据契约一致性",
-    "将旧系统的配置文件JSON转换为可执行的校验模式，用于Node.js应用的启动参数验证",
-    "自动化测试中基于测试数据样本生成测试数据工厂，结合Vitest实现精确的测试用例数据校验"
+    "从一个小型 API 响应样本生成起步的 Zod 对象 Schema。",
+    "原型开发 TypeScript 代码时为嵌套对象快速创建 Schema 片段。",
+    "使用示例 JSON 查看 email、URL、datetime、UUID、数组和嵌套对象的映射方式。",
+    "复制生成的 Schema 和 z.infer 类型到本地项目中手动审阅。"
   ]
 }
