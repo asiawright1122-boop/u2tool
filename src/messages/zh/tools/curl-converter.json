@@ -1,39 +1,16 @@
 {
-  "detailed_description": "cURL Converter是一款面向开发者的协议解析工具，可将标准cURL命令行指令精准转换为多种编程语言的等效网络请求代码。该工具基于自研的语法树解析引擎，支持HTTP/HTTPS协议全方法转换，完整保留请求头、请求体、SSL验证、代理设置等参数配置。开发者可直接粘贴curl -X POST等命令，通过动态语言适配模块自动生成Python Requests、JavaScript Fetch、Java OkHttp等框架代码。其核心价值在于解决跨语言调试API时的手动转换痛点，特别适合微服务接口联调、自动化测试脚本迁移、第三方API文档转换等场景，有效避免因参数遗漏导致的502错误或认证失败问题。",
+  "detailed_description": "cURL Converter 将粘贴的 curl 命令转换为 JavaScript（fetch）、Python（requests）、PHP（curl_setopt）、Go（net/http）或 Java（java.net.http）的等效请求代码。一个小型基于正则的解析器从命令中读取 `-X` 方法、`-H` 头部和 `-d` 或 `--data` 请求体，然后为所选语言输出模板代码片段，你可以从输出区域复制。本工具仅涵盖基本 HTTP 请求，不处理 cookies、`--cookie-jar`、文件上传、multipart 表单、`-u` 基本认证、客户端证书、`-L` 跟随重定向、`-G` 等查询字符串标志、Ruby 或 Node Axios 输出，也不提供语法高亮和可下载文件。",
   "usage_steps": [
-    "在输入框粘贴标准cURL命令（如curl -X GET 'https://api.example.com/data' -H 'Authorization: Bearer xxx'）",
-    "从下拉菜单选择目标语言（支持JavaScript/Fetch、Python/Requests、Java/OkHttp、Go/Net等8种组合）",
-    "勾选'保留注释'选项以生成带参数说明的代码注释",
-    "点击'转换'按钮触发语法解析引擎进行AST转换",
-    "在输出面板查看带语法高亮的生成代码",
-    "点击'复制'按钮将代码直接粘贴到开发环境使用"
+    "将 curl 命令粘贴到文本区域，包括 URL 以及任何 `-X`、`-H` 或 `-d` 标志。",
+    "从下拉菜单选择输出语言：JavaScript、Python、PHP、Go 或 Java。",
+    "点击 Convert 从解析的方法、头部和请求体生成请求代码。",
+    "在输出面板中查看生成的代码。",
+    "点击 Copy Code 将代码片段复制到剪贴板以便手动审阅。"
   ],
   "usage_examples": [
-    "前端开发者将测试接口的cURL示例转换为Vue项目中的Axios请求代码",
-    "Python爬虫工程师将调试好的curl命令转为带Session保持的Requests实现",
-    "移动端开发人员将API文档中的curl示例转为iOS项目的Objective-C NSURLSession代码",
-    "运维工程师将故障排查时记录的curl请求转为Shell脚本用于自动化监控"
-  ],
-  "faqs": [
-    {
-      "question": "Curl Converter 是免费的吗？",
-      "answer": "是的，Curl Converter 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
-    },
-    {
-      "question": "使用 Curl Converter 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
-    },
-    {
-      "question": "支持哪些格式转换？",
-      "answer": "Curl Converter 支持多种格式之间的转换。您可以在工具页面查看支持的输入和输出格式。"
-    },
-    {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Curl Converter 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
-    },
-    {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Curl Converter 的处理速度非常快，通常可以在几毫秒内完成。"
-    }
+    "将简单的 `curl -X POST -H 'Content-Type: application/json' -d '{...}'` 命令转换为 JavaScript `fetch` 代码片段。",
+    "从带有 Bearer 授权头的 curl 命令生成 Python `requests` 调用。",
+    "将带自定义头部的 GET 请求翻译为 Go `net/http` 示例。",
+    "从 curl POST 生成 Java `HttpClient` 代码片段作为手动编辑的起点。"
   ]
 }
