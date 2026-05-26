@@ -1,39 +1,15 @@
 {
-  "detailed_description": "本工具通过解析JSON语法结构，将其键值对映射为XML节点层次模型，实现数据格式转换。JSON对象转换为XML元素，数组类型自动转换为重复节点或带索引属性的集合。系统内置高性能解析器，支持嵌套结构展开、特殊字符转义（如CDATA段处理），并自动检测编码格式（UTF-8/UTF-16）。开发者常需此工具应对跨平台数据交互场景：如将REST API返回的JSON数据适配为传统企业系统所需的SOAP格式；将现代配置文件迁移至仅支持XML的遗留系统；或构建跨域数据交换中间件。转换过程采用DOM树构建技术，确保节点层级准确对应，支持自定义命名空间注入和XSD Schema验证，输出符合W3C XML 1.0标准。",
+  "detailed_description": "JSON to XML 转换器在浏览器中将粘贴的 JSON 转换为简单的 XML 字符串。它解析 JSON 文本区域的内容，用 XML 声明包裹结果，将对象键转换为元素名称，将数组转换为重复的 item 元素，并将原始值写为文本内容。无效 JSON 会显示错误消息，生成的 XML 可从输出文本区域复制。本工具最适合对简单 JSON 结构进行快速格式化测试，而非基于 Schema 的 XML 生成。",
   "usage_steps": [
-    "拖拽上传JSON文件或在多行文本框输入原始数据",
-    "在'Root Element'输入框指定XML根节点名称（默认为'root'）",
-    "展开'Advanced Settings'配置命名空间URI（可选）",
-    "选择数组处理模式：重复元素模式或带_index属性的单元素模式",
-    "点击'Preview'实时查看带语法高亮的转换结果",
-    "点击'Export'下载XML文件或复制剪贴板至开发环境"
+    "将有效的 JSON 粘贴到 JSON 文本区域。",
+    "点击 Convert 解析输入并生成 XML。",
+    "查看 XML 输出或无效 JSON 错误消息。",
+    "从输出文本区域复制生成的 XML。"
   ],
   "usage_examples": [
-    "将微服务返回的JSON响应转换为符合企业ESB要求的XML消息体",
-    "迁移React应用的本地化配置文件至ASP.NET传统项目（需XML格式）",
-    "构建数据库导入中间件：将MongoDB的JSON导出转换为SQL Server的XML Bulk Insert格式",
-    "生成电商平台商品目录的XML Feed供Google Merchant Center抓取"
-  ],
-  "faqs": [
-    {
-      "question": "Json To Xml 是免费的吗？",
-      "answer": "是的，Json To Xml 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
-    },
-    {
-      "question": "使用 Json To Xml 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
-    },
-    {
-      "question": "支持哪些格式转换？",
-      "answer": "Json To Xml 支持多种格式之间的转换。您可以在工具页面查看支持的输入和输出格式。"
-    },
-    {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Json To Xml 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
-    },
-    {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Json To Xml 的处理速度非常快，通常可以在几毫秒内完成。"
-    }
+    "将一个小型 JSON 对象转换为 XML 以便快速示例。",
+    "测试数据格式时将简单数组转换为重复的 item 元素。",
+    "查看嵌套 JSON 对象如何表示为子 XML 元素。",
+    "从粘贴的 JSON 样本中复制生成的 XML 用于本地原型。"
   ]
 }
