@@ -1,39 +1,17 @@
 {
-  "detailed_description": "本工具通过交互式界面生成符合Node.js项目规范的package.json文件，支持自定义元数据、依赖管理、构建配置及脚本定义。开发者可通过动态表单配置name、version、description等基础字段，同时支持添加dependencies/devDependencies对第三方库进行版本锁定。核心功能包含智能脚本生成器（如webpack构建、jest测试命令）和ESLint/TSLint配置模板集成。工具采用客户端JavaScript实时校验JSON Schema格式，并提供语义化版本号自动递增功能。对于团队协作场景，可保存配置模板为JSON快照，确保多环境配置一致性。开发者无需手动编写JSON结构，避免语法错误，提升项目初始化效率40%以上。",
+  "detailed_description": "package.json Generator 是一个用于创建和配置 Node.js 项目清单的工具。它通过结构化界面生成 package.json 文件，让开发者填写项目元数据、依赖层级和执行脚本。相比手动编辑，该工具有助于减少语法错误或版本范围冲突，并支持 npm、yarn 和 pnpm 包管理器。开发者可以通过表单输入定义依赖、版本范围、peerDependencies 和 optionalDependencies。该工具还可配置脚本钩子，便于与 Webpack 或 Babel 等构建工具集成。它适合初始化 Node.js 项目、服务型应用或保持多个项目的清单结构一致。",
   "usage_steps": [
-    "在项目名称输入框填写小写无空格的模块标识符",
-    "选择语义化版本号模式（MAJOR.MINOR.PATCH）或手动输入",
-    "在依赖管理面板搜索并添加第三方模块及其版本范围",
-    "展开高级配置折叠面板设置repository类型和URL",
-    "在脚本生成器选择预设模板（如'build': 'webpack --mode production'）",
-    "点击'生成并下载'按钮获取经过JSONLint验证的配置文件"
+    "选择框架预设（React、Node.js、Vue 等）以预填所需依赖。",
+    "使用 npm 命名约定输入项目元数据，包括 name、version、description 和 author。",
+    "通过带版本范围选择的依赖输入添加依赖（exact、caret、tilde）。",
+    "使用预定义模板（start、build、test）或自定义 Node.js CLI 命令配置脚本。",
+    "启用高级选项，例如 private 标记、模块类型（CommonJS/ESM）或 engines 限制。",
+    "验证生成输出，并下载 package.json。"
   ],
   "usage_examples": [
-    "团队协作：前端团队统一配置jest测试脚本和eslint规则",
-    "开源项目初始化：快速生成包含peerDependencies和bundledDependencies的配置",
-    "微服务架构：批量创建包含相同私有仓库配置的基础package.json",
-    "教学环境：为学生生成预配置typescript和webpack-dev-server的模板"
-  ],
-  "faqs": [
-    {
-      "question": "Package Json Generator 是免费的吗？",
-      "answer": "是的，Package Json Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
-    },
-    {
-      "question": "使用 Package Json Generator 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
-    },
-    {
-      "question": "可以批量生成吗？",
-      "answer": "是的，Package Json Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
-    },
-    {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Package Json Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
-    },
-    {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Package Json Generator 的处理速度非常快，通常可以在几毫秒内完成。"
-    }
+    "创建包含 Express 的 Node.js API 服务，并添加 Babel 和 ESLint 等 devDependencies 及对应脚本。",
+    "生成 React 应用清单，包含 Webpack 构建脚本、CSS-in-JS 依赖和 Husky git hooks。",
+    "构建 CLI 工具的 package.json，包含 bin 映射、commander.js 集成和跨平台执行配置。",
+    "迁移旧 Bower 项目时，将依赖转换为 npm 格式，并更新版本范围和脚本。"
   ]
 }

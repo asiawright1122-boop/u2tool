@@ -1,39 +1,16 @@
 {
-  "detailed_description": "JSON to Kotlin 转换工具基于AST解析技术，将JSON结构映射为Kotlin数据类模型。该工具深度集成Kotlinx.serialization库特性，支持自动生成@Serializable注解类、伴生对象及序列化方法。开发者通过反射机制获取JSON键值对类型信息后，采用KotlinPoet代码生成框架动态构建数据类，特别处理嵌套对象、集合类型及可空字段的转换逻辑。适用于Android端API响应解析、微服务间数据契约定义、配置文件对象化等场景，可减少80%手动建模工作量。其独创的类型推断算法能准确识别GeoJSON坐标、时间戳等特殊格式，并支持自定义类型适配器扩展。",
+  "detailed_description": "JSON to Kotlin 转换器会在浏览器中将粘贴的顶层 JSON 对象转换为 Kotlin class 代码。你可以设置根类名、包名，选择不使用序列化器，或选择 Moshi、Gson、Kotlinx Serialization 注解，并切换 data class 和可空输出选项。该工具包含 Load Sample 按钮，使用 JSON.parse 解析 JSON，生成代码，对无效输入或非对象输入显示错误，并允许复制输出。它适合快速搭建模型代码脚手架，不会分析 OpenAPI 文件、创建 sealed class 层级、推断特定领域适配器或下载 `.kt` 文件。",
   "usage_steps": [
-    "在左侧输入区域粘贴标准JSON文本，支持拖拽文件导入",
-    "勾选'生成Parcelable'或'Implement Serializable'接口选项",
-    "通过下拉菜单选择Kotlin语言版本（1.3-1.8）",
-    "在右侧代码预览面板查看实时生成的data class结构",
-    "点击'Adjust Field Names'手动修正不符合Kotlin命名规范的键",
-    "点击'下载ZIP'获取包含完整序列化配置的源码包"
+    "将有效的顶层 JSON 对象粘贴到输入文本区域，或点击 Load Sample。",
+    "按需设置 class name 和 package name 字段。",
+    "选择序列化器选项，并切换 data class 或 nullable 输出选项。",
+    "点击 Convert 生成 Kotlin 代码，并查看输出或错误消息。",
+    "从输出文本区域复制生成的 Kotlin 代码。"
   ],
   "usage_examples": [
-    "将OpenAPI规范生成的JSON Schema快速转换为Android网络请求模型",
-    "将MongoDB文档结构导出为Kotlin数据类用于Ktor后端服务",
-    "游戏开发中将Unity配置文件JSON转换为带@JvmField注解的数据容器",
-    "团队协作时统一前后端数据模型，通过生成的代码建立类型契约"
-  ],
-  "faqs": [
-    {
-      "question": "Json To Kotlin 是免费的吗？",
-      "answer": "是的，Json To Kotlin 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
-    },
-    {
-      "question": "使用 Json To Kotlin 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
-    },
-    {
-      "question": "支持哪些格式转换？",
-      "answer": "Json To Kotlin 支持多种格式之间的转换。您可以在工具页面查看支持的输入和输出格式。"
-    },
-    {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Json To Kotlin 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
-    },
-    {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Json To Kotlin 的处理速度非常快，通常可以在几毫秒内完成。"
-    }
+    "从小型 API 响应对象生成 Kotlin data class 起点。",
+    "对同一个 JSON 示例比较 Moshi、Gson 和 Kotlinx 注解输出。",
+    "原型设计模型时，从粘贴的 JSON 对象创建可空 Kotlin 字段。",
+    "加载示例 JSON，调整根类或包名后复制代码。"
   ]
 }
