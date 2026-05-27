@@ -1,35 +1,39 @@
 {
-  "detailed_description": "该工具实现TOML与JSON格式的双向无损转换，基于解析器-序列化架构。采用Rust编写的核心解析引擎支持完整TOML 1.0.0规范及JSON5扩展特性，能精确处理嵌套表（nested tables）、数组嵌套（array of tables）、日期时间等复杂数据结构。转换过程保留原始格式的注释、空格和键值顺序，通过抽象语法树（AST）进行中间表示转换。开发者在跨平台配置迁移（如将Cargo.toml转换为package.json）、调试配置文件解析错误或需要可视化JSON结构时特别有用。特有注释保留功能可帮助运维人员跟踪配置变更历史，支持自定义缩进规格（2-8空格）和Unicode转义控制。",
+  "detailed_description": "TOML/JSON Converter 提供轻量级的浏览器端简单 TOML 与 JSON 转换。选择 TOML to JSON 或 JSON to TOML，将文本粘贴到输入文本区域；如果是 TOML 转 JSON，可选择 2 spaces、4 spaces 或 minified JSON 缩进，然后点击 Convert。TOML 解析支持注释、基础 key=value 赋值、dotted keys、简单 section headers、quoted strings、booleans、numbers 和 inline arrays。JSON 转 TOML 使用 JSON.parse，并将标量值和嵌套普通对象写为 TOML tables。工具提供 Load Sample、Swap、Copy 和 Clear。它不使用 WebAssembly、不构建 AST、不验证 schema、不保留 TOML 注释、不支持 array-of-tables 或每一种 TOML 数据类型、不提供带行号的诊断，也不下载文件。",
   "usage_steps": [
-    "访问工具页面后，在顶部下拉菜单选择转换方向（TOML→JSON或JSON→TOML）",
-    "在左侧编辑器粘贴原始代码，支持拖拽文件导入（最大2MB）",
-    "勾选'保留注释'复选框并设置目标格式缩进量（默认4空格）",
-    "点击'转换'按钮触发实时解析，错误面板将显示语法问题",
-    "在右侧输出区域查看带语法高亮的转换结果",
-    "使用'下载'按钮保存文件或点击'复制'将结果存入剪贴板"
+    "从模式下拉菜单选择 TOML to JSON 或 JSON to TOML。",
+    "如果转换 TOML 到 JSON，选择 2 spaces、4 spaces 或 Minified 缩进。",
+    "将文本粘贴到输入文本区域，或点击 Load Sample。",
+    "点击 Convert 生成输出文本区域。",
+    "当你想反向转换时，使用 Swap 将输出移回输入。",
+    "点击 Copy 复制生成的输出，或点击 Clear 重置两个文本区域。"
   ],
   "usage_examples": [
-    "将Rust项目中的Cargo.toml转换为JSON格式供Node.js环境解析",
-    "将含注释说明的Kubernetes ConfigMap JSON模板转换为TOML格式",
-    "自动化流水线中将GitHub Actions工作流文件（YAML）经JSON中间格式转为TOML",
-    "调试Terraform配置时将JSON格式的状态文件转换为可读性更强的TOML格式"
+    "将包含 sections 和 arrays 的小型 TOML 配置转换为 JSON，以便快速检查。",
+    "将简单 JSON 对象转换为 TOML table 输出，作为配置文件草稿。",
+    "加载示例 TOML 并转换，然后在 2 spaces 和 minified 输出之间切换缩进。",
+    "转换后使用 Swap，对简单片段做快速往返检查。"
   ],
   "faqs": [
     {
-      "question": "Toml Json 是免费的吗？",
-      "answer": "是的，Toml Json 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+      "question": "转换器会保留 TOML 文件中的注释吗？",
+      "answer": "不会，JSON 原生不支持注释，因此 TOML 转 JSON 时会去除注释。"
     },
     {
-      "question": "使用 Toml Json 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+      "question": "工具如何处理无效的 TOML 或 JSON 语法？",
+      "answer": "工具会提供清晰的错误消息，说明遇到的语法错误位置和性质。"
     },
     {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Toml Json 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+      "question": "可以在两种格式之间转换嵌套结构和数组吗？",
+      "answer": "可以处理简单嵌套对象和数组，但不支持 array-of-tables 或所有 TOML 数据类型。"
     },
     {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Toml Json 的处理速度非常快，通常可以在几毫秒内完成。"
+      "question": "转换有文件大小限制吗？",
+      "answer": "转换在浏览器客户端执行，因此受设备可用内存限制。"
+    },
+    {
+      "question": "使用这个在线转换器时我的数据安全吗？",
+      "answer": "转换在你的浏览器本地完成，不会发送到服务器。"
     }
   ]
 }
