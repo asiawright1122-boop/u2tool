@@ -1,17 +1,39 @@
 {
-  "detailed_description": "JWT Decoder 是一个强大的在线工具，专为开发人员和安全专家设计，用于解码和检查 JSON Web Token (JWT)。JWT 在现代 web 应用程序中广泛用于身份验证和授权，但其内容通常以编码形式呈现，不便于直接阅读。JWT Decoder 能够快速解码 JWT，展示其头部（Header）、载荷（Payload）和签名（Signature）部分，帮助用户验证和调试 JWT 的内容。\n\n用户为何需要 JWT Decoder？\n1. **调试和测试**：在开发过程中，开发人员可以使用 JWT Decoder 来检查 JWT 的有效性和内容，确保身份验证流程正确无误。\n2. **安全审计**：安全专家可以使用此工具来验证 JWT 的签名，确保其未被篡改。\n3. **教育和学习**：对于初学者来说，通过 JWT Decoder 了解 JWT 的结构和工作原理，可以更好地掌握这一重要的身份验证技术。\n\nJWT Decoder 的工作原理：\nJWT 通常由三部分组成，每部分通过点号（.）分隔。头部通常包含令牌的类型和签名算法，载荷包含实际的声明信息，签名用于验证令牌的完整性和真实性。JWT Decoder 接收一个完整的 JWT 字符串，使用指定的算法解码头部和载荷，验证签名，并显示所有部分的详细信息。",
+  "detailed_description": "JWT Decoder 可帮助开发者在不编写本地脚本的情况下检查 JSON Web Token 的可见部分。将 token 粘贴到输入框后，页面会解码 Base64URL header 和 payload，并以可读布局显示 header、payload、原始 signature 段和 claim 表。它适合调试认证流程、检查 sub、role、iat、exp 等预期声明是否存在，并将 Unix 风格的过期时间转换为可读日期。该页面是解码和检查辅助工具，不是真伪校验器：它不会要求输入 secret 或 public key，也不能证明 token 可信。请用它快速理解 token 内容，然后在你的应用或安全工具中检查签名和授权规则。",
   "usage_steps": [
-    "Step 1: 打开 JWT Decoder 工具页面。",
-    "Step 2: 在“JWT Token”输入框中粘贴您需要解码的 JWT 字符串。",
-    "Step 3: 选择“解码并验证”选项，如果您有密钥，可以在“密钥”输入框中输入。",
-    "Step 4: 点击“解码”按钮，工具将自动解码 JWT 并显示结果。",
-    "Step 5: 在结果区域，查看头部（Header）、载荷（Payload）和签名（Signature）的详细信息。",
-    "Step 6: 如果需要进一步验证签名的有效性，可以点击“验证签名”按钮，工具将使用提供的密钥进行验证。"
+    "将 JWT 粘贴到 token 输入字段。",
+    "确认 token 具有 header、payload 和 signature 三段结构。",
+    "读取解码后的 header，检查 token 类型和算法元数据。",
+    "读取解码后的 payload 和 claim 表，检查用户、角色、issuer、issued-at 和 expiration 字段。",
+    "需要将解码后的 header 或 payload 放入 bug 报告或本地测试用例时，使用复制按钮。",
+    "如果存在 exp 声明，请查看显示的日期以判断 token 是否已过期。"
   ],
   "usage_examples": [
-    "Example 1: 开发人员在调试身份验证模块时，使用 JWT Decoder 解码从服务器返回的 JWT，检查载荷中的用户信息是否正确。",
-    "Example 2: 安全专家在进行渗透测试时，使用 JWT Decoder 验证 JWT 的签名，确保令牌未被篡改。",
-    "Example 3: 前端工程师在调试前端应用与后端服务器的交互时，使用 JWT Decoder 检查 JWT 的头部信息，确保使用了正确的签名算法。",
-    "Example 4: 初学者在学习 JWT 技术时，使用 JWT Decoder 了解 JWT 的结构，掌握如何解码和验证 JWT。"
+    "前端开发者检查登录响应是否包含预期的 role 声明，再启用仅管理员可见的页面。",
+    "后端开发者在调试授权不匹配时比较 staging 和 production token 的 payload。",
+    "QA 工程师粘贴样例 token，确认 exp 值是否符合会话超时测试用例。",
+    "支持工程师读取测试 token 中的非敏感声明，理解某个功能开关为什么不可用。"
+  ],
+  "faqs": [
+    {
+      "question": "这个 JWT Decoder 会验证签名吗？",
+      "answer": "不会。它会解码并显示 token 各部分以便检查。加密真实性检查需要正确的 secret 或 public key，并应在你的应用或可信安全工具中完成。"
+    },
+    {
+      "question": "可以把生产 token 粘贴到这个页面吗？",
+      "answer": "请谨慎。JWT payload 可能包含账户标识、角色、邮箱或其他敏感声明。尽可能使用测试 token 或脱敏示例。"
+    },
+    {
+      "question": "无效格式错误是什么意思？",
+      "answer": "标准 JWT 有三个由点号分隔的 Base64URL 部分。如果 token 部分数量不对，或某部分无法解码为 JSON，页面会报告错误。"
+    },
+    {
+      "question": "为什么不用密码也能读取 JWT？",
+      "answer": "大多数 JWT header 和 payload 是编码而非加密。解码能显示它们的 JSON 内容，但不能证明 token 有效或已授权。"
+    },
+    {
+      "question": "解码 JWT 后应先检查什么？",
+      "answer": "先检查 issuer、audience、subject、issued-at、expiration 以及 role 或 permission 声明，再与应用期望值比较。"
+    }
   ]
 }
