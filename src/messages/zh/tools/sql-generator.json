@@ -1,39 +1,16 @@
 {
-  "detailed_description": "SQL Generator是一款面向开发者的智能查询构建工具，通过结构化输入参数与数据库元数据解析，自动生成符合ANSI SQL-92标准及特定数据库方言的增删改查语句。该工具采用AST抽象语法树技术解析用户输入的表结构、字段约束和关联关系，结合内置的查询优化器生成执行计划，可输出包含JOIN嵌套、子查询、窗口函数等复杂逻辑的SQL语句。开发者在进行数据库迁移、报表开发或ORM调试时，可通过该工具快速生成规范化的SQL模板。其核心价值在于将E-R图解析、索引选择性评估和查询重写等数据库原理转化为可视化配置，支持MySQL、PostgreSQL、SQL Server等主流数据库的语法差异适配，输出结果包含EXPLAIN执行计划分析和安全审计提示。",
+  "detailed_description": "SQL Generator 会根据浏览器端表单中可见的字段创建简单 SQL 片段。你可以选择 SELECT、INSERT、UPDATE、DELETE 或 CREATE TABLE，编辑表名和相关字段，并复制生成的文本。SELECT 包含 columns、WHERE、ORDER BY 和 LIMIT 字段。INSERT 使用 columns 和 values。UPDATE 使用 SET 子句和 WHERE 子句。DELETE 使用 WHERE 子句。CREATE TABLE 使用自由填写的 schema definition 文本区域。该工具不会选择 SQL 方言、验证 schema 引用、上传数据库 schema、构建 JOIN 或子查询、分析执行计划、提供语法高亮、导出文件、创建事务包装，也不保证生成可直接用于生产的 SQL。",
   "usage_steps": [
-    "1. 在数据库类型下拉菜单选择目标RDBMS（如MySQL 8.0）",
-    "2. 输入包含字段名、数据类型、约束条件的CREATE TABLE语句",
-    "3. 选择操作类型（SELECT/INSERT/UPDATE/DELETE）并配置WHERE条件表达式",
-    "4. 在关联表面板拖拽建立JOIN关系，设置ON条件与表别名",
-    "5. 高级选项中启用DISTINCT去重或GROUP BY聚合配置",
-    "6. 点击生成按钮获取带语法高亮的SQL语句及执行计划分析报告"
+    "选择 SELECT、INSERT、UPDATE、DELETE 或 CREATE TABLE。",
+    "输入表名，并编辑该命令显示的字段。",
+    "对于 SELECT，编辑 columns、WHERE、ORDER BY 和 LIMIT 值。",
+    "对于 CREATE TABLE，编辑 schema definition 文本区域。",
+    "查看生成的 SQL 文本，并在它适合作为起点时复制。"
   ],
   "usage_examples": [
-    "开发电商系统时，快速生成包含用户、订单、商品三表关联的销售统计查询",
-    "将MongoDB的聚合管道转换为等效的PostgreSQL JSON函数查询语句",
-    "为数据库迁移项目批量生成带类型转换的INSERT语句，适配Oracle到MySQL的语法差异",
-    "通过可视化配置生成带CTE和ROW_NUMBER()的复杂查询，优化慢查询响应时间"
-  ],
-  "faqs": [
-    {
-      "question": "Sql Generator 是免费的吗？",
-      "answer": "是的，Sql Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
-    },
-    {
-      "question": "使用 Sql Generator 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
-    },
-    {
-      "question": "可以批量生成吗？",
-      "answer": "是的，Sql Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
-    },
-    {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Sql Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
-    },
-    {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Sql Generator 的处理速度非常快，通常可以在几毫秒内完成。"
-    }
+    "原型设计时为单表起草简单 SELECT 查询。",
+    "从粘贴的列和值列表创建基础 INSERT 语句。",
+    "使用手写 WHERE 子句生成 UPDATE 或 DELETE 语句。",
+    "在数据库工具中审查前，先草拟一个 CREATE TABLE 起始语句。"
   ]
 }
