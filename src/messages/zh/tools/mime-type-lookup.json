@@ -1,35 +1,17 @@
 {
-  "detailed_description": "MIME Type Lookup 是一款面向开发者的标准化文件类型查询工具，基于IANA（互联网数字分配机构）官方MIME类型注册表构建。该工具通过解析文件扩展名与对应MIME类型的关联关系，帮助用户精确获取RFC 6838标准定义的正式媒体类型。开发者在构建Web应用时，常需在HTTP头、API响应或文件处理模块中正确标识Content-Type，该工具通过内置的正则表达式引擎和模糊匹配算法，可快速定位如application/json、video/webm等精确类型定义。其技术架构包含预加载的SQLite数据库，支持通过文件扩展名反向查询MIME类型，或通过关键词（如'Portable Network Graphics'）匹配对应类型描述，确保在离线环境下仍能实现毫秒级响应。",
+  "detailed_description": "MIME Type Lookup 工具可帮助开发者根据文件扩展名或描述性关键词识别和验证媒体类型（MIME type）。该工具查询内部维护的扩展名与 MIME 类型映射数据库，覆盖常见文件扩展名及其对应的 IANA 注册 MIME 类型标识符，也包含一些企业环境中常见的非标准类型。开发者可用它排查 Web 服务器中错误的 Content-Type 头配置，验证 Web 应用的文件上传处理，或调试因 MIME 类型不匹配而导致内容被拒绝的跨平台数据交换问题。它支持从扩展名查类型，也支持从类型或描述反查相关扩展名。",
   "usage_steps": [
-    "访问工具页面后，在顶部搜索框输入目标文件扩展名（如'png'）或完整文件名",
-    "通过左侧'搜索模式'下拉菜单选择'扩展名匹配'或'描述关键词搜索'",
-    "在结果列表中定位精确MIME类型，查看对应IANA注册状态标识（如'标准'或'历史'）",
-    "点击右侧'代码片段'区域生成对应编程语言（如Python、Node.js）的Content-Type设置示例",
-    "切换'关联扩展名'标签页查看该MIME类型支持的备用扩展名列表",
-    "使用'错误报告'按钮提交未收录的新兴文件类型建议"
+    "打开工具界面，找到包含 By Extension 和 By Description 选项的搜索面板。",
+    "选择 By Extension 查询特定文件格式的 MIME 类型，或选择 By Description 使用技术描述搜索。",
+    "在查询字段输入文件扩展名（例如 .avif）或描述性关键词（例如 Portable Document Format）。",
+    "如果需要精确区分 MIME 子类型，可启用 Case-Sensitive 复选框。",
+    "点击 Search 执行查询，结果会显示 MIME type、关联扩展名和 IANA 状态。",
+    "使用目标 MIME 类型旁边的 Copy 按钮，将完整媒体类型字符串复制到剪贴板。"
   ],
   "usage_examples": [
-    "前端开发者在配置Webpack时验证SVG字体文件的正确MIME类型为'application/x-font-svf'",
-    "后端工程师调试API时发现返回JSON数据的Content-Type错误，通过工具确认应使用'application/json'",
-    "系统管理员在配置Nginx服务器时，批量查询WebP图片格式的MIME类型以添加至mime.types配置",
-    "移动应用开发者处理用户上传的PDF文件时，通过工具验证上传接口是否接受'application/pdf'类型"
-  ],
-  "faqs": [
-    {
-      "question": "Mime Type Lookup 是免费的吗？",
-      "answer": "是的，Mime Type Lookup 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
-    },
-    {
-      "question": "使用 Mime Type Lookup 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
-    },
-    {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Mime Type Lookup 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
-    },
-    {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Mime Type Lookup 的处理速度非常快，通常可以在几毫秒内完成。"
-    }
+    "前端开发者调试视频上传功能时，确认 .webm 文件应使用 video/webm 类型。",
+    "API 工程师构建文件验证系统时，确认 .xlsx 文档对应 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet。",
+    "DevOps 专家配置 Nginx 时，确保 .woff2 字体以 font/woff2 MIME 类型提供。",
+    "数据工程师处理邮件附件时，识别 .eml 文件需要 message/rfc822 MIME 类型。"
   ]
 }
