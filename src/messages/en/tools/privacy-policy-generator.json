@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The Privacy Policy Generator is a dynamic content-assembler that creates jurisdiction-specific, legally compliant privacy policies through a structured workflow. Technically, it employs a decision-tree algorithm to map user inputs—such as data collection methods, storage protocols, and geographic jurisdictions—to pre-vetted legal clauses stored in a normalized JSON schema. Users require this tool to meet regulatory requirements like GDPR, CCPA, or HIPAA when launching websites, mobile apps, or SaaS platforms. The generator analyzes business logic through conditional branching, integrating encryption protocols for secure data transmission and utilizing NLP to standardize user-defined data categories (e.g., 'PII' or 'non-PII') into legally recognized terminology. It dynamically assembles clauses for cookie usage, third-party integrations, data subject rights, and breach notification procedures, while applying logic gates to ensure compliance with selected regions. Technical validation occurs via schema.org metadata checks and automated policy readability scoring using Flesch-Kincaid metrics.",
+  "detailed_description": "The Privacy Policy Generator creates a general markdown-style privacy policy template from a browser-side form. Enter website name, website URL, company name, and contact email, then choose whether the template should include sections for personal data collection, cookies, analytics, ads, user accounts, and data selling. The Generate button fills a readonly textarea with a template that includes a last-updated date and a reminder to review, customize, and consult a legal professional. The tool does not scan websites, detect cookies, provide legal advice, guarantee GDPR/CCPA/HIPAA compliance, generate jurisdiction-specific policies, export PDF/HTML/YAML, provide an API, or track regulatory changes.",
   "usage_steps": [
-    "Select industry-specific compliance frameworks (e.g., GDPR, CCPA) from a taxonomy tree interface.",
-    "Input data handling workflows via structured forms for collection, processing, and retention stages.",
-    "Map geographic jurisdictions using a multiselect dropdown to trigger region-specific clauses.",
-    "Define cookie categories and third-party services through an interactive dependency graph.",
-    "Review auto-generated clauses in the WYSIWYG editor with highlighted compliance checkpoints.",
-    "Export the finalized policy in HTML, Markdown, or PDF formats with embedded schema.org metadata."
+    "Enter the website name, website URL, company name, and contact email.",
+    "Select which common sections apply: personal data, cookies, analytics, ads, user accounts, or data selling.",
+    "Click Generate to create the markdown-style privacy policy template.",
+    "Review and edit the generated text for your situation.",
+    "Copy the output when you are ready to move it into another editor for legal review."
   ],
   "usage_examples": [
-    "An e-commerce startup uses the tool to generate a GDPR-compliant policy after integrating Shopify and Stripe APIs.",
-    "A healthcare app developer creates HIPAA-aligned disclosures for patient data handling workflows.",
-    "A SaaS platform generates multi-language policies covering EU, California, and Brazil jurisdictions.",
-    "A non-profit organization configures donor data management clauses for recurring payment processing."
+    "Draft a starting privacy policy for a small website before professional review.",
+    "Include a cookies and analytics section for a prototype site that uses basic tracking.",
+    "Add an accounts section for a product demo that allows sign-ups.",
+    "Copy the generated markdown-style text into a document for manual editing."
   ]
 }
