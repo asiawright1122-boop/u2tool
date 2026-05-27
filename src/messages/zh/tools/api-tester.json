@@ -1,15 +1,35 @@
 {
-  "detailed_description": "API测试器允许您向任何API端点发送HTTP请求。支持所有HTTP方法、自定义头部、请求体，并以格式化方式显示响应。",
+  "detailed_description": "API Tester 会向你输入的端点发送基于浏览器的 HTTP 请求。可选择 GET、POST、PUT、PATCH、DELETE、HEAD 或 OPTIONS，编辑启用的请求头，为支持请求体的方法添加 body，然后点击 Send 查看响应状态、耗时、响应头和响应体。当浏览器可以读取响应体时，JSON 响应会被格式化以便阅读。工具还包含一个 JSONPlaceholder 示例，便于快速冒烟测试。由于请求通过浏览器 Fetch API 发出，目标服务器仍然控制 CORS 访问、认证、Cookie、速率限制以及响应体是否可读。",
   "usage_steps": [
-    "输入API端点URL",
-    "选择HTTP方法",
-    "根据需要添加头部",
-    "为POST/PUT输入请求体",
-    "发送请求并查看响应"
+    "输入 http 或 https 端点 URL，或加载 JSONPlaceholder 示例。",
+    "从 GET、POST、PUT、PATCH、DELETE、HEAD 或 OPTIONS 中选择请求方法。",
+    "使用 Headers 标签页启用、编辑、添加或移除请求头。",
+    "发送 POST、PUT 或 PATCH 请求体时使用 Body 标签页。",
+    "点击 Send，并在响应标签页查看状态、响应时间、响应头和响应体。",
+    "如果请求失败，检查显示的浏览器错误以及目标服务器的 CORS 策略。"
   ],
   "usage_examples": [
-    "测试API端点",
-    "调试API响应",
-    "探索第三方API"
+    "对公共 JSON 端点进行冒烟测试，并确认状态码和格式化后的响应体。",
+    "针对允许浏览器请求的本地开发 API 尝试 POST 请求体。",
+    "更改 Accept 或 Content-Type 请求头时比较响应头。",
+    "通过复制端点、方法和可见响应详情来记录一个简单 API 示例。"
+  ],
+  "faqs": [
+    {
+      "question": "API Tester 可以忽略浏览器 CORS 规则吗？",
+      "answer": "不可以。它使用浏览器 fetch，因此目标 API 必须允许当前浏览器来源，响应才能被读取。"
+    },
+    {
+      "question": "它会保存请求日志吗？",
+      "answer": "不会。当前工具只在页面中保留当前请求和响应。"
+    },
+    {
+      "question": "我可以测试需要认证的 API 吗？",
+      "answer": "你可以在合适时手动添加 Authorization 等请求头，但该工具不管理交互式登录流程、Cookie 会话或已保存密钥。"
+    },
+    {
+      "question": "为什么响应体为空或被阻止？",
+      "answer": "某些方法、重定向、不透明响应和 CORS 策略会阻止浏览器暴露可读响应体。"
+    }
   ]
 }
