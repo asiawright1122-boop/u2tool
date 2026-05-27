@@ -1,15 +1,16 @@
 {
-  "detailed_description": "API响应格式化工具使用语法高亮和可折叠树视图美化原始的JSON或XML格式的API响应。",
+  "detailed_description": "API Response Formatter 在浏览器中格式化粘贴的 JSON、原始 HTTP 响应或 XML 文本。可粘贴响应或加载 JSON、HTTP、XML 示例，选择 2 空格、4 空格或压缩的 JSON 缩进，可选对 JSON 对象键排序，在有 HTTP 响应时查看解析的状态码和头部，并复制格式化后的 body。JSON 通过本地响应解析器解析并使用 JSON 输出辅助格式化；XML 则进行简单的换行和缩进格式化。该工具不提供语法高亮、可折叠树视图、示例以外的手动格式选择、并排响应对比、Schema 验证、请求执行或文件导入/导出。",
   "usage_steps": [
-    "粘贴API响应",
-    "自动检测或选择格式",
-    "查看格式化输出",
-    "展开/折叠节点",
-    "复制格式化版本"
+    "将 JSON、XML 或原始 HTTP 响应粘贴到输入文本区。",
+    "可选加载 JSON、HTTP 或 XML 示例。",
+    "选择缩进大小，如需要可启用 JSON 对象键排序。",
+    "当输入包含 HTTP 响应时，查看解析的状态码和头部。",
+    "复制格式化后的 body 输出。"
   ],
   "usage_examples": [
-    "格式化压缩JSON",
-    "美化XML SOAP响应",
-    "比较API响应"
+    "将压缩的 JSON API 响应格式化为 2 或 4 空格缩进。",
+    "粘贴原始 HTTP 响应并检查其状态码、头部和格式化后的 body。",
+    "为紧凑的 XML 响应应用简单缩进。",
+    "在复制格式化 body 前按字母顺序排列 JSON 键。"
   ]
 }
