@@ -1,17 +1,16 @@
 {
-  "detailed_description": "HTML to Markdown converter tool 通过解析 HTML 结构并将元素映射为对应的 Markdown 语法，把 HTML 文档转换为 Markdown。该工具使用稳健的解析引擎分析 HTML DOM 树，识别块级和行内元素，并生成相应的 Markdown 格式。它处理嵌套列表、保留对齐的表格转换，以及将行内样式转换为 Markdown（例如将 strong 标签转为粗体语法）等复杂 HTML 结构。开发者在将内容从 WYSIWYG 编辑器迁移到静态站点生成器、从网页归档创建文档，或为要求 Markdown 的平台准备 HTML 文章时会用到该工具。转换过程通过智能处理标题层级、链接引用和代码块保留来维持语义一致性。技术实现利用有状态遍历算法递归处理 HTML 节点，并根据元素类型应用转换规则，同时过滤浏览器特定元数据和内联脚本以确保输出干净。",
+  "detailed_description": "HTML to Markdown 转换器将 HTML 文档转换为 Markdown 语法。它会解析 HTML 结构，并把常见元素映射为对应的 Markdown 表示，例如标题、段落、链接、列表和简单的行内格式。该工具适合将 WYSIWYG 编辑器或网页片段中的内容整理成 Markdown，用于文档、静态站点草稿或需要 Markdown 输入的平台。转换结果取决于输入 HTML 的结构；复杂布局、脚本、特殊样式或高度自定义的表格可能无法完整还原。",
   "usage_steps": [
-    "进入 html-to-markdown 转换器界面，找到 Source HTML 文本区域。",
-    "将 HTML 内容粘贴到左侧编辑面板，该面板支持 HTML 语法高亮。",
-    "在 Options 折叠菜单中调整转换设置，包括 GitHub Flavored Markdown 开关和换行偏好。",
-    "点击 Convert 按钮启动 DOM 解析和转换流程。",
-    "在右侧预览面板查看转换后的 Markdown，该面板使用内置 Markdown 解释器实时渲染更新。",
-    "使用 Copy to Clipboard 按钮保存输出，或使用 Download .md File 将转换后的文档保存到本地。"
+    "打开 html-to-markdown 转换器，并找到 HTML 输入区域。",
+    "将 HTML 内容粘贴到输入框中。",
+    "点击 Convert 将 HTML 转换为 Markdown。",
+    "查看生成的 Markdown 输出。",
+    "使用复制按钮将结果复制到剪贴板。"
   ],
   "usage_examples": [
-    "将多页产品文档网站的 HTML 输出转换为 Markdown 文件，用于 Docusaurus 集成。",
-    "将带嵌入 CSS 的邮件 newsletter 模板转换为干净 Markdown，用于文档门户。",
-    "将包含代码块和表格的 WordPress 博客文章迁移为 Jekyll 兼容的 Markdown 格式。",
-    "将 HTML 格式的 API 响应处理为 Markdown 表格，用于技术报告和规格文档。"
+    "将简单网页片段转换为 Markdown，用于文档草稿。",
+    "把 WYSIWYG 编辑器导出的 HTML 内容整理成 Markdown。",
+    "将包含标题、链接和列表的 HTML 文章转换为 Markdown。",
+    "在发布到支持 Markdown 的平台前，快速转换小段 HTML 内容。"
   ]
 }
