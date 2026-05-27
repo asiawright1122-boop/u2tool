@@ -1,39 +1,39 @@
 {
-  "detailed_description": "本工具通过解析Markdown语法树实现向HTML的精准转换，采用CommonMark规范解析引擎，支持GFM（GitHub Flavored Markdown）扩展语法。技术实现上，工具先将输入文本分解为抽象语法树（AST），通过递归遍历节点生成对应的HTML元素，同时保留原始格式语义。对于代码块、表格等复杂结构，采用正则匹配与DOM操作结合的方式进行精确转换。开发者可借此快速将文档、博客或技术说明转换为可嵌入网页的结构化HTML代码。工具特别适合需要批量处理Markdown文件、生成API文档或构建静态页面的场景，支持实时渲染预览功能，可同步展示HTML结构和样式效果，有效避免手动编码的格式错误。",
+  "detailed_description": "Markdown to HTML 转换器会在浏览器中将常见 Markdown 语法转换为经过清理的 HTML 预览输出。输入或粘贴 Markdown，查看渲染后的 HTML，并复制生成的标记。它处理日常语法，例如标题、强调、链接、行内代码、围栏代码块、引用和列表。该转换器适合快速文档草稿和片段，但复杂 Markdown 扩展可能不会与每个静态站点生成器或 CMS 完全一致。",
   "usage_steps": [
-    "访问工具页面后，在左侧代码编辑区输入或粘贴Markdown文本",
-    "通过顶部工具栏选择解析器版本（CommonMark或GFM）",
-    "勾选'保留原始缩进'选项以保持代码块格式",
-    "右侧实时预览窗口自动显示HTML渲染效果",
-    "点击'复制HTML'按钮提取纯净HTML代码",
-    "使用'导出文件'功能生成.html格式并下载"
+    "将 Markdown 粘贴或输入到编辑器中。",
+    "查看生成的 HTML 输出。",
+    "检查标题、链接、列表和代码块。",
+    "当预览符合预期时复制 HTML。",
+    "如果格式很关键，请在目标 CMS 中测试片段。",
+    "编辑 Markdown 并重复操作，直到输出正确。"
   ],
   "usage_examples": [
-    "技术团队将API文档Markdown文件转换为带折叠功能的HTML帮助手册",
-    "博客作者将多篇Markdown文章批量转为符合SEO规范的HTML内容",
-    "开发人员调试Markdown样式时实时查看HTML元素结构变化",
-    "教育机构将教学课件转换为可交互的HTML5演示文档"
+    "将 README 片段转换为 HTML，用于 CMS 字段。",
+    "发布文档前预览标题和列表。",
+    "为一小段格式化笔记创建 HTML。",
+    "检查行内代码和代码块会如何表示。"
   ],
   "faqs": [
     {
-      "question": "Markdown To Html 是免费的吗？",
-      "answer": "是的，Markdown To Html 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+      "question": "它支持所有 Markdown 扩展吗？",
+      "answer": "不支持。它支持常见 Markdown 模式，但平台特定扩展在其他地方可能渲染不同。"
     },
     {
-      "question": "使用 Markdown To Html 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+      "question": "生成的 HTML 会被清理吗？",
+      "answer": "页面会在显示前清理生成的 Markdown HTML。"
     },
     {
-      "question": "支持哪些格式转换？",
-      "answer": "Markdown To Html 支持多种格式之间的转换。您可以在工具页面查看支持的输入和输出格式。"
+      "question": "可以实时预览结果吗？",
+      "answer": "可以。输出会根据页面上的 Markdown 输入更新。"
     },
     {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Markdown To Html 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+      "question": "可以用于生产 HTML 吗？",
+      "answer": "可用于快速片段，重要输出请在目标 CMS 或渲染器中测试。"
     },
     {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Markdown To Html 的处理速度非常快，通常可以在几毫秒内完成。"
+      "question": "它会上传我的 Markdown 吗？",
+      "answer": "可见转换在浏览器页面中运行，不需要账户登录。"
     }
   ]
 }
