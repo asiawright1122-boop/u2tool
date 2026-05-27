@@ -1,39 +1,16 @@
 {
-  "detailed_description": "JSON Schema Generator 是一款面向开发者的智能模式推导工具，通过分析用户提供的JSON实例数据，自动生成符合Draft-07及Draft-2020-12规范的JSON Schema。该工具采用AST抽象语法树解析技术，对输入数据进行类型推断、嵌套结构分析和约束条件提取，能准确识别数组项类型、对象属性关系及必填字段等关键要素。开发者可通过该工具实现API请求验证、数据结构文档化、ETL流程规范化等场景需求，特别适用于微服务架构下的契约优先开发模式。其核心算法通过递归类型收敛和模式合并技术，在保证类型安全的同时最大限度保持数据结构的灵活性。",
+  "detailed_description": "JSON Schema Generator 会在浏览器中根据一个粘贴的 JSON 值创建 JSON Schema 文档。它使用 JSON.parse 解析输入，调用本地 generateFullSchema helper，并将格式化后的 schema 写入输出文本区域。你可以选择 Draft-07 或 Draft-2020-12，可选包含 examples，也可选将所有字段标记为 required，清空工具并复制生成的 schema。该工具不接受多个样本，不导入文件，不针对生成的 schema 验证其他数据，不检测 date-time 格式，不执行严格 null 分析，不生成递归引用，不推断条件 schema，也不保证每个高级 JSON Schema 功能都完全符合 draft。",
   "usage_steps": [
-    "1. 在输入面板的代码编辑器中粘贴或键入目标JSON数据",
-    "2. 在右侧面板选择目标Schema版本（Draft-07或Draft-2020-12）",
-    "3. 勾选'严格模式'选项以启用类型精确匹配或取消选择以允许类型联合",
-    "4. 调整'缩进级别'滑块设置生成Schema的格式化程度",
-    "5. 点击'生成Schema'按钮触发解析引擎并查看实时渲染结果",
-    "6. 通过'下载'按钮保存生成的Schema文件或复制到剪贴板"
+    "将一个有效 JSON 值粘贴到输入文本区域。",
+    "从 draft 下拉菜单选择 Draft-07 或 Draft-2020-12。",
+    "可选启用 examples，或将所有字段标记为 required。",
+    "点击 Generate 创建格式化的 schema 输出。",
+    "复制生成的 schema，或清空输入和输出。"
   ],
   "usage_examples": [
-    "API开发中根据示例响应数据快速生成请求体验证模式",
-    "将遗留系统中的JSON日志转换为结构化数据迁移方案",
-    "教学场景下生成标准化Schema示例辅助JSON规范学习",
-    "大数据管道中统一多个数据源的JSON格式描述"
-  ],
-  "faqs": [
-    {
-      "question": "Json Schema Generator 是免费的吗？",
-      "answer": "是的，Json Schema Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
-    },
-    {
-      "question": "使用 Json Schema Generator 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
-    },
-    {
-      "question": "可以批量生成吗？",
-      "answer": "是的，Json Schema Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
-    },
-    {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Json Schema Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
-    },
-    {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Json Schema Generator 的处理速度非常快，通常可以在几毫秒内完成。"
-    }
+    "从粘贴的 API 响应样本生成起始 schema。",
+    "比较包含和不包含 example 值时的输出差异。",
+    "在人工 review 前将所有字段标记为 required，得到更严格的 draft。",
+    "复制格式化后的 schema，作为文档或验证工作的起点。"
   ]
 }
