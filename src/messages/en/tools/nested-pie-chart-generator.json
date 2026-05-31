@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The Nested Pie Chart Generator is a specialized data visualization tool that creates multi-layered pie charts for representing hierarchical datasets through concentric rings. Technically, it processes hierarchical data structures by mapping parent-child relationships to inner and outer ring segments using SVG-based rendering for scalable vector graphics. Each layer's segment size corresponds to numerical values normalized within their hierarchy level, enabling proportional comparisons across categories. This tool addresses the need for visualizing complex datasets where relationships between primary categories (outer rings) and subcategories (inner rings) must be simultaneously analyzed, such as financial budget allocations across departments and sub-departments, market segmentation by region and demographic, or biological taxonomy classifications. The generator employs a two-stage data processing pipeline: first validating hierarchical integrity through parent-node validation, then calculating angular dimensions using polar coordinate transformations. Users can customize separation angles between rings, implement color-coding schemes via HEX/RGB inputs, and enable interactive legends with click-to-hide functionality. The output SVG maintains resolution independence for web and print applications, supporting accessibility standards through ARIA label integration for screen readers.",
+  "detailed_description": "The Nested Pie Chart Generator creates a two-ring pie chart from editable category and subcategory values. You can add or remove categories, add or remove subcategories per category, edit values inline, choose a color theme, show or hide the legend, load sample data, and export the chart as PNG or SVG. The outer ring represents categories and the inner ring shows subcategories, making it useful for simple hierarchical comparisons. The tool does not support more than two ring levels, import CSV, normalize raw values, generate embed code, or store charts on a backend.",
   "usage_steps": [
-    "1. Define category hierarchy in the 'Parent Category' dropdown and corresponding 'Subcategory' fields",
-    "2. Input numerical values in the 'Base Value' column for each subcategory with automatic percentage calculation",
-    "3. Configure ring separation using the 'Inter-Ring Distance' slider (0-40px) to prevent visual overlap",
-    "4. Select color palettes via the 'Segment Color' picker, with options for monochromatic gradients or categorical differentiation",
-    "5. Adjust outer ring thickness with the 'Ring Proportion' control (outer:inner ratio from 1:1 to 3:1)",
-    "6. Export as SVG with embedded CSS classes or PNG with high-resolution resolution using the 'Download Visualization' button"
+    "Load the sample data or start editing the default categories and subcategories.",
+    "Edit category names and subcategory values inline in the table.",
+    "Add or remove categories and subcategories as needed.",
+    "Choose a color theme and toggle the legend visibility.",
+    "Download the finished chart as PNG or SVG."
   ],
   "usage_examples": [
-    "Visualizing corporate expenditure where the outer ring shows department budgets and inner rings break down office supplies, salaries, and travel costs per department",
-    "Displaying market research data with geographic regions as primary rings and age demographics as nested segments",
-    "Representing website traffic sources with referral types in outer rings and specific URLs in inner segments",
-    "Mapping university enrollment data showing colleges as outer rings and degree programs with enrollment numbers inside"
+    "Compare department budgets as outer ring categories with subcategory breakdowns inside.",
+    "Show market segments by region in the outer ring and demographic groups in the inner ring.",
+    "Visualize traffic sources by channel type in the outer ring and specific referrers inside.",
+    "Export a two-ring chart as PNG for a report or SVG for further editing."
   ]
 }
