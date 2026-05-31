@@ -1,39 +1,17 @@
 {
-  "detailed_description": ".htaccess生成器是一个面向Apache服务器的配置文件生成工具，通过可视化界面生成标准化的.htaccess文件。该工具的核心功能涵盖URL重写规则配置（基于mod_rewrite模块）、访问控制（IP白名单/黑名单）、HTTP状态码自定义（如404/500错误页面）、强制HTTPS跳转、MIME类型注册及缓存策略设置。开发人员在部署Web应用时，常需应对复杂的服务器配置需求，例如实现SEO友好的URL结构、防范恶意爬虫、优化静态资源缓存，本工具通过结构化表单输入代替手动编写配置文件，可有效降低语法错误风险。工具内部采用Apache指令语法解析引擎，实时验证用户输入的正则表达式规则，并自动适配不同Apache版本（2.2/2.4）的语法差异，生成的配置代码包含详细注释说明。",
+  "detailed_description": ".htaccess Generator 会根据一个小型浏览器表单创建起始 Apache .htaccess 片段。你可以勾选强制 HTTPS、强制 www 或移除 www 等 URL 选项，启用 gzip 和浏览器缓存，可选择阻止图片盗链，添加自定义 404/500 错误页面，每行粘贴一个被阻止的 IP 或 CIDR 条目，以及粘贴简单的重定向对（如 /old-page /new-page）。点击 Generate 生成输出文本区域，点击 Copy 复制。生成的文本还包含基本安全头、禁用目录浏览和 .htaccess 文件保护。本工具不会选择 Apache 版本、验证语法、生成 htpasswd 文件、下载文件、检查服务器模块或保证生产环境兼容性。",
   "usage_steps": [
-    "1. 选择目标服务器Apache版本（2.2或2.4）及启用模块（mod_rewrite、mod_alias等）",
-    "2. 在URL重写标签页配置规则集，输入原始URL模式（如^/old/(.*)$）和目标路径（如/index.php?page=$1）",
-    "3. 在访问控制面板添加IP规则，选择允许/拒绝操作并输入CIDR格式IP段（如192.168.1.0/24）",
-    "4. 错误处理界面绑定HTTP状态码与自定义页面路径（如ErrorDocument 403 /forbidden.html）",
-    "5. 高级设置中配置MIME类型映射（如AddType application/json .json）和缓存控制头（Cache-Control）",
-    "6. 点击'生成代码'按钮查看实时预览，确认无误后复制配置或下载完整.htaccess文件"
+    "选择 URL 处理复选框，如 Force HTTPS、Force WWW 或 Remove WWW",
+    "切换 gzip、浏览器缓存和可选的盗链阻止",
+    "可选择启用自定义错误页面并输入 404/500 路径",
+    "粘贴被阻止的 IP 地址或 CIDR 范围（每行一个），以及需要的简单重定向对",
+    "点击 Generate 创建 .htaccess 片段",
+    "手动检查输出，然后点击 Copy 以便复用"
   ],
   "usage_examples": [
-    "Example 1: 将旧版网站路径结构^/products/([0-9]+)/([a-z-]+)重定向到新架构/index.php?prod_id=$1&slug=$2",
-    "Example 2: 阻止已知恶意扫描IP段（如185.213.0.0/16）访问管理后台目录",
-    "Example 3: 为API接口配置CORS头部，添加Header set Access-Control-Allow-Origin \"*\"规则",
-    "Example 4: 设置图片资源缓存策略，对.jpg/.png文件应用ExpiresByType指令延长缓存时间"
-  ],
-  "faqs": [
-    {
-      "question": "Htaccess Generator 是免费的吗？",
-      "answer": "是的，Htaccess Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
-    },
-    {
-      "question": "使用 Htaccess Generator 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
-    },
-    {
-      "question": "可以批量生成吗？",
-      "answer": "是的，Htaccess Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
-    },
-    {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Htaccess Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
-    },
-    {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Htaccess Generator 的处理速度非常快，通常可以在几毫秒内完成。"
-    }
+    "创建一个将 HTTP 流量重定向到 HTTPS 的起始片段",
+    "为常见静态资源类型生成浏览器缓存和 gzip 规则",
+    "为小型站点添加基本的 404 和 500 ErrorDocument 路径",
+    "将一组旧路径和新路径转换为简单的 301 Redirect 行"
   ]
 }
