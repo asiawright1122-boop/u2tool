@@ -1,17 +1,16 @@
 {
-  "detailed_description": "The YAML Validator is a precision tool designed to rigorously analyze YAML documents for syntactic and structural integrity. It parses input through a formal YAML 1.2-compliant parser, detecting deviations such as incorrect indentation, invalid scalar types, malformed collections, or improper anchor/alias references. Unlike basic linters, this tool offers two validation modes: 'Syntax-Only' for checking basic formatting rules and 'Schema-Aware' mode that validates documents against a provided JSON Schema or OpenAPI specification. Developers working with configuration files for Kubernetes, Ansible, or Docker Compose benefit from its ability to catch subtle errors like misplaced hyphens in sequences, tab characters in whitespace-sensitive contexts, or invalid UTF-8 encoding. The tool's engine performs semantic validation by resolving merge keys (<<: *) and verifying tag resolution for custom data types. Error reports include precise line/column numbers, problem severity levels, and suggested fixes for common anti-patterns, making it indispensable for teams maintaining infrastructure-as-code workflows or API configuration files.",
+  "detailed_description": "The YAML Validator checks YAML syntax in the browser using the js-yaml library. Paste YAML into the textarea, click Validate, and the tool reports whether the document is valid or shows the first parse error with a line marker. The page also displays the parsed data as formatted JSON so you can inspect the structure. It does not support multiple documents, schema validation, anchor/alias resolution, custom tags, file upload, download, or production-grade error recovery.",
   "usage_steps": [
-    "Open the YAML Validator interface and paste your document into the primary text editor panel.",
-    "Toggle 'Schema Validation' to enable advanced mode and paste or upload a JSON Schema in the dedicated pane.",
-    "Click 'Validate Document' to trigger multi-stage parsing and error detection.",
-    "Examine the diagnostics panel: syntax errors appear in a code-annotated view with red underline markers, while schema violations list missing required fields or type mismatches.",
-    "Use the 'Quick-Fix' suggestions to resolve common issues like incorrect boolean formatting (e.g., 'True' → 'true').",
-    "Re-validate after edits, then export cleaned YAML via the 'Download Validated' button or copy to clipboard."
+    "Paste YAML content into the textarea.",
+    "Click Validate to parse the input with js-yaml.",
+    "Read the validity message and check the line marker if an error is shown.",
+    "Inspect the parsed JSON structure below the validation result.",
+    "Fix any reported issues and re-validate."
   ],
   "usage_examples": [
-    "A DevOps engineer validates Kubernetes StatefulSet manifests to prevent deployment failures caused by misaligned indentation in volume mount definitions.",
-    "An API architect verifies OpenAPI 3.0 specifications conform to the official schema, ensuring all $ref pointers resolve correctly.",
-    "A Python developer debugs a broken .github/workflows CI configuration by identifying a malformed multi-line string with improper block scalar indicators.",
-    "A systems administrator cross-checks Ansible inventory files for duplicate keys and invalid IPv6 address formatting before running automation playbooks."
+    "Quickly check a short YAML snippet for syntax errors before pasting it into a config file.",
+    "Inspect the parsed structure of a simple YAML document as formatted JSON.",
+    "Verify that a hand-edited YAML value is still valid after manual changes.",
+    "Use the line marker to locate a missing colon or incorrect indentation in a draft."
   ]
 }
