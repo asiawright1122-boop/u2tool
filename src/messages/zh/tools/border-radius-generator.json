@@ -1,39 +1,16 @@
 {
-  "detailed_description": "该工具通过可视化交互引擎实现CSS border-radius属性的动态生成。开发者可操作基于SVG渲染的实时图形编辑器，通过拖拽控制点精确调整元素四角的圆角半径值。系统采用双模式参数体系，既支持绝对像素值的精确输入，也兼容相对单位（em/rem/%）的响应式配置。其核心技术架构包含盒模型分析模块，能自动计算border-box与content-box的差异值，并在代码生成阶段进行兼容性前缀处理（-webkit-/-moz-）。特别适合需要创建自定义形状组件（如梯形按钮、圆形头像、流体卡片）的前端开发者，可避免传统手动编码的试错成本，同时支持高级用法如斜切角（cut corners）的inset属性配置。",
+  "detailed_description": "Border Radius Generator 会根据四个滑块值生成简单的 CSS `border-radius` 声明。你可以将四个角联动，或分别编辑 top-left、top-right、bottom-right 和 bottom-left，在 px 与百分比单位之间切换，应用预设形状，选择预览框颜色，查看生成的 CSS 并复制。输出会在四角相同时生成单值声明，否则生成四值简写。本工具不支持独立的水平/垂直半径、CSS 变量输入、可拖拽角手柄、椭圆斜杠语法、单独 longhand 属性输出、响应式规则或像素级设计保证。",
   "usage_steps": [
-    "在画布区域点击并拖动四角的控制手柄，实时观察圆角变化效果",
-    "通过右侧参数面板输入精确数值并选择单位类型（px/%/em）",
-    "启用'独立角模式'分别设置top-left、top-right、bottom-right、bottom-left的差异化半径",
-    "在预览窗口切换'正常/悬停/激活'状态查看交互效果",
-    "点击代码区域的'复制CSS'按钮获取包含浏览器兼容前缀的完整样式代码",
-    "使用'导出JSON'功能保存当前配置参数用于项目文档归档"
+    "当希望四个角共享同一个值时，保持 Link All 开启。",
+    "关闭 Link All 后，可以分别调整每个角的滑块。",
+    "根据需要在 px 和百分比单位之间切换。",
+    "应用预设，或选择预览框颜色来检查形状。",
+    "从输出面板复制生成的 `border-radius` 声明。"
   ],
   "usage_examples": [
-    "为响应式导航栏按钮创建动态圆角效果：在移动端视图设置50%圆角实现胶囊形状，桌面端使用4px圆角保持现代感",
-    "设计社交媒体头像组件：通过精确设置border-radius: 50%生成圆形裁剪效果，实时预览不同尺寸头像的显示状态",
-    "构建电商产品卡片：利用独立角模式设置top-left为20px，bottom-right为8px，创造视觉焦点差异化的卡片样式",
-    "制作加载动画：通过动态调整border-radius值创建脉冲式圆角变化效果，导出关键帧动画CSS代码"
-  ],
-  "faqs": [
-    {
-      "question": "Border Radius Generator 是免费的吗？",
-      "answer": "是的，Border Radius Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
-    },
-    {
-      "question": "使用 Border Radius Generator 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
-    },
-    {
-      "question": "可以批量生成吗？",
-      "answer": "是的，Border Radius Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
-    },
-    {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Border Radius Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
-    },
-    {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Border Radius Generator 的处理速度非常快，通常可以在几毫秒内完成。"
-    }
+    "创建一个四个角半径相同的圆角卡片形状。",
+    "使用 pill、leaf、drop 或 message bubble 等预设作为起点。",
+    "为简单面板设计设置不同的顶部角和底部角。",
+    "复制四值 `border-radius` 简写，供后续人工检查 CSS。"
   ]
 }
