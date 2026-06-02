@@ -1,0 +1,39 @@
+{
+  "detailed_description": "O Rastreador de Patrimônio Líquido e Alocação de Ativos Multimoedas foi projetado para analisar e testar a estrutura geral da riqueza do seu lar. Modelado em um tema minimalista de ouro escuro fosco de private banking suíço, ele suporta categorização detalhada de ativos líquidos, não líquidos, de investimento e passivos. Com conversões dinâmicas de moedas e controles deslizantes duplos de sensibilidade ao preço para ações e imóveis, você pode simular o impacto no seu patrimônio líquido em tempo real.",
+  "usage_steps": [
+    "Insira os valores iniciais e selecione as moedas para ativos líquidos, não líquidos, investimentos e passivos no painel esquerdo.",
+    "Alterne sua moeda de avaliação principal (CNY / USD / EUR) e o sistema converterá automaticamente todos os valores.",
+    "Analise o gráfico de rosca de ativos e passivos acima das listas, renderizado nas cores minimalistas de ouro bronze do ECharts.",
+    "Arraste os controles de sensibilidade para volatilidade de ações (-50% a +50%) e flutuações de imóveis (-30% a +30%).",
+    "Observe as atualizações em tempo real do patrimônio líquido e as respostas no indicador fosco de saúde de 4 etapas.",
+    "Avalie sua liquidez e relação dívida/ativos para determinar a alavancagem ideal contra riscos financeiros."
+  ],
+  "usage_examples": [
+    "Simule se suas reservas de caixa líquido podem cobrir todas as dívidas caso o mercado de ações caia 30%.",
+    "Avalie se a relação dívida/ativos ultrapassa o limite crítico de segurança de 70% se o mercado imobiliário desvalorizar 20%.",
+    "Insira ativos mistos em várias moedas e mude a moeda base para avaliar o impacto das flutuações cambiais.",
+    "Verifique se seu índice de liquidez está na zona robusta dourada ao excluir ativos físicos como sua residência principal."
+  ],
+  "faqs": [
+    {
+      "question": "Por que separar ativos líquidos, não líquidos e investimentos?",
+      "answer": "Ativos líquidos (como poupança) cobrem despesas de emergência; não líquidos (como casas) demoram a ser liquidados; investimentos (como ações) trazem volatilidade. Uma divisão clara clareia os riscos de liquidez."
+    },
+    {
+      "question": "Como funcionam os controles deslizantes de estresse?",
+      "answer": "Os controles permitem simular flutuações percentuais nos preços de ações ou imóveis. O sistema recalcula os ativos e passivos e atualiza o patrimônio líquido simulado em tempo real."
+    },
+    {
+      "question": "O que é uma relação dívida/ativos saudável?",
+      "answer": "Uma proporção saudável costuma ficar entre 20% e 50% (equilibrada). Se ultrapassar 70%, indica alta alavancagem financeira e riscos de patrimônio líquido negativo."
+    },
+    {
+      "question": "Quais moedas principais são suportadas para conversão?",
+      "answer": "Suportamos CNY, USD e EUR de forma integrada com taxas dinâmicas, seguindo regras estritas de engenharia financeira."
+    },
+    {
+      "question": "Meus ativos, passivos e privacidade financeira estão seguros?",
+      "answer": "Sim. Este rastreador roda 100% no seu navegador local. Todos os dados permanecem na memória do dispositivo e nunca são enviados para servidores, protegendo sua total privacidade."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "detailed_description": "El Rastreador de Patrimonio Neto y Asignación de Activos Multidivisa está diseñado para analizar y someter a pruebas de estrés la estructura general de la riqueza de su hogar. Modelado con un tema de oro oscuro minimalista de banca privada suiza, admite una categorización detallada de activos líquidos, no líquidos, de inversión y pasivos. Con conversiones dinámicas multidivisa y controles deslizantes dobles de sensibilidad al precio para acciones y bienes raíces, puede simular el impacto en su patrimonio neto y ver coeficientes de deuda en tiempo real.",
+  "usage_steps": [
+    "Ingrese los montos iniciales y seleccione las monedas para activos líquidos, no líquidos, de inversión y pasivos en el panel izquierdo.",
+    "Cambie su moneda de valoración principal (CNY / USD / EUR) y el sistema convertirá automáticamente todos los valores con tipos de cambio dinámicos.",
+    "Revise el gráfico de dona de activos y pasivos sobre las listas, renderizado en colores minimalistas de oro bronce de ECharts.",
+    "Arrastre los controles de sensibilidad para la volatilidad de acciones (-50% a +50%) y cambios en bienes raíces (-30% a +30%).",
+    "Observe las actualizaciones fluidas del patrimonio neto y las respuestas en el indicador mate de salud financiera de 4 etapas.",
+    "Evalúe sus coeficientes de liquidez y deuda sobre activos para determinar el nivel óptimo de apalancamiento ante riesgos financieros."
+  ],
+  "usage_examples": [
+    "Simule si sus reservas de efectivo líquido pueden cubrir todas las deudas si el mercado de valores cae un 30%.",
+    "Evalúe si el coeficiente de deuda sobre activos de su hogar supera el límite crítico de seguridad del 70% si las propiedades bajan un 20%.",
+    "Introduzca activos mixtos en varias monedas y cambie la moneda base para evaluar el impacto de las fluctuaciones cambiarias.",
+    "Revise si su coeficiente de liquidez se encuentra en la zona robusta dorada al excluir activos físicos de baja liquidez como su casa."
+  ],
+  "faqs": [
+    {
+      "question": "¿Por qué separar activos líquidos, no líquidos y de inversión?",
+      "answer": "Los activos líquidos (como ahorros) cubren gastos de emergencia; los no líquidos (como casas) tardan en liquidarse; los de inversión (como acciones) conllevan volatilidad. Una división clara ayuda a comprender los riesgos."
+    },
+    {
+      "question": "¿Cómo funcionan los controles deslizantes de estrés?",
+      "answer": "Los controles le permiten simular fluctuaciones en los precios de acciones o propiedades. El sistema recalcula los totales y actualiza el patrimonio neto simulado y los indicadores en tiempo real."
+    },
+    {
+      "question": "¿Qué es un coeficiente de deuda sobre activos saludable?",
+      "answer": "Un coeficiente de deuda sobre activos saludable para el hogar suele estar entre el 20% y el 50% (equilibrado). Si supera el 70%, indica un alto apalancamiento financiero y riesgos de patrimonio negativo."
+    },
+    {
+      "question": "¿Qué monedas principales son compatibles para la conversión?",
+      "answer": "Soportamos CNY, USD y EUR de forma fluida con tasas dinámicas, siguiendo reglas estrictas de cálculo de ingeniería financiera."
+    },
+    {
+      "question": "¿Están seguros mis activos, pasivos y privacidad financiera?",
+      "answer": "Sí. Este rastreador se ejecuta al 100% en su navegador local. Todos los montos y datos ingresados permanecen en memoria y nunca se suben a ningún servidor, protegiendo su total privacidad."
+    }
+  ]
+}

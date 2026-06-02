@@ -1,0 +1,39 @@
+{
+  "detailed_description": "Der Tracker für Haushalts-Nettovermögen und Asset Allocation über mehrere Währungen hinweg wurde entwickelt, um die Struktur Ihres Vermögens systematisch zu analysieren und Stresstests zu unterziehen. Inspiriert von der Ästhetik des Schweizer Private Banking mit matten Goldlinien, unterstützt er die detaillierte Klassifizierung von liquiden, illiquiden, Anlagevermögen und Verbindlichkeiten. Mit Währungsumrechnungen und Dual-Reglern für Kursänderungen können Sie Stresstests in Echtzeit durchführen.",
+  "usage_steps": [
+    "Geben Sie die Anfangsbeträge ein und wählen Sie Währungen für liquide, illiquide, Anlagevermögen und Verbindlichkeiten im linken Bereich.",
+    "Wählen Sie Ihre Hauptwährung (CNY / USD / EUR) und das System rechnet automatisch alle Artikel mit dynamischen Kursen um.",
+    "Prüfen Sie das Donut-Diagramm für Vermögenswerte und Verbindlichkeiten über den Listen, dargestellt in matten Bronze-Gold-Farben von ECharts.",
+    "Verwenden Sie die Sensitivitätsregler für Aktienpreise (-50% bis +50%) und Immobilienpreise (-30% bis +30%).",
+    "Beobachten Sie die flüssige Aktualisierung des Nettovermögens und die Reaktionen auf dem matten 4-Stufen-Gesundheitsindikator auf der rechten Seite.",
+    "Bewerten Sie Ihre Liquidität und das Verhältnis von Schulden zu Vermögenswerten, um die optimale Hebelwirkung gegen Finanzrisiken zu ermitteln."
+  ],
+  "usage_examples": [
+    "Simulieren Sie, ob Ihre liquiden Barreserven alle Kreditkartenschulden decken können, wenn der Aktienmarkt um 30% einbricht.",
+    "Bewerten Sie, ob die Schuldenquote Ihres Haushalts die kritische rote Sicherheitsgrenze von 70% überschreitet, wenn Immobilien um 20% fallen.",
+    "Geben Sie gemischte Vermögenswerte in mehreren Währungen ein und wechseln Sie die Basiswährung, um Wechselkursschwankungen zu bewerten.",
+    "Prüfen Sie, ob Ihre Liquiditätsquote im robusten goldenen Bereich liegt, wenn illiquide Vermögenswerte wie Ihr Hauptwohnsitz ausgeschlossen werden."
+  ],
+  "faqs": [
+    {
+      "question": "Warum liquide, illiquide und Anlagevermögen trennen?",
+      "answer": "Liquide Mittel (Sparguthaben) decken Notfälle ab; illiquide Mittel (Immobilien) brauchen Zeit zum Verkauf; Anlagevermögen (Aktien) birgt Volatilität. Eine vernünftige Aufteilung verdeutlicht Liquiditätsrisiken."
+    },
+    {
+      "question": "Wie funktionieren die Regler für den Stresstest?",
+      "answer": "Mit den Reglern können Sie prozentuale Schwankungen der Aktien- oder Immobilienpreise simulieren. Das System berechnet Anlagen und Sachwerte neu und aktualisiert Nettovermögen und Gesundheitsindikatoren in Echtzeit."
+    },
+    {
+      "question": "Was ist eine gesunde Schuldenquote?",
+      "answer": "Eine gesunde Schuldenquote liegt typischerweise zwischen 20% und 50% (ausgewogen). Wenn sie 70% überschreitet, deutet dies auf eine hohe finanzielle Hebelwirkung und Risiken hin."
+    },
+    {
+      "question": "Welche Hauptwährungen werden für die Umrechnung unterstützt?",
+      "answer": "Wir unterstützen CNY, USD und EUR nahtlos mit dynamischen Umrechnungskursen gemäß strengen Regeln der Finanzmathematik."
+    },
+    {
+      "question": "Sind meine Vermögenswerte, Verbindlichkeiten und finanziellen Daten sicher?",
+      "answer": "Ja. Dieser Tracker läuft zu 100% lokal in Ihrem Webbrowser. Alle eingegebenen Beträge, Währungsumrechnungen und Stresstestdaten werden im Speicher abgelegt und niemals auf einen Server hochgeladen."
+    }
+  ]
+}

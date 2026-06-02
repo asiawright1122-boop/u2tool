@@ -1,0 +1,39 @@
+{
+  "detailed_description": "The Multi-Currency Net Worth & Asset Allocation Tracker is designed to systematically analyze and stress-test your overall household wealth structure. Modeled in a Swiss private banking minimal dark gold theme, it supports detailed categorization across liquid assets, non-liquid assets, investment assets, and liabilities. With dynamic multi-currency conversions and dual-slider price sensitivity simulations for stocks and real estate, you can stress-test your net worth and receive institutional-grade debt ratios and health diagnoses on the big screen.",
+  "usage_steps": [
+    "Enter your initial amounts and select currencies for liquid, non-liquid, and investment assets, along with liabilities on the left panel.",
+    "Toggle your primary valuation currency (CNY / USD / EUR), and the system automatically converts all values with dynamic exchange rates.",
+    "Inspect your family asset-liability donut chart above the lists, rendered in high-end ECharts minimal bronze gold colors.",
+    "Drag the sensitivity analysis sliders for stock price volatility (-50% to +50%) and real estate price changes (-30% to +30%).",
+    "Observe real-time smooth net worth value updates and immediate responses on the 4-stage matte asset health indicator on the right panel.",
+    "Evaluate your liquidity and debt-to-asset ratios to determine the optimum leverage ratio to hedge against potential financial risks."
+  ],
+  "usage_examples": [
+    "Simulate whether your liquid cash reserves can cover all outstanding credit card debts if the stock market crashes by 30%.",
+    "Assess whether your household debt-to-asset ratio exceeds the critical red safety margin of 70% if real estate prices drop by 20%.",
+    "Input multi-currency mixed assets and switch the base currency to evaluate currency fluctuation impacts on your total family net worth.",
+    "Review if your liquidity ratio lies in the gold robust zone when excluding illiquid physical assets like your primary residence."
+  ],
+  "faqs": [
+    {
+      "question": "Why separate liquid, non-liquid, and investment assets?",
+      "answer": "Liquid assets (like savings) represent your ability to meet emergency expenses; non-liquid assets (like homes) take time to cash out; investment assets (like stocks) carry volatility. Reasonable division clarifies liquidity risks."
+    },
+    {
+      "question": "How do the sensitivity stress-test sliders work?",
+      "answer": "Sliders let you simulate percentage fluctuations in stock or real estate prices. The calculator recalculates investments and physical assets, updating simulated net worth and health indicators in real-time."
+    },
+    {
+      "question": "What is a healthy debt-to-asset ratio?",
+      "answer": "A healthy household debt-to-asset ratio is typically between 20% and 50% (balanced). If it exceeds 70%, it indicates high financial leverage and elevated risks of negative equity during market recessions."
+    },
+    {
+      "question": "Which main currencies are supported for conversion?",
+      "answer": "We support CNY, USD, and EUR seamlessly with dynamic conversion rates, adhering strictly to strict financial engineering foreign exchange calculation rules."
+    },
+    {
+      "question": "Are my assets, liabilities, and financial privacy safe?",
+      "answer": "Yes. This tracker runs 100% locally in your web browser. All entered amounts, currency exchange metrics, and stress-test data are stored in memory and never uploaded to any server, securing your 100% financial privacy."
+    }
+  ]
+}

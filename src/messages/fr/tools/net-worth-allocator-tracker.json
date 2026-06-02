@@ -1,0 +1,39 @@
+{
+  "detailed_description": "Le Suivi du Patrimoine Net et de l'Allocation d'Actifs Multidevises est conçu pour analyser et tester la structure globale de la richesse de votre foyer. Modélisé sur un thème d'or foncé minimaliste de banque privée suisse, il prend en charge la catégorisation des actifs liquides, non liquides, d'investissement et passifs. Avec des conversions multidevises dynamiques et des curseurs doubles de simulation de sensibilité pour les actions et l'immobilier, vous pouvez tester votre patrimoine net en temps réel.",
+  "usage_steps": [
+    "Saisissez vos montants initiaux et sélectionnez les devises pour les actifs liquides, non liquides, d'investissement et passifs dans le panneau de gauche.",
+    "Basculez votre devise d'évaluation principale (CNY / USD / EUR) et le système convertira automatiquement toutes les valeurs.",
+    "Examinez le graphique en anneau de répartition actif-passif au-dessus des listes, rendu dans des couleurs minimalistes d'or bronze d'ECharts.",
+    "Faites glisser les curseurs de sensibilité pour la volatilité des actions (-50% à +50%) et de l'immobilier (-30% à +30%).",
+    "Observez en temps réel les mises à jour fluides de la valeur du patrimoine net et les réponses de l'indicateur de santé financière mate à 4 étapes.",
+    "Évaluez vos ratios de liquidité et de dette/actif pour déterminer le niveau d'endettement optimal face aux risques financiers."
+  ],
+  "usage_examples": [
+    "Simulez si vos réserves de liquidités peuvent couvrir toutes les dettes de carte de crédit à court terme si le marché boursier chute de 30%.",
+    "Évaluez si le ratio d'endettement dépasse le seuil critique de sécurité de 70% si l'immobilier se déprécie de 20%.",
+    "Saisissez des actifs mixtes multidevises et changez la devise de base pour mesurer l'impact des fluctuations de change.",
+    "Vérifiez si votre ratio de liquidité se situe dans la zone dorée robuste en excluant la résidence principale à faible liquidité."
+  ],
+  "faqs": [
+    {
+      "question": "Pourquoi séparer actifs liquides, non liquides et d'investissement ?",
+      "answer": "Les actifs liquides (épargne) couvrent les urgences ; les non liquides (immobilier) prennent du temps à se vendre ; les d'investissement (actions) comportent de la volatilité. Une division claire clarifie les risques de liquidité."
+    },
+    {
+      "question": "Comment fonctionnent les curseurs de stress-test ?",
+      "answer": "Les curseurs simulent des variations de prix des actions ou de l'immobilier. Le système recalcule les totaux et met à jour le patrimoine net simulé et les indicateurs en temps réel."
+    },
+    {
+      "question": "Qu'est-ce qu'un ratio d'endettement sain ?",
+      "answer": "Un ratio d'endettement sain pour un foyer se situe généralement entre 20% et 50% (équilibré). S'il dépasse 70%, cela indique un endettement élevé et un risque de valeur nette négative."
+    },
+    {
+      "question": "Quelles devises principales sont prises en charge pour la conversion ?",
+      "answer": "Nous prenons en charge CNY, USD et EUR de manière fluide avec des taux dynamiques, selon des règles de calcul strictes d'ingénierie financière."
+    },
+    {
+      "question": "Mes données d'actifs, de passifs et de vie privée sont-elles sécurisées ?",
+      "answer": "Oui. Ce suivi fonctionne à 100% localement dans votre navigateur. Toutes les données saisies restent en mémoire et ne sont jamais téléchargées sur aucun serveur, protégeant 100% de votre vie privée."
+    }
+  ]
+}
