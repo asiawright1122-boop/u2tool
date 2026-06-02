@@ -207,7 +207,7 @@ describe('translations module', () => {
       expect(toolsPageSource).toContain('loadBaseMessages(locale, Astro.url)');
       expect(toolDetailPageSource).toContain('loadToolPageMessages(locale, tool.slug, Astro.url)');
       expect(toolDetailPageSource).toContain('loadBaseUiMessages(locale, Astro.url)');
-      expect(llmsPageSource).toContain("buildLlmsContent('en', new URL(request.url))");
+      expect(llmsPageSource).toContain("buildLlmsContent('en', new URL(request.url), { isFull: false })");
     });
 
     it('keeps tool detail breadcrumbs on canonical trailing-slash paths', () => {

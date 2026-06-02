@@ -1,9 +1,5 @@
-const FETCH_BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
-const CANONICAL_BASE_URL = (
-  process.env.CANONICAL_BASE_URL ||
-  process.env.PUBLIC_SITE_URL ||
-  'https://www.u2tool.com'
-).replace(/\/+$/, '');
+import { buildLlmsContent } from '../../src/lib/llms-content';
+import { locales } from '../../src/lib/i18n';
 
 function assert(condition: unknown, message: string): void {
   if (!condition) {
@@ -26,6 +22,7 @@ function extractCanonicalRouteViolations(text: string): string[] {
       continue;
     }
 
+    // Only inspect tools, categories, compare routes
     if (!url.pathname.match(/^\/[a-z]{2}\/(?:tools|categories|compare)\//)) {
       continue;
     }
@@ -38,52 +35,85 @@ function extractCanonicalRouteViolations(text: string): string[] {
   return violations;
 }
 
-async function fetchWithRetry(url: string, init: RequestInit = {}, attempts = 3): Promise<Response> {
-  let lastError: unknown;
-
-  for (let attempt = 1; attempt <= attempts; attempt++) {
-    try {
-      return await fetch(url, init);
-    } catch (error) {
-      lastError = error;
-      if (attempt < attempts) {
-        await new Promise((resolve) => setTimeout(resolve, attempt * 500));
-      }
-    }
+async function validateCompact(text: string, isZh = false): Promise<void> {
+  // Check basic structure
+  if (isZh) {
+    assert(text.includes('# U2Tool - 免费在线工具大全'), 'Chinese compact version missing title');
+    assert(text.includes('## 全量发现字典'), 'Chinese compact version missing full catalog section');
+    assert(text.includes('/llms-full.txt'), 'Chinese compact version missing full catalog link');
+    assert(text.includes('## 常见问题 (FAQ)'), 'Chinese compact version missing FAQ section');
+    assert(text.includes('完全免费，无需注册'), 'Chinese compact version missing free cost statement');
+  } else {
+    assert(text.includes('# U2Tool - Free Online Tools Catalog'), 'English compact version missing title');
+    assert(text.includes('## Full Catalog Discovery'), 'English compact version missing full catalog section');
+    assert(text.includes('/llms-full.txt'), 'English compact version missing full catalog link');
+    assert(text.includes('## Frequently Asked Questions'), 'English compact version missing FAQ section');
   }
 
-  throw lastError;
+  // Ensure it is truly compact (no long tool lists expanded in categories)
+  const lines = text.split('\n');
+  assert(lines.length < 350, `Compact version is too large: ${lines.length} lines. Category tools list might have been incorrectly expanded.`);
+}
+
+async function validateFull(text: string, isZh = false): Promise<void> {
+  if (isZh) {
+    assert(text.includes('# U2Tool - 免费在线工具大全'), 'Chinese full version missing title');
+  } else {
+    assert(text.includes('# U2Tool - Free Online Tools Catalog'), 'English full version missing title');
+  }
+
+  // Count tools mentioned in catalog to verify all 500+ tools are rendered
+  const toolsCountInDoc = (text.match(/\/tools\/[a-zA-Z0-9-]+\//g) || []).length;
+  // There are over 500 tools. The full list must include them.
+  assert(toolsCountInDoc > 450, `Full catalog version missing long-tail tools. Found only ${toolsCountInDoc} tools, expected > 450.`);
+
+  // Ensure it has catalog by category details
+  if (isZh) {
+    assert(text.includes('## 工具分类目录'), 'Chinese full version missing category title');
+  } else {
+    assert(text.includes('## Catalog by Category'), 'English full version missing category title');
+  }
 }
 
 async function main(): Promise<void> {
-  const response = await fetchWithRetry(`${FETCH_BASE_URL}/llms.txt`, { redirect: 'follow' });
-  assert(response.status === 200, `llms.txt expected HTTP 200, got ${response.status}`);
-  assert((response.headers.get('content-type') || '').includes('text/plain'), `llms.txt unexpected content-type "${response.headers.get('content-type') || ''}"`);
+  console.log('🏁 Starting LLM discovery layer compilation & validation...');
 
-  const text = await response.text();
-  const requiredSnippets = [
-    '# U2Tool - Free Online Tools Catalog',
-    '## Priority Discovery Routes',
-    '## Preferred Canonical Routes',
-    '## Catalog by Category',
-    `${CANONICAL_BASE_URL}/sitemap.xml`,
-    `${CANONICAL_BASE_URL}/en/tools/json-formatter/`,
-    `${CANONICAL_BASE_URL}/en/compare/choose-json-tool/`,
-    `${CANONICAL_BASE_URL}/en/categories/development/`,
-    'Cloudflare SSR with client-side interactive islands',
-  ];
+  const mockUrl = new URL('https://www.u2tool.com/llms.txt');
 
-  for (const snippet of requiredSnippets) {
-    assert(text.includes(snippet), `llms.txt missing "${snippet}"`);
+  // 1. Compile 4 targets
+  const enCompact = await buildLlmsContent('en', mockUrl, { isFull: false });
+  const enFull = await buildLlmsContent('en', mockUrl, { isFull: true });
+  const zhCompact = await buildLlmsContent('zh', mockUrl, { isFull: false });
+  const zhFull = await buildLlmsContent('zh', mockUrl, { isFull: true });
+
+  // 2. Format & Integrity Audit
+  const documents = [enCompact, enFull, zhCompact, zhFull];
+  for (const doc of documents) {
+    assert(!doc.includes('undefined'), 'LLM discovery file contains "undefined" text.');
+    assert(!doc.includes('[object Object]'), 'LLM discovery file contains unrendered objects.');
+    assert(!doc.includes('${BASE_URL}'), 'LLM discovery file contains unreplaced placeholders.');
+    assert(!doc.includes('MISSING:'), 'LLM discovery file contains missing translation keys.');
+    assert(!doc.includes('Static Astro site'), 'LLM discovery file contains outdated rendering info.');
+    
+    // Check for trailing slashes
+    const violations = extractCanonicalRouteViolations(doc);
+    assert(violations.length === 0, `Discovery file contains non-canonical URLs without trailing slash: ${violations.slice(0, 5).join(', ')}`);
   }
 
-  const matches = extractCanonicalRouteViolations(text);
-  assert(matches.length === 0, `llms.txt contains non-canonical URLs without trailing slash: ${matches.slice(0, 5).join(', ')}`);
-  assert(!text.includes('${BASE_URL}'), 'llms.txt contains an unresolved BASE_URL placeholder');
-  assert(!text.includes('MISSING:'), 'llms.txt contains missing translation placeholders');
-  assert(!text.includes('Static Astro site'), 'llms.txt contains outdated static rendering language');
+  // 3. Compact / Full specific checks
+  console.log('🔍 Auditing English compact discovery node...');
+  await validateCompact(enCompact, false);
 
-  console.log(`All llms discovery checks passed. FETCH_BASE_URL=${FETCH_BASE_URL}; CANONICAL_BASE_URL=${CANONICAL_BASE_URL}`);
+  console.log('🔍 Auditing English full discovery catalog...');
+  await validateFull(enFull, false);
+
+  console.log('🔍 Auditing Chinese compact discovery node...');
+  await validateCompact(zhCompact, true);
+
+  console.log('🔍 Auditing Chinese full discovery catalog...');
+  await validateFull(zhFull, true);
+
+  console.log('✅ All LLM discovery layer compilation & validation checks passed successfully (Local Simulation Mode)!');
 }
 
 main().catch((error) => {

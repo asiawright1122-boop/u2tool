@@ -4,8 +4,9 @@ import { loadBaseMessages } from '@/lib/translations';
 
 export async function buildLlmsContent(
   locale: Locale = 'en',
-  assetBaseUrl?: string | URL
+  assetBaseUrl?: string | URL,
+  options?: { isFull?: boolean }
 ): Promise<string> {
   const baseMessages = await loadBaseMessages(locale, assetBaseUrl);
-  return buildLlmsContentFromMessages(locale, baseMessages);
+  return buildLlmsContentFromMessages(locale, baseMessages, options);
 }
