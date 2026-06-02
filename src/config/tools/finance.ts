@@ -30,4 +30,5 @@ export const FINANCE_TOOLS: Tool[] = [
   { slug: 'freelance-rate-calculator', category: 'finance', icon: 'calculator', component: 'PopularUtilityTool', popular: true },
   { slug: 'savings-goal-calculator', category: 'finance', icon: 'target', component: 'PopularUtilityTool', popular: true },
   { slug: 'loan-amortization-calculator', category: 'finance', icon: 'percent', component: 'LoanAmortizationCalculator', popular: true },
+  { slug: 'retirement-pension-calculator', category: 'finance', icon: 'wallet', component: 'RetirementPensionCalculator', popular: true },
 ];
