@@ -12,7 +12,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const repoRoot = path.join(__dirname, '..');
-const distDir = path.join(repoRoot, 'dist');
+const distDir = path.join(repoRoot, 'dist', 'client');
 
 const SITE_URL = 'https://www.u2tool.com';
 const LOCALES = ['en', 'zh', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'];
