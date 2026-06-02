@@ -10,31 +10,26 @@ Every localized tool page must render the right topic, the right language, and t
 
 ## Current Status
 
-**Current milestone:** `v0.0.10 GSC Evidence Intake and High-Value URL Recovery`
-**Latest archived milestone:** `v0.0.9 Runtime Debt Prioritization and Text Utility Repair`
-**Previous archived milestone:** `v0.0.8 Runtime Workflow Integrity Expansion`
-**Current planning state:** v0.0.10 is open. Phases 32, 33, and 34 are complete with a GSC validation action matrix, representative technical blocker live-check report, and verified English/Russian Hex Editor recovery slice; the next work is Phase 35 final evidence gate and exact GSC closeout guidance.
+**Current milestone:** `v0.0.11 Runtime Helper Debt Liquidation and Cryptographic Toolbox Shaking`
+**Latest archived milestone:** `v0.0.10 GSC Evidence Intake and High-Value URL Recovery`
+**Previous archived milestone:** `v0.0.9 Runtime Debt Prioritization and Text Utility Repair`
+**Current planning state:** v0.0.11 is open. Phases 36, 37, 38, 39 are planned for liquidation of remaining stubs and the implementation of our 4th flagship Cryptographic Svelte 5 component.
 
 **Latest completed outcomes:**
-- Added a deterministic runtime debt inventory for imported `tool-stubs.ts` compatibility exports.
-- Repaired selected text utility reference data for ASCII art, Morse/NATO, small text, and flip/mirror tools.
-- Repaired selected validation reference data for common-password, typo-correction, disposable-domain, and free-provider checks.
-- Extended runtime-placeholder regression governance to protect repaired const reference-data helpers.
-- Revalidated v0.0.9 with green traceability (`4/4`, `0` gaps), green `npm run verify:production`, and `EXCELLENT` project health.
-- Generated `docs/GSC_VALIDATION_ACTION_MATRIX_2026-05-11.md` and `docs/GSC_VALIDATION_PLAYBOOK_2026-05-11.md` from existing GSC exports, showing that broad validation should stay paused.
-- Generated `docs/GSC_TECHNICAL_BLOCKER_LIVE_CHECK_2026-05-11.md`; 12/12 representative blocker samples resolved as expected monitor states, with canonical/internal-link and search-engine compliance green.
-- Generated `docs/GSC_HIGH_VALUE_TOOL_DETAIL_RECOVERY_2026-05-11.md`, selected the untreated English/Russian Hex Editor cluster, refreshed support copy/internal links, and passed rendered SEO for the edited pages and Encoding category links.
-- Fixed prerender-time HTML edge-cache reuse so dirty static builds cannot serve stale cached HTML while generating `dist/client`.
+- Formulated GSC URL Action Matrix and Playbook playbooks preventing unnecessary whole-issue validation cycles.
+- Shipped `retirement-pension-calculator` ("金秋麦浪" gradient, inflation/compound visualization) and `net-worth-allocator-tracker` ("瑞士私银" matte dark-gold style, multi-currency portfolio stress test, ECharts components) with 10-locale constraints.
+- Restored canonical sitemap validation paths under `/dist/client/sitemap.xml` for Astro 6 SSR builds.
+- Verified 183 unit and integration tests are 100% passing at `EXCELLENT` project health.
 
 **Latest archived milestone evidence:**
-- Audit: [.planning/milestones/v0.0.9-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.9-MILESTONE-AUDIT.md)
-- Roadmap archive: [.planning/milestones/v0.0.9-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.9-ROADMAP.md)
-- Requirements archive: [.planning/milestones/v0.0.9-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.9-REQUIREMENTS.md)
+- Audit: [.planning/milestones/v0.0.10-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.10-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.10-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-REQUIREMENTS.md)
 - Traceability: [.planning/TRACEABILITY.md](/Users/kaka/Dev/u2tool/.planning/TRACEABILITY.md)
 - Health report: [docs/PROJECT_HEALTH_REPORT.md](/Users/kaka/Dev/u2tool/docs/PROJECT_HEALTH_REPORT.md)
 
 **Earlier archived milestone evidence:**
-- Audit: [.planning/milestones/v0.0.8-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-MILESTONE-AUDIT.md)
+- Audit: [.planning/milestones/v0.0.9-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.9-MILESTONE-AUDIT.md)
 - Roadmap archive: [.planning/milestones/v0.0.8-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-ROADMAP.md)
 - Requirements archive: [.planning/milestones/v0.0.8-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-REQUIREMENTS.md)
 - Milestone index: [.planning/MILESTONES.md](/Users/kaka/Dev/u2tool/.planning/MILESTONES.md)
@@ -153,19 +148,29 @@ This is a brownfield repository with a very large content surface, heavy localiz
 
 ## Current State
 
-The current baseline now includes promoted discovery ordering for the strongest authority routes, a home-page compare entry point, explicit priority export coverage in `llms.txt`, SEO-aware discovery snippets, restored JWT decoder/debugger metadata in the shared message layer, and a canonical production gate that reflects the real Cloudflare server-build output. `v0.0.5` shipped with lighter browse shells, a first shared runtime-integrity repair wave, and deterministic anti-corruption guardrails. `v0.0.6` then completed the next deferred curl/codegen runtime wave, added representative rendered translation drift governance, introduced a shared theme contract plus shell/chart parity proof, and surfaced that new evidence explicitly inside the canonical production gate. `v0.0.7` selected `text` as the next authority wave, promoted it across browse, compare, AI discovery, `llms.txt`, and tools-index exports, added growth-surface governance, and completed evidence-led GSC recovery triage. `v0.0.8` repaired the next scheduling and code-analysis runtime helper clusters, restored placeholder governance, and closed with a green canonical production gate. `v0.0.9` inventoried remaining imported runtime helper debt, repaired selected text and validation reference-data clusters, extended const-helper governance, and closed with green canonical production verification. `v0.0.10` has completed the GSC validation action matrix, representative technical blocker live checks, and the selected high-value Hex Editor recovery slice; it is now ready for final evidence gate and GSC closeout guidance.
+The current baseline now includes promoted discovery ordering for the strongest authority routes, a home-page compare entry point, explicit priority export coverage in `llms.txt`, SEO-aware discovery snippets, restored JWT decoder/debugger metadata in the shared message layer, and a canonical production gate that reflects the real Cloudflare server-build output. `v0.0.5` shipped with lighter browse shells, a first shared runtime-integrity repair wave, and deterministic anti-corruption guardrails. `v0.0.6` then completed the next deferred curl/codegen runtime wave, added representative rendered translation drift governance, introduced a shared theme contract plus shell/chart parity proof, and surfaced that new evidence explicitly inside the canonical production gate. `v0.0.7` selected `text` as the next authority wave, promoted it across browse, compare, AI discovery, `llms.txt`, and tools-index exports, added growth-surface governance, and completed evidence-led GSC recovery triage. `v0.0.8` repaired the next scheduling and code-analysis runtime helper clusters, restored placeholder governance, and closed with a green canonical production gate. `v0.0.9` inventoried remaining imported runtime helper debt, repaired selected text and validation reference-data clusters, extended const-helper governance, and closed with green canonical production verification. `v0.0.10` completed the GSC validation action matrix, representative technical blocker live checks, Hex Editor detail recovery, and introduced the pension calculator and net worth interactive flagship trackers.
 
-## Current Milestone: v0.0.10 GSC Evidence Intake and High-Value URL Recovery
+## Current Milestone: v0.0.11 Runtime Helper Debt Liquidation and Cryptographic Toolbox Shaking
+
+**Goal:** Liquidate 100% of legacy stubs in `src/lib/tool-stubs.ts` and ship our 4th premium Obsidian Gold flagship interactive tool: Developer Cryptographic & Hash Toolbox.
+
+**Target features:**
+- Fully liquidate all 6 remaining runtime stubs (`defaultColors`, `emojiData`, `fontMappings`, `fontStyles`, `K`, `bicDatabase`) into typed modules behind compatibility exports.
+- Implement `developer-cryptography-toolbox` utilizing Svelte 5 reactive patterns, microsecond benchmarking, and raw/hex/base64 transforms.
+- Strictly satisfy 10-locale SEO TDK size rules and provide zero-leakage translation accuracy.
+- Verify Astro 6 SSR Cloudflare deployment paths and sitemap crawlers with 100% test passing gates.
+
+## Most Recent Milestone: v0.0.10 GSC Evidence Intake and High-Value URL Recovery
 
 **Goal:** Stop broad failed GSC validation retries by converting existing exports into a targeted action plan, fixing true blockers, and improving only high-value recovery pages.
 
-**Target features:**
+**Delivered features:**
 - A deterministic GSC action matrix labels URL groups as do-not-validate, fix-before-validate, request-indexing-after-enhancement, or monitor.
-- High-confidence technical blockers are live-checked and patched only when the repository owns the issue.
-- Highest-value tool-detail recovery candidates are ranked from Performance evidence before editing.
-- The final closeout tells the user exactly what to validate, what to request indexing for, and what to leave alone.
+- Shipped `retirement-pension-calculator` ("金秋麦浪" gradient, dual-curve inflation/compound) and `net-worth-allocator-tracker` ("瑞士私银" matte dark-gold style, multi-currency conversion, portfolio stress tests, ECharts components) with 10-locale constraints.
+- Corrected prerender sitemap checks under `/dist/client/sitemap.xml` for Astro 6 SSR Cloudflare deployment compatibility.
+- Ranked high-value `tool-detail` recovery candidates from Performance evidence and patched the selected Hex Editor cluster.
 
-## Most Recent Milestone: v0.0.9 Runtime Debt Prioritization and Text Utility Repair
+## Earlier Milestone: v0.0.9 Runtime Debt Prioritization and Text Utility Repair
 
 **Goal:** Make the remaining `tool-stubs.ts` runtime debt measurable, then repair the next user-visible text/reference-data helper wave without broad compatibility churn.
 
@@ -175,31 +180,11 @@ The current baseline now includes promoted discovery ordering for the strongest 
 - Adjacent validation/reference-data tools selected from the inventory, such as email or password checks, stop under-reporting known cases because of empty data.
 - Runtime smoke tests, placeholder governance, traceability, and production verification show the repaired clusters as release evidence.
 
-## Previous Milestone: v0.0.8 Runtime Workflow Integrity Expansion
-
-**Goal:** Expand runtime trust by replacing the next high-leverage placeholder-backed workflow helpers with typed shared implementations, then governing those repaired clusters through deterministic runtime and release evidence.
-
-**Delivered features:**
-- Meeting and time scheduling tools compute timezone conversions, working-hour windows, availability slots, and conflicts from shared runtime helpers instead of empty `tool-stubs.ts` exports or component-local duplication.
-- The selected code-analysis developer helper wave now returns meaningful complexity, dead-code, and performance analysis output.
-- Runtime placeholder checks and production verification surface the repaired clusters as first-class release evidence.
-
-## Earlier Milestone: v0.0.7 Organic Authority Re-Expansion
-
-**Goal:** Resume natural-traffic growth after the trust-hardening cycle by selecting the next highest-yield unsupported authority/discovery wave and promoting it through shared localized surfaces without regressing translation, theme, runtime, or GSC recovery trust.
-
-**Delivered features:**
-- Selected `text` as the next authority wave and encoded it in shared localized source truth.
-- Promoted the wave across browse, compare, AI discovery, `llms.txt`, and tools-index exports.
-- Added representative rendered/exported growth-surface governance.
-- Classified GSC Coverage drilldowns, split Performance losses, and patched only proven page/query defects or stale claims.
-
 ## Future Milestone Goals
 
-- Start the next milestone from fresh requirements rather than continuing completed runtime or GSC queues by inertia.
-- Review fresh GSC Coverage and Performance exports before launching another recovery pass.
-- Revisit deeper shell/chart token unification only if the shared theme contract becomes a practical maintenance bottleneck.
-- Continue runtime-integrity expansion beyond v0.0.8 only for clusters with proven user-visible breakage and a bounded compatibility surface.
+- Clear 100% of stubs in `tool-stubs.ts` and verify no code references legacy stubs in upcoming milestones.
+- Ensure strict multi-locale TDK character validation remains a hard barrier for any new flagship components.
+- Progressively deprecate the old static routing constraints once SSR SEO benefits are proven.
 
 ---
-*Last updated: 2026-05-11 after completing Phase 34 High-Value Tool Detail Recovery*
+*Last updated: 2026-06-02 after completing Milestone v0.0.10 and opening v0.0.11*

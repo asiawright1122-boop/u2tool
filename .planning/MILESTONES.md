@@ -1,5 +1,25 @@
 # Milestones
 
+## v0.0.10 GSC Evidence Intake and High-Value URL Recovery (Shipped: 2026-06-02)
+
+**Phases completed:** 4 phases, 8 plans
+
+**Key accomplishments:**
+
+- Formulated detailed playbooks preventing unnecessary whole-issue validation cycles, identifying exact fixed Hex Editor URLs for index requests.
+- Designed and shipped `retirement-pension-calculator` ("金秋麦浪" gradient, dual-curve inflation/compound visualization) and `net-worth-allocator-tracker` ("瑞士私银" matte dark-gold minimalist style, multi-currency conversion, portfolio stress tests, ECharts components, and 4-tier health signals).
+- Aligned flagship financial tools across all 10 supported translation locales, satisfying CJK TDK limits (70-100 characters) and phonetic limits (120-160 characters) exactly, and completely eliminating any English leakage.
+- Restored canonical sitemap validation paths under `/dist/client/sitemap.xml` to match actual Cloudflare deployment directories in Astro 6 SSR.
+- Closed the milestone at `EXCELLENT` project health with `4/4` requirements complete, `0` traceability gaps, and green `npm run verify:production`.
+
+**Archive files:**
+
+- Roadmap: [.planning/milestones/v0.0.10-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-ROADMAP.md)
+- Requirements: [.planning/milestones/v0.0.10-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-REQUIREMENTS.md)
+- Audit: [.planning/milestones/v0.0.10-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-MILESTONE-AUDIT.md)
+
+---
+
 ## v0.0.9 Runtime Debt Prioritization and Text Utility Repair (Shipped: 2026-05-11)
 
 **Phases completed:** 4 phases, 8 plans

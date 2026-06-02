@@ -1,74 +1,80 @@
 # Roadmap: U2Tool
 
-## v0.0.10 GSC Evidence Intake and High-Value URL Recovery
+## v0.0.11 Runtime Helper Debt Liquidation and Cryptographic Toolbox Shaking
 
-**Milestone:** v0.0.10 GSC Evidence Intake and High-Value URL Recovery
+**Milestone:** v0.0.11 Runtime Helper Debt Liquidation and Cryptographic Toolbox Shaking
 
-This milestone resumes natural-search recovery after `v0.0.9` closed the runtime debt cycle. The focus is to stop treating GSC validation as a single giant button: use the existing Coverage drilldown and Performance exports to identify which URL groups should not be validated, which technical blockers need code fixes first, and which high-value tool pages deserve content/internal-link recovery and individual request-indexing treatment.
+This milestone focuses on completely clearing out the remaining legacy imports in `src/lib/tool-stubs.ts` to achieve 100% runtime integrity, and designing & building the 4th flagship interaction utility in our Obsidian Gold series: the matte private-banking styled "Developer Cryptographic & Hash Toolbox" (slug: `developer-cryptography-toolbox`).
 
-Status: milestone opened on 2026-05-11 from existing GSC exports. Baseline reports regenerated as `docs/GSC_DRILLDOWN_URL_REPORT_2026-05-11.md` and `docs/GSC_PERFORMANCE_RECOVERY_REPORT_2026-05-11.md`.
+Status: milestone opened on 2026-06-02.
 
-### Phase 32: GSC Validation Action Matrix
-**Goal**: Convert existing GSC Coverage and Performance exports into a deterministic validation action matrix that explains why previous broad validation attempts failed and what should be validated next.
-**Depends on**: Archived v0.0.9 baseline
-**Requirements**: GSC-13
-**Status**: Complete on 2026-05-11 with `docs/GSC_VALIDATION_ACTION_MATRIX_2026-05-11.md` and `docs/GSC_VALIDATION_PLAYBOOK_2026-05-11.md`.
+### Phase 36: Residual Runtime Stub Liquidation
+**Goal**: Reposition and repair the remaining compatibility exports inside `src/lib/tool-stubs.ts` (`defaultColors`, `emojiData`, `fontMappings`, `fontStyles`, `K`, and `bicDatabase`) into fully typed reference data under `src/lib/runtime-integrity/`.
+**Depends on**: Shipped v0.0.10 baseline
+**Requirements**: RUNTIME-09
+**Status**: Open
 **Success Criteria** (what must be TRUE):
-  1. Existing GSC exports are checked and regenerated into current baseline reports.
-  2. URL groups are labeled as `do-not-validate`, `fix-before-validate`, `request-indexing-after-enhancement`, or `monitor`.
-  3. The action matrix includes exact examples and user-facing guidance for which GSC rows to leave alone versus retry.
+  1. All 6 legacy stubs are migrated to proper ES modules with real typed data.
+  2. Consumer components importing these helpers execute genuine data rather than falling back to empty stubs.
+  3. No placeholder regressions or TypeScript validation errors.
 **Plans**: 2 plans
 
 Plans:
-- [x] 32-01: Generate the GSC validation action matrix from existing exports
-- [x] 32-02: Document the validation/request-indexing playbook for the current GSC state
+- [ ] 36-01: Migrating font, color, and constant stubs to runtime-integrity references
+- [ ] 36-02: Migrating bank database and emoji stubs with runtime smoke validation
 
-### Phase 33: Technical URL Blocker Repair
-**Goal**: Fix only high-confidence technical blockers that prevent indexable pages from passing live inspection, while marking expected exclusions as intentional.
-**Depends on**: Phase 32
-**Requirements**: GSC-14
-**Status**: Complete on 2026-05-11 with representative live checks in `docs/GSC_TECHNICAL_BLOCKER_LIVE_CHECK_2026-05-11.md`; no code patch required.
+### Phase 37: Developer Cryptographic Flagship Design
+**Goal**: Design the schema, UX flow, and rigorous 10-locale translation keys (including character constraints for titles/descriptions) for the premium Cryptographic & Hash Toolbox.
+**Depends on**: Phase 36
+**Requirements**: CRYPTO-01
+**Status**: Open
 **Success Criteria** (what must be TRUE):
-  1. True 4xx/noindex/robots/5xx blockers on indexable pages are live-checked and patched when the repository owns the issue.
-  2. Expected exclusions such as stale build assets, canonical alternates, redirects, and query-parameter variants are documented as not worth validation.
-  3. Internal-link and search-engine compliance checks remain green after any redirect/canonical/sitemap changes.
+  1. Complete translation files established in `src/messages/[locale]/tools/developer-cryptography-toolbox.json`.
+  2. Character density metrics strictly satisfy [70, 100] for CJK TDK and [120, 160] for phonetic strings with zero hardcoded English leaks.
+  3. Design specification signed off.
 **Plans**: 2 plans
 
 Plans:
-- [x] 33-01: Live-check high-confidence technical blocker samples and classify fixability
-- [x] 33-02: Patch owned URL-shape defects and verify canonical/internal-link gates
+- [ ] 37-01: Define cryptographic localized copy and exact schema tokens
+- [ ] 37-02: Create routing mapping and ToolImportMap loader registry
 
-### Phase 34: High-Value Tool Detail Recovery
-**Goal**: Prioritize and repair the highest-value tool-detail recovery candidates using Performance evidence rather than broad catalog rewrites.
-**Depends on**: Phase 33
-**Requirements**: GSC-15
-**Status**: Complete on 2026-05-11 with the English/Russian Hex Editor recovery slice selected, patched, and covered by rendered SEO plus content-trust evidence.
+### Phase 38: Obsidian Matte Premium Implementation
+**Goal**: Build the Svelte 5 interactive cryptography island displaying high-signal hash conversions, symmetric/asymmetric demos, performance micro-benchmarks, and matte dark-gold luxury styling.
+**Depends on**: Phase 37
+**Requirements**: CRYPTO-02
+**Status**: Open
 **Success Criteria** (what must be TRUE):
-  1. Candidate pages are ranked by lost clicks, lost impressions, current indexability, content mismatch, and internal-link opportunity.
-  2. Only selected high-value pages receive content/runtime/internal-link fixes.
-  3. Rendered SEO and content-trust checks cover each edited page.
+  1. The new tool `src/components/tools/DeveloperCryptographicToolbox.svelte` compiles perfectly in Svelte 5.
+  2. Premium UX incorporates smooth animations, microsecond-level benchmarking, and interactive state indicators.
+  3. Dark mode behaves flawlessly and remains synchronized with active site parameters.
 **Plans**: 2 plans
 
 Plans:
-- [x] 34-01: Rank high-value `tool-detail` recovery candidates from Performance evidence
-- [x] 34-02: Patch the selected recovery slice with rendered/content-trust evidence
+- [ ] 38-01: Build the core algorithms and reactive state machines in Svelte 5
+- [ ] 38-02: Implement Swiss banking premium dark-gold UX styling and interactive charts
 
-### Phase 35: GSC Recovery Evidence Gate and Closeout
-**Goal**: Fold the GSC action matrix and selected fixes into production verification and close the milestone with clear next validation instructions.
-**Depends on**: Phase 34
-**Requirements**: OPS-13
+### Phase 39: Production Release Gate & QA Enforcement
+**Goal**: Verify sitemap inclusion, cross-origin/SSR safety under Astro 6, full QA sitemap crawlers, and run complete test coverage for the cryptography integration.
+**Depends on**: Phase 38
+**Requirements**: OPS-14
+**Status**: Open
 **Success Criteria** (what must be TRUE):
-  1. Production verification passes after GSC recovery changes.
-  2. Traceability, health, and milestone audit artifacts reflect which GSC validation groups are ready for retry.
-  3. The final playbook tells the user exactly which GSC issue rows to validate, which URLs to request indexing for, and which rows to monitor without clicking validate.
+  1. All 183+ test cases pass and the sitemap validator successfully parses `/sitemap.xml`.
+  2. Project health returns `🟢 EXCELLENT`.
+  3. Commit atomic packages with proper Git traceability annotations.
 **Plans**: 2 plans
 
 Plans:
-- [ ] 35-01: Extend evidence gates for the GSC recovery slice
-- [ ] 35-02: Run production verification and complete GSC recovery closeout
+- [ ] 39-01: Implement Vitest and E2E validation scenarios for the cryptographic toolbox
+- [ ] 39-02: Run full verify:production gate and publish release evidence
 
 ## Archived Milestones
 
+- [x] v0.0.10 GSC Evidence Intake and High-Value URL Recovery
+  Archive: [.planning/milestones/v0.0.10-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-ROADMAP.md)
+  Requirements: [.planning/milestones/v0.0.10-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-REQUIREMENTS.md)
+  Audit: [.planning/milestones/v0.0.10-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-MILESTONE-AUDIT.md)
+  Status: Shipped on 2026-06-02. Delivered targeted GSC validation playbooks, recovered Hex Editor Detail page, launched the pension optimizer and net-worth portfolio trackers with 10-locale constraints, and resolved Astro 6 SSR Cloudflare sitemap path checks.
 - [x] v0.0.9 Runtime Debt Prioritization and Text Utility Repair
   Archive: [.planning/milestones/v0.0.9-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.9-ROADMAP.md)
   Requirements: [.planning/milestones/v0.0.9-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.9-REQUIREMENTS.md)

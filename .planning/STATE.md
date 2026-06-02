@@ -1,42 +1,42 @@
 ---
 gsd_state_version: 1.0
-milestone: v0.0.10
-milestone_name: GSC Evidence Intake and High-Value URL Recovery
-current_phase: 35
-current_phase_name: GSC Recovery Evidence Gate and Closeout
-current_plan: 2
-status: completed
-stopped_at: "v0.0.10 shipped with sitemap validation corrected, full offline health audit EXCELLENT, and Hex Editor + dynamic financial tool slices successfully staged/committed."
-last_updated: "2026-06-02T19:40:00+08:00"
+milestone: v0.0.11
+milestone_name: Runtime Helper Debt Liquidation and Cryptographic Toolbox Shaking
+current_phase: 36
+current_phase_name: Residual Runtime Stub Liquidation
+current_plan: 1
+status: planning
+stopped_at: "v0.0.10 archived. v0.0.11 milestone opened for runtime helper liquidation and cryptographic flagship toolbox design."
+last_updated: "2026-06-02T19:50:00+08:00"
 last_activity: 2026-06-02
 progress:
   total_phases: 4
-  completed_phases: 4
+  completed_phases: 0
   total_plans: 8
-  completed_plans: 8
-  percent: 100
+  completed_plans: 0
+  percent: 0
 ---
 
 # Project State
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-05-11)
+See: .planning/PROJECT.md (updated 2026-06-02)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** v0.0.10 has separated expected GSC exclusions, live-checked technical blocker samples, and recovered the selected high-value Hex Editor tool-detail slice before final GSC closeout guidance.
+**Current focus:** v0.0.11 clears all remaining legacy runtime stubs from tool-stubs.ts and delivers our 4th flagship tool: the private-banking styled cryptography suite.
 
 ## Current Position
 
-Current Phase: 35
-Current Phase Name: GSC Recovery Evidence Gate and Closeout
+Current Phase: 36
+Current Phase Name: Residual Runtime Stub Liquidation
 Total Phases: 4
-Current Plan: 2
+Current Plan: 1
 Total Plans in Phase: 2
-Status: Completed
+Status: Planning
 Last Activity: 2026-06-02
-Progress: 100%
-Progress Bar: [##########] 100%
+Progress: 0%
+Progress Bar: [----------] 0%
 
 ## Recent Trend
 
