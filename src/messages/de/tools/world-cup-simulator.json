@@ -1,0 +1,28 @@
+{
+  "detailed_description": "Kostenloser WM 2026 Simulator. Führen Sie 10k Monte-Carlo-Simulationen mit Elo-Klassen, Gastgeber/Tradition-Reglern und edlen ECharts aus. 100% offline.",
+  "usage_steps": [
+    "Passen Sie im linken Bereich die Regler für Gastgeber-Vorteil, Traditions-DNA und Wildcard-Chaos an",
+    "Wählen Sie in den Dropdowns zwei Fokus-Teams zum direkten Wahrscheinlichkeitsvergleich aus",
+    "Klicken Sie den goldenen Button, um 10.000 Monte-Carlo-Turniersimulationen zu starten",
+    "Prüfen Sie das Champion-Wahrscheinlichkeits-Balkendiagramm, das Radar und den Aufstiegstrichter rechts"
+  ],
+  "usage_examples": [
+    "Erhöhen Sie den Chaos-Regler, um Außenseiter wie Japan oder Marokko im Diagramm steigen zu sehen",
+    "Maximieren Sie den Gastgeber-Vorteil, um die besten Aufstiegspfade von USA, Mexiko und Kanada vorherzusagen",
+    "Vergleichen Sie Argentinien vs Brasilien in einem simulierten Finale"
+  ],
+  "faqs": [
+    {
+      "question": "Wie funktioniert das Simulationsmodell?",
+      "answer": "Der Simulator verwendet echte FIFA/Elo-Bewertungen aller 48 Teams und berechnet Sieg/Unentschieden/Niederlage über eine logistische Gleichung mit Poisson-Torgenerierung für Tiebreaker."
+    },
+    {
+      "question": "Bildet er das erweiterte Format 2026 ab?",
+      "answer": "Ja. 48 Teams in 12 Gruppen. Die jeweils 2 Erstplatzierten steigen direkt auf, die besten 8 Drittplatzierten qualifizieren sich ebenfalls für die K.o.-Runde der 32."
+    },
+    {
+      "question": "Werden meine Daten an einen Server gesendet?",
+      "answer": "Niemals. Die gesamte Monte-Carlo-Engine und die ECharts-Grafiken laufen lokal in Ihrem Browser ohne jegliche Serverkommunikation."
+    }
+  ]
+}

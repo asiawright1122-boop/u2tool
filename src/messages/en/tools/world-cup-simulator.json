@@ -1,0 +1,28 @@
+{
+  "detailed_description": "Free 2026 World Cup simulator. Run 10k Monte Carlo simulations with Elo ratings, custom host/heritage sliders, and sleek gold ECharts. 100% offline.",
+  "usage_steps": [
+    "Adjust the Home Advantage, Heritage DNA, and Wildcard Chaos sliders on the left panel",
+    "Select two focus teams from the dropdowns to compare their head-to-head odds",
+    "Click the golden button to launch 10,000 Monte Carlo tournament simulations",
+    "Review the Champion Probability bar chart, Radar comparison, and advancement funnel on the right"
+  ],
+  "usage_examples": [
+    "Crank up the Chaos slider to see dark horse teams like Japan or Morocco surge in win probability",
+    "Maximize Home Advantage to forecast USA, Mexico, and Canada's best advancement paths",
+    "Compare Argentina vs Brazil championship odds in a simulated final showdown"
+  ],
+  "faqs": [
+    {
+      "question": "How does the simulation model work?",
+      "answer": "The simulator uses real FIFA/Elo ratings for all 48 teams, computing win/draw/loss via a Logistic probability equation (with a 26% baseline draw rate) and Poisson-distributed goals for tie-breaker rankings."
+    },
+    {
+      "question": "How does it replicate the 2026 expanded format?",
+      "answer": "It fully models 48 teams in 12 groups. The top 2 from each group advance directly, and the best 8 of 12 third-placed teams also qualify for a 32-team knockout bracket."
+    },
+    {
+      "question": "Is my data uploaded anywhere?",
+      "answer": "Never. The entire Monte Carlo engine and ECharts rendering run locally in your browser with zero server communication."
+    }
+  ]
+}

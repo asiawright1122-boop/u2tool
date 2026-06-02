@@ -1,0 +1,28 @@
+{
+  "detailed_description": "Simulador da Copa do Mundo 2026 grátis. Execute 10k simulações de Monte Carlo com Elo, controles de anfitrião/tradição e gráficos ouro fosco no cliente.",
+  "usage_steps": [
+    "Ajuste os controles de Vantagem do Anfitrião, DNA de Tradição e Fator Caos no painel esquerdo",
+    "Selecione duas seleções nos menus para comparar suas probabilidades frente a frente",
+    "Clique no botão dourado para iniciar 10.000 simulações Monte Carlo do torneio",
+    "Analise o gráfico de barras de probabilidade de campeão, radar comparativo e funil de avanço"
+  ],
+  "usage_examples": [
+    "Aumente o Fator Caos para ver seleções como Japão ou Marrocos crescerem em probabilidade",
+    "Maximize a Vantagem do Anfitrião para projetar os melhores caminhos de EUA, México e Canadá",
+    "Compare as chances de Argentina vs Brasil em uma final simulada"
+  ],
+  "faqs": [
+    {
+      "question": "Como funciona o modelo de simulação?",
+      "answer": "O simulador usa classificações Elo/FIFA reais dos 48 times, calculando vitória/empate/derrota via equação logística e gols com distribuição de Poisson para desempates."
+    },
+    {
+      "question": "Ele replica o formato expandido de 2026?",
+      "answer": "Sim. Modela 48 times em 12 grupos. Os 2 primeiros avançam e os 8 melhores terceiros também se classificam para o mata-mata de 32 times."
+    },
+    {
+      "question": "Meus dados são enviados para algum servidor?",
+      "answer": "Nunca. Todo o motor Monte Carlo e os gráficos ECharts rodam localmente no navegador sem comunicação com servidores."
+    }
+  ]
+}

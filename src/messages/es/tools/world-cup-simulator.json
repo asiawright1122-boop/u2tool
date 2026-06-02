@@ -1,0 +1,28 @@
+{
+  "detailed_description": "Simulador del Mundial 2026 gratis. Dirige 10k simulaciones de Montecarlo con Elo, deslizadores de local/herencia y gráficos oro mate de ECharts. 100% local.",
+  "usage_steps": [
+    "Ajusta los deslizadores de Ventaja Local, ADN de Herencia y Factor Caos en el panel izquierdo",
+    "Selecciona dos equipos en los menús desplegables para comparar sus probabilidades cara a cara",
+    "Haz clic en el botón dorado para lanzar 10.000 simulaciones Montecarlo del torneo",
+    "Revisa el gráfico de barras de probabilidad de campeón, el radar comparativo y el embudo de avance"
+  ],
+  "usage_examples": [
+    "Sube el deslizador de Caos para ver cómo equipos como Japón o Marruecos aumentan su probabilidad",
+    "Maximiza la Ventaja Local para proyectar las mejores rutas de avance de EE.UU., México y Canadá",
+    "Compara las probabilidades de Argentina vs Brasil en una final simulada"
+  ],
+  "faqs": [
+    {
+      "question": "¿Cómo funciona el modelo de simulación?",
+      "answer": "El simulador utiliza clasificaciones Elo/FIFA reales de los 48 equipos, calculando victoria/empate/derrota mediante una ecuación logística y goles con distribución de Poisson para desempates."
+    },
+    {
+      "question": "¿Replica el formato ampliado de 2026?",
+      "answer": "Sí. Modela 48 equipos en 12 grupos. Los 2 primeros avanzan directamente y los 8 mejores terceros también clasifican al cuadro eliminatorio de 32 equipos."
+    },
+    {
+      "question": "¿Se suben mis datos a algún servidor?",
+      "answer": "Nunca. Todo el motor Montecarlo y los gráficos ECharts se ejecutan localmente en tu navegador sin comunicación con servidores."
+    }
+  ]
+}
