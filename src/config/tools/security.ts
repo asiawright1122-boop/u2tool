@@ -21,4 +21,5 @@ export const SECURITY_TOOLS: Tool[] = [
   { slug: 'sql-injection-tester', category: 'security', icon: 'shield-check', component: 'SqlInjectionTester' },
   { slug: 'security-headers-checker', category: 'security', icon: 'shield-check', component: 'PopularUtilityTool', popular: true },
   { slug: 'csp-header-generator', category: 'security', icon: 'shield-check', component: 'PopularUtilityTool', popular: true },
+  { slug: 'developer-cryptography-toolbox', category: 'security', icon: 'ShieldAlert', component: 'DeveloperCryptographicToolbox', popular: true },
 ];
