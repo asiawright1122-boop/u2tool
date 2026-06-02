@@ -262,7 +262,7 @@ export function simulateFullTournament(
         const teamA = groupTeams[i];
         const teamB = groupTeams[j];
 
-        const { probA, probB, probDraw } = calculateMatchProbability(teamA.elo, teamB.elo, chaosSlider);
+        const { probA, probB } = calculateMatchProbability(teamA.elo, teamB.elo, chaosSlider);
         const r = Math.random();
         let outcome: 'win' | 'loss' | 'draw' = 'draw';
         if (r < probA) {

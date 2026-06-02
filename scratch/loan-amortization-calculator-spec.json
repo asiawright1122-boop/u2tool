@@ -1,0 +1,439 @@
+{
+  "slug": "loan-amortization-calculator",
+  "category": "finance",
+  "icon": "percent",
+  "component": "LoanAmortizationCalculator",
+  "popular": true,
+  "locales": {
+    "zh": {
+      "name": "真实利率与还款优化计算器",
+      "description": "揭示消费贷与房贷的真实年化利率（APR/APY），智能对比并优化提前还款方案，帮助您省下利息，提早结清贷款。",
+      "seo_title": "真实贷款利率与每月还款本息计算器 - 提前还款优化分析",
+      "seo_description": "免费在线真实贷款利率计算器，输入贷款金额与日息/月费率，通过二分逼近法(IRR)反推真实年化利率(APR/APY)；支持提前还款(每月多还或一次性结清)双曲线实时对比，自动计算省下的利息与提前结清年限，看清年化套路。",
+      "detailed_description": "真实贷款利率与还款优化计算器专为拆穿“假低息”和优化提前还款而设计。它利用内部收益率(IRR)算法将日利息、月手续费反推为真实的年化利率APR与复利APY，并为您提供多维度的提前还款对比方案。您只需输入提前还款的时间与金额，即可直观查看能为您省下的总利息和缩短的贷款年限。",
+      "usage_steps": [
+        "输入贷款总本金、期限及宣称的利率（支持日利率、月利率、年利率）。",
+        "选择还款方式（等额本息或等额本金）。",
+        "查看计算出的真实年化利率（APR）与年化复利（APY），揭示真实利息成本。",
+        "在提前还款模块输入额外还款（每月多还、每年多还或一次性提前还款）。",
+        "实时查看曜石黑金折线图，直观对比原计划与提前还款计划的累计本息双曲线。",
+        "导出详细的月度/年度摊销明细表，掌握每一分钱的去向。"
+      ],
+      "usage_examples": [
+        "拆穿日息0.03%或月费率0.5%消费贷的真实年化利率（APR）。",
+        "模拟房贷等额本息下，每月多还2000元本金能节省多少利息和提前多少年结清。",
+        "比较一次性提前还贷10万元与按月多还本金的省息效果差异。",
+        "查看在不同贷款年限下，真实年化单利（APR）与复利（APY）的利息差值。"
+      ],
+      "faqs": [
+        {
+          "question": "为什么等额本息的真实年化利率（APR）往往是宣称月费率的近两倍？",
+          "answer": "因为在等额本息或每月等额手续费下，随着你逐月还本，你实际占用的资金在减少，但利息却始终以最初的全部本金为基数计算。二分逼近法（IRR）能精确还原你真实占用的本金，从而揭示真实的年化利率成本。"
+        },
+        {
+          "question": "APR与APY有什么区别？",
+          "answer": "APR（年化单利）是按年度单利计算的真实利息率，不计入利息再投资；APY（年化复利）则假定利息按期（通常是按月）复投产生复利。在消费贷中，APY能更真实地反映若将还款资金用于理财时的机会成本。"
+        },
+        {
+          "question": "提前还款时，“缩减期限”和“减少月供”哪个更划算？",
+          "answer": "在总省息效果上，“缩短期限且月供不变”能省下显著更多的利息；而“减少月供且期限不变”则能减轻日常的现金流压力。本工具的提前还款优化模块默认按省息最大的“缩减期限”进行对比和优化。"
+        },
+        {
+          "question": "输入日利息0.05%，怎么换算？",
+          "answer": "本工具支持直接输入日息（如0.05%）或月息（如0.6%），计算引擎会自动将其转换为等效 of 按月还款现金流，再通过IRR公式精确反推真实年化利率，无需手动繁琐换算。"
+        },
+        {
+          "question": "所有计算都在本地进行吗？我的贷款数据安全吗？",
+          "answer": "是的，u2tool 所有工具的计算完全在您的本地浏览器中运行，绝不上传任何财务数据到服务器，100% 保护您的个人隐私与财务安全。"
+        }
+      ]
+    },
+    "en": {
+      "name": "Real Loan Rate & Amortization Calculator",
+      "description": "Reveal the real APR/APY from daily or monthly rates, and optimize your prepayment plans with dynamic amortizations.",
+      "seo_title": "Real Loan Interest Rate & Amortization Calculator - Prepayment Optimizer",
+      "seo_description": "Free online real loan interest rate calculator to reveal true APR/APY from daily/monthly fees using IRR. Compare prepayments (monthly, yearly, or one-time) with interactive charts to see saved interest and early payoff years.",
+      "detailed_description": "The Real Loan Rate & Amortization Calculator is designed to demystify complex loan rate structures and optimize prepayment strategies. By utilizing the Internal Rate of Return (IRR) algorithm, it translates daily interest or monthly service fees into clear, standardized APR and APY rates. It also features a prepayment playground to dynamically compare interest savings and amortization timelines.",
+      "usage_steps": [
+        "Enter the loan principal, term, and advertised rate (daily, monthly, or annual).",
+        "Select the amortization type (Equated Monthly Installment - EMI or Equal Principal).",
+        "Inspect the true APR and APY calculated via numerical bisection (IRR).",
+        "Navigate to the Prepayment Optimizer to add extra payments (monthly, yearly, or lump-sum).",
+        "Compare the original vs. optimized plans using the luxury dark gold cumulative payment charts.",
+        "Export the complete monthly or annual amortization schedule to track every penny."
+      ],
+      "usage_examples": [
+        "Reveal the true annual APR of a quick loan advertised at a 0.03% daily interest rate.",
+        "Calculate how much interest you can save by prepaying an extra $500 monthly on your mortgage.",
+        "Compare a lump-sum prepayment of $20,000 versus paying extra principal monthly.",
+        "Generate a comprehensive amortization table to see how principal outstanding declines over time."
+      ],
+      "faqs": [
+        {
+          "question": "Why is the real APR of a consumer loan often nearly double the advertised monthly flat rate?",
+          "answer": "Under flat rate schemes, you pay interest on the initial full principal even though you are paying down the principal monthly. The IRR method computes the actual outstanding balance, revealing the true annual percentage rate."
+        },
+        {
+          "question": "What is the difference between APR and APY in this calculator?",
+          "answer": "APR (Annual Percentage Rate) represents the annualized simple interest rate based on monthly compounding. APY (Annual Percentage Yield) accounts for the compound effect, representing the true economic cost if payments were reinvested."
+        },
+        {
+          "question": "Is it better to reduce the loan term or reduce the monthly payment during prepayment?",
+          "answer": "Reducing the loan term (keeping the payment same) saves significantly more interest because the principal outstanding decreases much faster. Reducing the monthly payment relieves short-term cash flow pressure but saves less overall interest."
+        },
+        {
+          "question": "How does the calculator handle daily or flat monthly fee inputs?",
+          "answer": "It converts daily rates (e.g., 0.05%) or monthly flat fees into a monthly payment cash flow, then uses a mathematical bisection solver to iteratively solve for the exact discount rate that matches the initial loan principal."
+        },
+        {
+          "question": "Is my sensitive financial data safe when using this tool?",
+          "answer": "Absolutely. All calculations are performed entirely locally in your web browser. No data is ever transmitted to our servers, ensuring 100% privacy and bank-grade data security."
+        }
+      ]
+    },
+    "es": {
+      "name": "Calculadora de Tasa Real de Préstamo y Amortización",
+      "description": "Revela la tasa anual equivalente (TIE/TAE) real a partir de tarifas diarias o mensuales, y optimiza tus prepagos de préstamos de forma interactiva.",
+      "seo_title": "Calculadora de Tasa Real de Préstamo y Optimización de Prepago",
+      "seo_description": "Calculadora gratuita de tasas de préstamos reales en línea para revelar el TAE real a partir de tasas diarias o mensuales con IRR. Compare prepagos mensuales, anuales o únicos con gráficos interactivos y calcule el ahorro de intereses y los años pagados antes.",
+      "detailed_description": "La Calculadora de Tasa Real de Préstamo y Amortización está diseñada para desmitificar las complejas estructuras de tasas de interés y optimizar las estrategias de pago anticipado. Al utilizar el algoritmo de la Tasa Interna de Retorno (TIR), traduce las tasas diarias o las comisiones mensuales en tasas TAE claras y estandarizadas, además de simular el ahorro de intereses.",
+      "usage_steps": [
+        "Ingrese el capital del préstamo, el plazo y la tasa anunciada (diaria, mensual o anual).",
+        "Seleccione el tipo de amortización (pago mensual equivalente o principal igual).",
+        "Inspeccione la tasa TAE real calculada mediante bisección numérica (IRR).",
+        "Vaya al Optimizador de Prepago para agregar pagos adicionales (mensuales, anuales o de una sola vez).",
+        "Compare los planes original y optimizado con los gráficos de pagos acumulados de color oro oscuro.",
+        "Exporte el programa de amortización mensual o anual completo para realizar un seguimiento de cada centavo."
+      ],
+      "usage_examples": [
+        "Revele la verdadera tasa TAE de un préstamo rápido anunciado con una tasa diaria del 0,03%.",
+        "Calcule cuánto interés puede ahorrar pagando por adelantado $500 adicionales al mes en su hipoteca.",
+        "Compare un pago anticipado único de $20.000 con el pago de principal adicional cada mes.",
+        "Genere una tabla de amortización integral para ver cómo disminuye el capital pendiente con el tiempo."
+      ],
+      "faqs": [
+        {
+          "question": "¿Por qué la tasa TAE real de un préstamo de consumo suele ser casi el doble de la tasa plana mensual anunciada?",
+          "answer": "Bajo esquemas de tasa plana, usted paga intereses sobre el capital total inicial aunque esté pagando el capital mensualmente. El método IRR calcula el saldo real pendiente, revelando la tasa anual real."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre APR y APY en esta calculadora?",
+          "answer": "APR (Tasa de porcentaje anual) representa la tasa de interés simple anual basada en la capitalización mensual. APY (Rendimiento porcentual anual) tiene en cuenta el efecto compuesto, lo que representa el costo económico real."
+        },
+        {
+          "question": "¿Es mejor reducir el plazo del préstamo o reducir el pago mensual durante el pago anticipado?",
+          "answer": "Reducir el plazo del préstamo (manteniendo el pago igual) ahorra significativamente más intereses porque el capital pendiente disminuye mucho más rápido. Reducir el pago mensual alivia la presión del flujo de caja."
+        },
+        {
+          "question": "¿Cómo maneja la calculadora las entradas diarias o las tarifas mensuales planas?",
+          "answer": "Convierte tasas diarias (p. ej., 0,05%) o tarifas mensuales planas en un flujo de efectivo de pago mensual, luego utiliza un solucionador de bisección matemática para resolver de forma iterativa la tasa exacta."
+        },
+        {
+          "question": "¿Están seguros mis datos financieros confidenciales al utilizar esta herramienta?",
+          "answer": "Absolutamente. Todos los cálculos se realizan localmente en su navegador web. Ningún dato se transmite a nuestros servidores, lo que garantiza el 100% de privacidad y seguridad de nivel bancario."
+        }
+      ]
+    },
+    "pt": {
+      "name": "Calculadora de Taxa Real de Empréstimo e Amortização",
+      "description": "Revele a taxa anual real (CET/taxa efetiva) a partir de juros diários ou mensais, e otimize seus pagamentos antecipados de empréstimo.",
+      "seo_title": "Calculadora de Taxa Real de Empréstimo e Otimização de Pré-pagamento",
+      "seo_description": "Calculadora online gratuita de taxa real de empréstimo para revelar a taxa efetiva real a partir de taxas diárias ou mensais via TIR. Compare pré-pagamentos com gráficos interativos e veja o total economizado em juros e a redução de tempo no pagamento.",
+      "detailed_description": "A Calculadora de Taxa Real de Empréstimo e Amortização foi criada para desmistificar estruturas complexas de taxas de juros e otimizar estratégias de amortização antecipada. Utilizando o algoritmo da Taxa Interna de Retorno (TIR), ela traduz juros diários ou taxas mensais em taxas anuais padronizadas, auxiliando na comparação de cenários.",
+      "usage_steps": [
+        "Insira o valor principal, prazo e taxa anunciada (diária, mensal ou anual).",
+        "Selecione o tipo de amortização (parcela mensal igual ou amortização constante).",
+        "Inspecione a CET real calculada através do método de bisseção (TIR).",
+        "Vá ao Otimizador de Pré-pagamento para adicionar parcelas extras (mensais, anuais ou pagamento único).",
+        "Compare os planos original e otimizado com gráficos de pagamentos acumulados em ouro escuro luxo.",
+        "Exporte o cronograma completo de amortização mensal ou anual para rastrear cada centavo."
+      ],
+      "usage_examples": [
+        "Revele a verdadeira taxa anual CET de um empréstimo rápido anunciado a 0,03% de juros diários.",
+        "Calcule quanto você economiza amortizando $500 extras por mês em sua hipoteca.",
+        "Compare uma amortização única de $20.000 com pagamentos extras mensais no principal.",
+        "Gere uma tabela de amortização completa para ver como o saldo do principal diminui com o tempo."
+      ],
+      "faqs": [
+        {
+          "question": "Por que a CET real de um empréstimo pessoal costuma ser quase o dobro da taxa plana mensal anunciada?",
+          "answer": "Nos esquemas de taxa plana, você paga juros sobre o principal total inicial mesmo amortizando o principal mensalmente. O método TIR calcula o saldo real devedor, revelando a verdadeira taxa anual."
+        },
+        {
+          "question": "Qual é a diferença entre APR e APY nesta calculadora?",
+          "answer": "APR representa a taxa de juros simples anualizada baseada em capitalização mensal. APY considera o efeito dos juros compostos, representando o custo econômico real se os pagamentos fossem reinvestidos."
+        },
+        {
+          "question": "É melhor reduzir o prazo do empréstimo ou reduzir a parcela mensal na amortização?",
+          "answer": "Reduzir o prazo do empréstimo (mantendo a parcela igual) economiza muito mais juros porque o saldo devedor diminui mais rápido. Reduzir a parcela mensal alivia o fluxo de caixa no curto prazo."
+        },
+        {
+          "question": "Como a calculadora lida com entradas de juros diários ou taxas mensais planas?",
+          "answer": "Converte juros diários (ex. 0,05%) ou taxas planas em um fluxo de caixa mensal, então usa um resolvedor de bisseção matemática para calcular iterativamente a taxa de desconto exata."
+        },
+        {
+          "question": "Meus dados financeiros confidenciais estão seguros ao usar esta ferramenta?",
+          "answer": "Com certeza. Todos os cálculos são feitos 100% localmente em seu navegador. Nenhum dado é enviado aos nossos servidores, garantindo total privacidade e segurança financeira."
+        }
+      ]
+    },
+    "ja": {
+      "name": "実質金利と繰上返済最適化シミュレーター",
+      "description": "毎日の金利や月々の手数料から実質年率（APR/APY）を算出し、繰り上げ返済による利息軽減効果を最適化します。",
+      "seo_title": "実質ローン金利・繰上返済シミュレーター - 金利の罠を見抜く",
+      "seo_description": "無料のオンライン実質ローン金利計算機。日歩や月々の定額手数料からIRR法を用いて真の年換算金利（APR/APY）を逆算します。繰上返済（毎月・毎年の追加返済、一括返済）の利息削減効果をグラフで比較し、最適な返済計画を立てられます。",
+      "detailed_description": "実質金利と繰上返済最適化シミュレーターは、複雑なローン金利構造を解き明かし、繰上返済計画を視覚化するために開発されました。内部収益率（IRR）アルゴリズムにより、日歩や月額手数料から実質金利を算出します。さらに、繰上返済シミュレーターによって、削減される利息や完済時期の短縮効果をリアルタイムでシミュレーションできます。",
+      "usage_steps": [
+        "ローンの元金、期間、および公表されている金利（日歩、月利、年利）を入力します。",
+        "返済方式（元利均等返済または元金均等返済）を選択します。",
+        "数値二分法（IRR）によって計算された真のAPRおよびAPYを確認します。",
+        "繰上返済最適化モジュールに移動し、追加の返済（毎月、毎年、または一括）を入力します。",
+        "豪華なダークゴールドの累積支払いチャートを使用して、元の計画と最適化された計画を比較します。",
+        "完全な月次または年次の償還スケジュールをエクスポートして、すべての詳細を追跡します。"
+      ],
+      "usage_examples": [
+        "日利0.03%と謳うクイックローンの真の実質年率（APR）を暴きます。",
+        "住宅ローンに対して毎月追加で500ドルを繰上返済することで、どれだけの利息が節約できるかを計算します。",
+        "2万ドルの一括繰上返済と、毎月追加で元金を支払う場合の利息削減効果を比較します。",
+        "包括的な償還表を生成して、元金残高が時間の経過とともにどのように減少するかを確認します。"
+      ],
+      "faqs": [
+        {
+          "question": "なぜ消費者ローンの実質年率（APR）は、広告の月額固定手数料率のほぼ2倍になることが多いのですか？",
+          "answer": "固定手数料方式では、毎月元金を返済しているにもかかわらず、当初の元金全額に対して利息を支払います。IRR法は実際の未払い残高を計算し、真の実質年率を明らかにします。"
+        },
+        {
+          "question": "この計算機におけるAPRとAPYの違いは何ですか？",
+          "answer": "APR（実質年率）は毎月複利に基づく年換算の単利金利を表します。APY（実質年利）は複利効果を考慮し、返済資金が再投資された場合の真の経済的コストを表します。"
+        },
+        {
+          "question": "繰上返済の際、期間を短縮するのと毎月の返済額を減らすのはどちらが良いですか？",
+          "answer": "期間を短縮する（毎月の返済額は維持する）方が、未払い元金がはるかに早く減少するため、利息を大幅に節約できます。毎月の返済額を減らすと、短期的な負担は軽減されます。"
+        },
+        {
+          "question": "計算機は日々の金利や固定の月額手数料の入力をどのように処理しますか？",
+          "answer": "日歩（例：0.05%）や毎月の固定手数料を毎月の支払いキャッシュフローに変換し、数学的な二分法ソルバーを使用して、初期のローン元金に一致する正確な割引率を反復して解きます。"
+        },
+        {
+          "question": "このツールを使用する際、私の機密性の高い財務データは安全ですか？",
+          "answer": "完全に安全です。すべての計算はWebブラウザー内でローカルに実行されます。データがサーバーに送信されることは一切なく、100%のプライバシーとセキュリティが保証されます。"
+        }
+      ]
+    },
+    "ko": {
+      "name": "실제 대출 이자율 및 중도상환 최적화 계산기",
+      "description": "일일 또는 월간 수수료에서 실제 연이율(APR/APY)을 산출하고, 중도 상환을 통한 이자 절감 및 조기 상환 효과를 최적화합니다.",
+      "seo_title": "실제 대출 이자율 및 중도 상환 계산기 - 이자 절감 분석기",
+      "seo_description": "무료 온라인 실제 대출 금리 계산기입니다. 일일 이자나 월 수수료로부터 IRR 방식을 사용해 진짜 연이율(APR/APY)을 역산합니다. 추가 중도 상환(매월/매년 추가 납입, 일시 상환) 시 절약되는 총 이자와 단축되는 대출 기간을 차트로 직접 비교해 보세요.",
+      "detailed_description": "실제 대출 이자율 및 중도상환 최적화 계산기는 복잡하게 포장된 대출 금리 구조를 투명하게 밝히고 중도 상환 전략을 극대화하기 위해 설계되었습니다. 내부수익률(IRR) 알고리즘을 이용해 금융기관이 광고하는 일일 금리나 월별 고정 수수료를 표준화된 APR 및 APY로 환산하며, 추가 상환 시 줄어드는 이자와 상환 일정을 보여줍니다.",
+      "usage_steps": [
+        "대출 원금, 기간 및 광고된 금리(일일, 월간 또는 연간)를 입력합니다.",
+        "상환 방식(원리금 균등 상환 또는 원금 균등 상환)을 선택합니다.",
+        "수치 이분법(IRR)으로 계산된 실제 연이율(APR) 및 연복리(APY)를 확인합니다.",
+        "중도 상환 최적화 도구로 이동하여 추가 상환액(매월, 매년 또는 일시금)을 입력합니다.",
+        "고급스러운 다크 골드 누적 납부 차트를 사용하여 기존 계획과 최적화된 계획을 비교합니다.",
+        "전체 월별 또는 연간 상환 일정을 내보내 모든 세부 사항을 추적합니다."
+      ],
+      "usage_examples": [
+        "일일 이자율 0.03%로 광고된 소액 대출의 실제 실질 연이율(APR)을 파악합니다.",
+        "주택 담보 대출에 매월 추가로 500달러를 중도 상환할 때 절약할 수 있는 이자를 계산합니다.",
+        "2만 달러의 일시 중도 상환과 매월 추가 원금 상환의 이자 절감 효과를 비교합니다.",
+        "종합 상환 일정을 생성하여 원금 잔액이 시간에 따라 어떻게 감소하는지 확인합니다."
+      ],
+      "faqs": [
+        {
+          "question": "소비자 대출의 실제 APR이 광고된 월 고정 수수료율의 거의 두 배에 달하는 경우가 많은 이유는 무엇인가요?",
+          "answer": "고정 수수료 방식에서는 매월 원금을 상환함에도 불구하고 초기 원금 전액에 대해 이자를 지불합니다. IRR 방식은 실제 남은 잔액을 계산하여 실제 연이율을 밝혀냅니다."
+        },
+        {
+          "question": "이 계산기에서 APR과 APY의 차이점은 무엇인가요?",
+          "answer": "APR(연이율)은 매월 복리에 기초한 연간 단리 이자율을 나타냅니다. APY(연복리)는 복리 효과를 반영하여 상환 자금이 재투자되는 경우의 실제 경제적 비용을 나타냅니다."
+        },
+        {
+          "question": "중도 상환 시 대출 기간을 줄이는 것과 월 상환액을 줄이는 것 중 어느 것이 더 유리한가요?",
+          "answer": "대출 기간을 줄이는 것(월 상환액 유지)이 남은 원금이 훨씬 빨리 감소하므로 이자를 크게 절약할 수 있습니다. 월 상환액을 줄이면 단기적인 현금 흐름의 부담은 완화됩니다."
+        },
+        {
+          "question": "계산기는 일일 이자율이나 고정 월 수수료 입력을 어떻게 처리하나요?",
+          "answer": "일일 이자율(예: 0.05%) 또는 고정 월 수수료를 월별 상환 현금 흐름으로 변환한 다음, 초기 대출 원금과 일치하는 정확한 할인율을 수학적 이분법 솔버를 통해 반복 계산합니다."
+        },
+        {
+          "question": "이 도구를 사용할 때 나의 민감한 재무 데이터는 안전한가요?",
+          "answer": "완전히 안전합니다. 모든 계산은 웹 브라우저 내에서 로컬로 실행됩니다. 데이터가 서버로 전송되지 않으므로 100% 프라이버시와 은행 수준의 보안이 보장됩니다."
+        }
+      ]
+    },
+    "fr": {
+      "name": "Calculateur de Taux Réel de Prêt et d'Amortissement",
+      "description": "Révélez le TAEG réel à partir de taux journaliers ou mensuels, et optimisez vos remboursements anticipés de prêt avec des graphiques dynamiques.",
+      "seo_title": "Calculateur de Taux Réel de Prêt et Optimisation de Remboursement",
+      "seo_description": "Calculateur en ligne gratuit de taux de prêt réel pour révéler le TAEG réel à partir de frais journaliers ou mensuels par TRI. Comparez les remboursements anticipés avec des graphiques interactifs pour voir les économies d'intérêts et les années gagnées.",
+      "detailed_description": "Le Calculateur de Taux Réel de Prêt et d'Amortissement est conçu pour démystifier les structures de taux d'intérêt complexes et optimiser vos stratégies de remboursement anticipé. Grâce à l'algorithme du Taux de Rentabilité Interne (TRI), il convertit les intérêts journaliers ou les frais forfaitaires mensuels en un TAEG clair et transparent.",
+      "usage_steps": [
+        "Saisissez le capital, la durée et le taux annoncé (journalier, mensuel ou annuel).",
+        "Sélectionnez le type d'amortissement (échéance mensuelle égale ou amortissement constant).",
+        "Vérifiez le TAEG réel calculé par méthode de dichotomie (TRI).",
+        "Accédez à l'optimiseur de remboursement anticipé pour ajouter des versements supplémentaires.",
+        "Comparez les plans original et optimisé avec les graphiques de paiements cumulés en or sombre.",
+        "Exportez le tableau d'amortissement mensuel ou annuel complet pour suivre chaque centime."
+      ],
+      "usage_examples": [
+        "Révélez le TAEG annuel d'un prêt rapide annoncé à 0,03% d'intérêts journaliers.",
+        "Calculez combien vous pouvez économiser en remboursant 500 $ de plus par mois sur votre hypothèque.",
+        "Comparez un remboursement unique de 20 000 $ à des versements mensuels supplémentaires.",
+        "Générez un tableau d'amortissement complet pour voir le solde du capital diminuer."
+      ],
+      "faqs": [
+        {
+          "question": "Pourquoi le TAEG réel d'un crédit conso est souvent le double du taux forfaitaire mensuel annoncé ?",
+          "answer": "Avec un taux forfaitaire, vous payez des intérêts sur le capital initial total même si vous remboursez le capital chaque mois. La méthode TRI calcule sur le solde restant dû réel, révélant le TAEG exact."
+        },
+        {
+          "question": "Quelle est la différence entre APR (TAEG) et APY (taux actuariel) dans ce calculateur ?",
+          "answer": "L'APR représente le taux d'intérêt simple annualisé basé sur une capitalisation mensuelle. L'APY prend en compte les intérêts composés, modélisant le coût économique réel si les paiements étaient réinvestis."
+        },
+        {
+          "question": "Est-il préférable de réduire la durée ou de réduire la mensualité lors d'un remboursement anticipé ?",
+          "answer": "Réduire la durée (en gardant la mensualité identique) permet d'économiser beaucoup plus d'intérêts car le capital restant dû diminue plus vite. Réduire la mensualité soulage le budget mensuel."
+        },
+        {
+          "question": "Comment le calculateur gère-t-il les taux journaliers ou les frais fixes mensuels ?",
+          "answer": "Il convertit le taux journalier (ex. 0,05%) ou les frais fixes en flux de trésorerie mensuel, puis utilise un solveur de dichotomie pour trouver le taux d'actualisation exact correspondant au capital initial."
+        },
+        {
+          "question": "Mes données financières sensibles sont-elles sécurisées avec cet outil ?",
+          "answer": "Absolument. Tous les calculs s'exécutent localement dans votre navigateur. Aucune donnée n'est envoyée à nos serveurs, garantissant une confidentialité totale et une sécurité bancaire."
+        }
+      ]
+    },
+    "ru": {
+      "name": "Калькулятор реальной ставки кредита и досрочного погашения",
+      "description": "Рассчитайте реальную годовую ставку (ПСК) из ежедневных или ежемесячных комиссий и оптимизируйте график досрочного погашения кредита.",
+      "seo_title": "Калькулятор реальной ставки кредита и оптимизации погашения",
+      "seo_description": "Бесплатный калькулятор реальной кредитной ставки для расчета ПСК из ежедневных или ежемесячных комиссий с помощью метода ВСД. Сравните варианты досрочного погашения на интерактивных графиках, чтобы узнать экономию на процентах и сокращение срока.",
+      "detailed_description": "Калькулятор реальной ставки кредита и досрочного погашения разработан для выявления скрытой переплаты по кредитам и оптимизации стратегий досрочных выплат. Используя алгоритм внутренней ставки доходности (ВСД), он переводит ежедневные проценты или ежемесячные комиссии в прозрачные стандартизированные годовые ставки.",
+      "usage_steps": [
+        "Введите сумму кредита, срок и заявленную ставку (дневную, месячную или годовую).",
+        "Выберите тип погашения (аннуитетный или дифференцированный платеж).",
+        "Изучите реальную ставку ПСК, рассчитанную методом численного деления пополам (ВСД).",
+        "Перейдите к оптимизатору досрочных выплат и введите сумму дополнительных платежей.",
+        "Сравните базовый и оптимизированный планы на роскошных графиках кумулятивных платежей.",
+        "Экспортируйте полную таблицу ежемесячной или ежегодной амортизации для контроля."
+      ],
+      "usage_examples": [
+        "Узнайте реальную годовую ставку микрозайма с рекламируемой дневной ставкой 0,03%.",
+        "Рассчитайте экономию от досрочного внесения дополнительных $500 ежемесячно по ипотеке.",
+        "Сравните разовое досрочное погашение на $20 000 с ежемесячными переплатами.",
+        "Сгенерируйте подробный график амортизации, чтобы увидеть динамику снижения долга."
+      ],
+      "faqs": [
+        {
+          "question": "Почему реальная ставка ПСК потребительского кредита часто почти вдвое превышает рекламируемую плоскую ставку?",
+          "answer": "При плоской ставке проценты начисляются на первоначальную сумму, хотя долг ежемесячно уменьшается. Метод ВСД учитывает только реальный остаток долга, выявляя настоящую стоимость кредита."
+        },
+        {
+          "question": "В чем разница между APR и APY в этом калькуляторе?",
+          "answer": "APR представляет собой годовую простую процентную ставку при ежемесячном начислении. APY учитывает сложный процент, отражая реальные экономические затраты с учетом капитализации."
+        },
+        {
+          "question": "Что выгоднее при досрочном погашении: сокращать срок или уменьшать платеж?",
+          "answer": "Сокращение срока (при сохранении платежа) экономит существенно больше на процентах, так как основной долг гасится быстрее. Уменьшение платежа снижает ежемесячную нагрузку на бюджет."
+        },
+        {
+          "question": "Как калькулятор обрабатывает ввод дневных ставок или фиксированных ежемесячных комиссий?",
+          "answer": "Он конвертирует дневные проценты (например, 0,05%) или фиксированные комиссии в эквивалентный ежемесячный платеж, а затем методом бисекции подбирает дисконтную ставку под сумму долга."
+        },
+        {
+          "question": "Безопасны ли мои конфиденциальные финансовые данные при использовании этого инструмента?",
+          "answer": "Абсолютно. Все вычисления производятся локально в вашем браузере. Данные не передаются на наши серверы, что гарантирует 100% конфиденциальность и банковский уровень защиты."
+        }
+      ]
+    },
+    "de": {
+      "name": "Rechner für effektiven Darlehenszins und Sondertilgung",
+      "description": "Decken Sie den tatsächlichen Effektivzins aus Tages- oder Monatsgebühren auf und optimieren Sie Ihre Sondertilgungen mit dynamischen Tilgungsplänen.",
+      "seo_title": "Effektiver Darlehenszinsrechner & Sondertilgungsoptimierer",
+      "seo_description": "Kostenloser Online-Rechner für den effektiven Darlehenszins, um die wahre Jahresgebühr aus täglichen oder monatlichen Kosten mittels Internem Zinsfuß aufzudecken. Vergleichen Sie Sondertilgungen per Grafik und berechnen Sie die Zinsersparnis.",
+      "detailed_description": "Der Rechner für effektiven Darlehenszins und Sondertilgung hilft Ihnen, versteckte Zinskosten zu erkennen und Ihre Tilgungsstrategie zu optimieren. Durch die Berechnung des Internen Zinsfußes (IRR) werden Tageszinsen oder monatliche Servicepauschalen in standardisierte Effektivzinssätze (APR/APY) umgerechnet.",
+      "usage_steps": [
+        "Geben Sie die Darlehenssumme, die Laufzeit und den beworbenen Zinssatz (täglich, monatlich, jährlich) ein.",
+        "Wählen Sie die Tilgungsart (Annuitätendarlehen mit gleichen Raten oder Tilgungsdarlehen).",
+        "Prüfen Sie den effektiven Jahreszins (APR) und den Effektivzins mit Zinseszins (APY).",
+        "Nutzen Sie den Sondertilgungsrechner für zusätzliche Zahlungen (monatlich, jährlich, einmalig).",
+        "Vergleichen Sie die Pläne per edler dunkelgoldener Grafik der kumulierten Zahlungen.",
+        "Exportieren Sie den vollständigen monatlichen oder jährlichen Tilgungsplan zur Kontrolle."
+      ],
+      "usage_examples": [
+        "Decken Sie den wahren Jahreszins eines Mikrokredits mit 0,03 % täglichem Zins auf.",
+        "Berechnen Sie, wie viel Zinsen Sie durch monatliche Sondertilgungen von 500 € sparen.",
+        "Vergleichen Sie eine einmalige Sonderzahlung von 20.000 € mit monatlichen Extrazahlungen.",
+        "Erstellen Sie einen Tilgungsplan, um den Verlauf der Restschuld über die Zeit zu verfolgen."
+      ],
+      "faqs": [
+        {
+          "question": "Warum ist der echte Effektivzins bei Ratenkrediten oft fast doppelt so hoch wie der beworbene Sollzins?",
+          "answer": "Bei Festzinsmodellen zahlen Sie Zinsen auf die anfängliche Summe, obwohl die Restschuld sinkt. Der Zinsfuß (IRR) ermittelt die tatsächliche Restschuld und enthüllt die echten jährlichen Kosten."
+        },
+        {
+          "question": "Was ist der Unterschied zwischen APR und APY in diesem Rechner?",
+          "answer": "APR steht für den nominalen Effektivzins pro Jahr bei monatlicher Verrechnung. APY berücksichtigt den Zinseszinseffekt und zeigt die echten ökonomischen Kosten bei hypothetischer Wiederanlage."
+        },
+        {
+          "question": "Ist bei Sondertilgungen die Laufzeitverkürzung oder Ratenreduktion besser?",
+          "answer": "Eine Laufzeitverkürzung (Rate bleibt gleich) spart deutlich mehr Zinsen, da die Restschuld schneller sinkt. Eine Ratenreduktion entlastet die monatliche Liquidität, spart aber weniger Zinsen."
+        },
+        {
+          "question": "Wie verarbeitet der Rechner tägliche Zinsen oder pauschale Monatsgebühren?",
+          "answer": "Er wandelt tägliche Sätze (z. B. 0,05 %) oder Pauschalen in einen monatlichen Zahlungsfluss um und berechnet iterativ per mathematischer Bisektion den exakten Diskontsatz."
+        },
+        {
+          "question": "Sind meine sensiblen Finanzdaten bei der Nutzung dieses Tools sicher?",
+          "answer": "Absolut. Alle Berechnungen laufen komplett lokal in Ihrem Webbrowser. Es werden keine Daten an unsere Server übertragen. Das garantiert 100 % Privatsphäre und Datensicherheit."
+        }
+      ]
+    },
+    "ar": {
+      "name": "حاسبة سعر الفائدة الفعلي وجدولة استهلاك القرض",
+      "description": "اكشف عن نسبة الفائدة السنوية الفعلية (APR/APY) من الرسوم اليومية أو الشهرية، وحسّن خطط السداد المبكر لقرضك برسومات تفاعلية.",
+      "seo_title": "حاسبة سعر الفائدة الفعلي للقرض وتخفيض الفوائد بالسداد المبكر",
+      "seo_description": "حاسبة مجانية لمعدل فائدة القروض الحقيقي عبر الإنترنت لكشف سعر الفائدة السنوي الفعلي (APR) من الرسوم اليومية والشهرية باستخدام صيغة IRR. قارن خيارات السداد المبكر بالرسومات البيانية التفاعلية لحساب الفوائد الموفرة وسنوات السداد المحذوفة.",
+      "detailed_description": "تم تصميم حاسبة سعر الفائدة الفعلي وجدولة استهلاك القرض لتوضيح هياكل الفائدة المعقدة وتحسين استراتيجيات السداد المبكر. باستخدام خوارزمية معدل العائد الداخلي (IRR)، تترجم الحاسبة الفوائد اليومية أو الرسوم الشهرية الثابتة إلى نسب سنوية موحدة وواضحة (APR و APY) مع جدولة سداد تفاعلية.",
+      "usage_steps": [
+        "أدخل أصل القرض، والمدة، والفائدة المعلنة (يومية، شهرية، أو سنوية).",
+        "اختر نوع الاستهلاك (أقساط شهرية متساوية أو استهلاك أصل القرض بالتساوي).",
+        "تحقق من معدل الفائدة السنوي الفعلي (APR) والفائدة المركبة (APY) عبر طريقة التنصيف (IRR).",
+        "انتقل إلى أداة تحسين السداد المبكر لإضافة مدفوعات إضافية (شهرية، سنوية، أو دفعة واحدة).",
+        "قارن بين الخطط باستخدام مخططات الدفع التراكمي الفاخرة بلون الذهب الداكن.",
+        "قم بتصدير جدول الاستهلاك الشهري أو السنوي الكامل لتتبع كل التفاصيل المالية."
+      ],
+      "usage_examples": [
+        "اكشف الفائدة السنوية الفعلية لقرض سريع بفائدة يومية معلنة تبلغ 0.03%.",
+        "احسب إجمالي الفوائد الموفرة عند سداد 500 دولار إضافية شهرياً من قرضك العقاري.",
+        "قارن بين السداد المبكر لدفعة واحدة بقيمة 20,000 دولار مقابل السداد الإضافي الشهري.",
+        "أنشئ جدول استهلاك شامل لمشاهدة انخفاض أصل القرض المتبقي بمرور الوقت."
+      ],
+      "faqs": [
+        {
+          "question": "لماذا غالباً ما يكون سعر الفائدة الفعلي السنوي (APR) لقرض العميل ضعف المعدل الشهري المعلن تقريباً؟",
+          "answer": "تحت أنظمة الفائدة الثابتة، تدفع فائدة على أصل القرض الأصلي بالكامل حتى لو كنت تسدد جزءاً منه شهرياً. تحسب طريقة IRR الرصيد الفعلي المتبقي لتكشف السعر الفعلي."
+        },
+        {
+          "question": "ما الفرق بين APR و APY في هذه الحاسبة؟",
+          "answer": "يمثل APR سعر الفائدة البسيط السنوي بناءً على التركيب الشهري. بينما يأخذ APY في الاعتبار تأثير الفائدة المركبة، مما يوضح التكلفة الاقتصادية الحقيقية."
+        },
+        {
+          "question": "هل الأفضل تقليل مدة القرض أم تقليل القسط الشهري عند السداد المبكر؟",
+          "answer": "تقليل مدة القرض (مع إبقاء القسط كما هو) يوفر فوائد أكبر بكثير لأن أصل القرض ينخفض بشكل أسرع. تقليل القسط يقلل من الضغط المالي الفوري."
+        },
+        {
+          "question": "كيف تتعامل الحاسبة مع إدخالات الفائدة اليومية أو الرسوم الشهرية الثابتة؟",
+          "answer": "تقوم بتحويل المعدلات اليومية (مثل 0.05%) أو الرسوم الشهرية إلى تدفق نقدي شهري، ثم تستخدم حلاً رياضياً للتنصيف لحساب سعر الخصم الفعلي بشكل متكرر."
+        },
+        {
+          "question": "هل بياناتي المالية الحساسة آمنة عند استخدام هذه الأداة؟",
+          "answer": "بالتأكيد. يتم إجراء جميع الحسابات محلياً بالكامل داخل متصفح الويب الخاص بك. لا يتم إرسال أي بيانات إلى خوادمنا، مما يضمن خصوصية وأماناً ماليًا بنسبة 100%."
+        }
+      ]
+    }
+  }
+}

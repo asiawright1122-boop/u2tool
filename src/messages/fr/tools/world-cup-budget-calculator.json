@@ -1,0 +1,28 @@
+{
+  "detailed_description": "Calculez votre budget voyage et billets pour la Coupe du Monde FIFA 2026 aux États-Unis, Canada et Mexique. Inclut les catégories de billets, vols interurbains, hébergements partagés et visas transfrontaliers.",
+  "usage_steps": [
+    "Sélectionnez votre région d'origine et choisissez un profil de budget (Backpacker, Standard ou Luxe) pour initialiser les valeurs.",
+    "Ajustez le nombre de personnes dans le groupe et choisissez votre devise de calcul.",
+    "Créez votre itinéraire en ajoutant des villes hôtes, des phases de match, des catégories de billets, des modes de transport et le nombre de nuits.",
+    "Analysez le graphique de répartition ECharts et lisez les alertes de visa si vous changez de pays hôte en cours de route."
+  ],
+  "usage_examples": [
+    "Prévoir un voyage solo en mode routard depuis Paris pour voir 3 matchs de phase de groupes à Atlanta et Miami avec des billets de catégorie 3.",
+    "Estimer un voyage familial haut de gamme de 4 personnes depuis Montréal pour assister aux quarts de finale, demi-finales et finale à LA et NY.",
+    "Calculer les frais de voiture et les économies de chambre partagée pour un groupe de trois amis visitant les villes hôtes du Mexique."
+  ],
+  "faqs": [
+    {
+      "question": "Comment sont estimés les tarifs des billets de match pour 2026 ?",
+      "answer": "Les prix sont extrapolés à partir des grilles tarifaires officielles des éditions précédentes de la Coupe du Monde, indexés sur l'inflation locale estimée pour 2026. Vous pouvez définir la catégorie pour chaque match."
+    },
+    {
+      "question": "Quelles alertes de visa transfrontalier la calculatrice fournit-elle ?",
+      "answer": "La calculatrice vérifie si votre itinéraire traverse les frontières des USA, du Canada ou du Mexique. Elle indique la nécessité d'obtenir une autorisation de voyage (ESTA, AVE) ou un visa classique selon votre origine."
+    },
+    {
+      "question": "Comment est calculé le coût de l'hôtel pour les groupes impairs ?",
+      "answer": "L'hébergement est basé sur des chambres doubles. Pour les groupes impairs (ex: 3 voyageurs), la calculatrice intègre d'office le coût d'une chambre solo supplémentaire pour garantir un budget réaliste."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "detailed_description": "Planen Sie Ihr Reise- und Ticketbudget für die WM 2026 in den USA, Kanada und Mexiko. Berechnet Ticketkategorien, Inlandsflüge, Hotelkosten bei Aufteilung im Zimmer und Visa-Grenzübertrittswarnungen.",
+  "usage_steps": [
+    "Wählen Sie Ihre Herkunftsregion und ein Budget-Preset (Backpacker, Standard, Luxus), um die Standardwerte zu laden.",
+    "Passen Sie die Gruppengröße an und wählen Sie Ihre Abrechnungswährung.",
+    "Erstellen Sie Ihre Route, indem Sie Spielorte, Turnierphasen, Ticketkategorien, Transportmittel und Hotelübernachtungen hinzufügen.",
+    "Überprüfen Sie das ECharts-Kreisdiagramm für die Kostenaufteilung und beachten Sie Visa-Hinweise bei Länderwechseln."
+  ],
+  "usage_examples": [
+    "Planung einer Solo-Rucksackreise ab Frankfurt für 3 Gruppenspiele in Atlanta und Miami mit Tickets der Kategorie 3.",
+    "Schätzung einer Premium-Familienreise (4 Personen) von Zürich zu den Viertelfinals, Halbfinals und dem Finale in LA und NY.",
+    "Berechnung von Kraftstoffkosten und Hotelersparnissen für eine Gruppe von drei Freunden, die Spielorte in Mexiko mit dem Auto bereisen."
+  ],
+  "faqs": [
+    {
+      "question": "Wie werden die Ticketpreise für die WM 2026 geschätzt?",
+      "answer": "Die Kosten basieren auf historischen Ticketpreisen früherer WMs, angepasst an die erwartete lokale Inflation für 2026. Sie können die Preiskategorie für jedes Spiel individuell wählen."
+    },
+    {
+      "question": "Welche Visa-Warnungen bei Grenzübertritten bietet der Rechner?",
+      "answer": "Der Rechner prüft, ob Ihre Route die Grenzen zwischen USA, Kanada und Mexiko überschreitet. Je nach Herkunft erhalten Sie Hinweise zu nötigen Genehmigungen (ESTA, eTA) oder Touristenvisa."
+    },
+    {
+      "question": "Wie funktioniert die Aufteilung der Hotelzimmer bei ungerader Personenzahl?",
+      "answer": "Die Zimmerpreise basieren auf Doppelzimmern. Bei ungerader Personenzahl (z. B. 3 Reisende) bucht der Rechner automatisch die Kosten für ein notwendiges Zusatz-Einzelzimmer ein, um Fehlkalkulationen vorzubeugen."
+    }
+  ]
+}

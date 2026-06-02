@@ -1,0 +1,28 @@
+{
+  "detailed_description": "Estimate your travel and ticket budget for the 2026 FIFA World Cup across USA, Canada, and Mexico. Includes match ticket tiers, flight routes, hotel room splits, local transit, and border-crossing visa warnings.",
+  "usage_steps": [
+    "Select your origin region and choose a budget preset (Backpacker, Standard, or Luxury) to initialize values.",
+    "Adjust the group size and select your base currency for calculation.",
+    "Build your route by adding host cities, match stages, ticket categories, transit modes, and accommodation nights.",
+    "View the ECharts donut breakdown and read visa warnings when traveling between different host countries."
+  ],
+  "usage_examples": [
+    "Plan a solo backpacker trip starting from London to watch 3 Group Stage matches in Atlanta and Miami with Category 3 tickets.",
+    "Estimate a premium family-of-four trip from Seoul to watch the Quarterfinals, Semifinals, and Final in LA and NY.",
+    "Calculate driving costs and hotel split savings for a group of three friends touring host cities in Mexico."
+  ],
+  "faqs": [
+    {
+      "question": "How are ticket prices estimated for the 2026 World Cup?",
+      "answer": "Ticket costs are based on historical FIFA ticket tiers for group and knockout stages, adjusted for estimated 2026 inflation. You can customize ticket categories for each match in your route."
+    },
+    {
+      "question": "What border-crossing visa warnings does this calculator provide?",
+      "answer": "The calculator automatically checks if your route crosses borders between the USA, Canada, and Mexico. It alerts you to the visa requirements (ESTA, eTA, or tourist visas) depending on your selected home region."
+    },
+    {
+      "question": "How does the shared hotel room split logic work?",
+      "answer": "Accommodation costs assume double occupancy. For odd group sizes (e.g., 3 travelers), the calculator automatically estimates the additional room required, preventing cost underestimations."
+    }
+  ]
+}

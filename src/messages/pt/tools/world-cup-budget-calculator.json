@@ -1,0 +1,28 @@
+{
+  "detailed_description": "Estime seu orçamento para a Copa do Mundo FIFA 2026 nos EUA, Canadá e México. Calcule custos de ingressos, voos, acomodação compartilhada, transporte terrestre e receba alertas de visto de fronteira.",
+  "usage_steps": [
+    "Selecione sua região de origem e escolha um perfil de orçamento (Mochileiro, Padrão ou Luxo) para inicializar os valores.",
+    "Defina o número de viajantes no grupo e selecione a moeda base para os cálculos.",
+    "Monte seu roteiro adicionando cidades-sede, fases do torneio, categorias de ingressos, modos de transporte e noites de estadia.",
+    "Visualize o gráfico circular do ECharts com os custos e leia os alertas de vistos ao viajar entre países anfitriões."
+  ],
+  "usage_examples": [
+    "Planejar uma viagem solo no estilo mochileiro partindo de Lisboa para ver 3 jogos da Fase de Grupos em Atlanta e Miami com ingressos Categoria 3.",
+    "Estimar os custos de uma viagem de luxo para uma família de quatro pessoas saindo de São Paulo para ver as Quartas, Semifinal e Final em LA e NY.",
+    "Calcular custos de combustível e economia de hotel compartilhado para três amigos dirigindo pelas cidades-sede do México."
+  ],
+  "faqs": [
+    {
+      "question": "Como os preços dos ingressos para a Copa de 2026 são estimados?",
+      "answer": "Os custos são baseados na tabela oficial histórica da FIFA para a fase de grupos e mata-mata, ajustados pela inflação prevista para 2026. Você pode selecionar a categoria do ingresso para cada partida."
+    },
+    {
+      "question": "Que tipo de alertas de vistos transfronteiriços esta calculadora oferece?",
+      "answer": "A calculadora verifica se o seu roteiro cruza fronteiras entre EUA, Canadá e México. Dependendo da sua origem, ela alerta se você precisará de vistos de turista ou autorizações eletrônicas (ESTA, eTA)."
+    },
+    {
+      "question": "Como funciona a divisão dos custos de hospedagem para grupos?",
+      "answer": "Assume-se acomodação em quartos duplos. Se o número de viajantes for ímpar (ex: 3 pessoas), a calculadora adiciona automaticamente o custo de um quarto adicional para que o orçamento permaneça realista."
+    }
+  ]
+}

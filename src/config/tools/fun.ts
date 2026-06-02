@@ -8,5 +8,7 @@ export const FUN_TOOLS: Tool[] = [
   { slug: 'coin-flipper', category: 'fun', icon: 'gamepad-2', component: 'CoinFlipper' },
   { slug: 'dice-roller', category: 'fun', icon: 'gamepad-2', component: 'DiceRoller' },
   { slug: 'team-generator', category: 'fun', icon: 'gamepad-2', component: 'TeamGenerator' },
-  { slug: 'world-cup-simulator', category: 'fun', icon: 'gamepad-2', component: 'WorldCupSimulator' }
+  { slug: 'world-cup-simulator', category: 'fun', icon: 'gamepad-2', component: 'WorldCupSimulator' },
+  { slug: 'world-cup-budget-calculator', category: 'fun', icon: 'gamepad-2', component: 'WorldCupBudgetCalculator' }
 ];
+

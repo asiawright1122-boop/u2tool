@@ -1,0 +1,69 @@
+{
+  "slug": "developer-cryptography-toolbox",
+  "category": "security",
+  "icon": "ShieldAlert",
+  "component": "DeveloperCryptographicToolbox",
+  "popular": true,
+  "locales": {
+    "en": {
+      "name": "Developer Cryptography & Hash Toolbox",
+      "description": "Local high-performance hash generator and encryption suite with dynamic microsecond benchmark dashboards.",
+      "seo_title": "Developer Cryptography & Hash Toolbox - Free Online Local Encryption & Benchmarks",
+      "seo_description": "Free online cryptography suite for MD5, SHA256, bcrypt, AES & RSA. Features local benchmarks, dark-gold style, and 100% secure client-side calculation."
+    },
+    "zh": {
+      "name": "开发者密码学与哈希工具箱",
+      "description": "一站式本地安全哈希与加解密测试工具，内置高性能算法本地跑分大屏。",
+      "seo_title": "开发者密码学与哈希工具箱 - 免费在线本地加密与算法跑分",
+      "seo_description": "免费在线开发者密码学工具箱，支持 MD5、SHA256、bcrypt 及 AES/RSA 编解码，内置微秒级本地跑分对比，瑞士私银级暗金大屏，纯前端本地精算，无数据传输，保障隐私安全。"
+    },
+    "es": {
+      "name": "Caja de Herramientas Criptográficas para Desarrolladores",
+      "description": "Generador de hashes y suite de cifrado local de alto rendimiento con gráficos de rendimiento en microsegundos.",
+      "seo_title": "Caja de Herramientas Criptográficas para Desarrolladores - Cifrado Local",
+      "seo_description": "Criptografía en línea gratis para MD5, SHA256, bcrypt, AES y RSA. Ofrece benchmarks locales en microsegundos, diseño oro mate oscuro y cálculo 100% privado."
+    },
+    "pt": {
+      "name": "Caixa de Ferramentas Criptográficas de Desenvolvedor",
+      "description": "Gerador de hashes e suíte de criptografia local de alto desempenho com gráficos de benchmarking em microssegundos.",
+      "seo_title": "Caixa de Ferramentas Criptográficas de Desenvolvedor - Criptografia Local",
+      "seo_description": "Criptografia online grátis para MD5, SHA256, bcrypt, AES e RSA. Oferece benchmarks locais, design premium ouro fosco escuro e processamento 100% no cliente."
+    },
+    "ja": {
+      "name": "開発者向け暗号化・ハッシュツールボックス",
+      "description": "高性能なローカルハッシュ生成と暗号化スイート。マイクロ秒単位のベンチマークチャート機能付き。",
+      "seo_title": "開発者向け暗号化・ハッシュツールボックス - 無料オンライン暗号化とパフォーマンス測定",
+      "seo_description": "無料オンライン開発者向け暗号化ツール。MD5、SHA256、bcrypt、AES/RSAをサポート。ローカル測定とスイス私银級マットゴールド画面、100%ブラウザ実行で完全なプライバシー保護。"
+    },
+    "ru": {
+      "name": "Криптографический инструментарий разработчика",
+      "description": "Высокопроизводительный локальный генератор хешей и шифрования с графиком тестов в микросекундах.",
+      "seo_title": "Криптографический инструментарий разработчика - Локальное шифрование",
+      "seo_description": "Бесплатный онлайн крипто-инструмент для MD5, SHA256, bcrypt, AES и RSA. Локальные тесты, премиальный темно-золотой дизайн и 100% приватные вычисления на клиенте."
+    },
+    "fr": {
+      "name": "Boîte à Outils Cryptographiques de Développeur",
+      "description": "Générateur de hash et suite de chiffrement local haute performance avec graphiques de benchmark en microsecondes.",
+      "seo_title": "Boîte à Outils Cryptographiques de Développeur - Chiffrement Local",
+      "seo_description": "Outil cryptographique en ligne gratuit pour MD5, SHA256, bcrypt, AES et RSA. Benchmarks locaux, design premium or mat sombre et calculs 100% privés sur client."
+    },
+    "de": {
+      "name": "Entwickler Kryptographie & Hash Werkzeugkasten",
+      "description": "Lokaler Hochleistungs-Hash-Generator und Verschlüsselungssuite mit Live-Benchmark-Diagrammen in Mikrosekunden.",
+      "seo_title": "Entwickler Kryptographie & Hash Werkzeugkasten - Lokale Verschlüsselung",
+      "seo_description": "Kostenlose Online-Kryptographie für MD5, SHA256, bcrypt, AES und RSA. Lokale Benchmarks, mattes Dunkelgold-Design und 100% sichere Client-side-Berechnungen."
+    },
+    "ko": {
+      "name": "개발자용 암호화 및 해시 툴박스",
+      "description": "마이크로초 단위의 성능 벤치마크 차트를 지원하는 고성능 로컬 해시 생성 및 암호화 도구 모음입니다.",
+      "seo_title": "개발자용 암호화 및 해시 툴박스 - 무료 온라인 암호화 및 벤치마크",
+      "seo_description": "무료 온라인 개발자용 암호화 도구. MD5, SHA256, bcrypt, AES/RSA를 지원합니다. 로컬 측정 및 프리미엄 매트 골드 디자인, 100% 브라우저 연산으로 완전한 개인정보 보호 실현."
+    },
+    "ar": {
+      "name": "صندوق أدوات التشفير والهاش للمطورين",
+      "description": "مولد هاش محلي عالي الأداء ومجموعة أدوات تشفير مع مخططات مقارنة حية بالميكروثانية.",
+      "seo_title": "صندوق أدوات التشفير والهاش للمطورين - تشفير محلي آمن",
+      "seo_description": "أداة تشفير مجانية للمطورين تدعم MD5 وSHA256 وbcrypt وAES وRSA. تتميز بمقارنات محلية دقيقة، وتصميم ذهبي غير لامع، وتشغيل محلي آمن لحماية خصوصية المفاتيح تمامًا."
+    }
+  }
+}

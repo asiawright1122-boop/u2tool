@@ -1,0 +1,28 @@
+{
+  "detailed_description": "Estime su presupuesto para el Mundial de Fútbol 2026 en EE. UU., Canadá y México. Incluye categorías de entradas, vuelos interurbanos, alojamiento compartido y alertas de visa transfronterizas.",
+  "usage_steps": [
+    "Seleccione su región de origen y un ajuste preestablecido (Mochilero, Estándar o Lujo) para inicializar los valores.",
+    "Ajuste el tamaño del grupo y elija su moneda base para el cálculo.",
+    "Construya su ruta agregando ciudades anfitrionas, fases, categorías de entradas, modos de transporte y noches de hotel.",
+    "Vea el desglose en el gráfico circular de ECharts y lea las alertas de visado cuando su ruta cruce fronteras nacionales."
+  ],
+  "usage_examples": [
+    "Planificar un viaje de mochilero en solitario desde Madrid para ver 3 partidos de Fase de Grupos en Atlanta y Miami con entradas de Categoría 3.",
+    "Calcular un viaje familiar de lujo para cuatro personas desde Bogotá para ver los Cuartos, Semifinal y Final en Los Ángeles y Nueva York.",
+    "Estimar los costos de conducción y el ahorro en hoteles compartidos para un grupo de tres amigos que recorren las sedes en México."
+  ],
+  "faqs": [
+    {
+      "question": "¿Cómo se estiman los precios de las entradas para el Mundial 2026?",
+      "answer": "Los costos se basan en los precios históricos de la FIFA para la fase de grupos y eliminatorias, ajustados a la inflación proyectada de 2026. Puede personalizar la categoría para cada partido de su ruta."
+    },
+    {
+      "question": "¿Qué tipo de alertas de visas transfronterizas proporciona la calculadora?",
+      "answer": "La herramienta detecta si viaja entre Estados Unidos, Canadá y México. Según su región de origen, le alertará sobre requisitos de visado, autorizaciones electrónicas (ESTA, eTA) o visados de turista."
+    },
+    {
+      "question": "¿Cómo funciona la lógica de división de habitaciones de hotel?",
+      "answer": "Los costos de alojamiento se calculan sobre ocupación doble. Para grupos con un número impar de viajeros (ej. 3 personas), la calculadora suma la habitación adicional necesaria para evitar sorpresas de costo."
+    }
+  ]
+}
