@@ -1,0 +1,39 @@
+{
+  "detailed_description": "Der Renten- & Pensionsoptimierer wurde entwickelt, um die wahre Kaufkraft Ihrer Altersvorsorge aufzudecken. Durch die Kombination von Zinseszinsrenditen und dynamischen Inflationsmodellen bietet er eine einzigartige Doppelkurve, die das nominale Vermögen mit der inflationsbereinigten realen Kaufkraft vergleicht. Mit einstellbarer Auszahlungsdauer und neomorphen Sicherheitsanzeigen bietet er eine präzise Diagnose.",
+  "usage_steps": [
+    "Geben Sie Ihr aktuelles Alter, Ihr geplantes Rentenalter und die individuelle Auszahlungsdauer (10 bis 50 Jahre) ein.",
+    "Legen Sie Ihr anfängliches Rentenguthaben und die geplanten monatlichen Sparbeiträge fest.",
+    "Stellen Sie Ihre erwartete jährliche Anlagerendite und die geschätzte jährliche Inflationsrate ein.",
+    "Überprüfen Sie die neomorphe Sicherheitsstufe, um eventuelle Rentenlücken sofort zu diagnostizieren.",
+    "Beobachten Sie die ECharts-Doppelkurve, um die Auswirkungen der Inflation auf Ihr nominales Vermögen zu visualisieren.",
+    "Erweitern Sie den Tilgungsplan, um die Abzinsung Ihres Vermögens im Laufe der Zeit jährlich oder monatlich zu verfolgen."
+  ],
+  "usage_examples": [
+    "Simulieren Sie, wie stark die Kaufkraft einer monatlichen Sparrate von 2.000 € nach 30 Jahren bei 3 % Inflation sinkt.",
+    "Vergleichen Sie den Verlauf von nominalem Vermögen und realer Kaufkraft bei einer erwarteten Rendite von 5 % im Vergleich zu 0 %.",
+    "Passen Sie die Auszahlungsdauer von 20 auf 40 Jahre an, um Änderungen der monatlich real verfügbaren Kaufkraft zu bewerten.",
+    "Wenden Sie staatliche Rentenregelungen an, um die notwendige zusätzliche Vorsorge zur Schließung der Inflationslücke zu berechnen."
+  ],
+  "faqs": [
+    {
+      "question": "Warum ist es wichtig, das 'Nominale Vermögen' von der 'Realen Kaufkraft' zu trennen?",
+      "answer": "Nominale 10 Millionen Euro in einigen Jahrzehnten werden aufgrund der Inflation weit weniger wert sein. Die reale Kaufkraft zinst zukünftiges Vermögen auf den heutigen Wert ab und zeigt Ihnen, was Ihr Geld tatsächlich wert ist, um nominale Illusionen zu vermeiden."
+    },
+    {
+      "question": "Stürzt der Rechner ab, wenn meine Anlagerendite 0 % beträgt?",
+      "answer": "Nein. Der Rechner verwendet eine robuste finanzmathematische Formel, die bei einer Rendite von 0 % automatisch in eine lineare kumulative Gleichung übergeht, wodurch Division-durch-Null- oder NaN-Fehler vermieden werden."
+    },
+    {
+      "question": "Wie wirkt sich die Auszahlungsdauer auf meine monatliche verfügbare Kaufkraft aus?",
+      "answer": "Eine längere Auszahlungsdauer bedeutet, dass Ihre Ersparnisse für einen längeren Zeitraum reichen müssen, was zu einer geringeren monatlichen verfügbaren Kaufkraft führt. Sie können diese Dauer flexibel zwischen 10 und 50 Jahren einstellen."
+    },
+    {
+      "question": "Warum wird meine Sicherheitsstufe als 'Fragil (Fragile)' eingestuft?",
+      "answer": "Ihr Status wird als fragil eingestuft, wenn Ihre monatliche reale Kaufkraft unter Ihre erwarteten monatlichen Ausgaben fällt (standardmäßig als das 1,5-Fache Ihrer Sparrate berechnet). Erhöhen Sie Ihre Sparrate oder Rendite."
+    },
+    {
+      "question": "Sind meine eingegebenen Daten sicher? Werden sie auf Server hochgeladen?",
+      "answer": "Dieses Tool läuft vollständig clientseitig in Ihrem Webbrowser. Alle Berechnungen und Diagramme werden lokal ausgeführt. Es werden keine persönlichen Finanzdaten auf Server übertragen – für 100 % Privatsphäre."
+    }
+  ]
+}

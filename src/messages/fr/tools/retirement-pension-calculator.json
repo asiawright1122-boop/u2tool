@@ -1,0 +1,39 @@
+{
+  "detailed_description": "L'Optimiseur de Retrait et de Pension est conçu pour révéler le pouvoir d'achat réel de votre épargne. Combinant rendements de placements composés et modèles d'inflation dynamiques, il introduit une double courbe exclusive comparant la richesse nominale et le pouvoir d'achat réel. Avec une durée ajustable et un indicateur neomorphique, il diagnostique votre avenir financier.",
+  "usage_steps": [
+    "Saisissez votre âge actuel, votre âge de retraite prévu et la durée de versement personnalisée (10 à 50 ans).",
+    "Définissez votre épargne-retraite accumulée initiale et vos contributions mensuelles prévues.",
+    "Configurez le rendement annuel attendu de vos placements et le taux d'inflation annuel estimé.",
+    "Vérifiez l'indicateur de sécurité néomorphique pour diagnostiquer instantanément les lacunes de fonds.",
+    "Observez la double courbe ECharts pour visualiser l'impact de l'inflation sur votre richesse nominale.",
+    "Développez le tableau d'amortissement pour suivre la trajectoire d'actualisation de vos actifs."
+  ],
+  "usage_examples": [
+    "Simulez à quel point le pouvoir d'achat réel d'une épargne mensuelle de 2 000 $ se déprécie après 30 ans avec une inflation de 3 %.",
+    "Comparez la trajectoire des actifs nominaux et du pouvoir d'achat réel avec un rendement de 5 % vs. 0 %.",
+    "Ajustez la durée de versement de 20 à 40 ans pour évaluer les variations du revenu mensuel réel disponible.",
+    "Appliquez les politiques nationales pour calculer l'épargne supplémentaire nécessaire pour combler l'écart d'inflation."
+  ],
+  "faqs": [
+    {
+      "question": "Pourquoi est-il crucial de séparer les 'Actifs Nominaux' du 'Pouvoir d'Achat Réel' ?",
+      "answer": "Une somme nominale de 10 millions dans plusieurs décennies achètera beaucoup moins en raison de l'inflation. Le pouvoir d'achat réel actualise la richesse future à la valeur d'aujourd'hui, montrant ce que vaut réellement votre argent."
+    },
+    {
+      "question": "Le calculateur va-t-il planter si mon rendement de placement est de 0 % ?",
+      "answer": "Non. Le calculateur intègre une formule robuste qui se simplifie automatiquement en équation cumulative linéaire lorsque le rendement est de 0 %, évitant toute erreur de division par zéro ou NaN."
+    },
+    {
+      "question": "Comment la durée de versement personnalisée affecte-t-elle mon revenu mensuel disponible ?",
+      "answer": "Une durée de versement plus longue signifie que vos fonds doivent couvrir une période plus étendue, ce qui se traduit par un pouvoir d'achat mensuel disponible plus faible. Vous pouvez ajuster cette durée de 10 à 50 ans."
+    },
+    {
+      "question": "Pourquoi mon niveau de sécurité est-il diagnostiqué comme 'Fragile' ?",
+      "answer": "Votre niveau est marqué comme Fragile lorsque votre pouvoir d'achat réel mensuel disponible tombe en dessous de vos dépenses mensuelles prévues (par défaut, 1,5 fois votre taux d'épargne). Considérez augmenter les rendements ou l'épargne."
+    },
+    {
+      "question": "Mes données financières sont-elles sécurisées ? Sont-elles envoyées sur des serveurs ?",
+      "answer": "Cet outil fonctionne entièrement dans votre navigateur. Tous les calculs et graphiques sont générés localement. Nous ne collectons ni ne transmettons vos données financières personnelles, garantissant 100 % de confidentialité."
+    }
+  ]
+}

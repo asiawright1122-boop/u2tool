@@ -1,0 +1,39 @@
+{
+  "detailed_description": "O Otimizador de Aposentadoria e Pensões foi projetado para revelar o real poder de compra das suas economias. Combinando rendimentos compostos e modelos de inflação, introduz uma curva dupla exclusiva que compara a riqueza nominal e o poder de compra real ajustado à inflação. Com duração ajustável e indicador neomórfico, fornece um diagnóstico rigoroso.",
+  "usage_steps": [
+    "Insira sua idade atual, idade esperada de aposentadoria e duração do pagamento personalizada (10 a 50 anos).",
+    "Defina suas economias iniciais acumuladas e as contribuições mensais planejadas.",
+    "Configure o rendimento anual esperado e a taxa de inflação anual estimada.",
+    "Verifique o indicador de segurança neomórfico para diagnosticar lacunas nos fundos de aposentadoria.",
+    "Observe a curva dupla do ECharts para visualizar o impacto da inflação na riqueza nominal.",
+    "Expanda a tabela de amortização para acompanhar a trajetória de desconto de seus ativos mensal ou anualmente."
+  ],
+  "usage_examples": [
+    "Simule o quanto o poder de compra real de uma economia mensal de $ 2.000 se deprecia após 30 anos sob inflação de 3%.",
+    "Compare a trajetória dos ativos nominais e do poder de compra real quando o rendimento é de 5% vs. 0%.",
+    "Ajuste a duração do pagamento de 20 para 40 anos para avaliar mudanças na renda mensal real disponível.",
+    "Aplique políticas de aposentadoria para calcular as economias adicionais necessárias para cobrir a lacuna da inflação."
+  ],
+  "faqs": [
+    {
+      "question": "Por que é crítico separar 'Ativos Nominais' de 'Poder de Compra Real'?",
+      "answer": "Um valor nominal de 10 milhões no futuro comprará muito menos devido à inflação. O poder de compra real desconta a riqueza futura ao valor de hoje, mostrando o que seu dinheiro realmente vale e evitando ilusões nominais."
+    },
+    {
+      "question": "O calculador irá falhar se meu rendimento de investimento for 0%?",
+      "answer": "Não. O calculador possui uma fórmula robusta que se simplifica automaticamente para uma equação cumulativa linear quando o rendimento é 0%, evitando erros de divisão por zero ou NaN."
+    },
+    {
+      "question": "Como a duração personalizada do pagamento afeta minha renda mensal disponível?",
+      "answer": "Uma duração de pagamento mais longa significa que seus fundos devem cobrir um período maior, resultando em menor poder de compra mensal disponível. Você pode ajustar de 10 a 50 anos."
+    },
+    {
+      "question": "Por que minha classificação de segurança é diagnosticada como 'Frágil'?",
+      "answer": "Sua classificação é sinalizada como Frágil quando seu poder de compra real disponível cai abaixo de sua despesa mensal esperada (por padrão, 1.5 vezes sua taxa de economia). Aumente os rendimentos ou poupanças."
+    },
+    {
+      "question": "Meus dados financeiros são seguros? Eles são enviados para algum servidor?",
+      "answer": "Esta ferramenta roda inteiramente no seu navegador. Todos os cálculos e gráficos são gerados localmente. Não coletamos nem enviamos seus dados financeiros pessoais, garantindo 100% de privacidade."
+    }
+  ]
+}

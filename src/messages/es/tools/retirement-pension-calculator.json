@@ -1,0 +1,39 @@
+{
+  "detailed_description": "El Optimizador de Jubilación y Pensiones está diseñado para revelar el poder adquisitivo real de sus ahorros. Al combinar los rendimientos compuestos y los modelos de inflación, introduce una curva doble que compara la riqueza nominal y el poder adquisitivo real ajustado a la inflación. Con duración de pago ajustable e indicador neomórfico, proporciona un diagnóstico de su futuro financiero.",
+  "usage_steps": [
+    "Ingrese su edad actual, edad de jubilación esperada y duración de pago personalizada (10 a 50 años).",
+    "Establezca sus ahorros acumulados iniciales y las contribuciones mensuales planificadas.",
+    "Configure el rendimiento anual esperado y la tasa de inflación anual estimada.",
+    "Verifique el indicador de seguridad neomórfico para diagnosticar brechas en sus fondos de jubilación.",
+    "Observe la curva doble de ECharts para visualizar el impacto de la inflación en su riqueza nominal.",
+    "Expanda el cronograma de amortización para rastrear la trayectoria de descuento de sus activos."
+  ],
+  "usage_examples": [
+    "Simule cuánto se deprecia el poder adquisitivo real de un ahorro mensual de $2,000 en 30 años con una inflación del 3%.",
+    "Compare la trayectoria de los activos nominales y el poder adquisitivo real cuando el rendimiento es del 5% frente al 0%.",
+    "Ajuste la duración del pago de 20 a 40 años para evaluar los cambios en los ingresos mensuales reales disponibles.",
+    "Aplique políticas de jubilación para calcular los ahorros adicionales necesarios para cubrir la brecha de inflación."
+  ],
+  "faqs": [
+    {
+      "question": "¿Por qué es fundamental separar los 'Activos Nominales' del 'Poder Adquisitivo Real'?",
+      "answer": "Unos 10 millones nominales en el futuro comprarán mucho menos debido a la inflación. El poder adquisitivo real descuenta la riqueza futura al valor actual, mostrando el valor real de su dinero y evitando ilusiones de riqueza nominal."
+    },
+    {
+      "question": "¿Se bloqueará la calculadora si mi rendimiento de inversión es del 0%?",
+      "answer": "No. La calculadora cuenta con una fórmula robusta que se simplifica automáticamente a una ecuación acumulativa lineal cuando el rendimiento es del 0%, evitando errores de división por cero o NaN."
+    },
+    {
+      "question": "¿Cómo afecta la duración del pago a mis ingresos mensuales disponibles?",
+      "answer": "Una duración de pago más larga significa que sus fondos deben cubrir un período más largo, lo que resulta en un menor poder adquisitivo mensual disponible. Puede ajustar esto de 10 a 50 años."
+    },
+    {
+      "question": "¿Por qué mi calificación de seguridad se diagnostica como 'Frágil'?",
+      "answer": "Su calificación se marca como Frágil cuando su poder adquisitivo mensual real disponible cae por debajo de su gasto esperado (por defecto, 1.5 veces su tasa de ahorro). Considere aumentar los rendimientos o el ahorro mensual."
+    },
+    {
+      "question": "¿Son seguros mis datos financieros? ¿Se cargan en algún servidor?",
+      "answer": "Esta herramienta se ejecuta completamente en su navegador web. Todos los cálculos y gráficos se realizan localmente. No cargamos ningún dato financiero personal, garantizando 100% de privacidad y seguridad."
+    }
+  ]
+}

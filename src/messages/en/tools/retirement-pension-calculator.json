@@ -1,0 +1,39 @@
+{
+  "detailed_description": "The Retirement & Pension Optimizer is designed to expose the true purchasing power of your retirement savings. Combining compound investment returns and dynamic inflation models, it introduces a unique dual-curve comparing nominal wealth and inflation-adjusted real purchasing power. With adjustable payout durations and a glassmorphic indicator, it provides rigorous diagnosis for your financial future.",
+  "usage_steps": [
+    "Input your current age, expected retirement age, and custom payout duration (10 to 50 years).",
+    "Set your initial accumulated pension savings and planned monthly contributions.",
+    "Configure your expected annual investment yield and estimated annual inflation rate.",
+    "Check the neon-capsule safety rating to instantly diagnose your retirement fund gaps.",
+    "Observe the ECharts dual-curve to visualize the impact of inflation on your nominal wealth.",
+    "Expand the amortization schedule to track the discount trajectory of your assets annually or monthly."
+  ],
+  "usage_examples": [
+    "Simulate how much the real purchasing power of a $2,000 monthly saving depreciates after 30 years under 3% inflation.",
+    "Compare the trajectory of nominal assets and real purchasing power when expected yield is 5% vs. 0%.",
+    "Adjust payout duration from 20 to 40 years to evaluate changes in monthly real disposable income.",
+    "Apply national retirement policies to calculate the supplementary savings needed to bridge the inflation gap."
+  ],
+  "faqs": [
+    {
+      "question": "Why is it critical to separate 'Nominal Assets' from 'Real Purchasing Power'?",
+      "answer": "A nominal $10 million decades from now will purchase far less due to inflation. Real purchasing power discounts future wealth to today's value, showing what your money is actually worth and avoiding nominal wealth illusions."
+    },
+    {
+      "question": "Will the calculator crash if my investment yield is 0%?",
+      "answer": "No. The calculator features a robust actuarial formula that automatically simplifies to a linear cumulative equation when yield is 0%, preventing division-by-zero or NaN errors for any extreme inputs."
+    },
+    {
+      "question": "How does the custom payout duration affect my monthly disposable income?",
+      "answer": "A longer payout duration means your funds must cover a longer lifetime, resulting in lower monthly disposable purchasing power. You can adjust this from 10 to 50 years to match your life expectancy."
+    },
+    {
+      "question": "Why is my safety rating diagnosed as 'Fragile'?",
+      "answer": "Your safety rating is flagged as Fragile when your monthly real disposable purchasing power falls below your expected monthly expense (derived as 1.5x your savings rate by default). Consider increasing yields or monthly savings."
+    },
+    {
+      "question": "Are my financial actuarial inputs secure? Are they uploaded to any servers?",
+      "answer": "This tool runs entirely on the client side (your web browser). All calculations and charts are rendered locally. We do not upload any personal financial data, ensuring 100% privacy and security."
+    }
+  ]
+}
