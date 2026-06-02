@@ -1,0 +1,39 @@
+{
+  "detailed_description": "Le Calculateur de Taux Réel de Prêt et d'Amortissement est conçu pour démystifier les structures de taux d'intérêt complexes et optimiser vos stratégies de remboursement anticipé. Grâce à l'algorithme du Taux de Rentabilité Interne (TRI), il convertit les intérêts journaliers ou les frais forfaitaires mensuels en un TAEG clair et transparent.",
+  "usage_steps": [
+    "Saisissez le capital, la durée et le taux annoncé (journalier, mensuel ou annuel).",
+    "Sélectionnez le type d'amortissement (échéance mensuelle égale ou amortissement constant).",
+    "Vérifiez le TAEG réel calculé par méthode de dichotomie (TRI).",
+    "Accédez à l'optimiseur de remboursement anticipé pour ajouter des versements supplémentaires.",
+    "Comparez les plans original et optimisé avec les graphiques de paiements cumulés en or sombre.",
+    "Exportez le tableau d'amortissement mensuel ou annuel complet pour suivre chaque centime."
+  ],
+  "usage_examples": [
+    "Révélez le TAEG annuel d'un prêt rapide annoncé à 0,03% d'intérêts journaliers.",
+    "Calculez combien vous pouvez économiser en remboursant 500 $ de plus par mois sur votre hypothèque.",
+    "Comparez un remboursement unique de 20 000 $ à des versements mensuels supplémentaires.",
+    "Générez un tableau d'amortissement complet pour voir le solde du capital diminuer."
+  ],
+  "faqs": [
+    {
+      "question": "Pourquoi le TAEG réel d'un crédit conso est souvent le double du taux forfaitaire mensuel annoncé ?",
+      "answer": "Avec un taux forfaitaire, vous payez des intérêts sur le capital initial total même si vous remboursez le capital chaque mois. La méthode TRI calcule sur le solde restant dû réel, révélant le TAEG exact."
+    },
+    {
+      "question": "Quelle est la différence entre APR (TAEG) et APY (taux actuariel) dans ce calculateur ?",
+      "answer": "L'APR représente le taux d'intérêt simple annualisé basé sur une capitalisation mensuelle. L'APY prend en compte les intérêts composés, modélisant le coût économique réel si les paiements étaient réinvestis."
+    },
+    {
+      "question": "Est-il préférable de réduire la durée ou de réduire la mensualité lors d'un remboursement anticipé ?",
+      "answer": "Réduire la durée (en gardant la mensualité identique) permet d'économiser beaucoup plus d'intérêts car le capital restant dû diminue plus vite. Réduire la mensualité soulage le budget mensuel."
+    },
+    {
+      "question": "Comment le calculateur gère-t-il les taux journaliers ou les frais fixes mensuels ?",
+      "answer": "Il convertit le taux journalier (ex. 0,05%) ou les frais fixes en flux de trésorerie mensuel, puis utilise un solveur de dichotomie pour trouver le taux d'actualisation exact correspondant au capital initial."
+    },
+    {
+      "question": "Mes données financières sensibles sont-elles sécurisées avec cet outil ?",
+      "answer": "Absolument. Tous les calculs s'exécutent localement dans votre navigateur. Aucune donnée n'est envoyée à nos serveurs, garantissant une confidentialité totale et une sécurité bancaire."
+    }
+  ]
+}

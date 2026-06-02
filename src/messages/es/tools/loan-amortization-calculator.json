@@ -1,0 +1,39 @@
+{
+  "detailed_description": "La Calculadora de Tasa Real de Préstamo y Amortización está diseñada para desmitificar las complejas estructuras de tasas de interés y optimizar las estrategias de pago anticipado. Al utilizar el algoritmo de la Tasa Interna de Retorno (TIR), traduce las tasas diarias o las comisiones mensuales en tasas TAE claras y estandarizadas, además de simular el ahorro de intereses.",
+  "usage_steps": [
+    "Ingrese el capital del préstamo, el plazo y la tasa anunciada (diaria, mensual o anual).",
+    "Seleccione el tipo de amortización (pago mensual equivalente o principal igual).",
+    "Inspeccione la tasa TAE real calculada mediante bisección numérica (IRR).",
+    "Vaya al Optimizador de Prepago para agregar pagos adicionales (mensuales, anuales o de una sola vez).",
+    "Compare los planes original y optimizado con los gráficos de pagos acumulados de color oro oscuro.",
+    "Exporte el programa de amortización mensual o anual completo para realizar un seguimiento de cada centavo."
+  ],
+  "usage_examples": [
+    "Revele la verdadera tasa TAE de un préstamo rápido anunciado con una tasa diaria del 0,03%.",
+    "Calcule cuánto interés puede ahorrar pagando por adelantado $500 adicionales al mes en su hipoteca.",
+    "Compare un pago anticipado único de $20.000 con el pago de principal adicional cada mes.",
+    "Genere una tabla de amortización integral para ver cómo disminuye el capital pendiente con el tiempo."
+  ],
+  "faqs": [
+    {
+      "question": "¿Por qué la tasa TAE real de un préstamo de consumo suele ser casi el doble de la tasa plana mensual anunciada?",
+      "answer": "Bajo esquemas de tasa plana, usted paga intereses sobre el capital total inicial aunque esté pagando el capital mensualmente. El método IRR calcula el saldo real pendiente, revelando la tasa anual real."
+    },
+    {
+      "question": "¿Cuál es la diferencia entre APR y APY en esta calculadora?",
+      "answer": "APR (Tasa de porcentaje anual) representa la tasa de interés simple anual basada en la capitalización mensual. APY (Rendimiento porcentual anual) tiene en cuenta el efecto compuesto, lo que representa el costo económico real."
+    },
+    {
+      "question": "¿Es mejor reducir el plazo del préstamo o reducir el pago mensual durante el pago anticipado?",
+      "answer": "Reducir el plazo del préstamo (manteniendo el pago igual) ahorra significativamente más intereses porque el capital pendiente disminuye mucho más rápido. Reducir el pago mensual alivia la presión del flujo de caja."
+    },
+    {
+      "question": "¿Cómo maneja la calculadora las entradas diarias o las tarifas mensuales planas?",
+      "answer": "Convierte tasas diarias (p. ej., 0,05%) o tarifas mensuales planas en un flujo de efectivo de pago mensual, luego utiliza un solucionador de bisección matemática para resolver de forma iterativa la tasa exacta."
+    },
+    {
+      "question": "¿Están seguros mis datos financieros confidenciales al utilizar esta herramienta?",
+      "answer": "Absolutamente. Todos los cálculos se realizan localmente en su navegador web. Ningún dato se transmite a nuestros servidores, lo que garantiza el 100% de privacidad y seguridad de nivel bancario."
+    }
+  ]
+}

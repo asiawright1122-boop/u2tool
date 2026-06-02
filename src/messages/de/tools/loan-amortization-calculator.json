@@ -1,0 +1,39 @@
+{
+  "detailed_description": "Der Rechner für effektiven Darlehenszins und Sondertilgung hilft Ihnen, versteckte Zinskosten zu erkennen und Ihre Tilgungsstrategie zu optimieren. Durch die Berechnung des Internen Zinsfußes (IRR) werden Tageszinsen oder monatliche Servicepauschalen in standardisierte Effektivzinssätze (APR/APY) umgerechnet.",
+  "usage_steps": [
+    "Geben Sie die Darlehenssumme, die Laufzeit und den beworbenen Zinssatz (täglich, monatlich, jährlich) ein.",
+    "Wählen Sie die Tilgungsart (Annuitätendarlehen mit gleichen Raten oder Tilgungsdarlehen).",
+    "Prüfen Sie den effektiven Jahreszins (APR) und den Effektivzins mit Zinseszins (APY).",
+    "Nutzen Sie den Sondertilgungsrechner für zusätzliche Zahlungen (monatlich, jährlich, einmalig).",
+    "Vergleichen Sie die Pläne per edler dunkelgoldener Grafik der kumulierten Zahlungen.",
+    "Exportieren Sie den vollständigen monatlichen oder jährlichen Tilgungsplan zur Kontrolle."
+  ],
+  "usage_examples": [
+    "Decken Sie den wahren Jahreszins eines Mikrokredits mit 0,03 % täglichem Zins auf.",
+    "Berechnen Sie, wie viel Zinsen Sie durch monatliche Sondertilgungen von 500 € sparen.",
+    "Vergleichen Sie eine einmalige Sonderzahlung von 20.000 € mit monatlichen Extrazahlungen.",
+    "Erstellen Sie einen Tilgungsplan, um den Verlauf der Restschuld über die Zeit zu verfolgen."
+  ],
+  "faqs": [
+    {
+      "question": "Warum ist der echte Effektivzins bei Ratenkrediten oft fast doppelt so hoch wie der beworbene Sollzins?",
+      "answer": "Bei Festzinsmodellen zahlen Sie Zinsen auf die anfängliche Summe, obwohl die Restschuld sinkt. Der Zinsfuß (IRR) ermittelt die tatsächliche Restschuld und enthüllt die echten jährlichen Kosten."
+    },
+    {
+      "question": "Was ist der Unterschied zwischen APR und APY in diesem Rechner?",
+      "answer": "APR steht für den nominalen Effektivzins pro Jahr bei monatlicher Verrechnung. APY berücksichtigt den Zinseszinseffekt und zeigt die echten ökonomischen Kosten bei hypothetischer Wiederanlage."
+    },
+    {
+      "question": "Ist bei Sondertilgungen die Laufzeitverkürzung oder Ratenreduktion besser?",
+      "answer": "Eine Laufzeitverkürzung (Rate bleibt gleich) spart deutlich mehr Zinsen, da die Restschuld schneller sinkt. Eine Ratenreduktion entlastet die monatliche Liquidität, spart aber weniger Zinsen."
+    },
+    {
+      "question": "Wie verarbeitet der Rechner tägliche Zinsen oder pauschale Monatsgebühren?",
+      "answer": "Er wandelt tägliche Sätze (z. B. 0,05 %) oder Pauschalen in einen monatlichen Zahlungsfluss um und berechnet iterativ per mathematischer Bisektion den exakten Diskontsatz."
+    },
+    {
+      "question": "Sind meine sensiblen Finanzdaten bei der Nutzung dieses Tools sicher?",
+      "answer": "Absolut. Alle Berechnungen laufen komplett lokal in Ihrem Webbrowser. Es werden keine Daten an unsere Server übertragen. Das garantiert 100 % Privatsphäre und Datensicherheit."
+    }
+  ]
+}

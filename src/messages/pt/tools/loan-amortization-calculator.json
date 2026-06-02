@@ -1,0 +1,39 @@
+{
+  "detailed_description": "A Calculadora de Taxa Real de Empréstimo e Amortização foi criada para desmistificar estruturas complexas de taxas de juros e otimizar estratégias de amortização antecipada. Utilizando o algoritmo da Taxa Interna de Retorno (TIR), ela traduz juros diários ou taxas mensais em taxas anuais padronizadas, auxiliando na comparação de cenários.",
+  "usage_steps": [
+    "Insira o valor principal, prazo e taxa anunciada (diária, mensal ou anual).",
+    "Selecione o tipo de amortização (parcela mensal igual ou amortização constante).",
+    "Inspecione a CET real calculada através do método de bisseção (TIR).",
+    "Vá ao Otimizador de Pré-pagamento para adicionar parcelas extras (mensais, anuais ou pagamento único).",
+    "Compare os planos original e otimizado com gráficos de pagamentos acumulados em ouro escuro luxo.",
+    "Exporte o cronograma completo de amortização mensal ou anual para rastrear cada centavo."
+  ],
+  "usage_examples": [
+    "Revele a verdadeira taxa anual CET de um empréstimo rápido anunciado a 0,03% de juros diários.",
+    "Calcule quanto você economiza amortizando $500 extras por mês em sua hipoteca.",
+    "Compare uma amortização única de $20.000 com pagamentos extras mensais no principal.",
+    "Gere uma tabela de amortização completa para ver como o saldo do principal diminui com o tempo."
+  ],
+  "faqs": [
+    {
+      "question": "Por que a CET real de um empréstimo pessoal costuma ser quase o dobro da taxa plana mensal anunciada?",
+      "answer": "Nos esquemas de taxa plana, você paga juros sobre o principal total inicial mesmo amortizando o principal mensalmente. O método TIR calcula o saldo real devedor, revelando a verdadeira taxa anual."
+    },
+    {
+      "question": "Qual é a diferença entre APR e APY nesta calculadora?",
+      "answer": "APR representa a taxa de juros simples anualizada baseada em capitalização mensal. APY considera o efeito dos juros compostos, representando o custo econômico real se os pagamentos fossem reinvestidos."
+    },
+    {
+      "question": "É melhor reduzir o prazo do empréstimo ou reduzir a parcela mensal na amortização?",
+      "answer": "Reduzir o prazo do empréstimo (mantendo a parcela igual) economiza muito mais juros porque o saldo devedor diminui mais rápido. Reduzir a parcela mensal alivia o fluxo de caixa no curto prazo."
+    },
+    {
+      "question": "Como a calculadora lida com entradas de juros diários ou taxas mensais planas?",
+      "answer": "Converte juros diários (ex. 0,05%) ou taxas planas em um fluxo de caixa mensal, então usa um resolvedor de bisseção matemática para calcular iterativamente a taxa de desconto exata."
+    },
+    {
+      "question": "Meus dados financeiros confidenciais estão seguros ao usar esta ferramenta?",
+      "answer": "Com certeza. Todos os cálculos são feitos 100% localmente em seu navegador. Nenhum dado é enviado aos nossos servidores, garantindo total privacidade e segurança financeira."
+    }
+  ]
+}

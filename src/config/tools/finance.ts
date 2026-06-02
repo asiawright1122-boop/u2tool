@@ -29,4 +29,5 @@ export const FINANCE_TOOLS: Tool[] = [
   { slug: 'etsy-fee-calculator', category: 'finance', icon: 'percent', component: 'PopularUtilityTool', popular: true },
   { slug: 'freelance-rate-calculator', category: 'finance', icon: 'calculator', component: 'PopularUtilityTool', popular: true },
   { slug: 'savings-goal-calculator', category: 'finance', icon: 'target', component: 'PopularUtilityTool', popular: true },
+  { slug: 'loan-amortization-calculator', category: 'finance', icon: 'percent', component: 'LoanAmortizationCalculator', popular: true },
 ];

@@ -1,0 +1,39 @@
+{
+  "detailed_description": "The Real Loan Rate & Amortization Calculator is designed to demystify complex loan rate structures and optimize prepayment strategies. By utilizing the Internal Rate of Return (IRR) algorithm, it translates daily interest or monthly service fees into clear, standardized APR and APY rates. It also features a prepayment playground to dynamically compare interest savings and amortization timelines.",
+  "usage_steps": [
+    "Enter the loan principal, term, and advertised rate (daily, monthly, or annual).",
+    "Select the amortization type (Equated Monthly Installment - EMI or Equal Principal).",
+    "Inspect the true APR and APY calculated via numerical bisection (IRR).",
+    "Navigate to the Prepayment Optimizer to add extra payments (monthly, yearly, or lump-sum).",
+    "Compare the original vs. optimized plans using the luxury dark gold cumulative payment charts.",
+    "Export the complete monthly or annual amortization schedule to track every penny."
+  ],
+  "usage_examples": [
+    "Reveal the true annual APR of a quick loan advertised at a 0.03% daily interest rate.",
+    "Calculate how much interest you can save by prepaying an extra $500 monthly on your mortgage.",
+    "Compare a lump-sum prepayment of $20,000 versus paying extra principal monthly.",
+    "Generate a comprehensive amortization table to see how principal outstanding declines over time."
+  ],
+  "faqs": [
+    {
+      "question": "Why is the real APR of a consumer loan often nearly double the advertised monthly flat rate?",
+      "answer": "Under flat rate schemes, you pay interest on the initial full principal even though you are paying down the principal monthly. The IRR method computes the actual outstanding balance, revealing the true annual percentage rate."
+    },
+    {
+      "question": "What is the difference between APR and APY in this calculator?",
+      "answer": "APR (Annual Percentage Rate) represents the annualized simple interest rate based on monthly compounding. APY (Annual Percentage Yield) accounts for the compound effect, representing the true economic cost if payments were reinvested."
+    },
+    {
+      "question": "Is it better to reduce the loan term or reduce the monthly payment during prepayment?",
+      "answer": "Reducing the loan term (keeping the payment same) saves significantly more interest because the principal outstanding decreases much faster. Reducing the monthly payment relieves short-term cash flow pressure but saves less overall interest."
+    },
+    {
+      "question": "How does the calculator handle daily or flat monthly fee inputs?",
+      "answer": "It converts daily rates (e.g., 0.05%) or monthly flat fees into a monthly payment cash flow, then uses a mathematical bisection solver to iteratively solve for the exact discount rate that matches the initial loan principal."
+    },
+    {
+      "question": "Is my sensitive financial data safe when using this tool?",
+      "answer": "Absolutely. All calculations are performed entirely locally in your web browser. No data is ever transmitted to our servers, ensuring 100% privacy and bank-grade data security."
+    }
+  ]
+}
