@@ -440,6 +440,20 @@ const chartToolGroup = buildChartToolClusterGroupForTool(
     <StructuredData type="HowTo" data={howToData} slot="head" />
   )}
 
+  {/* SEO: FAQPage structured data */}
+  {faqs && faqs.length > 0 && (
+    <StructuredData type="FAQPage" data={{
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    }} slot="head" />
+  )}
+
   {/* SEO: BreadcrumbList structured data */}
   <StructuredData type="BreadcrumbList" data={{
     itemListElement: breadcrumbItems.map((item, index) => ({
