@@ -31,4 +31,6 @@ export const FINANCE_TOOLS: Tool[] = [
   { slug: 'savings-goal-calculator', category: 'finance', icon: 'target', component: 'PopularUtilityTool', popular: true },
   { slug: 'loan-amortization-calculator', category: 'finance', icon: 'percent', component: 'LoanAmortizationCalculator', popular: true },
   { slug: 'retirement-pension-calculator', category: 'finance', icon: 'wallet', component: 'RetirementPensionCalculator', popular: true },
+  { slug: 'net-worth-allocator-tracker', category: 'finance', icon: 'trending-up', component: 'NetWorthAllocatorTracker', popular: true },
 ];
+
