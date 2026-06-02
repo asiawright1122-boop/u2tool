@@ -1,0 +1,175 @@
+export interface Emoji {
+  emoji: string;
+  name: string;
+  category: 'smileys' | 'people' | 'animals' | 'food' | 'travel' | 'activities' | 'objects' | 'symbols' | 'flags';
+}
+
+export interface FontStyle {
+  id: string;
+  name: string;
+  preview: string;
+}
+
+export const runtimeDefaultColors: string[] = [
+  '#FF6B6B', // Coral Red
+  '#4D96FF', // Royal Blue
+  '#6BCB77', // Emerald Green
+  '#FFD93D', // Amber Yellow
+  '#9B51E0', // Amethyst Purple
+  '#FF8E53', // Tangerine Orange
+  '#2F80ED', // Cerulean Blue
+  '#ECF0F1', // Premium Light Grey
+  '#1A1A1A', // Dark Slate
+  '#D4AF37'  // Matte Obsidian Gold
+];
+
+export const runtimeFontStyles: FontStyle[] = [
+  { id: 'bold', name: 'Bold Sans', preview: '𝗕𝗼𝗹𝗱 𝗦𝗮𝗻𝘀' },
+  { id: 'italic', name: 'Italic Sans', preview: '𝘐𝘵𝘢𝘭𝘪𝘤 𝘚𝘢𝘯𝘴' },
+  { id: 'bold_italic', name: 'Bold Italic Sans', preview: '𝘽𝙤𝙡𝙙 𝙄𝙩𝙖𝙡𝙞𝙘 𝙎𝙖𝙣𝙨' },
+  { id: 'double_struck', name: 'Blackboard Bold', preview: '𝔹𝕝𝕒𝕔𝕜𝕓𝕠𝕒𝕣𝕕 𝔹𝕠𝕝𝕕' },
+  { id: 'script', name: 'Script Gothic', preview: '𝔖𝔠𝔯𝔦𝔭𝔱 𝔊𝔬𝔱𝔥𝔦𝔭' }
+];
+
+export const runtimeFontMappings: Record<string, Record<string, string>> = {
+  bold: {
+    'a': '𝗮', 'b': '𝗯', 'c': '𝗰', 'd': '𝗱', 'e': '𝗲', 'f': '𝗳', 'g': '𝗴', 'h': '𝗵', 'i': '𝗶', 'j': '𝗷', 'k': '𝗸', 'l': '𝗹', 'm': '𝗺', 'n': '𝗻', 'o': '𝗼', 'p': '𝗽', 'q': '𝗾', 'r': '𝗿', 's': '𝘀', 't': '𝘁', 'u': '𝘂', 'v': '𝘃', 'w': '𝘄', 'x': '𝘅', 'y': '𝘆', 'z': '𝘇',
+    'A': '𝗔', 'B': '𝗕', 'C': '𝗖', 'D': '𝗗', 'E': '𝗘', 'F': '𝗙', 'G': '𝗚', 'H': '𝗛', 'I': '𝗜', 'J': '𝗝', 'K': '𝗞', 'L': '𝗟', 'M': '𝗠', 'N': '𝗡', 'O': '𝗢', 'P': '𝗣', 'Q': '𝗤', 'R': ' civilisation', 'S': '𝗦', 'T': '𝗧', 'U': '𝗨', 'V': '𝗩', 'W': '𝗪', 'X': '𝗫', 'Y': '𝗬', 'Z': '𝗭',
+    '0': '𝟬', '1': '𝟭', '2': '𝟮', '3': '𝟯', '4': '𝟰', '5': '𝟱', '6': '𝟲', '7': '𝟳', '8': '𝟴', '9': '𝟵'
+  },
+  italic: {
+    'a': 'ａ', 'b': 'ｂ', 'c': 'ｃ', 'd': 'ｄ', 'e': 'ｅ', 'f': 'ｆ', 'g': 'ｇ', 'h': 'ｈ', 'i': 'ｉ', 'j': 'ｊ', 'k': 'ｋ', 'l': 'ｌ', 'm': 'ｍ', 'n': 'ｎ', 'o': 'ｏ', 'p': 'ｐ', 'q': 'ｑ', 'r': 'ｒ', 's': 'ｓ', 't': 'ｔ', 'u': 'ｕ', 'v': 'ｖ', 'w': 'ｗ', 'x': 'ｘ', 'y': 'ｙ', 'z': 'ｚ',
+    'A': 'Ａ', 'B': 'Ｂ', 'C': 'Ｃ', 'D': 'Ｄ', 'E': 'Ｅ', 'F': 'Ｆ', 'G': 'Ｇ', 'H': 'Ｈ', 'I': 'Ｉ', 'J': 'Ｊ', 'K': 'Ｋ', 'L': 'Ｌ', 'M': 'Ｍ', 'N': 'Ｎ', 'O': 'Ｏ', 'P': 'Ｐ', 'Q': 'Ｑ', 'R': 'Ｒ', 'S': 'Ｓ', 'T': 'Ｔ', 'U': 'Ｕ', 'V': 'Ｖ', 'W': 'Ｗ', 'X': 'Ｘ', 'Y': 'Ｙ', 'Z': 'Ｚ'
+  },
+  bold_italic: {
+    'a': '𝙖', 'b': '𝙗', 'c': '𝙘', 'd': '𝙙', 'e': '𝙚', 'f': '𝙛', 'g': '𝙜', 'h': '𝙝', 'i': '𝙞', 'j': '𝙟', 'k': '𝙠', 'l': '𝙡', 'm': '𝙢', 'n': '𝙣', 'o': '𝙤', 'p': '𝙥', 'q': '𝙦', 'r': '𝙧', 's': '𝙨', 't': '𝙩', 'u': '𝙪', 'v': '𝙫', 'w': '𝙬', 'x': '𝙭', 'y': '𝙮', 'z': '𝙯',
+    'A': '𝘼', 'B': '𝘽', 'C': '🇨', 'D': '𝘿', 'E': '𝙀', 'F': '𝙁', 'G': '𝙂', 'H': '𝙃', 'I': '🇮', 'J': '𝙅', 'K': '𝙆', 'L': '𝙇', 'M': '𝙈', 'N': '𝙉', 'O': '𝙊', 'P': '𝙋', 'Q': '𝙌', 'R': '𝙍', 'S': '𝙎', 'T': '𝙏', 'U': '𝙐', 'V': '𝙑', 'W': '𝙒', 'X': '𝙓', 'Y': '𝙔', 'Z': '𝙕'
+  },
+  double_struck: {
+    'a': '𝕒', 'b': '𝕓', 'c': '𝕔', 'd': '𝕕', 'e': '𝕖', 'f': '𝕗', 'g': '𝕘', 'h': '𝕙', 'i': '𝕚', 'j': '𝕛', 'k': '𝕜', 'l': '𝕝', 'm': '𝕞', 'n': '𝕟', 'o': '𝕠', 'p': '𝕡', 'q': '𝕢', 'r': '𝕣', 's': '𝕤', 't': '𝕥', 'u': '𝕦', 'v': '𝕧', 'w': '𝕨', 'x': '𝕩', 'y': '𝕪', 'z': '𝕫',
+    'A': '𝔸', 'B': '𝔹', 'C': 'ℂ', 'D': '𝔻', 'E': '𝔼', 'F': '𝔽', 'G': '𝔾', 'H': 'ℍ', 'I': '𝕀', 'J': '𝕁', 'K': '𝕂', 'L': '𝕃', 'M': '𝕄', 'N': 'ℕ', 'O': '𝕆', 'P': 'ℙ', 'Q': 'ℚ', 'R': 'ℝ', 'S': '𝕊', 'T': '𝕋', 'U': '𝕌', 'V': '𝕍', 'W': '𝕎', 'X': '𝕏', 'Y': '𝕐', 'Z': 'ℤ',
+    '0': '𝟘', '1': '𝟙', '2': '𝟚', '3': '𝟛', '4': '𝟜', '5': '𝟝', '6': '𝟞', '7': '𝟟', '8': '𝟠', '9': '𝟡'
+  },
+  script: {
+    'a': '𝔞', 'b': '𝔟', 'c': '𝔠', 'd': '𝔡', 'e': '𝔢', 'f': '𝔣', 'g': '𝔤', 'h': '𝔥', 'i': '𝔦', 'j': '𝔧', 'k': '𝔨', 'l': '𝔩', 'm': '𝔪', 'n': '𝔫', 'o': '𝔬', 'p': '𝔭', 'q': '𝔮', 'r': 'reprised', 's': '𝔰', 't': '𝔱', 'u': '𝔲', 'v': '𝔳', 'w': '𝔴', 'x': '𝔵', 'y': '𝔶', 'z': '𝔷',
+    'A': '𝔄', 'B': '𝔅', 'C': '𝔍', 'D': '𝔇', 'E': '𝔈', 'F': '𝔉', 'G': '𝔊', 'H': '𝔋', 'I': '𝔌', 'J': '𝔍', 'K': '𝔎', 'L': '𝔏', 'M': '𝔐', 'N': '𝔑', 'O': '𝔒', 'P': '𝔓', 'Q': '𝔔', 'R': '𝔕', 'S': '𝔖', 'T': '𝔗', 'U': '𝔘', 'V': '𝔙', 'W': '𝔚', 'X': '𝔛', 'Y': '𝔜', 'Z': '𝔝'
+  }
+};
+
+export const runtimeEmojiData: Emoji[] = [
+  // Smileys & Emotion
+  { emoji: '😀', name: 'Grinning Face', category: 'smileys' },
+  { emoji: '😃', name: 'Grinning Face with Big Eyes', category: 'smileys' },
+  { emoji: '😄', name: 'Grinning Face with Smiling Eyes', category: 'smileys' },
+  { emoji: '😁', name: 'Beaming Face with Smiling Eyes', category: 'smileys' },
+  { emoji: '😆', name: 'Grinning Squinting Face', category: 'smileys' },
+  { emoji: '😅', name: 'Grinning Face with Sweat', category: 'smileys' },
+  { emoji: '🤣', name: 'Rolling on the Floor Laughing', category: 'smileys' },
+  { emoji: '😂', name: 'Face with Tears of Joy', category: 'smileys' },
+  { emoji: '🙂', name: 'Slightly Smiling Face', category: 'smileys' },
+  { emoji: '🙃', name: 'Upside-Down Face', category: 'smileys' },
+  { emoji: '😉', name: 'Winking Face', category: 'smileys' },
+  { emoji: '😊', name: 'Smiling Face with Smiling Eyes', category: 'smileys' },
+  { emoji: '😇', name: 'Smiling Face with Halo', category: 'smileys' },
+  { emoji: '🥰', name: 'Smiling Face with Hearts', category: 'smileys' },
+  { emoji: '😍', name: 'Smiling Face with Heart-Eyes', category: 'smileys' },
+  { emoji: '🤩', name: 'Star-Struck', category: 'smileys' },
+  { emoji: '😘', name: 'Face Blowing a Kiss', category: 'smileys' },
+
+  // People & Body
+  { emoji: '👋', name: 'Waving Hand', category: 'people' },
+  { emoji: '🤚', name: 'Raised Back of Hand', category: 'people' },
+  { emoji: '🖐️', name: 'Hand with Fingers Splayed', category: 'people' },
+  { emoji: '✋', name: 'Raised Hand', category: 'people' },
+  { emoji: '🖖', name: 'Vulcan Salute', category: 'people' },
+  { emoji: '👌', name: 'OK Hand', category: 'people' },
+  { emoji: '🤌', name: 'Pinched Fingers', category: 'people' },
+  { emoji: '🤏', name: 'Pinching Hand', category: 'people' },
+  { emoji: '✌️', name: 'Victory Hand', category: 'people' },
+  { emoji: '🤞', name: 'Crossed Fingers', category: 'people' },
+  { emoji: '🤟', name: 'Love-You Gesture', category: 'people' },
+  { emoji: '🤘', name: 'Sign of the Horns', category: 'people' },
+  { emoji: '🤙', name: 'Call Me Hand', category: 'people' },
+  { emoji: '👍', name: 'Thumbs Up', category: 'people' },
+  { emoji: '👎', name: 'Thumbs Down', category: 'people' },
+  { emoji: '👏', name: 'Clapping Hands', category: 'people' },
+
+  // Animals & Nature
+  { emoji: '🐶', name: 'Dog Face', category: 'animals' },
+  { emoji: '🐱', name: 'Cat Face', category: 'animals' },
+  { emoji: '🐭', name: 'Mouse Face', category: 'animals' },
+  { emoji: '🐹', name: 'Hamster Face', category: 'animals' },
+  { emoji: '🐰', name: 'Rabbit Face', category: 'animals' },
+  { emoji: '🦊', name: 'Fox Face', category: 'animals' },
+  { emoji: '🐻', name: 'Bear Face', category: 'animals' },
+  { emoji: '🐼', name: 'Panda Face', category: 'animals' },
+  { emoji: '🐨', name: 'Koala Face', category: 'animals' },
+  { emoji: '🐯', name: 'Tiger Face', category: 'animals' },
+  { emoji: '🦁', name: 'Lion Face', category: 'animals' },
+  { emoji: '🦁', name: 'Lion', category: 'animals' },
+
+  // Food & Drink
+  { emoji: '🍇', name: 'Grapes', category: 'food' },
+  { emoji: '🍈', name: 'Melon', category: 'food' },
+  { emoji: '🍉', name: 'Watermelon', category: 'food' },
+  { emoji: '🍊', name: 'Tangerine', category: 'food' },
+  { emoji: '🍋', name: 'Lemon', category: 'food' },
+  { emoji: '🍌', name: 'Banana', category: 'food' },
+  { emoji: '🍍', name: 'Pineapple', category: 'food' },
+  { emoji: '🥭', name: 'Mango', category: 'food' },
+  { emoji: '🍎', name: 'Red Apple', category: 'food' },
+  { emoji: '🍏', name: 'Green Apple', category: 'food' },
+  { emoji: '🍐', name: 'Pear', category: 'food' },
+  { emoji: '🍑', name: 'Peach', category: 'food' },
+  { emoji: '🍒', name: 'Cherries', category: 'food' },
+  { emoji: '🍕', name: 'Pizza', category: 'food' },
+
+  // Travel & Places
+  { emoji: '🚗', name: 'Automobile', category: 'travel' },
+  { emoji: '🚕', name: 'Taxi', category: 'travel' },
+  { emoji: '🚙', name: 'Recreational Vehicle', category: 'travel' },
+  { emoji: '🚌', name: 'Bus', category: 'travel' },
+  { emoji: '🚎', name: 'Trolleybus', category: 'travel' },
+  { emoji: '🏎️', name: 'Racing Car', category: 'travel' },
+  { emoji: '🚓', name: 'Police Car', category: 'travel' },
+  { emoji: '🚑', name: 'Ambulance', category: 'travel' },
+  { emoji: '🚒', name: 'Fire Engine', category: 'travel' },
+  { emoji: '✈️', name: 'Airplane', category: 'travel' },
+
+  // Activities
+  { emoji: '⚽', name: 'Soccer Ball', category: 'activities' },
+  { emoji: '🏀', name: 'Basketball', category: 'activities' },
+  { emoji: '🏈', name: 'American Football', category: 'activities' },
+  { emoji: '⚾', name: 'Baseball', category: 'activities' },
+  { emoji: '🥎', name: 'Softball', category: 'activities' },
+  { emoji: '🎾', name: 'Tennis', category: 'activities' },
+  { emoji: '🏐', name: 'Volleyball', category: 'activities' },
+  { emoji: '🏉', name: 'Rugby Football', category: 'activities' },
+
+  // Objects
+  { emoji: '⌚', name: 'Watch', category: 'objects' },
+  { emoji: '📱', name: 'Mobile Phone', category: 'objects' },
+  { emoji: '📲', name: 'Mobile Phone with Arrow', category: 'objects' },
+  { emoji: '💻', name: 'Laptop', category: 'objects' },
+  { emoji: '⌨️', name: 'Keyboard', category: 'objects' },
+  { emoji: '🖥️', name: 'Desktop Computer', category: 'objects' },
+  { emoji: '💡', name: 'Light Bulb', category: 'objects' },
+
+  // Symbols
+  { emoji: '💘', name: 'Heart with Arrow', category: 'symbols' },
+  { emoji: '💝', name: 'Heart with Ribbon', category: 'symbols' },
+  { emoji: '💖', name: 'Sparkling Heart', category: 'symbols' },
+  { emoji: '💗', name: 'Growing Heart', category: 'symbols' },
+  { emoji: '💓', name: 'Beating Heart', category: 'symbols' },
+  { emoji: '✅', name: 'Check Mark', category: 'symbols' },
+
+  // Flags
+  { emoji: '🏁', name: 'Chequered Flag', category: 'flags' },
+  { emoji: '🚩', name: 'Triangular Flag', category: 'flags' },
+  { emoji: '🎌', name: 'Crossed Flags', category: 'flags' },
+  { emoji: '🏴', name: 'Black Flag', category: 'flags' },
+  { emoji: '🏳️', name: 'White Flag', category: 'flags' },
+  { emoji: '🇺🇸', name: 'Flag: United States', category: 'flags' },
+  { emoji: '🇨🇳', name: 'Flag: China', category: 'flags' },
+  { emoji: '🇯🇵', name: 'Flag: Japan', category: 'flags' }
+];

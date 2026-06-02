@@ -2,6 +2,14 @@
 // AUTO-GENERATED tool stubs to prevent runtime crashes
 // TODO: Replace stubs with real implementations.
 
+import { 
+  runtimeDefaultColors, 
+  runtimeFontMappings, 
+  runtimeFontStyles, 
+  runtimeEmojiData 
+} from './runtime-integrity/fonts-colors';
+import { runtimeBicDatabase, runtimeK } from './runtime-integrity/developer-db';
+
 import {
   base64UrlEncode as runtimeBase64UrlEncode,
   decodeJwt as runtimeDecodeJwt,
@@ -2211,7 +2219,7 @@ export const HTTP_STATUS_CODES = {
   "500": "Internal Server Error"
 };
 export const ICO_SIZES = [];
-export const K = [];
+export const K = runtimeK;
 export const LICENSES = [
   {
     "id": "mit",
@@ -2396,7 +2404,7 @@ export function applyBitFlags(byte = 0, locallyAdministered = true, multicast = 
 }
 export const bandConversions = {};
 export function base64UrlEncode(value) { return runtimeBase64UrlEncode(value); }
-export const bicDatabase = {};
+export const bicDatabase = runtimeBicDatabase;
 export function buildCrc32Table() {
   const table = new Uint32Array(256);
   for (let i = 0; i < 256; i += 1) {
@@ -2812,7 +2820,7 @@ export const cssToTailwindMap = {};
 export const cupSizes = [];
 export function decodeBase58() { return null; }
 export function decodeJwt(token) { return runtimeDecodeJwt(token); }
-export const defaultColors = [];
+export const defaultColors = runtimeDefaultColors;
 export const defaultDirectives = [];
 export const defaultParams = [];
 export function detectFormat(value = '') {
@@ -2947,7 +2955,7 @@ export const diceConfig = {};
 export const dictionary = [];
 export const disposableDomains = runtimeDisposableDomains;
 export const emissionFactors = [];
-export const emojiData = [];
+export const emojiData = runtimeEmojiData;
 export function encodeBase58() { return null; }
 export const euCupSizes = {};
 export function extractHeadings(content = '') {
@@ -3044,8 +3052,8 @@ export function findUnusedImports(code = '') {
   });
 }
 export const flipMap = runtimeFlipMap;
-export const fontMappings = {};
-export const fontStyles = [];
+export const fontMappings = runtimeFontMappings;
+export const fontStyles = runtimeFontStyles;
 export function formatCitation(citation = {}, style = 'apa') {
   const authors = safeText(citation.authors);
   const title = safeText(citation.title);
