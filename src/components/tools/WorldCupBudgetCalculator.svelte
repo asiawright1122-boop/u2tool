@@ -609,7 +609,7 @@
 </script>
 
 <!-- Outer Container styled in luxury Matte Gold Obsidian theme -->
-<div class="dark bg-[#0a0a0a] text-neutral-200 border border-neutral-800 rounded-3xl p-6 lg:p-10 shadow-2xl relative font-sans leading-relaxed selection:bg-amber-500/20" dir={isRtl ? 'rtl' : 'ltr'}>
+<div class="world-cup-budget-calculator-container dark bg-[#0a0a0a] text-neutral-200 border border-neutral-800 rounded-3xl p-6 lg:p-10 shadow-2xl relative font-sans leading-relaxed selection:bg-amber-500/20" dir={isRtl ? 'rtl' : 'ltr'}>
   
   <!-- Top Banner Header -->
   <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-b border-neutral-900 pb-8 mb-8">
@@ -648,19 +648,19 @@
         <div class="grid grid-cols-3 gap-3">
           <button
             onclick={() => applyPreset('backpacker')}
-            class="px-3 py-2 text-xs bg-neutral-950 hover:bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white rounded-xl transition-all font-medium font-mono"
+            class="px-3 py-2 text-xs bg-neutral-950 hover:bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white rounded-xl transition-all font-medium font-mono btn-preset"
           >
             🎒 {currentUi.backpackerPreset}
           </button>
           <button
             onclick={() => applyPreset('standard')}
-            class="px-3 py-2 text-xs bg-neutral-950 hover:bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white rounded-xl transition-all font-medium font-mono"
+            class="px-3 py-2 text-xs bg-neutral-950 hover:bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white rounded-xl transition-all font-medium font-mono btn-preset"
           >
             👥 {currentUi.standardPreset}
           </button>
           <button
             onclick={() => applyPreset('luxury')}
-            class="px-3 py-2 text-xs bg-neutral-950 hover:bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white rounded-xl transition-all font-medium font-mono"
+            class="px-3 py-2 text-xs bg-neutral-950 hover:bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white rounded-xl transition-all font-medium font-mono btn-preset"
           >
             👑 {currentUi.luxuryPreset}
           </button>
@@ -753,7 +753,7 @@
           </h3>
           <button
             onclick={addRouteLeg}
-            class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#E5C158] hover:bg-[#C59B27] text-neutral-950 font-bold text-xs rounded-lg transition-all"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#E5C158] hover:bg-[#C59B27] text-neutral-950 font-bold text-xs rounded-lg transition-all btn-add-city"
           >
             <Plus class="w-3.5 h-3.5" />
             {currentUi.addCityBtn}
@@ -769,7 +769,7 @@
                 {#if index > 0}
                   <button
                     onclick={() => deleteRouteLeg(index)}
-                    class="text-neutral-500 hover:text-red-400 transition-colors p-1"
+                    class="text-neutral-500 hover:text-red-400 transition-colors p-1 btn-delete-leg"
                     title="Delete city leg"
                   >
                     <Trash2 class="w-3.5 h-3.5" />
@@ -969,7 +969,7 @@
       <div class="flex flex-col gap-3">
         <button
           onclick={exportBudgetCSV}
-          class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#E5C158] hover:bg-[#C59B27] text-neutral-950 font-bold rounded-xl transition-all"
+          class="btn-export-csv w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#E5C158] hover:bg-[#C59B27] text-neutral-950 font-bold rounded-xl transition-all"
         >
           <Download class="w-4 h-4" />
           {currentUi.exportBtn}
@@ -1001,3 +1001,82 @@
     </div>
   </div>
 </div>
+
+<style>
+  /* 强制把该容器下的所有 button, select, input, option 强制定制为黑金曜石质感，防止浅色主题覆盖 */
+  .world-cup-budget-calculator-container :global(button),
+  .world-cup-budget-calculator-container :global(select),
+  .world-cup-budget-calculator-container :global(input),
+  .world-cup-budget-calculator-container :global(option) {
+    font-family: inherit;
+  }
+
+  /* 精确覆盖各种按钮的状态 */
+  .world-cup-budget-calculator-container :global(button) {
+    /* 默认清除全局 button 样式对背景和颜色的强行覆盖 */
+    box-shadow: none !important;
+  }
+
+  /* 针对 select */
+  .world-cup-budget-calculator-container :global(select) {
+    background-color: #0a0a0a !important;
+    color: #e5e5e5 !important;
+    border-color: #262626 !important;
+  }
+
+  .world-cup-budget-calculator-container :global(select:focus) {
+    border-color: #e5c158 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 1px rgba(229, 193, 88, 0.4) !important;
+  }
+
+  /* 针对 option */
+  .world-cup-budget-calculator-container :global(option) {
+    background-color: #0a0a0a !important;
+    color: #e5e5e5 !important;
+  }
+
+  /* 针对 range 进度条 */
+  .world-cup-budget-calculator-container :global(input[type="range"]) {
+    background-color: #262626 !important;
+  }
+
+  /* 预设方案按钮 */
+  .world-cup-budget-calculator-container :global(.btn-preset) {
+    background-color: #0a0a0a !important;
+    border-color: #262626 !important;
+    color: #d4d4d4 !important;
+  }
+
+  .world-cup-budget-calculator-container :global(.btn-preset:hover) {
+    color: #ffffff !important;
+    border-color: #404040 !important;
+    background-color: #171717 !important;
+  }
+
+  /* 添加主办城市按钮 */
+  .world-cup-budget-calculator-container :global(.btn-add-city) {
+    background-color: #e5c158 !important;
+    color: #0a0a0a !important;
+    border: none !important;
+  }
+  .world-cup-budget-calculator-container :global(.btn-add-city:hover) {
+    background-color: #c59b27 !important;
+  }
+
+  /* 删除 Leg 按钮 */
+  .world-cup-budget-calculator-container :global(.btn-delete-leg) {
+    background: none !important;
+    border: none !important;
+  }
+
+  /* 导出 CSV 按钮 */
+  .world-cup-budget-calculator-container :global(.btn-export-csv) {
+    background-color: #e5c158 !important;
+    color: #0a0a0a !important;
+    border: none !important;
+  }
+  .world-cup-budget-calculator-container :global(.btn-export-csv:hover) {
+    background-color: #c59b27 !important;
+  }
+</style>

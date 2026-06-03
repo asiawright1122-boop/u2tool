@@ -652,7 +652,7 @@
 </script>
 
 <!-- Outer Strict Dark Mode Gold Container -->
-<div class="dark bg-[#0a0a0a] text-neutral-200 border border-neutral-800 rounded-3xl p-6 lg:p-10 shadow-2xl relative font-sans leading-relaxed selection:bg-amber-500/20">
+<div class="world-cup-simulator-container dark bg-[#0a0a0a] text-neutral-200 border border-neutral-800 rounded-3xl p-6 lg:p-10 shadow-2xl relative font-sans leading-relaxed selection:bg-amber-500/20">
   
   <!-- Glassmorphic Trophy Loading Overlay -->
   {#if isSimulating}
@@ -833,7 +833,7 @@
       <button
         onclick={triggerSimulation}
         disabled={isSimulating}
-        class="w-full py-4 px-6 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 disabled:opacity-50 text-neutral-950 font-bold rounded-2xl text-sm font-sans shadow-[0_4px_20px_rgba(245,158,11,0.2)] transition-all duration-300 flex items-center justify-center gap-2 active:scale-98 group cursor-pointer"
+        class="btn-simulate w-full py-4 px-6 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 disabled:opacity-50 text-neutral-950 font-bold rounded-2xl text-sm font-sans shadow-[0_4px_20px_rgba(245,158,11,0.2)] transition-all duration-300 flex items-center justify-center gap-2 active:scale-98 group cursor-pointer"
       >
         <RefreshCw class="w-4 h-4 group-hover:rotate-180 transition-transform duration-700" />
         {currentUi.runSim}
@@ -958,3 +958,53 @@
   </div>
 
 </div>
+
+<style>
+  /* 强制把该容器下的所有 button, select, input, option 强制定制为黑金曜石质感，防止浅色主题覆盖 */
+  .world-cup-simulator-container :global(button),
+  .world-cup-simulator-container :global(select),
+  .world-cup-simulator-container :global(input),
+  .world-cup-simulator-container :global(option) {
+    font-family: inherit;
+  }
+
+  /* 精确覆盖各种按钮的状态 */
+  .world-cup-simulator-container :global(button) {
+    /* 默认清除全局 button 样式对背景 and 颜色的强行覆盖 */
+    box-shadow: none !important;
+  }
+
+  /* 针对 select */
+  .world-cup-simulator-container :global(select) {
+    background-color: #0a0a0a !important;
+    color: #e5e5e5 !important;
+    border-color: #262626 !important;
+  }
+
+  .world-cup-simulator-container :global(select:focus) {
+    border-color: #e5c158 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 1px rgba(229, 193, 88, 0.4) !important;
+  }
+
+  /* 针对 option */
+  .world-cup-simulator-container :global(option) {
+    background-color: #0a0a0a !important;
+    color: #e5e5e5 !important;
+  }
+
+  /* 针对 range 进度条 */
+  .world-cup-simulator-container :global(input[type="range"]) {
+    background-color: #262626 !important;
+  }
+
+  /* 模拟运行 10000 次按钮 */
+  .world-cup-simulator-container :global(.btn-simulate) {
+    background-color: #e5c158 !important;
+    color: #0a0a0a !important;
+    border: none !important;
+  }
+  .world-cup-simulator-container :global(.btn-simulate:hover) {
+    background-color: #c59b27 !important;
+  }
+</style>
