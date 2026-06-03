@@ -28,5 +28,64 @@
       "question": "Les informations fournies par cet assistant sont-elles à jour?",
       "answer": "Oui, cet outil intègre les dernières règles consulaires pour la Coupe du Monde 2026, y compris le programme simplifié eTA du Canada pour les titulaires de visa américain. Cependant, les règles pouvant changer, vérifiez les sites officiels avant de partir."
     }
-  ]
+  ],
+  "engine": {
+    "status": {
+      "visa_free": "Aucun / Sans visa",
+      "us_citizen": "Aucun (Citoyen américain)",
+      "us_green_card": "Aucun (Détenteur de Green Card américaine)",
+      "esta_req": "ESTA requis",
+      "us_visa_held": "Visa américain B1/B2 (détenu)",
+      "us_visa_req": "Visa américain B1/B2 requis",
+      "ca_citizen": "Aucun (Citoyen canadien)",
+      "ca_pr": "Aucun (Résident permanent canadien)",
+      "eta_req": "eTA requise",
+      "eta_us_visa": "eTA requise (via visa américain)",
+      "ca_visa_held": "Visa canadien (détenu)",
+      "ca_visa_req": "Visa canadien requis",
+      "mx_citizen": "Aucun (Citoyen mexicain)",
+      "mx_exempt": "Aucun (Exempté via visa détenu)",
+      "mx_visa_req": "Visa mexicain requis"
+    },
+    "desc": {
+      "us_citizen": "Les titulaires de passeport américain peuvent entrer librement aux USA.",
+      "us_green_card": "Les résidents permanents américains peuvent entrer librement. Présentez votre Green Card physique.",
+      "esta_req": "Éligible au programme d'exemption de visa (ESTA). Postulez en ligne 72h avant.",
+      "us_visa_held": "Voyagez avec votre passeport physique contenant le visa B1/B2 valide.",
+      "us_visa_req": "Vous devez demander un visa touristique B1/B2 américain avant le voyage.",
+      "ca_citizen": "Les titulaires de passeport canadien peuvent entrer au Canada librement.",
+      "ca_pr": "Les résidents permanents du Canada peuvent entrer librement. Présentez votre carte RP physique.",
+      "us_gc_ca": "Les citoyens américains et résidents permanents n'ont pas besoin de visa ou eTA pour le Canada.",
+      "ca_eta_req": "eTA canadienne requise si arrivée par avion. Postulez en ligne.",
+      "ca_eta_us_visa": "Éligible pour demander l'eTA canadien car vous détenez un visa américain B1/B2 actif.",
+      "ca_visa_held": "Voyagez avec votre passeport contenant le visa touristique canadien valide.",
+      "ca_visa_req": "Vous devez demander un visa de résident temporaire canadien (VRT).",
+      "mx_citizen": "Les titulaires de passeport mexicain peuvent entrer librement.",
+      "mx_visafree": "Votre passeport vous permet d'entrer librement au Mexique. Remplissez le formulaire FMM.",
+      "mx_exempt": "Exempté de visa mexicain si vous détenez un visa valide US, CA, Schengen, Royaume-Uni ou Japon.",
+      "mx_visa_req": "Vous devez demander un visa de tourisme au consulat du Mexique avant le départ."
+    },
+    "warning": {
+      "physical_visa": "Votre trajet requiert des visas physiques traditionnels. Réservez vos rendez-vous consulaires tôt.",
+      "esta_eta": "Autorisations de voyage électroniques (ESTA/eTA) requises. Postulez en ligne 3 à 7 jours avant.",
+      "multiple_borders": "Votre itinéraire comprend plusieurs passages de frontières. Assurez-vous d'avoir des visas à entrées multiples."
+    },
+    "checklist": {
+      "passport": "Passeport valide (au moins 6 mois de validité)",
+      "esta": "Autorisation de voyage ESTA (Approuvée)",
+      "us_visa_sticker": "Vignette de visa B1/B2 américain",
+      "ca_eta": "Autorisation eTA du Canada (Approuvée)",
+      "ca_visa_sticker": "Vignette de visa de tourisme canadien",
+      "supporting_visa": "Visa de support valide (US/CA/Schengen/UK/JP)",
+      "us_visa_exempt": "Visa B1/B2 américain (Preuve d'exemption)",
+      "ca_visa_exempt": "Visa canadien (Preuve d'exemption)",
+      "us_gc_exempt": "Green Card américaine (Preuve d'exemption)",
+      "ca_pr_exempt": "Carte RP du Canada (Preuve d'exemption)",
+      "mx_visa_sticker": "Vignette de visa de tourisme mexicain",
+      "multiple_entry": "Preuve de visa à entrées multiples",
+      "tickets": "Billets de match / Confirmation de réservation FIFA",
+      "flights": "Billets d'avion aller-retour ou de correspondance",
+      "accommodation": "Preuve d'hébergement (Réservations d'hôtel / Airbnb)"
+    }
+  }
 }

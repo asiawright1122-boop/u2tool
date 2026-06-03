@@ -28,5 +28,64 @@
       "question": "Sind die Informationen in diesem Ratgeber auf dem neuesten Stand?",
       "answer": "Ja, das Tool basiert auf den aktuellsten behördlichen Bestimmungen für die WM 2026, einschließlich Kanadas vereinfachtem eTA-Verfahren für Inhaber von US-Visa. Da sich Grenzregeln ändern können, empfehlen wir eine Endkontrolle auf den offiziellen Regierungsseiten."
     }
-  ]
+  ],
+  "engine": {
+    "status": {
+      "visa_free": "Keines / Visumfrei",
+      "us_citizen": "Keines (US-Bürger)",
+      "us_green_card": "Keines (US-Green-Card-Inhaber)",
+      "esta_req": "ESTA erforderlich",
+      "us_visa_held": "US B1/B2 Visum (vorhanden)",
+      "us_visa_req": "US B1/B2 Visum erforderlich",
+      "ca_citizen": "Keines (Kanadischer Staatsbürger)",
+      "ca_pr": "Keines (Kanada-PR-Inhaber)",
+      "eta_req": "eTA erforderlich",
+      "eta_us_visa": "eTA erforderlich (über US-Visum)",
+      "ca_visa_held": "Kanada-Visum (vorhanden)",
+      "ca_visa_req": "Kanada-Visum erforderlich",
+      "mx_citizen": "Keines (Mexikanischer Staatsbürger)",
+      "mx_exempt": "Keines (Befreit durch vorhandenes Visum)",
+      "mx_visa_req": "Mexiko-Visum erforderlich"
+    },
+    "desc": {
+      "us_citizen": "Inhaber eines US-Passes können visumfrei in die USA einreisen.",
+      "us_green_card": "Inhaber einer US-Green-Card können visumfrei einreisen. Führen Sie die Green Card physisch mit.",
+      "esta_req": "Berechtigt zum Visa-Waiver-Programm (ESTA). Beantragen Sie online 72 Stunden vor Abreise.",
+      "us_visa_held": "Führen Sie Ihren Reisepass mit dem gültigen B1/B2-Visum mit. EVUS-Status beachten.",
+      "us_visa_req": "Sie müssen vor der Reise ein reguläres US-B1/B2-Besuchervisum bei einer Botschaft beantragen.",
+      "ca_citizen": "Inhaber eines kanadischen Passes können visumfrei nach Kanada einreisen.",
+      "ca_pr": "Inhaber von Kanadas PR können visumfrei einreisen. PR-Karte physisch mitführen.",
+      "us_gc_ca": "US-Bürger und Green-Card-Inhaber benötigen kein Visum oder eTA für Kanada.",
+      "ca_eta_req": "Kanada eTA erforderlich bei Flugreise. Beantragen Sie online.",
+      "ca_eta_us_visa": "Berechtigt zur eTA-Beantragung für Kanada, da Sie ein aktives US-B1/B2-Visum besitzen.",
+      "ca_visa_held": "Reisepass mit dem gültigen kanadischen Besuchervisum physisch mitführen.",
+      "ca_visa_req": "Sie müssen vor der Reise nach Kanada ein reguläres kanadisches TRV-Visum beantragen.",
+      "mx_citizen": "Inhaber eines mexikanischen Passes können visumfrei nach Mexiko einreisen.",
+      "mx_visafree": "Ihr Pass berechtigt zur visumfreien Einreise nach Mexiko. FMM bei Bedarf ausfüllen.",
+      "mx_exempt": "Befreit von der mexikanischen Visumpflicht durch gültiges Visum für die USA, CA, Schengen, UK oder Japan.",
+      "mx_visa_req": "Sie müssen vor der Abreise ein Touristenvisum beim mexikanischen Konsulat beantragen."
+    },
+    "warning": {
+      "physical_visa": "Ihre Route erfordert traditionelle physische Visa. Buchen Sie Konsulartermine frühzeitig.",
+      "esta_eta": "Elektronische Reisegenehmigungen (ESTA/eTA) erforderlich. 3-7 Tage vor dem Flug online beantragen.",
+      "multiple_borders": "Ihre Route beinhaltet mehrfache Grenzübertritte. Stellen Sie sicher, dass Ihre Visa Mehrfacheinreisen erlauben."
+    },
+    "checklist": {
+      "passport": "Gültiger Reisepass (mindestens 6 Monate Restgültigkeit)",
+      "esta": "ESTA-Reisegenehmigung (Genehmigt)",
+      "us_visa_sticker": "US-B1/B2-Visumaufkleber",
+      "ca_eta": "Kanada eTA-Reisegenehmigung (Genehmigt)",
+      "ca_visa_sticker": "Kanadischer Touristenvisumaufkleber",
+      "supporting_visa": "Gültiges unterstützendes Visum (US/CA/Schengen/UK/JP)",
+      "us_visa_exempt": "US-B1/B2-Visum (Befreiungsnachweis)",
+      "ca_visa_exempt": "Kanada-Visum (Befreiungsnachweis)",
+      "us_gc_exempt": "US-Green-Card (Befreiungsnachweis)",
+      "ca_pr_exempt": "Kanada PR-Karte (Befreiungsnachweis)",
+      "mx_visa_sticker": "Mexikanischer Touristenvisumaufkleber",
+      "multiple_entry": "Nachweis über Mehrfacheinreise-Erlaubnis der Visa",
+      "tickets": "WM-Tickets / FIFA-Buchungsbestätigung",
+      "flights": "Bestätigte Flugtickets (Rückflug oder Weiterflug)",
+      "accommodation": "Unterkunftsnachweis (Hotel- / Airbnb-Buchungen)"
+    }
+  }
 }

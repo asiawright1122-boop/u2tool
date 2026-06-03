@@ -28,5 +28,64 @@
       "question": "Is the information provided by this assistant up to date?",
       "answer": "Yes, this tool is updated with the latest consulate rules for the 2026 World Cup, including Canada's simplified eTA program for certain nationalities holding US visas. However, border rules can change, so we recommend double-checking official immigration websites before you travel."
     }
-  ]
+  ],
+  "engine": {
+    "status": {
+      "visa_free": "None / Visa Free",
+      "us_citizen": "None (US Citizen)",
+      "us_green_card": "None (US Green Card Holder)",
+      "esta_req": "ESTA Required",
+      "us_visa_held": "US B1/B2 Visa (Held)",
+      "us_visa_req": "US B1/B2 Visa Required",
+      "ca_citizen": "None (Canada Citizen)",
+      "ca_pr": "None (Canada PR Holder)",
+      "eta_req": "eTA Required",
+      "eta_us_visa": "eTA Required (via US Visa)",
+      "ca_visa_held": "Canada Visa (Held)",
+      "ca_visa_req": "Canada Visa Required",
+      "mx_citizen": "None (Mexico Citizen)",
+      "mx_exempt": "None (Exempt via Held Visa)",
+      "mx_visa_req": "Mexico Visa Required"
+    },
+    "desc": {
+      "us_citizen": "US passport holders can enter the United States freely without visa documents.",
+      "us_green_card": "Permanent residents of the US can enter freely. Ensure you carry your physical Green Card.",
+      "esta_req": "Eligible for Visa Waiver Program (ESTA). You must apply for an online ESTA authorization at least 72 hours before departure.",
+      "us_visa_held": "Carry your physical passport containing the valid US B1/B2 visa sticker. Ensure EVUS registration is active for Chinese passport holders.",
+      "us_visa_req": "You must apply for a regular US B1/B2 Visitor Visa at a US Embassy or Consulate prior to your trip.",
+      "ca_citizen": "Canadian passport holders can enter Canada freely without additional border authorizations.",
+      "ca_pr": "Canadian Permanent Residents can enter freely. Ensure you carry your physical PR Card.",
+      "us_gc_ca": "US Citizens and Green Card holders do not require a visa or eTA to enter Canada. Carry proof of US status.",
+      "ca_eta_req": "You require a Canadian eTA (Electronic Travel Authorization) if arriving by air. Apply online before your flight.",
+      "ca_eta_us_visa": "Eligible to apply for a Canadian eTA instead of a visitor visa because you hold an active US B1/B2 visa. Applicable for air travel.",
+      "ca_visa_held": "Carry your passport with the valid Canadian tourist visa sticker.",
+      "ca_visa_req": "You must apply for a regular Canadian Temporary Resident Visa (TRV) before traveling to Canada.",
+      "mx_citizen": "Mexican passport holders can enter Mexico freely.",
+      "mx_visafree": "Your passport qualifies for visa-free tourist entry into Mexico. Fill out the FMM form if required by your airline.",
+      "mx_exempt": "Mexico exempts visa requirements for travelers holding valid, active visas or permanent residencies of the USA, Canada, Schengen Area, UK, or Japan. Carry the supporting document/visa sticker.",
+      "mx_visa_req": "You must apply for a Mexican Tourist Visa at a Mexican Consulate prior to travel."
+    },
+    "warning": {
+      "physical_visa": "Your route requires one or more standard physical tourist visas. Embassy interviews and physical document submissions will be necessary. Book appointments early!",
+      "esta_eta": "You require electronic travel authorizations (ESTA or eTA). Make sure to submit online applications at least 3-7 days before boarding flights.",
+      "multiple_borders": "Your itinerary involves multiple international border crossings. Ensure you have MULTIPLE-ENTRY permits to avoid being denied entry upon return."
+    },
+    "checklist": {
+      "passport": "Valid Passport (must have at least 6 months validity left)",
+      "esta": "ESTA Travel Authorization (Approved)",
+      "us_visa_sticker": "US B1/B2 Visa Sticker",
+      "ca_eta": "Canada eTA Authorization (Approved)",
+      "ca_visa_sticker": "Canada Tourist Visa Sticker",
+      "supporting_visa": "Supporting Valid Visa (US/CA/Schengen/UK/JP)",
+      "us_visa_exempt": "US B1/B2 Visa (Exemption proof)",
+      "ca_visa_exempt": "Canada Visa (Exemption proof)",
+      "us_gc_exempt": "US Green Card (Exemption proof)",
+      "ca_pr_exempt": "Canada PR Card (Exemption proof)",
+      "mx_visa_sticker": "Mexico Tourist Visa Sticker",
+      "multiple_entry": "Proof of Multiple-Entry rights for visas",
+      "tickets": "World Cup Match Tickets / FIFA Booking Confirmation",
+      "flights": "Confirmed Return or Onward Flight Tickets",
+      "accommodation": "Proof of Accommodation (Hotel / Airbnb Bookings)"
+    }
+  }
 }

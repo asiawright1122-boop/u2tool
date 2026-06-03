@@ -28,5 +28,64 @@
       "question": "¿La información proporcionada por este asistente está actualizada?",
       "answer": "Sí, esta herramienta se actualiza con las últimas reglas consulares para el Mundial 2026, incluido el programa eTA simplificado de Canadá. Sin embargo, las reglas pueden cambiar, por lo que recomendamos verificar los sitios web oficiales antes de viajar."
     }
-  ]
+  ],
+  "engine": {
+    "status": {
+      "visa_free": "Ninguno / Visa Libre",
+      "us_citizen": "Ninguno (Ciudadano de EE. UU.)",
+      "us_green_card": "Ninguno (Poseedor de Green Card de EE. UU.)",
+      "esta_req": "Se requiere ESTA",
+      "us_visa_held": "Visa de EE. UU. B1/B2 (Poseída)",
+      "us_visa_req": "Visa de EE. UU. B1/B2 requerida",
+      "ca_citizen": "Ninguno (Ciudadano canadiense)",
+      "ca_pr": "Ninguno (Poseedor de PR de Canadá)",
+      "eta_req": "Se requiere eTA",
+      "eta_us_visa": "Se requiere eTA (vía Visa de EE. UU.)",
+      "ca_visa_held": "Visa de Canadá (Poseída)",
+      "ca_visa_req": "Visa de Canadá requerida",
+      "mx_citizen": "Ninguno (Ciudadano mexicano)",
+      "mx_exempt": "Ninguno (Exento vía visa poseída)",
+      "mx_visa_req": "Visa de México requerida"
+    },
+    "desc": {
+      "us_citizen": "Los titulares de pasaportes de EE. UU. pueden ingresar libremente sin visas.",
+      "us_green_card": "Los residentes permanentes de EE. UU. pueden ingresar libremente. Lleve su Green Card física.",
+      "esta_req": "Elegible para Programa de Exención de Visa (ESTA). Solicite en línea 72 horas antes.",
+      "us_visa_held": "Lleve su pasaporte físico con la visa B1/B2. Active EVUS para ciudadanos chinos.",
+      "us_visa_req": "Debe solicitar una visa de visitante B1/B2 de EE. UU. antes del viaje.",
+      "ca_citizen": "Los titulares de pasaporte canadiense pueden entrar libremente.",
+      "ca_pr": "Los residentes permanentes de Canadá pueden entrar libremente. Lleve su tarjeta PR física.",
+      "us_gc_ca": "Los ciudadanos de EE. UU. y residentes permanentes no requieren visa ni eTA en Canadá.",
+      "ca_eta_req": "Requiere eTA canadiense si llega por aire. Solicite en línea.",
+      "ca_eta_us_visa": "Elegible para solicitar eTA canadiense por tener visa de EE. UU. B1/B2 activa.",
+      "ca_visa_held": "Lleve su pasaporte con la visa de turista de Canadá válida.",
+      "ca_visa_req": "Debe solicitar una visa de residente temporal (TRV) de Canadá.",
+      "mx_citizen": "Los titulares de pasaporte mexicano pueden entrar libremente.",
+      "mx_visafree": "Su pasaporte califica para ingreso libre a México. Llene la FMM si lo requiere.",
+      "mx_exempt": "Exento de visa mexicana por tener visa válida de EE. UU., CA, Schengen, Reino Unido o Japón.",
+      "mx_visa_req": "Debe solicitar una visa de turista en el Consulado de México antes de viajar."
+    },
+    "warning": {
+      "physical_visa": "Su ruta requiere visas físicas tradicionales. Reserve citas consulares con anticipación.",
+      "esta_eta": "Requiere autorizaciones electrónicas (ESTA o eTA). Solicite en línea de 3 a 7 días antes.",
+      "multiple_borders": "Su itinerario incluye múltiples cruces de fronteras. Asegúrese de tener permisos de entrada múltiple."
+    },
+    "checklist": {
+      "passport": "Pasaporte válido (al menos 6 meses de validez)",
+      "esta": "Autorización de viaje ESTA (Aprobada)",
+      "us_visa_sticker": "Etiqueta de visa B1/B2 de EE. UU.",
+      "ca_eta": "Autorización de eTA de Canadá (Aprobada)",
+      "ca_visa_sticker": "Etiqueta de visa de turista de Canadá",
+      "supporting_visa": "Visa válida de soporte (US/CA/Schengen/UK/JP)",
+      "us_visa_exempt": "Visa B1/B2 de EE. UU. (Prueba de exención)",
+      "ca_visa_exempt": "Visa de Canadá (Prueba de exención)",
+      "us_gc_exempt": "Green Card de EE. UU. (Prueba de exención)",
+      "ca_pr_exempt": "Tarjeta PR de Canadá (Prueba de exención)",
+      "mx_visa_sticker": "Etiqueta de visa de turista de México",
+      "multiple_entry": "Prueba de múltiples entradas para visas",
+      "tickets": "Entradas de partidos / Confirmación de reserva de FIFA",
+      "flights": "Billetes de vuelo de ida y vuelta o continuación",
+      "accommodation": "Prueba de alojamiento (Reservas de hotel / Airbnb)"
+    }
+  }
 }

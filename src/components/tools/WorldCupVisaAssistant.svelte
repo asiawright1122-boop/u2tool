@@ -430,6 +430,76 @@
     }
   };
 
+  const engineKeyMap: Record<string, string> = {
+    // Visa Required statuses
+    'None / Visa Free': 'status.visa_free',
+    'None (US Citizen)': 'status.us_citizen',
+    'None (US Green Card Holder)': 'status.us_green_card',
+    'ESTA Required': 'status.esta_req',
+    'US B1/B2 Visa (Held)': 'status.us_visa_held',
+    'US B1/B2 Visa Required': 'status.us_visa_req',
+    'None (Canada Citizen)': 'status.ca_citizen',
+    'None (Canada PR Holder)': 'status.ca_pr',
+    'eTA Required': 'status.eta_req',
+    'eTA Required (via US Visa)': 'status.eta_us_visa',
+    'Canada Visa (Held)': 'status.ca_visa_held',
+    'Canada Visa Required': 'status.ca_visa_req',
+    'None (Mexico Citizen)': 'status.mx_citizen',
+    'None (Exempt via Held Visa)': 'status.mx_exempt',
+    'Mexico Visa Required': 'status.mx_visa_req',
+
+    // Descriptions
+    'US passport holders can enter the United States freely without visa documents.': 'desc.us_citizen',
+    'Permanent residents of the US can enter freely. Ensure you carry your physical Green Card.': 'desc.us_green_card',
+    'Eligible for Visa Waiver Program (ESTA). You must apply for an online ESTA authorization at least 72 hours before departure.': 'desc.esta_req',
+    'Carry your physical passport containing the valid US B1/B2 visa sticker. Ensure EVUS registration is active for Chinese passport holders.': 'desc.us_visa_held',
+    'You must apply for a regular US B1/B2 Visitor Visa at a US Embassy or Consulate prior to your trip.': 'desc.us_visa_req',
+    'Canadian passport holders can enter Canada freely without additional border authorizations.': 'desc.ca_citizen',
+    'Canadian Permanent Residents can enter freely. Ensure you carry your physical PR Card.': 'desc.ca_pr',
+    'US Citizens and Green Card holders do not require a visa or eTA to enter Canada. Carry proof of US status.': 'desc.us_gc_ca',
+    'You require a Canadian eTA (Electronic Travel Authorization) if arriving by air. Apply online before your flight.': 'desc.ca_eta_req',
+    'Eligible to apply for a Canadian eTA instead of a visitor visa because you hold an active US B1/B2 visa. Applicable for air travel.': 'desc.ca_eta_us_visa',
+    'Carry your passport with the valid Canadian tourist visa sticker.': 'desc.ca_visa_held',
+    'You must apply for a regular Canadian Temporary Resident Visa (TRV) before traveling to Canada.': 'desc.ca_visa_req',
+    'Mexican passport holders can enter Mexico freely.': 'desc.mx_citizen',
+    'Your passport qualifies for visa-free tourist entry into Mexico. Fill out the FMM form if required by your airline.': 'desc.mx_visafree',
+    'Mexico exempts visa requirements for travelers holding valid, active visas or permanent residencies of the USA, Canada, Schengen Area, UK, or Japan. Carry the supporting document/visa sticker.': 'desc.mx_exempt',
+    'You must apply for a Mexican Tourist Visa at a Mexican Consulate prior to travel.': 'desc.mx_visa_req',
+
+    // Warnings
+    'Your route requires one or more standard physical tourist visas. Embassy interviews and physical document submissions will be necessary. Book appointments early!': 'warning.physical_visa',
+    'You require electronic travel authorizations (ESTA or eTA). Make sure to submit online applications at least 3-7 days before boarding flights.': 'warning.esta_eta',
+    'Your itinerary involves multiple international border crossings. Ensure you have MULTIPLE-ENTRY permits to avoid being denied entry upon return.': 'warning.multiple_borders',
+
+    // Checklist items
+    'Valid Passport (must have at least 6 months validity left)': 'checklist.passport',
+    'ESTA Travel Authorization (Approved)': 'checklist.esta',
+    'US B1/B2 Visa Sticker': 'checklist.us_visa_sticker',
+    'Canada eTA Authorization (Approved)': 'checklist.ca_eta',
+    'Canada Tourist Visa Sticker': 'checklist.ca_visa_sticker',
+    'Supporting Valid Visa (US/CA/Schengen/UK/JP)': 'checklist.supporting_visa',
+    'US B1/B2 Visa (Exemption proof)': 'checklist.us_visa_exempt',
+    'Canada Visa (Exemption proof)': 'checklist.ca_visa_exempt',
+    'US Green Card (Exemption proof)': 'checklist.us_gc_exempt',
+    'Canada PR Card (Exemption proof)': 'checklist.ca_pr_exempt',
+    'Mexico Tourist Visa Sticker': 'checklist.mx_visa_sticker',
+    'Proof of Multiple-Entry rights for visas': 'checklist.multiple_entry',
+    'World Cup Match Tickets / FIFA Booking Confirmation': 'checklist.tickets',
+    'Confirmed Return or Onward Flight Tickets': 'checklist.flights',
+    'Proof of Accommodation (Hotel / Airbnb Bookings)': 'checklist.accommodation'
+  };
+
+  function translateEngineText(text: string): string {
+    if (!text) return '';
+    const key = engineKeyMap[text];
+    if (!key) return text;
+    const translated = t(`engine.${key}`, text);
+    if (translated.startsWith('MISSING:')) {
+      return text;
+    }
+    return translated;
+  }
+
   // State Runes (Svelte 5)
   let passportCountry = $state('CHN');
   let heldVisas = $state<string[]>([]);
@@ -505,13 +575,19 @@
   $effect(() => {
     // Whenever checklist keys change, trim the unchecked keys to save memory
     const validKeys = new Set(visaResult.checklist);
+    const rawChecked = $state.snapshot(checkedItems);
     const updatedChecked: Record<string, boolean> = {};
-    for (const key of Object.keys(checkedItems)) {
+    let hasChanges = false;
+    for (const key of Object.keys(rawChecked)) {
       if (validKeys.has(key)) {
-        updatedChecked[key] = checkedItems[key];
+        updatedChecked[key] = rawChecked[key];
+      } else {
+        hasChanges = true;
       }
     }
-    checkedItems = updatedChecked;
+    if (hasChanges) {
+      checkedItems = updatedChecked;
+    }
   });
 </script>
 
@@ -531,10 +607,10 @@
         </span>
       </div>
       <h1 class="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 dark:from-amber-200 dark:via-amber-400 dark:to-amber-200 font-outfit uppercase tracking-tight">
-        {ui.name || 'Border & Visa Assistant'}
+        {t('name') || ui.name || 'Border & Visa Assistant'}
       </h1>
       <p class="text-xs text-neutral-500 dark:text-neutral-400 mt-1 max-w-xl">
-        {ui.description || 'Smart border compliance evaluator for tri-country World Cup journeys.'}
+        {t('description') || ui.description || 'Smart border compliance evaluator for tri-country World Cup journeys.'}
       </p>
     </div>
     <div class="flex items-center gap-3">
@@ -736,7 +812,7 @@
           <ul class="space-y-2">
             {#each visaResult.overallWarnings as warning}
               <li class="text-xs text-amber-700 dark:text-amber-200/90 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-1.5 before:w-1.5 before:h-1.5 before:bg-amber-500 dark:before:bg-amber-400 before:rounded-full leading-relaxed">
-                {warning}
+                {translateEngineText(warning)}
               </li>
             {/each}
           </ul>
@@ -787,12 +863,12 @@
                   {:else}
                     {leg.status === 'warning' ? '🟡' : '🟢'}
                   {/if}
-                  {leg.visaRequired}
+                  {translateEngineText(leg.visaRequired)}
                 </div>
 
                 <!-- Detailed Explanation -->
                 <p class="text-[11px] text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-[90%] mt-0.5">
-                  {leg.description}
+                  {translateEngineText(leg.description)}
                 </p>
               </div>
             {/each}
@@ -835,7 +911,7 @@
                 {/if}
               </div>
               <div class="flex flex-col min-w-0">
-                <span class="leading-snug break-words">{item}</span>
+                <span class="leading-snug break-words">{translateEngineText(item)}</span>
                 {#if checkedItems[item]}
                   <span class="text-[9px] text-amber-600 dark:text-amber-500 font-semibold uppercase tracking-wider font-mono mt-0.5">✓ {ui.preparedText}</span>
                 {/if}

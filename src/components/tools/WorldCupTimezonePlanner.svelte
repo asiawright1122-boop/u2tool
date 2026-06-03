@@ -108,7 +108,10 @@
       selectAll: 'Select All',
       quickSelect: 'Quick Selector',
       totalMatches: 'Matches',
-      liverGradeLegend: 'Liver Rating'
+      liverGradeLegend: 'Liver Rating',
+      survivalPosterTitle: 'Viewing Survival Poster',
+      teamsSelected: 'Teams Selected',
+      stadiumsSelected: 'Stadiums Selected'
     },
     zh: {
       timezoneCompassTitle: '时区滑动罗盘',
@@ -154,7 +157,10 @@
       selectAll: '选择全部',
       quickSelect: '快速选择',
       totalMatches: '场比赛',
-      liverGradeLegend: '护肝评估'
+      liverGradeLegend: '护肝评估',
+      survivalPosterTitle: '观赛生存海报',
+      teamsSelected: '已选球队',
+      stadiumsSelected: '已选场馆'
     },
     es: {
       timezoneCompassTitle: 'Brújula Deslizante de Zona Horaria',
@@ -200,7 +206,10 @@
       selectAll: 'Seleccionar Todo',
       quickSelect: 'Selector Rápido',
       totalMatches: 'Partidos',
-      liverGradeLegend: 'Evaluación de Salud'
+      liverGradeLegend: 'Evaluación de Salud',
+      survivalPosterTitle: 'Póster de Supervivencia',
+      teamsSelected: 'Equipos Seleccionados',
+      stadiumsSelected: 'Estadios Seleccionados'
     },
     pt: {
       timezoneCompassTitle: 'Bússola Deslizante de Fusos Horários',
@@ -246,7 +255,10 @@
       selectAll: 'Selecionar Tudo',
       quickSelect: 'Seleção Rápida',
       totalMatches: 'Jogos',
-      liverGradeLegend: 'Avaliação de Saúde'
+      liverGradeLegend: 'Avaliação de Saúde',
+      survivalPosterTitle: 'Pôster de Sobrevivência',
+      teamsSelected: 'Seleções Selecionadas',
+      stadiumsSelected: 'Estádios Selecionados'
     },
     ja: {
       timezoneCompassTitle: '時区（タイムゾーン）スライディングコンパス',
@@ -292,7 +304,10 @@
       selectAll: 'すべて選択',
       quickSelect: 'クイック選択',
       totalMatches: '試合',
-      liverGradeLegend: '健康評価'
+      liverGradeLegend: '健康評価',
+      survivalPosterTitle: '夜更かし観戦ポスター',
+      teamsSelected: '選択されたチーム',
+      stadiumsSelected: '選択されたスタジアム'
     },
     ru: {
       timezoneCompassTitle: 'Компас часовых поясов',
@@ -338,7 +353,10 @@
       selectAll: 'Выбрать все',
       quickSelect: 'Быстрый выбор',
       totalMatches: 'Матчи',
-      liverGradeLegend: 'Рейтинг здоровья'
+      liverGradeLegend: 'Рейтинг здоровья',
+      survivalPosterTitle: 'Постер выживания',
+      teamsSelected: 'Выбрано сборных',
+      stadiumsSelected: 'Выбрано стадионов'
     },
     fr: {
       timezoneCompassTitle: 'Boussole des Fuseaux Horaires',
@@ -384,7 +402,10 @@
       selectAll: 'Tout Sélectionner',
       quickSelect: 'Sélecteur Rapide',
       totalMatches: 'Matchs',
-      liverGradeLegend: 'Évaluation Santé'
+      liverGradeLegend: 'Évaluation Santé',
+      survivalPosterTitle: 'Affiche de Survie',
+      teamsSelected: 'Équipes Sélectionnées',
+      stadiumsSelected: 'Stades Sélectionnés'
     },
     ar: {
       timezoneCompassTitle: 'بوصلة المناطق الزمنية المنزلقة',
@@ -430,7 +451,10 @@
       selectAll: 'تحديد الكل',
       quickSelect: 'تحديد سريع',
       totalMatches: 'مباراة',
-      liverGradeLegend: 'التقييم الصحي'
+      liverGradeLegend: 'التقييم الصحي',
+      survivalPosterTitle: 'ملصق البقاء على قيد الحياة',
+      teamsSelected: 'الفرق المختارة',
+      stadiumsSelected: 'الملاعب المختارة'
     },
     de: {
       timezoneCompassTitle: 'Zeitzonen-Schiebekompass',
@@ -476,7 +500,10 @@
       selectAll: 'Alle auswählen',
       quickSelect: 'Schnellauswahl',
       totalMatches: 'Spiele',
-      liverGradeLegend: 'Leber-Rating'
+      liverGradeLegend: 'Leber-Rating',
+      survivalPosterTitle: 'Nachtwachen-Poster',
+      teamsSelected: 'Ausgewählte Teams',
+      stadiumsSelected: 'Ausgewählte Stadien'
     },
     ko: {
       timezoneCompassTitle: '시간대 슬라이딩 컴퍼스',
@@ -522,7 +549,10 @@
       selectAll: '전체 선택',
       quickSelect: '빠른 선택',
       totalMatches: '경기',
-      liverGradeLegend: '간 건강 등급'
+      liverGradeLegend: '간 건강 등급',
+      survivalPosterTitle: '수면 생존 포스터',
+      teamsSelected: '선택된 팀',
+      stadiumsSelected: '선택된 경기장'
     }
   };
 
