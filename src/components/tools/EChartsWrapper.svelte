@@ -86,34 +86,34 @@
     const seriesTypes = getSeriesTypes(chartOption);
 
     if (seriesTypes.some((seriesType) => PLUGIN_SERIES_TYPES.has(seriesType))) {
-      return import('@/lib/echarts/plugin-runtime.ts');
+      return import('../../lib/echarts/plugin-runtime');
     }
 
     if (seriesTypes.includes('custom')) {
-      return import('@/lib/echarts/custom-runtime.ts');
+      return import('../../lib/echarts/custom-runtime');
     }
 
     if (seriesTypes.includes('themeRiver')) {
-      return import('@/lib/echarts/theme-river-runtime.ts');
+      return import('../../lib/echarts/theme-river-runtime');
     }
 
     if (seriesTypes.includes('parallel')) {
-      return import('@/lib/echarts/parallel-runtime.ts');
+      return import('../../lib/echarts/parallel-runtime');
     }
 
     if (seriesTypes.some((seriesType) => FINANCE_SERIES_TYPES.has(seriesType))) {
-      return import('@/lib/echarts/finance-runtime.ts');
+      return import('../../lib/echarts/finance-runtime');
     }
 
     if (seriesTypes.some((seriesType) => HIERARCHY_SERIES_TYPES.has(seriesType))) {
-      return import('@/lib/echarts/hierarchy-runtime.ts');
+      return import('../../lib/echarts/hierarchy-runtime');
     }
 
     if (seriesTypes.includes('heatmap') && chartOption && 'calendar' in chartOption) {
-      return import('@/lib/echarts/calendar-runtime.ts');
+      return import('../../lib/echarts/calendar-runtime');
     }
 
-    return import('@/lib/echarts/common-runtime.ts');
+    return import('../../lib/echarts/common-runtime');
   }
 
   async function loadEChartsWithIdleCallback(chartOption: EChartsOption): Promise<any> {
