@@ -15,7 +15,7 @@
   let { locale, translations }: Props = $props();
 
   // Initialize state
-  const state = new WorldCupCalcState();
+  const calcState = new WorldCupCalcState();
   let activeTab = $state('groups'); // 'groups' | 'knockout'
 
   // Translation helpers
@@ -41,14 +41,14 @@
 
   function handleReset() {
     if (confirm(t('confirm_reset'))) {
-      state.reset();
+      calcState.reset();
     }
   }
 
   function handleFillFavorites() {
-    state.reset();
+    calcState.reset();
     const fifa = fifaRankingsData as Record<string, number>;
-    state.matches.forEach(m => {
+    calcState.matches.forEach(m => {
       if (m.stage === 'group') {
         const rHome = fifa[m.homeTeam] || 999;
         const rAway = fifa[m.awayTeam] || 999;
@@ -64,7 +64,7 @@
         }
       }
     });
-    state.cleanupGhostPredictions();
+    calcState.cleanupGhostPredictions();
   }
 
   // Load from localStorage on mount
@@ -73,7 +73,7 @@
     if (cached) {
       try {
         const parsed = JSON.parse(cached);
-        state.loadFromState(parsed);
+        calcState.loadFromState(parsed);
       } catch (e) {
         console.error('Failed to load world cup calculator state', e);
       }
@@ -83,24 +83,24 @@
   // Save to localStorage on state changes
   $effect(() => {
     // Reference variables to trigger reactivity in Svelte 5 $effect
-    const matches = state.matches;
-    const overrides = state.customTiesOverride;
-    const predictions = state.predictedWinners;
+    const matches = calcState.matches;
+    const overrides = calcState.customTiesOverride;
+    const predictions = calcState.predictedWinners;
 
-    const data = state.saveState();
+    const data = calcState.saveState();
     localStorage.setItem('world_cup_group_calc_state', JSON.stringify(data));
   });
 </script>
 
-<div class="obsidian-calculator-theme min-h-screen bg-zinc-950 text-zinc-100 font-sans antialiased p-4 md:p-6 lg:p-8 space-y-6">
+<div class="obsidian-calculator-theme bg-transparent text-zinc-800 dark:text-zinc-100 font-sans antialiased p-4 md:p-6 lg:p-8 space-y-6">
   
   <!-- Tool Header -->
-  <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-amber-900/30 pb-5 gap-4">
+  <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-amber-900/10 dark:border-amber-900/30 pb-5 gap-4">
     <div>
-      <h1 class="text-2xl md:text-3xl font-extrabold text-amber-500 tracking-wide font-serif">
+      <h1 class="text-2xl md:text-3xl font-extrabold text-amber-600 dark:text-amber-500 tracking-wide font-serif">
         {t('title')}
       </h1>
-      <p class="text-zinc-400 text-xs md:text-sm mt-1 max-w-2xl">
+      <p class="text-zinc-500 dark:text-zinc-400 text-xs md:text-sm mt-1 max-w-2xl">
         {t('description')}
       </p>
     </div>
@@ -109,7 +109,7 @@
     <div class="flex items-center gap-2">
       <button
         onclick={handleFillFavorites}
-        class="flex items-center gap-1.5 px-3 py-1.5 bg-amber-600/10 hover:bg-amber-600/20 border border-amber-500/30 text-amber-400 rounded-lg text-xs font-semibold transition-all shadow-md active:scale-95"
+        class="flex items-center gap-1.5 px-3 py-1.5 bg-amber-600/5 dark:bg-amber-600/10 hover:bg-amber-600/10 dark:hover:bg-amber-600/20 border border-amber-500/20 dark:border-amber-500/30 text-amber-600 dark:text-amber-400 rounded-lg text-xs font-semibold transition-all shadow-sm active:scale-95"
         title={t('fill_favorites_tooltip')}
       >
         <Zap size={13} />
@@ -117,7 +117,7 @@
       </button>
       <button
         onclick={handleReset}
-        class="flex items-center gap-1.5 px-3 py-1.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 rounded-lg text-xs font-semibold transition-all active:scale-95"
+        class="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 border border-slate-200 dark:border-zinc-800 text-slate-700 dark:text-zinc-300 rounded-lg text-xs font-semibold transition-all active:scale-95"
       >
         <RotateCcw size={13} />
         {t('reset')}
@@ -126,13 +126,13 @@
   </div>
 
   <!-- Tabs Navigation -->
-  <div class="flex border-b border-zinc-800">
+  <div class="flex border-b border-zinc-200 dark:border-zinc-800">
     <button
       onclick={() => activeTab = 'groups'}
       class={`flex items-center gap-2 px-5 py-3 text-xs md:text-sm font-semibold tracking-wider transition-all border-b-2 ${
         activeTab === 'groups'
-          ? 'border-amber-500 text-amber-500 bg-amber-500/[0.02]'
-          : 'border-transparent text-zinc-400 hover:text-zinc-200'
+          ? 'border-amber-500 text-amber-600 dark:text-amber-500 bg-amber-500/[0.02]'
+          : 'border-transparent text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200'
       }`}
     >
       <Table size={15} />
@@ -142,8 +142,8 @@
       onclick={() => activeTab = 'knockout'}
       class={`flex items-center gap-2 px-5 py-3 text-xs md:text-sm font-semibold tracking-wider transition-all border-b-2 ${
         activeTab === 'knockout'
-          ? 'border-amber-500 text-amber-500 bg-amber-500/[0.02]'
-          : 'border-transparent text-zinc-400 hover:text-zinc-200'
+          ? 'border-amber-500 text-amber-600 dark:text-amber-500 bg-amber-500/[0.02]'
+          : 'border-transparent text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200'
       }`}
     >
       <GitMerge size={15} class="rotate-90" />
@@ -156,27 +156,27 @@
     {#if activeTab === 'groups'}
       <!-- Group Stage Panels -->
       <div class="space-y-4">
-        <GroupStagePanel {state} {t} />
+        <GroupStagePanel calcState={calcState} {t} />
       </div>
 
       <!-- Third Place Ranking Table -->
       <div class="max-w-4xl mx-auto pt-6">
-        <ThirdPlaceRankingTable {state} {t} />
+        <ThirdPlaceRankingTable calcState={calcState} {t} />
       </div>
     {:else if activeTab === 'knockout'}
       <!-- Knockout Bracket -->
-      <div class="bg-zinc-900/40 border border-zinc-800/80 rounded-xl p-3 md:p-6 shadow-2xl">
+      <div class="bg-white/60 dark:bg-zinc-900/40 border border-slate-200 dark:border-zinc-800/80 rounded-xl p-3 md:p-6 shadow-2xl">
         <div class="border-b border-amber-900/20 pb-3 mb-4 flex items-center justify-between">
           <div>
             <h3 class="text-lg font-bold text-amber-400 tracking-wider">
               {t('knockout_stage')}
             </h3>
-            <p class="text-zinc-500 text-xs mt-0.5">
+            <p class="text-zinc-500 dark:text-zinc-400 text-xs mt-0.5">
               {t('knockout_stage_desc')}
             </p>
           </div>
         </div>
-        <KnockoutBracketTree {state} {t} />
+        <KnockoutBracketTree calcState={calcState} {t} />
       </div>
     {/if}
   </div>

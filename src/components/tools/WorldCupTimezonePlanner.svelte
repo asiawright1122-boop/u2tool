@@ -822,24 +822,24 @@
 </script>
 
 <!-- Dark obsidian gold container -->
-<div class="world-cup-timezone-planner-container dark bg-[#070707] text-neutral-200 border border-neutral-900 rounded-3xl p-6 lg:p-10 shadow-2xl relative font-sans leading-relaxed selection:bg-amber-500/20" dir={isRtl ? 'rtl' : 'ltr'}>
+<div class="world-cup-timezone-planner-container bg-transparent text-neutral-800 dark:text-neutral-200 rounded-3xl p-6 lg:p-10 shadow-2xl relative font-sans leading-relaxed selection:bg-amber-500/20" dir={isRtl ? 'rtl' : 'ltr'}>
   
   <!-- Premium Header Banner -->
-  <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-b border-neutral-900 pb-8 mb-8">
+  <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-b border-neutral-200 dark:border-neutral-900 pb-8 mb-8">
     <div class="space-y-2">
-      <div class="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-xs font-mono text-amber-400">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-xs font-mono text-amber-600 dark:text-amber-400">
         <Sparkles class="w-3.5 h-3.5" />
         2026 World Cup Timezone Compass & Webcal Synchronizer
       </div>
-      <h2 class="text-3xl font-extrabold text-white tracking-tight font-outfit">
+      <h2 class="text-3xl font-extrabold text-neutral-900 dark:text-white tracking-tight font-outfit">
         🏆 {t('name') || 'FIFA 2026 Timezone Planner'}
       </h2>
-      <p class="text-sm text-neutral-400 max-w-3xl">
+      <p class="text-sm text-neutral-500 dark:text-neutral-400 max-w-3xl">
         {t('detailed_description') || 'Convert times across 4 timezones and subscribe dynamically.'}
       </p>
     </div>
     <div class="flex items-center gap-3">
-      <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-950 border border-neutral-900 text-xs font-mono text-neutral-400 shadow-inner">
+      <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-900 text-xs font-mono text-neutral-500 dark:text-neutral-400 shadow-inner">
         <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
         No Server Tracking
       </span>
@@ -852,8 +852,8 @@
     <div class="lg:col-span-5 space-y-6">
       
       <!-- 1. TIMEZONE SLIDING COMPASS -->
-      <div class="p-6 bg-neutral-900/40 border border-neutral-900 rounded-2xl space-y-4">
-        <h3 class="text-sm font-semibold text-white tracking-wide flex items-center gap-2">
+      <div class="p-6 bg-white/70 dark:bg-neutral-900/40 border border-slate-200 dark:border-neutral-900 rounded-2xl space-y-4">
+        <h3 class="text-sm font-semibold text-neutral-900 dark:text-white tracking-wide flex items-center gap-2">
           <Compass class="w-4 h-4 text-[#E5C158]" />
           {currentUi.timezoneCompassTitle}
         </h3>
@@ -862,7 +862,7 @@
           <select
             id="timezone-select"
             bind:value={selectedTimezone}
-            class="w-full px-3.5 py-2.5 bg-neutral-950 border border-neutral-800 text-neutral-200 text-sm rounded-xl focus:outline-none focus:ring-1 focus:ring-[#E5C158]/40"
+            class="w-full px-3.5 py-2.5 bg-white dark:bg-neutral-950 border border-slate-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-200 text-sm rounded-xl focus:outline-none focus:ring-1 focus:ring-[#E5C158]/40"
           >
             {#each TIMEZONES as tz}
               <option value={tz.id}>{tz.name}</option>
@@ -872,22 +872,22 @@
       </div>
 
       <!-- 2. FUNNEL FILTER CHAMBER -->
-      <div class="p-6 bg-neutral-900/40 border border-neutral-900 rounded-2xl space-y-6">
-        <h3 class="text-sm font-semibold text-white tracking-wide border-b border-neutral-900 pb-3 flex items-center gap-2">
+      <div class="p-6 bg-white/70 dark:bg-neutral-900/40 border border-slate-200 dark:border-neutral-900 rounded-2xl space-y-6">
+        <h3 class="text-sm font-semibold text-neutral-900 dark:text-white tracking-wide border-b border-neutral-200 dark:border-neutral-900 pb-3 flex items-center gap-2">
           <Filter class="w-4 h-4 text-[#E5C158]" />
           {currentUi.filterPanelTitle}
         </h3>
 
         <!-- Attractiveness Filter -->
         <div class="space-y-2.5">
-          <span class="text-xs text-neutral-400 block font-medium">{currentUi.strengthFilter}</span>
+          <span class="text-xs text-neutral-500 dark:text-neutral-400 block font-medium">{currentUi.strengthFilter}</span>
           <div class="flex flex-wrap gap-2">
             <button
               onclick={() => {
                 if (selectedStrengths.includes('hot')) selectedStrengths = selectedStrengths.filter(s => s !== 'hot');
                 else selectedStrengths = [...selectedStrengths, 'hot'];
               }}
-              class="px-3 py-1.5 text-xs rounded-lg border transition-all font-medium flex items-center gap-1 {selectedStrengths.includes('hot') ? 'bg-amber-500/10 border-amber-500/40 text-amber-300 btn-filter-active' : 'bg-neutral-950 border-neutral-850 text-neutral-400 hover:text-white btn-filter-inactive'}"
+              class="px-3 py-1.5 text-xs rounded-lg border transition-all font-medium flex items-center gap-1 {selectedStrengths.includes('hot') ? 'bg-amber-500/10 border-amber-500/40 text-amber-600 dark:text-amber-300 btn-filter-active' : 'bg-slate-100 dark:bg-neutral-950 border-slate-200 dark:border-neutral-850 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white btn-filter-inactive'}"
             >
               {currentUi.matchStrengthHot}
             </button>
@@ -896,7 +896,7 @@
                 if (selectedStrengths.includes('medium')) selectedStrengths = selectedStrengths.filter(s => s !== 'medium');
                 else selectedStrengths = [...selectedStrengths, 'medium'];
               }}
-              class="px-3 py-1.5 text-xs rounded-lg border transition-all font-medium flex items-center gap-1 {selectedStrengths.includes('medium') ? 'bg-amber-500/10 border-amber-500/40 text-amber-300 btn-filter-active' : 'bg-neutral-950 border-neutral-850 text-neutral-400 hover:text-white btn-filter-inactive'}"
+              class="px-3 py-1.5 text-xs rounded-lg border transition-all font-medium flex items-center gap-1 {selectedStrengths.includes('medium') ? 'bg-amber-500/10 border-amber-500/40 text-amber-600 dark:text-amber-300 btn-filter-active' : 'bg-slate-100 dark:bg-neutral-950 border-slate-200 dark:border-neutral-850 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white btn-filter-inactive'}"
             >
               {currentUi.matchStrengthMedium}
             </button>
@@ -905,7 +905,7 @@
                 if (selectedStrengths.includes('normal')) selectedStrengths = selectedStrengths.filter(s => s !== 'normal');
                 else selectedStrengths = [...selectedStrengths, 'normal'];
               }}
-              class="px-3 py-1.5 text-xs rounded-lg border transition-all font-medium flex items-center gap-1 {selectedStrengths.includes('normal') ? 'bg-amber-500/10 border-amber-500/40 text-amber-300 btn-filter-active' : 'bg-neutral-950 border-neutral-850 text-neutral-400 hover:text-white btn-filter-inactive'}"
+              class="px-3 py-1.5 text-xs rounded-lg border transition-all font-medium flex items-center gap-1 {selectedStrengths.includes('normal') ? 'bg-amber-500/10 border-amber-500/40 text-amber-600 dark:text-amber-300 btn-filter-active' : 'bg-slate-100 dark:bg-neutral-950 border-slate-200 dark:border-neutral-850 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white btn-filter-inactive'}"
             >
               {currentUi.matchStrengthNormal}
             </button>
@@ -914,14 +914,14 @@
 
         <!-- Stage Filter -->
         <div class="space-y-2.5">
-          <span class="text-xs text-neutral-400 block font-medium">{currentUi.matchStage}</span>
+          <span class="text-xs text-neutral-500 dark:text-neutral-400 block font-medium">{currentUi.matchStage}</span>
           <div class="flex gap-2">
             <button
               onclick={() => {
                 if (selectedStages.includes('group')) selectedStages = selectedStages.filter(s => s !== 'group');
                 else selectedStages = [...selectedStages, 'group'];
               }}
-              class="flex-1 px-3 py-1.5 text-xs rounded-lg border text-center transition-all font-medium {selectedStages.includes('group') ? 'bg-amber-500/10 border-amber-500/40 text-amber-300 btn-filter-active' : 'bg-neutral-950 border-neutral-850 text-neutral-400 hover:text-white btn-filter-inactive'}"
+              class="flex-1 px-3 py-1.5 text-xs rounded-lg border text-center transition-all font-medium {selectedStages.includes('group') ? 'bg-amber-500/10 border-amber-500/40 text-amber-600 dark:text-amber-300 btn-filter-active' : 'bg-slate-100 dark:bg-neutral-950 border-slate-200 dark:border-neutral-850 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white btn-filter-inactive'}"
             >
               ⚽ {currentUi.groupStage}
             </button>
@@ -930,7 +930,7 @@
                 if (selectedStages.includes('knockout')) selectedStages = selectedStages.filter(s => s !== 'knockout');
                 else selectedStages = [...selectedStages, 'knockout'];
               }}
-              class="flex-1 px-3 py-1.5 text-xs rounded-lg border text-center transition-all font-medium {selectedStages.includes('knockout') ? 'bg-amber-500/10 border-amber-500/40 text-amber-300 btn-filter-active' : 'bg-neutral-950 border-neutral-850 text-neutral-400 hover:text-white btn-filter-inactive'}"
+              class="flex-1 px-3 py-1.5 text-xs rounded-lg border text-center transition-all font-medium {selectedStages.includes('knockout') ? 'bg-amber-500/10 border-amber-500/40 text-amber-600 dark:text-amber-300 btn-filter-active' : 'bg-slate-100 dark:bg-neutral-950 border-slate-200 dark:border-neutral-850 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white btn-filter-inactive'}"
             >
               🏆 {currentUi.knockoutStage}
             </button>
@@ -940,7 +940,7 @@
         <!-- Teams Filter -->
         <div class="space-y-3">
           <div class="flex justify-between items-center text-xs">
-            <span class="text-neutral-400 font-medium">{currentUi.selectedTeams} ({selectedTeams.length})</span>
+            <span class="text-neutral-500 dark:text-neutral-400 font-medium">{currentUi.selectedTeams} ({selectedTeams.length})</span>
             <div class="flex items-center gap-2 text-[10px] text-neutral-500">
               <button onclick={() => quickSelectTeams('hosts')} class="btn-link hover:text-amber-400 transition-colors">{currentUi.hostTeamsOnly}</button>
               <span>|</span>
@@ -949,9 +949,9 @@
               <button onclick={() => quickSelectTeams('clear')} class="btn-link hover:text-amber-400 transition-colors">{currentUi.clearAll}</button>
             </div>
           </div>
-          <div class="grid grid-cols-4 gap-1.5 p-3 bg-neutral-950/60 border border-neutral-900 rounded-xl max-h-40 overflow-y-auto font-mono text-[10px]">
+          <div class="grid grid-cols-4 gap-1.5 p-3 bg-white dark:bg-neutral-950/60 border border-slate-200 dark:border-neutral-900 rounded-xl max-h-40 overflow-y-auto font-mono text-[10px]">
             {#each allTeams as team}
-              <label class="flex items-center gap-1.5 p-1 rounded hover:bg-neutral-900 cursor-pointer text-neutral-400 hover:text-white transition-colors">
+              <label class="flex items-center gap-1.5 p-1 rounded hover:bg-slate-100 dark:hover:bg-neutral-900 cursor-pointer text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">
                 <input
                   type="checkbox"
                   value={team}
@@ -961,7 +961,7 @@
                     if (cb.checked) selectedTeams = [...selectedTeams, team];
                     else selectedTeams = selectedTeams.filter(t => t !== team);
                   }}
-                  class="rounded border-neutral-800 text-amber-500 focus:ring-0 focus:ring-offset-0 accent-amber-500 w-3 h-3"
+                  class="rounded border-slate-300 dark:border-neutral-800 text-amber-500 focus:ring-0 focus:ring-offset-0 accent-amber-500 w-3 h-3"
                 />
                 {team}
               </label>
@@ -972,16 +972,16 @@
         <!-- Stadium Filter -->
         <div class="space-y-3">
           <div class="flex justify-between items-center text-xs">
-            <span class="text-neutral-400 font-medium">{currentUi.stadiumFilter} ({selectedStadiums.length})</span>
+            <span class="text-neutral-500 dark:text-neutral-400 font-medium">{currentUi.stadiumFilter} ({selectedStadiums.length})</span>
             <div class="flex items-center gap-2 text-[10px] text-neutral-500">
               <button onclick={() => quickSelectStadiums('all')} class="btn-link hover:text-amber-400 transition-colors">{currentUi.selectAll}</button>
               <span>|</span>
               <button onclick={() => quickSelectStadiums('clear')} class="btn-link hover:text-amber-400 transition-colors">{currentUi.clearAll}</button>
             </div>
           </div>
-          <div class="grid grid-cols-2 gap-1.5 p-3 bg-neutral-950/60 border border-neutral-900 rounded-xl max-h-40 overflow-y-auto text-[10px]">
+          <div class="grid grid-cols-2 gap-1.5 p-3 bg-white dark:bg-neutral-950/60 border border-slate-200 dark:border-neutral-900 rounded-xl max-h-40 overflow-y-auto text-[10px]">
             {#each allStadiums as stad}
-              <label class="flex items-center gap-1.5 p-1 rounded hover:bg-neutral-900 cursor-pointer text-neutral-400 hover:text-white transition-colors">
+              <label class="flex items-center gap-1.5 p-1 rounded hover:bg-slate-100 dark:hover:bg-neutral-900 cursor-pointer text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">
                 <input
                   type="checkbox"
                   value={stad}
@@ -991,7 +991,7 @@
                     if (cb.checked) selectedStadiums = [...selectedStadiums, stad];
                     else selectedStadiums = selectedStadiums.filter(s => s !== stad);
                   }}
-                  class="rounded border-neutral-800 text-amber-500 focus:ring-0 focus:ring-offset-0 accent-amber-500 w-3 h-3"
+                  class="rounded border-slate-300 dark:border-neutral-800 text-amber-500 focus:ring-0 focus:ring-offset-0 accent-amber-500 w-3 h-3"
                 />
                 <span class="truncate" title={STADIUM_NAMES[stad] || stad}>{STADIUM_NAMES[stad] || stad}</span>
               </label>
@@ -1001,22 +1001,22 @@
       </div>
 
       <!-- 3. CALENDAR CONFIGURATION CHAMBER -->
-      <div class="p-6 bg-neutral-900/40 border border-neutral-900 rounded-2xl space-y-6">
-        <h3 class="text-sm font-semibold text-white tracking-wide border-b border-neutral-900 pb-3 flex items-center gap-2">
+      <div class="p-6 bg-white/70 dark:bg-neutral-900/40 border border-slate-200 dark:border-neutral-900 rounded-2xl space-y-6">
+        <h3 class="text-sm font-semibold text-neutral-900 dark:text-white tracking-wide border-b border-neutral-200 dark:border-neutral-900 pb-3 flex items-center gap-2">
           <CalendarClock class="w-4 h-4 text-[#E5C158]" />
           {currentUi.webcalSyncTitle}
         </h3>
 
         <!-- Reminder Offset Selector -->
         <div class="space-y-2 text-xs">
-          <label for="alarm-select" class="text-neutral-400 block font-medium flex items-center gap-1.5">
+          <label for="alarm-select" class="text-neutral-500 dark:text-neutral-400 block font-medium flex items-center gap-1.5">
             <Bell class="w-3.5 h-3.5 text-amber-500" />
             {currentUi.remindBefore}
           </label>
           <select
             id="alarm-select"
             bind:value={alarmMinutes}
-            class="w-full px-3.5 py-2.5 bg-neutral-950 border border-neutral-800 text-neutral-300 rounded-xl focus:outline-none"
+            class="w-full px-3.5 py-2.5 bg-white dark:bg-neutral-950 border border-slate-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-xl focus:outline-none"
           >
             <option value={undefined}>{currentUi.remindNone}</option>
             <option value={15}>{currentUi.remind15m}</option>
@@ -1045,7 +1045,7 @@
           <!-- ICS Download Button -->
           <button
             onclick={handleDownloadIcs}
-            class="btn-download w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-neutral-950 hover:bg-neutral-900 border border-neutral-800 text-neutral-200 font-bold text-sm rounded-xl transition-all"
+            class="btn-download w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-white hover:bg-slate-100 dark:bg-neutral-950 dark:hover:bg-neutral-900 border border-slate-200 dark:border-neutral-800 text-neutral-850 dark:text-neutral-200 font-bold text-sm rounded-xl transition-all"
           >
             <Download class="w-4 h-4" />
             {currentUi.downloadIcs}
@@ -1059,8 +1059,8 @@
     <div class="lg:col-span-7 space-y-6">
       
       <!-- 1. SLEEP SURVIVAL INDEX DASHBOARD -->
-      <div class="p-6 bg-neutral-900/40 border border-neutral-900 rounded-2xl">
-        <h3 class="text-sm font-semibold text-white tracking-wide border-b border-neutral-900 pb-3 flex items-center gap-2 mb-6">
+      <div class="p-6 bg-white/70 dark:bg-neutral-900/40 border border-slate-200 dark:border-neutral-900 rounded-2xl">
+        <h3 class="text-sm font-semibold text-neutral-900 dark:text-white tracking-wide border-b border-slate-200 dark:border-neutral-900 pb-3 flex items-center gap-2 mb-6">
           <Flame class="w-4 h-4 text-red-500 animate-pulse" />
           {currentUi.survivalIndexTitle}
         </h3>
@@ -1074,7 +1074,7 @@
                 cy="50"
                 r="40"
                 fill="transparent"
-                stroke="#171717"
+                class="stroke-slate-100 dark:stroke-neutral-800/80"
                 stroke-width="10"
               />
               <circle
@@ -1091,7 +1091,7 @@
               />
             </svg>
             <div class="absolute inset-0 flex flex-col items-center justify-center">
-              <span class="text-2xl font-black text-white font-mono">{survivalData.ratio}%</span>
+              <span class="text-2xl font-black text-neutral-900 dark:text-white font-mono">{survivalData.ratio}%</span>
               <span class="text-[10px] text-neutral-500 uppercase tracking-widest">{currentUi.sleepDeprivedRate}</span>
             </div>
           </div>
@@ -1099,7 +1099,7 @@
           <!-- Description and Tips -->
           <div class="space-y-3 flex-1 text-center md:text-left">
             <div class="flex flex-col md:flex-row items-center md:items-baseline gap-2">
-              <span class="text-xs text-neutral-400 font-medium">{currentUi.survivalStatus}:</span>
+              <span class="text-xs text-neutral-500 dark:text-neutral-400 font-medium">{currentUi.survivalStatus}:</span>
               <span class="text-lg font-black tracking-wide" style="color: {survivalData.color}">
                 {survivalData.grade}
               </span>
@@ -1108,9 +1108,9 @@
               </span>
             </div>
             
-            <div class="p-3 bg-neutral-950/60 border border-neutral-900 rounded-xl text-xs text-neutral-300">
-              <span class="font-bold block text-white mb-1 flex items-center justify-center md:justify-start gap-1">
-                <AlertTriangle class="w-3.5 h-3.5 text-amber-500" />
+            <div class="p-3 bg-slate-50 dark:bg-neutral-950/60 border border-slate-200 dark:border-neutral-900 rounded-xl text-xs text-neutral-700 dark:text-neutral-300">
+              <span class="font-bold block text-neutral-900 dark:text-white mb-1 flex items-center justify-center md:justify-start gap-1">
+                <AlertTriangle class="w-3.5 h-3.5 text-amber-550" />
                 {currentUi.survivalDesc}
               </span>
               {survivalData.tips}
@@ -1119,24 +1119,24 @@
         </div>
         
         <!-- FUN PERSONALIZED POSTER CONTAINER -->
-        <div class="mt-6 p-4 border border-dashed border-neutral-800 rounded-xl bg-neutral-950/20 text-center relative group overflow-hidden">
+        <div class="mt-6 p-4 border border-dashed border-slate-300 dark:border-neutral-800 rounded-xl bg-slate-50/20 dark:bg-neutral-950/20 text-center relative group overflow-hidden">
           <div class="absolute -inset-x-4 -inset-y-4 bg-gradient-to-r from-amber-500/5 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none duration-500"></div>
           <div class="relative space-y-3">
-            <h4 class="text-xs font-bold text-white flex items-center justify-center gap-1">
+            <h4 class="text-xs font-bold text-neutral-900 dark:text-white flex items-center justify-center gap-1">
               <Heart class="w-3.5 h-3.5 text-red-400" />
               {currentUi.survivalPosterTitle}
             </h4>
-            <div class="inline-grid grid-cols-2 md:grid-cols-4 gap-4 p-3 bg-neutral-950 rounded-lg text-[10px] text-neutral-400 border border-neutral-900">
+            <div class="inline-grid grid-cols-2 md:grid-cols-4 gap-4 p-3 bg-white dark:bg-neutral-950 rounded-lg text-[10px] text-neutral-500 dark:text-neutral-400 border border-slate-200 dark:border-neutral-900 shadow-sm">
               <div>
-                <span class="block font-mono text-xs text-white font-bold">{groupedMatches.length}d</span>
+                <span class="block font-mono text-xs text-neutral-900 dark:text-white font-bold">{groupedMatches.length}d</span>
                 <span>{currentUi.totalMatches}</span>
               </div>
               <div>
-                <span class="block font-mono text-xs text-white font-bold">{selectedTeams.length === 0 ? 'All' : selectedTeams.length}</span>
+                <span class="block font-mono text-xs text-neutral-900 dark:text-white font-bold">{selectedTeams.length === 0 ? 'All' : selectedTeams.length}</span>
                 <span>{currentUi.teamsSelected}</span>
               </div>
               <div>
-                <span class="block font-mono text-xs text-white font-bold">{selectedStadiums.length === 0 ? 'All' : selectedStadiums.length}</span>
+                <span class="block font-mono text-xs text-neutral-900 dark:text-white font-bold">{selectedStadiums.length === 0 ? 'All' : selectedStadiums.length}</span>
                 <span>{currentUi.stadiumsSelected}</span>
               </div>
               <div>
@@ -1155,8 +1155,8 @@
       <!-- 2. STREAMING MATCH CARDS -->
       <div class="space-y-4">
         {#if groupedMatches.length === 0}
-          <div class="p-12 bg-neutral-900/10 border border-neutral-900 border-dashed rounded-2xl text-center text-neutral-500 space-y-3">
-            <AlertTriangle class="w-8 h-8 mx-auto text-neutral-600" />
+          <div class="p-12 bg-slate-50/50 dark:bg-neutral-900/10 border border-slate-300 dark:border-neutral-900 border-dashed rounded-2xl text-center text-neutral-500 space-y-3">
+            <AlertTriangle class="w-8 h-8 mx-auto text-neutral-400 dark:text-neutral-600" />
             <p class="text-sm font-medium">{t('noResults') || 'No matches match your filter criteria.'}</p>
             <button
               onclick={() => {
@@ -1165,7 +1165,7 @@
                 selectedStages = ['group', 'knockout'];
                 selectedStrengths = ['hot', 'medium', 'normal'];
               }}
-              class="btn-reset px-4 py-2 bg-neutral-900 hover:bg-neutral-850 text-xs font-bold rounded-lg border border-neutral-800 text-neutral-300 transition-colors"
+              class="btn-reset px-4 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-neutral-900 dark:hover:bg-neutral-850 text-xs font-bold rounded-lg border border-slate-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-300 transition-colors"
             >
               {currentUi.resetFilters}
             </button>
@@ -1174,7 +1174,7 @@
           {#each groupedMatches as [dateKey, dayMatches]}
             <div class="space-y-2">
               <!-- Sticky Date Header -->
-              <h4 class="text-xs font-black text-amber-500 font-mono tracking-wider sticky top-0 py-2 bg-[#070707]/90 backdrop-blur-md z-10 flex items-center gap-1.5 border-b border-neutral-900/60">
+              <h4 class="text-xs font-black text-amber-600 dark:text-amber-500 font-mono tracking-wider sticky top-0 py-2 bg-white/95 dark:bg-[#070707]/95 backdrop-blur-md z-10 flex items-center gap-1.5 border-b border-slate-200 dark:border-neutral-900/60">
                 <Calendar class="w-3.5 h-3.5" />
                 {dateKey}
               </h4>
@@ -1182,11 +1182,11 @@
               <div class="grid gap-2">
                 {#each dayMatches as match}
                   <!-- Match Obsidian Card -->
-                  <div class="p-4 bg-neutral-900/20 border border-neutral-900/80 rounded-xl hover:border-neutral-800/80 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4 relative group">
+                  <div class="p-4 bg-white/70 dark:bg-neutral-900/20 border border-slate-250/70 dark:border-neutral-900/80 rounded-xl hover:border-slate-350 dark:hover:border-neutral-800/80 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4 relative group shadow-sm">
                     <div class="space-y-2 flex-1">
                       <!-- Stage and Stadium label -->
                       <div class="flex items-center gap-2 text-[10px] text-neutral-500 font-mono">
-                        <span class="px-1.5 py-0.5 bg-neutral-950 border border-neutral-850 rounded text-neutral-400">
+                        <span class="px-1.5 py-0.5 bg-slate-100 dark:bg-neutral-950 border border-slate-200 dark:border-neutral-850 rounded text-neutral-600 dark:text-neutral-400">
                           {match.stage === 'group' ? `${currentUi.groupStage} ${match.group || ''}` : `${currentUi.knockoutStage} R${match.stage === 'r32' ? '32' : match.stage === 'r16' ? '16' : match.stage.toUpperCase()}`}
                         </span>
                         <span>•</span>
@@ -1196,13 +1196,13 @@
                       </div>
 
                       <!-- Duel detail -->
-                      <div class="flex items-center gap-3 text-sm font-bold text-white">
+                      <div class="flex items-center gap-3 text-sm font-bold text-neutral-900 dark:text-white">
                         <span class="w-12 text-left font-mono">{match.homeTeam.startsWith('TBA') ? match.homePlaceholder : match.homeTeam}</span>
                         <span class="text-xs text-neutral-500 font-normal">{currentUi.vs}</span>
                         <span class="w-12 text-left font-mono">{match.awayTeam.startsWith('TBA') ? match.awayPlaceholder : match.awayTeam}</span>
                         
                         <!-- Watch star ELO proxy -->
-                        <span class="text-[10px] text-amber-500/80 flex items-center font-normal ml-2">
+                        <span class="text-[10px] text-amber-550 flex items-center font-normal ml-2">
                           {#if match.strength === 'hot'}
                             🔥 🌟🌟🌟
                           {:else if match.strength === 'medium'}
@@ -1215,11 +1215,11 @@
                     </div>
 
                     <!-- Timings and Sleep rating status -->
-                    <div class="flex items-center justify-between md:justify-end gap-6 border-t md:border-t-0 border-neutral-900/60 pt-3 md:pt-0">
+                    <div class="flex items-center justify-between md:justify-end gap-6 border-t md:border-t-0 border-slate-100 dark:border-neutral-900/60 pt-3 md:pt-0">
                       <!-- Live times -->
                       <div class="text-right flex flex-col justify-center">
-                        <span class="text-sm font-black text-white font-mono flex items-center gap-1.5 justify-end">
-                          <CalendarClock class="w-3.5 h-3.5 text-neutral-500" />
+                        <span class="text-sm font-black text-neutral-950 dark:text-white font-mono flex items-center gap-1.5 justify-end">
+                          <CalendarClock class="w-3.5 h-3.5 text-neutral-400 dark:text-neutral-500" />
                           {match.localTimeStr}
                         </span>
                         <span class="text-[10px] text-neutral-500">{currentUi.localTime}</span>
@@ -1228,7 +1228,7 @@
                       <!-- Liver warning breathing status light -->
                       <div class="flex items-center gap-2">
                         <div class="w-2.5 h-2.5 rounded-full animate-pulse shadow-lg" style="background-color: {match.oil.color}; box-shadow: 0 0 8px {match.oil.color}"></div>
-                        <span class="text-xs font-medium text-neutral-300 min-w-16 text-right" style="color: {match.oil.color}">
+                        <span class="text-xs font-medium text-neutral-700 dark:text-neutral-300 min-w-16 text-right" style="color: {match.oil.color}">
                           {match.oil.label}
                         </span>
                       </div>
@@ -1248,7 +1248,7 @@
 </div>
 
 <style>
-  /* 强制把该容器下的所有 button, select, input, option 强制定制为黑金曜石质感，防止浅色主题覆盖 */
+  /* 基础通用定义 */
   .world-cup-timezone-planner-container :global(button),
   .world-cup-timezone-planner-container :global(select),
   .world-cup-timezone-planner-container :global(input),
@@ -1256,94 +1256,159 @@
     font-family: inherit;
   }
 
-  /* 精确覆盖各种按钮的状态 */
   .world-cup-timezone-planner-container :global(button) {
-    /* 默认清除全局 button 样式对背景和颜色的强行覆盖 */
     box-shadow: none !important;
   }
 
-  /* 针对 select */
+  /* ================= 浅色模式 (Light Theme) ================= */
   .world-cup-timezone-planner-container :global(select) {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+    border-color: #e2e8f0 !important;
+  }
+
+  .world-cup-timezone-planner-container :global(select:focus) {
+    border-color: #d97706 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 1px rgba(217, 119, 6, 0.4) !important;
+  }
+
+  .world-cup-timezone-planner-container :global(option) {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+  }
+
+  .world-cup-timezone-planner-container :global(input[type="checkbox"]) {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    color: #d97706 !important;
+  }
+
+  .world-cup-timezone-planner-container :global(.btn-filter-active) {
+    background-color: rgba(217, 119, 6, 0.08) !important;
+    border-color: rgba(217, 119, 6, 0.4) !important;
+    color: #b45309 !important;
+  }
+
+  .world-cup-timezone-planner-container :global(.btn-filter-inactive) {
+    background-color: #f8fafc !important;
+    border-color: #e2e8f0 !important;
+    color: #64748b !important;
+  }
+
+  .world-cup-timezone-planner-container :global(.btn-filter-inactive:hover) {
+    color: #0f172a !important;
+    background-color: #f1f5f9 !important;
+  }
+
+  .world-cup-timezone-planner-container :global(.btn-link) {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    color: #64748b !important;
+  }
+  .world-cup-timezone-planner-container :global(.btn-link:hover) {
+    color: #d97706 !important;
+  }
+
+  .world-cup-timezone-planner-container :global(.btn-sync) {
+    background-color: #d97706 !important;
+    color: #ffffff !important;
+    border: none !important;
+  }
+  .world-cup-timezone-planner-container :global(.btn-sync:hover) {
+    background-color: #b45309 !important;
+  }
+
+  .world-cup-timezone-planner-container :global(.btn-download) {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+  .world-cup-timezone-planner-container :global(.btn-download:hover) {
+    background-color: #f8fafc !important;
+  }
+
+  .world-cup-timezone-planner-container :global(.btn-reset) {
+    background-color: #f1f5f9 !important;
+    color: #334155 !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+  .world-cup-timezone-planner-container :global(.btn-reset:hover) {
+    background-color: #e2e8f0 !important;
+  }
+
+  /* ================= 深色模式 (Dark Theme - 曜石暗金) ================= */
+  :global(.dark) .world-cup-timezone-planner-container :global(select) {
     background-color: #0a0a0a !important;
     color: #e5e5e5 !important;
     border-color: #262626 !important;
   }
 
-  .world-cup-timezone-planner-container :global(select:focus) {
+  :global(.dark) .world-cup-timezone-planner-container :global(select:focus) {
     border-color: #e5c158 !important;
     outline: none !important;
     box-shadow: 0 0 0 1px rgba(229, 193, 88, 0.4) !important;
   }
 
-  /* 针对 option */
-  .world-cup-timezone-planner-container :global(option) {
+  :global(.dark) .world-cup-timezone-planner-container :global(option) {
     background-color: #0a0a0a !important;
     color: #e5e5e5 !important;
   }
 
-  /* 针对 checkbox */
-  .world-cup-timezone-planner-container :global(input[type="checkbox"]) {
+  :global(.dark) .world-cup-timezone-planner-container :global(input[type="checkbox"]) {
     background-color: #0a0a0a !important;
     border-color: #262626 !important;
     color: #f59e0b !important;
   }
 
-  /* 针对筛选按钮（激活和非激活状态） */
-  .world-cup-timezone-planner-container :global(.btn-filter-active) {
+  :global(.dark) .world-cup-timezone-planner-container :global(.btn-filter-active) {
     background-color: rgba(245, 158, 11, 0.1) !important;
     border-color: rgba(245, 158, 11, 0.4) !important;
     color: #fcd34d !important;
   }
 
-  .world-cup-timezone-planner-container :global(.btn-filter-inactive) {
+  :global(.dark) .world-cup-timezone-planner-container :global(.btn-filter-inactive) {
     background-color: #0a0a0a !important;
     border-color: #262626 !important;
     color: #a3a3a3 !important;
   }
 
-  .world-cup-timezone-planner-container :global(.btn-filter-inactive:hover) {
+  :global(.dark) .world-cup-timezone-planner-container :global(.btn-filter-inactive:hover) {
     color: #ffffff !important;
     background-color: #171717 !important;
   }
 
-  /* 快速选择文本链接按钮 */
-  .world-cup-timezone-planner-container :global(.btn-link) {
-    background: none !important;
-    border: none !important;
-    padding: 0 !important;
+  :global(.dark) .world-cup-timezone-planner-container :global(.btn-link) {
     color: #737373 !important;
   }
-  .world-cup-timezone-planner-container :global(.btn-link:hover) {
+  :global(.dark) .world-cup-timezone-planner-container :global(.btn-link:hover) {
     color: #fbbf24 !important;
   }
 
-  /* 针对主操作按钮 (Webcal Sync) */
-  .world-cup-timezone-planner-container :global(.btn-sync) {
+  :global(.dark) .world-cup-timezone-planner-container :global(.btn-sync) {
     background-color: #e5c158 !important;
     color: #0a0a0a !important;
-    border: none !important;
   }
-  .world-cup-timezone-planner-container :global(.btn-sync:hover) {
+  :global(.dark) .world-cup-timezone-planner-container :global(.btn-sync:hover) {
     background-color: #c59b27 !important;
   }
 
-  /* 针对下载按钮 */
-  .world-cup-timezone-planner-container :global(.btn-download) {
+  :global(.dark) .world-cup-timezone-planner-container :global(.btn-download) {
     background-color: #0a0a0a !important;
     color: #e5e5e5 !important;
     border: 1px solid #262626 !important;
   }
-  .world-cup-timezone-planner-container :global(.btn-download:hover) {
+  :global(.dark) .world-cup-timezone-planner-container :global(.btn-download:hover) {
     background-color: #171717 !important;
   }
 
-  /* 针对重置过滤器按钮 */
-  .world-cup-timezone-planner-container :global(.btn-reset) {
+  :global(.dark) .world-cup-timezone-planner-container :global(.btn-reset) {
     background-color: #171717 !important;
     color: #d4d4d4 !important;
     border: 1px solid #262626 !important;
   }
-  .world-cup-timezone-planner-container :global(.btn-reset:hover) {
+  :global(.dark) .world-cup-timezone-planner-container :global(.btn-reset:hover) {
     background-color: #262626 !important;
   }
 </style>

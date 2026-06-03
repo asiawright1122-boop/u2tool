@@ -24,19 +24,23 @@
   // here so that updating them in the importer callback does not re-trigger this effect.
   $effect(() => {
     const currentSlug = slug;
+    console.log('[ToolWrapper] Effect triggered for slug:', currentSlug);
     loadedComponent = null;
     loading = true;
     error = null;
 
     const importer = TOOL_IMPORT_MAP[currentSlug];
     if (!importer) {
+      console.log('[ToolWrapper] Importer not found for slug:', currentSlug);
       error = `Tool not found: ${currentSlug}`;
       loading = false;
       return;
     }
 
+    console.log('[ToolWrapper] Starting dynamic import for:', currentSlug);
     importer()
       .then((mod) => {
+        console.log('[ToolWrapper] Dynamic import resolved successfully!');
         loadedComponent = mod.default as ToolComponent;
         loading = false;
       })

@@ -515,34 +515,34 @@
   });
 </script>
 
-<div class="world-cup-visa-assistant-container w-full max-w-5xl mx-auto p-4 md:p-6 bg-[#0a0a0a] text-[#e5e5e5] rounded-2xl border border-neutral-800/80 shadow-2xl relative overflow-hidden font-sans">
+<div class="world-cup-visa-assistant-container w-full max-w-5xl mx-auto p-4 md:p-6 bg-transparent text-neutral-800 dark:text-neutral-200 rounded-2xl relative overflow-hidden font-sans">
   <!-- Glowing Ambient Header Line -->
   <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600"></div>
 
   <!-- Header -->
-  <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-neutral-800/60 pb-6 mb-6">
+  <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-slate-200 dark:border-neutral-800/60 pb-6 mb-6">
     <div>
       <div class="flex items-center gap-2 mb-1">
-        <span class="px-2 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-outfit">
+        <span class="px-2 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded bg-amber-550/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 font-outfit">
           FIFA World Cup 2026
         </span>
-        <span class="px-2 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded bg-neutral-800 text-neutral-400">
+        <span class="px-2 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded bg-slate-100 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-400">
           BORDER RUNES
         </span>
       </div>
-      <h1 class="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-200 font-outfit uppercase tracking-tight">
+      <h1 class="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 dark:from-amber-200 dark:via-amber-400 dark:to-amber-200 font-outfit uppercase tracking-tight">
         {ui.name || 'Border & Visa Assistant'}
       </h1>
-      <p class="text-xs text-neutral-400 mt-1 max-w-xl">
+      <p class="text-xs text-neutral-500 dark:text-neutral-400 mt-1 max-w-xl">
         {ui.description || 'Smart border compliance evaluator for tri-country World Cup journeys.'}
       </p>
     </div>
     <div class="flex items-center gap-3">
       <div class="text-right hidden md:block">
-        <div class="text-[10px] text-neutral-500 uppercase tracking-widest">Border Engine</div>
-        <div class="text-xs text-amber-400 font-mono font-bold">v1.2.6 (Live Evals)</div>
+        <div class="text-[10px] text-neutral-450 dark:text-neutral-500 uppercase tracking-widest">Border Engine</div>
+        <div class="text-xs text-amber-650 dark:text-amber-400 font-mono font-bold">v1.2.6 (Live Evals)</div>
       </div>
-      <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center border border-amber-500/20 text-amber-400">
+      <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center border border-amber-500/20 text-amber-600 dark:text-amber-400">
         <ShieldAlert size={20} />
       </div>
     </div>
@@ -553,19 +553,19 @@
     <div class="lg:col-span-5 space-y-6">
       
       <!-- Card 1: Fan Profile -->
-      <div class="p-5 bg-neutral-900/40 rounded-xl border border-neutral-800/80 backdrop-blur-md relative">
-        <h3 class="text-sm font-bold text-amber-400 mb-4 flex items-center gap-2 border-b border-neutral-800/40 pb-2 uppercase tracking-wider font-outfit">
+      <div class="p-5 bg-white/70 dark:bg-neutral-900/40 rounded-xl border border-slate-200 dark:border-neutral-800/80 backdrop-blur-md relative">
+        <h3 class="text-sm font-bold text-amber-400 mb-4 flex items-center gap-2 border-b border-slate-200 dark:border-neutral-800/40 pb-2 uppercase tracking-wider font-outfit">
           <Plane size={15} />
           {ui.fanProfileTitle}
         </h3>
         
         <!-- Passport Dropdown -->
         <div class="space-y-2 mb-4">
-          <label for="passport-select" class="text-xs text-neutral-400 font-semibold block">{ui.selectPassport}</label>
+          <label for="passport-select" class="text-xs text-neutral-500 dark:text-neutral-400 font-semibold block">{ui.selectPassport}</label>
           <div class="relative">
             <select
               id="passport-select"
-              class="w-full bg-[#121212] border border-neutral-800 text-[#e5e5e5] px-3 py-2 rounded-lg text-sm focus:border-amber-400 focus:outline-none transition-all"
+              class="w-full bg-white dark:bg-[#121212] border border-slate-200 dark:border-neutral-800 text-neutral-800 dark:text-[#e5e5e5] px-3 py-2 rounded-lg text-sm focus:border-amber-400 focus:outline-none transition-all"
               bind:value={passportCountry}
             >
               {#each Object.keys(COUNTRIES) as code}
@@ -579,15 +579,15 @@
 
         <!-- Held Visas Checkboxes -->
         <div class="space-y-2">
-          <span class="text-xs text-neutral-400 font-semibold block">{ui.heldVisas}</span>
+          <span class="text-xs text-neutral-500 dark:text-neutral-400 font-semibold block">{ui.heldVisas}</span>
           <div class="space-y-2 max-h-56 overflow-y-auto pr-1 scrollbar-thin">
             {#each Object.keys(VISA_TYPES) as visaId}
               <button
                 type="button"
                 onclick={() => toggleVisa(visaId)}
-                class="w-full flex items-center gap-3 p-2 rounded-lg text-left text-xs transition-all border {heldVisas.includes(visaId) ? 'bg-amber-500/10 border-amber-500/30 text-amber-300' : 'bg-[#121212]/30 border-neutral-800 text-neutral-400 hover:border-neutral-700'}"
+                class="w-full flex items-center gap-3 p-2 rounded-lg text-left text-xs transition-all border {heldVisas.includes(visaId) ? 'bg-amber-500/10 border-amber-500/30 text-amber-300' : 'bg-slate-100/50 dark:bg-[#121212]/30 border-slate-200 dark:border-neutral-800 text-neutral-500 dark:text-neutral-400 hover:border-slate-300 dark:hover:border-neutral-700'}"
               >
-                <div class="flex-shrink-0 text-amber-400">
+                <div class="flex-shrink-0 text-amber-450 dark:text-amber-400">
                   {#if heldVisas.includes(visaId)}
                     <CheckSquare size={14} />
                   {:else}
@@ -602,8 +602,8 @@
       </div>
 
       <!-- Card 2: Itinerary Builder -->
-      <div class="p-5 bg-neutral-900/40 rounded-xl border border-neutral-800/80 backdrop-blur-md">
-        <h3 class="text-sm font-bold text-amber-400 mb-4 flex items-center gap-2 border-b border-neutral-800/40 pb-2 uppercase tracking-wider font-outfit">
+      <div class="p-5 bg-white/70 dark:bg-neutral-900/40 rounded-xl border border-slate-200 dark:border-neutral-800/80 backdrop-blur-md">
+        <h3 class="text-sm font-bold text-amber-400 mb-4 flex items-center gap-2 border-b border-slate-200 dark:border-neutral-800/40 pb-2 uppercase tracking-wider font-outfit">
           <Luggage size={15} />
           {ui.itineraryTitle}
         </h3>
@@ -615,14 +615,14 @@
             <button
               type="button"
               onclick={() => applyShortcut(['YVR', 'SEA', 'MEX'])}
-              class="w-full text-left text-[11px] px-2.5 py-1.5 rounded bg-neutral-800/40 hover:bg-neutral-800 border border-neutral-800 hover:border-neutral-700 transition-all text-neutral-300 hover:text-[#e5e5e5]"
+              class="w-full text-left text-[11px] px-2.5 py-1.5 rounded bg-slate-100 hover:bg-slate-200 dark:bg-neutral-800/40 dark:hover:bg-neutral-800 border border-slate-200 dark:border-neutral-800 hover:border-slate-300 dark:hover:border-neutral-700 transition-all text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-[#e5e5e5]"
             >
               {ui.shortcutVanSeaMex}
             </button>
             <button
               type="button"
               onclick={() => applyShortcut(['LAX', 'MTY', 'DFW'])}
-              class="w-full text-left text-[11px] px-2.5 py-1.5 rounded bg-neutral-800/40 hover:bg-neutral-800 border border-neutral-800 hover:border-neutral-700 transition-all text-neutral-300 hover:text-[#e5e5e5]"
+              class="w-full text-left text-[11px] px-2.5 py-1.5 rounded bg-slate-100 hover:bg-slate-200 dark:bg-neutral-800/40 dark:hover:bg-neutral-800 border border-slate-200 dark:border-neutral-800 hover:border-slate-300 dark:hover:border-neutral-700 transition-all text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-[#e5e5e5]"
             >
               {ui.shortcutLaMex}
             </button>
@@ -634,7 +634,7 @@
           <div class="flex-grow">
             <select
               aria-label={ui.selectCityPlaceholder}
-              class="w-full bg-[#121212] border border-neutral-800 text-[#e5e5e5] px-3 py-2 rounded-lg text-sm focus:border-amber-400 focus:outline-none transition-all"
+              class="w-full bg-white dark:bg-[#121212] border border-slate-200 dark:border-neutral-800 text-neutral-800 dark:text-[#e5e5e5] px-3 py-2 rounded-lg text-sm focus:border-amber-400 focus:outline-none transition-all"
               bind:value={selectedCityToAdd}
             >
               <option value="" disabled selected>{ui.selectCityPlaceholder}</option>
@@ -658,20 +658,20 @@
         <!-- Route Nodes List -->
         <div class="space-y-2 max-h-64 overflow-y-auto pr-1 scrollbar-thin">
           {#if route.length === 0}
-            <div class="p-6 text-center border border-dashed border-neutral-800 rounded-lg text-xs text-neutral-500">
+            <div class="p-6 text-center border border-dashed border-slate-200 dark:border-neutral-800 rounded-lg text-xs text-neutral-500">
               {ui.noCities}
             </div>
           {:else}
             {#each route as cityId, idx}
-              <div class="flex items-center justify-between p-2.5 bg-[#121212]/60 rounded-lg border border-neutral-800 text-xs">
+              <div class="flex items-center justify-between p-2.5 bg-slate-55 dark:bg-[#121212]/60 rounded-lg border border-slate-200 dark:border-neutral-800 text-xs">
                 <div class="flex items-center gap-2 min-w-0">
-                  <span class="w-5 h-5 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center font-bold text-[10px] text-neutral-400">
+                  <span class="w-5 h-5 rounded-full bg-slate-100 dark:bg-neutral-800 border border-slate-200 dark:border-neutral-700 flex items-center justify-center font-bold text-[10px] text-neutral-500 dark:text-neutral-400">
                     {idx + 1}
                   </span>
                   <span class="text-base flex-shrink-0">{HOST_CITIES[cityId].flag}</span>
                   <div class="truncate">
-                    <span class="font-bold text-[#e5e5e5] font-mono">{cityId}</span>
-                    <span class="text-neutral-400 ml-1 text-[11px]">{HOST_CITIES[cityId].name}</span>
+                    <span class="font-bold text-neutral-850 dark:text-[#e5e5e5] font-mono">{cityId}</span>
+                    <span class="text-neutral-500 dark:text-neutral-400 ml-1 text-[11px]">{HOST_CITIES[cityId].name}</span>
                   </div>
                 </div>
                 
@@ -680,7 +680,7 @@
                     type="button"
                     onclick={() => moveCityInRoute(idx, 'up')}
                     disabled={idx === 0}
-                    class="p-1 hover:bg-neutral-800 rounded text-neutral-400 hover:text-[#e5e5e5] disabled:opacity-30 disabled:cursor-not-allowed"
+                    class="p-1 hover:bg-slate-100 dark:hover:bg-neutral-800 rounded text-neutral-400 hover:text-[#e5e5e5] disabled:opacity-30 disabled:cursor-not-allowed"
                   >
                     <ArrowUp size={12} />
                   </button>
@@ -688,7 +688,7 @@
                     type="button"
                     onclick={() => moveCityInRoute(idx, 'down')}
                     disabled={idx === route.length - 1}
-                    class="p-1 hover:bg-neutral-800 rounded text-neutral-400 hover:text-[#e5e5e5] disabled:opacity-30 disabled:cursor-not-allowed"
+                    class="p-1 hover:bg-slate-100 dark:hover:bg-neutral-800 rounded text-neutral-400 hover:text-[#e5e5e5] disabled:opacity-30 disabled:cursor-not-allowed"
                   >
                     <ArrowDown size={12} />
                   </button>
@@ -729,13 +729,13 @@
           <div class="absolute top-0 right-0 p-3 text-amber-500/10">
             <AlertTriangle size={80} />
           </div>
-          <h4 class="text-xs uppercase tracking-wider font-extrabold text-amber-400 mb-3 flex items-center gap-1.5 font-outfit">
+          <h4 class="text-xs uppercase tracking-wider font-extrabold text-amber-500 dark:text-amber-400 mb-3 flex items-center gap-1.5 font-outfit">
             <AlertTriangle size={14} />
             {ui.overallWarnings}
           </h4>
           <ul class="space-y-2">
             {#each visaResult.overallWarnings as warning}
-              <li class="text-xs text-amber-200/90 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-1.5 before:w-1.5 before:h-1.5 before:bg-amber-400 before:rounded-full leading-relaxed">
+              <li class="text-xs text-amber-700 dark:text-amber-200/90 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-1.5 before:w-1.5 before:h-1.5 before:bg-amber-500 dark:before:bg-amber-400 before:rounded-full leading-relaxed">
                 {warning}
               </li>
             {/each}
@@ -744,24 +744,24 @@
       {/if}
 
       <!-- Card 3: Transit Evaluation Reports -->
-      <div class="p-5 bg-neutral-900/40 rounded-xl border border-neutral-800/80 backdrop-blur-md">
-        <h3 class="text-sm font-bold text-amber-400 mb-4 flex items-center gap-2 border-b border-neutral-800/40 pb-2 uppercase tracking-wider font-outfit">
+      <div class="p-5 bg-white/70 dark:bg-neutral-900/40 rounded-xl border border-slate-200 dark:border-neutral-800/80 backdrop-blur-md">
+        <h3 class="text-sm font-bold text-amber-400 mb-4 flex items-center gap-2 border-b border-slate-200 dark:border-neutral-800/40 pb-2 uppercase tracking-wider font-outfit">
           <FileText size={15} />
           {ui.transitReportsTitle}
         </h3>
 
         {#if visaResult.legs.length === 0}
-          <div class="p-8 text-center text-xs text-neutral-500 leading-relaxed border border-dashed border-neutral-800 rounded-lg">
+          <div class="p-8 text-center text-xs text-neutral-500 leading-relaxed border border-dashed border-slate-200 dark:border-neutral-800 rounded-lg">
             {ui.noTransitLegs}
           </div>
         {:else}
           <div class="space-y-4">
             {#each visaResult.legs as leg, idx}
-              <div class="p-4 bg-[#121212]/50 border rounded-xl flex flex-col gap-2 relative transition-all hover:bg-[#121212]/80 {leg.status === 'required' ? 'border-red-500/20 hover:border-red-500/40' : leg.status === 'warning' ? 'border-amber-500/20 hover:border-amber-500/40' : 'border-emerald-500/10 hover:border-emerald-500/30'}">
+              <div class="p-4 bg-slate-50/50 dark:bg-[#121212]/50 border rounded-xl flex flex-col gap-2 relative transition-all hover:bg-slate-100/50 dark:hover:bg-[#121212]/80 {leg.status === 'required' ? 'border-red-500/20 hover:border-red-500/40' : leg.status === 'warning' ? 'border-amber-500/20 hover:border-amber-500/40' : 'border-emerald-500/10 hover:border-emerald-500/30'}">
                 
                 <!-- Status Badge -->
                 <div class="absolute top-4 right-4 flex items-center gap-1.5">
-                  <span class="px-2 py-0.5 text-[9px] uppercase font-bold tracking-wider rounded font-mono border {leg.status === 'required' ? 'bg-red-500/10 text-red-400 border-red-500/20' : leg.status === 'warning' ? 'bg-amber-500/10 text-amber-400 border-amber-500/20' : 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'}">
+                  <span class="px-2 py-0.5 text-[9px] uppercase font-bold tracking-wider rounded font-mono border {leg.status === 'required' ? 'bg-red-500/10 text-red-500 dark:text-red-400 border-red-500/20' : leg.status === 'warning' ? 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20' : 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20'}">
                     {#if leg.status === 'required'}
                       {ui.legStatusRequired}
                     {:else}
@@ -771,17 +771,17 @@
                 </div>
 
                 <!-- Leg Routing Info -->
-                <div class="flex items-center gap-2 text-xs font-semibold text-neutral-300">
-                  <span class="px-1.5 py-0.5 rounded bg-neutral-800 font-mono tracking-wider font-bold text-[10px] text-neutral-400">LEG {idx + 1}</span>
+                <div class="flex items-center gap-2 text-xs font-semibold text-neutral-700 dark:text-neutral-300">
+                  <span class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-neutral-800 font-mono tracking-wider font-bold text-[10px] text-neutral-500 dark:text-neutral-400">LEG {idx + 1}</span>
                   <div class="flex items-center gap-1.5 min-w-0">
                     <span class="truncate font-mono">{leg.from === 'ORIGIN' ? 'Home' : leg.from}</span>
-                    <ChevronRight size={12} class="text-neutral-600 flex-shrink-0" />
-                    <span class="truncate font-mono text-[#e5e5e5]">{leg.to}</span>
+                    <ChevronRight size={12} class="text-neutral-400 dark:text-neutral-600 flex-shrink-0" />
+                    <span class="truncate font-mono text-neutral-850 dark:text-[#e5e5e5]">{leg.to}</span>
                   </div>
                 </div>
 
                 <!-- Requirement Title -->
-                <div class="text-xs font-bold font-outfit mt-1 flex items-center gap-1 {leg.status === 'required' ? 'text-red-400' : leg.status === 'warning' ? 'text-amber-400' : 'text-emerald-400'}">
+                <div class="text-xs font-bold font-outfit mt-1 flex items-center gap-1 {leg.status === 'required' ? 'text-red-650 dark:text-red-400' : leg.status === 'warning' ? 'text-amber-600 dark:text-amber-400' : 'text-emerald-600 dark:text-emerald-400'}">
                   {#if leg.status === 'required'}
                     🔴
                   {:else}
@@ -791,7 +791,7 @@
                 </div>
 
                 <!-- Detailed Explanation -->
-                <p class="text-[11px] text-neutral-400 leading-relaxed max-w-[90%] mt-0.5">
+                <p class="text-[11px] text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-[90%] mt-0.5">
                   {leg.description}
                 </p>
               </div>
@@ -801,19 +801,19 @@
       </div>
 
       <!-- Card 4: Packing Customs Checklist -->
-      <div class="p-5 bg-neutral-900/40 rounded-xl border border-neutral-800/80 backdrop-blur-md">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 border-b border-neutral-800/40 pb-2">
+      <div class="p-5 bg-white/70 dark:bg-neutral-900/40 rounded-xl border border-slate-200 dark:border-neutral-800/80 backdrop-blur-md">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 border-b border-slate-200 dark:border-neutral-800/40 pb-2">
           <h3 class="text-sm font-bold text-amber-400 flex items-center gap-2 uppercase tracking-wider font-outfit">
             <CheckSquare size={15} />
             {ui.checklistTitle}
           </h3>
-          <span class="text-[11px] text-neutral-400 font-bold font-mono">
+          <span class="text-[11px] text-neutral-500 dark:text-neutral-400 font-bold font-mono">
             {ui.checklistProgress}: {checkedCount} / {totalItems}
           </span>
         </div>
 
         <!-- Progress Bar -->
-        <div class="w-full bg-neutral-800/50 rounded-full h-1.5 mb-4 overflow-hidden border border-neutral-800">
+        <div class="w-full bg-slate-100 dark:bg-neutral-800/50 rounded-full h-1.5 mb-4 overflow-hidden border border-slate-200 dark:border-neutral-800">
           <div
             class="bg-gradient-to-r from-amber-500 to-yellow-400 h-1.5 rounded-full transition-all duration-300"
             style="width: {totalItems > 0 ? (checkedCount / totalItems) * 100 : 0}%"
@@ -825,9 +825,9 @@
             <button
               type="button"
               onclick={() => toggleCheckItem(item)}
-              class="flex items-start gap-3 p-3 rounded-xl border text-left text-xs transition-all hover:bg-neutral-800/30 {checkedItems[item] ? 'bg-amber-500/5 border-amber-500/20 text-amber-200/90' : 'bg-[#121212]/30 border-neutral-800 text-neutral-400'}"
+              class="flex items-start gap-3 p-3 rounded-xl border text-left text-xs transition-all hover:bg-slate-100 dark:hover:bg-neutral-800/30 {checkedItems[item] ? 'bg-amber-50/50 dark:bg-amber-500/5 border-amber-500/25 text-amber-800 dark:text-amber-200/90' : 'bg-slate-100/50 dark:bg-[#121212]/30 border-slate-200 dark:border-neutral-800 text-neutral-500 dark:text-neutral-400'}"
             >
-              <div class="flex-shrink-0 mt-0.5 text-amber-400">
+              <div class="flex-shrink-0 mt-0.5 text-amber-550 dark:text-amber-400">
                 {#if checkedItems[item]}
                   <CheckSquare size={15} />
                 {:else}
@@ -837,7 +837,7 @@
               <div class="flex flex-col min-w-0">
                 <span class="leading-snug break-words">{item}</span>
                 {#if checkedItems[item]}
-                  <span class="text-[9px] text-amber-500 font-semibold uppercase tracking-wider font-mono mt-0.5">✓ {ui.preparedText}</span>
+                  <span class="text-[9px] text-amber-600 dark:text-amber-500 font-semibold uppercase tracking-wider font-mono mt-0.5">✓ {ui.preparedText}</span>
                 {/if}
               </div>
             </button>
@@ -849,11 +849,11 @@
   </div>
 
   <!-- Disclaimer Footer -->
-  <div class="mt-6 border-t border-neutral-800/60 pt-4 flex flex-col md:flex-row justify-between items-center gap-3 text-neutral-500 text-[10px]">
+  <div class="mt-6 border-t border-slate-200 dark:border-neutral-800/60 pt-4 flex flex-col md:flex-row justify-between items-center gap-3 text-neutral-500 text-[10px]">
     <div class="flex items-center gap-1.5">
-      <span class="text-amber-500 font-bold uppercase tracking-wider">Disclaimer</span>
+      <span class="text-amber-600 dark:text-amber-500 font-bold uppercase tracking-wider">Disclaimer</span>
       <span>|</span>
-      <span class="text-neutral-400 max-w-lg leading-snug">
+      <span class="text-neutral-600 dark:text-neutral-400 max-w-lg leading-snug">
         This toolkit evaluates mock and consolidated immigration policies of 2026 hosts. Official policies may change dynamically. Confirm visa statuses directly via official consulate interfaces.
       </span>
     </div>
@@ -876,19 +876,38 @@
     box-shadow: none !important;
   }
 
+  /* ================= 浅色模式 (Light Theme) ================= */
   .world-cup-visa-assistant-container :global(select) {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+    border-color: #e2e8f0 !important;
+  }
+
+  .world-cup-visa-assistant-container :global(select:focus) {
+    border-color: #d97706 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 1px rgba(217, 119, 6, 0.4) !important;
+  }
+
+  .world-cup-visa-assistant-container :global(option) {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+  }
+
+  /* ================= 深色模式 (Dark Theme - 曜石暗金) ================= */
+  :global(.dark) .world-cup-visa-assistant-container :global(select) {
     background-color: #0d0d0d !important;
     color: #e5e5e5 !important;
     border-color: #262626 !important;
   }
 
-  .world-cup-visa-assistant-container :global(select:focus) {
+  :global(.dark) .world-cup-visa-assistant-container :global(select:focus) {
     border-color: #e5c158 !important;
     outline: none !important;
     box-shadow: 0 0 0 1px rgba(229, 193, 88, 0.4) !important;
   }
 
-  .world-cup-visa-assistant-container :global(option) {
+  :global(.dark) .world-cup-visa-assistant-container :global(option) {
     background-color: #0d0d0d !important;
     color: #e5e5e5 !important;
   }
@@ -902,10 +921,16 @@
     background: transparent;
   }
   .scrollbar-thin::-webkit-scrollbar-thumb {
-    background: #262626;
+    background: #e2e8f0;
     border-radius: 2px;
   }
+  :global(.dark) .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #262626;
+  }
   .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #d97706;
+  }
+  :global(.dark) .scrollbar-thin::-webkit-scrollbar-thumb:hover {
     background: #e5c158;
   }
 </style>
