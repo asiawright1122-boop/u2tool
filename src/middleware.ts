@@ -191,7 +191,6 @@ function resolveCanonicalRedirect(request: Request): string | null {
         if (target) {
           return target;
         }
-        return !url.pathname.endsWith('/') ? `/${first}/blog/${third}/` : null;
       }
       return resolveLegacyBlogFallback(first);
     }
@@ -274,6 +273,19 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
   }
 
   const response = await next();
+
+  const url = new URL(context.request.url);
+  if (response.status === 404 && isFileLikePath(url.pathname)) {
+    const textResponse = new Response(context.request.method === 'HEAD' ? null : 'Not Found', {
+      status: 404,
+      headers: {
+        'content-type': 'text/plain; charset=utf-8',
+        'x-robots-tag': 'noindex, nofollow',
+      },
+    });
+    return withSecurityHeaders(textResponse);
+  }
+
   const contentType = response.headers.get('content-type') || '';
 
   if (contentType.includes('text/html')) {

@@ -14,6 +14,23 @@ const url = new URL(Astro.request.url);
 const rawPath = url.pathname || '/';
 const normalizedPath =
   rawPath !== '/' && rawPath.endsWith('/') ? rawPath.slice(0, -1) : rawPath;
+
+function isFileLikePath(pathname: string): boolean {
+  const segments = pathname.split('/').filter(Boolean);
+  const lastSegment = segments.at(-1) || '';
+  return /\.[a-z0-9]+$/i.test(lastSegment);
+}
+
+if (isFileLikePath(normalizedPath)) {
+  return new Response('Not Found', {
+    status: 404,
+    headers: {
+      'content-type': 'text/plain; charset=utf-8',
+      'x-robots-tag': 'noindex, nofollow',
+    },
+  });
+}
+
 const segments = normalizedPath.split('/').filter(Boolean);
 
 if (segments.length === 0) {
@@ -42,6 +59,7 @@ if (first === 'blog' && second) {
   if (target) {
     return Astro.redirect(target, 301);
   }
+  return Astro.redirect('/en/tools/', 301);
 }
 
 if (first === 'compare' && second && third) {
@@ -49,6 +67,7 @@ if (first === 'compare' && second && third) {
   if (target) {
     return Astro.redirect(target, 301);
   }
+  return Astro.redirect('/en/compare/', 301);
 }
 
 if (first === 'tools' && second === 'category') {
@@ -93,12 +112,14 @@ if (isValidLocale(first) && second === 'blog' && third) {
   if (target) {
     return Astro.redirect(target, 301);
   }
+  return Astro.redirect(`/${first}/tools/`, 301);
 }
 if (isValidLocale(first) && second === 'compare' && third && fourth) {
   const target = resolveLegacyComparePairRedirect(first, third, fourth);
   if (target) {
     return Astro.redirect(target, 301);
   }
+  return Astro.redirect(`/${first}/compare/`, 301);
 }
 if (isValidLocale(first) && second === 'tools' && third === 'ranking') {
   return Astro.redirect(`/${first}/tools/`, 301);
