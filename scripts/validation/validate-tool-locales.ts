@@ -412,8 +412,25 @@ async function validatePage(page: Page, args: ValidationArgs, slug: string, loca
   const expected = getExpectedTexts(locale, slug);
   const url = `${args.baseUrl.replace(/\/$/, '')}/${locale}/tools/${slug}/`;
 
+  // Attach browser console listener to catch errors
+  const consoleErrors: string[] = [];
+  const consoleListener = (msg: any) => {
+    if (msg.type() === 'error') {
+      consoleErrors.push(msg.text());
+    }
+  };
+  const pageerrorListener = (err: Error) => {
+    consoleErrors.push(`[Page Error]: ${err.message}\n${err.stack}`);
+  };
+  page.on('console', consoleListener);
+  page.on('pageerror', pageerrorListener);
+
   try {
     await page.goto(url, { waitUntil: 'load', timeout: args.timeoutMs });
+    // Force a scroll to trigger client:visible Intersection Observer
+    await page.evaluate(() => {
+      window.scrollTo(0, 1000);
+    });
     await waitForLocalizedTool(page, expected.bodyTexts, args.timeoutMs);
 
     const raw = await page.evaluate(() => ({
@@ -432,6 +449,7 @@ async function validatePage(page: Page, args: ValidationArgs, slug: string, loca
       missingBodyTexts: expected.bodyTexts.filter((text) => !body.includes(foldForComparison(text))),
       toolNotFound: body.includes('tool not found') || body.includes('failed to load tool'),
       sample: raw.sample,
+      consoleErrors,
     };
 
     if (!actual.h1Ok || !actual.titleOk || actual.loadingVisible || actual.missingBodyTexts.length > 0 || actual.toolNotFound) {
@@ -460,8 +478,12 @@ async function validatePage(page: Page, args: ValidationArgs, slug: string, loca
           missingBodyTexts: expected.bodyTexts.filter((text) => !body.includes(foldForComparison(text))),
           loadingVisible: body.includes('initialising engine') || body.includes('initializing engine'),
           sample: raw.sample,
+          consoleErrors,
         };
-      }).catch(() => null);
+      }).catch(() => ({
+        consoleErrors,
+        errorMsg: 'Failed to extract DOM diagnostic'
+      }));
 
     return {
       slug,
@@ -470,6 +492,8 @@ async function validatePage(page: Page, args: ValidationArgs, slug: string, loca
       reason: error instanceof Error ? error.message : String(error),
       details: diagnostic,
     };
+  } finally {
+    page.off('console', consoleListener);
   }
 }
 

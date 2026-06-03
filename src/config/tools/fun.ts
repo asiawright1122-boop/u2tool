@@ -11,6 +11,7 @@ export const FUN_TOOLS: Tool[] = [
   { slug: 'world-cup-simulator', category: 'fun', icon: 'gamepad-2', component: 'WorldCupSimulator' },
   { slug: 'world-cup-budget-calculator', category: 'fun', icon: 'gamepad-2', component: 'WorldCupBudgetCalculator' },
   { slug: 'world-cup-timezone-planner', category: 'fun', icon: 'calendar', component: 'WorldCupTimezonePlanner' },
-  { slug: 'world-cup-visa-assistant', category: 'fun', icon: 'shield-alert', component: 'WorldCupVisaAssistant' }
+  { slug: 'world-cup-visa-assistant', category: 'fun', icon: 'shield-alert', component: 'WorldCupVisaAssistant' },
+  { slug: 'world-cup-group-calculator', category: 'fun', icon: 'trophy', component: 'WorldCupGroupCalculator' }
 ];
 
