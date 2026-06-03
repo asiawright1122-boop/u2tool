@@ -1,0 +1,32 @@
+{
+  "detailed_description": "Planejador de calendário gratuito para a Copa do Mundo FIFA 2026 multi-cidades e multi-fusos horários. Converta facilmente 104 jogos em 4 fusos horários da América do Norte e 16 cidades-sede para o fuso horário local do seu navegador. Filtre os jogos pelas suas seleções favoritas, cidades ou estádios para gerar feeds de calendário personalizados. Oferece links de assinatura dinâmica Webcal (que sincronizam automaticamente à medida que os confrontos da fase eliminatória são decididos) e downloads de arquivos .ics offline. Apresenta um painel interativo de sobrevivência ao sono para ajudá-lo a planejar sua programação.",
+  "usage_steps": [
+    "Abra o planejador e o fuso horário local do seu navegador será detectado automaticamente na bússola deslizante. Você também pode escolher qualquer outro fuso horário manualmente.",
+    "Use o painel de filtragem multidimensional para selecionar suas seleções favoritas, cidades-sede preferidas, estádios ou fases específicas dos jogos.",
+    "Configure lembretes (por exemplo, 15 minutos antes do início do jogo) no painel de configurações, depois clique em 'Gerar Link de Assinatura' ou 'Baixar Arquivo de Calendário .ics'.",
+    "Copie o link webcal:// e cole-o no Apple Calendar, Google Calendar, Outlook ou outros aplicativos de calendário para atualizações em tempo real."
+  ],
+  "usage_examples": [
+    "Selecione o fuso horário de Brasília/Lisboa para ver instantaneamente os horários de início de todos os 104 jogos e identificar as partidas da madrugada.",
+    "Filtre apenas os jogos do 'Brasil' e de 'Portugal', configure um alerta de 15 minutos e exporte um arquivo .ics para sincronizar com o calendário do seu celular.",
+    "Use a calculadora de sobrevivência para estimar seu 'nível de privação de sono' caso assista a todos os jogos selecionados e gere um pôster visual compartilhável."
+  ],
+  "faqs": [
+    {
+      "question": "Qual é a diferença entre a sincronização dinâmica do Webcal e o download offline de ICS?",
+      "answer": "O download offline de .ics gera um arquivo estático baseado na programação atual, que você importa manualmente uma única vez. A assinatura dinâmica do Webcal conecta seu aplicativo de calendário ao nosso servidor. Conforme a fase eliminatória avança e os times TBA (a definir) são substituídos por países reais, seu calendário atualizará automaticamente sem necessidade de nova importação."
+    },
+    {
+      "question": "Como este planejador lida com o Horário de Verão (DST) e diferenças de fuso horário?",
+      "answer": "O planejador integra o banco de dados completo de fusos horários IANA 2026 para todas as 16 cidades-sede (incluindo PDT, MDT, CDT, EDT). Todos os dados nos arquivos de calendário gerados usam o horário UTC absoluto, permitindo que o cliente de calendário nativo do seu dispositivo exiba os horários de início corretos em qualquer fuso horário em que o dispositivo estiver configurado."
+    },
+    {
+      "question": "Quais clientes de calendário suportam o link de assinatura Webcal?",
+      "answer": "O protocolo Webcal é padrão e totalmente compatível com Apple Calendar (iOS/macOS), Google Calendar, Microsoft Outlook e calendários padrão do Android. Basta copiar o link, escolher 'Nova Assinatura de Calendário' no seu aplicativo e colá-lo."
+    },
+    {
+      "question": "Os meus dados de seleção são enviados ou armazenados em algum servidor?",
+      "answer": "Não. A filtragem de jogos e a geração de arquivos .ics offline são feitas 100% localmente no seu navegador. Para assinaturas Webcal, as preferências de filtragem são codificadas diretamente nos parâmetros da URL. O servidor decodifica a URL em tempo real para transmitir o calendário e não salva nenhuma das suas escolhas."
+    }
+  ]
+}

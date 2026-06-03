@@ -1,0 +1,32 @@
+{
+  "detailed_description": "Planificateur de calendrier de la Coupe du Monde de la FIFA 2026 multi-villes et multi-fuseaux horaires gratuit. Convertissez facilement les 104 matchs répartis sur 4 fuseaux horaires d'Amérique du Nord et 16 villes hôtes dans le fuseau horaire local de votre navigateur. Filtrez les matchs par équipes favorites, villes ou stades pour générer des flux de calendrier personnalisés. Fournit des liens d'abonnement dynamique Webcal (qui se synchronisent automatiquement lorsque les équipes qualifiées pour la phase finale sont connues) et des téléchargements de fichiers .ics hors ligne. Propose un tableau de bord interactif de l'indice de survie au sommeil pour planifier vos nuits.",
+  "usage_steps": [
+    "Ouvrez le planificateur et le fuseau horaire de votre navigateur sera détecté et configuré sur le compas coulissant. Vous pouvez aussi choisir manuellement un autre fuseau horaire.",
+    "Utilisez le panneau de filtres pour sélectionner vos équipes favorites, villes hôtes préférées, stades ou phases de compétition spécifiques.",
+    "Configurez des alertes (ex. 15 minutes avant le coup d'envoi) dans les paramètres, puis cliquez sur 'Générer le lien d'abonnement' ou 'Télécharger le fichier de calendrier .ics'.",
+    "Copiez le lien webcal:// et collez-le dans Apple Calendar, Google Calendar, Outlook ou d'autres applications de calendrier pour synchroniser en temps réel."
+  ],
+  "usage_examples": [
+    "Sélectionnez le fuseau horaire de Paris/Bruxelles pour voir instantanément l'heure française du coup d'envoi des 104 matchs et repérer les matchs de nuit.",
+    "Filtrez uniquement les matchs de la 'France', activez une alerte de 15 minutes et exportez un fichier .ics à synchroniser avec votre téléphone.",
+    "Utilisez le calculateur de survie pour estimer votre 'déficit de sommeil' si vous regardez tous les matchs sélectionnés et partagez votre poster."
+  ],
+  "faqs": [
+    {
+      "question": "Quelle est la différence entre la synchronisation dynamique Webcal et le téléchargement ICS hors ligne?",
+      "answer": "Le téléchargement .ics hors ligne génère un fichier statique basé sur le calendrier actuel que vous importez manuellement une fois. L'abonnement dynamique Webcal connecte votre calendrier à notre serveur. Au fil de la phase finale, les équipes TBA (à déterminer) étant remplacées par les vrais pays, votre calendrier recevra automatiquement les mises à jour sans réimportation."
+    },
+    {
+      "question": "Comment ce planificateur gère-t-il l'heure d'été (DST) et les fuseaux horaires?",
+      "answer": "Le planificateur intègre la base de données de fuseaux horaires IANA 2026 pour les 16 villes hôtes (comprenant PDT, MDT, CDT, EDT). Toutes les données du calendrier généré utilisent le temps absolu UTC, ce qui permet à l'application de calendrier native de votre appareil de convertir les heures de coup d'envoi dans votre fuseau horaire local actuel."
+    },
+    {
+      "question": "Quelles applications de calendrier prennent en charge le lien d'abonnement Webcal?",
+      "answer": "Le protocole Webcal est standard et supporté par Apple Calendar (iOS/macOS), Google Calendar, Microsoft Outlook et les applications par défaut d'Android. Copiez simplement le lien, choisissez 'Nouvel abonnement calendrier' dans votre application et collez-le."
+    },
+    {
+      "question": "Mes préférences de filtre et mes données de navigation sont-elles stockées sur un serveur?",
+      "answer": "Non. Le filtrage des matchs et la génération du fichier .ics s'effectuent à 100 % en local dans votre navigateur. Pour les abonnements Webcal, les préférences de filtrage sont encodées dans les paramètres de la requête URL. Le serveur décode la demande à la volée pour envoyer le flux et ne stocke aucun choix."
+    }
+  ]
+}

@@ -3,9 +3,9 @@ import {
   foldLine,
   escapeText,
   formatIcsDate,
-  generateIcsContent
-} from './world-cup-calendar';
-import type { Match } from '../../lib/data/world-cup-schedule.json';
+  generateIcsContent,
+  type Match
+} from './world-cup-calendar.ics';
 
 describe('World Cup 2026 iCalendar API Unit Tests', () => {
   describe('escapeText()', () => {

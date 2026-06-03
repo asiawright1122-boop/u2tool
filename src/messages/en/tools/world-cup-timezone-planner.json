@@ -1,0 +1,32 @@
+{
+  "detailed_description": "Free FIFA World Cup 2026 Multi-City & Multi-Timezone Calendar Planner. Effortlessly convert 104 matches across 4 North American timezones and 16 host cities to your local browser timezone. Filter matches by your favorite teams, cities, or stadiums to generate custom calendar feeds. Provides dynamic Webcal calendar subscription links (which auto-sync when knockout match pairings are decided) and offline .ics file downloads. Features an interactive sleep survival index dashboard to help you plan your viewing schedule.",
+  "usage_steps": [
+    "Open the planner, and your browser's local timezone will be automatically detected and focused on the sliding compass. You can also manually choose any other timezone.",
+    "Use the multi-dimensional filter panel to select your favorite teams, preferred host cities, stadiums, or specific match stages.",
+    "Configure reminders (e.g., 15 minutes before kick-off) in the settings panel, then click 'Generate Subscription Link' or 'Download .ics Calendar File'.",
+    "Copy the webcal:// link and paste it into Apple Calendar, Google Calendar, Outlook, or other calendar apps to enjoy real-time synced match updates."
+  ],
+  "usage_examples": [
+    "Select Asia/Tokyo timezone to instantly see kickoff times in Japan for all 104 matches and identify late-night matches.",
+    "Filter only 'USA' and 'Mexico' matches, set a 15-minute alert, and export a customized .ics file to sync with your phone calendar.",
+    "Use the viewing survival calculator to estimate your 'sleep deprivation level' if you watch all selected matches, and generate a shareable visual poster."
+  ],
+  "faqs": [
+    {
+      "question": "What is the difference between Webcal dynamic sync and offline ICS download?",
+      "answer": "Offline .ics download generates a static file based on the current schedule which you manually import once. Webcal dynamic subscription links your calendar app to our server. As knockout stages progress and TBA teams are replaced by actual countries, your device calendar will automatically pull incremental updates without requiring any re-importing."
+    },
+    {
+      "question": "How does this planner handle Daylight Saving Time (DST) and time offsets?",
+      "answer": "The planner integrates full 2026 IANA timezone databases for all 16 host cities (including PDT, MDT, CDT, EDT). All match data in the generated calendar files uses absolute UTC times, allowing your device's native calendar client to accurately display kickoff times in whatever timezone your device is currently in."
+    },
+    {
+      "question": "Which calendar clients support the Webcal subscription link?",
+      "answer": "The Webcal protocol is standard and fully supported by Apple Calendar (iOS/macOS), Google Calendar, Microsoft Outlook, and standard Android calendars. Simply copy the link, choose 'New Calendar Subscription' in your app, and paste it."
+    },
+    {
+      "question": "Is my selection data sent to or stored on any server?",
+      "answer": "No. Filtering matches and generating offline .ics files is performed 100% locally in your browser. For Webcal subscriptions, the filter preferences are encoded in the URL query string itself. The server decodes the URL on-the-fly to stream the calendar feed and does not persist any of your choices."
+    }
+  ]
+}

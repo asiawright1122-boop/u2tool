@@ -9,6 +9,7 @@ export const FUN_TOOLS: Tool[] = [
   { slug: 'dice-roller', category: 'fun', icon: 'gamepad-2', component: 'DiceRoller' },
   { slug: 'team-generator', category: 'fun', icon: 'gamepad-2', component: 'TeamGenerator' },
   { slug: 'world-cup-simulator', category: 'fun', icon: 'gamepad-2', component: 'WorldCupSimulator' },
-  { slug: 'world-cup-budget-calculator', category: 'fun', icon: 'gamepad-2', component: 'WorldCupBudgetCalculator' }
+  { slug: 'world-cup-budget-calculator', category: 'fun', icon: 'gamepad-2', component: 'WorldCupBudgetCalculator' },
+  { slug: 'world-cup-timezone-planner', category: 'fun', icon: 'calendar', component: 'WorldCupTimezonePlanner' }
 ];
 

@@ -1,0 +1,32 @@
+{
+  "detailed_description": "Kostenloser WM 2026 Kalenderplaner für verschiedene Städte und Zeitzonen. Konvertieren Sie mühelos 104 Spiele in 4 nordamerikanischen Zeitzonen und 16 Austragungsstädten in die lokale Zeitzone Ihres Browsers. Filtern Sie Spiele nach Ihren Lieblingsteams, Städten oder Stadien, um benutzerdefinierte Kalender-Feeds zu erstellen. Bietet dynamische Webcal-Abonnementlinks (die automatisch synchronisiert werden, sobald die Paarungen der K.-o.-Runde feststehen) und Offline-.ics-Downloads. Enthält ein interaktives Schlafmangel-Index-Dashboard, mit dem Sie Ihren Zeitplan optimal planen können.",
+  "usage_steps": [
+    "Öffnen Sie den Planer. Die lokale Zeitzone Ihres Browsers wird automatisch auf dem Schiebekompass erkannt. Sie können auch manuell eine andere Zeitzone auswählen.",
+    "Verwenden Sie das multidimensionale Filterpanel, um Ihre Lieblingsteams, bevorzugten Austragungsorte, Stadien oder bestimmten Spielphasen auszuwählen.",
+    "Konfigurieren Sie Erinnerungen (z. B. 15 Minuten vor Anpfiff) in den Einstellungen und klicken Sie dann auf 'Abonnementlink erstellen' oder 'Kalenderdatei herunterladen (.ics)'.",
+    "Kopieren Sie den Link webcal:// und fügen Sie ihn in Apple Kalender, Google Kalender, Outlook oder andere Kalender-Apps ein, um Aktualisierungen in Echtzeit zu erhalten."
+  ],
+  "usage_examples": [
+    "Wählen Sie die Zeitzone Berlin/Wien, um sofort die deutschen Anstoßzeiten für alle 104 Spiele zu sehen und nächtliche Partien zu identifizieren.",
+    "Filtern Sie nur nach Spielen von 'Deutschland', stellen Sie eine 15-Minuten-Erinnerung ein und exportieren Sie eine .ics-Datei für Ihren Handykalender.",
+    "Nutzen Sie den Überlebensrechner, um Ihr 'Schlafmangel-Niveau' zu schätzen, falls Sie alle ausgewählten Spiele ansehen, und erstellen Sie ein Poster zum Teilen."
+  ],
+  "faqs": [
+    {
+      "question": "Was ist der Unterschied zwischen der dynamischen Webcal-Synchronisierung und dem Offline-ICS-Download?",
+      "answer": "Der Offline-ICS-Download generiert eine statische Datei basierend auf dem aktuellen Spielplan, die Sie einmalig manuell importieren. Ein dynamisches Webcal-Abonnement verknüpft Ihre Kalender-App mit unserem Server. Sobald in den K.-o.-Runden aus den Platzhaltern (TBA) echte Länder werden, aktualisiert sich Ihr Kalender automatisch, ohne dass Sie etwas neu importieren müssen."
+    },
+    {
+      "question": "Wie geht dieser Planer mit der Sommerzeit (DST) und Zeitverschiebungen um?",
+      "answer": "Der Planer integriert die vollständige IANA-Zeitzonendatenbank 2026 für alle 16 Austragungsstädte (einschließlich PDT, MDT, CDT, EDT). Alle Spieldaten in den generierten Kalenderdateien verwenden die absolute UTC-Zeit, sodass Ihre Kalender-App die Anstoßzeiten automatisch in der Zeitzone anzeigt, in der sich Ihr Gerät gerade befindet."
+    },
+    {
+      "question": "Welche Kalender-Apps unterstützen den Webcal-Abonnementlink?",
+      "answer": "Das Webcal-Protokoll ist ein Standard und wird von Apple Kalender (iOS/macOS), Google Kalender, Microsoft Outlook und Standard-Android-Kalendern vollständig unterstützt. Kopieren Sie einfach den Link, wählen Sie 'Neues Kalenderabonnement' in Ihrer App und fügen Sie ihn ein."
+    },
+    {
+      "question": "Werden meine Filterdaten auf einem Server gespeichert?",
+      "answer": "Nein. Das Filtern von Spielen und das Generieren von Offline-.ics-Dateien erfolgt zu 100 % lokal in Ihrem Browser. Bei Webcal-Abonnements werden Ihre Filtereinstellungen in den Parametern der URL selbst kodiert. Der Server dekodiert die URL in Echtzeit, um den Kalender-Stream bereitzustellen, und speichert Ihre Auswahl nicht."
+    }
+  ]
+}
