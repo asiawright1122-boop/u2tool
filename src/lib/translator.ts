@@ -2,9 +2,10 @@
  * Create a translator function from a flat translations record.
  * Supports dot-notation keys for nested access.
  */
-export function createTranslator(translations: Record<string, unknown>) {
+export function createTranslator(translations: Record<string, unknown>, locale?: string, prefix?: string) {
   return function t(key: string, fallback?: string): string {
-    const keys = key.split('.');
+    const fullKey = prefix ? `${prefix}.${key}` : key;
+    const keys = fullKey.split('.');
     let value: unknown = translations;
 
     for (const k of keys) {

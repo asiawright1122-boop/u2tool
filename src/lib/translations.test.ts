@@ -86,6 +86,21 @@ describe('translations module', () => {
       expect(emptyT('anything')).toBe('MISSING: anything');
       expect(emptyT('anything', 'fallback')).toBe('fallback');
     });
+
+    it('should prepend prefix to key if prefix is provided', () => {
+      const scopedTranslations = {
+        tools: {
+          'world-cup-timezone-planner': {
+            name: 'Planner Name',
+            detailed_description: 'Planner Desc'
+          }
+        }
+      };
+      const scopedT = createTranslator(scopedTranslations, 'en', 'tools.world-cup-timezone-planner');
+      expect(scopedT('name')).toBe('Planner Name');
+      expect(scopedT('detailed_description')).toBe('Planner Desc');
+      expect(scopedT('missing')).toBe('MISSING: missing');
+    });
   });
 
   describe('message loading', () => {

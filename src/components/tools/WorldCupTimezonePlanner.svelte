@@ -822,7 +822,7 @@
 </script>
 
 <!-- Dark obsidian gold container -->
-<div class="dark bg-[#070707] text-neutral-200 border border-neutral-900 rounded-3xl p-6 lg:p-10 shadow-2xl relative font-sans leading-relaxed selection:bg-amber-500/20" dir={isRtl ? 'rtl' : 'ltr'}>
+<div class="world-cup-timezone-planner-container dark bg-[#070707] text-neutral-200 border border-neutral-900 rounded-3xl p-6 lg:p-10 shadow-2xl relative font-sans leading-relaxed selection:bg-amber-500/20" dir={isRtl ? 'rtl' : 'ltr'}>
   
   <!-- Premium Header Banner -->
   <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-b border-neutral-900 pb-8 mb-8">
@@ -887,7 +887,7 @@
                 if (selectedStrengths.includes('hot')) selectedStrengths = selectedStrengths.filter(s => s !== 'hot');
                 else selectedStrengths = [...selectedStrengths, 'hot'];
               }}
-              class="px-3 py-1.5 text-xs rounded-lg border transition-all font-medium flex items-center gap-1 {selectedStrengths.includes('hot') ? 'bg-amber-500/10 border-amber-500/40 text-amber-300' : 'bg-neutral-950 border-neutral-850 text-neutral-400 hover:text-white'}"
+              class="px-3 py-1.5 text-xs rounded-lg border transition-all font-medium flex items-center gap-1 {selectedStrengths.includes('hot') ? 'bg-amber-500/10 border-amber-500/40 text-amber-300 btn-filter-active' : 'bg-neutral-950 border-neutral-850 text-neutral-400 hover:text-white btn-filter-inactive'}"
             >
               {currentUi.matchStrengthHot}
             </button>
@@ -896,7 +896,7 @@
                 if (selectedStrengths.includes('medium')) selectedStrengths = selectedStrengths.filter(s => s !== 'medium');
                 else selectedStrengths = [...selectedStrengths, 'medium'];
               }}
-              class="px-3 py-1.5 text-xs rounded-lg border transition-all font-medium flex items-center gap-1 {selectedStrengths.includes('medium') ? 'bg-amber-500/10 border-amber-500/40 text-amber-300' : 'bg-neutral-950 border-neutral-850 text-neutral-400 hover:text-white'}"
+              class="px-3 py-1.5 text-xs rounded-lg border transition-all font-medium flex items-center gap-1 {selectedStrengths.includes('medium') ? 'bg-amber-500/10 border-amber-500/40 text-amber-300 btn-filter-active' : 'bg-neutral-950 border-neutral-850 text-neutral-400 hover:text-white btn-filter-inactive'}"
             >
               {currentUi.matchStrengthMedium}
             </button>
@@ -905,7 +905,7 @@
                 if (selectedStrengths.includes('normal')) selectedStrengths = selectedStrengths.filter(s => s !== 'normal');
                 else selectedStrengths = [...selectedStrengths, 'normal'];
               }}
-              class="px-3 py-1.5 text-xs rounded-lg border transition-all font-medium flex items-center gap-1 {selectedStrengths.includes('normal') ? 'bg-amber-500/10 border-amber-500/40 text-amber-300' : 'bg-neutral-950 border-neutral-850 text-neutral-400 hover:text-white'}"
+              class="px-3 py-1.5 text-xs rounded-lg border transition-all font-medium flex items-center gap-1 {selectedStrengths.includes('normal') ? 'bg-amber-500/10 border-amber-500/40 text-amber-300 btn-filter-active' : 'bg-neutral-950 border-neutral-850 text-neutral-400 hover:text-white btn-filter-inactive'}"
             >
               {currentUi.matchStrengthNormal}
             </button>
@@ -921,7 +921,7 @@
                 if (selectedStages.includes('group')) selectedStages = selectedStages.filter(s => s !== 'group');
                 else selectedStages = [...selectedStages, 'group'];
               }}
-              class="flex-1 px-3 py-1.5 text-xs rounded-lg border text-center transition-all font-medium {selectedStages.includes('group') ? 'bg-amber-500/10 border-amber-500/40 text-amber-300' : 'bg-neutral-950 border-neutral-850 text-neutral-400 hover:text-white'}"
+              class="flex-1 px-3 py-1.5 text-xs rounded-lg border text-center transition-all font-medium {selectedStages.includes('group') ? 'bg-amber-500/10 border-amber-500/40 text-amber-300 btn-filter-active' : 'bg-neutral-950 border-neutral-850 text-neutral-400 hover:text-white btn-filter-inactive'}"
             >
               ⚽ {currentUi.groupStage}
             </button>
@@ -930,7 +930,7 @@
                 if (selectedStages.includes('knockout')) selectedStages = selectedStages.filter(s => s !== 'knockout');
                 else selectedStages = [...selectedStages, 'knockout'];
               }}
-              class="flex-1 px-3 py-1.5 text-xs rounded-lg border text-center transition-all font-medium {selectedStages.includes('knockout') ? 'bg-amber-500/10 border-amber-500/40 text-amber-300' : 'bg-neutral-950 border-neutral-850 text-neutral-400 hover:text-white'}"
+              class="flex-1 px-3 py-1.5 text-xs rounded-lg border text-center transition-all font-medium {selectedStages.includes('knockout') ? 'bg-amber-500/10 border-amber-500/40 text-amber-300 btn-filter-active' : 'bg-neutral-950 border-neutral-850 text-neutral-400 hover:text-white btn-filter-inactive'}"
             >
               🏆 {currentUi.knockoutStage}
             </button>
@@ -942,11 +942,11 @@
           <div class="flex justify-between items-center text-xs">
             <span class="text-neutral-400 font-medium">{currentUi.selectedTeams} ({selectedTeams.length})</span>
             <div class="flex items-center gap-2 text-[10px] text-neutral-500">
-              <button onclick={() => quickSelectTeams('hosts')} class="hover:text-amber-400 transition-colors">{currentUi.hostTeamsOnly}</button>
+              <button onclick={() => quickSelectTeams('hosts')} class="btn-link hover:text-amber-400 transition-colors">{currentUi.hostTeamsOnly}</button>
               <span>|</span>
-              <button onclick={() => quickSelectTeams('giants')} class="hover:text-amber-400 transition-colors">{currentUi.hotTeamsOnly}</button>
+              <button onclick={() => quickSelectTeams('giants')} class="btn-link hover:text-amber-400 transition-colors">{currentUi.hotTeamsOnly}</button>
               <span>|</span>
-              <button onclick={() => quickSelectTeams('clear')} class="hover:text-amber-400 transition-colors">{currentUi.clearAll}</button>
+              <button onclick={() => quickSelectTeams('clear')} class="btn-link hover:text-amber-400 transition-colors">{currentUi.clearAll}</button>
             </div>
           </div>
           <div class="grid grid-cols-4 gap-1.5 p-3 bg-neutral-950/60 border border-neutral-900 rounded-xl max-h-40 overflow-y-auto font-mono text-[10px]">
@@ -974,9 +974,9 @@
           <div class="flex justify-between items-center text-xs">
             <span class="text-neutral-400 font-medium">{currentUi.stadiumFilter} ({selectedStadiums.length})</span>
             <div class="flex items-center gap-2 text-[10px] text-neutral-500">
-              <button onclick={() => quickSelectStadiums('all')} class="hover:text-amber-400 transition-colors">{currentUi.selectAll}</button>
+              <button onclick={() => quickSelectStadiums('all')} class="btn-link hover:text-amber-400 transition-colors">{currentUi.selectAll}</button>
               <span>|</span>
-              <button onclick={() => quickSelectStadiums('clear')} class="hover:text-amber-400 transition-colors">{currentUi.clearAll}</button>
+              <button onclick={() => quickSelectStadiums('clear')} class="btn-link hover:text-amber-400 transition-colors">{currentUi.clearAll}</button>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-1.5 p-3 bg-neutral-950/60 border border-neutral-900 rounded-xl max-h-40 overflow-y-auto text-[10px]">
@@ -1031,7 +1031,7 @@
           <!-- Webcal Sync Button -->
           <button
             onclick={handleCopySyncLink}
-            class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#E5C158] hover:bg-[#C59B27] text-neutral-950 font-extrabold text-sm rounded-xl transition-all shadow-lg active:scale-95"
+            class="btn-sync w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#E5C158] hover:bg-[#C59B27] text-neutral-950 font-extrabold text-sm rounded-xl transition-all shadow-lg active:scale-95"
           >
             {#if showCopied}
               <Check class="w-4 h-4" />
@@ -1045,7 +1045,7 @@
           <!-- ICS Download Button -->
           <button
             onclick={handleDownloadIcs}
-            class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-neutral-950 hover:bg-neutral-900 border border-neutral-800 text-neutral-200 font-bold text-sm rounded-xl transition-all"
+            class="btn-download w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-neutral-950 hover:bg-neutral-900 border border-neutral-800 text-neutral-200 font-bold text-sm rounded-xl transition-all"
           >
             <Download class="w-4 h-4" />
             {currentUi.downloadIcs}
@@ -1165,7 +1165,7 @@
                 selectedStages = ['group', 'knockout'];
                 selectedStrengths = ['hot', 'medium', 'normal'];
               }}
-              class="px-4 py-2 bg-neutral-900 hover:bg-neutral-850 text-xs font-bold rounded-lg border border-neutral-800 text-neutral-300 transition-colors"
+              class="btn-reset px-4 py-2 bg-neutral-900 hover:bg-neutral-850 text-xs font-bold rounded-lg border border-neutral-800 text-neutral-300 transition-colors"
             >
               {currentUi.resetFilters}
             </button>
@@ -1246,3 +1246,104 @@
   </div>
 
 </div>
+
+<style>
+  /* 强制把该容器下的所有 button, select, input, option 强制定制为黑金曜石质感，防止浅色主题覆盖 */
+  .world-cup-timezone-planner-container :global(button),
+  .world-cup-timezone-planner-container :global(select),
+  .world-cup-timezone-planner-container :global(input),
+  .world-cup-timezone-planner-container :global(option) {
+    font-family: inherit;
+  }
+
+  /* 精确覆盖各种按钮的状态 */
+  .world-cup-timezone-planner-container :global(button) {
+    /* 默认清除全局 button 样式对背景和颜色的强行覆盖 */
+    box-shadow: none !important;
+  }
+
+  /* 针对 select */
+  .world-cup-timezone-planner-container :global(select) {
+    background-color: #0a0a0a !important;
+    color: #e5e5e5 !important;
+    border-color: #262626 !important;
+  }
+
+  .world-cup-timezone-planner-container :global(select:focus) {
+    border-color: #e5c158 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 1px rgba(229, 193, 88, 0.4) !important;
+  }
+
+  /* 针对 option */
+  .world-cup-timezone-planner-container :global(option) {
+    background-color: #0a0a0a !important;
+    color: #e5e5e5 !important;
+  }
+
+  /* 针对 checkbox */
+  .world-cup-timezone-planner-container :global(input[type="checkbox"]) {
+    background-color: #0a0a0a !important;
+    border-color: #262626 !important;
+    color: #f59e0b !important;
+  }
+
+  /* 针对筛选按钮（激活和非激活状态） */
+  .world-cup-timezone-planner-container :global(.btn-filter-active) {
+    background-color: rgba(245, 158, 11, 0.1) !important;
+    border-color: rgba(245, 158, 11, 0.4) !important;
+    color: #fcd34d !important;
+  }
+
+  .world-cup-timezone-planner-container :global(.btn-filter-inactive) {
+    background-color: #0a0a0a !important;
+    border-color: #262626 !important;
+    color: #a3a3a3 !important;
+  }
+
+  .world-cup-timezone-planner-container :global(.btn-filter-inactive:hover) {
+    color: #ffffff !important;
+    background-color: #171717 !important;
+  }
+
+  /* 快速选择文本链接按钮 */
+  .world-cup-timezone-planner-container :global(.btn-link) {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    color: #737373 !important;
+  }
+  .world-cup-timezone-planner-container :global(.btn-link:hover) {
+    color: #fbbf24 !important;
+  }
+
+  /* 针对主操作按钮 (Webcal Sync) */
+  .world-cup-timezone-planner-container :global(.btn-sync) {
+    background-color: #e5c158 !important;
+    color: #0a0a0a !important;
+    border: none !important;
+  }
+  .world-cup-timezone-planner-container :global(.btn-sync:hover) {
+    background-color: #c59b27 !important;
+  }
+
+  /* 针对下载按钮 */
+  .world-cup-timezone-planner-container :global(.btn-download) {
+    background-color: #0a0a0a !important;
+    color: #e5e5e5 !important;
+    border: 1px solid #262626 !important;
+  }
+  .world-cup-timezone-planner-container :global(.btn-download:hover) {
+    background-color: #171717 !important;
+  }
+
+  /* 针对重置过滤器按钮 */
+  .world-cup-timezone-planner-container :global(.btn-reset) {
+    background-color: #171717 !important;
+    color: #d4d4d4 !important;
+    border: 1px solid #262626 !important;
+  }
+  .world-cup-timezone-planner-container :global(.btn-reset:hover) {
+    background-color: #262626 !important;
+  }
+</style>
