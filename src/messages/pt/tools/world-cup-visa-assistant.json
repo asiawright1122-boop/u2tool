@@ -1,0 +1,32 @@
+{
+  "detailed_description": "Uma ferramenta interativa gratuita projetada para torcedores que vão à Copa do Mundo FIFA 2026, ajudando a navegar pelos complexos regulamentos de vistos e controle de fronteira dos EUA, Canadá e México. Selecione sua nacionalidade, vistos existentes e crie seu roteiro personalizado pelas 16 cidades-sede. A ferramenta calcula dinamicamente os requisitos para cada trecho internacional, gerando alertas sobre múltiplas travessias, passo a passo para elegibilidade do ESTA/eTA, isenções de visto e um checklist personalizado de documentos para levar.",
+  "usage_steps": [
+    "Selecione o país emissor do seu passaporte (nacionalidade) e marque os vistos válidos que possui atualmente (como EUA B1/B2, Visto canadense, Schengen, etc.).",
+    "Na seção 'Rota do Roteiro', adicione as cidades-sede na ordem planejada de visita. Ajuste a ordem usando os botões de subir/descer.",
+    "Revise instantaneamente os 'Relatórios de Trechos de Trânsito' para ver requisitos específicos de vistos e isenções para cada fronteira.",
+    "Siga o 'Checklist de Alfândega' gerado dinamicamente para preparar os documentos físicos e digitais antes de sua partida."
+  ],
+  "usage_examples": [
+    "Portador de passaporte chinês sem vistos viajando de Seattle para Vancouver: o sistema alerta que são necessários tanto o visto americano B1/B2 quanto o visto de visitante do Canadá (TRV).",
+    "Portador de passaporte chinês com visto americano B1/B2 válido visitando a Cidade do México: o sistema confirma isenção de visto mexicano e adiciona o visto americano ao checklist de documentos.",
+    "Portador de passaporte do Reino Unido assistindo a jogos em Nova York e Toronto: o sistema lembra de solicitar o ESTA dos EUA e o eTA do Canadá antes da partida."
+  ],
+  "faqs": [
+    {
+      "question": "A isenção de visto para o México usando o visto americano se aplica a todas as nacionalidades?",
+      "answer": "Sim. De acordo com as normas de imigração do México, viajantes de qualquer nacionalidade portando um visto ativo e válido de múltiplas entradas dos EUA, Canadá, Reino Unido, Japão ou Espaço Schengen podem entrar no México sem visto para turismo ou assistir aos jogos."
+    },
+    {
+      "question": "Quais são os riscos de entrar no mesmo país várias vezes no meu roteiro?",
+      "answer": "Se você cruzar fronteiras múltiplas vezes (ex: EUA -> Canadá -> EUA), você deve portar um visto de múltiplas entradas. Vistos de entrada única perdem validade ao sair do país. A ferramenta sinaliza múltiplas travessias para alertar sobre a necessidade de verificar o tipo do visto."
+    },
+    {
+      "question": "O que são ESTA e eTA, e quando devo solicitá-los?",
+      "answer": "ESTA (EUA) e eTA (Canadá) são autorizações eletrônicas de viagem para portadores de passaportes isentos de visto. Embora geralmente aprovados em minutos, recomenda-se fazer a solicitação com pelo menos 72 horas de antecedência ao voo."
+    },
+    {
+      "question": "As informações contidas neste assistente estão atualizadas?",
+      "answer": "Sim, a ferramenta é atualizada com as últimas regras consulares para a Copa do Mundo 2026, incluindo o programa eTA simplificado do Canadá. No entanto, as regras de fronteira podem mudar, recomendamos confirmar nos sites oficiais antes de viajar."
+    }
+  ]
+}

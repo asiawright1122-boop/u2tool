@@ -1,0 +1,32 @@
+{
+  "detailed_description": "Una herramienta interactiva gratuita diseñada para los aficionados que asisten a la Copa del Mundo de la FIFA 2026, ayudando a navegar por las complejas regulaciones de visados y control de fronteras de EE. UU., Canadá y México. Simplemente seleccione su nacionalidad, visados existentes y su itinerario personalizado en las 16 ciudades anfitrionas. La herramienta calcula dinámicamente los requisitos para cada tramo internacional, ofreciendo advertencias sobre cruces múltiples, orientación paso a paso sobre la elegibilidad para ESTA/eTA, exenciones de visado y una lista de verificación personalizada de documentos para llevar.",
+  "usage_steps": [
+    "Seleccione su país emisor de pasaporte (nacionalidad) y marque los visados válidos que posee actualmente (por ejemplo, EE. UU. B1/B2, Visa de Canadá, Schengen, etc.).",
+    "En la sección 'Ruta de itinerario', agregue ciudades anfitrionas en el orden en que planea visitarlas. Puede ajustar el orden usando los botones de arriba/abajo.",
+    "Revise instantáneamente los 'Informes de tramos de tránsito' para ver los requisitos específicos de visado y exenciones para cada cruce de frontera.",
+    "Siga la 'Lista de verificación de aduanas' generada dinámicamente para preparar todos los documentos digitales y físicos antes de la salida."
+  ],
+  "usage_examples": [
+    "Titular de pasaporte chino sin visados que viaja de Seattle a Vancouver: el sistema alerta que se requieren tanto la visa B1/B2 de EE. UU. como la visa de visitante de Canadá (TRV).",
+    "Titular de pasaporte chino con visa B1/B2 de EE. UU. válida que visita la Ciudad de México: el sistema confirma la exención de visa para México y agrega la visa de EE. UU. a la lista de verificación.",
+    "Titular de pasaporte del Reino Unido que asiste a partidos en Nueva York y Toronto: el sistema recuerda solicitar tanto la ESTA de EE. UU. como la eTA de Canadá antes de la salida."
+  ],
+  "faqs": [
+    {
+      "question": "¿La exención de visa de México usando una visa de EE. UU. se aplica a todas las nacionalidades?",
+      "answer": "Sí. Según las regulaciones de inmigración mexicanas, los viajeros de cualquier nacionalidad que tengan una visa de múltiples entradas válida y activa de EE. UU., Canadá, Reino Unido, Japón o del Espacio Schengen pueden ingresar a México sin visa para turismo o asistencia a partidos."
+    },
+    {
+      "question": "¿Cuáles son los riesgos de ingresar al mismo país varias veces en mi ruta?",
+      "answer": "Si cruza fronteras varias veces (por ejemplo, EE. UU. -> Canadá -> EE. UU.), debe tener una visa de múltiples entradas. Una visa de entrada única deja de ser válida una vez que sale del país. La herramienta advierte sobre cruces múltiples para recordarle que verifique los permisos de su visa."
+    },
+    {
+      "question": "¿Qué son ESTA y eTA, y cuándo debo solicitarlas?",
+      "answer": "ESTA (EE. UU.) y eTA (Canadá) son autorizaciones electrónicas de viaje para titulares de pasaportes exentos de visa. Aunque generalmente se aprueban en minutos, se recomienda solicitar al menos 72 horas antes de abordar su vuelo."
+    },
+    {
+      "question": "¿La información proporcionada por este asistente está actualizada?",
+      "answer": "Sí, esta herramienta se actualiza con las últimas reglas consulares para el Mundial 2026, incluido el programa eTA simplificado de Canadá. Sin embargo, las reglas pueden cambiar, por lo que recomendamos verificar los sitios web oficiales antes de viajar."
+    }
+  ]
+}

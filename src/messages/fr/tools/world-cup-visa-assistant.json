@@ -1,0 +1,32 @@
+{
+  "detailed_description": "Un outil interactif gratuit conçu pour les supporters assistant à la Coupe du Monde de la FIFA 2026, facilitant la navigation à travers les réglementations de visa et de contrôle frontalier des États-Unis, du Canada et du Mexique. Sélectionnez simplement votre nationalité, vos visas existants et votre itinéraire personnalisé parmi les 16 villes hôtes. L'outil évalue dynamiquement les formalités pour chaque trajet international, fournissant des alertes en cas de passages multiples, des conseils sur l'éligibilité ESTA/eTA, les exemptions et un checklist de documents personnalisé.",
+  "usage_steps": [
+    "Sélectionnez le pays émetteur de votre passeport (nationalité) et cochez les visas valides que vous possédez (ex. visa américain B1/B2, visa canadien, Schengen, etc.).",
+    "Dans la section 'Itinéraire', ajoutez les villes hôtes dans l'ordre de votre voyage. Ajustez l'ordre avec les boutons haut/bas.",
+    "Consultez instantanément les 'Rapports de transit frontalier' pour connaître les exigences de visa et les exemptions pour chaque trajet.",
+    "Suivez le 'Checklist des douanes' généré pour préparer tous vos documents numériques et physiques avant le départ."
+  ],
+  "usage_examples": [
+    "Titulaire de passeport chinois sans visa voyageant de Seattle à Vancouver : le système signale que le visa américain B1/B2 et le visa de visiteur canadien (VRT) sont tous deux requis.",
+    "Titulaire de passeport chinois avec visa américain B1/B2 valide visitant Mexico : le système confirme l'exemption de visa mexicain et ajoute le visa américain au checklist des documents.",
+    "Titulaire de passeport britannique se rendant à New York et Toronto : le système rappelle de demander l'ESTA américain et l'eTA canadien avant le départ."
+  ],
+  "faqs": [
+    {
+      "question": "L'exemption de visa mexicain grâce à un visa américain s'applique-t-elle à toutes les nationalités?",
+      "answer": "Oui. Selon la réglementation mexicaine, les voyageurs de toute nationalité détenant un visa valide à entrées multiples des États-Unis, du Canada, du Royaume-Uni, du Japon ou de l'Espace Schengen peuvent entrer au Mexique sans visa pour tourisme."
+    },
+    {
+      "question": "Quels sont les risques d'entrer plusieurs fois dans le même pays lors de mon voyage?",
+      "answer": "Si vous franchissez les frontières plusieurs fois (ex. USA -> Canada -> USA), vous devez disposer d'un visa à entrées multiples. Un visa à entrée unique expire dès que vous quittez le pays. L'outil signale ces cas pour que vous vérifiiez vos visas."
+    },
+    {
+      "question": "Qu'est-ce que l'ESTA et l'eTA, et quand dois-je les demander?",
+      "answer": "L'ESTA (USA) et l'eTA (Canada) sont des autorisations de voyage électroniques pour les ressortissants de pays exemptés de visa (ex. Royaume-Uni, Japon, France). Bien qu'approuvées rapidement, il est conseillé de postuler 72h avant le vol."
+    },
+    {
+      "question": "Les informations fournies par cet assistant sont-elles à jour?",
+      "answer": "Oui, cet outil intègre les dernières règles consulaires pour la Coupe du Monde 2026, y compris le programme simplifié eTA du Canada pour les titulaires de visa américain. Cependant, les règles pouvant changer, vérifiez les sites officiels avant de partir."
+    }
+  ]
+}

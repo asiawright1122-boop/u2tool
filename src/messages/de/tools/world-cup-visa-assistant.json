@@ -1,0 +1,32 @@
+{
+  "detailed_description": "Ein kostenloses interaktives Tool für Besucher der FIFA WM 2026, das Ihnen hilft, sich im komplexen Visum- und Grenzdschungel der USA, Kanadas und Mexikos zurechtzufinden. Wählen Sie einfach Ihre Staatsangehörigkeit, vorhandene Visa und Ihre Route durch die 16 Austragungsorte aus. Das Tool berechnet dynamisch die Vorgaben für jeden internationalen Grenzübertritt, warnt vor mehrfachen Einreisen, gibt Schritt-für-Schritt-Hinweise zur Berechtigung für ESTA/eTA oder Visumbefreiungen und erstellt ein maßgeschneidertes Dokumenten-Checklist.",
+  "usage_steps": [
+    "Wählen Sie Ihr Passausstellungsland (Staatsangehörigkeit) und kreuzen Sie Ihre gültigen Visa an (z. B. USA B1/B2, Kanada-Visum, Schengen-Visum usw.).",
+    "Fügen Sie im Bereich 'Reiseroute' die Austragungsorte in der geplanten Reihenfolge hinzu. Die Reihenfolge lässt sich mit den Pfeiltasten anpassen.",
+    "Prüfen Sie sofort die dynamischen 'Transit-Grenzberichte' unten, um Visumvorgaben und Befreiungsregeln für jeden Grenzübertritt einzusehen.",
+    "Nutzen Sie das generierte 'Zoll-Checklist', um alle digitalen und physischen Dokumente vor dem Abflug vorzubereiten."
+  ],
+  "usage_examples": [
+    "Inhaber eines chinesischen Passes ohne Visa auf der Reise von Seattle nach Vancouver: Das System warnt, dass sowohl ein US-B1/B2-Visum als auch ein kanadisches Besuchervisum (TRV) erforderlich sind.",
+    "Inhaber eines chinesischen Passes mit gültigem US-B1/B2-Visum bei der Reise nach Mexiko-Stadt: Das System bestätigt die Visumbefreiung für Mexiko und fügt das US-Visum zum Checklist hinzu.",
+    "Inhaber eines britischen Passes auf der Reise zu Spielen in New York und Toronto: Das System erinnert daran, vor der Abreise sowohl das US-ESTA als auch das kanadische eTA zu beantragen."
+  ],
+  "faqs": [
+    {
+      "question": "Gilt Mexikos Visumbefreiung mit US-Visum für alle Staatsangehörigkeiten?",
+      "answer": "Ja. Nach mexikanischen Einreisebestimmungen können Reisende aller Nationalitäten mit einem gültigen, aktiven Mehrfachvisum (Multiple-entry) für die USA, Kanada, Großbritannien, Japan oder den Schengen-Raum visumfrei zu touristischen Zwecken nach Mexiko einreisen."
+    },
+    {
+      "question": "Welche Risiken bestehen bei der mehrfachen Einreise in dasselbe Land auf meiner Route?",
+      "answer": "Wenn Sie Grenzen mehrfach überschreiten (z. B. USA -> Kanada -> USA), benötigen Sie ein Visum zur mehrfachen Einreise (Multiple-entry). Ein Visum zur einmaligen Einreise erlischt beim Verlassen des Landes. Das Tool weist auf solche Reiserouten hin, damit Sie Ihre Visa prüfen können."
+    },
+    {
+      "question": "Was sind ESTA und eTA und wie lange im Voraus sollte ich sie beantragen?",
+      "answer": "ESTA (USA) und eTA (Kanada) sind elektronische Einreisegenehmigungen für visumfreie Passinhaber (wie GBR, JPN, FRA etc.). Die Genehmigung erfolgt meist in Minuten, es wird jedoch empfohlen, den Antrag mindestens 72 Stunden vor dem Abflug zu stellen."
+    },
+    {
+      "question": "Sind die Informationen in diesem Ratgeber auf dem neuesten Stand?",
+      "answer": "Ja, das Tool basiert auf den aktuellsten behördlichen Bestimmungen für die WM 2026, einschließlich Kanadas vereinfachtem eTA-Verfahren für Inhaber von US-Visa. Da sich Grenzregeln ändern können, empfehlen wir eine Endkontrolle auf den offiziellen Regierungsseiten."
+    }
+  ]
+}

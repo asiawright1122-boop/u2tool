@@ -1,0 +1,32 @@
+{
+  "detailed_description": "A free interactive tool designed for fans attending the FIFA World Cup 2026, helping navigate the complex visa and border control regulations of the US, Canada, and Mexico. Simply select your nationality, existing visas, and custom itinerary across the 16 host cities. The tool dynamically calculates requirements for each international leg, offering warnings on multiple crossings, step-by-step guidance on ESTA/eTA eligibility, visa exemptions, and a personalized checklist of documents to carry.",
+  "usage_steps": [
+    "Select your passport issuing country (nationality) and check any valid visas you currently hold (e.g., US B1/B2, Canada Visa, Schengen, etc.).",
+    "In the 'Itinerary Route' section, add host cities in the order you plan to visit them. You can adjust the order using the up/down buttons.",
+    "Instantly review the dynamic 'Transit Leg Reports' below to see specific visa requirements and exemptions for each border crossing.",
+    "Follow the dynamically generated 'Customs Checklist' to prepare all required digital and physical documents before departure."
+  ],
+  "usage_examples": [
+    "Chinese passport holder with no visas traveling from Seattle to Vancouver: System alerts that both US B1/B2 visa and Canada Visitor Visa (TRV) are required.",
+    "Chinese passport holder with a valid US B1/B2 visa visiting Mexico City: System confirms visa exemption for Mexico and adds the US visa to the document checklist.",
+    "UK passport holder visiting matches in New York and Toronto: System reminds them to apply for both US ESTA and Canada eTA before departure."
+  ],
+  "faqs": [
+    {
+      "question": "Does Mexico's visa exemption using a US visa apply to all nationalities?",
+      "answer": "Yes. According to Mexican immigration regulations, travelers of any nationality holding a valid, active multiple-entry visa from the USA, Canada, UK, Japan, or the Schengen Area can enter Mexico visa-free for tourism or match attendance."
+    },
+    {
+      "question": "What are the risks of entering the same country multiple times on my route?",
+      "answer": "If you cross borders multiple times (e.g., US -> Canada -> US), you must hold a multiple-entry visa. A single-entry visa becomes invalid once you exit the country, and you will be denied re-entry. The tool flags multiple crossings to remind you to verify your visa's entry allowance."
+    },
+    {
+      "question": "What are ESTA and eTA, and when should I apply?",
+      "answer": "ESTA (US) and eTA (Canada) are electronic travel authorizations for visa-exempt passport holders (such as GBR, JPN, FRA, etc.). While usually approved within minutes or hours, it is officially recommended to apply at least 72 hours before boarding your flight to account for any processing delays."
+    },
+    {
+      "question": "Is the information provided by this assistant up to date?",
+      "answer": "Yes, this tool is updated with the latest consulate rules for the 2026 World Cup, including Canada's simplified eTA program for certain nationalities holding US visas. However, border rules can change, so we recommend double-checking official immigration websites before you travel."
+    }
+  ]
+}
