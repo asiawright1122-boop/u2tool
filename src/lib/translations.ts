@@ -38,6 +38,13 @@ const bundledBaseMessageModules: Record<string, () => Promise<MessagesRecord>> =
       })
     : {};
 
+const bundledToolMessageModules: Record<string, () => Promise<MessagesRecord>> =
+  typeof import.meta.glob === 'function'
+    ? import.meta.glob<MessagesRecord>('../messages/*/tools/*.json', {
+        import: 'default',
+      })
+    : {};
+
 function getAssetCacheKey(assetBaseUrl?: string | URL): string {
   if (!assetBaseUrl) {
     return 'default';
@@ -109,7 +116,8 @@ async function readJsonFromFile(relativePath: string): Promise<MessagesRecord | 
 }
 
 async function readBundledJson(relativePath: string): Promise<MessagesRecord | null> {
-  const loadBundledMessages = bundledBaseMessageModules[relativePath];
+  const loadBundledMessages =
+    bundledBaseMessageModules[relativePath] ?? bundledToolMessageModules[relativePath];
   if (!loadBundledMessages) {
     return null;
   }

@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import {
@@ -8,6 +8,20 @@ import {
   loadToolMessages,
   loadToolPageMessages,
 } from './translations';
+
+let mockFsUnavailable = false;
+vi.mock('node:fs/promises', async (importOriginal) => {
+  const original = await importOriginal<typeof import('node:fs/promises')>();
+  return {
+    ...original,
+    readFile: async (path: any, options: any) => {
+      if (mockFsUnavailable) {
+        throw new Error('FS unavailable simulation');
+      }
+      return original.readFile(path, options);
+    }
+  };
+});
 
 function readSplitToolMessages(slug: string): Record<string, unknown> {
   return JSON.parse(readFileSync(new URL(`../messages/en/tools/${slug}.json`, import.meta.url), 'utf-8'));
@@ -238,6 +252,28 @@ describe('translations module', () => {
       expect(toolDetailPageSource).toContain('rawFaqs.length === 0');
       expect(toolDetailPageSource).toContain('supportContentFallback?.faqs ?? []');
       expect(toolDetailPageSource).toContain('safeToolMessages.faqs = faqs');
+    });
+
+    it('loadDetailedToolMessages loads from memory glob without triggering network fetch when fs is unavailable', async () => {
+      mockFsUnavailable = true;
+
+      const originalFetch = globalThis.fetch;
+      let fetchCalled = false;
+      globalThis.fetch = async () => {
+        fetchCalled = true;
+        return new Response('{}');
+      };
+
+      try {
+        const messages = await loadToolPageMessages('en', 'json-formatter');
+        expect(messages.detailed_description).toBeDefined();
+        // Since we mocked FS, it must either use the bundled glob memory or fallback to fetch.
+        // We assert that fetch should NOT be called (which will fail initially because tools are not glob-bundled yet).
+        expect(fetchCalled).toBe(false);
+      } finally {
+        mockFsUnavailable = false;
+        globalThis.fetch = originalFetch;
+      }
     });
   });
 });
