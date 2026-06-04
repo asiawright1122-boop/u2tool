@@ -32,6 +32,24 @@
 ## Active Milestone: v0.0.12 Growth Acceleration and High-Performance Tool Expansion
 
 ### Phase 40: Milestone Kickoff & Scoped Requirements Definition
-- [ ] Align on requirements for performance tuning and tool growth
-- [ ] Establish initial research and scope definition
+- [/] Align on requirements for performance tuning and tool growth
+- [/] Establish initial research and scope definition
+
+### Phase 41: Performance Tuning & Loading Optimization (SmartLink & Translation Splitting)
+- [ ] Implement SmartLink prefetching with network-aware API guards
+- [ ] Devise split translation loading for specialized tools to trim base bundle weight
+- [ ] Verify HTTP Edge cache controls for APIs and dynamic route handlers
+
+### Phase 42: SEO Restoration & GSC Canonical Compliance
+- [ ] Fix query route canonical drifts and enforce strict rendering contracts
+- [ ] Implement playbook metadata and link adjustments for GSC recovered paths
+
+### Phase 43: Office Tools Implementation (Invoice, Resume, Signature, Pomodoro)
+- [ ] Develop Svelte 5 Invoice Generator and Resume Builder Svelte components
+- [ ] Implement Canvas-backed Signature Pad and reactive Pomodoro Timer Svelte components
+
+### Phase 44: i18n Translations & Production Verification Gate
+- [ ] Translate all new office tools across 10 locales and verify width limits
+- [ ] Run complete verify:production test suite and close v0.0.12 milestone
+
 
