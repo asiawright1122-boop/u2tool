@@ -301,4 +301,34 @@ describe('html edge cache middleware', () => {
     expect(next).toHaveBeenCalledTimes(1);
     expect(response.headers.get('location')).toBeNull();
   });
+
+  it('redirects tools requests containing category search param to canonical category path', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+
+    // 1. Unlocalized path with category
+    const { response: res1 } = await runMiddleware(
+      new Request('https://www.u2tool.com/tools/?category=math'),
+      next
+    );
+    expect(res1.status).toBe(301);
+    expect(res1.headers.get('location')).toBe('/en/categories/math/');
+
+    // 2. Localized path with category (zh)
+    const { response: res2 } = await runMiddleware(
+      new Request('https://www.u2tool.com/zh/tools?category=encoding'),
+      next
+    );
+    expect(res2.status).toBe(301);
+    expect(res2.headers.get('location')).toBe('/zh/categories/encoding/');
+
+    // 3. Localized path with category and other params
+    const { response: res3 } = await runMiddleware(
+      new Request('https://www.u2tool.com/en/tools/?category=math&q=word'),
+      next
+    );
+    expect(res3.status).toBe(301);
+    expect(res3.headers.get('location')).toBe('/en/categories/math/?q=word');
+
+    expect(next).not.toHaveBeenCalled();
+  });
 });
