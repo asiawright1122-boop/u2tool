@@ -1,28 +1,79 @@
 {
-  "detailed_description": "Developer Cryptography & Hash Toolbox — Local high-performance hash generator and encryption suite with dynamic microsecond benchmark dashboards. Review the calculated or generated result.",
+  "title": "Developer Cryptography & Hash Toolbox",
+  "subtitle": "Swiss Private Banking Matte-Gold Local Cryptographic Suite",
+  "hashTab": "Hashing (MD5/SHA)",
+  "bcryptTab": "Password Hash (bcrypt)",
+  "aesTab": "Symmetric (AES)",
+  "rsaTab": "Asymmetric (RSA)",
+  "benchmarkTab": "Performance (Benchmark)",
+  "inputLabel": "Raw Input Text",
+  "inputPlaceholder": "Type or paste plaintext to process...",
+  "md5Label": "MD5 Digest",
+  "sha256Label": "SHA-256 Digest",
+  "copy": "Copy",
+  "copied": "Copied",
+  "bcryptCost": "Cost Rounds",
+  "bcryptGenerate": "Generate bcrypt Hash",
+  "bcryptVerifyTab": "Verify Hash",
+  "bcryptVerifyBtn": "Verify Password Match",
+  "bcryptResult": "Match Integrity Status",
+  "aesKey": "256-bit Secret Key",
+  "aesEncrypt": "AES Encrypt",
+  "aesDecrypt": "AES Decrypt",
+  "aesOutput": "Ciphertext Output",
+  "rsaGenerate": "Generate 2048-bit Key Pair",
+  "rsaKeyPair": "RSA Key Pair (PEM Format)",
+  "rsaSign": "Digital Sign",
+  "rsaVerify": "Verify Signature",
+  "runBenchmark": "Execute Performance Run",
+  "benchmarkDesc": "Measures execution latency across algorithms on active payload (microseconds/µs, lower is faster)",
+  "matching": "Match Successful",
+  "notMatching": "Mismatch / Invalid",
+  "verifyResultSuccess": "Signature Verified! Integrity is completely intact.",
+  "verifyResultFail": "Verification Failed! Invalid signature or key mismatch.",
+  "decryptedOutput": "Decrypted Output",
+  "rsaKeyManager": "RSA-2048 Key Pair Manager",
+  "generating": "Generating...",
+  "publicKeyLabel": "Public Key (SPKI/PEM):",
+  "privateKeyLabel": "Private Key (PKCS8/PEM):",
+  "noKeyGenerated": "No key generated yet.",
+  "rsaSignVerifyIsland": "RSA Signature & Verification Island",
+  "signPayloadBtn": "Sign Payload with Private Key",
+  "payloadToVerify": "Payload to Verify:",
+  "signatureHex": "Signature (Hex):",
+  "verifySignatureBtn": "Verify Signature Validity",
+  "performanceBenchmarking": "Real-time Performance Benchmarking",
+  "benchmarkingAlgorithms": "Benchmarking Algorithms...",
+  "generator": "Generator",
+  "hashOutput": "Hash Output:",
+  "clickToGenerate": "Click button to generate...",
+  "verifyPassword": "Verify Password:",
+  "verifyHash": "Verify Hash:",
+  "plaintextPayload": "Plaintext Payload",
+  "detailed_description": "Developer Cryptography & Hash Toolbox — Local high-performance hash generator and encryption suite with dynamic microsecond benchmark dashboards.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter the raw payload string in the master input area",
+    "Select the target cryptographic algorithm (such as AES, RSA, or bcrypt)",
+    "Enter a custom key or trigger a 2048-bit RSA key pair generation",
+    "View, compare, or copy the processed hashes, ciphertext, or benchmark metrics"
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Perform high-security local bcrypt hashing and matching verification in-browser",
+    "Generate verifiable digital signatures or SHA-256 checksum fingerprints for payloads",
+    "Benchmarking microseconds speed comparisons between various crypto functions"
   ],
   "faqs": [
     {
-      "question": "Developer Cryptography & Hash Toolbox is free?",
-      "answer": "Yes. The tool runs free in the browser and does not require an account."
+      "question": "Is the Cryptography Toolbox free to use?",
+      "answer": "Yes. The tool operates 100% free within the client browser, requiring no registration or premium fees."
     },
     {
-      "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "question": "Are my keys or inputs uploaded to any server?",
+      "answer": "No. All computations are conducted entirely on your local machine using standard HTML5 Web Crypto APIs."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "What is the RSA modulus length configured?",
+      "answer": "It defaults to a highly robust 2048-bit RSASSA-PKCS1-v1_5 format, which is safe for general developer testing."
     }
   ]
 }

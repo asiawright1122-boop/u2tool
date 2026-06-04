@@ -146,6 +146,9 @@ import {
   superscriptMap,
   validateIP,
   vigenereCipher,
+  K,
+  bicDatabase,
+  emojiData,
 } from './tool-stubs';
 
 describe('tool-stubs runtime replacements', () => {
@@ -1012,5 +1015,19 @@ observer.observe(document.body, { childList: true });
     expect(svg).toContain('<svg');
     expect(svg).toContain('Regular expression diagram');
     expect(svg).not.toContain('<script');
+  });
+
+  it('provides genuine developer-db and emojiData reference collections', () => {
+    // 验证 K (物理/密码学常量)
+    expect(K).toBeInstanceOf(Array);
+    expect(K.some(c => c.symbol === 'c' && c.value === 299792458)).toBe(true);
+
+    // 验证 bicDatabase (SWIFT/BIC 银行代码)
+    expect(bicDatabase).toBeInstanceOf(Object);
+    expect(bicDatabase['CHASUS33XXX']).toMatchObject({ bankName: 'JPMorgan Chase Bank, N.A.', city: 'New York' });
+
+    // 验证 emojiData (表情数据)
+    expect(emojiData).toBeInstanceOf(Array);
+    expect(emojiData.some(e => e.emoji === '😀' && e.category === 'smileys')).toBe(true);
   });
 });

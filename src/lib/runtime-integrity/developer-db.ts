@@ -12,7 +12,7 @@ export interface PhysicalConstant {
   unit: string;
 }
 
-export const runtimeBicDatabase: Record<string, BicInfo> = {
+export const bicDatabase: Record<string, BicInfo> = {
   // United States
   'CHASUS33XXX': { bankName: 'JPMorgan Chase Bank, N.A.', city: 'New York', country: 'US', branch: 'Head Office' },
   'BOFAUS3NXXX': { bankName: 'Bank of America, N.A.', city: 'Charlotte', country: 'US', branch: 'Head Office' },
@@ -43,7 +43,7 @@ export const runtimeBicDatabase: Record<string, BicInfo> = {
   'MHCBJPJTXXX': { bankName: 'Mizuho Bank, Ltd.', city: 'Tokyo', country: 'JP', branch: 'Head Office' }
 };
 
-export const runtimeK: PhysicalConstant[] = [
+export const K: PhysicalConstant[] = [
   { symbol: 'c', name: 'Speed of Light in Vacuum', value: 299792458, unit: 'm/s' },
   { symbol: 'G', name: 'Newtonian Constant of Gravitation', value: 6.6743e-11, unit: 'm^3 kg^-1 s^-2' },
   { symbol: 'h', name: 'Planck Constant', value: 6.62607015e-34, unit: 'J s' },

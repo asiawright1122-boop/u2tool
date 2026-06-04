@@ -1,28 +1,79 @@
 {
-  "detailed_description": "Caixa de Ferramentas Criptográficas de Desenvolvedor — Gerador de hashes e suíte de criptografia local de alto desempenho com gráficos de benchmarking em microssegundos. Revise o resultado calculado ou gerado.",
+  "title": "Caixa de Ferramentas Criptográfica",
+  "subtitle": "Suite criptográfica local de alta qualidade estilo banco privado suíço",
+  "hashTab": "Hashing (MD5/SHA)",
+  "bcryptTab": "Hash de senha (bcrypt)",
+  "aesTab": "Simétrico (AES)",
+  "rsaTab": "Asimétrico (RSA)",
+  "benchmarkTab": "Rendimento (Benchmark)",
+  "inputLabel": "Texto de entrada bruto",
+  "inputPlaceholder": "Digite ou cole texto simples para processar...",
+  "md5Label": "MD5 Digest",
+  "sha256Label": "SHA-256 Digest",
+  "copy": "Copiar",
+  "copied": "Copiado",
+  "bcryptCost": "Rondas de custo",
+  "bcryptGenerate": "Gerar hash bcrypt",
+  "bcryptVerifyTab": "Verificar hash",
+  "bcryptVerifyBtn": "Confirmar correspondência",
+  "bcryptResult": "Status de correspondência",
+  "aesKey": "Chave secreta de 256 bits",
+  "aesEncrypt": "Criptografar AES",
+  "aesDecrypt": "Descriptografar AES",
+  "aesOutput": "Saída de texto criptografado",
+  "rsaGenerate": "Gerar par de chaves de 2048 bits",
+  "rsaKeyPair": "Par de chaves RSA (formato PEM)",
+  "rsaSign": "Assinar digitalmente",
+  "rsaVerify": "Verificar assinatura",
+  "runBenchmark": "Iniciar benchmark",
+  "benchmarkDesc": "Mede a latência de processamento em microssegundos (µs) de cada algoritmo sobre a carga útil ativa (menor é melhor)",
+  "matching": "Correspondência com sucesso",
+  "notMatching": "Diferente / Inválido",
+  "verifyResultSuccess": "Assinatura verificada! A integridade dos dados está completamente intacta.",
+  "verifyResultFail": "Falha na verificação! Assinatura inválida ou chave incorreta.",
+  "decryptedOutput": "Saída descriptografada",
+  "rsaKeyManager": "Gestor de par de chaves RSA-2048",
+  "generating": "Gerando...",
+  "publicKeyLabel": "Chave pública (SPKI/PEM):",
+  "privateKeyLabel": "Chave privada (PKCS8/PEM):",
+  "noKeyGenerated": "Nenhum par de chaves gerado ainda.",
+  "rsaSignVerifyIsland": "Módulo de assinatura e verificação RSA",
+  "signPayloadBtn": "Assinar carga útil com chave privada",
+  "payloadToVerify": "Carga útil a verificar:",
+  "signatureHex": "Assinatura (Hex):",
+  "verifySignatureBtn": "Verificar validade da assinatura",
+  "performanceBenchmarking": "Teste de rendimento em tempo real dos algoritmos",
+  "benchmarkingAlgorithms": "Executando benchmark...",
+  "generator": "Gerador",
+  "hashOutput": "Saída de hash:",
+  "clickToGenerate": "Clique no botão acima...",
+  "verifyPassword": "Confirmar senha:",
+  "verifyHash": "Confirmar hash:",
+  "plaintextPayload": "Carga útil de texto simples",
+  "detailed_description": "Caixa de ferramentas de criptografia para desenvolvedores: gerador de hash e suite de criptografia local de alto desempenho com gráficos em microssegundos.",
   "usage_steps": [
-    "Digite os valores necessários no formulário",
-    "Revise o resultado calculado ou gerado",
-    "Copie o resultado ou use a prévia exibida",
-    "Ajuste os valores para comparar outro cenário"
+    "Introduza o texto simples na caixa de texto mestra",
+    "Selecione o algoritmo desejado (AES, RSA ou bcrypt)",
+    "Defina uma chave ou gere um par de chaves RSA de 2048 bits",
+    "Visualize e copie os hashes, textos criptografados ou métricas de velocidade"
   ],
   "usage_examples": [
-    "Use em uma revisão ou planejamento rápido",
-    "Compare cenários sem criar uma planilha",
-    "Crie resultados prontos para relatórios, campanhas ou notas"
+    "Gerar hash bcrypt seguro de senha de forma 100% local no browser",
+    "Assinar payloads para evitar adulteração de dados com assinaturas digitais",
+    "Comparar a latência em microssegundos de diferentes métodos de cifragem"
   ],
   "faqs": [
     {
-      "question": "Caixa de Ferramentas Criptográficas de Desenvolvedor é grátis?",
-      "answer": "Sim. A ferramenta é gratuita no navegador e não exige conta."
+      "question": "Esta caixa de ferramentas é gratuita?",
+      "answer": "Sim. As operações rodam no cliente sem qualquer tipo de conta ou taxa."
     },
     {
-      "question": "A ferramenta envia meus dados?",
-      "answer": "Não. O cálculo ou a geração roda localmente no navegador."
+      "question": "Meus dados são enviados para a rede?",
+      "answer": "Não. Todas as criptografias e benchmarks rodam no navegador com a Web Crypto API."
     },
     {
-      "question": "Há alguma observação importante?",
-      "answer": "Use o resultado como apoio prático e revise-o antes de publicar ou depender dele."
+      "question": "Qual formato de assinatura o módulo RSA utiliza?",
+      "answer": "Utiliza o formato RSASSA-PKCS1-v1_5 de 2048 bits."
     }
   ]
 }

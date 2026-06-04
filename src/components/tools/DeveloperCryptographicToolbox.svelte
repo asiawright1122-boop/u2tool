@@ -12,88 +12,14 @@
 
   // Translation helpers
   function t(key: string, defaultValue = ''): string {
-    const scope = translations['tools']?.['developer-cryptography-toolbox'] as Record<string, unknown> || {};
+    const scope = translations?.['tools']?.['developer-cryptography-toolbox'] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) {
       value = (value as Record<string, unknown>)?.[k];
     }
     if (typeof value === 'string') return value;
-    
-    // Fallback translation mappings for professional multilingual fidelity
-    const fallbacks: Record<string, Record<string, string>> = {
-      zh: {
-        'title': '开发者密码学与哈希工具箱',
-        'subtitle': '瑞士私银级哑光暗金本地算法精算大屏',
-        'hashTab': '哈希算法 (Hash)',
-        'bcryptTab': '密码哈希 (bcrypt)',
-        'aesTab': '对称加密 (AES)',
-        'rsaTab': '非对称加密 (RSA)',
-        'benchmarkTab': '性能跑分 (Benchmark)',
-        'inputLabel': '原始明文输入 (Input String)',
-        'inputPlaceholder': '在此处输入您需要进行密码学处理的明文数据...',
-        'md5Label': 'MD5 哈希值',
-        'sha256Label': 'SHA-256 安全哈希',
-        'copy': '复制',
-        'copied': '已复制',
-        'bcryptCost': '计算成本 (Cost Rounds)',
-        'bcryptGenerate': '生成 bcrypt 哈希',
-        'bcryptVerifyTab': '验证哈希',
-        'bcryptVerifyBtn': '校验密码匹配性',
-        'bcryptResult': '密码与哈希匹配状态',
-        'aesKey': '256位密钥 (HEX 或 Base64)',
-        'aesEncrypt': 'AES 加密 (Encrypt)',
-        'aesDecrypt': 'AES 解密 (Decrypt)',
-        'aesOutput': '密文输出 (Ciphertext)',
-        'rsaGenerate': '生成 2048-bit 密钥对',
-        'rsaKeyPair': 'RSA 密钥对 (PEM 格式)',
-        'rsaSign': '数字签名 (Sign)',
-        'rsaVerify': '验证签名 (Verify)',
-        'runBenchmark': '启动算法性能跑分',
-        'benchmarkDesc': '测试各加密算法在当前输入下的处理耗时（微秒/μs，值越低性能越好）',
-        'matching': '匹配成功',
-        'notMatching': '匹配失败',
-        'verifyResultSuccess': '数字签名校验成功！数据完整且未被篡改。',
-        'verifyResultFail': '数字签名校验失败！签名无效或密钥不匹配。',
-      },
-      en: {
-        'title': 'Developer Cryptography & Hash Toolbox',
-        'subtitle': 'Swiss Private Banking Matte-Gold Local Cryptographic Suite',
-        'hashTab': 'Hashing (MD5/SHA)',
-        'bcryptTab': 'Password Hash (bcrypt)',
-        'aesTab': 'Symmetric (AES)',
-        'rsaTab': 'Asymmetric (RSA)',
-        'benchmarkTab': 'Performance (Benchmark)',
-        'inputLabel': 'Raw Input Text',
-        'inputPlaceholder': 'Type or paste plaintext to process...',
-        'md5Label': 'MD5 Digest',
-        'sha256Label': 'SHA-256 Digest',
-        'copy': 'Copy',
-        'copied': 'Copied',
-        'bcryptCost': 'Cost Rounds',
-        'bcryptGenerate': 'Generate bcrypt Hash',
-        'bcryptVerifyTab': 'Verify Hash',
-        'bcryptVerifyBtn': 'Verify Password Match',
-        'bcryptResult': 'Match Integrity Status',
-        'aesKey': '256-bit Secret Key',
-        'aesEncrypt': 'AES Encrypt',
-        'aesDecrypt': 'AES Decrypt',
-        'aesOutput': 'Ciphertext Output',
-        'rsaGenerate': 'Generate 2048-bit Key Pair',
-        'rsaKeyPair': 'RSA Key Pair (PEM Format)',
-        'rsaSign': 'Digital Sign',
-        'rsaVerify': 'Verify Signature',
-        'runBenchmark': 'Execute Performance Run',
-        'benchmarkDesc': 'Measures execution latency across algorithms on active payload (microseconds/µs, lower is faster)',
-        'matching': 'Match Successful',
-        'notMatching': 'Mismatch / Invalid',
-        'verifyResultSuccess': 'Signature Verified! Integrity is completely intact.',
-        'verifyResultFail': 'Verification Failed! Invalid signature or key mismatch.',
-      }
-    };
-    
-    const curLocale = locale === 'zh' ? 'zh' : 'en';
-    return fallbacks[curLocale]?.[key] || defaultValue || key;
+    return defaultValue || key;
   }
 
   // Active Tab
@@ -666,7 +592,7 @@
         <!-- Generator -->
         <div class="space-y-4">
           <div class="flex items-center justify-between">
-            <span class="text-xs font-mono font-bold text-amber-500 uppercase tracking-wider">{t('bcryptTab')} Generator</span>
+            <span class="text-xs font-mono font-bold text-gray-400 uppercase tracking-wider">{t('bcryptTab')} {t('generator')}</span>
             <div class="flex items-center gap-2">
               <span class="text-[11px] font-mono text-gray-500">{t('bcryptCost')}:</span>
               <input
@@ -686,7 +612,7 @@
           </button>
           <div class="space-y-2">
             <div class="flex justify-between items-center">
-              <span class="text-[11px] font-mono text-gray-500">Hash Output:</span>
+              <span class="text-[11px] font-mono text-gray-500">{t('hashOutput')}</span>
               <button
                 onclick={() => copyText(bcryptHash, 'bcrypt')}
                 class="p-1 hover:bg-amber-500/10 text-gray-400 hover:text-amber-300 rounded transition-all duration-300"
@@ -699,7 +625,7 @@
               </button>
             </div>
             <div class="p-3 bg-black/60 border border-gray-900 rounded-xl font-mono text-xs break-all text-amber-200 select-all">
-              {bcryptHash || 'Click button to generate...'}
+              {bcryptHash || t('clickToGenerate')}
             </div>
           </div>
         </div>
@@ -709,16 +635,18 @@
           <span class="text-xs font-mono font-bold text-amber-500 uppercase tracking-wider block">{t('bcryptVerifyTab')}</span>
           <div class="space-y-3">
             <div>
-              <label class="text-[11px] font-mono text-gray-500 block mb-1">Verify Password:</label>
+              <label for="bcrypt-verify-password" class="text-[11px] font-mono text-gray-500 block mb-1">{t('verifyPassword')}</label>
               <input
+                id="bcrypt-verify-password"
                 type="text"
                 bind:value={verifyPassword}
                 class="w-full px-3 py-2 bg-black border border-gray-800 rounded-xl text-xs font-mono text-gray-200"
               />
             </div>
             <div>
-              <label class="text-[11px] font-mono text-gray-500 block mb-1">Verify Hash:</label>
+              <label for="bcrypt-verify-hash" class="text-[11px] font-mono text-gray-500 block mb-1">{t('verifyHash')}</label>
               <input
+                id="bcrypt-verify-hash"
                 type="text"
                 bind:value={verifyHash}
                 class="w-full px-3 py-2 bg-black border border-gray-800 rounded-xl text-xs font-mono text-amber-200"
@@ -789,8 +717,9 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div class="space-y-2">
-            <label class="text-xs font-mono text-gray-400 block">Plaintext Payload</label>
+            <label for="aes-plaintext" class="text-xs font-mono text-gray-400 block">{t('plaintextPayload')}</label>
             <textarea
+              id="aes-plaintext"
               bind:value={aesPlaintext}
               class="w-full h-24 p-3 bg-black/60 border border-gray-900 rounded-xl text-xs font-mono text-gray-300"
             ></textarea>
@@ -818,7 +747,7 @@
 
         {#if aesDecrypted}
           <div class="p-4 bg-amber-500/5 border border-amber-500/20 rounded-xl text-xs font-mono text-amber-300">
-            <strong>Decrypted Output:</strong> {aesDecrypted}
+            <strong>{t('decryptedOutput')}:</strong> {aesDecrypted}
           </div>
         {/if}
       </div>
@@ -828,14 +757,14 @@
     {#if activeTab === 'rsa'}
       <div class="space-y-6">
         <div class="flex flex-col sm:flex-row gap-4 items-center justify-between">
-          <span class="text-xs font-mono font-bold text-gray-400">RSA-2048 Key Pair Manager</span>
+          <span class="text-xs font-mono font-bold text-gray-400">{t('rsaKeyManager')}</span>
           <button
             onclick={generateRSAKeys}
             disabled={rsaGenerating}
             class="px-4 py-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 disabled:opacity-50 text-black font-semibold rounded-xl text-xs font-mono transition-all duration-300 flex items-center gap-1.5"
           >
             {#if rsaGenerating}
-              <RefreshCw class="w-3.5 h-3.5 animate-spin" /> Generating...
+              <RefreshCw class="w-3.5 h-3.5 animate-spin" /> {t('generating')}
             {:else}
               <Key class="w-3.5 h-3.5" /> {t('rsaGenerate')}
             {/if}
@@ -846,7 +775,7 @@
           <!-- Public Key -->
           <div class="space-y-2">
             <div class="flex justify-between items-center">
-              <span class="text-[11px] font-mono text-gray-500">Public Key (SPKI/PEM):</span>
+              <span class="text-[11px] font-mono text-gray-500">{t('publicKeyLabel')}</span>
               <button
                 onclick={() => copyText(rsaPublicKeyPem, 'pubPem')}
                 class="text-[10px] text-amber-500 font-mono hover:underline"
@@ -856,14 +785,14 @@
             </div>
             <textarea
               readOnly
-              value={rsaPublicKeyPem || 'No key generated yet.'}
+              value={rsaPublicKeyPem || t('noKeyGenerated')}
               class="w-full h-32 p-3 bg-black/60 border border-gray-900 rounded-xl text-[10px] font-mono text-gray-400"
             ></textarea>
           </div>
           <!-- Private Key -->
           <div class="space-y-2">
             <div class="flex justify-between items-center">
-              <span class="text-[11px] font-mono text-gray-500">Private Key (PKCS8/PEM):</span>
+              <span class="text-[11px] font-mono text-gray-500">{t('privateKeyLabel')}</span>
               <button
                 onclick={() => copyText(rsaPrivateKeyPem, 'privPem')}
                 class="text-[10px] text-amber-500 font-mono hover:underline"
@@ -873,7 +802,7 @@
             </div>
             <textarea
               readOnly
-              value={rsaPrivateKeyPem || 'No key generated yet.'}
+              value={rsaPrivateKeyPem || t('noKeyGenerated')}
               class="w-full h-32 p-3 bg-black/60 border border-gray-900 rounded-xl text-[10px] font-mono text-gray-400"
             ></textarea>
           </div>
@@ -882,28 +811,30 @@
         <!-- Signing/Verification flows -->
         <div class="p-5 bg-gray-900/20 border border-gray-900 rounded-2xl space-y-4">
           <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
-            <span class="text-xs font-mono font-bold text-amber-500 uppercase tracking-wider">{t('rsaSign')} & {t('rsaVerify')} Island</span>
+            <span class="text-xs font-mono font-bold text-amber-500 uppercase tracking-wider">{t('rsaSignVerifyIsland')}</span>
             <button
               onclick={rsaSignPayload}
               disabled={!rsaPrivateKeyPem}
               class="w-full md:w-auto px-4 py-2 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-300 disabled:opacity-30 rounded-xl text-xs font-mono transition-all duration-300"
             >
-              Sign Payload with Private Key
+              {t('signPayloadBtn')}
             </button>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div class="space-y-2">
-              <label class="text-[11px] font-mono text-gray-500 block">Payload to Verify:</label>
+              <label for="rsa-verify-payload" class="text-[11px] font-mono text-gray-500 block">{t('payloadToVerify')}</label>
               <input
+                id="rsa-verify-payload"
                 type="text"
                 bind:value={rsaVerifyInput}
                 class="w-full px-3 py-2 bg-black border border-gray-800 rounded-xl text-xs font-mono text-gray-200"
               />
             </div>
             <div class="space-y-2">
-              <label class="text-[11px] font-mono text-gray-500 block">Signature (Hex):</label>
+              <label for="rsa-verify-signature" class="text-[11px] font-mono text-gray-500 block">{t('signatureHex')}</label>
               <input
+                id="rsa-verify-signature"
                 type="text"
                 bind:value={rsaVerifySignatureInput}
                 class="w-full px-3 py-2 bg-black border border-gray-800 rounded-xl text-xs font-mono text-amber-200"
@@ -916,7 +847,7 @@
             disabled={!rsaPublicKeyPem || !rsaVerifySignatureInput}
             class="w-full py-2 bg-amber-500 text-black font-semibold rounded-xl text-xs font-mono hover:bg-amber-400 transition-all duration-300"
           >
-            Verify Signature Validity
+            {t('verifySignatureBtn')}
           </button>
 
           {#if rsaVerificationStatus !== 'idle'}
@@ -937,7 +868,7 @@
       <div class="space-y-6">
         <div class="flex flex-col md:flex-row items-center justify-between gap-4">
           <div class="space-y-1">
-            <span class="text-xs font-mono font-bold text-amber-500 uppercase tracking-wider block">Real-time Performance Benchmarking</span>
+            <span class="text-xs font-mono font-bold text-amber-500 uppercase tracking-wider block">{t('performanceBenchmarking')}</span>
             <p class="text-[11px] text-gray-400">
               {t('benchmarkDesc')}
             </p>
@@ -948,7 +879,7 @@
             class="w-full md:w-auto px-6 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 disabled:opacity-50 text-black font-semibold rounded-xl text-xs font-mono shadow-[0_0_15px_rgba(245,158,11,0.2)] transition-all duration-300 flex items-center justify-center gap-2"
           >
             <Zap class="w-4 h-4" />
-            {benchmarkRunning ? 'Benchmarking Algorithms...' : t('runBenchmark')}
+            {benchmarkRunning ? t('benchmarkingAlgorithms') : t('runBenchmark')}
           </button>
         </div>
 

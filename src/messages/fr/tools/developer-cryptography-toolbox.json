@@ -1,28 +1,79 @@
 {
-  "detailed_description": "Boîte à Outils Cryptographiques de Développeur — Générateur de hash et suite de chiffrement local haute performance avec graphiques de benchmark en microsecondes. Vérifiez le résultat calculé ou généré.",
+  "title": "Boîte à Outils Criptographique",
+  "subtitle": "Suite de chiffrement locale haut de gamme style banque privée suisse",
+  "hashTab": "Hachage (MD5/SHA)",
+  "bcryptTab": "Hachage de mot de passe (bcrypt)",
+  "aesTab": "Symétrique (AES)",
+  "rsaTab": "Asymétrique (RSA)",
+  "benchmarkTab": "Performance (Benchmark)",
+  "inputLabel": "Texte d'entrée brut",
+  "inputPlaceholder": "Entrez ou collez le texte en clair à traiter...",
+  "md5Label": "Empreinte MD5",
+  "sha256Label": "Empreinte SHA-256",
+  "copy": "Copier",
+  "copied": "Copié",
+  "bcryptCost": "Rondes de coût",
+  "bcryptGenerate": "Générer le hash bcrypt",
+  "bcryptVerifyTab": "Vérifier le hash",
+  "bcryptVerifyBtn": "Vérifier la correspondance",
+  "bcryptResult": "Statut de correspondance",
+  "aesKey": "Clé secrète 256 bits",
+  "aesEncrypt": "Chiffrer avec AES",
+  "aesDecrypt": "Déchiffrer avec AES",
+  "aesOutput": "Sortie du texte chiffré",
+  "rsaGenerate": "Générer une paire de clés 2048 bits",
+  "rsaKeyPair": "Paire de clés RSA (format PEM)",
+  "rsaSign": "Signer numériquement",
+  "rsaVerify": "Vérifier la signature",
+  "runBenchmark": "Lancer le benchmark",
+  "benchmarkDesc": "Mesure la latence d'exécution des algorithmes en microsecondes (µs) sur les données actives (le plus bas est le plus rapide)",
+  "matching": "Correspondance réussie",
+  "notMatching": "Non correspondant / Invalide",
+  "verifyResultSuccess": "Signature vérifiée avec succès ! L'intégrité des données est préservée.",
+  "verifyResultFail": "Échec de la vérification ! Signature invalide ou clé non correspondante.",
+  "decryptedOutput": "Sortie déchiffrée",
+  "rsaKeyManager": "Gestionnaire de paire de clés RSA-2048",
+  "generating": "Génération...",
+  "publicKeyLabel": "Clé publique (SPKI/PEM):",
+  "privateKeyLabel": "Clé privée (PKCS8/PEM):",
+  "noKeyGenerated": "Aucune clé générée pour le moment.",
+  "rsaSignVerifyIsland": "Module de signature et vérification RSA",
+  "signPayloadBtn": "Signer les données avec la clé privée",
+  "payloadToVerify": "Données à vérifier:",
+  "signatureHex": "Signature (Hex):",
+  "verifySignatureBtn": "Vérifier la validité de la signature",
+  "performanceBenchmarking": "Benchmark de performance des algorithmes en temps réel",
+  "benchmarkingAlgorithms": "Mesure en cours...",
+  "generator": "Générateur",
+  "hashOutput": "Sortie du hash:",
+  "clickToGenerate": "Cliquez sur le bouton ci-dessus...",
+  "verifyPassword": "Confirmer mot de passe:",
+  "verifyHash": "Confirmer le hash:",
+  "plaintextPayload": "Données en clair",
+  "detailed_description": "Boîte à outils de cryptographie pour développeurs — Générateur de hachage et suite de chiffrement local avec graphiques de performance en microsecondes.",
   "usage_steps": [
-    "Saisissez les valeurs requises dans le formulaire",
-    "Vérifiez le résultat calculé ou généré",
-    "Copiez le résultat ou utilisez l’aperçu affiché",
-    "Ajustez les valeurs pour comparer un autre scénario"
+    "Entrez les données à traiter dans la zone de texte principale",
+    "Sélectionnez l'algorithme souhaité (AES, RSA ou bcrypt)",
+    "Définissez une clé ou générez une paire de clés RSA 2048 bits",
+    "Visualisez et copiez les empreintes, textes chiffrés ou résultats de vitesse calculés"
   ],
   "usage_examples": [
-    "Utilisez-le pour une vérification ou une planification rapide",
-    "Comparez des scénarios sans créer de feuille de calcul",
-    "Créez des résultats prêts à copier pour rapports, campagnes ou notes"
+    "Générer un hachage bcrypt sécurisé pour mot de passe localement dans le navigateur",
+    "Signer vos payloads avec une clé privée pour garantir leur non-altération",
+    "Comparer les temps de calcul des fonctions de sécurité en microsecondes"
   ],
   "faqs": [
     {
-      "question": "Boîte à Outils Cryptographiques de Développeur est-il gratuit ?",
-      "answer": "Oui. L’outil fonctionne gratuitement dans le navigateur et ne nécessite pas de compte."
+      "question": "Cette suite cryptographique est-elle gratuite ?",
+      "answer": "Oui. Le calcul fonctionne en local sans inscription ni frais requis."
     },
     {
-      "question": "L’outil téléverse-t-il mes données ?",
-      "answer": "Non. Le calcul ou la génération s’exécute localement dans le navigateur."
+      "question": "Les données ou clés sont-elles envoyées sur internet ?",
+      "answer": "Non. Toutes les opérations s'exécutent localement grâce à la Web Crypto API."
     },
     {
-      "question": "Y a-t-il une remarque importante ?",
-      "answer": "Utilisez le résultat comme aide pratique et vérifiez-le avant publication ou utilisation."
+      "question": "Quel standard de signature est utilisé pour RSA ?",
+      "answer": "Il s'appuie sur la norme éprouvée RSASSA-PKCS1-v1_5 de 2048 bits."
     }
   ]
 }

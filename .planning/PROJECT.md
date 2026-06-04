@@ -10,35 +10,34 @@ Every localized tool page must render the right topic, the right language, and t
 
 ## Current Status
 
-**Current milestone:** `v0.0.11 Runtime Helper Debt Liquidation and Cryptographic Toolbox Shaking`
-**Latest archived milestone:** `v0.0.10 GSC Evidence Intake and High-Value URL Recovery`
-**Previous archived milestone:** `v0.0.9 Runtime Debt Prioritization and Text Utility Repair`
-**Current planning state:** v0.0.11 is open. Phases 36, 37, 38, 39 are planned for liquidation of remaining stubs and the implementation of our 4th flagship Cryptographic Svelte 5 component.
+**Current milestone:** `v0.0.12 Growth Acceleration and High-Performance Tool Expansion`
+**Latest archived milestone:** `v0.0.11 Runtime Helper Debt Liquidation and Cryptographic Toolbox Shaking`
+**Previous archived milestone:** `v0.0.10 GSC Evidence Intake and High-Value URL Recovery`
+**Current planning state:** v0.0.12 is open. Target requirements and phases are being defined to drive further tool growth, SEO visibility, and runtime refinement.
 
 **Latest completed outcomes:**
-- Formulated GSC URL Action Matrix and Playbook playbooks preventing unnecessary whole-issue validation cycles.
-- Shipped `retirement-pension-calculator` ("金秋麦浪" gradient, inflation/compound visualization) and `net-worth-allocator-tracker` ("瑞士私银" matte dark-gold style, multi-currency portfolio stress test, ECharts components) with 10-locale constraints.
-- Restored canonical sitemap validation paths under `/dist/client/sitemap.xml` for Astro 6 SSR builds.
-- Verified 183 unit and integration tests are 100% passing at `EXCELLENT` project health.
+- Fully liquidated 100% of legacy stubs in `src/lib/tool-stubs.ts` by migrating `defaultColors`, `emojiData`, `fontMappings`, `fontStyles`, `K`, and `bicDatabase` into typed runtime-integrity modules.
+- Shipped the 4th flagship tool `developer-cryptography-toolbox` (Obsidian Gold matte dark-gold style, Web Crypto API integration, multi-locale translation support).
+- Hardened release-time link validation crawling with AbortController 8s timeout protection and crawl limit caps, resolving CI hanging issues.
+- Verified all 180+ tests passing and project health status is `EXCELLENT`.
 
 **Latest archived milestone evidence:**
-- Audit: [.planning/milestones/v0.0.10-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-MILESTONE-AUDIT.md)
-- Roadmap archive: [.planning/milestones/v0.0.10-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-ROADMAP.md)
-- Requirements archive: [.planning/milestones/v0.0.10-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-REQUIREMENTS.md)
+- Audit: [.planning/v0.0.11-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.11-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.11-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.11-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.11-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.11-REQUIREMENTS.md)
 - Traceability: [.planning/TRACEABILITY.md](/Users/kaka/Dev/u2tool/.planning/TRACEABILITY.md)
 - Health report: [docs/PROJECT_HEALTH_REPORT.md](/Users/kaka/Dev/u2tool/docs/PROJECT_HEALTH_REPORT.md)
 
 **Earlier archived milestone evidence:**
-- Audit: [.planning/milestones/v0.0.9-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.9-MILESTONE-AUDIT.md)
-- Roadmap archive: [.planning/milestones/v0.0.8-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-ROADMAP.md)
-- Requirements archive: [.planning/milestones/v0.0.8-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-REQUIREMENTS.md)
+- Audit: [.planning/milestones/v0.0.10-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.10-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.10-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-REQUIREMENTS.md)
 - Milestone index: [.planning/MILESTONES.md](/Users/kaka/Dev/u2tool/.planning/MILESTONES.md)
 
-**Most recent milestone focus (`v0.0.9`):**
-- Inventoried remaining imported `tool-stubs.ts` runtime debt before selecting repair waves.
-- Repaired bounded text and validation reference-data helpers instead of sweeping the large shared stub surface.
-- Preserved compatibility exports while moving real reference data into typed `src/lib/runtime-integrity/` modules.
-- Added const-helper governance and refreshed production closeout evidence.
+**Most recent milestone focus (`v0.0.11`):**
+- Migrated all remaining runtime stubs from `tool-stubs.ts` to `src/lib/runtime-integrity/` for absolute type-safe execution.
+- Shipped multilingual-optimized and de-hardcoded `developer-cryptography-toolbox` UI component with microsecond benchmarking.
+- Validated server-build routing and static asset integration under Astro 6.
 
 ## Requirements
 
@@ -80,10 +79,14 @@ Every localized tool page must render the right topic, the right language, and t
 - ✓ Existing GSC Coverage drilldown and Performance exports now generate a deterministic validation action matrix and user playbook — v0.0.10.
 - ✓ High-confidence GSC technical blocker samples are live-checked and marked expected when current production resolves to indexable canonical HTML — v0.0.10.
 - ✓ Highest-value untreated Hex Editor tool-detail recovery candidates are prioritized, patched, internally linked, and covered by rendered/content-trust evidence — v0.0.10.
+- ✓ Migrated all 6 remaining runtime stubs in `tool-stubs.ts` to `src/lib/runtime-integrity/` with 100% test coverage — v0.0.11.
+- ✓ Implemented `developer-cryptography-toolbox` utilizing Svelte 5 reactive patterns and Web Crypto API — v0.0.11.
+- ✓ Generated and verified translation keys in 10 locales with character boundary validations — v0.0.11.
+- ✓ Resolved CI crawler deadlocks with AbortController timeout protection on internal sitemap validation — v0.0.11.
 
 ### Active
 
-- [ ] End the milestone with exact GSC validation/request-indexing guidance and green production evidence.
+- [ ] Align and define v0.0.12 requirements for performance tuning, SEO restoration, and tool growth.
 
 ### Out of Scope
 

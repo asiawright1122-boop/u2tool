@@ -28,10 +28,10 @@ function isMatchPlayed(m: Match): boolean {
   return (
     m.homeScore !== null &&
     m.homeScore !== undefined &&
-    m.homeScore !== '' &&
+    String(m.homeScore) !== '' &&
     m.awayScore !== null &&
     m.awayScore !== undefined &&
-    m.awayScore !== ''
+    String(m.awayScore) !== ''
   );
 }
 

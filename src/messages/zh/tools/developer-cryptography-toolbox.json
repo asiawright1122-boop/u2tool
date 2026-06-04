@@ -1,28 +1,79 @@
 {
-  "detailed_description": "开发者密码学与哈希工具箱 — 一站式本地安全哈希与加解密测试工具，内置高性能算法本地跑分大屏。 查看计算或生成结果。",
+  "title": "开发者密码学与哈希工具箱",
+  "subtitle": "瑞士私银级哑光暗金本地算法精算大屏",
+  "hashTab": "哈希算法 (Hash)",
+  "bcryptTab": "密码哈希 (bcrypt)",
+  "aesTab": "对称加密 (AES)",
+  "rsaTab": "非对称加密 (RSA)",
+  "benchmarkTab": "性能跑分 (Benchmark)",
+  "inputLabel": "原始明文输入 (Input String)",
+  "inputPlaceholder": "在此处输入您需要进行密码学处理的明文数据...",
+  "md5Label": "MD5 哈希值",
+  "sha256Label": "SHA-256 安全哈希",
+  "copy": "复制",
+  "copied": "已复制",
+  "bcryptCost": "计算成本 (Cost Rounds)",
+  "bcryptGenerate": "生成 bcrypt 哈希",
+  "bcryptVerifyTab": "验证哈希",
+  "bcryptVerifyBtn": "校验密码匹配性",
+  "bcryptResult": "密码与哈希匹配状态",
+  "aesKey": "256位密钥 (HEX 或 Base64)",
+  "aesEncrypt": "AES 加密 (Encrypt)",
+  "aesDecrypt": "AES 解密 (Decrypt)",
+  "aesOutput": "密文输出 (Ciphertext)",
+  "rsaGenerate": "生成 2048-bit 密钥对",
+  "rsaKeyPair": "RSA 密钥对 (PEM 格式)",
+  "rsaSign": "数字签名 (Sign)",
+  "rsaVerify": "验证签名 (Verify)",
+  "runBenchmark": "启动算法性能跑分",
+  "benchmarkDesc": "测试各加密算法在当前输入下的处理耗时（微秒/μs，值越低性能越好）",
+  "matching": "匹配成功",
+  "notMatching": "匹配失败",
+  "verifyResultSuccess": "数字签名校验成功！数据完整且未被篡改。",
+  "verifyResultFail": "数字签名校验失败！签名无效或密钥不匹配。",
+  "decryptedOutput": "解密输出 (Decrypted)",
+  "rsaKeyManager": "RSA-2048 密钥对管理器",
+  "generating": "生成中...",
+  "publicKeyLabel": "公钥 (Public Key SPKI/PEM):",
+  "privateKeyLabel": "私钥 (Private Key PKCS8/PEM):",
+  "noKeyGenerated": "暂未生成密钥对。",
+  "rsaSignVerifyIsland": "数字签名与验证模块",
+  "signPayloadBtn": "使用私钥对数据进行签名",
+  "payloadToVerify": "待验证数据 (Payload):",
+  "signatureHex": "数字签名 (Hex Signature):",
+  "verifySignatureBtn": "验证签名有效性",
+  "performanceBenchmarking": "算法性能实时跑分评测",
+  "benchmarkingAlgorithms": "跑分计算中...",
+  "generator": "生成器",
+  "hashOutput": "哈希密文输出:",
+  "clickToGenerate": "请点击上方按钮生成...",
+  "verifyPassword": "校验密码:",
+  "verifyHash": "校验哈希:",
+  "plaintextPayload": "明文负荷数据 (Plaintext)",
+  "detailed_description": "开发者密码学与哈希工具箱 —— 本地高性能哈希生成与对称/非对称加密精算套件，配备动态微秒级性能跑分图表大屏。支持MD5、SHA256、bcrypt、AES和RSA签名算法。",
   "usage_steps": [
-    "在表单中输入所需值",
-    "查看计算或生成结果",
-    "复制结果或使用显示的预览",
-    "调整数值以比较另一个场景"
+    "在输入区域输入需要加密的原始文本",
+    "选择要执行的密码学算法（如 AES、RSA 或 bcrypt）",
+    "根据需要输入密钥或点击生成 2048位 RSA 密钥对",
+    "查看并复制处理后得到的密文、哈希值或跑分测试图表"
   ],
   "usage_examples": [
-    "用于快速检查或计划",
-    "无需创建表格即可比较场景",
-    "生成可复制到报告、活动或笔记中的结果"
+    "日常开发对特定密码进行本地安全 bcrypt 快速哈希和验证",
+    "为文本数据生成防篡改的 SHA-256 指纹或数字签名",
+    "对比各种本地密码学算法在不同数据荷载下的微秒级性能"
   ],
   "faqs": [
     {
-      "question": "开发者密码学与哈希工具箱 是免费的吗？",
-      "answer": "是的。该工具可在浏览器中免费使用，无需账户。"
+      "question": "此密码学工具箱是否收费？",
+      "answer": "不收费。工具箱完全在浏览器本地无限制运行，无任何计费要求。"
     },
     {
-      "question": "工具会上传我的输入吗？",
-      "answer": "不会。计算或生成逻辑在浏览器本地运行。"
+      "question": "输入的数据会被上传到服务器吗？",
+      "answer": "绝对不会。所有的加密、解密、签名及跑分计算均在您浏览器本地通过 Web Crypto API 执行，绝对保障安全。"
     },
     {
-      "question": "有什么重要提示？",
-      "answer": "请将结果作为实用辅助，并在发布或依赖前自行复核。"
+      "question": "如何获取 AES 256 位密钥？",
+      "answer": "我们提供了一键生成随机 256位密钥的功能，您也可以手动填入合规的 32 字节十六进制（Hex）值。"
     }
   ]
 }
