@@ -1,14 +1,13 @@
 import { describe, expect, it } from 'vitest';
 import {
-  foldLine,
-  escapeText,
   formatIcsDate,
   generateIcsContent,
   type Match
 } from './world-cup-calendar.ics';
+import { foldLine, escapeText } from '../../lib/ics-helper';
 
 describe('World Cup 2026 iCalendar API Unit Tests', () => {
-  describe('escapeText()', () => {
+  describe('escapeText() from ics-helper', () => {
     it('escapes commas, semicolons, and backslashes', () => {
       const input = 'New York, NY; Estadio: MetLife\\Stadium';
       const expected = 'New York\\, NY\\; Estadio: MetLife\\\\Stadium';
@@ -22,10 +21,10 @@ describe('World Cup 2026 iCalendar API Unit Tests', () => {
     });
   });
 
-  describe('foldLine()', () => {
+  describe('foldLine() from ics-helper', () => {
     it('does not fold lines shorter than 75 bytes', () => {
       const line = 'SUMMARY:Mexico vs Sweden';
-      expect(foldLine(line)).toBe(line);
+      expect(foldLine(line)).toBe(line + '\r\n');
     });
 
     it('correctly folds lines exceeding 75 bytes', () => {
@@ -38,21 +37,20 @@ describe('World Cup 2026 iCalendar API Unit Tests', () => {
       expect(folded).toContain('\r\n ');
       
       // 2. Re-assembling the folded line by removing CRLF + Space should equal the original
-      const restored = folded.replace(/\r\n /g, '');
+      const restored = folded.replace(/\r\n /g, '').trim();
       expect(restored).toBe(line);
       
       // 3. Each individual line segment must not exceed 75 characters (including CRLF)
-      const segments = folded.split('\r\n');
+      const segments = folded.split('\r\n').filter(Boolean);
       for (const segment of segments) {
         expect(segment.length).toBeLessThanOrEqual(75);
       }
     });
 
     it('handles folding multibyte characters correctly without cutting a character code in half', () => {
-      // "中文测试" is multibyte. We want to verify it folds safely on byte boundary if needed.
       const line = 'DESCRIPTION:测试中文字符折行测试中文字符折行测试中文字符折行测试中文字符折行测试中文字符折行';
       const folded = foldLine(line);
-      const restored = folded.replace(/\r\n /g, '');
+      const restored = folded.replace(/\r\n /g, '').trim();
       expect(restored).toBe(line);
     });
   });
@@ -120,6 +118,18 @@ describe('World Cup 2026 iCalendar API Unit Tests', () => {
       expect(ics).toContain('TRIGGER:-PT15M');
       expect(ics).toContain('ACTION:DISPLAY');
       expect(ics).toContain('END:VALARM');
+    });
+
+    it('generates localized summary when locale is zh', () => {
+      const mockMessages = {
+        teams: {
+          MEX: '墨西哥',
+          SWE: '瑞典'
+        },
+        group: '小组'
+      };
+      const ics = generateIcsContent(mockMatches, undefined, 'zh', mockMessages);
+      expect(ics).toContain('SUMMARY:🏆 墨西哥 vs 瑞典 (A组)');
     });
   });
 });
