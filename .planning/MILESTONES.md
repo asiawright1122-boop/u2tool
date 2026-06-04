@@ -1,5 +1,43 @@
 # Milestones
 
+## v0.0.12 Growth Acceleration and High-Performance Tool Expansion (Shipped: 2026-06-04)
+
+**Phases completed:** 5 phases, 0 plans (embedded inline)
+
+**Key accomplishments:**
+
+- Implemented `SmartLink` component with hover prefetching and Network Information API connection guards to optimize LCP/FCP.
+- Split tool-specific translations into dynamically loaded modules to bypass Cloudflare Worker loopback constraints and reduce core-bundle weight.
+- Enforced noindex, nofollow on dynamic query routes inside BaseLayout template to prevent search engine indexing duplicate content and canonical drifts.
+- Shipped Svelte 5 Invoice Generator, Resume Builder, Canvas-backed Signature Pad, and Pomodoro Timer flagship productivity tools with 100% complete 10-locale translation keys.
+- Passed full E2E verify:production release checks at EXCELLENT health.
+
+**Archive files:**
+
+- Roadmap: [.planning/milestones/v0.0.12-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-ROADMAP.md)
+- Requirements: [.planning/milestones/v0.0.12-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-REQUIREMENTS.md)
+- Audit: [.planning/v0.0.12-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.12-MILESTONE-AUDIT.md)
+
+---
+
+## v0.0.11 Runtime Helper Debt Liquidation and Cryptographic Toolbox Shaking (Shipped: 2026-06-04)
+
+**Phases completed:** 4 phases, 8 plans
+
+**Key accomplishments:**
+
+- Fully liquidated remaining stubs from `tool-stubs.ts` by migrating `defaultColors`, `emojiData`, `fontMappings`, `fontStyles`, `K`, and `bicDatabase` into typed runtime-integrity modules.
+- Delivered Svelte 5 interactive `developer-cryptography-toolbox` flagship component under 10-locale constraints with microsecond benchmarking.
+- Resolved CI crawler deadlocks with AbortController timeout protection on internal sitemap validation.
+
+**Archive files:**
+
+- Roadmap: [.planning/milestones/v0.0.11-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.11-ROADMAP.md)
+- Requirements: [.planning/milestones/v0.0.11-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.11-REQUIREMENTS.md)
+- Audit: [.planning/v0.0.11-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.11-MILESTONE-AUDIT.md)
+
+---
+
 ## v0.0.10 GSC Evidence Intake and High-Value URL Recovery (Shipped: 2026-06-02)
 
 **Phases completed:** 4 phases, 8 plans

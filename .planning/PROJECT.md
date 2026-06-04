@@ -10,34 +10,36 @@ Every localized tool page must render the right topic, the right language, and t
 
 ## Current Status
 
-**Current milestone:** `v0.0.12 Growth Acceleration and High-Performance Tool Expansion`
+**Current milestone:** TBD
+**Latest completed milestone:** `v0.0.12 Growth Acceleration and High-Performance Tool Expansion`
 **Latest archived milestone:** `v0.0.11 Runtime Helper Debt Liquidation and Cryptographic Toolbox Shaking`
 **Previous archived milestone:** `v0.0.10 GSC Evidence Intake and High-Value URL Recovery`
-**Current planning state:** v0.0.12 is open. Target requirements and phases are being defined to drive further tool growth, SEO visibility, and runtime refinement.
+**Current planning state:** v0.0.12 is closed. Planning for v0.0.13 is underway.
 
 **Latest completed outcomes:**
-- Fully liquidated 100% of legacy stubs in `src/lib/tool-stubs.ts` by migrating `defaultColors`, `emojiData`, `fontMappings`, `fontStyles`, `K`, and `bicDatabase` into typed runtime-integrity modules.
-- Shipped the 4th flagship tool `developer-cryptography-toolbox` (Obsidian Gold matte dark-gold style, Web Crypto API integration, multi-locale translation support).
-- Hardened release-time link validation crawling with AbortController 8s timeout protection and crawl limit caps, resolving CI hanging issues.
-- Verified all 180+ tests passing and project health status is `EXCELLENT`.
+- Implemented `SmartLink` component with hover prefetching and Network Information API connection guards to optimize LCP/FCP.
+- Split tool-specific translations into dynamically loaded modules to bypass Cloudflare Worker loopback constraints and reduce core-bundle weight.
+- Enforced noindex, nofollow on dynamic query routes inside BaseLayout template to prevent search engine indexing duplicate content and canonical drifts.
+- Shipped Svelte 5 Invoice Generator, Resume Builder, Canvas-backed Signature Pad, and Pomodoro Timer flagship productivity tools with 100% complete 10-locale translation keys.
+- Passed full E2E verify:production release checks at EXCELLENT health.
 
 **Latest archived milestone evidence:**
-- Audit: [.planning/v0.0.11-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.11-MILESTONE-AUDIT.md)
-- Roadmap archive: [.planning/milestones/v0.0.11-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.11-ROADMAP.md)
-- Requirements archive: [.planning/milestones/v0.0.11-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.11-REQUIREMENTS.md)
+- Audit: [.planning/v0.0.12-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.12-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.12-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.12-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-REQUIREMENTS.md)
 - Traceability: [.planning/TRACEABILITY.md](/Users/kaka/Dev/u2tool/.planning/TRACEABILITY.md)
 - Health report: [docs/PROJECT_HEALTH_REPORT.md](/Users/kaka/Dev/u2tool/docs/PROJECT_HEALTH_REPORT.md)
 
 **Earlier archived milestone evidence:**
-- Audit: [.planning/milestones/v0.0.10-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-MILESTONE-AUDIT.md)
-- Roadmap archive: [.planning/milestones/v0.0.10-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-ROADMAP.md)
-- Requirements archive: [.planning/milestones/v0.0.10-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-REQUIREMENTS.md)
+- Audit: [.planning/v0.0.11-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.11-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.11-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.11-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.11-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.11-REQUIREMENTS.md)
 - Milestone index: [.planning/MILESTONES.md](/Users/kaka/Dev/u2tool/.planning/MILESTONES.md)
 
-**Most recent milestone focus (`v0.0.11`):**
-- Migrated all remaining runtime stubs from `tool-stubs.ts` to `src/lib/runtime-integrity/` for absolute type-safe execution.
-- Shipped multilingual-optimized and de-hardcoded `developer-cryptography-toolbox` UI component with microsecond benchmarking.
-- Validated server-build routing and static asset integration under Astro 6.
+**Most recent milestone focus (`v0.0.12`):**
+- Optimizing initial bundle sizes and dynamic resource prefetching behavior.
+- Resolving legacy canonical drifts and ensuring search compliance across search links.
+- Expanding Svelte 5 flagship tools with interactive, rich-featured canvas, timers, calculations, and local-storage state saving.
 
 ## Requirements
 
@@ -83,10 +85,11 @@ Every localized tool page must render the right topic, the right language, and t
 - ✓ Implemented `developer-cryptography-toolbox` utilizing Svelte 5 reactive patterns and Web Crypto API — v0.0.11.
 - ✓ Generated and verified translation keys in 10 locales with character boundary validations — v0.0.11.
 - ✓ Resolved CI crawler deadlocks with AbortController timeout protection on internal sitemap validation — v0.0.11.
+- ✓ Align and define v0.0.12 requirements for performance tuning, SEO restoration, and tool growth. — v0.0.12
 
 ### Active
 
-- [ ] Align and define v0.0.12 requirements for performance tuning, SEO restoration, and tool growth.
+- [ ] Define requirements and plan for milestone v0.0.13.
 
 ### Out of Scope
 
