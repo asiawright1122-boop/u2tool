@@ -142,3 +142,14 @@ describe('seo helpers', () => {
     expect(urls.every((url) => !url.includes('com//'))).toBe(true);
   });
 });
+
+import { getDefaultRobots } from '@/layouts/BaseLayout.astro';
+
+describe('default robots helper', () => {
+  it('returns noindex, nofollow when search params present', () => {
+    expect(getDefaultRobots(true)).toBe('noindex, nofollow');
+  });
+  it('returns index, follow when no search params', () => {
+    expect(getDefaultRobots(false)).toBe('index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
+  });
+});

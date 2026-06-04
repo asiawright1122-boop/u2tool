@@ -35,7 +35,25 @@ interface Props {
   robots?: string;
 }
 
-const { title, description, locale, canonicalPath, siteDescription, robots = 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' } = Astro.props;
+// Enforce strict rendering contract: query routes default to noindex, nofollow
+// to prevent duplicate content indexing and canonical URL drifts.
+const hasSearchParams = Astro.url.searchParams.size > 0;
+const defaultRobots = getDefaultRobots(hasSearchParams);
+
+export function getDefaultRobots(hasSearchParams: boolean): string {
+  return hasSearchParams
+    ? 'noindex, nofollow'
+    : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1';
+}
+
+const {
+  title,
+  description,
+  locale,
+  canonicalPath,
+  siteDescription,
+  robots = defaultRobots,
+} = Astro.props;
 
 const BASE_URL = getPublicSiteUrl();
 
