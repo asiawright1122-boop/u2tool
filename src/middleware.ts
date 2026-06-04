@@ -119,6 +119,19 @@ function resolveCanonicalRedirect(request: Request): string | null {
   const segments = getPathSegments(normalizedPath);
   const [first, second, third, fourth] = segments;
 
+  const isToolsRoute = first === 'tools' || (isValidLocale(first || '') && second === 'tools');
+  if (isToolsRoute && url.searchParams.has('category')) {
+    const category = url.searchParams.get('category')?.trim();
+    if (category) {
+      const targetLocale = isValidLocale(first || '') ? first : 'en';
+      const nextSearch = new URLSearchParams(url.searchParams);
+      nextSearch.delete('category');
+      const queryString = nextSearch.toString();
+      const redirectPath = `/${targetLocale}/categories/${category}/`;
+      return queryString ? `${redirectPath}?${queryString}` : redirectPath;
+    }
+  }
+
   if (normalizedPath === '/favicon.ico') {
     return '/favicon.svg';
   }
