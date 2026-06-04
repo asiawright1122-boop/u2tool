@@ -32,7 +32,7 @@ import { tools, categories, getPopularTools } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
 import { locales, getLocalizedPath, isValidLocale } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
-import { loadBaseMessages } from '@/lib/translations';
+import { loadBaseUiMessages } from '@/lib/translations';
 import { buildCategoryDiscoveryItemList, buildCategoryDiscoverySpotlights } from '@/lib/discovery-surface';
 import {
   buildChartToolClusterGroups,
@@ -87,7 +87,7 @@ if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate)) {
   return Astro.redirect('/en/', 302);
 }
 const locale: Locale = localeCandidate;
-const baseMessages = await loadBaseMessages(locale, Astro.url);
+const baseMessages = await loadBaseUiMessages(locale, Astro.url);
 const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
 const navMessages = (baseMessages.nav as Record<string, string>) ?? {};

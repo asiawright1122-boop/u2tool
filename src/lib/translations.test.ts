@@ -232,8 +232,8 @@ describe('translations module', () => {
     });
 
     it('loads SSR translation assets from the current request origin', () => {
-      expect(homePageSource).toContain('loadBaseMessages(locale, Astro.url)');
-      expect(toolsPageSource).toContain('loadBaseMessages(locale, Astro.url)');
+      expect(homePageSource).toContain('loadBaseUiMessages(locale, Astro.url)');
+      expect(toolsPageSource).toContain('loadBaseUiMessages(locale, Astro.url)');
       expect(toolDetailPageSource).toContain('loadToolPageMessages(locale, tool.slug, Astro.url)');
       expect(toolDetailPageSource).toContain('loadBaseUiMessages(locale, Astro.url)');
       expect(llmsPageSource).toContain("buildLlmsContent('en', new URL(request.url), { isFull: false })");

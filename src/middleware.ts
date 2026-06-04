@@ -140,8 +140,9 @@ function resolveCanonicalRedirect(request: Request): string | null {
       if (target) {
         return target;
       }
+    } else {
+      return resolveLegacyUnlocalizedBlogFallback();
     }
-    return resolveLegacyUnlocalizedBlogFallback();
   }
 
   if (first === 'compare' && second && third) {
@@ -191,8 +192,9 @@ function resolveCanonicalRedirect(request: Request): string | null {
         if (target) {
           return target;
         }
+      } else {
+        return resolveLegacyBlogFallback(first);
       }
-      return resolveLegacyBlogFallback(first);
     }
 
     if (second === 'compare' && third && fourth) {
