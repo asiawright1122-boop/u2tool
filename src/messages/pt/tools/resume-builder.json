@@ -13,5 +13,52 @@
     "Uma gerente de marketing experiente decide mudar de carreira para o setor de comunicação. Ela utiliza o Resume Builder para reformular seu currículo, enfatizando suas habilidades de liderança e gestão de projetos, e adicionando uma seção de networking e parcerias. O documento resultante é enviado para agências de comunicação.",
     "Um freelancer de design gráfico precisa atualizar seu currículo para atrair novos clientes. Ele usa o Resume Builder para criar um currículo visualmente atraente, incluindo exemplos de seu portfólio e links para seus projetos online. O currículo é exportado em PDF e compartilhado em plataformas de freelancer e redes sociais.",
     "Um executivo sênior está se preparando para uma grande entrevista em uma empresa multinacional. Ele utiliza o Resume Builder para criar um currículo executivo, com uma seção de resumo de carreira que destaca suas principais realizações. O documento é revisado várias vezes e finalmente exportado em PDF para ser impresso e levado à entrevista."
-  ]
+  ],
+  "personalInfo": "Informações Pessoais",
+  "summary": "Resumo",
+  "experience": "Experiência Profissional",
+  "education": "Educação",
+  "skills": "Habilidades",
+  "languages": "Idiomas",
+  "addExperience": "Adicionar Experiência",
+  "addEducation": "Adicionar Educação",
+  "addSkill": "Adicionar Habilidade",
+  "addLanguage": "Adicionar Idioma",
+  "exportPDF": "Exportar PDF",
+  "company": "Empresa",
+  "position": "Cargo",
+  "startDate": "Data de Início",
+  "endDate": "Data de Término",
+  "jobDescription": "Descrição do cargo",
+  "school": "Escola / Universidade",
+  "degree": "Diploma",
+  "fieldOfStudy": "Área de Estudo",
+  "graduationDate": "Data de Graduação",
+  "gpa": "GPA",
+  "present": "Presente",
+  "editTab": "Editar",
+  "previewTab": "Visualizar",
+  "accentColor": "Cor do Tema",
+  "noSkills": "Nenhuma habilidade adicionada ainda.",
+  "summaryPlaceholder": "Descreva brevemente sua trajetória profissional e principais conquistas...",
+  "langLevels": {
+    "native": "Nativo",
+    "fluent": "Fluente",
+    "advanced": "Avançado",
+    "intermediate": "Intermediário",
+    "basic": "Básico"
+  },
+  "templates": {
+    "professional": "Profissional",
+    "minimal": "Minimalista",
+    "creative": "Criativo"
+  },
+  "placeholders": {
+    "name": "Seu Nome",
+    "title": "Título Profissional",
+    "email": "email@exemplo.com",
+    "phone": "+55 11 98765-4321",
+    "location": "Cidade, País",
+    "website": "site.com"
+  }
 }

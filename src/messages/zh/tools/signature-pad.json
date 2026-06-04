@@ -31,5 +31,23 @@
       "question": "处理速度如何？",
       "answer": "由于所有处理都在浏览器本地完成，Signature Pad 的处理速度非常快，通常可以在几毫秒内完成。"
     }
-  ]
+  ],
+  "penColor": "画笔颜色",
+  "penWidth": "粗细大小",
+  "backgroundColor": "背景颜色",
+  "transparent": "透明背景",
+  "clear": "清除全部",
+  "downloadPng": "下载 PNG",
+  "downloadSvg": "下载 SVG (矢量)",
+  "undo": "撤销 (Undo)",
+  "signature": {
+    "penColor": "画笔颜色",
+    "penWidth": "粗细大小",
+    "backgroundColor": "背景颜色",
+    "transparent": "透明背景",
+    "clear": "清除全部",
+    "downloadPng": "下载 PNG",
+    "downloadSvg": "下载 SVG (矢量)",
+    "undo": "撤销 (Undo)"
+  }
 }

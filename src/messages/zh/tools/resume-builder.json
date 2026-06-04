@@ -31,5 +31,52 @@
       "question": "处理速度如何？",
       "answer": "由于所有处理都在浏览器本地完成，Resume Builder 的处理速度非常快，通常可以在几毫秒内完成。"
     }
-  ]
+  ],
+  "personalInfo": "个人基本信息",
+  "summary": "个人简介 / 评价",
+  "experience": "工作与项目经历",
+  "education": "教育背景",
+  "skills": "专业技能",
+  "languages": "语言能力",
+  "addExperience": "添加工作经历",
+  "addEducation": "添加教育经历",
+  "addSkill": "添加专业技能",
+  "addLanguage": "添加熟练语言",
+  "exportPDF": "导出简历 PDF",
+  "company": "公司/组织名称",
+  "position": "担任职位",
+  "startDate": "开始时间",
+  "endDate": "结束时间",
+  "jobDescription": "工作/职责描述",
+  "school": "毕业学校/院系",
+  "degree": "获得学位",
+  "fieldOfStudy": "所学专业",
+  "graduationDate": "毕业时间",
+  "gpa": "绩点/GPA",
+  "present": "至今",
+  "editTab": "编辑内容",
+  "previewTab": "实时预览",
+  "accentColor": "主题色调",
+  "noSkills": "暂未添加技能。",
+  "summaryPlaceholder": "简要介绍您的职业背景、核心优势和主要成就...",
+  "langLevels": {
+    "native": "母语",
+    "fluent": "精通",
+    "advanced": "熟练",
+    "intermediate": "中级",
+    "basic": "基础"
+  },
+  "templates": {
+    "professional": "经典专业",
+    "minimal": "极简现代",
+    "creative": "创意活力"
+  },
+  "placeholders": {
+    "name": "您的名字",
+    "title": "求职意向 / 职业头衔",
+    "email": "email@example.com",
+    "phone": "138-xxxx-xxxx",
+    "location": "城市, 国家",
+    "website": "个人网站 / 社交账号"
+  }
 }

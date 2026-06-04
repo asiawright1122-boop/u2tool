@@ -13,5 +13,23 @@
     "Example 2: 의료 기록 서명: 병원에서 환자 동의서를 작성할 때, 서명 패드를 사용하여 환자의 전자 서명을 안전하게 수집합니다.",
     "Example 3: 회의록 서명: 회의록에 참가자들의 서명을 추가할 때, 서명 패드를 사용하여 각 참가자의 서명을 쉽게 수집하고 문서에 추가합니다.",
     "Example 4: 전자서명 인증: 온라인 거래에서 구매자의 서명을 수집하여, 거래의 법적 유효성을 확보하고 보안을 강화합니다."
-  ]
+  ],
+  "penColor": "펜 색상",
+  "penWidth": "펜 두께",
+  "backgroundColor": "배경 색상",
+  "transparent": "투명 배경",
+  "clear": "지우기",
+  "downloadPng": "PNG 다운로드",
+  "downloadSvg": "SVG 다운로드",
+  "undo": "되돌리기 (Undo)",
+  "signature": {
+    "penColor": "펜 색상",
+    "penWidth": "펜 두께",
+    "backgroundColor": "배경 색상",
+    "transparent": "투명 배경",
+    "clear": "지우기",
+    "downloadPng": "PNG 다운로드",
+    "downloadSvg": "SVG 다운로드",
+    "undo": "되돌리기 (Undo)"
+  }
 }

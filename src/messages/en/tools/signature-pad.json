@@ -12,5 +12,23 @@
     "Draw a transparent-background signature for use in a document editor.",
     "Save a quick SVG wrapper around the canvas image for design handoff.",
     "Redo a signature with a different pen width or color before downloading."
-  ]
+  ],
+  "penColor": "Pen Color",
+  "penWidth": "Pen Width",
+  "backgroundColor": "Background Color",
+  "transparent": "Transparent",
+  "clear": "Clear",
+  "downloadPng": "Download PNG",
+  "downloadSvg": "Download SVG",
+  "undo": "Undo",
+  "signature": {
+    "penColor": "Pen Color",
+    "penWidth": "Pen Width",
+    "backgroundColor": "Background Color",
+    "transparent": "Transparent Background",
+    "clear": "Clear",
+    "downloadPng": "Download PNG",
+    "downloadSvg": "Download SVG",
+    "undo": "Undo"
+  }
 }

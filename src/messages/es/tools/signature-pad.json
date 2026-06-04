@@ -13,5 +13,23 @@
     "Un médico debe firmar digitalmente una receta médica. Con el Signature Pad, crea su firma usando un dispositivo táctil y la exporta en formato SVG para mayor calidad en la impresión.",
     "Un gerente de proyectos necesita enviar un informe financiero a sus inversores. Utiliza el Signature Pad para añadir su firma al final del informe y lo envía por correo electrónico en formato PDF.",
     "Un diseñador gráfico debe firmar un acuerdo de servicio con un cliente. Usa el Signature Pad para crear una firma estilizada y la exporta en formato JPEG para incluirla en el contrato digital."
-  ]
+  ],
+  "penColor": "Color del lápiz",
+  "penWidth": "Grosor del lápiz",
+  "backgroundColor": "Color de fondo",
+  "transparent": "Fondo transparente",
+  "clear": "Borrar",
+  "downloadPng": "Descargar PNG",
+  "downloadSvg": "Descargar SVG",
+  "undo": "Deshacer",
+  "signature": {
+    "penColor": "Color del lápiz",
+    "penWidth": "Grosor del lápiz",
+    "backgroundColor": "Color de fondo",
+    "transparent": "Fondo transparente",
+    "clear": "Borrar",
+    "downloadPng": "Descargar PNG",
+    "downloadSvg": "Descargar SVG",
+    "undo": "Deshacer"
+  }
 }

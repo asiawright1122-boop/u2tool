@@ -26,5 +26,52 @@
       "question": "Does the tool write resume content for me?",
       "answer": "No. It gives you fields, layout, preview, and PDF export. You should review the wording and facts yourself."
     }
-  ]
+  ],
+  "personalInfo": "Personal Information",
+  "summary": "Summary",
+  "experience": "Work Experience",
+  "education": "Education",
+  "skills": "Skills",
+  "languages": "Languages",
+  "addExperience": "Add Experience",
+  "addEducation": "Add Education",
+  "addSkill": "Add Skill",
+  "addLanguage": "Add Language",
+  "exportPDF": "Export PDF",
+  "company": "Company",
+  "position": "Position",
+  "startDate": "Start Date",
+  "endDate": "End Date",
+  "jobDescription": "Job Description",
+  "school": "School / University",
+  "degree": "Degree",
+  "fieldOfStudy": "Field of Study",
+  "graduationDate": "Graduation Date",
+  "gpa": "GPA",
+  "present": "Present",
+  "editTab": "Edit",
+  "previewTab": "Preview",
+  "accentColor": "Theme Color",
+  "noSkills": "No skills added yet.",
+  "summaryPlaceholder": "Briefly describe your professional background and key achievements...",
+  "langLevels": {
+    "native": "Native",
+    "fluent": "Fluent",
+    "advanced": "Advanced",
+    "intermediate": "Intermediate",
+    "basic": "Basic"
+  },
+  "templates": {
+    "professional": "Professional",
+    "minimal": "Minimalist",
+    "creative": "Creative"
+  },
+  "placeholders": {
+    "name": "Your Name",
+    "title": "Professional Title",
+    "email": "email@example.com",
+    "phone": "+1 234 567 890",
+    "location": "City, Country",
+    "website": "portfolio.com"
+  }
 }

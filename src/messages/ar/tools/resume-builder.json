@@ -10,5 +10,52 @@
   "usage_examples": [
     "استخدم منشئ السيرة الذاتية لمعالجة بياناتك",
     "احصل على نتائج المعالجة بسرعة دون انتظار"
-  ]
+  ],
+  "personalInfo": "معلومات شخصية",
+  "summary": "الملخص",
+  "experience": "الخبرة المهنية",
+  "education": "التعليم",
+  "skills": "المهارات",
+  "languages": "اللغات",
+  "addExperience": "إضافة خبرة",
+  "addEducation": "إضافة تعليم",
+  "addSkill": "إضافة مهارة",
+  "addLanguage": "إضافة لغة",
+  "exportPDF": "تصدير PDF",
+  "company": "الشركة",
+  "position": "المنصب",
+  "startDate": "تاريخ البدء",
+  "endDate": "تاريخ الانتهاء",
+  "jobDescription": "الوصف الوظيفي",
+  "school": "المدرسة / الجامعة",
+  "degree": "الشهادة",
+  "fieldOfStudy": "مجال الدراسة",
+  "graduationDate": "تاريخ التخرج",
+  "gpa": "المعدل التراكمي",
+  "present": "الحالي",
+  "editTab": "تعديل",
+  "previewTab": "معاينة",
+  "accentColor": "لون المظهر",
+  "noSkills": "لم يتم إضافة مهارات بعد.",
+  "summaryPlaceholder": "صف بإيجاز خلفيتك المهنية وإنجازاتك الرئيسية...",
+  "langLevels": {
+    "native": "اللغة الأم",
+    "fluent": "طلاقة",
+    "advanced": "متقدم",
+    "intermediate": "متوسط",
+    "basic": "مبتدئ"
+  },
+  "templates": {
+    "professional": "مهني",
+    "minimal": "بسيط",
+    "creative": "إبداعي"
+  },
+  "placeholders": {
+    "name": "اسمك الكامل",
+    "title": "المسمى الوظيفي",
+    "email": "email@example.com",
+    "phone": "+966 50 123 4567",
+    "location": "المدينة، الدولة",
+    "website": "portfolio.com"
+  }
 }

@@ -10,5 +10,52 @@
   "usage_examples": [
     "이력서 빌더을 사용하여 데이터 처리",
     "대기 없이 처리 결과를 빠르게 얻기"
-  ]
+  ],
+  "personalInfo": "개인 정보",
+  "summary": "자기소개",
+  "experience": "경력 사항",
+  "education": "학력 사항",
+  "skills": "보유 기술",
+  "languages": "외국어 능력",
+  "addExperience": "경력 추가",
+  "addEducation": "학력 추가",
+  "addSkill": "기술 추가",
+  "addLanguage": "언어 추가",
+  "exportPDF": "PDF 내보내기",
+  "company": "회사명",
+  "position": "직책 / 역할",
+  "startDate": "시작일",
+  "endDate": "종료일",
+  "jobDescription": "주요 업무 및 성과",
+  "school": "학교명 / 대학명",
+  "degree": "학위",
+  "fieldOfStudy": "전공",
+  "graduationDate": "졸업일",
+  "gpa": "학점 (GPA)",
+  "present": "재직 중",
+  "editTab": "편집",
+  "previewTab": "미리보기",
+  "accentColor": "테마 색상",
+  "noSkills": "추가된 기술이 없습니다.",
+  "summaryPlaceholder": "전문적인 배경과 주요 성과를 간략히 설명하세요...",
+  "langLevels": {
+    "native": "모국어",
+    "fluent": "유창함",
+    "advanced": "능숙함",
+    "intermediate": "중급",
+    "basic": "기초"
+  },
+  "templates": {
+    "professional": "전문적인 스타일",
+    "minimal": "미니멀 스타일",
+    "creative": "크리에이티브 스타일"
+  },
+  "placeholders": {
+    "name": "이름",
+    "title": "희망 직무 / 직함",
+    "email": "email@example.com",
+    "phone": "010-xxxx-xxxx",
+    "location": "도시, 국가",
+    "website": "portfolio.com"
+  }
 }

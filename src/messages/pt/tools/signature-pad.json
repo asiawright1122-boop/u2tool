@@ -13,5 +13,23 @@
     "Uma médica precisa assinar digitalmente prescrições médicas para envio a farmácias. Ela usa o Signature Pad para criar uma assinatura com a cor preta e a espessura adequada, exportando-a em formato SVG para integrar ao sistema de gestão de prescrições do consultório.",
     "Um gestor de contratos precisa assinar um acordo com um fornecedor. Ele utiliza o Signature Pad para criar uma assinatura com a cor azul, exportando-a em formato JSON para integrar ao sistema de contratos da empresa.",
     "Um desenvolvedor web precisa criar uma assinatura para um projeto de design. Utiliza o Signature Pad para criar uma assinatura com a cor vermelha e a espessura fina, exportando-a em formato PNG para incluir no design do site."
-  ]
+  ],
+  "penColor": "Cor da caneta",
+  "penWidth": "Espessura da caneta",
+  "backgroundColor": "Cor de fundo",
+  "transparent": "Fundo transparente",
+  "clear": "Limpar",
+  "downloadPng": "Baixar PNG",
+  "downloadSvg": "Baixar SVG",
+  "undo": "Desfazer",
+  "signature": {
+    "penColor": "Cor da caneta",
+    "penWidth": "Espessura da caneta",
+    "backgroundColor": "Cor de fundo",
+    "transparent": "Fundo transparente",
+    "clear": "Limpar",
+    "downloadPng": "Baixar PNG",
+    "downloadSvg": "Baixar SVG",
+    "undo": "Desfazer"
+  }
 }

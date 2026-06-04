@@ -13,5 +13,23 @@
     "Une petite entreprise doit collecter des signatures de clients pour des bons de commande. L'entreprise utilise le Signature Pad pour permettre aux clients de signer numériquement ces bons directement sur un appareil tactile lors de la finalisation de leur achat.",
     "Unfreelance graphiste doit valider des concepts de design avec des clients. Il utilise le Signature Pad pour obtenir des signatures numériques sur des fichiers d'esquisse et de prototype, facilitant ainsi le processus d'approbation.",
     "Un enseignant souhaite distribuer des bulletins de notes numériquement signés aux parents d'élèves. Il utilise le Signature Pad pour créer une signature officielle qui est ensuite ajoutée aux documents PDF des bulletins avant leur envoi par e-mail."
-  ]
+  ],
+  "penColor": "Couleur du stylo",
+  "penWidth": "Épaisseur du stylo",
+  "backgroundColor": "Couleur de fond",
+  "transparent": "Fond transparent",
+  "clear": "Effacer",
+  "downloadPng": "Télécharger PNG",
+  "downloadSvg": "Télécharger SVG",
+  "undo": "Annuler",
+  "signature": {
+    "penColor": "Couleur du stylo",
+    "penWidth": "Épaisseur du stylo",
+    "backgroundColor": "Couleur de fond",
+    "transparent": "Fond transparent",
+    "clear": "Effacer",
+    "downloadPng": "Télécharger PNG",
+    "downloadSvg": "Télécharger SVG",
+    "undo": "Annuler"
+  }
 }

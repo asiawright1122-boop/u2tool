@@ -13,5 +13,52 @@
     "Example 2: IT業界での転職を検討しているエンジニア。技術スキルやプロジェクト経験を詳細に記載する必要がある場合、このツールの「スキル」や「経験」セクションを使って、具体的な成果や使用した技術を整理し、履歴書に反映できます。",
     "Example 3: フリーランスのデザイナーとして独立し、クライアントに自身の経歴を提出する必要がある場合。デザイン性の高いテンプレートを選択し、ポートフォリオのリンクやデザイン関連のスキルを強調することで、専門性をアピールできます。",
     "Example 4: 人事担当者が、候補者の履歴書を一括で作成する必要がある場合。このツールの複数テンプレート機能とカスタマイズオプションを使用して、一貫性のあるフォーマットで履歴書を作成し、採用プロセスを効率化できます。"
-  ]
+  ],
+  "personalInfo": "個人情報",
+  "summary": "プロフィール",
+  "experience": "職歴",
+  "education": "学歴",
+  "skills": "スキル",
+  "languages": "言語",
+  "addExperience": "職歴を追加",
+  "addEducation": "学歴を追加",
+  "addSkill": "スキルを追加",
+  "addLanguage": "言語を追加",
+  "exportPDF": "PDFをエクスポート",
+  "company": "企業名",
+  "position": "役職",
+  "startDate": "開始日",
+  "endDate": "終了日",
+  "jobDescription": "業務内容",
+  "school": "学校名 / 大学名",
+  "degree": "学位",
+  "fieldOfStudy": "専攻分野",
+  "graduationDate": "卒業日",
+  "gpa": "GPA",
+  "present": "現在",
+  "editTab": "編集",
+  "previewTab": "プレビュー",
+  "accentColor": "テーマカラー",
+  "noSkills": "スキルはまだ追加されていません。",
+  "summaryPlaceholder": "経歴や主な実績などを簡潔に説明してください...",
+  "langLevels": {
+    "native": "ネイティブ",
+    "fluent": "流暢",
+    "advanced": "上級",
+    "intermediate": "中級",
+    "basic": "初級"
+  },
+  "templates": {
+    "professional": "プロフェッショナル",
+    "minimal": "ミニマル",
+    "creative": "クリエイティブ"
+  },
+  "placeholders": {
+    "name": "お名前",
+    "title": "職種 / 肩書",
+    "email": "email@example.com",
+    "phone": "090-xxxx-xxxx",
+    "location": "市区町村, 国",
+    "website": "portfolio.com"
+  }
 }

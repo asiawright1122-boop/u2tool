@@ -13,5 +13,52 @@
     "Una estudiante de administración de empresas que necesita presentar un currículum para una pasantía en una consultora usa el tool para generar un documento profesional y bien estructurado.",
     "Un freelancer de diseño gráfico que trabaja de forma independiente emplea el Resume Builder para actualizar su perfil y presentarlo a nuevos clientes potenciales.",
     "Un ejecutivo de ventas que busca un cambio de carrera a marketing digital utiliza el Resume Builder para crear un currículum que muestre su experiencia y habilidades transferibles en el nuevo sector."
-  ]
+  ],
+  "personalInfo": "Información Personal",
+  "summary": "Resumen",
+  "experience": "Experiencia Laboral",
+  "education": "Educación",
+  "skills": "Habilidades",
+  "languages": "Idiomas",
+  "addExperience": "Añadir Experiencia",
+  "addEducation": "Añadir Educación",
+  "addSkill": "Añadir Habilidad",
+  "addLanguage": "Añadir Idioma",
+  "exportPDF": "Exportar PDF",
+  "company": "Empresa",
+  "position": "Puesto",
+  "startDate": "Fecha de Inicio",
+  "endDate": "Fecha de Finalización",
+  "jobDescription": "Descripción del puesto",
+  "school": "Escuela / Universidad",
+  "degree": "Título",
+  "fieldOfStudy": "Campo de Estudio",
+  "graduationDate": "Fecha de Graduación",
+  "gpa": "GPA",
+  "present": "Presente",
+  "editTab": "Editar",
+  "previewTab": "Vista Previa",
+  "accentColor": "Color de Tema",
+  "noSkills": "Aún no se han añadido habilidades.",
+  "summaryPlaceholder": "Describa brevemente su trayectoria profesional y logros clave...",
+  "langLevels": {
+    "native": "Nativo",
+    "fluent": "Fluido",
+    "advanced": "Avanzado",
+    "intermediate": "Intermedio",
+    "basic": "Básico"
+  },
+  "templates": {
+    "professional": "Profesional",
+    "minimal": "Minimalista",
+    "creative": "Creativo"
+  },
+  "placeholders": {
+    "name": "Su Nombre",
+    "title": "Título Profesional",
+    "email": "correo@ejemplo.com",
+    "phone": "+34 123 456 789",
+    "location": "Ciudad, País",
+    "website": "web.com"
+  }
 }
