@@ -32,13 +32,13 @@
 ## Active Milestone: v0.0.12 Growth Acceleration and High-Performance Tool Expansion
 
 ### Phase 40: Milestone Kickoff & Scoped Requirements Definition
-- [/] Align on requirements for performance tuning and tool growth
-- [/] Establish initial research and scope definition
+- [x] Align on requirements for performance tuning and tool growth
+- [x] Establish initial research and scope definition
 
 ### Phase 41: Performance Tuning & Loading Optimization (SmartLink & Translation Splitting)
-- [ ] Implement SmartLink prefetching with network-aware API guards
-- [ ] Devise split translation loading for specialized tools to trim base bundle weight
-- [ ] Verify HTTP Edge cache controls for APIs and dynamic route handlers
+- [x] Implement SmartLink prefetching with network-aware API guards
+- [x] Devise split translation loading for specialized tools to trim base bundle weight
+- [x] Verify HTTP Edge cache controls for APIs and dynamic route handlers
 
 ### Phase 42: SEO Restoration & GSC Canonical Compliance
 - [ ] Fix query route canonical drifts and enforce strict rendering contracts

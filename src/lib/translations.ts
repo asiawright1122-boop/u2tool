@@ -40,7 +40,7 @@ const bundledBaseMessageModules: Record<string, () => Promise<MessagesRecord>> =
 
 const bundledToolMessageModules: Record<string, () => Promise<unknown>> =
   typeof import.meta.glob === 'function'
-    ? import.meta.glob<unknown>('../messages/*/tools/*.json', {
+    ? import.meta.glob<unknown>('../messages/{en,zh}/tools/{json-formatter,jwt-decoder,word-counter}.json', {
         query: '?raw',
         import: 'default',
       })

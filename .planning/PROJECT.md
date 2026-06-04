@@ -151,19 +151,30 @@ This is a brownfield repository with a very large content surface, heavy localiz
 
 ## Current State
 
-The current baseline now includes promoted discovery ordering for the strongest authority routes, a home-page compare entry point, explicit priority export coverage in `llms.txt`, SEO-aware discovery snippets, restored JWT decoder/debugger metadata in the shared message layer, and a canonical production gate that reflects the real Cloudflare server-build output. `v0.0.5` shipped with lighter browse shells, a first shared runtime-integrity repair wave, and deterministic anti-corruption guardrails. `v0.0.6` then completed the next deferred curl/codegen runtime wave, added representative rendered translation drift governance, introduced a shared theme contract plus shell/chart parity proof, and surfaced that new evidence explicitly inside the canonical production gate. `v0.0.7` selected `text` as the next authority wave, promoted it across browse, compare, AI discovery, `llms.txt`, and tools-index exports, added growth-surface governance, and completed evidence-led GSC recovery triage. `v0.0.8` repaired the next scheduling and code-analysis runtime helper clusters, restored placeholder governance, and closed with a green canonical production gate. `v0.0.9` inventoried remaining imported runtime helper debt, repaired selected text and validation reference-data clusters, extended const-helper governance, and closed with green canonical production verification. `v0.0.10` completed the GSC validation action matrix, representative technical blocker live checks, Hex Editor detail recovery, and introduced the pension calculator and net worth interactive flagship trackers.
+The current baseline now includes promoted discovery ordering for the strongest authority routes, a home-page compare entry point, explicit priority export coverage in `llms.txt`, SEO-aware discovery snippets, restored JWT decoder/debugger metadata in the shared message layer, and a canonical production gate that reflects the real Cloudflare server-build output. `v0.0.5` shipped with lighter browse shells, a first shared runtime-integrity repair wave, and deterministic anti-corruption guardrails. `v0.0.6` completed the next deferred curl/codegen runtime wave, added representative rendered translation drift governance, introduced a shared theme contract plus shell/chart parity proof, and surfaced that new evidence explicitly inside the canonical production gate. `v0.0.7` selected `text` as the next authority wave, promoted it across browse, compare, AI discovery, `llms.txt`, and tools-index exports, added growth-surface governance, and completed evidence-led GSC recovery triage. `v0.0.8` repaired the next scheduling and code-analysis runtime helper clusters, restored placeholder governance, and closed with a green canonical production gate. `v0.0.9` inventoried remaining imported runtime helper debt, repaired selected text and validation reference-data clusters, extended const-helper governance, and closed with green canonical production verification. `v0.0.10` completed the GSC validation action matrix, representative technical blocker live checks, Hex Editor detail recovery, and introduced the pension calculator and net worth interactive flagship trackers. `v0.0.11` fully liquidated remaining stubs in `tool-stubs.ts` and shipped the Developer Cryptographic & Hash Toolbox flagship component under 10-locale constraints.
 
-## Current Milestone: v0.0.11 Runtime Helper Debt Liquidation and Cryptographic Toolbox Shaking
+## Current Milestone: v0.0.12 Growth Acceleration and High-Performance Tool Expansion
+
+**Goal:** Accelerate user entry performance via SmartLink prefetching and split translation loading, restore canonical SEO compliance, and ship 4 Svelte 5 office productivity tools.
+
+**Target features:**
+- Implement `SmartLink` component with global event delegation, 250ms mouseover delay, and network-aware connection guards (already completed in Phase 41).
+- Split tool-specific translations into glob imports in memory to bypass Cloudflare loopback requests and optimize bundle size (already completed in Phase 41).
+- Resolve GSC canonical drifts on dynamic query routes by enforcing strict canonical route rendering for search paths.
+- Develop Svelte 5 Invoice Generator, Resume Builder, Signature Pad, and Pomodoro Timer components.
+- Ensure complete 10-locale translation keys mapping for all new office tools.
+
+## Most Recent Milestone: v0.0.11 Runtime Helper Debt Liquidation and Cryptographic Toolbox Shaking
 
 **Goal:** Liquidate 100% of legacy stubs in `src/lib/tool-stubs.ts` and ship our 4th premium Obsidian Gold flagship interactive tool: Developer Cryptographic & Hash Toolbox.
 
-**Target features:**
-- Fully liquidate all 6 remaining runtime stubs (`defaultColors`, `emojiData`, `fontMappings`, `fontStyles`, `K`, `bicDatabase`) into typed modules behind compatibility exports.
-- Implement `developer-cryptography-toolbox` utilizing Svelte 5 reactive patterns, microsecond benchmarking, and raw/hex/base64 transforms.
-- Strictly satisfy 10-locale SEO TDK size rules and provide zero-leakage translation accuracy.
-- Verify Astro 6 SSR Cloudflare deployment paths and sitemap crawlers with 100% test passing gates.
+**Delivered features:**
+- Fully liquidated all 6 remaining runtime stubs (`defaultColors`, `emojiData`, `fontMappings`, `fontStyles`, `K`, `bicDatabase`) into typed modules behind compatibility exports.
+- Implemented `developer-cryptography-toolbox` utilizing Svelte 5 reactive patterns, microsecond benchmarking, and raw/hex/base64 transforms.
+- Satisfied 10-locale SEO TDK size rules and provided zero-leakage translation accuracy.
+- Verified Astro 6 SSR Cloudflare deployment paths and sitemap crawlers with 100% test passing gates.
 
-## Most Recent Milestone: v0.0.10 GSC Evidence Intake and High-Value URL Recovery
+## Earlier Milestone: v0.0.10 GSC Evidence Intake and High-Value URL Recovery
 
 **Goal:** Stop broad failed GSC validation retries by converting existing exports into a targeted action plan, fixing true blockers, and improving only high-value recovery pages.
 
@@ -173,21 +184,10 @@ The current baseline now includes promoted discovery ordering for the strongest 
 - Corrected prerender sitemap checks under `/dist/client/sitemap.xml` for Astro 6 SSR Cloudflare deployment compatibility.
 - Ranked high-value `tool-detail` recovery candidates from Performance evidence and patched the selected Hex Editor cluster.
 
-## Earlier Milestone: v0.0.9 Runtime Debt Prioritization and Text Utility Repair
-
-**Goal:** Make the remaining `tool-stubs.ts` runtime debt measurable, then repair the next user-visible text/reference-data helper wave without broad compatibility churn.
-
-**Delivered features:**
-- A deterministic inventory ranks imported `tool-stubs.ts` exports by consumer paths, placeholder signatures, false-positive notes, user-visible breakage, and compatibility risk.
-- Text utility tools such as ASCII art, Morse/NATO, small text, and flip/mirror output use meaningful reference data instead of empty compatibility maps.
-- Adjacent validation/reference-data tools selected from the inventory, such as email or password checks, stop under-reporting known cases because of empty data.
-- Runtime smoke tests, placeholder governance, traceability, and production verification show the repaired clusters as release evidence.
-
 ## Future Milestone Goals
 
-- Clear 100% of stubs in `tool-stubs.ts` and verify no code references legacy stubs in upcoming milestones.
 - Ensure strict multi-locale TDK character validation remains a hard barrier for any new flagship components.
 - Progressively deprecate the old static routing constraints once SSR SEO benefits are proven.
 
 ---
-*Last updated: 2026-06-02 after completing Milestone v0.0.10 and opening v0.0.11*
+*Last updated: 2026-06-04 after completing Milestone v0.0.11 and opening v0.0.12*
