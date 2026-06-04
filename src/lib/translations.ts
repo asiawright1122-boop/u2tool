@@ -20,12 +20,7 @@ type MessagesRecord = Record<string, unknown>;
 const toolMessageAliases: Record<string, string> = {
   'jwt-debugger': 'jwt-decoder',
 };
-const detailedToolSupportKeys = [
-  'detailed_description',
-  'usage_steps',
-  'usage_examples',
-  'faqs',
-];
+
 
 const baseMessagesCache = new Map<string, MessagesRecord>();
 const baseUiMessagesCache = new Map<string, MessagesRecord>();
@@ -445,13 +440,8 @@ export async function loadToolMessages(
       );
 
   // 3. Merge: tool-specific base metadata keeps name/SEO fields, while split
-  //    files remain authoritative for long-form support copy.
-  const mergedMessages = { ...toolData };
-  for (const key of detailedToolSupportKeys) {
-    if (detailed[key] !== undefined) {
-      mergedMessages[key] = detailed[key];
-    }
-  }
+  //    files remain authoritative for all keys including custom UI translations.
+  const mergedMessages = mergeMessageRecords(toolData, detailed);
 
   toolMessagesCache.set(cacheKey, mergedMessages);
   return mergedMessages;
@@ -487,12 +477,7 @@ export async function loadToolPageMessages(
         localeDetailed
       );
 
-  const mergedMessages = { ...toolData };
-  for (const key of detailedToolSupportKeys) {
-    if (detailed[key] !== undefined) {
-      mergedMessages[key] = detailed[key];
-    }
-  }
+  const mergedMessages = mergeMessageRecords(toolData, detailed);
 
   toolPageMessagesCache.set(cacheKey, mergedMessages);
   return mergedMessages;
