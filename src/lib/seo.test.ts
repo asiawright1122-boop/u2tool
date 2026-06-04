@@ -143,7 +143,7 @@ describe('seo helpers', () => {
   });
 });
 
-import { getDefaultRobots } from '@/layouts/BaseLayout.astro';
+import { getDefaultRobots } from '@/lib/robots';
 
 describe('default robots helper', () => {
   it('returns noindex, nofollow when search params present', () => {

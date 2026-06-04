@@ -45,11 +45,11 @@
 - [ ] Implement playbook metadata and link adjustments for GSC recovered paths
 
 ### Phase 43: Office Tools Implementation (Invoice, Resume, Signature, Pomodoro)
-- [ ] Develop Svelte 5 Invoice Generator and Resume Builder Svelte components
-- [ ] Implement Canvas-backed Signature Pad and reactive Pomodoro Timer Svelte components
+- [x] Develop Svelte 5 Invoice Generator and Resume Builder Svelte components
+- [x] Implement Canvas-backed Signature Pad and reactive Pomodoro Timer Svelte components
 
 ### Phase 44: i18n Translations & Production Verification Gate
-- [ ] Translate all new office tools across 10 locales and verify width limits
+- [x] Translate all new office tools across 10 locales and verify width limits
 - [ ] Run complete verify:production test suite and close v0.0.12 milestone
 
 

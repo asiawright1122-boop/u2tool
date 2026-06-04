@@ -178,12 +178,12 @@ const supportContent: SupportMap = {
         {
           title: 'Lebenslauf und formale Unterlagen',
           description: 'Erstelle berufliche Dokumente und exportiere sie fur Bewerbungen oder interne Freigaben.',
-          toolSlugs: ['resume-builder', 'signature-pad', 'markdown-to-pdf'],
+          toolSlugs: ['invoice-generator', 'resume-builder', 'signature-pad'],
         },
         {
           title: 'Meetings, Planung und Team-Taktung',
           description: 'Halte Aufgaben, Verfugbarkeit und Agenda in einem schlanken Browser-Workflow zusammen.',
-          toolSlugs: ['meeting-notes', 'meeting-agenda-builder', 'calendar-availability-finder'],
+          toolSlugs: ['meeting-notes', 'meeting-agenda-builder', 'pomodoro-timer'],
         },
       ],
       noteTitle: 'Warum das wichtig ist',
@@ -279,12 +279,12 @@ const supportContent: SupportMap = {
         {
           title: 'Curriculos y documentos personales',
           description: 'Crea documentos formales y prepara exportaciones para postulaciones o entregas.',
-          toolSlugs: ['resume-builder', 'signature-pad', 'word-to-html'],
+          toolSlugs: ['invoice-generator', 'resume-builder', 'signature-pad'],
         },
         {
           title: 'Reuniones y coordinacion',
           description: 'Mantén agendas, notas y horarios conectados en un flujo simple desde el navegador.',
-          toolSlugs: ['meeting-notes', 'meeting-agenda-builder', 'timezone-meeting-scheduler'],
+          toolSlugs: ['meeting-notes', 'meeting-agenda-builder', 'pomodoro-timer'],
         },
       ],
       noteTitle: 'Por que ayuda',
@@ -347,12 +347,12 @@ const supportContent: SupportMap = {
         {
           title: 'CV et documents de presentation',
           description: 'Preparez des supports professionnels sans logiciel desktop lourd.',
-          toolSlugs: ['resume-builder', 'signature-pad', 'markdown-to-pdf'],
+          toolSlugs: ['invoice-generator', 'resume-builder', 'signature-pad'],
         },
         {
           title: 'Reunions et organisation',
           description: 'Centralisez agenda, notes et disponibilites dans des outils simples et rapides.',
-          toolSlugs: ['meeting-notes', 'meeting-agenda-builder', 'calendar-availability-finder'],
+          toolSlugs: ['meeting-notes', 'meeting-agenda-builder', 'pomodoro-timer'],
         },
       ],
       noteTitle: 'Pourquoi cette couche compte',
@@ -415,12 +415,12 @@ const supportContent: SupportMap = {
         {
           title: '履歴書と提出書類',
           description: '応募や社内提出で使う書類を、ブラウザだけで整えて書き出せます。',
-          toolSlugs: ['resume-builder', 'signature-pad', 'markdown-to-pdf'],
+          toolSlugs: ['invoice-generator', 'resume-builder', 'signature-pad'],
         },
         {
           title: '会議準備と記録',
           description: '議題、メモ、参加可能時間をつなげて、会議運営の手戻りを減らします。',
-          toolSlugs: ['meeting-notes', 'meeting-agenda-builder', 'calendar-availability-finder'],
+          toolSlugs: ['meeting-notes', 'meeting-agenda-builder', 'pomodoro-timer'],
         },
       ],
       noteTitle: '狙い',
@@ -518,12 +518,12 @@ const supportContent: SupportMap = {
         {
           title: 'Curriculos e documentos pessoais',
           description: 'Monte arquivos formais e exporte materiais para candidatura ou entrega profissional.',
-          toolSlugs: ['resume-builder', 'signature-pad', 'word-to-html'],
+          toolSlugs: ['invoice-generator', 'resume-builder', 'signature-pad'],
         },
         {
           title: 'Reunioes e coordenacao',
           description: 'Mantenha pauta, notas e disponibilidade em um fluxo leve para times distribuidos.',
-          toolSlugs: ['meeting-notes', 'meeting-agenda-builder', 'timezone-meeting-scheduler'],
+          toolSlugs: ['meeting-notes', 'meeting-agenda-builder', 'pomodoro-timer'],
         },
       ],
       noteTitle: 'Por que isso ajuda',
