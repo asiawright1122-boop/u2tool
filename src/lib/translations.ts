@@ -38,9 +38,10 @@ const bundledBaseMessageModules: Record<string, () => Promise<MessagesRecord>> =
       })
     : {};
 
-const bundledToolMessageModules: Record<string, () => Promise<MessagesRecord>> =
+const bundledToolMessageModules: Record<string, () => Promise<unknown>> =
   typeof import.meta.glob === 'function'
-    ? import.meta.glob<MessagesRecord>('../messages/*/tools/*.json', {
+    ? import.meta.glob<unknown>('../messages/*/tools/*.json', {
+        query: '?raw',
         import: 'default',
       })
     : {};
@@ -123,7 +124,11 @@ async function readBundledJson(relativePath: string): Promise<MessagesRecord | n
   }
 
   try {
-    return await loadBundledMessages();
+    const result = await loadBundledMessages();
+    if (typeof result === 'string') {
+      return JSON.parse(result) as MessagesRecord;
+    }
+    return result as MessagesRecord | null;
   } catch {
     return null;
   }
