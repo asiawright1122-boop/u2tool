@@ -38,4 +38,19 @@
   Audit: [.planning/milestones/v0.0.7-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.7-MILESTONE-AUDIT.md)
   Status: shipped on 2026-05-10 with the `text` authority wave selected, promoted, governed, and followed by evidence-led GSC recovery triage.
 
-## Active Milestone: TBD
+## Active Milestone: v0.0.13 — Popular Tool Flagship Conversion Wave
+
+**Goal:** Convert 41 high-traffic `PopularUtilityTool` placeholder tools into real Svelte 5 components across Finance, Developer, Generators, Social/Media, Lifestyle, and Converter clusters. All with 10-locale translations and green release gates.
+
+**Phase numbering continues from v0.0.12 (last phase: 44):**
+
+- [x] Phase 45 — Finance Calculator Cluster (stock-profit, cagr, debt-snowball, paypal-fee, etsy-fee, freelance-rate, savings-goal)
+- [ ] Phase 46 — Developer & Security Tools (docker-run-to-compose, llms-txt-generator, csp-header-generator, security-headers-checker)
+- [ ] Phase 47 — Content Generator Cluster A (ai-prompt, blog-title, meta-description, seo-title, youtube-title, youtube-description, youtube-tags)
+- [ ] Phase 48 — Content Generator Cluster B (email-subject-line, instagram-bio, linkedin-headline, faq-generator, cover-letter, product-description)
+- [ ] Phase 49 — Social & Media Tools (wifi-qr-code, passport-photo-maker, youtube-thumbnail, tiktok-hashtag, tweet-generator)
+- [ ] Phase 50 — Lifestyle / Fitness Calculators (calorie-deficit, macro-calculator, one-rep-max)
+- [ ] Phase 51 — Converter Tools (csv-to-vcard, vcard-to-csv, ics-file-generator)
+- [ ] Phase 52 — Category Authority: finance, generators, lifestyle secondary waves + Production Verification Gate
+
+**Requirements:** [.planning/REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/REQUIREMENTS.md)
