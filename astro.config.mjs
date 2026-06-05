@@ -43,9 +43,18 @@ function healWranglerFiles() {
       }
     }
 
+    // Rewrite main to point to local entry.mjs within the build target, avoiding source path leakage
+    parsedWrangler.main = "entry.mjs";
+
     const distServerDir = path.join(projectRoot, 'dist', 'server');
     if (!fs.existsSync(distServerDir)) {
       fs.mkdirSync(distServerDir, { recursive: true });
+    }
+
+    // Ensure placeholder entry.mjs exists so Miniflare doesn't complain during initialization
+    const mainEntryPath = path.join(distServerDir, 'entry.mjs');
+    if (!fs.existsSync(mainEntryPath)) {
+      fs.writeFileSync(mainEntryPath, 'export default {};', 'utf8');
     }
     fs.writeFileSync(path.join(distServerDir, 'wrangler.json'), JSON.stringify(parsedWrangler), 'utf8');
 
@@ -53,6 +62,13 @@ function healWranglerFiles() {
     if (!fs.existsSync(prerenderDir)) {
       fs.mkdirSync(prerenderDir, { recursive: true });
     }
+
+    // Ensure placeholder entry.mjs exists for prerender as well
+    const prerenderEntryPath = path.join(prerenderDir, 'entry.mjs');
+    if (!fs.existsSync(prerenderEntryPath)) {
+      fs.writeFileSync(prerenderEntryPath, 'export default {};', 'utf8');
+    }
+
     const prerenderWrangler = {
       ...parsedWrangler,
       name: (parsedWrangler.name || "u2tool") + "-prerender"
