@@ -11,7 +11,7 @@ export const LIFESTYLE_TOOLS: Tool[] = [
   { slug: 'pace-calculator', category: 'lifestyle', icon: 'heart', component: 'PaceCalculator' },
   { slug: 'carbon-footprint-calculator', category: 'lifestyle', icon: 'heart', component: 'CarbonFootprintCalculator' },
   { slug: 'habit-tracker', category: 'lifestyle', icon: 'heart', component: 'HabitTracker' },
-  { slug: 'calorie-deficit-calculator', category: 'lifestyle', icon: 'calculator', component: 'PopularUtilityTool', popular: true },
-  { slug: 'macro-calculator', category: 'lifestyle', icon: 'calculator', component: 'PopularUtilityTool', popular: true },
-  { slug: 'one-rep-max-calculator', category: 'lifestyle', icon: 'activity', component: 'PopularUtilityTool', popular: true },
+  { slug: 'calorie-deficit-calculator', category: 'lifestyle', icon: 'calculator', component: 'CalorieDeficitCalculator', popular: true },
+  { slug: 'macro-calculator', category: 'lifestyle', icon: 'calculator', component: 'MacroCalculator', popular: true },
+  { slug: 'one-rep-max-calculator', category: 'lifestyle', icon: 'activity', component: 'OneRepMaxCalculator', popular: true },
 ];
