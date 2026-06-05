@@ -27,20 +27,19 @@ function healWranglerFiles() {
 
     // Also heal the expected wrangler.json in build output targets
     const wranglerJsoncPath = path.join(projectRoot, 'wrangler.jsonc');
-    let wranglerJsonContent = '{}';
+    let parsedWrangler = {
+      name: "u2tool",
+      compatibility_date: "2026-04-09",
+      compatibility_flags: ["nodejs_compat"]
+    };
     if (fs.existsSync(wranglerJsoncPath)) {
       try {
         // Stripping potential comments from JSONC for a basic parse
         const rawText = fs.readFileSync(wranglerJsoncPath, 'utf8');
         const cleanJson = rawText.replace(/\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm, '$1');
-        wranglerJsonContent = JSON.stringify(JSON.parse(cleanJson));
+        parsedWrangler = JSON.parse(cleanJson);
       } catch (e) {
-        // Fallback to basic structure
-        wranglerJsonContent = JSON.stringify({
-          name: "u2tool",
-          compatibility_date: "2026-04-09",
-          compatibility_flags: ["nodejs_compat"]
-        });
+        // Keep default structure
       }
     }
 
@@ -48,13 +47,17 @@ function healWranglerFiles() {
     if (!fs.existsSync(distServerDir)) {
       fs.mkdirSync(distServerDir, { recursive: true });
     }
-    fs.writeFileSync(path.join(distServerDir, 'wrangler.json'), wranglerJsonContent, 'utf8');
+    fs.writeFileSync(path.join(distServerDir, 'wrangler.json'), JSON.stringify(parsedWrangler), 'utf8');
 
     const prerenderDir = path.join(distServerDir, '.prerender');
     if (!fs.existsSync(prerenderDir)) {
       fs.mkdirSync(prerenderDir, { recursive: true });
     }
-    fs.writeFileSync(path.join(prerenderDir, 'wrangler.json'), wranglerJsonContent, 'utf8');
+    const prerenderWrangler = {
+      ...parsedWrangler,
+      name: (parsedWrangler.name || "u2tool") + "-prerender"
+    };
+    fs.writeFileSync(path.join(prerenderDir, 'wrangler.json'), JSON.stringify(prerenderWrangler), 'utf8');
   } catch (e) {
     // Silence filesystem errors during setup
   }
