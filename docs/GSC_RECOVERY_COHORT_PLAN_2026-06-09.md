@@ -60,25 +60,25 @@ These URLs came from the prior GSC high-loss queue and have live clean-URL index
 | 12 | `https://www.u2tool.com/de/tools/text-to-handwriting/` | -17 clicks, -176 impressions | 200, self-canonical, index/follow | GSC operator | Test live URL, then request indexing |
 | 13 | `https://www.u2tool.com/ru/tools/barcode-generator/` | -11 clicks, -244 impressions | 200, self-canonical, index/follow | GSC operator | Test live URL, then request indexing |
 
-## Cohort C: Enhance Before Requesting Indexing
+## Cohort C: Repo-Checked Lower-Priority Indexing Queue
 
-These URLs are high-loss candidates, but the current evidence does not prove that the relevant content/snippet issue has already been repaired. Keep them out of the request-indexing queue until the page is inspected and patched or explicitly accepted as healthy.
+These URLs were high-loss candidates that needed repo-side inspection before any request-indexing action. The inspection is now recorded in `docs/GSC_COHORT_C_READINESS_2026-06-09.md`: targeted rendered SEO/content guards exist for every URL, twelve URLs passed production checks on 2026-06-09, and `en/tools/bra-size-calculator/` has a local meta-description patch that must deploy before URL Inspection. Treat Cohort C as a lower-priority request-indexing queue after Cohort A/B and after confirming the live URL is eligible.
 
 | Priority | URL | Loss Signal | Owner | Next Action |
 |---:|---|---:|---|---|
-| 1 | `https://www.u2tool.com/en/tools/typing-speed-test/` | -2,215 impressions | Codex/repo | Inspect title, support copy, query fit, and internal links |
-| 2 | `https://www.u2tool.com/en/tools/pixel-density-calculator/` | -1,473 impressions | Codex/repo | Inspect title, support copy, query fit, and internal links |
-| 3 | `https://www.u2tool.com/es/tools/document-word-counter/` | -1,248 impressions | Codex/repo | Inspect localized content and canonical relation to `word-counter` |
-| 4 | `https://www.u2tool.com/en/tools/screen-recorder/` | -1,135 impressions | Codex/repo | Inspect actual UI claims and browser capability limits |
-| 5 | `https://www.u2tool.com/ar/tools/calorie-calculator/` | -1,089 impressions | Codex/repo | Inspect localized content, health disclaimers, and formula clarity |
-| 6 | `https://www.u2tool.com/es/tools/gantt-chart-generator/` | -1,042 impressions | Codex/repo | Compare Spanish content against the repaired English Gantt page |
-| 7 | `https://www.u2tool.com/en/tools/ascii-table/` | -933 impressions | Codex/repo | Inspect whether page satisfies ASCII reference intent |
-| 8 | `https://www.u2tool.com/en/tools/dice-roller/` | -837 impressions | Codex/repo | Inspect thin-content risk and internal links |
-| 9 | `https://www.u2tool.com/en/tools/credit-card-validator/` | -828 impressions | Codex/repo | Inspect validation boundary and payment-card safety copy |
-| 10 | `https://www.u2tool.com/en/tools/timeline-chart-generator/` | -770 impressions | Codex/repo | Inspect chart workflow and support copy |
-| 11 | `https://www.u2tool.com/fr/tools/mortgage-calculator/` | -765 impressions | Codex/repo | Inspect localized finance/YMYL limits and formula explanation |
-| 12 | `https://www.u2tool.com/en/tools/bra-size-calculator/` | -728 impressions | Codex/repo | Inspect sensitive health/body wording and measurement clarity |
-| 13 | `https://www.u2tool.com/en/tools/random-color-generator/` | -715 impressions | Codex/repo | Inspect SERP intent and feature completeness |
+| 1 | `https://www.u2tool.com/en/tools/typing-speed-test/` | -2,215 impressions | GSC operator | Test live URL, then request indexing if eligible and A/B quota allows |
+| 2 | `https://www.u2tool.com/en/tools/pixel-density-calculator/` | -1,473 impressions | GSC operator | Test live URL, then request indexing if eligible and A/B quota allows |
+| 3 | `https://www.u2tool.com/es/tools/document-word-counter/` | -1,248 impressions | GSC operator | Test live URL, then request indexing if eligible and A/B quota allows |
+| 4 | `https://www.u2tool.com/en/tools/screen-recorder/` | -1,135 impressions | GSC operator | Test live URL, then request indexing if eligible and A/B quota allows |
+| 5 | `https://www.u2tool.com/ar/tools/calorie-calculator/` | -1,089 impressions | GSC operator | Test live URL, then request indexing if eligible and A/B quota allows |
+| 6 | `https://www.u2tool.com/es/tools/gantt-chart-generator/` | -1,042 impressions | GSC operator | Test live URL, then request indexing if eligible and A/B quota allows |
+| 7 | `https://www.u2tool.com/en/tools/ascii-table/` | -933 impressions | GSC operator | Test live URL, then request indexing if eligible and A/B quota allows |
+| 8 | `https://www.u2tool.com/en/tools/dice-roller/` | -837 impressions | GSC operator | Test live URL, then request indexing if eligible and A/B quota allows |
+| 9 | `https://www.u2tool.com/en/tools/credit-card-validator/` | -828 impressions | GSC operator | Test live URL, then request indexing if eligible and A/B quota allows |
+| 10 | `https://www.u2tool.com/en/tools/timeline-chart-generator/` | -770 impressions | GSC operator | Test live URL, then request indexing if eligible and A/B quota allows |
+| 11 | `https://www.u2tool.com/fr/tools/mortgage-calculator/` | -765 impressions | GSC operator | Test live URL, then request indexing if eligible and A/B quota allows |
+| 12 | `https://www.u2tool.com/en/tools/bra-size-calculator/` | -728 impressions | GSC operator | Deploy local meta-description patch first, then test live URL and request indexing if eligible |
+| 13 | `https://www.u2tool.com/en/tools/random-color-generator/` | -715 impressions | GSC operator | Test live URL, then request indexing if eligible and A/B quota allows |
 
 ## Cohort D: Monitor Or Do Not Validate Broadly
 

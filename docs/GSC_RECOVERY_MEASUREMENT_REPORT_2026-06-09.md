@@ -63,7 +63,7 @@ Fill this table at every checkpoint.
 |---|---:|---|---|---:|---:|---:|---:|---|
 | A - Immediate release indexing | 6 | pending | pending | pending | pending | pending | pending | pending |
 | B - High-loss patched URLs | 13 | pending | pending | pending | pending | pending | pending | pending |
-| C - Enhance before indexing | 13 | not requested | pending inspection | pending | pending | pending | pending | pending |
+| C - Repo-checked lower-priority queue | 13 | not requested | repo inspection complete; one URL needs deployment before live inspection | pending | pending | pending | pending | pending |
 | D - Monitor / do not validate broadly | mixed historical rows | not requested | monitor only | pending | pending | pending | pending | pending |
 
 ## URL-Level Table Template
@@ -119,13 +119,14 @@ Use these labels at each checkpoint:
 | `indexed-no-exposure` | URL is indexed but impressions remain flat or zero by 14 days | Inspect query fit, title, meta description, internal links, and competitor SERP |
 | `not-recrawled` | URL Inspection or Page Indexing still shows stale crawl state after request | Re-test live URL; check sitemap/internal links; wait or request again only if allowed |
 | `needs-repair` | Clean URL fails indexability, canonical, robots, content, or frontend safety checks | Fix repo before any more GSC actions |
-| `defer` | Cohort C URL has no patch evidence yet | Keep out of request-indexing queue |
+| `defer` | URL has no patch evidence yet or a local fix is not deployed | Keep out of request-indexing queue until the evidence is complete |
 
 ## Checkpoint Tasks
 
 ### 2026-06-12
 
 - Record URL Inspection state for Cohort A and Cohort B.
+- If request-indexing quota remains after A/B, use `docs/GSC_COHORT_C_READINESS_2026-06-09.md` to inspect eligible Cohort C URLs. Keep `en/tools/bra-size-calculator/` deferred until the local meta-description patch is deployed.
 - Confirm no clean canonical URL slipped to `noindex`.
 - Do not judge clicks yet.
 
