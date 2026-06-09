@@ -8,38 +8,54 @@ U2Tool is a large multilingual Astro + Svelte tool site with 500+ utility pages 
 
 Every localized tool page must render the right topic, the right language, and the right UX state without drift.
 
+## Non-Negotiable Frontend Safety Principle
+
+No user-facing frontend surface may display internal reasoning traces. Tool UI,
+localized support copy, browser-rendered API output, and discovery text may show
+final answers, formulas, concise explanations, and validation evidence, but must
+never expose chain-of-thought, agent scratchpads, hidden prompts,
+system/developer instructions, reviewer handoffs, or raw planning notes.
+
 ## Current Status
 
-**Current milestone:** TBD
-**Latest completed milestone:** `v0.0.12 Growth Acceleration and High-Performance Tool Expansion`
-**Latest archived milestone:** `v0.0.11 Runtime Helper Debt Liquidation and Cryptographic Toolbox Shaking`
-**Previous archived milestone:** `v0.0.10 GSC Evidence Intake and High-Value URL Recovery`
-**Current planning state:** v0.0.12 is closed. Planning for v0.0.13 is underway.
+**Current milestone:** `v0.0.14 Production Release and GSC Recovery Measurement`
+**Latest completed milestone:** `v0.0.13 Popular Tool Flagship Conversion Wave`
+**Latest archived milestone:** `v0.0.13 Popular Tool Flagship Conversion Wave`
+**Previous archived milestone:** `v0.0.12 Growth Acceleration and High-Performance Tool Expansion`
+**Current planning state:** v0.0.14 is open. Phase 54 release/live verification, Phase 55 GSC cohort planning, and the Phase 56 measurement structure are complete; next work needs post-release GSC exports.
 
 **Latest completed outcomes:**
-- Implemented `SmartLink` component with hover prefetching and Network Information API connection guards to optimize LCP/FCP.
-- Split tool-specific translations into dynamically loaded modules to bypass Cloudflare Worker loopback constraints and reduce core-bundle weight.
-- Enforced noindex, nofollow on dynamic query routes inside BaseLayout template to prevent search engine indexing duplicate content and canonical drifts.
-- Shipped Svelte 5 Invoice Generator, Resume Builder, Canvas-backed Signature Pad, and Pomodoro Timer flagship productivity tools with 100% complete 10-locale translation keys.
-- Passed full E2E verify:production release checks at EXCELLENT health.
+- Converted the remaining high-traffic `PopularUtilityTool` catalog placeholders into real Svelte 5 components across finance, developer/security, generator, social/media, lifestyle, image, and converter clusters.
+- Added English category-level authority/support content for `finance`, `generators`, and `lifestyle` through the shared support-content model.
+- Safely released the latest recovery slice through PR #25 and verified the category support copy on production.
+- Confirmed final converted tool URLs remain HTTP 200 and live scanned surfaces do not expose internal reasoning traces.
+- Created the GSC recovery cohort plan with exact URL queues, request-indexing guidance, owner model, and 7/14/28-day checkpoints.
+- Created the recovery measurement report structure with baseline metrics, cohort scorecards, query-family tracking, and decision labels.
+- Added a local GSC cohort checkpoint comparator so post-release exports can be turned into a repeatable URL/query-family report.
+- Added and validated loss-aware GSC metadata/rendered SEO checks plus runtime-placeholder regression governance.
+- Preserved the frontend safety rule that user-facing surfaces must never display internal reasoning traces.
+- Passed release gates for build, check, runtime integrity, SEO governance, runtime-placeholder regression, and front-end safety.
 
 **Latest archived milestone evidence:**
-- Audit: [.planning/v0.0.12-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.12-MILESTONE-AUDIT.md)
-- Roadmap archive: [.planning/milestones/v0.0.12-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-ROADMAP.md)
-- Requirements archive: [.planning/milestones/v0.0.12-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-REQUIREMENTS.md)
+- Audit: [.planning/milestones/v0.0.13-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.13-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.13-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-REQUIREMENTS.md)
 - Traceability: [.planning/TRACEABILITY.md](/Users/kaka/Dev/u2tool/.planning/TRACEABILITY.md)
 - Health report: [docs/PROJECT_HEALTH_REPORT.md](/Users/kaka/Dev/u2tool/docs/PROJECT_HEALTH_REPORT.md)
 
 **Earlier archived milestone evidence:**
+- Audit: [.planning/v0.0.12-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.12-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.12-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.12-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-REQUIREMENTS.md)
 - Audit: [.planning/v0.0.11-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.11-MILESTONE-AUDIT.md)
 - Roadmap archive: [.planning/milestones/v0.0.11-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.11-ROADMAP.md)
 - Requirements archive: [.planning/milestones/v0.0.11-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.11-REQUIREMENTS.md)
 - Milestone index: [.planning/MILESTONES.md](/Users/kaka/Dev/u2tool/.planning/MILESTONES.md)
 
-**Most recent milestone focus (`v0.0.12`):**
-- Optimizing initial bundle sizes and dynamic resource prefetching behavior.
-- Resolving legacy canonical drifts and ensuring search compliance across search links.
-- Expanding Svelte 5 flagship tools with interactive, rich-featured canvas, timers, calculations, and local-storage state saving.
+**Most recent milestone focus (`v0.0.13`):**
+- Replacing popular placeholder tools with real Svelte 5 user workflows.
+- Converting traffic-loss recovery evidence into rendered SEO, metadata, runtime, and frontend-safety gates.
+- Completing category authority/support content for the newly activated English finance, generator, and lifestyle clusters.
 
 ## Requirements
 
@@ -86,10 +102,11 @@ Every localized tool page must render the right topic, the right language, and t
 - ✓ Generated and verified translation keys in 10 locales with character boundary validations — v0.0.11.
 - ✓ Resolved CI crawler deadlocks with AbortController timeout protection on internal sitemap validation — v0.0.11.
 - ✓ Align and define v0.0.12 requirements for performance tuning, SEO restoration, and tool growth. — v0.0.12
+- ✓ Converted remaining popular placeholder tools, added activated-category authority content, and closed traffic-recovery validation gates — v0.0.13
 
 ### Active
 
-- [ ] Define requirements and plan for milestone v0.0.13.
+- [ ] Execute v0.0.14 GSC recovery measurement after safe release, live verification, and cohort planning.
 
 ### Out of Scope
 
@@ -118,6 +135,7 @@ This is a brownfield repository with a very large content surface, heavy localiz
 | Centralize SEO helpers for titles, descriptions, hreflang, and SearchAction URLs | Topic governance needs one deterministic source of truth | ✓ Good |
 | Make chart theme reads live and let `EChartsWrapper` observe root theme changes | Theme drift was caused by one-time dark-mode reads and static chart options | ✓ Good |
 | Prioritize quality and topic alignment over adding more tools | Natural traffic depends more on trust and relevance than on raw page count | ✓ Good |
+| Ban internal reasoning traces from frontend output | User trust requires public UI to show final product copy and evidence, not private model/agent process text | ✓ Good |
 | Archive the completed hardening cycle before starting new growth work | The next milestone should inherit a clean baseline instead of extending completed repair phases | ✓ Good |
 | Continue phase numbering after archival instead of restarting from 01 | Preserves historical continuity across milestones and keeps GSD artifacts unambiguous | ✓ Good |
 | Validate representative built HTML in release gates, not just source-truth metadata helpers | Canonical/schema/hreflang regressions can still appear at render time even when the source helpers look correct | ✓ Good |
@@ -154,38 +172,42 @@ This is a brownfield repository with a very large content surface, heavy localiz
 
 ## Current State
 
-The current baseline now includes promoted discovery ordering for the strongest authority routes, a home-page compare entry point, explicit priority export coverage in `llms.txt`, SEO-aware discovery snippets, restored JWT decoder/debugger metadata in the shared message layer, and a canonical production gate that reflects the real Cloudflare server-build output. `v0.0.5` shipped with lighter browse shells, a first shared runtime-integrity repair wave, and deterministic anti-corruption guardrails. `v0.0.6` completed the next deferred curl/codegen runtime wave, added representative rendered translation drift governance, introduced a shared theme contract plus shell/chart parity proof, and surfaced that new evidence explicitly inside the canonical production gate. `v0.0.7` selected `text` as the next authority wave, promoted it across browse, compare, AI discovery, `llms.txt`, and tools-index exports, added growth-surface governance, and completed evidence-led GSC recovery triage. `v0.0.8` repaired the next scheduling and code-analysis runtime helper clusters, restored placeholder governance, and closed with a green canonical production gate. `v0.0.9` inventoried remaining imported runtime helper debt, repaired selected text and validation reference-data clusters, extended const-helper governance, and closed with green canonical production verification. `v0.0.10` completed the GSC validation action matrix, representative technical blocker live checks, Hex Editor detail recovery, and introduced the pension calculator and net worth interactive flagship trackers. `v0.0.11` fully liquidated remaining stubs in `tool-stubs.ts` and shipped the Developer Cryptographic & Hash Toolbox flagship component under 10-locale constraints.
+The current baseline now includes promoted discovery ordering, stable comparison surfaces, AI/GEO exports, category authority support content, runtime-placeholder governance, rendered SEO checks, and a canonical production gate that reflects real Cloudflare server-build output. v0.0.13 closed the highest visible gap in that baseline by converting the remaining popular placeholder pages into real Svelte 5 tool workflows and adding authority/support content for the newly activated English finance, generator, and lifestyle clusters.
 
-## Current Milestone: v0.0.12 Growth Acceleration and High-Performance Tool Expansion
+## Current Milestone: v0.0.14 Production Release and GSC Recovery Measurement
+
+**Goal:** Recover organic traffic by safely deploying the completed recovery work, verifying live production pages, and measuring repaired cohorts in Google Search Console.
+
+**Completed features:**
+- Produced a deployable release manifest that separates traffic-recovery changes from unrelated dirty-worktree changes.
+- Kept live production route validation green before and after release.
+- Merged and deployed a clean release for the latest category-support recovery slice.
+- Verified live category support content, final converted tool URLs, and frontend safety after release.
+- Built the exact GSC recovery cohort queue and indexing/monitoring rules.
+
+**Remaining target features:**
+- Fill 7-day, 14-day, and 28-day GSC recovery measurement checkpoints when post-release exports are available.
+- Run the checkpoint comparator for each export window and record the resulting report.
+
+## Most Recent Milestone: v0.0.13 Popular Tool Flagship Conversion Wave
+
+**Goal:** Convert the remaining high-traffic `PopularUtilityTool` placeholder tools into real Svelte 5 components with complete locale support and green release gates.
+
+**Delivered features:**
+- Converted all remaining catalog `PopularUtilityTool` entries to real tool components, including the final passport photo and CSV/vCard converter slice.
+- Added shared category support content and SEO-governed tests for English `finance`, `generators`, and `lifestyle`.
+- Preserved GSC loss metadata, rendered SEO, runtime-placeholder, runtime-integrity, and frontend-safety validation around the recovery wave.
+- Closed with green build, check, runtime, SEO, placeholder-regression, and no-internal-reasoning frontend safety evidence.
+
+## Earlier Milestone: v0.0.12 Growth Acceleration and High-Performance Tool Expansion
 
 **Goal:** Accelerate user entry performance via SmartLink prefetching and split translation loading, restore canonical SEO compliance, and ship 4 Svelte 5 office productivity tools.
 
-**Target features:**
-- Implement `SmartLink` component with global event delegation, 250ms mouseover delay, and network-aware connection guards (already completed in Phase 41).
-- Split tool-specific translations into glob imports in memory to bypass Cloudflare loopback requests and optimize bundle size (already completed in Phase 41).
-- Resolve GSC canonical drifts on dynamic query routes by enforcing strict canonical route rendering for search paths.
-- Develop Svelte 5 Invoice Generator, Resume Builder, Signature Pad, and Pomodoro Timer components.
-- Ensure complete 10-locale translation keys mapping for all new office tools.
-
-## Most Recent Milestone: v0.0.11 Runtime Helper Debt Liquidation and Cryptographic Toolbox Shaking
-
-**Goal:** Liquidate 100% of legacy stubs in `src/lib/tool-stubs.ts` and ship our 4th premium Obsidian Gold flagship interactive tool: Developer Cryptographic & Hash Toolbox.
-
 **Delivered features:**
-- Fully liquidated all 6 remaining runtime stubs (`defaultColors`, `emojiData`, `fontMappings`, `fontStyles`, `K`, `bicDatabase`) into typed modules behind compatibility exports.
-- Implemented `developer-cryptography-toolbox` utilizing Svelte 5 reactive patterns, microsecond benchmarking, and raw/hex/base64 transforms.
-- Satisfied 10-locale SEO TDK size rules and provided zero-leakage translation accuracy.
-- Verified Astro 6 SSR Cloudflare deployment paths and sitemap crawlers with 100% test passing gates.
-
-## Earlier Milestone: v0.0.10 GSC Evidence Intake and High-Value URL Recovery
-
-**Goal:** Stop broad failed GSC validation retries by converting existing exports into a targeted action plan, fixing true blockers, and improving only high-value recovery pages.
-
-**Delivered features:**
-- A deterministic GSC action matrix labels URL groups as do-not-validate, fix-before-validate, request-indexing-after-enhancement, or monitor.
-- Shipped `retirement-pension-calculator` ("金秋麦浪" gradient, dual-curve inflation/compound) and `net-worth-allocator-tracker` ("瑞士私银" matte dark-gold style, multi-currency conversion, portfolio stress tests, ECharts components) with 10-locale constraints.
-- Corrected prerender sitemap checks under `/dist/client/sitemap.xml` for Astro 6 SSR Cloudflare deployment compatibility.
-- Ranked high-value `tool-detail` recovery candidates from Performance evidence and patched the selected Hex Editor cluster.
+- Implemented `SmartLink` component with hover prefetching and Network Information API connection guards.
+- Split tool-specific translations into dynamically loaded modules to reduce core-bundle weight and avoid Cloudflare loopback constraints.
+- Enforced query-route robots safeguards to avoid duplicate search indexing.
+- Shipped Invoice Generator, Resume Builder, Signature Pad, and Pomodoro Timer with 10-locale translation coverage.
 
 ## Future Milestone Goals
 
@@ -193,4 +215,4 @@ The current baseline now includes promoted discovery ordering for the strongest 
 - Progressively deprecate the old static routing constraints once SSR SEO benefits are proven.
 
 ---
-*Last updated: 2026-06-04 after completing Milestone v0.0.11 and opening v0.0.12*
+*Last updated: 2026-06-09 after opening Milestone v0.0.14*

@@ -1,5 +1,25 @@
 # Milestones
 
+## v0.0.13 Popular Tool Flagship Conversion Wave (Shipped: 2026-06-09)
+
+**Phases completed:** 36 phases, 69 plans, 0 tasks
+
+**Key accomplishments:**
+
+- Converted all remaining high-traffic `PopularUtilityTool` catalog placeholders into real Svelte 5 tool components; the catalog now has 0 `PopularUtilityTool` entries.
+- Shipped the finance, developer/security, content-generator, social/media, lifestyle, image, and converter recovery waves with 10-locale support coverage.
+- Added GSC loss metadata, rendered SEO checks, runtime-placeholder regression checks, and the frontend safety validator that blocks internal reasoning trace exposure.
+- Added category-level authority/support content for English `finance`, `generators`, and `lifestyle` clusters through shared support-content governance.
+- Closed the milestone with green `npm run build`, `npm run check`, `npm run qa:runtime-integrity`, `npm run qa:seo-governance`, `npm run validate:runtime-placeholder-regressions`, and `npm run validate:front-end-safety`.
+
+**Archive files:**
+
+- Roadmap: [.planning/milestones/v0.0.13-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-ROADMAP.md)
+- Requirements: [.planning/milestones/v0.0.13-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-REQUIREMENTS.md)
+- Audit: [.planning/milestones/v0.0.13-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-MILESTONE-AUDIT.md)
+
+---
+
 ## v0.0.12 Growth Acceleration and High-Performance Tool Expansion (Shipped: 2026-06-04)
 
 **Phases completed:** 5 phases, 0 plans (embedded inline)
