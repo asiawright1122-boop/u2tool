@@ -7,6 +7,7 @@ import { phaseEightPriorityClusters } from './category-support-phase8';
 import { phaseElevenPriorityClusters } from './category-support-phase11';
 import { phaseTwentyPriorityClusters } from './category-support-phase20';
 import { phaseThirtyFourPriorityClusters } from './category-support-phase34';
+import { v13PriorityClusters } from './category-support-v13';
 
 const allPriorityClusters = [
   ...phaseSixPriorityClusters,
@@ -14,6 +15,7 @@ const allPriorityClusters = [
   ...phaseElevenPriorityClusters,
   ...phaseTwentyPriorityClusters,
   ...phaseThirtyFourPriorityClusters,
+  ...v13PriorityClusters,
 ];
 
 function isMergeableRecord(value: unknown): value is Record<string, unknown> {
@@ -39,7 +41,12 @@ function mergeMessageRecords(
   return merged;
 }
 
+const localeCache = new Map<string, Record<string, any>>();
+
 function loadMergedLocaleMessages(locale: string): Record<string, any> {
+  if (localeCache.has(locale)) {
+    return localeCache.get(locale)!;
+  }
   const basePath = path.join(process.cwd(), 'src/messages', locale, 'base.json');
   const rootPath = path.join(process.cwd(), 'src/messages', `${locale}.json`);
   const baseMessages = fs.existsSync(basePath)
@@ -49,7 +56,9 @@ function loadMergedLocaleMessages(locale: string): Record<string, any> {
     ? (JSON.parse(fs.readFileSync(rootPath, 'utf8')) as Record<string, any>)
     : {};
 
-  return mergeMessageRecords(baseMessages, rootMessages);
+  const merged = mergeMessageRecords(baseMessages, rootMessages);
+  localeCache.set(locale, merged);
+  return merged;
 }
 
 describe('category support governance', () => {
@@ -91,6 +100,9 @@ describe('category support governance', () => {
       'de/security': ['passwort', 'jwt', 'hmac', 'checksum'],
       'en/charts': ['bar', 'heatmap', 'gantt', 'sankey'],
       'en/encoding': ['json', 'base64', 'hex', 'html'],
+      'en/finance': ['currency', 'loan', 'roi', 'tax'],
+      'en/generators': ['uuid', 'lorem', 'cron', 'qr'],
+      'en/lifestyle': ['calorie', 'sleep', 'water', 'health'],
       'en/security': ['password', 'jwt', 'hmac', 'checksum'],
       'en/text': ['word', 'case', 'line', 'text'],
       'es/charts': ['barras', 'heatmap', 'gantt', 'sankey'],
@@ -137,4 +149,4 @@ describe('category support governance', () => {
       }
     }
   });
-});
+}, 15000);

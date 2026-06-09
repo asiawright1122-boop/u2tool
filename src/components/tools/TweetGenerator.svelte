@@ -279,7 +279,7 @@
 
   const TONE_TEMPLATES: Record<string, ((t: string, hashtags: boolean, cta: boolean) => string)[]> = {
     professional: [
-      (t, h, c) => `Just shared insights on ${t}. The key takeaway: consistency beats perfection every time.${h ? ' #productivity #growth' : ''}${c ? '\n\n→ What's your approach?' : ''}`,
+      (t, h, c) => `Just shared insights on ${t}. The key takeaway: consistency beats perfection every time.${h ? ' #productivity #growth' : ''}${c ? "\n\n→ What's your approach?" : ''}`,
       (t, h, c) => `3 things I learned from ${t}:\n\n1. Start small\n2. Track progress\n3. Iterate often${h ? '\n\n#leadership #learning' : ''}${c ? '\n\nWhich resonates most?' : ''}`,
       (t, h, c) => `The truth about ${t} that nobody talks about: it's not about talent, it's about systems.${h ? ' #mindset #success' : ''}`,
       (t, h, c) => `If you're struggling with ${t}, remember: every expert was once a beginner.${h ? ' #growth #career' : ''}${c ? '\n\nSave this for later. 🔖' : ''}`,
