@@ -13,8 +13,15 @@
   } from '../../lib/runtime-integrity/world-cup-engine';
   import { createTranslator } from '../../lib/translations';
 
-  let { locale, translations } = $props<{ locale: string; translations: any }>();
-  const t = createTranslator(translations, locale, 'tools.world-cup-simulator');
+  interface Props {
+    locale: string;
+    translations: any;
+  }
+  let props: Props = $props();
+
+  function t(key: string, fallback?: string): string {
+    return createTranslator(props.translations, props.locale, 'tools.world-cup-simulator')(key, fallback);
+  }
 
   // Unified localized UI copy map (covering all 10 locales)
   const uiTranslations: Record<string, Record<string, string>> = {
@@ -350,7 +357,7 @@
     }
   };
 
-  const currentUi = $derived(uiTranslations[locale] || uiTranslations['en']);
+  const currentUi = $derived(uiTranslations[props.locale] || uiTranslations['en']);
 
   // Slider States
   let homeSlider = $state(5);
@@ -905,7 +912,7 @@
           </h3>
 
           <div class="overflow-x-auto">
-            <table class="w-full text-xs font-mono text-left border-collapse">
+            <table class="w-full text-xs font-sans text-left border-collapse">
               <thead>
                 <tr class="text-neutral-500 border-b border-neutral-900">
                   <th class="py-3 px-4 text-left">{currentUi.stageLabel}</th>

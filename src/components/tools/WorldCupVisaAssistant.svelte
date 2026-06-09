@@ -18,8 +18,15 @@
   import { evaluateVisaRequirements, CITY_COUNTRY_MAP } from '../../lib/runtime-integrity/world-cup-visa-engine';
   import { createTranslator } from '../../lib/translations';
 
-  let { locale, translations } = $props<{ locale: string; translations: any }>();
-  const t = createTranslator(translations, locale, 'tools.world-cup-visa-assistant');
+  interface Props {
+    locale: string;
+    translations: any;
+  }
+  let props: Props = $props();
+
+  function t(key: string, fallback?: string): string {
+    return createTranslator(props.translations, props.locale, 'tools.world-cup-visa-assistant')(key, fallback);
+  }
 
   // IANA/ISO Country Names (10 Locales)
   const COUNTRIES: Record<string, Record<string, string>> = {
@@ -522,7 +529,7 @@
 
   let totalItems = $derived(visaResult.checklist.length);
 
-  let ui = $derived(uiTranslations[locale] || uiTranslations['en']);
+  let ui = $derived(uiTranslations[props.locale] || uiTranslations['en']);
 
   // Helpers
   function addCityToRoute() {
@@ -646,7 +653,7 @@
             >
               {#each Object.keys(COUNTRIES) as code}
                 <option value={code}>
-                  {COUNTRIES[code][locale] || COUNTRIES[code]['en']} ({code})
+                  {COUNTRIES[code][props.locale] || COUNTRIES[code]['en']} ({code})
                 </option>
               {/each}
             </select>
@@ -670,7 +677,7 @@
                     <Square size={14} />
                   {/if}
                 </div>
-                <span class="truncate">{VISA_TYPES[visaId][locale] || VISA_TYPES[visaId]['en']}</span>
+                 <span class="truncate">{VISA_TYPES[visaId][props.locale] || VISA_TYPES[visaId]['en']}</span>
               </button>
             {/each}
           </div>

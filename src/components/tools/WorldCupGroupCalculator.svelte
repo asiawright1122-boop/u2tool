@@ -12,7 +12,7 @@
     translations: Record<string, unknown>;
   }
 
-  let { locale, translations }: Props = $props();
+  let props: Props = $props();
 
   // Initialize state
   const calcState = new WorldCupCalcState();
@@ -20,7 +20,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']?.[ 'world-cup-group-calculator' ] as Record<string, unknown> || {};
+    const scope = props.translations['tools']?.[ 'world-cup-group-calculator' ] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) {
@@ -29,7 +29,7 @@
     if (typeof value === 'string') return value;
     
     // Fallback search in general tools scope
-    const generalScope = translations['tools'] as Record<string, unknown> || {};
+    const generalScope = props.translations['tools'] as Record<string, unknown> || {};
     let fallbackVal: unknown = generalScope;
     for (const k of keys) {
       fallbackVal = (fallbackVal as Record<string, unknown>)?.[k];

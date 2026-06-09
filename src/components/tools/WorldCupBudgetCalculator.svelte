@@ -30,8 +30,10 @@
   } from '../../lib/runtime-integrity/world-cup-budget-calculator';
   import { createTranslator } from '../../lib/translations';
 
-  let { locale, translations } = $props<{ locale: string; translations: any }>();
-  const t = createTranslator(translations, locale, 'tools.world-cup-budget-calculator');
+  let props = $props<{ locale: string; translations: any }>();
+  function t(key: string, fallback?: string): string {
+    return createTranslator(props.translations, props.locale, 'tools.world-cup-budget-calculator')(key, fallback);
+  }
 
   // Multi-language UI copy mapper
   const uiTranslations: Record<string, Record<string, string>> = {
@@ -269,7 +271,7 @@
     }
   };
 
-  const currentUi = $derived(uiTranslations[locale] || uiTranslations['en']);
+  const currentUi = $derived(uiTranslations[props.locale] || uiTranslations['en']);
 
   // Global Config States
   let originRegion = $state<'US_CAN_MEX' | 'SA' | 'EU' | 'AS_PAC' | 'AFR'>('EU');
@@ -322,13 +324,13 @@
 
   // Set default currency when locale changes
   $effect(() => {
-    if (locale === 'zh') {
+    if (props.locale === 'zh') {
       baseCurrency = 'CNY';
-    } else if (locale === 'ja') {
+    } else if (props.locale === 'ja') {
       baseCurrency = 'JPY';
-    } else if (locale === 'ko') {
+    } else if (props.locale === 'ko') {
       baseCurrency = 'KRW';
-    } else if (locale === 'fr' || locale === 'de') {
+    } else if (props.locale === 'fr' || props.locale === 'de') {
       baseCurrency = 'EUR';
     } else {
       baseCurrency = 'USD';
@@ -605,7 +607,7 @@
     });
   }
 
-  const isRtl = $derived(locale === 'ar');
+  const isRtl = $derived(props.locale === 'ar');
 </script>
 
 <!-- Outer Container styled in luxury Matte Gold Obsidian theme -->

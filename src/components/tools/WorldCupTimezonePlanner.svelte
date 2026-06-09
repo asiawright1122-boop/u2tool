@@ -22,8 +22,15 @@
   import scheduleData from '../../lib/data/world-cup-schedule.json';
   import { createTranslator } from '../../lib/translations';
 
-  let { locale, translations } = $props<{ locale: string; translations: any }>();
-  const t = createTranslator(translations, locale, 'tools.world-cup-timezone-planner');
+  interface Props {
+    locale: string;
+    translations: any;
+  }
+  let props: Props = $props();
+
+  function t(key: string, fallback?: string): string {
+    return createTranslator(props.translations, props.locale, 'tools.world-cup-timezone-planner')(key, fallback);
+  }
 
   // IANA timezone mapping configuration
   const TIMEZONES = [
@@ -556,7 +563,7 @@
     }
   };
 
-  const currentUi = $derived(uiTranslations[locale] || uiTranslations['en']);
+  const currentUi = $derived(uiTranslations[props.locale] || uiTranslations['en']);
 
   // Extract metadata dynamically from dataset to guarantee 100% data alignment
   const matches = scheduleData as any[];
@@ -748,7 +755,7 @@
     let color = '#10B981';
     let tips = '';
 
-    const isCjk = ['zh', 'ja', 'ko'].includes(locale);
+    const isCjk = ['zh', 'ja', 'ko'].includes(props.locale);
 
     if (ratio === 0) {
       grade = isCjk ? '养生神仙' : 'Healthy Sage';
@@ -848,7 +855,7 @@
     }
   }
 
-  const isRtl = $derived(locale === 'ar');
+  const isRtl = $derived(props.locale === 'ar');
 </script>
 
 <!-- Dark obsidian gold container -->
