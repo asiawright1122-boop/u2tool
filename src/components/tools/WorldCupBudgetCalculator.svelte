@@ -35,6 +35,16 @@
     return createTranslator(props.translations, props.locale, 'tools.world-cup-budget-calculator')(key, fallback);
   }
 
+  let isDark = $state(false);
+  onMount(() => {
+    isDark = document.documentElement.classList.contains('dark');
+    const observer = new MutationObserver(() => {
+      isDark = document.documentElement.classList.contains('dark');
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  });
+
   // Multi-language UI copy mapper
   const uiTranslations: Record<string, Record<string, string>> = {
     en: {
@@ -449,17 +459,19 @@
       tooltip: {
         trigger: 'item',
         formatter: (params: any) => {
-          return `<div class="p-1 font-sans text-xs text-neutral-300">
-            <span class="font-bold text-white">${params.name}</span>: ${symbol}${params.value.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} (${params.percent}%)
+          const nameColor = isDark ? 'text-white' : 'text-neutral-800 font-bold';
+          const textColor = isDark ? 'text-neutral-300' : 'text-neutral-600';
+          return `<div class="p-1 font-sans text-xs ${textColor}">
+            <span class="${nameColor}">${params.name}</span>: ${symbol}${params.value.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} (${params.percent}%)
           </div>`;
         },
-        backgroundColor: '#171717',
-        borderColor: '#262626',
-        textStyle: { color: '#d4d4d8' }
+        backgroundColor: isDark ? '#171717' : '#ffffff',
+        borderColor: isDark ? '#262626' : '#e5e7eb',
+        textStyle: { color: isDark ? '#d4d4d8' : '#1f2937' }
       },
       legend: {
         top: 'bottom',
-        textStyle: { color: '#a3a3a3', fontSize: 11 },
+        textStyle: { color: isDark ? '#a3a3a3' : '#4b5563', fontSize: 11 },
         itemWidth: 12,
         itemHeight: 12,
         itemGap: 16
@@ -472,7 +484,7 @@
           avoidLabelOverlap: false,
           itemStyle: {
             borderRadius: 6,
-            borderColor: '#0a0a0a',
+            borderColor: isDark ? '#0a0a0a' : '#ffffff',
             borderWidth: 2
           },
           label: {
@@ -483,7 +495,7 @@
               show: true,
               fontSize: 12,
               fontWeight: 'bold',
-              color: '#ffffff'
+              color: isDark ? '#ffffff' : '#111827'
             }
           },
           labelLine: {
@@ -611,25 +623,25 @@
 </script>
 
 <!-- Outer Container styled in luxury Matte Gold Obsidian theme -->
-<div class="world-cup-budget-calculator-container dark bg-[#0a0a0a] text-neutral-200 border border-neutral-800 rounded-3xl p-6 lg:p-10 shadow-2xl relative font-sans leading-relaxed selection:bg-amber-500/20" dir={isRtl ? 'rtl' : 'ltr'}>
+<div class="world-cup-budget-calculator-container bg-white dark:bg-[#0a0a0a] text-neutral-800 dark:text-neutral-200 border border-neutral-250 dark:border-neutral-800 rounded-3xl p-6 lg:p-10 shadow-2xl relative font-sans leading-relaxed selection:bg-amber-500/20" dir={isRtl ? 'rtl' : 'ltr'}>
   
   <!-- Top Banner Header -->
-  <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-b border-neutral-900 pb-8 mb-8">
+  <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-b border-neutral-200 dark:border-neutral-900 pb-8 mb-8">
     <div class="space-y-2">
-      <div class="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-xs font-mono text-amber-400">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-xs font-mono text-amber-600 dark:text-amber-400">
         <Sparkles class="w-3.5 h-3.5" />
         2026 World Cup Premium Estimator
       </div>
-      <h2 class="text-3xl font-extrabold text-white tracking-tight font-outfit">
+      <h2 class="text-3xl font-extrabold text-neutral-800 dark:text-white tracking-tight font-outfit">
         🏆 {t('name') || currentUi.budgetPresetLabel}
       </h2>
-      <p class="text-sm text-neutral-400 max-w-2xl">
+      <p class="text-sm text-neutral-550 dark:text-neutral-400 max-w-2xl">
         {t('detailed_description')}
       </p>
     </div>
     
     <div class="flex items-center gap-3">
-      <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-900 border border-neutral-800 text-xs font-mono text-neutral-400 shadow-inner">
+      <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-xs font-mono text-neutral-600 dark:text-neutral-400 shadow-inner">
         <span class="w-2 h-2 rounded-full bg-[#E5C158] animate-pulse"></span>
         No Data Leaves Browser
       </span>
@@ -642,8 +654,8 @@
     <div class="lg:col-span-7 space-y-6">
       
       <!-- Preset Triggers -->
-      <div class="p-6 bg-neutral-900/40 border border-neutral-900 rounded-2xl space-y-4">
-        <h3 class="text-sm font-semibold text-white tracking-wide border-b border-neutral-900 pb-3 flex items-center gap-2">
+      <div class="p-6 bg-neutral-50/80 dark:bg-neutral-900/40 border border-neutral-200 dark:border-neutral-900 rounded-2xl space-y-4">
+        <h3 class="text-sm font-semibold text-neutral-800 dark:text-white tracking-wide border-b border-neutral-200 dark:border-neutral-900 pb-3 flex items-center gap-2">
           <Briefcase class="w-4 h-4 text-[#E5C158]" />
           {currentUi.budgetPresetLabel}
         </h3>
@@ -670,8 +682,8 @@
       </div>
 
       <!-- Settings Sliders & Selectors -->
-      <div class="p-6 bg-neutral-900/40 border border-neutral-900 rounded-2xl space-y-6">
-        <h3 class="text-sm font-semibold text-white tracking-wide border-b border-neutral-900 pb-3 flex items-center gap-2">
+      <div class="p-6 bg-neutral-50/80 dark:bg-neutral-900/40 border border-neutral-200 dark:border-neutral-900 rounded-2xl space-y-6">
+        <h3 class="text-sm font-semibold text-neutral-800 dark:text-white tracking-wide border-b border-neutral-200 dark:border-neutral-900 pb-3 flex items-center gap-2">
           <Sliders class="w-4 h-4 text-[#E5C158]" />
           {currentUi.budgetSettings}
         </h3>
@@ -679,11 +691,11 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Origin Region -->
           <div class="space-y-2">
-            <label for="origin-region" class="text-xs text-neutral-400 block font-medium">{currentUi.originRegionLabel}</label>
+            <label for="origin-region" class="text-xs text-neutral-500 dark:text-neutral-400 block font-medium">{currentUi.originRegionLabel}</label>
             <select
               id="origin-region"
               bind:value={originRegion}
-              class="w-full px-3.5 py-2.5 bg-neutral-950 border border-neutral-800 text-neutral-200 text-sm rounded-xl focus:outline-none focus:ring-1 focus:ring-[#E5C158]/40"
+              class="w-full px-3.5 py-2.5 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-200 text-sm rounded-xl focus:outline-none focus:ring-1 focus:ring-[#E5C158]/40"
             >
               <option value="US_CAN_MEX">North America (Local)</option>
               <option value="SA">South America</option>
@@ -695,11 +707,11 @@
 
           <!-- Base Currency -->
           <div class="space-y-2">
-            <label for="base-currency" class="text-xs text-neutral-400 block font-medium">{currentUi.baseCurrencyLabel}</label>
+            <label for="base-currency" class="text-xs text-neutral-500 dark:text-neutral-400 block font-medium">{currentUi.baseCurrencyLabel}</label>
             <select
               id="base-currency"
               bind:value={baseCurrency}
-              class="w-full px-3.5 py-2.5 bg-neutral-950 border border-neutral-800 text-neutral-200 text-sm rounded-xl focus:outline-none focus:ring-1 focus:ring-[#E5C158]/40"
+              class="w-full px-3.5 py-2.5 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-200 text-sm rounded-xl focus:outline-none focus:ring-1 focus:ring-[#E5C158]/40"
             >
               <option value="USD">USD ($)</option>
               <option value="EUR">EUR (€)</option>
@@ -714,7 +726,7 @@
 
           <!-- Group Size -->
           <div class="space-y-2 md:col-span-2">
-            <div class="flex justify-between items-center text-xs text-neutral-400">
+            <div class="flex justify-between items-center text-xs text-neutral-550 dark:text-neutral-400">
               <span class="font-medium flex items-center gap-1.5">
                 <Users class="w-3.5 h-3.5 text-[#E5C158]" />
                 {currentUi.groupSizeLabel}
@@ -726,17 +738,17 @@
               min="1"
               max="10"
               bind:value={groupSize}
-              class="w-full h-1 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-[#E5C158]"
+              class="w-full h-1 bg-neutral-200 dark:bg-neutral-850 rounded-lg appearance-none cursor-pointer accent-[#E5C158]"
             />
           </div>
 
           <!-- Accommodation Level -->
           <div class="space-y-2 md:col-span-2">
-            <label for="accommodation-level" class="text-xs text-neutral-400 block font-medium">{currentUi.accommodationLabel}</label>
+            <label for="accommodation-level" class="text-xs text-neutral-550 dark:text-neutral-400 block font-medium">{currentUi.accommodationLabel}</label>
             <select
               id="accommodation-level"
               bind:value={accommodationLevel}
-              class="w-full px-3.5 py-2.5 bg-neutral-950 border border-neutral-800 text-neutral-200 text-sm rounded-xl focus:outline-none focus:ring-1 focus:ring-[#E5C158]/40"
+              class="w-full px-3.5 py-2.5 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-200 text-sm rounded-xl focus:outline-none focus:ring-1 focus:ring-[#E5C158]/40"
             >
               <option value="budget">{currentUi.accommodationBudget}</option>
               <option value="standard">{currentUi.accommodationStandard}</option>
@@ -747,9 +759,9 @@
       </div>
 
       <!-- Route Builder -->
-      <div class="p-6 bg-neutral-900/40 border border-neutral-900 rounded-2xl space-y-6">
-        <div class="flex justify-between items-center border-b border-neutral-900 pb-3">
-          <h3 class="text-sm font-semibold text-white tracking-wide flex items-center gap-2">
+      <div class="p-6 bg-neutral-50/80 dark:bg-neutral-900/40 border border-neutral-200 dark:border-neutral-900 rounded-2xl space-y-6">
+        <div class="flex justify-between items-center border-b border-neutral-200 dark:border-neutral-900 pb-3">
+          <h3 class="text-sm font-semibold text-neutral-800 dark:text-white tracking-wide flex items-center gap-2">
             <Calendar class="w-4 h-4 text-[#E5C158]" />
             {currentUi.tripRouteTitle}
           </h3>
@@ -764,9 +776,9 @@
 
         <div class="space-y-4">
           {#each route as leg, index}
-            <div class="p-4 bg-neutral-950/60 border border-neutral-800/80 rounded-xl space-y-3 relative group">
+            <div class="p-4 bg-white dark:bg-neutral-950/60 border border-neutral-200 dark:border-neutral-800/80 rounded-xl space-y-3 relative group shadow-sm dark:shadow-none">
               <!-- Leg Header -->
-              <div class="flex items-center justify-between text-xs text-neutral-400 border-b border-neutral-900/60 pb-2">
+              <div class="flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-900/60 pb-2">
                 <span class="font-mono text-[#E5C158] font-bold">Leg {index + 1}</span>
                 {#if index > 0}
                   <button
@@ -789,7 +801,7 @@
                     id="city-select-{index}"
                     value={leg.toCity}
                     onchange={(e) => handleCityChange(index, (e.target as HTMLSelectElement).value)}
-                    class="w-full px-2 py-1.5 bg-neutral-950 border border-neutral-800 text-neutral-300 text-xs rounded-lg focus:outline-none"
+                    class="w-full px-2 py-1.5 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-300 text-xs rounded-lg focus:outline-none"
                   >
                     {#each Object.entries(HOST_CITIES) as [code, city]}
                       <option value={code}>{city.name} ({city.country})</option>
@@ -803,7 +815,7 @@
                   <select
                     id="stage-select-{index}"
                     bind:value={leg.matchStage}
-                    class="w-full px-2 py-1.5 bg-neutral-950 border border-neutral-800 text-neutral-300 text-xs rounded-lg focus:outline-none"
+                    class="w-full px-2 py-1.5 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-300 text-xs rounded-lg focus:outline-none"
                   >
                     <option value="group">{currentUi.stageGroup}</option>
                     <option value="round_32">{currentUi.stageR32}</option>
@@ -820,7 +832,7 @@
                   <select
                     id="ticket-select-{index}"
                     bind:value={leg.ticketCategory}
-                    class="w-full px-2 py-1.5 bg-neutral-950 border border-neutral-800 text-neutral-300 text-xs rounded-lg focus:outline-none"
+                    class="w-full px-2 py-1.5 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-300 text-xs rounded-lg focus:outline-none"
                   >
                     <option value="cat1">{currentUi.ticketCat1}</option>
                     <option value="cat2">{currentUi.ticketCat2}</option>
@@ -838,7 +850,7 @@
                     min="0"
                     max="14"
                     bind:value={leg.nights}
-                    class="w-full px-2 py-1 bg-neutral-950 border border-neutral-800 text-neutral-300 text-xs rounded-lg focus:outline-none"
+                    class="w-full px-2 py-1 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-300 text-xs rounded-lg focus:outline-none"
                   />
                 </div>
 
@@ -846,14 +858,14 @@
                 <div class="space-y-1 col-span-2">
                   <label for="transit-select-{index}" class="text-[10px] text-neutral-500 font-mono uppercase">{currentUi.transitLabel}</label>
                   {#if index === 0}
-                    <div class="w-full px-2 py-1.5 bg-neutral-900 border border-neutral-800 text-neutral-500 text-xs rounded-lg">
+                    <div class="w-full px-2 py-1.5 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-500 text-xs rounded-lg">
                       {currentUi.transitNone}
                     </div>
                   {:else}
                     <select
                       id="transit-select-{index}"
                       bind:value={leg.transitMode}
-                      class="w-full px-2 py-1.5 bg-neutral-950 border border-neutral-800 text-neutral-300 text-xs rounded-lg focus:outline-none"
+                      class="w-full px-2 py-1.5 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-300 text-xs rounded-lg focus:outline-none"
                     >
                       <option value="flight">✈️ {currentUi.transitFlight}</option>
                       <option value="drive">🚗 {currentUi.transitDrive}</option>
@@ -872,36 +884,36 @@
     <div class="lg:col-span-5 space-y-6">
       
       <!-- Big Golden Cost Box -->
-      <div class="p-6 bg-gradient-to-br from-neutral-950 to-neutral-900 border border-neutral-800 rounded-2xl space-y-6 text-center shadow-lg relative overflow-hidden">
-        <div class="absolute -right-10 -bottom-10 opacity-[0.03] text-white">
+      <div class="p-6 bg-gradient-to-br from-amber-500/5 to-amber-600/10 dark:from-neutral-950 dark:to-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl space-y-6 text-center shadow-lg relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 opacity-[0.03] text-neutral-800 dark:text-white">
           <Wallet class="w-40 h-40" />
         </div>
         
         <div class="space-y-1">
-          <span class="text-xs text-neutral-400 font-medium tracking-wide uppercase">{currentUi.perPersonCostLabel}</span>
+          <span class="text-xs text-neutral-500 dark:text-neutral-400 font-medium tracking-wide uppercase">{currentUi.perPersonCostLabel}</span>
           <div class="text-4xl font-extrabold text-[#E5C158] font-outfit tracking-tight">
             {currencySymbols[baseCurrency]}{Math.round(budgetResult.perPersonBase).toLocaleString()}
           </div>
           <p class="text-[10px] text-neutral-500 font-mono">USD Equivalency: ${(budgetResult.perPersonUSD).toFixed(0)}</p>
         </div>
 
-        <div class="border-t border-neutral-900 pt-4 flex justify-around text-xs">
+        <div class="border-t border-neutral-200 dark:border-neutral-900 pt-4 flex justify-around text-xs">
           <div class="space-y-0.5">
-            <span class="text-neutral-500 block uppercase text-[10px]">{currentUi.totalCostLabel}</span>
-            <span class="font-bold text-white text-sm font-mono">
+            <span class="text-neutral-500 dark:text-neutral-450 block uppercase text-[10px]">{currentUi.totalCostLabel}</span>
+            <span class="font-bold text-neutral-800 dark:text-white text-sm font-mono">
               {currencySymbols[baseCurrency]}{Math.round(budgetResult.totalBase).toLocaleString()}
             </span>
           </div>
-          <div class="space-y-0.5 border-l border-neutral-900 pl-6">
-            <span class="text-neutral-500 block uppercase text-[10px]">{currentUi.nightsLabel}</span>
-            <span class="font-bold text-white text-sm font-mono">{budgetResult.totalNights} Nights</span>
+          <div class="space-y-0.5 border-l border-neutral-200 dark:border-neutral-900 pl-6">
+            <span class="text-neutral-500 dark:text-neutral-450 block uppercase text-[10px]">{currentUi.nightsLabel}</span>
+            <span class="font-bold text-neutral-800 dark:text-white text-sm font-mono">{budgetResult.totalNights} Nights</span>
           </div>
         </div>
       </div>
 
       <!-- Donut Chart of Breakdown -->
-      <div class="p-6 bg-neutral-900/40 border border-neutral-900 rounded-2xl space-y-4">
-        <h3 class="text-sm font-semibold text-white tracking-wide border-b border-neutral-900 pb-3 flex items-center gap-2">
+      <div class="p-6 bg-neutral-50/80 dark:bg-neutral-900/40 border border-neutral-200 dark:border-neutral-900 rounded-2xl space-y-4">
+        <h3 class="text-sm font-semibold text-neutral-800 dark:text-white tracking-wide border-b border-neutral-200 dark:border-neutral-900 pb-3 flex items-center gap-2">
           <DollarSign class="w-4 h-4 text-[#E5C158]" />
           {currentUi.budgetBreakdownTitle}
         </h3>
@@ -912,26 +924,26 @@
       </div>
 
       <!-- Border Crossing Visa Warning Box -->
-      <div class="p-6 bg-neutral-900/40 border border-neutral-900 rounded-2xl space-y-4">
-        <h3 class="text-sm font-semibold text-white tracking-wide border-b border-neutral-900 pb-3 flex items-center gap-2">
+      <div class="p-6 bg-neutral-50/80 dark:bg-neutral-900/40 border border-neutral-200 dark:border-neutral-900 rounded-2xl space-y-4">
+        <h3 class="text-sm font-semibold text-neutral-800 dark:text-white tracking-wide border-b border-neutral-200 dark:border-neutral-900 pb-3 flex items-center gap-2">
           <ShieldAlert class="w-4 h-4 text-[#E5C158]" />
           {currentUi.visaAlertsTitle}
         </h3>
 
         <div class="space-y-3">
           {#if !budgetResult.visaRequirements.requiresUSAVisa && !budgetResult.visaRequirements.requiresCanadaVisa && !budgetResult.visaRequirements.requiresMexicoVisa}
-            <div class="flex gap-2.5 items-start text-xs text-neutral-400 bg-neutral-950 p-4 border border-neutral-900 rounded-xl">
+            <div class="flex gap-2.5 items-start text-xs text-neutral-600 dark:text-neutral-400 bg-white dark:bg-neutral-950 p-4 border border-neutral-200 dark:border-neutral-900 rounded-xl">
               <CheckCircle class="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
               <span>{currentUi.visaStatusOk}</span>
             </div>
           {:else}
             <!-- US Warning -->
             {#if budgetResult.visaRequirements.requiresUSAVisa}
-              <div class="flex gap-2.5 items-start text-xs bg-amber-500/5 p-4 border border-amber-500/10 rounded-xl text-neutral-300">
+              <div class="flex gap-2.5 items-start text-xs bg-amber-500/5 p-4 border border-amber-500/10 rounded-xl text-neutral-700 dark:text-neutral-300">
                 <ShieldAlert class="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
                 <div class="space-y-1">
-                  <span class="font-bold text-white">{currentUi.visaRequiresUsa}</span>
-                  <p class="text-[11px] text-neutral-400 leading-normal">
+                  <span class="font-bold text-neutral-800 dark:text-white">{currentUi.visaRequiresUsa}</span>
+                  <p class="text-[11px] text-neutral-500 dark:text-neutral-400 leading-normal">
                     {budgetResult.visaRequirements.usaVisaType === 'ESTA' ? currentUi.visaUsaEsta : currentUi.visaUsaRegular}
                   </p>
                 </div>
@@ -940,11 +952,11 @@
 
             <!-- Canada Warning -->
             {#if budgetResult.visaRequirements.requiresCanadaVisa}
-              <div class="flex gap-2.5 items-start text-xs bg-amber-500/5 p-4 border border-amber-500/10 rounded-xl text-neutral-300">
+              <div class="flex gap-2.5 items-start text-xs bg-amber-500/5 p-4 border border-amber-500/10 rounded-xl text-neutral-700 dark:text-neutral-300">
                 <ShieldAlert class="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
                 <div class="space-y-1">
-                  <span class="font-bold text-white">{currentUi.visaRequiresCanada}</span>
-                  <p class="text-[11px] text-neutral-400 leading-normal">
+                  <span class="font-bold text-neutral-800 dark:text-white">{currentUi.visaRequiresCanada}</span>
+                  <p class="text-[11px] text-neutral-500 dark:text-neutral-400 leading-normal">
                     {budgetResult.visaRequirements.canadaVisaType === 'eTA' ? currentUi.visaCanadaEta : currentUi.visaCanadaRegular}
                   </p>
                 </div>
@@ -953,11 +965,11 @@
 
             <!-- Mexico Warning -->
             {#if budgetResult.visaRequirements.requiresMexicoVisa}
-              <div class="flex gap-2.5 items-start text-xs bg-amber-500/5 p-4 border border-amber-500/10 rounded-xl text-neutral-300">
+              <div class="flex gap-2.5 items-start text-xs bg-amber-500/5 p-4 border border-amber-500/10 rounded-xl text-neutral-700 dark:text-neutral-300">
                 <ShieldAlert class="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
                 <div class="space-y-1">
-                  <span class="font-bold text-white">{currentUi.visaRequiresMexico}</span>
-                  <p class="text-[11px] text-neutral-400 leading-normal">
+                  <span class="font-bold text-neutral-800 dark:text-white">{currentUi.visaRequiresMexico}</span>
+                  <p class="text-[11px] text-neutral-500 dark:text-neutral-400 leading-normal">
                     {currentUi.visaMexicoRegular}
                   </p>
                 </div>
@@ -984,19 +996,19 @@
       </div>
 
       <!-- Exchange Rates Reference -->
-      <div class="p-6 bg-neutral-900/40 border border-neutral-900 rounded-2xl space-y-4">
-        <h3 class="text-sm font-semibold text-white tracking-wide border-b border-neutral-900 pb-3 flex items-center gap-2">
+      <div class="p-6 bg-neutral-50/80 dark:bg-neutral-900/40 border border-neutral-200 dark:border-neutral-900 rounded-2xl space-y-4">
+        <h3 class="text-sm font-semibold text-neutral-800 dark:text-white tracking-wide border-b border-neutral-200 dark:border-neutral-900 pb-3 flex items-center gap-2">
           <Info class="w-4 h-4 text-[#E5C158]" />
           {currentUi.currencyRatesTitle}
         </h3>
-        <div class="grid grid-cols-2 gap-4 text-xs font-mono text-neutral-400">
-          <div>EUR (€): <span class="text-white">{exchangeRates.EUR}</span></div>
-          <div>GBP (£): <span class="text-white">{exchangeRates.GBP}</span></div>
-          <div>CAD (CA$): <span class="text-white">{exchangeRates.CAD}</span></div>
-          <div>MXN (Mex$): <span class="text-white">{exchangeRates.MXN}</span></div>
-          <div>CNY (¥): <span class="text-white">{exchangeRates.CNY}</span></div>
-          <div>JPY (¥): <span class="text-white">{exchangeRates.JPY}</span></div>
-          <div>KRW (₩): <span class="text-white">{exchangeRates.KRW}</span></div>
+        <div class="grid grid-cols-2 gap-4 text-xs font-mono text-neutral-600 dark:text-neutral-400">
+          <div>EUR (€): <span class="text-neutral-800 dark:text-white">{exchangeRates.EUR}</span></div>
+          <div>GBP (£): <span class="text-neutral-800 dark:text-white">{exchangeRates.GBP}</span></div>
+          <div>CAD (CA$): <span class="text-neutral-800 dark:text-white">{exchangeRates.CAD}</span></div>
+          <div>MXN (Mex$): <span class="text-neutral-800 dark:text-white">{exchangeRates.MXN}</span></div>
+          <div>CNY (¥): <span class="text-neutral-800 dark:text-white">{exchangeRates.CNY}</span></div>
+          <div>JPY (¥): <span class="text-neutral-800 dark:text-white">{exchangeRates.JPY}</span></div>
+          <div>KRW (₩): <span class="text-neutral-800 dark:text-white">{exchangeRates.KRW}</span></div>
         </div>
       </div>
 
@@ -1021,6 +1033,12 @@
 
   /* 针对 select */
   .world-cup-budget-calculator-container :global(select) {
+    background-color: #ffffff !important;
+    color: #1f2937 !important;
+    border-color: #e5e7eb !important;
+  }
+
+  :global(.dark) .world-cup-budget-calculator-container :global(select) {
     background-color: #0a0a0a !important;
     color: #e5e5e5 !important;
     border-color: #262626 !important;
@@ -1034,23 +1052,43 @@
 
   /* 针对 option */
   .world-cup-budget-calculator-container :global(option) {
+    background-color: #ffffff !important;
+    color: #1f2937 !important;
+  }
+
+  :global(.dark) .world-cup-budget-calculator-container :global(option) {
     background-color: #0a0a0a !important;
     color: #e5e5e5 !important;
   }
 
   /* 针对 range 进度条 */
   .world-cup-budget-calculator-container :global(input[type="range"]) {
+    background-color: #e5e7eb !important;
+  }
+  :global(.dark) .world-cup-budget-calculator-container :global(input[type="range"]) {
     background-color: #262626 !important;
   }
 
   /* 预设方案按钮 */
   .world-cup-budget-calculator-container :global(.btn-preset) {
+    background-color: #ffffff !important;
+    border-color: #e5e7eb !important;
+    color: #4b5563 !important;
+  }
+
+  .world-cup-budget-calculator-container :global(.btn-preset:hover) {
+    color: #111827 !important;
+    border-color: #d1d5db !important;
+    background-color: #f9fafb !important;
+  }
+
+  :global(.dark) .world-cup-budget-calculator-container :global(.btn-preset) {
     background-color: #0a0a0a !important;
     border-color: #262626 !important;
     color: #d4d4d4 !important;
   }
 
-  .world-cup-budget-calculator-container :global(.btn-preset:hover) {
+  :global(.dark) .world-cup-budget-calculator-container :global(.btn-preset:hover) {
     color: #ffffff !important;
     border-color: #404040 !important;
     background-color: #171717 !important;

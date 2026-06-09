@@ -23,6 +23,16 @@
     return createTranslator(props.translations, props.locale, 'tools.world-cup-simulator')(key, fallback);
   }
 
+  let isDark = $state(false);
+  onMount(() => {
+    isDark = document.documentElement.classList.contains('dark');
+    const observer = new MutationObserver(() => {
+      isDark = document.documentElement.classList.contains('dark');
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  });
+
   // Unified localized UI copy map (covering all 10 locales)
   const uiTranslations: Record<string, Record<string, string>> = {
     en: {
@@ -430,14 +440,14 @@
       xAxis: {
         type: 'value',
         boundaryGap: [0, 0.01],
-        splitLine: { lineStyle: { color: 'rgba(255, 255, 255, 0.05)' } },
-        axisLabel: { color: '#a3a3a3', formatter: '{value}%' }
+        splitLine: { lineStyle: { color: isDark ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.05)' } },
+        axisLabel: { color: isDark ? '#a3a3a3' : '#4b5563', formatter: '{value}%' }
       },
       yAxis: {
         type: 'category',
         data: categories,
-        axisLabel: { color: '#d4d4d8', fontSize: 11 },
-        axisLine: { lineStyle: { color: 'rgba(255,255,255,0.1)' } }
+        axisLabel: { color: isDark ? '#d4d4d8' : '#1f2937', fontSize: 11 },
+        axisLine: { lineStyle: { color: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)' } }
       },
       series: [
         {
@@ -487,7 +497,7 @@
       tooltip: { trigger: 'item' },
       legend: {
         data: [teamA.name, teamB.name],
-        textStyle: { color: '#d4d4d8' },
+        textStyle: { color: isDark ? '#d4d4d8' : '#374151' },
         bottom: 0
       },
       radar: {
@@ -498,10 +508,10 @@
           { name: 'Finals %', max: 50 },
           { name: 'Champion %', max: 30 }
         ],
-        axisName: { color: '#a3a3a3', fontSize: 10 },
+        axisName: { color: isDark ? '#a3a3a3' : '#4b5563', fontSize: 10 },
         splitArea: { show: false },
-        splitLine: { lineStyle: { color: 'rgba(255, 255, 255, 0.05)' } },
-        axisLine: { lineStyle: { color: 'rgba(255, 255, 255, 0.1)' } }
+        splitLine: { lineStyle: { color: isDark ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.05)' } },
+        axisLine: { lineStyle: { color: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)' } }
       },
       series: [
         {
@@ -659,7 +669,7 @@
 </script>
 
 <!-- Outer Strict Dark Mode Gold Container -->
-<div class="world-cup-simulator-container dark bg-[#0a0a0a] text-neutral-200 border border-neutral-800 rounded-3xl p-6 lg:p-10 shadow-2xl relative font-sans leading-relaxed selection:bg-amber-500/20">
+<div class="world-cup-simulator-container bg-white dark:bg-[#0a0a0a] text-neutral-800 dark:text-neutral-200 border border-neutral-200 dark:border-neutral-800 rounded-3xl p-6 lg:p-10 shadow-2xl relative font-sans leading-relaxed selection:bg-amber-500/20">
   
   <!-- Glassmorphic Trophy Loading Overlay -->
   {#if isSimulating}
@@ -682,22 +692,22 @@
   {/if}
 
   <!-- Header Banner -->
-  <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-b border-neutral-900 pb-8 mb-8">
+  <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-b border-neutral-200 dark:border-neutral-900 pb-8 mb-8">
     <div class="space-y-2">
-      <div class="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-xs font-mono text-amber-400">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-xs font-mono text-amber-650 dark:text-amber-400">
         <Sparkles class="w-3.5 h-3.5" />
         2026 World Cup Analytical Sandbox
       </div>
-      <h2 class="text-3xl font-extrabold text-white tracking-tight font-outfit">
+      <h2 class="text-3xl font-extrabold text-neutral-800 dark:text-white tracking-tight font-outfit">
         🏆 {t('name')}
       </h2>
-      <p class="text-sm text-neutral-400 max-w-2xl">
+      <p class="text-sm text-neutral-555 dark:text-neutral-400 max-w-2xl">
         {t('detailed_description')}
       </p>
     </div>
     
     <div class="flex items-center gap-3">
-      <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-900 border border-neutral-800 text-xs font-mono text-neutral-400 shadow-inner">
+      <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-xs font-mono text-neutral-600 dark:text-neutral-400 shadow-inner">
         <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
         Offline 精算
       </span>
@@ -710,84 +720,84 @@
     <div class="lg:col-span-4 space-y-6">
       
       <!-- DNA Sliders Block -->
-      <div class="p-6 bg-neutral-900/40 border border-neutral-900 rounded-2xl space-y-6">
-        <h3 class="text-xs font-mono font-bold text-neutral-400 uppercase tracking-wider flex items-center gap-2 border-b border-neutral-900 pb-3">
-          <Sliders class="w-4 h-4 text-amber-500" />
+      <div class="p-6 bg-neutral-50/80 dark:bg-neutral-900/40 border border-neutral-200 dark:border-neutral-900 rounded-2xl space-y-6">
+        <h3 class="text-xs font-mono font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider flex items-center gap-2 border-b border-neutral-200 dark:border-neutral-900 pb-3">
+          <Sliders class="w-4 h-4 text-amber-550 dark:text-amber-500" />
           {currentUi.tuneDnaTitle}
         </h3>
 
         <!-- Slider 1: Home Advantage -->
         <div class="space-y-2">
           <div class="flex justify-between items-center text-xs">
-            <span class="font-bold text-white flex items-center gap-1.5">
-              <Flame class="w-3.5 h-3.5 text-amber-500" />
+            <span class="font-bold text-neutral-800 dark:text-white flex items-center gap-1.5">
+              <Flame class="w-3.5 h-3.5 text-amber-550 dark:text-amber-500" />
               {currentUi.homeAdvantage}
             </span>
-            <span class="font-mono text-amber-400 font-bold">{homeSlider}/10</span>
+            <span class="font-mono text-amber-600 dark:text-amber-400 font-bold">{homeSlider}/10</span>
           </div>
           <input
             type="range"
             min="0"
             max="10"
             bind:value={homeSlider}
-            class="w-full h-1 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
+            class="w-full h-1 bg-neutral-200 dark:bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
           />
-          <p class="text-[10px] text-neutral-500">{currentUi.homeAdvantageDesc}</p>
+          <p class="text-[10px] text-neutral-500 dark:text-neutral-550">{currentUi.homeAdvantageDesc}</p>
         </div>
 
         <!-- Slider 2: Heritage DNA -->
         <div class="space-y-2">
           <div class="flex justify-between items-center text-xs">
-            <span class="font-bold text-white flex items-center gap-1.5">
-              <Award class="w-3.5 h-3.5 text-amber-500" />
+            <span class="font-bold text-neutral-800 dark:text-white flex items-center gap-1.5">
+              <Award class="w-3.5 h-3.5 text-amber-550 dark:text-amber-500" />
               {currentUi.heritageDna}
             </span>
-            <span class="font-mono text-amber-400 font-bold">{heritageSlider}/10</span>
+            <span class="font-mono text-amber-600 dark:text-amber-400 font-bold">{heritageSlider}/10</span>
           </div>
           <input
             type="range"
             min="0"
             max="10"
             bind:value={heritageSlider}
-            class="w-full h-1 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
+            class="w-full h-1 bg-neutral-200 dark:bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
           />
-          <p class="text-[10px] text-neutral-500">{currentUi.heritageDnaDesc}</p>
+          <p class="text-[10px] text-neutral-500 dark:text-neutral-550">{currentUi.heritageDnaDesc}</p>
         </div>
 
         <!-- Slider 3: Wildcard Chaos -->
         <div class="space-y-2">
           <div class="flex justify-between items-center text-xs">
-            <span class="font-bold text-white flex items-center gap-1.5">
-              <Info class="w-3.5 h-3.5 text-amber-500" />
+            <span class="font-bold text-neutral-800 dark:text-white flex items-center gap-1.5">
+              <Info class="w-3.5 h-3.5 text-amber-550 dark:text-amber-500" />
               {currentUi.wildcardChaos}
             </span>
-            <span class="font-mono text-amber-400 font-bold">{chaosSlider}/10</span>
+            <span class="font-mono text-amber-600 dark:text-amber-400 font-bold">{chaosSlider}/10</span>
           </div>
           <input
             type="range"
             min="0"
             max="10"
             bind:value={chaosSlider}
-            class="w-full h-1 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
+            class="w-full h-1 bg-neutral-200 dark:bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
           />
-          <p class="text-[10px] text-neutral-500">{currentUi.wildcardChaosDesc}</p>
+          <p class="text-[10px] text-neutral-500 dark:text-neutral-550">{currentUi.wildcardChaosDesc}</p>
         </div>
       </div>
 
       <!-- Focus Team H2H comparison configurations -->
-      <div class="p-6 bg-neutral-900/40 border border-neutral-900 rounded-2xl space-y-4">
-        <h3 class="text-xs font-mono font-bold text-neutral-400 uppercase tracking-wider flex items-center gap-2 border-b border-neutral-900 pb-3">
-          <ChevronRight class="w-4 h-4 text-amber-500" />
+      <div class="p-6 bg-neutral-50/80 dark:bg-neutral-900/40 border border-neutral-200 dark:border-neutral-900 rounded-2xl space-y-4">
+        <h3 class="text-xs font-mono font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider flex items-center gap-2 border-b border-neutral-200 dark:border-neutral-900 pb-3">
+          <ChevronRight class="w-4 h-4 text-amber-550 dark:text-amber-500" />
           {currentUi.focusTeamComparison}
         </h3>
 
         <div class="grid grid-cols-2 gap-4">
           <div class="space-y-2">
-            <label for="focus-team-a" class="text-[10px] font-mono text-neutral-500 block uppercase">{currentUi.chooseTeam} A</label>
+            <label for="focus-team-a" class="text-[10px] font-mono text-neutral-500 dark:text-neutral-400 block uppercase">{currentUi.chooseTeam} A</label>
             <select
               id="focus-team-a"
               bind:value={focusTeamA}
-              class="w-full px-3 py-2 bg-neutral-950 border border-neutral-800 text-neutral-200 text-xs rounded-xl focus:outline-none focus:ring-1 focus:ring-amber-500/40"
+              class="w-full px-3 py-2 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-200 text-xs rounded-xl focus:outline-none focus:ring-1 focus:ring-amber-500/40"
             >
               {#each BASE_TEAMS as team}
                 <option value={team.id}>{team.name}</option>
@@ -796,11 +806,11 @@
           </div>
 
           <div class="space-y-2">
-            <label for="focus-team-b" class="text-[10px] font-mono text-neutral-500 block uppercase">{currentUi.chooseTeam} B</label>
+            <label for="focus-team-b" class="text-[10px] font-mono text-neutral-500 dark:text-neutral-400 block uppercase">{currentUi.chooseTeam} B</label>
             <select
               id="focus-team-b"
               bind:value={focusTeamB}
-              class="w-full px-3 py-2 bg-neutral-950 border border-neutral-800 text-neutral-200 text-xs rounded-xl focus:outline-none focus:ring-1 focus:ring-amber-500/40"
+              class="w-full px-3 py-2 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-200 text-xs rounded-xl focus:outline-none focus:ring-1 focus:ring-amber-500/40"
             >
               {#each BASE_TEAMS as team}
                 <option value={team.id}>{team.name}</option>
@@ -810,17 +820,17 @@
         </div>
 
         <!-- Real-time dynamic win probabilities -->
-        <div class="mt-4 p-4 bg-neutral-950 border border-neutral-900 rounded-xl space-y-3">
+        <div class="mt-4 p-4 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-900 rounded-xl space-y-3 shadow-sm dark:shadow-none">
           <div class="flex justify-between items-center text-xs font-mono">
-            <span class="text-amber-400 font-bold">{BASE_TEAMS.find(t => t.id === focusTeamA)?.name}</span>
-            <span class="text-sky-400 font-bold">{BASE_TEAMS.find(t => t.id === focusTeamB)?.name}</span>
+            <span class="text-amber-600 dark:text-amber-400 font-bold">{BASE_TEAMS.find(t => t.id === focusTeamA)?.name}</span>
+            <span class="text-sky-600 dark:text-sky-400 font-bold">{BASE_TEAMS.find(t => t.id === focusTeamB)?.name}</span>
           </div>
           
-          <div class="relative h-6 bg-neutral-900 rounded-lg overflow-hidden flex text-[10px] font-mono text-white text-center font-bold">
+          <div class="relative h-6 bg-neutral-100 dark:bg-neutral-900 rounded-lg overflow-hidden flex text-[10px] font-mono text-white text-center font-bold">
             <div class="bg-amber-500 flex items-center justify-center transition-all duration-300" style="width: {directH2H.winA}%">
               {directH2H.winA > 15 ? `${directH2H.winA}%` : ''}
             </div>
-            <div class="bg-neutral-800 flex items-center justify-center transition-all duration-300" style="width: {directH2H.draw}%">
+            <div class="bg-neutral-400 dark:bg-neutral-800 flex items-center justify-center transition-all duration-300" style="width: {directH2H.draw}%">
               {directH2H.draw > 15 ? `${directH2H.draw}%` : ''}
             </div>
             <div class="bg-sky-500 flex items-center justify-center transition-all duration-300" style="width: {directH2H.winB}%">
@@ -828,7 +838,7 @@
             </div>
           </div>
           
-          <div class="flex justify-between text-[9px] text-neutral-500 font-mono">
+          <div class="flex justify-between text-[9px] text-neutral-500 dark:text-neutral-450 font-mono">
             <span>{currentUi.winOdds} (A)</span>
             <span>{currentUi.drawOdds}</span>
             <span>{currentUi.winOdds} (B)</span>
@@ -853,13 +863,13 @@
       
       {#if !simCompleted && topChampions.length === 0}
         <!-- Initial Placeholder State -->
-        <div class="p-12 border border-dashed border-neutral-800 rounded-3xl flex flex-col items-center justify-center text-center space-y-4 min-h-[500px]">
-          <div class="w-20 h-20 bg-neutral-900 border border-neutral-800 rounded-full flex items-center justify-center text-amber-500 shadow-inner">
+        <div class="p-12 border border-dashed border-neutral-250 dark:border-neutral-800 rounded-3xl flex flex-col items-center justify-center text-center space-y-4 min-h-[500px]">
+          <div class="w-20 h-20 bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-full flex items-center justify-center text-amber-550 dark:text-amber-500 shadow-inner">
             <Trophy class="w-10 h-10 animate-pulse" />
           </div>
           <div class="space-y-2 max-w-sm">
-            <h3 class="text-lg font-bold text-white font-outfit">{currentUi.readyToSim}</h3>
-            <p class="text-xs text-neutral-500 leading-relaxed">
+            <h3 class="text-lg font-bold text-neutral-800 dark:text-white font-outfit">{currentUi.readyToSim}</h3>
+            <p class="text-xs text-neutral-550 dark:text-neutral-500 leading-relaxed">
               {currentUi.readyToSimDesc}
             </p>
           </div>
@@ -869,9 +879,9 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           
           <!-- Panel A: Top 15 Win Probability Bar Chart -->
-          <div class="p-6 bg-neutral-900/40 border border-neutral-900 rounded-3xl space-y-4 flex flex-col justify-between min-h-[460px]">
-            <h3 class="text-xs font-mono font-bold text-neutral-400 uppercase tracking-wider flex items-center gap-2 border-b border-neutral-900 pb-3">
-              <Trophy class="w-4 h-4 text-amber-500" />
+          <div class="p-6 bg-neutral-50/80 dark:bg-neutral-900/40 border border-neutral-200 dark:border-neutral-900 rounded-3xl space-y-4 flex flex-col justify-between min-h-[460px]">
+            <h3 class="text-xs font-mono font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider flex items-center gap-2 border-b border-neutral-200 dark:border-neutral-900 pb-3">
+              <Trophy class="w-4 h-4 text-amber-550 dark:text-amber-500" />
               {currentUi.championProb}
             </h3>
             
@@ -886,9 +896,9 @@
           </div>
 
           <!-- Panel B: Focus Head-to-Head Radar Chart -->
-          <div class="p-6 bg-neutral-900/40 border border-neutral-900 rounded-3xl space-y-4 flex flex-col justify-between min-h-[460px]">
-            <h3 class="text-xs font-mono font-bold text-neutral-400 uppercase tracking-wider flex items-center gap-2 border-b border-neutral-900 pb-3">
-              <Sliders class="w-4 h-4 text-amber-500" />
+          <div class="p-6 bg-neutral-50/80 dark:bg-neutral-900/40 border border-neutral-200 dark:border-neutral-900 rounded-3xl space-y-4 flex flex-col justify-between min-h-[460px]">
+            <h3 class="text-xs font-mono font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider flex items-center gap-2 border-b border-neutral-200 dark:border-neutral-900 pb-3">
+              <Sliders class="w-4 h-4 text-amber-550 dark:text-amber-500" />
               {currentUi.focusCompareTitle}
             </h3>
 
@@ -905,19 +915,19 @@
         </div>
 
         <!-- Panel C: Full Advancement Funnel Comparative Matrix -->
-        <div class="p-6 bg-neutral-900/40 border border-neutral-900 rounded-3xl space-y-4">
-          <h3 class="text-xs font-mono font-bold text-neutral-400 uppercase tracking-wider flex items-center gap-2 border-b border-neutral-900 pb-3">
-            <Percent class="w-4 h-4 text-amber-500" />
+        <div class="p-6 bg-neutral-50/80 dark:bg-neutral-900/40 border border-neutral-200 dark:border-neutral-900 rounded-3xl space-y-4">
+          <h3 class="text-xs font-mono font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider flex items-center gap-2 border-b border-neutral-200 dark:border-neutral-900 pb-3">
+            <Percent class="w-4 h-4 text-amber-550 dark:text-amber-500" />
             {currentUi.advancementFunnel}
           </h3>
 
           <div class="overflow-x-auto">
             <table class="w-full text-xs font-sans text-left border-collapse">
               <thead>
-                <tr class="text-neutral-500 border-b border-neutral-900">
+                <tr class="text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-900">
                   <th class="py-3 px-4 text-left">{currentUi.stageLabel}</th>
-                  <th class="py-3 px-4 text-amber-400 text-right">{BASE_TEAMS.find(t => t.id === focusTeamA)?.name}</th>
-                  <th class="py-3 px-4 text-sky-400 text-right">{BASE_TEAMS.find(t => t.id === focusTeamB)?.name}</th>
+                  <th class="py-3 px-4 text-amber-600 dark:text-amber-400 text-right">{BASE_TEAMS.find(t => t.id === focusTeamA)?.name}</th>
+                  <th class="py-3 px-4 text-sky-600 dark:text-sky-400 text-right">{BASE_TEAMS.find(t => t.id === focusTeamB)?.name}</th>
                 </tr>
               </thead>
               <tbody>
@@ -930,12 +940,12 @@
                   currentUi.roundOf32,
                   currentUi.groupStage
                 ] as stage}
-                  <tr class="border-b border-neutral-900/40 hover:bg-neutral-900/20 transition-colors">
-                    <td class="py-3 px-4 font-bold text-neutral-300">{stage}</td>
-                    <td class="py-3 px-4 text-right text-amber-300 font-bold">
+                  <tr class="border-b border-neutral-200/80 dark:border-neutral-900/40 hover:bg-neutral-100/60 dark:hover:bg-neutral-900/20 transition-colors">
+                    <td class="py-3 px-4 font-bold text-neutral-700 dark:text-neutral-300">{stage}</td>
+                    <td class="py-3 px-4 text-right text-amber-600 dark:text-amber-300 font-bold">
                       {focusAdvancementA[stage] ? `${focusAdvancementA[stage].toFixed(2)}%` : '0.00%'}
                     </td>
-                    <td class="py-3 px-4 text-right text-sky-300 font-bold">
+                    <td class="py-3 px-4 text-right text-sky-600 dark:text-sky-300 font-bold">
                       {focusAdvancementB[stage] ? `${focusAdvancementB[stage].toFixed(2)}%` : '0.00%'}
                     </td>
                   </tr>
@@ -954,8 +964,8 @@
   <div class="mt-8 p-4 bg-amber-500/5 border border-amber-500/10 rounded-2xl flex items-start gap-3">
     <Info class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
     <div class="space-y-1">
-      <h4 class="text-xs font-bold text-amber-400 font-outfit">Simulation Guidelines & Physics</h4>
-      <p class="text-[10.5px] text-neutral-400 leading-relaxed">
+      <h4 class="text-xs font-bold text-amber-600 dark:text-amber-400 font-outfit">Simulation Guidelines & Physics</h4>
+      <p class="text-[10.5px] text-neutral-600 dark:text-neutral-400 leading-relaxed">
         This simulator applies a <strong>Logistic win probability equation</strong> with thermodynamic chaos scaling.
         Maxing out the <strong>Home Advantage</strong> gives host countries (USA, Canada, Mexico) an ELO boost up to +150.
         <strong>Heritage DNA</strong> powers traditional titans (Brazil, Argentina, Germany, France, Uruguay, Spain, England, Italy) by +140 ELO.
@@ -983,6 +993,12 @@
 
   /* 针对 select */
   .world-cup-simulator-container :global(select) {
+    background-color: #ffffff !important;
+    color: #1f2937 !important;
+    border-color: #e5e7eb !important;
+  }
+
+  :global(.dark) .world-cup-simulator-container :global(select) {
     background-color: #0a0a0a !important;
     color: #e5e5e5 !important;
     border-color: #262626 !important;
@@ -996,12 +1012,20 @@
 
   /* 针对 option */
   .world-cup-simulator-container :global(option) {
+    background-color: #ffffff !important;
+    color: #1f2937 !important;
+  }
+
+  :global(.dark) .world-cup-simulator-container :global(option) {
     background-color: #0a0a0a !important;
     color: #e5e5e5 !important;
   }
 
   /* 针对 range 进度条 */
   .world-cup-simulator-container :global(input[type="range"]) {
+    background-color: #e5e7eb !important;
+  }
+  :global(.dark) .world-cup-simulator-container :global(input[type="range"]) {
     background-color: #262626 !important;
   }
 
