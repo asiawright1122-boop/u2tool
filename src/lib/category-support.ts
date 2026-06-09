@@ -4,6 +4,7 @@ import { phaseEightSupportContent } from './category-support-phase8';
 import { phaseElevenSupportContent } from './category-support-phase11';
 import { phaseTwentySupportContent } from './category-support-phase20';
 import { phaseThirtyFourSupportContent } from './category-support-phase34';
+import { v13SupportContent } from './category-support-v13';
 
 export interface CategorySupportWorkflow {
   description: string;
@@ -29,7 +30,9 @@ type SupportedCategory =
   | 'development'
   | 'encoding'
   | 'finance'
+  | 'generators'
   | 'image'
+  | 'lifestyle'
   | 'network'
   | 'office'
   | 'security'
@@ -555,6 +558,13 @@ for (const [locale, localeContent] of Object.entries(phaseTwentySupportContent))
 }
 
 for (const [locale, localeContent] of Object.entries(phaseThirtyFourSupportContent)) {
+  supportContent[locale as SupportedLocale] = {
+    ...(supportContent[locale as SupportedLocale] ?? {}),
+    ...(localeContent as Partial<Record<SupportedCategory, CategorySupportContent>>),
+  };
+}
+
+for (const [locale, localeContent] of Object.entries(v13SupportContent)) {
   supportContent[locale as SupportedLocale] = {
     ...(supportContent[locale as SupportedLocale] ?? {}),
     ...(localeContent as Partial<Record<SupportedCategory, CategorySupportContent>>),
