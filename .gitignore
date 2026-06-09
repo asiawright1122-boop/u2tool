@@ -33,6 +33,10 @@ docs/*_REPORT.md
 docs/BUILD_ANALYSIS.md
 docs/DEPENDENCY_AUDIT.md
 scripts/validation/
+!scripts/validation/
+scripts/validation/*
+!scripts/validation/validate-front-end-safety.ts
+!scripts/validation/validate-gsc-loss-metadata.ts
 scripts/build-optimization/
 scripts/planning/
 scripts/dependency-audit/
@@ -49,4 +53,3 @@ progress.md
 
 # Visual Companion
 .superpowers/
-

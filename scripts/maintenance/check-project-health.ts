@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import { identifyTempFiles } from '../cleanup/identify-temp-files.js';
-import { checkAllSpecs } from '../spec-lifecycle/check-spec-status.js';
 import { execSync } from 'child_process';
 import fs from 'fs-extra';
 
@@ -9,10 +8,6 @@ export interface HealthCheckResult {
   temporaryFiles: {
     count: number;
     totalSize: number;
-  };
-  unarchivedSpecs: {
-    count: number;
-    specs: string[];
   };
   buildWarnings: {
     count: number;
@@ -35,19 +30,6 @@ async function checkTemporaryFiles() {
   return {
     count: files.length,
     totalSize,
-  };
-}
-
-/**
- * 检查未归档的 Spec
- */
-async function checkUnarchivedSpecs() {
-  const specs = await checkAllSpecs('.kiro/specs');
-  const unarchived = specs.filter(s => s.canArchive);
-  
-  return {
-    count: unarchived.length,
-    specs: unarchived.map(s => s.name),
   };
 }
 
@@ -181,9 +163,6 @@ function calculateOverallHealth(result: Omit<HealthCheckResult, 'overallHealth'>
   // 临时文件扣分
   score -= result.temporaryFiles.count * 2;
   
-  // 未归档 Spec 扣分
-  score -= result.unarchivedSpecs.count * 3;
-  
   // 构建警告扣分
   score -= result.buildWarnings.count * 1;
   
@@ -206,21 +185,16 @@ export async function checkProjectHealth(): Promise<HealthCheckResult> {
   const temporaryFiles = await checkTemporaryFiles();
   console.log(`   发现 ${temporaryFiles.count} 个临时文件`);
   
-  console.log('2️⃣ 检查未归档 Spec...');
-  const unarchivedSpecs = await checkUnarchivedSpecs();
-  console.log(`   发现 ${unarchivedSpecs.count} 个可归档的 Spec`);
-  
-  console.log('3️⃣ 检查构建警告...');
+  console.log('2️⃣ 检查构建警告...');
   const buildWarnings = await checkBuildWarnings();
   console.log(`   发现 ${buildWarnings.count} 个构建警告`);
   
-  console.log('4️⃣ 检查未使用的依赖...');
+  console.log('3️⃣ 检查未使用的依赖...');
   const unusedDependencies = await checkUnusedDependencies();
   console.log(`   发现 ${unusedDependencies.count} 个未使用的依赖`);
   
   const result: HealthCheckResult = {
     temporaryFiles,
-    unarchivedSpecs,
     buildWarnings,
     unusedDependencies,
     overallHealth: 'excellent',
@@ -238,7 +212,7 @@ export async function generateHealthReport(result: HealthCheckResult): Promise<s
   const lines: string[] = [];
   
   lines.push('# 项目健康检查报告\n');
-  lines.push(`生成时间: ${new Date().toLocaleString('zh-CN')}\n`);
+  lines.push(`生成日期: ${new Date().toLocaleDateString('zh-CN')}\n`);
   
   // 总体健康状态
   lines.push('## 总体健康状态\n');
@@ -263,22 +237,6 @@ export async function generateHealthReport(result: HealthCheckResult): Promise<s
     lines.push(`- **建议**: 运行 \`npm run cleanup:temp-files\` 清理临时文件\n`);
   } else {
     lines.push(`- **状态**: ✅ 无临时文件\n`);
-  }
-  
-  // 未归档 Spec
-  lines.push('## 未归档 Spec\n');
-  lines.push(`- **数量**: ${result.unarchivedSpecs.count}`);
-  if (result.unarchivedSpecs.count > 0) {
-    lines.push(`- **列表**:`);
-    for (const spec of result.unarchivedSpecs.specs.slice(0, 10)) {
-      lines.push(`  - ${spec}`);
-    }
-    if (result.unarchivedSpecs.specs.length > 10) {
-      lines.push(`  - ... 还有 ${result.unarchivedSpecs.specs.length - 10} 个`);
-    }
-    lines.push(`- **建议**: 运行 \`npm run spec:archive <spec-path>\` 归档已完成的 Spec\n`);
-  } else {
-    lines.push(`- **状态**: ✅ 所有 Spec 都已归档\n`);
   }
   
   // 构建警告
@@ -342,7 +300,6 @@ export function printHealthResult(result: HealthCheckResult): void {
   console.log(`总体健康状态: ${healthEmoji[result.overallHealth]} ${result.overallHealth.toUpperCase()}\n`);
   
   console.log(`临时文件: ${result.temporaryFiles.count} 个`);
-  console.log(`未归档 Spec: ${result.unarchivedSpecs.count} 个`);
   console.log(`构建警告: ${result.buildWarnings.count} 个`);
   console.log(`未使用依赖: ${result.unusedDependencies.count} 个\n`);
 }

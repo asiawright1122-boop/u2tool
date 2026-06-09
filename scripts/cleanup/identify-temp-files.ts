@@ -93,7 +93,6 @@ export async function identifyTempFiles(options: IdentifyOptions = {}): Promise<
           '.git/**',
           'dist/**',
           '.astro/**',
-          '.kiro/specs/**', // 不扫描 spec 目录
         ],
       });
 
@@ -145,7 +144,6 @@ export async function identifyTempFiles(options: IdentifyOptions = {}): Promise<
       '.git/**',
       'dist/**',
       '.astro/**',
-      '.kiro/specs/**',
     ],
   });
 
