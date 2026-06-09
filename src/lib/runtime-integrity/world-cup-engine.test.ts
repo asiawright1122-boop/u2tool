@@ -8,6 +8,7 @@ import {
   type Team,
   type MatchResult
 } from './world-cup-engine';
+import combinationsData from '../data/world-cup-3rd-combinations.json';
 
 describe('World Cup Monte Carlo Engine', () => {
   
@@ -362,6 +363,78 @@ describe('World Cup Monte Carlo Engine', () => {
         // E.g., at least a 1.5x increase in champion rate or a substantial increase in knockout stage rate.
         expect(koRate10).toBeGreaterThan(koRate0);
         expect(rate10).toBeGreaterThan(rate0);
+      }
+    });
+  });
+
+  describe('5. Knockout Group Rematch Prevention', () => {
+    it('should resolve group rematch conflicts for all combinations in the database without loss of slots', () => {
+      for (const [key, combination] of Object.entries(combinationsData) as [string, any][]) {
+        let slotM75 = combination.M75;
+        let slotM76 = combination.M76;
+        let slotM81 = combination.M81;
+        let slotM82 = combination.M82;
+        let slotM87H = combination.M87_H;
+        let slotM87A = combination.M87_A;
+        let slotM88H = combination.M88_H;
+        let slotM88A = combination.M88_A;
+
+        const originalSet = [slotM75, slotM76, slotM81, slotM82, slotM87H, slotM87A, slotM88H, slotM88A].sort();
+
+        const matchSlots = [
+          { key: 'M75', opponentGroup: 'C', get: () => slotM75, set: (val: string) => { slotM75 = val; } },
+          { key: 'M76', opponentGroup: 'D', get: () => slotM76, set: (val: string) => { slotM76 = val; } },
+          { key: 'M81', opponentGroup: 'I', get: () => slotM81, set: (val: string) => { slotM81 = val; } },
+          { key: 'M82', opponentGroup: 'J', get: () => slotM82, set: (val: string) => { slotM82 = val; } },
+        ];
+
+        const otherSlots = [
+          { key: 'M87_H', get: () => slotM87H, set: (val: string) => { slotM87H = val; } },
+          { key: 'M87_A', get: () => slotM87A, set: (val: string) => { slotM87A = val; } },
+          { key: 'M88_H', get: () => slotM88H, set: (val: string) => { slotM88H = val; } },
+          { key: 'M88_A', get: () => slotM88A, set: (val: string) => { slotM88A = val; } },
+        ];
+
+        for (const mSlot of matchSlots) {
+          const currentVal = mSlot.get();
+          const currentGroup = currentVal.slice(1);
+          if (currentGroup === mSlot.opponentGroup) {
+            let swapped = false;
+            for (const oSlot of otherSlots) {
+              const otherVal = oSlot.get();
+              const otherGroup = otherVal.slice(1);
+              if (otherGroup !== mSlot.opponentGroup) {
+                mSlot.set(otherVal);
+                oSlot.set(currentVal);
+                swapped = true;
+                break;
+              }
+            }
+            if (!swapped) {
+              for (const otherMSlot of matchSlots) {
+                if (otherMSlot.key === mSlot.key) continue;
+                const otherVal = otherMSlot.get();
+                const otherGroup = otherVal.slice(1);
+                if (otherGroup !== mSlot.opponentGroup && currentGroup !== otherMSlot.opponentGroup) {
+                  mSlot.set(otherVal);
+                  otherMSlot.set(currentVal);
+                  swapped = true;
+                  break;
+                }
+              }
+            }
+          }
+        }
+
+        // 1. Verify no rematch conflicts exist
+        expect(slotM75.slice(1), `Key ${key}: M75 must not be group C`).not.toBe('C');
+        expect(slotM76.slice(1), `Key ${key}: M76 must not be group D`).not.toBe('D');
+        expect(slotM81.slice(1), `Key ${key}: M81 must not be group I`).not.toBe('I');
+        expect(slotM82.slice(1), `Key ${key}: M82 must not be group J`).not.toBe('J');
+
+        // 2. Verify all slot values are preserved
+        const finalSet = [slotM75, slotM76, slotM81, slotM82, slotM87H, slotM87A, slotM88H, slotM88A].sort();
+        expect(finalSet, `Key ${key}: Set of slots must be preserved`).toEqual(originalSet);
       }
     });
   });

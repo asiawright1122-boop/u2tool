@@ -1,3 +1,5 @@
+import combinationsData from '../data/world-cup-3rd-combinations.json';
+
 export interface Team {
   id: string;
   name: string;
@@ -310,84 +312,132 @@ export function simulateFullTournament(
   const qualifiedForKnockout = [...top2Teams, ...best3rdTeams].map(t => teamsMap.get(t.id)!);
 
   // Step 4: Knockout stage
-  // For simplicity and alignment with bracket size, we pair them.
-  // Note: Standard 2026 bracket mapping would be Winner A vs 3rd C/D/I/J etc.,
-  // but to preserve exact deterministic tree size of 32 -> 16 -> 8 -> 4 -> 2 -> 1
-  // we can shuffle or pair them logically (e.g. Winner A vs Runner-up B, etc.)
-  // Let's pair them in a simple order or simulate bracket.
-  // We pair:
-  // - Winner Group A vs Runner B, Winner B vs Runner A, etc. (24 teams)
-  // - Best 3rd places matched against remaining Winners.
-  // To avoid complex group constraints during Monte Carlo iteration, we pair the 32 teams sequentially:
-  // (Qualified are 32 teams: 24 top2 + 8 best3rd)
-  // Let's shuffle/sort them to make sure group stage rematches are less frequent, or pair Winner G1 vs Runner G2, etc.
-  // Let's do a simple pairwise match simulation.
-  let currentRound = [...qualifiedForKnockout];
-  
-  // Track exits at each round
+  const qualified3rdGroups = best3rdTeams.map(t => teamsMap.get(t.id)!.base.group);
+  const key = [...qualified3rdGroups].sort().join('');
+  const combination = (combinationsData as any)[key];
+
+  let slotM75 = combination.M75;
+  let slotM76 = combination.M76;
+  let slotM81 = combination.M81;
+  let slotM82 = combination.M82;
+  let slotM87H = combination.M87_H;
+  let slotM87A = combination.M87_A;
+  let slotM88H = combination.M88_H;
+  let slotM88A = combination.M88_A;
+
+  const matchSlots = [
+    { key: 'M75', opponentGroup: 'C', get: () => slotM75, set: (val: string) => { slotM75 = val; } },
+    { key: 'M76', opponentGroup: 'D', get: () => slotM76, set: (val: string) => { slotM76 = val; } },
+    { key: 'M81', opponentGroup: 'I', get: () => slotM81, set: (val: string) => { slotM81 = val; } },
+    { key: 'M82', opponentGroup: 'J', get: () => slotM82, set: (val: string) => { slotM82 = val; } },
+  ];
+
+  const otherSlots = [
+    { key: 'M87_H', get: () => slotM87H, set: (val: string) => { slotM87H = val; } },
+    { key: 'M87_A', get: () => slotM87A, set: (val: string) => { slotM87A = val; } },
+    { key: 'M88_H', get: () => slotM88H, set: (val: string) => { slotM88H = val; } },
+    { key: 'M88_A', get: () => slotM88A, set: (val: string) => { slotM88A = val; } },
+  ];
+
+  for (const mSlot of matchSlots) {
+    const currentVal = mSlot.get();
+    const currentGroup = currentVal.slice(1);
+    if (currentGroup === mSlot.opponentGroup) {
+      let swapped = false;
+      // Try to swap with otherSlots first
+      for (const oSlot of otherSlots) {
+        const otherVal = oSlot.get();
+        const otherGroup = otherVal.slice(1);
+        if (otherGroup !== mSlot.opponentGroup) {
+          mSlot.set(otherVal);
+          oSlot.set(currentVal);
+          swapped = true;
+          break;
+        }
+      }
+      // If not swapped, try to swap with other matchSlots
+      if (!swapped) {
+        for (const otherMSlot of matchSlots) {
+          if (otherMSlot.key === mSlot.key) continue;
+          const otherVal = otherMSlot.get();
+          const otherGroup = otherVal.slice(1);
+          if (otherGroup !== mSlot.opponentGroup && currentGroup !== otherMSlot.opponentGroup) {
+            mSlot.set(otherVal);
+            otherMSlot.set(currentVal);
+            swapped = true;
+            break;
+          }
+        }
+      }
+    }
+  }
+
+  const getTeamBySlot = (slot: string): typeof qualifiedForKnockout[0] => {
+    const rank = parseInt(slot[0]); // 1, 2, or 3
+    const groupLetter = slot.slice(1); // 'A', 'B', etc.
+    const standings = groupStandings.get(groupLetter)!;
+    const team = standings[rank - 1];
+    return teamsMap.get(team.id)!;
+  };
+
+  const matchWinners = new Map<string, typeof qualifiedForKnockout[0]>();
   const roundOf32Exits: BaseTeam[] = [];
   const roundOf16Exits: BaseTeam[] = [];
   const quarterFinalExits: BaseTeam[] = [];
   const semiFinalExits: BaseTeam[] = [];
 
-  // Round of 32
-  let nextRound: typeof currentRound = [];
-  for (let i = 0; i < currentRound.length; i += 2) {
-    const teamA = currentRound[i];
-    const teamB = currentRound[i+1];
+  function playMatch(matchId: string, teamA: typeof qualifiedForKnockout[0], teamB: typeof qualifiedForKnockout[0], exitList: BaseTeam[]) {
     const expWinA = 1 / (1 + Math.pow(10, (teamB.elo - teamA.elo) / 400));
     const winner = Math.random() < expWinA ? teamA : teamB;
     const loser = winner.id === teamA.id ? teamB : teamA;
-    nextRound.push(winner);
-    roundOf32Exits.push(loser.base);
+    matchWinners.set(matchId, winner);
+    exitList.push(loser.base);
   }
-  currentRound = nextRound;
 
-  // Round of 16
-  nextRound = [];
-  for (let i = 0; i < currentRound.length; i += 2) {
-    const teamA = currentRound[i];
-    const teamB = currentRound[i+1];
-    const expWinA = 1 / (1 + Math.pow(10, (teamB.elo - teamA.elo) / 400));
-    const winner = Math.random() < expWinA ? teamA : teamB;
-    const loser = winner.id === teamA.id ? teamB : teamA;
-    nextRound.push(winner);
-    roundOf16Exits.push(loser.base);
-  }
-  currentRound = nextRound;
+  // R32 Pairing
+  playMatch('M73', getTeamBySlot('1A'), getTeamBySlot('2B'), roundOf32Exits);
+  playMatch('M74', getTeamBySlot('1B'), getTeamBySlot('2A'), roundOf32Exits);
+  playMatch('M75', getTeamBySlot('1C'), getTeamBySlot(slotM75), roundOf32Exits);
+  playMatch('M76', getTeamBySlot('1D'), getTeamBySlot(slotM76), roundOf32Exits);
+  playMatch('M77', getTeamBySlot('1E'), getTeamBySlot('2F'), roundOf32Exits);
+  playMatch('M78', getTeamBySlot('1F'), getTeamBySlot('2E'), roundOf32Exits);
+  playMatch('M79', getTeamBySlot('1G'), getTeamBySlot('2H'), roundOf32Exits);
+  playMatch('M80', getTeamBySlot('1H'), getTeamBySlot('2G'), roundOf32Exits);
+  playMatch('M81', getTeamBySlot('1I'), getTeamBySlot(slotM81), roundOf32Exits);
+  playMatch('M82', getTeamBySlot('1J'), getTeamBySlot(slotM82), roundOf32Exits);
+  playMatch('M83', getTeamBySlot('1K'), getTeamBySlot('2L'), roundOf32Exits);
+  playMatch('M84', getTeamBySlot('1L'), getTeamBySlot('2K'), roundOf32Exits);
+  playMatch('M85', getTeamBySlot('2C'), getTeamBySlot('2D'), roundOf32Exits);
+  playMatch('M86', getTeamBySlot('2I'), getTeamBySlot('2J'), roundOf32Exits);
+  playMatch('M87', getTeamBySlot(slotM87H), getTeamBySlot(slotM87A), roundOf32Exits);
+  playMatch('M88', getTeamBySlot(slotM88H), getTeamBySlot(slotM88A), roundOf32Exits);
 
-  // Quarter-Finals
-  nextRound = [];
-  for (let i = 0; i < currentRound.length; i += 2) {
-    const teamA = currentRound[i];
-    const teamB = currentRound[i+1];
-    const expWinA = 1 / (1 + Math.pow(10, (teamB.elo - teamA.elo) / 400));
-    const winner = Math.random() < expWinA ? teamA : teamB;
-    const loser = winner.id === teamA.id ? teamB : teamA;
-    nextRound.push(winner);
-    quarterFinalExits.push(loser.base);
-  }
-  currentRound = nextRound;
+  // R16 Pairing
+  playMatch('M89', matchWinners.get('M73')!, matchWinners.get('M74')!, roundOf16Exits);
+  playMatch('M90', matchWinners.get('M75')!, matchWinners.get('M76')!, roundOf16Exits);
+  playMatch('M91', matchWinners.get('M77')!, matchWinners.get('M78')!, roundOf16Exits);
+  playMatch('M92', matchWinners.get('M79')!, matchWinners.get('M80')!, roundOf16Exits);
+  playMatch('M93', matchWinners.get('M81')!, matchWinners.get('M82')!, roundOf16Exits);
+  playMatch('M94', matchWinners.get('M83')!, matchWinners.get('M84')!, roundOf16Exits);
+  playMatch('M95', matchWinners.get('M85')!, matchWinners.get('M86')!, roundOf16Exits);
+  playMatch('M96', matchWinners.get('M87')!, matchWinners.get('M88')!, roundOf16Exits);
 
-  // Semi-Finals
-  nextRound = [];
-  for (let i = 0; i < currentRound.length; i += 2) {
-    const teamA = currentRound[i];
-    const teamB = currentRound[i+1];
-    const expWinA = 1 / (1 + Math.pow(10, (teamB.elo - teamA.elo) / 400));
-    const winner = Math.random() < expWinA ? teamA : teamB;
-    const loser = winner.id === teamA.id ? teamB : teamA;
-    nextRound.push(winner);
-    semiFinalExits.push(loser.base);
-  }
-  currentRound = nextRound;
+  // QF Pairing
+  playMatch('M97', matchWinners.get('M89')!, matchWinners.get('M90')!, quarterFinalExits);
+  playMatch('M98', matchWinners.get('M91')!, matchWinners.get('M92')!, quarterFinalExits);
+  playMatch('M99', matchWinners.get('M93')!, matchWinners.get('M94')!, quarterFinalExits);
+  playMatch('M100', matchWinners.get('M95')!, matchWinners.get('M96')!, quarterFinalExits);
+
+  // SF Pairing
+  playMatch('M101', matchWinners.get('M97')!, matchWinners.get('M98')!, semiFinalExits);
+  playMatch('M102', matchWinners.get('M99')!, matchWinners.get('M100')!, semiFinalExits);
 
   // Final
-  const teamA = currentRound[0];
-  const teamB = currentRound[1];
-  const expWinA = 1 / (1 + Math.pow(10, (teamB.elo - teamA.elo) / 400));
-  const champion = Math.random() < expWinA ? teamA : teamB;
-  const runnerUp = champion.id === teamA.id ? teamB : teamA;
+  const finalTeamA = matchWinners.get('M101')!;
+  const finalTeamB = matchWinners.get('M102')!;
+  const expWinFinal = 1 / (1 + Math.pow(10, (finalTeamB.elo - finalTeamA.elo) / 400));
+  const champion = Math.random() < expWinFinal ? finalTeamA : finalTeamB;
+  const runnerUp = champion.id === finalTeamA.id ? finalTeamB : finalTeamA;
 
   return {
     champion: champion.base,

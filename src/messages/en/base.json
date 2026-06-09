@@ -9699,9 +9699,9 @@
     },
     "compound-interest-calculator": {
       "name": "Compound Interest Calculator",
-      "description": "Calculate compound interest and investment growth.",
+      "description": "Estimate compound interest and fixed-rate investment growth.",
       "seo_title": "Free Compound Interest Calculator Online",
-      "seo_description": "Calculate compound interest and investment growth online. Compare compounding frequencies, regular contributions, final amount, and total interest.",
+      "seo_description": "Estimate compound interest growth with a fixed annual rate. Compare compounding frequencies, regular contributions, final amount, and total interest.",
       "principal": "Initial Investment",
       "annualRate": "Annual Interest Rate (%)",
       "years": "Investment Period (Years)",
@@ -9965,7 +9965,7 @@
       "name": "Morse Code Player",
       "description": "Convert text to Morse code, decode Morse, and play dot-dash audio.",
       "seo_title": "Morse Code Player and Audio Generator Online",
-      "seo_description": "Free online Morse Code Player to convert text to Morse code and play audio online for free. Adjust speed and .... Runs locally in your browser safely.",
+      "seo_description": "Convert text to Morse code, decode Morse, and play dot-dash audio online. Adjust speed and frequency locally in your browser.",
       "text": "Text",
       "morseCode": "Morse Code",
       "play": "Play",
@@ -16206,9 +16206,11 @@
       "seo_title": "Developer Cryptography & Hash Toolbox - Free Online Local Encryption & Benchmarks",
       "seo_description": "Free online cryptography suite for MD5, SHA256, bcrypt, AES & RSA. Features local benchmarks, dark-gold style, and 100% secure client-side calculation."
     },
-    "world-cup-simulator": {
+        "world-cup-simulator": {
       "name": "2026 World Cup Monte Carlo Simulator",
-      "description": "Free 2026 World Cup simulator. Run 10k Monte Carlo simulations with Elo ratings, custom host/heritage sliders, and sleek gold ECharts. 100% offline."
+      "description": "Free 2026 World Cup simulator. Run 10k Monte Carlo simulations with Elo ratings, custom host/heritage sliders, and sleek gold ECharts. 100% offline.",
+      "seo_title": "2026 World Cup Monte Carlo Probability Simulator Online - Run 10,000 Matches, Adjust Elo Ratings & Custom Heritage Sliders to Forecast Tournament Results",
+      "seo_description": "Simulate the 2026 FIFA World Cup with 10,000 Monte Carlo runs. Adjust team Elo ratings with home advantage and heritage sliders to forecast winning odds."
     },
     "world-cup-budget-calculator": {
       "name": "2026 World Cup Travel & Ticket Budget Calculator",
