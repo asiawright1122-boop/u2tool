@@ -81,4 +81,4 @@ Progress Bar: [xxxxxxxx--] 83%
 
 ## Next Action
 
-Continue Phase 56 Plan 56-02: import the first post-release GSC exports, then run `scripts/seo/gsc-cohort-checkpoint-report.ts` to compare cohort movement against the pre-release baseline.
+Continue Phase 56 Plan 56-02: complete the 2026-06-12 URL Inspection spot check using `docs/GSC_URL_INSPECTION_CHECKPOINT_2026-06-12.md`, then import the first post-release GSC exports and run `scripts/seo/gsc-cohort-checkpoint-report.ts` to compare cohort movement against the pre-release baseline.
