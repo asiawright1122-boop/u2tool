@@ -26,6 +26,11 @@ node --import tsx/esm scripts/seo/gsc-cohort-checkpoint-report.ts \
 
 - Smoke run with `exports/gsc` as both baseline and checkpoint: passed.
 - `npx tsc --noEmit --pretty false --skipLibCheck scripts/seo/gsc-cohort-checkpoint-report.ts`: passed.
+- Follow-up recovery commits through `414c1074` deployed successfully via Cloudflare workflow run 27218741465 on 2026-06-09.
+- Post-deploy production checks passed:
+  - `npm run validate:production-routes`
+  - `npm run validate:front-end-safety`
+  - `INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Bra Size Calculator recovery' node --import tsx/esm scripts/validation/validate-rendered-seo.ts`
 
 ## Blocker
 
