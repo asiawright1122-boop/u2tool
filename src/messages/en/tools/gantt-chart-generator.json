@@ -1,17 +1,17 @@
 {
-  "detailed_description": "The Gantt Chart Maker helps teams turn a short task list into a visual project timeline. Add tasks, set start and end dates, update progress percentages, choose a color theme, and preview the result as a horizontal timeline chart. It is useful for sprint planning, campaign schedules, lightweight project briefs, and status visuals where a simple task-duration view is enough. The chart can be downloaded as PNG or SVG for docs, slides, and reports. The tool focuses on chart creation; it does not manage dependency logic, resource allocation, or live project tracking.",
+  "detailed_description": "The Gantt Chart Maker is a free online Gantt chart maker for turning a short task list into a visual project timeline or schedule chart. Add tasks, set start and end dates, update progress percentages, choose a color theme, and preview the result as a horizontal timeline chart. It is useful for sprint planning, marketing campaign schedules, roadmap snapshots, lightweight project briefs, and status visuals where a simple task-duration view is enough. The finished Gantt chart can be downloaded as PNG or SVG for docs, slides, reports, and stakeholder updates. The tool focuses on chart creation; it does not calculate dependencies, resource allocation, critical paths, or live project tracking.",
   "usage_steps": [
     "Edit the chart title and choose a color theme.",
     "Click Add Task to create another task row.",
     "Enter each task name, start date, end date, and progress percentage.",
     "Review the live Gantt preview on the right side of the page.",
     "Remove any sample task you do not need.",
-    "Download the finished chart as PNG or SVG."
+    "Download the finished Gantt chart as PNG or SVG."
   ],
   "usage_examples": [
     "Create a software sprint timeline with planning, development, testing, and release tasks.",
-    "Build a marketing campaign schedule showing content drafting, review, launch, and reporting.",
-    "Turn a construction or event plan into a simple visual timeline for a stakeholder update.",
+    "Build a marketing campaign schedule chart showing content drafting, review, launch, and reporting.",
+    "Turn a construction, event, or product roadmap plan into a simple visual timeline for a stakeholder update.",
     "Export a PNG for a status memo or an SVG for a slide deck."
   ],
   "faqs": [
@@ -22,6 +22,10 @@
     {
       "question": "Does this tool track task dependencies?",
       "answer": "No. It visualizes task dates and progress, but it does not calculate dependencies, critical paths, or resource constraints."
+    },
+    {
+      "question": "Can I use it as an online project timeline maker?",
+      "answer": "Yes. It works well for quick project timeline visuals when you need editable task names, start dates, end dates, progress bars, and PNG or SVG export."
     },
     {
       "question": "What fields can I edit?",

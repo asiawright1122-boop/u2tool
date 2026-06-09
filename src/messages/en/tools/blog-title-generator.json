@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Blog Title Generator produces headline ideas from a topic, target keyword, audience, and tone. Use it to compare search-focused angles, beginner-friendly titles, checklist formats, and problem-solution framing before selecting the title that best matches your article intent.",
+  "detailed_description": "Blog Title Generator produces 10-15 headline ideas from a topic keyword, optional audience, and title style. The real component includes informative, how-to, listicle, question, and ultimate-guide modes with copy actions and character counts. Use it to compare search-focused angles, beginner-friendly titles, checklist formats, and problem-solution framing before selecting the title that best matches your article intent.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter the blog topic or keyword.",
+    "Optionally add the target audience.",
+    "Choose the title style: informative, how-to, listicle, question, or ultimate guide.",
+    "Copy one title or copy the full list, then edit the final headline for your real article."
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Brainstorm listicle headlines for a marketing article.",
+    "Compare how-to and question titles for the same blog topic.",
+    "Generate beginner-friendly title options for an educational post."
   ],
   "faqs": [
     {
@@ -21,8 +21,12 @@
       "answer": "No. The calculation or generation runs locally in the browser."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Does it write the article?",
+      "answer": "No. It generates headline ideas only. Write and fact-check the article separately."
+    },
+    {
+      "question": "Are the titles AI generated?",
+      "answer": "No. The component uses local title templates and your inputs to create draft headline variations."
     }
   ]
 }

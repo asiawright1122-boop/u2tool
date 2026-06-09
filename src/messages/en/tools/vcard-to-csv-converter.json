@@ -1,11 +1,11 @@
 {
-  "detailed_description": "vCard to CSV Converter turns pasted BEGIN:VCARD blocks into spreadsheet-ready CSV text in the browser. Paste one or more VCF contacts into the textarea, choose comma, semicolon, or tab output, and the tool extracts common N, FN, EMAIL, TEL, ORG, TITLE, and ADR lines into first_name,last_name,full_name,email,phone,company,title,address columns. It shows contact and CSV row counts plus the generated CSV output with a copy action. It does not upload .vcf files, parse every vCard extension, keep multiple phone or email fields, create a downloadable CSV file, or import contacts into a CRM.",
+  "detailed_description": "This free online vCard to CSV converter turns pasted BEGIN:VCARD blocks or VCF contact text into spreadsheet-ready CSV rows in the browser. Paste one or more contacts into the textarea, choose comma, semicolon, or tab output, and the tool extracts common N, FN, EMAIL, TEL, ORG, TITLE, and ADR lines into first_name,last_name,full_name,email,phone,company,title,address columns. It shows contact and CSV row counts, a small preview table, generated CSV output, a copy action, and a browser-side CSV download. It does not upload .vcf files, parse every vCard extension, keep multiple phone or email fields, or import contacts into a CRM.",
   "usage_steps": [
-    "Paste one or more BEGIN:VCARD blocks from a .vcf export into the vCard textarea.",
+    "Paste one or more BEGIN:VCARD blocks from a .vcf or VCF export into the vCard textarea.",
     "Choose comma, semicolon, or tab as the CSV delimiter.",
     "Review the contact count and CSV row count.",
     "Check the generated first_name,last_name,full_name,email,phone,company,title,address columns.",
-    "Copy the CSV text and test it with your spreadsheet or CRM importer before a bulk import."
+    "Copy the CSV text or download contacts.csv and test it with your spreadsheet or CRM importer before a bulk import."
   ],
   "usage_examples": [
     "Turn a phone or address book VCF export into rows you can inspect in a spreadsheet.",
@@ -20,6 +20,14 @@
     {
       "question": "What fields does it export?",
       "answer": "The CSV includes first_name,last_name,full_name,email,phone,company,title,address columns parsed from common vCard fields."
+    },
+    {
+      "question": "Can it convert a .vcf file directly?",
+      "answer": "It does not upload files. Open the .vcf file as text, paste the BEGIN:VCARD blocks into the textarea, and copy the generated CSV output."
+    },
+    {
+      "question": "Does it create a downloadable CSV file?",
+      "answer": "Yes. It creates CSV text on the page with copy and browser-side download actions."
     },
     {
       "question": "Does it import contacts into a CRM automatically?",

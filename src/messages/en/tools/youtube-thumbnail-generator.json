@@ -1,15 +1,15 @@
 {
-  "detailed_description": "YouTube Thumbnail Generator is a free browser-based utility for generate YouTube thumbnail image URLs and previews from a video link or ID. It is designed for quick everyday workflows where users need a focused result without opening a spreadsheet, installing software, or signing in. The tool keeps inputs local in the browser and returns copy-ready output for analysis, marketing, content, or sharing workflows.",
+  "detailed_description": "YouTube Thumbnail Generator extracts the 11-character YouTube video ID from a watch URL, Shorts URL, embed URL, youtu.be link, or raw ID, then builds public thumbnail URLs for maxresdefault.jpg, hqdefault.jpg, mqdefault.jpg, and default.jpg. The page previews each image and lets you copy or open the exact thumbnail URL.",
   "usage_steps": [
-    "Enter the required values in the form fields",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview/output shown on the page",
-    "Adjust inputs to compare another scenario"
+    "Paste a YouTube watch, Shorts, embed, youtu.be URL, or raw 11-character video ID.",
+    "Confirm the extracted video ID shown above the preview grid.",
+    "Review the max resolution, high quality, medium quality, and default thumbnail variants.",
+    "Copy the thumbnail URL you need or open it in a new tab."
   ],
   "usage_examples": [
-    "Use YouTube Thumbnail Generator during a quick planning or review workflow",
-    "Compare multiple scenarios without building a spreadsheet",
-    "Create copy-ready output for reports, campaigns, or personal notes"
+    "Check whether maxresdefault.jpg exists for a video before using it in a content plan.",
+    "Copy hqdefault.jpg for a lightweight editorial preview or social planning sheet.",
+    "Compare public thumbnail variants when auditing a YouTube video page."
   ],
   "faqs": [
     {
@@ -18,11 +18,15 @@
     },
     {
       "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser for this utility."
+      "answer": "No. The tool only extracts the video ID locally and builds public YouTube image URLs."
     },
     {
       "question": "Does this download or proxy the thumbnail image?",
       "answer": "No. It generates the public YouTube thumbnail image URLs and previews them directly in your browser."
+    },
+    {
+      "question": "Which thumbnail sizes are shown?",
+      "answer": "The tool shows maxresdefault.jpg, hqdefault.jpg, mqdefault.jpg, and default.jpg for the extracted video ID."
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Tweet Generator creates short Tweet/X post options from a topic, audience, benefit, and tone. It is useful for drafting concise launch notes, opinion posts, reminders, or content hooks that can be tightened further before posting to social channels.",
+  "detailed_description": "Tweet Generator creates short Tweet/X post variants from a topic, tone, hashtag setting, call-to-action setting, and optional thread mode. The real component tracks the 280-character limit, marks near-limit drafts, and can generate single-post variants or a short thread. It does not connect to X/Twitter, schedule posts, fetch analytics, or guarantee engagement.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter the topic or idea for the post.",
+    "Choose the tone and whether to include hashtags or a call to action.",
+    "Optionally enable thread mode and select the number of thread tweets.",
+    "Review character counts, copy a draft, and edit it before posting."
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Draft a concise launch announcement.",
+    "Compare professional, humorous, motivational, question, and sharing tones.",
+    "Create a short thread outline from one topic idea."
   ],
   "faqs": [
     {
@@ -21,8 +21,12 @@
       "answer": "No. The calculation or generation runs locally in the browser."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Does it post to X/Twitter?",
+      "answer": "No. It only creates draft text that you copy and publish yourself."
+    },
+    {
+      "question": "Does it enforce the character limit?",
+      "answer": "It shows character counts and status labels for the 280-character limit, but you should still review final text in the platform composer."
     }
   ]
 }

@@ -1,28 +1,32 @@
 {
-  "detailed_description": "YouTube Tags Generator turns a video topic, target keyword, and intended audience into a clean comma-separated tag list. It is useful when you need a fast starter set for upload metadata, content planning, or comparing keyword angles before publishing a YouTube video.",
+  "detailed_description": "YouTube Tags Generator turns a video topic, target keyword, and intended audience into a clean comma-separated YouTube tag list. It combines exact keyword tags, tutorial and guide variants, audience-specific phrases, and topic-word expansions so you can quickly prepare upload metadata or compare keyword angles before publishing.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter the video topic, main target keyword, and intended audience.",
+    "Review the generated tag chips and the comma-separated output.",
+    "Copy the full tag list for your upload metadata or content planning sheet.",
+    "Adjust the topic or keyword to compare another tag angle."
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Create starter tags for a tutorial video before uploading to YouTube Studio.",
+    "Compare topic-led and keyword-led tag lists during content planning.",
+    "Build a comma-separated tag list for a video metadata audit."
   ],
   "faqs": [
     {
-      "question": "YouTube Tags Generator is free?",
+      "question": "Is YouTube Tags Generator free?",
       "answer": "Yes. The tool runs free in the browser and does not require an account."
     },
     {
       "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "answer": "No. The tag list is generated locally in your browser."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Does it use live YouTube search data?",
+      "answer": "No. The tool creates template-based tags from your inputs and does not fetch live search volume, trend data, or ranking data."
+    },
+    {
+      "question": "How many tags should I use?",
+      "answer": "Use the generated list as a starter set, then remove irrelevant tags and keep only terms that accurately describe the video."
     }
   ]
 }

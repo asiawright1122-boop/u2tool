@@ -1,15 +1,15 @@
 {
-  "detailed_description": "WiFi QR Code Generator is a free browser-based utility for generate a WiFi QR code payload and scannable QR image. It is designed for quick everyday workflows where users need a focused result without opening a spreadsheet, installing software, or signing in. The tool keeps inputs local in the browser and returns copy-ready output for analysis, marketing, content, or sharing workflows.",
+  "detailed_description": "WiFi QR Code Generator creates a standard WiFi QR payload and a scannable PNG preview from a network name, password, encryption type, and hidden-network setting. It supports WPA/WPA2/WPA3, WEP, and no-password networks, escapes special characters in SSIDs and passwords, and keeps the generated QR image local in your browser.",
   "usage_steps": [
-    "Enter the required values in the form fields",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview/output shown on the page",
-    "Adjust inputs to compare another scenario"
+    "Enter the SSID exactly as it appears on the router or access point.",
+    "Choose WPA/WPA2/WPA3, WEP, or no-password mode and add the password when required.",
+    "Set the hidden-network option if the SSID is not broadcast.",
+    "Copy the WiFi payload or download the generated QR Code PNG."
   ],
   "usage_examples": [
-    "Use WiFi QR Code Generator during a quick planning or review workflow",
-    "Compare multiple scenarios without building a spreadsheet",
-    "Create copy-ready output for reports, campaigns, or personal notes"
+    "Create a guest WiFi QR code for a reception desk, cafe counter, or meeting room.",
+    "Generate a copy-ready WIFI:T:WPA payload for testing QR scanner behavior.",
+    "Download a PNG QR code before printing a small sign for visitors."
   ],
   "faqs": [
     {
@@ -18,11 +18,15 @@
     },
     {
       "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser for this utility."
+      "answer": "No. The WiFi payload and QR image are generated locally in your browser."
     },
     {
       "question": "Will the QR code work on phones?",
       "answer": "Most modern iOS and Android camera apps can scan standard WiFi QR codes and offer to join the network."
+    },
+    {
+      "question": "What WiFi QR format does it generate?",
+      "answer": "It generates the standard WIFI:T:<encryption>;S:<ssid>;P:<password>;H:<hidden>;; payload used by common mobile camera apps."
     }
   ]
 }

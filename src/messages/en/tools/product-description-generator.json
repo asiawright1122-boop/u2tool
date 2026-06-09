@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Product Description Generator creates a structured product copy draft from a product name, keyword, audience, and benefit. It gives you a starting point for ecommerce listings, SaaS feature blurbs, marketplace descriptions, or landing page copy that still needs factual review.",
+  "detailed_description": "Product Description Generator creates short, medium, and long product description drafts from a product name, product type, feature list, audience, and tone. The real component also creates selling-point bullets, word counts, character counts, and copy actions. It is useful for ecommerce listings, SaaS feature blurbs, marketplace descriptions, or landing page copy that still needs factual review. It does not verify product claims, pull catalog data, or publish listings.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter the product name.",
+    "Choose the product type and tone.",
+    "Add three to five real product features, one per line.",
+    "Review the short, medium, long, and bullet versions, then copy and edit the draft."
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Draft a short social product blurb from a feature list.",
+    "Create a longer product-page description for a marketplace listing.",
+    "Compare friendly, professional, luxury, and minimal copy styles."
   ],
   "faqs": [
     {
@@ -21,8 +21,12 @@
       "answer": "No. The calculation or generation runs locally in the browser."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Does it verify product facts?",
+      "answer": "No. It formats drafts from the details you provide. Check specifications, claims, prices, and compliance language yourself."
+    },
+    {
+      "question": "What outputs does it create?",
+      "answer": "It creates short, medium, and long description drafts plus selling-point bullets with copy actions."
     }
   ]
 }

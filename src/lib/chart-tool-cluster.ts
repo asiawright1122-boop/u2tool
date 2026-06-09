@@ -170,7 +170,7 @@ const groupCopy: Record<Locale, Record<ChartToolClusterGroup['id'], { title: str
   en: {
     'compare-trends': { title: 'Compare Values & Trends', description: 'Create bar, line, area, pie, scatter, radar, stacked, and mixed charts for everyday reporting.' },
     'hierarchy-flow': { title: 'Hierarchy, Flow & Relationships', description: 'Map structure, flow, networks, funnels, waterfalls, trees, and overlapping sets.' },
-    'time-project-status': { title: 'Time, Project & Status', description: 'Visualize schedules, timelines, heatmaps, financial candles, gauges, and progress states.' },
+    'time-project-status': { title: 'Time, Project & Status', description: 'Visualize Gantt schedules, project timelines, heatmaps, financial candles, gauges, and progress states.' },
     'advanced-statistical': { title: 'Advanced & Statistical Charts', description: 'Build boxplots, bubbles, polar views, parallel coordinates, word clouds, and radial chart variants.' },
   },
   zh: {
@@ -247,6 +247,7 @@ const copyByLocale: Record<Locale, ChartToolClusterCopy> = {
       items: [
         { label: 'Compare', text: 'Use bars, pies, radar, stacked, and mixed charts to compare categories or contribution.', slugs: ['bar-chart-generator', 'pie-chart-generator', 'radar-chart-generator', 'stacked-bar-chart-generator'] },
         { label: 'Trend', text: 'Use line, area, step, calendar heatmap, and timeline views for change over time.', slugs: ['line-chart-generator', 'area-chart-generator', 'step-line-chart-generator', 'timeline-chart-generator'] },
+        { label: 'Plan', text: 'Use Gantt charts, timelines, progress rings, and heatmaps to show schedules, milestones, and project status.', slugs: ['gantt-chart-generator', 'timeline-chart-generator', 'ring-progress-chart-generator', 'calendar-heatmap-generator'] },
         { label: 'Explain', text: 'Use funnels, waterfalls, Sankey, treemaps, and graph charts to explain flow or structure.', slugs: ['funnel-chart-generator', 'waterfall-chart-generator', 'sankey-chart-generator', 'treemap-chart-generator'] },
         { label: 'Analyze', text: 'Use scatter, bubble, boxplot, parallel, and heatmap charts for deeper statistical patterns.', slugs: ['scatter-chart-generator', 'bubble-chart-generator', 'boxplot-chart-generator', 'parallel-chart-generator'] },
       ],

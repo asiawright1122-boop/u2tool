@@ -1,15 +1,15 @@
 {
-  "detailed_description": "TikTok Hashtag Generator creates a compact set of hashtag ideas from your topic, keyword, audience, and tone. Use it to draft a balanced mix of niche, creator, and discovery tags before editing the final caption for your actual TikTok post.",
+  "detailed_description": "TikTok Hashtag Generator creates hashtag combinations from a content topic, video type, target audience, and optional keywords. The real component separates viral-style tags from niche long-tail tags and provides a copy-all action for drafting captions. It does not connect to TikTok, inspect trending data, publish posts, or guarantee reach.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter the TikTok content topic.",
+    "Choose the content type and audience.",
+    "Add optional keywords you want reflected in the tag set.",
+    "Review the viral and niche hashtag groups, then copy the set for editing in your caption."
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Draft hashtags for a tutorial, product demo, or creator update.",
+    "Mix broad discovery tags with more specific niche tags.",
+    "Compare tag ideas for the same topic across different audiences."
   ],
   "faqs": [
     {
@@ -21,8 +21,12 @@
       "answer": "No. The calculation or generation runs locally in the browser."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Does it use live TikTok trend data?",
+      "answer": "No. It uses local template logic and your inputs. Check current platform trends yourself before publishing."
+    },
+    {
+      "question": "Does it post to TikTok?",
+      "answer": "No. It only generates hashtag text that you can copy and edit."
     }
   ]
 }

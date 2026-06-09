@@ -1,15 +1,16 @@
 {
-  "detailed_description": "YouTube Description Generator turns a video title, keyword, audience, call to action, and resource links into a structured description draft. The output includes an intro, learning bullets, links, CTA, and hashtags so creators can prepare repeatable descriptions before editing and publishing in YouTube Studio.",
+  "detailed_description": "YouTube Description Generator turns a video title, comma-separated keywords, channel name, and optional CTA link into a structured YouTube video description draft. The real component creates a hook, learning bullets, related keyword section, subscribe/follow block, hashtag-style keyword line, character count, and first-157-character preview. It does not upload or edit videos, fetch channel data, validate links, schedule publishing, or guarantee views.",
   "usage_steps": [
-    "Enter the video title, target keyword, audience, call to action, and one resource link per line.",
-    "Review the generated intro, learning bullets, link section, CTA, and hashtags.",
-    "Replace generic bullets with the actual sections, timestamps, offers, or resources from the video.",
-    "Paste the edited description into YouTube Studio manually and check links before publishing."
+    "Enter the video title.",
+    "Add comma-separated keywords and the channel name.",
+    "Optionally add a CTA link.",
+    "Review the hook, learning bullets, related keywords, subscribe block, character count, and first-157-character preview.",
+    "Copy the description, replace generic bullets with real video details, and paste the edited version into YouTube Studio manually."
   ],
   "usage_examples": [
-    "Create a repeatable description format for tutorials, product walkthroughs, or educational videos.",
-    "Turn a list of resources into a cleaner links section before publishing a video.",
-    "Prepare a description draft for a content calendar, then tailor it to the final video."
+    "Create a repeatable description format for tutorials or educational videos.",
+    "Add topic keywords as a related keyword section and hashtag-style line.",
+    "Preview the first characters that may appear before the viewer expands the description."
   ],
   "faqs": [
     {
@@ -21,12 +22,12 @@
       "answer": "No. It only creates description text. Uploading, editing, and publishing still happen in YouTube Studio."
     },
     {
-      "question": "How are resource links handled?",
-      "answer": "Each non-empty line in the links field becomes a bullet in the links and resources section."
+      "question": "What does the first 157 characters preview show?",
+      "answer": "It shows the beginning of the generated description so you can review the part that may appear before viewers expand the description."
     },
     {
       "question": "What should I review before publishing?",
-      "answer": "Check that the description matches the actual video, links are correct, hashtags are relevant, and claims are accurate."
+      "answer": "Check that the description matches the actual video, links are correct, keywords are relevant, and claims are accurate."
     }
   ]
 }

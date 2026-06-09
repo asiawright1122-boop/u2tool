@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Title Capitalization Tool is a free browser-based utility for convert titles to title case, sentence case, uppercase, or lowercase. It is designed for quick everyday workflows where users need a focused result without opening a spreadsheet, installing software, or signing in. The tool keeps inputs local in the browser and returns copy-ready output for analysis, marketing, content, or sharing workflows.",
+  "detailed_description": "Title Capitalization Tool converts headlines, page titles, email subjects, and document headings to title case, sentence case, uppercase, or lowercase. The title-case mode keeps common small words such as a, an, and, of, the, and to lowercase unless they appear at the start, end, or after a punctuation break.",
   "usage_steps": [
-    "Enter the required values in the form fields",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview/output shown on the page",
-    "Adjust inputs to compare another scenario"
+    "Paste the title, headline, or subject line into the text area.",
+    "Choose Title Case, Sentence case, UPPERCASE, or lowercase.",
+    "Review the converted title plus word and character counts.",
+    "Copy the output and switch styles when you need another capitalization format."
   ],
   "usage_examples": [
-    "Use Title Capitalization Tool during a quick planning or review workflow",
-    "Compare multiple scenarios without building a spreadsheet",
-    "Create copy-ready output for reports, campaigns, or personal notes"
+    "Convert a blog headline to title case before publishing.",
+    "Change an email subject line to sentence case for a calmer campaign tone.",
+    "Normalize a batch of page titles to uppercase or lowercase while reviewing metadata."
   ],
   "faqs": [
     {
@@ -18,11 +18,15 @@
     },
     {
       "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser for this utility."
+      "answer": "No. The capitalization conversion runs locally in your browser."
     },
     {
       "question": "Does Title Capitalization Tool use an AI API?",
       "answer": "No. This tool uses local templates and formatting logic in your browser; it does not call an AI model."
+    },
+    {
+      "question": "Which words stay lowercase in title case?",
+      "answer": "Common small words such as a, an, and, as, at, by, for, in, of, on, the, to, and via stay lowercase unless they are at an edge or after punctuation."
     }
   ]
 }

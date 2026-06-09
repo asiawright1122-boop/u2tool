@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Meta Description Generator is a free browser-based utility for generate concise SEO meta description options from a page topic and keyword. It is designed for quick everyday workflows where users need a focused result without opening a spreadsheet, installing software, or signing in. The tool keeps inputs local in the browser and returns copy-ready output for analysis, marketing, content, or sharing workflows.",
+  "detailed_description": "Meta Description Generator creates SEO meta description options from a page topic, target keyword, and optional call to action. The real component shows multiple copy-ready suggestions with live character counts and 120-160 character guidance so writers can compare concise search snippets before editing the final page description. It uses browser-side templates and does not call an AI API, audit rankings, fetch search results, or guarantee higher CTR.",
   "usage_steps": [
-    "Enter the required values in the form fields",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview/output shown on the page",
-    "Adjust inputs to compare another scenario"
+    "Enter the page topic you want the description to summarize.",
+    "Add a target keyword and optional call to action.",
+    "Review the generated description options and character counts.",
+    "Copy the strongest draft and edit it for accuracy, page fit, and natural keyword use."
   ],
   "usage_examples": [
-    "Use Meta Description Generator during a quick planning or review workflow",
-    "Compare multiple scenarios without building a spreadsheet",
-    "Create copy-ready output for reports, campaigns, or personal notes"
+    "Draft meta descriptions for a blog post before publishing.",
+    "Compare concise snippets for a product, tool, or landing page.",
+    "Add a call to action while keeping the description near the recommended length."
   ],
   "faqs": [
     {
@@ -23,6 +23,10 @@
     {
       "question": "Does Meta Description Generator use an AI API?",
       "answer": "No. This tool uses local templates and formatting logic in your browser; it does not call an AI model."
+    },
+    {
+      "question": "Does it guarantee a better search snippet?",
+      "answer": "No. It creates draft descriptions and character guidance only. Search engines may rewrite snippets based on the query and page content."
     }
   ]
 }

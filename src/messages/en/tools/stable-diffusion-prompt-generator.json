@@ -1,15 +1,16 @@
 {
-  "detailed_description": "Stable Diffusion Prompt Generator - Build a copy-ready prompt block from subject, style, details, lighting, aspect ratio, and negative prompt terms. The output separates positive prompt, negative prompt, and setting notes, including reminders to start with model defaults, tune steps and CFG after a preview, and keep the seed fixed when comparing prompt changes.",
+  "detailed_description": "Stable Diffusion Prompt Generator builds positive and negative prompt text from a subject plus selectable quality, style, character, environment, and negative tags. The real component also suggests sampler presets with steps and CFG values, includes LoRA/model hints, and offers separate copy actions for the positive prompt, negative prompt, or the full prompt block. It does not generate images, load models, validate LoRA names, or guarantee output quality.",
   "usage_steps": [
-    "Enter the subject, style, visual details, and lighting direction",
-    "Choose an aspect ratio and edit the negative prompt terms",
-    "Review the positive prompt, negative prompt, and setting notes",
-    "Copy the block into your own Stable Diffusion workflow and refine after testing"
+    "Enter the subject description.",
+    "Select quality, style, character, environment, and negative tags.",
+    "Choose a sampler suggestion to review steps and CFG values.",
+    "Copy the positive prompt, negative prompt, or full block into your own Stable Diffusion workflow.",
+    "Refine the tags after testing in your own model setup."
   ],
   "usage_examples": [
-    "Create a clean product-style image prompt with a matching negative prompt",
-    "Prepare a prompt note that keeps seed fixed while comparing changes",
-    "Switch aspect ratios before testing the same concept in another composition"
+    "Create a photorealistic prompt with a matching negative prompt.",
+    "Compare sampler suggestions such as DPM++ 2M Karras, Euler a, and UniPC.",
+    "Build a prompt block with LoRA reminders before testing in your own UI."
   ],
   "faqs": [
     {
@@ -21,8 +22,12 @@
       "answer": "No. It generates prompt text and setting notes only. Use the copied output in your own image generation setup."
     },
     {
-      "question": "Why are setting notes included?",
-      "answer": "They give a short reminder for controlled prompt testing, such as starting with model defaults and keeping seed fixed when comparing changes."
+      "question": "What sampler settings are shown?",
+      "answer": "The component shows sampler names with suggested steps and CFG values, such as DPM++ 2M Karras or Euler a."
+    },
+    {
+      "question": "Does it validate LoRA or model names?",
+      "answer": "No. The LoRA and model hints are reminders only. Check compatibility in your own Stable Diffusion setup."
     }
   ]
 }

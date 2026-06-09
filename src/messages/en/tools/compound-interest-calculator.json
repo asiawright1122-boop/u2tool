@@ -1,16 +1,34 @@
 {
-  "detailed_description": "Compound Interest Calculator estimates how an initial balance can grow over a chosen number of years. Enter the starting investment, annual interest rate, investment period, compounding frequency, and optional regular contribution, then calculate the final amount, total contributions, and total interest. The result includes a simple year-by-year balance view so you can compare how the projected balance changes over time.",
+  "detailed_description": "This free online Compound Interest Calculator estimates fixed-rate compound interest for a starting balance over a chosen number of years. Enter the starting investment, annual interest rate, investment period, compounding frequency, and optional monthly or annual contribution, then calculate the final amount, total contributions, and total interest. The result includes a simple year-by-year balance view so you can compare how the projected balance changes over time. It uses a fixed nominal annual rate and does not model taxes, fees, inflation, market risk, changing rates, or investment advice.",
   "usage_steps": [
-    "Enter your initial investment amount",
-    "Set the annual interest rate",
-    "Choose the investment period in years",
-    "Select compounding frequency (daily, monthly, quarterly, annually)",
-    "Optionally add regular contributions",
-    "View final amount, total contributions, total interest, and yearly balance bars"
+    "Enter your initial investment amount.",
+    "Set the fixed annual interest rate.",
+    "Choose the investment period in years.",
+    "Select the compounding frequency: daily, monthly, quarterly, or annually.",
+    "Optionally add monthly or annual regular contributions.",
+    "View the final amount, total contributions, total interest, and year-by-year balance view."
   ],
   "usage_examples": [
     "Estimate how a starting balance could grow over a fixed period.",
     "Compare daily, monthly, quarterly, and annual compounding inputs.",
     "Check how adding monthly or annual contributions changes the projected final amount."
+  ],
+  "faqs": [
+    {
+      "question": "What does the Compound Interest Calculator estimate?",
+      "answer": "It estimates final amount, total contributions, total interest, and a year-by-year balance view from your fixed-rate inputs."
+    },
+    {
+      "question": "How are regular contributions handled?",
+      "answer": "Monthly contributions are multiplied by 12 for each projected year, while annual contributions are added once per year after that year's compounding step."
+    },
+    {
+      "question": "Does it include taxes, fees, inflation, or market risk?",
+      "answer": "No. The calculator uses a fixed nominal annual interest rate. It does not model taxes, account fees, inflation, investment volatility, or changing rates."
+    },
+    {
+      "question": "Is this financial advice?",
+      "answer": "No. It is a planning calculator for fixed-rate scenarios, not investment advice or a guarantee of returns."
+    }
   ]
 }

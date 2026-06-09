@@ -1,15 +1,15 @@
 {
-  "detailed_description": "AI Prompt Generator is a free browser-based utility for create structured prompts for writing, coding, analysis, and marketing tasks. It is designed for quick everyday workflows where users need a focused result without opening a spreadsheet, installing software, or signing in. The tool keeps inputs local in the browser and returns copy-ready output for analysis, marketing, content, or sharing workflows.",
+  "detailed_description": "AI Prompt Generator creates structured prompt drafts for writing, coding, analysis, and marketing tasks. It combines a role, objective, audience, output format, constraints, and practical instruction checklist into one copy-ready prompt. The generator is template-based and runs in the browser; it does not call an AI model or send your prompt to an external API.",
   "usage_steps": [
-    "Enter the required values in the form fields",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview/output shown on the page",
-    "Adjust inputs to compare another scenario"
+    "Choose the task type: writing, coding, analysis, or marketing.",
+    "Enter the topic, target audience, tone, output format, and constraints.",
+    "Review the generated role, objective, audience, format, constraints, and instruction sections.",
+    "Copy the prompt and paste it into your preferred AI tool or internal workflow."
   ],
   "usage_examples": [
-    "Use AI Prompt Generator during a quick planning or review workflow",
-    "Compare multiple scenarios without building a spreadsheet",
-    "Create copy-ready output for reports, campaigns, or personal notes"
+    "Build a coding prompt that asks for implementation steps, examples, and caveats.",
+    "Create a marketing prompt for a launch plan aimed at a specific audience.",
+    "Turn a broad writing idea into a structured prompt with format and constraint guidance."
   ],
   "faqs": [
     {
@@ -18,11 +18,15 @@
     },
     {
       "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser for this utility."
+      "answer": "No. The prompt draft is generated locally in your browser."
     },
     {
-      "question": "Does AI Prompt Generator use an AI API?",
-      "answer": "No. This tool uses local templates and formatting logic in your browser; it does not call an AI model."
+      "question": "Does AI Prompt Generator call an AI model?",
+      "answer": "No. This tool uses local templates and formatting logic in your browser; it does not call an AI model or external API."
+    },
+    {
+      "question": "Can I use the generated prompt directly?",
+      "answer": "Yes, but review the topic, constraints, and output format so the prompt matches your real task and quality bar."
     }
   ]
 }

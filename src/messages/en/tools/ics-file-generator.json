@@ -1,15 +1,15 @@
 {
-  "detailed_description": "ICS File Generator - Generate iCalendar event text from a title, start and end date, start and end time, timezone, location, and description. The tool formats a VCALENDAR and VEVENT block with DTSTART, DTEND, SUMMARY, LOCATION, DESCRIPTION, and a deterministic UID, then shows the event date, duration, and timezone before you copy the text.",
+  "detailed_description": "ICS File Generator creates a downloadable .ics calendar file from an event title, start date and time, end date and time, optional location, optional description, and optional event URL. The tool formats a VCALENDAR and VEVENT block with DTSTART, DTEND, SUMMARY, LOCATION, DESCRIPTION, URL, and a deterministic UID, then downloads the generated file with a sanitized event filename. It is useful when you need a quick calendar event file for a meeting, milestone, webinar, reminder, or internal planning note.",
   "usage_steps": [
     "Enter the event title, start and end date, start and end time, and timezone",
     "Add optional location and description details",
-    "Review the generated iCalendar text, event date, duration, and timezone",
-    "Copy the output and test it with your calendar workflow before sharing widely"
+    "Click Download .ics File to generate and download the calendar event file",
+    "Test the downloaded file with your calendar workflow before sharing widely"
   ],
   "usage_examples": [
     "Draft an ICS block for a product planning meeting",
     "Check that a one-hour UTC event has the expected DTSTART and DTEND values",
-    "Prepare calendar event text for an email, documentation page, or internal note"
+    "Prepare a downloadable event file for an email, documentation page, or internal note"
   ],
   "faqs": [
     {
@@ -18,7 +18,7 @@
     },
     {
       "question": "Does the page download a calendar file?",
-      "answer": "No. It generates iCalendar text on the page. Copy the output and save or import it with your own calendar tools."
+      "answer": "Yes. After you enter a valid event title and date range, the page downloads a .ics calendar file generated in the browser."
     },
     {
       "question": "How are timezones handled?",

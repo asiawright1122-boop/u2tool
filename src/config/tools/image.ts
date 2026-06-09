@@ -23,7 +23,7 @@ export const IMAGE_TOOLS: Tool[] = [
   { slug: 'image-adjustment', category: 'image', icon: 'image', component: 'ImageAdjustment' },
   { slug: 'image-frosted-glass', category: 'image', icon: 'image', component: 'ImageFrostedGlass' },
   { slug: 'image-to-ico', category: 'image', icon: 'image', component: 'ImageToIco' },
-  { slug: 'youtube-thumbnail-generator', category: 'image', icon: 'image', component: 'PopularUtilityTool', popular: true },
+  { slug: 'youtube-thumbnail-generator', category: 'image', icon: 'image', component: 'YoutubeThumbnailGenerator', popular: true },
   { slug: 'gif-maker', category: 'image', icon: 'image', component: 'GifMaker' },
   { slug: 'gif-splitter', category: 'image', icon: 'image', component: 'GifSplitter' },
   { slug: 'gif-compressor', category: 'image', icon: 'image', component: 'GifCompressor' },
@@ -41,5 +41,5 @@ export const IMAGE_TOOLS: Tool[] = [
   { slug: 'pixel-density-calculator', category: 'image', icon: 'image', component: 'PixelDensityCalculator' },
   { slug: 'dpi-calculator', category: 'image', icon: 'image', component: 'DpiCalculator' },
   { slug: 'base64-image-converter', category: 'image', icon: 'image', component: 'Base64ImageConverter' },
-  { slug: 'passport-photo-maker', category: 'image', icon: 'image', component: 'PopularUtilityTool', popular: true },
+  { slug: 'passport-photo-maker', category: 'image', icon: 'image', component: 'PassportPhotoMaker', popular: true },
 ];

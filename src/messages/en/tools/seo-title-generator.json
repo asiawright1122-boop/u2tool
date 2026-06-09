@@ -1,15 +1,15 @@
 {
-  "detailed_description": "SEO Title Generator creates title tag options from a page name, target keyword, audience, and benefit. It helps compare concise search snippets, benefit-led titles, and tool-style title formats before choosing a version that fits your page and SERP intent.",
+  "detailed_description": "SEO Title Generator creates title tag options from a page topic, target keyword, optional brand name, and brand placement setting. The real component shows Google-style previews, character counts, and length status so you can compare concise search snippets before choosing a title that fits your page and SERP intent. It does not fetch search results, measure ranking difficulty, or guarantee rankings.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter the page topic and target keyword.",
+    "Optionally add a brand name.",
+    "Choose no brand, brand before, or brand after placement.",
+    "Review the title options, character status, and Google-style preview before copying a draft."
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Draft title tags for a landing page or tool page.",
+    "Compare branded and unbranded title options.",
+    "Check whether a title may be too short or likely to truncate."
   ],
   "faqs": [
     {
@@ -21,8 +21,12 @@
       "answer": "No. The calculation or generation runs locally in the browser."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Does it guarantee better rankings?",
+      "answer": "No. It creates title drafts and length guidance only. Ranking depends on page quality, relevance, competition, and many other signals."
+    },
+    {
+      "question": "Does it preview Google results?",
+      "answer": "Yes. The component includes a simple Google-style preview so you can compare how title drafts may read in search."
     }
   ]
 }

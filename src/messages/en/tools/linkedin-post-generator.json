@@ -1,15 +1,16 @@
 {
-  "detailed_description": "LinkedIn Post Generator drafts professional post variations from a topic, audience, benefit, and call to action. It is designed for quick thought-leadership, product, hiring, or campaign posts where you want a structured first draft before adding proof, examples, and personal context.",
+  "detailed_description": "LinkedIn Post Generator drafts short, standard, and deep-dive post variations from a post topic, personal perspective, target audience, and goal. The real component supports knowledge-sharing, recruiting, and brand-building modes, suggests goal-specific hashtags, shows character counts against a 1300-character recommendation, and provides copy actions for each version. It does not connect to LinkedIn, schedule posts, inspect analytics, or guarantee engagement.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter the post topic.",
+    "Add your personal experience or perspective.",
+    "Add the target audience and choose the post goal.",
+    "Compare the short, standard, and deep-dive drafts with character counts.",
+    "Copy one draft and edit it with real examples before publishing."
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Draft a knowledge-sharing post for a professional audience.",
+    "Create a recruiting-oriented post with relevant hiring tags.",
+    "Compare a concise version and a longer thought-leadership version before editing."
   ],
   "faqs": [
     {
@@ -21,8 +22,12 @@
       "answer": "No. The calculation or generation runs locally in the browser."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Does it post to LinkedIn?",
+      "answer": "No. It only generates draft text. You copy, edit, and publish the final post yourself."
+    },
+    {
+      "question": "Why does it show character counts?",
+      "answer": "The component highlights whether each draft stays near the recommended 1300-character range for LinkedIn engagement."
     }
   ]
 }

@@ -1,15 +1,16 @@
 {
-  "detailed_description": "Midjourney Prompt Generator - Create structured prompt variants from a subject, visual style, lighting note, composition, aspect ratio, and optional exclusions. The generator combines those inputs into several copy-ready prompt lines with --ar aspect ratio syntax and an optional --no block, helping image creators compare phrasing directions before using the prompt in their own workflow.",
+  "detailed_description": "Midjourney Prompt Generator builds one complete Midjourney prompt from a subject, art style, composition, lighting, atmosphere, version, aspect ratio, quality, and stylize value. The real component includes quick presets such as cinematic portrait, dream landscape, concept art, neon city, and nature photo, then outputs copy-ready text with --v, --ar, --q, and --s parameters. It does not generate images, call Midjourney, inspect prompts, or guarantee a particular visual result.",
   "usage_steps": [
-    "Describe the subject, style, lighting, and composition you want",
-    "Pick an aspect ratio and add any negative prompt terms if needed",
-    "Review the generated prompt variants and option rows",
-    "Copy the full set or one variant, then refine it in your image workflow"
+    "Describe the image subject.",
+    "Choose the style, composition, lighting, and atmosphere.",
+    "Set the Midjourney version, aspect ratio, quality, and stylize values.",
+    "Use a preset if you want to fill the form quickly.",
+    "Generate and copy the prompt, then refine it in your own image workflow."
   ],
   "usage_examples": [
-    "Generate six prompt angles for an editorial workspace scene",
-    "Compare square, widescreen, and vertical aspect ratio prompts",
-    "Add exclusions for unwanted visual elements before testing a prompt"
+    "Create a cinematic portrait prompt with --ar 2:3 and a moody lighting preset.",
+    "Build a widescreen concept-art prompt for a futuristic scene.",
+    "Compare square, vertical, and widescreen parameter choices before testing."
   ],
   "faqs": [
     {
@@ -21,8 +22,12 @@
       "answer": "No. It creates text prompt variants only. Use the copied prompt in the image tool or creative workflow you choose."
     },
     {
-      "question": "What does the negative prompt field do?",
-      "answer": "If you enter exclusions, the generator appends them as a --no block in each prompt variant."
+      "question": "Which Midjourney parameters are included?",
+      "answer": "The generated prompt includes version, aspect ratio, quality, and stylize parameters using --v, --ar, --q, and --s syntax."
+    },
+    {
+      "question": "Does it use live Midjourney model data?",
+      "answer": "No. It uses local template logic and form selections. Adjust the prompt after testing it in your own Midjourney workflow."
     }
   ]
 }

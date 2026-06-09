@@ -1,28 +1,32 @@
 {
-  "detailed_description": "Email Preview Text Generator creates short preheader and inbox preview ideas for campaigns, launches, newsletters, and announcements. It helps pair a subject line with supporting copy that clarifies the offer, reinforces the benefit, and encourages the open.",
+  "detailed_description": "Email Preview Text Generator creates short preheader and inbox preview ideas for campaigns, launches, newsletters, and announcements. It pairs a subject line with supporting copy based on campaign topic, audience, benefit, and tone, then shows character counts against a practical 35-90 character preview range.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter the subject line, campaign topic, audience, reader benefit, and tone.",
+    "Review the preheader options and character counts.",
+    "Copy one preview text option or copy the full numbered set.",
+    "Paste the final line into your own email platform and test it with the subject."
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Draft preview text for a product launch email.",
+    "Create supporting preheaders for a newsletter subject line.",
+    "Compare benefit-first and curiosity-led preview text before A/B testing."
   ],
   "faqs": [
     {
-      "question": "Email Preview Text Generator is free?",
+      "question": "Is Email Preview Text Generator free?",
       "answer": "Yes. The tool runs free in the browser and does not require an account."
     },
     {
       "question": "Does the tool upload my inputs?",
-      "answer": "No. The calculation or generation runs locally in the browser."
+      "answer": "No. The preview text options are generated locally in your browser."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Does it send emails or change my email platform?",
+      "answer": "No. It only creates preview text. Sending, preheader setup, and testing happen in your own email platform."
+    },
+    {
+      "question": "How long should email preview text be?",
+      "answer": "Many inboxes show roughly 35-90 characters, so the tool displays character counts to help you choose a concise line."
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "detailed_description": "IBAN Validator checks International Bank Account Numbers in the browser using the country code, registered IBAN length, and ISO 7064 MOD-97 checksum. It supports a broad local table of IBAN countries and territories, formats valid entries in groups of four, and shows the country, check digits, BBAN, and first BBAN block for quick review. The tool does not contact banks, verify account ownership, or confirm whether a transfer will be accepted by a payment provider.",
+  "detailed_description": "IBAN Validator is a free online IBAN checker that validates International Bank Account Numbers in the browser using the country code, registered IBAN length, and ISO 7064 MOD-97 checksum. It supports a broad local table of IBAN countries and territories, formats valid entries in groups of four, and shows the country, check digits, BBAN, and first BBAN block for quick review. The tool is useful for form QA, payment-data cleanup, support triage, and manual review before storing an IBAN string. It does not contact banks, verify account ownership, or confirm whether a transfer will be accepted by a payment provider.",
   "usage_steps": [
     "Enter or paste an IBAN number in the input field.",
     "Click the Validate button to remove spaces, normalize the country code, and run the length and MOD-97 checksum checks.",
@@ -11,5 +11,23 @@
     "Check whether a customer-provided IBAN has the right country length and checksum before storing it in a payment form.",
     "Normalize a pasted IBAN with inconsistent spacing into standard groups of four characters.",
     "Test validation handling for German, UK, French, Spanish, Italian, Dutch, and other IBAN country formats."
+  ],
+  "faqs": [
+    {
+      "question": "What does the IBAN Validator check?",
+      "answer": "It checks the country code, expected country-specific IBAN length, allowed format, and ISO 7064 MOD-97 checksum."
+    },
+    {
+      "question": "Does this verify a real bank account?",
+      "answer": "No. The validator checks IBAN structure and checksum only. It does not contact banks, verify account ownership, or confirm that a payment transfer will succeed."
+    },
+    {
+      "question": "Can I format an IBAN with spaces?",
+      "answer": "Yes. Valid IBANs are formatted in groups of four characters so they are easier to read, copy, and compare with forms or documents."
+    },
+    {
+      "question": "Which IBAN details are shown?",
+      "answer": "For valid entries, the tool shows the country, country code, check digits, BBAN, first BBAN block, and formatted IBAN."
+    }
   ]
 }

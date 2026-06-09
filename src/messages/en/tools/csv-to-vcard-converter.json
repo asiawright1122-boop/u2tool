@@ -1,15 +1,15 @@
 {
-  "detailed_description": "CSV to vCard Converter - Convert pasted contact rows into vCard text using a header row and common fields such as first name, last name, full name, email, phone, company, title, and address. You can choose comma, semicolon, or tab delimiters and output vCard 3.0 or 4.0 text, making it easier to prepare contacts for address book or CRM import workflows.",
+  "detailed_description": "This free online CSV to vCard converter turns pasted contact rows into vCard or VCF contact text in the browser. Use a header row with common fields such as first name, last name, full name, email, phone, company, title, and address. You can choose comma, semicolon, or tab delimiters, output vCard 3.0 or 4.0 BEGIN:VCARD blocks, copy the generated text, or download a .vcf file for a small address book or CRM import batch. The tool does not upload files, import contacts automatically, or validate every address-book rule.",
   "usage_steps": [
-    "Paste CSV contact data with a header row",
-    "Select the delimiter used by your data and the vCard version you need",
-    "Review the contact count and generated vCard output",
-    "Copy the vCard text and test it with your target address book or CRM import flow"
+    "Paste CSV contact data with a header row.",
+    "Select the delimiter used by your data and the vCard version you need.",
+    "Review the contact count and generated BEGIN:VCARD blocks.",
+    "Copy the vCard text or download contacts.vcf, then test it with your target address book or CRM import flow."
   ],
   "usage_examples": [
-    "Convert a small spreadsheet export into vCard 3.0 contact blocks",
-    "Prepare tab-delimited contact rows for an address book import",
-    "Check whether name, email, phone, company, and title columns map cleanly"
+    "Convert a small spreadsheet export into vCard 3.0 contact blocks.",
+    "Prepare tab-delimited contact rows for an address book import.",
+    "Check whether name, email, phone, company, and title columns map cleanly before a bulk import."
   ],
   "faqs": [
     {
@@ -19,6 +19,10 @@
     {
       "question": "Which CSV columns are recognized?",
       "answer": "The converter looks for common contact headers including first name, last name, full name, email, phone, company, title, and address."
+    },
+    {
+      "question": "Does it create a .vcf file download?",
+      "answer": "Yes. It creates copy-ready vCard text and a browser-side .vcf download for the generated contacts."
     },
     {
       "question": "Does it import contacts into my address book automatically?",

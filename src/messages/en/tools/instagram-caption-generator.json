@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Instagram Caption Generator drafts caption variations with a hook, practical value line, call to action, and hashtag set. It helps creators move from a rough post idea to copy-ready caption drafts that can be adjusted for brand voice, campaign context, and visual content.",
+  "detailed_description": "Instagram Caption Generator drafts caption variations from a post topic, tone, audience, and optional call to action. The real component creates hook-led caption drafts with copy actions so creators can compare short, friendly, promotional, or storytelling angles before editing them for the actual image, reel, or carousel. It does not connect to Instagram, analyze images, schedule posts, or guarantee engagement.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter the post topic or visual idea.",
+    "Choose the tone and audience for the caption.",
+    "Add a call to action if the post needs one.",
+    "Review the generated caption options, copy a draft, and edit it for the real post."
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Draft a caption for a launch post or creator update.",
+    "Compare friendly and promotional versions of the same caption idea.",
+    "Create a starting caption for a reel or carousel before tailoring it to the visual."
   ],
   "faqs": [
     {
@@ -21,8 +21,12 @@
       "answer": "No. The calculation or generation runs locally in the browser."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Does it connect to Instagram?",
+      "answer": "No. It creates caption drafts only. You paste and publish the final version yourself."
+    },
+    {
+      "question": "Should I publish the caption exactly as generated?",
+      "answer": "Review the draft for brand voice, visual context, factual claims, and current campaign details before posting."
     }
   ]
 }

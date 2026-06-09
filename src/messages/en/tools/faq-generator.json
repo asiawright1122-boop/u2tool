@@ -1,15 +1,15 @@
 {
-  "detailed_description": "FAQ Generator drafts practical question-and-answer blocks from a topic, keyword, audience, and benefit. Use it to outline support sections, landing page FAQs, product education snippets, or SEO content drafts that can be reviewed against real policies and product facts.",
+  "detailed_description": "FAQ Generator creates structured FAQ question-and-answer drafts from a product or service topic, industry template, audience type, and desired count. The real component supports ecommerce, SaaS, restaurant, education, medical/healthcare business, and general templates, then exports the result as Markdown or FAQPage JSON-LD. It does not verify policies, legal claims, medical guidance, pricing, availability, or schema eligibility for a real site.",
   "usage_steps": [
-    "Enter the required values in the form",
-    "Review the calculated or generated result",
-    "Copy the result or use the preview shown",
-    "Adjust values to compare another scenario"
+    "Enter the product, service, or page topic.",
+    "Choose the industry template and audience type.",
+    "Select whether to generate 5, 10, or 15 FAQ items.",
+    "Review the questions and answers, then copy individual items or export Markdown or JSON-LD."
   ],
   "usage_examples": [
-    "Use it during a quick review or planning session",
-    "Compare scenarios without creating a spreadsheet",
-    "Create copy-ready results for reports, campaigns, or notes"
+    "Draft a SaaS FAQ outline before replacing placeholder policies with real details.",
+    "Create ecommerce FAQ questions for shipping, returns, payments, and support.",
+    "Export a FAQPage JSON-LD draft after reviewing answers against the real page content."
   ],
   "faqs": [
     {
@@ -21,8 +21,12 @@
       "answer": "No. The calculation or generation runs locally in the browser."
     },
     {
-      "question": "Is there any important note?",
-      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+      "question": "Can it export FAQ schema?",
+      "answer": "Yes. After generating FAQ items, the component can export a FAQPage JSON-LD draft for review."
+    },
+    {
+      "question": "Should I publish the answers as-is?",
+      "answer": "No. Review every answer against your real policies, product facts, legal obligations, and page content before publishing."
     }
   ]
 }

@@ -1,15 +1,33 @@
 {
-  "detailed_description": "The Sitemap Generator creates a simple XML sitemap from the URLs you enter in the browser. Start with a base URL, edit the starter rows or add your own paths, set each page's last modified date, change frequency, and priority, then generate well-formed sitemap XML that can be copied or downloaded as sitemap.xml. It is useful when you need a small hand-maintained sitemap, a quick XML sample for a project, or a clean starting point before adding URLs to a CMS or build pipeline. The tool does not crawl a live website, fetch pages automatically, validate ownership, or split large sitemap indexes; it only formats the URL list you provide.",
+  "detailed_description": "This free online XML Sitemap Generator creates a simple sitemap.xml file from the URLs you enter in the browser. Start with a base URL, edit the starter rows or add your own paths, set each page's loc, lastmod, changefreq, and priority values, then generate well-formed sitemap XML that can be copied or downloaded as sitemap.xml. It is useful when you need a small hand-maintained sitemap, a quick XML sample for a project, or a clean starting point before adding URLs to a CMS or build pipeline. The tool does not crawl a live website, fetch pages automatically, validate ownership, submit URLs to search engines, or split large sitemap indexes; it only formats the URL list you provide.",
   "usage_steps": [
     "Enter the base URL, including the protocol, such as https://example.com.",
-    "Edit the starter paths or add more URL rows for the pages you want in the sitemap.",
+    "Edit the starter paths or add more URL rows for the pages you want in the XML sitemap.",
     "Choose a last modified date, change frequency, and priority for each row.",
     "Click Generate Sitemap to build the XML output.",
     "Review the XML, then copy it or download sitemap.xml."
   ],
   "usage_examples": [
-    "Create a compact sitemap for a five-page brochure site before uploading it to the site root.",
+    "Create a compact sitemap.xml file for a five-page brochure site before uploading it to the site root.",
     "Draft sitemap XML for a staging project where the final build process is not ready yet.",
     "Prepare a manual list of priority landing pages for a client review or SEO handoff."
+  ],
+  "faqs": [
+    {
+      "question": "Does the Sitemap Generator crawl my website?",
+      "answer": "No. It is a manual XML sitemap builder. Enter the URLs or paths you want included, then the page formats those rows into sitemap XML."
+    },
+    {
+      "question": "Which sitemap fields can I set?",
+      "answer": "Each URL row includes loc, lastmod, changefreq, and priority values. These are common XML sitemap fields used to describe the URL and update hint."
+    },
+    {
+      "question": "Can I download sitemap.xml?",
+      "answer": "Yes. After generating the XML, you can copy the text or download it as sitemap.xml from the browser."
+    },
+    {
+      "question": "Is this for large sites?",
+      "answer": "It is best for small manual sitemaps and drafts. It does not crawl thousands of pages, create sitemap indexes, or split large sitemap files automatically."
+    }
   ]
 }
