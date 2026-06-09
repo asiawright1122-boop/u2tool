@@ -1,12 +1,12 @@
 # Runtime Helper Debt Inventory
 
-Generated: 2026-05-10T15:37:27.016Z
+Generated: 2026-06-05T02:43:38.607Z
 
 ## Summary
 
-- Imported compatibility exports scanned: 246
-- Likely broken imported exports: 6
-- Protected or likely false-positive exports: 73
+- Imported compatibility exports scanned: 240
+- Likely broken imported exports: 0
+- Protected or likely false-positive exports: 86
 - Selected Phase 29 text/reference candidates still likely broken: 0
 - Selected Phase 30 validation/reference candidates still likely broken: 0
 
@@ -14,12 +14,7 @@ Generated: 2026-05-10T15:37:27.016Z
 
 | Rank | Export | Category | Score | Signatures | Consumers | Notes |
 | --- | --- | --- | ---: | --- | ---: | --- |
-| 1 | `defaultColors` | text-reference | 60 | empty-array-const | 1 | - |
-| 2 | `emojiData` | text-reference | 60 | empty-array-const | 1 | - |
-| 3 | `fontMappings` | text-reference | 60 | empty-object-const | 1 | - |
-| 4 | `fontStyles` | text-reference | 60 | empty-array-const | 1 | - |
-| 5 | `K` | general | 54 | empty-array-const | 5 | - |
-| 6 | `bicDatabase` | database-developer | 42 | empty-object-const | 1 | - |
+| - | - | - | 0 | - | 0 | - |
 
 ## Recommended v0.0.9 Waves
 
@@ -43,28 +38,28 @@ Generated: 2026-05-10T15:37:27.016Z
 | 6 | `analyzeComplexity` | general | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
 | 7 | `analyzeDeadCode` | general | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
 | 8 | `analyzePerformance` | general | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
-| 9 | `base64UrlEncode` | general | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
-| 10 | `calculate` | general | 6 | return-zero | 1 | empty return appears to be guarded invalid-input fallback |
-| 11 | `calculateBreakEven` | general | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
-| 12 | `calculateCapacity` | general | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
-| 13 | `calculateHash` | general | 6 | return-empty-string | 1 | empty return appears to be guarded invalid-input fallback |
-| 14 | `calculateMD5` | general | 6 | return-empty-string | 1 | empty return appears to be guarded invalid-input fallback |
-| 15 | `calculateStats` | general | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
-| 16 | `checkVulnerabilities` | validation-reference | 6 | empty-array-const | 1 | empty return appears to be guarded invalid-input fallback |
-| 17 | `convertTime` | time-scheduling | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
-| 18 | `decodeJwt` | general | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
-| 19 | `detectMemoryLeaks` | general | 6 | empty-array-const | 1 | empty return appears to be guarded invalid-input fallback |
-| 20 | `extractHeadings` | general | 6 | empty-array-const | 1 | empty return appears to be guarded invalid-input fallback |
-| 21 | `findAvailableSlots` | general | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
-| 22 | `findClosestColor` | text-reference | 6 | return-empty-array | 1 | empty return appears to be guarded invalid-input fallback |
-| 23 | `findUnusedImports` | general | 6 | empty-array-const | 1 | empty return appears to be guarded invalid-input fallback |
-| 24 | `formatDate` | time-scheduling | 6 | return-empty-string | 1 | empty return appears to be guarded invalid-input fallback |
-| 25 | `formatHour` | general | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
-| 26 | `formatMinutesToTime` | time-scheduling | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
-| 27 | `formatNumber` | general | 6 | return-empty-string | 1 | empty return appears to be guarded invalid-input fallback |
-| 28 | `formatSql` | database-developer | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
-| 29 | `formatTime` | time-scheduling | 6 | return-empty-string | 1 | empty return appears to be guarded invalid-input fallback |
-| 30 | `formatXml` | general | 6 | return-empty-string | 1 | empty return appears to be guarded invalid-input fallback |
+| 9 | `ASCII_FONTS` | text-reference | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
+| 10 | `base64UrlEncode` | general | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
+| 11 | `calculate` | general | 6 | return-zero | 1 | empty return appears to be guarded invalid-input fallback |
+| 12 | `calculateBreakEven` | general | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
+| 13 | `calculateCapacity` | general | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
+| 14 | `calculateHash` | general | 6 | return-empty-string | 1 | empty return appears to be guarded invalid-input fallback |
+| 15 | `calculateMD5` | general | 6 | return-empty-string | 1 | empty return appears to be guarded invalid-input fallback |
+| 16 | `calculateStats` | general | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
+| 17 | `checkVulnerabilities` | validation-reference | 6 | empty-array-const | 1 | empty return appears to be guarded invalid-input fallback |
+| 18 | `commonPasswords` | validation-reference | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
+| 19 | `commonTypos` | validation-reference | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
+| 20 | `convertTime` | time-scheduling | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
+| 21 | `decodeJwt` | general | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
+| 22 | `detectMemoryLeaks` | general | 6 | empty-array-const | 1 | empty return appears to be guarded invalid-input fallback |
+| 23 | `disposableDomains` | validation-reference | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
+| 24 | `extractHeadings` | general | 6 | empty-array-const | 1 | empty return appears to be guarded invalid-input fallback |
+| 25 | `findAvailableSlots` | general | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
+| 26 | `findClosestColor` | text-reference | 6 | return-empty-array | 1 | empty return appears to be guarded invalid-input fallback |
+| 27 | `findUnusedImports` | general | 6 | empty-array-const | 1 | empty return appears to be guarded invalid-input fallback |
+| 28 | `flipMap` | text-reference | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
+| 29 | `formatDate` | time-scheduling | 6 | return-empty-string | 1 | empty return appears to be guarded invalid-input fallback |
+| 30 | `formatHour` | general | 0 | - | 1 | covered by runtime-integrity delegation or placeholder validator |
 
 ## Ranking Notes
 
