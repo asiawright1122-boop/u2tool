@@ -7,6 +7,7 @@ const CANONICAL_BASE_URL = (
 const INCLUDE_SOURCE_RENDERED_CHECKS =
   process.env.INCLUDE_SOURCE_RENDERED_CHECKS === '1' ||
   /^https?:\/\/(localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/i.test(FETCH_BASE_URL);
+const RENDERED_SEO_CHECK_FILTER = process.env.RENDERED_SEO_CHECK?.trim().toLowerCase() || '';
 
 interface RenderedSeoCheck {
   name: string;
@@ -47,6 +48,134 @@ const longTailToolSupportCopyMustNotInclude = [
 ];
 
 const popularEnglishDepthRecoveryChecks: RenderedSeoCheck[] = [
+  {
+    name: 'Meta Description Generator real component support content',
+    path: '/en/tools/meta-description-generator/',
+    titleIncludes: 'Meta Description Generator',
+    descriptionIncludes: 'meta description',
+    h1Includes: 'Meta Description Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'Meta Description Generator creates SEO meta description options',
+      'live character counts and 120-160 character guidance',
+      'Does Meta Description Generator use an AI API?',
+      'does not call an AI model',
+    ],
+    bodyMustNotInclude: genericSupportCopyMustNotInclude,
+  },
+  {
+    name: 'Blog Title Generator real component support content',
+    path: '/en/tools/blog-title-generator/',
+    titleIncludes: 'Blog Title Generator',
+    descriptionIncludes: 'blog title',
+    h1Includes: 'Blog Title Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'produces 10-15 headline ideas',
+      'informative, how-to, listicle, question, and ultimate-guide modes',
+      'Does it write the article?',
+      'uses local title templates',
+    ],
+    bodyMustNotInclude: genericSupportCopyMustNotInclude,
+  },
+  {
+    name: 'Product Description Generator real component support content',
+    path: '/en/tools/product-description-generator/',
+    titleIncludes: 'Product Description Generator',
+    descriptionIncludes: 'product description',
+    h1Includes: 'Product Description Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'short, medium, and long product description drafts',
+      'selling-point bullets',
+      'Does it verify product facts?',
+      'does not verify product claims',
+    ],
+    bodyMustNotInclude: genericSupportCopyMustNotInclude,
+  },
+  {
+    name: 'FAQ Generator real component support content',
+    path: '/en/tools/faq-generator/',
+    titleIncludes: 'FAQ Generator',
+    descriptionIncludes: 'FAQ',
+    h1Includes: 'FAQ Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'industry template, audience type, and desired count',
+      'exports the result as Markdown or FAQPage JSON-LD',
+      'Can it export FAQ schema?',
+      'Review every answer against your real policies',
+    ],
+    bodyMustNotInclude: genericSupportCopyMustNotInclude,
+  },
+  {
+    name: 'SEO Title Generator real component support content',
+    path: '/en/tools/seo-title-generator/',
+    titleIncludes: 'SEO Title Generator',
+    descriptionIncludes: 'SEO title',
+    h1Includes: 'SEO Title Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'Google-style previews, character counts, and length status',
+      'brand before, or brand after placement',
+      'Does it guarantee better rankings?',
+      'creates title drafts and length guidance only',
+    ],
+    bodyMustNotInclude: genericSupportCopyMustNotInclude,
+  },
+  {
+    name: 'Tweet Generator real component support content',
+    path: '/en/tools/tweet-generator/',
+    titleIncludes: 'Tweet Generator',
+    descriptionIncludes: 'Tweet',
+    h1Includes: 'Tweet Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'tracks the 280-character limit',
+      'single-post variants or a short thread',
+      'Does it post to X/Twitter?',
+      'It shows character counts and status labels',
+    ],
+    bodyMustNotInclude: genericSupportCopyMustNotInclude,
+  },
+  {
+    name: 'TikTok Hashtag Generator real component support content',
+    path: '/en/tools/tiktok-hashtag-generator/',
+    titleIncludes: 'TikTok Hashtag Generator',
+    descriptionIncludes: 'TikTok',
+    h1Includes: 'TikTok Hashtag Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'separates viral-style tags from niche long-tail tags',
+      'Does it use live TikTok trend data?',
+      'Does it post to TikTok?',
+      'does not connect to TikTok',
+    ],
+    bodyMustNotInclude: genericSupportCopyMustNotInclude,
+  },
+  {
+    name: 'Instagram Caption Generator real component support content',
+    path: '/en/tools/instagram-caption-generator/',
+    titleIncludes: 'Instagram Caption Generator',
+    descriptionIncludes: 'Instagram caption',
+    h1Includes: 'Instagram Caption Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'hook-led caption drafts',
+      'Does it connect to Instagram?',
+      'does not connect to Instagram',
+      'Review the draft for brand voice',
+    ],
+    bodyMustNotInclude: genericSupportCopyMustNotInclude,
+  },
   {
     name: 'Calorie Deficit Calculator deep support content',
     path: '/en/tools/calorie-deficit-calculator/',
@@ -101,9 +230,11 @@ const popularEnglishDepthRecoveryChecks: RenderedSeoCheck[] = [
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     sourceRenderedOnly: true,
     bodyMustInclude: [
-      'Convert pasted contact rows into vCard text',
+      'pasted contact rows into vCard or VCF contact text',
       'comma, semicolon, or tab delimiters',
+      'download a .vcf file',
       'Does it import contacts into my address book automatically?',
+      'Does it create a .vcf file download?',
     ],
     bodyMustNotInclude: genericSupportCopyMustNotInclude,
   },
@@ -214,8 +345,9 @@ const popularEnglishDepthRecoveryChecks: RenderedSeoCheck[] = [
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     sourceRenderedOnly: true,
     bodyMustInclude: [
-      'Generate iCalendar event text from a title',
+      'creates a downloadable .ics calendar file',
       'VCALENDAR and VEVENT block',
+      'downloads the generated file',
       'Does the page download a calendar file?',
     ],
     bodyMustNotInclude: genericSupportCopyMustNotInclude,
@@ -244,9 +376,10 @@ const popularEnglishDepthRecoveryChecks: RenderedSeoCheck[] = [
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     sourceRenderedOnly: true,
     bodyMustInclude: [
-      'Create structured prompt variants from a subject',
-      '--ar aspect ratio syntax',
+      'builds one complete Midjourney prompt',
+      '--v, --ar, --q, and --s syntax',
       'Does this create images?',
+      'Does it use live Midjourney model data?',
     ],
     bodyMustNotInclude: genericSupportCopyMustNotInclude,
   },
@@ -334,9 +467,10 @@ const popularEnglishDepthRecoveryChecks: RenderedSeoCheck[] = [
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     sourceRenderedOnly: true,
     bodyMustInclude: [
-      'Build a copy-ready prompt block',
-      'positive prompt, negative prompt, and setting notes',
+      'builds positive and negative prompt text',
+      'sampler presets with steps and CFG values',
       'Does this generate images?',
+      'Does it validate LoRA or model names?',
     ],
     bodyMustNotInclude: genericSupportCopyMustNotInclude,
   },
@@ -388,6 +522,9 @@ const longTailToolSupportDepthChecks: RenderedSeoCheck[] = [
     bodyMustInclude: [
       'BEGIN:VCARD blocks',
       'first_name,last_name,full_name,email,phone,company,title,address',
+      'browser-side CSV download',
+      'Can it convert a .vcf file directly?',
+      'Does it create a downloadable CSV file?',
       'Does it import contacts into a CRM automatically?',
     ],
     bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
@@ -493,7 +630,56 @@ const longTailToolSupportDepthChecks: RenderedSeoCheck[] = [
     bodyMustInclude: [
       'campaign topic, audience, benefit, and tone',
       'numbered subject line options',
+      'direct, curiosity-led, checklist, launch, reminder, and benefit-first angles',
       'Does it send emails or measure open rates?',
+    ],
+    bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
+  },
+  {
+    name: 'AI Prompt Generator real component support content',
+    path: '/en/tools/ai-prompt-generator/',
+    titleIncludes: 'AI Prompt Generator',
+    descriptionIncludes: 'AI prompt',
+    h1Includes: 'AI Prompt Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'structured prompt drafts for writing, coding, analysis, and marketing tasks',
+      'role, objective, audience, output format, constraints',
+      'Does AI Prompt Generator call an AI model?',
+      'does not call an AI model or external API',
+    ],
+    bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
+  },
+  {
+    name: 'YouTube Tags Generator real component support content',
+    path: '/en/tools/youtube-tags-generator/',
+    titleIncludes: 'YouTube Tags Generator',
+    descriptionIncludes: 'YouTube',
+    h1Includes: 'YouTube Tags Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'clean comma-separated YouTube tag list',
+      'video topic, target keyword, and intended audience',
+      'Does it use live YouTube search data?',
+      'does not fetch live search volume, trend data, or ranking data',
+    ],
+    bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
+  },
+  {
+    name: 'Email Preview Text Generator real component support content',
+    path: '/en/tools/email-preview-text-generator/',
+    titleIncludes: 'Email Preview Text Generator',
+    descriptionIncludes: 'email',
+    h1Includes: 'Email Preview Text Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'short preheader and inbox preview ideas',
+      'campaign topic, audience, benefit, and tone',
+      'practical 35-90 character preview range',
+      'Does it send emails or change my email platform?',
     ],
     bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
   },
@@ -521,9 +707,75 @@ const longTailToolSupportDepthChecks: RenderedSeoCheck[] = [
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     sourceRenderedOnly: true,
     bodyMustInclude: [
-      'video title, keyword, audience, call to action, and resource links',
-      'intro, learning bullets, links, CTA, and hashtags',
+      'video title, comma-separated keywords, channel name, and optional CTA link',
+      'first-157-character preview',
       'Does it upload or edit my YouTube video?',
+      'What does the first 157 characters preview show?',
+    ],
+    bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
+  },
+  {
+    name: 'LinkedIn Post Generator real component support content',
+    path: '/en/tools/linkedin-post-generator/',
+    titleIncludes: 'LinkedIn Post Generator',
+    descriptionIncludes: 'LinkedIn',
+    h1Includes: 'LinkedIn Post Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'short, standard, and deep-dive post variations',
+      'knowledge-sharing, recruiting, and brand-building modes',
+      'Does it post to LinkedIn?',
+      'recommended 1300-character range',
+    ],
+    bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
+  },
+  {
+    name: 'WiFi QR Code Generator real component support content',
+    path: '/en/tools/wifi-qr-code-generator/',
+    titleIncludes: 'WiFi QR Code Generator',
+    descriptionIncludes: 'WiFi',
+    h1Includes: 'WiFi QR Code Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'creates a standard WiFi QR payload',
+      'supports WPA/WPA2/WPA3, WEP, and no-password networks',
+      'What WiFi QR format does it generate?',
+      'payload used by common mobile camera apps',
+    ],
+    bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
+  },
+  {
+    name: 'YouTube Thumbnail Generator real component support content',
+    path: '/en/tools/youtube-thumbnail-generator/',
+    titleIncludes: 'YouTube Thumbnail Generator',
+    descriptionIncludes: 'YouTube',
+    h1Includes: 'YouTube Thumbnail Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'extracts the 11-character YouTube video ID',
+      'maxresdefault.jpg, hqdefault.jpg, mqdefault.jpg, and default.jpg',
+      'Which thumbnail sizes are shown?',
+      'Does this download or proxy the thumbnail image?',
+      'previews them directly in your browser',
+    ],
+    bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
+  },
+  {
+    name: 'Title Capitalization Tool real component support content',
+    path: '/en/tools/title-capitalization-tool/',
+    titleIncludes: 'Title Capitalization Tool',
+    descriptionIncludes: 'Capitalize',
+    h1Includes: 'Title Capitalization Tool',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'converts headlines, page titles, email subjects, and document headings',
+      'common small words such as a, an, and, of, the, and to lowercase',
+      'Does Title Capitalization Tool use an AI API?',
+      'Which words stay lowercase in title case?',
     ],
     bodyMustNotInclude: longTailToolSupportCopyMustNotInclude,
   },
@@ -1304,6 +1556,164 @@ const visibleLocalizedCtrRecoveryChecks: RenderedSeoCheck[] = [
   },
 ];
 
+const gscLossRenderedChecks: RenderedSeoCheck[] = [
+  {
+    name: 'GSC loss Gantt Chart Generator recovery content',
+    path: '/en/tools/gantt-chart-generator/',
+    titleIncludes: 'Gantt Chart',
+    descriptionIncludes: 'Gantt',
+    h1Includes: 'Gantt Chart',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'free online Gantt chart maker',
+      'project timeline or schedule chart',
+      'simple task-duration view',
+      'downloaded as PNG or SVG',
+      'does not calculate dependencies',
+    ],
+    bodyMustNotInclude: [
+      'automated scheduling engine',
+      'resource leveling',
+      'critical path analysis engine',
+    ],
+  },
+  {
+    name: 'GSC loss English Hex Editor recovery content',
+    path: '/en/tools/hex-editor/',
+    titleIncludes: 'Hex Editor',
+    descriptionIncludes: 'hex',
+    h1Includes: 'Hex Editor',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'UTF-8 hex bytes',
+      'API payloads',
+      'All conversion runs in the browser',
+    ],
+    bodyMustNotInclude: [
+      'hex grid',
+      'byte-cell editing',
+    ],
+  },
+  {
+    name: 'GSC loss Russian Hex Editor recovery content',
+    path: '/ru/tools/hex-editor/',
+    titleIncludes: 'Hex',
+    descriptionIncludes: 'hex',
+    h1Includes: 'Hex',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'UTF-8',
+      'payload',
+      'браузере',
+    ],
+    bodyMustNotInclude: [
+      'прямо в браузере прямо в вашем браузере',
+      'без скачивания и регистрации',
+    ],
+  },
+  {
+    name: 'GSC loss iCal Parser recovery content',
+    path: '/en/tools/ical-parser/',
+    titleIncludes: 'iCal Parser',
+    descriptionIncludes: 'ICS',
+    h1Includes: 'iCal Parser',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'free online ICS viewer',
+      'VEVENT entries',
+      'does not sync calendars',
+      'export the event objects as JSON',
+    ],
+    bodyMustNotInclude: [
+      'automatic calendar sync',
+      'send calendar invitations',
+      'CalDAV sync engine',
+    ],
+  },
+  {
+    name: 'GSC loss Morse Code Player recovery content',
+    path: '/en/tools/morse-code-player/',
+    titleIncludes: 'Morse Code Player',
+    descriptionIncludes: 'Morse',
+    h1Includes: 'Morse Code Player',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'convert text to Morse code',
+      'play audio',
+      'adjustable speed and frequency',
+    ],
+    bodyMustNotInclude: [
+      'guaranteed radio',
+    ],
+  },
+  {
+    name: 'GSC loss Spanish Word Counter recovery content',
+    path: '/es/tools/word-counter/',
+    titleIncludes: 'Contador',
+    descriptionIncludes: 'palabras',
+    h1Includes: 'Contador',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'palabras',
+      'caracteres',
+      'navegador',
+    ],
+    bodyMustNotInclude: [
+      'primer borrador',
+      'Copiar o descargar',
+    ],
+  },
+  {
+    name: 'GSC loss Sitemap Generator recovery content',
+    path: '/en/tools/sitemap-generator/',
+    titleIncludes: 'Sitemap Generator',
+    descriptionIncludes: 'sitemap.xml',
+    h1Includes: 'Sitemap Generator',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'free online XML Sitemap Generator',
+      'loc, lastmod, changefreq, and priority',
+      'Does the Sitemap Generator crawl my website?',
+      'download it as sitemap.xml',
+    ],
+    bodyMustNotInclude: [
+      'Scan Website',
+      'scanning your website',
+      'recursively fetching',
+      'automatic site crawler',
+      'search engine submission service',
+    ],
+  },
+  {
+    name: 'GSC loss Compound Interest Calculator recovery content',
+    path: '/en/tools/compound-interest-calculator/',
+    titleIncludes: 'Compound Interest',
+    descriptionIncludes: 'compound interest',
+    h1Includes: 'Compound Interest',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'free online Compound Interest Calculator',
+      'fixed-rate compound interest',
+      'total contributions, and total interest',
+      'Does it include taxes, fees, inflation, or market risk?',
+      'not investment advice or a guarantee of returns',
+    ],
+    bodyMustNotInclude: [
+      'Visual charts help you understand',
+      'guaranteed returns',
+      'retirement advice',
+    ],
+  },
+];
+
 const checks: RenderedSeoCheck[] = [
   {
     name: 'English homepage',
@@ -1475,6 +1885,7 @@ const checks: RenderedSeoCheck[] = [
   ...popularEnglishDepthRecoveryChecks,
   ...longTailToolSupportDepthChecks,
   ...visibleLocalizedCtrRecoveryChecks,
+  ...gscLossRenderedChecks,
   {
     name: 'Creator SEO tool cluster backlink',
     path: '/en/tools/youtube-tags-generator/',
@@ -1946,9 +2357,9 @@ const checks: RenderedSeoCheck[] = [
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     sourceRenderedOnly: true,
     bodyMustInclude: [
-      'The Gantt Chart Maker helps teams turn a short task list into a visual project timeline',
+      'The Gantt Chart Maker is a free online Gantt chart maker',
       'it does not calculate dependencies',
-      'Download the finished chart as PNG or SVG',
+      'Download the finished Gantt chart as PNG or SVG',
     ],
     bodyMustNotInclude: [
       'manage dependencies',
@@ -2661,7 +3072,13 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'IBAN Validator',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     sourceRenderedOnly: true,
-    bodyMustInclude: ['IBAN Validator checks International Bank Account Numbers in the browser'],
+    bodyMustInclude: [
+      'free online IBAN checker',
+      'ISO 7064 MOD-97 checksum',
+      'does not contact banks',
+      'What does the IBAN Validator check?',
+      'Valid IBANs are formatted in groups of four characters',
+    ],
     bodyMustNotInclude: [
       'Supports all European countries',
       'show bank code',
@@ -2703,7 +3120,7 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'Sitemap Generator',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     sourceRenderedOnly: true,
-    bodyMustInclude: ['The Sitemap Generator creates a simple XML sitemap from the URLs you enter in the browser'],
+    bodyMustInclude: ['free online XML Sitemap Generator creates a simple sitemap.xml file from the URLs you enter in the browser'],
     bodyMustNotInclude: [
       'Scan Website',
       'scanning your website',
@@ -2746,7 +3163,7 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'iCal Parser',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     sourceRenderedOnly: true,
-    bodyMustInclude: ['Timezone identifiers are not expanded into full timezone databases'],
+    bodyMustInclude: ['Timezone identifiers are not expanded through complete timezone rulesets'],
     bodyMustNotInclude: ['full timezone handling'],
   },
   {
@@ -3641,8 +4058,8 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'Compound Interest',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     sourceRenderedOnly: true,
-    bodyMustInclude: ['estimates how an initial balance can grow over a chosen number of years'],
-    bodyMustNotInclude: ['Visual charts help you understand', 'growth chart'],
+    bodyMustInclude: ['estimates fixed-rate compound interest for a starting balance over a chosen number of years'],
+    bodyMustNotInclude: ['Visual charts help you understand', 'growth chart', 'guaranteed returns'],
   },
   {
     name: 'HTML Preview tool page',
@@ -4540,7 +4957,7 @@ function assert(condition: unknown, message: string): void {
 
 function getTagContent(html: string, selector: 'title' | 'description' | 'canonical' | 'robots'): string {
   if (selector === 'title') {
-    return html.match(/<title>(.*?)<\/title>/is)?.[1]?.trim() || '';
+    return html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim() || '';
   }
 
   if (selector === 'description') {
@@ -4638,8 +5055,17 @@ async function validateCheck(check: RenderedSeoCheck): Promise<void> {
 
 async function main(): Promise<void> {
   const failures: string[] = [];
+  const checksToRun = RENDERED_SEO_CHECK_FILTER
+    ? checks.filter((check) => check.name.toLowerCase().includes(RENDERED_SEO_CHECK_FILTER))
+    : checks;
 
-  for (const check of checks) {
+  if (checksToRun.length === 0) {
+    console.log(`No rendered SEO checks matched RENDERED_SEO_CHECK=${process.env.RENDERED_SEO_CHECK}`);
+    process.exitCode = 1;
+    return;
+  }
+
+  for (const check of checksToRun) {
     if (check.sourceRenderedOnly && !INCLUDE_SOURCE_RENDERED_CHECKS) {
       console.log(`SKIP ${check.name} ${check.path} -> source-rendered check not enabled for FETCH_BASE_URL=${FETCH_BASE_URL}`);
       continue;

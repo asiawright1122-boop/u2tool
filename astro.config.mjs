@@ -25,6 +25,20 @@ function healWranglerFiles() {
     });
     fs.writeFileSync(deployConfigPath, deployConfigContent, 'utf8');
 
+    // Create wrangler state directories to prevent "Directory named 'cache:storage' not found" and other state store ENOENTs
+    const stateDirs = [
+      path.join(projectRoot, '.wrangler', 'state', 'v3', 'cache'),
+      path.join(projectRoot, '.wrangler', 'state', 'v3', 'kv'),
+      path.join(projectRoot, '.wrangler', 'state', 'v3', 'd1'),
+      path.join(projectRoot, '.wrangler', 'state', 'v3', 'r2'),
+      path.join(projectRoot, '.wrangler', 'state', 'v3', 'do')
+    ];
+    for (const dir of stateDirs) {
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+    }
+
     // Also heal the expected wrangler.json in build output targets
     const wranglerJsoncPath = path.join(projectRoot, 'wrangler.jsonc');
     let parsedWrangler = {
@@ -56,11 +70,21 @@ function healWranglerFiles() {
     if (!fs.existsSync(mainEntryPath)) {
       fs.writeFileSync(mainEntryPath, 'export default {};', 'utf8');
     }
-    fs.writeFileSync(path.join(distServerDir, 'wrangler.json'), JSON.stringify(parsedWrangler), 'utf8');
+
+    // Only write target wrangler.json if it is missing
+    const mainWranglerPath = path.join(distServerDir, 'wrangler.json');
+    if (!fs.existsSync(mainWranglerPath)) {
+      fs.writeFileSync(mainWranglerPath, JSON.stringify(parsedWrangler), 'utf8');
+    }
 
     const prerenderDir = path.join(distServerDir, '.prerender');
     if (!fs.existsSync(prerenderDir)) {
       fs.mkdirSync(prerenderDir, { recursive: true });
+    }
+
+    const prerenderChunksDir = path.join(prerenderDir, 'chunks');
+    if (!fs.existsSync(prerenderChunksDir)) {
+      fs.mkdirSync(prerenderChunksDir, { recursive: true });
     }
 
     // Ensure placeholder entry.mjs exists for prerender as well
@@ -69,11 +93,27 @@ function healWranglerFiles() {
       fs.writeFileSync(prerenderEntryPath, 'export default {};', 'utf8');
     }
 
-    const prerenderWrangler = {
-      ...parsedWrangler,
-      name: (parsedWrangler.name || "u2tool") + "-prerender"
-    };
-    fs.writeFileSync(path.join(prerenderDir, 'wrangler.json'), JSON.stringify(prerenderWrangler), 'utf8');
+    const prerenderWranglerPath = path.join(prerenderDir, 'wrangler.json');
+    if (!fs.existsSync(prerenderWranglerPath)) {
+      const prerenderWrangler = {
+        ...parsedWrangler,
+        name: (parsedWrangler.name || "u2tool") + "-prerender"
+      };
+      fs.writeFileSync(prerenderWranglerPath, JSON.stringify(prerenderWrangler), 'utf8');
+    } else {
+      // If it already exists, only patch the name to prevent collision, keeping the genuine main entry point
+      try {
+        const content = fs.readFileSync(prerenderWranglerPath, 'utf8');
+        const json = JSON.parse(content);
+        const suffix = "-prerender";
+        if (json.name && !json.name.endsWith(suffix)) {
+          json.name = json.name + suffix;
+          fs.writeFileSync(prerenderWranglerPath, JSON.stringify(json), 'utf8');
+        }
+      } catch (e) {
+        // Silence parse errors
+      }
+    }
   } catch (e) {
     // Silence filesystem errors during setup
   }
@@ -88,6 +128,35 @@ function healWranglerVitePlugin() {
     enforce: 'pre',
     config() {
       healWranglerFiles();
+    },
+    buildStart() {
+      healWranglerFiles();
+    },
+    generateBundle() {
+      healWranglerFiles();
+    },
+    writeBundle() {
+      healWranglerFiles();
+    }
+  };
+}
+
+function fixPrerenderUrlVitePlugin() {
+  return {
+    name: 'fix-prerender-url-vite-plugin',
+    enforce: 'pre',
+    transform(code, id) {
+      if (code.includes('deserializeManifest') || code.includes('serializedManifest.rootDir')) {
+        const fixedCode = code.replace(
+          /new\s+URL\(\s*serializedManifest\.rootDir\s*\)/g,
+          "new URL(serializedManifest.rootDir.startsWith('file:') ? 'http://localhost' : serializedManifest.rootDir)"
+        );
+        return {
+          code: fixedCode,
+          map: null
+        };
+      }
+      return null;
     }
   };
 }
@@ -122,6 +191,12 @@ function copyMessageAssetsIntegration() {
   return {
     name: 'copy-message-assets',
     hooks: {
+      'astro:build:setup': () => {
+        healWranglerFiles();
+      },
+      'astro:build:start': () => {
+        healWranglerFiles();
+      },
       'astro:build:done': async ({ dir, logger }) => {
         const targetDir = new URL('./messages/', dir);
 
@@ -152,7 +227,7 @@ export default defineConfig({
   ],
 
   vite: {
-    plugins: [healWranglerVitePlugin(), tailwindcss()],
+    plugins: [healWranglerVitePlugin(), fixPrerenderUrlVitePlugin(), tailwindcss()],
     define: {
       __U2TOOL_HTML_CACHE_VERSION__: JSON.stringify(getHtmlCacheVersion()),
     },

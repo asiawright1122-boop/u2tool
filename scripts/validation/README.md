@@ -21,6 +21,8 @@ does, or is deliberately archived under `_deprecated/`.
 | `validate-internal-link-canonicals.ts` | `validate:internal-link-canonicals` |
 | `validate-search-engine-compliance.ts` | `validate:search-engine-compliance` |
 | `validate-runtime-placeholder-regressions.ts` | `validate:runtime-placeholder-regressions` |
+| `validate-front-end-safety.ts` | `validate:front-end-safety` |
+| `validate-gsc-loss-metadata.ts` | `validate:gsc-loss-metadata` |
 | `validate-tool-svg-rendering.ts` | `validate:tool-svg-rendering` |
 | `validate-sitemap-url-health.ts` | `validate:sitemap-url-health` |
 | `content-trust-audit.mjs` | `report:content-trust` |
@@ -55,3 +57,10 @@ back into the parent directory if you need to revive one. See
 - `report:*` scripts emit reports under `docs/` or `/tmp/` for manual review.
 - New gates should be added here and wired through `package.json` first; otherwise
   they end up in `_deprecated/` after the next stocktake.
+
+## Rendered SEO Debugging
+
+`validate-rendered-seo.ts` accepts `RENDERED_SEO_CHECK=<name fragment>` to run a
+subset of checks while debugging a single recovery page. Defaults stay full
+coverage. Source-rendered checks run automatically for localhost targets, or
+when `INCLUDE_SOURCE_RENDERED_CHECKS=1` is set.
