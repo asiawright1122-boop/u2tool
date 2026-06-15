@@ -16,37 +16,82 @@ interface LossMetadataIssue {
   message: string;
 }
 
+const locales = ['en', 'zh', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'];
+
+const fileSizeTerms: Record<string, string[]> = {
+  en: ['size', 'calculator'],
+  zh: ['大小', '计算器'],
+  ja: ['サイズ', '計算'],
+  ko: ['크기', '계산'],
+  es: ['tamaño', 'calculadora'],
+  pt: ['tamanho', 'calculadora'],
+  fr: ['taille', 'calculateur', 'Ko', 'Mo', 'Go'],
+  de: ['größe', 'rechner'],
+  ru: ['размер', 'калькулятор'],
+  ar: ['حجم', 'حاسبة'],
+};
+
+const hexEditorTerms: Record<string, string[]> = {
+  en: ['hex', 'editor'],
+  zh: ['十六进制', '编辑器'],
+  ja: ['16進', 'エディタ'],
+  ko: ['16진수', '에디터'],
+  es: ['hexadecimal', 'editor'],
+  pt: ['hexadecimal', 'editor'],
+  fr: ['hexadécimal', 'éditeur'],
+  de: ['hex', 'editor'],
+  ru: ['hex', 'редактор', 'текст'],
+  ar: ['سداسي', 'محرر'],
+};
+
+const wordCounterTerms: Record<string, string[]> = {
+  en: ['word', 'counter'],
+  zh: ['字数', '统计'],
+  ja: ['文字', 'カウント'],
+  ko: ['글자', '수'],
+  es: ['palabras', 'contador', 'caracteres'],
+  pt: ['palavras', 'contador'],
+  fr: ['mots', 'compteur'],
+  de: ['wörter', 'zähler'],
+  ru: ['слов', 'счетчик'],
+  ar: ['كلمات', 'عداد'],
+};
+
 const CHECKS: LossMetadataCheck[] = [
-  {
-    locale: 'ru',
-    slug: 'hex-editor',
-    requiredTerms: ['hex', 'текст'],
-    forbiddenFragments: [
-      'Бесплатный онлайн-инструмент',
-      'прямо в браузере прямо в вашем браузере',
-      'без скачивания и регистрации',
-    ],
-  },
-  {
-    locale: 'en',
-    slug: 'hex-editor',
-    requiredTerms: ['hex', 'text'],
-  },
-  {
-    locale: 'fr',
+  // 1. file-size-calculator (10 locales)
+  ...locales.map(locale => ({
+    locale,
     slug: 'file-size-calculator',
-    requiredTerms: ['Ko', 'Mo', 'Go'],
-  },
+    requiredTerms: fileSizeTerms[locale] || [],
+  })),
+
+  // 2. hex-editor (10 locales)
+  ...locales.map(locale => ({
+    locale,
+    slug: 'hex-editor',
+    requiredTerms: hexEditorTerms[locale] || [],
+    ...(locale === 'ru' ? {
+      forbiddenFragments: [
+        'Бесплатный онлайн-инструмент',
+        'прямо в браузере прямо в вашем браузере',
+        'без скачивания и регистрации',
+      ]
+    } : {}),
+  })),
+
+  // 3. word-counter (10 locales)
+  ...locales.map(locale => ({
+    locale,
+    slug: 'word-counter',
+    requiredTerms: wordCounterTerms[locale] || [],
+  })),
+
+  // 4. other individual checks
   {
     locale: 'en',
     slug: 'morse-code-player',
     requiredTerms: ['Morse', 'audio'],
     forbiddenFragments: ['....'],
-  },
-  {
-    locale: 'es',
-    slug: 'word-counter',
-    requiredTerms: ['palabras', 'caracteres'],
   },
   {
     locale: 'en',

@@ -28,6 +28,8 @@
     reset: 'Reset',
     empty: 'Enter a network name to generate a WiFi QR code.',
     localNote: 'Generated locally. Passwords are not uploaded.',
+    ssidPlaceholder: 'Guest WiFi',
+    passwordPlaceholder: 'welcome-2026',
   };
 
   let ssid = $state('Guest WiFi');
@@ -134,7 +136,7 @@
         type="text"
         bind:value={ssid}
         autocomplete="off"
-        placeholder="Guest WiFi"
+        placeholder={COPY.ssidPlaceholder}
       />
     </div>
 
@@ -147,7 +149,7 @@
         bind:value={password}
         autocomplete="off"
         disabled={encryption === 'nopass'}
-        placeholder="welcome-2026"
+        placeholder={COPY.passwordPlaceholder}
       />
     </div>
 

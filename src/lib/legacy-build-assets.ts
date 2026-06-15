@@ -14,7 +14,8 @@ const LEGACY_BUILD_ASSET_GONE_HEADERS = {
 } as const;
 
 export function isLegacyBuildAssetPath(pathname: string): boolean {
-  return LEGACY_BUILD_ASSET_PREFIXES.some((prefix) => pathname.startsWith(prefix));
+  const normalizedPath = pathname.replace(/^\/[a-z]{2}(?=\/)/, '');
+  return LEGACY_BUILD_ASSET_PREFIXES.some((prefix) => normalizedPath.startsWith(prefix));
 }
 
 export function isLegacyBuildAssetRequest(request: Request): boolean {

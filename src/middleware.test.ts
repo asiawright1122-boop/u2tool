@@ -174,6 +174,19 @@ describe('html edge cache middleware', () => {
     expect(next).not.toHaveBeenCalled();
   });
 
+  it('returns gone for stale Next.js build assets with locale prefix before route handling', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+    const { response, text } = await runMiddleware(
+      new Request('https://www.u2tool.com/zh/_next/static/chunks/8182cba999306f4b.js?dpl=old'),
+      next
+    );
+
+    expect(response.status).toBe(410);
+    expect(response.headers.get('x-robots-tag')).toBe('noindex, nofollow');
+    expect(text).toBe('Gone');
+    expect(next).not.toHaveBeenCalled();
+  });
+
   it('returns an empty gone response for HEAD requests to stale build assets', async () => {
     const next = vi.fn(async () => new Response('should not run'));
     const { response, text } = await runMiddleware(

@@ -29,7 +29,8 @@
       monthsLabel: '个月',
       copied: '✓ 已复制!',
       copyResult: '复制结果',
-      disclaimer: '仅供参考。还款模拟未考虑各家银行罚息、复利周期和其它违约条款，实际请以银行对账单为准。'
+      disclaimer: '仅供参考。还款模拟未考虑各家银行罚息、复利周期和其它违约条款，实际请以银行对账单为准。',
+      apy: '利率 %'
     },
     en: {
       title: 'Debt Snowball & Avalanche Calculator',
@@ -53,7 +54,8 @@
       monthsLabel: 'months',
       copied: '✓ Copied!',
       copyResult: 'Copy Result',
-      disclaimer: 'For informational purposes only. Calculation does not account for compounding details or penalties.'
+      disclaimer: 'For informational purposes only. Calculation does not account for compounding details or penalties.',
+      apy: 'APY %'
     },
     es: {
       title: 'Calculadora de Bola de Nieve y Avalancha de Deudas',
@@ -77,7 +79,8 @@
       monthsLabel: 'meses',
       copied: '✓ ¡Copiado!',
       copyResult: 'Copiar Resultado',
-      disclaimer: 'Solo para fines informativos. La simulación puede no considerar todas las penalizaciones.'
+      disclaimer: 'Solo para fines informativos. La simulación puede no considerar todas las penalizaciones.',
+      apy: 'Tasa %'
     },
     pt: {
       title: 'Calculadora de Bola de Neve e Avalanche de Dívidas',
@@ -101,7 +104,8 @@
       monthsLabel: 'meses',
       copied: '✓ Copiado!',
       copyResult: 'Copiar Resultado',
-      disclaimer: 'Apenas para fins informativos. A simulação pode variar de acordo com as taxas reais.'
+      disclaimer: 'Apenas para fins informativos. A simulação pode variar de acordo com as taxas reais.',
+      apy: 'Taxa %'
     },
     ja: {
       title: '債務返済シミュレーター (雪だるま式 vs アバランチ式)',
@@ -125,7 +129,8 @@
       monthsLabel: 'ヶ月',
       copied: '✓ コピーしました!',
       copyResult: '結果をコピー',
-      disclaimer: '情報提供のみを目的としています。実際の返済は各金融機関の約定に基づきます。'
+      disclaimer: '情報提供のみを目的としています。実際の返済は各金融機関の約定に基づきます。',
+      apy: '金利 %'
     },
     fr: {
       title: 'Calculateur de Remboursement de Dettes',
@@ -149,7 +154,8 @@
       monthsLabel: 'mois',
       copied: '✓ Copié !',
       copyResult: 'Copier le Résultat',
-      disclaimer: 'À titre informatif uniquement. Les calculs ne tiennent pas compte de toutes les pénalités.'
+      disclaimer: 'À titre informatif uniquement. Les calculs ne tiennent pas compte de toutes les pénalités.',
+      apy: 'Taux %'
     },
     de: {
       title: 'Schuldenschneeball- & Lawinenrechner',
@@ -173,7 +179,8 @@
       monthsLabel: 'Monate',
       copied: '✓ Kopiert!',
       copyResult: 'Ergebnis kopieren',
-      disclaimer: 'Nur zu Informationszwecken. Zinseszinsen oder Strafgebühren werden nicht voll abgebildet.'
+      disclaimer: 'Nur zu Informationszwecken. Zinseszinsen oder Strafgebühren werden nicht voll abgebildet.',
+      apy: 'Zins %'
     },
     ar: {
       title: 'حاسبة كرة الثلج والانهيار لسداد الديون',
@@ -197,7 +204,8 @@
       monthsLabel: 'أشهر',
       copied: '✓ تم النسخ!',
       copyResult: 'نسخ النتيجة',
-      disclaimer: 'لأغراض إعلامية فقط. قد لا تشمل التوقعات كافة الغرامات أو جداول تراكم الفوائد.'
+      disclaimer: 'لأغراض إعلامية فقط. قد لا تشمل التوقعات كافة الغرامات أو جداول تراكم الفوائد.',
+      apy: 'الفائدة %'
     },
     ko: {
       title: '빚 탕감 계획 계산기 (눈굴리기 vs 산사태)',
@@ -221,7 +229,8 @@
       monthsLabel: '개월',
       copied: '✓ 복사됨!',
       copyResult: '결과 복사',
-      disclaimer: '단순 참고용입니다. 연체 이자율이나 은행별 상환 수수료 조건은 고려하지 않은 모의 예측치입니다.'
+      disclaimer: '단순 참고용입니다. 연체 이자율이나 은행별 상환 수수료 조건은 고려하지 않은 모의 예측치입니다.',
+      apy: '이율 %'
     },
     ru: {
       title: 'Долговой калькулятор (Снежный ком vs Лавина)',
@@ -245,7 +254,8 @@
       monthsLabel: 'месяцев',
       copied: '✓ Скопировано!',
       copyResult: 'Скопировать результат',
-      disclaimer: 'Только для ознакомления. Симуляция может не учитывать все пени или особенности начисления.'
+      disclaimer: 'Только для ознакомления. Симуляция может не учитывать все пени или особенности начисления.',
+      apy: 'Ставка %'
     }
   };
 
@@ -449,21 +459,21 @@
         {#each debts as debt (debt.id)}
           <div class="grid grid-cols-12 gap-2 bg-stone-900/50 p-2.5 rounded-xl border border-stone-800/80 items-center">
             <div class="col-span-3">
-              <input type="text" bind:value={debt.name} placeholder="Debt name"
+              <input type="text" bind:value={debt.name} placeholder={l.debtName}
                 class="w-full bg-stone-900 border border-stone-800 rounded-lg px-2 py-1 text-xs text-stone-100 focus:border-amber-500 focus:outline-none" />
             </div>
             <div class="col-span-3 relative">
               <span class="absolute left-1.5 top-1.5 text-stone-600 text-[10px]">{sym}</span>
-              <input type="number" bind:value={debt.balance} placeholder="Balance" min="0"
+              <input type="number" bind:value={debt.balance} placeholder={l.balance} min="0"
                 class="w-full bg-stone-900 border border-stone-800 rounded-lg pl-5 pr-1 py-1 text-xs text-stone-100 focus:border-amber-500 focus:outline-none" />
             </div>
             <div class="col-span-2">
-              <input type="number" bind:value={debt.rate} placeholder="APY%" min="0" max="100" step="0.1"
+              <input type="number" bind:value={debt.rate} placeholder={l.apy} min="0" max="100" step="0.1"
                 class="w-full bg-stone-900 border border-stone-800 rounded-lg px-1.5 py-1 text-xs text-stone-100 focus:border-amber-500 focus:outline-none text-center" />
             </div>
             <div class="col-span-3 relative">
               <span class="absolute left-1.5 top-1.5 text-stone-600 text-[10px]">{sym}</span>
-              <input type="number" bind:value={debt.minPay} placeholder="Min payment" min="0"
+              <input type="number" bind:value={debt.minPay} placeholder={l.minPayment} min="0"
                 class="w-full bg-stone-900 border border-stone-800 rounded-lg pl-5 pr-1 py-1 text-xs text-stone-100 focus:border-amber-500 focus:outline-none" />
             </div>
             <div class="col-span-1 text-center">

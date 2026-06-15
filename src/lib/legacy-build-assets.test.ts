@@ -8,7 +8,9 @@ import {
 describe('legacy build asset responses', () => {
   it('detects old build asset prefixes only', () => {
     expect(isLegacyBuildAssetPath('/_next/static/chunks/old.js')).toBe(true);
+    expect(isLegacyBuildAssetPath('/zh/_next/static/chunks/old.js')).toBe(true);
     expect(isLegacyBuildAssetPath('/dist/old.js')).toBe(true);
+    expect(isLegacyBuildAssetPath('/de/dist/old.js')).toBe(true);
     expect(isLegacyBuildAssetPath('/_astro/current.css')).toBe(false);
   });
 

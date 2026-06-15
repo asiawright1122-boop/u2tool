@@ -154,19 +154,33 @@ async function readJsonFromAsset(
     return null;
   }
 
-  try {
-    const response = await fetch(url, {
-      headers: { Accept: 'application/json' },
-    });
+  const maxRetries = 4;
+  let delay = 150;
 
-    if (!response.ok) {
-      return null;
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      const response = await fetch(url, {
+        headers: { Accept: 'application/json' },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        return data as MessagesRecord;
+      }
+
+      console.warn(`[DEBUG] fetch not ok status=${response.status} url=${url.toString()} (attempt ${attempt}/${maxRetries})`);
+    } catch (err: any) {
+      console.warn(`[DEBUG] fetch error url=${url.toString()} error=${err?.message || err} (attempt ${attempt}/${maxRetries})`);
     }
 
-    return (await response.json()) as MessagesRecord;
-  } catch {
-    return null;
+    if (attempt < maxRetries) {
+      await new Promise((resolve) => setTimeout(resolve, delay));
+      delay *= 2;
+    }
   }
+
+  console.error(`[DEBUG] fetch failed permanently url=${url.toString()}`);
+  return null;
 }
 
 async function loadMessagesFile(
