@@ -50,6 +50,29 @@
   Audit: [.planning/milestones/v0.0.13-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-MILESTONE-AUDIT.md)
   Status: Shipped on 2026-06-09. Converted all remaining high-traffic `PopularUtilityTool` placeholders to real Svelte 5 components across Finance, Developer/Security, Content Generators, Social/Media, Lifestyle, Image, and Converter clusters. Added category-level authority content for English `finance`, `generators`, and `lifestyle`, preserved the no-internal-reasoning frontend safety rule, and closed on green build, runtime, SEO, placeholder, and frontend-safety gates.
 
-## Active Milestone
+## Active Milestone: v0.0.15 — Technical SEO Redirection Governance & Root Route Normalization
 
-- [ ] None. (Milestone v0.0.14 complete. Ready to plan next milestone.)
+**Goal:** Eliminate Google double-indexing issues and GSC redirect warnings by enforcing canonical 301 redirects from the root route `/` to the default language prefix `/en/` while guarding against redirection loops for system/build-level subrequests.
+
+**Phase numbering continues from v0.0.14 (last phase: 56):**
+
+### Phase 57: Root Route Redirection & Loopback Guard
+**Goal:** Implement the canonical 301 redirection from `/` to `/en/` preserving query parameters, adding safety loopback guards for system requests, and integrating with `_routes.json`.
+**Requirements:** RED-01, RED-02, RED-03, RED-04
+
+- [ ] Phase 57: Root Route Redirection & Loopback Guard
+  - [ ] 57-01: Implement a canonical 301 redirect from the root path `/` to `/en/` inside edge middleware.
+  - [ ] 57-02: Preserve all URL query parameters (UTM tracking codes, etc.) during redirection.
+  - [ ] 57-03: Implement a loopback safety guard (headers: `cf-worker`, `x-worker-loopback`, User-Agent) to bypass redirection.
+  - [ ] 57-04: Update `public/_routes.json` to explicitly include `"/"` to ensure edge middleware intercepts root requests in Cloudflare Pages.
+
+### Phase 58: Technical SEO Validation & E2E Testing
+**Goal:** Extend test suites and validation scripts to verify redirection status code (301) and loopback bypass behavior.
+**Requirements:** RED-05
+
+- [ ] Phase 58: Technical SEO Validation & E2E Testing
+  - [ ] 58-01: Add E2E smoke test cases for root route 301 redirection and query parameters preservation.
+  - [ ] 58-02: Add E2E test cases for loopback safety guard bypass behavior.
+  - [ ] 58-03: Run complete technical SEO validation test suite locally and verify redirection.
+
+**Requirements:** [`.planning/REQUIREMENTS.md`](/Users/kaka/Dev/u2tool/.planning/REQUIREMENTS.md)

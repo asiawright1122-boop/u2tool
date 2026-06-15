@@ -35,8 +35,8 @@ Eliminate Google double-indexing issues and GSC redirect warnings by enforcing c
 
 | Requirement ID | Description | Assigned Phase | Status | Plan/Summary Evidence |
 |---|---|---|---|---|
-| RED-01 | Root route 301 redirect | | | |
-| RED-02 | UTM parameters preservation | | | |
-| RED-03 | Loopback safety guard | | | |
-| RED-04 | _routes.json integration | | | |
-| RED-05 | Test suites and E2E validation | | | |
+| RED-01 | Root route 301 redirect | Phase 57 | | |
+| RED-02 | UTM parameters preservation | Phase 57 | | |
+| RED-03 | Loopback safety guard | Phase 57 | | |
+| RED-04 | _routes.json integration | Phase 57 | | |
+| RED-05 | Test suites and E2E validation | Phase 58 | | | |
