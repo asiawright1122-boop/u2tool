@@ -18,11 +18,11 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 
 ## Current Status
 
-**Current milestone:** `v0.0.14 Production Release and GSC Recovery Measurement`
-**Latest completed milestone:** `v0.0.13 Popular Tool Flagship Conversion Wave`
-**Latest archived milestone:** `v0.0.13 Popular Tool Flagship Conversion Wave`
-**Previous archived milestone:** `v0.0.12 Growth Acceleration and High-Performance Tool Expansion`
-**Current planning state:** v0.0.14 is open. Phase 54 release/live verification, Phase 55 GSC cohort planning, and the Phase 56 measurement structure are complete; next work needs post-release GSC exports.
+**Current milestone:** `v0.0.15 Multi-Locale TDK Integrity & Technical SEO Redirection Governance`
+**Latest completed milestone:** `v0.0.14 Production Release and GSC Recovery Measurement`
+**Latest archived milestone:** `v0.0.14 Production Release and GSC Recovery Measurement`
+**Previous archived milestone:** `v0.0.13 Popular Tool Flagship Conversion Wave`
+**Current planning state:** v0.0.15 TDK integrity validation script and technical SEO middleware redirections are successfully implemented, integrated, and verified locally. v0.0.14 release measurement checkpoints wait on GSC export availability.
 
 **Latest completed outcomes:**
 - Converted the remaining high-traffic `PopularUtilityTool` catalog placeholders into real Svelte 5 components across finance, developer/security, generator, social/media, lifestyle, image, and converter clusters.
@@ -103,6 +103,7 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 - ✓ Resolved CI crawler deadlocks with AbortController timeout protection on internal sitemap validation — v0.0.11.
 - ✓ Align and define v0.0.12 requirements for performance tuning, SEO restoration, and tool growth. — v0.0.12
 - ✓ Converted remaining popular placeholder tools, added activated-category authority content, and closed traffic-recovery validation gates — v0.0.13
+- ✓ Implemented strict multi-locale TDK integrity scanner gate and universal trailing slash HTML routing rules inside middleware — v0.0.15
 
 ### Active
 
@@ -174,7 +175,17 @@ This is a brownfield repository with a very large content surface, heavy localiz
 
 The current baseline now includes promoted discovery ordering, stable comparison surfaces, AI/GEO exports, category authority support content, runtime-placeholder governance, rendered SEO checks, and a canonical production gate that reflects real Cloudflare server-build output. v0.0.13 closed the highest visible gap in that baseline by converting the remaining popular placeholder pages into real Svelte 5 tool workflows and adding authority/support content for the newly activated English finance, generator, and lifestyle clusters.
 
-## Current Milestone: v0.0.14 Production Release and GSC Recovery Measurement
+## Current Milestone: v0.0.15 Multi-Locale TDK Integrity & Technical SEO Redirection Governance
+
+**Goal:** Refine multi-locale metadata scanning and edge redirection handling to prevent indexing degradation and resolve search anomalies.
+
+**Delivered features:**
+- Corrected the TDK integrity namespace lookup path to `.tools`, removing 4,224 false-positives and enforcing zero hard errors.
+- Established strict TDK validation gates: exit code 1 for missing keys/empty values/forbidden placeholders; soft warnings for character bounds.
+- Enabled universal trailing slash 301 redirection rules for non-file HTML routes in middleware.
+- Validated stale Next.js chunk mitigation (`410 Gone` with strict noindex tags).
+
+## Most Recent Milestone: v0.0.14 Production Release and GSC Recovery Measurement
 
 **Goal:** Recover organic traffic by safely deploying the completed recovery work, verifying live production pages, and measuring repaired cohorts in Google Search Console.
 
@@ -189,7 +200,7 @@ The current baseline now includes promoted discovery ordering, stable comparison
 - Fill 7-day, 14-day, and 28-day GSC recovery measurement checkpoints when post-release exports are available.
 - Run the checkpoint comparator for each export window and record the resulting report.
 
-## Most Recent Milestone: v0.0.13 Popular Tool Flagship Conversion Wave
+## Earlier Milestone: v0.0.13 Popular Tool Flagship Conversion Wave
 
 **Goal:** Convert the remaining high-traffic `PopularUtilityTool` placeholder tools into real Svelte 5 components with complete locale support and green release gates.
 
@@ -199,20 +210,5 @@ The current baseline now includes promoted discovery ordering, stable comparison
 - Preserved GSC loss metadata, rendered SEO, runtime-placeholder, runtime-integrity, and frontend-safety validation around the recovery wave.
 - Closed with green build, check, runtime, SEO, placeholder-regression, and no-internal-reasoning frontend safety evidence.
 
-## Earlier Milestone: v0.0.12 Growth Acceleration and High-Performance Tool Expansion
-
-**Goal:** Accelerate user entry performance via SmartLink prefetching and split translation loading, restore canonical SEO compliance, and ship 4 Svelte 5 office productivity tools.
-
-**Delivered features:**
-- Implemented `SmartLink` component with hover prefetching and Network Information API connection guards.
-- Split tool-specific translations into dynamically loaded modules to reduce core-bundle weight and avoid Cloudflare loopback constraints.
-- Enforced query-route robots safeguards to avoid duplicate search indexing.
-- Shipped Invoice Generator, Resume Builder, Signature Pad, and Pomodoro Timer with 10-locale translation coverage.
-
-## Future Milestone Goals
-
-- Ensure strict multi-locale TDK character validation remains a hard barrier for any new flagship components.
-- Progressively deprecate the old static routing constraints once SSR SEO benefits are proven.
-
 ---
-*Last updated: 2026-06-09 after opening Milestone v0.0.14*
+*Last updated: 2026-06-15 after completing Milestone v0.0.15*

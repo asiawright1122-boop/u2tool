@@ -227,10 +227,7 @@ function resolveCanonicalRedirect(request: Request): string | null {
     normalizedPath !== '/'
     && !url.pathname.endsWith('/')
     && !isFileLikePath(url.pathname)
-    && (
-      isValidLocale(first)
-      || LEGACY_UNLOCALIZED_SECTIONS.has(first || '')
-    )
+    && !first?.startsWith('_')
   ) {
     return withSlashAndSearch(url.pathname, url.search);
   }
