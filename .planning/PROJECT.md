@@ -18,11 +18,11 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 
 ## Current Status
 
-**Current milestone:** `v0.0.15 Multi-Locale TDK Integrity & Technical SEO Redirection Governance`
+**Current milestone:** `v0.0.15 Technical SEO Redirection Governance & Root Route Normalization`
 **Latest completed milestone:** `v0.0.14 Production Release and GSC Recovery Measurement`
 **Latest archived milestone:** `v0.0.14 Production Release and GSC Recovery Measurement`
 **Previous archived milestone:** `v0.0.13 Popular Tool Flagship Conversion Wave`
-**Current planning state:** Milestone v0.0.14 has been fully audited and archived. v0.0.15 technical SEO integrations are validated; next work is to draft the formal requirements and roadmap for the next wave of SEO visibility improvements.
+**Current planning state:** Milestone v0.0.14 has been archived. v0.0.15 is initialized. Defining requirements and roadmap for root route redirection and loopback safety governance.
 
 **Latest completed outcomes:**
 - Converted the remaining high-traffic `PopularUtilityTool` catalog placeholders into real Svelte 5 components across finance, developer/security, generator, social/media, lifestyle, image, and converter clusters.
@@ -103,11 +103,14 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 - ✓ Resolved CI crawler deadlocks with AbortController timeout protection on internal sitemap validation — v0.0.11.
 - ✓ Align and define v0.0.12 requirements for performance tuning, SEO restoration, and tool growth. — v0.0.12
 - ✓ Converted remaining popular placeholder tools, added activated-category authority content, and closed traffic-recovery validation gates — v0.0.13
-- ✓ Implemented strict multi-locale TDK integrity scanner gate and universal trailing slash HTML routing rules inside middleware — v0.0.15
+- ✓ Executed v0.0.14 production release, E2E smoke tests, GSC cohort planning, and weekly performance measurement report — v0.0.14
+- ✓ Implemented strict multi-locale TDK integrity scanner gate and universal trailing slash HTML routing rules inside middleware — v0.0.14
 
 ### Active
 
-- [ ] Execute v0.0.14 GSC recovery measurement after safe release, live verification, and cohort planning.
+- [ ] **R1** - Implement a canonical 301 redirect from the root path `/` to the default language prefixed path `/en/` inside edge middleware.
+- [ ] **R2** - Guard against redirect loops for system-level calls (e.g., favicon, API paths, and internal Cloudflare Worker loopbacks).
+- [ ] **R3** - Expand the automated technical SEO verification scripts and E2E smoke tests to validate the root route redirect.
 
 ### Out of Scope
 
