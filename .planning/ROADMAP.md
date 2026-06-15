@@ -2,6 +2,12 @@
 
 ## Archived Milestones
 
+- [x] v0.0.14 Production Release and GSC Recovery Measurement
+  Archive: [.planning/milestones/v0.0.14-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.14-ROADMAP.md)
+  Requirements: [.planning/milestones/v0.0.14-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.14-REQUIREMENTS.md)
+  Audit: [.planning/v0.0.14-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.14-MILESTONE-AUDIT.md)
+  Status: Shipped on 2026-06-15. Released recovery slice through PR #25, verified live category support copy, ran spot checks for Cohort A/B on June 12, resolved Wrangler high-concurrency connection drops via loopback retry client, and aligned 10-locale intent TDK.
+
 - [x] v0.0.12 Growth Acceleration and High-Performance Tool Expansion
   Archive: [.planning/milestones/v0.0.12-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-ROADMAP.md)
   Requirements: [.planning/milestones/v0.0.12-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-REQUIREMENTS.md)
@@ -46,7 +52,4 @@
 
 ## Active Milestone
 
-- [ ] v0.0.14 Production Release and GSC Recovery Measurement
-  Roadmap: [.planning/milestones/v0.0.14-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.14-ROADMAP.md)
-  Requirements: [.planning/milestones/v0.0.14-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.14-REQUIREMENTS.md)
-  Status: Active as of 2026-06-09. Release isolation, clean PR #25, Cloudflare deploy, production route validation, live content checks, final tool URL checks, frontend safety scans, GSC cohort recovery planning, and measurement structure are complete; next work is checkpoint reporting from post-release GSC exports.
+- [ ] None. (Milestone v0.0.14 complete. Ready to plan next milestone.)

@@ -22,7 +22,7 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 **Latest completed milestone:** `v0.0.14 Production Release and GSC Recovery Measurement`
 **Latest archived milestone:** `v0.0.14 Production Release and GSC Recovery Measurement`
 **Previous archived milestone:** `v0.0.13 Popular Tool Flagship Conversion Wave`
-**Current planning state:** v0.0.15 TDK integrity validation script and technical SEO middleware redirections are successfully implemented, integrated, and verified locally. v0.0.14 release measurement checkpoints wait on GSC export availability.
+**Current planning state:** Milestone v0.0.14 has been fully audited and archived. v0.0.15 technical SEO integrations are validated; next work is to draft the formal requirements and roadmap for the next wave of SEO visibility improvements.
 
 **Latest completed outcomes:**
 - Converted the remaining high-traffic `PopularUtilityTool` catalog placeholders into real Svelte 5 components across finance, developer/security, generator, social/media, lifestyle, image, and converter clusters.

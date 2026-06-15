@@ -1,5 +1,24 @@
 # Milestones
 
+## v0.0.14 Production Release and GSC Recovery Measurement (Shipped: 2026-06-15)
+
+**Phases completed:** 4 phases, 12 plans
+
+**Key accomplishments:**
+
+- Safely released the v0.0.13 recovery slice through PR #25 and verified category support copy on live production.
+- Aligned 10-locale intent TDK keywords for core traffic tools (`file-size-calculator`, `hex-editor`, `word-counter`), fixing Arabic translation leaks and Svelte component placeholder debts.
+- Implemented resilient loopback fetch retry logic in translations to bypass Wrangler dev connection drops under high concurrent test runs.
+- Set up Google Search Console monitoring checkpoints, validated Cohort A/B URLs live on June 12, and generated recovery report metrics.
+
+**Archive files:**
+
+- Roadmap: [.planning/milestones/v0.0.14-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.14-ROADMAP.md)
+- Requirements: [.planning/milestones/v0.0.14-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.14-REQUIREMENTS.md)
+- Audit: [.planning/v0.0.14-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.14-MILESTONE-AUDIT.md)
+
+---
+
 ## v0.0.13 Popular Tool Flagship Conversion Wave (Shipped: 2026-06-09)
 
 **Phases completed:** 36 phases, 69 plans, 0 tasks
