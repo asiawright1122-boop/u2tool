@@ -12,6 +12,7 @@ interface HtmlCheck {
   name: string;
   path: string;
   canonicalPath?: string;
+  isNoIndex?: boolean;
   requiredSchema: string[];
   requiredBody: Array<string | RegExp>;
 }
@@ -32,7 +33,7 @@ const htmlChecks: HtmlCheck[] = [
   {
     name: 'Tools search canonical',
     path: '/en/tools/?q=word',
-    canonicalPath: '/en/tools/',
+    isNoIndex: true,
     requiredSchema: ['Organization', 'WebSite', 'CollectionPage'],
     requiredBody: ['Word Counter', 'https://www.u2tool.com/en/tools/word-counter/'],
   },
@@ -195,7 +196,12 @@ async function validateHtml(check: HtmlCheck): Promise<void> {
   assert(title.length >= 10 && title.length <= 70, `${check.name}: title length ${title.length} outside safe range`);
   assert(description.length >= 50 && description.length <= 180, `${check.name}: description length ${description.length} outside safe range`);
   assert(canonical === expectedCanonical, `${check.name}: canonical "${canonical}" does not match "${expectedCanonical}"`);
-  assert(robots.includes('index') && robots.includes('follow') && !robots.includes('noindex'), `${check.name}: robots meta is not indexable`);
+  
+  if (check.isNoIndex) {
+    assert(robots.includes('noindex'), `${check.name}: robots meta should be noindex`);
+  } else {
+    assert(robots.includes('index') && robots.includes('follow') && !robots.includes('noindex'), `${check.name}: robots meta is not indexable`);
+  }
   assert(h1.length > 0, `${check.name}: missing H1`);
 
   const hreflangValues = Array.from(html.matchAll(/hreflang=["']([^"']+)["']/gi)).map((match) => match[1]);

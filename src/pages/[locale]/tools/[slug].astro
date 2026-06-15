@@ -273,12 +273,25 @@ const faqs = supportContentTrust.blockSupportContent || rawFaqs.length === 0
   ? supportContentFallback?.faqs ?? []
   : rawFaqs;
 
-// ---------------------------------------------------------------------------
-// Structured data: HowTo (if usage steps are available)
-// ---------------------------------------------------------------------------
+const howToUseTemplates: Record<string, string> = {
+  ar: 'كيفية استخدام {name}',
+  de: 'Wie man {name} benutzt',
+  en: 'How to use {name}',
+  es: 'Cómo usar {name}',
+  fr: 'Comment utiliser {name}',
+  ja: '{name}の使い方',
+  ko: '{name} 사용 방법',
+  pt: 'Como usar {name}',
+  ru: 'Как использовать {name}',
+  zh: '如何使用 {name}',
+};
+
+const howToUseTemplate = howToUseTemplates[locale] || 'How to use {name}';
+const howToName = howToUseTemplate.replace('{name}', toolName);
+
 const howToData = usageSteps && usageSteps.length > 0
   ? {
-      name: `How to use ${toolName}`,
+      name: howToName,
       description: seoDescription,
       inLanguage: schemaLanguage,
       step: usageSteps.map((step, index) => ({

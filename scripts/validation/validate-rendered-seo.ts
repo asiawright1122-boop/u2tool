@@ -20,6 +20,7 @@ interface RenderedSeoCheck {
   bodyMustInclude?: string[];
   bodyMustNotInclude?: string[];
   sourceRenderedOnly?: boolean;
+  isNoIndex?: boolean;
 }
 
 const requiredSocialMeta = [
@@ -1866,12 +1867,12 @@ const checks: RenderedSeoCheck[] = [
   {
     name: 'English tools search results',
     path: '/en/tools/?q=json',
-    canonicalPath: '/en/tools/',
     titleIncludes: 'Tools',
     descriptionIncludes: 'tools',
     h1Includes: 'Free Online Tools',
     schemaTypes: ['Organization', 'WebSite', 'CollectionPage'],
     bodyMustInclude: ['data-search-results', 'JSON Formatter', 'https://www.u2tool.com/en/tools/json-formatter/'],
+    isNoIndex: true,
   },
   {
     name: 'JSON Formatter tool page',
@@ -3659,7 +3660,7 @@ const checks: RenderedSeoCheck[] = [
     name: 'Spanish Text Spinner recovery content',
     path: '/es/tools/text-spinner/',
     titleIncludes: 'Text Spinner',
-    descriptionIncludes: 'sinonimos',
+    descriptionIncludes: 'sinónimos',
     h1Includes: 'Girador',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     sourceRenderedOnly: true,
@@ -5030,7 +5031,11 @@ async function validateCheck(check: RenderedSeoCheck): Promise<void> {
     assert(h1Text.includes(check.h1Includes), `${check.name}: H1 "${h1Text}" missing "${check.h1Includes}"`);
   }
   assert(canonical === canonicalUrl, `${check.name}: canonical "${canonical}" does not match "${canonicalUrl}"`);
-  assert(robots.includes('index') && robots.includes('follow') && !robots.includes('noindex'), `${check.name}: robots meta is not indexable`);
+  if (check.isNoIndex) {
+    assert(robots.includes('noindex'), `${check.name}: robots meta is expected to be noindex`);
+  } else {
+    assert(robots.includes('index') && robots.includes('follow') && !robots.includes('noindex'), `${check.name}: robots meta is not indexable`);
+  }
   assert((html.match(/rel=["']alternate["']\s+hreflang=/g) || []).length >= 10, `${check.name}: missing hreflang alternates`);
 
   for (const [attributeName, attributeValue] of requiredSocialMeta) {

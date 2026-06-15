@@ -23,7 +23,7 @@ export interface WebsiteSchema {
   url: string;
   description: string;
   inLanguage: string;
-  potentialAction: {
+  potentialAction?: {
     '@type': 'SearchAction';
     target: {
       '@type': 'EntryPoint';
@@ -188,24 +188,30 @@ export function buildOrganizationSchema(
 export function buildWebsiteSchema(
   baseUrl: string,
   locale: Locale,
-  description: string
+  description: string,
+  isHomePage = false
 ): WebsiteSchema {
-  return {
+  const schema: WebsiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'U2Tool',
     url: baseUrl,
     description,
     inLanguage: getHreflang(locale),
-    potentialAction: {
+  };
+
+  if (isHomePage) {
+    schema.potentialAction = {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
         urlTemplate: buildWebsiteSearchUrlTemplate(baseUrl, locale),
       },
       'query-input': 'required name=search_term_string',
-    },
-  };
+    };
+  }
+
+  return schema;
 }
 
 export function getToolsPageSeo(
