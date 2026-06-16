@@ -150,3 +150,23 @@ export function resolveLegacyComparePairFallback(locale: string): string | null 
 export function resolveLegacyUnlocalizedComparePairFallback(): string {
   return withLocale('en', '/compare');
 }
+
+export function isDecommissionedLegacyRoute(pathname: string): boolean {
+  const segments = pathname.replace(/^\/+|\/+$/g, '').split('/').filter(Boolean);
+  if (segments.length === 0) return false;
+
+  const [first, second, third] = segments;
+
+  // Case 1: unlocalized /tools/compare/... or /tools/categories/...
+  if (first === 'tools' && (second === 'compare' || second === 'categories')) {
+    return true;
+  }
+
+  // Case 2: localized /[locale]/tools/compare/... or /[locale]/tools/categories/...
+  if (isValidLocale(first) && second === 'tools' && (third === 'compare' || third === 'categories')) {
+    return true;
+  }
+
+  return false;
+}
+
