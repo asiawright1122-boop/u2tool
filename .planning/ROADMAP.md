@@ -81,11 +81,11 @@
 **Goal:** Extend the validation suite and E2E smoke tests to verify all redirection behaviors, legacy redirects, 410 responses, and robots headers under local preview servers.
 **Requirements:** RED-11
 
-- [ ] Phase 60: Technical SEO Validation & E2E Testing
-  - [ ] 60-01: Implement E2E smoke tests for trailing slash normalization and query parameter preservation.
-  - [ ] 60-02: Add E2E smoke tests verifying decommissioned blog route redirects.
-  - [ ] 60-03: Add E2E tests verifying decommissioned comparison/category paths and stale Next.js assets return `410 Gone` with `noindex, nofollow` headers.
-  - [ ] 60-04: Integrate validation checks into `verify:production` pipeline under preview environments.
+- [x] Phase 60: Technical SEO Validation & E2E Testing
+  - [x] 60-01: Implement E2E smoke tests for trailing slash normalization and query parameter preservation.
+  - [x] 60-02: Add E2E smoke tests verifying decommissioned blog route redirects.
+  - [x] 60-03: Add E2E tests verifying decommissioned comparison/category paths and stale Next.js assets return `410 Gone` with `noindex, nofollow` headers.
+  - [x] 60-04: Integrate validation checks into `verify:production` pipeline under preview environments.
 
 **Success Criteria:**
 - Puppeteer/Playwright E2E smoke tests successfully verify trailing-slash redirects, legacy blog redirects, and `410 Gone` responses.
