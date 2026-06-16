@@ -66,7 +66,7 @@
 
 This milestone focuses on full-scale auditing and governance of SEO and GEO aspects of the U2Tool project. It addresses multi-locale Hreflang, TDK, Sitemap, and JSON-LD defects, prevents reasoning trace and prerender leakage, and establishes edge simulation gates to block flawed releases.
 
-- [ ] **Phase 61: Technical SEO Link Crawling & Normalization** (Requirements: `TSEO-01`, `TSEO-02`)
+- [x] **Phase 61: Technical SEO Link Crawling & Normalization** (Requirements: `TSEO-01`, `TSEO-02`)
   - Description: Implement the trailing slash normalization checker and the multi-locale sitemap link validator to scan the static output of the build, ensuring clean URLs and active links.
   - Success Criteria:
     - Running the build with a non-compliant canonical URL inside static HTML fails the build pipeline with clear file references.
