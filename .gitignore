@@ -37,6 +37,8 @@ scripts/validation/
 scripts/validation/*
 !scripts/validation/validate-front-end-safety.ts
 !scripts/validation/validate-gsc-loss-metadata.ts
+!scripts/validation/validate-robots-txt.ts
+!scripts/validation/validate-decommissioned-routes.ts
 scripts/build-optimization/
 scripts/planning/
 scripts/dependency-audit/
