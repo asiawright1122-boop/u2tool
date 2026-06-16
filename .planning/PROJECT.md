@@ -22,9 +22,10 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 **Latest completed milestone:** `v0.0.14 Production Release and GSC Recovery Measurement`
 **Latest archived milestone:** `v0.0.14 Production Release and GSC Recovery Measurement`
 **Previous archived milestone:** `v0.0.13 Popular Tool Flagship Conversion Wave`
-**Current planning state:** Milestone v0.0.14 has been archived. v0.0.15 is initialized. Defining requirements and roadmap for root route redirection and loopback safety governance.
+**Current planning state:** Phase 58 is complete. E2E verification and technical SEO validation for the root route redirection are successfully implemented and verified. Milestone v0.0.15 is ready to be audited and completed.
 
 **Latest completed outcomes:**
+- Implemented bare root route `/` 301 redirect to `/en/` preserving query parameters and loopback safety guards (RED-01, RED-02, RED-03, RED-04).
 - Converted the remaining high-traffic `PopularUtilityTool` catalog placeholders into real Svelte 5 components across finance, developer/security, generator, social/media, lifestyle, image, and converter clusters.
 - Added English category-level authority/support content for `finance`, `generators`, and `lifestyle` through the shared support-content model.
 - Safely released the latest recovery slice through PR #25 and verified the category support copy on production.
@@ -105,12 +106,11 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 - ✓ Converted remaining popular placeholder tools, added activated-category authority content, and closed traffic-recovery validation gates — v0.0.13
 - ✓ Executed v0.0.14 production release, E2E smoke tests, GSC cohort planning, and weekly performance measurement report — v0.0.14
 - ✓ Implemented strict multi-locale TDK integrity scanner gate and universal trailing slash HTML routing rules inside middleware — v0.0.14
+- ✓ Implement a canonical 301 redirect from the root path `/` to the default language prefixed path `/en/` inside edge middleware (RED-01, RED-02, RED-04) — Phase 57
+- ✓ Guard against redirect loops for system-level calls (e.g., favicon, API paths, and internal Cloudflare Worker loopbacks) (RED-03) — Phase 57
+- ✓ Expand the automated technical SEO verification scripts and E2E smoke tests to validate the root route redirect (R3 / RED-05) — Phase 58
 
 ### Active
-
-- [ ] **R1** - Implement a canonical 301 redirect from the root path `/` to the default language prefixed path `/en/` inside edge middleware.
-- [ ] **R2** - Guard against redirect loops for system-level calls (e.g., favicon, API paths, and internal Cloudflare Worker loopbacks).
-- [ ] **R3** - Expand the automated technical SEO verification scripts and E2E smoke tests to validate the root route redirect.
 
 ### Out of Scope
 
