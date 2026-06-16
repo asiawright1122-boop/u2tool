@@ -10,6 +10,7 @@ import {
   resolveLegacyUnlocalizedBlogFallback,
   resolveLegacyComparePairFallback,
   resolveLegacyUnlocalizedComparePairFallback,
+  isDecommissionedLegacyRoute,
 } from './lib/legacy-redirects';
 import {
   createLegacyBuildAssetGoneResponse,
@@ -123,6 +124,10 @@ function resolveCanonicalRedirect(request: Request): string | null {
     return null;
   }
 
+  if (url.pathname === '/messages' || url.pathname.startsWith('/messages/')) {
+    return null;
+  }
+
   if (url.pathname === '/') {
     return `/en/${url.search}`;
   }
@@ -162,14 +167,7 @@ function resolveCanonicalRedirect(request: Request): string | null {
   }
 
   if (first === 'blog') {
-    if (second) {
-      const target = resolveLegacyUnlocalizedBlogRedirect(second);
-      if (target) {
-        return target;
-      }
-    } else {
-      return resolveLegacyUnlocalizedBlogFallback();
-    }
+    return (second && resolveLegacyUnlocalizedBlogRedirect(second)) || resolveLegacyUnlocalizedBlogFallback();
   }
 
   if (first === 'compare' && second && third) {
@@ -214,14 +212,7 @@ function resolveCanonicalRedirect(request: Request): string | null {
     }
 
     if (second === 'blog') {
-      if (third) {
-        const target = resolveLegacyBlogRedirect(first, third);
-        if (target) {
-          return target;
-        }
-      } else {
-        return resolveLegacyBlogFallback(first);
-      }
+      return (third && resolveLegacyBlogRedirect(first, third)) || resolveLegacyBlogFallback(first);
     }
 
     if (second === 'compare' && third && fourth) {
@@ -272,7 +263,7 @@ function toCachedGetResponse(response: Response): Response {
 }
 
 export const onRequest: MiddlewareHandler = async (context, next) => {
-  if (isLegacyBuildAssetRequest(context.request)) {
+  if (isLegacyBuildAssetRequest(context.request) || isDecommissionedLegacyRoute(new URL(context.request.url).pathname)) {
     return withSecurityHeaders(createLegacyBuildAssetGoneResponse(context.request.method));
   }
 
