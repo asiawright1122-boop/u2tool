@@ -73,7 +73,7 @@ This milestone focuses on full-scale auditing and governance of SEO and GEO aspe
     - Sitemap validator successfully maps and crawls all 10 language sitemaps, verifying HTTP 200 responses.
     - Non-200 responses or unnecessary redirects are flagged as build-blocking errors.
 
-- [ ] **Phase 62: Decommissioned Routes & Robots.txt Governance** (Requirements: `TSEO-03`)
+- [x] **Phase 62: Decommissioned Routes & Robots.txt Governance** (Requirements: `TSEO-03`)
   - Description: Set up automated validation for `/robots.txt` structure and audit decommissioned routes (such as legacy `/blog` and `/compare` variations) to guarantee they correctly return `410 Gone` with appropriate header directives.
   - Success Criteria:
     - HTTP requests to decommissioned routes (both with and without trailing slash) return `410` status.
