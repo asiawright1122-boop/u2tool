@@ -198,9 +198,16 @@ This is a brownfield repository with a very large content surface, heavy localiz
 
 The current baseline now includes promoted discovery ordering, stable comparison surfaces, AI/GEO exports, category authority support content, runtime-placeholder governance, rendered SEO checks, and a canonical production gate that reflects real Cloudflare server-build output. v0.0.16 finalized dynamic trailing-slash normalizations, legacy blog/compare redirections, and stale framework asset 410 gone status gates, verified fully with browser-level Puppeteer redirect chains and header assertions.
 
-## Current Milestone: —
+## Current Milestone: v0.0.17 SEO & GEO Comprehensive Audit & Governance
 
-Planning next milestone.
+**Goal:** 以搜索引擎和 GEO (AI 搜索) 的高标准对 U2Tool 项目的 SEO 与 GEO 进行全方位审查审计，治理多语言 Hreflang/TDK/Sitemap/JSON-LD 缺陷，防范内容信誉与 Prerender 泄露，并构建自动化的上线发布拦截防线。
+
+**Target features:**
+- 审计并修复多语言 Sitemap 的完整性、Robots.txt 的可访问性与边缘路由状态（包括 410 CDN 缓存等）。
+- 校验 10 个 Locale 语境下的 `hreflang` 映射闭环，核对 TDK 翻译，防范双重索引与定位偏移。
+- 优化面包屑（Breadcrumbs）与工具级 Schema Markup 的结构化数据，精简 llms.txt 以提升 AI GEO 召回率。
+- 编写审查规则以审计静态 prerender HTML，杜绝空白、未激活 stubs、placeholders 或 internal reasoning 的遗留。
+- 构建自动化的 SEO/GEO release gates 与测试套件以拦截不合格的部署包。
 
 ## Most Recent Milestone: v0.0.16 GSC Legacy Redirects & Decommissioned Route Governance
 
