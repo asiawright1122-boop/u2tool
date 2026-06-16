@@ -344,4 +344,99 @@ describe('html edge cache middleware', () => {
 
     expect(next).not.toHaveBeenCalled();
   });
+
+  describe('root route redirection and loopback guard', () => {
+    it('redirects bare root requests to default locale prefix', async () => {
+      const next = vi.fn(async () => new Response('should not run'));
+      const { response } = await runMiddleware(
+        new Request('https://www.u2tool.com/'),
+        next
+      );
+
+      expect(response.status).toBe(301);
+      expect(response.headers.get('location')).toBe('/en/');
+      expect(next).not.toHaveBeenCalled();
+    });
+
+    it('preserves query parameters on root redirect', async () => {
+      const next = vi.fn(async () => new Response('should not run'));
+      const { response } = await runMiddleware(
+        new Request('https://www.u2tool.com/?utm_source=newsletter&utm_medium=email'),
+        next
+      );
+
+      expect(response.status).toBe(301);
+      expect(response.headers.get('location')).toBe('/en/?utm_source=newsletter&utm_medium=email');
+      expect(next).not.toHaveBeenCalled();
+    });
+
+    it('redirects root requests on localhost under local preview conditions', async () => {
+      const next = vi.fn(async () => new Response('should not run'));
+      const { response } = await runMiddleware(
+        new Request('http://localhost:4321/'),
+        next
+      );
+
+      expect(response.status).toBe(301);
+      expect(response.headers.get('location')).toBe('/en/');
+      expect(next).not.toHaveBeenCalled();
+    });
+
+    it('bypasses root redirect if cf-worker header is present', async () => {
+      const next = vi.fn(async () => new Response('<html>ok</html>'));
+      const { response } = await runMiddleware(
+        new Request('https://www.u2tool.com/', {
+          headers: { 'cf-worker': 'true' },
+        }),
+        next
+      );
+
+      expect(response.status).toBe(200);
+      expect(response.headers.get('location')).toBeNull();
+      expect(next).toHaveBeenCalled();
+    });
+
+    it('bypasses root redirect if x-worker-loopback header is present', async () => {
+      const next = vi.fn(async () => new Response('<html>ok</html>'));
+      const { response } = await runMiddleware(
+        new Request('https://www.u2tool.com/', {
+          headers: { 'x-worker-loopback': 'true' },
+        }),
+        next
+      );
+
+      expect(response.status).toBe(200);
+      expect(response.headers.get('location')).toBeNull();
+      expect(next).toHaveBeenCalled();
+    });
+
+    it('bypasses root redirect if loopback User-Agent is present', async () => {
+      const next = vi.fn(async () => new Response('<html>ok</html>'));
+
+      const useragents = ['Cloudflare-Workers', 'u2tool-loopback', 'astro-engine'];
+      for (const ua of useragents) {
+        const { response } = await runMiddleware(
+          new Request('https://www.u2tool.com/', {
+            headers: { 'user-agent': `Mozilla/5.0 (${ua})` },
+          }),
+          next
+        );
+        expect(response.status).toBe(200);
+        expect(response.headers.get('location')).toBeNull();
+      }
+      expect(next).toHaveBeenCalledTimes(useragents.length);
+    });
+
+    it('does not redirect non-GET/HEAD requests to root', async () => {
+      const next = vi.fn(async () => new Response('<html>ok</html>'));
+      const { response } = await runMiddleware(
+        new Request('https://www.u2tool.com/', { method: 'POST' }),
+        next
+      );
+
+      expect(response.status).toBe(200);
+      expect(response.headers.get('location')).toBeNull();
+      expect(next).toHaveBeenCalled();
+    });
+  });
 });
