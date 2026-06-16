@@ -45,6 +45,16 @@ const checks = [
   { name: 'missing url', url: '/en/this-route-should-not-exist-xyz', expect: { status: 404 } },
   { name: 'legacy tool redirect', url: '/tools/jwt-decoder', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/tools/jwt-decoder/' } },
   { name: 'tool page', url: '/en/tools/venn-diagram-generator/', expect: { status: 200 } },
+  { name: 'trailing slash redirect en json formatter', url: '/en/tools/json-formatter', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/tools/json-formatter/' } },
+  { name: 'trailing slash redirect zh json formatter', url: '/zh/tools/json-formatter', expect: { status: [301, 302, 307, 308], locationEndsWith: '/zh/tools/json-formatter/' } },
+  { name: 'trailing slash redirect with query params', url: '/en/tools/json-formatter?utm_source=newsletter', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/tools/json-formatter/?utm_source=newsletter' } },
+  { name: 'unmapped blog redirect en tools root', url: '/blog/non-existent-blog', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/tools/' } },
+  { name: 'unmapped blog redirect zh tools root', url: '/zh/blog/non-existent-blog', expect: { status: [301, 302, 307, 308], locationEndsWith: '/zh/tools/' } },
+  { name: 'decommissioned category 410', url: '/tools/categories/text', expect: { status: 410 } },
+  { name: 'decommissioned localized category 410', url: '/en/tools/categories/text', expect: { status: 410 } },
+  { name: 'decommissioned compare 410', url: '/tools/compare/url-parser/dns-lookup', expect: { status: 410 } },
+  { name: 'decommissioned localized compare 410', url: '/en/tools/compare/url-parser/dns-lookup', expect: { status: 410 } },
+  { name: 'stale Next.js static asset 410', url: '/_next/static/chunks/main.js', expect: { status: 410 } },
 ];
 
 function normalizeLocation(location) {
@@ -59,6 +69,8 @@ async function fetchManual(url) {
     status: res.status,
     contentType: res.headers.get('content-type') || '',
     location: normalizeLocation(res.headers.get('location')),
+    robots: res.headers.get('x-robots-tag') || '',
+    cacheControl: res.headers.get('cache-control') || '',
   };
 }
 
@@ -90,6 +102,16 @@ async function runCheck(check) {
     if (!expected.includes(manual.status)) {
       ok = false;
       details.push(`status ${manual.status} (expected ${expected.join(', ')})`);
+    }
+  }
+  if (manual.status === 410) {
+    if (manual.robots !== 'noindex, nofollow') {
+      ok = false;
+      details.push(`x-robots-tag "${manual.robots}" (expected "noindex, nofollow")`);
+    }
+    if (manual.cacheControl !== 'public, max-age=86400, s-maxage=86400') {
+      ok = false;
+      details.push(`cache-control "${manual.cacheControl}" (expected "public, max-age=86400, s-maxage=86400")`);
     }
   }
   if (check.allowRedirectTo && [301, 302, 307, 308].includes(manual.status)) {
