@@ -28,8 +28,8 @@ Clean up over 1,300+ GSC redirect warnings by enforcing trailing slashes on raw 
 
 | Requirement ID | Description | Assigned Phase | Status | Plan/Summary Evidence |
 |---|---|---|---|---|
-| RED-07 | Trailing slash 301 redirection | | | |
-| RED-08 | Legacy Blog redirects | | | |
-| RED-09 | Legacy compare/category 410 | | | |
-| RED-10 | Stale framework asset 410 | | | |
-| RED-11 | Test suites and E2E validation | | | |
+| RED-07 | Trailing slash 301 redirection | Phase 59 | Proposed | |
+| RED-08 | Legacy Blog redirects | Phase 59 | Proposed | |
+| RED-09 | Legacy compare/category 410 | Phase 59 | Proposed | |
+| RED-10 | Stale framework asset 410 | Phase 59 | Proposed | |
+| RED-11 | Test suites and E2E validation | Phase 60 | Proposed | |

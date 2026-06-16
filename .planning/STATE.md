@@ -2,10 +2,10 @@
 gsd_state_version: 1.0
 milestone: v0.0.16
 milestone_name: — GSC Legacy Redirects & Decommissioned Route Governance
-status: Defining requirements
-last_updated: "2026-06-16T02:42:00.000Z"
+status: Planning
+last_updated: "2026-06-16T10:45:00.000Z"
 progress:
-  total_phases: 0
+  total_phases: 2
   completed_phases: 0
   total_plans: 0
   completed_plans: 0
@@ -18,15 +18,15 @@ progress:
 See: .planning/PROJECT.md (updated 2026-06-09)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** Phase 58 — technical-seo-validation-and-e2e-testing
+**Current focus:** Phase 59 — redirection-and-410-gone-route-governance
 **Frontend safety:** No user-facing surface may expose internal reasoning traces, hidden prompts, scratchpads, handoff notes, or raw planning notes.
 
 ## Current Position
 
-Phase: Not started (defining requirements)
+Phase: Phase 59: Redirection & 410 Gone Route Governance
 Plan: —
-Status: Defining requirements
-Last activity: 2026-06-16 — Milestone v0.0.16 started
+Status: Planning
+Last activity: 2026-06-16 — Milestone v0.0.16 started, roadmap created
 
 ## Milestone Context
 
@@ -55,6 +55,8 @@ Last activity: 2026-06-16 — Milestone v0.0.16 started
 | 56 | Recovery measurement and closeout | Complete |
 | 57 | Root Route Redirection & Loopback Guard | Complete |
 | 58 | Technical SEO Validation & E2E Testing | Complete |
+| 59 | Redirection & 410 Gone Route Governance | Proposed |
+| 60 | Technical SEO Validation & E2E Testing | Proposed |
 
 ## Accumulated Context
 
@@ -76,8 +78,8 @@ Last activity: 2026-06-16 — Milestone v0.0.16 started
 - 2026-06-09 follow-up deployment from `414c1074` completed successfully through Cloudflare workflow run 27218741465.
 - 2026-06-09 production validation after the follow-up deployment passed route contract, frontend safety, and `en/tools/bra-size-calculator/` rendered SEO checks; the updated Bra Size meta description is live with `underbust`.
 
-Milestone v0.0.14 is complete. Run gsd-audit-milestone and gsd-complete-milestone to archive and tag.
+Milestone v0.0.15 is complete and archived.
 
 ## Next Action
 
-Milestone v0.0.15 is complete. Run gsd-audit-milestone and gsd-complete-milestone to archive and tag.
+Discuss and plan Phase 59: Redirection & 410 Gone Route Governance.

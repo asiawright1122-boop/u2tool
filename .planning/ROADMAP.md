@@ -2,11 +2,23 @@
 
 ## Archived Milestones
 
+- [x] v0.0.15 Technical SEO Redirection Governance & Root Route Normalization
+  Archive: [.planning/milestones/v0.0.15-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.15-ROADMAP.md)
+  Requirements: [.planning/milestones/v0.0.15-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.15-REQUIREMENTS.md)
+  Audit: [.planning/milestones/v0.0.15-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.15-MILESTONE-AUDIT.md)
+  Status: Shipped on 2026-06-16. Implemented canonical 301 redirects from the root route `/` to the default language prefix `/en/` while preserving all query parameters. Implemented loopback safety guards (headers: `cf-worker`, `x-worker-loopback`, User-Agent) to bypass redirection and prevent loopbacks. Updated `public/_routes.json` to explicitly intercept root route requests. Extended technical SEO validation and E2E smoke tests validating root redirection and loopback bypass behavior.
+
 - [x] v0.0.14 Production Release and GSC Recovery Measurement
   Archive: [.planning/milestones/v0.0.14-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.14-ROADMAP.md)
   Requirements: [.planning/milestones/v0.0.14-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.14-REQUIREMENTS.md)
   Audit: [.planning/v0.0.14-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.14-MILESTONE-AUDIT.md)
   Status: Shipped on 2026-06-15. Released recovery slice through PR #25, verified live category support copy, ran spot checks for Cohort A/B on June 12, resolved Wrangler high-concurrency connection drops via loopback retry client, and aligned 10-locale intent TDK.
+
+- [x] v0.0.13 Popular Tool Flagship Conversion Wave
+  Archive: [.planning/milestones/v0.0.13-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-ROADMAP.md)
+  Requirements: [.planning/milestones/v0.0.13-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-REQUIREMENTS.md)
+  Audit: [.planning/milestones/v0.0.13-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-MILESTONE-AUDIT.md)
+  Status: Shipped on 2026-06-09. Converted all remaining high-traffic `PopularUtilityTool` placeholders to real Svelte 5 components across Finance, Developer/Security, Content Generators, Social/Media, Lifestyle, Image, and Converter clusters. Added category-level authority content for English `finance`, `generators`, and `lifestyle`, preserved the no-internal-reasoning frontend safety rule, and closed on green build, runtime, SEO, placeholder, and frontend-safety gates.
 
 - [x] v0.0.12 Growth Acceleration and High-Performance Tool Expansion
   Archive: [.planning/milestones/v0.0.12-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-ROADMAP.md)
@@ -44,35 +56,40 @@
   Audit: [.planning/milestones/v0.0.7-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.7-MILESTONE-AUDIT.md)
   Status: shipped on 2026-05-10 with the `text` authority wave selected, promoted, governed, and followed by evidence-led GSC recovery triage.
 
-- [x] v0.0.13 Popular Tool Flagship Conversion Wave
-  Archive: [.planning/milestones/v0.0.13-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-ROADMAP.md)
-  Requirements: [.planning/milestones/v0.0.13-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-REQUIREMENTS.md)
-  Audit: [.planning/milestones/v0.0.13-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-MILESTONE-AUDIT.md)
-  Status: Shipped on 2026-06-09. Converted all remaining high-traffic `PopularUtilityTool` placeholders to real Svelte 5 components across Finance, Developer/Security, Content Generators, Social/Media, Lifestyle, Image, and Converter clusters. Added category-level authority content for English `finance`, `generators`, and `lifestyle`, preserved the no-internal-reasoning frontend safety rule, and closed on green build, runtime, SEO, placeholder, and frontend-safety gates.
+## Active Milestone: v0.0.16 — GSC Legacy Redirects & Decommissioned Route Governance
 
-## Active Milestone: v0.0.15 — Technical SEO Redirection Governance & Root Route Normalization
+**Goal:** Clean up over 1,300+ GSC redirect warnings by enforcing trailing slashes on raw paths, setting up correct 410 Gone gates for stale asset/framework paths, and implementing lightweight middleware normalizations for decommissioned legacy blogs and compare-guide URLs.
 
-**Goal:** Eliminate Google double-indexing issues and GSC redirect warnings by enforcing canonical 301 redirects from the root route `/` to the default language prefix `/en/` while guarding against redirection loops for system/build-level subrequests.
+**Phase numbering continues from v0.0.15 (last phase: 58):**
 
-**Phase numbering continues from v0.0.14 (last phase: 56):**
+### Phase 59: Redirection & 410 Gone Route Governance
+**Goal:** Implement trailing-slash normalization, decommissioning gates for `/blog/*` redirects, legacy comparisons/categories 410, and Next.js stale chunks 410 in the Cloudflare middleware.
+**Requirements:** RED-07, RED-08, RED-09, RED-10
 
-### Phase 57: Root Route Redirection & Loopback Guard
-**Goal:** Implement the canonical 301 redirection from `/` to `/en/` preserving query parameters, adding safety loopback guards for system requests, and integrating with `_routes.json`.
-**Requirements:** RED-01, RED-02, RED-03, RED-04
+- [ ] Phase 59: Redirection & 410 Gone Route Governance
+  - [ ] 59-01: Normalize dynamic localized HTML path requests missing a trailing slash with a 301 redirect to canonical trailing-slash URLs while preserving query parameters.
+  - [ ] 59-02: Redirect decommissioned legacy blog URLs (`/blog/*`, `/zh/blog/*`, etc.) to parent category paths (e.g. `/zh/tools/` or `/en/tools/`).
+  - [ ] 59-03: Filter decommissioned comparison pairs (`/en/tools/compare/...`) and categories (`/en/tools/categories/...`) returning `410 Gone` and `x-robots-tag: noindex, nofollow` headers.
+  - [ ] 59-04: Filter stale Next.js assets (`/_next/static/chunks/*`) returning `410 Gone` and `x-robots-tag: noindex, nofollow` headers.
 
-- [x] Phase 57: Root Route Redirection & Loopback Guard
-  - [x] 57-01: Implement a canonical 301 redirect from the root path `/` to `/en/` inside edge middleware.
-  - [x] 57-02: Preserve all URL query parameters (UTM tracking codes, etc.) during redirection.
-  - [x] 57-03: Implement a loopback safety guard (headers: `cf-worker`, `x-worker-loopback`, User-Agent) to bypass redirection.
-  - [x] 57-04: Update `public/_routes.json` to explicitly include `"/"` to ensure edge middleware intercepts root requests in Cloudflare Pages.
+**Success Criteria:**
+- Any localized HTML route request missing a trailing slash (excluding files and system `_` paths) triggers a permanent (301) redirect to the path with a trailing slash, and UTM parameters remain intact.
+- Legacy blog URL requests are routed via a 301 redirect to canonical categories.
+- Stale comparison guides, obsolete categories, and legacy Next.js chunk requests return a `410 Gone` HTTP status accompanied by `x-robots-tag: noindex, nofollow` headers.
 
-### Phase 58: Technical SEO Validation & E2E Testing
-**Goal:** Extend test suites and validation scripts to verify redirection status code (301) and loopback bypass behavior.
-**Requirements:** RED-05
+### Phase 60: Technical SEO Validation & E2E Testing
+**Goal:** Extend the validation suite and E2E smoke tests to verify all redirection behaviors, legacy redirects, 410 responses, and robots headers under local preview servers.
+**Requirements:** RED-11
 
-- [x] Phase 58: Technical SEO Validation & E2E Testing (completed 2026-06-16)
-  - [x] 58-01: Add E2E smoke test cases for root route 301 redirection and query parameters preservation.
-  - [x] 58-02: Add E2E test cases for loopback safety guard bypass behavior.
-  - [x] 58-03: Run complete technical SEO validation test suite locally and verify redirection.
+- [ ] Phase 60: Technical SEO Validation & E2E Testing
+  - [ ] 60-01: Implement E2E smoke tests for trailing slash normalization and query parameter preservation.
+  - [ ] 60-02: Add E2E smoke tests verifying decommissioned blog route redirects.
+  - [ ] 60-03: Add E2E tests verifying decommissioned comparison/category paths and stale Next.js assets return `410 Gone` with `noindex, nofollow` headers.
+  - [ ] 60-04: Integrate validation checks into `verify:production` pipeline under preview environments.
+
+**Success Criteria:**
+- Puppeteer/Playwright E2E smoke tests successfully verify trailing-slash redirects, legacy blog redirects, and `410 Gone` responses.
+- The technical SEO validation scripts confirm the presence of correct `x-robots-tag: noindex, nofollow` headers for 410 targets.
+- Local preview server check passes the automated redirection gate without any regressions or warnings.
 
 **Requirements:** [`.planning/REQUIREMENTS.md`](/Users/kaka/Dev/u2tool/.planning/REQUIREMENTS.md)
