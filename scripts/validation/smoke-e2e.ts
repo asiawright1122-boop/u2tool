@@ -230,6 +230,100 @@ async function main(): Promise<void> {
     }
     console.log('✅ E2E Check: Loopback safety guard successfully bypassed 301 middleware redirect.');
 
+    // E2E Check: Trailing slash redirect and parameter preservation
+    console.log('🔍 E2E Check: Trailing slash redirection and query parameter preservation');
+    const slashPage = await browser.newPage();
+    const slashResponse = await slashPage.goto(`${BASE_URL}/en/tools/json-formatter`, { waitUntil: 'domcontentloaded' });
+    const slashChain = slashResponse.request().redirectChain();
+    if (slashChain.length === 0) {
+      throw new Error('Expected trailing slash request to redirect, but no redirect chain was found.');
+    }
+    const slashRedirectStatus = slashChain[0].response()?.status();
+    const slashFinalUrl = slashPage.url();
+    await slashPage.close();
+
+    if (slashRedirectStatus !== 301) {
+      throw new Error(`Expected trailing slash redirect status 301, got ${slashRedirectStatus}`);
+    }
+    if (slashFinalUrl !== `${BASE_URL}/en/tools/json-formatter/`) {
+      throw new Error(`Expected final URL to be trailing-slash normalized /en/tools/json-formatter/, got ${slashFinalUrl}`);
+    }
+
+    const slashParamPage = await browser.newPage();
+    const slashParamResponse = await slashParamPage.goto(`${BASE_URL}/en/tools/json-formatter?utm_source=twitter`, { waitUntil: 'domcontentloaded' });
+    const slashParamChain = slashParamResponse.request().redirectChain();
+    if (slashParamChain.length === 0) {
+      throw new Error('Expected trailing slash request with params to redirect, but no redirect chain was found.');
+    }
+    const slashParamRedirectStatus = slashParamChain[0].response()?.status();
+    const slashParamFinalUrl = slashParamPage.url();
+    await slashParamPage.close();
+
+    if (slashParamRedirectStatus !== 301) {
+      throw new Error(`Expected trailing slash redirect status 301 with params, got ${slashParamRedirectStatus}`);
+    }
+    if (slashParamFinalUrl !== `${BASE_URL}/en/tools/json-formatter/?utm_source=twitter`) {
+      throw new Error(`Expected final URL to preserve params on trailing slash redirect, got ${slashParamFinalUrl}`);
+    }
+    console.log('✅ E2E Check: Trailing slash redirection and query parameter preservation successfully verified.');
+
+    // E2E Check: Decommissioned blog redirects
+    console.log('🔍 E2E Check: Decommissioned blog redirects');
+    const blogPage = await browser.newPage();
+    const blogResponse = await blogPage.goto(`${BASE_URL}/zh/blog/some-obsolete-blog-post`, { waitUntil: 'domcontentloaded' });
+    const blogChain = blogResponse.request().redirectChain();
+    if (blogChain.length === 0) {
+      throw new Error('Expected blog request to redirect, but no redirect chain was found.');
+    }
+    const blogRedirectStatus = blogChain[0].response()?.status();
+    const blogFinalUrl = blogPage.url();
+    await blogPage.close();
+
+    if (blogRedirectStatus !== 301) {
+      throw new Error(`Expected blog redirect status 301, got ${blogRedirectStatus}`);
+    }
+    if (blogFinalUrl !== `${BASE_URL}/zh/tools/`) {
+      throw new Error(`Expected final URL to redirect to localized tools root, got ${blogFinalUrl}`);
+    }
+    console.log('✅ E2E Check: Decommissioned blog redirect successfully verified.');
+
+    // E2E Check: Gone (410) routes
+    console.log('🔍 E2E Check: Decommissioned routes return 410');
+    const gonePage1 = await browser.newPage();
+    const response410_1 = await gonePage1.goto(`${BASE_URL}/en/tools/compare/url-parser/dns-lookup`, { waitUntil: 'domcontentloaded' });
+    const status410_1 = response410_1?.status();
+    const robots410_1 = response410_1?.headers()['x-robots-tag'];
+    const cache410_1 = response410_1?.headers()['cache-control'];
+    await gonePage1.close();
+
+    if (status410_1 !== 410) {
+      throw new Error(`Expected HTTP 410 on decommissioned compare guide, got ${status410_1}`);
+    }
+    if (robots410_1 !== 'noindex, nofollow') {
+      throw new Error(`Expected robots tag 'noindex, nofollow' on 410 page, got '${robots410_1}'`);
+    }
+    if (cache410_1 !== 'public, max-age=86400, s-maxage=86400') {
+      throw new Error(`Expected cache control public, max-age=86400, s-maxage=86400 on 410 page, got '${cache410_1}'`);
+    }
+
+    const gonePage2 = await browser.newPage();
+    const response410_2 = await gonePage2.goto(`${BASE_URL}/_next/static/chunks/main.js`, { waitUntil: 'domcontentloaded' });
+    const status410_2 = response410_2?.status();
+    const robots410_2 = response410_2?.headers()['x-robots-tag'];
+    const cache410_2 = response410_2?.headers()['cache-control'];
+    await gonePage2.close();
+
+    if (status410_2 !== 410) {
+      throw new Error(`Expected HTTP 410 on stale asset request, got ${status410_2}`);
+    }
+    if (robots410_2 !== 'noindex, nofollow') {
+      throw new Error(`Expected robots tag 'noindex, nofollow' on 410 stale asset, got '${robots410_2}'`);
+    }
+    if (cache410_2 !== 'public, max-age=86400, s-maxage=86400') {
+      throw new Error(`Expected cache control public, max-age=86400, s-maxage=86400 on 410 stale asset, got '${cache410_2}'`);
+    }
+    console.log('✅ E2E Check: Decommissioned routes return 410 with correct headers successfully verified.');
+
     if (hasFatalErrors) {
       throw new Error(`Fatal browser errors were captured during smoke tests:\n${fatalErrors.join('\n')}`);
     }
