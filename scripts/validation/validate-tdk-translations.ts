@@ -83,6 +83,15 @@ async function main() {
        console.error(`❌ Fallback Leak in ${relativePath}: <meta name="description"> matches English exactly: "${description}"`);
        violations++;
     }
+
+    const tdkContent = [title, description].join(' ').toUpperCase();
+    const forbidden = ['TODO', 'PLACEHOLDER', 'MISSING', '${BASE_URL}'];
+    for (const token of forbidden) {
+       if (tdkContent.includes(token.toUpperCase())) {
+           console.error(`❌ Placeholder Leak in ${relativePath}: TDK contains forbidden token "${token}"`);
+           violations++;
+       }
+    }
   }
 
   if (violations > 0) {
