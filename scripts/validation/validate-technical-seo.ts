@@ -122,12 +122,53 @@ async function validateSitemapConsistency(): Promise<void> {
   assert(toolLocs.every((url) => url.endsWith('/')), 'tools sitemap contains non-canonical tool URLs without trailing slash');
 }
 
+async function validateRootRedirectionAndLoopback(): Promise<void> {
+  // 1. Verify standard root route 301 redirection
+  const resNormal = await fetchWithRetry(`${BASE_URL}/`, { redirect: 'manual' });
+  assert(resNormal.status === 301, `Root redirect: expected status 301, got ${resNormal.status}`);
+  const locNormal = resNormal.headers.get('location') || '';
+  assert(locNormal.endsWith('/en/'), `Root redirect: expected Location ending in /en/, got "${locNormal}"`);
+
+  // 2. Verify query parameters preservation
+  const resParams = await fetchWithRetry(`${BASE_URL}/?utm_source=test&utm_medium=social`, { redirect: 'manual' });
+  assert(resParams.status === 301, `Root query redirect: expected status 301, got ${resParams.status}`);
+  const locParams = resParams.headers.get('location') || '';
+  assert(locParams.endsWith('/en/?utm_source=test&utm_medium=social'), `Root query redirect: expected Location to preserve params, got "${locParams}"`);
+
+  // 3. Verify loopback safety guard bypass behavior with cf-worker header
+  const resCfWorker = await fetchWithRetry(`${BASE_URL}/`, {
+    headers: { 'cf-worker': 'true' },
+    redirect: 'manual',
+  });
+  assert(resCfWorker.status !== 301, `Loopback cf-worker: expected status NOT 301, got ${resCfWorker.status}`);
+  assert([302, 307, 308].includes(resCfWorker.status), `Loopback cf-worker: expected 302/307/308 redirect, got ${resCfWorker.status}`);
+  const locCfWorker = resCfWorker.headers.get('location') || '';
+  assert(locCfWorker.endsWith('/en/'), `Loopback cf-worker: expected Location ending in /en/, got "${locCfWorker}"`);
+
+  // 4. Verify loopback safety guard bypass behavior with x-worker-loopback header
+  const resLoopbackHeader = await fetchWithRetry(`${BASE_URL}/`, {
+    headers: { 'x-worker-loopback': 'true' },
+    redirect: 'manual',
+  });
+  assert(resLoopbackHeader.status !== 301, `Loopback x-worker-loopback: expected status NOT 301, got ${resLoopbackHeader.status}`);
+  assert([302, 307, 308].includes(resLoopbackHeader.status), `Loopback x-worker-loopback: expected 302/307/308 redirect, got ${resLoopbackHeader.status}`);
+
+  // 5. Verify loopback safety guard bypass behavior with User-Agent
+  const resUa = await fetchWithRetry(`${BASE_URL}/`, {
+    headers: { 'user-agent': 'u2tool-loopback' },
+    redirect: 'manual',
+  });
+  assert(resUa.status !== 301, `Loopback User-Agent: expected status NOT 301, got ${resUa.status}`);
+  assert([302, 307, 308].includes(resUa.status), `Loopback User-Agent: expected 302/307/308 redirect, got ${resUa.status}`);
+}
+
 async function main(): Promise<void> {
   const failures: string[] = [];
   const tasks: Array<[string, () => Promise<void>]> = [
     ...urlChecks.map((check): [string, () => Promise<void>] => [check.name, () => validateUrlCheck(check)]),
     ['redirect canonicals', validateRedirects],
     ['sitemap consistency', validateSitemapConsistency],
+    ['root redirection and loopback bypass', validateRootRedirectionAndLoopback],
   ];
 
   for (const [name, task] of tasks) {
