@@ -15,11 +15,11 @@ Eliminate Google double-indexing issues and GSC redirect warnings by enforcing c
 
 ### Active
 
-- [ ] **RED-01** - Implement a canonical 301 redirect from the root path `/` to the default language prefixed path `/en/` inside edge middleware.
-- [ ] **RED-02** - Preserve all URL query parameters (e.g., UTM tracking codes) during the root path redirection.
-- [ ] **RED-03** - Implement a loopback safety guard using specific headers (`cf-worker`, `x-worker-loopback`, User-Agent) to bypass redirection for system-level requests.
-- [ ] **RED-04** - Update `public/_routes.json` to explicitly include `"/"` to ensure the edge middleware intercepts root requests in Cloudflare Pages.
-- [ ] **RED-05** - Extend technical SEO validation and E2E smoke test scripts to verify the redirection status code (301) and loopback bypass behavior.
+- [x] **RED-01** - Implement a canonical 301 redirect from the root path `/` to the default language prefixed path `/en/` inside edge middleware.
+- [x] **RED-02** - Preserve all URL query parameters (e.g., UTM tracking codes) during the root path redirection.
+- [x] **RED-03** - Implement a loopback safety guard using specific headers (`cf-worker`, `x-worker-loopback`, User-Agent) to bypass redirection for system-level requests.
+- [x] **RED-04** - Update `public/_routes.json` to explicitly include `"/"` to ensure the edge middleware intercepts root requests in Cloudflare Pages.
+- [x] **RED-05** - Extend technical SEO validation and E2E smoke test scripts to verify the redirection status code (301) and loopback bypass behavior.
 
 ## Future Requirements (Deferred)
 
