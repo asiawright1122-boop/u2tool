@@ -1,7 +1,7 @@
 export const LEGACY_BUILD_ASSET_PREFIXES = ['/_next/', '/dist/'] as const;
 
 const LEGACY_BUILD_ASSET_GONE_HEADERS = {
-  'cache-control': 'public, max-age=86400',
+  'cache-control': 'public, max-age=86400, s-maxage=86400',
   'content-security-policy': "frame-ancestors 'none'",
   'content-type': 'text/plain; charset=utf-8',
   'permissions-policy': 'camera=(), microphone=(), geolocation=()',
