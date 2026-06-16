@@ -82,6 +82,10 @@ async function validateRedirects(): Promise<void> {
   const redirects = [
     ['/tools/json-formatter', '/en/tools/json-formatter/'],
     ['/en/tools/json-formatter', '/en/tools/json-formatter/'],
+    ['/zh/tools/json-formatter', '/zh/tools/json-formatter/'],
+    ['/en/tools/json-formatter?utm_source=newsletter', '/en/tools/json-formatter/?utm_source=newsletter'],
+    ['/blog/some-blog', '/en/tools/'],
+    ['/zh/blog/some-blog', '/zh/tools/'],
     ['/tools/category/text', '/en/categories/text/'],
     ['/tools/category/text/', '/en/categories/text/'],
     ['/en/tools/category/text', '/en/categories/text/'],
@@ -105,6 +109,27 @@ async function validateRedirects(): Promise<void> {
     const location = response.headers.get('location') || '';
     assert([301, 302, 307, 308].includes(response.status), `redirect ${from}: expected redirect, got ${response.status}`);
     assert(location.endsWith(expectedLocation), `redirect ${from}: expected location ending "${expectedLocation}", got "${location}"`);
+  }
+}
+
+async function validateDecommissionedGoneRoutes(): Promise<void> {
+  const goneRoutes = [
+    '/tools/compare/url-parser/dns-lookup',
+    '/en/tools/compare/url-parser/dns-lookup',
+    '/tools/categories/encoding',
+    '/en/tools/categories/encoding',
+    '/_next/static/chunks/main.js',
+  ];
+
+  for (const path of goneRoutes) {
+    const response = await fetchWithRetry(`${BASE_URL}${path}`, { redirect: 'manual' });
+    assert(response.status === 410, `Gone route ${path}: expected status 410, got ${response.status}`);
+    
+    const robots = response.headers.get('x-robots-tag') || '';
+    assert(robots === 'noindex, nofollow', `Gone route ${path}: expected x-robots-tag "noindex, nofollow", got "${robots}"`);
+    
+    const cacheControl = response.headers.get('cache-control') || '';
+    assert(cacheControl === 'public, max-age=86400, s-maxage=86400', `Gone route ${path}: expected cache-control "public, max-age=86400, s-maxage=86400", got "${cacheControl}"`);
   }
 }
 
@@ -169,6 +194,7 @@ async function main(): Promise<void> {
     ['redirect canonicals', validateRedirects],
     ['sitemap consistency', validateSitemapConsistency],
     ['root redirection and loopback bypass', validateRootRedirectionAndLoopback],
+    ['decommissioned 410 gone routes', validateDecommissionedGoneRoutes],
   ];
 
   for (const [name, task] of tasks) {
