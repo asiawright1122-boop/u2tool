@@ -1,5 +1,15 @@
 # Milestones
 
+## v0.0.16 GSC Legacy Redirects & Decommissioned Route Governance (Shipped: 2026-06-16)
+
+**Phases completed:** 2 phases, 2 plans, 9 tasks
+
+**Key accomplishments:**
+
+- Extends the validation suite and E2E smoke tests to verify all redirection behaviors, legacy redirects, 410 responses, and robots headers under local preview servers.
+
+---
+
 ## v0.0.15 Technical SEO Redirection Governance & Root Route Normalization (Shipped: 2026-06-16)
 
 **Phases completed:** 2 phases, 2 plans, 3 tasks

@@ -18,13 +18,17 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 
 ## Current Status
 
-**Current milestone:** `v0.0.16 GSC Legacy Redirects & Decommissioned Route Governance`
-**Latest completed milestone:** `v0.0.15 Technical SEO Redirection Governance & Root Route Normalization`
-**Latest archived milestone:** `v0.0.15 Technical SEO Redirection Governance & Root Route Normalization`
-**Previous archived milestone:** `v0.0.14 Production Release and GSC Recovery Measurement`
-**Current planning state:** Milestone v0.0.16 started. Roadmap created.
+**Current milestone:** `Planning next milestone`
+**Latest completed milestone:** `v0.0.16 GSC Legacy Redirects & Decommissioned Route Governance`
+**Latest archived milestone:** `v0.0.16 GSC Legacy Redirects & Decommissioned Route Governance`
+**Previous archived milestone:** `v0.0.15 Technical SEO Redirection Governance & Root Route Normalization`
+**Current planning state:** Milestone v0.0.16 completed and archived.
 
 **Latest completed outcomes:**
+- Enforced canonical 301 redirects for dynamic localized HTML paths missing trailing slashes inside edge middleware while preserving all query parameters.
+- Implemented permanent (301) redirects from legacy blog paths (e.g. `/blog/*` and `/zh/blog/*`) to their canonical parent category routes (e.g. `/en/tools/` and `/zh/tools/`).
+- Returned `410 Gone` with `x-robots-tag: noindex, nofollow` and cache-control headers for decommissioned compare pairs, legacy categories, and stale Next.js chunk assets (`/_next/static/chunks/*`).
+- Extended technical SEO validation and E2E smoke tests validating trailing slash redirects, query parameter preservation, legacy redirects, and 410 gone status and headers with zero warnings.
 - Enforced canonical 301 redirect from the bare root path `/` to the default language prefix `/en/` inside edge middleware while preserving all query parameters.
 - Implemented loopback safety guards (headers: `cf-worker`, `x-worker-loopback`, User-Agent) to prevent worker redirection loopbacks.
 - Updated `public/_routes.json` to explicitly intercept root route requests.
@@ -41,13 +45,19 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 - Passed release gates for build, check, runtime integrity, SEO governance, runtime-placeholder regression, and front-end safety.
 
 **Latest archived milestone evidence:**
-- Audit: [.planning/milestones/v0.0.13-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-MILESTONE-AUDIT.md)
-- Roadmap archive: [.planning/milestones/v0.0.13-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-ROADMAP.md)
-- Requirements archive: [.planning/milestones/v0.0.13-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-REQUIREMENTS.md)
+- Audit: [.planning/milestones/v0.0.16-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.16-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.16-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.16-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.16-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.16-REQUIREMENTS.md)
 - Traceability: [.planning/TRACEABILITY.md](/Users/kaka/Dev/u2tool/.planning/TRACEABILITY.md)
 - Health report: [docs/PROJECT_HEALTH_REPORT.md](/Users/kaka/Dev/u2tool/docs/PROJECT_HEALTH_REPORT.md)
 
 **Earlier archived milestone evidence:**
+- Audit: [.planning/milestones/v0.0.15-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.15-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.15-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.15-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.15-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.15-REQUIREMENTS.md)
+- Audit: [.planning/milestones/v0.0.13-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.13-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.13-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-REQUIREMENTS.md)
 - Audit: [.planning/v0.0.12-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.12-MILESTONE-AUDIT.md)
 - Roadmap archive: [.planning/milestones/v0.0.12-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-ROADMAP.md)
 - Requirements archive: [.planning/milestones/v0.0.12-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-REQUIREMENTS.md)
@@ -56,10 +66,9 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 - Requirements archive: [.planning/milestones/v0.0.11-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.11-REQUIREMENTS.md)
 - Milestone index: [.planning/MILESTONES.md](/Users/kaka/Dev/u2tool/.planning/MILESTONES.md)
 
-**Most recent milestone focus (`v0.0.13`):**
-- Replacing popular placeholder tools with real Svelte 5 user workflows.
-- Converting traffic-loss recovery evidence into rendered SEO, metadata, runtime, and frontend-safety gates.
-- Completing category authority/support content for the newly activated English finance, generator, and lifestyle clusters.
+**Most recent milestone focus (`v0.0.16`):**
+- Resolving Google double-indexing issues and GSC redirect warnings by enforcing trailing slash redirection, legacy blog/compare redirections, and stale framework asset 410 gone status gates.
+
 
 ## Requirements
 
@@ -112,8 +121,14 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 - ✓ Implement a canonical 301 redirect from the root path `/` to the default language prefixed path `/en/` inside edge middleware (RED-01, RED-02, RED-04) — Phase 57
 - ✓ Guard against redirect loops for system-level calls (e.g., favicon, API paths, and internal Cloudflare Worker loopbacks) (RED-03) — Phase 57
 - ✓ Expand the automated technical SEO verification scripts and E2E smoke tests to validate the root route redirect (R3 / RED-05) — Phase 58
+- ✓ Trailing slash 301 redirection (RED-07) — v0.0.16
+- ✓ Legacy Blog redirects (RED-08) — v0.0.16
+- ✓ Legacy compare/category 410 (RED-09) — v0.0.16
+- ✓ Stale framework asset 410 (RED-10) — v0.0.16
+- ✓ Test suites and E2E validation (RED-11) — v0.0.16
 
 ### Active
+
 
 ### Out of Scope
 
@@ -176,22 +191,28 @@ This is a brownfield repository with a very large content surface, heavy localiz
 | Treat current technical blocker samples as monitor states when live checks resolve to canonical indexable HTML | GSC historical rows can lag current production behavior, so validation should not be retried just because old rows still exist | ✓ Good |
 | Select the English/Russian Hex Editor cluster as the Phase 34 recovery slice | It had the largest untreated click loss among current Performance candidates while remaining small enough for rendered/content-trust verification | ✓ Good |
 | Bypass persistent HTML edge cache during Astro prerender | Dirty builds reused the same edge-cache version and could emit stale static HTML even after source changes | ✓ Good |
+| Querying normalized trailing-slash URLs (e.g. /tools/categories/text/) during local preview-server verification to bypass Astro preview server level normalization | Astro preview server redirects raw dynamic paths before edge middleware is invoked, so testing canonical URLs ensures edge middleware logic is directly tested | ✓ Good |
+| Asserting both x-robots-tag: noindex, nofollow and cache-control: public, max-age=86400, s-maxage=86400 headers for 410 Gone routes | CDNs must cache 410 status to reduce compute origin costs while search engines must drop obsolete pages | ✓ Good |
 
 ## Current State
 
-The current baseline now includes promoted discovery ordering, stable comparison surfaces, AI/GEO exports, category authority support content, runtime-placeholder governance, rendered SEO checks, and a canonical production gate that reflects real Cloudflare server-build output. v0.0.13 closed the highest visible gap in that baseline by converting the remaining popular placeholder pages into real Svelte 5 tool workflows and adding authority/support content for the newly activated English finance, generator, and lifestyle clusters.
+The current baseline now includes promoted discovery ordering, stable comparison surfaces, AI/GEO exports, category authority support content, runtime-placeholder governance, rendered SEO checks, and a canonical production gate that reflects real Cloudflare server-build output. v0.0.16 finalized dynamic trailing-slash normalizations, legacy blog/compare redirections, and stale framework asset 410 gone status gates, verified fully with browser-level Puppeteer redirect chains and header assertions.
 
-## Current Milestone: v0.0.16 GSC Legacy Redirects & Decommissioned Route Governance
+## Current Milestone: —
+
+Planning next milestone.
+
+## Most Recent Milestone: v0.0.16 GSC Legacy Redirects & Decommissioned Route Governance
 
 **Goal:** Clean up over 1,300+ GSC redirect warnings by enforcing trailing slashes on raw paths, setting up correct 410 Gone gates for stale asset/framework paths, and implementing lightweight middleware normalizations for decommissioned legacy blogs and compare-guide URLs.
 
-**Target features:**
+**Completed features:**
 - Correctly rewrite/redirect all localized dynamic HTML routes without trailing slashes to their canonical trailing-slash URLs inside middleware.
 - Implement strict 410 Gone filters (or 301 redirects to canonical categories) for decommissioned system entry points (`/blog/*`, legacy categories, legacy compare pairs).
 - Refine edge response logic for legacy Next.js static asset patterns (`/_next/static/chunks/*`) to ensure they return `410 Gone` with noindex robots.
 - Integrate these trailing-slash and decommissioned route gates into the automated validation suite.
 
-## Most Recent Milestone: v0.0.15 Technical SEO Redirection Governance & Root Route Normalization
+## Earlier Milestone: v0.0.15 Technical SEO Redirection Governance & Root Route Normalization
 
 **Goal:** Eliminate Google double-indexing issues and GSC redirect warnings by enforcing canonical 301 redirects from the root route `/` to the default language prefix `/en/` while guarding against redirection loops for system/build-level subrequests.
 
@@ -201,17 +222,6 @@ The current baseline now includes promoted discovery ordering, stable comparison
 - Loopback safety guard (headers: `cf-worker`, `x-worker-loopback`, User-Agent) to bypass redirection.
 - Updated `public/_routes.json` to include `"/"`.
 - Extended validation scripts and E2E smoke tests.
-
-## Earlier Milestone: v0.0.14 Production Release and GSC Recovery Measurement
-
-**Goal:** Recover organic traffic by safely deploying the completed recovery work, verifying live production pages, and measuring repaired cohorts in Google Search Console.
-
-**Completed features:**
-- Produced a deployable release manifest separating traffic-recovery changes.
-- Kept live production route validation green.
-- Merged and deployed a clean release for the latest category-support recovery slice.
-- Verified live category support content, final converted URLs, and frontend safety.
-- Built GSC recovery cohort queue and indexing/monitoring rules.
 
 ## Evolution
 
@@ -231,4 +241,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-06-16 after starting Milestone v0.0.16*
+*Last updated: 2026-06-16 after completing Milestone v0.0.16*
