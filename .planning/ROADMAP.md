@@ -60,11 +60,11 @@
 **Goal:** Implement the canonical 301 redirection from `/` to `/en/` preserving query parameters, adding safety loopback guards for system requests, and integrating with `_routes.json`.
 **Requirements:** RED-01, RED-02, RED-03, RED-04
 
-- [ ] Phase 57: Root Route Redirection & Loopback Guard
-  - [ ] 57-01: Implement a canonical 301 redirect from the root path `/` to `/en/` inside edge middleware.
-  - [ ] 57-02: Preserve all URL query parameters (UTM tracking codes, etc.) during redirection.
-  - [ ] 57-03: Implement a loopback safety guard (headers: `cf-worker`, `x-worker-loopback`, User-Agent) to bypass redirection.
-  - [ ] 57-04: Update `public/_routes.json` to explicitly include `"/"` to ensure edge middleware intercepts root requests in Cloudflare Pages.
+- [x] Phase 57: Root Route Redirection & Loopback Guard
+  - [x] 57-01: Implement a canonical 301 redirect from the root path `/` to `/en/` inside edge middleware.
+  - [x] 57-02: Preserve all URL query parameters (UTM tracking codes, etc.) during redirection.
+  - [x] 57-03: Implement a loopback safety guard (headers: `cf-worker`, `x-worker-loopback`, User-Agent) to bypass redirection.
+  - [x] 57-04: Update `public/_routes.json` to explicitly include `"/"` to ensure edge middleware intercepts root requests in Cloudflare Pages.
 
 ### Phase 58: Technical SEO Validation & E2E Testing
 **Goal:** Extend test suites and validation scripts to verify redirection status code (301) and loopback bypass behavior.
