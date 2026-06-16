@@ -37,12 +37,12 @@
 
 | Requirement ID | Description | Assigned Phase | Status | Plan/Summary Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| **TSEO-01** | Trailing Slash Normalization Checker | | Proposed | |
-| **TSEO-02** | Multi-locale Sitemap Link Validator | | Proposed | |
-| **TSEO-03** | Robots.txt & 410 Routes Auditor | | Proposed | |
-| **HTDK-01** | 10-Locale Hreflang Graph Loop Validator | | Proposed | |
-| **HTDK-02** | TDK Translation Completeness Scanner | | Proposed | |
-| **GEO-01** | Breadcrumbs & Tool Schema Semantic Checker | | Proposed | |
-| **GEO-02** | llms.txt Semantic Optimizer | | Proposed | |
-| **SAFE-01** | Prerender Leaks & Reasoning Trace Scanner | | Proposed | |
-| **SAFE-02** | Dynamic Edge Redirection Loop Scanner | | Proposed | |
+| **TSEO-01** | Trailing Slash Normalization Checker | Phase 61 | Proposed | |
+| **TSEO-02** | Multi-locale Sitemap Link Validator | Phase 61 | Proposed | |
+| **TSEO-03** | Robots.txt & 410 Routes Auditor | Phase 62 | Proposed | |
+| **HTDK-01** | 10-Locale Hreflang Graph Loop Validator | Phase 63 | Proposed | |
+| **HTDK-02** | TDK Translation Completeness Scanner | Phase 63 | Proposed | |
+| **GEO-01** | Breadcrumbs & Tool Schema Semantic Checker | Phase 64 | Proposed | |
+| **GEO-02** | llms.txt Semantic Optimizer | Phase 64 | Proposed | |
+| **SAFE-01** | Prerender Leaks & Reasoning Trace Scanner | Phase 65 | Proposed | |
+| **SAFE-02** | Dynamic Edge Redirection Loop Scanner | Phase 65 | Proposed | |

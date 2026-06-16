@@ -3,10 +3,10 @@ gsd_state_version: 1.0
 milestone: v0.0.17
 milestone_name: — SEO & GEO Comprehensive Audit & Governance
 status: Planning
-last_updated: "2026-06-16T14:11:00.000Z"
+last_updated: "2026-06-16T14:25:40.000Z"
 last_activity: 2026-06-16
 progress:
-  total_phases: 0
+  total_phases: 5
   completed_phases: 0
   total_plans: 0
   completed_plans: 0
@@ -24,10 +24,10 @@ See: .planning/PROJECT.md (updated 2026-06-16)
 
 ## Current Position
 
-Phase: Not started (defining requirements)
+Phase: Not started (defining roadmap)
 Plan: —
-Status: Defining requirements
-Last activity: 2026-06-16 — Milestone v0.0.17 started
+Status: Planning
+Last activity: 2026-06-16 — Milestone v0.0.17 roadmap created
 
 ## Milestone Context
 
@@ -58,7 +58,11 @@ Last activity: 2026-06-16 — Milestone v0.0.17 started
 | 58 | Technical SEO Validation & E2E Testing | Complete |
 | 59 | Redirection & 410 Gone Route Governance | Complete |
 | 60 | Technical SEO Validation & E2E Testing | Complete |
-
+| 61 | Technical SEO Link Crawling & Normalization | Proposed |
+| 62 | Decommissioned Routes & Robots.txt Governance | Proposed |
+| 63 | Hreflang & TDK Loop & Translation Integrity | Proposed |
+| 64 | Semantic Metadata Schema & GEO Optimization | Proposed |
+| 65 | Edge Simulation & Prerender Safety Governance | Proposed |
 ## Accumulated Context
 
 ### Traffic Recovery Notes

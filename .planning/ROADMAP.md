@@ -62,9 +62,44 @@
   Audit: [.planning/milestones/v0.0.7-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.7-MILESTONE-AUDIT.md)
   Status: shipped on 2026-05-10 with the `text` authority wave selected, promoted, governed, and followed by evidence-led GSC recovery triage.
 
-## Active Milestone: —
+## Active Milestone: v0.0.17 - SEO & GEO Comprehensive Audit & Governance
 
-Planning next milestone.
+This milestone focuses on full-scale auditing and governance of SEO and GEO aspects of the U2Tool project. It addresses multi-locale Hreflang, TDK, Sitemap, and JSON-LD defects, prevents reasoning trace and prerender leakage, and establishes edge simulation gates to block flawed releases.
+
+- [ ] **Phase 61: Technical SEO Link Crawling & Normalization** (Requirements: `TSEO-01`, `TSEO-02`)
+  - Description: Implement the trailing slash normalization checker and the multi-locale sitemap link validator to scan the static output of the build, ensuring clean URLs and active links.
+  - Success Criteria:
+    - Running the build with a non-compliant canonical URL inside static HTML fails the build pipeline with clear file references.
+    - Sitemap validator successfully maps and crawls all 10 language sitemaps, verifying HTTP 200 responses.
+    - Non-200 responses or unnecessary redirects are flagged as build-blocking errors.
+
+- [ ] **Phase 62: Decommissioned Routes & Robots.txt Governance** (Requirements: `TSEO-03`)
+  - Description: Set up automated validation for `/robots.txt` structure and audit decommissioned routes (such as legacy `/blog` and `/compare` variations) to guarantee they correctly return `410 Gone` with appropriate header directives.
+  - Success Criteria:
+    - HTTP requests to decommissioned routes (both with and without trailing slash) return `410` status.
+    - Handled responses carry `x-robots-tag: noindex, nofollow` and long CDN cache headers.
+    - Verification tests fail if any decommissioned route returns a standard 404 or redirect.
+
+- [ ] **Phase 63: Hreflang & TDK Loop & Translation Integrity** (Requirements: `HTDK-01`, `HTDK-02`)
+  - Description: Model the 10-locale alternate pages as a directed graph and run SCC loop verification. Audit multi-language Title/Description elements to detect any missing translations or English fallbacks.
+  - Success Criteria:
+    - The hreflang graph validator successfully confirms that all alternate relations form closed cycles and all nodes are reachable.
+    - TDK translation scanner throws errors if placeholder strings or untranslated fallback English text are found on localized pages.
+    - Integration tests intercept any asymmetrical alternate configurations.
+
+- [ ] **Phase 64: Semantic Metadata Schema & GEO Optimization** (Requirements: `GEO-01`, `GEO-02`)
+  - Description: Validate BreadcrumbList JSON-LD structure URLs to ensure proper trailing slash normalization, and align `/llms.txt` and `/llms-full.txt` index contents with physical HTML output.
+  - Success Criteria:
+    - JSON-LD parser checks all page templates to confirm that `WebApplication` / `SoftwareApplication` definitions and breadcrumbs point only to canonical trailing-slash URLs.
+    - Validation tests block the build if the tools listed in `/llms.txt` differ from actual pre-rendered HTML files.
+    - Output `llms.txt` sizes and token footprint are validated to stay within search retrieval limits.
+
+- [ ] **Phase 65: Edge Simulation & Prerender Safety Governance** (Requirements: `SAFE-01`, `SAFE-02`)
+  - Description: Implement physical HTML deep scans to block AI reasoning leaks or internal TODOs. Spin up a local `wrangler dev` environment to verify edge routing loops and cache header behaviors.
+  - Success Criteria:
+    - Safety scanner intercepts and fails the build if `<!-- reasoning -->`, `Thinking Process:`, or `${BASE_URL}` traces exist in `dist/`.
+    - Local integration tests run via wrangler dev confirm that 301 redirects and 410 gates do not cause infinite loops.
+    - Response cache headers under simulating middlewares match expected CDN behaviors.
 
 <details>
 <summary>✅ v0.0.16 GSC Legacy Redirects & Decommissioned Route Governance (Phases 59-60) — SHIPPED 2026-06-16</summary>
