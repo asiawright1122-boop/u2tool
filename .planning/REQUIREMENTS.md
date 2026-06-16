@@ -8,11 +8,11 @@ Clean up over 1,300+ GSC redirect warnings by enforcing trailing slashes on raw 
 
 ### Active
 
-- [ ] **RED-07** - Middleware permanently redirects (301) any localized dynamic HTML path request missing a trailing slash (excluding file-like paths or system paths prefixed with `_`) to its canonical trailing-slash URL preserving query parameters.
-- [ ] **RED-08** - Middleware captures decommissioned `/blog/*` and invalid legacy information paths (e.g. `/zh/blog/...`, `/blog/...`), returning a cacheable `301 Redirect` to their canonical parent category routes (e.g. `/en/tools/` or specific tools hubs) to retain link equity.
-- [ ] **RED-09** - Middleware returns a cacheable `410 Gone` response with `x-robots-tag: noindex, nofollow` headers for decommissioned legacy compare pairs (`/en/tools/compare/...`) and legacy categories under tools (`/en/tools/categories/...`) to signal search engines to drop these obsolete pages from their index.
-- [ ] **RED-10** - Middleware intercepts requests targeting stale Next.js framework assets (`/_next/static/chunks/*`), returning `410 Gone` with noindex robots headers to preserve search crawl budgets.
-- [ ] **RED-11** - Extend the technical SEO validation suite and E2E smoke tests to verify trailing-slash redirects, legacy route redirects/410, and stale assets 410 responses under local preview servers.
+- [x] **RED-07** - Middleware permanently redirects (301) any localized dynamic HTML path request missing a trailing slash (excluding file-like paths or system paths prefixed with `_`) to its canonical trailing-slash URL preserving query parameters.
+- [x] **RED-08** - Middleware captures decommissioned `/blog/*` and invalid legacy information paths (e.g. `/zh/blog/...`, `/blog/...`), returning a cacheable `301 Redirect` to their canonical parent category routes (e.g. `/en/tools/` or specific tools hubs) to retain link equity.
+- [x] **RED-09** - Middleware returns a cacheable `410 Gone` response with `x-robots-tag: noindex, nofollow` headers for decommissioned legacy compare pairs (`/en/tools/compare/...`) and legacy categories under tools (`/en/tools/categories/...`) to signal search engines to drop these obsolete pages from their index.
+- [x] **RED-10** - Middleware intercepts requests targeting stale Next.js framework assets (`/_next/static/chunks/*`), returning `410 Gone` with noindex robots headers to preserve search crawl budgets.
+- [x] **RED-11** - Extend the technical SEO validation suite and E2E smoke tests to verify trailing-slash redirects, legacy route redirects/410, and stale assets 410 responses under local preview servers.
 
 ## Future Requirements (Deferred)
 
