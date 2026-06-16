@@ -1,25 +1,18 @@
-# Requirements: v0.0.15 - Technical SEO Redirection Governance & Root Route Normalization
+# Requirements: v0.0.16 - GSC Legacy Redirects & Decommissioned Route Governance
 
 ## Milestone Goal
 
-Eliminate Google double-indexing issues and GSC redirect warnings by enforcing canonical 301 redirects from the root route `/` to the default language prefix `/en/` while guarding against redirection loops for system/build-level subrequests.
-
-## Evidence Base
-
-- Research Summary: [`.planning/research/SUMMARY.md`](/Users/kaka/Dev/u2tool/.planning/research/SUMMARY.md)
-- Stack Reference: [`.planning/research/STACK.md`](/Users/kaka/Dev/u2tool/.planning/research/STACK.md)
-- Architecture Reference: [`.planning/research/ARCHITECTURE.md`](/Users/kaka/Dev/u2tool/.planning/research/ARCHITECTURE.md)
-- Pitfalls Reference: [`.planning/research/PITFALLS.md`](/Users/kaka/Dev/u2tool/.planning/research/PITFALLS.md)
+Clean up over 1,300+ GSC redirect warnings by enforcing trailing slashes on raw paths, setting up correct 410 Gone gates for stale asset/framework paths, and implementing lightweight middleware normalizations for decommissioned legacy blogs and compare-guide URLs.
 
 ## Requirements
 
 ### Active
 
-- [x] **RED-01** - Implement a canonical 301 redirect from the root path `/` to the default language prefixed path `/en/` inside edge middleware.
-- [x] **RED-02** - Preserve all URL query parameters (e.g., UTM tracking codes) during the root path redirection.
-- [x] **RED-03** - Implement a loopback safety guard using specific headers (`cf-worker`, `x-worker-loopback`, User-Agent) to bypass redirection for system-level requests.
-- [x] **RED-04** - Update `public/_routes.json` to explicitly include `"/"` to ensure the edge middleware intercepts root requests in Cloudflare Pages.
-- [x] **RED-05** - Extend technical SEO validation and E2E smoke test scripts to verify the redirection status code (301) and loopback bypass behavior.
+- [ ] **RED-07** - Middleware permanently redirects (301) any localized dynamic HTML path request missing a trailing slash (excluding file-like paths or system paths prefixed with `_`) to its canonical trailing-slash URL preserving query parameters.
+- [ ] **RED-08** - Middleware captures decommissioned `/blog/*` and invalid legacy information paths (e.g. `/zh/blog/...`, `/blog/...`), returning a cacheable `301 Redirect` to their canonical parent category routes (e.g. `/en/tools/` or specific tools hubs) to retain link equity.
+- [ ] **RED-09** - Middleware returns a cacheable `410 Gone` response with `x-robots-tag: noindex, nofollow` headers for decommissioned legacy compare pairs (`/en/tools/compare/...`) and legacy categories under tools (`/en/tools/categories/...`) to signal search engines to drop these obsolete pages from their index.
+- [ ] **RED-10** - Middleware intercepts requests targeting stale Next.js framework assets (`/_next/static/chunks/*`), returning `410 Gone` with noindex robots headers to preserve search crawl budgets.
+- [ ] **RED-11** - Extend the technical SEO validation suite and E2E smoke tests to verify trailing-slash redirects, legacy route redirects/410, and stale assets 410 responses under local preview servers.
 
 ## Future Requirements (Deferred)
 
@@ -35,8 +28,8 @@ Eliminate Google double-indexing issues and GSC redirect warnings by enforcing c
 
 | Requirement ID | Description | Assigned Phase | Status | Plan/Summary Evidence |
 |---|---|---|---|---|
-| RED-01 | Root route 301 redirect | Phase 57 | | |
-| RED-02 | UTM parameters preservation | Phase 57 | | |
-| RED-03 | Loopback safety guard | Phase 57 | | |
-| RED-04 | _routes.json integration | Phase 57 | | |
-| RED-05 | Test suites and E2E validation | Phase 58 | | | |
+| RED-07 | Trailing slash 301 redirection | | | |
+| RED-08 | Legacy Blog redirects | | | |
+| RED-09 | Legacy compare/category 410 | | | |
+| RED-10 | Stale framework asset 410 | | | |
+| RED-11 | Test suites and E2E validation | | | |
