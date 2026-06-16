@@ -270,7 +270,7 @@ async function main(): Promise<void> {
     // E2E Check: Decommissioned blog redirects
     console.log('🔍 E2E Check: Decommissioned blog redirects');
     const blogPage = await browser.newPage();
-    const blogResponse = await blogPage.goto(`${BASE_URL}/zh/blog/some-obsolete-blog-post`, { waitUntil: 'domcontentloaded' });
+    const blogResponse = await blogPage.goto(`${BASE_URL}/zh/blog/some-obsolete-blog-post/`, { waitUntil: 'domcontentloaded' });
     const blogChain = blogResponse.request().redirectChain();
     if (blogChain.length === 0) {
       throw new Error('Expected blog request to redirect, but no redirect chain was found.');
@@ -290,7 +290,7 @@ async function main(): Promise<void> {
     // E2E Check: Gone (410) routes
     console.log('🔍 E2E Check: Decommissioned routes return 410');
     const gonePage1 = await browser.newPage();
-    const response410_1 = await gonePage1.goto(`${BASE_URL}/en/tools/compare/url-parser/dns-lookup`, { waitUntil: 'domcontentloaded' });
+    const response410_1 = await gonePage1.goto(`${BASE_URL}/en/tools/compare/url-parser/dns-lookup/`, { waitUntil: 'domcontentloaded' });
     const status410_1 = response410_1?.status();
     const robots410_1 = response410_1?.headers()['x-robots-tag'];
     const cache410_1 = response410_1?.headers()['cache-control'];

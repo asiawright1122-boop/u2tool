@@ -48,12 +48,12 @@ const checks = [
   { name: 'trailing slash redirect en json formatter', url: '/en/tools/json-formatter', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/tools/json-formatter/' } },
   { name: 'trailing slash redirect zh json formatter', url: '/zh/tools/json-formatter', expect: { status: [301, 302, 307, 308], locationEndsWith: '/zh/tools/json-formatter/' } },
   { name: 'trailing slash redirect with query params', url: '/en/tools/json-formatter?utm_source=newsletter', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/tools/json-formatter/?utm_source=newsletter' } },
-  { name: 'unmapped blog redirect en tools root', url: '/blog/non-existent-blog', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/tools/' } },
-  { name: 'unmapped blog redirect zh tools root', url: '/zh/blog/non-existent-blog', expect: { status: [301, 302, 307, 308], locationEndsWith: '/zh/tools/' } },
-  { name: 'decommissioned category 410', url: '/tools/categories/text', expect: { status: 410 } },
-  { name: 'decommissioned localized category 410', url: '/en/tools/categories/text', expect: { status: 410 } },
-  { name: 'decommissioned compare 410', url: '/tools/compare/url-parser/dns-lookup', expect: { status: 410 } },
-  { name: 'decommissioned localized compare 410', url: '/en/tools/compare/url-parser/dns-lookup', expect: { status: 410 } },
+  { name: 'unmapped blog redirect en tools root', url: '/blog/non-existent-blog/', expect: { status: [301, 302, 307, 308], locationEndsWith: '/en/tools/' } },
+  { name: 'unmapped blog redirect zh tools root', url: '/zh/blog/non-existent-blog/', expect: { status: [301, 302, 307, 308], locationEndsWith: '/zh/tools/' } },
+  { name: 'decommissioned category 410', url: '/tools/categories/text/', expect: { status: 410 } },
+  { name: 'decommissioned localized category 410', url: '/en/tools/categories/text/', expect: { status: 410 } },
+  { name: 'decommissioned compare 410', url: '/tools/compare/url-parser/dns-lookup/', expect: { status: 410 } },
+  { name: 'decommissioned localized compare 410', url: '/en/tools/compare/url-parser/dns-lookup/', expect: { status: 410 } },
   { name: 'stale Next.js static asset 410', url: '/_next/static/chunks/main.js', expect: { status: 410 } },
 ];
 

@@ -84,8 +84,8 @@ async function validateRedirects(): Promise<void> {
     ['/en/tools/json-formatter', '/en/tools/json-formatter/'],
     ['/zh/tools/json-formatter', '/zh/tools/json-formatter/'],
     ['/en/tools/json-formatter?utm_source=newsletter', '/en/tools/json-formatter/?utm_source=newsletter'],
-    ['/blog/some-blog', '/en/tools/'],
-    ['/zh/blog/some-blog', '/zh/tools/'],
+    ['/blog/some-blog/', '/en/tools/'],
+    ['/zh/blog/some-blog/', '/zh/tools/'],
     ['/tools/category/text', '/en/categories/text/'],
     ['/tools/category/text/', '/en/categories/text/'],
     ['/en/tools/category/text', '/en/categories/text/'],
@@ -114,10 +114,10 @@ async function validateRedirects(): Promise<void> {
 
 async function validateDecommissionedGoneRoutes(): Promise<void> {
   const goneRoutes = [
-    '/tools/compare/url-parser/dns-lookup',
-    '/en/tools/compare/url-parser/dns-lookup',
-    '/tools/categories/encoding',
-    '/en/tools/categories/encoding',
+    '/tools/compare/url-parser/dns-lookup/',
+    '/en/tools/compare/url-parser/dns-lookup/',
+    '/tools/categories/encoding/',
+    '/en/tools/categories/encoding/',
     '/_next/static/chunks/main.js',
   ];
 
