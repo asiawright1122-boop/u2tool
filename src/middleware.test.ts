@@ -124,7 +124,7 @@ describe('html edge cache middleware', () => {
     expect(compare.response.status).toBe(301);
     expect(compare.response.headers.get('location')).toBe('/zh/tools/url-parser/');
     expect(unknownBlog.response.status).toBe(301);
-    expect(unknownBlog.response.headers.get('location')).toBe('/en/blog/unknown-post/');
+    expect(unknownBlog.response.headers.get('location')).toBe('/en/tools/');
   });
 
   it('redirects localized site info pages and ranking pages to canonical routes', async () => {
@@ -167,7 +167,7 @@ describe('html edge cache middleware', () => {
 
     expect(response.status).toBe(410);
     expect(response.headers.get('x-robots-tag')).toBe('noindex, nofollow');
-    expect(response.headers.get('cache-control')).toContain('max-age=86400');
+    expect(response.headers.get('cache-control')).toBe('public, max-age=86400, s-maxage=86400');
     expect(response.headers.get('content-type')).toContain('text/plain');
     expect(response.headers.get('x-frame-options')).toBe('DENY');
     expect(text).toBe('Gone');
@@ -343,6 +343,69 @@ describe('html edge cache middleware', () => {
     expect(res3.headers.get('location')).toBe('/en/categories/math/?q=word');
 
     expect(next).not.toHaveBeenCalled();
+  });
+
+  it('excludes static translation bundles (/messages/*) from trailing slash redirection', async () => {
+    const next = vi.fn(async () => new Response('{"welcome":"Welcome"}', {
+      headers: { 'content-type': 'application/json' }
+    }));
+
+    const { response } = await runMiddleware(
+      new Request('https://www.u2tool.com/messages/en.json'),
+      next
+    );
+
+    expect(response.status).toBe(200);
+    expect(response.headers.get('location')).toBeNull();
+    expect(next).toHaveBeenCalled();
+  });
+
+  it('redirects unmapped legacy blog posts to tools root page', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+
+    const unlocalized = await runMiddleware(
+      new Request('https://www.u2tool.com/blog/unmapped-post'),
+      next
+    );
+    const localized = await runMiddleware(
+      new Request('https://www.u2tool.com/zh/blog/unmapped-post'),
+      next
+    );
+
+    expect(unlocalized.response.status).toBe(301);
+    expect(unlocalized.response.headers.get('location')).toBe('/en/tools/');
+
+    expect(localized.response.status).toBe(301);
+    expect(localized.response.headers.get('location')).toBe('/zh/tools/');
+    expect(next).not.toHaveBeenCalled();
+  });
+
+  it('returns gone (410) with noindex for decommissioned compare and category routes', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+
+    const compareUnloc = await runMiddleware(
+      new Request('https://www.u2tool.com/tools/compare/url-parser/dns-lookup'),
+      next
+    );
+    const compareLoc = await runMiddleware(
+      new Request('https://www.u2tool.com/en/tools/compare/url-parser/dns-lookup'),
+      next
+    );
+    const categoryUnloc = await runMiddleware(
+      new Request('https://www.u2tool.com/tools/categories/encoding'),
+      next
+    );
+    const categoryLoc = await runMiddleware(
+      new Request('https://www.u2tool.com/en/tools/categories/encoding'),
+      next
+    );
+
+    for (const res of [compareUnloc, compareLoc, categoryUnloc, categoryLoc]) {
+      expect(res.response.status).toBe(410);
+      expect(res.response.headers.get('x-robots-tag')).toBe('noindex, nofollow');
+      expect(res.response.headers.get('cache-control')).toBe('public, max-age=86400, s-maxage=86400');
+      expect(res.next).not.toHaveBeenCalled();
+    }
   });
 
   describe('root route redirection and loopback guard', () => {
