@@ -1,5 +1,15 @@
 # Milestones
 
+## v0.0.15 Technical SEO Redirection Governance & Root Route Normalization (Shipped: 2026-06-16)
+
+**Phases completed:** 2 phases, 2 plans, 3 tasks
+
+**Key accomplishments:**
+
+- Puppeteer E2E smoke tests and raw HTTP fetch checks validation for bare root route 301 redirection, query parameter preservation, and loopback safety guard bypass behavior
+
+---
+
 ## v0.0.14 Production Release and GSC Recovery Measurement (Shipped: 2026-06-15)
 
 **Phases completed:** 4 phases, 12 plans
