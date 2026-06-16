@@ -203,6 +203,33 @@ async function main(): Promise<void> {
     }
     console.log('✅ E2E Check: Query parameters preserved successfully.');
 
+    // E2E Check: Loopback safety guard bypass behavior
+    console.log('🔍 E2E Check: Loopback safety guard bypass behavior');
+    const loopbackPage = await browser.newPage();
+    await loopbackPage.setCacheEnabled(false);
+    await loopbackPage.setExtraHTTPHeaders({ 'x-worker-loopback': 'true' });
+    
+    const loopbackResponse = await loopbackPage.goto(`${BASE_URL}/`, { waitUntil: 'domcontentloaded' });
+    const loopbackChain = loopbackResponse.request().redirectChain();
+    
+    if (loopbackChain.length === 0) {
+      throw new Error('Expected loopback request to fallback redirect, but no redirect chain was found.');
+    }
+    const loopbackRedirectStatus = loopbackChain[0].response()?.status();
+    const loopbackFinalUrl = loopbackPage.url();
+    await loopbackPage.close();
+
+    if (loopbackRedirectStatus === 301) {
+      throw new Error('Expected loopback request NOT to undergo 301 canonical redirection, but got 301.');
+    }
+    if (![302, 307, 308].includes(loopbackRedirectStatus || 0)) {
+      throw new Error(`Expected loopback fallback redirect status 302/307/308, got ${loopbackRedirectStatus}`);
+    }
+    if (loopbackFinalUrl !== `${BASE_URL}/en/`) {
+      throw new Error(`Expected final destination to be /en/, got ${loopbackFinalUrl}`);
+    }
+    console.log('✅ E2E Check: Loopback safety guard successfully bypassed 301 middleware redirect.');
+
     if (hasFatalErrors) {
       throw new Error(`Fatal browser errors were captured during smoke tests:\n${fatalErrors.join('\n')}`);
     }
