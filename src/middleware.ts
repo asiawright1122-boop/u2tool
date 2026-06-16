@@ -109,8 +109,22 @@ function resolveCanonicalRedirect(request: Request): string | null {
   }
 
   const url = new URL(request.url);
+  const headers = request.headers;
+  const isLoopback =
+    headers.has('cf-worker') ||
+    headers.has('x-worker-loopback') ||
+    /Cloudflare-Workers|u2tool-loopback|astro-engine/i.test(headers.get('user-agent') || '');
+
+  if (isLoopback) {
+    return null;
+  }
+
   if (url.pathname === '/api' || url.pathname.startsWith('/api/')) {
     return null;
+  }
+
+  if (url.pathname === '/') {
+    return `/en/${url.search}`;
   }
 
   const normalizedPath = url.pathname !== '/' && url.pathname.endsWith('/')
