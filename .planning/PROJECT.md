@@ -18,14 +18,17 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 
 ## Current Status
 
-**Current milestone:** `v0.0.15 Technical SEO Redirection Governance & Root Route Normalization`
-**Latest completed milestone:** `v0.0.14 Production Release and GSC Recovery Measurement`
-**Latest archived milestone:** `v0.0.14 Production Release and GSC Recovery Measurement`
-**Previous archived milestone:** `v0.0.13 Popular Tool Flagship Conversion Wave`
-**Current planning state:** Phase 58 is complete. E2E verification and technical SEO validation for the root route redirection are successfully implemented and verified. Milestone v0.0.15 is ready to be audited and completed.
+**Current milestone:** `v0.0.16 GSC Legacy Redirects & Decommissioned Route Governance`
+**Latest completed milestone:** `v0.0.15 Technical SEO Redirection Governance & Root Route Normalization`
+**Latest archived milestone:** `v0.0.15 Technical SEO Redirection Governance & Root Route Normalization`
+**Previous archived milestone:** `v0.0.14 Production Release and GSC Recovery Measurement`
+**Current planning state:** Milestone v0.0.16 started. Defining requirements.
 
 **Latest completed outcomes:**
-- Implemented bare root route `/` 301 redirect to `/en/` preserving query parameters and loopback safety guards (RED-01, RED-02, RED-03, RED-04).
+- Enforced canonical 301 redirect from the bare root path `/` to the default language prefix `/en/` inside edge middleware while preserving all query parameters.
+- Implemented loopback safety guards (headers: `cf-worker`, `x-worker-loopback`, User-Agent) to prevent worker redirection loopbacks.
+- Updated `public/_routes.json` to explicitly intercept root route requests.
+- Extended technical SEO validation and E2E smoke tests validating root redirection and loopback bypass behavior with zero warnings.
 - Converted the remaining high-traffic `PopularUtilityTool` catalog placeholders into real Svelte 5 components across finance, developer/security, generator, social/media, lifestyle, image, and converter clusters.
 - Added English category-level authority/support content for `finance`, `generators`, and `lifestyle` through the shared support-content model.
 - Safely released the latest recovery slice through PR #25 and verified the category support copy on production.
@@ -178,40 +181,54 @@ This is a brownfield repository with a very large content surface, heavy localiz
 
 The current baseline now includes promoted discovery ordering, stable comparison surfaces, AI/GEO exports, category authority support content, runtime-placeholder governance, rendered SEO checks, and a canonical production gate that reflects real Cloudflare server-build output. v0.0.13 closed the highest visible gap in that baseline by converting the remaining popular placeholder pages into real Svelte 5 tool workflows and adding authority/support content for the newly activated English finance, generator, and lifestyle clusters.
 
-## Current Milestone: v0.0.15 Multi-Locale TDK Integrity & Technical SEO Redirection Governance
+## Current Milestone: v0.0.16 GSC Legacy Redirects & Decommissioned Route Governance
 
-**Goal:** Refine multi-locale metadata scanning and edge redirection handling to prevent indexing degradation and resolve search anomalies.
+**Goal:** Clean up over 1,300+ GSC redirect warnings by enforcing trailing slashes on raw paths, setting up correct 410 Gone gates for stale asset/framework paths, and implementing lightweight middleware normalizations for decommissioned legacy blogs and compare-guide URLs.
 
-**Delivered features:**
-- Corrected the TDK integrity namespace lookup path to `.tools`, removing 4,224 false-positives and enforcing zero hard errors.
-- Established strict TDK validation gates: exit code 1 for missing keys/empty values/forbidden placeholders; soft warnings for character bounds.
-- Enabled universal trailing slash 301 redirection rules for non-file HTML routes in middleware.
-- Validated stale Next.js chunk mitigation (`410 Gone` with strict noindex tags).
+**Target features:**
+- Correctly rewrite/redirect all localized dynamic HTML routes without trailing slashes to their canonical trailing-slash URLs inside middleware.
+- Implement strict 410 Gone filters (or 301 redirects to canonical categories) for decommissioned system entry points (`/blog/*`, legacy categories, legacy compare pairs).
+- Refine edge response logic for legacy Next.js static asset patterns (`/_next/static/chunks/*`) to ensure they return `410 Gone` with noindex robots.
+- Integrate these trailing-slash and decommissioned route gates into the automated validation suite.
 
-## Most Recent Milestone: v0.0.14 Production Release and GSC Recovery Measurement
+## Most Recent Milestone: v0.0.15 Technical SEO Redirection Governance & Root Route Normalization
+
+**Goal:** Eliminate Google double-indexing issues and GSC redirect warnings by enforcing canonical 301 redirects from the root route `/` to the default language prefix `/en/` while guarding against redirection loops for system/build-level subrequests.
+
+**Completed features:**
+- Canonical 301 redirect from `/` to `/en/` in edge middleware.
+- Query parameters preservation during redirection.
+- Loopback safety guard (headers: `cf-worker`, `x-worker-loopback`, User-Agent) to bypass redirection.
+- Updated `public/_routes.json` to include `"/"`.
+- Extended validation scripts and E2E smoke tests.
+
+## Earlier Milestone: v0.0.14 Production Release and GSC Recovery Measurement
 
 **Goal:** Recover organic traffic by safely deploying the completed recovery work, verifying live production pages, and measuring repaired cohorts in Google Search Console.
 
 **Completed features:**
-- Produced a deployable release manifest that separates traffic-recovery changes from unrelated dirty-worktree changes.
-- Kept live production route validation green before and after release.
+- Produced a deployable release manifest separating traffic-recovery changes.
+- Kept live production route validation green.
 - Merged and deployed a clean release for the latest category-support recovery slice.
-- Verified live category support content, final converted tool URLs, and frontend safety after release.
-- Built the exact GSC recovery cohort queue and indexing/monitoring rules.
+- Verified live category support content, final converted URLs, and frontend safety.
+- Built GSC recovery cohort queue and indexing/monitoring rules.
 
-**Remaining target features:**
-- Fill 7-day, 14-day, and 28-day GSC recovery measurement checkpoints when post-release exports are available.
-- Run the checkpoint comparator for each export window and record the resulting report.
+## Evolution
 
-## Earlier Milestone: v0.0.13 Popular Tool Flagship Conversion Wave
+This document evolves at phase transitions and milestone boundaries.
 
-**Goal:** Convert the remaining high-traffic `PopularUtilityTool` placeholder tools into real Svelte 5 components with complete locale support and green release gates.
+**After each phase transition** (via `/gsd-transition`):
+1. Requirements invalidated? → Move to Out of Scope with reason
+2. Requirements validated? → Move to Validated with phase reference
+3. New requirements emerged? → Add to Active
+4. Decisions to log? → Add to Key Decisions
+5. "What This Is" still accurate? → Update if drifted
 
-**Delivered features:**
-- Converted all remaining catalog `PopularUtilityTool` entries to real tool components, including the final passport photo and CSV/vCard converter slice.
-- Added shared category support content and SEO-governed tests for English `finance`, `generators`, and `lifestyle`.
-- Preserved GSC loss metadata, rendered SEO, runtime-placeholder, runtime-integrity, and frontend-safety validation around the recovery wave.
-- Closed with green build, check, runtime, SEO, placeholder-regression, and no-internal-reasoning frontend safety evidence.
+**After each milestone** (via `/gsd-complete-milestone`):
+1. Full review of all sections
+2. Core Value check — still the right priority?
+3. Audit Out of Scope — reasons still valid?
+4. Update Context with current state
 
 ---
-*Last updated: 2026-06-15 after completing Milestone v0.0.15*
+*Last updated: 2026-06-16 after starting Milestone v0.0.16*

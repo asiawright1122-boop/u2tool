@@ -1,14 +1,14 @@
 ---
 gsd_state_version: 1.0
-milestone: v0.0.15
-milestone_name: — Technical SEO Redirection Governance & Root Route Normalization
-status: v0.0.15 milestone complete
-last_updated: "2026-06-16T02:32:51.737Z"
+milestone: v0.0.16
+milestone_name: — GSC Legacy Redirects & Decommissioned Route Governance
+status: Defining requirements
+last_updated: "2026-06-16T02:42:00.000Z"
 progress:
-  total_phases: 2
-  completed_phases: 2
-  total_plans: 2
-  completed_plans: 2
+  total_phases: 0
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
 ---
 
 # Project State
@@ -23,8 +23,10 @@ See: .planning/PROJECT.md (updated 2026-06-09)
 
 ## Current Position
 
-Phase: 58 (technical-seo-validation-and-e2e-testing) — COMPLETE
-Plan: 1 of 1
+Phase: Not started (defining requirements)
+Plan: —
+Status: Defining requirements
+Last activity: 2026-06-16 — Milestone v0.0.16 started
 
 ## Milestone Context
 
