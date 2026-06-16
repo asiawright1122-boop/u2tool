@@ -66,11 +66,11 @@
 **Goal:** Implement trailing-slash normalization, decommissioning gates for `/blog/*` redirects, legacy comparisons/categories 410, and Next.js stale chunks 410 in the Cloudflare middleware.
 **Requirements:** RED-07, RED-08, RED-09, RED-10
 
-- [ ] Phase 59: Redirection & 410 Gone Route Governance
-  - [ ] 59-01: Normalize dynamic localized HTML path requests missing a trailing slash with a 301 redirect to canonical trailing-slash URLs while preserving query parameters.
-  - [ ] 59-02: Redirect decommissioned legacy blog URLs (`/blog/*`, `/zh/blog/*`, etc.) to parent category paths (e.g. `/zh/tools/` or `/en/tools/`).
-  - [ ] 59-03: Filter decommissioned comparison pairs (`/en/tools/compare/...`) and categories (`/en/tools/categories/...`) returning `410 Gone` and `x-robots-tag: noindex, nofollow` headers.
-  - [ ] 59-04: Filter stale Next.js assets (`/_next/static/chunks/*`) returning `410 Gone` and `x-robots-tag: noindex, nofollow` headers.
+- [x] Phase 59: Redirection & 410 Gone Route Governance
+  - [x] 59-01: Normalize dynamic localized HTML path requests missing a trailing slash with a 301 redirect to canonical trailing-slash URLs while preserving query parameters.
+  - [x] 59-02: Redirect decommissioned legacy blog URLs (`/blog/*`, `/zh/blog/*`, etc.) to parent category paths (e.g. `/zh/tools/` or `/en/tools/`).
+  - [x] 59-03: Filter decommissioned comparison pairs (`/en/tools/compare/...`) and categories (`/en/tools/categories/...`) returning `410 Gone` and `x-robots-tag: noindex, nofollow` headers.
+  - [x] 59-04: Filter stale Next.js assets (`/_next/static/chunks/*`) returning `410 Gone` and `x-robots-tag: noindex, nofollow` headers.
 
 **Success Criteria:**
 - Any localized HTML route request missing a trailing slash (excluding files and system `_` paths) triggers a permanent (301) redirect to the path with a trailing slash, and UTM parameters remain intact.

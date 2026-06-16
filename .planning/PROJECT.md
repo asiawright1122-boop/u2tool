@@ -22,7 +22,7 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 **Latest completed milestone:** `v0.0.15 Technical SEO Redirection Governance & Root Route Normalization`
 **Latest archived milestone:** `v0.0.15 Technical SEO Redirection Governance & Root Route Normalization`
 **Previous archived milestone:** `v0.0.14 Production Release and GSC Recovery Measurement`
-**Current planning state:** Milestone v0.0.16 started. Defining requirements.
+**Current planning state:** Milestone v0.0.16 started. Roadmap created.
 
 **Latest completed outcomes:**
 - Enforced canonical 301 redirect from the bare root path `/` to the default language prefix `/en/` inside edge middleware while preserving all query parameters.
