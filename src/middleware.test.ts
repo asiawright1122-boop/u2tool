@@ -1,5 +1,6 @@
-import { afterEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { Mock } from 'vitest';
+import { MEMORY_CACHE } from './lib/gsc-recovery-redirects';
 
 vi.mock('cloudflare:workers', () => ({
   env: {},
@@ -509,6 +510,10 @@ describe('html edge cache middleware', () => {
   });
 
   describe('GSC recovery redirects', () => {
+    beforeEach(() => {
+      MEMORY_CACHE.clear();
+    });
+
     it('redirects GSC excluded URLs to their new routes with 301 status', async () => {
       const next = vi.fn(async () => new Response('should not run'));
       const { response } = await runMiddleware(
@@ -561,8 +566,10 @@ describe('html edge cache middleware', () => {
       const next = vi.fn(async () => new Response('should not run'));
       const mockKv = {
         get: vi.fn(async (key: string) => {
-          if (key === '/dynamic-old-path') {
-            return '/tools/dynamic-new-target';
+          if (key === 'gsc-recovery-rules') {
+            return JSON.stringify({
+              '/dynamic-old-path': '/tools/dynamic-new-target',
+            });
           }
           return null;
         }),
@@ -582,13 +589,15 @@ describe('html edge cache middleware', () => {
 
       expect(response.status).toBe(301);
       expect(response.headers.get('location')).toBe('/en/tools/dynamic-new-target/');
-      expect(mockKv.get).toHaveBeenCalledWith('/dynamic-old-path');
+      expect(mockKv.get).toHaveBeenCalledWith('gsc-recovery-rules');
     });
 
     it('utilizes in-memory cache to prevent redundant KV lookups', async () => {
       const next = vi.fn(async () => new Response('should not run'));
       const mockKv = {
-        get: vi.fn(async () => '/tools/cached-target'),
+        get: vi.fn(async () => JSON.stringify({
+          '/cache-test-path': '/tools/cached-target',
+        })),
       };
 
       // First request (hits KV)
@@ -648,7 +657,32 @@ describe('html edge cache middleware', () => {
       // Should fall back to static mapping in gsc-redirects.json
       expect(response.status).toBe(301);
       expect(response.headers.get('location')).toBe('/en/tools/typing-speed-test/');
-      expect(mockKv.get).toHaveBeenCalledWith('/typing-test');
+      expect(mockKv.get).toHaveBeenCalledWith('gsc-recovery-rules');
+    });
+
+    it('falls back gracefully to static JSON redirects on JSON parse error', async () => {
+      const next = vi.fn(async () => new Response('should not run'));
+      const mockKv = {
+        get: vi.fn(async () => 'invalid-json-string{]'),
+      };
+
+      const { response } = await runMiddleware(
+        new Request('https://www.u2tool.com/typing-test'),
+        next,
+        {
+          runtime: {
+            env: {
+              GSC_REDIRECTS: mockKv,
+            },
+          },
+        }
+      );
+
+      // Should fall back to static mapping in gsc-redirects.json
+      expect(response.status).toBe(301);
+      expect(response.headers.get('location')).toBe('/en/tools/typing-speed-test/');
+      expect(mockKv.get).toHaveBeenCalledWith('gsc-recovery-rules');
     });
   });
 });
+

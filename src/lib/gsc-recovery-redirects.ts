@@ -2,7 +2,7 @@ import { isValidLocale } from './i18n';
 import STATIC_REDIRECTS from '../config/gsc-redirects.json';
 
 // In-memory cache for KV redirects to protect CPU time and prevent cache penetration
-const MEMORY_CACHE = new Map<string, { value: string | null; expiry: number }>();
+export const MEMORY_CACHE = new Map<string, { value: any; expiry: number }>();
 const CACHE_TTL = 60000; // 60 seconds
 
 /**
@@ -37,18 +37,33 @@ export async function resolveGscRecoveryRedirect(urlPath: string, kv?: { get: (k
 
   // 3. Try reading from Cloudflare KV redirects database if available
   if (kv) {
-    const cached = MEMORY_CACHE.get(lookupKey);
+    const cached = MEMORY_CACHE.get('__CF_KV_RULES_TABLE__');
+    let rules: Record<string, string> | null = null;
+
     if (cached && cached.expiry > Date.now()) {
-      matchedTarget = cached.value;
+      rules = cached.value;
     } else {
       try {
-        const value = await kv.get(lookupKey);
-        MEMORY_CACHE.set(lookupKey, { value, expiry: Date.now() + CACHE_TTL });
-        matchedTarget = value;
+        const rawValue = await kv.get('gsc-recovery-rules');
+        if (rawValue) {
+          try {
+            rules = JSON.parse(rawValue);
+          } catch (e) {
+            console.error('Failed to parse gsc-recovery-rules JSON:', e);
+            rules = {};
+          }
+        } else {
+          rules = {};
+        }
+        MEMORY_CACHE.set('__CF_KV_RULES_TABLE__', { value: rules, expiry: Date.now() + CACHE_TTL });
       } catch (err) {
-        console.error(`GSC Redirect KV lookup error for ${lookupKey}:`, err);
-        matchedTarget = null;
+        console.error('GSC Redirect KV lookup error for gsc-recovery-rules:', err);
+        rules = null;
       }
+    }
+
+    if (rules) {
+      matchedTarget = rules[lookupKey] || null;
     }
   }
 
@@ -74,4 +89,5 @@ export async function resolveGscRecoveryRedirect(urlPath: string, kv?: { get: (k
 
   return finalPath;
 }
+
 

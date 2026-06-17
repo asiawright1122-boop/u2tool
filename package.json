@@ -18,6 +18,7 @@
     "report:content-trust": "node scripts/validation/content-trust-audit.mjs",
     "report:gsc-coverage": "node --import tsx/esm scripts/seo/gsc-coverage-report.ts",
     "gsc:generate-mappings": "node --import tsx/esm scripts/gsc-recovery/generate-mappings.ts",
+    "gsc-recovery:publish": "node --import tsx/esm scripts/gsc-recovery/publish-mappings.ts",
     "report:gsc-drilldown": "node --import tsx/esm scripts/seo/gsc-drilldown-url-report.ts",
     "report:gsc-recovery": "node --import tsx/esm scripts/seo/gsc-recovery-report.ts",
     "report:gsc-validation-matrix": "node --import tsx/esm scripts/seo/gsc-validation-action-matrix.ts",

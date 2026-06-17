@@ -48,7 +48,7 @@
 
 本里程碑致力于建立自动化往 Cloudflare KV 写入最新重定向映射的同步与发布机制，打通从 404 URL 生成配对到边缘层上线的 E2E 自动化链条。
 
-- [ ] **Phase 72: E2E Cloudflare KV Write Integration** (Requirements: `GEO-06`)
+- [x] **Phase 72: E2E Cloudflare KV Write Integration** (Requirements: `GEO-06`)
 - [ ] **Phase 73: KV Pipeline Integration Validation** (Requirements: `GEO-07`)
 
 ### Phase 72: E2E Cloudflare KV Write Integration
