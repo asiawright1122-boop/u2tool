@@ -1,6 +1,37 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import http from 'node:http';
+import { spawn, type ChildProcess } from 'node:child_process';
+
+function checkServerActive(port: number): Promise<boolean> {
+  return new Promise((resolve) => {
+    const req = http.get(`http://localhost:${port}/`, { timeout: 1500 }, (res) => {
+      resolve(true);
+      res.resume();
+    });
+
+    req.on('error', () => {
+      resolve(false);
+    });
+
+    req.on('timeout', () => {
+      req.destroy();
+      resolve(false);
+    });
+  });
+}
+
+async function waitForServer(port: number, maxAttempts = 15, delay = 1000): Promise<boolean> {
+  for (let i = 0; i < maxAttempts; i++) {
+    const active = await checkServerActive(port);
+    if (active) {
+      return true;
+    }
+    await new Promise((resolve) => setTimeout(resolve, delay));
+  }
+  return false;
+}
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -241,84 +272,117 @@ async function main() {
     console.log('\n--- Stage 2: Online HTTP Response Check ---');
     console.log(`Simulated Server Base URL: ${FETCH_BASE_URL}`);
 
-    // Sample URLs for online check to avoid overloading simulated worker limits
-    const priorityUrls = allUrls.filter(item => item.sitemap === 'sitemap-priority.xml' || item.sitemap === 'sitemap-pages.xml');
-    const toolsUrls = allUrls.filter(item => item.sitemap === 'sitemap-tools.xml');
+    let serverProcess: ChildProcess | null = null;
+    let isTempServer = false;
 
-    // Group tools by locale
-    const toolsByLocale: Record<string, typeof toolsUrls> = {};
-    for (const locale of LOCALES) {
-      toolsByLocale[locale] = [];
-    }
+    const url = new URL(FETCH_BASE_URL);
+    const port = url.port ? Number(url.port) : 80;
+    const isLocal = url.hostname === 'localhost' || url.hostname === '127.0.0.1';
 
-    for (const item of toolsUrls) {
-      const locale = getLocaleFromUrl(item.url);
-      if (toolsByLocale[locale]) {
-        toolsByLocale[locale].push(item);
+    if (isLocal) {
+      const active = await checkServerActive(port);
+      if (!active) {
+        console.log(`📡 Local server not running on port ${port}. Spawning a temporary server...`);
+        serverProcess = spawn('npx', ['astro', 'preview', '--port', String(port)], {
+          stdio: 'ignore',
+          shell: process.platform === 'win32',
+        });
+        isTempServer = true;
+        const ready = await waitForServer(port);
+        if (!ready) {
+          console.error(`❌ Failed to start temporary Astro preview server on port ${port}.`);
+          if (serverProcess) serverProcess.kill('SIGTERM');
+          process.exit(1);
+        }
+        console.log(`📡 Temporary Astro preview server successfully launched.`);
       }
     }
 
-    const sampledToolsUrls: typeof toolsUrls = [];
-    for (const locale of LOCALES) {
-      const localeTools = toolsByLocale[locale] || [];
-      const sampled = selectEvenly(localeTools, MAX_TOOLS_SAMPLED_PER_LOCALE);
-      sampledToolsUrls.push(...sampled);
-      console.log(`Locale [${locale}]: sampled ${sampled.length} of ${localeTools.length} tools URLs.`);
-    }
+    try {
+      // Sample URLs for online check to avoid overloading simulated worker limits
+      const priorityUrls = allUrls.filter(item => item.sitemap === 'sitemap-priority.xml' || item.sitemap === 'sitemap-pages.xml');
+      const toolsUrls = allUrls.filter(item => item.sitemap === 'sitemap-tools.xml');
 
-    const onlineCheckList = [...priorityUrls, ...sampledToolsUrls];
-    console.log(`\nTotal URLs selected for online check: ${onlineCheckList.length} (Priority/Pages: 100%, Tools: sampled)`);
+      // Group tools by locale
+      const toolsByLocale: Record<string, typeof toolsUrls> = {};
+      for (const locale of LOCALES) {
+        toolsByLocale[locale] = [];
+      }
 
-    let checkFailures = 0;
-
-    const validateOnlineUrl = async (item: typeof onlineCheckList[0]) => {
-      // Map canonical host to FETCH_BASE_URL for testing
-      const targetUrl = item.url.replace(CANONICAL_BASE_URL, FETCH_BASE_URL);
-      try {
-        // Fetch HEAD first to check status and check for redirects
-        const response = await fetchWithRetry(targetUrl, { method: 'HEAD', redirect: 'manual' });
-        
-        if (response.status >= 300 && response.status < 400) {
-          const loc = response.headers.get('location') || '(missing location)';
-          console.error(`❌ HTTP Redirect (${response.status}) on URL: ${item.url} -> Location: ${loc}`);
-          checkFailures += 1;
-          return;
+      for (const item of toolsUrls) {
+        const locale = getLocaleFromUrl(item.url);
+        if (toolsByLocale[locale]) {
+          toolsByLocale[locale].push(item);
         }
+      }
 
-        if (response.status !== 200) {
-          console.error(`❌ HTTP Status (${response.status}) on URL: ${item.url}`);
-          checkFailures += 1;
-          return;
-        }
+      const sampledToolsUrls: typeof toolsUrls = [];
+      for (const locale of LOCALES) {
+        const localeTools = toolsByLocale[locale] || [];
+        const sampled = selectEvenly(localeTools, MAX_TOOLS_SAMPLED_PER_LOCALE);
+        sampledToolsUrls.push(...sampled);
+        console.log(`Locale [${locale}]: sampled ${sampled.length} of ${localeTools.length} tools URLs.`);
+      }
 
-        // Fetch GET to scan body for placeholders
-        const contentType = response.headers.get('content-type') || '';
-        if (contentType.includes('text/html')) {
-          const { response: getResponse, text: html } = await fetchTextWithRetry(targetUrl, { redirect: 'manual' });
-          if (getResponse.status !== 200) {
-            console.error(`❌ HTTP GET Status (${getResponse.status}) on URL: ${item.url}`);
+      const onlineCheckList = [...priorityUrls, ...sampledToolsUrls];
+      console.log(`\nTotal URLs selected for online check: ${onlineCheckList.length} (Priority/Pages: 100%, Tools: sampled)`);
+
+      let checkFailures = 0;
+
+      const validateOnlineUrl = async (item: typeof onlineCheckList[0]) => {
+        // Map canonical host to FETCH_BASE_URL for testing
+        const targetUrl = item.url.replace(CANONICAL_BASE_URL, FETCH_BASE_URL);
+        try {
+          // Fetch HEAD first to check status and check for redirects
+          const response = await fetchWithRetry(targetUrl, { method: 'HEAD', redirect: 'manual' });
+          
+          if (response.status >= 300 && response.status < 400) {
+            const loc = response.headers.get('location') || '(missing location)';
+            console.error(`❌ HTTP Redirect (${response.status}) on URL: ${item.url} -> Location: ${loc}`);
             checkFailures += 1;
             return;
           }
 
-          if (html.includes('MISSING:') || html.includes('${BASE_URL}')) {
-            console.error(`❌ Placeholder Leaked on URL: ${item.url} (Body contains 'MISSING:' or '\${BASE_URL}')`);
+          if (response.status !== 200) {
+            console.error(`❌ HTTP Status (${response.status}) on URL: ${item.url}`);
             checkFailures += 1;
+            return;
           }
+
+          // Fetch GET to scan body for placeholders
+          const contentType = response.headers.get('content-type') || '';
+          if (contentType.includes('text/html')) {
+            const { response: getResponse, text: html } = await fetchTextWithRetry(targetUrl, { redirect: 'manual' });
+            if (getResponse.status !== 200) {
+              console.error(`❌ HTTP GET Status (${getResponse.status}) on URL: ${item.url}`);
+              checkFailures += 1;
+              return;
+            }
+
+            if (html.includes('MISSING:') || html.includes('${BASE_URL}')) {
+              console.error(`❌ Placeholder Leaked on URL: ${item.url} (Body contains 'MISSING:' or '\${BASE_URL}')`);
+              checkFailures += 1;
+            }
+          }
+        } catch (err) {
+          console.error(`❌ Network error fetching ${item.url} (${targetUrl}): ${err instanceof Error ? err.message : String(err)}`);
+          checkFailures += 1;
         }
-      } catch (err) {
-        console.error(`❌ Network error fetching ${item.url} (${targetUrl}): ${err instanceof Error ? err.message : String(err)}`);
-        checkFailures += 1;
+      };
+
+      await mapWithConcurrency(onlineCheckList, validateOnlineUrl);
+
+      if (checkFailures > 0) {
+        console.error(`\n❌ Online HTTP check failed. Found ${checkFailures} online check errors.`);
+        process.exit(1);
       }
-    };
-
-    await mapWithConcurrency(onlineCheckList, validateOnlineUrl);
-
-    if (checkFailures > 0) {
-      console.error(`\n❌ Online HTTP check failed. Found ${checkFailures} online check errors.`);
-      process.exit(1);
+      console.log(`✅ Online health checks passed successfully on all ${onlineCheckList.length} checked URLs!`);
+    } finally {
+      if (serverProcess) {
+        console.log('🛑 Shutting down temporary Astro preview server...');
+        serverProcess.kill('SIGTERM');
+      }
     }
-    console.log(`✅ Online health checks passed successfully on all ${onlineCheckList.length} checked URLs!`);
   }
 
   console.log('\n✅ All sitemap validation gates passed successfully!');

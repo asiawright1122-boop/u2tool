@@ -1,28 +1,28 @@
 {
-  "detailed_description": "Calculadora de una repetición máxima — Estima tu 1RM con fórmulas comunes de fuerza a partir del peso y las repeticiones. Revisa el resultado calculado o generado.",
+  "detailed_description": "La Calculadora de una Repetición Máxima (1RM) estima su capacidad límite de levantamiento en fuerza a partir del peso levantado y las repeticiones. Muestra los cálculos de Epley, Brzycki y Lombardi, y promedia los tres para proporcionar una cifra de referencia rápida, evitando tener que calcular cada fórmula manualmente. Use el resultado con precaución y dé prioridad absoluta a la técnica de levantamiento segura.",
   "usage_steps": [
-    "Introduce los valores requeridos en el formulario",
-    "Revisa el resultado calculado o generado",
-    "Copia el resultado o usa la vista previa mostrada",
-    "Ajusta los valores para comparar otro escenario"
+    "Seleccione la unidad de medida (kilogramos o libras)",
+    "Ingrese el peso levantado y el número de repeticiones completadas en su serie de entrenamiento",
+    "Revise la fuerza promedio estimada 1RM y los desgloses individuales de Epley, Brzycki y Lombardi",
+    "Copie el resultado o ajuste el peso y repeticiones para simular otros registros de entrenamiento"
   ],
   "usage_examples": [
-    "Úsalo durante una revisión o planificación rápida",
-    "Compara escenarios sin crear una hoja de cálculo",
-    "Crea resultados listos para informes, campañas o notas"
+    "Estime su fuerza máxima teórica a partir de una serie de trabajo de 5 repeticiones",
+    "Compare cómo las diferentes combinaciones de repeticiones afectan el promedio de las fórmulas",
+    "Planifique intensidades de cargas de entrenamiento basadas en porcentajes sin correr el riesgo de probar un 1RM real"
   ],
   "faqs": [
     {
-      "question": "¿Calculadora de una repetición máxima es gratis?",
-      "answer": "Sí. La herramienta es gratuita en el navegador y no requiere cuenta."
+      "question": "¿La Calculadora de 1RM es gratuita?",
+      "answer": "Sí. Se ejecuta completamente en el navegador y no requiere cuenta ni registros."
     },
     {
-      "question": "¿La herramienta sube mis datos?",
-      "answer": "No. El cálculo o la generación se ejecuta localmente en el navegador."
+      "question": "¿Qué fórmulas de fuerza están incluidas?",
+      "answer": "Incluye las estimaciones de Epley, Brzycki y Lombardi, junto con el promedio ponderado de las tres."
     },
     {
-      "question": "¿Hay alguna nota importante?",
-      "answer": "Usa el resultado como ayuda práctica y revísalo antes de publicarlo o depender de él."
+      "question": "¿Es seguro entrenar directamente con el 1RM estimado?",
+      "answer": "Debe tratarse solo como un estimado teórico. La fatiga del día, la técnica, el tipo de ejercicio y su historial de entrenamiento afectan el rendimiento real de forma segura. Use soportes de seguridad."
     }
   ]
 }

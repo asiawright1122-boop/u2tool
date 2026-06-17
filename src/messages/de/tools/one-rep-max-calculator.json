@@ -1,28 +1,28 @@
 {
-  "detailed_description": "One-Rep-Max-Rechner — Schätze dein 1RM mit gängigen Kraftformeln aus Gewicht und Wiederholungen. Prüfe das berechnete oder generierte Ergebnis.",
+  "detailed_description": "Der One-Rep-Max-Rechner (1RM) schätzt Ihre maximale Kraftleistung für eine Wiederholung basierend auf dem bewältigten Gewicht und den Wiederholungen eines Arbeitssatzes. Das Tool berechnet die Werte nach Epley, Brzycki und Lombardi und ermittelt den Durchschnitt, damit Sie Ihre Kraftwerte ohne manuelles Rechnen vergleichen können. Nutzen Sie das Ergebnis vorsichtig und priorisieren Sie stets eine sichere Bewegungsausführung.",
   "usage_steps": [
-    "Gib die erforderlichen Werte in das Formular ein",
-    "Prüfe das berechnete oder generierte Ergebnis",
-    "Kopiere das Ergebnis oder nutze die Vorschau",
-    "Passe Eingaben an, um ein weiteres Szenario zu vergleichen"
+    "Wählen Sie die Gewichtseinheit (Kilogramm oder Pfund) aus",
+    "Geben Sie das bewegte Gewicht und die Anzahl der geschafften Wiederholungen in Ihrem Arbeitssatz ein",
+    "Prüfen Sie das berechnete durchschnittliche 1RM sowie die Einzelwerte nach Epley, Brzycki und Lombardi",
+    "Kopieren Sie das Ergebnis oder ändern Sie Gewicht und Wiederholungen, um andere Sätze zu vergleichen"
   ],
   "usage_examples": [
-    "Nutze das Tool für schnelle Planung oder Prüfung",
-    "Vergleiche Szenarien ohne Tabellenkalkulation",
-    "Erstelle kopierfertige Ergebnisse für Berichte, Kampagnen oder Notizen"
+    "Schätzen Sie Ihre Maximalkraft basierend auf einem Arbeitssatz mit 5 Wiederholungen",
+    "Vergleichen Sie, wie unterschiedliche Wiederholungszahlen den errechneten Formeldurchschnitt beeinflussen",
+    "Planen Sie Ihre Trainingsgewichte prozentual ohne das Risiko eines echten Maximalkraftversuchs"
   ],
   "faqs": [
     {
-      "question": "Ist One-Rep-Max-Rechner kostenlos?",
-      "answer": "Ja. Das Tool ist im Browser kostenlos nutzbar und benötigt kein Konto."
+      "question": "Ist der One-Rep-Max-Rechner kostenlos?",
+      "answer": "Ja. Das Tool läuft vollständig im Browser und kann ohne Anmeldung dauerhaft kostenlos genutzt werden."
     },
     {
-      "question": "Werden meine Eingaben hochgeladen?",
-      "answer": "Nein. Die Berechnung oder Generierung läuft lokal im Browser."
+      "question": "Welche Kraftformeln werden berücksichtigt?",
+      "answer": "Er ermittelt die Werte nach den klassischen Formeln von Epley, Brzycki und Lombardi und stellt den Durchschnitt der drei Formeln bereit."
     },
     {
-      "question": "Gibt es wichtige Hinweise?",
-      "answer": "Nutze das Ergebnis als praktische Hilfe und prüfe es, bevor du es veröffentlichst oder dich darauf verlässt."
+      "question": "Kann ich das berechnete 1RM direkt als Trainingsgewicht nutzen?",
+      "answer": "Es handelt sich um einen rein theoretischen Schätzwert. Tagesform, Technik und Übungsauswahl beeinflussen die Kraftleistung dynamisch. Trainieren Sie stets mit Sicherheitsablagen."
     }
   ]
 }

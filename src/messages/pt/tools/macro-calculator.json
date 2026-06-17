@@ -1,28 +1,28 @@
 {
-  "detailed_description": "Calculadora de macros — Calcule calorias diárias e metas de proteína, carboidratos e gordura com base nos seus dados e objetivo. Revise o resultado calculado ou gerado.",
+  "detailed_description": "A Calculadora de Macronutrientes projeta as necessidades de calorias diárias e a correspondente divisão ideal de proteínas, carboidratos e gorduras. O sistema calcula o BMR e o TDEE, e a seguir aplica uma modulação de calorias baseada em sua meta de queima de gordura, manutenção ou ganho de peso. Os valores de macros são apresentados em gramas para facilitar sua rotina. Utilize este resultado como auxílio de planejamento, não como orientação médica ou clínica.",
   "usage_steps": [
-    "Digite os valores necessários no formulário",
-    "Revise o resultado calculado ou gerado",
-    "Copie o resultado ou use a prévia exibida",
-    "Ajuste os valores para comparar outro cenário"
+    "Escolha o sistema métrico ou imperial e digite seu peso, altura, idade e sexo",
+    "Selecione o nível de atividade física habitual e seu principal objetivo fitness",
+    "Analise a meta total de calorias diárias e a respectiva divisão de macros em gramas e porcentagens",
+    "Copie o sumário gerado ou altere os objetivos para avaliar diferentes cardápios e proporções"
   ],
   "usage_examples": [
-    "Use em uma revisão ou planejamento rápido",
-    "Compare cenários sem criar uma planilha",
-    "Crie resultados prontos para relatórios, campanhas ou notas"
+    "Compare a divisão de macronutrientes da sua fase de manutenção com a fase de perda de gordura",
+    "Determine a quantidade de gramas diárias de carboidratos e gorduras para um perfil moderadamente ativo",
+    "Alterne entre metas de ganho de massa seca ou ganho bruto para entender a oscilação de calorias e macros"
   ],
   "faqs": [
     {
-      "question": "Calculadora de macros é grátis?",
-      "answer": "Sim. A ferramenta é gratuita no navegador e não exige conta."
+      "question": "A calculadora de macronutrientes é gratuita?",
+      "answer": "Sim. O processamento ocorre de forma inteiramente local no seu browser e não requer nenhum tipo de login."
     },
     {
-      "question": "A ferramenta envia meus dados?",
-      "answer": "Não. O cálculo ou a geração roda localmente no navegador."
+      "question": "Quais metodologias são aplicadas?",
+      "answer": "Ela estima a taxa de metabolismo basal (BMR) a partir de seus dados físicos, aplica o multiplicador de atividade para obter o TDEE, ajusta conforme o objetivo e divide o total de calorias em gramas de macros."
     },
     {
-      "question": "Há alguma observação importante?",
-      "answer": "Use o resultado como apoio prático e revise-o antes de publicar ou depender dele."
+      "question": "Esta distribuição constitui prescrição clínica?",
+      "answer": "Não. Trata-se de uma simulação educativa para fins de condicionamento físico. Consulte médicos e nutricionistas licenciados para dietoterapia ou restrições de saúde específicas."
     }
   ]
 }

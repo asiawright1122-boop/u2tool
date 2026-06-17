@@ -1,4 +1,7 @@
-const FETCH_BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
+import http from 'node:http';
+import { spawn, type ChildProcess } from 'node:child_process';
+
+const FETCH_BASE_URL = (process.env.PROD_BASE_URL || 'http://localhost:8787').replace(/\/+$/, '');
 const CANONICAL_BASE_URL = (
   process.env.CANONICAL_BASE_URL ||
   process.env.PUBLIC_SITE_URL ||
@@ -6,6 +9,36 @@ const CANONICAL_BASE_URL = (
 ).replace(/\/+$/, '');
 const MAX_LINKS = Number(process.env.INTERNAL_LINK_AUDIT_MAX_LINKS || 500);
 const FETCH_ATTEMPTS = Number(process.env.INTERNAL_LINK_AUDIT_FETCH_ATTEMPTS || 5);
+
+function checkServerActive(port: number): Promise<boolean> {
+  return new Promise((resolve) => {
+    const req = http.get(`http://localhost:${port}/`, { timeout: 1500 }, (res) => {
+      resolve(true);
+      res.resume();
+    });
+
+    req.on('error', () => {
+      resolve(false);
+    });
+
+    req.on('timeout', () => {
+      req.destroy();
+      resolve(false);
+    });
+  });
+}
+
+async function waitForServer(port: number, maxAttempts = 15, delay = 1000): Promise<boolean> {
+  for (let i = 0; i < maxAttempts; i++) {
+    const active = await checkServerActive(port);
+    if (active) {
+      return true;
+    }
+    await new Promise((resolve) => setTimeout(resolve, delay));
+  }
+  return false;
+}
+
 
 const seedPaths = [
   '/en/',
@@ -225,39 +258,73 @@ async function validateInternalLink(sourcePath: string, href: string): Promise<L
 }
 
 async function main(): Promise<void> {
-  const linksBySource = new Map<string, string[]>();
-  for (const seedPath of seedPaths) {
-    const links = await fetchSeedLinks(seedPath);
-    linksBySource.set(seedPath, links);
-    console.log(`OK  Seed ${seedPath} exposed ${links.length} internal crawlable links`);
+  let serverProcess: ChildProcess | null = null;
+  let isTempServer = false;
+
+  const url = new URL(FETCH_BASE_URL);
+  const port = url.port ? Number(url.port) : 80;
+  const isLocal = url.hostname === 'localhost' || url.hostname === '127.0.0.1';
+
+  if (isLocal) {
+    const active = await checkServerActive(port);
+    if (!active) {
+      console.log(`📡 Local server not running on port ${port}. Spawning a temporary server...`);
+      serverProcess = spawn('npx', ['astro', 'preview', '--port', String(port)], {
+        stdio: 'ignore',
+        shell: process.platform === 'win32',
+      });
+      isTempServer = true;
+      const ready = await waitForServer(port);
+      if (!ready) {
+        console.error(`❌ Failed to start temporary Astro preview server on port ${port}.`);
+        if (serverProcess) serverProcess.kill('SIGTERM');
+        process.exitCode = 1;
+        return;
+      }
+      console.log(`📡 Temporary Astro preview server successfully launched.`);
+    }
   }
 
-  const pairsByHref = new Map<string, { sourcePath: string; href: string }>();
-  for (const [sourcePath, links] of linksBySource.entries()) {
-    for (const href of links) {
-      if (!pairsByHref.has(href)) {
-        pairsByHref.set(href, { sourcePath, href });
+  try {
+    const linksBySource = new Map<string, string[]>();
+    for (const seedPath of seedPaths) {
+      const links = await fetchSeedLinks(seedPath);
+      linksBySource.set(seedPath, links);
+      console.log(`OK  Seed ${seedPath} exposed ${links.length} internal crawlable links`);
+    }
+
+    const pairsByHref = new Map<string, { sourcePath: string; href: string }>();
+    for (const [sourcePath, links] of linksBySource.entries()) {
+      for (const href of links) {
+        if (!pairsByHref.has(href)) {
+          pairsByHref.set(href, { sourcePath, href });
+        }
       }
     }
-  }
 
-  const pairs = Array.from(pairsByHref.values()).slice(0, MAX_LINKS);
+    const pairs = Array.from(pairsByHref.values()).slice(0, MAX_LINKS);
 
-  const findings: LinkFinding[] = [];
-  for (const pair of pairs) {
-    findings.push(...await validateInternalLink(pair.sourcePath, pair.href));
-  }
-
-  if (findings.length > 0) {
-    for (const finding of findings.slice(0, 50)) {
-      console.log(`FAIL ${finding.sourcePath} -> ${finding.href}: ${finding.reason}`);
+    const findings: LinkFinding[] = [];
+    for (const pair of pairs) {
+      findings.push(...await validateInternalLink(pair.sourcePath, pair.href));
     }
-    console.log(`\n${findings.length} internal link canonical findings found. FETCH_BASE_URL=${FETCH_BASE_URL}; CANONICAL_BASE_URL=${CANONICAL_BASE_URL}; checked=${pairs.length}`);
-    process.exitCode = 1;
-    return;
-  }
 
-  console.log(`\nAll internal link canonical checks passed. FETCH_BASE_URL=${FETCH_BASE_URL}; CANONICAL_BASE_URL=${CANONICAL_BASE_URL}; checked=${pairs.length}`);
+    if (findings.length > 0) {
+      for (const finding of findings.slice(0, 50)) {
+        console.log(`FAIL ${finding.sourcePath} -> ${finding.href}: ${finding.reason}`);
+      }
+      console.log(`\n${findings.length} internal link canonical findings found. FETCH_BASE_URL=${FETCH_BASE_URL}; CANONICAL_BASE_URL=${CANONICAL_BASE_URL}; checked=${pairs.length}`);
+      process.exitCode = 1;
+      return;
+    }
+
+    console.log(`\nAll internal link canonical checks passed. FETCH_BASE_URL=${FETCH_BASE_URL}; CANONICAL_BASE_URL=${CANONICAL_BASE_URL}; checked=${pairs.length}`);
+  } finally {
+    if (serverProcess) {
+      console.log('🛑 Shutting down temporary Astro preview server...');
+      serverProcess.kill('SIGTERM');
+    }
+  }
 }
 
 main().catch((error) => {

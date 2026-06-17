@@ -1,5 +1,10 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import type { Mock } from 'vitest';
+
+vi.mock('cloudflare:workers', () => ({
+  env: {},
+}));
+
 import { onRequest } from './middleware';
 
 const originalCaches = globalThis.caches;
@@ -550,6 +555,100 @@ describe('html edge cache middleware', () => {
       expect(response.status).toBe(200);
       expect(response.headers.get('location')).toBeNull();
       expect(next).toHaveBeenCalled();
+    });
+
+    it('redirects via Cloudflare KV when matching key exists', async () => {
+      const next = vi.fn(async () => new Response('should not run'));
+      const mockKv = {
+        get: vi.fn(async (key: string) => {
+          if (key === '/dynamic-old-path') {
+            return '/tools/dynamic-new-target';
+          }
+          return null;
+        }),
+      };
+
+      const { response } = await runMiddleware(
+        new Request('https://www.u2tool.com/dynamic-old-path'),
+        next,
+        {
+          runtime: {
+            env: {
+              GSC_REDIRECTS: mockKv,
+            },
+          },
+        }
+      );
+
+      expect(response.status).toBe(301);
+      expect(response.headers.get('location')).toBe('/en/tools/dynamic-new-target/');
+      expect(mockKv.get).toHaveBeenCalledWith('/dynamic-old-path');
+    });
+
+    it('utilizes in-memory cache to prevent redundant KV lookups', async () => {
+      const next = vi.fn(async () => new Response('should not run'));
+      const mockKv = {
+        get: vi.fn(async () => '/tools/cached-target'),
+      };
+
+      // First request (hits KV)
+      const res1 = await runMiddleware(
+        new Request('https://www.u2tool.com/cache-test-path'),
+        next,
+        {
+          runtime: {
+            env: {
+              GSC_REDIRECTS: mockKv,
+            },
+          },
+        }
+      );
+      expect(res1.response.status).toBe(301);
+      expect(res1.response.headers.get('location')).toBe('/en/tools/cached-target/');
+
+      // Second request (should hit memory cache instead of KV)
+      const res2 = await runMiddleware(
+        new Request('https://www.u2tool.com/cache-test-path'),
+        next,
+        {
+          runtime: {
+            env: {
+              GSC_REDIRECTS: mockKv,
+            },
+          },
+        }
+      );
+      expect(res2.response.status).toBe(301);
+      expect(res2.response.headers.get('location')).toBe('/en/tools/cached-target/');
+      
+      // KV get should only be called once
+      expect(mockKv.get).toHaveBeenCalledTimes(1);
+    });
+
+    it('falls back gracefully to static JSON redirects on KV error', async () => {
+      const next = vi.fn(async () => new Response('should not run'));
+      const mockKv = {
+        get: vi.fn(async () => {
+          throw new Error('KV storage failure');
+        }),
+      };
+
+      const { response } = await runMiddleware(
+        new Request('https://www.u2tool.com/typing-test'),
+        next,
+        {
+          runtime: {
+            env: {
+              GSC_REDIRECTS: mockKv,
+            },
+          },
+        }
+      );
+
+      // Should fall back to static mapping in gsc-redirects.json
+      expect(response.status).toBe(301);
+      expect(response.headers.get('location')).toBe('/en/tools/typing-speed-test/');
+      expect(mockKv.get).toHaveBeenCalledWith('/typing-test');
     });
   });
 });

@@ -1,28 +1,28 @@
 {
-  "detailed_description": "Calculadora de déficit calórico — Estima el déficit diario, semanal y el cambio de peso proyectado desde calorías de mantenimiento e ingesta. Revisa el resultado calculado o generado.",
+  "detailed_description": "La Calculadora de Déficit Calórico estima la brecha diaria y semanal de calorías y el cambio de peso proyectado según sus calorías de mantenimiento (TDEE), consumo planificado y los días del modelo. Al ajustar su ingesta o el período de planificación, puede comparar un déficit moderado con un enfoque más agresivo, ayudándole a encontrar el plan más seguro y sostenible. Esta herramienta es una ayuda de planificación, no un consejo médico.",
   "usage_steps": [
-    "Introduce los valores requeridos en el formulario",
-    "Revisa el resultado calculado o generado",
-    "Copia el resultado o usa la vista previa mostrada",
-    "Ajusta los valores para comparar otro escenario"
+    "Ingrese sus calorías de mantenimiento estimadas, su meta de consumo diario y el período de planificación en días",
+    "Revise las tarjetas de déficit diario, déficit semanal y cambio de peso estimado",
+    "Copie el resumen del escenario actual o ajuste los valores para comparar otros planes de calorías",
+    "Cambie la ingesta o los días para evaluar científicamente su progreso de pérdida de peso a largo plazo"
   ],
   "usage_examples": [
-    "Úsalo durante una revisión o planificación rápida",
-    "Compara escenarios sin crear una hoja de cálculo",
-    "Crea resultados listos para informes, campañas o notas"
+    "Compare un déficit de 300 kcal con uno de 500 kcal antes de elegir una meta semanal",
+    "Estime el cambio de peso esperado en una etapa de definición de 30 días usando sus calorías de mantenimiento",
+    "Verifique si su consumo planificado realmente crea un déficit o si genera un excedente calórico"
   ],
   "faqs": [
     {
-      "question": "¿Calculadora de déficit calórico es gratis?",
-      "answer": "Sí. La herramienta es gratuita en el navegador y no requiere cuenta."
+      "question": "¿La Calculadora de Déficit Calórico es gratuita?",
+      "answer": "Sí. La calculadora funciona localmente en su navegador, es completamente gratuita y no requiere registro."
     },
     {
-      "question": "¿La herramienta sube mis datos?",
-      "answer": "No. El cálculo o la generación se ejecuta localmente en el navegador."
+      "question": "¿Qué entradas se necesitan?",
+      "answer": "Necesita una estimación de sus calorías de mantenimiento (TDEE), su consumo diario planificado y el número de días a proyectar."
     },
     {
-      "question": "¿Hay alguna nota importante?",
-      "answer": "Usa el resultado como ayuda práctica y revísalo antes de publicarlo o depender de él."
+      "question": "¿Debo tomar el cambio de peso como exacto?",
+      "answer": "No. El cálculo utiliza conversiones estándar de calorías a peso y no tiene en cuenta la retención de agua, adaptación metabólica, condiciones médicas o diferencias nutricionales individuales."
     }
   ]
 }

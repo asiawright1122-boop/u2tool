@@ -1,28 +1,28 @@
 {
-  "detailed_description": "Calculadora de uma repetição máxima — Estime seu 1RM com fórmulas comuns de força usando peso e repetições. Revise o resultado calculado ou gerado.",
+  "detailed_description": "A Calculadora de Uma Repetição Uma Máxima (1RM) calcula sua capacidade máxima empírica de elevação de carga em exercícios de força muscular a partir do peso levantado e repetições completadas. Ela compila e processa os resultados das fórmulas de Epley, Brzycki e Lombardi, tirando a média delas para fornecer uma métrica mais balanceada e prática. Trabalhe com esses números de forma moderada e priorize a execução técnica e segura.",
   "usage_steps": [
-    "Digite os valores necessários no formulário",
-    "Revise o resultado calculado ou gerado",
-    "Copie o resultado ou use a prévia exibida",
-    "Ajuste os valores para comparar outro cenário"
+    "Escolha a unidade de peso de sua preferência (quilogramas ou libras)",
+    "Digite a carga levantada e a quantidade de repetições completadas na série de trabalho",
+    "Verifique a média geral de 1RM calculada e os desgloses das fórmulas de Epley, Brzycki e Lombardi",
+    "Copie a estimativa de carga ou modifique os valores para simular outras séries"
   ],
   "usage_examples": [
-    "Use em uma revisão ou planejamento rápido",
-    "Compare cenários sem criar uma planilha",
-    "Crie resultados prontos para relatórios, campanhas ou notas"
+    "Estime a capacidade de força pura a partir de uma série intensa de 5 repetições",
+    "Compare como diferentes repetições influenciam a consistência média das fórmulas de 1RM",
+    "Planeje intensidades percentuais seguras de treino sem precisar testar a força máxima real sob risco de lesão"
   ],
   "faqs": [
     {
-      "question": "Calculadora de uma repetição máxima é grátis?",
-      "answer": "Sim. A ferramenta é gratuita no navegador e não exige conta."
+      "question": "A Calculadora de 1RM é gratuita?",
+      "answer": "Sim. Ela roda 100% no navegador e pode ser utilizada de forma livre e sem limites."
     },
     {
-      "question": "A ferramenta envia meus dados?",
-      "answer": "Não. O cálculo ou a geração roda localmente no navegador."
+      "question": "Quais fórmulas de força estão integradas?",
+      "answer": "A calculadora fornece projeções pelas fórmulas clássicas de Epley, Brzycki e Lombardi, além da média aritmética das três."
     },
     {
-      "question": "Há alguma observação importante?",
-      "answer": "Use o resultado como apoio prático e revise-o antes de publicar ou depender dele."
+      "question": "Posso utilizar a carga máxima estimada diretamente no meu treino de força?",
+      "answer": "Recomenda-se tratar os resultados apenas como referência aproximada. Variáveis como fadiga acumulada, qualidade do movimento e tipo de exercício impactam a força real de forma dinâmica. Use sempre travas de segurança."
     }
   ]
 }

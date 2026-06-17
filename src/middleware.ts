@@ -1,5 +1,6 @@
 import type { MiddlewareHandler } from 'astro';
 import { isValidLocale } from './lib/i18n';
+import { env } from 'cloudflare:workers';
 import { resolveGscRecoveryRedirect } from './lib/gsc-recovery-redirects';
 import {
   resolveLegacyBlogRedirect,
@@ -269,7 +270,21 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
   }
 
   const url = new URL(context.request.url);
-  const recoveryTarget = resolveGscRecoveryRedirect(url.pathname);
+  let redirectsKv: any = undefined;
+  try {
+    redirectsKv = (context.locals as any).runtime?.env?.GSC_REDIRECTS;
+  } catch (e) {
+    // Ignored in Astro v6 where runtime.env throws an error
+  }
+
+  if (!redirectsKv) {
+    try {
+      redirectsKv = env.GSC_REDIRECTS;
+    } catch {
+      // Ignored
+    }
+  }
+  const recoveryTarget = await resolveGscRecoveryRedirect(url.pathname, redirectsKv);
   if (recoveryTarget) {
     return redirect(`${recoveryTarget}${url.search}`);
   }

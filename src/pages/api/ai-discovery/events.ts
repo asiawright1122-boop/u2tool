@@ -1,4 +1,5 @@
 import type { APIRoute } from 'astro';
+import { env } from 'cloudflare:workers';
 import {
   handleDiscoveryEventsExport,
   handleDiscoveryEventsSubmit,
@@ -28,11 +29,19 @@ function getRuntimeLocals(locals: unknown): TelemetryRuntimeLocals {
 }
 
 function getStore(locals: unknown): TelemetryStore | undefined {
-  return getRuntimeLocals(locals).runtime?.env?.AI_DISCOVERY_TELEMETRY;
+  try {
+    return env.AI_DISCOVERY_TELEMETRY;
+  } catch {
+    return getRuntimeLocals(locals).runtime?.env?.AI_DISCOVERY_TELEMETRY;
+  }
 }
 
 function getExportToken(locals: unknown): string | undefined {
-  return getRuntimeLocals(locals).runtime?.env?.AI_DISCOVERY_TELEMETRY_EXPORT_TOKEN;
+  try {
+    return env.AI_DISCOVERY_TELEMETRY_EXPORT_TOKEN;
+  } catch {
+    return getRuntimeLocals(locals).runtime?.env?.AI_DISCOVERY_TELEMETRY_EXPORT_TOKEN;
+  }
 }
 
 function waitUntil(locals: unknown, promise: Promise<unknown>): void {

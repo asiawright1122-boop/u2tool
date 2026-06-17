@@ -1,28 +1,28 @@
 {
-  "detailed_description": "Kaloriendefizit-Rechner — Schätze tägliches und wöchentliches Defizit sowie Gewichtsänderung aus Erhaltungs- und Aufnahmekalorien. Prüfe das berechnete oder generierte Ergebnis.",
+  "detailed_description": "Der Kaloriendefizit-Rechner schätzt das tägliche und wöchentliche Kaloriendefizit sowie die prognostizierte Gewichtsveränderung basierend auf Ihren Erhaltungskalorien (TDEE), der geplanten täglichen Zufuhr und dem Berechnungszeitraum. Durch Anpassung von Zufuhr oder Zeitraum können Sie ein moderates Defizit mit einer aggressiveren Planung vergleichen und so die sicherste, nachhaltigste Abnehmstrategie finden. Das Tool dient zur Orientierung und ersetzt keine medizinische Beratung.",
   "usage_steps": [
-    "Gib die erforderlichen Werte in das Formular ein",
-    "Prüfe das berechnete oder generierte Ergebnis",
-    "Kopiere das Ergebnis oder nutze die Vorschau",
-    "Passe Eingaben an, um ein weiteres Szenario zu vergleichen"
+    "Geben Sie Ihre geschätzten Erhaltungskalorien (TDEE), die tägliche Zielzufuhr und den Zeitraum in Tagen ein",
+    "Prüfen Sie die berechneten Werte für tägliches Defizit, wöchentliches Defizit und Gewichtsabnahme",
+    "Kopieren Sie das Ergebnis oder ändern Sie die Kalorienzufuhr, um andere Szenarien zu vergleichen",
+    "Passen Sie die Zufuhr oder den Zeitraum an, um Ihren Abnehmfortschritt langfristig wissenschaftlich zu bewerten"
   ],
   "usage_examples": [
-    "Nutze das Tool für schnelle Planung oder Prüfung",
-    "Vergleiche Szenarien ohne Tabellenkalkulation",
-    "Erstelle kopierfertige Ergebnisse für Berichte, Kampagnen oder Notizen"
+    "Vergleichen Sie den Unterschied zwischen 300 kcal und 500 kcal Defizit, bevor Sie Ihr Wochenziel festlegen",
+    "Prognostizieren Sie die Gewichtsabnahme for eine 30-tägige Definitionsphase basierend auf Ihren Erhaltungskalorien",
+    "Stellen Sie sicher, dass Ihre geplante Zufuhr tatsächlich ein Kaloriendefizit und keinen Überschuss erzeugt"
   ],
   "faqs": [
     {
-      "question": "Ist Kaloriendefizit-Rechner kostenlos?",
-      "answer": "Ja. Das Tool ist im Browser kostenlos nutzbar und benötigt kein Konto."
+      "question": "Ist der Kaloriendefizit-Rechner kostenlos?",
+      "answer": "Ja. Der Rechner läuft lokal in Ihrem Browser, ist absolut kostenlos und erfordert keine Registrierung."
     },
     {
-      "question": "Werden meine Eingaben hochgeladen?",
-      "answer": "Nein. Die Berechnung oder Generierung läuft lokal im Browser."
+      "question": "Welche Eingabewerte werden benötigt?",
+      "answer": "Sie benötigen eine Schätzung Ihrer Erhaltungskalorien (TDEE), Ihre geplante tägliche Zufuhr und den Prognosezeitraum in Tagen."
     },
     {
-      "question": "Gibt es wichtige Hinweise?",
-      "answer": "Nutze das Ergebnis als praktische Hilfe und prüfe es, bevor du es veröffentlichst oder dich darauf verlässt."
+      "question": "Sind die prognostizierten Werte der Gewichtsabnahme exakt?",
+      "answer": "Nein. Die Schätzung basiert auf Standard-Kalorienumrechnungen. Wassereinlagerungen, metabolische Anpassungen, gesundheitliche Faktoren und individuelle Unterschiede werden nicht berücksichtigt."
     }
   ]
 }

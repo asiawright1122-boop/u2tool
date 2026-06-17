@@ -1,28 +1,28 @@
 {
-  "detailed_description": "Calculateur de déficit calorique — Estimez le déficit quotidien, hebdomadaire et l’évolution de poids à partir des calories de maintien et d’apport. Vérifiez le résultat calculé ou généré.",
+  "detailed_description": "Le Calculateur de Déficit Calorique vous permet d'estimer l'écart calorique quotidien et hebdomadaire ainsi que la perte de poids projetée d'après votre métabolisme de maintien (TDEE), votre apport programmé et le nombre de jours modélisés. Ajuster l'apport ou la durée permet de confronter un déficit modéré à une approche plus intense, afin d'établir la stratégie la plus sécuritaire et durable. Cet outil est une aide à la planification, pas un avis médical.",
   "usage_steps": [
-    "Saisissez les valeurs requises dans le formulaire",
-    "Vérifiez le résultat calculé ou généré",
-    "Copiez le résultat ou utilisez l’aperçu affiché",
-    "Ajustez les valeurs pour comparer un autre scénario"
+    "Saisissez votre besoin calorique de maintien estimé (TDEE), votre objectif d'apport quotidien et la durée en jours",
+    "Consultez les indicateurs de déficit journalier, hebdomadaire et de perte de poids projetée",
+    "Copiez le résumé du scénario actuel ou ajustez l'apport pour tester d'autres budgets caloriques",
+    "Modifiez la durée ou les calories pour évaluer scientifiquement votre progression à long terme"
   ],
   "usage_examples": [
-    "Utilisez-le pour une vérification ou une planification rapide",
-    "Comparez des scénarios sans créer de feuille de calcul",
-    "Créez des résultats prêts à copier pour rapports, campagnes ou notes"
+    "Comparez l'impact d'un déficit de 300 kcal par rapport à 500 kcal avant de choisir un objectif hebdomadaire",
+    "Estimez la perte de poids théorique sur une sèche de 30 jours à partir de votre dépense énergétique actuelle",
+    "Validez que votre apport programmé crée effectivement un déficit et non un excédent calorique involontaire"
   ],
   "faqs": [
     {
-      "question": "Calculateur de déficit calorique est-il gratuit ?",
-      "answer": "Oui. L’outil fonctionne gratuitement dans le navigateur et ne nécessite pas de compte."
+      "question": "Le Calculateur de Déficit Calorique est-il gratuit ?",
+      "answer": "Oui. Il s'exécute directement dans votre navigateur, est totalement gratuit et ne requiert aucune inscription."
     },
     {
-      "question": "L’outil téléverse-t-il mes données ?",
-      "answer": "Non. Le calcul ou la génération s’exécute localement dans le navigateur."
+      "question": "Quelles données dois-je renseigner ?",
+      "answer": "Vous avez besoin d'une estimation de vos calories de maintien (TDEE), de votre apport programmé et du nombre de jours à modéliser."
     },
     {
-      "question": "Y a-t-il une remarque importante ?",
-      "answer": "Utilisez le résultat comme aide pratique et vérifiez-le avant publication ou utilisation."
+      "question": "La projection de perte de poids est-elle rigoureusement exacte ?",
+      "answer": "Non. Le calcul utilise des ratios énergétiques standards de la graisse corporelle sans tenir compte de la rétention d'eau, des adaptations métaboliques ou des particularités de santé de chacun."
     }
   ]
 }

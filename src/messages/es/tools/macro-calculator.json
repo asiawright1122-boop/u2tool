@@ -1,28 +1,28 @@
 {
-  "detailed_description": "Calculadora de macros — Calcula calorías diarias y objetivos de proteína, carbohidratos y grasa según tus datos y meta. Revisa el resultado calculado o generado.",
+  "detailed_description": "La Calculadora de Macronutrientes estima las calorías diarias y las metas de proteínas, carbohidratos y grasas según sus métricas corporales, nivel de actividad y metas específicas. Primero deriva el BMR y el TDEE, luego aplica un factor de ajuste para pérdida de grasa, mantenimiento o ganancia muscular, dividiendo los gramos de macros. Este resultado es una guía de planificación dietética, no una prescripción clínica.",
   "usage_steps": [
-    "Introduce los valores requeridos en el formulario",
-    "Revisa el resultado calculado o generado",
-    "Copia el resultado o usa la vista previa mostrada",
-    "Ajusta los valores para comparar otro escenario"
+    "Elija el sistema métrico o imperial e ingrese peso, altura, edad y sexo",
+    "Seleccione su nivel de actividad diaria y su meta de entrenamiento",
+    "Revise las calorías diarias totales y los gramos recomendados de proteínas, carbohidratos y grasas, además de BMR y TDEE",
+    "Copie el resumen o cambie la meta para comparar otras distribuciones de macronutrientes"
   ],
   "usage_examples": [
-    "Úsalo durante una revisión o planificación rápida",
-    "Compara escenarios sin crear una hoja de cálculo",
-    "Crea resultados listos para informes, campañas o notas"
+    "Compare los macros de mantenimiento con los de un plan de pérdida de grasa",
+    "Estime los gramos de proteínas, carbohidratos y grasas para una persona con nivel de actividad moderada",
+    "Cambie entre ganancia magra y volumen para observar cómo varía el consumo objetivo y la distribución"
   ],
   "faqs": [
     {
-      "question": "¿Calculadora de macros es gratis?",
-      "answer": "Sí. La herramienta es gratuita en el navegador y no requiere cuenta."
+      "question": "¿La calculadora de macronutrientes es gratuita?",
+      "answer": "Sí. Todo el procesamiento se realiza localmente en el navegador y no se requiere ninguna cuenta o registro."
     },
     {
-      "question": "¿La herramienta sube mis datos?",
-      "answer": "No. El cálculo o la generación se ejecuta localmente en el navegador."
+      "question": "¿Qué fórmulas se utilizan?",
+      "answer": "Estima el BMR a partir de sus datos físicos, aplica un multiplicador de actividad para hallar el TDEE, ajusta las calorías según su meta y divide el total en gramos según los ratios seleccionados."
     },
     {
-      "question": "¿Hay alguna nota importante?",
-      "answer": "Usa el resultado como ayuda práctica y revísalo antes de publicarlo o depender de él."
+      "question": "¿Esta distribución es asesoramiento médico o nutricional?",
+      "answer": "No. Son estimaciones para la forma física general. Consulte a un nutricionista calificado para obtener pautas de salud o restricciones dietéticas específicas."
     }
   ]
 }
