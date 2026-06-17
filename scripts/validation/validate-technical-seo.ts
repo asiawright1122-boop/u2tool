@@ -161,14 +161,20 @@ async function validateRootRedirectionAndLoopback(): Promise<void> {
   assert(locParams.endsWith('/en/?utm_source=test&utm_medium=social'), `Root query redirect: expected Location to preserve params, got "${locParams}"`);
 
   // 3. Verify loopback safety guard bypass behavior with cf-worker header
-  const resCfWorker = await fetchWithRetry(`${BASE_URL}/`, {
-    headers: { 'cf-worker': 'true' },
-    redirect: 'manual',
-  });
-  assert(resCfWorker.status !== 301, `Loopback cf-worker: expected status NOT 301, got ${resCfWorker.status}`);
-  assert([302, 307, 308].includes(resCfWorker.status), `Loopback cf-worker: expected 302/307/308 redirect, got ${resCfWorker.status}`);
-  const locCfWorker = resCfWorker.headers.get('location') || '';
-  assert(locCfWorker.endsWith('/en/'), `Loopback cf-worker: expected Location ending in /en/, got "${locCfWorker}"`);
+  // NOTE: Cloudflare CDN strips the cf-worker header from external requests,
+  // so this check only works against local wrangler dev (validate:edge-simulation).
+  // We skip it when running against production to avoid false failures.
+  const isProduction = BASE_URL.includes('u2tool.com');
+  if (!isProduction) {
+    const resCfWorker = await fetchWithRetry(`${BASE_URL}/`, {
+      headers: { 'cf-worker': 'true' },
+      redirect: 'manual',
+    });
+    assert(resCfWorker.status !== 301, `Loopback cf-worker: expected status NOT 301, got ${resCfWorker.status}`);
+    assert([302, 307, 308].includes(resCfWorker.status), `Loopback cf-worker: expected 302/307/308 redirect, got ${resCfWorker.status}`);
+    const locCfWorker = resCfWorker.headers.get('location') || '';
+    assert(locCfWorker.endsWith('/en/'), `Loopback cf-worker: expected Location ending in /en/, got "${locCfWorker}"`);
+  }
 
   // 4. Verify loopback safety guard bypass behavior with x-worker-loopback header
   const resLoopbackHeader = await fetchWithRetry(`${BASE_URL}/`, {
