@@ -1,5 +1,15 @@
 # Milestones
 
+## v0.0.20 v0.0.20 (Shipped: 2026-06-17)
+
+**Phases completed:** 2 phases, 2 plans, 0 tasks
+
+**Key accomplishments:**
+
+- (none recorded)
+
+---
+
 ## v0.0.19 GSC Recovery Automation & Long-tail Expansion (Shipped: 2026-06-17)
 
 **Phases completed:** 3 phases, 3 plans
@@ -15,7 +25,6 @@
 - Roadmap: [.planning/milestones/v0.0.19-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.19-ROADMAP.md)
 - Requirements: [.planning/milestones/v0.0.19-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.19-REQUIREMENTS.md)
 - Audit: [.planning/milestones/v0.0.19-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.19-MILESTONE-AUDIT.md)
-
 
 ---
 
