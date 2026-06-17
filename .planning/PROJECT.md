@@ -18,7 +18,7 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 
 ## Current Status
 
-**Current milestone:** `v0.0.20 - Planning Next Milestone`
+**Current milestone:** `v0.0.20 - Edge Redirect KV Automation & Release Pipeline`
 **Latest completed milestone:** `v0.0.19 GSC Recovery Automation & Long-tail Expansion`
 **Latest archived milestone:** `v0.0.19 GSC Recovery Automation & Long-tail Expansion`
 **Previous archived milestone:** `v0.0.18 GSC Recovery Checkpoint & Content Optimization`
@@ -57,8 +57,8 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 - Requirements archive: [.planning/milestones/v0.0.12-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-REQUIREMENTS.md)
 - Milestone index: [.planning/MILESTONES.md](/Users/kaka/Dev/u2tool/.planning/MILESTONES.md)
 
-**Most recent milestone focus (`v0.0.19`):**
-- Designing & implementing dynamic recovery redirect engine and long-tail locale TDK optimization.
+**Most recent milestone focus (`v0.0.20`):**
+- Designing E2E automated Cloudflare KV synchronization pipeline and redirect routing validation suites.
 
 
 
@@ -128,6 +128,8 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 
 ### Active
 
+- [ ] **GEO-06** - **E2E Cloudflare KV Write Integration**: 建立自动化往 Cloudflare KV 写入最新映射的同步与发布管线。
+- [ ] **GEO-07** - **KV Pipeline Integration Validation**: 针对线上/沙盒环境下的实际 KV 匹配链路进行 E2E 重定向与防环路闭环回归测试。
 
 ### Out of Scope
 

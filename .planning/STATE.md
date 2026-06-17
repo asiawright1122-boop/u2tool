@@ -1,9 +1,9 @@
 ---
 gsd_state_version: 1.0
 milestone: v0.0.20
-milestone_name: - Planning Next Milestone
-status: Planning
-last_updated: "2026-06-17T07:38:22.000Z"
+milestone_name: - Edge Redirect KV Automation & Release Pipeline
+status: Defining requirements
+last_updated: "2026-06-17T08:10:00.000Z"
 progress:
   total_phases: 0
   completed_phases: 0
@@ -18,12 +18,15 @@ progress:
 See: .planning/PROJECT.md (updated 2026-06-17)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** Milestone v0.0.20 — Planning next milestone requirements and roadmap.
+**Current focus:** Milestone v0.0.20 — Designing E2E automated Cloudflare KV synchronization pipeline and redirect routing validation suites.
 **Frontend safety:** No user-facing surface may expose internal reasoning traces, hidden prompts, scratchpads, handoff notes, or raw planning notes.
 
 ## Current Position
 
-Milestone: v0.0.20 — Planning
+Phase: Not started (defining requirements)
+Plan: —
+Status: Defining requirements
+Last activity: 2026-06-17 — Milestone v0.0.20 started
 
 ## Milestone Context
 
@@ -31,7 +34,7 @@ Milestone: v0.0.20 — Planning
 
 | Phase | Focus | Status |
 |-------|-------|--------|
-| - | Planning next milestone | - |
+| - | Defining requirements | - |
 
 ## Accumulated Context
 
@@ -46,5 +49,6 @@ Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19 are complete and
 
 ## Next Action
 
-Run `/gsd-new-milestone` to define scope and requirements for v0.0.20.
+Draft `.planning/REQUIREMENTS.md` for v0.0.20.
+
 
