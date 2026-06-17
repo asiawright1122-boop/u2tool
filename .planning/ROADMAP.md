@@ -80,21 +80,21 @@ This milestone focuses on full-scale auditing and governance of SEO and GEO aspe
     - Handled responses carry `x-robots-tag: noindex, nofollow` and long CDN cache headers.
     - Verification tests fail if any decommissioned route returns a standard 404 or redirect.
 
-- [ ] **Phase 63: Hreflang & TDK Loop & Translation Integrity** (Requirements: `HTDK-01`, `HTDK-02`)
+- [x] **Phase 63: Hreflang & TDK Loop & Translation Integrity** (Requirements: `HTDK-01`, `HTDK-02`)
   - Description: Model the 10-locale alternate pages as a directed graph and run SCC loop verification. Audit multi-language Title/Description elements to detect any missing translations or English fallbacks.
   - Success Criteria:
     - The hreflang graph validator successfully confirms that all alternate relations form closed cycles and all nodes are reachable.
     - TDK translation scanner throws errors if placeholder strings or untranslated fallback English text are found on localized pages.
     - Integration tests intercept any asymmetrical alternate configurations.
 
-- [ ] **Phase 64: Semantic Metadata Schema & GEO Optimization** (Requirements: `GEO-01`, `GEO-02`)
+- [x] **Phase 64: Semantic Metadata Schema & GEO Optimization** (Requirements: `GEO-01`, `GEO-02`)
   - Description: Validate BreadcrumbList JSON-LD structure URLs to ensure proper trailing slash normalization, and align `/llms.txt` and `/llms-full.txt` index contents with physical HTML output.
   - Success Criteria:
     - JSON-LD parser checks all page templates to confirm that `WebApplication` / `SoftwareApplication` definitions and breadcrumbs point only to canonical trailing-slash URLs.
     - Validation tests block the build if the tools listed in `/llms.txt` differ from actual pre-rendered HTML files.
     - Output `llms.txt` sizes and token footprint are validated to stay within search retrieval limits.
 
-- [ ] **Phase 65: Edge Simulation & Prerender Safety Governance** (Requirements: `SAFE-01`, `SAFE-02`)
+- [x] **Phase 65: Edge Simulation & Prerender Safety Governance** (Requirements: `SAFE-01`, `SAFE-02`)
   - Description: Implement physical HTML deep scans to block AI reasoning leaks or internal TODOs. Spin up a local `wrangler dev` environment to verify edge routing loops and cache header behaviors.
   - Success Criteria:
     - Safety scanner intercepts and fails the build if `<!-- reasoning -->`, `Thinking Process:`, or `${BASE_URL}` traces exist in `dist/`.

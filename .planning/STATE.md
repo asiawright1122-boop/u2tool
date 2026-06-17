@@ -2,67 +2,43 @@
 gsd_state_version: 1.0
 milestone: v0.0.17
 milestone_name: — SEO & GEO Comprehensive Audit & Governance
-status: In Progress
-last_updated: "2026-06-16T15:10:00.000Z"
-last_activity: 2026-06-16
+status: Complete
+last_updated: "2026-06-17T03:15:00.000Z"
+last_activity: 2026-06-17
 progress:
   total_phases: 5
-  completed_phases: 1
-  total_plans: 1
-  completed_plans: 1
+  completed_phases: 5
+  total_plans: 5
+  completed_plans: 5
 ---
 
 # Project State
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-06-16)
+See: .planning/PROJECT.md (updated 2026-06-17)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** Milestone v0.0.17 — SEO & GEO Comprehensive Audit & Governance
+**Current focus:** Milestone v0.0.17 complete — all SEO & GEO audit validators shipped.
 **Frontend safety:** No user-facing surface may expose internal reasoning traces, hidden prompts, scratchpads, handoff notes, or raw planning notes.
 
 ## Current Position
 
-Phase: 61 — Technical SEO Link Crawling & Normalization (Complete)
-Plan: 61-PLAN.md (Complete)
-Status: In Progress
-Last activity: 2026-06-16 — Phase 61 completed
+Milestone: v0.0.17 — Complete
+All 5 phases (61–65) verified and committed.
 
 ## Milestone Context
-
-### v0.0.14 Priority
-
-- v0.0.13 closed the local placeholder-conversion and authority-content work.
-- Live route contract recheck on 2026-06-09 passed via `npm run validate:production-routes`; historical soft-404 and `${BASE_URL}` JSON-LD failures are not the current blocker.
-- Live tool spot checks show the final passport/vCard tool URLs return HTTP 200 and render real content.
-- PR #25 merged into main and deployed successfully through Cloudflare workflow run 27190356884.
-- Live category spot checks now show the new English `finance`, `generators`, and `lifestyle` support-content copy.
-- Final converted tool URLs remain HTTP 200 and live frontend scams show no internal reasoning trace exposure.
-- GSC recovery cohorts are recorded in `docs/GSC_RECOVERY_COHORT_PLAN_2026-06-09.md`.
-- GSC measurement structure is recorded in `docs/GSC_RECOVERY_MEASUREMENT_REPORT_2026-06-09.md`.
-- GSC checkpoint comparison script is ready at `scripts/seo/gsc-cohort-checkpoint-report.ts`.
-- Follow-up recovery commits through `414c1074` deployed successfully through Cloudflare workflow run 27218741465.
-- Post-deploy checks passed: `npm run validate:production-routes`, `npm run validate:front-end-safety`, and the production `Bra Size Calculator recovery` rendered SEO guard.
-- The original worktree remains heavily dirty. Further production releases must still be isolated to approved files before commit/deploy.
 
 ### Phase Map
 
 | Phase | Focus | Status |
 |-------|-------|--------|
-| 53 | Release isolation and production contract baseline | Complete |
-| 54 | Safe release and live content verification | Complete |
-| 55 | GSC cohort recovery plan and indexing operations | Complete |
-| 56 | Recovery measurement and closeout | Complete |
-| 57 | Root Route Redirection & Loopback Guard | Complete |
-| 58 | Technical SEO Validation & E2E Testing | Complete |
-| 59 | Redirection & 410 Gone Route Governance | Complete |
-| 60 | Technical SEO Validation & E2E Testing | Complete |
 | 61 | Technical SEO Link Crawling & Normalization | Complete |
-| 62 | Decommissioned Routes & Robots.txt Governance | Proposed |
-| 63 | Hreflang & TDK Loop & Translation Integrity | Proposed |
-| 64 | Semantic Metadata Schema & GEO Optimization | Proposed |
-| 65 | Edge Simulation & Prerender Safety Governance | Proposed |
+| 62 | Decommissioned Routes & Robots.txt Governance | Complete |
+| 63 | Hreflang & TDK Loop & Translation Integrity | Complete |
+| 64 | Semantic Metadata Schema & GEO Optimization | Complete |
+| 65 | Edge Simulation & Prerender Safety Governance | Complete |
+
 ## Accumulated Context
 
 ### Traffic Recovery Notes
@@ -83,8 +59,8 @@ Last activity: 2026-06-16 — Phase 61 completed
 - 2026-06-09 follow-up deployment from `414c1074` completed successfully through Cloudflare workflow run 27218741465.
 - 2026-06-09 production validation after the follow-up deployment passed route contract, frontend safety, and `en/tools/bra-size-calculator/` rendered SEO checks; the updated Bra Size meta description is live with `underbust`.
 
-Milestone v0.0.15 is complete and archived.
+Milestones v0.0.14, v0.0.15, v0.0.16 are complete and archived.
 
 ## Next Action
 
-Complete milestone v0.0.16.
+Archive milestone v0.0.17 and plan v0.0.18.
