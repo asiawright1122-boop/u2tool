@@ -34,7 +34,9 @@ Last activity: 2026-06-17 — Milestone v0.0.20 started
 
 | Phase | Focus | Status |
 |-------|-------|--------|
-| - | Defining requirements | - |
+| 72 | E2E Cloudflare KV Write Integration (GEO-06) | Proposed |
+| 73 | KV Pipeline Integration Validation (GEO-07) | Proposed |
+
 
 ## Accumulated Context
 
