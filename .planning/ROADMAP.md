@@ -2,6 +2,12 @@
 
 ## Archived Milestones
 
+- [x] v0.0.17 SEO & GEO Comprehensive Audit & Governance
+  Archive: [.planning/milestones/v0.0.17-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.17-ROADMAP.md)
+  Requirements: [.planning/milestones/v0.0.17-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.17-REQUIREMENTS.md)
+  Audit: [.planning/milestones/v0.0.17-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.17-MILESTONE-AUDIT.md)
+  Status: Shipped on 2026-06-17. Implemented full-scale trailing-slash validation, multi-locale sitemap validator, Robots.txt & 410 decommissioned route auditor, 10-locale hreflang SCC graph validator, TDK completeness scanner, Breadcrumbs Schema validator, llms.txt optimizer, and edge-simulation safety gates. Fully verified online.
+
 - [x] v0.0.16 GSC Legacy Redirects & Decommissioned Route Governance
   Archive: [.planning/milestones/v0.0.16-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.16-ROADMAP.md)
   Requirements: [.planning/milestones/v0.0.16-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.16-REQUIREMENTS.md)
@@ -24,87 +30,26 @@
   Archive: [.planning/milestones/v0.0.13-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-ROADMAP.md)
   Requirements: [.planning/milestones/v0.0.13-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-REQUIREMENTS.md)
   Audit: [.planning/milestones/v0.0.13-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-MILESTONE-AUDIT.md)
-  Status: Shipped on 2026-06-09. Converted all remaining high-traffic `PopularUtilityTool` placeholders to real Svelte 5 components across Finance, Developer/Security, Content Generators, Social/Media, Lifestyle, Image, and Converter clusters. Added category-level authority content for English `finance`, `generators`, and `lifestyle`, preserved the no-internal-reasoning frontend safety rule, and closed on green build, runtime, SEO, placeholder, and frontend-safety gates.
+  Status: Shipped on 2026-06-09. Converted all remaining high-traffic `PopularUtilityTool` catalog placeholders to real Svelte 5 components across Finance, Developer/Security, Content Generators, Social/Media, Lifestyle, Image, and Converter clusters. Added category-level authority content for English `finance`, `generators`, and `lifestyle`, preserved the no-internal-reasoning frontend safety rule, and closed on green build, runtime, SEO, placeholder, and frontend-safety gates.
 
-- [x] v0.0.12 Growth Acceleration and High-Performance Tool Expansion
-  Archive: [.planning/milestones/v0.0.12-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-ROADMAP.md)
-  Requirements: [.planning/milestones/v0.0.12-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-REQUIREMENTS.md)
-  Audit: [.planning/v0.0.12-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.12-MILESTONE-AUDIT.md)
-  Status: Shipped on 2026-06-04. Delivered SmartLink prefetch optimization, split translation lazy loading, BaseLayout query robots degradation, 4 Svelte 5 office productivity tools, and green verify:production checks.
+## Active Milestone: v0.0.18 - GSC Recovery Checkpoint & Content Optimization
 
-- [x] v0.0.11 Runtime Helper Debt Liquidation and Cryptographic Toolbox Shaking
-  Archive: [.planning/milestones/v0.0.11-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.11-ROADMAP.md)
-  Requirements: [.planning/milestones/v0.0.11-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.11-REQUIREMENTS.md)
-  Audit: [.planning/v0.0.11-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.11-MILESTONE-AUDIT.md)
-  Status: Shipped on 2026-06-04. Fully liquidated remaining stubs from tool-stubs.ts, delivered Developer Cryptographic & Hash Toolbox Svelte 5 flagship component under 10-locale constraints, and verified 100% production gate passing.
+本里程碑致力于执行 2026-06-09 恢复版发布后的 7-Day GSC 数据指标比对与收敛分析，彻底完成低优先级 Cohort C 队列中 13 个工具的多语言 TDK/Snippet 深度优化与审核，并设计评估 GEO-03 自动化 GSC 恢复管线。
 
-- [x] v0.0.10 GSC Evidence Intake and High-Value URL Recovery
-  Archive: [.planning/milestones/v0.0.10-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-ROADMAP.md)
-  Requirements: [.planning/milestones/v0.0.10-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-REQUIREMENTS.md)
-  Audit: [.planning/milestones/v0.0.10-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.10-MILESTONE-AUDIT.md)
-  Status: Shipped on 2026-06-02. Delivered targeted GSC validation playbooks, recovered Hex Editor Detail page, launched the pension optimizer and net-worth portfolio trackers with 10-locale constraints, and resolved Astro 6 SSR Cloudflare sitemap path checks.
-
-- [x] v0.0.9 Runtime Debt Prioritization and Text Utility Repair
-  Archive: [.planning/milestones/v0.0.9-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.9-ROADMAP.md)
-  Requirements: [.planning/milestones/v0.0.9-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.9-REQUIREMENTS.md)
-  Audit: [.planning/milestones/v0.0.9-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.9-MILESTONE-AUDIT.md)
-  Status: shipped on 2026-05-11 with runtime debt inventory, text and validation reference-data repairs, const-helper governance, and canonical production verification complete.
-
-- [x] v0.0.8 Runtime Workflow Integrity Expansion
-  Archive: [.planning/milestones/v0.0.8-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-ROADMAP.md)
-  Requirements: [.planning/milestones/v0.0.8-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-REQUIREMENTS.md)
-  Audit: [.planning/milestones/v0.0.8-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.8-MILESTONE-AUDIT.md)
-  Status: shipped on 2026-05-10 with scheduling and code-analysis runtime helper repairs plus runtime-placeholder governance.
-
-- [x] v0.0.7 Organic Authority Re-Expansion
-  Archive: [.planning/milestones/v0.0.7-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.7-ROADMAP.md)
-  Requirements: [.planning/milestones/v0.0.7-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.7-REQUIREMENTS.md)
-  Audit: [.planning/milestones/v0.0.7-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.7-MILESTONE-AUDIT.md)
-  Status: shipped on 2026-05-10 with the `text` authority wave selected, promoted, governed, and followed by evidence-led GSC recovery triage.
-
-## Active Milestone: v0.0.17 - SEO & GEO Comprehensive Audit & Governance
-
-This milestone focuses on full-scale auditing and governance of SEO and GEO aspects of the U2Tool project. It addresses multi-locale Hreflang, TDK, Sitemap, and JSON-LD defects, prevents reasoning trace and prerender leakage, and establishes edge simulation gates to block flawed releases.
-
-- [x] **Phase 61: Technical SEO Link Crawling & Normalization** (Requirements: `TSEO-01`, `TSEO-02`)
-  - Description: Implement the trailing slash normalization checker and the multi-locale sitemap link validator to scan the static output of the build, ensuring clean URLs and active links.
+- [ ] **Phase 66: GSC 7-Day Performance Checkpoint Comparator** (Requirements: `TSEO-04`)
+  - Description: 在用户提供 2026-06-16 的 GSC Performance xlsx 数据后，运行对比分析脚本，分析 Cohort A & B 的点击量与曝光回升状况，判定流量恢复的阶段性状态。
   - Success Criteria:
-    - Running the build with a non-compliant canonical URL inside static HTML fails the build pipeline with clear file references.
-    - Sitemap validator successfully maps and crawls all 10 language sitemaps, verifying HTTP 200 responses.
-    - Non-200 responses or unnecessary redirects are flagged as build-blocking errors.
+    - 成功生成 `docs/GSC_COHORT_CHECKPOINT_2026-06-16.md`。
+    - 针对 Cohort A & B 中的每一个 URL 进行量化分析并计算出波动率，为后续策略调整提供依据。
 
-- [x] **Phase 62: Decommissioned Routes & Robots.txt Governance** (Requirements: `TSEO-03`)
-  - Description: Set up automated validation for `/robots.txt` structure and audit decommissioned routes (such as legacy `/blog` and `/compare` variations) to guarantee they correctly return `410 Gone` with appropriate header directives.
+- [ ] **Phase 67: Cohort C Metadata Optimization & Snippet Hardening** (Requirements: `HTDK-03`)
+  - Description: 深度优化 Cohort C 队列中的 13 个工具在各语系下的元数据（Title、Description），修复任何翻译瑕疵与占位符，完成 snippet 优化。
   - Success Criteria:
-    - HTTP requests to decommissioned routes (both with and without trailing slash) return `410` status.
-    - Handled responses carry `x-robots-tag: noindex, nofollow` and long CDN cache headers.
-    - Verification tests fail if any decommissioned route returns a standard 404 or redirect.
+    - `npm run validate:tdk-integrity` 运行全绿。
+    - 检查代码库各语言 JSON 翻译中不存在未被本地化的英文 fallback、占位符或生硬句式。
 
-- [x] **Phase 63: Hreflang & TDK Loop & Translation Integrity** (Requirements: `HTDK-01`, `HTDK-02`)
-  - Description: Model the 10-locale alternate pages as a directed graph and run SCC loop verification. Audit multi-language Title/Description elements to detect any missing translations or English fallbacks.
+- [ ] **Phase 68: GEO-03 Automated GSC Recovery Pipeline Design & Sandbox** (Requirements: `GEO-03`)
+  - Description: 完成 GEO-03 管线的概要架构设计方案，并实现本地沙盒演示。
   - Success Criteria:
-    - The hreflang graph validator successfully confirms that all alternate relations form closed cycles and all nodes are reachable.
-    - TDK translation scanner throws errors if placeholder strings or untranslated fallback English text are found on localized pages.
-    - Integration tests intercept any asymmetrical alternate configurations.
-
-- [x] **Phase 64: Semantic Metadata Schema & GEO Optimization** (Requirements: `GEO-01`, `GEO-02`)
-  - Description: Validate BreadcrumbList JSON-LD structure URLs to ensure proper trailing slash normalization, and align `/llms.txt` and `/llms-full.txt` index contents with physical HTML output.
-  - Success Criteria:
-    - JSON-LD parser checks all page templates to confirm that `WebApplication` / `SoftwareApplication` definitions and breadcrumbs point only to canonical trailing-slash URLs.
-    - Validation tests block the build if the tools listed in `/llms.txt` differ from actual pre-rendered HTML files.
-    - Output `llms.txt` sizes and token footprint are validated to stay within search retrieval limits.
-
-- [x] **Phase 65: Edge Simulation & Prerender Safety Governance** (Requirements: `SAFE-01`, `SAFE-02`)
-  - Description: Implement physical HTML deep scans to block AI reasoning leaks or internal TODOs. Spin up a local `wrangler dev` environment to verify edge routing loops and cache header behaviors.
-  - Success Criteria:
-    - Safety scanner intercepts and fails the build if `<!-- reasoning -->`, `Thinking Process:`, or `${BASE_URL}` traces exist in `dist/`.
-    - Local integration tests run via wrangler dev confirm that 301 redirects and 410 gates do not cause infinite loops.
-    - Response cache headers under simulating middlewares match expected CDN behaviors.
-
-<details>
-<summary>✅ v0.0.16 GSC Legacy Redirects & Decommissioned Route Governance (Phases 59-60) — SHIPPED 2026-06-16</summary>
-
-- [x] Phase 59: Redirection & 410 Gone Route Governance (1/1 plans) — completed 2026-06-16
-- [x] Phase 60: Technical SEO Validation & E2E Testing (1/1 plans) — completed 2026-06-16
-
-</details>
+    - 产生 `docs/GSC_RECOVERY_PIPELINE_DESIGN.md`，内含时序图和各组件职责定义。
+    - 在开发环境下实现 mock JSON 的 edge 解析测试用例，确立其可行性与安全性边界。

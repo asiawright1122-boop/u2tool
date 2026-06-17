@@ -18,14 +18,14 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 
 ## Current Status
 
-**Current milestone:** `Planning next milestone`
-**Latest completed milestone:** `v0.0.16 GSC Legacy Redirects & Decommissioned Route Governance`
-**Latest archived milestone:** `v0.0.16 GSC Legacy Redirects & Decommissioned Route Governance`
-**Previous archived milestone:** `v0.0.15 Technical SEO Redirection Governance & Root Route Normalization`
-**Current planning state:** Milestone v0.0.16 completed and archived.
+**Current milestone:** `v0.0.18 GSC Recovery Checkpoint & Content Optimization`
+**Latest completed milestone:** `v0.0.17 SEO & GEO Comprehensive Audit & Governance`
+**Latest archived milestone:** `v0.0.17 SEO & GEO Comprehensive Audit & Governance`
+**Previous archived milestone:** `v0.0.16 GSC Legacy Redirects & Decommissioned Route Governance`
+**Current planning state:** Milestone v0.0.17 completed and archived.
 
 **Latest completed outcomes:**
-- Enforced canonical 301 redirects for dynamic localized HTML paths missing trailing slashes inside edge middleware while preserving all query parameters.
+- Implemented comprehensive SEO & GEO validators for trailing-slashes, multi-locale sitemaps, Robots.txt & 410 decommissioned routes, 10-locale hreflang SCC graph loops, TDK translations completeness, JSON-LD Schema structures, llms.txt alignment, and edge-simulation safety loops.
 - Implemented permanent (301) redirects from legacy blog paths (e.g. `/blog/*` and `/zh/blog/*`) to their canonical parent category routes (e.g. `/en/tools/` and `/zh/tools/`).
 - Returned `410 Gone` with `x-robots-tag: noindex, nofollow` and cache-control headers for decommissioned compare pairs, legacy categories, and stale Next.js chunk assets (`/_next/static/chunks/*`).
 - Extended technical SEO validation and E2E smoke tests validating trailing slash redirects, query parameter preservation, legacy redirects, and 410 gone status and headers with zero warnings.
