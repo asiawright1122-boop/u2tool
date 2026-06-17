@@ -1,5 +1,6 @@
 import type { MiddlewareHandler } from 'astro';
 import { isValidLocale } from './lib/i18n';
+import { resolveGscRecoveryRedirect } from './lib/gsc-recovery-redirects';
 import {
   resolveLegacyBlogRedirect,
   resolveLegacyComparePairRedirect,
@@ -267,6 +268,12 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     return withSecurityHeaders(createLegacyBuildAssetGoneResponse(context.request.method));
   }
 
+  const url = new URL(context.request.url);
+  const recoveryTarget = resolveGscRecoveryRedirect(url.pathname);
+  if (recoveryTarget) {
+    return redirect(`${recoveryTarget}${url.search}`);
+  }
+
   const canonicalRedirect = resolveCanonicalRedirect(context.request);
   if (canonicalRedirect) {
     return redirect(canonicalRedirect);
@@ -291,7 +298,6 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
 
   const response = await next();
 
-  const url = new URL(context.request.url);
   if (response.status === 404 && isFileLikePath(url.pathname)) {
     const textResponse = new Response(context.request.method === 'HEAD' ? null : 'Not Found', {
       status: 404,

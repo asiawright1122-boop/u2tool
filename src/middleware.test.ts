@@ -502,4 +502,54 @@ describe('html edge cache middleware', () => {
       expect(next).toHaveBeenCalled();
     });
   });
+
+  describe('GSC recovery redirects', () => {
+    it('redirects GSC excluded URLs to their new routes with 301 status', async () => {
+      const next = vi.fn(async () => new Response('should not run'));
+      const { response } = await runMiddleware(
+        new Request('https://www.u2tool.com/typing-test'),
+        next
+      );
+
+      expect(response.status).toBe(301);
+      expect(response.headers.get('location')).toBe('/en/tools/typing-speed-test/');
+      expect(next).not.toHaveBeenCalled();
+    });
+
+    it('preserves locale in GSC recovery redirects', async () => {
+      const next = vi.fn(async () => new Response('should not run'));
+      const { response } = await runMiddleware(
+        new Request('https://www.u2tool.com/zh/calculator/calorie'),
+        next
+      );
+
+      expect(response.status).toBe(301);
+      expect(response.headers.get('location')).toBe('/zh/tools/calorie-calculator/');
+      expect(next).not.toHaveBeenCalled();
+    });
+
+    it('preserves query parameters on recovery redirect', async () => {
+      const next = vi.fn(async () => new Response('should not run'));
+      const { response } = await runMiddleware(
+        new Request('https://www.u2tool.com/calculator/mortgage?ref=gsc&utm_medium=organic'),
+        next
+      );
+
+      expect(response.status).toBe(301);
+      expect(response.headers.get('location')).toBe('/en/tools/mortgage-calculator/?ref=gsc&utm_medium=organic');
+      expect(next).not.toHaveBeenCalled();
+    });
+
+    it('bypasses redirect if target route is identical to current route to prevent loops', async () => {
+      const next = vi.fn(async () => new Response('<html>ok</html>'));
+      const { response } = await runMiddleware(
+        new Request('https://www.u2tool.com/en/tools/typing-speed-test/'),
+        next
+      );
+
+      expect(response.status).toBe(200);
+      expect(response.headers.get('location')).toBeNull();
+      expect(next).toHaveBeenCalled();
+    });
+  });
 });
