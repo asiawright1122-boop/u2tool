@@ -592,6 +592,64 @@ describe('html edge cache middleware', () => {
       expect(mockKv.get).toHaveBeenCalledWith('gsc-recovery-rules');
     });
 
+    it('preserves query parameters on KV recovery redirect', async () => {
+      const next = vi.fn(async () => new Response('should not run'));
+      const mockKv = {
+        get: vi.fn(async (key: string) => {
+          if (key === 'gsc-recovery-rules') {
+            return JSON.stringify({
+              '/dynamic-old-path': '/tools/dynamic-new-target',
+            });
+          }
+          return null;
+        }),
+      };
+
+      const { response } = await runMiddleware(
+        new Request('https://www.u2tool.com/dynamic-old-path?utm_source=test&q=hello'),
+        next,
+        {
+          runtime: {
+            env: {
+              GSC_REDIRECTS: mockKv,
+            },
+          },
+        }
+      );
+
+      expect(response.status).toBe(301);
+      expect(response.headers.get('location')).toBe('/en/tools/dynamic-new-target/?utm_source=test&q=hello');
+    });
+
+    it('preserves locale in KV recovery redirect', async () => {
+      const next = vi.fn(async () => new Response('should not run'));
+      const mockKv = {
+        get: vi.fn(async (key: string) => {
+          if (key === 'gsc-recovery-rules') {
+            return JSON.stringify({
+              '/dynamic-old-path': '/tools/dynamic-new-target',
+            });
+          }
+          return null;
+        }),
+      };
+
+      const { response } = await runMiddleware(
+        new Request('https://www.u2tool.com/zh/dynamic-old-path'),
+        next,
+        {
+          runtime: {
+            env: {
+              GSC_REDIRECTS: mockKv,
+            },
+          },
+        }
+      );
+
+      expect(response.status).toBe(301);
+      expect(response.headers.get('location')).toBe('/zh/tools/dynamic-new-target/');
+    });
+
     it('utilizes in-memory cache to prevent redundant KV lookups', async () => {
       const next = vi.fn(async () => new Response('should not run'));
       const mockKv = {
