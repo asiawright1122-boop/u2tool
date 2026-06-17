@@ -1,5 +1,7 @@
 import { buildLlmsContent } from '../../src/lib/llms-content';
 import { locales } from '../../src/lib/i18n';
+import * as fs from 'node:fs/promises';
+import path from 'node:path';
 
 function assert(condition: unknown, message: string): void {
   if (!condition) {
@@ -75,6 +77,50 @@ async function validateFull(text: string, isZh = false): Promise<void> {
   }
 }
 
+import { tools, categories } from '../../src/config/tools';
+
+async function checkRouteValidity(doc: string, docName: string): Promise<void> {
+  const urls = doc.match(/https:\/\/www\.u2tool\.com\/[^\s)]+/g) || [];
+  const validToolSlugs = new Set(tools.map(t => t.slug));
+  const validCategories = new Set(categories.map(c => c.id));
+  const checkedPaths = new Set<string>();
+
+  for (const rawUrl of urls) {
+    const value = rawUrl.replace(/[,.]+$/, '');
+    let url: URL;
+    try {
+      url = new URL(value);
+    } catch {
+      continue;
+    }
+    
+    if (!url.pathname.match(/^\/[a-z]{2}\//)) continue;
+    if (checkedPaths.has(url.pathname)) continue;
+    checkedPaths.add(url.pathname);
+    
+    // Extract route pattern
+    const toolMatch = url.pathname.match(/^\/[a-z]{2}\/tools\/([^/]+)\/$/);
+    if (toolMatch) {
+      const slug = toolMatch[1];
+      if (slug === '%3Ctool-slug%3E') continue;
+      if (!validToolSlugs.has(slug)) {
+        throw new Error(`[${docName}] Route validation failed: Tool slug "${slug}" listed in llms.txt is not a valid tool.`);
+      }
+      continue;
+    }
+
+    const categoryMatch = url.pathname.match(/^\/[a-z]{2}\/categories\/([^/]+)\/$/);
+    if (categoryMatch) {
+      const cat = categoryMatch[1];
+      if (cat === '%3Ccategory-slug%3E') continue;
+      if (!validCategories.has(cat)) {
+        throw new Error(`[${docName}] Route validation failed: Category "${cat}" listed in llms.txt is not a valid category.`);
+      }
+      continue;
+    }
+  }
+}
+
 async function main(): Promise<void> {
   console.log('🏁 Starting LLM discovery layer compilation & validation...');
 
@@ -87,8 +133,14 @@ async function main(): Promise<void> {
   const zhFull = await buildLlmsContent('zh', mockUrl, { isFull: true });
 
   // 2. Format & Integrity Audit
-  const documents = [enCompact, enFull, zhCompact, zhFull];
-  for (const doc of documents) {
+  const documents = [
+    { name: 'enCompact', doc: enCompact },
+    { name: 'enFull', doc: enFull },
+    { name: 'zhCompact', doc: zhCompact },
+    { name: 'zhFull', doc: zhFull },
+  ];
+  for (const item of documents) {
+    const doc = item.doc;
     assert(!doc.includes('undefined'), 'LLM discovery file contains "undefined" text.');
     assert(!doc.includes('[object Object]'), 'LLM discovery file contains unrendered objects.');
     assert(!doc.includes('${BASE_URL}'), 'LLM discovery file contains unreplaced placeholders.');
@@ -98,6 +150,13 @@ async function main(): Promise<void> {
     // Check for trailing slashes
     const violations = extractCanonicalRouteViolations(doc);
     assert(violations.length === 0, `Discovery file contains non-canonical URLs without trailing slash: ${violations.slice(0, 5).join(', ')}`);
+    
+    // Check route validity
+    await checkRouteValidity(doc, item.name);
+    
+    // Check byte size to stay within search retrieval limits (500KB)
+    const byteSize = Buffer.byteLength(doc, 'utf8');
+    assert(byteSize < 500 * 1024, `[${item.name}] Discovery file is too large: ${Math.round(byteSize / 1024)}KB (limit 500KB).`);
   }
 
   // 3. Compact / Full specific checks

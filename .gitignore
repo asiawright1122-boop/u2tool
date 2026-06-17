@@ -57,3 +57,6 @@ progress.md
 .superpowers/
 !scripts/validation/validate-hreflang-scc.ts
 !scripts/validation/validate-tdk-translations.ts
+!scripts/validation/validate-json-ld.ts
+!scripts/validation/validate-prerender-safety.ts
+!scripts/validation/validate-edge-simulation.mjs
