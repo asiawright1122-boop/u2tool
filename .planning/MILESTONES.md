@@ -1,5 +1,61 @@
 # Milestones
 
+## v0.0.19 GSC Recovery Automation & Long-tail Expansion (Shipped: 2026-06-17)
+
+**Phases completed:** 3 phases, 3 plans
+
+**Key accomplishments:**
+
+- Implemented dynamic recovery redirection engine inside Cloudflare Workers edge middleware supporting high-performance memory cache, anti-loopback protections, and static fallback mapping.
+- Developed Node.js automatic similarity mapping CLI scripts matching GSC Excluded 404 URL lists utilizing Levenshtein Distance and Dice Coefficient algorithms.
+- Optimized 10-locale metadata and support copy for fitness flagship tools while resolving Astro Cloudflare type compatibility errors and local validation deadlocks.
+
+**Archive files:**
+
+- Roadmap: [.planning/milestones/v0.0.19-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.19-ROADMAP.md)
+- Requirements: [.planning/milestones/v0.0.19-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.19-REQUIREMENTS.md)
+- Audit: [.planning/milestones/v0.0.19-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.19-MILESTONE-AUDIT.md)
+
+
+---
+
+## v0.0.18 GSC Recovery Checkpoint & Content Optimization (Shipped: 2026-06-17)
+
+**Phases completed:** 3 phases, 3 plans
+
+**Key accomplishments:**
+
+- Generated the GSC 7-day performance comparator report (`docs/GSC_COHORT_CHECKPOINT_2026-06-16.md`) with 0 issues.
+- Optimized and audited TDKs for 13 Cohort C tools across 10 locales, achieving 0 warnings under the strict scanner.
+- Designed GSC recovery redirect pipeline specification and successfully ran dynamic intercept E2E sandboxes inside edge middleware.
+
+**Archive files:**
+
+- Roadmap: [.planning/milestones/v0.0.18-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.18-ROADMAP.md)
+- Requirements: [.planning/milestones/v0.0.18-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.18-REQUIREMENTS.md)
+- Audit: [.planning/v0.0.18-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.18-MILESTONE-AUDIT.md)
+
+---
+
+## v0.0.17 SEO & GEO Comprehensive Audit & Governance (Shipped: 2026-06-17)
+
+**Phases completed:** 5 phases, 5 plans
+
+**Key accomplishments:**
+
+- Governed multilingual Sitemap completeness, Robots.txt accessibility, and 410 gone edge routing response states.
+- Audited 10-locale `hreflang` symmetrical connection graphs, resolved CJK character boundaries, and ensured 0 translation-drift alerts.
+- Optimized JSON-LD Breadcrumbs structures and refined `llms.txt` token budgets for improved AI/GEO crawl efficiency.
+- Added strict static prerender audit checks preventing systemic leakage of draft stubs or developer reasoning traces.
+
+**Archive files:**
+
+- Roadmap: [.planning/milestones/v0.0.17-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.17-ROADMAP.md)
+- Requirements: [.planning/milestones/v0.0.17-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.17-REQUIREMENTS.md)
+- Audit: [.planning/milestones/v0.0.17-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.17-MILESTONE-AUDIT.md)
+
+---
+
 ## v0.0.16 GSC Legacy Redirects & Decommissioned Route Governance (Shipped: 2026-06-16)
 
 **Phases completed:** 2 phases, 2 plans, 9 tasks

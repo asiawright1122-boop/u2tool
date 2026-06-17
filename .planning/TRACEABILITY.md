@@ -1,6 +1,6 @@
 # Milestone Traceability Report
 
-Generated: 2026-06-16T03:31:46.512Z
+Generated: 2026-06-17T07:30:00.862Z
 Milestone: Unknown milestone
 
 ## Summary
@@ -19,8 +19,6 @@ Milestone: Unknown milestone
 
 | Phase | Requirements | Plans | Summaries |
 | --- | --- | --- | --- |
-| Phase 59 Redirection & 410 Gone Route Governance | None | None | [59-SUMMARY.md](/Users/kaka/Dev/u2tool/.planning/phases/59-redirection-410-gone-route-governance/59-SUMMARY.md) |
-| Phase 60 Technical SEO Validation & E2E Testing | None | None | None |
 
 ## Gaps
 

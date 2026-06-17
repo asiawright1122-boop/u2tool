@@ -1,94 +1,97 @@
 # Feature Research
 
-**Domain:** Technical SEO & Edge Redirection
-**Researched:** 2026-06-15
+**Domain:** SEO & GEO Comprehensive Audit & Governance System
+**Researched:** 2026-06-16
 **Confidence:** HIGH
 
 ## Feature Landscape
 
-### Table Stakes (Users Expect These)
+### Table Stakes (Users & Search Engines Expect These)
 
-Features users assume exist. Missing these = product feels incomplete.
+Features search engines and users assume exist. Missing these results in indexation penalties, double-indexing, or crawl budgeting waste.
 
 | Feature | Why Expected | Complexity | Notes |
 |---------|--------------|------------|-------|
-| Root Route Redirection (`/` to `/en/`) | Localized sites should route the root path to a default locale path to ensure a clean entry point. | LOW | Add root-level redirection matching `url.pathname === '/'` inside `resolveCanonicalRedirect` in `src/middleware.ts`. |
-| Query Parameter Preservation | Marketing campaigns, tracking IDs (e.g., `?utm_source=...`), and user queries must not be lost during redirection. | LOW | Append `url.search` to the redirection target path (e.g., `/en/${url.search}`). |
-| Trailing Slash Normalization | Direct routes must maintain canonical structure with a trailing slash to prevent indexing duplicate content. | LOW | Redirect `/en` to `/en/` and ensure `/` redirects directly to `/en/` (preserving the trailing slash). |
-| Static Asset Exclusions | Favicons, site manifests, assets under `/_astro/`, and API routes must bypass locale-prefixed routing. | LOW | Ensure existing exclusions like `isFileLikePath` and path prefixes (`/api`, `/favicon.ico`) remain prioritized. |
+| **Trailing Slash Normalization Checker** | Astro 5 defaults to trailing-slash routes. Missing these checks leads to search engine crawlers indexing both with and without trailing slash, causing double-indexing penalties. | LOW | Statically parses pre-rendered HTML files, extracting `canonical` tags and internal link hrefs to guarantee they all contain trailing slashes. Checks that edge middleware 301 redirects raw URLs correctly. |
+| **Multi-locale Sitemap Link Validator** | Google and Bing require complete sitemaps without dead ends. A sitemap with 404s or redirect loops degrades search authority. | MEDIUM | Parses generated sitemap files across all 10 locales, crawls all listed URLs, and asserts they return HTTP 200 with matching dynamic trailing-slash configurations. |
+| **Robots.txt & Decommissioned 410 Routes Auditor** | Outdated or removed routes (like `/blog/*` and stale dynamic paths) waste crawl budget. Crawlers must receive `410 Gone` with proper caching to clear indexes without taxing edge compute. | LOW | Validates that `/robots.txt` points to correct sitemaps, and checks that deprecated routes yield a `410 Gone` HTTP status, set `x-robots-tag: noindex, nofollow`, and carry CDN cache-control headers. |
+| **TDK Translation Completeness Scanner** | If Titles, Descriptions, or Keywords (TDK) fall back to default English messages in regional folders, local SEO performance is destroyed. | LOW | Extracts `<title>`, `<meta name="description">`, and keywords from prerendered HTML and diffs them against base translation structures to locate missing translations or raw translation key fallbacks. |
 
 ### Differentiators (Competitive Advantage)
 
-Features that set the product apart. Not required, but valuable.
+Features that set U2Tool's audit system apart, specifically optimizing for mass-localization and generative search engines (GEO).
 
 | Feature | Value Proposition | Complexity | Notes |
 |---------|-------------------|------------|-------|
-| Edge-Level Loopback Safety | Prevents infinite loop execution on Cloudflare Workers when workers perform internal subrequests. | MEDIUM | Detect loopback signatures using request headers (`cf-worker`, `cdn-loop`, or custom headers) and bypass redirection. |
-| Client-Side Language Detection | Seamlessly redirect visitors from `/` to their preferred language (e.g., `/zh/`, `/ru/`) based on headers. | MEDIUM | Negotiate `Accept-Language` headers and compare them to supported locales, falling back to `/en/`. |
+| **10-Locale Hreflang Graph Loop Validator** | Verifying 10 locales by hand is impossible. A single incorrect alternate URL breaks the localized indexation ring. Checking this programmatically ensures search engines correctly present the regional search page. | HIGH | Models the 10-locale translation relationship as a directed graph. Asserts that each URL's `rel="alternate"` hreflang array forms a strongly connected component (fully bi-directional loopback ring) and that all targets are HTTP 200. |
+| **Breadcrumbs & Tool Schema Semantic Checker** | Semantic markup feeds search snippets and rich results. Structural errors in JSON-LD invalidate indexing data. | MEDIUM | Extracts `<script type="application/ld+json">` blocks. Validates that breadcrumb URLs strictly match canonical paths (including trailing slashes), and verifies that Tool Schemas contain necessary fields (`name`, `description`, `applicationCategory`). |
+| **llms.txt & llms-full.txt Semantic Optimizer** | GEO (Generative Engine Optimization) relies on LLM crawlers. Consuming structured Markdown index files allows AI search agents (e.g. ChatGPT, Perplexity) to index tool capabilities without blowing their token limits. | MEDIUM | Scans `/llms.txt` and `/llms-full.txt`. Checks syntax correctness, trims verbose descriptions for token efficiency, and matches indexed tools with the actual live prerendered HTML tool list. |
+| **Prerender Leaks & Reasoning Trace Scanner** | AI-generated translations or code stubs can leave placeholders (`TODO`, `[Placeholder]`) or internal model reasoning traces (chain-of-thought, agent handoff notes). Stopping these protects site credibility and ensures compliance with frontend safety guidelines. | HIGH | Implements regex patterns and heuristic checkers to scan pre-rendered static HTML. Intercepts any build containing debugging tags, AI-thinking blocks (`<!-- reasoning -->`, `Thinking Process:`), or unhydrated placeholder stubs. |
 
 ### Anti-Features (Commonly Requested, Often Problematic)
 
-Features that seem good but create problems.
+Features that seem beneficial on the surface but create major routing loops, crawler blockers, or indexing penalties.
 
 | Feature | Why Requested | Why Problematic | Alternative |
 |---------|---------------|-----------------|-------------|
-| Cookie-Based Sticky Redirects | Save the last visited language in cookies and auto-redirect users on future visits. | Search crawlers visiting from different IPs/regions may get stuck in incorrect redirect loops, causing indexing drift. | Rely on clean URLs, explicit `hreflang` tags, and a prominent user-facing language selector. |
-| Global Unlocalized Catch-All Redirect | Redirect any invalid route (404) back to `/en/` to prevent dead pages. | Confuses search engines by returning soft 404s, which pollutes the index and makes actual route issues harder to debug. | Serve a clean, localized 404 page with a search bar and directory index. |
+| **Cookie-Based Language Redirects** | Automatically route visitors to their last preferred locale based on browser cookie/header. | Crawlers usually don't send cookies or browser headers, and primarily crawl from US IPs. Dynamic redirects hide regional pages from bots, resulting in indexation drops. | Use HTTP 301 redirection only for the bare root `/` to `/en/`. Rely on `hreflang` headers so search engines surface the correct locale page to the user directly, and place an obvious manual language selector. |
+| **JavaScript-Only Hydration of Canonical URLs** | Rely on client-side Svelte hydration to inject or normalise canonical tags with trailing slashes. | Googlebot indexes HTML before running Javascript. If the initial HTML lacks a trailing slash, Google registers a redirect mismatch, raising GSC indexation alerts. | Write canonical tags directly during server-side pre-rendering (SSR/SSG). Edge middleware is a backup redirect shield, not a source of truth for canonical metadata. |
+| **Reasoning Trace Hiding via CSS `display: none`** | Keep internal model chain-of-thought/instructions in HTML but hide them using styling. | Search engine algorithms flag text hidden via CSS as "cloaking," a violation of spam policies. GEO crawlers still parse hidden elements, polluting search snippet summaries. | Physically prune all reasoning traces, prompt fragments, and debugging stubs from the source data during the pre-render build step so they never appear in the final HTML. |
 
 ## Feature Dependencies
 
 ```
-[Root Route Redirection]
-    ├── requires ──> [Default Locale 'en']
-    └── requires ──> [Static Asset & API Exclusions]
+[10-Locale Hreflang Graph Loop Validator]
+    └──requires──> [Multi-locale Sitemap Link Validator]
+                       └──requires──> [Trailing Slash Normalization Checker]
 
-[Loopback Safety Governance] ── enhances ──> [Root Route Redirection]
+[Prerender Leaks & Reasoning Trace Scanner] ──enhances──> [TDK Translation Completeness Scanner]
 
-[Automated SEO Verification] ── validates ──> [Root Route Redirection]
-                               ── validates ──> [Loopback Safety Governance]
+[Cookie-Based Language Redirects] ──conflicts──> [Bare Root 301 Normalization Router]
 ```
 
 ### Dependency Notes
 
-- **[Root Route Redirection] requires [Default Locale 'en']**: The redirect must target the default translation layer `/en/` to serve consistent indexable content.
-- **[Root Route Redirection] requires [Static Asset & API Exclusions]**: Critical requests like `/favicon.ico`, `/favicon.svg`, and `/api/*` must not be redirected to locale prefixes.
-- **[Loopback Safety Governance] enhances [Root Route Redirection]**: Protects edge nodes and crawlers from infinite redirect loops by detecting and bypassing routing rules.
-- **[Automated SEO Verification] validates [Root Route Redirection] / [Loopback Safety Governance]**: E2E smoke tests and technical scripts must assert that headers are preserved, redirects work, and loopback bypasses fire correctly.
+- **[10-Locale Hreflang Graph Loop Validator] requires [Multi-locale Sitemap Link Validator]:** The graph validator requires a complete set of seed URLs representing the localized map. The Sitemap validator parses and serves as this source of truth for all live URLs.
+- **[Multi-locale Sitemap Link Validator] requires [Trailing Slash Normalization Checker]:** Sitemap files must contain only canonical, trailing-slash URLs. Sitemap link checking is blocked until path normalization rules are enforced.
+- **[Prerender Leaks & Reasoning Trace Scanner] enhances [TDK Translation Completeness Scanner]:** The leaks scanner detects placeholder strings and AI artifacts, acting as a secondary verification layer for incomplete translations.
+- **[Cookie-Based Language Redirects] conflicts with [Bare Root 301 Normalization Router]:** Cookie redirection interferes with deterministic 301 edge routing of bare paths, making route behavior unpredictable for search engines.
 
 ## MVP Definition
 
-### Launch With (v1)
+### Launch With (v1 - Audit & Governance Core)
 
-Minimum viable product — what's needed to validate the concept.
+The Minimum Viable Product focuses purely on validating pre-rendered output and blocking invalid deployments through strict CI/CD gates.
 
-- [ ] Root Redirect (`/` to `/en/`) — Enable 301 redirection from the bare root path to `/en/` inside edge middleware.
-- [ ] Query Preservation — Preserve query parameters during the root redirect to avoid breaking tracking or utility links.
-- [ ] Loopback Bypass — Exclude requests carrying loopback signatures (`cf-worker`, `cdn-loop: cloudflare`, or `x-u2tool-loopback`) from redirect rules.
-- [ ] Automated Integration Tests — Write Vitest test cases in `src/middleware.test.ts` to cover root redirect, query parameters, and loopback bypass.
-- [ ] Smoke Test Integration — Add root redirection checks to `scripts/validation/validate-technical-seo.ts` and `scripts/validation/verify-production-routes.mjs`.
+- [ ] **Trailing Slash Compliance Auditor** — Scan built files to verify canonical links and local hrefs match trailing-slash routing rules.
+- [ ] **10-Locale Hreflang Loop Auditor** — Parse pre-rendered HTML files, construct a localization graph, and verify that hreflang alternate links form reciprocal loops across all 10 locales.
+- [ ] **TDK Translation Completeness Scanner** — Parse HTML titles and descriptions, raising errors if any default English strings escape into localized page builds.
+- [ ] **Prerender Leaks & Reasoning Trace Scanner** — Scan pre-rendered output for stub patterns, placeholder strings, and AI thinking blocks, aborting the build if leaks are detected.
+- [ ] **Sitemap & Robots.txt Link Quality Auditor** — Parse sitemaps, trace all URLs to ensure HTTP 200, and check robots.txt structure.
+- [ ] **Breadcrumbs & Tool Schema JSON-LD validator** — Inspect page JSON-LD structures to confirm breadcrumb trailing-slash consistency and WebApplication Schema presence.
 
 ### Add After Validation (v1.x)
 
-Features to add once core is working.
-
-- [ ] Accept-Language Negotiation — Gently redirect `/` based on browser headers if a supported locale is matched.
+- [ ] **Dynamic Edge Redirection Loop Scanner** — Simulate Edge requests locally to ensure trailing-slash rewrites, legacy blog redirects, and 410 assets don't trigger circular redirections.
+- [ ] **llms.txt semantic formatting validator** — Check formatting standards of `/llms.txt` and `/llms-full.txt` against standard AI discovery conventions.
 
 ### Future Consideration (v2+)
 
-Features to defer until product-market fit is established.
-
-- [ ] Edge Geo-IP routing — Perform country-specific edge routing on root request based on Cloudflare Geo-IP headers.
+- [ ] **Automated GSC Recovery Pipeline** — Automatically parse Google Search Console API error exports to flag and schedule programmatic redirection adjustments.
 
 ## Feature Prioritization Matrix
 
 | Feature | User Value | Implementation Cost | Priority |
 |---------|------------|---------------------|----------|
-| Root Redirect (`/` to `/en/`) | HIGH | LOW | P1 |
-| Query Preservation | HIGH | LOW | P1 |
-| Loopback Bypass Guard | HIGH | MEDIUM | P1 |
-| Automated Redirect Tests | HIGH | LOW | P1 |
-| Accept-Language Negotiator | MEDIUM | MEDIUM | P2 |
-| Edge Geo-IP Routing | LOW | HIGH | P3 |
+| **Trailing Slash compliance checks** | HIGH | LOW | P1 |
+| **10-Locale Hreflang Loop validation** | HIGH | MEDIUM | P1 |
+| **TDK translation missing checks** | HIGH | LOW | P1 |
+| **Prerender Leaks & Reasoning Trace Scanner** | HIGH | MEDIUM | P1 |
+| **Sitemap & Robots.txt routes validation** | HIGH | LOW | P1 |
+| **Breadcrumbs & Tool Schema validator** | MEDIUM | MEDIUM | P1 |
+| **llms.txt semantic formatting validator** | MEDIUM | LOW | P2 |
+| **Dynamic Edge Redirection Loop Scanner** | MEDIUM | HIGH | P2 |
+| **Automated GSC Recovery Pipeline** | LOW | HIGH | P3 |
 
 **Priority key:**
 - P1: Must have for launch
@@ -97,17 +100,19 @@ Features to defer until product-market fit is established.
 
 ## Competitor Feature Analysis
 
-| Feature | Competitor A (e.g., CyberChef) | Competitor B (e.g., TinyWow) | Our Approach |
-|---------|--------------------------------|------------------------------|--------------|
-| Root redirection | Single-page app model. No locale-based root routing. | Root is a dedicated catalog; path routing is unlocalized. | Redirect `/` to `/en/` while preserving localization SEO structure for 10 locales. |
-| Loopback protection | Not applicable (client-side only/no edge routing). | Standard server routing; loop loops caught by load balancer. | Active edge-level loopback detection using request headers in Astro middleware. |
+| Feature | Screaming Frog | Semrush | Our Approach |
+|---------|----------------|---------|--------------|
+| **Hreflang Validation** | Crawls site, flags missing codes. Does not perform local graph analysis. | Checks tag presence, lacks localized loop-directed graph verification. | Builds a localized graph of all 10 language alternates at build time, blocking deployment if alternates aren't fully reciprocal. |
+| **AI Reasoning Trace Detection** | None. | None. | Custom build-phase scanner utilizing heuristics to block pages exposing reasoning tokens, prompt stubs, or developer traces. |
+| **llms.txt Verification** | Basic file presence checks. | None. | Validates `/llms.txt` against active tool metadata lists to prevent index drift. |
 
 ## Sources
 
-- Astro Middleware Guidelines: [Astro Middleware API](https://docs.astro.build/en/guides/middleware/)
-- Cloudflare Workers Loop Detection Guide: [Security Model - Loop Detection](https://developers.cloudflare.com/workers/learning/security-model/#loop-detection)
-- Google Search Console Localized URL Management: [Managing Multilingual Sites](https://developers.google.com/search/docs/specialty/multilingual/managing-multi-regional-and-multilingual-sites)
+- Google Search Console Help: [Tell Google about localized versions of your page](https://developers.google.com/search/docs/specialty/international/localized-versions)
+- Astro 5 Docs: [Astro Trailing Slash Routing Behavior](https://docs.astro.build/en/guides/routing/#trailing-slash)
+- llms.txt Proposal: [Standard for LLM-friendly documentation context indexing](https://llmstxt.org/)
+- Project Technical Redirection Guidelines (RED-01 to RED-11)
 
 ---
-*Feature research for: Technical SEO & Edge Redirection*
-*Researched: 2026-06-15*
+*Feature research for: SEO & GEO Comprehensive Audit & Governance System*
+*Researched: 2026-06-16*

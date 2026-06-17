@@ -18,40 +18,34 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 
 ## Current Status
 
-**Current milestone:** `v0.0.18 GSC Recovery Checkpoint & Content Optimization`
-**Latest completed milestone:** `v0.0.17 SEO & GEO Comprehensive Audit & Governance`
-**Latest archived milestone:** `v0.0.17 SEO & GEO Comprehensive Audit & Governance`
-**Previous archived milestone:** `v0.0.16 GSC Legacy Redirects & Decommissioned Route Governance`
-**Current planning state:** Milestone v0.0.17 completed and archived.
+**Current milestone:** `v0.0.20 - Planning Next Milestone`
+**Latest completed milestone:** `v0.0.19 GSC Recovery Automation & Long-tail Expansion`
+**Latest archived milestone:** `v0.0.19 GSC Recovery Automation & Long-tail Expansion`
+**Previous archived milestone:** `v0.0.18 GSC Recovery Checkpoint & Content Optimization`
+**Current planning state:** Milestone v0.0.19 completed and archived.
 
 **Latest completed outcomes:**
-- Implemented comprehensive SEO & GEO validators for trailing-slashes, multi-locale sitemaps, Robots.txt & 410 decommissioned routes, 10-locale hreflang SCC graph loops, TDK translations completeness, JSON-LD Schema structures, llms.txt alignment, and edge-simulation safety loops.
-- Implemented permanent (301) redirects from legacy blog paths (e.g. `/blog/*` and `/zh/blog/*`) to their canonical parent category routes (e.g. `/en/tools/` and `/zh/tools/`).
-- Returned `410 Gone` with `x-robots-tag: noindex, nofollow` and cache-control headers for decommissioned compare pairs, legacy categories, and stale Next.js chunk assets (`/_next/static/chunks/*`).
-- Extended technical SEO validation and E2E smoke tests validating trailing slash redirects, query parameter preservation, legacy redirects, and 410 gone status and headers with zero warnings.
-- Enforced canonical 301 redirect from the bare root path `/` to the default language prefix `/en/` inside edge middleware while preserving all query parameters.
-- Implemented loopback safety guards (headers: `cf-worker`, `x-worker-loopback`, User-Agent) to prevent worker redirection loopbacks.
-- Updated `public/_routes.json` to explicitly intercept root route requests.
-- Extended technical SEO validation and E2E smoke tests validating root redirection and loopback bypass behavior with zero warnings.
-- Converted the remaining high-traffic `PopularUtilityTool` catalog placeholders into real Svelte 5 components across finance, developer/security, generator, social/media, lifestyle, image, and converter clusters.
-- Added English category-level authority/support content for `finance`, `generators`, and `lifestyle` through the shared support-content model.
-- Safely released the latest recovery slice through PR #25 and verified the category support copy on production.
-- Confirmed final converted tool URLs remain HTTP 200 and live scanned surfaces do not expose internal reasoning traces.
-- Created the GSC recovery cohort plan with exact URL queues, request-indexing guidance, owner model, and 7/14/28-day checkpoints.
-- Created the recovery measurement report structure with baseline metrics, cohort scorecards, query-family tracking, and decision labels.
-- Added a local GSC cohort checkpoint comparator so post-release exports can be turned into a repeatable URL/query-family report.
-- Added and validated loss-aware GSC metadata/rendered SEO checks plus runtime-placeholder regression governance.
-- Preserved the frontend safety rule that user-facing surfaces must never display internal reasoning traces.
-- Passed release gates for build, check, runtime integrity, SEO governance, runtime-placeholder regression, and front-end safety.
+- Implemented dynamic recovery redirection engine inside Cloudflare Workers edge middleware supporting high-performance memory cache, anti-loopback protections, and static fallback mapping.
+- Developed Node.js automatic similarity mapping CLI scripts matching GSC Excluded 404 URL lists utilizing Levenshtein Distance and Dice Coefficient algorithms.
+- Optimized 10-locale metadata and support copy for fitness flagship tools while resolving Astro Cloudflare type compatibility errors and local validation deadlocks.
 
 **Latest archived milestone evidence:**
-- Audit: [.planning/milestones/v0.0.16-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.16-MILESTONE-AUDIT.md)
-- Roadmap archive: [.planning/milestones/v0.0.16-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.16-ROADMAP.md)
-- Requirements archive: [.planning/milestones/v0.0.16-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.16-REQUIREMENTS.md)
+- Audit: [.planning/milestones/v0.0.19-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.19-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.19-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.19-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.19-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.19-REQUIREMENTS.md)
 - Traceability: [.planning/TRACEABILITY.md](/Users/kaka/Dev/u2tool/.planning/TRACEABILITY.md)
 - Health report: [docs/PROJECT_HEALTH_REPORT.md](/Users/kaka/Dev/u2tool/docs/PROJECT_HEALTH_REPORT.md)
 
 **Earlier archived milestone evidence:**
+- Audit: [.planning/v0.0.18-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.18-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.18-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.18-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.18-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.18-REQUIREMENTS.md)
+- Audit: [.planning/v0.0.17-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.17-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.17-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.17-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.17-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.17-REQUIREMENTS.md)
+- Audit: [.planning/milestones/v0.0.16-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.16-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.16-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.16-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.16-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.16-REQUIREMENTS.md)
 - Audit: [.planning/milestones/v0.0.15-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.15-MILESTONE-AUDIT.md)
 - Roadmap archive: [.planning/milestones/v0.0.15-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.15-ROADMAP.md)
 - Requirements archive: [.planning/milestones/v0.0.15-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.15-REQUIREMENTS.md)
@@ -61,20 +55,22 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 - Audit: [.planning/v0.0.12-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.12-MILESTONE-AUDIT.md)
 - Roadmap archive: [.planning/milestones/v0.0.12-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-ROADMAP.md)
 - Requirements archive: [.planning/milestones/v0.0.12-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-REQUIREMENTS.md)
-- Audit: [.planning/v0.0.11-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.11-MILESTONE-AUDIT.md)
-- Roadmap archive: [.planning/milestones/v0.0.11-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.11-ROADMAP.md)
-- Requirements archive: [.planning/milestones/v0.0.11-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.11-REQUIREMENTS.md)
 - Milestone index: [.planning/MILESTONES.md](/Users/kaka/Dev/u2tool/.planning/MILESTONES.md)
 
-**Most recent milestone focus (`v0.0.16`):**
-- Resolving Google double-indexing issues and GSC redirect warnings by enforcing trailing slash redirection, legacy blog/compare redirections, and stale framework asset 410 gone status gates.
+**Most recent milestone focus (`v0.0.19`):**
+- Designing & implementing dynamic recovery redirect engine and long-tail locale TDK optimization.
+
 
 
 ## Requirements
 
 ### Validated
 
+- ✓ Dynamic GSC Recovery Redirect Engine (GEO-04) — v0.0.19.
+- ✓ Automatic Redirect Generator & Pipeline (GEO-05) — v0.0.19.
+- ✓ Long-Tail Locale Content & Metadata Alignment (LTDK-04) — v0.0.19.
 - ✓ Large multilingual tool catalog ships and builds successfully across locale-prefixed routes.
+
 - ✓ Shared SEO governance and alignment scripts now enforce deterministic metadata coverage for priority locales and categories.
 - ✓ Translation loading now resolves localized base, root, and tool message sources without silent English fallback.
 - ✓ Theme switching now stays synchronized between the document shell, UI toggle, and ECharts-based tool output.
@@ -126,6 +122,9 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 - ✓ Legacy compare/category 410 (RED-09) — v0.0.16
 - ✓ Stale framework asset 410 (RED-10) — v0.0.16
 - ✓ Test suites and E2E validation (RED-11) — v0.0.16
+- ✓ GSC 7-Day Performance Checkpoint comparison report generated with 0 issues — v0.0.18
+- ✓ Cohort C Metadata content optimization complete, TDK validation green for 13 tools — v0.0.18
+- ✓ Dynamic GSC recovery redirect pipeline designed and verified in local E2E sandbox — v0.0.18
 
 ### Active
 
@@ -198,18 +197,25 @@ This is a brownfield repository with a very large content surface, heavy localiz
 
 The current baseline now includes promoted discovery ordering, stable comparison surfaces, AI/GEO exports, category authority support content, runtime-placeholder governance, rendered SEO checks, and a canonical production gate that reflects real Cloudflare server-build output. v0.0.16 finalized dynamic trailing-slash normalizations, legacy blog/compare redirections, and stale framework asset 410 gone status gates, verified fully with browser-level Puppeteer redirect chains and header assertions.
 
-## Current Milestone: v0.0.17 SEO & GEO Comprehensive Audit & Governance
+## Current Milestone: v0.0.19 GSC Recovery Automation & Long-tail Expansion
 
-**Goal:** 以搜索引擎和 GEO (AI 搜索) 的高标准对 U2Tool 项目的 SEO 与 GEO 进行全方位审查审计，治理多语言 Hreflang/TDK/Sitemap/JSON-LD 缺陷，防范内容信誉与 Prerender 泄露，并构建自动化的上线发布拦截防线。
+**Goal:** 实现 GSC Excluded 404 URL 恢复重定向的动态化与半自动化生成机制，并进一步优化和对齐长尾语系的旗舰工具 SEO/GEO 元数据。
 
 **Target features:**
-- 审计并修复多语言 Sitemap 的完整性、Robots.txt 的可访问性与边缘路由状态（包括 410 CDN 缓存等）。
-- 校验 10 个 Locale 语境下的 `hreflang` 映射闭环，核对 TDK 翻译，防范双重索引与定位偏移。
-- 优化面包屑（Breadcrumbs）与工具级 Schema Markup 的结构化数据，精简 llms.txt 以提升 AI GEO 召回率。
-- 编写审查规则以审计静态 prerender HTML，杜绝空白、未激活 stubs、placeholders 或 internal reasoning 的遗留。
-- 构建自动化的 SEO/GEO release gates 与测试套件以拦截不合格的部署包。
+- 将边缘重定向规则由静态硬编码过渡到动态机制，支持基于 Cloudflare KV 快速部署/更新而无需新版打包。
+- 开发 GSC Excluded 404 URL 控制面拉取脚本与规则匹配引擎，实现半自动生成映射 JSON。
+- 深度优化 `macro-calculator`、`one-rep-max-calculator` 等长尾重点工具在 10 个语系下的 TDK/Snippet 表达，杜绝翻译缺陷。
 
-## Most Recent Milestone: v0.0.16 GSC Legacy Redirects & Decommissioned Route Governance
+## Most Recent Milestone: v0.0.18 GSC Recovery Checkpoint & Content Optimization
+
+**Goal:** 执行 2026-06-09 恢复版发布后的 7-Day GSC 数据指标比对与收敛分析，彻底完成低优先级 Cohort C 队列中 13 个工具的多语言 TDK/Snippet 深度优化与审核以确保具备优秀的索引收录品质，并设计评估 GEO-03 自动化 GSC 恢复管线。
+
+**Completed features:**
+- 成功生成 2026-06-16 checked GSC 表现对比报告（docs/GSC_COHORT_CHECKPOINT_2026-06-16.md）。
+- 彻底完成 13 个 Cohort C 工具的多语言（10个Locale）元数据审计与优化，消除 TDK length 警告与翻译纰漏。
+- 完成 GSC 恢复重定向机制（GEO-03）系统设计与本地沙盒 E2E 测试拦截验证。
+
+## Earlier Milestone: v0.0.17 SEO & GEO Comprehensive Audit & Governance
 
 **Goal:** Clean up over 1,300+ GSC redirect warnings by enforcing trailing slashes on raw paths, setting up correct 410 Gone gates for stale asset/framework paths, and implementing lightweight middleware normalizations for decommissioned legacy blogs and compare-guide URLs.
 
@@ -248,4 +254,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-06-16 after completing Milestone v0.0.16*
+*Last updated: 2026-06-17 after completing Milestone v0.0.18*
