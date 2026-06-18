@@ -90,6 +90,24 @@ describe('validate-live-redirects', () => {
       expect(res.status).toBe(301);
       expect(mockFetch).toHaveBeenCalledTimes(3);
     });
+
+    it('should apply exponential backoff of 500 * attempt between retries', async () => {
+      const mockFetch = vi.fn().mockRejectedValue(new Error('Network Error'));
+      globalThis.fetch = mockFetch;
+
+      // 记录所有 setTimeout 调用的 delay 参数；默认透传原实现（真实等待）
+      const setTimeoutSpy = vi.spyOn(globalThis, 'setTimeout');
+
+      await expect(
+        // timeoutMs=50 与退避值 500/1000 不混淆，便于精确区分
+        fetchWithRetry('https://example.com', {}, 3, 50)
+      ).rejects.toThrow('Network Error');
+
+      const delays = setTimeoutSpy.mock.calls.map((call) => call[1]);
+      // attempt=1 失败 → sleep(500*1=500)；attempt=2 失败 → sleep(500*2=1000)；attempt=3 失败 → 抛错无 sleep
+      expect(delays).toContain(500);
+      expect(delays).toContain(1000);
+    });
   });
 
   describe('probeUrl', () => {
@@ -154,6 +172,33 @@ describe('validate-live-redirects', () => {
 
       expect(results).toEqual([2, 4, 6, 8, 10, 12, 14, 16, 18, 20]);
       expect(peakConcurrency).toBeLessThanOrEqual(3);
+    });
+
+    it('should produce jitter delays within the [min, max] bounds', async () => {
+      const items = [1, 2, 3, 4];
+      const JITTER_MIN = 50;
+      const JITTER_MAX = 150;
+
+      // 通过 spy setTimeout 收集 jitter 实际产生的延迟值
+      const setTimeoutSpy = vi.spyOn(globalThis, 'setTimeout');
+      // mapper 立即返回，不引入自身延迟，确保 spy 捕获的全是 jitter
+      const mapper = async (item: number) => item;
+
+      await mapWithConcurrencyAndJitter(items, mapper, 1, [JITTER_MIN, JITTER_MAX]);
+
+      // index=0 不注入 jitter；index>0 各注入一次落在 [50,150] 的随机延迟
+      const delays = setTimeoutSpy.mock.calls.map((call) => call[1]);
+      const jitterDelays = delays.filter((d) => d >= JITTER_MIN && d <= JITTER_MAX);
+
+      // 至少捕获到 index=1,2,3 三次 jitter
+      expect(jitterDelays.length).toBeGreaterThanOrEqual(3);
+      // 每次 jitter 都必须严格落在闭区间内
+      for (const d of jitterDelays) {
+        expect(d).toBeGreaterThanOrEqual(JITTER_MIN);
+        expect(d).toBeLessThanOrEqual(JITTER_MAX);
+      }
+
+      setTimeoutSpy.mockRestore();
     });
   });
 });
