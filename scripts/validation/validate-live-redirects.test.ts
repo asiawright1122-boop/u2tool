@@ -5,11 +5,17 @@ import {
   fetchWithRetry,
   mapWithConcurrencyAndJitter,
   probeUrl,
+  normalizeUrlForComparison,
+  traceRedirectChain,
+  suggestFlatten,
+  type RedirectTask,
+  type HopInfo,
 } from './validate-live-redirects';
 
 vi.mock('node:fs/promises', () => ({
   default: {
     readFile: vi.fn(),
+    writeFile: vi.fn(),
   },
 }));
 
@@ -199,6 +205,185 @@ describe('validate-live-redirects', () => {
       }
 
       setTimeoutSpy.mockRestore();
+    });
+  });
+
+  // ---- Phase 75: Hop tracer, loop blocker, normalization, flatten ----
+
+  describe('normalizeUrlForComparison', () => {
+    it('should treat param reordering as equal', () => {
+      // Must Have 4: 查询参数顺序漂移被中和
+      expect(normalizeUrlForComparison('https://x.com/p?b=2&a=1'))
+        .toBe(normalizeUrlForComparison('https://x.com/p?a=1&b=2'));
+    });
+
+    it('should preserve trailing slash (avoid false loop on normalization)', () => {
+      // PITFALLS.md L106：尾部斜杠规范化是正常跳转，不应被归并为同 URL 误判环路
+      expect(normalizeUrlForComparison('https://x.com/p'))
+        .not.toBe(normalizeUrlForComparison('https://x.com/p/'));
+    });
+
+    it('should drop hash noise', () => {
+      expect(normalizeUrlForComparison('https://x.com/p#a'))
+        .toBe(normalizeUrlForComparison('https://x.com/p#b'));
+    });
+
+    it('should still distinguish genuinely different params', () => {
+      expect(normalizeUrlForComparison('https://x.com/p?a=1'))
+        .not.toBe(normalizeUrlForComparison('https://x.com/p?a=2'));
+    });
+  });
+
+  describe('traceRedirectChain', () => {
+    /** 构造按调用顺序返回的 mock fetch */
+    function mockFetchSequence(responses: Array<{ status: number; location?: string }>) {
+      const calls: string[] = [];
+      const mock = vi.fn(async (url: string) => {
+        calls.push(url);
+        const r = responses.shift() ?? { status: 200 };
+        return new Response(null, {
+          status: r.status,
+          headers: r.location ? { location: r.location } : {},
+        });
+      });
+      globalThis.fetch = mock;
+      return { calls };
+    }
+
+    const task: RedirectTask = {
+      sourceUrl: 'https://x.com/old',
+      expectedTarget: '/new',
+    };
+
+    it('should return single-hop chain when no redirect (Must Have 1)', async () => {
+      mockFetchSequence([{ status: 200 }]);
+      const res = await traceRedirectChain(task, { maxAttempts: 1, timeoutMs: 100 });
+      expect(res.success).toBe(true);
+      expect(res.chain?.length).toBe(1);
+      expect(res.loopDetected).toBeUndefined();
+      expect(res.maxHopsExceeded).toBeUndefined();
+    });
+
+    it('should follow multi-hop A->B->C and record full chain (Must Have 1)', async () => {
+      mockFetchSequence([
+        { status: 301, location: 'https://x.com/mid' },
+        { status: 302, location: 'https://x.com/final' },
+        { status: 200 },
+      ]);
+      const res = await traceRedirectChain(task, { maxAttempts: 1, timeoutMs: 100 });
+      expect(res.success).toBe(true);
+      expect(res.chain?.length).toBe(3);
+      expect(res.chain?.[0].url).toBe('https://x.com/old');
+      expect(res.chain?.[2].url).toBe('https://x.com/final');
+    });
+
+    it('should detect a loop A->B->A before repeating (Must Have 2)', async () => {
+      // B 回指 A：应在再次请求 A 之前中断
+      const { calls } = mockFetchSequence([
+        { status: 301, location: 'https://x.com/loop-b' },
+        { status: 301, location: 'https://x.com/old' }, // 指回起点 → 环路
+      ]);
+      const res = await traceRedirectChain(task, { maxAttempts: 1, timeoutMs: 100 });
+      expect(res.success).toBe(false);
+      expect(res.loopDetected).toBe(true);
+      expect(res.error).toMatch(/Loop detected/);
+      // 关键：环路检测发生在再次发包前，不应第三次请求 /old
+      expect(calls.length).toBe(2);
+    });
+
+    it('should flag maxHopsExceeded when depth cap is hit (Must Have 3)', async () => {
+      // 永远返回 301 指向不同 URL，确保不触发环路，只触发深度上限
+      mockFetchSequence([
+        { status: 301, location: 'https://x.com/h1' },
+        { status: 301, location: 'https://x.com/h2' },
+        { status: 301, location: 'https://x.com/h3' },
+        { status: 301, location: 'https://x.com/h4' },
+        { status: 301, location: 'https://x.com/h5' },
+        { status: 301, location: 'https://x.com/h6' },
+      ]);
+      const res = await traceRedirectChain(task, { maxRedirects: 5, maxAttempts: 1, timeoutMs: 100 });
+      expect(res.success).toBe(false);
+      expect(res.maxHopsExceeded).toBe(true);
+      expect(res.error).toMatch(/Max redirects/);
+      expect(res.chain?.length).toBe(6); // depth 0..5 共 6 次请求
+    });
+
+    it('should neutralize param reordering during loop detection (Must Have 4)', async () => {
+      // 两次 Location 仅参数顺序不同 → 归一化后相同 → 视为环路
+      const { calls } = mockFetchSequence([
+        { status: 301, location: 'https://x.com/p?a=1&b=2' },
+        { status: 301, location: 'https://x.com/p?b=2&a=1' }, // 仅顺序不同
+      ]);
+      const taskParam: RedirectTask = {
+        sourceUrl: 'https://x.com/old',
+        expectedTarget: '/p',
+      };
+      const res = await traceRedirectChain(taskParam, { maxAttempts: 1, timeoutMs: 100 });
+      expect(res.loopDetected).toBe(true);
+      expect(calls.length).toBe(2);
+    });
+
+    it('should NOT misflag trailing-slash normalization as a loop (regression)', async () => {
+      // PITFALLS.md L106/L166 张力：/p -> /p/ 然后 200 终止是正常规范化，非环路
+      const { calls } = mockFetchSequence([
+        { status: 301, location: 'https://x.com/old/' }, // 加尾斜杠
+        { status: 200 }, // 到达终点
+      ]);
+      const res = await traceRedirectChain(task, { maxAttempts: 1, timeoutMs: 100 });
+      expect(res.success).toBe(true);
+      expect(res.loopDetected).toBeUndefined();
+      expect(res.chain?.length).toBe(2);
+      expect(calls.length).toBe(2);
+    });
+  });
+
+  describe('suggestFlatten', () => {
+    it('should return null for depth < 2 (Must Have 5)', () => {
+      expect(suggestFlatten([])).toBeNull();
+      expect(suggestFlatten([
+        { url: 'https://x.com/a', status: 200 },
+      ])).toBeNull();
+      expect(suggestFlatten([
+        { url: 'https://x.com/a', status: 301, location: 'https://x.com/b' },
+        { url: 'https://x.com/b', status: 200 },
+      ])).toBeNull(); // length 2 = depth 1，无需压平
+    });
+
+    it('should return from->to for depth >= 2 (Must Have 5)', () => {
+      const chain: HopInfo[] = [
+        { url: 'https://x.com/a', status: 301, location: 'https://x.com/b' },
+        { url: 'https://x.com/b', status: 301, location: 'https://x.com/c' },
+        { url: 'https://x.com/c', status: 200, location: null },
+      ];
+      const suggestion = suggestFlatten(chain);
+      expect(suggestion).not.toBeNull();
+      expect(suggestion?.from).toBe('https://x.com/a');
+      expect(suggestion?.to).toBe('https://x.com/c');
+      expect(suggestion?.hopsEliminated).toBe(1); // 3 - 2
+    });
+
+    it('must be a pure reporter (no fs import side effects)', async () => {
+      // 守 FEATURES.md Anti-Feature 边界：suggestFlatten 不应触碰文件系统
+      const spy = vi.spyOn(fs, 'writeFile');
+      suggestFlatten([
+        { url: 'a', status: 301, location: 'b' },
+        { url: 'b', status: 301, location: 'c' },
+        { url: 'c', status: 200, location: null },
+      ]);
+      expect(spy).not.toHaveBeenCalled();
+      spy.mockRestore();
+    });
+  });
+
+  describe('backward compatibility (Must Have 6)', () => {
+    it('Phase 74 probeUrl still works with unchanged ProbeResult shape', async () => {
+      // 新增字段为可选，probeUrl 不填充 chain，旧断言不受影响
+      globalThis.fetch = vi.fn().mockResolvedValue(new Response('ok', { status: 200 }));
+      const res = await probeUrl('https://x.com/a', undefined, 1, 100);
+      expect(res.success).toBe(true);
+      expect(res.chain).toBeUndefined();
+      expect(res.loopDetected).toBeUndefined();
+      expect(res.maxHopsExceeded).toBeUndefined();
     });
   });
 });

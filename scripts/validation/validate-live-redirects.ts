@@ -11,6 +11,13 @@ export interface RedirectTask {
   expectedTarget: string;
 }
 
+/** 单次跳转节点的快照（URL + 响应状态 + Location 头） */
+export interface HopInfo {
+  url: string;
+  status?: number;
+  location?: string | null;
+}
+
 export interface ProbeResult {
   url: string;
   success: boolean;
@@ -18,10 +25,40 @@ export interface ProbeResult {
   location?: string | null;
   error?: string;
   durationMs: number;
+  /** 完整跳转链路；长度即跳转深度（单跳为 1） */
+  chain?: HopInfo[];
+  /** 检测到循环（A->B->A）时为 true */
+  loopDetected?: boolean;
+  /** 跳转深度超过 MAX_REDIRECTS 上限时为 true */
+  maxHopsExceeded?: boolean;
 }
 
 const CHROME_DESKTOP_UA =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
+
+/** 多跳追踪的最大深度上限（PITFALLS.md Pitfall 2：防止无限跳转崩溃） */
+const MAX_REDIRECTS = 5;
+
+/**
+ * URL 规范化比较键：对查询参数按 key/value 排序，
+ * 消除参数顺序漂移（PITFALLS.md Pitfall 3），
+ * 归并查询参数顺序并丢弃 hash 噪声；但**保留尾部斜杠**——
+ * 因为生产环境的 trailing-slash 规范化（A -> B/）是正常单跳，
+ * 不应被误判为环路（PITFALLS.md L106 假阳性警告）。
+ * 仅当同一规范化 URL 真的重复出现时才视为环路。
+ */
+export function normalizeUrlForComparison(raw: string): string {
+  const u = new URL(raw);
+  // 保留 pathname 原样（含尾斜杠），仅重建排序后的 query
+  const normalized = new URL(u.origin + u.pathname);
+  for (const key of [...u.searchParams.keys()].sort()) {
+    for (const value of u.searchParams.getAll(key).sort()) {
+      normalized.searchParams.append(key, value);
+    }
+  }
+  // 不去尾斜杠；丢弃 hash（new URL 已不含 hash）
+  return normalized.toString();
+}
 
 /**
  * 根据重定向配置与语系列表构建测试 URL 矩阵
@@ -99,6 +136,21 @@ export async function fetchWithRetry(
 }
 
 /**
+ * 构造探测请求头：固定 Chrome 桌面 UA，可选 WAF 绕过 token
+ */
+function buildProbeHeaders(bypassToken?: string): Record<string, string> {
+  const headers: Record<string, string> = {
+    'User-Agent': CHROME_DESKTOP_UA,
+  };
+
+  if (bypassToken) {
+    headers['x-waf-bypass-token'] = bypassToken;
+  }
+
+  return headers;
+}
+
+/**
  * 网络探测单次 GET 执行器
  */
 export async function probeUrl(
@@ -108,13 +160,7 @@ export async function probeUrl(
   timeoutMs = 5000
 ): Promise<ProbeResult> {
   const startTime = Date.now();
-  const headers: Record<string, string> = {
-    'User-Agent': CHROME_DESKTOP_UA,
-  };
-
-  if (bypassToken) {
-    headers['x-waf-bypass-token'] = bypassToken;
-  }
+  const headers = buildProbeHeaders(bypassToken);
 
   try {
     const response = await fetchWithRetry(url, headers, maxAttempts, timeoutMs);
@@ -136,6 +182,111 @@ export async function probeUrl(
       durationMs: Date.now() - startTime,
     };
   }
+}
+
+export interface TraceOptions {
+  bypassToken?: string;
+  maxRedirects?: number;
+  maxAttempts?: number;
+  timeoutMs?: number;
+}
+
+/**
+ * 多跳重定向链路追踪器：沿 Location 头逐步跟进，
+ * 直到抵达终点（非 3xx 或无可用 Location），或触发
+ * 环路检测 / 深度上限。
+ */
+export async function traceRedirectChain(
+  task: RedirectTask,
+  opts: TraceOptions = {}
+): Promise<ProbeResult> {
+  const maxRedirects = opts.maxRedirects ?? MAX_REDIRECTS;
+  const maxAttempts = opts.maxAttempts ?? 4;
+  const timeoutMs = opts.timeoutMs ?? 5000;
+  const startTime = Date.now();
+  const headers = buildProbeHeaders(opts.bypassToken);
+
+  const chain: HopInfo[] = [];
+  const visited = new Set<string>();
+  let currentUrl = task.sourceUrl;
+
+  // depth 从 0 到 maxRedirects：最多发起 maxRedirects+1 次请求
+  for (let depth = 0; depth <= maxRedirects; depth++) {
+    // 环路检测：在每次请求前检查 visited，避免对已访问 URL 重复发包
+    const key = normalizeUrlForComparison(currentUrl);
+    if (visited.has(key)) {
+      return {
+        url: task.sourceUrl,
+        success: false,
+        durationMs: Date.now() - startTime,
+        chain,
+        loopDetected: true,
+        error: `Loop detected at hop ${depth}: ${currentUrl} already visited`,
+      };
+    }
+    visited.add(key);
+
+    const response = await fetchWithRetry(currentUrl, headers, maxAttempts, timeoutMs);
+    const location = response.headers.get('location');
+    chain.push({ url: currentUrl, status: response.status, location });
+
+    // 终点判定：非 3xx，或 3xx 但无可用 Location
+    if (response.status < 300 || response.status >= 400 || !location) {
+      return {
+        url: task.sourceUrl,
+        success: response.status >= 200 && response.status < 400,
+        status: response.status,
+        location: null,
+        durationMs: Date.now() - startTime,
+        chain,
+      };
+    }
+
+    // 相对 Location 需基于当前 URL 解析为绝对地址
+    currentUrl = new URL(location, currentUrl).toString();
+
+    // 已是最后一轮（depth === maxRedirects）但仍得到 3xx：深度超限
+    if (depth === maxRedirects) {
+      return {
+        url: task.sourceUrl,
+        success: false,
+        status: response.status,
+        location,
+        durationMs: Date.now() - startTime,
+        chain,
+        maxHopsExceeded: true,
+        error: `Max redirects (${maxRedirects}) exceeded`,
+      };
+    }
+  }
+
+  // 循环内每条路径都已 return，此处不可达
+  throw new Error('traceRedirectChain: unreachable');
+}
+
+export interface FlattenSuggestion {
+  from: string;
+  to: string;
+  hopsEliminated: number;
+}
+
+/**
+ * 压平建议生成器：对深度 >= 2 的链路（chain.length >= 3）
+ * 提出从首跳直指末跳终点的扁平规则建议。
+ * 纯函数，绝不改写 gsc-redirects.json（FEATURES.md Anti-Feature 边界）。
+ */
+export function suggestFlatten(chain: HopInfo[]): FlattenSuggestion | null {
+  if (chain.length < 3) return null; // 深度 0 或 1 无需压平
+
+  const from = chain[0].url;
+  const last = chain[chain.length - 1];
+  const to = last.location ?? last.url;
+
+  return {
+    from,
+    to,
+    hopsEliminated: chain.length - 2,
+  };
 }
 
 /**
@@ -202,20 +353,54 @@ async function main(): Promise<void> {
   console.log(`------------------------------------------------------------------`);
 
   const startTime = Date.now();
-  const mapper = (task: RedirectTask) => probeUrl(task.sourceUrl, WAF_BYPASS_TOKEN);
+  const mapper = (task: RedirectTask) =>
+    traceRedirectChain(task, {
+      bypassToken: WAF_BYPASS_TOKEN,
+      maxRedirects: MAX_REDIRECTS,
+      maxAttempts: 4,
+      timeoutMs: 5000,
+    });
   const results = await mapWithConcurrencyAndJitter(matrix, mapper, CONCURRENCY, JITTER_RANGE);
   const totalDuration = Date.now() - startTime;
 
   let passedCount = 0;
   let failedCount = 0;
+  let loopCount = 0;
+  let maxHopsCount = 0;
+  let flattenCount = 0;
 
   for (let i = 0; i < results.length; i++) {
     const res = results[i];
     const task = matrix[i];
-    
+
+    // 环路 / 深度超限：单独归类并打印完整 hop 链
+    if (res.loopDetected || res.maxHopsExceeded) {
+      failedCount++;
+      if (res.loopDetected) loopCount++;
+      if (res.maxHopsExceeded) maxHopsCount++;
+      console.log(`\x1b[31m[${res.loopDetected ? 'LOOP' : 'MAXHOPS'}]\x1b[0m ${res.url}`);
+      console.log(`  - Reason: ${res.error}`);
+      if (res.chain && res.chain.length > 0) {
+        console.log(`  - Hop chain (${res.chain.length} hops):`);
+        for (const hop of res.chain) {
+          console.log(`      [HOP] ${hop.url} -> ${hop.status} (Location: ${hop.location || 'none'})`);
+        }
+      }
+      console.log(`  - Expected Target Path: ${task.expectedTarget}`);
+      continue;
+    }
+
     if (res.success) {
       passedCount++;
-      console.log(`\x1b[32m[PASS]\x1b[0m ${res.url} -> Status: ${res.status}, Location: ${res.location || '(none)'} (${res.durationMs}ms)`);
+      const hopDepth = res.chain ? res.chain.length : 1;
+      console.log(`\x1b[32m[PASS]\x1b[0m ${res.url} -> Status: ${res.status}, Hops: ${hopDepth}, Final: ${res.location || '(none)'} (${res.durationMs}ms)`);
+
+      // 深度 >= 2（chain.length >= 3）给出压平建议
+      const suggestion = res.chain ? suggestFlatten(res.chain) : null;
+      if (suggestion) {
+        flattenCount++;
+        console.log(`\x1b[36m[FLATTEN]\x1b[0m ${suggestion.from} -> ${suggestion.to} (eliminate ${suggestion.hopsEliminated} hops)`);
+      }
     } else {
       failedCount++;
       console.log(`\x1b[31m[FAIL]\x1b[0m ${res.url}`);
@@ -236,7 +421,10 @@ async function main(): Promise<void> {
   console.log(`\x1b[36m[SUMMARY] Probe Completed in ${(totalDuration / 1000).toFixed(2)}s\x1b[0m`);
   console.log(`  - Total checked: ${results.length}`);
   console.log(`  - Passed: \x1b[32m${passedCount}\x1b[0m`);
-  console.log(`  - Failed: \x1b[31m${failedCount}\x1b[0m`);
+  console.log(`  - Failed: \x1b[31m${failedCount}\x1b[0m (loops: ${loopCount}, max-hops exceeded: ${maxHopsCount})`);
+  if (flattenCount > 0) {
+    console.log(`  - Flatten suggestions: ${flattenCount}`);
+  }
 
   if (failedCount > 0) {
     console.error(`\x1b[31m[ERROR] ${failedCount} redirection probes failed.\x1b[0m`);
