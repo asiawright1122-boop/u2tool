@@ -18,25 +18,29 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 
 ## Current Status
 
-**Current milestone:** `v0.0.20 - Edge Redirect KV Automation & Release Pipeline`
-**Latest completed milestone:** `v0.0.19 GSC Recovery Automation & Long-tail Expansion`
-**Latest archived milestone:** `v0.0.19 GSC Recovery Automation & Long-tail Expansion`
-**Previous archived milestone:** `v0.0.18 GSC Recovery Checkpoint & Content Optimization`
-**Current planning state:** Milestone v0.0.19 completed and archived.
+**Current milestone:** `v0.0.21 - Live Redirection Connection Monitoring & Crawler`
+**Latest completed milestone:** `v0.0.20 - Edge Redirect KV Automation & Release Pipeline`
+**Latest archived milestone:** `v0.0.20 - Edge Redirect KV Automation & Release Pipeline`
+**Previous archived milestone:** `v0.0.19 GSC Recovery Automation & Long-tail Expansion`
+**Current planning state:** Milestone v0.0.20 completed and archived.
 
 **Latest completed outcomes:**
-- Implemented dynamic recovery redirection engine inside Cloudflare Workers edge middleware supporting high-performance memory cache, anti-loopback protections, and static fallback mapping.
-- Developed Node.js automatic similarity mapping CLI scripts matching GSC Excluded 404 URL lists utilizing Levenshtein Distance and Dice Coefficient algorithms.
-- Optimized 10-locale metadata and support copy for fitness flagship tools while resolving Astro Cloudflare type compatibility errors and local validation deadlocks.
+- Built the synchronization script `publish-mappings.ts` that safely validates mapping integrity, checks credentials, and publishes redirect mappings to Cloudflare KV.
+- Re-implemented middleware lookup using a single KV key `'gsc-recovery-rules'` and a high-performance in-memory cache map.
+- Implemented a graph-based loop detection script `validate-redirect-loops.ts` that blocks build and publish operations on self-loops or multi-hop loops.
+- Expanded middleware integration tests to cover query parameters and locale preservation under KV simulated mock scenarios.
 
 **Latest archived milestone evidence:**
-- Audit: [.planning/milestones/v0.0.19-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.19-MILESTONE-AUDIT.md)
-- Roadmap archive: [.planning/milestones/v0.0.19-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.19-ROADMAP.md)
-- Requirements archive: [.planning/milestones/v0.0.19-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.19-REQUIREMENTS.md)
+- Audit: [.planning/milestones/v0.0.20-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.20-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.20-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.20-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.20-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.20-REQUIREMENTS.md)
 - Traceability: [.planning/TRACEABILITY.md](/Users/kaka/Dev/u2tool/.planning/TRACEABILITY.md)
 - Health report: [docs/PROJECT_HEALTH_REPORT.md](/Users/kaka/Dev/u2tool/docs/PROJECT_HEALTH_REPORT.md)
 
 **Earlier archived milestone evidence:**
+- Audit: [.planning/milestones/v0.0.19-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.19-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.19-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.19-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.19-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.19-REQUIREMENTS.md)
 - Audit: [.planning/v0.0.18-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/v0.0.18-MILESTONE-AUDIT.md)
 - Roadmap archive: [.planning/milestones/v0.0.18-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.18-ROADMAP.md)
 - Requirements archive: [.planning/milestones/v0.0.18-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.18-REQUIREMENTS.md)
@@ -57,8 +61,8 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 - Requirements archive: [.planning/milestones/v0.0.12-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-REQUIREMENTS.md)
 - Milestone index: [.planning/MILESTONES.md](/Users/kaka/Dev/u2tool/.planning/MILESTONES.md)
 
-**Most recent milestone focus (`v0.0.20`):**
-- Designing E2E automated Cloudflare KV synchronization pipeline and redirect routing validation suites.
+**Most recent milestone focus (`v0.0.21`):**
+- Developing a real-time redirection crawler monitoring system on the live domain to verify status codes, hop chains, and target paths.
 
 
 
@@ -66,6 +70,8 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 
 ### Validated
 
+- ✓ E2E Cloudflare KV Write Integration (GEO-06) — v0.0.20.
+- ✓ KV Pipeline Integration Validation (GEO-07) — v0.0.20.
 - ✓ Dynamic GSC Recovery Redirect Engine (GEO-04) — v0.0.19.
 - ✓ Automatic Redirect Generator & Pipeline (GEO-05) — v0.0.19.
 - ✓ Long-Tail Locale Content & Metadata Alignment (LTDK-04) — v0.0.19.
@@ -128,8 +134,7 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 
 ### Active
 
-- [ ] **GEO-06** - **E2E Cloudflare KV Write Integration**: 建立自动化往 Cloudflare KV 写入最新映射的同步与发布管线。
-- [ ] **GEO-07** - **KV Pipeline Integration Validation**: 针对线上/沙盒环境下的实际 KV 匹配链路进行 E2E 重定向与防环路闭环回归测试。
+- [ ] **GEO-08** - **Live Redirection Connection Monitoring & Crawler**: 建立针对生产域名上所有已激活重定向规则的实域连通性与 HTTP 跳转深度扫描爬虫检测系统。
 
 ### Out of Scope
 
@@ -199,44 +204,35 @@ This is a brownfield repository with a very large content surface, heavy localiz
 
 The current baseline now includes promoted discovery ordering, stable comparison surfaces, AI/GEO exports, category authority support content, runtime-placeholder governance, rendered SEO checks, and a canonical production gate that reflects real Cloudflare server-build output. v0.0.16 finalized dynamic trailing-slash normalizations, legacy blog/compare redirections, and stale framework asset 410 gone status gates, verified fully with browser-level Puppeteer redirect chains and header assertions.
 
-## Current Milestone: v0.0.19 GSC Recovery Automation & Long-tail Expansion
+## Current Milestone: v0.0.21 Live Redirection Connection Monitoring & Crawler
+
+**Goal:** 建立针对生产域名上所有激活的 GSC 历史重定向规则的实域连通性、跳转状态码与目标路由合规性进行扫描与监控的自动化爬虫检测系统。
+
+**Target features:**
+- 核心 CLI 监测工具 `validate-live-redirects.ts`：支持高并发、安全限流地访问线上实域对应 URL。
+- 跳转状态校验：严格验证重定向返回码（301/302），并核对 location 字段是否与本地规则或 Canonical 路径完美对齐。
+- 目标可用性校验：检测最终目标页面是否能够连通，有无 404/500 等异常，防范重定向到死链。
+- 链条扁平化建议：扫描多级跳转路径，自动提示压平建议。
+- 报告自动化生成：输出详细的连通性统计数据与异常清单。
+
+## Most Recent Milestone: v0.0.20 Edge Redirect KV Automation & Release Pipeline
+
+**Goal:** 建立自动化往 Cloudflare KV 写入最新重定向映射的同步与发布机制，打通从 404 URL 生成配对到边缘层上线的 E2E 自动化链条。
+
+**Completed features:**
+- 新建发布脚本 `publish-mappings.ts` 本地发布同步脚本，安全地通过 REST API 往 Cloudflare KV 写入规则。
+- 重构边缘端重定向读取，改成单一主键 `gsc-recovery-rules` 获取并用内存缓存 map 防护 QPS。
+- 实现有向图死循环拦截判定机制 `validate-redirect-loops.ts` 并并入 `qa:production` 门禁。
+- 增加 KV 模式下 Query 透传与 Locale 匹配拼接的集成测试校验。
+
+## Earlier Milestone: v0.0.19 GSC Recovery Automation & Long-tail Expansion
 
 **Goal:** 实现 GSC Excluded 404 URL 恢复重定向的动态化与半自动化生成机制，并进一步优化和对齐长尾语系的旗舰工具 SEO/GEO 元数据。
 
-**Target features:**
+**Completed features:**
 - 将边缘重定向规则由静态硬编码过渡到动态机制，支持基于 Cloudflare KV 快速部署/更新而无需新版打包。
 - 开发 GSC Excluded 404 URL 控制面拉取脚本与规则匹配引擎，实现半自动生成映射 JSON。
 - 深度优化 `macro-calculator`、`one-rep-max-calculator` 等长尾重点工具在 10 个语系下的 TDK/Snippet 表达，杜绝翻译缺陷。
-
-## Most Recent Milestone: v0.0.18 GSC Recovery Checkpoint & Content Optimization
-
-**Goal:** 执行 2026-06-09 恢复版发布后的 7-Day GSC 数据指标比对与收敛分析，彻底完成低优先级 Cohort C 队列中 13 个工具的多语言 TDK/Snippet 深度优化与审核以确保具备优秀的索引收录品质，并设计评估 GEO-03 自动化 GSC 恢复管线。
-
-**Completed features:**
-- 成功生成 2026-06-16 checked GSC 表现对比报告（docs/GSC_COHORT_CHECKPOINT_2026-06-16.md）。
-- 彻底完成 13 个 Cohort C 工具的多语言（10个Locale）元数据审计与优化，消除 TDK length 警告与翻译纰漏。
-- 完成 GSC 恢复重定向机制（GEO-03）系统设计与本地沙盒 E2E 测试拦截验证。
-
-## Earlier Milestone: v0.0.17 SEO & GEO Comprehensive Audit & Governance
-
-**Goal:** Clean up over 1,300+ GSC redirect warnings by enforcing trailing slashes on raw paths, setting up correct 410 Gone gates for stale asset/framework paths, and implementing lightweight middleware normalizations for decommissioned legacy blogs and compare-guide URLs.
-
-**Completed features:**
-- Correctly rewrite/redirect all localized dynamic HTML routes without trailing slashes to their canonical trailing-slash URLs inside middleware.
-- Implement strict 410 Gone filters (or 301 redirects to canonical categories) for decommissioned system entry points (`/blog/*`, legacy categories, legacy compare pairs).
-- Refine edge response logic for legacy Next.js static asset patterns (`/_next/static/chunks/*`) to ensure they return `410 Gone` with noindex robots.
-- Integrate these trailing-slash and decommissioned route gates into the automated validation suite.
-
-## Earlier Milestone: v0.0.15 Technical SEO Redirection Governance & Root Route Normalization
-
-**Goal:** Eliminate Google double-indexing issues and GSC redirect warnings by enforcing canonical 301 redirects from the root route `/` to the default language prefix `/en/` while guarding against redirection loops for system/build-level subrequests.
-
-**Completed features:**
-- Canonical 301 redirect from `/` to `/en/` in edge middleware.
-- Query parameters preservation during redirection.
-- Loopback safety guard (headers: `cf-worker`, `x-worker-loopback`, User-Agent) to bypass redirection.
-- Updated `public/_routes.json` to include `"/"`.
-- Extended validation scripts and E2E smoke tests.
 
 ## Evolution
 
@@ -256,4 +252,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-06-17 after completing Milestone v0.0.18*
+*Last updated: 2026-06-18 after completing Milestone v0.0.20*
