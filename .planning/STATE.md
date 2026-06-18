@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v0.0.21
 milestone_name: - Live Redirection Connection Monitoring & Crawler
 status: Implementing
-stopped_at: Phase 75 plan ready
-last_updated: "2026-06-18T03:58:00.000Z"
+stopped_at: Phase 76 plan ready
+last_updated: "2026-06-18T04:58:00.000Z"
 last_activity: 2026-06-18
 progress:
   total_phases: 3
-  completed_phases: 1
-  total_plans: 2
-  completed_plans: 1
+  completed_phases: 2
+  total_plans: 3
+  completed_plans: 2
 ---
 
 # Project State
@@ -25,10 +25,10 @@ See: .planning/PROJECT.md (updated 2026-06-18)
 
 ## Current Position
 
-Phase: 75
-Plan: Ready (`.planning/phases/75-redirection-hop-tracer-loop-blocker/75-PLAN.md`)
+Phase: 76
+Plan: Ready (`.planning/phases/76-html-safety-auditor-production-gate/76-PLAN.md`)
 Status: Implementing
-Last activity: 2026-06-18 — Phase 74 implemented & tested, Phase 75 plan drafted
+Last activity: 2026-06-18 — Phase 75 implemented & tested, Phase 76 plan drafted
 
 ## Milestone Context
 
@@ -37,13 +37,14 @@ Last activity: 2026-06-18 — Phase 74 implemented & tested, Phase 75 plan draft
 | Phase | Focus | Status |
 |-------|-------|--------|
 | 74 | Redirection Matrix Expansion & Fetch Pool (GEO-08-01) | Complete |
-| 75 | Redirection Hop Tracer & Loop Blocker (GEO-08-02, GEO-08-03) | Plan ready |
-| 76 | HTML Safety Auditor & Production Gate (GEO-08-04, GEO-08-05) | Proposed |
+| 75 | Redirection Hop Tracer & Loop Blocker (GEO-08-02, GEO-08-03) | Complete |
+| 76 | HTML Safety Auditor & Production Gate (GEO-08-04, GEO-08-05) | Plan ready |
 
 ## Accumulated Context
 
+- 2026-06-18 Phase 76 plan drafted. HTML safety auditor (soft-404 + reasoning-trace + noindex), `--online` gate, shared `safety-patterns.ts` extraction, JSON report writer.
+- 2026-06-18 Phase 75 complete. Multi-hop `traceRedirectChain` with per-chain visited Set, `MAX_REDIRECTS=5` cap, query-param normalization (trailing-slash preserved to avoid false loop), non-mutating `suggestFlatten`. 24 unit tests green.
 - 2026-06-18 Phase 74 complete. `validate-live-redirects.ts` ships matrix expansion (11 configs/rule), concurrency pool with 50–150ms jitter, manual-redirect fetch with `500*attempt` backoff, and `x-waf-bypass-token` header guard. 10 unit tests green.
-- 2026-06-18 Phase 75 plan drafted. Hop tracer with per-chain visited Set, `MAX_REDIRECTS=5` cap, query-param normalization, and non-mutating flatten suggestions.
 - 2026-06-18 milestone v0.0.20 complete. Edge KV automatic publishing, local memory cache, and graph cycle detection gates implemented and verified green.
 - 2026-06-17 milestone v0.0.19 complete. Dynamic redirects middleware, similarity generator CLI, and flagship l10n verified green.
 - 2026-06-17 milestone v0.0.18 complete. Metadata audit passes with 0 warnings, GSC Recovery Pipeline E2E sandbox tests passed.
@@ -56,10 +57,10 @@ Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20 are com
 
 ## Next Action
 
-Implement Phase 75 per `.planning/phases/75-redirection-hop-tracer-loop-blocker/75-PLAN.md` (Tasks 1–4: extend `ProbeResult`, `traceRedirectChain`, `suggestFlatten`, CLI wiring).
+Implement Phase 76 per `.planning/phases/76-html-safety-auditor-production-gate/76-PLAN.md` (Tasks 1–4: shared `safety-patterns.ts`, soft-404 dictionary, `auditHtmlSafety`, `--online` gate + JSON report). This is the final wave of milestone v0.0.21.
 
 ## Session
 
-Last Date: 2026-06-18T03:58:00.000Z
-Stopped At: Phase 75 plan ready
-Resume File: .planning/phases/75-redirection-hop-tracer-loop-blocker/75-PLAN.md
+Last Date: 2026-06-18T04:58:00.000Z
+Stopped At: Phase 76 plan ready
+Resume File: .planning/phases/76-html-safety-auditor-production-gate/76-PLAN.md
