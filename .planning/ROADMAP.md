@@ -48,7 +48,7 @@
 
 本里程碑致力于建立生产域名上已激活重定向规则的实域连通性与 HTTP 跳转深度扫描爬虫检测系统，确保流量无缝流转，防范死循环与软 404。
 
-- [ ] **Phase 74: Redirection Matrix Expansion & Fetch Pool** (Requirements: `GEO-08-01`)
+- [x] **Phase 74: Redirection Matrix Expansion & Fetch Pool** (Requirements: `GEO-08-01`) (completed 2026-06-18)
 - [ ] **Phase 75: Redirection Hop Tracer & Loop Blocker** (Requirements: `GEO-08-02`, `GEO-08-03`)
 - [ ] **Phase 76: HTML Safety Auditor & Production Gate** (Requirements: `GEO-08-04`, `GEO-08-05`)
 
