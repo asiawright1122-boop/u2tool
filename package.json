@@ -89,8 +89,7 @@
     "health:check:strict": "npm run verify:production",
     "submit:indexnow": "node scripts/submit-indexnow.js",
     "submit:indexnow:dry": "node scripts/submit-indexnow.js --dry-run",
-    "validate:sitemap": "node scripts/validate-sitemap-fix.js",
-    "update-seo": "node update_seo.js"
+    "validate:sitemap": "node scripts/validate-sitemap-fix.js"
   },
   "dependencies": {
     "dompurify": "^3.4.2",
