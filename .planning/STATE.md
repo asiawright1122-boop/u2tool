@@ -33,7 +33,11 @@ Last activity: 2026-06-18 — Milestone v0.0.21 started
 
 ### Phase Map
 
-*To be defined by the roadmapper.*
+| Phase | Focus | Status |
+|-------|-------|--------|
+| 74 | Redirection Matrix Expansion & Fetch Pool (GEO-08-01) | Proposed |
+| 75 | Redirection Hop Tracer & Loop Blocker (GEO-08-02, GEO-08-03) | Proposed |
+| 76 | HTML Safety Auditor & Production Gate (GEO-08-04, GEO-08-05) | Proposed |
 
 ## Accumulated Context
 

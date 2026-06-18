@@ -44,28 +44,34 @@
   Audit: [.planning/milestones/v0.0.13-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-MILESTONE-AUDIT.md)
   Status: Shipped on 2026-06-09. Converted all remaining high-traffic `PopularUtilityTool` catalog placeholders to real Svelte 5 components across Finance, Developer/Security, Content Generators, Social/Media, Lifestyle, Image, and Converter clusters. Added category-level authority content for English `finance`, `generators`, and `lifestyle`, preserved the no-internal-reasoning frontend safety rule, and closed on green build, runtime, SEO, placeholder, and frontend-safety gates.
 
-## Active Milestone: v0.0.20 - Edge Redirect KV Automation & Release Pipeline
+## Active Milestone: v0.0.21 - Live Redirection Connection Monitoring & Crawler
 
-本里程碑致力于建立自动化往 Cloudflare KV 写入最新重定向映射的同步与发布机制，打通从 404 URL 生成配对到边缘层上线的 E2E 自动化链条。
+本里程碑致力于建立生产域名上已激活重定向规则的实域连通性与 HTTP 跳转深度扫描爬虫检测系统，确保流量无缝流转，防范死循环与软 404。
 
-- [x] **Phase 72: E2E Cloudflare KV Write Integration** (Requirements: `GEO-06`)
-- [x] **Phase 73: KV Pipeline Integration Validation** (Requirements: `GEO-07`)
+- [ ] **Phase 74: Redirection Matrix Expansion & Fetch Pool** (Requirements: `GEO-08-01`)
+- [ ] **Phase 75: Redirection Hop Tracer & Loop Blocker** (Requirements: `GEO-08-02`, `GEO-08-03`)
+- [ ] **Phase 76: HTML Safety Auditor & Production Gate** (Requirements: `GEO-08-04`, `GEO-08-05`)
 
-### Phase 72: E2E Cloudflare KV Write Integration
-**Goal:** 实现安全、幂等且具备防空保护的 publish-mappings.ts 脚本，可将本地 gsc-redirects.json 通过 API 自动推送到 Cloudflare KV。
-
-- **Success Criteria**:
-  - 编写并验证 `scripts/gsc-recovery/publish-mappings.ts` 可以成功通过 REST API 在沙盒或预发 KV 中执行合并与同步。
-  - 当输入的数据格式损坏、缺失核心字段或为空时，发布脚本会被拦截并阻断发布过程。
-  - 支持幂等操作，仅对发生变动的重定向规则进行增量追加，并不破坏 KV 中已有的非冲突字段。
-
-### Phase 73: KV Pipeline Integration Validation
-**Goal:** 编写全链路的集成验证测试，能够在沙盒或本地模拟的 KV 条件下，校验重定向链路的安全和防环路跳转。
+### Phase 74: Redirection Matrix Expansion & Fetch Pool
+**Goal:** 实现本地 URL 矩阵扩展与具备 CF WAF 放行/避让的高并发 Promise Pool 探测器。
 
 - **Success Criteria**:
-  - 在 `qa:production` 门禁中集成对远程/本地模拟 KV 取值逻辑的 Edge 仿真重定向测试。
-  - 测试需验证带参透传（例如 `/legacy?id=1` 重定向为 `/zh/tools/new?id=1`）、Locale 语系判定，且必须包含环路判定系统（若存在 A->B->A 环路则强制报错拦截）。
-  - `npm run verify:production` 跑完后依然能够保持全绿。
+  - 新建连通性检测脚本 `scripts/validation/validate-live-redirects.ts`，能将 `gsc-redirects.json` 配置项扩展出 10 个有效语系的前缀测试矩阵。
+  - 实现限制最大并发并发通道数 $\le 5$ 的队列池，并注入 50ms-150ms 随机请求抖动（Jitter）。
+  - 支持从环境变量读取 Token 拼入自定义头部或使用桌面 Chrome UA 请求，实现 Cloudflare WAF 放行探测。
 
+### Phase 75: Redirection Hop Tracer & Loop Blocker
+**Goal:** 实现手动重定向跳转链追踪、防死循环阻断（Visited Set 门禁）与 URL 参数字典序对比正规化。
 
+- **Success Criteria**:
+  - 配置 fetch 手动处理 `redirect: 'manual'` 并抓取跳转 Location，通过 non-recursive while 模式追踪跳转路径。
+  - 引入已访问 Set 防御死循环重定向（最大跳数 `MAX_REDIRECTS = 5`），一旦发现环路立即强制退出拦截。
+  - 实现重定向目标 Location 的 Pathname 忽略尾斜杠与大小写归一，并将 Query 参数重排后进行字典序精确核对。
 
+### Phase 76: HTML Safety Auditor & Production Gate
+**Goal:** 实现跳转目标 HTML 页面健康审计与敏感推理信息防御，提供直接跳转配置扁平化方案，并将检测任务并入发布门禁。
+
+- **Success Criteria**:
+  - 爬虫自动筛查最终跳转 HTML 内容，拦截页面内敏感的 reasoning traces（如 `chain-of-thought`）或 draft 占位符泄露。
+  - 检测是否有软 404 或 500 等异常。
+  - 对跳数 $\ge 2$ 的链路给出扁平化 direct 规则修改建议，并将此监控爬虫集成到 `qa:production` 中，在部署后做线上检测。
