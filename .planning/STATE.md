@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v0.0.21
 milestone_name: - Live Redirection Connection Monitoring & Crawler
-status: Implementing
-stopped_at: Phase 76 plan ready
-last_updated: "2026-06-18T04:58:00.000Z"
-last_activity: 2026-06-18
+status: Complete
+stopped_at: Milestone v0.0.21 archived
+last_updated: "2026-06-20T04:00:00.000Z"
+last_activity: 2026-06-20
 progress:
   total_phases: 3
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 3
-  completed_plans: 2
+  completed_plans: 3
 ---
 
 # Project State
@@ -20,15 +20,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-06-18)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** Milestone v0.0.21 — Developing a real-time redirection crawler monitoring system on the live domain to verify redirection health.
+**Current focus:** No active milestone — v0.0.21 (Live Redirection Connection Monitoring & Crawler) shipped and archived on 2026-06-20. Next milestone requirements to be defined.
 **Frontend safety:** No user-facing surface may expose internal reasoning traces, hidden prompts, scratchpads, handoff notes, or raw planning notes.
 
 ## Current Position
 
-Phase: 76
-Plan: Ready (`.planning/phases/76-html-safety-auditor-production-gate/76-PLAN.md`)
-Status: Implementing
-Last activity: 2026-06-18 — Phase 75 implemented & tested, Phase 76 plan drafted
+Phase: 76 (final phase of v0.0.21)
+Status: Complete — milestone archived
+Last activity: 2026-06-20 — Phase 76 implemented & tested, v0.0.21 archived (audit + requirements + roadmap)
 
 ## Milestone Context
 
@@ -38,11 +37,12 @@ Last activity: 2026-06-18 — Phase 75 implemented & tested, Phase 76 plan draft
 |-------|-------|--------|
 | 74 | Redirection Matrix Expansion & Fetch Pool (GEO-08-01) | Complete |
 | 75 | Redirection Hop Tracer & Loop Blocker (GEO-08-02, GEO-08-03) | Complete |
-| 76 | HTML Safety Auditor & Production Gate (GEO-08-04, GEO-08-05) | Plan ready |
+| 76 | HTML Safety Auditor & Production Gate (GEO-08-04, GEO-08-05) | Complete |
 
 ## Accumulated Context
 
-- 2026-06-18 Phase 76 plan drafted. HTML safety auditor (soft-404 + reasoning-trace + noindex), `--online` gate, shared `safety-patterns.ts` extraction, JSON report writer.
+- 2026-06-20 milestone v0.0.21 complete and archived. All three phases (74 matrix+pool, 75 hop tracer+loop blocker, 76 HTML safety auditor+gate) implemented; 38 probe unit tests green; front-end-safety scan green after extracting shared `safety-patterns.ts`. Audit/requirements/roadmap written under `.planning/milestones/`.
+- 2026-06-18 Phase 76 complete. `auditHtmlSafety` (soft-404 scoped to `<h1>`/`<title>` across 10 locales + reasoning-trace via shared patterns + noindex), `--online`/`LIVE_REDIRECT_ONLINE=1` gate, sanitized JSON report under gitignored `.planning/research/reports/`, `validate:live-redirects:online` in package.json. 38 unit tests green.
 - 2026-06-18 Phase 75 complete. Multi-hop `traceRedirectChain` with per-chain visited Set, `MAX_REDIRECTS=5` cap, query-param normalization (trailing-slash preserved to avoid false loop), non-mutating `suggestFlatten`. 24 unit tests green.
 - 2026-06-18 Phase 74 complete. `validate-live-redirects.ts` ships matrix expansion (11 configs/rule), concurrency pool with 50–150ms jitter, manual-redirect fetch with `500*attempt` backoff, and `x-waf-bypass-token` header guard. 10 unit tests green.
 - 2026-06-18 milestone v0.0.20 complete. Edge KV automatic publishing, local memory cache, and graph cycle detection gates implemented and verified green.
@@ -53,14 +53,14 @@ Last activity: 2026-06-18 — Phase 75 implemented & tested, Phase 76 plan draft
 - 2026-06-09 GSC recovery cohort plan created with exact URL lists, action rules, owner model, and checkpoints.
 - 2026-06-12 GSC URL Inspection checkpoint recorded.
 
-Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20 are complete and archived.
+Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20, v0.0.21 are complete and archived.
 
 ## Next Action
 
-Implement Phase 76 per `.planning/phases/76-html-safety-auditor-production-gate/76-PLAN.md` (Tasks 1–4: shared `safety-patterns.ts`, soft-404 dictionary, `auditHtmlSafety`, `--online` gate + JSON report). This is the final wave of milestone v0.0.21.
+No active milestone. Define next milestone requirements in `.planning/REQUIREMENTS.md` (e.g., TDK drift verification deferred from v0.0.21, or a new GSC recovery cohort).
 
 ## Session
 
-Last Date: 2026-06-18T04:58:00.000Z
-Stopped At: Phase 76 plan ready
-Resume File: .planning/phases/76-html-safety-auditor-production-gate/76-PLAN.md
+Last Date: 2026-06-20T04:00:00.000Z
+Stopped At: Milestone v0.0.21 archived
+Resume File: .planning/milestones/v0.0.21-MILESTONE-AUDIT.md

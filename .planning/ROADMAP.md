@@ -2,7 +2,13 @@
 
 ## Archived Milestones
 
-- [x] v0.0.19 GSC Recovery Automation & Long-tail Expansion
+- [x] v0.0.21 Live Redirection Connection Monitoring & Crawler
+  Archive: [.planning/milestones/v0.0.21-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.21-ROADMAP.md)
+  Requirements: [.planning/milestones/v0.0.21-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.21-REQUIREMENTS.md)
+  Audit: [.planning/milestones/v0.0.21-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.21-MILESTONE-AUDIT.md)
+  Status: Shipped on 2026-06-20. Built a live redirect probe (matrix expansion + fetch pool), multi-hop tracer with per-chain loop blocker and query-param normalization, and an HTML safety auditor (soft-404 + reasoning-trace + noindex) gated behind --online. 38 unit tests green across all three phases.
+
+- [x] v0.0.20 GSC Recovery Automation & Long-tail Expansion
   Archive: [.planning/milestones/v0.0.19-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.19-ROADMAP.md)
   Requirements: [.planning/milestones/v0.0.19-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.19-REQUIREMENTS.md)
   Audit: [.planning/milestones/v0.0.19-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.19-MILESTONE-AUDIT.md)
@@ -44,34 +50,6 @@
   Audit: [.planning/milestones/v0.0.13-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-MILESTONE-AUDIT.md)
   Status: Shipped on 2026-06-09. Converted all remaining high-traffic `PopularUtilityTool` catalog placeholders to real Svelte 5 components across Finance, Developer/Security, Content Generators, Social/Media, Lifestyle, Image, and Converter clusters. Added category-level authority content for English `finance`, `generators`, and `lifestyle`, preserved the no-internal-reasoning frontend safety rule, and closed on green build, runtime, SEO, placeholder, and frontend-safety gates.
 
-## Active Milestone: v0.0.21 - Live Redirection Connection Monitoring & Crawler
+## Active Milestone: None
 
-本里程碑致力于建立生产域名上已激活重定向规则的实域连通性与 HTTP 跳转深度扫描爬虫检测系统，确保流量无缝流转，防范死循环与软 404。
-
-- [x] **Phase 74: Redirection Matrix Expansion & Fetch Pool** (Requirements: `GEO-08-01`) (completed 2026-06-18)
-- [ ] **Phase 75: Redirection Hop Tracer & Loop Blocker** (Requirements: `GEO-08-02`, `GEO-08-03`)
-- [ ] **Phase 76: HTML Safety Auditor & Production Gate** (Requirements: `GEO-08-04`, `GEO-08-05`)
-
-### Phase 74: Redirection Matrix Expansion & Fetch Pool
-**Goal:** 实现本地 URL 矩阵扩展与具备 CF WAF 放行/避让的高并发 Promise Pool 探测器。
-
-- **Success Criteria**:
-  - 新建连通性检测脚本 `scripts/validation/validate-live-redirects.ts`，能将 `gsc-redirects.json` 配置项扩展出 10 个有效语系的前缀测试矩阵。
-  - 实现限制最大并发并发通道数 $\le 5$ 的队列池，并注入 50ms-150ms 随机请求抖动（Jitter）。
-  - 支持从环境变量读取 Token 拼入自定义头部或使用桌面 Chrome UA 请求，实现 Cloudflare WAF 放行探测。
-
-### Phase 75: Redirection Hop Tracer & Loop Blocker
-**Goal:** 实现手动重定向跳转链追踪、防死循环阻断（Visited Set 门禁）与 URL 参数字典序对比正规化。
-
-- **Success Criteria**:
-  - 配置 fetch 手动处理 `redirect: 'manual'` 并抓取跳转 Location，通过 non-recursive while 模式追踪跳转路径。
-  - 引入已访问 Set 防御死循环重定向（最大跳数 `MAX_REDIRECTS = 5`），一旦发现环路立即强制退出拦截。
-  - 实现重定向目标 Location 的 Pathname 忽略尾斜杠与大小写归一，并将 Query 参数重排后进行字典序精确核对。
-
-### Phase 76: HTML Safety Auditor & Production Gate
-**Goal:** 实现跳转目标 HTML 页面健康审计与敏感推理信息防御，提供直接跳转配置扁平化方案，并将检测任务并入发布门禁。
-
-- **Success Criteria**:
-  - 爬虫自动筛查最终跳转 HTML 内容，拦截页面内敏感的 reasoning traces（如 `chain-of-thought`）或 draft 占位符泄露。
-  - 检测是否有软 404 或 500 等异常。
-  - 对跳数 $\ge 2$ 的链路给出扁平化 direct 规则修改建议，并将此监控爬虫集成到 `qa:production` 中，在部署后做线上检测。
+v0.0.21 (Live Redirection Connection Monitoring & Crawler) shipped on 2026-06-20. No milestone is currently active. The next milestone requirements should be defined in `.planning/REQUIREMENTS.md`.
