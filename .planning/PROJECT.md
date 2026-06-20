@@ -18,22 +18,22 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 
 ## Current Status
 
-**Current milestone:** `v0.0.21 - Live Redirection Connection Monitoring & Crawler`
-**Latest completed milestone:** `v0.0.20 - Edge Redirect KV Automation & Release Pipeline`
-**Latest archived milestone:** `v0.0.20 - Edge Redirect KV Automation & Release Pipeline`
-**Previous archived milestone:** `v0.0.19 GSC Recovery Automation & Long-tail Expansion`
-**Current planning state:** Milestone v0.0.20 completed and archived.
+**Current milestone:** _None — next milestone to be defined from the 4 candidate directions._
+**Latest completed milestone:** `v0.0.21 - Live Redirection Connection Monitoring & Crawler`
+**Latest archived milestone:** `v0.0.21 - Live Redirection Connection Monitoring & Crawler`
+**Previous archived milestone:** `v0.0.20 Edge Redirect KV Automation & Release Pipeline`
+**Current planning state:** Milestone v0.0.21 completed and archived.
 
 **Latest completed outcomes:**
-- Built the synchronization script `publish-mappings.ts` that safely validates mapping integrity, checks credentials, and publishes redirect mappings to Cloudflare KV.
-- Re-implemented middleware lookup using a single KV key `'gsc-recovery-rules'` and a high-performance in-memory cache map.
-- Implemented a graph-based loop detection script `validate-redirect-loops.ts` that blocks build and publish operations on self-loops or multi-hop loops.
-- Expanded middleware integration tests to cover query parameters and locale preservation under KV simulated mock scenarios.
+- Built the core CLI probe `validate-live-redirects.ts` with a rule-parametrized test-matrix generator and a concurrency-pooled, retry-backed fetch layer (GEO-08-01).
+- Implemented a multi-hop redirect tracer with query-param normalization and an in-chain loop blocker that flags true A→B→A cycles while avoiding false positives from single-hop trailing-slash normalization (GEO-08-02/03).
+- Added an HTML safety auditor that reuses the shared `src/lib/safety-patterns.ts` reasoning-trace regex set to detect leaked agent traces in terminal redirect bodies, gated behind `--online` so offline test runs make no network calls (GEO-08-04/05).
+- Gated the probe behind `validate:live-redirects:online` with 38 unit tests covering matrix generation, fetch retry, hop tracing, loop detection, param normalization, flatten suggestions, and HTML safety.
 
 **Latest archived milestone evidence:**
-- Audit: [.planning/milestones/v0.0.20-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.20-MILESTONE-AUDIT.md)
-- Roadmap archive: [.planning/milestones/v0.0.20-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.20-ROADMAP.md)
-- Requirements archive: [.planning/milestones/v0.0.20-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.20-REQUIREMENTS.md)
+- Audit: [.planning/milestones/v0.0.21-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.21-MILESTONE-AUDIT.md)
+- Roadmap archive: [.planning/milestones/v0.0.21-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.21-ROADMAP.md)
+- Requirements archive: [.planning/milestones/v0.0.21-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.21-REQUIREMENTS.md)
 - Traceability: [.planning/TRACEABILITY.md](/Users/kaka/Dev/u2tool/.planning/TRACEABILITY.md)
 - Health report: [docs/PROJECT_HEALTH_REPORT.md](/Users/kaka/Dev/u2tool/docs/PROJECT_HEALTH_REPORT.md)
 
@@ -61,8 +61,8 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 - Requirements archive: [.planning/milestones/v0.0.12-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.12-REQUIREMENTS.md)
 - Milestone index: [.planning/MILESTONES.md](/Users/kaka/Dev/u2tool/.planning/MILESTONES.md)
 
-**Most recent milestone focus (`v0.0.21`):**
-- Developing a real-time redirection crawler monitoring system on the live domain to verify status codes, hop chains, and target paths.
+**Most recent milestone focus (`v0.0.21`, archived):**
+- Shipped a real-time redirection crawler monitoring system on the live domain that verifies status codes, hop chains, and target paths, with loop blocking and HTML safety auditing.
 
 
 
@@ -70,6 +70,7 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 
 ### Validated
 
+- ✓ Live Redirection Connection Monitoring & Crawler (GEO-08) — v0.0.21. Matrix expansion + fetch pool (GEO-08-01), multi-hop tracer + loop blocker (GEO-08-02/03), and HTML safety auditor + --online production gate (GEO-08-04/05). 38 probe unit tests green.
 - ✓ E2E Cloudflare KV Write Integration (GEO-06) — v0.0.20.
 - ✓ KV Pipeline Integration Validation (GEO-07) — v0.0.20.
 - ✓ Dynamic GSC Recovery Redirect Engine (GEO-04) — v0.0.19.
@@ -134,7 +135,7 @@ system/developer instructions, reviewer handoffs, or raw planning notes.
 
 ### Active
 
-- [ ] **GEO-08** - **Live Redirection Connection Monitoring & Crawler**: 建立针对生产域名上所有已激活重定向规则的实域连通性与 HTTP 跳转深度扫描爬虫检测系统。
+_No active requirements. The next milestone will be defined from the 4 candidate directions (TDK drift verification, tool-detail page architecture refactor, cluster card / tool island commonality extraction, translation corpus governance)._
 
 ### Out of Scope
 
@@ -204,18 +205,19 @@ This is a brownfield repository with a very large content surface, heavy localiz
 
 The current baseline now includes promoted discovery ordering, stable comparison surfaces, AI/GEO exports, category authority support content, runtime-placeholder governance, rendered SEO checks, and a canonical production gate that reflects real Cloudflare server-build output. v0.0.16 finalized dynamic trailing-slash normalizations, legacy blog/compare redirections, and stale framework asset 410 gone status gates, verified fully with browser-level Puppeteer redirect chains and header assertions.
 
-## Current Milestone: v0.0.21 Live Redirection Connection Monitoring & Crawler
+## Most Recent Milestone: v0.0.21 Live Redirection Connection Monitoring & Crawler (archived)
 
 **Goal:** 建立针对生产域名上所有激活的 GSC 历史重定向规则的实域连通性、跳转状态码与目标路由合规性进行扫描与监控的自动化爬虫检测系统。
 
-**Target features:**
-- 核心 CLI 监测工具 `validate-live-redirects.ts`：支持高并发、安全限流地访问线上实域对应 URL。
-- 跳转状态校验：严格验证重定向返回码（301/302），并核对 location 字段是否与本地规则或 Canonical 路径完美对齐。
+**Completed features:**
+- 核心 CLI 监测工具 `validate-live-redirects.ts`：支持高并发、安全限流地访问线上实域对应 URL（GEO-08-01）。
+- 多跳跳转链路追踪与循环拦截：`traceRedirectChain` 记录每跳 status/location，`visited` Set 拦截真实多跳循环；查询参数归一化与尾斜杠保留并存的对比策略（GEO-08-02/03）。
+- 链条扁平化建议：`suggestFlatten` 对 ≥3 跳或多重定向到相同 host 的链路给出压平提示。
 - 目标可用性校验：检测最终目标页面是否能够连通，有无 404/500 等异常，防范重定向到死链。
-- 链条扁平化建议：扫描多级跳转路径，自动提示压平建议。
+- HTML 安全审计：`auditHtmlSafety` 复用 `src/lib/safety-patterns.ts` 的 12 条推理痕迹正则，扫描终态响应体是否泄漏 agent 思考链/草稿（GEO-08-04/05），通过 `--online` 门禁在测试期不发起网络请求。
 - 报告自动化生成：输出详细的连通性统计数据与异常清单。
 
-## Most Recent Milestone: v0.0.20 Edge Redirect KV Automation & Release Pipeline
+## Earlier Milestone: v0.0.20 Edge Redirect KV Automation & Release Pipeline
 
 **Goal:** 建立自动化往 Cloudflare KV 写入最新重定向映射的同步与发布机制，打通从 404 URL 生成配对到边缘层上线的 E2E 自动化链条。
 
@@ -225,7 +227,7 @@ The current baseline now includes promoted discovery ordering, stable comparison
 - 实现有向图死循环拦截判定机制 `validate-redirect-loops.ts` 并并入 `qa:production` 门禁。
 - 增加 KV 模式下 Query 透传与 Locale 匹配拼接的集成测试校验。
 
-## Earlier Milestone: v0.0.19 GSC Recovery Automation & Long-tail Expansion
+## Earlier Milestone: v0.0.19 GSC Recovery Automation & Long-tail Expansion (superseded)
 
 **Goal:** 实现 GSC Excluded 404 URL 恢复重定向的动态化与半自动化生成机制，并进一步优化和对齐长尾语系的旗舰工具 SEO/GEO 元数据。
 
@@ -252,4 +254,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-06-18 after completing Milestone v0.0.20*
+*Last updated: 2026-06-20 after archiving Milestone v0.0.21*
