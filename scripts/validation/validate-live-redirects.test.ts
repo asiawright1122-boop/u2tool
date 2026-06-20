@@ -8,9 +8,12 @@ import {
   normalizeUrlForComparison,
   traceRedirectChain,
   suggestFlatten,
+  auditHtmlSafety,
+  SOFT_404_KEYWORDS,
   type RedirectTask,
   type HopInfo,
 } from './validate-live-redirects';
+import { REASONING_TRACE_PATTERNS } from '../../src/lib/safety-patterns';
 
 vi.mock('node:fs/promises', () => ({
   default: {
@@ -384,6 +387,117 @@ describe('validate-live-redirects', () => {
       expect(res.chain).toBeUndefined();
       expect(res.loopDetected).toBeUndefined();
       expect(res.maxHopsExceeded).toBeUndefined();
+    });
+  });
+
+  // ---- Phase 76: HTML Safety Auditor ----
+
+  describe('shared REASONING_TRACE_PATTERNS (Must Have 1)', () => {
+    it('is the single source for both source-file and live-HTML scanning', () => {
+      // Must Have 1: safety-patterns.ts 是唯一真源
+      expect(REASONING_TRACE_PATTERNS.length).toBeGreaterThanOrEqual(10);
+      const labels = REASONING_TRACE_PATTERNS.map((p) => p.label);
+      expect(labels).toContain('chain-of-thought');
+      expect(labels).toContain('Chinese chain-of-thought');
+    });
+
+    it('each pattern is a RegExp with a non-empty label', () => {
+      for (const p of REASONING_TRACE_PATTERNS) {
+        expect(p.label).toBeTruthy();
+        expect(p.pattern).toBeInstanceOf(RegExp);
+      }
+    });
+  });
+
+  describe('SOFT_404_KEYWORDS (Must Have 3)', () => {
+    it('covers all 10 supported locales', () => {
+      // Must Have 3: 10 语种全覆盖
+      const supportedLocales = ['en', 'zh', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'];
+      for (const loc of supportedLocales) {
+        expect(SOFT_404_KEYWORDS[loc], `locale ${loc} missing`).toBeDefined();
+        expect(SOFT_404_KEYWORDS[loc].length).toBeGreaterThan(0);
+      }
+    });
+
+    it('includes numeric status fragments per locale', () => {
+      // FEATURES.md：数字状态片段是软 404 信号
+      for (const loc of Object.keys(SOFT_404_KEYWORDS)) {
+        expect(SOFT_404_KEYWORDS[loc]).toContain('404');
+      }
+    });
+  });
+
+  describe('auditHtmlSafety (Must Have 2)', () => {
+    it('returns safe report for clean tool HTML', () => {
+      const html = '<html><head><title>BMI 计算器</title></head><body><h1>BMI Calculator</h1></body></html>';
+      const report = auditHtmlSafety(html, 'zh');
+      expect(report.safe).toBe(true);
+      expect(report.issues).toHaveLength(0);
+    });
+
+    it('detects soft-404 via <h1> keyword (en)', () => {
+      const html = '<html><head><title>Site</title></head><body><h1>Page Not Found</h1></body></html>';
+      const report = auditHtmlSafety(html, 'en');
+      expect(report.safe).toBe(false);
+      expect(report.issues.some((i) => i.kind === 'soft-404')).toBe(true);
+    });
+
+    it('detects soft-404 via <title> keyword (zh)', () => {
+      const html = '<html><head><title>页面未找到</title></head><body><h1>正常</h1></body></html>';
+      const report = auditHtmlSafety(html, 'zh');
+      expect(report.safe).toBe(false);
+      const soft = report.issues.filter((i) => i.kind === 'soft-404');
+      expect(soft.length).toBeGreaterThan(0);
+    });
+
+    it('does NOT flag numeric 404 in body text (avoids false positive)', () => {
+      // 关键：500/404 仅在 <h1>/<title> 匹配，正文里的数字不该误报
+      const html = '<html><head><title>One-Rep Max</title></head><body><h1>Bench Press</h1><p>Your 1RM is 500 lbs and 404 is your last rep count.</p></html>';
+      const report = auditHtmlSafety(html, 'en');
+      expect(report.safe).toBe(true);
+    });
+
+    it('detects reasoning-trace leak in live HTML', () => {
+      // Must Have 2: 对实时 HTML 断言 ADR 0002 契约
+      const html = '<html><body><div>The chain-of-thought reveals: step 1...</div></body></html>';
+      const report = auditHtmlSafety(html, 'en');
+      expect(report.safe).toBe(false);
+      const trace = report.issues.filter((i) => i.kind === 'reasoning-trace');
+      expect(trace.length).toBeGreaterThan(0);
+      expect(trace[0].label).toBe('chain-of-thought');
+    });
+
+    it('detects Chinese reasoning-trace leak', () => {
+      const html = '<html><body><p>内部推理过程不应泄露</p></body></html>';
+      const report = auditHtmlSafety(html, 'zh');
+      expect(report.safe).toBe(false);
+      expect(report.issues.some((i) => i.label === 'Chinese internal reasoning')).toBe(true);
+    });
+
+    it('detects noindex robots meta', () => {
+      const html = '<html><head><meta name="robots" content="noindex,nofollow"><title>Tool</title></head><body><h1>Tool</h1></body></html>';
+      const report = auditHtmlSafety(html, 'en');
+      expect(report.safe).toBe(false);
+      expect(report.issues.some((i) => i.kind === 'noindex')).toBe(true);
+    });
+
+    it('does NOT flag indexable robots meta', () => {
+      const html = '<html><head><meta name="robots" content="index,follow"><title>Tool</title></head><body><h1>Tool</h1></body></html>';
+      const report = auditHtmlSafety(html, 'en');
+      expect(report.issues.some((i) => i.kind === 'noindex')).toBe(false);
+    });
+
+    it('never throws on malformed HTML', () => {
+      // Must Have 2: 纯函数绝不因畸形 HTML 崩溃
+      const malformed = '<<<><h1>not closed' + String.fromCharCode(0) + '<<<';
+      expect(() => auditHtmlSafety(malformed, 'en')).not.toThrow();
+      expect(() => auditHtmlSafety('', 'en')).not.toThrow();
+    });
+
+    it('falls back to en keywords for unknown locale', () => {
+      const html = '<html><head><title>Page Not Found</title></head><body><h1>Oops</h1></body></html>';
+      const report = auditHtmlSafety(html, 'xx'); // 未知语种
+      expect(report.issues.some((i) => i.kind === 'soft-404')).toBe(true);
     });
   });
 });

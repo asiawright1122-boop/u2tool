@@ -34,6 +34,7 @@
     "validate:sitemap-urls": "node --import tsx/esm scripts/validation/validate-sitemap-urls.ts",
     "validate:sitemap-url-health": "node --import tsx/esm scripts/validation/validate-sitemap-url-health.ts",
     "validate:live-redirects": "node --import tsx/esm scripts/validation/validate-live-redirects.ts",
+    "validate:live-redirects:online": "node --import tsx/esm scripts/validation/validate-live-redirects.ts --online",
     "validate:llms-discovery": "node --import tsx/esm scripts/validation/validate-llms-discovery.ts",
     "validate:rendered-seo": "node --import tsx/esm scripts/validation/validate-rendered-seo.ts",
     "validate:localized-longtail-support": "node --import tsx/esm scripts/validation/validate-localized-longtail-support.ts",

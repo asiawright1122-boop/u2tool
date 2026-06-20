@@ -1,10 +1,6 @@
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
-
-interface ForbiddenPattern {
-  label: string;
-  pattern: RegExp;
-}
+import { REASONING_TRACE_PATTERNS as FORBIDDEN_PATTERNS } from '../../src/lib/safety-patterns';
 
 interface SafetyIssue {
   file: string;
@@ -39,23 +35,15 @@ const EXCLUDED_SUFFIXES = [
   '.d.ts',
 ];
 
-const FORBIDDEN_PATTERNS: ForbiddenPattern[] = [
-  { label: 'chain-of-thought', pattern: /\bchain[-\s]?of[-\s]?thought\b/i },
-  { label: 'reasoning trace', pattern: /\breasoning\s+trace\b/i },
-  { label: 'internal reasoning', pattern: /\binternal\s+reasoning\b/i },
-  { label: 'hidden reasoning', pattern: /\bhidden\s+reasoning\b/i },
-  { label: 'hidden prompt', pattern: /\bhidden\s+prompt\b/i },
-  { label: 'developer message leak', pattern: /\bdeveloper\s+messages?\b/i },
-  { label: 'agent handoff leak', pattern: /\bagent\s+handoffs?\b/i },
-  { label: 'scratchpad reasoning leak', pattern: /\bscratchpad\b.*\b(reasoning|thought|deliberation)\b/i },
-  { label: 'model thinking leak', pattern: /\b(show|display|reveal)\b.*\b(model|assistant|agent)\b.*\bthinking\b/i },
-  { label: 'Chinese chain-of-thought', pattern: /思考链|推理链/ },
-  { label: 'Chinese internal reasoning', pattern: /内部(?:推理|思考)/ },
-  { label: 'Chinese hidden prompt', pattern: /隐藏提示词|系统提示词/ },
-];
+// 模式定义文件本身包含要检测的短语字面量（如 "思考链|推理链"），
+// 扫描它会必然误报。它是 ADR 0002 规则的来源，而非被治理的对象。
+const EXCLUDED_FILES = new Set([path.join('src', 'lib', 'safety-patterns.ts')]);
 
 function shouldScanFile(filePath: string): boolean {
   if (EXCLUDED_SUFFIXES.some((suffix) => filePath.endsWith(suffix))) {
+    return false;
+  }
+  if (EXCLUDED_FILES.has(filePath)) {
     return false;
   }
 

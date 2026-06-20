@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { locales } from '../../src/lib/i18n';
+import { REASONING_TRACE_PATTERNS } from '../../src/lib/safety-patterns';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -31,6 +32,8 @@ export interface ProbeResult {
   loopDetected?: boolean;
   /** 跳转深度超过 MAX_REDIRECTS 上限时为 true */
   maxHopsExceeded?: boolean;
+  /** Phase 76: 终点 HTML 的安全审计报告（仅 --online 模式填充） */
+  safetyReport?: SafetyReport;
 }
 
 const CHROME_DESKTOP_UA =
@@ -58,6 +61,105 @@ export function normalizeUrlForComparison(raw: string): string {
   }
   // 不去尾斜杠；丢弃 hash（new URL 已不含 hash）
   return normalized.toString();
+}
+
+// ---------------------------------------------------------------------------
+// Phase 76: HTML Safety Auditor
+// ---------------------------------------------------------------------------
+
+/**
+ * 10 语种软 404 / 服务器错误关键词字典（FEATURES.md Differentiator）。
+ * 仅在 auditHtmlSafety 中对 <h1>/<title> 文本做大小写不敏感子串匹配，
+ * 避免误伤正文里合法出现的数字（如计算器结果 "500"）。
+ */
+export const SOFT_404_KEYWORDS: Record<string, string[]> = {
+  en: ['page not found', '404', 'not found', 'server error', '500'],
+  zh: ['页面未找到', '404', '未找到', '服务器错误', '500'],
+  ja: ['ページが見つかりません', '404', '見つかりません', 'サーバーエラー', '500'],
+  ko: ['페이지를 찾을 수 없습니다', '404', '찾을 수 없습니다', '서버 오류', '500'],
+  es: ['página no encontrada', '404', 'no encontrada', 'error del servidor', '500'],
+  pt: ['página não encontrada', '404', 'não encontrada', 'erro do servidor', '500'],
+  fr: ['page introuvable', '404', 'introuvable', 'erreur du serveur', '500'],
+  de: ['seite nicht gefunden', '404', 'nicht gefunden', 'serverfehler', '500'],
+  ru: ['страница не найдена', '404', 'не найдена', 'ошибка сервера', '500'],
+  ar: ['الصفحة غير موجودة', '404', 'غير موجود', 'خطأ في الخادم', '500'],
+};
+
+export type SafetyIssueKind = 'soft-404' | 'reasoning-trace' | 'noindex';
+
+export interface SafetyIssue {
+  kind: SafetyIssueKind;
+  label: string;
+  context: string;
+}
+
+export interface SafetyReport {
+  safe: boolean;
+  issues: SafetyIssue[];
+}
+
+/**
+ * 容错地从 HTML 中提取指定标签的内部文本。
+ * 用非贪婪正则而非 DOM 解析器，因为站点是 SSR 的、结构可预测，
+ * 且要求纯函数扫描器绝不因畸形 HTML 抛错。
+ */
+function extractTagText(html: string, tags: string[]): string {
+  let out = '';
+  for (const tag of tags) {
+    const re = new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, 'gi');
+    let m: RegExpExecArray | null;
+    while ((m = re.exec(html)) !== null) {
+      out += ` ${m[1]}`;
+    }
+  }
+  return out.replace(/<[^>]+>/g, ' ').trim();
+}
+
+/** 截取关键词首次出现位置周围 ~40 字符的上下文窗口 */
+function snippet(text: string, keyword: string): string {
+  const idx = text.toLowerCase().indexOf(keyword.toLowerCase());
+  if (idx < 0) return keyword;
+  const start = Math.max(0, idx - 20);
+  const end = Math.min(text.length, idx + keyword.length + 20);
+  return text.slice(start, end).trim();
+}
+
+/**
+ * 对终点 HTML 做安全审计（纯函数，无 I/O）：
+ *   1. 软 404：仅扫 <h1>/<title>，防正文误报
+ *   2. 推理痕迹泄露：复用 REASONING_TRACE_PATTERNS（ADR 0002 单一真源）
+ *   3. noindex：robots meta 退出索引 = 工具页 SEO 失败
+ * 永不抛错；畸形 HTML 只会产生较少匹配，不会崩溃。
+ */
+export function auditHtmlSafety(html: string, locale: string): SafetyReport {
+  const issues: SafetyIssue[] = [];
+
+  // 1. 软 404（仅 heading/title）
+  const headingText = extractTagText(html, ['h1', 'title']);
+  if (headingText) {
+    const lowerHeading = headingText.toLowerCase();
+    const keywords = SOFT_404_KEYWORDS[locale] ?? SOFT_404_KEYWORDS.en;
+    for (const kw of keywords) {
+      if (lowerHeading.includes(kw.toLowerCase())) {
+        issues.push({ kind: 'soft-404', label: kw, context: snippet(headingText, kw) });
+      }
+    }
+  }
+
+  // 2. 推理痕迹泄露（全文扫描，共享模式）
+  for (const { label, pattern } of REASONING_TRACE_PATTERNS) {
+    const m = html.match(pattern);
+    if (m) {
+      issues.push({ kind: 'reasoning-trace', label, context: m[0] });
+    }
+  }
+
+  // 3. noindex robots meta
+  if (/<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i.test(html)) {
+    issues.push({ kind: 'noindex', label: 'robots noindex', context: '<meta robots noindex>' });
+  }
+
+  return { safe: issues.length === 0, issues };
 }
 
 /**
@@ -326,8 +428,54 @@ export async function mapWithConcurrencyAndJitter<T, R>(
   return results;
 }
 
+// ---------------------------------------------------------------------------
+// Phase 76: HTML body fetch + locale inference helpers
+// ---------------------------------------------------------------------------
+
+/** 从 URL 首段路径推断语系（/zh/tools/... → zh），默认 en */
+function inferLocaleFromUrl(url: string): string {
+  const m = url.match(/^https?:\/\/[^/]+\/([a-z]{2})(?:\/|$)/i);
+  if (m && (locales as readonly string[]).includes(m[1])) {
+    return m[1];
+  }
+  return 'en';
+}
+
+/**
+ * 获取终点 URL 的响应体（自动跟随重定向到最终页面）。
+ * 仅在 --online 模式下被调用；失败返回 null 而非抛错，审计随之跳过。
+ * 注意：不复用 fetchWithRetry（它强制 redirect:'manual'），这里需要
+ * 默认 follow 以拿到渲染后的最终页面体。
+ */
+async function fetchTerminalBody(
+  url: string,
+  bypassToken?: string,
+  timeoutMs = 5000
+): Promise<string | null> {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: buildProbeHeaders(bypassToken),
+      signal: controller.signal,
+      // redirect: 默认 'follow'，拿到最终页面体
+    });
+    clearTimeout(timeoutId);
+    if (!response.ok) return null;
+    return await response.text();
+  } catch {
+    clearTimeout(timeoutId);
+    return null;
+  }
+}
+
 // 主执行逻辑 (CLI Driver)
 async function main(): Promise<void> {
+  // --online 门禁：仅在显式开启时才抓取终点 HTML 并做安全审计，
+  // 避免 qa:production 本地误打生产域名。也支持环境变量 LIVE_REDIRECT_ONLINE=1
+  const ONLINE_MODE = process.argv.includes('--online') || process.env.LIVE_REDIRECT_ONLINE === '1';
+
   const PROD_BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
   const WAF_BYPASS_TOKEN = process.env.WAF_BYPASS_TOKEN;
   
@@ -350,16 +498,36 @@ async function main(): Promise<void> {
   console.log(`  - Concurrency limit: ${CONCURRENCY}`);
   console.log(`  - Jitter range: ${JITTER_RANGE[0]}ms - ${JITTER_RANGE[1]}ms`);
   console.log(`  - WAF Bypass status: ${WAF_BYPASS_TOKEN ? 'Active (x-waf-bypass-token header)' : 'Inactive'}`);
+  console.log(`  - HTML safety audit: ${ONLINE_MODE ? '\x1b[33mON (fetching terminal bodies)\x1b[0m' : 'OFF (use --online to enable)'}`);
   console.log(`------------------------------------------------------------------`);
 
   const startTime = Date.now();
-  const mapper = (task: RedirectTask) =>
-    traceRedirectChain(task, {
+  const mapper = async (task: RedirectTask): Promise<ProbeResult> => {
+    const res = await traceRedirectChain(task, {
       bypassToken: WAF_BYPASS_TOKEN,
       maxRedirects: MAX_REDIRECTS,
       maxAttempts: 4,
       timeoutMs: 5000,
     });
+
+    // Phase 76: 仅 online 且 2xx 成功时抓取终点 HTML 做安全审计
+    if (ONLINE_MODE && res.success && res.chain && res.chain.length > 0) {
+      const terminalHop = res.chain[res.chain.length - 1];
+      const terminalUrl = terminalHop.location || terminalHop.url;
+      const body = await fetchTerminalBody(terminalUrl, WAF_BYPASS_TOKEN);
+      if (body !== null) {
+        const locale = inferLocaleFromUrl(terminalUrl);
+        const report = auditHtmlSafety(body, locale);
+        res.safetyReport = report;
+        if (!report.safe) {
+          // 安全失败降级整条探测为失败
+          res.success = false;
+          res.error = `HTML safety audit failed: ${report.issues.length} issue(s)`;
+        }
+      }
+    }
+    return res;
+  };
   const results = await mapWithConcurrencyAndJitter(matrix, mapper, CONCURRENCY, JITTER_RANGE);
   const totalDuration = Date.now() - startTime;
 
@@ -368,6 +536,7 @@ async function main(): Promise<void> {
   let loopCount = 0;
   let maxHopsCount = 0;
   let flattenCount = 0;
+  let safetyIssueCount = 0;
 
   for (let i = 0; i < results.length; i++) {
     const res = results[i];
@@ -387,6 +556,17 @@ async function main(): Promise<void> {
         }
       }
       console.log(`  - Expected Target Path: ${task.expectedTarget}`);
+      continue;
+    }
+
+    // Phase 76: 安全审计失败（res.success 已被降级，safetyReport 非空）
+    if (res.safetyReport && !res.safetyReport.safe) {
+      failedCount++;
+      safetyIssueCount += res.safetyReport.issues.length;
+      console.log(`\x1b[31m[SAFETY]\x1b[0m ${res.url}`);
+      for (const issue of res.safetyReport.issues) {
+        console.log(`  - [${issue.kind}] ${issue.label}: "${issue.context}"`);
+      }
       continue;
     }
 
@@ -422,8 +602,26 @@ async function main(): Promise<void> {
   console.log(`  - Total checked: ${results.length}`);
   console.log(`  - Passed: \x1b[32m${passedCount}\x1b[0m`);
   console.log(`  - Failed: \x1b[31m${failedCount}\x1b[0m (loops: ${loopCount}, max-hops exceeded: ${maxHopsCount})`);
+  if (safetyIssueCount > 0) {
+    console.log(`  - Safety issues: \x1b[31m${safetyIssueCount}\x1b[0m`);
+  }
   if (flattenCount > 0) {
     console.log(`  - Flatten suggestions: ${flattenCount}`);
+  }
+
+  // Phase 76: --online 模式写 JSON 报告到 gitignored 的 .planning/research/reports/
+  // 仅含公开字段（PITFALLS.md L167 日志脱敏要求：无 token/key/内部路径）
+  if (ONLINE_MODE) {
+    await writeJsonReport(results, matrix, {
+      baseUrl: PROD_BASE_URL,
+      totalDuration,
+      passed: passedCount,
+      failed: failedCount,
+      loops: loopCount,
+      maxHops: maxHopsCount,
+      safetyIssues: safetyIssueCount,
+      flatten: flattenCount,
+    });
   }
 
   if (failedCount > 0) {
@@ -431,6 +629,65 @@ async function main(): Promise<void> {
     process.exitCode = 1;
   } else {
     console.log(`\x1b[32m[SUCCESS] All live redirection checks passed!\x1b[0m`);
+  }
+}
+
+/** Phase 76: 写脱敏 JSON 报告，仅含 sourceUrl/状态/跳数/issue 标签 */
+async function writeJsonReport(
+  results: ProbeResult[],
+  matrix: RedirectTask[],
+  summary: {
+    baseUrl: string;
+    totalDuration: number;
+    passed: number;
+    failed: number;
+    loops: number;
+    maxHops: number;
+    safetyIssues: number;
+    flatten: number;
+  }
+): Promise<void> {
+  const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+  const reportDir = path.resolve(__dirname, '../../.planning/research/reports');
+  const reportPath = path.join(reportDir, `live-redirect-report-${timestamp}.json`);
+
+  // 仅暴露公开字段，剥离任何 token / 内部路径
+  const entries = results.map((res, i) => ({
+    sourceUrl: res.url,
+    expectedTarget: matrix[i].expectedTarget,
+    success: res.success,
+    status: res.status ?? null,
+    hops: res.chain?.length ?? 0,
+    loopDetected: res.loopDetected ?? false,
+    maxHopsExceeded: res.maxHopsExceeded ?? false,
+    safetyIssues: res.safetyReport?.issues.map((iss) => ({
+      kind: iss.kind,
+      label: iss.label,
+    })) ?? [],
+  }));
+
+  const report = {
+    generatedAt: new Date().toISOString(),
+    baseUrl: summary.baseUrl,
+    summary: {
+      total: results.length,
+      passed: summary.passed,
+      failed: summary.failed,
+      loops: summary.loops,
+      maxHopsExceeded: summary.maxHops,
+      safetyIssues: summary.safetyIssues,
+      flattenSuggestions: summary.flatten,
+      durationMs: summary.totalDuration,
+    },
+    entries,
+  };
+
+  try {
+    await fs.mkdir(reportDir, { recursive: true });
+    await fs.writeFile(reportPath, JSON.stringify(report, null, 2), 'utf-8');
+    console.log(`\x1b[36m[REPORT]\x1b[0m JSON report written to ${reportPath}`);
+  } catch (err) {
+    console.error(`\x1b[33m[WARN]\x1b[0m Failed to write JSON report: ${err instanceof Error ? err.message : err}`);
   }
 }
 
