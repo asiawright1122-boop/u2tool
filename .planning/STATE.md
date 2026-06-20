@@ -1,33 +1,33 @@
 ---
 gsd_state_version: 1.0
-milestone: v0.0.21
-milestone_name: - Live Redirection Connection Monitoring & Crawler
-status: Complete
-stopped_at: Milestone v0.0.21 archived
-last_updated: "2026-06-20T04:00:00.000Z"
+milestone: v0.0.22
+milestone_name: - TDK Drift Verification
+status: In Progress
+stopped_at: v0.0.22 requirements + roadmap defined; Phase 77 PLAN pending
+last_updated: "2026-06-20T05:00:00.000Z"
 last_activity: 2026-06-20
 progress:
-  total_phases: 3
-  completed_phases: 3
-  total_plans: 3
-  completed_plans: 3
+  total_phases: 2
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
 ---
 
 # Project State
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-06-18)
+See: .planning/PROJECT.md (updated 2026-06-20)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** No active milestone — v0.0.21 (Live Redirection Connection Monitoring & Crawler) shipped and archived on 2026-06-20. Next milestone requirements to be defined.
+**Current focus:** v0.0.22 (TDK Drift Verification) — building a source-truth ↔ live-rendered TDK drift detector for tool detail pages. Detection-only; no rendering/message changes.
 **Frontend safety:** No user-facing surface may expose internal reasoning traces, hidden prompts, scratchpads, handoff notes, or raw planning notes.
 
 ## Current Position
 
-Phase: 76 (final phase of v0.0.21)
-Status: Complete — milestone archived
-Last activity: 2026-06-20 — Phase 76 implemented & tested, v0.0.21 archived (audit + requirements + roadmap)
+Phase: 77 (first phase of v0.0.22)
+Status: Requirements + roadmap defined; Phase 77 PLAN pending
+Last activity: 2026-06-20 — v0.0.22 REQUIREMENTS.md + ROADMAP.md drafted, GEO-08 status fixed in PROJECT.md, milestone ordering agreed (v0.0.22→v0.0.25).
 
 ## Milestone Context
 
@@ -35,12 +35,12 @@ Last activity: 2026-06-20 — Phase 76 implemented & tested, v0.0.21 archived (a
 
 | Phase | Focus | Status |
 |-------|-------|--------|
-| 74 | Redirection Matrix Expansion & Fetch Pool (GEO-08-01) | Complete |
-| 75 | Redirection Hop Tracer & Loop Blocker (GEO-08-02, GEO-08-03) | Complete |
-| 76 | HTML Safety Auditor & Production Gate (GEO-08-04, GEO-08-05) | Complete |
+| 77 | Source Truth Resolver & Shared Probe Module (TDK-01, TDK-02) | In Progress |
+| 78 | Drift Comparator, Report & Offline Gate (TDK-03, TDK-04) | Not Started |
 
 ## Accumulated Context
 
+- 2026-06-20 v0.0.22 requirements + roadmap defined. Gap analysis of 5 existing TDK/metadata validators (`validate-tdk-translations`, `validate-tdk-integrity`, `validate-rendered-seo`, `seo-alignment-audit`, `validate-tool-locales`) confirmed none do source-vs-live drift comparison with brand-suffix + double-fallback-chain modeling — the new `validate-tdk-drift.ts` fills that gap. Rendering contract captured from `[slug].astro:133-137`: `seoTitle = seo_title ?? name ?? slug`, `brandedSeoTitle = withBrand(seoTitle)`, `seoDescription = seo_description ?? description`. Must reuse `withBrand` from `src/lib/seo.ts` and extract `fetchHtmlWithRetry`/`getTagContent` from `validate-rendered-seo.ts` into shared `src/lib/seo-probe.ts`.
 - 2026-06-20 milestone v0.0.21 complete and archived. All three phases (74 matrix+pool, 75 hop tracer+loop blocker, 76 HTML safety auditor+gate) implemented; 38 probe unit tests green; front-end-safety scan green after extracting shared `safety-patterns.ts`. Audit/requirements/roadmap written under `.planning/milestones/`.
 - 2026-06-18 Phase 76 complete. `auditHtmlSafety` (soft-404 scoped to `<h1>`/`<title>` across 10 locales + reasoning-trace via shared patterns + noindex), `--online`/`LIVE_REDIRECT_ONLINE=1` gate, sanitized JSON report under gitignored `.planning/research/reports/`, `validate:live-redirects:online` in package.json. 38 unit tests green.
 - 2026-06-18 Phase 75 complete. Multi-hop `traceRedirectChain` with per-chain visited Set, `MAX_REDIRECTS=5` cap, query-param normalization (trailing-slash preserved to avoid false loop), non-mutating `suggestFlatten`. 24 unit tests green.
@@ -57,10 +57,10 @@ Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20, v0.0.2
 
 ## Next Action
 
-No active milestone. Define next milestone requirements in `.planning/REQUIREMENTS.md` (e.g., TDK drift verification deferred from v0.0.21, or a new GSC recovery cohort).
+Draft Phase 77 PLAN (`.planning/phases/77-source-truth-resolver-shared-probe/77-PLAN.md`) covering TDK-01 (source truth resolver with fallback chain + reused `withBrand`) and TDK-02 (shared `src/lib/seo-probe.ts` extraction + `validate-tdk-drift.ts` capture wiring). Then implement.
 
 ## Session
 
-Last Date: 2026-06-20T04:00:00.000Z
-Stopped At: Milestone v0.0.21 archived
-Resume File: .planning/milestones/v0.0.21-MILESTONE-AUDIT.md
+Last Date: 2026-06-20T05:00:00.000Z
+Stopped At: v0.0.22 requirements + roadmap defined; Phase 77 PLAN pending
+Resume File: .planning/REQUIREMENTS.md
