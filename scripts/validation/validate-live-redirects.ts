@@ -36,7 +36,7 @@ export interface ProbeResult {
   safetyReport?: SafetyReport;
 }
 
-const CHROME_DESKTOP_UA =
+export const CHROME_DESKTOP_UA =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
 
 /** 多跳追踪的最大深度上限（PITFALLS.md Pitfall 2：防止无限跳转崩溃） */
@@ -240,7 +240,7 @@ export async function fetchWithRetry(
 /**
  * 构造探测请求头：固定 Chrome 桌面 UA，可选 WAF 绕过 token
  */
-function buildProbeHeaders(bypassToken?: string): Record<string, string> {
+export function buildProbeHeaders(bypassToken?: string): Record<string, string> {
   const headers: Record<string, string> = {
     'User-Agent': CHROME_DESKTOP_UA,
   };
@@ -691,8 +691,10 @@ async function writeJsonReport(
   }
 }
 
-// 启动执行
-if (typeof process !== 'undefined' && !process.env.VITEST) {
+// 启动执行（仅在作为直接入口点运行时，而非被其他脚本 import 时）
+import { argv } from 'node:process';
+const isDirectEntry = argv[1] && path.resolve(argv[1]) === __filename;
+if (typeof process !== 'undefined' && !process.env.VITEST && isDirectEntry) {
   main().catch((err) => {
     console.error(`\x1b[31m[FATAL] Unexpected error in validate-live-redirects:\x1b[0m`, err);
     process.exitCode = 1;

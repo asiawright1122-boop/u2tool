@@ -17,7 +17,7 @@ import type { Locale } from './i18n';
 export { createTranslator } from './translator';
 
 type MessagesRecord = Record<string, unknown>;
-const toolMessageAliases: Record<string, string> = {
+export const toolMessageAliases: Record<string, string> = {
   'jwt-debugger': 'jwt-decoder',
 };
 
@@ -201,11 +201,11 @@ async function loadMessagesFile(
   return readJsonFromAsset(assetPath, assetBaseUrl);
 }
 
-function isMergeableRecord(value: unknown): value is Record<string, unknown> {
+export function isMergeableRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
 }
 
-function mergeMessageRecords(
+export function mergeMessageRecords(
   base: MessagesRecord,
   override: MessagesRecord
 ): MessagesRecord {
@@ -495,4 +495,47 @@ export async function loadToolPageMessages(
 
   toolPageMessagesCache.set(cacheKey, mergedMessages);
   return mergedMessages;
+}
+
+/**
+ * Pure, offline message file reader for validation probes.
+ *
+ * Unlike {@link loadMessagesFile} this never touches `import.meta.glob`, the
+ * asset cache, or the network — it reads `src/messages/<relativePath>` from the
+ * workspace root. Validators (e.g. `validate-merge-chain-consistency.ts`) use
+ * this to feed real files into the shared {@link mergeMessageRecords} so the
+ * probe exercises the exact runtime merge logic without caches or fetches.
+ * Returns `null` when the file is absent (mirrors the missing-file semantics of
+ * the runtime loaders).
+ *
+ * `relativePath` is relative to `src/messages/` (e.g. `en/base.json`,
+ * `en/tools/markdown-editor.json`, `en.json`).
+ */
+export async function readMessageFile(relativePath: string): Promise<MessagesRecord | null> {
+  const [{ readFile }, { fileURLToPath }, { resolve, dirname }] = await Promise.all([
+    import('node:fs/promises'),
+    import('node:url'),
+    import('node:path'),
+  ]);
+
+  const candidatePaths = new Set<string>();
+  if (typeof import.meta.url === 'string') {
+    candidatePaths.add(fileURLToPath(new URL(`../messages/${relativePath}`, import.meta.url)));
+    candidatePaths.add(
+      resolve(dirname(fileURLToPath(import.meta.url)), '../../src/messages', relativePath)
+    );
+  }
+  // Workspace-root resolution, used by scripts that set cwd to the repo root.
+  candidatePaths.add(resolve(process.cwd(), 'src/messages', relativePath));
+
+  for (const candidate of candidatePaths) {
+    try {
+      const raw = await readFile(candidate, 'utf-8');
+      return JSON.parse(raw) as MessagesRecord;
+    } catch {
+      // Try the next candidate path.
+    }
+  }
+
+  return null;
 }

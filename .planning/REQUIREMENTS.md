@@ -1,69 +1,88 @@
-# Requirements: v0.0.22 - TDK Drift Verification
+# Requirements: v0.0.23 - Translation Corpus Governance
 
 ## Milestone Goal
 
-建立"源真相 ↔ 线上渲染"的 TDK（Title / Description / Keywords 意图）漂移校验系统：对每个已上线工具页面，比对 `src/messages/<locale>/tools/<slug>.json` 源真相字段（`seo_title` / `seo_description`，含其 `name` / `description` 回退链）与生产域名实际渲染的 `<title>` / `<meta name="description">` 是否一致，从而捕获翻译回归、回退链断裂、品牌后缀漂移、未翻译英文残留等"源对、线上错"的隐蔽缺陷。
+建立翻译语料的**结构完整性 + 覆盖完整性 + 合并一致性**三层治理：对 ~5,573 个拆分工具 JSON 文件（`src/messages/<locale>/tools/<slug>.json`）及 base/root 命名空间做 100% 严格校验（非抽样），并将 v0.0.22 的漂移检测从 `<title>`/`description` 扩展到 OG/Twitter/keywords/JSON-LD。产出 JSON 报告 + CI gate。
 
-This is a **detection-only** milestone: it produces a drift report and a release gate, but does not modify any production rendering behavior or message file.
+This is a **detection-only** milestone (carrying forward the v0.0.22 precedent): it produces reports and release gates, but does not modify any message file or rendering behavior.
 
 ## Motivation
 
-- v0.0.21 的重定向爬虫已确保流量能正确到达目标页，但"到达 ≠ 内容正确"。目标页 TDK 一旦在源→渲染链路中漂移（回退到英文、品牌后缀丢失、字段被覆盖），GSC 收录与 CTR 会无声下滑。
-- 现有 5 个 TDK/metadata 校验脚本各覆盖一半问题，没有任何一个同时满足：(a) 源真相 vs 线上渲染对比、(b) ` | U2Tool` 品牌后缀建模、(c) `seo_title→name` / `seo_description→description` 双重回退链建模。本里程碑专门填补该缺口。
-- 这是 v0.0.21 之后 STATE.md 明确点名的延后项（`Next Action: ...TDK drift verification deferred from v0.0.21`）。
+- v0.0.22 的 TDK 漂移校验覆盖了 `<title>`/`description`，但 ~5,573 个拆分工具文件（承载长篇 SEO/support 文案：`detailed_description`/`usage_steps`/`usage_examples`/`faqs`）本身从未被结构化校验——schema 违规、locale 间覆盖不对称、孤儿文件等问题无法被 CI 感知。
+- `src/messages/translations.test.ts:45` 用 `deepMerge(base, root)` 合并，而 `src/lib/translations.ts` 运行时用 `mergeMessageRecords(fallback, locale)`（方向相反），两者的合并结果可能分歧，导致测试与生产行为不一致。
+- `base.json` 的 `tools` 命名空间混有 146 个 shared UI string keys 与 692 个 tool slug objects，无校验区分二者——可疑条目（既非已知 UI key 也非 catalog slug）可能长期潜伏。
+- 现有 key parity 校验对 tail namespace 采用阈值抽样而非 100% 强制，随着内容频繁迭代，长尾工具页翻译可能部分缺失或回退到默认语言而不被检测（CONCERNS.md #1）。
+- TDK-05（v0.0.22 延后项）：将漂移检测扩展到 `og:title`/`twitter:title`/`keywords`/JSON-LD `name`/`description`。
 
 ## Requirements
 
-### TDK Drift Verification (TDK)
+### Translation Corpus Governance (TCG)
 
-- [ ] **TDK-01** - **Source Truth Resolver**: 从 `src/messages/<locale>/tools/<slug>.json`（叠加 `base.json` 与根 `<locale>.json` 的 deep merge，复用 `src/lib/translations.ts` 已有加载器）解析出每个工具页的"期望 TDK"。
-  - 必须复现 `[slug].astro:133-137` 的渲染回退链，作为单一真相：
-    - `expectedSeoTitle = tool.seo_title ?? tool.name ?? tool.slug`
-    - `expectedBrandedTitle = withBrand(expectedSeoTitle)`（复用 `src/lib/seo.ts:107`，绝不本地重写品牌后缀逻辑）
-    - `expectedDescription = tool.seo_description ?? tool.description ?? ''`
-  - 支持全部 10 个 locale（en, zh, ja, ko, es, pt, fr, de, ru, ar）与全部已上线工具 slug（从 `src/config/tools/index.ts` 读取 catalog，而非手维护白名单）。
-- [ ] **TDK-02** - **Live Rendered HTML Capture**: 对每个 (locale, slug) 抓取生产域名 `https://www.u2tool.com/<locale>/tools/<slug>/` 的渲染 HTML，提取 `<title>` 与 `<meta name="description">`。
-  - 复用 `validate-rendered-seo.ts` 已有的 `fetchHtmlWithRetry` 重试抓取模式（4 次重试、指数退避），不新造 fetch 层；若该函数未导出则将其抽取为 `src/lib/seo-probe.ts` 共享模块，由两个脚本同时引用（单一真相）。
-  - 复用 `validate-rendered-seo.ts:4959` 的 `getTagContent` 正则提取 title/description，避免 cheerio/Puppeteer 等重依赖（TDK 只需静态 HTML，无需 JS 水合后内容——SSR 已包含完整 TDK）。
-  - 必须注入与 `validate-live-redirects.ts` 一致的探测 User-Agent 与可选 `WAF_BYPASS_TOKEN` 头，复用现有放行通道；并发度 ≤ 5、jitter 50–150ms，沿用 v0.0.21 已验证的限流策略。
-- [ ] **TDK-03** - **Brand-Aware & Fallback-Aware Drift Comparator**: 实现漂移判定核心，区分以下漂移类型并输出精确标签（而非笼统 fail）：
-  - `MATCH` — 线上 title（去品牌后缀后）与 description 与源真相完全一致（做 Unicode NFC 归一化与首尾空白修剪后再比较）。
-  - `BRAND_DRIFT` — 去品牌后缀后 title 一致，但线上缺少/多出/错误品牌后缀（如缺少 ` | U2Tool`，或出现 `U2Tool | U2Tool` 双品牌）。
-  - `FALLBACK_LEAK` — 线上渲染值等于回退链上游字段（如线上 title 实为 `tool.name` 而源 `seo_title` 已存在），说明渲染时回退链被错误触发。
-  - `ENGLISH_RESIDUE` — 非 en locale 下，线上值等于对应 en 源字段（复用 `validate-tdk-translations.ts` 已有的英文字符串集思路，检测未翻译泄漏）。
-  - `MISMATCH` — 上述皆不匹配的真实内容漂移（最高优先级人工排查项）。
-  - description 不含品牌后缀，故 description 漂移只判 `MATCH` / `FALLBACK_LEAK` / `ENGLISH_RESIDUE` / `MISMATCH`。
-- [ ] **TDK-04** - **Report Generator & Offline Gate**: 生成结构化漂移报告并接入发布门禁。
-  - 报告落盘到 gitignored 的 `.planning/research/reports/tdk-drift-<timestamp>.json`，含：总工具数、各 locale 命中率、按漂移类型分桶的异常清单（slug / locale / expected / actual / drift_type）。
-  - 与 v0.0.21 一致采用 `--online` / `TDK_DRIFT_ONLINE=1` 门禁：默认（含测试与 CI）**不发起任何网络请求**，仅 `--online` 时抓取生产；无 `--online` 时跑源真相解析的自检（确认能对全部 locale×slug 解析出非空 expected TDK，不漏字段）。
-  - `MISMATCH` / `BRAND_DRIFT` / `ENGLISH_RESIDUE` 触发非零退出码；`FALLBACK_LEAK` 为 warning。
-  - package.json 新增 `validate:tdk-drift`（离线自检）与 `validate:tdk-drift:online`（`--online` 实域抓取）；离线自检并入 `qa:production` 聚合门禁。
+- [x] **TCG-01** - **Split File Schema Validator**: 遍历全部 ~5,573 个 `{locale}/tools/{slug>.json` 文件，断言每个文件结构合法：
+  - `detailed_description`: 非空 string（<20 字符 = 未完成 stub error；20–49 字符 = 短文案 warning；≥50 字符 clean）。
+  - `usage_steps`: 非空 string[]，每项非空。
+  - `usage_examples`: 非空 string[]，每项非空。
+  - `faqs`（可选）: 若存在则每项需含非空 `question` 与 `answer`；接受 legacy `{q, a}` 变体但标记为渲染漂移 error（ToolFAQ.astro 期望 `{question, answer}`）。
+  - 不得含 forbidden tokens（`TODO`/`PLACEHOLDER`/`MISSING`/`${BASE_URL}`，沿用 v0.0.22 `validate-tdk-integrity.ts` 先例）。
+  - 报告每个违规文件的 (locale, slug, field, reason)。
+- [x] **TCG-02** - **Split File Coverage & Parity Detector**: 以 `src/config/tools/index.ts` catalog 为单一真相基准，检测覆盖完整性：
+  - **缺失拆分文件**: catalog 中存在但某 locale 缺少 `{slug>.json` 的条目。
+  - **孤儿文件**: `{slug>.json` 存在但 slug 不在 catalog（含 `jwt-debugger`/`jwt-decoder` alias）。
+  - **locale 间不对称**: 文件集合在 10 个 locale 间不一致（如 en=559 vs zh=557 的 2 文件差需明确列出）。
+  - 报告以 EN 为基准，列出每个 locale 的 missing/orphan/extra 清单。
+- [x] **TCG-03** - **Merge Chain Consistency Auditor**: 审计运行时多层合并链的真实一致性问题：
+  - **设计修正（Phase 80 pre-research）**: 原始前提"`translations.test.ts:45` 用 `deepMerge(base, root)` 与运行时方向相反"经核实**已过时**——`translations.test.ts` 已重写为直接调用运行时 loader（`loadBaseMessages`/`loadToolMessages`），测试与运行时共用同一合并逻辑，无 test-vs-runtime 分歧可审计。重设计为**多源 support-copy 重叠审计**：检测 `detailed_description`/`usage_steps`/`usage_examples`/`faqs` 在三层合并源（`<locale>.json` aggregate root、`<locale>/base.json` `tools.*`、`<locale>/tools/<slug>.json` split file）中的重叠与运行时解析后的真实分歧。
+  - 抽取 `src/lib/translations.ts` 的 `mergeMessageRecords` 为可复用探针（新增纯离线 `readMessageFile`，参照 Phase 79 `validate-translation-corpus.ts` + Phase 77 `seo-probe.ts` 先例），不重写合并逻辑。
+  - 三项审计: (1) `layer_overlap`——split file 存在但 root/base.json 也携带同一 support key（静默重复源，warning）；(2) `resolved_divergence`——运行时多层 merge 解析后的最终值与 authoritative split file 值不一致（split file 未胜出 = 真实 bug，error）；(3) `en_fallback_resolution`——对 Phase 79 TCG-02 的 17 个缺失 split slug，记录 EN-fallback 解析路径（informational）。
+  - 若 baseline 显示 0 resolved divergences（split file 始终胜出），降级为 warning-only 报告而非 gate（沿用原始 line 37 设计意图）。
+- [x] **TCG-04** - **Metadata Drift Extension (TDK-05)**: 扩展 v0.0.22 的 `validate-tdk-drift.ts` 漂移检测范围：
+  - `<meta property="og:title">` vs `expectedBrandedTitle`。
+  - `<meta name="twitter:title">` vs `expectedBrandedTitle`。
+  - `<meta name="keywords">` vs 源 keywords（若源存在）。
+  - JSON-LD `<script type="application/ld+json">` 的 `name`/`description` 字段。
+  - 复用 Phase 78 的 `DriftLabel` 5-label 分类与 `compareTdk` 架构；新增 `compareMetadata()` 包装器。
+  - 沿用 `--online` gate + `computeExitCode` 退出码策略。
+- [x] **TCG-05** - **base.json Namespace Hygiene Check**: 扫描每个 locale 的 `base.json` `tools` 命名空间，以 EN 为基准做一致性检查：
+  - **设计修正（fix 3）**: 原始"mixed-layer 区分 UI key vs slug object"前提经全量扫描证伪——`tools.*` 几乎全部是 slug object，原规则产生大量误报。重设计为 **EN-consistency check**：对每个 `tools.<slug>` object，对比 non-EN locale 的 inner keys 与 EN 的 inner keys，报告 `group_key_drift`（extra/missing inner keys）。
+  - 以 EN `base.json` 为单一基准，100% parity（非抽样），warning-only（不挂 gate——结构差异不直接破坏渲染）。
+  - 报告每个 (locale, slug) 的 inner-key 差异清单。
 
 ## Future Requirements (Deferred)
 
-- **TDK-05** - **Keywords/OG/Twitter Drift**: 将对比范围从 `<title>`/`description` 扩展到 `og:title`、`twitter:title`、`keywords`、JSON-LD `name`/`description`（延后至 v0.0.23 或更后）。
 - **TDK-06** - **Rendered vs Source Snapshot Diff**: 对 `dist/client` 构建产物做同源对比（不抓生产），用于 CI 内捕获"构建已漂移但尚未发布"的回归（延后）。
-- **GEO-09** - **Continuous Cron Redirection Health Alerting**:（沿用 v0.0.21 延后项）将重定向爬虫与 TDK 漂移校验一起发布为常驻 Cron 定时任务，异常时向 Slack/Teams 告警。
+- **GEO-09** - **Continuous Cron Redirection Health Alerting**:（沿用 v0.0.21 延后项）将重定向爬虫、TDK 漂移校验、翻译语料校验一起发布为常驻 Cron 定时任务，异常时向 Slack/Teams 告警。
 
 ## Out of Scope
 
-- 修改任何生产渲染行为或 `src/messages/` 消息文件——本里程碑只检测、只报告。
-- 开发可视化 TDK 漂移大屏或监控仪表盘。
-- 对非工具页（首页 / 分类页 / compare 页）的 TDK 漂移校验——v0.0.22 聚焦工具详情页（`[slug].astro` 渲染链），其它页面类型留待后续。
-- 重写已有的 5 个 TDK/metadata 校验脚本——本里程碑只新增 `validate-tdk-drift.ts` 并按需抽取共享 fetch/tag-extract 模块，不重构既有脚本。
+- 修改任何 `src/messages/` 消息文件或生产渲染行为——本里程碑只检测、只报告。
+- 开发可视化翻译治理大屏或监控仪表盘。
+- v1/v2 命名空间迁移：`src/messages/{locale}/v2/` 已不存在（CONCERNS.md #4 过时信息已核实），无迁移需求。
+- 重写 `translations.test.ts` 或 `seo-governance.test.ts`——本里程碑新增 `validate-translation-corpus.ts` 并按需抽取共享探针，不重构既有测试。
+- 对非工具页（首页 / 分类页 / compare 页）的拆分文件校验——v0.0.23 聚焦 `src/messages/<locale>/tools/` 拆分文件。
+
+## Design Refinements (applied during Phase 79 implementation)
+
+这些细化基于全量扫描的真实数据，已回写进上方 Requirements 与 79-PLAN/BASELINE：
+
+- **TCG-01 `detailed_description` 阈值**: 原 "≥50 字符" 单一阈值在真实语料中会产生大量误报（多语言短工具名合理短文案）。基于全量 EN 扫描（559 文件）改为三档：`<20` = 未完成 stub error、`20–49` = 短文案 warning、`≥50` = clean。
+- **TCG-01 `faqs`**: 全量扫描确认 `faqs` 仅 33.8% 工具存在，从"必需"改为"可选"；并接受 legacy `{q, a}` 变体（结构合法）但标记为渲染漂移 error（真实 bug：ToolFAQ.astro 渲染为空）。
+- **TCG-05 前提证伪**: 原 "区分 shared UI key vs slug object" 前提经全量扫描证伪（`tools.*` 几乎全是 slug object，mixed-layer 假设不成立）。重设计为 **EN inner-key 一致性检查**（`group_key_drift`），warning-only。
+- **TCG-03 前提证伪（Phase 80 pre-research）**: 原 "`translations.test.ts:45` 用 `deepMerge(base, root)` 与运行时方向相反" 前提经核实**已过时**——该测试已重写为直接调用运行时 loader，无 test-vs-runtime 分歧。重设计为**多源 support-copy 重叠审计**（root.json/base.json/split file 三层重叠 + 运行时解析分歧）。Pre-research 实测: root.json support-key overlap 5,002（~500/locale）、base.json overlap 389（zh=290 outlier）、确认 `en/markdown-editor` faqs 真实分歧。
 
 ## Traceability
 
 | Requirement ID | Description | Assigned Phase | Status | Plan/Summary Evidence |
 | :--- | :--- | :--- | :--- | :--- |
-| **TDK-01** | Source Truth Resolver | Phase 77 | Proposed | |
-| **TDK-02** | Live Rendered HTML Capture | Phase 77 | Proposed | |
-| **TDK-03** | Brand-Aware & Fallback-Aware Drift Comparator | Phase 78 | Proposed | |
-| **TDK-04** | Report Generator & Offline Gate | Phase 78 | Proposed | |
+| **TCG-01** | Split File Schema Validator | Phase 79 | Implemented | [79-PLAN.md](/Users/kaka/Dev/u2tool/.planning/phases/79-split-file-schema-coverage/79-PLAN.md), [79-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/79-split-file-schema-coverage/79-BASELINE.md) |
+| **TCG-02** | Split File Coverage & Parity Detector | Phase 79 | Implemented | [79-PLAN.md](/Users/kaka/Dev/u2tool/.planning/phases/79-split-file-schema-coverage/79-PLAN.md), [79-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/79-split-file-schema-coverage/79-BASELINE.md) |
+| **TCG-03** | Merge Chain Consistency Auditor | Phase 80 | Implemented | [80-PLAN.md](/Users/kaka/Dev/u2tool/.planning/phases/80-merge-chain-consistency-auditor/80-PLAN.md), [80-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/80-merge-chain-consistency-auditor/80-BASELINE.md) |
+| **TCG-04** | Metadata Drift Extension (TDK-05) | Phase 81 | Implemented | [81-PLAN.md](/Users/kaka/Dev/u2tool/.planning/phases/81-metadata-drift-extension/81-PLAN.md), [81-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/81-metadata-drift-extension/81-BASELINE.md) |
+| **TCG-05** | base.json Namespace Hygiene Check | Phase 79 | Implemented | [79-PLAN.md](/Users/kaka/Dev/u2tool/.planning/phases/79-split-file-schema-coverage/79-PLAN.md), [79-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/79-split-file-schema-coverage/79-BASELINE.md) |
 
 ## Key Design Constraints (carry into PLAN.md)
 
-1. **单一真相（Single source of truth）**: 品牌后缀逻辑必须复用 `src/lib/seo.ts` 的 `withBrand`，不得在脚本内重新实现；fetch 重试与 tag 提取应从 `validate-rendered-seo.ts` 抽取共享，避免第二次拷贝（参照 v0.0.21 抽取 `src/lib/safety-patterns.ts` 的先例）。
-2. **ADR 0002 合规**: 漂移报告本身不得包含任何内部推理痕迹；报告字段命名与样例必须只含产品级 TDK 文本。
-3. **离线安全**: 遵循 v0.0.21 的 `--online` 模式先例——测试与默认 CI 不得触网；源真相解析自检 + 单元测试覆盖回退链与各漂移类型判定。
-4. **Worktree 安全**: 仓库当前 dirty，本里程碑不得 revert 任何无关 in-flight 改动（尤指 `src/pages/api/ai-discovery/`）。
+1. **Detection-only**: 全程不修改任何 `src/messages/` 文件，只检测、报告、设 gate（沿用 v0.0.22 先例）。
+2. **单一真相（Single source of truth）**: 合并逻辑必须复用 `src/lib/translations.ts` 的 `mergeMessageRecords`，不得在脚本内重新实现；catalog 必须从 `src/config/tools/index.ts` 读取，不手维护白名单（参照 Phase 77/78 先例）。
+3. **ADR 0002 合规**: 翻译语料报告本身不得包含任何内部推理痕迹；报告字段命名与样例必须只含产品级翻译文本。
+4. **离线安全**: 遵循 v0.0.22 的 `--online` 模式先例——TCG-01/02/03/05 全部 offline（纯文件扫描），只有 TCG-04 的生产 HTML 抓取受 `--online` 控制；测试与默认 CI 不得触网。
+5. **目录复用**: 新脚本放 `scripts/validation/`，共享探针放 `src/lib/`（如有抽取需求），不新建顶层目录。

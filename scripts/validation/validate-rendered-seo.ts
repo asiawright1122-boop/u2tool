@@ -9,6 +9,9 @@ const INCLUDE_SOURCE_RENDERED_CHECKS =
   /^https?:\/\/(localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/i.test(FETCH_BASE_URL);
 const RENDERED_SEO_CHECK_FILTER = process.env.RENDERED_SEO_CHECK?.trim().toLowerCase() || '';
 
+// Shared probe helpers — single source of truth (src/lib/seo-probe.ts)
+import { fetchHtmlWithRetry, getTagContent } from '../../src/lib/seo-probe';
+
 interface RenderedSeoCheck {
   name: string;
   path: string;
@@ -4927,52 +4930,10 @@ const checks: RenderedSeoCheck[] = [
   },
 ];
 
-async function fetchHtmlWithRetry(
-  url: string,
-  init: RequestInit = {},
-  attempts = 4
-): Promise<{ html: string; response: Response }> {
-  let lastError: unknown;
-
-  for (let attempt = 1; attempt <= attempts; attempt++) {
-    try {
-      const response = await fetch(url, init);
-      const html = await response.text();
-      return { response, html };
-    } catch (error) {
-      lastError = error;
-      if (attempt < attempts) {
-        await new Promise((resolve) => setTimeout(resolve, attempt * 750));
-      }
-    }
-  }
-
-  throw lastError;
-}
-
 function assert(condition: unknown, message: string): void {
   if (!condition) {
     throw new Error(message);
   }
-}
-
-function getTagContent(html: string, selector: 'title' | 'description' | 'canonical' | 'robots'): string {
-  if (selector === 'title') {
-    return html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim() || '';
-  }
-
-  if (selector === 'description') {
-    const tag = html.match(/<meta\b(?=[^>]*\bname=["']description["'])[^>]*>/i)?.[0] || '';
-    return tag.match(/\bcontent=(["'])(.*?)\1/i)?.[2]?.trim() || '';
-  }
-
-  if (selector === 'canonical') {
-    const tag = html.match(/<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/i)?.[0] || '';
-    return tag.match(/\bhref=["']([^"']+)["']/i)?.[1]?.trim() || '';
-  }
-
-  const tag = html.match(/<meta\b(?=[^>]*\bname=["']robots["'])[^>]*>/i)?.[0] || '';
-  return tag.match(/\bcontent=(["'])(.*?)\1/i)?.[2]?.trim() || '';
 }
 
 function extractJsonLdTypes(html: string): string[] {

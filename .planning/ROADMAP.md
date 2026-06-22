@@ -2,6 +2,11 @@
 
 ## Archived Milestones
 
+- [x] v0.0.22 TDK Drift Verification
+  Archive: [.planning/milestones/v0.0.22-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.22-MILESTONE-AUDIT.md)
+  Requirements: [.planning/REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/REQUIREMENTS.md)
+  Status: Shipped on 2026-06-20. Built a source-truth ↔ live-rendered TDK drift detector for tool detail pages. Phase 77: `resolveExpectedTdk` reproducing `[slug].astro:133-137` fallback chain with reused `withBrand`, shared `src/lib/seo-probe.ts` module, `captureRenderedTdk` batch capture. Phase 78: 5-label drift comparator (MATCH/BRAND_DRIFT/FALLBACK_LEAK/ENGLISH_RESIDUE/MISMATCH) with Unicode NFC normalization, JSON report writer, `--online` production gate with exit code policy. 52 unit tests green; 5570 tools × 10 locales offline self-check PASS.
+
 - [x] v0.0.21 Live Redirection Connection Monitoring & Crawler
   Archive: [.planning/milestones/v0.0.21-ROADMAP.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.21-ROADMAP.md)
   Requirements: [.planning/milestones/v0.0.21-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.21-REQUIREMENTS.md)
@@ -50,25 +55,31 @@
   Audit: [.planning/milestones/v0.0.13-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-MILESTONE-AUDIT.md)
   Status: Shipped on 2026-06-09. Converted all remaining high-traffic `PopularUtilityTool` catalog placeholders to real Svelte 5 components across Finance, Developer/Security, Content Generators, Social/Media, Lifestyle, Image, and Converter clusters. Added category-level authority content for English `finance`, `generators`, and `lifestyle`, preserved the no-internal-reasoning frontend safety rule, and closed on green build, runtime, SEO, placeholder, and frontend-safety gates.
 
-## Active Milestone: v0.0.22 TDK Drift Verification
+## Active Milestone: v0.0.23 Translation Corpus Governance
 
-**Goal:** 建立"源真相 ↔ 线上渲染"的 TDK 漂移校验系统，检测工具详情页 `<title>` / `<meta description>` 在源→渲染链路中的回退泄漏、品牌后缀漂移与未翻译英文残留。Detection-only — 不修改任何渲染行为或消息文件。
+**Goal:** 建立翻译语料的结构完整性 + 覆盖完整性 + 合并一致性三层治理：对 ~5,573 个拆分工具 JSON 文件做 100% 严格校验，并扩展 v0.0.22 漂移检测到 OG/Twitter/keywords/JSON-LD。Detection-only — 不修改任何 message 文件。
 
 **Phase plan:**
 
-- [ ] **Phase 77** - Source Truth Resolver & Shared Probe Module (TDK-01, TDK-02)
-  - Resolve expected TDK from `src/messages/<locale>/tools/<slug>.json` reproducing the `[slug].astro:133-137` fallback chain (`seo_title→name→slug`, `seo_description→description`), brand-suffix via reused `withBrand`. Catalog from `src/config/tools/index.ts`, all 10 locales.
-  - Extract `fetchHtmlWithRetry` + `getTagContent` from `validate-rendered-seo.ts` into shared `src/lib/seo-probe.ts` (single source of truth, mirroring the v0.0.21 `safety-patterns.ts` extraction precedent). Wire `validate-tdk-drift.ts` to use it with the same UA / `WAF_BYPASS_TOKEN` / ≤5 concurrency / 50–150ms jitter policy as `validate-live-redirects.ts`.
-- [ ] **Phase 78** - Drift Comparator, Report & Offline Gate (TDK-03, TDK-04)
-  - Implement the 5-label drift comparator (`MATCH` / `BRAND_DRIFT` / `FALLBACK_LEAK` / `ENGLISH_RESIDUE` / `MISMATCH`) with Unicode NFC + whitespace normalization; description uses the subset without `BRAND_DRIFT`.
-  - JSON report to gitignored `.planning/research/reports/`; `--online` / `TDK_DRIFT_ONLINE=1` gate (offline default runs source-resolution self-check, no network); `validate:tdk-drift` + `validate:tdk-drift:online` in package.json; offline self-check wired into `qa:production`.
+- [x] **Phase 79** - Split File Schema & Coverage (TCG-01, TCG-02, TCG-05)
+  - TCG-01: 遍历 ~5,573 拆分文件校验 4-key schema (`detailed_description`/`usage_steps`/`usage_examples`/`faqs`) 与 forbidden tokens。
+  - TCG-02: 以 `src/config/tools/index.ts` catalog 为基准检测缺失文件、孤儿文件、locale 间不对称。
+  - TCG-05: `base.json` `tools` 命名空间 EN 一致性检查（non-EN locale vs EN inner-key drift）。
+  - 产出 JSON 报告 + `validate:translation-corpus` CI gate（并入 `qa:seo-governance` 与 `qa:production`）。
+  - Baseline: 5,573 文件扫描 → 51 schema errors + 37 coverage gaps (gate exit 1) + 325 namespace warnings. 详见 [79-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/79-split-file-schema-coverage/79-BASELINE.md).
+- [x] **Phase 80** - Merge Chain Consistency Auditor (TCG-03) [depends on 79]
+  - **前提证伪（pre-research）**: 原 "`translations.test.ts:45` 用 `deepMerge(base, root)` 与运行时方向相反" 已过时——测试已重写为调用运行时 loader，无 test-vs-runtime 分歧。
+  - **重设计**: 多源 support-copy 重叠审计——抽取 `mergeMessageRecords` 为共享探针，检测 `detailed_description`/`usage_steps`/`usage_examples`/`faqs` 在三层源（`<locale>.json` root / `base.json` `tools.*` / split file）的重叠（warning）与运行时解析分歧（resolved != authoritative split = error）+ 17 缺失 slug 的 EN-fallback 路径（info）。
+  - Baseline: 557 slugs × 10 locales → **0 resolved divergences** (split file 总是胜出, gate PASS) + **15,301 layer-overlap warnings** (15,034 root-only + 267 root+base) + **68 EN-fallback resolutions** (2 distinct slugs). 详见 [80-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/80-merge-chain-consistency-auditor/80-BASELINE.md)。
+- [x] **Phase 81** - Metadata Drift Extension (TCG-04 / TDK-05) [depends on 79]
+  - 扩展 `validate-tdk-drift.ts` 漂移检测到 `og:title`/`twitter:title`/`keywords`/JSON-LD `name`/`description`，复用 Phase 78 的 5-label 分类与 `--online` gate。
+  - 新增 `compareMetadata()` 包装器 + 4 个 seo-probe 提取器（`getOgTitle`/`getTwitterTitle`/`getKeywords`/`extractJsonLdBlocks`）。102 单元测试通过（78 + 24）。5570 tools × 10 locales 离线 self-check PASS。详见 [81-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/81-metadata-drift-extension/81-BASELINE.md)。
 
 **Requirements:** [.planning/REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/REQUIREMENTS.md)
 
 **Upcoming milestones (order agreed 2026-06-20):**
 
-- v0.0.23 Translation Corpus Governance (detection + tooling over ~5,600 message files)
-- v0.0.24 Tool Detail Page Architecture Refactor (behavior-preserving, `src/pages/[locale]/tools/[slug].astro`)
+- v0.0.24 Tool Detail Page Architecture Refactor (behavior-preserving, `src/pages/[locale]/tools/[slug>.astro`)
 - v0.0.25 Cluster Card / Tool Island Commonality Extraction (`src/lib/*-cluster.ts` + `src/components/tools/`)
 
 ## Archived Milestones
