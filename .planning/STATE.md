@@ -1,14 +1,14 @@
 ---
 gsd_state_version: 1.0
-milestone: v0.0.25
-milestone_name: - Cluster Card / Tool Island Commonality Extraction
+milestone: v0.0.26
+milestone_name: Persistent Render Regression Gate
 status: Active
-stopped_at: v0.0.24 archived (MILESTONE-AUDIT PASS); v0.0.25 requirements not yet drafted, Phase 83 not started
-last_updated: "2026-06-23T02:45:00.000Z"
+stopped_at: Phase 86 implemented; server-backed render validation pending runnable SSR environment
+last_updated: "2026-06-23T13:25:00.000Z"
 last_activity: 2026-06-23
 progress:
   total_phases: 1
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 0
   completed_plans: 0
 ---
@@ -20,14 +20,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-06-20)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** v0.0.25 (Cluster Card / Tool Island Commonality Extraction) — extract commonality from 8 `src/lib/*-cluster.ts` files + 8 `*ClusterCard.astro` components into unified `src/lib/tool-cluster.ts` + `src/components/tools/ToolClusterCard.astro`. Prerequisite v0.0.24 completed: `CLUSTER_BLOCKS` array in `[slug].astro` now serves as the single call-site to be simplified in v0.0.25.
+**Current focus:** v0.0.26 (Persistent Render Regression Gate) — upgrade v0.0.24's one-shot `[slug].astro` HTML snapshot method into a durable render contract gate in `qa:production`, with a direct guard for v0.0.25 Phase 84's missing cluster-card runtime bug.
 **Frontend safety:** No user-facing surface may expose internal reasoning traces, hidden prompts, scratchpads, handoff notes, or raw planning notes.
 
 ## Current Position
 
-Phase: 83 NOT STARTED; v0.0.24 milestone COMPLETE + archived (2026-06-23)
-Status: v0.0.25 (Cluster Card / Tool Island Commonality Extraction) requirements not yet drafted; awaiting phase planning
-Last activity: 2026-06-23 — v0.0.24 MILESTONE-AUDIT PASS: 5/5 requirements TDP-01/02/03/04/05 implemented in Phase 82, HTML snapshot byte-diff proves 11 pages byte-equivalent (-6 bytes pure whitespace), `qa:production` chain 27/28 green (sole failure = v0.0.23 legacy `validate:translation-corpus`), two design refinements transparently recorded (TDP-01 order-description typo fix; TDP-03 function-extraction rolled back to inline after contract-test regression). Single-file boundary + refactor-only discipline held. `[slug].astro` refactored from 729 → 721 lines with `CLUSTER_BLOCKS` array + single `.map` render loop. ROADMAP: v0.0.24 → archived, v0.0.25 → Active Milestone. REQUIREMENTS + milestones/v0.0.24-REQUIREMENTS.md snapshot + milestones/v0.0.24-MILESTONE-AUDIT.md written.
+Phase: 86 IMPLEMENTED; server-backed validation pending runnable SSR environment
+Status: v0.0.26 render contract gate implemented. Added `tool-page-render-contract.ts`, `validate-tool-page-render-contract.ts`, Vitest coverage, and `qa:production` wiring. No product rendering or translation content changes.
+Last activity: 2026-06-23 — Phase 86 implemented with TDD. New tests cover the 11-route matrix, stable HTML contract extraction, pass/fail comparison, CLI option parsing, report summary, and a synthetic Phase-84-style missing cluster-card regression. Local server-backed validation remains blocked in this sandbox if no SSR server is reachable.
 
 ## Milestone Context
 
@@ -36,10 +36,17 @@ Last activity: 2026-06-23 — v0.0.24 MILESTONE-AUDIT PASS: 5/5 requirements TDP
 | Phase | Focus | Status |
 |-------|-------|--------|
 | 82 | Tool Detail Page Architecture Refactor (TDP-01, TDP-02, TDP-03, TDP-04, TDP-05) | **Complete** |
+| 83 | Shared cluster types + factory extraction | **Complete** |
+| 84 | Unified ToolClusterCard + ToolClusterSection components | **Complete** |
+| 85 | CLUSTER_BLOCKS type simplification + bug fix + cleanup | **Complete** |
+| 86 | Persistent tool-page render contract gate | **Complete** |
 
 ## Accumulated Context
 
-- 2026-06-23 v0.0.24 shipped + archived. MILESTONE-AUDIT PASS: 5/5 requirements (TDP-01/02/03/04/05) implemented in Phase 82. Behavior-preserving single-file refactor of `[slug].astro` (729 → 721 lines): `CLUSTER_BLOCKS` config array + single `.map` render loop replacing 8 copy-pasted cluster blocks; FAQ extraction + support-content trust/fallback organized into clear frontmatter sections; imports grouped by concern. HTML snapshot byte-diff: 11/11 pages equivalent (-6 bytes pure whitespace). `qa:production` chain: 27/28 green. Two design refinements recorded: (1) TDP-01 REQUIREMENTS order-description typo (chart居首→chart居末, corrected to match pre-refactor HEAD actual render order); (2) TDP-03 `resolveSupportContent()` function extraction rolled back to inline — `translations.test.ts:253` contract test asserts SSR fallback chain must remain inline (`supportContentFallback?.faqs ?? []`), function extraction broke contract (clean HEAD test passes, refactored fails → regression identified and rolled back). Single-file + refactor-only discipline held: zero `src/messages/`, `src/lib/`, `src/components/` changes. Commit `1d077e2a` pushed to origin/main. REQUIREMENTS + milestones/v0.0.24-REQUIREMENTS.md snapshot + milestones/v0.0.24-MILESTONE-AUDIT.md written. ROADMAP: v0.0.24 → archived, v0.0.25 → Active.
+- 2026-06-23 v0.0.26 planned. User order: A+C 后 B — close v0.0.25, clear translation-corpus debt, then plan v0.0.26. Fresh verification: `validate:translation-corpus` PASS (`Schema errors: 0`, `Coverage gaps: 0`, namespace warnings only), `validate:merge-chain-consistency` PASS (`Resolved divergences: 0`, `EN-fallback resolutions: 0`), `validate:tdk-drift` PASS (`5570/5570`), and 10 focused Vitest files / 76 tests PASS. v0.0.26 scope selected as TDP-06 persistent render tests: fixed SSR route matrix, stable HTML contract extractor, cluster-card runtime assertions, validation script, tests, and `qa:production` wiring. Known local sandbox blocker remains: commands requiring local bind/listen or fetch can fail with environment `EPERM` / `fetch failed`.
+- 2026-06-23 Phase 86 implemented. `scripts/validation/tool-page-render-contract.ts` defines the 11-route matrix and zero-dependency contract comparator; `scripts/validation/validate-tool-page-render-contract.ts` fetches rendered SSR HTML with `fetchHtmlWithRetry`, compares contracts, supports `--base-url`, `--filter`, `--json-out`, and `--update-baseline`, and exits non-zero on drift. `scripts/validation/tool-page-render-contract.test.ts` covers extraction/comparison plus a missing `data-tool-cluster` regression case. `package.json` wires `validate:tool-page-render-contract` into `qa:production` after `build`.
+- 2026-06-23 v0.0.25 shipped (all 3 phases: 83/84/85). Phase 83 extracted shared `tool-cluster-types.ts` (5 interfaces: `ToolClusterItem`, `ToolClusterGroup`, `ToolClusterCopy`, `ToolClusterGroupDef`, `ClusterColorTheme`) + `tool-cluster-factory.ts` (4 generic builders) from 8 `*-cluster.ts` data files. Phase 84 replaced 16 per-cluster Astro components (8 Card + 8 Section) with unified `ToolClusterCard.astro` + `ToolClusterSection.astro`, deleted old files, updated all consumer pages. Phase 85 added `ToolClusterBlock` interface to shared types, fixed critical template bug (stale `Card` discriminator from pre-Phase-84 refactor — template was destructuring undefined `Card` instead of using `ToolClusterCard`), replaced inline CLUSTER_BLOCKS type with named interface, removed 16 unused per-cluster type imports from `[slug].astro`. MILESTONE-AUDIT PASS. Local current sandbox cannot re-run `astro check` / `astro build` because Cloudflare local listening is blocked (`listen EPERM`), but prior audit records those gates green in a runnable environment.
+- 2026-06-23 v0.0.24 shipped + archived. MILESTONE-AUDIT PASS: 5/5 requirements (TDP-01/02/03/04/05) implemented in Phase 82. MILESTONE-AUDIT PASS: 5/5 requirements (TDP-01/02/03/04/05) implemented in Phase 82. Behavior-preserving single-file refactor of `[slug].astro` (729 → 721 lines): `CLUSTER_BLOCKS` config array + single `.map` render loop replacing 8 copy-pasted cluster blocks; FAQ extraction + support-content trust/fallback organized into clear frontmatter sections; imports grouped by concern. HTML snapshot byte-diff: 11/11 pages equivalent (-6 bytes pure whitespace). `qa:production` chain: 27/28 green. Two design refinements recorded: (1) TDP-01 REQUIREMENTS order-description typo (chart居首→chart居末, corrected to match pre-refactor HEAD actual render order); (2) TDP-03 `resolveSupportContent()` function extraction rolled back to inline — `translations.test.ts:253` contract test asserts SSR fallback chain must remain inline (`supportContentFallback?.faqs ?? []`), function extraction broke contract (clean HEAD test passes, refactored fails → regression identified and rolled back). Single-file + refactor-only discipline held: zero `src/messages/`, `src/lib/`, `src/components/` changes. Commit `1d077e2a` pushed to origin/main. REQUIREMENTS + milestones/v0.0.24-REQUIREMENTS.md snapshot + milestones/v0.0.24-MILESTONE-AUDIT.md written. ROADMAP: v0.0.24 → archived, v0.0.25 → Active.
 - 2026-06-22 v0.0.23 archived + v0.0.24 planned. v0.0.23 MILESTONE-AUDIT PASS (5/5 requirements, 163 tests green, offline self-checks pass, two premise disproofs recorded). REQUIREMENTS.md rolled over to v0.0.24 (Tool Detail Page Architecture Refactor): 5 TDP requirements — TDP-01 page-internal `CLUSTER_BLOCKS` array + map loop (collapses 8 copy-pasted cluster copy/path/group-build + card-render blocks), TDP-02 FAQ extraction local-function, TDP-03 support-content trust+fallback chain integration, TDP-04 import reorganization, TDP-05 HTML snapshot byte-diff equivalence proof. **Scope locked to `[slug].astro` single file** (no new lib/component — v0.0.25 scope). User-confirmed decisions: (a) page-internal data-driven loop (no new files except one-shot snapshot script), (b) HTML snapshot byte-diff as the behavior-preservation verification strategy. ROADMAP: v0.0.23 → Archived, v0.0.24 → Active with single Phase 82 (snapshot baseline first, then refactor, then re-snapshot diff). v0.0.23-REQUIREMENTS.md snapshot + v0.0.23-MILESTONE-AUDIT.md written to milestones/.
 - 2026-06-22 Phase 81 complete (wave 3 of v0.0.23, **milestone complete**). Extended `validate-tdk-drift.ts` with `compareMetadata()` wrapper detecting drift on `og:title`, `twitter:title`, `keywords`, and JSON-LD `SoftwareApplication` `name`/`description`. Added 4 new zero-dependency regex extractors to `src/lib/seo-probe.ts`: `getOgTitle`, `getTwitterTitle`, `getKeywords`, `extractJsonLdBlocks` (multi-block parse, silently skips malformed JSON). Extended types: `ExpectedTdk` (+`expectedToolName` = `name ?? slug` unbranded, +`sourceKeywords` if split file has it), `RenderedTdk` (+`ogTitle`/`twitterTitle`/`keywords`/`jsonLdBlocks`), `DriftResult.field` → new `MetadataField` union (`'title'|'description'|'og:title'|'twitter:title'|'keywords'|'jsonld_name'|'jsonld_description'`). Architecture: `compareBrandedMetaTitle` reuses full 5-label logic for OG/Twitter (same `brandedSeoTitle` source as `<title>`); `compareJsonLdName` uses unbranded `expectedToolName` (no BRAND_DRIFT); `compareKeywordsMeta` skips when source has no keywords (no false positives — no source currently has keywords); `compareJsonLdDescription` mirrors `compareTdkDescription`. `findSoftwareApplicationBlock` selects from up to 4 JSON-LD blocks by `@type`. 102 unit tests green (78 in `validate-tdk-drift.test.ts` + 24 in new `seo-probe.test.ts`). 5570 tools × 10 locales offline self-check PASS (3.0s). No wiring changes — `validate:tdk-drift` already in `qa:seo-governance` → `qa:production`. Per-tool online check count: 6 fields (2 TDK + 4 metadata; keywords = 0 today). 81-PLAN.md + 81-BASELINE.md written. REQUIREMENTS TCG-04 ✓ + traceability table + ROADMAP Phase 81 ✓ updated. **v0.0.23 Translation Corpus Governance milestone complete: TCG-01/02/03/04/05 all implemented.**
 - 2026-06-22 Phase 80 complete (wave 2 of v0.0.23). **TCG-03 original premise DISPROVEN** (same pattern as Phase 79 fix-3/fix-5): "`translations.test.ts:45` uses `deepMerge(base, root)` opposite to runtime" — test was rewritten to call runtime loaders, no test-vs-runtime divergence exists. **Redesigned to multi-source support-copy overlap audit.** Exported `mergeMessageRecords` + `isMergeableRecord` + new pure async `readMessageFile` (offline, no glob/cache/fetch) from `src/lib/translations.ts` — single-source merge reuse (REQUIREMENTS line 84). Built `scripts/validation/validate-merge-chain-consistency.ts` + `.test.ts` (17 tests). Three audits: (1) `layer_overlap` = 15,301 warnings (15,034 root-only + 267 root+base; 498 distinct slugs; near-ubiquitous stale support-copy in legacy aggregate root); (2) `resolved_divergence` = **0** (merge logic correct, split file always wins → gate PASS exit 0); (3) `en_fallback_resolution` = 68 info (17 Phase-79 missing slugs × 4 fields, 2 distinct slugs: ip-geolocation + screen-recorder). Gate design: only resolved divergences fail gate; 0 → warning-only regression guard. Wired `validate:merge-chain-consistency` into `qa:seo-governance` + `qa:production`. 80-BASELINE.md + 80-PLAN.md updated. REQUIREMENTS TCG-03 + traceability table + ROADMAP marked implemented. `readMessageFile` is reusable by Phase 81.
@@ -61,35 +68,23 @@ Last activity: 2026-06-23 — v0.0.24 MILESTONE-AUDIT PASS: 5/5 requirements TDP
 - 2026-06-09 GSC recovery cohort plan created with exact URL lists, action rules, owner model, and checkpoints.
 - 2026-06-12 GSC URL Inspection checkpoint recorded.
 
-Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20, v0.0.21, v0.0.22, v0.0.23, v0.0.24 are complete and archived.
+Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20, v0.0.21, v0.0.22, v0.0.23, v0.0.24, and v0.0.25 are complete and archived. v0.0.26 is active/planned.
 
 ## Next Action
 
-**v0.0.25 (Cluster Card / Tool Island Commonality Extraction) — requirements
-not yet drafted.** Scope: extract commonality from 8 `src/lib/*-cluster.ts`
-(getXxxClusterCopy / buildXxxClusterGroupForTool / xxxClusterPath) and 8
-`*ClusterCard.astro` components into unified `src/lib/tool-cluster.ts` +
-`src/components/tools/ToolClusterCard.astro`. The `CLUSTER_BLOCKS` array
-established in v0.0.24 will simplify to a single unified-lib call.
+**Validate Phase 86 in a runnable SSR environment.**
 
-To kick off Phase 83:
-1. Draft v0.0.25 requirements in REQUIREMENTS.md: inventory the 8 cluster libs
-   for shared patterns (copy function shape, group builder shape, path
-   constant, card component props), define the unified interface, identify
-   variant-specific extension points (e.g. creatorSeo's `showAll` flag).
-2. Write `.planning/phases/83-cluster-commonality/83-PLAN.md`.
-3. Implement the extraction, then simplify `CLUSTER_BLOCKS` in `[slug].astro`.
+Run:
+1. `npx vitest run scripts/validation/tool-page-render-contract.test.ts`
+2. Start local SSR (`npm run build && npm run preview` or project-standard preview)
+3. `FETCH_BASE_URL=http://localhost:4321 npm run validate:tool-page-render-contract`
+4. Run broader `qa:production` when local bind/listen is available.
 
-Carried-over optional (not blocking v0.0.25):
-- Run `validate:tdk-drift:online` against production to capture the first
-  online metadata-drift baseline (gated by `--online`/`TDK_DRIFT_ONLINE=1`;
-  requires production network + WAF bypass token). Offline parity is already
-  verified by v0.0.23's 102 unit tests + 5570 self-check.
-- Fix 51 schema errors + 37 coverage gaps detected by v0.0.23's
-  `validate:translation-corpus` (detection-only, needs content milestone).
+Carried-over optional:
+- Run `validate:tdk-drift:online` against production when network/WAF token is available.
 
 ## Session
 
-Last Date: 2026-06-23T02:45:00.000Z
-Stopped At: v0.0.24 archived; v0.0.25 requirements not yet drafted, Phase 83 not started
+Last Date: 2026-06-23T13:25:00.000Z
+Stopped At: Phase 86 implemented; server-backed render validation pending runnable SSR environment
 Resume File: .planning/REQUIREMENTS.md

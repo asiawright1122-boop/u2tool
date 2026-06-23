@@ -16,16 +16,16 @@
   ],
   "faqs": [
     {
-      "q": "O que é TOML?",
-      "a": "TOML (Tom's Obvious, Minimal Language) é um formato de arquivo de configuração mínimo para arquivos de configuração."
+      "question": "O que é TOML?",
+      "answer": "TOML (Tom's Obvious, Minimal Language) é um formato de arquivo de configuração mínimo para arquivos de configuração."
     },
     {
-      "q": "Por que converter TOML para JSON?",
-      "a": "JSON é mais amplamente suportado e pode ser usado em muitas linguagens de programação e ferramentas."
+      "question": "Por que converter TOML para JSON?",
+      "answer": "JSON é mais amplamente suportado e pode ser usado em muitas linguagens de programação e ferramentas."
     },
     {
-      "q": "Esta ferramenta é gratuita?",
-      "a": "Sim, é completamente gratuita e não requer registro."
+      "question": "Esta ferramenta é gratuita?",
+      "answer": "Sim, é completamente gratuita e não requer registro."
     }
   ]
 }

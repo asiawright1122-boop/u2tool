@@ -2,6 +2,11 @@
 
 ## Archived Milestones
 
+- [x] v0.0.25 Cluster Card / Tool Island Commonality Extraction
+  Requirements: [.planning/milestones/v0.0.25-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.25-REQUIREMENTS.md)
+  Audit: [.planning/milestones/v0.0.25-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.25-MILESTONE-AUDIT.md)
+  Status: Shipped on 2026-06-23. Extracted shared types (`tool-cluster-types.ts`, 6 interfaces/types) and factory (`tool-cluster-factory.ts`, 4 generic builders) from 8 `*-cluster.ts` data files. Replaced 16 per-cluster Astro components (8 Card + 8 Section) with unified `ToolClusterCard.astro` + `ToolClusterSection.astro`. Fixed critical template bug (`Card` discriminator vestige → `ToolClusterCard`). Simplified `CLUSTER_BLOCKS` type to named `ToolClusterBlock` interface, removed 16 unused type imports. 3 phases (83/84/85), 9 requirements (SCT-01/02/03/04, UCC-01/02/03/04, TBF-01) all PASS. `astro check` 0 errors, `astro build` success, 811/811 relevant tests green. Refactor-only discipline: zero `src/messages/` changes, zero rendering behavior changes.
+
 - [x] v0.0.24 Tool Detail Page Architecture Refactor
   Requirements: [.planning/milestones/v0.0.24-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.24-REQUIREMENTS.md)
   Audit: [.planning/milestones/v0.0.24-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.24-MILESTONE-AUDIT.md)
@@ -65,19 +70,18 @@
   Audit: [.planning/milestones/v0.0.13-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-MILESTONE-AUDIT.md)
   Status: Shipped on 2026-06-09. Converted all remaining high-traffic `PopularUtilityTool` catalog placeholders to real Svelte 5 components across Finance, Developer/Security, Content Generators, Social/Media, Lifestyle, Image, and Converter clusters. Added category-level authority content for English `finance`, `generators`, and `lifestyle`, preserved the no-internal-reasoning frontend safety rule, and closed on green build, runtime, SEO, placeholder, and frontend-safety gates.
 
-## Active Milestone: v0.0.25 Cluster Card / Tool Island Commonality Extraction
+## Active Milestone: v0.0.26 Persistent Render Regression Gate
 
-**Goal:** 把 8 个 `src/lib/*-cluster.ts`（`getXxxClusterCopy` / `buildXxxClusterGroupForTool` / `xxxClusterPath`）和 8 个 `*ClusterCard.astro` 的共性抽取到统一的 `src/lib/tool-cluster.ts` + `src/components/tools/ToolClusterCard.astro`，消除 lib/component 层的对称性。v0.0.24 在页面层建立的 `CLUSTER_BLOCKS` 数组届时将简化为对统一 lib 的单次调用。
+**Goal:** Upgrade the v0.0.24 one-shot `[slug].astro` HTML snapshot workflow into a durable `qa:production` render contract gate. The gate will fetch a fixed representative SSR page matrix, extract stable semantic HTML contracts, and fail on regressions like the v0.0.25 Phase 84 missing cluster-card render bug.
 
-**Requirements:** TBD (to be drafted when phase planning begins)
+**Requirements:** [.planning/REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/REQUIREMENTS.md)
 
 **Phase plan:**
 
-- [ ] **Phase 83** - TBD
+- [ ] **Phase 86** - Persistent tool-page render contract gate
 
-**Upcoming milestones (order agreed 2026-06-20):**
+**Design notes:**
 
-- (none currently agreed beyond v0.0.25)
-
-## Archived Milestones
-
+- Reuse the existing one-shot `scripts/validation/snapshot-tool-pages.ts` matrix as input, but do not commit full-page HTML snapshots.
+- Store compact contract expectations and assert stable fields: head metadata, JSON-LD types, cluster card attributes, FAQ count, support-copy sentinels, and related links.
+- Direct regression target: any cluster matrix page missing `data-tool-cluster`, `data-tool-cluster-group`, or sibling links fails with a Phase-84-style cluster-card message.

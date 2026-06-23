@@ -1,0 +1,16 @@
+{
+  "detailed_description": "IP-Geolokalisierung zeigt ungefähre Netzwerkstandortdaten für IPv4- und IPv6-Adressen an. Geben Sie eine IP-Adresse ein oder verwenden Sie Ihre aktuelle öffentliche IP, um Land, Region, Stadt, Zeitzone, Koordinaten, Provider, Organisation und ASN zu prüfen, sofern der Anbieter diese Daten zurückgibt.",
+  "usage_steps": [
+    "Geben Sie eine IP-Adresse ein oder lassen Sie das Feld leer, um Ihre aktuelle öffentliche IP zu nutzen.",
+    "Klicken Sie auf Nachschlagen oder Meine IP-Adresse.",
+    "Warten Sie, bis die Browserabfrage Standortdaten vom Anbieter erhält.",
+    "Prüfen Sie Land, Region, Stadt, Zeitzone, Koordinaten, Provider und ASN.",
+    "Verwenden Sie die Kartenansicht nur als ungefähre Orientierung."
+  ],
+  "usage_examples": [
+    "Prüfen, ob eine Test-IP dem erwarteten Land zugeordnet wird.",
+    "Die öffentliche IP und den Provider des aktuellen Netzwerks bestätigen.",
+    "Lokalisierungslogik anhand von Land und Zeitzone debuggen.",
+    "Vor einer Eskalation einen schnellen Netzwerkstandort-Snapshot erfassen."
+  ]
+}

@@ -65,7 +65,7 @@
     "validate:prerender-safety": "node --import tsx/esm scripts/validation/validate-prerender-safety.ts",
     "validate:edge-simulation": "node scripts/validation/validate-edge-simulation.mjs",
     "validate:redirect-loops": "node --import tsx/esm scripts/validation/validate-redirect-loops.ts",
-    "qa:production": "npm run validate:redirect-loops && npm run check && npm run qa:seo-governance && npm run qa:theme-parity && npm run qa:runtime-integrity && npm run validate:runtime-placeholder-regressions && npm run validate:tool-svg-rendering && npm run validate:front-end-safety && npm run validate:gsc-loss-metadata && npm run build && npm run validate:robots-txt && npm run validate:decommissioned-routes && npm run validate:html-links && npm run validate:canonical-slash && npm run validate:sitemap-urls && npm run validate:production-routes && npm run validate:seo-alignment && npm run validate:technical-seo && npm run validate:llms-discovery && npm run validate:rendered-seo && npm run validate:worker-ssr && npm run validate:growth-surfaces && npm run validate:internal-link-canonicals && npm run validate:search-engine-compliance && npm run validate:hreflang-scc && npm run validate:tdk-translations && npm run validate:json-ld && npm run validate:prerender-safety && npm run validate:edge-simulation",
+    "qa:production": "npm run validate:redirect-loops && npm run check && npm run qa:seo-governance && npm run qa:theme-parity && npm run qa:runtime-integrity && npm run validate:runtime-placeholder-regressions && npm run validate:tool-svg-rendering && npm run validate:front-end-safety && npm run validate:gsc-loss-metadata && npm run build && npm run validate:tool-page-render-contract && npm run validate:robots-txt && npm run validate:decommissioned-routes && npm run validate:html-links && npm run validate:canonical-slash && npm run validate:sitemap-urls && npm run validate:production-routes && npm run validate:seo-alignment && npm run validate:technical-seo && npm run validate:llms-discovery && npm run validate:rendered-seo && npm run validate:worker-ssr && npm run validate:growth-surfaces && npm run validate:internal-link-canonicals && npm run validate:search-engine-compliance && npm run validate:hreflang-scc && npm run validate:tdk-translations && npm run validate:json-ld && npm run validate:prerender-safety && npm run validate:edge-simulation",
     "qa:smoke": "node --import tsx/esm scripts/validation/smoke-e2e.ts && npm run validate:sitemap-urls -- --online",
     "verify:production": "npm run qa:production && npm run qa:smoke && npm run report:seo-alignment && npm run planning:traceability && npm run health:check",
     "qa:ai-discovery": "npx vitest run src/lib/ai-discovery/*.test.ts && npm run build",
@@ -94,7 +94,8 @@
     "health:check:strict": "npm run verify:production",
     "submit:indexnow": "node scripts/submit-indexnow.js",
     "submit:indexnow:dry": "node scripts/submit-indexnow.js --dry-run",
-    "validate:sitemap": "node scripts/validate-sitemap-fix.js"
+    "validate:sitemap": "node scripts/validate-sitemap-fix.js",
+    "validate:tool-page-render-contract": "node --import tsx/esm scripts/validation/validate-tool-page-render-contract.ts"
   },
   "dependencies": {
     "dompurify": "^3.4.2",

@@ -1,0 +1,16 @@
+{
+  "detailed_description": "Der Bildschirmrekorder nutzt die Bildschirmfreigabe-Berechtigung des Browsers, um den ausgewählten Bildschirm, ein Fenster oder einen Tab aufzunehmen. Sie können die Aufnahme starten, pausieren, fortsetzen, stoppen, eine Vorschau ansehen und das Ergebnis als WebM-Datei herunterladen.",
+  "usage_steps": [
+    "Klicken Sie auf Aufnahme starten und bestätigen Sie die Bildschirmfreigabe im Browser.",
+    "Wählen Sie den Bildschirm, das Fenster oder den Tab aus, der aufgenommen werden soll.",
+    "Nutzen Sie Pause und Fortsetzen, wenn die Aufnahme kurz unterbrochen werden soll.",
+    "Klicken Sie auf Stopp und prüfen Sie anschließend die Videovorschau.",
+    "Laden Sie die WebM-Datei herunter oder starten Sie eine neue Aufnahme."
+  ],
+  "usage_examples": [
+    "Eine kurze Produktdemo aus einem Browser-Tab aufnehmen.",
+    "Eine Fehlerreproduktion als Video für ein Ticket speichern.",
+    "Eine UI-Erklärung für Teammitglieder vorbereiten.",
+    "Während der Einrichtung pausieren und nur die wichtigen Schritte aufnehmen."
+  ]
+}

@@ -1,6 +1,15 @@
-import { tools } from '@/config/tools';
-import { getLocalizedPath, type Locale } from './i18n';
-import { buildLocalizedPageUrl, getHreflang } from './seo';
+import { type Locale } from './i18n';
+import {
+  buildClusterCollectionData as factoryBuildCollectionData,
+  buildClusterGroupForTool as factoryBuildGroupForTool,
+  buildClusterGroups as factoryBuildGroups,
+  buildClusterItemList as factoryBuildItemList,
+  buildClusterItems as factoryBuildItems,
+  createClusterSlugSet,
+  getClusterGroupIdForSlug as factoryGetGroupIdForSlug,
+  resolveClusterCopy,
+} from './tool-cluster-factory';
+import type { ToolClusterCopy, ToolClusterGroup, ToolClusterItem } from './tool-cluster-types';
 
 export const imageToolClusterPath = '/tools/image-editing-converters';
 
@@ -48,44 +57,13 @@ export const imageToolClusterSlugs = [
   'barcode-generator',
 ] as const;
 
-export interface ImageToolClusterItem {
-  category: string;
-  categoryName: string;
-  description: string;
-  href: string;
-  icon: string;
-  name: string;
-  slug: string;
-}
+export type ImageToolClusterItem = ToolClusterItem;
 
-export interface ImageToolClusterGroup {
-  description: string;
-  id: 'optimize-convert' | 'edit-compose' | 'svg-gif-assets' | 'inspect-measure-print';
-  title: string;
-  tools: ImageToolClusterItem[];
-}
+export type ImageToolClusterGroup = ToolClusterGroup<
+  'optimize-convert' | 'edit-compose' | 'svg-gif-assets' | 'inspect-measure-print'
+>;
 
-export interface ImageToolClusterCopy {
-  ctaLabel: string;
-  description: string;
-  eyebrow: string;
-  h1: string;
-  intro: string;
-  relatedLinksTitle: string;
-  seoDescription: string;
-  seoTitle: string;
-  summary: string;
-  title: string;
-  toolCountLabel: string;
-  workflow: {
-    title: string;
-    items: Array<{
-      label: string;
-      text: string;
-      slugs: string[];
-    }>;
-  };
-}
+export type ImageToolClusterCopy = ToolClusterCopy;
 
 const groupSlugs: Array<{
   id: ImageToolClusterGroup['id'];
@@ -154,14 +132,14 @@ const groupSlugs: Array<{
   },
 ];
 
-const imageToolClusterSlugSet = new Set<string>(imageToolClusterSlugs);
+const imageToolClusterSlugSet = createClusterSlugSet(imageToolClusterSlugs);
 
 export function isImageToolClusterSlug(slug: string): boolean {
   return imageToolClusterSlugSet.has(slug);
 }
 
 export function getImageToolClusterGroupIdForSlug(slug: string): ImageToolClusterGroup['id'] | null {
-  return groupSlugs.find((group) => group.slugs.includes(slug))?.id ?? null;
+  return factoryGetGroupIdForSlug(groupSlugs, slug);
 }
 
 const groupCopy: Record<Locale, Record<ImageToolClusterGroup['id'], { title: string; description: string }>> = {
@@ -463,7 +441,7 @@ const copyByLocale: Record<Locale, ImageToolClusterCopy> = {
 };
 
 export function getImageToolClusterCopy(locale: Locale): ImageToolClusterCopy {
-  return copyByLocale[locale] ?? copyByLocale.en;
+  return resolveClusterCopy(copyByLocale, locale);
 }
 
 export function buildImageToolClusterItems(
@@ -473,20 +451,7 @@ export function buildImageToolClusterItems(
   toolDescriptions: Record<string, string>,
   slugs: readonly string[] = imageToolClusterSlugs
 ): ImageToolClusterItem[] {
-  const toolBySlug = new Map(tools.map((tool) => [tool.slug, tool]));
-
-  return slugs
-    .map((slug) => toolBySlug.get(slug))
-    .filter((tool): tool is (typeof tools)[number] => Boolean(tool))
-    .map((tool) => ({
-      category: tool.category,
-      categoryName: categoryNames[tool.category] || tool.category,
-      description: toolDescriptions[tool.slug] || '',
-      href: getLocalizedPath(locale, `/tools/${tool.slug}`),
-      icon: tool.icon,
-      name: toolNames[tool.slug] || tool.slug,
-      slug: tool.slug,
-    }));
+  return factoryBuildItems(locale, categoryNames, toolNames, toolDescriptions, slugs);
 }
 
 export function buildImageToolClusterGroups(
@@ -495,14 +460,7 @@ export function buildImageToolClusterGroups(
   toolNames: Record<string, string>,
   toolDescriptions: Record<string, string>
 ): ImageToolClusterGroup[] {
-  const copy = groupCopy[locale] ?? groupCopy.en;
-
-  return groupSlugs.map((group) => ({
-    id: group.id,
-    title: copy[group.id].title,
-    description: copy[group.id].description,
-    tools: buildImageToolClusterItems(locale, categoryNames, toolNames, toolDescriptions, group.slugs),
-  }));
+  return factoryBuildGroups(locale, categoryNames, toolNames, toolDescriptions, groupSlugs, groupCopy);
 }
 
 export function buildImageToolClusterGroupForTool(
@@ -512,13 +470,7 @@ export function buildImageToolClusterGroupForTool(
   toolNames: Record<string, string>,
   toolDescriptions: Record<string, string>
 ): ImageToolClusterGroup | null {
-  const groupId = getImageToolClusterGroupIdForSlug(slug);
-  if (!groupId) {
-    return null;
-  }
-
-  return buildImageToolClusterGroups(locale, categoryNames, toolNames, toolDescriptions)
-    .find((group) => group.id === groupId) ?? null;
+  return factoryBuildGroupForTool(locale, slug, categoryNames, toolNames, toolDescriptions, groupSlugs, groupCopy);
 }
 
 export function buildImageToolClusterItemList(
@@ -526,25 +478,7 @@ export function buildImageToolClusterItemList(
   locale: Locale,
   groups: ImageToolClusterGroup[]
 ): Record<string, unknown> {
-  const toolsForList = groups.flatMap((group) => group.tools);
-
-  return {
-    name: getImageToolClusterCopy(locale).title,
-    itemListOrder: 'https://schema.org/ItemListOrderAscending',
-    numberOfItems: toolsForList.length,
-    itemListElement: toolsForList.map((tool, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      url: `${baseUrl}${tool.href}`,
-      item: {
-        '@type': 'SoftwareApplication',
-        name: tool.name,
-        description: tool.description || undefined,
-        applicationCategory: tool.categoryName,
-        url: `${baseUrl}${tool.href}`,
-      },
-    })),
-  };
+  return factoryBuildItemList(baseUrl, locale, groups, getImageToolClusterCopy(locale).title);
 }
 
 export function buildImageToolClusterCollectionData(
@@ -552,23 +486,5 @@ export function buildImageToolClusterCollectionData(
   locale: Locale,
   groups: ImageToolClusterGroup[]
 ): Record<string, unknown> {
-  const copy = getImageToolClusterCopy(locale);
-
-  return {
-    name: copy.title,
-    description: copy.seoDescription,
-    url: buildLocalizedPageUrl(baseUrl, locale, imageToolClusterPath),
-    inLanguage: getHreflang(locale),
-    numberOfItems: groups.reduce((count, group) => count + group.tools.length, 0),
-    hasPart: groups.map((group) => ({
-      '@type': 'CollectionPage',
-      name: group.title,
-      description: group.description,
-      hasPart: group.tools.map((tool) => ({
-        '@type': 'SoftwareApplication',
-        name: tool.name,
-        url: `${baseUrl}${tool.href}`,
-      })),
-    })),
-  };
+  return factoryBuildCollectionData(baseUrl, locale, groups, imageToolClusterPath, getImageToolClusterCopy(locale));
 }

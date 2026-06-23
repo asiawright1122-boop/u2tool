@@ -1,6 +1,19 @@
-import { tools } from '@/config/tools';
-import { getLocalizedPath, type Locale } from './i18n';
-import { buildLocalizedPageUrl, getHreflang } from './seo';
+import { type Locale } from './i18n';
+import {
+  buildClusterCollectionData as factoryBuildCollectionData,
+  buildClusterGroupForTool as factoryBuildGroupForTool,
+  buildClusterGroups as factoryBuildGroups,
+  buildClusterItemList as factoryBuildItemList,
+  buildClusterItems as factoryBuildItems,
+  createClusterSlugSet,
+  getClusterGroupIdForSlug as factoryGetGroupIdForSlug,
+  resolveClusterCopy,
+} from './tool-cluster-factory';
+import type {
+  ToolClusterCopy,
+  ToolClusterGroup,
+  ToolClusterItem,
+} from './tool-cluster-types';
 
 export const textWritingToolClusterPath = '/tools/text-writing-editing-tools';
 
@@ -43,44 +56,13 @@ export const textWritingToolClusterSlugs = [
   'emoji-picker',
 ] as const;
 
-export interface TextWritingToolClusterItem {
-  category: string;
-  categoryName: string;
-  description: string;
-  href: string;
-  icon: string;
-  name: string;
-  slug: string;
-}
+export type TextWritingToolClusterItem = ToolClusterItem;
 
-export interface TextWritingToolClusterGroup {
-  description: string;
-  id: 'count-analysis' | 'clean-format' | 'writing-ai' | 'markdown-compare-language';
-  title: string;
-  tools: TextWritingToolClusterItem[];
-}
+export type TextWritingToolClusterGroup = ToolClusterGroup<
+  'count-analysis' | 'clean-format' | 'writing-ai' | 'markdown-compare-language'
+>;
 
-export interface TextWritingToolClusterCopy {
-  ctaLabel: string;
-  description: string;
-  eyebrow: string;
-  h1: string;
-  intro: string;
-  relatedLinksTitle: string;
-  seoDescription: string;
-  seoTitle: string;
-  summary: string;
-  title: string;
-  toolCountLabel: string;
-  workflow: {
-    title: string;
-    items: Array<{
-      label: string;
-      text: string;
-      slugs: string[];
-    }>;
-  };
-}
+export type TextWritingToolClusterCopy = ToolClusterCopy;
 
 const groupSlugs: Array<{
   id: TextWritingToolClusterGroup['id'];
@@ -144,14 +126,14 @@ const groupSlugs: Array<{
   },
 ];
 
-const textWritingToolClusterSlugSet = new Set<string>(textWritingToolClusterSlugs);
+const textWritingToolClusterSlugSet = createClusterSlugSet(textWritingToolClusterSlugs);
 
 export function isTextWritingToolClusterSlug(slug: string): boolean {
   return textWritingToolClusterSlugSet.has(slug);
 }
 
 export function getTextWritingToolClusterGroupIdForSlug(slug: string): TextWritingToolClusterGroup['id'] | null {
-  return groupSlugs.find((group) => group.slugs.includes(slug))?.id ?? null;
+  return factoryGetGroupIdForSlug(groupSlugs, slug);
 }
 
 const groupCopy: Partial<Record<Locale, Record<TextWritingToolClusterGroup['id'], { title: string; description: string }>>> = {
@@ -333,7 +315,7 @@ function workflowFallback(): TextWritingToolClusterCopy['workflow'] {
 }
 
 export function getTextWritingToolClusterCopy(locale: Locale): TextWritingToolClusterCopy {
-  return copyByLocale[locale] ?? copyByLocale.en!;
+  return resolveClusterCopy(copyByLocale, locale);
 }
 
 export function buildTextWritingToolClusterItems(
@@ -343,20 +325,7 @@ export function buildTextWritingToolClusterItems(
   toolDescriptions: Record<string, string>,
   slugs: readonly string[] = textWritingToolClusterSlugs
 ): TextWritingToolClusterItem[] {
-  const toolBySlug = new Map(tools.map((tool) => [tool.slug, tool]));
-
-  return slugs
-    .map((slug) => toolBySlug.get(slug))
-    .filter((tool): tool is (typeof tools)[number] => Boolean(tool))
-    .map((tool) => ({
-      category: tool.category,
-      categoryName: categoryNames[tool.category] || tool.category,
-      description: toolDescriptions[tool.slug] || '',
-      href: getLocalizedPath(locale, `/tools/${tool.slug}`),
-      icon: tool.icon,
-      name: toolNames[tool.slug] || tool.slug,
-      slug: tool.slug,
-    }));
+  return factoryBuildItems(locale, categoryNames, toolNames, toolDescriptions, slugs);
 }
 
 export function buildTextWritingToolClusterGroups(
@@ -365,14 +334,7 @@ export function buildTextWritingToolClusterGroups(
   toolNames: Record<string, string>,
   toolDescriptions: Record<string, string>
 ): TextWritingToolClusterGroup[] {
-  const copy = groupCopy[locale] ?? groupCopy.en!;
-
-  return groupSlugs.map((group) => ({
-    id: group.id,
-    title: copy[group.id].title,
-    description: copy[group.id].description,
-    tools: buildTextWritingToolClusterItems(locale, categoryNames, toolNames, toolDescriptions, group.slugs),
-  }));
+  return factoryBuildGroups(locale, categoryNames, toolNames, toolDescriptions, groupSlugs, groupCopy);
 }
 
 export function buildTextWritingToolClusterGroupForTool(
@@ -382,13 +344,7 @@ export function buildTextWritingToolClusterGroupForTool(
   toolNames: Record<string, string>,
   toolDescriptions: Record<string, string>
 ): TextWritingToolClusterGroup | null {
-  const groupId = getTextWritingToolClusterGroupIdForSlug(slug);
-  if (!groupId) {
-    return null;
-  }
-
-  return buildTextWritingToolClusterGroups(locale, categoryNames, toolNames, toolDescriptions)
-    .find((group) => group.id === groupId) ?? null;
+  return factoryBuildGroupForTool(locale, slug, categoryNames, toolNames, toolDescriptions, groupSlugs, groupCopy);
 }
 
 export function buildTextWritingToolClusterItemList(
@@ -396,25 +352,7 @@ export function buildTextWritingToolClusterItemList(
   locale: Locale,
   groups: TextWritingToolClusterGroup[]
 ): Record<string, unknown> {
-  const toolsForList = groups.flatMap((group) => group.tools);
-
-  return {
-    name: getTextWritingToolClusterCopy(locale).title,
-    itemListOrder: 'https://schema.org/ItemListOrderAscending',
-    numberOfItems: toolsForList.length,
-    itemListElement: toolsForList.map((tool, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      url: `${baseUrl}${tool.href}`,
-      item: {
-        '@type': 'SoftwareApplication',
-        name: tool.name,
-        description: tool.description || undefined,
-        applicationCategory: tool.categoryName,
-        url: `${baseUrl}${tool.href}`,
-      },
-    })),
-  };
+  return factoryBuildItemList(baseUrl, locale, groups, getTextWritingToolClusterCopy(locale).title);
 }
 
 export function buildTextWritingToolClusterCollectionData(
@@ -422,23 +360,5 @@ export function buildTextWritingToolClusterCollectionData(
   locale: Locale,
   groups: TextWritingToolClusterGroup[]
 ): Record<string, unknown> {
-  const copy = getTextWritingToolClusterCopy(locale);
-
-  return {
-    name: copy.title,
-    description: copy.seoDescription,
-    url: buildLocalizedPageUrl(baseUrl, locale, textWritingToolClusterPath),
-    inLanguage: getHreflang(locale),
-    numberOfItems: groups.reduce((count, group) => count + group.tools.length, 0),
-    hasPart: groups.map((group) => ({
-      '@type': 'CollectionPage',
-      name: group.title,
-      description: group.description,
-      hasPart: group.tools.map((tool) => ({
-        '@type': 'SoftwareApplication',
-        name: tool.name,
-        url: `${baseUrl}${tool.href}`,
-      })),
-    })),
-  };
+  return factoryBuildCollectionData(baseUrl, locale, groups, textWritingToolClusterPath, getTextWritingToolClusterCopy(locale));
 }

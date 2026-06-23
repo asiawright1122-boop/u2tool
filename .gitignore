@@ -29,7 +29,8 @@ Thumbs.db
 .trae/
 
 # AI Agent Workspaces & Validation Artifacts
-.planning/
+.planning/*
+!.planning/
 .kiro/
 .tmp/
 exports/
@@ -70,3 +71,18 @@ progress.md
 !scripts/validation/validate-translation-corpus.test.ts
 !scripts/validation/validate-merge-chain-consistency.ts
 !scripts/validation/validate-merge-chain-consistency.test.ts
+!scripts/validation/tool-page-render-contract.ts
+!scripts/validation/tool-page-render-contract.test.ts
+!scripts/validation/validate-tool-page-render-contract.ts
+!.planning/codebase/
+.planning/codebase/*
+!.planning/codebase/TESTING.md
+!.planning/phases/
+.planning/phases/*
+!.planning/phases/86-persistent-render-regression-gate/
+.planning/phases/86-persistent-render-regression-gate/*
+!.planning/phases/86-persistent-render-regression-gate/86-PLAN.md
+!.planning/milestones/
+.planning/milestones/*
+!.planning/milestones/v0.0.25-REQUIREMENTS.md
+!.planning/milestones/v0.0.25-MILESTONE-AUDIT.md

@@ -1,0 +1,16 @@
+{
+  "detailed_description": "L’enregistreur d’écran utilise l’autorisation de partage d’écran du navigateur pour capturer l’écran, une fenêtre ou un onglet sélectionné. Démarrez l’enregistrement, mettez-le en pause si nécessaire, arrêtez la capture, vérifiez l’aperçu puis téléchargez le résultat au format WebM.",
+  "usage_steps": [
+    "Cliquez sur Démarrer l’enregistrement et acceptez l’autorisation de partage d’écran.",
+    "Choisissez l’écran, la fenêtre ou l’onglet à capturer.",
+    "Utilisez Pause et Reprendre si vous devez interrompre temporairement la capture.",
+    "Cliquez sur Arrêter à la fin de la session et vérifiez l’aperçu vidéo.",
+    "Téléchargez le fichier WebM ou commencez un nouvel enregistrement."
+  ],
+  "usage_examples": [
+    "Capturer une courte démonstration produit depuis un onglet.",
+    "Enregistrer une reproduction de bug à joindre à un ticket.",
+    "Préparer une explication d’interface pour des collègues absents.",
+    "Mettre en pause pendant la préparation puis reprendre pour les étapes importantes."
+  ]
+}

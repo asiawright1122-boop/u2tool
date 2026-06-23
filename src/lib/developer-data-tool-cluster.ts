@@ -1,6 +1,15 @@
-import { tools } from '@/config/tools';
-import { getLocalizedPath, type Locale } from './i18n';
-import { buildLocalizedPageUrl, getHreflang } from './seo';
+import { type Locale } from './i18n';
+import {
+  buildClusterCollectionData as factoryBuildCollectionData,
+  buildClusterGroupForTool as factoryBuildGroupForTool,
+  buildClusterGroups as factoryBuildGroups,
+  buildClusterItemList as factoryBuildItemList,
+  buildClusterItems as factoryBuildItems,
+  createClusterSlugSet,
+  getClusterGroupIdForSlug as factoryGetGroupIdForSlug,
+  resolveClusterCopy,
+} from './tool-cluster-factory';
+import type { ToolClusterCopy, ToolClusterGroup, ToolClusterItem } from './tool-cluster-types';
 
 export const developerDataToolClusterPath = '/tools/developer-data-formatters';
 
@@ -64,44 +73,13 @@ export const developerDataToolClusterSlugs = [
   'request-header-builder',
 ] as const;
 
-export interface DeveloperDataToolClusterItem {
-  category: string;
-  categoryName: string;
-  description: string;
-  href: string;
-  icon: string;
-  name: string;
-  slug: string;
-}
+export type DeveloperDataToolClusterItem = ToolClusterItem;
 
-export interface DeveloperDataToolClusterGroup {
-  description: string;
-  id: 'format-minify' | 'convert-models' | 'validate-query' | 'encode-api';
-  title: string;
-  tools: DeveloperDataToolClusterItem[];
-}
+export type DeveloperDataToolClusterGroup = ToolClusterGroup<
+  'format-minify' | 'convert-models' | 'validate-query' | 'encode-api'
+>;
 
-export interface DeveloperDataToolClusterCopy {
-  ctaLabel: string;
-  description: string;
-  eyebrow: string;
-  h1: string;
-  intro: string;
-  relatedLinksTitle: string;
-  seoDescription: string;
-  seoTitle: string;
-  summary: string;
-  title: string;
-  toolCountLabel: string;
-  workflow: {
-    title: string;
-    items: Array<{
-      label: string;
-      text: string;
-      slugs: string[];
-    }>;
-  };
-}
+export type DeveloperDataToolClusterCopy = ToolClusterCopy;
 
 const groupSlugs: Array<{
   id: DeveloperDataToolClusterGroup['id'];
@@ -186,7 +164,7 @@ const groupSlugs: Array<{
   },
 ];
 
-const developerDataToolClusterSlugSet = new Set<string>(developerDataToolClusterSlugs);
+const developerDataToolClusterSlugSet = createClusterSlugSet(developerDataToolClusterSlugs);
 
 export function isDeveloperDataToolClusterSlug(slug: string): boolean {
   return developerDataToolClusterSlugSet.has(slug);
@@ -195,7 +173,7 @@ export function isDeveloperDataToolClusterSlug(slug: string): boolean {
 export function getDeveloperDataToolClusterGroupIdForSlug(
   slug: string
 ): DeveloperDataToolClusterGroup['id'] | null {
-  return groupSlugs.find((group) => group.slugs.includes(slug))?.id ?? null;
+  return factoryGetGroupIdForSlug(groupSlugs, slug);
 }
 
 const groupCopy: Record<
@@ -428,7 +406,7 @@ function workflowFallback(): DeveloperDataToolClusterCopy['workflow'] {
 }
 
 export function getDeveloperDataToolClusterCopy(locale: Locale): DeveloperDataToolClusterCopy {
-  return copyByLocale[locale] ?? copyByLocale.en;
+  return resolveClusterCopy(copyByLocale, locale);
 }
 
 export function buildDeveloperDataToolClusterItems(
@@ -438,20 +416,7 @@ export function buildDeveloperDataToolClusterItems(
   toolDescriptions: Record<string, string>,
   slugs: readonly string[] = developerDataToolClusterSlugs
 ): DeveloperDataToolClusterItem[] {
-  const toolBySlug = new Map(tools.map((tool) => [tool.slug, tool]));
-
-  return slugs
-    .map((slug) => toolBySlug.get(slug))
-    .filter((tool): tool is (typeof tools)[number] => Boolean(tool))
-    .map((tool) => ({
-      category: tool.category,
-      categoryName: categoryNames[tool.category] || tool.category,
-      description: toolDescriptions[tool.slug] || '',
-      href: getLocalizedPath(locale, `/tools/${tool.slug}`),
-      icon: tool.icon,
-      name: toolNames[tool.slug] || tool.slug,
-      slug: tool.slug,
-    }));
+  return factoryBuildItems(locale, categoryNames, toolNames, toolDescriptions, slugs);
 }
 
 export function buildDeveloperDataToolClusterGroups(
@@ -460,14 +425,7 @@ export function buildDeveloperDataToolClusterGroups(
   toolNames: Record<string, string>,
   toolDescriptions: Record<string, string>
 ): DeveloperDataToolClusterGroup[] {
-  const copy = groupCopy[locale] ?? groupCopy.en;
-
-  return groupSlugs.map((group) => ({
-    id: group.id,
-    title: copy[group.id].title,
-    description: copy[group.id].description,
-    tools: buildDeveloperDataToolClusterItems(locale, categoryNames, toolNames, toolDescriptions, group.slugs),
-  }));
+  return factoryBuildGroups(locale, categoryNames, toolNames, toolDescriptions, groupSlugs, groupCopy);
 }
 
 export function buildDeveloperDataToolClusterGroupForTool(
@@ -477,13 +435,7 @@ export function buildDeveloperDataToolClusterGroupForTool(
   toolNames: Record<string, string>,
   toolDescriptions: Record<string, string>
 ): DeveloperDataToolClusterGroup | null {
-  const groupId = getDeveloperDataToolClusterGroupIdForSlug(slug);
-  if (!groupId) {
-    return null;
-  }
-
-  return buildDeveloperDataToolClusterGroups(locale, categoryNames, toolNames, toolDescriptions)
-    .find((group) => group.id === groupId) ?? null;
+  return factoryBuildGroupForTool(locale, slug, categoryNames, toolNames, toolDescriptions, groupSlugs, groupCopy);
 }
 
 export function buildDeveloperDataToolClusterItemList(
@@ -491,25 +443,7 @@ export function buildDeveloperDataToolClusterItemList(
   locale: Locale,
   groups: DeveloperDataToolClusterGroup[]
 ): Record<string, unknown> {
-  const toolsForList = groups.flatMap((group) => group.tools);
-
-  return {
-    name: getDeveloperDataToolClusterCopy(locale).title,
-    itemListOrder: 'https://schema.org/ItemListOrderAscending',
-    numberOfItems: toolsForList.length,
-    itemListElement: toolsForList.map((tool, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      url: `${baseUrl}${tool.href}`,
-      item: {
-        '@type': 'SoftwareApplication',
-        name: tool.name,
-        description: tool.description || undefined,
-        applicationCategory: tool.categoryName,
-        url: `${baseUrl}${tool.href}`,
-      },
-    })),
-  };
+  return factoryBuildItemList(baseUrl, locale, groups, getDeveloperDataToolClusterCopy(locale).title);
 }
 
 export function buildDeveloperDataToolClusterCollectionData(
@@ -517,23 +451,5 @@ export function buildDeveloperDataToolClusterCollectionData(
   locale: Locale,
   groups: DeveloperDataToolClusterGroup[]
 ): Record<string, unknown> {
-  const copy = getDeveloperDataToolClusterCopy(locale);
-
-  return {
-    name: copy.title,
-    description: copy.seoDescription,
-    url: buildLocalizedPageUrl(baseUrl, locale, developerDataToolClusterPath),
-    inLanguage: getHreflang(locale),
-    numberOfItems: groups.reduce((count, group) => count + group.tools.length, 0),
-    hasPart: groups.map((group) => ({
-      '@type': 'CollectionPage',
-      name: group.title,
-      description: group.description,
-      hasPart: group.tools.map((tool) => ({
-        '@type': 'SoftwareApplication',
-        name: tool.name,
-        url: `${baseUrl}${tool.href}`,
-      })),
-    })),
-  };
+  return factoryBuildCollectionData(baseUrl, locale, groups, developerDataToolClusterPath, getDeveloperDataToolClusterCopy(locale));
 }

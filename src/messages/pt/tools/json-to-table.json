@@ -1,17 +1,16 @@
 {
-  "detailed_description": "...",
+  "detailed_description": "JSON para Tabela transforma arrays e objetos JSON em uma visualização tabular fácil de ler. A ferramenta ajuda a inspecionar respostas de APIs, amostras de logs e estruturas de dados aninhadas antes de copiar os valores para planilhas, documentação ou análises rápidas.",
   "usage_steps": [
-    "Etapa 1...",
-    "Etapa 2...",
-    "Etapa 3...",
-    "Etapa 4...",
-    "Etapa 5...",
-    "Etapa 6..."
+    "Cole um array ou objeto JSON na área de entrada.",
+    "Clique para converter o conteúdo em uma tabela.",
+    "Revise colunas, linhas e campos aninhados exibidos no resultado.",
+    "Corrija o JSON e converta novamente se houver erro de sintaxe.",
+    "Copie a tabela ou use os dados como base para documentação e análise."
   ],
   "usage_examples": [
-    "Exemplo 1...",
-    "Exemplo 2...",
-    "Exemplo 3...",
-    "Exemplo 4..."
+    "Visualizar uma resposta de API em formato de tabela para revisar campos.",
+    "Transformar uma lista JSON de produtos em linhas para uma planilha.",
+    "Inspecionar logs estruturados sem escrever um script temporário.",
+    "Explicar a estrutura de um payload para uma equipe não técnica."
   ]
 }

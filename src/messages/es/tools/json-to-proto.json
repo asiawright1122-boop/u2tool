@@ -1,17 +1,16 @@
 {
-  "detailed_description": "...",
+  "detailed_description": "JSON to Proto convierte una muestra JSON en una definición inicial de Protocol Buffers. Analiza objetos, arrays, cadenas, números, booleanos y campos anidados para proponer mensajes, tipos y nombres de campo que después puedes revisar antes de integrarlos en un contrato gRPC o en una canalización de datos.",
   "usage_steps": [
-    "Paso 1...",
-    "Paso 2...",
-    "Paso 3...",
-    "Paso 4...",
-    "Paso 5...",
-    "Paso 6..."
+    "Pega un objeto JSON representativo en el área de entrada.",
+    "Ejecuta la conversión para generar una propuesta de esquema .proto.",
+    "Revisa los tipos inferidos para números, arrays y campos opcionales.",
+    "Ajusta nombres de mensajes o campos si tu contrato requiere convenciones específicas.",
+    "Copia el resultado y pruébalo con tus herramientas de Protocol Buffers."
   ],
   "usage_examples": [
-    "Ejemplo 1...",
-    "Ejemplo 2...",
-    "Ejemplo 3...",
-    "Ejemplo 4..."
+    "Crear un punto de partida .proto desde una respuesta JSON de API.",
+    "Explorar cómo se modelarían objetos anidados en mensajes protobuf.",
+    "Preparar un borrador de contrato para una conversación entre backend y frontend.",
+    "Comparar cambios de payload antes de versionar un esquema."
   ]
 }

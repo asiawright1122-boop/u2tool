@@ -1,10 +1,10 @@
 {
-  "detailed_description": "The htaccess to Nginx Converter performs a lightweight line-by-line conversion for pasted .htaccess text. Load the sample or paste rules, then click Convert to wrap converted lines in a basic Nginx server block using example.com and /var/www/html placeholders. It recognizes a limited set of common patterns such as RewriteEngine On, RewriteBase, selected RewriteCond and RewriteRule forms, ErrorDocument, DirectoryIndex, Options +/-Indexes, Header set, ExpiresByType, Deny/Allow from, SetEnvIf, and php_value/php_flag comments. Lines that do not match a known pattern are kept as TODO comments for manual review. The tool does not validate Nginx syntax, preserve every Apache behavior, convert full virtual hosts, generate optimized production configs, or test the result on a server.",
+  "detailed_description": "The htaccess to Nginx Converter performs a lightweight line-by-line conversion for pasted .htaccess text. Load the sample or paste rules, then click Convert to wrap converted lines in a basic Nginx server block using example.com and /var/www/html sample values. It recognizes a limited set of common patterns such as RewriteEngine On, RewriteBase, selected RewriteCond and RewriteRule forms, ErrorDocument, DirectoryIndex, Options +/-Indexes, Header set, ExpiresByType, Deny/Allow from, SetEnvIf, and php_value/php_flag comments. Lines that do not match a known pattern are kept as review comments so you can inspect them manually. The tool does not validate Nginx syntax, preserve every Apache behavior, convert full virtual hosts, generate optimized production configs, or test the result on a server.",
   "usage_steps": [
     "Click Load Sample or paste .htaccess rules into the input textarea",
     "Click Convert to run the browser-side pattern converter",
-    "Review the generated Nginx server block and placeholder server_name/root values",
-    "Look for TODO comments where a line was not recognized",
+    "Review the generated Nginx server block and sample server_name/root values",
+    "Look for review comments where a line was not recognized",
     "Click Copy to copy the output",
     "Test and adjust the configuration with your own Nginx tooling before deploying"
   ],
@@ -12,6 +12,6 @@
     "Convert a simple HTTPS redirect rule into a starting Nginx return block",
     "Turn ErrorDocument lines into error_page directives for manual review",
     "Translate basic Header set rules into add_header directives",
-    "Identify unsupported .htaccess lines as TODO comments before writing a real Nginx config"
+    "Identify unsupported .htaccess lines as review comments before writing a real Nginx config"
   ]
 }

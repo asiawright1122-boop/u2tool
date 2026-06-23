@@ -1,6 +1,19 @@
-import { tools } from '@/config/tools';
-import { getLocalizedPath, type Locale } from './i18n';
-import { buildLocalizedPageUrl, getHreflang } from './seo';
+import { type Locale } from './i18n';
+import {
+  buildClusterCollectionData as factoryBuildCollectionData,
+  buildClusterGroupForTool as factoryBuildGroupForTool,
+  buildClusterGroups as factoryBuildGroups,
+  buildClusterItemList as factoryBuildItemList,
+  buildClusterItems as factoryBuildItems,
+  createClusterSlugSet,
+  getClusterGroupIdForSlug as factoryGetGroupIdForSlug,
+  resolveClusterCopy,
+} from './tool-cluster-factory';
+import type {
+  ToolClusterCopy,
+  ToolClusterGroup,
+  ToolClusterItem,
+} from './tool-cluster-types';
 
 export const pdfDocumentToolClusterPath = '/tools/pdf-document-converters';
 
@@ -34,44 +47,13 @@ export const pdfDocumentToolClusterSlugs = [
   'signature-pad',
 ] as const;
 
-export interface PdfDocumentToolClusterItem {
-  category: string;
-  categoryName: string;
-  description: string;
-  href: string;
-  icon: string;
-  name: string;
-  slug: string;
-}
+export type PdfDocumentToolClusterItem = ToolClusterItem;
 
-export interface PdfDocumentToolClusterGroup {
-  description: string;
-  id: 'pdf-conversion' | 'pdf-editing' | 'spreadsheet-data' | 'office-documents';
-  title: string;
-  tools: PdfDocumentToolClusterItem[];
-}
+export type PdfDocumentToolClusterGroup = ToolClusterGroup<
+  'pdf-conversion' | 'pdf-editing' | 'spreadsheet-data' | 'office-documents'
+>;
 
-export interface PdfDocumentToolClusterCopy {
-  ctaLabel: string;
-  description: string;
-  eyebrow: string;
-  h1: string;
-  intro: string;
-  relatedLinksTitle: string;
-  seoDescription: string;
-  seoTitle: string;
-  summary: string;
-  title: string;
-  toolCountLabel: string;
-  workflow: {
-    title: string;
-    items: Array<{
-      label: string;
-      text: string;
-      slugs: string[];
-    }>;
-  };
-}
+export type PdfDocumentToolClusterCopy = ToolClusterCopy;
 
 const groupSlugs: Array<{
   id: PdfDocumentToolClusterGroup['id'];
@@ -95,14 +77,14 @@ const groupSlugs: Array<{
   },
 ];
 
-const pdfDocumentToolClusterSlugSet = new Set<string>(pdfDocumentToolClusterSlugs);
+const pdfDocumentToolClusterSlugSet = createClusterSlugSet(pdfDocumentToolClusterSlugs);
 
 export function isPdfDocumentToolClusterSlug(slug: string): boolean {
   return pdfDocumentToolClusterSlugSet.has(slug);
 }
 
 export function getPdfDocumentToolClusterGroupIdForSlug(slug: string): PdfDocumentToolClusterGroup['id'] | null {
-  return groupSlugs.find((group) => group.slugs.includes(slug))?.id ?? null;
+  return factoryGetGroupIdForSlug(groupSlugs, slug);
 }
 
 const groupCopy: Partial<Record<Locale, Record<PdfDocumentToolClusterGroup['id'], { title: string; description: string }>>> = {
@@ -332,7 +314,7 @@ function workflowFallback(): PdfDocumentToolClusterCopy['workflow'] {
 }
 
 export function getPdfDocumentToolClusterCopy(locale: Locale): PdfDocumentToolClusterCopy {
-  return copyByLocale[locale] ?? copyByLocale.en;
+  return resolveClusterCopy(copyByLocale, locale);
 }
 
 export function buildPdfDocumentToolClusterItems(
@@ -342,20 +324,7 @@ export function buildPdfDocumentToolClusterItems(
   toolDescriptions: Record<string, string>,
   slugs: readonly string[] = pdfDocumentToolClusterSlugs
 ): PdfDocumentToolClusterItem[] {
-  const toolBySlug = new Map(tools.map((tool) => [tool.slug, tool]));
-
-  return slugs
-    .map((slug) => toolBySlug.get(slug))
-    .filter((tool): tool is (typeof tools)[number] => Boolean(tool))
-    .map((tool) => ({
-      category: tool.category,
-      categoryName: categoryNames[tool.category] || tool.category,
-      description: toolDescriptions[tool.slug] || '',
-      href: getLocalizedPath(locale, `/tools/${tool.slug}`),
-      icon: tool.icon,
-      name: toolNames[tool.slug] || tool.slug,
-      slug: tool.slug,
-    }));
+  return factoryBuildItems(locale, categoryNames, toolNames, toolDescriptions, slugs);
 }
 
 export function buildPdfDocumentToolClusterGroups(
@@ -364,14 +333,7 @@ export function buildPdfDocumentToolClusterGroups(
   toolNames: Record<string, string>,
   toolDescriptions: Record<string, string>
 ): PdfDocumentToolClusterGroup[] {
-  const copy = groupCopy[locale] ?? groupCopy.en!;
-
-  return groupSlugs.map((group) => ({
-    id: group.id,
-    title: copy[group.id].title,
-    description: copy[group.id].description,
-    tools: buildPdfDocumentToolClusterItems(locale, categoryNames, toolNames, toolDescriptions, group.slugs),
-  }));
+  return factoryBuildGroups(locale, categoryNames, toolNames, toolDescriptions, groupSlugs, groupCopy);
 }
 
 export function buildPdfDocumentToolClusterGroupForTool(
@@ -381,13 +343,7 @@ export function buildPdfDocumentToolClusterGroupForTool(
   toolNames: Record<string, string>,
   toolDescriptions: Record<string, string>
 ): PdfDocumentToolClusterGroup | null {
-  const groupId = getPdfDocumentToolClusterGroupIdForSlug(slug);
-  if (!groupId) {
-    return null;
-  }
-
-  return buildPdfDocumentToolClusterGroups(locale, categoryNames, toolNames, toolDescriptions)
-    .find((group) => group.id === groupId) ?? null;
+  return factoryBuildGroupForTool(locale, slug, categoryNames, toolNames, toolDescriptions, groupSlugs, groupCopy);
 }
 
 export function buildPdfDocumentToolClusterItemList(
@@ -395,25 +351,7 @@ export function buildPdfDocumentToolClusterItemList(
   locale: Locale,
   groups: PdfDocumentToolClusterGroup[]
 ): Record<string, unknown> {
-  const toolsForList = groups.flatMap((group) => group.tools);
-
-  return {
-    name: getPdfDocumentToolClusterCopy(locale).title,
-    itemListOrder: 'https://schema.org/ItemListOrderAscending',
-    numberOfItems: toolsForList.length,
-    itemListElement: toolsForList.map((tool, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      url: `${baseUrl}${tool.href}`,
-      item: {
-        '@type': 'SoftwareApplication',
-        name: tool.name,
-        description: tool.description || undefined,
-        applicationCategory: tool.categoryName,
-        url: `${baseUrl}${tool.href}`,
-      },
-    })),
-  };
+  return factoryBuildItemList(baseUrl, locale, groups, getPdfDocumentToolClusterCopy(locale).title);
 }
 
 export function buildPdfDocumentToolClusterCollectionData(
@@ -421,23 +359,5 @@ export function buildPdfDocumentToolClusterCollectionData(
   locale: Locale,
   groups: PdfDocumentToolClusterGroup[]
 ): Record<string, unknown> {
-  const copy = getPdfDocumentToolClusterCopy(locale);
-
-  return {
-    name: copy.title,
-    description: copy.seoDescription,
-    url: buildLocalizedPageUrl(baseUrl, locale, pdfDocumentToolClusterPath),
-    inLanguage: getHreflang(locale),
-    numberOfItems: groups.reduce((count, group) => count + group.tools.length, 0),
-    hasPart: groups.map((group) => ({
-      '@type': 'CollectionPage',
-      name: group.title,
-      description: group.description,
-      hasPart: group.tools.map((tool) => ({
-        '@type': 'SoftwareApplication',
-        name: tool.name,
-        url: `${baseUrl}${tool.href}`,
-      })),
-    })),
-  };
+  return factoryBuildCollectionData(baseUrl, locale, groups, pdfDocumentToolClusterPath, getPdfDocumentToolClusterCopy(locale));
 }

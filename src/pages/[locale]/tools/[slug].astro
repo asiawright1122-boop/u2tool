@@ -35,14 +35,8 @@ import RelatedTools from '@/components/tools/RelatedTools.astro';
 import ToolFAQ from '@/components/tools/ToolFAQ.astro';
 
 // --- Cluster (order matches CLUSTER_BLOCKS array below: creatorSeo → developerData → image → onlineCalculator → pdfDocument → security → textWriting → chart) ---
-import CreatorSeoToolClusterCard from '@/components/tools/CreatorSeoToolClusterCard.astro';
-import DeveloperDataToolClusterCard from '@/components/tools/DeveloperDataToolClusterCard.astro';
-import ImageToolClusterCard from '@/components/tools/ImageToolClusterCard.astro';
-import OnlineCalculatorClusterCard from '@/components/tools/OnlineCalculatorClusterCard.astro';
-import PdfDocumentToolClusterCard from '@/components/tools/PdfDocumentToolClusterCard.astro';
-import SecurityToolClusterCard from '@/components/tools/SecurityToolClusterCard.astro';
-import TextWritingToolClusterCard from '@/components/tools/TextWritingToolClusterCard.astro';
-import ChartToolClusterCard from '@/components/tools/ChartToolClusterCard.astro';
+import ToolClusterCard from '@/components/tools/ToolClusterCard.astro';
+import type { ToolClusterBlock } from '@/lib/tool-cluster-types';
 
 // --- Config ---
 import { tools, categories, getToolsByCategory } from '@/config/tools';
@@ -63,57 +57,41 @@ import {
   buildChartToolClusterGroupForTool,
   chartToolClusterPath,
   getChartToolClusterCopy,
-  type ChartToolClusterGroup,
-  type ChartToolClusterCopy,
 } from '@/lib/chart-tool-cluster';
 import {
   buildCreatorSeoClusterGroupForTool,
   creatorSeoClusterPath,
   getCreatorSeoClusterCopy,
-  type CreatorSeoClusterGroup,
-  type CreatorSeoClusterCopy,
 } from '@/lib/creator-seo-cluster';
 import {
   buildDeveloperDataToolClusterGroupForTool,
   developerDataToolClusterPath,
   getDeveloperDataToolClusterCopy,
-  type DeveloperDataToolClusterGroup,
-  type DeveloperDataToolClusterCopy,
 } from '@/lib/developer-data-tool-cluster';
 import {
   buildImageToolClusterGroupForTool,
   getImageToolClusterCopy,
   imageToolClusterPath,
-  type ImageToolClusterGroup,
-  type ImageToolClusterCopy,
 } from '@/lib/image-tool-cluster';
 import {
   buildOnlineCalculatorClusterGroupForTool,
   getOnlineCalculatorClusterCopy,
   onlineCalculatorClusterPath,
-  type OnlineCalculatorClusterGroup,
-  type OnlineCalculatorClusterCopy,
 } from '@/lib/online-calculator-cluster';
 import {
   buildPdfDocumentToolClusterGroupForTool,
   getPdfDocumentToolClusterCopy,
   pdfDocumentToolClusterPath,
-  type PdfDocumentToolClusterGroup,
-  type PdfDocumentToolClusterCopy,
 } from '@/lib/pdf-document-tool-cluster';
 import {
   buildSecurityToolClusterGroupForTool,
   getSecurityToolClusterCopy,
   securityToolClusterPath,
-  type SecurityToolClusterGroup,
-  type SecurityToolClusterCopy,
 } from '@/lib/security-tool-cluster';
 import {
   buildTextWritingToolClusterGroupForTool,
   getTextWritingToolClusterCopy,
   textWritingToolClusterPath,
-  type TextWritingToolClusterGroup,
-  type TextWritingToolClusterCopy,
 } from '@/lib/text-writing-tool-cluster';
 
 export const prerender = false;
@@ -413,77 +391,69 @@ const comparisonGuide = findComparisonGuideForTool(
 );
 
 // ---------------------------------------------------------------------------
-// Cluster configuration — 8 blocks, rendered in template order
+// Cluster configuration — 8 blocks, rendered in template order.
+//
+// Every cluster now shares the generic ToolClusterGroup / ToolClusterCopy
+// shapes (introduced in Phase 83), so the per-cluster union aliases and the
+// per-block `Card` discriminator are no longer needed: a single ToolClusterCard
+// renders every block.
 // ---------------------------------------------------------------------------
-type ClusterGroup =
-  | ChartToolClusterGroup
-  | CreatorSeoClusterGroup
-  | DeveloperDataToolClusterGroup
-  | ImageToolClusterGroup
-  | OnlineCalculatorClusterGroup
-  | PdfDocumentToolClusterGroup
-  | SecurityToolClusterGroup
-  | TextWritingToolClusterGroup
-  | null;
-
-type ClusterCopy =
-  | ChartToolClusterCopy
-  | CreatorSeoClusterCopy
-  | DeveloperDataToolClusterCopy
-  | ImageToolClusterCopy
-  | OnlineCalculatorClusterCopy
-  | PdfDocumentToolClusterCopy
-  | SecurityToolClusterCopy
-  | TextWritingToolClusterCopy;
-
-const CLUSTER_BLOCKS: Array<{ group: ClusterGroup; Card: any; clusterPath: string; copy: ClusterCopy }> = [
+const CLUSTER_BLOCKS: ToolClusterBlock[] = [
   {
     group: buildCreatorSeoClusterGroupForTool(locale, tool.slug, categoryMessages, allToolNames, allToolDescriptions),
-    Card: CreatorSeoToolClusterCard,
     clusterPath: creatorSeoClusterPath,
     copy: creatorSeoCopy,
+    theme: 'amber',
+    dataPrefix: 'creator-seo',
   },
   {
     group: buildDeveloperDataToolClusterGroupForTool(locale, tool.slug, categoryMessages, allToolNames, allToolDescriptions),
-    Card: DeveloperDataToolClusterCard,
     clusterPath: developerDataToolClusterPath,
     copy: developerDataToolCopy,
+    theme: 'cyan',
+    dataPrefix: 'developer-data',
   },
   {
     group: buildImageToolClusterGroupForTool(locale, tool.slug, categoryMessages, allToolNames, allToolDescriptions),
-    Card: ImageToolClusterCard,
     clusterPath: imageToolClusterPath,
     copy: imageToolCopy,
+    theme: 'amber',
+    dataPrefix: 'image',
   },
   {
     group: buildOnlineCalculatorClusterGroupForTool(locale, tool.slug, categoryMessages, allToolNames, allToolDescriptions),
-    Card: OnlineCalculatorClusterCard,
     clusterPath: onlineCalculatorClusterPath,
     copy: onlineCalculatorCopy,
+    theme: 'emerald',
+    dataPrefix: 'online-calculator',
   },
   {
     group: buildPdfDocumentToolClusterGroupForTool(locale, tool.slug, categoryMessages, allToolNames, allToolDescriptions),
-    Card: PdfDocumentToolClusterCard,
     clusterPath: pdfDocumentToolClusterPath,
     copy: pdfDocumentToolCopy,
+    theme: 'sky',
+    dataPrefix: 'pdf-document',
   },
   {
     group: buildSecurityToolClusterGroupForTool(locale, tool.slug, categoryMessages, allToolNames, allToolDescriptions),
-    Card: SecurityToolClusterCard,
     clusterPath: securityToolClusterPath,
     copy: securityToolCopy,
+    theme: 'rose',
+    dataPrefix: 'security',
   },
   {
     group: buildTextWritingToolClusterGroupForTool(locale, tool.slug, categoryMessages, allToolNames, allToolDescriptions),
-    Card: TextWritingToolClusterCard,
     clusterPath: textWritingToolClusterPath,
     copy: textWritingToolCopy,
+    theme: 'emerald',
+    dataPrefix: 'text-writing',
   },
   {
     group: buildChartToolClusterGroupForTool(locale, tool.slug, categoryMessages, allToolNames, allToolDescriptions),
-    Card: ChartToolClusterCard,
     clusterPath: chartToolClusterPath,
     copy: chartToolCopy,
+    theme: 'amber',
+    dataPrefix: 'chart',
   },
 ];
 ---
@@ -640,13 +610,15 @@ const CLUSTER_BLOCKS: Array<{ group: ClusterGroup; Card: any; clusterPath: strin
       )}
 
       {/* Cluster cards — data-driven loop over 8 cluster blocks */}
-      {CLUSTER_BLOCKS.map(({ group, Card, clusterPath, copy }) =>
+      {CLUSTER_BLOCKS.map(({ group, clusterPath, copy, theme, dataPrefix }) =>
         group && (
-          <Card
+          <ToolClusterCard
             clusterHref={buildLocalizedPagePath(locale, clusterPath)}
             copy={copy}
             currentSlug={tool.slug}
             group={group}
+            theme={theme}
+            dataPrefix={dataPrefix}
           />
         )
       )}

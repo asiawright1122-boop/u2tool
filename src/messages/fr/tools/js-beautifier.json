@@ -1,12 +1,12 @@
 {
   "detailed_description": "Le JavaScript Beautifier est un outil de traitement de code source qui permet de réorganiser, formater et optimiser le code JavaScript selon des standards de qualité professionnels. Techniquement, il utilise un parseur syntaxique comme Esprima ou Acorn pour générer un arbre syntaxique abstrait (AST) à partir du code d'entrée. Cet AST est ensuite analysé pour appliquer des règles de reformatage (ajout d'indentations, alignement des accolades, gestion des espaces) ou des transformations de minification (suppression des commentaires, des espaces inutiles, renommage des variables). Les développeurs ont besoin de cet outil pour améliorer la lisibilité de scripts non documentés, déboguer des bibliothèques compactées, ou préparer du code pour la production. Le mode beautify utilise des algorithmes de détection automatique de style pour conserver la cohérence des conventions existantes (guillemets simples vs doubles, points-virgules optionnels), tandis que le mode minify applique des techniques de compression comme la conversion des variables en identifiants courts (obfuscation légère) sans altérer la logique fonctionnelle. L'outil gère nativement les fonctionnalités ES6+ (flèches, templates, déstructuration) et permet de configurer finement la sortie via des paramètres comme la profondeur d'indentation ou la préservation des annotations JSDoc.",
   "usage_steps": [
-    "Collez votre code JavaScript dans la zone d'entrée multi-lignes.",
-    "Cochez la case 'Beautify' pour un formatage lisible ou 'Minify' pour une compression agressive.",
-    "Ajustez les paramètres avancés : taille d'indentation (2/4/8 espaces), style de guillemets (simple/double), suppression/conservation des points-virgules.",
-    "Activez l'option 'Préserver les commentaires' si vous souhaitez conserver les annotations JSDoc ou TODO.",
-    "Cliquez sur 'Traiter le code' pour générer la sortie dans la case inférieure.",
-    "Copiez le résultat ou téléchargez-le au format .js avec le bouton 'Exporter'."
+    "Collez votre code JavaScript dans la zone d’entrée multi-lignes.",
+    "Cochez la case Beautify pour un formatage lisible ou Minify pour une compression agressive.",
+    "Ajustez les paramètres avancés : taille d’indentation, style de guillemets et gestion des points-virgules.",
+    "Activez l’option de conservation des commentaires si vous souhaitez garder les annotations JSDoc ou les notes de revue.",
+    "Cliquez sur Traiter le code pour générer la sortie dans la zone inférieure.",
+    "Copiez le résultat ou téléchargez-le au format .js avec le bouton d’export."
   ],
   "usage_examples": [
     "Un développeur frontend optimise un bundle JavaScript en minifiant son code avant déploiement en production.",

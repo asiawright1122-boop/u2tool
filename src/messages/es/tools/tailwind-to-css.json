@@ -1,17 +1,16 @@
 {
-  "detailed_description": "...",
+  "detailed_description": "Tailwind to CSS traduce clases comunes de Tailwind CSS a reglas CSS legibles para inspección, documentación o migración gradual. Pega una lista de clases utilitarias y revisa el CSS aproximado generado para espaciado, color, tipografía, layout, bordes y estados básicos.",
   "usage_steps": [
-    "Step 1...",
-    "Step 2...",
-    "Step 3...",
-    "Step 4...",
-    "Step 5...",
-    "Step 6..."
+    "Pega una cadena de clases Tailwind en el campo de entrada.",
+    "Ejecuta la conversión para generar reglas CSS equivalentes o aproximadas.",
+    "Revisa selectores, propiedades y valores antes de copiarlos.",
+    "Ajusta manualmente clases personalizadas, variantes o tokens de tema no reconocidos.",
+    "Copia el CSS resultante para documentación, prototipos o migraciones."
   ],
   "usage_examples": [
-    "Example 1...",
-    "Example 2...",
-    "Example 3...",
-    "Example 4..."
+    "Explicar a un diseñador qué CSS produce una combinación de utilidades.",
+    "Crear una versión CSS base de un componente prototipado con Tailwind.",
+    "Documentar estilos de espaciado y color en una guía interna.",
+    "Detectar clases que requieren tokens personalizados del proyecto."
   ]
 }

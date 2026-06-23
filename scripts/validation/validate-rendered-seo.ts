@@ -1898,7 +1898,7 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'YouTube Tags',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     bodyMustInclude: [
-      'data-creator-seo-tool-cluster',
+      'data-tool-cluster="creator-seo"',
       '/en/tools/creator-seo-generators/',
       '/en/tools/youtube-title-generator/',
       '/en/tools/youtube-thumbnail-generator/',
@@ -1912,7 +1912,7 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'Image Compressor',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     bodyMustInclude: [
-      'data-image-tool-cluster',
+      'data-tool-cluster="image"',
       '/en/tools/image-editing-converters/',
       '/en/tools/image-converter/',
     ],
@@ -1925,7 +1925,7 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'Bar Chart',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     bodyMustInclude: [
-      'data-chart-tool-cluster',
+      'data-tool-cluster="chart"',
       '/en/tools/chart-generators/',
       '/en/tools/line-chart-generator/',
     ],
@@ -1938,7 +1938,7 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'JSON Formatter',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     bodyMustInclude: [
-      'data-developer-data-tool-cluster',
+      'data-tool-cluster="developer-data"',
       '/en/tools/developer-data-formatters/',
       '/en/tools/json-viewer/',
     ],
@@ -1951,7 +1951,7 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'Mortgage',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     bodyMustInclude: [
-      'data-online-calculator-cluster',
+      'data-tool-cluster="online-calculator"',
       '/en/tools/online-calculators/',
       '/en/tools/roi-calculator/',
     ],
@@ -1964,7 +1964,7 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'PDF Merger',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     bodyMustInclude: [
-      'data-pdf-document-tool-cluster',
+      'data-tool-cluster="pdf-document"',
       '/en/tools/pdf-document-converters/',
       '/en/tools/pdf-splitter/',
     ],
@@ -1977,7 +1977,7 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'Password Generator',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     bodyMustInclude: [
-      'data-security-tool-cluster',
+      'data-tool-cluster="security"',
       '/en/tools/security-password-hash-tools/',
       '/en/tools/password-strength/',
     ],
@@ -1990,7 +1990,7 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'Word Counter',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     bodyMustInclude: [
-      'data-text-writing-tool-cluster',
+      'data-tool-cluster="text-writing"',
       '/en/tools/text-writing-editing-tools/',
       '/en/tools/document-word-counter/',
     ],

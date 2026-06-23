@@ -1,6 +1,19 @@
-import { tools } from '@/config/tools';
-import { getLocalizedPath, type Locale } from './i18n';
-import { buildLocalizedPageUrl, getHreflang } from './seo';
+import { type Locale } from './i18n';
+import {
+  buildClusterCollectionData as factoryBuildCollectionData,
+  buildClusterGroupForTool as factoryBuildGroupForTool,
+  buildClusterGroups as factoryBuildGroups,
+  buildClusterItemList as factoryBuildItemList,
+  buildClusterItems as factoryBuildItems,
+  createClusterSlugSet,
+  getClusterGroupIdForSlug as factoryGetGroupIdForSlug,
+  resolveClusterCopy,
+} from './tool-cluster-factory';
+import type {
+  ToolClusterCopy,
+  ToolClusterGroup,
+  ToolClusterItem,
+} from './tool-cluster-types';
 
 export const onlineCalculatorClusterPath = '/tools/online-calculators';
 
@@ -84,44 +97,13 @@ export const onlineCalculatorClusterSlugs = [
   'love-calculator',
 ] as const;
 
-export interface OnlineCalculatorClusterItem {
-  category: string;
-  categoryName: string;
-  description: string;
-  href: string;
-  icon: string;
-  name: string;
-  slug: string;
-}
+export type OnlineCalculatorClusterItem = ToolClusterItem;
 
-export interface OnlineCalculatorClusterGroup {
-  description: string;
-  id: 'finance-business' | 'math-engineering' | 'time-network-work' | 'health-home-life';
-  title: string;
-  tools: OnlineCalculatorClusterItem[];
-}
+export type OnlineCalculatorClusterGroup = ToolClusterGroup<
+  'finance-business' | 'math-engineering' | 'time-network-work' | 'health-home-life'
+>;
 
-export interface OnlineCalculatorClusterCopy {
-  ctaLabel: string;
-  description: string;
-  eyebrow: string;
-  h1: string;
-  intro: string;
-  relatedLinksTitle: string;
-  seoDescription: string;
-  seoTitle: string;
-  summary: string;
-  title: string;
-  toolCountLabel: string;
-  workflow: {
-    title: string;
-    items: Array<{
-      label: string;
-      text: string;
-      slugs: string[];
-    }>;
-  };
-}
+export type OnlineCalculatorClusterCopy = ToolClusterCopy;
 
 const groupSlugs: Array<{
   id: OnlineCalculatorClusterGroup['id'];
@@ -226,7 +208,7 @@ const groupSlugs: Array<{
   },
 ];
 
-const onlineCalculatorClusterSlugSet = new Set<string>(onlineCalculatorClusterSlugs);
+const onlineCalculatorClusterSlugSet = createClusterSlugSet(onlineCalculatorClusterSlugs);
 
 export function isOnlineCalculatorClusterSlug(slug: string): boolean {
   return onlineCalculatorClusterSlugSet.has(slug);
@@ -235,7 +217,7 @@ export function isOnlineCalculatorClusterSlug(slug: string): boolean {
 export function getOnlineCalculatorClusterGroupIdForSlug(
   slug: string
 ): OnlineCalculatorClusterGroup['id'] | null {
-  return groupSlugs.find((group) => group.slugs.includes(slug))?.id ?? null;
+  return factoryGetGroupIdForSlug(groupSlugs, slug);
 }
 
 const groupCopy: Record<
@@ -468,7 +450,7 @@ function workflowFallback(): OnlineCalculatorClusterCopy['workflow'] {
 }
 
 export function getOnlineCalculatorClusterCopy(locale: Locale): OnlineCalculatorClusterCopy {
-  return copyByLocale[locale] ?? copyByLocale.en;
+  return resolveClusterCopy(copyByLocale, locale);
 }
 
 export function buildOnlineCalculatorClusterItems(
@@ -478,20 +460,7 @@ export function buildOnlineCalculatorClusterItems(
   toolDescriptions: Record<string, string>,
   slugs: readonly string[] = onlineCalculatorClusterSlugs
 ): OnlineCalculatorClusterItem[] {
-  const toolBySlug = new Map(tools.map((tool) => [tool.slug, tool]));
-
-  return slugs
-    .map((slug) => toolBySlug.get(slug))
-    .filter((tool): tool is (typeof tools)[number] => Boolean(tool))
-    .map((tool) => ({
-      category: tool.category,
-      categoryName: categoryNames[tool.category] || tool.category,
-      description: toolDescriptions[tool.slug] || '',
-      href: getLocalizedPath(locale, `/tools/${tool.slug}`),
-      icon: tool.icon,
-      name: toolNames[tool.slug] || tool.slug,
-      slug: tool.slug,
-    }));
+  return factoryBuildItems(locale, categoryNames, toolNames, toolDescriptions, slugs);
 }
 
 export function buildOnlineCalculatorClusterGroups(
@@ -500,14 +469,7 @@ export function buildOnlineCalculatorClusterGroups(
   toolNames: Record<string, string>,
   toolDescriptions: Record<string, string>
 ): OnlineCalculatorClusterGroup[] {
-  const copy = groupCopy[locale] ?? groupCopy.en;
-
-  return groupSlugs.map((group) => ({
-    id: group.id,
-    title: copy[group.id].title,
-    description: copy[group.id].description,
-    tools: buildOnlineCalculatorClusterItems(locale, categoryNames, toolNames, toolDescriptions, group.slugs),
-  }));
+  return factoryBuildGroups(locale, categoryNames, toolNames, toolDescriptions, groupSlugs, groupCopy);
 }
 
 export function buildOnlineCalculatorClusterGroupForTool(
@@ -517,13 +479,7 @@ export function buildOnlineCalculatorClusterGroupForTool(
   toolNames: Record<string, string>,
   toolDescriptions: Record<string, string>
 ): OnlineCalculatorClusterGroup | null {
-  const groupId = getOnlineCalculatorClusterGroupIdForSlug(slug);
-  if (!groupId) {
-    return null;
-  }
-
-  return buildOnlineCalculatorClusterGroups(locale, categoryNames, toolNames, toolDescriptions)
-    .find((group) => group.id === groupId) ?? null;
+  return factoryBuildGroupForTool(locale, slug, categoryNames, toolNames, toolDescriptions, groupSlugs, groupCopy);
 }
 
 export function buildOnlineCalculatorClusterItemList(
@@ -531,25 +487,7 @@ export function buildOnlineCalculatorClusterItemList(
   locale: Locale,
   groups: OnlineCalculatorClusterGroup[]
 ): Record<string, unknown> {
-  const toolsForList = groups.flatMap((group) => group.tools);
-
-  return {
-    name: getOnlineCalculatorClusterCopy(locale).title,
-    itemListOrder: 'https://schema.org/ItemListOrderAscending',
-    numberOfItems: toolsForList.length,
-    itemListElement: toolsForList.map((tool, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      url: `${baseUrl}${tool.href}`,
-      item: {
-        '@type': 'SoftwareApplication',
-        name: tool.name,
-        description: tool.description || undefined,
-        applicationCategory: tool.categoryName,
-        url: `${baseUrl}${tool.href}`,
-      },
-    })),
-  };
+  return factoryBuildItemList(baseUrl, locale, groups, getOnlineCalculatorClusterCopy(locale).title);
 }
 
 export function buildOnlineCalculatorClusterCollectionData(
@@ -557,23 +495,5 @@ export function buildOnlineCalculatorClusterCollectionData(
   locale: Locale,
   groups: OnlineCalculatorClusterGroup[]
 ): Record<string, unknown> {
-  const copy = getOnlineCalculatorClusterCopy(locale);
-
-  return {
-    name: copy.title,
-    description: copy.seoDescription,
-    url: buildLocalizedPageUrl(baseUrl, locale, onlineCalculatorClusterPath),
-    inLanguage: getHreflang(locale),
-    numberOfItems: groups.reduce((count, group) => count + group.tools.length, 0),
-    hasPart: groups.map((group) => ({
-      '@type': 'CollectionPage',
-      name: group.title,
-      description: group.description,
-      hasPart: group.tools.map((tool) => ({
-        '@type': 'SoftwareApplication',
-        name: tool.name,
-        url: `${baseUrl}${tool.href}`,
-      })),
-    })),
-  };
+  return factoryBuildCollectionData(baseUrl, locale, groups, onlineCalculatorClusterPath, getOnlineCalculatorClusterCopy(locale));
 }

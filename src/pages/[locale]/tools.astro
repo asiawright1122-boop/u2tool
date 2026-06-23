@@ -12,15 +12,8 @@ import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
 import Footer from '@/components/layout/Footer.astro';
 import ToolsGrid from '@/components/tools/ToolsGrid.astro';
 import CategorySpotlightSection from '@/components/discovery/CategorySpotlightSection.astro';
-import ChartToolClusterSection from '@/components/discovery/ChartToolClusterSection.astro';
+import ToolClusterSection from '@/components/discovery/ToolClusterSection.astro';
 import ComparisonGuideSection from '@/components/discovery/ComparisonGuideSection.astro';
-import CreatorSeoClusterSection from '@/components/discovery/CreatorSeoClusterSection.astro';
-import DeveloperDataToolClusterSection from '@/components/discovery/DeveloperDataToolClusterSection.astro';
-import ImageToolClusterSection from '@/components/discovery/ImageToolClusterSection.astro';
-import OnlineCalculatorClusterSection from '@/components/discovery/OnlineCalculatorClusterSection.astro';
-import PdfDocumentToolClusterSection from '@/components/discovery/PdfDocumentToolClusterSection.astro';
-import SecurityToolClusterSection from '@/components/discovery/SecurityToolClusterSection.astro';
-import TextWritingToolClusterSection from '@/components/discovery/TextWritingToolClusterSection.astro';
 import ToolLaunchSection from '@/components/discovery/ToolLaunchSection.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
@@ -322,8 +315,11 @@ const toolsCollectionData = {
           ctaLabel={heroMessages.tryTool || 'Try'}
           tools={recentLaunchTools}
         />
-        <CreatorSeoClusterSection
+        <ToolClusterSection
           compact
+          theme="amber"
+          dataPrefix="creator-seo-cluster"
+          gridCols={3}
           eyebrow={creatorSeoCopy.eyebrow}
           title={creatorSeoCopy.title}
           description={creatorSeoCopy.description}
@@ -332,8 +328,10 @@ const toolsCollectionData = {
           groups={creatorSeoGroups}
           toolCountLabel={creatorSeoCopy.toolCountLabel}
         />
-        <DeveloperDataToolClusterSection
+        <ToolClusterSection
           compact
+          theme="cyan"
+          dataPrefix="developer-data-tool-cluster"
           eyebrow={developerDataToolCopy.eyebrow}
           title={developerDataToolCopy.title}
           description={developerDataToolCopy.description}
@@ -342,8 +340,10 @@ const toolsCollectionData = {
           groups={developerDataToolGroups}
           toolCountLabel={developerDataToolCopy.toolCountLabel}
         />
-        <ImageToolClusterSection
+        <ToolClusterSection
           compact
+          theme="amber"
+          dataPrefix="image-tool-cluster"
           eyebrow={imageToolCopy.eyebrow}
           title={imageToolCopy.title}
           description={imageToolCopy.description}
@@ -352,8 +352,10 @@ const toolsCollectionData = {
           groups={imageToolGroups}
           toolCountLabel={imageToolCopy.toolCountLabel}
         />
-        <OnlineCalculatorClusterSection
+        <ToolClusterSection
           compact
+          theme="emerald"
+          dataPrefix="online-calculator-cluster"
           eyebrow={onlineCalculatorCopy.eyebrow}
           title={onlineCalculatorCopy.title}
           description={onlineCalculatorCopy.description}
@@ -362,8 +364,10 @@ const toolsCollectionData = {
           groups={onlineCalculatorGroups}
           toolCountLabel={onlineCalculatorCopy.toolCountLabel}
         />
-        <PdfDocumentToolClusterSection
+        <ToolClusterSection
           compact
+          theme="sky"
+          dataPrefix="pdf-document-tool-cluster"
           eyebrow={pdfDocumentToolCopy.eyebrow}
           title={pdfDocumentToolCopy.title}
           description={pdfDocumentToolCopy.description}
@@ -372,8 +376,10 @@ const toolsCollectionData = {
           groups={pdfDocumentToolGroups}
           toolCountLabel={pdfDocumentToolCopy.toolCountLabel}
         />
-        <TextWritingToolClusterSection
+        <ToolClusterSection
           compact
+          theme="emerald"
+          dataPrefix="text-writing-tool-cluster"
           eyebrow={textWritingToolCopy.eyebrow}
           title={textWritingToolCopy.title}
           description={textWritingToolCopy.description}
@@ -382,8 +388,10 @@ const toolsCollectionData = {
           groups={textWritingToolGroups}
           toolCountLabel={textWritingToolCopy.toolCountLabel}
         />
-        <SecurityToolClusterSection
+        <ToolClusterSection
           compact
+          theme="rose"
+          dataPrefix="security-tool-cluster"
           eyebrow={securityToolCopy.eyebrow}
           title={securityToolCopy.title}
           description={securityToolCopy.description}
@@ -392,8 +400,10 @@ const toolsCollectionData = {
           groups={securityToolGroups}
           toolCountLabel={securityToolCopy.toolCountLabel}
         />
-        <ChartToolClusterSection
+        <ToolClusterSection
           compact
+          theme="amber"
+          dataPrefix="chart-tool-cluster"
           eyebrow={chartToolCopy.eyebrow}
           title={chartToolCopy.title}
           description={chartToolCopy.description}

@@ -1,0 +1,16 @@
+{
+  "detailed_description": "Géolocalisation IP recherche des informations approximatives de localisation réseau pour une adresse IPv4 ou IPv6. Saisissez une adresse IP ou utilisez votre IP actuelle pour consulter le pays, la région, la ville, le fuseau horaire, les coordonnées, le fournisseur, l’organisation et l’ASN lorsque ces données sont disponibles.",
+  "usage_steps": [
+    "Saisissez une adresse IP ou laissez le champ vide pour utiliser votre IP publique actuelle.",
+    "Cliquez sur Rechercher ou sur Mon adresse IP.",
+    "Attendez que le navigateur récupère les données de géolocalisation disponibles.",
+    "Vérifiez le pays, la région, la ville, le fuseau horaire, les coordonnées, le FAI et l’ASN.",
+    "Utilisez la carte comme indication approximative uniquement."
+  ],
+  "usage_examples": [
+    "Vérifier qu’une IP de test correspond au pays attendu.",
+    "Confirmer l’adresse IP publique et le fournisseur du réseau courant.",
+    "Déboguer une logique de localisation à partir du pays et du fuseau horaire.",
+    "Capturer un aperçu réseau rapide avant d’utiliser une source plus officielle."
+  ]
+}

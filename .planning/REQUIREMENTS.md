@@ -1,71 +1,61 @@
-# Requirements: v0.0.24 - Tool Detail Page Architecture Refactor
+# Requirements: v0.0.26 - Persistent Render Regression Gate
 
 ## Milestone Goal
 
-对 `src/pages/[locale]/tools/[slug].astro`（729 行）做 **behavior-preserving（行为保持）** 的架构重构：把当前 8 组手写复制粘贴的 cluster 配置（copy/path/group 构建 + card 渲染）收敛为**页面内数据驱动的单一循环**，并把 FAQ 提取、support-content trust+fallback 解析等过程式逻辑块抽成页面内局部函数。
+把 v0.0.24 的一次性 `[slug].astro` HTML 快照方法升级成可长期运行的 render 回归 gate：用固定代表性页面矩阵抓取 SSR HTML，抽取稳定的页面契约（head、structured data、cluster cards、FAQ、support copy、related links），并接入 `qa:production`，防止类似 v0.0.25 Phase 84 的 `Card` 字段遗留 bug 再次溜过类型/构建检查。
 
-**重构边界严格限定在 `[slug].astro` 单文件内**：不新建任何 `src/lib/*` 或 `src/components/*` 文件，不修改任何 `*-cluster.ts` lib 或 `*ClusterCard.astro` 组件（那是 v0.0.25 的范围）。重构后的页面输出必须与重构前 **byte-for-byte 等价**（由 HTML 快照对比证明）。
-
-This is a **refactor-only** milestone: it changes code structure, not behavior. No SEO output, structured data, hreflang, canonical, OG/Twitter metadata, breadcrumb, FAQ, cluster card rendering, or translation loading logic may change.
+This is a **validation-infrastructure** milestone: it should not change product rendering, translation content, SEO output, URL routing, or user-facing UI. It adds a durable regression net around already-shipped behavior.
 
 ## Motivation
 
-- **复制粘贴对称性已到临界点**：`[slug].astro` 当前有 **8 组完全对称的 cluster 配置** —— frontmatter 区 8 段 `getXxxClusterCopy` + 8 段 `buildXxxClusterGroupForTool`（L123-130 + L380-435，共 ~120 行重复结构），template 区 8 段 `{xxxGroup && <XxxClusterCard .../>}`（L590-660，共 ~70 行重复结构）。新增第 9 个 cluster 需要同步改 5 处，极易遗漏。
-- **v0.0.25 的前提**：ROADMAP 已约定 v0.0.25 做 `src/lib/*-cluster.ts` + `*ClusterCard.astro` 的共性抽取。v0.0.24 先在页面层把"8 组配置"收敛成"1 个配置数组 + 循环"，为 v0.0.25 在 lib/component 层做进一步抽象扫清调用点 —— 届时 v0.0.25 只需替换数组元素，不需再读这 729 行页面。
-- **过程式逻辑块混在 frontmatter**：FAQ 提取（`extractFAQs` L212-237，3 个 helper 函数）、support-content trust 评估 + fallback 链（L240-274，6 个条件表达式）是独立的逻辑块，但与路由参数解析、metadata 提取混在同一个 436 行的 frontmatter 里，可读性差。
-- **没有页面级回归网**：项目目前没有 `[slug].astro` 的 render/snapshot 测试。`qa:production` 的 `validate:rendered-seo` 只抽查 TDK 子集字段，无法证明完整 HTML 等价。本里程碑借机建立一次性 HTML 快照对比流程，既验证本次重构，也为未来 v0.0.25 / 内容改动留下可复用的等价性证明方法。
+- **Phase 84 暴露了测试盲区**：v0.0.25 审计发现 `[slug].astro` 模板仍解构不存在的 `Card` 字段，运行时会导致 cluster cards 区域不渲染。Phase 85 已修复，但该类“模板字段漂移”需要常驻 gate。
+- **一次性快照不可持续**：v0.0.24 的 `scripts/validation/snapshot-tool-pages.ts` 能证明 refactor 前后等价，但未纳入 `qa:production`，也依赖人工比较快照目录。
+- **完整 byte diff 成本高且脆弱**：Astro/Cloudflare SSR 输出包含构建资产 hash 与空白差异。v0.0.26 应抽取稳定 DOM/HTML 契约，而不是长期保存整页 HTML golden。
+- **C 已解除发布阻塞**：v0.0.23 的 translation-corpus debt 已修复。Fresh verification on 2026-06-23: `validate:translation-corpus` exits 0 with `Schema errors: 0`, `Coverage gaps: 0`, namespace warnings only; `validate:merge-chain-consistency` and `validate:tdk-drift` also pass.
 
 ## Requirements
 
-### Tool Detail Page Refactor (TDP)
+### Persistent Render Gate (PRG)
 
-- [x] **TDP-01** - **Cluster Configuration Array（页面内数据驱动循环）**: 在 `[slug].astro` frontmatter 顶部定义单一 `CLUSTER_BLOCKS` 配置数组，每个元素是一个 `{ group, Card, clusterPath, copy }` 四元组，按当前 8 个 cluster 的渲染顺序排列（creatorSeo / developerData / image / onlineCalculator / pdfDocument / security / textWriting / chart — 注：此为重构前 template 区的实际出现顺序，原始 REQUIREMENTS 草稿误写为 chart 居首，已据实修正，见 Design Refinements #1）。template 区把当前 8 段 `{xxxGroup && <XxxClusterCard clusterHref={buildLocalizedPagePath(locale, xxxClusterPath)} copy={xxxCopy} currentSlug={tool.slug} group={xxxGroup} />}` 替换为对这个数组的单一 `map` 循环。8 组 `getXxxClusterCopy` + `buildXxxClusterGroupForTool` 调用保留在 frontmatter（用于填充数组），顺序与数组对齐。
-- [x] **TDP-02** - **FAQ 提取局部函数化**: 把 `hasSupportText` / `hasSupportList` / `pushFAQIfComplete` / `extractFAQs`（L192-237）保持为页面内函数（不外移到 lib），但重新组织为 frontmatter 内一个清晰的 "FAQ resolution" 区块，与 support-content trust 评估（TDP-03）相邻。
-- [x] **TDP-03** - **Support-Content Trust + Fallback 链整合**: 把当前分散的 `supportContentTrust` / `shouldUseSupportContentFallback` / `supportContentFallback` / `detailedDescription` / `safeDetailedDescription` / `usageSteps` / `usageExamples` / `faqs` 解析（L240-274，6 个条件三元表达式）整合为一个清晰的 "support content resolution" 区块。**Design Refinement #2**：原建议"抽成 `resolveSupportContent(...)` 局部函数"在实现后被回滚为内联三元表达式 —— `src/lib/translations.test.ts:253` 是契约性测试，断言 SSR fallback 链必须以内联源码形式存在（`supportContentFallback?.faqs ?? []` / `safeToolMessages.faqs = faqs`），函数提取会破坏契约。最终方案：加 "support content resolution" 分节注释把内联逻辑组织为清晰区块，保留 `assessSupportContentTrust` / `buildSafeFallbackSupportContent` 调用契约不变。逻辑与重构前 byte-equivalent。
-- [x] **TDP-04** - **Import 区整理**: 当前 39 行 import（L21-90）含 8 组 cluster lib 的对称 import。整理为按职责分组（layout / seo / tools / cluster / config / lib），cluster import 顺序与 `CLUSTER_BLOCKS` 数组顺序对齐。不删除任何 import，不改变导入路径。
-- [x] **TDP-05** - **行为保持等价性证明（HTML 快照对比）**: 建立一次性 HTML 快照对比流程：
-  - 重构前：在当前 HEAD（重构前）构建并抓取一组代表性 slug × locale 的完整渲染 HTML，存入 gitignored 快照目录。
-  - 重构后：在重构分支重新构建并抓取相同 slug × locale，与前快照做 byte-level diff。
-  - **等价标准**: HEAD 区（title/description/canonical/hreflang/所有 StructuredData/OG/Twitter meta）+ body 区（breadcrumb/tool header/detailed description/cluster cards/ToolWrapper 容器/usage/FAQ/related tools 的 DOM 结构与文本）必须 byte-identical。
-  - 代表性 slug 选择标准：覆盖 (a) 有 cluster card 渲染的 slug、(b) 有 comparison guide 的 slug、(c) 触发 support-content fallback 的 slug、(d) 有 FAQ 的 slug，每个至少 1 个；locale 覆盖 en + 1 个非拉丁字母 locale（如 ja/zh/ar）。
-  - 快照脚本放 `scripts/validation/snapshot-tool-pages.ts`（一次性，不纳入 `qa:production` 常驻 gate；可复用于 v0.0.25）。
-
-## Future Requirements (Deferred)
-
-- **v0.0.25** - **Cluster Lib + Component Commonality Extraction**: 把 8 个 `src/lib/*-cluster.ts`（`getXxxClusterCopy` / `buildXxxClusterGroupForTool` / `xxxClusterPath`）和 8 个 `*ClusterCard.astro` 的共性抽取到统一的 `src/lib/tool-cluster.ts` + `src/components/tools/ToolClusterCard.astro`，消除 lib/component 层的对称性。本里程碑（v0.0.24）在页面层建立的 `CLUSTER_BLOCKS` 数组届时将简化为对统一 lib 的单次调用。
-- **TDP-06** - **持久化 render 测试**: 把本里程碑的一次性快照脚本升级为 `qa:production` 常驻的 render 回归测试（需决定快照存储策略与 CI 成本）。延后至 render 测试基建成熟。
+- [x] **PRG-01** - **Representative render matrix**: Extract the v0.0.24 snapshot page matrix into a typed reusable constant covering all 8 tool clusters plus FAQ, support-content fallback, comparison guide, CJK, and RTL pages. The matrix must include at least these 11 entries: `en/bar-chart-generator`, `en/youtube-tags-generator`, `en/json-formatter`, `en/image-compressor`, `en/currency-converter`, `en/pdf-to-image`, `en/password-generator`, `en/word-counter`, `en/markdown-editor`, `ja/json-formatter`, `ar/password-generator`.
+- [x] **PRG-02** - **Stable HTML contract extractor**: Add a zero-dependency extractor that converts raw rendered HTML into a stable contract object instead of storing full HTML. Contract fields must include: HTTP status, `<title>`, meta description, canonical URL, h1 text, JSON-LD `@type` set, `data-tool-cluster` entries, `data-tool-cluster-group` entries, sibling tool hrefs, FAQ question count, and sentinel body text presence.
+- [x] **PRG-03** - **Cluster card runtime assertions**: For each cluster matrix page, assert the expected unified `data-tool-cluster="<prefix>"` appears, at least one `data-tool-cluster-group` appears, and at least one sibling tool link appears. This is the direct regression guard for the Phase 84 `Card` discriminator bug.
+- [x] **PRG-04** - **Render validation script**: Add `scripts/validation/validate-tool-page-render-contract.ts` with CLI options `--base-url`, `--filter`, and `--json-out`; `--update-baseline` is reserved and fails fast until a committed-baseline workflow exists. Default mode validates against committed stable expectations and exits non-zero on contract drift.
+- [x] **PRG-05** - **Unit tests for contract logic**: Add Vitest coverage for extractor/comparator behavior, including a fixture where `data-tool-cluster` is missing and the comparator fails with a specific cluster-card regression message.
+- [x] **PRG-06** - **qa:production wiring**: Add `validate:tool-page-render-contract` to `package.json` and wire it into `qa:production` after `build` and before broader rendered SEO checks. It must support local `FETCH_BASE_URL` / `PROD_BASE_URL` conventions already used by `validate-rendered-seo.ts`.
+- [x] **PRG-07** - **Document local-server limitation**: Document that this gate requires a reachable SSR server. In sandboxed environments that cannot bind/listen/fetch localhost, mark the result as environmental rather than code regression. Do not weaken the gate for normal CI/dev environments.
 
 ## Out of Scope
 
-- **修改任何 `src/lib/*-cluster.ts`**（8 个 cluster lib 文件）—— v0.0.25 范围。
-- **修改任何 `src/components/tools/*ClusterCard.astro`**（8 个 cluster card 组件）—— v0.0.25 范围。
-- **新建任何 `src/lib/*` 或 `src/components/*` 文件** —— 本里程碑严格限定在 `[slug].astro` 单文件内重构（唯一新增文件是一次性快照脚本 `scripts/validation/snapshot-tool-pages.ts`）。
-- **修改任何 `src/messages/` 消息文件** —— 与 v0.0.22/v0.0.23 一致的 detection/refactor-only 纪律。
-- **改变任何渲染行为** —— SEO 输出、structured data、hreflang、canonical、OG/Twitter、breadcrumb、FAQ、cluster card 渲染、translation loading、support-content fallback 逻辑、ToolWrapper 契约，全部必须 byte-for-byte 等价。
-- **重构非工具详情页**（首页 / 分类页 / compare 页 / 8 个 cluster 聚合页如 `chart-generators.astro`）—— 本里程碑只动 `[slug].astro`。
-- **性能优化** —— 不以减小 bundle size 或提升 LCP 为目标；若快照对比证明等价，任何性能变化都是副产物而非验收项。
+- **Changing `[slug].astro` rendering** — no template, SEO, structured data, ToolWrapper, support-content, FAQ, or cluster card output changes unless a failing contract reveals a real existing regression.
+- **Changing translation content** — C already fixed schema/coverage debt; this milestone only guards rendered behavior.
+- **Browser E2E automation** — no Puppeteer/Playwright dependency unless the HTML contract approach proves insufficient.
+- **Full-page golden snapshots in git** — store compact expectations/fixtures only; avoid committed full rendered HTML.
+- **Production-only online probing** — default gate should run against local SSR build/preview when available. Production probing remains opt-in through base URL overrides.
 
-## Key Design Constraints (carry into PLAN.md)
+## Key Design Constraints
 
-1. **Behavior-preserving（行为保持）**: 这是本里程碑的唯一硬约束。重构后的页面渲染输出必须与重构前 byte-for-byte 等价，由 TDP-05 的 HTML 快照对比证明。任何无法通过快照对比的行为差异（哪怕"看起来无害"）都视为失败。
-2. **单文件边界**: 所有重构发生在 `src/pages/[locale]/tools/[slug].astro` 内。唯一允许的新增文件是一次性快照脚本。不在 `src/lib/` 或 `src/components/` 新建文件（为 v0.0.25 保留 lib/component 层的抽象空间）。
-3. **不改外部契约**: `assessSupportContentTrust` / `buildSafeFallbackSupportContent` / `loadToolPageMessages` / `loadBaseUiMessages` / `withBrand` / `buildLocalizedPagePath` / `getIconSvg` / 8 个 `buildXxxClusterGroupForTool` / 8 个 `getXxxClusterCopy` / 8 个 `xxxClusterPath` 的调用签名与返回值不变。
-4. **`CLUSTER_BLOCKS` 数组顺序 = 渲染顺序**: 数组元素顺序必须与当前 template 区 8 段 cluster card 的出现顺序完全一致（creatorSeo → developerData → image → onlineCalculator → pdfDocument → security → textWriting → chart），确保 DOM 顺序不变。
-5. **快照脚本是验证工具，不是产品代码**: `snapshot-tool-pages.ts` 是一次性 / 可复用的等价性证明工具，放 `scripts/validation/`，不纳入 `qa:production` 常驻 gate（避免 CI 成本与快照存储复杂度），但必须可重复运行以备 v0.0.25 复用。
-6. **离线可验证**: 快照对比基于本地 `astro build` 产物（`dist/`）或本地 dev server，不抓生产。与 v0.0.22+ 的 `--online` 纪律一致。
+1. **Stable over exhaustive**: Prefer durable semantic assertions over byte-for-byte HTML comparison. The goal is to catch user-visible/render-contract regressions without flaking on asset hashes or whitespace.
+2. **Offline/local first**: Reuse `fetchHtmlWithRetry` / `getTagContent` from `src/lib/seo-probe.ts` and existing `FETCH_BASE_URL` / `PROD_BASE_URL` conventions. Do not require production network in default mode.
+3. **Phase 84 guard is mandatory**: Missing `data-tool-cluster`, missing cluster groups, or missing sibling links on a cluster matrix page must fail the gate.
+4. **Small committed baseline**: If a baseline file is needed, keep it compact JSON under `scripts/validation/fixtures/` or `src/lib/__fixtures__/`, not `.planning/` or `.snapshots/`.
+5. **Clear failure output**: Failures must name the route, contract field, expected value, actual value, and likely affected surface.
 
 ## Traceability
 
-| Requirement ID | Description | Assigned Phase | Status | Plan/Summary Evidence |
-| :--- | :--- | :--- | :--- | :--- |
-| **TDP-01** | Cluster Configuration Array (页面内数据驱动循环) | Phase 82 | ✅ Implemented | `CLUSTER_BLOCKS` 数组 + 单一 `.map` 渲染循环；顺序与重构前 template 一致（见 Design Refinement #1） |
-| **TDP-02** | FAQ 提取局部函数化 | Phase 82 | ✅ Implemented | "FAQ extraction" 分节注释 + 4 个 helper 保持页面内函数 |
-| **TDP-03** | Support-Content Trust + Fallback 链整合 | Phase 82 | ✅ Implemented (refined) | "support content resolution" 分节；函数提取回滚为内联（见 Design Refinement #2，契约测试冲突） |
-| **TDP-04** | Import 区整理 | Phase 82 | ✅ Implemented | import 按职责分组（Layout/SEO/Tools/Cluster/Config/Lib）+ 类型 import 内联 |
-| **TDP-05** | 行为保持等价性证明（HTML 快照对比） | Phase 82 | ✅ Implemented | `snapshot-tool-pages.ts` + 11 页 × byte-diff，仅 -6 字节纯空白 |
+| Requirement ID | Description | Assigned Phase | Status |
+| :--- | :--- | :--- | :--- |
+| **PRG-01** | Representative render matrix | Phase 86 | ✅ Implemented |
+| **PRG-02** | Stable HTML contract extractor | Phase 86 | ✅ Implemented |
+| **PRG-03** | Cluster card runtime assertions | Phase 86 | ✅ Implemented |
+| **PRG-04** | Render validation script | Phase 86 | ✅ Implemented |
+| **PRG-05** | Unit tests for contract logic | Phase 86 | ✅ Implemented |
+| **PRG-06** | qa:production wiring | Phase 86 | ✅ Implemented |
+| **PRG-07** | Local-server limitation docs | Phase 86 | ✅ Implemented |
 
-## Design Refinements (recorded after implementation)
+## Fresh Baseline Evidence
 
-1. **TDP-01 顺序描述笔误修正**：原始 REQUIREMENTS 草稿把 `CLUSTER_BLOCKS` 顺序写成 "chart 居首"，但核查重构前 HEAD（`2d81af81`）template 区 8 段 `{xxxGroup && <XxxClusterCard/>}` 的实际出现顺序为 **chart 居末**（creatorSeo → developerData → image → onlineCalculator → pdfDocument → security → textWriting → chart）。重构严格遵循"行为保持"硬约束，数组顺序与重构前一致，byte-diff 证明等价。REQUIREMENTS 文字已据实修正（TDP-01 与 Design Constraint #4）。这是文档描述错误而非重构偏差。
-
-2. **TDP-03 函数提取回滚**：原建议"抽成 `resolveSupportContent(...)` 局部函数返回聚合对象"。实现后 `src/lib/translations.test.ts:253`（契约性测试 "fills missing tool detail support copy with safe SSR fallback content"）失败 —— 该测试用 `toContain` 断言 `[slug].astro` 源码必须内联包含 `supportContentFallback?.faqs ?? []` 与 `safeToolMessages.faqs = faqs`，作为防止 SSR fallback 链被误改的守卫。函数提取把变量名改为参数 `fallback` 破坏了契约。干净 HEAD 上该测试通过，证实是本次重构引入的回归。最终方案回滚为内联三元表达式 + "support content resolution" 分节注释，逻辑 byte-equivalent 于重构前。设计意图（可读性提升）通过分节注释达成，而非函数提取。
+- `npm run validate:translation-corpus` — PASS on 2026-06-23 (`Schema errors: 0`, `Coverage gaps: 0`, `Namespace issues: 325` warnings only).
+- `npm run validate:merge-chain-consistency` — PASS on 2026-06-23 (`Resolved divergences: 0`, `EN-fallback resolutions: 0`, layer overlap warnings only).
+- `npm run validate:tdk-drift` — PASS on 2026-06-23 (`5570/5570` offline records resolved).
+- `npx vitest run src/lib/tool-cluster-factory.test.ts ... src/lib/translations.test.ts` — PASS on 2026-06-23 (`10` files, `76` tests).

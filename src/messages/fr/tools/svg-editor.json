@@ -1,17 +1,16 @@
 {
-  "detailed_description": "...",
+  "detailed_description": "L’éditeur SVG permet de visualiser, modifier et nettoyer du code SVG directement dans le navigateur. Il aide à ajuster des formes, couleurs, dimensions et attributs tout en gardant un aperçu rapide du rendu, ce qui est pratique pour préparer des icônes, illustrations et ressources vectorielles avant intégration.",
   "usage_steps": [
-    "Étape 1...",
-    "Étape 2...",
-    "Étape 3...",
-    "Étape 4...",
-    "Étape 5...",
-    "Étape 6..."
+    "Collez un code SVG ou chargez un exemple dans l’éditeur.",
+    "Modifiez les attributs, formes, couleurs ou dimensions nécessaires.",
+    "Observez l’aperçu pour vérifier le rendu après chaque changement.",
+    "Nettoyez ou simplifiez le code si vous préparez une ressource pour le web.",
+    "Copiez le SVG final ou téléchargez-le pour l’utiliser dans votre projet."
   ],
   "usage_examples": [
-    "Exemple 1...",
-    "Exemple 2...",
-    "Exemple 3...",
-    "Exemple 4..."
+    "Ajuster la couleur d’une icône avant de l’intégrer dans une interface.",
+    "Inspecter rapidement un SVG fourni par un outil de design.",
+    "Nettoyer une illustration vectorielle pour réduire le code embarqué.",
+    "Tester une modification de viewBox avant publication."
   ]
 }

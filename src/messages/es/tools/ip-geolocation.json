@@ -1,0 +1,16 @@
+{
+  "detailed_description": "Geolocalización IP consulta datos aproximados de ubicación de red para direcciones IPv4 o IPv6. Introduce una IP o usa tu IP actual para revisar país, región, ciudad, zona horaria, coordenadas, ISP, organización y ASN cuando el proveedor los devuelve. Los resultados sirven para diagnóstico rápido, no para ubicación exacta.",
+  "usage_steps": [
+    "Introduce una dirección IP o deja el campo vacío para usar tu IP pública actual.",
+    "Haz clic en Buscar o en Mi dirección IP.",
+    "Espera a que el navegador solicite los datos al proveedor de geolocalización.",
+    "Revisa país, región, ciudad, zona horaria, coordenadas, ISP y ASN.",
+    "Usa la vista de mapa solo como referencia aproximada."
+  ],
+  "usage_examples": [
+    "Comprobar si una IP de prueba aparece en el país esperado.",
+    "Confirmar la IP pública y el ISP de la red actual.",
+    "Depurar lógica de localización comparando país y zona horaria.",
+    "Guardar una instantánea rápida antes de acudir a una fuente más autorizada."
+  ]
+}

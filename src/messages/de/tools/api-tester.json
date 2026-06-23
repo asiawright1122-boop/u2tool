@@ -1,17 +1,16 @@
 {
-  "detailed_description": "...",
+  "detailed_description": "Der API Tester sendet HTTP-Anfragen direkt aus dem Browser und zeigt Statuscode, Antworttext, Header und Fehlermeldungen übersichtlich an. Er eignet sich für schnelle REST-Checks, Debugging von Endpunkten und das Prüfen von Authentifizierungs- oder Payload-Änderungen ohne ein separates Desktop-Tool.",
   "usage_steps": [
-    "Schritt 1...",
-    "Schritt 2...",
-    "Schritt 3...",
-    "Schritt 4...",
-    "Schritt 5...",
-    "Schritt 6..."
+    "Wählen Sie die HTTP-Methode wie GET, POST, PUT oder DELETE.",
+    "Geben Sie die vollständige API-URL ein.",
+    "Fügen Sie bei Bedarf Header, Query-Parameter oder einen Request-Body hinzu.",
+    "Senden Sie die Anfrage und prüfen Sie Statuscode, Header und Antwortinhalt.",
+    "Passen Sie die Eingaben an und wiederholen Sie den Test für weitere Szenarien."
   ],
   "usage_examples": [
-    "Beispiel 1...",
-    "Beispiel 2...",
-    "Beispiel 3...",
-    "Beispiel 4..."
+    "Einen neuen REST-Endpunkt mit einer GET-Anfrage prüfen.",
+    "Einen JSON-Body per POST testen, bevor er in Code übernommen wird.",
+    "Header wie Authorization oder Content-Type vergleichen.",
+    "Fehlermeldungen einer API schnell reproduzieren und dokumentieren."
   ]
 }

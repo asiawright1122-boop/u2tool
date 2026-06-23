@@ -11,14 +11,7 @@ import StaticSidebar from '@/components/layout/StaticSidebar.astro';
 import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
 import Footer from '@/components/layout/Footer.astro';
 import CategorySupportSection from '@/components/categories/CategorySupportSection.astro';
-import ChartToolClusterSection from '@/components/discovery/ChartToolClusterSection.astro';
-import CreatorSeoClusterSection from '@/components/discovery/CreatorSeoClusterSection.astro';
-import DeveloperDataToolClusterSection from '@/components/discovery/DeveloperDataToolClusterSection.astro';
-import ImageToolClusterSection from '@/components/discovery/ImageToolClusterSection.astro';
-import OnlineCalculatorClusterSection from '@/components/discovery/OnlineCalculatorClusterSection.astro';
-import PdfDocumentToolClusterSection from '@/components/discovery/PdfDocumentToolClusterSection.astro';
-import SecurityToolClusterSection from '@/components/discovery/SecurityToolClusterSection.astro';
-import TextWritingToolClusterSection from '@/components/discovery/TextWritingToolClusterSection.astro';
+import ToolClusterSection from '@/components/discovery/ToolClusterSection.astro';
 import Breadcrumb from '@/components/layout/Breadcrumb.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
@@ -249,7 +242,10 @@ const collectionData = {
         )}
 
         {category === 'generators' && (
-          <CreatorSeoClusterSection
+          <ToolClusterSection
+            theme="amber"
+            dataPrefix="creator-seo-cluster"
+            gridCols={3}
             eyebrow={creatorSeoCopy.eyebrow}
             title={creatorSeoCopy.title}
             description={creatorSeoCopy.description}
@@ -261,7 +257,9 @@ const collectionData = {
         )}
 
         {category === 'image' && (
-          <ImageToolClusterSection
+          <ToolClusterSection
+            theme="amber"
+            dataPrefix="image-tool-cluster"
             eyebrow={imageToolCopy.eyebrow}
             title={imageToolCopy.title}
             description={imageToolCopy.description}
@@ -273,7 +271,9 @@ const collectionData = {
         )}
 
         {developerDataClusterCategories.includes(category) && (
-          <DeveloperDataToolClusterSection
+          <ToolClusterSection
+            theme="cyan"
+            dataPrefix="developer-data-tool-cluster"
             eyebrow={developerDataToolCopy.eyebrow}
             title={developerDataToolCopy.title}
             description={developerDataToolCopy.description}
@@ -285,7 +285,9 @@ const collectionData = {
         )}
 
         {onlineCalculatorCategories.includes(category) && (
-          <OnlineCalculatorClusterSection
+          <ToolClusterSection
+            theme="emerald"
+            dataPrefix="online-calculator-cluster"
             eyebrow={onlineCalculatorCopy.eyebrow}
             title={onlineCalculatorCopy.title}
             description={onlineCalculatorCopy.description}
@@ -297,7 +299,9 @@ const collectionData = {
         )}
 
         {pdfDocumentClusterCategories.includes(category) && (
-          <PdfDocumentToolClusterSection
+          <ToolClusterSection
+            theme="sky"
+            dataPrefix="pdf-document-tool-cluster"
             eyebrow={pdfDocumentToolCopy.eyebrow}
             title={pdfDocumentToolCopy.title}
             description={pdfDocumentToolCopy.description}
@@ -309,7 +313,9 @@ const collectionData = {
         )}
 
         {securityClusterCategories.includes(category) && (
-          <SecurityToolClusterSection
+          <ToolClusterSection
+            theme="rose"
+            dataPrefix="security-tool-cluster"
             eyebrow={securityToolCopy.eyebrow}
             title={securityToolCopy.title}
             description={securityToolCopy.description}
@@ -321,7 +327,9 @@ const collectionData = {
         )}
 
         {textWritingClusterCategories.includes(category) && (
-          <TextWritingToolClusterSection
+          <ToolClusterSection
+            theme="emerald"
+            dataPrefix="text-writing-tool-cluster"
             eyebrow={textWritingToolCopy.eyebrow}
             title={textWritingToolCopy.title}
             description={textWritingToolCopy.description}
@@ -333,7 +341,9 @@ const collectionData = {
         )}
 
         {category === 'charts' && (
-          <ChartToolClusterSection
+          <ToolClusterSection
+            theme="amber"
+            dataPrefix="chart-tool-cluster"
             eyebrow={chartToolCopy.eyebrow}
             title={chartToolCopy.title}
             description={chartToolCopy.description}
