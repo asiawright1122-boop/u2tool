@@ -8,6 +8,9 @@ public/messages/
 # Astro cache
 .astro/
 
+# HTML snapshot artifacts (behavior-preserving refactor equivalence testing)
+.snapshots/
+
 # Wrangler
 .wrangler/
 

@@ -18,17 +18,23 @@
  * Requirements: 1.4, 1.5, 3.4, 5.1, 5.2, 5.3, 5.4
  */
 
+// --- Layout ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/layout/Header.svelte';
 import StaticSidebar from '@/components/layout/StaticSidebar.astro';
 import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
+import Breadcrumb from '@/components/layout/Breadcrumb.astro';
+
+// --- SEO ---
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
-import Breadcrumb from '@/components/layout/Breadcrumb.astro';
+
+// --- Tools ---
 import ToolWrapper from '@/components/tools/ToolWrapper.svelte';
 import RelatedTools from '@/components/tools/RelatedTools.astro';
 import ToolFAQ from '@/components/tools/ToolFAQ.astro';
-import ChartToolClusterCard from '@/components/tools/ChartToolClusterCard.astro';
+
+// --- Cluster (order matches CLUSTER_BLOCKS array below: creatorSeo → developerData → image → onlineCalculator → pdfDocument → security → textWriting → chart) ---
 import CreatorSeoToolClusterCard from '@/components/tools/CreatorSeoToolClusterCard.astro';
 import DeveloperDataToolClusterCard from '@/components/tools/DeveloperDataToolClusterCard.astro';
 import ImageToolClusterCard from '@/components/tools/ImageToolClusterCard.astro';
@@ -36,8 +42,13 @@ import OnlineCalculatorClusterCard from '@/components/tools/OnlineCalculatorClus
 import PdfDocumentToolClusterCard from '@/components/tools/PdfDocumentToolClusterCard.astro';
 import SecurityToolClusterCard from '@/components/tools/SecurityToolClusterCard.astro';
 import TextWritingToolClusterCard from '@/components/tools/TextWritingToolClusterCard.astro';
+import ChartToolClusterCard from '@/components/tools/ChartToolClusterCard.astro';
+
+// --- Config ---
 import { tools, categories, getToolsByCategory } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
+
+// --- Lib ---
 import { isValidLocale } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadBaseUiMessages, loadToolPageMessages } from '@/lib/translations';
@@ -47,46 +58,62 @@ import { buildLocalizedPagePath, buildLocalizedPageUrl, getHreflang, withBrand }
 import { sanitizeHtml } from '@/lib/sanitize';
 import { assessSupportContentTrust } from '@/lib/content-trust';
 import { buildSafeFallbackSupportContent } from '@/lib/support-content-fallback';
+import { findComparisonGuideForTool, getComparisonUiCopy } from '@/lib/comparison-surfaces';
 import {
   buildChartToolClusterGroupForTool,
   chartToolClusterPath,
   getChartToolClusterCopy,
+  type ChartToolClusterGroup,
+  type ChartToolClusterCopy,
 } from '@/lib/chart-tool-cluster';
-import { findComparisonGuideForTool, getComparisonUiCopy } from '@/lib/comparison-surfaces';
 import {
   buildCreatorSeoClusterGroupForTool,
   creatorSeoClusterPath,
   getCreatorSeoClusterCopy,
+  type CreatorSeoClusterGroup,
+  type CreatorSeoClusterCopy,
 } from '@/lib/creator-seo-cluster';
 import {
   buildDeveloperDataToolClusterGroupForTool,
   developerDataToolClusterPath,
   getDeveloperDataToolClusterCopy,
+  type DeveloperDataToolClusterGroup,
+  type DeveloperDataToolClusterCopy,
 } from '@/lib/developer-data-tool-cluster';
 import {
   buildImageToolClusterGroupForTool,
   getImageToolClusterCopy,
   imageToolClusterPath,
+  type ImageToolClusterGroup,
+  type ImageToolClusterCopy,
 } from '@/lib/image-tool-cluster';
 import {
   buildOnlineCalculatorClusterGroupForTool,
   getOnlineCalculatorClusterCopy,
   onlineCalculatorClusterPath,
+  type OnlineCalculatorClusterGroup,
+  type OnlineCalculatorClusterCopy,
 } from '@/lib/online-calculator-cluster';
 import {
   buildPdfDocumentToolClusterGroupForTool,
   getPdfDocumentToolClusterCopy,
   pdfDocumentToolClusterPath,
+  type PdfDocumentToolClusterGroup,
+  type PdfDocumentToolClusterCopy,
 } from '@/lib/pdf-document-tool-cluster';
 import {
   buildSecurityToolClusterGroupForTool,
   getSecurityToolClusterCopy,
   securityToolClusterPath,
+  type SecurityToolClusterGroup,
+  type SecurityToolClusterCopy,
 } from '@/lib/security-tool-cluster';
 import {
   buildTextWritingToolClusterGroupForTool,
   getTextWritingToolClusterCopy,
   textWritingToolClusterPath,
+  type TextWritingToolClusterGroup,
+  type TextWritingToolClusterCopy,
 } from '@/lib/text-writing-tool-cluster';
 
 export const prerender = false;
@@ -98,6 +125,7 @@ const localeCandidate = Astro.params.locale;
 if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate)) {
   return Astro.redirect('/en/tools/', 302);
 }
+
 const locale: Locale = localeCandidate;
 
 const slugCandidate = Astro.params.slug;
@@ -120,6 +148,10 @@ const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
 const headerTranslations = buildHeaderTranslations(baseMessages);
 const mobileNavMessages = buildMobileNavMessages(navMessages);
 const comparisonUiCopy = getComparisonUiCopy(locale);
+
+// ---------------------------------------------------------------------------
+// Cluster copy — locale-level labels for each cluster
+// ---------------------------------------------------------------------------
 const chartToolCopy = getChartToolClusterCopy(locale);
 const creatorSeoCopy = getCreatorSeoClusterCopy(locale);
 const developerDataToolCopy = getDeveloperDataToolClusterCopy(locale);
@@ -180,9 +212,7 @@ const softwareAppData = {
 };
 
 // ---------------------------------------------------------------------------
-// FAQ data: extract from translations if available
-// For now, FAQs are generated from the faq system. In the Astro version,
-// we look for faq_q1/faq_a1 pattern or faqs array in translations.
+// FAQ extraction
 // ---------------------------------------------------------------------------
 interface FAQItem {
   question: string;
@@ -236,6 +266,9 @@ function extractFAQs(msgs: Record<string, unknown>): FAQItem[] {
   return faqs;
 }
 
+// ---------------------------------------------------------------------------
+// Support content resolution (trust assessment + fallback chain)
+// ---------------------------------------------------------------------------
 const rawFaqs = extractFAQs(messages);
 const supportContentTrust = assessSupportContentTrust({
   slug: tool.slug,
@@ -257,6 +290,7 @@ const supportContentFallback =
   shouldUseSupportContentFallback
     ? buildSafeFallbackSupportContent(tool.slug, toolName, locale)
     : null;
+
 const detailedDescription = supportContentTrust.blockSupportContent || !hasSupportText(rawDetailedDescription)
   ? supportContentFallback?.detailedDescription ?? ''
   : rawDetailedDescription;
@@ -377,64 +411,82 @@ const comparisonGuide = findComparisonGuideForTool(
   allToolNames,
   allToolDescriptions
 );
-const creatorSeoGroup = buildCreatorSeoClusterGroupForTool(
-  locale,
-  tool.slug,
-  categoryMessages,
-  allToolNames,
-  allToolDescriptions
-);
-const developerDataToolGroup = buildDeveloperDataToolClusterGroupForTool(
-  locale,
-  tool.slug,
-  categoryMessages,
-  allToolNames,
-  allToolDescriptions
-);
-const imageToolGroup = buildImageToolClusterGroupForTool(
-  locale,
-  tool.slug,
-  categoryMessages,
-  allToolNames,
-  allToolDescriptions
-);
-const onlineCalculatorGroup = buildOnlineCalculatorClusterGroupForTool(
-  locale,
-  tool.slug,
-  categoryMessages,
-  allToolNames,
-  allToolDescriptions
-);
-const pdfDocumentToolGroup = buildPdfDocumentToolClusterGroupForTool(
-  locale,
-  tool.slug,
-  categoryMessages,
-  allToolNames,
-  allToolDescriptions
-);
-const securityToolGroup = buildSecurityToolClusterGroupForTool(
-  locale,
-  tool.slug,
-  categoryMessages,
-  allToolNames,
-  allToolDescriptions
-);
-const textWritingToolGroup = buildTextWritingToolClusterGroupForTool(
-  locale,
-  tool.slug,
-  categoryMessages,
-  allToolNames,
-  allToolDescriptions
-);
-const chartToolGroup = buildChartToolClusterGroupForTool(
-  locale,
-  tool.slug,
-  categoryMessages,
-  allToolNames,
-  allToolDescriptions
-);
----
 
+// ---------------------------------------------------------------------------
+// Cluster configuration — 8 blocks, rendered in template order
+// ---------------------------------------------------------------------------
+type ClusterGroup =
+  | ChartToolClusterGroup
+  | CreatorSeoClusterGroup
+  | DeveloperDataToolClusterGroup
+  | ImageToolClusterGroup
+  | OnlineCalculatorClusterGroup
+  | PdfDocumentToolClusterGroup
+  | SecurityToolClusterGroup
+  | TextWritingToolClusterGroup
+  | null;
+
+type ClusterCopy =
+  | ChartToolClusterCopy
+  | CreatorSeoClusterCopy
+  | DeveloperDataToolClusterCopy
+  | ImageToolClusterCopy
+  | OnlineCalculatorClusterCopy
+  | PdfDocumentToolClusterCopy
+  | SecurityToolClusterCopy
+  | TextWritingToolClusterCopy;
+
+const CLUSTER_BLOCKS: Array<{ group: ClusterGroup; Card: any; clusterPath: string; copy: ClusterCopy }> = [
+  {
+    group: buildCreatorSeoClusterGroupForTool(locale, tool.slug, categoryMessages, allToolNames, allToolDescriptions),
+    Card: CreatorSeoToolClusterCard,
+    clusterPath: creatorSeoClusterPath,
+    copy: creatorSeoCopy,
+  },
+  {
+    group: buildDeveloperDataToolClusterGroupForTool(locale, tool.slug, categoryMessages, allToolNames, allToolDescriptions),
+    Card: DeveloperDataToolClusterCard,
+    clusterPath: developerDataToolClusterPath,
+    copy: developerDataToolCopy,
+  },
+  {
+    group: buildImageToolClusterGroupForTool(locale, tool.slug, categoryMessages, allToolNames, allToolDescriptions),
+    Card: ImageToolClusterCard,
+    clusterPath: imageToolClusterPath,
+    copy: imageToolCopy,
+  },
+  {
+    group: buildOnlineCalculatorClusterGroupForTool(locale, tool.slug, categoryMessages, allToolNames, allToolDescriptions),
+    Card: OnlineCalculatorClusterCard,
+    clusterPath: onlineCalculatorClusterPath,
+    copy: onlineCalculatorCopy,
+  },
+  {
+    group: buildPdfDocumentToolClusterGroupForTool(locale, tool.slug, categoryMessages, allToolNames, allToolDescriptions),
+    Card: PdfDocumentToolClusterCard,
+    clusterPath: pdfDocumentToolClusterPath,
+    copy: pdfDocumentToolCopy,
+  },
+  {
+    group: buildSecurityToolClusterGroupForTool(locale, tool.slug, categoryMessages, allToolNames, allToolDescriptions),
+    Card: SecurityToolClusterCard,
+    clusterPath: securityToolClusterPath,
+    copy: securityToolCopy,
+  },
+  {
+    group: buildTextWritingToolClusterGroupForTool(locale, tool.slug, categoryMessages, allToolNames, allToolDescriptions),
+    Card: TextWritingToolClusterCard,
+    clusterPath: textWritingToolClusterPath,
+    copy: textWritingToolCopy,
+  },
+  {
+    group: buildChartToolClusterGroupForTool(locale, tool.slug, categoryMessages, allToolNames, allToolDescriptions),
+    Card: ChartToolClusterCard,
+    clusterPath: chartToolClusterPath,
+    copy: chartToolCopy,
+  },
+];
+---
 <BaseLayout
   title={seoTitle}
   description={seoDescription}
@@ -587,76 +639,16 @@ const chartToolGroup = buildChartToolClusterGroupForTool(
         </section>
       )}
 
-      {creatorSeoGroup && (
-        <CreatorSeoToolClusterCard
-          clusterHref={buildLocalizedPagePath(locale, creatorSeoClusterPath)}
-          copy={creatorSeoCopy}
-          currentSlug={tool.slug}
-          group={creatorSeoGroup}
-        />
-      )}
-
-      {developerDataToolGroup && (
-        <DeveloperDataToolClusterCard
-          clusterHref={buildLocalizedPagePath(locale, developerDataToolClusterPath)}
-          copy={developerDataToolCopy}
-          currentSlug={tool.slug}
-          group={developerDataToolGroup}
-        />
-      )}
-
-      {imageToolGroup && (
-        <ImageToolClusterCard
-          clusterHref={buildLocalizedPagePath(locale, imageToolClusterPath)}
-          copy={imageToolCopy}
-          currentSlug={tool.slug}
-          group={imageToolGroup}
-        />
-      )}
-
-      {onlineCalculatorGroup && (
-        <OnlineCalculatorClusterCard
-          clusterHref={buildLocalizedPagePath(locale, onlineCalculatorClusterPath)}
-          copy={onlineCalculatorCopy}
-          currentSlug={tool.slug}
-          group={onlineCalculatorGroup}
-        />
-      )}
-
-      {pdfDocumentToolGroup && (
-        <PdfDocumentToolClusterCard
-          clusterHref={buildLocalizedPagePath(locale, pdfDocumentToolClusterPath)}
-          copy={pdfDocumentToolCopy}
-          currentSlug={tool.slug}
-          group={pdfDocumentToolGroup}
-        />
-      )}
-
-      {securityToolGroup && (
-        <SecurityToolClusterCard
-          clusterHref={buildLocalizedPagePath(locale, securityToolClusterPath)}
-          copy={securityToolCopy}
-          currentSlug={tool.slug}
-          group={securityToolGroup}
-        />
-      )}
-
-      {textWritingToolGroup && (
-        <TextWritingToolClusterCard
-          clusterHref={buildLocalizedPagePath(locale, textWritingToolClusterPath)}
-          copy={textWritingToolCopy}
-          currentSlug={tool.slug}
-          group={textWritingToolGroup}
-        />
-      )}
-
-      {chartToolGroup && (
-        <ChartToolClusterCard
-          clusterHref={buildLocalizedPagePath(locale, chartToolClusterPath)}
-          copy={chartToolCopy}
-          currentSlug={tool.slug}
-          group={chartToolGroup}
-        />
+      {/* Cluster cards — data-driven loop over 8 cluster blocks */}
+      {CLUSTER_BLOCKS.map(({ group, Card, clusterPath, copy }) =>
+        group && (
+          <Card
+            clusterHref={buildLocalizedPagePath(locale, clusterPath)}
+            copy={copy}
+            currentSlug={tool.slug}
+            group={group}
+          />
+        )
       )}
 
       {/* Tool Component — Island Architecture: hydrate only when visible */}

@@ -2,6 +2,11 @@
 
 ## Archived Milestones
 
+- [x] v0.0.23 Translation Corpus Governance
+  Requirements: [.planning/milestones/v0.0.23-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.23-REQUIREMENTS.md)
+  Audit: [.planning/milestones/v0.0.23-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.23-MILESTONE-AUDIT.md)
+  Status: Shipped on 2026-06-22. Built a three-layer translation corpus governance system (detection-only). Phase 79: split-file schema validator (4-key schema, tiered `detailed_description` thresholds, legacy FAQ variant detection) + coverage/parity detector (17 missing slugs, orphans, inter-locale asymmetry) + base.json namespace EN-consistency check; 44 unit tests green. Phase 80: merge chain consistency auditor — redesigned after premise disproof to multi-source support-copy overlap audit, exported `readMessageFile` + `mergeMessageRecords` as reusable probes, 0 resolved divergences (split file always wins); 17 unit tests green. Phase 81: metadata drift extension (TDK-05) covering `og:title`/`twitter:title`/`keywords`/JSON-LD via new `compareMetadata()` wrapper + 4 seo-probe extractors; 102 unit tests green (78 + 24). All three validators wired into `qa:seo-governance` → `qa:production`. Two premise disproofs transparently recorded.
+
 - [x] v0.0.22 TDK Drift Verification
   Archive: [.planning/milestones/v0.0.22-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.22-MILESTONE-AUDIT.md)
   Requirements: [.planning/REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/REQUIREMENTS.md)
@@ -55,31 +60,22 @@
   Audit: [.planning/milestones/v0.0.13-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-MILESTONE-AUDIT.md)
   Status: Shipped on 2026-06-09. Converted all remaining high-traffic `PopularUtilityTool` catalog placeholders to real Svelte 5 components across Finance, Developer/Security, Content Generators, Social/Media, Lifestyle, Image, and Converter clusters. Added category-level authority content for English `finance`, `generators`, and `lifestyle`, preserved the no-internal-reasoning frontend safety rule, and closed on green build, runtime, SEO, placeholder, and frontend-safety gates.
 
-## Active Milestone: v0.0.23 Translation Corpus Governance
+## Active Milestone: v0.0.24 Tool Detail Page Architecture Refactor
 
-**Goal:** 建立翻译语料的结构完整性 + 覆盖完整性 + 合并一致性三层治理：对 ~5,573 个拆分工具 JSON 文件做 100% 严格校验，并扩展 v0.0.22 漂移检测到 OG/Twitter/keywords/JSON-LD。Detection-only — 不修改任何 message 文件。
+**Goal:** 对 `src/pages/[locale]/tools/[slug].astro`（729 行）做 **behavior-preserving** 架构重构：把 8 组手写复制粘贴的 cluster 配置（copy/path/group 构建 + card 渲染）收敛为页面内单一数据驱动循环，FAQ 提取与 support-content trust+fallback 链整合为清晰的局部区块。**严格限定在 `[slug].astro` 单文件内**，不新建 lib/component 文件（v0.0.25 范围）。重构后渲染输出必须 byte-for-byte 等价，由 HTML 快照对比证明。
 
 **Phase plan:**
 
-- [x] **Phase 79** - Split File Schema & Coverage (TCG-01, TCG-02, TCG-05)
-  - TCG-01: 遍历 ~5,573 拆分文件校验 4-key schema (`detailed_description`/`usage_steps`/`usage_examples`/`faqs`) 与 forbidden tokens。
-  - TCG-02: 以 `src/config/tools/index.ts` catalog 为基准检测缺失文件、孤儿文件、locale 间不对称。
-  - TCG-05: `base.json` `tools` 命名空间 EN 一致性检查（non-EN locale vs EN inner-key drift）。
-  - 产出 JSON 报告 + `validate:translation-corpus` CI gate（并入 `qa:seo-governance` 与 `qa:production`）。
-  - Baseline: 5,573 文件扫描 → 51 schema errors + 37 coverage gaps (gate exit 1) + 325 namespace warnings. 详见 [79-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/79-split-file-schema-coverage/79-BASELINE.md).
-- [x] **Phase 80** - Merge Chain Consistency Auditor (TCG-03) [depends on 79]
-  - **前提证伪（pre-research）**: 原 "`translations.test.ts:45` 用 `deepMerge(base, root)` 与运行时方向相反" 已过时——测试已重写为调用运行时 loader，无 test-vs-runtime 分歧。
-  - **重设计**: 多源 support-copy 重叠审计——抽取 `mergeMessageRecords` 为共享探针，检测 `detailed_description`/`usage_steps`/`usage_examples`/`faqs` 在三层源（`<locale>.json` root / `base.json` `tools.*` / split file）的重叠（warning）与运行时解析分歧（resolved != authoritative split = error）+ 17 缺失 slug 的 EN-fallback 路径（info）。
-  - Baseline: 557 slugs × 10 locales → **0 resolved divergences** (split file 总是胜出, gate PASS) + **15,301 layer-overlap warnings** (15,034 root-only + 267 root+base) + **68 EN-fallback resolutions** (2 distinct slugs). 详见 [80-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/80-merge-chain-consistency-auditor/80-BASELINE.md)。
-- [x] **Phase 81** - Metadata Drift Extension (TCG-04 / TDK-05) [depends on 79]
-  - 扩展 `validate-tdk-drift.ts` 漂移检测到 `og:title`/`twitter:title`/`keywords`/JSON-LD `name`/`description`，复用 Phase 78 的 5-label 分类与 `--online` gate。
-  - 新增 `compareMetadata()` 包装器 + 4 个 seo-probe 提取器（`getOgTitle`/`getTwitterTitle`/`getKeywords`/`extractJsonLdBlocks`）。102 单元测试通过（78 + 24）。5570 tools × 10 locales 离线 self-check PASS。详见 [81-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/81-metadata-drift-extension/81-BASELINE.md)。
+- [ ] **Phase 82** - HTML Snapshot Baseline + Refactor (TDP-01, TDP-02, TDP-03, TDP-04, TDP-05)
+  - 先建快照基线：在重构前 HEAD 构建并抓取代表性 slug × locale 的完整渲染 HTML 存入 gitignored 目录。
+  - 重构 `[slug].astro`：TDP-01 `CLUSTER_BLOCKS` 配置数组 + template map 循环；TDP-02 FAQ 提取局部函数化；TDP-03 support-content trust+fallback 链整合；TDP-04 import 区按职责分组并顺序对齐。
+  - TDP-05 重构后重新构建并抓取相同 slug × locale，与前快照 byte-level diff；HEAD + body 全等价才算通过。
+  - 一次性快照脚本 `scripts/validation/snapshot-tool-pages.ts`，不纳入常驻 gate，可复用于 v0.0.25。
 
 **Requirements:** [.planning/REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/REQUIREMENTS.md)
 
 **Upcoming milestones (order agreed 2026-06-20):**
 
-- v0.0.24 Tool Detail Page Architecture Refactor (behavior-preserving, `src/pages/[locale]/tools/[slug>.astro`)
 - v0.0.25 Cluster Card / Tool Island Commonality Extraction (`src/lib/*-cluster.ts` + `src/components/tools/`)
 
 ## Archived Milestones
