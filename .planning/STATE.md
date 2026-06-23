@@ -1,14 +1,14 @@
 ---
 gsd_state_version: 1.0
-milestone: v0.0.26
-milestone_name: Persistent Render Regression Gate
-status: Active
-stopped_at: Phase 86 implemented; server-backed render validation pending runnable SSR environment
-last_updated: "2026-06-23T13:25:00.000Z"
+milestone: v0.0.27
+milestone_name: TBD
+status: Planning
+stopped_at: v0.0.26 archived; choose v0.0.27 direction
+last_updated: "2026-06-23T15:20:00.000Z"
 last_activity: 2026-06-23
 progress:
-  total_phases: 1
-  completed_phases: 1
+  total_phases: 0
+  completed_phases: 0
   total_plans: 0
   completed_plans: 0
 ---
@@ -20,14 +20,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-06-20)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** v0.0.26 (Persistent Render Regression Gate) — upgrade v0.0.24's one-shot `[slug].astro` HTML snapshot method into a durable render contract gate in `qa:production`, with a direct guard for v0.0.25 Phase 84's missing cluster-card runtime bug.
+**Current focus:** v0.0.27 TBD — choose the next milestone direction after v0.0.26 archival.
 **Frontend safety:** No user-facing surface may expose internal reasoning traces, hidden prompts, scratchpads, handoff notes, or raw planning notes.
 
 ## Current Position
 
-Phase: 86 IMPLEMENTED; server-backed validation pending runnable SSR environment
-Status: v0.0.26 render contract gate implemented. Added `tool-page-render-contract.ts`, `validate-tool-page-render-contract.ts`, Vitest coverage, and `qa:production` wiring. No product rendering or translation content changes.
-Last activity: 2026-06-23 — Phase 86 implemented with TDD. New tests cover the 11-route matrix, stable HTML contract extraction, pass/fail comparison, CLI option parsing, report summary, and a synthetic Phase-84-style missing cluster-card regression. Local server-backed validation remains blocked in this sandbox if no SSR server is reachable.
+Phase: v0.0.27 planning
+Status: v0.0.26 archived and pushed. v0.0.27 direction not selected yet.
+Last activity: 2026-06-23 — v0.0.26 finalized after local SSR validation. `FETCH_BASE_URL=http://127.0.0.1:4321 npm run validate:tool-page-render-contract -- --timeout-ms 30000` passed 11/11 routes; commit `eed8e7dd` pushed to `origin/main`.
 
 ## Milestone Context
 
@@ -39,10 +39,11 @@ Last activity: 2026-06-23 — Phase 86 implemented with TDD. New tests cover the
 | 83 | Shared cluster types + factory extraction | **Complete** |
 | 84 | Unified ToolClusterCard + ToolClusterSection components | **Complete** |
 | 85 | CLUSTER_BLOCKS type simplification + bug fix + cleanup | **Complete** |
-| 86 | Persistent tool-page render contract gate | **Complete** |
+| 86 | Persistent tool-page render contract gate | **Complete / Archived in v0.0.26** |
 
 ## Accumulated Context
 
+- 2026-06-23 v0.0.26 archived. Commit `eed8e7dd` pushed to `origin/main`. Local SSR probe returned HTTP 200 for `/en/tools/youtube-tags-generator/`; render contract gate passed 11/11 routes with `FETCH_BASE_URL=http://127.0.0.1:4321 npm run validate:tool-page-render-contract -- --timeout-ms 30000`. Timeout follow-up included `--timeout-ms` and route-level abort messages to prevent perceived hangs. v0.0.27 is now TBD; candidate directions: Production QA Closure, Online TDK / Metadata Baseline, Render Gate CI Ergonomics, or Translation Namespace Warning Reduction.
 - 2026-06-23 v0.0.26 planned. User order: A+C 后 B — close v0.0.25, clear translation-corpus debt, then plan v0.0.26. Fresh verification: `validate:translation-corpus` PASS (`Schema errors: 0`, `Coverage gaps: 0`, namespace warnings only), `validate:merge-chain-consistency` PASS (`Resolved divergences: 0`, `EN-fallback resolutions: 0`), `validate:tdk-drift` PASS (`5570/5570`), and 10 focused Vitest files / 76 tests PASS. v0.0.26 scope selected as TDP-06 persistent render tests: fixed SSR route matrix, stable HTML contract extractor, cluster-card runtime assertions, validation script, tests, and `qa:production` wiring. Known local sandbox blocker remains: commands requiring local bind/listen or fetch can fail with environment `EPERM` / `fetch failed`.
 - 2026-06-23 Phase 86 implemented. `scripts/validation/tool-page-render-contract.ts` defines the 11-route matrix and zero-dependency contract comparator; `scripts/validation/validate-tool-page-render-contract.ts` fetches rendered SSR HTML with `fetchHtmlWithRetry`, compares contracts, supports `--base-url`, `--filter`, `--json-out`, and `--update-baseline`, and exits non-zero on drift. `scripts/validation/tool-page-render-contract.test.ts` covers extraction/comparison plus a missing `data-tool-cluster` regression case. `package.json` wires `validate:tool-page-render-contract` into `qa:production` after `build`.
 - 2026-06-23 v0.0.25 shipped (all 3 phases: 83/84/85). Phase 83 extracted shared `tool-cluster-types.ts` (5 interfaces: `ToolClusterItem`, `ToolClusterGroup`, `ToolClusterCopy`, `ToolClusterGroupDef`, `ClusterColorTheme`) + `tool-cluster-factory.ts` (4 generic builders) from 8 `*-cluster.ts` data files. Phase 84 replaced 16 per-cluster Astro components (8 Card + 8 Section) with unified `ToolClusterCard.astro` + `ToolClusterSection.astro`, deleted old files, updated all consumer pages. Phase 85 added `ToolClusterBlock` interface to shared types, fixed critical template bug (stale `Card` discriminator from pre-Phase-84 refactor — template was destructuring undefined `Card` instead of using `ToolClusterCard`), replaced inline CLUSTER_BLOCKS type with named interface, removed 16 unused per-cluster type imports from `[slug].astro`. MILESTONE-AUDIT PASS. Local current sandbox cannot re-run `astro check` / `astro build` because Cloudflare local listening is blocked (`listen EPERM`), but prior audit records those gates green in a runnable environment.
@@ -68,23 +69,20 @@ Last activity: 2026-06-23 — Phase 86 implemented with TDD. New tests cover the
 - 2026-06-09 GSC recovery cohort plan created with exact URL lists, action rules, owner model, and checkpoints.
 - 2026-06-12 GSC URL Inspection checkpoint recorded.
 
-Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20, v0.0.21, v0.0.22, v0.0.23, v0.0.24, and v0.0.25 are complete and archived. v0.0.26 is active/planned.
+Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20, v0.0.21, v0.0.22, v0.0.23, v0.0.24, v0.0.25, and v0.0.26 are complete and archived. v0.0.27 is pending direction selection.
 
 ## Next Action
 
-**Validate Phase 86 in a runnable SSR environment.**
+**Choose v0.0.27 direction.**
 
-Run:
-1. `npx vitest run scripts/validation/tool-page-render-contract.test.ts`
-2. Start local SSR (`npm run build && npm run preview` or project-standard preview)
-3. `FETCH_BASE_URL=http://localhost:4321 npm run validate:tool-page-render-contract`
-4. Run broader `qa:production` when local bind/listen is available.
-
-Carried-over optional:
-- Run `validate:tdk-drift:online` against production when network/WAF token is available.
+Candidate options:
+1. Production QA Closure
+2. Online TDK / Metadata Baseline
+3. Render Gate CI Ergonomics
+4. Translation Namespace Warning Reduction
 
 ## Session
 
-Last Date: 2026-06-23T13:25:00.000Z
-Stopped At: Phase 86 implemented; server-backed render validation pending runnable SSR environment
+Last Date: 2026-06-23T15:20:00.000Z
+Stopped At: v0.0.26 archived; choose v0.0.27 direction
 Resume File: .planning/REQUIREMENTS.md

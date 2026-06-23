@@ -2,6 +2,11 @@
 
 ## Archived Milestones
 
+- [x] v0.0.26 Persistent Render Regression Gate
+  Requirements: [.planning/milestones/v0.0.26-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.26-REQUIREMENTS.md)
+  Audit: [.planning/milestones/v0.0.26-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.26-MILESTONE-AUDIT.md)
+  Status: Shipped on 2026-06-23. Added a durable SSR render contract gate for 11 representative tool pages, covering all 8 cluster families plus FAQ, CJK, and RTL sentinel routes. The gate extracts stable semantic HTML contracts (head metadata, canonical, JSON-LD types, cluster attributes, sibling links, FAQ count, and body sentinels) instead of committing full HTML snapshots. It directly guards the v0.0.25 Phase 84 missing cluster-card runtime bug, supports `--timeout-ms` to avoid hanging fetches, and is wired into `qa:production` after `build`. Local SSR validation passed 11/11 routes against `http://127.0.0.1:4321` on 2026-06-23.
+
 - [x] v0.0.25 Cluster Card / Tool Island Commonality Extraction
   Requirements: [.planning/milestones/v0.0.25-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.25-REQUIREMENTS.md)
   Audit: [.planning/milestones/v0.0.25-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.25-MILESTONE-AUDIT.md)
@@ -70,18 +75,15 @@
   Audit: [.planning/milestones/v0.0.13-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-MILESTONE-AUDIT.md)
   Status: Shipped on 2026-06-09. Converted all remaining high-traffic `PopularUtilityTool` catalog placeholders to real Svelte 5 components across Finance, Developer/Security, Content Generators, Social/Media, Lifestyle, Image, and Converter clusters. Added category-level authority content for English `finance`, `generators`, and `lifestyle`, preserved the no-internal-reasoning frontend safety rule, and closed on green build, runtime, SEO, placeholder, and frontend-safety gates.
 
-## Active Milestone: v0.0.26 Persistent Render Regression Gate
+## Next Milestone: v0.0.27 TBD
 
-**Goal:** Upgrade the v0.0.24 one-shot `[slug].astro` HTML snapshot workflow into a durable `qa:production` render contract gate. The gate will fetch a fixed representative SSR page matrix, extract stable semantic HTML contracts, and fail on regressions like the v0.0.25 Phase 84 missing cluster-card render bug.
+**Goal:** TBD after direction selection.
 
 **Requirements:** [.planning/REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/REQUIREMENTS.md)
 
-**Phase plan:**
+**Candidate directions:**
 
-- [ ] **Phase 86** - Persistent tool-page render contract gate
-
-**Design notes:**
-
-- Reuse the existing one-shot `scripts/validation/snapshot-tool-pages.ts` matrix as input, but do not commit full-page HTML snapshots.
-- Store compact contract expectations and assert stable fields: head metadata, JSON-LD types, cluster card attributes, FAQ count, support-copy sentinels, and related links.
-- Direct regression target: any cluster matrix page missing `data-tool-cluster`, `data-tool-cluster-group`, or sibling links fails with a Phase-84-style cluster-card message.
+- Production QA Closure
+- Online TDK / Metadata Baseline
+- Render Gate CI Ergonomics
+- Translation Namespace Warning Reduction
