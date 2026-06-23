@@ -2,6 +2,11 @@
 
 ## Archived Milestones
 
+- [x] v0.0.24 Tool Detail Page Architecture Refactor
+  Requirements: [.planning/milestones/v0.0.24-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.24-REQUIREMENTS.md)
+  Audit: [.planning/milestones/v0.0.24-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.24-MILESTONE-AUDIT.md)
+  Status: Shipped on 2026-06-23. Behavior-preserving single-file refactor of `src/pages/[locale]/tools/[slug].astro` (729 → 721 lines): collapsed 8 copy-pasted cluster configurations (getXxxClusterCopy + buildXxxClusterGroupForTool + {xxxGroup && <XxxClusterCard/>}) into one `CLUSTER_BLOCKS` array + single `.map` render loop. FAQ extraction + support-content trust/fallback chain organized into clear frontmatter sections. HTML snapshot byte-diff over 11 representative slug × locale pages proves byte-equivalence (-6 bytes pure whitespace). TDP-01/02/03/04/05 all implemented in Phase 82; two design refinements transparently recorded (TDP-01 order-description typo fix; TDP-03 function-extraction rolled back to inline after `translations.test.ts` contract-test regression, caught on clean HEAD). `qa:production` chain 27/28 green (sole failure = v0.0.23 legacy detection-only `validate:translation-corpus`). Single-file boundary + refactor-only discipline held: zero `src/messages/`, `src/lib/`, `src/components/` changes; only new file is one-shot `scripts/validation/snapshot-tool-pages.ts`.
+
 - [x] v0.0.23 Translation Corpus Governance
   Requirements: [.planning/milestones/v0.0.23-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.23-REQUIREMENTS.md)
   Audit: [.planning/milestones/v0.0.23-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.23-MILESTONE-AUDIT.md)
@@ -60,23 +65,19 @@
   Audit: [.planning/milestones/v0.0.13-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.13-MILESTONE-AUDIT.md)
   Status: Shipped on 2026-06-09. Converted all remaining high-traffic `PopularUtilityTool` catalog placeholders to real Svelte 5 components across Finance, Developer/Security, Content Generators, Social/Media, Lifestyle, Image, and Converter clusters. Added category-level authority content for English `finance`, `generators`, and `lifestyle`, preserved the no-internal-reasoning frontend safety rule, and closed on green build, runtime, SEO, placeholder, and frontend-safety gates.
 
-## Active Milestone: v0.0.24 Tool Detail Page Architecture Refactor
+## Active Milestone: v0.0.25 Cluster Card / Tool Island Commonality Extraction
 
-**Goal:** 对 `src/pages/[locale]/tools/[slug].astro`（729 行）做 **behavior-preserving** 架构重构：把 8 组手写复制粘贴的 cluster 配置（copy/path/group 构建 + card 渲染）收敛为页面内单一数据驱动循环，FAQ 提取与 support-content trust+fallback 链整合为清晰的局部区块。**严格限定在 `[slug].astro` 单文件内**，不新建 lib/component 文件（v0.0.25 范围）。重构后渲染输出必须 byte-for-byte 等价，由 HTML 快照对比证明。
+**Goal:** 把 8 个 `src/lib/*-cluster.ts`（`getXxxClusterCopy` / `buildXxxClusterGroupForTool` / `xxxClusterPath`）和 8 个 `*ClusterCard.astro` 的共性抽取到统一的 `src/lib/tool-cluster.ts` + `src/components/tools/ToolClusterCard.astro`，消除 lib/component 层的对称性。v0.0.24 在页面层建立的 `CLUSTER_BLOCKS` 数组届时将简化为对统一 lib 的单次调用。
+
+**Requirements:** TBD (to be drafted when phase planning begins)
 
 **Phase plan:**
 
-- [ ] **Phase 82** - HTML Snapshot Baseline + Refactor (TDP-01, TDP-02, TDP-03, TDP-04, TDP-05)
-  - 先建快照基线：在重构前 HEAD 构建并抓取代表性 slug × locale 的完整渲染 HTML 存入 gitignored 目录。
-  - 重构 `[slug].astro`：TDP-01 `CLUSTER_BLOCKS` 配置数组 + template map 循环；TDP-02 FAQ 提取局部函数化；TDP-03 support-content trust+fallback 链整合；TDP-04 import 区按职责分组并顺序对齐。
-  - TDP-05 重构后重新构建并抓取相同 slug × locale，与前快照 byte-level diff；HEAD + body 全等价才算通过。
-  - 一次性快照脚本 `scripts/validation/snapshot-tool-pages.ts`，不纳入常驻 gate，可复用于 v0.0.25。
-
-**Requirements:** [.planning/REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/REQUIREMENTS.md)
+- [ ] **Phase 83** - TBD
 
 **Upcoming milestones (order agreed 2026-06-20):**
 
-- v0.0.25 Cluster Card / Tool Island Commonality Extraction (`src/lib/*-cluster.ts` + `src/components/tools/`)
+- (none currently agreed beyond v0.0.25)
 
 ## Archived Milestones
 

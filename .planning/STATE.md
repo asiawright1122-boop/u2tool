@@ -1,16 +1,16 @@
 ---
 gsd_state_version: 1.0
-milestone: v0.0.24
-milestone_name: - Translation Corpus Governance
-status: Complete
-stopped_at: v0.0.23 archived (MILESTONE-AUDIT PASS); v0.0.24 requirements + roadmap defined, Phase 82 not started
-last_updated: "2026-06-22T04:30:00.000Z"
-last_activity: 2026-06-22
+milestone: v0.0.25
+milestone_name: - Cluster Card / Tool Island Commonality Extraction
+status: Active
+stopped_at: v0.0.24 archived (MILESTONE-AUDIT PASS); v0.0.25 requirements not yet drafted, Phase 83 not started
+last_updated: "2026-06-23T02:45:00.000Z"
+last_activity: 2026-06-23
 progress:
-  total_phases: 3
-  completed_phases: 3
-  total_plans: 3
-  completed_plans: 3
+  total_phases: 1
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
 ---
 
 # Project State
@@ -20,14 +20,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-06-20)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** v0.0.24 (Tool Detail Page Architecture Refactor) — behavior-preserving single-file refactor of `src/pages/[locale]/tools/[slug].astro` (729 lines): collapse 8 copy-pasted cluster configurations into one page-internal data-driven loop, integrate FAQ extraction + support-content trust/fallback resolution into clear local blocks. HTML snapshot byte-diff proves equivalence.
+**Current focus:** v0.0.25 (Cluster Card / Tool Island Commonality Extraction) — extract commonality from 8 `src/lib/*-cluster.ts` files + 8 `*ClusterCard.astro` components into unified `src/lib/tool-cluster.ts` + `src/components/tools/ToolClusterCard.astro`. Prerequisite v0.0.24 completed: `CLUSTER_BLOCKS` array in `[slug].astro` now serves as the single call-site to be simplified in v0.0.25.
 **Frontend safety:** No user-facing surface may expose internal reasoning traces, hidden prompts, scratchpads, handoff notes, or raw planning notes.
 
 ## Current Position
 
-Phase: 82 NOT STARTED; v0.0.23 milestone COMPLETE + archived (2026-06-22)
-Status: v0.0.24 requirements + roadmap defined; awaiting Phase 82 kick-off
-Last activity: 2026-06-22 — v0.0.23 archived (MILESTONE-AUDIT PASS: 5/5 requirements TCG-01/02/03/04/05 implemented across phases 79/80/81, 163 unit tests green, all offline self-checks pass, two premise disproofs transparently recorded). v0.0.24 (Tool Detail Page Architecture Refactor) requirements drafted: 5 TDP requirements covering page-internal cluster loop (TDP-01), FAQ local-function (TDP-02), support-content chain integration (TDP-03), import reorganization (TDP-04), and HTML snapshot byte-diff equivalence proof (TDP-05). Scope locked to `[slug].astro` single file (no new lib/component — that is v0.0.25). ROADMAP updated: v0.0.23 → archived, v0.0.24 → Active Milestone with single Phase 82. REQUIREMENTS + milestones/v0.0.23-REQUIREMENTS.md snapshot + milestones/v0.0.23-MILESTONE-AUDIT.md written.
+Phase: 83 NOT STARTED; v0.0.24 milestone COMPLETE + archived (2026-06-23)
+Status: v0.0.25 (Cluster Card / Tool Island Commonality Extraction) requirements not yet drafted; awaiting phase planning
+Last activity: 2026-06-23 — v0.0.24 MILESTONE-AUDIT PASS: 5/5 requirements TDP-01/02/03/04/05 implemented in Phase 82, HTML snapshot byte-diff proves 11 pages byte-equivalent (-6 bytes pure whitespace), `qa:production` chain 27/28 green (sole failure = v0.0.23 legacy `validate:translation-corpus`), two design refinements transparently recorded (TDP-01 order-description typo fix; TDP-03 function-extraction rolled back to inline after contract-test regression). Single-file boundary + refactor-only discipline held. `[slug].astro` refactored from 729 → 721 lines with `CLUSTER_BLOCKS` array + single `.map` render loop. ROADMAP: v0.0.24 → archived, v0.0.25 → Active Milestone. REQUIREMENTS + milestones/v0.0.24-REQUIREMENTS.md snapshot + milestones/v0.0.24-MILESTONE-AUDIT.md written.
 
 ## Milestone Context
 
@@ -35,12 +35,11 @@ Last activity: 2026-06-22 — v0.0.23 archived (MILESTONE-AUDIT PASS: 5/5 requir
 
 | Phase | Focus | Status |
 |-------|-------|--------|
-| 79 | Split File Schema & Coverage (TCG-01, TCG-02, TCG-05) | **Complete** |
-| 80 | Merge Chain Consistency Auditor (TCG-03) | **Complete** |
-| 81 | Metadata Drift Extension (TCG-04 / TDK-05) | **Complete** |
+| 82 | Tool Detail Page Architecture Refactor (TDP-01, TDP-02, TDP-03, TDP-04, TDP-05) | **Complete** |
 
 ## Accumulated Context
 
+- 2026-06-23 v0.0.24 shipped + archived. MILESTONE-AUDIT PASS: 5/5 requirements (TDP-01/02/03/04/05) implemented in Phase 82. Behavior-preserving single-file refactor of `[slug].astro` (729 → 721 lines): `CLUSTER_BLOCKS` config array + single `.map` render loop replacing 8 copy-pasted cluster blocks; FAQ extraction + support-content trust/fallback organized into clear frontmatter sections; imports grouped by concern. HTML snapshot byte-diff: 11/11 pages equivalent (-6 bytes pure whitespace). `qa:production` chain: 27/28 green. Two design refinements recorded: (1) TDP-01 REQUIREMENTS order-description typo (chart居首→chart居末, corrected to match pre-refactor HEAD actual render order); (2) TDP-03 `resolveSupportContent()` function extraction rolled back to inline — `translations.test.ts:253` contract test asserts SSR fallback chain must remain inline (`supportContentFallback?.faqs ?? []`), function extraction broke contract (clean HEAD test passes, refactored fails → regression identified and rolled back). Single-file + refactor-only discipline held: zero `src/messages/`, `src/lib/`, `src/components/` changes. Commit `1d077e2a` pushed to origin/main. REQUIREMENTS + milestones/v0.0.24-REQUIREMENTS.md snapshot + milestones/v0.0.24-MILESTONE-AUDIT.md written. ROADMAP: v0.0.24 → archived, v0.0.25 → Active.
 - 2026-06-22 v0.0.23 archived + v0.0.24 planned. v0.0.23 MILESTONE-AUDIT PASS (5/5 requirements, 163 tests green, offline self-checks pass, two premise disproofs recorded). REQUIREMENTS.md rolled over to v0.0.24 (Tool Detail Page Architecture Refactor): 5 TDP requirements — TDP-01 page-internal `CLUSTER_BLOCKS` array + map loop (collapses 8 copy-pasted cluster copy/path/group-build + card-render blocks), TDP-02 FAQ extraction local-function, TDP-03 support-content trust+fallback chain integration, TDP-04 import reorganization, TDP-05 HTML snapshot byte-diff equivalence proof. **Scope locked to `[slug].astro` single file** (no new lib/component — v0.0.25 scope). User-confirmed decisions: (a) page-internal data-driven loop (no new files except one-shot snapshot script), (b) HTML snapshot byte-diff as the behavior-preservation verification strategy. ROADMAP: v0.0.23 → Archived, v0.0.24 → Active with single Phase 82 (snapshot baseline first, then refactor, then re-snapshot diff). v0.0.23-REQUIREMENTS.md snapshot + v0.0.23-MILESTONE-AUDIT.md written to milestones/.
 - 2026-06-22 Phase 81 complete (wave 3 of v0.0.23, **milestone complete**). Extended `validate-tdk-drift.ts` with `compareMetadata()` wrapper detecting drift on `og:title`, `twitter:title`, `keywords`, and JSON-LD `SoftwareApplication` `name`/`description`. Added 4 new zero-dependency regex extractors to `src/lib/seo-probe.ts`: `getOgTitle`, `getTwitterTitle`, `getKeywords`, `extractJsonLdBlocks` (multi-block parse, silently skips malformed JSON). Extended types: `ExpectedTdk` (+`expectedToolName` = `name ?? slug` unbranded, +`sourceKeywords` if split file has it), `RenderedTdk` (+`ogTitle`/`twitterTitle`/`keywords`/`jsonLdBlocks`), `DriftResult.field` → new `MetadataField` union (`'title'|'description'|'og:title'|'twitter:title'|'keywords'|'jsonld_name'|'jsonld_description'`). Architecture: `compareBrandedMetaTitle` reuses full 5-label logic for OG/Twitter (same `brandedSeoTitle` source as `<title>`); `compareJsonLdName` uses unbranded `expectedToolName` (no BRAND_DRIFT); `compareKeywordsMeta` skips when source has no keywords (no false positives — no source currently has keywords); `compareJsonLdDescription` mirrors `compareTdkDescription`. `findSoftwareApplicationBlock` selects from up to 4 JSON-LD blocks by `@type`. 102 unit tests green (78 in `validate-tdk-drift.test.ts` + 24 in new `seo-probe.test.ts`). 5570 tools × 10 locales offline self-check PASS (3.0s). No wiring changes — `validate:tdk-drift` already in `qa:seo-governance` → `qa:production`. Per-tool online check count: 6 fields (2 TDK + 4 metadata; keywords = 0 today). 81-PLAN.md + 81-BASELINE.md written. REQUIREMENTS TCG-04 ✓ + traceability table + ROADMAP Phase 81 ✓ updated. **v0.0.23 Translation Corpus Governance milestone complete: TCG-01/02/03/04/05 all implemented.**
 - 2026-06-22 Phase 80 complete (wave 2 of v0.0.23). **TCG-03 original premise DISPROVEN** (same pattern as Phase 79 fix-3/fix-5): "`translations.test.ts:45` uses `deepMerge(base, root)` opposite to runtime" — test was rewritten to call runtime loaders, no test-vs-runtime divergence exists. **Redesigned to multi-source support-copy overlap audit.** Exported `mergeMessageRecords` + `isMergeableRecord` + new pure async `readMessageFile` (offline, no glob/cache/fetch) from `src/lib/translations.ts` — single-source merge reuse (REQUIREMENTS line 84). Built `scripts/validation/validate-merge-chain-consistency.ts` + `.test.ts` (17 tests). Three audits: (1) `layer_overlap` = 15,301 warnings (15,034 root-only + 267 root+base; 498 distinct slugs; near-ubiquitous stale support-copy in legacy aggregate root); (2) `resolved_divergence` = **0** (merge logic correct, split file always wins → gate PASS exit 0); (3) `en_fallback_resolution` = 68 info (17 Phase-79 missing slugs × 4 fields, 2 distinct slugs: ip-geolocation + screen-recorder). Gate design: only resolved divergences fail gate; 0 → warning-only regression guard. Wired `validate:merge-chain-consistency` into `qa:seo-governance` + `qa:production`. 80-BASELINE.md + 80-PLAN.md updated. REQUIREMENTS TCG-03 + traceability table + ROADMAP marked implemented. `readMessageFile` is reusable by Phase 81.
@@ -62,34 +61,35 @@ Last activity: 2026-06-22 — v0.0.23 archived (MILESTONE-AUDIT PASS: 5/5 requir
 - 2026-06-09 GSC recovery cohort plan created with exact URL lists, action rules, owner model, and checkpoints.
 - 2026-06-12 GSC URL Inspection checkpoint recorded.
 
-Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20, v0.0.21, v0.0.22, v0.0.23 are complete and archived.
+Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20, v0.0.21, v0.0.22, v0.0.23, v0.0.24 are complete and archived.
 
 ## Next Action
 
-**v0.0.24 (Tool Detail Page Architecture Refactor) requirements + roadmap
-defined** — Phase 82 not yet started. Scope: behavior-preserving single-file
-refactor of `src/pages/[locale]/tools/[slug].astro` (729 lines). 5 TDP
-requirements drafted in REQUIREMENTS.md.
+**v0.0.25 (Cluster Card / Tool Island Commonality Extraction) — requirements
+not yet drafted.** Scope: extract commonality from 8 `src/lib/*-cluster.ts`
+(getXxxClusterCopy / buildXxxClusterGroupForTool / xxxClusterPath) and 8
+`*ClusterCard.astro` components into unified `src/lib/tool-cluster.ts` +
+`src/components/tools/ToolClusterCard.astro`. The `CLUSTER_BLOCKS` array
+established in v0.0.24 will simplify to a single unified-lib call.
 
-To kick off Phase 82:
-1. Write `.planning/phases/82-tool-detail-page-refactor/82-PLAN.md` — the
-   snapshot script design (`scripts/validation/snapshot-tool-pages.ts`),
-   representative slug × locale selection criteria, and the refactor steps
-   (TDP-01 `CLUSTER_BLOCKS` array → TDP-02/03/04 block reorganization →
-   TDP-05 re-snapshot diff).
-2. Build + capture the **before** snapshot on the current (pre-refactor) HEAD
-   — this is the equivalence baseline; it must be captured before any
-   `[slug].astro` edits.
-3. Execute the refactor in `[slug].astro` only, then re-snapshot + byte-diff.
+To kick off Phase 83:
+1. Draft v0.0.25 requirements in REQUIREMENTS.md: inventory the 8 cluster libs
+   for shared patterns (copy function shape, group builder shape, path
+   constant, card component props), define the unified interface, identify
+   variant-specific extension points (e.g. creatorSeo's `showAll` flag).
+2. Write `.planning/phases/83-cluster-commonality/83-PLAN.md`.
+3. Implement the extraction, then simplify `CLUSTER_BLOCKS` in `[slug].astro`.
 
-Carried-over optional (not blocking v0.0.24):
+Carried-over optional (not blocking v0.0.25):
 - Run `validate:tdk-drift:online` against production to capture the first
   online metadata-drift baseline (gated by `--online`/`TDK_DRIFT_ONLINE=1`;
   requires production network + WAF bypass token). Offline parity is already
-  verified by the 102 unit tests + 5570 self-check.
+  verified by v0.0.23's 102 unit tests + 5570 self-check.
+- Fix 51 schema errors + 37 coverage gaps detected by v0.0.23's
+  `validate:translation-corpus` (detection-only, needs content milestone).
 
 ## Session
 
-Last Date: 2026-06-22T06:30:00.000Z
-Stopped At: v0.0.23 archived; v0.0.24 requirements + roadmap defined, Phase 82 not started
+Last Date: 2026-06-23T02:45:00.000Z
+Stopped At: v0.0.24 archived; v0.0.25 requirements not yet drafted, Phase 83 not started
 Resume File: .planning/REQUIREMENTS.md
