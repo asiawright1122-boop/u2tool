@@ -32,6 +32,7 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import fs from 'node:fs/promises';
+import process from 'node:process';
 
 import { tools } from '../../src/config/tools/index';
 import { locales, type Locale } from '../../src/lib/i18n';
@@ -883,103 +884,570 @@ export interface OnlineDriftConfig {
   jitterRange?: [number, number];
   /** Custom report path; defaults to timestamped file in reports dir. */
   reportPath?: string;
+  /** Custom markdown summary path; defaults to timestamped file in reports dir. */
+  summaryPath?: string;
+  /** Per-request timeout in ms. */
+  timeoutMs?: number;
+  /** Scope selector: `full`, `smoke`, or `targeted`. */
+  scope?: OnlineDriftScope;
+  /** Locale filters for targeted/smoke scopes. */
+  locales?: Locale[];
+  /** Slug filters for targeted scope. */
+  slugs?: string[];
+}
+
+export type OnlineDriftScope = 'full' | 'smoke' | 'targeted';
+
+export interface OnlineDriftCliOptions extends OnlineDriftConfig {
+  baseUrl: string;
+  concurrency: number;
+  jitterRange: [number, number];
+  timeoutMs: number;
+  bypassToken?: string;
+}
+
+export interface OnlineDriftTarget {
+  locale: Locale;
+  slug: string;
+  reason: string;
+}
+
+export interface OnlineDriftBlocker {
+  kind: 'invalid-bypass-token' | 'unreachable-base-url' | 'widespread-fetch-failures';
+  message: string;
+}
+
+export interface OnlineDriftRunResult {
+  options: OnlineDriftCliOptions;
+  targets: OnlineDriftTarget[];
+  report: DriftReport;
+  reportPath: string;
+  summaryPath: string;
+  transportFailureCount: number;
+  blocker?: OnlineDriftBlocker;
+}
+
+const DEFAULT_ONLINE_DRIFT_BASE_URL = 'https://www.u2tool.com';
+const DEFAULT_ONLINE_DRIFT_CONCURRENCY = 5;
+const DEFAULT_ONLINE_DRIFT_JITTER_RANGE: [number, number] = [50, 150];
+const DEFAULT_ONLINE_DRIFT_TIMEOUT_MS = 5000;
+const ONLINE_DRIFT_SUMMARY_SUFFIX = '-summary.md';
+
+function normalizeOnlineDriftBaseUrl(value: string): string {
+  return value.replace(/\/+$/, '');
+}
+
+function normalizeOptionalToken(value: string | undefined | null): string | undefined {
+  if (typeof value !== 'string') {
+    return undefined;
+  }
+
+  const trimmed = value.trim();
+  return trimmed.length > 0 ? trimmed : undefined;
+}
+
+function isHttpHeaderSafeValue(value: string): boolean {
+  for (let index = 0; index < value.length; index += 1) {
+    const code = value.charCodeAt(index);
+    if (code > 0xff || code === 0x0a || code === 0x0d || code === 0x00) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function parsePositiveInteger(value: string, optionName: string): number {
+  const parsed = Number.parseInt(value, 10);
+  if (!Number.isFinite(parsed) || parsed <= 0) {
+    throw new Error(`${optionName} must be a positive integer`);
+  }
+  return parsed;
+}
+
+function parseCommaSeparatedValues<T extends string>(
+  value: string,
+  validator: (entry: string) => entry is T,
+  optionName: string
+): T[] {
+  const entries = value
+    .split(',')
+    .map((item) => item.trim())
+    .filter(Boolean);
+  const invalid = entries.filter((entry) => !validator(entry));
+  if (invalid.length > 0) {
+    throw new Error(`${optionName} contains unsupported value(s): ${invalid.join(', ')}`);
+  }
+  return entries as T[];
+}
+
+function parseJitterRange(value: string): [number, number] {
+  const parts = value.split('-').map((part) => Number.parseInt(part.trim(), 10));
+  if (parts.length !== 2 || parts.some((part) => !Number.isFinite(part) || part < 0)) {
+    throw new Error('--jitter-range must look like <min>-<max>');
+  }
+  const [min, max] = parts;
+  if (max < min) {
+    throw new Error('--jitter-range max must be greater than or equal to min');
+  }
+  return [min, max];
+}
+
+function isLocale(value: string): value is Locale {
+  return (locales as readonly string[]).includes(value);
+}
+
+function parseScope(value: string): OnlineDriftScope {
+  if (value === 'full' || value === 'smoke' || value === 'targeted') {
+    return value;
+  }
+  throw new Error(`Unsupported --scope value: ${value}`);
+}
+
+export function parseOnlineDriftArgs(argv: string[]): OnlineDriftCliOptions {
+  const envBaseUrl = process.env.FETCH_BASE_URL || process.env.PROD_BASE_URL || DEFAULT_ONLINE_DRIFT_BASE_URL;
+  const options: OnlineDriftCliOptions = {
+    baseUrl: normalizeOnlineDriftBaseUrl(envBaseUrl),
+    scope: 'full',
+    locales: [],
+    slugs: [],
+    reportPath: '',
+    summaryPath: '',
+    concurrency: DEFAULT_ONLINE_DRIFT_CONCURRENCY,
+    jitterRange: DEFAULT_ONLINE_DRIFT_JITTER_RANGE,
+    timeoutMs: DEFAULT_ONLINE_DRIFT_TIMEOUT_MS,
+    bypassToken: normalizeOptionalToken(process.env.WAF_BYPASS_TOKEN),
+  };
+
+  for (let index = 0; index < argv.length; index += 1) {
+    const arg = argv[index];
+
+    if (arg === '--base-url' && argv[index + 1]) {
+      options.baseUrl = normalizeOnlineDriftBaseUrl(argv[++index]);
+      continue;
+    }
+
+    if (arg === '--scope' && argv[index + 1]) {
+      options.scope = parseScope(argv[++index]);
+      continue;
+    }
+
+    if (arg === '--locales' && argv[index + 1]) {
+      options.locales = parseCommaSeparatedValues(argv[++index], isLocale, '--locales');
+      continue;
+    }
+
+    if (arg === '--slugs' && argv[index + 1]) {
+      const explicitSlugs = argv[++index]
+        .split(',')
+        .map((item) => item.trim())
+        .filter(Boolean);
+      options.slugs = explicitSlugs;
+      continue;
+    }
+
+    if (arg === '--report-path' && argv[index + 1]) {
+      options.reportPath = argv[++index];
+      continue;
+    }
+
+    if (arg === '--json-out' && argv[index + 1]) {
+      options.reportPath = argv[++index];
+      continue;
+    }
+
+    if (arg === '--summary-path' && argv[index + 1]) {
+      options.summaryPath = argv[++index];
+      continue;
+    }
+
+    if (arg === '--concurrency' && argv[index + 1]) {
+      options.concurrency = parsePositiveInteger(argv[++index], '--concurrency');
+      continue;
+    }
+
+    if (arg === '--jitter-range' && argv[index + 1]) {
+      options.jitterRange = parseJitterRange(argv[++index]);
+      continue;
+    }
+
+    if (arg === '--timeout-ms' && argv[index + 1]) {
+      options.timeoutMs = parsePositiveInteger(argv[++index], '--timeout-ms');
+      continue;
+    }
+
+    if (arg === '--bypass-token' && argv[index + 1]) {
+      options.bypassToken = normalizeOptionalToken(argv[++index]);
+      continue;
+    }
+
+    if (arg === '--online') {
+      continue;
+    }
+
+    throw new Error(`Unknown argument: ${arg}`);
+  }
+
+  return options;
+}
+
+export function buildOnlineDriftSmokeTargets(): OnlineDriftTarget[] {
+  return [
+    { locale: 'en', slug: 'bar-chart-generator', reason: 'default cluster sentinel' },
+    { locale: 'en', slug: 'json-formatter', reason: 'developer-data cluster sentinel' },
+    { locale: 'en', slug: 'markdown-editor', reason: 'support-content and FAQ sentinel' },
+    { locale: 'ja', slug: 'json-formatter', reason: 'CJK locale sentinel' },
+    { locale: 'ar', slug: 'password-generator', reason: 'RTL locale sentinel' },
+    { locale: 'en', slug: 'screen-recorder', reason: 'fallback-heavy baseline candidate' },
+    { locale: 'en', slug: 'ip-geolocation', reason: 'fallback-heavy baseline candidate' },
+  ];
+}
+
+export function buildOnlineDriftTargets(options: OnlineDriftCliOptions): OnlineDriftTarget[] {
+  const smokeTargets = buildOnlineDriftSmokeTargets();
+
+  if (options.scope === 'smoke') {
+    return smokeTargets.filter((target) =>
+      (options.locales.length === 0 || options.locales.includes(target.locale)) &&
+      (options.slugs.length === 0 || options.slugs.includes(target.slug))
+    );
+  }
+
+  if (options.scope === 'targeted') {
+    const localesToUse = options.locales.length > 0 ? options.locales : (['en'] as Locale[]);
+    const slugsToUse = options.slugs.length > 0 ? options.slugs : tools.slice(0, 1).map((tool) => tool.slug);
+    return localesToUse.flatMap((locale) =>
+      slugsToUse.map((slug) => ({
+        locale,
+        slug,
+        reason: 'targeted run',
+      }))
+    );
+  }
+
+  const localesToUse = options.locales.length > 0 ? options.locales : [...locales];
+  const slugsToUse = options.slugs.length > 0 ? options.slugs : tools.map((tool) => tool.slug);
+  return localesToUse.flatMap((locale) =>
+    slugsToUse.map((slug) => ({
+      locale,
+      slug,
+      reason: 'full sweep',
+    }))
+  );
+}
+
+export function classifyOnlineDriftBlocker(params: {
+  baseUrl: string;
+  bypassToken?: string;
+  transportFailureCount: number;
+  totalTargets: number;
+}): OnlineDriftBlocker | undefined {
+  const normalizedBaseUrl = normalizeOnlineDriftBaseUrl(params.baseUrl);
+
+  if (params.bypassToken && !isHttpHeaderSafeValue(params.bypassToken)) {
+    return {
+      kind: 'invalid-bypass-token',
+      message: 'WAF bypass token contains characters that cannot be sent in an HTTP header; pass the real token value, not a placeholder label',
+    };
+  }
+
+  if (params.totalTargets > 0 && params.transportFailureCount === params.totalTargets) {
+    return {
+      kind: 'unreachable-base-url',
+      message: `Unable to reach any target under ${normalizedBaseUrl}`,
+    };
+  }
+
+  if (params.totalTargets > 0 && params.transportFailureCount > 0) {
+    const failureRatio = params.transportFailureCount / params.totalTargets;
+    if (params.transportFailureCount >= 2 && failureRatio >= 0.5) {
+      return {
+        kind: 'widespread-fetch-failures',
+        message: `Transport failures affected ${params.transportFailureCount}/${params.totalTargets} target(s)`,
+      };
+    }
+  }
+
+  return undefined;
+}
+
+function deriveSummaryPath(reportPath: string): string {
+  if (!reportPath) {
+    return path.join(path.resolve(__dirname, '../../.planning/research/reports'), `tdk-drift${ONLINE_DRIFT_SUMMARY_SUFFIX}`);
+  }
+  return reportPath.replace(/\.json$/i, ONLINE_DRIFT_SUMMARY_SUFFIX);
+}
+
+function summarizeByFieldAndLabel(report: DriftReport): Array<[string, number]> {
+  const totals = new Map<string, number>();
+  for (const finding of report.findings) {
+    const key = `${finding.field}::${finding.driftLabel}`;
+    totals.set(key, (totals.get(key) ?? 0) + 1);
+  }
+  return [...totals.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+}
+
+function summarizeByLocale(report: DriftReport): Array<[string, number]> {
+  const totals = new Map<string, number>();
+  for (const finding of report.findings) {
+    totals.set(finding.locale, (totals.get(finding.locale) ?? 0) + 1);
+  }
+  return [...totals.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+}
+
+function countTransportFailures(results: RenderedTdk[]): number {
+  return results.filter((result) => Boolean(result.error) || (result.status !== undefined && result.status >= 400)).length;
+}
+
+export function renderOnlineDriftSummaryMarkdown(run: OnlineDriftRunResult): string {
+  const lines: string[] = [];
+  const blockerLabel = run.blocker?.kind ?? 'none';
+  lines.push('# TDK Drift Baseline Summary');
+  lines.push('');
+  lines.push(`Generated: ${run.report.timestamp}`);
+  lines.push(`Base URL: ${run.options.baseUrl}`);
+  lines.push(`Scope: ${run.options.scope}`);
+  lines.push(`Targets: ${run.targets.length}`);
+  lines.push(`Bypass token: ${run.options.bypassToken ? 'present' : 'missing'}`);
+  lines.push(`Blocker: ${blockerLabel}`);
+  lines.push(`Report: \`${run.reportPath}\``);
+  lines.push('');
+  lines.push('## Report');
+  lines.push('');
+  lines.push(`- MATCH: ${run.report.summary.MATCH}`);
+  lines.push(`- BRAND_DRIFT: ${run.report.summary.BRAND_DRIFT}`);
+  lines.push(`- FALLBACK_LEAK: ${run.report.summary.FALLBACK_LEAK}`);
+  lines.push(`- ENGLISH_RESIDUE: ${run.report.summary.ENGLISH_RESIDUE}`);
+  lines.push(`- MISMATCH: ${run.report.summary.MISMATCH}`);
+  lines.push(`- Transport failures: ${run.transportFailureCount}`);
+  lines.push('');
+  lines.push('## Targets');
+  lines.push('');
+  lines.push('| Locale | Slug | Reason |');
+  lines.push('| --- | --- | --- |');
+  for (const target of run.targets) {
+    lines.push(`| ${target.locale} | ${target.slug} | ${target.reason} |`);
+  }
+  if (run.targets.length === 0) {
+    lines.push('| none | none | none |');
+  }
+  lines.push('');
+  lines.push('## By Field');
+  lines.push('');
+  lines.push('| Field | Label | Count |');
+  lines.push('| --- | --- | --- |');
+  for (const [key, count] of summarizeByFieldAndLabel(run.report)) {
+    const [field, label] = key.split('::');
+    lines.push(`| ${field} | ${label} | ${count} |`);
+  }
+  if (run.report.findings.length === 0) {
+    lines.push('| none | MATCH | 0 |');
+  }
+  lines.push('');
+  lines.push('## By Locale');
+  lines.push('');
+  lines.push('| Locale | Findings |');
+  lines.push('| --- | --- |');
+  for (const [locale, count] of summarizeByLocale(run.report)) {
+    lines.push(`| ${locale} | ${count} |`);
+  }
+  if (run.report.findings.length === 0) {
+    lines.push('| none | 0 |');
+  }
+
+  return lines.join('\n');
+}
+
+export function computeOnlineDriftExitCode(report: DriftReport, blocker?: OnlineDriftBlocker): number {
+  if (blocker?.kind === 'invalid-bypass-token' || blocker?.kind === 'unreachable-base-url') {
+    return 2;
+  }
+
+  if (blocker?.kind === 'widespread-fetch-failures') {
+    return 2;
+  }
+
+  return computeExitCode(report);
+}
+
+export async function writeOnlineDriftSummary(summary: string, summaryPath?: string): Promise<string> {
+  const targetPath = summaryPath ?? deriveSummaryPath('');
+  await fs.mkdir(path.dirname(targetPath), { recursive: true });
+  await fs.writeFile(targetPath, `${summary}\n`, 'utf-8');
+  return targetPath;
 }
 
 /**
- * Run the full online TDK drift check: resolve all expected TDK, capture
- * rendered HTML from production, compare each, and write a JSON report.
+ * Run the online TDK drift check: resolve expected TDK, capture rendered HTML,
+ * compare fields, classify blockers, and write both JSON + markdown reports.
  *
  * Must NOT be called without `--online` / `TDK_DRIFT_ONLINE=1` — the function
  * itself does not gate network calls; the caller (`main`) is responsible.
  */
 export async function runOnlineDriftCheck(
   config?: OnlineDriftConfig
-): Promise<DriftReport> {
-  const baseUrl = config?.baseUrl ?? 'https://www.u2tool.com';
-  const bypassToken = config?.bypassToken ?? process.env.WAF_BYPASS_TOKEN;
-  const concurrency = config?.concurrency ?? 5;
-  const jitterRange = config?.jitterRange ?? [50, 150];
+): Promise<OnlineDriftRunResult> {
+  const startTime = Date.now();
+  const options: OnlineDriftCliOptions = {
+    baseUrl: normalizeOnlineDriftBaseUrl(config?.baseUrl ?? DEFAULT_ONLINE_DRIFT_BASE_URL),
+    scope: config?.scope ?? 'full',
+    locales: config?.locales ?? [],
+    slugs: config?.slugs ?? [],
+    reportPath: config?.reportPath ?? '',
+    summaryPath: config?.summaryPath ?? '',
+    concurrency: config?.concurrency ?? DEFAULT_ONLINE_DRIFT_CONCURRENCY,
+    jitterRange: config?.jitterRange ?? DEFAULT_ONLINE_DRIFT_JITTER_RANGE,
+    timeoutMs: config?.timeoutMs ?? DEFAULT_ONLINE_DRIFT_TIMEOUT_MS,
+    bypassToken: normalizeOptionalToken(config?.bypassToken) ?? normalizeOptionalToken(process.env.WAF_BYPASS_TOKEN),
+  };
+
+  const targets = buildOnlineDriftTargets(options);
 
   console.log('\x1b[36m[INFO] TDK Drift — online drift check\x1b[0m');
   console.log(`  Catalog: ${tools.length} tools × ${locales.length} locales`);
-  console.log(`  Base URL: ${baseUrl}`);
+  console.log(`  Base URL: ${options.baseUrl}`);
+  console.log(`  Scope: ${options.scope}`);
+  console.log(`  Targets: ${targets.length}`);
+  console.log(`  Bypass token: ${options.bypassToken ? 'present' : 'missing'}`);
   console.log('------------------------------------------------------------------');
 
-  // 1. Resolve all expected TDK
-  console.log('  Resolving expected TDK for all locales...');
-  const startTime = Date.now();
-  const allExpected = await resolveAllExpectedTdk();
-  console.log(`  Resolved ${allExpected.length} expected TDK records in ${((Date.now() - startTime) / 1000).toFixed(1)}s`);
-
-  // 2. Build English-only expected TDK map (keyed by slug) for ENGLISH_RESIDUE detection
-  const englishMap = new Map<string, ExpectedTdk>();
-  const englishSlugs = new Set(tools.map((t) => t.slug));
-  for (const slug of englishSlugs) {
-    englishMap.set(slug, await resolveExpectedTdk('en', slug));
-  }
-  console.log(`  Built English TDK map for ${englishMap.size} tools`);
-
-  // 3. Build probe URLs
-  const probeUrls: string[] = [];
-  const expectedByUrl = new Map<string, ExpectedTdk>();
-  for (const tdk of allExpected) {
-    const url = `${baseUrl}/${tdk.locale}/tools/${tdk.slug}/`;
-    probeUrls.push(url);
-    expectedByUrl.set(url, tdk);
-  }
-  console.log(`  Probing ${probeUrls.length} URLs (concurrency: ${concurrency}, jitter: ${jitterRange[0]}-${jitterRange[1]}ms)`);
-  console.log('------------------------------------------------------------------');
-
-  // 4. Capture rendered TDK in batch
-  const allRendered = await captureRenderedTdkBatch(probeUrls, {
-    bypassToken,
-    concurrency,
-    jitterRange,
+  const preflightBlocker = classifyOnlineDriftBlocker({
+    baseUrl: options.baseUrl,
+    bypassToken: options.bypassToken,
+    transportFailureCount: 0,
+    totalTargets: targets.length,
   });
 
-  // 5. Compare each
+  if (preflightBlocker?.kind === 'invalid-bypass-token') {
+    const reason = 'the provided bypass token is not a valid HTTP header value.';
+    console.log(`  Skipping URL probes because ${reason}`);
+
+    const report = buildDriftReport([], {
+      totalTools: tools.length,
+      totalLocales: locales.length,
+    });
+    const reportPath = await writeDriftReport(report, options.reportPath || undefined);
+    const summary = renderOnlineDriftSummaryMarkdown({
+      options,
+      targets,
+      report,
+      reportPath,
+      summaryPath: options.summaryPath || deriveSummaryPath(reportPath),
+      transportFailureCount: 0,
+      blocker: preflightBlocker,
+    });
+    const summaryPath = await writeOnlineDriftSummary(summary, options.summaryPath || deriveSummaryPath(reportPath));
+
+    console.log('------------------------------------------------------------------');
+    console.log(`\x1b[36m[SUMMARY] Online drift check completed in ${((Date.now() - startTime) / 1000).toFixed(1)}s\x1b[0m`);
+    console.log(`  Total checked: ${report.totalChecked}`);
+    console.log(`  MATCH: \x1b[32m${report.summary.MATCH}\x1b[0m`);
+    console.log(`  Report: ${reportPath}`);
+    console.log(`  Summary: ${summaryPath}`);
+
+    return {
+      options,
+      targets,
+      report,
+      reportPath,
+      summaryPath,
+      transportFailureCount: 0,
+      blocker: preflightBlocker,
+    };
+  }
+
+  console.log('  Resolving expected TDK for selected locales...');
+  const expectedByTarget = new Map<string, ExpectedTdk>();
+  const englishMap = new Map<string, ExpectedTdk>();
+  const targetKeys = targets.map((target) => `${target.locale}/${target.slug}`);
+  const uniqueSlugs = [...new Set(targets.map((target) => target.slug))];
+
+  for (const target of targets) {
+    const expected = await resolveExpectedTdk(target.locale, target.slug);
+    expectedByTarget.set(`${target.locale}/${target.slug}`, expected);
+  }
+
+  for (const slug of uniqueSlugs) {
+    englishMap.set(slug, await resolveExpectedTdk('en', slug));
+  }
+
+  console.log(`  Resolved ${expectedByTarget.size} expected TDK records in ${((Date.now() - startTime) / 1000).toFixed(1)}s`);
+  console.log(`  Built English TDK map for ${englishMap.size} tools`);
+  console.log(`  Probing ${targets.length} URLs (concurrency: ${options.concurrency}, jitter: ${options.jitterRange[0]}-${options.jitterRange[1]}ms)`);
+  console.log('------------------------------------------------------------------');
+
+  const probeUrls = targets.map((target) => `${options.baseUrl}/${target.locale}/tools/${target.slug}/`);
+  const rendered = await mapWithConcurrencyAndJitter(
+    probeUrls,
+    async (url) => {
+      try {
+        return await captureRenderedTdk(url, {
+          bypassToken: options.bypassToken,
+          timeoutMs: options.timeoutMs,
+        });
+      } catch (error) {
+        return {
+          url,
+          title: '',
+          description: '',
+          error: error instanceof Error ? error.message : String(error),
+        } satisfies RenderedTdk;
+      }
+    },
+    options.concurrency,
+    options.jitterRange
+  );
+
+  const transportFailureCount = countTransportFailures(rendered);
+  const blocker = classifyOnlineDriftBlocker({
+    baseUrl: options.baseUrl,
+    bypassToken: options.bypassToken,
+    transportFailureCount,
+    totalTargets: targets.length,
+  });
+
   const allDriftResults: DriftResult[] = [];
-  let errorCount = 0;
-  for (const rendered of allRendered) {
-    const expected = expectedByUrl.get(rendered.url);
+  for (let index = 0; index < rendered.length; index += 1) {
+    const renderedEntry = rendered[index];
+    const expected = expectedByTarget.get(targetKeys[index]);
     if (!expected) continue;
 
-    if (rendered.error || (rendered.status !== undefined && rendered.status >= 400)) {
-      errorCount++;
-      // Record as MISMATCH — fetch failures are treated as drift
+    if (renderedEntry.error || (renderedEntry.status !== undefined && renderedEntry.status >= 400)) {
       allDriftResults.push(
-        makeDriftResult(expected, 'title', 'MISMATCH', expected.expectedBrandedTitle, `(HTTP ${rendered.status ?? 'error'}: ${rendered.error ?? 'fetch failed'})`)
+        makeDriftResult(expected, 'title', 'MISMATCH', expected.expectedBrandedTitle, `(HTTP ${renderedEntry.status ?? 'error'}: ${renderedEntry.error ?? 'fetch failed'})`)
       );
       allDriftResults.push(
-        makeDriftResult(expected, 'description', 'MISMATCH', expected.expectedDescription, `(HTTP ${rendered.status ?? 'error'}: ${rendered.error ?? 'fetch failed'})`)
+        makeDriftResult(expected, 'description', 'MISMATCH', expected.expectedDescription, `(HTTP ${renderedEntry.status ?? 'error'}: ${renderedEntry.error ?? 'fetch failed'})`)
       );
       continue;
     }
 
     const englishExpected = englishMap.get(expected.slug);
-    const drift = compareTdk(expected, rendered, englishExpected);
+    const drift = compareTdk(expected, renderedEntry, englishExpected);
     allDriftResults.push(drift.title, drift.description);
-
-    // Phase 81: extended metadata drift (og:title, twitter:title, keywords, JSON-LD)
-    const metaDrift = compareMetadata(expected, rendered, englishExpected);
-    allDriftResults.push(...metaDrift);
+    allDriftResults.push(...compareMetadata(expected, renderedEntry, englishExpected));
   }
 
-  const durationMs = Date.now() - startTime;
-
-  // 6. Build and write report
   const report = buildDriftReport(allDriftResults, {
     totalTools: tools.length,
     totalLocales: locales.length,
   });
-  const reportPath = await writeDriftReport(report, config?.reportPath);
+  const reportPath = await writeDriftReport(report, options.reportPath || undefined);
+  const summary = renderOnlineDriftSummaryMarkdown({
+    options,
+    targets,
+    report,
+    reportPath,
+    summaryPath: options.summaryPath || deriveSummaryPath(reportPath),
+    transportFailureCount,
+    blocker,
+  });
+  const summaryPath = await writeOnlineDriftSummary(summary, options.summaryPath || deriveSummaryPath(reportPath));
 
-  // 7. Print summary
   console.log('------------------------------------------------------------------');
-  console.log(`\x1b[36m[SUMMARY] Online drift check completed in ${(durationMs / 1000).toFixed(1)}s\x1b[0m`);
+  console.log(`\x1b[36m[SUMMARY] Online drift check completed in ${((Date.now() - startTime) / 1000).toFixed(1)}s\x1b[0m`);
   console.log(`  Total checked: ${report.totalChecked}`);
-  if (errorCount > 0) {
-    console.log(`  Fetch errors: \x1b[33m${errorCount}\x1b[0m`);
+  if (transportFailureCount > 0) {
+    console.log(`  Fetch errors: \x1b[33m${transportFailureCount}\x1b[0m`);
   }
   for (const label of ALL_DRIFT_LABELS) {
     const count = report.summary[label];
@@ -991,8 +1459,17 @@ export async function runOnlineDriftCheck(
   }
   console.log(`  MATCH: \x1b[32m${report.summary.MATCH}\x1b[0m`);
   console.log(`  Report: ${reportPath}`);
+  console.log(`  Summary: ${summaryPath}`);
 
-  return report;
+  return {
+    options,
+    targets,
+    report,
+    reportPath,
+    summaryPath,
+    transportFailureCount,
+    blocker,
+  };
 }
 
 /**
@@ -1104,47 +1581,31 @@ async function runOfflineSelfCheck(): Promise<SelfCheckResult> {
 // ---------------------------------------------------------------------------
 
 async function main(): Promise<void> {
-  const args = process.argv.slice(2);
-  const onlineMode = args.includes('--online') || process.env.TDK_DRIFT_ONLINE === '1';
+  const args = parseOnlineDriftArgs(process.argv.slice(2));
+  const onlineMode = process.argv.includes('--online') || process.env.TDK_DRIFT_ONLINE === '1';
 
   if (onlineMode) {
-    // Phase 78: full online drift sweep.
+    // Phase 89: online drift baseline / scoped smoke / targeted reruns.
     console.log('\x1b[36m[INFO] TDK Drift — online mode\x1b[0m');
+    const result = await runOnlineDriftCheck(args);
+    process.exitCode = computeOnlineDriftExitCode(result.report, result.blocker);
 
-    // 1. Offline self-check first (fail fast if source truth is broken)
-    const check = await runOfflineSelfCheck();
-
-    if (check.failed > 0) {
-      console.error(`\x1b[31m[FAIL] Source self-check: ${check.failed}/${check.total} tools have empty/placeholder TDK\x1b[0m`);
-      console.error('\x1b[33mFix source truth before running online drift check.\x1b[0m');
-      for (const f of check.failures.slice(0, 20)) {
-        console.error(`  ${f.locale}/${f.slug} — ${f.field}: ${f.reason}`);
+    if (result.blocker) {
+      console.error(`\x1b[33m[BLOCKER] ${result.blocker.kind}: ${result.blocker.message}\x1b[0m`);
+      if (result.blocker.kind === 'invalid-bypass-token') {
+        console.error('          Next: replace the placeholder text with the real secret value, or export a real `WAF_BYPASS_TOKEN` before rerunning.');
       }
-      if (check.failures.length > 20) {
-        console.error(`  ... and ${check.failures.length - 20} more`);
-      }
-      process.exitCode = 1;
-      return;
     }
-
-    console.log(`\x1b[32m[PASS] Source self-check: ${check.total} tools resolved successfully\x1b[0m`);
-    console.log('');
-
-    // 2. Online drift check
-    const report = await runOnlineDriftCheck();
-
-    // 3. Exit code gate (extracted as pure function for testability):
-    process.exitCode = computeExitCode(report);
 
     if (process.exitCode === 1) {
-      console.error(`\x1b[31m[FAIL] ${report.summary.MISMATCH + report.summary.BRAND_DRIFT + report.summary.ENGLISH_RESIDUE} drift finding(s) require attention (MISMATCH=${report.summary.MISMATCH}, BRAND_DRIFT=${report.summary.BRAND_DRIFT}, ENGLISH_RESIDUE=${report.summary.ENGLISH_RESIDUE})\x1b[0m`);
+      console.error(`\x1b[31m[FAIL] ${result.report.summary.MISMATCH + result.report.summary.BRAND_DRIFT + result.report.summary.ENGLISH_RESIDUE} drift finding(s) require attention (MISMATCH=${result.report.summary.MISMATCH}, BRAND_DRIFT=${result.report.summary.BRAND_DRIFT}, ENGLISH_RESIDUE=${result.report.summary.ENGLISH_RESIDUE})\x1b[0m`);
     }
 
-    if (report.summary.FALLBACK_LEAK > 0) {
-      console.warn(`\x1b[33m[WARN] ${report.summary.FALLBACK_LEAK} FALLBACK_LEAK finding(s) — review recommended\x1b[0m`);
+    if (result.report.summary.FALLBACK_LEAK > 0) {
+      console.warn(`\x1b[33m[WARN] ${result.report.summary.FALLBACK_LEAK} FALLBACK_LEAK finding(s) — review recommended\x1b[0m`);
     }
 
-    if (process.exitCode === 0 && report.summary.FALLBACK_LEAK === 0) {
+    if (process.exitCode === 0 && result.report.summary.FALLBACK_LEAK === 0 && !result.blocker) {
       console.log(`\x1b[32m[SUCCESS] All online TDK drift checks passed!\x1b[0m`);
     }
 

@@ -67,6 +67,10 @@ import {
   resolveExpectedTdk,
   resolveAllExpectedTdk,
   captureRenderedTdk,
+  parseOnlineDriftArgs,
+  buildOnlineDriftSmokeTargets,
+  classifyOnlineDriftBlocker,
+  renderOnlineDriftSummaryMarkdown,
   compareTdkTitle,
   compareTdkDescription,
   compareTdk,
@@ -75,6 +79,7 @@ import {
   buildDriftReport,
   writeDriftReport,
   computeExitCode,
+  computeOnlineDriftExitCode,
   type ExpectedTdk,
   type RenderedTdk,
   type DriftResult,
@@ -812,10 +817,12 @@ describe('runOnlineDriftCheck (mocked network)', () => {
       { '@type': 'SoftwareApplication', name: 'Test Tool', description: 'Test SEO description.' },
     ]);
 
-    const report = await (await import('./validate-tdk-drift')).runOnlineDriftCheck({
+    const run = await (await import('./validate-tdk-drift')).runOnlineDriftCheck({
       baseUrl: 'https://test.example.com',
       reportPath: '/tmp/test-tdk-drift.json',
+      summaryPath: '/tmp/test-tdk-drift-summary.md',
     });
+    const report = run.report;
 
     // 3 tools × 3 locales × (2 TDK + 4 metadata: og:title, twitter:title,
     // jsonld_name, jsonld_description; keywords skipped because source has none) = 54
@@ -825,13 +832,12 @@ describe('runOnlineDriftCheck (mocked network)', () => {
     expect(report.summary.MATCH).toBe(54);
     expect(report.findings).toHaveLength(0);
     expect(computeExitCode(report)).toBe(0);
+    expect(run.blocker).toBeUndefined();
+    expect(run.summaryPath).toBe('/tmp/test-tdk-drift-summary.md');
 
     // Report was written via fs.writeFile
-    expect(mockedFs.writeFile).toHaveBeenCalledWith(
-      '/tmp/test-tdk-drift.json',
-      expect.stringContaining('"MATCH"'),
-      'utf-8'
-    );
+    expect(mockedFs.writeFile).toHaveBeenCalledWith('/tmp/test-tdk-drift.json', expect.stringContaining('"MATCH"'), 'utf-8');
+    expect(mockedFs.writeFile).toHaveBeenCalledWith('/tmp/test-tdk-drift-summary.md', expect.stringContaining('# TDK Drift Baseline Summary'), 'utf-8');
   });
 
   it('detects drift and writes findings to report', async () => {
@@ -863,10 +869,12 @@ describe('runOnlineDriftCheck (mocked network)', () => {
       { '@type': 'SoftwareApplication', name: 'English', description: 'English desc.' },
     ]);
 
-    const report = await (await import('./validate-tdk-drift')).runOnlineDriftCheck({
+    const run = await (await import('./validate-tdk-drift')).runOnlineDriftCheck({
       baseUrl: 'https://test.example.com',
       reportPath: '/tmp/test-tdk-leak.json',
+      summaryPath: '/tmp/test-tdk-leak-summary.md',
     });
+    const report = run.report;
 
     // en locale (3 tools × (2 TDK + 4 metadata) = 18) should be MATCH
     // zh, ja (2 locales × 3 tools × 6 fields = 36) should be ENGLISH_RESIDUE
@@ -875,6 +883,227 @@ describe('runOnlineDriftCheck (mocked network)', () => {
     expect(computeExitCode(report)).toBe(1);
     expect(report.findings).toHaveLength(36);
     expect(report.findings[0].driftLabel).toBe('ENGLISH_RESIDUE');
+    expect(run.blocker).toBeUndefined();
+    expect(mockedFs.writeFile).toHaveBeenCalledWith('/tmp/test-tdk-leak-summary.md', expect.stringContaining('ENGLISH_RESIDUE'), 'utf-8');
+  });
+
+  it('allows production-like smoke to run without a bypass token when the target is reachable', async () => {
+    mockedLoadToolPageMessages.mockResolvedValue({
+      seo_title: 'Test SEO Title',
+      seo_description: 'Test SEO description.',
+      name: 'Test Tool',
+      description: 'Test desc.',
+    });
+    mockedFetchHtmlWithRetry.mockResolvedValue({
+      response: { status: 200, text: async () => '' } as Response,
+      html: '<title>Test SEO Title | U2Tool</title><meta name="description" content="Test SEO description.">',
+    });
+    mockedGetTagContent.mockImplementation((html: string, tag: string) => {
+      if (tag === 'title') return 'Test SEO Title | U2Tool';
+      if (tag === 'description') return 'Test SEO description.';
+      return '';
+    });
+    mockedGetOgTitle.mockReturnValue('Test SEO Title | U2Tool');
+    mockedGetTwitterTitle.mockReturnValue('Test SEO Title | U2Tool');
+    mockedGetKeywords.mockReturnValue('');
+    mockedExtractJsonLdBlocks.mockReturnValue([
+      { '@type': 'SoftwareApplication', name: 'Test Tool', description: 'Test SEO description.' },
+    ]);
+
+    const run = await (await import('./validate-tdk-drift')).runOnlineDriftCheck({
+      baseUrl: 'https://www.u2tool.com',
+      scope: 'smoke',
+      reportPath: '/tmp/test-tdk-prod-missing-token.json',
+      summaryPath: '/tmp/test-tdk-prod-missing-token.md',
+    });
+
+    expect(run.blocker).toBeUndefined();
+    expect(run.report.totalChecked).toBe(42);
+    expect(run.report.summary.MATCH).toBe(42);
+    expect(mockedFetchHtmlWithRetry).toHaveBeenCalled();
+    expect(mockedFs.writeFile).toHaveBeenCalledWith(
+      '/tmp/test-tdk-prod-missing-token.md',
+      expect.stringContaining('Blocker: none'),
+      'utf-8'
+    );
+  });
+
+  it('short-circuits when bypass token is not safe for HTTP headers', async () => {
+    mockedLoadToolPageMessages.mockResolvedValue({
+      seo_title: 'Test SEO Title',
+      seo_description: 'Test SEO description.',
+      name: 'Test Tool',
+      description: 'Test desc.',
+    });
+
+    const run = await (await import('./validate-tdk-drift')).runOnlineDriftCheck({
+      baseUrl: 'https://www.u2tool.com',
+      scope: 'smoke',
+      bypassToken: '你真实的WAF_BYPASS_TOKEN',
+      reportPath: '/tmp/test-tdk-prod-invalid-token.json',
+      summaryPath: '/tmp/test-tdk-prod-invalid-token.md',
+    });
+
+    expect(run.blocker?.kind).toBe('invalid-bypass-token');
+    expect(run.report.totalChecked).toBe(0);
+    expect(run.report.summary.MATCH).toBe(0);
+    expect(mockedFetchHtmlWithRetry).not.toHaveBeenCalled();
+    expect(mockedFs.writeFile).toHaveBeenCalledWith(
+      '/tmp/test-tdk-prod-invalid-token.md',
+      expect.stringContaining('Blocker: invalid-bypass-token'),
+      'utf-8'
+    );
+  });
+});
+
+describe('online drift CLI + summary helpers', () => {
+  it('parses scoped online drift args and keeps defaults intact', () => {
+    const originalFetchBaseUrl = process.env.FETCH_BASE_URL;
+    const originalProdBaseUrl = process.env.PROD_BASE_URL;
+    const originalWafToken = process.env.WAF_BYPASS_TOKEN;
+    delete process.env.FETCH_BASE_URL;
+    delete process.env.PROD_BASE_URL;
+    delete process.env.WAF_BYPASS_TOKEN;
+
+    try {
+      expect(parseOnlineDriftArgs([
+        '--scope', 'smoke',
+        '--base-url', 'https://www.u2tool.com/',
+        '--locales', 'en,ja',
+        '--slugs', 'json-formatter,password-generator',
+        '--report-path', '.planning/research/reports/tdk-drift.json',
+        '--summary-path', '.planning/research/reports/tdk-drift.md',
+        '--concurrency', '3',
+        '--jitter-range', '25-50',
+        '--timeout-ms', '8000',
+        '--bypass-token', 'secret-token',
+      ])).toEqual({
+        baseUrl: 'https://www.u2tool.com',
+        scope: 'smoke',
+        locales: ['en', 'ja'],
+        slugs: ['json-formatter', 'password-generator'],
+        reportPath: '.planning/research/reports/tdk-drift.json',
+        summaryPath: '.planning/research/reports/tdk-drift.md',
+        concurrency: 3,
+        jitterRange: [25, 50],
+        timeoutMs: 8000,
+        bypassToken: 'secret-token',
+      });
+
+      expect(parseOnlineDriftArgs([])).toMatchObject({
+        baseUrl: 'https://www.u2tool.com',
+        scope: 'full',
+        locales: [],
+        slugs: [],
+        concurrency: 5,
+        jitterRange: [50, 150],
+        timeoutMs: 5000,
+      });
+    } finally {
+      restoreEnv('FETCH_BASE_URL', originalFetchBaseUrl);
+      restoreEnv('PROD_BASE_URL', originalProdBaseUrl);
+      restoreEnv('WAF_BYPASS_TOKEN', originalWafToken);
+    }
+  });
+
+  it('treats blank bypass-token values as missing', () => {
+    const originalWafToken = process.env.WAF_BYPASS_TOKEN;
+    process.env.WAF_BYPASS_TOKEN = '   ';
+
+    try {
+      expect(parseOnlineDriftArgs([]).bypassToken).toBeUndefined();
+      expect(parseOnlineDriftArgs([
+        '--bypass-token', '   ',
+      ]).bypassToken).toBeUndefined();
+    } finally {
+      restoreEnv('WAF_BYPASS_TOKEN', originalWafToken);
+    }
+  });
+
+  it('builds a smoke cohort that covers default, CJK, RTL, and fallback-heavy pages', () => {
+    const targets = buildOnlineDriftSmokeTargets();
+    const pairs = new Set(targets.map((target) => `${target.locale}/${target.slug}`));
+
+    expect(targets.length).toBeGreaterThanOrEqual(6);
+    expect(pairs.size).toBe(targets.length);
+    expect(targets).toEqual(expect.arrayContaining([
+      expect.objectContaining({ locale: 'en', slug: 'bar-chart-generator' }),
+      expect.objectContaining({ locale: 'en', slug: 'json-formatter' }),
+      expect.objectContaining({ locale: 'ja', slug: 'json-formatter' }),
+      expect.objectContaining({ locale: 'ar', slug: 'password-generator' }),
+      expect.objectContaining({ locale: 'en', slug: 'screen-recorder' }),
+      expect.objectContaining({ locale: 'en', slug: 'ip-geolocation' }),
+    ]));
+  });
+
+  it('classifies production blockers and computes exit codes accordingly', () => {
+    const invalidToken = classifyOnlineDriftBlocker({
+      baseUrl: 'https://www.u2tool.com',
+      bypassToken: '你真实的WAF_BYPASS_TOKEN',
+      transportFailureCount: 0,
+      totalTargets: 7,
+    });
+    expect(invalidToken?.kind).toBe('invalid-bypass-token');
+    expect(invalidToken?.message).toContain('real token value');
+
+    const widespread = classifyOnlineDriftBlocker({
+      baseUrl: 'https://preview.example.com',
+      bypassToken: 'secret-token',
+      transportFailureCount: 4,
+      totalTargets: 7,
+    });
+    expect(widespread?.kind).toBe('widespread-fetch-failures');
+
+    const report = buildDriftReport([], { totalTools: 1, totalLocales: 1 });
+    expect(computeOnlineDriftExitCode(report, widespread)).toBe(2);
+  });
+
+  it('renders a compact markdown summary with label, field, and locale groupings', () => {
+    const report = buildDriftReport(
+      [
+        { locale: 'en', slug: 'json-formatter', field: 'title', driftLabel: 'MATCH', expected: 'E', actual: 'A' },
+        { locale: 'en', slug: 'json-formatter', field: 'description', driftLabel: 'MISMATCH', expected: 'E', actual: 'A', details: 'bad desc' },
+        { locale: 'ja', slug: 'json-formatter', field: 'og:title', driftLabel: 'ENGLISH_RESIDUE', expected: 'E', actual: 'A' },
+      ],
+      { totalTools: 2, totalLocales: 3 }
+    );
+
+    const summary = renderOnlineDriftSummaryMarkdown({
+      options: {
+        baseUrl: 'https://preview.example.com',
+        scope: 'smoke',
+        locales: ['en', 'ja'],
+        slugs: ['json-formatter'],
+        reportPath: '/tmp/tdk-drift.json',
+        summaryPath: '/tmp/tdk-drift.md',
+        concurrency: 2,
+        jitterRange: [50, 150],
+        timeoutMs: 5000,
+        bypassToken: 'secret-token',
+      },
+      targets: [
+        { locale: 'en', slug: 'json-formatter', reason: 'default locale' },
+        { locale: 'ja', slug: 'json-formatter', reason: 'CJK locale' },
+      ],
+      report,
+      reportPath: '/tmp/tdk-drift.json',
+      summaryPath: '/tmp/tdk-drift.md',
+      transportFailureCount: 1,
+      blocker: {
+        kind: 'unreachable-base-url',
+        message: 'Unable to reach any target under https://preview.example.com',
+      },
+    });
+
+    expect(summary).toContain('# TDK Drift Baseline Summary');
+    expect(summary).toContain('Scope: smoke');
+    expect(summary).toContain('Bypass token: present');
+    expect(summary).toContain('Blocker: unreachable-base-url');
+    expect(summary).toContain('Report: `/tmp/tdk-drift.json`');
+    expect(summary).toContain('| description | MISMATCH | 1 |');
+    expect(summary).toContain('| og:title | ENGLISH_RESIDUE | 1 |');
+    expect(summary).toContain('| ja | 1 |');
+    expect(summary).toContain('| en | json-formatter | default locale |');
   });
 });
 
@@ -1185,6 +1414,14 @@ describe('compareMetadata — combined output shape', () => {
     expect(results).toHaveLength(5);
   });
 });
+
+function restoreEnv(key: string, value: string | undefined): void {
+  if (value === undefined) {
+    delete process.env[key];
+  } else {
+    process.env[key] = value;
+  }
+}
 
 // ---------------------------------------------------------------------------
 // Phase 81: seo-probe extractors (real, against mock HTML — no network)
