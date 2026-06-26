@@ -15,6 +15,7 @@ import {
   auditLayerOverlap,
   auditResolvedDivergence,
   buildReport,
+  parseMergeChainArgs,
 } from './validate-merge-chain-consistency';
 import { mergeMessageRecords } from '../../src/lib/translations';
 
@@ -304,8 +305,73 @@ describe('buildReport', () => {
     );
     expect(report.summary).toEqual({
       layerOverlap: 1,
+      layerOverlapByLayerShape: {
+        root: 1,
+        base: 0,
+        both: 0,
+      },
+      topOverlapLocales: [{ locale: 'en', count: 1 }],
+      topOverlapSlugs: [{ slug: 'x', count: 1 }],
       resolvedDivergences: 1,
       enFallbackResolutions: 1,
     });
+  });
+
+  it('breaks overlap warnings down by layer shape and hotspots', () => {
+    const report = buildReport(
+      { totalLocales: 3, catalogSlugs: 3 },
+      [
+        { locale: 'zh', slug: 'gpa-calculator', field: 'faqs', layers: ['root'], severity: 'warning' },
+        { locale: 'zh', slug: 'gpa-calculator', field: 'usage_steps', layers: ['root', 'base'], severity: 'warning' },
+        { locale: 'ar', slug: 'pace-calculator', field: 'usage_examples', layers: ['base'], severity: 'warning' },
+      ],
+      [],
+      []
+    );
+
+    expect(report.summary.layerOverlapByLayerShape).toEqual({
+      root: 1,
+      base: 1,
+      both: 1,
+    });
+    expect(report.summary.topOverlapLocales).toEqual([
+      { locale: 'zh', count: 2 },
+      { locale: 'ar', count: 1 },
+    ]);
+    expect(report.summary.topOverlapSlugs[0]).toEqual({
+      slug: 'gpa-calculator',
+      count: 2,
+    });
+  });
+});
+
+describe('parseMergeChainArgs', () => {
+  it('parses report path and top limit', () => {
+    expect(
+      parseMergeChainArgs(['--report-path', 'merge.json', '--top', '12'])
+    ).toEqual({
+      help: false,
+      reportPath: 'merge.json',
+      top: 12,
+    });
+  });
+
+  it('parses help flags', () => {
+    expect(parseMergeChainArgs(['-h'])).toEqual({
+      help: true,
+      top: 30,
+    });
+  });
+
+  it('rejects invalid top values', () => {
+    expect(() => parseMergeChainArgs(['--top', '-1'])).toThrow(
+      'Invalid value for --top: -1'
+    );
+  });
+
+  it('rejects unknown flags', () => {
+    expect(() => parseMergeChainArgs(['--wat'])).toThrow(
+      'Unknown argument: --wat'
+    );
   });
 });

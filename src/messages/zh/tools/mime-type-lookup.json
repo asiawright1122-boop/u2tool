@@ -13,5 +13,23 @@
     "API 工程师构建文件验证系统时，确认 .xlsx 文档对应 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet。",
     "DevOps 专家配置 Nginx 时，确保 .woff2 字体以 font/woff2 MIME 类型提供。",
     "数据工程师处理邮件附件时，识别 .eml 文件需要 message/rfc822 MIME 类型。"
+  ],
+  "faqs": [
+    {
+      "question": "Mime Type Lookup 是免费的吗？",
+      "answer": "是的，Mime Type Lookup 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Mime Type Lookup 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Mime Type Lookup 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Mime Type Lookup 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
   ]
 }

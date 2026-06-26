@@ -9553,21 +9553,7 @@
       "name": "Chronomètre",
       "description": "Chronomètre précis avec fonction de chronométrage des tours. Suivi de multiples tours avec indicateurs des meilleurs et des pires temps.",
       "seo_title": "Gratuit en ligne : Outil de chronomètre avec suivi de laps JSON",
-      "seo_description": "Chronomètre précis avec suivi de laps et indication des meilleurs et des pires temps en ligne. Commencez dès maintenant avec notre outil JSON !",
-      "faqs": [
-        {
-          "question": "Quelle est l'exactitude du chronomètre?",
-          "answer": "L'exactitude du chronomètre est de 10 millisecondes (centième de seconde), affichée sous forme de minutes:secondes.centisecondes, suffisante pour les besoins de chronométrage quotidiens."
-        },
-        {
-          "question": "Les enregistrements de tours sont-ils sauvegardés?",
-          "answer": "Les enregistrements de tours sont effacés lors de la mise à jour de la page. Si vous avez besoin de sauvegarder les enregistrements, nous recommandons de les enregistrer manuellement ou de prendre des captures d'écran après utilisation."
-        },
-        {
-          "question": "Comment sont marqués les tours les plus rapides et les plus lents?",
-          "answer": "Lorsque 2 ou plus de tours sont enregistrés, le système marque automatiquement le tour le plus rapide avec 🏆 et le plus lent avec 🐢, ce qui vous aide à analyser vos performances."
-        }
-      ]
+      "seo_description": "Chronomètre précis avec suivi de laps et indication des meilleurs et des pires temps en ligne. Commencez dès maintenant avec notre outil JSON !"
     },
     "countdownTimer": {
       "hours": "Heures",
@@ -9599,20 +9585,7 @@
       "description": "Écrivez et prévisualisez Markdown avec rendu en direct. Exportez en MD ou HTML.",
       "seo_title": "Éditeur Markdown Gratuit en Ligne avec Aperçu en Direct",
       "seo_description": "Écrivez et prévisualisez Markdown en ligne gratuitement. Rendu en direct, coloration syntaxique et export en MD ou HTML. Parfait pour la documentation et les notes.",
-      "faqs": [
-        {
-          "question": "Quelle syntaxe Markdown est prise en charge ?",
-          "answer": "Toute la syntaxe Markdown standard est prise en charge, incluant les titres, gras, italique, listes, blocs de code, tableaux, liens, images, citations et plus. Les extensions GFM (GitHub Flavored Markdown) sont également prises en charge."
-        },
-        {
-          "question": "Mon contenu est-il sauvegardé automatiquement ?",
-          "answer": "La version actuelle ne sauvegarde pas automatiquement le contenu. Nous recommandons d'exporter votre fichier après l'édition. Vous pouvez exporter au format .md ou .html."
-        },
-        {
-          "question": "Puis-je importer des fichiers Markdown existants ?",
-          "answer": "Vous pouvez copier et coller du contenu Markdown existant directement dans l'éditeur. L'éditeur reconnaîtra et rendra automatiquement la syntaxe Markdown."
-        }
-      ],
+
       "errorParsingMarkdown": "Erreur d'analyse markdown",
       "list": "Liste",
       "code": "Code",
@@ -9624,65 +9597,19 @@
       "name": "Horloge Mondiale",
       "description": "Affichez l'heure actuelle dans plusieurs villes du monde simultanément.",
       "seo_title": "Gratuit Outil Horloge Mondiale En Ligne - Suivez les Heures en Temps Réel",
-      "seo_description": "Consultez les horloges de multiples villes du monde simultanément en ligne. Notre outil gratuit vous permet de suivre les heures en temps réel et de rester connecté. Essayez maintenant !",
-      "faqs": [
-        {
-          "question": "Quelles villes sont prises en charge ?",
-          "answer": "Plus de 20 grandes villes mondiales sont prises en charge, incluant New York, Los Angeles, Chicago, Londres, Paris, Berlin, Moscou, Dubaï, Mumbai, Singapour, Hong Kong, Shanghai, Tokyo, Séoul, Sydney, Auckland et plus."
-        },
-        {
-          "question": "L'heure est-elle précise ?",
-          "answer": "L'heure est basée sur l'heure système de votre appareil et se met à jour chaque seconde. Tant que l'heure de votre appareil est précise, les heures des villes affichées seront précises."
-        },
-        {
-          "question": "Comment savoir s'il fait jour ou nuit ?",
-          "answer": "Chaque carte de ville affiche une icône soleil ☀️ ou lune 🌙. Le soleil indique le jour (6:00-18:00), la lune indique la nuit (autres heures)."
-        }
-      ]
+      "seo_description": "Consultez les horloges de multiples villes du monde simultanément en ligne. Notre outil gratuit vous permet de suivre les heures en temps réel et de rester connecté. Essayez maintenant !"
     },
     "countdown-timer": {
       "name": "Compte à rebours en ligne",
       "description": "Configurez des compte à rebours personnalisés avec une progression visuelle et des notifications.",
       "seo_title": "Gratuit en ligne, Outil de Timer de Compteur à Rebours Visuel",
-      "seo_description": "Créez des timers de compteur à rebours personnalisés avec notifications et visualisation progress. Outil JSON en ligne gratuit pour événements importants. Commencez maintenant!",
-      "faqs": [
-        {
-          "question": "Recevrai-je un rappel lorsque le compte à rebours se termine?",
-          "answer": "Oui, une notification du navigateur est envoyée lorsque le compte à rebours se termine. Lors de la première utilisation, le navigateur demandera la permission pour les notifications - veuillez autoriser pour activer la fonction de rappel."
-        },
-        {
-          "question": "Pour quelle durée puis-je configurer le chronomètre?",
-          "answer": "Prend en charge toute combinaison de 0 à 23 heures, 0 à 59 minutes et 0 à 59 secondes. Le compte à rebours maximum est de 23:59:59."
-        },
-        {
-          "question": "Puis-je continuer après une pause?",
-          "answer": "Oui. Après avoir cliqué sur pause, le compte à rebours conserve son état actuel. Cliquez sur 'Reprendre' pour continuer à partir de là où vous avez arrêté."
-        }
-      ]
+      "seo_description": "Créez des timers de compteur à rebours personnalisés avec notifications et visualisation progress. Outil JSON en ligne gratuit pour événements importants. Commencez maintenant!"
     },
     "note-pad": {
       "name": "Bloc-Notes Gratuit",
       "description": "Créez et organisez des notes autocollantes colorées. Sauvegarde automatique dans le stockage du navigateur.",
       "seo_title": "Gratuit Outil en ligne de notes colorées - Note Pad",
-      "seo_description": "Note Pad, un outil en ligne pour créer et organiser des notes collantes colorées. Sauvegardez automatiquement dans votre stockage de navigateur. Commencez maintenant gratuitement!",
-      "faqs": [
-        {
-          "question": "Les notes sont-elles sauvegardées automatiquement?",
-          "answer": "Oui, toutes les notes sont sauvegardées automatiquement dans le stockage local du navigateur. Même après la fermeture de la page ou du navigateur, les notes sont conservées lors de votre retour."
-        },
-        {
-          "question": "Où sont stockées les données des notes?",
-          "answer": "Les données des notes sont stockées dans le localStorage de votre navigateur, sans être téléchargées sur un serveur. La suppression des données du navigateur peut entraîner la perte des notes, donc nous recommandons des exports réguliers pour la sauvegarde."
-        },
-        {
-          "question": "Comment puis-je sauvegarder mes notes?",
-          "answer": "Cliquez sur le bouton 'Exporter' pour exporter toutes les notes sous forme de fichier JSON. Vous pouvez sauvegarder ce fichier comme une sauvegarde."
-        },
-        {
-          "question": "Combien de notes puis-je créer?",
-          "answer": "Il n'y a pas de limite sur le nombre de notes. Créez-en aussi nombreuses que vous en avez besoin. Notez que le stockage local du navigateur a des limites de capacité (généralement 5-10MB)."
-        }
-      ]
+      "seo_description": "Note Pad, un outil en ligne pour créer et organiser des notes collantes colorées. Sauvegardez automatiquement dans votre stockage de navigateur. Commencez maintenant gratuitement!"
     },
     "stopwatchUI": {
       "start": "Démarrer",
@@ -9699,54 +9626,31 @@
       "name": "PDF vers Texte",
       "description": "Extrait le contenu texte des fichiers PDF. Prend en charge les PDF multi-pages avec des marqueurs de page.",
       "seo_title": "Convertisseur gratuit PDF vers texte en ligne",
-      "seo_description": "Convertissez vos fichiers PDF en texte en ligne gratuitement. Prise en charge des PDF multicadres, préservation de la mise en forme, téléchargement instantané en format TXT.",
-      "faqs": [
-        {
-          "question": "Fonctionne-t-il avec les PDF scannés?",
-          "answer": "Cet outil extrait le texte intégré des PDF. Pour les images scannées, vous pourriez avoir besoin de logiciels OCR."
-        },
-        {
-          "question": "Y a-t-il une limite de taille de fichier?",
-          "answer": "Le traitement se fait dans votre navigateur, donc les fichiers très volumineux peuvent être lents. Nous recommandons des fichiers de moins de 50MB."
-        }
-      ]
+      "seo_description": "Convertissez vos fichiers PDF en texte en ligne gratuitement. Prise en charge des PDF multicadres, préservation de la mise en forme, téléchargement instantané en format TXT."
     },
     "word-to-txt": {
       "name": "Word vers Texte",
       "description": "Convertir documents Word (.docx) en texte brut.",
       "seo_title": "Convertisseur gratuit de Word en texte en ligne",
-      "seo_description": "Convertissez des documents Word en texte brut en ligne gratuitement. Extrairez le texte des fichiers DOCX instantanément, sans logiciel nécessaire.",
-      "faqs": []
+      "seo_description": "Convertissez des documents Word en texte brut en ligne gratuitement. Extrairez le texte des fichiers DOCX instantanément, sans logiciel nécessaire."
     },
     "word-to-html": {
       "name": "Word à HTML",
       "description": "Convertissez des documents Word (.docx) en format HTML tout en préservant le formatage.",
       "seo_title": "Convertisseur gratuit Word en HTML en ligne",
-      "seo_description": "Convertissez vos documents Word en HTML en ligne gratuitement. Garde les formats, les titres et les listes. Téléchargez le code HTML propre.",
-      "faqs": [
-        {
-          "question": "Tous les formats sont-ils préservés ?",
-          "answer": "Les formats de base comme les titres, gras, italique et les listes sont préservés. Les layouts complexes peuvent ne pas se convertir parfaitement."
-        },
-        {
-          "question": "Puis-je éditer le HTML ?",
-          "answer": "Oui, vous pouvez copier le code HTML et l'éditer dans n'importe quel éditeur de texte ou éditeur HTML."
-        }
-      ]
+      "seo_description": "Convertissez vos documents Word en HTML en ligne gratuitement. Garde les formats, les titres et les listes. Téléchargez le code HTML propre."
     },
     "excel-to-csv": {
       "name": "Excel vers CSV",
       "description": "Convertir feuilles de calcul Excel en format CSV.",
       "seo_title": "Convertisseur Excel vers CSV en ligne gratuit",
-      "seo_description": "Convertissez vos fichiers Excel en CSV en ligne gratuitement. Prise en charge de plusieurs feuilles, aperçu instantané et téléchargement.",
-      "faqs": []
+      "seo_description": "Convertissez vos fichiers Excel en CSV en ligne gratuitement. Prise en charge de plusieurs feuilles, aperçu instantané et téléchargement."
     },
     "csv-to-excel": {
       "name": "CSV vers Excel",
       "description": "Convertir fichiers CSV en format Excel (.xlsx).",
       "seo_title": "Convertisseur CSV vers Excel en ligne gratuit",
-      "seo_description": "Convertissez vos fichiers CSV en Excel en ligne gratuitement. Visualisez les données en temps réel et téléchargez instantanément le fichier XLSX.",
-      "faqs": []
+      "seo_description": "Convertissez vos fichiers CSV en Excel en ligne gratuitement. Visualisez les données en temps réel et téléchargez instantanément le fichier XLSX."
     },
     "loan-calculator": {
       "name": "Calculateur de Prêt",
@@ -10681,8 +10585,7 @@
       "yourGpa": "Votre GPA",
       "totalPoints": "Points Totaux",
       "percentage": "Pourcentage",
-      "gradeReference": "Référence de Note",
-      "remove": "Supprimer"
+      "gradeReference": "Référence de Note"
     },
     "pace-calculator": {
       "name": "Calculateur d'Allure",
@@ -10714,8 +10617,6 @@
       "pacePerMile": "Allure par mile",
       "speed": "Vitesse",
       "finishTime": "Temps d'Arrivée",
-      "metric": "Métrique",
-      "imperial": "Impérial",
       "hoursShort": "H",
       "minutesShort": "M",
       "secondsShort": "S"

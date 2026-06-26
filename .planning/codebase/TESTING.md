@@ -1,6 +1,6 @@
 # Testing
 
-**Analysis Date:** 2026-05-21
+**Analysis Date:** 2026-06-24
 
 ## Primary Test Stack
 
@@ -108,6 +108,230 @@ SSR render contract:
 - **deploy-cloudflare.yml** — push to main / manual; Node 22, builds and `wrangler deploy`. Requires `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` secrets.
 - **performance.yml** — pull request and manual; Node 22, runs `perf:benchmark`, compares against `benchmarks/baseline.json`, uploads artifact.
 - **project-health.yml** — weekly Mon 09:00 UTC and manual; Node 22, runs `verify:production`, uploads health report, opens issue on failure.
+
+## Production QA Closure (v0.0.27 / Phase 87)
+
+### `qa:production` Inventory
+
+Current `package.json` chain:
+
+```bash
+npm run validate:redirect-loops && npm run check && npm run qa:seo-governance && npm run qa:theme-parity && npm run qa:runtime-integrity && npm run validate:runtime-placeholder-regressions && npm run validate:tool-svg-rendering && npm run validate:front-end-safety && npm run validate:gsc-loss-metadata && npm run build && npm run validate:tool-page-render-contract && npm run validate:robots-txt && npm run validate:decommissioned-routes && npm run validate:html-links && npm run validate:canonical-slash && npm run validate:sitemap-urls && npm run validate:production-routes && npm run validate:seo-alignment && npm run validate:technical-seo && npm run validate:llms-discovery && npm run validate:rendered-seo && npm run validate:worker-ssr && npm run validate:growth-surfaces && npm run validate:internal-link-canonicals && npm run validate:search-engine-compliance && npm run validate:hreflang-scc && npm run validate:tdk-translations && npm run validate:json-ld && npm run validate:prerender-safety && npm run validate:edge-simulation
+```
+
+Ordered release groups:
+
+| Order | Group | Commands | Purpose | Failure meaning |
+|-------|-------|----------|---------|-----------------|
+| 1 | redirect / build / type safety | `validate:redirect-loops`, `check` | Catch routing loops and Astro/type regressions before deeper QA. | Usually code regression; occasionally environment/toolchain install breakage. |
+| 2 | SEO governance | `qa:seo-governance` | Validate i18n key coverage, TDK integrity/drift, translation corpus, merge-chain consistency, localized longtail support, and focused Vitest SEO coverage. | Schema/content drift, governance regression, or warning-only corpus debt depending on sub-step. |
+| 3 | theme / runtime integrity | `qa:theme-parity`, `qa:runtime-integrity`, `validate:runtime-placeholder-regressions`, `validate:tool-svg-rendering`, `validate:front-end-safety`, `validate:gsc-loss-metadata` | Protect tool runtime contracts, theme parity, placeholder regressions, SVG rendering, and frontend safety promises. | Usually code regression or generated-asset drift. |
+| 4 | build + rendered HTML / SSR | `build`, `validate:tool-page-render-contract` | Produce the SSR bundle and verify 11 representative tool pages render the expected semantic contract. | Build failures are code/toolchain regressions; render-contract fetch failures can also be environment/network blockers if localhost SSR is unreachable. |
+| 5 | routes / sitemap / production route checks | `validate:robots-txt`, `validate:decommissioned-routes`, `validate:html-links`, `validate:canonical-slash`, `validate:sitemap-urls`, `validate:production-routes` | Guard crawlability, canonicalization, sitemap integrity, and declared route health. | Usually code regression or deployment-shape drift. |
+| 6 | rendered SEO / i18n / metadata / schema | `validate:seo-alignment`, `validate:technical-seo`, `validate:llms-discovery`, `validate:rendered-seo`, `validate:worker-ssr`, `validate:growth-surfaces`, `validate:internal-link-canonicals`, `validate:search-engine-compliance`, `validate:hreflang-scc`, `validate:tdk-translations`, `validate:json-ld` | Validate rendered metadata, structured data, discovery surfaces, worker SSR health, and locale graph consistency. | Code regression, content/data drift, or environment/network blocker for live-fetch checks. |
+| 7 | prerender / edge simulation | `validate:prerender-safety`, `validate:edge-simulation` | Confirm prerender safety rules and edge-runtime assumptions still hold. | Usually code regression or edge-runtime contract drift. |
+
+Warning-only gates inside the chain today:
+
+- `validate:translation-corpus` passes with warning-only namespace issues when schema errors and coverage gaps are zero.
+- `validate:merge-chain-consistency` passes with warning-only layer overlap findings when resolved divergences remain zero.
+- These warnings are visible release evidence, but **they do not block v0.0.27 closure** unless their scripts start exiting non-zero.
+
+### Environment Preflight Checklist
+
+Use this checklist before any SSR-backed local release run:
+
+1. Confirm dependencies are installed and Node satisfies `>=22.12.0`.
+2. Confirm any required local secrets/config already live in `.env.local` if your normal dev flow depends on them.
+3. Start local SSR from a normal terminal, not the Codex sandbox:
+
+```bash
+npm install
+npm run dev -- --host 127.0.0.1 --port 4321
+```
+
+4. Confirm the local SSR target responds before running render gates:
+
+```bash
+curl -I http://127.0.0.1:4321/en/tools/youtube-tags-generator/
+```
+
+Expected probe result: HTTP `200 OK` (or another explicit success code from the local SSR server), with no connection refusal / timeout.
+
+5. Run the SSR-backed render contract against that exact base URL:
+
+```bash
+FETCH_BASE_URL=http://127.0.0.1:4321 npm run validate:tool-page-render-contract -- --timeout-ms 30000
+```
+
+Environment notes:
+
+- `validate:tool-page-render-contract` resolves `FETCH_BASE_URL` first, then `PROD_BASE_URL`, then defaults to `http://localhost:4321`.
+- Astro is running with the Cloudflare adapter, so a healthy local SSR process matters for rendered-page checks even when offline validation is green.
+- In the Codex desktop sandbox, local bind/listen/fetch may fail with `listen EPERM` or `fetch failed`. Treat that as an **environment/network blocker**, not as evidence that rendered HTML regressed.
+
+### Failure Taxonomy
+
+| Bucket | Meaning | Current examples | Release action |
+|--------|---------|------------------|----------------|
+| code regression | Code, config, or template behavior no longer satisfies an established contract. | `npm run check` type errors; `validate:tool-page-render-contract` drift on missing `data-tool-cluster`; `validate:runtime-placeholder-regressions` failures. | Block release, fix code, rerun the failing gate. |
+| content/data drift | Source messages, metadata, routes, or generated governance data no longer match the expected corpus. | `validate:translation-corpus` schema/coverage failures; `validate:tdk-drift` mismatches; `validate:tdk-translations` failures. | Block release until source truth or generator output is corrected. |
+| environment/network blocker | The validator could not reach the runtime or external dependency needed to judge behavior. | `listen EPERM` during local SSR startup; `fetch failed` / timeout against unreachable `FETCH_BASE_URL`; sandboxed localhost denial in Codex. | Do not claim pass or fail; rerun in a reachable local terminal or CI and record the exact blocker. |
+| warning-only hygiene debt | Known audit noise that is still surfaced, but intentionally non-blocking for this milestone. | `validate:translation-corpus` namespace issues (`0` at the latest Phase 90 follow-up checkpoint on 2026-06-26); `validate:merge-chain-consistency` layer overlap warnings (`0` at the latest Phase 90 follow-up checkpoint on 2026-06-26). | Record warning counts in release evidence; use the new hotspot summaries to decide whether a warning batch is historical debt or a fresh regression. |
+
+### Translation Governance Checkpoint (2026-06-26)
+
+Latest focused warning-reduction evidence:
+
+```bash
+npm run validate:merge-chain-consistency -- --top 20 --report-path .planning/research/reports/merge-chain-phase90-all-shadow-cleanup.json
+npm run validate:translation-corpus -- --top 20 --report-path .planning/research/reports/translation-corpus-phase90-all-shadow-cleanup.json
+npx vitest run scripts/validation/validate-translation-corpus.test.ts scripts/validation/validate-merge-chain-consistency.test.ts src/lib/translations.test.ts src/lib/support-content-fallback.test.ts
+npm run qa:seo-governance
+npm run check
+npm run build
+```
+
+Results:
+
+- `validate:translation-corpus`: PASS, `Schema errors: 0`, `Coverage gaps: 0`, `Namespace issues: 0`
+- namespace shape summary: `missing_only=0`, `extra_only=0`, `mixed=0`
+- `validate:merge-chain-consistency`: PASS, `Layer overlap: 0`, `Resolved divergences: 0`, `EN-fallback resolutions: 0`
+- merge layer shape summary: `root=0`, `base=0`, `both=0`
+- focused regression tests: `4` files / `190` tests / PASS
+- `qa:seo-governance`: PASS. It reconfirmed `0` missing i18n keys, `5570/5570` TDK drift records resolved, both translation-governance warning channels at `0`, localized long-tail support for `90` files, and `16` Vitest files / `187` tests passing. It also surfaced `2802` warning-only TDK compliance suggestions.
+- `npm run check`: PASS with `0` errors and `0` warnings; Astro emitted `13` existing unused-symbol hints.
+- `npm run build`: PASS for Cloudflare server output; existing Vite browser-compat externalization warnings were non-fatal.
+
+### Guarded Release Command Recipes
+
+Never run release validation and git actions as separate bare lines in the same paste block. Use one of these guarded recipes instead.
+
+Focused local SSR guard:
+
+```bash
+FETCH_BASE_URL=http://127.0.0.1:4321 npm run validate:tool-page-render-contract -- --timeout-ms 30000 && git status -sb
+```
+
+Focused Phase 87 evidence run:
+
+```bash
+npx vitest run src/lib/tool-cluster-factory.test.ts scripts/validation/tool-page-render-contract.test.ts && npm run validate:translation-corpus && npm run validate:merge-chain-consistency && npm run validate:tdk-drift
+```
+
+Full local production QA closure:
+
+```bash
+FETCH_BASE_URL=http://127.0.0.1:4321 npm run qa:production && git status -sb
+```
+
+Only after the guarded validation command succeeds should release actions continue:
+
+```bash
+FETCH_BASE_URL=http://127.0.0.1:4321 npm run qa:production && git status -sb && git add -A && git commit -m "..." && git push
+```
+
+### Phase 87 Evidence Minimum
+
+Before closing a release milestone, capture at least:
+
+- Exact commands run.
+- Pass/fail totals for each command.
+- Warning-only counts for non-blocking audits.
+- Local SSR URL used for rendered-page gates.
+- Current branch state and commit SHA.
+- Any skipped gates plus the exact reason (`Codex sandbox listen EPERM`, unreachable localhost, CI-only dependency, etc.).
+
+Store that record in the phase validation file for the active milestone.
+
+## Online Metadata Drift Smoke (v0.0.29)
+
+`validate:tdk-drift:online` is now a scoped release-governance workflow rather
+than a bare `--online` toggle. It supports:
+
+- `--scope full|smoke|targeted`
+- `--base-url`
+- `--locales`
+- `--slugs`
+- `--report-path` / `--json-out`
+- `--summary-path`
+- `--concurrency`
+- `--jitter-range`
+- `--timeout-ms`
+- `--bypass-token`
+
+Representative smoke cohort:
+
+- `en/bar-chart-generator`
+- `en/json-formatter`
+- `en/markdown-editor`
+- `ja/json-formatter`
+- `ar/password-generator`
+- `en/screen-recorder`
+- `en/ip-geolocation`
+
+### Local rehearsal
+
+```bash
+FETCH_BASE_URL=http://127.0.0.1:4321 npm run validate:tdk-drift:online -- --scope smoke --report-path .planning/research/reports/tdk-drift-v0.0.29-smoke.json --summary-path .planning/research/reports/tdk-drift-v0.0.29-smoke-summary.md --timeout-ms 30000
+```
+
+Latest local result (2026-06-24):
+
+- PASS
+- `42/42` MATCH
+- `0` transport failures
+- blocker = `none`
+
+### Production smoke
+
+```bash
+npm run validate:tdk-drift:online:prod-smoke -- --report-path .planning/research/reports/tdk-drift-v0.0.29-prod-smoke.json --summary-path .planning/research/reports/tdk-drift-v0.0.29-prod-smoke-summary.md --timeout-ms 30000
+```
+
+Current baseline snapshot (2026-06-24, reachable local terminal):
+
+- Report path: `.planning/research/reports/tdk-drift-v0.0.29-prod-smoke.json`
+- Summary path: `.planning/research/reports/tdk-drift-v0.0.29-prod-smoke-summary.md`
+- Content result: `42/42` MATCH
+- Exit behavior: `0`
+- blocker = `none`
+
+Interpretation:
+
+- The production target is reachable and returns clean metadata for the smoke
+  cohort.
+- This establishes the first formal production metadata-drift baseline for
+  v0.0.29.
+- Cloudflare dashboard inspection on 2026-06-24 showed no active custom rule
+  using `x-waf-bypass-token` for the current zone, so `WAF_BYPASS_TOKEN` is
+  optional infrastructure rather than a required prerequisite for this deploy.
+- Placeholder text is not a valid token. If you literally pass example text
+  such as `你真实的WAF_BYPASS_TOKEN`, the validator now exits early with
+  `invalid-bypass-token` so that placeholder misuse is not misread as a
+  production reachability failure.
+
+### Release placement decision
+
+Keep this smoke run as a **manual pre-release step** for now.
+
+Do not wire it into `qa:smoke` or `verify:production` yet because:
+
+- it depends on production network access;
+- some deployments may optionally depend on a WAF secret not required by normal local QA;
+- the full online sweep remains too expensive for default local release paths.
+
+Weekly CI is a possible follow-up once the secret contract is routine, but it is
+not the default placement today.
+
+## Latest Verification Snapshot (2026-06-24)
+
+- **`npx vitest run src/lib/tool-cluster-factory.test.ts scripts/validation/tool-page-render-contract.test.ts`**: 2 files / 26 tests / PASS
+- **`npm run validate:translation-corpus -- --top 5`**: PASS with `307` warning-only namespace issues; schema errors `0`, coverage gaps `0`; summary now breaks findings down by kind, drift shape, top locales, and top keys.
+- **`npm run validate:merge-chain-consistency -- --top 5`**: PASS with `15241` warning-only overlap findings; `0` resolved divergences; summary now breaks overlap down by `root` / `base` / `both` plus top locales and slugs.
+- **`npm run validate:tdk-drift`**: PASS, `5570/5570` records resolved
+- **`curl -I http://127.0.0.1:4321/en/tools/youtube-tags-generator/`**: HTTP `200 OK`
+- **`FETCH_BASE_URL=http://127.0.0.1:4321 npm run validate:tool-page-render-contract -- --timeout-ms 30000`**: PASS, `11/11` routes
 
 ## Latest Verification Snapshot (2026-05-21)
 
