@@ -4,6 +4,7 @@ import {
   auditCoverage,
   auditBaseJsonNamespace,
   buildCorpusReport,
+  parseTranslationCorpusArgs,
   type SplitFileFinding,
   type CoverageFinding,
   type NamespaceFinding,
@@ -324,6 +325,8 @@ describe('auditBaseJsonNamespace', () => {
     const drift = findings.find((f) => f.key === 'json-formatter' && f.kind === 'group_key_drift');
     expect(drift).toBeDefined();
     expect(drift!.details).toContain('faqs');
+    expect(drift!.groupKeyDriftShape).toBe('extra_only');
+    expect(drift!.extraInnerKeys).toEqual(['faqs']);
   });
 
   it('flags tool UI group inner-key drift (locale drops an inner key EN has)', () => {
@@ -335,6 +338,21 @@ describe('auditBaseJsonNamespace', () => {
     const drift = findings.find((f) => f.key === 'regex' && f.kind === 'group_key_drift');
     expect(drift).toBeDefined();
     expect(drift!.details).toContain('global');
+    expect(drift!.groupKeyDriftShape).toBe('missing_only');
+    expect(drift!.missingInnerKeys).toEqual(['global']);
+  });
+
+  it('classifies mixed inner-key drift when locale both drops and adds keys', () => {
+    const zhTools = {
+      ...enBaseTools,
+      regex: { pattern: '模式', global: '全局', extra: '额外' },
+    };
+    const findings = auditBaseJsonNamespace(zhTools, 'zh', enBaseTools);
+    const drift = findings.find((f) => f.key === 'regex' && f.kind === 'group_key_drift');
+    expect(drift).toBeDefined();
+    expect(drift!.groupKeyDriftShape).toBe('mixed');
+    expect(drift!.missingInnerKeys).toEqual(['flags']);
+    expect(drift!.extraInnerKeys).toEqual(['extra']);
   });
 
   it('does not treat object-valued tool UI groups as suspicious (the old false positive)', () => {
@@ -377,6 +395,11 @@ describe('buildCorpusReport', () => {
     expect(report.summary.schemaErrors).toBe(2); // only errors counted
     expect(report.summary.coverageGaps).toBe(1);
     expect(report.summary.namespaceIssues).toBe(1);
+    expect(report.summary.namespaceByKind).toEqual({
+      missing_key: 0,
+      extra_key: 1,
+      group_key_drift: 0,
+    });
   });
 
   it('sorts schema findings by error-first then locale then slug', () => {
@@ -399,6 +422,80 @@ describe('buildCorpusReport', () => {
     expect(report.summary.schemaErrors).toBe(0);
     expect(report.summary.coverageGaps).toBe(0);
     expect(report.summary.namespaceIssues).toBe(0);
+    expect(report.summary.namespaceByKind).toEqual({
+      missing_key: 0,
+      extra_key: 0,
+      group_key_drift: 0,
+    });
+    expect(report.summary.groupKeyDriftShapes).toEqual({
+      missing_only: 0,
+      extra_only: 0,
+      mixed: 0,
+    });
     expect(report.schemaFindings).toEqual([]);
+  });
+
+  it('computes namespace warning breakdown hotspots', () => {
+    const report = buildCorpusReport(
+      [],
+      [],
+      [
+        { locale: 'zh', key: 'gpa-calculator', kind: 'group_key_drift', groupKeyDriftShape: 'extra_only' },
+        { locale: 'zh', key: 'gpa-calculator', kind: 'group_key_drift', groupKeyDriftShape: 'extra_only' },
+        { locale: 'ar', key: 'pace-calculator', kind: 'group_key_drift', groupKeyDriftShape: 'missing_only' },
+        { locale: 'ar', key: 'regex', kind: 'missing_key' },
+      ],
+      { totalFiles: 2, totalLocales: 2 }
+    );
+
+    expect(report.summary.namespaceByKind).toEqual({
+      missing_key: 1,
+      extra_key: 0,
+      group_key_drift: 3,
+    });
+    expect(report.summary.groupKeyDriftShapes).toEqual({
+      missing_only: 1,
+      extra_only: 2,
+      mixed: 0,
+    });
+    expect(report.summary.topNamespaceLocales).toEqual([
+      { locale: 'ar', count: 2 },
+      { locale: 'zh', count: 2 },
+    ]);
+    expect(report.summary.topNamespaceKeys[0]).toEqual({
+      key: 'gpa-calculator',
+      count: 2,
+    });
+  });
+});
+
+describe('parseTranslationCorpusArgs', () => {
+  it('parses report path and top limit', () => {
+    expect(
+      parseTranslationCorpusArgs(['--report-path', 'out.json', '--top', '12'])
+    ).toEqual({
+      help: false,
+      reportPath: 'out.json',
+      top: 12,
+    });
+  });
+
+  it('parses help flags', () => {
+    expect(parseTranslationCorpusArgs(['--help'])).toEqual({
+      help: true,
+      top: 30,
+    });
+  });
+
+  it('rejects invalid top values', () => {
+    expect(() => parseTranslationCorpusArgs(['--top', '0'])).toThrow(
+      'Invalid value for --top: 0'
+    );
+  });
+
+  it('rejects unknown flags', () => {
+    expect(() => parseTranslationCorpusArgs(['--wat'])).toThrow(
+      'Unknown argument: --wat'
+    );
   });
 });

@@ -12,5 +12,27 @@
     "选择 Redis 或 RabbitMQ，将基础服务片段复制到原型堆栈中。",
     "从内置默认值创建简单的 Nginx 或 MinIO 服务条目。",
     "下载生成的 YAML，并在使用前手动编辑端口、密码或卷。"
+  ],
+  "faqs": [
+    {
+      "question": "Docker Compose Generator 是免费的吗？",
+      "answer": "是的，Docker Compose Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Docker Compose Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Docker Compose Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Docker Compose Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Docker Compose Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
   ]
 }

@@ -13,5 +13,16 @@
     "300㎡商场中庭地面铺贴600×1200mm大板瓷砖，考虑8%损耗率及伸缩缝预留",
     "复式楼梯间斜面铺贴计算，输入梯段倾斜角度与踏步尺寸生成三维展开面积",
     "厨房防溅板异形切割方案，针对650×850mm操作台面生成最小损耗的瓷砖组合方案"
-  ]
+  ],
+  "roomLength": "房间长度",
+  "roomWidth": "房间宽度",
+  "wastage": "损耗率",
+  "pricePerTile": "每块价格",
+  "totalCost": "总成本",
+  "tilePrice": "瓷砖价格",
+  "perTile": "每块",
+  "wastagePercentage": "损耗百分比",
+  "tilesRequired": "所需瓷砖",
+  "tilesWithWastage": "含损耗瓷砖数",
+  "estimatedCost": "估算成本"
 }

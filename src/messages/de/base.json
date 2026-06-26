@@ -9609,21 +9609,7 @@
       "name": "Stoppuhr",
       "description": "Genauige Stoppuhr mit Rundenzeitmessung. Verfolge mehrere Runden mit Besten/Schlechtesten-Indikatoren.",
       "seo_title": " Kostenlose Online-Timer mit Lap-Tracking – StopWatch",
-      "seo_description": "Messen Sie mit dieser Stoppuhr Zeiten präzise, verfolgen Sie Runden und vergleichen Sie beste sowie schlechteste Zwischenzeiten.",
-      "faqs": [
-        {
-          "question": "Wie genau ist die Stoppuhr?",
-          "answer": "Die Stoppuhr hat eine Genauigkeit von 10 Millisekunden (eine Hundertstelsekunde), angezeigt als Minuten: Sekunden.Zehntelsekunden, ausreichend für alltägliche Zeitmessungsnötigkeiten."
-        },
-        {
-          "question": "Werden Rundenzeiten gespeichert?",
-          "answer": "Rundenzeiten werden gelöscht, wenn die Seite neu geladen wird. Wenn du die Aufzeichnungen speichern möchtest, empfehlen wir, sie manuell aufzuschreiben oder nach der Nutzung Screenshots zu machen."
-        },
-        {
-          "question": "Wie werden die schnellsten und langsamsten Runden markiert?",
-          "answer": "Wenn 2 oder mehr Runden erfasst werden, markiert das System die schnellste Runde mit 🏆 und die langsamste mit 🐢, was dir bei der Analyse deiner Leistung hilft."
-        }
-      ]
+      "seo_description": "Messen Sie mit dieser Stoppuhr Zeiten präzise, verfolgen Sie Runden und vergleichen Sie beste sowie schlechteste Zwischenzeiten."
     },
     "countdownTimer": {
       "hours": "Stunden",
@@ -9655,20 +9641,7 @@
       "description": "Schreiben und Vorschau von Markdown mit Live-Rendering. Export als MD oder HTML.",
       "seo_title": "Kostenloser Online Markdown-Editor mit Live-Vorschau",
       "seo_description": "Schreiben und Vorschau von Markdown online kostenlos. Live-Rendering, Syntax-Highlighting und Export in MD oder HTML. Perfekt für Dokumentation und Notizen.",
-      "faqs": [
-        {
-          "question": "Welche Markdown-Syntax wird unterstützt?",
-          "answer": "Alle Standard-Markdown-Syntax wird unterstützt, einschließlich Überschriften, Fett, Kursiv, Listen, Codeblöcke, Tabellen, Links, Bilder, Zitate und mehr. GFM (GitHub Flavored Markdown) Erweiterungen werden ebenfalls unterstützt."
-        },
-        {
-          "question": "Wird mein Inhalt automatisch gespeichert?",
-          "answer": "Die aktuelle Version speichert Inhalte nicht automatisch. Wir empfehlen, Ihre Datei nach der Bearbeitung zu exportieren. Sie können im .md- oder .html-Format exportieren."
-        },
-        {
-          "question": "Kann ich vorhandene Markdown-Dateien importieren?",
-          "answer": "Sie können vorhandenen Markdown-Inhalt direkt in den Editor kopieren und einfügen. Der Editor erkennt und rendert die Markdown-Syntax automatisch."
-        }
-      ],
+
       "errorParsingMarkdown": "Fehler beim Parsen von Markdown",
       "list": "Liste",
       "code": "Code",
@@ -9680,65 +9653,19 @@
       "name": "Weltuhr",
       "description": "Zeigen Sie die aktuelle Zeit in mehreren Städten weltweit gleichzeitig an.",
       "seo_title": "Kostenlos Online-Weltuhr – Zeit in verschiedenen Städten gleichzeitig überwachen",
-      "seo_description": "Kostenloses Online-Tool Weltuhr, mit dem Sie schnell und sicher Behalten Sie mit dieser Weltuhr die aktuelle Uhrzeit in mehreren Städten weltweit gleichzeitig im Blick direkt in Ihrem Browser. Völlig kostenlos, ohne Downloads oder Registrierung, läuft 100% lokal, um maximale Privatsphäre und Arbeitseffizienz zu gewährleisten.",
-      "faqs": [
-        {
-          "question": "Welche Städte werden unterstützt?",
-          "answer": "Über 20 Großstädte weltweit werden unterstützt, einschließlich New York, Los Angeles, Chicago, London, Paris, Berlin, Moskau, Dubai, Mumbai, Singapur, Hongkong, Shanghai, Tokio, Seoul, Sydney, Auckland und mehr."
-        },
-        {
-          "question": "Ist die Zeit genau?",
-          "answer": "Die Zeit basiert auf der Systemzeit Ihres Geräts und wird jede Sekunde aktualisiert. Solange die Zeit Ihres Geräts genau ist, sind die angezeigten Stadtzeiten genau."
-        },
-        {
-          "question": "Wie weiß ich, ob es Tag oder Nacht ist?",
-          "answer": "Jede Stadtkarte zeigt ein Sonnen- ☀️ oder Mond-Symbol 🌙. Die Sonne zeigt Tag an (6:00-18:00), der Mond zeigt Nacht an (andere Stunden)."
-        }
-      ]
+      "seo_description": "Kostenloses Online-Tool Weltuhr, mit dem Sie schnell und sicher Behalten Sie mit dieser Weltuhr die aktuelle Uhrzeit in mehreren Städten weltweit gleichzeitig im Blick direkt in Ihrem Browser. Völlig kostenlos, ohne Downloads oder Registrierung, läuft 100% lokal, um maximale Privatsphäre und Arbeitseffizienz zu gewährleisten."
     },
     "countdown-timer": {
       "name": "Countdown Timer",
       "description": "Individuelle Countdown-Timer mit visueller Fortschrittsanzeige und Benachrichtigungen einrichten.",
       "seo_title": "Kostenlos Online Countdown Timer",
-      "seo_description": "Setze kostenlose online Countdown-Zeitwerke mit visueller Fortschrittskante, vorgefertigten Zeiten und Browser-Notifications. Perfekt für Produktivität und Kochen.",
-      "faqs": [
-        {
-          "question": "Erhalte ich eine Erinnerung, wenn der Countdown abgelaufen ist?",
-          "answer": "Ja, eine Browser-Benachrichtigung wird gesendet, wenn der Countdown abgelaufen ist. Bei der ersten Verwendung wird der Browser um Erlaubnis für Benachrichtigungen bitten - bitte erlauben Sie, um die Erinnerungsfunktion zu aktivieren."
-        },
-        {
-          "question": "Wie lange kann ich die Uhr einstellen?",
-          "answer": "Unterstützt jede Kombination von 0-23 Stunden, 0-59 Minuten und 0-59 Sekunden. Maximale Countdown-Dauer ist 23:59:59."
-        },
-        {
-          "question": "Kann ich nach dem Pausieren weitermachen?",
-          "answer": "Ja. Nach dem Pausieren bleibt der Countdown bei seinem aktuellen Zustand. Klicken Sie auf 'Fortsetzen', um von dort fortzufahren."
-        }
-      ]
+      "seo_description": "Setze kostenlose online Countdown-Zeitwerke mit visueller Fortschrittskante, vorgefertigten Zeiten und Browser-Notifications. Perfekt für Produktivität und Kochen."
     },
     "note-pad": {
       "name": "Notizblock",
       "description": "Erstellen und organisieren Sie farbige Notizzettel. Automatische Speicherung im Browser-Speicher.",
       "seo_title": "Kostenlos Online Tool: Farbenprächtige Stickynotes erstellen & organisieren",
-      "seo_description": "Erstelle und ordne farbenprächtige Stickynotes online. Automatische Speicherung in deinem Browser. Alles in einem kostenlosen Tool. Jetzt versuchen!",
-      "faqs": [
-        {
-          "question": "Werden Notizen automatisch gespeichert?",
-          "answer": "Ja, alle Notizen werden automatisch im Browser-Lokalspeicher gesichert. Selbst nach dem Schließen der Seite oder des Browsers bleiben Notizen erhalten, wenn Sie zurückkehren."
-        },
-        {
-          "question": "Wo wird die Notizdaten gespeichert?",
-          "answer": "Notizdaten werden im localStorage Ihres Browsers gespeichert, nicht auf einem Server hochgeladen. Das Löschen des Browserdaten kann zu einem Verlust der Notizen führen, daher empfehlen wir regelmäßige Exports zur Sicherung."
-        },
-        {
-          "question": "Wie sichere ich meine Notizen?",
-          "answer": "Klicken Sie auf die Schaltfläche 'Exportieren', um alle Notizen als JSON-Datei zu exportieren. Sie können diese Datei als Sicherung speichern."
-        },
-        {
-          "question": "Wie viele Notizen kann ich erstellen?",
-          "answer": "Es gibt keine Begrenzung für die Anzahl der Notizen. Erstellen Sie so viele wie Sie benötigen. Beachten Sie, dass der Lokalspeicher des Browsers Kapazitätsbeschränkungen hat (typischerweise 5-10MB)."
-        }
-      ]
+      "seo_description": "Erstelle und ordne farbenprächtige Stickynotes online. Automatische Speicherung in deinem Browser. Alles in einem kostenlosen Tool. Jetzt versuchen!"
     },
     "stopwatchUI": {
       "start": "Start",
@@ -9755,54 +9682,31 @@
       "name": "PDF in Text umwandeln",
       "description": "Textinhalt aus PDF-Dateien extrahieren. Unterstützt mehrseitige PDFs mit Seitenmarkern.",
       "seo_title": "Kostenloser Online-Textkonverter für PDF",
-      "seo_description": "Wandeln Sie PDF-Dateien online kostenlos in Text um. Unterstützt mehrseitige PDFs und behält die Formatierung bei. Sofortiger TXT-Dateien-Download.",
-      "faqs": [
-        {
-          "question": "Funktioniert das mit gescannten PDFs?",
-          "answer": "Dieses Tool extrahiert eingebetteten Text aus PDFs. Für gescannte Bilder benötigen Sie möglicherweise OCR-Software."
-        },
-        {
-          "question": "Gibt es eine Dateigrößenbegrenzung?",
-          "answer": "Die Verarbeitung erfolgt in Ihrem Browser, daher können sehr große Dateien langsam sein. Wir empfehlen Dateien unter 50MB."
-        }
-      ]
+      "seo_description": "Wandeln Sie PDF-Dateien online kostenlos in Text um. Unterstützt mehrseitige PDFs und behält die Formatierung bei. Sofortiger TXT-Dateien-Download."
     },
     "word-to-txt": {
       "name": "Word zu Text",
       "description": "Word-Dokumente (.docx) in Klartext konvertieren.",
       "seo_title": "Kostenlos Word zu Text-Converter online",
-      "seo_description": "Konvertieren Sie Word-Dokumente kostenlos online in reinen Text. Extrahieren Sie Text aus DOCX-Dateien sofort, ohne Software zu benötigen.",
-      "faqs": []
+      "seo_description": "Konvertieren Sie Word-Dokumente kostenlos online in reinen Text. Extrahieren Sie Text aus DOCX-Dateien sofort, ohne Software zu benötigen."
     },
     "word-to-html": {
       "name": "Word nach HTML umwandeln",
       "description": "Umwandeln Sie Word-Dokumente (.docx) in das HTML-Format mit erhaltenem Format.",
       "seo_title": "Kostenlose Online-Werkzeug: Word zu HTML Konverter",
-      "seo_description": "Konvertieren Sie Word-Dokumente kostenlos online in HTML. Formatierung, Überschriften und Listen werden beibehalten. Laden Sie sauberen HTML-Code herunter.",
-      "faqs": [
-        {
-          "question": "Wird alle Formatierung erhalten?",
-          "answer": "Grundlegende Formate wie Überschriften, Fett, Kursiv und Listen werden erhalten. Komplexe Layouts könnten nicht perfekt umgewandelt werden."
-        },
-        {
-          "question": "Kann ich das HTML bearbeiten?",
-          "answer": "Ja, Sie können den HTML-Code kopieren und ihn in jedem Texteditor oder HTML-Editor bearbeiten."
-        }
-      ]
+      "seo_description": "Konvertieren Sie Word-Dokumente kostenlos online in HTML. Formatierung, Überschriften und Listen werden beibehalten. Laden Sie sauberen HTML-Code herunter."
     },
     "excel-to-csv": {
       "name": "Excel zu CSV",
       "description": "Excel-Tabellen in CSV-Format konvertieren.",
       "seo_title": "Kostenlos Online Excel zu CSV Konverter",
-      "seo_description": "Konvertieren Sie Excel-Dateien kostenlos online in CSV. Unterstützung für mehrere Blätter, sofortiges Vorschau- und Herunterladen.",
-      "faqs": []
+      "seo_description": "Konvertieren Sie Excel-Dateien kostenlos online in CSV. Unterstützung für mehrere Blätter, sofortiges Vorschau- und Herunterladen."
     },
     "csv-to-excel": {
       "name": "CSV zu Excel",
       "description": "CSV-Dateien in Excel-Format (.xlsx) konvertieren.",
       "seo_title": "Kostenloser CSV zu Excel-Converter online",
-      "seo_description": "Kostenloses Online-Tool CSV zu Excel, mit dem Sie schnell und sicher Konvertieren Sie CSV-Dateien online kostenlos in Excel. Daten vorab ansehen und XLSX-Datei sofort herunterladen direkt in Ihrem Browser. Völlig kostenlos, ohne Downloads oder Registrierung, läuft 100% lokal, um maximale Privatsphäre und Arbeitseffizienz zu gewährleisten.",
-      "faqs": []
+      "seo_description": "Kostenloses Online-Tool CSV zu Excel, mit dem Sie schnell und sicher Konvertieren Sie CSV-Dateien online kostenlos in Excel. Daten vorab ansehen und XLSX-Datei sofort herunterladen direkt in Ihrem Browser. Völlig kostenlos, ohne Downloads oder Registrierung, läuft 100% lokal, um maximale Privatsphäre und Arbeitseffizienz zu gewährleisten."
     },
     "loan-calculator": {
       "name": "Kreditrechner",
@@ -10737,8 +10641,7 @@
       "yourGpa": "Ihrer GPA",
       "totalPoints": "Gesamtzahl der Punkte",
       "percentage": "Prozentsatz",
-      "gradeReference": "Notenbezug",
-      "remove": "Entfernen"
+      "gradeReference": "Notenbezug"
     },
     "pace-calculator": {
       "name": "Pace-Rechner",
@@ -10770,8 +10673,6 @@
       "pacePerMile": "Tempo pro Meile",
       "speed": "Geschwindigkeit",
       "finishTime": "Zielzeit",
-      "metric": "Metrisch",
-      "imperial": "Imperial",
       "hoursShort": "Std",
       "minutesShort": "Min",
       "secondsShort": "Sek"

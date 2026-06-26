@@ -79,6 +79,9 @@ const FAQ_KEY_PAIRS: ReadonlyArray<readonly [string, string]> = [
   ['q', 'a'],
 ];
 
+const DEFAULT_TOP_FINDINGS = 30;
+const SUMMARY_TOP_LIMIT = 10;
+
 // ---------------------------------------------------------------------------
 // Types
 // ---------------------------------------------------------------------------
@@ -102,12 +105,41 @@ export interface CoverageFinding {
   details?: string;
 }
 
+export type NamespaceFindingKind =
+  | 'missing_key'
+  | 'extra_key'
+  | 'group_key_drift';
+
+export type GroupKeyDriftShape =
+  | 'missing_only'
+  | 'extra_only'
+  | 'mixed';
+
 /** TCG-05: a base.json namespace parity issue (against the EN reference). */
 export interface NamespaceFinding {
   locale: string;
   key: string;
-  kind: 'missing_key' | 'extra_key' | 'group_key_drift';
+  kind: NamespaceFindingKind;
   details?: string;
+  groupKeyDriftShape?: GroupKeyDriftShape;
+  missingInnerKeys?: string[];
+  extraInnerKeys?: string[];
+}
+
+export interface CountByLocaleEntry {
+  locale: string;
+  count: number;
+}
+
+export interface CountByKeyEntry {
+  key: string;
+  count: number;
+}
+
+export interface TranslationCorpusCliArgs {
+  help: boolean;
+  reportPath?: string;
+  top: number;
 }
 
 /** Aggregate report written to disk. */
@@ -119,6 +151,10 @@ export interface CorpusReport {
     schemaErrors: number;
     coverageGaps: number;
     namespaceIssues: number;
+    namespaceByKind: Record<NamespaceFindingKind, number>;
+    groupKeyDriftShapes: Record<GroupKeyDriftShape, number>;
+    topNamespaceLocales: CountByLocaleEntry[];
+    topNamespaceKeys: CountByKeyEntry[];
   };
   schemaFindings: SplitFileFinding[];
   coverageFindings: CoverageFinding[];
@@ -496,7 +532,21 @@ export function auditBaseJsonNamespace(
       const parts: string[] = [];
       if (missing.length > 0) parts.push(`missing inner keys: ${missing.join(', ')}`);
       if (extra.length > 0) parts.push(`extra inner keys: ${extra.join(', ')}`);
-      findings.push({ locale, key: groupKey, kind: 'group_key_drift', details: parts.join('; ') });
+      let groupKeyDriftShape: GroupKeyDriftShape = 'mixed';
+      if (missing.length > 0 && extra.length === 0) {
+        groupKeyDriftShape = 'missing_only';
+      } else if (extra.length > 0 && missing.length === 0) {
+        groupKeyDriftShape = 'extra_only';
+      }
+      findings.push({
+        locale,
+        key: groupKey,
+        kind: 'group_key_drift',
+        details: parts.join('; '),
+        groupKeyDriftShape,
+        missingInnerKeys: missing,
+        extraInnerKeys: extra,
+      });
     }
   }
 
@@ -535,6 +585,24 @@ export function buildCorpusReport(
     return a.key < b.key ? -1 : a.key > b.key ? 1 : 0;
   });
 
+  const namespaceByKind: Record<NamespaceFindingKind, number> = {
+    missing_key: 0,
+    extra_key: 0,
+    group_key_drift: 0,
+  };
+  const groupKeyDriftShapes: Record<GroupKeyDriftShape, number> = {
+    missing_only: 0,
+    extra_only: 0,
+    mixed: 0,
+  };
+
+  for (const finding of sortedNamespace) {
+    namespaceByKind[finding.kind] += 1;
+    if (finding.kind === 'group_key_drift' && finding.groupKeyDriftShape) {
+      groupKeyDriftShapes[finding.groupKeyDriftShape] += 1;
+    }
+  }
+
   return {
     timestamp: new Date().toISOString(),
     totalFiles: meta.totalFiles,
@@ -543,11 +611,45 @@ export function buildCorpusReport(
       schemaErrors: schemaFindings.filter((f) => f.severity === 'error').length,
       coverageGaps: coverageFindings.length,
       namespaceIssues: namespaceFindings.length,
+      namespaceByKind,
+      groupKeyDriftShapes,
+      topNamespaceLocales: buildTopLocaleCounts(sortedNamespace, SUMMARY_TOP_LIMIT),
+      topNamespaceKeys: buildTopKeyCounts(sortedNamespace, SUMMARY_TOP_LIMIT),
     },
     schemaFindings: sortedSchema,
     coverageFindings: sortedCoverage,
     namespaceFindings: sortedNamespace,
   };
+}
+
+function buildTopLocaleCounts(
+  findings: NamespaceFinding[],
+  limit: number
+): CountByLocaleEntry[] {
+  const counts = new Map<string, number>();
+  for (const finding of findings) {
+    counts.set(finding.locale, (counts.get(finding.locale) ?? 0) + 1);
+  }
+
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .slice(0, limit)
+    .map(([locale, count]) => ({ locale, count }));
+}
+
+function buildTopKeyCounts(
+  findings: NamespaceFinding[],
+  limit: number
+): CountByKeyEntry[] {
+  const counts = new Map<string, number>();
+  for (const finding of findings) {
+    counts.set(finding.key, (counts.get(finding.key) ?? 0) + 1);
+  }
+
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .slice(0, limit)
+    .map(([key, count]) => ({ key, count }));
 }
 
 /**
@@ -650,11 +752,71 @@ export async function runCorpusAudit(): Promise<CorpusReport> {
   });
 }
 
+export function parseTranslationCorpusArgs(argv: string[]): TranslationCorpusCliArgs {
+  const args: TranslationCorpusCliArgs = {
+    help: false,
+    top: DEFAULT_TOP_FINDINGS,
+  };
+
+  for (let index = 0; index < argv.length; index += 1) {
+    const arg = argv[index];
+
+    if (arg === '--help' || arg === '-h') {
+      args.help = true;
+      continue;
+    }
+
+    if (arg === '--report-path' && argv[index + 1]) {
+      args.reportPath = argv[index + 1];
+      index += 1;
+      continue;
+    }
+
+    if (arg === '--top' && argv[index + 1]) {
+      const parsed = Number(argv[index + 1]);
+      if (!Number.isInteger(parsed) || parsed <= 0) {
+        throw new Error(`Invalid value for --top: ${argv[index + 1]}`);
+      }
+      args.top = parsed;
+      index += 1;
+      continue;
+    }
+
+    throw new Error(`Unknown argument: ${arg}`);
+  }
+
+  return args;
+}
+
+function printHelp(): void {
+  console.log('Translation Corpus Governance — offline audit');
+  console.log('');
+  console.log('Usage:');
+  console.log('  npm run validate:translation-corpus -- [options]');
+  console.log('');
+  console.log('Options:');
+  console.log('  --report-path <path>  Write the JSON report to a specific path');
+  console.log(`  --top <n>             Print up to <n> sample findings per section (default: ${DEFAULT_TOP_FINDINGS})`);
+  console.log('  --help, -h            Show this help and exit');
+}
+
+function formatCountList(
+  entries: Array<{ label: string; count: number }>
+): string {
+  return entries.map((entry) => `${entry.label}=${entry.count}`).join(', ');
+}
+
 // ---------------------------------------------------------------------------
 // Entry Point
 // ---------------------------------------------------------------------------
 
 async function main(): Promise<void> {
+  const args = parseTranslationCorpusArgs(process.argv.slice(2));
+  if (args.help) {
+    printHelp();
+    return;
+  }
+
   console.log('\x1b[36m[INFO] Translation Corpus Governance — offline audit\x1b[0m');
   console.log(`  Catalog: ${tools.length} tools × ${locales.length} locales`);
   console.log('------------------------------------------------------------------');
@@ -694,14 +856,52 @@ async function main(): Promise<void> {
   if (report.summary.namespaceIssues > 0) {
     console.warn('');
     console.warn(`\x1b[33m[WARN] ${report.summary.namespaceIssues} namespace issue(s) — review recommended\x1b[0m`);
-    for (const f of report.namespaceFindings.slice(0, 30)) {
+    console.warn(
+      `  By kind: ${formatCountList([
+        { label: 'missing_key', count: report.summary.namespaceByKind.missing_key },
+        { label: 'extra_key', count: report.summary.namespaceByKind.extra_key },
+        { label: 'group_key_drift', count: report.summary.namespaceByKind.group_key_drift },
+      ])}`
+    );
+    if (report.summary.namespaceByKind.group_key_drift > 0) {
+      console.warn(
+        `  Group-drift shapes: ${formatCountList([
+          { label: 'missing_only', count: report.summary.groupKeyDriftShapes.missing_only },
+          { label: 'extra_only', count: report.summary.groupKeyDriftShapes.extra_only },
+          { label: 'mixed', count: report.summary.groupKeyDriftShapes.mixed },
+        ])}`
+      );
+    }
+    if (report.summary.topNamespaceLocales.length > 0) {
+      console.warn(
+        `  Top locales: ${formatCountList(
+          report.summary.topNamespaceLocales.map((entry) => ({
+            label: entry.locale,
+            count: entry.count,
+          }))
+        )}`
+      );
+    }
+    if (report.summary.topNamespaceKeys.length > 0) {
+      console.warn(
+        `  Top keys: ${formatCountList(
+          report.summary.topNamespaceKeys.map((entry) => ({
+            label: entry.key,
+            count: entry.count,
+          }))
+        )}`
+      );
+    }
+    for (const f of report.namespaceFindings.slice(0, args.top)) {
       console.warn(`  ${f.locale}/${f.key} — ${f.kind}: ${f.details ?? ''}`);
     }
+    const remaining = report.summary.namespaceIssues - args.top;
+    if (remaining > 0) console.warn(`  ... and ${remaining} more`);
   }
 
   // Write report (non-fatal on write failure).
   try {
-    const reportPath = await writeCorpusReport(report);
+    const reportPath = await writeCorpusReport(report, args.reportPath);
     console.log(`\n  Report: ${reportPath}`);
   } catch (err) {
     console.warn(`\n  \x1b[33m[WARN] Could not write report: ${(err as Error).message}\x1b[0m`);

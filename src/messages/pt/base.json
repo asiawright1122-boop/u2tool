@@ -9553,21 +9553,7 @@
       "name": "Cronômetro",
       "description": "Cronômetro preciso com marcação de voltas. Trace várias voltas com indicadores de melhor e pior tempo.",
       "seo_title": "Grátis Online: Relógio de Tempo com Registro de Volta - Ferramenta Precisa",
-      "seo_description": "Ferramenta online gratuita Cronômetro para ajudar você a Use este cronômetro online grátis para medir tempo, registrar voltas e acompanhar melhores marcas de forma rápida e segura no seu navegador. Totalmente grátis, sem downloads ou registros, rodando 100% localmente para garantir sua total privacidade, segurança e eficiência no dia a dia.",
-      "faqs": [
-        {
-          "question": "Qual é a precisão do cronômetro?",
-          "answer": "A precisão do cronômetro é de 10 milissegundos (centésimos de segundo), exibida como minutos:segundos.centésimos, suficiente para as necessidades de medição diárias."
-        },
-        {
-          "question": "Os registros de volta são salvos?",
-          "answer": "Os registros de volta são apagados quando a página é recarregada. Se precisar salvar os registros, recomendamos registrar manualmente ou tirar screenshots após o uso."
-        },
-        {
-          "question": "Como são marcadas as voltas mais rápidas e mais lentas?",
-          "answer": "Quando 2 ou mais voltas são registradas, o sistema marca automaticamente a volta mais rápida com 🏆 e a mais lenta com 🐢, ajudando você a analisar o desempenho."
-        }
-      ]
+      "seo_description": "Ferramenta online gratuita Cronômetro para ajudar você a Use este cronômetro online grátis para medir tempo, registrar voltas e acompanhar melhores marcas de forma rápida e segura no seu navegador. Totalmente grátis, sem downloads ou registros, rodando 100% localmente para garantir sua total privacidade, segurança e eficiência no dia a dia."
     },
     "countdownTimer": {
       "hours": "Horas",
@@ -9599,20 +9585,7 @@
       "description": "Escreva e visualize Markdown com renderização ao vivo. Exporte para MD ou HTML.",
       "seo_title": "Editor Markdown Gratuito Online com Visualização ao Vivo",
       "seo_description": "Escreva e visualize Markdown online de graça. Renderização em tempo real, destaque sintático e exportação para MD ou HTML. Perfeito para documentação e anotações.",
-      "faqs": [
-        {
-          "question": "Qual sintaxe Markdown é suportada?",
-          "answer": "Toda a sintaxe Markdown padrão é suportada, incluindo títulos, negrito, itálico, listas, blocos de código, tabelas, links, imagens, citações e mais. Extensões GFM (GitHub Flavored Markdown) também são suportadas."
-        },
-        {
-          "question": "Meu conteúdo é salvo automaticamente?",
-          "answer": "A versão atual não salva o conteúdo automaticamente. Recomendamos exportar seu arquivo após editar. Você pode exportar no formato .md ou .html."
-        },
-        {
-          "question": "Posso importar arquivos Markdown existentes?",
-          "answer": "Você pode copiar e colar conteúdo Markdown existente diretamente no editor. O editor reconhecerá e renderizará automaticamente a sintaxe Markdown."
-        }
-      ],
+
       "errorParsingMarkdown": "Erro ao analisar markdown",
       "list": "Lista",
       "code": "Código",
@@ -9624,65 +9597,19 @@
       "name": "Relógio Mundial",
       "description": "Veja a hora atual em múltiplas cidades do mundo simultaneamente.",
       "seo_title": "World Clock Online Grátis - Ver Horas em Tempo Real",
-      "seo_description": "Acesse nossa ferramenta de World Clock online e veja as horas atuais em várias cidades ao redor do mundo simultaneamente. Tudo grátis e fácil de usar! Experimente agora!",
-      "faqs": [
-        {
-          "question": "Quais cidades são suportadas?",
-          "answer": "Mais de 20 cidades principais do mundo são suportadas, incluindo Nova York, Los Angeles, Chicago, Londres, Paris, Berlim, Moscou, Dubai, Mumbai, Singapura, Hong Kong, Xangai, Tóquio, Seul, Sydney, Auckland e mais."
-        },
-        {
-          "question": "A hora é precisa?",
-          "answer": "A hora é baseada na hora do sistema do seu dispositivo e atualiza a cada segundo. Enquanto a hora do seu dispositivo for precisa, as horas das cidades exibidas serão precisas."
-        },
-        {
-          "question": "Como sei se é dia ou noite?",
-          "answer": "Cada cartão de cidade mostra um ícone de sol ☀️ ou lua 🌙. O sol indica dia (6:00-18:00), a lua indica noite (outras horas)."
-        }
-      ]
+      "seo_description": "Acesse nossa ferramenta de World Clock online e veja as horas atuais em várias cidades ao redor do mundo simultaneamente. Tudo grátis e fácil de usar! Experimente agora!"
     },
     "countdown-timer": {
       "name": "Contador Regressivo",
       "description": "Configure contadores regressivos personalizados com progresso visual e notificações.",
       "seo_title": "Contador de Descontos Online Grátis - Ferramenta JSON!",
-      "seo_description": "Crie seu próprio contador decrescente visual com notificações. Ferramenta JSON online totalmente gratuita. Comece agora!",
-      "faqs": [
-        {
-          "question": "Receberei um lembrete quando o countdown terminar?",
-          "answer": "Sim, uma notificação do navegador é enviada quando o countdown termina. Na primeira utilização, o navegador pedirá permissão para notificações - por favor, permita para ativar o recurso de lembrete."
-        },
-        {
-          "question": "Por quanto tempo posso configurar o timer?",
-          "answer": "Suporta qualquer combinação de 0-23 horas, 0-59 minutos e 0-59 segundos. O countdown máximo é 23:59:59."
-        },
-        {
-          "question": "Posso continuar após pausar?",
-          "answer": "Sim. Após clicar em pausa, o countdown mantém seu estado atual. Clique em 'Continuar' para retomar a partir do ponto onde pausou."
-        }
-      ]
+      "seo_description": "Crie seu próprio contador decrescente visual com notificações. Ferramenta JSON online totalmente gratuita. Comece agora!"
     },
     "note-pad": {
       "name": "Bloco de Notas Online",
       "description": "Crie e organize notas adesivas coloridas. Salve automaticamente no armazenamento do navegador.",
       "seo_title": "Note Pad Grátis Online: Organize Notas Coloridas - Salve Automaticamente!",
-      "seo_description": "Crie e organize notas coloridas online com facilidade. Salva automaticamente em seu navegador. Tudo grátis e fácil de usar! Tente agora!",
-      "faqs": [
-        {
-          "question": "As notas são salvas automaticamente?",
-          "answer": "Sim, todas as notas são salvas automaticamente no armazenamento local do navegador. Mesmo após fechar a página ou o navegador, as notas são preservadas quando você retornar."
-        },
-        {
-          "question": "Onde são armazenados os dados das notas?",
-          "answer": "Os dados das notas são armazenados no localStorage do seu navegador, não são enviados para nenhum servidor. A limpeza dos dados do navegador pode causar a perda de notas, portanto, recomendamos exportações regulares para backup."
-        },
-        {
-          "question": "Como eu faço backup das minhas notas?",
-          "answer": "Clique no botão 'Exportar' para exportar todas as notas como um arquivo JSON. Você pode salvar esse arquivo como backup."
-        },
-        {
-          "question": "Quantas notas posso criar?",
-          "answer": "Não há limite no número de notas. Crie quantas precisar. Note que o armazenamento local do navegador tem limites de capacidade (tipicamente 5-10MB)."
-        }
-      ]
+      "seo_description": "Crie e organize notas coloridas online com facilidade. Salva automaticamente em seu navegador. Tudo grátis e fácil de usar! Tente agora!"
     },
     "stopwatchUI": {
       "start": "Iniciar",
@@ -9699,45 +9626,31 @@
       "name": "PDF para Texto",
       "description": "Extrai conteúdo textual de arquivos PDF. Suporta PDFs de múltiplas páginas com marcadores de página.",
       "seo_title": "Grátis: Converta PDF online em texto facilmente!",
-      "seo_description": "Converta PDFs em texto online gratuitamente. Suporta múltiplas páginas, mantém formatação e baixe instantaneamente como arquivo TXT.",
-      "faqs": [
-        {
-          "question": "Funciona com PDFs escaneados?",
-          "answer": "Esta ferramenta extrai texto embutido de PDFs. Para imagens escaneadas, você pode precisar de software OCR."
-        },
-        {
-          "question": "Há um limite de tamanho de arquivo?",
-          "answer": "Os processamentos são feitos no seu navegador, então arquivos muito grandes podem ser lentos. Recomendamos arquivos com menos de 50MB."
-        }
-      ]
+      "seo_description": "Converta PDFs em texto online gratuitamente. Suporta múltiplas páginas, mantém formatação e baixe instantaneamente como arquivo TXT."
     },
     "word-to-txt": {
       "name": "Word para Texto",
       "description": "Converter documentos Word (.docx) para texto simples.",
       "seo_title": "Conversor de Word para Texto Grátis Online",
-      "seo_description": "Converta documentos Word em texto puro online gratuitamente. Extraia texto de arquivos DOCX instantaneamente, sem necessidade de software.",
-      "faqs": []
+      "seo_description": "Converta documentos Word em texto puro online gratuitamente. Extraia texto de arquivos DOCX instantaneamente, sem necessidade de software."
     },
     "word-to-html": {
       "name": "Word para HTML",
       "description": "Converter documentos Word (.docx) para formato HTML.",
       "seo_title": "Conversor Grátis de Word para HTML Online | Ferramenta Facil",
-      "seo_description": "Ferramenta online gratuita Word para HTML para ajudar você a Converter documentos .docx para HTML preservando formatação. Ferramenta online gratuita e fácil de usar. Tente agora de forma rápida e segura no seu navegador. Totalmente grátis, sem downloads ou registros, rodando 100% localmente para garantir sua total privacidade, segurança e eficiência no dia a dia.",
-      "faqs": []
+      "seo_description": "Ferramenta online gratuita Word para HTML para ajudar você a Converter documentos .docx para HTML preservando formatação. Ferramenta online gratuita e fácil de usar. Tente agora de forma rápida e segura no seu navegador. Totalmente grátis, sem downloads ou registros, rodando 100% localmente para garantir sua total privacidade, segurança e eficiência no dia a dia."
     },
     "excel-to-csv": {
       "name": "Excel para CSV",
       "description": "Converter planilhas Excel para formato CSV.",
       "seo_title": "Conversor Excel para CSV online grátis - Ferramenta fácil!",
-      "seo_description": "Ferramenta online gratuita Excel para CSV para ajudar você a Converta seus arquivos Excel (.xlsx, .xls) para CSV de forma rápida e gratuita online. Baixe agora a sua ferramenta de forma rápida e segura no seu navegador. Totalmente grátis, sem downloads ou registros, rodando 100% localmente para garantir sua total privacidade, segurança e eficiência no dia a dia.",
-      "faqs": []
+      "seo_description": "Ferramenta online gratuita Excel para CSV para ajudar você a Converta seus arquivos Excel (.xlsx, .xls) para CSV de forma rápida e gratuita online. Baixe agora a sua ferramenta de forma rápida e segura no seu navegador. Totalmente grátis, sem downloads ou registros, rodando 100% localmente para garantir sua total privacidade, segurança e eficiência no dia a dia."
     },
     "csv-to-excel": {
       "name": "CSV para Excel",
       "description": "Converter arquivos CSV para formato Excel (.xlsx).",
       "seo_title": "Conversor CSV para Excel Online Grátis",
-      "seo_description": "Ferramenta online gratuita CSV para Excel para ajudar você a Converta arquivos CSV para Excel online de graça. Visualize os dados e baixe instantaneamente como arquivo XLSX de forma rápida e segura no seu navegador. Totalmente grátis, sem downloads ou registros, rodando 100% localmente para garantir sua total privacidade, segurança e eficiência no dia a dia.",
-      "faqs": []
+      "seo_description": "Ferramenta online gratuita CSV para Excel para ajudar você a Converta arquivos CSV para Excel online de graça. Visualize os dados e baixe instantaneamente como arquivo XLSX de forma rápida e segura no seu navegador. Totalmente grátis, sem downloads ou registros, rodando 100% localmente para garantir sua total privacidade, segurança e eficiência no dia a dia."
     },
     "loan-calculator": {
       "name": "Calculadora de Empréstimos",
@@ -10672,8 +10585,7 @@
       "yourGpa": "Seu GPA",
       "totalPoints": "Pontos Totais",
       "percentage": "Porcentagem",
-      "gradeReference": "Referência de Notas",
-      "remove": "Remover"
+      "gradeReference": "Referência de Notas"
     },
     "pace-calculator": {
       "name": "Calculadora de Ritmo",
@@ -10705,8 +10617,6 @@
       "pacePerMile": "Ritmo por milha",
       "speed": "Velocidade",
       "finishTime": "Tempo de Chegada",
-      "metric": "Métrico",
-      "imperial": "Imperial",
       "hoursShort": "H",
       "minutesShort": "M",
       "secondsShort": "S"
@@ -11122,45 +11032,7 @@
       "description": "Calcule a sua pegada de carbono pessoal devido ao transporte, energia e estilo de vida.",
       "seo_title": "Calculadora Grátis de Pista de Carbono - Calculadora de Emissões de CO2",
       "seo_description": "Calcule seu rastro de carbono online de forma gratuita. Tracking de emissões de CO2 de transporte, energia doméstica e dieta. Dicas pessoalizadas de redução.",
-      "periodo_de_calculo": {
-        "mensal": "Mensal",
-        "anual": "Anual"
-      },
-      "aspectos_a_calcular": [
-        "Transporte",
-        "Energia Doméstica",
-        "Estilo de Vida",
-        "Dieta"
-      ],
-      "opções_de_dieta": {
-        "carne": "Consumidor de carne em excesso",
-        "medio": "Medio",
-        "vegetariano": "Vegetariano",
-        "vegano": "Vegano"
-      },
-      "resultados": "A sua Pegada de Carbono",
       "total": "Total",
-      "árvores_necessárias": "Árvores necessárias para compensar as emissões",
-      "número_de_árvores_anual": "Número de árvores necessárias por ano",
-      "níveis_de_impacto": {
-        "baixo": "Baixo Impacto",
-        "medio": "Médio",
-        "alto": "Alto Impacto",
-        "muito_alto": "Muito Alto Impacto"
-      },
-      "descrição_detalhada": "A Calculadora de Pegada de Carbono ajuda a medir o seu impacto ambiental, calculando as emissões de CO2 provenientes de transporte, consumo de energia doméstica e escolhas alimentares. O ferramenta fornece uma análise completa da sua pegada de carbono e indica quantas árvores seriam necessárias para compensar as suas emissões.",
-      "passos_de_uso": [
-        "Selecionar o período de cálculo (mensal ou anual)",
-        "Inserir os dados de transporte (carro, voos, trem, ônibus)",
-        "Informar o consumo de energia doméstica (eletricidade, gás, aquecimento)",
-        "Selecionar o tipo de dieta",
-        "Ver a sua pegada de carbono total e a detalhada análise das emissões"
-      ],
-      "exemplos_de_uso": [
-        "Acompanhar o impacto ambiental ao longo do tempo",
-        "Comparar a pegada de carbono de diferentes estilos de vida",
-        "Planejar estratégias de compensação de emissões para indivíduos ou empresas"
-      ],
       "monthly": "Mensal",
       "yearly": "Anual",
       "month": "mês",

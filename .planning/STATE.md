@@ -1,16 +1,16 @@
 ---
 gsd_state_version: 1.0
-milestone: v0.0.27
-milestone_name: TBD
-status: Planning
-stopped_at: v0.0.26 archived; choose v0.0.27 direction
-last_updated: "2026-06-23T15:20:00.000Z"
-last_activity: 2026-06-23
+milestone: v0.0.30
+milestone_name: Translation Warning Signal Reduction
+status: Complete
+stopped_at: v0.0.30 completed; ready to choose the next milestone
+last_updated: "2026-06-26T08:30:00.000Z"
+last_activity: 2026-06-26
 progress:
-  total_phases: 0
-  completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
+  total_phases: 1
+  completed_phases: 1
+  total_plans: 1
+  completed_plans: 1
 ---
 
 # Project State
@@ -20,14 +20,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-06-20)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** v0.0.27 TBD — choose the next milestone direction after v0.0.26 archival.
+**Current focus:** v0.0.30 is closed, and post-closure follow-up warning-reduction slices have cleared both translation warning channels. The next work is to choose a new governance / release-health priority.
 **Frontend safety:** No user-facing surface may expose internal reasoning traces, hidden prompts, scratchpads, handoff notes, or raw planning notes.
 
 ## Current Position
 
-Phase: v0.0.27 planning
-Status: v0.0.26 archived and pushed. v0.0.27 direction not selected yet.
-Last activity: 2026-06-23 — v0.0.26 finalized after local SSR validation. `FETCH_BASE_URL=http://127.0.0.1:4321 npm run validate:tool-page-render-contract -- --timeout-ms 30000` passed 11/11 routes; commit `eed8e7dd` pushed to `origin/main`.
+Phase: 90 COMPLETE
+Status: Phase 90 is complete. Hard translation-governance failures remain clear, validator output is now materially more actionable, and bounded cleanup batches have reduced namespace warning noise without introducing regressions.
+Last activity: 2026-06-26 — Post-closure follow-ups migrated all remaining `zh/base.json` namespace findings into split files, removed identical `zh.json` root-layer FAQ shadows where present, and then removed all remaining root/base support-copy shadows already covered by split files. Fresh reruns show `npm run validate:translation-corpus -- --top 20` at `0` schema errors, `0` coverage gaps, and `0` namespace warnings; `npm run validate:merge-chain-consistency -- --top 20` at `0` layer overlaps, `0` resolved divergences, and `0` EN-fallback resolutions. Focused regression coverage passed (`190/190` tests), and `npm run qa:seo-governance` passed with both translation-governance warning channels still at `0`; its `2802` TDK compliance findings remain warning-only. `npm run check` and `npm run build` also pass.
 
 ## Milestone Context
 
@@ -40,9 +40,26 @@ Last activity: 2026-06-23 — v0.0.26 finalized after local SSR validation. `FET
 | 84 | Unified ToolClusterCard + ToolClusterSection components | **Complete** |
 | 85 | CLUSTER_BLOCKS type simplification + bug fix + cleanup | **Complete** |
 | 86 | Persistent tool-page render contract gate | **Complete / Archived in v0.0.26** |
+| 87 | Production QA Closure | **Complete** |
+| 88 | Traceability Contract Restoration | **Complete** |
+| 89 | Production Metadata Drift Baseline | **Complete** |
+| 90 | Translation Warning Signal Reduction | **Complete** |
 
 ## Accumulated Context
 
+- 2026-06-24 Phase 90 checkpoint captured. `validate-translation-corpus.ts` and `validate-merge-chain-consistency.ts` now expose real CLI help and scoped output controls plus warning summaries by shape/hotspot. Focused tests passed (`72/72` validator tests; `190/190` when including `src/lib/translations.test.ts` and `src/lib/support-content-fallback.test.ts`). A bounded cleanup removed dead root-layer support copy for `gpa-calculator` and `pace-calculator` in all locales and pruned locale-only `base.json` extras (`remove`, `metric`, `imperial`). Fresh measurements dropped namespace warnings from `325` to `307` and merge overlap warnings from `15301` to `15241`, while keeping `schemaErrors=0`, `coverageGaps=0`, and `resolvedDivergences=0`.
+- 2026-06-24 Phase 90 follow-up checkpoint captured. A second bounded cleanup added missing Prettier UI labels for `ar` and `ru`, removed safe Arabic chart extras (`title`, `themeRandom`, `themeImportJson`, and Nightingale-only `category`), and removed five Chinese chart FAQ shadow blocks already covered by split files. Fresh measurements dropped namespace warnings from `307` to `291` and eliminated all `missing_only` namespace drift (`2` to `0`). Merge overlap total stayed at `15241`, but `root+base` overlap dropped from `267` to `262` because those FAQ shadows no longer live in `base.json`. Focused regression tests passed (`190/190`).
+- 2026-06-24 Phase 90 follow-up checkpoint 2 captured. Removed `162` more `zh/base.json` FAQ shadow blocks only when `src/messages/zh/tools/<slug>.json` already had FAQ copy. Fresh measurements dropped namespace warnings from `291` to `129`; `zh` now contributes `127` findings and non-ZH drift is limited to `es`/`pt` carbon-footprint extras. Merge overlap total stayed at `15241`, but `root+base` overlap dropped from `262` to `100` because the remaining noise is now overwhelmingly root-layer duplicate support copy. Focused regression tests passed (`190/190`).
+- 2026-06-24 Phase 90 follow-up checkpoint 3 captured. Removed stale localized/snake-case `carbon-footprint-calculator` extra keys from `es/base.json`, `pt/base.json`, and `zh/base.json` while preserving the component-read UI keys. Fresh measurements dropped namespace warnings from `129` to `126`; remaining namespace drift is entirely `zh`. Merge overlap total and shape stayed at `15241` (`root=15141`, `both=100`). Focused regression tests passed (`190/190`).
+- 2026-06-26 Phase 90 follow-up checkpoint 4 captured. Migrated `112` remaining FAQ-only `zh/base.json` extras into their split files and removed `108` identical `zh.json` root FAQ shadows after exact FAQ-array comparison. Fresh measurements dropped namespace warnings from `126` to `14`; all remaining findings are non-FAQ `zh` UI-key extras. Merge overlap total and shape stayed at `15241` (`root=15141`, `both=100`) with `0` resolved divergences and `0` EN-fallback resolutions. Focused regression tests passed (`190/190`).
+- 2026-06-26 Phase 90 follow-up checkpoint 5 captured. Migrated the final `14` non-FAQ `zh/base.json` UI-key extras into their split files verbatim. Fresh measurements dropped namespace warnings from `14` to `0`; merge overlap stayed at `15241` (`root=15141`, `both=100`) with `0` resolved divergences and `0` EN-fallback resolutions. Focused regression tests passed (`190/190`).
+- 2026-06-26 Phase 90 follow-up checkpoint 6 captured. Removed all remaining root/base support-copy shadows for split-owned fields after a full in-memory dry-run verified `14841` overlap findings, `4852` affected `(locale, slug)` pairs, and `19408` support-key comparisons with `0` resolved-copy diffs. Fresh measurements dropped merge overlap from `15241` to `0`; translation corpus stayed at `0` namespace warnings. Focused regression tests passed (`190/190`).
+- 2026-06-24 v0.0.30 planned. Archived snapshot saved at `.planning/milestones/v0.0.29-REQUIREMENTS.md`; milestone audit drafted at `.planning/milestones/v0.0.29-MILESTONE-AUDIT.md`. Fresh local reruns corrected the next-step backlog: `validate:translation-corpus` now has `0` schema errors, `0` coverage gaps, and `325` warning-only `group_key_drift` findings, while `validate:merge-chain-consistency` has `0` resolved divergences, `0` EN-fallback resolutions, and `15301` warning-only overlaps (`15034` root-only). Selected v0.0.30 as Translation Warning Signal Reduction to improve warning signal quality rather than planning around stale missing-split-file debt.
+- 2026-06-24 v0.0.28 archived + v0.0.29 planned. Archived snapshot saved at `.planning/milestones/v0.0.28-REQUIREMENTS.md`; milestone audit saved at `.planning/milestones/v0.0.28-MILESTONE-AUDIT.md`. Selected next milestone as Production Metadata Drift Baseline because the online drift workflow has been explicitly deferred across multiple audits despite healthy offline validation. Drafted 7 MDB requirements covering scoped online CLI controls, representative smoke coverage, environment-blocker semantics, readable summaries, focused tests, first production baseline capture, and release-contract placement.
+- 2026-06-24 Phase 89 completed. `validate:tdk-drift.ts` now supports scoped online smoke / targeted / full runs, explicit blocker taxonomy, markdown summaries, and invalid-header-value preflight protection for placeholder bypass tokens. `validate-tdk-drift.test.ts` passed `85/85`. Local SSR smoke baseline (`.planning/research/reports/tdk-drift-v0.0.29-smoke.json`) passed cleanly with `42/42` MATCH. Production smoke baseline (`.planning/research/reports/tdk-drift-v0.0.29-prod-smoke.json`) also recorded `42/42` MATCH from a reachable local terminal, establishing the first formal production baseline. Cloudflare dashboard inspection confirmed there is no active `x-waf-bypass-token` bypass rule configured for the current `u2tool.com` zone, so `WAF_BYPASS_TOKEN` is optional infrastructure rather than a hard production requirement. Release placement remains manual pre-release, not default `qa:smoke`.
+- 2026-06-24 v0.0.28 completed. `scripts/planning/traceability.ts` now parses the active milestone heading, current requirement bullets, the requirements traceability table, and modern phase-plan lines. Evidence discovery now includes `-SUMMARY`, `-VALIDATION`, `-VERIFICATION`, and `-BASELINE` artifacts plus milestone audits. `npx vitest run scripts/planning/traceability.test.ts` passed 3/3 tests, and `npm run planning:traceability` regenerated `.planning/TRACEABILITY.md` with milestone `v0.0.28 Traceability Contract Restoration`, `6` parsed requirements, `Phase 88` coverage, and explicit planned-gap reporting.
+- 2026-06-24 v0.0.27 completed. `.planning/codebase/TESTING.md` now documents the exact `qa:production` chain, local SSR preflight, failure taxonomy, warning-only gates, and copy-paste-safe guarded release recipes. Focused validation evidence is green: Vitest PASS (26/26), `validate:translation-corpus` PASS with 325 warning-only namespace issues, `validate:merge-chain-consistency` PASS with 15301 warning-only overlaps and 0 resolved divergences, `validate:tdk-drift` PASS with 5570/5570 resolved, and local terminal SSR validation PASS with HTTP 200 probe plus `validate:tool-page-render-contract` 11/11 routes green against `http://127.0.0.1:4321`.
+- 2026-06-23 v0.0.27 planned as Production QA Closure. Requirements PQC-01 through PQC-06 define QA chain inventory, environment preflight, failure taxonomy, guarded release command recipes, evidence log format, and focused Phase 87 validation. Phase plan created at `.planning/phases/87-production-qa-closure/87-PLAN.md`. Scope is release-governance only: no product rendering, SEO content, routing, or translation copy changes; namespace/overlap warning reduction stays out of scope.
 - 2026-06-23 v0.0.26 archived. Commit `eed8e7dd` pushed to `origin/main`. Local SSR probe returned HTTP 200 for `/en/tools/youtube-tags-generator/`; render contract gate passed 11/11 routes with `FETCH_BASE_URL=http://127.0.0.1:4321 npm run validate:tool-page-render-contract -- --timeout-ms 30000`. Timeout follow-up included `--timeout-ms` and route-level abort messages to prevent perceived hangs. v0.0.27 is now TBD; candidate directions: Production QA Closure, Online TDK / Metadata Baseline, Render Gate CI Ergonomics, or Translation Namespace Warning Reduction.
 - 2026-06-23 v0.0.26 planned. User order: A+C 后 B — close v0.0.25, clear translation-corpus debt, then plan v0.0.26. Fresh verification: `validate:translation-corpus` PASS (`Schema errors: 0`, `Coverage gaps: 0`, namespace warnings only), `validate:merge-chain-consistency` PASS (`Resolved divergences: 0`, `EN-fallback resolutions: 0`), `validate:tdk-drift` PASS (`5570/5570`), and 10 focused Vitest files / 76 tests PASS. v0.0.26 scope selected as TDP-06 persistent render tests: fixed SSR route matrix, stable HTML contract extractor, cluster-card runtime assertions, validation script, tests, and `qa:production` wiring. Known local sandbox blocker remains: commands requiring local bind/listen or fetch can fail with environment `EPERM` / `fetch failed`.
 - 2026-06-23 Phase 86 implemented. `scripts/validation/tool-page-render-contract.ts` defines the 11-route matrix and zero-dependency contract comparator; `scripts/validation/validate-tool-page-render-contract.ts` fetches rendered SSR HTML with `fetchHtmlWithRetry`, compares contracts, supports `--base-url`, `--filter`, `--json-out`, and `--update-baseline`, and exits non-zero on drift. `scripts/validation/tool-page-render-contract.test.ts` covers extraction/comparison plus a missing `data-tool-cluster` regression case. `package.json` wires `validate:tool-page-render-contract` into `qa:production` after `build`.
@@ -69,20 +86,14 @@ Last activity: 2026-06-23 — v0.0.26 finalized after local SSR validation. `FET
 - 2026-06-09 GSC recovery cohort plan created with exact URL lists, action rules, owner model, and checkpoints.
 - 2026-06-12 GSC URL Inspection checkpoint recorded.
 
-Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20, v0.0.21, v0.0.22, v0.0.23, v0.0.24, v0.0.25, and v0.0.26 are complete and archived. v0.0.27 is pending direction selection.
+Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20, v0.0.21, v0.0.22, v0.0.23, v0.0.24, v0.0.25, v0.0.26, v0.0.27, v0.0.28, and v0.0.29 are complete.
 
 ## Next Action
 
-**Choose v0.0.27 direction.**
-
-Candidate options:
-1. Production QA Closure
-2. Online TDK / Metadata Baseline
-3. Render Gate CI Ergonomics
-4. Translation Namespace Warning Reduction
+**Select the next governance / release-health milestone.**
 
 ## Session
 
-Last Date: 2026-06-23T15:20:00.000Z
-Stopped At: v0.0.26 archived; choose v0.0.27 direction
+Last Date: 2026-06-26T08:30:00.000Z
+Stopped At: Phase 90 follow-up checkpoint 6 verified; ready to choose next milestone
 Resume File: .planning/REQUIREMENTS.md

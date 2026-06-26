@@ -9206,20 +9206,7 @@
       "description": "Write and preview Markdown with live rendering. Export to MD or HTML.",
       "seo_title": "Free Online Markdown Editor with Live Preview",
       "seo_description": "Write and preview Markdown online for free. Live rendering, syntax highlighting, and export to MD or HTML. Perfect for documentation and notes.",
-      "faqs": [
-        {
-          "question": "What Markdown syntax is supported?",
-          "answer": "All standard Markdown syntax is supported, including headings, bold, italic, lists, code blocks, tables, links, images, blockquotes, and more. GFM (GitHub Flavored Markdown) extensions are also supported."
-        },
-        {
-          "question": "Is my content saved automatically?",
-          "answer": "The current version does not auto-save content. We recommend exporting your file after editing. You can export as .md or .html format."
-        },
-        {
-          "question": "Can I import existing Markdown files?",
-          "answer": "You can copy and paste existing Markdown content directly into the editor. The editor will automatically recognize and render the Markdown syntax."
-        }
-      ],
+
       "errorParsingMarkdown": "Error parsing markdown",
       "list": "List",
       "code": "Code",
@@ -9231,85 +9218,25 @@
       "name": "World Clock",
       "description": "View current time in multiple cities around the world simultaneously.",
       "seo_title": "Free World Clock - Multiple Time Zones",
-      "seo_description": "View current time in multiple cities worldwide. Add custom cities, 12/24 hour format, day/night indicator. Free online world clock tool.",
-      "faqs": [
-        {
-          "question": "Which cities are supported?",
-          "answer": "Over 20 major cities worldwide are supported, including New York, Los Angeles, Chicago, London, Paris, Berlin, Moscow, Dubai, Mumbai, Singapore, Hong Kong, Shanghai, Tokyo, Seoul, Sydney, Auckland, and more."
-        },
-        {
-          "question": "Is the time accurate?",
-          "answer": "The time is based on your device's system time and updates every second. As long as your device time is accurate, the displayed city times will be accurate."
-        },
-        {
-          "question": "How do I know if it's day or night?",
-          "answer": "Each city card shows a sun ☀️ or moon 🌙 icon. Sun indicates daytime (6:00-18:00), moon indicates nighttime (other hours)."
-        }
-      ]
+      "seo_description": "View current time in multiple cities worldwide. Add custom cities, 12/24 hour format, day/night indicator. Free online world clock tool."
     },
     "stopwatch": {
       "name": "Stopwatch",
       "description": "Precise stopwatch with lap timing. Track multiple laps with best/worst indicators.",
       "seo_title": "Free Online Stopwatch with Lap Timer",
-      "seo_description": "Precise online stopwatch with lap timing feature. Track multiple laps, see best and worst times. Free, accurate, and easy to use.",
-      "faqs": [
-        {
-          "question": "What is the stopwatch accuracy?",
-          "answer": "The stopwatch accuracy is 10 milliseconds (one-hundredth of a second), displayed as minutes:seconds.centiseconds, sufficient for everyday timing needs."
-        },
-        {
-          "question": "Are lap records saved?",
-          "answer": "Lap records are cleared when the page is refreshed. If you need to save records, we recommend manually recording or taking screenshots after use."
-        },
-        {
-          "question": "How are fastest and slowest laps marked?",
-          "answer": "When 2 or more laps are recorded, the system automatically marks the fastest lap with 🏆 and the slowest with 🐢, helping you analyze performance."
-        }
-      ]
+      "seo_description": "Precise online stopwatch with lap timing feature. Track multiple laps, see best and worst times. Free, accurate, and easy to use."
     },
     "countdown-timer": {
       "name": "Countdown Timer",
       "description": "Set custom countdown timers with visual progress and notifications.",
       "seo_title": "Free Online Countdown Timer",
-      "seo_description": "Set custom countdown timers online for free. Visual progress circle, preset times, browser notifications. Perfect for productivity and cooking.",
-      "faqs": [
-        {
-          "question": "Will I get a reminder when countdown ends?",
-          "answer": "Yes, a browser notification is sent when countdown ends. On first use, the browser will ask permission for notifications - please allow to enable the reminder feature."
-        },
-        {
-          "question": "How long can I set the timer for?",
-          "answer": "Supports any combination of 0-23 hours, 0-59 minutes, and 0-59 seconds. Maximum countdown is 23:59:59."
-        },
-        {
-          "question": "Can I continue after pausing?",
-          "answer": "Yes. After clicking pause, the countdown maintains its current state. Click 'Resume' to continue from where you paused."
-        }
-      ]
+      "seo_description": "Set custom countdown timers online for free. Visual progress circle, preset times, browser notifications. Perfect for productivity and cooking."
     },
     "note-pad": {
       "name": "Note Pad",
       "description": "Create and organize colorful sticky notes. Auto-save to browser storage.",
       "seo_title": "Free Online Note Pad - Sticky Notes",
-      "seo_description": "Create and organize colorful sticky notes online for free. Auto-save to browser, search notes, export to JSON. Simple and effective note-taking.",
-      "faqs": [
-        {
-          "question": "Are notes saved automatically?",
-          "answer": "Yes, all notes are automatically saved to browser local storage. Even after closing the page or browser, notes are preserved when you return."
-        },
-        {
-          "question": "Where is note data stored?",
-          "answer": "Note data is stored in your browser's localStorage, not uploaded to any server. Clearing browser data may cause notes to be lost, so we recommend regular exports for backup."
-        },
-        {
-          "question": "How do I backup my notes?",
-          "answer": "Click the 'Export' button to export all notes as a JSON file. You can save this file as a backup."
-        },
-        {
-          "question": "How many notes can I create?",
-          "answer": "There's no limit on the number of notes. Create as many as you need. Note that browser local storage has capacity limits (typically 5-10MB)."
-        }
-      ]
+      "seo_description": "Create and organize colorful sticky notes online for free. Auto-save to browser, search notes, export to JSON. Simple and effective note-taking."
     },
     "excelToJson": {
       "uploadFile": "Upload Excel File",
@@ -9524,81 +9451,31 @@
       "name": "PDF to Text",
       "description": "Extract text content from PDF files. Supports multi-page PDFs with page markers.",
       "seo_title": "Free PDF to Text Converter Online",
-      "seo_description": "Extract embedded text from PDF files online for free. Supports multi-page PDFs with page markers and TXT download.",
-      "faqs": [
-        {
-          "question": "Does it work with scanned PDFs?",
-          "answer": "This tool extracts embedded text from PDFs. For scanned images, you may need OCR software."
-        },
-        {
-          "question": "Is there a file size limit?",
-          "answer": "Processing happens in your browser, so very large files may be slow. We recommend files under 50MB."
-        }
-      ]
+      "seo_description": "Extract embedded text from PDF files online for free. Supports multi-page PDFs with page markers and TXT download."
     },
     "word-to-txt": {
       "name": "Word to Text",
       "description": "Convert Word documents (.docx) to plain text format.",
       "seo_title": "Free Word to Text Converter Online",
-      "seo_description": "Free online Word to Text to convert Word documents to plain text online for free. Extract text from DOCX file.... Runs locally in your browser safely.",
-      "faqs": [
-        {
-          "question": "Does it support .doc files?",
-          "answer": "Currently only .docx format is supported. Please convert .doc files to .docx first."
-        },
-        {
-          "question": "Is formatting preserved?",
-          "answer": "This tool extracts plain text only. Formatting, images, and tables are not preserved."
-        }
-      ]
+      "seo_description": "Free online Word to Text to convert Word documents to plain text online for free. Extract text from DOCX file.... Runs locally in your browser safely."
     },
     "word-to-html": {
       "name": "Word to HTML",
       "description": "Convert DOCX files to sanitized HTML with preview, copy, and download.",
       "seo_title": "Free Word to HTML Converter Online",
-      "seo_description": "Free online Word to HTML to convert Word documents to HTML online for free. Preserves formatting, headings, a.... Runs locally in your browser safely.",
-      "faqs": [
-        {
-          "question": "Is all formatting preserved?",
-          "answer": "Basic formatting like headings, bold, italic, and lists are preserved. Complex layouts may not convert perfectly."
-        },
-        {
-          "question": "Can I edit the HTML?",
-          "answer": "Yes, you can copy the HTML code and edit it in any text editor or HTML editor."
-        }
-      ]
+      "seo_description": "Free online Word to HTML to convert Word documents to HTML online for free. Preserves formatting, headings, a.... Runs locally in your browser safely."
     },
     "excel-to-csv": {
       "name": "Excel to CSV",
       "description": "Convert Excel spreadsheets (.xlsx, .xls) to CSV format.",
       "seo_title": "Free Excel to CSV Converter Online",
-      "seo_description": "Free online Excel to CSV to convert Excel files to CSV online for free. Supports multiple sheets, instant pre.... Runs locally in your browser safely.",
-      "faqs": [
-        {
-          "question": "Can I convert multiple sheets?",
-          "answer": "Yes, you can select different sheets and convert them one at a time."
-        },
-        {
-          "question": "Are formulas converted?",
-          "answer": "Only the calculated values are exported, not the formulas themselves."
-        }
-      ]
+      "seo_description": "Free online Excel to CSV to convert Excel files to CSV online for free. Supports multiple sheets, instant pre.... Runs locally in your browser safely."
     },
     "csv-to-excel": {
       "name": "CSV to Excel",
       "description": "Convert CSV files to Excel spreadsheet format (.xlsx).",
       "seo_title": "Free CSV to Excel Converter Online",
-      "seo_description": "Free online CSV to Excel to convert CSV files to Excel online for free. Preview data, instant download as XLS.... Runs locally in your browser safely.",
-      "faqs": [
-        {
-          "question": "Does it handle large files?",
-          "answer": "Very large files may take longer to process in the browser. We recommend small to moderate CSV files for best performance."
-        },
-        {
-          "question": "Are special characters preserved?",
-          "answer": "The file is read as browser text. Check the preview before downloading when your CSV uses unusual encodings or special characters."
-        }
-      ]
+      "seo_description": "Free online CSV to Excel to convert CSV files to Excel online for free. Preview data, instant download as XLS.... Runs locally in your browser safely."
     },
     "loan-calculator": {
       "name": "Loan Calculator",

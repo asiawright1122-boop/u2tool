@@ -9547,21 +9547,7 @@
       "name": "Cronómetro",
       "description": "Cronómetro preciso con función de vueltas. Seguimiento de múltiples vueltas con indicadores de mejor/más lenta.",
       "seo_title": "Gratuita Online Herramienta de Cronómetro con Tiempos de Pecho",
-      "seo_description": "Utiliza nuestro cronómetro en línea gratuito para rastrear múltiples tiempos de pecho con indicadores de mejor y peor. ¡Empieza a medir ahora!",
-      "faqs": [
-        {
-          "question": "¿Cuál es la precisión del cronómetro?",
-          "answer": "La precisión del cronómetro es de 10 milisegundos (una centésima de segundo), mostrada como minutos:segundos.centésimas, suficiente para las necesidades de cronometraje diarias."
-        },
-        {
-          "question": "¿Se guardan los registros de vueltas?",
-          "answer": "Los registros de vueltas se borran cuando se recarga la página. Si necesitas guardar los registros, recomendamos registrarlos manualmente o tomar capturas de pantalla después de su uso."
-        },
-        {
-          "question": "¿Cómo se marcan las vueltas más rápidas y más lentas?",
-          "answer": "Cuando se graban 2 o más vueltas, el sistema automáticamente marca la vuelta más rápida con 🏆 y la más lenta con 🐢, ayudándote a analizar el rendimiento."
-        }
-      ]
+      "seo_description": "Utiliza nuestro cronómetro en línea gratuito para rastrear múltiples tiempos de pecho con indicadores de mejor y peor. ¡Empieza a medir ahora!"
     },
     "countdownTimer": {
       "hours": "Horas",
@@ -9593,20 +9579,7 @@
       "description": "Escribe y previsualiza Markdown con renderizado en vivo. Exporta a MD o HTML.",
       "seo_title": "Editor Markdown Gratuito en Línea con Vista Previa en Vivo",
       "seo_description": "Escribe y previsualiza Markdown en línea gratis. Renderizado en vivo, resaltado de sintaxis y exportación a MD o HTML. Perfecto para documentación y notas.",
-      "faqs": [
-        {
-          "question": "¿Qué sintaxis Markdown es compatible?",
-          "answer": "Se soporta toda la sintaxis Markdown estándar, incluyendo encabezados, negrita, cursiva, listas, bloques de código, tablas, enlaces, imágenes, citas y más. También se soportan las extensiones GFM (GitHub Flavored Markdown)."
-        },
-        {
-          "question": "¿Mi contenido se guarda automáticamente?",
-          "answer": "La versión actual no guarda el contenido automáticamente. Recomendamos exportar tu archivo después de editar. Puedes exportar en formato .md o .html."
-        },
-        {
-          "question": "¿Puedo importar archivos Markdown existentes?",
-          "answer": "Puedes copiar y pegar contenido Markdown existente directamente en el editor. El editor reconocerá y renderizará automáticamente la sintaxis Markdown."
-        }
-      ],
+
       "errorParsingMarkdown": "Error al analizar markdown",
       "list": "Lista",
       "code": "Código",
@@ -9618,65 +9591,19 @@
       "name": "Reloj Mundial",
       "description": "Ve la hora actual en múltiples ciudades del mundo simultáneamente.",
       "seo_title": "Reloj mundial gratis - múltiples zonas horarias",
-      "seo_description": "Ver la hora actual en múltiples ciudades a nivel mundial. Añada ciudades personalizadas, formato 12/24 horas e indicador de día/noche. Herramienta en línea gratuita de reloj mundial.",
-      "faqs": [
-        {
-          "question": "¿Qué ciudades son compatibles?",
-          "answer": "Se soportan más de 20 ciudades principales del mundo, incluyendo Nueva York, Los Ángeles, Chicago, Londres, París, Berlín, Moscú, Dubái, Bombay, Singapur, Hong Kong, Shanghái, Tokio, Seúl, Sídney, Auckland y más."
-        },
-        {
-          "question": "¿Es precisa la hora?",
-          "answer": "La hora se basa en la hora del sistema de tu dispositivo y se actualiza cada segundo. Mientras la hora de tu dispositivo sea precisa, las horas de las ciudades mostradas serán precisas."
-        },
-        {
-          "question": "¿Cómo sé si es de día o de noche?",
-          "answer": "Cada tarjeta de ciudad muestra un icono de sol ☀️ o luna 🌙. El sol indica día (6:00-18:00), la luna indica noche (otras horas)."
-        }
-      ]
+      "seo_description": "Ver la hora actual en múltiples ciudades a nivel mundial. Añada ciudades personalizadas, formato 12/24 horas e indicador de día/noche. Herramienta en línea gratuita de reloj mundial."
     },
     "countdown-timer": {
       "name": "Cronómetro de Cuenta Atrás",
       "description": "Configura cronómetros de cuenta atrás personalizados con progreso visual y notificaciones.",
       "seo_title": "Contador de Réplica Gratis Online",
-      "seo_description": "Crea temporizadores personalizados en línea de forma gratuita. Círculo visual de progreso, tiempos predeterminados, notificaciones del navegador. Perfecto para productividad y cocina.",
-      "faqs": [
-        {
-          "question": "¿Recibiré un recordatorio cuando finalice la cuenta atrás?",
-          "answer": "Sí, se enviará una notificación del navegador cuando finalice la cuenta atrás. Al primer uso, el navegador solicitará permiso para las notificaciones - por favor, permite para activar la función de recordatorio."
-        },
-        {
-          "question": "¿Cuánto tiempo puedo configurar el temporizador?",
-          "answer": "Admite cualquier combinación de 0-23 horas, 0-59 minutos y 0-59 segundos. El tiempo máximo de cuenta atrás es 23:59:59."
-        },
-        {
-          "question": "¿Puedo continuar después de pausar?",
-          "answer": "Sí. Después de hacer clic en pausa, la cuenta atrás mantiene su estado actual. Haz clic en 'Reanudar' para continuar desde donde lo pausaste."
-        }
-      ]
+      "seo_description": "Crea temporizadores personalizados en línea de forma gratuita. Círculo visual de progreso, tiempos predeterminados, notificaciones del navegador. Perfecto para productividad y cocina."
     },
     "note-pad": {
       "name": "Bloc de Notas",
       "description": "Crea notas de colores con búsqueda, guardado local automático y exportación JSON.",
       "seo_title": "Bloc de Notas Gratis Online - Notas adhesivas locales",
-      "seo_description": "Crea y organiza notas de colores en el navegador. Se guardan en localStorage, permiten búsqueda por título o contenido y se exportan como JSON.",
-      "faqs": [
-        {
-          "question": "¿Se guardan las notas automáticamente?",
-          "answer": "Sí, todas las notas se guardan automáticamente en el almacenamiento local del navegador. Incluso después de cerrar la página o el navegador, las notas se conservan cuando vuelves."
-        },
-        {
-          "question": "¿Dónde se almacena los datos de las notas?",
-          "answer": "Los datos de las notas se almacenan en el localStorage de tu navegador, no se suben a ningún servidor. El borrado de los datos del navegador puede hacer que se pierdan las notas, por lo que recomendamos realizar exports regulares para respaldo."
-        },
-        {
-          "question": "¿Cómo puedo respaldar mis notas?",
-          "answer": "Haz clic en el botón 'Exportar' para exportar todas las notas como un archivo JSON. Puedes guardar este archivo como respaldo."
-        },
-        {
-          "question": "¿Cuántas notas puedo crear?",
-          "answer": "No hay límite en el número de notas. Crea tantas como necesites. Ten en cuenta que el almacenamiento local del navegador tiene límites de capacidad (generalmente 5-10MB)."
-        }
-      ]
+      "seo_description": "Crea y organiza notas de colores en el navegador. Se guardan en localStorage, permiten búsqueda por título o contenido y se exportan como JSON."
     },
     "stopwatchUI": {
       "start": "Iniciar",
@@ -9693,45 +9620,31 @@
       "name": "PDF a Texto",
       "description": "Extrae contenido de texto de archivos PDF. Soporta PDFs multi-pagina con marcadores de página.",
       "seo_title": "Convierte PDF a Texto Online Gratis - Herramienta Versátil",
-      "seo_description": "Convertir múltiples páginas de PDF a texto fácilmente con nuestra herramienta en línea. Marcadores de página incluidos. ¡Prueba gratis ahora!",
-      "faqs": [
-        {
-          "question": "¿Funciona con PDFs escaneados?",
-          "answer": "Esta herramienta extrae texto incrustado en PDFs. Para imágenes escaneadas, puede que necesites software OCR."
-        },
-        {
-          "question": "¿Hay un límite de tamaño de archivo?",
-          "answer": "El procesamiento se realiza en tu navegador, por lo que los archivos muy grandes pueden ser lentos. Recomendamos archivos inferiores a 50MB."
-        }
-      ]
+      "seo_description": "Convertir múltiples páginas de PDF a texto fácilmente con nuestra herramienta en línea. Marcadores de página incluidos. ¡Prueba gratis ahora!"
     },
     "word-to-txt": {
       "name": "Word a Texto",
       "description": "Convertir documentos Word (.docx) a texto plano.",
       "seo_title": "Convertidor de Word a Texto Gratis Online",
-      "seo_description": "Convierte documentos Word a texto plano en línea de forma gratuita. Extrae texto de archivos DOCX instantáneamente con esta herramienta.",
-      "faqs": []
+      "seo_description": "Convierte documentos Word a texto plano en línea de forma gratuita. Extrae texto de archivos DOCX instantáneamente con esta herramienta."
     },
     "word-to-html": {
       "name": "Word a HTML",
       "description": "Convertir documentos Word (.docx) a formato HTML.",
       "seo_title": "Convertidor de Word a HTML gratis online",
-      "seo_description": "Herramienta online gratuita Word a HTML para ayudarle a Convierte documentos Word a HTML en línea gratis. Preserva formato, encabezados y listas. Descarga código HTML limpio de forma rápida y sencilla en su navegador. Completamente gratis, sin descargas ni registros de usuario, rodando 100% localmente para garantizar su total privacidad y productividad en el trabajo.",
-      "faqs": []
+      "seo_description": "Herramienta online gratuita Word a HTML para ayudarle a Convierte documentos Word a HTML en línea gratis. Preserva formato, encabezados y listas. Descarga código HTML limpio de forma rápida y sencilla en su navegador. Completamente gratis, sin descargas ni registros de usuario, rodando 100% localmente para garantizar su total privacidad y productividad en el trabajo."
     },
     "excel-to-csv": {
       "name": "Excel a CSV",
       "description": "Convertir hojas de cálculo Excel a formato CSV.",
       "seo_title": "Convertidor Gratis de Excel a CSV Online",
-      "seo_description": "Convierte archivos Excel a CSV en línea de forma gratuita. Soporta múltiples hojas, vista previa instantánea y descarga.",
-      "faqs": []
+      "seo_description": "Convierte archivos Excel a CSV en línea de forma gratuita. Soporta múltiples hojas, vista previa instantánea y descarga."
     },
     "csv-to-excel": {
       "name": "CSV a Excel",
       "description": "Convertir archivos CSV a formato Excel (.xlsx).",
       "seo_title": "Convertidor CSV a Excel Online Gratis",
-      "seo_description": "Convierte archivos CSV a Excel en línea de forma gratuita. Previsualiza los datos y descarga instantáneamente el archivo XLSX con nuestra herramienta.",
-      "faqs": []
+      "seo_description": "Convierte archivos CSV a Excel en línea de forma gratuita. Previsualiza los datos y descarga instantáneamente el archivo XLSX con nuestra herramienta."
     },
     "loan-calculator": {
       "name": "Calculadora de Préstamos",
@@ -10666,8 +10579,7 @@
       "yourGpa": "Tu GPA",
       "totalPoints": "Puntos Totales",
       "percentage": "Porcentaje",
-      "gradeReference": "Referencia de Notas",
-      "remove": "Eliminar"
+      "gradeReference": "Referencia de Notas"
     },
     "pace-calculator": {
       "name": "Calculadora de Ritmo",
@@ -10699,8 +10611,6 @@
       "pacePerMile": "Ritmo por milla",
       "speed": "Velocidad",
       "finishTime": "Tiempo de Llegada",
-      "metric": "Métrico",
-      "imperial": "Imperial",
       "hoursShort": "H",
       "minutesShort": "M",
       "secondsShort": "S"
@@ -11116,53 +11026,6 @@
       "description": "Calcule su huella de carbono personal derivada del transporte, la energía y su estilo de vida.",
       "seo_title": "Calculadora gratuita de huella de carbono - Herramienta online",
       "seo_description": "Calcula tu huella de carbono en línea de forma gratuita. Rastrea las emisiones de CO2 de transporte, energía doméstica y dieta. Recibe consejos personalizados para reducirla.",
-      "periodo_de_cálculo": {
-        "mensual": "Mensual",
-        "anual": "Anual"
-      },
-      "campos_de_ingreso": {
-        "transporte": "Transporte",
-        "distancia_coche": "Distancia recorrida en coche",
-        "petróleo": "Combustible para coches",
-        "diésel": "Combustible diésel",
-        "híbrido": "Vehículo híbrido",
-        "eléctrico": "Vehículo eléctrico",
-        "horas_vuelo": "Horas de vuelo",
-        "corta_distancia": "Corta distancia (<3 horas)",
-        "media_distancia": "Media distancia (3-6 horas)",
-        "larga_distancia": "Larga distancia (>6 horas)",
-        "distancia_tren": "Distancia recorrida en tren",
-        "distancia_autobús": "Distancia recorrida en autobús",
-        "energía_hogar": "Energía en el hogar",
-        "electricidad": "Electricidad",
-        "gas_natural": "Gas natural",
-        "aceite_calefacción": "Aceite para calefacción",
-        "estilo_de_vida": "Estilo de vida",
-        "tipo_de_dieta": "Tipo de dieta"
-      },
-      "resultados": "Su huella de carbono",
-      "total_emisiones": "Emisiones totales",
-      "árboles_necesarios": "Árboles necesarios para compensar las emisiones",
-      "árboles_anuales": "Número de árboles necesarios al año",
-      "niveles_de_impacto": {
-        "bajo": "Bajo impacto",
-        "promedio": "Impacto medio",
-        "alto": "Impacto alto",
-        "muy_alto": "Impacto muy alto"
-      },
-      "descripción-detallada": "La Calculadora de Huella de Carbono le ayuda a medir su impacto ambiental al calcular las emisiones de CO2 derivadas del transporte, el consumo de energía en su hogar y sus elecciones dietéticas. El herramienta proporciona un análisis completo de su huella de carbono y muestra cuántos árboles serían necesarios para compensar dichas emisiones.",
-      "pasos_de_uso": [
-        "Elija el período de cálculo (mensual o anual)",
-        "Introduzca sus datos de transporte (coche, vuelos, tren, autobús)",
-        "Ingrese su consumo de energía en su hogar (electricidad, gas, calefacción)",
-        "Elija su tipo de dieta",
-        "Consulte su huella de carbono total y el desglose de sus emisiones"
-      ],
-      "ejemplos_de_uso": [
-        "Haga un seguimiento de su impacto ambiental a lo largo del tiempo",
-        "Compare la huella de carbono de diferentes estilos de vida",
-        "Planifique estrategias para compensar sus emisiones, tanto a nivel personal como empresarial"
-      ],
       "monthly": "Mensual",
       "yearly": "Anual",
       "month": "mes",

@@ -69,6 +69,9 @@ const SUPPORT_KEYS = [
   'faqs',
 ] as const;
 
+const DEFAULT_TOP_FINDINGS = 30;
+const SUMMARY_TOP_LIMIT = 10;
+
 type SupportKey = (typeof SUPPORT_KEYS)[number];
 
 type MessagesRecord = Record<string, unknown>;
@@ -108,6 +111,13 @@ export interface MergeChainReport {
   catalogSlugs: number;
   summary: {
     layerOverlap: number;
+    layerOverlapByLayerShape: {
+      root: number;
+      base: number;
+      both: number;
+    };
+    topOverlapLocales: Array<{ locale: Locale; count: number }>;
+    topOverlapSlugs: Array<{ slug: string; count: number }>;
     resolvedDivergences: number;
     enFallbackResolutions: number;
   };
@@ -119,6 +129,12 @@ export interface MergeChainReport {
 export interface MergeChainAuditMeta {
   totalLocales: number;
   catalogSlugs: number;
+}
+
+export interface MergeChainCliArgs {
+  help: boolean;
+  reportPath?: string;
+  top: number;
 }
 
 // ---------------------------------------------------------------------------
@@ -381,12 +397,33 @@ export function buildReport(
     return a.field < b.field ? -1 : a.field > b.field ? 1 : 0;
   };
 
+  const layerOverlapByLayerShape = {
+    root: 0,
+    base: 0,
+    both: 0,
+  };
+
+  for (const finding of layerOverlap) {
+    const hasRoot = finding.layers.includes('root');
+    const hasBase = finding.layers.includes('base');
+    if (hasRoot && hasBase) {
+      layerOverlapByLayerShape.both += 1;
+    } else if (hasRoot) {
+      layerOverlapByLayerShape.root += 1;
+    } else if (hasBase) {
+      layerOverlapByLayerShape.base += 1;
+    }
+  }
+
   return {
     timestamp: new Date().toISOString(),
     totalLocales: meta.totalLocales,
     catalogSlugs: meta.catalogSlugs,
     summary: {
       layerOverlap: layerOverlap.length,
+      layerOverlapByLayerShape,
+      topOverlapLocales: buildTopLocaleCounts(layerOverlap, SUMMARY_TOP_LIMIT),
+      topOverlapSlugs: buildTopSlugCounts(layerOverlap, SUMMARY_TOP_LIMIT),
       resolvedDivergences: resolvedDivergence.length,
       enFallbackResolutions: enFallback.length,
     },
@@ -396,6 +433,36 @@ export function buildReport(
     ),
     enFallbackFindings: [...enFallback].sort(sortByLocaleSlugField),
   };
+}
+
+function buildTopLocaleCounts(
+  findings: LayerOverlapFinding[],
+  limit: number
+): Array<{ locale: Locale; count: number }> {
+  const counts = new Map<Locale, number>();
+  for (const finding of findings) {
+    counts.set(finding.locale, (counts.get(finding.locale) ?? 0) + 1);
+  }
+
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .slice(0, limit)
+    .map(([locale, count]) => ({ locale, count }));
+}
+
+function buildTopSlugCounts(
+  findings: LayerOverlapFinding[],
+  limit: number
+): Array<{ slug: string; count: number }> {
+  const counts = new Map<string, number>();
+  for (const finding of findings) {
+    counts.set(finding.slug, (counts.get(finding.slug) ?? 0) + 1);
+  }
+
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .slice(0, limit)
+    .map(([slug, count]) => ({ slug, count }));
 }
 
 /**
@@ -421,11 +488,69 @@ export async function writeMergeChainReport(
   return targetPath;
 }
 
+export function parseMergeChainArgs(argv: string[]): MergeChainCliArgs {
+  const args: MergeChainCliArgs = {
+    help: false,
+    top: DEFAULT_TOP_FINDINGS,
+  };
+
+  for (let index = 0; index < argv.length; index += 1) {
+    const arg = argv[index];
+
+    if (arg === '--help' || arg === '-h') {
+      args.help = true;
+      continue;
+    }
+
+    if (arg === '--report-path' && argv[index + 1]) {
+      args.reportPath = argv[index + 1];
+      index += 1;
+      continue;
+    }
+
+    if (arg === '--top' && argv[index + 1]) {
+      const parsed = Number(argv[index + 1]);
+      if (!Number.isInteger(parsed) || parsed <= 0) {
+        throw new Error(`Invalid value for --top: ${argv[index + 1]}`);
+      }
+      args.top = parsed;
+      index += 1;
+      continue;
+    }
+
+    throw new Error(`Unknown argument: ${arg}`);
+  }
+
+  return args;
+}
+
+function printHelp(): void {
+  console.log('Merge Chain Consistency — offline audit');
+  console.log('');
+  console.log('Usage:');
+  console.log('  npm run validate:merge-chain-consistency -- [options]');
+  console.log('');
+  console.log('Options:');
+  console.log('  --report-path <path>  Write the JSON report to a specific path');
+  console.log(`  --top <n>             Print up to <n> sample findings per section (default: ${DEFAULT_TOP_FINDINGS})`);
+  console.log('  --help, -h            Show this help and exit');
+}
+
+function formatCountList(entries: Array<{ label: string; count: number }>): string {
+  return entries.map((entry) => `${entry.label}=${entry.count}`).join(', ');
+}
+
 // ---------------------------------------------------------------------------
 // CLI
 // ---------------------------------------------------------------------------
 
 async function main(): Promise<void> {
+  const args = parseMergeChainArgs(process.argv.slice(2));
+  if (args.help) {
+    printHelp();
+    return;
+  }
+
   console.log('\x1b[36m[INFO] Merge Chain Consistency — offline audit\x1b[0m');
   console.log(`  Catalog: ${tools.length} tools × ${locales.length} locales`);
   console.log('------------------------------------------------------------------');
@@ -444,10 +569,37 @@ async function main(): Promise<void> {
     console.warn(
       `\x1b[33m[WARN] ${report.summary.layerOverlap} duplicate support-key source(s) — review recommended\x1b[0m`
     );
-    for (const f of report.layerOverlapFindings.slice(0, 30)) {
+    console.warn(
+      `  Layer shape: ${formatCountList([
+        { label: 'root', count: report.summary.layerOverlapByLayerShape.root },
+        { label: 'base', count: report.summary.layerOverlapByLayerShape.base },
+        { label: 'both', count: report.summary.layerOverlapByLayerShape.both },
+      ])}`
+    );
+    if (report.summary.topOverlapLocales.length > 0) {
+      console.warn(
+        `  Top locales: ${formatCountList(
+          report.summary.topOverlapLocales.map((entry) => ({
+            label: entry.locale,
+            count: entry.count,
+          }))
+        )}`
+      );
+    }
+    if (report.summary.topOverlapSlugs.length > 0) {
+      console.warn(
+        `  Top slugs: ${formatCountList(
+          report.summary.topOverlapSlugs.map((entry) => ({
+            label: entry.slug,
+            count: entry.count,
+          }))
+        )}`
+      );
+    }
+    for (const f of report.layerOverlapFindings.slice(0, args.top)) {
       console.warn(`  ${f.locale}/${f.slug} — ${f.field}: layers=${f.layers.join(',')}`);
     }
-    const remaining = report.summary.layerOverlap - 30;
+    const remaining = report.summary.layerOverlap - args.top;
     if (remaining > 0) console.warn(`  ... and ${remaining} more`);
   }
 
@@ -472,7 +624,7 @@ async function main(): Promise<void> {
 
   // Write report (non-fatal on write failure).
   try {
-    const reportPath = await writeMergeChainReport(report);
+    const reportPath = await writeMergeChainReport(report, args.reportPath);
     console.log(`\n  Report: ${reportPath}`);
   } catch (err) {
     console.warn(
