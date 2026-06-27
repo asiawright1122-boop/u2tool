@@ -1,7 +1,7 @@
 # Milestone Traceability Report
 
-Generated: 2026-06-27T04:33:08.385Z
-Milestone: v0.0.31 TDK Compliance Warning Signal Reduction
+Generated: 2026-06-27T05:12:30.471Z
+Milestone: v0.0.32 TDK Cleanup Batch Planner
 
 ## Summary
 
@@ -14,18 +14,18 @@ Milestone: v0.0.31 TDK Compliance Warning Signal Reduction
 
 | Requirement | Area | Status | Roadmap | Mapped Phases | Evidence |
 | --- | --- | --- | --- | --- | --- |
-| TDK-W-01 | TDK Compliance Warning Signal Reduction (TDK-W) | complete | complete | Phase 91 | [91-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/91-tdk-compliance-warning-signal-reduction/91-BASELINE.md)<br>[v0.0.31-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.31-MILESTONE-AUDIT.md) |
-| TDK-W-02 | TDK Compliance Warning Signal Reduction (TDK-W) | complete | complete | Phase 91 | [91-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/91-tdk-compliance-warning-signal-reduction/91-BASELINE.md)<br>[v0.0.31-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.31-MILESTONE-AUDIT.md) |
-| TDK-W-03 | TDK Compliance Warning Signal Reduction (TDK-W) | complete | complete | Phase 91 | [91-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/91-tdk-compliance-warning-signal-reduction/91-BASELINE.md)<br>[v0.0.31-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.31-MILESTONE-AUDIT.md) |
-| TDK-W-04 | TDK Compliance Warning Signal Reduction (TDK-W) | complete | complete | Phase 91 | [91-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/91-tdk-compliance-warning-signal-reduction/91-BASELINE.md)<br>[v0.0.31-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.31-MILESTONE-AUDIT.md) |
-| TDK-W-05 | TDK Compliance Warning Signal Reduction (TDK-W) | complete | complete | Phase 91 | [91-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/91-tdk-compliance-warning-signal-reduction/91-BASELINE.md)<br>[v0.0.31-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.31-MILESTONE-AUDIT.md) |
-| TDK-W-06 | TDK Compliance Warning Signal Reduction (TDK-W) | complete | complete | Phase 91 | [91-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/91-tdk-compliance-warning-signal-reduction/91-BASELINE.md)<br>[v0.0.31-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.31-MILESTONE-AUDIT.md) |
+| TDK-BP-01 | TDK Cleanup Batch Planner (TDK-BP) | complete | complete | Phase 92 | [92-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/92-tdk-cleanup-batch-planner/92-BASELINE.md)<br>[v0.0.32-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.32-MILESTONE-AUDIT.md) |
+| TDK-BP-02 | TDK Cleanup Batch Planner (TDK-BP) | complete | complete | Phase 92 | [92-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/92-tdk-cleanup-batch-planner/92-BASELINE.md)<br>[v0.0.32-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.32-MILESTONE-AUDIT.md) |
+| TDK-BP-03 | TDK Cleanup Batch Planner (TDK-BP) | complete | complete | Phase 92 | [92-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/92-tdk-cleanup-batch-planner/92-BASELINE.md)<br>[v0.0.32-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.32-MILESTONE-AUDIT.md) |
+| TDK-BP-04 | TDK Cleanup Batch Planner (TDK-BP) | complete | complete | Phase 92 | [92-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/92-tdk-cleanup-batch-planner/92-BASELINE.md)<br>[v0.0.32-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.32-MILESTONE-AUDIT.md) |
+| TDK-BP-05 | TDK Cleanup Batch Planner (TDK-BP) | complete | complete | Phase 92 | [92-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/92-tdk-cleanup-batch-planner/92-BASELINE.md)<br>[v0.0.32-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.32-MILESTONE-AUDIT.md) |
+| TDK-BP-06 | TDK Cleanup Batch Planner (TDK-BP) | complete | complete | Phase 92 | [92-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/92-tdk-cleanup-batch-planner/92-BASELINE.md)<br>[v0.0.32-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.32-MILESTONE-AUDIT.md) |
 
 ## Phase Coverage
 
 | Phase | Requirements | Plans | Summaries |
 | --- | --- | --- | --- |
-| Phase 91 TDK Compliance Warning Signal Reduction | TDK-W-01, TDK-W-02, TDK-W-03, TDK-W-04, TDK-W-05, TDK-W-06 | x 91 | [91-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/91-tdk-compliance-warning-signal-reduction/91-BASELINE.md) |
+| Phase 92 TDK Cleanup Batch Planner | TDK-BP-01, TDK-BP-02, TDK-BP-03, TDK-BP-04, TDK-BP-05, TDK-BP-06 | x 92 | [92-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/92-tdk-cleanup-batch-planner/92-BASELINE.md) |
 
 ## Gaps
 
