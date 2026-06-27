@@ -571,6 +571,37 @@ Interpretation:
   `fr/resource-allocation-planner`, `pt/git-branch-naming-validator`, and
   `pt/tip-calculator`.
 
+## TDK Cleanup Batch Evidence (v0.0.39)
+
+The seventh candidate-driven cleanup batch trimmed exactly 10 synchronized
+`root_base_match` overlong `seo_description` entries in `es`, `fr`, and `pt`.
+It intentionally skipped the two intervening high-overrun `ru` candidates for a
+later language-review batch.
+
+After-cleanup command:
+
+```bash
+npm run validate:tdk-integrity -- --top 10 --report-path .planning/research/reports/tdk-integrity-v0.0.39-final.json --candidates-path .planning/research/reports/tdk-cleanup-candidates-v0.0.39-final-top30.json --candidate-top 30 --candidate-fields seo_description --candidate-directions long
+```
+
+Current result (2026-06-27):
+
+- PASS
+- `0` hard errors
+- `2722` warning-only findings, down from `2732`
+- `seo_description=2280`, down from `2290`
+- `long=2716`, down from `2726`
+- focused root/base sync check passed for all 10 edited pairs
+
+Interpretation:
+
+- The candidate-export workflow continues to support small, auditable metadata
+  cleanup batches.
+- The next largest Latin-script candidates include
+  `es/invoice-template-generator`, `fr/ring-size-calculator`,
+  `pt/boxplot-chart-generator`, `pt/pace-calculator`, and
+  `es/sql-to-mongodb-converter`.
+
 ## Latest Verification Snapshot (2026-06-24)
 
 - **`npx vitest run src/lib/tool-cluster-factory.test.ts scripts/validation/tool-page-render-contract.test.ts`**: 2 files / 26 tests / PASS
