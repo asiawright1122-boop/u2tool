@@ -133,11 +133,11 @@
 
 **Status:** Archived on 2026-06-24. Phase 89 now has scoped online CLI controls, a committed smoke cohort, explicit blocker semantics, markdown summary output, green focused tests (`85/85`), and captured local + production smoke artifacts. Production smoke has already been confirmed from a reachable local terminal with `42/42 MATCH`, and Cloudflare dashboard inspection showed no configured `x-waf-bypass-token` bypass rule for the current zone, so `WAF_BYPASS_TOKEN` is treated as optional infrastructure rather than a universal production prerequisite.
 
-## Active Milestone: v0.0.30 Translation Warning Signal Reduction
+## Archived Milestone: v0.0.30 Translation Warning Signal Reduction
 
 **Goal:** Reduce the standing translation-governance warning noise so release evidence can separate real regressions from historical backlog, starting with `group_key_drift` namespace warnings and root-layer duplicate support-copy overlap.
 
-**Requirements:** [.planning/REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/REQUIREMENTS.md)
+**Requirements:** [.planning/milestones/v0.0.30-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.30-REQUIREMENTS.md)
 
 **Audit:** [.planning/milestones/v0.0.30-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.30-MILESTONE-AUDIT.md)
 
@@ -152,3 +152,23 @@
 - Start from the concentrated hotspots: `zh` dominates namespace drift, and `root` dominates merge-layer overlap noise.
 
 **Status:** Completed on 2026-06-24. Phase 90 improved validator ergonomics (`--help`, `--report-path`, `--top`), added warning breakdown summaries, regenerated planning evidence for `v0.0.30`, and completed one bounded duplicate-copy cleanup batch. The milestone closed with `validate:translation-corpus` PASS at `307` warning-only namespace issues and `validate:merge-chain-consistency` PASS at `15241` warning-only overlap findings, both still at `0` hard-fail counts. Post-closure follow-up cleanups reduced namespace warnings to `0`, eliminated all `missing_only` namespace drift, reduced merge-chain overlap warnings to `0`, and preserved `0` hard-fail counts.
+
+## Active Milestone: v0.0.31 TDK Compliance Warning Signal Reduction
+
+**Goal:** Turn `validate:tdk-integrity` from a flat warning dump into a readable release-health signal, then prove the workflow with a bounded top-overrun metadata cleanup batch.
+
+**Requirements:** [.planning/milestones/v0.0.31-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.31-REQUIREMENTS.md)
+
+**Audit:** [.planning/milestones/v0.0.31-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.31-MILESTONE-AUDIT.md)
+
+**Phase plan:**
+
+- [x] **Phase 91** - TDK Compliance Warning Signal Reduction
+
+**Design notes:**
+
+- Preserve hard errors for missing metadata and placeholder leakage.
+- Keep length/style findings warning-only, but make them reviewable by locale, field, category, slug, and overrun size.
+- Avoid whole-catalog rewriting; use a small top-overrun batch to validate the cleanup loop.
+
+**Status:** Completed on 2026-06-27; ready to select the next milestone. `validate:tdk-integrity` now supports `--help`, `--report-path` / `--json-out`, and `--top`; writes complete JSON reports; and prints summarized warning evidence. Focused tests pass (`7/7`). The fresh baseline was `0` errors / `2802` warnings, and the top-10 cleanup reduced it to `0` errors / `2792` warnings while keeping edited root/base metadata synchronized. Closeout verification kept `validate:tdk-drift`, `validate:translation-corpus`, and `validate:merge-chain-consistency` green.

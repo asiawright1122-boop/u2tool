@@ -324,6 +324,51 @@ Do not wire it into `qa:smoke` or `verify:production` yet because:
 Weekly CI is a possible follow-up once the secret contract is routine, but it is
 not the default placement today.
 
+## TDK Integrity Warning Summaries (v0.0.31)
+
+`validate:tdk-integrity` now supports scoped release evidence output:
+
+- `--help`
+- `--top <n>`
+- `--report-path <path>`
+- `--json-out <path>`
+
+Baseline capture:
+
+```bash
+npm run validate:tdk-integrity -- --top 5 --report-path .planning/research/reports/tdk-integrity-v0.0.31-baseline.json
+```
+
+Baseline result (2026-06-26):
+
+- PASS
+- `0` hard errors
+- `2802` warning-only findings
+- by field: `seo_title=442`, `seo_description=2360`
+- by direction: `short=6`, `long=2796`
+
+After the first top-overrun cleanup:
+
+```bash
+npm run validate:tdk-integrity -- --top 5 --report-path .planning/research/reports/tdk-integrity-v0.0.31-after-top10.json
+```
+
+Current result:
+
+- PASS
+- `0` hard errors
+- `2792` warning-only findings
+- by field: `seo_title=442`, `seo_description=2350`
+- by direction: `short=6`, `long=2786`
+
+Interpretation:
+
+- TDK length/style warnings remain non-blocking SEO optimization debt.
+- Missing metadata namespaces, empty `seo_title` / `seo_description`, and
+  forbidden placeholder tokens remain hard errors.
+- Full finding detail lives in the JSON report; console output should be used
+  for hotspot triage and regression comparison.
+
 ## Latest Verification Snapshot (2026-06-24)
 
 - **`npx vitest run src/lib/tool-cluster-factory.test.ts scripts/validation/tool-page-render-contract.test.ts`**: 2 files / 26 tests / PASS

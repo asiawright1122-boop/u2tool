@@ -1,7 +1,7 @@
 # Milestone Traceability Report
 
-Generated: 2026-06-24T23:02:23.797Z
-Milestone: v0.0.30 Translation Warning Signal Reduction
+Generated: 2026-06-27T04:33:08.385Z
+Milestone: v0.0.31 TDK Compliance Warning Signal Reduction
 
 ## Summary
 
@@ -14,18 +14,18 @@ Milestone: v0.0.30 Translation Warning Signal Reduction
 
 | Requirement | Area | Status | Roadmap | Mapped Phases | Evidence |
 | --- | --- | --- | --- | --- | --- |
-| TWS-01 | Translation Warning Signal Reduction (TWS) | complete | complete | Phase 90 | [90-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/90-translation-warning-signal-reduction/90-BASELINE.md)<br>[v0.0.30-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.30-MILESTONE-AUDIT.md) |
-| TWS-02 | Translation Warning Signal Reduction (TWS) | complete | complete | Phase 90 | [90-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/90-translation-warning-signal-reduction/90-BASELINE.md)<br>[v0.0.30-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.30-MILESTONE-AUDIT.md) |
-| TWS-03 | Translation Warning Signal Reduction (TWS) | complete | complete | Phase 90 | [90-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/90-translation-warning-signal-reduction/90-BASELINE.md)<br>[v0.0.30-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.30-MILESTONE-AUDIT.md) |
-| TWS-04 | Translation Warning Signal Reduction (TWS) | complete | complete | Phase 90 | [90-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/90-translation-warning-signal-reduction/90-BASELINE.md)<br>[v0.0.30-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.30-MILESTONE-AUDIT.md) |
-| TWS-05 | Translation Warning Signal Reduction (TWS) | complete | complete | Phase 90 | [90-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/90-translation-warning-signal-reduction/90-BASELINE.md)<br>[v0.0.30-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.30-MILESTONE-AUDIT.md) |
-| TWS-06 | Translation Warning Signal Reduction (TWS) | complete | complete | Phase 90 | [90-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/90-translation-warning-signal-reduction/90-BASELINE.md)<br>[v0.0.30-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.30-MILESTONE-AUDIT.md) |
+| TDK-W-01 | TDK Compliance Warning Signal Reduction (TDK-W) | complete | complete | Phase 91 | [91-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/91-tdk-compliance-warning-signal-reduction/91-BASELINE.md)<br>[v0.0.31-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.31-MILESTONE-AUDIT.md) |
+| TDK-W-02 | TDK Compliance Warning Signal Reduction (TDK-W) | complete | complete | Phase 91 | [91-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/91-tdk-compliance-warning-signal-reduction/91-BASELINE.md)<br>[v0.0.31-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.31-MILESTONE-AUDIT.md) |
+| TDK-W-03 | TDK Compliance Warning Signal Reduction (TDK-W) | complete | complete | Phase 91 | [91-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/91-tdk-compliance-warning-signal-reduction/91-BASELINE.md)<br>[v0.0.31-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.31-MILESTONE-AUDIT.md) |
+| TDK-W-04 | TDK Compliance Warning Signal Reduction (TDK-W) | complete | complete | Phase 91 | [91-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/91-tdk-compliance-warning-signal-reduction/91-BASELINE.md)<br>[v0.0.31-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.31-MILESTONE-AUDIT.md) |
+| TDK-W-05 | TDK Compliance Warning Signal Reduction (TDK-W) | complete | complete | Phase 91 | [91-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/91-tdk-compliance-warning-signal-reduction/91-BASELINE.md)<br>[v0.0.31-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.31-MILESTONE-AUDIT.md) |
+| TDK-W-06 | TDK Compliance Warning Signal Reduction (TDK-W) | complete | complete | Phase 91 | [91-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/91-tdk-compliance-warning-signal-reduction/91-BASELINE.md)<br>[v0.0.31-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.31-MILESTONE-AUDIT.md) |
 
 ## Phase Coverage
 
 | Phase | Requirements | Plans | Summaries |
 | --- | --- | --- | --- |
-| Phase 90 Translation Warning Signal Reduction | TWS-01, TWS-02, TWS-03, TWS-04, TWS-05, TWS-06 | x 90 | [90-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/90-translation-warning-signal-reduction/90-BASELINE.md) |
+| Phase 91 TDK Compliance Warning Signal Reduction | TDK-W-01, TDK-W-02, TDK-W-03, TDK-W-04, TDK-W-05, TDK-W-06 | x 91 | [91-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/91-tdk-compliance-warning-signal-reduction/91-BASELINE.md) |
 
 ## Gaps
 

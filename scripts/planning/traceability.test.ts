@@ -102,6 +102,66 @@ describe('traceability generator', () => {
     expect(getTraceabilityIntegrityIssues(report)).toEqual([]);
   });
 
+  it('parses hyphenated requirement prefixes used by TDK warning milestones', () => {
+    const root = makeTempRoot();
+
+    writeFile(
+      root,
+      '.planning/ROADMAP.md',
+      `# Roadmap: U2Tool
+
+## Active Milestone: v0.0.31 TDK Compliance Warning Signal Reduction
+
+**Goal:** Make TDK warning evidence reviewable.
+
+**Phase plan:**
+
+- [x] **Phase 91** - TDK Compliance Warning Signal Reduction
+`
+    );
+
+    writeFile(
+      root,
+      '.planning/REQUIREMENTS.md',
+      `# Requirements: v0.0.31 - TDK Compliance Warning Signal Reduction
+
+## Requirements
+
+### TDK Compliance Warning Signal Reduction (TDK-W)
+
+- [x] **TDK-W-01** - **Fresh warning baseline capture**: Record the TDK warning baseline.
+- [x] **TDK-W-02** - **Validator CLI ergonomics**: Add report and summary options.
+
+## Traceability
+
+| Requirement ID | Description | Assigned Phase | Status |
+| :--- | :--- | :--- | :--- |
+| **TDK-W-01** | Fresh warning baseline capture | Phase 91 | Complete |
+| **TDK-W-02** | Validator CLI ergonomics | Phase 91 | Complete |
+`
+    );
+
+    writeFile(
+      root,
+      '.planning/phases/91-tdk-compliance-warning-signal-reduction/91-BASELINE.md',
+      '# Phase 91 Baseline\n'
+    );
+    writeFile(
+      root,
+      '.planning/milestones/v0.0.31-MILESTONE-AUDIT.md',
+      '# Milestone Audit: v0.0.31\n'
+    );
+
+    const report = collectTraceabilityReportData(root);
+
+    expect(report.milestone).toBe('v0.0.31 TDK Compliance Warning Signal Reduction');
+    expect(report.summary.totalRequirements).toBe(2);
+    expect(report.summary.unmappedRequirements).toBe(0);
+    expect(report.requirementEntries.map((entry) => entry.id)).toEqual(['TDK-W-01', 'TDK-W-02']);
+    expect(report.requirementEntries.every((entry) => entry.roadmapStatus === 'complete')).toBe(true);
+    expect(getTraceabilityIntegrityIssues(report)).toEqual([]);
+  });
+
   it('renders meaningful gaps for missing evidence and missing phase mappings', () => {
     const root = makeTempRoot();
 

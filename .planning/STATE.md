@@ -1,11 +1,11 @@
 ---
 gsd_state_version: 1.0
-milestone: v0.0.30
-milestone_name: Translation Warning Signal Reduction
+milestone: v0.0.31
+milestone_name: TDK Compliance Warning Signal Reduction
 status: Complete
-stopped_at: v0.0.30 completed; ready to choose the next milestone
-last_updated: "2026-06-26T08:30:00.000Z"
-last_activity: 2026-06-26
+stopped_at: v0.0.31 completed; ready to choose the next milestone
+last_updated: "2026-06-27T04:30:00.000Z"
+last_activity: 2026-06-27
 progress:
   total_phases: 1
   completed_phases: 1
@@ -20,14 +20,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-06-20)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** v0.0.30 is closed, and post-closure follow-up warning-reduction slices have cleared both translation warning channels. The next work is to choose a new governance / release-health priority.
+**Current focus:** v0.0.31 is closed. TDK compliance warning output is now reviewable, the first bounded cleanup batch is verified, and the next work is to choose a new governance / release-health priority.
 **Frontend safety:** No user-facing surface may expose internal reasoning traces, hidden prompts, scratchpads, handoff notes, or raw planning notes.
 
 ## Current Position
 
-Phase: 90 COMPLETE
-Status: Phase 90 is complete. Hard translation-governance failures remain clear, validator output is now materially more actionable, and bounded cleanup batches have reduced namespace warning noise without introducing regressions.
-Last activity: 2026-06-26 — Post-closure follow-ups migrated all remaining `zh/base.json` namespace findings into split files, removed identical `zh.json` root-layer FAQ shadows where present, and then removed all remaining root/base support-copy shadows already covered by split files. Fresh reruns show `npm run validate:translation-corpus -- --top 20` at `0` schema errors, `0` coverage gaps, and `0` namespace warnings; `npm run validate:merge-chain-consistency -- --top 20` at `0` layer overlaps, `0` resolved divergences, and `0` EN-fallback resolutions. Focused regression coverage passed (`190/190` tests), and `npm run qa:seo-governance` passed with both translation-governance warning channels still at `0`; its `2802` TDK compliance findings remain warning-only. `npm run check` and `npm run build` also pass.
+Phase: 91 COMPLETE
+Status: Phase 91 is complete. Hard TDK errors remain clear, warning output is now summarized, and the first cleanup reduced warning-only findings from `2802` to `2792`.
+Last activity: 2026-06-27 — v0.0.31 closeout evidence was captured. `validate:tdk-integrity` supports `--help`, `--report-path` / `--json-out`, and `--top`; focused tests passed (`7/7`); `validate:tdk-integrity -- --top 5` passed with `0` errors and `2792` warning-only findings; `validate:tdk-drift` passed with `5570/5570` records resolved; translation corpus and merge-chain checks both remained at `0` warning/error findings.
 
 ## Milestone Context
 
@@ -44,9 +44,11 @@ Last activity: 2026-06-26 — Post-closure follow-ups migrated all remaining `zh
 | 88 | Traceability Contract Restoration | **Complete** |
 | 89 | Production Metadata Drift Baseline | **Complete** |
 | 90 | Translation Warning Signal Reduction | **Complete** |
+| 91 | TDK Compliance Warning Signal Reduction | **Complete** |
 
 ## Accumulated Context
 
+- 2026-06-27 v0.0.31 completed. `validate-tdk-integrity.ts` now exposes testable validation/report helpers, real CLI help, `--report-path` / `--json-out`, `--top`, summarized warning evidence, and JSON report output. `.gitignore` now unignores the validator and focused test file plus Phase 91 and v0.0.31 archive artifacts. `npx vitest run scripts/validation/validate-tdk-integrity.test.ts` passed `7/7`. Fresh baseline: `npm run validate:tdk-integrity -- --top 5 --report-path .planning/research/reports/tdk-integrity-v0.0.31-baseline.json` passed with `0` errors and `2802` warnings. After trimming the top 10 overlong `seo_description` entries in synchronized root/base metadata layers, `npm run validate:tdk-integrity -- --top 5 --report-path .planning/research/reports/tdk-integrity-v0.0.31-retry.json` passed with `0` errors and `2792` warnings. Closeout checks kept `validate:tdk-drift`, `validate:translation-corpus`, and `validate:merge-chain-consistency` green.
 - 2026-06-24 Phase 90 checkpoint captured. `validate-translation-corpus.ts` and `validate-merge-chain-consistency.ts` now expose real CLI help and scoped output controls plus warning summaries by shape/hotspot. Focused tests passed (`72/72` validator tests; `190/190` when including `src/lib/translations.test.ts` and `src/lib/support-content-fallback.test.ts`). A bounded cleanup removed dead root-layer support copy for `gpa-calculator` and `pace-calculator` in all locales and pruned locale-only `base.json` extras (`remove`, `metric`, `imperial`). Fresh measurements dropped namespace warnings from `325` to `307` and merge overlap warnings from `15301` to `15241`, while keeping `schemaErrors=0`, `coverageGaps=0`, and `resolvedDivergences=0`.
 - 2026-06-24 Phase 90 follow-up checkpoint captured. A second bounded cleanup added missing Prettier UI labels for `ar` and `ru`, removed safe Arabic chart extras (`title`, `themeRandom`, `themeImportJson`, and Nightingale-only `category`), and removed five Chinese chart FAQ shadow blocks already covered by split files. Fresh measurements dropped namespace warnings from `307` to `291` and eliminated all `missing_only` namespace drift (`2` to `0`). Merge overlap total stayed at `15241`, but `root+base` overlap dropped from `267` to `262` because those FAQ shadows no longer live in `base.json`. Focused regression tests passed (`190/190`).
 - 2026-06-24 Phase 90 follow-up checkpoint 2 captured. Removed `162` more `zh/base.json` FAQ shadow blocks only when `src/messages/zh/tools/<slug>.json` already had FAQ copy. Fresh measurements dropped namespace warnings from `291` to `129`; `zh` now contributes `127` findings and non-ZH drift is limited to `es`/`pt` carbon-footprint extras. Merge overlap total stayed at `15241`, but `root+base` overlap dropped from `262` to `100` because the remaining noise is now overwhelmingly root-layer duplicate support copy. Focused regression tests passed (`190/190`).
@@ -86,7 +88,7 @@ Last activity: 2026-06-26 — Post-closure follow-ups migrated all remaining `zh
 - 2026-06-09 GSC recovery cohort plan created with exact URL lists, action rules, owner model, and checkpoints.
 - 2026-06-12 GSC URL Inspection checkpoint recorded.
 
-Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20, v0.0.21, v0.0.22, v0.0.23, v0.0.24, v0.0.25, v0.0.26, v0.0.27, v0.0.28, and v0.0.29 are complete.
+Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20, v0.0.21, v0.0.22, v0.0.23, v0.0.24, v0.0.25, v0.0.26, v0.0.27, v0.0.28, v0.0.29, v0.0.30, and v0.0.31 are complete.
 
 ## Next Action
 
@@ -94,6 +96,6 @@ Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20, v0.0.2
 
 ## Session
 
-Last Date: 2026-06-26T08:30:00.000Z
-Stopped At: Phase 90 follow-up checkpoint 6 verified; ready to choose next milestone
+Last Date: 2026-06-27T04:30:00.000Z
+Stopped At: v0.0.31 completed; ready to choose the next milestone
 Resume File: .planning/REQUIREMENTS.md

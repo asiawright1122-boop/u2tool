@@ -58,6 +58,7 @@ const PHASE_EVIDENCE_SUFFIXES = [
   '-VERIFICATION.md',
   '-BASELINE.md',
 ];
+const REQUIREMENT_ID_PATTERN = '[A-Z]+(?:-[A-Z]+)*-\\d+';
 
 function readFile(filePath: string): string {
   return fs.readFileSync(filePath, 'utf8');
@@ -147,7 +148,7 @@ function parseRequirements(requirementsContent: string): RequirementEntry[] {
       continue;
     }
 
-    const currentFormatMatch = line.match(/^- \[(x| )\]\s+\*\*([A-Z]+-\d+)\*\*\s+-\s+\*\*(.+?)\*\*:\s+(.+)$/);
+    const currentFormatMatch = line.match(new RegExp(`^- \\[(x| )\\]\\s+\\*\\*(${REQUIREMENT_ID_PATTERN})\\*\\*\\s+-\\s+\\*\\*(.+?)\\*\\*:\\s+(.+)$`));
     if (currentFormatMatch) {
       entries.push({
         area: currentArea,
@@ -158,7 +159,7 @@ function parseRequirements(requirementsContent: string): RequirementEntry[] {
       continue;
     }
 
-    const currentFallbackMatch = line.match(/^- \[(x| )\]\s+\*\*([A-Z]+-\d+)\*\*\s+-\s+(.+)$/);
+    const currentFallbackMatch = line.match(new RegExp(`^- \\[(x| )\\]\\s+\\*\\*(${REQUIREMENT_ID_PATTERN})\\*\\*\\s+-\\s+(.+)$`));
     if (currentFallbackMatch) {
       entries.push({
         area: currentArea,
@@ -169,7 +170,7 @@ function parseRequirements(requirementsContent: string): RequirementEntry[] {
       continue;
     }
 
-    const legacyMatch = line.match(/^- \[(x| )\]\s+([A-Z]+-\d+):\s+(.+)$/);
+    const legacyMatch = line.match(new RegExp(`^- \\[(x| )\\]\\s+(${REQUIREMENT_ID_PATTERN}):\\s+(.+)$`));
     if (legacyMatch) {
       entries.push({
         area: currentArea,
@@ -188,8 +189,8 @@ function parseRequirementTraceabilityTable(requirementsContent: string): Map<str
 
   for (const rawLine of requirementsContent.split('\n')) {
     const line = rawLine.trim();
-    const currentFormatMatch = line.match(/^\|\s+\*\*([A-Z]+-\d+)\*\*\s+\|\s+(.+?)\s+\|\s+(.+?)\s+\|\s+(.+?)\s+\|$/);
-    const legacyFormatMatch = line.match(/^\|\s*([A-Z]+-\d+)\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|$/);
+    const currentFormatMatch = line.match(new RegExp(`^\\|\\s+\\*\\*(${REQUIREMENT_ID_PATTERN})\\*\\*\\s+\\|\\s+(.+?)\\s+\\|\\s+(.+?)\\s+\\|\\s+(.+?)\\s+\\|$`));
+    const legacyFormatMatch = line.match(new RegExp(`^\\|\\s*(${REQUIREMENT_ID_PATTERN})\\s*\\|\\s*(.+?)\\s*\\|\\s*(.+?)\\s*\\|\\s*(.+?)\\s*\\|$`));
     const match = currentFormatMatch ?? legacyFormatMatch;
 
     if (!match || match[1] === 'Requirement ID') {
