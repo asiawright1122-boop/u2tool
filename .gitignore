@@ -72,6 +72,8 @@ progress.md
 !scripts/validation/validate-edge-simulation.mjs
 !scripts/validation/validate-tdk-drift.ts
 !scripts/validation/validate-tdk-drift.test.ts
+!scripts/validation/validate-tdk-integrity.ts
+!scripts/validation/validate-tdk-integrity.test.ts
 !scripts/validation/validate-translation-corpus.ts
 !scripts/validation/validate-translation-corpus.test.ts
 !scripts/validation/validate-merge-chain-consistency.ts
@@ -87,6 +89,10 @@ progress.md
 !.planning/phases/86-persistent-render-regression-gate/
 .planning/phases/86-persistent-render-regression-gate/*
 !.planning/phases/86-persistent-render-regression-gate/86-PLAN.md
+!.planning/phases/91-tdk-compliance-warning-signal-reduction/
+.planning/phases/91-tdk-compliance-warning-signal-reduction/*
+!.planning/phases/91-tdk-compliance-warning-signal-reduction/91-PLAN.md
+!.planning/phases/91-tdk-compliance-warning-signal-reduction/91-BASELINE.md
 !.planning/milestones/
 .planning/milestones/*
 !.planning/milestones/v0.0.25-REQUIREMENTS.md
@@ -96,3 +102,5 @@ progress.md
 !.planning/milestones/v0.0.27-REQUIREMENTS.md
 !.planning/milestones/v0.0.28-REQUIREMENTS.md
 !.planning/milestones/v0.0.28-MILESTONE-AUDIT.md
+!.planning/milestones/v0.0.31-REQUIREMENTS.md
+!.planning/milestones/v0.0.31-MILESTONE-AUDIT.md
