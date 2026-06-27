@@ -173,7 +173,7 @@
 
 **Status:** Completed on 2026-06-27; ready to select the next milestone. `validate:tdk-integrity` now supports `--help`, `--report-path` / `--json-out`, and `--top`; writes complete JSON reports; and prints summarized warning evidence. Focused tests pass (`7/7`). The fresh baseline was `0` errors / `2802` warnings, and the top-10 cleanup reduced it to `0` errors / `2792` warnings while keeping edited root/base metadata synchronized. Closeout verification kept `validate:tdk-drift`, `validate:translation-corpus`, and `validate:merge-chain-consistency` green.
 
-## Active Milestone: v0.0.32 TDK Cleanup Batch Planner
+## Archived Milestone: v0.0.32 TDK Cleanup Batch Planner
 
 **Goal:** Turn the remaining TDK warning backlog into a reviewable cleanup queue with ranked candidates, source-layer evidence, and scoped export controls.
 
@@ -192,4 +192,23 @@
 - Export candidates for human review; do not mass-edit localized metadata copy in this milestone.
 - Include root/base source-layer status so follow-up batches know whether one or both legacy metadata layers need synchronized edits.
 
-**Status:** Completed locally on 2026-06-27; PR integration pending. `validate:tdk-integrity` now supports optional cleanup candidate exports via `--candidates-path`, `--candidate-top`, `--candidate-locales`, `--candidate-fields`, and `--candidate-directions`. Focused tests pass (`11/11`), traceability maps `6/6` requirements, `qa:seo-governance` passes, and `npm run check` passes with only existing hints. The fresh candidate baseline is `0` errors / `2792` warnings, and the top-20 overlong `seo_description` export includes rank, length bounds, overrun size, current value evidence, file paths, and source-layer sync status.
+**Status:** Completed and merged on 2026-06-27. `validate:tdk-integrity` now supports optional cleanup candidate exports via `--candidates-path`, `--candidate-top`, `--candidate-locales`, `--candidate-fields`, and `--candidate-directions`. Focused tests pass (`11/11`), traceability maps `6/6` requirements, `qa:seo-governance` passes, and `npm run check` passes with only existing hints. The fresh candidate baseline is `0` errors / `2792` warnings, and the top-20 overlong `seo_description` export includes rank, length bounds, overrun size, current value evidence, file paths, and source-layer sync status.
+
+## Active Milestone: v0.0.33 TDK Cleanup Batch One
+
+**Goal:** Use the v0.0.32 candidate export to trim the first bounded set of 10 synchronized overlong `seo_description` entries.
+
+**Requirements:** [.planning/milestones/v0.0.33-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.33-REQUIREMENTS.md)
+
+**Phase plan:**
+
+- [x] **Phase 93** - TDK Cleanup Batch One
+
+**Design notes:**
+
+- Edit only the selected 10 `root_base_match` candidates from the fresh export.
+- Keep root/base metadata synchronized for every edited pair.
+- Avoid CJK/RTL/Slavic-language edits in this batch.
+- Verify a concrete warning-count reduction while preserving `0` hard errors.
+
+**Status:** Completed locally on 2026-06-27; final PR integration pending. The selected 10 root/base `seo_description` pairs were trimmed and kept synchronized. `validate:tdk-integrity` now reports `0` errors / `2782` warnings, down from `2792`, with `seo_description` warnings reduced from `2350` to `2340`.
