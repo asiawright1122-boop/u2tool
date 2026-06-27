@@ -432,6 +432,33 @@ Interpretation:
 - Continue with Latin-script `root_base_match` candidates before taking on
   larger JA/KO/RU/AR review-sensitive batches.
 
+## TDK Cleanup Batch Evidence (v0.0.34)
+
+The second candidate-driven cleanup batch trimmed exactly 10 synchronized
+`root_base_match` overlong `seo_description` entries in `es` and `pt`.
+
+After-cleanup command:
+
+```bash
+npm run validate:tdk-integrity -- --top 10 --report-path .planning/research/reports/tdk-integrity-v0.0.34-final.json --candidates-path .planning/research/reports/tdk-cleanup-candidates-v0.0.34-final-top30.json --candidate-top 30 --candidate-fields seo_description --candidate-directions long
+```
+
+Current result (2026-06-27):
+
+- PASS
+- `0` hard errors
+- `2772` warning-only findings, down from `2782`
+- `seo_description=2330`, down from `2340`
+- `long=2766`, down from `2776`
+- focused root/base sync check passed for all 10 edited pairs
+
+Interpretation:
+
+- The candidate-export workflow is repeatable for small metadata cleanup
+  batches.
+- Continue with Latin-script `root_base_match` candidates before taking on
+  larger JA/KO/RU/AR review-sensitive batches.
+
 ## Latest Verification Snapshot (2026-06-24)
 
 - **`npx vitest run src/lib/tool-cluster-factory.test.ts scripts/validation/tool-page-render-contract.test.ts`**: 2 files / 26 tests / PASS
