@@ -21,6 +21,7 @@ const CJK_DESC_MIN = 40;
 const CJK_DESC_MAX = 120;
 
 const DEFAULT_TOP_FINDINGS = 30;
+const DEFAULT_CANDIDATE_TOP = 20;
 const SUMMARY_TOP_LIMIT = 10;
 
 const forbiddenSubstrings = ['TODO', 'PLACEHOLDER', 'MISSING', '${BASE_URL}'] as const;
@@ -86,10 +87,81 @@ export interface TdkIntegrityReport {
   findings: TdkIntegrityFinding[];
 }
 
+export type TdkSourceLayerStatus =
+  | 'root_base_match'
+  | 'root_base_mismatch'
+  | 'root_only'
+  | 'base_only'
+  | 'missing';
+
+export interface TdkSourceLayerValue {
+  root?: string;
+  base?: string;
+  rootPath?: string;
+  basePath?: string;
+}
+
+export type TdkSourceLayerIndex = Record<
+  string,
+  Record<string, Partial<Record<Exclude<TdkIntegrityField, 'namespace'>, TdkSourceLayerValue>>>
+>;
+
+export interface TdkCleanupCandidateSourceLayers {
+  status: TdkSourceLayerStatus;
+  rootValue?: string;
+  baseValue?: string;
+  rootPath?: string;
+  basePath?: string;
+}
+
+export interface TdkCleanupCandidate {
+  rank: number;
+  locale: string;
+  slug: string;
+  category: ToolCategory | string;
+  field: Exclude<TdkIntegrityField, 'namespace'>;
+  direction: TdkLengthDirection;
+  length: number;
+  min: number;
+  max: number;
+  overBy: number;
+  message: string;
+  currentValue?: string;
+  sourceLayers: TdkCleanupCandidateSourceLayers;
+}
+
+export interface TdkCleanupCandidateOptions {
+  limit?: number;
+  locales?: string[];
+  fields?: Array<Exclude<TdkIntegrityField, 'namespace'>>;
+  directions?: TdkLengthDirection[];
+}
+
+export interface TdkCleanupCandidateExport {
+  timestamp: string;
+  summary: {
+    errors: number;
+    warnings: number;
+    candidateCount: number;
+  };
+  filters: {
+    limit: number;
+    locales?: string[];
+    fields?: Array<Exclude<TdkIntegrityField, 'namespace'>>;
+    directions?: TdkLengthDirection[];
+  };
+  candidates: TdkCleanupCandidate[];
+}
+
 export interface TdkIntegrityCliArgs {
   help: boolean;
   reportPath?: string;
   top: number;
+  candidatesPath?: string;
+  candidateTop: number;
+  candidateLocales?: string[];
+  candidateFields?: Array<Exclude<TdkIntegrityField, 'namespace'>>;
+  candidateDirections?: TdkLengthDirection[];
 }
 
 export interface ValidateToolTdkParams {
@@ -129,6 +201,28 @@ function loadTranslations(locale: Locale): Record<string, unknown> {
     : {};
 
   return deepMerge(baseMessages, rootMessages);
+}
+
+function readJsonFile(filePath: string): Record<string, unknown> {
+  return fs.existsSync(filePath)
+    ? JSON.parse(fs.readFileSync(filePath, 'utf-8')) as Record<string, unknown>
+    : {};
+}
+
+function readTranslationLayers(locale: Locale): {
+  rootPath: string;
+  basePath: string;
+  rootMessages: Record<string, unknown>;
+  baseMessages: Record<string, unknown>;
+} {
+  const rootPath = path.join(messagesDir, `${locale}.json`);
+  const basePath = path.join(messagesDir, locale, 'base.json');
+  return {
+    rootPath,
+    basePath,
+    rootMessages: readJsonFile(rootPath),
+    baseMessages: readJsonFile(basePath),
+  };
 }
 
 function getSafeBounds(
@@ -245,6 +339,185 @@ function buildTopCounts<T extends { count: number }>(
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
     .slice(0, limit)
     .map(([key, count]) => makeEntry(key, count));
+}
+
+function readToolField(
+  messages: Record<string, unknown>,
+  lookupKey: string,
+  field: Exclude<TdkIntegrityField, 'namespace'>
+): string | undefined {
+  const toolsNamespace = messages.tools;
+  if (!isObject(toolsNamespace)) return undefined;
+
+  const toolDict = toolsNamespace[lookupKey];
+  if (!isObject(toolDict)) return undefined;
+
+  const value = toolDict[field];
+  return typeof value === 'string' ? value : undefined;
+}
+
+export function buildTdkSourceLayerIndex(): TdkSourceLayerIndex {
+  const index: TdkSourceLayerIndex = {};
+
+  for (const locale of locales) {
+    const { rootPath, basePath, rootMessages, baseMessages } = readTranslationLayers(locale);
+    const localeIndex: TdkSourceLayerIndex[string] = {};
+
+    for (const tool of tools) {
+      const lookupKey = toolMessageAliases[tool.slug] ?? tool.slug;
+      const fieldValues: Partial<Record<Exclude<TdkIntegrityField, 'namespace'>, TdkSourceLayerValue>> = {};
+
+      for (const field of ['seo_title', 'seo_description'] as const) {
+        const root = readToolField(rootMessages, lookupKey, field);
+        const base = readToolField(baseMessages, lookupKey, field);
+        if (root !== undefined || base !== undefined) {
+          fieldValues[field] = {
+            root,
+            base,
+            rootPath,
+            basePath,
+          };
+        }
+      }
+
+      if (Object.keys(fieldValues).length > 0) {
+        localeIndex[tool.slug] = fieldValues;
+      }
+    }
+
+    index[locale] = localeIndex;
+  }
+
+  return index;
+}
+
+function resolveSourceLayerMetadata(
+  sourceLayers: TdkSourceLayerIndex,
+  finding: TdkIntegrityFinding & {
+    field: Exclude<TdkIntegrityField, 'namespace'>;
+  }
+): TdkCleanupCandidateSourceLayers {
+  const layerValue = sourceLayers[finding.locale]?.[finding.slug]?.[finding.field];
+  if (!layerValue) {
+    return { status: 'missing' };
+  }
+
+  const hasRoot = typeof layerValue.root === 'string';
+  const hasBase = typeof layerValue.base === 'string';
+  let status: TdkSourceLayerStatus = 'missing';
+  if (hasRoot && hasBase) {
+    status = layerValue.root === layerValue.base ? 'root_base_match' : 'root_base_mismatch';
+  } else if (hasRoot) {
+    status = 'root_only';
+  } else if (hasBase) {
+    status = 'base_only';
+  }
+
+  return {
+    status,
+    rootValue: layerValue.root,
+    baseValue: layerValue.base,
+    rootPath: layerValue.rootPath,
+    basePath: layerValue.basePath,
+  };
+}
+
+function candidateCurrentValue(sourceLayers: TdkCleanupCandidateSourceLayers): string | undefined {
+  return sourceLayers.rootValue ?? sourceLayers.baseValue;
+}
+
+function normalizeCandidateOptions(
+  options: TdkCleanupCandidateOptions = {}
+): Required<Pick<TdkCleanupCandidateOptions, 'limit'>> & Omit<TdkCleanupCandidateOptions, 'limit'> {
+  return {
+    ...options,
+    limit: options.limit ?? DEFAULT_CANDIDATE_TOP,
+  };
+}
+
+export function buildTdkCleanupCandidates(
+  report: TdkIntegrityReport,
+  sourceLayers: TdkSourceLayerIndex,
+  options: TdkCleanupCandidateOptions = {}
+): TdkCleanupCandidate[] {
+  const normalized = normalizeCandidateOptions(options);
+  const localeFilter = normalized.locales ? new Set(normalized.locales) : undefined;
+  const fieldFilter = normalized.fields ? new Set(normalized.fields) : undefined;
+  const directionFilter = normalized.directions ? new Set(normalized.directions) : undefined;
+
+  const candidates = report.findings
+    .filter((finding): finding is TdkIntegrityFinding & {
+      field: Exclude<TdkIntegrityField, 'namespace'>;
+      direction: TdkLengthDirection;
+      length: number;
+      min: number;
+      max: number;
+      overBy: number;
+    } => (
+      finding.severity === 'warning'
+      && finding.kind === 'length'
+      && finding.field !== 'namespace'
+      && typeof finding.direction === 'string'
+      && typeof finding.length === 'number'
+      && typeof finding.min === 'number'
+      && typeof finding.max === 'number'
+      && typeof finding.overBy === 'number'
+    ))
+    .filter((finding) => !localeFilter || localeFilter.has(finding.locale))
+    .filter((finding) => !fieldFilter || fieldFilter.has(finding.field))
+    .filter((finding) => !directionFilter || directionFilter.has(finding.direction))
+    .sort((a, b) => (
+      b.overBy - a.overBy
+      || b.length - a.length
+      || a.locale.localeCompare(b.locale)
+      || String(a.category).localeCompare(String(b.category))
+      || a.slug.localeCompare(b.slug)
+      || a.field.localeCompare(b.field)
+    ))
+    .slice(0, normalized.limit);
+
+  return candidates.map((finding, index) => {
+    const candidateLayers = resolveSourceLayerMetadata(sourceLayers, finding);
+    return {
+      rank: index + 1,
+      locale: finding.locale,
+      slug: finding.slug,
+      category: finding.category,
+      field: finding.field,
+      direction: finding.direction,
+      length: finding.length,
+      min: finding.min,
+      max: finding.max,
+      overBy: finding.overBy,
+      message: finding.message,
+      currentValue: candidateCurrentValue(candidateLayers),
+      sourceLayers: candidateLayers,
+    };
+  });
+}
+
+export function buildTdkCleanupCandidateExport(
+  report: TdkIntegrityReport,
+  sourceLayers: TdkSourceLayerIndex,
+  options: TdkCleanupCandidateOptions = {}
+): TdkCleanupCandidateExport {
+  const normalized = normalizeCandidateOptions(options);
+  const candidates = buildTdkCleanupCandidates(report, sourceLayers, normalized);
+  return {
+    timestamp: new Date().toISOString(),
+    summary: {
+      errors: report.summary.errors,
+      warnings: report.summary.warnings,
+      candidateCount: candidates.length,
+    },
+    filters: {
+      limit: normalized.limit,
+      locales: normalized.locales,
+      fields: normalized.fields,
+      directions: normalized.directions,
+    },
+    candidates,
+  };
 }
 
 export function buildTdkIntegrityReport(
@@ -406,10 +679,20 @@ export async function writeTdkIntegrityReport(
   return targetPath;
 }
 
+export async function writeTdkCleanupCandidateExport(
+  candidateExport: TdkCleanupCandidateExport,
+  candidatesPath: string
+): Promise<string> {
+  await fs.promises.mkdir(path.dirname(candidatesPath), { recursive: true });
+  await fs.promises.writeFile(candidatesPath, `${JSON.stringify(candidateExport, null, 2)}\n`, 'utf-8');
+  return candidatesPath;
+}
+
 export function parseTdkIntegrityArgs(argv: string[]): TdkIntegrityCliArgs {
   const args: TdkIntegrityCliArgs = {
     help: false,
     top: DEFAULT_TOP_FINDINGS,
+    candidateTop: DEFAULT_CANDIDATE_TOP,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -436,10 +719,71 @@ export function parseTdkIntegrityArgs(argv: string[]): TdkIntegrityCliArgs {
       continue;
     }
 
+    if (arg === '--candidates-path' && argv[index + 1]) {
+      args.candidatesPath = argv[index + 1];
+      index += 1;
+      continue;
+    }
+
+    if (arg === '--candidate-top' && argv[index + 1]) {
+      const parsed = Number(argv[index + 1]);
+      if (!Number.isInteger(parsed) || parsed <= 0) {
+        throw new Error(`Invalid value for --candidate-top: ${argv[index + 1]}`);
+      }
+      args.candidateTop = parsed;
+      index += 1;
+      continue;
+    }
+
+    if (arg === '--candidate-locales' && argv[index + 1]) {
+      args.candidateLocales = parseCommaList(argv[index + 1]);
+      index += 1;
+      continue;
+    }
+
+    if (arg === '--candidate-fields' && argv[index + 1]) {
+      args.candidateFields = parseCandidateFields(argv[index + 1]);
+      index += 1;
+      continue;
+    }
+
+    if (arg === '--candidate-directions' && argv[index + 1]) {
+      args.candidateDirections = parseCandidateDirections(argv[index + 1]);
+      index += 1;
+      continue;
+    }
+
     throw new Error(`Unknown argument: ${arg}`);
   }
 
   return args;
+}
+
+function parseCommaList(value: string): string[] {
+  return value
+    .split(',')
+    .map((entry) => entry.trim())
+    .filter(Boolean);
+}
+
+function parseCandidateFields(value: string): Array<Exclude<TdkIntegrityField, 'namespace'>> {
+  const fields = parseCommaList(value);
+  for (const field of fields) {
+    if (field !== 'seo_title' && field !== 'seo_description') {
+      throw new Error(`Invalid value for --candidate-fields: ${field}`);
+    }
+  }
+  return fields as Array<Exclude<TdkIntegrityField, 'namespace'>>;
+}
+
+function parseCandidateDirections(value: string): TdkLengthDirection[] {
+  const directions = parseCommaList(value);
+  for (const direction of directions) {
+    if (direction !== 'short' && direction !== 'long') {
+      throw new Error(`Invalid value for --candidate-directions: ${direction}`);
+    }
+  }
+  return directions as TdkLengthDirection[];
 }
 
 function printHelp(): void {
@@ -452,6 +796,15 @@ function printHelp(): void {
   console.log('  --report-path <path>  Write the JSON report to a specific path');
   console.log('  --json-out <path>     Alias for --report-path');
   console.log(`  --top <n>             Print up to <n> sample findings per section (default: ${DEFAULT_TOP_FINDINGS})`);
+  console.log('  --candidates-path <path>');
+  console.log('                         Write a ranked cleanup candidate JSON export');
+  console.log(`  --candidate-top <n>   Candidate export limit (default: ${DEFAULT_CANDIDATE_TOP})`);
+  console.log('  --candidate-locales <list>');
+  console.log('                         Comma-separated locale filter for candidates');
+  console.log('  --candidate-fields <list>');
+  console.log('                         Comma-separated candidate field filter: seo_title,seo_description');
+  console.log('  --candidate-directions <list>');
+  console.log('                         Comma-separated candidate direction filter: short,long');
   console.log('  --help, -h            Show this help and exit');
 }
 
@@ -564,6 +917,23 @@ async function main(): Promise<void> {
     console.log(`\n  Report: ${reportPath}`);
   } catch (err) {
     console.warn(`\n  [WARN] Could not write report: ${(err as Error).message}`);
+  }
+
+  if (args.candidatesPath) {
+    try {
+      const sourceLayers = buildTdkSourceLayerIndex();
+      const candidateExport = buildTdkCleanupCandidateExport(report, sourceLayers, {
+        limit: args.candidateTop,
+        locales: args.candidateLocales,
+        fields: args.candidateFields,
+        directions: args.candidateDirections,
+      });
+      const candidatesPath = await writeTdkCleanupCandidateExport(candidateExport, args.candidatesPath);
+      console.log(`  Cleanup candidates: ${candidatesPath}`);
+      console.log(`  Cleanup candidate count: ${candidateExport.summary.candidateCount}`);
+    } catch (err) {
+      console.warn(`  [WARN] Could not write cleanup candidates: ${(err as Error).message}`);
+    }
   }
 
   if (report.summary.errors > 0) {

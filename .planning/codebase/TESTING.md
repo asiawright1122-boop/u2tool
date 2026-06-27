@@ -369,6 +369,42 @@ Interpretation:
 - Full finding detail lives in the JSON report; console output should be used
   for hotspot triage and regression comparison.
 
+## TDK Cleanup Candidate Export (v0.0.32)
+
+`validate:tdk-integrity` can now emit a ranked cleanup queue without changing
+the default hard-fail policy:
+
+- `--candidates-path <path>`
+- `--candidate-top <n>`
+- `--candidate-locales <comma-list>`
+- `--candidate-fields <seo_title|seo_description>`
+- `--candidate-directions <short|long>`
+
+Candidate export command:
+
+```bash
+npm run validate:tdk-integrity -- --top 5 --report-path .planning/research/reports/tdk-integrity-v0.0.32-after-candidates.json --candidates-path .planning/research/reports/tdk-cleanup-candidates-v0.0.32-top20.json --candidate-top 20 --candidate-fields seo_description --candidate-directions long
+```
+
+Current result (2026-06-27):
+
+- PASS
+- `0` hard errors
+- `2792` warning-only findings
+- candidate count: `20`
+- candidate filters: `fields=seo_description`, `directions=long`, `limit=20`
+- each candidate includes rank, locale, slug, category, field, length bounds,
+  overrun size, current value evidence, source file paths, and root/base
+  source-layer status.
+
+Interpretation:
+
+- Use this export to plan bounded metadata cleanup batches.
+- Prefer `root_base_match` candidates first because synchronized edits are
+  straightforward to review.
+- `.planning/research/reports/` remains gitignored; commit only summarized
+  phase evidence and code/tests.
+
 ## Latest Verification Snapshot (2026-06-24)
 
 - **`npx vitest run src/lib/tool-cluster-factory.test.ts scripts/validation/tool-page-render-contract.test.ts`**: 2 files / 26 tests / PASS

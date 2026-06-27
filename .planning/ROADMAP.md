@@ -153,7 +153,7 @@
 
 **Status:** Completed on 2026-06-24. Phase 90 improved validator ergonomics (`--help`, `--report-path`, `--top`), added warning breakdown summaries, regenerated planning evidence for `v0.0.30`, and completed one bounded duplicate-copy cleanup batch. The milestone closed with `validate:translation-corpus` PASS at `307` warning-only namespace issues and `validate:merge-chain-consistency` PASS at `15241` warning-only overlap findings, both still at `0` hard-fail counts. Post-closure follow-up cleanups reduced namespace warnings to `0`, eliminated all `missing_only` namespace drift, reduced merge-chain overlap warnings to `0`, and preserved `0` hard-fail counts.
 
-## Active Milestone: v0.0.31 TDK Compliance Warning Signal Reduction
+## Archived Milestone: v0.0.31 TDK Compliance Warning Signal Reduction
 
 **Goal:** Turn `validate:tdk-integrity` from a flat warning dump into a readable release-health signal, then prove the workflow with a bounded top-overrun metadata cleanup batch.
 
@@ -172,3 +172,24 @@
 - Avoid whole-catalog rewriting; use a small top-overrun batch to validate the cleanup loop.
 
 **Status:** Completed on 2026-06-27; ready to select the next milestone. `validate:tdk-integrity` now supports `--help`, `--report-path` / `--json-out`, and `--top`; writes complete JSON reports; and prints summarized warning evidence. Focused tests pass (`7/7`). The fresh baseline was `0` errors / `2802` warnings, and the top-10 cleanup reduced it to `0` errors / `2792` warnings while keeping edited root/base metadata synchronized. Closeout verification kept `validate:tdk-drift`, `validate:translation-corpus`, and `validate:merge-chain-consistency` green.
+
+## Active Milestone: v0.0.32 TDK Cleanup Batch Planner
+
+**Goal:** Turn the remaining TDK warning backlog into a reviewable cleanup queue with ranked candidates, source-layer evidence, and scoped export controls.
+
+**Requirements:** [.planning/milestones/v0.0.32-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.32-REQUIREMENTS.md)
+
+**Audit:** [.planning/milestones/v0.0.32-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.32-MILESTONE-AUDIT.md)
+
+**Phase plan:**
+
+- [x] **Phase 92** - TDK Cleanup Batch Planner
+
+**Design notes:**
+
+- Build on the v0.0.31 report model instead of creating a separate scanner.
+- Keep ordinary `validate:tdk-integrity` pass/fail behavior unchanged.
+- Export candidates for human review; do not mass-edit localized metadata copy in this milestone.
+- Include root/base source-layer status so follow-up batches know whether one or both legacy metadata layers need synchronized edits.
+
+**Status:** Completed locally on 2026-06-27; PR integration pending. `validate:tdk-integrity` now supports optional cleanup candidate exports via `--candidates-path`, `--candidate-top`, `--candidate-locales`, `--candidate-fields`, and `--candidate-directions`. Focused tests pass (`11/11`), traceability maps `6/6` requirements, `qa:seo-governance` passes, and `npm run check` passes with only existing hints. The fresh candidate baseline is `0` errors / `2792` warnings, and the top-20 overlong `seo_description` export includes rank, length bounds, overrun size, current value evidence, file paths, and source-layer sync status.
