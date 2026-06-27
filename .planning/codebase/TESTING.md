@@ -514,6 +514,34 @@ Interpretation:
   `fr/small-text-generator`, `pt/tree-chart-generator`,
   `pt/shoe-size-converter`, and `pt/financial-forecast-calculator`.
 
+## TDK Cleanup Batch Evidence (v0.0.37)
+
+The fifth candidate-driven cleanup batch trimmed exactly 10 synchronized
+`root_base_match` overlong `seo_description` entries in `es`, `fr`, and `pt`.
+
+After-cleanup command:
+
+```bash
+npm run validate:tdk-integrity -- --top 10 --report-path .planning/research/reports/tdk-integrity-v0.0.37-final.json --candidates-path .planning/research/reports/tdk-cleanup-candidates-v0.0.37-final-top30.json --candidate-top 30 --candidate-fields seo_description --candidate-directions long
+```
+
+Current result (2026-06-27):
+
+- PASS
+- `0` hard errors
+- `2742` warning-only findings, down from `2752`
+- `seo_description=2300`, down from `2310`
+- `long=2736`, down from `2746`
+- focused root/base sync check passed for all 10 edited pairs
+
+Interpretation:
+
+- The candidate-export workflow continues to support small, auditable metadata
+  cleanup batches.
+- The next largest Latin-script candidates include `es/git-tag-manager`,
+  `es/sql-query-optimizer`, `fr/json-to-protobuf-converter`,
+  `fr/reading-time-calculator`, and `pt/css-to-tailwind`.
+
 ## Latest Verification Snapshot (2026-06-24)
 
 - **`npx vitest run src/lib/tool-cluster-factory.test.ts scripts/validation/tool-page-render-contract.test.ts`**: 2 files / 26 tests / PASS
