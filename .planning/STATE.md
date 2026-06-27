@@ -1,10 +1,10 @@
 ---
 gsd_state_version: 1.0
-milestone: v0.0.35
-milestone_name: TDK Cleanup Batch Three
+milestone: v0.0.36
+milestone_name: TDK Cleanup Batch Four
 status: Complete
-stopped_at: v0.0.35 implemented locally; PR integration pending
-last_updated: "2026-06-27T07:42:00.000Z"
+stopped_at: v0.0.36 implemented locally; PR integration pending
+last_updated: "2026-06-27T07:25:19.000Z"
 last_activity: 2026-06-27
 progress:
   total_phases: 1
@@ -20,14 +20,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-06-20)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** v0.0.35 is implemented locally. The third bounded top-10 synchronized TDK metadata cleanup batch reduced warning-only findings from `2772` to `2762`.
+**Current focus:** v0.0.36 is implemented locally. The fourth bounded top-10 synchronized TDK metadata cleanup batch reduced warning-only findings from `2762` to `2752`.
 **Frontend safety:** No user-facing surface may expose internal reasoning traces, hidden prompts, scratchpads, handoff notes, or raw planning notes.
 
 ## Current Position
 
-Phase: 95 COMPLETE
-Status: Phase 95 is complete locally and release-health verification passed. Hard TDK errors remain clear at `0`; warning-only findings dropped from `2772` to `2762`; all 10 edited root/base `seo_description` pairs remain synchronized and within bounds.
-Last activity: 2026-06-27 — v0.0.35 trimmed the selected candidate JSON rank `1` through `10` `root_base_match` overlong `seo_description` candidates in `es`, `fr`, and `pt`. Focused sync verification passed for all 10 pairs. `validate:tdk-integrity -- --top 10 --report-path .planning/research/reports/tdk-integrity-v0.0.35-final.json --candidates-path .planning/research/reports/tdk-cleanup-candidates-v0.0.35-final-top30.json --candidate-top 30 --candidate-fields seo_description --candidate-directions long` passed with `0` errors and `2762` warnings.
+Phase: 96 COMPLETE
+Status: Phase 96 is complete locally and release-health verification passed. Hard TDK errors remain clear at `0`; warning-only findings dropped from `2762` to `2752`; all 10 edited root/base `seo_description` pairs remain synchronized and within bounds.
+Last activity: 2026-06-27 — v0.0.36 trimmed the selected candidate JSON rank `1` through `10` `root_base_match` overlong `seo_description` candidates in `es`, `fr`, and `pt`. Focused sync verification passed for all 10 pairs. `validate:tdk-integrity -- --top 10 --report-path .planning/research/reports/tdk-integrity-v0.0.36-final.json --candidates-path .planning/research/reports/tdk-cleanup-candidates-v0.0.36-final-top30.json --candidate-top 30 --candidate-fields seo_description --candidate-directions long` passed with `0` errors and `2752` warnings.
 
 ## Milestone Context
 
@@ -48,11 +48,13 @@ Last activity: 2026-06-27 — v0.0.35 trimmed the selected candidate JSON rank `
 | 92 | TDK Cleanup Batch Planner | **Complete** |
 | 93 | TDK Cleanup Batch One | **Complete** |
 | 94 | TDK Cleanup Batch Two | **Complete** |
-| 95 | TDK Cleanup Batch Three | **Complete / Pending PR** |
+| 95 | TDK Cleanup Batch Three | **Complete / Merged** |
+| 96 | TDK Cleanup Batch Four | **Complete / Pending PR** |
 
 ## Accumulated Context
 
-- 2026-06-27 v0.0.35 implemented locally. Fresh candidate baseline: `npm run validate:tdk-integrity -- --top 10 --report-path .planning/research/reports/tdk-integrity-v0.0.35-candidate-baseline.json --candidates-path .planning/research/reports/tdk-cleanup-candidates-v0.0.35-top30.json --candidate-top 30 --candidate-fields seo_description --candidate-directions long` passed with `0` errors, `2772` warnings, and `30` cleanup candidates. Candidate JSON ranks `1` through `10` (`es/code-duplication-finder`, `es/swagger-to-code-generator`, `es/gradient-generator`, `es/image-resizer`, `fr/invoice-template-generator`, `fr/meeting-minutes-generator`, `pt/performance-profiler`, `pt/base58`, `pt/project-risk-analyzer`, and `es/json-to-protobuf-converter`) were edited in synchronized root/base layers. Focused sync check passed for all 10 pairs; `validate:tdk-integrity` after cleanup passed with `0` errors and `2762` warnings (`-10`).
+- 2026-06-27 v0.0.36 implemented locally. Fresh candidate baseline: `npm run validate:tdk-integrity -- --top 10 --report-path .planning/research/reports/tdk-integrity-v0.0.36-candidate-baseline.json --candidates-path .planning/research/reports/tdk-cleanup-candidates-v0.0.36-top30.json --candidate-top 30 --candidate-fields seo_description --candidate-directions long` passed with `0` errors, `2762` warnings, and `30` cleanup candidates. Candidate JSON ranks `1` through `10` (`es/typescript-playground`, `es/unit-price-calculator`, `fr/image-flip-rotate`, `fr/social-media-size-guide`, `fr/project-risk-analyzer`, `pt/base64-image-converter`, `es/concrete-calculator`, `es/http-status-code-reference`, `es/calendar-availability-finder`, and `es/paraphrase-tool`) were edited in synchronized root/base layers. Focused sync check passed for all 10 pairs; `validate:tdk-integrity` after cleanup passed with `0` errors and `2752` warnings (`-10`).
+- 2026-06-27 v0.0.35 completed and merged. Fresh candidate baseline: `npm run validate:tdk-integrity -- --top 10 --report-path .planning/research/reports/tdk-integrity-v0.0.35-candidate-baseline.json --candidates-path .planning/research/reports/tdk-cleanup-candidates-v0.0.35-top30.json --candidate-top 30 --candidate-fields seo_description --candidate-directions long` passed with `0` errors, `2772` warnings, and `30` cleanup candidates. Candidate JSON ranks `1` through `10` (`es/code-duplication-finder`, `es/swagger-to-code-generator`, `es/gradient-generator`, `es/image-resizer`, `fr/invoice-template-generator`, `fr/meeting-minutes-generator`, `pt/performance-profiler`, `pt/base58`, `pt/project-risk-analyzer`, and `es/json-to-protobuf-converter`) were edited in synchronized root/base layers. Focused sync check passed for all 10 pairs; `validate:tdk-integrity` after cleanup passed with `0` errors and `2762` warnings (`-10`).
 - 2026-06-27 v0.0.34 merged. Fresh candidate baseline: `npm run validate:tdk-integrity -- --top 10 --report-path .planning/research/reports/tdk-integrity-v0.0.34-candidate-baseline.json --candidates-path .planning/research/reports/tdk-cleanup-candidates-v0.0.34-top30.json --candidate-top 30 --candidate-fields seo_description --candidate-directions long` passed with `0` errors, `2782` warnings, and `30` cleanup candidates. The next 10 `root_base_match` overlong `seo_description` candidates in `es` and `pt` were edited in synchronized root/base layers. Focused sync check passed for all 10 pairs; `validate:tdk-integrity` after cleanup passed with `0` errors and `2772` warnings (`-10`).
 - 2026-06-27 v0.0.33 implemented locally. Fresh candidate baseline: `npm run validate:tdk-integrity -- --top 5 --report-path .planning/research/reports/tdk-integrity-v0.0.33-candidate-baseline.json --candidates-path .planning/research/reports/tdk-cleanup-candidates-v0.0.33-top20.json --candidate-top 20 --candidate-fields seo_description --candidate-directions long` passed with `0` errors, `2792` warnings, and `20` cleanup candidates. The first 10 `root_base_match` overlong `seo_description` candidates in `es`, `fr`, and `pt` were edited in synchronized root/base layers. Focused sync check passed for all 10 pairs; `validate:tdk-integrity` after cleanup passed with `0` errors and `2782` warnings (`-10`).
 - 2026-06-27 Phase 92 implemented and verified locally for v0.0.32. `validate-tdk-integrity.ts` now exports `buildTdkCleanupCandidates`, `buildTdkCleanupCandidateExport`, `buildTdkSourceLayerIndex`, and `writeTdkCleanupCandidateExport`. CLI options now include `--candidates-path`, `--candidate-top`, `--candidate-locales`, `--candidate-fields`, and `--candidate-directions`. Candidate exports are built from existing warning-only length findings, ranked by overrun size, and include current value evidence plus source-layer status (`root_base_match`, `root_base_mismatch`, `root_only`, `base_only`, `missing`) and file paths. Focused tests passed (`15/15` with traceability tests). Fresh baseline remains `0` errors and `2792` warnings; the top-20 overlong `seo_description` export was generated under `.planning/research/reports/` with `20` candidates. `qa:seo-governance` and `npm run check` both passed.
@@ -96,14 +98,14 @@ Last activity: 2026-06-27 — v0.0.35 trimmed the selected candidate JSON rank `
 - 2026-06-09 GSC recovery cohort plan created with exact URL lists, action rules, owner model, and checkpoints.
 - 2026-06-12 GSC URL Inspection checkpoint recorded.
 
-Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20, v0.0.21, v0.0.22, v0.0.23, v0.0.24, v0.0.25, v0.0.26, v0.0.27, v0.0.28, v0.0.29, v0.0.30, v0.0.31, v0.0.32, v0.0.33, and v0.0.34 are complete. v0.0.35 is implemented locally and pending PR integration.
+Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20, v0.0.21, v0.0.22, v0.0.23, v0.0.24, v0.0.25, v0.0.26, v0.0.27, v0.0.28, v0.0.29, v0.0.30, v0.0.31, v0.0.32, v0.0.33, v0.0.34, and v0.0.35 are complete. v0.0.36 is implemented locally and pending PR integration.
 
 ## Next Action
 
-**Create the v0.0.35 PR, wait for checks, merge, and clean up.**
+**Create the v0.0.36 PR, wait for checks, merge, and clean up.**
 
 ## Session
 
-Last Date: 2026-06-27T07:42:00.000Z
-Stopped At: v0.0.35 implemented locally; PR integration pending
+Last Date: 2026-06-27T07:25:19.000Z
+Stopped At: v0.0.36 implemented locally; PR integration pending
 Resume File: .planning/REQUIREMENTS.md
