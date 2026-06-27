@@ -1,10 +1,10 @@
 ---
 gsd_state_version: 1.0
-milestone: v0.0.32
-milestone_name: TDK Cleanup Batch Planner
+milestone: v0.0.33
+milestone_name: TDK Cleanup Batch One
 status: Complete
-stopped_at: v0.0.32 verified locally; ready for PR, checks, merge, and cleanup
-last_updated: "2026-06-27T05:20:00.000Z"
+stopped_at: v0.0.33 implemented locally; release-health verification and PR integration pending
+last_updated: "2026-06-27T05:45:00.000Z"
 last_activity: 2026-06-27
 progress:
   total_phases: 1
@@ -20,14 +20,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-06-20)
 
 **Core value:** Every localized tool page must render the right topic, the right language, and the right UX state without drift.
-**Current focus:** v0.0.32 is implemented locally. TDK compliance warnings now have a reviewable cleanup candidate export so the remaining warning debt can be handled in small, human-reviewable batches.
+**Current focus:** v0.0.33 is implemented locally. The first bounded top-10 synchronized TDK metadata cleanup batch reduced warning-only findings from `2792` to `2782`.
 **Frontend safety:** No user-facing surface may expose internal reasoning traces, hidden prompts, scratchpads, handoff notes, or raw planning notes.
 
 ## Current Position
 
-Phase: 92 COMPLETE
-Status: Phase 92 is complete locally. Hard TDK errors remain clear at `0`, warning count remains `2792`, and `validate:tdk-integrity` can now export ranked cleanup candidates with root/base source-layer evidence.
-Last activity: 2026-06-27 — v0.0.32 candidate planner was implemented and verified locally. Focused TDK integrity + traceability tests passed (`15/15`). `validate:tdk-integrity -- --top 5 --candidates-path ... --candidate-top 20 --candidate-fields seo_description --candidate-directions long` passed with `0` errors, `2792` warnings, and `20` exported cleanup candidates. `planning:traceability` mapped `6/6` requirements to Phase 92 with no gaps, `qa:seo-governance` passed, and `npm run check` passed with `0` errors / `0` warnings / `13` existing hints. PR integration and merge remain pending.
+Phase: 93 COMPLETE
+Status: Phase 93 is complete locally. Hard TDK errors remain clear at `0`; warning-only findings dropped from `2792` to `2782`; all 10 edited root/base `seo_description` pairs remain synchronized and within bounds.
+Last activity: 2026-06-27 — v0.0.33 trimmed the selected top-10 `root_base_match` overlong `seo_description` candidates in `es`, `fr`, and `pt`. Focused sync verification passed for all 10 pairs. `validate:tdk-integrity -- --top 5 --report-path .planning/research/reports/tdk-integrity-v0.0.33-after-top10.json --candidates-path .planning/research/reports/tdk-cleanup-candidates-v0.0.33-after-top20.json --candidate-top 20 --candidate-fields seo_description --candidate-directions long` passed with `0` errors and `2782` warnings.
 
 ## Milestone Context
 
@@ -45,10 +45,12 @@ Last activity: 2026-06-27 — v0.0.32 candidate planner was implemented and veri
 | 89 | Production Metadata Drift Baseline | **Complete** |
 | 90 | Translation Warning Signal Reduction | **Complete** |
 | 91 | TDK Compliance Warning Signal Reduction | **Complete** |
-| 92 | TDK Cleanup Batch Planner | **Complete / Verified / Pending PR** |
+| 92 | TDK Cleanup Batch Planner | **Complete** |
+| 93 | TDK Cleanup Batch One | **Complete / Pending PR** |
 
 ## Accumulated Context
 
+- 2026-06-27 v0.0.33 implemented locally. Fresh candidate baseline: `npm run validate:tdk-integrity -- --top 5 --report-path .planning/research/reports/tdk-integrity-v0.0.33-candidate-baseline.json --candidates-path .planning/research/reports/tdk-cleanup-candidates-v0.0.33-top20.json --candidate-top 20 --candidate-fields seo_description --candidate-directions long` passed with `0` errors, `2792` warnings, and `20` cleanup candidates. The first 10 `root_base_match` overlong `seo_description` candidates in `es`, `fr`, and `pt` were edited in synchronized root/base layers. Focused sync check passed for all 10 pairs; `validate:tdk-integrity` after cleanup passed with `0` errors and `2782` warnings (`-10`).
 - 2026-06-27 Phase 92 implemented and verified locally for v0.0.32. `validate-tdk-integrity.ts` now exports `buildTdkCleanupCandidates`, `buildTdkCleanupCandidateExport`, `buildTdkSourceLayerIndex`, and `writeTdkCleanupCandidateExport`. CLI options now include `--candidates-path`, `--candidate-top`, `--candidate-locales`, `--candidate-fields`, and `--candidate-directions`. Candidate exports are built from existing warning-only length findings, ranked by overrun size, and include current value evidence plus source-layer status (`root_base_match`, `root_base_mismatch`, `root_only`, `base_only`, `missing`) and file paths. Focused tests passed (`15/15` with traceability tests). Fresh baseline remains `0` errors and `2792` warnings; the top-20 overlong `seo_description` export was generated under `.planning/research/reports/` with `20` candidates. `qa:seo-governance` and `npm run check` both passed.
 - 2026-06-27 v0.0.31 completed. `validate-tdk-integrity.ts` now exposes testable validation/report helpers, real CLI help, `--report-path` / `--json-out`, `--top`, summarized warning evidence, and JSON report output. `.gitignore` now unignores the validator and focused test file plus Phase 91 and v0.0.31 archive artifacts. `npx vitest run scripts/validation/validate-tdk-integrity.test.ts` passed `7/7`. Fresh baseline: `npm run validate:tdk-integrity -- --top 5 --report-path .planning/research/reports/tdk-integrity-v0.0.31-baseline.json` passed with `0` errors and `2802` warnings. After trimming the top 10 overlong `seo_description` entries in synchronized root/base metadata layers, `npm run validate:tdk-integrity -- --top 5 --report-path .planning/research/reports/tdk-integrity-v0.0.31-retry.json` passed with `0` errors and `2792` warnings. Closeout checks kept `validate:tdk-drift`, `validate:translation-corpus`, and `validate:merge-chain-consistency` green.
 - 2026-06-24 Phase 90 checkpoint captured. `validate-translation-corpus.ts` and `validate-merge-chain-consistency.ts` now expose real CLI help and scoped output controls plus warning summaries by shape/hotspot. Focused tests passed (`72/72` validator tests; `190/190` when including `src/lib/translations.test.ts` and `src/lib/support-content-fallback.test.ts`). A bounded cleanup removed dead root-layer support copy for `gpa-calculator` and `pace-calculator` in all locales and pruned locale-only `base.json` extras (`remove`, `metric`, `imperial`). Fresh measurements dropped namespace warnings from `325` to `307` and merge overlap warnings from `15301` to `15241`, while keeping `schemaErrors=0`, `coverageGaps=0`, and `resolvedDivergences=0`.
@@ -90,14 +92,14 @@ Last activity: 2026-06-27 — v0.0.32 candidate planner was implemented and veri
 - 2026-06-09 GSC recovery cohort plan created with exact URL lists, action rules, owner model, and checkpoints.
 - 2026-06-12 GSC URL Inspection checkpoint recorded.
 
-Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20, v0.0.21, v0.0.22, v0.0.23, v0.0.24, v0.0.25, v0.0.26, v0.0.27, v0.0.28, v0.0.29, v0.0.30, and v0.0.31 are complete. v0.0.32 is implemented and verified locally, pending PR integration.
+Milestones v0.0.14, v0.0.15, v0.0.16, v0.0.17, v0.0.18, v0.0.19, v0.0.20, v0.0.21, v0.0.22, v0.0.23, v0.0.24, v0.0.25, v0.0.26, v0.0.27, v0.0.28, v0.0.29, v0.0.30, v0.0.31, and v0.0.32 are complete. v0.0.33 is implemented locally and pending PR integration.
 
 ## Next Action
 
-**Create the v0.0.32 PR, wait for checks, merge, and clean up.**
+**Run final v0.0.33 verification, create the PR, wait for checks, merge, and clean up.**
 
 ## Session
 
-Last Date: 2026-06-27T05:20:00.000Z
-Stopped At: v0.0.32 verified locally; PR integration pending
+Last Date: 2026-06-27T05:45:00.000Z
+Stopped At: v0.0.33 implemented locally; final verification and PR integration pending
 Resume File: .planning/REQUIREMENTS.md

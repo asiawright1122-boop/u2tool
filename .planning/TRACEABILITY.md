@@ -1,7 +1,7 @@
 # Milestone Traceability Report
 
-Generated: 2026-06-27T05:12:30.471Z
-Milestone: v0.0.32 TDK Cleanup Batch Planner
+Generated: 2026-06-27T05:40:37.523Z
+Milestone: v0.0.33 TDK Cleanup Batch One
 
 ## Summary
 
@@ -14,18 +14,18 @@ Milestone: v0.0.32 TDK Cleanup Batch Planner
 
 | Requirement | Area | Status | Roadmap | Mapped Phases | Evidence |
 | --- | --- | --- | --- | --- | --- |
-| TDK-BP-01 | TDK Cleanup Batch Planner (TDK-BP) | complete | complete | Phase 92 | [92-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/92-tdk-cleanup-batch-planner/92-BASELINE.md)<br>[v0.0.32-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.32-MILESTONE-AUDIT.md) |
-| TDK-BP-02 | TDK Cleanup Batch Planner (TDK-BP) | complete | complete | Phase 92 | [92-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/92-tdk-cleanup-batch-planner/92-BASELINE.md)<br>[v0.0.32-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.32-MILESTONE-AUDIT.md) |
-| TDK-BP-03 | TDK Cleanup Batch Planner (TDK-BP) | complete | complete | Phase 92 | [92-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/92-tdk-cleanup-batch-planner/92-BASELINE.md)<br>[v0.0.32-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.32-MILESTONE-AUDIT.md) |
-| TDK-BP-04 | TDK Cleanup Batch Planner (TDK-BP) | complete | complete | Phase 92 | [92-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/92-tdk-cleanup-batch-planner/92-BASELINE.md)<br>[v0.0.32-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.32-MILESTONE-AUDIT.md) |
-| TDK-BP-05 | TDK Cleanup Batch Planner (TDK-BP) | complete | complete | Phase 92 | [92-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/92-tdk-cleanup-batch-planner/92-BASELINE.md)<br>[v0.0.32-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.32-MILESTONE-AUDIT.md) |
-| TDK-BP-06 | TDK Cleanup Batch Planner (TDK-BP) | complete | complete | Phase 92 | [92-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/92-tdk-cleanup-batch-planner/92-BASELINE.md)<br>[v0.0.32-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.32-MILESTONE-AUDIT.md) |
+| TDK-CB-01 | TDK Cleanup Batch One (TDK-CB) | complete | complete | Phase 93 | [93-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/93-tdk-cleanup-batch-one/93-BASELINE.md)<br>[v0.0.33-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.33-MILESTONE-AUDIT.md) |
+| TDK-CB-02 | TDK Cleanup Batch One (TDK-CB) | complete | complete | Phase 93 | [93-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/93-tdk-cleanup-batch-one/93-BASELINE.md)<br>[v0.0.33-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.33-MILESTONE-AUDIT.md) |
+| TDK-CB-03 | TDK Cleanup Batch One (TDK-CB) | complete | complete | Phase 93 | [93-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/93-tdk-cleanup-batch-one/93-BASELINE.md)<br>[v0.0.33-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.33-MILESTONE-AUDIT.md) |
+| TDK-CB-04 | TDK Cleanup Batch One (TDK-CB) | complete | complete | Phase 93 | [93-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/93-tdk-cleanup-batch-one/93-BASELINE.md)<br>[v0.0.33-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.33-MILESTONE-AUDIT.md) |
+| TDK-CB-05 | TDK Cleanup Batch One (TDK-CB) | complete | complete | Phase 93 | [93-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/93-tdk-cleanup-batch-one/93-BASELINE.md)<br>[v0.0.33-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.33-MILESTONE-AUDIT.md) |
+| TDK-CB-06 | TDK Cleanup Batch One (TDK-CB) | complete | complete | Phase 93 | [93-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/93-tdk-cleanup-batch-one/93-BASELINE.md)<br>[v0.0.33-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.33-MILESTONE-AUDIT.md) |
 
 ## Phase Coverage
 
 | Phase | Requirements | Plans | Summaries |
 | --- | --- | --- | --- |
-| Phase 92 TDK Cleanup Batch Planner | TDK-BP-01, TDK-BP-02, TDK-BP-03, TDK-BP-04, TDK-BP-05, TDK-BP-06 | x 92 | [92-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/92-tdk-cleanup-batch-planner/92-BASELINE.md) |
+| Phase 93 TDK Cleanup Batch One | TDK-CB-01, TDK-CB-02, TDK-CB-03, TDK-CB-04, TDK-CB-05, TDK-CB-06 | x 93 | [93-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/93-tdk-cleanup-batch-one/93-BASELINE.md) |
 
 ## Gaps
 
