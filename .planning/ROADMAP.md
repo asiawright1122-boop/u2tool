@@ -344,7 +344,7 @@
 
 **Status:** Completed and merged on 2026-06-27. The selected 10 root/base `seo_description` pairs were trimmed and kept synchronized. `validate:tdk-integrity` reports `0` errors / `2722` warnings, down from `2732`, with `seo_description` warnings reduced from `2290` to `2280`.
 
-## Active Milestone: v0.0.40 TDK Cleanup Batch Eight
+## Archived Milestone: v0.0.40 TDK Cleanup Batch Eight
 
 **Goal:** Use the remaining candidate export queue to trim the eighth bounded set of 10 synchronized overlong `seo_description` entries.
 
@@ -364,4 +364,26 @@
 - Skip the three intervening high-overrun `ru` entries for a later review-sensitive batch.
 - Verify a concrete warning-count reduction while preserving `0` hard errors.
 
-**Status:** Completed locally on 2026-06-27; final release-health verification and PR integration pending. The selected 10 root/base `seo_description` pairs were trimmed and kept synchronized. `validate:tdk-integrity` now reports `0` errors / `2712` warnings, down from `2722`, with `seo_description` warnings reduced from `2280` to `2270`.
+**Status:** Completed, pushed, and deployed on 2026-06-28 after fixing the Cloudflare `GSC_REDIRECTS` KV binding. The selected 10 root/base `seo_description` pairs were trimmed and kept synchronized. `validate:tdk-integrity` reports `0` errors / `2712` warnings, down from `2722`, with `seo_description` warnings reduced from `2280` to `2270`.
+
+## Active Milestone: v0.0.41 TDK Cleanup Batch Nine
+
+**Goal:** Use the remaining candidate export queue to trim the ninth bounded set of 10 synchronized overlong `seo_description` entries.
+
+**Requirements:** [.planning/milestones/v0.0.41-REQUIREMENTS.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.41-REQUIREMENTS.md)
+
+**Audit:** [.planning/milestones/v0.0.41-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.41-MILESTONE-AUDIT.md)
+
+**Phase plan:**
+
+- [x] **Phase 101** - TDK Cleanup Batch Nine
+
+**Design notes:**
+
+- Edit only the selected 10 `root_base_match` candidates from the fresh v0.0.41 export.
+- Keep root/base metadata synchronized for every edited pair.
+- Stay with low-risk Latin-script `es`, `fr`, and `pt` entries in this batch.
+- Skip the four intervening high-overrun `ru` entries for a later review-sensitive batch.
+- Verify a concrete warning-count reduction while preserving `0` hard errors.
+
+**Status:** Completed locally on 2026-06-28; final release-health verification and integration pending. The selected 10 root/base `seo_description` pairs were trimmed and kept synchronized. `validate:tdk-integrity` now reports `0` errors / `2702` warnings, down from `2712`, with `seo_description` warnings reduced from `2270` to `2260`.

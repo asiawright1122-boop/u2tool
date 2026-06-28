@@ -1,7 +1,7 @@
 # Milestone Traceability Report
 
-Generated: 2026-06-27T10:07:28.129Z
-Milestone: v0.0.40 TDK Cleanup Batch Eight
+Generated: 2026-06-28T04:33:58.430Z
+Milestone: v0.0.41 TDK Cleanup Batch Nine
 
 ## Summary
 
@@ -14,18 +14,18 @@ Milestone: v0.0.40 TDK Cleanup Batch Eight
 
 | Requirement | Area | Status | Roadmap | Mapped Phases | Evidence |
 | --- | --- | --- | --- | --- | --- |
-| TDK-CBEI-01 | TDK Cleanup Batch Eight (TDK-CBEI) | complete | complete | Phase 100 | [100-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/100-tdk-cleanup-batch-eight/100-BASELINE.md)<br>[v0.0.40-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.40-MILESTONE-AUDIT.md) |
-| TDK-CBEI-02 | TDK Cleanup Batch Eight (TDK-CBEI) | complete | complete | Phase 100 | [100-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/100-tdk-cleanup-batch-eight/100-BASELINE.md)<br>[v0.0.40-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.40-MILESTONE-AUDIT.md) |
-| TDK-CBEI-03 | TDK Cleanup Batch Eight (TDK-CBEI) | complete | complete | Phase 100 | [100-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/100-tdk-cleanup-batch-eight/100-BASELINE.md)<br>[v0.0.40-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.40-MILESTONE-AUDIT.md) |
-| TDK-CBEI-04 | TDK Cleanup Batch Eight (TDK-CBEI) | complete | complete | Phase 100 | [100-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/100-tdk-cleanup-batch-eight/100-BASELINE.md)<br>[v0.0.40-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.40-MILESTONE-AUDIT.md) |
-| TDK-CBEI-05 | TDK Cleanup Batch Eight (TDK-CBEI) | complete | complete | Phase 100 | [100-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/100-tdk-cleanup-batch-eight/100-BASELINE.md)<br>[v0.0.40-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.40-MILESTONE-AUDIT.md) |
-| TDK-CBEI-06 | TDK Cleanup Batch Eight (TDK-CBEI) | complete | complete | Phase 100 | [100-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/100-tdk-cleanup-batch-eight/100-BASELINE.md)<br>[v0.0.40-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.40-MILESTONE-AUDIT.md) |
+| TDK-CBNI-01 | TDK Cleanup Batch Nine (TDK-CBNI) | complete | complete | Phase 101 | [101-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/101-tdk-cleanup-batch-nine/101-BASELINE.md)<br>[v0.0.41-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.41-MILESTONE-AUDIT.md) |
+| TDK-CBNI-02 | TDK Cleanup Batch Nine (TDK-CBNI) | complete | complete | Phase 101 | [101-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/101-tdk-cleanup-batch-nine/101-BASELINE.md)<br>[v0.0.41-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.41-MILESTONE-AUDIT.md) |
+| TDK-CBNI-03 | TDK Cleanup Batch Nine (TDK-CBNI) | complete | complete | Phase 101 | [101-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/101-tdk-cleanup-batch-nine/101-BASELINE.md)<br>[v0.0.41-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.41-MILESTONE-AUDIT.md) |
+| TDK-CBNI-04 | TDK Cleanup Batch Nine (TDK-CBNI) | complete | complete | Phase 101 | [101-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/101-tdk-cleanup-batch-nine/101-BASELINE.md)<br>[v0.0.41-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.41-MILESTONE-AUDIT.md) |
+| TDK-CBNI-05 | TDK Cleanup Batch Nine (TDK-CBNI) | complete | complete | Phase 101 | [101-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/101-tdk-cleanup-batch-nine/101-BASELINE.md)<br>[v0.0.41-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.41-MILESTONE-AUDIT.md) |
+| TDK-CBNI-06 | TDK Cleanup Batch Nine (TDK-CBNI) | complete | complete | Phase 101 | [101-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/101-tdk-cleanup-batch-nine/101-BASELINE.md)<br>[v0.0.41-MILESTONE-AUDIT.md](/Users/kaka/Dev/u2tool/.planning/milestones/v0.0.41-MILESTONE-AUDIT.md) |
 
 ## Phase Coverage
 
 | Phase | Requirements | Plans | Summaries |
 | --- | --- | --- | --- |
-| Phase 100 TDK Cleanup Batch Eight | TDK-CBEI-01, TDK-CBEI-02, TDK-CBEI-03, TDK-CBEI-04, TDK-CBEI-05, TDK-CBEI-06 | x 100 | [100-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/100-tdk-cleanup-batch-eight/100-BASELINE.md) |
+| Phase 101 TDK Cleanup Batch Nine | TDK-CBNI-01, TDK-CBNI-02, TDK-CBNI-03, TDK-CBNI-04, TDK-CBNI-05, TDK-CBNI-06 | x 101 | [101-BASELINE.md](/Users/kaka/Dev/u2tool/.planning/phases/101-tdk-cleanup-batch-nine/101-BASELINE.md) |
 
 ## Gaps
 
