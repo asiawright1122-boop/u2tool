@@ -93,6 +93,8 @@ import {
   extractJsonLdBlocks,
 } from '../../src/lib/seo-probe';
 
+import { resolveMetaDescription } from '../../src/lib/seo';
+
 const mockedBuildProbeHeaders = vi.mocked(buildProbeHeaders);
 
 const mockedLoadToolPageMessages = vi.mocked(loadToolPageMessages);
@@ -102,6 +104,51 @@ const mockedGetOgTitle = vi.mocked(getOgTitle);
 const mockedGetTwitterTitle = vi.mocked(getTwitterTitle);
 const mockedGetKeywords = vi.mocked(getKeywords);
 const mockedExtractJsonLdBlocks = vi.mocked(extractJsonLdBlocks);
+
+function resolvedTestDescription(
+  description: string | undefined,
+  locale = 'en',
+  title = 'Test Tool'
+): string {
+  return resolveMetaDescription({ description, locale, title });
+}
+
+function localeFromRenderedUrl(url: string): string {
+  return new URL(url).pathname.split('/').filter(Boolean)[0] || 'en';
+}
+
+function mockMatchingRenderedDescription(
+  description = 'Test SEO description.',
+  title = 'Test Tool'
+): void {
+  mockedFetchHtmlWithRetry.mockImplementation(async (url: string) => {
+    const locale = localeFromRenderedUrl(url);
+    const safeDescription = resolvedTestDescription(description, locale, title);
+
+    return {
+      response: { status: 200, ok: true } as Response,
+      html: '<head><title>Test SEO Title | U2Tool</title>' +
+        '<meta name="description" content="' + safeDescription + '"></head>',
+    };
+  });
+  mockedGetTagContent.mockImplementation((html: string, tag: string) => {
+    if (tag === 'title') return 'Test SEO Title | U2Tool';
+    if (tag === 'description') {
+      return html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? '';
+    }
+    return '';
+  });
+  mockedGetOgTitle.mockReturnValue('Test SEO Title | U2Tool');
+  mockedGetTwitterTitle.mockReturnValue('Test SEO Title | U2Tool');
+  mockedGetKeywords.mockReturnValue('');
+  mockedExtractJsonLdBlocks.mockImplementation((html: string) => [
+    {
+      '@type': 'SoftwareApplication',
+      name: 'Test Tool',
+      description: html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? '',
+    },
+  ]);
+}
 
 beforeEach(() => {
   vi.clearAllMocks();
@@ -126,7 +173,11 @@ describe('resolveExpectedTdk', () => {
     expect(result.slug).toBe('my-tool');
     expect(result.expectedSeoTitle).toBe('My Tool - Best Online');
     expect(result.expectedBrandedTitle).toBe('My Tool - Best Online | U2Tool');
-    expect(result.expectedDescription).toBe('A great tool for your needs.');
+    expect(result.expectedDescription).toBe(resolveMetaDescription({
+      description: 'A great tool for your needs.',
+      locale: 'en',
+      title: 'My Tool',
+    }));
     expect(result.sourceSeoTitle).toBe('My Tool - Best Online');
     expect(result.sourceName).toBe('My Tool');
     expect(result.sourceSeoDescription).toBe('A great tool for your needs.');
@@ -157,7 +208,11 @@ describe('resolveExpectedTdk', () => {
 
     const result = await resolveExpectedTdk('en', 'my-tool');
 
-    expect(result.expectedDescription).toBe('Fallback description text.');
+    expect(result.expectedDescription).toBe(resolveMetaDescription({
+      description: 'Fallback description text.',
+      locale: 'en',
+      title: 'My Tool',
+    }));
     expect(result.sourceSeoDescription).toBeUndefined();
     expect(result.sourceDescription).toBe('Fallback description text.');
   });
@@ -175,14 +230,17 @@ describe('resolveExpectedTdk', () => {
     expect(result.sourceName).toBeUndefined();
   });
 
-  it('falls back to empty string when all description fields are missing', async () => {
+  it('falls back to a safe title-based description when all description fields are missing', async () => {
     mockedLoadToolPageMessages.mockResolvedValue({
       seo_title: 'Just Title',
     });
 
     const result = await resolveExpectedTdk('en', 'no-desc-tool');
 
-    expect(result.expectedDescription).toBe('');
+    expect(result.expectedDescription).toBe(resolveMetaDescription({
+      locale: 'en',
+      title: 'no-desc-tool',
+    }));
     expect(result.sourceSeoDescription).toBeUndefined();
     expect(result.sourceDescription).toBeUndefined();
   });
@@ -211,7 +269,11 @@ describe('resolveExpectedTdk', () => {
 
     expect(result.expectedSeoTitle).toBe('無料JSON格式化ツール');
     expect(result.expectedBrandedTitle).toBe('無料JSON格式化ツール | U2Tool');
-    expect(result.expectedDescription).toBe('ブラウザでJSONを整形・検証する無料ツール。');
+    expect(result.expectedDescription).toBe(resolveMetaDescription({
+      description: 'ブラウザでJSONを整形・検証する無料ツール。',
+      locale: 'ja',
+      title: 'JSONフォーマッター',
+    }));
   });
 
   it('handles empty-string seo_title (treated as falsy, falls to name)', async () => {
@@ -477,7 +539,10 @@ describe('compareTdkDescription — all 4 labels (no BRAND_DRIFT)', () => {
       sourceSeoDescription: 'Format JSON online.',
       sourceDescription: 'JSON Formatter tool.', // distinct fallback target
     });
-    const result = compareTdkDescription(expected, mkRendered('x', 'JSON Formatter tool.'));
+    const result = compareTdkDescription(
+      expected,
+      mkRendered('x', resolvedTestDescription('JSON Formatter tool.', 'en', 'JSON Formatter'))
+    );
     expect(result.driftLabel).toBe('FALLBACK_LEAK');
   });
 
@@ -566,19 +631,24 @@ describe('runOfflineSelfCheck (via main)', () => {
     expect(all.length).toBe(9);
     for (const tdk of all) {
       expect(tdk.expectedBrandedTitle).toBe('Test SEO Title | U2Tool');
-      expect(tdk.expectedDescription).toBe('Test SEO description for the tool.');
+      expect(tdk.expectedDescription).toBe(resolveMetaDescription({
+        description: 'Test SEO description for the tool.',
+        locale: tdk.locale,
+        title: 'Test Tool',
+      }));
     }
   });
 
-  it('flags empty branded title (self-check would catch this)', async () => {
+  it('resolves missing descriptions to safe title-based fallback copy', async () => {
     mockedLoadToolPageMessages.mockResolvedValue({});
 
     const result = await resolveExpectedTdk('en', 'empty-everything');
 
-    // Falls to slug for title, empty string for description
     expect(result.expectedBrandedTitle).toBe('empty-everything | U2Tool');
-    expect(result.expectedDescription).toBe('');
-    // The self-check would flag the empty description
+    expect(result.expectedDescription).toBe(resolveMetaDescription({
+      locale: 'en',
+      title: 'empty-everything',
+    }));
   });
 
   it('flags TODO placeholder in title (self-check would catch this)', async () => {
@@ -798,24 +868,7 @@ describe('runOnlineDriftCheck (mocked network)', () => {
     });
 
     // Mock rendered HTML that matches expected (all MATCH)
-    mockedFetchHtmlWithRetry.mockResolvedValue({
-      response: { status: 200, ok: true } as Response,
-      html: '<head><title>Test SEO Title | U2Tool</title>' +
-        '<meta name="description" content="Test SEO description."></head>',
-    });
-    mockedGetTagContent
-      .mockImplementation((html: string, tag: string) => {
-        if (tag === 'title') return 'Test SEO Title | U2Tool';
-        if (tag === 'description') return 'Test SEO description.';
-        return '';
-      });
-    // Phase 81 metadata extractors — all aligned with expected (MATCH)
-    mockedGetOgTitle.mockReturnValue('Test SEO Title | U2Tool');
-    mockedGetTwitterTitle.mockReturnValue('Test SEO Title | U2Tool');
-    mockedGetKeywords.mockReturnValue(''); // no source keywords → field skipped
-    mockedExtractJsonLdBlocks.mockReturnValue([
-      { '@type': 'SoftwareApplication', name: 'Test Tool', description: 'Test SEO description.' },
-    ]);
+    mockMatchingRenderedDescription();
 
     const run = await (await import('./validate-tdk-drift')).runOnlineDriftCheck({
       baseUrl: 'https://test.example.com',
@@ -850,6 +903,11 @@ describe('runOnlineDriftCheck (mocked network)', () => {
       return { seo_title: '本地化标题', seo_description: '本地化描述', name: '本地化名称', description: '本地化描述' };
     });
 
+    const safeEnglishDescription = resolvedTestDescription('English desc.', 'en', 'English');
+    const safeLocalizedDescription = resolvedTestDescription('本地化描述', 'zh', '本地化名称');
+
+    expect(safeLocalizedDescription).not.toBe(safeEnglishDescription);
+
     // Rendered page returns English content for ALL locales (simulating untranslated leak)
     mockedFetchHtmlWithRetry.mockResolvedValue({
       response: { status: 200, ok: true } as Response,
@@ -858,7 +916,7 @@ describe('runOnlineDriftCheck (mocked network)', () => {
     mockedGetTagContent
       .mockImplementation((_html: string, tag: string) => {
         if (tag === 'title') return 'English Title | U2Tool';
-        if (tag === 'description') return 'English desc.';
+        if (tag === 'description') return safeEnglishDescription;
         return '';
       });
     // Phase 81 metadata extractors also return English content for ALL locales (leak)
@@ -866,7 +924,7 @@ describe('runOnlineDriftCheck (mocked network)', () => {
     mockedGetTwitterTitle.mockReturnValue('English Title | U2Tool');
     mockedGetKeywords.mockReturnValue('');
     mockedExtractJsonLdBlocks.mockReturnValue([
-      { '@type': 'SoftwareApplication', name: 'English', description: 'English desc.' },
+      { '@type': 'SoftwareApplication', name: 'English', description: safeEnglishDescription },
     ]);
 
     const run = await (await import('./validate-tdk-drift')).runOnlineDriftCheck({
@@ -894,21 +952,8 @@ describe('runOnlineDriftCheck (mocked network)', () => {
       name: 'Test Tool',
       description: 'Test desc.',
     });
-    mockedFetchHtmlWithRetry.mockResolvedValue({
-      response: { status: 200, text: async () => '' } as Response,
-      html: '<title>Test SEO Title | U2Tool</title><meta name="description" content="Test SEO description.">',
-    });
-    mockedGetTagContent.mockImplementation((html: string, tag: string) => {
-      if (tag === 'title') return 'Test SEO Title | U2Tool';
-      if (tag === 'description') return 'Test SEO description.';
-      return '';
-    });
-    mockedGetOgTitle.mockReturnValue('Test SEO Title | U2Tool');
-    mockedGetTwitterTitle.mockReturnValue('Test SEO Title | U2Tool');
-    mockedGetKeywords.mockReturnValue('');
-    mockedExtractJsonLdBlocks.mockReturnValue([
-      { '@type': 'SoftwareApplication', name: 'Test Tool', description: 'Test SEO description.' },
-    ]);
+
+    mockMatchingRenderedDescription();
 
     const run = await (await import('./validate-tdk-drift')).runOnlineDriftCheck({
       baseUrl: 'https://www.u2tool.com',

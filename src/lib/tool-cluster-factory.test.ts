@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { tools } from '@/config/tools';
+import { META_DESCRIPTION_MIN_LENGTH } from './seo';
 
 import {
   buildClusterCollectionData,
@@ -247,5 +248,20 @@ describe('tool-cluster-factory structured-data builders', () => {
     expect(data.inLanguage).toBe('en');
     expect(data.numberOfItems).toBe(firstTwoSlugs.length + nextTwoSlugs.length);
     expect(data.hasPart.map((part) => part.name)).toEqual(['Group A', 'Group B']);
+  });
+
+  it('buildClusterCollectionData expands short localized SEO descriptions', () => {
+    const data = buildClusterCollectionData(
+      'https://example.com',
+      'zh',
+      groups,
+      clusterPath,
+      copyByLocale.zh
+    ) as {
+      description: string;
+    };
+
+    expect([...data.description].length).toBeGreaterThanOrEqual(META_DESCRIPTION_MIN_LENGTH);
+    expect(data.description).toContain(copyByLocale.zh.seoDescription);
   });
 });

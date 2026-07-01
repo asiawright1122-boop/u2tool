@@ -22,7 +22,7 @@ import {
   buildMobileNavMessages,
 } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
-import { buildLocalizedPageUrl } from '@/lib/seo';
+import { buildLocalizedPageUrl, resolveMetaDescription } from '@/lib/seo';
 
 export const prerender = false;
 
@@ -46,7 +46,11 @@ const discoveryTranslations = buildDiscoveryTranslations(baseMessages);
 const mobileNavMessages = buildMobileNavMessages(navMessages);
 const BASE_URL = getPublicSiteUrl();
 const aiPageTitle = aiMessages.pageTitle || 'AI Tool Discovery';
-const aiPageDescription = aiMessages.pageDescription || 'Describe your intent and find the right existing tool quickly.';
+const aiPageDescription = resolveMetaDescription({
+  description: aiMessages.pageDescription || 'Describe your intent and find the right existing tool quickly.',
+  locale,
+  title: aiPageTitle,
+});
 const toolNames = Object.fromEntries(
   tools.map((tool) => {
     const toolMessage = toolsObj[tool.slug] as Record<string, unknown> | undefined;

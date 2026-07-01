@@ -36,7 +36,7 @@ import process from 'node:process';
 
 import { tools } from '../../src/config/tools/index';
 import { locales, type Locale } from '../../src/lib/i18n';
-import { withBrand } from '../../src/lib/seo';
+import { withBrand, resolveMetaDescription } from '../../src/lib/seo';
 import { loadToolPageMessages } from '../../src/lib/translations';
 import {
   fetchHtmlWithRetry,
@@ -154,7 +154,11 @@ export async function resolveExpectedTdk(
   const toolDescription = (messages.description as string) || '';
   const seoTitle = (messages.seo_title as string) || toolName;
   const brandedSeoTitle = withBrand(seoTitle);
-  const seoDescription = (messages.seo_description as string) || toolDescription;
+  const seoDescription = resolveMetaDescription({
+    description: (messages.seo_description as string) || toolDescription,
+    locale,
+    title: toolName,
+  });
 
   return {
     locale,
@@ -308,6 +312,14 @@ function normalizeForCompare(s: string): string {
   return s.normalize('NFC').trim();
 }
 
+function resolveSafeSourceDescription(expected: ExpectedTdk): string {
+  return normalizeForCompare(resolveMetaDescription({
+    description: expected.sourceDescription ?? '',
+    locale: expected.locale,
+    title: expected.expectedToolName || expected.slug,
+  }));
+}
+
 // ---------------------------------------------------------------------------
 // TDK-03: Drift Comparator
 // ---------------------------------------------------------------------------
@@ -429,7 +441,7 @@ export function compareTdkDescription(
 
   // FALLBACK_LEAK: seo_description exists but rendered falls to description
   if (expected.sourceSeoDescription !== undefined) {
-    const normSourceDesc = normalizeForCompare(expected.sourceDescription ?? '');
+    const normSourceDesc = resolveSafeSourceDescription(expected);
     if (normRendered === normSourceDesc && normSourceDesc !== normDescription) {
       return makeDriftResult(
         expected, 'description', 'FALLBACK_LEAK', normDescription, normRendered,

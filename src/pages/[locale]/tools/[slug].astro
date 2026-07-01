@@ -48,7 +48,7 @@ import type { Locale } from '@/lib/i18n';
 import { loadBaseUiMessages, loadToolPageMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
-import { buildLocalizedPagePath, buildLocalizedPageUrl, getHreflang, withBrand } from '@/lib/seo';
+import { buildLocalizedPagePath, buildLocalizedPageUrl, getHreflang, resolveMetaDescription, withBrand } from '@/lib/seo';
 import { sanitizeHtml } from '@/lib/sanitize';
 import { assessSupportContentTrust } from '@/lib/content-trust';
 import { buildSafeFallbackSupportContent } from '@/lib/support-content-fallback';
@@ -144,7 +144,11 @@ const toolName = (messages.name as string) || tool.slug;
 const toolDescription = (messages.description as string) || '';
 const seoTitle = (messages.seo_title as string) || toolName;
 const brandedSeoTitle = withBrand(seoTitle);
-const seoDescription = (messages.seo_description as string) || toolDescription;
+const seoDescription = resolveMetaDescription({
+  description: (messages.seo_description as string) || toolDescription,
+  locale,
+  title: toolName,
+});
 const rawDetailedDescription = (messages.detailed_description as string) || '';
 const rawUsageSteps = messages.usage_steps as string[] | undefined;
 const rawUsageExamples = messages.usage_examples as string[] | undefined;

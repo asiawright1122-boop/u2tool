@@ -107,7 +107,7 @@ function getToolDescription(slug: string): string {
 
 const BASE_URL = getPublicSiteUrl();
 const schemaLanguage = getHreflang(locale);
-const categorySeo = getCategoryPageSeo(baseMessages, category, categoryName, categoryTools.length);
+const categorySeo = getCategoryPageSeo(baseMessages, category, categoryName, categoryTools.length, locale);
 const pageTitle = categorySeo.title;
 const pageDescription = categorySeo.description;
 const categorySupport = getCategorySupportContent(locale, category);
