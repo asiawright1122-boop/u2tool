@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Le générateur de nombres aléatoires produit des entiers dans une plage que vous définissez. Saisissez une valeur minimale, une valeur maximale et une quantité, puis générez jusqu'à 1000 résultats. L'option Valeurs uniques évite les doublons lorsque la plage contient assez de nombres disponibles, et le bouton Copier place les résultats dans le presse-papiers. L'outil utilise la génération aléatoire du navigateur pour des tirages simples; il ne fournit pas de graine reproductible, de décimales, de UUID ni de nombres cryptographiquement sûrs.",
+  "detailed_description": "Le générateur de nombres aléatoires produit jusqu'à 1000 entiers aléatoires dans une plage que vous définissez. Saisissez une valeur minimale, une valeur maximale et une quantité, puis générez les résultats. L'option Valeurs uniques évite les doublons lorsque la plage contient assez de nombres disponibles, et le bouton Copier place les résultats dans le presse-papiers. L'outil utilise la génération aléatoire du navigateur pour des tirages simples; il ne fournit pas de graine reproductible, de décimales, de UUID ni de nombres cryptographiquement sûrs.",
   "usage_steps": [
     "Entrez la valeur minimale et la valeur maximale de l'intervalle.",
     "Choisissez combien de nombres générer, jusqu'à 1000.",

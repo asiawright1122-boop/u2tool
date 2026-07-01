@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Morse Code Player converts text to Morse code and Morse code back to text in the browser. You can convert text to Morse code, play audio for the dots and dashes with adjustable speed and frequency, display a visual dot-dash pattern, and review the legend for spacing details.",
+  "detailed_description": "Morse Code Player helps you convert text to Morse code and Morse code back to text in the browser. You can type a practice phrase, generate the dot-dash sequence, play the audio tone, adjust playback speed and frequency, copy the output, and inspect the visual dot-dash pattern on the page. In decode mode, paste a Morse sequence using dots, dashes, spaces, and slashes to turn supported symbols back into text. The tool is useful for practice sessions, classroom examples, radio hobby notes, and quick checks when you want both a readable sequence and an audible rhythm. It does not include a full Morse alphabet table or advanced training scheduler.",
   "usage_steps": [
     "Choose Text to Morse or Morse to Text.",
     "Enter plain text or Morse symbols in the input box.",
@@ -10,7 +10,8 @@
   "usage_examples": [
     "Turn a short practice phrase into Morse code and listen to it.",
     "Decode a Morse sequence such as .... . .-.. .-.. --- back into text.",
-    "Compare slower and faster playback speeds while practicing recognition."
+    "Compare slower and faster playback speeds while practicing recognition.",
+    "Copy a generated dot-dash sequence into a lesson note or radio practice worksheet."
   ],
   "faqs": [
     {
@@ -28,6 +29,10 @@
     {
       "question": "Does it include a full alphabet table?",
       "answer": "No. The page shows the output, visualization, and a small legend for timing symbols, but not a full Morse alphabet table."
+    },
+    {
+      "question": "Can I change the sound?",
+      "answer": "Yes. You can adjust playback speed and tone frequency before pressing Play, which helps compare slower practice audio with faster review audio."
     }
   ]
 }

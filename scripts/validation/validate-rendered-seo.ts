@@ -1648,8 +1648,8 @@ const gscLossRenderedChecks: RenderedSeoCheck[] = [
     sourceRenderedOnly: true,
     bodyMustInclude: [
       'convert text to Morse code',
-      'play audio',
-      'adjustable speed and frequency',
+      'play the audio tone',
+      'adjust playback speed and frequency',
     ],
     bodyMustNotInclude: [
       'guaranteed radio',
@@ -3969,7 +3969,7 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'Morse Code Player',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     sourceRenderedOnly: true,
-    bodyMustInclude: ['Morse Code Player converts text to Morse code and Morse code back to text'],
+    bodyMustInclude: ['Morse Code Player helps you convert text to Morse code and Morse code back to text'],
     bodyMustNotInclude: ['built-in reference chart', 'reference chart'],
   },
   {
@@ -4038,7 +4038,7 @@ const checks: RenderedSeoCheck[] = [
   {
     name: 'Korean Document Word Counter refreshed support content',
     path: '/ko/tools/document-word-counter/',
-    titleIncludes: '문장',
+    titleIncludes: '문서',
     descriptionIncludes: '단어',
     h1Includes: '문서',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],

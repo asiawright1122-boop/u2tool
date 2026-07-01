@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Mit dem Text-zu-Handschrift-Converter wandelst du eingegebenen Text direkt im Browser in ein PNG-Bild mit handschriftlicher Optik um. Gib deinen Text ein, wähle einen Handschriftstil, stelle Tintenfarbe und Schriftgröße ein und entscheide dich für leeres, liniertes oder kariertes Papier. Die Vorschau wird auf einer Canvas-Fläche gerendert und kann als PNG heruntergeladen werden. Das Tool erkennt keine echte Handschrift und nutzt keine KI-OCR; es erzeugt eine stilisierte Grafik aus dem Text, den du eingibst.",
+  "detailed_description": "Mit dem Text-zu-Handschrift-Converter wandelst du eingegebenen Text direkt im Browser in ein PNG-Bild mit handschriftlicher Optik um. Gib deinen Text ein, wähle einen Handschriftstil, stelle Tintenfarbe und Schriftgröße ein und entscheide dich für leeres, liniertes oder kariertes Papier. Die Vorschau wird auf einer Canvas-Fläche gerendert und kann als PNG heruntergeladen werden. Das Tool eignet sich für Mockups, Lernmaterial, kurze Notizen und visuelle Entwürfe, bei denen eine handschriftliche Anmutung reicht. Es erkennt keine echte Handschrift und nutzt keine KI-OCR; es erzeugt eine stilisierte Grafik aus dem Text, den du eingibst.",
   "usage_steps": [
     "Gib den gewünschten Text in das Textfeld ein.",
     "Wähle einen der Handschriftstile.",
@@ -11,7 +11,8 @@
   "usage_examples": [
     "Erstelle eine handschriftlich wirkende Notiz für ein Mockup.",
     "Gestalte einen kurzen persönlichen Gruß als PNG-Grafik.",
-    "Bereite ein einfaches Schreibübungsblatt mit liniertem oder kariertem Hintergrund vor."
+    "Bereite ein einfaches Schreibübungsblatt mit liniertem oder kariertem Hintergrund vor.",
+    "Teste unterschiedliche Tintenfarben und Schriftgrößen, bevor du die Grafik in eine Präsentation einfügst."
   ],
   "faqs": [
     {
@@ -29,6 +30,10 @@
     {
       "question": "Warum sieht der Text bei jeder Änderung etwas anders aus?",
       "answer": "Die Canvas-Ausgabe nutzt leichte zufällige Abweichungen bei Position, Drehung und Zeichengröße, damit die Schrift weniger mechanisch wirkt."
+    },
+    {
+      "question": "Kann ich lange Dokumente damit setzen?",
+      "answer": "Das Tool ist für kurze Texte, Notizen und visuelle Vorschauen gedacht. Für lange Dokumente ist ein Textverarbeitungs- oder Layoutprogramm besser geeignet."
     }
   ]
 }

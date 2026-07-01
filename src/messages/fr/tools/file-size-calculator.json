@@ -30,6 +30,10 @@
     {
       "question": "L'outil analyse-t-il un vrai fichier ?",
       "answer": "Non. Il convertit une valeur numérique saisie manuellement. Il ne lit pas de fichier local et ne téléverse rien."
+    },
+    {
+      "question": "Quand faut-il utiliser les résultats en bits ?",
+      "answer": "Les bits, kilobits, mégabits et gigabits sont utiles pour comparer une taille de fichier avec un débit réseau, une limite de transfert ou une estimation de téléchargement."
     }
   ]
 }

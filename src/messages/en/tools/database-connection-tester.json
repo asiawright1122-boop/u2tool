@@ -10,7 +10,8 @@
   "usage_examples": [
     "Prepare a PostgreSQL connection string for a staging environment before adding it to an .env file.",
     "Compare how MySQL and MongoDB connection strings change when host, port, or database values are edited.",
-    "Create a key-value database connection snippet for a setup guide without exposing real production credentials."
+    "Create a key-value database connection snippet for a setup guide without exposing real production credentials.",
+    "Draft a Redis or MongoDB connection example for documentation, then replace placeholders inside your secure deployment workflow."
   ],
   "faqs": [
     {
@@ -28,6 +29,10 @@
     {
       "question": "What should I check before deployment?",
       "answer": "Confirm the host, port, database name, username, SSL setting, and final secret storage location. Then test the connection inside the application or deployment environment."
+    },
+    {
+      "question": "Why is this still called a tester?",
+      "answer": "It helps test the shape of a connection string and code snippet before use. It does not perform a live network test, so the final connection must be verified in your own runtime."
     }
   ]
 }
