@@ -92,7 +92,7 @@ const aboutStatsMessages = (aboutMessages.stats as Record<string, string>) ?? {}
 const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
 const headerTranslations = buildHeaderTranslations(baseMessages);
 const mobileNavMessages = buildMobileNavMessages(navMessages);
-const homePageSeo = getHomePageSeo(baseMessages, tools.length);
+const homePageSeo = getHomePageSeo(baseMessages, tools.length, locale);
 
 const popularTools = getPopularTools();
 const recentTools = tools.slice(-4).reverse();

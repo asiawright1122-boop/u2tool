@@ -19,6 +19,7 @@ import {
   buildLocalizedPageUrl,
   buildOrganizationSchema,
   buildWebsiteSchema,
+  resolveMetaDescription,
   resolveSiteDescription,
   withBrand,
 } from '@/lib/seo';
@@ -49,6 +50,12 @@ const {
   siteDescription,
   robots = defaultRobots,
 } = Astro.props;
+
+const safeDescription = resolveMetaDescription({
+  description,
+  locale,
+  title,
+});
 
 const BASE_URL = getPublicSiteUrl();
 
@@ -97,7 +104,7 @@ const themeInitScript = buildThemeInitScript();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{withBrand(title)}</title>
-    <meta name="description" content={description} />
+    <meta name="description" content={safeDescription} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260512" />
     <link rel="canonical" href={canonical} />
     <meta name="robots" content={robots} />

@@ -1,10 +1,13 @@
 import { describe, expect, it } from 'vitest';
 import {
+  META_DESCRIPTION_MAX_LENGTH,
+  META_DESCRIPTION_MIN_LENGTH,
   buildWebsiteSearchUrlTemplate,
   getCategoryPageSeo,
   getHomePageSeo,
   getHreflang,
   getToolsPageSeo,
+  resolveMetaDescription,
   withBrand,
 } from './seo';
 import { buildPriorityIndexNowUrls } from './seo-discovery';
@@ -20,11 +23,16 @@ describe('seo helpers', () => {
           },
         },
       },
-      501
+      501,
+      'en'
     );
 
     expect(seo.title).toBe('Free Developer Tools | U2Tool');
-    expect(seo.description).toBe('Localized tools listing description.');
+    expect(seo.description).toBe(resolveMetaDescription({
+      description: 'Localized tools listing description.',
+      locale: 'en',
+      title: 'Free Developer Tools | U2Tool',
+    }));
   });
 
   it('normalizes outdated numeric claims in tools page SEO copy', () => {
@@ -37,11 +45,16 @@ describe('seo helpers', () => {
           },
         },
       },
-      501
+      501,
+      'en'
     );
 
     expect(seo.title).toBe('501+ Free Online Tools for Developers & Designers | U2Tool');
-    expect(seo.description).toBe('Discover 501+ free online tools for developers and creators.');
+    expect(seo.description).toBe(resolveMetaDescription({
+      description: 'Discover 501+ free online tools for developers and creators.',
+      locale: 'en',
+      title: '501+ Free Online Tools for Developers & Designers | U2Tool',
+    }));
   });
 
   it('builds stronger homepage SEO copy when no dedicated home metadata exists', () => {
@@ -74,7 +87,10 @@ describe('seo helpers', () => {
     const seo = getCategoryPageSeo({}, 'security', 'Security', 42);
 
     expect(seo.title).toBe('Security Tools');
-    expect(seo.description).toBe('42+ free Security tools online.');
+    expect(seo.description).toBe(resolveMetaDescription({
+      description: '42+ free Security tools online.',
+      title: 'Security Tools',
+    }));
   });
 
   it('keeps encoding category SEO pinned to Hex intent when message assets are stale', () => {
@@ -114,6 +130,52 @@ describe('seo helpers', () => {
     expect(seo.title).toContain('\u043a\u043e\u0434\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f');
     expect(seo.title).toContain('Hex');
     expect(seo.description).toContain('hex');
+  });
+
+  it('expands short localized meta descriptions into the safe SEO range', () => {
+    const description = resolveMetaDescription({
+      description: '快速编辑十六进制。',
+      locale: 'zh',
+      title: 'Hex Editor',
+    });
+
+    expect([...description].length).toBeGreaterThanOrEqual(META_DESCRIPTION_MIN_LENGTH);
+    expect([...description].length).toBeLessThanOrEqual(META_DESCRIPTION_MAX_LENGTH);
+    expect(description).toContain('快速编辑十六进制');
+    expect(description).toContain('无需注册');
+  });
+
+  it('uses a Bing-safe minimum length for short CJK meta descriptions', () => {
+    const description = resolveMetaDescription({
+      description: '将联系人 CSV 行转换为适用于通讯录和 CRM 导入的 vCard 文本。',
+      locale: 'zh',
+      title: '免费在线CSV 转 vCard 转换器',
+    });
+
+    expect([...description].length).toBeGreaterThanOrEqual(150);
+    expect([...description].length).toBeLessThanOrEqual(META_DESCRIPTION_MAX_LENGTH);
+  });
+
+  it('uses a Bing-safe minimum length for short RTL meta descriptions', () => {
+    const description = resolveMetaDescription({
+      description: 'قارن أدوات النص قبل فتح صفحة واحدة.',
+      locale: 'ar',
+      title: 'دليل أدوات النص',
+    });
+
+    expect([...description].length).toBeGreaterThanOrEqual(150);
+    expect([...description].length).toBeLessThanOrEqual(META_DESCRIPTION_MAX_LENGTH);
+  });
+
+  it('truncates overlong meta descriptions without exceeding the shared max', () => {
+    const description = resolveMetaDescription({
+      description: 'Free online developer utility for testing metadata, converting content, validating structured data, generating copy, reviewing SEO output, and preparing browser-based workflows without signup or server uploads.',
+      locale: 'en',
+      title: 'Developer Utility',
+    });
+
+    expect([...description].length).toBeLessThanOrEqual(META_DESCRIPTION_MAX_LENGTH);
+    expect(description.endsWith('…')).toBe(true);
   });
 
   it('does not duplicate the brand in titles', () => {

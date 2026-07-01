@@ -19,7 +19,7 @@ import {
 import { loadBaseUiMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
-import { buildLocalizedPagePath, getHreflang } from '@/lib/seo';
+import { buildLocalizedPagePath, getHreflang, resolveMetaDescription } from '@/lib/seo';
 
 export const prerender = true;
 
@@ -61,6 +61,11 @@ if (!guide) {
 const uiCopy = getComparisonUiCopy(locale);
 const BASE_URL = getPublicSiteUrl();
 const schemaLanguage = getHreflang(locale);
+const pageDescription = resolveMetaDescription({
+  description: guide.description,
+  locale,
+  title: guide.title,
+});
 const breadcrumbItems = [
   { label: navMessages.home || 'Home', href: buildLocalizedPagePath(locale, '/') },
   { label: uiCopy.comparisonSectionTitle, href: buildLocalizedPagePath(locale, '/compare') },
@@ -76,7 +81,7 @@ const breadcrumbData = {
 };
 const collectionData = {
   name: guide.title,
-  description: guide.description,
+  description: pageDescription,
   url: `${BASE_URL}${guide.href}`,
   inLanguage: schemaLanguage,
   numberOfItems: guide.workflows.reduce((count, workflow) => count + workflow.tools.length, 0),
@@ -93,7 +98,7 @@ const collectionData = {
 
 <BaseLayout
   title={guide.title}
-  description={guide.description}
+  description={pageDescription}
   locale={locale}
   canonicalPath={`/compare/${guide.slug}`}
   siteDescription={siteMessages.description}
@@ -102,14 +107,14 @@ const collectionData = {
   <StructuredData type="BreadcrumbList" data={breadcrumbData} slot="head" />
   <StructuredData type="CollectionPage" data={collectionData} slot="head" />
   <meta property="og:title" content={`${guide.title} | U2Tool`} slot="head" />
-  <meta property="og:description" content={guide.description} slot="head" />
+  <meta property="og:description" content={pageDescription} slot="head" />
   <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
   <meta property="og:type" content="website" slot="head" />
   <meta property="og:url" content={`${BASE_URL}${guide.href}`} slot="head" />
   <meta property="og:site_name" content="U2Tool" slot="head" />
   <meta name="twitter:card" content="summary_large_image" slot="head" />
   <meta name="twitter:title" content={`${guide.title} | U2Tool`} slot="head" />
-  <meta name="twitter:description" content={guide.description} slot="head" />
+  <meta name="twitter:description" content={pageDescription} slot="head" />
   <meta name="twitter:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
 
   <StaticSidebar

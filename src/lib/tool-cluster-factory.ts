@@ -12,7 +12,7 @@
 
 import { tools } from '@/config/tools';
 import { getLocalizedPath, type Locale } from './i18n';
-import { buildLocalizedPageUrl, getHreflang } from './seo';
+import { buildLocalizedPageUrl, getHreflang, resolveMetaDescription } from './seo';
 import type { ToolClusterCopy, ToolClusterGroup, ToolClusterItem } from './tool-cluster-types';
 
 // ---------------------------------------------------------------------------
@@ -185,7 +185,11 @@ export function buildClusterCollectionData(
 ): Record<string, unknown> {
   return {
     name: copy.title,
-    description: copy.seoDescription,
+    description: resolveMetaDescription({
+      description: copy.seoDescription,
+      locale,
+      title: copy.seoTitle,
+    }),
     url: buildLocalizedPageUrl(baseUrl, locale, clusterPath),
     inLanguage: getHreflang(locale),
     numberOfItems: groups.reduce((count, group) => count + group.tools.length, 0),
