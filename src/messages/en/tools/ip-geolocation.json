@@ -25,6 +25,14 @@
     {
       "question": "Why can results differ between services?",
       "answer": "Geolocation providers maintain separate databases and refresh schedules, so country, city, organization, or coordinate fields can vary."
+    },
+    {
+      "question": "What should I check before using the IP Geolocation output?",
+      "answer": "Review formatting, assumptions, and operational context before applying the result to a network workflow."
+    },
+    {
+      "question": "Can I edit the result after generating it?",
+      "answer": "Yes. Adjust the input values or available options, generate the result again, and then copy, export, or reuse the updated output in your workflow when the page provides those actions."
     }
   ]
 }

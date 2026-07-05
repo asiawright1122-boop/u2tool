@@ -1,34 +1,38 @@
 {
-  "detailed_description": "The Image Splitter tool divides one uploaded image into a simple rows-and-columns grid directly in the browser. Choose a preset such as 2x2, 3x3, 4x4, 2x3, or 3x2, or enter custom row and column counts from 1 to 10. After you upload an image, the page shows a grid overlay on the original image along with the source size and calculated part size. Click Split to create PNG pieces with Canvas, then download a single piece or download every piece together as a ZIP file.",
+  "detailed_description": "Image Splitter Online divides one uploaded image into a simple rows-and-columns grid directly in the browser. Use presets such as 2x2, 3x3, 4x4, 2x3, and 3x2, or enter custom row and column counts from 1 to 10. The page shows the original size, the calculated part size, and a grid overlay before splitting. When you click Split, Canvas creates equal rectangular PNG pieces from the selected grid. You can download a single piece from the preview or download all generated PNG files together as a ZIP archive. The tool is designed for social grid drafts, classroom image pieces, layout mockups, and quick visual review; it does not add overlap, choose output formats, preserve metadata, or create sprite-sheet workflows.",
   "usage_steps": [
-    "Upload an image from the file picker.",
-    "Choose a grid preset or set the rows and columns manually.",
-    "Review the grid overlay and calculated part size.",
-    "Click Split to create the image pieces in the browser.",
-    "Download one piece from the preview or use Download All to save a ZIP file."
+    "Upload one image from the file picker.",
+    "Choose a grid preset such as 3x3, or set rows and columns manually from 1 to 10.",
+    "Review the red grid overlay, original size, and calculated part size.",
+    "Click Split to generate equal PNG pieces in the browser with Canvas.",
+    "Download one piece from the preview or use Download All to save every PNG in a ZIP file."
   ],
   "usage_examples": [
-    "Split a banner into a 3x2 grid for a layout mockup.",
-    "Create equal image pieces for a simple puzzle or classroom activity.",
-    "Break a large illustration into smaller PNG tiles for review.",
-    "Download all generated pieces in one ZIP after checking the preview."
+    "Split a poster draft into a 3x3 grid for a social media layout preview.",
+    "Create equal PNG pieces from a large illustration for classroom or puzzle activities.",
+    "Break a banner into a 2x3 grid so a designer can review each section separately.",
+    "Export all generated parts as a ZIP after checking the grid overlay and part size."
   ],
   "faqs": [
     {
+      "question": "What does Image Splitter Online create?",
+      "answer": "It creates equal rectangular PNG pieces from one uploaded image based on the selected row and column grid."
+    },
+    {
+      "question": "Can I set custom rows and columns?",
+      "answer": "Yes. You can use presets such as 2x2 and 3x3, or enter row and column values from 1 to 10."
+    },
+    {
       "question": "Can I download all pieces at once?",
-      "answer": "Yes. After splitting the image, use Download All to save the PNG pieces inside a ZIP file."
+      "answer": "Yes. Use Download All after splitting to save every PNG piece in a ZIP file."
     },
     {
-      "question": "What grid sizes are available?",
-      "answer": "The page includes 2x2, 3x3, 4x4, 2x3, and 3x2 presets, plus manual row and column inputs from 1 to 10."
+      "question": "Does the tool process images on a server?",
+      "answer": "No. Upload, preview, splitting, single-piece download, and ZIP creation happen in the browser."
     },
     {
-      "question": "Where does the image processing happen?",
-      "answer": "The upload, preview, splitting, and downloads happen in the browser."
-    },
-    {
-      "question": "Can I download a single part?",
-      "answer": "Yes. Hover a generated piece and use the download action for that part."
+      "question": "Does it support overlap, EXIF preservation, or output format selection?",
+      "answer": "No. The current tool focuses on simple non-overlapping PNG grid pieces created from rows and columns."
     }
   ]
 }

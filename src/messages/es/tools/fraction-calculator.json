@@ -1,5 +1,5 @@
 {
-  "detailed_description": "La Calculadora de Fracciones realiza operaciones aritméticas en fracciones. Los resultados se simplifican automáticamente a su mínima expresión con equivalentes decimales.",
+  "detailed_description": "La Calculadora de Fracciones realiza operaciones aritméticas en fracciones. Los resultados se simplifican automáticamente a su mínima expresión con equivalentes decimales. Calculadora de Fracciones está pensado para cálculos rápidos y comparación de condiciones. Revisa unidades, supuestos, redondeo y valores de entrada antes de usar el resultado como referencia.",
   "usage_steps": [
     "Ingresa la primera fracción",
     "Selecciona la operación",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Resuelve problemas de tareas de matemáticas",
     "Calcula medidas de recetas",
-    "Trabaja con razones y proporciones"
+    "Trabaja con razones y proporciones",
+    "Comprobar un cálculo rápido y revisar las suposiciones antes de usar el resultado."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Calculadora de Fracciones?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra calculadora?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

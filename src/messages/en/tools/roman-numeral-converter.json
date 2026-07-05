@@ -5,6 +5,7 @@
     "Enter an Arabic number from 1 to 3999, or enter a Roman numeral using I, V, X, L, C, D, and M.",
     "Click Convert to update the result field.",
     "Use the reference chart if you need to check symbol values.",
+    "Check whether the result matches the standard form you expect, especially in Roman to Arabic mode.",
     "Copy the converted value when you want to paste it elsewhere."
   ],
   "usage_examples": [
@@ -29,6 +30,10 @@
     {
       "question": "Can I copy the result?",
       "answer": "Yes. Use the Copy button after converting."
+    },
+    {
+      "question": "What should I check before using the Roman Numeral Converter output?",
+      "answer": "Check the input mode, the 1-3999 range for Arabic numbers, and whether the Roman numeral form is appropriate for your use case."
     }
   ]
 }

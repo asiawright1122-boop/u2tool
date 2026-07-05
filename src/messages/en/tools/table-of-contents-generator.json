@@ -29,6 +29,10 @@
     {
       "question": "Is the text sent to a server?",
       "answer": "No. The list parsing and output generation run in your browser."
+    },
+    {
+      "question": "What should I check before using the Table of Contents Generator output?",
+      "answer": "Review the generated output, available options, and target context before publishing, deploying, or sharing it."
     }
   ]
 }

@@ -1,15 +1,38 @@
 {
-  "detailed_description": "Project Estimation Calculator helps estimate project effort using PERT and story points.",
+  "detailed_description": "Project Estimation Calculator helps estimate project effort with PERT using optimistic, most likely, and pessimistic task durations. Project Estimation Calculator is intended for quick drafting, checking, and review of planning or document workflows. Use the generated result as a starting point, review the assumptions or formatting details shown in the interface, and verify important schedules, handoffs, or reports before you share them.",
   "usage_steps": [
     "Enter task descriptions",
-    "Provide estimates",
-    "Or use story points",
+    "Provide optimistic, most likely, and pessimistic estimates",
+    "Review the expected duration",
     "Calculate duration",
     "View confidence intervals"
   ],
   "usage_examples": [
     "Estimate software projects",
-    "Calculate sprint capacity",
-    "Plan timelines with PERT"
+    "Compare task-level uncertainty",
+    "Plan timelines with PERT",
+    "Prepare a draft for a planning document, spreadsheet, or team handoff."
+  ],
+  "faqs": [
+    {
+      "question": "What should I check before using the Project Estimation Calculator output?",
+      "answer": "Review dates, names, totals, and formatting before using the result in a document, schedule, or team handoff."
+    },
+    {
+      "question": "Can I edit the result after generating it?",
+      "answer": "Yes. Adjust the input values or available options, generate the result again, and then copy, export, or reuse the updated output in your workflow when the page provides those actions."
+    },
+    {
+      "question": "Why might the result differ from another office tool?",
+      "answer": "Different tools can use different assumptions, rounding rules, parsing behavior, or export settings. Compare the same input values and review any notes shown in the interface before relying on the result."
+    },
+    {
+      "question": "Can I start with sample or placeholder data?",
+      "answer": "Yes. Use a small example or non-sensitive sample first, confirm the output shape, and then replace it with the real input you want to process."
+    },
+    {
+      "question": "Does this replace manual review?",
+      "answer": "No. It can speed up planning and document work, but important schedules, reports, and handoffs should still be reviewed."
+    }
   ]
 }

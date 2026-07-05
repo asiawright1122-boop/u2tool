@@ -1,17 +1,39 @@
 {
-  "detailed_description": "Der GIF Splitter ist eine spezialisierte Online-Tool, das es Benutzern ermöglicht, einzelne Frames aus animierten GIFs zu extrahieren. Dieses Tool ist besonders nützlich für Grafiker, Webdesigner, und Entwickler, die detaillierte Kontrolle über die Komponenten animierter GIFs benötigen. Die Extraktion einzelner Frames ermöglicht es, jedes Frame separat zu bearbeiten, optimieren oder in andere Formate zu konvertieren. Dies ist insbesondere hilfreich bei der Erstellung von Animationen, der Optimierung von GIF-Dateien für das Web, oder der Vorbereitung von Frames für weitere Bearbeitungen in Grafikprogrammen. Technisch gesehen, verwendet der GIF Splitter eine Kombination aus Bildverarbeitungsalgorithmen und Frame-Extraktionstechniken, um die Frames präzise zu trennen und als individuelle Bilder zu speichern. Die Benutzeroberfläche ist intuitiv gestaltet und erlaubt eine feine Anpassung der Extraktionsparameter, wie zum Beispiel die Auswahl bestimmter Frames oder das Anpassen der Ausgabeformatierung.",
+  "detailed_description": "Der GIF Splitter zerlegt eine animierte GIF-Datei im Browser in einzelne PNG-Frames. Nach dem Upload analysiert das Tool die GIF-Struktur, zeigt das Originalbild, zählt die gefundenen Frames und erstellt Vorschaubilder für die extrahierten Einzelbilder. Sie können alle Frames auswählen, die Auswahl leeren oder einzelne Frames ein- und ausschalten. Die ausgewählten Bilder werden anschließend als ZIP-Datei heruntergeladen. Das ist hilfreich, wenn Sie eine Animation prüfen, ein einzelnes Standbild weiterverwenden, Tutorial-Schritte aus einer GIF-Anleitung extrahieren oder Frames für Design-Reviews bereitstellen möchten. Das Tool bietet keine JPG-Ausgabe, keine automatische Optimierung und keine Videokonvertierung; es konzentriert sich auf die nachvollziehbare Frame-Extraktion als PNG.",
   "usage_steps": [
-    "Laden Sie die animierte GIF-Datei über den 'Datei auswählen'-Button in das Tool hoch.",
-    "Wählen Sie im Abschnitt 'Extraktionsmodus' die Option 'Alle Frames' oder 'Ausgewählte Frames', je nachdem, ob Sie alle Frames oder nur bestimmte Frames extrahieren möchten.",
-    "Falls Sie nur bestimmte Frames auswählen möchten, aktivieren Sie die 'Manuelle Auswahl'-Option und geben Sie die Frame-Nummern in das Textfeld ein, getrennt durch Kommas.",
-    "Passen Sie im Abschnitt 'Ausgabeformatierung' die Einstellungen für die Ausgabe an, wie z. B. die Bildqualität und das Ausgabeformat (z. B. PNG oder JPG).",
-    "Klicken Sie auf den 'Frames extrahieren'-Button, um den Extraktionsprozess zu starten. Der Fortschritt wird in der Statusanzeige unten auf der Seite angezeigt.",
-    "Sobald die Extraktion abgeschlossen ist, können Sie die extrahierten Frames über den 'Download'-Button als ZIP-Datei herunterladen."
+    "Laden Sie eine animierte GIF-Datei über das Upload-Feld hoch.",
+    "Warten Sie, bis das Tool die Frames analysiert und Vorschaubilder anzeigt.",
+    "Prüfen Sie die Gesamtzahl der Frames und die aktuelle Auswahl.",
+    "Wählen Sie einzelne Frames ab oder nutzen Sie Alles auswählen beziehungsweise Auswahl aufheben.",
+    "Laden Sie die ausgewählten Frames als ZIP-Datei mit PNG-Bildern herunter.",
+    "Öffnen Sie die ZIP-Datei lokal und verwenden Sie nur die Frames, die Sie wirklich benötigen."
   ],
   "usage_examples": [
-    "Ein Grafikdesigner benötigt einzelne Frames einer animierten GIF, um sie in ein Video-Projekt zu integrieren. Der GIF Splitter ermöglicht es ihm, die Frames zu extrahieren und in ein passendes Videoformat zu konvertieren.",
-    "Ein Webentwickler arbeitet an einem responsiven Webdesign und muss sicherstellen, dass die GIF-Animationen auf mobilen Geräten schnell geladen werden. Durch die Extraktion und Optimierung einzelner Frames kann er die Dateigröße reduzieren und die Ladezeiten verbessern.",
-    "Ein Animationskünstler möchte eine animierte GIF in ein Comic umwandeln. Er verwendet den GIF Splitter, um die Frames zu extrahieren und jede Szene separat zu bearbeiten, um sie in seine Comic-Struktur zu integrieren.",
-    "Ein Social Media Manager erstellt einen Tutorial-Post, der Schritt-für-Schritt-Anleitungen zeigt. Er verwendet den GIF Splitter, um die Frames einer animierten Anleitung zu extrahieren, um sie in den Post einzubetten und die Anleitung klarer zu machen."
+    "Ein Designer extrahiert mehrere Schlüsselbilder aus einer Produktanimation, um sie in einem Review-Dokument zu kommentieren.",
+    "Ein Entwickler prüft, welche Frames eine GIF-Anleitung enthält, bevor er eine leichtere Animation nachbaut.",
+    "Ein Content-Team erstellt aus einer animierten GIF einzelne Tutorial-Schritte für einen Blogartikel.",
+    "Ein Support-Team speichert einzelne Frames einer Fehleranimation, um einen UI-Zustand genauer zu dokumentieren."
+  ],
+  "faqs": [
+    {
+      "question": "In welchem Format werden die Frames gespeichert?",
+      "answer": "Die extrahierten Frames werden als PNG-Bilder in einer ZIP-Datei heruntergeladen."
+    },
+    {
+      "question": "Kann ich einzelne Frames auswählen?",
+      "answer": "Ja. Nach der Analyse können Sie Frames einzeln ein- oder ausschalten oder die gesamte Auswahl ändern."
+    },
+    {
+      "question": "Konvertiert das Tool GIFs in Videos?",
+      "answer": "Nein. Es extrahiert Einzelbilder aus einer GIF-Datei, erstellt aber keine MP4- oder Videodatei."
+    },
+    {
+      "question": "Optimiert der GIF Splitter die Dateigröße?",
+      "answer": "Nein. Er ist für die Frame-Extraktion gedacht. Eine separate Bildoptimierung sollten Sie danach mit einem passenden Tool durchführen."
+    },
+    {
+      "question": "Was passiert, wenn eine GIF nicht gelesen werden kann?",
+      "answer": "Bei nicht unterstützten oder beschädigten Dateien kann die Frame-Liste leer bleiben. Versuchen Sie dann eine andere GIF-Datei oder exportieren Sie die Animation erneut."
+    }
   ]
 }

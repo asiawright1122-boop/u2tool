@@ -203,6 +203,36 @@ describe('seo helpers', () => {
     expect(urls.every((url) => url.endsWith('/'))).toBe(true);
     expect(urls.every((url) => !url.includes('com//'))).toBe(true);
   });
+
+  it('keeps GSC performance-loss recovery pages in priority discovery', () => {
+    const urls = buildPriorityIndexNowUrls('https://www.u2tool.com/', {
+      selectedLocales: ['en', 'es'],
+    });
+
+    expect(urls).toContain('https://www.u2tool.com/en/tools/gantt-chart-generator/');
+    expect(urls).toContain('https://www.u2tool.com/en/tools/ascii-table/');
+    expect(urls).toContain('https://www.u2tool.com/en/tools/iban-validator/');
+    expect(urls).toContain('https://www.u2tool.com/en/tools/compound-interest-calculator/');
+    expect(urls).toContain('https://www.u2tool.com/es/tools/document-word-counter/');
+  });
+
+  it('keeps crawled-not-indexed content-refresh pages in priority discovery', () => {
+    const urls = buildPriorityIndexNowUrls('https://www.u2tool.com/', {
+      selectedLocales: ['en', 'es', 'fr'],
+    });
+
+    expect(urls).toContain('https://www.u2tool.com/en/tools/database-connection-tester/');
+    expect(urls).toContain('https://www.u2tool.com/fr/tools/image-resizer/');
+    expect(urls).toContain('https://www.u2tool.com/en/tools/merge-conflict-resolver/');
+    expect(urls).toContain('https://www.u2tool.com/en/tools/go-formatter/');
+    expect(urls).toContain('https://www.u2tool.com/es/tools/image-cropper/');
+    expect(urls).toContain('https://www.u2tool.com/es/tools/love-calculator/');
+    expect(urls).toContain('https://www.u2tool.com/es/tools/gif-maker/');
+    expect(urls).toContain('https://www.u2tool.com/es/tools/venn-diagram-generator/');
+    expect(urls).toContain('https://www.u2tool.com/es/tools/world-clock/');
+    expect(urls).toContain('https://www.u2tool.com/en/tools/compound-interest-calculator/');
+    expect(urls).toContain('https://www.u2tool.com/en/tools/tile-calculator/');
+  });
 });
 
 import { getDefaultRobots } from '@/lib/robots';

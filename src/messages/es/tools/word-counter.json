@@ -13,5 +13,27 @@
     "Un estudiante confirma que la introducción de una tarea entra dentro del rango de palabras requerido.",
     "Un product manager compara dos textos cortos de interfaz y conserva la versión más clara bajo el límite de caracteres.",
     "Una persona de soporte revisa el tamaño de una respuesta antes de pegarla en un formulario con límite de texto."
+  ],
+  "faqs": [
+    {
+      "question": "¿El contador envía mi texto a un servidor?",
+      "answer": "No. La página calcula palabras, caracteres, frases, párrafos y líneas en el navegador mientras escribes o pegas el texto."
+    },
+    {
+      "question": "¿Qué tipo de entrada funciona mejor?",
+      "answer": "Funciona mejor con texto plano, borradores de artículos, descripciones SEO, respuestas de soporte o copias de interfaz pegadas en el área principal."
+    },
+    {
+      "question": "¿Qué no valida esta herramienta?",
+      "answer": "No revisa gramática, estilo, plagio ni significado. Solo aplica reglas simples de conteo sobre el texto visible."
+    },
+    {
+      "question": "¿Las cifras están listas para límites oficiales?",
+      "answer": "Úsalas como una referencia rápida y confirma las reglas de la plataforma, universidad o editor cuando el límite sea estricto."
+    },
+    {
+      "question": "¿Qué herramienta puede ayudar después?",
+      "answer": "Si necesitas revisar un archivo completo, usa el contador de palabras para documentos; si quieres ajustar una página, combina el conteo con herramientas de texto y SEO."
+    }
   ]
 }

@@ -10,7 +10,8 @@
   "usage_examples": [
     "Crear una nota manuscrita decorativa para una maqueta de producto.",
     "Preparar una tarjeta simple con fondo de papel rayado.",
-    "Generar una hoja visual de práctica con texto grande y fondo de cuadrícula."
+    "Generar una hoja visual de práctica con texto grande y fondo de cuadrícula.",
+    "Probar colores de tinta y tamaños antes de usar la imagen en una presentación."
   ],
   "faqs": [
     {
@@ -28,6 +29,10 @@
     {
       "question": "Funciona para textos largos?",
       "answer": "Funciona mejor con notas cortas o párrafos moderados. Para textos muy largos conviene dividir el contenido en varias imágenes."
+    },
+    {
+      "question": "Exporta PDF o documentos editables?",
+      "answer": "No. La salida actual es una imagen PNG generada desde el canvas del navegador."
     }
   ]
 }

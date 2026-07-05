@@ -1,34 +1,38 @@
 {
-  "detailed_description": "Credit Card Validator checks whether a card number has a valid mathematical structure using the Luhn checksum. Type or paste a number, click Validate, and the tool removes spaces, checks the digit length, runs the Luhn test, and identifies common card networks such as Visa, Mastercard, American Express, Discover, Diners Club, JCB, UnionPay, and Maestro when the prefix and length match. It is useful for testing checkout form validation, sample data, QA cases, and developer documentation. The tool does not contact a bank, payment processor, or card network, so it cannot confirm whether a card is active, funded, issued to a real person, or safe to charge. Use test numbers only.",
+  "detailed_description": "Credit Card Checker validates whether a test card number has a mathematically valid structure using the Luhn checksum. Type or paste a number, click Validate, and the browser removes spaces, checks the 13-19 digit length, runs the Luhn test, and identifies common card network patterns such as Visa, Mastercard, American Express, Discover, Diners Club, JCB, UnionPay, and Maestro when the prefix and length match. Use it for credit card check workflows in checkout form QA, sample data, unit tests, and developer documentation. The tool does not contact a bank, payment processor, or card network, so it cannot confirm whether a card is active, funded, issued to a real person, or safe to charge. Use test numbers only. This wording also covers check credit card and credit card checker intent for developers who need a local Luhn validator rather than a payment processor or account-status checker.",
   "usage_steps": [
-    "Enter a test card number in the input field.",
-    "The field formats the digits into groups while you type.",
-    "Click Validate to run the local Luhn check.",
-    "Review the detected card network, issuer label, digit count, and pass or fail result.",
+    "Enter a test credit card number in the input field.",
+    "The field formats digits into readable groups while you type.",
+    "Click Validate to run the local Luhn checksum and length checks.",
+    "Review the detected card network pattern, static network label, digit count, and pass or fail result.",
     "Use the result to debug form validation or sample payment data, not to verify a real account."
   ],
   "usage_examples": [
-    "Test whether a checkout form accepts a standard Visa or Mastercard test number.",
-    "Confirm that a sample card number fails when one digit is changed.",
+    "Check whether a checkout form accepts a standard Visa or Mastercard test number.",
+    "Confirm that a sample card number fails after one digit is changed.",
     "Identify the likely card network from a number prefix during QA.",
-    "Document the expected Luhn result for payment form unit tests."
+    "Document the expected Luhn validator result for payment form unit tests."
   ],
   "faqs": [
     {
       "question": "Does this verify a real credit card account?",
-      "answer": "No. It only checks the number pattern, length, and Luhn checksum. It does not contact banks or payment processors."
+      "answer": "No. It only checks the number pattern, length, and Luhn checksum locally. It does not contact banks or payment processors."
     },
     {
       "question": "Should I enter a real card number?",
       "answer": "No. Use official payment-provider test numbers or dummy values only."
     },
     {
-      "question": "Which card types can it detect?",
+      "question": "Which card networks can it detect?",
       "answer": "It detects common patterns for Visa, Mastercard, American Express, Discover, Diners Club, JCB, UnionPay, and Maestro."
     },
     {
       "question": "What does a valid result mean?",
       "answer": "Valid means the digits pass the local checksum and length checks. It does not mean the card exists, is active, or has funds."
+    },
+    {
+      "question": "Is the card number sent to a server?",
+      "answer": "The validator runs in the browser for the checks shown on the page. Treat every value as test data and avoid real personal payment details."
     }
   ]
 }

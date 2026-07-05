@@ -1,14 +1,38 @@
 {
-  "detailed_description": "Конвертер SQL в MongoDB - мощный онлайн инструмент, который помогает эффективно обрабатывать и конвертировать данные. С интуитивно понятным интерфейсом и мгновенными результатами, он идеально подходит для разработчиков, дизайнеров и создателей контента.",
+  "detailed_description": "SQL to MongoDB Converter превращает простые SQL statements в MongoDB shell-style snippets прямо в браузере. SELECT преобразуется в find или countDocuments, INSERT INTO ... VALUES — в insertOne или insertMany, UPDATE ... SET — в updateMany, DELETE FROM — в deleteMany. Для SELECT поддерживаются WHERE, ORDER BY, LIMIT и OFFSET, а в WHERE — операторы =, !=, сравнения, IN, NOT IN, LIKE и IS NULL. Страница показывает collection, operation, generated query, примеры и кнопку Copy для query snippet. Сложный SQL проверяйте вручную перед использованием.",
   "usage_steps": [
-    "Введите или вставьте ваши входные данные",
-    "Настройте необходимые параметры",
-    "Нажмите кнопку обработки",
-    "Видите результатыInstantly",
-    "Копируйте или загружайте результат"
+    "Вставьте поддерживаемый SQL statement или выберите один из примеров.",
+    "Проверьте распознанные operation и collection name.",
+    "Просмотрите MongoDB query snippet в output block.",
+    "Сверьтесь со списком supported operations, чтобы SQL оставался простым.",
+    "Скопируйте generated query и адаптируйте его в своем коде или shell."
   ],
   "usage_examples": [
-    "Используйте Конвертер SQL в MongoDB для быстрого обработки данных",
-    "Интегрируйте с вашей рабочей схемой для повышения эффективности"
+    "Преобразовать SELECT * FROM users WHERE age >= 18 LIMIT 10 в find query.",
+    "Превратить INSERT INTO users (...) VALUES (...) в insertOne или insertMany.",
+    "Перевести UPDATE users SET status = 'inactive' WHERE age < 18 в updateMany.",
+    "Создать deleteMany snippet из DELETE FROM sessions WHERE last_seen < '2024-01-01'."
+  ],
+  "faqs": [
+    {
+      "question": "Какие SQL операции поддерживаются?",
+      "answer": "Поддерживаются простые SELECT, COUNT(*), INSERT INTO ... VALUES, UPDATE ... SET и DELETE FROM."
+    },
+    {
+      "question": "Какие WHERE операторы распознаются?",
+      "answer": "Базовый парсер поддерживает =, !=, >, <, >=, <=, IN, NOT IN, LIKE и IS NULL."
+    },
+    {
+      "question": "Можно ли выполнять результат прямо на странице?",
+      "answer": "Нет. Страница генерирует snippet, который нужно скопировать и проверить в своем окружении."
+    },
+    {
+      "question": "Подходит ли это для сложного SQL?",
+      "answer": "Нет. Сложные запросы нужно переносить вручную и проверять отдельно."
+    },
+    {
+      "question": "Что проверить перед использованием результата Конвертер SQL в MongoDB?",
+      "answer": "Проверьте исходные данные, выбранные настройки и итоговый результат в контексте вашей задачи. Для важных материалов дополнительно сверяйте числа, формат и смысл перед публикацией или передачей дальше."
+    }
   ]
 }

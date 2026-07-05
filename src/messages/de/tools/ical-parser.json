@@ -1,12 +1,38 @@
 {
-  "detailed_description": "Der iCal-Parser ist ein Online-Tool zum Lesen und Anzeigen von ICS-Kalenderdateien. Laden Sie eine ICS-Datei hoch oder fügen Sie die rohe iCal-Daten ein, um alle Ereignisse in einem sauberen, lesbaren Tabellenformat anzuzeigen. Der Parser extrahiert Ereignistitel, Start- und Endzeiten, Orte, Beschreibungen, Teilnehmer und Wiederholungsregeln. Ideal zum Debuggen von Kalenderintegrationen, zum Anzeigen von Kalenderexporten oder zum Extrahieren von Ereignisdaten aus ICS-Dateien. Unterstützt sowohl einzelne Ereignisse als auch wiederkehrende Ereignisreihen mit vollständiger Zeitzonenerfassung.",
+  "detailed_description": "Der iCal-Parser ist ein Online-Tool zum Lesen und Anzeigen von ICS-Kalenderdateien. Laden Sie eine ICS-Datei hoch oder fügen Sie die rohe iCal-Daten ein, um alle Ereignisse in einem sauberen, lesbaren Tabellenformat anzuzeigen. Der Parser extrahiert Ereignistitel, Start- und Endzeiten, Orte, Beschreibungen, Teilnehmer und Wiederholungsregeln. Ideal zum Debuggen von Kalenderintegrationen, zum Anzeigen von Kalenderexporten oder zum Extrahieren von Ereignisdaten aus ICS-Dateien. Unterstützt sowohl einzelne Ereignisse als auch wiederkehrende Ereignisreihen mit vollständiger Zeitzonenerfassung. iCal-Parser ist für eine schnelle Vorprüfung von Eingaben, Einstellungen und Ergebnissen gedacht. Nutze das Ergebnis als Entwurf, prüfe Format, Zahlen, Zeichen und Kontext, und bestätige wichtige Ausgaben in deinem eigenen Arbeitsablauf, bevor du sie teilst, veröffentlichst oder in einem Projekt verwendest.",
   "usage_steps": [
     "ICS-Datei hochladen oder Inhalt einfügen",
     "Geparste Ereignisse anzeigen",
-    "Als JSON exportieren"
+    "Als JSON exportieren",
+    "Prüfe das Ergebnis und gleiche es mit deinem Ziel ab.",
+    "Verwende das Ergebnis erst nach der Kontrolle im Zielablauf."
   ],
   "usage_examples": [
     "Kalenderexporte anzeigen",
-    "Ereignisdaten extrahieren"
+    "Ereignisdaten extrahieren",
+    "Eine kurze Eingabe prüfen, bevor der vollständige Inhalt verarbeitet wird.",
+    "Das Ergebnis als Entwurf für Dokumentation, Code, Planung oder Kommunikation nutzen."
+  ],
+  "faqs": [
+    {
+      "question": "Was sollte ich vor der Nutzung von iCal-Parser prüfen?",
+      "answer": "Prüfe Eingaben, Einstellungen, Format und Kontext. Bei wichtigen Ergebnissen solltest du Zahlen, Zeichen und Bedeutung vor dem Teilen oder Veröffentlichen noch einmal kontrollieren."
+    },
+    {
+      "question": "Kann ich das Ergebnis nachträglich ändern?",
+      "answer": "Ja. Passe die Eingabe oder verfügbare Optionen an, führe die Verarbeitung erneut aus und verwende die aktualisierte Ausgabe erst nach einer Prüfung."
+    },
+    {
+      "question": "Warum kann das Ergebnis von einem anderen Werkzeug abweichen?",
+      "answer": "Werkzeuge können Rundung, Analyse, Formatierung oder Darstellung unterschiedlich behandeln. Vergleiche mit derselben Eingabe und beachte die Grenzen der Oberfläche."
+    },
+    {
+      "question": "Kann ich mit einer kurzen Eingabe beginnen?",
+      "answer": "Ja. Beginne mit einer kurzen oder nicht sensiblen Eingabe, um die Form der Ausgabe zu prüfen, bevor du den eigentlichen Inhalt verwendest."
+    },
+    {
+      "question": "Ersetzt das Werkzeug eine manuelle Prüfung?",
+      "answer": "Nein. Es beschleunigt wiederkehrende Arbeit, aber wichtige Ergebnisse sollten auf Genauigkeit, Kontext und Eignung geprüft werden."
+    }
   ]
 }

@@ -1,17 +1,38 @@
 {
-  "detailed_description": "Le séparateur d'images permet de découper une image en plusieurs segments à l'aide d'une grille paramétrable. Techniquement, l'outil analyse les dimensions de l'image source (en pixels) et applique un algorithme de segmentation basé sur les valeurs de lignes et colonnes définies par l'utilisateur. Chaque segment est généré en préservant la résolution originale grâce à une interpolation bicubique lors du redimensionnement. Le format de sortie (PNG, JPEG ou WEBP) est configurable, avec un contrôle précis des marges et du chevauchement entre les pièces. Ce tool est essentiel pour créer des galeries interactives, préparer des assets pour le développement web ou imprimer des affiches en mosaïque. Contrairement aux outils basiques, il permet de gérer des ratios non uniformes et d'exporter les segments en un seul clic, avec un prévisualisation en temps réel de la grille appliquée.",
+  "detailed_description": "Le diviseur d'images en ligne découpe une image importée en une grille simple de lignes et de colonnes directement dans le navigateur. Vous pouvez choisir des préréglages comme 2x2, 3x3, 4x4, 2x3 et 3x2, ou saisir manuellement de 1 à 10 lignes et colonnes. Après l'import, la page affiche une grille rouge sur l'image originale, la taille source et la taille calculée de chaque morceau. En cliquant sur Split, Canvas génère des morceaux PNG rectangulaires de taille égale. Vous pouvez ensuite télécharger une pièce depuis l'aperçu ou enregistrer tous les PNG dans un fichier ZIP. Cet outil convient aux maquettes de grilles sociales, aux supports pédagogiques, aux revues de design et aux grandes illustrations. Il ne propose pas de chevauchement, de choix de format de sortie ni de conservation des métadonnées.",
   "usage_steps": [
-    "Téléchargez l'image via le bouton 'Importer une image' (formats PNG, JPEG, WEBP jusqu'à 20 Mo).",
-    "Ajustez le nombre de lignes avec le curseur 'Nombre de lignes' (de 1 à 20).",
-    "Définissez les colonnes en utilisant le champ numérique 'Colonnes souhaitées' (1 à 20).",
-    "Réglez les marges internes en pixels via les champs 'Espacement horizontal' et 'Espacement vertical'.",
-    "Sélectionnez le format de sortie dans le menu déroulant 'Format d'export' (PNG par défaut).",
-    "Cliquez sur 'Générer les segments' puis téléchargez le dossier ZIP contenant tous les fichiers découpés."
+    "Importez une image depuis le sélecteur de fichier.",
+    "Choisissez un préréglage comme 3x3 ou saisissez de 1 à 10 lignes et colonnes.",
+    "Vérifiez la grille rouge, la taille originale et la taille de chaque morceau.",
+    "Cliquez sur Split pour créer les morceaux PNG dans le navigateur.",
+    "Téléchargez une pièce depuis l’aperçu ou utilisez Download All pour enregistrer un ZIP."
   ],
   "usage_examples": [
-    "Un designer web crée une galerie d'art responsive en découpant une image 4K en 3x3 pour un effet de zoom par segment.",
-    "Un marketeur assemble une story Instagram divisée en 6 parties égales pour un affichage linéaire sur 24h.",
-    "Un imprimeur prépare une affiche A0 en 4 sections A4 avec 5px de marge pour l'assemblage physique.",
-    "Un développeur de jeux vidéo extrait manuellement les frames d'un spritesheet en 8x8 pour une animation 2D."
+    "Diviser une affiche en grille 3x3 pour vérifier une publication visuelle.",
+    "Créer des morceaux PNG égaux depuis une illustration pour une activité pédagogique.",
+    "Découper une bannière en 2x3 afin de relire chaque zone séparément.",
+    "Télécharger tous les morceaux en ZIP après avoir contrôlé la grille et les tailles."
+  ],
+  "faqs": [
+    {
+      "question": "Que crée le diviseur d'images ?",
+      "answer": "Il crée des morceaux PNG rectangulaires et égaux depuis une image selon la grille de lignes et colonnes choisie."
+    },
+    {
+      "question": "Puis-je définir les lignes et colonnes ?",
+      "answer": "Oui. Vous pouvez utiliser les préréglages ou saisir des valeurs de 1 à 10."
+    },
+    {
+      "question": "Puis-je télécharger tous les morceaux ensemble ?",
+      "answer": "Oui. Après la division, Download All enregistre tous les morceaux PNG dans un ZIP."
+    },
+    {
+      "question": "L'image est-elle traitée sur un serveur ?",
+      "answer": "Non. L'import, l'aperçu, la division et le téléchargement se font dans le navigateur."
+    },
+    {
+      "question": "Y a-t-il chevauchement, EXIF ou choix JPEG ?",
+      "answer": "Non. L'outil se limite à des morceaux PNG simples et non chevauchants selon la grille."
+    }
   ]
 }

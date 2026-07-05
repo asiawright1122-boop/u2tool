@@ -1,12 +1,38 @@
 {
-  "detailed_description": "Typing Time Calculator estimates how long it will take to type a document based on word count and typing speed. Enter your text or word count, select your typing speed in words per minute (WPM), and get accurate time estimates. The tool includes preset speeds for different skill levels from beginner to professional typist. Perfect for writers planning their work sessions, students estimating assignment completion time, or anyone curious about typing productivity. Also useful for transcription time estimates.",
+  "detailed_description": "Typing Time Calculator estimates how long a typing task may take from a word count and a words-per-minute speed. Enter the number of words, adjust the WPM slider, or choose one of the preset speed levels for beginner, average, professional, and expert typing speeds. The page shows the pure typing time, a suggested number of breaks based on 25-minute work blocks, and the total time after adding short breaks. It is useful for planning writing sessions, estimating manual transcription effort, or comparing how different typing speeds affect a task. The result is an estimate, so check the word count, speed assumption, breaks, and any extra editing or formatting time before relying on it.",
   "usage_steps": [
-    "Enter word count or paste text",
-    "Set typing speed",
-    "View time estimate"
+    "Enter the word count for the document or typing task.",
+    "Adjust the WPM slider or choose a preset speed level.",
+    "Review the estimated pure typing time.",
+    "Check the suggested break count and total time with breaks.",
+    "Change the word count or WPM to compare another scenario."
   ],
   "usage_examples": [
-    "Plan writing sessions",
-    "Estimate project timelines"
+    "A writer estimates how long it may take to type 1,500 words at 40 WPM.",
+    "A student compares beginner and average typing speeds before planning an assignment session.",
+    "A transcription worker adds break time to a long manual typing estimate.",
+    "A team member checks how a faster WPM assumption changes the schedule for entering notes."
+  ],
+  "faqs": [
+    {
+      "question": "What should I check before using the Typing Time Calculator output?",
+      "answer": "Review assumptions, units, rounding, and input values before relying on the calculated result."
+    },
+    {
+      "question": "Can I edit the result after generating it?",
+      "answer": "Yes. Adjust the input values or available options, generate the result again, and then copy, export, or reuse the updated output in your workflow when the page provides those actions."
+    },
+    {
+      "question": "Why might the result differ from another calculation tool?",
+      "answer": "Different tools can use different assumptions, rounding rules, parsing behavior, or export settings. Compare the same input values and review any notes shown in the interface before relying on the result."
+    },
+    {
+      "question": "Can I start with sample or placeholder data?",
+      "answer": "Yes. Use a small example or non-sensitive sample first, confirm the output shape, and then replace it with the real input you want to process."
+    },
+    {
+      "question": "Does this replace manual review?",
+      "answer": "No. It helps calculate quickly, but important results should still be checked against the correct assumptions."
+    }
   ]
 }

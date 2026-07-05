@@ -1,15 +1,39 @@
 {
-  "detailed_description": "El Convertidor SQL a MongoDB traduce consultas SQL a una sintaxis de consulta equivalente de MongoDB para la migración de bases de datos.",
+  "detailed_description": "El Convertidor SQL a MongoDB ayuda a transformar consultas SQL comunes en una consulta MongoDB equivalente para aprendizaje, prototipos y revisión de consultas sencillas. Puede pegar sentencias SELECT, UPDATE o DELETE sencillas, revisar la colección detectada, ver la operación generada y copiar la consulta resultante. El conversor es útil para entender cómo se traducen filtros WHERE, límites, ordenaciones y actualizaciones básicas al estilo de MongoDB. No sustituye una revisión de arquitectura ni cubre todo SQL avanzado: consultas compuestas, reglas propias de cada motor y agregaciones complejas deben validarse manualmente. Use la salida como punto de partida, compruebe los nombres de colección y campos, y pruebe la consulta en un entorno seguro antes de aplicarla a datos reales.",
   "usage_steps": [
-    "Pega consulta SQL",
-    "Selecciona el driver MongoDB",
-    "Haz clic en Convertir",
-    "Ver sintaxis MongoDB",
-    "Copia la consulta"
+    "Pega una consulta SQL en el área de entrada",
+    "Usa los ejemplos rápidos si necesitas una consulta de prueba",
+    "Revisa si el conversor detecta una operación compatible",
+    "Comprueba la colección, el tipo de operación y la consulta MongoDB generada",
+    "Copia la consulta y ajústala a tu esquema real antes de ejecutarla",
+    "Prueba el resultado en una base de datos de desarrollo o staging"
   ],
   "usage_examples": [
-    "Migra SQL a MongoDB",
-    "Aprende la sintaxis de MongoDB",
-    "Convierte WHERE a $match"
+    "Convierte un SELECT con WHERE y LIMIT en una consulta find",
+    "Transforma una consulta de pedidos recientes con ORDER BY y LIMIT",
+    "Genera una base para UPDATE con una condición por identificador",
+    "Revisa cómo una condición DELETE simple se expresa en MongoDB"
+  ],
+  "faqs": [
+    {
+      "question": "¿El conversor soporta todo el lenguaje SQL?",
+      "answer": "No. Está pensado para consultas comunes y ejemplos de aprendizaje. Las consultas compuestas o con lógica específica del motor deben revisarse manualmente."
+    },
+    {
+      "question": "¿Puedo ejecutar directamente la consulta generada?",
+      "answer": "Debe probarla primero en un entorno seguro. Compruebe nombres de campos, tipos de datos, índices y permisos antes de usarla en producción."
+    },
+    {
+      "question": "¿Qué operaciones reconoce mejor?",
+      "answer": "El flujo está orientado a SELECT, UPDATE y DELETE sencillos con filtros, límites y ordenaciones básicas."
+    },
+    {
+      "question": "¿Sirve para aprender MongoDB?",
+      "answer": "Sí. Es útil para comparar una consulta SQL conocida con una forma MongoDB aproximada y entender la estructura de la operación."
+    },
+    {
+      "question": "¿La conversión reemplaza una migración de base de datos?",
+      "answer": "No. Es una ayuda para crear borradores de consulta; una migración real requiere modelado de documentos, pruebas y revisión de rendimiento."
+    }
   ]
 }

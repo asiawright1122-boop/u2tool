@@ -1,16 +1,38 @@
 {
-  "detailed_description": "L'éditeur hexadécimal est un convertisseur de texte et de valeurs hexadécimales exécuté dans le navigateur pour les vérifications rapides au niveau des octets. Saisissez du texte pour l'encoder en octets hexadécimaux UTF-8 en majuscules, ou collez une séquence hexadécimale pour la décoder en texte lisible. Le flux reste volontairement simple : deux zones de texte modifiables, des boutons de conversion explicites et des commandes de copie pour chaque côté. L'outil est pratique pour vérifier des payloads d'API, inspecter des valeurs de logs, préparer des chaînes de test ou montrer comment les caractères se représentent en octets hexadécimaux. Toutes les conversions s'effectuent dans le navigateur via les API standard d'encodage et de décodage de texte, afin que les valeurs saisies restent sur l'appareil.",
+  "detailed_description": "L'éditeur hexadécimal convertit du texte en octets hexadécimaux UTF-8 et décode une suite hexadécimale en texte lisible directement dans le navigateur. L'interface reste volontairement simple : une zone Texte, une zone Hexadécimal, un bouton pour convertir vers l'hexadécimal, un bouton pour revenir vers le texte et des commandes de copie. Cette page est utile pour vérifier une valeur de log, préparer un exemple de payload, expliquer la représentation UTF-8 d'un caractère ou comparer rapidement une chaîne texte avec sa forme hexadécimale. L'outil ne modifie pas de fichier binaire et n'envoie pas le contenu à un serveur ; il traite uniquement le texte collé dans la page.",
   "usage_steps": [
-    "1. Saisissez ou collez du texte dans le champ Texte.",
-    "2. Cliquez sur Vers hexadécimal pour encoder le texte en octets hexadécimaux en majuscules séparés par des espaces.",
-    "3. Collez une séquence hexadécimale dans le champ Hexadécimal lorsque vous souhaitez décoder une valeur existante.",
-    "4. Cliquez sur Vers texte pour décoder les octets hexadécimaux en texte.",
-    "5. Utilisez Copier à côté du champ voulu pour récupérer le texte ou le résultat hexadécimal."
+    "Collez une chaîne courte dans le champ Texte lorsque vous voulez obtenir sa représentation hexadécimale.",
+    "Cliquez sur Vers hexadécimal pour générer des octets UTF-8 en majuscules séparés par des espaces.",
+    "Collez une suite comme 48 65 6C 6C 6F dans le champ Hexadécimal pour tester un décodage.",
+    "Cliquez sur Vers texte pour convertir les paires hexadécimales en texte lisible.",
+    "Copiez le côté Texte ou Hexadécimal après avoir relu le résultat et vérifié l'encodage attendu."
   ],
   "usage_examples": [
-    "Exemple 1 : convertir un court jeton d'API ou une valeur de log en octets hexadécimaux pour une note de débogage.",
-    "Exemple 2 : vérifier qu'une séquence comme 48 65 6C 6C 6F se décode en texte lisible.",
-    "Exemple 3 : comparer la représentation UTF-8 hexadécimale de la ponctuation, des espaces et des caractères non ASCII.",
-    "Exemple 4 : copier une chaîne encodée en hexadécimal dans une documentation ou un jeu de tests sans quitter le navigateur."
+    "Vérifier qu'une valeur de log ou un jeton de test contient bien les octets attendus.",
+    "Montrer dans une note de débogage comment un caractère accentué est encodé en UTF-8.",
+    "Décoder une courte séquence hexadécimale reçue dans une documentation d'API.",
+    "Comparer deux chaînes simples en regardant leurs différences au niveau des octets."
+  ],
+  "faqs": [
+    {
+      "question": "Cet outil édite-t-il des fichiers binaires ?",
+      "answer": "Non. Il convertit du texte et des suites hexadécimales collées dans deux zones de texte. Il ne charge pas, ne modifie pas et n'exporte pas de fichier binaire."
+    },
+    {
+      "question": "Quel encodage est utilisé pour le texte ?",
+      "answer": "La conversion texte vers hexadécimal utilise les octets UTF-8 produits par le navigateur. Les caractères non ASCII peuvent donc occuper plusieurs octets."
+    },
+    {
+      "question": "Dois-je garder les espaces dans l'entrée hexadécimale ?",
+      "answer": "Les espaces sont acceptés pour la lisibilité. L'outil regroupe ensuite les caractères hexadécimaux par paires avant de tenter le décodage."
+    },
+    {
+      "question": "Pourquoi certains résultats affichent des caractères inattendus ?",
+      "answer": "Une paire hexadécimale invalide, une séquence incomplète ou un texte qui n'est pas de l'UTF-8 peut produire un résultat surprenant. Testez d'abord une séquence courte et connue."
+    },
+    {
+      "question": "Le contenu est-il envoyé ailleurs ?",
+      "answer": "Non. La conversion se fait dans le navigateur avec les API standard TextEncoder et TextDecoder, puis vous pouvez copier le résultat si nécessaire."
+    }
   ]
 }

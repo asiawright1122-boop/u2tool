@@ -1,17 +1,39 @@
 {
-  "detailed_description": "Le générateur de diagrammes de Venn est un outil technique permettant de visualiser les relations logiques entre des ensembles de données complexes. Il utilise des algorithmes de géométrie computationnelle pour représenter graphiquement les intersections, unions et différences symétriques de plusieurs ensembles via des zones circulaires ou elliptiques superposées (jusqu'à 5 ensembles). Le moteur interne convertit les données textuelles saisies en coordonnées SVG précises, en respectant les proportions des cardinalités via un algorithme de mise à l'échelle dynamique. Ce dispositif est essentiel pour les chercheurs en théorie des ensembles, les analystes de données confrontés à des comparaisons de clusters, ou les enseignants illustrant des concepts de logique booléenne. Contrairement aux outils classiques, il permet d'intégrer des valeurs numériques exactes pour les intersections, d'exporter des fichiers vectoriels pour une utilisation académique, et de manipuler manuellement les positions des cercles via une interface WebGL pour affiner la lisibilité des relations complexes.",
+  "detailed_description": "Le générateur de diagrammes de Venn crée une visualisation SVG simple pour comparer deux ou trois ensembles. Il convient aux cours, aux ateliers d'analyse, aux documents de planification et aux présentations qui doivent montrer rapidement ce qui est commun, distinct ou partagé entre plusieurs groupes. Vous pouvez choisir le mode deux ou trois ensembles, modifier les libellés, ajuster les couleurs, saisir une courte description pour chaque cercle et exporter le résultat en PNG ou en SVG. Le rendu privilégie la clarté visuelle plutôt qu'un calcul automatique des surfaces proportionnelles : les cercles restent lisibles et faciles à expliquer, même lorsque les tailles réelles des groupes ne sont pas connues. Utilisez cet outil pour préparer une première figure, puis vérifiez les libellés, la légende et le contexte avant de publier le diagramme dans un rapport ou une page de cours.",
   "usage_steps": [
-    "Sélectionnez le nombre d'ensembles (de 2 à 5) via le sélecteur de topologie",
-    "Entrez les éléments de chaque ensemble dans les zones de texte structurées en JSON",
-    "Ajustez les couleurs et opacités des cercles via le sélecteur chromatique en temps réel",
-    "Activez/désactivez l'affichage des valeurs d'intersection dans les zones de surbrillance",
-    "Utilisez le mode édition interactive pour redimensionner manuellement les cercles avec la souris",
-    "Exportez le diagramme en SVG ou PNG avec résolution personnalisable jusqu'à high-resolution"
+    "Choisissez le mode à deux ou trois ensembles selon la comparaison à présenter",
+    "Saisissez le titre du diagramme et les libellés de chaque ensemble",
+    "Ajoutez une courte description pour préciser le rôle de chaque groupe",
+    "Ajustez les couleurs afin de rendre les zones superposées lisibles",
+    "Vérifiez que les libellés restent compréhensibles dans l'aperçu SVG",
+    "Téléchargez le diagramme en PNG ou en SVG selon l'usage prévu"
   ],
   "usage_examples": [
     "Comparaison des gènes différentiellement exprimés entre 3 conditions expérimentales en biologie moléculaire",
     "Visualisation des chevauchements entre segments de marché identifiés par analyse de données clients",
     "Enseignement interactif des opérations ensemblistes (union, intersection, complémentarité) en cours de mathématiques discrètes",
     "Analyse sociologique des réponses partiellement superposées à un questionnaire sur les comportements d'achat"
+  ],
+  "faqs": [
+    {
+      "question": "Le diagramme calcule-t-il automatiquement des intersections proportionnelles ?",
+      "answer": "Non. L'outil fournit une mise en page visuelle claire pour deux ou trois ensembles, mais les surfaces ne sont pas calculées à partir de cardinalités numériques."
+    },
+    {
+      "question": "Puis-je exporter le résultat ?",
+      "answer": "Oui. Le diagramme peut être téléchargé en PNG pour une image prête à partager ou en SVG pour une édition vectorielle."
+    },
+    {
+      "question": "Combien d'ensembles sont pris en charge ?",
+      "answer": "Le composant propose un mode à deux ensembles et un mode à trois ensembles, adaptés aux comparaisons les plus courantes."
+    },
+    {
+      "question": "Les données sont-elles envoyées à un serveur ?",
+      "answer": "Le diagramme est construit dans le navigateur à partir des libellés et descriptions saisis sur la page."
+    },
+    {
+      "question": "Quand utiliser ce générateur plutôt qu'un outil statistique ?",
+      "answer": "Utilisez-le pour expliquer une relation logique ou préparer une illustration. Pour une analyse quantitative exacte, conservez les calculs dans votre outil de données principal."
+    }
   ]
 }

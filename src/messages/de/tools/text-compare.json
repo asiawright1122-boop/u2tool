@@ -1,17 +1,39 @@
 {
-  "detailed_description": "Der Text Similarity Compare-Tool analysiert die semantische und lexikalische Ähnlichkeit zwischen zwei Textdokumenten durch die Anwendung moderner Algorithmen der natürlichen Sprachverarbeitung. Technisch basiert das Tool auf einer Kombination aus Levenshtein-Distanz-Berechnung, Cosinus-Ähnlichkeit und Jaro-Winkler-Metrik, um präzise Übereinstimmungswerte zu generieren. Die Eingabetexte werden zunächst tokenisiert, anschließend werden Bag-of-Words-Modelle erstellt, um Vektorrepräsentationen zu generieren. Die semantische Bewertung erfolgt durch Normalisierung von Stopwörtern, Lemmatisierung und TF-IDF-Gewichtung. Zusätzlich wird ein Alignment-Algorithmus angewandt, der identische und abweichende Textsegmente visuell hervorhebt. Dieses Tool ist unverzichtbar für Entwickler, die Code-Duplikate erkennen möchten, Redakteure, die Versionen von Dokumenten vergleichen müssen, oder Forscher, die Textoriginalität überprüfen. Die browserbasierte Implementierung garantiert datenschutzkonforme Verarbeitung ohne Serverkommunikation, während die Kombination aus lexikalischer und struktureller Analyse einzigartige Einsichten liefert.",
+  "detailed_description": "Der Text Similaritätsvergleich vergleicht zwei eingefügte Texte direkt im Browser. Sobald beide Felder Inhalt enthalten, berechnet die Seite eine zeichenbasierte Ähnlichkeit aus der Levenshtein-Distanz, eine Wortähnlichkeit über gemeinsame Wörter, die Editierdistanz sowie die Anzahl gemeinsamer Wörter im Verhältnis zur Gesamtmenge. Das Tool eignet sich für schnelle Plausibilitätschecks bei kurzen Dokumentvarianten, Textbausteinen, Übersetzungsentwürfen, Produktbeschreibungen oder Code-Kommentaren. Es führt keine semantische NLP-Bewertung, keine Datei-Uploads, keine TF-IDF-Analyse und keine farbige Diff-Ansicht aus. Nutze die Werte als Hinweis auf Nähe oder Abweichung und prüfe wichtige Änderungen weiterhin manuell im Kontext.",
   "usage_steps": [
-    "1. Navigieren Sie zur Tool-Seite unter /tools/text-compare.",
-    "2. Geben Sie den ersten Text in das linke Eingabefeld mit der Bezeichnung 'Quelltext' ein oder laden Sie eine TXT-Datei hoch.",
-    "3. Fügen Sie den zu vergleichenden Text in das rechte Feld 'Zieltext' ein oder ziehen Sie eine Datei per Drag-and-Drop in das Feld.",
-    "4. Wählen Sie im Abschnitt 'Ähnlichkeitsmethode' zwischen Levenshtein, Cosinus oder Jaro-Winkler.",
-    "5. Aktivieren Sie die Option 'Detaillierte Differenzierung', um zusätzlich Token-Vergleiche und Vokabular-Überlappungen angezeigt zu bekommen.",
-    "6. Klicken Sie auf 'Berechnen' und analysieren Sie die Ergebnisse mit dem farblich markierten Vergleich und dem prozentualen Ähnlichkeitsindex."
+    "Füge den ersten Text in das linke Textfeld ein.",
+    "Füge den zweiten Text in das rechte Textfeld ein.",
+    "Warte, bis die Kennzahlen unter den Eingaben erscheinen.",
+    "Vergleiche Zeichenähnlichkeit, Wortähnlichkeit, Editierdistanz und gemeinsame Wörter.",
+    "Passe einen Text an, wenn die Werte nicht zu deiner Erwartung passen.",
+    "Prüfe wichtige Änderungen zusätzlich manuell."
   ],
   "usage_examples": [
-    "Ein Entwicklungsleiter identifiziert redundante Codeabschnitte in verschiedenen Projektzweigen durch wiederholten Vergleich von Quelltexten.",
-    "Ein Dokumentenmanager überprüft zwei Versionen einer Benutzeranleitung, um Änderungsumfang und -muster visuell darzustellen.",
-    "Ein Forschungsteam analysiert wissenschaftliche Arbeiten auf potenzielle Plagiate durch semantische Ähnlichkeitsbewertung über mehrere Abschnitte hinweg.",
-    "Ein Jurist vergleicht Klauseln in Verträgen, um Abweichungen in Rechtsformulierungen und vertraglichen Bedingungen präzise zu quantifizieren."
+    "Zwei Varianten eines kurzen Hilfetextes auf grobe Ähnlichkeit prüfen.",
+    "Eine übersetzte Produktbeschreibung mit einer früheren Version vergleichen.",
+    "Kontrollieren, ob zwei Listen viele gemeinsame Wörter enthalten.",
+    "Vor einem Review schnell sehen, wie stark sich ein Textentwurf geändert hat."
+  ],
+  "faqs": [
+    {
+      "question": "Welche Kennzahlen berechnet das Tool?",
+      "answer": "Es zeigt Zeichenähnlichkeit, Wortähnlichkeit, Editierdistanz und gemeinsame Wörter an."
+    },
+    {
+      "question": "Versteht das Tool die Bedeutung des Textes?",
+      "answer": "Nein. Die Werte basieren auf Zeichenabstand und Wortüberschneidung, nicht auf semantischer Analyse."
+    },
+    {
+      "question": "Kann ich Dateien hochladen?",
+      "answer": "Nein. Die aktuelle Oberfläche arbeitet mit zwei Textfeldern zum Einfügen von Inhalt."
+    },
+    {
+      "question": "Warum sehe ich kein Ergebnis?",
+      "answer": "Beide Textfelder müssen Inhalt enthalten, bevor die Vergleichswerte angezeigt werden."
+    },
+    {
+      "question": "Ersetzt das Werkzeug ein Diff- oder Plagiatstool?",
+      "answer": "Nein. Es beschleunigt wiederkehrende Arbeit, aber wichtige Ergebnisse sollten auf Genauigkeit, Kontext und Eignung geprüft werden."
+    }
   ]
 }

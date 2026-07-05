@@ -4,12 +4,12 @@
 
 This audit checks tool support content against search-engine quality expectations and the actual U2Tool browser-first implementation. The primary recovery risk addressed here is not raw indexability: GSC Coverage showed indexed pages continued to rise while impressions collapsed. The next defensible layer is content trust, overclaiming, and thin support content.
 
-- Tool message files scanned: 5483
-- English tool files scanned: 550
-- Popular English tool files checked for depth: 96
+- Tool message files scanned: 5570
+- English tool files scanned: 557
+- Popular English tool files checked for depth: 100
 - Files with high-confidence implementation overclaims: 0
-- Files with medium-confidence claims for future review: 0
-- Popular English files with depth gaps: 0
+- Files with medium-confidence claims for future review: 4
+- Popular English files with depth gaps: 1
 
 Runtime mitigation: high-confidence support-content issues are blocked by `assessSupportContentTrust` and replaced by safe fallback support content on tool detail pages.
 
@@ -25,7 +25,9 @@ Runtime mitigation: high-confidence support-content issues are blocked by `asses
 
 | Code | Severity | Count | Meaning |
 |---|---:|---:|---|
-| - | - | - | No issues found. |
+| `redis-runtime` | medium | 4 | Mentions Redis-specific behavior that should be verified against the actual tool UI. |
+| `server-side-reference` | medium | 2 | References server-side behavior on a browser-first tool page and should be verified. |
+| `thin-detailed-description` | depth | 1 | Popular English tool has a short detailed_description (...). |
 
 ## High-Confidence Overclaim Samples
 
@@ -39,7 +41,7 @@ These are not automatic noindex problems. They are prioritization targets for co
 
 | Tool | Detailed Chars | Steps | Examples | FAQs | Gap Codes |
 |---|---:|---:|---:|---:|---|
-| - | - | - | - | - | No popular English depth gaps found. |
+| `developer-cryptography-toolbox` | 145 | 4 | 3 | 3 | `thin-detailed-description` |
 
 ## Recovery Actions
 

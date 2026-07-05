@@ -1,17 +1,39 @@
 {
-  "detailed_description": "El GIF Maker es una herramienta avanzada para la creación de GIFs animados a partir de múltiples imágenes. Esta herramienta permite a los usuarios combinar una serie de imágenes en una animación fluida y atractiva, ideal para uso en redes sociales, presentaciones web, y proyectos multimedia. Desde diseñadores gráficos hasta desarrolladores web, el GIF Maker ofrece una plataforma intuitiva y potente para la edición de imágenes en movimiento. Los usuarios pueden ajustar la duración de cada cuadro, la velocidad de la animación, y aplicar diversos filtros y efectos para personalizar su GIF. Además, la herramienta soporta formatos de imagen estándar como PNG, JPEG, y BMP, facilitando la integración con otros proyectos de diseño. La funcionalidad de exportación permite guardar el GIF en diferentes resoluciones y tamaños, optimizando la calidad y el rendimiento para diferentes plataformas.",
+  "detailed_description": "El Creador de GIFs combina varias imágenes en una animación GIF directamente desde el navegador. La herramienta permite cargar archivos de imagen, ordenar los fotogramas, eliminar los que no sirven, ajustar la duración de cada cuadro en milisegundos, cambiar la calidad de codificación y decidir si la animación debe repetirse en bucle. Al generar el GIF, las imágenes se centran sobre un lienzo del tamaño máximo necesario para que todos los fotogramas encajen sin deformarse. Es una opción práctica para crear demostraciones breves, secuencias antes/después, animaciones simples para documentación o piezas visuales ligeras para compartir. Antes de descargar, conviene revisar el resultado: el ritmo final depende de la duración elegida y de la cantidad de imágenes cargadas.",
   "usage_steps": [
-    "Paso 1: Visite la página de GIF Maker y haga clic en el botón 'Seleccionar Imágenes' para cargar los archivos de imagen que desea usar en su animación.",
-    "Paso 2: Ajuste la orden de las imágenes arrastrándolas en el panel de 'Secuencia de Imágenes'. Puede agregar o eliminar imágenes según sea necesario.",
-    "Paso 3: Personalice la duración de cada cuadro en milisegundos utilizando el control deslizante 'Duración del Cuadro'. Ajuste esta opción para controlar la velocidad de la animación.",
-    "Paso 4: Aplique efectos y filtros a las imágenes seleccionadas a través del menú 'Efectos y Filtros'. Elija entre una variedad de opciones para mejorar la apariencia visual de su GIF.",
-    "Paso 5: Configure la resolución y el tamaño del GIF en la sección 'Configuración de Exportación'. Seleccione una opción que se adapte a su plataforma de destino, ya sea para web, redes sociales, o descarga local.",
-    "Paso 6: Haga clic en el botón 'Crear GIF' para generar el archivo. Una vez que el proceso de creación esté completo, podrá descargar el GIF animado directamente desde la plataforma."
+    "Paso 1: abre la herramienta y selecciona dos o más imágenes para usarlas como fotogramas.",
+    "Paso 2: revisa la lista de imágenes cargadas y cambia el orden con los botones de mover arriba o abajo.",
+    "Paso 3: elimina cualquier fotograma que no quieras incluir en la animación final.",
+    "Paso 4: ajusta la duración del cuadro en milisegundos para controlar si el GIF avanza rápido o despacio.",
+    "Paso 5: modifica la calidad de codificación y activa o desactiva la repetición en bucle según el uso previsto.",
+    "Paso 6: haz clic en crear GIF, espera la vista previa y descarga el archivo generado."
   ],
   "usage_examples": [
-    "Ejemplo 1: Un diseñador gráfico puede usar el GIF Maker para crear una animación visual que muestre las diferentes etapas de un proyecto de diseño, desde el boceto inicial hasta la versión final, para compartir en su portfolio en línea.",
-    "Ejemplo 2: Un desarrollador web puede generar un GIF que ilustre los pasos de un tutorial interactivo, como la configuración de un plugin en WordPress, para integrarlo en una guía de usuario en su sitio web.",
-    "Ejemplo 3: Un creador de contenido en redes sociales puede utilizar el GIF Maker para producir una animación corta y atractiva que promocione un nuevo producto o evento, optimizando la animación para que se vea bien en Instagram Stories.",
-    "Ejemplo 4: Un educador puede crear un GIF animado que explique un concepto matemático o científico de manera visual, utilizando imágenes secuenciales para mostrar el proceso paso a paso, y compartirlo con sus estudiantes en una plataforma de aprendizaje en línea."
+    "Ejemplo 1: Un diseñador convierte varias capturas de una interfaz en una animación corta para mostrar el flujo de una pantalla.",
+    "Ejemplo 2: Un desarrollador crea un GIF con pasos de instalación a partir de imágenes exportadas de una guía.",
+    "Ejemplo 3: Un equipo de producto prepara una secuencia antes/después para comparar cambios visuales sin montar un video.",
+    "Ejemplo 4: Un docente reúne imágenes de un proceso en orden y ajusta el intervalo de los fotogramas para explicarlo con movimiento."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Creador de GIFs?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta de imagen?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

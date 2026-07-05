@@ -1,15 +1,38 @@
 {
-  "detailed_description": "O Encontrador de Importações Não Utilizadas varre seu código para identificar importações que são declaradas mas nunca utilizadas.",
+  "detailed_description": "O Encontrador de Importações Não Utilizadas analisa código colado no navegador e destaca nomes importados que não aparecem no restante do arquivo. Ele mostra cada declaração de import, separa nomes usados e não usados, conta os achados e gera uma versão limpa para copiar. É útil para revisar arquivos JavaScript ou TypeScript pequenos antes de um commit, mas não substitui lint, type-check ou uma análise completa de projeto.",
   "usage_steps": [
-    "Cole código com importações",
-    "Selecione o idioma",
-    "Clique em Analisar",
-    "Visualize as importações não utilizadas",
-    "Copie o código limpo"
+    "Cole um trecho JavaScript ou TypeScript com declarações import no campo de código.",
+    "Use Carregar exemplo se quiser ver primeiro o formato esperado.",
+    "Revise os cartões com linhas de import, nomes usados e nomes não usados.",
+    "Confira a contagem de imports e o código limpo gerado abaixo.",
+    "Copie o código limpo e revise manualmente antes de aplicar no projeto."
   ],
   "usage_examples": [
-    "Limpe importações do npm",
-    "Reduza o tamanho do pacote",
-    "Mantenha importações limpas"
+    "Encontrar imports React ou utilitários declarados e não usados em um componente.",
+    "Limpar um arquivo TypeScript pequeno antes de abrir um pull request.",
+    "Comparar a lista de nomes usados e não usados depois de refatorar funções.",
+    "Gerar uma versão limpa de um snippet para documentação ou exemplo de código."
+  ],
+  "faqs": [
+    {
+      "question": "A ferramenta analisa um projeto inteiro?",
+      "answer": "Não. Ela trabalha com o código colado na página e é mais indicada para arquivos ou snippets pequenos."
+    },
+    {
+      "question": "Ela executa lint ou type-check?",
+      "answer": "Não. A página usa uma análise leve no navegador e não substitui lint, type-check ou revisão de build."
+    },
+    {
+      "question": "O código é enviado para um servidor?",
+      "answer": "Não. A análise acontece no navegador enquanto você usa a página."
+    },
+    {
+      "question": "Posso aplicar o código limpo diretamente?",
+      "answer": "Use a saída como ponto de partida. Revise aliases, imports com efeitos colaterais e padrões específicos do seu projeto antes de salvar."
+    },
+    {
+      "question": "O que devo revisar antes de usar o resultado de Encontrador de Importações Não Utilizadas?",
+      "answer": "Revise entradas, opções, formato e contexto. Em resultados importantes, confira números, caracteres e significado antes de compartilhar ou publicar."
+    }
   ]
 }

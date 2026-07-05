@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Der Metrische-Imperialer-Währungsumrechner ist ein umfassendes Tool zur Umrechnung von Einheiten, das Umrechnungen für Länge, Gewicht, Volumen, Temperatur, Fläche und Geschwindigkeit unterstützt. Er ermöglicht die einfache Umrechnung zwischen metrischen Einheiten (Meter, Kilogramm, Liter) und imperialen Einheiten (Fuß, Pfund, Gallonen) mit sofortigen Ergebnissen.",
+  "detailed_description": "Der Metrische-Imperialer-Währungsumrechner ist ein umfassendes Tool zur Umrechnung von Einheiten, das Umrechnungen für Länge, Gewicht, Volumen, Temperatur, Fläche und Geschwindigkeit unterstützt. Er ermöglicht die einfache Umrechnung zwischen metrischen Einheiten (Meter, Kilogramm, Liter) und imperialen Einheiten (Fuß, Pfund, Gallonen) mit sofortigen Ergebnissen. Metrischer-Imperialer-Währungsumrechner ist für eine schnelle Vorprüfung von Eingaben, Einstellungen und Ergebnissen gedacht. Nutze das Ergebnis als Entwurf, prüfe Format, Zahlen, Zeichen und Kontext, und bestätige wichtige Ausgaben in deinem eigenen Arbeitsablauf, bevor du sie teilst, veröffentlichst oder in einem Projekt verwendest.",
   "usage_steps": [
     "Wählen Sie eine Umrechnungskategorie aus (Länge, Gewicht, Volumen usw.).",
     "Geben Sie den Wert ein, den Sie umrechnen möchten.",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Konvertieren Sie Kilometer in Meilen für die Reiseplanung.",
     "Konvertieren Sie Kilogramm in Pfund zur Gewichtsüberwachung.",
-    "Konvertieren Sie Celsius in Fahrenheit für Temperaturvergleiche."
+    "Konvertieren Sie Celsius in Fahrenheit für Temperaturvergleiche.",
+    "Eine kurze Eingabe prüfen, bevor der vollständige Inhalt verarbeitet wird."
+  ],
+  "faqs": [
+    {
+      "question": "Was sollte ich vor der Nutzung von Metrischer-Imperialer-Währungsumrechner prüfen?",
+      "answer": "Prüfe Eingaben, Einstellungen, Format und Kontext. Bei wichtigen Ergebnissen solltest du Zahlen, Zeichen und Bedeutung vor dem Teilen oder Veröffentlichen noch einmal kontrollieren."
+    },
+    {
+      "question": "Kann ich das Ergebnis nachträglich ändern?",
+      "answer": "Ja. Passe die Eingabe oder verfügbare Optionen an, führe die Verarbeitung erneut aus und verwende die aktualisierte Ausgabe erst nach einer Prüfung."
+    },
+    {
+      "question": "Warum kann das Ergebnis von einem anderen Werkzeug abweichen?",
+      "answer": "Werkzeuge können Rundung, Analyse, Formatierung oder Darstellung unterschiedlich behandeln. Vergleiche mit derselben Eingabe und beachte die Grenzen der Oberfläche."
+    },
+    {
+      "question": "Kann ich mit einer kurzen Eingabe beginnen?",
+      "answer": "Ja. Beginne mit einer kurzen oder nicht sensiblen Eingabe, um die Form der Ausgabe zu prüfen, bevor du den eigentlichen Inhalt verwendest."
+    },
+    {
+      "question": "Ersetzt das Werkzeug eine manuelle Prüfung?",
+      "answer": "Nein. Es beschleunigt wiederkehrende Arbeit, aber wichtige Ergebnisse sollten auf Genauigkeit, Kontext und Eignung geprüft werden."
+    }
   ]
 }

@@ -1,17 +1,39 @@
 {
-  "detailed_description": "El Generador de Diagramas de Venn permite crear representaciones visuales precisas de relaciones lógicas entre conjuntos mediante principios matemáticos de teoría de conjuntos. Esta herramienta implementa algoritmos de renderizado dinámico para calcular proporciones de intersecciones, uniones y diferencias simétricas, generando diagramas de 2 a 5 conjuntos con soporte para anotaciones personalizadas. Utiliza coordenadas polares para posicionar elementos y optimiza la legibilidad mediante ajustes automáticos de tamaño de fuente y transparencia en áreas superpuestas. Es esencial para profesionales que requieren visualizar relaciones complejas en datos multidimensionales, como en análisis de mercado, biología computacional o lógica formal. Al integrar opciones para exportar en formatos vectoriales SVG y PDF, permite obtener gráficos listos para publicaciones académicas o presentaciones corporativas. Su motor interno procesa entradas en formato JSON o CSV, validando automáticamente la consistencia de los datos para evitar solapamientos imposibles geométricamente.",
+  "detailed_description": "El Generador de Diagramas de Venn crea diagramas visuales sencillos de 2 o 3 conjuntos usando círculos SVG editables. Puedes cambiar el título, elegir el modo de dos o tres conjuntos, editar las etiquetas, ajustar el color de cada círculo y modificar su radio para representar relaciones de forma clara. La vista previa se actualiza con esos controles y mantiene posiciones predefinidas para cada modo. La herramienta no calcula proporciones estadísticas ni valida datos de conjuntos; está pensada para crear una ilustración rápida para clases, documentos, lluvia de ideas, presentaciones y comparaciones conceptuales. Cuando el diseño esté listo, puedes descargarlo como PNG o SVG para reutilizarlo en otros materiales.",
   "usage_steps": [
-    "Selecciona el número de conjuntos (de 2 a 5) usando los controles deslizantes en el panel de configuración inicial",
-    "Introduce valores numéricos para cada sección en la tabla de datos o carga un archivo CSV con tus conjuntos",
-    "Personaliza los colores de los círculos y transparencias mediante el selector RGB avanzado en la barra lateral",
-    "Activa la opción 'Ajuste automático' para optimizar la posición y tamaño de los elementos según las proporciones de datos",
-    "Utiliza la herramienta de anotación para agregar etiquetas matemáticas (como símbolos de intersección ∩ o unión ∪) directamente en el diagrama",
-    "Exporta el resultado en formato SVG, PNG o PDF con opciones de resolución ajustable hasta high-resolution"
+    "Escribe un título para el diagrama si quieres identificar el tema principal",
+    "Elige el modo de 2 conjuntos o 3 conjuntos según la comparación que quieras mostrar",
+    "Edita las etiquetas de cada círculo para nombrar los grupos o ideas",
+    "Ajusta el color y el radio de cada círculo desde los controles disponibles",
+    "Revisa la vista previa con las posiciones predefinidas del modo seleccionado",
+    "Descarga el resultado como PNG para usarlo rápido o como SVG si necesitas seguir editándolo"
   ],
   "usage_examples": [
-    "Un equipo de marketing analiza solapamientos entre segmentos de clientes que utilizan diferentes canales digitales",
-    "Un biólogo compara expresiones génicas en tres condiciones experimentales para identificar biomarcadores comunes",
-    "Un gerente de proyectos visualiza la asignación cruzada de recursos entre múltiples equipos en una organización",
-    "Un académico estudia las intersecciones entre respuestas a encuestas con múltiples categorías no excluyentes"
+    "Un profesor crea un diagrama de tres conjuntos para explicar similitudes y diferencias entre conceptos de una clase",
+    "Un equipo de marketing dibuja una comparación visual entre audiencia orgánica, email y redes sociales antes de una reunión",
+    "Un gerente de producto prepara un SVG con áreas superpuestas para discutir prioridades entre usuarios, negocio y técnica",
+    "Un estudiante usa dos círculos con colores distintos para resumir una comparación simple en una presentación"
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Generador de diagramas de Venn?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta de gráficos?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

@@ -1,12 +1,38 @@
 {
-  "detailed_description": "Der vCard-Parser ist ein Online-Tool zum Lesen und Anzeigen von VCF-Kontaktdaten. Laden Sie eine VCF-Datei hoch oder fügen Sie die rohen vCard-Daten ein, um alle Kontaktdaten in einem sauberen, organisierten Format anzuzeigen. Der Parser extrahiert Namen, Telefonnummern, E-Mail-Adressen, physische Adressen, Organisationen, Jobtitel, Fotos und soziale Profile. Unterstützung für vCard-Versionen 2.1, 3.0 und 4.0. Ideal zum Anzeigen von Kontaktausgaben, zum Debuggen von Kontaktsynchronisierungsproblemen oder zum Extrahieren von Daten aus VCF-Dateien ohne diese in Ihre Kontakte-App zu importieren.",
+  "detailed_description": "Der vCard-Parser ist ein Online-Tool zum Lesen und Anzeigen von VCF-Kontaktdaten. Laden Sie eine VCF-Datei hoch oder fügen Sie die rohen vCard-Daten ein, um alle Kontaktdaten in einem sauberen, organisierten Format anzuzeigen. Der Parser extrahiert Namen, Telefonnummern, E-Mail-Adressen, physische Adressen, Organisationen, Jobtitel, Fotos und soziale Profile. Unterstützung für vCard-Versionen 2.1, 3.0 und 4.0. Ideal zum Anzeigen von Kontaktausgaben, zum Debuggen von Kontaktsynchronisierungsproblemen oder zum Extrahieren von Daten aus VCF-Dateien ohne diese in Ihre Kontakte-App zu importieren. vCard-Parser ist für eine schnelle Vorprüfung von Eingaben, Einstellungen und Ergebnissen gedacht. Nutze das Ergebnis als Entwurf, prüfe Format, Zahlen, Zeichen und Kontext, und bestätige wichtige Ausgaben in deinem eigenen Arbeitsablauf, bevor du sie teilst, veröffentlichst oder in einem Projekt verwendest.",
   "usage_steps": [
     "VCF-Datei hochladen oder Inhalt einfügen",
     "Geparste Kontakte anzeigen",
-    "Als JSON exportieren"
+    "Als JSON exportieren",
+    "Prüfe das Ergebnis und gleiche es mit deinem Ziel ab.",
+    "Verwende das Ergebnis erst nach der Kontrolle im Zielablauf."
   ],
   "usage_examples": [
     "Kontaktexporte anzeigen",
-    "Kontaktdaten extrahieren"
+    "Kontaktdaten extrahieren",
+    "Eine kurze Eingabe prüfen, bevor der vollständige Inhalt verarbeitet wird.",
+    "Das Ergebnis als Entwurf für Dokumentation, Code, Planung oder Kommunikation nutzen."
+  ],
+  "faqs": [
+    {
+      "question": "Was sollte ich vor der Nutzung von vCard-Parser prüfen?",
+      "answer": "Prüfe Eingaben, Einstellungen, Format und Kontext. Bei wichtigen Ergebnissen solltest du Zahlen, Zeichen und Bedeutung vor dem Teilen oder Veröffentlichen noch einmal kontrollieren."
+    },
+    {
+      "question": "Kann ich das Ergebnis nachträglich ändern?",
+      "answer": "Ja. Passe die Eingabe oder verfügbare Optionen an, führe die Verarbeitung erneut aus und verwende die aktualisierte Ausgabe erst nach einer Prüfung."
+    },
+    {
+      "question": "Warum kann das Ergebnis von einem anderen Werkzeug abweichen?",
+      "answer": "Werkzeuge können Rundung, Analyse, Formatierung oder Darstellung unterschiedlich behandeln. Vergleiche mit derselben Eingabe und beachte die Grenzen der Oberfläche."
+    },
+    {
+      "question": "Kann ich mit einer kurzen Eingabe beginnen?",
+      "answer": "Ja. Beginne mit einer kurzen oder nicht sensiblen Eingabe, um die Form der Ausgabe zu prüfen, bevor du den eigentlichen Inhalt verwendest."
+    },
+    {
+      "question": "Ersetzt das Werkzeug eine manuelle Prüfung?",
+      "answer": "Nein. Es beschleunigt wiederkehrende Arbeit, aber wichtige Ergebnisse sollten auf Genauigkeit, Kontext und Eignung geprüft werden."
+    }
   ]
 }

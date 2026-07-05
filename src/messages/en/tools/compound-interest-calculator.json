@@ -11,7 +11,8 @@
   "usage_examples": [
     "Estimate how a starting balance could grow over a fixed period.",
     "Compare daily, monthly, quarterly, and annual compounding inputs.",
-    "Check how adding monthly or annual contributions changes the projected final amount."
+    "Check how adding monthly or annual contributions changes the projected final amount.",
+    "Create a simple fixed-rate scenario for a savings discussion before reviewing fees, taxes, inflation, and risk separately."
   ],
   "faqs": [
     {
@@ -29,6 +30,10 @@
     {
       "question": "Is this financial advice?",
       "answer": "No. It is a planning calculator for fixed-rate scenarios, not investment advice or a guarantee of returns."
+    },
+    {
+      "question": "When should I verify the result elsewhere?",
+      "answer": "Verify the result whenever it affects a real financial decision, tax plan, loan comparison, investment choice, or regulated disclosure."
     }
   ]
 }

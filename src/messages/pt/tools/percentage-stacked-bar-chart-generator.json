@@ -1,17 +1,35 @@
 {
-  "detailed_description": "O Gerador de Gráficos de Barras Empilhadas Percentuais é uma ferramenta técnica projetada para visualizar proporções relativas dentro de múltiplas categorias simultaneamente. Diferente de gráficos convencionais, esta ferramenta normaliza os dados para exibir cada segmento como uma porcentagem do total por categoria, permitindo comparações horizontais diretas mesmo com magnitudes absolutas distintas. Utiliza algoritmos de escalonamento proporcional para ajustar os valores de entrada a uma escala de 0% a 100%, representando graficamente cada subcategoria com cores personalizáveis codificadas em hexadecimal. O motor de renderização baseia-se em bibliotecas de gráficos vetoriais escaláveis (SVG) para garantir precisão visual e responsividade. É essencial para análises de composição em conjuntos de dados heterogêneos, como comparar participação de mercado entre setores, distribuição de votos em eleições ou análise de custos em projetos multidisciplinares. A ferramenta suporta entrada de dados em formatos estruturados (CSV, TSV) e inclui opções avançadas de personalização, como inversão de eixos, ajuste de paleta de cores e exportação em múltiplos formatos (PNG, SVG, PDF). A interface integrada de pré-visualização em tempo real permite ajustes iterativos sem perda de dados.",
+  "detailed_description": "O gerador de gráfico de barras empilhadas percentuais cria gráficos 100% empilhados a partir de categorias e séries editáveis. Cada linha representa uma categoria e cada valor de série aparece como um segmento percentual, então o ideal é que cada linha some perto de 100%. Você pode renomear séries, adicionar ou remover linhas e séries, editar valores na tabela, escolher um tema de cores, mostrar ou ocultar a legenda, alternar entre orientação vertical e horizontal e baixar o resultado como PNG ou SVG.",
   "usage_steps": [
-    "Acesse o gerador via URL e selecione a orientação do gráfico (vertical ou horizontal) no seletor 'Modo de Exibição'.",
-    "Cole seus dados formatados em CSV ou TSV na área de edição, separando valores por vírgulas ou tabs conforme necessário.",
-    "Defina os delimitadores de decimal e milhar no painel 'Configurações de Formato' para garantir leitura correta de números.",
-    "Personalize a paleta de cores usando o seletor hexadecimal para cada subcategoria listada no painel lateral.",
-    "Ajuste os rótulos dos eixos X/Y e habilite a exibição de porcentagens com um clique no botão 'Mostrar Valores Absolutos'.",
-    "Exporte o gráfico finalizado em SVG, PNG ou PDF através do menu 'Exportar' ou compartilhe via link gerado."
+    "Carregue os dados de exemplo ou comece editando as linhas padrão.",
+    "Renomeie cada série de acordo com os segmentos que deseja comparar.",
+    "Edite cada linha de categoria e insira valores percentuais para cada série.",
+    "Adicione linhas ou séries se precisar de mais categorias ou segmentos.",
+    "Escolha um tema de cores e ajuste orientação horizontal ou legenda.",
+    "Baixe o gráfico final como PNG ou SVG."
   ],
   "usage_examples": [
-    "Um analista de marketing comparando a participação por canal de vendas (e-commerce, loja física, revendedores) entre diferentes regiões, ajustando cores para manter identidade visual corporativa.",
-    "Um biólogo analisando a proporção de espécies em amostras de solo coletadas em áreas urbanas versus rurais, usando escalas logarítmicas para normalizar dados desbalanceados.",
-    "Um consultor financeiro demonstrando a alocação de carteiras de investimento (ações, títulos, fundos imobiliários) para clientes com perfis de risco distintos.",
-    "Um educador visualizando o desempenho de turmas em múltiplas disciplinas, destacando subgrupos com cores contrastantes para facilitar discussões em reuniões pedagógicas."
+    "Comparar a participação de mobile, tablet e desktop ao longo de anos.",
+    "Mostrar respostas de pesquisa por segmento de cliente em porcentagem.",
+    "Visualizar contribuição de canais de venda por trimestre quando cada linha soma 100%.",
+    "Exportar um PNG para relatório ou um SVG para apresentação."
+  ],
+  "faqs": [
+    {
+      "question": "A ferramenta normaliza valores automaticamente?",
+      "answer": "Não. Insira percentuais diretamente e mantenha cada linha próxima de 100%."
+    },
+    {
+      "question": "Posso adicionar mais séries?",
+      "answer": "Sim. Você pode adicionar séries até o limite da interface e renomear cada uma."
+    },
+    {
+      "question": "Posso mudar a orientação?",
+      "answer": "Sim. A opção Horizontal alterna entre colunas empilhadas e barras horizontais."
+    },
+    {
+      "question": "Quais formatos estão disponíveis?",
+      "answer": "O gráfico pode ser baixado como PNG ou SVG."
+    }
   ]
 }

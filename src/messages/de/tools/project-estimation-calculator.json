@@ -1,15 +1,38 @@
 {
-  "detailed_description": "Der Projektgeschätzung-Rechner hilft, Projektarbeitskosten mit PERT und Story Points zu schätzen.",
+  "detailed_description": "Der Projektschätzungsrechner hilft, Projektdauern mit der PERT-Methode zu schätzen. Gib für jede Aufgabe eine optimistische, wahrscheinliche und pessimistische Dauer ein, damit die Seite die erwartete Dauer und eine einfache Spannweite berechnet. Die Ergebnisse eignen sich für frühe Planungsgespräche, Angebotsvorbereitung und Risikoabgleich, ersetzen aber keine verbindliche Projektplanung.",
   "usage_steps": [
     "Aufgabenbeschreibungen eingeben",
-    "Schätzungen bereitstellen",
-    "Oder Story Points verwenden",
-    "Dauer berechnen",
-    "Vertrauensintervalle anzeigen"
+    "Optimistische, wahrscheinliche und pessimistische Dauer eintragen",
+    "Weitere Aufgaben ergänzen, wenn das Projekt aus mehreren Arbeitspaketen besteht",
+    "PERT-Erwartungswert und Spannweite berechnen",
+    "Ergebnis mit Annahmen und Risiken im Projektteam prüfen"
   ],
   "usage_examples": [
-    "Softwareprojekte schätzen",
-    "Sprint-Kapazität berechnen",
-    "Zeitpläne mit PERT planen"
+    "Eine frühe Projektdauer aus drei Schätzwerten ableiten.",
+    "Mehrere Arbeitspakete vergleichen, bevor ein Terminplan erstellt wird.",
+    "Optimistische und pessimistische Szenarien für ein Angebot dokumentieren.",
+    "PERT-Ergebnisse als Gesprächsgrundlage im Projektteam verwenden."
+  ],
+  "faqs": [
+    {
+      "question": "Was sollte ich vor der Nutzung des Projektschätzungsrechners prüfen?",
+      "answer": "Prüfe Eingaben, Einstellungen, Format und Kontext. Bei wichtigen Ergebnissen solltest du Zahlen, Zeichen und Bedeutung vor dem Teilen oder Veröffentlichen noch einmal kontrollieren."
+    },
+    {
+      "question": "Kann ich das Ergebnis nachträglich ändern?",
+      "answer": "Ja. Passe die Eingabe oder verfügbare Optionen an, führe die Verarbeitung erneut aus und verwende die aktualisierte Ausgabe erst nach einer Prüfung."
+    },
+    {
+      "question": "Warum kann das Ergebnis von einem anderen Werkzeug abweichen?",
+      "answer": "Werkzeuge können Rundung, Analyse, Formatierung oder Darstellung unterschiedlich behandeln. Vergleiche mit derselben Eingabe und beachte die Grenzen der Oberfläche."
+    },
+    {
+      "question": "Kann ich mit einer kurzen Eingabe beginnen?",
+      "answer": "Ja. Beginne mit einer kurzen oder nicht sensiblen Eingabe, um die Form der Ausgabe zu prüfen, bevor du den eigentlichen Inhalt verwendest."
+    },
+    {
+      "question": "Ersetzt das Werkzeug eine manuelle Prüfung?",
+      "answer": "Nein. Es beschleunigt wiederkehrende Arbeit, aber wichtige Ergebnisse sollten auf Genauigkeit, Kontext und Eignung geprüft werden."
+    }
   ]
 }

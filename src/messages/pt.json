@@ -3862,7 +3862,7 @@
       "output": "Saída CSS",
       "copy": "Copiar CSS",
       "seo_title": "Gerador Online Grátis de CSS Border Radius",
-      "seo_description": "Ferramenta online gratuita Gerador de Raio de Bordas para ajudar você a Use a ferramenta online para criar bordas arredondadas com editor visual. Copie o código CSS instantaneamente de forma rápida e segura no seu navegador. Totalmente grátis, sem downloads ou registros, rodando 100% localmente para garantir sua total privacidade, segurança e eficiência no dia a dia.",
+      "seo_description": "Ajuste cantos por lado e veja o preview instantâneo para gerar estilos de borda CSS consistentes.",
       "cornerRadius": "Raio de Canto",
       "linkAll": "Linkar Todos",
       "topLeft": "Canto Superior Esquerdo",
@@ -4004,7 +4004,7 @@
       "input": "Texto de Entrada",
       "copy": "Copiar Resultados",
       "seo_title": "Visualizador de URLs Curtos Online Grátis",
-      "seo_description": "Analise e expanda URLs curtas online gratuitamente. Verifique a segurança antes de clicar em links bit.ly, tinyurl e outros.",
+      "seo_description": "Cole texto para identificar URLs curtos de serviços como bit.ly, tinyurl.com e t.co no navegador. A expansão real exige solicitação do servidor.",
       "note": "Nota: Devido às restrições de segurança do navegador, a expansão real do URL requer solicitações do lado do servidor. Esta ferramenta identifica URLs curtos e mostra seus domínios.",
       "placeholder": "Cole texto contendo URLs curtos (bit.ly, tinyurl.com, t.co, etc.)...",
       "analyzing": "Analisando...",
@@ -5926,9 +5926,9 @@
     },
     "heatmap-chart-generator": {
       "name": "Gerador de Gráficos de Calor",
-      "description": "Crie gráficos de calor online. Visualize a densidade de dados e exporte como PNG/SVG.",
+      "description": "Crie heatmaps editáveis por grade manual, com temas de cor e exportação PNG/SVG.",
       "seo_title": "Gerador de Mapas de Calor Online Grátis - Ferramenta Visual",
-      "seo_description": "Crie mapas de calor online de forma simples e rápida. Visualize dados densos e exporte em PNG/SVG. Tente nossa ferramenta grária!",
+      "seo_description": "Monte um heatmap manual com linhas, colunas, valores, temas default/ocean/sunset/forest, rótulos e download PNG ou SVG.",
       "chartTitle": "Título do Gráfico",
       "chartTitlePlaceholder": "Insira o título do gráfico",
       "colorTheme": "Tema de Cor",
@@ -6169,8 +6169,8 @@
     "sunburst-chart-generator": {
       "name": "Gerador de Gráficos de Radial",
       "description": "Crie gráficos de radial online. Visualize dados hierárquicos radialmente e exporte como PNG/SVG.",
-      "seo_title": "Gerador de gráfico sunburst online grátis - visualize dados radialmente",
-      "seo_description": "Ferramenta online gratuita Gerador de Gráficos de Radial para ajudar você a Crie gráficos sunburst profissionais online. Visualize dados hierárquicos e exporte como PNG ou SVG de forma rápida e segura no seu navegador. Totalmente grátis, sem downloads ou registros, rodando 100% localmente para garantir sua total privacidade, segurança e eficiência no dia a dia.",
+      "seo_title": "Gerador de Gráficos de Radial online grátis - U2Tool",
+      "seo_description": "Use Gerador de Gráficos de Radial no navegador para trabalhar com entradas, saídas e resultados sem conta ou instalação.",
       "chartTitle": "Título do Gráfico",
       "chartTitlePlaceholder": "Insira o título do gráfico",
       "colorTheme": "Tema de Cor",
@@ -6664,8 +6664,8 @@
     },
     "tree-chart-generator": {
       "name": "Gerador de Gráficos de Árvore",
-      "seo_title": "Gerador de gráfico em árvore online grátis - crie diagramas hierárquicos",
-      "seo_description": "Crie gráficos de árvore hierárquicos com layouts ortogonais ou radiais e exporte em PNG ou SVG.",
+      "seo_title": "Gerador de Gráficos de Árvore online grátis - U2Tool",
+      "seo_description": "Use Gerador de Gráficos de Árvore no navegador para trabalhar com entradas, saídas e resultados sem conta ou instalação.",
       "title": "Gerador de Gráficos de Árvore",
       "description": "Crie gráficos de árvore hierárquica com layouts ortogonais e radiais.",
       "defaultTitle": "Exemplo de Gráfico de Árvore",
@@ -7992,9 +7992,9 @@
     },
     "image-splitter": {
       "name": "Divisor de Imagens",
-      "description": "Divida uma imagem em várias peças com linhas e colunas personalizadas.",
-      "seo_title": "Grátis: Divida Imagens Online em Peças Personalizadas",
-      "seo_description": "Use nossa ferramenta online para dividir imagens em múltiplas partes com customização em linhas e colunas. Grátis e fácil de usar - comece agora!",
+      "description": "Divida uma imagem em partes PNG por linhas e colunas no navegador.",
+      "seo_title": "Divisor de imagens online - grade PNG e ZIP",
+      "seo_description": "Divida uma imagem online por linhas e colunas, visualize a grade, gere partes PNG no navegador e baixe uma peça ou um ZIP.",
       "rows": "Linhas",
       "cols": "Colunas",
       "split": "Dividir",
@@ -8661,7 +8661,7 @@
       "name": "Visualizador do Excel",
       "description": "Visualize arquivos do Excel online com ordenação, filtragem e navegação por planilhas.",
       "seo_title": "Visualizador Online Grátis de Excel",
-      "seo_description": "Visualize arquivos Excel online sem precisar de Microsoft Office. Suporte a ordenação, filtragem e navegação entre múltiplas folhas.",
+      "seo_description": "Abra arquivos XLS ou XLSX no navegador, navegue por planilhas, filtre por texto, ordene colunas e veja a contagem de linhas.",
 
 
 
@@ -9476,9 +9476,9 @@
     },
     "text-to-image": {
       "name": "Texto para Imagem",
-      "description": "Converter texto em imagens PNG.",
-      "seo_title": "Grátis: Converta texto em imagens online com nossa ferramenta poderosa",
-      "seo_description": "Converte texto em imagens PNG baixáveis ​​em segundos. Nossa ferramenta online facilita a criação de conteúdo visual. Comece agora gratuitamente!",
+      "description": "Transforme texto em uma imagem PNG com fonte, cores, padding e alinhamento.",
+      "seo_title": "Texto para Imagem PNG online - U2Tool",
+      "seo_description": "Digite texto, escolha fonte, tamanho, cores, padding e alinhamento, veja o preview no canvas e baixe uma imagem PNG gerada no navegador!",
       "text": "Texto",
       "fontSize": "Tamanho",
       "fontFamily": "Fonte",
@@ -10429,8 +10429,8 @@
     "tile-calculator": {
       "name": "Calculadora de Azulejos",
       "description": "Calcula os azulejos necessários para pisos e paredes com fator de desperdício.",
-      "seo_title": "Calculadora Online Grátis de Azulejos - Facilite a Sua Vida!",
-      "seo_description": "A nossa ferramenta de cálculo de azulejos online ajuda a calcular a quantidade necessária para pisos e paredes, incluindo fator de resíduo. Fácil e rápido! Tente agora!",
+      "seo_title": "Calculadora de Azulejos online grátis - U2Tool",
+      "seo_description": "Calcule azulejos para uma área retangular com tamanho da peça, junta, desperdício, padrão de assentamento e peças por caixa.",
       "areaToTile": "Área a Azulejar",
       "tileSize": "Tamanho do Azulejo",
       "tileLength": "Comprimento do azulejo",
@@ -10690,7 +10690,7 @@
       "name": "Calculadora de IVA",
       "description": "Calcule o IVA (Imposto sobre o Valor Acrescentado) para países europeus com taxas diferentes.",
       "seo_title": "Calculadora de IVA Online Grátis - Fácil e Rápido!",
-      "seo_description": "Aproveite nossa ferramenta gratuita de cálculo de IVA para países europeus com diferentes taxas. Facilita sua vida financeira! Tente agora!",
+      "seo_description": "Calcule IVA adicionando, removendo ou isolando o imposto. Escolha país europeu, taxa padrão, reduzida, super-reduzida ou taxa personalizada.",
       "amount": "Quantia",
       "calculationMode": "Modo de Cálculo",
       "addVat": "Adicionar IVA à quantia",
@@ -10902,9 +10902,9 @@
     },
     "credit-card-validator": {
       "name": "Validador de Cartões de Crédito",
-      "description": "Valide números de cartão de crédito no navegador.",
-      "seo_title": "Validador de Cartão de Crédito Online - Teste Luhn",
-      "seo_description": "Valide números de cartão de crédito no navegador. Verifique com o algoritmo de Luhn e identifique bandeiras como Visa e Mastercard de forma segura e 100% local.",
+      "description": "Valide números de cartão de teste com algoritmo de Luhn, comprimento e detecção local da bandeira.",
+      "seo_title": "Validador de Cartão de Crédito Online - Luhn",
+      "seo_description": "Verifique cartões de crédito online com algoritmo de Luhn, comprimento e detecção de bandeira Visa/Mastercard. Apenas números de teste; sem banco.",
       "cardNumber": "Número do Cartão",
       "inputPlaceholder": "Insira o número do cartão...",
       "validate": "Validar",
@@ -11287,7 +11287,7 @@
       "name": "Calculadora de Preço Unitário",
       "description": "Compare preços por unidade para encontrar o melhor valor",
       "seo_title": "Comparar Preços Unitários Online - Ferramenta Grátis",
-      "seo_description": "Ferramenta online gratuita Calculadora de Preço Unitário para ajudar você a Encontre o melhor valor comparando preços unitários online com nossa ferramenta gratuita. Aproveite agora de forma rápida e segura no seu navegador. Totalmente grátis, sem downloads ou registros, rodando 100% localmente para garantir sua total privacidade, segurança e eficiência no dia a dia.",
+      "seo_description": "Compare preços por unidade em diferentes cenários para escolher a opção mais econômica por item.",
 
 
 
@@ -11845,9 +11845,9 @@
     },
     "typescript-to-json": {
       "name": "TypeScript para JSON",
-      "description": "Converta interfaces TypeScript para esquema JSON",
+      "description": "Gere JSON de amostra a partir de interfaces TypeScript simples",
       "seo_title": "Conversor TypeScript para JSON Online Grátis",
-      "seo_description": "Converta interfaces TypeScript em exemplos JSON para documentacao, testes e validacao de APIs diretamente no navegador.",
+      "seo_description": "Crie JSON de amostra de interface ou type TypeScript simples no navegador, com valores mock para tipos comuns e saída copiável.",
 
 
 
@@ -12035,8 +12035,8 @@
     "text-shadow-generator": {
       "name": "Gerador de Sombra de Texto",
       "description": "Crie sombras de texto CSS com editor visual",
-      "seo_title": "Gerador de Sombra de Texto CSS Grátis Online",
-      "seo_description": "Gerador de sombra de texto CSS online gratuito com pré-visualização ao vivo. Crie efeitos de texto impressionantes com várias sombras, desfoque e cores. Copie o código CSS pronto para uso instantaneamente.",
+      "seo_title": "Gerador de Sombra de Texto online grátis - U2Tool",
+      "seo_description": "Use Gerador de Sombra de Texto no navegador para trabalhar com entradas, saídas e resultados sem conta ou instalação.",
 
 
 
@@ -12356,8 +12356,8 @@
     "github-readme-generator": {
       "name": "Gerador de README do GitHub",
       "description": "Gere arquivos README.md profissionais para projetos do GitHub",
-      "seo_title": "Gerador de README do GitHub Grátis Online - Crie Arquivos README Profissionais",
-      "seo_description": "Gere arquivos README.md profissionais para seus projetos do GitHub com nossa ferramenta online gratuita. Adicione badges, recursos, instruções de instalação, exemplos de uso e muito mais. Faça seus projetos se destacarem.",
+      "seo_title": "Gerador de README do GitHub online grátis - U2Tool",
+      "seo_description": "Use Gerador de README do GitHub no navegador para trabalhar com entradas, saídas e resultados sem conta ou instalação.",
 
 
 
@@ -12556,8 +12556,8 @@
     "margin-calculator": {
       "name": "Calculadora de Margem",
       "description": "Calcule as porcentagens de margem de lucro e margem de markup",
-      "seo_title": "Calculadora de Margem Grátis Online - Margem de Lucro e Markup",
-      "seo_description": "Calcule as porcentagens de margem de lucro e margem de markup com nossa ferramenta gratuita online. Insira o custo e o preço de venda para ver a margem bruta, a porcentagem de markup e o valor do lucro.",
+      "seo_title": "Calculadora de Margem online grátis - U2Tool",
+      "seo_description": "Use Calculadora de Margem no navegador para trabalhar com entradas, saídas e resultados sem conta ou instalação.",
 
 
 
@@ -12790,8 +12790,8 @@
     "bandwidth-calculator": {
       "name": "Calculadora de Largura de Banda",
       "description": "Calcule os requisitos de largura de banda de rede e tempos de transferência de dados",
-      "seo_title": "Calculadora de Bandwidth Grátis Online",
-      "seo_description": "Calcule a largura de banda necessária a partir do tamanho do arquivo e do tempo de transferência. Converta entre Mbps, Gbps e outras unidades de velocidade de rede com nossa ferramenta online gratuita.",
+      "seo_title": "Calculadora de Largura de Banda online grátis - U2Tool",
+      "seo_description": "Use Calculadora de Largura de Banda no navegador para trabalhar com entradas, saídas e resultados sem conta ou instalação.",
 
 
 
@@ -12956,8 +12956,8 @@
     "jwt-payload-decoder": {
       "name": "Decodificador de Carga JWT",
       "description": "Descodifique e insira cargas de tokens JWT sem verificação",
-      "seo_title": "Decodificador JWT Grátis Online - Inspeção de Reivindicações",
-      "seo_description": "Ferramenta online gratuita Decodificador de Carga JWT para ajudar você a Decodifique tokens JWT online grátis e veja o cabeçalho, a carga útil e a data de expiração de forma rápida e segura no seu navegador. Totalmente grátis, sem downloads ou registros, rodando 100% localmente para garantir sua total privacidade, segurança e eficiência no dia a dia.",
+      "seo_title": "Decodificador de Carga JWT online grátis - U2Tool",
+      "seo_description": "Use Decodificador de Carga JWT no navegador para trabalhar com entradas, saídas e resultados sem conta ou instalação.",
 
 
 
@@ -13115,8 +13115,8 @@
     "webhook-tester": {
       "name": "Testador de Webhook",
       "description": "Teste e depura endpoints de webhook com payloads personalizados",
-      "seo_title": "Testador de webhook grátis online - teste e diagnostique webhooks",
-      "seo_description": "Teste e depure webhook endpoints com payloads personalizados online. Nossa ferramenta gratuita facilita a validação e o desenvolvimento de webhooks. Comece agora!",
+      "seo_title": "Testador de Webhook online grátis - U2Tool",
+      "seo_description": "Use Testador de Webhook no navegador para trabalhar com entradas, saídas e resultados sem conta ou instalação.",
 
 
 
@@ -13594,8 +13594,8 @@
     "code-complexity-analyzer": {
       "name": "Analisador de Complexidade de Código",
       "description": "Analisar métricas de complexidade de código (complexidade cíclica, LOC)",
-      "seo_title": "Análise gratuita de complexidade de código online - Ferramenta simples!",
-      "seo_description": "Aumente a eficiência do seu código com a nossa ferramenta online de análise de complexidade de código. Cálculo rápido de métricas como complexidade cíclica e LOC. Tente agora!",
+      "seo_title": "Analisador de Complexidade de Código online grátis - U2Tool",
+      "seo_description": "Use Analisador de Complexidade de Código no navegador para trabalhar com entradas, saídas e resultados sem conta ou instalação.",
 
 
 
@@ -13845,8 +13845,8 @@
     "unused-imports-finder": {
       "name": "Encontrador de Importações Não Utilizadas",
       "description": "Identifique importações e dependências não utilizadas no código",
-      "seo_title": "Encontrador de imports não utilizados online grátis",
-      "seo_description": "Encontre imports e dependências desnecessárias em seu código online. Use nossa ferramenta gratuita agora para otimizar seu código JSON, Base64 e SVG.",
+      "seo_title": "Encontrador de imports não utilizados online",
+      "seo_description": "Cole JavaScript ou TypeScript e encontre imports não usados no navegador. Revise nomes usados, linhas import e código limpo para copiar.",
 
 
 
@@ -14119,8 +14119,8 @@
     "query-execution-planner": {
       "name": "Planejador de Execução de Consultas",
       "description": "Análise de planos de execução de consultas e sugestões de otimização",
-      "seo_title": "Analisador Grátis de Plano de Execução de Consulta Online | U2Tool",
-      "seo_description": "Ferramenta online gratuita Planejador de Execução de Consultas para ajudar você a Analise planos de execução SQL e compreenda a saída EXPLAIN. Obtenha dicas de otimização de forma rápida e segura no seu navegador. Totalmente grátis, sem downloads ou registros, rodando 100% localmente para garantir sua total privacidade, segurança e eficiência no dia a dia.",
+      "seo_title": "Planejador de Execução de Consultas online grátis - U2Tool",
+      "seo_description": "Use Planejador de Execução de Consultas no navegador para trabalhar com entradas, saídas e resultados sem conta ou instalação.",
 
 
 
@@ -14437,8 +14437,8 @@
     "git-tag-manager": {
       "name": "Gerenciador de Tags do Git",
       "description": "Gerencie e organize tags do Git para lançamentos",
-      "seo_title": "Gerenciador de tags do Git online - organize tags grátis",
-      "seo_description": "Gerencie e organize suas tags Git para releases com nossa ferramenta online. Organize melhor, grave tempo e trabalhe grátis!",
+      "seo_title": "Gerenciador de Tags do Git online grátis - U2Tool",
+      "seo_description": "Use Gerenciador de Tags do Git no navegador para trabalhar com entradas, saídas e resultados sem conta ou instalação.",
 
 
 
@@ -14587,8 +14587,8 @@
     "table-of-contents-generator": {
       "name": "Gerador de Sumário",
       "description": "Crie um sumário a partir dos cabeçalhos do seu documento",
-      "seo_title": "Gerador de sumário online grátis para Markdown",
-      "seo_description": "Ferramenta online gratuita Gerador de Sumário para ajudar você a Gere sumários a partir de cabeçalhos Markdown. Crie TOC com links de ancreza online usando a ferramenta U2Tool de forma rápida e segura no seu navegador. Totalmente grátis, sem downloads ou registros, rodando 100% localmente para garantir sua total privacidade, segurança e eficiência no dia a dia.",
+      "seo_title": "Gerador de Sumário online grátis - U2Tool",
+      "seo_description": "Use Gerador de Sumário no navegador para trabalhar com entradas, saídas e resultados sem conta ou instalação.",
 
 
 
@@ -14727,8 +14727,8 @@
     "citation-formatter": {
       "name": "Formatador de Citações",
       "description": "Formate citações em APA, MLA, Chicago e outros estilos",
-      "seo_title": "Formatador de citações online grátis - organize referências em APA, MLA e mais",
-      "seo_description": "A ferramenta de formatação de citações em linha facilita a sua vida acadêmica. Organize citações em vários estilos, como APA, MLA e Chicago, sem esforço. Tudo online e grátis!",
+      "seo_title": "Formatador de citações APA, MLA, Chicago, Harvard e IEEE",
+      "seo_description": "Preencha autor, título, ano, editora, DOI ou URL e gere uma citação em APA, MLA, Chicago, Harvard ou IEEE para revisar e copiar.",
 
 
 
@@ -15293,7 +15293,7 @@
       "name": "Gerador de Modelos de Fatura",
       "description": "Crie modelos de fatura profissionais e personalizáveis",
       "seo_title": "Gerador de modelo de fatura grátis online",
-      "seo_description": "Ferramenta online gratuita Gerador de Modelos de Fatura para ajudar você a Monte um modelo de fatura com dados da empresa, cliente, itens, impostos, vencimento e total para download de forma rápida e segura no seu navegador. Totalmente grátis, sem downloads ou registros, rodando 100% localmente para garantir sua total privacidade, segurança e eficiência no dia a dia.",
+      "seo_description": "Crie modelos de fatura com cliente, itens, vencimento e impostos em poucos passos, prontos para enviar.",
 
 
 
@@ -15364,8 +15364,8 @@
     "expense-report-generator": {
       "name": "Gerador de Relatórios de Despesas",
       "description": "Crie relatórios de despesas organizados para reembolso e controle financeiro",
-      "seo_title": "Gerador gratuito de relatório de despesas online",
-      "seo_description": "Crie relatórios de despesas com categorias, recibos, períodos e totais para aprovações e reembolsos.",
+      "seo_title": "Gerador de Relatórios de Despesas online grátis - U2Tool",
+      "seo_description": "Crie relatórios de despesas com recibos, categorias, valores e reembolsos para viagens, compras internas e controle financeiro.",
 
 
 

@@ -1,14 +1,39 @@
 {
-  "detailed_description": "Texto para Imagem é uma ferramenta online prática que ajuda você a completar várias tarefas rapidamente. Usando Texto para Imagem, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e use de forma eficiente. Seja você desenvolvedor, designer ou usuário geral, Texto para Imagem pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor.",
+  "detailed_description": "Texto para Imagem renderiza o texto digitado em um canvas e gera uma imagem PNG para baixar. A página permite ajustar tamanho da fonte, família tipográfica, cor do texto, cor de fundo, padding e alinhamento à esquerda, centralizado ou à direita. O preview é atualizado no navegador antes do download, então a ferramenta serve bem para títulos simples, etiquetas, snippets visuais, placeholders e pequenos cartazes de texto. Ela não é um gerador de imagens por IA, não cria ilustrações a partir de prompts e não oferece camadas, filtros ou edição avançada. Revise quebras de linha, contraste e dimensões do canvas antes de usar o PNG em produção.",
   "usage_steps": [
-    "Abrir a página da ferramenta Texto para Imagem",
-    "Inserir ou colar o conteúdo a ser processado na caixa de entrada",
-    "Ajustar as opções e configurações da ferramenta conforme necessário",
-    "Clicar no botão de processar para ver os resultados",
-    "Copiar ou baixar os resultados processados"
+    "Digite ou cole o texto que deve aparecer na imagem.",
+    "Ajuste o tamanho da fonte e escolha uma família tipográfica disponível.",
+    "Escolha a cor do texto, a cor de fundo e o padding ao redor do conteúdo.",
+    "Defina o alinhamento como esquerda, centro ou direita.",
+    "Revise o preview no canvas.",
+    "Baixe o resultado como arquivo PNG."
   ],
   "usage_examples": [
-    "Usar Texto para Imagem para processar seus dados",
-    "Obter resultados de processamento rapidamente sem esperar"
+    "Criar uma imagem PNG com uma frase curta para documentação.",
+    "Gerar uma etiqueta visual com texto preto sobre fundo claro.",
+    "Transformar um título de várias linhas em um pequeno cartaz de texto.",
+    "Preparar um placeholder simples para mockups ou apresentações."
+  ],
+  "faqs": [
+    {
+      "question": "Texto para Imagem usa IA para criar imagens?",
+      "answer": "Não. A ferramenta desenha o texto em um canvas com fonte, cores, padding e alinhamento escolhidos por você."
+    },
+    {
+      "question": "Qual formato posso baixar?",
+      "answer": "O botão de download salva o canvas como PNG."
+    },
+    {
+      "question": "Posso usar várias linhas de texto?",
+      "answer": "Sim. Quebras de linha são renderizadas no canvas, mas vale revisar o tamanho final antes de baixar."
+    },
+    {
+      "question": "A ferramenta tem edição avançada de imagem?",
+      "answer": "Não. Ela cobre texto, fonte, cores, padding e alinhamento; camadas, filtros e recortes devem ser feitos em outro editor."
+    },
+    {
+      "question": "O texto é enviado para um servidor?",
+      "answer": "A renderização acontece no navegador usando canvas. Mesmo assim, evite colar conteúdo sensível em ferramentas online se isso violar suas regras internas."
+    }
   ]
 }

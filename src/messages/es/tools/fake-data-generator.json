@@ -13,5 +13,27 @@
     "Pruebas de seguridad en una plataforma de comercio electrónico: Los responsables de seguridad necesitan verificar la capacidad de la plataforma para manejar y proteger datos sensibles. Utilizando el Generador de Datos Falsos, pueden crear datos de prueba que incluyan información de tarjetas de crédito y direcciones de facturación, simulando un entorno real sin poner en riesgo datos reales.",
     "Formación de desarrolladores junior: Un mentor de desarrollo utiliza el Generador de Datos Falsos para crear un conjunto de datos que los desarrolladores en formación pueden usar para practicar consultas SQL y operaciones de base de datos. Esto ayuda a los nuevos desarrolladores a familiarizarse con el manejo de datos sin afectar sistemas de producción.",
     "Pruebas de rendimiento en una aplicación móvil: Un equipo de pruebas necesita simular una gran cantidad de usuarios activos para evaluar el rendimiento de la aplicación. El Generador de Datos Falsos permite crear perfiles de usuario ficticios, incluyendo nombres, correos electrónicos, y ubicaciones, para simular un uso real de la aplicación y evaluar su capacidad de respuesta."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Generador de Datos Falsos?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra generador?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

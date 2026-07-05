@@ -1,17 +1,39 @@
 {
-  "detailed_description": "Notre convertisseur HTML en PDF utilise un moteur de rendu basé sur Chromium pour transformer précisément le code HTML, CSS et JavaScript en documents PDF conformes aux normes PDF/A-1b. Ce processus implique une interprétation complète du DOM, une gestion avancée des polices embarquées via @font-face, et un support des médias d'impression (print media queries). La conversion inclut également l'optimisation des images en DPI élevé et le rendu des effets CSS3 comme les ombres portées ou les dégradés vectoriels. Ce outil est indispensable pour générer des factures interactives, archiver des pages web avec mise en forme préservée, ou produire des rapports techniques imprimables. Contrairement aux solutions basiques, il permet de configurer finement les marges (en unités CSS), les tailles de page (A4, lettre, etc.) et les options d'accessibilité (balises PDF structurelles). Le back-end traite les appels asynchrones avec Web Workers pour garantir une conversion sans blocage de l'interface, tandis qu'un système de prévisualisation instantanée affiche les modifications en temps réel.",
+  "detailed_description": "Le convertisseur HTML en PDF affiche le HTML saisi dans une iframe après nettoyage du contenu, puis lance la boîte d'impression du navigateur pour permettre l'enregistrement en PDF. Vous pouvez coller un fragment HTML ou charger l'exemple intégré, prévisualiser le rendu, choisir un format de page, une orientation et une marge avant d'utiliser l'action Générer PDF. Le résultat dépend du moteur d'impression du navigateur et des styles autorisés après nettoyage; l'outil ne fournit pas de service de rendu serveur, ne promet pas de norme d'archivage et ne traite pas les pages interactives comme une chaîne de publication professionnelle. Il convient surtout aux brouillons, documents simples, aperçus imprimables et contenus HTML que vous pouvez vérifier visuellement avant sauvegarde.",
   "usage_steps": [
-    "Collez votre code HTML dans l'éditeur WYSIWYG avec surlignage syntaxique activé",
-    "Sélectionnez le moteur de rendu (Chromium ou WebKit) via le sélecteur 'Moteur PDF'",
-    "Ajustez les paramètres de mise en page dans l'onglet 'Options d'impression' (orientation, taille, marges personnalisées)",
-    "Activez l'option 'Inclure polices Web' si votre HTML utilise des polices Google Fonts",
-    "Cliquez sur 'Générer PDF' et surveillez la barre de progression indiquant le statut de conversion",
-    "Téléchargez le fichier résultant ou copiez le lien de partage temporaire généré automatiquement"
+    "Collez le HTML dans la zone de saisie ou chargez l'exemple intégré.",
+    "Choisissez le format de page, l'orientation et la marge disponibles dans l'interface.",
+    "Cliquez sur Prévisualiser pour afficher le contenu nettoyé dans l'iframe.",
+    "Vérifiez visuellement le texte, les espacements et les styles avant de générer.",
+    "Cliquez sur Générer PDF pour ouvrir la boîte d'impression du navigateur.",
+    "Dans la boîte d'impression, choisissez l'option d'enregistrement en PDF si votre navigateur la propose."
   ],
   "usage_examples": [
-    "Un développeur d'e-commerce convertit dynamiquement les pages de commande HTML en factures PDF signées numériquement pour ses clients",
-    "Un rédacteur technique exporte une documentation Markdown (via prévisualisation HTML) en PDF avec bookmarks interactifs",
-    "Une startup EdTech génère des certificats personnalisés avec graphiques SVG intégrés pour les cours en ligne",
-    "Un designer web archive des prototypes interactifs en PDF/A pour validation client hors ligne avec annotations conservées"
+    "Prévisualiser une facture HTML simple avant de l'enregistrer avec l'impression du navigateur.",
+    "Créer un brouillon PDF depuis une note HTML contenant titres, paragraphes et tableau léger.",
+    "Vérifier le rendu imprimable d'un modèle HTML avant de le partager en interne.",
+    "Utiliser l'exemple intégré pour confirmer le fonctionnement de la prévisualisation et de l'impression."
+  ],
+  "faqs": [
+    {
+      "question": "Que vérifier avant d'utiliser le résultat de Convertisseur HTML en PDF Gratuit ?",
+      "answer": "Vérifiez le contenu HTML, les réglages de page, l'aperçu dans l'iframe et le rendu proposé par la boîte d'impression avant de sauvegarder ou partager le PDF."
+    },
+    {
+      "question": "Le fichier PDF est-il généré directement par le site ?",
+      "answer": "Non. L'outil prépare l'aperçu et ouvre l'impression du navigateur; l'enregistrement en PDF dépend des options disponibles dans votre navigateur."
+    },
+    {
+      "question": "Les scripts du HTML sont-ils exécutés ?",
+      "answer": "Non. Le contenu est nettoyé avant l'aperçu, donc utilisez-le pour des documents simples plutôt que pour des pages interactives."
+    },
+    {
+      "question": "Puis-je commencer avec un exemple ?",
+      "answer": "Oui. Chargez l'exemple intégré pour vérifier l'aperçu, le format de page, l'orientation, les marges et la boîte d'impression."
+    },
+    {
+      "question": "L'outil remplace-t-il une vérification manuelle ?",
+      "answer": "Non. Pour un document important, relisez le contenu, les pages, les marges et le PDF sauvegardé avant de l'utiliser."
+    }
   ]
 }

@@ -30,6 +30,10 @@
     {
       "question": "Is CRC32 a security hash?",
       "answer": "No. CRC32 is useful for error detection and quick comparisons, but it is not a cryptographic hash."
+    },
+    {
+      "question": "What should I check before using the CRC32 Calculator output?",
+      "answer": "Review code, configuration, parsing details, and any assumptions before using the result in a repository, script, or deployment workflow."
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "detailed_description": "ROT13 Encoder es una herramienta sencilla para codificar y decodificar texto utilizando el cifrado ROT13. ROT13 (rotar 13 posiciones) es un caso especial del cifrado César que reemplaza cada letra con la letra 13 posiciones después en el alfabeto. Dado que el alfabeto tiene 26 letras, aplicar ROT13 dos veces devuelve el texto original, lo que lo convierte en su propia inversa. ROT13 se utiliza comúnmente para ocultar spoilers, soluciones de puzzles o texto ligeramente oscurecido.",
+  "detailed_description": "ROT13 Encoder es una herramienta sencilla para codificar y decodificar texto utilizando el cifrado ROT13. ROT13 (rotar 13 posiciones) es un caso especial del cifrado César que reemplaza cada letra con la letra 13 posiciones después en el alfabeto. Dado que el alfabeto tiene 26 letras, aplicar ROT13 dos veces devuelve el texto original, lo que lo convierte en su propia inversa. ROT13 se utiliza comúnmente para ocultar spoilers, soluciones de puzzles o texto ligeramente oscurecido. Codificador ROT13 está pensado para comprobar codificación, decodificación o transformación de texto. Revisa una entrada corta, caracteres especiales y formato esperado antes de usar el resultado en scripts o APIs.",
   "usage_steps": [
     "Ingrese o pegue su texto en el área de entrada",
     "La transformación ROT13 se aplica automáticamente",
@@ -12,5 +12,27 @@
     "Codificar soluciones de puzzles",
     "Aprender sobre criptografía básica",
     "Decodificar mensajes codificados con ROT13"
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Codificador ROT13?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta de codificación?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

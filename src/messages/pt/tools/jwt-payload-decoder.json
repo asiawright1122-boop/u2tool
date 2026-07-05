@@ -10,6 +10,29 @@
   "usage_examples": [
     "Depurar problemas de autenticação",
     "Verificar expiração do token",
-    "Extrair informações do usuário dos tokens"
+    "Extrair informações do usuário dos tokens",
+    "Verificar uma entrada curta antes de processar o conteúdo completo."
+  ],
+  "faqs": [
+    {
+      "question": "O que devo revisar antes de usar o resultado de Decodificador de Carga JWT?",
+      "answer": "Revise entradas, opções, formato e contexto. Em resultados importantes, confira números, caracteres e significado antes de compartilhar ou publicar."
+    },
+    {
+      "question": "Posso alterar o resultado depois de gerar?",
+      "answer": "Sim. Ajuste a entrada ou as opções disponíveis, processe novamente e use a saída atualizada somente depois de revisar."
+    },
+    {
+      "question": "Por que o resultado pode diferir de outra ferramenta?",
+      "answer": "Ferramentas podem tratar arredondamento, análise, formatação ou exibição de formas diferentes. Compare usando a mesma entrada e observe os limites da interface."
+    },
+    {
+      "question": "Posso começar com uma entrada curta?",
+      "answer": "Sim. Comece com uma entrada curta ou conteúdo não sensível para confirmar o formato da saída antes de usar o conteúdo real."
+    },
+    {
+      "question": "A ferramenta substitui uma revisão manual?",
+      "answer": "Não. Ela acelera tarefas repetitivas, mas resultados importantes ainda devem ser revisados quanto a precisão, contexto e adequação."
+    }
   ]
 }

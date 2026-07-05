@@ -1,15 +1,38 @@
 {
-  "detailed_description": "O Validador de Cartões de Crédito verifica se um número de cartão de crédito é matematicamente válido utilizando o algoritmo Luhn. Detecta automaticamente o tipo do cartão (Visa, Mastercard, Amex, etc.) e fornece resultados de validação detalhados. Destina-se apenas a fins de teste e desenvolvimento.",
+  "detailed_description": "O validador de cartão de crédito verifica se um número de cartão de teste tem uma estrutura matemática válida usando o algoritmo de Luhn. Digite ou cole um número, clique em Validar, e o navegador remove espaços, confere o comprimento de 13 a 19 dígitos, executa a verificação Luhn e identifica padrões de bandeira como Visa, Mastercard, American Express, Discover, Diners Club, JCB, UnionPay e Maestro quando prefixo e comprimento combinam. Use para verificar cartão de crédito em QA de checkout, dados de exemplo, testes unitários e documentação técnica. A ferramenta não contata banco, processador de pagamento nem rede de cartões, portanto não confirma se o cartão existe, está ativo, tem saldo, pertence a uma pessoa real ou pode ser cobrado. Use apenas números de teste.",
   "usage_steps": [
-    "Insira um número de cartão de crédito no campo de entrada",
-    "O número será automaticamente formatado com espaços",
-    "Clique em 'Validar' para verificar o cartão",
-    "Veja o tipo do cartão, a emissora e o resultado da verificação Luhn",
-    "Verifique o número de dígitos para uma validação adicional"
+    "Insira um número de cartão de crédito de teste no campo.",
+    "O campo formata os dígitos em grupos legíveis enquanto você digita.",
+    "Clique em Validar para executar a verificação Luhn local e conferir o comprimento.",
+    "Revise o padrão de bandeira detectado, o rótulo estático da rede, a contagem de dígitos e o resultado.",
+    "Use o resultado para depurar validação de formulário ou dados de exemplo, não para verificar uma conta real."
   ],
   "usage_examples": [
-    "Testar a lógica de validação de formulários de pagamento",
-    "Verificar o formato do número do cartão antes do processamento",
-    "Identificar o tipo do cartão a partir do prefixo do número"
+    "Testar se um checkout aceita um número de teste Visa ou Mastercard.",
+    "Confirmar que um número de exemplo falha quando um dígito é alterado.",
+    "Identificar a provável bandeira pelo prefixo durante QA.",
+    "Documentar o resultado Luhn esperado para testes unitários de um formulário de pagamento."
+  ],
+  "faqs": [
+    {
+      "question": "A ferramenta verifica uma conta real de cartão?",
+      "answer": "Não. Ela verifica localmente apenas o padrão do número, o comprimento e o checksum Luhn. Bancos e processadores de pagamento não são contatados."
+    },
+    {
+      "question": "Devo inserir um número de cartão real?",
+      "answer": "Não. Use apenas números de teste oficiais de provedores de pagamento ou valores fictícios."
+    },
+    {
+      "question": "Quais bandeiras podem ser detectadas?",
+      "answer": "Ela detecta padrões comuns para Visa, Mastercard, American Express, Discover, Diners Club, JCB, UnionPay e Maestro."
+    },
+    {
+      "question": "O que significa um resultado válido?",
+      "answer": "Significa que os dígitos passaram nas verificações locais de comprimento e Luhn. Não significa que o cartão exista, esteja ativo ou tenha saldo."
+    },
+    {
+      "question": "O número é enviado para um servidor?",
+      "answer": "As verificações mostradas na página rodam no navegador. Mesmo assim, trate cada valor como dado de teste e evite dados reais de pagamento."
+    }
   ]
 }

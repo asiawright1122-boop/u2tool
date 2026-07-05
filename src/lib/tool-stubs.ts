@@ -2397,7 +2397,107 @@ export function analyzeDeadCode(code: any = '') { return runtimeAnalyzeDeadCode(
 export function analyzeDocument() { return { score: 0, issues: [] }; }
 export function analyzeFrequency() { return { score: 0, issues: [] }; }
 export function analyzePerformance(code: any = '') { return runtimeAnalyzePerformance(code); }
-export function analyzeQuery() { return { score: 0, issues: [] }; }
+interface QueryPlanStep {
+  operation: string;
+  table?: string;
+  cost: number;
+  rows: number;
+  details: string;
+  warning?: string;
+}
+
+export function analyzeQuery(sql: any = ''): QueryPlanStep[] {
+  const text = String(sql ?? '').trim();
+  if (!text) return [];
+
+  const firstTableMatch = text.match(/\b(?:FROM|UPDATE|INTO)\s+([`"[]?[\w.]+[`"\]]?)/i);
+  const table = firstTableMatch?.[1]?.replace(/^[`"[]|[`"\]]$/g, '');
+  const joins = Array.from(text.matchAll(/\bJOIN\s+([`"[]?[\w.]+[`"\]]?)/gi));
+  const hasWhere = /\bWHERE\b/i.test(text);
+  const hasGroupBy = /\bGROUP\s+BY\b/i.test(text);
+  const hasOrderBy = /\bORDER\s+BY\b/i.test(text);
+  const limitMatch = text.match(/\bLIMIT\s+(\d+)/i);
+  const hasFunctionFilter = /\bWHERE\b[\s\S]*(?:LOWER|UPPER|TRIM|CAST|COALESCE)\s*\(/i.test(text);
+  const hasLeadingWildcard = /\bLIKE\s+['"]%/i.test(text);
+
+  const steps: QueryPlanStep[] = [
+    {
+      operation: /^\s*SELECT\b/i.test(text) ? 'Read query' : 'Inspect statement',
+      table,
+      cost: 5,
+      rows: 1000,
+      details: 'Identify the main table, filters, joins, ordering, grouping, and result limits.',
+    },
+  ];
+
+  if (table) {
+    steps.push({
+      operation: hasWhere ? 'Filter rows' : 'Table scan',
+      table,
+      cost: hasWhere ? 25 : 55,
+      rows: hasWhere ? 500 : 10000,
+      details: hasWhere
+        ? 'Apply WHERE predicates after reading candidate rows.'
+        : 'Read rows from the table before later clauses are applied.',
+      warning: !hasWhere ? 'No WHERE clause was found; large tables may require more work.' : undefined,
+    });
+  }
+
+  if (joins.length > 0) {
+    steps.push({
+      operation: 'Join tables',
+      table: joins.map((join) => join[1].replace(/^[`"[]|[`"\]]$/g, '')).join(', '),
+      cost: 35 + joins.length * 15,
+      rows: 1000,
+      details: 'Combine rows from the joined tables based on the ON clauses in the query.',
+      warning: 'Check join columns in your database planner for missing or low-selectivity indexes.',
+    });
+  }
+
+  if (hasFunctionFilter || hasLeadingWildcard) {
+    steps.push({
+      operation: 'Review filter shape',
+      table,
+      cost: 20,
+      rows: 500,
+      details: 'Function-wrapped columns or leading-wildcard LIKE filters can be harder to narrow quickly.',
+      warning: 'Confirm these predicates with your database planner before relying on index usage.',
+    });
+  }
+
+  if (hasGroupBy) {
+    steps.push({
+      operation: 'Aggregate rows',
+      table,
+      cost: 30,
+      rows: 250,
+      details: 'Group matching rows and compute aggregate values.',
+    });
+  }
+
+  if (hasOrderBy) {
+    steps.push({
+      operation: 'Sort results',
+      table,
+      cost: limitMatch ? 20 : 35,
+      rows: limitMatch ? Number(limitMatch[1]) : 500,
+      details: 'Order the result set after filtering, joining, or grouping.',
+      warning: !limitMatch ? 'ORDER BY without LIMIT can make large result sets expensive to sort.' : undefined,
+    });
+  }
+
+  if (limitMatch) {
+    steps.push({
+      operation: 'Limit output',
+      table,
+      cost: 5,
+      rows: Number(limitMatch[1]),
+      details: `Return at most ${limitMatch[1]} rows to the client.`,
+    });
+  }
+
+  return steps;
+}
 export function applyBitFlags(byte = 0, locallyAdministered = true, multicast = false) {
   let value = Number(byte) & 0xff;
   value = locallyAdministered ? value | 0x02 : value & ~0x02;

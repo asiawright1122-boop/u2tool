@@ -1,15 +1,38 @@
 {
-  "detailed_description": "Changelog Generator creates formatted changelogs from Git commit messages.",
+  "detailed_description": "Advanced Changelog Generator builds a Markdown changelog from releases and change entries that you enter in the browser. Each release has a version, date, and entries grouped as added, changed, deprecated, removed, fixed, or security. The output can be rendered as Keep a Changelog, Conventional, or Simple format and copied to the clipboard. It is a manual editor for prepared release notes rather than a repository import tool. Changelog Generator is intended for quick draft generation and review rather than unattended automation. Use the generated result as a starting point, adjust the available options, and verify important output before publishing, deploying, or sharing it.",
   "usage_steps": [
-    "Paste commit messages",
-    "Select format",
-    "Configure version/date",
-    "Click Generate",
-    "Copy or download"
+    "Choose Keep a Changelog, Conventional, or Simple format.",
+    "Edit the release version and date, or add another release.",
+    "Add entries and choose a change type for each one.",
+    "Fill the description and optional issue reference.",
+    "Review the generated Markdown and copy it to your changelog file."
   ],
   "usage_examples": [
-    "Generate release notes",
-    "Create CHANGELOG.md",
-    "Document version history"
+    "Prepare a small CHANGELOG.md section for a manual release.",
+    "Group bug fixes and security notes before publishing a version.",
+    "Compare Keep a Changelog and simple output for the same release entries.",
+    "Draft release notes from notes that were already collected outside the tool."
+  ],
+  "faqs": [
+    {
+      "question": "What should I check before using the Changelog Generator output?",
+      "answer": "Review the generated output, available options, and target context before publishing, deploying, or sharing it."
+    },
+    {
+      "question": "Can I edit the result after generating it?",
+      "answer": "Yes. Adjust the input values or available options, generate the result again, and then copy, export, or reuse the updated output in your workflow when the page provides those actions."
+    },
+    {
+      "question": "Why might the result differ from another generator tool?",
+      "answer": "Different tools can use different assumptions, rounding rules, parsing behavior, or export settings. Compare the same input values and review any notes shown in the interface before relying on the result."
+    },
+    {
+      "question": "Can I start with sample or placeholder data?",
+      "answer": "Yes. Use a small example or non-sensitive sample first, confirm the output shape, and then replace it with the real input you want to process."
+    },
+    {
+      "question": "Does this replace manual review?",
+      "answer": "No. It is meant to speed up routine work, but important results should still be checked for accuracy, context, and fit before you publish or share them."
+    }
   ]
 }

@@ -5,6 +5,7 @@
     "Use Carregar exemplo se quiser ver primeiro o formato aceito.",
     "Clique em Converter para JSON para criar uma saída JSON de amostra.",
     "Revise valores como sample string, 42, true, arrays e datas ISO.",
+    "Corrija a entrada se a página mostrar uma mensagem de erro de parsing.",
     "Copie a saída JSON e ajuste manualmente para sua API ou caso de teste."
   ],
   "usage_examples": [
@@ -29,6 +30,10 @@
     {
       "question": "Posso salvar o resultado como arquivo pela página?",
       "answer": "A página foca em saída copiável. Use o botão de copiar e salve o JSON no seu editor se precisar de um arquivo."
+    },
+    {
+      "question": "O que devo revisar antes de usar o resultado de TypeScript para JSON?",
+      "answer": "Revise entradas, opções, formato e contexto. Em resultados importantes, confira números, caracteres e significado antes de compartilhar ou publicar."
     }
   ]
 }

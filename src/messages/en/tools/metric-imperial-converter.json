@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Metric Imperial Converter is a comprehensive unit conversion tool that supports length, weight, volume, temperature, area, and speed conversions. Easily convert between metric units (meters, kilograms, liters) and imperial units (feet, pounds, gallons) with instant results.",
+  "detailed_description": "Metric Imperial Converter is a comprehensive unit conversion tool that supports length, weight, volume, temperature, area, and speed conversions. Easily convert between metric units (meters, kilograms, liters) and imperial units (feet, pounds, gallons) with instant results. Metric Imperial Converter is intended for quick format conversion checks and draft outputs. Test with a small sample first, review the converted result for missing fields or formatting changes, and verify important data before using it in another system.",
   "usage_steps": [
     "Select a conversion category (length, weight, volume, etc.)",
     "Enter the value you want to convert",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Convert kilometers to miles for travel planning",
     "Convert kilograms to pounds for weight tracking",
-    "Convert Celsius to Fahrenheit for weather comparison"
+    "Convert Celsius to Fahrenheit for weather comparison",
+    "Convert a small sample first, then verify the output before processing the full file or dataset."
+  ],
+  "faqs": [
+    {
+      "question": "What should I check before using the Metric Imperial Converter output?",
+      "answer": "Review field mapping, formatting, special characters, and a small sample before using the converted output elsewhere."
+    },
+    {
+      "question": "Can I edit the result after generating it?",
+      "answer": "Yes. Adjust the input values or available options, generate the result again, and then copy, export, or reuse the updated output in your workflow when the page provides those actions."
+    },
+    {
+      "question": "Why might the result differ from another conversion tool?",
+      "answer": "Different tools can use different assumptions, rounding rules, parsing behavior, or export settings. Compare the same input values and review any notes shown in the interface before relying on the result."
+    },
+    {
+      "question": "Can I start with sample or placeholder data?",
+      "answer": "Yes. Use a small example or non-sensitive sample first, confirm the output shape, and then replace it with the real input you want to process."
+    },
+    {
+      "question": "Does this replace manual review?",
+      "answer": "No. It helps convert or reshape data, but important output should still be checked in the destination app or workflow."
+    }
   ]
 }

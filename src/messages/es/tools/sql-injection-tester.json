@@ -1,5 +1,5 @@
 {
-  "detailed_description": "El Prueba de Inyección SQL analiza consultas SQL y patrones de código para identificar posibles vulnerabilidades de inyección SQL.",
+  "detailed_description": "El Prueba de Inyección SQL analiza consultas SQL y patrones de código para identificar posibles vulnerabilidades de inyección SQL. Prueba de Inyección SQL está pensado para una revisión inicial y aprendizaje, no como decisión final de seguridad. Usa el resultado como ayuda, revisa la entrada y confirma las conclusiones importantes con tu proceso habitual.",
   "usage_steps": [
     "Pega consulta SQL o código",
     "Introduce las entradas de prueba",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Prueba el manejo de entrada de usuarios",
     "Identifica la concatenación de cadenas",
-    "Aprende patrones seguros"
+    "Aprende patrones seguros",
+    "Hacer una revisión inicial con contenido público o una entrada corta antes de una comprobación manual de seguridad."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Prueba de Inyección SQL?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta de seguridad?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

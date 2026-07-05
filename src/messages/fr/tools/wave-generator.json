@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Le Générateur de Ondes crée des motifs d'ondes平滑且可自定义的SVG，非常适合用作部分分隔符、标题或页脚。生成单层或多层波浪，高度、频率和振幅均可调节。生成的SVG已优化用于网页，并可在部分顶部或底部定位。",
+  "detailed_description": "Le Générateur de Ondes crée des motifs d'ondes平滑且可自定义的SVG，非常适合用作部分分隔符、标题或页脚。生成单层或多层波浪，高度、频率和振幅均可调节。生成的SVG已优化用于网页，并可在部分顶部或底部定位。 Générateur de Vagues sert à vérifier rapidement les entrées, les réglages et le résultat. Utilisez la sortie comme brouillon, relisez le format, les nombres, les caractères et le contexte, puis confirmez les résultats importants dans votre propre flux de travail avant de les partager, publier ou appliquer.",
   "usage_steps": [
     "Définissez la hauteur de la vague en pixels",
     "Adaptez la fréquence pour le nombre de vagues",
@@ -11,6 +11,29 @@
   "usage_examples": [
     "Créer des diviseurs de sections entre du contenu",
     "Concevoir des en-têtes de vagues pour des pages d'accueil",
-    "Construire des arrière-plans animés de vagues"
+    "Construire des arrière-plans animés de vagues",
+    "Vérifier une entrée courte avant de traiter le contenu complet."
+  ],
+  "faqs": [
+    {
+      "question": "Que vérifier avant d’utiliser le résultat de Générateur de Vagues ?",
+      "answer": "Vérifiez les entrées, les réglages, le format et le contexte. Pour un résultat important, relisez les nombres, les caractères et le sens avant partage ou publication."
+    },
+    {
+      "question": "Puis-je modifier le résultat après génération ?",
+      "answer": "Oui. Ajustez l’entrée ou les options disponibles, relancez le traitement, puis utilisez la sortie mise à jour après relecture."
+    },
+    {
+      "question": "Pourquoi le résultat peut-il différer d’un autre outil ?",
+      "answer": "Les outils peuvent gérer l’arrondi, l’analyse, la mise en forme ou l’affichage différemment. Comparez avec la même entrée et tenez compte des limites de l’interface."
+    },
+    {
+      "question": "Puis-je commencer avec une entrée courte ?",
+      "answer": "Oui. Commencez avec une entrée courte ou un contenu non sensible pour confirmer la forme de la sortie avant d’utiliser le contenu réel."
+    },
+    {
+      "question": "L’outil remplace-t-il une relecture manuelle ?",
+      "answer": "Non. Il accélère les tâches répétitives, mais les résultats importants doivent rester vérifiés pour l’exactitude, le contexte et l’adéquation."
+    }
   ]
 }

@@ -1,17 +1,38 @@
 {
-  "detailed_description": "Der Half Doughnut Chart Generator ist ein spezialisierter Visualisierungstool zur Erstellung von halbkreisförmigen Tortendiagrammen mit dynamischen SVG-Elementen. Das Werkzeug konvertiert numerische Datensätze in proportionale Segmente innerhalb eines 180°-Kreissegments, wobei Benutzer die Kontrolle über technische Parameter wie Füllfarben, Strichstärken, Legendenpositionierung und interaktive Tooltips behalten. Die Implementierung erfolgt durch die Berechnung von Bogenwinkeln basierend auf Datenwerten, unter Verwendung von SVG-path-Elementen für präzise Formdarstellung. Die Halbkreisarchitektur eignet sich besonders für Dashboards mit begrenztem Platzangebot oder asymmetrische Layouts, da sie im Gegensatz zu vollständigen Doughnut-Charts einen fokussierten Datenbereich hervorhebt. Technisch ermöglicht der Generator die Anpassung des Innen- und Außendurchmessers, die Implementierung von Datenbeschriftungen via DOM-Manipulation und die Exportfunktionalität in Vektor- und Rasterformaten. Entwickler profitieren von der Integration von ARIA-Labels für Barrierefreiheit und der Möglichkeit, den Chart über JavaScript-APIs dynamisch zu aktualisieren, ohne das gesamte Diagramm neu laden zu müssen.",
+  "detailed_description": "Der Halbmond-Diagramm-Generator erstellt halbkreisförmige Donut-Diagramme direkt im Browser. Sie können Beispieldaten laden, den Diagrammtitel ändern, Namen und Werte in einer editierbaren Tabelle pflegen, Zeilen hinzufügen oder entfernen, ein Farbthema wählen, Legende und Beschriftungen ein- oder ausblenden und die Vorschau als PNG oder SVG herunterladen. Die Werte werden als Anteile des sichtbaren Halbkreises dargestellt, wodurch sich das Diagramm gut für kompakte KPI-Karten, Fortschrittsübersichten, Budgetanteile oder Zufriedenheitsverteilungen eignet. Für belastbare Berichte sollten die Zahlen vor dem Export noch einmal geprüft werden.",
   "usage_steps": [
-    "1. Geben Sie numerische Werte in die Tabellenfelder ein und weisen Sie jedem Segment eine eindeutige Beschriftung zu.",
-    "2. Wählen Sie ein Farbschema aus dem verfügbaren CSS-Farbpaletten-Modul oder definieren Sie benutzerdefinierte HEX-Codes.",
-    "3. Passen Sie die Segmentabstände durch Eingabe von Pixelwerten für den 'Padding' und 'Margin' Parameter an.",
-    "4. Aktivieren Sie den 'Legend Docking' Schalter, um die Legende an der linken, rechten oder unteren Seite des Diagramms zu positionieren.",
-    "5. Verfeinern Sie die interaktiven Tooltips durch Aktivierung von 'Value Display Mode' für absolute oder prozentuale Anzeige.",
-    "6. Exportieren Sie das generierte Diagramm durch Klick auf den 'Download SVG/PNG' Button oder integrieren Sie den Embed-Code direkt in Ihre Webseite."
+    "Laden Sie das Beispiel oder bearbeiten Sie die vorhandenen Tabellenzeilen.",
+    "Geben Sie einen klaren Diagrammtitel ein.",
+    "Passen Sie Namen und Werte an und fügen Sie bei Bedarf weitere Zeilen hinzu.",
+    "Wählen Sie ein Farbthema und entscheiden Sie, ob Legende und Beschriftungen sichtbar sein sollen.",
+    "Prüfen Sie die Vorschau und laden Sie das Diagramm als PNG oder SVG herunter."
   ],
   "usage_examples": [
-    "Ein Projektmanager visualisiert den Fertigstellungsstand von Meilensteinen in einer Dashboard-Spalte mit begrenztem Platz.",
-    "Ein Finanzanalyst zeigt Quartalsgewinne im Vergleich zum Vorjahreszeitraum in einem asymmetrischen Report-Layout an.",
-    "Ein UX-Designer demonstriert Nutzerbefragungsergebnisse (z.B. 0-100%-Skala) in einem responsiven Web-Prototypen.",
-    "Ein Bildungsanbieter präsentiert Abschlussraten verschiedener Kurse in einer kompakten Infografik für mobile Endgeräte."
+    "Eine Kundenzufriedenheit in Ausgezeichnet, Gut, Durchschnittlich und Schlecht darstellen.",
+    "Budgetanteile in einer kompakten Präsentationsgrafik vergleichen.",
+    "Projektstatus nach erledigt, laufend und offen visualisieren.",
+    "Eine Dashboard-Kachel vorbereiten, in der Anteile schnell erfassbar sein sollen."
+  ],
+  "faqs": [
+    {
+      "question": "Welche Daten kann ich eingeben?",
+      "answer": "Die Seite nutzt eine einfache Tabelle aus Namen und numerischen Werten. Jede Zeile wird als Segment im Halbmond-Diagramm angezeigt."
+    },
+    {
+      "question": "Kann ich Dateien importieren oder JSON exportieren?",
+      "answer": "Nein. Diese Version arbeitet mit direkt bearbeitbaren Tabellenzeilen und exportiert die fertige Grafik als PNG oder SVG."
+    },
+    {
+      "question": "Wie werden Prozentwerte berechnet?",
+      "answer": "Die Prozentwerte ergeben sich aus dem Anteil jedes Werts an der Summe aller sichtbaren Segmente."
+    },
+    {
+      "question": "Wann sollte ich Beschriftungen ausblenden?",
+      "answer": "Blenden Sie Beschriftungen aus, wenn Segmentnamen lang sind oder sich in der Vorschau überschneiden. Die Legende kann dann die Namen übernehmen."
+    },
+    {
+      "question": "Wofür ist ein Halbmond-Diagramm besonders geeignet?",
+      "answer": "Es eignet sich für wenige Kategorien, Anteile und kompakte KPI-Darstellungen. Für viele Kategorien ist ein Balken- oder Tabellenformat oft lesbarer."
+    }
   ]
 }

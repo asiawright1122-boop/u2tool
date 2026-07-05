@@ -1,17 +1,35 @@
 {
-  "detailed_description": "Le générateur de graphiques à barres empilées en pourcentage permet de visualiser la composition proportionnelle des données catégorielles en normalisant chaque groupe à 100%. Techniquement, l'outil utilise des bibliothèques de rendu SVG pour créer des barres segmentées dont chaque section correspond à un ratio relatif. Les données d'entrée, structurées en format CSV ou JSON, sont interprétées pour calculer les proportions via une fonction de normalisation (chaque valeur est divisée par la somme totale du groupe). L'axe X représente les catégories, tandis que l'axe Y affiche les pourcentages. Les utilisateurs peuvent personnaliser les échelles de couleur via des palettes HEX ou RGB, ajuster les étiquettes dynamiques, et intégrer des infobulles (tooltips) pour une analyse interactive. Ce type de graphique est essentiel pour comparer des distributions de marché, analyser des résultats d'enquêtes ou illustrer des répartitions budgétaires, où l'accent est mis sur les relations entre parties plutôt que sur des valeurs absolues.",
+  "detailed_description": "Le générateur de barres empilées en pourcentage crée des graphiques 100% empilés à partir de catégories et de séries éditables. Chaque ligne représente une catégorie et chaque valeur de série est affichée comme un segment en pourcentage; il est donc préférable que chaque ligne totalise environ 100%. Vous pouvez renommer les séries, ajouter ou supprimer des lignes et des séries, modifier les valeurs dans le tableau, choisir un thème de couleur, afficher ou masquer la légende, passer en orientation verticale ou horizontale, puis télécharger le résultat en PNG ou en SVG.",
   "usage_steps": [
-    "Accédez à l'outil et cliquez sur 'Importer des données' pour charger un fichier CSV/TSV ou coller manuellement vos données dans l'éditeur.",
-    "Sélectionnez la colonne représentant les catégories (axe X) et les valeurs numériques à empiler via le menu déroulant 'Configuration des axes'.",
-    "Activez l'option 'Normalisation 100%' pour convertir les valeurs en pourcentages et choisissez la direction de l'empilement (vertical ou horizontal).",
-    "Personnalisez les couleurs des segments en utilisant le sélecteur de palette ou insérez des codes HEX personnalisés dans la section 'Style des données'.",
-    "Ajoutez des annotations dynamiques en cochant 'Afficher les étiquettes' et ajustez le format d'affichage (ex: 2 chiffres après la virgule).",
-    "Prévisualisez le graphique, téléchargez-le au format SVG ou PNG, ou générez un code intégrable HTML/JavaScript pour un site web."
+    "Chargez les données d’exemple ou commencez à modifier les lignes par défaut.",
+    "Renommez chaque série selon les segments que vous voulez comparer.",
+    "Modifiez chaque ligne de catégorie et saisissez les valeurs en pourcentage.",
+    "Ajoutez des lignes ou des séries si le graphique nécessite plus de catégories.",
+    "Choisissez un thème de couleur et ajustez l’orientation horizontale ou la légende.",
+    "Téléchargez le graphique final en PNG ou en SVG."
   ],
   "usage_examples": [
-    "Un analyste marketing compare les parts de marché de trois marques dans cinq régions en représentant chaque région comme une barre divisée par marque.",
-    "Un chercheur en sociologie visualise la répartition des réponses à un sondage (très satisfait, satisfait, insatisfait) par tranche d'âge.",
-    "Un directeur financier illustre la répartition des dépenses (RH, R&D, marketing) sur quatre trimestres avec des pourcentages cumulés.",
-    "Un administrateur réseau analyse la distribution du trafic web (mobile, bureau, tablette) sur 12 mois via un graphique à barres horizontales."
+    "Comparer la part mobile, tablette et bureau sur plusieurs années.",
+    "Afficher les réponses d’un sondage par segment de clientèle.",
+    "Visualiser la contribution des canaux de vente par trimestre lorsque chaque ligne vaut 100%.",
+    "Exporter un PNG pour un rapport ou un SVG pour une présentation."
+  ],
+  "faqs": [
+    {
+      "question": "L’outil normalise-t-il les valeurs brutes ?",
+      "answer": "Non. Saisissez directement les pourcentages et gardez chaque ligne proche de 100%."
+    },
+    {
+      "question": "Puis-je ajouter des séries ?",
+      "answer": "Oui. Vous pouvez ajouter des séries jusqu’à la limite de l’interface et les renommer."
+    },
+    {
+      "question": "Puis-je changer l’orientation ?",
+      "answer": "Oui. L’option Horizontal alterne colonnes empilées et barres horizontales."
+    },
+    {
+      "question": "Quels formats sont disponibles ?",
+      "answer": "Le graphique peut être téléchargé en PNG ou en SVG."
+    }
   ]
 }

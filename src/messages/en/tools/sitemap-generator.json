@@ -10,7 +10,8 @@
   "usage_examples": [
     "Create a compact sitemap.xml file for a five-page brochure site before uploading it to the site root.",
     "Draft sitemap XML for a staging project where the final build process is not ready yet.",
-    "Prepare a manual list of priority landing pages for a client review or SEO handoff."
+    "Prepare a manual list of priority landing pages for a client review or SEO handoff.",
+    "Build a small sitemap sample to compare lastmod, changefreq, and priority values before wiring them into a build script."
   ],
   "faqs": [
     {
@@ -28,6 +29,10 @@
     {
       "question": "Is this for large sites?",
       "answer": "It is best for small manual sitemaps and drafts. It does not crawl thousands of pages, create sitemap indexes, or split large sitemap files automatically."
+    },
+    {
+      "question": "Does it submit the sitemap to search engines?",
+      "answer": "No. It creates XML text and a sitemap.xml download. Submit the final file through your hosting setup or webmaster tools after reviewing the URLs."
     }
   ]
 }

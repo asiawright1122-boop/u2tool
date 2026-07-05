@@ -10,7 +10,8 @@
   "usage_examples": [
     "Verificar si un ensayo cumple un límite mínimo o máximo de palabras.",
     "Medir la longitud de un artículo antes de publicarlo.",
-    "Estimar el tiempo de lectura o habla de un informe, guion o borrador."
+    "Estimar el tiempo de lectura o habla de un informe, guion o borrador.",
+    "Transformar un fragmento corto y revisar el resultado antes de compartirlo o publicarlo."
   ],
   "faqs": [
     {
@@ -24,6 +25,14 @@
     {
       "question": "¿Se sube mi documento?",
       "answer": "No. El análisis se ejecuta en el navegador mientras escribes o pegas texto."
+    },
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Contador de Palabras de Documentos?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
     }
   ]
 }

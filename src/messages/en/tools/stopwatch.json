@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Online Stopwatch is a precise timing tool with accuracy to one-hundredth of a second (10 milliseconds). Supports start, stop, reset, and lap functions. The lap feature records multiple split times and automatically marks the fastest and slowest laps. Displays individual lap time and cumulative total time. Clean and intuitive interface with large font display for easy viewing. Suitable for sports training, cooking timing, study timing, and various other scenarios. All timing happens locally in your browser, no internet connection required.",
+  "detailed_description": "Online Stopwatch is a browser-based timer with start, stop, reset, and lap controls. The display updates in centiseconds and switches to an hour format when timing passes one hour. Each lap records the split duration and cumulative total time, with the best and slowest lap highlighted once at least two laps exist. It is useful for everyday timing, practice sessions, cooking, study blocks, and quick task measurements. Lap data stays on the page only while the session is open; there is no account, file export, cloud sync, or persistent history.",
   "usage_steps": [
     "Open the Stopwatch tool page",
     "Click the green 'Start' button to begin timing",
@@ -9,15 +9,15 @@
     "Click 'Reset' to clear all records"
   ],
   "usage_examples": [
-    "Record running laps and times during sports training",
-    "Precise timing while cooking",
-    "Pomodoro technique timing for studying",
-    "Test how long tasks take to complete"
+    "Record running laps and split times during practice.",
+    "Time a cooking step and pause when interrupted.",
+    "Measure a study block with visible elapsed time.",
+    "Compare how long repeated tasks take to complete."
   ],
   "faqs": [
     {
-      "question": "What is the stopwatch accuracy?",
-      "answer": "The stopwatch accuracy is 10 milliseconds (one-hundredth of a second), displayed as minutes:seconds.centiseconds, sufficient for everyday timing needs."
+      "question": "What time format is displayed?",
+      "answer": "The display shows minutes, seconds, and centiseconds, and adds hours after the elapsed time passes one hour."
     },
     {
       "question": "Are lap records saved?",
@@ -25,7 +25,15 @@
     },
     {
       "question": "How are fastest and slowest laps marked?",
-      "answer": "When 2 or more laps are recorded, the system automatically marks the fastest lap with 🏆 and the slowest with 🐢, helping you analyze performance."
+      "answer": "When two or more laps are recorded, the page highlights the shortest split as best and the longest split as slowest."
+    },
+    {
+      "question": "Can I export lap records?",
+      "answer": "No. The current stopwatch does not export files; copy or record important lap values manually."
+    },
+    {
+      "question": "What should I check before relying on the timing?",
+      "answer": "Use it for everyday timing and confirm important measurements with the timing standard required by your event or workflow."
     }
   ]
 }

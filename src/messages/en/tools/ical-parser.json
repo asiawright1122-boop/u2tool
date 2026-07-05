@@ -1,17 +1,23 @@
 {
-  "detailed_description": "iCal Parser is a free online ICS viewer for reading pasted or uploaded iCalendar calendar text in the browser. It extracts VEVENT entries into a simple event table so you can inspect each event's summary, start time, end time, and location before importing or sharing a calendar export. When events are found, you can export the parsed event objects as JSON for deeper inspection. The parser also keeps common fields such as description, organizer, attendees, status, categories, and RRULE in the JSON output. It is useful for quickly checking calendar exports, debugging small ICS snippets, comparing generated .ics files, or reviewing event data without importing it into a calendar app. Timezone identifiers are not expanded through complete timezone rulesets, so verify timezone-sensitive schedules in the calendar system that will publish or consume the file.",
+  "detailed_description": "iCal Parser is a free online iCal viewer, free online ICS viewer, and ICS calendar viewer for reading pasted or uploaded iCalendar calendar text in the browser. Use it to view iCal online, view ICS file online, and extract VEVENT entries into a simple event table so you can inspect each event's summary, start time, end time, and location before importing or sharing a calendar export. When events are found, you can export the parsed event objects as JSON for deeper inspection. The parser also keeps common fields such as description, organizer, attendees, status, categories, and RRULE in the JSON output. It is useful for quickly checking calendar exports, debugging small ICS snippets, comparing generated .ics files, or reviewing event data without importing it into a calendar app. Timezone identifiers are not expanded through complete timezone rulesets, so verify timezone-sensitive schedules in the calendar system that will publish or consume the file.",
   "usage_steps": [
-    "Paste iCal/ICS content into the text area or upload an .ics file.",
+    "Paste iCal/ICS content into the text area or upload an .ics file when you need to view iCal online.",
     "Click Parse and review the event table for summary, start, end, and location.",
     "Use Export JSON when you need the parsed event fields for debugging or handoff.",
+    "Check recurring rules, timezone identifiers, attendees, and description fields in the JSON output when those details matter.",
     "If you need to create a new calendar file instead of inspect one, use an ICS file generator workflow."
   ],
   "usage_examples": [
     "Inspect a calendar export before sharing it with a teammate.",
     "Debug whether an ICS snippet contains the expected times, locations, and JSON fields.",
-    "Compare the VEVENT output from an ICS generator before sending the file to another system."
+    "Compare the VEVENT output from an ICS generator before sending the file to another system.",
+    "Review an uploaded .ics file from a scheduling tool without importing it into your main calendar."
   ],
   "faqs": [
+    {
+      "question": "Can I use this as an iCal viewer?",
+      "answer": "Yes. It works as an iCal viewer and ICS calendar viewer for pasted calendar text or uploaded .ics files, then shows the parsed events in a readable table."
+    },
     {
       "question": "Can I upload an .ics file?",
       "answer": "Yes. You can paste ICS calendar text or upload an .ics or .ical file, then parse it into a readable event table."
@@ -27,6 +33,10 @@
     {
       "question": "How are timezones handled?",
       "answer": "The parser reads timezone identifiers from the ICS content, but it does not expand them through complete timezone rulesets. Verify timezone-sensitive events in the calendar system that will use the file."
+    },
+    {
+      "question": "Does it change or publish my calendar?",
+      "answer": "No. It only parses the pasted or uploaded ICS content for review in the browser. It does not edit, publish, invite guests, or write back to a calendar account."
     }
   ]
 }

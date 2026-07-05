@@ -1,5 +1,5 @@
 {
-  "detailed_description": "BIC/SWIFT Lookup tool validates and provides information about Bank Identifier Codes (BIC) used for international wire transfers. Enter a BIC code to verify its format and get details about the bank, country, and branch. Essential for ensuring accurate international payments.",
+  "detailed_description": "BIC/SWIFT Lookup tool validates and provides information about Bank Identifier Codes (BIC) used for international wire transfers. Enter a BIC code to verify its format and get details about the bank, country, and branch. Essential for ensuring accurate international payments. BIC/SWIFT Lookup is intended for quick estimates and comparison checks, not professional financial advice. Use the generated result as a starting point, review assumptions, rounding, and source values, and verify important financial decisions before you publish or share the output.",
   "usage_steps": [
     "Enter a BIC/SWIFT code in the input field",
     "Click Look Up to validate and get bank information",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Verify BIC codes before making international transfers",
     "Look up bank information from SWIFT codes",
-    "Validate payment details for cross-border transactions"
+    "Validate payment details for cross-border transactions",
+    "Compare a quick estimate before moving the numbers into a budget, invoice, or report."
+  ],
+  "faqs": [
+    {
+      "question": "What should I check before using the BIC/SWIFT Lookup output?",
+      "answer": "Review source values, assumptions, rounding, and context before using the result in a budget, invoice, report, or decision."
+    },
+    {
+      "question": "Can I edit the result after generating it?",
+      "answer": "Yes. Adjust the input values or available options, generate the result again, and then copy, export, or reuse the updated output in your workflow when the page provides those actions."
+    },
+    {
+      "question": "Why might the result differ from another finance tool?",
+      "answer": "Different tools can use different assumptions, rounding rules, parsing behavior, or export settings. Compare the same input values and review any notes shown in the interface before relying on the result."
+    },
+    {
+      "question": "Can I start with sample or placeholder data?",
+      "answer": "Yes. Use a small example or non-sensitive sample first, confirm the output shape, and then replace it with the real input you want to process."
+    },
+    {
+      "question": "Does this replace manual review?",
+      "answer": "No. It is a quick calculation aid, not professional financial advice; verify important decisions with the right source or reviewer."
+    }
   ]
 }

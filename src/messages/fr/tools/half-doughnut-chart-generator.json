@@ -1,17 +1,35 @@
 {
-  "detailed_description": "Le Générateur de Graphiques en Demi-Couronne permet de créer des visualisations de données semi-circulaires basées sur des principes de géométrie vectorielle SVG. Contrairement aux graphiques circulaires traditionnels, cet outil se concentre sur une représentation en arc de 180 degrés, idéale pour les interfaces nécessitant un espace d'affichage restreint sans compromettre la lisibilité. Techniquement, il utilise des algorithmes de traçage de chemins (path tracing) pour dessiner des segments proportionnels en fonction des valeurs d'entrée, avec des options avancées de personnalisation comme les dégradés linéaires pour les remplissages, la gestion des étiquettes de données avec des angles d'alignement dynamiques, et la possibilité de définir des seuils de visibilité pour les petites proportions. L'outil est particulièrement utile pour les tableaux de bord d'applications mobiles, les rapports financiers verticaux ou les interfaces IoT où l'espace horizontal est limité. Il supporte le chargement de données en JSON ou CSV, et génère des graphiques scalables (responsive) adaptés aux écrans de toutes tailles, avec des attributs ARIA pour l'accessibilité. Le rendu est calculé côté client en temps réel, sans dépendance à des bibliothèques externes, garantissant une exécution rapide et une intégration simplifiée.",
+  "detailed_description": "Le générateur de graphique en demi-donut crée un graphique semi-circulaire directement dans le navigateur à partir de lignes nom-valeur. Vous pouvez modifier le titre, ajouter ou supprimer des lignes, choisir un thème de couleur, afficher ou masquer la légende et les libellés, puis vérifier le rendu dans l’aperçu. Le graphique est rendu avec ECharts et peut être téléchargé en PNG ou en SVG. Il convient aux cartes de KPI, aux rapports rapides, aux répartitions de budget et aux présentations qui nécessitent une visualisation compacte.",
   "usage_steps": [
-    "Sélectionnez le format d'entrée de données via l'onglet 'Source' (manuel via le tableau de valeurs ou import CSV en glissant-déposant un fichier).",
-    "Saisissez au moins deux catégories avec leurs valeurs numériques et couleurs hexadécimales personnalisées dans le panneau d'édition de données.",
-    "Ajustez l'angle de départ (0-360°) et l'arc total (jusqu'à 180°) à l'aide des curseurs sous l'option 'Paramètres de rotation'.",
-    "Activez le mode 'Dégradé' pour appliquer des transitions entre couleurs ou définissez une largeur de trait personnalisée en pixels.",
-    "Utilisez le bouton 'Aperçu en temps réel' pour visualiser les modifications avant l'exportation.",
-    "Téléchargez le graphique généré au format SVG ou PNG haute résolution via le menu 'Exporter'."
+    "Saisissez le titre du graphique dans le champ prévu.",
+    "Modifiez le nom et la valeur de chaque ligne dans le tableau.",
+    "Ajoutez des lignes si vous avez plus de segments ou supprimez celles qui sont inutiles.",
+    "Choisissez un thème parmi Default, Ocean, Sunset et Forest.",
+    "Activez ou désactivez la légende et les libellés selon la lisibilité de l’aperçu.",
+    "Téléchargez le graphique final en PNG ou en SVG."
   ],
   "usage_examples": [
-    "Un responsable marketing visualise l'avancement d'une campagne de 6 mois sur un tableau de bord vertical, en utilisant un demi-cercle pour symboliser la progression de 0 à 100%.",
-    "Un comptable présente un rapport trimestriel avec un graphique en demi-couronne montrant la répartition des dépenses (salaires, logistique, R&D) dans une présentation PowerPoint.",
-    "Un développeur d'application de fitness intègre un indicateur circulaire de 50% pour illustrer l'atteinte quotidienne d'objectifs de pas, s'adaptant à un design UI mobile compact.",
-    "Un analyste en communication mesure l'engagement social (likes, partages, commentaires) sur une plateforme web responsive, en superposant deux demi-couronnes pour comparer deux campagnes."
+    "Afficher la progression d’un objectif dans une carte de tableau de bord.",
+    "Présenter la répartition d’un budget par catégorie dans un rapport.",
+    "Résumer les réponses principales d’un sondage dans une diapositive.",
+    "Comparer quelques segments de KPI dans un espace horizontal réduit."
+  ],
+  "faqs": [
+    {
+      "question": "Puis-je importer un fichier de données ?",
+      "answer": "Non. Cette page utilise un tableau de lignes éditables pour saisir les noms et les valeurs."
+    },
+    {
+      "question": "Quels réglages puis-je modifier ?",
+      "answer": "Vous pouvez modifier le titre, les lignes de données, le thème de couleur, la légende et les libellés."
+    },
+    {
+      "question": "Quels exports sont disponibles ?",
+      "answer": "Le graphique peut être téléchargé en PNG ou en SVG."
+    },
+    {
+      "question": "Quand utiliser un demi-donut ?",
+      "answer": "Il est pratique pour montrer une composition ou un avancement dans un emplacement compact."
+    }
   ]
 }

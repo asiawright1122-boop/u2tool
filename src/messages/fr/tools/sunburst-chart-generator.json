@@ -1,17 +1,38 @@
 {
-  "detailed_description": "Le générateur de graphiques en soleil permet de transformer des données hiérarchiques complexes en visualisations radiales interactives. Contrairement aux arborescences classiques, cette solution exploite un système de coordonnées polaires pour représenter des structures à plusieurs niveaux, avec chaque couche annulaire correspondant à une profondeur hiérarchique. La solution s'appuie sur l'algorithme de partitionnement circulaire qui divise les données en segments proportionnels à leurs valeurs, calculant les angles via des ratios cumulatifs. Les développeurs peuvent importer des données au format JSON imbriqué ou CSV hiérarchique avec des séparateurs de niveau personnalisables, puis appliquer des mappings de couleurs via des gradients HSV ou des palettes catégorielles. L'outil est particulièrement utile pour analyser des structures organisationnelles, des répartitions de ventes par région/catégorie/sous-catégorie, ou des systèmes de fichiers complexes. Il génère des exports SVG vectoriels pour une intégration web fluide ou des PNG haute résolution avec anti-aliasing, tout en intégrant des mécanismes d'optimisation de rendu pour éviter la surcharge visuelle sur les grands datasets.",
+  "detailed_description": "Le générateur de diagramme sunburst transforme une structure JSON hiérarchique en visualisation radiale dans le navigateur. La page fournit un éditeur JSON, un bouton pour charger un exemple, un formatteur JSON, des réglages de titre, de thème, de rayon intérieur, de rayon extérieur et d'affichage des étiquettes, puis une prévisualisation ECharts exportable en PNG ou SVG. Il est adapté aux taxonomies, répartitions par catégorie, structures d'équipe ou données imbriquées de taille raisonnable. L'outil n'importe pas de CSV et ne propose pas de cartographie de couleurs avancée ; la structure affichée vient du JSON que vous collez ou modifiez dans l'éditeur.",
   "usage_steps": [
-    "Chargez votre fichier JSON avec une structure imbriquée ou un CSV avec des niveaux séparés par '>' dans la zone d'import",
-    "Sélectionnez la profondeur maximale à afficher via le curseur 'Niveaux de hiérarchie'",
-    "Activez/désactivez les étiquettes de segment avec le switch 'Affichage des textes'",
-    "Ajustez la palette de couleurs via le sélecteur HSV ou importez un fichier .colormap",
-    "Utilisez la roue de zoom pour ajuster le rayon interne/externe du graphique",
-    "Téléchargez le résultat au format SVG ou PNG high-resolution via le bouton 'Exporter avec résolution'"
+    "Chargez l'exemple ou collez un tableau JSON avec des objets name, value et children.",
+    "Utilisez Format JSON pour rendre la structure plus lisible avant de la modifier.",
+    "Ajustez le titre, le thème de couleur, les rayons intérieur et extérieur, ainsi que l'affichage des étiquettes.",
+    "Surveillez les erreurs de JSON invalide et corrigez la structure avant d'exporter.",
+    "Téléchargez le résultat en PNG ou SVG lorsque la hiérarchie est lisible."
   ],
   "usage_examples": [
-    "Visualisation de la structure du capital d'une entreprise avec actionnaires principaux et sous-actions à chaque niveau",
-    "Analyse de la répartition des ventes par continent > pays > ville > magasin dans un tableau de bord commercial",
-    "Représentation d'une taxonomie biologique avec royaume > emprunt > classe > ordre > famille",
-    "Cartographie des permissions d'accès dans un système informatique avec rôles > groupes > utilisateurs > droits"
+    "Visualiser une structure produit avec catégories, sous-catégories et volumes.",
+    "Présenter une organisation par équipes et sous-équipes dans un format radial compact.",
+    "Comparer des parts de contenu dans une taxonomie à deux ou trois niveaux.",
+    "Préparer une image PNG ou SVG pour une documentation interne après nettoyage du JSON."
+  ],
+  "faqs": [
+    {
+      "question": "Quel format de données dois-je coller?",
+      "answer": "Collez du JSON hiérarchique avec des noms, des valeurs et éventuellement des enfants. L'exemple intégré montre la forme attendue."
+    },
+    {
+      "question": "Puis-je importer un CSV?",
+      "answer": "Non. Cette page travaille avec un éditeur JSON. Convertissez d'abord vos données en JSON si elles viennent d'un tableur."
+    },
+    {
+      "question": "Que changent les rayons intérieur et extérieur?",
+      "answer": "Ils contrôlent l'épaisseur et la position de l'anneau sunburst. Des valeurs trop proches peuvent rendre les libellés plus difficiles à lire."
+    },
+    {
+      "question": "Quand masquer les étiquettes?",
+      "answer": "Masquez-les lorsque la hiérarchie contient beaucoup de segments ou lorsque vous préférez expliquer les valeurs dans un texte séparé."
+    },
+    {
+      "question": "Le PNG ou SVG exporté remplace-t-il une validation des données?",
+      "answer": "Non. Relisez les valeurs et la structure JSON avant de partager l'image, surtout pour un rapport ou une présentation."
+    }
   ]
 }

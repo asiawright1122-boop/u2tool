@@ -1,16 +1,39 @@
 {
-  "detailed_description": "Generador de Neumorfismo crea el estilo de diseño de interfaz de usuario popular que combina el diseño plano con efectos 3D sutiles. Esta herramienta genera código CSS para elementos que parecen proyectarse hacia fuera o hundirse en el fondo. Personalice la dirección de la fuente de luz, la intensidad de la sombra, la cantidad de desenfoque y el radio de borde para lograr la apariencia perfectamente suave y táctil para botones, tarjetas e campos de entrada.",
+  "detailed_description": "Generador Neumorphism crea un bloque CSS para un elemento con fondo, borde redondeado y sombras suaves. La página muestra una vista previa y permite ajustar color de fondo, forma plana, cóncava, convexa o presionada, distancia de sombra, intensidad, desenfoque y radio de borde. El resultado incluye `background`, `border-radius` y `box-shadow`, listo para copiar como punto de partida. Es útil para botones, tarjetas o pequeños elementos de interfaz que necesiten un estilo neumórfico. No genera un sistema de diseño completo, estados responsive ni componentes interactivos; revisa contraste y accesibilidad en tu UI real.",
   "usage_steps": [
-    "Selecciona tu color de fondo preferido",
-    "Elige un estilo de forma: plano, concavo, convexo o presionado",
-    "Ajusta la distancia de la sombra para efecto de profundidad",
-    "Establece la intensidad para sombras claras y oscuras",
-    "Configura la cantidad de desenfoque para suavidad",
-    "Copia el código CSS para tu proyecto"
+    "Selecciona el color de fondo del elemento.",
+    "Elige la forma: plana, cóncava, convexa o presionada.",
+    "Ajusta la distancia de sombra para controlar la profundidad.",
+    "Cambia la intensidad para aclarar u oscurecer las sombras.",
+    "Configura el desenfoque y el radio de borde.",
+    "Copia el CSS generado y pruébalo en tu componente."
   ],
   "usage_examples": [
-    "Diseño de botones y interruptores de interfaz de usuario suaves",
-    "Creación de campos de entrada neumórficos",
-    "Construcción de tarjetas de panel con sombras suaves"
+    "Crear un botón suave con sombras claras y oscuras.",
+    "Preparar una tarjeta de panel con esquinas redondeadas.",
+    "Probar un estado presionado para un control visual.",
+    "Copiar un bloque CSS inicial y adaptarlo a la paleta del proyecto."
+  ],
+  "faqs": [
+    {
+      "question": "Qué CSS genera?",
+      "answer": "Genera propiedades de `background`, `border-radius` y `box-shadow` para el estilo mostrado en la vista previa."
+    },
+    {
+      "question": "Qué formas están disponibles?",
+      "answer": "Puedes elegir plana, cóncava, convexa o presionada."
+    },
+    {
+      "question": "Incluye componentes listos para frameworks?",
+      "answer": "No. La herramienta genera CSS base; debes integrarlo manualmente en HTML, Svelte, React u otro framework."
+    },
+    {
+      "question": "Qué debo comprobar antes de publicarlo?",
+      "answer": "Revisa contraste, foco visible, legibilidad y accesibilidad, porque las sombras suaves pueden reducir claridad."
+    },
+    {
+      "question": "Puedo cambiar el color manualmente?",
+      "answer": "Sí. Usa el selector de color o escribe un valor hexadecimal en el campo de texto."
+    }
   ]
 }

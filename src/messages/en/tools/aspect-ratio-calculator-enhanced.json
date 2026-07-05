@@ -1,17 +1,39 @@
 {
-  "detailed_description": "This calculator performs precise aspect ratio analysis by computing the proportional relationship between two dimensions using the Euclidean algorithm to reduce width:height fractions to their simplest form. It supports both pixel-based calculations and decimal ratio conversions, enabling users to maintain dimensional integrity across different display formats. The tool's unique value lies in its ability to handle complex scaling operations for responsive web design, video production pipelines, and cross-platform content adaptation. Developers can use it to resolve dimension conflicts when implementing CSS aspect-ratio properties, while filmmakers benefit from its ability to calculate safe action areas during format conversions. The algorithm automatically detects and preserves original proportions when scaling resolutions, with advanced features for calculating pixel aspect ratios (PAR) in video encoding workflows. Technical outputs include simplified ratios, dimensional cross-multiplication results, and resolution compatibility assessments for specific display standards like 4K UHD (3840×2160) or mobile formats (1080×1920).",
+  "detailed_description": "The enhanced Aspect Ratio Calculator reduces a width and height to the simplest ratio and helps resize one dimension while keeping the other proportional. Enter numeric width and height values, review the simplified ratio, lock the current ratio, or apply one of the built-in presets: 16:9, 4:3, 1:1, and 3:2. When a ratio is locked, changing width recalculates height and changing height recalculates width. The tool is useful for quick image, video, thumbnail, and UI placeholder checks. It does not provide unit switching, JSON export, pixel aspect ratio analysis, safe-area calculations, or platform-specific compatibility scoring.",
   "usage_steps": [
-    "Enter original width and height values in pixels or decimal format into the designated input fields",
-    "Select calculation mode: 'Simplify Ratio' for fraction reduction or 'Scale Dimensions' for proportional resizing",
-    "Adjust unit settings between pixels, centimeters, or inches using the dropdown menu for physical dimension calculations",
-    "Activate 'Lock Ratio' button to maintain proportionality when modifying one dimension value",
-    "Review technical output displaying simplified ratio, dimensional equivalence, and recommended resolution scaling options",
-    "Export calculation results in JSON format or copy individual values to clipboard using context-specific buttons"
+    "Enter the width value in the first numeric field.",
+    "Enter the height value in the second numeric field.",
+    "Review the simplified width:height ratio shown in the result panel.",
+    "Click Lock Ratio if you want later width or height edits to stay proportional.",
+    "Apply a preset such as 16:9, 4:3, 1:1, or 3:2 when it matches your target.",
+    "Copy the displayed dimensions manually into your image, CSS, or video workflow."
   ],
   "usage_examples": [
-    "Converting 4:3 standard definition video to 16:9 HD format while preserving safe action area dimensions",
-    "Calculating minimum image dimensions for responsive web banners requiring strict 3:4 aspect ratio compliance",
-    "Determining optimal resolution for YouTube video thumbnails that meet platform-specific 16:9 pixel requirements",
-    "Validating mobile UI element proportions for 18:9 screen devices during Android app development"
+    "Reduce 1920 x 1080 to the familiar 16:9 ratio.",
+    "Lock 4:3 and calculate a proportional height for a new image width.",
+    "Check whether a design placeholder is closer to square, widescreen, or 3:2.",
+    "Quickly resize a thumbnail draft while preserving its current proportions."
+  ],
+  "faqs": [
+    {
+      "question": "Which presets are included?",
+      "answer": "The current presets are 16:9, 4:3, 1:1, and 3:2."
+    },
+    {
+      "question": "Does the tool export JSON or files?",
+      "answer": "No. It displays the ratio and dimensions on the page; copy the values manually if you need them elsewhere."
+    },
+    {
+      "question": "What happens when Lock Ratio is enabled?",
+      "answer": "Changing width recalculates height, and changing height recalculates width based on the locked ratio."
+    },
+    {
+      "question": "Does it support centimeters, inches, or PAR values?",
+      "answer": "No. The current interface uses numeric width and height values without unit conversion or pixel aspect ratio analysis."
+    },
+    {
+      "question": "What should I check before using the result?",
+      "answer": "Confirm the source dimensions, rounding, and whether your target platform needs additional crop or safe-area rules."
+    }
   ]
 }

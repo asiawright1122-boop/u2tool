@@ -13,5 +13,27 @@
     "Turn a color image into a quick black-and-white version with the grayscale slider",
     "Apply a soft vintage feel by mixing partial sepia with a gentle hue rotate",
     "Add a subtle blur to a background image before downloading the PNG"
+  ],
+  "faqs": [
+    {
+      "question": "What image adjustments are available?",
+      "answer": "The tool provides brightness, contrast, saturation, hue rotation, blur, grayscale, and sepia controls using the browser canvas filter chain."
+    },
+    {
+      "question": "What format does the download use?",
+      "answer": "The adjusted image is exported from the canvas as a PNG file."
+    },
+    {
+      "question": "Does it edit RAW files or SVG images?",
+      "answer": "No. It is intended for common raster image files that the browser can draw to a canvas."
+    },
+    {
+      "question": "Can I reset the edits?",
+      "answer": "Yes. The reset action restores the default slider values so you can start again from the uploaded image."
+    },
+    {
+      "question": "Are the adjustments destructive?",
+      "answer": "The original file is not changed. The tool draws an adjusted preview and lets you download a new PNG copy."
+    }
   ]
 }

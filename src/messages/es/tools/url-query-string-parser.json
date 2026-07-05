@@ -1,5 +1,5 @@
 {
-  "detailed_description": "El Analizador de Cadena de Consulta de URL descompone URLs complejas en componentes, extrayendo y descodificando parámetros de consulta en una tabla legible.",
+  "detailed_description": "El Analizador de Cadena de Consulta de URL descompone URLs complejas en componentes, extrayendo y descodificando parámetros de consulta en una tabla legible. Analizador de Cadena de Consulta de URL está pensado para revisar valores y formatos de red con rapidez. Comprueba formato, contexto y restricciones del destino antes de usar el resultado en un entorno de trabajo.",
   "usage_steps": [
     "Pega la URL completa o la cadena de consulta",
     "Visualiza los parámetros analizados",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Depura parámetros de seguimiento",
     "Analiza devoluciones de OAuth",
-    "Extrae parámetros de puntos finales de API"
+    "Extrae parámetros de puntos finales de API",
+    "Revisar un valor corto antes de usar el resultado en documentación o diagnóstico de red."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Analizador de Cadena de Consulta de URL?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta de red?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

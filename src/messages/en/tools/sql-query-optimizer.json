@@ -29,6 +29,10 @@
     {
       "question": "Is the optimized query guaranteed to be faster?",
       "answer": "No. Treat the output as a checklist and always test changes with your real schema, data volume, and workload."
+    },
+    {
+      "question": "What should I check before using the SQL Query Optimizer output?",
+      "answer": "Review code, configuration, parsing details, and any assumptions before using the result in a repository, script, or deployment workflow."
     }
   ]
 }

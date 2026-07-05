@@ -1,5 +1,5 @@
 {
-  "detailed_description": "The Markdown to PDF converter renders Markdown as sanitized HTML in the browser, shows a live preview, and opens a print window so you can save the result as a PDF with your browser's print dialog. It supports GitHub Flavored Markdown parsing through marked, including headings, lists, tables, code blocks, blockquotes, horizontal rules, inline code, bold, and italic text. You can set the document title, choose 10 to 16 pt font size, and select A4, Letter, or Legal page size before printing.",
+  "detailed_description": "The Markdown to PDF converter renders Markdown as sanitized HTML in the browser, shows a live preview, and opens a print window so you can save the result as a PDF with your browser's print dialog. It supports GitHub Flavored Markdown parsing through marked, including headings, lists, tables, code blocks, blockquotes, horizontal rules, inline code, bold, and italic text. You can set the document title, choose 10 to 16 pt font size, and select A4, Letter, or Legal page size before printing. Markdown to PDF is intended for quick drafting, checking, and review of planning or document workflows. Use the generated result as a starting point, review the assumptions or formatting details shown in the interface, and verify important schedules, handoffs, or reports before you share them.",
   "usage_steps": [
     "Enter or paste your Markdown content",
     "Set the document title for the print window",
@@ -11,6 +11,29 @@
   "usage_examples": [
     "Preview Markdown documentation and save it through the browser print dialog",
     "Create a printable draft from Markdown notes",
-    "Prepare a PDF copy of a README-style document"
+    "Prepare a PDF copy of a README-style document",
+    "Prepare a draft for a planning document, spreadsheet, or team handoff."
+  ],
+  "faqs": [
+    {
+      "question": "What should I check before using the Markdown to PDF output?",
+      "answer": "Review dates, names, totals, and formatting before using the result in a document, schedule, or team handoff."
+    },
+    {
+      "question": "Can I edit the result after generating it?",
+      "answer": "Yes. Adjust the input values or available options, generate the result again, and then copy, export, or reuse the updated output in your workflow when the page provides those actions."
+    },
+    {
+      "question": "Why might the result differ from another office tool?",
+      "answer": "Different tools can use different assumptions, rounding rules, parsing behavior, or export settings. Compare the same input values and review any notes shown in the interface before relying on the result."
+    },
+    {
+      "question": "Can I start with sample or placeholder data?",
+      "answer": "Yes. Use a small example or non-sensitive sample first, confirm the output shape, and then replace it with the real input you want to process."
+    },
+    {
+      "question": "Does this replace manual review?",
+      "answer": "No. It can speed up planning and document work, but important schedules, reports, and handoffs should still be reviewed."
+    }
   ]
 }

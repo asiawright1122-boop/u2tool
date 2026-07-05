@@ -1,17 +1,38 @@
 {
-  "detailed_description": "O URL Shortener Preview é uma ferramenta avançada projetada para desenvolvedores e profissionais de segurança que precisam analisar URLs encurtadas antes de acessá-las. Tecnicamente, a ferramenta desencapsula URLs encurtadas, revelando a URL de destino original, juntamente com detalhes importantes sobre o domínio, como a reputação do site, a localização geográfica do servidor e metadados adicionais. Isso é crucial para garantir que os usuários não sejam redirecionados para páginas maliciosas ou não confiáveis. A ferramenta utiliza APIs de análise de URLs e bases de dados de segurança para fornecer informações em tempo real e precisas. Para profissionais de segurança, esta ferramenta é essencial na detecção de phishing e outras ameaças cibernéticas. Para desenvolvedores, ela ajuda a validar links antes de integrá-los em aplicações, garantindo a segurança e a integridade dos sistemas.",
+  "detailed_description": "O Visualizador de URLs Curtos ajuda a encontrar links encurtados dentro de um bloco de texto e a identificar quais domínios de encurtador aparecem, como bit.ly, tinyurl.com, t.co e outros serviços conhecidos. Por restrições de segurança do navegador, a página não segue redirecionamentos nem consulta reputação, geolocalização ou bancos de dados de ameaça em tempo real. O resultado mostra os links reconhecidos e informa quando a expansão real exigiria uma solicitação do lado do servidor. Use a ferramenta como uma triagem rápida antes de decidir se um link deve ser analisado por um fluxo de segurança mais completo.",
   "usage_steps": [
-    "Acesse a página do URL Shortener Preview no site da ferramenta.",
-    "No campo de entrada, insira a URL encurtada que deseja analisar.",
-    "Clique no botão 'Analisar URL' para iniciar o processo de desencapsulamento.",
-    "Aguarde alguns segundos enquanto a ferramenta processa a URL e coleta os dados necessários.",
-    "Revise os resultados apresentados, incluindo a URL de destino, reputação do site, localização geográfica e outros metadados.",
-    "Se necessário, salve ou exporte os resultados para uso futuro ou compartilhamento com a equipe."
+    "Cole no campo de entrada o texto que contém URLs encurtados.",
+    "Clique em Analisar URLs para extrair os links e filtrar domínios de encurtadores conhecidos.",
+    "Revise cada URL curta detectada e a mensagem de resultado exibida pela página.",
+    "Use Copiar resultados se precisar registrar a lista em um ticket, chat ou documento interno.",
+    "Para uma investigação de segurança, valide o link em uma ferramenta que possa seguir redirecionamentos no servidor."
   ],
   "usage_examples": [
-    "Um analista de segurança encontra um link suspeito em um e-mail e usa o URL Shortener Preview para verificar se ele leva a um site de phishing antes de relatar a ameaça à equipe de TI.",
-    "Um desenvolvedor de uma startup de e-commerce está integrando um sistema de compartilhamento de links nas redes sociais e usa a ferramenta para validar todos os links antes de publicá-los, garantindo que os usuários não sejam redirecionados para sites maliciosos.",
-    "Um administrador de redes recebe um link em uma mensagem de chat de um colega e usa o URL Shortener Preview para confirmar que o link é seguro antes de permitir que seja clicado em um dispositivo corporativo.",
-    "Um pesquisador de segurança está investigando uma campanha de spam em massa e utiliza o URL Shortener Preview para analisar vários links encurtados, coletando dados sobre a origem e a natureza das páginas de destino para sua pesquisa."
+    "Separar rapidamente links bit.ly ou t.co de um e-mail suspeito antes de enviar a lista para análise.",
+    "Conferir se uma publicação de redes sociais contém URLs encurtados misturados com links normais.",
+    "Preparar uma lista de links encurtados encontrados em comentários ou mensagens de suporte.",
+    "Explicar a um usuário que a expansão real do destino requer verificação fora do navegador."
+  ],
+  "faqs": [
+    {
+      "question": "A ferramenta expande o destino real do link?",
+      "answer": "Não no navegador atual. Ela identifica URLs curtos e domínios conhecidos, mas a expansão do destino exige uma solicitação do lado do servidor."
+    },
+    {
+      "question": "Ela verifica se o link é seguro?",
+      "answer": "Não. O resultado não é uma classificação de segurança. Use scanners ou processos internos apropriados antes de clicar em links suspeitos."
+    },
+    {
+      "question": "Quais links são reconhecidos?",
+      "answer": "A página procura URLs HTTP/HTTPS e filtra domínios comuns de encurtadores, como bit.ly, tinyurl.com, t.co, is.gd e serviços semelhantes."
+    },
+    {
+      "question": "Posso colar várias URLs de uma vez?",
+      "answer": "Sim. Cole um parágrafo, lista ou mensagem inteira; a ferramenta extrai as URLs encontradas no texto."
+    },
+    {
+      "question": "Quando devo usar outra ferramenta?",
+      "answer": "Use outra ferramenta quando precisar seguir redirecionamentos, obter reputação, verificar malware ou registrar evidências formais de segurança."
+    }
   ]
 }

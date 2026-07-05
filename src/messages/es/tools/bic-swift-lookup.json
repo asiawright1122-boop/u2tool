@@ -1,5 +1,5 @@
 {
-  "detailed_description": "La herramienta de búsqueda de códigos BIC/SWIFT valida y proporciona información sobre los códigos de identificación bancaria (BIC) utilizados para transferencias bancarias internacionales. Introduce un código BIC para verificar su formato y obtener detalles sobre el banco, el país y la sucursal. Es esencial para garantizar pagos internacionales precisos.",
+  "detailed_description": "La herramienta de búsqueda de códigos BIC/SWIFT valida y proporciona información sobre los códigos de identificación bancaria (BIC) utilizados para transferencias bancarias internacionales. Introduce un código BIC para verificar su formato y obtener detalles sobre el banco, el país y la sucursal. Es esencial para garantizar pagos internacionales precisos. Búsqueda de Códigos BIC/SWIFT está pensado para estimaciones rápidas y comparación de escenarios, no como asesoramiento financiero profesional. Revisa valores de entrada, supuestos y redondeos antes de tomar decisiones importantes.",
   "usage_steps": [
     "Introduce un código BIC/SWIFT en el campo de entrada",
     "Haz clic en 'Buscar' para verificar y obtener información bancaria",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Verifica códigos BIC antes de realizar transferencias internacionales",
     "Busca información bancaria a partir de códigos SWIFT",
-    "Valida los detalles de los pagos para transacciones transfronterizas"
+    "Valida los detalles de los pagos para transacciones transfronterizas",
+    "Comparar una estimación rápida antes de mover cifras a un presupuesto, factura o informe."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Búsqueda de Códigos BIC/SWIFT?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta financiera?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

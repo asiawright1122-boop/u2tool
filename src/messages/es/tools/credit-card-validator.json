@@ -1,10 +1,10 @@
 {
-  "detailed_description": "El Validador de Tarjetas de Crédito comprueba si un número de tarjeta tiene una estructura matemática válida mediante el algoritmo de Luhn. Escriba o pegue un número, pulse Validar y la herramienta elimina espacios, revisa la longitud, ejecuta la comprobación Luhn e identifica redes comunes como Visa, Mastercard, American Express, Discover, Diners Club, JCB, UnionPay y Maestro cuando el prefijo y la longitud coinciden. Sirve para probar formularios de pago, datos de ejemplo, casos de QA y documentación técnica. No consulta bancos, procesadores de pago ni redes de tarjetas, por lo que no puede confirmar si una tarjeta está activa, tiene fondos, pertenece a una persona real o se puede cobrar. Use solo números de prueba.",
+  "detailed_description": "El validador de tarjetas de crédito comprueba si un número de tarjeta de prueba tiene una estructura matemática válida mediante el algoritmo de Luhn. Escriba o pegue un número, pulse Validar y el navegador elimina espacios, revisa la longitud de 13 a 19 dígitos, ejecuta la comprobación Luhn e identifica patrones de red como Visa, Mastercard, American Express, Discover, Diners Club, JCB, UnionPay y Maestro cuando el prefijo y la longitud coinciden. Sirve para validar tarjeta de crédito en flujos de QA, formularios de pago, datos de ejemplo, pruebas unitarias y documentación técnica. No consulta bancos, procesadores de pago ni redes de tarjetas, por lo que no puede confirmar si una tarjeta está activa, tiene fondos, pertenece a una persona real o se puede cobrar. Use solo números de prueba.",
   "usage_steps": [
-    "Introduzca un número de tarjeta de prueba en el campo.",
+    "Introduzca un número de tarjeta de crédito de prueba en el campo.",
     "El campo agrupa los dígitos con espacios mientras escribe.",
-    "Haga clic en Validar para ejecutar la comprobación Luhn local.",
-    "Revise la red detectada, la etiqueta del emisor, el número de dígitos y el resultado.",
+    "Haga clic en Validar para ejecutar la comprobación Luhn local y revisar la longitud.",
+    "Revise el patrón de red detectado, la etiqueta estática de red, el número de dígitos y el resultado.",
     "Use el resultado para depurar validación de formularios o datos de muestra, no para verificar una cuenta real."
   ],
   "usage_examples": [
@@ -16,19 +16,23 @@
   "faqs": [
     {
       "question": "¿Verifica una cuenta real de tarjeta?",
-      "answer": "No. Solo revisa el patrón del número, la longitud y el checksum Luhn. No contacta bancos ni procesadores de pago."
+      "answer": "No. Solo revisa localmente el patrón del número, la longitud y el checksum Luhn. No contacta bancos ni procesadores de pago."
     },
     {
       "question": "¿Debo introducir una tarjeta real?",
       "answer": "No. Use únicamente números de prueba oficiales de proveedores de pago o valores ficticios."
     },
     {
-      "question": "¿Qué tipos de tarjeta detecta?",
+      "question": "¿Qué redes de tarjeta detecta?",
       "answer": "Detecta patrones comunes para Visa, Mastercard, American Express, Discover, Diners Club, JCB, UnionPay y Maestro."
     },
     {
       "question": "¿Qué significa un resultado válido?",
       "answer": "Significa que los dígitos pasan las comprobaciones locales de longitud y Luhn. No significa que la tarjeta exista, esté activa o tenga fondos."
+    },
+    {
+      "question": "¿El número se envía a un servidor?",
+      "answer": "Las comprobaciones mostradas en la página se ejecutan en el navegador. Aun así, trate cada valor como dato de prueba y evite datos de pago reales."
     }
   ]
 }

@@ -1,15 +1,39 @@
 {
-  "detailed_description": "La Calculadora de Estimación de Proyectos ayuda a estimar el esfuerzo de proyectos utilizando PERT y puntos de historia.",
+  "detailed_description": "La Calculadora de Estimación de Proyectos ayuda a planificar tareas con el método PERT. Para cada tarea puede introducir una estimación optimista, una más probable y una pesimista; el resultado calcula la duración esperada, la desviación estándar y rangos aproximados de confianza. Es útil para equipos de software, consultoría, operaciones o contenido que necesitan comparar escenarios antes de comprometer una fecha. Puede añadir y eliminar tareas, cambiar la unidad entre horas, días o semanas y ver cómo cada partida afecta al total. La herramienta no reemplaza la planificación del equipo ni datos históricos de velocidad, pero da una base transparente para discutir incertidumbre, riesgos y buffers antes de cerrar un cronograma.",
   "usage_steps": [
-    "Ingrese descripciones de tareas",
-    "Proporcione estimaciones",
-    "O utilice puntos de historia",
-    "Calcule la duración",
-    "Vea intervalos de confianza"
+    "Ingrese una lista de tareas o use las filas iniciales como ejemplo",
+    "Escriba la estimación optimista, más probable y pesimista de cada tarea",
+    "Elija si desea leer el resultado en horas, días o semanas",
+    "Revise la duración esperada calculada con la fórmula PERT",
+    "Compare los rangos de confianza para decidir si necesita margen adicional",
+    "Ajuste o elimine tareas hasta que el plan refleje su alcance real"
   ],
   "usage_examples": [
-    "Estime proyectos de software",
-    "Calcule la capacidad de sprint",
-    "Planifique cronogramas con PERT"
+    "Estime un proyecto de software con análisis, diseño, desarrollo, pruebas y despliegue",
+    "Compare un plan optimista de sprint con un escenario pesimista antes de comprometer fechas",
+    "Prepare una conversación con stakeholders mostrando duración esperada y variabilidad",
+    "Calcule un buffer inicial para un lote de tareas de contenido, soporte u operaciones"
+  ],
+  "faqs": [
+    {
+      "question": "¿Qué fórmula usa la calculadora?",
+      "answer": "Usa la estimación PERT clásica: optimista + 4 veces la más probable + pesimista, dividido entre 6."
+    },
+    {
+      "question": "¿Qué significa la desviación estándar?",
+      "answer": "Indica cuánta incertidumbre hay entre el escenario optimista y pesimista. Una desviación alta sugiere que la tarea necesita más análisis o margen."
+    },
+    {
+      "question": "¿Puedo usarla para puntos de historia?",
+      "answer": "Puede introducir valores relativos, pero el resultado se muestra como esfuerzo estimado. Para velocity real, combine el cálculo con datos históricos del equipo."
+    },
+    {
+      "question": "¿La herramienta guarda mi plan?",
+      "answer": "No. La calculadora trabaja en la página actual; copie los resultados importantes a su documento de planificación."
+    },
+    {
+      "question": "¿Sirve para fechas finales de entrega?",
+      "answer": "Sirve como base de estimación. Las fechas finales también dependen de dependencias, disponibilidad del equipo, revisiones y riesgos externos."
+    }
   ]
 }

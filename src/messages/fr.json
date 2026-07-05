@@ -2685,9 +2685,9 @@
     },
     "data-uri": {
       "name": "Générateur d'URI de données",
-      "description": "Convertissez des fichiers en format URI de données pour l'intégration dans HTML/CSS.",
-      "seo_title": "Générateur d'URI de données gratuit en ligne",
-      "seo_description": "Générez des URIs de données à partir de fichiers ou de texte en ligne gratuitement. Convertissez des images, des polices et des fichiers en URLs de données base64. Idéal pour intégrer des actifs dans CSS et HTML.",
+      "description": "Convertissez un fichier local en data URI, copiez le résultat et prévisualisez les images.",
+      "seo_title": "Générateur d'URI de données en ligne - U2Tool",
+      "seo_description": "Transformez un fichier local en data URI dans le navigateur, consultez son nom, sa taille, son type MIME et copiez la chaîne générée.",
       "output": "URI de données",
 
 
@@ -4999,8 +4999,8 @@
     "file-size-calculator": {
       "name": "Calculateur de Taille de Fichier",
       "description": "Convertissez entre différentes unités de taille de fichier.",
-      "seo_title": "Calculateur de Taille de Fichier en Ligne Gratuit",
-      "seo_description": "Convertissez entre les unités de bytes, KB, MB, GB, TB et plus en ligne gratuitement. Calculez la taille des fichiers avec des unités binaires (1024) ou décimales (1000). Outil essentiel pour la planification de l'espace de stockage.",
+      "seo_title": "Calculateur et convertisseur de taille de fichier",
+      "seo_description": "Convertisseur de taille de fichier pour octets, Ko, Mo, Go, To et Po. Convertir Ko en Mo, convertir Mo en Go, et comparer base 1000 ou 1024.",
       "inputValue": "Valeur d'Entrée",
       "unit": "Unité",
       "base": "Base",
@@ -5391,8 +5391,8 @@
     "color-name-finder": {
       "name": "Trouveur de Nom de Couleur",
       "description": "Trouvez le nom de couleur le plus proche pour toute valeur de couleur.",
-      "seo_title": "Trouver le nom de couleur le plus proche en ligne gratuitement",
-      "seo_description": "Trouvez le nom de couleur le plus proche pour toute valeur hexadécimale. Explorez les noms de couleurs CSS, les couleurs X11 et les couleurs web-sécurisées. Outil pour designers et conformité aux normes d’accessibilité.",
+      "seo_title": "Trouveur de Nom de Couleur en ligne - U2Tool",
+      "seo_description": "Utilisez Trouveur de Nom de Couleur dans le navigateur pour traiter les entrées, sorties et résultats sans compte ni installation.",
       "inputLabel": "Couleur",
       "find": "Trouver le Nom de Couleur",
       "closestColors": "Couleurs les Plus Proches",
@@ -5565,9 +5565,9 @@
     },
     "pie-chart-generator": {
       "name": "Générateur de Graphique en Camembert",
-      "description": "Créez des graphiques en camembert en ligne. Visualisez les proportions de données et exportez-les en PNG/SVG.",
-      "seo_title": "Générateur gratuit de diagrammes en camembert en ligne - Visualisez vos données facilement",
-      "seo_description": "Créez des diagrammes en camembert interactifs en ligne. Visualisez vos proportions de données et exportez en PNG ou SVG. Commencez maintenant!",
+      "description": "Créez des camemberts, anneaux ou roses avec table de valeurs, import CSV simple et export PNG/SVG.",
+      "seo_title": "Générateur de camembert en ligne - CSV, PNG et SVG",
+      "seo_description": "Créez un camembert en ligne depuis une table ou un CSV nom,valeur. Ajustez légende, pourcentages, anneau ou rose, puis exportez en PNG/SVG.",
       "chartTitle": "Titre du Graphique",
       "chartTitlePlaceholder": "Entrez le titre du graphique",
       "colorTheme": "Thème de Couleur",
@@ -6167,10 +6167,10 @@
       "chartsettings": "parametres"
     },
     "sunburst-chart-generator": {
-      "name": "Générateur de Diagramme en Roseau de Soleil",
-      "description": "Créez des diagrammes en roseau de soleil en ligne. Visualisez les données hiérarchiques radialement et exportez-les en PNG/SVG.",
-      "seo_title": "Générateur gratuit de diagrammes Sunburst en ligne - Visualisez vos données hiérarchiques",
-      "seo_description": "Créez facilement des diagrammes Sunburst radiaux en ligne. Visualisez vos données hiérarchiques de manière efficace et exportez-les en PNG ou SVG. Commencez dès maintenant !",
+      "name": "Générateur de diagramme sunburst",
+      "description": "Créez des diagrammes sunburst en ligne. Visualisez des données hiérarchiques radialement et exportez-les en PNG/SVG.",
+      "seo_title": "Générateur de diagramme sunburst en ligne - U2Tool",
+      "seo_description": "Collez du JSON hiérarchique, ajustez titre, thème, rayons et étiquettes, puis exportez le diagramme sunburst en PNG ou SVG.",
       "chartTitle": "Titre du Diagramme",
       "chartTitlePlaceholder": "Saisissez le titre du diagramme",
       "colorTheme": "Thème de Couleur",
@@ -7992,9 +7992,9 @@
     },
     "image-splitter": {
       "name": "Diviseur d'images",
-      "description": "Divisez une image en plusieurs parties personnalisées en lignes et colonnes.",
-      "seo_title": "outil gratuit en ligne pour découper des images en JSON",
-      "seo_description": "Découpez vos images en plusieurs morceaux avec nos outils en ligne. Personnalisez les colonnes et les lignes. Commencez maintenant gratuitement !",
+      "description": "Divisez une image en morceaux PNG par lignes et colonnes dans le navigateur.",
+      "seo_title": "Diviseur d'images en ligne - grille PNG et ZIP",
+      "seo_description": "Divisez une image en ligne par lignes et colonnes, prévisualisez la grille, générez des morceaux PNG et téléchargez une pièce ou un ZIP.",
       "rows": "Lignes",
       "cols": "Colonnes",
       "split": "Diviser",
@@ -9100,8 +9100,8 @@
     "world-clock": {
       "name": "Horloge Mondiale",
       "description": "Affichez l'heure actuelle dans plusieurs villes du monde simultanément.",
-      "seo_title": "Gratuit Outil Horloge Mondiale En Ligne - Suivez les Heures en Temps Réel",
-      "seo_description": "Consultez les horloges de multiples villes du monde simultanément en ligne. Notre outil gratuit vous permet de suivre les heures en temps réel et de rester connecté. Essayez maintenant !",
+      "seo_title": "Horloge Mondiale en ligne - U2Tool",
+      "seo_description": "Utilisez Horloge Mondiale dans le navigateur pour traiter les entrées, sorties et résultats sans compte ni installation.",
 
 
 
@@ -10232,7 +10232,7 @@
       "name": "Calculateur d'Allure",
       "description": "Calculez l'allure, le temps ou la distance de course.",
       "seo_title": "Calculateur de vitesse de course en ligne gratuit",
-      "seo_description": "Outil en ligne gratuit Calculateur d'Allure pour vous aider à Calculez votre allure de course, votre temps de fin ou votre distance en ligne. Idéal pour préparer un marathon rapidement et en toute sécurité dans votre navigateur. Entièrement gratuit, sans téléchargement ni inscription, 100% local pour garantir votre confidentialité et votre productivité au quotidien.",
+      "seo_description": "Calculez votre allure et prévoyez vos temps intermédiaires par distance avec une vue claire du rythme cible.",
       "time": "Temps",
       "pace": "Allure",
       "hours": "Heures",
@@ -10944,9 +10944,9 @@
     },
     "credit-card-validator": {
       "name": "Validateur de Carte de Crédit",
-      "description": "Validez les numéros de cartes bancaires en ligne facilement.",
-      "seo_title": "Validateur de carte de crédit en ligne - Formule de Luhn",
-      "seo_description": "Validez les numéros de cartes bancaires en ligne. Vérification par l'algorithme de Luhn et détection des réseaux Visa, Mastercard, Amex.",
+      "description": "Vérifiez des numéros de carte de test avec Luhn, la longueur et la détection locale du réseau de carte.",
+      "seo_title": "Validateur de carte bancaire en ligne - Luhn",
+      "seo_description": "Vérifiez une carte bancaire en ligne avec l algorithme de Luhn, la longueur et la détection Visa/Mastercard. Pour numéros de test, sans appel à une banque.",
       "cardNumber": "Numéro de Carte",
       "inputPlaceholder": "Entrez le numéro de carte...",
       "validate": "Valider",
@@ -11508,9 +11508,9 @@
     },
     "html-to-pdf": {
       "name": "Convertisseur HTML en PDF Gratuit",
-      "description": "Convertissez du contenu HTML en documents PDF",
+      "description": "Prévisualisez du HTML nettoyé et utilisez l'impression du navigateur pour l'enregistrer en PDF.",
       "seo_title": "Convertisseur gratuit HTML vers PDF en ligne",
-      "seo_description": "Convertissez du HTML au PDF en ligne gratuitement. Créez des documents PDF avec le support CSS. Idéal pour les rapports et la documentation.",
+      "seo_description": "Collez du HTML, prévisualisez le rendu nettoyé dans une iframe, choisissez format/orientation/marge, puis ouvrez l'impression du navigateur pour sauvegarder en PDF.",
 
 
 
@@ -11537,8 +11537,8 @@
     "json-to-table": {
       "name": "Convertisseur JSON en Tableau",
       "description": "Convertit les données JSON en format tableau HTML",
-      "seo_title": "Convertisseur JSON en Tableau Gratuit En Ligne - Visualisez les Données JSON",
-      "seo_description": "Convertissez JSON en tableau HTML en ligne gratuitement. Visualisez les tableaux de données JSON et les objets en format tabulaire. Exportez en HTML ou copiez pour les tableaux de données.",
+      "seo_title": "Convertisseur JSON en tableau en ligne",
+      "seo_description": "Convertissez un objet ou tableau JSON en tableau HTML lisible. Copiez le HTML ou le CSV, vérifiez les colonnes et relisez les valeurs avant usage.",
 
 
 
@@ -12522,8 +12522,8 @@
     "margin-calculator": {
       "name": "Calculateur de Marge",
       "description": "Calculez les pourcentages de marge bénéficiaire et de majoration",
-      "seo_title": "Calculateur de Marge Gratuit en Ligne - Marge Bénéficiaire et Majoration",
-      "seo_description": "Calculez les pourcentages de marge bénéficiaire et de majoration avec notre outil gratuit en ligne. Entrez le coût et le prix de vente pour voir la marge brute, le pourcentage de majoration et le montant du bénéfice.",
+      "seo_title": "Calculateur de Marge en ligne - U2Tool",
+      "seo_description": "Utilisez Calculateur de Marge dans le navigateur pour traiter les entrées, sorties et résultats sans compte ni installation.",
 
 
 
@@ -13560,8 +13560,8 @@
     "code-complexity-analyzer": {
       "name": "Analyseur de Complexité de Code",
       "description": "Analysez les métriques de complexité du code (complexité cyclomatique, LOC)",
-      "seo_title": "Analyser la complexité du code en ligne gratuitement - Outil efficace",
-      "seo_description": "Optimisez votre code avec notre outil en ligne pour analyser la complexité cyclométrique et le nombre de lignes de code. Découvrez des solutions faciles à mettre en œuvre avec JSON, Base64, SVG. Commencez maintenant !",
+      "seo_title": "Analyseur de Complexité de Code en ligne - U2Tool",
+      "seo_description": "Utilisez Analyseur de Complexité de Code dans le navigateur pour traiter les entrées, sorties et résultats sans compte ni installation.",
 
 
 
@@ -13670,8 +13670,8 @@
     "performance-profiler": {
       "name": "Profileur de Performance de Code",
       "description": "Analysez la performance du code et identifiez les goulets d'étranglement",
-      "seo_title": "Profileur de performance de code gratuit en ligne | U2Tool",
-      "seo_description": "Outil en ligne gratuit Profileur de Performance de Code pour vous aider à Mesurez le temps d'exécution du code JavaScript, identifiez les boute-necks en ligne gratuitement rapidement et en toute sécurité dans votre navigateur. Entièrement gratuit, sans téléchargement ni inscription, 100% local pour garantir votre confidentialité et votre productivité au quotidien.",
+      "seo_title": "Profileur de Performance de Code en ligne - U2Tool",
+      "seo_description": "Utilisez Profileur de Performance de Code dans le navigateur pour traiter les entrées, sorties et résultats sans compte ni installation.",
 
 
 
@@ -14508,8 +14508,8 @@
     "document-outline-generator": {
       "name": "Générateur de Sommaire de Document",
       "description": "Générez des sommaires de documents à partir des titres et de la structure",
-      "seo_title": "Générateur en ligne gratuit d’ossature de document JSON",
-      "seo_description": "Créez rapidement et facilement des ossatures de document JSON avec notre outil en ligne. Simplifiez la structure de vos documents et améliorez leur lisibilité. Commencez dès maintenant !",
+      "seo_title": "Générateur de Sommaire de Document en ligne - U2Tool",
+      "seo_description": "Utilisez Générateur de Sommaire de Document dans le navigateur pour traiter les entrées, sorties et résultats sans compte ni installation.",
 
 
 
@@ -15112,8 +15112,8 @@
     "meeting-agenda-builder": {
       "name": "Constructeur d'Ordre du Jour de Réunion",
       "description": "Créez des ordres du jour de réunion structurés avec des affectations de temps",
-      "seo_title": "Générateur d’ordre du jour gratuit en ligne - Organisez vos réunions facilement",
-      "seo_description": "Créez des agendas de réunion structurés avec des allouments de temps en ligne. Notre outil JSON gratuit vous aide à organiser efficacement vos réunions. Commencez maintenant !",
+      "seo_title": "Constructeur d'Ordre du Jour de Réunion en ligne - U2Tool",
+      "seo_description": "Utilisez Constructeur d'Ordre du Jour de Réunion dans le navigateur pour traiter les entrées, sorties et résultats sans compte ni installation.",
 
 
 
@@ -16293,9 +16293,9 @@
     },
     "data-uri": {
       "name": "Générateur d'URI de données",
-      "description": "Convertissez les fichiers au format Data URI pour les intégrer en HTML/CSS.",
-      "seo_title": "Générateur d'URI de données gratuit en ligne",
-      "seo_description": "Générez gratuitement des URI de données à partir de fichiers ou de texte en ligne. Convertissez des images, des polices et des fichiers en URL de données base64. Parfait pour intégrer des actifs en CSS et HTML.",
+      "description": "Convertissez un fichier local en data URI, copiez le résultat et prévisualisez les images.",
+      "seo_title": "Générateur d'URI de données en ligne - U2Tool",
+      "seo_description": "Transformez un fichier local en data URI dans le navigateur, consultez son nom, sa taille, son type MIME et copiez la chaîne générée.",
       "output": "URI des données"
     },
     "text-compare": {
@@ -17710,8 +17710,8 @@
     "file-size-calculator": {
       "name": "Calculateur de taille de fichier",
       "description": "Convertissez entre différentes unités de taille de fichier.",
-      "seo_title": "Calculateur gratuit de taille de fichier en ligne",
-      "seo_description": "Convertissez gratuitement entre octets, Ko, Mo, Go, To et plus en ligne. Calculez la taille des fichiers avec des unités binaires (1024) ou décimales (1000). Indispensable pour la planification du stockage.",
+      "seo_title": "Calculateur et convertisseur de taille de fichier",
+      "seo_description": "Convertisseur de taille de fichier pour octets, Ko, Mo, Go, To et Po. Convertir Ko en Mo, convertir Mo en Go, et comparer base 1000 ou 1024.",
       "inputValue": "Valeur d'entrée",
       "unit": "Unité",
       "base": "Base",
@@ -18026,8 +18026,8 @@
     "world-clock": {
       "name": "Horloge Mondiale",
       "description": "Affichez l'heure actuelle dans plusieurs villes du monde simultanément.",
-      "seo_title": "Horloge Mondiale Gratuite - Fuseaux Horaires Multiples",
-      "seo_description": "Affichez l'heure actuelle dans plusieurs villes du monde. Ajoutez des villes personnalisées, format 12/24 heures, indicateur jour/nuit. Outil d'horloge mondiale gratuit en ligne.",
+      "seo_title": "Horloge Mondiale en ligne - U2Tool",
+      "seo_description": "Utilisez Horloge Mondiale dans le navigateur pour traiter les entrées, sorties et résultats sans compte ni installation.",
       "detailed_description": "L'Horloge Mondiale est un outil pratique d'affichage multi-fuseaux horaires qui vous permet de voir l'heure actuelle dans plusieurs villes simultanément. Prend en charge l'ajout de plus de 20 grandes villes incluant New York, Londres, Tokyo, Sydney, Shanghai, Singapour et plus. Chaque carte de ville affiche l'heure actuelle, la date et le décalage horaire, avec des icônes soleil/lune indiquant s'il fait jour ou nuit localement. Prend en charge le basculement entre format 12/24 heures et l'affichage optionnel des secondes. Interface propre et belle avec mises à jour en temps réel. Outil essentiel pour le travail et les voyages entre fuseaux horaires.",
       "usage_steps": [
         "Ouvrez la page de l'outil Horloge Mondiale",

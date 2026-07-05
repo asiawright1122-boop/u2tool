@@ -1,17 +1,39 @@
 {
-  "detailed_description": "Le PDF Rotator permet de modifier l'orientation des pages PDF en appliquant des transformations matricielles conformes à la spécification ISO 32000-1. Ce dispositif agit sur les paramètres de rotation (-90°, 180°, 270°) des dictionnaires de page, tout en préservant l'intégrité des objets vectoriels, des annotations et des métadonnées (signets, liens hypertexte). Conçu pour répondre aux besoins spécifiques de numérisation de documents légaux, de rapports techniques ou de contenus mobiles, il corrige les problèmes d'orientation causés par des scanners mal configurés ou des captures d'écran en mode paysage. Le processus s'exécute intégralement en client-side via une API basée sur PDF.js et Poppler, évitant tout transfert de données vers des serveurs tiers. Chaque modification génère une mise à jour incrémentielle du fichier PDF, garantissant la compatibilité avec les lecteurs conformes aux normes PDF/A et PDF/X.",
+  "detailed_description": "Le PDF Rotator corrige l'orientation des pages PDF directement dans le navigateur. Après l'import d'un fichier, l'outil utilise PDF.js pour générer des aperçus de page, puis PDF-lib pour enregistrer un nouveau PDF avec les rotations choisies. Vous pouvez appliquer une rotation de 90, 180 ou 270 degrés à toutes les pages, ajuster une page précise vers la gauche ou la droite, réinitialiser les changements et télécharger une copie du document modifié. Cette approche est utile après une numérisation de travers, un assemblage de pages portrait et paysage, ou la préparation d'un fichier avant envoi. Les fichiers restent dans la session du navigateur pendant le traitement. Vérifiez toujours la sortie finale si votre PDF contient des formulaires, des signatures, des annotations complexes ou des contraintes d'archivage.",
   "usage_steps": [
-    "Cliquez sur 'Importer un fichier' ou glissez-déposez votre PDF dans la zone de traitement",
-    "Sélectionnez l'angle de rotation (90°, 180°, ou 270°) dans le menu déroulant 'Paramètres de rotation'",
-    "Cochez les pages spécifiques à modifier ou activez 'Tout sélectionner' pour un traitement par lot",
-    "Activez l'option 'Préserver les annotations' si le document contient des formes vectorielles ou des commentaires",
-    "Apercevez les modifications en temps réel dans le visualiseur 3D intégré",
-    "Téléchargez le PDF transformé en cliquant sur 'Exporter' (aucun fichier n'est stocké sur nos serveurs)"
+    "Importez un fichier PDF depuis le sélecteur de fichier",
+    "Attendez que les aperçus de page soient générés",
+    "Choisissez 90°, 180° ou 270° pour une rotation globale si tout le document doit changer",
+    "Utilisez les boutons de page pour corriger seulement les pages mal orientées",
+    "Réinitialisez si nécessaire pour revenir aux rotations d'origine",
+    "Téléchargez la nouvelle copie PDF après avoir vérifié les aperçus"
   ],
   "usage_examples": [
     "Un ingénieur doit aligner des plans techniques scannés avec des rotations variables entre 0° et 270°",
-    "Un juriste corrige l'orientation d'un contrat PDF contenant des signatures numériques sans altérer les champs remplis",
+    "Un juriste corrige l'orientation d'un contrat PDF avant relecture et contrôle ensuite le fichier exporté",
     "Un étudiant ajuste des captures d'écran prises en mode portrait depuis son smartphone pour les intégrer à un mémoire",
-    "Un comptable réaligne des factures PDF générées par un logiciel de gestion obligeant une orientation spécifique pour l'archivage électronique"
+    "Un comptable réaligne des factures PDF générées par un logiciel de gestion avant archivage électronique"
+  ],
+  "faqs": [
+    {
+      "question": "Le fichier PDF est-il envoyé sur un serveur ?",
+      "answer": "Le traitement se fait dans le navigateur pendant la session. Évitez toutefois d'utiliser des documents sensibles sur un appareil ou un navigateur que vous ne contrôlez pas."
+    },
+    {
+      "question": "Puis-je faire pivoter une seule page ?",
+      "answer": "Oui. Après l'import, chaque aperçu de page dispose de commandes pour tourner cette page vers la gauche ou vers la droite."
+    },
+    {
+      "question": "Puis-je appliquer la même rotation à tout le document ?",
+      "answer": "Oui. Choisissez 90, 180 ou 270 degrés dans le contrôle global, puis appliquez la rotation à toutes les pages."
+    },
+    {
+      "question": "Le PDF original est-il remplacé ?",
+      "answer": "Non. L'outil génère un nouveau fichier à télécharger, généralement avec un nom indiquant qu'il a été pivoté."
+    },
+    {
+      "question": "Que vérifier après le téléchargement ?",
+      "answer": "Ouvrez le PDF exporté pour contrôler l'ordre des pages, les rotations et les éléments particuliers comme formulaires, signatures ou annotations."
+    }
   ]
 }

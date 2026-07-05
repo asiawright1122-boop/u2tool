@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Email Validator helps you verify email addresses for correct format and common issues. It detects typos in popular domains, identifies disposable email services, and validates the overall structure. Perfect for cleaning email lists and preventing invalid signups.",
+  "detailed_description": "Email Validator helps you verify email addresses for correct format and common issues. It detects typos in popular domains, identifies disposable email services, and validates the overall structure. Perfect for cleaning email lists and preventing invalid signups. メールアドレス検証は、ネットワーク関連の値や形式をすばやく確認するための補助ツールです。形式、前提、利用先の条件を見直してから、作業環境で使ってください。",
   "usage_steps": [
     "Enter one or more email addresses (one per line)",
     "Click Validate to check all emails",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Validate email lists before sending campaigns",
     "Check user input during registration",
-    "Clean up contact databases"
+    "Clean up contact databases",
+    "短い値で結果を確認してから、ネットワーク資料や診断メモに使います。"
+  ],
+  "faqs": [
+    {
+      "question": "メールアドレス検証の結果を使う前に何を確認すべきですか？",
+      "answer": "入力内容、選択した設定、結果が目的に合っているかを確認してください。重要な内容では、数値、形式、文脈を見直してから共有や公開に進みます。"
+    },
+    {
+      "question": "生成後に結果を変更できますか？",
+      "answer": "はい。入力内容や利用できる設定を変更し、もう一度処理してから、更新された結果を確認して使えます。"
+    },
+    {
+      "question": "他のネットワークツールと結果が違うのはなぜですか？",
+      "answer": "丸め、解析方法、表示形式、設定の扱いがツールごとに異なる場合があります。同じ入力で比較し、画面上の条件や制限も確認してください。"
+    },
+    {
+      "question": "短い例から始められますか？",
+      "answer": "はい。まず短い入力や公開してよい内容で結果の形を確認し、その後で実際に使う入力へ進むと安全です。"
+    },
+    {
+      "question": "手作業の確認を置き換えますか？",
+      "answer": "いいえ。作業を速くするための補助ですが、重要な結果は正確性、文脈、利用先への適合を確認してから使ってください。"
+    }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Text Repeater duplicates your text as many times as you need. Choose from various separators and optionally add numbering. Great for testing, creating sample data, or filling content.",
+  "detailed_description": "Text Repeater duplicates your text as many times as you need. Choose from various separators and optionally add numbering. Great for testing, creating sample data, or filling content. Text Repeater is intended for quick text drafting, transformation, and review. Use the generated result as a starting point, proofread the wording and formatting, and verify important content before publishing or sharing it.",
   "usage_steps": [
     "Enter text to repeat",
     "Set repeat count",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Create test data",
     "Fill placeholder content",
-    "Generate patterns"
+    "Generate patterns",
+    "Transform sample text first, then proofread the result before sharing or publishing."
+  ],
+  "faqs": [
+    {
+      "question": "What should I check before using the Text Repeater output?",
+      "answer": "Proofread wording, characters, spacing, and formatting before publishing or sharing the transformed text."
+    },
+    {
+      "question": "Can I edit the result after generating it?",
+      "answer": "Yes. Adjust the input values or available options, generate the result again, and then copy, export, or reuse the updated output in your workflow when the page provides those actions."
+    },
+    {
+      "question": "Why might the result differ from another text tool?",
+      "answer": "Different tools can use different assumptions, rounding rules, parsing behavior, or export settings. Compare the same input values and review any notes shown in the interface before relying on the result."
+    },
+    {
+      "question": "Can I start with sample or placeholder data?",
+      "answer": "Yes. Use a small example or non-sensitive sample first, confirm the output shape, and then replace it with the real input you want to process."
+    },
+    {
+      "question": "Does this replace manual review?",
+      "answer": "No. It helps transform or draft text, but important content should still be proofread and checked for context."
+    }
   ]
 }

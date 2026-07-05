@@ -1,17 +1,35 @@
 {
-  "detailed_description": "El generador de gráficos de dona semicircular permite crear representaciones visuales de datos en formato de medio círculo mediante renderizado SVG/Canvas. Técnicamente, transforma conjuntos de datos en coordenadas polares para generar segmentos con ángulos proporcionales a los valores ingresados, limitados a 180 grados. Esta herramienta especializada destaca por su capacidad de personalización en escalas de color divergentes, espesor de arco variable (entre 10px y 100px) y posicionamiento de etiquetas inteligente (interno/externo automático). Utiliza algoritmos de interpolación cúbica para suavizar transiciones entre segmentos, y soporta integración de datos mediante vinculación reactiva en tiempo real. Es especialmente útil para desarrolladores que necesitan visualizar métricas en interfaces de usuario compactas, como tableros de control de aplicaciones móviles o widgets de estado. Su motor de renderizado multipasada garantiza alta fidelidad visual en dispositivos retina, mientras permite exportación en formatos vectoriales (SVG) y rasterizados (PNG). La implementación incluye soporte para anotaciones personalizadas mediante capas superpuestas y manejo de eventos táctiles en dispositivos sensibles.",
+  "detailed_description": "El generador de gráficos de dona semicircular crea un gráfico de media dona en el navegador a partir de una tabla editable de nombres y valores. Puede cambiar el título, añadir o quitar filas, elegir un tema de color, mostrar u ocultar la leyenda y las etiquetas, y revisar la vista previa antes de descargar el resultado. El gráfico se renderiza con ECharts y se puede guardar como PNG o SVG. Es útil para tarjetas de métricas, resúmenes de avance, composición de presupuestos y presentaciones donde un gráfico circular completo ocuparía demasiado espacio.",
   "usage_steps": [
-    "Selecciona el formato de entrada de datos (JSON/CSV) mediante el interruptor en la barra lateral derecha",
-    "Ingresa tus valores numéricos en la tabla editable, asignando etiquetas y códigos hexadecimales personalizados",
-    "Configura parámetros avanzados en el panel de opciones: ajusta el ángulo inicial (0-180°), define el radio interno/externo y activa la leyenda interactiva",
-    "Previsualiza el gráfico en tiempo real y ajusta la posición de etiquetas arrastrando los marcadores en la vista de edición",
-    "Habilita la opción de degradado radial en el menú de estilo para aplicar gradientes entre colores de segmentos adyacentes",
-    "Exporta el resultado usando el botón de descarga, seleccionando resolución (1x/2x) y formato de salida (SVG/PNG)"
+    "Escriba el título que aparecerá sobre el gráfico.",
+    "Edite en la tabla el nombre y el valor de cada segmento.",
+    "Añada nuevas filas o elimine las que no necesite.",
+    "Seleccione un tema de color entre Default, Ocean, Sunset y Forest.",
+    "Active o desactive la leyenda y las etiquetas según la legibilidad de la vista previa.",
+    "Descargue el gráfico terminado como PNG o SVG."
   ],
   "usage_examples": [
-    "Visualización de porcentaje de cumplimiento de metas trimestrales en un dashboard ejecutivo",
-    "Representación de distribución de respuestas en encuestas de satisfacción con clientes",
-    "Mostrar progreso de carga en una aplicación móvil con indicador circular animado",
-    "Comparativa de participación de mercado entre dos competidores en un informe financiero"
+    "Mostrar el avance de un proyecto dividido en completado, en curso y pendiente.",
+    "Resumir la distribución de un presupuesto trimestral en un informe.",
+    "Presentar resultados principales de una encuesta en una diapositiva compacta.",
+    "Colocar una composición de KPI en una tarjeta estrecha de dashboard."
+  ],
+  "faqs": [
+    {
+      "question": "¿Puedo cargar datos desde un archivo?",
+      "answer": "No. La interfaz actual usa filas editables donde se escriben nombres y valores directamente."
+    },
+    {
+      "question": "¿Qué opciones visuales están disponibles?",
+      "answer": "Puede cambiar el título, el tema de color, la leyenda, las etiquetas y las filas de datos."
+    },
+    {
+      "question": "¿Qué formatos de descarga ofrece?",
+      "answer": "El gráfico se puede descargar como PNG o SVG desde los botones de la herramienta."
+    },
+    {
+      "question": "¿Para qué casos sirve mejor?",
+      "answer": "Funciona bien para porcentajes, progreso y composiciones que deben mostrarse en poco espacio."
+    }
   ]
 }

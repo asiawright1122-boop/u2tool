@@ -1,15 +1,38 @@
 {
-  "detailed_description": "Credit Card Validator checks if a credit card number is mathematically valid using the Luhn algorithm. It automatically detects the card type (Visa, Mastercard, Amex, etc.) and provides detailed validation results. For testing and development purposes only.",
+  "detailed_description": "Le validateur de carte bancaire vérifie si un numéro de carte de test possède une structure mathématique valide avec l algorithme de Luhn. Saisissez ou collez un numéro, cliquez sur Valider, et le navigateur retire les espaces, contrôle la longueur de 13 à 19 chiffres, exécute le test de Luhn et détecte les modèles de réseau comme Visa, Mastercard, American Express, Discover, Diners Club, JCB, UnionPay et Maestro lorsque le préfixe et la longueur correspondent. Utilisez cet outil pour vérifier carte bancaire dans les formulaires de paiement, les listes de numéros de carte de test, les tests unitaires et la documentation développeur. Il ne contacte aucune banque, aucun processeur de paiement ni aucun réseau de carte. Il ne peut donc pas confirmer qu une carte existe, est active, contient des fonds, appartient à une vraie personne ou peut être débitée. Utilisez uniquement des numéros de test.",
   "usage_steps": [
-    "Enter a credit card number in the input field",
-    "The number will be automatically formatted with spaces",
-    "Click Validate to check the card",
-    "View the card type, issuer, and Luhn check result",
-    "Check the digit count for additional validation"
+    "Saisissez un numéro de carte bancaire de test dans le champ.",
+    "Le champ regroupe les chiffres avec des espaces pendant la saisie.",
+    "Cliquez sur Valider pour lancer le contrôle local de Luhn et de longueur.",
+    "Consultez le modèle de réseau détecté, le libellé statique du réseau, le nombre de chiffres et le résultat.",
+    "Utilisez le résultat pour déboguer une validation de formulaire ou des données d exemple, pas pour vérifier un vrai compte."
   ],
   "usage_examples": [
-    "Test payment form validation logic",
-    "Verify card number format before processing",
-    "Identify card type from number prefix"
+    "Tester si un formulaire de paiement accepte un numéro de test Visa ou Mastercard.",
+    "Confirmer qu un numéro d exemple échoue lorsqu un chiffre est modifié.",
+    "Identifier le réseau de carte probable à partir du préfixe pendant la QA.",
+    "Documenter le résultat Luhn attendu pour les tests unitaires d un formulaire de paiement."
+  ],
+  "faqs": [
+    {
+      "question": "Cet outil vérifie-t-il un vrai compte de carte ?",
+      "answer": "Non. Il vérifie localement le modèle du numéro, la longueur et la somme de contrôle Luhn. Il ne contacte pas les banques ni les processeurs de paiement."
+    },
+    {
+      "question": "Dois-je saisir un vrai numéro de carte ?",
+      "answer": "Non. Utilisez uniquement des numéros de test officiels fournis par les prestataires de paiement ou des valeurs fictives."
+    },
+    {
+      "question": "Quels réseaux de carte sont détectés ?",
+      "answer": "Il détecte les modèles courants pour Visa, Mastercard, American Express, Discover, Diners Club, JCB, UnionPay et Maestro."
+    },
+    {
+      "question": "Que signifie un résultat valide ?",
+      "answer": "Cela signifie que les chiffres passent les contrôles locaux de longueur et de Luhn. Cela ne signifie pas que la carte existe, est active ou contient des fonds."
+    },
+    {
+      "question": "Le numéro est-il envoyé à un serveur ?",
+      "answer": "Les contrôles affichés sur la page s exécutent dans le navigateur. Traitez tout de même chaque valeur comme une donnée de test et évitez les vraies données de paiement."
+    }
   ]
 }

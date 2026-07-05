@@ -1,5 +1,5 @@
 {
-  "detailed_description": "El Convertidor de SVG a PNG transforma gráficos vectoriales escalables al formato de gráficos de red portátil. Soporta dimensiones personalizadas, colores de fondo y exportaciones de alta calidad.",
+  "detailed_description": "El Convertidor de SVG a PNG transforma gráficos vectoriales escalables al formato de gráficos de red portátil. Soporta dimensiones personalizadas, colores de fondo y exportaciones de alta calidad. Convertidor de SVG a PNG está pensado para crear un borrador visual rápido. Revisa tamaño, color, legibilidad y encaje en el diseño final antes de usar la imagen en una página, informe o presentación.",
   "usage_steps": [
     "Sube o pega tu archivo SVG",
     "Establece las dimensiones de salida (ancho/alto)",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Convierte logotipos para redes sociales",
     "Exporta iconos para aplicaciones móviles",
-    "Crea versiones raster de arte vectorial"
+    "Crea versiones raster de arte vectorial",
+    "Crear un borrador visual y revisarlo dentro del diseño final."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Convertidor de SVG a PNG?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta de imagen?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

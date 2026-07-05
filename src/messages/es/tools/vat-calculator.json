@@ -1,5 +1,5 @@
 {
-  "detailed_description": "La Calculadora de IVA es una herramienta completa para calcular el Impuesto sobre el Valor Añadido en los países europeos. Soporta tasas de IVA estándar, reducidas y superreducidas para todos los estados miembros de la UE. Puedes agregar el IVA a un importe neto, quitar el IVA de un importe bruto o calcular únicamente la parte correspondiente al IVA.",
+  "detailed_description": "La Calculadora de IVA es una herramienta completa para calcular el Impuesto sobre el Valor Añadido en los países europeos. Soporta tasas de IVA estándar, reducidas y superreducidas para todos los estados miembros de la UE. Puedes agregar el IVA a un importe neto, quitar el IVA de un importe bruto o calcular únicamente la parte correspondiente al IVA. Calculadora de IVA está pensado para estimaciones rápidas y comparación de escenarios, no como asesoramiento financiero profesional. Revisa valores de entrada, supuestos y redondeos antes de tomar decisiones importantes.",
   "usage_steps": [
     "Introduce el importe para el cual deseas calcular el IVA",
     "Selecciona el modo de cálculo (agregar IVA, quitar IVA o calcular únicamente el IVA)",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Calcular el IVA en facturas y transacciones comerciales",
     "Determinar el precio neto a partir de precios con IVA incluido",
-    "Comparar las tasas de IVA entre diferentes países de la UE"
+    "Comparar las tasas de IVA entre diferentes países de la UE",
+    "Comparar una estimación rápida antes de mover cifras a un presupuesto, factura o informe."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Calculadora de IVA?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta financiera?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

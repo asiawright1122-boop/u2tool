@@ -1,5 +1,5 @@
 {
-  "detailed_description": "El convertidor de texto a PDF transforma tu texto plano en documentos PDF profesionales. Personaliza la fuente, el tamaño y el formato de página para crear documentos exactamente como los deseas.",
+  "detailed_description": "El convertidor de texto a PDF transforma tu texto plano en documentos PDF profesionales. Personaliza la fuente, el tamaño y el formato de página para crear documentos exactamente como los deseas. Texto a PDF está pensado para comprobar conversiones de formato con rapidez. Prueba primero una entrada corta, compara el resultado con la estructura esperada y úsalo después en otra aplicación o script.",
   "usage_steps": [
     "Ingresa o pega tu texto",
     "Agrega un título opcional",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Crear documentos imprimibles",
     "Guardar notas como PDF",
-    "Generar informes simples"
+    "Generar informes simples",
+    "Probar la conversión con una entrada corta antes de procesar texto o archivos completos."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Texto a PDF?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra conversor?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

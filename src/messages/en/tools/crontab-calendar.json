@@ -30,6 +30,10 @@
     {
       "question": "Should I still test cron in production-like timezones?",
       "answer": "Yes. Use this as a quick preview, then confirm timezone and daylight-saving behavior in the environment where the job will actually run."
+    },
+    {
+      "question": "What should I check before using the Crontab Calendar output?",
+      "answer": "Review code, configuration, parsing details, and any assumptions before using the result in a repository, script, or deployment workflow."
     }
   ]
 }

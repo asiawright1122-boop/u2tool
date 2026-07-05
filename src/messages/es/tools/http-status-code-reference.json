@@ -1,5 +1,5 @@
 {
-  "detailed_description": "La Referencia de Códigos de Estado HTTP ofrece una guía completa de todos los códigos de respuesta HTTP desde 1xx hasta 5xx, con explicaciones detalladas y consejos de solución de problemas.",
+  "detailed_description": "La Referencia de Códigos de Estado HTTP ofrece una guía completa de todos los códigos de respuesta HTTP desde 1xx hasta 5xx, con explicaciones detalladas y consejos de solución de problemas. Referencia de Códigos de Estado HTTP está pensado para revisar valores y formatos de red con rapidez. Comprueba formato, contexto y restricciones del destino antes de usar el resultado en un entorno de trabajo.",
   "usage_steps": [
     "Ingresa el código de estado para buscar",
     "O navega por categoría",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Depura respuestas de API",
     "Aprende manejo de errores para 4xx/5xx",
-    "Entiende códigos de redirección para SEO"
+    "Entiende códigos de redirección para SEO",
+    "Revisar un valor corto antes de usar el resultado en documentación o diagnóstico de red."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Referencia de Códigos de Estado HTTP?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta de red?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

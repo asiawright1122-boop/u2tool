@@ -10,7 +10,8 @@
   "usage_examples": [
     "Verifique se um ensaio cumpre um limite de palavras.",
     "Meça o comprimento de um artigo antes de publicar.",
-    "Estime o tempo de leitura ou fala de um relatório, roteiro ou rascunho."
+    "Estime o tempo de leitura ou fala de um relatório, roteiro ou rascunho.",
+    "Verificar uma entrada curta antes de processar o conteúdo completo."
   ],
   "faqs": [
     {
@@ -24,6 +25,14 @@
     {
       "question": "Meu documento é enviado?",
       "answer": "Não. A análise roda no navegador enquanto você digita ou cola o texto."
+    },
+    {
+      "question": "O que devo revisar antes de usar o resultado de Contador de Palavras de Documentos?",
+      "answer": "Revise entradas, opções, formato e contexto. Em resultados importantes, confira números, caracteres e significado antes de compartilhar ou publicar."
+    },
+    {
+      "question": "Posso alterar o resultado depois de gerar?",
+      "answer": "Sim. Ajuste a entrada ou as opções disponíveis, processe novamente e use a saída atualizada somente depois de revisar."
     }
   ]
 }

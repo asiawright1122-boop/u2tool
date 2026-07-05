@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Checksum Verifier es una herramienta integral para calcular y verificar sumas de verificación de archivos utilizando múltiples algoritmos de hash. Sube cualquier archivo para calcular sus hashes MD5, SHA-1, SHA-256 y SHA-512 simultáneamente. Compara los hashes calculados con los valores esperados para verificar la integridad del archivo. La herramienta procesa archivos enteramente en tu navegador utilizando la API Web Crypto, asegurando que tus archivos nunca se suban a ningún servidor.",
+  "detailed_description": "Checksum Verifier es una herramienta integral para calcular y verificar sumas de verificación de archivos utilizando múltiples algoritmos de hash. Sube cualquier archivo para calcular sus hashes MD5, SHA-1, SHA-256 y SHA-512 simultáneamente. Compara los hashes calculados con los valores esperados para verificar la integridad del archivo. La herramienta procesa archivos enteramente en tu navegador utilizando la API Web Crypto, asegurando que tus archivos nunca se suban a ningún servidor. Verificador de Suma de Verificación está pensado para una revisión inicial y aprendizaje, no como decisión final de seguridad. Usa el resultado como ayuda, revisa la entrada y confirma las conclusiones importantes con tu proceso habitual.",
   "usage_steps": [
     "Sube un archivo haciendo clic o arrastrando",
     "Espera a que se complete el cálculo de hash",
@@ -13,5 +13,27 @@
     "Comprueba si un archivo se corrompió durante la transferencia",
     "Compara versiones de archivos utilizando hashes",
     "Valida la integridad de archivos de respaldo"
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Verificador de Suma de Verificación?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta de seguridad?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

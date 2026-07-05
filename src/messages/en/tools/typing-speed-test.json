@@ -10,7 +10,8 @@
   "usage_examples": [
     "A student checks their WPM before an online writing exam.",
     "A support agent practices accuracy on medium-length sentences before a shift.",
-    "A keyboard reviewer compares typing speed and mistake counts across two keyboard layouts."
+    "A keyboard reviewer compares typing speed and mistake counts across two keyboard layouts.",
+    "Transform sample text first, then proofread the result before sharing or publishing."
   ],
   "faqs": [
     {
@@ -28,6 +29,10 @@
     {
       "question": "What happens if I make mistakes?",
       "answer": "Characters are highlighted as you type, and the final result includes correct characters, incorrect characters, accuracy, duration, and WPM."
+    },
+    {
+      "question": "What should I check before using the Typing Speed Test output?",
+      "answer": "Proofread wording, characters, spacing, and formatting before publishing or sharing the transformed text."
     }
   ]
 }

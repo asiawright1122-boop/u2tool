@@ -1,5 +1,5 @@
 {
-  "detailed_description": "L'outil de Chiffre de César vous permet de chiffrez et déchiffrez du texte en utilisant l'algorithme classique du chiffre de César. Nommé d'après Jules César qui l'a utilisé pour les communications militaires, ce chiffre décale chaque lettre d'un nombre fixe de positions dans l'alphabet. Choisissez n'importe quelle valeur de décalage comprise entre 1 et 25, ROT13 étant le cas spécial du décalage 13. L'outil prend en charge les modes de chiffrement et de déchiffrement et conserve les caractères non alphabétiques.",
+  "detailed_description": "L'outil de Chiffre de César vous permet de chiffrez et déchiffrez du texte en utilisant l'algorithme classique du chiffre de César. Nommé d'après Jules César qui l'a utilisé pour les communications militaires, ce chiffre décale chaque lettre d'un nombre fixe de positions dans l'alphabet. Choisissez n'importe quelle valeur de décalage comprise entre 1 et 25, ROT13 étant le cas spécial du décalage 13. L'outil prend en charge les modes de chiffrement et de déchiffrement et conserve les caractères non alphabétiques. Chiffre de César sert à vérifier rapidement les entrées, les réglages et le résultat. Utilisez la sortie comme brouillon, relisez le format, les nombres, les caractères et le contexte, puis confirmez les résultats importants dans votre propre flux de travail avant de les partager, publier ou appliquer.",
   "usage_steps": [
     "Entrez votre texte dans la zone de saisie",
     "Sélectionnez la valeur de décalage (1-25)",
@@ -13,5 +13,27 @@
     "Créez des messages codés simples",
     "Résolvez des puzzles de chiffre de César",
     "Enseignez les bases du chiffrement aux étudiants"
+  ],
+  "faqs": [
+    {
+      "question": "Que vérifier avant d’utiliser le résultat de Chiffre de César ?",
+      "answer": "Vérifiez les entrées, les réglages, le format et le contexte. Pour un résultat important, relisez les nombres, les caractères et le sens avant partage ou publication."
+    },
+    {
+      "question": "Puis-je modifier le résultat après génération ?",
+      "answer": "Oui. Ajustez l’entrée ou les options disponibles, relancez le traitement, puis utilisez la sortie mise à jour après relecture."
+    },
+    {
+      "question": "Pourquoi le résultat peut-il différer d’un autre outil ?",
+      "answer": "Les outils peuvent gérer l’arrondi, l’analyse, la mise en forme ou l’affichage différemment. Comparez avec la même entrée et tenez compte des limites de l’interface."
+    },
+    {
+      "question": "Puis-je commencer avec une entrée courte ?",
+      "answer": "Oui. Commencez avec une entrée courte ou un contenu non sensible pour confirmer la forme de la sortie avant d’utiliser le contenu réel."
+    },
+    {
+      "question": "L’outil remplace-t-il une relecture manuelle ?",
+      "answer": "Non. Il accélère les tâches répétitives, mais les résultats importants doivent rester vérifiés pour l’exactitude, le contexte et l’adéquation."
+    }
   ]
 }

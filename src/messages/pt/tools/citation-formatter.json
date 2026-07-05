@@ -1,15 +1,38 @@
 {
-  "detailed_description": "O Formatador de Citações gera citações e entradas de bibliografia corretamente formatadas em vários estilos.",
+  "detailed_description": "O Formatador de Citações monta uma citação a partir dos dados da fonte preenchidos manualmente. Escolha APA, MLA, Chicago, Harvard ou IEEE, selecione livro, artigo de periódico, artigo ou site, e preencha campos como autores, título, ano, editora, periódico, volume, edição, páginas, DOI, URL e data de acesso quando forem relevantes. A citação formatada aparece na página e pode ser copiada. É um auxiliar leve, então revise o resultado com o guia de estilo exigido antes de entregar um trabalho acadêmico.",
   "usage_steps": [
-    "Selecione o tipo de fonte",
-    "Insira os detalhes da fonte",
-    "Escolha o estilo de citação",
-    "Clique em Formatar",
-    "Copie a citação"
+    "Escolha o estilo APA, MLA, Chicago, Harvard ou IEEE",
+    "Selecione o tipo de fonte: livro, artigo de periódico, artigo ou site",
+    "Preencha os dados disponíveis da fonte",
+    "Revise a prévia da citação gerada",
+    "Copie o texto da citação"
   ],
   "usage_examples": [
-    "Formate citações de livros",
-    "Gere citações de sites",
-    "Crie entradas de bibliografia"
+    "Rascunhar uma citação de livro com autores, título, ano e editora",
+    "Criar uma citação de site com URL e data de acesso",
+    "Formatar um artigo de periódico com volume, edição, páginas e DOI",
+    "Comparar a mesma fonte em APA, MLA, Chicago, Harvard e IEEE"
+  ],
+  "faqs": [
+    {
+      "question": "A ferramenta busca os dados automaticamente pelo DOI ou URL?",
+      "answer": "Não. A página formata os campos que você preenche manualmente; ela não consulta catálogos externos nem importa metadados."
+    },
+    {
+      "question": "Posso montar várias referências em sequência?",
+      "answer": "Sim, mas o fluxo atual monta uma citação por vez para copiar. Para trabalhos acadêmicos, revise cada entrada com o guia de estilo exigido pela instituição."
+    },
+    {
+      "question": "O que devo revisar antes de usar o resultado de Formatador de Citações?",
+      "answer": "Revise entradas, opções, formato e contexto. Em resultados importantes, confira números, caracteres e significado antes de compartilhar ou publicar."
+    },
+    {
+      "question": "Posso alterar o resultado depois de gerar?",
+      "answer": "Sim. Ajuste a entrada ou as opções disponíveis, processe novamente e use a saída atualizada somente depois de revisar."
+    },
+    {
+      "question": "Por que o resultado pode diferir de outra ferramenta?",
+      "answer": "Ferramentas podem tratar arredondamento, análise, formatação ou exibição de formas diferentes. Compare usando a mesma entrada e observe os limites da interface."
+    }
   ]
 }

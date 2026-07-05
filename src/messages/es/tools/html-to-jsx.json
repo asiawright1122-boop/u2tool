@@ -1,17 +1,38 @@
 {
-  "detailed_description": "El conversor HTML a JSX es una herramienta especializada que transforma código HTML estático en sintaxis JSX compatible con React. Técnicamente, el proceso implica analizar el Document Object Model (DOM) del HTML de entrada, identificar elementos, atributos, comentarios y nodos de texto, y luego mapearlos a componentes React equivalentes. El parser integrado convierte automáticamente etiquetas de auto-cierre (como <img> o <br>) en sintaxis JSX válida, transforma atributos HTML (ej.: class → className, for → htmlFor) a convenciones de React, y maneja estructuras complejas como listas, tablas o formularios anidados. Esta herramienta es esencial para desarrolladores que necesitan integrar maquetas estáticas en aplicaciones React, migrar proyectos legacy a componentes modulares, o convertir diseños de herramientas como Figma a código ejecutable. Funciona mediante un motor de transformación basado en árboles sintácticos abstractos (AST) que garantiza precisión en la preservación de la estructura original, incluyendo soporte para elementos void, fragmentos y expresiones dinámicas. Además, permite configurar opciones avanzadas como la preservación de comentarios HTML o la conversión automática de estilos en línea a objetos JavaScript.",
+  "detailed_description": "HTML a JSX convierte fragmentos HTML pegados en una versión más compatible con React JSX desde el navegador. El conversor aplica reemplazos comunes como class por className, for por htmlFor, tabindex por tabIndex y otros atributos frecuentes. También ajusta etiquetas vacías como img, input, br, hr, meta y link para que se cierren en formato JSX, y transforma comentarios HTML en comentarios JSX. Es una ayuda rápida para migrar snippets, ejemplos de documentación o maquetas pequeñas, pero el resultado debe revisarse antes de usarlo en producción, sobre todo si el HTML incluye estilos complejos, JavaScript embebido o sintaxis dinámica.",
   "usage_steps": [
-    "Pega tu código HTML en el área de entrada de la interfaz web.",
-    "Activa la opción 'Preservar comentarios' si necesitas incluir notas del HTML original en JSX.",
-    "Selecciona el modo de transformación de atributos: 'CamelCase' para propiedades React o 'Original' para mantener nombres HTML.",
-    "Haz clic en el botón 'Convertir a JSX' para iniciar el proceso de transformación.",
-    "Revisa el resultado en el panel de salida, prestando atención a advertencias sobre elementos no compatibles.",
-    "Copia el JSX generado y pégalo en tu componente React, ajustando manualmente expresiones dinámicas si es necesario."
+    "Pega un fragmento HTML en el panel HTML Input.",
+    "Pulsa Convertir para aplicar las conversiones de atributos y etiquetas comunes.",
+    "Revisa el panel JSX Output y busca casos que necesiten ajuste manual.",
+    "Copia el resultado cuando el fragmento sea válido para tu componente React.",
+    "Prueba el JSX en tu proyecto antes de mezclarlo con estado, props o lógica dinámica."
   ],
   "usage_examples": [
-    "Un desarrollador migra un sitio estático de HTML/CSS a una arquitectura React, reutilizando componentes de cabecera y menús.",
-    "Un diseñador convierte un prototipo de alta fidelidad exportado desde Figma (en formato HTML) a JSX para integrarlo en Storybook.",
-    "Un equipo ágil transforma fragmentos de HTML generados por un CMS en componentes reutilables con estado gestionado por React.",
-    "Un ingeniero refactoriza una aplicación heredada, extrayendo secciones de código HTML y encapsulándolas como componentes funcionales con props."
+    "Convertir un bloque de navegación HTML simple para empezar un componente React.",
+    "Pasar una tarjeta estática con class y for a una sintaxis JSX inicial.",
+    "Preparar un ejemplo de documentación antes de refactorizarlo manualmente.",
+    "Comprobar rápidamente cómo quedarían etiquetas img o input autocerradas en JSX."
+  ],
+  "faqs": [
+    {
+      "question": "El conversor entiende todo el DOM como un compilador?",
+      "answer": "No. Usa transformaciones de texto para casos comunes. Es rápido para snippets, pero no sustituye una revisión con herramientas de React o TypeScript."
+    },
+    {
+      "question": "Convierte estilos inline a objetos JavaScript perfectos?",
+      "answer": "Intenta transformar estilos inline simples, pero debes revisar el resultado, especialmente con valores complejos, variables CSS o comillas."
+    },
+    {
+      "question": "Qué atributos convierte?",
+      "answer": "Cubre conversiones frecuentes como className, htmlFor, tabIndex, readOnly, maxLength, cellPadding, cellSpacing, colSpan, rowSpan, frameBorder, allowFullScreen, autoComplete y autoFocus."
+    },
+    {
+      "question": "Sirve para HTML generado por CMS o editores visuales?",
+      "answer": "Puede servir como primer paso para fragmentos pequeños. Para páginas grandes o HTML con scripts, conviene limpiar y probar el resultado por partes."
+    },
+    {
+      "question": "El resultado es seguro para pegar directamente en producción?",
+      "answer": "No automáticamente. Revisa el JSX, elimina contenido no confiable y pruébalo dentro de tu componente antes de publicarlo."
+    }
   ]
 }

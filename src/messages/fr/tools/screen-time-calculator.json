@@ -1,12 +1,38 @@
 {
-  "detailed_description": "Le calculateur de temps d'écran vous aide à comprendre et à gérer votre utilisation des appareils numériques. Entrez votre temps d'écran quotidien pour différents appareils et activités, et l'outil calcule votre temps d'écran total quotidien, hebdomadaire, mensuel et annuel. Il montre également quel pourcentage de vos heures d'éveil vous passez devant les écrans et fournit des recommandations de santé basées sur les lignes directrices des organisations de santé. Que vous essayiez de réduire votre temps d'écran, de suivre votre productivité ou de comprendre vos habitudes numériques, ce calculateur fournit des informations précieuses.",
+  "detailed_description": "Le calculateur de temps d'écran vous aide à comprendre et à gérer votre utilisation des appareils numériques. Entrez votre temps d'écran quotidien pour différents appareils et activités, et l'outil calcule votre temps d'écran total quotidien, hebdomadaire, mensuel et annuel. Il montre également quel pourcentage de vos heures d'éveil vous passez devant les écrans et fournit des recommandations de santé basées sur les lignes directrices des organisations de santé. Que vous essayiez de réduire votre temps d'écran, de suivre votre productivité ou de comprendre vos habitudes numériques, ce calculateur fournit des informations précieuses. Calculateur de temps d'écran sert à vérifier rapidement les entrées, les réglages et le résultat. Utilisez la sortie comme brouillon, relisez le format, les nombres, les caractères et le contexte, puis confirmez les résultats importants dans votre propre flux de travail avant de les partager, publier ou appliquer.",
   "usage_steps": [
     "Entrez vos heures d'écran quotidiennes",
     "Affichez les totaux calculés",
-    "Lisez les suggestions de santé"
+    "Lisez les suggestions de santé",
+    "Vérifiez le résultat et confirmez qu’il correspond à votre objectif.",
+    "Utilisez le résultat final seulement après contrôle dans le flux prévu."
   ],
   "usage_examples": [
     "Suivez votre utilisation du téléphone",
-    "Fixez des objectifs de temps d'écran"
+    "Fixez des objectifs de temps d'écran",
+    "Vérifier une entrée courte avant de traiter le contenu complet.",
+    "Utiliser le résultat comme brouillon pour une documentation, du code, une planification ou un message."
+  ],
+  "faqs": [
+    {
+      "question": "Que vérifier avant d’utiliser le résultat de Calculateur de temps d'écran ?",
+      "answer": "Vérifiez les entrées, les réglages, le format et le contexte. Pour un résultat important, relisez les nombres, les caractères et le sens avant partage ou publication."
+    },
+    {
+      "question": "Puis-je modifier le résultat après génération ?",
+      "answer": "Oui. Ajustez l’entrée ou les options disponibles, relancez le traitement, puis utilisez la sortie mise à jour après relecture."
+    },
+    {
+      "question": "Pourquoi le résultat peut-il différer d’un autre outil ?",
+      "answer": "Les outils peuvent gérer l’arrondi, l’analyse, la mise en forme ou l’affichage différemment. Comparez avec la même entrée et tenez compte des limites de l’interface."
+    },
+    {
+      "question": "Puis-je commencer avec une entrée courte ?",
+      "answer": "Oui. Commencez avec une entrée courte ou un contenu non sensible pour confirmer la forme de la sortie avant d’utiliser le contenu réel."
+    },
+    {
+      "question": "L’outil remplace-t-il une relecture manuelle ?",
+      "answer": "Non. Il accélère les tâches répétitives, mais les résultats importants doivent rester vérifiés pour l’exactitude, le contexte et l’adéquation."
+    }
   ]
 }

@@ -1,17 +1,35 @@
 {
-  "detailed_description": "O Boxplot Chart Generator é uma ferramenta técnica especializada para criar diagramas de caixa (boxplots) interativos, visualizando distribuições estatísticas de dados. Ele permite analisar quartis, mediana, valores extremos e intervalos de confiança, ideal para profissionais que lidam com análise de variabilidade em conjuntos de dados multidimensionais. Usuários precisam deste recurso para identificar outliers em processos industriais, comparar distribuições em pesquisas acadêmicas ou monitorar métricas em ciência de dados. O funcionamento baseia-se na ingestão de dados numéricos em formato CSV ou colunas tabulares, onde o algoritmo calcula automaticamente os percentis 25 (Q1), 50 (mediana) e 75 (Q3), além de determinar os limites de outliers usando o intervalo interquartil (IIQ). A renderização usa bibliotecas SVG para alta qualidade gráfica, com opções de personalização de escalas logarítmicas, cores por categoria e sobreposição de pontos de dados brutos. A exportação suporta PNG vetorial e SVG editável, mantendo metadados estatísticos embutidos para auditoria posterior.",
+  "detailed_description": "O Boxplot Chart Generator cria diagramas de caixa no navegador a partir de pequenos grupos de números. Para cada grupo, você pode editar o nome e inserir uma lista de valores separados por vírgula; a ferramenta ordena os números e calcula mínimo, Q1, mediana, Q3 e máximo. Quando a opção de outliers está ativada, pontos fora do padrão 1.5 IQR aparecem separadamente. A página também oferece título do gráfico, temas de cores, orientação horizontal, dados de exemplo, limpeza e exportação em PNG ou SVG. É útil para comparar distribuições em aulas, relatórios e apresentações.",
   "usage_steps": [
-    "Acesse a página do Boxplot Chart Generator e cole seus dados em formato tabular na área de edição 'Colar Dados CSV/TSV'.",
-    "Selecione a coluna de destino usando o dropdown 'Eixo Y' e agrupe dados por categorias via 'Agrupamento por Coluna'.",
-    "Ative a opção 'Mostrar Outliers' para destacar valores fora do intervalo [Q1 - 1.5*IIQ, Q3 + 1.5*IIQ].",
-    "Ajuste a escala do eixo Y entre linear/logarítmica usando o toggle 'Escala do Eixo'.",
-    "Personalize cores dos boxes pelo painel 'Paleta de Cores' e adicione rótulos de média/mediana via checkbox correspondente.",
-    "Exporte o gráfico final em PNG ou SVG clicando no botão 'Baixar Visualização' e selecione a resolução desejada."
+    "Carregue os dados de exemplo ou comece pelos grupos padrão.",
+    "Edite o título do gráfico e o nome de cada grupo.",
+    "Insira os números de cada grupo separados por vírgula.",
+    "Escolha um tema de cores e, se desejar, ative a orientação horizontal.",
+    "Mantenha ou desative a exibição de outliers pelo padrão 1.5 IQR.",
+    "Revise a prévia e baixe o boxplot como PNG ou SVG."
   ],
   "usage_examples": [
-    "Um professor analisa notas de alunos de múltiplas turmas para identificar disparidades educacionais através de diferenças nos quartis.",
-    "Um engenheiro de qualidade monitora variações no diâmetro de peças produzidas, detectando lotes com outliers além de 3σ.",
-    "Um cientista de dados compara distribuições de renda entre regiões, aplicando escala logarítmica para visualizar assimetrias.",
-    "Um pesquisador ambiental avalia a concentração de poluentes em diferentes estações do ano, usando boxplots empilhados para análise sazonal."
+    "Comparar o tempo de conclusão de tarefas entre várias equipes.",
+    "Mostrar a dispersão de notas de teste para grupos A, B e C.",
+    "Verificar outliers em um conjunto de medições antes de incluir o gráfico em um relatório.",
+    "Baixar uma versão SVG do boxplot para uma apresentação ou documentação."
+  ],
+  "faqs": [
+    {
+      "question": "Como inserir dados?",
+      "answer": "Digite os números de cada grupo em um campo, separando valores por vírgula. Itens não numéricos são ignorados."
+    },
+    {
+      "question": "Quais métricas são calculadas?",
+      "answer": "Para cada grupo são calculados mínimo, Q1, mediana, Q3 e máximo; outliers podem aparecer como pontos."
+    },
+    {
+      "question": "Posso importar arquivos?",
+      "answer": "Não. A tela atual trabalha com listas de números digitadas manualmente."
+    },
+    {
+      "question": "Quais formatos de exportação existem?",
+      "answer": "O gráfico final pode ser baixado como PNG ou SVG pelos botões da ferramenta."
+    }
   ]
 }

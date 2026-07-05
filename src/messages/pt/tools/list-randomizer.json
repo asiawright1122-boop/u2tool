@@ -1,14 +1,38 @@
 {
-  "detailed_description": "List Randomizer embaralha no navegador texto colado linha por linha. Cole um item por linha, clique em Shuffle List e a ferramenta remove linhas vazias antes de devolver a ordem aleatória. O resultado pode ser copiado. Usa Fisher-Yates simples com Math.random; não suporta upload de arquivos, CSV/JSON, sementes, delimitadores, aleatoriedade criptográfica, embaralhamento reproduzível nem downloads.",
+  "detailed_description": "List Randomizer embaralha no navegador texto colado linha por linha. Cole um item por linha, clique em Shuffle List e a ferramenta remove linhas vazias antes de devolver a ordem aleatória. O resultado pode ser copiado. Usa Fisher-Yates simples com Math.random; não suporta upload de arquivos, CSV/JSON, sementes, delimitadores, aleatoriedade criptográfica, embaralhamento reproduzível nem downloads. Randomizador de Listas foi pensado para verificar entradas, opções e resultados com rapidez. Use a saída como rascunho, revise formato, números, caracteres e contexto, e confirme resultados importantes no seu próprio fluxo de trabalho antes de compartilhar, publicar ou aplicar em um projeto.",
   "usage_steps": [
     "Paste one item per line.",
     "Click Shuffle List.",
     "Review the randomized output.",
-    "Copy the result or clear the input."
+    "Copy the result or clear the input.",
+    "Revise o resultado e confirme se ele combina com seu objetivo."
   ],
   "usage_examples": [
     "Shuffle a small list for a classroom or draft.",
     "Randomize checklist items before assignment.",
-    "Reorder one-item-per-line survey questions."
+    "Reorder one-item-per-line survey questions.",
+    "Verificar uma entrada curta antes de processar o conteúdo completo."
+  ],
+  "faqs": [
+    {
+      "question": "O que devo revisar antes de usar o resultado de Randomizador de Listas?",
+      "answer": "Revise entradas, opções, formato e contexto. Em resultados importantes, confira números, caracteres e significado antes de compartilhar ou publicar."
+    },
+    {
+      "question": "Posso alterar o resultado depois de gerar?",
+      "answer": "Sim. Ajuste a entrada ou as opções disponíveis, processe novamente e use a saída atualizada somente depois de revisar."
+    },
+    {
+      "question": "Por que o resultado pode diferir de outra ferramenta?",
+      "answer": "Ferramentas podem tratar arredondamento, análise, formatação ou exibição de formas diferentes. Compare usando a mesma entrada e observe os limites da interface."
+    },
+    {
+      "question": "Posso começar com uma entrada curta?",
+      "answer": "Sim. Comece com uma entrada curta ou conteúdo não sensível para confirmar o formato da saída antes de usar o conteúdo real."
+    },
+    {
+      "question": "A ferramenta substitui uma revisão manual?",
+      "answer": "Não. Ela acelera tarefas repetitivas, mas resultados importantes ainda devem ser revisados quanto a precisão, contexto e adequação."
+    }
   ]
 }

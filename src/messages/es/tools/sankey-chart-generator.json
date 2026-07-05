@@ -1,17 +1,38 @@
 {
-  "detailed_description": "El Generador de Diagramas Sankey es una herramienta técnica para crear diagramas de flujo interactivos que representan el movimiento de datos, materiales o recursos entre nodos conectados por enlaces ponderados. Utiliza algoritmos de distribución jerárquica para calcular la posición óptima de los nodos y la curvatura proporcional de los enlaces, aplicando técnicas de gradientes de color para visualizar magnitudes de flujo. Esta herramienta es esencial para ingenieros de datos que necesitan analizar sistemas de distribución energética, arquitectos de software que mapean flujos de microservicios, o analistas financieros que trazan cadenas de suministro. Soporta importación de datos estructurados en formatos CSV/JSON, permitiendo la personalización avanzada de propiedades como la opacidad de los enlaces, alineación de nodos (vertical/horizontal), y escalado logarítmico de anchos de banda. Su motor basado en ECharts-based browser chart rendering renderiza gráficos vectoriales escalables (SVG) con soporte para anotaciones dinámicas y exportación a PNG con resolución ajustable. La interfaz incluye un modo de depuración para validar integridad de conexiones y un panel de análisis estadístico de flujos entrantes/salientes.",
+  "detailed_description": "El Generador de Gráficos Sankey crea diagramas de flujo editables directamente en el navegador con una vista previa basada en ECharts. Puedes cargar un ejemplo, cambiar el título, elegir un tema de color, ajustar orientación horizontal o vertical, modificar ancho y separación de nodos, editar nombres de nodos, añadir o eliminar enlaces, cambiar fuentes, destinos y valores, y descargar el resultado como PNG o SVG. La herramienta está pensada para modelos pequeños y medianos de flujo, como embudos, presupuestos, recorridos de usuario o transferencias entre etapas. No importa archivos CSV/JSON ni valida un esquema externo; los datos se editan desde los controles visibles de la página.",
   "usage_steps": [
-    "Accede al generador mediante el slug /sankey-chart-generator y selecciona 'Nueva Visualización' en el panel de control.",
-    "Elige entre las plantillas predefinidas de orientación (vertical u horizontal) según tu tipo de datos en el menú desplegable 'Layout'.",
-    "Importa tu archivo CSV/JSON con columnas definidas como 'source', 'target', 'value' usando el botón 'Cargar Datos' con validador automático de esquema.",
-    "Arrastra y ajusta nodos en el editor visual para optimizar la disposición jerárquica, utilizando la cuadrícula de alineación automática.",
-    "Configura gradientes de color en la pestaña 'Estilo' seleccionando paletas categóricas o escalas continuas basadas en valores numéricos.",
-    "Exporta el diagrama interactivo como SVG editables o PNG de alta resolución (hasta 4K) con el botón 'Descargar' y comparte enlaces a visualizaciones en tiempo real."
+    "Carga los datos de ejemplo o empieza con los nodos y enlaces predeterminados.",
+    "Actualiza el título, el tema de color, la orientación, el ancho de nodo y la separación.",
+    "Renombra nodos o añade nuevos nodos cuando necesites más etapas en el flujo.",
+    "Edita cada enlace seleccionando fuente, destino y valor numérico.",
+    "Revisa la vista previa y descarga el gráfico como PNG o SVG cuando el flujo sea claro."
   ],
   "usage_examples": [
-    "Una empresa energética analiza el flujo de electricidad entre plantas generadoras, subestaciones y consumidores residenciales.",
-    "Un arquitecto de software mapea la comunicación entre microservicios en una aplicación cloud, identificando cuellos de botella.",
-    "Un analista financiero traza el movimiento de capitales entre cuentas corporativas y proveedores durante auditorías.",
-    "Un equipo de marketing visualiza el recorrido de usuarios entre páginas web y conversiones en una plataforma de comercio electrónico."
+    "Mostrar cuántos usuarios pasan de visita a carrito, pago y compra en un embudo simple.",
+    "Representar una distribución de presupuesto entre equipos, partidas y resultados.",
+    "Explicar flujos de energía, materiales o tickets entre varias etapas de un proceso.",
+    "Probar distintas orientaciones y separaciones de nodo antes de exportar un gráfico para una presentación."
+  ],
+  "faqs": [
+    {
+      "question": "Puedo importar un archivo CSV o JSON?",
+      "answer": "No. Esta versión se edita desde los campos de nodos y enlaces de la página. Usa Cargar ejemplo para empezar rápido y luego ajusta los valores."
+    },
+    {
+      "question": "Qué opciones de diseño están disponibles?",
+      "answer": "Puedes cambiar orientación, tema de color, ancho de nodo, separación entre nodos, nombres de nodos y valores de enlaces."
+    },
+    {
+      "question": "El diagrama se puede exportar?",
+      "answer": "Sí. La página permite descargar la visualización como PNG o SVG desde los botones de exportación."
+    },
+    {
+      "question": "Qué debo revisar antes de compartir el gráfico?",
+      "answer": "Comprueba que cada enlace tenga la fuente y el destino correctos, que los valores sean coherentes y que las etiquetas no creen ambigüedad."
+    },
+    {
+      "question": "Para qué tamaño de datos es más útil?",
+      "answer": "Funciona mejor para flujos pequeños o medianos. Si tienes muchas conexiones, simplifica el modelo antes de exportar para mantener la lectura clara."
+    }
   ]
 }

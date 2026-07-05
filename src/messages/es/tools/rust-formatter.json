@@ -1,12 +1,38 @@
 {
-  "detailed_description": "Rust Formatter es una herramienta en línea que formatea su código Rust según las directrices de estilo de rustfmt. Ayuda a mantener un estilo de código consistente en sus proyectos de Rust manejando automáticamente la sangría, el envoltorio de líneas, el espacio alrededor de los operadores y el formato de estructuras y enumeraciones. La herramienta es perfecta para los desarrolladores que desean código Rust limpio y legible sin instalar herramientas adicionales. Ya sea que esté escribiendo código de sistemas, servicios web o aplicaciones de línea de comandos en Rust, este formateador garantiza que su código sigue los estándares de la comunidad.",
+  "detailed_description": "Rust Formatter es una herramienta en línea que formatea su código Rust según las directrices de estilo de rustfmt. Ayuda a mantener un estilo de código consistente en sus proyectos de Rust manejando automáticamente la sangría, el envoltorio de líneas, el espacio alrededor de los operadores y el formato de estructuras y enumeraciones. La herramienta es perfecta para los desarrolladores que desean código Rust limpio y legible sin instalar herramientas adicionales. Ya sea que esté escribiendo código de sistemas, servicios web o aplicaciones de línea de comandos en Rust, este formateador garantiza que su código sigue los estándares de la comunidad. Formateador de Rust está pensado para revisar tareas de desarrollo de forma rápida, no para aplicar resultados sin comprobación. Usa el resultado como punto de partida, revisa entradas, formato y contexto, y valida los cambios importantes dentro de tu propio flujo de trabajo.",
   "usage_steps": [
     "Pega el código Rust",
     "Haz clic en Formatear",
-    "Copia el código formateado"
+    "Copia el código formateado",
+    "Revisa el resultado y confirma que encaja con tu objetivo.",
+    "Usa el resultado final solo después de comprobarlo en tu flujo de trabajo."
   ],
   "usage_examples": [
     "Formatea módulos de Rust",
-    "Prepara código para revisión"
+    "Prepara código para revisión",
+    "Revisar el resultado con una entrada corta antes de usarlo en un repositorio o proyecto real.",
+    "Usar el resultado como borrador para código, configuración o notas de depuración."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Formateador de Rust?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta de desarrollo?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "detailed_description": "O conversor de texto para PDF transforma seu texto simples em documentos PDF profissionais. Personalize fonte, tamanho e formato de página.",
+  "detailed_description": "O conversor de texto para PDF transforma seu texto simples em documentos PDF profissionais. Personalize fonte, tamanho e formato de página. Texto para PDF foi pensado para verificar entradas, opções e resultados com rapidez. Use a saída como rascunho, revise formato, números, caracteres e contexto, e confirme resultados importantes no seu próprio fluxo de trabalho antes de compartilhar, publicar ou aplicar em um projeto.",
   "usage_steps": [
     "Digite ou cole seu texto",
     "Adicione um título opcional",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Criar documentos imprimíveis",
     "Salvar notas como PDF",
-    "Gerar relatórios simples"
+    "Gerar relatórios simples",
+    "Verificar uma entrada curta antes de processar o conteúdo completo."
+  ],
+  "faqs": [
+    {
+      "question": "O que devo revisar antes de usar o resultado de Texto para PDF?",
+      "answer": "Revise entradas, opções, formato e contexto. Em resultados importantes, confira números, caracteres e significado antes de compartilhar ou publicar."
+    },
+    {
+      "question": "Posso alterar o resultado depois de gerar?",
+      "answer": "Sim. Ajuste a entrada ou as opções disponíveis, processe novamente e use a saída atualizada somente depois de revisar."
+    },
+    {
+      "question": "Por que o resultado pode diferir de outra ferramenta?",
+      "answer": "Ferramentas podem tratar arredondamento, análise, formatação ou exibição de formas diferentes. Compare usando a mesma entrada e observe os limites da interface."
+    },
+    {
+      "question": "Posso começar com uma entrada curta?",
+      "answer": "Sim. Comece com uma entrada curta ou conteúdo não sensível para confirmar o formato da saída antes de usar o conteúdo real."
+    },
+    {
+      "question": "A ferramenta substitui uma revisão manual?",
+      "answer": "Não. Ela acelera tarefas repetitivas, mas resultados importantes ainda devem ser revisados quanto a precisão, contexto e adequação."
+    }
   ]
 }

@@ -13,5 +13,27 @@
     "2. Un equipo de e-commerce implementa rápidamente un formulario de carga de productos con campos obligatorios para SKU, precios y descripciones usando la conversión automática de restricciones JSON a atributos HTML5.",
     "3. Un arquitecto de software genera un interfaz de prueba para una API REST, convirtiendo esquemas OpenAPI (Swagger) en formularios que envían solicitudes POST con carga útil validada automáticamente.",
     "4. Un diseñador UX construye un constructor de encuestas en tiempo real donde cada cambio en el esquema JSON (agregar preguntas, definir tipos de respuesta) actualiza instantáneamente el formulario sin recargar la página."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Generador de Formularios desde JSON?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra generador?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

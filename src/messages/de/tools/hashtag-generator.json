@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Der Hashtag-Generator hilft Ihnen, relevante Hashtags für Ihren Social-Media-Inhalt zu finden. Geben Sie ein Thema oder Schlüsselwörter ein, wählen Sie Ihre Zielplattform (Instagram, Twitter, TikTok, LinkedIn) und erhalten Sie eine kuratierte Liste von Hashtags. Das Tool generiert eine Mischung aus beliebten, Nischen- und Trend-Hashtags, um die Reichweite Ihres Inhalts zu maximieren. Kopieren Sie alle Hashtags mit einem Klick und fügen Sie sie direkt in Ihre Beiträge ein.",
+  "detailed_description": "Der Hashtag-Generator erstellt aus einem Thema oder Stichwort eine sofort kopierbare Liste von Hashtags für Instagram, Twitter/X, TikTok, LinkedIn oder eine allgemeine Nutzung. Die Ausgabe kombiniert kurze Kernbegriffe, Varianten mit Plattformbezug und breitere Begriffe, damit Sie schnell eine erste Hashtag-Liste für einen Beitrag, eine Kampagne oder einen Redaktionsplan vorbereiten können. Das Tool arbeitet direkt im Browser und ersetzt keine Recherche zu echten Trenddaten, aber es spart Zeit beim Brainstorming und hilft, zu viele irrelevante oder wiederholte Tags zu vermeiden. Wählen Sie die Plattform, legen Sie die Anzahl fest, prüfen Sie die Vorschläge manuell und kopieren Sie die fertige Liste in Ihren Social-Media-Entwurf.",
   "usage_steps": [
     "Geben Sie Ihr Thema oder Schlüsselwörter ein",
     "Wählen Sie die Zielplattform",
@@ -14,5 +14,27 @@
     "Generieren Sie Twitter-Hashtags für aktuelle Themen",
     "Erstellen Sie TikTok-Hashtag-Strategien",
     "Optimieren Sie die Sichtbarkeit von LinkedIn-Beiträgen"
+  ],
+  "faqs": [
+    {
+      "question": "Nutzt der Generator Live-Trenddaten?",
+      "answer": "Nein. Die Vorschläge werden lokal aus Ihrem Thema und der gewählten Plattform abgeleitet. Prüfen Sie aktuelle Trends separat, bevor Sie eine Kampagne veröffentlichen."
+    },
+    {
+      "question": "Wie viele Hashtags sollte ich verwenden?",
+      "answer": "Das hängt von der Plattform ab. Das Tool begrenzt die Anzahl je Plattform, damit die Liste nicht länger wird als in typischen Beiträgen sinnvoll ist."
+    },
+    {
+      "question": "Kann ich die Vorschläge direkt kopieren?",
+      "answer": "Ja. Nach dem Generieren können Sie alle Hashtags zusammen kopieren und in den Entwurf Ihres Beitrags einfügen."
+    },
+    {
+      "question": "Sind die Hashtags für jede Sprache geeignet?",
+      "answer": "Sie können Themen in verschiedenen Sprachen eingeben. Für lokale Kampagnen sollten Sie die Begriffe trotzdem an Zielgruppe, Schreibweise und regionale Nutzung anpassen."
+    },
+    {
+      "question": "Wofür eignet sich das Tool am besten?",
+      "answer": "Es eignet sich für schnelles Brainstorming, Content-Kalender, erste Kampagnenentwürfe und das Mischen von breiteren und spezifischeren Tags."
+    }
   ]
 }

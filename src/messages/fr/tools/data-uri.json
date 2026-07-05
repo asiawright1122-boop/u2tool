@@ -1,17 +1,39 @@
 {
-  "detailed_description": "Le générateur d'URI de données convertit des fichiers binaires ou textuels en un format URI codé en Base64, intégrant des métadonnées comme le type MIME. Ce processus permet l'intégration directe de ressources (images, polices, scripts) dans des documents HTML, CSS ou JavaScript sans fichiers externes. Techniquement, l'URI généré suit le schéma 'data:[<type MIME>][;charset=<encodage>][;base64],<données>', où les données binaires sont transformées en chaîne ASCII via l'encodage Base64. Cet outil est crucial pour optimiser les performances web en réduisant les requêtes HTTP, notamment pour les petites ressources comme les icônes SVG ou les polices personnalisées. Il est également utile pour contourner les restrictions de CORS lors de l'intégration de ressources externes. Le fonctionnement repose sur la lecture du fichier en mode binaire, sa conversion en Base64, et l'assemblage final avec les en-têtes de métadonnées. À noter que ce format augmente la taille des données de 33 %, ce qui le rend inadapté aux grands fichiers.",
+  "detailed_description": "Le générateur d'URI de données transforme un fichier local en data URI directement dans le navigateur. Sélectionnez un fichier, puis la page lit son contenu avec FileReader, affiche le nom, la taille, le type MIME détecté et la chaîne data URI générée. Vous pouvez copier le résultat, effacer l'entrée et prévisualiser les fichiers image quand le data URI commence par `data:image`. L'outil est pratique pour de petites icônes, images de test ou extraits HTML/CSS rapides. Il ne propose pas de choix manuel d'encodage, de réglage charset, de contournement CORS, de compression ou d'optimisation automatique; vérifiez toujours la taille finale avant intégration.",
   "usage_steps": [
-    "1. Cliquez sur la zone de dépôt pour charger un fichier (image, police, script) ou sélectionnez un fichier via l'explorateur.",
-    "2. Choisissez la méthode d'encodage : Base64 pour les binaires ou encodage raw pour les textes ASCII.",
-    "3. Spécifiez manuellement le type MIME (ex: image/png, application/json) si nécessaire.",
-    "4. Activez l'option 'Inclure charset' pour les textes UTF-8 et définissez l'encodage (ex: charset=utf-8).",
-    "5. Cliquez sur 'Générer URI' pour obtenir le résultat dans le champ de sortie.",
-    "6. Utilisez le bouton 'Copier' pour intégrer l'URI dans votre code HTML/CSS."
+    "Cliquez sur la zone de dépôt ou utilisez le sélecteur de fichier.",
+    "Choisissez un petit fichier local à convertir.",
+    "Laissez la page générer automatiquement le data URI.",
+    "Vérifiez le nom, la taille et le type détecté du fichier.",
+    "Prévisualisez l'image si le résultat est un data URI d'image.",
+    "Copiez la chaîne data URI ou effacez l'entrée pour recommencer."
   ],
   "usage_examples": [
-    "Incorporer une petite image PNG en tant qu'arrière-plan CSS sans requête externe.",
-    "Intégrer un fichier JSON de configuration directement dans un script JavaScript.",
-    "Encoder une police WOFF2 pour une utilisation dans @font-face sans hébergement externe.",
-    "Convertir un SVG d'icône en URI pour l'utiliser dans un attribut src d'une balise img."
+    "Transformer une petite icône PNG en data URI pour un test CSS.",
+    "Copier un SVG local sous forme de data URI pour un prototype HTML.",
+    "Prévisualiser rapidement une image encodée avant de la coller dans un exemple.",
+    "Comparer la taille d'un petit fichier avant de décider s'il doit rester externe."
+  ],
+  "faqs": [
+    {
+      "question": "Puis-je choisir le type MIME manuellement ?",
+      "answer": "Non. Le type affiché vient du fichier sélectionné; corrigez le résultat dans votre code si un cas particulier l'exige."
+    },
+    {
+      "question": "L'outil compresse-t-il les fichiers ?",
+      "answer": "Non. Il lit le fichier et produit un data URI; aucune compression ou optimisation n'est appliquée."
+    },
+    {
+      "question": "Quels fichiers peuvent être prévisualisés ?",
+      "answer": "La page affiche une prévisualisation uniquement lorsque le résultat commence par `data:image`."
+    },
+    {
+      "question": "Est-ce une solution pour les gros fichiers ?",
+      "answer": "Non. Les data URI deviennent vite volumineux; utilisez-les surtout pour de petites ressources ou des prototypes."
+    },
+    {
+      "question": "Est-ce que cela contourne CORS ?",
+      "answer": "Non. L'outil convertit seulement un fichier local; il ne change pas les règles de sécurité de votre application."
+    }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "detailed_description": "O Calculador de Bandwidth ajuda você a determinar o largura de banda de rede necessária para transferir arquivos dentro de um determinado período de tempo. Insira o tamanho do arquivo e o tempo desejado de transferência para calcular o largura de banda necessário em várias unidades, incluindo bps, Kbps, Mbps, Gbps e bytes por segundo. Perfeito para planejamento de rede e estimativa de capacidade.",
+  "detailed_description": "O Calculador de Bandwidth ajuda você a determinar o largura de banda de rede necessária para transferir arquivos dentro de um determinado período de tempo. Insira o tamanho do arquivo e o tempo desejado de transferência para calcular o largura de banda necessário em várias unidades, incluindo bps, Kbps, Mbps, Gbps e bytes por segundo. Perfeito para planejamento de rede e estimativa de capacidade. Calculadora de Largura de Banda foi pensado para verificar entradas, opções e resultados com rapidez. Use a saída como rascunho, revise formato, números, caracteres e contexto, e confirme resultados importantes no seu próprio fluxo de trabalho antes de compartilhar, publicar ou aplicar em um projeto.",
   "usage_steps": [
     "Insira o tamanho do arquivo que deseja transferir",
     "Selecione a unidade de tamanho apropriada (KB, MB, GB, TB)",
@@ -11,6 +11,29 @@
   "usage_examples": [
     "Planejando requisitos de largura de banda para streaming de vídeo",
     "Estimando velocidades de transferência de backup",
-    "Calculando necessidades de upload/download para nuvem"
+    "Calculando necessidades de upload/download para nuvem",
+    "Verificar uma entrada curta antes de processar o conteúdo completo."
+  ],
+  "faqs": [
+    {
+      "question": "O que devo revisar antes de usar o resultado de Calculadora de Largura de Banda?",
+      "answer": "Revise entradas, opções, formato e contexto. Em resultados importantes, confira números, caracteres e significado antes de compartilhar ou publicar."
+    },
+    {
+      "question": "Posso alterar o resultado depois de gerar?",
+      "answer": "Sim. Ajuste a entrada ou as opções disponíveis, processe novamente e use a saída atualizada somente depois de revisar."
+    },
+    {
+      "question": "Por que o resultado pode diferir de outra ferramenta?",
+      "answer": "Ferramentas podem tratar arredondamento, análise, formatação ou exibição de formas diferentes. Compare usando a mesma entrada e observe os limites da interface."
+    },
+    {
+      "question": "Posso começar com uma entrada curta?",
+      "answer": "Sim. Comece com uma entrada curta ou conteúdo não sensível para confirmar o formato da saída antes de usar o conteúdo real."
+    },
+    {
+      "question": "A ferramenta substitui uma revisão manual?",
+      "answer": "Não. Ela acelera tarefas repetitivas, mas resultados importantes ainda devem ser revisados quanto a precisão, contexto e adequação."
+    }
   ]
 }

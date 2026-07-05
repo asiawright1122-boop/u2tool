@@ -1,13 +1,38 @@
 {
-  "detailed_description": "Le Générateur de modèles SVG est un outil créatif pour concevoir des modèles sans fin pour les fonds d'écran web et les graphiques. Choisissez parmi divers types de modèles, notamment des formes géométriques, des rayures, des points, des vagues et bien plus encore. Personnalisez les couleurs, les tailles, les espacements et la rotation pour créer des conceptions uniques. L'outil génère un code SVG optimisé qui est léger et s'adapte parfaitement à toutes les résolutions. Exportez vos modèles sous forme de SVG en ligne, de fond d'écran CSS ou de fichiers SVG téléchargeables. Parfait pour les concepteurs web, les développeurs d'interface utilisateur et quiconque a besoin de modèles de fond personnalisés.",
+  "detailed_description": "Le Générateur de modèles SVG est un outil créatif pour concevoir des modèles sans fin pour les fonds d'écran web et les graphiques. Choisissez parmi divers types de modèles, notamment des formes géométriques, des rayures, des points, des vagues et bien plus encore. Personnalisez les couleurs, les tailles, les espacements et la rotation pour créer des conceptions uniques. L'outil génère un code SVG optimisé qui est léger et s'adapte parfaitement à toutes les résolutions. Exportez vos modèles sous forme de SVG en ligne, de fond d'écran CSS ou de fichiers SVG téléchargeables. Parfait pour les concepteurs web, les développeurs d'interface utilisateur et quiconque a besoin de modèles de fond personnalisés. Générateur de motifs SVG sert à vérifier rapidement les entrées, les réglages et le résultat. Utilisez la sortie comme brouillon, relisez le format, les nombres, les caractères et le contexte, puis confirmez les résultats importants dans votre propre flux de travail avant de les partager, publier ou appliquer.",
   "usage_steps": [
     "Sélectionnez le type de motif",
     "Personnalisez les couleurs et la taille",
     "Prévisualisez",
-    "Exportez en SVG ou CSS"
+    "Exportez en SVG ou CSS",
+    "Vérifiez le résultat et confirmez qu’il correspond à votre objectif."
   ],
   "usage_examples": [
     "Créez des arrières-plans de site web",
-    "Concevez des motifs de cartes"
+    "Concevez des motifs de cartes",
+    "Vérifier une entrée courte avant de traiter le contenu complet.",
+    "Utiliser le résultat comme brouillon pour une documentation, du code, une planification ou un message."
+  ],
+  "faqs": [
+    {
+      "question": "Que vérifier avant d’utiliser le résultat de Générateur de motifs SVG ?",
+      "answer": "Vérifiez les entrées, les réglages, le format et le contexte. Pour un résultat important, relisez les nombres, les caractères et le sens avant partage ou publication."
+    },
+    {
+      "question": "Puis-je modifier le résultat après génération ?",
+      "answer": "Oui. Ajustez l’entrée ou les options disponibles, relancez le traitement, puis utilisez la sortie mise à jour après relecture."
+    },
+    {
+      "question": "Pourquoi le résultat peut-il différer d’un autre outil ?",
+      "answer": "Les outils peuvent gérer l’arrondi, l’analyse, la mise en forme ou l’affichage différemment. Comparez avec la même entrée et tenez compte des limites de l’interface."
+    },
+    {
+      "question": "Puis-je commencer avec une entrée courte ?",
+      "answer": "Oui. Commencez avec une entrée courte ou un contenu non sensible pour confirmer la forme de la sortie avant d’utiliser le contenu réel."
+    },
+    {
+      "question": "L’outil remplace-t-il une relecture manuelle ?",
+      "answer": "Non. Il accélère les tâches répétitives, mais les résultats importants doivent rester vérifiés pour l’exactitude, le contexte et l’adéquation."
+    }
   ]
 }

@@ -1,23 +1,28 @@
 {
-  "detailed_description": "The HTML Preview tool lets you edit HTML and CSS snippets and view the rendered result in a sandboxed iframe-style preview area. The page starts with a sample document, updates the preview as the HTML changes, reloads the iframe when Refresh Preview is used, and includes a Clear action for starting over. It is useful for testing small HTML snippets, learning markup structure, or checking quick layout ideas. Scripts are not enabled in the sandboxed preview, and the tool does not bundle assets, run a build step, or replace cross-browser testing for production pages.",
+  "detailed_description": "HTML Preview is an HTML viewer online for editing small HTML and CSS snippets and viewing the rendered result in a sandboxed iframe-style preview area. Use it as an HTML online viewer, HTML previewer, or online HTML preview when you need to preview HTML online for a card, documentation block, learning example, or quick static layout check. The page starts with a sample document, reloads the iframe when Refresh Preview is used, and includes a Clear action for starting over. Scripts are not enabled in the sandboxed preview, and the tool does not bundle assets, run a build step, execute interactive apps, or replace cross-browser testing for production pages.",
   "usage_steps": [
-    "Edit the sample HTML or paste your own snippet.",
+    "Edit the sample HTML or paste your own static HTML and CSS snippet.",
     "Click Refresh Preview when you want to reload the iframe preview.",
-    "Inspect the preview area to see how the markup appears.",
+    "Inspect the HTML preview area to see how the markup appears.",
     "Adjust the HTML and refresh again as needed.",
     "Use Clear to empty the editor.",
     "Move production code into a real project and test it there before publishing."
   ],
   "usage_examples": [
-    "Preview a small HTML card before adding it to documentation.",
+    "Use the HTML viewer online to preview a small HTML card before adding it to documentation.",
     "Test a heading, paragraph, and link structure while learning HTML.",
-    "Check a static embed snippet quickly without creating a new file.",
+    "Check a static embed snippet quickly with an online HTML preview without creating a new file.",
+    "Preview HTML online for a short CSS layout experiment before moving it into a project.",
     "Clear the editor and start a new sample from scratch."
   ],
   "faqs": [
     {
-      "question": "Does the preview update automatically?",
-      "answer": "The page includes a refresh action so you can reload the preview after editing."
+      "question": "Is this an HTML viewer online?",
+      "answer": "Yes. It works as an HTML viewer online for static HTML and CSS snippets, with a sandboxed iframe preview and a refresh action."
+    },
+    {
+      "question": "Can I preview HTML online without creating a file?",
+      "answer": "Yes. Paste a snippet into the editor, refresh the preview, and use the page as an HTML online viewer for quick checks."
     },
     {
       "question": "Can I test complete websites here?",
@@ -34,6 +39,10 @@
     {
       "question": "Should I still test in real browsers?",
       "answer": "Yes. Use real browser testing for production pages, responsive behavior, and external assets."
+    },
+    {
+      "question": "Does the sandbox run scripts?",
+      "answer": "No. The iframe is sandboxed and does not enable scripts, so the tool is intended for static HTML and CSS previews."
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "detailed_description": "El Formatador de Citaciones genera citaciones y entradas de bibliografía correctamente formateadas en varios estilos.",
+  "detailed_description": "El Formatador de Citaciones genera citaciones y entradas de bibliografía correctamente formateadas en varios estilos. Formatador de Citaciones está pensado para preparar y revisar borradores de trabajo, planificación o documentos. Revisa fechas, nombres, cifras y formato antes de enviar, publicar o compartir materiales importantes.",
   "usage_steps": [
     "Seleccione el tipo de fuente",
     "Introduzca los detalles de la fuente",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Formatear citaciones de libros",
     "Generar citaciones de sitios web",
-    "Crear entradas de bibliografía"
+    "Crear entradas de bibliografía",
+    "Preparar un borrador para un documento, calendario o entrega de equipo."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Formatador de Citaciones?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta de oficina?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

@@ -1,15 +1,16 @@
 {
-  "detailed_description": "Git Tag Manager helps organize and create Git tags following semantic versioning.",
+  "detailed_description": "Git Tag Manager generates copyable Git tag commands in the browser. Enter a current version, use major/minor/patch/prerelease bump buttons, choose an annotated or lightweight tag, add an optional message and commit hash, then copy the generated git tag and git push commands. The page also shows a small SemVer guide and common tag commands for listing, showing, and deleting tags. It is a command planner; run the copied commands in your own terminal.",
   "usage_steps": [
-    "Enter current version",
-    "Select bump type",
-    "Add tag message",
-    "Generate command",
-    "Copy tag commands"
+    "Enter the current version, such as v1.0.0.",
+    "Use major, minor, patch, or prerelease to calculate the next tag name.",
+    "Choose annotated or lightweight tag type.",
+    "Add a tag message and optional commit hash when needed.",
+    "Copy the generated git tag and git push commands."
   ],
   "usage_examples": [
-    "Create semantic version tags",
-    "Generate annotated tags",
-    "Plan version numbering"
+    "Prepare an annotated v1.2.0 release tag command.",
+    "Generate a lightweight tag command for a specific commit hash.",
+    "Plan the next SemVer version before cutting a release.",
+    "Copy delete/show/list commands as reminders for local terminal work."
   ]
 }

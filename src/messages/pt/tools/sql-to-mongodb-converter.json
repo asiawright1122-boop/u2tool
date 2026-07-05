@@ -1,15 +1,38 @@
 {
-  "detailed_description": "O Conversor SQL para MongoDB traduz consultas SQL para a sintaxe equivalente de consulta MongoDB para migração de banco de dados.",
+  "detailed_description": "O Conversor SQL para MongoDB transforma instruções SQL simples em snippets de consulta MongoDB no navegador. Ele lida melhor com SELECT, INSERT, UPDATE e DELETE básicos, mostrando a coleção detectada, a operação e a consulta gerada para copiar. Use a saída para aprendizado, protótipos e revisão de consultas simples. Consultas complexas, modelagem de documentos e regras do seu banco devem ser verificadas manualmente em um ambiente seguro.",
   "usage_steps": [
-    "Cole a consulta SQL",
-    "Selecione o driver MongoDB",
-    "Clique em Converter",
-    "Visualize a sintaxe MongoDB",
-    "Copie a consulta"
+    "Cole uma instrução SQL simples no campo de entrada.",
+    "Use um dos exemplos rápidos se quiser testar uma forma compatível.",
+    "Revise a coleção, a operação e a consulta MongoDB gerada.",
+    "Compare a saída com a lista de operações SQL suportadas.",
+    "Copie o snippet e adapte nomes de campos e tipos ao seu projeto."
   ],
   "usage_examples": [
-    "Migrar SQL para MongoDB",
-    "Aprenda a sintaxe MongoDB",
-    "Converta WHERE para $match"
+    "Converter um SELECT com WHERE e LIMIT em uma consulta find.",
+    "Transformar INSERT INTO ... VALUES em um snippet insertOne ou insertMany.",
+    "Criar uma base updateMany a partir de UPDATE com condição simples.",
+    "Gerar um deleteMany para uma instrução DELETE com filtro de data."
+  ],
+  "faqs": [
+    {
+      "question": "O conversor suporta todo SQL?",
+      "answer": "Não. Ele é voltado para instruções comuns e simples; consultas compostas precisam de revisão manual."
+    },
+    {
+      "question": "A página conecta ao MongoDB?",
+      "answer": "Não. Ela apenas gera um snippet de consulta no navegador e não executa comandos."
+    },
+    {
+      "question": "Quais operações funcionam melhor?",
+      "answer": "SELECT com WHERE, ORDER BY, LIMIT e OFFSET, além de INSERT, UPDATE, DELETE e COUNT simples."
+    },
+    {
+      "question": "Posso usar a saída em produção?",
+      "answer": "Teste primeiro em um ambiente seguro e confira nomes de coleção, campos, tipos e permissões."
+    },
+    {
+      "question": "O que devo revisar antes de usar o resultado de Conversor SQL para MongoDB?",
+      "answer": "Revise entradas, opções, formato e contexto. Em resultados importantes, confira números, caracteres e significado antes de compartilhar ou publicar."
+    }
   ]
 }

@@ -1,17 +1,39 @@
 {
-  "detailed_description": "O Heatmap Chart Generator é uma ferramenta técnica especializada para criar visualizações de mapa de calor interativas, utilizando dados bidimensionais para representar a densidade ou intensidade de valores através de gradientes de cor. Profissionais de áreas como análise de dados, biologia computacional e UX design utilizam esta ferramenta para identificar padrões espaciais em conjuntos complexos. O funcionamento baseia-se na associação de valores numéricos a uma paleta de cores interpolada, onde cada célula da matriz representa coordenadas X/Y com intensidade Z. A ferramenta processa dados em formato CSV ou JSON, permitindo personalização avançada de escala de cores (linear, logarítmica, quantil), suavização de dados (kernel density estimation) e configuração de eixos categóricos. A renderização utiliza HTML5 Canvas para alta performance gráfica, com opção de exportação em PNG vetorial ou SVG editável. Diferente de outras soluções, oferece controle granular sobre a função de agregação de dados (média, mediana, desvio padrão) e suporte para coordenadas geoespaciais em formato WKT.",
+  "detailed_description": "O Gerador de Gráficos de Calor cria um heatmap editável a partir de uma grade de valores digitados manualmente. A página inicia com dias e horários de exemplo, permite carregar dados de amostra, preencher valores aleatórios, editar rótulos de linhas e colunas, adicionar ou remover linhas e colunas, definir título, valor mínimo, valor máximo, tema de cores e exibição de rótulos. O gráfico é renderizado com ECharts e pode ser baixado como PNG ou SVG. É útil para visualizar intensidade em uma matriz pequena ou média. A ferramenta não importa CSV/JSON, não faz suavização, escala logarítmica, agregação estatística nem mapas geoespaciais.",
   "usage_steps": [
-    "1. Faça upload do arquivo CSV/JSON com dados estruturados em colunas X, Y e Z.",
-    "2. Selecione o tipo de escala de cor (divergente, sequencial, categórica) no painel de estilos.",
-    "3. Ajuste a resolução da grade usando o controle deslizante 'Pixel Density' para equilibrar detalhe e desempenho.",
-    "4. Ative a opção 'Interpolação Bilinear' para suavizar transições entre valores discretos.",
-    "5. Personalize rótulos de eixos e legendas usando a aba de anotações com suporte a LaTeX.",
-    "6. Clique em 'Exportar SVG' para baixar o gráfico editável ou 'PNG HD' para imagem rasterizada."
+    "Carregue os dados de amostra ou comece pela grade inicial.",
+    "Edite o título do gráfico e os rótulos das linhas e colunas.",
+    "Digite valores numéricos nas células do heatmap.",
+    "Ajuste valor mínimo, valor máximo, tema de cores e exibição de rótulos.",
+    "Adicione ou remova linhas e colunas quando precisar mudar a matriz.",
+    "Baixe o gráfico como PNG ou SVG depois de revisar a prévia."
   ],
   "usage_examples": [
-    "Analistas de web analytics mapeando padrões de cliques em páginas com coordenadas X/Y e contagem de interações.",
-    "Pesquisadores em genômica visualizando expressão gênica em matrizes de tecidos com escala logarítmica.",
-    "Urbanistas analisando densidade de tráfego em mapas de grade com dados de GPS de veículos.",
-    "Economistas comparando PIB regional usando mapa de calor georreferenciado com projeção cartográfica."
+    "Mostrar atividade por dia da semana e horário em uma matriz simples.",
+    "Comparar intensidade de tarefas entre equipes e etapas de processo.",
+    "Criar um heatmap manual para um relatório de produto.",
+    "Gerar uma imagem PNG ou SVG de uma grade de valores revisada."
+  ],
+  "faqs": [
+    {
+      "question": "Posso importar CSV ou JSON?",
+      "answer": "Não. A interface atual usa uma grade editável manualmente e botões de amostra ou preenchimento aleatório."
+    },
+    {
+      "question": "Quais temas de cor existem?",
+      "answer": "Os temas atuais incluem default, ocean, sunset e forest."
+    },
+    {
+      "question": "Posso editar linhas e colunas?",
+      "answer": "Sim. Você pode alterar rótulos, adicionar linhas ou colunas e remover itens enquanto restarem pelo menos duas linhas ou colunas."
+    },
+    {
+      "question": "O gráfico pode ser exportado?",
+      "answer": "Sim. A página usa a exportação do ECharts para baixar PNG ou SVG."
+    },
+    {
+      "question": "O que devo verificar antes de publicar?",
+      "answer": "Confira rótulos, escala mínima e máxima, valores de cada célula e se o tema de cor comunica a intensidade corretamente."
+    }
   ]
 }

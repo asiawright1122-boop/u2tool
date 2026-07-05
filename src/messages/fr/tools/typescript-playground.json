@@ -1,14 +1,38 @@
 {
-  "detailed_description": "Le terrain de jeu TypeScript vous permet d'écrire du TypeScript et de voir le JavaScript compilé.",
+  "detailed_description": "Le terrain de jeu TypeScript vous permet d'écrire du TypeScript et de voir le JavaScript compilé. Terrain de jeu TypeScript sert à vérifier rapidement les entrées, les réglages et le résultat. Utilisez la sortie comme brouillon, relisez le format, les nombres, les caractères et le contexte, puis confirmez les résultats importants dans votre propre flux de travail avant de les partager, publier ou appliquer.",
   "usage_steps": [
     "Écrivez du TypeScript",
     "Configurez les options",
     "Voyez le JavaScript compilé",
-    "Copiez la sortie"
+    "Copiez la sortie",
+    "Vérifiez le résultat et confirmez qu’il correspond à votre objectif."
   ],
   "usage_examples": [
     "Apprenez le TypeScript",
     "Testez les définitions de types",
-    "Partagez des extraits de code"
+    "Partagez des extraits de code",
+    "Vérifier une entrée courte avant de traiter le contenu complet."
+  ],
+  "faqs": [
+    {
+      "question": "Que vérifier avant d’utiliser le résultat de Terrain de jeu TypeScript ?",
+      "answer": "Vérifiez les entrées, les réglages, le format et le contexte. Pour un résultat important, relisez les nombres, les caractères et le sens avant partage ou publication."
+    },
+    {
+      "question": "Puis-je modifier le résultat après génération ?",
+      "answer": "Oui. Ajustez l’entrée ou les options disponibles, relancez le traitement, puis utilisez la sortie mise à jour après relecture."
+    },
+    {
+      "question": "Pourquoi le résultat peut-il différer d’un autre outil ?",
+      "answer": "Les outils peuvent gérer l’arrondi, l’analyse, la mise en forme ou l’affichage différemment. Comparez avec la même entrée et tenez compte des limites de l’interface."
+    },
+    {
+      "question": "Puis-je commencer avec une entrée courte ?",
+      "answer": "Oui. Commencez avec une entrée courte ou un contenu non sensible pour confirmer la forme de la sortie avant d’utiliser le contenu réel."
+    },
+    {
+      "question": "L’outil remplace-t-il une relecture manuelle ?",
+      "answer": "Non. Il accélère les tâches répétitives, mais les résultats importants doivent rester vérifiés pour l’exactitude, le contexte et l’adéquation."
+    }
   ]
 }

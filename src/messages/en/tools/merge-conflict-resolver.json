@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Merge Conflict Resolver helps clean up Git conflict markers in pasted text. It recognizes standard <<<<<<<, =======, and >>>>>>> blocks, then applies one choice to every conflict in the input: keep the current branch, keep the incoming branch, or keep both chunks in order. The resolved output can be copied back to your editor. The page is a marker cleaner, not a semantic code merge engine, so review the merged result before committing.",
+  "detailed_description": "Merge Conflict Resolver helps clean up Git conflict markers in pasted text. It recognizes standard <<<<<<<, =======, and >>>>>>> blocks, then applies one choice to every conflict in the input: keep the current branch, keep the incoming branch, or keep both chunks in order. The resolved output can be copied back to your editor. The page is a marker cleaner, not a semantic code merge engine, so review the merged result before committing. It is best for small files, documentation snippets, config fragments, and quick previews where you want to remove marker noise before doing the real code review.",
   "usage_steps": [
     "Paste file content that contains Git conflict markers.",
     "Choose Use current, Use incoming, or Keep both.",
@@ -29,6 +29,10 @@
     {
       "question": "Should I commit the output immediately?",
       "answer": "No. Always review the result, format the file, and run the relevant tests or build before committing."
+    },
+    {
+      "question": "What should I check before using the Merge Conflict Resolver output?",
+      "answer": "Review code, configuration, parsing details, and any assumptions before using the result in a repository, script, or deployment workflow."
     }
   ]
 }

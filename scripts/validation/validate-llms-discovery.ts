@@ -37,6 +37,29 @@ function extractCanonicalRouteViolations(text: string): string[] {
   return violations;
 }
 
+const gscRecoveryFragments = [
+  '/de/tools/text-to-handwriting/',
+  '/ru/tools/hex-editor/',
+  '/ko/tools/html-preview/',
+  '/en/tools/hex-editor/',
+  '/ko/tools/unicode-converter/',
+  '/ru/tools/html-preview/',
+  '/fr/tools/file-size-calculator/',
+  '/en/tools/ical-parser/',
+  '/es/tools/html-preview/',
+  '/ru/tools/barcode-generator/',
+  '/en/tools/morse-code-player/',
+  '/en/tools/gantt-chart-generator/',
+  '/en/tools/iban-validator/',
+  '/en/tools/sitemap-generator/',
+  '/en/tools/compound-interest-calculator/',
+  '/es/tools/word-counter/',
+  '/es/tools/document-word-counter/',
+  '/en/tools/passport-photo-maker/',
+  '/en/tools/csv-to-vcard-converter/',
+  '/en/tools/vcard-to-csv-converter/',
+];
+
 async function validateCompact(text: string, isZh = false): Promise<void> {
   // Check basic structure
   if (isZh) {
@@ -74,6 +97,16 @@ async function validateFull(text: string, isZh = false): Promise<void> {
     assert(text.includes('## 工具分类目录'), 'Chinese full version missing category title');
   } else {
     assert(text.includes('## Catalog by Category'), 'English full version missing category title');
+  }
+}
+
+function validateGscRecoveryCoverage(fullDocs: Array<{ name: string; doc: string }>): void {
+  for (const fragment of gscRecoveryFragments) {
+    const matchingDocs = fullDocs.filter((item) => item.doc.includes(fragment)).map((item) => item.name);
+    assert(
+      matchingDocs.length > 0,
+      `GSC recovery route missing from full LLM discovery catalogs: ${fragment}`
+    );
   }
 }
 
@@ -171,6 +204,12 @@ async function main(): Promise<void> {
 
   console.log('🔍 Auditing Chinese full discovery catalog...');
   await validateFull(zhFull, true);
+
+  console.log('🔍 Auditing GSC recovery route coverage...');
+  validateGscRecoveryCoverage([
+    { name: 'enFull', doc: enFull },
+    { name: 'zhFull', doc: zhFull },
+  ]);
 
   console.log('✅ All LLM discovery layer compilation & validation checks passed successfully (Local Simulation Mode)!');
 }

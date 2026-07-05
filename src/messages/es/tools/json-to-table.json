@@ -1,5 +1,5 @@
 {
-  "detailed_description": "El Convertidor JSON a Tabla transforma datos JSON en tablas HTML legibles. Ideal para visualizar respuestas de API, exportaciones de datos y información estructurada.",
+  "detailed_description": "El Convertidor JSON a Tabla transforma datos JSON en tablas HTML legibles. Ideal para visualizar respuestas de API, exportaciones de datos y información estructurada. Convertidor JSON a Tabla está pensado para comprobar conversiones de formato con rapidez. Prueba primero una entrada corta, compara el resultado con la estructura esperada y úsalo después en otra aplicación o script.",
   "usage_steps": [
     "Pega tus datos JSON",
     "Haz clic en Convertir para generar la tabla",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Visualiza respuestas de API",
     "Crea informes de datos",
-    "Exporta JSON a hojas de cálculo"
+    "Exporta JSON a hojas de cálculo",
+    "Probar la conversión con una entrada corta antes de procesar texto o archivos completos."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Convertidor JSON a Tabla?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra conversor?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

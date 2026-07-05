@@ -28,6 +28,10 @@
       "answer": "Le graphique peut être téléchargé en PNG ou en SVG depuis les boutons de l'outil."
     },
     {
+      "question": "Comment les pourcentages sont-ils calculés ?",
+      "answer": "Ils sont calculés à partir du total des valeurs saisies et peuvent être affichés dans les étiquettes lorsque l'option de pourcentage est activée."
+    },
+    {
       "question": "L'outil propose-t-il un graphique 3D ou une API ?",
       "answer": "Non. L'interface se concentre sur les camemberts 2D, les anneaux, le mode rose, l'import CSV simple et l'export PNG/SVG."
     }

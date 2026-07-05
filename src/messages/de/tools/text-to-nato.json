@@ -1,17 +1,39 @@
 {
-  "detailed_description": "Der Text-zu-NATO-Konverter ist ein Spezialwerkzeug zur Transformation beliebiger Textzeichen in das Standard-NATO-Phonetsystem (International Radiotelephony Spelling Alphabet). Technisch erfolgt die Konversion durch eine mehrstufige Verarbeitung: Zunächst wird der Eingabetext in Einzelzeichen zerlegt, wobei Unicode-Zeichensätze vollständig unterstützt werden. Jedes Zeichen durchläuft dann eine Mapping-Prozedur über eine vordefinierte Lookup-Tabelle, die nicht nur die 26 lateinischen Buchstaben, sondern auch Ziffern (0-9) und ausgewählte Sonderzeichen (wie #, @, -) abdeckt. Bei Nichtübereinstimmungen wird ein Standardersatzzeichen verwendet. Besondere Aufmerksamkeit gilt der Case-Behandlung - Groß- und Kleinschreibung wird beibehalten, während nicht darstellbare Zeichen protokolliert werden. Dieses Tool ist unverzichtbar für kritische Kommunikationsszenarien wie militärische Funkverbindungen, Luftfahrtkoordination oder Notfalldienste, wo phonetische Klarheit Leben retten kann. Entwickler nutzen es zur Validierung von Transkripten, Pädagogen zur Erstellung Lernmaterialien für Funkausbildungen. Die Implementierung erfolgt serverlos mit WebAssembly für Echtzeitverarbeitung direkt im Browser.",
+  "detailed_description": "Text to NATO wandelt eingegebenen Text lokal in das NATO-Buchstabieralphabet um. Die aktuelle Zuordnung deckt die lateinischen Buchstaben A-Z und die Ziffern 0-9 ab. Du kannst wählen, ob das Originalzeichen im Ergebnis angezeigt wird, und den Trenner als neue Zeile, Gedankenstrich oder Leerzeichen festlegen. Die Seite bietet außerdem einen Beispieltext, eine Kopierfunktion und eine sichtbare Alphabet-Tabelle für die 26 Buchstaben. Nicht zugeordnete Zeichen werden als unbekannt markiert. Das Werkzeug ist eine schnelle Referenz für klare Buchstabierung, kein Funk-, Notfall- oder Transkriptionssystem und kein Export-Workflow.",
   "usage_steps": [
-    "Öffnen Sie das Text-zu-NATO-Werkzeug und lokalisieren Sie das Eingabefeld 'Quelltext'.",
-    "Geben Sie den zu konvertierenden Text ein oder fügen Sie ihn über STRG+V ein.",
-    "Aktivieren Sie den Schalter 'Groß-/Kleinschreibung beibehalten', wenn die Originalformatierung erhalten bleiben soll.",
-    "Wählen Sie im Dropdown 'Zeichenumfang' zwischen 'Alphanumerisch' oder 'Erweitert mit Sonderzeichen'.",
-    "Klicken Sie auf 'Konvertieren' um die phonetische Transformation zu starten.",
-    "Kopieren Sie das Ergebnis über den 'Zwischenablage'-Button oder exportieren Sie es als .txt-Datei."
+    "Gib Text, Buchstaben oder Ziffern in das Eingabefeld ein.",
+    "Wähle den Trenner: neue Zeile, Gedankenstrich oder Leerzeichen.",
+    "Entscheide, ob das Originalzeichen im Ergebnis angezeigt werden soll.",
+    "Nutze bei Bedarf den Beispieltext, um das Ausgabeformat zu prüfen.",
+    "Klicke auf Konvertieren, um die NATO-Schreibweise zu erzeugen.",
+    "Kopiere das Ergebnis und prüfe unbekannte Zeichen manuell."
   ],
   "usage_examples": [
-    "Ein Kampfpilot übermittelt eine Zielkoordinaten-Ziffernfolge (z.B. 34°N 118°W) mit präziser Zahlendiktion für Navigation.",
-    "Ein Systemadministrator dokumentiert ein komplexes Passwort (z.B. T3#m@Gq9) für Support-Teams im Krisenfall.",
-    "Ein Fluglotsenausbilder erstellt Übungsmaterial mit gemischten Flugzeug-Kennzeichen (wie D-ABCD oder N12345).",
-    "Ein Amateurfunker bestätigt während einer DX-QSO-Verbindung seinen Locator (z.B. JN58me) ohne Verwechslungsgefahr."
+    "Einen kurzen Produktcode wie AB12 in Alpha Bravo One Two umwandeln.",
+    "Einen Namen am Telefon buchstabierbar machen.",
+    "Eine Ticket-ID mit Buchstaben und Zahlen für Support-Notizen vorbereiten.",
+    "Die Alphabet-Tabelle als Lernhilfe für A-Z-NATO-Wörter verwenden."
+  ],
+  "faqs": [
+    {
+      "question": "Welche Zeichen werden unterstützt?",
+      "answer": "Die Zuordnung unterstützt A-Z und 0-9. Andere sichtbare Zeichen werden als unbekannt markiert."
+    },
+    {
+      "question": "Bleibt Groß- und Kleinschreibung erhalten?",
+      "answer": "Nein. Der eingegebene Text wird für die Zuordnung in Großbuchstaben umgewandelt."
+    },
+    {
+      "question": "Kann ich das Ausgabeformat ändern?",
+      "answer": "Ja. Du kannst neue Zeilen, Gedankenstriche oder Leerzeichen als Trenner wählen und das Originalzeichen ein- oder ausblenden."
+    },
+    {
+      "question": "Gibt es einen Datei-Export?",
+      "answer": "Nein. Die Seite bietet eine Kopierfunktion, aber keinen TXT-Download."
+    },
+    {
+      "question": "Ist das für kritische Kommunikation zertifiziert?",
+      "answer": "Nein. Es ist eine Browser-Referenz; prüfe kritische oder sicherheitsrelevante Kommunikation mit deinen offiziellen Verfahren."
+    }
   ]
 }

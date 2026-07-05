@@ -1,14 +1,38 @@
 {
-  "detailed_description": "Text Shadow Generator is a visual CSS tool that helps you create beautiful text shadow effects for your web projects. Adjust horizontal and vertical offsets, blur radius, spread, and color to achieve the perfect shadow effect. The live preview shows your changes in real-time, and you can add multiple shadow layers for complex effects. Whether you're creating subtle depth, glowing text, or dramatic 3D effects, this tool generates clean CSS code you can copy directly into your stylesheets.",
+  "detailed_description": "Text Shadow Generator is a visual CSS tool that helps you create beautiful text shadow effects for your web projects. Adjust horizontal and vertical offsets, blur radius, spread, and color to achieve the perfect shadow effect. The live preview shows your changes in real-time, and you can add multiple shadow layers for complex effects. Whether you're creating subtle depth, glowing text, or dramatic 3D effects, this tool generates clean CSS code you can copy directly into your stylesheets. Text Shadow Generator is intended for quick draft generation and review rather than unattended automation. Use the generated result as a starting point, adjust the available options, and verify important output before publishing, deploying, or sharing it.",
   "usage_steps": [
     "Adjust shadow settings",
     "Add multiple layers",
     "Preview effect",
-    "Copy CSS"
+    "Copy CSS",
+    "Review the generated output for accuracy and missing context."
   ],
   "usage_examples": [
     "Create glow effects",
     "Design 3D text",
-    "Add depth to headings"
+    "Add depth to headings",
+    "Generate a draft output, then adjust settings until it fits the target page, document, or workflow."
+  ],
+  "faqs": [
+    {
+      "question": "What should I check before using the Text Shadow Generator output?",
+      "answer": "Review the generated output, available options, and target context before publishing, deploying, or sharing it."
+    },
+    {
+      "question": "Can I edit the result after generating it?",
+      "answer": "Yes. Adjust the input values or available options, generate the result again, and then copy, export, or reuse the updated output in your workflow when the page provides those actions."
+    },
+    {
+      "question": "Why might the result differ from another generator tool?",
+      "answer": "Different tools can use different assumptions, rounding rules, parsing behavior, or export settings. Compare the same input values and review any notes shown in the interface before relying on the result."
+    },
+    {
+      "question": "Can I start with sample or placeholder data?",
+      "answer": "Yes. Use a small example or non-sensitive sample first, confirm the output shape, and then replace it with the real input you want to process."
+    },
+    {
+      "question": "Does this replace manual review?",
+      "answer": "No. It is meant to speed up routine work, but important results should still be checked for accuracy, context, and fit before you publish or share them."
+    }
   ]
 }

@@ -1,16 +1,16 @@
 {
-  "detailed_description": "La herramienta de previsualización HTML permite editar fragmentos de HTML y CSS y ver el resultado en un panel de vista previa con iframe sandboxed. La página empieza con un documento de ejemplo, incluye un botón para actualizar la vista previa y ofrece una acción para limpiar el editor. Es útil para probar tarjetas, bloques estáticos, ejemplos de documentación o ejercicios de aprendizaje. Los scripts no se ejecutan en la vista previa sandboxed, y la herramienta no reemplaza pruebas reales de navegador para sitios completos.",
+  "detailed_description": "El visualizador HTML online permite editar fragmentos pequeños de HTML y CSS y ver el resultado en un panel de vista previa HTML con iframe sandboxed. Si necesitas ver HTML online para una tarjeta, un bloque estático, un ejemplo de documentación o un ejercicio de aprendizaje, pega el fragmento, ajusta el CSS y recarga la vista previa cuando quieras volver a renderizarlo. La página empieza con un documento de ejemplo, incluye un botón para actualizar la vista previa y ofrece una acción para limpiar el editor. Los scripts no se ejecutan en la vista previa sandboxed, el iframe no habilita scripts y la herramienta no reemplaza pruebas reales de navegador para sitios completos.",
   "usage_steps": [
-    "Edita el HTML de ejemplo o pega tu propio fragmento.",
+    "Edita el HTML de ejemplo o pega tu propio fragmento para verlo online.",
     "Añade CSS dentro de etiquetas <style> o como estilos inline si lo necesitas.",
     "Haz clic en Actualizar vista previa para recargar el iframe.",
-    "Revisa el panel de vista previa y ajusta el marcado.",
+    "Revisa el panel de vista previa HTML y ajusta el marcado.",
     "Usa Limpiar para vaciar el editor antes de empezar otro fragmento."
   ],
   "usage_examples": [
     "Probar una tarjeta HTML pequeña antes de llevarla a la documentación.",
     "Practicar la estructura de encabezados, párrafos y enlaces mientras aprendes HTML.",
-    "Revisar un fragmento estático de CSS sin crear un archivo local.",
+    "Usar el visualizador HTML para revisar un fragmento estático de CSS sin crear un archivo local.",
     "Limpiar el editor y comenzar una muestra nueva desde cero."
   ],
   "faqs": [
@@ -29,6 +29,10 @@
     {
       "question": "¿Cuándo debo usar Actualizar vista previa?",
       "answer": "Úsalo cuando quieras recargar el iframe después de editar el fragmento o volver a renderizar el documento."
+    },
+    {
+      "question": "¿Qué entrada funciona mejor?",
+      "answer": "Funciona mejor con un fragmento HTML pequeño, una página de ejemplo o CSS dentro de etiquetas <style>. Si el resultado va a producción, revisa accesibilidad, diseño responsive y compatibilidad en tu entorno real."
     }
   ]
 }

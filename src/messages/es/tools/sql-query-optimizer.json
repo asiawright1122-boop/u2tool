@@ -1,5 +1,5 @@
 {
-  "detailed_description": "El Optimizador de Consultas SQL analiza tus consultas SQL y proporciona sugerencias de optimización para mejorar el rendimiento.",
+  "detailed_description": "El Optimizador de Consultas SQL analiza tus consultas SQL y proporciona sugerencias de optimización para mejorar el rendimiento. Optimizador de Consultas SQL está pensado para revisar tareas de desarrollo de forma rápida, no para aplicar resultados sin comprobación. Usa el resultado como punto de partida, revisa entradas, formato y contexto, y valida los cambios importantes dentro de tu propio flujo de trabajo.",
   "usage_steps": [
     "Pega la consulta SQL",
     "Selecciona el tipo de base de datos",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Optimiza consultas SELECT lentas",
     "Obtén recomendaciones de índices",
-    "Reescribe subconsultas"
+    "Reescribe subconsultas",
+    "Revisar el resultado con una entrada corta antes de usarlo en un repositorio o proyecto real."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Optimizador de Consultas SQL?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta de desarrollo?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

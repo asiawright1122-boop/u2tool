@@ -13,5 +13,27 @@
     "Extraer direcciones IPv4 de un archivo de logs mediante \\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b y filtro de grupos",
     "Crear una expresión para validar contraseñas seguras con al menos 12 caracteres, una letra mayúscula, un número y un símbolo especial",
     "Parsear fechas en formato ISO 8601 (YYYY-MM-DDTHH:mm:ssZ) desde un archivo JSON utilizando el patrón \\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z"
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Generador de Expresiones Regulares?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta de desarrollo?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

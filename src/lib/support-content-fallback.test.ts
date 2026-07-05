@@ -1,4 +1,6 @@
 import { describe, expect, it } from 'vitest';
+import fs from 'fs';
+import path from 'path';
 import { assessSupportContentTrust } from './content-trust.js';
 import { buildSafeFallbackSupportContent } from './support-content-fallback';
 
@@ -394,6 +396,98 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks chart recovery file-import and advanced runtime claims that are not implemented', () => {
+    const cases = [
+      {
+        slug: 'half-doughnut-chart-generator',
+        locale: 'ko',
+        detailedDescription:
+          'CSV 업로드, JSON 입력, API 연결, HTML 임베드 코드, Base64 출력까지 지원합니다.',
+      },
+      {
+        slug: 'pie-chart-generator',
+        locale: 'zh',
+        detailedDescription:
+          'Web Workers 可处理 10 万级数据量并提供 API 接口、3D 效果、批量生成和 PDF 导出。',
+      },
+      {
+        slug: 'percentage-stacked-bar-chart-generator',
+        locale: 'de',
+        detailedDescription:
+          'Hochladen von CSV-Dateien, Echtzeit-Aggregierung von 10.000 Zeilen und Export nach SVG, PDF und Excel.',
+      },
+      {
+        slug: 'boxplot-chart-generator',
+        locale: 'ar',
+        detailedDescription:
+          'يدعم تنسيقات متعددة مثل JSON، CSV مع تعديل مباشر وPDF وتقارير Excel.',
+      },
+    ];
+
+    for (const item of cases) {
+      const report = assessSupportContentTrust({
+        slug: item.slug,
+        locale: item.locale,
+        name: 'Chart Generator',
+        description: '',
+        detailedDescription: item.detailedDescription,
+        usageSteps: [],
+        usageExamples: [],
+        faqs: [],
+      });
+
+      expect(report.blockSupportContent).toBe(true);
+      expect(report.issues.map((issue) => issue.code)).toEqual(
+        expect.arrayContaining([
+          expect.stringMatching(
+            /chart-unsupported-(file-import|advanced-runtime)-claim/
+          ),
+        ])
+      );
+    }
+  });
+
+  it('keeps actual chart recovery support copy aligned with the implemented editors', () => {
+    const locales = ['en', 'zh', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'];
+    const slugs = [
+      'half-doughnut-chart-generator',
+      'pie-chart-generator',
+      'percentage-stacked-bar-chart-generator',
+      'boxplot-chart-generator',
+    ];
+
+    for (const slug of slugs) {
+      for (const locale of locales) {
+        const filePath = path.join(
+          process.cwd(),
+          'src/messages',
+          locale,
+          'tools',
+          `${slug}.json`
+        );
+        const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+          detailed_description?: string;
+          usage_steps?: string[];
+          usage_examples?: string[];
+          faqs?: Array<{ question?: string; answer?: string }>;
+        };
+
+        const report = assessSupportContentTrust({
+          slug,
+          locale,
+          name: slug,
+          description: '',
+          detailedDescription: messages.detailed_description ?? '',
+          usageSteps: messages.usage_steps ?? [],
+          usageExamples: messages.usage_examples ?? [],
+          faqs: messages.faqs ?? [],
+        });
+
+        expect(report.blockSupportContent, `${locale}/${slug} support copy`).toBe(false);
+      }
+    }
+  });
+
   it('blocks Text to ASCII Art font and export claims that are not implemented', () => {
     const report = assessSupportContentTrust({
       slug: 'text-to-ascii-art',
@@ -435,6 +529,79 @@ describe('assessSupportContentTrust', () => {
     expect(report.issues.map((issue) => issue.code)).toContain(
       'image-splitter-unsupported-advanced-claim'
     );
+  });
+
+  it('blocks localized Image Splitter overlap, metadata, and sprite claims', () => {
+    const cases = [
+      {
+        locale: 'de',
+        detailedDescription:
+          'Der Bildteiler behält Metadaten bei, erstellt CSS-Sprites und unterstützt Überlappungsbereiche für Texture-Atlas Workflows.',
+        usageSteps: ['Aktivieren Sie das Kontrollkästchen Überlappung und wählen Sie das Ausgabeformat JPEG.'],
+      },
+      {
+        locale: 'fr',
+        detailedDescription:
+          "Le diviseur d'images conserve les données EXIF, propose des marges internes et un menu Format d'export PNG ou JPEG.",
+        usageSteps: ["Réglez l'espacement horizontal et vertical avant de générer les segments."],
+      },
+      {
+        locale: 'ko',
+        detailedDescription:
+          '이미지 분할기는 CSS 스프라이트와 스프라이트시트 분할을 지원하며 PNG 또는 JPEG 출력 형식을 선택할 수 있습니다.',
+        usageSteps: ['마진(px) 및 패딩(px) 슬라이더로 간격을 조정합니다.'],
+      },
+    ];
+
+    for (const item of cases) {
+      const report = assessSupportContentTrust({
+        slug: 'image-splitter',
+        locale: item.locale,
+        name: 'Image Splitter',
+        description: '',
+        detailedDescription: item.detailedDescription,
+        usageSteps: item.usageSteps,
+        usageExamples: [],
+        faqs: [],
+      });
+
+      expect(report.blockSupportContent).toBe(true);
+      expect(report.issues.map((issue) => issue.code)).toContain(
+        'image-splitter-unsupported-advanced-claim'
+      );
+    }
+  });
+
+  it('keeps actual localized Image Splitter support copy aligned with implemented grid behavior', () => {
+    const locales = ['en', 'zh', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'];
+
+    for (const locale of locales) {
+      const filePath = path.join(
+        process.cwd(),
+        'src/messages',
+        locale,
+        'tools/image-splitter.json'
+      );
+      const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+        detailed_description?: string;
+        usage_steps?: string[];
+        usage_examples?: string[];
+        faqs?: Array<{ question?: string; answer?: string }>;
+      };
+
+      const report = assessSupportContentTrust({
+        slug: 'image-splitter',
+        locale,
+        name: 'Image Splitter',
+        description: '',
+        detailedDescription: messages.detailed_description ?? '',
+        usageSteps: messages.usage_steps ?? [],
+        usageExamples: messages.usage_examples ?? [],
+        faqs: messages.faqs ?? [],
+      });
+
+      expect(report.blockSupportContent, `${locale} Image Splitter support copy`).toBe(false);
+    }
   });
 
   it('blocks Hex Base64 options and history claims that are not implemented', () => {
@@ -534,6 +701,59 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks multilingual Credit Card Validator authorization and balance claims', () => {
+    const report = assessSupportContentTrust({
+      slug: 'credit-card-validator',
+      locale: 'es',
+      name: 'Validador de Tarjetas',
+      description: '',
+      detailedDescription:
+        'Promete autorización en tiempo real, verificación CVV, saldo disponible, 实时授权 y الرصيد المتاح.',
+      usageSteps: ['Use it for bank verification before charging a customer.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'credit-card-validator-live-verification-claim'
+    );
+  });
+
+  it('keeps actual localized Credit Card Validator support copy within local Luhn behavior', () => {
+    const locales = ['en', 'zh', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'];
+
+    for (const locale of locales) {
+      const filePath = path.join(
+        process.cwd(),
+        'src/messages',
+        locale,
+        'tools/credit-card-validator.json'
+      );
+      const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+        detailed_description?: string;
+        usage_steps?: string[];
+        usage_examples?: string[];
+        faqs?: Array<{ question?: string; answer?: string }>;
+      };
+
+      const report = assessSupportContentTrust({
+        slug: 'credit-card-validator',
+        locale,
+        name: 'Credit Card Validator',
+        description: '',
+        detailedDescription: messages.detailed_description ?? '',
+        usageSteps: messages.usage_steps ?? [],
+        usageExamples: messages.usage_examples ?? [],
+        faqs: messages.faqs ?? [],
+      });
+
+      expect(report.blockSupportContent, `${locale} Credit Card Validator support copy`).toBe(
+        false
+      );
+    }
+  });
+
   it('blocks Scientific Calculator function claims that are not implemented in the button UI', () => {
     const report = assessSupportContentTrust({
       slug: 'scientific-calculator',
@@ -600,6 +820,419 @@ describe('assessSupportContentTrust', () => {
     });
 
     expect(report.blockSupportContent).toBe(false);
+    expect(report.issues).toEqual([]);
+  });
+
+  it('keeps actual Russian Scientific Calculator support copy aligned with the button UI', () => {
+    const filePath = path.join(
+      process.cwd(),
+      'src/messages',
+      'ru',
+      'tools/scientific-calculator.json'
+    );
+    const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+      detailed_description?: string;
+      usage_steps?: string[];
+      usage_examples?: string[];
+      faqs?: Array<{ question?: string; answer?: string }>;
+    };
+
+    const report = assessSupportContentTrust({
+      slug: 'scientific-calculator',
+      locale: 'ru',
+      name: 'Научный калькулятор',
+      description: '',
+      detailedDescription: messages.detailed_description ?? '',
+      usageSteps: messages.usage_steps ?? [],
+      usageExamples: messages.usage_examples ?? [],
+      faqs: messages.faqs ?? [],
+    });
+
+    expect(report.blockSupportContent, 'ru Scientific Calculator support copy').toBe(false);
+    expect(report.issues).toEqual([]);
+  });
+
+  it('blocks Bandwidth Calculator live network claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'bandwidth-calculator',
+      locale: 'ru',
+      name: 'Калькулятор пропускной способности',
+      description: '',
+      detailedDescription:
+        'Инструмент измеряет фактическую скорость подключения, выполняет мониторинг сети и диагностику сети.',
+      usageSteps: ['Запустите тест скорости в реальном времени.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'bandwidth-calculator-live-network-claim'
+    );
+  });
+
+  it('keeps actual Russian Bandwidth Calculator support copy aligned with the formula UI', () => {
+    const filePath = path.join(
+      process.cwd(),
+      'src/messages',
+      'ru',
+      'tools/bandwidth-calculator.json'
+    );
+    const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+      detailed_description?: string;
+      usage_steps?: string[];
+      usage_examples?: string[];
+      faqs?: Array<{ question?: string; answer?: string }>;
+    };
+
+    const report = assessSupportContentTrust({
+      slug: 'bandwidth-calculator',
+      locale: 'ru',
+      name: 'Калькулятор пропускной способности',
+      description: '',
+      detailedDescription: messages.detailed_description ?? '',
+      usageSteps: messages.usage_steps ?? [],
+      usageExamples: messages.usage_examples ?? [],
+      faqs: messages.faqs ?? [],
+    });
+
+    expect(report.blockSupportContent, 'ru Bandwidth Calculator support copy').toBe(false);
+    expect(report.issues).toEqual([]);
+  });
+
+  it('blocks Project Estimation Calculator planning claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'project-estimation-calculator',
+      locale: 'ru',
+      name: 'Калькулятор оценки проекта',
+      description: '',
+      detailedDescription:
+        'Инструмент поддерживает story points, автоматически строит график проекта и рассчитывает стоимость проекта.',
+      usageSteps: ['Запустите AI schedule prediction и ресурсное планирование.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'project-estimation-unsupported-planning-claim'
+    );
+  });
+
+  it('keeps actual Russian Project Estimation support copy aligned with the PERT UI', () => {
+    const filePath = path.join(
+      process.cwd(),
+      'src/messages',
+      'ru',
+      'tools/project-estimation-calculator.json'
+    );
+    const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+      detailed_description?: string;
+      usage_steps?: string[];
+      usage_examples?: string[];
+      faqs?: Array<{ question?: string; answer?: string }>;
+    };
+
+    const report = assessSupportContentTrust({
+      slug: 'project-estimation-calculator',
+      locale: 'ru',
+      name: 'Калькулятор оценки проекта',
+      description: '',
+      detailedDescription: messages.detailed_description ?? '',
+      usageSteps: messages.usage_steps ?? [],
+      usageExamples: messages.usage_examples ?? [],
+      faqs: messages.faqs ?? [],
+    });
+
+    expect(report.blockSupportContent, 'ru Project Estimation support copy').toBe(false);
+    expect(report.issues).toEqual([]);
+  });
+
+  it('blocks Russian API Tester full-client claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'api-tester',
+      locale: 'ru',
+      name: 'Тестер API',
+      description: '',
+      detailedDescription:
+        'Тестер API отправляет запросы в любую конечную точку, использует CORS-прокси, сохраняет историю запросов и коллекции.',
+      usageSteps: ['Настройте переменные окружения, OAuth-поток и хранение секретов.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'api-tester-unsupported-client-claim'
+    );
+  });
+
+  it('keeps actual Russian API Tester support copy aligned with the browser-fetch UI', () => {
+    const filePath = path.join(
+      process.cwd(),
+      'src/messages',
+      'ru',
+      'tools/api-tester.json'
+    );
+    const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+      detailed_description?: string;
+      usage_steps?: string[];
+      usage_examples?: string[];
+      faqs?: Array<{ question?: string; answer?: string }>;
+    };
+
+    const report = assessSupportContentTrust({
+      slug: 'api-tester',
+      locale: 'ru',
+      name: 'Тестер API',
+      description: '',
+      detailedDescription: messages.detailed_description ?? '',
+      usageSteps: messages.usage_steps ?? [],
+      usageExamples: messages.usage_examples ?? [],
+      faqs: messages.faqs ?? [],
+    });
+
+    expect(report.blockSupportContent, 'ru API Tester support copy').toBe(false);
+    expect(report.issues).toEqual([]);
+  });
+
+  it('blocks Code Complexity Analyzer static-analysis claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'code-complexity-analyzer',
+      locale: 'ru',
+      name: 'Анализатор сложности кода',
+      description: '',
+      detailedDescription:
+        'Инструмент строит AST, использует ESLint и SonarQube, сканирует репозиторий и выполняет поиск уязвимостей.',
+      usageSteps: ['Загрузите весь проект и запустите автоматический рефакторинг.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'code-complexity-unsupported-static-analysis-claim'
+    );
+  });
+
+  it('keeps actual Russian Code Complexity Analyzer support copy aligned with the snippet UI', () => {
+    const filePath = path.join(
+      process.cwd(),
+      'src/messages',
+      'ru',
+      'tools/code-complexity-analyzer.json'
+    );
+    const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+      detailed_description?: string;
+      usage_steps?: string[];
+      usage_examples?: string[];
+      faqs?: Array<{ question?: string; answer?: string }>;
+    };
+
+    const report = assessSupportContentTrust({
+      slug: 'code-complexity-analyzer',
+      locale: 'ru',
+      name: 'Анализатор сложности кода',
+      description: '',
+      detailedDescription: messages.detailed_description ?? '',
+      usageSteps: messages.usage_steps ?? [],
+      usageExamples: messages.usage_examples ?? [],
+      faqs: messages.faqs ?? [],
+    });
+
+    expect(report.blockSupportContent, 'ru Code Complexity Analyzer support copy').toBe(false);
+    expect(report.issues).toEqual([]);
+  });
+
+  it('blocks Russian Merge Conflict Resolver visual diff claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'merge-conflict-resolver',
+      locale: 'ru',
+      name: 'Решатель конфликта слияний',
+      description: '',
+      detailedDescription:
+        'Инструмент показывает визуальное сравнение, подсветку конфликтов и трехстороннее слияние.',
+      usageSteps: ['Используйте поблочный выбор и редактируемый результат для автоматического разрешения.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'merge-conflict-resolver-unsupported-visual-diff-claim'
+    );
+  });
+
+  it('keeps actual Russian Merge Conflict Resolver support copy aligned with marker cleanup', () => {
+    const filePath = path.join(
+      process.cwd(),
+      'src/messages',
+      'ru',
+      'tools/merge-conflict-resolver.json'
+    );
+    const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+      detailed_description?: string;
+      usage_steps?: string[];
+      usage_examples?: string[];
+      faqs?: Array<{ question?: string; answer?: string }>;
+    };
+
+    const report = assessSupportContentTrust({
+      slug: 'merge-conflict-resolver',
+      locale: 'ru',
+      name: 'Решатель конфликта слияний',
+      description: '',
+      detailedDescription: messages.detailed_description ?? '',
+      usageSteps: messages.usage_steps ?? [],
+      usageExamples: messages.usage_examples ?? [],
+      faqs: messages.faqs ?? [],
+    });
+
+    expect(report.blockSupportContent, 'ru Merge Conflict Resolver support copy').toBe(false);
+    expect(report.issues).toEqual([]);
+  });
+
+  it('blocks Small Text Generator font and export claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'small-text-generator',
+      locale: 'ru',
+      name: 'Генератор маленького текста',
+      description: '',
+      detailedDescription:
+        'Инструмент поддерживает выбор шрифта, настройки шрифта и интеграцию с соцсетями.',
+      usageSteps: ['Скачайте PNG или SVG изображение и экспорт CSS.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'small-text-unsupported-font-export-claim'
+    );
+  });
+
+  it('keeps actual Russian Small Text Generator support copy aligned with Unicode text mapping', () => {
+    const filePath = path.join(
+      process.cwd(),
+      'src/messages',
+      'ru',
+      'tools/small-text-generator.json'
+    );
+    const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+      detailed_description?: string;
+      usage_steps?: string[];
+      usage_examples?: string[];
+      faqs?: Array<{ question?: string; answer?: string }>;
+    };
+
+    const report = assessSupportContentTrust({
+      slug: 'small-text-generator',
+      locale: 'ru',
+      name: 'Генератор маленького текста',
+      description: '',
+      detailedDescription: messages.detailed_description ?? '',
+      usageSteps: messages.usage_steps ?? [],
+      usageExamples: messages.usage_examples ?? [],
+      faqs: messages.faqs ?? [],
+    });
+
+    expect(report.blockSupportContent, 'ru Small Text Generator support copy').toBe(false);
+    expect(report.issues).toEqual([]);
+  });
+
+  it('blocks Unused Imports Finder project-analysis claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'unused-imports-finder',
+      locale: 'ru',
+      name: 'Поиск неиспользуемых импортов',
+      description: '',
+      detailedDescription:
+        'Инструмент использует ESLint и TypeScript compiler, сканирует проект и репозиторий.',
+      usageSteps: ['Автоматически удаляйте импорты, организуйте imports и изменяйте файлы проекта.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'unused-imports-unsupported-project-analysis-claim'
+    );
+  });
+
+  it('keeps actual Russian Unused Imports Finder support copy aligned with snippet analysis', () => {
+    const filePath = path.join(
+      process.cwd(),
+      'src/messages',
+      'ru',
+      'tools/unused-imports-finder.json'
+    );
+    const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+      detailed_description?: string;
+      usage_steps?: string[];
+      usage_examples?: string[];
+      faqs?: Array<{ question?: string; answer?: string }>;
+    };
+
+    const report = assessSupportContentTrust({
+      slug: 'unused-imports-finder',
+      locale: 'ru',
+      name: 'Поиск неиспользуемых импортов',
+      description: '',
+      detailedDescription: messages.detailed_description ?? '',
+      usageSteps: messages.usage_steps ?? [],
+      usageExamples: messages.usage_examples ?? [],
+      faqs: messages.faqs ?? [],
+    });
+
+    expect(report.blockSupportContent, 'ru Unused Imports Finder support copy').toBe(false);
+    expect(report.issues).toEqual([]);
+  });
+
+  it('blocks Russian Meeting Agenda export and calendar claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'meeting-agenda-builder',
+      locale: 'ru',
+      name: 'Создатель повестки совещания',
+      description: '',
+      detailedDescription:
+        'Инструмент отправляет календарные приглашения, синхронизируется с Google Calendar и Outlook.',
+      usageSteps: ['Скачайте PDF и опубликуйте повестку в общем рабочем пространстве с библиотекой встреч.'],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'meeting-agenda-unsupported-export-share-claim'
+    );
+  });
+
+  it('keeps actual Russian Meeting Agenda support copy aligned with copy-only output', () => {
+    const filePath = path.join(
+      process.cwd(),
+      'src/messages',
+      'ru',
+      'tools/meeting-agenda-builder.json'
+    );
+    const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+      detailed_description?: string;
+      usage_steps?: string[];
+      usage_examples?: string[];
+      faqs?: Array<{ question?: string; answer?: string }>;
+    };
+
+    const report = assessSupportContentTrust({
+      slug: 'meeting-agenda-builder',
+      locale: 'ru',
+      name: 'Создатель повестки совещания',
+      description: '',
+      detailedDescription: messages.detailed_description ?? '',
+      usageSteps: messages.usage_steps ?? [],
+      usageExamples: messages.usage_examples ?? [],
+      faqs: messages.faqs ?? [],
+    });
+
+    expect(report.blockSupportContent, 'ru Meeting Agenda support copy').toBe(false);
     expect(report.issues).toEqual([]);
   });
 
@@ -1319,6 +1952,479 @@ describe('assessSupportContentTrust', () => {
     });
 
     expect(report.blockSupportContent).toBe(false);
+  });
+
+  it('keeps actual Russian TypeScript to JSON support copy visible', () => {
+    const filePath = path.join(
+      process.cwd(),
+      'src/messages/ru/tools/typescript-to-json.json'
+    );
+    const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+      detailed_description?: string;
+      usage_steps?: string[];
+      usage_examples?: string[];
+      faqs?: Array<{ question?: string; answer?: string }>;
+    };
+
+    const report = assessSupportContentTrust({
+      slug: 'typescript-to-json',
+      locale: 'ru',
+      name: 'TypeScript в JSON',
+      description: '',
+      detailedDescription: messages.detailed_description ?? '',
+      usageSteps: messages.usage_steps ?? [],
+      usageExamples: messages.usage_examples ?? [],
+      faqs: messages.faqs ?? [],
+    });
+
+    expect(report.blockSupportContent).toBe(false);
+  });
+
+  it('blocks Dependency Vulnerability Checker live audit and report claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'dependency-vulnerability-checker',
+      locale: 'en',
+      name: 'Dependency Vulnerability Checker',
+      description: '',
+      detailedDescription:
+        'Scan package.json and requirements.txt with OSV API and Snyk API real-time advisories.',
+      usageSteps: ['Export PDF reports after a production audit.'],
+      usageExamples: ['Connect GitHub Dependabot findings to a live advisory dashboard.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'dependency-vulnerability-unsupported-live-audit-claim'
+    );
+  });
+
+  it('keeps actual Russian Dependency Vulnerability Checker support copy visible', () => {
+    const filePath = path.join(
+      process.cwd(),
+      'src/messages/ru/tools/dependency-vulnerability-checker.json'
+    );
+    const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+      detailed_description?: string;
+      usage_steps?: string[];
+      usage_examples?: string[];
+      faqs?: Array<{ question?: string; answer?: string }>;
+    };
+
+    const report = assessSupportContentTrust({
+      slug: 'dependency-vulnerability-checker',
+      locale: 'ru',
+      name: 'Чекер уязвимостей зависимостей',
+      description: '',
+      detailedDescription: messages.detailed_description ?? '',
+      usageSteps: messages.usage_steps ?? [],
+      usageExamples: messages.usage_examples ?? [],
+      faqs: messages.faqs ?? [],
+    });
+
+    expect(report.blockSupportContent).toBe(false);
+  });
+
+  it('blocks Invoice Template PDF, payment, and accounting claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'invoice-template-generator',
+      locale: 'en',
+      name: 'Invoice Template Generator',
+      description: '',
+      detailedDescription:
+        'Download PDF invoices with logo upload, payment links, and recurring invoice management.',
+      usageSteps: ['Automatically email invoices and sync with QuickBooks.'],
+      usageExamples: ['Export PDF for accounting workflows.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'invoice-template-unsupported-pdf-payment-claim'
+    );
+  });
+
+  it('keeps actual Invoice Template HTML support copy visible', () => {
+    const locales = ['en', 'ru'];
+
+    for (const locale of locales) {
+      const filePath = path.join(
+        process.cwd(),
+        'src/messages',
+        locale,
+        'tools/invoice-template-generator.json'
+      );
+      const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+        detailed_description?: string;
+        usage_steps?: string[];
+        usage_examples?: string[];
+        faqs?: Array<{ question?: string; answer?: string }>;
+      };
+
+      const report = assessSupportContentTrust({
+        slug: 'invoice-template-generator',
+        locale,
+        name: 'Invoice Template Generator',
+        description: '',
+        detailedDescription: messages.detailed_description ?? '',
+        usageSteps: messages.usage_steps ?? [],
+        usageExamples: messages.usage_examples ?? [],
+        faqs: messages.faqs ?? [],
+      });
+
+      expect(report.blockSupportContent, `${locale} invoice template support copy`).toBe(false);
+    }
+  });
+
+  it('blocks JWT Payload Decoder signature verification and OAuth claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'jwt-payload-decoder',
+      locale: 'en',
+      name: 'JWT Payload Decoder',
+      description: '',
+      detailedDescription:
+        'Verify the JWT signature with JWKS, validate token trust, and inspect refresh tokens.',
+      usageSteps: ['Configure an OAuth flow callback and RS256 public key.'],
+      usageExamples: ['Run signature verification with a JWK set.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'jwt-payload-unsupported-verification-claim'
+    );
+  });
+
+  it('keeps actual Russian JWT Payload Decoder support copy visible', () => {
+    const filePath = path.join(
+      process.cwd(),
+      'src/messages/ru/tools/jwt-payload-decoder.json'
+    );
+    const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+      detailed_description?: string;
+      usage_steps?: string[];
+      usage_examples?: string[];
+      faqs?: Array<{ question?: string; answer?: string }>;
+    };
+
+    const report = assessSupportContentTrust({
+      slug: 'jwt-payload-decoder',
+      locale: 'ru',
+      name: 'Декодер JWT Payload',
+      description: '',
+      detailedDescription: messages.detailed_description ?? '',
+      usageSteps: messages.usage_steps ?? [],
+      usageExamples: messages.usage_examples ?? [],
+      faqs: messages.faqs ?? [],
+    });
+
+    expect(report.blockSupportContent).toBe(false);
+  });
+
+  it('blocks Base64 Image Converter editing and transcoding claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'base64-image-converter',
+      locale: 'en',
+      name: 'Base64 Image Converter',
+      description: '',
+      detailedDescription:
+        'Batch convert images, preserve EXIF metadata, and transcode to WebP with a quality slider.',
+      usageSteps: ['Crop images and remove metadata before exporting.'],
+      usageExamples: ['Convert between PNG, JPEG, WebP, and AVIF for production assets.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'base64-image-unsupported-editing-claim'
+    );
+  });
+
+  it('keeps actual Base64 Image Converter support copy visible', () => {
+    const locales = ['en', 'ru'];
+
+    for (const locale of locales) {
+      const filePath = path.join(
+        process.cwd(),
+        'src/messages',
+        locale,
+        'tools/base64-image-converter.json'
+      );
+      const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+        detailed_description?: string;
+        usage_steps?: string[];
+        usage_examples?: string[];
+        faqs?: Array<{ question?: string; answer?: string }>;
+      };
+
+      const report = assessSupportContentTrust({
+        slug: 'base64-image-converter',
+        locale,
+        name: 'Base64 Image Converter',
+        description: '',
+        detailedDescription: messages.detailed_description ?? '',
+        usageSteps: messages.usage_steps ?? [],
+        usageExamples: messages.usage_examples ?? [],
+        faqs: messages.faqs ?? [],
+      });
+
+      expect(report.blockSupportContent, `${locale} Base64 Image support copy`).toBe(false);
+    }
+  });
+
+  it('blocks Advanced Changelog Git import claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'changelog-generator-advanced',
+      locale: 'en',
+      name: 'Advanced Changelog Generator',
+      description: '',
+      detailedDescription:
+        'Parse Git commit messages, read Git history, and compare tags to create releases.',
+      usageSteps: ['Import commits from GitHub releases and pull request titles.'],
+      usageExamples: ['Use a Conventional Commits parser for repository history.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'changelog-advanced-unsupported-git-import-claim'
+    );
+  });
+
+  it('keeps actual Advanced Changelog manual-entry support copy visible', () => {
+    const locales = ['en', 'ru', 'es'];
+
+    for (const locale of locales) {
+      const filePath = path.join(
+        process.cwd(),
+        'src/messages',
+        locale,
+        'tools/changelog-generator-advanced.json'
+      );
+      const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+        detailed_description?: string;
+        usage_steps?: string[];
+        usage_examples?: string[];
+        faqs?: Array<{ question?: string; answer?: string }>;
+      };
+
+      const report = assessSupportContentTrust({
+        slug: 'changelog-generator-advanced',
+        locale,
+        name: 'Advanced Changelog Generator',
+        description: '',
+        detailedDescription: messages.detailed_description ?? '',
+        usageSteps: messages.usage_steps ?? [],
+        usageExamples: messages.usage_examples ?? [],
+        faqs: messages.faqs ?? [],
+      });
+
+      expect(report.blockSupportContent, `${locale} changelog support copy`).toBe(false);
+    }
+  });
+
+  it('blocks Git Branch Naming repository policy and automation claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'git-branch-naming-validator',
+      locale: 'en',
+      name: 'Git Branch Naming Validator',
+      description: '',
+      detailedDescription:
+        'Integrates with Git and enforces team branch naming policies for every repository.',
+      usageSteps: ['Add it as a CI/CD check with custom regex rules and pull request checks.'],
+      usageExamples: ['Bulk branch validation creates a Git branch after approval.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'git-branch-naming-unsupported-repo-policy-claim'
+    );
+  });
+
+  it('keeps actual Git Branch Naming Validator support copy visible', () => {
+    const locales = ['en', 'ko'];
+
+    for (const locale of locales) {
+      const filePath = path.join(
+        process.cwd(),
+        'src/messages',
+        locale,
+        'tools/git-branch-naming-validator.json'
+      );
+      const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+        detailed_description?: string;
+        usage_steps?: string[];
+        usage_examples?: string[];
+        faqs?: Array<{ question?: string; answer?: string }>;
+      };
+
+      const report = assessSupportContentTrust({
+        slug: 'git-branch-naming-validator',
+        locale,
+        name: 'Git Branch Naming Validator',
+        description: '',
+        detailedDescription: messages.detailed_description ?? '',
+        usageSteps: messages.usage_steps ?? [],
+        usageExamples: messages.usage_examples ?? [],
+        faqs: messages.faqs ?? [],
+      });
+
+      expect(report.blockSupportContent, `${locale} Git Branch Naming support copy`).toBe(false);
+    }
+  });
+
+  it('blocks Git Tag Manager repository operation claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'git-tag-manager',
+      locale: 'en',
+      name: 'Git Tag Manager',
+      description: '',
+      detailedDescription:
+        'Connects to a repository, reads existing tags, and creates tags in your repo.',
+      usageSteps: ['Automatically pushes tags and deletes remote tags when requested.'],
+      usageExamples: ['Runs git tag commands from the browser.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'git-tag-manager-unsupported-repo-operation-claim'
+    );
+  });
+
+  it('keeps actual Git Tag Manager command-planner support copy visible', () => {
+    const locales = ['en', 'ru'];
+
+    for (const locale of locales) {
+      const filePath = path.join(
+        process.cwd(),
+        'src/messages',
+        locale,
+        'tools/git-tag-manager.json'
+      );
+      const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+        detailed_description?: string;
+        usage_steps?: string[];
+        usage_examples?: string[];
+        faqs?: Array<{ question?: string; answer?: string }>;
+      };
+
+      const report = assessSupportContentTrust({
+        slug: 'git-tag-manager',
+        locale,
+        name: 'Git Tag Manager',
+        description: '',
+        detailedDescription: messages.detailed_description ?? '',
+        usageSteps: messages.usage_steps ?? [],
+        usageExamples: messages.usage_examples ?? [],
+        faqs: messages.faqs ?? [],
+      });
+
+      expect(report.blockSupportContent, `${locale} git tag support copy`).toBe(false);
+    }
+  });
+
+  it('blocks Markdown to HTML CSS, download, and front matter claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'markdown-to-html-converter',
+      locale: 'en',
+      name: 'Markdown to HTML Converter',
+      description: '',
+      detailedDescription:
+        'Customize CSS with a custom CSS editor, parse front matter, and build a table-of-contents.',
+      usageSteps: ['Download HTML file with syntax-highlighting export.'],
+      usageExamples: ['Apply a custom stylesheet for full document publishing.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'markdown-html-unsupported-css-download-claim'
+    );
+  });
+
+  it('keeps actual Markdown to HTML copy and preview support copy visible', () => {
+    const locales = ['en', 'ru'];
+
+    for (const locale of locales) {
+      const filePath = path.join(
+        process.cwd(),
+        'src/messages',
+        locale,
+        'tools/markdown-to-html-converter.json'
+      );
+      const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+        detailed_description?: string;
+        usage_steps?: string[];
+        usage_examples?: string[];
+        faqs?: Array<{ question?: string; answer?: string }>;
+      };
+
+      const report = assessSupportContentTrust({
+        slug: 'markdown-to-html-converter',
+        locale,
+        name: 'Markdown to HTML Converter',
+        description: '',
+        detailedDescription: messages.detailed_description ?? '',
+        usageSteps: messages.usage_steps ?? [],
+        usageExamples: messages.usage_examples ?? [],
+        faqs: messages.faqs ?? [],
+      });
+
+      expect(report.blockSupportContent, `${locale} markdown html support copy`).toBe(false);
+    }
+  });
+
+  it('blocks SQL to MongoDB migration, driver, and execution claims that are not implemented', () => {
+    const report = assessSupportContentTrust({
+      slug: 'sql-to-mongodb-converter',
+      locale: 'en',
+      name: 'SQL to MongoDB Converter',
+      description: '',
+      detailedDescription:
+        'Select a MongoDB driver, connect to database, and run database migration with JOINs and subqueries.',
+      usageSteps: ['Execute queries, create indexes, and convert CREATE TABLE DDL.'],
+      usageExamples: ['Build an aggregation pipeline for schema migration.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'sql-mongodb-unsupported-migration-driver-claim'
+    );
+  });
+
+  it('keeps actual SQL to MongoDB snippet-converter support copy visible', () => {
+    const locales = ['en', 'ru'];
+
+    for (const locale of locales) {
+      const filePath = path.join(
+        process.cwd(),
+        'src/messages',
+        locale,
+        'tools/sql-to-mongodb-converter.json'
+      );
+      const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+        detailed_description?: string;
+        usage_steps?: string[];
+        usage_examples?: string[];
+        faqs?: Array<{ question?: string; answer?: string }>;
+      };
+
+      const report = assessSupportContentTrust({
+        slug: 'sql-to-mongodb-converter',
+        locale,
+        name: 'SQL to MongoDB Converter',
+        description: '',
+        detailedDescription: messages.detailed_description ?? '',
+        usageSteps: messages.usage_steps ?? [],
+        usageExamples: messages.usage_examples ?? [],
+        faqs: messages.faqs ?? [],
+      });
+
+      expect(report.blockSupportContent, `${locale} sql mongodb support copy`).toBe(false);
+    }
   });
 
   it('blocks Financial Forecast cash-flow and investor claims that are not implemented', () => {
@@ -2117,6 +3223,108 @@ describe('assessSupportContentTrust', () => {
     expect(report.issues.map((issue) => issue.code)).toContain(
       'sql-query-optimizer-unsupported-database-rewrite-claim'
     );
+  });
+
+  it('blocks Query Execution Planner EXPLAIN and database-specific claims', () => {
+    const report = assessSupportContentTrust({
+      slug: 'query-execution-planner',
+      locale: 'en',
+      name: 'Query Execution Planner',
+      description: '',
+      detailedDescription:
+        'Paste EXPLAIN output to get PostgreSQL planner and MySQL optimizer index recommendations.',
+      usageSteps: ['Select database type, view plan visualization, and compare execution plans.'],
+      usageExamples: ['Runs SQL to show actual runtime cost from the database.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'query-execution-planner-unsupported-explain-database-claim'
+    );
+  });
+
+  it('keeps actual Query Execution Planner heuristic support copy visible', () => {
+    const locales = ['en', 'ko'];
+
+    for (const locale of locales) {
+      const filePath = path.join(
+        process.cwd(),
+        'src/messages',
+        locale,
+        'tools/query-execution-planner.json'
+      );
+      const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+        detailed_description?: string;
+        usage_steps?: string[];
+        usage_examples?: string[];
+        faqs?: Array<{ question?: string; answer?: string }>;
+      };
+
+      const report = assessSupportContentTrust({
+        slug: 'query-execution-planner',
+        locale,
+        name: 'Query Execution Planner',
+        description: '',
+        detailedDescription: messages.detailed_description ?? '',
+        usageSteps: messages.usage_steps ?? [],
+        usageExamples: messages.usage_examples ?? [],
+        faqs: messages.faqs ?? [],
+      });
+
+      expect(report.blockSupportContent, `${locale} query execution support copy`).toBe(false);
+    }
+  });
+
+  it('blocks Citation Formatter metadata lookup and bibliography claims', () => {
+    const report = assessSupportContentTrust({
+      slug: 'citation-formatter',
+      locale: 'pt',
+      name: 'Formatador de Citações',
+      description: '',
+      detailedDescription:
+        'Busca metadados por DOI lookup, importar BibTeX do Zotero e garante conformidade 100% correto.',
+      usageSteps: ['Use preenchimento automático para exportar BibTeX, RIS e Word.'],
+      usageExamples: ['Crie citações em lote e uma bibliografia completa.'],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      'citation-formatter-unsupported-metadata-bibliography-claim'
+    );
+  });
+
+  it('keeps actual Citation Formatter manual-entry support copy visible', () => {
+    const locales = ['en', 'pt'];
+
+    for (const locale of locales) {
+      const filePath = path.join(
+        process.cwd(),
+        'src/messages',
+        locale,
+        'tools/citation-formatter.json'
+      );
+      const messages = JSON.parse(fs.readFileSync(filePath, 'utf8')) as {
+        detailed_description?: string;
+        usage_steps?: string[];
+        usage_examples?: string[];
+        faqs?: Array<{ question?: string; answer?: string }>;
+      };
+
+      const report = assessSupportContentTrust({
+        slug: 'citation-formatter',
+        locale,
+        name: 'Citation Formatter',
+        description: '',
+        detailedDescription: messages.detailed_description ?? '',
+        usageSteps: messages.usage_steps ?? [],
+        usageExamples: messages.usage_examples ?? [],
+        faqs: messages.faqs ?? [],
+      });
+
+      expect(report.blockSupportContent, `${locale} citation formatter support copy`).toBe(false);
+    }
   });
 
   it('blocks Spanish Countdown Days Calculator calendar and export claims', () => {

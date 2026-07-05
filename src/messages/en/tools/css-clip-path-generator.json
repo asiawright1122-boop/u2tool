@@ -4,7 +4,8 @@
     "Choose one of the built-in presets to start with a common clip-path value.",
     "Edit the clip-path text directly if you need a custom circle(), ellipse(), polygon(), or inset() shape.",
     "Check the preview square to confirm the shape looks close to what you need.",
-    "Copy the generated clip-path declaration and paste it into your CSS."
+    "Copy the generated clip-path declaration and paste it into your CSS.",
+    "Test the copied declaration in the real responsive layout before publishing it."
   ],
   "usage_examples": [
     "Create a triangle or diamond mask for a decorative section divider.",
@@ -24,6 +25,14 @@
     {
       "question": "Does the tool export image or SVG files?",
       "answer": "No. It produces a CSS clip-path declaration for you to use in your own stylesheet."
+    },
+    {
+      "question": "Can I move points on a canvas?",
+      "answer": "No. The current tool uses presets plus direct text editing in the textarea, then shows a simple preview."
+    },
+    {
+      "question": "Does it check browser support?",
+      "answer": "No. It creates the CSS declaration only, so test the final value in the browsers and breakpoints you support."
     }
   ]
 }

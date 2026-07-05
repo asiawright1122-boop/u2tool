@@ -1,16 +1,39 @@
 {
-  "detailed_description": "El Generador de Ondas crea patrones de ondas suaves y personalizables en formato SVG ideal para dividir secciones, encabezados y pies de página. Puede generar ondas simples o mult capas con altura, frecuencia y amplitud ajustables. El SVG generado está optimizado para su uso en la web y puede posicionarse en la parte superior o inferior de las secciones.",
+  "detailed_description": "El Generador de Ondas crea divisores SVG estáticos para secciones web. La interfaz muestra una vista previa y permite ajustar altura, frecuencia, amplitud, número de capas, color y posición superior o inferior. El resultado es un bloque SVG que puedes copiar o descargar como archivo `wave.svg`. Es útil para preparar separadores decorativos, encabezados simples y fondos de sección que después revisarás dentro de tu layout real. La herramienta no genera animaciones, keyframes CSS ni presets responsive por breakpoint; si necesitas movimiento o reglas adaptativas, añade ese código manualmente en tu proyecto.",
   "usage_steps": [
-    "Establece la altura de las ondas en píxeles",
-    "Ajusta la frecuencia para el número de ondas",
-    "Configura la amplitud para la intensidad de las ondas",
-    "Añade múltiples capas para efecto de profundidad",
-    "Elige la posición superior o inferior",
-    "Copia o descarga el código SVG"
+    "Ajusta la altura de la onda con el control deslizante.",
+    "Cambia la frecuencia para definir cuántas curvas aparecen en el SVG.",
+    "Configura la amplitud para hacer la onda más suave o más marcada.",
+    "Elige entre una y cuatro capas para crear profundidad visual.",
+    "Selecciona la posición superior o inferior y revisa el color.",
+    "Copia el SVG o descárgalo como `wave.svg` para probarlo en tu página."
   ],
   "usage_examples": [
-    "Crear divisores de sección entre el contenido",
-    "Diseñar encabezados de ola para páginas de destino",
-    "Construir fondos de ola animados"
+    "Crear un divisor SVG estático entre dos bloques de contenido.",
+    "Diseñar una franja superior para una sección de landing page.",
+    "Preparar una onda de color para un footer o encabezado sencillo.",
+    "Copiar el SVG generado y ajustar el tamaño final en CSS del proyecto."
+  ],
+  "faqs": [
+    {
+      "question": "Genera ondas animadas?",
+      "answer": "No. La herramienta genera SVG estático; las animaciones o keyframes deben añadirse después en tu CSS."
+    },
+    {
+      "question": "Qué opciones puedo ajustar?",
+      "answer": "Puedes cambiar altura, frecuencia, amplitud, capas, color y si la onda se coloca arriba o abajo."
+    },
+    {
+      "question": "Puedo descargar el resultado?",
+      "answer": "Sí. Además de copiar el marcado SVG, puedes descargarlo como archivo `wave.svg`."
+    },
+    {
+      "question": "Incluye presets para breakpoints responsive?",
+      "answer": "No. El SVG usa `viewBox` y `preserveAspectRatio`, pero las reglas responsive finales dependen de tu CSS."
+    },
+    {
+      "question": "Qué debo revisar antes de publicarlo?",
+      "answer": "Comprueba contraste, tamaño, color y encaje visual dentro de la sección real donde usarás la onda."
+    }
   ]
 }

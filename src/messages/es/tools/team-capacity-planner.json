@@ -1,5 +1,5 @@
 {
-  "detailed_description": "El Planificador de Capacidad de Equipo calcula la capacidad del equipo disponible considerando vacaciones y reuniones.",
+  "detailed_description": "El Planificador de Capacidad de Equipo calcula la capacidad del equipo disponible considerando vacaciones y reuniones. Planificador de Capacidad de Equipo está pensado para preparar y revisar borradores de trabajo, planificación o documentos. Revisa fechas, nombres, cifras y formato antes de enviar, publicar o compartir materiales importantes.",
   "usage_steps": [
     "Añadir miembros del equipo",
     "Establecer horas laborales",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Planificar capacidad de sprint",
     "Tener en cuenta las vacaciones",
-    "Equilibrar la carga de trabajo"
+    "Equilibrar la carga de trabajo",
+    "Preparar un borrador para un documento, calendario o entrega de equipo."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Planificador de Capacidad de Equipo?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta de oficina?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

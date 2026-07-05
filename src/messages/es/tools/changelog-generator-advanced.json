@@ -1,15 +1,39 @@
 {
-  "detailed_description": "El Generador de Historial de Cambios crea historiales de cambios formateados a partir de mensajes de commit de Git.",
+  "detailed_description": "Advanced Changelog Generator crea un changelog Markdown a partir de versiones y entradas que escribes manualmente en el navegador. Cada release tiene version, date y entries agrupadas como added, changed, deprecated, removed, fixed o security. Puedes elegir Keep a Changelog, Conventional o Simple, revisar el Markdown generado y copiarlo al portapapeles. Es un editor manual para release notes ya preparadas, no una herramienta de importacion desde un repositorio.",
   "usage_steps": [
-    "Pegue los mensajes de commit",
-    "Seleccione el formato",
-    "Configurar versión/fecha",
-    "Haga clic en Generar",
-    "Copie o descargue"
+    "Elige el formato Keep a Changelog, Conventional o Simple.",
+    "Edita la version y date del release, o agrega otro release.",
+    "Agrega entries y selecciona el tipo de cambio para cada una.",
+    "Completa la descripcion y, si hace falta, la referencia de issue.",
+    "Elimina entradas vacias o corrige el texto antes de usarlo.",
+    "Revisa el changelog generado y copia el Markdown."
   ],
   "usage_examples": [
-    "Genere notas de lanzamiento",
-    "Cree un archivo CHANGELOG.md",
-    "Documente el historial de versiones"
+    "Preparar una seccion pequena de CHANGELOG.md para un release manual.",
+    "Agrupar bug fixes y security notes antes de publicar una version.",
+    "Comparar Keep a Changelog y Simple output para las mismas entries.",
+    "Redactar release notes desde notas ya reunidas fuera de la herramienta."
+  ],
+  "faqs": [
+    {
+      "question": "Usa datos automaticos del repositorio?",
+      "answer": "No. Es un editor manual: escribes versiones, fechas y entradas directamente en la pagina."
+    },
+    {
+      "question": "Qué formatos de salida tiene?",
+      "answer": "Puedes elegir Keep a Changelog, Conventional o Simple para el Markdown generado."
+    },
+    {
+      "question": "Puedo agregar varias versiones?",
+      "answer": "Sí. El boton Add Release crea otra version editable con fecha y lista de entradas."
+    },
+    {
+      "question": "Incluye campos de issue o pull request?",
+      "answer": "La interfaz permite escribir una referencia de issue por entrada; no consulta GitHub ni pull requests automaticamente."
+    },
+    {
+      "question": "Qué debo revisar antes de publicarlo?",
+      "answer": "Comprueba version, fecha, tipo de cambio, descripcion y referencias antes de pegar el Markdown en tu CHANGELOG.md."
+    }
   ]
 }

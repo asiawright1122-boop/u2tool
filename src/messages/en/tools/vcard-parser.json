@@ -1,12 +1,38 @@
 {
-  "detailed_description": "vCard Parser is an online tool for reading and viewing VCF contact files. Upload a VCF file or paste the raw vCard data to see all contact information displayed in a clean, organized format. The parser extracts names, phone numbers, email addresses, physical addresses, organizations, job titles, photos, and social profiles. Supports vCard versions 2.1, 3.0, and 4.0. Perfect for viewing contact exports, debugging contact sync issues, or extracting data from VCF files without importing them to your contacts app.",
+  "detailed_description": "vCard Parser is an online tool for reading and viewing VCF contact files. Upload a VCF file or paste the raw vCard data to see all contact information displayed in a clean, organized format. The parser extracts names, phone numbers, email addresses, physical addresses, organizations, job titles, photos, and social profiles. Supports vCard versions 2.1, 3.0, and 4.0. Perfect for viewing contact exports, debugging contact sync issues, or extracting data from VCF files without importing them to your contacts app. vCard Parser is intended for quick format conversion checks and draft outputs. Test with a small sample first, review the converted result for missing fields or formatting changes, and verify important data before using it in another system.",
   "usage_steps": [
     "Upload VCF file or paste content",
     "View parsed contacts",
-    "Export to JSON"
+    "Export to JSON",
+    "Review the generated output for accuracy and missing context.",
+    "Copy, export, or reuse the result only after checking it in your destination workflow."
   ],
   "usage_examples": [
     "View contact exports",
-    "Extract contact data"
+    "Extract contact data",
+    "Convert a small sample first, then verify the output before processing the full file or dataset.",
+    "Prepare copied or exported output for another app, script, or documentation workflow."
+  ],
+  "faqs": [
+    {
+      "question": "What should I check before using the vCard Parser output?",
+      "answer": "Review field mapping, formatting, special characters, and a small sample before using the converted output elsewhere."
+    },
+    {
+      "question": "Can I edit the result after generating it?",
+      "answer": "Yes. Adjust the input values or available options, generate the result again, and then copy, export, or reuse the updated output in your workflow when the page provides those actions."
+    },
+    {
+      "question": "Why might the result differ from another conversion tool?",
+      "answer": "Different tools can use different assumptions, rounding rules, parsing behavior, or export settings. Compare the same input values and review any notes shown in the interface before relying on the result."
+    },
+    {
+      "question": "Can I start with sample or placeholder data?",
+      "answer": "Yes. Use a small example or non-sensitive sample first, confirm the output shape, and then replace it with the real input you want to process."
+    },
+    {
+      "question": "Does this replace manual review?",
+      "answer": "No. It helps convert or reshape data, but important output should still be checked in the destination app or workflow."
+    }
   ]
 }

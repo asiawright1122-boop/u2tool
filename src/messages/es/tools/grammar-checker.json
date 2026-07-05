@@ -1,14 +1,38 @@
 {
-  "detailed_description": "La Revisión de Gramática analiza el texto en busca de errores gramaticales comunes y sugiere correcciones.",
+  "detailed_description": "La Revisión de Gramática analiza el texto en busca de errores gramaticales comunes y sugiere correcciones. Revisión de Gramática está pensado para transformar y revisar texto con rapidez. Trata el resultado como borrador, revisa redacción, caracteres y formato antes de compartirlo o publicarlo.",
   "usage_steps": [
     "Pega el texto",
     "Ver errores resaltados",
     "Aplica sugerencias",
-    "Copia el texto corregido"
+    "Copia el texto corregido",
+    "Revisa el resultado y confirma que encaja con tu objetivo."
   ],
   "usage_examples": [
     "Revisa correos electrónicos",
     "Revisa ensayos",
-    "Mejora entradas de blog"
+    "Mejora entradas de blog",
+    "Transformar un fragmento corto y revisar el resultado antes de compartirlo o publicarlo."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Revisión de Gramática?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta de texto?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

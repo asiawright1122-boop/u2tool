@@ -1,8 +1,8 @@
 {
-  "detailed_description": "Mit dem Text-zu-Handschrift-Converter wandelst du eingegebenen Text direkt im Browser in ein PNG-Bild mit handschriftlicher Optik um. Gib deinen Text ein, wähle einen Handschriftstil, stelle Tintenfarbe und Schriftgröße ein und entscheide dich für leeres, liniertes oder kariertes Papier. Die Vorschau wird auf einer Canvas-Fläche gerendert und kann als PNG heruntergeladen werden. Das Tool eignet sich für Mockups, Lernmaterial, kurze Notizen und visuelle Entwürfe, bei denen eine handschriftliche Anmutung reicht. Es erkennt keine echte Handschrift und nutzt keine KI-OCR; es erzeugt eine stilisierte Grafik aus dem Text, den du eingibst.",
+  "detailed_description": "Mit dem Text-zu-Handschrift-Converter kannst du Text in Handschrift umwandeln online und direkt im Browser ein PNG-Bild mit handschriftlicher Optik erzeugen. Wenn du Text zu Handschrift für eine Notiz, ein Mockup oder ein Arbeitsblatt brauchst, gib deinen Text ein, wähle einen Handschriftstil, stelle Tintenfarbe und Schriftgröße ein und entscheide dich für leeres, liniertes oder kariertes Papier. Die Vorschau wird auf einer Canvas-Fläche gerendert und kann als PNG heruntergeladen werden. Das Tool funktioniert als einfacher Handschrift Generator für kurze Texte, Lernmaterial, persönliche Grüße und visuelle Entwürfe, bei denen eine handschriftliche Anmutung reicht. Es erkennt keine echte Handschrift und nutzt keine KI-OCR; es erzeugt eine stilisierte Grafik aus dem Text, den du eingibst.",
   "usage_steps": [
-    "Gib den gewünschten Text in das Textfeld ein.",
-    "Wähle einen der Handschriftstile.",
+    "Gib den gewünschten Text in das Textfeld ein, wenn du Text in Handschrift umwandeln möchtest.",
+    "Wähle einen der Handschriftstile für die Ausgabe Text zu Handschrift.",
     "Lege Tintenfarbe, Papierstil und Schriftgröße fest.",
     "Prüfe die Vorschau auf der Canvas-Fläche.",
     "Passe den Text oder die Einstellungen bei Bedarf an.",
@@ -18,6 +18,10 @@
     {
       "question": "Erkennt das Tool echte Handschrift?",
       "answer": "Nein. Es wandelt eingegebenen Text in eine stilisierte Canvas-Grafik um und nutzt keine Handschrifterkennung."
+    },
+    {
+      "question": "Kann ich Text in Handschrift umwandeln online kostenlos?",
+      "answer": "Ja. Der Handschrift Generator läuft im Browser und erstellt aus deinem eingegebenen Text eine handschriftlich wirkende PNG-Vorschau, ohne Anmeldung und ohne Upload deiner Eingabe."
     },
     {
       "question": "Welche Papierstile gibt es?",

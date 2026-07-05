@@ -1,5 +1,5 @@
 {
-  "detailed_description": "El Convertidor Markdown a HTML transforma documentos Markdown en HTML limpio con soporte GFM.",
+  "detailed_description": "El Convertidor Markdown a HTML transforma documentos Markdown en HTML limpio con soporte GFM. Convertidor Markdown a HTML está pensado para comprobar conversiones de formato con rapidez. Prueba primero una entrada corta, compara el resultado con la estructura esperada y úsalo después en otra aplicación o script.",
   "usage_steps": [
     "Pega contenido Markdown",
     "Selecciona opciones",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Convierte README a HTML",
     "Genera documentos HTML",
-    "Crea correos electrónicos con estilo"
+    "Crea correos electrónicos con estilo",
+    "Probar la conversión con una entrada corta antes de procesar texto o archivos completos."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Convertidor Markdown a HTML?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra conversor?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

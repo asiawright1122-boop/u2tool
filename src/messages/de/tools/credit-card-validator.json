@@ -1,15 +1,38 @@
 {
-  "detailed_description": "Der Kreditkarten-Validierer prüft, ob eine Kreditkartennummer mathematisch gültig ist, indem er den Luhn-Algorithmus anwendet. Er erkennt automatisch die Kartenart (Visa, Mastercard, Amex usw.) und liefert detaillierte Validierungsergebnisse. Nur für Test- und Entwicklungszwecke geeignet.",
+  "detailed_description": "Der Kreditkartenprüfer kontrolliert, ob eine Test-Kreditkartennummer eine mathematisch gültige Struktur nach dem Luhn-Algorithmus hat. Geben Sie eine Nummer ein oder fügen Sie sie ein, klicken Sie auf Validieren, und der Browser entfernt Leerzeichen, prüft die Länge von 13 bis 19 Ziffern, führt die Luhn-Prüfung aus und erkennt gängige Kartennetzwerk-Muster wie Visa, Mastercard, American Express, Discover, Diners Club, JCB, UnionPay und Maestro, wenn Präfix und Länge passen. Nutzen Sie den Luhn Validator für Zahlungsformular-QA, Beispieldaten, Unit-Tests und Entwicklerdokumentation. Das Tool kontaktiert keine Bank, keinen Zahlungsdienstleister und kein Kartennetzwerk. Es kann daher nicht bestätigen, ob eine Karte existiert, aktiv ist, Guthaben hat, einer echten Person gehört oder belastet werden darf. Verwenden Sie nur Testnummern.",
   "usage_steps": [
-    "Geben Sie eine Kreditkartennummer in das Eingabefeld ein.",
-    "Die Zahl wird automatisch mit Leerzeichen formatiert.",
-    "Klicken Sie auf „Validieren“, um die Karte zu überprüfen.",
-    "Sehen Sie die Kartenart, den Emittenten sowie das Ergebnis der Luhn-Prüfung an.",
-    "Überprüfen Sie die Anzahl der Ziffern für zusätzliche Validierung."
+    "Geben Sie eine Test-Kreditkartennummer in das Eingabefeld ein.",
+    "Das Feld formatiert die Ziffern während der Eingabe in lesbare Gruppen.",
+    "Klicken Sie auf Validieren, um die lokale Luhn-Prüfung und den Längencheck auszuführen.",
+    "Prüfen Sie das erkannte Kartennetzwerk-Muster, das statische Netzwerklabel, die Ziffernanzahl und das Ergebnis.",
+    "Nutzen Sie das Ergebnis zum Debuggen von Formularvalidierung oder Beispieldaten, nicht zur Prüfung eines echten Kontos."
   ],
   "usage_examples": [
-    "Prüfen Sie die Validierungslogik von Zahlungsformularen.",
-    "Stellen Sie vor der Verarbeitung die Formatierung der Kartennummer sicher.",
-    "Identifizieren Sie die Kartenart anhand des Nummernvorzeichens."
+    "Prüfen, ob ein Checkout-Formular eine Visa- oder Mastercard-Testnummer akzeptiert.",
+    "Bestätigen, dass eine Beispielnummer nach Änderung einer Ziffer fehlschlägt.",
+    "Während der QA das wahrscheinliche Kartennetzwerk anhand des Präfixes erkennen.",
+    "Das erwartete Luhn-Ergebnis für Unit-Tests eines Zahlungsformulars dokumentieren."
+  ],
+  "faqs": [
+    {
+      "question": "Prüft das Tool ein echtes Kreditkartenkonto?",
+      "answer": "Nein. Es prüft lokal nur Nummernmuster, Länge und Luhn-Prüfsumme. Banken oder Zahlungsdienstleister werden nicht kontaktiert."
+    },
+    {
+      "question": "Soll ich eine echte Kartennummer eingeben?",
+      "answer": "Nein. Verwenden Sie nur offizielle Testnummern von Zahlungsanbietern oder Dummy-Werte."
+    },
+    {
+      "question": "Welche Kartennetzwerke werden erkannt?",
+      "answer": "Erkannt werden gängige Muster für Visa, Mastercard, American Express, Discover, Diners Club, JCB, UnionPay und Maestro."
+    },
+    {
+      "question": "Was bedeutet ein gültiges Ergebnis?",
+      "answer": "Gültig bedeutet, dass die Ziffern die lokale Luhn- und Längenprüfung bestehen. Es bedeutet nicht, dass die Karte existiert, aktiv ist oder Guthaben hat."
+    },
+    {
+      "question": "Wird die Kartennummer an einen Server gesendet?",
+      "answer": "Die auf der Seite gezeigten Prüfungen laufen im Browser. Behandeln Sie trotzdem jeden Wert als Prüfnummer und vermeiden Sie echte Zahlungsdaten."
+    }
   ]
 }

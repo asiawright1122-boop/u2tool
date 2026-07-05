@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Der Trinkgeldrechner erleichtert das Berechnen von Trinkgeldern und das Aufteilen von Rechnungen unter mehreren Personen. Mit voreingestellten Trinkgeldprozenten und benutzerdefinierten Optionen können Sie schnell den Trinkgeldbetrag, den Gesamtbetrag und den Anteil pro Person ermitteln. Perfekt für das Essen mit Freunden oder das Berechnen von Service-Gratien.",
+  "detailed_description": "Der Trinkgeldrechner erleichtert das Berechnen von Trinkgeldern und das Aufteilen von Rechnungen unter mehreren Personen. Mit voreingestellten Trinkgeldprozenten und benutzerdefinierten Optionen können Sie schnell den Trinkgeldbetrag, den Gesamtbetrag und den Anteil pro Person ermitteln. Perfekt für das Essen mit Freunden oder das Berechnen von Service-Gratien. Trinkgeldrechner ist für eine schnelle Vorprüfung von Eingaben, Einstellungen und Ergebnissen gedacht. Nutze das Ergebnis als Entwurf, prüfe Format, Zahlen, Zeichen und Kontext, und bestätige wichtige Ausgaben in deinem eigenen Arbeitsablauf, bevor du sie teilst, veröffentlichst oder in einem Projekt verwendest.",
   "usage_steps": [
     "Geben Sie den Rechnungsbetrag ein",
     "Wählen Sie einen Trinkgeldprozentsatz oder geben Sie einen benutzerdefinierten Betrag ein",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Trinkgelder für Restaurants schnell berechnen",
     "Rechnungen unter Freunden gleichmäßig aufteilen",
-    "Angemessene Trinkgeldbeträge für verschiedene Servicequalitäten bestimmen"
+    "Angemessene Trinkgeldbeträge für verschiedene Servicequalitäten bestimmen",
+    "Eine kurze Eingabe prüfen, bevor der vollständige Inhalt verarbeitet wird."
+  ],
+  "faqs": [
+    {
+      "question": "Was sollte ich vor der Nutzung von Trinkgeldrechner prüfen?",
+      "answer": "Prüfe Eingaben, Einstellungen, Format und Kontext. Bei wichtigen Ergebnissen solltest du Zahlen, Zeichen und Bedeutung vor dem Teilen oder Veröffentlichen noch einmal kontrollieren."
+    },
+    {
+      "question": "Kann ich das Ergebnis nachträglich ändern?",
+      "answer": "Ja. Passe die Eingabe oder verfügbare Optionen an, führe die Verarbeitung erneut aus und verwende die aktualisierte Ausgabe erst nach einer Prüfung."
+    },
+    {
+      "question": "Warum kann das Ergebnis von einem anderen Werkzeug abweichen?",
+      "answer": "Werkzeuge können Rundung, Analyse, Formatierung oder Darstellung unterschiedlich behandeln. Vergleiche mit derselben Eingabe und beachte die Grenzen der Oberfläche."
+    },
+    {
+      "question": "Kann ich mit einer kurzen Eingabe beginnen?",
+      "answer": "Ja. Beginne mit einer kurzen oder nicht sensiblen Eingabe, um die Form der Ausgabe zu prüfen, bevor du den eigentlichen Inhalt verwendest."
+    },
+    {
+      "question": "Ersetzt das Werkzeug eine manuelle Prüfung?",
+      "answer": "Nein. Es beschleunigt wiederkehrende Arbeit, aber wichtige Ergebnisse sollten auf Genauigkeit, Kontext und Eignung geprüft werden."
+    }
   ]
 }

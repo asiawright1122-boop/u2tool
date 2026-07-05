@@ -177,6 +177,27 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['half-doughnut-chart-generator'],
   },
   {
+    code: 'chart-unsupported-file-import-claim',
+    pattern: /\bJSON\/CSV\b|\bCSV\/JSON\b|\bCSV\/TSV\b|CSV 업로드|JSON 입력|Hochladen von CSV|Importar CSV|import CSV en glissant|chargement de données en JSON ou CSV|supports?[^.\n]{0,80}(?:JSON or CSV|CSV or JSON)|supporte[^.\n]{0,80}JSON ou CSV|поддерживает[^.\n]{0,80}CSV или JSON|формате CSV или JSON|формат \(CSV или JSON\)|تنسيقات متعددة مثل JSON، CSV|تنسيقات CSV أو JSON/i,
+    message: 'Claims CSV/JSON upload or import behavior that is not present in these chart table editors.',
+    slugs: [
+      'half-doughnut-chart-generator',
+      'percentage-stacked-bar-chart-generator',
+      'boxplot-chart-generator',
+    ],
+  },
+  {
+    code: 'chart-unsupported-advanced-runtime-claim',
+    pattern: /API 연동|API 연결|API 接口|JavaScript-APIs? dynamisch|vinculación reactiva en tiempo real|Web Workers|60FPS|10\s*万|10万级|100\.000|10\.000|3Dエフェクト|3D 파이|effet 3D|batch generation|batch generate|支持批量生成|Base64|PDF|Excel|HTML 임베드 코드|código de inserción|code d['’]intégration/i,
+    message: 'Claims chart API, live data, large-data runtime, 3D, document export, or embed-code features that are not present in the current chart editor UI.',
+    slugs: [
+      'half-doughnut-chart-generator',
+      'pie-chart-generator',
+      'percentage-stacked-bar-chart-generator',
+      'boxplot-chart-generator',
+    ],
+  },
+  {
     code: 'text-ascii-unsupported-export-font-claim',
     pattern: /['’]Standard['’].*['’]Banner['’].*['’]Slant['’]|Font Selection|Convert to ASCII Art|Download as Text|Download as Image|Скачать как текст|Скачать как изображение|слайдер ['’]Size['’]|выберите шрифт ASCII|настройку шрифтов, стилей и размеров/i,
     message: 'Claims ASCII font, size, or file/image export controls that are not present in the current single-font copy-only UI.',
@@ -184,7 +205,7 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
   },
   {
     code: 'image-splitter-unsupported-advanced-claim',
-    pattern: /\bBMP\b|التداخل البكسل|التفاف الحافة|تنسيق الإخراج المفضل|PNG لجودة أعلى|JPEG لملفات أصغر|20 ميجا|الحفاظ على بيانات EXIF|preserves? .*EXIF|maintaining .*EXIF|slice overlap percentage|Maintain Aspect Ratio|coordinate overlays|bi-linear interpolation|bi-?linear|percentage-based|バイリニア|CSSスプライト|余白削除|出力形式ドロップダウン|トリミング/i,
+    pattern: /\bBMP\b|التداخل البكسل|التفاف الحافة|تنسيق الإخراج المفضل|PNG لجودة أعلى|JPEG لملفات أصغر|20 ميجا|الحفاظ على بيانات EXIF|preserves? .*EXIF|maintaining .*EXIF|slice overlap percentage|Maintain Aspect Ratio|coordinate overlays|bi-linear interpolation|bi-?linear|percentage-based|Metadaten|Überlappungsbereiche|Überlappung|Ausgabeformat|CSS-Sprites?|Texture-Atlas|données EXIF|marges internes|Format d['’]export|espacement horizontal|espacement vertical|バイリニア|CSSスプライト|余白削除|出力形式ドロップダウン|トリミング|CSS 스프라이트|스프라이트시트|출력 형식|마진\\(px\\)|패딩\\(px\\)/i,
     message: 'Claims image splitter overlap, output-format, EXIF, or advanced slicing controls that are not present in the current rows/columns PNG grid UI.',
     slugs: ['image-splitter'],
   },
@@ -238,7 +259,7 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
   },
   {
     code: 'credit-card-validator-live-verification-claim',
-    pattern: /real-time authorization|balance check|CVV verification|authori[sz]e a card|available balance|авторизац[а-яё ]+реальн|провер(?:ка|яет)[а-яё ]+CVV|доступн[а-яё ]+баланс/i,
+    pattern: /real-time authorization|balance check|CVV verification|authori[sz]e a card|available balance|bank verification|live payment authorization|авторизац[а-яё ]+реальн|провер(?:ка|яет)[а-яё ]+CVV|доступн[а-яё ]+баланс|autorización en tiempo real|verificación CVV|saldo disponible|autorização em tempo real|verificação CVV|autorisation en temps réel|vérification CVV|Echtzeitautorisierung|CVV-Prüfung|verfügbares Guthaben|实时授权|余额查询|CVV 验证|リアルタイム承認|残高確認|실시간 승인|잔액 확인|تفويض فوري|تحقق CVV|الرصيد المتاح/i,
     message: 'Claims live card authorization, CVV, or balance checks that are not present in the current local Luhn validator.',
     slugs: ['credit-card-validator'],
   },
@@ -247,6 +268,18 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     pattern: /гиперболическ|sinh|cosh|tanh|senh|sin⁻¹|cos⁻¹|tan⁻¹|обратн[а-яё]+ тригонометр|клавиш[ау]\s*['’]Exp['’]|функци[яю]\s*['’]2nd['’]|['’]2nd['’]|\bShift\b|\bAns\b|\bSTO\b|\bEquation\b|\bExp\b|обратн[а-яё]+ польск[а-яё]+ нотаци|дифференциальных уравнений|\bhyperbolic\b|hiperb[oó]lic|hiperb[oó]licas|\breverse polish notation\b|\bRPN\b|逆波兰|逆ポーランド|复数|複素|복소수|الأعداد المركبة|nombres complexes|números complejos|números complexos|matriz|matrices|矩阵|行列|매트릭스|WebAssembly|Wasm|56种|56\s+opera|log10|log₂|logₐ|graficaci[oó]n|graphiques?\s+2D|\bgraphing\b|\bHistory\b|Historial|Historique|Histórico|历史记录|履歴|\bCSV\b|\bLaTeX\b/i,
     message: 'Claims scientific-calculator controls or math modes that are not present in the current button UI.',
     slugs: ['scientific-calculator'],
+  },
+  {
+    code: 'bandwidth-calculator-live-network-claim',
+    pattern: /\breal-time speed test\b|\blive speed test\b|\bactual internet speed\b|\bmeasure(?:s)? your internet speed\b|\bmonitor(?:s|ing)? bandwidth\b|\bnetwork diagnostics?\b|измеря(?:ет|ть)[а-яё ]{0,40}фактическ[а-яё ]+скорост|проверя(?:ет|ть)[а-яё ]{0,40}скорост[а-яё ]+подключ|тест скорост[а-яё ]{0,40}реальн|мониторинг[а-яё ]+сети|диагностик[а-яё ]+сети/i,
+    message: 'Claims live network speed testing, monitoring, or diagnostics that are not present in the current formula-based calculator.',
+    slugs: ['bandwidth-calculator'],
+  },
+  {
+    code: 'project-estimation-unsupported-planning-claim',
+    pattern: /\bstory points?\b|стори[- ]?пойнт|балльн[а-яё ]{0,40}задач|AI[- ]?(?:powered )?(?:timeline|schedule|prediction)|автоматическ[а-яё ]{0,60}(?:график|расписани|план проекта)|рассчитыва(?:ет|ть)[а-яё ]{0,50}стоимост[а-яё ]+проекта|ресурсн[а-яё ]{0,30}планировани/i,
+    message: 'Claims story points, AI scheduling, cost estimation, or resource planning that are not present in the current PERT-only project estimator.',
+    slugs: ['project-estimation-calculator'],
   },
   {
     code: 'random-color-generator-unsupported-palette-controls',
@@ -304,7 +337,7 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
   },
   {
     code: 'merge-conflict-resolver-unsupported-visual-diff-claim',
-    pattern: /visual diff|side[- ]by[- ]side|highlighted conflicts|per-conflict|Edit merged result|Compare conflicting changes/i,
+    pattern: /visual diff|side[- ]by[- ]side|highlighted conflicts|per-conflict|Edit merged result|Compare conflicting changes|визуальн[а-яё ]{0,30}сравнен|подсветк[а-яё ]{0,30}конфликт|тр[её]хсторонн[а-яё ]+слиян|3[- ]?way merge|поблочн[а-яё ]+выбор|редактируем[а-яё ]+результат|автоматическ[а-яё ]{0,40}разреш/i,
     message: 'Claims Merge Conflict Resolver visual diff, per-conflict choices, or editable merged-result behavior that is not present in the current marker cleaner.',
     slugs: ['merge-conflict-resolver'],
   },
@@ -313,6 +346,12 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     pattern: /創造的|クリエイティブ|様々な効果|SNS投稿を作成/i,
     message: 'Claims broad creative output for Flip Text instead of the current upside-down, mirror, and reverse text transforms.',
     slugs: ['flip-text'],
+  },
+  {
+    code: 'small-text-unsupported-font-export-claim',
+    pattern: /\bfont picker\b|\bcustom fonts?\b|\bfont settings\b|\bexport(?:s|ing)? (?:PNG|SVG|CSS)\b|\bdownload(?:s)? as image\b|выбор[а-яё ]+шрифт|настройк[аи][а-яё ]+шрифт|скач(?:ать|ивает)[а-яё ]+(?:PNG|SVG|изображени)|экспорт[а-яё ]+(?:PNG|SVG|CSS)|интеграц[а-яё ]+с соцсет/i,
+    message: 'Claims font controls, image/CSS export, or social-platform integration that is not present in the current Unicode text-copy generator.',
+    slugs: ['small-text-generator'],
   },
   {
     code: 'jwt-signature-verification-claim',
@@ -429,6 +468,60 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['typescript-to-json'],
   },
   {
+    code: 'dependency-vulnerability-unsupported-live-audit-claim',
+    pattern: /requirements\.txt|production(?:-ready)? audit|real[-\s]?time advis(?:ory|ories)|live advis(?:ory|ories)|OSV API|Snyk API|GitHub advisory|GitHub Dependabot|export(?:s|ed)? (?:CSV|PDF)|export (?:the )?report|экспорт(?:ируйте|ировать).{0,24}отч[её]т|полный аудит|производственн[а-яё\s]+аудит|сканир(?:ует|уйте|ование).{0,60}(?:OSV|Snyk|GitHub|npm|PyPI)|провер(?:яет|ьте|ка).{0,60}(?:requirements\.txt|OSV|Snyk|GitHub|PyPI)/i,
+    message: 'Claims live advisory integrations, requirements.txt scanning, production audit coverage, or report export that are not present in the current local demo checker.',
+    slugs: ['dependency-vulnerability-checker'],
+  },
+  {
+    code: 'invoice-template-unsupported-pdf-payment-claim',
+    pattern: /download PDF|export PDF|PDF export|payment links?|payment gateways?|sync with (?:QuickBooks|Xero|accounting)|QuickBooks|Xero|logo upload|automatic invoice sending|email invoices|manage recurring invoices|send invoices through|созда[её](?:т|йте).{0,30}PDF|скач(?:ать|айте).{0,30}PDF|плат[её]жн[а-яё\s]+ссыл|загруз(?:ка|ите).{0,20}логотип|интеграц[а-яё\s]+(?:QuickBooks|Xero)|автоматическ[а-яё\s]+отправ/i,
+    message: 'Claims PDF export, logo upload, invoice sending, recurring billing, payment links, or accounting sync that are not present in the current HTML invoice template tool.',
+    slugs: ['invoice-template-generator'],
+  },
+  {
+    code: 'jwt-payload-unsupported-verification-claim',
+    pattern: /verify (?:the )?(?:JWT|token|signature)|signature verification with|validates? (?:the )?(?:JWT|token|signature)|JWKS|JWK set|RS256 public key|secret key validation|refresh tokens?|OAuth (?:flow|callback)|валидир(?:ует|уйте).{0,30}(?:JWT|токен|подпис)|провер(?:ка|ьте).{0,30}подпис[ьи]|публичн[а-яё\s]+ключ|секретн[а-яё\s]+ключ|refresh[-\s]?токен|OAuth/i,
+    message: 'Claims JWT signature validation, key/JWKS handling, OAuth flow, or refresh-token behavior that is not present in the current local decoder.',
+    slugs: ['jwt-payload-decoder'],
+  },
+  {
+    code: 'base64-image-unsupported-editing-claim',
+    pattern: /quality slider|batch (?:convert\b|conversion\b|processing\b)|preserve(?:s)? EXIF|EXIF metadata|remove metadata|crop images?|transcode to|convert between (?:PNG|JPG|JPEG|WebP|AVIF)|WebP export|AVIF export|lossless compression|пакетн[а-яё\s]+конвер|ползунок[а-яё\s]+качеств|EXIF|обрез(?:ка|ать).{0,20}изображ|транскодир|конвертац[а-яё\s]+между.{0,30}(?:PNG|JPG|JPEG|WebP|AVIF)/i,
+    message: 'Claims image editing, batch conversion, metadata/EXIF handling, quality controls, or format transcoding that are not present in the current Base64 image preview tool.',
+    slugs: ['base64-image-converter'],
+  },
+  {
+    code: 'changelog-advanced-unsupported-git-import-claim',
+    pattern: /Git commit messages?|read Git history|parse(?:s)? commits|import commits|compare tags|GitHub releases?|pull request titles|Conventional Commits? parser|из Git коммит|читает.{0,20}Git history|импорт(?:ирует|ируйте).{0,30}commit|сравн(?:ивает|ить).{0,30}tags|GitHub releases|mensajes de commit|commits de Git|historial de Git|importar commits|comparar tags|lanzamientos de GitHub|t[ií]tulos de pull request/i,
+    message: 'Claims Git history import, commit parsing, tag comparison, GitHub release sync, or PR-title parsing that are not present in the current manual changelog editor.',
+    slugs: ['changelog-generator-advanced'],
+  },
+  {
+    code: 'git-tag-manager-unsupported-repo-operation-claim',
+    pattern: /executes? Git commands|runs? git tag|connects? to (?:a )?repository|reads? existing tags|automatically pushes?|delete(?:s)? remote tags|creates? tags in your repo|выполня(?:ет|йте).{0,30}git|подключа(?:ет|ется).{0,30}репозитор|автоматическ[а-яё\s]+push|читает.{0,30}tags|удаля(?:ет|йте).{0,30}remote/i,
+    message: 'Claims live repository operations, command execution, automatic push/delete, or existing-tag reads that are not present in the current Git command planner.',
+    slugs: ['git-tag-manager'],
+  },
+  {
+    code: 'git-branch-naming-unsupported-repo-policy-claim',
+    pattern: /integrates with Git|Git integration|connects? to (?:a )?Git repository|enforces? (?:team )?(?:branch )?(?:naming )?(?:polic(?:y|ies)|rules|standards?)|repository polic(?:y|ies)|repo polic(?:y|ies)|CI\/CD (?:check|gate|pipeline|workflow)|pipeline enforcement|custom regex (?:rules?|editor|configuration)|custom regular expression|bulk branch validation|batch branch validation|creates? (?:a )?(?:Git )?branch|runs? git branch|executes? Git commands|GitHub branch protection|pull request checks?|팀 표준 강제|CI\/CD에 체크인|저장소 정책 강제|사용자 지정 정규식|커스텀 정규식|일괄 브랜치 검증|대량 브랜치 검증|브랜치를 생성/i,
+    message: 'Claims Git integration, repository policy enforcement, CI/CD gates, custom rules, bulk validation, or branch creation that are not present in the current branch-name checker.',
+    slugs: ['git-branch-naming-validator'],
+  },
+  {
+    code: 'markdown-html-unsupported-css-download-claim',
+    pattern: /Customize CSS|custom CSS editor|CSS editor|download HTML file|downloadable HTML|front[-\s]?matter|table[-\s]?of[-\s]?contents|syntax[-\s]?highlighting export|custom stylesheet|редактир(?:ует|уйте).{0,20}CSS|CSS[-\s]?редактор|front matter|table of contents|оглавлен[а-яё\s]+автомат/i,
+    message: 'Claims CSS editing, HTML file download, front matter parsing, table-of-contents generation, or syntax-highlight export that are not present in the current Markdown-to-HTML copy/preview tool.',
+    slugs: ['markdown-to-html-converter'],
+  },
+  {
+    code: 'sql-mongodb-unsupported-migration-driver-claim',
+    pattern: /select (?:a )?MongoDB driver|driver selection|database migration|schema migration|migrate SQL database|connects? to (?:MongoDB|database)|executes? queries|runs? MongoDB|JOINs?|subqueries|DDL|CREATE TABLE|ALTER TABLE|aggregation pipeline|index(?:es)? creation|выберите MongoDB driver|миграц[а-яё\s]+(?:баз|схем|данн)|подключа(?:ет|ется).{0,30}(?:MongoDB|баз)|выполня(?:ет|йте).{0,30}(?:запрос|MongoDB)|JOIN|subquery|агрегац[а-яё\s]+pipeline|создан[а-яё\s]+индекс/i,
+    message: 'Claims MongoDB driver selection, live execution, database/schema migration, joins/subqueries/DDL, aggregation pipelines, or index creation that are not present in the current SQL snippet converter.',
+    slugs: ['sql-to-mongodb-converter'],
+  },
+  {
     code: 'financial-forecast-unsupported-cashflow-investor-claim',
     pattern: /Project cash flow|Create investor projections|investor projections|seasonalAdjustment|seasonal adjustment|Monte Carlo|valuation model|accounting software/i,
     message: 'Claims cash-flow, investor, seasonal, valuation, or accounting behavior that is not present in the current revenue/expense/profit forecast calculator.',
@@ -532,9 +625,21 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
   },
   {
     code: 'api-tester-unsupported-client-claim',
-    pattern: /\bany API endpoint\b|\bbypass(?:es)? CORS\b|\bCORS proxy\b|\brequest history\b|\bcollections?\b|\benvironment variables?\b|\bOAuth flows?\b|\bsecret storage\b/i,
+    pattern: /\bany API endpoint\b|\bbypass(?:es)? CORS\b|\bCORS proxy\b|\brequest history\b|\bcollections?\b|\benvironment variables?\b|\bOAuth flows?\b|\bsecret storage\b|любу[яю][^.\n]{0,50}конечн[а-яё ]+точк|об(?:ход|ойти|ходит)[а-яё ]{0,20}CORS|CORS[- ]?прокси|истори[яю][а-яё ]{0,20}запрос|коллекци[ия]|переменн[а-яё ]+окружени|OAuth[- ]?поток|хранени[ея][а-яё ]+секрет/i,
     message: 'Claims API client, CORS, history, collection, environment, or auth management behavior that is not present in the current browser-fetch tester.',
     slugs: ['api-tester'],
+  },
+  {
+    code: 'code-complexity-unsupported-static-analysis-claim',
+    pattern: /\bAST\b|\bESLint\b|\bSonarQube\b|\brepository scan\b|\bproject upload\b|\bautomatic refactoring\b|\bsecurity vulnerabilities\b|парс(?:ит|инг)[а-яё ]+AST|сканиру(?:ет|йте)[а-яё ]+репозитор|загружа(?:ет|йте)[а-яё ]+весь проект|автоматическ[а-яё ]{0,40}(?:исправля|рефактор)|поиск[а-яё ]+уязвимост/i,
+    message: 'Claims AST, linter-grade, repository, auto-refactor, or security scanning behavior that is not present in the current snippet-level complexity analyzer.',
+    slugs: ['code-complexity-analyzer'],
+  },
+  {
+    code: 'unused-imports-unsupported-project-analysis-claim',
+    pattern: /\bESLint\b|\bTypeScript compiler\b|\btsserver\b|\bproject-wide\b|\brepository scan\b|\bauto(?:matically)? (?:fix|remove|organize)s? imports\b|\bmodif(?:y|ies) files\b|сканиру(?:ет|йте)[а-яё ]+(?:проект|репозитор)|автоматическ[а-яё ]{0,40}(?:удаля|исправля|организ)|изменя(?:ет|йте)[а-яё ]+файлы|компилятор[а-яё ]+TypeScript/i,
+    message: 'Claims project-wide lint/compiler analysis, automatic file edits, or IDE-style import organization that is not present in the current pasted-snippet unused-import finder.',
+    slugs: ['unused-imports-finder'],
   },
   {
     code: 'radar-chart-unsupported-editor-claim',
@@ -544,7 +649,7 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
   },
   {
     code: 'meeting-agenda-unsupported-export-share-claim',
-    pattern: /\bExport and share\b|\bsend(?:s|ing)? calendar invitations?\b|\bGoogle Calendar\b|\bOutlook\b|\bdownload(?:able)? PDF\b|\bshared workspace\b|\bmeeting library\b/i,
+    pattern: /\bExport and share\b|\bsend(?:s|ing)? calendar invitations?\b|\bGoogle Calendar\b|\bOutlook\b|\bdownload(?:able)? PDF\b|\bshared workspace\b|\bmeeting library\b|отправ(?:ляет|ка|ьте)[а-яё ]+календарн[а-яё ]+приглаш|Google Calendar|Outlook|скач(?:ать|ивает)[а-яё ]+PDF|общ(?:ее|ий)[а-яё ]+рабоч(?:ее|ий)[а-яё ]+простран|библиотек[а-яё ]+встреч/i,
     message: 'Claims meeting agenda export, calendar, sharing, or saved-library behavior that is not present in the current copy-only agenda builder.',
     slugs: ['meeting-agenda-builder'],
   },
@@ -691,6 +796,18 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     pattern: /Select database type|Click Optimize|query rewrites?|rewrite subqueries|database-specific|verify indexes/i,
     message: 'Claims database-specific optimization, EXPLAIN/runtime plans, query rewriting, or missing UI controls that are not present in the current static SQL text helper.',
     slugs: ['sql-query-optimizer'],
+  },
+  {
+    code: 'query-execution-planner-unsupported-explain-database-claim',
+    pattern: /Paste EXPLAIN output|EXPLAIN ANALYZE|Select database type|database type selector|plan visualization|visuali[sz]e execution plans|database-specific|PostgreSQL planner|MySQL optimizer|SQL Server execution plan|index recommendations?|optimization recommendations?|compare execution plans|connects? to (?:a )?database|executes? queries|runs? SQL|actual runtime cost|actual execution plan|EXPLAIN 출력|데이터베이스 유형 선택|계획 시각화|추천 사항 얻기|실행 계획 비교|실제 실행 계획|데이터베이스별|인덱스 추천/i,
+    message: 'Claims EXPLAIN parsing, database-specific planners, visual plan graphs, live execution, index recommendations, or plan comparison that are not present in the current heuristic SQL text planner.',
+    slugs: ['query-execution-planner'],
+  },
+  {
+    code: 'citation-formatter-unsupported-metadata-bibliography-claim',
+    pattern: /DOI lookup|URL lookup|fetch(?:es)? metadata|auto(?:matically)? (?:fill|import|generate)|BibTeX|RIS|CSL JSON|Zotero|Mendeley|Google Scholar|PubMed|bulk citations?|batch citations?|bibliography file|export(?:s)? (?:BibTeX|RIS|CSL|Word|DOCX)|guaranteed(?:ly)? compliant|100% accurate|perfect APA|busca(?:r)? metadados|preenchimento automático|importar metadados|importar BibTeX|exportar BibTeX|citações em lote|bibliografia completa|garante conformidade|100% correto/i,
+    message: 'Claims citation metadata lookup, reference-manager import/export, bulk bibliographies, or guaranteed style compliance that are not present in the current manual citation formatter.',
+    slugs: ['citation-formatter'],
   },
   {
     code: 'countdown-days-unsupported-calendar-export-claim',

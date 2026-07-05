@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Go Formatter is a browser-based helper for cleaning up pasted Go snippets. It applies lightweight indentation, spacing around common operators, comma spacing, and brace-based line structure, then gives you a copy-ready output pane. It is useful for small examples, documentation snippets, and quick readability cleanup before you run your normal Go tooling. The formatter does not compile code, sort imports, rewrite packages, or replace the Go command-line formatter for production code.",
+  "detailed_description": "Go Formatter is a browser-based helper for cleaning up pasted Go snippets. It applies lightweight indentation, spacing around common operators, comma spacing, and brace-based line structure, then gives you a copy-ready output pane. It is useful for small examples, documentation snippets, and quick readability cleanup before you run your normal Go tooling. The formatter does not compile code, sort imports, rewrite packages, or replace the Go command-line formatter for production code. Treat the result as a readable draft for review notes, examples, or temporary cleanup, then verify important files in your own repository workflow.",
   "usage_steps": [
     "Paste a short Go snippet into the input editor.",
     "Click Format to apply browser-side indentation and spacing cleanup.",
@@ -25,6 +25,14 @@
     {
       "question": "Is my Go code uploaded?",
       "answer": "No. Formatting runs in the browser for the text you paste into the page."
+    },
+    {
+      "question": "What should I check before using the Go Formatter output?",
+      "answer": "Review code, configuration, parsing details, and any assumptions before using the result in a repository, script, or deployment workflow."
+    },
+    {
+      "question": "Can I edit the result after generating it?",
+      "answer": "Yes. Adjust the input values or available options, generate the result again, and then copy, export, or reuse the updated output in your workflow when the page provides those actions."
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Calculadora Binaria es una herramienta en línea práctica que te ayuda a completar varias tareas rápidamente. Usando Calculadora Binaria, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla eficientemente. Ya seas desarrollador, diseñador o usuario general, Calculadora Binaria puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y no se subirá a ningún servidor.",
+  "detailed_description": "Calculadora Binaria es una herramienta en línea práctica que te ayuda a completar varias tareas rápidamente. Usando Calculadora Binaria, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla eficientemente. Ya seas desarrollador, diseñador o usuario general, Calculadora Binaria puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y no se subirá a ningún servidor. Calculadora Binaria está pensado para cálculos rápidos y comparación de condiciones. Revisa unidades, supuestos, redondeo y valores de entrada antes de usar el resultado como referencia.",
   "usage_steps": [
     "Abrir la página de la herramienta Calculadora Binaria",
     "Ingresar o pegar el contenido a procesar en el cuadro de entrada",
@@ -9,6 +9,30 @@
   ],
   "usage_examples": [
     "Usar Calculadora Binaria para procesar tus datos",
-    "Obtener resultados de procesamiento rápidamente sin esperar"
+    "Obtener resultados de procesamiento rápidamente sin esperar",
+    "Comprobar un cálculo rápido y revisar las suposiciones antes de usar el resultado.",
+    "Comparar varias entradas para entender cómo cambia el resultado final."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Calculadora Binaria?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra calculadora?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

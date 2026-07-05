@@ -1,34 +1,38 @@
 {
-  "detailed_description": "Image Splitter divide una imagen subida en una cuadrícula simple de filas y columnas dentro del navegador. Puedes usar presets como 2x2, 3x3, 4x4, 2x3 o 3x2, o introducir manualmente valores de 1 a 10 para filas y columnas. Después de cargar la imagen, la página muestra una cuadrícula superpuesta, el tamaño original y el tamaño calculado de cada parte. Al hacer clic en Split, la herramienta recorta las piezas con Canvas y permite descargar una pieza individual o todas juntas en un archivo ZIP.",
+  "detailed_description": "Image Splitter permite dividir una imagen online en una cuadrícula simple de filas y columnas dentro del navegador. Puedes elegir presets como 2x2, 3x3, 4x4, 2x3 y 3x2, o introducir manualmente valores de 1 a 10 para filas y columnas. La página muestra la imagen original con una cuadrícula superpuesta, el tamaño de origen y el tamaño calculado de cada parte. Al hacer clic en Split, Canvas genera piezas PNG rectangulares e iguales. Después puedes descargar una pieza individual desde la vista previa o guardar todas las piezas en un archivo ZIP. Está pensado para borradores de cuadrículas sociales, material educativo, revisión de diseños e ilustraciones grandes. No añade solapamiento, no cambia el formato de salida ni conserva metadatos.",
   "usage_steps": [
-    "Selecciona una imagen desde el campo de carga.",
-    "Elige un preset de cuadrícula o define filas y columnas manualmente.",
-    "Revisa la cuadrícula superpuesta y el tamaño de cada parte.",
-    "Haz clic en Split para crear las piezas en el navegador.",
+    "Sube una imagen desde el selector de archivos.",
+    "Elige un preset como 3x3 o define filas y columnas de 1 a 10.",
+    "Revisa la cuadrícula superpuesta, el tamaño original y el tamaño de cada pieza.",
+    "Haz clic en Split para crear piezas PNG en el navegador.",
     "Descarga una pieza desde la vista previa o usa Download All para guardar un ZIP."
   ],
   "usage_examples": [
-    "Dividir un banner en una cuadrícula 3x2 para una maqueta visual.",
-    "Crear piezas iguales de una imagen para una actividad o rompecabezas sencillo.",
-    "Separar una ilustración grande en partes PNG más pequeñas para revisarlas.",
-    "Descargar todas las piezas generadas en un ZIP después de comprobar la vista previa."
+    "Dividir una imagen en 9 partes para previsualizar una cuadrícula de publicación.",
+    "Crear piezas PNG iguales de una ilustración para una actividad de clase.",
+    "Cortar un banner en una cuadrícula 2x3 para revisar secciones por separado.",
+    "Descargar todas las piezas en ZIP después de comprobar la cuadrícula."
   ],
   "faqs": [
     {
-      "question": "¿Puedo descargar todas las piezas a la vez?",
-      "answer": "Sí. Después de dividir la imagen, usa Download All para guardar las piezas en un archivo ZIP."
+      "question": "¿Qué crea Image Splitter?",
+      "answer": "Crea piezas PNG rectangulares e iguales desde una imagen según la cuadrícula de filas y columnas elegida."
     },
     {
-      "question": "¿Qué tamaños de cuadrícula puedo usar?",
-      "answer": "La página incluye presets 2x2, 3x3, 4x4, 2x3 y 3x2, además de campos manuales de 1 a 10."
+      "question": "¿Puedo elegir filas y columnas?",
+      "answer": "Sí. Puedes usar presets o introducir filas y columnas de 1 a 10."
     },
     {
-      "question": "¿Dónde se procesa la imagen?",
-      "answer": "La carga, vista previa, división y descarga se realizan en el navegador."
+      "question": "¿Puedo descargar todas las piezas juntas?",
+      "answer": "Sí. Después de dividir la imagen, Download All guarda todas las piezas PNG en un ZIP."
     },
     {
-      "question": "¿Puedo descargar una sola parte?",
-      "answer": "Sí. Pasa el cursor sobre una pieza generada y usa la acción de descarga de esa parte."
+      "question": "¿La imagen se procesa en un servidor?",
+      "answer": "No. La carga, vista previa, división y descarga se realizan en el navegador."
+    },
+    {
+      "question": "¿Incluye solapamiento, EXIF o selección de formato?",
+      "answer": "No. La herramienta genera piezas PNG simples y sin solapamiento a partir de la cuadrícula."
     }
   ]
 }

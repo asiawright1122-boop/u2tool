@@ -1,10 +1,10 @@
 {
-  "detailed_description": "The Hex Editor is a browser-based text and hexadecimal converter for quick byte-level inspection. Enter text to encode it as uppercase UTF-8 hex bytes, or paste a hex sequence to decode it back into readable text. The tool keeps the workflow intentionally simple: two editable text areas, explicit conversion buttons, and copy controls for either side. It is useful when checking API payloads, inspecting encoded strings, comparing byte values in logs, or teaching how characters map to hexadecimal bytes. All conversion runs in the browser through standard text encoding and decoding APIs, so pasted text and hex values stay on the device.",
+  "detailed_description": "The online Hex Editor is a browser-based text and hexadecimal converter for quick byte-level inspection. Use it as a text to hex and hex to text converter: enter text to encode it as uppercase UTF-8 hex bytes, or paste a hex sequence to decode it back into readable text. The tool keeps the workflow intentionally simple with two editable text areas, explicit conversion buttons, and copy controls for either side. It is useful when checking API payloads, inspecting encoded strings, comparing byte values in logs, or teaching how characters map to hexadecimal bytes. All conversion runs in the browser through standard text encoding and decoding APIs, so pasted text and hex values stay on the device.",
   "usage_steps": [
     "1. Type or paste text in the Text field.",
-    "2. Click To Hex to encode the text as uppercase hexadecimal bytes separated by spaces.",
+    "2. Click To Hex to run a text to hex conversion as uppercase hexadecimal bytes separated by spaces.",
     "3. Paste a hexadecimal sequence in the Hexadecimal field when you want to decode existing data.",
-    "4. Click To Text to decode the hex bytes back into text.",
+    "4. Click To Text to run hex to text decoding back into readable text.",
     "5. Use Copy beside either field to copy the text or hex result."
   ],
   "usage_examples": [
@@ -17,6 +17,10 @@
     {
       "question": "Is this a full binary file editor?",
       "answer": "No. The current Hex Editor is a browser text-to-hex and hex-to-text converter for small strings. It does not provide an offset table, per-byte editing controls, upload handling, or saved binary output."
+    },
+    {
+      "question": "Can I use it as an online hex editor for text to hex and hex to text?",
+      "answer": "Yes. It is designed for online text to hex and hex to text conversion of small strings, log snippets, payload examples, and UTF-8 hex checks directly in the browser."
     },
     {
       "question": "Which encoding does text-to-hex use?",
@@ -32,7 +36,7 @@
     },
     {
       "question": "What is this tool best for?",
-      "answer": "It is best for quick checks of logs, payloads, and test fixtures, plus UTF-8 byte examples and copying small hex strings into docs or tickets."
+      "answer": "It is best for quick checks of logs, payloads, and test fixtures, plus UTF-8 hex byte examples and copying small hex strings into docs or tickets."
     }
   ]
 }

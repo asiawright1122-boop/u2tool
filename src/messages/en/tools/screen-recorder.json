@@ -29,6 +29,10 @@
     {
       "question": "Why might recording fail to start?",
       "answer": "The browser must support getDisplayMedia and MediaRecorder, and the screen-sharing permission must be allowed."
+    },
+    {
+      "question": "What should I check before using the Screen Recorder output?",
+      "answer": "Review dates, names, totals, and formatting before using the result in a document, schedule, or team handoff."
     }
   ]
 }

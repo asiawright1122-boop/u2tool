@@ -1,15 +1,16 @@
 {
-  "detailed_description": "Markdown to HTML Converter transforms Markdown documents into clean HTML with GFM support.",
+  "detailed_description": "Markdown to HTML Converter turns typed Markdown into sanitized HTML in the browser. The converter uses marked with GitHub-flavored Markdown enabled, an optional line-break setting, an HTML code view, a rendered preview view, and a copy button for the generated HTML. It is useful for README snippets, docs drafts, blog fragments, and quick checks before moving the HTML into another editor. Styling, file saving, metadata parsing, navigation builders, and highlighted export workflows stay outside this page.",
   "usage_steps": [
-    "Paste Markdown content",
-    "Select options",
-    "Preview HTML output",
-    "Customize CSS",
-    "Copy or download"
+    "Paste or edit Markdown in the input pane.",
+    "Keep GFM enabled for tables, task lists, and common GitHub-style syntax.",
+    "Turn line breaks on only when you want single newlines to become HTML breaks.",
+    "Switch between HTML and Preview to inspect the generated result.",
+    "Copy the sanitized HTML output when it looks right."
   ],
   "usage_examples": [
-    "Convert README to HTML",
-    "Generate HTML docs",
-    "Create styled emails"
+    "Convert a README section into HTML before pasting it into a CMS.",
+    "Preview a Markdown documentation fragment while drafting.",
+    "Check how links, images, lists, quotes, and inline code render.",
+    "Copy a sanitized HTML snippet for a small internal note."
   ]
 }

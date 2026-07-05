@@ -1391,6 +1391,7 @@ const allowedZhTechnicalTokens = new Set(
     'markdown',
     'lorem',
     'ipsum',
+    'luhn',
     'mime',
     'opengraph',
     'prettier',
@@ -1502,6 +1503,10 @@ const repairedLocaleSeoCases: Partial<
     },
   },
   ru: {
+    'image-splitter': {
+      title: ['разделитель', 'изображений'],
+      description: ['png', 'строкам', 'столбцам'],
+    },
     'expense-report-generator': {
       title: ['отчетов', 'расходах'],
       description: ['чеками', 'возмещений'],
@@ -1536,6 +1541,10 @@ const repairedLocaleSeoCases: Partial<
     },
   },
   fr: {
+    'image-splitter': {
+      title: ['diviseur', 'images'],
+      description: ['png', 'lignes', 'colonnes'],
+    },
     'invoice-template-generator': {
       title: ['facture', 'modèle'],
       description: ['taxes', 'total'],
@@ -1554,6 +1563,10 @@ const repairedLocaleSeoCases: Partial<
     },
   },
   pt: {
+    'image-splitter': {
+      title: ['divisor', 'imagens'],
+      description: ['png', 'linhas', 'colunas'],
+    },
     'meeting-minutes-generator': {
       title: ['atas', 'reunião'],
       description: ['participantes', 'itens de ação'],
@@ -1576,18 +1589,30 @@ const repairedLocaleSeoCases: Partial<
     },
   },
   de: {
+    'image-splitter': {
+      title: ['bildteiler'],
+      description: ['png', 'zeilen', 'spalten'],
+    },
     'database-backup-scheduler': {
       title: ['datenbank', 'backups'],
       description: ['cron-jobs', 'postgresql'],
     },
   },
   es: {
+    'image-splitter': {
+      title: ['divisor', 'imágenes'],
+      description: ['png', 'filas', 'columnas'],
+    },
     'query-execution-planner': {
       title: ['ejecución', 'consultas'],
       description: ['explain', 'consultas lentas'],
     },
   },
   ko: {
+    'image-splitter': {
+      title: ['이미지', '분할기'],
+      description: ['png', '행', '열'],
+    },
     'budget-variance-analyzer': {
       title: ['예산', '변동'],
       description: ['집행률', '불리한'],

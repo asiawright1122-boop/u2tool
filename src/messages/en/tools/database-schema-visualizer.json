@@ -4,12 +4,14 @@
     "Paste SQL CREATE TABLE statements into the schema editor.",
     "Use Load Example if you want to see the expected SQL shape.",
     "Review the generated table cards, column types, and primary-key markers.",
-    "Check the relationship list for detected foreign-key references."
+    "Check the relationship list for detected foreign-key references.",
+    "Review the generated output for accuracy and missing context."
   ],
   "usage_examples": [
     "Summarize a small SQL schema before adding it to project documentation.",
     "Review legacy CREATE TABLE statements and spot primary keys or foreign keys.",
-    "Prepare a schema discussion by sharing the parsed table and relationship list."
+    "Prepare a schema discussion by sharing the parsed table and relationship list.",
+    "Review generated code, configuration, or diagnostics before using them in a repository or deployment workflow."
   ],
   "faqs": [
     {
@@ -27,6 +29,10 @@
     {
       "question": "Does it connect to my database?",
       "answer": "No. Paste SQL text into the page; the tool does not connect to a live database or inspect credentials."
+    },
+    {
+      "question": "What should I check before using the Database Schema Visualizer output?",
+      "answer": "Review code, configuration, parsing details, and any assumptions before using the result in a repository, script, or deployment workflow."
     }
   ]
 }

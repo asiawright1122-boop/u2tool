@@ -1,22 +1,22 @@
 {
-  "detailed_description": "Morse Code Player helps you convert text to Morse code and Morse code back to text in the browser. You can type a practice phrase, generate the dot-dash sequence, play the audio tone, adjust playback speed and frequency, copy the output, and inspect the visual dot-dash pattern on the page. In decode mode, paste a Morse sequence using dots, dashes, spaces, and slashes to turn supported symbols back into text. The tool is useful for practice sessions, classroom examples, radio hobby notes, and quick checks when you want both a readable sequence and an audible rhythm. It does not include a full Morse alphabet table or advanced training scheduler.",
+  "detailed_description": "Morse Code Player online helps you convert text to Morse code, decode Morse back to text, and play Morse code live audio in the browser. Use it as a quick Morse player for listening practice: type a phrase, generate the dot-dash sequence, press Play, adjust playback speed and frequency, copy the output, and inspect the visual rhythm on the page. In Morse to Text mode, paste supported dots, dashes, spaces, and slashes to decode letters and word breaks. It fits classroom demos, amateur-radio practice notes, scouts or learning sessions, and quick checks when you need both readable code and audible timing. It is not a full Morse alphabet table, certification trainer, or professional transmission validator.",
   "usage_steps": [
     "Choose Text to Morse or Morse to Text.",
     "Enter plain text or Morse symbols in the input box.",
     "Adjust playback speed and frequency if you plan to listen.",
     "Click Convert to show the Morse or text output.",
-    "Use Play, the visualization, and the legend to review the dot-dash timing."
+    "Use Play, the visualization, and the legend to review the dot-dash timing for Morse code play practice."
   ],
   "usage_examples": [
-    "Turn a short practice phrase into Morse code and listen to it.",
-    "Decode a Morse sequence such as .... . .-.. .-.. --- back into text.",
+    "Open the Morse code player online, turn a short practice phrase into Morse code, and listen to it.",
+    "Decode a sample SOS sequence back into text without memorizing a full table.",
     "Compare slower and faster playback speeds while practicing recognition.",
-    "Copy a generated dot-dash sequence into a lesson note or radio practice worksheet."
+    "Use the Morse player to copy a generated dot-dash sequence into a lesson note or radio practice worksheet."
   ],
   "faqs": [
     {
-      "question": "Can this tool play Morse audio?",
-      "answer": "Yes. After converting text to Morse, use Play to hear dots and dashes with the selected speed and frequency."
+      "question": "Is this a Morse code player online?",
+      "answer": "Yes. It runs in your browser, converts text to Morse code, and plays live dot-dash audio with the selected speed and frequency."
     },
     {
       "question": "Can it decode Morse back to text?",
@@ -32,7 +32,7 @@
     },
     {
       "question": "Can I change the sound?",
-      "answer": "Yes. You can adjust playback speed and tone frequency before pressing Play, which helps compare slower practice audio with faster review audio."
+      "answer": "Yes. You can adjust playback speed and tone frequency before pressing Play, which helps compare slower Morse code live practice audio with faster review audio."
     }
   ]
 }

@@ -1,17 +1,35 @@
 {
-  "detailed_description": "El Generador de Gráficos Circulares permite crear visualizaciones precisas de proporciones de datos mediante la generación de gráficos circulares en formatos PNG y SVG. Técnicamente, el sistema procesa datos numéricos mediante algoritmos de cálculo angular para distribuir sectores en base a valores proporcionales, aplicando técnicas de renderizado vectorial para exportaciones escalables. Incluye opciones avanzadas como la personalización de paletas de colores (HEX/RGB), ajuste de ángulos iniciales, profundidad 3D mediante sombreado de segmentos, y exportación con resolución configurable. Los usuarios necesitan esta herramienta para analizar distribuciones de presupuestos, resultados de encuestas, segmentación de mercado o composición demográfica, evitando procesos manuales en software complejo. Su motor basado en JavaScript ejecuta cálculos en el cliente, garantizando privacidad de datos y respuesta en tiempo real mediante un canvas interactivo que actualiza automáticamente los sectores al modificar valores o etiquetas.",
+  "detailed_description": "El generador de gráficos de pastel convierte una tabla pequeña de nombres y valores en un gráfico de pastel, dona o rosa. Puede editar filas manualmente, importar un CSV simple con formato name,value, cambiar el título, elegir un tema de color, mostrar u ocultar leyenda, etiquetas y porcentajes, y revisar el total calculado antes de exportar. El resultado se puede descargar como PNG o SVG. Es útil para informes de presupuesto, distribución de ventas, encuestas, participación de canales y otras composiciones con pocas categorías.",
   "usage_steps": [
-    "Accede al panel de entrada de datos y escribe valores numéricos en columnas separadas por comas o pega directamente desde CSV/JSON.",
-    "Selecciona un esquema de colores predefinido o personaliza los códigos HEX para cada segmento en el editor de paleta.",
-    "Ajusta el radio del gráfico mediante un control deslizante de 100 a 500 píxeles y activa la opción de efecto 3D para profundidad visual.",
-    "Configura las etiquetas mostradas: porcentaje, valor absoluto o combinación, ajustando el tamaño de fuente desde el menú de estilo.",
-    "Interactúa con la previsualización en tiempo real arrastrando segmentos para destacarlos o usando el botón de rotación automática.",
-    "Exporta el resultado final como PNG con transparencia o SVG editables, aplicando compresión GZIP para reducir tamaño de archivos."
+    "Cargue los datos de ejemplo, importe un CSV simple o añada filas manualmente.",
+    "Edite el nombre y el valor de cada categoría en la tabla.",
+    "Defina el título del gráfico y seleccione un tema de color.",
+    "Active o desactive leyenda, etiquetas, porcentajes, modo dona o modo rosa.",
+    "Revise la vista previa, el total y los porcentajes calculados.",
+    "Descargue el gráfico terminado como PNG o SVG."
   ],
   "usage_examples": [
-    "Un analista financiero visualiza el desglose de gastos mensuales para un informe corporativo, usando colores codificados por departamentos.",
-    "Un equipo de marketing representa resultados de una encuesta de satisfacción con clientes, destacando segmentos críticos mediante explosión de sectores.",
-    "Un consultor de inversiones crea gráficos comparativos de portafolios con efecto 3D para presentaciones ejecutivas en PDF.",
-    "Un investigador académico genera gráficos SVG editables para incluir en un artículo científico, manteniendo precisión de escalas."
+    "Mostrar la distribución de ventas por categoría en un informe mensual.",
+    "Crear una dona de asignación de presupuesto para una presentación.",
+    "Comparar la participación de canales de marketing con pocas categorías.",
+    "Convertir un archivo name,value CSV pequeño en un gráfico descargable."
+  ],
+  "faqs": [
+    {
+      "question": "¿Qué CSV admite?",
+      "answer": "Use una fila de encabezado y después filas con nombre y valor separados por coma."
+    },
+    {
+      "question": "¿Puedo crear un gráfico de dona?",
+      "answer": "Sí. Active la opción de dona para dejar vacío el centro del gráfico."
+    },
+    {
+      "question": "¿Qué formatos puedo descargar?",
+      "answer": "El resultado se puede descargar como PNG o SVG."
+    },
+    {
+      "question": "¿Es para datos enormes?",
+      "answer": "No. Está pensado para conjuntos pequeños de categorías que se revisan visualmente."
+    }
   ]
 }

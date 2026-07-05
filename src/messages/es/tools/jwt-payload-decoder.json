@@ -1,5 +1,5 @@
 {
-  "detailed_description": "El Decodificador de Carga JWT extrae y muestra el encabezado y la carga de los Tokens JSON Web sin requerir la clave secreta.",
+  "detailed_description": "El Decodificador de Carga JWT extrae y muestra el encabezado y la carga de los Tokens JSON Web sin requerir la clave secreta. Decodificador de Carga JWT está pensado para una revisión inicial y aprendizaje, no como decisión final de seguridad. Usa el resultado como ayuda, revisa la entrada y confirma las conclusiones importantes con tu proceso habitual.",
   "usage_steps": [
     "Pegue el token JWT",
     "El token se decodifica automáticamente",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Depurar problemas de autenticación",
     "Verificar expiración de token",
-    "Extraer información de usuario de tokens"
+    "Extraer información de usuario de tokens",
+    "Hacer una revisión inicial con contenido público o una entrada corta antes de una comprobación manual de seguridad."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Decodificador de Carga JWT?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta de seguridad?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

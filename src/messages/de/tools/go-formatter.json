@@ -1,12 +1,38 @@
 {
-  "detailed_description": "Der Go-Formatter ist ein Online-Tool, das Ihren Go-Code gemäß den offiziellen gofmt-Konventionen der Go-Community formatiert. Es stellt sicher, dass Ihr Code die strengen Formatierungsstandards von Go einhält, wodurch er leichter lesbar und wartbar wird. Das Tool übernimmt die Einrückung, Ausrichtung, Abstände und die Organisation von Importen automatisch. Ob Sie an einem kleinen Skript oder einem großen Go-Projekt arbeiten, dieser Formatter hilft dabei, einen konsistenten Code-Stil über Ihren gesamten Codebasis zu wahren. Einfach Ihren Go-Code einfügen und in Sekunden perfekt formatierten Output erhalten.",
+  "detailed_description": "Der Go-Formatter ist ein Online-Tool, das Ihren Go-Code gemäß den offiziellen gofmt-Konventionen der Go-Community formatiert. Es stellt sicher, dass Ihr Code die strengen Formatierungsstandards von Go einhält, wodurch er leichter lesbar und wartbar wird. Das Tool übernimmt die Einrückung, Ausrichtung, Abstände und die Organisation von Importen automatisch. Ob Sie an einem kleinen Skript oder einem großen Go-Projekt arbeiten, dieser Formatter hilft dabei, einen konsistenten Code-Stil über Ihren gesamten Codebasis zu wahren. Einfach Ihren Go-Code einfügen und in Sekunden perfekt formatierten Output erhalten. Go-Formatter ist für eine schnelle Vorprüfung von Eingaben, Einstellungen und Ergebnissen gedacht. Nutze das Ergebnis als Entwurf, prüfe Format, Zahlen, Zeichen und Kontext, und bestätige wichtige Ausgaben in deinem eigenen Arbeitsablauf, bevor du sie teilst, veröffentlichst oder in einem Projekt verwendest.",
   "usage_steps": [
     "Fügen Sie Go-Code ein",
     "Klicken Sie auf Formatieren",
-    "Kopieren Sie den formatierten Code"
+    "Kopieren Sie den formatierten Code",
+    "Prüfe das Ergebnis und gleiche es mit deinem Ziel ab.",
+    "Verwende das Ergebnis erst nach der Kontrolle im Zielablauf."
   ],
   "usage_examples": [
     "Formatieren Sie Go-Pakete",
-    "Bereinigen Sie Code vor dem Commit"
+    "Bereinigen Sie Code vor dem Commit",
+    "Eine kurze Eingabe prüfen, bevor der vollständige Inhalt verarbeitet wird.",
+    "Das Ergebnis als Entwurf für Dokumentation, Code, Planung oder Kommunikation nutzen."
+  ],
+  "faqs": [
+    {
+      "question": "Was sollte ich vor der Nutzung von Go-Formatter prüfen?",
+      "answer": "Prüfe Eingaben, Einstellungen, Format und Kontext. Bei wichtigen Ergebnissen solltest du Zahlen, Zeichen und Bedeutung vor dem Teilen oder Veröffentlichen noch einmal kontrollieren."
+    },
+    {
+      "question": "Kann ich das Ergebnis nachträglich ändern?",
+      "answer": "Ja. Passe die Eingabe oder verfügbare Optionen an, führe die Verarbeitung erneut aus und verwende die aktualisierte Ausgabe erst nach einer Prüfung."
+    },
+    {
+      "question": "Warum kann das Ergebnis von einem anderen Werkzeug abweichen?",
+      "answer": "Werkzeuge können Rundung, Analyse, Formatierung oder Darstellung unterschiedlich behandeln. Vergleiche mit derselben Eingabe und beachte die Grenzen der Oberfläche."
+    },
+    {
+      "question": "Kann ich mit einer kurzen Eingabe beginnen?",
+      "answer": "Ja. Beginne mit einer kurzen oder nicht sensiblen Eingabe, um die Form der Ausgabe zu prüfen, bevor du den eigentlichen Inhalt verwendest."
+    },
+    {
+      "question": "Ersetzt das Werkzeug eine manuelle Prüfung?",
+      "answer": "Nein. Es beschleunigt wiederkehrende Arbeit, aber wichtige Ergebnisse sollten auf Genauigkeit, Kontext und Eignung geprüft werden."
+    }
   ]
 }

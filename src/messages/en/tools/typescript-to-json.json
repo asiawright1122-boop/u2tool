@@ -29,6 +29,10 @@
     {
       "question": "Can I save the result as a file from this page?",
       "answer": "The page focuses on copyable output. Use the copy button, then save the JSON in your editor if you need a file."
+    },
+    {
+      "question": "What should I check before using the TypeScript to JSON output?",
+      "answer": "Review field mapping, formatting, special characters, and a small sample before using the converted output elsewhere."
     }
   ]
 }

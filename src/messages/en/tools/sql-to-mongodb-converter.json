@@ -1,15 +1,16 @@
 {
-  "detailed_description": "SQL to MongoDB Converter translates SQL queries into equivalent MongoDB query syntax for database migration.",
+  "detailed_description": "SQL to MongoDB Converter turns simple SQL statements into MongoDB shell-style snippets in the browser. It handles SELECT queries as find or countDocuments, INSERT INTO ... VALUES as insertOne or insertMany, UPDATE ... SET as updateMany, and DELETE FROM as deleteMany. Supported SELECT clauses include WHERE, ORDER BY, LIMIT, and OFFSET, with common WHERE operators such as =, !=, comparison operators, IN, NOT IN, LIKE, and IS NULL. The page shows the detected collection, operation, generated query, examples, and a copy button for the query snippet. Complex SQL should be reviewed manually before use.",
   "usage_steps": [
-    "Paste SQL query",
-    "Select MongoDB driver",
-    "Click Convert",
-    "View MongoDB syntax",
-    "Copy the query"
+    "Paste a supported SQL statement, or choose one of the example buttons.",
+    "Review the generated operation and collection name.",
+    "Inspect the MongoDB query snippet in the output block.",
+    "Use the supported-operations list to keep the SQL shape simple.",
+    "Copy the generated query and adapt it in your own code or shell."
   ],
   "usage_examples": [
-    "Migrate SQL to MongoDB",
-    "Learn MongoDB syntax",
-    "Convert WHERE to $match"
+    "Convert SELECT * FROM users WHERE age >= 18 LIMIT 10 into a find query.",
+    "Turn INSERT INTO users (...) VALUES (...) into insertOne or insertMany.",
+    "Translate UPDATE users SET status = 'inactive' WHERE age < 18 into updateMany.",
+    "Create a deleteMany snippet from DELETE FROM sessions WHERE last_seen < '2024-01-01'."
   ]
 }

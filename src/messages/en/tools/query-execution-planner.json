@@ -1,15 +1,16 @@
 {
-  "detailed_description": "Query Execution Planner helps understand and optimize SQL query execution plans.",
+  "detailed_description": "Query Execution Planner creates a simplified browser-side plan from SQL text. It scans the query for common clauses such as FROM, WHERE, JOIN, GROUP BY, ORDER BY, and LIMIT, then shows estimated steps, rough costs, row counts, and warnings for patterns like missing WHERE clauses, function-wrapped filters, joins, or ORDER BY without LIMIT. Use it as a quick teaching and pre-check aid before checking the query with the planner from your own database system.",
   "usage_steps": [
-    "Paste EXPLAIN output",
-    "Select database type",
-    "Click Analyze",
-    "View plan visualization",
-    "Get recommendations"
+    "Paste a SQL query into the input area",
+    "Use Load Example if you want to start from the sample query",
+    "Review the estimated total cost shown above the plan",
+    "Read each generated step for operation, table, cost, rows, and warning details",
+    "Use the warnings as a checklist before testing the query in your database tools"
   ],
   "usage_examples": [
-    "Understand slow queries",
-    "Identify full table scans",
-    "Compare execution plans"
+    "Preview how a SELECT with WHERE and ORDER BY may be broken into simple plan steps",
+    "Spot a query without a WHERE clause before running it on a large table",
+    "Notice LOWER(email) or leading-wildcard LIKE filters that may need closer review",
+    "Check whether ORDER BY is paired with a LIMIT for result-heavy screens"
   ]
 }

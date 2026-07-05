@@ -1,15 +1,38 @@
 {
-  "detailed_description": "El Visualizador de Esquema de Base de Datos crea diagramas ER visuales a partir de declaraciones SQL CREATE TABLE.",
+  "detailed_description": "El Visualizador de Esquema de Base de Datos convierte sentencias SQL CREATE TABLE en una vista legible de tablas, columnas, claves primarias, claves foráneas y relaciones detectadas. Pega el SQL en el área de entrada o carga el ejemplo incluido para comprobar el formato. Cuando el parser encuentra tablas válidas, la página muestra tarjetas de tabla con sus columnas y una sección de relaciones para las referencias FK detectadas. Es útil para revisar un esquema pequeño, documentar una migración, explicar relaciones durante una revisión de código o entender rápidamente un fragmento SQL antes de pasarlo a una herramienta de modelado más completa.",
   "usage_steps": [
-    "Pega declaraciones CREATE TABLE",
-    "Haz clic en Visualizar",
-    "Ver relaciones",
-    "Arrastra para organizar",
-    "Exporta como PNG/SVG"
+    "Pega una o varias sentencias CREATE TABLE en el campo Esquema SQL.",
+    "Usa Cargar ejemplo si quieres ver primero el formato esperado por el parser.",
+    "Revisa las tarjetas generadas para confirmar nombres de tablas, columnas, tipos y marcas de clave primaria.",
+    "Comprueba la sección Relaciones cuando tus columnas incluyan referencias FK reconocibles.",
+    "Limpia la entrada y repite con un fragmento menor si el SQL original es demasiado grande o no se interpreta bien."
   ],
   "usage_examples": [
-    "Documentar la estructura de la base de datos",
-    "Comprender bases de datos heredadas",
-    "Planificar cambios en el esquema"
+    "Documentar rápidamente las tablas users, orders y order_items antes de una revisión de backend.",
+    "Explicar una relación de clave foránea a un compañero sin abrir un cliente de base de datos.",
+    "Revisar una migración CREATE TABLE generada por un ORM antes de aplicarla.",
+    "Extraer una vista simple de tablas heredadas para incluirla en una tarea o documento técnico."
+  ],
+  "faqs": [
+    {
+      "question": "Genera un diagrama ER con nodos arrastrables?",
+      "answer": "No. La página muestra tarjetas de tablas y una lista de relaciones detectadas. No incluye lienzo ER, arrastre de nodos ni exportación gráfica."
+    },
+    {
+      "question": "Qué tipo de entrada funciona mejor?",
+      "answer": "Funciona mejor con sentencias CREATE TABLE claras, tipos de columnas explícitos y relaciones FK escritas de forma reconocible."
+    },
+    {
+      "question": "Puedo conectarlo a una base de datos real?",
+      "answer": "No. El visualizador trabaja con SQL pegado en el navegador. No abre conexiones ni consulta servidores de base de datos."
+    },
+    {
+      "question": "Qué debo hacer si no aparecen relaciones?",
+      "answer": "Comprueba que las claves foráneas estén declaradas en el SQL y prueba con un fragmento más corto para aislar la tabla o columna problemática."
+    },
+    {
+      "question": "Sirve como documentación final del esquema?",
+      "answer": "Úsalo como revisión rápida. Para documentación formal, valida el SQL con tu motor de base de datos y revisa manualmente nombres, tipos y relaciones."
+    }
   ]
 }

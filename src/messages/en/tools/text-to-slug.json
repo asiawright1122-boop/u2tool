@@ -1,23 +1,23 @@
 {
-  "detailed_description": "The Text to Slug tool turns a title or phrase into a URL-friendly slug. It lowercases text, removes unsupported characters, converts spaces and separators into hyphens, trims extra hyphens, and updates the result on the page. It is useful for blog URLs, documentation anchors, product handles, and file naming drafts. Review generated slugs before publishing because project routing rules, duplicate URLs, and non-Latin transliteration requirements can differ.",
+  "detailed_description": "The Text to Slug tool turns a title, heading, product name, or short phrase into a simple URL-style slug. It normalizes accents, removes unsupported characters, trims the input, replaces whitespace with your selected separator, and can lowercase the result. The separator control supports hyphen, underscore, or no separator, and the result is shown immediately so you can copy it. The tool is useful for blog drafts, documentation anchors, product handles, static-site routes, and simple file-name ideas. It does not check uniqueness in your CMS, enforce route length, reserve protected words, or provide full transliteration for every script. Review the generated slug before publishing.",
   "usage_steps": [
     "Enter the title or phrase you want to slugify.",
-    "Review the generated slug.",
-    "Adjust the source text if the slug is too long or unclear.",
+    "Choose hyphen, underscore, or no separator.",
+    "Leave Lowercase enabled if your URL style uses lowercase slugs.",
+    "Review the generated slug shown under the controls.",
     "Copy the slug when it fits your URL style.",
-    "Check for duplicate slugs in your CMS or router.",
-    "Use the final slug in your page, article, or file path."
+    "Check uniqueness and reserved routes in your CMS or router."
   ],
   "usage_examples": [
     "Convert \"My New Blog Post\" into \"my-new-blog-post\".",
     "Create a documentation anchor from a section heading.",
     "Draft a product handle for a catalog URL.",
-    "Normalize a file name for a static page."
+    "Switch the separator to underscore for an internal file-name draft."
   ],
   "faqs": [
     {
-      "question": "What characters are kept?",
-      "answer": "The generated slug keeps URL-friendly letters, numbers, and hyphen separators after normalization."
+      "question": "Which separators are available?",
+      "answer": "You can choose hyphen, underscore, or no separator for whitespace in the source text."
     },
     {
       "question": "Does it guarantee a unique URL?",
@@ -25,7 +25,7 @@
     },
     {
       "question": "Can it transliterate every language?",
-      "answer": "No. Non-Latin handling depends on the page normalization rules and may require manual review."
+      "answer": "No. It normalizes accents and removes unsupported characters, so non-Latin text may require manual review."
     },
     {
       "question": "Should slugs be short?",

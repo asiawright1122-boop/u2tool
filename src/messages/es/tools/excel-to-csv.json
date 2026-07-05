@@ -1,12 +1,38 @@
 {
-  "detailed_description": "Convierte Excel a CSV.",
+  "detailed_description": "Convierte Excel a CSV. Excel a CSV está pensado para preparar y revisar borradores de trabajo, planificación o documentos. Revisa fechas, nombres, cifras y formato antes de enviar, publicar o compartir materiales importantes.",
   "usage_steps": [
     "Subir archivo Excel",
     "Seleccionar hoja",
-    "Descargar CSV"
+    "Descargar CSV",
+    "Revisa el resultado y confirma que encaja con tu objetivo.",
+    "Usa el resultado final solo después de comprobarlo en tu flujo de trabajo."
   ],
   "usage_examples": [
-    "Exportar datos Excel a CSV"
+    "Exportar datos Excel a CSV",
+    "Preparar un borrador para un documento, calendario o entrega de equipo.",
+    "Revisar el resultado antes de añadirlo a un informe, hoja de cálculo o nota de trabajo.",
+    "Revisar el resultado con otra entrada antes de usarlo en el trabajo final."
   ],
-  "faqs": []
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Excel a CSV?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta de oficina?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
+  ]
 }

@@ -1,16 +1,17 @@
 {
-  "detailed_description": "Excel to CSV converter transforms Excel spreadsheets into CSV (Comma-Separated Values) format. Supports both .xlsx and .xls files. Select specific sheets to convert and preview data before downloading.",
+  "detailed_description": "Excel to CSV converts .xlsx and .xls spreadsheets in the browser. Upload or drop a file, let the tool read the workbook, choose a sheet when the file contains multiple sheets, and review the generated CSV text in the preview area. You can copy the CSV to the clipboard or download the selected sheet as a CSV file. The converter is useful for quick imports, table cleanup, spreadsheet handoffs, and checking sheet data before using it elsewhere. Review important values after conversion because formulas, formatting, merged cells, and workbook-specific features may not carry over to plain CSV.",
   "usage_steps": [
-    "Open the Excel to CSV tool page",
-    "Drag and drop an Excel file or click to select",
-    "Select the sheet to convert if multiple sheets exist",
-    "Preview the CSV data",
-    "Copy or download the CSV file"
+    "Open the Excel to CSV tool page.",
+    "Drag and drop an .xlsx or .xls file, or click the upload area to select one.",
+    "If the workbook has multiple sheets, choose the sheet to convert.",
+    "Review the generated CSV text in the preview area.",
+    "Copy the CSV text or download the selected sheet as a CSV file."
   ],
   "usage_examples": [
-    "Convert Excel data for database import",
-    "Create CSV files for data analysis tools",
-    "Export spreadsheet data in universal format"
+    "Convert one sheet from an Excel workbook for database import.",
+    "Create CSV text for a data analysis tool that does not accept XLSX.",
+    "Preview a spreadsheet as plain comma-separated text before a handoff.",
+    "Download a selected sheet as CSV after checking dates, names, and totals."
   ],
   "faqs": [
     {
@@ -19,7 +20,19 @@
     },
     {
       "question": "Are formulas converted?",
-      "answer": "Only the calculated values are exported, not the formulas themselves."
+      "answer": "The CSV output contains values produced by the workbook reader, not the original formula definitions."
+    },
+    {
+      "question": "What should I check before using the Excel to CSV output?",
+      "answer": "Review dates, names, totals, delimiters, and any cells that depended on formatting before importing the CSV elsewhere."
+    },
+    {
+      "question": "Can I edit the result after generating it?",
+      "answer": "You can copy the CSV text and edit it in another editor, or change the source sheet and regenerate."
+    },
+    {
+      "question": "Does CSV preserve workbook formatting?",
+      "answer": "No. CSV is plain text, so styles, formulas, merged cells, and workbook-specific features are not preserved."
     }
   ]
 }

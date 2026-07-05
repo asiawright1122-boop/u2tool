@@ -1,23 +1,23 @@
 {
-  "detailed_description": "El Reloj Mundial es una herramienta práctica de visualización de múltiples zonas horarias que te permite ver la hora actual en varias ciudades simultáneamente. Soporta añadir más de 20 ciudades principales incluyendo Nueva York, Londres, Tokio, Sídney, Shanghái, Singapur y más. Cada tarjeta de ciudad muestra la hora actual, fecha y diferencia horaria, con iconos de sol/luna indicando si es de día o de noche localmente. Soporta cambio entre formato 12/24 horas y visualización opcional de segundos. Interfaz limpia y hermosa con actualizaciones en tiempo real. Herramienta esencial para trabajo y viajes entre zonas horarias.",
+  "detailed_description": "El Reloj Mundial muestra la hora actual de varias ciudades y zonas horarias en una sola vista del navegador. La página parte de ciudades predeterminadas como Nueva York, Londres, Tokio y Sídney, y permite añadir otras zonas horarias desde un selector mientras evita duplicados. Cada tarjeta muestra nombre de ciudad, diferencia UTC aproximada, hora, fecha local e indicador visual de día o noche según la hora de esa zona. Puedes alternar entre formato de 12 o 24 horas, mostrar u ocultar segundos y eliminar ciudades que ya no necesites comparar. Es útil para preparar reuniones internacionales, coordinar trabajo remoto, revisar la hora local antes de llamar a alguien o comprobar horarios durante un viaje. La hora depende del reloj del dispositivo, así que conviene mantenerlo sincronizado para obtener resultados fiables.",
   "usage_steps": [
-    "Abre la página de la herramienta Reloj Mundial",
-    "La visualización predeterminada muestra Nueva York, Londres, Tokio y Sídney",
-    "Selecciona una ciudad para añadir desde el menú desplegable",
-    "Haz clic en el botón Añadir Ciudad para agregarla a la visualización",
-    "Haz clic en la × de una tarjeta de ciudad para eliminarla",
-    "Usa las opciones superiores para cambiar el formato 24 horas o mostrar segundos"
+    "Abre la página de Reloj Mundial y revisa las ciudades mostradas por defecto",
+    "Activa o desactiva el formato de 24 horas según cómo prefieras leer la hora",
+    "Activa o desactiva los segundos si necesitas una vista más precisa o más limpia",
+    "Selecciona una ciudad o zona horaria disponible en el menú desplegable",
+    "Pulsa Añadir Ciudad para incluirla en la comparación",
+    "Elimina una tarjeta cuando ya no necesites seguir esa ubicación"
   ],
   "usage_examples": [
-    "Verificar horarios en diferentes ubicaciones para colaboración de equipos internacionales",
-    "Programar reuniones y llamadas internacionales",
-    "Conocer la hora del destino al viajar al extranjero",
-    "Confirmar la hora al contactar amigos y familiares en el extranjero"
+    "Comparar Nueva York, Londres y Tokio antes de proponer una hora de reunión",
+    "Añadir la ciudad de un cliente para evitar llamarlo fuera de horario laboral",
+    "Comprobar la fecha y la hora local del destino antes de un viaje internacional",
+    "Mantener visibles solo las zonas horarias de un equipo remoto durante una jornada de trabajo"
   ],
   "faqs": [
     {
       "question": "¿Qué ciudades son compatibles?",
-      "answer": "Se soportan más de 20 ciudades principales del mundo, incluyendo Nueva York, Los Ángeles, Chicago, Londres, París, Berlín, Moscú, Dubái, Bombay, Singapur, Hong Kong, Shanghái, Tokio, Seúl, Sídney, Auckland y más."
+      "answer": "El selector incluye una lista de ciudades y zonas horarias principales. Las opciones disponibles se muestran directamente en el menú y las ciudades ya añadidas se ocultan para evitar duplicados."
     },
     {
       "question": "¿Es precisa la hora?",
@@ -26,6 +26,14 @@
     {
       "question": "¿Cómo sé si es de día o de noche?",
       "answer": "Cada tarjeta de ciudad muestra un icono de sol ☀️ o luna 🌙. El sol indica día (6:00-18:00), la luna indica noche (otras horas)."
+    },
+    {
+      "question": "¿Puedo cambiar entre 12 y 24 horas?",
+      "answer": "Sí. Usa la opción de formato de 24 horas para cambiar cómo se muestra la hora en las tarjetas."
+    },
+    {
+      "question": "¿Puedo mostrar u ocultar segundos?",
+      "answer": "Sí. La opción de segundos permite una vista más precisa cuando la necesitas o una vista más limpia para comparar horarios generales."
     }
   ]
 }

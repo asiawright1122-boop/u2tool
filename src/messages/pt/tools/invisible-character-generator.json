@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Invisible Character Generator permite escolher caracteres invisíveis incluídos na página, repetir de 1 a 100 vezes e copiar a sequência. Um detector simples conta esses mesmos caracteres em texto colado. Não é um scanner Unicode forense completo e não exporta JSON ou CSV.",
+  "detailed_description": "Invisible Character Generator permite escolher caracteres invisíveis incluídos na página, repetir de 1 a 100 vezes e copiar a sequência. Um detector simples conta esses mesmos caracteres em texto colado. Não é um scanner Unicode forense completo e não exporta JSON ou CSV. Gerador de Caracteres Invisíveis foi pensado para verificar entradas, opções e resultados com rapidez. Use a saída como rascunho, revise formato, números, caracteres e contexto, e confirme resultados importantes no seu próprio fluxo de trabalho antes de compartilhar, publicar ou aplicar em um projeto.",
   "usage_steps": [
     "Choose a bundled invisible character.",
     "Set a repeat count from 1 to 100.",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Copy a zero-width space for a formatting test.",
     "Generate repeated invisible characters for UI testing.",
-    "Check pasted text for bundled zero-width characters."
+    "Check pasted text for bundled zero-width characters.",
+    "Verificar uma entrada curta antes de processar o conteúdo completo."
+  ],
+  "faqs": [
+    {
+      "question": "O que devo revisar antes de usar o resultado de Gerador de Caracteres Invisíveis?",
+      "answer": "Revise entradas, opções, formato e contexto. Em resultados importantes, confira números, caracteres e significado antes de compartilhar ou publicar."
+    },
+    {
+      "question": "Posso alterar o resultado depois de gerar?",
+      "answer": "Sim. Ajuste a entrada ou as opções disponíveis, processe novamente e use a saída atualizada somente depois de revisar."
+    },
+    {
+      "question": "Por que o resultado pode diferir de outra ferramenta?",
+      "answer": "Ferramentas podem tratar arredondamento, análise, formatação ou exibição de formas diferentes. Compare usando a mesma entrada e observe os limites da interface."
+    },
+    {
+      "question": "Posso começar com uma entrada curta?",
+      "answer": "Sim. Comece com uma entrada curta ou conteúdo não sensível para confirmar o formato da saída antes de usar o conteúdo real."
+    },
+    {
+      "question": "A ferramenta substitui uma revisão manual?",
+      "answer": "Não. Ela acelera tarefas repetitivas, mas resultados importantes ainda devem ser revisados quanto a precisão, contexto e adequação."
+    }
   ]
 }

@@ -1,17 +1,38 @@
 {
-  "detailed_description": "Der Image Splitter ist ein Spezialwerkzeug zur präzisen Segmentierung von Rastergrafiken in rechteckige Teilbilder durch definierte Gitterparameter. Technisch gesehen analysiert der Splitter die Pixelmatrix der hochgeladenen Bilddatei (unterstützt werden PNG, JPEG und WebP) und generiert anhand benutzerdefinierter Zeilen- und Spaltenanzahlen ein Kachelsystem. Jedes Teilbild wird dabei verlustfrei extrahiert, wobei die Originalfarbtiefe und Metadaten beibehalten werden. Besondere Features umfassen die Anpassung von Überlappungsbereichen (Overlap) für Nahtstellenoptimierung sowie die automatische Berechnung der optimalen Kachelgröße in Pixeln. Entwickler benötigen diesen Tool für Aufgaben wie die Generierung von CSS-Sprites, Vorbereitung von Texture-Atlases für WebGL-Anwendungen oder das Zerschneiden von Druckdateien in plottbare Segmente. Im Gegensatz zu herkömmlichen Bildbearbeitungsprogrammen erfolgt der Prozess vollautomatisch im Browser, ohne Server-Upload, durch clientseitige Canvas-Rendering-Technologie. Die Ergebnisse liegen sofort als ZIP-Archiv mit numerisch benannten Dateien vor, was den Workflow im Vergleich zu manuellem Slicing in Photoshop oder GIMP erheblich beschleunigt.",
+  "detailed_description": "Der Bildteiler Online teilt ein hochgeladenes Bild direkt im Browser in ein einfaches Raster aus Zeilen und Spalten. Sie können Presets wie 2x2, 3x3, 4x4, 2x3 und 3x2 verwenden oder Zeilen und Spalten manuell von 1 bis 10 eingeben. Nach dem Hochladen zeigt die Seite eine rote Rastervorschau über dem Originalbild sowie die Originalgröße und die berechnete Größe jedes Teils. Mit Split erstellt Canvas gleich große rechteckige PNG-Teile. Anschließend können Sie ein einzelnes Teil aus der Vorschau herunterladen oder alle PNG-Dateien gemeinsam als ZIP speichern. Der Bildteiler eignet sich für Social-Media-Raster, Unterrichtsmaterial, Design-Reviews und schnelle Aufteilungen großer Bilder. Die aktuelle Oberfläche konzentriert sich auf einfache PNG-Teile aus einem Zeilen- und Spaltenraster.",
   "usage_steps": [
-    "1. Klicken Sie auf 'Bild hochladen' und wählen Sie Ihre Datei im PNG-, JPEG- oder WebP-Format aus.",
-    "2. Geben Sie im Eingabefeld 'Zeilen' die gewünschte Anzahl horizontaler Bildsegmente ein, z.B. '3' für drei Reihen.",
-    "3. Stellen Sie im Schieberegler 'Spalten' die vertikale Aufteilung ein, z.B. '4' für vier Segmente pro Zeile.",
-    "4. Aktivieren Sie das Kontrollkästchen 'Überlappung' und geben Sie einen Wert in Pixeln ein, um Nahtstellen für Kachelungen zu erstellen.",
-    "5. Überprüfen Sie das Ergebnis im Echtzeitvorschau-Fenster, das die Kachelgrenzen mit Koordinatenangaben anzeigt.",
-    "6. Klicken Sie auf 'Split starten' und laden Sie das ZIP-Archiv mit allen Einzeltiles im Format 'tile_rowX_colY.png' herunter."
+    "Laden Sie ein Bild über die Dateiauswahl hoch.",
+    "Wählen Sie ein Rasterpreset wie 3x3 oder geben Sie Zeilen und Spalten von 1 bis 10 ein.",
+    "Prüfen Sie die rote Rastervorschau, die Originalgröße und die Teilgröße.",
+    "Klicken Sie auf Split, um PNG-Teile im Browser zu erstellen.",
+    "Laden Sie ein einzelnes Teil herunter oder speichern Sie mit Download All alle PNG-Dateien als ZIP."
   ],
   "usage_examples": [
-    "Ein Webdesigner zerlegt ein 2000x1000px Hero-Banner in 2x2-Segmente mit 10px Überlappung, um ein responsives CSS-Masonry-Layout zu erstellen.",
-    "Ein Game-Entwickler teilt eine 1024x1024px Texture-Atlas-Datei in 8x8-Quadrate auf, um Einzeltexturen für Unity3D-Assets zu extrahieren.",
-    "Ein Fotograf spaltet ein 12000x6000px Panoramabild in 4x3-Teile, um die Einzelbilder in einer Galerie-App mit nahtlosem Übergang anzuordnen.",
-    "Ein Print-Designer zerschneidet eine A0-Posterdatei (3300x4668px) in 3x3-Segmente mit 15mm Zuschnittmarken für die Plotterausgabe."
+    "Ein Posterentwurf wird in ein 3x3-Raster geteilt, um eine Social-Media-Anordnung zu prüfen.",
+    "Eine große Illustration wird in gleich große PNG-Teile für Unterricht oder einfache Puzzle-Aufgaben zerlegt.",
+    "Ein Banner wird in 2x3 Abschnitte geteilt, damit einzelne Bereiche separat geprüft werden können.",
+    "Nach Kontrolle von Raster und Teilgröße werden alle PNG-Teile als ZIP heruntergeladen."
+  ],
+  "faqs": [
+    {
+      "question": "Was erstellt der Bildteiler?",
+      "answer": "Er erstellt gleich große rechteckige PNG-Teile aus einem Bild anhand der gewählten Zeilen und Spalten."
+    },
+    {
+      "question": "Kann ich Zeilen und Spalten selbst festlegen?",
+      "answer": "Ja. Neben Presets wie 2x2 und 3x3 können Sie Werte von 1 bis 10 eingeben."
+    },
+    {
+      "question": "Kann ich alle Teile zusammen herunterladen?",
+      "answer": "Ja. Nach dem Teilen speichert Download All alle PNG-Teile in einer ZIP-Datei."
+    },
+    {
+      "question": "Wird das Bild auf einen Server hochgeladen?",
+      "answer": "Nein. Upload, Vorschau, Teilung und Downloads laufen im Browser."
+    },
+    {
+      "question": "Welche Art von Teilen wird erzeugt?",
+      "answer": "Das aktuelle Werkzeug erzeugt einfache PNG-Teile anhand der gewählten Zeilen und Spalten."
+    }
   ]
 }

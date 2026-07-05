@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Habit Tracker es una herramienta sencilla pero potente para construir y mantener hábitos diarios. Rastrea múltiples hábitos, ve tus cadenas y mantente motivado con indicadores de progreso visuales. Todos los datos se almacenan localmente en tu navegador.",
+  "detailed_description": "Habit Tracker es una herramienta sencilla pero potente para construir y mantener hábitos diarios. Rastrea múltiples hábitos, ve tus cadenas y mantente motivado con indicadores de progreso visuales. Todos los datos se almacenan localmente en tu navegador. Rastreador de Hábitos está pensado para cálculos personales rápidos y comparación de opciones. Usa el resultado como borrador y actualiza las entradas cuando cambie el plan o el contexto.",
   "usage_steps": [
     "Añade un nuevo hábito con un nombre e icono",
     "Haz clic en un hábito para marcarlo como completo hoy",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Rastrea rutinas de ejercicio diarias",
     "Monitorea tus hábitos de lectura",
-    "Construye una práctica de meditación"
+    "Construye una práctica de meditación",
+    "Comparar varios escenarios y actualizar las entradas cuando cambie el plan."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Rastreador de Hábitos?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta de planificación?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

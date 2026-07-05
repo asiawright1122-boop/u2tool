@@ -1,17 +1,35 @@
 {
-  "detailed_description": "O Gerador de Gráficos de Pizza permite criar visualizações proporcionais de dados estruturados através de algoritmos de segmentação geométrica. A ferramenta processa entradas em formatos como JSON ou CSV, convertendo valores numéricos em ângulos radiais para representação em 2D ou 3D. Usando técnicas de renderização SVG e Canvas, os segmentos são gerados com proporções calculadas via fórmulas trigonométricas, enquanto opções avançadas permitem ajustar gradientes, sombras e transparências. Profissionais de análise de dados precisam deste recurso para demonstrar distribuições percentuais em relatórios financeiros, estudos estatísticos ou apresentações corporativas. O mecanismo suporta interatividade com eventos de tooltip para exibição de valores brutos e formatos de exportação em PNG rasterizado ou SVG vetorial para alta resolução em impressões e documentos digitais.",
+  "detailed_description": "O gerador de gráfico de pizza transforma uma pequena tabela de nomes e valores em gráfico de pizza, rosca ou rosa. Você pode editar linhas manualmente, importar um CSV simples no formato name,value, alterar o título, escolher um tema de cores, mostrar ou ocultar legenda, rótulos e porcentagens, e conferir o total antes de exportar. O gráfico final pode ser baixado em PNG ou SVG. É útil para relatórios de orçamento, participação de vendas, respostas de pesquisa e composições com poucas categorias.",
   "usage_steps": [
-    "Cole seus dados no formato JSON (ex: [{\"categoria\":\"A\",\"valor\":30}, {\"categoria\":\"B\",\"valor\":70}]) ou CSV no campo 'Dados de Entrada'",
-    "Ajuste o raio interno e externo usando os controles deslizantes para criar efeitos de donut ou pizza padrão",
-    "Selecione um esquema de cores predefinido ou personalize gradientes radiais nas configurações de estilo",
-    "Ative/desative rótulos percentuais e legendas através das caixas de seleção correspondentes",
-    "Utilize o seletor de profundidade 3D para aplicar efeitos de perspectiva nos segmentos",
-    "Clique em 'Exportar' para baixar o gráfico como PNG de 4K ou SVG editável com metadados inclusos"
+    "Carregue os dados de exemplo, importe um CSV simples ou adicione linhas manualmente.",
+    "Edite o nome e o valor de cada categoria na tabela.",
+    "Defina o título do gráfico e escolha um tema de cores.",
+    "Ative ou desative legenda, rótulos, porcentagens, modo rosca ou modo rosa.",
+    "Revise a prévia, o total e as porcentagens calculadas.",
+    "Baixe o gráfico final como PNG ou SVG."
   ],
   "usage_examples": [
-    "Equipe de marketing analisando participação de mercado entre concorrentes com dados em tempo real",
-    "Departamento financeiro visualizando distribuição de custos operacionais trimestrais",
-    "Pesquisadores apresentando proporções de resposta em estudos de opinião pública",
-    "Desenvolvedores integrando gráficos dinâmicos em dashboards com exportação para PDF"
+    "Mostrar a participação de vendas por categoria em um relatório.",
+    "Criar uma rosca de alocação de orçamento para uma apresentação.",
+    "Comparar canais de marketing em poucas categorias.",
+    "Transformar um pequeno CSV name,value em gráfico editável e baixável."
+  ],
+  "faqs": [
+    {
+      "question": "Qual CSV é aceito?",
+      "answer": "Use uma linha de cabeçalho e depois linhas com nome e valor separados por vírgula."
+    },
+    {
+      "question": "Posso criar gráfico de rosca?",
+      "answer": "Sim. Ative a opção de rosca para deixar o centro vazio."
+    },
+    {
+      "question": "Quais formatos posso baixar?",
+      "answer": "O gráfico pode ser baixado como PNG ou SVG."
+    },
+    {
+      "question": "Serve para conjuntos enormes?",
+      "answer": "Não. A ferramenta é voltada a pequenas listas de categorias para relatórios e apresentações."
+    }
   ]
 }

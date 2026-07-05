@@ -1,5 +1,5 @@
 {
-  "detailed_description": "License Generator helps you create license files for your open source projects. Choose from popular licenses including MIT, Apache 2.0, GPL 3.0, BSD 2-Clause, BSD 3-Clause, ISC, Mozilla Public License, and more. Enter your name and the tool automatically fills in the year and generates the complete license text. Each license includes a brief description of its terms to help you choose the right one for your project.",
+  "detailed_description": "License Generator helps you create license files for your open source projects. Choose from popular licenses including MIT, Apache 2.0, GPL 3.0, BSD 2-Clause, BSD 3-Clause, ISC, Mozilla Public License, and more. Enter your name and the tool automatically fills in the year and generates the complete license text. Each license includes a brief description of its terms to help you choose the right one for your project. License Generator is intended for quick draft generation and review rather than unattended automation. Use the generated result as a starting point, adjust the available options, and verify important output before publishing, deploying, or sharing it.",
   "usage_steps": [
     "Browse available licenses and their descriptions",
     "Select the license that fits your needs",
@@ -13,5 +13,27 @@
     "Choose Apache 2.0 for a corporate open source project",
     "Select GPL for a copyleft project",
     "Use ISC for a simple permissive license"
+  ],
+  "faqs": [
+    {
+      "question": "What should I check before using the License Generator output?",
+      "answer": "Review the generated output, available options, and target context before publishing, deploying, or sharing it."
+    },
+    {
+      "question": "Can I edit the result after generating it?",
+      "answer": "Yes. Adjust the input values or available options, generate the result again, and then copy, export, or reuse the updated output in your workflow when the page provides those actions."
+    },
+    {
+      "question": "Why might the result differ from another generator tool?",
+      "answer": "Different tools can use different assumptions, rounding rules, parsing behavior, or export settings. Compare the same input values and review any notes shown in the interface before relying on the result."
+    },
+    {
+      "question": "Can I start with sample or placeholder data?",
+      "answer": "Yes. Use a small example or non-sensitive sample first, confirm the output shape, and then replace it with the real input you want to process."
+    },
+    {
+      "question": "Does this replace manual review?",
+      "answer": "No. It is meant to speed up routine work, but important results should still be checked for accuracy, context, and fit before you publish or share them."
+    }
   ]
 }

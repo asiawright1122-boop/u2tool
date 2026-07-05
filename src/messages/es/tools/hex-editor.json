@@ -1,17 +1,38 @@
 {
-  "detailed_description": "El Hex Editor es una herramienta técnica que permite la conversión bidireccional entre cadenas de texto ASCII/UTF-8 y su representación hexadecimal, mientras ofrece una visualización detallada de datos binarios a nivel de byte. Esta utilidad es esencial para desarrolladores que necesitan analizar o manipular estructuras de datos binarias, como en el caso de ingeniería inversa de archivos, depuración de protocolos de red o edición de cabeceras de archivos. La herramienta opera mediante la codificación/decodificación de cada byte del texto de entrada según el estándar UTF-8, mostrando simultáneamente el valor hexadecimal, decimal y su representación ASCII. Soporta la detección automática de secuencias nulas, bytes de control y caracteres extendidos, mostrando un grid hexadecimal con numeración de direcciones (offsets) en notación hexadecimal de 32 bits. Los usuarios pueden editar directamente los valores hexadecimales en la cuadrícula, lo que permite modificar bytes específicos sin alterar el resto del flujo de datos, útil para ajustar firmas de archivos o parchear ejecutables pequeños.",
+  "detailed_description": "El Editor hexadecimal convierte texto en bytes hexadecimales UTF-8 y decodifica secuencias hexadecimales de vuelta a texto desde el navegador. La interfaz se centra en dos áreas de texto, botones explícitos para convertir en ambas direcciones y acciones de copia para cada resultado. Es una herramienta práctica para revisar valores de logs, preparar ejemplos de API, entender cómo se representan caracteres no ASCII o comprobar una cadena corta antes de incluirla en documentación o pruebas. No es un editor binario de archivos: trabaja con el texto pegado en la página y con pares hexadecimales legibles.",
   "usage_steps": [
-    "Selecciona la dirección de conversión usando el selector 'Texto a Hex' o 'Hex a Texto' en la barra de herramientas superior.",
-    "Ingresa el contenido en el campo de texto izquierdo o pega una secuencia hexadecimal válida (sin espacios ni prefijos '0x').",
-    "Navega por la representación hexadecimal en el grid interactivo, donde cada celda muestra el byte en formato XX con resaltado de valores nulos (00).",
-    "Activa la opción 'Mostrar ASCII' para ver caracteres imprimibles junto a los valores hexadecimales en la vista de bytes.",
-    "Edita bytes individuales en el grid haciendo clic sobre ellos y escribiendo nuevos valores hexadecimales (00-FF).",
-    "Descarga el resultado binario modificado como archivo .bin usando el botón 'Exportar Bytes' o copia el texto convertido al portapapeles."
+    "Pega texto en el campo Texto si necesitas ver sus bytes UTF-8 en hexadecimal.",
+    "Pulsa el botón para convertir a hexadecimal y revisa la salida separada por espacios.",
+    "Pega una secuencia como 48 65 6C 6C 6F en el campo Hexadecimal cuando quieras decodificarla.",
+    "Pulsa el botón para convertir a texto y comprueba si el resultado coincide con lo esperado.",
+    "Copia el texto o la salida hexadecimal solo después de revisar la codificación y el contexto."
   ],
   "usage_examples": [
-    "Un desarrollador corrige manualmente el byte de firma de un archivo PDF dañado cambiando los primeros bytes de '504B0304' a '25504446'.",
-    "Un analista de seguridad convierte una secuencia de shellcode hexadecimal (\\x31\\xc0\\x50\\x68...) a bytes ejecutables para pruebas en entorno controlado.",
-    "Un programador de firmware examina la diferencia hexadecimal entre dos versiones de un archivo .hex para identificar cambios en secciones de memoria crítica.",
-    "Un estudiante compara la representación hexadecimal de caracteres UTF-8 multibyte (ej: 'ñ' = C3 B1) versus ASCII simple para entender codificaciones de texto."
+    "Convertir una palabra o un token de prueba a hexadecimal para una nota de depuración.",
+    "Comprobar cómo se codifica en UTF-8 una letra acentuada o un símbolo usado en una API.",
+    "Decodificar una secuencia hexadecimal corta recibida en documentación técnica.",
+    "Comparar dos cadenas simples observando sus bytes hexadecimales."
+  ],
+  "faqs": [
+    {
+      "question": "Puedo editar bytes dentro de una cuadrícula hexadecimal?",
+      "answer": "No. La página ofrece conversión entre texto y una secuencia hexadecimal en áreas de texto. No incluye cuadrícula de bytes ni edición binaria por offset."
+    },
+    {
+      "question": "Qué codificación usa la conversión de texto?",
+      "answer": "Usa UTF-8 mediante las APIs del navegador. Por eso algunos caracteres pueden generar varios bytes hexadecimales."
+    },
+    {
+      "question": "La entrada hexadecimal puede tener espacios?",
+      "answer": "Sí. Puedes usar espacios para separar los bytes. La herramienta elimina los espacios antes de agrupar la secuencia en pares hexadecimales."
+    },
+    {
+      "question": "Por qué veo caracteres raros al decodificar?",
+      "answer": "Puede ocurrir si la secuencia no representa texto UTF-8 válido, si falta un byte o si se pegó un valor que pertenece a otro formato."
+    },
+    {
+      "question": "La herramienta sube mis datos a un servidor?",
+      "answer": "No. El procesamiento se realiza en el navegador y el resultado solo sale de la página si decides copiarlo."
+    }
   ]
 }

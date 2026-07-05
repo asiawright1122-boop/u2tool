@@ -1,17 +1,39 @@
 {
-  "detailed_description": "El Image Cropper permite recortar imágenes con precisión milimétrica mediante un motor basado en HTML5 Canvas que opera en el cliente, garantizando privacidad y velocidad. Soporta dos modos: proporción libre para selección arbitraria de área y proporciones fijas predefinidas (1:1, 4:3, 16:9) o personalizadas mediante entrada decimal. Al cargar una imagen, el algoritmo analiza su matriz de píxeles y aplica una transformación afín al seleccionar el área de interés, preservando metadatos EXIF mediante bibliotecas de procesamiento como ExifTool. La interfaz incluye una cuadrícula vectorial que se adapta dinámicamente a la resolución de la imagen, permitiendo ajustes de submuestreo y supermuestreo para mantener calidad en redimensionamiento. Esencial para desarrolladores que necesitan optimizar imágenes para breakpoints responsivos, diseñadores que preparan assets para frameworks CSS como Bootstrap, y fotógrafos que requieren ajustar composiciones a estándares de plataformas como Instagram o LinkedIn.",
+  "detailed_description": "El Cortador de Imágenes recorta archivos de imagen directamente en el navegador mediante HTML5 Canvas. Puedes cargar una imagen, mover el área de recorte sobre la vista previa, elegir proporción libre o una proporción fija y ajustar manualmente el ancho y el alto antes de generar el resultado. La herramienta muestra el tamaño original de la imagen, centra una selección inicial para empezar rápido y exporta el recorte como archivo PNG descargable. Es útil para preparar miniaturas, avatares, capturas, banners sencillos y recursos visuales cuando necesitas quedarte con una zona concreta sin abrir un editor pesado. Todo el flujo ocurre en la sesión del navegador: revisa siempre la vista previa final, porque el archivo descargado corresponde exactamente al área y dimensiones que hayas seleccionado.",
   "usage_steps": [
-    "Haz clic en el botón 'Cargar Imagen' y selecciona un archivo en formato JPEG/PNG con resolución máxima de 8000x8000 píxeles",
-    "Elige el modo de recorte: 'Proporción Libre' o selecciona una proporción fija desde el menú desplegable 'Proporciones Predefinidas'",
-    "Arrastra el marco de selección sobre la imagen para definir el área de recorte, usando las guías vectoriales para alinear elementos críticos",
-    "Ajusta las coordenadas numéricas en los campos X, Y, Ancho y Alto con precisión de punto decimal para ajustes milimétricos",
-    "Presiona 'Aplicar Recorte' para ejecutar el algoritmo de transformación afín en el buffer de memoria del navegador",
-    "Descarga el resultado en formato WebP (calidad 85) o PNG-24, con opción de copiar el enlace Data URI al portapapeles"
+    "Haz clic en el área de carga y selecciona una imagen desde tu dispositivo",
+    "Elige una proporción libre o una proporción fija disponible si necesitas un formato concreto",
+    "Arrastra el marco de recorte sobre la vista previa hasta encuadrar la zona que quieres conservar",
+    "Ajusta los campos de ancho y alto si necesitas una medida de recorte más exacta",
+    "Pulsa el botón de recortar para generar una vista previa del resultado",
+    "Revisa la imagen recortada y descárgala como PNG cuando el encuadre sea correcto"
   ],
   "usage_examples": [
-    "Un fotógrafo ajusta imágenes de 5000x3333 píxeles a proporción 4:5 para publicar en Instagram Stories manteniendo el sujeto centrado mediante las guías de tercios",
-    "Un desarrollador de front-end recorta capturas de pantalla a 1440x900 píxeles (proporción 16:10) para generar thumbnails compatibles con pantallas Retina",
-    "Un diseñador gráfico convierte imágenes de alta resolución en miniaturas de 256x256 píxeles (1:1) para un sistema de iconos escalables usando el modo de submuestreo",
-    "Un community manager procesa 20 imágenes de producto a proporción 3:4 para anuncios de Facebook Marketplace, utilizando el modo de lote para mantener consistencia visual"
+    "Un creador recorta una foto horizontal a formato cuadrado para usarla como avatar o imagen de perfil",
+    "Un desarrollador prepara una captura de pantalla más limpia eliminando bordes del navegador antes de incluirla en una guía",
+    "Un diseñador genera una miniatura PNG a partir de una parte concreta de una imagen de producto",
+    "Un gestor de contenido prueba diferentes encuadres de una misma imagen antes de subirla a una tarjeta o bloque visual"
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Cortador de Imágenes?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra herramienta de imagen?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

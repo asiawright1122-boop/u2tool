@@ -1,5 +1,5 @@
 {
-  "detailed_description": "El Generador de Consentimiento GDPR crea banners de consentimiento para cookies y plantillas de política de privacidad personalizables que cumplen con las regulaciones europeas de protección de datos. Genere código HTML y CSS listo para usar para su sitio web, con opciones para diferentes tipos de cookies, posiciones de banners y temas.",
+  "detailed_description": "El Generador de Consentimiento GDPR crea banners de consentimiento para cookies y plantillas de política de privacidad personalizables que cumplen con las regulaciones europeas de protección de datos. Genere código HTML y CSS listo para usar para su sitio web, con opciones para diferentes tipos de cookies, posiciones de banners y temas. Generador de Consentimiento GDPR está pensado para generar un borrador y ajustarlo manualmente. Revisa las opciones disponibles, comprueba si el resultado encaja con tu contexto y úsalo solo después de revisarlo.",
   "usage_steps": [
     "Introduzca la información de su sitio web y empresa",
     "Elija los tipos de cookies que utiliza su sitio web",
@@ -10,6 +10,29 @@
   "usage_examples": [
     "Añada banners de consentimiento para cookies que cumplen con la GDPR a sus sitios web",
     "Cree documentos de política de privacidad para cumplir con la UE",
-    "Implemente la gestión de preferencias de cookies para los usuarios"
+    "Implemente la gestión de preferencias de cookies para los usuarios",
+    "Crear un borrador y ajustarlo al documento, página o flujo de trabajo final."
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Generador de Consentimiento GDPR?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra generador?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

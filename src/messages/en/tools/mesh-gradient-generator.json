@@ -1,16 +1,39 @@
 {
-  "detailed_description": "Mesh Gradient Generator creates a CSS background from four editable radial-gradient color points. Use the browser color pickers and X/Y sliders to position each point, adjust the shared blur percentage, preview the background, randomize the point colors, and copy the generated CSS. It does not add or remove points, export images, animate gradients, or provide per-breakpoint responsive settings.",
+  "detailed_description": "Mesh Gradient Generator creates a CSS background from four editable radial-gradient color points. Use the browser color pickers and X/Y sliders to position each point, adjust the shared blur percentage, preview the background, randomize the point colors, and copy the generated CSS background code. It does not add or remove points, export images, animate gradients, or provide per-breakpoint responsive settings. The generated CSS is a practical draft for hero backgrounds, cards, panels, and design experiments. Review contrast, readability, browser support, and surrounding layout before publishing the gradient in a production interface.",
   "usage_steps": [
     "Choose colors for the four gradient points.",
     "Move each point with its X and Y percentage sliders.",
     "Adjust the shared blur slider for softer or sharper transitions.",
     "Click Randomize to replace the point colors with preset choices.",
     "Review the preview area.",
-    "Copy the generated CSS background code."
+    "Copy the generated CSS background code and test it in your target layout."
   ],
   "usage_examples": [
     "Create a CSS background for a hero section.",
     "Draft a colorful card or panel background.",
-    "Copy a radial-gradient stack into a stylesheet for further editing."
+    "Copy a radial-gradient stack into a stylesheet for further editing.",
+    "Create a quick background idea for a prototype before refining colors in the design system."
+  ],
+  "faqs": [
+    {
+      "question": "How many color points can I edit?",
+      "answer": "The current interface provides four color points, each with color, X position, and Y position controls."
+    },
+    {
+      "question": "Can I export an image?",
+      "answer": "No. The tool previews the gradient and copies CSS; it does not export PNG, SVG, or video files."
+    },
+    {
+      "question": "What does the blur slider control?",
+      "answer": "It changes the shared transparent stop percentage used in each radial-gradient layer."
+    },
+    {
+      "question": "Does Randomize move the points?",
+      "answer": "No. Randomize changes the colors from preset choices while keeping the existing point positions."
+    },
+    {
+      "question": "What should I review before publishing?",
+      "answer": "Check text contrast, color fit, browser rendering, and whether the background works at the sizes used by your page."
+    }
   ]
 }

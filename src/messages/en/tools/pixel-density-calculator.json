@@ -10,6 +10,29 @@
   "usage_examples": [
     "Compare a 24-inch Full HD monitor with a 27-inch QHD monitor before buying.",
     "Check whether a 4K laptop panel has enough pixel density for detailed design review.",
-    "Translate a product spec sheet into PPI and pixel pitch for documentation."
+    "Translate a product spec sheet into PPI and pixel pitch for documentation.",
+    "Create a draft visual asset, then test it in the final layout before publishing."
+  ],
+  "faqs": [
+    {
+      "question": "What should I check before using the Pixel Density Calculator output?",
+      "answer": "Review size, colors, contrast, readability, and export quality in the final layout before publishing the asset."
+    },
+    {
+      "question": "Can I edit the result after generating it?",
+      "answer": "Yes. Adjust the input values or available options, generate the result again, and then copy, export, or reuse the updated output in your workflow when the page provides those actions."
+    },
+    {
+      "question": "Why might the result differ from another image tool?",
+      "answer": "Different tools can use different assumptions, rounding rules, parsing behavior, or export settings. Compare the same input values and review any notes shown in the interface before relying on the result."
+    },
+    {
+      "question": "Can I start with sample or placeholder data?",
+      "answer": "Yes. Use a small example or non-sensitive sample first, confirm the output shape, and then replace it with the real input you want to process."
+    },
+    {
+      "question": "Does this replace manual review?",
+      "answer": "No. It helps create a draft asset, but important visuals should still be reviewed in the final design context."
+    }
   ]
 }

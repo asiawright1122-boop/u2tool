@@ -1,17 +1,39 @@
 {
-  "detailed_description": "O Excel Viewer é uma ferramenta web especializada em processar e renderizar arquivos XLSX no navegador, permitindo manipulação avançada sem dependência de software instalado. Ele utiliza bibliotecas de análise (parsing) de planilhas para interpretar estruturas de células, fórmulas e estilos diretamente no cliente, com suporte a funcionalidades como ordenação dinâmica de colunas, filtragem baseada em expressões regulares e navegação entre múltiplas abas (sheets) via interface de guias. Sua engine roda em Web Workers para evitar travamentos em arquivos grandes, enquanto mantém a integridade de dados complexos, como células mescladas ou formatação condicional. Profissionais de controle financeiro, analistas de dados e equipes de desenvolvimento usam essa ferramenta para auditar planilhas compartilhadas, extrair subsets de dados sem instalar softwares ou validar integração de APIs que geram XLSX. O processamento ocorre localmente, garantindo privacidade, e a interface reativa permite interações em tempo real, como redimensionar colunas com arrastar e soltar ou aplicar filtros customizados por operadores lógicos.",
+  "detailed_description": "O Excel Viewer abre arquivos .xlsx e .xls no navegador, lê as abas disponíveis e mostra os dados em uma tabela simples. Depois do upload, você pode alternar entre planilhas, escolher uma coluna para filtrar por texto, clicar no cabeçalho para alternar ordenação crescente ou decrescente e ver quantas linhas estão sendo exibidas em relação ao total da aba. A ferramenta é útil para uma conferência rápida sem abrir o Microsoft Office, especialmente quando você precisa verificar linhas, colunas e valores de uma planilha recebida. Ela não edita o arquivo, não preserva todos os estilos visuais como uma suíte de planilhas completa e não exporta os dados filtrados.",
   "usage_steps": [
-    "Acesse a ferramenta pelo slug '/excel-viewer' e clique em 'Carregar Arquivo' para selecionar seu XLSX.",
-    "Arraste o arquivo para a área de upload ou clique em 'Procurar' para localizar no dispositivo.",
-    "Navegue entre as abas usando a barra de guias na parte inferior para visualizar diferentes sheets.",
-    "Clique no ícone de seta na barra de ferramentas para ordenar uma coluna em ordem crescente ou decrescente.",
-    "Utilize o botão 'Filtrar' para definir critérios de seleção por valor, texto ou expressão regular.",
-    "Exporte dados filtrados como CSV ou use a opção 'Imprimir' para gerar um PDF da planilha atual."
+    "Clique na área de upload e selecione um arquivo .xlsx ou .xls do dispositivo.",
+    "Aguarde o nome do arquivo carregado aparecer na tela.",
+    "Se houver mais de uma aba, use as guias para escolher a planilha que deseja visualizar.",
+    "Escolha uma coluna e digite um valor para filtrar as linhas por texto.",
+    "Clique no cabeçalho de uma coluna para alternar entre ordem crescente, decrescente e sem ordenação.",
+    "Use a contagem exibida acima da tabela para saber quantas linhas continuam visíveis após o filtro."
   ],
   "usage_examples": [
-    "Um auditor fiscal identifica inconsistências em um relatório financeiro ao aplicar filtros de células com valores negativos.",
-    "Um analista de vendas exporta apenas dados de clientes com status 'Inadimplente' para análise em outra ferramenta.",
-    "Um professor visualiza uma planilha de notas com fórmulas de média calculada, garantindo que as funções estejam corretas.",
-    "Um desenvolvedor extrai dados de uma aba específica de um XLSX gerado por API para validação de integração."
+    "Conferir rapidamente uma planilha de vendas recebida por e-mail sem abrir um aplicativo de escritório.",
+    "Filtrar uma coluna de status para encontrar linhas que contêm um texto específico.",
+    "Alternar entre abas de um arquivo XLSX para verificar se os dados esperados estão presentes.",
+    "Ordenar uma coluna de nomes ou valores para revisar a tabela em outra sequência."
+  ],
+  "faqs": [
+    {
+      "question": "O que devo revisar antes de usar o resultado de Visualizador do Excel?",
+      "answer": "Revise entradas, opções, formato e contexto. Em resultados importantes, confira números, caracteres e significado antes de compartilhar ou publicar."
+    },
+    {
+      "question": "Posso alterar o resultado depois de gerar?",
+      "answer": "Sim. Ajuste a entrada ou as opções disponíveis, processe novamente e use a saída atualizada somente depois de revisar."
+    },
+    {
+      "question": "Por que o resultado pode diferir de outra ferramenta?",
+      "answer": "Ferramentas podem tratar arredondamento, análise, formatação ou exibição de formas diferentes. Compare usando a mesma entrada e observe os limites da interface."
+    },
+    {
+      "question": "Posso começar com uma entrada curta?",
+      "answer": "Sim. Comece com uma entrada curta ou conteúdo não sensível para confirmar o formato da saída antes de usar o conteúdo real."
+    },
+    {
+      "question": "A ferramenta substitui uma revisão manual?",
+      "answer": "Não. Ela acelera tarefas repetitivas, mas resultados importantes ainda devem ser revisados quanto a precisão, contexto e adequação."
+    }
   ]
 }

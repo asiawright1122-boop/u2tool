@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   applyBitFlags,
+  analyzeQuery,
   analyzeComplexity,
   analyzeDeadCode,
   analyzePerformance,
@@ -380,6 +381,17 @@ X-Trace-Id: abc123
     expect(optimized.optimized).toContain('SELECT');
     expect(optimized.score).toBeLessThan(100);
     expect(optimized.suggestions.map((suggestion) => suggestion.type)).toContain('warning');
+  });
+
+  it('builds simplified query execution plan steps for SQL text', () => {
+    const plan = analyzeQuery(EXAMPLE_SQL);
+
+    expect(Array.isArray(plan)).toBe(true);
+    expect(plan.map((step: { operation: string }) => step.operation)).toEqual(
+      expect.arrayContaining(['Read query', 'Filter rows', 'Review filter shape', 'Sort results'])
+    );
+    expect(plan.reduce((sum: number, step: { cost: number }) => sum + step.cost, 0)).toBeGreaterThan(0);
+    expect(plan.some((step: { warning?: string }) => step.warning)).toBe(true);
   });
 
   it('finds duplicate code windows and removes unused imports conservatively', () => {

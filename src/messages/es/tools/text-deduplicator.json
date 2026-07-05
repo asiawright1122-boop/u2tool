@@ -1,17 +1,39 @@
 {
-  "detailed_description": "El Text Deduplicator es una herramienta de procesamiento de texto avanzada diseñada para eliminar líneas duplicadas de un conjunto de datos de texto, asegurando que solo se mantengan las entradas únicas. Esta funcionalidad es crucial en una variedad de aplicaciones, desde la limpieza de datos de investigación hasta la optimización de bases de datos y la preparación de textos para análisis de datos. Los usuarios necesitan esta herramienta para garantizar la integridad y precisión de sus datos, evitando sesgos y redundancias que puedan afectar los resultados de sus proyectos. La herramienta opera a través de un algoritmo de detección de duplicados que compara cada línea de texto con todas las demás, identificando y eliminando las repeticiones. Este proceso se realiza de manera eficiente, incluso con grandes volúmenes de datos, gracias a la optimización del algoritmo y la capacidad de procesamiento en la nube.",
+  "detailed_description": "Deduplicador de Texto elimina líneas repetidas de un bloque de texto pegado en el navegador. La herramienta conserva la primera aparición de cada línea y muestra tres contadores: líneas originales, líneas únicas y líneas eliminadas. Puedes decidir si la comparación distingue mayúsculas y minúsculas, y si se recortan espacios al inicio y al final antes de detectar duplicados. El resultado se actualiza en el área de salida y se puede copiar al portapapeles. Es útil para limpiar listas, palabras clave, IDs, notas, respuestas de formularios o datos copiados desde hojas de cálculo. No carga archivos, no descarga documentos y no procesa datos en la nube; revisa el resultado si el orden o los espacios exactos son importantes.",
   "usage_steps": [
-    "Paso 1: Navega hasta la página de Text Deduplicator en el sitio web de herramientas de desarrollo.",
-    "Paso 2: Haz clic en el botón 'Cargar archivo' y selecciona el archivo de texto que deseas procesar.",
-    "Paso 3: Si prefieres, puedes copiar y pegar el texto directamente en el área de texto proporcionada.",
-    "Paso 4: Configura las opciones de procesamiento, como la sensibilidad a mayúsculas y minúsculas, y el tratamiento de espacios en blanco.",
-    "Paso 5: Haz clic en el botón 'Procesar' para iniciar la eliminación de duplicados.",
-    "Paso 6: Una vez finalizado el proceso, revisa el texto resultante y descarga el archivo o cópialo al portapapeles."
+    "Pega la lista o el bloque de texto en el campo de entrada.",
+    "Activa o desactiva la comparación sensible a mayúsculas según tu caso.",
+    "Decide si quieres recortar espacios antes de comparar líneas.",
+    "Revisa los contadores de líneas originales, únicas y eliminadas.",
+    "Comprueba el texto deduplicado en el campo de salida.",
+    "Copia el resultado si mantiene el orden y formato que necesitas."
   ],
   "usage_examples": [
-    "Ejemplo 1: Un analista de datos recibe un archivo CSV con miles de entradas de clientes, pero sospecha que hay duplicados. Utiliza Text Deduplicator para limpiar el archivo y asegurarse de que cada cliente esté representado solo una vez en el análisis.",
-    "Ejemplo 2: Un escritor de contenido tiene un documento con múltiples versiones de un mismo texto y necesita asegurarse de que no haya fragmentos repetidos antes de publicar. Text Deduplicator le ayuda a eliminar las repeticiones y mantener un contenido único.",
-    "Ejemplo 3: Un investigador en ciencias sociales recopila respuestas de encuestas en un archivo de texto. Algunas respuestas son repetidas debido a errores de entrada. Utiliza Text Deduplicator para limpiar el archivo y obtener datos precisos para su estudio.",
-    "Ejemplo 4: Un desarrollador trabaja en un proyecto de minería de datos y necesita un conjunto de datos limpio para entrenar un modelo de aprendizaje automático. Text Deduplicator le permite eliminar duplicados de manera eficiente, mejorando la calidad de los datos de entrenamiento."
+    "Limpiar una lista de palabras clave pegada desde una hoja de cálculo.",
+    "Eliminar IDs repetidos antes de compararlos con otra lista.",
+    "Conservar solo la primera aparición de cada línea en notas de soporte.",
+    "Probar si dos líneas con diferente capitalización deben tratarse como duplicadas."
+  ],
+  "faqs": [
+    {
+      "question": "Qué considera duplicado la herramienta?",
+      "answer": "Compara cada línea. Según las opciones, puede respetar mayúsculas/minúsculas y recortar espacios antes de comparar."
+    },
+    {
+      "question": "Se conserva el orden original?",
+      "answer": "Sí. Se conserva la primera aparición de cada línea única en el orden en que aparece."
+    },
+    {
+      "question": "Puedo subir un archivo?",
+      "answer": "No. La interfaz actual funciona con texto pegado en el área de entrada."
+    },
+    {
+      "question": "Qué significan los contadores?",
+      "answer": "Original indica el número total de líneas, único muestra las líneas conservadas y eliminado muestra cuántas se quitaron."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }

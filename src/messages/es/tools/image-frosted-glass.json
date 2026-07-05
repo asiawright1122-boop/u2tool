@@ -1,17 +1,39 @@
 {
-  "detailed_description": "La herramienta Frosted Glass Effect aplica un sofisticado desenfoque visual simulando el efecto óptico de un vidrio esmerilado sobre imágenes digitales. Técnicamente, implementa un filtro Gaussiano con radio ajustable combinado con una reducción controlada de opacidad para crear un efecto translúcido, seguido de un ajuste de modos de mezcla como 'overlay' o 'soft light' para preservar texturas sutiles. Este proceso requiere un balance entre desenfoque y conservación de bordes, logrado mediante algoritmos de procesamiento escalonado que optimizan el balance entre calidad y rendimiento. Los desarrolladores web y diseñadores UX necesitan esta herramienta para crear interfaces modernas con capas de profundidad visual, como ventanas modales con fondo difuminado o elementos de interfaz con transparencia estilizada. La implementación utiliza procesamiento en el lado cliente con WebAssembly para manipulaciones en tiempo real, permitiendo ajustes granulares de intensidad (0-100px de radio de desenfoque) y una vista previa dinámica sin recargar la página.",
+  "detailed_description": "Efecto Vidrio Tostado aplica un desenfoque de imagen completa en un canvas del navegador. Carga una imagen local, elige un preset Ligero, Medio o Fuerte, o ajusta la intensidad de desenfoque manualmente entre 0 y 50 px. La vista previa se actualiza en la página y el resultado se descarga como PNG con el valor de desenfoque en el nombre del archivo. Es útil para crear fondos suaves, ocultar detalles visuales en una captura o preparar una textura borrosa para un diseño. No incluye selección de áreas, máscaras, capas transparentes editables, modos de mezcla, controles de opacidad ni aceleración WebGL.",
   "usage_steps": [
-    "Haz clic en 'Seleccionar Imagen' para cargar tu archivo en formato PNG/JPEG.",
-    "Ajusta el deslizador 'Radio de Desenfoque' entre 0 y 100 píxeles según la intensidad deseada.",
-    "Modifica el control 'Opacidad' para definir el nivel de translucidez del efecto (20%-80%).",
-    "Activa la opción 'Tinte de Color' y elige un tono hexadecimal para personalizar el matiz del vidrio.",
-    "Utiliza el botón 'Comparar Antes/Durante' para evaluar visualmente los cambios en tiempo real.",
-    "Descarga el resultado final en formato PNG optimizado con un clic en 'Guardar Imagen'."
+    "Selecciona una imagen local con el campo de carga.",
+    "Elige un preset Ligero, Medio o Fuerte si quieres empezar rápido.",
+    "Ajusta el control de intensidad para definir el desenfoque entre 0 y 50 px.",
+    "Revisa la vista previa generada en el canvas.",
+    "Cambia el valor de desenfoque hasta que la imagen tenga el nivel deseado.",
+    "Descarga el resultado como PNG desde el botón de descarga."
   ],
   "usage_examples": [
-    "Un diseñador crea un fondo para una ventana modal de sitio web, aplicando un desenfoque de 30px con 50% opacidad para mantener legible el contenido superior.",
-    "Un desarrollador de apps móviles difumina temporalmente datos sensibles en una captura de pantalla de perfil de usuario antes de publicarla en documentación.",
-    "Un diseñador UX implementa un efecto de capa de login superpuesta con vidrio esmerilado sobre una imagen de alta resolución en una aplicación web progresiva.",
-    "Un artista digital transforma una fotografía en una textura abstracta mediante un desenfoque extremo de 100px combinado con un tinte azul cian para una campaña de redes sociales."
+    "Desenfocar una captura antes de usarla como fondo de una maqueta.",
+    "Crear una textura suave para una tarjeta o cabecera de diseño.",
+    "Ocultar detalles visuales de una imagen antes de compartir un borrador.",
+    "Preparar una versión PNG borrosa de una foto para probar contraste de texto encima."
+  ],
+  "faqs": [
+    {
+      "question": "Puedo aplicar el efecto solo a una parte de la imagen?",
+      "answer": "No. El efecto se aplica a la imagen completa cargada en el canvas."
+    },
+    {
+      "question": "Qué rango de desenfoque está disponible?",
+      "answer": "El control manual permite valores de 0 a 50 px, además de los presets Ligero, Medio y Fuerte."
+    },
+    {
+      "question": "En qué formato se descarga el resultado?",
+      "answer": "La descarga usa PNG generado desde el canvas."
+    },
+    {
+      "question": "Incluye controles de opacidad o color?",
+      "answer": "No. La herramienta actual controla el desenfoque; otros ajustes deben hacerse en un editor externo."
+    },
+    {
+      "question": "Qué debo revisar antes de usarlo?",
+      "answer": "Comprueba que el PNG descargado conserve el tamaño y el nivel de desenfoque adecuados para tu diseño."
+    }
   ]
 }

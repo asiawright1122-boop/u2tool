@@ -1,20 +1,30 @@
 {
-  "detailed_description": "Le calculateur de taille de fichier convertit une valeur source en octets, Ko, Mo, Go, To et Po directement dans la page. Saisissez une valeur, choisissez son unité, puis sélectionnez la base binaire 1024 ou décimale 1000 pour comparer les résultats. L'outil affiche en même temps les conversions en octets, les équivalents en bits, kilobits, mégabits et gigabits, ainsi que le total exact en octets. Il est utile pour vérifier l'écart entre les unités SI et IEC, préparer des quotas de stockage, estimer des transferts ou expliquer pourquoi une capacité affichée par un système d'exploitation diffère de l'étiquette fabricant.",
+  "detailed_description": "Le calculateur de taille de fichier est aussi un convertisseur de taille de fichier pour convertir une valeur source en octets, Ko, Mo, Go, To et Po directement dans la page. Utilisez-le pour convertir Ko en Mo, convertir Mo en Go, vérifier une table octets Ko Mo Go, ou comparer une base 1000 ou 1024. Saisissez une valeur, choisissez son unité, puis sélectionnez la base binaire 1024 ou décimale 1000 pour comparer les résultats. L'outil affiche en même temps les conversions en octets, les équivalents en bits, kilobits, mégabits et gigabits, ainsi que le total exact en octets. Il est utile pour vérifier l'écart entre les unités SI et IEC, préparer des quotas de stockage, estimer des transferts ou expliquer pourquoi une capacité affichée par un système d'exploitation diffère de l'étiquette fabricant. Il convertit une valeur numérique manuelle et ne lit pas la taille d'un fichier local.",
   "usage_steps": [
     "Saisissez la taille de départ dans le champ de valeur.",
     "Choisissez l'unité source, par exemple B, KB, MB, GB, TB ou PB.",
-    "Sélectionnez la base binaire 1024 ou la base décimale 1000.",
+    "Sélectionnez la base 1000 ou 1024 selon que vous voulez une lecture décimale ou binaire.",
     "Consultez les conversions en octets dans la colonne de gauche.",
     "Comparez les conversions en bits et le total en octets dans la colonne de droite.",
     "Modifiez la valeur, l'unité ou la base pour mettre les résultats à jour."
   ],
   "usage_examples": [
+    "Convertir Ko en Mo pour vérifier rapidement la taille de fichier indiquée dans une limite d'upload.",
+    "Convertir Mo en Go avant de comparer une archive avec un quota de stockage.",
     "Un administrateur serveur convertit un quota disque de 500 Go (SI) en Tébioctets (TiB) pour vérifier la compatibilité avec un hyperviseur utilisant des blocs de stockage binaires",
     "Un développeur Android convertit la taille d'une vidéo 4K de 1,200 MégaOctets (Mo) en Gigaoctets (Go) pour s'assurer qu'elle respecte les limites d'installation sur appareils mobiles",
     "Un photographe professionnel calcule la capacité requise pour stocker 800 fichiers RAW de 25 Mo chacun en téraoctets, en tenant compte des 5% d'espace système réservé",
     "Un ingénieur cloud convertit 4096 Mo de mémoire vive en Gibioctets (GiB) pour configurer correctement les paramètres d'une machine virtuelle AWS EC2"
   ],
   "faqs": [
+    {
+      "question": "Puis-je utiliser cet outil comme convertisseur de taille de fichier ?",
+      "answer": "Oui. Il fonctionne comme convertisseur de taille de fichier pour passer entre octets, Ko, Mo, Go, To et Po avec une base 1000 ou 1024."
+    },
+    {
+      "question": "Comment convertir Ko en Mo ou convertir Mo en Go ?",
+      "answer": "Saisissez la valeur, choisissez Ko ou Mo comme unité source, puis lisez directement les résultats dans les unités affichées. La page met à jour les conversions sans action supplémentaire."
+    },
     {
       "question": "Quelle est la différence entre base 1024 et base 1000 ?",
       "answer": "La base 1024 correspond aux unités binaires souvent utilisées par les systèmes d'exploitation, tandis que la base 1000 correspond aux unités décimales souvent utilisées dans les fiches fabricant."

@@ -1,30 +1,38 @@
 {
-  "detailed_description": "O Image Splitter divide uma imagem carregada no navegador em uma grade simples de linhas e colunas. Voce pode escolher presets como 2x2, 3x3, 4x4, 2x3 e 3x2, ou definir manualmente de 1 a 10 linhas e colunas. A pagina mostra a imagem original com uma sobreposicao de grade, calcula o tamanho aproximado de cada peca e gera partes PNG a partir das areas iguais da imagem. Depois da divisao, cada peca pode ser baixada separadamente, ou todas podem ser reunidas em um arquivo ZIP. O processamento acontece no navegador e e voltado para cortes rapidos de rascunhos, layouts sociais e referencias visuais.",
+  "detailed_description": "O Image Splitter online divide uma imagem enviada em uma grade simples de linhas e colunas diretamente no navegador. Voce pode escolher presets como 2x2, 3x3, 4x4, 2x3 e 3x2, ou definir manualmente de 1 a 10 linhas e colunas. Depois do upload, a pagina mostra uma grade sobre a imagem original, o tamanho de origem e o tamanho calculado de cada parte. Ao clicar em Dividir, o Canvas cria partes PNG retangulares e iguais. Em seguida, voce pode baixar uma parte individual pela pre-visualizacao ou salvar todos os PNG em um arquivo ZIP. A ferramenta e util para rascunhos de grade social, materiais educativos, revisao de design e imagens grandes. Ela nao adiciona sobreposicao, nao escolhe outro formato de saida e nao preserva metadados.",
   "usage_steps": [
-    "1. Clique ou arraste uma imagem para a area de upload.",
-    "2. Escolha um preset de grade ou informe manualmente o numero de linhas e colunas.",
-    "3. Confira a sobreposicao de grade e o tamanho estimado de cada peca.",
-    "4. Clique em Dividir para gerar as partes PNG no navegador.",
-    "5. Baixe uma peca individual passando o cursor sobre ela, ou use Baixar Tudo para obter um ZIP."
+    "Envie uma imagem pelo seletor de arquivos.",
+    "Escolha um preset como 3x3 ou defina linhas e colunas de 1 a 10.",
+    "Confira a grade, o tamanho original e o tamanho de cada parte.",
+    "Clique em Dividir para gerar partes PNG no navegador.",
+    "Baixe uma parte na pre-visualizacao ou use Baixar Tudo para salvar um ZIP."
   ],
   "usage_examples": [
-    "Criador de conteudo dividindo uma imagem quadrada em 3x3 para planejar uma grade de publicacoes.",
-    "Designer separando um mockup em quatro partes iguais para revisar detalhes com a equipe.",
-    "Professor preparando partes de uma imagem para uma atividade visual simples em sala.",
-    "Desenvolvedor gerando pecas PNG de referencia para testar um layout de grade."
+    "Dividir um cartaz em grade 3x3 para testar um layout de postagem.",
+    "Criar partes PNG iguais de uma ilustracao para aula ou atividade simples.",
+    "Cortar um banner em uma grade 2x3 para revisar cada secao separadamente.",
+    "Baixar todas as partes em ZIP depois de conferir a grade e os tamanhos."
   ],
   "faqs": [
     {
-      "question": "As partes sao baixadas em qual formato?",
-      "answer": "As partes geradas pela ferramenta sao PNG. Voce pode baixar cada peca separadamente ou todas juntas em um ZIP."
+      "question": "O que o Image Splitter cria?",
+      "answer": "Ele cria partes PNG retangulares e iguais de uma imagem conforme a grade de linhas e colunas escolhida."
     },
     {
-      "question": "Posso definir margens ou sobreposicao entre as pecas?",
-      "answer": "Nao. A versao atual divide a imagem em areas iguais de acordo com as linhas e colunas escolhidas."
+      "question": "Posso definir linhas e colunas?",
+      "answer": "Sim. Use presets ou informe valores de 1 a 10 para linhas e colunas."
+    },
+    {
+      "question": "Posso baixar todas as partes juntas?",
+      "answer": "Sim. Depois da divisao, Baixar Tudo salva todas as partes PNG em um ZIP."
     },
     {
       "question": "A imagem e enviada para um servidor?",
-      "answer": "Nao. O upload e lido pelo navegador e a divisao acontece localmente na pagina."
+      "answer": "Nao. Upload, pre-visualizacao, divisao e downloads acontecem no navegador."
+    },
+    {
+      "question": "Ha sobreposicao, EXIF ou escolha de JPEG?",
+      "answer": "Nao. A ferramenta atual cria partes PNG simples e sem sobreposicao pela grade."
     }
   ]
 }

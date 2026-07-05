@@ -57,6 +57,58 @@ const wordCounterTerms: Record<string, string[]> = {
   ar: ['كلمات', 'عداد'],
 };
 
+const creditCardValidatorTerms: Record<string, string[]> = {
+  en: ['credit card', 'Luhn', 'check'],
+  zh: ['信用卡', 'Luhn', '校验'],
+  ja: ['クレジットカード', 'Luhn'],
+  ko: ['신용카드', 'Luhn'],
+  es: ['tarjeta', 'Luhn'],
+  pt: ['cartão', 'Luhn'],
+  fr: ['carte', 'Luhn'],
+  de: ['Kreditkarte', 'Luhn'],
+  ru: ['карты', 'Лухна'],
+  ar: ['بطاقات', 'لوهن'],
+};
+
+const creditCardValidatorForbiddenTerms: Record<string, string[]> = {
+  en: ['real-time authorization', 'balance check', 'CVV verification', 'bank verification'],
+  zh: ['实时授权', '余额查询', 'CVV 验证', '银行验证'],
+  ja: ['リアルタイム承認', '残高確認', 'CVV確認', '銀行確認'],
+  ko: ['실시간 승인', '잔액 확인', 'CVV 확인', '은행 확인'],
+  es: ['autorización en tiempo real', 'verificación CVV', 'saldo disponible', 'verificación bancaria'],
+  pt: ['autorização em tempo real', 'verificação CVV', 'saldo disponível', 'verificação bancária'],
+  fr: ['autorisation en temps réel', 'vérification CVV', 'solde disponible', 'vérification bancaire'],
+  de: ['Echtzeitautorisierung', 'CVV-Prüfung', 'verfügbares Guthaben', 'Bankprüfung'],
+  ru: ['авторизация в реальном времени', 'проверка CVV', 'доступный баланс'],
+  ar: ['تفويض فوري', 'تحقق CVV', 'الرصيد المتاح', 'تحقق بنكي'],
+};
+
+const imageSplitterTerms: Record<string, string[]> = {
+  en: ['image', 'splitter', 'PNG'],
+  zh: ['图片', '分割', 'PNG'],
+  ja: ['画像', '分割', 'PNG'],
+  ko: ['이미지', '분할', 'PNG'],
+  es: ['imagen', 'PNG'],
+  pt: ['imagem', 'PNG'],
+  fr: ['image', 'PNG'],
+  de: ['Bild', 'PNG'],
+  ru: ['фото', 'PNG'],
+  ar: ['الصور', 'PNG'],
+};
+
+const imageSplitterForbiddenTerms: Record<string, string[]> = {
+  en: ['overlap', 'EXIF', 'output format', 'sprite'],
+  zh: ['重叠', 'EXIF', '输出格式', '精灵图'],
+  ja: ['重なり', 'EXIF', '出力形式', 'スプライト'],
+  ko: ['겹침', 'EXIF', '출력 형식', '스프라이트'],
+  es: ['solapamiento', 'EXIF', 'formato de salida', 'sprite'],
+  pt: ['sobreposicao', 'EXIF', 'formato de saida', 'sprite'],
+  fr: ['chevauchement', 'EXIF', 'format de sortie', 'sprite'],
+  de: ['Überlappung', 'EXIF', 'Formatwahl', 'Sprite'],
+  ru: ['нахлест', 'EXIF', 'формат вывода', 'спрайт'],
+  ar: ['تداخلا', 'EXIF', 'صيغا أخرى', 'سبرایت'],
+};
+
 const CHECKS: LossMetadataCheck[] = [
   // 1. file-size-calculator (10 locales)
   ...locales.map(locale => ({
@@ -86,7 +138,23 @@ const CHECKS: LossMetadataCheck[] = [
     requiredTerms: wordCounterTerms[locale] || [],
   })),
 
-  // 4. other individual checks
+  // 4. credit-card-validator (10 locales)
+  ...locales.map(locale => ({
+    locale,
+    slug: 'credit-card-validator',
+    requiredTerms: creditCardValidatorTerms[locale] || [],
+    forbiddenFragments: creditCardValidatorForbiddenTerms[locale] || [],
+  })),
+
+  // 5. image-splitter (10 locales)
+  ...locales.map(locale => ({
+    locale,
+    slug: 'image-splitter',
+    requiredTerms: imageSplitterTerms[locale] || [],
+    forbiddenFragments: imageSplitterForbiddenTerms[locale] || [],
+  })),
+
+  // 6. other individual checks
   {
     locale: 'en',
     slug: 'morse-code-player',
@@ -96,7 +164,8 @@ const CHECKS: LossMetadataCheck[] = [
   {
     locale: 'en',
     slug: 'gantt-chart-generator',
-    requiredTerms: ['Gantt', 'chart', 'project timeline', 'PNG/SVG'],
+    requiredTerms: ['Gantt', 'chart', 'project timeline', 'PNG', 'SVG'],
+    forbiddenFragments: ['manage Gantt charts', 'progress tracking'],
   },
   {
     locale: 'en',
@@ -106,7 +175,8 @@ const CHECKS: LossMetadataCheck[] = [
   {
     locale: 'en',
     slug: 'iban-validator',
-    requiredTerms: ['IBAN'],
+    requiredTerms: ['IBAN', 'checker', 'MOD-97', 'checksum'],
+    forbiddenFragments: ['Supports all European countries', 'show bank code', 'bank information'],
   },
   {
     locale: 'en',
@@ -127,6 +197,66 @@ const CHECKS: LossMetadataCheck[] = [
     locale: 'en',
     slug: 'vcard-to-csv-converter',
     requiredTerms: ['vCard', 'VCF', 'CSV', 'spreadsheets'],
+  },
+  {
+    locale: 'de',
+    slug: 'text-to-handwriting',
+    requiredTerms: ['Handschrift', 'Text'],
+  },
+  {
+    locale: 'ko',
+    slug: 'html-preview',
+    requiredTerms: ['HTML', '미리보기'],
+  },
+  {
+    locale: 'ko',
+    slug: 'unicode-converter',
+    requiredTerms: ['유니코드', '변환'],
+    forbiddenFragments: [
+      '무료 온라인 유니코드 변환기을 통해',
+      '을(를) 진행할 수 있습니다',
+      '100% 로컬에서 실행되어 개인정보를 완벽히 보호',
+    ],
+  },
+  {
+    locale: 'ru',
+    slug: 'html-preview',
+    requiredTerms: ['HTML', 'просмотр', 'предпросмотр'],
+    forbiddenFragments: [
+      'с поддержкой CSS и JavaScript',
+      'Бесплатный онлайн-инструмент',
+      'прямо в браузере прямо в вашем браузере',
+      'Live HTML Viewer',
+    ],
+  },
+  {
+    locale: 'es',
+    slug: 'html-preview',
+    requiredTerms: ['HTML', 'visualizador', 'vista previa'],
+    forbiddenFragments: [
+      'soporte para CSS y JavaScript',
+      'compatibilidad con CSS y JavaScript',
+      'Renderizado en tiempo real',
+      'Renderizado en vivo',
+      'Visualizador y editor en tiempo real',
+    ],
+  },
+  {
+    locale: 'en',
+    slug: 'html-preview',
+    requiredTerms: ['HTML', 'Viewer', 'Preview', 'sandboxed iframe'],
+    forbiddenFragments: [
+      'Live HTML Viewer',
+      'live sandboxed iframe',
+      'JavaScript support',
+      'JavaScript execution',
+      'complete web pages including interactive elements',
+    ],
+  },
+  {
+    locale: 'ru',
+    slug: 'barcode-generator',
+    requiredTerms: ['штрихкод', 'генератор'],
   },
 ];
 

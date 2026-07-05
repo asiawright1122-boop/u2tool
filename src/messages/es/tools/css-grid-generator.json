@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Nuestro generador CSS Grid es una herramienta visual potente que simplifica la creación de layouts de cuadrícula complejos. Define filas y columnas con unidades flexibles (fr, px, %, auto), ajusta espaciados y ve los cambios instantáneamente en la vista previa en vivo. Perfecto para diseño web responsivo, layouts de dashboard e interfaces modernas basadas en CSS Grid.",
+  "detailed_description": "Nuestro generador CSS Grid es una herramienta visual potente que simplifica la creación de layouts de cuadrícula complejos. Define filas y columnas con unidades flexibles (fr, px, %, auto), ajusta espaciados y ve los cambios instantáneamente en la vista previa en vivo. Perfecto para diseño web responsivo, layouts de dashboard e interfaces modernas basadas en CSS Grid. Generador de cuadrícula CSS está pensado para generar un borrador y ajustarlo manualmente. Revisa las opciones disponibles, comprueba si el resultado encaja con tu contexto y úsalo solo después de revisarlo.",
   "usage_steps": [
     "1. Establece el número de columnas y filas",
     "2. Define los tamaños de columnas y filas (1fr, 200px, auto, etc.)",
@@ -12,5 +12,27 @@
     "Cuadrículas de dashboard con diferentes anchos de columna",
     "Galerías de imágenes con distribución uniforme",
     "Layouts de blog con barra lateral y contenido principal"
+  ],
+  "faqs": [
+    {
+      "question": "Qué debo revisar antes de usar el resultado de Generador de cuadrícula CSS?",
+      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+    },
+    {
+      "question": "Puedo modificar el resultado después de generarlo?",
+      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+    },
+    {
+      "question": "Por qué el resultado puede diferir de otra generador?",
+      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+    },
+    {
+      "question": "Puedo empezar con una entrada corta?",
+      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+    },
+    {
+      "question": "Sustituye la revisión manual?",
+      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+    }
   ]
 }
