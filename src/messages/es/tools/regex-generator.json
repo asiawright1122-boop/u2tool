@@ -1,39 +1,38 @@
 {
-  "detailed_description": "El Generador de Expresiones Regulares es una herramienta técnica diseñada para desarrolladores que necesitan crear y probar patrones de coincidencia complejos de forma eficiente. Esta herramienta permite componer expresiones regulares utilizando una biblioteca predefinida de fragmentos comunes, como validación de correos electrónicos, extracción de URLs o identificación de fechas en formatos específicos. Los usuarios pueden combinar estos bloques mediante operadores avanzados (ej: cuantificadores, grupos de captura, assertions) y aplicarlos en tiempo real a datos de prueba ingresados manualmente o cargados desde archivos. La necesidad de esta herramienta surge de la complejidad inherente a las expresiones regulares, donde errores sintácticos o lógicos pueden generar falsos positivos o negativos en tareas críticas como el procesamiento de logs, la validación de formularios o el scraping de datos. Su motor utiliza un analizador léxico basado en Thompson NFA para simular coincidencias y mostrar resultados inmediatos, incluyendo grupos capturados y posiciones de coincidencia. Además, incluye un modo de depuración que visualiza el autómata finito generado, útil para entender el flujo de ejecución del patrón.",
+  "detailed_description": "El Generador de Expresiones Regulares ayuda a crear y probar regex sencillas en el navegador. Puedes elegir un patrón común, como correo electrónico, teléfono de EE.UU., URL, IPv4, fecha, hora, color hexadecimal, usuario, contraseña, ZIP, tarjeta o slug, o escribir tu propio patrón. Después puedes activar flags global, insensible a mayúsculas y multilínea, pegar una cadena de prueba y ejecutar la comprobación para ver las coincidencias devueltas por JavaScript. El patrón actual se puede copiar al portapapeles. La herramienta no importa archivos, no muestra grupos capturados por separado, no depura autómatas y no garantiza que un patrón sea válido para todos los motores de regex.",
   "usage_steps": [
-    "Selecciona una categoría de patrones básicos en el menú desplegable (ej: 'Validación de datos', 'Extracción de texto')",
-    "Arrastra fragmentos específicos (ej: [a-zA-Z], \\d{3}) desde la paleta de componentes al área de construcción",
-    "Combina los fragmentos usando operadores avanzados desde el panel contextual (ej: *, +?, | para alternancia)",
-    "Ingresa texto de prueba en el campo 'Cadena de entrada' o carga un archivo .txt/.log usando el botón 'Importar'",
-    "Observa el resaltado de coincidencias en tiempo real y examina el panel de resultados detallados (capturas, índices)",
-    "Descarga la expresión generada en formato .regex o copia el código directamente en lenguaje de programación (PHP, Python, JavaScript)"
+    "Elige un patrón común o escribe tu propia expresión regular.",
+    "Activa los flags g, i o m si los necesitas.",
+    "Pega el texto que quieres probar en el área de prueba.",
+    "Haz clic en Prueba de Patrón para ver las coincidencias.",
+    "Copia el patrón actual si quieres usarlo en otro lugar."
   ],
   "usage_examples": [
-    "Validar números de teléfono mexicanos con formato (55) 1234-5678 usando el patrón \\(\\d{2}\\) \\d{4}-\\d{4}",
-    "Extraer direcciones IPv4 de un archivo de logs mediante \\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b y filtro de grupos",
-    "Crear una expresión para validar contraseñas seguras con al menos 12 caracteres, una letra mayúscula, un número y un símbolo especial",
-    "Parsear fechas en formato ISO 8601 (YYYY-MM-DDTHH:mm:ssZ) desde un archivo JSON utilizando el patrón \\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z"
+    "Probar un patrón de correo electrónico con una lista corta de direcciones.",
+    "Comprobar si un texto contiene URLs o direcciones IPv4.",
+    "Crear una regex sencilla para fechas en formato AAAA-MM-DD.",
+    "Copiar un patrón común y ajustarlo antes de usarlo en código JavaScript."
   ],
   "faqs": [
     {
-      "question": "Qué debo revisar antes de usar el resultado de Generador de Expresiones Regulares?",
-      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+      "question": "Puedo escribir mi propio patrón?",
+      "answer": "Sí. Si no eliges un patrón común, puedes escribir una expresión regular personalizada en el campo de patrón."
     },
     {
-      "question": "Puedo modificar el resultado después de generarlo?",
-      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+      "question": "Qué flags admite?",
+      "answer": "La interfaz permite activar global (g), insensible a mayúsculas y minúsculas (i) y multilínea (m)."
     },
     {
-      "question": "Por qué el resultado puede diferir de otra herramienta de desarrollo?",
-      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+      "question": "Muestra todas las coincidencias?",
+      "answer": "Muestra las coincidencias que devuelve el método match de JavaScript con los flags seleccionados."
     },
     {
-      "question": "Puedo empezar con una entrada corta?",
-      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+      "question": "Puedo importar archivos de log?",
+      "answer": "No. Debes pegar manualmente el texto de prueba en el área de texto."
     },
     {
-      "question": "Sustituye la revisión manual?",
-      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+      "question": "Sirve para validar expresiones críticas?",
+      "answer": "Úsalo como ayuda rápida. Para formularios, seguridad o procesamiento importante, prueba el patrón con casos límite y en el motor exacto donde lo usarás."
     }
   ]
 }

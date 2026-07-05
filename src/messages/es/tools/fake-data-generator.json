@@ -1,39 +1,39 @@
 {
-  "detailed_description": "El Generador de Datos Falsos es una herramienta avanzada diseñada para crear datos simulados de alta calidad para diversos propósitos de desarrollo y pruebas. Técnica y funcionalmente, esta herramienta utiliza algoritmos de generación de datos basados en modelos estadísticos y lógicas de patrones lingüísticos para producir datos que se asemejan a datos reales, incluyendo nombres, correos electrónicos, direcciones, números de teléfono, y más. La importancia de esta herramienta radica en su capacidad para proporcionar a los desarrolladores y probadores un conjunto de datos realistas sin infringir la privacidad de individuos reales. Esto es crucial en escenarios de desarrollo de aplicaciones, pruebas de funcionalidad, y simulaciones de uso en entornos controlados.\n\nLos usuarios necesitan esta herramienta para varios casos de uso específicos. Por ejemplo, en el desarrollo de aplicaciones web, es esencial contar con datos de prueba que reflejen la variedad y complejidad de los datos reales para asegurar que la aplicación funcione correctamente en todas las condiciones. En pruebas de rendimiento, los datos generados pueden ayudar a simular cargas de trabajo reales y evaluar la capacidad del sistema. Además, en entornos de formación y capacitación, los datos falsos permiten a los nuevos desarrolladores aprender y practicar sin riesgo de dañar datos reales.\n\nLa herramienta funciona a través de una interfaz de usuario intuitiva que permite a los usuarios seleccionar los tipos de datos que desean generar, configurar los parámetros específicos, y obtener el resultado en formato CSV, JSON, o directamente en el navegador. La generación de datos se realiza en tiempo real, y los algoritmos utilizados aseguran que los datos sean consistentes y lógicamente correctos, lo que aumenta su valor para pruebas y desarrollo.",
+  "detailed_description": "El Generador de Datos Falsos crea datos de ejemplo directamente en el navegador para pruebas ligeras, demos y documentación. Puedes elegir entre 1 y 1000 registros, seleccionar el locale de la muestra, añadir o quitar campos, renombrar columnas y escoger tipos como nombre, correo electrónico, teléfono, dirección, ciudad, país, empresa, cargo, fecha, número, UUID, URL o nombre de usuario. Después de generar la tabla, puedes editar celdas individuales, copiar el resultado como JSON o exportarlo como JSON, CSV o una sentencia SQL INSERT con el nombre de tabla que indiques. Los datos son simulados y simples; no representan identidades reales, no validan reglas fiscales o bancarias y no sustituyen un generador de datos de prueba especializado para cargas masivas.",
   "usage_steps": [
-    "Acceda a la herramienta a través del menú principal y seleccione 'Generador de Datos Falsos'.",
-    "En el panel de configuración, elija el tipo de datos que desea generar, como nombres, correos electrónicos, direcciones, etc.",
-    "Personalice los parámetros específicos para cada tipo de dato. Por ejemplo, para nombres, puede seleccionar el país y el idioma para generar nombres más precisos y contextuales.",
-    "Configure el número de registros que desea generar y el formato de salida (CSV, JSON, o texto plano).",
-    "Haga clic en el botón 'Generar Datos' para iniciar el proceso de creación de datos falsos.",
-    "Una vez generados, los datos se mostrarán en la pantalla y podrán ser descargados en el formato seleccionado."
+    "Elige cuántos registros quieres crear, hasta 1000.",
+    "Selecciona el locale de ejemplo que debe usar la generación.",
+    "Añade, elimina o renombra campos y escoge el tipo de dato de cada columna.",
+    "Escribe el nombre de tabla si vas a exportar SQL.",
+    "Haz clic en Generar Datos para crear la vista previa editable.",
+    "Edita celdas si hace falta, copia el JSON o exporta JSON, CSV o SQL."
   ],
   "usage_examples": [
-    "Desarrollo de una aplicación de gestión de clientes: Un equipo de desarrollo necesita datos de prueba que incluyan nombres, direcciones, y correos electrónicos para simular el comportamiento de los usuarios en la aplicación. El Generador de Datos Falsos permite crear un conjunto de datos realistas y voluminoso para probar la funcionalidad y el rendimiento de la aplicación.",
-    "Pruebas de seguridad en una plataforma de comercio electrónico: Los responsables de seguridad necesitan verificar la capacidad de la plataforma para manejar y proteger datos sensibles. Utilizando el Generador de Datos Falsos, pueden crear datos de prueba que incluyan información de tarjetas de crédito y direcciones de facturación, simulando un entorno real sin poner en riesgo datos reales.",
-    "Formación de desarrolladores junior: Un mentor de desarrollo utiliza el Generador de Datos Falsos para crear un conjunto de datos que los desarrolladores en formación pueden usar para practicar consultas SQL y operaciones de base de datos. Esto ayuda a los nuevos desarrolladores a familiarizarse con el manejo de datos sin afectar sistemas de producción.",
-    "Pruebas de rendimiento en una aplicación móvil: Un equipo de pruebas necesita simular una gran cantidad de usuarios activos para evaluar el rendimiento de la aplicación. El Generador de Datos Falsos permite crear perfiles de usuario ficticios, incluyendo nombres, correos electrónicos, y ubicaciones, para simular un uso real de la aplicación y evaluar su capacidad de respuesta."
+    "Crear 20 usuarios de ejemplo con nombre, correo y teléfono para una demo.",
+    "Preparar un CSV pequeño para probar la importación de una tabla.",
+    "Generar una sentencia SQL INSERT con columnas personalizadas para una base de datos local.",
+    "Copiar JSON de muestra para documentación, fixtures manuales o prototipos."
   ],
   "faqs": [
     {
-      "question": "Qué debo revisar antes de usar el resultado de Generador de Datos Falsos?",
-      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+      "question": "Qué tipos de datos puedo generar?",
+      "answer": "Puedes usar nombre, nombre, apellido, correo electrónico, teléfono, dirección, ciudad, país, empresa, cargo, fecha, número, UUID, URL y nombre de usuario."
     },
     {
-      "question": "Puedo modificar el resultado después de generarlo?",
-      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+      "question": "Puedo cambiar los nombres de las columnas?",
+      "answer": "Sí. Cada campo tiene un nombre editable y también puedes cambiar su tipo antes de generar los registros."
     },
     {
-      "question": "Por qué el resultado puede diferir de otra generador?",
-      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+      "question": "Qué formatos puedo exportar?",
+      "answer": "La página permite copiar JSON y descargar los datos como JSON, CSV o SQL."
     },
     {
-      "question": "Puedo empezar con una entrada corta?",
-      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+      "question": "Los datos son reales?",
+      "answer": "No. Son valores simulados para pruebas, demostraciones y ejemplos; revisa siempre el resultado antes de usarlo."
     },
     {
-      "question": "Sustituye la revisión manual?",
-      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+      "question": "Genera datos masivos o seguros?",
+      "answer": "No. El límite de la interfaz es 1000 registros y la generación es sencilla, pensada para ejemplos rápidos en el navegador."
     }
   ]
 }
