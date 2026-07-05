@@ -14,10 +14,10 @@
  * Requirements: 5.1
  */
 
-import { tools, getToolsByCategory } from '@/config/tools';
 import type { Tool } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
 import { getLocalizedPath, type Locale } from '@/lib/i18n';
+import { getRelatedToolsForTool } from '@/lib/related-tools';
 
 interface Props {
   /** Current tool (to exclude from related list) */
@@ -40,40 +40,7 @@ const {
   headingLabel = 'Related Tools',
 } = Astro.props;
 
-/**
- * Get related tools: same category first, then fill with popular tools from other categories.
- */
-function getRelatedTools(tool: Tool, max: number): Tool[] {
-  // 1. Get tools from the same category (excluding current)
-  const sameCategoryTools = getToolsByCategory(tool.category)
-    .filter((t) => t.slug !== tool.slug);
-
-  if (sameCategoryTools.length >= max) {
-    return sameCategoryTools.slice(0, max);
-  }
-
-  // 2. If not enough, supplement with popular tools from other categories
-  const result = [...sameCategoryTools];
-  const usedSlugs = new Set([tool.slug, ...result.map((t) => t.slug)]);
-
-  const popularFromOtherCategories = tools
-    .filter((t) => t.popular && !usedSlugs.has(t.slug))
-    .slice(0, max - result.length);
-
-  result.push(...popularFromOtherCategories);
-
-  // 3. If still not enough, add any remaining tools
-  if (result.length < max) {
-    const remaining = tools
-      .filter((t) => !usedSlugs.has(t.slug) && !result.some((r) => r.slug === t.slug))
-      .slice(0, max - result.length);
-    result.push(...remaining);
-  }
-
-  return result.slice(0, max);
-}
-
-const relatedTools = getRelatedTools(currentTool, maxCount);
+const relatedTools = getRelatedToolsForTool(currentTool, maxCount);
 
 /**
  * Get the localized tool name from translations, falling back to slug.

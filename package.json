@@ -23,6 +23,7 @@
     "report:gsc-recovery": "node --import tsx/esm scripts/seo/gsc-recovery-report.ts",
     "report:gsc-validation-matrix": "node --import tsx/esm scripts/seo/gsc-validation-action-matrix.ts",
     "report:gsc-crawled-not-indexed-actions": "node --import tsx/esm scripts/seo/gsc-crawled-not-indexed-action-matrix.ts",
+    "report:gsc-content-refresh-links": "node --import tsx/esm scripts/seo/gsc-content-refresh-internal-link-audit.ts",
     "report:gsc-p1-post-deploy-monitoring": "node --import tsx/esm scripts/seo/gsc-p1-post-deploy-monitoring-list.ts",
     "report:gsc-p1-checkpoint": "node --import tsx/esm scripts/seo/gsc-p1-checkpoint-report.ts",
     "report:gsc-content-refresh-live-preflight": "node --import tsx/esm scripts/seo/gsc-content-refresh-live-preflight.ts",

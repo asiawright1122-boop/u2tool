@@ -1,5 +1,6 @@
 import { categories, getPopularTools, getToolsByCategory, type ToolCategory } from '@/config/tools';
 import { getLocalizedPath, type Locale } from './i18n';
+import { crawledNotIndexedContentRefreshToolSlugsByCategory } from './related-tools';
 
 export interface DiscoverySpotlightTool {
   description: string;
@@ -20,22 +21,53 @@ export interface CategoryDiscoverySpotlight {
 
 export const discoveryCategoryPriority: ToolCategory[] = [
   'text',
-  'security',
+  'converters',
   'charts',
   'development',
+  'encoding',
   'image',
+  'network',
+  'finance',
+  'math',
   'office',
-  'converters',
+  'fun',
+  'security',
 ];
+
+const defaultDiscoverySpotlightLimit = 12;
+const representativeToolLimit = 6;
+
+const recoveryRepresentativeToolSlugsByCategory: Partial<Record<ToolCategory, string[]>> = {
+  charts: ['gantt-chart-generator', ...(crawledNotIndexedContentRefreshToolSlugsByCategory.charts ?? [])],
+  converters: ['csv-to-vcard-converter', 'vcard-to-csv-converter', 'ical-parser'],
+  development: ['html-preview', ...(crawledNotIndexedContentRefreshToolSlugsByCategory.development ?? [])],
+  encoding: ['hex-editor', 'ascii-table', 'unicode-converter', 'morse-code-player'],
+  finance: ['iban-validator'],
+  fun: [...(crawledNotIndexedContentRefreshToolSlugsByCategory.fun ?? [])],
+  image: [
+    'passport-photo-maker',
+    'text-to-handwriting',
+    'barcode-generator',
+    ...(crawledNotIndexedContentRefreshToolSlugsByCategory.image ?? []),
+  ],
+  math: ['compound-interest-calculator', ...(crawledNotIndexedContentRefreshToolSlugsByCategory.math ?? [])],
+  network: [...(crawledNotIndexedContentRefreshToolSlugsByCategory.network ?? [])],
+  office: [...(crawledNotIndexedContentRefreshToolSlugsByCategory.office ?? [])],
+  text: ['document-word-counter'],
+};
 
 function getRepresentativeToolSlugs(category: ToolCategory): string[] {
   const categoryTools = getToolsByCategory(category);
+  const categoryToolSlugs = new Set(categoryTools.map((tool) => tool.slug));
+  const recoverySlugs = (recoveryRepresentativeToolSlugsByCategory[category] ?? []).filter((slug) =>
+    categoryToolSlugs.has(slug)
+  );
   const popularSlugs = getPopularTools()
     .filter((tool) => tool.category === category)
     .map((tool) => tool.slug);
   const fallbackSlugs = categoryTools.map((tool) => tool.slug);
 
-  return [...new Set([...popularSlugs, ...fallbackSlugs])].slice(0, 3);
+  return [...new Set([...recoverySlugs, ...popularSlugs, ...fallbackSlugs])].slice(0, representativeToolLimit);
 }
 
 export function buildCategoryDiscoverySpotlights(
@@ -43,7 +75,7 @@ export function buildCategoryDiscoverySpotlights(
   categoryNames: Record<string, string>,
   toolNames: Record<string, string>,
   toolDescriptions: Record<string, string>,
-  limit = 6
+  limit = defaultDiscoverySpotlightLimit
 ): CategoryDiscoverySpotlight[] {
   const prioritizedCategories = discoveryCategoryPriority
     .map((id) => categories.find((category) => category.id === id))
