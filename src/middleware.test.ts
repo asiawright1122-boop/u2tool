@@ -97,6 +97,109 @@ describe('html edge cache middleware', () => {
     expect(next).not.toHaveBeenCalled();
   });
 
+  it('redirects production HTTP canonical pages to HTTPS', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+    const { response } = await runMiddleware(
+      new Request('http://www.u2tool.com/en/tools/json-to-xml/?utm_source=test'),
+      next
+    );
+
+    expect(response.status).toBe(301);
+    expect(response.headers.get('location')).toBe('https://www.u2tool.com/en/tools/json-to-xml/?utm_source=test');
+    expect(next).not.toHaveBeenCalled();
+  });
+
+  it('collapses production HTTP canonicalization redirects to a single HTTPS target', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+    const { response } = await runMiddleware(
+      new Request('http://www.u2tool.com/en/tools/json-formatter?utm_source=test'),
+      next
+    );
+
+    expect(response.status).toBe(301);
+    expect(response.headers.get('location')).toBe('https://www.u2tool.com/en/tools/json-formatter/?utm_source=test');
+    expect(next).not.toHaveBeenCalled();
+  });
+
+  it('normalizes production apex HTTP requests to the canonical www HTTPS host', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+    const { response } = await runMiddleware(
+      new Request('http://u2tool.com/en/tools/json-to-xml/'),
+      next
+    );
+
+    expect(response.status).toBe(301);
+    expect(response.headers.get('location')).toBe('https://www.u2tool.com/en/tools/json-to-xml/');
+    expect(next).not.toHaveBeenCalled();
+  });
+
+  it('collapses apex HTTP and trailing-slash canonicalization to one www HTTPS target', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+    const { response } = await runMiddleware(
+      new Request('http://u2tool.com/en/tools/json-formatter?utm_source=test'),
+      next
+    );
+
+    expect(response.status).toBe(301);
+    expect(response.headers.get('location')).toBe('https://www.u2tool.com/en/tools/json-formatter/?utm_source=test');
+    expect(next).not.toHaveBeenCalled();
+  });
+
+  it('redirects production apex HTTPS requests to the canonical www host', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+    const { response } = await runMiddleware(
+      new Request('https://u2tool.com/en/tools/json-to-xml/?utm_source=test'),
+      next
+    );
+
+    expect(response.status).toBe(301);
+    expect(response.headers.get('location')).toBe('https://www.u2tool.com/en/tools/json-to-xml/?utm_source=test');
+    expect(next).not.toHaveBeenCalled();
+  });
+
+  it('collapses GSC recovery redirects from production HTTP to a single HTTPS target', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+    const { response } = await runMiddleware(
+      new Request('http://www.u2tool.com/typing-test?ref=gsc'),
+      next
+    );
+
+    expect(response.status).toBe(301);
+    expect(response.headers.get('location')).toBe('https://www.u2tool.com/en/tools/typing-speed-test/?ref=gsc');
+    expect(next).not.toHaveBeenCalled();
+  });
+
+  it('does not force HTTPS for local preview requests', async () => {
+    const next = vi.fn(async () => new Response('<html>ok</html>', {
+      headers: { 'content-type': 'text/html; charset=utf-8' },
+    }));
+    const { response } = await runMiddleware(
+      new Request('http://localhost:4321/en/tools/json-to-xml/'),
+      next
+    );
+
+    expect(response.status).toBe(200);
+    expect(response.headers.get('location')).toBeNull();
+    expect(next).toHaveBeenCalled();
+  });
+
+  it.each([
+    ['https://www.u2tool.com/de/tools/text-to-handwriting', '/de/tools/text-to-handwriting/'],
+    ['https://www.u2tool.com/ru/tools/hex-editor', '/ru/tools/hex-editor/'],
+    ['https://www.u2tool.com/ko/tools/html-preview', '/ko/tools/html-preview/'],
+    ['https://www.u2tool.com/en/tools/hex-editor', '/en/tools/hex-editor/'],
+    ['https://www.u2tool.com/ko/tools/unicode-converter', '/ko/tools/unicode-converter/'],
+    ['https://www.u2tool.com/fr/tools/file-size-calculator', '/fr/tools/file-size-calculator/'],
+    ['https://www.u2tool.com/en/tools/ical-parser', '/en/tools/ical-parser/'],
+  ])('redirects old GSC winner URL %s to slash canonical %s', async (source, target) => {
+    const next = vi.fn(async () => new Response('should not run'));
+    const { response } = await runMiddleware(new Request(source), next);
+
+    expect(response.status).toBe(301);
+    expect(response.headers.get('location')).toBe(target);
+    expect(next).not.toHaveBeenCalled();
+  });
+
   it('redirects legacy unlocalized site info pages before invalid-locale home matching', async () => {
     const next = vi.fn(async () => new Response('should not run'));
     const { response } = await runMiddleware(
@@ -743,4 +846,3 @@ describe('html edge cache middleware', () => {
     });
   });
 });
-

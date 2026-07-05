@@ -44,6 +44,8 @@ const LEGACY_UNLOCALIZED_SECTIONS = new Set([
   'terms',
   'tools',
 ]);
+const CANONICAL_SITE_HOST = 'www.u2tool.com';
+const PRODUCTION_SITE_HOSTS = new Set(['u2tool.com', 'www.u2tool.com']);
 
 type CloudflareRuntimeLocals = {
   cfContext?: {
@@ -76,6 +78,54 @@ function isLocalPreviewRequest(request: Request): boolean {
     || hostname === '0.0.0.0'
     || hostname === '[::1]'
     || hostname === '::1';
+}
+
+function isWorkerLoopbackRequest(request: Request): boolean {
+  const headers = request.headers;
+  return headers.has('cf-worker')
+    || headers.has('x-worker-loopback')
+    || /Cloudflare-Workers|u2tool-loopback|astro-engine/i.test(headers.get('user-agent') || '');
+}
+
+function shouldNormalizeProductionOrigin(request: Request): boolean {
+  if (request.method !== 'GET' && request.method !== 'HEAD') {
+    return false;
+  }
+
+  const url = new URL(request.url);
+  return PRODUCTION_SITE_HOSTS.has(url.hostname)
+    && (url.protocol === 'http:' || url.hostname !== CANONICAL_SITE_HOST)
+    && !isLocalPreviewRequest(request)
+    && !isWorkerLoopbackRequest(request);
+}
+
+function normalizeProductionOrigin(url: URL): URL {
+  url.protocol = 'https:';
+  url.hostname = CANONICAL_SITE_HOST;
+  url.port = '';
+  return url;
+}
+
+function resolveProductionOriginRedirect(request: Request): string | null {
+  if (!shouldNormalizeProductionOrigin(request)) {
+    return null;
+  }
+
+  const url = new URL(request.url);
+  return normalizeProductionOrigin(url).toString();
+}
+
+function normalizeRedirectLocation(location: string, request: Request): string {
+  if (!shouldNormalizeProductionOrigin(request)) {
+    return location;
+  }
+
+  const targetUrl = new URL(location, request.url);
+  return normalizeProductionOrigin(targetUrl).toString();
+}
+
+function redirectForRequest(location: string, request: Request, status = 301): Response {
+  return redirect(normalizeRedirectLocation(location, request), status);
 }
 
 function getPathSegments(pathname: string): string[] {
@@ -112,13 +162,7 @@ function resolveCanonicalRedirect(request: Request): string | null {
   }
 
   const url = new URL(request.url);
-  const headers = request.headers;
-  const isLoopback =
-    headers.has('cf-worker') ||
-    headers.has('x-worker-loopback') ||
-    /Cloudflare-Workers|u2tool-loopback|astro-engine/i.test(headers.get('user-agent') || '');
-
-  if (isLoopback) {
+  if (isWorkerLoopbackRequest(request)) {
     return null;
   }
 
@@ -286,12 +330,17 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
   }
   const recoveryTarget = await resolveGscRecoveryRedirect(url.pathname, redirectsKv);
   if (recoveryTarget) {
-    return redirect(`${recoveryTarget}${url.search}`);
+    return redirectForRequest(`${recoveryTarget}${url.search}`, context.request);
   }
 
   const canonicalRedirect = resolveCanonicalRedirect(context.request);
   if (canonicalRedirect) {
-    return redirect(canonicalRedirect);
+    return redirectForRequest(canonicalRedirect, context.request);
+  }
+
+  const originRedirect = resolveProductionOriginRedirect(context.request);
+  if (originRedirect) {
+    return redirect(originRedirect);
   }
 
   const shouldUseHtmlCache = !context.isPrerendered

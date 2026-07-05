@@ -8,6 +8,7 @@ import svelte from '@astrojs/svelte';
 import tailwindcss from '@tailwindcss/vite';
 import fs from 'node:fs';
 import path from 'node:path';
+import { getHtmlCacheVersion } from './scripts/build/html-cache-version.mjs';
 
 // Automatically heal wrangler configuration files during Astro config loading and Vite build phases
 function healWranglerFiles() {
@@ -180,13 +181,6 @@ function readGitValue(args) {
   }
 }
 
-function getHtmlCacheVersion() {
-  const commit = readGitValue(['rev-parse', '--short=12', 'HEAD']);
-  const status = readGitValue(['status', '--porcelain']);
-
-  return `${commit || 'unknown'}${status ? '-dirty' : ''}`;
-}
-
 function copyMessageAssetsIntegration() {
   return {
     name: 'copy-message-assets',
@@ -215,7 +209,7 @@ function copyMessageAssetsIntegration() {
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
-  trailingSlash: 'always',
+  trailingSlash: 'ignore',
   site: 'https://www.u2tool.com',
   adapter: cloudflare({
     imageService: 'compile',
@@ -229,7 +223,7 @@ export default defineConfig({
   vite: {
     plugins: [healWranglerVitePlugin(), fixPrerenderUrlVitePlugin(), tailwindcss()],
     define: {
-      __U2TOOL_HTML_CACHE_VERSION__: JSON.stringify(getHtmlCacheVersion()),
+      __U2TOOL_HTML_CACHE_VERSION__: JSON.stringify(getHtmlCacheVersion({ readGitValue })),
     },
   },
 });

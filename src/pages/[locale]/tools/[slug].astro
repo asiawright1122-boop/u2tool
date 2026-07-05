@@ -39,7 +39,7 @@ import ToolClusterCard from '@/components/tools/ToolClusterCard.astro';
 import type { ToolClusterBlock } from '@/lib/tool-cluster-types';
 
 // --- Config ---
-import { tools, categories, getToolsByCategory } from '@/config/tools';
+import { tools, categories } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
 
 // --- Lib ---
@@ -53,6 +53,7 @@ import { sanitizeHtml } from '@/lib/sanitize';
 import { assessSupportContentTrust } from '@/lib/content-trust';
 import { buildSafeFallbackSupportContent } from '@/lib/support-content-fallback';
 import { findComparisonGuideForTool, getComparisonUiCopy } from '@/lib/comparison-surfaces';
+import { getRelatedToolsForTool } from '@/lib/related-tools';
 import {
   buildChartToolClusterGroupForTool,
   chartToolClusterPath,
@@ -348,19 +349,8 @@ if (supportContentFallback) {
   safeToolMessages.faqs = faqs;
 }
 const toolTranslations = { tools: { ...genericToolKeys, [tool.slug]: safeToolMessages } };
-const sameCategoryTools = getToolsByCategory(tool.category)
-  .filter((t) => t.slug !== tool.slug)
-  .slice(0, 6);
-
 // Build a minimal translations map for related tool names
-const relatedToolSlugs = new Set(sameCategoryTools.map((t) => t.slug));
-// Also include popular tools that might be used as fallback
-const popularFallbacks = tools
-  .filter((t) => t.popular && t.slug !== tool.slug && !relatedToolSlugs.has(t.slug))
-  .slice(0, 6);
-for (const t of popularFallbacks) {
-  relatedToolSlugs.add(t.slug);
-}
+const relatedToolSlugs = new Set(getRelatedToolsForTool(tool, 6).map((relatedTool) => relatedTool.slug));
 
 // Extract tool names from base messages
 const allToolTranslations: Record<string, Record<string, unknown>> = {};

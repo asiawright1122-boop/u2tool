@@ -7,6 +7,8 @@ const BASE_URL = `http://localhost:${DEV_PORT}`;
 const checks = [
   { name: 'Root Redirection', url: '/', expect: { status: 301, locationEndsWith: '/en/' } },
   { name: 'Legacy Blog Redirect', url: '/ru/blog/regex-complete-guide', expect: { status: 301, locationEndsWith: '/ru/tools/regex-tester/' } },
+  { name: 'Comparison Guide Canonical Slash', url: '/en/compare/choose-jwt-tool', expect: { status: 301, locationEndsWith: '/en/compare/choose-jwt-tool/' } },
+  { name: 'Comparison Guide Static HTML', url: '/en/compare/choose-jwt-tool/', expect: { status: 200 } },
   { name: 'Decommissioned Category Route', url: '/tools/categories/text/', expect: { status: 410, cacheControl: 'public, max-age=86400, s-maxage=86400', robots: 'noindex, nofollow' } },
   { name: 'Stale Next.js static asset', url: '/_next/static/chunks/main.js', expect: { status: 410 } },
 ];
