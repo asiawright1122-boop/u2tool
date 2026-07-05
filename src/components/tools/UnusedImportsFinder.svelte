@@ -78,25 +78,25 @@
           <div class="grid grid-cols-3 gap-4">
             <div class="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg text-center">
               <div class="text-2xl font-bold text-gray-900 dark:text-white">{result.imports.length}</div>
-              <div class="text-sm text-gray-500">Import Statements</div>
+              <div class="text-sm text-gray-500">{t('importStatements')}</div>
             </div>
             <div class="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg text-center">
               <div class={`text-2xl font-bold ${result.unusedCount > 0 ? 'text-orange-600' : 'text-green-600'}`}>
                 {result.unusedCount}
               </div>
-              <div class="text-sm text-gray-500">Unused Imports</div>
+              <div class="text-sm text-gray-500">{t('unusedImports')}</div>
             </div>
             <div class="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg text-center">
               <div class="text-2xl font-bold text-green-600">
                 {result.imports.reduce((sum, imp) => sum + imp.used.length, 0)}
               </div>
-              <div class="text-sm text-gray-500">Used Imports</div>
+              <div class="text-sm text-gray-500">{t('usedImports')}</div>
             </div>
           </div>
 
           {#if result.imports.filter(imp => imp.unused.length > 0).length > 0}
 <div class="space-y-3">
-              <h3 class="text-lg font-medium text-gray-900 dark:text-white">Unused Imports</h3>
+              <h3 class="text-lg font-medium text-gray-900 dark:text-white">{t('unusedImports')}</h3>
               {#each result.imports.filter(imp => imp.unused.length > 0) as imp, idx (idx)}
 <div  class="p-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg border border-orange-200 dark:border-orange-800">
                   <div class="flex items-center justify-between mb-1">

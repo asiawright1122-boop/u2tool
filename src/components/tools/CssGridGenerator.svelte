@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
-  import { alignItems } from '@/lib/tool-stubs';
 
   interface Props {
     locale: string;
@@ -37,6 +36,8 @@
 
   let justifyItems = $state('stretch');
 
+  let alignItems = $state('stretch');
+
   let copied = $state(false);
 
   let timerRef = $state(null);  onDestroy(() => {
@@ -68,7 +69,10 @@
   align-items: ${alignItems};
 }`;
   }
-  const css = generateCSS();
+  function getPreviewStyle() {
+    return `display: grid; grid-template-columns: ${columnSizes.join(' ')}; grid-template-rows: ${rowSizes.join(' ')}; gap: ${gap}px; justify-items: ${justifyItems}; align-items: ${alignItems};`;
+  }
+  let css = $derived(generateCSS());
   async function copyCSS() {
     await navigator.clipboard.writeText(css);
     copied = true;
@@ -81,7 +85,7 @@
 
 
     <div class="space-y-6">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
         <div class="flex flex-col">
           <label for="grid-columns" class="block text-sm font-medium mb-2 truncate">{tg('columns')}</label>
           <input
@@ -123,6 +127,15 @@
         <div class="flex flex-col">
           <label for="grid-justify-items" class="block text-sm font-medium mb-2 truncate">{tg('justifyItems')}</label>
           <select id="grid-justify-items" name="gridJustifyItems" bind:value={justifyItems} class="tool-input flex-1">
+            <option value="stretch">{tg('stretch')}</option>
+            <option value="start">{tg('start')}</option>
+            <option value="center">{tg('center')}</option>
+            <option value="end">{tg('end')}</option>
+          </select>
+        </div>
+        <div class="flex flex-col">
+          <label for="grid-align-items" class="block text-sm font-medium mb-2 truncate">{t('alignItems')}</label>
+          <select id="grid-align-items" name="gridAlignItems" bind:value={alignItems} class="tool-input flex-1">
             <option value="stretch">{tg('stretch')}</option>
             <option value="start">{tg('start')}</option>
             <option value="center">{tg('center')}</option>
@@ -185,7 +198,7 @@
         <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{tg('preview')}</label>
         <div
           class="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg min-h-[200px]"
-          style="display: grid; grid-template-columns: columnSizes.join(' '); grid-template-rows: rowSizes.join(' '); gap: {gap}px; justify-items: justifyItems as 'stretch' | 'start' | 'center' | 'end'; align-items: alignItems as 'stretch' | 'start' | 'center' | 'end'"
+          style={getPreviewStyle()}
         >
           {#each Array.from({ length: columns * rows }) as _, i (i)}
 <div 

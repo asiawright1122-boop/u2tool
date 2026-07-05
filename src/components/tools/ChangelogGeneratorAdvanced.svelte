@@ -131,7 +131,7 @@
                   : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
               }`}
             >
-              {f === 'keepachangelog' ? 'Keep a Changelog' : f === 'conventional' ? 'Conventional' : 'Simple'}
+              {f === 'keepachangelog' ? t('keepAChangelog') : f === 'conventional' ? t('conventional') : t('simple')}
             </button>
 {/each}
         </div>

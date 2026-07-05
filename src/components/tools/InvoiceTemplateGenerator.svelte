@@ -641,14 +641,14 @@
 
           <div class="grid grid-cols-2 gap-8 mb-8">
             <div>
-              <p class="text-xs text-gray-500 uppercase mb-1">From</p>
+              <p class="text-xs text-gray-500 uppercase mb-1">{t('from')}</p>
               <p class="font-semibold text-gray-900">{invoice.companyName}</p>
               <p class="text-sm text-gray-600">{invoice.companyAddress}</p>
               <p class="text-sm text-gray-600">{invoice.companyEmail}</p>
               <p class="text-sm text-gray-600">{invoice.companyPhone}</p>
             </div>
             <div>
-              <p class="text-xs text-gray-500 uppercase mb-1">Bill To</p>
+              <p class="text-xs text-gray-500 uppercase mb-1">{t('billTo')}</p>
               <p class="font-semibold text-gray-900">{invoice.clientName}</p>
               <p class="text-sm text-gray-600">{invoice.clientAddress}</p>
               <p class="text-sm text-gray-600">{invoice.clientEmail}</p>
@@ -657,11 +657,11 @@
 
           <div class="flex gap-8 mb-8 text-sm">
             <div>
-              <p class="text-gray-500">Invoice Date</p>
+              <p class="text-gray-500">{t('invoiceDate')}</p>
               <p class="font-medium text-gray-900">{invoice.date}</p>
             </div>
             <div>
-              <p class="text-gray-500">Due Date</p>
+              <p class="text-gray-500">{t('dueDate')}</p>
               <p class="font-medium text-gray-900">{invoice.dueDate}</p>
             </div>
           </div>
@@ -669,16 +669,16 @@
           <table class="w-full mb-8">
             <thead>
               <tr class="border-b border-gray-200">
-                <th class="text-left py-2 text-sm text-gray-500">Description</th>
-                <th class="text-right py-2 text-sm text-gray-500">Qty</th>
-                <th class="text-right py-2 text-sm text-gray-500">Price</th>
-                <th class="text-right py-2 text-sm text-gray-500">Amount</th>
+                <th class="text-left py-2 text-sm text-gray-500">{t('descriptionPlaceholder')}</th>
+                <th class="text-right py-2 text-sm text-gray-500">{t('qty')}</th>
+                <th class="text-right py-2 text-sm text-gray-500">{t('price')}</th>
+                <th class="text-right py-2 text-sm text-gray-500">{t('amount')}</th>
               </tr>
             </thead>
             <tbody>
               {#each invoice.items as item (item.id)}
 <tr  class="border-b border-gray-100">
-                  <td class="py-3 text-gray-900">{item.description || 'Item'}</td>
+                  <td class="py-3 text-gray-900">{item.description || t('items')}</td>
                   <td class="py-3 text-right text-gray-600">{item.quantity}</td>
                   <td class="py-3 text-right text-gray-600">{formatCurrency(item.unitPrice)}</td>
                   <td class="py-3 text-right text-gray-900 font-medium">{formatCurrency(item.quantity * item.unitPrice)}</td>
@@ -690,15 +690,15 @@
           <div class="flex justify-end">
             <div class="w-64">
               <div class="flex justify-between py-2 text-sm">
-                <span class="text-gray-500">Subtotal</span>
+                <span class="text-gray-500">{t('subtotal')}</span>
                 <span class="text-gray-900">{formatCurrency(calculations.subtotal)}</span>
               </div>
               <div class="flex justify-between py-2 text-sm border-b border-gray-200">
-                <span class="text-gray-500">Tax ({invoice.taxRate}%)</span>
+                <span class="text-gray-500">{t('tax')} ({invoice.taxRate}%)</span>
                 <span class="text-gray-900">{formatCurrency(calculations.tax)}</span>
               </div>
               <div class="flex justify-between py-3 text-lg font-bold">
-                <span class="text-gray-900">Total</span>
+                <span class="text-gray-900">{t('total')}</span>
                 <span class="text-amber-600">{formatCurrency(calculations.total)}</span>
               </div>
             </div>
