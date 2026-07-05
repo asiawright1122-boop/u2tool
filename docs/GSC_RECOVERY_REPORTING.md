@@ -153,6 +153,43 @@ npm run report:gsc-recovery -- \
 - 最受影响查询意图
 - 可直接复用的 `Weekly Summary Draft`
 
+## P1 部署后监控
+
+2026-07-05 P1 内容恢复批次已经部署，专项说明见：
+
+- [/Users/kaka/Dev/u2tool/docs/GSC_P1_POST_DEPLOY_CHECKPOINTS_2026-07-05.md](/Users/kaka/Dev/u2tool/docs/GSC_P1_POST_DEPLOY_CHECKPOINTS_2026-07-05.md)
+
+该批次的检查节奏：
+
+- `2026-07-12`：7 天 checkpoint，确认抓取/索引和早期曝光变化。
+- `2026-07-19`：14 天 checkpoint，标记已索引但曝光仍平的页面。
+- `2026-08-02`：28 天 checkpoint，决定是否需要下一轮修复。
+
+重新生成 P1 URL 监控清单：
+
+```bash
+npm run report:gsc-p1-post-deploy-monitoring
+```
+
+重新生成并线上 smoke cache-busted URL：
+
+```bash
+npm run report:gsc-p1-post-deploy-monitoring -- --smoke true
+```
+
+每个 checkpoint 的 GSC 页面导出就位后，生成 P1 URL 级别恢复报告：
+
+```bash
+npm run report:gsc-p1-checkpoint -- \
+  --baseline-dir exports/gsc \
+  --checkpoint-dir exports/gsc/checkpoints/2026-07-12 \
+  --monitoring-json exports/seo/gsc-p1-post-deploy-monitoring/2026-07-05/p1-monitoring-urls.json \
+  --label 2026-07-12 \
+  --output docs/GSC_P1_COHORT_CHECKPOINT_2026-07-12.md
+```
+
+输出位于 `exports/seo/gsc-p1-post-deploy-monitoring/2026-07-05/`，该目录被 `.gitignore` 忽略，适合作为本地 GSC 对账和批量验证输入。
+
 ## 配套文件
 
 - 命令说明：[/Users/kaka/Dev/u2tool/docs/GSC_RECOVERY_REPORTING.md](/Users/kaka/Dev/u2tool/docs/GSC_RECOVERY_REPORTING.md)

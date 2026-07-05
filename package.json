@@ -22,6 +22,8 @@
     "report:gsc-drilldown": "node --import tsx/esm scripts/seo/gsc-drilldown-url-report.ts",
     "report:gsc-recovery": "node --import tsx/esm scripts/seo/gsc-recovery-report.ts",
     "report:gsc-validation-matrix": "node --import tsx/esm scripts/seo/gsc-validation-action-matrix.ts",
+    "report:gsc-p1-post-deploy-monitoring": "node --import tsx/esm scripts/seo/gsc-p1-post-deploy-monitoring-list.ts",
+    "report:gsc-p1-checkpoint": "node --import tsx/esm scripts/seo/gsc-p1-checkpoint-report.ts",
     "report:gsc-technical-blockers": "node --import tsx/esm scripts/seo/gsc-technical-blocker-live-check.ts",
     "check:gsc-recovery-inputs": "node --import tsx/esm scripts/seo/check-gsc-recovery-inputs.ts",
     "report:runtime-debt": "node --import tsx/esm scripts/validation/generate-runtime-debt-inventory.ts",
