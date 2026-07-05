@@ -1,17 +1,33 @@
 {
-  "detailed_description": "El generador de UUID v4 crea identificadores únicos universales basados en valores aleatorios criptográficamente seguros, según el estándar UUID versión 4 (RFC 4122). Cada UUID es una cadena de 36 caracteres (128 bits representados en hexadecimal) con una probabilidad extremadamente baja de colisión. Esta herramienta es esencial para desarrolladores que necesitan identificadores únicos en sistemas distribuidos, bases de datos NoSQL, tokens de sesión o pruebas automatizadas. Internamente utiliza un generador de números pseudoaleatorios (CSPRNG) que extrae entropía del sistema operativo para garantizar seguridad criptográfica. A diferencia de otros generadores, permite personalizar la salida con opciones como formato JSON/CSV, control de mayúsculas/minúsculas y eliminación de guiones, ideal para integrar directamente en pipelines de desarrollo o entornos de CI/CD.",
+  "detailed_description": "El generador de UUID crea identificadores UUID v4 directamente en el navegador. Indica una cantidad entre 1 y 100, pulsa Generar y copia un UUID individual o toda la lista. Los valores se muestran con el formato estándar con guiones y sirven para ejemplos, fixtures, pruebas manuales, identificadores temporales o datos de demostración. La herramienta se centra en generación v4 simple; no ofrece UUID v1, v3 o v5, no cambia mayúsculas/minúsculas, no elimina guiones y no exporta JSON, CSV ni TXT.",
   "usage_steps": [
-    "Accede al generador a través de la barra de navegación en la categoría 'Generadores'",
-    "Ajusta el número de UUIDs a generar (de 1 a 1000) usando el control deslizante 'Cantidad'",
-    "Selecciona las opciones de formato: activa 'Mayúsculas' para estándares SQL o desactiva 'Guiones' para claves compactas",
-    "Elige el formato de salida en el menú desplegable: 'Línea simple', 'JSON array' o 'CSV'",
-    "Haz clic en 'Generar UUID' para crear los identificadores inmediatamente en el área de resultados",
-    "Copia el resultado con un clic en el botón 'Copiar al portapapeles' o descarga como archivo .txt con el botón 'Descargar'"
+    "Elige cuántos UUID quieres generar, de 1 a 100.",
+    "Haz clic en Generar para crear una nueva lista.",
+    "Copia un UUID individual si solo necesitas uno.",
+    "Usa Copiar todo para llevar toda la lista al portapapeles."
   ],
   "usage_examples": [
-    "Crear 100 UUIDs en formato CSV para poblar una base de datos de pruebas con identificadores únicos en un entorno de staging",
-    "Generar un token de sesión en formato UUID v4 sin guiones para un API REST que requiere identificadores compactos de 24 caracteres",
-    "Producir 10 UUIDs en mayúsculas para definir constantes en código Java que siguen el estándar de nomenclatura UPPER_SNAKE_CASE",
-    "Exportar 500 UUIDs en formato JSON array para integrar directamente como fixture en pruebas unitarias de una aplicación Node.js"
+    "Crear algunos identificadores para fixtures de prueba.",
+    "Generar una lista corta de UUID para documentación de API.",
+    "Copiar un UUID v4 para un registro de demostración.",
+    "Reemplazar rápidamente identificadores ficticios en un prototipo."
+  ],
+  "faqs": [
+    {
+      "question": "Qué versión de UUID genera?",
+      "answer": "La página genera UUID v4 mediante la biblioteca usada por la aplicación."
+    },
+    {
+      "question": "Cuántos UUID puedo crear a la vez?",
+      "answer": "El campo cantidad acepta de 1 a 100 UUID."
+    },
+    {
+      "question": "Puedo copiar toda la lista?",
+      "answer": "Sí. Copiar todo coloca todos los UUID en el portapapeles separados por saltos de línea."
+    },
+    {
+      "question": "Puedo descargar CSV o JSON?",
+      "answer": "No. Esta versión solo permite copiar un UUID individual o copiar toda la lista."
+    }
   ]
 }

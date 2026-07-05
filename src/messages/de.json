@@ -1232,7 +1232,7 @@
       "name": "JSON zu Python",
       "description": "Konvertiere JSON-Daten in Python-Datenklassen, Pydantic oder TypedDict.",
       "seo_title": "Kostenlos JSON zu Python-Converter online",
-      "seo_description": "Konvertieren Sie JSON online kostenlos in Python-Datenklassen oder Pydantic-Modelle. Generieren Sie typsichere Python-Code mit Validierung – ideal für Python-API-Entwicklung.",
+      "seo_description": "Wandeln Sie ein JSON-Objekt in Python-Code um: Dataclass, Pydantic, TypedDict oder Plain Class mit kopierbarer Ausgabe.",
 
 
 
@@ -2194,7 +2194,7 @@
       "name": "Zufallszahlengenerator",
       "description": "Generiere zufällige Ganzzahlen in einem eigenen Bereich, optional ohne Duplikate.",
       "seo_title": "Kostenloser Zufallszahlengenerator online",
-      "seo_description": "Kostenloses Online-Tool Zufallszahlengenerator, mit dem Sie schnell und sicher Erzeuge bis zu 1000 zufällige Ganzzahlen in einem Bereich, optional eindeutig, und kopiere die Liste im Browser direkt in Ihrem Browser. Völlig kostenlos, ohne Downloads oder Registrierung, läuft 100% lokal, um maximale Privatsphäre und Arbeitseffizienz zu gewährleisten.",
+      "seo_description": "Erzeugen Sie bis zu 1000 ganze Zufallszahlen zwischen Minimum und Maximum, optional eindeutig, und kopieren Sie die Liste.",
 
 
 
@@ -4048,7 +4048,7 @@
       "description": "Generiere zufällige IP-Adressen (IPv4, IPv6, private, öffentlich).",
       "copy": "Alles kopieren",
       "seo_title": "IP-Adresse-Generator online - U2Tool",
-      "seo_description": "Nutzen Sie IP-Adresse-Generator im Browser, um Eingaben, Ausgaben und Ergebnisse schnell ohne Konto oder Installation zu bearbeiten.",
+      "seo_description": "Generieren Sie IPv4-, IPv6-, private oder öffentliche IPv4-Adressen in Mengen von 1 bis 100 und kopieren Sie die Liste.",
       "ipType": "IP-Typ",
       "ipv4Random": "IPv4 (Zufällig)",
       "ipv6": "IPv6",
@@ -5111,10 +5111,10 @@
       "infoText": "Verwendet die Picsum Photos API. Seed stellt sicher, dass dasselbe Bild für konsistente Ergebnisse wiedergegeben wird. Bild-ID (0-1084) wählt ein bestimmtes Foto aus."
     },
     "regex-escape": {
-      "name": "Regex-Maskierung",
-      "description": "Besondere Regex-Zeichen entkommen oder entschärfen.",
-      "seo_title": "Kostenloses Online-Tool zum Maskieren von Regex-Zeichen",
-      "seo_description": "Kostenloses Online-Tool Regex-Maskierung, mit dem Sie schnell und sicher Maskieren oder demaskieren Sie Sonderzeichen für reguläre Ausdrücke mit diesem Regex-Werkzeug online direkt in Ihrem Browser. Völlig kostenlos, ohne Downloads oder Registrierung, läuft 100% lokal, um maximale Privatsphäre und Arbeitseffizienz zu gewährleisten.",
+      "name": "Regex Escape",
+      "description": "Escapen oder unescapen Sie Sonderzeichen für reguläre Ausdrücke.",
+      "seo_title": "Regex Escape online kostenlos",
+      "seo_description": "Escapen oder unescapen Sie Regex-Sonderzeichen, nutzen Sie Beispieltext, Sonderzeichen-Tasten, Ausgabe, Swap und Kopieren.",
       "mode": "Modus",
       "escape": "Entschärfen",
       "unescape": "Entschärfen",
@@ -11335,7 +11335,7 @@
       "name": "Text-Wiederholer",
       "description": "Wiederholen Sie Text mehrmals mit benutzerdefinierten Trennzeichen",
       "seo_title": "Kostenlos Online Text-Repeater-Tool",
-      "seo_description": "Kostenlose Online-Anwendung zum Wiederholen beliebiger Textabschnitte mit benutzerdefinierten Trennzeichen. Perfekt für Tests und Inhaltsfüllung.",
+      "seo_description": "Wiederholen Sie Text 1 bis 1000 Mal mit Trennzeichen, Nummerierung, Zeichen-/Zeilenzähler, Kopieren und TXT-Download.",
 
 
 
@@ -16111,9 +16111,9 @@
     },
     "random-generator": {
       "name": "Zufallszahlengenerator",
-      "description": "Generieren Sie Zufallszahlen innerhalb eines bestimmten Bereichs mit Massengenerierung und einzigartigen Optionen.",
-      "seo_title": "Kostenloser Online-Zufallszahlengenerator",
-      "seo_description": "Generieren Sie kostenlos Zufallszahlen online. Unterstützt benutzerdefinierte Bereiche, eindeutige Nummern und mehrere Ergebnisse. Perfekt für Spiele, Lotterien und Zufallsauswahlaufgaben."
+      "description": "Generiere zufällige Ganzzahlen in einem eigenen Bereich, optional ohne Duplikate.",
+      "seo_title": "Kostenloser Zufallszahlengenerator online",
+      "seo_description": "Erzeugen Sie bis zu 1000 ganze Zufallszahlen zwischen Minimum und Maximum, optional eindeutig, und kopieren Sie die Liste."
     },
     "text-reverser": {
       "name": "Textumkehrer",
@@ -16493,9 +16493,9 @@
     },
     "json-to-python": {
       "name": "JSON to Python",
-      "description": "Konvertieren Sie JSON-Daten in die Datenklasse Python, Pydantic oder TypedDict.",
-      "seo_title": "Kostenloser JSON-zu-Python-Konverter online",
-      "seo_description": "Konvertieren Sie JSON kostenlos online in Python-Datenklassen oder Pydantic-Modelle. Generieren Sie typsicheren Python-Code mit Validierung. Unverzichtbar für die Python-API-Entwicklung."
+      "description": "Konvertiere JSON-Daten in Python-Datenklassen, Pydantic oder TypedDict.",
+      "seo_title": "Kostenlos JSON zu Python-Converter online",
+      "seo_description": "Wandeln Sie ein JSON-Objekt in Python-Code um: Dataclass, Pydantic, TypedDict oder Plain Class mit kopierbarer Ausgabe."
     },
     "json-to-kotlin": {
       "name": "JSON to Kotlin",
@@ -17071,11 +17071,11 @@
       "seo_description": "Konvertieren Sie XML kostenlos online in das JSON-Format. Behalten Sie Attribute, Namespaces und verschachtelte Elemente bei. Perfekt für API-Integration und Datentransformation."
     },
     "ip-address-generator": {
-      "name": "IP Address Generator",
+      "name": "IP-Adresse-Generator",
       "description": "Generieren Sie zufällige IP-Adressen (IPv4, IPv6, privat, öffentlich).",
       "copy": "Alles kopieren",
       "seo_title": "IP-Adresse-Generator online - U2Tool",
-      "seo_description": "Nutzen Sie IP-Adresse-Generator im Browser, um Eingaben, Ausgaben und Ergebnisse schnell ohne Konto oder Installation zu bearbeiten.",
+      "seo_description": "Generieren Sie IPv4-, IPv6-, private oder öffentliche IPv4-Adressen in Mengen von 1 bis 100 und kopieren Sie die Liste.",
       "ipType": "IP Type",
       "ipv4Random": "IPv4 (Random)",
       "ipv6": "IPv6",
@@ -17842,9 +17842,9 @@
     },
     "regex-escape": {
       "name": "Regex-Escape",
-      "description": "Spezielle Regex-Zeichen mit Escape- oder Unescape-Zeichen versehen.",
-      "seo_title": "Kostenloses Regex-Escape-Tool online",
-      "seo_description": "Escape-Sonderzeichen zur Verwendung in regulären Ausdrücken online kostenlos. Behandeln Sie Metazeichen wie . * + ? ^ $ '{' '}' [ ] \\ '|' ( ). Unverzichtbar für Muster.",
+      "description": "Escapen oder unescapen Sie Sonderzeichen für reguläre Ausdrücke.",
+      "seo_title": "Regex Escape online kostenlos",
+      "seo_description": "Escapen oder unescapen Sie Regex-Sonderzeichen, nutzen Sie Beispieltext, Sonderzeichen-Tasten, Ausgabe, Swap und Kopieren.",
       "mode": "Modus",
       "escape": "Flucht",
       "unescape": "Unflucht",

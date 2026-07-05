@@ -1,39 +1,34 @@
 {
-  "detailed_description": "Der IP-Adressgenerator erstellt zufällige IP-Adressen aus IPv4- und IPv6-Adressräumen, einschließlich privater und öffentlicher Adressen, unter Einhaltung der IANA-Vorgaben. Technisch basiert der Generator auf kryptografisch sicheren Zufallsalgorithmen, die sicherstellen, dass die Adressen einzigartig und vorgabenkonform sind. Bei IPv4 werden Adressen unter Berücksichtigung klassischer Subnetzmasken (z. B. 192.168.x.x/16) generiert, während IPv6-Adressen mit 128-Bit-Länge und hexadezimaler Notation (z. B. 2001:db8::/32) erstellt werden. Private Adressen stammen aus definierten Bereichen wie 10.0.0.0/8, während öffentliche Adressen aus nicht-reservierten Ranges stammen. Anwender benötigen das Tool beispielsweise für Netzwerksimulationen, Lasttests auf Servern oder die Erstellung von Testdaten für Sicherheitsanalysen. Entwickler nutzen es zur Validierung von Firewall-Regeln, und Datenschutzexperten generieren damit anonymisierte Protokolldaten. Der Generator arbeitet zudem mit CIDR-kompatibler Maskierung und ermöglicht die Erzeugung von Adressen mit zugehörigen MAC-Übersetzungen für virtuelle Netzwerktests.",
+  "detailed_description": "Der IP-Adresse-Generator erstellt zufällige Beispieladressen im Browser. Sie können IPv4, IPv6, private IPv4 oder öffentliche IPv4 auswählen und über den Regler 1 bis 100 Adressen erzeugen. Die Ergebnisse erscheinen als Liste; einzelne Adressen können per Klick kopiert werden, oder die komplette Liste wird über den Kopieren-Button in die Zwischenablage übernommen. Private IPv4-Adressen stammen aus den üblichen Bereichen 10.x.x.x, 172.16-31.x.x und 192.168.x.x. Öffentliche IPv4-Adressen schließen private, Loopback- und reservierte Bereiche grob aus. Das Tool bietet keine CIDR-Eingabe, keine MAC-Übersetzung, keinen CSV-Export, keine Netzwerksimulation und keine kryptografische Zusicherung.",
   "usage_steps": [
-    "Wählen Sie im Dropdown-Menü die gewünschte IP-Version (IPv4 oder IPv6).",
-    "Aktivieren Sie die Checkbox 'Privat' oder 'Öffentlich', um den Adresstyp festzulegen.",
-    "Geben Sie im Feld 'Anzahl' die Menge der zu generierenden Adressen ein (max. 1000).",
-    "Optionaler Schritt: Legen Sie einen benutzerdefinierten CIDR-Bereich (z. B. 192.168.0.0/24) im Eingabefeld 'Subnetz' fest.",
-    "Klicken Sie auf den Button 'Generieren', um den Algorithmus zu starten.",
-    "Kopieren Sie die Ergebnisse über den 'Zwischenablage'-Button oder exportieren Sie sie als CSV-Datei."
+    "Wählen Sie IPv4, IPv6, private IPv4 oder öffentliche IPv4.",
+    "Stellen Sie die Anzahl zwischen 1 und 100 ein.",
+    "Klicken Sie auf Generieren, um die Liste zu erstellen.",
+    "Klicken Sie auf eine einzelne Adresse, um sie zu kopieren.",
+    "Nutzen Sie Kopieren, um die ganze Liste zu übernehmen."
   ],
   "usage_examples": [
-    "Ein Entwickler testet ein Cloud-Loadbalancer-System mit einer Liste von IPv6-Adressen, um die Verteilung auf Backends zu analysieren.",
-    "Ein Netzwerkadministrator simuliert einen DDoS-Angriff mit zufälligen öffentlichen IPs, um Firewall-Regeln zu optimieren.",
-    "Ein Lehrer erstellt Übungsaufgaben für Studenten, bei denen zwischen privaten und öffentlichen Adressen unterschieden werden muss.",
-    "Ein Data-Scientist generiert Dummy-IP-Daten für einen Log-Generator, um Datenschutzrichtlinien einzuhalten."
+    "Eine kurze Liste privater IPv4-Adressen für Testdaten erzeugen.",
+    "Einige IPv6-Beispieladressen für Dokumentation erstellen.",
+    "Öffentliche IPv4-Beispiele für UI-Mockups generieren.",
+    "Eine Liste von Adressen in ein Testdokument kopieren."
   ],
   "faqs": [
     {
-      "question": "Was sollte ich vor der Nutzung von IP-Adresse-Generator prüfen?",
-      "answer": "Prüfe Eingaben, Einstellungen, Format und Kontext. Bei wichtigen Ergebnissen solltest du Zahlen, Zeichen und Bedeutung vor dem Teilen oder Veröffentlichen noch einmal kontrollieren."
+      "question": "Kann ich einen CIDR-Bereich eingeben?",
+      "answer": "Nein. Die Oberfläche bietet nur die vier Typen IPv4, IPv6, private IPv4 und öffentliche IPv4."
     },
     {
-      "question": "Kann ich das Ergebnis nachträglich ändern?",
-      "answer": "Ja. Passe die Eingabe oder verfügbare Optionen an, führe die Verarbeitung erneut aus und verwende die aktualisierte Ausgabe erst nach einer Prüfung."
+      "question": "Wie viele IP-Adressen kann ich erzeugen?",
+      "answer": "Der Regler erlaubt 1 bis 100 Adressen."
     },
     {
-      "question": "Warum kann das Ergebnis von einem anderen Werkzeug abweichen?",
-      "answer": "Werkzeuge können Rundung, Analyse, Formatierung oder Darstellung unterschiedlich behandeln. Vergleiche mit derselben Eingabe und beachte die Grenzen der Oberfläche."
+      "question": "Kann ich die Ergebnisse exportieren?",
+      "answer": "Es gibt keinen Datei-Export. Sie können einzelne Adressen oder die komplette Liste kopieren."
     },
     {
-      "question": "Kann ich mit einer kurzen Eingabe beginnen?",
-      "answer": "Ja. Beginne mit einer kurzen oder nicht sensiblen Eingabe, um die Form der Ausgabe zu prüfen, bevor du den eigentlichen Inhalt verwendest."
-    },
-    {
-      "question": "Ersetzt das Werkzeug eine manuelle Prüfung?",
-      "answer": "Nein. Es beschleunigt wiederkehrende Arbeit, aber wichtige Ergebnisse sollten auf Genauigkeit, Kontext und Eignung geprüft werden."
+      "question": "Sind die öffentlichen IPv4-Adressen garantiert routbar?",
+      "answer": "Nein. Das Tool filtert einige private und reservierte Bereiche aus, garantiert aber keine tatsächliche Routbarkeit."
     }
   ]
 }
