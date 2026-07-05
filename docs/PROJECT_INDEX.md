@@ -1,6 +1,6 @@
 # U2Tool Project Index
 
-Last updated: 2026-06-22
+Last updated: 2026-06-30
 
 This document is a practical map of the current U2Tool codebase. It is meant
 to answer three questions quickly:
@@ -16,11 +16,21 @@ to answer three questions quickly:
 - Node baseline: `>=22.12.0`
 - Supported locales: `en`, `zh`, `ja`, `ko`, `es`, `pt`, `fr`, `de`, `ru`, `ar`
 - Tool catalog size: 557 tools across 14 categories
-- Tool components under `src/components/tools/`: 587 files
+- Popular tools: 100
+- Svelte files under `src/components/tools/`: 565
+- Direct tool-component tests under `src/components/tools/`: 5
 - Library files under `src/lib/`: 186 files
+- Library tests under `src/lib/`: 61
 - Route files under `src/pages/`: 39 files
 - Script files under `scripts/`: 205 files
 - Test files matched by `*test.ts`: 73 files
+
+### Current workspace baseline (2026-06-30)
+
+- Branch: `main...origin/main`
+- Pre-existing dirty files before this baseline: `.planning/TRACEABILITY.md`, `src/messages/es.json`, `src/messages/es/base.json`, `src/messages/fr.json`, `src/messages/fr/base.json`, `src/messages/pt.json`, `src/messages/pt/base.json`
+- Dated health baseline: [docs/PROJECT_HEALTH_BASELINE_2026-06-30.md](/Users/kaka/Dev/u2tool/docs/PROJECT_HEALTH_BASELINE_2026-06-30.md)
+- Implementation plan: [docs/superpowers/plans/2026-06-30-project-index-health-baseline.md](/Users/kaka/Dev/u2tool/docs/superpowers/plans/2026-06-30-project-index-health-baseline.md)
 
 ## 2. Domain Ground Truth
 

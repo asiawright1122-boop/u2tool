@@ -1,6 +1,6 @@
 # GSC Cohort Checkpoint - 2026-06-16
 
-Generated: 2026-06-17T05:25:34.705Z
+Generated: 2026-07-02T04:19:51.453Z
 
 Baseline directory: `/Users/kaka/Dev/u2tool/exports/gsc`
 Checkpoint directory: `/Users/kaka/Dev/u2tool/exports/gsc/checkpoints/2026-06-16`
@@ -9,6 +9,17 @@ Checkpoint directory: `/Users/kaka/Dev/u2tool/exports/gsc/checkpoints/2026-06-16
 
 | Cohort | URL | Label | Baseline Clicks | Checkpoint Clicks | Click Delta | Baseline Impressions | Checkpoint Impressions | Impression Delta | Checkpoint Position | Decision |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---|
+| A | `https://www.u2tool.com/de/tools/text-to-handwriting/` | DE Text to Handwriting - 16-month winner | 0 | 0 | 0 | 2 | 2 | 0 | 41.00 | watch |
+| A | `https://www.u2tool.com/ru/tools/hex-editor/` | RU Hex Editor - 16-month winner | 0 | 0 | 0 | 9 | 9 | 0 | 80.11 | watch |
+| A | `https://www.u2tool.com/ko/tools/html-preview/` | KO HTML Preview - 16-month winner | 3 | 3 | 0 | 6 | 6 | 0 | 7.33 | watch |
+| A | `https://www.u2tool.com/en/tools/hex-editor/` | EN Hex Editor - 16-month winner | 0 | 0 | 0 | 16 | 16 | 0 | 40.25 | watch |
+| A | `https://www.u2tool.com/ko/tools/unicode-converter/` | KO Unicode Converter - 16-month winner | 0 | 0 | 0 | 4 | 4 | 0 | 43.75 | watch |
+| A | `https://www.u2tool.com/ru/tools/html-preview/` | RU HTML Preview - 16-month winner | 0 | 0 | 0 | 3 | 3 | 0 | 47.33 | watch |
+| A | `https://www.u2tool.com/fr/tools/file-size-calculator/` | FR File Size Calculator - 16-month winner | 0 | 0 | 0 | 1 | 1 | 0 | 47.00 | watch |
+| A | `https://www.u2tool.com/en/tools/ical-parser/` | EN iCal Parser - 16-month winner | 0 | 0 | 0 | 0 | 0 | 0 | 0.00 | not-visible-yet |
+| A | `https://www.u2tool.com/es/tools/html-preview/` | ES HTML Preview - 16-month winner | 0 | 0 | 0 | 1 | 1 | 0 | 48.00 | watch |
+| A | `https://www.u2tool.com/ru/tools/barcode-generator/` | RU Barcode Generator - 16-month winner | 0 | 0 | 0 | 27 | 27 | 0 | 42.04 | watch |
+| A | `https://www.u2tool.com/en/tools/morse-code-player/` | EN Morse Code Player - 16-month winner | 0 | 0 | 0 | 1 | 1 | 0 | 89.00 | watch |
 | A | `https://www.u2tool.com/en/tools/passport-photo-maker/` | Passport Photo Maker | 0 | 0 | 0 | 0 | 0 | 0 | 0.00 | not-visible-yet |
 | A | `https://www.u2tool.com/en/tools/csv-to-vcard-converter/` | CSV to vCard Converter | 0 | 0 | 0 | 0 | 0 | 0 | 0.00 | not-visible-yet |
 | A | `https://www.u2tool.com/en/tools/vcard-to-csv-converter/` | vCard to CSV Converter | 0 | 0 | 0 | 0 | 0 | 0 | 0.00 | not-visible-yet |
@@ -48,6 +59,10 @@ Checkpoint directory: `/Users/kaka/Dev/u2tool/exports/gsc/checkpoints/2026-06-16
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---|
 | hex editor online | `hex editor online` | `https://www.u2tool.com/en/tools/hex-editor/`<br>`https://www.u2tool.com/ru/tools/hex-editor/` | 0 | 0 | 0 | 3 | 3 | 0 | 48.33 | watch |
 | hex editor Russian | `hex редактор онлайн` | `https://www.u2tool.com/ru/tools/hex-editor/` | 0 | 0 | 0 | 0 | 0 | 0 | 0.00 | not-visible-yet |
+| German handwriting conversion | `text in handschrift umwandeln`<br>`text in handschrift umwandeln online` | `https://www.u2tool.com/de/tools/text-to-handwriting/` | 0 | 0 | 0 | 0 | 0 | 0 | 0.00 | not-visible-yet |
+| Korean HTML preview | `html 미리보기`<br>`html 뷰어`<br>`html 실행` | `https://www.u2tool.com/ko/tools/html-preview/`<br>`https://www.u2tool.com/ru/tools/html-preview/`<br>`https://www.u2tool.com/es/tools/html-preview/`<br>`https://www.u2tool.com/en/tools/html-preview/` | 2 | 2 | 0 | 2 | 2 | 0 | 10.50 | watch |
+| Korean unicode converter | `유니코드 변환`<br>`유니코드 변환기` | `https://www.u2tool.com/ko/tools/unicode-converter/` | 0 | 0 | 0 | 0 | 0 | 0 | 0.00 | not-visible-yet |
+| French file size calculator | `calcul taille fichier`<br>`taille fichier ko mo go` | `https://www.u2tool.com/fr/tools/file-size-calculator/` | 0 | 0 | 0 | 0 | 0 | 0 | 0.00 | not-visible-yet |
 | gantt chart maker | `gantt chart maker`<br>`create gantt chart online`<br>`create a gantt chart online` | `https://www.u2tool.com/en/tools/gantt-chart-generator/` | 0 | 0 | 0 | 41 | 41 | 0 | 43.75 | watch |
 | compound interest calculator | `compound interest calculator` | `https://www.u2tool.com/en/tools/compound-interest-calculator/` | 0 | 0 | 0 | 1 | 1 | 0 | 79.00 | watch |
 | sitemap generator | `sitemap generator` | `https://www.u2tool.com/en/tools/sitemap-generator/` | 0 | 0 | 0 | 0 | 0 | 0 | 0.00 | not-visible-yet |

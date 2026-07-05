@@ -32,6 +32,61 @@ interface QueryFamily {
 const COHORT_URLS: CohortUrl[] = [
   {
     cohort: 'A',
+    url: 'https://www.u2tool.com/de/tools/text-to-handwriting/',
+    label: 'DE Text to Handwriting - 16-month winner',
+  },
+  {
+    cohort: 'A',
+    url: 'https://www.u2tool.com/ru/tools/hex-editor/',
+    label: 'RU Hex Editor - 16-month winner',
+  },
+  {
+    cohort: 'A',
+    url: 'https://www.u2tool.com/ko/tools/html-preview/',
+    label: 'KO HTML Preview - 16-month winner',
+  },
+  {
+    cohort: 'A',
+    url: 'https://www.u2tool.com/en/tools/hex-editor/',
+    label: 'EN Hex Editor - 16-month winner',
+  },
+  {
+    cohort: 'A',
+    url: 'https://www.u2tool.com/ko/tools/unicode-converter/',
+    label: 'KO Unicode Converter - 16-month winner',
+  },
+  {
+    cohort: 'A',
+    url: 'https://www.u2tool.com/ru/tools/html-preview/',
+    label: 'RU HTML Preview - 16-month winner',
+  },
+  {
+    cohort: 'A',
+    url: 'https://www.u2tool.com/fr/tools/file-size-calculator/',
+    label: 'FR File Size Calculator - 16-month winner',
+  },
+  {
+    cohort: 'A',
+    url: 'https://www.u2tool.com/en/tools/ical-parser/',
+    label: 'EN iCal Parser - 16-month winner',
+  },
+  {
+    cohort: 'A',
+    url: 'https://www.u2tool.com/es/tools/html-preview/',
+    label: 'ES HTML Preview - 16-month winner',
+  },
+  {
+    cohort: 'A',
+    url: 'https://www.u2tool.com/ru/tools/barcode-generator/',
+    label: 'RU Barcode Generator - 16-month winner',
+  },
+  {
+    cohort: 'A',
+    url: 'https://www.u2tool.com/en/tools/morse-code-player/',
+    label: 'EN Morse Code Player - 16-month winner',
+  },
+  {
+    cohort: 'A',
     url: 'https://www.u2tool.com/en/tools/passport-photo-maker/',
     label: 'Passport Photo Maker',
   },
@@ -205,6 +260,31 @@ const QUERY_FAMILIES: QueryFamily[] = [
     family: 'hex editor Russian',
     queries: ['hex редактор онлайн'],
     urls: ['https://www.u2tool.com/ru/tools/hex-editor/'],
+  },
+  {
+    family: 'German handwriting conversion',
+    queries: ['text in handschrift umwandeln', 'text in handschrift umwandeln online'],
+    urls: ['https://www.u2tool.com/de/tools/text-to-handwriting/'],
+  },
+  {
+    family: 'Korean HTML preview',
+    queries: ['html 미리보기', 'html 뷰어', 'html 실행'],
+    urls: [
+      'https://www.u2tool.com/ko/tools/html-preview/',
+      'https://www.u2tool.com/ru/tools/html-preview/',
+      'https://www.u2tool.com/es/tools/html-preview/',
+      'https://www.u2tool.com/en/tools/html-preview/',
+    ],
+  },
+  {
+    family: 'Korean unicode converter',
+    queries: ['유니코드 변환', '유니코드 변환기'],
+    urls: ['https://www.u2tool.com/ko/tools/unicode-converter/'],
+  },
+  {
+    family: 'French file size calculator',
+    queries: ['calcul taille fichier', 'taille fichier ko mo go'],
+    urls: ['https://www.u2tool.com/fr/tools/file-size-calculator/'],
   },
   {
     family: 'gantt chart maker',

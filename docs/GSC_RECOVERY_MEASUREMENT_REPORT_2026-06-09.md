@@ -151,3 +151,7 @@ Use these labels at each checkpoint:
 ## Current Status
 
 The measurement structure and local checkpoint comparator are ready. The next evidence needed is the 2026-06-12 indexing spot check and the first post-release GSC Performance export.
+
+## 2026-07-01 Addendum
+
+GSC 16-month daily data identifies the cliff window as 2026-03-29 to 2026-03-30. The first recovery queue is now based on old winner URLs, not only the June local export loss list. Use `docs/GSC_RECOVERY_COHORT_PLAN_2026-07-01.md` as the request-indexing and monitoring queue.
