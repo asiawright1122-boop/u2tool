@@ -1,17 +1,37 @@
 {
-  "detailed_description": "Le générateur UUID (v4) permet de créer des identifiants uniques universels basés sur un algorithme de génération aléatoire utilisant un générateur de nombres pseudo-aléatoires cryptographiquement sécurisé (CSPRNG). Contrairement aux versions 1 à 3 basées sur l'horodatage ou l'adresse MAC, le UUID v4 garantit une entropie maximale avec 122 bits aléatoires intégrés dans un format standardisé (8-4-4-4-12) composé de 32 caractères hexadécimaux. Ce type d'identifiant est essentiel pour les systèmes distribués nécessitant des clés primaires sans collision (bases de données NoSQL, service-oriented applications), les jetons de session temporaires ou les identifiants d'objets IoT. L'outil exploite l'algorithme de génération basé sur la norme RFC 4122, avec une option de conversion en majuscules/minuscules pour s'adapter aux conventions d'API spécifiques. La fonction de génération par lots (jusqu'à 1000 UUIDs) permet de remplir des environnements de test avec des données réalistes tout en évitant les doublons grâce à des vérifications de collision intégrées.",
+  "detailed_description": "Le générateur UUID crée des identifiants UUID v4 directement dans le navigateur. Indiquez une quantité de 1 à 100, cliquez sur Générer, puis copiez un UUID individuel ou toute la liste. Les valeurs sont affichées au format standard avec tirets et conviennent aux exemples, fixtures, tests manuels, identifiants temporaires ou données de démonstration. L'outil se concentre sur la génération v4 simple; il ne propose pas les versions 1, 3 ou 5, pas d'option majuscules/minuscules, pas d'export CSV et pas de vérification de collision intégrée.",
   "usage_steps": [
-    "1. Définissez le nombre d'UUID souhaités dans le champ 'Quantité' (1 à 1000)",
-    "2. Activez/désactivez l'option 'Majuscules' selon vos besoins",
-    "3. Cliquez sur le bouton 'Générer' pour lancer l'algorithme CSPRNG",
-    "4. Vérifiez la liste générée avec indicateurs de validité RFC 4122",
-    "5. Utilisez les icônes de copie individuelle ou le bouton 'Copier tout' pour exporter les résultats",
-    "6. (Optionnel) Téléchargez le fichier CSV avec timestamp d'audit pour conformité RGPD"
+    "Choisissez le nombre d'UUID à générer, entre 1 et 100.",
+    "Cliquez sur Générer pour remplacer la liste actuelle.",
+    "Copiez un UUID individuel si vous n'en avez besoin que d'un.",
+    "Utilisez Copier tout pour récupérer toute la liste séparée par des retours à la ligne."
   ],
   "usage_examples": [
-    "Création de jetons d'activation de compte utilisateur avec expiration automatique",
-    "Génération d'identifiants uniques pour des dispositifs IoT en phase de déploiement pilote",
-    "Simulation de données de test pour une base de données de 500 000 clients synthétiques",
-    "Gestion de sessions sans état dans une architecture serverless avec identifiants temporellement bornés"
+    "Créer quelques identifiants pour des fixtures de test.",
+    "Générer une liste courte d'UUID pour une documentation d'API.",
+    "Copier un UUID v4 pour un enregistrement de démonstration.",
+    "Remplacer rapidement des identifiants factices dans un prototype."
+  ],
+  "faqs": [
+    {
+      "question": "Quelle version d'UUID est générée?",
+      "answer": "La page génère des UUID v4 avec la bibliothèque utilisée par l'application."
+    },
+    {
+      "question": "Combien d'UUID puis-je créer à la fois?",
+      "answer": "Le champ quantité accepte de 1 à 100 UUID."
+    },
+    {
+      "question": "Puis-je copier toute la liste?",
+      "answer": "Oui. Le bouton Copier tout place tous les UUID dans le presse-papiers, séparés par des retours à la ligne."
+    },
+    {
+      "question": "Puis-je télécharger un fichier CSV?",
+      "answer": "Non. Cette version propose uniquement la copie individuelle ou la copie de toute la liste."
+    },
+    {
+      "question": "Génère-t-il d'autres versions d'UUID?",
+      "answer": "Non. L'interface actuelle se limite aux UUID v4."
+    }
   ]
 }

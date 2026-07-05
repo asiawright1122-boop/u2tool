@@ -1,17 +1,39 @@
 {
-  "detailed_description": "El convertidor JSON a SQL transforma estructuras de datos JSON en sentencias SQL compatibles para la creación de tablas y la inserción de registros. Esta herramienta analiza automáticamente el esquema de los objetos JSON, identificando tipos de datos (como cadenas, números, booleanos y fechas), claves anidadas y relaciones entre arrays para generar un modelo relacional optimizado. Los desarrolladores necesitan esta herramienta cuando migran datos desde fuentes NoSQL o APIs REST hacia bases de datos relacionales como MySQL, PostgreSQL o SQLite. Su algoritmo de inferencia de esquema detecta patrones de datos para proponer tipos SQL adecuados, permitiendo ajustes manuales en columnas con formatos complejos. Además, soporta la normalización de datos mediante la creación de tablas relacionadas cuando se detectan arrays de objetos anidados, evitando la redundancia y asegurando la integridad referencial desde el primer momento.",
+  "detailed_description": "El convertidor JSON a SQL transforma un objeto JSON o una matriz de objetos en sentencias SQL desde el navegador. Pega el JSON, escribe el nombre de la tabla, elige MySQL, PostgreSQL o SQLite y decide si quieres incluir una sentencia CREATE TABLE. La herramienta infiere tipos simples a partir de los valores disponibles y genera una sentencia INSERT por cada fila. También incluye un ejemplo cargable, botón para convertir, limpiar y copiar el resultado. No normaliza arrays anidados, no crea tablas relacionadas, no importa archivos y no valida el SQL contra una base de datos real.",
   "usage_steps": [
-    "Pega tu JSON en el editor de código con resaltado de sintaxis.",
-    "Selecciona el motor de base de datos objetivo (MySQL, PostgreSQL, SQLite) en el menú desplegable.",
-    "Activa la opción 'Crear esquema relacional' si deseas tablas normalizadas para arrays anidados.",
-    "Personaliza los tipos de datos haciendo clic en las sugerencias automáticas en cada campo.",
-    "Presiona 'Generar SQL' para obtener el script con CREATE TABLE y múltiples INSERT statements.",
-    "Copia el resultado o descarga el archivo .sql con formato optimizado para importación masiva."
+    "Pega un objeto JSON o una matriz de objetos en el área de entrada.",
+    "Escribe el nombre de la tabla de destino.",
+    "Elige el dialecto: MySQL, PostgreSQL o SQLite.",
+    "Activa o desactiva Incluir CREAR TABLA según necesites.",
+    "Haz clic en Convertir para generar CREATE TABLE e INSERT.",
+    "Copia el SQL generado o limpia la entrada para empezar de nuevo."
   ],
   "usage_examples": [
-    "Migrar datos de configuración desde un archivo JSON de una aplicación Node.js a una base de datos PostgreSQL para un microservicio.",
-    "Convertir respuestas de una API de terceros en datos de prueba (test data) para entornos de desarrollo local.",
-    "Importar logs estructurados en JSON a una base de datos MySQL para análisis de rendimiento con herramientas BI.",
-    "Crear un esquema relacional automático a partir de un dataset JSON de productos para un sistema de e-commerce en SQLite."
+    "Convertir una lista pequeña de usuarios JSON en INSERT para MySQL.",
+    "Crear una tabla SQLite rápida desde objetos con id, nombre y activo.",
+    "Generar datos SQL de ejemplo para documentación o pruebas manuales.",
+    "Comparar cómo se citan columnas en MySQL, PostgreSQL y SQLite."
+  ],
+  "faqs": [
+    {
+      "question": "Acepta un solo objeto JSON?",
+      "answer": "Sí. Si pegas un objeto, se convierte como una fila; si pegas una matriz, cada objeto genera una fila."
+    },
+    {
+      "question": "Qué dialectos admite?",
+      "answer": "Puedes elegir MySQL, PostgreSQL o SQLite."
+    },
+    {
+      "question": "Puede incluir CREATE TABLE?",
+      "answer": "Sí. La opción Incluir CREAR TABLA añade una definición de tabla antes de los INSERT."
+    },
+    {
+      "question": "Convierte JSON anidado en varias tablas?",
+      "answer": "No. La herramienta trabaja con columnas de primer nivel y no normaliza relaciones anidadas."
+    },
+    {
+      "question": "Valida el resultado en una base de datos?",
+      "answer": "No. Revisa el SQL generado en tu propio entorno antes de ejecutarlo."
+    }
   ]
 }

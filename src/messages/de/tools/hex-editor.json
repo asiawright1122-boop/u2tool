@@ -12,5 +12,23 @@
     "Beispiel 2: Prüfen, ob eine Sequenz wie 48 65 6C 6C 6F als lesbarer Text dekodiert wird.",
     "Beispiel 3: Vergleichen, wie Satzzeichen, Leerzeichen und Nicht-ASCII-Zeichen in UTF-8-Hex erscheinen.",
     "Beispiel 4: Eine hexadezimale Zeichenfolge für Dokumentation oder Testdaten kopieren, ohne den Browser zu verlassen."
+  ],
+  "faqs": [
+    {
+      "question": "Welche Textkodierung wird verwendet?",
+      "answer": "Text wird mit UTF-8 in Bytes umgewandelt und anschließend als großgeschriebene Hex-Werte angezeigt."
+    },
+    {
+      "question": "Kann ich Hex wieder in Text umwandeln?",
+      "answer": "Ja. Fügen Sie eine Hex-Sequenz ein und klicken Sie auf In Text, um sie mit dem Browser-Decoder zurück in Text zu wandeln."
+    },
+    {
+      "question": "Werden Dateien als Hex geöffnet?",
+      "answer": "Nein. Diese Oberfläche arbeitet mit eingegebenem Text und eingegebenen Hex-Sequenzen, nicht mit Datei-Uploads."
+    },
+    {
+      "question": "Kann ich die Ergebnisse kopieren?",
+      "answer": "Ja. Es gibt Kopierbuttons für das Textfeld und das Hex-Feld."
+    }
   ]
 }

@@ -1,17 +1,39 @@
 {
-  "detailed_description": "Der Fake Data Generator ist ein leistungsstarkes Werkzeug, das Entwicklern und Testern hilft, realistische Falschdaten zu generieren. Diese Daten können in verschiedenen Formaten wie Namen, E-Mail-Adressen, Adressen, Telefonnummern und mehr erstellt werden. Technisch betrachtet, verwendet der Generator Algorithmen, die auf statistischen Modellen basieren, um Daten zu erzeugen, die in ihrer Verteilung und Struktur echten Daten ähneln. Dies ist besonders nützlich, um Testumgebungen zu befüllen, ohne sensible Daten zu verwenden, was sowohl die Datensicherheit als auch die Anonymität gewährleistet. Die Benutzer können die generierten Daten in CSV- oder JSON-Format exportieren, um sie in ihre Anwendungen oder Datenbanken zu integrieren. Die Anwendung unterstützt auch die Generierung von benutzerdefinierten Datensätzen, die spezifischen Anforderungen entsprechen, wie z.B. die Erstellung von Falschangaben für eine spezielle Industrie oder den Erhalt von bestimmten Merkmalen wie Altersverteilungen oder geografischen Positionen.",
+  "detailed_description": "Der Falschdaten-Generator erstellt einfache Testdatensätze direkt im Browser. Sie können 1 bis 1000 Datensätze erzeugen, eine Beispiel-Locale wählen, Felder hinzufügen oder entfernen, Spaltennamen bearbeiten und Datentypen wie Name, Vorname, Nachname, E-Mail, Telefon, Adresse, Stadt, Land, Firma, Jobtitel, Datum, Zahl, UUID, URL oder Benutzername auswählen. Nach dem Generieren erscheint eine editierbare Tabellenvorschau. Das Ergebnis kann als JSON kopiert oder als JSON, CSV oder SQL-INSERT mit eigenem Tabellennamen heruntergeladen werden. Die Daten sind simulierte Beispiele und keine echten Personenprofile; das Tool bietet keine Branchenregeln, Altersverteilungen, geografischen Modelle oder Massendaten-Validierung.",
   "usage_steps": [
-    "Öffnen Sie das Fake Data Generator Tool auf der Website.",
-    "Wählen Sie die Art der Daten, die Sie generieren möchten, aus der Dropdown-Liste 'Datenart'. Optionen umfassen Namen, E-Mail-Adressen, Adressen, Telefonnummern, etc.",
-    "Geben Sie die Anzahl der Datensätze an, die Sie generieren möchten, in das Eingabefeld 'Anzahl der Datensätze'.",
-    "Fügen Sie bei Bedarf spezifische Kriterien hinzu, indem Sie auf 'Erweiterte Optionen' klicken. Hier können Sie z.B. das Alter, den Geschlecht oder die geografische Region definieren.",
-    "Klicken Sie auf den Button 'Generieren', um die Daten zu erzeugen. Der Prozess wird in Echtzeit durchgeführt und die generierten Daten werden in der Vorschau angezeigt.",
-    "Exportieren Sie die generierten Daten in das gewünschte Format, indem Sie auf 'Exportieren' klicken und das Format (CSV oder JSON) auswählen."
+    "Legen Sie die Anzahl der Datensätze fest, maximal 1000.",
+    "Wählen Sie die Beispiel-Locale für die generierten Werte.",
+    "Fügen Sie Felder hinzu, entfernen Sie Felder oder ändern Sie Spaltennamen und Datentypen.",
+    "Geben Sie bei Bedarf einen Tabellennamen für den SQL-Export ein.",
+    "Klicken Sie auf Daten generieren und prüfen Sie die editierbare Vorschau.",
+    "Kopieren Sie JSON oder exportieren Sie JSON, CSV oder SQL."
   ],
   "usage_examples": [
-    "Ein Softwareentwickler benötigt eine große Menge an Testdaten, um die Leistung und Robustheit seines neuen Webapplikations-Backends zu testen. Mit dem Fake Data Generator kann er schnell und einfach realistische Benutzerdaten erzeugen, ohne echte Kundendaten zu verwenden.",
-    "Eine Marketing-Agentur plant eine neue Kampagne und möchte die Effektivität verschiedener Zielgruppenstrategien testen. Indem sie den Fake Data Generator verwendet, können sie spezifische Demografiedaten erzeugen, um die Kampagnen auf verschiedene Gruppen zu testen.",
-    "Ein Datenwissenschaftler arbeitet an einem Projekt, das die Verteilung von Einkommensniveaus in verschiedenen Regionen analysiert. Mit dem Tool kann er Falschdaten generieren, die den statistischen Merkmalen der jeweiligen Regionen entsprechen, um seine Modelle zu testen.",
-    "Eine Finanzinstitution möchte ihre neuen Fraud-Detection-Systeme testen, ohne echte Kundendaten zu verwenden. Der Fake Data Generator ermöglicht es, Falschdaten zu erzeugen, die die spezifischen Merkmale von potenziell betrügerischen Transaktionen aufweisen, um die Effektivität der Systeme zu bewerten."
+    "Eine kleine Nutzerliste mit Name, E-Mail und Telefon für eine Demo erstellen.",
+    "CSV-Testdaten für einen lokalen Import vorbereiten.",
+    "Ein SQL-INSERT mit eigenen Spaltennamen für eine Entwicklungsdatenbank erzeugen.",
+    "JSON-Beispieldaten für Dokumentation, Fixtures oder Prototypen kopieren."
+  ],
+  "faqs": [
+    {
+      "question": "Welche Feldtypen sind verfügbar?",
+      "answer": "Verfügbar sind Name, Vorname, Nachname, E-Mail, Telefon, Adresse, Stadt, Land, Firma, Jobtitel, Datum, Zahl, UUID, URL und Benutzername."
+    },
+    {
+      "question": "Kann ich Spaltennamen bearbeiten?",
+      "answer": "Ja. Jeder Feldname ist editierbar, und der Datentyp kann vor dem Generieren geändert werden."
+    },
+    {
+      "question": "Welche Exportformate gibt es?",
+      "answer": "Sie können JSON kopieren oder die Daten als JSON, CSV oder SQL herunterladen."
+    },
+    {
+      "question": "Sind die Daten echte Personen?",
+      "answer": "Nein. Die Werte sind simulierte Beispiele für Tests, Demos und Dokumentation."
+    },
+    {
+      "question": "Ist das für große Lasttests gedacht?",
+      "answer": "Nein. Die Oberfläche ist auf 1000 Datensätze begrenzt und für schnelle Browser-Beispiele gedacht."
+    }
   ]
 }

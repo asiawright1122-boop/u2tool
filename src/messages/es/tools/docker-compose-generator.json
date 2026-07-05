@@ -1,17 +1,34 @@
 {
-  "detailed_description": "El Generador de Docker Compose permite a desarrolladores definir configuraciones de múltiples contenedores mediante una interfaz especializada, generando archivos docker-compose.yml que incluyen servicios, redes, volúmenes y dependencias con sintaxis validada. Esta herramienta resuelve problemas comunes como errores manuales en la configuración YAML, la falta de consistencia entre entornos de desarrollo y producción, y la complejidad de gestionar dependencias entre servicios. Al seleccionar opciones en la interfaz, el usuario especifica versiones de imágenes, variables de entorno, mapeo de puertos, configuraciones de almacenamiento persistente y políticas de reinicio, mientras el generador aplica convenciones de nombres y buenas prácticas de seguridad automáticamente. La lógica interna convierte las entradas de usuario en bloques YAML estructurados siguiendo las especificaciones de Docker Compose, incluyendo healthchecks predeterminados y limitaciones de recursos para entornos de producción. Es especialmente útil para crear configuraciones reproducibles en proyectos con dependencias complejas, permitiendo a los equipos enfocarse en el desarrollo en lugar de en la infraestructura de contenedores.",
+  "detailed_description": "El Generador de Docker Compose crea un archivo docker-compose.yml básico a partir de servicios predefinidos. Puedes elegir la versión Compose 3.7, 3.8 o 3.9 y activar servicios como MySQL, PostgreSQL, MongoDB, Redis, RabbitMQ, Elasticsearch, Nginx, MinIO, Adminer o MailHog. La página genera YAML con imagen, restart, puertos, variables de entorno y volúmenes cuando el servicio seleccionado los define. El resultado se puede copiar o descargar como docker-compose.yml. La herramienta no edita redes personalizadas, depends_on, healthchecks, límites de recursos ni configuraciones de producción; revisa el YAML antes de usarlo en un proyecto real.",
   "usage_steps": [
-    "1. Selecciona los servicios necesarios (MySQL, cache service, Nginx, etc.) desde el panel de opciones predefinidas.",
-    "2. Configura parámetros individuales para cada servicio: versión de imagen, variables de entorno (ej. MYSQL_ROOT_PASSWORD), puertos expuestos y directorios montados.",
-    "3. Define redes personalizadas y asigna servicios a subredes específicas mediante el editor de redes.",
-    "4. Establece dependencias entre contenedores usando el campo 'depends_on' para garantizar el orden de inicio correcto.",
-    "5. Revisa el archivo YAML generado en el visor en tiempo real, verificando la sintaxis y estructura.",
-    "6. Descarga el archivo docker-compose.yml o copia el código directamente al terminal para implementar con 'docker-compose up'."
+    "Elige la versión de Compose que quieres incluir en el YAML.",
+    "Selecciona uno o varios servicios predefinidos por categoría.",
+    "Haz clic en Generar para crear el archivo docker-compose.yml.",
+    "Revisa el YAML generado en la vista previa.",
+    "Copia el contenido o descárgalo como docker-compose.yml."
   ],
   "usage_examples": [
-    "1. Configurar una pila LAMP completa con Apache, MySQL 8.0 y PHPMyAdmin, incluyendo volúmenes para almacenamiento persistente del directorio /var/www/html.",
-    "2. Implementar una arquitectura de microservicios con dos contenedores de Node.js comunicándose a través de cache service como caché de mensajes.",
-    "3. Crear un entorno de desarrollo para una aplicación Django con PostgreSQL 14, configuración de variables de entorno y mapeo de puertos 8000:8000.",
-    "4. Generar una configuración para pruebas CI/CD con GitLab Runner, un contenedor de base de datos de prueba y servicios de notificación por correo electrónico."
+    "Crear un docker-compose.yml rápido con PostgreSQL y Adminer para desarrollo local.",
+    "Generar una pila simple de Redis y Nginx para un prototipo.",
+    "Preparar un Compose con MinIO para probar almacenamiento compatible con S3.",
+    "Copiar una base YAML y ajustarla manualmente en tu editor."
+  ],
+  "faqs": [
+    {
+      "question": "Qué servicios puedo seleccionar?",
+      "answer": "La interfaz incluye MySQL, PostgreSQL, MongoDB, Redis, RabbitMQ, Elasticsearch, Nginx, MinIO, Adminer y MailHog."
+    },
+    {
+      "question": "Puedo cambiar puertos o variables desde la interfaz?",
+      "answer": "No. Los servicios usan valores predefinidos; edita el YAML después de copiarlo o descargarlo si necesitas cambios."
+    },
+    {
+      "question": "Genera redes o depends_on?",
+      "answer": "No. Esta versión genera servicios, puertos, variables, volúmenes y la sección volumes cuando aplica."
+    },
+    {
+      "question": "Puedo descargar el archivo?",
+      "answer": "Sí. El botón de descarga guarda el resultado como docker-compose.yml."
+    }
   ]
 }
