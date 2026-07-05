@@ -1,17 +1,34 @@
 {
-  "detailed_description": "SQL to JSON 도구는 SQL INSERT 문의 구문을 분석하여 JSON 배열로 변환하는 전용 변환 엔진을 기반으로 동작합니다. 이 도구는 SQL 문에서 스키마 정보(컬럼명, 데이터 타입)를 추출하고, 값 목록을 JSON 객체의 키-값 쌍으로 매핑합니다. 특히 문자열 이스케이프 처리, NULL 값 처리, 날짜/숫자 형식의 JSON 호환 타입 변환을 자동으로 수행합니다. 관계형 데이터베이스 데이터를 NoSQL로 마이그레이션하거나 REST API 테스트 데이터를 생성할 때 유용합니다. 변환 과정에서는 파서가 SQL AST(Abstract Syntax Tree)를 생성한 후, 정규화된 데이터 구조를 통해 JSON 트리로 재구성하는 방식으로 작동합니다.",
+  "detailed_description": "SQL을 JSON으로 변환 도구는 SQL INSERT 문을 브라우저에서 JSON 배열로 바꿉니다. 입력창에 INSERT INTO table (col1, col2) VALUES (val1, val2); 형태의 문장을 붙여넣고 변환을 누르면 컬럼 이름과 값이 JSON 객체 배열로 표시됩니다. 결과가 없으면 INSERT 문을 찾지 못했다는 오류를 보여주고, 구문을 처리할 수 없으면 오류 메시지를 표시합니다. 출력 JSON은 읽기 쉬운 형태로 확인하고 복사할 수 있습니다. 이 도구는 단순 INSERT 변환에 집중하며, 일반 SQL 편집기나 데이터베이스 마이그레이션 도구가 아닙니다.",
   "usage_steps": [
-    "SQL 입력 텍스트 영역에 INSERT 문 복사 (예: 'INSERT INTO users VALUES (...)')",
-    "정렬 옵션에서 들여쓰기 단위(2-4 space) 선택",
-    "날짜 형식 처리 방식 설정 (ISO 8601 또는 원시 문자열 유지)",
-    "'배열 요소 줄바꿈' 체크박스로 출력 포맷 조정",
-    "'컬럼명 매핑' 섹션에서 JSON 키 커스터마이징",
-    "'변환 실행' 버튼 클릭 후 결과 창에서 JSON 복사"
+    "SQL INSERT 문을 입력창에 붙여넣습니다.",
+    "지원 형식이 INSERT INTO table (col1, col2) VALUES (val1, val2); 구조인지 확인합니다.",
+    "변환 버튼을 눌러 JSON 배열을 생성합니다.",
+    "오류 메시지가 나오면 INSERT 문 형식을 다시 확인합니다.",
+    "출력된 JSON을 확인하고 복사 버튼으로 클립보드에 복사합니다."
   ],
   "usage_examples": [
-    "MySQL 테이블 데이터를 MongoDB 컬렉션 초기화용 JSON 파일로 변환",
-    "테스트용 API 응답 샘플 생성을 위한 INSERT 데이터 Mock JSON 생성",
-    "워드프레스 옵션 테이블 데이터를 JSON 설정 파일로 내보내기",
-    "ETL 프로세스 전 조건부 INSERT 데이터를 Elasticsearch bulk API 형식으로 재구성"
+    "두 개의 INSERT 문을 JSON 배열 샘플로 바꿉니다.",
+    "테스트 문서에 붙일 사용자 행 데이터를 JSON으로 변환합니다.",
+    "간단한 SQL fixture를 API 응답 예시 형태로 정리합니다.",
+    "컬럼과 값 매핑이 예상대로 되었는지 빠르게 확인합니다."
+  ],
+  "faqs": [
+    {
+      "question": "어떤 SQL을 지원하나요?",
+      "answer": "INSERT INTO table (col1, col2) VALUES (val1, val2); 형태의 INSERT 문을 대상으로 합니다."
+    },
+    {
+      "question": "SELECT나 CREATE TABLE도 변환하나요?",
+      "answer": "아니요. 현재 도구는 INSERT 문을 JSON 배열로 바꾸는 데 집중합니다."
+    },
+    {
+      "question": "결과를 파일로 저장할 수 있나요?",
+      "answer": "아니요. 출력 JSON을 복사할 수 있지만 파일 다운로드는 제공하지 않습니다."
+    },
+    {
+      "question": "오류가 나오면 무엇을 확인해야 하나요?",
+      "answer": "INSERT 키워드, 컬럼 목록, VALUES 목록, 따옴표와 괄호가 올바른지 확인하세요."
+    }
   ]
 }
