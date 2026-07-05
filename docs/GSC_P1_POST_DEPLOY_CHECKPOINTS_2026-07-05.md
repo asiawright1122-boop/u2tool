@@ -8,6 +8,7 @@
 - Matrix source: `docs/SEO_GEO_AUDIT_MATRIX_2026-07-05.md`.
 - P1 matrix rows covered: `105`.
 - Unique production URLs extracted from the worklog for monitoring: `94`.
+- Additional P0 exposure-loss URL to compare at the same checkpoints: `https://www.u2tool.com/en/tools/gantt-chart-generator/`.
 - GSC request-indexing submissions from this release: `0`.
 
 ## Immediate Post-Deploy State
@@ -17,6 +18,7 @@
 - `https://www.u2tool.com/es/tools/word-counter/?v=a9e30cc0` served the corrected title `Contador de palabras online gratis - U2Tool`.
 - Unversioned `https://www.u2tool.com/es/tools/word-counter/` briefly hit a stale Cloudflare CDN HTML cache entry immediately after deploy, then refreshed naturally. Follow-up validation served `Contador de palabras online gratis - U2Tool` with `x-u2tool-html-cache: MISS`.
 - `npm run validate:rendered-seo` passed against `https://www.u2tool.com` after the CDN cache refreshed.
+- The remaining P0 Gantt URL was source-verified in this closure pass and remains covered by the existing Gantt query-intent metadata/content guards.
 
 ## Local Monitoring Artifacts
 
@@ -82,6 +84,7 @@ If Search Console's latest complete date lags the calendar checkpoint, use the l
 ## Measurement Rules
 
 - Compare affected URLs with the 7/14/28-day framework in `docs/GSC_RECOVERY_MEASUREMENT_REPORT_2026-06-09.md`.
+- Include `https://www.u2tool.com/en/tools/gantt-chart-generator/` in the checkpoint comparison even though the generated P1 monitoring JSON contains only P1 worklog URLs.
 - Treat this release as deployment-only for GSC: no request-indexing ledger mutation, no URL Inspection submission, and no broad indexing action unless a new ready-to-submit queue is generated.
 - Use URL-level movement first: clicks, impressions, CTR, average position, and latest indexing state.
 - Use query-family movement second: old winner terms, localized long-tail variants, and title/query alignment.

@@ -14,6 +14,7 @@ Generated from the completed superpowers recovery batches for the 2026-07-05 GSC
 | Batch | Plan | Pages | Main Change |
 |---|---|---:|---|
 | P0 content recovery | `docs/superpowers/plans/2026-07-05-gsc-p0-content-recovery-batch.md` | 6 | Strengthened highest-loss page support copy/TDK and synchronized root/base metadata. |
+| P0 Gantt closure | `docs/superpowers/plans/2026-07-05-gsc-p0-gantt-closure.md` | 1 | Verified the remaining high-exposure Gantt page, preserved its query-intent copy/guards, and added it to monitoring. |
 | P1 click-loss recovery | `docs/superpowers/plans/2026-07-05-gsc-p1-click-loss-recovery-batch.md` | 6 | Preserved already-healthy pages and replaced generic Russian TDK for Excel merge and color blending pages. |
 | P1 intent polish | `docs/superpowers/plans/2026-07-05-gsc-p1-intent-polish-batch.md` | 2 | Removed capability drift from Random Color Generator and CRC32 Calculator metadata. |
 | P1 exposure recovery | `docs/superpowers/plans/2026-07-05-gsc-p1-exposure-recovery-batch.md` | 6 | Opened the next high-impression P1 cohort and tightened English TDK for Timeline Chart, Bra Size, and GIF Maker pages. |
@@ -42,6 +43,7 @@ Generated from the completed superpowers recovery batches for the 2026-07-05 GSC
 | `https://www.u2tool.com/en/tools/ical-parser/` | 15 clicks / 257 impressions lost | Root/base TDK tightened around iCal/ICS viewer intent. |
 | `https://www.u2tool.com/ru/tools/barcode-generator/` | 11 clicks / 244 impressions lost | Split support copy and root/base SEO metadata verified. |
 | `https://www.u2tool.com/fr/tools/file-size-calculator/` | 11 clicks / 57 impressions lost | Split support copy and root/base SEO metadata verified. |
+| `https://www.u2tool.com/en/tools/gantt-chart-generator/` | 1 click / 6255 impressions lost | Existing query-intent root/base metadata, split support copy, and validation guard verified for Gantt chart maker, create Gantt chart online, project timeline, PNG/SVG export, and no project-management overclaims. |
 
 ### P1 Click-Loss Recovery
 
@@ -225,17 +227,25 @@ Latest full SEO governance run completed after the P1 final tail closure batch:
 - Localized long-tail support: passed.
 - Vitest SEO governance suite: `16` files and `240` tests passed.
 
+P0 Gantt closure checks completed after the audit reconciliation:
+
+- `npm run validate:gsc-loss-metadata` passed with `checks=65`.
+- `npx vitest run scripts/validation/gsc-high-value-content.test.ts` passed with `89` tests.
+- P0/P1 audit/worklog URL diff passed: `95` unique P0/P1 URLs covered, `0` uncovered.
+
 Earlier release-adjacent checks completed during this worklog session:
 
 - `npm run check` passed with `0` errors and `13` existing hints after the P1 final tail closure batch.
 - `npm run build` passed after the P1 final tail closure batch. Build completed server output and prerendered static routes successfully.
 - Build emitted existing Vite externalization warnings for Node modules imported by `src/lib/translations.ts`; these did not fail the build.
 
-P1 matrix coverage after the P1 final tail closure batch:
+P0/P1 matrix coverage after the P0 Gantt closure:
 
+- P0 URLs in `docs/SEO_GEO_AUDIT_MATRIX_2026-07-05.md`: `7`.
+- P0 URLs covered in this worklog after the current batch: `7`.
 - P1 URLs in `docs/SEO_GEO_AUDIT_MATRIX_2026-07-05.md`: `105`.
 - P1 URLs covered in this worklog after the current batch: `105`.
-- P1 URLs remaining for content/metadata inspection: `0`.
+- P0/P1 URLs remaining for content/metadata inspection: `0`.
 
 ## Deployment Notes
 
@@ -243,6 +253,7 @@ P1 matrix coverage after the P1 final tail closure batch:
 - The release did not mutate any GSC request-indexing ledger and did not submit URL Inspection requests.
 - Post-deploy `npm run validate:search-engine-compliance` passed against `https://www.u2tool.com`.
 - Cache-busted production status sweep checked `94` unique P1 URLs from this worklog with `?v=a9e30cc0`; all returned `200`, failures `0`.
+- The remaining P0 Gantt URL already had release-adjacent source and rendered-SEO validation coverage from the 2026-07-01 Cohort B update; include it in the next GSC checkpoint comparison with the same 7/14/28-day method.
 - Immediate post-deploy `npm run validate:rendered-seo` briefly saw one stale unversioned CDN cache entry for `https://www.u2tool.com/es/tools/word-counter/`; cache-busted smoke for `?v=a9e30cc0` served the corrected title. Follow-up unversioned production validation later served `Contador de palabras online gratis - U2Tool` with a fresh HTML cache `MISS`, and `npm run validate:rendered-seo` passed against `https://www.u2tool.com`.
 - After deployment, compare affected URLs in the next GSC export and use the 7/14/28-day checkpoint method from `docs/GSC_RECOVERY_MEASUREMENT_REPORT_2026-06-09.md`.
 
@@ -250,5 +261,6 @@ P1 matrix coverage after the P1 final tail closure batch:
 
 1. Use `docs/GSC_DEPLOY_SUMMARY_2026-07-05.md` as the deployment summary.
 2. Use `docs/GSC_P1_POST_DEPLOY_CHECKPOINTS_2026-07-05.md` and `npm run report:gsc-p1-post-deploy-monitoring -- --smoke true` for the next P1 checkpoint preparation.
-3. Keep the GSC request-indexing lane closed unless a new ready-to-submit queue is generated.
-4. After deployment, compare affected URLs in the next GSC export using the 7/14/28-day checkpoint method.
+3. Include `https://www.u2tool.com/en/tools/gantt-chart-generator/` in the same 7/14/28-day export review because it is the now-closed remaining P0 exposure-loss row.
+4. Keep the GSC request-indexing lane closed unless a new ready-to-submit queue is generated.
+5. After deployment, compare affected URLs in the next GSC export using the 7/14/28-day checkpoint method.

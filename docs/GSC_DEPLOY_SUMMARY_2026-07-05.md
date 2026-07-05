@@ -36,6 +36,7 @@ This deploy candidate contains the completed GSC/SEO recovery content batches re
 - `npm run validate:search-engine-compliance` passed against `https://www.u2tool.com`.
 - Cache-busted production smoke confirmed `https://www.u2tool.com/es/tools/word-counter/?v=a9e30cc0` serves `Contador de palabras online gratis - U2Tool`.
 - Cache-busted production status sweep checked `94` unique P1 URLs extracted from the worklog with `?v=a9e30cc0`; all returned `200`, failures `0`.
+- Follow-up P0 audit reconciliation closed the remaining `https://www.u2tool.com/en/tools/gantt-chart-generator/` exposure-loss row as source-verified and checkpoint-eligible; no request-indexing ledger or URL Inspection action was taken.
 - Follow-up unversioned production validation confirmed `https://www.u2tool.com/es/tools/word-counter/` now serves `Contador de palabras online gratis - U2Tool` with a fresh HTML cache `MISS`.
 - `npm run validate:rendered-seo` passed against `https://www.u2tool.com` after the CDN cache refreshed.
 
