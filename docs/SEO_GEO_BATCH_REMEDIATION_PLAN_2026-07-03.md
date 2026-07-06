@@ -1408,3 +1408,19 @@ These rows have known historic click or impression loss and should stay ahead of
 - Post-deploy production smoke at `2026-07-06 15:16:58 CST` confirmed the same eight URLs return `200`, self-canonical HTML, expected localized titles, and no visible repaired residue phrase.
 - Post-deploy `npm run validate:search-engine-compliance` passed against production.
 - Next action: wait for fresh GSC Pages indexing movement or URL Inspection recrawl before taking any GSC-side validation action.
+
+## 2026-07-06 Duplicate Canonical Third-Pass Content-Residue Prep
+
+- Continued the read-only duplicate-canonical follow-up; no GSC `Validate fix`, `Request indexing`, or URL Inspection submission was submitted.
+- Post-`bc61e9a6` production scan of the current `295` GSC rows remained route/canonical clean: `295/295` status `200`, `0` redirects, `0` canonical mismatches, and `0` missing titles.
+- Saved the third-pass live evidence under `exports/gsc/coverage-drilldowns/2026-07-06/google-selected-canonical-live-check-postdeploy-bc61e9a6.csv`.
+- Repo fix prepared and locally verified for the next ten clear title/body quality residues:
+  - German `json-to-sql`, `json-to-php`, `color-shades-generator`, and `eslint-config-generator`;
+  - Spanish `palindrome-checker`;
+  - Portuguese `text-summarizer`, `strikethrough-text`, and `decision-wheel`;
+  - French `team-generator`;
+  - Japanese `markdown-to-pdf`, including localized support FAQ content to remove English fallback text.
+- Extended `src/messages/seo-governance.test.ts` to lock the repaired titles/names across root/base translation sources.
+- Verification passed: focused Vitest/support fallback tests, translation corpus, TDK translations, targeted TDK drift, `check`, `build`, `validate:gsc-loss-metadata`, and `validate:rendered-seo`.
+- Local preview smoke confirmed the ten repaired URLs render `200`, self-canonical HTML, expected localized titles, and no visible repaired residue phrase.
+- Next action: deploy this third-pass batch, production-smoke the ten URLs, then run `npm run validate:search-engine-compliance`.

@@ -378,3 +378,35 @@ Checked at: 2026-07-06 15:08:55 CST
 - Post-deploy production smoke at `2026-07-06 15:16:58 CST` confirmed all eight repaired URLs return `200`, self-canonical HTML, expected localized titles, and no visible repaired residue phrase.
 - Post-deploy `npm run validate:search-engine-compliance` passed against production.
 - Next action: wait for a fresh Pages indexing update or URL Inspection recrawl before considering any narrow GSC validation workflow.
+
+## 2026-07-06 Duplicate Canonical Third-Pass Content-Residue Prep
+
+Checked at: 2026-07-06 15:40:37 CST
+
+- Continued the duplicate-canonical follow-up read-only. The current in-app GSC page remained on `Duplicate, Google chose different canonical than user`; no login, CAPTCHA, quota dialog, `Validate fix`, or `Request indexing` action was encountered or clicked.
+- Re-ran the current `295` URL production live check after deployed commit `bc61e9a6`; evidence file:
+  - `exports/gsc/coverage-drilldowns/2026-07-06/google-selected-canonical-live-check-postdeploy-bc61e9a6.csv`
+- Post-`bc61e9a6` full-sample result stayed route/canonical clean: `295/295` HTTP `200`, `0` redirects, `0` canonical mismatches, and `0` missing titles.
+- Repo fix prepared for ten additional title/body quality residues from the current GSC sample:
+  - `https://www.u2tool.com/de/tools/json-to-sql/`
+  - `https://www.u2tool.com/de/tools/json-to-php/`
+  - `https://www.u2tool.com/de/tools/color-shades-generator/`
+  - `https://www.u2tool.com/de/tools/eslint-config-generator/`
+  - `https://www.u2tool.com/es/tools/palindrome-checker/`
+  - `https://www.u2tool.com/pt/tools/text-summarizer/`
+  - `https://www.u2tool.com/pt/tools/strikethrough-text/`
+  - `https://www.u2tool.com/pt/tools/decision-wheel/`
+  - `https://www.u2tool.com/fr/tools/team-generator/`
+  - `https://www.u2tool.com/ja/tools/markdown-to-pdf/`
+- Added regression coverage in `src/messages/seo-governance.test.ts` for the repaired root/base titles and selected names.
+- Verification passed before deploy:
+  - `npx vitest run src/messages/seo-governance.test.ts src/lib/support-content-fallback.test.ts`
+  - `npm run validate:translation-corpus`
+  - `npm run validate:tdk-translations`
+  - `npm run validate:tdk-drift -- --scope targeted`
+  - `npm run check`
+  - `npm run build`
+  - `npm run validate:gsc-loss-metadata`
+  - `npm run validate:rendered-seo`
+- Local preview smoke confirmed all ten repaired URLs return `200`, self-canonical HTML, expected localized titles, and no visible occurrence of the repaired residue phrases.
+- Next action: commit, deploy, then production-smoke the same ten URLs and run `npm run validate:search-engine-compliance`.

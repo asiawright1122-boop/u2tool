@@ -1,11 +1,11 @@
 {
-  "detailed_description": "O Text Summarizer cria um resumo extrativo diretamente no navegador. Cole um texto, escolha Short, Medium ou Long, e a pagina seleciona frases representativas com base na frequencia de palavras, posicao da frase e tamanho de cada sentenca. E util para reduzir notas, rascunhos, artigos ou mensagens longas antes da revisao manual. A interface atual trabalha com texto colado e nao reescreve paragrafos novos.",
+  "detailed_description": "O resumidor de texto cria um resumo extrativo diretamente no navegador. Cole um texto, escolha curto, médio ou longo, e a página seleciona frases representativas com base na frequência de palavras, posição da frase e tamanho de cada sentença. É útil para reduzir notas, rascunhos, artigos ou mensagens longas antes da revisão manual. A interface atual trabalha com texto colado e não reescreve parágrafos novos.",
   "usage_steps": [
     "Cole o texto na area principal de entrada.",
-    "Escolha Short, Medium ou Long conforme o nivel de detalhe desejado.",
+    "Escolha curto, médio ou longo conforme o nível de detalhe desejado.",
     "Revise a contagem de palavras originais, palavras do resumo, frases e reducao.",
     "Leia o resumo e ajuste a extensao se faltar contexto.",
-    "Use Copy para levar o resultado ao seu documento, nota ou editor."
+    "Use Copiar para levar o resultado ao seu documento, nota ou editor."
   ],
   "usage_examples": [
     "Reduzir notas de reuniao as frases mais representativas antes de compartilhar.",

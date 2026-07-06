@@ -1912,6 +1912,68 @@ describe('SEO Governance', () => {
         expectedTitle: 'CSS 変数生成オンラインツール 無料',
         forbidden: ['CSS変数'],
       },
+      {
+        locale: 'de',
+        slug: 'json-to-sql',
+        expectedName: 'JSON zu SQL',
+        expectedTitle: 'JSON in SQL online konvertieren kostenlos',
+        forbidden: ['JSON to SQL', 'Converter'],
+      },
+      {
+        locale: 'de',
+        slug: 'json-to-php',
+        expectedTitle: 'JSON in PHP-Arrays online konvertieren kostenlos',
+        forbidden: ['Converter'],
+      },
+      {
+        locale: 'de',
+        slug: 'color-shades-generator',
+        expectedName: 'Farbschattengenerator',
+        expectedTitle: 'Farbschattengenerator online kostenlos',
+        forbidden: ['Color Shades Generator'],
+      },
+      {
+        locale: 'de',
+        slug: 'eslint-config-generator',
+        expectedTitle: 'ESLint-Konfigurationsgenerator online kostenlos',
+        forbidden: ['ESLint Config Generator', 'Stilleiter'],
+      },
+      {
+        locale: 'es',
+        slug: 'palindrome-checker',
+        expectedTitle: 'Verificador de palíndromos gratis en línea',
+        forbidden: ['Checker'],
+      },
+      {
+        locale: 'pt',
+        slug: 'text-summarizer',
+        expectedTitle: 'Resumidor de texto online grátis',
+        forbidden: ['Summarize Text'],
+      },
+      {
+        locale: 'pt',
+        slug: 'strikethrough-text',
+        expectedTitle: 'Gerador de texto riscado online grátis',
+        forbidden: ['Crossed Out', 'Strikethrough Text'],
+      },
+      {
+        locale: 'pt',
+        slug: 'decision-wheel',
+        expectedTitle: 'Roda de decisão online grátis',
+        forbidden: ['Decision Wheel'],
+      },
+      {
+        locale: 'fr',
+        slug: 'team-generator',
+        expectedTitle: "Générateur d'équipes gratuit en ligne pour des groupes équilibrés",
+        forbidden: ['Team Generator'],
+      },
+      {
+        locale: 'ja',
+        slug: 'markdown-to-pdf',
+        expectedTitle: '無料オンライン Markdown PDF 変換ツール',
+        forbidden: ['Markdown to PDF', 'オンラインMarkdown'],
+      },
     ] as const;
 
     for (const { locale, slug, expectedName, expectedTitle, forbidden } of cases) {

@@ -418,3 +418,25 @@ Generated at: 2026-07-04T14:48:58Z
 - Post-deploy production smoke at `2026-07-06 15:16:58 CST` confirmed all eight URLs return `200`, self-canonical HTML, expected localized titles, and no visible repaired residue phrase.
 - Post-deploy `npm run validate:search-engine-compliance` passed against production.
 - Next action: wait for fresh GSC Pages indexing movement or URL Inspection recrawl before taking any GSC-side validation action.
+
+## 2026-07-06 Duplicate Canonical Third-Pass Content-Residue Prep
+
+- Continued read-only in the same duplicate-canonical lane. No GSC `Validate fix`, `Request indexing`, or URL Inspection submission was clicked.
+- Rechecked all current `295` duplicate-canonical sample URLs after commit `bc61e9a6` was live; production remained clean at `295/295` status `200`, `0` redirects, `0` canonical mismatches, and `0` missing titles.
+- Generated ignored evidence:
+  - `exports/gsc/coverage-drilldowns/2026-07-06/google-selected-canonical-live-check-postdeploy-bc61e9a6.csv`
+- Prepared the next repo-side content-residue batch for:
+  - `https://www.u2tool.com/de/tools/json-to-sql/`
+  - `https://www.u2tool.com/de/tools/json-to-php/`
+  - `https://www.u2tool.com/de/tools/color-shades-generator/`
+  - `https://www.u2tool.com/de/tools/eslint-config-generator/`
+  - `https://www.u2tool.com/es/tools/palindrome-checker/`
+  - `https://www.u2tool.com/pt/tools/text-summarizer/`
+  - `https://www.u2tool.com/pt/tools/strikethrough-text/`
+  - `https://www.u2tool.com/pt/tools/decision-wheel/`
+  - `https://www.u2tool.com/fr/tools/team-generator/`
+  - `https://www.u2tool.com/ja/tools/markdown-to-pdf/`
+- Guardrail update: `src/messages/seo-governance.test.ts` now covers these repaired root/base title/name strings.
+- Local verification passed: focused Vitest/support fallback tests, translation corpus, TDK translations, targeted TDK drift, `check`, `build`, `validate:gsc-loss-metadata`, and `validate:rendered-seo`.
+- Local preview smoke confirmed all ten URLs render `200`, self-canonical HTML, expected localized titles, and no visible repaired residue phrase.
+- Next action: commit/deploy this batch, then production-smoke the same ten URLs and run `npm run validate:search-engine-compliance`.
