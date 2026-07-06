@@ -34,6 +34,7 @@
     "report:gsc-request-indexing-next-window-live-preflight": "node --import tsx/esm scripts/seo/gsc-request-indexing-live-preflight.ts --url-list exports/seo/gsc-crawled-not-indexed-queues/2026-07-04/request-indexing-quota-resume/next-window.txt --output docs/GSC_REQUEST_INDEXING_NEXT_WINDOW_LIVE_PREFLIGHT_2026-07-04.md --csv-out exports/seo/gsc-crawled-not-indexed-queues/2026-07-04/request-indexing-next-window-live-preflight.csv --json-out exports/seo/gsc-crawled-not-indexed-queues/2026-07-04/request-indexing-next-window-live-preflight.json",
     "report:gsc-request-indexing-submission-runbook": "node --import tsx/esm scripts/seo/gsc-request-indexing-submission-runbook.ts",
     "report:gsc-request-indexing-quota-resume": "node --import tsx/esm scripts/seo/gsc-request-indexing-quota-resume-plan.ts",
+    "report:gsc-post-submission-performance-template": "node --import tsx/esm scripts/seo/gsc-post-submission-performance-readout-template.ts",
     "report:gsc-daily-execution-status": "node --import tsx/esm scripts/seo/gsc-daily-execution-status.ts",
     "report:gsc-technical-blockers": "node --import tsx/esm scripts/seo/gsc-technical-blocker-live-check.ts",
     "check:gsc-recovery-inputs": "node --import tsx/esm scripts/seo/check-gsc-recovery-inputs.ts",

@@ -1270,4 +1270,65 @@ These rows have known historic click or impression loss and should stay ahead of
 - Created app heartbeat automation `u2tool-gsc-request-indexing-unattended-resume`.
 - It will resume the current GSC request-indexing queue roughly every `15` minutes without manual prompts.
 - Each run starts from `exports/seo/gsc-crawled-not-indexed-queues/2026-07-04/request-indexing-quota-resume/next-window.txt`, updates the ledger on accepted/already-indexed/quota-stop results, regenerates operational reports, and runs metadata validation.
-- Completion condition met at `2026-07-05 12:40:17 CST`; automation can be deleted after this completion record.
+- Completion condition met at `2026-07-05 12:40:17 CST`; the queue is now in the post-submission monitor lane.
+
+## 2026-07-06 GSC 24-Hour Post-Submission Smoke Check
+
+- Ran the read-only 24-hour URL Inspection smoke check at `2026-07-06 09:42:57 CST`; no request-indexing action was submitted.
+- GSC showed all sampled URLs as indexed across `5` request-submitted priority rows plus `1` already-indexed control:
+  - `https://www.u2tool.com/es/tools/word-counter/`;
+  - `https://www.u2tool.com/en/tools/ascii-table/`;
+  - `https://www.u2tool.com/en/tools/roman-numeral-converter/`;
+  - `https://www.u2tool.com/en/tools/sql-query-optimizer/`;
+  - `https://www.u2tool.com/ru/tools/image-splitter/`;
+  - `https://www.u2tool.com/en/tools/gpa-calculator/`.
+- Detailed crawl timestamps and next checkpoint guidance are recorded in `docs/GSC_REQUEST_INDEXING_POST_SUBMISSION_MONITOR_2026-07-05.md`.
+
+## 2026-07-06 GSC Extended Priority Spot Check
+
+- Ran an additional read-only URL Inspection check at `2026-07-06 10:00:22 CST`; no request-indexing action was submitted.
+- Checked the remaining `4` priority spot-check URLs:
+  - `https://www.u2tool.com/ko/tools/chinese-converter/`;
+  - `https://www.u2tool.com/es/tools/license-generator/`;
+  - `https://www.u2tool.com/es/tools/text-to-handwriting/`;
+  - `https://www.u2tool.com/ru/tools/css-clip-path-generator/`.
+- GSC showed all remaining priority URLs as indexed; priority spot-check coverage is now `10/10`.
+- Next execution target: run the 2026-07-08 3-day check from the representative sample prepared in `docs/GSC_REQUEST_INDEXING_POST_SUBMISSION_MONITOR_2026-07-05.md`, plus any fresh GSC export anomalies.
+
+## 2026-07-06 GSC Early Baseline For 3-Day Sample
+
+- Ran a read-only early baseline for the prepared 2026-07-08 representative sample at `2026-07-06 10:17:00 CST`; no request-indexing action was submitted.
+- Checked `9` sample URLs across batches 1, 6, and 7: `7` request-submitted rows and `2` already-indexed controls.
+- GSC showed all `9` sample URLs as indexed.
+- Next execution target: on 2026-07-08, recheck the same sample for regressions or crawl-state changes, then keep performance-recovery decisions for the 2026-07-12 export checkpoint.
+- App heartbeat `u2tool-gsc-3-day-post-submission-recheck` was upgraded to the full post-submission monitor chain; it starts with the 2026-07-08 3-day recheck, then should reschedule itself to the 7-day, 14-day, and 28-day checkpoints after each stage completes.
+
+## 2026-07-12 GSC 7-Day Performance Export Prep
+
+- Added the 7-day export runbook to `docs/GSC_REQUEST_INDEXING_POST_SUBMISSION_MONITOR_2026-07-05.md` at `2026-07-06 10:18:29 CST`.
+- The export should use the latest complete GSC performance date available on 2026-07-12, not an incomplete same-day range.
+- Required readout: Pages export, Queries drilldown for visible pages, and optional country/device checks only for anomalies.
+- Next execution target after the 2026-07-08 index recheck: classify exported rows as `indexed-recovering`, `indexed-watch`, `indexed-flat`, `not-visible-yet`, or `needs-query-fit-review`.
+- Created working CSV template `exports/seo/gsc-crawled-not-indexed-queues/2026-07-04/post-submission-performance-readout-template.csv` with `67` URL rows and `36` columns for the 3-day, 7-day, 14-day, and 28-day readouts.
+- Added reusable generator command `npm run report:gsc-post-submission-performance-template`; it preserves already-filled checkpoint fields when the template is regenerated.
+
+## 2026-07-19 and 2026-08-02 GSC Checkpoint Prep
+
+- Added 14-day and 28-day readout prep to `docs/GSC_REQUEST_INDEXING_POST_SUBMISSION_MONITOR_2026-07-05.md` at `2026-07-06 10:23:07 CST`.
+- The 14-day checkpoint focuses on weak or unclear rows from the 7-day export and can create snippet/query-fit/internal-link follow-up work.
+- The 28-day checkpoint is the final first-cycle recovery readout and should decide whether a focused second remediation wave is needed.
+
+## 2026-07-06 GSC Backend Audit And Redirect Hotfix Deploy
+
+- Ran a read-only GSC backend audit across Overview, Performance, Pages indexing, Sitemaps, Core Web Vitals, HTTPS, Breadcrumbs, Review snippets, Manual actions, and Security issues.
+- No manual actions, security issues, sitemap failures, HTTPS failures, or structured-data invalid rows were found.
+- Identified the only repo-side fixes needed from GSC examples:
+  - legacy localized `/about/` URLs such as `https://www.u2tool.com/ru/about/` and `https://www.u2tool.com/ko/about/` still returned `404`;
+  - repeated locale URLs such as `https://www.u2tool.com/en/en/tools/query-execution-planner/` still returned `404`.
+- Patched the middleware, Astro catch-all fallback, and Cloudflare `_redirects` so those URL shapes now redirect to canonical pages.
+- Deployed the fix to Cloudflare Worker version `9670e66b-2b74-4c51-ba56-b7bbbac2fbfa`.
+- Post-deploy verification:
+  - `https://www.u2tool.com/ru/about/` -> `301 /ru/` -> `200`;
+  - `https://www.u2tool.com/ko/about/` -> `301 /ko/` -> `200`;
+  - `https://www.u2tool.com/en/en/tools/query-execution-planner/?utm_source=gsc` -> `301 /en/tools/query-execution-planner/?utm_source=gsc` -> `200`.
+- `npm run validate:live-redirects` and `npm run validate:search-engine-compliance` passed against production after deployment.

@@ -11,6 +11,8 @@
 /categories /en/tools/ 301
 /compare /en/compare/ 301
 /ai /en/ai/ 301
+/about /en/ 301
+/about/ /en/ 301
 /privacy /en/privacy/ 301
 /privacy/ /en/privacy/ 301
 /terms /en/terms/ 301
@@ -166,6 +168,8 @@
 /:locale/privacy /:locale/privacy/ 301
 /:locale/terms /:locale/terms/ 301
 /:locale/contact /:locale/contact/ 301
+/:locale/about /:locale/ 301
+/:locale/about/ /:locale/ 301
 /:locale/compare /:locale/compare/ 301
 /:locale/compare/:slug /:locale/compare/:slug/ 301
 /:locale/tools/:tool /:locale/tools/:tool/ 301

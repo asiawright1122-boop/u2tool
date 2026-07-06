@@ -43,7 +43,15 @@ if (normalizedPath === '/favicon.ico') {
   return Astro.redirect('/favicon.svg', 301);
 }
 
+if (isValidLocale(first) && first === second) {
+  return Astro.redirect(`/${[first, ...segments.slice(2)].join('/')}/${url.search}`, 301);
+}
+
 if (segments.length === 1) {
+  if (first === 'about') {
+    return Astro.redirect(`/en/${url.search}`, 301);
+  }
+
   const siteInfoRedirect = resolveUnlocalizedSiteInfoRedirect(first);
   if (siteInfoRedirect) {
     return Astro.redirect(siteInfoRedirect, 301);
@@ -106,6 +114,9 @@ if (isValidLocale(first) && second === 'tools' && third === 'category') {
     segments.length > 3 ? `/${first}/categories/${segments.slice(3).join('/')}/` : `/${first}/tools/`,
     301
   );
+}
+if (isValidLocale(first) && second === 'about' && segments.length === 2) {
+  return Astro.redirect(`/${first}/${url.search}`, 301);
 }
 if (isValidLocale(first) && second === 'blog' && third) {
   const target = resolveLegacyBlogRedirect(first, third);

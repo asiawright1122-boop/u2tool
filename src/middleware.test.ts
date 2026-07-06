@@ -212,6 +212,37 @@ describe('html edge cache middleware', () => {
     expect(next).not.toHaveBeenCalled();
   });
 
+  it('redirects legacy about pages to the localized homepage', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+
+    const unlocalized = await runMiddleware(
+      new Request('https://www.u2tool.com/about'),
+      next
+    );
+    const localized = await runMiddleware(
+      new Request('https://www.u2tool.com/ru/about/'),
+      next
+    );
+
+    expect(unlocalized.response.status).toBe(301);
+    expect(unlocalized.response.headers.get('location')).toBe('/en/');
+    expect(localized.response.status).toBe(301);
+    expect(localized.response.headers.get('location')).toBe('/ru/');
+    expect(next).not.toHaveBeenCalled();
+  });
+
+  it('collapses repeated locale prefixes in GSC-discovered tool URLs', async () => {
+    const next = vi.fn(async () => new Response('should not run'));
+    const { response } = await runMiddleware(
+      new Request('https://www.u2tool.com/en/en/tools/query-execution-planner/?utm_source=gsc'),
+      next
+    );
+
+    expect(response.status).toBe(301);
+    expect(response.headers.get('location')).toBe('/en/tools/query-execution-planner/?utm_source=gsc');
+    expect(next).not.toHaveBeenCalled();
+  });
+
   it('redirects known legacy GSC URL patterns without wildcarding unknown content', async () => {
     const next = vi.fn(async () => new Response('should not run'));
 

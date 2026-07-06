@@ -54,6 +54,176 @@ Use these rows first because they carry the largest tracked exposure or click-lo
 | click-loss leader | `https://www.u2tool.com/es/tools/text-to-handwriting/` | request-submitted | 4/22 |
 | click-loss leader | `https://www.u2tool.com/ru/tools/css-clip-path-generator/` | request-submitted | 4/17 |
 
+## 2026-07-06 24-Hour Smoke Check
+
+Checked at: 2026-07-06 09:42:57 CST
+
+Scope: read-only URL Inspection spot check. No `request indexing` action was submitted.
+
+Result: all `5` sampled `request-submitted` URLs now show `URL is on Google` / `Page is indexed` in GSC. The already-indexed control also remains indexed.
+
+| URL | Baseline ledger result | GSC smoke-check state | Last crawl shown | Notes |
+|---|---|---|---|---|
+| `https://www.u2tool.com/es/tools/word-counter/` | request-submitted | indexed | 2026-07-05 12:30:29 | Highest impression-loss submitted URL; user-declared canonical matches inspected URL. |
+| `https://www.u2tool.com/en/tools/ascii-table/` | request-submitted | indexed | 2026-07-04 20:23:23 | High impression-loss submitted URL; user-declared canonical matches inspected URL. |
+| `https://www.u2tool.com/en/tools/roman-numeral-converter/` | request-submitted | indexed | 2026-07-05 12:40:32 | Final submitted URL from the completed queue; user-declared canonical matches inspected URL. |
+| `https://www.u2tool.com/en/tools/sql-query-optimizer/` | request-submitted | indexed | 2026-07-05 09:30:24 | High intent / query-fit submitted URL; user-declared canonical matches inspected URL. |
+| `https://www.u2tool.com/ru/tools/image-splitter/` | request-submitted | indexed | 2026-07-04 19:41:16 | Click-loss submitted URL; user-declared canonical matches inspected URL. |
+| `https://www.u2tool.com/en/tools/gpa-calculator/` | already-indexed | indexed | 2026-06-14 23:08:12 | Already-indexed control; user-declared canonical matches inspected URL. |
+
+Follow-up: the remaining priority spot-check URLs were inspected in the extended check below.
+
+## 2026-07-06 Extended Priority Spot Check
+
+Checked at: 2026-07-06 10:00:22 CST
+
+Scope: read-only URL Inspection check for the remaining priority spot-check URLs. No `request indexing` action was submitted.
+
+Result: the remaining `3` sampled `request-submitted` URLs now show `URL is on Google` / `Page is indexed` in GSC. The remaining already-indexed high-exposure control also remains indexed.
+
+| URL | Baseline ledger result | GSC smoke-check state | Last crawl shown | Notes |
+|---|---|---|---|---|
+| `https://www.u2tool.com/ko/tools/chinese-converter/` | already-indexed | indexed | 2026-06-18 18:12:12 | High-exposure already-indexed control; user-declared canonical matches inspected URL. |
+| `https://www.u2tool.com/es/tools/license-generator/` | request-submitted | indexed | 2026-07-04 19:43:17 | Click-loss submitted URL; user-declared canonical matches inspected URL. |
+| `https://www.u2tool.com/es/tools/text-to-handwriting/` | request-submitted | indexed | 2026-07-04 19:45:17 | Click-loss submitted URL; user-declared canonical matches inspected URL. |
+| `https://www.u2tool.com/ru/tools/css-clip-path-generator/` | request-submitted | indexed | 2026-07-04 19:47:18 | Click-loss submitted URL; user-declared canonical matches inspected URL. |
+
+Priority spot-check coverage is now complete: all `10` listed priority URLs were inspected on 2026-07-06, and all showed indexed in GSC.
+
+Next checkpoint: keep the 2026-07-08 3-day index check, but shift it to representative samples from batches 1, 6, and 7 plus any new GSC export anomalies, rather than repeating the completed priority list by default.
+
+## 2026-07-08 3-Day Index Check Prep
+
+Prepared at: 2026-07-06 10:00:22 CST
+
+Scope: representative URL Inspection sample for the 3-day checkpoint. Do not submit new request-indexing actions during this check; record only index state, last crawl, canonical, and whether the URL has become flat or recovering in later performance exports.
+
+| Batch | URL | Ledger result | Request date | Loss c/i | Why this sample |
+|---:|---|---|---|---:|---|
+| 1 | `https://www.u2tool.com/ru/tools/countdown-timer/` | request-submitted | 2026-07-04 | 3/66 | Batch 1 high click-loss row not already covered by the 2026-07-06 priority spot checks. |
+| 1 | `https://www.u2tool.com/pt/tools/tile-calculator/` | request-submitted | 2026-07-04 | 3/24 | Batch 1 non-English submitted row with historic click loss. |
+| 1 | `https://www.u2tool.com/en/tools/table-of-contents-generator/` | request-submitted | 2026-07-04 | 2/80 | Batch 1 English submitted row with moderate impression loss. |
+| 6 | `https://www.u2tool.com/en/tools/aspect-ratio-calculator-enhanced/` | request-submitted | 2026-07-05 | 1/3 | Batch 6 submitted row from a later quota window. |
+| 6 | `https://www.u2tool.com/fr/tools/data-uri/` | request-submitted | 2026-07-05 | 1/3 | Batch 6 localized submitted row from a later quota window. |
+| 6 | `https://www.u2tool.com/es/tools/image-frosted-glass/` | already-indexed | none | 1/2 | Batch 6 already-indexed control. |
+| 7 | `https://www.u2tool.com/es/tools/cors-tester/` | already-indexed | none | 1/1 | Batch 7 already-indexed control not covered by the 2026-07-06 priority spot checks. |
+| 7 | `https://www.u2tool.com/ja/tools/text-repeater/` | request-submitted | 2026-07-05 | 1/1 | Batch 7 submitted row from the final queue phase. |
+| 7 | `https://www.u2tool.com/pt/tools/heatmap-chart-generator/` | request-submitted | 2026-07-05 | 1/1 | Batch 7 submitted row that previously appeared at a quota boundary. |
+
+## 2026-07-06 Early Baseline For 3-Day Sample
+
+Checked at: 2026-07-06 10:17:00 CST
+
+Scope: read-only URL Inspection baseline for the prepared 2026-07-08 sample. This is not the formal 3-day checkpoint, and no `request indexing` action was submitted.
+
+Result: all `9` representative sample URLs currently show `URL is on Google` / `Page is indexed` in GSC. This includes `7` request-submitted URLs and `2` already-indexed controls.
+
+| Batch | URL | Baseline ledger result | GSC early-baseline state | Last crawl shown | Notes |
+|---:|---|---|---|---|---|
+| 1 | `https://www.u2tool.com/ru/tools/countdown-timer/` | request-submitted | indexed | 2026-07-05 07:37:23 | User-declared canonical matches inspected URL. |
+| 1 | `https://www.u2tool.com/pt/tools/tile-calculator/` | request-submitted | indexed | 2026-07-04 19:51:18 | User-declared canonical matches inspected URL. |
+| 1 | `https://www.u2tool.com/en/tools/table-of-contents-generator/` | request-submitted | indexed | 2026-07-04 19:53:18 | User-declared canonical matches inspected URL. |
+| 6 | `https://www.u2tool.com/en/tools/aspect-ratio-calculator-enhanced/` | request-submitted | indexed | 2026-07-05 11:08:08 | User-declared canonical matches inspected URL. |
+| 6 | `https://www.u2tool.com/fr/tools/data-uri/` | request-submitted | indexed | 2026-07-05 11:34:19 | User-declared canonical matches inspected URL. |
+| 6 | `https://www.u2tool.com/es/tools/image-frosted-glass/` | already-indexed | indexed | 2026-06-17 04:18:27 | Already-indexed control; user-declared canonical matches inspected URL. |
+| 7 | `https://www.u2tool.com/es/tools/cors-tester/` | already-indexed | indexed | 2026-06-26 17:42:26 | Already-indexed control; user-declared canonical matches inspected URL. |
+| 7 | `https://www.u2tool.com/ja/tools/text-repeater/` | request-submitted | indexed | 2026-07-05 12:22:28 | User-declared canonical matches inspected URL. |
+| 7 | `https://www.u2tool.com/pt/tools/heatmap-chart-generator/` | request-submitted | indexed | 2026-07-05 12:30:29 | User-declared canonical matches inspected URL. |
+
+Next checkpoint: on 2026-07-08, recheck this same sample only for regressions or crawl-state changes, then keep performance recovery decisions for the 2026-07-12 export checkpoint.
+
+Automation: app heartbeat `u2tool-gsc-3-day-post-submission-recheck` was upgraded to the post-submission monitor chain. It starts with the 2026-07-08 3-day recheck, then should reschedule itself to the 2026-07-12, 2026-07-19, and 2026-08-02 checkpoints after each stage completes.
+
+## 2026-07-12 7-Day Performance Export Prep
+
+Prepared at: 2026-07-06 10:18:29 CST
+
+Scope: prepare the first performance readout after the request-indexing lane completed. Do not use this checkpoint to resubmit indexing requests; it is for traffic recovery and query-fit classification.
+
+Export timing:
+
+- Use the latest complete GSC performance date available on 2026-07-12; do not force an incomplete same-day range.
+- Primary comparison window: from 2026-07-06 through the latest complete GSC date shown by Search Console.
+- Baseline source: `exports/seo/gsc-crawled-not-indexed-queues/2026-07-04/request-indexing-inspection-ledger.csv` and its `click_loss`, `impression_loss`, `current_clicks`, `current_impressions`, `previous_clicks`, and `previous_impressions` columns.
+- Readout template: `exports/seo/gsc-crawled-not-indexed-queues/2026-07-04/post-submission-performance-readout-template.csv`.
+  - Rows: `67` request-indexing lane URLs.
+  - Columns: ledger baseline fields plus 2026-07-08 index state fields, 2026-07-12/2026-07-19 performance readout fields, and 2026-08-02 final decision fields.
+  - Use this template as the durable working CSV for the 7-day, 14-day, and 28-day checkpoints.
+  - Regenerate safely with `npm run report:gsc-post-submission-performance-template`; the generator preserves existing checkpoint columns for matching URLs.
+
+Required exports:
+
+| Export | GSC surface | Filter | Purpose |
+|---|---|---|---|
+| Pages | Performance > Search results > Pages | page URLs from the `request-indexing` ledger | Mark indexed pages as recovering, flat, or still invisible. |
+| Queries | Performance > Search results > Queries | drill into pages with impressions or clicks | Check whether recovered visibility matches the intended tool/query fit. |
+| Countries/devices if anomalous | Performance secondary dimensions | only for rows with unexpected drops or low CTR | Separate indexing recovery from SERP/locale/device changes. |
+
+Classification labels:
+
+| Label | Apply when | Follow-up |
+|---|---|---|
+| `indexed-recovering` | URL is indexed and has clicks or meaningful impressions in the export window. | Keep monitoring; avoid content churn. |
+| `indexed-watch` | URL is indexed and shows some impressions but still no clicks. | Recheck query fit at the 14-day checkpoint. |
+| `indexed-flat` | URL is indexed but remains at or near zero impressions. | Review title, meta description, internal links, and query intent after the 14-day export. |
+| `not-visible-yet` | URL is indexed but absent from the Pages export. | Keep in monitoring until the 14-day checkpoint unless GSC URL Inspection regresses. |
+| `needs-query-fit-review` | Queries are irrelevant, too broad, or mismatched to the page promise. | Queue copy/snippet/internal-link work; do not request indexing again. |
+
+Minimum 7-day readout table:
+
+| URL | Ledger result | GSC index state | Export clicks | Export impressions | Top query signal | Label | Notes |
+|---|---|---|---:|---:|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
+
+## 2026-07-19 14-Day Performance Export Prep
+
+Prepared at: 2026-07-06 10:23:07 CST
+
+Scope: repeat the Pages/Queries readout and focus on rows that were not clearly recovering at the 7-day checkpoint. This is the first checkpoint where indexed-but-flat pages can enter snippet/query-fit/internal-link review.
+
+Priority review groups:
+
+| 7-day label | 14-day question | Action if still weak |
+|---|---|---|
+| `indexed-watch` | Did impressions turn into clicks or better query coverage? | If no, inspect title, meta description, above-the-fold promise, and internal anchors. |
+| `indexed-flat` | Did the page appear in Pages/Queries after more time? | If no, mark for query-fit and internal-link review; do not request indexing again. |
+| `not-visible-yet` | Is the URL still absent despite indexed URL Inspection state? | Keep URL Inspection evidence and compare against sitemap/internal-link coverage. |
+| `needs-query-fit-review` | Are recovered queries mismatched to the page promise? | Queue copy/snippet work tied to actual query terms. |
+
+Minimum 14-day readout table:
+
+| URL | 7-day label | 14-day clicks | 14-day impressions | Query-fit note | 14-day label | Follow-up |
+|---|---|---:|---:|---|---|---|
+| TBD | TBD | TBD | TBD | TBD | TBD | TBD |
+
+Working CSV: continue from `exports/seo/gsc-crawled-not-indexed-queues/2026-07-04/post-submission-performance-readout-template.csv`, filling the 2026-07-19 columns without overwriting the 2026-07-12 evidence.
+
+## 2026-08-02 28-Day Recovery Readout Prep
+
+Prepared at: 2026-07-06 10:23:07 CST
+
+Scope: final first-cycle recovery readout for this request-indexing lane. Decide whether to close the lane as recovered/monitoring or create a second remediation wave for flat or mismatched pages.
+
+Required summary:
+
+| Metric | Value |
+|---|---:|
+| Indexed recovering | TBD |
+| Indexed watch | TBD |
+| Indexed flat | TBD |
+| Not visible yet | TBD |
+| Needs query-fit review | TBD |
+| Regression / not indexed | TBD |
+
+Decision rule:
+
+- If most high-loss URLs are `indexed-recovering` or `indexed-watch`, keep monitoring and avoid broad content churn.
+- If specific indexed URLs are `indexed-flat` or `needs-query-fit-review`, create a focused snippet/query-fit/internal-link queue.
+- If any sampled URL regresses to not indexed, run live preflight and page-quality checks before considering any fresh GSC action.
+- If a broad set remains invisible, compare fresh GSC exports, sitemap discovery, and internal-link coverage before launching a second remediation wave.
+
+Working CSV: complete the 2026-08-02 final label and second-wave decision columns in `exports/seo/gsc-crawled-not-indexed-queues/2026-07-04/post-submission-performance-readout-template.csv`.
+
 ## Decision Rules
 
 | Label | Meaning | Next action |
@@ -69,3 +239,16 @@ Use these rows first because they carry the largest tracked exposure or click-lo
 - The completed app heartbeat automation `u2tool-gsc-request-indexing-unattended-resume` was deleted after queue completion.
 - `docs/GSC_DAILY_EXECUTION_STATUS_2026-07-04.md` says the content-refresh lane has `11` live-ready and internally covered URLs; keep those in monitoring mode unless fresh GSC data says otherwise.
 - Use fresh GSC exports for 7/14/28-day performance decisions. Local ledger state alone is not proof of traffic recovery.
+
+## 2026-07-06 GSC Backend Audit And Redirect Hotfix
+
+- Read-only GSC backend audit found no manual actions, security issues, sitemap failures, HTTPS failures, or invalid enhancement rows.
+- Pages indexing still had historical coverage buckets, but live checks showed the 5xx and most 4xx samples were stale or expected legacy asset/API states.
+- Repo-side fixes were required for two current 404 URL shapes found in GSC examples:
+  - localized legacy `about` pages;
+  - repeated locale prefixes.
+- Cloudflare deployment `9670e66b-2b74-4c51-ba56-b7bbbac2fbfa` is live.
+- Production verification confirmed:
+  - `/ru/about/` redirects to `/ru/`;
+  - `/ko/about/` redirects to `/ko/`;
+  - `/en/en/tools/query-execution-planner/?utm_source=gsc` redirects to `/en/tools/query-execution-planner/?utm_source=gsc`.

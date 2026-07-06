@@ -156,6 +156,10 @@ function withSlashAndSearch(pathname: string, search: string): string {
   return `${pathname.endsWith('/') ? pathname : `${pathname}/`}${search}`;
 }
 
+function withCanonicalHtmlSearch(pathname: string, search: string): string {
+  return isFileLikePath(pathname) ? `${pathname}${search}` : withSlashAndSearch(pathname, search);
+}
+
 function resolveCanonicalRedirect(request: Request): string | null {
   if (request.method !== 'GET' && request.method !== 'HEAD') {
     return null;
@@ -184,6 +188,11 @@ function resolveCanonicalRedirect(request: Request): string | null {
   const segments = getPathSegments(normalizedPath);
   const [first, second, third, fourth] = segments;
 
+  if (first && second && isValidLocale(first) && first === second) {
+    const dedupedPath = `/${[first, ...segments.slice(2)].join('/')}`;
+    return withCanonicalHtmlSearch(dedupedPath, url.search);
+  }
+
   const isToolsRoute = first === 'tools' || (isValidLocale(first || '') && second === 'tools');
   if (isToolsRoute && url.searchParams.has('category')) {
     const category = url.searchParams.get('category')?.trim();
@@ -202,6 +211,10 @@ function resolveCanonicalRedirect(request: Request): string | null {
   }
 
   if (segments.length === 1) {
+    if (first === 'about') {
+      return `/en/${url.search}`;
+    }
+
     const siteInfoRedirect = resolveUnlocalizedSiteInfoRedirect(first);
     if (siteInfoRedirect) {
       return siteInfoRedirect;
@@ -249,6 +262,10 @@ function resolveCanonicalRedirect(request: Request): string | null {
   }
 
   if (isValidLocale(first)) {
+    if (second === 'about' && segments.length === 2) {
+      return `/${first}/${url.search}`;
+    }
+
     if (second === 'tools' && third === 'category') {
       return segments.length > 3 ? `/${first}/categories/${segments.slice(3).join('/')}/` : `/${first}/tools/`;
     }

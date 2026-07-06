@@ -297,4 +297,51 @@ Generated at: 2026-07-04T14:48:58Z
 - Created app heartbeat automation `u2tool-gsc-request-indexing-unattended-resume`.
 - Cadence: checks back roughly every `15` minutes while quota-bound, without requiring manual "continue" prompts.
 - Automation behavior: resume from the generated `next-window.txt`, submit accepted URLs, stop on the next GSC quota wall, regenerate reports, validate metadata, and keep the browser on the latest stop URL.
-- Stop condition: met at `2026-07-05 12:40:17 CST`; automation can be deleted after this completion record.
+- Stop condition: met at `2026-07-05 12:40:17 CST`; the completion record is now in the post-submission monitor.
+
+## 2026-07-06 24-Hour Post-Submission Smoke Check
+
+- Ran the read-only 24-hour URL Inspection smoke check at `2026-07-06 09:42:57 CST`; no request-indexing action was submitted.
+- Sampled `5` request-submitted priority URLs and `1` already-indexed control from the post-submission monitor.
+- GSC showed all sampled URLs as indexed:
+  - `https://www.u2tool.com/es/tools/word-counter/`;
+  - `https://www.u2tool.com/en/tools/ascii-table/`;
+  - `https://www.u2tool.com/en/tools/roman-numeral-converter/`;
+  - `https://www.u2tool.com/en/tools/sql-query-optimizer/`;
+  - `https://www.u2tool.com/ru/tools/image-splitter/`;
+  - `https://www.u2tool.com/en/tools/gpa-calculator/`.
+- Detailed crawl timestamps and notes are recorded in `docs/GSC_REQUEST_INDEXING_POST_SUBMISSION_MONITOR_2026-07-05.md`.
+
+## 2026-07-06 Extended Priority Spot Check
+
+- Ran an additional read-only URL Inspection check at `2026-07-06 10:00:22 CST`; no request-indexing action was submitted.
+- Checked the remaining `4` priority spot-check URLs:
+  - `https://www.u2tool.com/ko/tools/chinese-converter/`;
+  - `https://www.u2tool.com/es/tools/license-generator/`;
+  - `https://www.u2tool.com/es/tools/text-to-handwriting/`;
+  - `https://www.u2tool.com/ru/tools/css-clip-path-generator/`.
+- GSC showed all remaining priority URLs as indexed; priority spot-check coverage is now `10/10`.
+- The 2026-07-08 3-day check should use the representative batch sample prepared in `docs/GSC_REQUEST_INDEXING_POST_SUBMISSION_MONITOR_2026-07-05.md`, plus any new export anomalies, rather than repeating the completed priority list by default.
+
+## 2026-07-06 Early Baseline For 3-Day Sample
+
+- Ran a read-only early baseline for the prepared 2026-07-08 representative sample at `2026-07-06 10:17:00 CST`; no request-indexing action was submitted.
+- Checked `9` sample URLs across batches 1, 6, and 7: `7` request-submitted rows and `2` already-indexed controls.
+- GSC showed all `9` sample URLs as indexed.
+- Formal 2026-07-08 action: recheck the same sample for regressions or crawl-state changes, then leave traffic-recovery decisions for the 2026-07-12 performance export checkpoint.
+- App heartbeat `u2tool-gsc-3-day-post-submission-recheck` was upgraded to the full post-submission monitor chain; it starts with the 2026-07-08 3-day recheck, then should reschedule itself to the 7-day, 14-day, and 28-day checkpoints after each stage completes.
+
+## 2026-07-12 7-Day Performance Export Prep
+
+- Added the 7-day export runbook to `docs/GSC_REQUEST_INDEXING_POST_SUBMISSION_MONITOR_2026-07-05.md` at `2026-07-06 10:18:29 CST`.
+- The export should use the latest complete GSC performance date available on 2026-07-12, not an incomplete same-day range.
+- Required readout: Pages export, Queries drilldown for visible pages, and optional country/device checks only for anomalies.
+- Recovery labels are now defined as `indexed-recovering`, `indexed-watch`, `indexed-flat`, `not-visible-yet`, and `needs-query-fit-review`.
+- Created working CSV template `exports/seo/gsc-crawled-not-indexed-queues/2026-07-04/post-submission-performance-readout-template.csv` with `67` URL rows and `36` columns for the 3-day, 7-day, 14-day, and 28-day readouts.
+- Added reusable generator command `npm run report:gsc-post-submission-performance-template`; it preserves already-filled checkpoint fields when the template is regenerated.
+
+## 2026-07-19 and 2026-08-02 Checkpoint Prep
+
+- Added 14-day and 28-day readout prep to `docs/GSC_REQUEST_INDEXING_POST_SUBMISSION_MONITOR_2026-07-05.md` at `2026-07-06 10:23:07 CST`.
+- The 14-day checkpoint focuses on `indexed-watch`, `indexed-flat`, `not-visible-yet`, and `needs-query-fit-review` rows from the 7-day export.
+- The 28-day checkpoint is the final first-cycle recovery readout and should decide whether a focused second remediation wave is needed.
