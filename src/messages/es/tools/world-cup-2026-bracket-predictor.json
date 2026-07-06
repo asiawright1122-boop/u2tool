@@ -24,5 +24,13 @@
       "question": "¿Hay alguna nota importante?",
       "answer": "Usa el resultado como ayuda práctica y revísalo antes de publicarlo o depender de él."
     }
-  ]
+  ],
+  "ui": {
+    "champion": "Campeón",
+    "copy": "Copiar predicción",
+    "copied": "Copiado",
+    "reset": "Restablecer selecciones",
+    "note": "Predictor simplificado. No obtiene resultados FIFA en vivo.",
+    "rounds": "Ronda de 32|Octavos de final|Cuartos de final|Semifinales|Final"
+  }
 }

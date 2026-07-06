@@ -23,4 +23,16 @@ describe('world cup 2026 bracket helper', () => {
     expect(result.rounds.at(-1)?.name).toBe('Final');
     expect(result.summary).toContain('Champion:');
   });
+
+  it('uses localized round and champion labels when provided', () => {
+    const state = buildDefaultBracket();
+    const result = advanceBracket(state, {}, {
+      roundNames: ['32 强', '16 强', '四分之一决赛', '半决赛', '决赛'],
+      championLabel: '冠军',
+    });
+
+    expect(result.rounds[0].name).toBe('32 强');
+    expect(result.rounds.at(-1)?.name).toBe('决赛');
+    expect(result.summary).toContain('冠军:');
+  });
 });

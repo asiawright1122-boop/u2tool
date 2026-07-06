@@ -24,5 +24,22 @@
       "question": "중요한 참고 사항이 있나요?",
       "answer": "결과는 실용적인 보조 자료로 사용하고 게시하거나 의존하기 전에 검토하세요."
     }
-  ]
+  ],
+  "ui": {
+    "promptSample": "개발자를 위해 이 제품 변경 로그를 요약하고 마이그레이션 위험도 포함하세요.",
+    "model": "모델",
+    "prompt": "프롬프트 텍스트",
+    "outputTokens": "예상 출력 토큰",
+    "requestCount": "요청 수",
+    "inputTokens": "입력 토큰",
+    "totalTokens": "총 토큰",
+    "perRequest": "요청당",
+    "batchCost": "배치 비용",
+    "source": "가격 출처",
+    "pricingDate": "가격 확인일",
+    "copy": "요약 복사",
+    "copied": "복사됨",
+    "reset": "초기화",
+    "localNote": "추정은 로컬에서 실행됩니다. 토큰 수는 문자 기반의 간단한 근사값입니다."
+  }
 }

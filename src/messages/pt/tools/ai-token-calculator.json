@@ -24,5 +24,22 @@
       "question": "Há alguma observação importante?",
       "answer": "Use o resultado como apoio prático e revise-o antes de publicar ou depender dele."
     }
-  ]
+  ],
+  "ui": {
+    "promptSample": "Resuma este changelog do produto para desenvolvedores e inclua riscos de migração.",
+    "model": "Modelo",
+    "prompt": "Texto do prompt",
+    "outputTokens": "Tokens de saída estimados",
+    "requestCount": "Número de solicitações",
+    "inputTokens": "Tokens de entrada",
+    "totalTokens": "Tokens totais",
+    "perRequest": "Por solicitação",
+    "batchCost": "Custo do lote",
+    "source": "Fonte de preços",
+    "pricingDate": "Preço verificado",
+    "copy": "Copiar resumo",
+    "copied": "Copiado",
+    "reset": "Redefinir",
+    "localNote": "As estimativas rodam localmente. A contagem de tokens usa uma aproximação simples baseada em caracteres."
+  }
 }

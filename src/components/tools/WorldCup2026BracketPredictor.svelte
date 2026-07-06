@@ -22,6 +22,7 @@
     copied: 'Copied',
     reset: 'Reset picks',
     note: 'Simplified predictor. It does not fetch live FIFA results.',
+    rounds: 'Round of 32|Round of 16|Quarterfinals|Semifinals|Final',
   };
 
   const bracketSeed = buildDefaultBracket();
@@ -30,14 +31,39 @@
   let copied = $state(false);
   let copyTimer: ReturnType<typeof setTimeout> | null = null;
 
-  const result = $derived(advanceBracket(bracketSeed, picks));
-
   function toolMessage(key: string, fallback: string) {
     const toolsScope = translations.tools as Record<string, unknown> | undefined;
     const toolScope = toolsScope?.['world-cup-2026-bracket-predictor'] as Record<string, unknown> | undefined;
     const value = toolScope?.[key];
     return typeof value === 'string' ? value : fallback;
   }
+
+  function uiMessage(key: keyof typeof COPY, fallback: string) {
+    const toolsScope = translations.tools as Record<string, unknown> | undefined;
+    const toolScope = toolsScope?.['world-cup-2026-bracket-predictor'] as Record<string, unknown> | undefined;
+    const uiScope = toolScope?.ui as Record<string, unknown> | undefined;
+    const value = uiScope?.[key];
+    return typeof value === 'string' ? value : fallback;
+  }
+
+  function splitRounds(value: string) {
+    const rounds = value.split('|').map((round) => round.trim()).filter(Boolean);
+    return rounds.length >= 5 ? rounds.slice(0, 5) : COPY.rounds.split('|');
+  }
+
+  const ui = $derived({
+    champion: uiMessage('champion', COPY.champion),
+    copy: uiMessage('copy', COPY.copy),
+    copied: uiMessage('copied', COPY.copied),
+    reset: uiMessage('reset', COPY.reset),
+    note: uiMessage('note', COPY.note),
+    rounds: splitRounds(uiMessage('rounds', COPY.rounds)),
+  });
+
+  const result = $derived(advanceBracket(bracketSeed, picks, {
+    roundNames: ui.rounds,
+    championLabel: ui.champion,
+  }));
 
   function selectedWinner(match: WorldCupMatch) {
     return picks[match.id] || match.winner || match.home;
@@ -81,7 +107,7 @@
         <Trophy class="h-5 w-5" aria-hidden="true" />
       </div>
       <div>
-        <div class="text-xs font-semibold uppercase text-amber-800 dark:text-amber-300">{COPY.champion}</div>
+        <div class="text-xs font-semibold uppercase text-amber-800 dark:text-amber-300">{ui.champion}</div>
         <div class="text-2xl font-bold text-slate-900 dark:text-white">{result.champion}</div>
       </div>
     </div>
@@ -128,19 +154,19 @@
     <button type="button" class="btn-primary inline-flex items-center gap-2" onclick={handleCopy}>
       {#if copied}
         <Check class="h-4 w-4" aria-hidden="true" />
-        {COPY.copied}
+          {ui.copied}
       {:else}
         <Copy class="h-4 w-4" aria-hidden="true" />
-        {COPY.copy}
+          {ui.copy}
       {/if}
     </button>
     <button type="button" class="btn-secondary inline-flex items-center gap-2" onclick={resetPicks}>
       <RefreshCw class="h-4 w-4" aria-hidden="true" />
-      {COPY.reset}
+      {ui.reset}
     </button>
   </div>
 
-  <p class="text-xs font-medium text-slate-500 dark:text-slate-400">{COPY.note}</p>
+  <p class="text-xs font-medium text-slate-500 dark:text-slate-400">{ui.note}</p>
 </div>
 
 <style>

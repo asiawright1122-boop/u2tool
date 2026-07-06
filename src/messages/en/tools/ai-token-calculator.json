@@ -24,5 +24,22 @@
       "question": "Is there any important note?",
       "answer": "Use the result as a practical helper and review it before publishing or relying on it."
     }
-  ]
+  ],
+  "ui": {
+    "promptSample": "Summarize this product changelog for developers and include migration risks.",
+    "model": "Model",
+    "prompt": "Prompt text",
+    "outputTokens": "Estimated output tokens",
+    "requestCount": "Request count",
+    "inputTokens": "Input tokens",
+    "totalTokens": "Total tokens",
+    "perRequest": "Per request",
+    "batchCost": "Batch cost",
+    "source": "Pricing source",
+    "pricingDate": "Pricing checked",
+    "copy": "Copy summary",
+    "copied": "Copied",
+    "reset": "Reset",
+    "localNote": "Estimates run locally. Token counts use a simple character-based approximation."
+  }
 }

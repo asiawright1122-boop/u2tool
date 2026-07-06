@@ -24,5 +24,24 @@
       "question": "重要な注意点はありますか？",
       "answer": "結果は実用的な補助として使い、公開または利用前に確認してください。"
     }
-  ]
+  ],
+  "ui": {
+    "input": "HAR JSON",
+    "upload": ".har ファイルを開く",
+    "summary": "概要",
+    "requests": "リクエスト",
+    "bytes": "転送量",
+    "time": "合計時間",
+    "domains": "ドメイン",
+    "status": "ステータス分類",
+    "slowest": "最も遅いリクエスト",
+    "method": "メソッド",
+    "url": "URL",
+    "copy": "概要をコピー",
+    "copied": "コピー済み",
+    "sample": "サンプルを読み込む",
+    "file": "ファイル",
+    "emptyError": "HAR JSON を貼り付けるか、.har ファイルを開いてください。",
+    "localNote": "ファイルはブラウザ内だけで読み取られ、アップロードされません。"
+  }
 }

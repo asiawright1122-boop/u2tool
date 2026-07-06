@@ -24,5 +24,24 @@
       "question": "Gibt es wichtige Hinweise?",
       "answer": "Nutze das Ergebnis als praktische Hilfe und prüfe es, bevor du es veröffentlichst oder dich darauf verlässt."
     }
-  ]
+  ],
+  "ui": {
+    "input": "HAR JSON",
+    "upload": ".har-Datei öffnen",
+    "summary": "Zusammenfassung",
+    "requests": "Anfragen",
+    "bytes": "Übertragen",
+    "time": "Gesamtzeit",
+    "domains": "Domains",
+    "status": "Statusgruppen",
+    "slowest": "Langsamste Anfragen",
+    "method": "Methode",
+    "url": "URL",
+    "copy": "Zusammenfassung kopieren",
+    "copied": "Kopiert",
+    "sample": "Beispiel laden",
+    "file": "Datei",
+    "emptyError": "HAR JSON einfügen oder eine .har-Datei öffnen.",
+    "localNote": "Dateien werden nur in deinem Browser gelesen. Es wird nichts hochgeladen."
+  }
 }

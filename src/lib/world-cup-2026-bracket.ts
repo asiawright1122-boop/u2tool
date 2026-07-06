@@ -25,6 +25,11 @@ export type WorldCupBracketResult = {
   summary: string;
 };
 
+export type WorldCupBracketCopy = {
+  roundNames?: string[];
+  championLabel?: string;
+};
+
 const GROUP_IDS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
 const ROUND_NAMES = ['Round of 32', 'Round of 16', 'Quarterfinals', 'Semifinals', 'Final'];
 
@@ -73,12 +78,17 @@ function pickWinner(match: WorldCupMatch, picks: Record<string, string>): string
   return match.home;
 }
 
-export function advanceBracket(state: WorldCupBracketState, picks: Record<string, string>): WorldCupBracketResult {
+export function advanceBracket(
+  state: WorldCupBracketState,
+  picks: Record<string, string>,
+  copy: WorldCupBracketCopy = {}
+): WorldCupBracketResult {
   const rounds: WorldCupRound[] = [];
   let currentMatches = state.rounds[0]?.matches || [];
 
   for (let roundIndex = 0; roundIndex < ROUND_NAMES.length; roundIndex += 1) {
-    const name = ROUND_NAMES[roundIndex];
+    const internalName = ROUND_NAMES[roundIndex];
+    const name = copy.roundNames?.[roundIndex] || internalName;
     const matches = currentMatches.map((match) => ({
       ...match,
       winner: pickWinner(match, picks),
@@ -95,9 +105,10 @@ export function advanceBracket(state: WorldCupBracketState, picks: Record<string
 
   const finalRound = rounds.at(-1);
   const champion = finalRound?.matches[0]?.winner || finalRound?.matches[0]?.home || '';
+  const championLabel = copy.championLabel || 'Champion';
   const summary = [
     ...rounds.map((round) => `${round.name}: ${round.matches.map((match) => match.winner || match.home).join(', ')}`),
-    `Champion: ${champion}`,
+    `${championLabel}: ${champion}`,
   ].join('\n');
 
   return {

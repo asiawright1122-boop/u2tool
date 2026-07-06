@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onDestroy } from 'svelte';
+  import { onDestroy, untrack } from 'svelte';
   import QRCode from 'qrcode';
   import {
     generateAiRobotsTxt,
@@ -1508,7 +1508,7 @@
     }
   }
 
-  const initialInputs = getDefaults(slug);
+  const initialInputs = untrack(() => getDefaults(slug));
   let inputs = $state<Record<string, string>>(initialInputs);
   let copied = $state(false);
   let qrDataUrl = $state('');

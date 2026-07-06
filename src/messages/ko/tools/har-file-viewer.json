@@ -24,5 +24,24 @@
       "question": "중요한 참고 사항이 있나요?",
       "answer": "결과는 실용적인 보조 자료로 사용하고 게시하거나 의존하기 전에 검토하세요."
     }
-  ]
+  ],
+  "ui": {
+    "input": "HAR JSON",
+    "upload": ".har 파일 열기",
+    "summary": "요약",
+    "requests": "요청",
+    "bytes": "전송량",
+    "time": "총 시간",
+    "domains": "도메인",
+    "status": "상태 그룹",
+    "slowest": "가장 느린 요청",
+    "method": "메서드",
+    "url": "URL",
+    "copy": "요약 복사",
+    "copied": "복사됨",
+    "sample": "샘플 불러오기",
+    "file": "파일",
+    "emptyError": "HAR JSON을 붙여넣거나 .har 파일을 여세요.",
+    "localNote": "파일은 브라우저에서만 읽으며 업로드되지 않습니다."
+  }
 }

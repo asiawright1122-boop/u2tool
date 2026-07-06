@@ -24,5 +24,24 @@
       "question": "有什么重要提示？",
       "answer": "请将结果作为实用辅助，并在发布或依赖前自行复核。"
     }
-  ]
+  ],
+  "ui": {
+    "input": "HAR JSON",
+    "upload": "打开 .har 文件",
+    "summary": "摘要",
+    "requests": "请求数",
+    "bytes": "传输量",
+    "time": "总耗时",
+    "domains": "域名",
+    "status": "状态分组",
+    "slowest": "最慢请求",
+    "method": "方法",
+    "url": "URL",
+    "copy": "复制摘要",
+    "copied": "已复制",
+    "sample": "载入示例",
+    "file": "文件",
+    "emptyError": "粘贴 HAR JSON，或打开一个 .har 文件。",
+    "localNote": "文件只会在你的浏览器中读取，不会上传。"
+  }
 }

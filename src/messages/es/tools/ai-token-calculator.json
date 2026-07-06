@@ -24,5 +24,22 @@
       "question": "¿Hay alguna nota importante?",
       "answer": "Usa el resultado como ayuda práctica y revísalo antes de publicarlo o depender de él."
     }
-  ]
+  ],
+  "ui": {
+    "promptSample": "Resume este registro de cambios del producto para desarrolladores e incluye riesgos de migración.",
+    "model": "Modelo",
+    "prompt": "Texto del prompt",
+    "outputTokens": "Tokens de salida estimados",
+    "requestCount": "Número de solicitudes",
+    "inputTokens": "Tokens de entrada",
+    "totalTokens": "Tokens totales",
+    "perRequest": "Por solicitud",
+    "batchCost": "Coste del lote",
+    "source": "Fuente de precios",
+    "pricingDate": "Precio revisado",
+    "copy": "Copiar resumen",
+    "copied": "Copiado",
+    "reset": "Restablecer",
+    "localNote": "Las estimaciones se ejecutan localmente. El conteo de tokens usa una aproximación simple basada en caracteres."
+  }
 }

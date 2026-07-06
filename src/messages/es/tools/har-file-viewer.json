@@ -24,5 +24,24 @@
       "question": "¿Hay alguna nota importante?",
       "answer": "Usa el resultado como ayuda práctica y revísalo antes de publicarlo o depender de él."
     }
-  ]
+  ],
+  "ui": {
+    "input": "JSON HAR",
+    "upload": "Abrir archivo .har",
+    "summary": "Resumen",
+    "requests": "Solicitudes",
+    "bytes": "Transferido",
+    "time": "Tiempo total",
+    "domains": "Dominios",
+    "status": "Grupos de estado",
+    "slowest": "Solicitudes más lentas",
+    "method": "Método",
+    "url": "URL",
+    "copy": "Copiar resumen",
+    "copied": "Copiado",
+    "sample": "Cargar ejemplo",
+    "file": "Archivo",
+    "emptyError": "Pega JSON HAR o abre un archivo .har.",
+    "localNote": "Los archivos se leen solo en tu navegador. No se sube nada."
+  }
 }

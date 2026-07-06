@@ -24,5 +24,24 @@
       "question": "Is there any important note?",
       "answer": "Use the result as a practical helper and review it before publishing or relying on it."
     }
-  ]
+  ],
+  "ui": {
+    "input": "HAR JSON",
+    "upload": "Open .har file",
+    "summary": "Summary",
+    "requests": "Requests",
+    "bytes": "Transferred",
+    "time": "Total time",
+    "domains": "Domains",
+    "status": "Status groups",
+    "slowest": "Slowest requests",
+    "method": "Method",
+    "url": "URL",
+    "copy": "Copy summary",
+    "copied": "Copied",
+    "sample": "Load sample",
+    "file": "File",
+    "emptyError": "Paste HAR JSON or open a .har file.",
+    "localNote": "Files are read by your browser only. Nothing is uploaded."
+  }
 }

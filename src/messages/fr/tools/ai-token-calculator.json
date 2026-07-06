@@ -24,5 +24,22 @@
       "question": "Y a-t-il une remarque importante ?",
       "answer": "Utilisez le résultat comme aide pratique et vérifiez-le avant publication ou utilisation."
     }
-  ]
+  ],
+  "ui": {
+    "promptSample": "Résumez ce journal de modifications produit pour les développeurs et incluez les risques de migration.",
+    "model": "Modèle",
+    "prompt": "Texte du prompt",
+    "outputTokens": "Tokens de sortie estimés",
+    "requestCount": "Nombre de requêtes",
+    "inputTokens": "Tokens d’entrée",
+    "totalTokens": "Tokens totaux",
+    "perRequest": "Par requête",
+    "batchCost": "Coût du lot",
+    "source": "Source des tarifs",
+    "pricingDate": "Tarif vérifié",
+    "copy": "Copier le résumé",
+    "copied": "Copié",
+    "reset": "Réinitialiser",
+    "localNote": "Les estimations s’exécutent localement. Le comptage des tokens utilise une approximation simple basée sur les caractères."
+  }
 }

@@ -24,5 +24,24 @@
       "question": "Y a-t-il une remarque importante ?",
       "answer": "Utilisez le résultat comme aide pratique et vérifiez-le avant publication ou utilisation."
     }
-  ]
+  ],
+  "ui": {
+    "input": "JSON HAR",
+    "upload": "Ouvrir un fichier .har",
+    "summary": "Résumé",
+    "requests": "Requêtes",
+    "bytes": "Transféré",
+    "time": "Temps total",
+    "domains": "Domaines",
+    "status": "Groupes de statut",
+    "slowest": "Requêtes les plus lentes",
+    "method": "Méthode",
+    "url": "URL",
+    "copy": "Copier le résumé",
+    "copied": "Copié",
+    "sample": "Charger l’exemple",
+    "file": "Fichier",
+    "emptyError": "Collez du JSON HAR ou ouvrez un fichier .har.",
+    "localNote": "Les fichiers sont lus uniquement dans votre navigateur. Rien n’est téléversé."
+  }
 }

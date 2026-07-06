@@ -24,5 +24,22 @@
       "question": "Gibt es wichtige Hinweise?",
       "answer": "Nutze das Ergebnis als praktische Hilfe und prüfe es, bevor du es veröffentlichst oder dich darauf verlässt."
     }
-  ]
+  ],
+  "ui": {
+    "promptSample": "Fasse dieses Produkt-Changelog für Entwickler zusammen und nenne auch Migrationsrisiken.",
+    "model": "Modell",
+    "prompt": "Prompt-Text",
+    "outputTokens": "Geschätzte Ausgabetokens",
+    "requestCount": "Anzahl der Anfragen",
+    "inputTokens": "Eingabetokens",
+    "totalTokens": "Tokens gesamt",
+    "perRequest": "Pro Anfrage",
+    "batchCost": "Batch-Kosten",
+    "source": "Preisquelle",
+    "pricingDate": "Preis geprüft",
+    "copy": "Zusammenfassung kopieren",
+    "copied": "Kopiert",
+    "reset": "Zurücksetzen",
+    "localNote": "Schätzungen laufen lokal. Die Token-Zählung nutzt eine einfache zeichenbasierte Näherung."
+  }
 }

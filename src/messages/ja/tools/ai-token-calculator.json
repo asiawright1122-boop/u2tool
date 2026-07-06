@@ -24,5 +24,22 @@
       "question": "重要な注意点はありますか？",
       "answer": "結果は実用的な補助として使い、公開または利用前に確認してください。"
     }
-  ]
+  ],
+  "ui": {
+    "promptSample": "開発者向けにこの製品変更ログを要約し、移行リスクも含めてください。",
+    "model": "モデル",
+    "prompt": "プロンプト本文",
+    "outputTokens": "推定出力トークン",
+    "requestCount": "リクエスト数",
+    "inputTokens": "入力トークン",
+    "totalTokens": "合計トークン",
+    "perRequest": "1 回あたり",
+    "batchCost": "バッチ費用",
+    "source": "価格ソース",
+    "pricingDate": "価格確認日",
+    "copy": "要約をコピー",
+    "copied": "コピー済み",
+    "reset": "リセット",
+    "localNote": "見積もりはローカルで実行されます。トークン数は文字数ベースの簡易近似です。"
+  }
 }

@@ -24,5 +24,13 @@
       "question": "Y a-t-il une remarque importante ?",
       "answer": "Utilisez le résultat comme aide pratique et vérifiez-le avant publication ou utilisation."
     }
-  ]
+  ],
+  "ui": {
+    "champion": "Champion",
+    "copy": "Copier la prédiction",
+    "copied": "Copié",
+    "reset": "Réinitialiser les choix",
+    "note": "Prédicteur simplifié. Il ne récupère pas les résultats FIFA en direct.",
+    "rounds": "Tour de 32|Huitièmes de finale|Quarts de finale|Demi-finales|Finale"
+  }
 }
