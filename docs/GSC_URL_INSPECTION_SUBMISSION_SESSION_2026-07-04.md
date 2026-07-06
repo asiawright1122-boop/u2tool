@@ -356,4 +356,7 @@ Generated at: 2026-07-04T14:48:58Z
   - localized DE/ES/FR/PT titles for the `meta-tags-vs-open-graph-vs-twitter-cards` comparison page;
   - regression tests for both copy surfaces.
 - Validation passed: focused Vitest tests, `npm run check`, `npm run validate:gsc-loss-metadata`, `npm run build`, and `npm run validate:rendered-seo`.
-- Next action after deployment: smoke the same localized URLs on production and wait for a fresh Pages indexing update or URL Inspection recrawl before deciding whether any narrow validation workflow is useful.
+- GitHub Actions deploy run `28766765319` completed successfully and deployed Cloudflare Worker version `10d2e84b-f42c-4b24-8f42-3befcb59be3d`.
+- Post-deploy production smoke at `2026-07-06 12:02:43 CST` confirmed `200`, self-canonical HTML, and localized titles/body copy for `/zh/privacy/`, `/fr/contact/`, `/ko/privacy/`, and `/pt/compare/meta-tags-vs-open-graph-vs-twitter-cards/`.
+- Post-deploy `npm run validate:search-engine-compliance` passed against production.
+- Next action: wait for a fresh Pages indexing update or URL Inspection recrawl before deciding whether any narrow validation workflow is useful.

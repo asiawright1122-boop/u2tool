@@ -275,3 +275,6 @@ Checked at: 2026-07-06 11:55:48 CST
   - `npm run build`
   - `npm run validate:rendered-seo`
 - Local preview smoke confirmed `200`, self-canonical HTML and localized content for `/zh/privacy/`, `/fr/contact/`, `/ko/privacy/`, and `/pt/compare/meta-tags-vs-open-graph-vs-twitter-cards/`.
+- Deployed by GitHub Actions run `28766765319`; Cloudflare Worker version `10d2e84b-f42c-4b24-8f42-3befcb59be3d`.
+- Post-deploy production smoke at `2026-07-06 12:02:43 CST` confirmed `200`, self-canonical HTML, and localized content on the same four URLs.
+- Post-deploy `npm run validate:search-engine-compliance` passed against `https://www.u2tool.com`.

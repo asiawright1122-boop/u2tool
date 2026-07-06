@@ -1354,4 +1354,7 @@ These rows have known historic click or impression loss and should stay ahead of
   - `http://127.0.0.1:4322/fr/contact/`
   - `http://127.0.0.1:4322/ko/privacy/`
   - `http://127.0.0.1:4322/pt/compare/meta-tags-vs-open-graph-vs-twitter-cards/`
+- GitHub Actions deploy run `28766765319` completed successfully and deployed Cloudflare Worker version `10d2e84b-f42c-4b24-8f42-3befcb59be3d`.
+- Post-deploy production smoke at `2026-07-06 12:02:43 CST` confirmed the same localized URLs return `200`, self-canonical HTML, and the updated localized titles/body copy.
+- Post-deploy `npm run validate:search-engine-compliance` passed against production.
 - No GSC `Validate fix` or `Request indexing` action was submitted for this mixed duplicate-canonical bucket. Re-evaluate after deployment and the next Pages indexing export or URL Inspection recrawl.
