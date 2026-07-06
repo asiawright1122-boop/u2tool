@@ -10,6 +10,7 @@ import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
 import AiModelComparisonDetail from '@/components/ai/AiModelComparisonDetail.astro';
 import { categories } from '@/config/tools';
+import { getAiToolsDirectoryHref, getAiToolsDirectoryLabel } from '@/lib/ai-tools-navigation';
 import type { Locale } from '@/lib/i18n';
 import {
   aiModelComparisonIndexPath,
@@ -53,8 +54,11 @@ const pageDescription = resolveMetaDescription({
   title: page.copy.seoTitle,
 });
 const canonicalPath = `${aiModelComparisonIndexPath}/${page.slug}`;
+const aiDirectoryHref = getAiToolsDirectoryHref(locale);
+const aiDirectoryLabel = getAiToolsDirectoryLabel(locale);
 const breadcrumbItems = [
   { label: navMessages.home || 'Home', href: buildLocalizedPagePath(locale, '/') },
+  { label: aiDirectoryLabel, href: aiDirectoryHref },
   { label: indexCopy.h1, href: buildLocalizedPagePath(locale, aiModelComparisonIndexPath) },
   { label: page.copy.h1, href: page.href },
 ];

@@ -4,6 +4,7 @@ import {
   type AiModelComparisonIndexCopy,
   type AiModelComparisonIndexItem,
 } from '@/lib/ai-model-comparisons';
+import { getAiToolsDirectoryHref, getAiToolsDirectoryLabel } from '@/lib/ai-tools-navigation';
 import { getLocalizedPath, type Locale } from '@/lib/i18n';
 
 interface Props {
@@ -15,6 +16,8 @@ interface Props {
 const { comparisons, copy, locale } = Astro.props as Props;
 const toolHref = getLocalizedPath(locale, '/tools/ai-token-calculator');
 const indexHref = getLocalizedPath(locale, aiModelComparisonIndexPath);
+const aiDirectoryHref = getAiToolsDirectoryHref(locale);
+const aiDirectoryLabel = getAiToolsDirectoryLabel(locale);
 ---
 
 <section data-discovery-surface="ai-model-cost-comparisons" class="space-y-8">
@@ -41,6 +44,12 @@ const indexHref = getLocalizedPath(locale, aiModelComparisonIndexPath);
         class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-xs font-black uppercase tracking-[0.16em] text-slate-700 dark:border-white/10 dark:text-slate-200"
       >
         {comparisons.length} comparisons
+      </a>
+      <a
+        href={aiDirectoryHref}
+        class="inline-flex items-center justify-center rounded-xl border border-sky-200 px-5 py-3 text-xs font-black uppercase tracking-[0.16em] text-sky-700 transition hover:border-sky-400 hover:bg-sky-50 dark:border-sky-400/20 dark:text-sky-200 dark:hover:border-sky-300/60 dark:hover:bg-sky-950/30"
+      >
+        {aiDirectoryLabel}
       </a>
     </div>
   </div>

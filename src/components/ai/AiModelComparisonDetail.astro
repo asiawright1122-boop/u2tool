@@ -3,6 +3,7 @@ import {
   aiModelComparisonIndexPath,
   type AiModelComparisonPage,
 } from '@/lib/ai-model-comparisons';
+import { getAiToolsDirectoryHref, getAiToolsDirectoryLabel } from '@/lib/ai-tools-navigation';
 import { getLocalizedPath, type Locale } from '@/lib/i18n';
 
 interface Props {
@@ -12,11 +13,11 @@ interface Props {
 
 const { page, locale } = Astro.props as Props;
 const toolHref = getLocalizedPath(locale, '/tools/ai-token-calculator');
-const aiDirectoryHref = getLocalizedPath(locale, '/ai');
+const aiDirectoryHref = getAiToolsDirectoryHref(locale);
+const aiDirectoryLabel = getAiToolsDirectoryLabel(locale);
 const comparisonIndexHref = getLocalizedPath(locale, aiModelComparisonIndexPath);
 const labels = locale === 'zh'
   ? {
-      aiDirectory: 'AI 工具目录',
       caveats: '价格说明',
       cheapest: '最低模型',
       compareMore: '更多模型对比',
@@ -32,7 +33,6 @@ const labels = locale === 'zh'
       updated: '价格日期',
     }
   : {
-      aiDirectory: 'AI tools directory',
       caveats: 'Pricing notes',
       cheapest: 'Lowest model',
       compareMore: 'More model comparisons',
@@ -95,7 +95,7 @@ const notes = [...new Set(allModels.map((model) => model.note).filter((note): no
         href={aiDirectoryHref}
         class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-xs font-black uppercase tracking-[0.16em] text-slate-700 transition hover:border-sky-400 hover:text-sky-700 dark:border-white/10 dark:text-slate-200 dark:hover:border-sky-400 dark:hover:text-sky-300"
       >
-        {labels.aiDirectory}
+        {aiDirectoryLabel}
       </a>
     </div>
   </header>
