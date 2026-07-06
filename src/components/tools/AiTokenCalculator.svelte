@@ -4,6 +4,7 @@
   import {
     AI_MODEL_PRICING,
     calculateAiTokenCost,
+    getAiModelPricingGroups,
     type AiTokenCostResult,
   } from '../../lib/ai-token-calculator';
 
@@ -35,6 +36,7 @@
   };
 
   const initialPromptText = uiMessage('promptSample', COPY.promptSample);
+  const modelGroups = getAiModelPricingGroups();
   let modelId = $state(AI_MODEL_PRICING[0].id);
   let promptText = $state(initialPromptText);
   let outputTokens = $state('600');
@@ -88,14 +90,14 @@
   function currency(value: number) {
     return new Intl.NumberFormat(locale, {
       style: 'currency',
-      currency: 'USD',
+      currency: result.model.currency,
       maximumFractionDigits: value < 0.01 ? 6 : 4,
     }).format(value);
   }
 
   function copyText() {
     return [
-      `${ui.model}: ${result.model.model}`,
+      `${ui.model}: ${result.model.provider} - ${result.model.model}`,
       `${ui.inputTokens}: ${result.inputTokens}`,
       `${ui.outputTokens}: ${result.outputTokens}`,
       `${ui.perRequest}: ${currency(result.perRequestCost)}`,
@@ -138,8 +140,12 @@
     <div>
       <label for="ai-token-model" class="tool-label">{ui.model}</label>
       <select id="ai-token-model" class="tool-input" bind:value={modelId}>
-        {#each AI_MODEL_PRICING as model (model.id)}
-          <option value={model.id}>{model.provider} - {model.model}</option>
+        {#each modelGroups as group (group.provider)}
+          <optgroup label={group.provider}>
+            {#each group.models as model (model.id)}
+              <option value={model.id}>{model.model}</option>
+            {/each}
+          </optgroup>
         {/each}
       </select>
     </div>
