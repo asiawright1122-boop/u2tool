@@ -1508,7 +1508,8 @@
     }
   }
 
-  let inputs = $state<Record<string, string>>(getDefaults(slug));
+  const initialInputs = getDefaults(slug);
+  let inputs = $state<Record<string, string>>(initialInputs);
   let copied = $state(false);
   let qrDataUrl = $state('');
   let copyTimer: ReturnType<typeof setTimeout> | null = null;
@@ -3898,7 +3899,7 @@
 
     {#if result.output}
       <div>
-        <label class="tool-label">{labels.output}</label>
+        <div class="tool-label">{labels.output}</div>
         <pre class="p-4 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 overflow-x-auto whitespace-pre-wrap break-words text-sm text-gray-800 dark:text-gray-200">{result.output}</pre>
       </div>
     {/if}

@@ -128,7 +128,7 @@
     </div>
 
     <div>
-      <label class="tool-label">{COPY.pricingDate}</label>
+      <div class="tool-label">{COPY.pricingDate}</div>
       <div class="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-300">
         {result.model.pricingDate}
       </div>
