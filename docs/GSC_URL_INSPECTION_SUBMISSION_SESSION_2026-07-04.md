@@ -391,3 +391,6 @@ Generated at: 2026-07-04T14:48:58Z
   - Korean `htaccess-to-nginx`, `csv-to-excel`, `epoch-converter`, and `json-to-python`.
 - Validation passed: focused Vitest/support fallback tests, translation corpus, TDK translations, targeted TDK drift, `check`, `validate:gsc-loss-metadata`, `build`, and `validate:rendered-seo`.
 - Local preview smoke confirmed all seven repaired URLs render `200`, self-canonical HTML, expected localized titles, and no visible occurrence of the repaired source-title phrases.
+- Deployed commit `c4026523` via GitHub Actions run `28773065482`; Cloudflare Worker version `84205a30-a3d6-4a7a-927d-3b07769bd4e6`.
+- Post-deploy production smoke at `2026-07-06 14:48:43 CST` confirmed all seven repaired URLs render `200`, self-canonical HTML, expected localized titles, and no visible occurrence of the repaired source-title phrases.
+- Post-deploy `npm run validate:search-engine-compliance` passed against production.

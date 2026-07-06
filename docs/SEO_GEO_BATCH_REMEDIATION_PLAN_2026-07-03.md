@@ -1386,3 +1386,6 @@ These rows have known historic click or impression loss and should stay ahead of
 - Extended `src/messages/seo-governance.test.ts` to lock these duplicate-canonical title/name repairs across root/base translation sources.
 - Verification passed before deploy: focused Vitest/support fallback tests, translation corpus, TDK translations, targeted TDK drift, `check`, `validate:gsc-loss-metadata`, `build`, and `validate:rendered-seo`.
 - Local preview confirmed the seven repaired URLs render `200`, self-canonicals, expected localized titles, and no visible repaired source-title phrase.
+- Deployed commit `c4026523` via GitHub Actions run `28773065482`; Cloudflare Worker version `84205a30-a3d6-4a7a-927d-3b07769bd4e6`.
+- Post-deploy production smoke at `2026-07-06 14:48:43 CST` confirmed the same seven URLs return `200`, self-canonical HTML, expected localized titles, and no visible occurrence of the repaired source-title phrases.
+- Post-deploy `npm run validate:search-engine-compliance` passed against production.
