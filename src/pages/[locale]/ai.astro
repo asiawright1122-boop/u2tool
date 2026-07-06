@@ -7,6 +7,7 @@ import Footer from '@/components/layout/Footer.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
 import DiscoverySearch from '@/components/ai/DiscoverySearch.svelte';
+import AiToolsDirectorySection from '@/components/ai/AiToolsDirectorySection.astro';
 import CategorySpotlightSection from '@/components/discovery/CategorySpotlightSection.astro';
 import ComparisonGuideSection from '@/components/discovery/ComparisonGuideSection.astro';
 import { tools, categories } from '@/config/tools';
@@ -14,7 +15,12 @@ import { isValidLocale } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadBaseUiMessages } from '@/lib/translations';
 import { isAiDiscoveryEnabled } from '@/lib/ai-discovery/feature-flag';
-import { buildCategoryDiscoveryItemList, buildCategoryDiscoverySpotlights } from '@/lib/discovery-surface';
+import {
+  buildAiToolsDirectory,
+  buildAiToolsDirectoryItemList,
+  getAiToolsDirectoryCopy,
+} from '@/lib/ai-tools-directory';
+import { buildCategoryDiscoverySpotlights } from '@/lib/discovery-surface';
 import { buildComparisonGuides, getComparisonUiCopy } from '@/lib/comparison-surfaces';
 import {
   buildDiscoveryTranslations,
@@ -39,15 +45,15 @@ const categoryMessages = (baseMessages.categories as Record<string, string>) ?? 
 const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
 const homeMessages = (baseMessages.home as Record<string, unknown>) ?? {};
 const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
-const aiMessages = (baseMessages.aiDiscovery as Record<string, string>) ?? {};
 const toolsMessages = (baseMessages.tools as Record<string, string>) ?? {};
 const headerTranslations = buildHeaderTranslations(baseMessages);
 const discoveryTranslations = buildDiscoveryTranslations(baseMessages);
 const mobileNavMessages = buildMobileNavMessages(navMessages);
 const BASE_URL = getPublicSiteUrl();
-const aiPageTitle = aiMessages.pageTitle || 'AI Tool Discovery';
+const aiDirectoryCopy = getAiToolsDirectoryCopy(locale);
+const aiPageTitle = aiDirectoryCopy.seoTitle;
 const aiPageDescription = resolveMetaDescription({
-  description: aiMessages.pageDescription || 'Describe your intent and find the right existing tool quickly.',
+  description: aiDirectoryCopy.seoDescription,
   locale,
   title: aiPageTitle,
 });
@@ -64,7 +70,8 @@ const toolDescriptions = Object.fromEntries(
   })
 );
 const discoverySpotlights = buildCategoryDiscoverySpotlights(locale, categoryMessages, toolNames, toolDescriptions);
-const discoveryItemListData = buildCategoryDiscoveryItemList(BASE_URL, discoverySpotlights);
+const aiToolClusters = buildAiToolsDirectory(locale, categoryMessages, toolNames, toolDescriptions);
+const aiDirectoryItemListData = buildAiToolsDirectoryItemList(BASE_URL, aiToolClusters);
 const comparisonUiCopy = getComparisonUiCopy(locale);
 const comparisonGuides = buildComparisonGuides(locale, categoryMessages, toolNames, toolDescriptions);
 ---
@@ -77,7 +84,7 @@ const comparisonGuides = buildComparisonGuides(locale, categoryMessages, toolNam
   siteDescription={siteMessages.description}
 >
   <HreflangTags path="/ai" slot="head" />
-  <StructuredData type="ItemList" data={discoveryItemListData} slot="head" />
+  <StructuredData type="ItemList" data={aiDirectoryItemListData} slot="head" />
   <meta property="og:title" content={`${aiPageTitle} | U2Tool`} slot="head" />
   <meta property="og:description" content={aiPageDescription} slot="head" />
   <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
@@ -99,24 +106,31 @@ const comparisonGuides = buildComparisonGuides(locale, categoryMessages, toolNam
     <main class="py-6 px-4 lg:px-6">
       <div class="max-w-none mx-0">
         {aiDiscoveryEnabled ? (
-          <DiscoverySearch client:load locale={locale} translations={discoveryTranslations} />
+          <DiscoverySearch
+            client:load
+            locale={locale}
+            translations={discoveryTranslations}
+            headingTitle={aiDirectoryCopy.searchTitle}
+            headingDescription={aiDirectoryCopy.searchDescription}
+          />
         ) : (
           <section class="mb-8 rounded-3xl border border-slate-200/60 glass p-8 shadow-2xl backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/40">
             <p class="mb-3 text-[10px] font-black uppercase tracking-[0.3em] text-amber-600/80 dark:text-amber-500/60">
               {siteMessages.name || 'U2Tool'}
             </p>
             <h1 class="max-w-4xl text-4xl font-black tracking-tight text-slate-900 drop-shadow-sm dark:text-white md:text-5xl">
-              {aiPageTitle}
+              {aiDirectoryCopy.h1}
             </h1>
             <p class="mt-4 max-w-3xl text-sm font-medium leading-7 text-slate-500 dark:text-slate-400">
-              {aiMessages.heroDescription || aiPageDescription}
+              {aiDirectoryCopy.description}
             </p>
           </section>
         )}
+        <AiToolsDirectorySection copy={aiDirectoryCopy} clusters={aiToolClusters} />
         <CategorySpotlightSection
           eyebrow={aiPageTitle}
           title={(homeMessages.categories as string) || 'Tool Categories'}
-          description={aiMessages.heroDescription || aiPageDescription}
+          description={aiDirectoryCopy.description || aiPageDescription}
           popularLabel={(toolsMessages.popular || 'Popular').toUpperCase()}
           toolsCountLabel={(homeMessages.toolsCount as string) || 'tools'}
           spotlights={discoverySpotlights}

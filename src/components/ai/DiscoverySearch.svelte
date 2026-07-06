@@ -27,11 +27,18 @@
   }
 
   interface Props {
+    headingDescription?: string;
+    headingTitle?: string;
     locale: string;
     translations?: Record<string, unknown>;
   }
 
-  let { locale, translations = {} }: Props = $props();
+  let {
+    headingDescription,
+    headingTitle,
+    locale,
+    translations = {},
+  }: Props = $props();
 
   let query = $state('');
   let isLoading = $state(false);
@@ -48,13 +55,14 @@
   }
 
   const pageTitle = $derived(
-    t('aiDiscovery.heroTitle', 'AI Tool Discovery')
+    headingTitle || t('aiDiscovery.heroTitle', 'AI Tool Discovery')
   );
   const pageDescription = $derived(
-    t(
-      'aiDiscovery.heroDescription',
-      'Describe what you want to do, and we will map it to the best existing tool first.'
-    )
+    headingDescription ||
+      t(
+        'aiDiscovery.heroDescription',
+        'Describe what you want to do, and we will map it to the best existing tool first.'
+      )
   );
   const inputPlaceholder = $derived(
     t('aiDiscovery.inputPlaceholder', 'Example: convert json to csv')
