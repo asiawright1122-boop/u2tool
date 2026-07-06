@@ -1860,6 +1860,58 @@ describe('SEO Governance', () => {
         expectedTitle: '무료 온라인 JSON Python 변환기',
         forbidden: ['JSON to Python'],
       },
+      {
+        locale: 'ru',
+        slug: 'neumorphism-generator',
+        expectedName: 'Генератор неоморфизма',
+        expectedTitle: 'Генератор неоморфизма CSS онлайн бесплатно',
+        forbidden: ['Neumorphism', 'Soft UI', 'глянцевой тонкостенной'],
+      },
+      {
+        locale: 'ru',
+        slug: 'commit-message-generator',
+        expectedTitle: 'Генератор сообщений коммитов онлайн бесплатно',
+        forbidden: ['Conventional Commits'],
+      },
+      {
+        locale: 'ja',
+        slug: 'neumorphism-generator',
+        expectedName: 'ニューモーフィズムジェネレーター',
+        expectedTitle: '無料オンライン ニューモーフィズムジェネレーター',
+        forbidden: ['Neumorphism', 'ネウモーフィックUI'],
+      },
+      {
+        locale: 'ja',
+        slug: 'python-formatter',
+        expectedTitle: '無料オンライン Python フォーマッター',
+        forbidden: ['オンラインPython'],
+      },
+      {
+        locale: 'ja',
+        slug: 'markdown-editor',
+        expectedTitle: '無料オンライン Markdown エディタ',
+        forbidden: ['オンラインMarkdown'],
+      },
+      {
+        locale: 'ja',
+        slug: 'bic-swift-lookup',
+        expectedName: 'BIC/SWIFT コード検索',
+        expectedTitle: '国際送金用 BIC/SWIFT コード検索オンラインツール',
+        forbidden: ['用BIC/SWIFT', 'BIC/SWIFTコード'],
+      },
+      {
+        locale: 'ja',
+        slug: 'docker-compose-generator-advanced',
+        expectedTitle: '無料オンライン Docker Compose 生成ツール',
+        forbidden: ['オンラインDocker', 'Compose生成'],
+      },
+      {
+        locale: 'ja',
+        slug: 'css-variables-generator',
+        expectedName: 'CSS 変数生成ツール',
+        expectedTitle: 'CSS 変数生成オンラインツール 無料',
+        forbidden: ['CSS変数'],
+      },
     ] as const;
 
     for (const { locale, slug, expectedName, expectedTitle, forbidden } of cases) {

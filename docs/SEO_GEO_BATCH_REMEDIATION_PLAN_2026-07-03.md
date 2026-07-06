@@ -1389,3 +1389,19 @@ These rows have known historic click or impression loss and should stay ahead of
 - Deployed commit `c4026523` via GitHub Actions run `28773065482`; Cloudflare Worker version `84205a30-a3d6-4a7a-927d-3b07769bd4e6`.
 - Post-deploy production smoke at `2026-07-06 14:48:43 CST` confirmed the same seven URLs return `200`, self-canonical HTML, expected localized titles, and no visible occurrence of the repaired source-title phrases.
 - Post-deploy `npm run validate:search-engine-compliance` passed against production.
+
+## 2026-07-06 Duplicate Canonical Second-Pass Content-Residue Prep
+
+- Continued the same read-only GSC duplicate-canonical follow-up; no GSC `Validate fix`, `Request indexing`, or URL Inspection submission was submitted.
+- Post-`c4026523` full production scan of the current `295` GSC rows remained route/canonical clean: `295/295` status `200`, `0` redirects, `0` canonical mismatches, and `0` missing titles.
+- Saved second-pass evidence under `exports/gsc/coverage-drilldowns/2026-07-06/`:
+  - `google-selected-canonical-live-check-postdeploy-c4026523.csv`
+  - `google-selected-canonical-content-risk-postdeploy-c4026523.csv`
+- Treated the broad content-risk scan as a triage source only, because full visible-text matching catches expected footer/recommended-link phrases.
+- Repo fix prepared and locally verified for the next eight clear title/name/body quality residues:
+  - Russian `neumorphism-generator` and `commit-message-generator`;
+  - Japanese `neumorphism-generator`, `python-formatter`, `markdown-editor`, `bic-swift-lookup`, `docker-compose-generator-advanced`, and `css-variables-generator`.
+- Extended `src/messages/seo-governance.test.ts` to lock the repaired Russian/Japanese titles/names across root/base translation sources.
+- Verification passed: focused Vitest/support fallback tests, translation corpus, TDK translations, targeted TDK drift, `check`, `build`, `validate:gsc-loss-metadata`, and `validate:rendered-seo`.
+- Local preview smoke confirmed the eight repaired URLs render `200`, self-canonical HTML, expected localized titles, and no visible repaired residue phrase.
+- Next action: deploy this second-pass batch, production-smoke the eight URLs, then run `npm run validate:search-engine-compliance`.

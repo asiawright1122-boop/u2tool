@@ -343,3 +343,35 @@ Checked at: 2026-07-06 14:42:37 CST
 - Deployed commit `c4026523` via GitHub Actions run `28773065482`; Cloudflare Worker version `84205a30-a3d6-4a7a-927d-3b07769bd4e6`.
 - Post-deploy production smoke at `2026-07-06 14:48:43 CST` confirmed all seven repaired URLs return `200`, self-canonical HTML, expected localized titles, and no visible occurrence of the repaired English source-title phrases.
 - Post-deploy `npm run validate:search-engine-compliance` passed against production.
+
+## 2026-07-06 Duplicate Canonical Second-Pass Content-Residue Prep
+
+Checked at: 2026-07-06 15:08:55 CST
+
+- Continued the duplicate-canonical follow-up read-only. No GSC `Validate fix`, `Request indexing`, or URL Inspection submission was clicked.
+- Re-ran the full `295` URL production live check after deployed commit `c4026523`; evidence files:
+  - `exports/gsc/coverage-drilldowns/2026-07-06/google-selected-canonical-live-check-postdeploy-c4026523.csv`
+  - `exports/gsc/coverage-drilldowns/2026-07-06/google-selected-canonical-content-risk-postdeploy-c4026523.csv`
+- Post-deploy full-sample result stayed clean at `295/295` HTTP `200`, `0` redirects, `0` canonical mismatches, and `0` missing titles.
+- The broad content-risk scan still contains expected false positives from footer/recommended-link visible text, so this pass only changed clear title/name/body quality residues.
+- Repo fix prepared for eight additional duplicate-canonical sample candidates:
+  - `https://www.u2tool.com/ru/tools/neumorphism-generator/`
+  - `https://www.u2tool.com/ru/tools/commit-message-generator/`
+  - `https://www.u2tool.com/ja/tools/neumorphism-generator/`
+  - `https://www.u2tool.com/ja/tools/python-formatter/`
+  - `https://www.u2tool.com/ja/tools/markdown-editor/`
+  - `https://www.u2tool.com/ja/tools/bic-swift-lookup/`
+  - `https://www.u2tool.com/ja/tools/docker-compose-generator-advanced/`
+  - `https://www.u2tool.com/ja/tools/css-variables-generator/`
+- Added regression coverage in `src/messages/seo-governance.test.ts` for the repaired Russian/Japanese root/base titles and names.
+- Verification passed before deploy:
+  - `npx vitest run src/messages/seo-governance.test.ts src/lib/support-content-fallback.test.ts`
+  - `npm run validate:translation-corpus`
+  - `npm run validate:tdk-translations`
+  - `npm run validate:tdk-drift -- --scope targeted`
+  - `npm run check`
+  - `npm run build`
+  - `npm run validate:gsc-loss-metadata`
+  - `npm run validate:rendered-seo`
+- Local preview smoke confirmed all eight repaired URLs return `200`, self-canonical HTML, expected localized titles, and no visible occurrence of the repaired residue phrases.
+- Next action: commit, deploy, then run production smoke and `npm run validate:search-engine-compliance` before considering the repo-side pass complete.

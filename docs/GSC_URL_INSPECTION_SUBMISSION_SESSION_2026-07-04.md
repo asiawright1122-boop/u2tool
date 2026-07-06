@@ -394,3 +394,24 @@ Generated at: 2026-07-04T14:48:58Z
 - Deployed commit `c4026523` via GitHub Actions run `28773065482`; Cloudflare Worker version `84205a30-a3d6-4a7a-927d-3b07769bd4e6`.
 - Post-deploy production smoke at `2026-07-06 14:48:43 CST` confirmed all seven repaired URLs render `200`, self-canonical HTML, expected localized titles, and no visible occurrence of the repaired source-title phrases.
 - Post-deploy `npm run validate:search-engine-compliance` passed against production.
+
+## 2026-07-06 Duplicate Canonical Second-Pass Content-Residue Prep
+
+- Continued read-only in the same duplicate-canonical lane. No GSC `Validate fix`, `Request indexing`, or URL Inspection submission was clicked.
+- Rechecked all current `295` duplicate-canonical sample URLs after commit `c4026523` was live; production remained clean at `295/295` status `200`, `0` redirects, `0` canonical mismatches, and `0` missing titles.
+- Generated ignored evidence:
+  - `exports/gsc/coverage-drilldowns/2026-07-06/google-selected-canonical-live-check-postdeploy-c4026523.csv`
+  - `exports/gsc/coverage-drilldowns/2026-07-06/google-selected-canonical-content-risk-postdeploy-c4026523.csv`
+- Prepared the next repo-side content-residue batch for:
+  - `https://www.u2tool.com/ru/tools/neumorphism-generator/`
+  - `https://www.u2tool.com/ru/tools/commit-message-generator/`
+  - `https://www.u2tool.com/ja/tools/neumorphism-generator/`
+  - `https://www.u2tool.com/ja/tools/python-formatter/`
+  - `https://www.u2tool.com/ja/tools/markdown-editor/`
+  - `https://www.u2tool.com/ja/tools/bic-swift-lookup/`
+  - `https://www.u2tool.com/ja/tools/docker-compose-generator-advanced/`
+  - `https://www.u2tool.com/ja/tools/css-variables-generator/`
+- Guardrail update: `src/messages/seo-governance.test.ts` now covers these repaired Russian/Japanese root/base title/name strings.
+- Local verification passed: focused Vitest/support fallback tests, translation corpus, TDK translations, targeted TDK drift, `check`, `build`, `validate:gsc-loss-metadata`, and `validate:rendered-seo`.
+- Local preview smoke confirmed all eight URLs render `200`, self-canonical HTML, expected localized titles, and no visible repaired residue phrase.
+- Next action: commit/deploy this batch, then production-smoke the same eight URLs and run `npm run validate:search-engine-compliance`.
