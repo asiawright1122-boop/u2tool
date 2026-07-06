@@ -1,0 +1,143 @@
+---
+import type { Locale } from '@/lib/i18n';
+import { getAiModelPricingGroups } from '@/lib/ai-token-calculator';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const groups = getAiModelPricingGroups();
+const notes = groups.flatMap((group) =>
+  group.models
+    .filter((model) => model.note)
+    .map((model) => ({
+      provider: group.provider,
+      model: model.model,
+      note: model.note || '',
+    }))
+);
+
+const COPY = {
+  en: {
+    heading: 'AI model token pricing reference',
+    intro:
+      'Use this source-backed table to compare the model presets available in the calculator. Prices are listed per 1 million input or output tokens in the currency published by each provider.',
+    provider: 'Provider',
+    model: 'Model',
+    input: 'Input / 1M',
+    output: 'Output / 1M',
+    currency: 'Currency',
+    checked: 'Checked',
+    source: 'Source',
+    sourceLabel: 'Official pricing',
+    caveats: 'Pricing caveats',
+    finalNote:
+      'The calculator uses a simple local token estimate. Provider prices, cache rates, long-context rates, request fees, search add-ons, and promotional periods can change, so review the official source before committing production spend.',
+  },
+  zh: {
+    heading: 'AI 模型 Token 价格参考',
+    intro:
+      '这张可索引的表格列出计算器当前支持的模型预设。价格按每 100 万输入或输出 token 展示，并保留各厂商官方发布的币种。',
+    provider: '厂商',
+    model: '模型',
+    input: '输入 / 100万',
+    output: '输出 / 100万',
+    currency: '币种',
+    checked: '核对日期',
+    source: '来源',
+    sourceLabel: '官方价格',
+    caveats: '价格说明',
+    finalNote:
+      '本工具使用本地简化 token 估算。厂商价格、缓存价、长上下文价、请求费、搜索附加费和促销期可能变化，正式预算前请复核官方来源。',
+  },
+} as const;
+
+const copy = locale === 'zh' ? COPY.zh : COPY.en;
+
+function formatPrice(value: number, currency: string) {
+  return new Intl.NumberFormat(locale, {
+    style: 'currency',
+    currency,
+    maximumFractionDigits: value < 1 ? 4 : 2,
+  }).format(value);
+}
+---
+
+<section class="glass-card p-6 md:p-10 mb-10 group" aria-labelledby="ai-token-pricing-reference-heading">
+  <div class="max-w-5xl">
+    <h2
+      id="ai-token-pricing-reference-heading"
+      class="text-2xl md:text-3xl font-bold mb-4 text-slate-900 dark:text-white tracking-tight flex items-center gap-3"
+    >
+      <span class="w-1 h-8 bg-amber-500 rounded-full dark:shadow-[0_0_10px_rgba(245,158,11,0.5)]"></span>
+      {copy.heading}
+    </h2>
+    <p class="text-slate-600 dark:text-slate-400 text-base md:text-lg leading-relaxed">
+      {copy.intro}
+    </p>
+  </div>
+
+  <div class="mt-8 overflow-x-auto rounded-2xl border border-slate-200/70 dark:border-white/10 bg-white/50 dark:bg-slate-950/50">
+    <table class="min-w-[860px] w-full text-left text-sm">
+      <thead class="bg-slate-100/80 text-[11px] uppercase tracking-[0.16em] text-slate-500 dark:bg-white/[0.04] dark:text-slate-400">
+        <tr>
+          <th scope="col" class="px-4 py-3 font-black">{copy.provider}</th>
+          <th scope="col" class="px-4 py-3 font-black">{copy.model}</th>
+          <th scope="col" class="px-4 py-3 font-black">{copy.input}</th>
+          <th scope="col" class="px-4 py-3 font-black">{copy.output}</th>
+          <th scope="col" class="px-4 py-3 font-black">{copy.currency}</th>
+          <th scope="col" class="px-4 py-3 font-black">{copy.checked}</th>
+          <th scope="col" class="px-4 py-3 font-black">{copy.source}</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-200/70 dark:divide-white/10">
+        {groups.map((group) =>
+          group.models.map((model, index) => (
+            <tr class="text-slate-700 dark:text-slate-300">
+              <td class="px-4 py-3 font-bold text-slate-900 dark:text-white">
+                {index === 0 ? group.provider : ''}
+              </td>
+              <td class="px-4 py-3 font-mono text-xs md:text-sm text-slate-800 dark:text-amber-100">
+                {model.model}
+              </td>
+              <td class="px-4 py-3 whitespace-nowrap">{formatPrice(model.inputPerMillion, model.currency)}</td>
+              <td class="px-4 py-3 whitespace-nowrap">{formatPrice(model.outputPerMillion, model.currency)}</td>
+              <td class="px-4 py-3">{model.currency}</td>
+              <td class="px-4 py-3 whitespace-nowrap">{model.pricingDate}</td>
+              <td class="px-4 py-3">
+                <a
+                  class="font-bold text-amber-700 hover:underline dark:text-amber-300"
+                  href={model.sourceUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {copy.sourceLabel}
+                </a>
+              </td>
+            </tr>
+          ))
+        )}
+      </tbody>
+    </table>
+  </div>
+
+  {notes.length > 0 && (
+    <div class="mt-8">
+      <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">{copy.caveats}</h3>
+      <ul class="space-y-3">
+        {notes.map((item) => (
+          <li class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+            <span class="font-bold text-slate-800 dark:text-slate-100">{item.provider} {item.model}:</span>
+            {' '}
+            {item.note}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+
+  <p class="mt-8 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
+    {copy.finalNote}
+  </p>
+</section>

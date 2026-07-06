@@ -33,6 +33,7 @@ import StructuredData from '@/components/seo/StructuredData.astro';
 import ToolWrapper from '@/components/tools/ToolWrapper.svelte';
 import RelatedTools from '@/components/tools/RelatedTools.astro';
 import ToolFAQ from '@/components/tools/ToolFAQ.astro';
+import AiTokenCalculatorSeoContent from '@/components/tools/AiTokenCalculatorSeoContent.astro';
 
 // --- Cluster (order matches CLUSTER_BLOCKS array below: creatorSeo → developerData → image → onlineCalculator → pdfDocument → security → textWriting → chart) ---
 import ToolClusterCard from '@/components/tools/ToolClusterCard.astro';
@@ -626,6 +627,10 @@ const CLUSTER_BLOCKS: ToolClusterBlock[] = [
           translations={toolTranslations}
         />
       </div>
+
+      {tool.slug === 'ai-token-calculator' && (
+        <AiTokenCalculatorSeoContent locale={locale} />
+      )}
 
       {/* Usage instructions */}
       {(usageSteps || usageExamples) && (

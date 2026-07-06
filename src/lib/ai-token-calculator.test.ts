@@ -61,6 +61,37 @@ describe('ai token calculator helper', () => {
     );
   });
 
+  it('provides complete source-backed rows for the rendered pricing reference table', () => {
+    const groupedRows = getAiModelPricingGroups().flatMap((group) =>
+      group.models.map((model) => ({
+        provider: group.provider,
+        model: model.model,
+        inputPerMillion: model.inputPerMillion,
+        outputPerMillion: model.outputPerMillion,
+        currency: model.currency,
+        pricingDate: model.pricingDate,
+        sourceUrl: model.sourceUrl,
+        note: model.note,
+      }))
+    );
+
+    expect(groupedRows).toHaveLength(AI_MODEL_PRICING.length);
+    expect(groupedRows.some((row) => row.model === 'gpt-5.5')).toBe(true);
+    expect(groupedRows.some((row) => row.model === 'Claude Sonnet 5')).toBe(true);
+    expect(groupedRows.some((row) => row.model === 'grok-4.3')).toBe(true);
+    expect(groupedRows.some((row) => row.model === 'kimi-k2.7-code' && row.currency === 'CNY')).toBe(true);
+    expect(groupedRows.some((row) => row.note?.includes('cache'))).toBe(true);
+
+    for (const row of groupedRows) {
+      expect(row.provider).toBeTruthy();
+      expect(row.model).toBeTruthy();
+      expect(row.inputPerMillion).toBeGreaterThan(0);
+      expect(row.outputPerMillion).toBeGreaterThan(0);
+      expect(row.pricingDate).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(new URL(row.sourceUrl).protocol).toBe('https:');
+    }
+  });
+
   it('calculates per-request and batch cost from per-million token pricing', () => {
     const result = calculateAiTokenCost({
       modelId: 'openai-gpt-5-5',
