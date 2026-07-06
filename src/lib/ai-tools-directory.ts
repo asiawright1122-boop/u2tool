@@ -1,4 +1,10 @@
 import { tools, type Tool } from '@/config/tools';
+import {
+  aiModelComparisonIndexPath,
+  buildAiModelComparisonIndex,
+  isPublishedAiModelComparisonLocale,
+  type AiModelComparisonSlug,
+} from './ai-model-comparisons';
 import { getLocalizedPath, type Locale } from './i18n';
 
 export type AiToolsDirectoryClusterId =
@@ -18,6 +24,10 @@ export interface AiToolsDirectoryCopy {
   featuredDescription: string;
   featuredTitle: string;
   h1: string;
+  modelComparisonDescription: string;
+  modelComparisonIndex: { href: string; label: string };
+  modelComparisonLinks: Array<{ href: string; label: string; description: string }>;
+  modelComparisonTitle: string;
   searchDescription: string;
   searchTitle: string;
   seoDescription: string;
@@ -50,6 +60,16 @@ interface AiToolsDirectoryDefinition {
 }
 
 type ClusterCopy = Record<AiToolsDirectoryClusterId, { title: string; description: string }>;
+type AiToolsDirectoryCopyBundle = Omit<AiToolsDirectoryCopy, 'modelComparisonIndex' | 'modelComparisonLinks'> & {
+  clusters: ClusterCopy;
+  modelComparisonIndexLabel: string;
+};
+
+const FEATURED_MODEL_COMPARISON_SLUGS: readonly AiModelComparisonSlug[] = [
+  'openai-vs-claude-api-cost',
+  'gpt-vs-gemini-api-cost',
+  'deepseek-vs-openai-api-cost',
+];
 
 const AI_TOOLS_DIRECTORY_DEFINITIONS: AiToolsDirectoryDefinition[] = [
   {
@@ -74,10 +94,10 @@ const AI_TOOLS_DIRECTORY_DEFINITIONS: AiToolsDirectoryDefinition[] = [
   },
 ];
 
-const englishCopy: AiToolsDirectoryCopy & { clusters: ClusterCopy } = {
+const englishCopy: AiToolsDirectoryCopyBundle = {
   costComparisonCta: 'Compare model costs',
   costComparisonDescription:
-    'Start with the token calculator today. Dedicated OpenAI, Claude, Gemini, DeepSeek, Kimi, and Grok comparison pages can plug into this directory next.',
+    'Start with the token calculator, then use the model comparison pages to compare source-backed token prices before choosing a default API model.',
   costComparisonTitle: 'Plan AI model spend before you build',
   ctaLabel: 'Open tool',
   description:
@@ -88,6 +108,10 @@ const englishCopy: AiToolsDirectoryCopy & { clusters: ClusterCopy } = {
     'Estimate input and output token costs across current model presets, then use the pricing reference table for source-backed planning.',
   featuredTitle: 'Featured: AI Token Calculator',
   h1: 'AI Tools Directory',
+  modelComparisonDescription:
+    'Open a focused comparison cluster for GPT, Claude, Gemini, DeepSeek, Grok, and Perplexity token costs.',
+  modelComparisonIndexLabel: 'Browse AI model cost comparisons',
+  modelComparisonTitle: 'AI model cost comparisons',
   searchDescription: 'Search by intent, or browse the curated AI workflow groups below.',
   searchTitle: 'Find the right AI tool',
   seoDescription:
@@ -114,10 +138,10 @@ const englishCopy: AiToolsDirectoryCopy & { clusters: ClusterCopy } = {
   },
 };
 
-const chineseCopy: AiToolsDirectoryCopy & { clusters: ClusterCopy } = {
+const chineseCopy: AiToolsDirectoryCopyBundle = {
   costComparisonCta: '对比模型费用',
   costComparisonDescription:
-    '当前先使用 AI Token 费用计算器和价格参考表。后续 OpenAI、Claude、Gemini、DeepSeek、Kimi、Grok 对比页可以接入这个目录。',
+    '先用 AI Token 费用计算器估算自己的输入输出，再查看模型对比页，比较带来源的 token 标价。',
   costComparisonTitle: '开发前先估算 AI 模型成本',
   ctaLabel: '打开工具',
   description:
@@ -128,6 +152,10 @@ const chineseCopy: AiToolsDirectoryCopy & { clusters: ClusterCopy } = {
     '按输入和输出 token 估算常见模型调用成本，并查看带来源的模型价格参考表。',
   featuredTitle: '重点工具：AI Token 费用计算器',
   h1: 'AI 工具目录',
+  modelComparisonDescription:
+    '打开 GPT、Claude、Gemini、DeepSeek、Grok 和 Perplexity 的模型费用对比页。',
+  modelComparisonIndexLabel: '浏览 AI 模型费用对比',
+  modelComparisonTitle: 'AI 模型费用对比',
   searchDescription: '可以按需求搜索，也可以直接浏览下面的 AI 工作流分组。',
   searchTitle: '找到合适的 AI 工具',
   seoDescription:
@@ -154,18 +182,39 @@ const chineseCopy: AiToolsDirectoryCopy & { clusters: ClusterCopy } = {
   },
 };
 
-const copyByLocale: Partial<Record<Locale, AiToolsDirectoryCopy & { clusters: ClusterCopy }>> = {
+const copyByLocale: Partial<Record<Locale, AiToolsDirectoryCopyBundle>> = {
   en: englishCopy,
   zh: chineseCopy,
 };
 
-function getCopyBundle(locale: Locale): AiToolsDirectoryCopy & { clusters: ClusterCopy } {
+function getCopyBundle(locale: Locale): AiToolsDirectoryCopyBundle {
   return copyByLocale[locale] ?? englishCopy;
 }
 
 export function getAiToolsDirectoryCopy(locale: Locale): AiToolsDirectoryCopy {
-  const { clusters: _clusters, ...copy } = getCopyBundle(locale);
-  return copy;
+  const {
+    clusters: _clusters,
+    modelComparisonIndexLabel,
+    ...copy
+  } = getCopyBundle(locale);
+  const comparisonLocale = isPublishedAiModelComparisonLocale(locale) ? locale : 'en';
+  const comparisonIndex = buildAiModelComparisonIndex(comparisonLocale);
+  const comparisonBySlug = new Map(comparisonIndex.map((comparison) => [comparison.slug, comparison]));
+
+  return {
+    ...copy,
+    modelComparisonIndex: {
+      href: getLocalizedPath(comparisonLocale, aiModelComparisonIndexPath),
+      label: modelComparisonIndexLabel,
+    },
+    modelComparisonLinks: FEATURED_MODEL_COMPARISON_SLUGS.map((slug) => comparisonBySlug.get(slug))
+      .filter((comparison): comparison is NonNullable<typeof comparison> => Boolean(comparison))
+      .map((comparison) => ({
+        href: comparison.href,
+        label: comparison.title,
+        description: comparison.description,
+      })),
+  };
 }
 
 export function buildAiToolsDirectory(

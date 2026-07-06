@@ -18,8 +18,14 @@ import { pdfDocumentToolClusterPath } from '@/lib/pdf-document-tool-cluster';
 import { securityToolClusterPath } from '@/lib/security-tool-cluster';
 import { textWritingToolClusterPath } from '@/lib/text-writing-tool-cluster';
 import { siteInfoPageSlugs } from '@/lib/site-info-pages';
+import {
+  aiModelComparisonIndexPath,
+  aiModelComparisonLocales,
+  aiModelComparisonSlugs,
+  isPublishedAiModelComparisonLocale,
+} from '@/lib/ai-model-comparisons';
 import { sitemapLastmodManifest } from '@/generated/sitemap-lastmod';
-import { buildUrl, generateSitemapResponse } from '@/lib/sitemap-utils';
+import { buildUrl, buildUrlForLocales, generateSitemapResponse } from '@/lib/sitemap-utils';
 
 export const prerender = true;
 
@@ -32,6 +38,27 @@ export const GET: APIRoute = () => {
 
     // AI 发现页 - even when interactive discovery is disabled, the route renders an indexable static fallback.
     urls.push(buildUrl(`/${locale}/ai`, '0.6', 'weekly', sitemapLastmodManifest.ai));
+
+    // AI 模型费用对比页 - first batch is published only in English and Chinese.
+    if (isPublishedAiModelComparisonLocale(locale)) {
+      urls.push(buildUrlForLocales(
+        `/${locale}${aiModelComparisonIndexPath}`,
+        '0.7',
+        'weekly',
+        aiModelComparisonLocales,
+        sitemapLastmodManifest.ai
+      ));
+
+      for (const slug of aiModelComparisonSlugs) {
+        urls.push(buildUrlForLocales(
+          `/${locale}${aiModelComparisonIndexPath}/${slug}`,
+          '0.6',
+          'weekly',
+          aiModelComparisonLocales,
+          sitemapLastmodManifest.ai
+        ));
+      }
+    }
     
     // 工具列表页 - 高优先级
     urls.push(buildUrl(`/${locale}/tools`, '0.9', 'daily', sitemapLastmodManifest.pages));

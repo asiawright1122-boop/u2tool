@@ -77,6 +77,20 @@ describe('AI tools directory', () => {
     expect(getAiToolsDirectoryCopy('zh').seoDescription).toContain('Token');
   });
 
+  it('exposes AI model comparison links from the AI directory copy', () => {
+    const enCopy = getAiToolsDirectoryCopy('en');
+    const zhCopy = getAiToolsDirectoryCopy('zh');
+
+    expect(enCopy.modelComparisonIndex.href).toBe('/en/ai/models/');
+    expect(enCopy.modelComparisonLinks.map((link) => link.href)).toEqual([
+      '/en/ai/models/openai-vs-claude-api-cost/',
+      '/en/ai/models/gpt-vs-gemini-api-cost/',
+      '/en/ai/models/deepseek-vs-openai-api-cost/',
+    ]);
+    expect(zhCopy.modelComparisonIndex.href).toBe('/zh/ai/models/');
+    expect(zhCopy.modelComparisonIndex.label).toContain('模型费用');
+  });
+
   it('builds AI-directory ItemList structured data', () => {
     const clusters = buildAiToolsDirectory('en', categoryNames, toolNames, toolDescriptions);
     const itemList = buildAiToolsDirectoryItemList('https://www.u2tool.com', clusters);

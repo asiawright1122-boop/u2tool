@@ -5,7 +5,7 @@
  */
 
 import { sitemapLastmodManifest } from '@/generated/sitemap-lastmod';
-import { locales } from '@/lib/i18n';
+import { locales as allLocales, type Locale } from '@/lib/i18n';
 import { getPublicSiteUrl } from '@/lib/public-env';
 import { buildLocalizedPageUrl, getHreflang, withPageUrlTrailingSlash } from '@/lib/seo';
 
@@ -23,9 +23,38 @@ export function buildUrl(path: string, priority: string, changefreq: string, las
   const pathAfterLocale = pathSegmentsAfterLocale.length > 0 ? `/${pathSegmentsAfterLocale.join('/')}` : '';
 
   // Generate hreflang tags with language-region codes
-  const alternates = locales.map(l => {
+  const alternates = allLocales.map(l => {
     const hreflang = getHreflang(l);
     return `    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${esc(buildLocalizedPageUrl(BASE_URL, l, pathAfterLocale || '/'))}" />`;
+  }).join('\n');
+
+  return `  <url>
+    <loc>${loc}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+${alternates}
+    <xhtml:link rel="alternate" hreflang="x-default" href="${esc(buildLocalizedPageUrl(BASE_URL, 'en', pathAfterLocale || '/'))}" />
+  </url>`;
+}
+
+/**
+ * 构建只发布到部分语言的 URL 条目，避免 sitemap 指向不存在的翻译页面
+ */
+export function buildUrlForLocales(
+  path: string,
+  priority: string,
+  changefreq: string,
+  publishedLocales: readonly Locale[],
+  lastmod = SITEMAP_LASTMOD
+): string {
+  const loc = esc(withPageUrlTrailingSlash(`${BASE_URL}${path}`));
+  const parts = path.split('/');
+  const pathSegmentsAfterLocale = parts.slice(2).filter(Boolean);
+  const pathAfterLocale = pathSegmentsAfterLocale.length > 0 ? `/${pathSegmentsAfterLocale.join('/')}` : '';
+  const alternates = publishedLocales.map((locale) => {
+    const hreflang = getHreflang(locale);
+    return `    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${esc(buildLocalizedPageUrl(BASE_URL, locale, pathAfterLocale || '/'))}" />`;
   }).join('\n');
 
   return `  <url>
