@@ -1404,4 +1404,7 @@ These rows have known historic click or impression loss and should stay ahead of
 - Extended `src/messages/seo-governance.test.ts` to lock the repaired Russian/Japanese titles/names across root/base translation sources.
 - Verification passed: focused Vitest/support fallback tests, translation corpus, TDK translations, targeted TDK drift, `check`, `build`, `validate:gsc-loss-metadata`, and `validate:rendered-seo`.
 - Local preview smoke confirmed the eight repaired URLs render `200`, self-canonical HTML, expected localized titles, and no visible repaired residue phrase.
-- Next action: deploy this second-pass batch, production-smoke the eight URLs, then run `npm run validate:search-engine-compliance`.
+- Deployed commit `bc61e9a6` via GitHub Actions run `28774290626`; Cloudflare Worker version `3a2f80c9-74a1-44a6-b1db-85966f71011e`.
+- Post-deploy production smoke at `2026-07-06 15:16:58 CST` confirmed the same eight URLs return `200`, self-canonical HTML, expected localized titles, and no visible repaired residue phrase.
+- Post-deploy `npm run validate:search-engine-compliance` passed against production.
+- Next action: wait for fresh GSC Pages indexing movement or URL Inspection recrawl before taking any GSC-side validation action.

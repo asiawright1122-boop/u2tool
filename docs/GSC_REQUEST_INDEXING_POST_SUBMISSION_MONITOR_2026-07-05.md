@@ -374,4 +374,7 @@ Checked at: 2026-07-06 15:08:55 CST
   - `npm run validate:gsc-loss-metadata`
   - `npm run validate:rendered-seo`
 - Local preview smoke confirmed all eight repaired URLs return `200`, self-canonical HTML, expected localized titles, and no visible occurrence of the repaired residue phrases.
-- Next action: commit, deploy, then run production smoke and `npm run validate:search-engine-compliance` before considering the repo-side pass complete.
+- Deployed commit `bc61e9a6` via GitHub Actions run `28774290626`; Cloudflare Worker version `3a2f80c9-74a1-44a6-b1db-85966f71011e`.
+- Post-deploy production smoke at `2026-07-06 15:16:58 CST` confirmed all eight repaired URLs return `200`, self-canonical HTML, expected localized titles, and no visible repaired residue phrase.
+- Post-deploy `npm run validate:search-engine-compliance` passed against production.
+- Next action: wait for a fresh Pages indexing update or URL Inspection recrawl before considering any narrow GSC validation workflow.
