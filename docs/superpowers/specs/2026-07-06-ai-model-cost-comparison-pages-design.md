@@ -2,7 +2,7 @@
 
 ## Goal
 
-Create a small, high-quality AI model cost comparison cluster that captures long-tail searches around GPT, Claude, Gemini, DeepSeek, Kimi, Grok, and Perplexity pricing while routing users back to the AI Token Calculator.
+Create a small, high-quality AI model cost comparison cluster that captures long-tail searches around GPT, Claude, Gemini, DeepSeek, Grok, and Perplexity pricing while routing users back to the AI Token Calculator.
 
 ## Approved Direction
 
@@ -72,9 +72,9 @@ Create these 8 comparison pages:
    - English intent: DeepSeek vs OpenAI API cost
    - Chinese intent: DeepSeek 和 OpenAI API 成本对比
 
-5. `deepseek-vs-kimi-code-model-cost`
-   - English intent: DeepSeek vs Kimi code model cost
-   - Chinese intent: DeepSeek 和 Kimi 代码模型成本对比
+5. `deepseek-vs-perplexity-api-cost`
+   - English intent: DeepSeek vs Perplexity API cost
+   - Chinese intent: DeepSeek 和 Perplexity API 成本对比
 
 6. `gemini-vs-deepseek-api-cost`
    - English intent: Gemini vs DeepSeek API cost
@@ -194,6 +194,8 @@ cost = requestCount * ((inputTokens * inputPerMillion) + (outputTokens * outputP
 ```
 
 Only compare rows that share the same currency. The current first batch uses USD rows.
+
+Kimi code model rows are currently priced in CNY while the other first-batch provider rows are priced in USD. Do not publish a Kimi comparison page until the product has either a verified CNY peer set or an explicit, source-backed exchange-rate policy.
 
 ## Data Model
 
