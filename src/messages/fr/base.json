@@ -9585,7 +9585,6 @@
       "description": "Écrivez et prévisualisez Markdown avec rendu en direct. Exportez en MD ou HTML.",
       "seo_title": "Éditeur Markdown Gratuit en Ligne avec Aperçu en Direct",
       "seo_description": "Écrivez et prévisualisez Markdown en ligne gratuitement. Rendu en direct, coloration syntaxique et export en MD ou HTML. Parfait pour la documentation et les notes.",
-
       "errorParsingMarkdown": "Erreur d'analyse markdown",
       "list": "Liste",
       "code": "Code",
@@ -15846,7 +15845,19 @@
         "composition": "Composition",
         "aspectRatio": "Ratio",
         "negativePrompt": "Prompt négatif",
-        "details": "Détails"
+        "details": "Détails",
+        "llmsTxt": "Contenu llms.txt",
+        "robotsPolicy": "Politique",
+        "sitemapUrl": "URL du sitemap",
+        "customAgents": "Robots IA supplementaires",
+        "mcpConfig": "Config MCP JSON",
+        "mcpClient": "Client",
+        "serverName": "Nom du serveur",
+        "command": "Commande",
+        "argsText": "Arguments",
+        "envText": "Variables environnement",
+        "jsonInput": "Entree JSON",
+        "jsonlInput": "Entree JSONL"
       },
       "options": {
         "writing": "Rédaction",
@@ -15892,7 +15903,13 @@
         "vcard3": "vCard 3.0",
         "vcard4": "vCard 4.0",
         "playful": "Ludique",
-        "bold": "Audacieux"
+        "bold": "Audacieux",
+        "blockTraining": "Bloquer les robots d entrainement",
+        "allowDiscovery": "Autoriser les robots de decouverte",
+        "claude": "Claude Desktop",
+        "codex": "Codex",
+        "cursor": "Cursor",
+        "vscode": "VS Code"
       },
       "results": {
         "totalCost": "Coût total",
@@ -15976,7 +15993,21 @@
         "duration": "Durée",
         "promptVariants": "Variantes de prompt",
         "positivePrompt": "Prompt positif",
-        "settingNotes": "Notes de réglage"
+        "settingNotes": "Notes de réglage",
+        "status": "Statut",
+        "valid": "Valide",
+        "invalid": "Invalide",
+        "validLines": "Lignes valides",
+        "invalidLines": "Lignes invalides",
+        "issues": "Problemes",
+        "warnings": "Avertissements",
+        "links": "Liens",
+        "servers": "Serveurs",
+        "fixes": "Corrections",
+        "normalized": "Normalise",
+        "crawlers": "Robots",
+        "policy": "Politique",
+        "client": "Client"
       },
       "placeholders": {
         "aiTopic": "texte de lancement pour un site d’outils en ligne",
@@ -16030,7 +16061,15 @@
         "promptLighting": "lumière douce du matin",
         "promptComposition": "grand angle, sujet centré",
         "negativePrompt": "flou, basse qualité, mains déformées, doigts en trop",
-        "promptDetails": "haut niveau de détail, matériaux réalistes, contraste subtil"
+        "promptDetails": "haut niveau de détail, matériaux réalistes, contraste subtil",
+        "llmsTxtContent": "# U2Tool\n\n> Free browser-based tools for developers, marketers, and operators.\n\n- [Home](https://www.u2tool.com)\n- [Docs](https://www.u2tool.com/docs)",
+        "customAgents": "ChatGPT-User\nExampleBot",
+        "mcpConfig": "{\n  \"mcpServers\": {\n    \"filesystem\": {\n      \"command\": \"npx\",\n      \"args\": [\"@modelcontextprotocol/server-filesystem\", \"/tmp\"]\n    }\n  }\n}",
+        "mcpArgs": "@modelcontextprotocol/server-filesystem /tmp",
+        "mcpEnv": "API_KEY=${API_KEY}",
+        "jsonRepairInput": "{ foo: 'bar', trailing: true, }",
+        "jsonlInput": "{\"event\":\"signup\",\"userId\":123}\n{\"event\":\"purchase\",\"amount\":49}",
+        "sitemapUrl": "https://www.u2tool.com/sitemap.xml"
       }
     },
     "calorie-deficit-calculator": {
@@ -16296,6 +16335,60 @@
       "description": "Simulez la Coupe du Monde de la FIFA 2026 à 48 équipes. Prédisez les scores des matches de poule, classez les meilleurs troisièmes et pronostiquez toute la phase finale.",
       "seo_title": "Calculateur Coupe du Monde 2026",
       "seo_description": "Simulez la Coupe du Monde de la FIFA 2026 à 48 équipes. Prédisez les scores des matches de poule, classez les meilleurs troisièmes et pronostiquez toute la phase finale."
+    },
+    "ai-token-calculator": {
+      "name": "Calculateur de cout de tokens IA",
+      "description": "Estimez le cout des tokens d'entree et de sortie pour les modeles IA courants.",
+      "seo_title": "Calculateur de cout de tokens IA gratuit",
+      "seo_description": "Estimez le cout des tokens d'entree et de sortie pour les modeles IA courants. Utilisez cet outil en ligne gratuit dans le navigateur, sans inscription."
+    },
+    "llms-txt-validator": {
+      "name": "Validateur LLMs.txt",
+      "description": "Verifiez un fichier llms.txt et reperez les problemes de titre, resume et liens Markdown.",
+      "seo_title": "Validateur LLMs.txt gratuit",
+      "seo_description": "Verifiez un fichier llms.txt et reperez les problemes de titre, resume et liens Markdown. Utilisez cet outil en ligne gratuit dans le navigateur, sans inscription."
+    },
+    "ai-robots-txt-generator": {
+      "name": "Generateur Robots.txt pour IA",
+      "description": "Generez des regles robots.txt pour les robots IA et les bots de decouverte courants.",
+      "seo_title": "Generateur Robots.txt pour IA gratuit",
+      "seo_description": "Generez des regles robots.txt pour les robots IA et les bots de decouverte courants. Utilisez cet outil en ligne gratuit dans le navigateur, sans inscription."
+    },
+    "mcp-json-validator": {
+      "name": "Validateur MCP JSON",
+      "description": "Validez les configs JSON de serveurs MCP et reperez commandes, arguments ou env mal formes.",
+      "seo_title": "Validateur MCP JSON gratuit",
+      "seo_description": "Validez les configs JSON de serveurs MCP et reperez commandes, arguments ou env mal formes. Utilisez cet outil en ligne gratuit dans le navigateur, sans inscription."
+    },
+    "mcp-server-config-generator": {
+      "name": "Generateur de configuration MCP",
+      "description": "Creez des extraits JSON prets a copier pour serveurs MCP dans les clients courants.",
+      "seo_title": "Generateur de configuration MCP gratuit",
+      "seo_description": "Creez des extraits JSON prets a copier pour serveurs MCP dans les clients courants. Utilisez cet outil en ligne gratuit dans le navigateur, sans inscription."
+    },
+    "json-repair": {
+      "name": "Reparateur JSON",
+      "description": "Corrigez les problemes JSON courants comme commentaires, apostrophes et virgules finales.",
+      "seo_title": "Reparateur JSON gratuit",
+      "seo_description": "Corrigez les problemes JSON courants comme commentaires, apostrophes et virgules finales. Utilisez cet outil en ligne gratuit dans le navigateur, sans inscription."
+    },
+    "jsonl-validator": {
+      "name": "Validateur JSONL",
+      "description": "Validez des entrees JSON Lines et trouvez la ligne exacte avec un JSON invalide.",
+      "seo_title": "Validateur JSONL gratuit",
+      "seo_description": "Validez des entrees JSON Lines et trouvez la ligne exacte avec un JSON invalide. Utilisez cet outil en ligne gratuit dans le navigateur, sans inscription."
+    },
+    "har-file-viewer": {
+      "name": "Visionneuse de fichiers HAR",
+      "description": "Inspectez les fichiers HAR et resumez requetes, domaines, temps et problemes HTTP.",
+      "seo_title": "Visionneuse de fichiers HAR gratuit",
+      "seo_description": "Inspectez les fichiers HAR et resumez requetes, domaines, temps et problemes HTTP. Utilisez cet outil en ligne gratuit dans le navigateur, sans inscription."
+    },
+    "world-cup-2026-bracket-predictor": {
+      "name": "Predicteur de tableau Coupe du monde 2026",
+      "description": "Creez un tableau a elimination directe 2026 et predisez chaque tour jusqu'a la finale.",
+      "seo_title": "Predicteur de tableau Coupe du monde 2026 gratuit",
+      "seo_description": "Creez un tableau a elimination directe 2026 et predisez chaque tour jusqu'a la finale. Utilisez cet outil en ligne gratuit dans le navigateur, sans inscription."
     }
   }
 }

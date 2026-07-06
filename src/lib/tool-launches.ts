@@ -2,6 +2,16 @@ import { tools } from '@/config/tools';
 import { getLocalizedPath, type Locale } from './i18n';
 
 export const recentLongTailToolSlugs = [
+  'ai-token-calculator',
+  'llms-txt-validator',
+  'ai-robots-txt-generator',
+  'mcp-json-validator',
+  'mcp-server-config-generator',
+  'json-repair',
+  'jsonl-validator',
+  'har-file-viewer',
+  'world-cup-2026-bracket-predictor',
+  'llms-txt-generator',
   'instagram-bio-generator',
   'youtube-description-generator',
   'linkedin-headline-generator',
@@ -11,7 +21,6 @@ export const recentLongTailToolSlugs = [
   'freelance-rate-calculator',
   'vcard-to-csv-converter',
   'docker-run-to-docker-compose-converter',
-  'llms-txt-generator',
 ] as const;
 
 export interface ToolLaunchItem {

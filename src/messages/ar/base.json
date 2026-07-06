@@ -9580,7 +9580,6 @@
       "description": "اكتب وعاين Markdown مع العرض المباشر. تصدير كـ MD أو HTML.",
       "seo_title": "محرر Markdown مجاني عبر الإنترنت مع معاينة مباشرة",
       "seo_description": "أداة مجانية عبر الإنترنت محرر Markdown لمساعدتك على اكتب وعاين Markdown عبر الإنترنت مجانًا. عرض مباشر، تمييز بناء الجملة وتصدير كـ MD أو HTML. مثالي للتوثيق والملاحظات بسرعة وأمان في متصفحك. مجانية تمامًا، بدون تحميل أو تسجيل، وتعمل محليًا بنسبة 100% لضمان الخصوصية التامة وتحسين الكفاءة والإنتاجية اليومية.",
-
       "errorParsingMarkdown": "خطأ في تحليل markdown",
       "list": "قائمة",
       "code": "كود",
@@ -15832,7 +15831,19 @@
         "composition": "التكوين",
         "aspectRatio": "نسبة العرض",
         "negativePrompt": "المطالبة السلبية",
-        "details": "التفاصيل"
+        "details": "التفاصيل",
+        "llmsTxt": "محتوى llms.txt",
+        "robotsPolicy": "السياسة",
+        "sitemapUrl": "رابط خريطة الموقع",
+        "customAgents": "زواحف ذكاء اصطناعي إضافية",
+        "mcpConfig": "إعداد MCP JSON",
+        "mcpClient": "العميل",
+        "serverName": "اسم الخادم",
+        "command": "الأمر",
+        "argsText": "المعاملات",
+        "envText": "متغيرات البيئة",
+        "jsonInput": "إدخال JSON",
+        "jsonlInput": "إدخال JSONL"
       },
       "options": {
         "writing": "كتابة",
@@ -15878,7 +15889,13 @@
         "vcard3": "vCard 3.0",
         "vcard4": "vCard 4.0",
         "playful": "مرح",
-        "bold": "جريء"
+        "bold": "جريء",
+        "blockTraining": "حظر زواحف التدريب",
+        "allowDiscovery": "السماح بزواحف الاكتشاف",
+        "claude": "Claude Desktop",
+        "codex": "Codex",
+        "cursor": "Cursor",
+        "vscode": "VS Code"
       },
       "results": {
         "totalCost": "التكلفة الإجمالية",
@@ -15962,7 +15979,21 @@
         "duration": "المدة",
         "promptVariants": "صيغ المطالبة",
         "positivePrompt": "المطالبة الإيجابية",
-        "settingNotes": "ملاحظات الإعداد"
+        "settingNotes": "ملاحظات الإعداد",
+        "status": "الحالة",
+        "valid": "صالح",
+        "invalid": "غير صالح",
+        "validLines": "أسطر صالحة",
+        "invalidLines": "أسطر غير صالحة",
+        "issues": "مشكلات",
+        "warnings": "تحذيرات",
+        "links": "روابط",
+        "servers": "خوادم",
+        "fixes": "إصلاحات",
+        "normalized": "منسق",
+        "crawlers": "زواحف",
+        "policy": "السياسة",
+        "client": "العميل"
       },
       "placeholders": {
         "aiTopic": "نص إطلاق لموقع أدوات عبر الإنترنت",
@@ -16016,7 +16047,15 @@
         "promptLighting": "ضوء صباحي ناعم",
         "promptComposition": "زاوية واسعة، موضوع في الوسط",
         "negativePrompt": "ضبابي، جودة منخفضة، أيد مشوهة، أصابع إضافية",
-        "promptDetails": "تفاصيل عالية، خامات واقعية، تباين لوني لطيف"
+        "promptDetails": "تفاصيل عالية، خامات واقعية، تباين لوني لطيف",
+        "llmsTxtContent": "# U2Tool\n\n> Free browser-based tools for developers, marketers, and operators.\n\n- [Home](https://www.u2tool.com)\n- [Docs](https://www.u2tool.com/docs)",
+        "customAgents": "ChatGPT-User\nExampleBot",
+        "mcpConfig": "{\n  \"mcpServers\": {\n    \"filesystem\": {\n      \"command\": \"npx\",\n      \"args\": [\"@modelcontextprotocol/server-filesystem\", \"/tmp\"]\n    }\n  }\n}",
+        "mcpArgs": "@modelcontextprotocol/server-filesystem /tmp",
+        "mcpEnv": "API_KEY=${API_KEY}",
+        "jsonRepairInput": "{ foo: 'bar', trailing: true, }",
+        "jsonlInput": "{\"event\":\"signup\",\"userId\":123}\n{\"event\":\"purchase\",\"amount\":49}",
+        "sitemapUrl": "https://www.u2tool.com/sitemap.xml"
       }
     },
     "calorie-deficit-calculator": {
@@ -16282,6 +16321,60 @@
       "description": "قم بمحاكاة بطولة كأس العالم لكرة القدم 2026 بمشاركة 48 فريقًا. توقع نتائج مباريات المجموعات، واحسب ترتيب أفضل المنتخبات الحاصلة على المركز الثالث، وتوقع مسار مرحلة خروج المغلوب بأكمله.",
       "seo_title": "حاسبة كأس العالم 2026",
       "seo_description": "قم بمحاكاة بطولة كأس العالم لكرة القدم 2026 بمشاركة 48 فريقًا. توقع نتائج مباريات المجموعات، واحسب ترتيب أفضل المنتخبات الحاصلة على المركز الثالث، وتوقع مسار مرحلة خروج المغلوب بأكمله."
+    },
+    "ai-token-calculator": {
+      "name": "حاسبة تكلفة رموز الذكاء الاصطناعي",
+      "description": "قدّر تكلفة رموز الإدخال والإخراج في نماذج الذكاء الاصطناعي الشائعة.",
+      "seo_title": "حاسبة تكلفة رموز الذكاء الاصطناعي مجانًا",
+      "seo_description": "قدّر تكلفة رموز الإدخال والإخراج في نماذج الذكاء الاصطناعي الشائعة. استخدم هذه الأداة المجانية عبر الإنترنت في المتصفح بدون تسجيل."
+    },
+    "llms-txt-validator": {
+      "name": "مدقق LLMs.txt",
+      "description": "افحص ملف llms.txt لاكتشاف مشكلات العنوان والملخص وروابط Markdown.",
+      "seo_title": "مدقق LLMs.txt مجانًا",
+      "seo_description": "افحص ملف llms.txt لاكتشاف مشكلات العنوان والملخص وروابط Markdown. استخدم هذه الأداة المجانية عبر الإنترنت في المتصفح بدون تسجيل."
+    },
+    "ai-robots-txt-generator": {
+      "name": "مولد Robots.txt للذكاء الاصطناعي",
+      "description": "أنشئ قواعد robots.txt لزواحف الذكاء الاصطناعي وروبوتات الاكتشاف الشائعة.",
+      "seo_title": "مولد Robots.txt للذكاء الاصطناعي مجانًا",
+      "seo_description": "أنشئ قواعد robots.txt لزواحف الذكاء الاصطناعي وروبوتات الاكتشاف الشائعة. استخدم هذه الأداة المجانية عبر الإنترنت في المتصفح بدون تسجيل."
+    },
+    "mcp-json-validator": {
+      "name": "مدقق MCP JSON",
+      "description": "تحقق من إعدادات JSON لخوادم MCP واكتشف مشكلات الأوامر والمعاملات و env.",
+      "seo_title": "مدقق MCP JSON مجانًا",
+      "seo_description": "تحقق من إعدادات JSON لخوادم MCP واكتشف مشكلات الأوامر والمعاملات و env. استخدم هذه الأداة المجانية عبر الإنترنت في المتصفح بدون تسجيل."
+    },
+    "mcp-server-config-generator": {
+      "name": "مولد إعدادات خادم MCP",
+      "description": "أنشئ مقتطفات JSON جاهزة للنسخ لإعداد خوادم MCP في العملاء الشائعين.",
+      "seo_title": "مولد إعدادات خادم MCP مجانًا",
+      "seo_description": "أنشئ مقتطفات JSON جاهزة للنسخ لإعداد خوادم MCP في العملاء الشائعين. استخدم هذه الأداة المجانية عبر الإنترنت في المتصفح بدون تسجيل."
+    },
+    "json-repair": {
+      "name": "إصلاح JSON",
+      "description": "أصلح مشكلات JSON الشائعة مثل التعليقات وعلامات الاقتباس المفردة والفواصل الزائدة.",
+      "seo_title": "إصلاح JSON مجانًا",
+      "seo_description": "أصلح مشكلات JSON الشائعة مثل التعليقات وعلامات الاقتباس المفردة والفواصل الزائدة. استخدم هذه الأداة المجانية عبر الإنترنت في المتصفح بدون تسجيل."
+    },
+    "jsonl-validator": {
+      "name": "مدقق JSONL",
+      "description": "تحقق من إدخال JSON Lines وحدد السطر الدقيق الذي يحتوي على JSON غير صالح.",
+      "seo_title": "مدقق JSONL مجانًا",
+      "seo_description": "تحقق من إدخال JSON Lines وحدد السطر الدقيق الذي يحتوي على JSON غير صالح. استخدم هذه الأداة المجانية عبر الإنترنت في المتصفح بدون تسجيل."
+    },
+    "har-file-viewer": {
+      "name": "عارض ملفات HAR",
+      "description": "افحص ملفات HAR ولخّص الطلبات والنطاقات والتوقيت ومشكلات حالة HTTP.",
+      "seo_title": "عارض ملفات HAR مجانًا",
+      "seo_description": "افحص ملفات HAR ولخّص الطلبات والنطاقات والتوقيت ومشكلات حالة HTTP. استخدم هذه الأداة المجانية عبر الإنترنت في المتصفح بدون تسجيل."
+    },
+    "world-cup-2026-bracket-predictor": {
+      "name": "متوقع جدول كأس العالم 2026",
+      "description": "أنشئ جدول خروج المغلوب لكأس العالم 2026 وتوقع كل جولة حتى النهائي.",
+      "seo_title": "متوقع جدول كأس العالم 2026 مجانًا",
+      "seo_description": "أنشئ جدول خروج المغلوب لكأس العالم 2026 وتوقع كل جولة حتى النهائي. استخدم هذه الأداة المجانية عبر الإنترنت في المتصفح بدون تسجيل."
     }
   }
 }

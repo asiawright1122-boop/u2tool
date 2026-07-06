@@ -24,13 +24,13 @@
     note: 'Simplified predictor. It does not fetch live FIFA results.',
   };
 
-  const state = buildDefaultBracket();
+  const bracketSeed = buildDefaultBracket();
 
   let picks = $state<Record<string, string>>({});
   let copied = $state(false);
   let copyTimer: ReturnType<typeof setTimeout> | null = null;
 
-  const result = $derived(advanceBracket(state, picks));
+  const result = $derived(advanceBracket(bracketSeed, picks));
 
   function toolMessage(key: string, fallback: string) {
     const toolsScope = translations.tools as Record<string, unknown> | undefined;

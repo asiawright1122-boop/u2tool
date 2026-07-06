@@ -216,6 +216,32 @@ const POPULAR_UTILITY_PROBES: Record<string, ToolProbe> = {
     fields: ['siteName', 'priorityPages'],
     results: ['pages'],
   },
+  'llms-txt-validator': {
+    fields: ['llmsTxt'],
+    results: ['status', 'issues', 'warnings', 'links'],
+  },
+  'ai-robots-txt-generator': {
+    fields: ['robotsPolicy', 'sitemapUrl'],
+    options: ['blockTraining', 'allowDiscovery'],
+    results: ['crawlers', 'policy'],
+  },
+  'mcp-json-validator': {
+    fields: ['mcpConfig'],
+    results: ['servers', 'issues', 'warnings'],
+  },
+  'mcp-server-config-generator': {
+    fields: ['mcpClient', 'serverName'],
+    options: ['claude', 'codex'],
+    results: ['client'],
+  },
+  'json-repair': {
+    fields: ['jsonInput'],
+    results: ['status', 'fixes'],
+  },
+  'jsonl-validator': {
+    fields: ['jsonlInput'],
+    results: ['validLines', 'invalidLines'],
+  },
   'wifi-qr-code-generator': {
     fields: ['ssid', 'encryption'],
     results: ['encryption', 'hidden'],

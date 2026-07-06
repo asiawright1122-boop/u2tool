@@ -9585,7 +9585,6 @@
       "description": "Escreva e visualize Markdown com renderização ao vivo. Exporte para MD ou HTML.",
       "seo_title": "Editor Markdown Gratuito Online com Visualização ao Vivo",
       "seo_description": "Escreva e visualize Markdown online de graça. Renderização em tempo real, destaque sintático e exportação para MD ou HTML. Perfeito para documentação e anotações.",
-
       "errorParsingMarkdown": "Erro ao analisar markdown",
       "list": "Lista",
       "code": "Código",
@@ -15842,7 +15841,19 @@
         "composition": "Composição",
         "aspectRatio": "Proporção",
         "negativePrompt": "Prompt negativo",
-        "details": "Detalhes"
+        "details": "Detalhes",
+        "llmsTxt": "Conteudo llms.txt",
+        "robotsPolicy": "Politica",
+        "sitemapUrl": "URL do sitemap",
+        "customAgents": "Rastreadores de IA extras",
+        "mcpConfig": "Config MCP JSON",
+        "mcpClient": "Cliente",
+        "serverName": "Nome do servidor",
+        "command": "Comando",
+        "argsText": "Argumentos",
+        "envText": "Variaveis de ambiente",
+        "jsonInput": "Entrada JSON",
+        "jsonlInput": "Entrada JSONL"
       },
       "options": {
         "writing": "Escrita",
@@ -15888,7 +15899,13 @@
         "vcard3": "vCard 3.0",
         "vcard4": "vCard 4.0",
         "playful": "Descontraído",
-        "bold": "Marcante"
+        "bold": "Marcante",
+        "blockTraining": "Bloquear rastreadores de treino",
+        "allowDiscovery": "Permitir rastreadores de descoberta",
+        "claude": "Claude Desktop",
+        "codex": "Codex",
+        "cursor": "Cursor",
+        "vscode": "VS Code"
       },
       "results": {
         "totalCost": "Custo total",
@@ -15972,7 +15989,21 @@
         "duration": "Duração",
         "promptVariants": "Variações de prompt",
         "positivePrompt": "Prompt positivo",
-        "settingNotes": "Notas de configuração"
+        "settingNotes": "Notas de configuração",
+        "status": "Status",
+        "valid": "Valido",
+        "invalid": "Invalido",
+        "validLines": "Linhas validas",
+        "invalidLines": "Linhas invalidas",
+        "issues": "Problemas",
+        "warnings": "Avisos",
+        "links": "Links",
+        "servers": "Servidores",
+        "fixes": "Correcoes",
+        "normalized": "Normalizado",
+        "crawlers": "Rastreadores",
+        "policy": "Politica",
+        "client": "Cliente"
       },
       "placeholders": {
         "aiTopic": "texto de lançamento para um site de ferramentas online",
@@ -16026,7 +16057,15 @@
         "promptLighting": "luz suave da manhã",
         "promptComposition": "grande angular, assunto centralizado",
         "negativePrompt": "borrado, baixa qualidade, mãos distorcidas, dedos extras",
-        "promptDetails": "alto detalhe, materiais realistas, contraste sutil de cores"
+        "promptDetails": "alto detalhe, materiais realistas, contraste sutil de cores",
+        "llmsTxtContent": "# U2Tool\n\n> Free browser-based tools for developers, marketers, and operators.\n\n- [Home](https://www.u2tool.com)\n- [Docs](https://www.u2tool.com/docs)",
+        "customAgents": "ChatGPT-User\nExampleBot",
+        "mcpConfig": "{\n  \"mcpServers\": {\n    \"filesystem\": {\n      \"command\": \"npx\",\n      \"args\": [\"@modelcontextprotocol/server-filesystem\", \"/tmp\"]\n    }\n  }\n}",
+        "mcpArgs": "@modelcontextprotocol/server-filesystem /tmp",
+        "mcpEnv": "API_KEY=${API_KEY}",
+        "jsonRepairInput": "{ foo: 'bar', trailing: true, }",
+        "jsonlInput": "{\"event\":\"signup\",\"userId\":123}\n{\"event\":\"purchase\",\"amount\":49}",
+        "sitemapUrl": "https://www.u2tool.com/sitemap.xml"
       }
     },
     "calorie-deficit-calculator": {
@@ -16292,6 +16331,60 @@
       "description": "Simule a Copa do Mundo FIFA 2026 de 48 equipes. Preveja os placares dos jogos de grupo, classifique os melhores terceiros colocados e prognostique toda a fase de mata-mata.",
       "seo_title": "Calculadora Copa do Mundo 2026",
       "seo_description": "Simule a Copa do Mundo FIFA 2026 de 48 equipes. Preveja os placares dos jogos de grupo, classifique os melhores terceiros colocados e prognostique toda a fase de mata-mata."
+    },
+    "ai-token-calculator": {
+      "name": "Calculadora de custo de tokens de IA",
+      "description": "Estime custos de tokens de entrada e saída em modelos de IA populares.",
+      "seo_title": "Calculadora de custo de tokens de IA grátis",
+      "seo_description": "Estime custos de tokens de entrada e saída em modelos de IA populares. Use esta ferramenta online gratuita no navegador, sem cadastro."
+    },
+    "llms-txt-validator": {
+      "name": "Validador de LLMs.txt",
+      "description": "Verifique um arquivo llms.txt e encontre problemas de titulo, resumo e links Markdown.",
+      "seo_title": "Validador de LLMs.txt grátis",
+      "seo_description": "Verifique um arquivo llms.txt e encontre problemas de titulo, resumo e links Markdown. Use esta ferramenta online gratuita no navegador, sem cadastro."
+    },
+    "ai-robots-txt-generator": {
+      "name": "Gerador de Robots.txt para IA",
+      "description": "Gere regras robots.txt para rastreadores de IA e bots de descoberta comuns.",
+      "seo_title": "Gerador de Robots.txt para IA grátis",
+      "seo_description": "Gere regras robots.txt para rastreadores de IA e bots de descoberta comuns. Use esta ferramenta online gratuita no navegador, sem cadastro."
+    },
+    "mcp-json-validator": {
+      "name": "Validador MCP JSON",
+      "description": "Valide configs JSON de servidores MCP e encontre comandos, argumentos ou env com formato incorreto.",
+      "seo_title": "Validador MCP JSON grátis",
+      "seo_description": "Valide configs JSON de servidores MCP e encontre comandos, argumentos ou env com formato incorreto. Use esta ferramenta online gratuita no navegador, sem cadastro."
+    },
+    "mcp-server-config-generator": {
+      "name": "Gerador de configuracao MCP",
+      "description": "Crie trechos JSON prontos para copiar para servidores MCP em clientes populares.",
+      "seo_title": "Gerador de configuracao MCP grátis",
+      "seo_description": "Crie trechos JSON prontos para copiar para servidores MCP em clientes populares. Use esta ferramenta online gratuita no navegador, sem cadastro."
+    },
+    "json-repair": {
+      "name": "Reparador de JSON",
+      "description": "Corrija problemas comuns de JSON malformado, como comentarios, aspas simples e virgulas finais.",
+      "seo_title": "Reparador de JSON grátis",
+      "seo_description": "Corrija problemas comuns de JSON malformado, como comentarios, aspas simples e virgulas finais. Use esta ferramenta online gratuita no navegador, sem cadastro."
+    },
+    "jsonl-validator": {
+      "name": "Validador JSONL",
+      "description": "Valide entradas JSON Lines e identifique a linha exata com JSON invalido.",
+      "seo_title": "Validador JSONL grátis",
+      "seo_description": "Valide entradas JSON Lines e identifique a linha exata com JSON invalido. Use esta ferramenta online gratuita no navegador, sem cadastro."
+    },
+    "har-file-viewer": {
+      "name": "Visualizador de arquivos HAR",
+      "description": "Inspecione arquivos HAR e resuma requisicoes, dominios, tempos e problemas de status HTTP.",
+      "seo_title": "Visualizador de arquivos HAR grátis",
+      "seo_description": "Inspecione arquivos HAR e resuma requisicoes, dominios, tempos e problemas de status HTTP. Use esta ferramenta online gratuita no navegador, sem cadastro."
+    },
+    "world-cup-2026-bracket-predictor": {
+      "name": "Previsor de chave da Copa 2026",
+      "description": "Monte uma chave eliminatoria da Copa 2026 e preveja cada fase ate a final.",
+      "seo_title": "Previsor de chave da Copa 2026 grátis",
+      "seo_description": "Monte uma chave eliminatoria da Copa 2026 e preveja cada fase ate a final. Use esta ferramenta online gratuita no navegador, sem cadastro."
     }
   }
 }
