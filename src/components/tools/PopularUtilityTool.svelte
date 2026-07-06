@@ -1,6 +1,15 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
   import QRCode from 'qrcode';
+  import {
+    generateAiRobotsTxt,
+    generateMcpServerConfig,
+    repairJson,
+    validateJsonLines,
+    validateLlmsTxt,
+    validateMcpJsonConfig,
+    type AiRobotsPolicy,
+  } from '../../lib/high-opportunity-tool-helpers';
 
   interface Props {
     slug?: string;
@@ -134,6 +143,18 @@
         csv: 'CSV Contacts',
         vcard: 'vCard Contacts',
         dockerRun: 'docker run Command',
+        llmsTxt: 'llms.txt Content',
+        robotsPolicy: 'Policy',
+        sitemapUrl: 'Sitemap URL',
+        customAgents: 'Extra AI Crawlers',
+        mcpConfig: 'MCP JSON Config',
+        mcpClient: 'Client',
+        serverName: 'Server Name',
+        command: 'Command',
+        argsText: 'Arguments',
+        envText: 'Environment Variables',
+        jsonInput: 'JSON Input',
+        jsonlInput: 'JSONL Input',
         siteName: 'Site Name',
         siteUrl: 'Site URL',
         summary: 'Summary',
@@ -212,6 +233,12 @@
         tab: 'Tab',
         vcard3: 'vCard 3.0',
         vcard4: 'vCard 4.0',
+        blockTraining: 'Block training crawlers',
+        allowDiscovery: 'Allow discovery crawlers',
+        claude: 'Claude Desktop',
+        codex: 'Codex',
+        cursor: 'Cursor',
+        vscode: 'VS Code',
       },
       results: {
         totalCost: 'Total Cost',
@@ -296,6 +323,20 @@
         promptVariants: 'Prompt Variants',
         positivePrompt: 'Positive Prompt',
         settingNotes: 'Setting Notes',
+        status: 'Status',
+        valid: 'Valid',
+        invalid: 'Invalid',
+        validLines: 'Valid Lines',
+        invalidLines: 'Invalid Lines',
+        issues: 'Issues',
+        warnings: 'Warnings',
+        links: 'Links',
+        servers: 'Servers',
+        fixes: 'Fixes',
+        normalized: 'Normalized',
+        crawlers: 'Crawlers',
+        policy: 'Policy',
+        client: 'Client',
       },
       placeholders: {
         aiTopic: 'launch copy for an online tools site',
@@ -330,6 +371,14 @@
         siteUrl: 'https://www.u2tool.com',
         siteSummary: 'A free collection of browser-based tools for developers, marketers, and operators.',
         dockerRun: 'docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest',
+        llmsTxtContent: '# U2Tool\n\n> Free browser-based tools for developers, marketers, and operators.\n\n- [Home](https://www.u2tool.com)\n- [Docs](https://www.u2tool.com/docs)',
+        customAgents: 'ChatGPT-User\nExampleBot',
+        mcpConfig: '{\n  "mcpServers": {\n    "filesystem": {\n      "command": "npx",\n      "args": ["@modelcontextprotocol/server-filesystem", "/tmp"]\n    }\n  }\n}',
+        mcpArgs: '@modelcontextprotocol/server-filesystem /tmp',
+        mcpEnv: 'API_KEY=${API_KEY}',
+        jsonRepairInput: "{ foo: 'bar', trailing: true, }",
+        jsonlInput: '{"event":"signup","userId":123}\n{"event":"purchase","amount":49}',
+        sitemapUrl: 'https://www.u2tool.com/sitemap.xml',
         vcardContacts: 'BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD',
         headers: 'strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff',
         csvContacts: 'first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder',
@@ -451,6 +500,18 @@
         csv: 'CSV 联系人',
         vcard: 'vCard 联系人',
         dockerRun: 'docker run 命令',
+        llmsTxt: 'llms.txt 内容',
+        robotsPolicy: '策略',
+        sitemapUrl: 'Sitemap URL',
+        customAgents: '额外 AI 爬虫',
+        mcpConfig: 'MCP JSON 配置',
+        mcpClient: '客户端',
+        serverName: '服务名称',
+        command: '命令',
+        argsText: '参数',
+        envText: '环境变量',
+        jsonInput: 'JSON 输入',
+        jsonlInput: 'JSONL 输入',
         siteName: '网站名称',
         siteUrl: '网站 URL',
         summary: '摘要',
@@ -529,6 +590,12 @@
         tab: '制表符',
         vcard3: 'vCard 3.0',
         vcard4: 'vCard 4.0',
+        blockTraining: '阻止训练爬虫',
+        allowDiscovery: '允许发现类爬虫',
+        claude: 'Claude Desktop',
+        codex: 'Codex',
+        cursor: 'Cursor',
+        vscode: 'VS Code',
       },
       results: {
         totalCost: '总成本',
@@ -613,6 +680,20 @@
         promptVariants: '提示词版本',
         positivePrompt: '正向提示词',
         settingNotes: '设置备注',
+        status: '状态',
+        valid: '有效',
+        invalid: '无效',
+        validLines: '有效行',
+        invalidLines: '无效行',
+        issues: '问题',
+        warnings: '提醒',
+        links: '链接',
+        servers: '服务数',
+        fixes: '修复项',
+        normalized: '格式化结果',
+        crawlers: '爬虫数',
+        policy: '策略',
+        client: '客户端',
       },
       placeholders: {
         aiTopic: '一个在线工具网站的发布文案',
@@ -647,6 +728,14 @@
         siteUrl: 'https://www.u2tool.com',
         siteSummary: '一个面向开发者、营销人员和运营人员的免费浏览器工具集合。',
         dockerRun: 'docker run -d --name web -p 8080:80 -e NODE_ENV=production -v app-data:/data nginx:latest',
+        llmsTxtContent: '# U2Tool\n\n> 面向开发者、营销人员和运营人员的免费浏览器工具集合。\n\n- [首页](https://www.u2tool.com)\n- [文档](https://www.u2tool.com/docs)',
+        customAgents: 'ChatGPT-User\nExampleBot',
+        mcpConfig: '{\n  "mcpServers": {\n    "filesystem": {\n      "command": "npx",\n      "args": ["@modelcontextprotocol/server-filesystem", "/tmp"]\n    }\n  }\n}',
+        mcpArgs: '@modelcontextprotocol/server-filesystem /tmp',
+        mcpEnv: 'API_KEY=${API_KEY}',
+        jsonRepairInput: "{ foo: 'bar', trailing: true, }",
+        jsonlInput: '{"event":"signup","userId":123}\n{"event":"purchase","amount":49}',
+        sitemapUrl: 'https://www.u2tool.com/sitemap.xml',
         vcardContacts: 'BEGIN:VCARD\nVERSION:3.0\nFN:Ada Lovelace\nN:Lovelace;Ada;;;\nEMAIL:ada@example.com\nTEL:+15551234567\nORG:Analytical Engines\nTITLE:Founder\nEND:VCARD',
         headers: 'strict-transport-security: max-age=31536000; includeSubDomains\ncontent-security-policy: default-src self\nx-content-type-options: nosniff',
         csvContacts: 'first_name,last_name,email,phone,company,title\nAda,Lovelace,ada@example.com,+15551234567,Analytical Engines,Founder',
@@ -1219,6 +1308,45 @@
         return [
           { key: 'dockerRun', label: text('fields', 'dockerRun'), type: 'textarea', placeholder: text('placeholders', 'dockerRun') },
         ];
+      case 'llms-txt-validator':
+        return [
+          { key: 'llmsTxt', label: text('fields', 'llmsTxt'), type: 'textarea', placeholder: text('placeholders', 'llmsTxtContent') },
+        ];
+      case 'ai-robots-txt-generator':
+        return [
+          { key: 'robotsPolicy', label: text('fields', 'robotsPolicy'), type: 'select', options: [
+            { label: text('options', 'blockTraining'), value: 'block-training' },
+            { label: text('options', 'allowDiscovery'), value: 'allow-discovery' },
+            { label: text('options', 'custom'), value: 'custom' },
+          ] },
+          { key: 'sitemapUrl', label: text('fields', 'sitemapUrl'), type: 'text', placeholder: text('placeholders', 'sitemapUrl') },
+          { key: 'customAgents', label: text('fields', 'customAgents'), type: 'textarea', placeholder: text('placeholders', 'customAgents') },
+        ];
+      case 'mcp-json-validator':
+        return [
+          { key: 'mcpConfig', label: text('fields', 'mcpConfig'), type: 'textarea', placeholder: text('placeholders', 'mcpConfig') },
+        ];
+      case 'mcp-server-config-generator':
+        return [
+          { key: 'mcpClient', label: text('fields', 'mcpClient'), type: 'select', options: [
+            { label: text('options', 'claude'), value: 'claude' },
+            { label: text('options', 'codex'), value: 'codex' },
+            { label: text('options', 'cursor'), value: 'cursor' },
+            { label: text('options', 'vscode'), value: 'vscode' },
+          ] },
+          { key: 'serverName', label: text('fields', 'serverName'), type: 'text', placeholder: 'filesystem' },
+          { key: 'command', label: text('fields', 'command'), type: 'text', placeholder: 'npx' },
+          { key: 'argsText', label: text('fields', 'argsText'), type: 'textarea', placeholder: text('placeholders', 'mcpArgs') },
+          { key: 'envText', label: text('fields', 'envText'), type: 'textarea', placeholder: text('placeholders', 'mcpEnv') },
+        ];
+      case 'json-repair':
+        return [
+          { key: 'jsonInput', label: text('fields', 'jsonInput'), type: 'textarea', placeholder: text('placeholders', 'jsonRepairInput') },
+        ];
+      case 'jsonl-validator':
+        return [
+          { key: 'jsonlInput', label: text('fields', 'jsonlInput'), type: 'textarea', placeholder: text('placeholders', 'jsonlInput') },
+        ];
       case 'llms-txt-generator':
         return [
           { key: 'siteName', label: text('fields', 'siteName'), type: 'text', placeholder: text('placeholders', 'siteName') },
@@ -1359,6 +1487,18 @@
         return { vcard: text('placeholders', 'vcardContacts'), delimiter: 'comma' };
       case 'docker-run-to-docker-compose-converter':
         return { dockerRun: text('placeholders', 'dockerRun') };
+      case 'llms-txt-validator':
+        return { llmsTxt: text('placeholders', 'llmsTxtContent') };
+      case 'ai-robots-txt-generator':
+        return { robotsPolicy: 'block-training', sitemapUrl: text('placeholders', 'sitemapUrl'), customAgents: '' };
+      case 'mcp-json-validator':
+        return { mcpConfig: text('placeholders', 'mcpConfig') };
+      case 'mcp-server-config-generator':
+        return { mcpClient: 'claude', serverName: 'filesystem', command: 'npx', argsText: text('placeholders', 'mcpArgs'), envText: '' };
+      case 'json-repair':
+        return { jsonInput: text('placeholders', 'jsonRepairInput') };
+      case 'jsonl-validator':
+        return { jsonlInput: text('placeholders', 'jsonlInput') };
       case 'llms-txt-generator':
         return { siteName: text('placeholders', 'siteName'), siteUrl: text('placeholders', 'siteUrl'), summary: text('placeholders', 'siteSummary'), audience: text('placeholders', 'metaAudience'), priorityPages: text('placeholders', 'priorityPages') };
       case 'wifi-qr-code-generator':
@@ -2592,6 +2732,22 @@
     return `# ${siteName}\n\n> ${summary}\n\nOfficial site: ${siteUrl}\nAudience: ${audience}\n\n## Key Pages\n${pageLines.join('\n')}\n\n## Usage Notes\n- Prefer the canonical URLs above when citing or linking to ${siteName}.\n- Summarize tools by their input, output, and whether they run in the browser.\n- Do not invent pricing, account requirements, or supported formats beyond the linked pages.\n`;
   }
 
+  function statusCard(valid: boolean): ResultCard {
+    return {
+      label: text('results', 'status'),
+      value: valid ? text('results', 'valid') : text('results', 'invalid'),
+      tone: valid ? 'good' : 'bad',
+    };
+  }
+
+  function labeledList(label: string, values: string[], emptyValue = text('results', 'passed')): string {
+    if (!values.length) {
+      return `${label}: ${emptyValue}`;
+    }
+
+    return `${label}:\n${values.map((value) => `- ${value}`).join('\n')}`;
+  }
+
   function cleanDirectiveValue(value: string): string {
     return value
       .split(/[;\r\n]+/)
@@ -3460,6 +3616,128 @@
       }
       case 'docker-run-to-docker-compose-converter':
         return dockerRunToCompose();
+      case 'llms-txt-validator': {
+        const validation = validateLlmsTxt(inputs.llmsTxt || '');
+        const output = [
+          `${text('results', 'status')}: ${validation.valid ? text('results', 'valid') : text('results', 'invalid')}`,
+          `${text('fields', 'title')}: ${validation.title || text('results', 'missing')}`,
+          labeledList(text('results', 'issues'), validation.issues),
+          labeledList(text('results', 'warnings'), validation.warnings, text('results', 'missing')),
+        ].join('\n\n');
+
+        return {
+          cards: [
+            statusCard(validation.valid),
+            { label: text('results', 'links'), value: integer(validation.links), tone: validation.links > 0 ? 'good' : 'neutral' },
+            { label: text('results', 'issues'), value: integer(validation.issues.length), tone: validation.issues.length ? 'bad' : 'good' },
+            { label: text('results', 'warnings'), value: integer(validation.warnings.length), tone: validation.warnings.length ? 'neutral' : 'good' },
+          ],
+          output,
+          copyText: output,
+        };
+      }
+      case 'ai-robots-txt-generator': {
+        const policy = (inputs.robotsPolicy || 'block-training') as AiRobotsPolicy;
+        const customAgents = splitNonEmptyLines(inputs.customAgents || '');
+        const output = generateAiRobotsTxt({
+          policy,
+          sitemapUrl: inputs.sitemapUrl || '',
+          extraAgents: customAgents,
+        });
+        const crawlerCount = (output.match(/^User-agent:/gm) || []).length;
+
+        return {
+          cards: [
+            { label: text('results', 'crawlers'), value: integer(crawlerCount), tone: 'good' },
+            { label: text('results', 'policy'), value: text('options', policy === 'block-training' ? 'blockTraining' : policy === 'allow-discovery' ? 'allowDiscovery' : 'custom') },
+            { label: text('fields', 'sitemapUrl'), value: inputs.sitemapUrl || text('results', 'missing') },
+          ],
+          output,
+          copyText: output,
+        };
+      }
+      case 'mcp-json-validator': {
+        const validation = validateMcpJsonConfig(inputs.mcpConfig || '');
+        const output = [
+          validation.normalized,
+          labeledList(text('results', 'issues'), validation.errors),
+          labeledList(text('results', 'warnings'), validation.warnings, text('results', 'missing')),
+        ].filter(Boolean).join('\n\n');
+
+        return {
+          cards: [
+            statusCard(validation.valid),
+            { label: text('results', 'servers'), value: integer(validation.serverCount), tone: validation.serverCount > 0 ? 'good' : 'neutral' },
+            { label: text('results', 'issues'), value: integer(validation.errors.length), tone: validation.errors.length ? 'bad' : 'good' },
+            { label: text('results', 'warnings'), value: integer(validation.warnings.length), tone: validation.warnings.length ? 'neutral' : 'good' },
+          ],
+          output,
+          copyText: validation.normalized || output,
+        };
+      }
+      case 'mcp-server-config-generator': {
+        const output = generateMcpServerConfig({
+          client: inputs.mcpClient || 'claude',
+          serverName: inputs.serverName || 'filesystem',
+          command: inputs.command || 'npx',
+          argsText: inputs.argsText || '',
+          envText: inputs.envText || '',
+        });
+
+        return {
+          cards: [
+            { label: text('results', 'client'), value: text('options', inputs.mcpClient || 'claude') },
+            { label: text('fields', 'serverName'), value: inputs.serverName || 'filesystem', tone: 'good' },
+          ],
+          output,
+          copyText: output,
+        };
+      }
+      case 'json-repair': {
+        const repaired = repairJson(inputs.jsonInput || '');
+        if (!repaired.valid) {
+          const output = [
+            `${text('results', 'status')}: ${text('results', 'invalid')}`,
+            repaired.error ? `${text('results', 'issues')}:\n- ${repaired.error}` : '',
+            labeledList(text('results', 'fixes'), repaired.fixes, text('results', 'missing')),
+          ].filter(Boolean).join('\n\n');
+
+          return {
+            cards: [
+              statusCard(false),
+              { label: text('results', 'fixes'), value: integer(repaired.fixes.length), tone: repaired.fixes.length ? 'neutral' : 'bad' },
+            ],
+            output,
+          };
+        }
+
+        return {
+          cards: [
+            statusCard(true),
+            { label: text('results', 'fixes'), value: integer(repaired.fixes.length), tone: repaired.fixes.length ? 'good' : 'neutral' },
+          ],
+          output: repaired.output,
+          copyText: repaired.output,
+        };
+      }
+      case 'jsonl-validator': {
+        const validation = validateJsonLines(inputs.jsonlInput || '');
+        const errors = validation.invalidLines.map((line) => `Line ${line.line}: ${line.message}`);
+        const output = [
+          validation.normalized,
+          labeledList(text('results', 'issues'), errors),
+        ].filter(Boolean).join('\n\n');
+
+        return {
+          cards: [
+            statusCard(validation.valid),
+            { label: text('results', 'validLines'), value: integer(validation.validLines), tone: validation.validLines > 0 ? 'good' : 'neutral' },
+            { label: text('results', 'invalidLines'), value: integer(validation.invalidLines.length), tone: validation.invalidLines.length ? 'bad' : 'good' },
+          ],
+          output,
+          copyText: validation.normalized || output,
+        };
+      }
       case 'llms-txt-generator': {
         const output = llmsTxtOutput();
         const pages = splitNonEmptyLines(inputs.priorityPages || text('placeholders', 'priorityPages')).length;
