@@ -1793,6 +1793,37 @@ describe('SEO Governance', () => {
     }
   });
 
+  it('keeps GSC duplicate-canonical non-Latin title repairs out of English source titles', () => {
+    const cases = [
+      {
+        locale: 'ko',
+        slug: 'percentage-stacked-bar-chart-generator',
+        expectedTitle: '무료 온라인 100% 누적 막대 차트 생성기',
+        forbidden: ['Percentage Stacked Bar Chart'],
+      },
+      {
+        locale: 'ja',
+        slug: 'dependency-vulnerability-checker',
+        expectedTitle: '無料オンライン依存関係脆弱性チェッカー',
+        forbidden: ['Dependency Vulnerability Checker'],
+      },
+    ] as const;
+
+    for (const { locale, slug, expectedTitle, forbidden } of cases) {
+      for (const [label, messages] of [
+        ['root', loadRootMessages(locale)],
+        ['base', loadBaseMessages(locale)],
+      ] as const) {
+        const seo = getToolSeo(messages, slug, 'tools');
+
+        expect(seo.title, `${locale} ${label} tools.${slug}.seo_title`).toBe(expectedTitle);
+        for (const phrase of forbidden) {
+          expect(String(seo.title)).not.toContain(phrase);
+        }
+      }
+    }
+  });
+
   it('keeps JWT decoder SEO metadata truthful about signature verification', () => {
     const forbidden = [
       /signature verifier/i,

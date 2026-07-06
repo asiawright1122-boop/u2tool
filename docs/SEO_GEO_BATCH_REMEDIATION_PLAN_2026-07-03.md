@@ -1358,3 +1358,15 @@ These rows have known historic click or impression loss and should stay ahead of
 - Post-deploy production smoke at `2026-07-06 12:02:43 CST` confirmed the same localized URLs return `200`, self-canonical HTML, and the updated localized titles/body copy.
 - Post-deploy `npm run validate:search-engine-compliance` passed against production.
 - No GSC `Validate fix` or `Request indexing` action was submitted for this mixed duplicate-canonical bucket. Re-evaluate after deployment and the next Pages indexing export or URL Inspection recrawl.
+
+## 2026-07-06 GSC Duplicate Canonical Tool-Title Follow-Up
+
+- Continued the same read-only duplicate-canonical drilldown from the in-app GSC page; no GSC validation or request-indexing action was submitted.
+- Confirmed the current report has `295` rows and used the historical export `exports/gsc/coverage-drilldowns/google-selected-canonical.csv` (`268` URL rows) for batch triage.
+- Production live classification of all historical rows found no current route/canonical blocker: `268/268` returned `200`, self-canonical HTML, and non-empty titles.
+- A focused non-Latin title audit found two clear repo-side content residues:
+  - Korean `percentage-stacked-bar-chart-generator` still used the English phrase `Percentage Stacked Bar Chart` in `ko/base.json`.
+  - Japanese `dependency-vulnerability-checker` still used `Dependency Vulnerability Checker` in `ja/base.json` and visible fallback FAQ/support copy.
+- Fixed the Korean and Japanese base TDK/support sources and added a regression in `src/messages/seo-governance.test.ts` so root/base titles cannot drift back to those English source phrases.
+- Verification passed: focused Vitest, support fallback tests, translation corpus, TDK translations, targeted TDK drift, `check`, `validate:gsc-loss-metadata`, `build`, and `validate:rendered-seo`.
+- Local preview confirmed `/ko/tools/percentage-stacked-bar-chart-generator/` and `/ja/tools/dependency-vulnerability-checker/` render localized titles, self-canonicals, and no visible repaired English source-title phrase.

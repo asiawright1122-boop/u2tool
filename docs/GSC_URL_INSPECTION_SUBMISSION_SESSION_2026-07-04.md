@@ -360,3 +360,19 @@ Generated at: 2026-07-04T14:48:58Z
 - Post-deploy production smoke at `2026-07-06 12:02:43 CST` confirmed `200`, self-canonical HTML, and localized titles/body copy for `/zh/privacy/`, `/fr/contact/`, `/ko/privacy/`, and `/pt/compare/meta-tags-vs-open-graph-vs-twitter-cards/`.
 - Post-deploy `npm run validate:search-engine-compliance` passed against production.
 - Next action: wait for a fresh Pages indexing update or URL Inspection recrawl before deciding whether any narrow validation workflow is useful.
+
+## 2026-07-06 Duplicate Canonical Tool-Title Follow-Up
+
+- Continued the duplicate-canonical drilldown read-only; no GSC `Validate fix`, `Request indexing`, export/download, or broad validation action was submitted.
+- Browser pagination showed the current report has `295` rows. The local historical export `exports/gsc/coverage-drilldowns/google-selected-canonical.csv` has `268` URL rows and was used for batch triage.
+- Production live classification of the historical export found `268/268` rows currently return `200`, self-canonical HTML, and non-empty titles.
+- A focused non-Latin title audit identified two clear source-title residues:
+  - `https://www.u2tool.com/ko/tools/percentage-stacked-bar-chart-generator/`
+  - `https://www.u2tool.com/ja/tools/dependency-vulnerability-checker/`
+- Repo fix prepared and verified:
+  - Korean base TDK now uses `무료 온라인 100% 누적 막대 차트 생성기`;
+  - Japanese base TDK now uses `無料オンライン依存関係脆弱性チェッカー`;
+  - Japanese support steps/examples/FAQ no longer fall back to visible English copy;
+  - `src/messages/seo-governance.test.ts` now guards both root/base repaired titles.
+- Validation passed: focused Vitest, support fallback tests, translation corpus, TDK translations, targeted TDK drift, `check`, `validate:gsc-loss-metadata`, `build`, and `validate:rendered-seo`.
+- Local preview smoke confirmed both repaired URLs render `200`, self-canonical HTML, expected localized titles, and no visible occurrence of the repaired English source-title phrase.

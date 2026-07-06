@@ -278,3 +278,28 @@ Checked at: 2026-07-06 11:55:48 CST
 - Deployed by GitHub Actions run `28766765319`; Cloudflare Worker version `10d2e84b-f42c-4b24-8f42-3befcb59be3d`.
 - Post-deploy production smoke at `2026-07-06 12:02:43 CST` confirmed `200`, self-canonical HTML, and localized content on the same four URLs.
 - Post-deploy `npm run validate:search-engine-compliance` passed against `https://www.u2tool.com`.
+
+## 2026-07-06 Duplicate Canonical Tool-Title Follow-Up
+
+Checked at: 2026-07-06 13:35:41 CST
+
+- Continued the same read-only duplicate-canonical drilldown. No GSC `Validate fix` or `Request indexing` action was submitted.
+- Browser pagination confirmed the report has more rows (`295` current GSC rows); local historical export `exports/gsc/coverage-drilldowns/google-selected-canonical.csv` has `268` URL rows and was used for batch triage.
+- Production live classification for all `268` historical export rows returned `200`, self-canonical HTML, and non-empty titles (`0` status failures, `0` canonical mismatches).
+- Non-Latin localized title audit found only two clear English source-title residues in the duplicate-canonical sample:
+  - `https://www.u2tool.com/ko/tools/percentage-stacked-bar-chart-generator/`
+  - `https://www.u2tool.com/ja/tools/dependency-vulnerability-checker/`
+- Repo fix:
+  - synchronized Korean base TDK for `percentage-stacked-bar-chart-generator` to `무료 온라인 100% 누적 막대 차트 생성기`;
+  - synchronized Japanese base TDK for `dependency-vulnerability-checker` to `無料オンライン依存関係脆弱性チェッカー`;
+  - localized Japanese support FAQ/steps so the page no longer falls back to visible English FAQ text.
+- Verification passed:
+  - `npx vitest run src/messages/seo-governance.test.ts src/lib/support-content-fallback.test.ts`
+  - `npm run validate:translation-corpus`
+  - `npm run validate:tdk-translations`
+  - `npm run validate:tdk-drift -- --scope targeted`
+  - `npm run check`
+  - `npm run validate:gsc-loss-metadata`
+  - `npm run build`
+  - `npm run validate:rendered-seo`
+- Local preview smoke confirmed both fixed URLs return `200`, self-canonical HTML, expected localized titles, and no visible occurrence of the repaired English source-title phrase.
