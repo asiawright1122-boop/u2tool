@@ -3977,9 +3977,9 @@
     },
     "markdown-preview": {
       "name": "Markdown 预览",
-      "description": "编写 Markdown 并实时预览。导出为 HTML。",
+      "description": "编写 Markdown 并预览渲染结果，可复制生成的 HTML。",
       "seo_title": "免费在线 Markdown 预览工具",
-      "seo_description": "免费在线 Markdown 预览，助您在浏览器本地极速 工具实时查看渲染效果并导出 HTML，适合文档编写、自述文档检查和博客排版。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
+      "seo_description": "在左右分栏中输入 Markdown，查看渲染效果，复制可导出 HTML，适合自述文档预览和快速清空重写。",
       "inputPlaceholder": "在此处输入文本..."
     },
     "lorem-ipsum": {
@@ -4144,9 +4144,9 @@
     },
     "unit-converter": {
       "name": "单位转换器",
-      "description": "在线转换长度、重量、温度、面积等多种单位。",
+      "description": "转换长度、重量、温度、面积、体积、速度和数据单位。",
       "seo_title": "免费在线单位转换器",
-      "seo_description": "免费在线 单位转换器，支持在浏览器本地极速 完成长度、重量、温度和面积换算，适合学习计算、工程参考和日常换算。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
+      "seo_description": "选择长度、重量、温度等单位类别，设置源单位和目标单位，输入数值后查看并复制换算结果。",
       "enterValue": "输入数值",
       "swapUnits": "切换单位",
       "copied": "已复制！",
@@ -4515,9 +4515,9 @@
     },
     "url-parser": {
       "name": "URL 解析器",
-      "description": "解析和分析 URL 组件，包括协议、主机、路径和查询参数。",
+      "description": "解析 URL 的协议、主机、端口、路径、查询参数和锚点。",
       "seo_title": "免费在线 URL 解析器",
-      "seo_description": "免费在线 URL 解析器，支持在浏览器本地极速 拆解协议、主机、路径和查询参数，适合链接排查、接口调试和参数分析。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
+      "seo_description": "输入 URL，查看协议、主机、端口、路径、查询字符串、锚点、origin 和查询参数，并逐项复制。",
       "urlLabel": "URL",
       "protocol": "协议",
       "hostname": "主机名",
@@ -4988,13 +4988,13 @@
     },
     "sql-to-mongo": {
       "name": "SQL转MongoDB",
-      "description": "将SQL查询转换为MongoDB查询。",
+      "description": "将常见 SQL SELECT、INSERT、UPDATE、DELETE 语句转换为 MongoDB 查询。",
       "sqlQuery": "SQL查询",
       "sqlPlaceholder": "输入SQL查询...",
       "mongoQuery": "MongoDB查询",
       "examples": "示例",
       "seo_title": "免费在线 SQL 转 MongoDB 转换器",
-      "seo_description": "免费在线 SQL转MongoDB，助您在浏览器本地极速 SQL 转 MongoDB 转换器可把常见查询语句转换为 MongoDB 查询写法，适合数据库迁移、语法学习和开发调试。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
+      "seo_description": "粘贴常见 SQL 语句，转换为 MongoDB 查询写法，适合数据库迁移、语法学习和查询写法参考。",
       "exampleSimpleSelect": "简单的SELECT",
       "exampleSelectProjection": "带有投影的SELECT",
       "exampleInsert": "INSERT",
@@ -6112,9 +6112,9 @@
     },
     "octal-converter": {
       "name": "八进制转换器",
-      "description": "在八进制和其他数制之间进行转换。",
+      "description": "在八进制、十进制、二进制和十六进制之间转换整数。",
       "seo_title": "免费在线八进制转换器",
-      "seo_description": "免费在线 八进制转换器，支持在浏览器本地极速 在八进制、十进制、二进制和十六进制之间互转，适合编程计算、权限换算和数制学习。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
+      "seo_description": "选择八进制、十进制、二进制或十六进制转换模式，输入整数，查看结果并复制输出，适合数制学习。",
       "mode": "模式",
       "octToDec": "八进制 → 十进制",
       "decToOct": "十进制 → 八进制",
@@ -9233,9 +9233,9 @@
     },
     "pdf-rotator": {
       "name": "PDF 页面旋转器",
-      "description": "将 PDF 页面旋转 90°、180° 或 270°，支持单页或批量旋转。",
+      "description": "上传 PDF，预览页面缩略图，并按页或批量旋转后保存。",
       "seo_title": "免费在线 PDF 页面旋转器",
-      "seo_description": "免费在线 PDF 页面旋转器，助您在浏览器本地极速 旋转单页或多页 PDF，适合修正扫描方向、横版表格和打印排版。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。"
+      "seo_description": "上传 PDF，预览每页缩略图，单页或全部旋转 90°、180°、270°，然后下载旋转后的文件。"
     },
     "markdown-editor": {
       "name": "Markdown 编辑器",
