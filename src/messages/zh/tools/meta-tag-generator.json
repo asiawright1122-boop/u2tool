@@ -1,38 +1,35 @@
 {
-  "detailed_description": "Meta Tag Generator 通过浏览器表单字段构建简单的 HTML meta 标签代码块。可输入页面标题、描述、关键词、作者、Open Graph 图片 URL、页面 URL、Twitter card 类型、Twitter 站点 handle、robots 选项和 viewport 值，然后复制生成的标记。输出包含 charset、viewport、title、description、keywords、author、robots，基础 Open Graph 标签（`og:type` 固定为 `website`），以及基础 Twitter Card 标签。值在插入属性前会被转义。该工具不进行 W3C 验证、不检查重复标签、不预览社交卡片、不生成 schema.org 标记、不支持动态 Open Graph 类型、不处理已有页面，也不提供 CSV 批量导入/导出。",
+  "detailed_description": "元标签生成器通过页面表单生成一段可复制的 HTML meta 标签代码。你可以填写页面标题、描述、关键词、作者、Open Graph 图片 URL、页面 URL、Twitter Card 类型、Twitter 站点账号、robots 选项和 viewport 值。输出会包含 charset、viewport、title、description、keywords、author、robots、基础 Open Graph 标签和基础 Twitter Card 标签，其中 og:type 固定为 website，字段值会在插入属性前转义。该工具适合起草页面元数据，不覆盖外部检查、分享效果查看、页面分析、文件流程或多页处理场景。",
   "usage_steps": [
-    "输入页面标题、描述以及可选的关键词或作者。",
-    "如需要可添加 Open Graph 图片 URL 和页面 URL。",
-    "选择 Twitter card 类型，并在合适时输入 Twitter 站点 handle。",
-    "选择 robots 选项，并按需编辑 viewport 值。",
-    "从输出面板复制生成的 meta 标签标记。"
+    "填写页面标题、描述、关键词和作者。",
+    "按需要输入 Open Graph 图片 URL 和页面 URL。",
+    "选择 Twitter Card 类型，并填写 Twitter 站点账号。",
+    "选择 robots 选项，并确认 viewport 值。",
+    "在输出区域查看生成的 meta 标签代码。",
+    "点击复制保存生成的代码块。"
   ],
   "usage_examples": [
-    "为一个小型静态页面生成起始的 title 和 description 标签。",
-    "根据一个页面标题和图片 URL 创建基础 Open Graph 和 Twitter Card 标签。",
-    "为原型 HTML 文档复制 viewport 和 robots meta 标签代码块。",
-    "在项目中人工 review 之前，先起草简单的元数据标记。"
+    "为一个静态页面生成 title 和 description 标签。",
+    "根据页面标题、描述和图片 URL 起草 Open Graph 标签。",
+    "为链接分享准备基础 Twitter Card 标签。",
+    "复制 viewport 和 robots 标签到 HTML 草稿中。"
   ],
   "faqs": [
     {
-      "question": "Meta Tag Generator 是免费的吗？",
-      "answer": "是的，Meta Tag Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+      "question": "会验证标签是否正确吗？",
+      "answer": "不会。当前工具只按输入字段生成代码，发布前仍需要人工检查。"
     },
     {
-      "question": "使用 Meta Tag Generator 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+      "question": "支持分享效果查看吗？",
+      "answer": "不支持。页面只显示生成的 HTML 标签文本。"
     },
     {
-      "question": "可以批量生成吗？",
-      "answer": "是的，Meta Tag Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+      "question": "可以一次处理多个页面吗？",
+      "answer": "不可以。当前界面一次生成一组页面标签。"
     },
     {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Meta Tag Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
-    },
-    {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Meta Tag Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+      "question": "会读取现成页面内容吗？",
+      "answer": "不会。你需要手动填写字段并复制生成结果。"
     }
   ]
 }

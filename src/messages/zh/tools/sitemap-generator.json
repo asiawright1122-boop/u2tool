@@ -1,39 +1,35 @@
 {
-  "detailed_description": "Sitemap Generator 是一款专为网站管理员和开发者设计的工具，用于自动生成 XML 站点地图。该工具通过爬取您的网站，收集页面链接并生成符合搜索引擎标准的 XML 文件，帮助搜索引擎更有效地抓取和索引您的网站内容。使用 Sitemap Generator，您可以确保网站上的所有重要页面都能被搜索引擎发现，从而提高网站的可见性和搜索排名。此外，该工具还提供了多种配置选项，允许用户自定义站点地图的生成规则，如设置优先级、更改频率等，以满足不同网站的需求。",
+  "detailed_description": "网站地图生成器用于手动维护 URL 条目并生成 XML sitemap。你可以填写基础 URL，编辑每一行的路径、lastmod 日期、changefreq 和 priority，添加或移除 URL 行，然后点击生成得到 XML。路径会和基础 URL 拼接，已输入完整 http 或 https 地址的条目会直接使用；XML 输出会对特殊字符进行转义。生成后可以复制 XML，或下载为 sitemap.xml。该工具不执行站点发现、外部发布或服务器操作，也不保证搜索表现。",
   "usage_steps": [
-    "Step 1: 访问 Sitemap Generator 工具页面并点击“开始生成”按钮。",
-    "Step 2: 在“网站地址”输入框中输入您要生成站点地图的网站URL。",
-    "Step 3: 选择“生成选项”标签页，可以根据需要调整站点地图的生成规则，例如设置页面的优先级和更新频率。",
-    "Step 4: 点击“开始生成”按钮，工具将自动爬取网站并生成站点地图。",
-    "Step 5: 生成完成后，您可以在“预览”标签页中查看生成的 XML 站点地图。",
-    "Step 6: 点击“下载”按钮，将生成的站点地图下载到本地，或直接复制 XML 代码并粘贴到您的网站服务器。"
+    "填写基础 URL，例如 https://example.com。",
+    "编辑默认 URL 行的路径、日期、更新频率和优先级。",
+    "点击添加 URL 增加更多条目。",
+    "删除不需要的行。",
+    "点击生成 Sitemap 输出 XML。",
+    "复制 XML 或下载 sitemap.xml 文件。"
   ],
   "usage_examples": [
-    "Example 1: 一个新上线的电商网站需要尽快被搜索引擎收录，使用 Sitemap Generator 生成 XML 站点地图并提交给搜索引擎，确保所有商品页面都能被快速抓取。",
-    "Example 2: 一家内容丰富的新闻网站发现部分文章未能被搜索引擎索引，通过使用 Sitemap Generator 生成并更新站点地图，解决了这一问题，提高了文章的可见性。",
-    "Example 3: 一个博客网站的管理员希望优化网站的搜索表现，使用 Sitemap Generator 设置了文章页面的优先级和更新频率，从而提升了博客在搜索结果中的排名。",
-    "Example 4: 一家企业网站在进行改版后，需要重新生成站点地图以反映新的页面结构，通过 Sitemap Generator 快速生成新的 XML 文件，并成功提交给搜索引擎。"
+    "为首页、关于页和联系页生成一个小型 XML 网站地图。",
+    "为某个页面设置 monthly 更新频率和 0.8 优先级。",
+    "输入完整 URL，生成跨路径的 sitemap 条目。",
+    "下载 sitemap.xml 后再放入自己的站点发布流程。"
   ],
   "faqs": [
     {
-      "question": "Sitemap Generator 是免费的吗？",
-      "answer": "是的，Sitemap Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+      "question": "会自动发现站点页面吗？",
+      "answer": "不会。你需要手动添加或编辑 URL 条目。"
     },
     {
-      "question": "使用 Sitemap Generator 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+      "question": "可以下载 XML 文件吗？",
+      "answer": "可以。生成后可下载为 sitemap.xml。"
     },
     {
-      "question": "可以批量生成吗？",
-      "answer": "是的，Sitemap Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+      "question": "会发布到外部平台吗？",
+      "answer": "不会。工具只生成 XML，你需要在自己的流程中处理后续发布。"
     },
     {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Sitemap Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
-    },
-    {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Sitemap Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+      "question": "支持一次添加多条 URL 吗？",
+      "answer": "支持在表格中手动添加多行 URL。"
     }
   ]
 }

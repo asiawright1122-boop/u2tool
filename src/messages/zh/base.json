@@ -306,9 +306,9 @@
     },
     "color-converter": {
       "name": "颜色转换器",
-      "description": "在 HEX、RGB 和 HSL 格式之间转换颜色。",
+      "description": "在 HEX、RGB 和 HSL 之间转换颜色并复制结果。",
       "seo_title": "免费在线颜色转换器",
-      "seo_description": "使用这款免费在线颜色转换器快速完成 HEX、RGB 和 HSL 互转，适合界面设计、前端开发和配色调试。"
+      "seo_description": "颜色转换器支持 HEX、RGB、HSL 互转，使用颜色选择器或数值输入更新颜色并复制结果。"
     },
     "timestamp-converter": {
       "name": "时间戳转换器",
@@ -849,9 +849,9 @@
     },
     "password-strength": {
       "name": "密码强度检查器",
-      "description": "通过检查长度、字符类型和常见模式来分析密码强度。",
+      "description": "根据长度、字符类型和常见模式检查密码强度。",
       "seo_title": "免费在线密码强度检测器",
-      "seo_description": "使用这款免费在线密码强度检测器快速评估密码复杂度、破解风险和常见弱点，适合账号安全检查和密码优化。"
+      "seo_description": "密码强度检测器根据密码复杂度、常见模式和字符组合提示破解风险与密码优化建议。"
     },
     "totp-generator": {
       "name": "TOTP 生成器",
@@ -1074,9 +1074,9 @@
     },
     "meta-tag-generator": {
       "name": "元标签生成器",
-      "description": "为您的网站生成 SEO 元标记、开放图谱和 Twitter 卡标记。",
+      "description": "填写页面标题、描述和分享字段，生成可复制的 meta 标签。",
       "seo_title": "免费在线元标记生成器 - SEO 工具",
-      "seo_description": "免费在线生成 SEO 元标签、Open Graph 和 Twitter Card 标签。预览您的页面在搜索结果和社交媒体分享中的显示方式。"
+      "seo_description": "元标签生成器可填写页面标题、描述和社交分享字段，生成 SEO 与分享标签代码。"
     },
     "robots-txt-generator": {
       "name": "robots.txt 生成器",
@@ -1384,7 +1384,7 @@
     },
     "base85": {
       "name": "Base85 编码器/解码器",
-      "description": "对 Base85 (Ascii85) 数据进行编码和解码。",
+      "description": "输入文本并进行 Base85 编码或解码，复制输出结果。",
       "input": "输入",
       "output": "输出",
       "encode": "编码",
@@ -1394,7 +1394,7 @@
       "inputPlaceholderDecode": "输入Base85进行解码...",
       "outputPlaceholder": "结果将出现在这里...",
       "seo_title": "免费在线 Base85 编码解码器",
-      "seo_description": "使用这款免费在线 Base85 编码解码器快速转换文本和二进制内容，适合文档嵌入、传输压缩和编码调试。"
+      "seo_description": "Base85 编码解码器可在浏览器中转换文本和二进制字符数据，支持编码、解码和复制结果。"
     },
     "html-to-markdown": {
       "name": "HTML to Markdown",
@@ -1528,11 +1528,11 @@
     },
     "sitemap-generator": {
       "name": "站点地图生成器",
-      "description": "为您的网站生成 XML 站点地图。",
+      "description": "手动添加 URL 条目，生成 XML 网站地图并复制或下载。",
       "output": "站点地图输出",
       "copy": "复制",
       "seo_title": "免费在线网站地图生成器 - 快速生成 XML 网站地图",
-      "seo_description": "网站地图生成器可批量生成 XML 网站地图，设置网址优先级、更新频率和最后修改时间，帮助搜索引擎抓取与索引。",
+      "seo_description": "网站地图生成器可手动维护 URL、更新时间、更新频率和优先级，生成 XML 网站地图，辅助抓取入口整理并下载。",
       "baseUrl": "基本网址",
       "urls": "URLs",
       "addUrl": "+ 添加网址",
@@ -3945,9 +3945,9 @@
     },
     "color-converter": {
       "name": "颜色转换器",
-      "description": "在HEX、RGB和HSL格式之间转换颜色。",
+      "description": "在 HEX、RGB 和 HSL 之间转换颜色并复制结果。",
       "seo_title": "免费在线颜色转换器",
-      "seo_description": "免费在线 颜色转换器，支持在浏览器本地极速 完成 HEX、RGB 和 HSL 互转，适合界面设计、前端开发和配色调试。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。"
+      "seo_description": "颜色转换器支持 HEX、RGB、HSL 互转，使用颜色选择器或数值输入更新颜色并复制结果。"
     },
     "timestamp-converter": {
       "name": "时间戳转换器",
@@ -4569,9 +4569,9 @@
     },
     "password-strength": {
       "name": "密码强度检测器",
-      "description": "通过检查长度、字符类型和常见模式来分析密码强度。",
+      "description": "根据长度、字符类型和常见模式检查密码强度。",
       "seo_title": "免费在线密码强度检测器",
-      "seo_description": "免费在线 密码强度检测器，助您在浏览器本地极速 评估密码复杂度、破解风险和常见弱点，适合账号安全检查和密码优化。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。"
+      "seo_description": "密码强度检测器根据密码复杂度、常见模式和字符组合提示破解风险与密码优化建议。"
     },
     "totp-generator": {
       "name": "TOTP 生成器",
@@ -4835,9 +4835,9 @@
     },
     "meta-tag-generator": {
       "name": "元标签生成器",
-      "description": "在线生成SEO元标签、Open Graph和Twitter Card标签。",
+      "description": "填写页面标题、描述和分享字段，生成可复制的 meta 标签。",
       "seo_title": "免费在线元标签生成器 - SEO 页面摘要与分享标签",
-      "seo_description": "免费在线 元标签生成器，助您在浏览器本地快速 生成页面标题、描述和分享标签，适合网站发布、搜索摘要优化和链接预览设置。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。"
+      "seo_description": "元标签生成器可填写页面标题、描述和社交分享字段，生成 SEO 与分享标签代码。"
     },
     "robots-txt-generator": {
       "name": "robots.txt 生成器",
@@ -5169,7 +5169,7 @@
     },
     "base85": {
       "name": "Base85 编码/解码",
-      "description": "在线编码和解码 Base85 (Ascii85) 数据。",
+      "description": "输入文本并进行 Base85 编码或解码，复制输出结果。",
       "input": "输入",
       "output": "输出",
       "encode": "编码",
@@ -5179,7 +5179,7 @@
       "inputPlaceholderDecode": "输入 Base85 以解码...",
       "outputPlaceholder": "结果将出现在这里...",
       "seo_title": "免费在线 Base85 编码解码器",
-      "seo_description": "免费在线 Base85 编码/解码，助您在浏览器本地极速 Base85 编码解码器快速转换文本和二进制内容，适合文档嵌入、传输压缩和编码调试。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。"
+      "seo_description": "Base85 编码解码器可在浏览器中转换文本和二进制字符数据，支持编码、解码和复制结果。"
     },
     "html-to-markdown": {
       "name": "HTML转Markdown",
@@ -5320,11 +5320,11 @@
     },
     "sitemap-generator": {
       "name": "网站地图生成器",
-      "description": "为您的网站生成XML格式的网站地图。",
+      "description": "手动添加 URL 条目，生成 XML 网站地图并复制或下载。",
       "output": "Sitemap Output",
       "copy": "Copy",
       "seo_title": "免费在线网站地图生成器 - 快速生成 XML 网站地图",
-      "seo_description": "免费在线 XML 网站地图生成器，可快速抓取并扫描您的网站，自动构建符合搜索引擎规范的 XML 网站地图文件。支持配置页面更新频率与优先级，助您快速提交给各大搜索引擎，大幅提升网站收录与 SEO 排名。",
+      "seo_description": "网站地图生成器可手动维护 URL、更新时间、更新频率和优先级，生成 XML 网站地图，辅助抓取入口整理并下载。",
       "baseUrl": "基础URL",
       "urls": "URLs",
       "addUrl": "+ 添加URL",
@@ -7332,9 +7332,9 @@
     },
     "polar-bar-chart-generator": {
       "name": "极坐标柱状图生成器",
-      "description": "在线创建极坐标柱状图。径向可视化数据并导出为PNG/SVG。",
+      "description": "编辑分类和值，生成极坐标柱状图并下载 PNG 或 SVG。",
       "seo_title": "免费在线极坐标柱状图生成器 - 展示径向数据比较",
-      "seo_description": "免费在线极坐标柱状图（Polar Bar）生成器，通过极坐标系直观展示周期性或多维度分类数据的对比关系。支持自定义半径、数据系列、主题颜色和实时动画预览，可一键导出高清 PNG/SVG 图表，让您的数据报告更加高级精美。",
+      "seo_description": "极坐标柱状图生成器可编辑分类和值，设置标题、主题、内半径和图例，并导出 PNG 或 SVG。",
       "chartTitle": "图表标题",
       "chartTitlePlaceholder": "输入图表标题",
       "colorTheme": "颜色主题",
