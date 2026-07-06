@@ -21,7 +21,7 @@ interface Props {
 }
 
 const { locale, pageSlug } = Astro.props;
-const page = getSiteInfoPageCopy(pageSlug);
+const page = getSiteInfoPageCopy(pageSlug, locale);
 const baseMessages = await loadBaseMessages(locale);
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
 const navMessages = (baseMessages.nav as Record<string, string>) ?? {};

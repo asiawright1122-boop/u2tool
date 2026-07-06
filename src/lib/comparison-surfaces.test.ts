@@ -139,4 +139,18 @@ describe('comparison surfaces', () => {
       categoryName: getComparisonUiCopy('en').comparisonLabel,
     });
   });
+
+  it('localizes search and social comparison titles beyond the English source title', () => {
+    const guideSlug = 'meta-tags-vs-open-graph-vs-twitter-cards';
+    const englishGuide = getComparisonGuide('en', guideSlug, categoryNames, toolNames, toolDescriptions);
+
+    expect(englishGuide?.title).toBe('Meta Tags vs Open Graph vs Twitter Cards');
+
+    for (const locale of ['de', 'es', 'fr', 'pt'] as const) {
+      const localizedGuide = getComparisonGuide(locale, guideSlug, categoryNames, toolNames, toolDescriptions);
+
+      expect(localizedGuide?.title).toBeTruthy();
+      expect(localizedGuide?.title).not.toBe(englishGuide?.title);
+    }
+  });
 });

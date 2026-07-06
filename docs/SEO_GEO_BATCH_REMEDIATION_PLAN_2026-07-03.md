@@ -1332,3 +1332,26 @@ These rows have known historic click or impression loss and should stay ahead of
   - `https://www.u2tool.com/ko/about/` -> `301 /ko/` -> `200`;
   - `https://www.u2tool.com/en/en/tools/query-execution-planner/?utm_source=gsc` -> `301 /en/tools/query-execution-planner/?utm_source=gsc` -> `200`.
 - `npm run validate:live-redirects` and `npm run validate:search-engine-compliance` passed against production after deployment.
+
+## 2026-07-06 GSC Duplicate Canonical Localization Fix
+
+- Continued the read-only GSC backend audit from the Pages indexing drilldown `Duplicate, Google chose different canonical than user`.
+- GSC showed `295` affected pages as of the `2026-06-30` report update. The current sample URLs were live `200` and self-canonical, but several localized site-info pages still rendered shared English policy/contact copy.
+- Root cause fixed in the repo:
+  - `src/components/pages/SiteInfoPage.astro` now passes `locale` to the site-info copy resolver.
+  - `src/lib/site-info-pages.ts` now serves localized privacy, terms, and contact copy for all ten sitemap locales.
+  - `src/lib/comparison-surfaces.ts` now gives DE/ES/FR/PT distinct localized titles for the `meta-tags-vs-open-graph-vs-twitter-cards` comparison page, including the Portuguese GSC sample URL.
+- Added regression coverage in `src/lib/site-info-pages.test.ts` and `src/lib/comparison-surfaces.test.ts`.
+- Verification passed before deploy:
+  - `npx vitest run src/lib/site-info-pages.test.ts`
+  - `npx vitest run src/lib/comparison-surfaces.test.ts`
+  - `npm run check`
+  - `npm run validate:gsc-loss-metadata`
+  - `npm run build`
+  - `npm run validate:rendered-seo`
+- Local preview smoke confirmed localized HTML and self-canonicals for:
+  - `http://127.0.0.1:4322/zh/privacy/`
+  - `http://127.0.0.1:4322/fr/contact/`
+  - `http://127.0.0.1:4322/ko/privacy/`
+  - `http://127.0.0.1:4322/pt/compare/meta-tags-vs-open-graph-vs-twitter-cards/`
+- No GSC `Validate fix` or `Request indexing` action was submitted for this mixed duplicate-canonical bucket. Re-evaluate after deployment and the next Pages indexing export or URL Inspection recrawl.

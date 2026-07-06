@@ -345,3 +345,15 @@ Generated at: 2026-07-04T14:48:58Z
 - Added 14-day and 28-day readout prep to `docs/GSC_REQUEST_INDEXING_POST_SUBMISSION_MONITOR_2026-07-05.md` at `2026-07-06 10:23:07 CST`.
 - The 14-day checkpoint focuses on `indexed-watch`, `indexed-flat`, `not-visible-yet`, and `needs-query-fit-review` rows from the 7-day export.
 - The 28-day checkpoint is the final first-cycle recovery readout and should decide whether a focused second remediation wave is needed.
+
+## 2026-07-06 Duplicate Canonical Drilldown Follow-Up
+
+- Continued with a read-only GSC Pages indexing drilldown for `Duplicate, Google chose different canonical than user`; no request-indexing action and no broad validation action was submitted.
+- GSC reported `295` affected pages, last updated `2026-06-30`.
+- Live sample checks found the strongest repo-side signal on localized site-info pages: URLs such as `https://www.u2tool.com/ko/privacy/`, `https://www.u2tool.com/zh/contact/`, and `https://www.u2tool.com/fr/contact/` were `200` and self-canonical, but still shared English body copy.
+- Repo fix prepared and verified:
+  - localized privacy, terms, and contact copy for all ten sitemap locales;
+  - localized DE/ES/FR/PT titles for the `meta-tags-vs-open-graph-vs-twitter-cards` comparison page;
+  - regression tests for both copy surfaces.
+- Validation passed: focused Vitest tests, `npm run check`, `npm run validate:gsc-loss-metadata`, `npm run build`, and `npm run validate:rendered-seo`.
+- Next action after deployment: smoke the same localized URLs on production and wait for a fresh Pages indexing update or URL Inspection recrawl before deciding whether any narrow validation workflow is useful.

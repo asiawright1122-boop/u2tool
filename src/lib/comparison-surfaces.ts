@@ -469,7 +469,7 @@ const comparisonSurfaceCopy: Record<Locale, Record<ExistingComparisonSurfaceSlug
       },
     },
     'meta-tags-vs-open-graph-vs-twitter-cards': {
-      title: 'Meta Tags vs. Open Graph vs. Twitter Cards',
+      title: 'Meta-Tags, Open Graph und Twitter Cards',
       description: 'Ordne Basis-Metadaten, Social-Preview-Tags, Vorschau-Tools und Crawl-Dateien richtig zu, bevor du einzelne SEO-Generatoren offnest.',
       shortDescription: 'Wahle zwischen SEO-Metadaten, Social Cards, Preview-Prufung und Discovery-Dateien.',
       aliases: ['Open Graph oder Twitter Cards', 'Meta Tags Vergleich'],
@@ -581,7 +581,7 @@ const comparisonSurfaceCopy: Record<Locale, Record<ExistingComparisonSurfaceSlug
       },
     },
     'meta-tags-vs-open-graph-vs-twitter-cards': {
-      title: 'Meta Tags vs Open Graph vs Twitter Cards',
+      title: 'Metaetiquetas, Open Graph y Twitter Cards',
       description: 'Aclara cuando usar metadatos SEO basicos, etiquetas para redes sociales, herramientas de vista previa y archivos de descubrimiento sin mezclar tareas.',
       shortDescription: 'Elige entre metadatos de busqueda, tarjetas sociales, vistas previas y archivos de rastreo.',
       aliases: ['open graph vs twitter cards', 'meta tags seo'],
@@ -637,7 +637,7 @@ const comparisonSurfaceCopy: Record<Locale, Record<ExistingComparisonSurfaceSlug
       },
     },
     'meta-tags-vs-open-graph-vs-twitter-cards': {
-      title: 'Meta Tags vs Open Graph vs Twitter Cards',
+      title: 'Balises meta, Open Graph et Twitter Cards',
       description: 'Comprenez quand utiliser les metadonnees SEO, les balises sociales, les outils d apercu et les fichiers de decouverte sans melanger leurs roles.',
       shortDescription: 'Choisissez entre metadonnees de recherche, balises sociales, apercus et fichiers de decouverte.',
       aliases: ['open graph vs twitter cards', 'meta tags seo'],
@@ -805,7 +805,7 @@ const comparisonSurfaceCopy: Record<Locale, Record<ExistingComparisonSurfaceSlug
       },
     },
     'meta-tags-vs-open-graph-vs-twitter-cards': {
-      title: 'Meta Tags vs Open Graph vs Twitter Cards',
+      title: 'Meta tags, Open Graph e Twitter Cards',
       description: 'Entenda quando usar metadados basicos de SEO, tags sociais, ferramentas de previa e arquivos de descoberta sem misturar as funcoes.',
       shortDescription: 'Escolha entre metadados de busca, cartoes sociais, previas e arquivos de descoberta.',
       aliases: ['open graph vs twitter cards', 'meta tags'],

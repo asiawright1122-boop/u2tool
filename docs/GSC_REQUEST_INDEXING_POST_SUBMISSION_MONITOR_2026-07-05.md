@@ -252,3 +252,26 @@ Working CSV: complete the 2026-08-02 final label and second-wave decision column
   - `/ru/about/` redirects to `/ru/`;
   - `/ko/about/` redirects to `/ko/`;
   - `/en/en/tools/query-execution-planner/?utm_source=gsc` redirects to `/en/tools/query-execution-planner/?utm_source=gsc`.
+
+## 2026-07-06 Duplicate Canonical Localization Follow-Up
+
+Checked at: 2026-07-06 11:55:48 CST
+
+- Read-only Pages indexing drilldown follow-up for `Duplicate, Google chose different canonical than user` (`295` affected pages, last update `2026-06-30`). No `Validate fix` or `Request indexing` action was submitted.
+- Sampled GSC examples were live `200` and self-canonical, but several localized site-info URLs still rendered English policy/contact body copy:
+  - `https://www.u2tool.com/ko/privacy/`
+  - `https://www.u2tool.com/zh/contact/`
+  - `https://www.u2tool.com/zh/privacy/`
+  - `https://www.u2tool.com/fr/contact/`
+  - `https://www.u2tool.com/fr/terms/`
+  - `https://www.u2tool.com/fr/privacy/`
+- Repo fix: `SiteInfoPage` now passes `locale` into `getSiteInfoPageCopy`, and `src/lib/site-info-pages.ts` serves localized privacy, terms, and contact copy for all ten sitemap locales.
+- Related comparison-page fix: localized the `meta-tags-vs-open-graph-vs-twitter-cards` title for DE/ES/FR/PT so affected pages are no longer using the exact English source title.
+- Verification passed:
+  - `npx vitest run src/lib/site-info-pages.test.ts`
+  - `npx vitest run src/lib/comparison-surfaces.test.ts`
+  - `npm run check`
+  - `npm run validate:gsc-loss-metadata`
+  - `npm run build`
+  - `npm run validate:rendered-seo`
+- Local preview smoke confirmed `200`, self-canonical HTML and localized content for `/zh/privacy/`, `/fr/contact/`, `/ko/privacy/`, and `/pt/compare/meta-tags-vs-open-graph-vs-twitter-cards/`.
