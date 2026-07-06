@@ -41,7 +41,7 @@ const htmlChecks: HtmlCheck[] = [
     name: 'AI discovery fallback',
     path: '/en/ai/',
     requiredSchema: ['Organization', 'WebSite'],
-    requiredBody: ['AI Tool Discovery', 'Text Tools', 'Choose the Right Text Tool'],
+    requiredBody: ['AI Tools Directory', 'Text Tools', 'Choose the Right Text Tool'],
   },
   {
     name: 'Representative tool detail',
