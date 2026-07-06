@@ -306,3 +306,37 @@ Checked at: 2026-07-06 13:35:41 CST
 - Deployed commit `fdb0938b` via GitHub Actions run `28770275230`; Cloudflare Worker version `d82442bf-2d6b-48dd-a35b-ef27a39bb2b7`.
 - Post-deploy production smoke at `2026-07-06 13:42:50 CST` confirmed both repaired URLs return `200`, self-canonical HTML, expected localized titles, and no visible occurrence of the repaired English source-title phrase.
 - Post-deploy `npm run validate:search-engine-compliance` passed against production.
+
+## 2026-07-06 Duplicate Canonical Full 295-Row Sync
+
+Checked at: 2026-07-06 14:42:37 CST
+
+- Continued the same read-only GSC duplicate-canonical drilldown. No GSC `Validate fix`, `Request indexing`, or broad validation action was submitted.
+- Set the GSC examples table to `500` rows per page and captured the current `295/295` visible sample rows into ignored local evidence:
+  - `exports/gsc/coverage-drilldowns/2026-07-06/google-selected-canonical-live.csv`
+  - `exports/gsc/coverage-drilldowns/2026-07-06/google-selected-canonical.csv`
+  - `exports/gsc/coverage-drilldowns/2026-07-06/google-selected-canonical-new-since-historical.csv`
+  - `exports/gsc/coverage-drilldowns/2026-07-06/google-selected-canonical-removed-since-historical.csv`
+  - `exports/gsc/coverage-drilldowns/2026-07-06/google-selected-canonical-live-check.csv`
+  - `exports/gsc/coverage-drilldowns/2026-07-06/google-selected-canonical-content-risk.csv`
+- Current-vs-historical diff: `58` URLs are new in the current GSC sample, `31` historical URLs are no longer present, and all `58` newly present rows are tool pages.
+- Full current-sample production live check returned `295/295` HTTP `200`, `0` redirects, `0` canonical mismatches, and `0` missing titles.
+- Content-risk follow-up fixed clear localized-title/body residues for:
+  - `https://www.u2tool.com/ru/tools/regex-escape/`
+  - `https://www.u2tool.com/ru/tools/regex-tester/`
+  - `https://www.u2tool.com/ru/tools/csv-to-excel/`
+  - `https://www.u2tool.com/ko/tools/htaccess-to-nginx/`
+  - `https://www.u2tool.com/ko/tools/csv-to-excel/`
+  - `https://www.u2tool.com/ko/tools/epoch-converter/`
+  - `https://www.u2tool.com/ko/tools/json-to-python/`
+- Added regression coverage in `src/messages/seo-governance.test.ts` so these root/base titles and selected names cannot drift back to the repaired English source phrases.
+- Verification passed before deploy:
+  - `npx vitest run src/messages/seo-governance.test.ts src/lib/support-content-fallback.test.ts`
+  - `npm run validate:translation-corpus`
+  - `npm run validate:tdk-translations`
+  - `npm run validate:tdk-drift -- --scope targeted`
+  - `npm run check`
+  - `npm run validate:gsc-loss-metadata`
+  - `npm run build`
+  - `npm run validate:rendered-seo`
+- Local preview smoke confirmed all seven repaired URLs return `200`, self-canonical HTML, expected localized titles, and no visible occurrence of the repaired English source-title phrases.

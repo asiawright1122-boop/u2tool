@@ -1794,7 +1794,15 @@ describe('SEO Governance', () => {
   });
 
   it('keeps GSC duplicate-canonical non-Latin title repairs out of English source titles', () => {
-    const cases = [
+    type GscDuplicateCanonicalTitleRepairCase = {
+      locale: Locale;
+      slug: string;
+      expectedName?: string;
+      expectedTitle: string;
+      forbidden: readonly string[];
+    };
+
+    const cases: readonly GscDuplicateCanonicalTitleRepairCase[] = [
       {
         locale: 'ko',
         slug: 'percentage-stacked-bar-chart-generator',
@@ -1807,18 +1815,67 @@ describe('SEO Governance', () => {
         expectedTitle: '無料オンライン依存関係脆弱性チェッカー',
         forbidden: ['Dependency Vulnerability Checker'],
       },
+      {
+        locale: 'ru',
+        slug: 'regex-escape',
+        expectedName: 'Экранирование Regex',
+        expectedTitle: 'Экранирование и снятие экранирования Regex онлайн бесплатно',
+        forbidden: ['экaping', 'unescaping', 'Regex Escape онлайн'],
+      },
+      {
+        locale: 'ru',
+        slug: 'regex-tester',
+        expectedTitle: 'Проверка регулярных выражений онлайн бесплатно',
+        forbidden: ['Regex Tester'],
+      },
+      {
+        locale: 'ru',
+        slug: 'csv-to-excel',
+        expectedTitle: 'Конвертер CSV в Excel онлайн бесплатно',
+        forbidden: ['CSV to Excel'],
+      },
+      {
+        locale: 'ko',
+        slug: 'htaccess-to-nginx',
+        expectedName: 'htaccess를 Nginx로 변환',
+        expectedTitle: '무료 온라인 htaccess를 Nginx로 변환',
+        forbidden: ['htaccess to Nginx'],
+      },
+      {
+        locale: 'ko',
+        slug: 'csv-to-excel',
+        expectedTitle: '무료 온라인 CSV 엑셀 변환기',
+        forbidden: ['CSV to Excel', 'EasyCSVtoExcel'],
+      },
+      {
+        locale: 'ko',
+        slug: 'epoch-converter',
+        expectedTitle: '무료 온라인 에포크 변환기',
+        forbidden: ['온라인Epoch'],
+      },
+      {
+        locale: 'ko',
+        slug: 'json-to-python',
+        expectedName: 'JSON Python 변환기',
+        expectedTitle: '무료 온라인 JSON Python 변환기',
+        forbidden: ['JSON to Python'],
+      },
     ] as const;
 
-    for (const { locale, slug, expectedTitle, forbidden } of cases) {
+    for (const { locale, slug, expectedName, expectedTitle, forbidden } of cases) {
       for (const [label, messages] of [
         ['root', loadRootMessages(locale)],
         ['base', loadBaseMessages(locale)],
       ] as const) {
         const seo = getToolSeo(messages, slug, 'tools');
+        const name = getNestedValue(messages, `tools.${slug}.name`);
 
+        if (expectedName) {
+          expect(name, `${locale} ${label} tools.${slug}.name`).toBe(expectedName);
+        }
         expect(seo.title, `${locale} ${label} tools.${slug}.seo_title`).toBe(expectedTitle);
         for (const phrase of forbidden) {
-          expect(String(seo.title)).not.toContain(phrase);
+          expect(`${String(name)} ${String(seo.title)}`).not.toContain(phrase);
         }
       }
     }

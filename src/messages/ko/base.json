@@ -930,7 +930,7 @@
       "seo_description": "온라인에서 JSON을 Java 클래스로 무료로 변환하세요. Lombok, getter/setter 및 빌더 패턴을 지원합니다. API 개발 및 데이터 모델링에 적합합니다."
     },
     "json-to-python": {
-      "name": "JSON to Python",
+      "name": "JSON Python 변환기",
       "description": "JSON 데이터를 Python 데이터 클래스, Pydantic 또는 TypedDict로 변환합니다.",
       "seo_title": "온라인에서 무료 JSON을 Python으로 변환기",
       "seo_description": "온라인에서 JSON을 Python 데이터 클래스 또는 Pydantic 모델로 무료로 변환하세요. 유효성 검사를 통해 유형이 안전한 Python 코드를 생성합니다. Python API 개발에 필수적입니다."
@@ -3630,9 +3630,9 @@
       "convert": "변환",
       "inputPlaceholder": "JSON 객체 입력...",
       "outputPlaceholder": "Python 코드가 여기에 표시됩니다...",
-      "name": "JSON to Python",
+      "name": "JSON Python 변환기",
       "description": "JSON 데이터를 Python dataclass, Pydantic, TypedDict로 변환합니다.",
-      "seo_title": "무료 JSON to Python 변환기 온라인",
+      "seo_title": "무료 온라인 JSON Python 변환기",
       "seo_description": "무료 온라인 JSON Python 변환기을 통해 브라우저에서 안전하고 빠르게 JSON Python 변환기는 JSON 데이터를 Python 코드로 변환할 수 있는 무료 도구입니다을(를) 진행할 수 있습니다. 별도의 가입 없이 100% 로컬에서 실행되어 개인정보를 완벽히 보호하며 일상 작업 효율을 높여주는 유용한 도구입니다.",
       "pydanticBaseModel": "Pydantic BaseModel",
       "typedDict": "TypedDict",
@@ -4406,7 +4406,7 @@
     "epoch-converter": {
       "name": "에포크 변환기",
       "description": "에포크/UNIX 타임스탬프를 날짜와 시간으로 변환하거나 반대로 변환합니다.",
-      "seo_title": "온라인Epoch 변환 도구 - 무료 사용",
+      "seo_title": "무료 온라인 에포크 변환기",
       "seo_description": "무료 온라인 에포크 변환기을 통해 브라우저에서 안전하고 빠르게 에포크 변환기는 Unix 시간과 날짜 시간을 서로 변환할 수 있는 무료 도구입니다을(를) 진행할 수 있습니다. 별도의 가입 없이 100% 로컬에서 실행되어 개인정보를 완벽히 보호하며 일상 작업 효율을 높여주는 유용한 도구입니다."
     },
     "css-unit-converter": {
@@ -5770,9 +5770,9 @@
       "seo_description": "무료 온라인 SQL 생성기을 통해 브라우저에서 안전하고 빠르게 조회, 삽입, 수정, 삭제, 테이블 생성용 SQL 구문을 빠르게 만드는 무료 온라인 도구입니다을(를) 진행할 수 있습니다. 별도의 가입 없이 100% 로컬에서 실행되어 개인정보를 완벽히 보호하며 일상 작업 효율을 높여주는 유용한 도구입니다."
     },
     "htaccess-to-nginx": {
-      "name": "htaccess to Nginx 변환기",
-      "description": "Apache .htaccess 규칙을 Nginx 구성으로 변환하세요.",
-      "seo_title": "무료 htaccess to Nginx 변환기 온라인",
+      "name": "htaccess를 Nginx로 변환",
+      "description": "Apache .htaccess 규칙을 Nginx 설정으로 변환합니다.",
+      "seo_title": "무료 온라인 htaccess를 Nginx로 변환",
       "seo_description": "무료 온라인 htaccess를 Nginx로 변환을 통해 브라우저에서 안전하고 빠르게 htaccess 규칙을 Nginx 설정 형식으로 바꾸는 무료 온라인 변환 도구입니다을(를) 진행할 수 있습니다. 별도의 가입 없이 100% 로컬에서 실행되어 개인정보를 완벽히 보호하며 일상 작업 효율을 높여주는 유용한 도구입니다.",
       "htaccessInput": ".htaccess 입력",
       "nginxOutput": "Nginx 출력",
@@ -9469,7 +9469,7 @@
     "csv-to-excel": {
       "name": "CSV를 Excel로",
       "description": "CSV 파일을 Excel 형식(.xlsx)으로 변환.",
-      "seo_title": "무료 온라인 CSV to Excel 변환 도구 - EasyCSVtoExcel",
+      "seo_title": "무료 온라인 CSV 엑셀 변환기",
       "seo_description": "무료 온라인 CSV를 Excel로을 통해 브라우저에서 안전하고 빠르게 CSV 파일을 엑셀 형식으로 바꾸는 무료 온라인 도구입니다을(를) 진행할 수 있습니다. 별도의 가입 없이 100% 로컬에서 실행되어 개인정보를 완벽히 보호하며 일상 작업 효율을 높여주는 유용한 도구입니다."
     },
     "loan-calculator": {

@@ -1373,3 +1373,16 @@ These rows have known historic click or impression loss and should stay ahead of
 - Deployed commit `fdb0938b` via GitHub Actions run `28770275230`; Cloudflare Worker version `d82442bf-2d6b-48dd-a35b-ef27a39bb2b7`.
 - Post-deploy production smoke at `2026-07-06 13:42:50 CST` confirmed the same two URLs return `200`, self-canonical HTML, expected localized titles, and no visible occurrence of the repaired English source-title phrase.
 - Post-deploy `npm run validate:search-engine-compliance` passed against production.
+
+## 2026-07-06 GSC Duplicate Canonical Full 295-Row Sync
+
+- Continued the read-only GSC duplicate-canonical drilldown and switched the examples table to `500` rows per page, exposing all `295` current rows in-browser.
+- Saved the full current sample and generated local ignored evidence under `exports/gsc/coverage-drilldowns/2026-07-06/`.
+- Compared the current `295` rows with the older `268`-row historical export: `58` current rows are new since the historical file, `31` historical rows are no longer present, and the new rows are all tool pages.
+- Full current-sample production live check found no route/canonical blocker: `295/295` returned `200`, with `0` redirects, `0` canonical mismatches, and `0` missing titles.
+- Remediated the strongest remaining content-residue signals in the current sample:
+  - Russian `regex-escape`, `regex-tester`, and `csv-to-excel` titles/body copy;
+  - Korean `htaccess-to-nginx`, `csv-to-excel`, `epoch-converter`, and `json-to-python` base titles/names/body copy.
+- Extended `src/messages/seo-governance.test.ts` to lock these duplicate-canonical title/name repairs across root/base translation sources.
+- Verification passed before deploy: focused Vitest/support fallback tests, translation corpus, TDK translations, targeted TDK drift, `check`, `validate:gsc-loss-metadata`, `build`, and `validate:rendered-seo`.
+- Local preview confirmed the seven repaired URLs render `200`, self-canonicals, expected localized titles, and no visible repaired source-title phrase.

@@ -379,3 +379,15 @@ Generated at: 2026-07-04T14:48:58Z
 - Deployed commit `fdb0938b` via GitHub Actions run `28770275230`; Cloudflare Worker version `d82442bf-2d6b-48dd-a35b-ef27a39bb2b7`.
 - Post-deploy production smoke at `2026-07-06 13:42:50 CST` confirmed both repaired URLs render `200`, self-canonical HTML, expected localized titles, and no visible occurrence of the repaired English source-title phrase.
 - Post-deploy `npm run validate:search-engine-compliance` passed against production.
+
+## 2026-07-06 Duplicate Canonical Full 295-Row Sync
+
+- Continued read-only in the same GSC duplicate-canonical drilldown; no URL Inspection request-indexing action, `Validate fix`, or broad validation action was submitted.
+- Set the examples table to `500` rows per page and captured all current `295` rows into ignored local files under `exports/gsc/coverage-drilldowns/2026-07-06/`.
+- Current-vs-historical comparison against `exports/gsc/coverage-drilldowns/google-selected-canonical.csv` found `58` current-only rows and `31` historical-only rows.
+- Full production live check for the current `295` rows found `295` status `200`, `0` redirects, `0` canonical mismatches, and `0` missing titles.
+- Repo fix prepared and verified for the remaining clear title/body residues:
+  - Russian `regex-escape`, `regex-tester`, and `csv-to-excel`;
+  - Korean `htaccess-to-nginx`, `csv-to-excel`, `epoch-converter`, and `json-to-python`.
+- Validation passed: focused Vitest/support fallback tests, translation corpus, TDK translations, targeted TDK drift, `check`, `validate:gsc-loss-metadata`, `build`, and `validate:rendered-seo`.
+- Local preview smoke confirmed all seven repaired URLs render `200`, self-canonical HTML, expected localized titles, and no visible occurrence of the repaired source-title phrases.
