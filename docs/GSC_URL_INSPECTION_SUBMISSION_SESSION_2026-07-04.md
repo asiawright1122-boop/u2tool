@@ -439,4 +439,7 @@ Generated at: 2026-07-04T14:48:58Z
 - Guardrail update: `src/messages/seo-governance.test.ts` now covers these repaired root/base title/name strings.
 - Local verification passed: focused Vitest/support fallback tests, translation corpus, TDK translations, targeted TDK drift, `check`, `build`, `validate:gsc-loss-metadata`, and `validate:rendered-seo`.
 - Local preview smoke confirmed all ten URLs render `200`, self-canonical HTML, expected localized titles, and no visible repaired residue phrase.
-- Next action: commit/deploy this batch, then production-smoke the same ten URLs and run `npm run validate:search-engine-compliance`.
+- Deployed commit `b9d876ac` via GitHub Actions run `28775838845`; Cloudflare Worker version `2577c845-4332-457d-9f97-83606f5bc1b1`.
+- Post-deploy production smoke at `2026-07-06 15:47:11 CST` confirmed all ten URLs return `200`, self-canonical HTML, expected localized titles, and no visible repaired residue phrase.
+- Post-deploy `npm run validate:search-engine-compliance` passed against production.
+- Next action: wait for fresh GSC Pages indexing movement or URL Inspection recrawl before taking any GSC-side validation action.
