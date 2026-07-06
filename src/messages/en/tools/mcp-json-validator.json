@@ -1,5 +1,5 @@
 {
-  "detailed_description": "MCP JSON Validator — Validate MCP server JSON configs and spot missing commands, args, or env shapes. Review the calculated or generated result.",
+  "detailed_description": "MCP JSON Validator reviews Model Context Protocol server configuration snippets before you paste them into a client. It checks for valid JSON, confirms the expected mcpServers object shape, counts configured servers, and highlights common mistakes such as missing commands, non-array args, or shared configs that expose concrete environment values. The validator runs in the browser for quick local review.",
   "usage_steps": [
     "Enter the required values in the form",
     "Review the calculated or generated result",

@@ -1,5 +1,5 @@
 {
-  "detailed_description": "LLMs.txt Validator — Check an llms.txt file for title, summary, and Markdown link issues. Review the calculated or generated result.",
+  "detailed_description": "LLMs.txt Validator checks whether an llms.txt draft has the basics that AI agents and search-oriented crawlers expect: a clear H1 title, a short summary, and Markdown links in a predictable shape. It is designed for site owners and developers who are publishing AI-readable documentation files and want a fast browser-based review before placing the file at the site root or linking it from discovery surfaces.",
   "usage_steps": [
     "Enter the required values in the form",
     "Review the calculated or generated result",

@@ -1,5 +1,5 @@
 {
-  "detailed_description": "MCP Server Config Generator — Build copy-ready MCP server JSON config snippets for popular clients. Review the calculated or generated result.",
+  "detailed_description": "MCP Server Config Generator builds a copy-ready Model Context Protocol server JSON snippet from a server name, command, arguments, and optional environment placeholders. It is useful when setting up a new MCP server for clients such as Claude Desktop, Codex, Cursor, or VS Code and you want a clean starter config without hand-writing nested JSON from scratch.",
   "usage_steps": [
     "Enter the required values in the form",
     "Review the calculated or generated result",

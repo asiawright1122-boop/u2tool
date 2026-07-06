@@ -9,7 +9,7 @@ This audit checks tool support content against search-engine quality expectation
 - Popular English tool files checked for depth: 109
 - Files with high-confidence implementation overclaims: 0
 - Files with medium-confidence claims for future review: 5
-- Popular English files with depth gaps: 10
+- Popular English files with depth gaps: 1
 
 Runtime mitigation: high-confidence support-content issues are blocked by `assessSupportContentTrust` and replaced by safe fallback support content on tool detail pages.
 
@@ -25,9 +25,9 @@ Runtime mitigation: high-confidence support-content issues are blocked by `asses
 
 | Code | Severity | Count | Meaning |
 |---|---:|---:|---|
-| `thin-detailed-description` | depth | 10 | Popular English tool has a short detailed_description (...). |
 | `redis-runtime` | medium | 7 | Mentions Redis-specific behavior that should be verified against the actual tool UI. |
 | `server-side-reference` | medium | 2 | References server-side behavior on a browser-first tool page and should be verified. |
+| `thin-detailed-description` | depth | 1 | Popular English tool has a short detailed_description (...). |
 
 ## High-Confidence Overclaim Samples
 
@@ -41,16 +41,7 @@ These are not automatic noindex problems. They are prioritization targets for co
 
 | Tool | Detailed Chars | Steps | Examples | FAQs | Gap Codes |
 |---|---:|---:|---:|---:|---|
-| `ai-robots-txt-generator` | 137 | 4 | 3 | 3 | `thin-detailed-description` |
-| `ai-token-calculator` | 132 | 4 | 3 | 3 | `thin-detailed-description` |
 | `developer-cryptography-toolbox` | 145 | 4 | 3 | 3 | `thin-detailed-description` |
-| `har-file-viewer` | 143 | 4 | 3 | 3 | `thin-detailed-description` |
-| `json-repair` | 146 | 4 | 3 | 3 | `thin-detailed-description` |
-| `jsonl-validator` | 133 | 4 | 3 | 3 | `thin-detailed-description` |
-| `llms-txt-validator` | 132 | 4 | 3 | 3 | `thin-detailed-description` |
-| `mcp-json-validator` | 144 | 4 | 3 | 3 | `thin-detailed-description` |
-| `mcp-server-config-generator` | 142 | 4 | 3 | 3 | `thin-detailed-description` |
-| `world-cup-2026-bracket-predictor` | 159 | 4 | 3 | 3 | `thin-detailed-description` |
 
 ## Recovery Actions
 
