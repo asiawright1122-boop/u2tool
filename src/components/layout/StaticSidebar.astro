@@ -2,6 +2,7 @@
 import { getLocalizedPath } from '@/lib/i18n';
 import { getIconSvg } from '@/lib/icon-svg';
 import type { Locale } from '@/lib/i18n';
+import { getAiToolsDirectoryHref, getAiToolsDirectoryLabel } from '@/lib/ai-tools-navigation';
 
 interface CategoryItem {
   id: string;
@@ -25,6 +26,8 @@ const {
 } = Astro.props as Props;
 
 const compactCategories = categories.slice(0, 5);
+const aiToolsHref = getAiToolsDirectoryHref(locale as Locale);
+const aiToolsLabel = getAiToolsDirectoryLabel(locale as Locale);
 
 function localized(path: string) {
   return getLocalizedPath(locale as Locale, path);
@@ -52,6 +55,10 @@ function categoryPath(categoryId: string) {
       <a href={localized('/')} data-prefetch class="sidebar-item">
         <span class="sidebar-icon" set:html={getIconSvg('home', 18)} />
         <span class="text-sm font-medium">{navMessages.home || 'Home'}</span>
+      </a>
+      <a href={aiToolsHref} data-prefetch class="sidebar-item group/item">
+        <span class="sidebar-icon text-sky-500 transition-colors group-hover/item:text-sky-600 dark:text-sky-400 dark:group-hover/item:text-sky-300" set:html={getIconSvg('sparkle', 18)} />
+        <span class="text-sm font-medium">{aiToolsLabel}</span>
       </a>
 
       <div class="h-[0.5px] bg-slate-200 dark:bg-white/10 my-4 mx-4"></div>
@@ -113,6 +120,15 @@ function categoryPath(categoryId: string) {
         aria-label={navMessages.home || 'Home'}
       >
         <span class="sidebar-icon" set:html={getIconSvg('home', 18)} />
+      </a>
+      <a
+        href={aiToolsHref}
+        data-prefetch
+        class="sidebar-item justify-center"
+        title={aiToolsLabel}
+        aria-label={aiToolsLabel}
+      >
+        <span class="sidebar-icon text-sky-500 dark:text-sky-400" set:html={getIconSvg('sparkle', 18)} />
       </a>
       <a
         href={localized('/tools')}

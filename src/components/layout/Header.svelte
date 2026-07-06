@@ -13,6 +13,8 @@
   import GlobalSearch from '@/components/ui/GlobalSearch.svelte';
   import { getLocalizedPath } from '@/lib/i18n';
   import type { Locale } from '@/lib/i18n';
+  import { getAiToolsDirectoryHref, getAiToolsDirectoryLabel } from '@/lib/ai-tools-navigation';
+  import { getIconSvg } from '@/lib/icon-svg';
 
   interface Props {
     locale: string;
@@ -30,6 +32,9 @@
   });
 
   let homePath = $derived(getLocalizedPath(locale as Locale, '/'));
+  let aiToolsHref = $derived(getAiToolsDirectoryHref(locale as Locale));
+  let aiToolsLabel = $derived(getAiToolsDirectoryLabel(locale as Locale));
+  let aiToolsIcon = getIconSvg('sparkle', 15);
 </script>
 
 <header class="w-full glass-nav sticky top-0 z-50 transition-all duration-300">
@@ -39,6 +44,15 @@
       <div class="min-w-0 flex-1 max-w-2xl">
         <GlobalSearch {locale} translations={translations} />
       </div>
+
+      <a
+        href={aiToolsHref}
+        data-prefetch
+        class="hidden shrink-0 items-center gap-2 rounded-xl border border-sky-200/70 bg-sky-50/80 px-3 py-2 text-[11px] font-black uppercase tracking-[0.14em] text-sky-700 transition hover:border-sky-300 hover:bg-sky-100 dark:border-sky-400/20 dark:bg-sky-950/25 dark:text-sky-200 dark:hover:border-sky-300/50 xl:inline-flex"
+      >
+        <span class="inline-flex" aria-hidden="true">{@html aiToolsIcon}</span>
+        <span>{aiToolsLabel}</span>
+      </a>
 
       <div class="flex items-center gap-1.5 shrink-0 sm:gap-4">
         <LanguageSelector {locale} {currentPath} />
