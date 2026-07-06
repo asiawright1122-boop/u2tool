@@ -1,0 +1,144 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.svelte';
+import StaticSidebar from '@/components/layout/StaticSidebar.astro';
+import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
+import Footer from '@/components/layout/Footer.astro';
+import Breadcrumb from '@/components/layout/Breadcrumb.astro';
+import HreflangTags from '@/components/seo/HreflangTags.astro';
+import StructuredData from '@/components/seo/StructuredData.astro';
+import AiModelComparisonDetail from '@/components/ai/AiModelComparisonDetail.astro';
+import { categories } from '@/config/tools';
+import type { Locale } from '@/lib/i18n';
+import {
+  aiModelComparisonIndexPath,
+  aiModelComparisonLocales,
+  aiModelComparisonSlugs,
+  getAiModelComparison,
+  getAiModelComparisonIndexCopy,
+} from '@/lib/ai-model-comparisons';
+import { loadBaseUiMessages } from '@/lib/translations';
+import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
+import { getPublicSiteUrl } from '@/lib/public-env';
+import { buildLocalizedPagePath, getHreflang, resolveMetaDescription } from '@/lib/seo';
+
+export const prerender = true;
+
+export const getStaticPaths: GetStaticPaths = () =>
+  aiModelComparisonLocales.flatMap((locale) =>
+    aiModelComparisonSlugs.map((slug) => ({
+      params: { locale, slug },
+      props: { locale, slug },
+    }))
+  );
+
+const { locale, slug } = Astro.props as { locale: Locale; slug: string };
+const page = getAiModelComparison(locale, slug);
+if (!page) {
+  return Astro.redirect(`/${locale}${aiModelComparisonIndexPath}/`);
+}
+
+const baseMessages = await loadBaseUiMessages(locale, Astro.url);
+const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
+const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
+const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
+const headerTranslations = buildHeaderTranslations(baseMessages);
+const mobileNavMessages = buildMobileNavMessages(navMessages);
+const indexCopy = getAiModelComparisonIndexCopy(locale);
+const BASE_URL = getPublicSiteUrl();
+const pageDescription = resolveMetaDescription({
+  description: page.copy.seoDescription,
+  locale,
+  title: page.copy.seoTitle,
+});
+const canonicalPath = `${aiModelComparisonIndexPath}/${page.slug}`;
+const breadcrumbItems = [
+  { label: navMessages.home || 'Home', href: buildLocalizedPagePath(locale, '/') },
+  { label: indexCopy.h1, href: buildLocalizedPagePath(locale, aiModelComparisonIndexPath) },
+  { label: page.copy.h1, href: page.href },
+];
+const breadcrumbData = {
+  itemListElement: breadcrumbItems.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.label,
+    item: `${BASE_URL}${item.href}`,
+  })),
+};
+const articleData = {
+  headline: page.copy.h1,
+  description: pageDescription,
+  url: `${BASE_URL}${page.href}`,
+  inLanguage: getHreflang(locale),
+  dateModified: page.sources[0]?.pricingDate,
+  about: [
+    page.left.provider,
+    page.right.provider,
+    'AI token pricing',
+    'API cost comparison',
+  ],
+  mainEntityOfPage: `${BASE_URL}${page.href}`,
+};
+const relatedItemListData = {
+  name: `${page.copy.h1} related comparisons`,
+  itemListOrder: 'https://schema.org/ItemListOrderAscending',
+  numberOfItems: page.related.length,
+  itemListElement: page.related.map((related, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: related.title,
+    description: related.description,
+    url: `${BASE_URL}${related.href}`,
+  })),
+};
+---
+
+<BaseLayout
+  title={page.copy.seoTitle}
+  description={pageDescription}
+  locale={locale}
+  canonicalPath={canonicalPath}
+  siteDescription={siteMessages.description}
+>
+  <HreflangTags path={canonicalPath} locales={aiModelComparisonLocales} slot="head" />
+  <StructuredData type="BreadcrumbList" data={breadcrumbData} slot="head" />
+  <StructuredData type="TechArticle" data={articleData} slot="head" />
+  <StructuredData type="ItemList" data={relatedItemListData} slot="head" />
+  <meta property="og:title" content={`${page.copy.seoTitle} | U2Tool`} slot="head" />
+  <meta property="og:description" content={pageDescription} slot="head" />
+  <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
+  <meta property="og:type" content="article" slot="head" />
+  <meta property="og:url" content={`${BASE_URL}${page.href}`} slot="head" />
+  <meta property="og:site_name" content="U2Tool" slot="head" />
+  <meta name="twitter:card" content="summary_large_image" slot="head" />
+  <meta name="twitter:title" content={`${page.copy.seoTitle} | U2Tool`} slot="head" />
+  <meta name="twitter:description" content={pageDescription} slot="head" />
+  <meta name="twitter:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
+
+  <StaticSidebar
+    locale={locale}
+    categories={categories}
+    categoryNames={categoryMessages}
+    navMessages={navMessages}
+    siteName={siteMessages.name || 'U2Tool'}
+  />
+
+  <div class="main-content-with-sidebar main-content-with-mobile-nav">
+    <Header client:load locale={locale} translations={headerTranslations} />
+
+    <main class="px-4 py-6 lg:px-6">
+      <div class="mx-0 max-w-none">
+        <div class="mb-6">
+          <Breadcrumb locale={locale} items={breadcrumbItems} />
+        </div>
+
+        <AiModelComparisonDetail page={page} locale={locale} />
+      </div>
+    </main>
+
+    <Footer locale={locale} />
+  </div>
+
+  <MobileBottomNav client:load locale={locale} navMessages={mobileNavMessages} />
+</BaseLayout>

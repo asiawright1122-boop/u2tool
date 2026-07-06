@@ -1,0 +1,106 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.svelte';
+import StaticSidebar from '@/components/layout/StaticSidebar.astro';
+import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
+import Footer from '@/components/layout/Footer.astro';
+import HreflangTags from '@/components/seo/HreflangTags.astro';
+import StructuredData from '@/components/seo/StructuredData.astro';
+import AiModelComparisonIndex from '@/components/ai/AiModelComparisonIndex.astro';
+import { categories } from '@/config/tools';
+import type { Locale } from '@/lib/i18n';
+import {
+  aiModelComparisonIndexPath,
+  aiModelComparisonLocales,
+  buildAiModelComparisonIndex,
+  buildAiModelComparisonItemList,
+  getAiModelComparisonIndexCopy,
+} from '@/lib/ai-model-comparisons';
+import { loadBaseUiMessages } from '@/lib/translations';
+import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
+import { getPublicSiteUrl } from '@/lib/public-env';
+import { buildLocalizedPageUrl, getHreflang, resolveMetaDescription } from '@/lib/seo';
+
+export const prerender = true;
+
+export const getStaticPaths: GetStaticPaths = () =>
+  aiModelComparisonLocales.map((locale) => ({
+    params: { locale },
+    props: { locale },
+  }));
+
+const { locale } = Astro.props as { locale: Locale };
+const baseMessages = await loadBaseUiMessages(locale, Astro.url);
+const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
+const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
+const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
+const headerTranslations = buildHeaderTranslations(baseMessages);
+const mobileNavMessages = buildMobileNavMessages(navMessages);
+const copy = getAiModelComparisonIndexCopy(locale);
+const comparisons = buildAiModelComparisonIndex(locale);
+const BASE_URL = getPublicSiteUrl();
+const pageDescription = resolveMetaDescription({
+  description: copy.seoDescription,
+  locale,
+  title: copy.seoTitle,
+});
+const itemListData = buildAiModelComparisonItemList(BASE_URL, locale);
+const collectionData = {
+  name: copy.h1,
+  description: pageDescription,
+  url: buildLocalizedPageUrl(BASE_URL, locale, aiModelComparisonIndexPath),
+  inLanguage: getHreflang(locale),
+  numberOfItems: comparisons.length,
+  hasPart: comparisons.map((comparison) => ({
+    '@type': 'WebPage',
+    name: comparison.title,
+    description: comparison.description,
+    url: `${BASE_URL}${comparison.href}`,
+  })),
+};
+---
+
+<BaseLayout
+  title={copy.seoTitle}
+  description={pageDescription}
+  locale={locale}
+  canonicalPath={aiModelComparisonIndexPath}
+  siteDescription={siteMessages.description}
+>
+  <HreflangTags path={aiModelComparisonIndexPath} locales={aiModelComparisonLocales} slot="head" />
+  <StructuredData type="CollectionPage" data={collectionData} slot="head" />
+  <StructuredData type="ItemList" data={itemListData} slot="head" />
+  <meta property="og:title" content={`${copy.seoTitle} | U2Tool`} slot="head" />
+  <meta property="og:description" content={pageDescription} slot="head" />
+  <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
+  <meta property="og:type" content="website" slot="head" />
+  <meta property="og:url" content={buildLocalizedPageUrl(BASE_URL, locale, aiModelComparisonIndexPath)} slot="head" />
+  <meta property="og:site_name" content="U2Tool" slot="head" />
+  <meta name="twitter:card" content="summary_large_image" slot="head" />
+  <meta name="twitter:title" content={`${copy.seoTitle} | U2Tool`} slot="head" />
+  <meta name="twitter:description" content={pageDescription} slot="head" />
+  <meta name="twitter:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
+
+  <StaticSidebar
+    locale={locale}
+    categories={categories}
+    categoryNames={categoryMessages}
+    navMessages={navMessages}
+    siteName={siteMessages.name || 'U2Tool'}
+  />
+
+  <div class="main-content-with-sidebar main-content-with-mobile-nav">
+    <Header client:load locale={locale} translations={headerTranslations} />
+
+    <main class="px-4 py-6 lg:px-6">
+      <div class="mx-0 max-w-none">
+        <AiModelComparisonIndex comparisons={comparisons} copy={copy} locale={locale} />
+      </div>
+    </main>
+
+    <Footer locale={locale} />
+  </div>
+
+  <MobileBottomNav client:load locale={locale} navMessages={mobileNavMessages} />
+</BaseLayout>

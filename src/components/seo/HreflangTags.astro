@@ -9,16 +9,25 @@
  * Requirements: 5.2, 5.3
  */
 
-import { locales } from '@/lib/i18n';
+import { locales as allLocales } from '@/lib/i18n';
+import type { Locale } from '@/lib/i18n';
 import { getPublicSiteUrl } from '@/lib/public-env';
 import { buildLocalizedPageUrl, getHreflang } from '@/lib/seo';
 
 interface Props {
   /** Path without locale prefix, e.g. `/tools/json-formatter` */
   path: string;
+  /** Optional limited locale set for pages that are not published in every language. */
+  locales?: readonly Locale[];
+  /** Locale used for the x-default alternate. */
+  xDefaultLocale?: Locale;
 }
 
-const { path } = Astro.props;
+const {
+  path,
+  locales = allLocales,
+  xDefaultLocale = 'en',
+} = Astro.props as Props;
 
 const BASE_URL = getPublicSiteUrl();
 
@@ -34,5 +43,5 @@ const BASE_URL = getPublicSiteUrl();
 <link
   rel="alternate"
   hreflang="x-default"
-  href={buildLocalizedPageUrl(BASE_URL, 'en', path)}
+  href={buildLocalizedPageUrl(BASE_URL, xDefaultLocale, path)}
 />

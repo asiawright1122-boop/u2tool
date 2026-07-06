@@ -1,0 +1,252 @@
+---
+import {
+  aiModelComparisonIndexPath,
+  type AiModelComparisonPage,
+} from '@/lib/ai-model-comparisons';
+import { getLocalizedPath, type Locale } from '@/lib/i18n';
+
+interface Props {
+  page: AiModelComparisonPage;
+  locale: Locale;
+}
+
+const { page, locale } = Astro.props as Props;
+const toolHref = getLocalizedPath(locale, '/tools/ai-token-calculator');
+const aiDirectoryHref = getLocalizedPath(locale, '/ai');
+const comparisonIndexHref = getLocalizedPath(locale, aiModelComparisonIndexPath);
+const labels = locale === 'zh'
+  ? {
+      aiDirectory: 'AI 工具目录',
+      caveats: '价格说明',
+      cheapest: '最低模型',
+      compareMore: '更多模型对比',
+      input: '输入 / 百万 token',
+      model: '模型',
+      output: '输出 / 百万 token',
+      provider: '厂商',
+      requests: '请求次数',
+      scenario: '场景',
+      tokenCalculator: '打开 Token 计算器',
+      tokenOnly: '本页只比较文本 token 标价，不评价模型质量、速度、上下文窗口或企业合同价格。',
+      tokens: 'Token 规模',
+      updated: '价格日期',
+    }
+  : {
+      aiDirectory: 'AI tools directory',
+      caveats: 'Pricing notes',
+      cheapest: 'Lowest model',
+      compareMore: 'More model comparisons',
+      input: 'Input / 1M tokens',
+      model: 'Model',
+      output: 'Output / 1M tokens',
+      provider: 'Provider',
+      requests: 'Requests',
+      scenario: 'Scenario',
+      tokenCalculator: 'Open token calculator',
+      tokenOnly: 'This page compares listed text token prices only. It does not score quality, latency, context windows, or enterprise terms.',
+      tokens: 'Token shape',
+      updated: 'Pricing date',
+    };
+
+function formatCurrency(value: number, currency: string): string {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency,
+    maximumFractionDigits: value < 1 ? 4 : 2,
+  }).format(value);
+}
+
+function formatNumber(value: number): string {
+  return new Intl.NumberFormat(locale === 'zh' ? 'zh-CN' : 'en-US').format(value);
+}
+
+const allModels = [...page.left.models, ...page.right.models];
+const notes = [...new Set(allModels.map((model) => model.note).filter((note): note is string => Boolean(note)))];
+---
+
+<article data-discovery-surface="ai-model-cost-comparison" class="space-y-10">
+  <header class="border-b border-slate-200/70 pb-8 dark:border-white/10">
+    <p class="mb-3 text-[10px] font-black uppercase tracking-[0.3em] text-sky-600/80 dark:text-sky-400/70">
+      {page.left.provider} vs {page.right.provider}
+    </p>
+    <h1 class="max-w-5xl text-4xl font-black leading-tight tracking-tight text-slate-950 dark:text-white md:text-6xl">
+      {page.copy.h1}
+    </h1>
+    <p class="mt-5 max-w-4xl text-base font-medium leading-8 text-slate-600 dark:text-slate-300 md:text-lg">
+      {page.copy.description}
+    </p>
+    <p class="mt-4 max-w-4xl text-sm font-medium leading-7 text-slate-500 dark:text-slate-400">
+      {labels.tokenOnly}
+    </p>
+    <div class="mt-7 flex flex-wrap gap-3">
+      <a
+        href={toolHref}
+        class="inline-flex items-center justify-center rounded-xl bg-slate-950 px-5 py-3 text-xs font-black uppercase tracking-[0.16em] text-white transition hover:bg-black dark:bg-sky-400 dark:text-slate-950 dark:hover:bg-sky-300"
+      >
+        {labels.tokenCalculator}
+      </a>
+      <a
+        href={comparisonIndexHref}
+        class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-xs font-black uppercase tracking-[0.16em] text-slate-700 transition hover:border-sky-400 hover:text-sky-700 dark:border-white/10 dark:text-slate-200 dark:hover:border-sky-400 dark:hover:text-sky-300"
+      >
+        {labels.compareMore}
+      </a>
+      <a
+        href={aiDirectoryHref}
+        class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-xs font-black uppercase tracking-[0.16em] text-slate-700 transition hover:border-sky-400 hover:text-sky-700 dark:border-white/10 dark:text-slate-200 dark:hover:border-sky-400 dark:hover:text-sky-300"
+      >
+        {labels.aiDirectory}
+      </a>
+    </div>
+  </header>
+
+  <section class="grid grid-cols-1 gap-4 md:grid-cols-2">
+    <div class="rounded-2xl border border-slate-200/70 bg-white/70 p-5 shadow-sm dark:border-white/10 dark:bg-white/5">
+      <h2 class="text-base font-black tracking-tight text-slate-950 dark:text-white">
+        {page.left.provider}
+      </h2>
+      <p class="mt-3 text-sm font-medium leading-7 text-slate-600 dark:text-slate-300">
+        {page.copy.chooseLeft}
+      </p>
+    </div>
+    <div class="rounded-2xl border border-slate-200/70 bg-white/70 p-5 shadow-sm dark:border-white/10 dark:bg-white/5">
+      <h2 class="text-base font-black tracking-tight text-slate-950 dark:text-white">
+        {page.right.provider}
+      </h2>
+      <p class="mt-3 text-sm font-medium leading-7 text-slate-600 dark:text-slate-300">
+        {page.copy.chooseRight}
+      </p>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-black tracking-tight text-slate-950 dark:text-white">
+      {page.copy.pricingTableTitle}
+    </h2>
+    <div class="overflow-x-auto rounded-2xl border border-slate-200/70 bg-white/80 shadow-sm dark:border-white/10 dark:bg-white/5">
+      <table class="min-w-full divide-y divide-slate-200 text-left text-sm dark:divide-white/10">
+        <thead class="bg-slate-50 text-[10px] uppercase tracking-[0.18em] text-slate-500 dark:bg-white/5 dark:text-slate-400">
+          <tr>
+            <th class="px-4 py-3 font-black">{labels.provider}</th>
+            <th class="px-4 py-3 font-black">{labels.model}</th>
+            <th class="px-4 py-3 font-black">{labels.input}</th>
+            <th class="px-4 py-3 font-black">{labels.output}</th>
+            <th class="px-4 py-3 font-black">{labels.updated}</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 dark:divide-white/10">
+          {allModels.map((model) => (
+            <tr>
+              <td class="px-4 py-3 font-bold text-slate-700 dark:text-slate-200">{model.provider}</td>
+              <td class="px-4 py-3 font-medium text-slate-600 dark:text-slate-300">{model.model}</td>
+              <td class="px-4 py-3 font-mono text-slate-700 dark:text-slate-200">
+                {formatCurrency(model.inputPerMillion, model.currency)}
+              </td>
+              <td class="px-4 py-3 font-mono text-slate-700 dark:text-slate-200">
+                {formatCurrency(model.outputPerMillion, model.currency)}
+              </td>
+              <td class="px-4 py-3 text-slate-500 dark:text-slate-400">{model.pricingDate}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-black tracking-tight text-slate-950 dark:text-white">
+      {page.copy.scenarioTableTitle}
+    </h2>
+    <div class="overflow-x-auto rounded-2xl border border-slate-200/70 bg-white/80 shadow-sm dark:border-white/10 dark:bg-white/5">
+      <table class="min-w-full divide-y divide-slate-200 text-left text-sm dark:divide-white/10">
+        <thead class="bg-slate-50 text-[10px] uppercase tracking-[0.18em] text-slate-500 dark:bg-white/5 dark:text-slate-400">
+          <tr>
+            <th class="px-4 py-3 font-black">{labels.scenario}</th>
+            <th class="px-4 py-3 font-black">{labels.tokens}</th>
+            <th class="px-4 py-3 font-black">{labels.requests}</th>
+            <th class="px-4 py-3 font-black">{page.left.provider}</th>
+            <th class="px-4 py-3 font-black">{page.right.provider}</th>
+            <th class="px-4 py-3 font-black">{labels.cheapest}</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 dark:divide-white/10">
+          {page.scenarios.map((result) => {
+            const leftLowest = [...result.leftCosts].sort((a, b) => a.cost - b.cost)[0];
+            const rightLowest = [...result.rightCosts].sort((a, b) => a.cost - b.cost)[0];
+
+            return (
+              <tr>
+                <td class="px-4 py-3 font-bold text-slate-700 dark:text-slate-200">{result.scenario.title}</td>
+                <td class="px-4 py-3 text-slate-500 dark:text-slate-400">
+                  {formatNumber(result.scenario.inputTokens)} / {formatNumber(result.scenario.outputTokens)}
+                </td>
+                <td class="px-4 py-3 text-slate-500 dark:text-slate-400">{formatNumber(result.requestCount)}</td>
+                <td class="px-4 py-3 font-mono text-slate-700 dark:text-slate-200">
+                  {formatCurrency(leftLowest.cost, page.currency)}
+                </td>
+                <td class="px-4 py-3 font-mono text-slate-700 dark:text-slate-200">
+                  {formatCurrency(rightLowest.cost, page.currency)}
+                </td>
+                <td class="px-4 py-3 font-medium text-slate-600 dark:text-slate-300">
+                  {result.cheapestModel.provider} {result.cheapestModel.model}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="grid grid-cols-1 gap-5 lg:grid-cols-3">
+    <div class="lg:col-span-2">
+      <h2 class="text-xl font-black tracking-tight text-slate-950 dark:text-white">
+        {page.copy.sourceTitle}
+      </h2>
+      <div class="mt-4 grid gap-3">
+        {page.sources.map((source) => (
+          <a
+            href={source.sourceUrl}
+            rel="noopener noreferrer"
+            target="_blank"
+            class="rounded-2xl border border-slate-200/70 bg-white/70 p-4 text-sm font-bold text-slate-700 transition hover:border-sky-400 hover:text-sky-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-200 dark:hover:border-sky-400 dark:hover:text-sky-300"
+          >
+            {source.provider} · {source.pricingDate}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    {notes.length > 0 && (
+      <div>
+        <h2 class="text-xl font-black tracking-tight text-slate-950 dark:text-white">
+          {labels.caveats}
+        </h2>
+        <ul class="mt-4 space-y-3 text-sm font-medium leading-7 text-slate-600 dark:text-slate-300">
+          {notes.map((note) => (
+            <li class="rounded-2xl border border-slate-200/70 bg-white/70 p-4 dark:border-white/10 dark:bg-white/5">
+              {note}
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </section>
+
+  <section class="border-t border-slate-200/70 pt-6 dark:border-white/10">
+    <h2 class="text-xl font-black tracking-tight text-slate-950 dark:text-white">
+      {labels.compareMore}
+    </h2>
+    <div class="mt-4 grid grid-cols-1 gap-3 md:grid-cols-3">
+      {page.related.map((related) => (
+        <a
+          href={related.href}
+          class="rounded-2xl border border-slate-200/70 bg-white/70 p-4 transition hover:border-sky-400 dark:border-white/10 dark:bg-white/5 dark:hover:border-sky-400/70"
+        >
+          <span class="block text-sm font-black leading-6 text-slate-950 dark:text-white">{related.title}</span>
+          <span class="mt-2 block text-xs font-medium leading-6 text-slate-500 dark:text-slate-400">{related.description}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</article>
