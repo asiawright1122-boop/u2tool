@@ -1,39 +1,35 @@
 {
-  "detailed_description": "Audio to Base64 工具使用 Base64 MIME 传输编码对音频文件进行二进制到文本的编码。此过程将原始音频数据（WAV、MP3、OGG 等）转换为 64 字符 ASCII 字符串表示，使二进制音频内容能在为文本处理设计的系统上安全传输。开发者在以下场景需要此工具：通过 data URL 将音频直接嵌入 HTML5 <audio> 标签、在 JSON/XML 载荷中存储压缩音频、或绕过 API 端点的二进制限制。工具利用 JavaScript 的 FileReader API 异步读取客户端文件，通过 Base64 编码算法处理音频缓冲区——使用 RFC 4648 标准将 3 字节二进制块映射为 4 字符 ASCII 块——并输出带有适当 MIME 类型的完整 data URI。高级用户可手动覆盖 MIME 类型并查看转换过程中的填充字符处理。",
+  "detailed_description": "音频转 Base64 工具可以在浏览器中读取音频文件并生成 Base64 文本。你可以点击上传或拖放音频文件，页面会显示文件名、MIME 类型、原始大小和 Base64 文本长度，并提供音频播放器预览。勾选项可控制输出是否包含 Data URI 前缀。生成结果显示在只读文本框中，可以复制；清除按钮会移除当前文件、输出和预览链接。支持 MP3、WAV、OGG、WebM、AAC、FLAC 和 M4A 等浏览器识别的音频类型。",
   "usage_steps": [
-    "将音频文件拖放到上传区域，或点击「Choose File」从设备中选择。",
-    "确认上传框下方显示的检测到的音频格式（WAV/MP3/OGG）。",
-    "切换「Include Data URI Prefix」以在 Base64 字符串前添加 'data:audio/[format];base64,'。",
-    "点击「Convert to Base64」按钮启动客户端处理。",
-    "从输出文本区域复制生成的 Base64 字符串，或点击「Download Result」保存为 .txt。",
-    "调试时启用「Show Encoding Process」查看字节块和对应的 Base64 字符映射。"
+    "点击上传区域选择音频文件，或将文件拖放到页面中。",
+    "确认文件名、类型、原始大小和音频预览。",
+    "根据需要切换是否包含 Data URI 前缀。",
+    "在输出框中查看生成的 Base64 内容。",
+    "点击复制保存输出文本。",
+    "点击清除移除当前文件并重新开始。"
   ],
   "usage_examples": [
-    "将 30 秒的 WAV 通知音效直接内联到 HTML 邮件模板中，避免外部文件请求。",
-    "为需要 Base64 编码 JSON 载荷的 API 提交准备音频验证码样本。",
-    "将 MP3 背景音乐嵌入单文件 HTML5 游戏，用于在没有资源托管的平台分发。",
-    "通过比较原始文件和 Base64 解码文件的十六进制转储来调试音频编码问题以验证数据完整性。"
+    "把一个短 MP3 提示音转换成可复制的 Base64 文本。",
+    "生成带 Data URI 前缀的音频字符串用于网页测试。",
+    "预览上传的音频后再复制转换结果。",
+    "比较包含和不包含 Data URI 前缀的输出差异。"
   ],
   "faqs": [
     {
-      "question": "Audio To Base64 是免费的吗？",
-      "answer": "是的，Audio To Base64 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+      "question": "支持哪些音频格式？",
+      "answer": "界面列出 MP3、WAV、OGG、WebM、AAC、FLAC、M4A，并接受浏览器识别的 audio/* 文件。"
     },
     {
-      "question": "使用 Audio To Base64 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+      "question": "可以去掉 Data URI 前缀吗？",
+      "answer": "可以。取消勾选包含 Data URI 前缀即可输出纯 Base64 内容。"
     },
     {
-      "question": "支持哪些格式转换？",
-      "answer": "Audio To Base64 支持多种格式之间的转换。您可以在工具页面查看支持的输入和输出格式。"
+      "question": "可以下载结果吗？",
+      "answer": "不提供下载按钮，但可以复制输出文本。"
     },
     {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Audio To Base64 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
-    },
-    {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Audio To Base64 的处理速度非常快，通常可以在几毫秒内完成。"
+      "question": "会显示音频预览吗？",
+      "answer": "会。选择文件后页面会显示浏览器音频播放器。"
     }
   ]
 }

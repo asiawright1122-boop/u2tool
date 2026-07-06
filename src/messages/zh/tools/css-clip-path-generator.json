@@ -1,39 +1,34 @@
 {
-  "detailed_description": "CSS Clip Path Generator 是一款基于 Web 的可视化图形裁剪路径生成工具，通过交互式界面直接操作 SVG 路径节点或 CSS 基本形状函数（polygon/inset/circle/ellipse）生成精确的 clip-path 属性值。开发者可直观调整多边形顶点坐标、贝塞尔曲线控制点或径向裁剪参数，实时预览元素裁剪效果，并将生成的 CSS 代码无缝集成到前端项目中。该工具解决了传统手动编写 SVG 路径语法（M/L/C/Q/Z 命令）复杂度高、调试困难的问题，特别适用于创建非矩形图文布局、动态形状遮罩或响应式裁剪区域。其核心机制基于 SVGPathElement 的几何变换与 CSSOM 接口交互，支持导出带浏览器前缀的兼容代码，并提供百分比/像素双模式坐标系适配方案。",
+  "detailed_description": "CSS 剪裁路径生成器用于预览和复制 clip-path 样式。页面左侧显示裁剪后的预览图形，右侧提供预设按钮、clip-path 文本框、输出代码块和复制按钮。你可以选择 triangle、diamond、star、circle、inset 等预设，也可以直接编辑文本框中的 clip-path 值。复制按钮会复制完整的 clip-path CSS 声明。页面底部列出 circle、ellipse、polygon 和 inset 的语法说明。该工具不提供图形化节点编辑、额外导出格式、批量流程或坐标模式切换。",
   "usage_steps": [
-    "在工具界面选择基础形状类型（多边形/圆形/椭圆/Inset）",
-    "通过拖拽坐标系中的控制点调整裁剪路径几何形态",
-    "在参数面板手动输入精确坐标值或曲线控制点参数",
-    "切换'路径模式'查看生成的 SVG 路径语法字符串",
-    "选择目标 CSS 属性格式（clip-path: url(...) 或 path(...)）",
-    "点击'导出代码'按钮获取包含浏览器兼容前缀的完整样式"
+    "从预设按钮中选择一个形状，或直接编辑 clip-path 文本框。",
+    "在预览区域查看裁剪效果。",
+    "检查输出代码块中的 clip-path 声明。",
+    "点击复制按钮复制 CSS。",
+    "参考底部语法说明调整 circle、ellipse、polygon 或 inset 值。"
   ],
   "usage_examples": [
-    "为响应式网站创建自适应窗口尺寸的多边形视差滚动效果",
-    "生成商品详情页中不规则形状的图像裁剪蒙版",
-    "开发基于 CSS 动画的路径渐变展开加载指示器",
-    "实现网页组件中动态数据驱动的百分比进度裁剪图形"
+    "选择 triangle 预设生成三角形裁剪效果。",
+    "编辑 polygon 值测试自定义多边形。",
+    "复制 clip-path CSS 到样式表中试用。",
+    "参考 inset 语法制作圆角裁剪区域。"
   ],
   "faqs": [
     {
-      "question": "Css Clip Path Generator 是免费的吗？",
-      "answer": "是的，Css Clip Path Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+      "question": "可以手动编辑 clip-path 吗？",
+      "answer": "可以。文本框可以直接编辑 clip-path 值。"
     },
     {
-      "question": "使用 Css Clip Path Generator 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+      "question": "复制的内容是什么？",
+      "answer": "复制按钮会复制完整的 clip-path CSS 声明。"
     },
     {
-      "question": "可以批量生成吗？",
-      "answer": "是的，Css Clip Path Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+      "question": "有拖拽编辑器吗？",
+      "answer": "没有。当前页面使用预设按钮和文本输入。"
     },
     {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Css Clip Path Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
-    },
-    {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Css Clip Path Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+      "question": "支持哪些语法提示？",
+      "answer": "页面列出 circle、ellipse、polygon 和 inset 的基本写法。"
     }
   ]
 }

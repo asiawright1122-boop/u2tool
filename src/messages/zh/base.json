@@ -1357,11 +1357,11 @@
     },
     "color-shades-generator": {
       "name": "颜色明暗生成器",
-      "description": "从基色生成色调和色调。",
+      "description": "从一个基础颜色生成 5-15 个明暗色阶并复制 CSS 变量。",
       "output": "CSS Output",
       "copy": "复制",
       "seo_title": "免费在线颜色明暗生成器",
-      "seo_description": "使用这款免费在线颜色明暗生成器根据基础颜色生成不同深浅层级，适合配色扩展、设计系统和界面开发。",
+      "seo_description": "选择基础颜色和色阶数量，预览生成的 HEX 色阶，点击单色复制或复制全部 CSS 变量。",
       "baseColor": "基色",
       "numberOfShades": "色调数量：{count}",
       "copyCssVariables": "复制 CSS 变量"
@@ -1609,10 +1609,10 @@
       "confidence": "信心"
     },
     "css-clip-path-generator": {
-      "name": "CSS Clip Path Generator",
-      "description": "使用可视化编辑器创建 CSS 剪辑路径形状。",
-      "seo_title": "免费 CSS 在线剪辑路径生成器",
-      "seo_description": "使用可视化编辑器免费在线创建 CSS 剪辑路径形状。设计多边形、圆形、椭圆形和自定义路径。复制 CSS 代码以实现创意布局。"
+      "name": "CSS剪裁路径生成器",
+      "description": "选择预设或编辑 clip-path 值，预览形状并复制 CSS。",
+      "seo_title": "免费在线CSS剪裁路径生成器",
+      "seo_description": "使用预设形状或手写 clip-path，实时预览裁剪效果，复制 clip-path CSS 代码。"
     },
     "uuid-validator": {
       "name": "UUID Validator",
@@ -2098,9 +2098,9 @@
     },
     "audio-to-base64": {
       "name": "音频转 Base64",
-      "description": "将音频文件转换为 Base64 编码。",
+      "description": "上传或拖放音频文件，生成 Base64 或 Data URI 输出。",
       "seo_title": "免费在线音频转 Base64 工具",
-      "seo_description": "使用这款免费在线音频转 Base64 工具把 MP3、WAV、OGG 等音频文件编码为 Base64，适合嵌入 HTML、JSON 和数据链接。",
+      "seo_description": "选择 MP3、WAV、OGG 等音频文件，预览文件信息和播放器，切换数据 URI 前缀，复制 Base64 输出。",
       "dropzone": "将音频文件拖放到此处或点击上传",
       "acceptedFormats": "支持：MP3、WAV、OGG、WebM、AAC、FLAC",
       "errorNotAudio": "请选择一个音频文件",
@@ -5142,11 +5142,11 @@
     },
     "color-shades-generator": {
       "name": "颜色明暗生成器",
-      "description": "从基础颜色生成颜色色调和色彩。",
+      "description": "从一个基础颜色生成 5-15 个明暗色阶并复制 CSS 变量。",
       "output": "CSS 输出",
       "copy": "复制",
       "seo_title": "免费在线颜色明暗生成器",
-      "seo_description": "免费在线 颜色明暗生成器，助您在浏览器本地快速 根据基础颜色生成不同深浅层级，适合配色扩展、设计系统和界面开发。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
+      "seo_description": "选择基础颜色和色阶数量，预览生成的 HEX 色阶，点击单色复制或复制全部 CSS 变量。",
       "baseColor": "基础颜色",
       "numberOfShades": "色调数量: {count}",
       "copyCssVariables": "复制CSS变量"
@@ -5402,9 +5402,9 @@
     },
     "css-clip-path-generator": {
       "name": "CSS剪裁路径生成器",
-      "description": "使用可视化编辑器创建CSS剪裁路径形状。",
+      "description": "选择预设或编辑 clip-path 值，预览形状并复制 CSS。",
       "seo_title": "免费在线CSS剪裁路径生成器",
-      "seo_description": "免费在线 CSS剪裁路径生成器，助您在浏览器本地快速 使用可视化编辑器在线免费创建CSS剪裁路径形状。设计多边形、圆形、椭圆和自定义路径。复制CSS代码用于创意布局。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。"
+      "seo_description": "使用预设形状或手写 clip-path，实时预览裁剪效果，复制 clip-path CSS 代码。"
     },
     "uuid-validator": {
       "name": "UUID验证器",
@@ -5892,9 +5892,9 @@
     },
     "audio-to-base64": {
       "name": "音频转 Base64",
-      "description": "将音频文件转换为 Base64 编码。",
+      "description": "上传或拖放音频文件，生成 Base64 或 Data URI 输出。",
       "seo_title": "免费在线音频转 Base64 工具",
-      "seo_description": "免费在线音频转 Base64 编码工具，快速将 MP3、WAV、OGG 等音频文件转换为 Base64 编码字符串。支持生成可直接嵌入网页音频标签的数据 URI，适合背景音乐内联、网页特效声效和独立应用资源离线嵌入场景。",
+      "seo_description": "选择 MP3、WAV、OGG 等音频文件，预览文件信息和播放器，切换数据 URI 前缀，复制 Base64 输出。",
       "dropzone": "将音频文件拖放到此处或点击上传",
       "acceptedFormats": "支持：MP3、WAV、OGG、WebM、AAC、FLAC",
       "errorNotAudio": "请选择一个音频文件",
@@ -6284,9 +6284,9 @@
     },
     "base-calculator": {
       "name": "基数计算器",
-      "description": "在不同数制下进行计算。",
+      "description": "在二进制、八进制、十进制和十六进制中计算两个数。",
       "seo_title": "免费在线基数计算器 - 进制计算与按位运算",
-      "seo_description": "免费在线 基数计算器，可帮助您在浏览器本地 二进制、八进制、十进制和十六进制之间的进制计算与按位运算，适合编程、电子电路和底层开发学习。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
+      "seo_description": "基数计算器支持二进制、八进制、十进制和十六进制，输入两个数执行加减乘除或 AND/OR/XOR 按位运算。",
       "base": "数制",
       "binary": "二进制",
       "octal": "八进制",
@@ -6304,9 +6304,9 @@
     },
     "color-name-finder": {
       "name": "颜色名称查找器",
-      "description": "查找任何颜色值的最近颜色名称。",
+      "description": "输入 HEX 颜色，查找最接近的命名颜色候选。",
       "seo_title": "免费在线颜色名称查找器",
-      "seo_description": "免费在线 颜色名称查找器，助您在浏览器本地极速 根据十六进制颜色值查找最接近的颜色名称，适合设计取色、配色参考和无障碍检查。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
+      "seo_description": "颜色名称查找器根据十六进制颜色值查找最接近的 5 个颜色名称、HEX 值和距离，并显示色块预览。",
       "inputLabel": "颜色",
       "find": "查找颜色名称",
       "closestColors": "最近颜色",
@@ -9706,9 +9706,9 @@
     },
     "aspect-ratio-calculator-enhanced": {
       "name": "宽高比计算器",
-      "description": "在线计算和转换图片及视频的宽高比。",
+      "description": "输入宽度和高度，计算比例并按预设或锁定比例调整尺寸。",
       "seo_title": "免费在线图片与视频宽高比计算器",
-      "seo_description": "免费在线 宽高比计算器，可帮助您在浏览器本地 换算图片和视频尺寸比例，适合裁剪适配、分辨率换算和媒体制作。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
+      "seo_description": "输入宽高计算尺寸比例，锁定比例并套用 16:9、4:3、1:1、3:2 预设，辅助裁剪前尺寸和分辨率换算。",
       "width": "宽度",
       "height": "高度",
       "ratio": "宽高比",
