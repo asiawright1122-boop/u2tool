@@ -9206,7 +9206,6 @@
       "description": "Write and preview Markdown with live rendering. Export to MD or HTML.",
       "seo_title": "Free Online Markdown Editor with Live Preview",
       "seo_description": "Write and preview Markdown online for free. Live rendering, syntax highlighting, and export to MD or HTML. Perfect for documentation and notes.",
-
       "errorParsingMarkdown": "Error parsing markdown",
       "list": "List",
       "code": "Code",
@@ -15662,7 +15661,19 @@
         "composition": "Composition",
         "aspectRatio": "Aspect Ratio",
         "negativePrompt": "Negative Prompt",
-        "details": "Details"
+        "details": "Details",
+        "llmsTxt": "llms.txt Content",
+        "robotsPolicy": "Policy",
+        "sitemapUrl": "Sitemap URL",
+        "customAgents": "Extra AI Crawlers",
+        "mcpConfig": "MCP JSON Config",
+        "mcpClient": "Client",
+        "serverName": "Server Name",
+        "command": "Command",
+        "argsText": "Arguments",
+        "envText": "Environment Variables",
+        "jsonInput": "JSON Input",
+        "jsonlInput": "JSONL Input"
       },
       "options": {
         "writing": "Writing",
@@ -15708,7 +15719,13 @@
         "vcard3": "vCard 3.0",
         "vcard4": "vCard 4.0",
         "playful": "Playful",
-        "bold": "Bold"
+        "bold": "Bold",
+        "blockTraining": "Block training crawlers",
+        "allowDiscovery": "Allow discovery crawlers",
+        "claude": "Claude Desktop",
+        "codex": "Codex",
+        "cursor": "Cursor",
+        "vscode": "VS Code"
       },
       "results": {
         "totalCost": "Total Cost",
@@ -15792,7 +15809,21 @@
         "duration": "Duration",
         "promptVariants": "Prompt Variants",
         "positivePrompt": "Positive Prompt",
-        "settingNotes": "Setting Notes"
+        "settingNotes": "Setting Notes",
+        "status": "Status",
+        "valid": "Valid",
+        "invalid": "Invalid",
+        "validLines": "Valid Lines",
+        "invalidLines": "Invalid Lines",
+        "issues": "Issues",
+        "warnings": "Warnings",
+        "links": "Links",
+        "servers": "Servers",
+        "fixes": "Fixes",
+        "normalized": "Normalized",
+        "crawlers": "Crawlers",
+        "policy": "Policy",
+        "client": "Client"
       },
       "placeholders": {
         "aiTopic": "launch copy for an online tools site",
@@ -15846,7 +15877,15 @@
         "promptLighting": "soft morning light",
         "promptComposition": "wide angle, centered subject",
         "negativePrompt": "blurry, low quality, distorted hands, extra fingers",
-        "promptDetails": "high detail, realistic materials, subtle color contrast"
+        "promptDetails": "high detail, realistic materials, subtle color contrast",
+        "llmsTxtContent": "# U2Tool\n\n> Free browser-based tools for developers, marketers, and operators.\n\n- [Home](https://www.u2tool.com)\n- [Docs](https://www.u2tool.com/docs)",
+        "customAgents": "ChatGPT-User\nExampleBot",
+        "mcpConfig": "{\n  \"mcpServers\": {\n    \"filesystem\": {\n      \"command\": \"npx\",\n      \"args\": [\"@modelcontextprotocol/server-filesystem\", \"/tmp\"]\n    }\n  }\n}",
+        "mcpArgs": "@modelcontextprotocol/server-filesystem /tmp",
+        "mcpEnv": "API_KEY=${API_KEY}",
+        "jsonRepairInput": "{ foo: 'bar', trailing: true, }",
+        "jsonlInput": "{\"event\":\"signup\",\"userId\":123}\n{\"event\":\"purchase\",\"amount\":49}",
+        "sitemapUrl": "https://www.u2tool.com/sitemap.xml"
       }
     },
     "calorie-deficit-calculator": {
@@ -16112,6 +16151,60 @@
       "description": "Simulate the 48-team 2026 FIFA World Cup. Predict group match scores, calculate the best 3rd-place teams ranking, and forecast the entire knockout stage.",
       "seo_title": "World Cup 2026 Calculator",
       "seo_description": "Simulate the 48-team 2026 FIFA World Cup. Predict group match scores, calculate the best 3rd-place teams ranking, and forecast the entire knockout stage."
+    },
+    "ai-token-calculator": {
+      "name": "AI Token Calculator",
+      "description": "Estimate LLM input and output token costs across popular AI models.",
+      "seo_title": "Free AI Token Calculator Online",
+      "seo_description": "Estimate LLM input and output token costs across popular AI models. Use this free online tool in your browser with no signup required."
+    },
+    "llms-txt-validator": {
+      "name": "LLMs.txt Validator",
+      "description": "Check an llms.txt file for title, summary, and Markdown link issues.",
+      "seo_title": "Free LLMs.txt Validator Online",
+      "seo_description": "Check an llms.txt file for title, summary, and Markdown link issues. Use this free online tool in your browser with no signup required."
+    },
+    "ai-robots-txt-generator": {
+      "name": "AI Robots.txt Generator",
+      "description": "Generate robots.txt rules for common AI crawlers and discovery bots.",
+      "seo_title": "Free AI Robots.txt Generator Online",
+      "seo_description": "Generate robots.txt rules for common AI crawlers and discovery bots. Use this free online tool in your browser with no signup required."
+    },
+    "mcp-json-validator": {
+      "name": "MCP JSON Validator",
+      "description": "Validate MCP server JSON configs and spot missing commands, args, or env shapes.",
+      "seo_title": "Free MCP JSON Validator Online",
+      "seo_description": "Validate MCP server JSON configs and spot missing commands, args, or env shapes. Use this free online tool in your browser with no signup required."
+    },
+    "mcp-server-config-generator": {
+      "name": "MCP Server Config Generator",
+      "description": "Build copy-ready MCP server JSON config snippets for popular clients.",
+      "seo_title": "Free MCP Server Config Generator Online",
+      "seo_description": "Build copy-ready MCP server JSON config snippets for popular clients. Use this free online tool in your browser with no signup required."
+    },
+    "json-repair": {
+      "name": "JSON Repair",
+      "description": "Repair common malformed JSON issues such as comments, single quotes, and trailing commas.",
+      "seo_title": "Free JSON Repair Online",
+      "seo_description": "Repair common malformed JSON issues such as comments, single quotes, and trailing commas. Use this free online tool in your browser with no signup required."
+    },
+    "jsonl-validator": {
+      "name": "JSONL Validator",
+      "description": "Validate JSON Lines input and identify the exact line with invalid JSON.",
+      "seo_title": "Free JSONL Validator Online",
+      "seo_description": "Validate JSON Lines input and identify the exact line with invalid JSON. Use this free online tool in your browser with no signup required."
+    },
+    "har-file-viewer": {
+      "name": "HAR File Viewer",
+      "description": "Inspect HAR files and summarize requests, domains, timing, and HTTP status issues.",
+      "seo_title": "Free HAR File Viewer Online",
+      "seo_description": "Inspect HAR files and summarize requests, domains, timing, and HTTP status issues. Use this free online tool in your browser with no signup required."
+    },
+    "world-cup-2026-bracket-predictor": {
+      "name": "World Cup 2026 Bracket Predictor",
+      "description": "Build a 2026 World Cup knockout bracket and predict each round through the final.",
+      "seo_title": "Free World Cup 2026 Bracket Predictor Online",
+      "seo_description": "Build a 2026 World Cup knockout bracket and predict each round through the final. Use this free online tool in your browser with no signup required."
     }
   }
 }

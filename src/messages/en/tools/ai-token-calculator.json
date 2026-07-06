@@ -1,0 +1,28 @@
+{
+  "detailed_description": "AI Token Calculator helps developers, AI product teams, and operators estimate LLM usage costs before sending a request. Enter input and output token counts, choose a current model preset, and compare the projected spend per request, batch, or repeated workflow. The calculation runs locally, so it is useful for quick pricing reviews, feature planning, prompt budgeting, and sanity-checking usage assumptions before adding a model call to production.",
+  "usage_steps": [
+    "Enter the required values in the form",
+    "Review the calculated or generated result",
+    "Copy the result or use the preview shown",
+    "Adjust values to compare another scenario"
+  ],
+  "usage_examples": [
+    "Use it during a quick review or planning session",
+    "Compare scenarios without creating a spreadsheet",
+    "Create copy-ready results for reports, campaigns, or notes"
+  ],
+  "faqs": [
+    {
+      "question": "AI Token Calculator is free?",
+      "answer": "Yes. The tool runs free in the browser and does not require an account."
+    },
+    {
+      "question": "Does the tool upload my inputs?",
+      "answer": "No. The calculation or generation runs locally in the browser."
+    },
+    {
+      "question": "Is there any important note?",
+      "answer": "Use the result as a practical helper and review it before publishing or relying on it."
+    }
+  ]
+}

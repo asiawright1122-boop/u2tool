@@ -9641,7 +9641,6 @@
       "description": "Schreiben und Vorschau von Markdown mit Live-Rendering. Export als MD oder HTML.",
       "seo_title": "Kostenloser Online Markdown-Editor mit Live-Vorschau",
       "seo_description": "Schreiben und Vorschau von Markdown online kostenlos. Live-Rendering, Syntax-Highlighting und Export in MD oder HTML. Perfekt für Dokumentation und Notizen.",
-
       "errorParsingMarkdown": "Fehler beim Parsen von Markdown",
       "list": "Liste",
       "code": "Code",
@@ -15893,7 +15892,19 @@
         "composition": "Komposition",
         "aspectRatio": "Seitenverhältnis",
         "negativePrompt": "Negativer Prompt",
-        "details": "Details"
+        "details": "Details",
+        "llmsTxt": "llms.txt Inhalt",
+        "robotsPolicy": "Richtlinie",
+        "sitemapUrl": "Sitemap URL",
+        "customAgents": "Zusaetzliche KI-Crawler",
+        "mcpConfig": "MCP JSON Konfiguration",
+        "mcpClient": "Client",
+        "serverName": "Servername",
+        "command": "Befehl",
+        "argsText": "Argumente",
+        "envText": "Umgebungsvariablen",
+        "jsonInput": "JSON Eingabe",
+        "jsonlInput": "JSONL Eingabe"
       },
       "options": {
         "writing": "Schreiben",
@@ -15939,7 +15950,13 @@
         "vcard3": "vCard 3.0",
         "vcard4": "vCard 4.0",
         "playful": "Verspielt",
-        "bold": "Markant"
+        "bold": "Markant",
+        "blockTraining": "Training-Crawler blockieren",
+        "allowDiscovery": "Discovery-Crawler erlauben",
+        "claude": "Claude Desktop",
+        "codex": "Codex",
+        "cursor": "Cursor",
+        "vscode": "VS Code"
       },
       "results": {
         "totalCost": "Gesamtkosten",
@@ -16023,7 +16040,21 @@
         "duration": "Dauer",
         "promptVariants": "Prompt-Varianten",
         "positivePrompt": "Positiver Prompt",
-        "settingNotes": "Einstellungshinweise"
+        "settingNotes": "Einstellungshinweise",
+        "status": "Status",
+        "valid": "Gueltig",
+        "invalid": "Ungueltig",
+        "validLines": "Gueltige Zeilen",
+        "invalidLines": "Ungueltige Zeilen",
+        "issues": "Probleme",
+        "warnings": "Warnungen",
+        "links": "Links",
+        "servers": "Server",
+        "fixes": "Korrekturen",
+        "normalized": "Normalisiert",
+        "crawlers": "Crawler",
+        "policy": "Richtlinie",
+        "client": "Client"
       },
       "placeholders": {
         "aiTopic": "Launch-Text für eine Online-Tool-Website",
@@ -16077,7 +16108,15 @@
         "promptLighting": "weiches Morgenlicht",
         "promptComposition": "Weitwinkel, zentriertes Motiv",
         "negativePrompt": "unscharf, geringe Qualität, verzerrte Hände, zusätzliche Finger",
-        "promptDetails": "hohe Detailtreue, realistische Materialien, dezenter Farbkontrast"
+        "promptDetails": "hohe Detailtreue, realistische Materialien, dezenter Farbkontrast",
+        "llmsTxtContent": "# U2Tool\n\n> Free browser-based tools for developers, marketers, and operators.\n\n- [Home](https://www.u2tool.com)\n- [Docs](https://www.u2tool.com/docs)",
+        "customAgents": "ChatGPT-User\nExampleBot",
+        "mcpConfig": "{\n  \"mcpServers\": {\n    \"filesystem\": {\n      \"command\": \"npx\",\n      \"args\": [\"@modelcontextprotocol/server-filesystem\", \"/tmp\"]\n    }\n  }\n}",
+        "mcpArgs": "@modelcontextprotocol/server-filesystem /tmp",
+        "mcpEnv": "API_KEY=${API_KEY}",
+        "jsonRepairInput": "{ foo: 'bar', trailing: true, }",
+        "jsonlInput": "{\"event\":\"signup\",\"userId\":123}\n{\"event\":\"purchase\",\"amount\":49}",
+        "sitemapUrl": "https://www.u2tool.com/sitemap.xml"
       }
     },
     "calorie-deficit-calculator": {
@@ -16343,6 +16382,60 @@
       "description": "Simulieren Sie die FIFA Fussball-Weltmeisterschaft 2026 mit 48 Teams. Sagen Sie Gruppenspiele voraus, berechnen Sie die Tabelle der besten Gruppendritten und prognostizieren Sie die K.-o.-Runde.",
       "seo_title": "Weltmeisterschaft 2026 Rechner",
       "seo_description": "Simulieren Sie die FIFA Fussball-Weltmeisterschaft 2026 mit 48 Teams. Sagen Sie Gruppenspiele voraus, berechnen Sie die Tabelle der besten Gruppendritten und prognostizieren Sie die K.-o.-Runde."
+    },
+    "ai-token-calculator": {
+      "name": "KI Token Kostenrechner",
+      "description": "Schaetze Eingabe- und Ausgabetoken-Kosten fuer gaengige KI-Modelle.",
+      "seo_title": "Kostenloser KI Token Kostenrechner",
+      "seo_description": "Schaetze Eingabe- und Ausgabetoken-Kosten fuer gaengige KI-Modelle. Nutze dieses kostenlose Online-Tool direkt im Browser, ohne Anmeldung."
+    },
+    "llms-txt-validator": {
+      "name": "LLMs.txt Pruefer",
+      "description": "Pruefe eine llms.txt-Datei auf Titel, Zusammenfassung und Markdown-Link-Probleme.",
+      "seo_title": "Kostenloser LLMs.txt Pruefer",
+      "seo_description": "Pruefe eine llms.txt-Datei auf Titel, Zusammenfassung und Markdown-Link-Probleme. Nutze dieses kostenlose Online-Tool direkt im Browser, ohne Anmeldung."
+    },
+    "ai-robots-txt-generator": {
+      "name": "Generator fuer KI-Robots.txt",
+      "description": "Erzeuge robots.txt-Regeln fuer gaengige KI-Crawler und Discovery-Bots.",
+      "seo_title": "Kostenloser Generator fuer KI-Robots.txt",
+      "seo_description": "Erzeuge robots.txt-Regeln fuer gaengige KI-Crawler und Discovery-Bots. Nutze dieses kostenlose Online-Tool direkt im Browser, ohne Anmeldung."
+    },
+    "mcp-json-validator": {
+      "name": "MCP JSON Pruefer",
+      "description": "Pruefe MCP-Server-JSON-Konfigurationen auf Befehle, Argumente und Env-Strukturen.",
+      "seo_title": "Kostenloser MCP JSON Pruefer",
+      "seo_description": "Pruefe MCP-Server-JSON-Konfigurationen auf Befehle, Argumente und Env-Strukturen. Nutze dieses kostenlose Online-Tool direkt im Browser, ohne Anmeldung."
+    },
+    "mcp-server-config-generator": {
+      "name": "MCP Server-Konfigurationsgenerator",
+      "description": "Erstelle kopierfertige MCP-Server-JSON-Snippets fuer gaengige Clients.",
+      "seo_title": "Kostenloser MCP Server-Konfigurationsgenerator",
+      "seo_description": "Erstelle kopierfertige MCP-Server-JSON-Snippets fuer gaengige Clients. Nutze dieses kostenlose Online-Tool direkt im Browser, ohne Anmeldung."
+    },
+    "json-repair": {
+      "name": "JSON Reparatur",
+      "description": "Repariere haeufige JSON-Fehler wie Kommentare, einfache Anfuehrungszeichen und Endkommas.",
+      "seo_title": "Kostenloser JSON Reparatur",
+      "seo_description": "Repariere haeufige JSON-Fehler wie Kommentare, einfache Anfuehrungszeichen und Endkommas. Nutze dieses kostenlose Online-Tool direkt im Browser, ohne Anmeldung."
+    },
+    "jsonl-validator": {
+      "name": "JSONL Pruefer",
+      "description": "Pruefe JSON-Lines-Eingaben und finde die genaue Zeile mit ungueltigem JSON.",
+      "seo_title": "Kostenloser JSONL Pruefer",
+      "seo_description": "Pruefe JSON-Lines-Eingaben und finde die genaue Zeile mit ungueltigem JSON. Nutze dieses kostenlose Online-Tool direkt im Browser, ohne Anmeldung."
+    },
+    "har-file-viewer": {
+      "name": "HAR Datei Viewer",
+      "description": "Untersuche HAR-Dateien und fasse Requests, Domains, Zeiten und HTTP-Statusprobleme zusammen.",
+      "seo_title": "Kostenloser HAR Datei Viewer",
+      "seo_description": "Untersuche HAR-Dateien und fasse Requests, Domains, Zeiten und HTTP-Statusprobleme zusammen. Nutze dieses kostenlose Online-Tool direkt im Browser, ohne Anmeldung."
+    },
+    "world-cup-2026-bracket-predictor": {
+      "name": "WM 2026 Turnierbaum Prognose",
+      "description": "Erstelle einen K.-o.-Turnierbaum fuer die WM 2026 und tippe jede Runde bis zum Finale.",
+      "seo_title": "Kostenloser WM 2026 Turnierbaum Prognose",
+      "seo_description": "Erstelle einen K.-o.-Turnierbaum fuer die WM 2026 und tippe jede Runde bis zum Finale. Nutze dieses kostenlose Online-Tool direkt im Browser, ohne Anmeldung."
     }
   }
 }

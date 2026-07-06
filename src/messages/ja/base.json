@@ -9201,7 +9201,6 @@
       "description": "Markdown を書いてリアルタイムでプレビュー。MD または HTML にエクスポート。",
       "seo_title": "無料オンライン Markdown エディタ",
       "seo_description": "無料オンラインのMarkdown エディター。ブラウザ上で Markdownを書くとプレビューがリアルタイムで表示される無料のオンラインツール。MDまたはHTMLとしてエクスポート可能です を迅速かつ安全に行うことができます。ダウンロードや面倒な会員登録は一切不要で100%ローカル実行。プライバシーを完全に保護しながら、作業効率を大幅に向上させる優れたツールです。",
-
       "errorParsingMarkdown": "Markdownの解析エラー",
       "list": "リスト",
       "code": "コード",
@@ -15657,7 +15656,19 @@
         "composition": "構図",
         "aspectRatio": "アスペクト比",
         "negativePrompt": "ネガティブプロンプト",
-        "details": "詳細"
+        "details": "詳細",
+        "llmsTxt": "llms.txt 内容",
+        "robotsPolicy": "ポリシー",
+        "sitemapUrl": "Sitemap URL",
+        "customAgents": "追加 AI クローラー",
+        "mcpConfig": "MCP JSON 設定",
+        "mcpClient": "クライアント",
+        "serverName": "サーバー名",
+        "command": "コマンド",
+        "argsText": "引数",
+        "envText": "環境変数",
+        "jsonInput": "JSON 入力",
+        "jsonlInput": "JSONL 入力"
       },
       "options": {
         "writing": "文章作成",
@@ -15703,7 +15714,13 @@
         "vcard3": "vCard 3.0",
         "vcard4": "vCard 4.0",
         "playful": "遊び心",
-        "bold": "大胆"
+        "bold": "大胆",
+        "blockTraining": "学習クローラーをブロック",
+        "allowDiscovery": "発見クローラーを許可",
+        "claude": "Claude Desktop",
+        "codex": "Codex",
+        "cursor": "Cursor",
+        "vscode": "VS Code"
       },
       "results": {
         "totalCost": "総コスト",
@@ -15787,7 +15804,21 @@
         "duration": "所要時間",
         "promptVariants": "プロンプト案",
         "positivePrompt": "ポジティブプロンプト",
-        "settingNotes": "設定メモ"
+        "settingNotes": "設定メモ",
+        "status": "状態",
+        "valid": "有効",
+        "invalid": "無効",
+        "validLines": "有効な行",
+        "invalidLines": "無効な行",
+        "issues": "問題",
+        "warnings": "警告",
+        "links": "リンク",
+        "servers": "サーバー",
+        "fixes": "修正",
+        "normalized": "整形結果",
+        "crawlers": "クローラー",
+        "policy": "ポリシー",
+        "client": "クライアント"
       },
       "placeholders": {
         "aiTopic": "オンラインツールサイトのローンチ文",
@@ -15841,7 +15872,15 @@
         "promptLighting": "柔らかな朝の光",
         "promptComposition": "広角、中央に被写体",
         "negativePrompt": "ぼやけ、低品質、手の歪み、余分な指",
-        "promptDetails": "高精細、リアルな質感、繊細な色のコントラスト"
+        "promptDetails": "高精細、リアルな質感、繊細な色のコントラスト",
+        "llmsTxtContent": "# U2Tool\n\n> Free browser-based tools for developers, marketers, and operators.\n\n- [Home](https://www.u2tool.com)\n- [Docs](https://www.u2tool.com/docs)",
+        "customAgents": "ChatGPT-User\nExampleBot",
+        "mcpConfig": "{\n  \"mcpServers\": {\n    \"filesystem\": {\n      \"command\": \"npx\",\n      \"args\": [\"@modelcontextprotocol/server-filesystem\", \"/tmp\"]\n    }\n  }\n}",
+        "mcpArgs": "@modelcontextprotocol/server-filesystem /tmp",
+        "mcpEnv": "API_KEY=${API_KEY}",
+        "jsonRepairInput": "{ foo: 'bar', trailing: true, }",
+        "jsonlInput": "{\"event\":\"signup\",\"userId\":123}\n{\"event\":\"purchase\",\"amount\":49}",
+        "sitemapUrl": "https://www.u2tool.com/sitemap.xml"
       }
     },
     "calorie-deficit-calculator": {
@@ -16107,6 +16146,60 @@
       "description": "48か国が参加する2026 FIFAワールドカップをシミュレートします。グループステージのスコア予測、各組3位の順位計算、そして決勝トーナメントの全展開を予想できます。",
       "seo_title": "ワールドカップ2026 シミュレーター",
       "seo_description": "48か国が参加する2026 FIFAワールドカップをシミュレートします。グループステージのスコア予測、各組3位の順位計算、そして決勝トーナメントの全展開を予想できます。"
+    },
+    "ai-token-calculator": {
+      "name": "AI トークン料金計算機",
+      "description": "主要な AI モデルの入力と出力トークン費用を見積もります。",
+      "seo_title": "無料オンライン AI トークン料金計算機",
+      "seo_description": "主要な AI モデルの入力と出力トークン費用を見積もります。 ブラウザで無料で使え、登録は不要です。"
+    },
+    "llms-txt-validator": {
+      "name": "LLMs.txt バリデーター",
+      "description": "llms.txt のタイトル、要約、Markdown リンクの問題を確認します。",
+      "seo_title": "無料オンライン LLMs.txt バリデーター",
+      "seo_description": "llms.txt のタイトル、要約、Markdown リンクの問題を確認します。 ブラウザで無料で使え、登録は不要です。"
+    },
+    "ai-robots-txt-generator": {
+      "name": "AI Robots.txt 生成ツール",
+      "description": "主要な AI クローラーと検索ボット向けの robots.txt ルールを生成します。",
+      "seo_title": "無料オンライン AI Robots.txt 生成ツール",
+      "seo_description": "主要な AI クローラーと検索ボット向けの robots.txt ルールを生成します。 ブラウザで無料で使え、登録は不要です。"
+    },
+    "mcp-json-validator": {
+      "name": "MCP JSON バリデーター",
+      "description": "MCP サーバー JSON 設定を検証し、コマンドや引数、環境変数の問題を見つけます。",
+      "seo_title": "無料オンライン MCP JSON バリデーター",
+      "seo_description": "MCP サーバー JSON 設定を検証し、コマンドや引数、環境変数の問題を見つけます。 ブラウザで無料で使え、登録は不要です。"
+    },
+    "mcp-server-config-generator": {
+      "name": "MCP サーバー設定生成ツール",
+      "description": "主要クライアント向けにコピーしやすい MCP サーバー JSON 設定を作成します。",
+      "seo_title": "無料オンライン MCP サーバー設定生成ツール",
+      "seo_description": "主要クライアント向けにコピーしやすい MCP サーバー JSON 設定を作成します。 ブラウザで無料で使え、登録は不要です。"
+    },
+    "json-repair": {
+      "name": "JSON 修復ツール",
+      "description": "コメント、シングルクォート、末尾カンマなど一般的な JSON 問題を修復します。",
+      "seo_title": "無料オンライン JSON 修復ツール",
+      "seo_description": "コメント、シングルクォート、末尾カンマなど一般的な JSON 問題を修復します。 ブラウザで無料で使え、登録は不要です。"
+    },
+    "jsonl-validator": {
+      "name": "JSONL バリデーター",
+      "description": "JSON Lines 入力を検証し、無効な JSON の行番号を特定します。",
+      "seo_title": "無料オンライン JSONL バリデーター",
+      "seo_description": "JSON Lines 入力を検証し、無効な JSON の行番号を特定します。 ブラウザで無料で使え、登録は不要です。"
+    },
+    "har-file-viewer": {
+      "name": "HAR ファイルビューア",
+      "description": "HAR ファイルを調べ、リクエスト、ドメイン、時間、HTTP 状態の問題を要約します。",
+      "seo_title": "無料オンライン HAR ファイルビューア",
+      "seo_description": "HAR ファイルを調べ、リクエスト、ドメイン、時間、HTTP 状態の問題を要約します。 ブラウザで無料で使え、登録は不要です。"
+    },
+    "world-cup-2026-bracket-predictor": {
+      "name": "2026 ワールドカップ勝敗予想ツール",
+      "description": "2026 ワールドカップの決勝トーナメント表を作り、決勝まで予想します。",
+      "seo_title": "無料オンライン 2026 ワールドカップ勝敗予想ツール",
+      "seo_description": "2026 ワールドカップの決勝トーナメント表を作り、決勝まで予想します。 ブラウザで無料で使え、登録は不要です。"
     }
   }
 }

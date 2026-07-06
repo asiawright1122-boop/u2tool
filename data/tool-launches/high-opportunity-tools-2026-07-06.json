@@ -1,0 +1,463 @@
+{
+  "tools": [
+    {
+      "slug": "ai-token-calculator",
+      "category": "development",
+      "icon": "calculator",
+      "component": "AiTokenCalculator",
+      "popular": true,
+      "search_intent": "ai token cost calculator",
+      "aliases": ["llm token cost calculator", "openai token calculator", "claude token cost calculator"],
+      "locales": {
+        "en": {
+          "name": "AI Token Calculator",
+          "description": "Estimate LLM input and output token costs across popular AI models."
+        },
+        "zh": {
+          "name": "AI Token 费用计算器",
+          "description": "按输入和输出 token 估算常见 AI 模型的调用费用。"
+        },
+        "ja": {
+          "name": "AI トークン料金計算機",
+          "description": "主要な AI モデルの入力と出力トークン費用を見積もります。"
+        },
+        "ko": {
+          "name": "AI 토큰 비용 계산기",
+          "description": "주요 AI 모델의 입력 및 출력 토큰 비용을 추정합니다."
+        },
+        "es": {
+          "name": "Calculadora de coste de tokens de IA",
+          "description": "Estima el coste de tokens de entrada y salida en modelos de IA populares."
+        },
+        "pt": {
+          "name": "Calculadora de custo de tokens de IA",
+          "description": "Estime custos de tokens de entrada e saída em modelos de IA populares."
+        },
+        "fr": {
+          "name": "Calculateur de cout de tokens IA",
+          "description": "Estimez le cout des tokens d'entree et de sortie pour les modeles IA courants."
+        },
+        "de": {
+          "name": "KI Token Kostenrechner",
+          "description": "Schaetze Eingabe- und Ausgabetoken-Kosten fuer gaengige KI-Modelle."
+        },
+        "ru": {
+          "name": "Калькулятор стоимости AI токенов",
+          "description": "Оценивайте стоимость входных и выходных токенов для популярных моделей AI."
+        },
+        "ar": {
+          "name": "حاسبة تكلفة رموز الذكاء الاصطناعي",
+          "description": "قدّر تكلفة رموز الإدخال والإخراج في نماذج الذكاء الاصطناعي الشائعة."
+        }
+      }
+    },
+    {
+      "slug": "llms-txt-validator",
+      "category": "development",
+      "icon": "file-text",
+      "component": "PopularUtilityTool",
+      "popular": true,
+      "search_intent": "llms.txt validator",
+      "aliases": ["llms txt checker", "llms.txt checker", "llms.txt format validator"],
+      "locales": {
+        "en": {
+          "name": "LLMs.txt Validator",
+          "description": "Check an llms.txt file for title, summary, and Markdown link issues."
+        },
+        "zh": {
+          "name": "LLMs.txt 校验器",
+          "description": "检查 llms.txt 文件中的标题、摘要和 Markdown 链接问题。"
+        },
+        "ja": {
+          "name": "LLMs.txt バリデーター",
+          "description": "llms.txt のタイトル、要約、Markdown リンクの問題を確認します。"
+        },
+        "ko": {
+          "name": "LLMs.txt 검사기",
+          "description": "llms.txt 파일의 제목, 요약, Markdown 링크 문제를 확인합니다."
+        },
+        "es": {
+          "name": "Validador de LLMs.txt",
+          "description": "Revisa un archivo llms.txt y detecta problemas de titulo, resumen y enlaces Markdown."
+        },
+        "pt": {
+          "name": "Validador de LLMs.txt",
+          "description": "Verifique um arquivo llms.txt e encontre problemas de titulo, resumo e links Markdown."
+        },
+        "fr": {
+          "name": "Validateur LLMs.txt",
+          "description": "Verifiez un fichier llms.txt et reperez les problemes de titre, resume et liens Markdown."
+        },
+        "de": {
+          "name": "LLMs.txt Pruefer",
+          "description": "Pruefe eine llms.txt-Datei auf Titel, Zusammenfassung und Markdown-Link-Probleme."
+        },
+        "ru": {
+          "name": "Валидатор LLMs.txt",
+          "description": "Проверяйте файл llms.txt на ошибки заголовка, описания и Markdown-ссылок."
+        },
+        "ar": {
+          "name": "مدقق LLMs.txt",
+          "description": "افحص ملف llms.txt لاكتشاف مشكلات العنوان والملخص وروابط Markdown."
+        }
+      }
+    },
+    {
+      "slug": "ai-robots-txt-generator",
+      "category": "generators",
+      "icon": "shield",
+      "component": "PopularUtilityTool",
+      "popular": true,
+      "search_intent": "ai robots.txt generator",
+      "aliases": ["ai crawler robots txt", "block ai crawlers robots.txt", "gptbot robots.txt generator"],
+      "locales": {
+        "en": {
+          "name": "AI Robots.txt Generator",
+          "description": "Generate robots.txt rules for common AI crawlers and discovery bots."
+        },
+        "zh": {
+          "name": "AI Robots.txt 生成器",
+          "description": "为常见 AI 爬虫和发现类机器人生成 robots.txt 规则。"
+        },
+        "ja": {
+          "name": "AI Robots.txt 生成ツール",
+          "description": "主要な AI クローラーと検索ボット向けの robots.txt ルールを生成します。"
+        },
+        "ko": {
+          "name": "AI Robots.txt 생성기",
+          "description": "일반적인 AI 크롤러와 검색 봇을 위한 robots.txt 규칙을 생성합니다."
+        },
+        "es": {
+          "name": "Generador de Robots.txt para IA",
+          "description": "Genera reglas robots.txt para rastreadores de IA y bots de descubrimiento comunes."
+        },
+        "pt": {
+          "name": "Gerador de Robots.txt para IA",
+          "description": "Gere regras robots.txt para rastreadores de IA e bots de descoberta comuns."
+        },
+        "fr": {
+          "name": "Generateur Robots.txt pour IA",
+          "description": "Generez des regles robots.txt pour les robots IA et les bots de decouverte courants."
+        },
+        "de": {
+          "name": "Generator fuer KI-Robots.txt",
+          "description": "Erzeuge robots.txt-Regeln fuer gaengige KI-Crawler und Discovery-Bots."
+        },
+        "ru": {
+          "name": "Генератор Robots.txt для AI",
+          "description": "Создавайте правила robots.txt для популярных AI-краулеров и поисковых ботов."
+        },
+        "ar": {
+          "name": "مولد Robots.txt للذكاء الاصطناعي",
+          "description": "أنشئ قواعد robots.txt لزواحف الذكاء الاصطناعي وروبوتات الاكتشاف الشائعة."
+        }
+      }
+    },
+    {
+      "slug": "mcp-json-validator",
+      "category": "development",
+      "icon": "braces",
+      "component": "PopularUtilityTool",
+      "popular": true,
+      "search_intent": "mcp json validator",
+      "aliases": ["mcp config validator", "mcp json checker", "model context protocol config validator"],
+      "locales": {
+        "en": {
+          "name": "MCP JSON Validator",
+          "description": "Validate MCP server JSON configs and spot missing commands, args, or env shapes."
+        },
+        "zh": {
+          "name": "MCP JSON 校验器",
+          "description": "校验 MCP 服务 JSON 配置，并发现命令、参数或环境变量结构问题。"
+        },
+        "ja": {
+          "name": "MCP JSON バリデーター",
+          "description": "MCP サーバー JSON 設定を検証し、コマンドや引数、環境変数の問題を見つけます。"
+        },
+        "ko": {
+          "name": "MCP JSON 검사기",
+          "description": "MCP 서버 JSON 설정을 검증하고 명령, 인수, 환경 변수 구조 문제를 찾습니다."
+        },
+        "es": {
+          "name": "Validador MCP JSON",
+          "description": "Valida configuraciones JSON de servidores MCP y detecta comandos, argumentos o env mal formados."
+        },
+        "pt": {
+          "name": "Validador MCP JSON",
+          "description": "Valide configs JSON de servidores MCP e encontre comandos, argumentos ou env com formato incorreto."
+        },
+        "fr": {
+          "name": "Validateur MCP JSON",
+          "description": "Validez les configs JSON de serveurs MCP et reperez commandes, arguments ou env mal formes."
+        },
+        "de": {
+          "name": "MCP JSON Pruefer",
+          "description": "Pruefe MCP-Server-JSON-Konfigurationen auf Befehle, Argumente und Env-Strukturen."
+        },
+        "ru": {
+          "name": "Валидатор MCP JSON",
+          "description": "Проверяйте JSON-конфиги MCP-серверов и находите ошибки команд, аргументов и env."
+        },
+        "ar": {
+          "name": "مدقق MCP JSON",
+          "description": "تحقق من إعدادات JSON لخوادم MCP واكتشف مشكلات الأوامر والمعاملات و env."
+        }
+      }
+    },
+    {
+      "slug": "mcp-server-config-generator",
+      "category": "generators",
+      "icon": "server-cog",
+      "component": "PopularUtilityTool",
+      "popular": true,
+      "search_intent": "mcp server config generator",
+      "aliases": ["mcp config generator", "claude mcp config generator", "cursor mcp json generator"],
+      "locales": {
+        "en": {
+          "name": "MCP Server Config Generator",
+          "description": "Build copy-ready MCP server JSON config snippets for popular clients."
+        },
+        "zh": {
+          "name": "MCP 服务配置生成器",
+          "description": "为常见客户端生成可复制的 MCP 服务 JSON 配置片段。"
+        },
+        "ja": {
+          "name": "MCP サーバー設定生成ツール",
+          "description": "主要クライアント向けにコピーしやすい MCP サーバー JSON 設定を作成します。"
+        },
+        "ko": {
+          "name": "MCP 서버 설정 생성기",
+          "description": "주요 클라이언트용 MCP 서버 JSON 설정 스니펫을 바로 복사할 수 있게 만듭니다."
+        },
+        "es": {
+          "name": "Generador de configuracion MCP",
+          "description": "Crea fragmentos JSON listos para copiar para servidores MCP en clientes populares."
+        },
+        "pt": {
+          "name": "Gerador de configuracao MCP",
+          "description": "Crie trechos JSON prontos para copiar para servidores MCP em clientes populares."
+        },
+        "fr": {
+          "name": "Generateur de configuration MCP",
+          "description": "Creez des extraits JSON prets a copier pour serveurs MCP dans les clients courants."
+        },
+        "de": {
+          "name": "MCP Server-Konfigurationsgenerator",
+          "description": "Erstelle kopierfertige MCP-Server-JSON-Snippets fuer gaengige Clients."
+        },
+        "ru": {
+          "name": "Генератор конфигурации MCP",
+          "description": "Создавайте готовые JSON-фрагменты конфигурации MCP-сервера для популярных клиентов."
+        },
+        "ar": {
+          "name": "مولد إعدادات خادم MCP",
+          "description": "أنشئ مقتطفات JSON جاهزة للنسخ لإعداد خوادم MCP في العملاء الشائعين."
+        }
+      }
+    },
+    {
+      "slug": "json-repair",
+      "category": "development",
+      "icon": "wrench",
+      "component": "PopularUtilityTool",
+      "popular": true,
+      "search_intent": "json repair tool",
+      "aliases": ["fix json online", "json fixer", "repair malformed json"],
+      "locales": {
+        "en": {
+          "name": "JSON Repair",
+          "description": "Repair common malformed JSON issues such as comments, single quotes, and trailing commas."
+        },
+        "zh": {
+          "name": "JSON 修复工具",
+          "description": "修复注释、单引号、尾随逗号等常见 JSON 格式问题。"
+        },
+        "ja": {
+          "name": "JSON 修復ツール",
+          "description": "コメント、シングルクォート、末尾カンマなど一般的な JSON 問題を修復します。"
+        },
+        "ko": {
+          "name": "JSON 복구 도구",
+          "description": "주석, 작은따옴표, 후행 쉼표 같은 일반적인 JSON 형식 문제를 수정합니다."
+        },
+        "es": {
+          "name": "Reparador JSON",
+          "description": "Repara problemas comunes de JSON mal formado como comentarios, comillas simples y comas finales."
+        },
+        "pt": {
+          "name": "Reparador de JSON",
+          "description": "Corrija problemas comuns de JSON malformado, como comentarios, aspas simples e virgulas finais."
+        },
+        "fr": {
+          "name": "Reparateur JSON",
+          "description": "Corrigez les problemes JSON courants comme commentaires, apostrophes et virgules finales."
+        },
+        "de": {
+          "name": "JSON Reparatur",
+          "description": "Repariere haeufige JSON-Fehler wie Kommentare, einfache Anfuehrungszeichen und Endkommas."
+        },
+        "ru": {
+          "name": "Восстановление JSON",
+          "description": "Исправляйте типичные ошибки JSON: комментарии, одинарные кавычки и завершающие запятые."
+        },
+        "ar": {
+          "name": "إصلاح JSON",
+          "description": "أصلح مشكلات JSON الشائعة مثل التعليقات وعلامات الاقتباس المفردة والفواصل الزائدة."
+        }
+      }
+    },
+    {
+      "slug": "jsonl-validator",
+      "category": "development",
+      "icon": "file-json",
+      "component": "PopularUtilityTool",
+      "popular": true,
+      "search_intent": "jsonl validator",
+      "aliases": ["json lines validator", "ndjson validator", "jsonl checker"],
+      "locales": {
+        "en": {
+          "name": "JSONL Validator",
+          "description": "Validate JSON Lines input and identify the exact line with invalid JSON."
+        },
+        "zh": {
+          "name": "JSONL 校验器",
+          "description": "校验 JSON Lines 输入，并定位无效 JSON 所在的具体行。"
+        },
+        "ja": {
+          "name": "JSONL バリデーター",
+          "description": "JSON Lines 入力を検証し、無効な JSON の行番号を特定します。"
+        },
+        "ko": {
+          "name": "JSONL 검사기",
+          "description": "JSON Lines 입력을 검증하고 잘못된 JSON 이 있는 줄을 찾아냅니다."
+        },
+        "es": {
+          "name": "Validador JSONL",
+          "description": "Valida entradas JSON Lines e identifica la linea exacta con JSON no valido."
+        },
+        "pt": {
+          "name": "Validador JSONL",
+          "description": "Valide entradas JSON Lines e identifique a linha exata com JSON invalido."
+        },
+        "fr": {
+          "name": "Validateur JSONL",
+          "description": "Validez des entrees JSON Lines et trouvez la ligne exacte avec un JSON invalide."
+        },
+        "de": {
+          "name": "JSONL Pruefer",
+          "description": "Pruefe JSON-Lines-Eingaben und finde die genaue Zeile mit ungueltigem JSON."
+        },
+        "ru": {
+          "name": "Валидатор JSONL",
+          "description": "Проверяйте JSON Lines и находите точную строку с некорректным JSON."
+        },
+        "ar": {
+          "name": "مدقق JSONL",
+          "description": "تحقق من إدخال JSON Lines وحدد السطر الدقيق الذي يحتوي على JSON غير صالح."
+        }
+      }
+    },
+    {
+      "slug": "har-file-viewer",
+      "category": "development",
+      "icon": "activity",
+      "component": "HarFileViewer",
+      "popular": true,
+      "search_intent": "har file viewer",
+      "aliases": ["har viewer online", "har analyzer", "http archive viewer"],
+      "locales": {
+        "en": {
+          "name": "HAR File Viewer",
+          "description": "Inspect HAR files and summarize requests, domains, timing, and HTTP status issues."
+        },
+        "zh": {
+          "name": "HAR 文件查看器",
+          "description": "检查 HAR 文件，并汇总请求、域名、耗时和 HTTP 状态问题。"
+        },
+        "ja": {
+          "name": "HAR ファイルビューア",
+          "description": "HAR ファイルを調べ、リクエスト、ドメイン、時間、HTTP 状態の問題を要約します。"
+        },
+        "ko": {
+          "name": "HAR 파일 뷰어",
+          "description": "HAR 파일을 확인하고 요청, 도메인, 시간, HTTP 상태 문제를 요약합니다."
+        },
+        "es": {
+          "name": "Visor de archivos HAR",
+          "description": "Inspecciona archivos HAR y resume solicitudes, dominios, tiempos y problemas de estado HTTP."
+        },
+        "pt": {
+          "name": "Visualizador de arquivos HAR",
+          "description": "Inspecione arquivos HAR e resuma requisicoes, dominios, tempos e problemas de status HTTP."
+        },
+        "fr": {
+          "name": "Visionneuse de fichiers HAR",
+          "description": "Inspectez les fichiers HAR et resumez requetes, domaines, temps et problemes HTTP."
+        },
+        "de": {
+          "name": "HAR Datei Viewer",
+          "description": "Untersuche HAR-Dateien und fasse Requests, Domains, Zeiten und HTTP-Statusprobleme zusammen."
+        },
+        "ru": {
+          "name": "Просмотр HAR файлов",
+          "description": "Анализируйте HAR-файлы и сводите запросы, домены, задержки и HTTP-статусы."
+        },
+        "ar": {
+          "name": "عارض ملفات HAR",
+          "description": "افحص ملفات HAR ولخّص الطلبات والنطاقات والتوقيت ومشكلات حالة HTTP."
+        }
+      }
+    },
+    {
+      "slug": "world-cup-2026-bracket-predictor",
+      "category": "fun",
+      "icon": "trophy",
+      "component": "WorldCup2026BracketPredictor",
+      "popular": true,
+      "search_intent": "world cup 2026 bracket predictor",
+      "aliases": ["2026 world cup bracket", "world cup bracket maker", "fifa world cup 2026 predictor"],
+      "locales": {
+        "en": {
+          "name": "World Cup 2026 Bracket Predictor",
+          "description": "Build a 2026 World Cup knockout bracket and predict each round through the final."
+        },
+        "zh": {
+          "name": "2026 世界杯淘汰赛预测器",
+          "description": "创建 2026 世界杯淘汰赛签表，并一路预测到决赛。"
+        },
+        "ja": {
+          "name": "2026 ワールドカップ勝敗予想ツール",
+          "description": "2026 ワールドカップの決勝トーナメント表を作り、決勝まで予想します。"
+        },
+        "ko": {
+          "name": "2026 월드컵 토너먼트 예측기",
+          "description": "2026 월드컵 녹아웃 대진표를 만들고 결승까지 각 라운드를 예측합니다."
+        },
+        "es": {
+          "name": "Predictor de cuadro Mundial 2026",
+          "description": "Crea un cuadro eliminatorio del Mundial 2026 y predice cada ronda hasta la final."
+        },
+        "pt": {
+          "name": "Previsor de chave da Copa 2026",
+          "description": "Monte uma chave eliminatoria da Copa 2026 e preveja cada fase ate a final."
+        },
+        "fr": {
+          "name": "Predicteur de tableau Coupe du monde 2026",
+          "description": "Creez un tableau a elimination directe 2026 et predisez chaque tour jusqu'a la finale."
+        },
+        "de": {
+          "name": "WM 2026 Turnierbaum Prognose",
+          "description": "Erstelle einen K.-o.-Turnierbaum fuer die WM 2026 und tippe jede Runde bis zum Finale."
+        },
+        "ru": {
+          "name": "Прогноз сетки ЧМ 2026",
+          "description": "Соберите плей-офф ЧМ 2026 и прогнозируйте каждый раунд до финала."
+        },
+        "ar": {
+          "name": "متوقع جدول كأس العالم 2026",
+          "description": "أنشئ جدول خروج المغلوب لكأس العالم 2026 وتوقع كل جولة حتى النهائي."
+        }
+      }
+    }
+  ]
+}

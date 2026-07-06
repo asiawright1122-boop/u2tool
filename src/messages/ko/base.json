@@ -9201,7 +9201,6 @@
       "description": "Markdown을 작성하고 실시간으로 미리보기. MD 또는 HTML로 내보내기.",
       "seo_title": "무료 온라인 Markdown 편집기 - 실시간 미리보기",
       "seo_description": "무료 온라인 Markdown 편집기을 통해 브라우저에서 안전하고 빠르게 무료로 온라인에서 Markdown을 작성하고 미리보기. 실시간 렌더링, 구문 강조, MD 또는 HTML로 내보내기을(를) 진행할 수 있습니다. 별도의 가입 없이 100% 로컬에서 실행되어 개인정보를 완벽히 보호하며 일상 작업 효율을 높여주는 유용한 도구입니다.",
-
       "errorParsingMarkdown": "Markdown 파싱 오류",
       "list": "목록",
       "code": "코드",
@@ -15657,7 +15656,19 @@
         "composition": "구도",
         "aspectRatio": "화면 비율",
         "negativePrompt": "부정 프롬프트",
-        "details": "세부 정보"
+        "details": "세부 정보",
+        "llmsTxt": "llms.txt 내용",
+        "robotsPolicy": "정책",
+        "sitemapUrl": "Sitemap URL",
+        "customAgents": "추가 AI 크롤러",
+        "mcpConfig": "MCP JSON 설정",
+        "mcpClient": "클라이언트",
+        "serverName": "서버 이름",
+        "command": "명령",
+        "argsText": "인수",
+        "envText": "환경 변수",
+        "jsonInput": "JSON 입력",
+        "jsonlInput": "JSONL 입력"
       },
       "options": {
         "writing": "글쓰기",
@@ -15703,7 +15714,13 @@
         "vcard3": "vCard 3.0",
         "vcard4": "vCard 4.0",
         "playful": "경쾌한",
-        "bold": "강렬한"
+        "bold": "강렬한",
+        "blockTraining": "학습 크롤러 차단",
+        "allowDiscovery": "검색 크롤러 허용",
+        "claude": "Claude Desktop",
+        "codex": "Codex",
+        "cursor": "Cursor",
+        "vscode": "VS Code"
       },
       "results": {
         "totalCost": "총비용",
@@ -15787,7 +15804,21 @@
         "duration": "소요 시간",
         "promptVariants": "프롬프트 변형",
         "positivePrompt": "긍정 프롬프트",
-        "settingNotes": "설정 메모"
+        "settingNotes": "설정 메모",
+        "status": "상태",
+        "valid": "유효",
+        "invalid": "무효",
+        "validLines": "유효한 줄",
+        "invalidLines": "무효한 줄",
+        "issues": "문제",
+        "warnings": "경고",
+        "links": "링크",
+        "servers": "서버",
+        "fixes": "수정",
+        "normalized": "정규화 결과",
+        "crawlers": "크롤러",
+        "policy": "정책",
+        "client": "클라이언트"
       },
       "placeholders": {
         "aiTopic": "온라인 도구 사이트 출시 문구",
@@ -15841,7 +15872,15 @@
         "promptLighting": "부드러운 아침빛",
         "promptComposition": "광각, 중앙 피사체",
         "negativePrompt": "흐림, 낮은 품질, 왜곡된 손, 여분의 손가락",
-        "promptDetails": "높은 디테일, 사실적인 재질, 은은한 색 대비"
+        "promptDetails": "높은 디테일, 사실적인 재질, 은은한 색 대비",
+        "llmsTxtContent": "# U2Tool\n\n> Free browser-based tools for developers, marketers, and operators.\n\n- [Home](https://www.u2tool.com)\n- [Docs](https://www.u2tool.com/docs)",
+        "customAgents": "ChatGPT-User\nExampleBot",
+        "mcpConfig": "{\n  \"mcpServers\": {\n    \"filesystem\": {\n      \"command\": \"npx\",\n      \"args\": [\"@modelcontextprotocol/server-filesystem\", \"/tmp\"]\n    }\n  }\n}",
+        "mcpArgs": "@modelcontextprotocol/server-filesystem /tmp",
+        "mcpEnv": "API_KEY=${API_KEY}",
+        "jsonRepairInput": "{ foo: 'bar', trailing: true, }",
+        "jsonlInput": "{\"event\":\"signup\",\"userId\":123}\n{\"event\":\"purchase\",\"amount\":49}",
+        "sitemapUrl": "https://www.u2tool.com/sitemap.xml"
       }
     },
     "calorie-deficit-calculator": {
@@ -16107,6 +16146,60 @@
       "description": "48개국이 참가하는 2026 FIFA 월드컵을 시뮬레이션합니다. 조별리그 스코어 예측, 조 3위 팀 순위 계산, 그리고 토너먼트의 모든 라운드를 예측해 보세요.",
       "seo_title": "월드컵 2026 계산기",
       "seo_description": "48개국이 참가하는 2026 FIFA 월드컵을 시뮬레이션합니다. 조별리그 스코어 예측, 조 3위 팀 순위 계산, 그리고 토너먼트의 모든 라운드를 예측해 보세요."
+    },
+    "ai-token-calculator": {
+      "name": "AI 토큰 비용 계산기",
+      "description": "주요 AI 모델의 입력 및 출력 토큰 비용을 추정합니다.",
+      "seo_title": "무료 온라인 AI 토큰 비용 계산기",
+      "seo_description": "주요 AI 모델의 입력 및 출력 토큰 비용을 추정합니다. 브라우저에서 무료로 사용할 수 있으며 가입이 필요 없습니다."
+    },
+    "llms-txt-validator": {
+      "name": "LLMs.txt 검사기",
+      "description": "llms.txt 파일의 제목, 요약, Markdown 링크 문제를 확인합니다.",
+      "seo_title": "무료 온라인 LLMs.txt 검사기",
+      "seo_description": "llms.txt 파일의 제목, 요약, Markdown 링크 문제를 확인합니다. 브라우저에서 무료로 사용할 수 있으며 가입이 필요 없습니다."
+    },
+    "ai-robots-txt-generator": {
+      "name": "AI Robots.txt 생성기",
+      "description": "일반적인 AI 크롤러와 검색 봇을 위한 robots.txt 규칙을 생성합니다.",
+      "seo_title": "무료 온라인 AI Robots.txt 생성기",
+      "seo_description": "일반적인 AI 크롤러와 검색 봇을 위한 robots.txt 규칙을 생성합니다. 브라우저에서 무료로 사용할 수 있으며 가입이 필요 없습니다."
+    },
+    "mcp-json-validator": {
+      "name": "MCP JSON 검사기",
+      "description": "MCP 서버 JSON 설정을 검증하고 명령, 인수, 환경 변수 구조 문제를 찾습니다.",
+      "seo_title": "무료 온라인 MCP JSON 검사기",
+      "seo_description": "MCP 서버 JSON 설정을 검증하고 명령, 인수, 환경 변수 구조 문제를 찾습니다. 브라우저에서 무료로 사용할 수 있으며 가입이 필요 없습니다."
+    },
+    "mcp-server-config-generator": {
+      "name": "MCP 서버 설정 생성기",
+      "description": "주요 클라이언트용 MCP 서버 JSON 설정 스니펫을 바로 복사할 수 있게 만듭니다.",
+      "seo_title": "무료 온라인 MCP 서버 설정 생성기",
+      "seo_description": "주요 클라이언트용 MCP 서버 JSON 설정 스니펫을 바로 복사할 수 있게 만듭니다. 브라우저에서 무료로 사용할 수 있으며 가입이 필요 없습니다."
+    },
+    "json-repair": {
+      "name": "JSON 복구 도구",
+      "description": "주석, 작은따옴표, 후행 쉼표 같은 일반적인 JSON 형식 문제를 수정합니다.",
+      "seo_title": "무료 온라인 JSON 복구 도구",
+      "seo_description": "주석, 작은따옴표, 후행 쉼표 같은 일반적인 JSON 형식 문제를 수정합니다. 브라우저에서 무료로 사용할 수 있으며 가입이 필요 없습니다."
+    },
+    "jsonl-validator": {
+      "name": "JSONL 검사기",
+      "description": "JSON Lines 입력을 검증하고 잘못된 JSON 이 있는 줄을 찾아냅니다.",
+      "seo_title": "무료 온라인 JSONL 검사기",
+      "seo_description": "JSON Lines 입력을 검증하고 잘못된 JSON 이 있는 줄을 찾아냅니다. 브라우저에서 무료로 사용할 수 있으며 가입이 필요 없습니다."
+    },
+    "har-file-viewer": {
+      "name": "HAR 파일 뷰어",
+      "description": "HAR 파일을 확인하고 요청, 도메인, 시간, HTTP 상태 문제를 요약합니다.",
+      "seo_title": "무료 온라인 HAR 파일 뷰어",
+      "seo_description": "HAR 파일을 확인하고 요청, 도메인, 시간, HTTP 상태 문제를 요약합니다. 브라우저에서 무료로 사용할 수 있으며 가입이 필요 없습니다."
+    },
+    "world-cup-2026-bracket-predictor": {
+      "name": "2026 월드컵 토너먼트 예측기",
+      "description": "2026 월드컵 녹아웃 대진표를 만들고 결승까지 각 라운드를 예측합니다.",
+      "seo_title": "무료 온라인 2026 월드컵 토너먼트 예측기",
+      "seo_description": "2026 월드컵 녹아웃 대진표를 만들고 결승까지 각 라운드를 예측합니다. 브라우저에서 무료로 사용할 수 있으며 가입이 필요 없습니다."
     }
   }
 }

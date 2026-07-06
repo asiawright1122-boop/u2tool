@@ -70,4 +70,6 @@ export const GENERATORS_TOOLS: Tool[] = [
   { slug: 'faq-generator', category: 'generators', icon: 'file-text', component: 'FaqGenerator', popular: true },
   { slug: 'seo-title-generator', category: 'generators', icon: 'file-text', component: 'SeoTitleGenerator', popular: true },
   { slug: 'tweet-generator', category: 'generators', icon: 'text', component: 'TweetGenerator', popular: true },
+  { slug: 'ai-robots-txt-generator', category: 'generators', icon: 'shield', component: 'PopularUtilityTool', popular: true },
+  { slug: 'mcp-server-config-generator', category: 'generators', icon: 'server-cog', component: 'PopularUtilityTool', popular: true },
 ];
