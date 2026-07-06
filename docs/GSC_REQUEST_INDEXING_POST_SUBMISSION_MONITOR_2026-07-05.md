@@ -303,3 +303,6 @@ Checked at: 2026-07-06 13:35:41 CST
   - `npm run build`
   - `npm run validate:rendered-seo`
 - Local preview smoke confirmed both fixed URLs return `200`, self-canonical HTML, expected localized titles, and no visible occurrence of the repaired English source-title phrase.
+- Deployed commit `fdb0938b` via GitHub Actions run `28770275230`; Cloudflare Worker version `d82442bf-2d6b-48dd-a35b-ef27a39bb2b7`.
+- Post-deploy production smoke at `2026-07-06 13:42:50 CST` confirmed both repaired URLs return `200`, self-canonical HTML, expected localized titles, and no visible occurrence of the repaired English source-title phrase.
+- Post-deploy `npm run validate:search-engine-compliance` passed against production.
