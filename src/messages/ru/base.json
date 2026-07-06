@@ -985,7 +985,8 @@
       "copy": "Копировать",
       "download": "Скачать",
       "outputLabel": "docker-compose.yml",
-      "note": "Примечание. Не забудьте изменить пароли по умолчанию перед использованием в рабочей среде."
+      "note": "Примечание. Не забудьте изменить пароли по умолчанию перед использованием в рабочей среде.",
+      "composeVersion": "Compose Version"
     },
     "package-json-generator": {
       "name": "Генератор package.json",
@@ -1112,7 +1113,8 @@
       "rowSizes": "Размеры строк",
       "row": "Строка {index}",
       "preview": "Предпросмотр",
-      "generatedCss": "Сгенерированный CSS"
+      "generatedCss": "Сгенерированный CSS",
+      "alignItems": "Align Items"
     },
     "css-flexbox-generator": {
       "name": "Генератор CSS Flexbox",
@@ -3265,10 +3267,13 @@
       "shades": "Оттенки",
       "complementary": "Дополнительный",
       "analogous": "Аналогичный",
-      "triadic": "Триадический"
+      "triadic": "Триадический",
+      "baseColor": "Base color",
+      "hexCode": "HEX code"
     },
     "httpStatus": {
-      "search": "Поиск кодов состояния..."
+      "search": "Поиск кодов состояния...",
+      "noResults": "No status codes found."
     },
     "dataUri": {
       "dropzone": "Нажмите или перетащите файл, чтобы создать URI данных.",
@@ -3911,7 +3916,8 @@
       "generate": "Генерировать",
       "clear": "Очистить",
       "copy": "Копировать",
-      "download": "Скачать"
+      "download": "Скачать",
+      "copied": "Copied!"
     },
     "dockerCompose": {
       "version": "Создать версию",
@@ -4060,7 +4066,8 @@
         "MX": "Обмен почтой",
         "NS": "Сервер имен",
         "TXT": "Текстовая запись"
-      }
+      },
+      "noRecords": "No DNS records found."
     },
     "imageResizer": {
       "dropzone": "Нажмите или перетащите изображение, чтобы изменить его размер",
@@ -4897,7 +4904,8 @@
       "copy": "Копировать",
       "download": "Скачать",
       "outputLabel": "docker-compose.yml",
-      "note": "Примечание. Не забудьте изменить пароли по умолчанию перед использованием в рабочей среде."
+      "note": "Примечание. Не забудьте изменить пароли по умолчанию перед использованием в рабочей среде.",
+      "composeVersion": "Compose Version"
     },
     "package-json-generator": {
       "name": "Генератор package.json",
@@ -5055,7 +5063,8 @@
       "preview": "Предварительный просмотр",
       "generatedCss": "Сгенерированный CSS",
       "copied": "Копировано!",
-      "copy": "Копировать"
+      "copy": "Копировать",
+      "alignItems": "Align Items"
     },
     "css-flexbox-generator": {
       "name": "Генератор CSS Flexbox",
@@ -9140,7 +9149,9 @@
       "taxRate": "Ставка налога",
       "total": "Итого",
       "notes": "Примечания",
-      "downloadPdf": "Скачать PDF"
+      "downloadPdf": "Скачать PDF",
+      "discount": "Discount",
+      "discountRate": "Discount Rate"
     },
     "resume": {
       "edit": "Редактировать",
@@ -9246,7 +9257,9 @@
       "backgroundColor": "Цвет фона",
       "transparent": "Прозрачный",
       "downloadPng": "Скачать PNG",
-      "downloadSvg": "Скачать SVG"
+      "downloadSvg": "Скачать SVG",
+      "settings": "Settings",
+      "undo": "Undo"
     },
     "pomodoro": {
       "work": "Работа",
@@ -9624,31 +9637,58 @@
       "name": "PDF в текст",
       "description": "Извлечение текста из PDF-файлов. Поддержка многостраничных документов.",
       "seo_title": "Бесплатный онлайн инструмент PDF to Text для быстрого извлечения текста",
-      "seo_description": "Бесплатный онлайн-инструмент PDF в текст позволяет быстро и безопасно Преобразуйте многостраничные PDF в текст с пометками страниц онлайн. Бесплатно и удобно! Попробуйте сейчас прямо в вашем браузере. Полностью бесплатно, без скачивания и регистрации, работает 100% локально для обеспечения максимальной конфиденциальности и эффективности."
+      "seo_description": "Бесплатный онлайн-инструмент PDF в текст позволяет быстро и безопасно Преобразуйте многостраничные PDF в текст с пометками страниц онлайн. Бесплатно и удобно! Попробуйте сейчас прямо в вашем браузере. Полностью бесплатно, без скачивания и регистрации, работает 100% локально для обеспечения максимальной конфиденциальности и эффективности.",
+      "dropzone": "Drag and drop a PDF file here, or click to select",
+      "extracting": "Extracting text...",
+      "page": "Page",
+      "pages": "pages",
+      "errorParsing": "Failed to parse PDF file",
+      "errorInvalidFile": "Please upload a valid PDF file"
     },
     "word-to-txt": {
       "name": "Word в текст",
       "description": "Конвертация документов Word (.docx) в простой текст.",
       "seo_title": "Бесплатный онлайн инструмент Word to Text для быстрого конвертации",
-      "seo_description": "Бесплатный онлайн-инструмент Word в текст позволяет быстро и безопасно Используйте инструмент «Word в текст» онлайн для быстрых и точных результатов по основной задаче прямо в вашем браузере. Полностью бесплатно, без скачивания и регистрации, работает 100% локально для обеспечения максимальной конфиденциальности и эффективности."
+      "seo_description": "Бесплатный онлайн-инструмент Word в текст позволяет быстро и безопасно Используйте инструмент «Word в текст» онлайн для быстрых и точных результатов по основной задаче прямо в вашем браузере. Полностью бесплатно, без скачивания и регистрации, работает 100% локально для обеспечения максимальной конфиденциальности и эффективности.",
+      "dropzone": "Drag and drop a Word file here, or click to select",
+      "extracting": "Extracting text...",
+      "errorParsing": "Failed to parse Word file",
+      "errorInvalidFile": "Please upload a valid DOCX file"
     },
     "word-to-html": {
       "name": "Конвертер Word в HTML",
       "description": "Конвертируйте документы Word (.docx) в формат HTML, сохраняя форматирование.",
       "seo_title": "Бесплатный онлайн инструмент Word to HTML с сохранением форматирования",
-      "seo_description": "Бесплатный онлайн-инструмент Конвертер Word в HTML позволяет быстро и безопасно Преобразуйте ваши документы Word в HTML с сохранением стиля онлайн бесплатно. Просто и быстро! Попробуйте сейчас прямо в вашем браузере. Полностью бесплатно, без скачивания и регистрации, работает 100% локально для обеспечения максимальной конфиденциальности и эффективности."
+      "seo_description": "Бесплатный онлайн-инструмент Конвертер Word в HTML позволяет быстро и безопасно Преобразуйте ваши документы Word в HTML с сохранением стиля онлайн бесплатно. Просто и быстро! Попробуйте сейчас прямо в вашем браузере. Полностью бесплатно, без скачивания и регистрации, работает 100% локально для обеспечения максимальной конфиденциальности и эффективности.",
+      "dropzone": "Drag and drop a Word file here, or click to select",
+      "converting": "Converting to HTML...",
+      "showCode": "Show Code",
+      "showPreview": "Show Preview",
+      "errorParsing": "Failed to parse Word file",
+      "errorInvalidFile": "Please upload a valid DOCX file"
     },
     "excel-to-csv": {
       "name": "Excel в CSV",
       "description": "Конвертация таблиц Excel в формат CSV.",
       "seo_title": "Бесплатный онлайн инструмент Excel to CSV Конвертация",
-      "seo_description": "Бесплатный онлайн-инструмент Excel в CSV позволяет быстро и безопасно Конвертируйте ваши Excel файлы (.xlsx, .xls) в CSV формат онлайн бесплатно. Просто и быстро! Попробуйте сейчас прямо в вашем браузере. Полностью бесплатно, без скачивания и регистрации, работает 100% локально для обеспечения максимальной конфиденциальности и эффективности."
+      "seo_description": "Бесплатный онлайн-инструмент Excel в CSV позволяет быстро и безопасно Конвертируйте ваши Excel файлы (.xlsx, .xls) в CSV формат онлайн бесплатно. Просто и быстро! Попробуйте сейчас прямо в вашем браузере. Полностью бесплатно, без скачивания и регистрации, работает 100% локально для обеспечения максимальной конфиденциальности и эффективности.",
+      "dropzone": "Drop an Excel file here or click to upload",
+      "converting": "Converting...",
+      "errorInvalidFile": "Please upload an XLS or XLSX file.",
+      "errorParsing": "Could not parse this Excel file."
     },
     "csv-to-excel": {
       "name": "CSV в Excel",
       "description": "Конвертация файлов CSV в формат Excel (.xlsx).",
       "seo_title": "Конвертер CSV в Excel онлайн бесплатно",
-      "seo_description": "Бесплатный онлайн-инструмент CSV в Excel позволяет быстро и безопасно Преобразуйте CSV файлы в формат Excel (.xlsx) онлайн. Бесплатный инструмент с простым интерфейсом. Попробуйте сейчас прямо в вашем браузере. Полностью бесплатно, без скачивания и регистрации, работает 100% локально для обеспечения максимальной конфиденциальности и эффективности."
+      "seo_description": "Бесплатный онлайн-инструмент CSV в Excel позволяет быстро и безопасно Преобразуйте CSV файлы в формат Excel (.xlsx) онлайн. Бесплатный инструмент с простым интерфейсом. Попробуйте сейчас прямо в вашем браузере. Полностью бесплатно, без скачивания и регистрации, работает 100% локально для обеспечения максимальной конфиденциальности и эффективности.",
+      "dropzone": "Drag and drop a CSV file here, or click to select",
+      "converting": "Converting to Excel...",
+      "rows": "rows",
+      "showingFirst": "Showing first",
+      "errorParsing": "Failed to parse CSV file",
+      "errorInvalidFile": "Please upload a valid CSV file",
+      "errorExport": "Failed to export Excel file"
     },
     "loan-calculator": {
       "name": "Кредитный калькулятор",
@@ -11780,7 +11820,8 @@
       "placeholder": "Вставьте JSON массив здесь...",
       "copied": "Скопировано!",
       "copyCsv": "Копировать CSV",
-      "downloadCsv": "Скачать CSV"
+      "downloadCsv": "Скачать CSV",
+      "rowCount": "Rows: {count}"
     },
     "yaml-validator": {
       "name": "YAML Валидатор",
@@ -11796,7 +11837,8 @@
       "placeholder": "Вставьте YAML здесь...",
       "loadExample": "Загрузить пример",
       "format": "Форматировать",
-      "parsedOutput": "Разобранный вывод"
+      "parsedOutput": "Разобранный вывод",
+      "errorLine": "Line {line}"
     },
     "xml-validator": {
       "name": "XML Валидатор",
@@ -11812,7 +11854,9 @@
       "format": "Форматировать XML",
       "placeholder": "Вставьте XML здесь...",
       "loadExample": "Загрузить пример",
-      "validMessage": "XML действителен"
+      "validMessage": "XML действителен",
+      "errorLine": "Line {line}",
+      "errorColumn": "Column {column}"
     },
     "css-to-tailwind": {
       "name": "Конвертер CSS в Tailwind",
@@ -11967,7 +12011,8 @@
       "corsEnabledAll": "CORS включён для всех источников",
       "corsEnabledNoHeader": "CORS включён (без заголовка Access-Control-Allow-Origin)",
       "testing": "Тестирование...",
-      "unknown": "Неизвестно"
+      "unknown": "Неизвестно",
+      "corsEnabledSpecific": "CORS enabled for {origin}"
     },
     "json-to-zod": {
       "name": "JSON в Zod-схему",
@@ -12338,7 +12383,8 @@
       "tip4": "Запустите несколько раз с разными настройками для разнообразия",
       "addFillers": "Добавить слова-заполнители",
       "humanize": "Гуманизировать",
-      "inputPlaceholder": "Вставьте текст ИИ сюда..."
+      "inputPlaceholder": "Вставьте текст ИИ сюда...",
+      "outputPlaceholder": "Результат появится здесь..."
     },
     "dockerfile-generator": {
       "name": "Генератор Dockerfile",
@@ -12541,7 +12587,8 @@
       "inputPlaceholder": "Введите текст...",
       "swap": "Поменять",
       "outputPlaceholder": "Результат появится здесь...",
-      "showTable": "Показать таблицу"
+      "showTable": "Показать таблицу",
+      "none": "None"
     },
     "checksum-verifier": {
       "name": "Проверка контрольной суммы",
@@ -14656,7 +14703,8 @@
       "standardDeviation": "Стандартное отклонение",
       "hrs": "ч",
       "wks": "нед",
-      "taskDefault": "Задача"
+      "taskDefault": "Задача",
+      "remove": "Remove"
     },
     "sprint-velocity-calculator": {
       "name": "Калькулятор скорости спринта",
@@ -14720,7 +14768,8 @@
       "medium": "Средний",
       "low": "Низкий",
       "resourceDefault": "Ресурс",
-      "projectDefault": "Проект"
+      "projectDefault": "Проект",
+      "remove": "Remove"
     },
     "project-risk-analyzer": {
       "name": "Анализатор рисков проекта",
@@ -14781,7 +14830,8 @@
       "external": "Внешний",
       "budget": "Бюджет",
       "mitigated": "Смягчен",
-      "closed": "Закрыт"
+      "closed": "Закрыт",
+      "copied": "Copied!"
     },
     "milestone-tracker": {
       "name": "Milestone Tracker",
@@ -16379,6 +16429,9 @@
       "description": "Соберите плей-офф ЧМ 2026 и прогнозируйте каждый раунд до финала.",
       "seo_title": "Бесплатный Прогноз сетки ЧМ 2026 онлайн",
       "seo_description": "Соберите плей-офф ЧМ 2026 и прогнозируйте каждый раунд до финала. Используйте этот бесплатный онлайн-инструмент в браузере без регистрации."
-    }
+    },
+    "remove": "Remove",
+    "loading": "Loading...",
+    "noResults": "No results"
   }
 }

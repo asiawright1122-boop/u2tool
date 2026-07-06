@@ -329,7 +329,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="space-y-4">
                     <div>
-                        <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+                        <label for="chart-settings" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
                         <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
                             <div>
                                 <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
@@ -414,7 +414,7 @@
                 </div>
 
                 <div>
-                    <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+                    <label for="chart-preview" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
                     <div class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style="min-height: 500px">
                         <EChartsWrapper
               bind:this={chartRef as any}

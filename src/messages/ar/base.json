@@ -985,7 +985,8 @@
       "copy": "نسخ",
       "download": "تنزيل",
       "outputLabel": "docker-compose.yml",
-      "note": "ملاحظة: تذكر تغيير كلمات المرور الافتراضية قبل استخدامها في الإنتاج."
+      "note": "ملاحظة: تذكر تغيير كلمات المرور الافتراضية قبل استخدامها في الإنتاج.",
+      "composeVersion": "Compose Version"
     },
     "package-json-generator": {
       "name": "مولد الحزمة.json",
@@ -1112,7 +1113,8 @@
       "rowSizes": "أحجام الصفوف",
       "row": "الصف {index}",
       "preview": "معاينة",
-      "generatedCss": "تم إنشاء CSS"
+      "generatedCss": "تم إنشاء CSS",
+      "alignItems": "Align Items"
     },
     "css-flexbox-generator": {
       "name": "مولد CSS Flexbox",
@@ -3261,10 +3263,13 @@
       "shades": "ظلال",
       "complementary": "تكميلية",
       "analogous": "مماثل",
-      "triadic": "ثلاثي"
+      "triadic": "ثلاثي",
+      "baseColor": "Base color",
+      "hexCode": "HEX code"
     },
     "httpStatus": {
-      "search": "رموز حالة البحث..."
+      "search": "رموز حالة البحث...",
+      "noResults": "No status codes found."
     },
     "dataUri": {
       "dropzone": "انقر أو اسحب الملف لإنشاء URI للبيانات",
@@ -3907,7 +3912,8 @@
       "generate": "توليد",
       "clear": "مسح",
       "copy": "نسخ",
-      "download": "تنزيل"
+      "download": "تنزيل",
+      "copied": "Copied!"
     },
     "dockerCompose": {
       "version": "إنشاء الإصدار",
@@ -4056,7 +4062,8 @@
         "MX": "تبادل البريد",
         "NS": "خادم الاسم",
         "TXT": "سجل النص"
-      }
+      },
+      "noRecords": "No DNS records found."
     },
     "imageResizer": {
       "dropzone": "انقر أو اسحب الصورة لتغيير حجمها",
@@ -4893,7 +4900,8 @@
       "copy": "نسخ",
       "download": "تحميل",
       "outputLabel": "ملف docker-compose.yml",
-      "note": "ملاحظة: تذكر تغيير كلمات المرور الافتراضية قبل الاستخدام في الإنتاج."
+      "note": "ملاحظة: تذكر تغيير كلمات المرور الافتراضية قبل الاستخدام في الإنتاج.",
+      "composeVersion": "Compose Version"
     },
     "package-json-generator": {
       "name": "مولد package.json",
@@ -5051,7 +5059,8 @@
       "preview": "النظرة السريعة",
       "generatedCss": "الكود CSS المولد",
       "copied": "تم النسخ!",
-      "copy": "نسخ"
+      "copy": "نسخ",
+      "alignItems": "Align Items"
     },
     "css-flexbox-generator": {
       "name": "مولد CSS Flexbox",
@@ -9136,7 +9145,9 @@
       "taxRate": "معدل الضريبة",
       "total": "الإجمالي",
       "notes": "ملاحظات",
-      "downloadPdf": "تحميل PDF"
+      "downloadPdf": "تحميل PDF",
+      "discount": "Discount",
+      "discountRate": "Discount Rate"
     },
     "resume": {
       "personalInfo": "المعلومات الشخصية",
@@ -9242,7 +9253,9 @@
       "backgroundColor": "لون الخلفية",
       "transparent": "شفاف",
       "downloadPng": "تحميل PNG",
-      "downloadSvg": "تحميل SVG"
+      "downloadSvg": "تحميل SVG",
+      "settings": "Settings",
+      "undo": "Undo"
     },
     "pomodoro": {
       "work": "عمل",
@@ -9620,31 +9633,58 @@
       "name": "PDF إلى نص",
       "description": "استخراج النص من ملفات PDF. دعم متعدد الصفحات.",
       "seo_title": "مجاني عبر الإنترنت أداة لتحويل PDF إلى نص مع علامات الصفحات",
-      "seo_description": "أداة مجانية عبر الإنترنت PDF إلى نص لمساعدتك على استخدم أداة مجانية عبر الإنترنت لتحويل PDF إلى نص بسهولة. دعم ملفات PDF متعددة الصفحات مع علامات الصفحات. حمل الآن بسرعة وأمان في متصفحك. مجانية تمامًا، بدون تحميل أو تسجيل، وتعمل محليًا بنسبة 100% لضمان الخصوصية التامة وتحسين الكفاءة والإنتاجية اليومية."
+      "seo_description": "أداة مجانية عبر الإنترنت PDF إلى نص لمساعدتك على استخدم أداة مجانية عبر الإنترنت لتحويل PDF إلى نص بسهولة. دعم ملفات PDF متعددة الصفحات مع علامات الصفحات. حمل الآن بسرعة وأمان في متصفحك. مجانية تمامًا، بدون تحميل أو تسجيل، وتعمل محليًا بنسبة 100% لضمان الخصوصية التامة وتحسين الكفاءة والإنتاجية اليومية.",
+      "dropzone": "Drag and drop a PDF file here, or click to select",
+      "extracting": "Extracting text...",
+      "page": "Page",
+      "pages": "pages",
+      "errorParsing": "Failed to parse PDF file",
+      "errorInvalidFile": "Please upload a valid PDF file"
     },
     "word-to-txt": {
       "name": "Word إلى نص",
       "description": "تحويل مستندات Word (.docx) إلى نص عادي.",
       "seo_title": "مجاني عبر الإنترنت أداة Word إلى نص",
-      "seo_description": "أداة مجانية عبر الإنترنت Word إلى نص لمساعدتك على تحويل مستندات Word إلى نص بسيط عبر الإنترنت بسهولة. أداة مجانية لتحويل JSON وBase64 وSVG مجانًا بسرعة وأمان في متصفحك. مجانية تمامًا، بدون تحميل أو تسجيل، وتعمل محليًا بنسبة 100% لضمان الخصوصية التامة وتحسين الكفاءة والإنتاجية اليومية."
+      "seo_description": "أداة مجانية عبر الإنترنت Word إلى نص لمساعدتك على تحويل مستندات Word إلى نص بسيط عبر الإنترنت بسهولة. أداة مجانية لتحويل JSON وBase64 وSVG مجانًا بسرعة وأمان في متصفحك. مجانية تمامًا، بدون تحميل أو تسجيل، وتعمل محليًا بنسبة 100% لضمان الخصوصية التامة وتحسين الكفاءة والإنتاجية اليومية.",
+      "dropzone": "Drag and drop a Word file here, or click to select",
+      "extracting": "Extracting text...",
+      "errorParsing": "Failed to parse Word file",
+      "errorInvalidFile": "Please upload a valid DOCX file"
     },
     "word-to-html": {
       "name": "تحويل النص إلى HTML",
       "description": "تحويل مستندات الوورد (.docx) إلى صيغة HTML مع الحفاظ على الت-format.",
       "seo_title": "مجاني عبر الإنترنت أداة Word إلى HTML مع الحفاظ على التصنيف",
-      "seo_description": "أداة مجانية عبر الإنترنت تحويل النص إلى HTML لمساعدتك على تحويل المستندات Word إلى HTML بسهولة عبر الإنترنت. حافظ على التصنيف والصور بدون أي تدخل. تجربة المجاني الآن بسرعة وأمان في متصفحك. مجانية تمامًا، بدون تحميل أو تسجيل، وتعمل محليًا بنسبة 100% لضمان الخصوصية التامة وتحسين الكفاءة والإنتاجية اليومية."
+      "seo_description": "أداة مجانية عبر الإنترنت تحويل النص إلى HTML لمساعدتك على تحويل المستندات Word إلى HTML بسهولة عبر الإنترنت. حافظ على التصنيف والصور بدون أي تدخل. تجربة المجاني الآن بسرعة وأمان في متصفحك. مجانية تمامًا، بدون تحميل أو تسجيل، وتعمل محليًا بنسبة 100% لضمان الخصوصية التامة وتحسين الكفاءة والإنتاجية اليومية.",
+      "dropzone": "Drag and drop a Word file here, or click to select",
+      "converting": "Converting to HTML...",
+      "showCode": "Show Code",
+      "showPreview": "Show Preview",
+      "errorParsing": "Failed to parse Word file",
+      "errorInvalidFile": "Please upload a valid DOCX file"
     },
     "excel-to-csv": {
       "name": "Excel إلى CSV",
       "description": "تحويل جداول Excel إلى تنسيق CSV.",
       "seo_title": "تحويل Excel إلى CSV عبر الإنترنت مجانًا",
-      "seo_description": "أداة مجانية عبر الإنترنت Excel إلى CSV لمساعدتك على استخدم أداة مجانية لتحويل ملفات Excel إلى CSV عبر الإنترنت بسهولة. احمِ بياناتك بتحويلها إلى CSV الآن بسرعة وأمان في متصفحك. مجانية تمامًا، بدون تحميل أو تسجيل، وتعمل محليًا بنسبة 100% لضمان الخصوصية التامة وتحسين الكفاءة والإنتاجية اليومية."
+      "seo_description": "أداة مجانية عبر الإنترنت Excel إلى CSV لمساعدتك على استخدم أداة مجانية لتحويل ملفات Excel إلى CSV عبر الإنترنت بسهولة. احمِ بياناتك بتحويلها إلى CSV الآن بسرعة وأمان في متصفحك. مجانية تمامًا، بدون تحميل أو تسجيل، وتعمل محليًا بنسبة 100% لضمان الخصوصية التامة وتحسين الكفاءة والإنتاجية اليومية.",
+      "dropzone": "Drop an Excel file here or click to upload",
+      "converting": "Converting...",
+      "errorInvalidFile": "Please upload an XLS or XLSX file.",
+      "errorParsing": "Could not parse this Excel file."
     },
     "csv-to-excel": {
       "name": "CSV إلى Excel",
       "description": "تحويل ملفات CSV إلى تنسيق Excel (.xlsx).",
       "seo_title": "مجاني عبر الإنترنت أداة CSV إلى Excel - تحويل سهل وسريع",
-      "seo_description": "أداة مجانية عبر الإنترنت CSV إلى Excel لمساعدتك على استخدم أداة مجانية عبر الإنترنت لتحويل ملفات CSV إلى Excel (.xlsx) بسهولة وسرعة. ابدأ الآن مجانًا بسرعة وأمان في متصفحك. مجانية تمامًا، بدون تحميل أو تسجيل، وتعمل محليًا بنسبة 100% لضمان الخصوصية التامة وتحسين الكفاءة والإنتاجية اليومية."
+      "seo_description": "أداة مجانية عبر الإنترنت CSV إلى Excel لمساعدتك على استخدم أداة مجانية عبر الإنترنت لتحويل ملفات CSV إلى Excel (.xlsx) بسهولة وسرعة. ابدأ الآن مجانًا بسرعة وأمان في متصفحك. مجانية تمامًا، بدون تحميل أو تسجيل، وتعمل محليًا بنسبة 100% لضمان الخصوصية التامة وتحسين الكفاءة والإنتاجية اليومية.",
+      "dropzone": "Drag and drop a CSV file here, or click to select",
+      "converting": "Converting to Excel...",
+      "rows": "rows",
+      "showingFirst": "Showing first",
+      "errorParsing": "Failed to parse CSV file",
+      "errorInvalidFile": "Please upload a valid CSV file",
+      "errorExport": "Failed to export Excel file"
     },
     "loan-calculator": {
       "name": "حاسبة القروض",
@@ -11776,7 +11816,8 @@
       "placeholder": "الصق مصفوفة JSON هنا...",
       "copied": "تم النسخ!",
       "copyCsv": "نسخ CSV",
-      "downloadCsv": "تحميل CSV"
+      "downloadCsv": "تحميل CSV",
+      "rowCount": "Rows: {count}"
     },
     "yaml-validator": {
       "name": "م��الر",
@@ -11792,7 +11833,8 @@
       "placeholder": "الصق YAML هنا...",
       "loadExample": "تحميل مثال",
       "format": "تنسيق",
-      "parsedOutput": "الإخراج المحلل"
+      "parsedOutput": "الإخراج المحلل",
+      "errorLine": "Line {line}"
     },
     "xml-validator": {
       "name": "مدقق XML مجاني",
@@ -11808,7 +11850,9 @@
       "format": "تنسيق XML",
       "placeholder": "الصق XML هنا...",
       "loadExample": "تحميل مثال",
-      "validMessage": "XML صالح"
+      "validMessage": "XML صالح",
+      "errorLine": "Line {line}",
+      "errorColumn": "Column {column}"
     },
     "css-to-tailwind": {
       "name": "محول CSS إلى Tailwind",
@@ -11963,7 +12007,8 @@
       "corsEnabledAll": "CORS مفعل لجميع المصادر",
       "corsEnabledNoHeader": "CORS مفعل (بدون رأس Access-Control-Allow-Origin)",
       "testing": "جاري الاختبار...",
-      "unknown": "غير معروف"
+      "unknown": "غير معروف",
+      "corsEnabledSpecific": "CORS enabled for {origin}"
     },
     "json-to-zod": {
       "name": "JSON إلى مخطط Zod",
@@ -12334,7 +12379,8 @@
       "tip4": "تشغيل الأداة عدة مرات بإعدادات مختلفة للحصول على تنوع",
       "addFillers": "إضافة كلمات حشو",
       "humanize": "إنسانية",
-      "inputPlaceholder": "الصق النص هنا..."
+      "inputPlaceholder": "الصق النص هنا...",
+      "outputPlaceholder": "ستظهر النتيجة هنا..."
     },
     "dockerfile-generator": {
       "name": "مولد Dockerfile",
@@ -12537,7 +12583,8 @@
       "inputPlaceholder": "أدخل النص...",
       "swap": "تبديل",
       "outputPlaceholder": "ستظهر النتيجة هنا...",
-      "showTable": "عرض الجدول"
+      "showTable": "عرض الجدول",
+      "none": "None"
     },
     "checksum-verifier": {
       "name": "مفحّص التأكيد",
@@ -14652,7 +14699,8 @@
       "standardDeviation": "الانحراف المعياري",
       "hrs": "س",
       "wks": "أ",
-      "taskDefault": "مهمة"
+      "taskDefault": "مهمة",
+      "remove": "Remove"
     },
     "sprint-velocity-calculator": {
       "name": "حاسبة سرعة السباق",
@@ -14716,7 +14764,8 @@
       "medium": "متوسط",
       "low": "منخفض",
       "resourceDefault": "مورد",
-      "projectDefault": "مشروع"
+      "projectDefault": "مشروع",
+      "remove": "Remove"
     },
     "project-risk-analyzer": {
       "name": "مزود تحليل المخاطر المشروعية",
@@ -14777,7 +14826,8 @@
       "external": "خارجي",
       "budget": "الميزانية",
       "mitigated": "مخفف",
-      "closed": "مغلق"
+      "closed": "مغلق",
+      "copied": "Copied!"
     },
     "milestone-tracker": {
       "name": "ملاحظة النقاط المهمة",
@@ -16375,6 +16425,9 @@
       "description": "أنشئ جدول خروج المغلوب لكأس العالم 2026 وتوقع كل جولة حتى النهائي.",
       "seo_title": "متوقع جدول كأس العالم 2026 مجانًا",
       "seo_description": "أنشئ جدول خروج المغلوب لكأس العالم 2026 وتوقع كل جولة حتى النهائي. استخدم هذه الأداة المجانية عبر الإنترنت في المتصفح بدون تسجيل."
-    }
+    },
+    "remove": "Remove",
+    "loading": "Loading...",
+    "noResults": "No results"
   }
 }

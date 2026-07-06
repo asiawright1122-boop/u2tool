@@ -53,6 +53,7 @@ import { buildLocalizedPagePath, buildLocalizedPageUrl, getHreflang, resolveMeta
 import { sanitizeHtml } from '@/lib/sanitize';
 import { assessSupportContentTrust } from '@/lib/content-trust';
 import { buildSafeFallbackSupportContent } from '@/lib/support-content-fallback';
+import { buildToolWrapperTranslations } from '@/lib/tool-page-translations';
 import { findComparisonGuideForTool, getComparisonUiCopy } from '@/lib/comparison-surfaces';
 import { getRelatedToolsForTool } from '@/lib/related-tools';
 import {
@@ -325,23 +326,6 @@ const howToData = usageSteps && usageSteps.length > 0
 // Build translations object for ToolWrapper
 // Contains: generic tool keys (input, output, copy, etc.) + current tool translations
 // ---------------------------------------------------------------------------
-const genericToolKeys: Record<string, unknown> = {};
-for (const [key, value] of Object.entries(toolsCommon)) {
-  // Generic keys are string values (not tool slug objects)
-  if (typeof value === 'string') {
-    genericToolKeys[key] = value;
-  }
-}
-// Also include nested generic namespaces (e.g., json.invalidJson, stopwatchUI, etc.)
-for (const [key, value] of Object.entries(toolsCommon)) {
-  if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
-    // Check if this is a tool slug (has 'name' key) or a generic namespace
-    const obj = value as Record<string, unknown>;
-    if (!obj.name && !obj.description) {
-      genericToolKeys[key] = value;
-    }
-  }
-}
 const safeToolMessages: Record<string, unknown> = { ...messages };
 if (supportContentFallback) {
   safeToolMessages.detailed_description = detailedDescription;
@@ -349,7 +333,12 @@ if (supportContentFallback) {
   safeToolMessages.usage_examples = usageExamples ?? [];
   safeToolMessages.faqs = faqs;
 }
-const toolTranslations = { tools: { ...genericToolKeys, [tool.slug]: safeToolMessages } };
+const toolTranslations = buildToolWrapperTranslations({
+  currentSlug: tool.slug,
+  currentToolMessages: safeToolMessages,
+  toolSlugs: tools.map((candidateTool) => candidateTool.slug),
+  toolsCommon,
+});
 // Build a minimal translations map for related tool names
 const relatedToolSlugs = new Set(getRelatedToolsForTool(tool, 6).map((relatedTool) => relatedTool.slug));
 

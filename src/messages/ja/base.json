@@ -985,7 +985,8 @@
       "copy": "コピー",
       "download": "ダウンロード",
       "outputLabel": "docker-compose.yml",
-      "note": "注: 運用環境で使用する前に、必ずデフォルトのパスワードを変更してください。"
+      "note": "注: 運用環境で使用する前に、必ずデフォルトのパスワードを変更してください。",
+      "composeVersion": "Compose Version"
     },
     "package-json-generator": {
       "name": "package.json ジェネレーター",
@@ -1112,7 +1113,8 @@
       "rowSizes": "行サイズ",
       "row": "行 {index}",
       "preview": "プレビュー",
-      "generatedCss": "生成されたCSS"
+      "generatedCss": "生成されたCSS",
+      "alignItems": "Align Items"
     },
     "css-flexbox-generator": {
       "name": "CSS Flexbox生成",
@@ -3081,10 +3083,13 @@
       "shades": "シェード",
       "complementary": "補完的",
       "analogous": "類似した",
-      "triadic": "トライアド"
+      "triadic": "トライアド",
+      "baseColor": "Base color",
+      "hexCode": "HEX code"
     },
     "httpStatus": {
-      "search": "ステータスコードを検索..."
+      "search": "ステータスコードを検索...",
+      "noResults": "No status codes found."
     },
     "dataUri": {
       "dropzone": "ファイルをクリックまたはドラッグしてデータ URI を生成します",
@@ -3727,7 +3732,8 @@
       "generate": "生成",
       "clear": "クリア",
       "copy": "コピー",
-      "download": "ダウンロード"
+      "download": "ダウンロード",
+      "copied": "Copied!"
     },
     "dockerCompose": {
       "version": "バージョンの作成",
@@ -3876,7 +3882,8 @@
         "MX": "メール交換",
         "NS": "ネームサーバー",
         "TXT": "テキストレコード"
-      }
+      },
+      "noRecords": "No DNS records found."
     },
     "imageResizer": {
       "dropzone": "画像をクリックまたはドラッグしてサイズを変更します",
@@ -4713,7 +4720,8 @@
       "copy": "コピー",
       "download": "ダウンロード",
       "outputLabel": "docker-compose.yml",
-      "note": "注意: 生産環境で使用する前にデフォルトパスワードを変更してください。"
+      "note": "注意: 生産環境で使用する前にデフォルトパスワードを変更してください。",
+      "composeVersion": "Compose Version"
     },
     "package-json-generator": {
       "name": "package.json ジェネレーター",
@@ -4871,7 +4879,8 @@
       "preview": "プレビュー",
       "generatedCss": "生成されたCSS",
       "copied": "コピーしました！",
-      "copy": "コピー"
+      "copy": "コピー",
+      "alignItems": "Align Items"
     },
     "css-flexbox-generator": {
       "name": "CSS Flexboxジェネレーター",
@@ -8961,7 +8970,9 @@
       "taxRate": "税率",
       "total": "合計",
       "notes": "備考",
-      "downloadPdf": "PDFをダウンロード"
+      "downloadPdf": "PDFをダウンロード",
+      "discount": "Discount",
+      "discountRate": "Discount Rate"
     },
     "resume": {
       "edit": "編集",
@@ -9067,7 +9078,9 @@
       "backgroundColor": "背景色",
       "transparent": "透明",
       "downloadPng": "PNGをダウンロード",
-      "downloadSvg": "SVGをダウンロード"
+      "downloadSvg": "SVGをダウンロード",
+      "settings": "Settings",
+      "undo": "Undo"
     },
     "pomodoro": {
       "work": "作業",
@@ -9445,31 +9458,58 @@
       "name": "PDFからテキスト",
       "description": "PDFファイルからテキスト内容を抽出。ページマーカー付きの多ページPDFをサポート。",
       "seo_title": "PDFからテキストを無料でオンラインで抽出するツール",
-      "seo_description": "無料オンラインのPDFからテキスト。ブラウザ上で 多ページのPDFからテキストを抽出。ページマーカー付きのPDFもサポートします。無料のオンラインツールで簡単操作 を迅速かつ安全に行うことができます。ダウンロードや面倒な会員登録は一切不要で100%ローカル実行。プライバシーを完全に保護しながら、作業効率を大幅に向上させる優れたツールです。"
+      "seo_description": "無料オンラインのPDFからテキスト。ブラウザ上で 多ページのPDFからテキストを抽出。ページマーカー付きのPDFもサポートします。無料のオンラインツールで簡単操作 を迅速かつ安全に行うことができます。ダウンロードや面倒な会員登録は一切不要で100%ローカル実行。プライバシーを完全に保護しながら、作業効率を大幅に向上させる優れたツールです。",
+      "dropzone": "Drag and drop a PDF file here, or click to select",
+      "extracting": "Extracting text...",
+      "page": "Page",
+      "pages": "pages",
+      "errorParsing": "Failed to parse PDF file",
+      "errorInvalidFile": "Please upload a valid PDF file"
     },
     "word-to-txt": {
       "name": "Wordからテキスト",
       "description": "Word文書(.docx)をプレーンテキストに変換。",
       "seo_title": "無料オンラインツール：Word文書をテキストに変換",
-      "seo_description": "無料オンラインのWordからテキスト。ブラウザ上で Wordからテキスト変換ツールは、Word文書をプレーンテキストへ変換できる無料ツールです を迅速かつ安全に行うことができます。ダウンロードや面倒な会員登録は一切不要で100%ローカル実行。プライバシーを完全に保護しながら、作業効率を大幅に向上させる優れたツールです。"
+      "seo_description": "無料オンラインのWordからテキスト。ブラウザ上で Wordからテキスト変換ツールは、Word文書をプレーンテキストへ変換できる無料ツールです を迅速かつ安全に行うことができます。ダウンロードや面倒な会員登録は一切不要で100%ローカル実行。プライバシーを完全に保護しながら、作業効率を大幅に向上させる優れたツールです。",
+      "dropzone": "Drag and drop a Word file here, or click to select",
+      "extracting": "Extracting text...",
+      "errorParsing": "Failed to parse Word file",
+      "errorInvalidFile": "Please upload a valid DOCX file"
     },
     "word-to-html": {
       "name": "WordからHTML",
       "description": "Word文書(.docx)をHTML形式に変換。",
       "seo_title": "Word文書を無料オンラインツールでHTMLに変換",
-      "seo_description": "無料オンラインのWordからHTML。ブラウザ上で WordからHTML変換ツールは、Word文書をHTML形式に変換できる無料ツールです を迅速かつ安全に行うことができます。ダウンロードや面倒な会員登録は一切不要で100%ローカル実行。プライバシーを完全に保護しながら、作業効率を大幅に向上させる優れたツールです。"
+      "seo_description": "無料オンラインのWordからHTML。ブラウザ上で WordからHTML変換ツールは、Word文書をHTML形式に変換できる無料ツールです を迅速かつ安全に行うことができます。ダウンロードや面倒な会員登録は一切不要で100%ローカル実行。プライバシーを完全に保護しながら、作業効率を大幅に向上させる優れたツールです。",
+      "dropzone": "Drag and drop a Word file here, or click to select",
+      "converting": "Converting to HTML...",
+      "showCode": "Show Code",
+      "showPreview": "Show Preview",
+      "errorParsing": "Failed to parse Word file",
+      "errorInvalidFile": "Please upload a valid DOCX file"
     },
     "excel-to-csv": {
       "name": "ExcelからCSVへの変換ツール",
       "description": "Excelスプレッドシート（.xlsx、.xls）をCSV形式に変換します。",
       "seo_title": "Excelを無料オンラインツールでCSVに変換",
-      "seo_description": "無料オンラインのExcelからCSVへの変換ツール。ブラウザ上で ExcelからCSV変換ツールは、ExcelファイルをCSV形式に変換できる無料ツールです を迅速かつ安全に行うことができます。ダウンロードや面倒な会員登録は一切不要で100%ローカル実行。プライバシーを完全に保護しながら、作業効率を大幅に向上させる優れたツールです。"
+      "seo_description": "無料オンラインのExcelからCSVへの変換ツール。ブラウザ上で ExcelからCSV変換ツールは、ExcelファイルをCSV形式に変換できる無料ツールです を迅速かつ安全に行うことができます。ダウンロードや面倒な会員登録は一切不要で100%ローカル実行。プライバシーを完全に保護しながら、作業効率を大幅に向上させる優れたツールです。",
+      "dropzone": "Drop an Excel file here or click to upload",
+      "converting": "Converting...",
+      "errorInvalidFile": "Please upload an XLS or XLSX file.",
+      "errorParsing": "Could not parse this Excel file."
     },
     "csv-to-excel": {
       "name": "CSVからExcel",
       "description": "CSVファイルをExcel形式(.xlsx)に変換。",
       "seo_title": "CSVファイルをオンラインツールでExcelに変換",
-      "seo_description": "無料オンラインのCSVからExcel。ブラウザ上で CSVからExcel変換ツールは、CSVファイルをExcel形式に変換できる無料ツールです を迅速かつ安全に行うことができます。ダウンロードや面倒な会員登録は一切不要で100%ローカル実行。プライバシーを完全に保護しながら、作業効率を大幅に向上させる優れたツールです。"
+      "seo_description": "無料オンラインのCSVからExcel。ブラウザ上で CSVからExcel変換ツールは、CSVファイルをExcel形式に変換できる無料ツールです を迅速かつ安全に行うことができます。ダウンロードや面倒な会員登録は一切不要で100%ローカル実行。プライバシーを完全に保護しながら、作業効率を大幅に向上させる優れたツールです。",
+      "dropzone": "Drag and drop a CSV file here, or click to select",
+      "converting": "Converting to Excel...",
+      "rows": "rows",
+      "showingFirst": "Showing first",
+      "errorParsing": "Failed to parse CSV file",
+      "errorInvalidFile": "Please upload a valid CSV file",
+      "errorExport": "Failed to export Excel file"
     },
     "loan-calculator": {
       "name": "ローン計算機",
@@ -11601,7 +11641,8 @@
       "placeholder": "JSON配列をここに貼り付け...",
       "copied": "コピーしました！",
       "copyCsv": "CSVをコピー",
-      "downloadCsv": "CSVをダウンロード"
+      "downloadCsv": "CSVをダウンロード",
+      "rowCount": "Rows: {count}"
     },
     "yaml-validator": {
       "name": "YAMLバリデーター",
@@ -11617,7 +11658,8 @@
       "placeholder": "YAMLをここに貼り付け...",
       "loadExample": "例を読み込む",
       "format": "フォーマット",
-      "parsedOutput": "解析出力"
+      "parsedOutput": "解析出力",
+      "errorLine": "Line {line}"
     },
     "xml-validator": {
       "name": "XMLバリデーター",
@@ -11633,7 +11675,9 @@
       "format": "XML形式",
       "placeholder": "XMLをここに貼り付け...",
       "loadExample": "例を読み込む",
-      "validMessage": "XMLは有効です"
+      "validMessage": "XMLは有効です",
+      "errorLine": "Line {line}",
+      "errorColumn": "Column {column}"
     },
     "css-to-tailwind": {
       "name": "CSS to Tailwindコンバータ",
@@ -11806,7 +11850,8 @@
       "corsEnabledAll": "すべてのオリジンでCORS有効",
       "corsEnabledNoHeader": "CORS有効（Access-Control-Allow-Originヘッダーなし）",
       "testing": "テスト中...",
-      "unknown": "不明"
+      "unknown": "不明",
+      "corsEnabledSpecific": "CORS enabled for {origin}"
     },
     "json-to-zod": {
       "name": "JSON to Zodスキーマ",
@@ -12159,7 +12204,8 @@
       "tip4": "さまざまな設定で複数回実行してバリエーションを得ます",
       "addFillers": "自然なフィラーワードを追加",
       "humanize": "人間化",
-      "inputPlaceholder": "AI生成テキストをここに貼り付け..."
+      "inputPlaceholder": "AI生成テキストをここに貼り付け...",
+      "outputPlaceholder": "結果がここに表示されます..."
     },
     "dockerfile-generator": {
       "name": "Dockerfile ジェネレーター",
@@ -12362,7 +12408,8 @@
       "inputPlaceholder": "テキストを入力...",
       "swap": "入れ替え",
       "outputPlaceholder": "結果がここに表示されます...",
-      "showTable": "テーブルを表示"
+      "showTable": "テーブルを表示",
+      "none": "None"
     },
     "checksum-verifier": {
       "name": "チェックサム検証ツール",
@@ -14477,7 +14524,8 @@
       "standardDeviation": "標準偏差",
       "hrs": "時間",
       "wks": "週",
-      "taskDefault": "タスク"
+      "taskDefault": "タスク",
+      "remove": "Remove"
     },
     "sprint-velocity-calculator": {
       "name": "スプリント・ベロシティ計算ツール",
@@ -14541,7 +14589,8 @@
       "medium": "中",
       "low": "低",
       "resourceDefault": "リソース",
-      "projectDefault": "プロジェクト"
+      "projectDefault": "プロジェクト",
+      "remove": "Remove"
     },
     "project-risk-analyzer": {
       "name": "プロジェクトリスクアナライザ",
@@ -14602,7 +14651,8 @@
       "external": "外部",
       "budget": "予算",
       "mitigated": "緩和済み",
-      "closed": "クローズ"
+      "closed": "クローズ",
+      "copied": "Copied!"
     },
     "milestone-tracker": {
       "name": "マイルストーン・トラッカー",
@@ -16200,6 +16250,9 @@
       "description": "2026 ワールドカップの決勝トーナメント表を作り、決勝まで予想します。",
       "seo_title": "無料オンライン 2026 ワールドカップ勝敗予想ツール",
       "seo_description": "2026 ワールドカップの決勝トーナメント表を作り、決勝まで予想します。 ブラウザで無料で使え、登録は不要です。"
-    }
+    },
+    "remove": "Remove",
+    "loading": "Loading...",
+    "noResults": "No results"
   }
 }

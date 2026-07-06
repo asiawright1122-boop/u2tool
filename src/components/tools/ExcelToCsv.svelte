@@ -17,15 +17,13 @@
   }
 
   function t(key: string): string {
-    const toolScope = (translations['tool'] as Record<string, unknown>)?.['excelToCsv'] as Record<string, unknown> | undefined;
     const toolsScope = translations['tools'] as Record<string, unknown> | undefined;
     const kebabScope = toolsScope?.['excel-to-csv'] as Record<string, unknown> | undefined;
     const camelScope = toolsScope?.['excelToCsv'] as Record<string, unknown> | undefined;
 
     const value =
       (kebabScope && getNestedValue(kebabScope, key)) ||
-      (camelScope && getNestedValue(camelScope, key)) ||
-      (toolScope && getNestedValue(toolScope, key));
+      (camelScope && getNestedValue(camelScope, key));
 
     return value ?? `MISSING: tools.excel-to-csv.${key}`;
   }

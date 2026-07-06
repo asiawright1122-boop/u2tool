@@ -184,11 +184,31 @@ describe('translations module', () => {
       expect(tools['bar-chart-generator']?.addCategory).toBe('Add Category');
     });
 
+    it('fills missing nested base UI tool namespace keys with English fallback', async () => {
+      const jaMessages = await loadBaseUiMessages('ja');
+      const tools = jaMessages.tools as Record<string, Record<string, string>>;
+
+      expect(tools.invoice?.discount).toBe('Discount');
+      expect(tools.invoice?.discountRate).toBe('Discount Rate');
+    });
+
     it('fills missing locale tool-detail keys with English fallback', async () => {
       const jaToolMessages = await loadToolMessages('ja', 'venn-diagram-generator');
 
       expect(jaToolMessages.setCount).toBe('Number of Sets');
       expect(jaToolMessages.chartTitle).toBe('Chart Title');
+    });
+
+    it('keeps merge conflict resolver mode labels in lightweight tool page messages', async () => {
+      const enToolMessages = await loadToolPageMessages('en', 'merge-conflict-resolver');
+      const zhToolMessages = await loadToolPageMessages('zh', 'merge-conflict-resolver');
+
+      expect(enToolMessages.useCurrent).toBe('Use Current');
+      expect(enToolMessages.useIncoming).toBe('Use Incoming');
+      expect(enToolMessages.keepBoth).toBe('Keep Both');
+      expect(zhToolMessages.useCurrent).toBe('使用当前版本');
+      expect(zhToolMessages.useIncoming).toBe('使用传入版本');
+      expect(zhToolMessages.keepBoth).toBe('保留两者');
     });
 
     it('restores JWT decoder/debugger base metadata from the legacy tool index before alias fallback', async () => {

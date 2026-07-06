@@ -435,7 +435,7 @@
     <div class="space-y-4">
       <div>
         <label
-          for="label-{t('chartsettings')}"
+          for="chart-settings"
           class="block text-sm font-medium mb-2">{t("chartSettings")}</label
         >
         <div
@@ -590,7 +590,7 @@
 
     <div>
       <label
-        for="label-{t('chartpreview')}"
+        for="chart-preview"
         class="block text-sm font-medium mb-2">{t("chartPreview")}</label
       >
       <div

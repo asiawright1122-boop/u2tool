@@ -7,12 +7,17 @@
   let { locale, translations }: Props = $props();
 
   // Translation helpers
-  function t(key: string): string {
+  function t(key: string, vars?: Record<string, string | number>): string {
     const scope = translations['tools']['yaml-validator'] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
-    return typeof value === 'string' ? value : `MISSING: tools.yaml-validator.${key}`;
+    if (typeof value !== 'string') return `MISSING: tools.yaml-validator.${key}`;
+    if (!vars) return value;
+    return Object.entries(vars).reduce(
+      (result, [varKey, varValue]) => result.replace(`{${varKey}}`, String(varValue)),
+      value
+    );
   }
 
   // Imports

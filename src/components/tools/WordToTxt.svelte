@@ -8,12 +8,12 @@
 
   // Translation helpers
   function t(key: string): string {
-    const toolTranslations = translations['tool'] as Record<string, unknown> | undefined;
-    const scope = (toolTranslations?.['wordToTxt'] as Record<string, unknown> | undefined) || {};
+    const tools = translations['tools'] as Record<string, unknown> | undefined;
+    const scope = (tools?.['word-to-txt'] as Record<string, unknown> | undefined) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
-    return typeof value === 'string' ? value : `MISSING: tool.wordToTxt.${key}`;
+    return typeof value === 'string' ? value : `MISSING: tools.word-to-txt.${key}`;
   }
   function tc(key: string): string {
     const scope = translations['tools'] as Record<string, unknown> || {};

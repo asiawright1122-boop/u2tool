@@ -480,7 +480,7 @@
       <!-- 图表设置 -->
       <div>
         <label
-          for="label-{t('chartsettings')}"
+          for="chart-settings"
           class="block text-sm font-medium mb-2">{t("chartSettings")}</label
         >
         <div
@@ -675,7 +675,7 @@
     <!-- 右侧：图表预览 -->
     <div>
       <label
-        for="label-{t('chartpreview')}"
+        for="chart-preview"
         class="block text-sm font-medium mb-2">{t("chartPreview")}</label
       >
       <div

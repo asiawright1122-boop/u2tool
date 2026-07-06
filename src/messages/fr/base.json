@@ -985,7 +985,8 @@
       "copy": "Copier",
       "download": "Télécharger",
       "outputLabel": "docker-compose.yml",
-      "note": "Remarque : N'oubliez pas de modifier les mots de passe par défaut avant de les utiliser en production."
+      "note": "Remarque : N'oubliez pas de modifier les mots de passe par défaut avant de les utiliser en production.",
+      "composeVersion": "Compose Version"
     },
     "package-json-generator": {
       "name": "Générateur package.json",
@@ -1112,7 +1113,8 @@
       "rowSizes": "Tailles des lignes",
       "row": "Ligne {index}",
       "preview": "Aperçu",
-      "generatedCss": "CSS généré"
+      "generatedCss": "CSS généré",
+      "alignItems": "Align Items"
     },
     "css-flexbox-generator": {
       "name": "Générateur de Flexbox CSS",
@@ -3261,10 +3263,13 @@
       "shades": "Nuances",
       "complementary": "Complémentaire",
       "analogous": "Analogue",
-      "triadic": "Triadique"
+      "triadic": "Triadique",
+      "baseColor": "Base color",
+      "hexCode": "HEX code"
     },
     "httpStatus": {
-      "search": "Rechercher les codes d'état..."
+      "search": "Rechercher les codes d'état...",
+      "noResults": "No status codes found."
     },
     "dataUri": {
       "dropzone": "Cliquez ou faites glisser le fichier pour générer l'URI de données",
@@ -3907,7 +3912,8 @@
       "generate": "Générer",
       "clear": "Effacer",
       "copy": "Copier",
-      "download": "Télécharger"
+      "download": "Télécharger",
+      "copied": "Copied!"
     },
     "dockerCompose": {
       "version": "Composer une version",
@@ -4056,7 +4062,8 @@
         "MX": "Échange de courrier",
         "NS": "Serveur de noms",
         "TXT": "Enregistrement de texte"
-      }
+      },
+      "noRecords": "No DNS records found."
     },
     "imageResizer": {
       "dropzone": "Cliquez ou faites glisser l'image pour la redimensionner",
@@ -4893,7 +4900,8 @@
       "copy": "Copier",
       "download": "Télécharger",
       "outputLabel": "docker-compose.yml",
-      "note": "Note: N'oubliez pas de modifier les mots de passe par défaut avant de les utiliser en production."
+      "note": "Note: N'oubliez pas de modifier les mots de passe par défaut avant de les utiliser en production.",
+      "composeVersion": "Compose Version"
     },
     "package-json-generator": {
       "name": "Générateur de package.json",
@@ -5051,7 +5059,8 @@
       "preview": "Aperçu",
       "generatedCss": "CSS Généré",
       "copied": "Copié !",
-      "copy": "Copier"
+      "copy": "Copier",
+      "alignItems": "Align Items"
     },
     "css-flexbox-generator": {
       "name": "Générateur de Flexbox CSS",
@@ -9141,7 +9150,9 @@
       "taxRate": "Taux de Taxe",
       "total": "Total",
       "notes": "Notes",
-      "downloadPdf": "Télécharger PDF"
+      "downloadPdf": "Télécharger PDF",
+      "discount": "Discount",
+      "discountRate": "Discount Rate"
     },
     "resume": {
       "edit": "Modifier",
@@ -9247,7 +9258,9 @@
       "backgroundColor": "Couleur de Fond",
       "transparent": "Transparent",
       "downloadPng": "Télécharger PNG",
-      "downloadSvg": "Télécharger SVG"
+      "downloadSvg": "Télécharger SVG",
+      "settings": "Settings",
+      "undo": "Undo"
     },
     "pomodoro": {
       "work": "Travail",
@@ -9625,31 +9638,58 @@
       "name": "PDF vers Texte",
       "description": "Extrait le contenu texte des fichiers PDF. Prend en charge les PDF multi-pages avec des marqueurs de page.",
       "seo_title": "Convertisseur gratuit PDF vers texte en ligne",
-      "seo_description": "Convertissez vos fichiers PDF en texte en ligne gratuitement. Prise en charge des PDF multicadres, préservation de la mise en forme, téléchargement instantané en format TXT."
+      "seo_description": "Convertissez vos fichiers PDF en texte en ligne gratuitement. Prise en charge des PDF multicadres, préservation de la mise en forme, téléchargement instantané en format TXT.",
+      "dropzone": "Drag and drop a PDF file here, or click to select",
+      "extracting": "Extracting text...",
+      "page": "Page",
+      "pages": "pages",
+      "errorParsing": "Failed to parse PDF file",
+      "errorInvalidFile": "Please upload a valid PDF file"
     },
     "word-to-txt": {
       "name": "Word vers Texte",
       "description": "Convertir documents Word (.docx) en texte brut.",
       "seo_title": "Convertisseur gratuit de Word en texte en ligne",
-      "seo_description": "Convertissez des documents Word en texte brut en ligne gratuitement. Extrairez le texte des fichiers DOCX instantanément, sans logiciel nécessaire."
+      "seo_description": "Convertissez des documents Word en texte brut en ligne gratuitement. Extrairez le texte des fichiers DOCX instantanément, sans logiciel nécessaire.",
+      "dropzone": "Drag and drop a Word file here, or click to select",
+      "extracting": "Extracting text...",
+      "errorParsing": "Failed to parse Word file",
+      "errorInvalidFile": "Please upload a valid DOCX file"
     },
     "word-to-html": {
       "name": "Word à HTML",
       "description": "Convertissez des documents Word (.docx) en format HTML tout en préservant le formatage.",
       "seo_title": "Convertisseur gratuit Word en HTML en ligne",
-      "seo_description": "Convertissez vos documents Word en HTML en ligne gratuitement. Garde les formats, les titres et les listes. Téléchargez le code HTML propre."
+      "seo_description": "Convertissez vos documents Word en HTML en ligne gratuitement. Garde les formats, les titres et les listes. Téléchargez le code HTML propre.",
+      "dropzone": "Drag and drop a Word file here, or click to select",
+      "converting": "Converting to HTML...",
+      "showCode": "Show Code",
+      "showPreview": "Show Preview",
+      "errorParsing": "Failed to parse Word file",
+      "errorInvalidFile": "Please upload a valid DOCX file"
     },
     "excel-to-csv": {
       "name": "Excel vers CSV",
       "description": "Convertir feuilles de calcul Excel en format CSV.",
       "seo_title": "Convertisseur Excel vers CSV en ligne gratuit",
-      "seo_description": "Convertissez vos fichiers Excel en CSV en ligne gratuitement. Prise en charge de plusieurs feuilles, aperçu instantané et téléchargement."
+      "seo_description": "Convertissez vos fichiers Excel en CSV en ligne gratuitement. Prise en charge de plusieurs feuilles, aperçu instantané et téléchargement.",
+      "dropzone": "Drop an Excel file here or click to upload",
+      "converting": "Converting...",
+      "errorInvalidFile": "Please upload an XLS or XLSX file.",
+      "errorParsing": "Could not parse this Excel file."
     },
     "csv-to-excel": {
       "name": "CSV vers Excel",
       "description": "Convertir fichiers CSV en format Excel (.xlsx).",
       "seo_title": "Convertisseur CSV vers Excel en ligne gratuit",
-      "seo_description": "Convertissez vos fichiers CSV en Excel en ligne gratuitement. Visualisez les données en temps réel et téléchargez instantanément le fichier XLSX."
+      "seo_description": "Convertissez vos fichiers CSV en Excel en ligne gratuitement. Visualisez les données en temps réel et téléchargez instantanément le fichier XLSX.",
+      "dropzone": "Drag and drop a CSV file here, or click to select",
+      "converting": "Converting to Excel...",
+      "rows": "rows",
+      "showingFirst": "Showing first",
+      "errorParsing": "Failed to parse CSV file",
+      "errorInvalidFile": "Please upload a valid CSV file",
+      "errorExport": "Failed to export Excel file"
     },
     "loan-calculator": {
       "name": "Calculateur de Prêt",
@@ -11790,7 +11830,8 @@
       "placeholder": "Collez le tableau JSON ici...",
       "copied": "Copié !",
       "copyCsv": "Copier CSV",
-      "downloadCsv": "Télécharger CSV"
+      "downloadCsv": "Télécharger CSV",
+      "rowCount": "Rows: {count}"
     },
     "yaml-validator": {
       "name": "Valideur YAML Gratuit En Ligne",
@@ -11806,7 +11847,8 @@
       "placeholder": "Collez YAML ici...",
       "loadExample": "Charger l'exemple",
       "format": "Formater",
-      "parsedOutput": "Sortie analysée"
+      "parsedOutput": "Sortie analysée",
+      "errorLine": "Line {line}"
     },
     "xml-validator": {
       "name": "Valideur XML",
@@ -11822,7 +11864,9 @@
       "format": "Format XML",
       "placeholder": "Collez XML ici...",
       "loadExample": "Charger l'exemple",
-      "validMessage": "XML est valide"
+      "validMessage": "XML est valide",
+      "errorLine": "Line {line}",
+      "errorColumn": "Column {column}"
     },
     "css-to-tailwind": {
       "name": "Convertisseur CSS en Tailwind",
@@ -11995,7 +12039,8 @@
       "corsEnabledAll": "CORS activé pour toutes les origines",
       "corsEnabledNoHeader": "CORS activé (pas d'en-tête Access-Control-Allow-Origin)",
       "testing": "Test en cours...",
-      "unknown": "Inconnu"
+      "unknown": "Inconnu",
+      "corsEnabledSpecific": "CORS enabled for {origin}"
     },
     "json-to-zod": {
       "name": "JSON vers Schéma Zod",
@@ -12348,7 +12393,8 @@
       "tip4": "Exécutez plusieurs fois avec des paramètres différents pour varier les résultats",
       "addFillers": "Ajouter des mots de remplissage",
       "humanize": "Humaniser",
-      "inputPlaceholder": "Collez votre texte généré par IA ici..."
+      "inputPlaceholder": "Collez votre texte généré par IA ici...",
+      "outputPlaceholder": "Le résultat apparaîtra ici..."
     },
     "dockerfile-generator": {
       "name": "Générateur de Dockerfile",
@@ -12551,7 +12597,8 @@
       "inputPlaceholder": "Entrez le texte...",
       "swap": "Échanger",
       "outputPlaceholder": "Le résultat apparaîtra ici...",
-      "showTable": "Afficher le tableau"
+      "showTable": "Afficher le tableau",
+      "none": "None"
     },
     "checksum-verifier": {
       "name": "Vérificateur de somme de contrôle",
@@ -14666,7 +14713,8 @@
       "standardDeviation": "Écart-type",
       "hrs": "hrs",
       "wks": "sem",
-      "taskDefault": "Tâche"
+      "taskDefault": "Tâche",
+      "remove": "Remove"
     },
     "sprint-velocity-calculator": {
       "name": "Calculateur de Vitesse de Sprint",
@@ -14730,7 +14778,8 @@
       "medium": "Moyen",
       "low": "Faible",
       "resourceDefault": "Ressource",
-      "projectDefault": "Projet"
+      "projectDefault": "Projet",
+      "remove": "Remove"
     },
     "project-risk-analyzer": {
       "name": "Analyseur de Risques de Projet",
@@ -14791,7 +14840,8 @@
       "external": "Externe",
       "budget": "Budget",
       "mitigated": "Atténué",
-      "closed": "Fermé"
+      "closed": "Fermé",
+      "copied": "Copied!"
     },
     "milestone-tracker": {
       "name": "Suivi des Étapes Clés",
@@ -16389,6 +16439,9 @@
       "description": "Creez un tableau a elimination directe 2026 et predisez chaque tour jusqu'a la finale.",
       "seo_title": "Predicteur de tableau Coupe du monde 2026 gratuit",
       "seo_description": "Creez un tableau a elimination directe 2026 et predisez chaque tour jusqu'a la finale. Utilisez cet outil en ligne gratuit dans le navigateur, sans inscription."
-    }
+    },
+    "remove": "Remove",
+    "loading": "Loading...",
+    "noResults": "No results"
   }
 }

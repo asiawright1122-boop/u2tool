@@ -263,10 +263,14 @@ function mergeBaseUiRecords(
     'countries',
     'tax',
     'aiDiscovery',
-    'tools',
   ]) {
     merged[section] = shallowMergeRecordSection(base[section], override[section]);
   }
+
+  merged.tools = mergeMessageRecords(
+    isMergeableRecord(base.tools) ? base.tools : {},
+    isMergeableRecord(override.tools) ? override.tools : {}
+  );
 
   return merged;
 }

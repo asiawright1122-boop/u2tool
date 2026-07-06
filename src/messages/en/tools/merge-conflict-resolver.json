@@ -13,6 +13,9 @@
     "Resolve a simple package or config conflict before running project validation.",
     "Check how a current-branch-only resolution would look without editing the original file."
   ],
+  "useCurrent": "Use Current",
+  "useIncoming": "Use Incoming",
+  "keepBoth": "Keep Both",
   "faqs": [
     {
       "question": "Does this merge code intelligently?",

@@ -982,6 +982,7 @@
       "seo_title": "Free Docker Compose Generator Online",
       "seo_description": "Generate docker-compose.yml files with MySQL, PostgreSQL, cache service, Nginx, and more services online for free. Visual editor with YAML preview and validation.",
       "version": "Compose Version",
+      "composeVersion": "Compose Version",
       "databases": "Databases",
       "messaging": "Messaging & Search",
       "utilities": "Utilities",
@@ -1108,6 +1109,7 @@
       "rows": "Rows",
       "gap": "Gap (px)",
       "justifyItems": "Justify Items",
+      "alignItems": "Align Items",
       "stretch": "Stretch",
       "start": "Start",
       "center": "Center",
@@ -2593,6 +2595,7 @@
     "copy": "Copy",
     "clear": "Clear",
     "add": "Add",
+    "remove": "Remove",
     "expandAll": "Expand All",
     "collapseAll": "Collapse All",
     "generate": "Generate",
@@ -2612,6 +2615,8 @@
     "count": "Count",
     "all": "All",
     "new": "New",
+    "loading": "Loading...",
+    "noResults": "No results",
     "error": "Error",
     "errorEncoding": "Error encoding",
     "errorDecoding": "Error decoding",
@@ -3083,13 +3088,16 @@
       "toText": "To Text"
     },
     "palette": {
+      "baseColor": "Base color",
+      "hexCode": "HEX code",
       "shades": "Shades",
       "complementary": "Complementary",
       "analogous": "Analogous",
       "triadic": "Triadic"
     },
     "httpStatus": {
-      "search": "Search status codes..."
+      "search": "Search status codes...",
+      "noResults": "No status codes found."
     },
     "dataUri": {
       "dropzone": "Click or drag file to generate Data URI",
@@ -3732,6 +3740,7 @@
       "generate": "Generate",
       "clear": "Clear",
       "copy": "Copy",
+      "copied": "Copied!",
       "download": "Download"
     },
     "dockerCompose": {
@@ -3870,6 +3879,7 @@
       "lookup": "Lookup",
       "loading": "Looking up...",
       "error": "Lookup failed",
+      "noRecords": "No DNS records found.",
       "ipError": "Please enter a domain name, not an IP address. Example: google.com",
       "recordTypes": "Record Types",
       "records": "{type} Records",
@@ -4710,6 +4720,7 @@
       "seo_title": "Free Docker Compose Generator Online",
       "seo_description": "Generate docker-compose.yml files with MySQL, PostgreSQL, cache service, Nginx, and more services online for free. Visual editor with YAML preview and validation.",
       "version": "Compose Version",
+      "composeVersion": "Compose Version",
       "databases": "Databases",
       "messaging": "Messaging & Search",
       "utilities": "Utilities",
@@ -4865,6 +4876,7 @@
       "rows": "Rows",
       "gap": "Gap (px)",
       "justifyItems": "Justify Items",
+      "alignItems": "Align Items",
       "stretch": "Stretch",
       "start": "Start",
       "center": "Center",
@@ -8962,6 +8974,8 @@
       "amount": "Amount",
       "addItem": "+ Add Item",
       "subtotal": "Subtotal",
+      "discount": "Discount",
+      "discountRate": "Discount Rate",
       "tax": "Tax",
       "taxRate": "Tax Rate",
       "total": "Total",
@@ -9067,6 +9081,8 @@
       "gpa": "GPA"
     },
     "signature": {
+      "settings": "Settings",
+      "undo": "Undo",
       "penColor": "Pen Color",
       "penWidth": "Pen Width",
       "backgroundColor": "Background Color",
@@ -9450,31 +9466,58 @@
       "name": "PDF to Text",
       "description": "Extract text content from PDF files. Supports multi-page PDFs with page markers.",
       "seo_title": "Free PDF to Text Converter Online",
-      "seo_description": "Extract embedded text from PDF files online for free. Supports multi-page PDFs with page markers and TXT download."
+      "seo_description": "Extract embedded text from PDF files online for free. Supports multi-page PDFs with page markers and TXT download.",
+      "dropzone": "Drag and drop a PDF file here, or click to select",
+      "extracting": "Extracting text...",
+      "page": "Page",
+      "pages": "pages",
+      "errorParsing": "Failed to parse PDF file",
+      "errorInvalidFile": "Please upload a valid PDF file"
     },
     "word-to-txt": {
       "name": "Word to Text",
       "description": "Convert Word documents (.docx) to plain text format.",
       "seo_title": "Free Word to Text Converter Online",
-      "seo_description": "Free online Word to Text to convert Word documents to plain text online for free. Extract text from DOCX file.... Runs locally in your browser safely."
+      "seo_description": "Free online Word to Text to convert Word documents to plain text online for free. Extract text from DOCX file.... Runs locally in your browser safely.",
+      "dropzone": "Drag and drop a Word file here, or click to select",
+      "extracting": "Extracting text...",
+      "errorParsing": "Failed to parse Word file",
+      "errorInvalidFile": "Please upload a valid DOCX file"
     },
     "word-to-html": {
       "name": "Word to HTML",
       "description": "Convert DOCX files to sanitized HTML with preview, copy, and download.",
       "seo_title": "Free Word to HTML Converter Online",
-      "seo_description": "Free online Word to HTML to convert Word documents to HTML online for free. Preserves formatting, headings, a.... Runs locally in your browser safely."
+      "seo_description": "Free online Word to HTML to convert Word documents to HTML online for free. Preserves formatting, headings, a.... Runs locally in your browser safely.",
+      "dropzone": "Drag and drop a Word file here, or click to select",
+      "converting": "Converting to HTML...",
+      "showCode": "Show Code",
+      "showPreview": "Show Preview",
+      "errorParsing": "Failed to parse Word file",
+      "errorInvalidFile": "Please upload a valid DOCX file"
     },
     "excel-to-csv": {
       "name": "Excel to CSV",
       "description": "Convert Excel spreadsheets (.xlsx, .xls) to CSV format.",
       "seo_title": "Free Excel to CSV Converter Online",
-      "seo_description": "Upload or drop an XLS/XLSX file, choose a sheet, preview the CSV text, then copy it or download the selected sheet as CSV."
+      "seo_description": "Upload or drop an XLS/XLSX file, choose a sheet, preview the CSV text, then copy it or download the selected sheet as CSV.",
+      "dropzone": "Drop an Excel file here or click to upload",
+      "converting": "Converting...",
+      "errorInvalidFile": "Please upload an XLS or XLSX file.",
+      "errorParsing": "Could not parse this Excel file."
     },
     "csv-to-excel": {
       "name": "CSV to Excel",
       "description": "Convert CSV files to Excel spreadsheet format (.xlsx).",
       "seo_title": "Free CSV to Excel Converter Online",
-      "seo_description": "Free online CSV to Excel to convert CSV files to Excel online for free. Preview data, instant download as XLS.... Runs locally in your browser safely."
+      "seo_description": "Free online CSV to Excel to convert CSV files to Excel online for free. Preview data, instant download as XLS.... Runs locally in your browser safely.",
+      "dropzone": "Drag and drop a CSV file here, or click to select",
+      "converting": "Converting to Excel...",
+      "rows": "rows",
+      "showingFirst": "Showing first",
+      "errorParsing": "Failed to parse CSV file",
+      "errorInvalidFile": "Please upload a valid CSV file",
+      "errorExport": "Failed to export Excel file"
     },
     "loan-calculator": {
       "name": "Loan Calculator",
@@ -11604,6 +11647,7 @@
       "inputPlaceholder": "Paste JSON array or object here...",
       "noData": "No data to display",
       "placeholder": "Paste JSON array here...",
+      "rowCount": "Rows: {count}",
       "copied": "Copied!",
       "copyCsv": "Copy CSV",
       "downloadCsv": "Download CSV"
@@ -11618,6 +11662,7 @@
       "valid": "Valid YAML",
       "invalid": "Invalid YAML",
       "errorAt": "Error at line",
+      "errorLine": "Line {line}",
       "inputPlaceholder": "Paste your YAML here...",
       "placeholder": "Paste YAML here...",
       "loadExample": "Load Example",
@@ -11634,6 +11679,8 @@
       "valid": "Valid XML",
       "invalid": "Invalid XML",
       "errorAt": "Error at line",
+      "errorLine": "Line {line}",
+      "errorColumn": "Column {column}",
       "inputPlaceholder": "Paste your XML here...",
       "format": "Format XML",
       "placeholder": "Paste XML here...",
@@ -11809,6 +11856,7 @@
       "corsBlockedDescription": "The request was blocked by CORS policy",
       "corsEnabled": "CORS Enabled",
       "corsEnabledAll": "CORS enabled for all origins",
+      "corsEnabledSpecific": "CORS enabled for {origin}",
       "corsEnabledNoHeader": "CORS enabled (no Access-Control-Allow-Origin header)",
       "testing": "Testing...",
       "unknown": "Unknown"
@@ -11911,7 +11959,8 @@
       "tip4": "Run multiple times with different settings for variety",
       "addFillers": "Add natural filler words",
       "humanize": "Humanize",
-      "inputPlaceholder": "Paste your AI-generated text here..."
+      "inputPlaceholder": "Paste your AI-generated text here...",
+      "outputPlaceholder": "Humanized text will appear here..."
     },
     "text-spinner": {
       "name": "Text Spinner",
@@ -12365,6 +12414,7 @@
       "keywordPlaceholder": "keyword Placeholder",
       "effectiveKey": "effective Key",
       "inputPlaceholder": "input Placeholder",
+      "none": "None",
       "swap": "swap",
       "outputPlaceholder": "output Placeholder",
       "showTable": "show Table"
@@ -14482,6 +14532,7 @@
       "standardDeviation": "Standard Deviation",
       "hrs": "hrs",
       "wks": "wks",
+      "remove": "Remove",
       "taskDefault": "Task"
     },
     "sprint-velocity-calculator": {
@@ -14545,6 +14596,7 @@
       "high": "High",
       "medium": "Medium",
       "low": "Low",
+      "remove": "Remove",
       "resourceDefault": "Resource",
       "projectDefault": "Project"
     },
@@ -14594,6 +14646,7 @@
       "avgScore": "Avg Score",
       "riskRegister": "Risk Register",
       "exportReport": "Export Report",
+      "copied": "Copied!",
       "addRisk": "+ Add Risk",
       "probability": "Probability (1-5)",
       "impact": "Impact (1-5)",

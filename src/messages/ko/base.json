@@ -985,7 +985,8 @@
       "copy": "복사",
       "download": "다운로드",
       "outputLabel": "docker-compose.yml",
-      "note": "참고: 프로덕션에서 사용하기 전에 기본 비밀번호를 변경하는 것을 잊지 마십시오."
+      "note": "참고: 프로덕션에서 사용하기 전에 기본 비밀번호를 변경하는 것을 잊지 마십시오.",
+      "composeVersion": "Compose Version"
     },
     "package-json-generator": {
       "name": "package.json 생성기",
@@ -1112,7 +1113,8 @@
       "rowSizes": "행 크기",
       "row": "행 {index}",
       "preview": "미리보기",
-      "generatedCss": "생성된 CSS"
+      "generatedCss": "생성된 CSS",
+      "alignItems": "Align Items"
     },
     "css-flexbox-generator": {
       "name": "CSS 플렉스박스 생성기",
@@ -3081,10 +3083,13 @@
       "shades": "그늘",
       "complementary": "보완적인",
       "analogous": "유사한",
-      "triadic": "삼극체"
+      "triadic": "삼극체",
+      "baseColor": "Base color",
+      "hexCode": "HEX code"
     },
     "httpStatus": {
-      "search": "상태 코드 검색..."
+      "search": "상태 코드 검색...",
+      "noResults": "No status codes found."
     },
     "dataUri": {
       "dropzone": "파일을 클릭하거나 드래그하여 데이터 URI를 생성하세요.",
@@ -3727,7 +3732,8 @@
       "generate": "생성",
       "clear": "지우기",
       "copy": "복사",
-      "download": "다운로드"
+      "download": "다운로드",
+      "copied": "Copied!"
     },
     "dockerCompose": {
       "version": "버전 작성",
@@ -3876,7 +3882,8 @@
         "MX": "메일교환",
         "NS": "네임서버",
         "TXT": "텍스트 기록"
-      }
+      },
+      "noRecords": "No DNS records found."
     },
     "imageResizer": {
       "dropzone": "크기를 조정하려면 이미지를 클릭하거나 드래그하세요.",
@@ -4713,7 +4720,8 @@
       "copy": "복사",
       "download": "다운로드",
       "outputLabel": "docker-compose.yml",
-      "note": "참고: 프로덕션 환경에서 사용하기 전에 기본 비밀번호를 변경하세요."
+      "note": "참고: 프로덕션 환경에서 사용하기 전에 기본 비밀번호를 변경하세요.",
+      "composeVersion": "Compose Version"
     },
     "package-json-generator": {
       "name": "package.json 생성기",
@@ -4871,7 +4879,8 @@
       "preview": "미리보기",
       "generatedCss": "생성된 CSS",
       "copied": "복사됨!",
-      "copy": "복사"
+      "copy": "복사",
+      "alignItems": "Align Items"
     },
     "css-flexbox-generator": {
       "name": "CSS Flexbox 생성기",
@@ -8961,7 +8970,9 @@
       "taxRate": "세율",
       "total": "합계",
       "notes": "비고",
-      "downloadPdf": "PDF 다운로드"
+      "downloadPdf": "PDF 다운로드",
+      "discount": "Discount",
+      "discountRate": "Discount Rate"
     },
     "resume": {
       "edit": "편집",
@@ -9067,7 +9078,9 @@
       "backgroundColor": "배경색",
       "transparent": "투명",
       "downloadPng": "PNG 다운로드",
-      "downloadSvg": "SVG 다운로드"
+      "downloadSvg": "SVG 다운로드",
+      "settings": "Settings",
+      "undo": "Undo"
     },
     "pomodoro": {
       "work": "작업",
@@ -9445,31 +9458,58 @@
       "name": "PDF to 텍스트 변환기",
       "description": "PDF 파일에서 텍스트 내용을 추출합니다. 페이지 마커를 포함한 다중 페이지 PDF를 지원합니다.",
       "seo_title": "무료 PDF to Text 온라인 도구 - 다중 페이지 PDF 텍스트 추출",
-      "seo_description": "무료 온라인 PDF 텍스트 추출기을 통해 브라우저에서 안전하고 빠르게 PDF 파일에서 텍스트를 쉽게 추출하세요. 다중 페이지 PDF를 지원하며 페이지 마커가 있습니다. 지금 무료로 사용해보세요을(를) 진행할 수 있습니다. 별도의 가입 없이 100% 로컬에서 실행되어 개인정보를 완벽히 보호하며 일상 작업 효율을 높여주는 유용한 도구입니다."
+      "seo_description": "무료 온라인 PDF 텍스트 추출기을 통해 브라우저에서 안전하고 빠르게 PDF 파일에서 텍스트를 쉽게 추출하세요. 다중 페이지 PDF를 지원하며 페이지 마커가 있습니다. 지금 무료로 사용해보세요을(를) 진행할 수 있습니다. 별도의 가입 없이 100% 로컬에서 실행되어 개인정보를 완벽히 보호하며 일상 작업 효율을 높여주는 유용한 도구입니다.",
+      "dropzone": "Drag and drop a PDF file here, or click to select",
+      "extracting": "Extracting text...",
+      "page": "Page",
+      "pages": "pages",
+      "errorParsing": "Failed to parse PDF file",
+      "errorInvalidFile": "Please upload a valid PDF file"
     },
     "word-to-txt": {
       "name": "Word를 텍스트로",
       "description": "Word 문서(.docx)를 일반 텍스트로 변환.",
       "seo_title": "무료 온라인 Word to Text 도구 - 간편하게 문서 변환",
-      "seo_description": "무료 온라인 워드 텍스트 변환기을 통해 브라우저에서 안전하고 빠르게 Word 문서를 무료로 온라인으로 변환해주는 편리한 도구. JSON, Base64, SVG 등 다양한 형식 지원. 지금 바로 시작하세요을(를) 진행할 수 있습니다. 별도의 가입 없이 100% 로컬에서 실행되어 개인정보를 완벽히 보호하며 일상 작업 효율을 높여주는 유용한 도구입니다."
+      "seo_description": "무료 온라인 워드 텍스트 변환기을 통해 브라우저에서 안전하고 빠르게 Word 문서를 무료로 온라인으로 변환해주는 편리한 도구. JSON, Base64, SVG 등 다양한 형식 지원. 지금 바로 시작하세요을(를) 진행할 수 있습니다. 별도의 가입 없이 100% 로컬에서 실행되어 개인정보를 완벽히 보호하며 일상 작업 효율을 높여주는 유용한 도구입니다.",
+      "dropzone": "Drag and drop a Word file here, or click to select",
+      "extracting": "Extracting text...",
+      "errorParsing": "Failed to parse Word file",
+      "errorInvalidFile": "Please upload a valid DOCX file"
     },
     "word-to-html": {
       "name": "Word를 HTML로",
       "description": "Word 문서(.docx)를 HTML 형식으로 변환.",
       "seo_title": "무료 온라인 Word to HTML 도구 - 문서 변환",
-      "seo_description": "무료 온라인 Word를 HTML로을 통해 브라우저에서 안전하고 빠르게 Word 문서를 HTML로 쉽게 변환하세요. 무료 온라인 도구로 원본 형식을 유지합니다. 지금 시작하세요을(를) 진행할 수 있습니다. 별도의 가입 없이 100% 로컬에서 실행되어 개인정보를 완벽히 보호하며 일상 작업 효율을 높여주는 유용한 도구입니다."
+      "seo_description": "무료 온라인 Word를 HTML로을 통해 브라우저에서 안전하고 빠르게 Word 문서를 HTML로 쉽게 변환하세요. 무료 온라인 도구로 원본 형식을 유지합니다. 지금 시작하세요을(를) 진행할 수 있습니다. 별도의 가입 없이 100% 로컬에서 실행되어 개인정보를 완벽히 보호하며 일상 작업 효율을 높여주는 유용한 도구입니다.",
+      "dropzone": "Drag and drop a Word file here, or click to select",
+      "converting": "Converting to HTML...",
+      "showCode": "Show Code",
+      "showPreview": "Show Preview",
+      "errorParsing": "Failed to parse Word file",
+      "errorInvalidFile": "Please upload a valid DOCX file"
     },
     "excel-to-csv": {
       "name": "엑셀을 CSV로 변환",
       "description": "엑셀 스프레드시트 (.xlsx, .xls)를 CSV 형식으로 변환합니다.",
       "seo_title": "무료 온라인 Excel to CSV 변환 도구",
-      "seo_description": "무료 온라인 엑셀을 CSV로 변환을 통해 브라우저에서 안전하고 빠르게 Excel 데이터를 쉽게 CSV로 변환하세요. 무료 온라인 도구로 간편하게 파일 변환. 지금 시작하세요을(를) 진행할 수 있습니다. 별도의 가입 없이 100% 로컬에서 실행되어 개인정보를 완벽히 보호하며 일상 작업 효율을 높여주는 유용한 도구입니다."
+      "seo_description": "무료 온라인 엑셀을 CSV로 변환을 통해 브라우저에서 안전하고 빠르게 Excel 데이터를 쉽게 CSV로 변환하세요. 무료 온라인 도구로 간편하게 파일 변환. 지금 시작하세요을(를) 진행할 수 있습니다. 별도의 가입 없이 100% 로컬에서 실행되어 개인정보를 완벽히 보호하며 일상 작업 효율을 높여주는 유용한 도구입니다.",
+      "dropzone": "Drop an Excel file here or click to upload",
+      "converting": "Converting...",
+      "errorInvalidFile": "Please upload an XLS or XLSX file.",
+      "errorParsing": "Could not parse this Excel file."
     },
     "csv-to-excel": {
       "name": "CSV를 Excel로",
       "description": "CSV 파일을 Excel 형식(.xlsx)으로 변환.",
       "seo_title": "무료 온라인 CSV 엑셀 변환기",
-      "seo_description": "무료 온라인 CSV를 Excel로을 통해 브라우저에서 안전하고 빠르게 CSV 파일을 엑셀 형식으로 바꾸는 무료 온라인 도구입니다을(를) 진행할 수 있습니다. 별도의 가입 없이 100% 로컬에서 실행되어 개인정보를 완벽히 보호하며 일상 작업 효율을 높여주는 유용한 도구입니다."
+      "seo_description": "무료 온라인 CSV를 Excel로을 통해 브라우저에서 안전하고 빠르게 CSV 파일을 엑셀 형식으로 바꾸는 무료 온라인 도구입니다을(를) 진행할 수 있습니다. 별도의 가입 없이 100% 로컬에서 실행되어 개인정보를 완벽히 보호하며 일상 작업 효율을 높여주는 유용한 도구입니다.",
+      "dropzone": "Drag and drop a CSV file here, or click to select",
+      "converting": "Converting to Excel...",
+      "rows": "rows",
+      "showingFirst": "Showing first",
+      "errorParsing": "Failed to parse CSV file",
+      "errorInvalidFile": "Please upload a valid CSV file",
+      "errorExport": "Failed to export Excel file"
     },
     "loan-calculator": {
       "name": "대출 계산기",
@@ -11601,7 +11641,8 @@
       "placeholder": "JSON 배열을 여기에 붙여넣기...",
       "copied": "복사됨!",
       "copyCsv": "CSV 복사",
-      "downloadCsv": "CSV 다운로드"
+      "downloadCsv": "CSV 다운로드",
+      "rowCount": "Rows: {count}"
     },
     "yaml-validator": {
       "name": "YAML 검사기",
@@ -11617,7 +11658,8 @@
       "placeholder": "YAML을 여기에 붙여넣기...",
       "loadExample": "예제 로드",
       "format": "포맷",
-      "parsedOutput": "파싱된 출력"
+      "parsedOutput": "파싱된 출력",
+      "errorLine": "Line {line}"
     },
     "xml-validator": {
       "name": "XML 검사기",
@@ -11633,7 +11675,9 @@
       "format": "XML 형식",
       "placeholder": "XML을 여기에 붙여넣기...",
       "loadExample": "예제 로드",
-      "validMessage": "XML이 유효합니다"
+      "validMessage": "XML이 유효합니다",
+      "errorLine": "Line {line}",
+      "errorColumn": "Column {column}"
     },
     "css-to-tailwind": {
       "name": "CSS to Tailwind 변환기",
@@ -11806,7 +11850,8 @@
       "corsEnabledAll": "모든 출처에 대해 CORS 활성화됨",
       "corsEnabledNoHeader": "CORS 활성화됨 (Access-Control-Allow-Origin 헤더 없음)",
       "testing": "테스트 중...",
-      "unknown": "알 수 없음"
+      "unknown": "알 수 없음",
+      "corsEnabledSpecific": "CORS enabled for {origin}"
     },
     "json-to-zod": {
       "name": "JSON to Zod 스키마",
@@ -12159,7 +12204,8 @@
       "tip4": "다양한 결과를 위해 여러 번 실행",
       "addFillers": "자연스러운 필러 단어 추가",
       "humanize": "인간화",
-      "inputPlaceholder": "AI 생성 텍스트를 여기에 붙여넣기..."
+      "inputPlaceholder": "AI 생성 텍스트를 여기에 붙여넣기...",
+      "outputPlaceholder": "결과가 여기에 표시됩니다..."
     },
     "dockerfile-generator": {
       "name": "도커파일 생성기",
@@ -12362,7 +12408,8 @@
       "inputPlaceholder": "내용을 입력하세요...",
       "swap": "교환",
       "outputPlaceholder": "결과가 여기에 표시됩니다...",
-      "showTable": "테이블 표시"
+      "showTable": "테이블 표시",
+      "none": "None"
     },
     "checksum-verifier": {
       "name": "체크섬 검증기",
@@ -14477,7 +14524,8 @@
       "standardDeviation": "표준 편차",
       "hrs": "시간",
       "wks": "주",
-      "taskDefault": "작업"
+      "taskDefault": "작업",
+      "remove": "Remove"
     },
     "sprint-velocity-calculator": {
       "name": "스프린트 빠르도 계산기",
@@ -14541,7 +14589,8 @@
       "medium": "중간",
       "low": "낮음",
       "resourceDefault": "리소스",
-      "projectDefault": "프로젝트"
+      "projectDefault": "프로젝트",
+      "remove": "Remove"
     },
     "project-risk-analyzer": {
       "name": "프로젝트 리스크 분석 도구",
@@ -14602,7 +14651,8 @@
       "external": "외부",
       "budget": "예산",
       "mitigated": "완화됨",
-      "closed": "종료"
+      "closed": "종료",
+      "copied": "Copied!"
     },
     "milestone-tracker": {
       "name": "마일스톤 트래커",
@@ -16200,6 +16250,9 @@
       "description": "2026 월드컵 녹아웃 대진표를 만들고 결승까지 각 라운드를 예측합니다.",
       "seo_title": "무료 온라인 2026 월드컵 토너먼트 예측기",
       "seo_description": "2026 월드컵 녹아웃 대진표를 만들고 결승까지 각 라운드를 예측합니다. 브라우저에서 무료로 사용할 수 있으며 가입이 필요 없습니다."
-    }
+    },
+    "remove": "Remove",
+    "loading": "Loading...",
+    "noResults": "No results"
   }
 }

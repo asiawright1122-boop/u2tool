@@ -256,7 +256,7 @@
         <div class="space-y-4">
           <!-- 图表设置 -->
           <div>
-            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <label for="chart-settings" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
                 <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
@@ -403,7 +403,7 @@
 
         <!-- 右侧：图表预览 -->
         <div>
-          <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <label for="chart-preview" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="min-height: 400px">
             <EChartsWrapper
               bind:this={chartRef as any}

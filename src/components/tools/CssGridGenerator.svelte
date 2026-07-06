@@ -134,7 +134,7 @@
           </select>
         </div>
         <div class="flex flex-col">
-          <label for="grid-align-items" class="block text-sm font-medium mb-2 truncate">{t('alignItems')}</label>
+          <label for="grid-align-items" class="block text-sm font-medium mb-2 truncate">{tg('alignItems')}</label>
           <select id="grid-align-items" name="gridAlignItems" bind:value={alignItems} class="tool-input flex-1">
             <option value="stretch">{tg('stretch')}</option>
             <option value="start">{tg('start')}</option>
