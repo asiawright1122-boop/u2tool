@@ -38,18 +38,20 @@ describe('AI model cost comparisons', () => {
     }
   });
 
-  it('keeps Kimi out of the first batch until a currency policy exists', () => {
+  it('keeps CNY-priced providers out of the first batch until a currency policy exists', () => {
     const indexedModels = aiModelComparisonSlugs.flatMap((slug) => {
       const page = getAiModelComparison('en', slug);
       return [...(page?.left.models ?? []), ...(page?.right.models ?? [])];
     });
 
     expect(indexedModels.some((model) => model.provider === 'Kimi')).toBe(false);
+    expect(indexedModels.some((model) => model.provider === 'Qwen')).toBe(false);
     expect(AI_MODEL_PRICING.some((model) => model.provider === 'Kimi' && model.currency === 'CNY')).toBe(true);
+    expect(AI_MODEL_PRICING.some((model) => model.provider === 'Qwen' && model.currency === 'CNY')).toBe(true);
   });
 
   it('calculates scenario costs with the shared formula', () => {
-    const openAiModel = AI_MODEL_PRICING.find((model) => model.id === 'openai-gpt-5-4-mini');
+    const openAiModel = AI_MODEL_PRICING.find((model) => model.id === 'openai-gpt-5-2');
 
     expect(openAiModel).toBeTruthy();
     expect(
@@ -58,7 +60,7 @@ describe('AI model cost comparisons', () => {
         { id: 'short-chatbot', title: 'Short chatbot', inputTokens: 750, outputTokens: 500 },
         1000
       )
-    ).toBeCloseTo(2.8125, 6);
+    ).toBeCloseTo(8.3125, 6);
   });
 
   it('provides English and Chinese page copy without fallback routes', () => {

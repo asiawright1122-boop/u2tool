@@ -6,14 +6,28 @@ import {
   getAiModelPricingGroups,
 } from './ai-token-calculator';
 
-const EXPECTED_PROVIDERS = ['OpenAI', 'Anthropic', 'Google', 'DeepSeek', 'xAI', 'Perplexity', 'Kimi'];
+const EXPECTED_PROVIDERS = [
+  'OpenAI',
+  'Anthropic',
+  'Google',
+  'DeepSeek',
+  'xAI',
+  'Perplexity',
+  'Mistral',
+  'Cohere',
+  'Qwen',
+  'Kimi',
+];
 const OFFICIAL_SOURCE_HOSTS = [
-  'platform.openai.com',
+  'openai.com',
   'platform.claude.com',
   'ai.google.dev',
   'api-docs.deepseek.com',
   'docs.x.ai',
   'docs.perplexity.ai',
+  'mistral.ai',
+  'cohere.com',
+  'help.aliyun.com',
   'platform.kimi.com',
 ];
 
@@ -24,17 +38,20 @@ describe('ai token calculator helper', () => {
   });
 
   it('contains dated pricing metadata for current supported providers', () => {
-    expect(AI_MODEL_PRICING.length).toBeGreaterThanOrEqual(30);
+    expect(AI_MODEL_PRICING.length).toBeGreaterThanOrEqual(35);
     expect(AI_MODEL_PRICING.map((model) => model.id)).toEqual(expect.arrayContaining([
-      'openai-gpt-5-5',
+      'openai-gpt-5-2',
       'anthropic-claude-fable-5',
       'google-gemini-3-5-flash',
       'deepseek-v4-pro',
       'xai-grok-4-3',
       'perplexity-sonar-pro',
+      'mistral-large',
+      'cohere-aya-expanse-32b',
+      'qwen-qwen3-7-max',
       'kimi-k2-7-code',
     ]));
-    expect(AI_MODEL_PRICING.every((model) => model.pricingDate === '2026-07-06')).toBe(true);
+    expect(AI_MODEL_PRICING.every((model) => model.pricingDate === '2026-07-07')).toBe(true);
   });
 
   it('keeps the pricing catalog valid and source-backed', () => {
@@ -76,9 +93,12 @@ describe('ai token calculator helper', () => {
     );
 
     expect(groupedRows).toHaveLength(AI_MODEL_PRICING.length);
-    expect(groupedRows.some((row) => row.model === 'gpt-5.5')).toBe(true);
+    expect(groupedRows.some((row) => row.model === 'gpt-5.2')).toBe(true);
     expect(groupedRows.some((row) => row.model === 'Claude Sonnet 5')).toBe(true);
     expect(groupedRows.some((row) => row.model === 'grok-4.3')).toBe(true);
+    expect(groupedRows.some((row) => row.model === 'Mistral Large')).toBe(true);
+    expect(groupedRows.some((row) => row.model === 'Aya Expanse 32B')).toBe(true);
+    expect(groupedRows.some((row) => row.model === 'qwen3.7-max' && row.currency === 'CNY')).toBe(true);
     expect(groupedRows.some((row) => row.model === 'kimi-k2.7-code' && row.currency === 'CNY')).toBe(true);
     expect(groupedRows.some((row) => row.note?.includes('cache'))).toBe(true);
 
@@ -94,7 +114,7 @@ describe('ai token calculator helper', () => {
 
   it('calculates per-request and batch cost from per-million token pricing', () => {
     const result = calculateAiTokenCost({
-      modelId: 'openai-gpt-5-5',
+      modelId: 'openai-gpt-5-2',
       promptText: 'hello world',
       outputTokens: 100,
       requestCount: 10,
