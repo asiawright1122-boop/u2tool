@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { COMMON_PATTERNS } from '@/lib/tool-stubs';
-
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -19,26 +17,40 @@
 
   // Types
   interface PatternOption {
-  id: string;
-  labelKey: string;
-  pattern: string;
-  descKey: string;
-}
+    id: string;
+    labelKey: string;
+    pattern: string;
+    descKey: string;
+  }
 
-  let selectedPattern = $state('');
+  const PATTERN_OPTIONS: PatternOption[] = [
+    { id: 'email', labelKey: 'email', pattern: '^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$', descKey: 'emailDesc' },
+    { id: 'phone', labelKey: 'phone', pattern: '^\\+?1?[-.\\s]?\\(?[2-9]\\d{2}\\)?[-.\\s]?\\d{3}[-.\\s]?\\d{4}$', descKey: 'phoneDesc' },
+    { id: 'url', labelKey: 'url', pattern: 'https?:\\/\\/[^\\s]+', descKey: 'urlDesc' },
+    { id: 'ip', labelKey: 'ip', pattern: '^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$', descKey: 'ipDesc' },
+    { id: 'date', labelKey: 'date', pattern: '^\\d{4}-\\d{2}-\\d{2}$', descKey: 'dateDesc' },
+    { id: 'time', labelKey: 'time', pattern: '^(?:[01]\\d|2[0-3]):[0-5]\\d$', descKey: 'timeDesc' },
+    { id: 'hex', labelKey: 'hex', pattern: '^#(?:[0-9a-fA-F]{3}){1,2}$', descKey: 'hexDesc' },
+    { id: 'username', labelKey: 'username', pattern: '^[a-zA-Z0-9_]{3,16}$', descKey: 'usernameDesc' },
+    { id: 'password', labelKey: 'password', pattern: '^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^A-Za-z\\d]).{8,}$', descKey: 'passwordDesc' },
+    { id: 'zip', labelKey: 'zip', pattern: '^\\d{5}(?:-\\d{4})?$', descKey: 'zipDesc' },
+    { id: 'creditcard', labelKey: 'creditcard', pattern: '^(?:\\d[ -]*?){13,19}$', descKey: 'creditcardDesc' },
+    { id: 'slug', labelKey: 'slug', pattern: '^[a-z0-9]+(?:-[a-z0-9]+)*$', descKey: 'slugDesc' },
+  ];
 
+  let selectedPattern = $state('email');
   let customPattern = $state('');
-
   let testString = $state('');
-
   let flags = $state({ g: true, i: false, m: false });
+  let matches = $state<string[]>([]);
 
-  let matches = $state([]);
+  const selectedPatternOption = $derived(PATTERN_OPTIONS.find((pattern) => pattern.id === selectedPattern));
+  const currentPattern = $derived(selectedPatternOption?.pattern || customPattern);
+  const currentPatternLabel = $derived(
+    selectedPatternOption ? t(`patterns.${selectedPatternOption.descKey}`) : t('customPattern')
+  );
 
   // Functions
-  const currentPattern = selectedPattern 
-    ? COMMON_PATTERNS.find(p => p.id === selectedPattern)?.pattern || ''
-    : customPattern;
   function testPattern() {
     if (!currentPattern || !testString) {
       matches = [];
@@ -55,7 +67,7 @@
     }
   }
   function copyPattern() {
-    navigator.clipboard.writeText(currentPattern);
+    if (currentPattern) navigator.clipboard.writeText(currentPattern);
   }
 
 </script>
@@ -65,7 +77,7 @@
       <div>
         <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('commonPatterns')}</label>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
-          {#each COMMON_PATTERNS as pattern (pattern.id)}
+          {#each PATTERN_OPTIONS as pattern (pattern.id)}
 <button 
               onclick={() => { selectedPattern = pattern.id; customPattern = ''; }}
               class={`px-3 py-2 rounded-lg text-sm transition-colors ${
@@ -79,10 +91,10 @@
 
       <div>
         <label for="regex-pattern" class="tool-label">
-          {selectedPattern ? t(`patterns.${COMMON_PATTERNS.find(p => p.id === selectedPattern)?.descKey}`) : t('customPattern')}
+          {currentPatternLabel}
         </label>
         <input id="regex-pattern" name="pattern" type="text" value={currentPattern}
-          onchange={(e) => { customPattern = e.target.value; selectedPattern = ''; }}
+          oninput={(e) => { customPattern = e.currentTarget.value; selectedPattern = ''; }}
           class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono"
           placeholder={t('placeholder')} />
       </div>
