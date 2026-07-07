@@ -282,16 +282,16 @@
     </button>
   </div>
 
-  <section class="rounded-xl bg-gradient-to-r from-slate-900 to-amber-900 p-5 text-white shadow-lg">
+  <section class="rounded-xl bg-gradient-to-r from-amber-50 to-orange-50 p-5 text-amber-950 shadow-lg dark:from-slate-900 dark:to-amber-900 dark:text-white">
     <div class="flex items-center justify-between gap-3">
       <div>
-        <div class="text-sm uppercase tracking-wide text-amber-100">{tz('convertedTime')}</div>
+        <div class="text-sm uppercase tracking-wide text-amber-700 dark:text-amber-100">{tz('convertedTime')}</div>
         {#if result}
           <div class="mt-2 text-3xl font-bold">{result.time}</div>
-          <div class="mt-1 text-amber-100">{result.date}</div>
-          <div class="mt-3 text-sm text-amber-100">{targetTimezone}</div>
+          <div class="mt-1 text-amber-700 dark:text-amber-100">{result.date}</div>
+          <div class="mt-3 text-sm text-amber-700 dark:text-amber-100">{targetTimezone}</div>
         {:else}
-          <div class="mt-2 text-lg font-medium text-amber-100">-</div>
+          <div class="mt-2 text-lg font-medium text-amber-700 dark:text-amber-100">-</div>
         {/if}
       </div>
       <button

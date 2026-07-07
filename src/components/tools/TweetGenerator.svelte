@@ -348,14 +348,14 @@
   }
 </script>
 
-<div class="bg-stone-950 text-stone-100 p-6 rounded-2xl border border-stone-800 shadow-2xl font-sans min-h-[400px]">
+<div class="tool-theme-shell p-6 rounded-2xl font-sans min-h-[400px]">
   <!-- Header -->
   <div class="flex items-center gap-3 mb-6">
     <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-400 to-sky-700 flex items-center justify-center text-stone-950 font-black text-lg">
       𝕏
     </div>
     <div>
-      <h2 class="font-extrabold text-lg bg-gradient-to-r from-sky-300 via-sky-100 to-sky-400 bg-clip-text text-transparent leading-tight">
+      <h2 class="font-extrabold text-lg text-sky-700 dark:bg-gradient-to-r dark:from-sky-300 dark:via-sky-100 dark:to-sky-400 dark:bg-clip-text dark:text-transparent leading-tight">
         {l.title}
       </h2>
       <p class="text-stone-500 text-xs mt-0.5">{l.subtitle}</p>

@@ -282,6 +282,356 @@
 }
 
 /* ============================================
+ * Adaptive Tool Theme Bridge
+ * ============================================ */
+
+.tool-theme-shell {
+  @apply bg-white text-slate-900 border border-slate-200 shadow-sm;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.dark .tool-theme-shell {
+  @apply bg-stone-950 text-stone-100 border-stone-800 shadow-2xl;
+}
+
+.tool-theme-workspace {
+  @apply bg-white text-slate-900;
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.dark .tool-theme-workspace {
+  @apply bg-stone-950 text-stone-100;
+}
+
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-stone-950 {
+  @apply bg-white dark:bg-stone-950;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-zinc-950 {
+  @apply bg-white dark:bg-zinc-950;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-gray-950,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-neutral-950,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-black {
+  @apply bg-white dark:bg-black;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-stone-950\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-stone-950\/60,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-zinc-950\/20,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-zinc-950\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-zinc-950\/60,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-zinc-950\/80,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-zinc-950\/90,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-gray-950\/20,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-gray-950\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-gray-950\/60,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-gray-950\/80,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-gray-950\/90,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-neutral-950\/20,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-neutral-950\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-neutral-950\/60,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-neutral-950\/80,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-neutral-950\/90,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-black\/30,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-black\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-black\/60 {
+  @apply bg-white dark:bg-zinc-950/60;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-stone-900 {
+  @apply bg-slate-50 dark:bg-stone-900;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-zinc-900 {
+  @apply bg-slate-50 dark:bg-zinc-900;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-gray-900,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-neutral-900 {
+  @apply bg-slate-50 dark:bg-gray-900;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-stone-800 {
+  @apply bg-slate-100 dark:bg-stone-800;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-zinc-800 {
+  @apply bg-slate-100 dark:bg-zinc-800;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-gray-800,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-neutral-800 {
+  @apply bg-slate-100 dark:bg-gray-800;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-stone-900\/25,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-stone-900\/30,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-stone-900\/35,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-stone-900\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-stone-900\/50,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-stone-900\/60,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-zinc-900\/20,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-zinc-900\/30,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-zinc-900\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-zinc-900\/50,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-gray-900\/20,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-gray-900\/30,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-gray-900\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-gray-900\/50,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-gray-900\/60,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-neutral-900\/20,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-neutral-900\/30,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-neutral-900\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-neutral-900\/50,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-neutral-900\/60 {
+  @apply bg-slate-50/90 dark:bg-stone-900/50;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .from-stone-900,
+:where(.tool-theme-shell, .tool-theme-workspace) .from-stone-900\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .from-stone-900\/50,
+:where(.tool-theme-shell, .tool-theme-workspace) .from-stone-900\/60 {
+  @apply from-slate-50 dark:from-stone-900/60;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .from-zinc-900,
+:where(.tool-theme-shell, .tool-theme-workspace) .from-zinc-900\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .from-zinc-900\/50,
+:where(.tool-theme-shell, .tool-theme-workspace) .from-zinc-900\/60 {
+  @apply from-slate-50 dark:from-zinc-900/60;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .from-gray-900,
+:where(.tool-theme-shell, .tool-theme-workspace) .from-gray-900\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .from-gray-900\/50,
+:where(.tool-theme-shell, .tool-theme-workspace) .from-gray-900\/60,
+:where(.tool-theme-shell, .tool-theme-workspace) .from-gray-950 {
+  @apply from-slate-50 dark:from-gray-900/60;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .from-neutral-900,
+:where(.tool-theme-shell, .tool-theme-workspace) .from-neutral-900\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .from-neutral-900\/50,
+:where(.tool-theme-shell, .tool-theme-workspace) .from-neutral-900\/60,
+:where(.tool-theme-shell, .tool-theme-workspace) .from-neutral-950 {
+  @apply from-slate-50 dark:from-neutral-900/60;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .via-gray-900,
+:where(.tool-theme-shell, .tool-theme-workspace) .via-neutral-900,
+:where(.tool-theme-shell, .tool-theme-workspace) .via-black {
+  @apply via-white dark:via-black;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .to-stone-950,
+:where(.tool-theme-shell, .tool-theme-workspace) .to-stone-950\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .to-stone-950\/50,
+:where(.tool-theme-shell, .tool-theme-workspace) .to-stone-950\/60 {
+  @apply to-white dark:to-stone-950/60;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .to-zinc-950,
+:where(.tool-theme-shell, .tool-theme-workspace) .to-zinc-950\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .to-zinc-950\/50,
+:where(.tool-theme-shell, .tool-theme-workspace) .to-zinc-950\/60 {
+  @apply to-white dark:to-zinc-950/60;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .to-gray-900,
+:where(.tool-theme-shell, .tool-theme-workspace) .to-gray-950,
+:where(.tool-theme-shell, .tool-theme-workspace) .to-black {
+  @apply to-white dark:to-black;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .to-neutral-950,
+:where(.tool-theme-shell, .tool-theme-workspace) .to-neutral-950\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .to-neutral-950\/60,
+:where(.tool-theme-shell, .tool-theme-workspace) .to-neutral-950\/90 {
+  @apply to-white dark:to-neutral-950/80;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-stone-850,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:bg-stone-850:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:bg-stone-750:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:bg-stone-800:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:bg-zinc-700:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:bg-zinc-800:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:bg-zinc-900\/30:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:bg-zinc-950:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:bg-zinc-950\/90:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:bg-gray-800:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:bg-gray-800\/40:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:bg-gray-900:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:bg-neutral-900:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:bg-neutral-950:hover {
+  @apply bg-slate-100 dark:bg-stone-800;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .disabled\:bg-stone-900:disabled,
+:where(.tool-theme-shell, .tool-theme-workspace) .disabled\:bg-stone-800:disabled,
+:where(.tool-theme-shell, .tool-theme-workspace) .disabled\:bg-stone-850:disabled {
+  @apply bg-slate-200 dark:bg-stone-800;
+}
+
+:where(.tool-theme-shell, .tool-theme-workspace) .border-stone-900\/80,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-stone-800,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-stone-800\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-stone-800\/50,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-stone-800\/60,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-stone-800\/80,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-stone-850,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-zinc-800,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-zinc-800\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-gray-900,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-gray-800,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-gray-800\/80,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-neutral-900,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-neutral-800,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-neutral-800\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-neutral-800\/60,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-neutral-800\/80 {
+  @apply border-slate-200 dark:border-stone-800;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .border-stone-700,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-zinc-700,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-gray-700,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-neutral-700,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-neutral-700\/60,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:border-stone-700:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:border-zinc-700:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:border-neutral-700:hover {
+  @apply border-slate-300 dark:border-stone-700;
+}
+
+:where(.tool-theme-shell, .tool-theme-workspace) .text-stone-100 {
+  @apply text-slate-900 dark:text-stone-100;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .text-zinc-100,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-gray-100,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-neutral-100,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-white {
+  @apply text-slate-900 dark:text-zinc-100;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .text-stone-200 {
+  @apply text-slate-800 dark:text-stone-200;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .text-zinc-200,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-gray-200,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-neutral-200 {
+  @apply text-slate-800 dark:text-zinc-200;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .text-stone-300,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:text-stone-300:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-zinc-300,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-gray-300,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-neutral-300,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:text-zinc-200:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:text-gray-300:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:text-neutral-200:hover {
+  @apply text-slate-700 dark:text-stone-300;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .text-stone-400,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:text-stone-400:hover {
+  @apply text-slate-600 dark:text-stone-400;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .text-zinc-400,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-gray-400,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-neutral-400,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:text-zinc-400:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:text-gray-400:hover,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:text-neutral-400:hover {
+  @apply text-slate-600 dark:text-zinc-400;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .text-stone-500,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-zinc-500,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-gray-500,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-neutral-500 {
+  @apply text-slate-500 dark:text-stone-500;
+}
+
+:where(.tool-theme-shell, .tool-theme-workspace) .text-amber-200\/90 {
+  @apply text-amber-800/90 dark:text-amber-200/90;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .text-amber-200,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-yellow-100 {
+  @apply text-amber-800 dark:text-amber-200;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .text-amber-300,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-amber-400,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-amber-500,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:text-amber-400:hover {
+  @apply text-amber-700 dark:text-amber-400;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .text-sky-300,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-sky-400,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-sky-500,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:text-sky-400:hover {
+  @apply text-sky-700 dark:text-sky-400;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .text-violet-300,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-violet-400,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:text-violet-400:hover {
+  @apply text-violet-700 dark:text-violet-400;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .text-fuchsia-300,
+:where(.tool-theme-shell, .tool-theme-workspace) .text-fuchsia-400,
+:where(.tool-theme-shell, .tool-theme-workspace) .hover\:text-fuchsia-300:hover {
+  @apply text-fuchsia-700 dark:text-fuchsia-400;
+}
+
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-amber-950\/30,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-amber-950\/40 {
+  @apply bg-amber-50 dark:bg-amber-950/40;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-sky-950\/30,
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-sky-950\/40 {
+  @apply bg-sky-50 dark:bg-sky-950/40;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-violet-950\/40 {
+  @apply bg-violet-50 dark:bg-violet-950/40;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .bg-fuchsia-950\/40 {
+  @apply bg-fuchsia-50 dark:bg-fuchsia-950/40;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .border-amber-800\/40,
+:where(.tool-theme-shell, .tool-theme-workspace) .border-amber-800\/50 {
+  @apply border-amber-200 dark:border-amber-800/50;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .border-sky-800\/50 {
+  @apply border-sky-200 dark:border-sky-800/50;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .border-violet-700\/40 {
+  @apply border-violet-200 dark:border-violet-700/40;
+}
+:where(.tool-theme-shell, .tool-theme-workspace) .border-fuchsia-800\/40 {
+  @apply border-fuchsia-200 dark:border-fuchsia-800/40;
+}
+
+/* ============================================
+ * Adaptive Code Output Surfaces
+ * ============================================ */
+
+:where(pre, textarea).bg-gray-900,
+:where(pre, textarea).bg-gray-950,
+:where(pre, textarea).bg-slate-950,
+:where(.tool-result).bg-gray-900,
+:where(div).bg-gray-900:has(code),
+:where(div).bg-gray-950:has(code),
+:where(div).bg-slate-950:has(code) {
+  @apply bg-slate-50 dark:bg-gray-900 border-slate-200 dark:border-gray-700;
+}
+
+:where(pre, textarea).bg-gray-950,
+:where(pre, textarea).bg-slate-950,
+:where(div).bg-gray-950:has(code),
+:where(div).bg-slate-950:has(code) {
+  @apply dark:bg-gray-950;
+}
+
+:where(pre, code, textarea).text-green-400,
+:where(pre, code, textarea).text-green-300,
+:where(.bg-gray-900, .bg-gray-950, .bg-slate-950) :where(.text-green-400, .text-green-300) {
+  @apply text-emerald-700 dark:text-green-400;
+}
+
+:where(pre, code, textarea).text-gray-100,
+:where(.bg-gray-900, .bg-gray-950, .bg-slate-950) .text-gray-100 {
+  @apply text-slate-800 dark:text-gray-100;
+}
+
+:where(pre, code, textarea).text-slate-100,
+:where(.bg-gray-900, .bg-gray-950, .bg-slate-950) .text-slate-100 {
+  @apply text-slate-800 dark:text-slate-100;
+}
+
+:where(.tool-result).border-gray-800,
+:where(pre).border-gray-700,
+:where(div).bg-gray-900:has(code).border-gray-700,
+:where(div).bg-gray-900:has(code).border-gray-800 {
+  @apply border-slate-200 dark:border-gray-700;
+}
+
+/* ============================================
  * Tool Component Styles
  * ============================================ */
 

@@ -662,19 +662,19 @@
         <div class="grid grid-cols-3 gap-3">
           <button
             onclick={() => applyPreset('backpacker')}
-            class="px-3 py-2 text-xs bg-neutral-950 hover:bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white rounded-xl transition-all font-medium font-mono btn-preset"
+            class="px-3 py-2 text-xs bg-white hover:bg-neutral-50 border border-neutral-200 hover:border-neutral-300 text-neutral-700 hover:text-neutral-950 dark:bg-neutral-950 dark:hover:bg-neutral-900 dark:border-neutral-800 dark:hover:border-neutral-700 dark:text-neutral-300 dark:hover:text-white rounded-xl transition-all font-medium font-mono btn-preset"
           >
             🎒 {currentUi.backpackerPreset}
           </button>
           <button
             onclick={() => applyPreset('standard')}
-            class="px-3 py-2 text-xs bg-neutral-950 hover:bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white rounded-xl transition-all font-medium font-mono btn-preset"
+            class="px-3 py-2 text-xs bg-white hover:bg-neutral-50 border border-neutral-200 hover:border-neutral-300 text-neutral-700 hover:text-neutral-950 dark:bg-neutral-950 dark:hover:bg-neutral-900 dark:border-neutral-800 dark:hover:border-neutral-700 dark:text-neutral-300 dark:hover:text-white rounded-xl transition-all font-medium font-mono btn-preset"
           >
             👥 {currentUi.standardPreset}
           </button>
           <button
             onclick={() => applyPreset('luxury')}
-            class="px-3 py-2 text-xs bg-neutral-950 hover:bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white rounded-xl transition-all font-medium font-mono btn-preset"
+            class="px-3 py-2 text-xs bg-white hover:bg-neutral-50 border border-neutral-200 hover:border-neutral-300 text-neutral-700 hover:text-neutral-950 dark:bg-neutral-950 dark:hover:bg-neutral-900 dark:border-neutral-800 dark:hover:border-neutral-700 dark:text-neutral-300 dark:hover:text-white rounded-xl transition-all font-medium font-mono btn-preset"
           >
             👑 {currentUi.luxuryPreset}
           </button>
