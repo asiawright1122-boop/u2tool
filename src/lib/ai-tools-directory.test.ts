@@ -39,7 +39,15 @@ describe('AI tools directory', () => {
       'writing-content',
       'crawler-discovery',
     ]);
+    expect(clusters.map((cluster) => cluster.href)).toEqual([
+      '#cost-model-planning',
+      '#prompt-builders',
+      '#writing-content',
+      '#crawler-discovery',
+    ]);
     expect(clusters[0]?.tools.map((tool) => tool.slug)).toEqual(['ai-token-calculator']);
+    expect(clusters[0]?.featuredTool?.slug).toBe('ai-token-calculator');
+    expect(clusters[0]?.tools[0]?.isFeatured).toBe(true);
     expect(clusters[1]?.tools.map((tool) => tool.slug)).toEqual([
       'ai-prompt-generator',
       'midjourney-prompt-generator',
@@ -90,6 +98,8 @@ describe('AI tools directory', () => {
 
   it('returns Chinese copy and English fallback copy for directory-only labels', () => {
     expect(getAiToolsDirectoryCopy('zh').h1).toBe('AI 工具目录');
+    expect(getAiToolsDirectoryCopy('zh').clusterNavTitle).toBe('按 AI 工作流浏览');
+    expect(getAiToolsDirectoryCopy('zh').featuredBadgeLabel).toBe('重点');
     expect(getAiToolsDirectoryCopy('fr').h1).toBe('AI Tools Directory');
     expect(getAiToolsDirectoryCopy('zh').seoDescription).toContain('Token');
   });

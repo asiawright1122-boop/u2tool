@@ -14,12 +14,14 @@ export type AiToolsDirectoryClusterId =
   | 'crawler-discovery';
 
 export interface AiToolsDirectoryCopy {
+  clusterNavTitle: string;
   costComparisonCta: string;
   costComparisonDescription: string;
   costComparisonTitle: string;
   ctaLabel: string;
   description: string;
   eyebrow: string;
+  featuredBadgeLabel: string;
   featuredCta: string;
   featuredDescription: string;
   featuredTitle: string;
@@ -41,13 +43,16 @@ export interface AiToolsDirectoryTool {
   description: string;
   href: string;
   icon: string;
+  isFeatured: boolean;
   name: string;
   slug: string;
 }
 
 export interface AiToolsDirectoryCluster {
   description: string;
+  featuredTool?: AiToolsDirectoryTool;
   featuredSlug?: string;
+  href: string;
   id: AiToolsDirectoryClusterId;
   title: string;
   tools: AiToolsDirectoryTool[];
@@ -102,6 +107,7 @@ export const AI_TOOLS_DIRECTORY_TOOL_SLUGS: readonly string[] = Object.freeze(
 const AI_TOOLS_DIRECTORY_TOOL_SLUG_SET = new Set(AI_TOOLS_DIRECTORY_TOOL_SLUGS);
 
 const englishCopy: AiToolsDirectoryCopyBundle = {
+  clusterNavTitle: 'Browse by AI workflow',
   costComparisonCta: 'Compare model costs',
   costComparisonDescription:
     'Start with the token calculator, then use the model comparison pages to compare source-backed token prices before choosing a default API model.',
@@ -110,6 +116,7 @@ const englishCopy: AiToolsDirectoryCopyBundle = {
   description:
     'Browse AI-focused tools for token cost planning, prompt writing, image prompts, AI crawler controls, and llms.txt publishing.',
   eyebrow: 'AI tools',
+  featuredBadgeLabel: 'Featured',
   featuredCta: 'Open AI Token Calculator',
   featuredDescription:
     'Estimate input and output token costs across current model presets, then use the pricing reference table for source-backed planning.',
@@ -146,6 +153,7 @@ const englishCopy: AiToolsDirectoryCopyBundle = {
 };
 
 const chineseCopy: AiToolsDirectoryCopyBundle = {
+  clusterNavTitle: '按 AI 工作流浏览',
   costComparisonCta: '对比模型费用',
   costComparisonDescription:
     '先用 AI Token 费用计算器估算自己的输入输出，再查看模型对比页，比较带来源的 token 标价。',
@@ -154,6 +162,7 @@ const chineseCopy: AiToolsDirectoryCopyBundle = {
   description:
     '浏览 AI 相关工具：Token 成本估算、Prompt 生成、图像提示词、AI 爬虫规则和 llms.txt 发布工具。',
   eyebrow: 'AI 工具',
+  featuredBadgeLabel: '重点',
   featuredCta: '打开 AI Token 计算器',
   featuredDescription:
     '按输入和输出 token 估算常见模型调用成本，并查看带来源的模型价格参考表。',
@@ -245,13 +254,17 @@ export function buildAiToolsDirectory(
         description: toolDescriptions[tool.slug] || '',
         href: getLocalizedPath(locale, `/tools/${tool.slug}`),
         icon: tool.icon,
+        isFeatured: tool.slug === definition.featuredSlug,
         name: toolNames[tool.slug] || tool.slug,
         slug: tool.slug,
       }));
+    const featuredTool = clusterTools.find((tool) => tool.isFeatured);
 
     return {
       description: clusterCopy.description,
+      featuredTool,
       featuredSlug: definition.featuredSlug,
+      href: `#${definition.id}`,
       id: definition.id,
       title: clusterCopy.title,
       tools: clusterTools,

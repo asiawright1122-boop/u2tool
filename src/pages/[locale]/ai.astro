@@ -126,7 +126,11 @@ const comparisonGuides = buildComparisonGuides(locale, categoryMessages, toolNam
             </p>
           </section>
         )}
-        <AiToolsDirectorySection copy={aiDirectoryCopy} clusters={aiToolClusters} />
+        <AiToolsDirectorySection
+          copy={aiDirectoryCopy}
+          clusters={aiToolClusters}
+          showHeader={aiDiscoveryEnabled}
+        />
         <CategorySpotlightSection
           eyebrow={aiPageTitle}
           title={(homeMessages.categories as string) || 'Tool Categories'}
