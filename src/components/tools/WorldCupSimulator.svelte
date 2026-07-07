@@ -685,7 +685,7 @@
         <h3 class="text-xl font-bold tracking-wide text-amber-400 font-outfit">{currentUi.runningSim}</h3>
         <p class="text-xs text-neutral-500 font-mono">Monte Carlo Sampling: {simProgress}%</p>
       </div>
-      <div class="w-64 bg-neutral-900 h-1.5 rounded-full overflow-hidden border border-neutral-800">
+      <div class="w-64 bg-neutral-200 dark:bg-neutral-900 h-1.5 rounded-full overflow-hidden border border-neutral-300 dark:border-neutral-800">
         <div class="bg-gradient-to-r from-amber-400 to-amber-600 h-full transition-all duration-300" style="width: {simProgress}%"></div>
       </div>
     </div>

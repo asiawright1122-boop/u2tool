@@ -276,7 +276,7 @@
   }
 </script>
 
-<div class="bg-stone-950 text-stone-100 p-6 rounded-2xl border border-stone-800 shadow-2xl font-sans min-h-[400px]">
+<div class="tool-theme-shell p-6 rounded-2xl font-sans min-h-[400px]">
   <!-- Header -->
   <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
     <div class="flex items-center gap-3">
@@ -284,7 +284,7 @@
         🏋️
       </div>
       <div>
-        <h2 class="font-extrabold text-lg bg-gradient-to-r from-red-400 via-red-100 to-red-500 bg-clip-text text-transparent leading-tight">
+        <h2 class="font-extrabold text-lg text-red-700 dark:bg-gradient-to-r dark:from-red-400 dark:via-red-100 dark:to-red-500 dark:bg-clip-text dark:text-transparent leading-tight">
           {l.title}
         </h2>
         <p class="text-stone-500 text-xs mt-0.5">{l.subtitle}</p>

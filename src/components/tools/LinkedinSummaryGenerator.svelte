@@ -231,14 +231,14 @@
   }
 </script>
 
-<div class="bg-stone-950 text-stone-100 p-6 rounded-2xl border border-stone-800 shadow-2xl font-sans min-h-[400px]">
+<div class="tool-theme-shell p-6 rounded-2xl font-sans min-h-[400px]">
   <!-- Header -->
   <div class="flex items-center gap-3 mb-6">
     <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-700 flex items-center justify-center text-stone-950 font-black text-lg">
       📝
     </div>
     <div>
-      <h2 class="font-extrabold text-lg bg-gradient-to-r from-amber-300 via-amber-100 to-amber-400 bg-clip-text text-transparent leading-tight">
+      <h2 class="font-extrabold text-lg text-amber-700 dark:bg-gradient-to-r dark:from-amber-300 dark:via-amber-100 dark:to-amber-400 dark:bg-clip-text dark:text-transparent leading-tight">
         {l.title}
       </h2>
       <p class="text-stone-500 text-xs mt-0.5">{l.subtitle}</p>

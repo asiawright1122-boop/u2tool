@@ -297,7 +297,7 @@
       <div class="flex items-end">
         <button
           onclick={addBusySlot}
-          class="w-full rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-black dark:bg-amber-600 dark:hover:bg-amber-700"
+          class="w-full rounded-lg bg-amber-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-amber-700"
         >
           {t('addBusyTime')}
         </button>

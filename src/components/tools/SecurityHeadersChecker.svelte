@@ -357,13 +357,13 @@
   }
 </script>
 
-<div class="obsidian-calculator-theme min-h-screen text-stone-100 p-4 md:p-8 flex flex-col gap-6">
+<div class="tool-theme-workspace min-h-screen p-4 md:p-8 flex flex-col gap-6">
   <div class="max-w-6xl mx-auto w-full flex flex-col gap-6">
     
     <!-- Header -->
     <div class="border-b border-amber-500/20 pb-4 flex justify-between items-end">
       <div>
-        <h1 class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">
+        <h1 class="text-2xl md:text-3xl font-bold text-amber-700 dark:bg-gradient-to-r dark:from-amber-200 dark:to-yellow-500 dark:bg-clip-text dark:text-transparent">
           {t('title')}
         </h1>
         <p class="text-stone-400 text-sm mt-1">{t('subtitle')}</p>
@@ -528,13 +528,3 @@
 
   </div>
 </div>
-
-<style>
-  .obsidian-calculator-theme {
-    background-color: #0c0a09; /* stone-950 */
-    font-family: 'Inter', system-ui, sans-serif;
-  }
-  .bg-stone-850 {
-    background-color: #211f1d;
-  }
-</style>

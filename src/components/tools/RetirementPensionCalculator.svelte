@@ -6,13 +6,33 @@
 
   let { locale, translations }: Props = $props();
 
+  const BUILTIN_FALLBACKS: Record<string, Record<string, string>> = {
+    zh: { months: '月' },
+    en: { months: 'mo' },
+    es: { months: 'mes' },
+    pt: { months: 'mês' },
+    ja: { months: '月' },
+    fr: { months: 'mois' },
+    de: { months: 'Mon.' },
+    ar: { months: 'شهر' },
+    ko: { months: '개월' },
+    ru: { months: 'мес.' }
+  };
+
   // Translation helper
   function t(key: string): string {
     const scope = translations['tools']?.['retirement-pension-calculator'] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
-    return typeof value === 'string' ? value : `tools.retirement-pension-calculator.${key}`;
+    if (typeof value === 'string') return value;
+
+    const backupScope = I18N_BACKUP[locale] || I18N_BACKUP['en'];
+    value = backupScope;
+    for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
+    if (typeof value === 'string') return value;
+
+    return BUILTIN_FALLBACKS[locale]?.[key] || BUILTIN_FALLBACKS['en']?.[key] || `tools.retirement-pension-calculator.${key}`;
   }
 
   import { onMount } from 'svelte';
@@ -805,14 +825,14 @@
   });
 </script>
 
-<div class="retirement-optimizer-wrapper py-6 px-4 md:px-8 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 text-neutral-100 rounded-3xl border border-neutral-800 shadow-2xl relative overflow-hidden">
+<div class="tool-theme-shell retirement-optimizer-wrapper py-6 px-4 md:px-8 rounded-3xl relative overflow-hidden">
   
   <!-- Flowing Gold Header Background Effect -->
   <div class="absolute top-0 left-1/4 w-96 h-1 bg-[#C5A059] blur-3xl opacity-35 animate-pulse"></div>
 
   <!-- Header -->
   <div class="header-section text-center mb-8 relative z-10">
-    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-yellow-100 via-[#C5A059] to-yellow-100 bg-clip-text text-transparent mb-2">
+    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-amber-700 dark:bg-gradient-to-r dark:from-yellow-100 dark:via-[#C5A059] dark:to-yellow-100 dark:bg-clip-text dark:text-transparent mb-2">
       {t('title')}
     </h1>
     <p class="text-sm md:text-base text-neutral-400 max-w-2xl mx-auto font-light">

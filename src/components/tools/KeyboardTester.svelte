@@ -135,7 +135,7 @@
         </div>
 {/if}
 
-      <div class="p-4 bg-gray-900 rounded-lg overflow-x-auto">
+      <div class="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg overflow-x-auto">
         <div class="min-w-max space-y-1">
           {#each keyboardLayout as row, rowIndex (rowIndex)}
 <div  class="flex gap-1 justify-center">
@@ -144,7 +144,7 @@
                   class={`${getKeyWidth(code)} h-10 rounded text-xs font-medium transition-all ${
                     pressedKeys.has(code)
                       ? 'bg-amber-500 text-white scale-95'
-                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                      : 'bg-white text-gray-700 border border-gray-200 hover:bg-gray-100 dark:bg-gray-700 dark:text-gray-300 dark:border-transparent dark:hover:bg-gray-600'
                   }`}
                 >
                   {getKeyLabel(code)}

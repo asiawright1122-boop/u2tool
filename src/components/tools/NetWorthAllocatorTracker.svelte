@@ -786,6 +786,9 @@
     const nonLiquid = simulatedPortfolio.nonLiquidSimulated;
     const investment = simulatedPortfolio.investmentSimulated;
     const debts = simulatedPortfolio.totalLiabilitiesSimulated;
+    const isDark = chartTheme.isDark;
+    const tooltipTitleColor = isDark ? '#ffffff' : '#0f172a';
+    const tooltipMutedColor = isDark ? '#B5B5B5' : '#64748b';
 
     return {
       backgroundColor: 'transparent',
@@ -796,18 +799,18 @@
       },
       tooltip: {
         trigger: 'item',
-        backgroundColor: 'rgba(15, 15, 15, 0.95)',
-        borderColor: '#8A6623',
+        backgroundColor: isDark ? 'rgba(15, 15, 15, 0.95)' : 'rgba(255, 255, 255, 0.98)',
+        borderColor: isDark ? '#8A6623' : '#e2e8f0',
         borderWidth: 1,
-        textStyle: { color: '#E5C47F', fontSize: 12 },
+        textStyle: { color: isDark ? '#E5C47F' : '#334155', fontSize: 12 },
         formatter: (params: any) => {
           return `<div style="padding:4px 8px;">
-            <div style="font-weight:bold;margin-bottom:4px;color:#FFF;">${params.name}</div>
+            <div style="font-weight:bold;margin-bottom:4px;color:${tooltipTitleColor};">${params.name}</div>
             <div style="display:flex;justify-content:space-between;gap:12px;">
               <span>${l.amount}:</span>
               <span style="font-weight:bold;color:#C5A059;">${currencySymbols[baseCurrency]}${Math.round(params.value).toLocaleString()}</span>
             </div>
-            <div style="display:flex;justify-content:space-between;gap:12px;font-size:11px;color:#B5B5B5;">
+            <div style="display:flex;justify-content:space-between;gap:12px;font-size:11px;color:${tooltipMutedColor};">
               <span>占比:</span>
               <span>${params.percent}%</span>
             </div>
@@ -818,7 +821,7 @@
         orient: 'horizontal',
         bottom: 0,
         data: [l.liquidAssets, l.nonLiquidAssets, l.investmentAssets, l.liabilities],
-        textStyle: { color: '#B5B5B5', fontSize: 11 }
+        textStyle: { color: isDark ? '#B5B5B5' : '#64748b', fontSize: 11 }
       },
       series: [
         {
@@ -833,14 +836,14 @@
           },
           labelLine: { show: false },
           itemStyle: {
-            borderColor: '#121212',
+            borderColor: isDark ? '#121212' : '#ffffff',
             borderWidth: 2
           },
           color: [
             '#C5A059', // Liquid Assets - Champagne gold
             '#8A6623', // Non-Liquid Assets - Deep bronze gold
             '#E5C47F', // Investment Assets - Bright warm gold
-            '#333333'  // Liabilities - Dark gray (de-emphasized)
+            isDark ? '#333333' : '#94a3b8'  // Liabilities - neutral gray (de-emphasized)
           ],
           data: [
             { value: liquid, name: l.liquidAssets },
@@ -854,7 +857,7 @@
   });
 </script>
 
-<div class="luxury-calculator obsidian-theme">
+<div class="tool-theme-shell luxury-calculator obsidian-theme">
   <!-- Header 流光渐变 -->
   <header class="calc-header">
     <div class="logo-area">
@@ -1143,6 +1146,34 @@
 <style>
   /* Global CSS Tokens - Obsidian Minimalist Swiss Gold Theme */
   .obsidian-theme {
+    --bg-dark: #ffffff;
+    --card-bg: #f8fafc;
+    --gold-bronze: #b45309;
+    --gold-champagne: #b45309;
+    --gold-bright: #92400e;
+    --border-color: #e2e8f0;
+    --input-bg: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --panel-bg: #f8fafc;
+    --table-head-bg: #f1f5f9;
+    --table-border: #e2e8f0;
+    --table-hover-bg: #f8fafc;
+    --range-track: #e2e8f0;
+    --scrollbar-track: #f1f5f9;
+    --scrollbar-thumb: #cbd5e1;
+    --card-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    --premium-bg: radial-gradient(circle at top, #ffffff, var(--card-bg));
+
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+  }
+
+  :global(.dark) .obsidian-theme {
     --bg-dark: #0a0a0a;
     --card-bg: #121212;
     --gold-bronze: #8a6623;
@@ -1150,14 +1181,17 @@
     --gold-bright: #e5c47f;
     --border-color: #222222;
     --input-bg: #181818;
+    --text-main: #eaeaea;
     --text-muted: #b5b5b5;
-    
-    background-color: var(--bg-dark);
-    color: #eaeaea;
-    font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
-    padding: 1.5rem;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
+    --panel-bg: #161616;
+    --table-head-bg: #181818;
+    --table-border: #222222;
+    --table-hover-bg: #151515;
+    --range-track: #2a2a2a;
+    --scrollbar-track: #121212;
+    --scrollbar-thumb: #2a2a2a;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    --premium-bg: radial-gradient(circle at top, #1a1a1a, var(--card-bg));
   }
 
   /* Shimmer /流光 Effects strictly avoided for cold Swiss private banking theme */
@@ -1219,7 +1253,7 @@
   .currency-btn {
     background: transparent;
     border: none;
-    color: #888888;
+    color: var(--text-muted);
     font-family: monospace;
     font-size: 0.8rem;
     font-weight: bold;
@@ -1247,14 +1281,14 @@
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--card-shadow);
   }
 
   .card-title {
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 1.25rem;
-    border-bottom: 1px solid #1a1a1a;
+    border-bottom: 1px solid var(--table-border);
     padding-bottom: 0.5rem;
   }
 
@@ -1268,7 +1302,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 0.85rem;
-    color: #999;
+    color: var(--text-muted);
     margin-bottom: 0.5rem;
   }
 
@@ -1288,7 +1322,7 @@
     appearance: none;
     width: 100%;
     height: 4px;
-    background: #2a2a2a;
+    background: var(--range-track);
     border-radius: 2px;
     outline: none;
   }
@@ -1312,7 +1346,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 0.7rem;
-    color: #555;
+    color: var(--text-muted);
     margin-top: 0.25rem;
     font-family: monospace;
   }
@@ -1321,7 +1355,7 @@
   .custom-scrollable-table {
     max-height: 240px;
     overflow-y: auto;
-    border: 1px solid #1a1a1a;
+    border: 1px solid var(--table-border);
     border-radius: 4px;
     margin-bottom: 1rem;
   }
@@ -1330,10 +1364,10 @@
     width: 6px;
   }
   .custom-scrollable-table::-webkit-scrollbar-track {
-    background: #121212;
+    background: var(--scrollbar-track);
   }
   .custom-scrollable-table::-webkit-scrollbar-thumb {
-    background: #2a2a2a;
+    background: var(--scrollbar-thumb);
     border-radius: 3px;
   }
   .custom-scrollable-table::-webkit-scrollbar-thumb:hover {
@@ -1347,8 +1381,8 @@
   }
 
   .item-table th {
-    background: #181818;
-    color: #888;
+    background: var(--table-head-bg);
+    color: var(--text-muted);
     text-transform: uppercase;
     font-size: 0.75rem;
     letter-spacing: 0.05em;
@@ -1356,16 +1390,16 @@
     text-align: left;
     position: sticky;
     top: 0;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid var(--table-border);
   }
 
   .item-table td {
     padding: 10px 12px;
-    border-bottom: 1px solid #161616;
+    border-bottom: 1px solid var(--table-border);
   }
 
   .item-row:hover {
-    background: #151515;
+    background: var(--table-hover-bg);
   }
 
   .item-label-cell {
@@ -1415,10 +1449,10 @@
 
   /* Form UI */
   .add-item-form {
-    background: #161616;
+    background: var(--panel-bg);
     padding: 1rem;
     border-radius: 6px;
-    border: 1px solid #222;
+    border: 1px solid var(--border-color);
   }
 
   .form-row {
@@ -1429,7 +1463,7 @@
   .form-select, .form-input {
     background: var(--input-bg);
     border: 1px solid var(--border-color);
-    color: #eaeaea;
+    color: var(--text-main);
     border-radius: 4px;
     padding: 8px 12px;
     font-size: 0.8rem;
@@ -1464,7 +1498,7 @@
 
   /* Premium Display worth block */
   .premium-worth-display {
-    background: radial-gradient(circle at top, #1a1a1a, var(--card-bg));
+    background: var(--premium-bg);
     border-radius: 8px;
     padding: 2rem;
     box-shadow: inset 0 0 15px rgba(138, 102, 35, 0.15);
@@ -1489,8 +1523,8 @@
 
   /* Actuarial indicators */
   .actuarial-item {
-    background: #161616;
-    border: 1px solid #222;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     padding: 0.75rem;
   }
@@ -1505,8 +1539,8 @@
 
   /* Actuarial diagnosis advice */
   .health-diagnosis-panel {
-    background: #161616;
-    border: 1px solid #222;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
     padding: 1.25rem;
     border-radius: 6px;
   }

@@ -459,11 +459,11 @@
   });
 </script>
 
-<div class="space-y-6">
+<div class="tool-theme-shell space-y-6 p-6 rounded-2xl">
   <!-- Title / Swiss private bank dark gold hero header -->
   <div class="p-6 bg-gradient-to-r from-gray-900 via-black to-gray-900 border border-amber-500/20 rounded-2xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-4">
     <div class="space-y-1">
-      <h2 class="text-2xl font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-amber-500 font-sans">
+      <h2 class="text-2xl font-bold tracking-wide text-amber-700 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-amber-400 dark:via-amber-200 dark:to-amber-500 font-sans">
         {t('title')}
       </h2>
       <p class="text-xs text-amber-500/60 font-mono">

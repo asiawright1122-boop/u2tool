@@ -1116,7 +1116,7 @@
     const url = echartInstance.getDataURL({
       type: 'png',
       pixelRatio: 2,
-      backgroundColor: '#121212',
+      backgroundColor: document.documentElement.classList.contains('dark') ? '#121212' : '#ffffff',
     });
 
     const link = document.createElement('a');
@@ -1167,7 +1167,7 @@
   });
 </script>
 
-<div class="space-y-6 text-gray-100 bg-[#121212] p-6 rounded-2xl border border-zinc-800 shadow-2xl relative overflow-hidden font-sans">
+<div class="tool-theme-shell space-y-6 p-6 rounded-2xl relative overflow-hidden font-sans">
   
   <!-- 奢华曜石黑金流光背景微效果 -->
   <div class="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-amber-500/10 via-transparent to-transparent blur-3xl pointer-events-none rounded-full"></div>
@@ -1175,7 +1175,7 @@
   <!-- 头部主标题与副标题 -->
   <div class="border-b border-zinc-800 pb-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
     <div>
-      <h1 class="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] bg-clip-text text-transparent">
+      <h1 class="text-3xl font-extrabold tracking-tight text-amber-700 dark:bg-gradient-to-r dark:from-[#BF953F] dark:via-[#FCF6BA] dark:to-[#AA771C] dark:bg-clip-text dark:text-transparent">
         {l.title}
       </h1>
       <p class="text-zinc-400 text-sm mt-1">{l.subtitle}</p>
@@ -1183,7 +1183,7 @@
     <div>
       <button
         onclick={loadFlatRateTrapSample}
-        class="px-4 py-2 bg-gradient-to-r from-amber-900/60 to-zinc-900 border border-amber-600/40 text-amber-400 hover:from-amber-800/80 hover:to-zinc-800 rounded-lg text-xs font-semibold tracking-wider transition-all duration-300 shadow-lg hover:shadow-amber-500/10 flex items-center gap-1.5"
+        class="px-4 py-2 bg-amber-50 dark:bg-gradient-to-r dark:from-amber-900/60 dark:to-zinc-900 border border-amber-300 dark:border-amber-600/40 text-amber-700 dark:text-amber-400 hover:bg-amber-100 dark:hover:from-amber-800/80 dark:hover:to-zinc-800 rounded-lg text-xs font-semibold tracking-wider transition-all duration-300 shadow-sm dark:shadow-lg dark:hover:shadow-amber-500/10 flex items-center gap-1.5"
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -1582,10 +1582,16 @@
 <style>
   /* 曜石黑金融图表专用微样式 */
   input[type="range"] {
-    background: #27272a;
+    background: #e2e8f0;
     transition: background 0.3s;
   }
   input[type="range"]:hover {
+    background: #cbd5e1;
+  }
+  :global(.dark) input[type="range"] {
+    background: #27272a;
+  }
+  :global(.dark) input[type="range"]:hover {
     background: #3f3f46;
   }
   
