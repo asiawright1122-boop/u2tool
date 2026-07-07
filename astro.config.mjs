@@ -162,6 +162,26 @@ function fixPrerenderUrlVitePlugin() {
   };
 }
 
+function resolveViteCacheDir() {
+  const lifecycleEvent = process.env.npm_lifecycle_event || '';
+  const argv = process.argv.join(' ');
+  const commandText = `${lifecycleEvent} ${argv}`;
+
+  if (/\bdev\b/.test(commandText)) {
+    return 'node_modules/.vite-u2tool-dev';
+  }
+
+  if (/\bcheck\b/.test(commandText)) {
+    return 'node_modules/.vite-u2tool-check';
+  }
+
+  if (/\bbuild\b/.test(commandText)) {
+    return 'node_modules/.vite-u2tool-build';
+  }
+
+  return 'node_modules/.vite-u2tool';
+}
+
 function compileSvelteClientModulesVitePlugin() {
   let svelteCompilerPromise;
 
@@ -292,6 +312,7 @@ export default defineConfig({
   ],
 
   vite: {
+    cacheDir: resolveViteCacheDir(),
     plugins: [
       healWranglerVitePlugin(),
       fixPrerenderUrlVitePlugin(),
