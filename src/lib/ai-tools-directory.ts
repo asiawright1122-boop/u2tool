@@ -94,6 +94,12 @@ const AI_TOOLS_DIRECTORY_DEFINITIONS: AiToolsDirectoryDefinition[] = [
   },
 ];
 
+export const AI_TOOLS_DIRECTORY_TOOL_SLUGS: readonly string[] = Object.freeze(
+  Array.from(new Set(AI_TOOLS_DIRECTORY_DEFINITIONS.flatMap((definition) => definition.slugs)))
+);
+
+const AI_TOOLS_DIRECTORY_TOOL_SLUG_SET = new Set(AI_TOOLS_DIRECTORY_TOOL_SLUGS);
+
 const englishCopy: AiToolsDirectoryCopyBundle = {
   costComparisonCta: 'Compare model costs',
   costComparisonDescription:
@@ -250,6 +256,10 @@ export function buildAiToolsDirectory(
       tools: clusterTools,
     };
   }).filter((cluster) => cluster.tools.length > 0);
+}
+
+export function isAiToolsDirectoryToolSlug(slug: string): boolean {
+  return AI_TOOLS_DIRECTORY_TOOL_SLUG_SET.has(slug);
 }
 
 export function buildAiToolsDirectoryItemList(

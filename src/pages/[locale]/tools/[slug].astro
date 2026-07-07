@@ -56,6 +56,8 @@ import { buildSafeFallbackSupportContent } from '@/lib/support-content-fallback'
 import { buildToolWrapperTranslations } from '@/lib/tool-page-translations';
 import { findComparisonGuideForTool, getComparisonUiCopy } from '@/lib/comparison-surfaces';
 import { getRelatedToolsForTool } from '@/lib/related-tools';
+import { isAiToolsDirectoryToolSlug } from '@/lib/ai-tools-directory';
+import { getAiToolsDirectoryHref, getAiToolsDirectoryLabel } from '@/lib/ai-tools-navigation';
 import {
   buildChartToolClusterGroupForTool,
   chartToolClusterPath,
@@ -129,6 +131,9 @@ const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
 const headerTranslations = buildHeaderTranslations(baseMessages);
 const mobileNavMessages = buildMobileNavMessages(navMessages);
 const comparisonUiCopy = getComparisonUiCopy(locale);
+const aiToolsHref = getAiToolsDirectoryHref(locale);
+const aiToolsLabel = getAiToolsDirectoryLabel(locale);
+const isAiDirectoryTool = isAiToolsDirectoryToolSlug(tool.slug);
 
 // ---------------------------------------------------------------------------
 // Cluster copy — locale-level labels for each cluster
@@ -511,8 +516,19 @@ const CLUSTER_BLOCKS: ToolClusterBlock[] = [
     <div class="py-8 px-4">
     <div class="max-w-none mx-0">
       {/* Breadcrumb navigation */}
-      <div class="mb-6">
+      <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <Breadcrumb locale={locale} items={breadcrumbItems} />
+        {isAiDirectoryTool && (
+          <a
+            href={aiToolsHref}
+            data-prefetch
+            data-ai-tools-directory-context-link
+            class="inline-flex w-fit shrink-0 items-center gap-2 rounded-xl border border-sky-200/70 bg-sky-50/70 px-3 py-2 text-[10px] font-black uppercase tracking-[0.14em] text-sky-700 transition hover:border-sky-400 hover:bg-sky-100 dark:border-sky-400/20 dark:bg-sky-950/25 dark:text-sky-200 dark:hover:border-sky-300/50"
+          >
+            <span class="inline-flex" aria-hidden="true" set:html={getIconSvg('sparkle', 15)} />
+            <span>{aiToolsLabel}</span>
+          </a>
+        )}
       </div>
 
       {/* Tool Header */}

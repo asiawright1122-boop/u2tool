@@ -18,6 +18,8 @@ This makes the new AI model cost pages feel disconnected from the broader AI too
 
 - Add a persistent AI directory entry in the desktop header where the current layout has unused space between search and language/theme controls.
 - Add an AI directory entry in the desktop sidebar so users can browse AI tools independently from the regular category taxonomy.
+- Add an AI directory entry in the mobile bottom navigation so phone users can reach the AI hub from any tool page.
+- Add a contextual AI directory link on AI tool detail pages only.
 - Keep all individual AI tools at `/{locale}/tools/{slug}/`.
 - Keep `/{locale}/ai/` as the AI hub for current and future AI-related tools.
 - Cross-link AI model cost comparison pages back to the AI tools directory.
@@ -60,6 +62,18 @@ AI model comparison pages:
 - Add a visible route back to the AI tools directory from the comparison index.
 - Detail pages should keep users within the AI cluster through breadcrumbs or nearby contextual links.
 
+Mobile bottom navigation:
+
+- Add a fourth entry for `AI Tools` / `AI 工具集` using the existing sparkle icon.
+- Keep the bottom items equal width so long localized labels do not resize the bar.
+- Use the localized `/{locale}/ai/` path and keep the entry visible only on mobile, matching the existing bottom-nav pattern.
+
+AI tool detail pages:
+
+- Show a small `AI Tools` / `AI 工具集` link near the breadcrumb area only when the current tool is configured in the AI directory.
+- Drive that decision from `src/lib/ai-tools-directory.ts` so future AI tools inherit the link when added to the directory.
+- Do not add the link to unrelated tool pages.
+
 ## Localization
 
 Use direct labels for English and Chinese:
@@ -72,14 +86,17 @@ Other locales can fall back to English for the navigation label in this change. 
 ## SEO And Internal Linking
 
 - The header and sidebar links should point to localized `/{locale}/ai/` paths.
+- Mobile bottom navigation should point to localized `/{locale}/ai/` paths.
 - AI model comparison pages should include crawlable links to the AI directory.
+- AI tool detail pages should include crawlable links back to the AI directory.
 - The sitemap behavior does not need to change because `/{locale}/ai/` and `/{locale}/ai/models/` are already covered separately.
 - Internal anchor text should describe the hub as an AI tools directory, not just the token calculator.
 
 ## Testing
 
 - Verify the AI directory link renders on `/{locale}/ai/models/` and points to `/{locale}/ai/`.
+- Verify the mobile bottom nav renders an AI directory link on a mobile viewport.
+- Verify an AI tool detail page renders the contextual AI directory link and a non-AI tool detail page does not.
 - Verify `/zh/ai/`, `/zh/ai/models/`, and `/en/ai/models/` still render after build.
 - Run focused tests for AI directory and AI model comparison data if data changes.
 - Run `npm run check` and `npm run build` before claiming completion.
-

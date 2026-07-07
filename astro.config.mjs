@@ -162,6 +162,77 @@ function fixPrerenderUrlVitePlugin() {
   };
 }
 
+function compileSvelteClientModulesVitePlugin() {
+  let svelteCompilerPromise;
+
+  function loadCompiler() {
+    svelteCompilerPromise ??= import('svelte/compiler');
+    return svelteCompilerPromise;
+  }
+
+  return {
+    name: 'compile-svelte-client-modules-vite-plugin',
+    configEnvironment(environmentName) {
+      if (environmentName !== 'client') {
+        return;
+      }
+
+      return {
+        optimizeDeps: {
+          esbuildOptions: {
+            plugins: [
+              {
+                name: 'compile-svelte-client-modules',
+                setup(build) {
+                  if (build.initialOptions.plugins?.some((plugin) => plugin.name === 'vite:dep-scan')) {
+                    return;
+                  }
+
+                  build.onLoad({ filter: /\.svelte\.[jt]s(?:\?.*)?$/ }, async ({ path: filename }) => {
+                    const code = fs.readFileSync(filename, 'utf8');
+
+                    try {
+                      const compiler = await loadCompiler();
+                      const compiled = compiler.compileModule(code, {
+                        dev: true,
+                        filename,
+                        generate: 'client',
+                      });
+                      const result = compiled.js;
+                      const contents = result.map
+                        ? `${result.code}//# sourceMappingURL=${result.map.toUrl()}`
+                        : result.code;
+
+                      return { contents, loader: 'js' };
+                    } catch (error) {
+                      const text = error instanceof Error ? error.message : String(error);
+                      const position =
+                        typeof error === 'object' && error !== null && 'position' in error
+                          ? error.position
+                          : undefined;
+
+                      return {
+                        errors: [
+                          {
+                            text,
+                            location: position
+                              ? { file: filename, line: position.line, column: position.column }
+                              : undefined,
+                          },
+                        ],
+                      };
+                    }
+                  });
+                },
+              },
+            ],
+          },
+        },
+      };
+    },
+  };
+}
+
 // Svelte's Vite plugin attaches watchers for several config/module files during
 // check/build. Keep Node's leak detector useful without warning on that expected fan-out.
 EventEmitter.defaultMaxListeners = Math.max(EventEmitter.defaultMaxListeners, 30);
@@ -221,7 +292,12 @@ export default defineConfig({
   ],
 
   vite: {
-    plugins: [healWranglerVitePlugin(), fixPrerenderUrlVitePlugin(), tailwindcss()],
+    plugins: [
+      healWranglerVitePlugin(),
+      fixPrerenderUrlVitePlugin(),
+      compileSvelteClientModulesVitePlugin(),
+      tailwindcss(),
+    ],
     define: {
       __U2TOOL_HTML_CACHE_VERSION__: JSON.stringify(getHtmlCacheVersion({ readGitValue })),
     },

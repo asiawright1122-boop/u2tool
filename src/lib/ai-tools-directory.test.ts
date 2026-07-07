@@ -1,9 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { tools } from '@/config/tools';
 import {
+  AI_TOOLS_DIRECTORY_TOOL_SLUGS,
   buildAiToolsDirectory,
   buildAiToolsDirectoryItemList,
   getAiToolsDirectoryCopy,
+  isAiToolsDirectoryToolSlug,
 } from './ai-tools-directory';
 
 const categoryNames = {
@@ -51,6 +53,21 @@ describe('AI tools directory', () => {
         expect(tool.description).toContain('description');
       }
     }
+  });
+
+  it('exposes the configured AI tool slug set for detail-page links', () => {
+    expect(AI_TOOLS_DIRECTORY_TOOL_SLUGS).toEqual([
+      'ai-token-calculator',
+      'ai-prompt-generator',
+      'midjourney-prompt-generator',
+      'stable-diffusion-prompt-generator',
+      'ai-text-humanizer',
+      'ai-robots-txt-generator',
+      'llms-txt-generator',
+      'llms-txt-validator',
+    ]);
+    expect(isAiToolsDirectoryToolSlug('llms-txt-generator')).toBe(true);
+    expect(isAiToolsDirectoryToolSlug('json-formatter')).toBe(false);
   });
 
   it('filters missing configured slugs without breaking the remaining clusters', () => {
