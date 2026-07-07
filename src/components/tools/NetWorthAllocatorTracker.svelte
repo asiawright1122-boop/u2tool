@@ -1116,7 +1116,7 @@
 
       <!-- ECharts 哑光环占比图 -->
       <div class="calc-card echarts-card">
-        <EChartsWrapper bind:this={chartRef} options={chartOption} />
+        <EChartsWrapper bind:this={chartRef} option={chartOption} />
       </div>
 
       <!-- 精算意见报告 -->

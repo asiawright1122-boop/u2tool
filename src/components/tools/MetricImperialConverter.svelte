@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { conversions } from '@/lib/tool-stubs';
-
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -20,14 +18,72 @@
   // Types
   type ConversionCategory = 'length' | 'weight' | 'volume' | 'temperature' | 'area' | 'speed';
   interface ConversionUnit {
-  name: string;
-  toBase: (value: number) => number;
-  fromBase: (value: number) => number;
-  symbol: string;
-  system: 'metric' | 'imperial';
-}
+    name: string;
+    toBase: (value: number) => number;
+    fromBase: (value: number) => number;
+    symbol: string;
+    system: 'metric' | 'imperial';
+  }
 
-  let category = $state('length');
+  const categoryIcons: Record<ConversionCategory, string> = {
+    length: '📏',
+    weight: '⚖️',
+    volume: '🧪',
+    temperature: '🌡️',
+    area: '▦',
+    speed: '⚡',
+  };
+
+  const conversions: Record<ConversionCategory, Record<string, ConversionUnit>> = {
+    length: {
+      meter: { name: 'Meter', symbol: 'm', system: 'metric', toBase: (value) => value, fromBase: (value) => value },
+      kilometer: { name: 'Kilometer', symbol: 'km', system: 'metric', toBase: (value) => value * 1000, fromBase: (value) => value / 1000 },
+      centimeter: { name: 'Centimeter', symbol: 'cm', system: 'metric', toBase: (value) => value / 100, fromBase: (value) => value * 100 },
+      inch: { name: 'Inch', symbol: 'in', system: 'imperial', toBase: (value) => value * 0.0254, fromBase: (value) => value / 0.0254 },
+      foot: { name: 'Foot', symbol: 'ft', system: 'imperial', toBase: (value) => value * 0.3048, fromBase: (value) => value / 0.3048 },
+      yard: { name: 'Yard', symbol: 'yd', system: 'imperial', toBase: (value) => value * 0.9144, fromBase: (value) => value / 0.9144 },
+      mile: { name: 'Mile', symbol: 'mi', system: 'imperial', toBase: (value) => value * 1609.344, fromBase: (value) => value / 1609.344 },
+    },
+    weight: {
+      kilogram: { name: 'Kilogram', symbol: 'kg', system: 'metric', toBase: (value) => value, fromBase: (value) => value },
+      gram: { name: 'Gram', symbol: 'g', system: 'metric', toBase: (value) => value / 1000, fromBase: (value) => value * 1000 },
+      tonne: { name: 'Tonne', symbol: 't', system: 'metric', toBase: (value) => value * 1000, fromBase: (value) => value / 1000 },
+      ounce: { name: 'Ounce', symbol: 'oz', system: 'imperial', toBase: (value) => value * 0.028349523125, fromBase: (value) => value / 0.028349523125 },
+      pound: { name: 'Pound', symbol: 'lb', system: 'imperial', toBase: (value) => value * 0.45359237, fromBase: (value) => value / 0.45359237 },
+      stone: { name: 'Stone', symbol: 'st', system: 'imperial', toBase: (value) => value * 6.35029318, fromBase: (value) => value / 6.35029318 },
+    },
+    volume: {
+      liter: { name: 'Liter', symbol: 'L', system: 'metric', toBase: (value) => value, fromBase: (value) => value },
+      milliliter: { name: 'Milliliter', symbol: 'mL', system: 'metric', toBase: (value) => value / 1000, fromBase: (value) => value * 1000 },
+      cubicMeter: { name: 'Cubic meter', symbol: 'm³', system: 'metric', toBase: (value) => value * 1000, fromBase: (value) => value / 1000 },
+      fluidOunce: { name: 'Fluid ounce', symbol: 'fl oz', system: 'imperial', toBase: (value) => value * 0.0295735295625, fromBase: (value) => value / 0.0295735295625 },
+      pint: { name: 'Pint', symbol: 'pt', system: 'imperial', toBase: (value) => value * 0.473176473, fromBase: (value) => value / 0.473176473 },
+      gallon: { name: 'Gallon', symbol: 'gal', system: 'imperial', toBase: (value) => value * 3.785411784, fromBase: (value) => value / 3.785411784 },
+    },
+    temperature: {
+      celsius: { name: 'Celsius', symbol: '°C', system: 'metric', toBase: (value) => value, fromBase: (value) => value },
+      kelvin: { name: 'Kelvin', symbol: 'K', system: 'metric', toBase: (value) => value - 273.15, fromBase: (value) => value + 273.15 },
+      fahrenheit: { name: 'Fahrenheit', symbol: '°F', system: 'imperial', toBase: (value) => (value - 32) * 5 / 9, fromBase: (value) => value * 9 / 5 + 32 },
+      rankine: { name: 'Rankine', symbol: '°R', system: 'imperial', toBase: (value) => (value - 491.67) * 5 / 9, fromBase: (value) => (value + 273.15) * 9 / 5 },
+    },
+    area: {
+      squareMeter: { name: 'Square meter', symbol: 'm²', system: 'metric', toBase: (value) => value, fromBase: (value) => value },
+      squareKilometer: { name: 'Square kilometer', symbol: 'km²', system: 'metric', toBase: (value) => value * 1_000_000, fromBase: (value) => value / 1_000_000 },
+      hectare: { name: 'Hectare', symbol: 'ha', system: 'metric', toBase: (value) => value * 10_000, fromBase: (value) => value / 10_000 },
+      squareFoot: { name: 'Square foot', symbol: 'ft²', system: 'imperial', toBase: (value) => value * 0.09290304, fromBase: (value) => value / 0.09290304 },
+      squareYard: { name: 'Square yard', symbol: 'yd²', system: 'imperial', toBase: (value) => value * 0.83612736, fromBase: (value) => value / 0.83612736 },
+      acre: { name: 'Acre', symbol: 'ac', system: 'imperial', toBase: (value) => value * 4046.8564224, fromBase: (value) => value / 4046.8564224 },
+    },
+    speed: {
+      meterPerSecond: { name: 'Meter per second', symbol: 'm/s', system: 'metric', toBase: (value) => value, fromBase: (value) => value },
+      kilometerPerHour: { name: 'Kilometer per hour', symbol: 'km/h', system: 'metric', toBase: (value) => value / 3.6, fromBase: (value) => value * 3.6 },
+      footPerSecond: { name: 'Foot per second', symbol: 'ft/s', system: 'imperial', toBase: (value) => value * 0.3048, fromBase: (value) => value / 0.3048 },
+      milePerHour: { name: 'Mile per hour', symbol: 'mph', system: 'imperial', toBase: (value) => value * 0.44704, fromBase: (value) => value / 0.44704 },
+      knot: { name: 'Knot', symbol: 'kn', system: 'imperial', toBase: (value) => value * 0.514444, fromBase: (value) => value / 0.514444 },
+    },
+  };
+
+  let category = $state<ConversionCategory>('length');
 
   let fromUnit = $state('meter');
 
@@ -35,12 +91,20 @@
 
   let inputValue = $state('1');
 
-  let result = $state(null);
+  let result = $state<number | null>(null);
+
+  const categoryUnits = $derived(conversions[category]);
+  const metricUnits = $derived(Object.entries(categoryUnits).filter(([, unit]) => unit.system === 'metric'));
+  const imperialUnits = $derived(Object.entries(categoryUnits).filter(([, unit]) => unit.system === 'imperial'));
 
   $effect(() => {
-    const units = Object.keys(conversions[category]);
-    const metricUnit = units.find(u => conversions[category][u].system === 'metric') || units[0];
-    const imperialUnit = units.find(u => conversions[category][u].system === 'imperial') || units[1];
+    if (categoryUnits[fromUnit] && categoryUnits[toUnit]) {
+      return;
+    }
+
+    const units = Object.keys(categoryUnits);
+    const metricUnit = units.find(unit => categoryUnits[unit].system === 'metric') || units[0];
+    const imperialUnit = units.find(unit => categoryUnits[unit].system === 'imperial') || units[1] || metricUnit;
     fromUnit = metricUnit;
     toUnit = imperialUnit;
   });
@@ -57,8 +121,8 @@
       return;
     }
 
-    const fromConversion = conversions[category][fromUnit];
-    const toConversion = conversions[category][toUnit];
+    const fromConversion = categoryUnits[fromUnit];
+    const toConversion = categoryUnits[toUnit];
 
     if (!fromConversion || !toConversion) {
       result = null;
@@ -70,8 +134,9 @@
     result = convertedValue;
   }
   function handleSwap() {
+    const previousFromUnit = fromUnit;
     fromUnit = toUnit;
-    toUnit = fromUnit;
+    toUnit = previousFromUnit;
     if (result !== null) {
       inputValue = result.toString();
     }
@@ -82,10 +147,6 @@
     }
     return value.toLocaleString('en-US', { maximumFractionDigits: 6 });
   }
-  const categoryUnits = conversions[category];
-  const metricUnits = Object.entries(categoryUnits).filter(([, u]) => u.system === 'metric');
-  const imperialUnits = Object.entries(categoryUnits).filter(([, u]) => u.system === 'imperial');
-
 </script>
 
 

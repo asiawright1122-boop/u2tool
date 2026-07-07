@@ -1074,7 +1074,7 @@
             </button>
           </div>
         </div>
-        <EChartsWrapper bind:this={chartRef} options={chartOption} />
+        <EChartsWrapper bind:this={chartRef} option={chartOption} />
       </div>
 
     </div>
