@@ -49,6 +49,18 @@ const PRIORITY_TOOL_SLUGS = [
   'ssl-checker',
   'cidr-calculator',
   'timezone-converter',
+  'ai-token-calculator',
+  'ai-prompt-generator',
+  'ai-prompt-optimizer',
+  'ai-prompt-template-generator',
+  'json-to-prompt',
+  'rag-chunk-size-calculator',
+  'ai-text-humanizer',
+  'ai-robots-txt-generator',
+  'llms-txt-generator',
+  'llms-txt-validator',
+  'midjourney-prompt-generator',
+  'stable-diffusion-prompt-generator',
 ];
 
 function assert(condition, message) {

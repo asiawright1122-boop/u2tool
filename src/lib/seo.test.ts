@@ -233,6 +233,18 @@ describe('seo helpers', () => {
     expect(urls).toContain('https://www.u2tool.com/en/tools/compound-interest-calculator/');
     expect(urls).toContain('https://www.u2tool.com/en/tools/tile-calculator/');
   });
+
+  it('keeps AI toolkit routes in priority discovery', () => {
+    const urls = buildPriorityIndexNowUrls('https://www.u2tool.com/', {
+      selectedLocales: ['en', 'zh'],
+    });
+
+    expect(urls).toContain('https://www.u2tool.com/en/tools/ai-token-calculator/');
+    expect(urls).toContain('https://www.u2tool.com/en/tools/ai-prompt-template-generator/');
+    expect(urls).toContain('https://www.u2tool.com/en/tools/rag-chunk-size-calculator/');
+    expect(urls).toContain('https://www.u2tool.com/zh/tools/ai-robots-txt-generator/');
+    expect(urls).toContain('https://www.u2tool.com/zh/tools/llms-txt-generator/');
+  });
 });
 
 import { getDefaultRobots } from '@/lib/robots';
