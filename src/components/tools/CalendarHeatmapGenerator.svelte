@@ -41,6 +41,23 @@
   value: number;
 }
 
+  function createRandomCalendarData(targetYear: number, activeProbability = 0.7, maxValue = 10): CalendarData[] {
+    const result: CalendarData[] = [];
+    const startDate = new Date(`${targetYear}-01-01`);
+    const endDate = new Date(`${targetYear}-12-31`);
+
+    for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
+      if (Math.random() < activeProbability) {
+        result.push({
+          date: d.toISOString().split('T')[0],
+          value: Math.floor(Math.random() * maxValue),
+        });
+      }
+    }
+
+    return result;
+  }
+
   let isInitialized = $state(false);
 
   let chartTitle = $state('');
@@ -51,22 +68,7 @@
 
   let cellSize = $state(13);
 
-  let data = $state(() => {
-    // 生成默认示例数据
-    const result: CalendarData[] = [];
-    const startDate = new Date(`${new Date().getFullYear()}-01-01`);
-    const endDate = new Date(`${new Date().getFullYear()}-12-31`);
-    
-    for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
-      if (Math.random() > 0.3) {
-        result.push({
-          date: d.toISOString().split('T')[0],
-          value: Math.floor(Math.random() * 10),
-        });
-      }
-    }
-    return result;
-  });
+  let data = $state<CalendarData[]>(createRandomCalendarData(year));
 
   let chartRef = $state(null);
 
@@ -177,19 +179,7 @@
     link.click();
   }
   function generateRandomData() {
-    const result: CalendarData[] = [];
-    const startDate = new Date(`${year}-01-01`);
-    const endDate = new Date(`${year}-12-31`);
-    
-    for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
-      if (Math.random() > 0.2) {
-        result.push({
-          date: d.toISOString().split('T')[0],
-          value: Math.floor(Math.random() * 10),
-        });
-      }
-    }
-    data = result;
+    data = createRandomCalendarData(year, 0.8);
   }
   function loadSampleData() {
     const result: CalendarData[] = [];
