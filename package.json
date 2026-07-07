@@ -79,6 +79,8 @@
     "qa:tool-locales": "npx tsx scripts/validation/validate-tool-locales.ts",
     "qa:changed-tool-locales": "npx tsx scripts/validation/validate-changed-tool-locales.ts",
     "validate:runtime-placeholder-regressions": "node --import tsx/esm scripts/validation/validate-runtime-placeholder-regressions.ts",
+    "validate:tool-runtime-loading": "node --import tsx/esm scripts/validation/validate-tool-runtime-loading.ts",
+    "validate:tool-runtime-loading:prod": "node --import tsx/esm scripts/validation/validate-tool-runtime-loading.ts --base-url https://www.u2tool.com",
     "validate:tool-theme-adaptation": "node --import tsx/esm scripts/validation/validate-tool-theme-adaptation.ts",
     "validate:tool-svg-rendering": "node --import tsx/esm scripts/validation/validate-tool-svg-rendering.ts",
     "validate:prerender-safety": "node --import tsx/esm scripts/validation/validate-prerender-safety.ts",
