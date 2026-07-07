@@ -29,6 +29,11 @@ const COMPARISON_SLUGS = [
   'choose-image-tool',
   'meta-tags-vs-open-graph-vs-twitter-cards',
 ];
+const AI_TOPIC_SLUGS = [
+  'prompt-tools',
+  'rag-tools',
+  'ai-crawler-tools',
+];
 const PRIORITY_TOOL_SLUGS = [
   'json-formatter',
   'base64',
@@ -226,6 +231,9 @@ function buildPriorityUrls(siteUrl, selectedLocales, limit) {
     addPath(`/${locale}/tools`);
     addPath(`/${locale}/compare`);
     addPath(`/${locale}/ai`);
+    for (const slug of AI_TOPIC_SLUGS) {
+      addPath(`/${locale}/ai/${slug}`);
+    }
 
     for (const category of CATEGORY_SLUGS) {
       addPath(`/${locale}/categories/${category}`);

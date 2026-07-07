@@ -25,6 +25,11 @@ const COMPARISON_SLUGS = [
   'choose-image-tool',
   'meta-tags-vs-open-graph-vs-twitter-cards',
 ];
+const AI_TOPIC_SLUGS = [
+  'prompt-tools',
+  'rag-tools',
+  'ai-crawler-tools',
+];
 const PRIORITY_TOOL_SLUGS = [
   'json-formatter',
   'base64',
@@ -85,7 +90,7 @@ function extractTagCount(xml, tagName) {
 
 function buildMinimumPriorityCount(prioritySitemap) {
   const aiCount = prioritySitemap.includes(`${SITE_URL}/en/ai`) ? 1 : 0;
-  const perLocale = 1 + 1 + 1 + aiCount + CATEGORIES.length + COMPARISON_SLUGS.length + PRIORITY_TOOL_SLUGS.length;
+  const perLocale = 1 + 1 + 1 + aiCount + AI_TOPIC_SLUGS.length + CATEGORIES.length + COMPARISON_SLUGS.length + PRIORITY_TOOL_SLUGS.length;
   return perLocale * LOCALES.length;
 }
 
@@ -117,6 +122,8 @@ function main() {
   assert(priorityLocs.length >= minimumPriorityCount, `sitemap-priority.xml URL count is too low: expected at least ${minimumPriorityCount}, got ${priorityLocs.length}.`);
   assert(new Set(priorityLocs).size === priorityLocs.length, 'sitemap-priority.xml must not contain duplicate URLs.');
   assert(priorityLocs.includes(`${SITE_URL}/en/ai/`), 'sitemap-priority.xml must include /en/ai/.');
+  assert(priorityLocs.includes(`${SITE_URL}/en/ai/prompt-tools/`), 'sitemap-priority.xml must include /en/ai/prompt-tools/.');
+  assert(priorityLocs.includes(`${SITE_URL}/zh/ai/rag-tools/`), 'sitemap-priority.xml must include /zh/ai/rag-tools/.');
   assert(priorityLocs.includes(`${SITE_URL}/en/tools/json-formatter/`), 'sitemap-priority.xml must include /en/tools/json-formatter/.');
   assert(priorityLocs.includes(`${SITE_URL}/zh/tools/json-formatter/`), 'sitemap-priority.xml must include /zh/tools/json-formatter/.');
   console.log(`sitemap-priority.xml OK (${priorityLocs.length} URLs)`);
@@ -125,6 +132,7 @@ function main() {
   const pageLocs = extractLocs(sitemapPages);
   assert(pageLocs.includes(`${SITE_URL}/en/`), 'sitemap-pages.xml must include /en/.');
   assert(pageLocs.includes(`${SITE_URL}/en/ai/`), 'sitemap-pages.xml must include /en/ai/.');
+  assert(pageLocs.includes(`${SITE_URL}/en/ai/ai-crawler-tools/`), 'sitemap-pages.xml must include /en/ai/ai-crawler-tools/.');
   assert(pageLocs.includes(`${SITE_URL}/en/compare/`), 'sitemap-pages.xml must include /en/compare/.');
   assert(pageLocs.includes(`${SITE_URL}/en/categories/development/`), 'sitemap-pages.xml must include /en/categories/development/.');
   console.log(`sitemap-pages.xml OK (${pageLocs.length} URLs)`);

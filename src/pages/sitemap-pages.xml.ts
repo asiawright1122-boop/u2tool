@@ -9,6 +9,7 @@ import type { APIRoute } from 'astro';
 import { locales } from '@/lib/i18n';
 import { categories } from '@/config/tools';
 import { comparisonSurfaceSlugs } from '@/lib/comparison-surfaces';
+import { aiToolTopicSlugs, getAiToolTopicPath } from '@/lib/ai-tool-topics';
 import { chartToolClusterPath } from '@/lib/chart-tool-cluster';
 import { creatorSeoClusterPath } from '@/lib/creator-seo-cluster';
 import { developerDataToolClusterPath } from '@/lib/developer-data-tool-cluster';
@@ -38,6 +39,9 @@ export const GET: APIRoute = () => {
 
     // AI 发现页 - even when interactive discovery is disabled, the route renders an indexable static fallback.
     urls.push(buildUrl(`/${locale}/ai`, '0.6', 'weekly', sitemapLastmodManifest.ai));
+    for (const topicSlug of aiToolTopicSlugs) {
+      urls.push(buildUrl(`/${locale}${getAiToolTopicPath(topicSlug)}`, '0.7', 'weekly', sitemapLastmodManifest.ai));
+    }
 
     // AI 模型费用对比页 - first batch is published only in English and Chinese.
     if (isPublishedAiModelComparisonLocale(locale)) {

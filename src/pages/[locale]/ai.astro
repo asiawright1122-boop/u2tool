@@ -20,6 +20,10 @@ import {
   buildAiToolsDirectoryItemList,
   getAiToolsDirectoryCopy,
 } from '@/lib/ai-tools-directory';
+import {
+  buildAiToolTopics,
+  getAiToolTopicUiCopy,
+} from '@/lib/ai-tool-topics';
 import { buildCategoryDiscoverySpotlights } from '@/lib/discovery-surface';
 import { buildComparisonGuides, getComparisonUiCopy } from '@/lib/comparison-surfaces';
 import {
@@ -71,6 +75,8 @@ const toolDescriptions = Object.fromEntries(
 );
 const discoverySpotlights = buildCategoryDiscoverySpotlights(locale, categoryMessages, toolNames, toolDescriptions);
 const aiToolClusters = buildAiToolsDirectory(locale, categoryMessages, toolNames, toolDescriptions);
+const aiToolTopics = buildAiToolTopics(locale, categoryMessages, toolNames, toolDescriptions);
+const aiToolTopicCopy = getAiToolTopicUiCopy(locale);
 const aiDirectoryItemListData = buildAiToolsDirectoryItemList(BASE_URL, aiToolClusters);
 const comparisonUiCopy = getComparisonUiCopy(locale);
 const comparisonGuides = buildComparisonGuides(locale, categoryMessages, toolNames, toolDescriptions);
@@ -130,6 +136,8 @@ const comparisonGuides = buildComparisonGuides(locale, categoryMessages, toolNam
           copy={aiDirectoryCopy}
           clusters={aiToolClusters}
           showHeader={aiDiscoveryEnabled}
+          topics={aiToolTopics}
+          topicCopy={aiToolTopicCopy}
         />
         <CategorySpotlightSection
           eyebrow={aiPageTitle}

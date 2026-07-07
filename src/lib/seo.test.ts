@@ -242,6 +242,9 @@ describe('seo helpers', () => {
     expect(urls).toContain('https://www.u2tool.com/en/tools/ai-token-calculator/');
     expect(urls).toContain('https://www.u2tool.com/en/tools/ai-prompt-template-generator/');
     expect(urls).toContain('https://www.u2tool.com/en/tools/rag-chunk-size-calculator/');
+    expect(urls).toContain('https://www.u2tool.com/en/ai/prompt-tools/');
+    expect(urls).toContain('https://www.u2tool.com/en/ai/rag-tools/');
+    expect(urls).toContain('https://www.u2tool.com/zh/ai/ai-crawler-tools/');
     expect(urls).toContain('https://www.u2tool.com/zh/tools/ai-robots-txt-generator/');
     expect(urls).toContain('https://www.u2tool.com/zh/tools/llms-txt-generator/');
   });

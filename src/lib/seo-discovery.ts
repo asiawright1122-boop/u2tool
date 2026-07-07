@@ -1,4 +1,5 @@
 import { categories, getPopularTools, tools, type Tool } from '@/config/tools';
+import { aiToolTopicSlugs, getAiToolTopicPath } from '@/lib/ai-tool-topics';
 import { comparisonSurfaceSlugs } from '@/lib/comparison-surfaces';
 import { isAiDiscoveryEnabled } from '@/lib/ai-discovery/feature-flag';
 import { locales, type Locale } from '@/lib/i18n';
@@ -168,6 +169,10 @@ export function buildPriorityRoutePaths(locale: Locale): string[] {
 
   if (isAiDiscoveryEnabled()) {
     paths.add(`/${locale}/ai`);
+  }
+
+  for (const topicSlug of aiToolTopicSlugs) {
+    paths.add(`/${locale}${getAiToolTopicPath(topicSlug)}`);
   }
 
   for (const category of categories) {
