@@ -35,6 +35,7 @@ export const TEXT_TOOLS: Tool[] = [
   { slug: 'keyword-density-checker', category: 'text', icon: 'type', component: 'KeywordDensityChecker' },
   { slug: 'ai-prompt-generator', category: 'text', icon: 'sparkle', component: 'AiPromptGenerator', popular: true },
   { slug: 'ai-prompt-optimizer', category: 'text', icon: 'sparkle', component: 'AiPromptOptimizer', popular: true },
+  { slug: 'ai-prompt-template-generator', category: 'text', icon: 'sparkle', component: 'AiPromptTemplateGenerator', popular: true },
   { slug: 'title-capitalization-tool', category: 'text', icon: 'type', component: 'TitleCapitalizationTool' },
   { slug: 'text-summarizer', category: 'text', icon: 'type', component: 'TextSummarizer' },
   { slug: 'paraphrase-tool', category: 'text', icon: 'type', component: 'ParaphraseTool' },

@@ -15564,6 +15564,12 @@
       "seo_title": "무료 온라인 AI 프롬프트 최적화 도구",
       "seo_description": "목표, 대상, 톤, 형식, 제약 조건, 체크리스트가 포함된 AI 프롬프트를 무료로 최적화하세요."
     },
+    "ai-prompt-template-generator": {
+      "name": "AI 프롬프트 템플릿 생성기",
+      "description": "변수, 제약 조건, 예시 값, 체크리스트가 포함된 재사용 가능한 AI 프롬프트 템플릿을 만듭니다.",
+      "seo_title": "무료 온라인 AI 프롬프트 템플릿 생성기",
+      "seo_description": "변수, 출력 형식, 제약 조건, 예시 값, 체크리스트가 포함된 AI 프롬프트 템플릿을 무료로 생성하세요."
+    },
     "title-capitalization-tool": {
       "name": "제목 대소문자 변환 도구",
       "description": "제목을 title case, sentence case, 대문자 또는 소문자로 변환합니다.",
@@ -16214,6 +16220,12 @@
       "description": "JSON 객체를 컨텍스트, 스키마, 작업, 출력 형식이 포함된 구조화된 AI 프롬프트로 변환합니다.",
       "seo_title": "무료 온라인 JSON to Prompt 도구",
       "seo_description": "JSON을 AI 프롬프트로 무료 변환합니다. 스키마를 분석하고 작업을 추가해 브라우저에서 바로 복사할 수 있는 프롬프트를 만듭니다."
+    },
+    "rag-chunk-size-calculator": {
+      "name": "RAG 청크 크기 계산기",
+      "description": "RAG 워크플로의 청크 수, overlap 중복, 검색 컨텍스트 사용량을 추정합니다.",
+      "seo_title": "무료 온라인 RAG 청크 크기 계산기",
+      "seo_description": "RAG 청크 크기를 무료로 계산하세요. 청크 수, overlap, 임베딩 토큰, Top K 검색 사용량, 컨텍스트 창 적합도를 추정합니다."
     },
     "llms-txt-validator": {
       "name": "LLMs.txt 검사기",

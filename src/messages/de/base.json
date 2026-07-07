@@ -15800,6 +15800,12 @@
       "seo_title": "Kostenloser KI-Prompt-Optimierer",
       "seo_description": "Optimiere KI-Prompts kostenlos mit Ziel, Zielgruppe, Ton, Format, Einschränkungen und kopierfertiger Checkliste."
     },
+    "ai-prompt-template-generator": {
+      "name": "KI-Prompt-Vorlagengenerator",
+      "description": "Erstelle wiederverwendbare KI-Prompt-Vorlagen mit Variablen, Einschränkungen, Beispielen und Checkliste.",
+      "seo_title": "Kostenloser KI-Prompt-Vorlagengenerator",
+      "seo_description": "Generiere KI-Prompt-Vorlagen kostenlos mit Variablen, Ausgabeformat, Einschränkungen, Beispielwerten und kopierfertiger Checkliste."
+    },
     "title-capitalization-tool": {
       "name": "Titel-Großschreibungstool",
       "description": "Wandle Titel in Title Case, Sentence Case, Groß- oder Kleinschreibung um.",
@@ -16450,6 +16456,12 @@
       "description": "Wandle ein JSON-Objekt in einen strukturierten KI-Prompt mit Kontext, Schema, Aufgabe und Ausgabeformat um.",
       "seo_title": "Kostenloses JSON zu Prompt Tool",
       "seo_description": "Erstelle kostenlos KI-Prompts aus JSON. Analysiere das Schema, fuege eine Aufgabe hinzu und kopiere den fertigen Prompt direkt im Browser."
+    },
+    "rag-chunk-size-calculator": {
+      "name": "RAG Chunk-Groessenrechner",
+      "description": "Schaetze Chunk-Anzahl, Overlap-Duplikate und Kontextnutzung fuer RAG-Workflows.",
+      "seo_title": "Kostenloser RAG Chunk-Groessenrechner",
+      "seo_description": "Berechne RAG Chunk Size kostenlos. Schaetze Chunk-Anzahl, Overlap, Embedding-Tokens, Top-K-Retrieval und Kontextfenster-Auslastung."
     },
     "llms-txt-validator": {
       "name": "LLMs.txt Pruefer",

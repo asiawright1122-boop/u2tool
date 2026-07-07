@@ -15576,6 +15576,12 @@
       "seo_title": "免费在线 AI 提示词优化器",
       "seo_description": "免费在线优化 AI 提示词。把粗糙 Prompt 整理成带角色、受众、输出格式、约束和质量检查的结构化提示词。"
     },
+    "ai-prompt-template-generator": {
+      "name": "AI Prompt 模板生成器",
+      "description": "生成带变量、约束、示例值和检查清单的可复用 AI Prompt 模板。",
+      "seo_title": "免费在线 AI Prompt 模板生成器",
+      "seo_description": "免费在线生成可复用 AI Prompt 模板。添加变量、输出格式、约束、示例值和检查清单后直接复制使用。"
+    },
     "title-capitalization-tool": {
       "name": "标题大小写转换工具",
       "description": "将标题转换为标题式、句首大写、全大写或全小写。",
@@ -16226,6 +16232,12 @@
       "description": "把 JSON、API 返回和配置片段转换成基于数据结构的 AI 提示词。",
       "seo_title": "免费在线 JSON 转 Prompt 工具",
       "seo_description": "免费在线把 JSON 转成 AI 提示词。粘贴 JSON 或 API 返回，生成包含结构摘要、任务说明和数据约束的 Prompt。"
+    },
+    "rag-chunk-size-calculator": {
+      "name": "RAG 分块大小计算器",
+      "description": "估算 RAG 工作流的分块数量、overlap 重复量和检索上下文占用。",
+      "seo_title": "免费在线 RAG 分块大小计算器",
+      "seo_description": "免费在线计算 RAG 分块大小。估算分块数量、重叠比例、嵌入 token、Top K 检索占用和上下文窗口适配情况。"
     },
     "llms-txt-validator": {
       "name": "LLMs.txt 校验器",

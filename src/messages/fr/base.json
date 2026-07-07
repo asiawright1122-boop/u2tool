@@ -15753,6 +15753,12 @@
       "seo_title": "Optimiseur de prompts IA gratuit",
       "seo_description": "Optimisez gratuitement vos prompts IA avec objectif, audience, ton, format, contraintes et checklist prête à copier."
     },
+    "ai-prompt-template-generator": {
+      "name": "Générateur de modèles de prompts IA",
+      "description": "Créez des modèles de prompts IA réutilisables avec variables, contraintes, exemples et checklist.",
+      "seo_title": "Générateur de modèles de prompts IA gratuit",
+      "seo_description": "Générez gratuitement des modèles de prompts IA avec variables, format de sortie, contraintes, exemples et checklist prêts à copier."
+    },
     "title-capitalization-tool": {
       "name": "Outil de capitalisation des titres",
       "description": "Convertissez les titres en title case, sentence case, majuscules ou minuscules.",
@@ -16403,6 +16409,12 @@
       "description": "Convertissez un objet JSON en prompt IA structure avec contexte, schema, tache et format de sortie.",
       "seo_title": "Outil JSON vers Prompt gratuit",
       "seo_description": "Transformez gratuitement du JSON en prompt IA structure. Analysez le schema, ajoutez une tache et générez un prompt pret a copier dans le navigateur."
+    },
+    "rag-chunk-size-calculator": {
+      "name": "Calculateur de taille de chunks RAG",
+      "description": "Estimez le nombre de chunks, le chevauchement et l'usage du contexte pour les workflows RAG.",
+      "seo_title": "Calculateur de taille de chunks RAG gratuit",
+      "seo_description": "Calculez gratuitement la taille de chunks RAG. Estimez chunks, overlap, tokens d'embedding, Top K et usage de la fenêtre de contexte."
     },
     "llms-txt-validator": {
       "name": "Validateur LLMs.txt",

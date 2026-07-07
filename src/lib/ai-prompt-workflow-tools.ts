@@ -34,6 +34,52 @@ export interface JsonToPromptResult {
   topLevelType: string;
 }
 
+export interface RagChunkPlanInput {
+  chunkSize: number;
+  contextWindow: number;
+  documentTokens: number;
+  overlapTokens: number;
+  promptReserveTokens: number;
+  topK: number;
+}
+
+export interface RagChunkPlanResult {
+  chunkCount: number;
+  contextBudgetTokens: number;
+  contextUsagePercent: number;
+  effectiveStepTokens: number;
+  embeddedTokenEstimate: number;
+  overlapPercent: number;
+  recommendation: string;
+  retrievedContextTokens: number;
+  warnings: string[];
+}
+
+export interface AiPromptTemplateInput {
+  constraints: string;
+  includeExample: boolean;
+  outputFormat: string;
+  task: string;
+  tone: string;
+  variablesText: string;
+}
+
+export interface AiPromptTemplateVariable {
+  description: string;
+  example: string;
+  name: string;
+  placeholder: string;
+}
+
+export interface AiPromptTemplateResult {
+  checklist: string[];
+  examplePrompt: string;
+  template: string;
+  variableCount: number;
+  variables: AiPromptTemplateVariable[];
+  wordCount: number;
+}
+
 const goalInstructions: Record<AiPromptGoal, string[]> = {
   writing: [
     'Clarify the reader, purpose, and desired action before drafting.',
@@ -68,6 +114,16 @@ function clean(value: string, fallback: string): string {
 
 function countWords(value: string): number {
   return value.trim().split(/\s+/).filter(Boolean).length;
+}
+
+function clampNumber(value: number, min: number, max: number): number {
+  if (!Number.isFinite(value)) return min;
+  return Math.min(Math.max(value, min), max);
+}
+
+function round(value: number, digits = 1): number {
+  const factor = 10 ** digits;
+  return Math.round(value * factor) / factor;
 }
 
 export function optimizeAiPrompt(input: AiPromptOptimizerInput): AiPromptOptimizerResult {
@@ -228,5 +284,155 @@ export function buildJsonToPrompt(input: JsonToPromptInput): JsonToPromptResult 
     prompt,
     schemaSummary,
     topLevelType,
+  };
+}
+
+export function calculateRagChunkPlan(input: RagChunkPlanInput): RagChunkPlanResult {
+  const documentTokens = Math.round(clampNumber(input.documentTokens, 1, 50_000_000));
+  const chunkSize = Math.round(clampNumber(input.chunkSize, 64, 64_000));
+  const overlapTokens = Math.round(clampNumber(input.overlapTokens, 0, chunkSize - 1));
+  const topK = Math.round(clampNumber(input.topK, 1, 100));
+  const contextWindow = Math.round(clampNumber(input.contextWindow, 1_000, 5_000_000));
+  const promptReserveTokens = Math.round(clampNumber(input.promptReserveTokens, 0, contextWindow - 1));
+  const effectiveStepTokens = Math.max(1, chunkSize - overlapTokens);
+  const chunkCount =
+    documentTokens <= chunkSize
+      ? 1
+      : 1 + Math.ceil((documentTokens - chunkSize) / effectiveStepTokens);
+  const embeddedTokenEstimate = chunkCount * chunkSize;
+  const retrievedContextTokens = topK * chunkSize;
+  const contextBudgetTokens = Math.max(1, contextWindow - promptReserveTokens);
+  const contextUsagePercent = round((retrievedContextTokens / contextBudgetTokens) * 100, 1);
+  const overlapPercent = round((overlapTokens / chunkSize) * 100, 1);
+  const warnings: string[] = [];
+
+  if (overlapPercent > 35) {
+    warnings.push('Overlap is high; embedding storage and duplicate retrieved text may grow quickly.');
+  }
+  if (contextUsagePercent > 80) {
+    warnings.push('Retrieved chunks consume most of the available context budget.');
+  }
+  if (chunkSize < 300) {
+    warnings.push('Chunk size is small; semantic context may be fragmented for long paragraphs.');
+  }
+  if (topK > 12) {
+    warnings.push('Top K is high; reranking or metadata filtering may be needed to keep answers focused.');
+  }
+
+  let recommendation = 'Balanced setup for a general RAG knowledge base.';
+  if (contextUsagePercent > 80) {
+    recommendation = 'Reduce top K or chunk size so retrieved context leaves room for instructions and the answer.';
+  } else if (overlapPercent > 35) {
+    recommendation = 'Lower overlap toward 10-25% unless your documents contain many split-sensitive passages.';
+  } else if (chunkSize < 300) {
+    recommendation = 'Increase chunk size for better paragraph-level context before tuning overlap.';
+  } else if (chunkSize > 2_000 && topK > 6) {
+    recommendation = 'Large chunks plus high top K can crowd the model; try reranking fewer chunks.';
+  }
+
+  return {
+    chunkCount,
+    contextBudgetTokens,
+    contextUsagePercent,
+    effectiveStepTokens,
+    embeddedTokenEstimate,
+    overlapPercent,
+    recommendation,
+    retrievedContextTokens,
+    warnings,
+  };
+}
+
+function normalizeTemplateVariable(value: string): string {
+  return value
+    .trim()
+    .replace(/^\{+|\}+$/g, '')
+    .replace(/[^a-zA-Z0-9_\-\s]/g, ' ')
+    .trim()
+    .replace(/\s+/g, '_')
+    .replace(/-+/g, '_')
+    .toLowerCase();
+}
+
+function parseTemplateVariables(variablesText: string): AiPromptTemplateVariable[] {
+  const rawVariables = variablesText
+    .split(/[\n,;]/)
+    .map(normalizeTemplateVariable)
+    .filter(Boolean);
+  const names = Array.from(new Set(rawVariables)).slice(0, 12);
+
+  return names.map((name) => ({
+    name,
+    placeholder: `{{${name}}}`,
+    description: `Replace ${name} with the real value before sending the prompt.`,
+    example: name.includes('audience')
+      ? 'API developers'
+      : name.includes('topic')
+        ? 'AI model pricing'
+        : name.includes('format')
+          ? 'Markdown table'
+          : `sample_${name}`,
+  }));
+}
+
+export function generateAiPromptTemplate(input: AiPromptTemplateInput): AiPromptTemplateResult {
+  const task = clean(input.task, 'Complete the requested AI task using the provided context.');
+  const tone = clean(input.tone, 'clear, practical, and direct');
+  const outputFormat = clean(input.outputFormat, 'structured Markdown with headings and bullet points');
+  const constraints = clean(input.constraints, 'state assumptions, avoid unsupported claims, and keep the result actionable');
+  const variables = parseTemplateVariables(input.variablesText);
+  const variableList = variables.length > 0
+    ? variables.map((variable) => `- ${variable.placeholder}: ${variable.description}`)
+    : ['- {{context}}: Replace with the source material or task context before sending.'];
+  const placeholders = variables.length > 0
+    ? variables.map((variable) => `${variable.placeholder}`).join(', ')
+    : '{{context}}';
+
+  const template = [
+    `Role: You are a ${tone} AI assistant.`,
+    `Task: ${task}`,
+    'Variables:',
+    ...variableList,
+    `Use these values: ${placeholders}.`,
+    `Output format: ${outputFormat}.`,
+    `Constraints: ${constraints}.`,
+    'Instructions:',
+    '- Ask one clarifying question only if a missing variable materially changes the result.',
+    '- Keep every recommendation tied to the supplied variables or context.',
+    '- Separate facts, assumptions, and next steps.',
+    '- End with a short quality checklist.',
+  ].join('\n');
+
+  const exampleValues = variables.length > 0
+    ? variables.map((variable) => `${variable.placeholder} = ${variable.example}`)
+    : ['{{context}} = Paste source notes, data, or requirements here'];
+  const examplePrompt = input.includeExample
+    ? [
+        template,
+        '',
+        'Example variable values:',
+        ...exampleValues.map((value) => `- ${value}`),
+      ].join('\n')
+    : template;
+  const checklist = [
+    'Replace every placeholder before sending the prompt.',
+    'Check that the requested output format matches the workflow you will paste into.',
+    'Remove any constraint that conflicts with your real task.',
+  ];
+
+  return {
+    checklist,
+    examplePrompt,
+    template,
+    variableCount: variables.length || 1,
+    variables: variables.length > 0
+      ? variables
+      : [{
+          name: 'context',
+          placeholder: '{{context}}',
+          description: 'Replace context with the source material or task context before sending.',
+          example: 'Paste source notes, data, or requirements here',
+        }],
+    wordCount: countWords(template),
   };
 }

@@ -15564,6 +15564,12 @@
       "seo_title": "無料オンライン AI プロンプト最適化ツール",
       "seo_description": "目的、対象読者、トーン、形式、制約、チェックリストを含む AI プロンプトを無料で最適化できます。"
     },
+    "ai-prompt-template-generator": {
+      "name": "AI プロンプトテンプレート生成ツール",
+      "description": "変数、制約、例、チェックリストを含む再利用可能な AI プロンプトテンプレートを作成します。",
+      "seo_title": "無料オンライン AI プロンプトテンプレート生成ツール",
+      "seo_description": "変数、出力形式、制約、サンプル値、チェックリストを含む AI プロンプトテンプレートを無料で生成できます。"
+    },
     "title-capitalization-tool": {
       "name": "タイトル大文字変換ツール",
       "description": "タイトルを Title Case、sentence case、大文字、小文字に変換します。",
@@ -16214,6 +16220,12 @@
       "description": "JSON オブジェクトを、コンテキスト、スキーマ、タスク、出力形式を含む構造化 AI プロンプトへ変換します。",
       "seo_title": "無料オンライン JSON から Prompt ツール",
       "seo_description": "JSON を AI プロンプトへ無料変換できます。スキーマを解析し、タスクを追加して、コピーしやすいプロンプトを生成します。"
+    },
+    "rag-chunk-size-calculator": {
+      "name": "RAG チャンクサイズ計算機",
+      "description": "RAG ワークフローのチャンク数、重複量、検索コンテキスト使用量を見積もります。",
+      "seo_title": "無料オンライン RAG チャンクサイズ計算機",
+      "seo_description": "RAG チャンクサイズを無料で計算できます。チャンク数、overlap、埋め込みトークン、Top K、コンテキスト使用率を見積もります。"
     },
     "llms-txt-validator": {
       "name": "LLMs.txt バリデーター",

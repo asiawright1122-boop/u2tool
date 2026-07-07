@@ -88,6 +88,7 @@ export const DEVELOPMENT_TOOLS: Tool[] = [
   { slug: 'llms-txt-generator', category: 'development', icon: 'file-text', component: 'LlmsTxtGenerator', popular: true },
   { slug: 'ai-token-calculator', category: 'development', icon: 'calculator', component: 'AiTokenCalculator', popular: true },
   { slug: 'json-to-prompt', category: 'development', icon: 'braces', component: 'JsonToPrompt', popular: true },
+  { slug: 'rag-chunk-size-calculator', category: 'development', icon: 'database', component: 'RagChunkSizeCalculator', popular: true },
   { slug: 'llms-txt-validator', category: 'development', icon: 'file-text', component: 'PopularUtilityTool', popular: true },
   { slug: 'mcp-json-validator', category: 'development', icon: 'braces', component: 'PopularUtilityTool', popular: true },
   { slug: 'json-repair', category: 'development', icon: 'wrench', component: 'PopularUtilityTool', popular: true },

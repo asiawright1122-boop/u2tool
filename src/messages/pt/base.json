@@ -15749,6 +15749,12 @@
       "seo_title": "Otimizador de prompts de IA grátis",
       "seo_description": "Otimize prompts de IA grátis com objetivo, público, tom, formato, restrições e checklist pronta para copiar."
     },
+    "ai-prompt-template-generator": {
+      "name": "Gerador de templates de prompts de IA",
+      "description": "Crie templates reutilizáveis de prompts de IA com variáveis, restrições, exemplos e checklist.",
+      "seo_title": "Gerador de templates de prompts de IA grátis",
+      "seo_description": "Gere templates de prompts de IA grátis com variáveis, formato de saída, restrições, valores de exemplo e checklist pronta para copiar."
+    },
     "title-capitalization-tool": {
       "name": "Ferramenta de capitalização de títulos",
       "description": "Converta títulos para title case, sentence case, maiúsculas ou minúsculas.",
@@ -16399,6 +16405,12 @@
       "description": "Converta um objeto JSON em um prompt de IA estruturado com contexto, esquema, tarefa e formato de saída.",
       "seo_title": "Ferramenta JSON para Prompt grátis",
       "seo_description": "Transforme JSON em prompts de IA grátis. Analise o esquema, adicione uma tarefa e copie um prompt pronto no navegador."
+    },
+    "rag-chunk-size-calculator": {
+      "name": "Calculadora de tamanho de chunks RAG",
+      "description": "Estime número de chunks, duplicação por overlap e uso de contexto recuperado em workflows RAG.",
+      "seo_title": "Calculadora de tamanho de chunks RAG grátis",
+      "seo_description": "Calcule tamanho de chunks RAG grátis. Estime chunks, overlap, tokens de embedding, Top K e uso da janela de contexto."
     },
     "llms-txt-validator": {
       "name": "Validador de LLMs.txt",
