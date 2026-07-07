@@ -10,6 +10,7 @@ import { getLocalizedPath, type Locale } from './i18n';
 export type AiToolsDirectoryClusterId =
   | 'cost-model-planning'
   | 'prompt-builders'
+  | 'developer-workflows'
   | 'writing-content'
   | 'crawler-discovery';
 
@@ -86,7 +87,12 @@ const AI_TOOLS_DIRECTORY_DEFINITIONS: AiToolsDirectoryDefinition[] = [
   {
     id: 'prompt-builders',
     featuredSlug: 'ai-prompt-generator',
-    slugs: ['ai-prompt-generator', 'midjourney-prompt-generator', 'stable-diffusion-prompt-generator'],
+    slugs: ['ai-prompt-generator', 'ai-prompt-optimizer', 'midjourney-prompt-generator', 'stable-diffusion-prompt-generator'],
+  },
+  {
+    id: 'developer-workflows',
+    featuredSlug: 'json-to-prompt',
+    slugs: ['json-to-prompt'],
   },
   {
     id: 'writing-content',
@@ -114,7 +120,7 @@ const englishCopy: AiToolsDirectoryCopyBundle = {
   costComparisonTitle: 'Plan AI model spend before you build',
   ctaLabel: 'Open tool',
   description:
-    'Browse AI-focused tools for token cost planning, prompt writing, image prompts, AI crawler controls, and llms.txt publishing.',
+    'Browse AI-focused tools for token cost planning, prompt optimization, JSON-to-prompt workflows, image prompts, AI crawler controls, and llms.txt publishing.',
   eyebrow: 'AI tools',
   featuredBadgeLabel: 'Featured',
   featuredCta: 'Open AI Token Calculator',
@@ -129,8 +135,8 @@ const englishCopy: AiToolsDirectoryCopyBundle = {
   searchDescription: 'Search by intent, or browse the curated AI workflow groups below.',
   searchTitle: 'Find the right AI tool',
   seoDescription:
-    'Browse free AI tools for token cost estimates, prompt generation, Midjourney and Stable Diffusion prompts, AI robots.txt rules, and llms.txt publishing.',
-  seoTitle: 'AI Tools Directory - Token Cost, Prompts and llms.txt Tools',
+    'Browse free AI tools for token cost estimates, prompt generation, prompt optimization, JSON to prompt conversion, AI robots.txt rules, and llms.txt publishing.',
+  seoTitle: 'AI Tools Directory - Token Cost, Prompt Optimizer and JSON to Prompt Tools',
   toolCountLabel: 'tools',
   clusters: {
     'cost-model-planning': {
@@ -139,7 +145,11 @@ const englishCopy: AiToolsDirectoryCopyBundle = {
     },
     'prompt-builders': {
       title: 'Prompt and image prompt builders',
-      description: 'Create structured prompts for general AI tasks, Midjourney scenes, and Stable Diffusion workflows.',
+      description: 'Create and improve structured prompts for general AI tasks, Midjourney scenes, and Stable Diffusion workflows.',
+    },
+    'developer-workflows': {
+      title: 'AI developer workflows',
+      description: 'Convert JSON, API responses, and config snippets into prompts grounded in the actual data shape.',
     },
     'writing-content': {
       title: 'AI writing and content helpers',
@@ -160,7 +170,7 @@ const chineseCopy: AiToolsDirectoryCopyBundle = {
   costComparisonTitle: '开发前先估算 AI 模型成本',
   ctaLabel: '打开工具',
   description:
-    '浏览 AI 相关工具：Token 成本估算、Prompt 生成、图像提示词、AI 爬虫规则和 llms.txt 发布工具。',
+    '浏览 AI 相关工具：Token 成本估算、Prompt 优化、JSON 转 Prompt、图像提示词、AI 爬虫规则和 llms.txt 发布工具。',
   eyebrow: 'AI 工具',
   featuredBadgeLabel: '重点',
   featuredCta: '打开 AI Token 计算器',
@@ -175,8 +185,8 @@ const chineseCopy: AiToolsDirectoryCopyBundle = {
   searchDescription: '可以按需求搜索，也可以直接浏览下面的 AI 工作流分组。',
   searchTitle: '找到合适的 AI 工具',
   seoDescription:
-    '浏览免费的 AI 工具目录，包含 AI Token 费用估算、Prompt 生成、Midjourney 和 Stable Diffusion 提示词、AI robots.txt 规则与 llms.txt 工具。',
-  seoTitle: 'AI 工具目录 - Token 费用、Prompt 和 llms.txt 工具',
+    '浏览免费的 AI 工具目录，包含 AI Token 费用估算、Prompt 优化、JSON 转 Prompt、AI robots.txt 规则与 llms.txt 工具。',
+  seoTitle: 'AI 工具目录 - Token 费用、Prompt 优化和 JSON 转 Prompt 工具',
   toolCountLabel: '个工具',
   clusters: {
     'cost-model-planning': {
@@ -185,7 +195,11 @@ const chineseCopy: AiToolsDirectoryCopyBundle = {
     },
     'prompt-builders': {
       title: 'Prompt 与图像提示词生成',
-      description: '为通用 AI 任务、Midjourney 场景和 Stable Diffusion 工作流生成结构化提示词。',
+      description: '为通用 AI 任务、Midjourney 场景和 Stable Diffusion 工作流生成并优化结构化提示词。',
+    },
+    'developer-workflows': {
+      title: 'AI 开发者工作流',
+      description: '把 JSON、API 返回和配置片段转换成基于真实数据结构的 AI 提示词。',
     },
     'writing-content': {
       title: 'AI 写作与内容辅助',

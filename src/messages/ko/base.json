@@ -15558,6 +15558,12 @@
       "seo_title": "무료 온라인 AI 프롬프트 생성기",
       "seo_description": "작업, 대상, 톤, 형식, 제약 조건으로 구조화된 AI 프롬프트를 무료로 생성하세요."
     },
+    "ai-prompt-optimizer": {
+      "name": "AI 프롬프트 최적화 도구",
+      "description": "초안 프롬프트를 역할, 목표, 제약 조건, 출력 형식이 포함된 구조화된 AI 지시문으로 바꿉니다.",
+      "seo_title": "무료 온라인 AI 프롬프트 최적화 도구",
+      "seo_description": "목표, 대상, 톤, 형식, 제약 조건, 체크리스트가 포함된 AI 프롬프트를 무료로 최적화하세요."
+    },
     "title-capitalization-tool": {
       "name": "제목 대소문자 변환 도구",
       "description": "제목을 title case, sentence case, 대문자 또는 소문자로 변환합니다.",
@@ -16202,6 +16208,12 @@
       "description": "주요 AI 모델의 입력 및 출력 토큰 비용을 추정합니다.",
       "seo_title": "무료 온라인 AI 토큰 비용 계산기",
       "seo_description": "주요 AI 모델의 입력 및 출력 토큰 비용을 추정합니다. 브라우저에서 무료로 사용할 수 있으며 가입이 필요 없습니다."
+    },
+    "json-to-prompt": {
+      "name": "JSON to Prompt",
+      "description": "JSON 객체를 컨텍스트, 스키마, 작업, 출력 형식이 포함된 구조화된 AI 프롬프트로 변환합니다.",
+      "seo_title": "무료 온라인 JSON to Prompt 도구",
+      "seo_description": "JSON을 AI 프롬프트로 무료 변환합니다. 스키마를 분석하고 작업을 추가해 브라우저에서 바로 복사할 수 있는 프롬프트를 만듭니다."
     },
     "llms-txt-validator": {
       "name": "LLMs.txt 검사기",

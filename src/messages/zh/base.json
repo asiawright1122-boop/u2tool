@@ -15570,6 +15570,12 @@
       "seo_title": "免费在线 AI 提示词生成器",
       "seo_description": "免费在线生成结构化 AI 提示词。按任务、受众、语气、输出格式和约束快速构建可复制的提示词。"
     },
+    "ai-prompt-optimizer": {
+      "name": "AI 提示词优化器",
+      "description": "用角色、任务、受众、格式、约束和检查清单优化粗糙提示词。",
+      "seo_title": "免费在线 AI 提示词优化器",
+      "seo_description": "免费在线优化 AI 提示词。把粗糙 Prompt 整理成带角色、受众、输出格式、约束和质量检查的结构化提示词。"
+    },
     "title-capitalization-tool": {
       "name": "标题大小写转换工具",
       "description": "将标题转换为标题式、句首大写、全大写或全小写。",
@@ -16214,6 +16220,12 @@
       "description": "按输入和输出 token 估算常见 AI 模型的调用费用。",
       "seo_title": "免费在线AI Token 费用计算器",
       "seo_description": "按输入和输出 token 估算常见 AI 模型的调用费用。 直接在浏览器中免费使用，无需注册。"
+    },
+    "json-to-prompt": {
+      "name": "JSON 转 Prompt",
+      "description": "把 JSON、API 返回和配置片段转换成基于数据结构的 AI 提示词。",
+      "seo_title": "免费在线 JSON 转 Prompt 工具",
+      "seo_description": "免费在线把 JSON 转成 AI 提示词。粘贴 JSON 或 API 返回，生成包含结构摘要、任务说明和数据约束的 Prompt。"
     },
     "llms-txt-validator": {
       "name": "LLMs.txt 校验器",

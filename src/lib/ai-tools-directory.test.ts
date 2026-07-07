@@ -17,8 +17,10 @@ const categoryNames = {
 const toolNames = {
   'ai-token-calculator': 'AI Token Calculator',
   'ai-prompt-generator': 'AI Prompt Generator',
+  'ai-prompt-optimizer': 'AI Prompt Optimizer',
   'midjourney-prompt-generator': 'Midjourney Prompt Generator',
   'stable-diffusion-prompt-generator': 'Stable Diffusion Prompt Generator',
+  'json-to-prompt': 'JSON to Prompt',
   'ai-text-humanizer': 'AI Text Humanizer',
   'ai-robots-txt-generator': 'AI Robots.txt Generator',
   'llms-txt-generator': 'llms.txt Generator',
@@ -36,12 +38,14 @@ describe('AI tools directory', () => {
     expect(clusters.map((cluster) => cluster.id)).toEqual([
       'cost-model-planning',
       'prompt-builders',
+      'developer-workflows',
       'writing-content',
       'crawler-discovery',
     ]);
     expect(clusters.map((cluster) => cluster.href)).toEqual([
       '#cost-model-planning',
       '#prompt-builders',
+      '#developer-workflows',
       '#writing-content',
       '#crawler-discovery',
     ]);
@@ -50,9 +54,12 @@ describe('AI tools directory', () => {
     expect(clusters[0]?.tools[0]?.isFeatured).toBe(true);
     expect(clusters[1]?.tools.map((tool) => tool.slug)).toEqual([
       'ai-prompt-generator',
+      'ai-prompt-optimizer',
       'midjourney-prompt-generator',
       'stable-diffusion-prompt-generator',
     ]);
+    expect(clusters[2]?.tools.map((tool) => tool.slug)).toEqual(['json-to-prompt']);
+    expect(clusters[2]?.featuredTool?.slug).toBe('json-to-prompt');
 
     for (const cluster of clusters) {
       for (const tool of cluster.tools) {
@@ -67,8 +74,10 @@ describe('AI tools directory', () => {
     expect(AI_TOOLS_DIRECTORY_TOOL_SLUGS).toEqual([
       'ai-token-calculator',
       'ai-prompt-generator',
+      'ai-prompt-optimizer',
       'midjourney-prompt-generator',
       'stable-diffusion-prompt-generator',
+      'json-to-prompt',
       'ai-text-humanizer',
       'ai-robots-txt-generator',
       'llms-txt-generator',
@@ -125,7 +134,7 @@ describe('AI tools directory', () => {
     const elements = itemList.itemListElement as Array<Record<string, unknown>>;
 
     expect(itemList.name).toBe('U2Tool AI tools directory');
-    expect(itemList.numberOfItems).toBe(8);
+    expect(itemList.numberOfItems).toBe(10);
     expect(elements[0]?.position).toBe(1);
     expect(elements[0]?.url).toBe('https://www.u2tool.com/en/tools/ai-token-calculator/');
   });
