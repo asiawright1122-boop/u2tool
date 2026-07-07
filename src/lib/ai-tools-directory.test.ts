@@ -103,6 +103,7 @@ describe('AI tools directory', () => {
       '/en/ai/models/openai-vs-claude-api-cost/',
       '/en/ai/models/gpt-vs-gemini-api-cost/',
       '/en/ai/models/deepseek-vs-openai-api-cost/',
+      '/en/ai/models/mistral-vs-cohere-api-cost/',
     ]);
     expect(zhCopy.modelComparisonIndex.href).toBe('/zh/ai/models/');
     expect(zhCopy.modelComparisonIndex.label).toContain('模型费用');

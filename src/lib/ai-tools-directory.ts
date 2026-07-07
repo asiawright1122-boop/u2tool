@@ -69,6 +69,7 @@ const FEATURED_MODEL_COMPARISON_SLUGS: readonly AiModelComparisonSlug[] = [
   'openai-vs-claude-api-cost',
   'gpt-vs-gemini-api-cost',
   'deepseek-vs-openai-api-cost',
+  'mistral-vs-cohere-api-cost',
 ];
 
 const AI_TOOLS_DIRECTORY_DEFINITIONS: AiToolsDirectoryDefinition[] = [
@@ -115,7 +116,7 @@ const englishCopy: AiToolsDirectoryCopyBundle = {
   featuredTitle: 'Featured: AI Token Calculator',
   h1: 'AI Tools Directory',
   modelComparisonDescription:
-    'Open a focused comparison cluster for GPT, Claude, Gemini, DeepSeek, Grok, and Perplexity token costs.',
+    'Open focused comparison pages for GPT, Claude, Gemini, DeepSeek, Grok, Perplexity, Mistral, Cohere, Qwen, and Kimi token costs.',
   modelComparisonIndexLabel: 'Browse AI model cost comparisons',
   modelComparisonTitle: 'AI model cost comparisons',
   searchDescription: 'Search by intent, or browse the curated AI workflow groups below.',
@@ -159,7 +160,7 @@ const chineseCopy: AiToolsDirectoryCopyBundle = {
   featuredTitle: '重点工具：AI Token 费用计算器',
   h1: 'AI 工具目录',
   modelComparisonDescription:
-    '打开 GPT、Claude、Gemini、DeepSeek、Grok 和 Perplexity 的模型费用对比页。',
+    '打开 GPT、Claude、Gemini、DeepSeek、Grok、Perplexity、Mistral、Cohere、Qwen 和 Kimi 的模型费用对比页。',
   modelComparisonIndexLabel: '浏览 AI 模型费用对比',
   modelComparisonTitle: 'AI 模型费用对比',
   searchDescription: '可以按需求搜索，也可以直接浏览下面的 AI 工作流分组。',

@@ -11,7 +11,7 @@ import {
 } from './ai-model-comparisons';
 
 describe('AI model cost comparisons', () => {
-  it('publishes exactly the first 8 USD comparison slugs for English and Chinese', () => {
+  it('publishes the expanded comparison slug set for English and Chinese', () => {
     expect(aiModelComparisonLocales).toEqual(['en', 'zh']);
     expect(aiModelComparisonSlugs).toEqual([
       'openai-vs-claude-api-cost',
@@ -22,30 +22,39 @@ describe('AI model cost comparisons', () => {
       'gemini-vs-deepseek-api-cost',
       'grok-vs-gpt-api-cost',
       'perplexity-sonar-vs-openai-api-cost',
+      'mistral-vs-openai-api-cost',
+      'cohere-vs-openai-api-cost',
+      'mistral-vs-cohere-api-cost',
+      'qwen-vs-kimi-token-cost',
     ]);
   });
 
-  it('resolves every comparison to left and right model rows with one shared currency', () => {
+  it('resolves every comparison to left and right model rows with one configured shared currency', () => {
     for (const slug of aiModelComparisonSlugs) {
       const page = getAiModelComparison('en', slug);
+      const expectedCurrency = slug === 'qwen-vs-kimi-token-cost' ? 'CNY' : 'USD';
 
       expect(page?.left.models.length, slug).toBeGreaterThan(0);
       expect(page?.right.models.length, slug).toBeGreaterThan(0);
-      expect(new Set(page?.left.models.map((model) => model.currency))).toEqual(new Set(['USD']));
-      expect(new Set(page?.right.models.map((model) => model.currency))).toEqual(new Set(['USD']));
-      expect(page?.currency).toBe('USD');
+      expect(new Set(page?.left.models.map((model) => model.currency))).toEqual(new Set([expectedCurrency]));
+      expect(new Set(page?.right.models.map((model) => model.currency))).toEqual(new Set([expectedCurrency]));
+      expect(page?.currency).toBe(expectedCurrency);
       expect(page?.sources.length, slug).toBeGreaterThanOrEqual(2);
     }
   });
 
-  it('keeps CNY-priced providers out of the first batch until a currency policy exists', () => {
-    const indexedModels = aiModelComparisonSlugs.flatMap((slug) => {
+  it('keeps CNY-priced providers out of USD pages and exposes them on the CNY page', () => {
+    const usdIndexedModels = aiModelComparisonSlugs.filter((slug) => slug !== 'qwen-vs-kimi-token-cost').flatMap((slug) => {
       const page = getAiModelComparison('en', slug);
       return [...(page?.left.models ?? []), ...(page?.right.models ?? [])];
     });
+    const cnyPage = getAiModelComparison('en', 'qwen-vs-kimi-token-cost');
 
-    expect(indexedModels.some((model) => model.provider === 'Kimi')).toBe(false);
-    expect(indexedModels.some((model) => model.provider === 'Qwen')).toBe(false);
+    expect(usdIndexedModels.some((model) => model.provider === 'Kimi')).toBe(false);
+    expect(usdIndexedModels.some((model) => model.provider === 'Qwen')).toBe(false);
+    expect(cnyPage?.left.provider).toBe('Qwen');
+    expect(cnyPage?.right.provider).toBe('Kimi');
+    expect(cnyPage?.currency).toBe('CNY');
     expect(AI_MODEL_PRICING.some((model) => model.provider === 'Kimi' && model.currency === 'CNY')).toBe(true);
     expect(AI_MODEL_PRICING.some((model) => model.provider === 'Qwen' && model.currency === 'CNY')).toBe(true);
   });
@@ -70,7 +79,7 @@ describe('AI model cost comparisons', () => {
     for (const locale of aiModelComparisonLocales) {
       const index = buildAiModelComparisonIndex(locale);
 
-      expect(index).toHaveLength(8);
+      expect(index).toHaveLength(12);
       for (const item of index) {
         expect(item.href).toBe(`/${locale}/ai/models/${item.slug}/`);
         expect(item.title).toBeTruthy();
@@ -88,8 +97,9 @@ describe('AI model cost comparisons', () => {
     const itemList = buildAiModelComparisonItemList('https://www.u2tool.com', 'zh');
     const elements = itemList.itemListElement as Array<Record<string, unknown>>;
 
-    expect(itemList.numberOfItems).toBe(8);
+    expect(itemList.numberOfItems).toBe(12);
     expect(elements[0]?.url).toBe('https://www.u2tool.com/zh/ai/models/openai-vs-claude-api-cost/');
+    expect(elements.at(-1)?.url).toBe('https://www.u2tool.com/zh/ai/models/qwen-vs-kimi-token-cost/');
     expect(elements.every((element) => String(element.url).includes('/zh/ai/models/'))).toBe(true);
   });
 });

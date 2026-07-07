@@ -14,7 +14,11 @@ export type AiModelComparisonSlug =
   | 'deepseek-vs-perplexity-api-cost'
   | 'gemini-vs-deepseek-api-cost'
   | 'grok-vs-gpt-api-cost'
-  | 'perplexity-sonar-vs-openai-api-cost';
+  | 'perplexity-sonar-vs-openai-api-cost'
+  | 'mistral-vs-openai-api-cost'
+  | 'cohere-vs-openai-api-cost'
+  | 'mistral-vs-cohere-api-cost'
+  | 'qwen-vs-kimi-token-cost';
 
 export const aiModelComparisonSlugs: readonly AiModelComparisonSlug[] = [
   'openai-vs-claude-api-cost',
@@ -25,6 +29,10 @@ export const aiModelComparisonSlugs: readonly AiModelComparisonSlug[] = [
   'gemini-vs-deepseek-api-cost',
   'grok-vs-gpt-api-cost',
   'perplexity-sonar-vs-openai-api-cost',
+  'mistral-vs-openai-api-cost',
+  'cohere-vs-openai-api-cost',
+  'mistral-vs-cohere-api-cost',
+  'qwen-vs-kimi-token-cost',
 ];
 
 export interface AiModelCostScenario {
@@ -59,6 +67,7 @@ export interface AiModelComparisonCopy {
 }
 
 interface AiModelComparisonDefinition {
+  currency?: AiPricingCurrency;
   leftProvider: string;
   rightProvider: string;
   related: AiModelComparisonSlug[];
@@ -163,6 +172,31 @@ const comparisonDefinitions: readonly AiModelComparisonDefinition[] = [
     rightProvider: 'OpenAI',
     related: ['deepseek-vs-perplexity-api-cost', 'openai-vs-claude-api-cost', 'grok-vs-gpt-api-cost'],
   },
+  {
+    slug: 'mistral-vs-openai-api-cost',
+    leftProvider: 'Mistral',
+    rightProvider: 'OpenAI',
+    related: ['cohere-vs-openai-api-cost', 'mistral-vs-cohere-api-cost', 'gpt-vs-gemini-api-cost'],
+  },
+  {
+    slug: 'cohere-vs-openai-api-cost',
+    leftProvider: 'Cohere',
+    rightProvider: 'OpenAI',
+    related: ['mistral-vs-openai-api-cost', 'mistral-vs-cohere-api-cost', 'openai-vs-claude-api-cost'],
+  },
+  {
+    slug: 'mistral-vs-cohere-api-cost',
+    leftProvider: 'Mistral',
+    rightProvider: 'Cohere',
+    related: ['mistral-vs-openai-api-cost', 'cohere-vs-openai-api-cost', 'perplexity-sonar-vs-openai-api-cost'],
+  },
+  {
+    slug: 'qwen-vs-kimi-token-cost',
+    currency: 'CNY',
+    leftProvider: 'Qwen',
+    rightProvider: 'Kimi',
+    related: ['mistral-vs-cohere-api-cost', 'deepseek-vs-openai-api-cost', 'gpt-vs-gemini-api-cost'],
+  },
 ];
 
 const indexCopyByLocale: Record<AiModelComparisonLocale, AiModelComparisonIndexCopy> = {
@@ -172,10 +206,10 @@ const indexCopyByLocale: Record<AiModelComparisonLocale, AiModelComparisonIndexC
       'Compare source-backed input and output token prices for current AI model providers before choosing a default API model.',
     h1: 'AI Model Cost Comparisons',
     pricingNote:
-      'These pages compare listed text token prices only. They exclude cache discounts, search fees, audio pricing, enterprise terms, and model quality.',
+      'These pages compare listed text token prices only. They exclude cache discounts, search fees, audio pricing, currency conversion, enterprise terms, and model quality.',
     seoDescription:
-      'Compare OpenAI, Claude, Gemini, DeepSeek, Grok, and Perplexity API token costs with source-backed pricing tables and scenario estimates.',
-    seoTitle: 'AI Model Cost Comparisons - GPT, Claude, Gemini and DeepSeek Pricing',
+      'Compare OpenAI, Claude, Gemini, DeepSeek, Grok, Perplexity, Mistral, Cohere, Qwen, and Kimi API token costs with source-backed pricing tables and scenario estimates.',
+    seoTitle: 'AI Model Cost Comparisons - GPT, Claude, Gemini, Mistral and Qwen Pricing',
     toolCtaLabel: 'Estimate your own token cost',
   },
   zh: {
@@ -184,10 +218,10 @@ const indexCopyByLocale: Record<AiModelComparisonLocale, AiModelComparisonIndexC
       '在选择默认 API 模型前，对比主流 AI 模型厂商带来源的输入、输出 token 标价。',
     h1: 'AI 模型费用对比',
     pricingNote:
-      '这些页面只对比文本 token 标价，不包含缓存折扣、搜索费用、音频价格、企业合同价格或模型质量评价。',
+      '这些页面只对比文本 token 标价，不包含缓存折扣、搜索费用、音频价格、汇率换算、企业合同价格或模型质量评价。',
     seoDescription:
-      '对比 OpenAI、Claude、Gemini、DeepSeek、Grok 和 Perplexity API token 成本，包含带来源的价格表和场景估算。',
-    seoTitle: 'AI 模型费用对比 - GPT、Claude、Gemini 与 DeepSeek 价格',
+      '对比 OpenAI、Claude、Gemini、DeepSeek、Grok、Perplexity、Mistral、Cohere、Qwen 和 Kimi API token 成本，包含带来源的价格表和场景估算。',
+    seoTitle: 'AI 模型费用对比 - GPT、Claude、Gemini、Mistral 与 Qwen 价格',
     toolCtaLabel: '估算自己的 Token 成本',
   },
 };
@@ -297,6 +331,58 @@ const englishComparisonCopy: LocalizedComparisonCopy = {
     shortDescription: 'Perplexity Sonar and OpenAI token costs compared for API planning.',
     sourceTitle: 'Pricing sources',
   },
+  'mistral-vs-openai-api-cost': {
+    chooseLeft: 'Use Mistral pricing when Mistral Large is in your shortlist for European-hosted or open-weight-adjacent workflows.',
+    chooseRight: 'Use OpenAI pricing when GPT-family coverage and platform compatibility matter most.',
+    description: 'Compare Mistral and OpenAI API token costs with source-backed pricing rows and scenario estimates.',
+    h1: 'Mistral vs OpenAI API Cost',
+    intro: 'This page compares Mistral Large token pricing with OpenAI GPT token rows.',
+    pricingTableTitle: 'Mistral and OpenAI token prices',
+    scenarioTableTitle: 'Estimated cost by usage scenario',
+    seoDescription: 'Compare Mistral and OpenAI API token costs across current source-backed input and output prices.',
+    seoTitle: 'Mistral vs OpenAI API Cost - Token Price Comparison',
+    shortDescription: 'Mistral and OpenAI token prices side by side for API budget planning.',
+    sourceTitle: 'Pricing sources',
+  },
+  'cohere-vs-openai-api-cost': {
+    chooseLeft: 'Use Cohere pricing when Aya or Command R rows match your multilingual or enterprise search workflow.',
+    chooseRight: 'Use OpenAI pricing when GPT models are your baseline for assistant and coding workloads.',
+    description: 'Compare Cohere and OpenAI API token costs for multilingual and general AI application planning.',
+    h1: 'Cohere vs OpenAI API Cost',
+    intro: 'This page compares Cohere API token rows with OpenAI GPT token rows.',
+    pricingTableTitle: 'Cohere and OpenAI token prices',
+    scenarioTableTitle: 'Estimated cost by usage scenario',
+    seoDescription: 'Compare Cohere and OpenAI API token costs with source-backed pricing and workload estimates.',
+    seoTitle: 'Cohere vs OpenAI API Cost - Token Price Comparison',
+    shortDescription: 'Cohere and OpenAI token costs compared for model spend planning.',
+    sourceTitle: 'Pricing sources',
+  },
+  'mistral-vs-cohere-api-cost': {
+    chooseLeft: 'Use Mistral pricing when Mistral Large is the main candidate for generation workloads.',
+    chooseRight: 'Use Cohere pricing when Aya or Command R rows are closer to your multilingual or search workload.',
+    description: 'Compare Mistral and Cohere API token costs without mixing in currency conversion or request add-ons.',
+    h1: 'Mistral vs Cohere API Cost',
+    intro: 'This page compares listed USD text token prices for Mistral and Cohere models.',
+    pricingTableTitle: 'Mistral and Cohere token prices',
+    scenarioTableTitle: 'Estimated cost by usage scenario',
+    seoDescription: 'Compare Mistral and Cohere API token costs with current source-backed USD pricing rows.',
+    seoTitle: 'Mistral vs Cohere API Cost - Token Price Comparison',
+    shortDescription: 'Mistral and Cohere token prices compared for API planning.',
+    sourceTitle: 'Pricing sources',
+  },
+  'qwen-vs-kimi-token-cost': {
+    chooseLeft: 'Use Qwen pricing when Alibaba Cloud Model Studio and CNY billing are the planning baseline.',
+    chooseRight: 'Use Kimi pricing when Moonshot Kimi coding or high-speed rows are being evaluated in CNY.',
+    description: 'Compare Qwen and Kimi token costs using CNY pricing rows from their official pricing pages.',
+    h1: 'Qwen vs Kimi Token Cost',
+    intro: 'This page compares CNY token prices for Qwen and Kimi models and does not convert to USD.',
+    pricingTableTitle: 'Qwen and Kimi token prices',
+    scenarioTableTitle: 'Estimated cost by usage scenario',
+    seoDescription: 'Compare Qwen and Kimi token costs with source-backed CNY pricing rows and usage estimates.',
+    seoTitle: 'Qwen vs Kimi Token Cost - CNY Model Price Comparison',
+    shortDescription: 'Qwen and Kimi CNY token prices side by side for China-market API budgeting.',
+    sourceTitle: 'Pricing sources',
+  },
 };
 
 const chineseComparisonCopy: LocalizedComparisonCopy = {
@@ -404,6 +490,58 @@ const chineseComparisonCopy: LocalizedComparisonCopy = {
     shortDescription: '用于 API 规划的 Perplexity Sonar 与 OpenAI token 成本对比。',
     sourceTitle: '价格来源',
   },
+  'mistral-vs-openai-api-cost': {
+    chooseLeft: '如果 Mistral Large 是候选模型，或项目偏向欧洲部署和开放模型生态，可以查看 Mistral 价格。',
+    chooseRight: '如果更看重 GPT 系列覆盖和 OpenAI 平台兼容性，可以查看 OpenAI 价格。',
+    description: '用带来源的价格行和场景估算，对比 Mistral 与 OpenAI API token 成本。',
+    h1: 'Mistral 和 OpenAI API 成本对比',
+    intro: '本页比较 Mistral Large token 标价与 OpenAI GPT token 价格行。',
+    pricingTableTitle: 'Mistral 与 OpenAI Token 价格',
+    scenarioTableTitle: '按使用场景估算成本',
+    seoDescription: '基于当前带来源的输入、输出价格，对比 Mistral 与 OpenAI API token 成本。',
+    seoTitle: 'Mistral 和 OpenAI API 成本对比 - Token 价格比较',
+    shortDescription: '并排查看 Mistral 与 OpenAI 的 API token 预算。',
+    sourceTitle: '价格来源',
+  },
+  'cohere-vs-openai-api-cost': {
+    chooseLeft: '如果 Aya 或 Command R 更接近多语言、企业检索或知识库场景，可以查看 Cohere 价格。',
+    chooseRight: '如果 GPT 模型是助手和代码工作负载基准，可以查看 OpenAI 价格。',
+    description: '对比 Cohere 与 OpenAI API token 成本，覆盖多语言和通用 AI 应用规划。',
+    h1: 'Cohere 和 OpenAI API 成本对比',
+    intro: '本页比较 Cohere API token 价格行与 OpenAI GPT token 价格行。',
+    pricingTableTitle: 'Cohere 与 OpenAI Token 价格',
+    scenarioTableTitle: '按使用场景估算成本',
+    seoDescription: '用带来源的价格和工作负载估算，对比 Cohere 与 OpenAI API token 成本。',
+    seoTitle: 'Cohere 和 OpenAI API 成本对比 - Token 价格比较',
+    shortDescription: '面向模型支出规划的 Cohere 与 OpenAI token 成本对比。',
+    sourceTitle: '价格来源',
+  },
+  'mistral-vs-cohere-api-cost': {
+    chooseLeft: '如果 Mistral Large 是主要生成模型候选，可以先查看 Mistral 价格。',
+    chooseRight: '如果 Aya 或 Command R 更贴近多语言或检索工作流，可以查看 Cohere 价格。',
+    description: '在不混入汇率换算或请求附加费的前提下，对比 Mistral 与 Cohere API token 成本。',
+    h1: 'Mistral 和 Cohere API 成本对比',
+    intro: '本页比较 Mistral 与 Cohere 模型的 USD 文本 token 标价。',
+    pricingTableTitle: 'Mistral 与 Cohere Token 价格',
+    scenarioTableTitle: '按使用场景估算成本',
+    seoDescription: '基于当前带来源的 USD 价格行，对比 Mistral 与 Cohere API token 成本。',
+    seoTitle: 'Mistral 和 Cohere API 成本对比 - Token 价格比较',
+    shortDescription: '面向 API 规划的 Mistral 与 Cohere token 价格对比。',
+    sourceTitle: '价格来源',
+  },
+  'qwen-vs-kimi-token-cost': {
+    chooseLeft: '如果阿里云百炼和人民币计费是预算基准，可以查看 Qwen 价格。',
+    chooseRight: '如果评估 Kimi 代码模型或高速行，可以查看 Kimi 的人民币价格。',
+    description: '使用官方人民币价格行，对比 Qwen 与 Kimi token 成本。',
+    h1: 'Qwen 和 Kimi Token 成本对比',
+    intro: '本页比较 Qwen 与 Kimi 模型的人民币 token 标价，不进行美元换算。',
+    pricingTableTitle: 'Qwen 与 Kimi Token 价格',
+    scenarioTableTitle: '按使用场景估算成本',
+    seoDescription: '基于带来源的人民币价格行和使用量估算，对比 Qwen 与 Kimi token 成本。',
+    seoTitle: 'Qwen 和 Kimi Token 成本对比 - 人民币模型价格比较',
+    shortDescription: '面向中国市场 API 预算的 Qwen 与 Kimi 人民币 token 成本对比。',
+    sourceTitle: '价格来源',
+  },
 };
 
 const comparisonCopyByLocale: Record<AiModelComparisonLocale, LocalizedComparisonCopy> = {
@@ -439,8 +577,8 @@ function getLocalizedScenarioDefinitions(locale: AiModelComparisonLocale): AiMod
   return [...scenarioDefinitions];
 }
 
-function resolveProviderModels(provider: string): AiModelPricing[] {
-  return AI_MODEL_PRICING.filter((model) => model.provider === provider && model.currency === 'USD');
+function resolveProviderModels(provider: string, currency: AiPricingCurrency): AiModelPricing[] {
+  return AI_MODEL_PRICING.filter((model) => model.provider === provider && model.currency === currency);
 }
 
 function buildScenarioResults(
@@ -522,8 +660,9 @@ export function getAiModelComparison(locale: Locale, slug: string): AiModelCompa
     return null;
   }
 
-  const leftModels = resolveProviderModels(definition.leftProvider);
-  const rightModels = resolveProviderModels(definition.rightProvider);
+  const comparisonCurrency = definition.currency ?? 'USD';
+  const leftModels = resolveProviderModels(definition.leftProvider, comparisonCurrency);
+  const rightModels = resolveProviderModels(definition.rightProvider, comparisonCurrency);
   if (leftModels.length === 0 || rightModels.length === 0) {
     return null;
   }

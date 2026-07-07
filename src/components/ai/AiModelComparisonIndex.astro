@@ -18,12 +18,14 @@ const toolHref = getLocalizedPath(locale, '/tools/ai-token-calculator');
 const indexHref = getLocalizedPath(locale, aiModelComparisonIndexPath);
 const aiDirectoryHref = getAiToolsDirectoryHref(locale);
 const aiDirectoryLabel = getAiToolsDirectoryLabel(locale);
+const eyebrowLabel = locale === 'zh' ? 'AI 模型价格' : 'AI model pricing';
+const comparisonCountLabel = locale === 'zh' ? `${comparisons.length} 个对比` : `${comparisons.length} comparisons`;
 ---
 
 <section data-discovery-surface="ai-model-cost-comparisons" class="space-y-8">
   <div class="border-b border-slate-200/70 pb-8 dark:border-white/10">
     <p class="mb-3 text-[10px] font-black uppercase tracking-[0.3em] text-sky-600/80 dark:text-sky-400/70">
-      AI model pricing
+      {eyebrowLabel}
     </p>
     <h1 class="max-w-5xl text-4xl font-black leading-tight tracking-tight text-slate-950 dark:text-white md:text-6xl">
       {copy.h1}
@@ -43,7 +45,7 @@ const aiDirectoryLabel = getAiToolsDirectoryLabel(locale);
         aria-current="page"
         class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-xs font-black uppercase tracking-[0.16em] text-slate-700 dark:border-white/10 dark:text-slate-200"
       >
-        {comparisons.length} comparisons
+        {comparisonCountLabel}
       </a>
       <a
         href={aiDirectoryHref}
