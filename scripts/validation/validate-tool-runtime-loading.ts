@@ -21,11 +21,31 @@ interface RuntimeLoadingOptions {
   jsonOut?: string;
   locales: Locale[];
   minControls: number;
+  retryDelayMs: number;
+  retryFailedAttempts: number;
   scope: RuntimeScope;
   slugs?: string[];
 }
 
+interface ToolRuntimeAttempt {
+  attempt: number;
+  badNetworkResponses: string[];
+  consoleErrors: string[];
+  controls: number;
+  failed: boolean;
+  failureReasons: string[];
+  hasFailedToolText: boolean;
+  hasStuckLoadingText: boolean;
+  httpStatus: number;
+  islandText: string;
+  pageErrors: string[];
+  parentRect: { bottom: number; height: number; top: number } | null;
+  url: string;
+  weakLoad: boolean;
+}
+
 interface ToolRuntimeResult {
+  attempts: ToolRuntimeAttempt[];
   badNetworkResponses: string[];
   buttonCount: number;
   canvasCount: number;
@@ -42,6 +62,7 @@ interface ToolRuntimeResult {
   pageErrors: string[];
   parentRect: { bottom: number; height: number; top: number } | null;
   path: string;
+  recoveredAfterRetry: boolean;
   selectCount: number;
   slug: string;
   url: string;
@@ -62,6 +83,8 @@ interface ToolRuntimeReport {
     hydrationTimeoutMs: number;
     locales: Locale[];
     minControls: number;
+    retryDelayMs: number;
+    retryFailedAttempts: number;
     scope: RuntimeScope;
     slugs: string[];
   };
@@ -73,6 +96,8 @@ interface ToolRuntimeReport {
 const DEFAULT_BASE_URL = process.env.PROD_BASE_URL || process.env.BASE_URL || 'http://127.0.0.1:4321';
 const DEFAULT_HYDRATION_TIMEOUT_MS = 12_000;
 const DEFAULT_MIN_CONTROLS = 1;
+const DEFAULT_RETRY_DELAY_MS = 2_000;
+const DEFAULT_RETRY_FAILED_ATTEMPTS = 1;
 const TOOL_WRAPPER_SELECTOR = 'astro-island[component-url*="ToolWrapper"]';
 const TOOL_CONTROL_SELECTOR = 'input, textarea, select, button, canvas, svg, [contenteditable="true"]';
 const TOOL_FAILURE_TEXT_PATTERN = /Failed to load tool|Tool not found/i;
@@ -107,6 +132,9 @@ Options:
   --concurrency <n>            Number of pages to test at once. Default: 1
   --timeout-ms <n>             Tool hydration wait timeout. Default: ${DEFAULT_HYDRATION_TIMEOUT_MS}
   --min-controls <n>           Controls below this are reported as weak loads. Default: ${DEFAULT_MIN_CONTROLS}
+  --retry-failed-attempts <n>  Retry failed pages this many times. Default: ${DEFAULT_RETRY_FAILED_ATTEMPTS}
+  --retry-delay-ms <n>         Delay before each failed-page retry. Default: ${DEFAULT_RETRY_DELAY_MS}
+  --no-retry                   Disable failed-page retries.
   --fail-on-weak-load          Exit non-zero for weak loads.
   --fail-on-console-error      Exit non-zero for browser console errors.
   --json-out <path>            Write the full report to JSON.
@@ -131,6 +159,14 @@ function parsePositiveInteger(value: string, flag: string): number {
   const parsed = Number.parseInt(value, 10);
   if (!Number.isFinite(parsed) || parsed <= 0) {
     throw new Error(`${flag} must be a positive integer`);
+  }
+  return parsed;
+}
+
+function parseNonNegativeInteger(value: string, flag: string): number {
+  const parsed = Number.parseInt(value, 10);
+  if (!Number.isFinite(parsed) || parsed < 0) {
+    throw new Error(`${flag} must be a non-negative integer`);
   }
   return parsed;
 }
@@ -175,6 +211,8 @@ function parseOptions(argv = process.argv.slice(2)): RuntimeLoadingOptions {
   let hydrationTimeoutMs = DEFAULT_HYDRATION_TIMEOUT_MS;
   let jsonOut: string | undefined;
   let minControls = DEFAULT_MIN_CONTROLS;
+  let retryDelayMs = DEFAULT_RETRY_DELAY_MS;
+  let retryFailedAttempts = DEFAULT_RETRY_FAILED_ATTEMPTS;
   let scope: RuntimeScope = 'smoke';
   let useAllLocales = false;
 
@@ -256,6 +294,23 @@ function parseOptions(argv = process.argv.slice(2)): RuntimeLoadingOptions {
       continue;
     }
 
+    if (arg === '--retry-failed-attempts') {
+      retryFailedAttempts = parseNonNegativeInteger(readArgValue(argv, index, arg), arg);
+      index += 1;
+      continue;
+    }
+
+    if (arg === '--retry-delay-ms') {
+      retryDelayMs = parseNonNegativeInteger(readArgValue(argv, index, arg), arg);
+      index += 1;
+      continue;
+    }
+
+    if (arg === '--no-retry') {
+      retryFailedAttempts = 0;
+      continue;
+    }
+
     if (arg === '--fail-on-weak-load') {
       failOnWeakLoad = true;
       continue;
@@ -285,6 +340,8 @@ function parseOptions(argv = process.argv.slice(2)): RuntimeLoadingOptions {
     jsonOut,
     locales: useAllLocales ? [...locales] : dedupe(selectedLocales.length > 0 ? selectedLocales : (['zh'] satisfies Locale[])),
     minControls,
+    retryDelayMs,
+    retryFailedAttempts,
     scope,
     slugs: selectedSlugs.length > 0 ? dedupe(selectedSlugs) : undefined,
   };
@@ -318,9 +375,9 @@ function getSelectedSlugs(options: RuntimeLoadingOptions): string[] {
   return dedupe(scopedTools.map((tool) => tool.slug));
 }
 
-function buildToolUrl(baseUrl: string, locale: Locale, slug: string): string {
+function buildToolUrl(baseUrl: string, locale: Locale, slug: string, attempt: number): string {
   const url = new URL(`/${locale}/tools/${slug}/`, baseUrl);
-  url.searchParams.set('__u2tool_runtime_probe', `${Date.now()}`);
+  url.searchParams.set('__u2tool_runtime_probe', `${Date.now()}-${attempt}`);
   return url.toString();
 }
 
@@ -418,7 +475,8 @@ async function inspectTool(
   browser: Browser,
   options: RuntimeLoadingOptions,
   locale: Locale,
-  slug: string
+  slug: string,
+  attempt = 1
 ): Promise<ToolRuntimeResult> {
   const page = await browser.newPage();
   await page.setViewport({ width: 1365, height: 900 });
@@ -427,7 +485,7 @@ async function inspectTool(
   const consoleErrors: string[] = [];
   const pageErrors: string[] = [];
   const badNetworkResponses: string[] = [];
-  const url = buildToolUrl(options.baseUrl, locale, slug);
+  const url = buildToolUrl(options.baseUrl, locale, slug, attempt);
   const pathName = `/${locale}/tools/${slug}/`;
   let httpStatus = 0;
 
@@ -465,6 +523,7 @@ async function inspectTool(
     ].filter(Boolean);
 
     return {
+      attempts: [],
       badNetworkResponses,
       buttonCount: metrics.buttonCount,
       canvasCount: metrics.canvasCount,
@@ -481,6 +540,7 @@ async function inspectTool(
       pageErrors,
       parentRect: metrics.parentRect,
       path: pathName,
+      recoveredAfterRetry: false,
       selectCount: metrics.selectCount,
       slug,
       url,
@@ -489,6 +549,7 @@ async function inspectTool(
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     return {
+      attempts: [],
       badNetworkResponses,
       buttonCount: 0,
       canvasCount: 0,
@@ -505,6 +566,7 @@ async function inspectTool(
       pageErrors,
       parentRect: null,
       path: pathName,
+      recoveredAfterRetry: false,
       selectCount: 0,
       slug,
       url,
@@ -513,6 +575,53 @@ async function inspectTool(
   } finally {
     await page.close().catch(() => undefined);
   }
+}
+
+function toAttempt(result: ToolRuntimeResult, attempt: number): ToolRuntimeAttempt {
+  return {
+    attempt,
+    badNetworkResponses: result.badNetworkResponses,
+    consoleErrors: result.consoleErrors,
+    controls: result.controls,
+    failed: result.failed,
+    failureReasons: result.failureReasons,
+    hasFailedToolText: result.hasFailedToolText,
+    hasStuckLoadingText: result.hasStuckLoadingText,
+    httpStatus: result.httpStatus,
+    islandText: result.islandText,
+    pageErrors: result.pageErrors,
+    parentRect: result.parentRect,
+    url: result.url,
+    weakLoad: result.weakLoad,
+  };
+}
+
+async function sleep(ms: number): Promise<void> {
+  if (ms <= 0) return;
+  await new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function inspectToolWithRetry(
+  browser: Browser,
+  options: RuntimeLoadingOptions,
+  locale: Locale,
+  slug: string
+): Promise<ToolRuntimeResult> {
+  const attempts: ToolRuntimeAttempt[] = [];
+  let result = await inspectTool(browser, options, locale, slug, 1);
+  attempts.push(toAttempt(result, 1));
+
+  for (let retryIndex = 1; result.failed && retryIndex <= options.retryFailedAttempts; retryIndex += 1) {
+    await sleep(options.retryDelayMs);
+    result = await inspectTool(browser, options, locale, slug, retryIndex + 1);
+    attempts.push(toAttempt(result, retryIndex + 1));
+  }
+
+  return {
+    ...result,
+    attempts,
+    recoveredAfterRetry: attempts.length > 1 && !result.failed,
+  };
 }
 
 async function runQueue<T>(
@@ -548,13 +657,13 @@ export async function runToolRuntimeLoadingValidation(
 
   try {
     await runQueue(probes, options.concurrency, async (probe) => {
-      const result = await inspectTool(browser, options, probe.locale, probe.slug);
+      const result = await inspectToolWithRetry(browser, options, probe.locale, probe.slug);
       results.push(result);
       completed += 1;
 
-      const status = result.failed ? 'FAIL' : result.weakLoad ? 'WEAK' : 'OK';
+      const status = result.failed ? 'FAIL' : result.recoveredAfterRetry ? 'OK_AFTER_RETRY' : result.weakLoad ? 'WEAK' : 'OK';
       console.log(
-        `${status.padEnd(4)} ${result.locale}/${result.slug} controls=${result.controls} status=${result.httpStatus}`
+        `${status.padEnd(14)} ${result.locale}/${result.slug} controls=${result.controls} status=${result.httpStatus} attempts=${result.attempts.length}`
       );
 
       if (completed % 25 === 0 || completed === probes.length) {
@@ -585,6 +694,8 @@ export async function runToolRuntimeLoadingValidation(
       hydrationTimeoutMs: options.hydrationTimeoutMs,
       locales: options.locales,
       minControls: options.minControls,
+      retryDelayMs: options.retryDelayMs,
+      retryFailedAttempts: options.retryFailedAttempts,
       scope: options.scope,
       slugs: selectedSlugs,
     },
