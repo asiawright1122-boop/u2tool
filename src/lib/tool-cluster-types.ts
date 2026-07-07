@@ -49,6 +49,12 @@ export interface ToolClusterCopy {
   };
 }
 
+/** Minimal copy needed by per-tool cluster cards. */
+export interface ToolClusterCardCopy {
+  ctaLabel: string;
+  eyebrow: string;
+}
+
 /** A group definition mapping a group ID to its member slugs. */
 export interface ToolClusterGroupDef<GroupId extends string> {
   id: GroupId;
@@ -69,8 +75,8 @@ export interface ToolClusterBlock {
   group: ToolClusterGroup | null;
   /** URL path to the cluster's hub page (e.g. `/tools/security-tools`). */
   clusterPath: string;
-  /** Locale-aware copy bundle for the cluster hub. */
-  copy: ToolClusterCopy;
+  /** Locale-aware labels used by the per-tool cluster card. */
+  copy: ToolClusterCardCopy;
   /** Visual theme for the card component. */
   theme: ClusterColorTheme;
   /** Short data-attribute prefix for analytics/tracking (e.g. `'security'`). */

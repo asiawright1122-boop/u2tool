@@ -38,6 +38,18 @@ describe('related tools recovery ordering', () => {
     expect(relatedSlugs[0]).toBe('merge-conflict-resolver');
   });
 
+  it('prioritizes same-workflow AI tools on AI tool pages', () => {
+    const relatedSlugs = getRelatedToolsForTool(mustGetTool('ai-prompt-template-generator')).map((tool) => tool.slug);
+
+    expect(relatedSlugs).not.toContain('ai-prompt-template-generator');
+    expect(relatedSlugs.slice(0, 4)).toEqual([
+      'ai-prompt-generator',
+      'ai-prompt-optimizer',
+      'midjourney-prompt-generator',
+      'stable-diffusion-prompt-generator',
+    ]);
+  });
+
   it('promotes network, image, and calculator content-refresh pages without crossing category boundaries', () => {
     const networkRelatedSlugs = getRelatedToolsForTool(mustGetTool('dns-lookup')).map((tool) => tool.slug);
     const imageRelatedSlugs = getRelatedToolsForTool(mustGetTool('image-compressor')).map((tool) => tool.slug);

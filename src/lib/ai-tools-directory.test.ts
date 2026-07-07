@@ -3,8 +3,10 @@ import { tools } from '@/config/tools';
 import {
   AI_TOOLS_DIRECTORY_TOOL_SLUGS,
   buildAiToolsDirectory,
+  buildAiToolsDirectoryClusterForTool,
   buildAiToolsDirectoryItemList,
   getAiToolsDirectoryCopy,
+  getAiToolsDirectoryRelatedSlugs,
   isAiToolsDirectoryToolSlug,
 } from './ai-tools-directory';
 
@@ -112,6 +114,43 @@ describe('AI tools directory', () => {
       'llms-txt-generator',
     ]);
     expect(crawlerCluster?.tools.every((tool) => tool.href.startsWith('/zh/tools/'))).toBe(true);
+  });
+
+  it('resolves the AI workflow cluster for a specific tool detail page', () => {
+    const cluster = buildAiToolsDirectoryClusterForTool(
+      'en',
+      'ai-prompt-template-generator',
+      categoryNames,
+      toolNames,
+      toolDescriptions
+    );
+
+    expect(cluster?.id).toBe('prompt-builders');
+    expect(cluster?.tools.map((tool) => tool.slug)).toEqual([
+      'ai-prompt-generator',
+      'ai-prompt-optimizer',
+      'ai-prompt-template-generator',
+      'midjourney-prompt-generator',
+      'stable-diffusion-prompt-generator',
+    ]);
+    expect(
+      buildAiToolsDirectoryClusterForTool('en', 'json-formatter', categoryNames, toolNames, toolDescriptions)
+    ).toBeNull();
+  });
+
+  it('returns same-workflow AI related slugs before the broader AI directory', () => {
+    expect(getAiToolsDirectoryRelatedSlugs('ai-prompt-template-generator', 4)).toEqual([
+      'ai-prompt-generator',
+      'ai-prompt-optimizer',
+      'midjourney-prompt-generator',
+      'stable-diffusion-prompt-generator',
+    ]);
+    expect(getAiToolsDirectoryRelatedSlugs('ai-token-calculator', 3)).toEqual([
+      'ai-prompt-generator',
+      'ai-prompt-optimizer',
+      'ai-prompt-template-generator',
+    ]);
+    expect(getAiToolsDirectoryRelatedSlugs('json-formatter', 3)).toEqual([]);
   });
 
   it('returns Chinese copy and English fallback copy for directory-only labels', () => {

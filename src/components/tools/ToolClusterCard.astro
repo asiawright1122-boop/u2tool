@@ -1,10 +1,10 @@
 ---
 import { getIconSvg } from '@/lib/icon-svg';
-import type { ToolClusterCopy, ToolClusterGroup, ClusterColorTheme } from '@/lib/tool-cluster-types';
+import type { ToolClusterCardCopy, ToolClusterGroup, ClusterColorTheme } from '@/lib/tool-cluster-types';
 
 interface Props {
   clusterHref: string;
-  copy: ToolClusterCopy;
+  copy: ToolClusterCardCopy;
   currentSlug: string;
   group: ToolClusterGroup;
   /** Kebab-case identifier used in `data-tool-cluster` and `data-sibling-tool` attributes. */

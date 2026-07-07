@@ -300,8 +300,49 @@ export function buildAiToolsDirectory(
   }).filter((cluster) => cluster.tools.length > 0);
 }
 
+export function buildAiToolsDirectoryClusterForTool(
+  locale: Locale,
+  slug: string,
+  categoryNames: Record<string, string>,
+  toolNames: Record<string, string>,
+  toolDescriptions: Record<string, string>,
+  availableTools: Tool[] = tools
+): AiToolsDirectoryCluster | null {
+  return buildAiToolsDirectory(locale, categoryNames, toolNames, toolDescriptions, availableTools)
+    .find((cluster) => cluster.tools.some((tool) => tool.slug === slug)) ?? null;
+}
+
 export function isAiToolsDirectoryToolSlug(slug: string): boolean {
   return AI_TOOLS_DIRECTORY_TOOL_SLUG_SET.has(slug);
+}
+
+export function getAiToolsDirectoryRelatedSlugs(slug: string, maxCount = 6): string[] {
+  if (maxCount <= 0 || !isAiToolsDirectoryToolSlug(slug)) {
+    return [];
+  }
+
+  const currentDefinition = AI_TOOLS_DIRECTORY_DEFINITIONS.find((definition) =>
+    definition.slugs.includes(slug)
+  );
+  const orderedCandidates = [
+    ...(currentDefinition?.slugs ?? []),
+    ...AI_TOOLS_DIRECTORY_DEFINITIONS.flatMap((definition) => definition.slugs),
+  ];
+  const seenSlugs = new Set([slug]);
+  const relatedSlugs: string[] = [];
+
+  for (const candidateSlug of orderedCandidates) {
+    if (relatedSlugs.length >= maxCount) {
+      break;
+    }
+
+    if (!seenSlugs.has(candidateSlug) && isAiToolsDirectoryToolSlug(candidateSlug)) {
+      relatedSlugs.push(candidateSlug);
+      seenSlugs.add(candidateSlug);
+    }
+  }
+
+  return relatedSlugs;
 }
 
 export function buildAiToolsDirectoryItemList(

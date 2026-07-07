@@ -35,7 +35,7 @@ import RelatedTools from '@/components/tools/RelatedTools.astro';
 import ToolFAQ from '@/components/tools/ToolFAQ.astro';
 import AiTokenCalculatorSeoContent from '@/components/tools/AiTokenCalculatorSeoContent.astro';
 
-// --- Cluster (order matches CLUSTER_BLOCKS array below: creatorSeo → developerData → image → onlineCalculator → pdfDocument → security → textWriting → chart) ---
+// --- Cluster (order matches CLUSTER_BLOCKS array below) ---
 import ToolClusterCard from '@/components/tools/ToolClusterCard.astro';
 import type { ToolClusterBlock } from '@/lib/tool-cluster-types';
 
@@ -56,8 +56,16 @@ import { buildSafeFallbackSupportContent } from '@/lib/support-content-fallback'
 import { buildToolWrapperTranslations } from '@/lib/tool-page-translations';
 import { findComparisonGuideForTool, getComparisonUiCopy } from '@/lib/comparison-surfaces';
 import { getRelatedToolsForTool } from '@/lib/related-tools';
-import { isAiToolsDirectoryToolSlug } from '@/lib/ai-tools-directory';
-import { getAiToolsDirectoryHref, getAiToolsDirectoryLabel } from '@/lib/ai-tools-navigation';
+import {
+  buildAiToolsDirectoryClusterForTool,
+  getAiToolsDirectoryCopy,
+  isAiToolsDirectoryToolSlug,
+} from '@/lib/ai-tools-directory';
+import {
+  AI_TOOLS_DIRECTORY_PATH,
+  getAiToolsDirectoryHref,
+  getAiToolsDirectoryLabel,
+} from '@/lib/ai-tools-navigation';
 import {
   buildChartToolClusterGroupForTool,
   chartToolClusterPath,
@@ -133,6 +141,11 @@ const mobileNavMessages = buildMobileNavMessages(navMessages);
 const comparisonUiCopy = getComparisonUiCopy(locale);
 const aiToolsHref = getAiToolsDirectoryHref(locale);
 const aiToolsLabel = getAiToolsDirectoryLabel(locale);
+const aiToolsDirectoryCopy = getAiToolsDirectoryCopy(locale);
+const aiToolsClusterCopy = {
+  ctaLabel: aiToolsLabel,
+  eyebrow: aiToolsDirectoryCopy.eyebrow,
+};
 const isAiDirectoryTool = isAiToolsDirectoryToolSlug(tool.slug);
 
 // ---------------------------------------------------------------------------
@@ -388,6 +401,13 @@ const comparisonGuide = findComparisonGuideForTool(
 // renders every block.
 // ---------------------------------------------------------------------------
 const CLUSTER_BLOCKS: ToolClusterBlock[] = [
+  {
+    group: buildAiToolsDirectoryClusterForTool(locale, tool.slug, categoryMessages, allToolNames, allToolDescriptions),
+    clusterPath: AI_TOOLS_DIRECTORY_PATH,
+    copy: aiToolsClusterCopy,
+    theme: 'sky',
+    dataPrefix: 'ai-tools-directory',
+  },
   {
     group: buildCreatorSeoClusterGroupForTool(locale, tool.slug, categoryMessages, allToolNames, allToolDescriptions),
     clusterPath: creatorSeoClusterPath,

@@ -34,6 +34,14 @@ import {
 } from '@/lib/chart-tool-cluster';
 import { buildComparisonGuides, getComparisonUiCopy } from '@/lib/comparison-surfaces';
 import {
+  buildAiToolsDirectory,
+  getAiToolsDirectoryCopy,
+} from '@/lib/ai-tools-directory';
+import {
+  AI_TOOLS_DIRECTORY_PATH,
+  getAiToolsDirectoryLabel,
+} from '@/lib/ai-tools-navigation';
+import {
   buildCreatorSeoClusterGroups,
   creatorSeoClusterPath,
   getCreatorSeoClusterCopy,
@@ -147,6 +155,14 @@ const comparisonGuides = buildComparisonGuides(
   toolNames,
   toolDescriptions
 ).slice(0, 3);
+const aiToolsDirectoryCopy = getAiToolsDirectoryCopy(locale);
+const aiToolsDirectoryLabel = getAiToolsDirectoryLabel(locale);
+const aiToolsDirectoryGroups = buildAiToolsDirectory(
+  locale,
+  categoryMessages,
+  toolNames,
+  toolDescriptions
+);
 const creatorSeoCopy = getCreatorSeoClusterCopy(locale);
 const creatorSeoGroups = buildCreatorSeoClusterGroups(
   locale,
@@ -331,6 +347,21 @@ const chartToolGroups = buildChartToolClusterGroups(
           description={(homeMessages.recentToolsDesc as string) || ''}
           ctaLabel={(heroMessages.tryTool as string) || 'Try'}
           tools={recentLaunchTools}
+        />
+
+        <ToolClusterSection
+          compact
+          theme="sky"
+          dataPrefix="ai-tools-directory-cluster"
+          gridCols={3}
+          toolLimit={6}
+          eyebrow={aiToolsDirectoryCopy.eyebrow}
+          title={aiToolsDirectoryCopy.h1}
+          description={aiToolsDirectoryCopy.description}
+          ctaLabel={aiToolsDirectoryLabel}
+          href={buildLocalizedPagePath(locale, AI_TOOLS_DIRECTORY_PATH)}
+          groups={aiToolsDirectoryGroups}
+          toolCountLabel={aiToolsDirectoryCopy.toolCountLabel}
         />
 
         <ToolClusterSection

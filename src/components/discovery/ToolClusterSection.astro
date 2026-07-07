@@ -25,6 +25,10 @@ interface Props {
    * Clusters with only 3 groups (creator-seo) pass 3.
    */
   gridCols?: 3 | 4;
+  /**
+   * Optional per-group tool display cap. Defaults to 4 in compact mode and 6 otherwise.
+   */
+  toolLimit?: number;
 }
 
 const {
@@ -39,9 +43,10 @@ const {
   theme,
   dataPrefix,
   gridCols = 4,
+  toolLimit: explicitToolLimit,
 } = Astro.props as Props;
 
-const toolLimit = compact ? 4 : 6;
+const toolLimit = explicitToolLimit ?? (compact ? 4 : 6);
 const toolCount = groups.reduce((count, group) => count + group.tools.length, 0);
 const gridClass = gridCols === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-4';
 

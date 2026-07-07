@@ -1,4 +1,5 @@
-import { getPopularTools, getToolsByCategory, tools, type Tool, type ToolCategory } from '@/config/tools';
+import { getPopularTools, getToolBySlug, getToolsByCategory, tools, type Tool, type ToolCategory } from '@/config/tools';
+import { getAiToolsDirectoryRelatedSlugs, isAiToolsDirectoryToolSlug } from './ai-tools-directory';
 
 export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
   charts: ['venn-diagram-generator'],
@@ -34,6 +35,36 @@ function sortSameCategoryRecoveryTools(currentTool: Tool, candidates: Tool[]): T
 }
 
 export function getRelatedToolsForTool(currentTool: Tool, maxCount = 6): Tool[] {
+  if (maxCount <= 0) {
+    return [];
+  }
+
+  if (isAiToolsDirectoryToolSlug(currentTool.slug)) {
+    const aiRelatedTools = getAiToolsDirectoryRelatedSlugs(currentTool.slug, maxCount)
+      .map((slug) => getToolBySlug(slug))
+      .filter((tool): tool is Tool => Boolean(tool));
+
+    if (aiRelatedTools.length >= maxCount) {
+      return aiRelatedTools.slice(0, maxCount);
+    }
+
+    const result = [...aiRelatedTools];
+    const usedSlugs = new Set([currentTool.slug, ...result.map((tool) => tool.slug)]);
+
+    for (const popularTool of getPopularTools()) {
+      if (result.length >= maxCount) {
+        break;
+      }
+
+      if (!usedSlugs.has(popularTool.slug)) {
+        result.push(popularTool);
+        usedSlugs.add(popularTool.slug);
+      }
+    }
+
+    return result.slice(0, maxCount);
+  }
+
   const sameCategoryTools = sortSameCategoryRecoveryTools(
     currentTool,
     getToolsByCategory(currentTool.category).filter((tool) => tool.slug !== currentTool.slug)
