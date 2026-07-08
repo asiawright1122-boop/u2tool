@@ -3,6 +3,7 @@ import {
   META_DESCRIPTION_MAX_LENGTH,
   META_DESCRIPTION_MIN_LENGTH,
   buildWebsiteSearchUrlTemplate,
+  buildCanonicalUrl,
   getCategoryPageSeo,
   getHomePageSeo,
   getHreflang,
@@ -186,6 +187,27 @@ describe('seo helpers', () => {
   it('builds a valid search action URL template', () => {
     expect(buildWebsiteSearchUrlTemplate('https://www.u2tool.com', 'en'))
       .toBe('https://www.u2tool.com/en/tools/?q={search_term_string}');
+  });
+
+  it('builds canonical URLs without request query strings or hashes', () => {
+    const canonical = buildCanonicalUrl({
+      baseUrl: 'https://www.u2tool.com/',
+      locale: 'zh',
+      requestUrl: 'https://www.u2tool.com/zh/ai/rag-tools/?utm_source=test#pricing',
+      canonicalPath: '/ai/rag-tools',
+    });
+
+    expect(canonical).toBe('https://www.u2tool.com/zh/ai/rag-tools/');
+  });
+
+  it('derives canonical paths from localized request pathnames when no override is provided', () => {
+    const canonical = buildCanonicalUrl({
+      baseUrl: 'https://www.u2tool.com',
+      locale: 'en',
+      requestUrl: new URL('https://www.u2tool.com/en/tools/?q=json'),
+    });
+
+    expect(canonical).toBe('https://www.u2tool.com/en/tools/');
   });
 
   it('returns shared hreflang mappings', () => {

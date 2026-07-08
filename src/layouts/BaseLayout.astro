@@ -16,7 +16,7 @@ import { isRTL, locales } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { tools } from '@/config/tools';
 import {
-  buildLocalizedPageUrl,
+  buildCanonicalUrl,
   buildOrganizationSchema,
   buildWebsiteSchema,
   resolveMetaDescription,
@@ -60,15 +60,12 @@ const safeDescription = resolveMetaDescription({
 const BASE_URL = getPublicSiteUrl();
 
 const pathWithoutLocale = canonicalPath || Astro.url.pathname.replace(new RegExp(`^/${locale}`), '') || '/';
-
-const isNoIndex = robots.includes('noindex');
-let canonical: string;
-
-if (isNoIndex) {
-  canonical = BASE_URL.replace(/\/+$/, '') + Astro.url.pathname + Astro.url.search;
-} else {
-  canonical = buildLocalizedPageUrl(BASE_URL, locale as Locale, pathWithoutLocale);
-}
+const canonical = buildCanonicalUrl({
+  baseUrl: BASE_URL,
+  locale: locale as Locale,
+  requestUrl: Astro.url,
+  canonicalPath,
+});
 
 const isRtl = isRTL(locale as Locale);
 

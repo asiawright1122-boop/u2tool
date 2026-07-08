@@ -12,6 +12,13 @@ export interface MetaDescriptionInput {
   title?: string;
 }
 
+export interface CanonicalUrlInput {
+  baseUrl: string;
+  locale: Locale;
+  requestUrl: URL | string;
+  canonicalPath?: string;
+}
+
 export const META_DESCRIPTION_MIN_LENGTH = 150;
 export const META_DESCRIPTION_MAX_LENGTH = 180;
 
@@ -253,6 +260,25 @@ export function buildLocalizedPagePath(locale: Locale, path = '/'): string {
 
 export function buildLocalizedPageUrl(baseUrl: string, locale: Locale, path = '/'): string {
   return withPageUrlTrailingSlash(`${baseUrl}${buildLocalizedPagePath(locale, path)}`);
+}
+
+export function buildCanonicalUrl({
+  baseUrl,
+  locale,
+  requestUrl,
+  canonicalPath,
+}: CanonicalUrlInput): string {
+  const normalizedBaseUrl = baseUrl.replace(/\/+$/, '');
+  const url = typeof requestUrl === 'string'
+    ? new URL(requestUrl, normalizedBaseUrl)
+    : requestUrl;
+  const normalizedCanonicalPath = canonicalPath
+    ? new URL(canonicalPath, normalizedBaseUrl).pathname
+    : undefined;
+  const requestPathWithoutLocale = url.pathname.replace(new RegExp(`^/${locale}(?=/|$)`), '') || '/';
+  const pathWithoutLocale = normalizedCanonicalPath ?? requestPathWithoutLocale;
+
+  return buildLocalizedPageUrl(normalizedBaseUrl, locale, pathWithoutLocale);
 }
 
 export function buildSiteDescription(toolCount: number): string {
