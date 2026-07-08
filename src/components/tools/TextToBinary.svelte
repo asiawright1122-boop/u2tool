@@ -102,7 +102,7 @@
             class="w-full h-40 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded p-3 font-mono text-sm text-gray-900 dark:text-white"
             placeholder={t('textBinary.textPlaceholder')}
             readOnly={mode === 'toText'}
-          />
+          ></textarea>
         </div>
         <div>
           <div class="flex justify-between items-center mb-1">
@@ -119,7 +119,7 @@
             class="w-full h-40 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded p-3 font-mono text-sm text-green-600 dark:text-green-400"
             placeholder={t('textBinary.binaryPlaceholder')}
             readOnly={mode === 'toBinary'}
-          />
+          ></textarea>
         </div>
       </div>
     </div>

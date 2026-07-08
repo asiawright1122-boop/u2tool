@@ -250,7 +250,7 @@
                 config.primaryColor === color ? 'border-gray-900 dark:border-white' : 'border-transparent'
               }`}
               style="background-color: {color}"
-            />
+            ></button>
 {/each}
           <input
             type="color"

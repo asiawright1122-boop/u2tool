@@ -157,7 +157,7 @@
           oninput={(e) => inputText = (e.currentTarget as HTMLTextAreaElement).value.toUpperCase()}
           class="w-full h-24 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono resize-none"
           placeholder={mode === 'encode' ? 'HELLO WORLD' : '.... . .-.. .-.. ---'}
-        />
+        ></textarea>
       </div>
 
       <div class="grid grid-cols-2 gap-4">

@@ -130,7 +130,7 @@
         disabled={isFinished}
         class="w-full h-24 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono resize-none"
         placeholder={t('startTyping')}
-      />
+      ></textarea>
 
       <button
         onclick={startTest}

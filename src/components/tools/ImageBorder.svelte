@@ -115,7 +115,7 @@
                   onclick={() => borderColor = color}
                   class={`w-8 h-8 rounded border-2 ${borderColor === color ? 'border-amber-500' : 'border-gray-300'}`}
                   style="background-color: {color}"
-                />
+                ></button>
 {/each}
             </div>
             <div class="flex gap-2">

@@ -81,7 +81,7 @@
                     <div class="w-32 text-sm font-mono text-gray-700 dark:text-gray-300">{op.name}</div>
                     <div class="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-4 overflow-hidden">
                       <div class={`h-full ${op.percentage > 30 ? 'bg-red-500' : op.percentage > 15 ? 'bg-yellow-500' : 'bg-green-500'}`}
-                        style="width: {Math.max(op.percentage, 2)}%" />
+                        style="width: {Math.max(op.percentage, 2)}%" ></div>
                     </div>
                     <div class="w-16 text-right text-sm text-gray-500">{op.time}ms</div>
                     <div class="w-12 text-right text-xs text-gray-400">×{op.calls}</div>

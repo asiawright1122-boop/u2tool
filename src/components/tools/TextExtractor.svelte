@@ -243,7 +243,7 @@
         <div class="font-medium mb-1">{t('extractor.supportedTypes')}</div>
         <ul class="list-disc list-inside space-y-1">
           <li><strong>{t('extractor.email')}</strong>: user@example.com</li>
-          <li><strong>{t('extractor.url')}</strong>: https:
+          <li><strong>{t('extractor.url')}</strong>: https://example.com</li>
           <li><strong>{t('extractor.phone')}</strong>: +86 138-1234-5678</li>
           <li><strong>{t('extractor.ip')}</strong>: 192.168.1.1</li>
           <li><strong>{t('extractor.number')}</strong>: 123, -45.67</li>

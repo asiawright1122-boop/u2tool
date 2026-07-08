@@ -102,7 +102,7 @@ features:
           }}
           placeholder={t('placeholder')}
           class="w-full h-80 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm"
-        />
+        ></textarea>
       </div>
 
       <div class="flex gap-4 flex-wrap">

@@ -78,7 +78,7 @@
       <div class="grid md:grid-cols-2 gap-4">
         <div>
           <label for="html-minifier-input" class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-200">{t('input')}</label>
-          <textarea id="html-minifier-input" name="inputValue" bind:value={input} class="w-full h-64 p-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-gray-100" placeholder="<html>..." />
+          <textarea id="html-minifier-input" name="inputValue" bind:value={input} class="w-full h-64 p-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-gray-100" placeholder="<html>..." ></textarea>
         </div>
         <div>
           <label for="html-minifier-output" class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-200">{t('output')}</label>

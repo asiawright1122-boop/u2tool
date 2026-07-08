@@ -91,7 +91,7 @@
               onclick={() => color = c}
               class={`w-8 h-8 rounded-full border-2 ${color === c ? 'border-white' : 'border-transparent'}`}
               style="background-color: {c}"
-            />
+            ></button>
 {/each}
           <input type="color" bind:value={color} class="w-8 h-8 rounded cursor-pointer" />
         </div>

@@ -139,7 +139,7 @@
           onchange={(e) => handleJsonChange(e.target.value)}
           placeholder={t('jsonToExcel.placeholder')}
           class="tool-textarea h-48"
-        />
+        ></textarea>
       </div>
 
       {#if error}

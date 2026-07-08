@@ -152,7 +152,7 @@
               }`}
               style="background-color: {c}"
               title={c}
-            />
+            ></button>
 {/each}
         </div>
       </div>
@@ -170,7 +170,7 @@
                 }`}
                 style="background-color: {c}"
                 title={c}
-              />
+              ></button>
 {/each}
           </div>
         </div>

@@ -449,7 +449,7 @@
             class="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500" />
         </div>
         <textarea value={summary} oninput={e => summary = e.currentTarget.value} placeholder={t('summaryPlaceholder')} rows={3}
-          class="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-amber-500" />
+          class="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-amber-500" ></textarea>
       </section>
 
       <!-- Experience -->
@@ -504,7 +504,7 @@
               <textarea value={exp.description}
                 oninput={e => { experiences[index].description = e.currentTarget.value; }}
                 placeholder={t('jobDescription')} rows={2}
-                class="w-full px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm resize-none focus:ring-2 focus:ring-amber-500" />
+                class="w-full px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm resize-none focus:ring-2 focus:ring-amber-500" ></textarea>
             </div>
           {/each}
         </div>

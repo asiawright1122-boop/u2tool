@@ -75,7 +75,7 @@
       <div class="grid md:grid-cols-2 gap-4">
         <div>
           <label class="tool-label">{t('input')}</label>
-          <textarea bind:value={input} class="tool-textarea" placeholder={mode === 'encode' ? '<div>Hello & World</div>' : '&lt;div&gt;Hello &amp; World&lt;/div&gt;'} />
+          <textarea bind:value={input} class="tool-textarea" placeholder={mode === 'encode' ? '<div>Hello & World</div>' : '&lt;div&gt;Hello &amp; World&lt;/div&gt;'} ></textarea>
         </div>
         <div>
           <label class="tool-label">{t('output')}</label>

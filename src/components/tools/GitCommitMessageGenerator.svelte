@@ -125,7 +125,7 @@
           placeholder={t('bodyPlaceholder')}
           rows={4}
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
-        />
+        ></textarea>
       </div>
 
       <div class="flex items-center gap-4">
@@ -151,7 +151,7 @@
             placeholder={t('breakingPlaceholder')}
             rows={2}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
-          />
+          ></textarea>
         </div>
 {/if}
 

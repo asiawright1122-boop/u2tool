@@ -224,7 +224,7 @@
                 onclick={() => inkColor = color}
                 class="w-6 h-6 rounded-full border-2 border-gray-300"
                 style="background-color: {color}"
-              />
+              ></button>
 {/each}
           </div>
         </div>

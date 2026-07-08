@@ -148,7 +148,7 @@
               class="tool-input"
               rows={2}
               placeholder="/public/"
-            />
+            ></textarea>
           </div>
           
           <div>
@@ -159,7 +159,7 @@
               class="tool-input"
               rows={2}
               placeholder="/admin/&#10;/private/"
-            />
+            ></textarea>
           </div>
         </div>
 {/each}

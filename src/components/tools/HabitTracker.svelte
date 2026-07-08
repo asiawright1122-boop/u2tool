@@ -109,7 +109,7 @@
               onclick={() => selectedColor = color}
               class={`w-10 h-10 rounded-lg transition-transform ${selectedColor === color ? 'scale-110 ring-2 ring-offset-2 ring-gray-400' : ''}`}
               style="background-color: {color}"
-            />
+            ></button>
 {/each}
         </div>
         <button

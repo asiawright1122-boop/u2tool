@@ -165,7 +165,7 @@
             onchange={(e) => updateData('agenda', e.target.value)}
             rows={3}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
-          />
+          ></textarea>
         </div>
         <div>
           <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('discussionNotes')}</label>
@@ -174,7 +174,7 @@
             onchange={(e) => updateData('discussion', e.target.value)}
             rows={3}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
-          />
+          ></textarea>
         </div>
         <div>
           <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('decisionsMade')}</label>
@@ -183,7 +183,7 @@
             onchange={(e) => updateData('decisions', e.target.value)}
             rows={3}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
-          />
+          ></textarea>
         </div>
         <div>
           <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('nextMeeting')}</label>

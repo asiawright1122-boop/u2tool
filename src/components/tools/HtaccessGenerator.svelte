@@ -289,7 +289,7 @@ Options -Indexes
               onchange={(e) => config = { ...config, blockIps: e.target.value }}
               class="w-full h-20 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 font-mono text-sm text-gray-900 dark:text-white"
               placeholder="192.168.1.1&#10;10.0.0.0/8"
-            />
+            ></textarea>
           </div>
 
           <div>
@@ -299,7 +299,7 @@ Options -Indexes
               onchange={(e) => config = { ...config, redirects: e.target.value }}
               class="w-full h-20 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 font-mono text-sm text-gray-900 dark:text-white"
               placeholder="/old-page /new-page&#10;/blog /articles"
-            />
+            ></textarea>
           </div>
         </div>
       </div>

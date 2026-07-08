@@ -153,7 +153,7 @@
               value={`<img src="${base64}" alt="image">`}
               readOnly
               rows={2}
-            />
+            ></textarea>
           </div>
 
           <div>

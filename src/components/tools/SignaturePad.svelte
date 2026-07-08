@@ -259,7 +259,7 @@
               class:ring-2={penColor === color}
               class:ring-amber-500={penColor === color}
               style="background-color: {color}"
-              aria-label={color} />
+              aria-label={color} ></button>
           {/each}
           
           <div class="relative w-7 h-7 rounded-full overflow-hidden border border-gray-200 dark:border-gray-700 focus-within:ring-2 focus-within:ring-amber-500">
