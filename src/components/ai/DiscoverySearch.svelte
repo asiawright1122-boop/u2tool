@@ -281,14 +281,15 @@
             >
               <div class="absolute inset-0 bg-gradient-to-br from-transparent to-amber-500/5 dark:to-amber-500/10 opacity-0 group-hover/result:opacity-100 transition-opacity duration-500"></div>
               <div class="relative z-10">
-              <div class="flex items-start justify-between gap-3">
-                <div class="min-w-0">
-                  <h3 class="text-sm font-bold text-slate-900 dark:text-white group-hover/result:text-amber-600 dark:group-hover/result:text-amber-400 transition-colors uppercase tracking-tight">{result.name}</h3>
-                  <p class="mt-1.5 text-xs text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">{result.description}</p>
+                <div class="flex items-start justify-between gap-3">
+                  <div class="min-w-0">
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white group-hover/result:text-amber-600 dark:group-hover/result:text-amber-400 transition-colors uppercase tracking-tight">{result.name}</h3>
+                    <p class="mt-1.5 text-xs text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">{result.description}</p>
+                  </div>
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 whitespace-nowrap bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md border border-slate-200/50 dark:border-slate-700/50">
+                    {result.categoryName}
+                  </span>
                 </div>
-                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 whitespace-nowrap bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md border border-slate-200/50 dark:border-slate-700/50">
-                  {result.categoryName}
-                </span>
               </div>
             </a>
           {/each}
