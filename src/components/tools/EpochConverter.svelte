@@ -57,7 +57,7 @@
     <div class="space-y-6">
       <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 text-center">
         <p class="text-sm text-gray-600 dark:text-gray-300 mb-1">{t('epoch.current')}</p>
-        <p class="text-3xl font-mono text-amber-600 dark:text-amber-400 cursor-pointer" onclick={() => copy(currentEpoch.toString())}>{currentEpoch}</p>
+        <p role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }} class="text-3xl font-mono text-amber-600 dark:text-amber-400 cursor-pointer" onclick={() => copy(currentEpoch.toString())}>{currentEpoch}</p>
       </div>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="space-y-3">
@@ -76,4 +76,4 @@
         <button onclick={() => copy(epoch || date)} class="px-4 py-2 bg-gray-500 dark:bg-gray-600 text-white rounded hover:bg-gray-600 dark:hover:bg-gray-700">{copied ? t('copied') : t('copy')}</button>
       </div>
     </div>
-  
+

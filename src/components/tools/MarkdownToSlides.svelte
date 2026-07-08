@@ -36,7 +36,7 @@
 
   function parseMarkdown(md: string) {
     const slideTexts = md.split(/^---$/m).filter(s => s.trim());
-    
+
     return slideTexts.map(slideText => {
       const lines = slideText.trim().split('\n');
       let title = '';
@@ -113,7 +113,7 @@
 ${slides.map(slide => `
   <div class="slide slide-${safeTheme}">
     ${slide.title ? `<h1>${escapeHtmlAttribute(slide.title)}</h1>` : ''}
-    ${slide.content.some(c => c.startsWith('- ') || c.startsWith('* ')) 
+    ${slide.content.some(c => c.startsWith('- ') || c.startsWith('* '))
       ? `<ul>${slide.content.filter(c => c.startsWith('- ') || c.startsWith('* ')).map(c => `<li>${escapeHtmlAttribute(c.replace(/^[-*] /, ''))}</li>`).join('')}</ul>`
       : slide.content.map(c => `<p>${escapeHtmlAttribute(c)}</p>`).join('')}
   </div>
@@ -164,7 +164,7 @@ Thank you for your attention!
 </script>
 
 
-    <div class="space-y-6" onkeydown={handleKeyDown} tabIndex={0}>
+    <div role="application" class="space-y-6" onkeydown={handleKeyDown} tabIndex={0}>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <!-- Input Section -->
         <div class="space-y-4">
@@ -216,7 +216,7 @@ Thank you for your attention!
                 <div class="space-y-2">
                   {#each slides[currentSlide]?.content as line, i (i)}
 <p  class="text-lg">
-                      {line.startsWith('- ') || line.startsWith('* ') 
+                      {line.startsWith('- ') || line.startsWith('* ')
                         ? `• ${line.replace(/^[-*] /, '')}`
                         : line}
                     </p>
@@ -279,7 +279,7 @@ Thank you for your attention!
             >
               {t('exportHtml')}
             </button>
-          
+
 </div>
 {/if}
       </div>
@@ -300,7 +300,7 @@ Thank you for your attention!
 
       <!-- Fullscreen Presentation Mode -->
       {#if isPresenting}
-<div 
+<div role="application"
           class={`fixed inset-0 z-50 ${getThemeClasses()}`}
           onkeydown={handleKeyDown}
           tabIndex={0}
@@ -312,7 +312,7 @@ Thank you for your attention!
             <div class="space-y-4">
               {#each slides[currentSlide]?.content as line, i (i)}
 <p  class="text-3xl">
-                  {line.startsWith('- ') || line.startsWith('* ') 
+                  {line.startsWith('- ') || line.startsWith('* ')
                     ? `• ${line.replace(/^[-*] /, '')}`
                     : line}
                 </p>
@@ -345,4 +345,4 @@ Thank you for your attention!
         </div>
 {/if}
     </div>
-  
+

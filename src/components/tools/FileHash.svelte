@@ -55,10 +55,10 @@
         calculateHash(buffer, 'SHA-256'),
         calculateHash(buffer, 'SHA-512'),
       ]);
-      
+
       // MD5 not available in Web Crypto, use simple hash
       const md5 = await simpleMD5(buffer);
-      
+
       hashes = { md5, sha1, sha256, sha512 };
     } catch {
       hashes = null;
@@ -85,7 +85,7 @@
 
 
     <div class="space-y-4">
-      <div
+      <div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}
         onclick={() => fileInputRef?.click()}
         class="tool-dropzone"
       >
@@ -138,4 +138,4 @@
         </div>
 {/if}
     </div>
-  
+

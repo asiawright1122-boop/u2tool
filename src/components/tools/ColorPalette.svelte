@@ -60,7 +60,7 @@
 </script>
 
 {#snippet ColorBox(color)}
-<div onclick={() => copy(color)} class="cursor-pointer group">
+<div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }} onclick={() => copy(color)} class="cursor-pointer group">
       <div class="h-16 rounded-lg border border-gray-300 dark:border-gray-600" style="background-color: {color}"></div>
       <p class="text-xs text-center mt-1 text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white">{copied === color ? '✓' : color}</p>
     </div>
@@ -99,4 +99,4 @@
         </div>
       </div>
     </div>
-  
+

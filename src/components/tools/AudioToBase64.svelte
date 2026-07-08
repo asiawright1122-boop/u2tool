@@ -127,7 +127,7 @@
 
 
     <div class="space-y-6">
-      <div
+      <div role="region"
         ondrop={handleDrop}
         ondragover={(e) => e.preventDefault()}
         class="border-2 border-dashed border-gray-600 rounded-lg p-8 text-center hover:border-amber-500 transition-colors"
@@ -214,4 +214,4 @@
         <p class="text-sm text-amber-700 dark:text-amber-400">MP3, WAV, OGG, WebM, AAC, FLAC, M4A</p>
       </div>
     </div>
-  
+

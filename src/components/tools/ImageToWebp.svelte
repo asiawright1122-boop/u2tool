@@ -184,7 +184,7 @@
       </div>
 
       <!-- Upload Area -->
-      <div
+      <div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}
         onclick={() => fileInputRef?.click()}
         class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-6 text-center cursor-pointer hover:border-amber-500"
       >
@@ -215,7 +215,7 @@
 
           <div class="space-y-2">
             {#each images as img (img.id)}
-<div 
+<div
                 class="flex items-center gap-4 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg"
               >
                 <img
@@ -275,4 +275,4 @@
         </div>
 {/if}
     </div>
-  
+

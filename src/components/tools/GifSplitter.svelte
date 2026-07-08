@@ -181,7 +181,7 @@
 
               <div class="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2 max-h-96 overflow-y-auto p-2 bg-gray-50 dark:bg-gray-800 rounded-lg">
                 {#each frames as frame (frame.index)}
-<div 
+<div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}
                     onclick={() => toggleFrame(frame.index)}
                     class={`relative cursor-pointer rounded overflow-hidden ${
                       selectedFrames.includes(frame.index)
@@ -229,4 +229,4 @@
         </div>
 {/if}
     </div>
-  
+

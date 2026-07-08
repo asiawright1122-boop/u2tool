@@ -141,7 +141,7 @@
       </div>
 
       <!-- File Input -->
-      <div
+      <div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}
         onclick={() => fileInputRef?.click()}
         class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-gray-400 dark:hover:border-gray-500 transition-colors bg-gray-50 dark:bg-transparent"
       >
@@ -239,4 +239,4 @@
         </div>
 {/if}
     </div>
-  
+

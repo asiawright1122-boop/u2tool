@@ -83,7 +83,7 @@
       </div>
       <div class="grid md:grid-cols-3 gap-3">
         {#each formats as { locale, formatted } (locale)}
-<div  onclick={() => copy(formatted)} class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}  onclick={() => copy(formatted)} class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
             <p class="text-sm text-gray-600 dark:text-gray-300 mb-1">{locale}</p>
             <p class="text-lg font-mono text-gray-900 dark:text-gray-100">{formatted}</p>
             {#if copied === formatted}
@@ -93,4 +93,4 @@
 {/each}
       </div>
     </div>
-  
+

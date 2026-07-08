@@ -385,7 +385,7 @@
         <div class="space-y-2">
           {#each titles as title, idx}
             {@const st = charStatus(title.length)}
-            <div onclick={() => (selectedIdx = idx)}
+            <div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }} onclick={() => (selectedIdx = idx)}
               class="bg-stone-900 border rounded-lg px-3 py-2.5 flex items-center gap-3 cursor-pointer transition-all {selectedIdx === idx ? 'border-emerald-600 bg-emerald-950/20' : 'border-stone-800 hover:border-stone-700'}">
               <div class="flex-1">
                 <p class="text-stone-200 text-sm leading-snug">{title}</p>

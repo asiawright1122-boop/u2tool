@@ -221,7 +221,7 @@
 
       <!-- File Input -->
       {#if !originalImage}
-<div
+<div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}
           onclick={() => fileInputRef?.click()}
           class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-gray-400 dark:hover:border-gray-500 transition-colors"
         >
@@ -257,7 +257,7 @@
                 class="hidden"
               />
             </div>
-            <div
+            <div role="application"
               bind:this={containerRef}
               class="relative bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg overflow-hidden cursor-move"
               onmousedown={handleMouseDown}
@@ -336,4 +336,4 @@
         </div>
 {/if}
     </div>
-  
+

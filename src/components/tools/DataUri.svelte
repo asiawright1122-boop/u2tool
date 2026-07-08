@@ -67,7 +67,7 @@
 
 
     <div class="space-y-4">
-      <div class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-amber-500 transition-colors bg-gray-50 dark:bg-transparent" onclick={() => fileRef?.click()}>
+      <div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }} class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-amber-500 transition-colors bg-gray-50 dark:bg-transparent" onclick={() => fileRef?.click()}>
         <input id="data-uri-file" bind:this={fileRef} type="file" onchange={handleFile} class="hidden" />
         <p class="text-gray-600 dark:text-gray-300">{'Drop file here or click to browse'}</p>
       </div>
@@ -95,4 +95,4 @@
       {/if}
 {/if}
     </div>
-  
+

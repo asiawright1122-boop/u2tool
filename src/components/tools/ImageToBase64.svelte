@@ -88,7 +88,7 @@
 
     <div class="space-y-4">
       <!-- Upload Area -->
-      <div
+      <div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}
         class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center hover:border-amber-500 transition-colors cursor-pointer bg-gray-50 dark:bg-transparent"
         onclick={() => fileInputRef?.click()}
       >
@@ -167,4 +167,4 @@
         </div>
 {/if}
     </div>
-  
+

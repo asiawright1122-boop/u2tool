@@ -311,7 +311,7 @@
   }
   function saveEdit() {
     if (editingCell) {
-      data = data.map((row, idx) => 
+      data = data.map((row, idx) =>
         idx === editingCell.row ? { ...row, [editingCell.field]: editValue } : row
       );
       editingCell = null;
@@ -484,8 +484,8 @@
               <button
                 onclick={handleCopy}
                 class={`text-sm px-3 py-1 rounded ${
-                  copied 
-                    ? 'btn-success' 
+                  copied
+                    ? 'btn-success'
                     : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100'
                 }`}
               >
@@ -511,7 +511,7 @@
               </button>
             </div>
           </div>
-          
+
           <div class="overflow-x-auto">
             <table class="w-full text-sm border border-gray-200 dark:border-gray-700 rounded-lg">
               <thead class="bg-gray-50 dark:bg-gray-800">
@@ -546,7 +546,7 @@
                             class="w-full px-2 py-1 border border-amber-500 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-1 focus:ring-amber-500"
                           />
 {:else}
-<div
+<div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}
                             onclick={() => startEditing(index, field.name, row[field.name] || '')}
                             class="px-3 py-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 rounded text-gray-900 dark:text-gray-100 min-h-[28px]"
                             title={t('clickToEdit')}
@@ -569,4 +569,4 @@
         </div>
 {/if}
     </div>
-  
+

@@ -78,7 +78,7 @@
 
     try {
       let dataUrl = base64Input.trim();
-      
+
       // Add data URL prefix if missing
       if (!dataUrl.startsWith('data:')) {
         // Try to detect image type from base64
@@ -88,7 +88,7 @@
         else if (firstChars.startsWith('iVBOR')) mimeType = 'image/png';
         else if (firstChars.startsWith('R0lGO')) mimeType = 'image/gif';
         else if (firstChars.startsWith('UklGR')) mimeType = 'image/webp';
-        
+
         dataUrl = `data:${mimeType};base64,${dataUrl}`;
       }
 
@@ -188,7 +188,7 @@
 <!-- Encode Mode: Image to Base64 -->
         <div class="space-y-6">
           <!-- File Upload -->
-          <div
+          <div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}
             ondrop={handleDrop}
             ondragover={(e) => e.preventDefault()}
             class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center hover:border-amber-500 dark:hover:border-amber-400 transition-colors cursor-pointer"
@@ -336,4 +336,4 @@
         </div>
 {/if}
     </div>
-  
+

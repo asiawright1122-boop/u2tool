@@ -95,7 +95,7 @@
             <div class="relative border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden">
               <div class="max-h-96 overflow-y-auto">
                 {#each commits as commit, idx (commit.hash)}
-<div 
+<div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}
                     onclick={() => selectedCommit = commit}
                     class={`flex items-start gap-3 p-3 border-b border-gray-200 dark:border-gray-700 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 ${
                       selectedCommit?.hash === commit.hash ? 'bg-amber-50 dark:bg-amber-900/20' : ''
@@ -218,4 +218,4 @@
         </div>
 {/if}
     </div>
-  
+

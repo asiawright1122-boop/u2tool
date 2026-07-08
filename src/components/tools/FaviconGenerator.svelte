@@ -135,7 +135,7 @@
         <label class="text-sm text-gray-700 dark:text-gray-300">{t('sizes')}:</label>
         <div class="flex flex-wrap gap-2">
           {#each FAVICON_SIZES as size (size)}
-<button 
+<button
               onclick={() => toggleSize(size)}
               class={`px-3 py-1 rounded text-sm ${
                 selectedSizes.includes(size)
@@ -156,7 +156,7 @@
       </div>
 
       <!-- File Input -->
-      <div
+      <div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}
         onclick={() => fileInputRef?.click()}
         class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-gray-400 dark:hover:border-gray-500 transition-colors"
       >
@@ -218,7 +218,7 @@
 
           <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {#each favicons as favicon (favicon.size)}
-<div 
+<div
                 class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-center"
               >
                 <div class="flex items-center justify-center h-20 mb-2" style="aspect-ratio: 1/1">
@@ -262,4 +262,4 @@
         </div>
 {/if}
     </div>
-  
+

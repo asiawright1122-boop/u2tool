@@ -236,7 +236,7 @@
             {#if colors.length > 0}
 <div class="space-y-2">
                 {#each colors as color, index (index)}
-<div 
+<div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}
                     class="flex items-center gap-3 p-2 bg-gray-50 dark:bg-gray-800 rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700"
                     onclick={() => copyColor(color.hex)}
                   >
@@ -264,4 +264,4 @@
         </div>
 {/if}
     </div>
-  
+

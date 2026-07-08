@@ -75,12 +75,12 @@
         const page = await pdf.getPage(i);
         const scale = 0.5;
         const viewport = page.getViewport({ scale });
-        
+
         const canvas = document.createElement('canvas');
         canvas.width = viewport.width;
         canvas.height = viewport.height;
         const ctx = canvas.getContext('2d')!;
-        
+
         await page.render({ canvasContext: ctx, viewport, canvas }).promise;
         previews.push({ pageNum: i, dataUrl: canvas.toDataURL('image/png'), selected: true });
       }
@@ -131,7 +131,7 @@
         canvas.height = viewport.height;
         const ctx = canvas.getContext('2d')!;
         await page.render({ canvasContext: ctx, viewport, canvas }).promise;
-        
+
         canvas.toBlob(blob => {
           if (blob) saveAs(blob, `${fileName}_page${selectedPages[0].pageNum}.${format}`);
         }, `image/${format}`, format === 'jpeg' ? 0.92 : undefined);
@@ -145,7 +145,7 @@
           canvas.height = viewport.height;
           const ctx = canvas.getContext('2d')!;
           await page.render({ canvasContext: ctx, viewport, canvas }).promise;
-          
+
           const dataUrl = canvas.toDataURL(`image/${format}`, format === 'jpeg' ? 0.92 : undefined);
           const base64 = dataUrl.split(',')[1];
           zip.file(`${fileName}_page${sp.pageNum}.${format}`, base64, { base64: true });
@@ -190,7 +190,7 @@
       {#if pages.length > 0}
 <div>
 {#if !loading}
-        
+
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div>
               <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('pdfToImage.format')}</label>
@@ -216,7 +216,7 @@
 
           <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-3">
             {#each pages as page (page.pageNum)}
-<div  onclick={() => togglePage(page.pageNum)} class={`cursor-pointer border-2 rounded-lg overflow-hidden transition-all ${page.selected ? 'border-amber-500 ring-2 ring-amber-500/20' : 'border-gray-200 dark:border-gray-700'}`}>
+<div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}  onclick={() => togglePage(page.pageNum)} class={`cursor-pointer border-2 rounded-lg overflow-hidden transition-all ${page.selected ? 'border-amber-500 ring-2 ring-amber-500/20' : 'border-gray-200 dark:border-gray-700'}`}>
                 <img src={page.dataUrl} alt={`Page ${page.pageNum}`} class="w-full" />
                 <div class="text-center text-xs py-1 bg-gray-50 dark:bg-gray-800">{page.pageNum}</div>
               </div>
@@ -226,9 +226,9 @@
           <button onclick={handleConvert} disabled={selectedCount === 0 || loading} class="w-full px-4 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium">
             {t('pdfToImage.convert')} ({selectedCount} {t('pdfToImage.pages')})
           </button>
-        
+
       {/if}
 </div>
 {/if}
     </div>
-  
+

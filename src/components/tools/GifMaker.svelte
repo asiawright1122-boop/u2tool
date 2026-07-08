@@ -196,7 +196,7 @@
       </div>
 
       <!-- Upload Area -->
-      <div
+      <div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}
         onclick={() => fileInputRef?.click()}
         class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-6 text-center cursor-pointer hover:border-amber-500"
       >
@@ -218,7 +218,7 @@
           <h3 class="font-medium">{t('frames')} ({frames.length})</h3>
           <div class="flex flex-wrap gap-2">
             {#each frames as frame, index (frame.id)}
-<div 
+<div
                 class={`relative group w-20 h-20 ${
                   index === previewFrame ? 'ring-2 ring-amber-500' : ''
                 }`}
@@ -290,13 +290,13 @@
       {#if result}
 <div class="space-y-2">
           <h3 class="font-medium">{t('result')}</h3>
-          <div 
+          <div
             class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 flex justify-center"
             style="min-height: 200px"
           >
-            <img 
-              src={result} 
-              alt="GIF Result" 
+            <img
+              src={result}
+              alt="GIF Result"
               class="max-w-full max-h-96 rounded"
               style="aspect-ratio: auto"
             />
@@ -304,4 +304,4 @@
         </div>
 {/if}
     </div>
-  
+

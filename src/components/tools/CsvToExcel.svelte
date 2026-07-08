@@ -97,7 +97,7 @@
 
 
     <div class="space-y-6">
-      <div
+      <div role="region"
         ondrop={handleDrop}
         ondragover={(e) => e.preventDefault()}
         class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-amber-500 transition-colors"
@@ -163,4 +163,4 @@
         </div>
 {/if}
     </div>
-  
+

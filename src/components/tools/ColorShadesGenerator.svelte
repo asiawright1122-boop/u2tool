@@ -24,7 +24,7 @@
   $effect(() => {
     const [h, s] = hexToHsl(baseColor);
     const newShades: string[] = [];
-    
+
     for (let i = 0; i < shadeCount; i++) {
       const l = 95 - (i * (90 / (shadeCount - 1)));
       newShades.push(hslToHex(h, s, Math.max(5, Math.min(95, l))));
@@ -37,7 +37,7 @@
     const r = parseInt(hex.slice(1, 3), 16) / 255;
     const g = parseInt(hex.slice(3, 5), 16) / 255;
     const b = parseInt(hex.slice(5, 7), 16) / 255;
-    
+
     const max = Math.max(r, g, b), min = Math.min(r, g, b);
     let h = 0, s = 0;
     let l = (max + min) / 2;
@@ -102,7 +102,7 @@
 
       <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-10 gap-2">
         {#each shades as shade, index (index)}
-<div  onclick={() => copyColor(shade)}
+<div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}  onclick={() => copyColor(shade)}
             class="cursor-pointer group">
             <div class="h-20 rounded-lg transition-transform group-hover:scale-105"
               style="background-color: {shade}"></div>
@@ -123,4 +123,4 @@
         </pre>
       </div>
     </div>
-  
+

@@ -178,7 +178,7 @@
 
       {#if pages.length > 0}
 {#if !loading}
-        
+
           <div class="flex flex-wrap gap-4 items-end">
             <div>
               <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('pdfSplitter.splitMode')}</label>
@@ -198,7 +198,7 @@
                   <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('pdfSplitter.to')}</label>
                   <input type="number" bind:value={rangeEnd} min={1} max={pages.length} class="w-20 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
                 </div>
-              
+
 {/if}
           </div>
 
@@ -211,13 +211,13 @@
               </div>
               <div class="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2">
                 {#each pages as page (page.pageNum)}
-<div  onclick={() => togglePage(page.pageNum)} class={`cursor-pointer border-2 rounded overflow-hidden transition-all ${page.selected ? 'border-amber-500 ring-2 ring-amber-500/20' : 'border-gray-200 dark:border-gray-700'}`}>
+<div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}  onclick={() => togglePage(page.pageNum)} class={`cursor-pointer border-2 rounded overflow-hidden transition-all ${page.selected ? 'border-amber-500 ring-2 ring-amber-500/20' : 'border-gray-200 dark:border-gray-700'}`}>
                     <img src={page.thumbnail} alt={`Page ${page.pageNum}`} class="w-full" />
                     <div class="text-center text-xs py-1 bg-gray-50 dark:bg-gray-800">{page.pageNum}</div>
                   </div>
 {/each}
               </div>
-            
+
 </div>
 {/if}
 
@@ -226,8 +226,8 @@
 `(${selectedCount} ${t('pdfSplitter.pages')})`
 {/if}
           </button>
-        
+
       {/if}
 {/if}
     </div>
-  
+

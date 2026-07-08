@@ -149,7 +149,7 @@
 
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
     {#each colors as color, index (index)}
-      <div
+      <div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}
         onclick={() => copyColor(index)}
         class="cursor-pointer rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
       >

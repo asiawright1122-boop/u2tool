@@ -26,7 +26,7 @@
     return Array.from({ length: 4 }, () => Math.floor(Math.random() * 256)).join('.');
   }
   function generateIPv6(): string {
-    return Array.from({ length: 8 }, () => 
+    return Array.from({ length: 8 }, () =>
       Math.floor(Math.random() * 65536).toString(16).padStart(4, '0')
     ).join(':');
   }
@@ -44,7 +44,7 @@
       ip = generateIPv4();
       const parts = ip.split('.').map(Number);
       // Exclude private, loopback, and reserved ranges
-      const isPrivate = 
+      const isPrivate =
         parts[0] === 10 ||
         (parts[0] === 172 && parts[1] >= 16 && parts[1] <= 31) ||
         (parts[0] === 192 && parts[1] === 168) ||
@@ -62,7 +62,7 @@
       private: generatePrivateIPv4,
       public: generatePublicIPv4,
     };
-    
+
     const ips = Array.from({ length: count }, () => generators[ipType]());
     generated = ips;
   }
@@ -111,7 +111,7 @@
           <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 max-h-96 overflow-y-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
               {#each generated as ip, index (index)}
-<div  onclick={() => navigator.clipboard.writeText(ip)}
+<div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}  onclick={() => navigator.clipboard.writeText(ip)}
                   class="px-3 py-2 bg-white dark:bg-gray-600 rounded font-mono text-sm text-green-600 dark:text-green-400 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-500">
                   {ip}
                 </div>
@@ -121,4 +121,4 @@
         </div>
 {/if}
     </div>
-  
+

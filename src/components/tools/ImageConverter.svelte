@@ -160,7 +160,7 @@
       </div>
 
       <!-- File Input -->
-      <div
+      <div role="button" tabindex="0" onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.currentTarget.click(); } }}
         onclick={() => fileInputRef?.click()}
         class="tool-dropzone"
       >
@@ -259,4 +259,4 @@
         </div>
       </div>
     </div>
-  
+
