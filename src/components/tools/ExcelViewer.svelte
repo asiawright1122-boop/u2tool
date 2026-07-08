@@ -173,13 +173,12 @@
 {#if currentSheet.headers.length > 0}
         <div class="flex flex-wrap gap-4 items-end">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label for="excel-viewer-field-4" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               {t('excelViewer.filterColumn')}
             </label>
             <select
               bind:value={filterColumn}
-              class="tool-select"
-            >
+              class="tool-select" id="excel-viewer-field-4">
               <option value="">{t('excelViewer.selectColumn')}</option>
               {#each currentSheet.headers as h (h)}
 <option  value={h}>{h}</option>
@@ -187,7 +186,7 @@
             </select>
           </div>
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label for="excel-viewer-field-3" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               {t('excelViewer.filterValue')}
             </label>
             <input
@@ -195,8 +194,7 @@
               bind:value={filterValue}
               placeholder={t('excelViewer.enterValue')}
               class="tool-input"
-              disabled={!filterColumn}
-            />
+              disabled={!filterColumn} id="excel-viewer-field-3" />
           </div>
           {#if filterColumn || filterValue}
 <button

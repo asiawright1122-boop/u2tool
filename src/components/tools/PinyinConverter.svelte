@@ -50,12 +50,12 @@
 
     <div class="space-y-4">
       <div>
-        <label class="block text-sm font-medium mb-2">{t('input')}</label>
+        <label for="pinyin-converter-field-3" class="block text-sm font-medium mb-2">{t('input')}</label>
         <textarea
           class="tool-textarea"
           bind:value={input}
           placeholder={t('pinyin.placeholder')}
-          rows={4}></textarea>
+          rows={4} id="pinyin-converter-field-3"></textarea>
       </div>
 
       <div class="flex items-center gap-4">
@@ -81,7 +81,7 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium">{t('output')}</label>
+            <div class="text-sm font-medium">{t('output')}</div>
             <button
               onclick={copyOutput}
               class={`text-sm px-3 py-1 rounded text-white ${copied ? 'bg-emerald-500' : 'bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600'}`}

@@ -134,9 +134,9 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Gender -->
         <div class="space-y-2">
-          <label class="tool-label">
+          <div class="tool-label">
             {t('gender')}
-          </label>
+          </div>
           <div class="flex gap-2">
             <button
               onclick={() => gender = 'male'}

@@ -88,26 +88,24 @@
     <div class="space-y-4">
       <div class="flex flex-wrap gap-4 items-center">
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">{t('tableGen.rows')}:</label>
+          <label for="html-table-generator-field-6" class="text-sm text-gray-600 dark:text-gray-300">{t('tableGen.rows')}:</label>
           <input
             type="number"
             min="1"
             max="20"
             value={rows}
             onchange={(e) => updateSize(parseInt(e.target.value) || 1, cols)}
-            class="w-16 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded px-2 py-1 text-center"
-          />
+            class="w-16 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded px-2 py-1 text-center" id="html-table-generator-field-6" />
         </div>
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">{t('tableGen.cols')}:</label>
+          <label for="html-table-generator-field-5" class="text-sm text-gray-600 dark:text-gray-300">{t('tableGen.cols')}:</label>
           <input
             type="number"
             min="1"
             max="10"
             value={cols}
             onchange={(e) => updateSize(rows, parseInt(e.target.value) || 1)}
-            class="w-16 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded px-2 py-1 text-center"
-          />
+            class="w-16 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded px-2 py-1 text-center" id="html-table-generator-field-5" />
         </div>
         <label class="flex items-center gap-2 text-sm text-gray-900 dark:text-white">
           <input
@@ -145,7 +143,7 @@
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">HTML</label>
+          <div class="text-sm text-gray-600 dark:text-gray-300">HTML</div>
           <button
             onclick={copyHtml}
             class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-500 dark:hover:text-amber-300"
@@ -159,7 +157,7 @@
       </div>
 
       <div>
-        <label class="text-sm text-gray-600 dark:text-gray-300 mb-2 block">{t('tableGen.preview')}</label>
+        <div class="text-sm text-gray-600 dark:text-gray-300 mb-2 block">{t('tableGen.preview')}</div>
         <div class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded p-4 overflow-x-auto">
           <table class="border-collapse border border-gray-400 dark:border-gray-600 text-black">
             {#if hasHeader}

@@ -103,24 +103,22 @@
     <div class="space-y-6">
       <div class="flex flex-wrap gap-4 items-center">
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">{t('count')}:</label>
+          <label for="mac-address-generator-field-7" class="text-sm text-gray-600 dark:text-gray-300">{t('count')}:</label>
           <input
             type="number"
             value={count}
             onchange={(e) => count = parseInt(e.target.value) || 1}
             min="1"
             max="100"
-            class="w-20 h-10 px-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-          />
+            class="w-20 h-10 px-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="mac-address-generator-field-7" />
         </div>
 
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">{t('separator')}:</label>
+          <label for="mac-address-generator-field-6" class="text-sm text-gray-600 dark:text-gray-300">{t('separator')}:</label>
           <select
             value={separator}
             onchange={(e) => separator = e.target.value as Separator}
-            class="w-32 h-10 px-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-          >
+            class="w-32 h-10 px-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="mac-address-generator-field-6">
             <option value=":">{t('sepColon')}</option>
             <option value="-">{t('sepHyphen')}</option>
             <option value="">{t('sepNone')}</option>
@@ -147,15 +145,14 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div class="space-y-2">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">
+            <label for="mac-address-generator-field-5" class="block text-sm font-medium text-gray-700 dark:text-gray-200">
               {t('prefix')}
             </label>
             <input
               type="text"
               bind:value={prefix}
               placeholder={t('prefixPlaceholder')}
-              class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono placeholder-gray-500"
-            />
+              class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono placeholder-gray-500" id="mac-address-generator-field-5" />
             <p class="text-xs text-gray-600 dark:text-gray-300">{t('prefixHint')}</p>
           </div>
 
@@ -195,9 +192,9 @@
 
         <div class="space-y-2">
           <div class="flex items-center justify-between">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">
+            <div class="block text-sm font-medium text-gray-700 dark:text-gray-200">
               {t('output')}
-            </label>
+            </div>
             {#if output}
 <button
                 onclick={handleCopy}

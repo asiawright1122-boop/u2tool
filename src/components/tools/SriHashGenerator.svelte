@@ -143,9 +143,9 @@
           </div>
 
           <div>
-            <label class="tool-label">
+            <div class="tool-label">
               {inputType === 'url' ? t('urlInput') : t('contentInput')}
-            </label>
+            </div>
             {#if inputType === 'url'}
 <input
                 type="text"
@@ -162,14 +162,13 @@
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="sri-hash-generator-field-6" class="tool-label">
               {t('algorithm')}
             </label>
             <select
               value={algorithm}
               onchange={(e) => algorithm = e.target.value as 'sha256' | 'sha384' | 'sha512'}
-              class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            >
+              class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="sri-hash-generator-field-6">
               <option value="sha256">SHA-256</option>
               <option value="sha384">SHA-384 ({t('recommended')})</option>
               <option value="sha512">SHA-512</option>
@@ -203,9 +202,9 @@
 <div class="space-y-4">
             <div>
               <div class="flex items-center justify-between mb-2">
-                <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+                <div class="text-sm font-medium text-gray-700 dark:text-gray-300">
                   {t('sriHash')}
-                </label>
+                </div>
                 <button
                   onclick={() => copyToClipboard(hash, 'hash')}
                   class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
@@ -222,9 +221,9 @@
 
             <div>
               <div class="flex items-center justify-between mb-2">
-                <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+                <div class="text-sm font-medium text-gray-700 dark:text-gray-300">
                   {t('scriptTag')}
-                </label>
+                </div>
                 <button
                   onclick={() => copyToClipboard(getScriptTag(), 'script')}
                   class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
@@ -241,9 +240,9 @@
 
             <div>
               <div class="flex items-center justify-between mb-2">
-                <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+                <div class="text-sm font-medium text-gray-700 dark:text-gray-300">
                   {t('linkTag')}
-                </label>
+                </div>
                 <button
                   onclick={() => copyToClipboard(getLinkTag(), 'link')}
                   class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"

@@ -171,15 +171,14 @@
       <!-- Converter -->
       <div class="grid grid-cols-1 md:grid-cols-[1fr,auto,1fr] gap-4 items-end">
         <div>
-          <label class="tool-label">
+          <label for="metric-imperial-converter-field-3" class="tool-label">
             {t('from')}
           </label>
           <input
             type="number"
             bind:value={inputValue}
             class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-lg mb-2"
-            placeholder="1"
-          />
+            placeholder="1" id="metric-imperial-converter-field-3" />
           <select
             bind:value={fromUnit}
             class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -208,9 +207,9 @@
         </button>
 
         <div>
-          <label class="tool-label">
+          <div class="tool-label">
             {t('to')}
-          </label>
+          </div>
           <div class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white text-lg mb-2 min-h-[52px] flex items-center">
             {result !== null ? formatResult(result) : '-'}
           </div>

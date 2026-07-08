@@ -150,30 +150,28 @@
         <!-- Input Section -->
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label for="business-days-calculator-field-6" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               {t('businessDays.startDate')}
             </label>
             <input
               type="date"
               bind:value={startDate}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-            />
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="business-days-calculator-field-6" />
           </div>
 
           {#if !reverseMode}
 <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label for="business-days-calculator-field-5" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 {t('businessDays.endDate')}
               </label>
               <input
                 type="date"
                 bind:value={endDate}
-                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-              />
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="business-days-calculator-field-5" />
             </div>
 {:else}
 <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label for="business-days-calculator-field-4" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 {t('businessDays.businessDaysToAdd')}
               </label>
               <input
@@ -181,8 +179,7 @@
                 min="1"
                 value={businessDaysToAdd}
                 onchange={(e) => businessDaysToAdd = parseInt(e.target.value) || 1}
-                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-              />
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="business-days-calculator-field-4" />
             </div>
 {/if}
 

@@ -122,13 +122,13 @@
     <div class="space-y-6">
       <!-- 输入区域 -->
       <div>
-        <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
+        <label for="statistics-calculator-field-2" class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
           {t('stats.inputLabel')}
         </label>
         <textarea
           bind:value={input}
           class="w-full h-32 px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          placeholder="10, 20, 30, 40, 50"></textarea>
+          placeholder="10, 20, 30, 40, 50" id="statistics-calculator-field-2"></textarea>
         <p class="text-xs text-gray-500 dark:text-gray-300 mt-1">
           {t('stats.inputHint')}
         </p>

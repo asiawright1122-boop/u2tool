@@ -51,9 +51,9 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <!-- Preview -->
         <div>
-          <label class="tool-label">
+          <div class="tool-label">
             {t('clipPath.preview')}
-          </label>
+          </div>
           <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-8 flex items-center justify-center min-h-[300px]">
             <div
               class="w-48 h-48 bg-gradient-to-br from-amber-500 to-slate-600"
@@ -64,9 +64,9 @@
         <!-- Controls -->
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <div class="tool-label">
               {t('clipPath.presets')}
-            </label>
+            </div>
             <div class="grid grid-cols-5 gap-2">
               {#each Object.keys(presets) as preset (preset)}
 <button 
@@ -80,18 +80,18 @@
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="css-clip-path-generator-field-5" class="tool-label">
               {t('clipPath.value')}
             </label>
             <textarea
               bind:value={clipPath}
-              class="w-full h-24 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent"></textarea>
+              class="w-full h-24 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="css-clip-path-generator-field-5"></textarea>
           </div>
 
           <div>
-            <label class="tool-label">
+            <div class="tool-label">
               {t('output')}
-            </label>
+            </div>
             <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
               <code class="text-sm text-green-700 dark:text-green-400 font-mono">
                 clip-path: {clipPath};

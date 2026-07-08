@@ -160,7 +160,7 @@
       <!-- Settings -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm font-medium mb-2">{t('frameDelay')}: {delay}ms</label>
+          <label for="gif-maker-field-4" class="block text-sm font-medium mb-2">{t('frameDelay')}: {delay}ms</label>
           <input
             type="range"
             min="50"
@@ -168,19 +168,17 @@
             step="50"
             value={delay}
             onchange={(e) => delay = Number(e.target.value)}
-            class="w-full"
-          />
+            class="w-full" id="gif-maker-field-4" />
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2">{t('quality')}: {quality}</label>
+          <label for="gif-maker-field-3" class="block text-sm font-medium mb-2">{t('quality')}: {quality}</label>
           <input
             type="range"
             min="1"
             max="20"
             value={quality}
             onchange={(e) => quality = Number(e.target.value)}
-            class="w-full"
-          />
+            class="w-full" id="gif-maker-field-3" />
           <p class="text-xs text-gray-500">{t('qualityHint')}</p>
         </div>
         <div class="flex items-center">

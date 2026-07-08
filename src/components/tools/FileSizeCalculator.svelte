@@ -99,7 +99,7 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="space-y-2">
-          <label class="tool-label">
+          <label for="file-size-calculator-field-6" class="tool-label">
             {t('inputValue')}
           </label>
           <input
@@ -107,19 +107,17 @@
             bind:value={inputValue}
             class="tool-input"
             min="0"
-            step="any"
-          />
+            step="any" id="file-size-calculator-field-6" />
         </div>
 
         <div class="space-y-2">
-          <label class="tool-label">
+          <label for="file-size-calculator-field-5" class="tool-label">
             {t('unit')}
           </label>
           <select
             value={inputUnit}
             onchange={(e) => inputUnit = e.target.value as Unit}
-            class="tool-input"
-          >
+            class="tool-input" id="file-size-calculator-field-5">
             {#each units as unit (unit)}
 <option  value={unit}>
                 {unit}
@@ -129,14 +127,13 @@
         </div>
 
         <div class="space-y-2">
-          <label class="tool-label">
+          <label for="file-size-calculator-field-4" class="tool-label">
             {t('base')}
           </label>
           <select
             value={base}
             onchange={(e) => base = e.target.value as Base}
-            class="tool-input"
-          >
+            class="tool-input" id="file-size-calculator-field-4">
             <option value="binary">{t('binary')} (1024)</option>
             <option value="decimal">{t('decimal')} (1000)</option>
           </select>

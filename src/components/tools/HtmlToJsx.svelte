@@ -69,12 +69,12 @@
     <div class="space-y-4">
       <div class="grid md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium mb-2 text-gray-900 dark:text-white">{t('htmlInput')}</label>
-          <textarea bind:value={html} class="w-full h-64 p-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" placeholder={t('placeholder')}></textarea>
+          <label for="html-to-jsx-field-4" class="block text-sm font-medium mb-2 text-gray-900 dark:text-white">{t('htmlInput')}</label>
+          <textarea bind:value={html} class="w-full h-64 p-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" placeholder={t('placeholder')} id="html-to-jsx-field-4"></textarea>
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2 text-gray-900 dark:text-white">{t('jsxOutput')}</label>
-          <textarea value={jsx} readOnly class="w-full h-64 p-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white"></textarea>
+          <label for="html-to-jsx-field-3" class="block text-sm font-medium mb-2 text-gray-900 dark:text-white">{t('jsxOutput')}</label>
+          <textarea value={jsx} readOnly class="w-full h-64 p-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" id="html-to-jsx-field-3"></textarea>
         </div>
       </div>
       <div class="flex gap-2">

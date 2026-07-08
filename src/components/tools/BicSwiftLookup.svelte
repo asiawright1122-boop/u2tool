@@ -85,7 +85,7 @@
 
     <div class="space-y-6">
       <div>
-        <label class="tool-label">
+        <label for="bic-swift-lookup-field-2" class="tool-label">
           {t('inputLabel')}
         </label>
         <div class="flex gap-2">
@@ -95,8 +95,7 @@
             onchange={handleInputChange}
             placeholder={t('placeholder')}
             maxLength={11}
-            class="flex-1 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-lg tracking-wider"
-          />
+            class="flex-1 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-lg tracking-wider" id="bic-swift-lookup-field-2" />
           <button
             onclick={lookup}
             class="px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium"

@@ -117,9 +117,9 @@
 
       <!-- Pattern Selection -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('pattern')}
-        </label>
+        </div>
         <div class="flex gap-2">
           {#each patterns as p (p.id)}
 <button 
@@ -142,24 +142,22 @@
         <h3 class="font-semibold text-gray-900 dark:text-white mb-3">{t('roomDimensions')}</h3>
         <div class="grid grid-cols-2 gap-4">
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
+            <label for="tile-calculator-field-15" class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
               {t('length')} ({unit === 'metric' ? 'm' : 'ft'})
             </label>
             <input
               type="number"
               bind:value={roomLength}
-              class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-            />
+              class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="tile-calculator-field-15" />
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
+            <label for="tile-calculator-field-14" class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
               {t('width')} ({unit === 'metric' ? 'm' : 'ft'})
             </label>
             <input
               type="number"
               bind:value={roomWidth}
-              class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-            />
+              class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="tile-calculator-field-14" />
           </div>
         </div>
       </div>
@@ -169,24 +167,22 @@
         <h3 class="font-semibold text-gray-900 dark:text-white mb-3">{t('tileDimensions')}</h3>
         <div class="grid grid-cols-2 gap-4">
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
+            <label for="tile-calculator-field-13" class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
               {t('tileLength')} ({unit === 'metric' ? 'cm' : 'in'})
             </label>
             <input
               type="number"
               bind:value={tileLength}
-              class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-            />
+              class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="tile-calculator-field-13" />
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
+            <label for="tile-calculator-field-12" class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
               {t('tileWidth')} ({unit === 'metric' ? 'cm' : 'in'})
             </label>
             <input
               type="number"
               bind:value={tileWidth}
-              class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-            />
+              class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="tile-calculator-field-12" />
           </div>
         </div>
       </div>
@@ -194,35 +190,32 @@
       <!-- Settings -->
       <div class="grid grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
+          <label for="tile-calculator-field-11" class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
             {t('groutWidth')} (mm)
           </label>
           <input
             type="number"
             bind:value={groutWidth}
-            class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-          />
+            class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="tile-calculator-field-11" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
+          <label for="tile-calculator-field-10" class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
             {t('waste')} (%)
           </label>
           <input
             type="number"
             bind:value={wastePercent}
-            class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-          />
+            class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="tile-calculator-field-10" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
+          <label for="tile-calculator-field-9" class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
             {t('tilesPerBox')}
           </label>
           <input
             type="number"
             bind:value={tilesPerBox}
             placeholder={t('optional')}
-            class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-          />
+            class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="tile-calculator-field-9" />
         </div>
       </div>
 

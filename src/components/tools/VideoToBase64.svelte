@@ -216,9 +216,9 @@
 
       <div class="space-y-2">
         <div class="flex items-center justify-between">
-          <label class="tool-label mb-0">
+          <div class="tool-label mb-0">
             {t('base64Output')}
-          </label>
+          </div>
           {#if base64}
 <button
               onclick={handleCopy}

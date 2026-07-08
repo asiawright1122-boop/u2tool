@@ -100,15 +100,15 @@ ${urls.map(url => `  <url>
 
     <div class="space-y-6">
       <div>
-        <label class="tool-label">{t('baseUrl')}</label>
+        <label for="sitemap-generator-field-4" class="tool-label">{t('baseUrl')}</label>
         <input type="text" bind:value={baseUrl}
           class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white"
-          placeholder="https://example.com" />
+          placeholder="https://example.com" id="sitemap-generator-field-4" />
       </div>
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('urls')}</label>
+          <div class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('urls')}</div>
           <button onclick={addUrl} class="px-3 py-1 bg-emerald-500 hover:bg-green-700 rounded text-sm text-white">
             {t('addUrl')}
           </button>
@@ -161,7 +161,7 @@ ${urls.map(url => `  <url>
 
       {#if output}
 <div>
-          <label class="tool-label">{t('output')}</label>
+          <div class="tool-label">{t('output')}</div>
           <pre class="bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg p-4 font-mono text-sm text-green-600 dark:text-green-400 overflow-x-auto max-h-64">
             {output}
           </pre>

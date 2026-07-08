@@ -105,9 +105,9 @@
       <!-- Input -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">
+          <div class="tool-label">
             JWT Token
-          </label>
+          </div>
           <button
             onclick={() => token = exampleToken}
             class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"

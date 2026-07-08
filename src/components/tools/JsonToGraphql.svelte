@@ -87,13 +87,12 @@
     <div class="space-y-4">
       <div class="flex items-center gap-4">
         <div class="flex-1">
-          <label class="block text-sm font-medium mb-2">{tg('typeName')}</label>
+          <label for="json-to-graphql-field-5" class="block text-sm font-medium mb-2">{tg('typeName')}</label>
           <input
             type="text"
             bind:value={typeName}
             class="tool-input"
-            placeholder={t('inputPlaceholder')}
-          />
+            placeholder={t('inputPlaceholder')} id="json-to-graphql-field-5" />
         </div>
         <button onclick={loadSample} class="btn-secondary mt-6">
           {tg('loadSample')}
@@ -101,12 +100,12 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium mb-2">{tg('jsonInput')}</label>
+        <label for="json-to-graphql-field-4" class="block text-sm font-medium mb-2">{tg('jsonInput')}</label>
         <textarea
           class="tool-textarea font-mono"
           bind:value={input}
           placeholder={tg('placeholder')}
-          rows={10}></textarea>
+          rows={10} id="json-to-graphql-field-4"></textarea>
       </div>
 
       {#if error}
@@ -123,7 +122,7 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium">{tg('graphqlOutput')}</label>
+            <div class="text-sm font-medium">{tg('graphqlOutput')}</div>
             <button
               onclick={copyOutput}
               class={`text-sm px-3 py-1 rounded ${copied ? 'bg-emerald-500' : 'bg-gray-700 hover:bg-gray-600'}`}

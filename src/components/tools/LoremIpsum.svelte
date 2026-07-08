@@ -134,7 +134,7 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="tool-label mb-0">{t('output')}</label>
+            <div class="tool-label mb-0">{t('output')}</div>
             <button
               onclick={copyOutput}
               class={`text-sm px-3 py-1 rounded text-white ${copied ? 'bg-emerald-500' : 'bg-gray-600 dark:bg-gray-700 hover:bg-gray-500 dark:hover:bg-gray-600'}`}

@@ -100,15 +100,15 @@
     <div class="space-y-4">
       <div class="grid md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('input')} SVG</label>
+          <label for="svg-optimizer-field-4" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('input')} SVG</label>
           <textarea
             bind:value={input}
             class="w-full h-48 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded p-3 font-mono text-sm text-gray-900 dark:text-white"
-            placeholder={t('svgOptimizer.placeholder')}></textarea>
+            placeholder={t('svgOptimizer.placeholder')} id="svg-optimizer-field-4"></textarea>
         </div>
         <div>
           <div class="flex justify-between items-center mb-1">
-            <label class="text-sm text-gray-600 dark:text-gray-300">{t('output')}</label>
+            <div class="text-sm text-gray-600 dark:text-gray-300">{t('output')}</div>
             <button onclick={copyOutput} class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300">
               {copied ? t('copied') : t('copy')}
             </button>
@@ -146,7 +146,7 @@
 
       {#if output}
 <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('svgOptimizer.preview')}</label>
+          <div class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('svgOptimizer.preview')}</div>
           <!-- 净化 SVG 防止 XSS 攻击 -->
           <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-4 flex justify-center">{@html sanitizeSvg(output)}</div>
         </div>

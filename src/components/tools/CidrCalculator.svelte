@@ -131,7 +131,7 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium mb-2">{t('cidr.commonPrefixes')}</label>
+        <div class="block text-sm font-medium mb-2">{t('cidr.commonPrefixes')}</div>
         <div class="flex flex-wrap gap-2">
           {#each commonPrefixes as prefix (prefix)}
 <button 

@@ -79,7 +79,7 @@
     <div class="space-y-4">
       <!-- Code Type Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{tc('codeType')}</label>
+        <div class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{tc('codeType')}</div>
         <div class="flex gap-2">
           {#each (['html', 'css', 'js'] as CodeType[]) as type (type)}
 <button 
@@ -95,12 +95,12 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium mb-2">{t('input')}</label>
+        <label for="code-minifier-field-4" class="block text-sm font-medium mb-2">{t('input')}</label>
         <textarea
           class="tool-textarea font-mono text-sm"
           bind:value={input}
           placeholder={tc('placeholder', { type: codeType.toUpperCase() })}
-          rows={8}></textarea>
+          rows={8} id="code-minifier-field-4"></textarea>
       </div>
 
       <div class="flex flex-wrap gap-2">
@@ -124,7 +124,7 @@
 
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="text-sm font-medium">{t('output')}</label>
+              <div class="text-sm font-medium">{t('output')}</div>
               <button
                 onclick={copyOutput}
                 class={`text-sm px-3 py-1 rounded ${copied ? 'bg-emerald-500' : 'bg-gray-700 hover:bg-gray-600'}`}

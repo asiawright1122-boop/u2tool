@@ -98,43 +98,43 @@
               
               <div class="grid grid-cols-2 gap-3">
                 <div>
-                  <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('offsetX')}: {shadow.offsetX}px</label>
+                  <label for={`box-shadow-generator-field-13-${index}`} class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('offsetX')}: {shadow.offsetX}px</label>
                   <input type="range" min="-50" max="50" value={shadow.offsetX}
                     onchange={(e) => updateShadow(shadow.id, 'offsetX', parseInt(e.target.value))}
-                    class="w-full" />
+                    class="w-full" id={`box-shadow-generator-field-13-${index}`} />
                 </div>
                 <div>
-                  <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('offsetY')}: {shadow.offsetY}px</label>
+                  <label for={`box-shadow-generator-field-12-${index}`} class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('offsetY')}: {shadow.offsetY}px</label>
                   <input type="range" min="-50" max="50" value={shadow.offsetY}
                     onchange={(e) => updateShadow(shadow.id, 'offsetY', parseInt(e.target.value))}
-                    class="w-full" />
+                    class="w-full" id={`box-shadow-generator-field-12-${index}`} />
                 </div>
                 <div>
-                  <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('blur')}: {shadow.blur}px</label>
+                  <label for={`box-shadow-generator-field-11-${index}`} class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('blur')}: {shadow.blur}px</label>
                   <input type="range" min="0" max="100" value={shadow.blur}
                     onchange={(e) => updateShadow(shadow.id, 'blur', parseInt(e.target.value))}
-                    class="w-full" />
+                    class="w-full" id={`box-shadow-generator-field-11-${index}`} />
                 </div>
                 <div>
-                  <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('spread')}: {shadow.spread}px</label>
+                  <label for={`box-shadow-generator-field-10-${index}`} class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('spread')}: {shadow.spread}px</label>
                   <input type="range" min="-50" max="50" value={shadow.spread}
                     onchange={(e) => updateShadow(shadow.id, 'spread', parseInt(e.target.value))}
-                    class="w-full" />
+                    class="w-full" id={`box-shadow-generator-field-10-${index}`} />
                 </div>
               </div>
               
               <div class="flex gap-4 items-center">
                 <div class="flex items-center gap-2">
-                  <label class="text-xs text-gray-600 dark:text-gray-300">{t('color')}</label>
+                  <label for={`box-shadow-generator-field-9-${index}`} class="text-xs text-gray-600 dark:text-gray-300">{t('color')}</label>
                   <input type="color" value={shadow.color}
                     onchange={(e) => updateShadow(shadow.id, 'color', e.target.value)}
-                    class="w-8 h-8 rounded cursor-pointer" />
+                    class="w-8 h-8 rounded cursor-pointer" id={`box-shadow-generator-field-9-${index}`} />
                 </div>
                 <div class="flex-1">
-                  <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('opacity')}: {shadow.opacity}%</label>
+                  <label for={`box-shadow-generator-field-8-${index}`} class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('opacity')}: {shadow.opacity}%</label>
                   <input type="range" min="0" max="100" value={shadow.opacity}
                     onchange={(e) => updateShadow(shadow.id, 'opacity', parseInt(e.target.value))}
-                    class="w-full" />
+                    class="w-full" id={`box-shadow-generator-field-8-${index}`} />
                 </div>
                 <label class="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-300">
                   <input type="checkbox" checked={shadow.inset}
@@ -170,7 +170,7 @@
           </div>
           
           <div>
-            <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('output')}</label>
+            <div class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('output')}</div>
             <div class="bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg p-4 font-mono text-sm text-green-600 dark:text-green-400 break-all">
               box-shadow: {generateCss()};
             </div>

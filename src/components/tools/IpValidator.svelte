@@ -47,7 +47,7 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+        <label for="ip-validator-field-2" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
           {t('inputLabel')}
         </label>
         <div class="flex gap-2">
@@ -56,8 +56,7 @@
             bind:value={input}
             onkeydown={(e) => e.key === 'Enter' && handleValidate()}
             placeholder={t('placeholder')}
-            class="flex-1 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-amber-500"
-          />
+            class="flex-1 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-amber-500" id="ip-validator-field-2" />
           <button
             onclick={handleValidate}
             class="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"

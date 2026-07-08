@@ -62,12 +62,12 @@
 
     <div class="max-w-4xl mx-auto space-y-6">
       <div class="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700">
-        <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
+        <label for="string-obfuscator-field-3" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
         <textarea
           bind:value={input}
           rows={4}
           class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"
-          placeholder={t('inputPlaceholder')}></textarea>
+          placeholder={t('inputPlaceholder')} id="string-obfuscator-field-3"></textarea>
       </div>
 
       <div class="flex flex-wrap gap-4">
@@ -121,7 +121,7 @@
       {#if output}
 <div class="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700">
           <div class="flex justify-between items-center mb-2">
-            <label class="block text-sm font-medium text-gray-600 dark:text-gray-300">{t('result')} ({method})</label>
+            <div class="block text-sm font-medium text-gray-600 dark:text-gray-300">{t('result')} ({method})</div>
             <button
               onclick={() => navigator.clipboard.writeText(output)}
               class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300"

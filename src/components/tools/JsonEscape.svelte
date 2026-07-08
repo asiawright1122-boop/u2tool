@@ -56,11 +56,11 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
+        <label for="json-escape-field-3" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
         <textarea
           bind:value={input}
           placeholder={t('jsonEscape.placeholder')}
-          class="w-full h-40 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500"></textarea>
+          class="w-full h-40 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500" id="json-escape-field-3"></textarea>
       </div>
 
       <div class="flex gap-3">
@@ -74,7 +74,7 @@
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium text-gray-600 dark:text-gray-300">{t('output')}</label>
+          <div class="text-sm font-medium text-gray-600 dark:text-gray-300">{t('output')}</div>
           <button
             onclick={copyToClipboard}
             disabled={!output}

@@ -130,7 +130,7 @@
             { label: t('opacity'), value: opacity, set: setOpacity, min: 0, max: 100, unit: '%' },
           ] as { label, value, set, min, max, unit } (label)}
 <div >
-              <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{label}: {value}{unit}</label>
+              <div class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{label}: {value}{unit}</div>
               <input type="range" min={min} max={max} value={value}
                 onchange={(e) => set(parseInt(e.target.value))} class="w-full" />
             </div>
@@ -147,7 +147,7 @@
           </div>
 
           <div>
-            <label class="tool-label">{t('output')}</label>
+            <div class="tool-label">{t('output')}</div>
             <pre class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 font-mono text-sm text-green-600 dark:text-green-400">{getCss()}</pre>
           </div>
 

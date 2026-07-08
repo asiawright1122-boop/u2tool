@@ -93,53 +93,49 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="text-to-pdf-field-10" class="tool-label">
             {t('title')} ({t('optional')})
           </label>
           <input
             type="text"
             bind:value={title}
             placeholder={t('titlePlaceholder')}
-            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="text-to-pdf-field-10" />
         </div>
         <div class="grid grid-cols-3 gap-2">
           <div>
-            <label class="tool-label">
+            <label for="text-to-pdf-field-9" class="tool-label">
               {t('fontSize')}
             </label>
             <select
               value={fontSize}
               onchange={(e) => fontSize = Number(e.target.value)}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            >
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="text-to-pdf-field-9">
               {#each [10, 11, 12, 14, 16, 18, 20, 24] as size (size)}
 <option  value={size}>{size}pt</option>
 {/each}
             </select>
           </div>
           <div>
-            <label class="tool-label">
+            <label for="text-to-pdf-field-8" class="tool-label">
               {t('font')}
             </label>
             <select
               bind:value={fontFamily}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            >
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="text-to-pdf-field-8">
               <option value="Arial">Arial</option>
               <option value="Times New Roman">Times</option>
               <option value="Courier">Courier</option>
             </select>
           </div>
           <div>
-            <label class="tool-label">
+            <label for="text-to-pdf-field-7" class="tool-label">
               {t('pageSize')}
             </label>
             <select
               value={pageSize}
               onchange={(e) => pageSize = e.target.value as 'a4' | 'letter'}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            >
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="text-to-pdf-field-7">
               <option value="a4">A4</option>
               <option value="letter">Letter</option>
             </select>
@@ -148,14 +144,14 @@
       </div>
 
       <div>
-        <label class="tool-label">
+        <label for="text-to-pdf-field-6" class="tool-label">
           {t('content')}
         </label>
         <textarea
           bind:value={text}
           placeholder={t('contentPlaceholder')}
           class="w-full h-64 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono"
-          style="font-size: {fontSize}px"></textarea>
+          style="font-size: {fontSize}px" id="text-to-pdf-field-6"></textarea>
         <div class="mt-1 text-sm text-gray-500 dark:text-gray-400">
           {text.length} {t('characters')}
         </div>

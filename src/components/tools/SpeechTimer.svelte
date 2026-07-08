@@ -64,7 +64,7 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="speech-timer-field-4" class="tool-label">
             {t('targetDuration')} ({t('minutes')})
           </label>
           <input
@@ -74,11 +74,10 @@
             min="1"
             max="120"
             class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            disabled={isRunning}
-          />
+            disabled={isRunning} id="speech-timer-field-4" />
         </div>
         <div>
-          <label class="tool-label">
+          <label for="speech-timer-field-3" class="tool-label">
             {t('wordsPerMinute')}
           </label>
           <input
@@ -87,8 +86,7 @@
             onchange={(e) => wordsPerMinute = Math.max(50, parseInt(e.target.value) || 150)}
             min="50"
             max="300"
-            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="speech-timer-field-3" />
         </div>
       </div>
 

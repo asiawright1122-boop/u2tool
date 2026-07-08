@@ -92,22 +92,20 @@
       <!-- Options -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('className')}</label>
+          <label for="json-to-java-field-6" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('className')}</label>
           <input
             type="text"
             value={options.className}
             onchange={(e) => options = { ...options, className: e.target.value }}
-            class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
-          />
+            class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white" id="json-to-java-field-6" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('packageName')}</label>
+          <label for="json-to-java-field-5" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('packageName')}</label>
           <input
             type="text"
             value={options.packageName}
             onchange={(e) => options = { ...options, packageName: e.target.value }}
-            class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
-          />
+            class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white" id="json-to-java-field-5" />
         </div>
         <div class="flex flex-col gap-2">
           <label class="flex items-center gap-2 text-sm text-gray-600 dark:text-white">
@@ -146,7 +144,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-600 dark:text-gray-300">JSON</label>
+            <div class="text-sm font-medium text-gray-600 dark:text-gray-300">JSON</div>
             <button
               onclick={loadSample}
               class="px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded text-xs"
@@ -162,7 +160,7 @@
 
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-600 dark:text-gray-300">Java</label>
+            <div class="text-sm font-medium text-gray-600 dark:text-gray-300">Java</div>
             <button
               onclick={copyOutput}
               disabled={!output}

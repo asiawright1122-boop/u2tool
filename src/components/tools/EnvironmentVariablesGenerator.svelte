@@ -76,7 +76,7 @@
     <div class="space-y-6">
       <!-- Presets -->
       <div>
-        <label class="tool-label">Quick Presets</label>
+        <div class="tool-label">Quick Presets</div>
         <div class="flex flex-wrap gap-2">
           {#each Object.keys(PRESETS) as preset (preset)}
 <button 
@@ -92,7 +92,7 @@
       <!-- Variables -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">Environment Variables</label>
+          <div class="tool-label">Environment Variables</div>
           <button onclick={addVar} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">+ Add Variable</button>
         </div>
         <div class="space-y-2 max-h-64 overflow-y-auto">
@@ -137,7 +137,7 @@
 
       <!-- Format Selection -->
       <div>
-        <label class="tool-label">{tCommon('output')} Format</label>
+        <div class="tool-label">{tCommon('output')} Format</div>
         <div class="flex flex-wrap gap-2">
           {#each (['env', 'json', 'yaml', 'docker', 'shell'] as const) as fmt (fmt)}
 <button 
@@ -158,7 +158,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="tool-label">{tCommon('output')}</label>
+            <div class="tool-label">{tCommon('output')}</div>
             <button onclick={() => handleCopy(output, 'output')} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">
               {copied === 'output' ? tCommon('copied') : tCommon('copy')}
             </button>
@@ -169,7 +169,7 @@
         </div>
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="tool-label">.env.example</label>
+            <div class="tool-label">.env.example</div>
             <button onclick={() => handleCopy(exampleOutput, 'example')} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">
               {copied === 'example' ? tCommon('copied') : tCommon('copy')}
             </button>

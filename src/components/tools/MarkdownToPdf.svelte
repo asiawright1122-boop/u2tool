@@ -162,24 +162,22 @@ function hello() {
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="markdown-to-pdf-field-9" class="tool-label">
             {t('documentTitle')}
           </label>
           <input
             type="text"
             bind:value={title}
-            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="markdown-to-pdf-field-9" />
         </div>
         <div>
-          <label class="tool-label">
+          <label for="markdown-to-pdf-field-8" class="tool-label">
             {t('fontSize')}
           </label>
           <select
             value={fontSize}
             onchange={(e) => fontSize = parseInt(e.target.value)}
-            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="markdown-to-pdf-field-8">
             <option value={10}>10pt</option>
             <option value={11}>11pt</option>
             <option value={12}>12pt</option>
@@ -188,13 +186,12 @@ function hello() {
           </select>
         </div>
         <div>
-          <label class="tool-label">
+          <label for="markdown-to-pdf-field-7" class="tool-label">
             {t('pageSize')}
           </label>
           <select
             bind:value={pageSize}
-            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="markdown-to-pdf-field-7">
             <option value="a4">A4</option>
             <option value="letter">Letter</option>
             <option value="legal">Legal</option>
@@ -204,19 +201,19 @@ function hello() {
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
-          <label class="tool-label">
+          <label for="markdown-to-pdf-field-6" class="tool-label">
             {t('markdownInput')}
           </label>
           <textarea
             bind:value={markdown}
             class="w-full h-96 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm"
-            placeholder={t('inputPlaceholder')}></textarea>
+            placeholder={t('inputPlaceholder')} id="markdown-to-pdf-field-6"></textarea>
         </div>
 
         <div>
-          <label class="tool-label">
+          <div class="tool-label">
             {t('preview')}
-          </label>
+          </div>
           <div
             bind:this={previewRef}
             class="w-full h-96 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 overflow-auto prose prose-sm dark:prose-invert max-w-none"

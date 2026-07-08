@@ -113,12 +113,11 @@
     <div class="space-y-6">
       <div class="flex flex-wrap gap-4 items-center">
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">{t('mode')}:</label>
+          <label for="binary-to-decimal-field-7" class="text-sm text-gray-600 dark:text-gray-300">{t('mode')}:</label>
           <select
             value={mode}
             onchange={(e) => { mode = e.target.value as ConversionMode; output = ''; error = ''; }}
-            class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-          >
+            class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="binary-to-decimal-field-7">
             <option value="binToDec">{t('binToDec')}</option>
             <option value="decToBin">{t('decToBin')}</option>
             <option value="binToHex">{t('binToHex')}</option>
@@ -128,12 +127,11 @@
 
         {#if mode === 'decToBin' || mode === 'hexToBin'}
 <div class="flex items-center gap-2">
-            <label class="text-sm text-gray-600 dark:text-gray-300">{t('bitLength')}:</label>
+            <label for="binary-to-decimal-field-6" class="text-sm text-gray-600 dark:text-gray-300">{t('bitLength')}:</label>
             <select
               value={bitLength}
               onchange={(e) => bitLength = parseInt(e.target.value) as 8 | 16 | 32 | 64}
-              class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-            >
+              class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="binary-to-decimal-field-6">
               <option value="8">{t('bit8')}</option>
               <option value="16">{t('bit16')}</option>
               <option value="32">{t('bit32')}</option>
@@ -152,20 +150,20 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-2">
-          <label class="tool-label">
+          <label for="binary-to-decimal-field-5" class="tool-label">
             {t('input')}
           </label>
           <textarea
             bind:value={input}
             placeholder={t('inputPlaceholder')}
-            class="w-full h-32 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono"></textarea>
+            class="w-full h-32 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono" id="binary-to-decimal-field-5"></textarea>
         </div>
 
         <div class="space-y-2">
           <div class="flex items-center justify-between">
-            <label class="tool-label">
+            <div class="tool-label">
               {t('output')}
-            </label>
+            </div>
             {#if output}
 <button
                 onclick={handleCopy}

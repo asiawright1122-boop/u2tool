@@ -103,7 +103,7 @@
       <!-- Personal Info -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="email-signature-generator-field-21" class="tool-label">
             {t('name')}
           </label>
           <input
@@ -111,11 +111,10 @@
             value={config.name}
             onchange={(e) => config = ({ ...config, name: e.target.value })}
             placeholder={t('namePlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="email-signature-generator-field-21" />
         </div>
         <div>
-          <label class="tool-label">
+          <label for="email-signature-generator-field-20" class="tool-label">
             {t('title')}
           </label>
           <input
@@ -123,11 +122,10 @@
             value={config.title}
             onchange={(e) => config = ({ ...config, title: e.target.value })}
             placeholder={t('titlePlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="email-signature-generator-field-20" />
         </div>
         <div>
-          <label class="tool-label">
+          <label for="email-signature-generator-field-19" class="tool-label">
             {t('company')}
           </label>
           <input
@@ -135,11 +133,10 @@
             value={config.company}
             onchange={(e) => config = ({ ...config, company: e.target.value })}
             placeholder={t('companyPlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="email-signature-generator-field-19" />
         </div>
         <div>
-          <label class="tool-label">
+          <label for="email-signature-generator-field-18" class="tool-label">
             {t('email')}
           </label>
           <input
@@ -147,11 +144,10 @@
             value={config.email}
             onchange={(e) => config = ({ ...config, email: e.target.value })}
             placeholder={t('emailPlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="email-signature-generator-field-18" />
         </div>
         <div>
-          <label class="tool-label">
+          <label for="email-signature-generator-field-17" class="tool-label">
             {t('phone')}
           </label>
           <input
@@ -159,11 +155,10 @@
             value={config.phone}
             onchange={(e) => config = ({ ...config, phone: e.target.value })}
             placeholder={t('phonePlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="email-signature-generator-field-17" />
         </div>
         <div>
-          <label class="tool-label">
+          <label for="email-signature-generator-field-16" class="tool-label">
             {t('website')}
           </label>
           <input
@@ -171,15 +166,14 @@
             value={config.website}
             onchange={(e) => config = ({ ...config, website: e.target.value })}
             placeholder={t('websitePlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="email-signature-generator-field-16" />
         </div>
       </div>
 
       <!-- Social Links -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="email-signature-generator-field-15" class="tool-label">
             LinkedIn
           </label>
           <input
@@ -187,11 +181,10 @@
             value={config.linkedin}
             onchange={(e) => config = ({ ...config, linkedin: e.target.value })}
             placeholder={t('usernamePlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="email-signature-generator-field-15" />
         </div>
         <div>
-          <label class="tool-label">
+          <label for="email-signature-generator-field-14" class="tool-label">
             Twitter
           </label>
           <input
@@ -199,11 +192,10 @@
             value={config.twitter}
             onchange={(e) => config = ({ ...config, twitter: e.target.value })}
             placeholder={t('usernamePlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="email-signature-generator-field-14" />
         </div>
         <div>
-          <label class="tool-label">
+          <label for="email-signature-generator-field-13" class="tool-label">
             GitHub
           </label>
           <input
@@ -211,16 +203,15 @@
             value={config.github}
             onchange={(e) => config = ({ ...config, github: e.target.value })}
             placeholder={t('usernamePlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="email-signature-generator-field-13" />
         </div>
       </div>
 
       <!-- Style Selection -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('style')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each styles as s (s.id)}
 <button 
@@ -239,7 +230,7 @@
 
       <!-- Color Selection -->
       <div>
-        <label class="tool-label">
+        <label for="email-signature-generator-field-12" class="tool-label">
           {t('primaryColor')}
         </label>
         <div class="flex flex-wrap gap-2">
@@ -256,8 +247,7 @@
             type="color"
             value={config.primaryColor}
             onchange={(e) => config = ({ ...config, primaryColor: e.target.value })}
-            class="w-8 h-8 rounded cursor-pointer"
-          />
+            class="w-8 h-8 rounded cursor-pointer" id="email-signature-generator-field-12" />
         </div>
       </div>
 

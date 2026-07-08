@@ -87,15 +87,15 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('input')}</label>
+          <label for="grammar-checker-field-3" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('input')}</label>
           <textarea
             bind:value={input}
             class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
-            placeholder={t('inputPlaceholder')}></textarea>
+            placeholder={t('inputPlaceholder')} id="grammar-checker-field-3"></textarea>
         </div>
 
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('preview')}</label>
+          <div class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('preview')}</div>
           <div 
             class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white overflow-auto">{@html getHighlightedText() || escapeHtmlAttribute(t('noErrors'))}</div>
         </div>

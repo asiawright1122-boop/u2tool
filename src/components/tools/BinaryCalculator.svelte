@@ -86,7 +86,7 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label for="binary-calculator-field-7" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           {t('operand1')}
         </label>
         <input
@@ -94,14 +94,13 @@
           value={operand1}
           onchange={(e) => operand1 = e.target.value.replace(/[^01]/g, '')}
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono"
-          placeholder="1010"
-        />
+          placeholder="1010" id="binary-calculator-field-7" />
       </div>
 
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('operation')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each operations as op (op.value)}
 <button 
@@ -120,7 +119,7 @@
 
       {#if needsSecondOperand}
 <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="binary-calculator-field-6" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('operand2')}
           </label>
           <input
@@ -128,14 +127,13 @@
             value={operand2}
             onchange={(e) => operand2 = e.target.value.replace(/[^01]/g, '')}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono"
-            placeholder="0101"
-          />
+            placeholder="0101" id="binary-calculator-field-6" />
         </div>
 {/if}
 
       {#if isShiftOperation}
 <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="binary-calculator-field-5" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('shiftAmount')}
           </label>
           <input
@@ -143,8 +141,7 @@
             bind:value={shiftAmount}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
             min="1"
-            max="32"
-          />
+            max="32" id="binary-calculator-field-5" />
         </div>
 {/if}
 

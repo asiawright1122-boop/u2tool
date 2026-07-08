@@ -104,30 +104,27 @@
       <!-- Options -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('className')}</label>
+          <label for="json-to-kotlin-field-8" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('className')}</label>
           <input
             type="text"
             value={options.className}
             onchange={(e) => options = { ...options, className: e.target.value }}
-            class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
-          />
+            class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white" id="json-to-kotlin-field-8" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('packageName')}</label>
+          <label for="json-to-kotlin-field-7" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('packageName')}</label>
           <input
             type="text"
             value={options.packageName}
             onchange={(e) => options = { ...options, packageName: e.target.value }}
-            class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
-          />
+            class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white" id="json-to-kotlin-field-7" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('serializer')}</label>
+          <label for="json-to-kotlin-field-6" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('serializer')}</label>
           <select
             value={options.useMoshi ? 'moshi' : options.useGson ? 'gson' : options.useKotlinx ? 'kotlinx' : 'none'}
             onchange={(e) => handleSerializerChange(e.target.value as 'none' | 'moshi' | 'gson' | 'kotlinx')}
-            class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
-          >
+            class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white" id="json-to-kotlin-field-6">
             <option value="none">{t('noSerializer')}</option>
             <option value="moshi">Moshi</option>
             <option value="gson">Gson</option>
@@ -160,7 +157,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-600 dark:text-gray-300">{t('input')}</label>
+            <div class="text-sm font-medium text-gray-600 dark:text-gray-300">{t('input')}</div>
             <button
               onclick={loadSample}
               class="px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded text-xs"
@@ -176,7 +173,7 @@
 
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-600 dark:text-gray-300">{t('output')}</label>
+            <div class="text-sm font-medium text-gray-600 dark:text-gray-300">{t('output')}</div>
             <button
               onclick={copyOutput}
               disabled={!output}

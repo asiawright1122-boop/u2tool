@@ -67,7 +67,7 @@
 
       <!-- Input -->
       <div>
-        <label class="tool-label">
+        <label for="rot13-encoder-field-3" class="tool-label">
           {tCommon('input')}
         </label>
         <textarea
@@ -75,8 +75,7 @@
           onchange={(e) => handleInputChange(e.target.value)}
           placeholder={t('inputPlaceholder')}
           rows={6}
-          class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono focus:ring-2 focus:ring-amber-500 focus:border-transparent resize-none"
-        ></textarea>
+          class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono focus:ring-2 focus:ring-amber-500 focus:border-transparent resize-none" id="rot13-encoder-field-3"></textarea>
       </div>
 
       <!-- Actions -->
@@ -105,9 +104,9 @@
       <!-- Output -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+          <div class="text-sm font-medium text-gray-700 dark:text-gray-300">
             {tCommon('output')}
-          </label>
+          </div>
           {#if output}
 <button
               onclick={copyToClipboard}

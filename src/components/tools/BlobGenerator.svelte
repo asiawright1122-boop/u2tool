@@ -109,7 +109,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <label for="blob-generator-field-10" class="tool-label">
               {t('complexity')}: {complexity}
             </label>
             <input
@@ -118,12 +118,11 @@
               max="12"
               value={complexity}
               onchange={(e) => complexity = Number(e.target.value)}
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-            />
+              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id="blob-generator-field-10" />
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="blob-generator-field-9" class="tool-label">
               {t('contrast')}: {contrast}%
             </label>
             <input
@@ -132,14 +131,13 @@
               max="100"
               value={contrast}
               onchange={(e) => contrast = Number(e.target.value)}
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-            />
+              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id="blob-generator-field-9" />
           </div>
         </div>
 
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <label for="blob-generator-field-8" class="tool-label">
               {t('size')}: {size}px
             </label>
             <input
@@ -148,20 +146,18 @@
               max="400"
               value={size}
               onchange={(e) => size = Number(e.target.value)}
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-            />
+              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id="blob-generator-field-8" />
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="blob-generator-field-7" class="tool-label">
               {t('color')}
             </label>
             <div class="flex items-center gap-3">
               <input
                 type="color"
                 bind:value={color}
-                class="w-12 h-10 rounded cursor-pointer"
-              />
+                class="w-12 h-10 rounded cursor-pointer" id="blob-generator-field-7" />
               <input
                 type="text"
                 bind:value={color}
@@ -196,9 +192,9 @@
 
       <!-- SVG Output -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           SVG {common('output')}
-        </label>
+        </div>
         <pre class="p-4 bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm font-mono max-h-48">
           {svgCode}
         </pre>
@@ -206,9 +202,9 @@
 
       <!-- CSS Output -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           CSS clip-path
-        </label>
+        </div>
         <pre class="p-4 bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm font-mono">
           {cssCode}
         </pre>

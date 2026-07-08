@@ -71,14 +71,13 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="invisible-character-generator-field-4" class="tool-label">
             {t('selectCharacter')}
           </label>
           <select
             value={selectedChar.unicode}
             onchange={(e) => selectedChar = invisibleChars.find(c => c.unicode === e.target.value) || invisibleChars[0]}
-            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="invisible-character-generator-field-4">
             {#each invisibleChars as char (char.unicode)}
 <option  value={char.unicode}>
                 {char.name} ({char.unicode})
@@ -87,7 +86,7 @@
           </select>
         </div>
         <div>
-          <label class="tool-label">
+          <label for="invisible-character-generator-field-3" class="tool-label">
             {t('repeatCount')}
           </label>
           <input
@@ -96,8 +95,7 @@
             onchange={(e) => count = Math.max(1, Math.min(100, parseInt(e.target.value) || 1))}
             min="1"
             max="100"
-            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="invisible-character-generator-field-3" />
         </div>
       </div>
 

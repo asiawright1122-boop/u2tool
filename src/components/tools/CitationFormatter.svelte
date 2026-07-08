@@ -97,12 +97,11 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('sourceType')}</label>
+          <label for="citation-formatter-field-25" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('sourceType')}</label>
           <select
             value={citation.type}
             onchange={(e) => updateCitation('type', e.target.value as Citation['type'])}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="citation-formatter-field-25">
             <option value="book">Book</option>
             <option value="journal">Journal Article</option>
             <option value="article">Article</option>
@@ -110,94 +109,85 @@
           </select>
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('year')}</label>
+          <label for="citation-formatter-field-24" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('year')}</label>
           <input
             type="text"
             value={citation.year}
             onchange={(e) => updateCitation('year', e.target.value)}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="citation-formatter-field-24" />
         </div>
         <div class="md:col-span-2">
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('authors')} ({t('authorsHint')})</label>
+          <label for="citation-formatter-field-23" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('authors')} ({t('authorsHint')})</label>
           <input
             type="text"
             value={citation.authors}
             onchange={(e) => updateCitation('authors', e.target.value)}
             placeholder={t("authorsPlaceholder")}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="citation-formatter-field-23" />
         </div>
         <div class="md:col-span-2">
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('title')}</label>
+          <label for="citation-formatter-field-22" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('title')}</label>
           <input
             type="text"
             value={citation.title}
             onchange={(e) => updateCitation('title', e.target.value)}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="citation-formatter-field-22" />
         </div>
         
         {#if citation.type === 'book' || citation.type === 'website'}
 <div class="md:col-span-2">
-            <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('publisher')}</label>
+            <label for="citation-formatter-field-21" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('publisher')}</label>
             <input
               type="text"
               value={citation.publisher}
               onchange={(e) => updateCitation('publisher', e.target.value)}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            />
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="citation-formatter-field-21" />
           </div>
 {/if}
         
         {#if citation.type === 'journal' || citation.type === 'article'}
 
             <div class="md:col-span-2">
-              <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('journalName')}</label>
+              <label for="citation-formatter-field-20" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('journalName')}</label>
               <input
                 type="text"
                 value={citation.journal}
                 onchange={(e) => updateCitation('journal', e.target.value)}
-                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              />
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="citation-formatter-field-20" />
             </div>
             <div>
-              <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('volume')}</label>
+              <label for="citation-formatter-field-19" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('volume')}</label>
               <input
                 type="text"
                 value={citation.volume}
                 onchange={(e) => updateCitation('volume', e.target.value)}
-                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              />
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="citation-formatter-field-19" />
             </div>
             <div>
-              <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('issue')}</label>
+              <label for="citation-formatter-field-18" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('issue')}</label>
               <input
                 type="text"
                 value={citation.issue}
                 onchange={(e) => updateCitation('issue', e.target.value)}
-                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              />
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="citation-formatter-field-18" />
             </div>
             <div>
-              <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('pages')}</label>
+              <label for="citation-formatter-field-17" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('pages')}</label>
               <input
                 type="text"
                 value={citation.pages}
                 onchange={(e) => updateCitation('pages', e.target.value)}
                 placeholder={t("pagesPlaceholder")}
-                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              />
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="citation-formatter-field-17" />
             </div>
             <div>
-              <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('doi')}</label>
+              <label for="citation-formatter-field-16" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('doi')}</label>
               <input
                 type="text"
                 value={citation.doi}
                 onchange={(e) => updateCitation('doi', e.target.value)}
                 placeholder={t("doiPlaceholder")}
-                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              />
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="citation-formatter-field-16" />
             </div>
           
 {/if}
@@ -205,23 +195,21 @@
         {#if citation.type === 'website'}
 
             <div>
-              <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('url')}</label>
+              <label for="citation-formatter-field-15" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('url')}</label>
               <input
                 type="text"
                 value={citation.url}
                 onchange={(e) => updateCitation('url', e.target.value)}
-                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              />
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="citation-formatter-field-15" />
             </div>
             <div>
-              <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('accessDate')}</label>
+              <label for="citation-formatter-field-14" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('accessDate')}</label>
               <input
                 type="text"
                 value={citation.accessDate}
                 onchange={(e) => updateCitation('accessDate', e.target.value)}
                 placeholder={t("datePlaceholder")}
-                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              />
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="citation-formatter-field-14" />
             </div>
           
 {/if}
@@ -229,9 +217,9 @@
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">
+          <div class="tool-label">
             {t('formattedCitation')} ({style.toUpperCase()})
-          </label>
+          </div>
           <button
             onclick={handleCopy}
             class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"

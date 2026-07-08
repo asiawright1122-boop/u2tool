@@ -82,17 +82,16 @@
         <!-- Settings -->
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium mb-2">{t('uploadImage')}</label>
+            <label for="image-frosted-glass-field-5" class="block text-sm font-medium mb-2">{t('uploadImage')}</label>
             <input
               type="file"
               accept="image/*"
               onchange={handleImageUpload}
-              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700"
-            />
+              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700" id="image-frosted-glass-field-5" />
           </div>
 
           <div>
-            <label class="block text-sm font-medium mb-2">{t('presets')}</label>
+            <div class="block text-sm font-medium mb-2">{t('presets')}</div>
             <div class="flex gap-2">
               {#each presets as preset (preset.value)}
 <button 
@@ -110,7 +109,7 @@
           </div>
 
           <div>
-            <label class="block text-sm font-medium mb-2">
+            <label for="image-frosted-glass-field-4" class="block text-sm font-medium mb-2">
               {t('blurIntensity')}: {blurIntensity}px
             </label>
             <input
@@ -119,8 +118,7 @@
               max="50"
               value={blurIntensity}
               onchange={(e) => blurIntensity = Number(e.target.value)}
-              class="w-full"
-            />
+              class="w-full" id="image-frosted-glass-field-4" />
           </div>
 
           <button

@@ -141,15 +141,14 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <label for="svg-editor-field-13" class="tool-label">
               {t('svgCode')}
             </label>
             <textarea
               value={svgCode}
               onchange={(e) => handleCodeChange(e.target.value)}
               placeholder={t('placeholder')}
-              class="w-full h-64 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm"
-            ></textarea>
+              class="w-full h-64 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm" id="svg-editor-field-13"></textarea>
           </div>
 
           <div class="flex gap-4">
@@ -177,52 +176,48 @@
 
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <label class="tool-label">
+              <label for="svg-editor-field-12" class="tool-label">
                 {t('width')}
               </label>
               <input
                 type="number"
                 value={width}
                 onchange={(e) => width = Number(e.target.value)}
-                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              />
+                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="svg-editor-field-12" />
             </div>
             <div>
-              <label class="tool-label">
+              <label for="svg-editor-field-11" class="tool-label">
                 {t('height')}
               </label>
               <input
                 type="number"
                 value={height}
                 onchange={(e) => height = Number(e.target.value)}
-                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              />
+                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="svg-editor-field-11" />
             </div>
           </div>
 
           <div class="grid grid-cols-3 gap-4">
             <div>
-              <label class="tool-label">
+              <label for="svg-editor-field-10" class="tool-label">
                 {t('fill')}
               </label>
               <input
                 type="color"
                 bind:value={fill}
-                class="w-full h-10 rounded cursor-pointer"
-              />
+                class="w-full h-10 rounded cursor-pointer" id="svg-editor-field-10" />
             </div>
             <div>
-              <label class="tool-label">
+              <label for="svg-editor-field-9" class="tool-label">
                 {t('stroke')}
               </label>
               <input
                 type="color"
                 bind:value={stroke}
-                class="w-full h-10 rounded cursor-pointer"
-              />
+                class="w-full h-10 rounded cursor-pointer" id="svg-editor-field-9" />
             </div>
             <div>
-              <label class="tool-label">
+              <label for="svg-editor-field-8" class="tool-label">
                 {t('strokeWidth')}
               </label>
               <input
@@ -231,8 +226,7 @@
                 onchange={(e) => strokeWidth = Number(e.target.value)}
                 min="0"
                 max="20"
-                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              />
+                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="svg-editor-field-8" />
             </div>
           </div>
 
@@ -246,9 +240,9 @@
 
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <div class="tool-label">
               {t('preview')}
-            </label>
+            </div>
             <div class="border border-gray-300 dark:border-gray-600 rounded-lg p-4 min-h-64 flex items-center justify-center bg-[url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAADFJREFUOE9jZGBg+M+ABRw9epQRm3QYGxvDJRgZGRmxKcamBpsabGqwqcGmBpsabGoAAPvfB/1uTd4UAAAAAElFTkSuQmCC')]">
               {#if previewUrl}
 <img src={previewUrl} alt="SVG Preview" class="max-w-full max-h-64" />

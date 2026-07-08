@@ -146,7 +146,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label class="block text-sm font-medium mb-3">{tg('columnSizes')}</label>
+          <label for="css-grid-generator-field-6" class="block text-sm font-medium mb-3">{tg('columnSizes')}</label>
           <div class="space-y-2">
             {#each columnSizes as size, i (i)}
 <div  class="flex items-center gap-3">
@@ -158,8 +158,7 @@
                     newSizes[i] = e.target.value;
                     columnSizes = newSizes;
                   }}
-                  class="tool-input flex-1 min-w-0"
-                >
+                  class="tool-input flex-1 min-w-0" id="css-grid-generator-field-6">
                   {#each sizeOptions as opt (opt)}
 <option  value={opt}>{opt}</option>
 {/each}
@@ -169,7 +168,7 @@
           </div>
         </div>
         <div>
-          <label class="block text-sm font-medium mb-3">{tg('rowSizes')}</label>
+          <label for="css-grid-generator-field-5" class="block text-sm font-medium mb-3">{tg('rowSizes')}</label>
           <div class="space-y-2">
             {#each rowSizes as size, i (i)}
 <div  class="flex items-center gap-3">
@@ -181,8 +180,7 @@
                     newSizes[i] = e.target.value;
                     rowSizes = newSizes;
                   }}
-                  class="tool-input flex-1 min-w-0"
-                >
+                  class="tool-input flex-1 min-w-0" id="css-grid-generator-field-5">
                   {#each sizeOptions as opt (opt)}
 <option  value={opt}>{opt}</option>
 {/each}
@@ -195,7 +193,7 @@
 
       <!-- Preview -->
       <div>
-        <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{tg('preview')}</label>
+        <div class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{tg('preview')}</div>
         <div
           class="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg min-h-[200px]"
           style={getPreviewStyle()}
@@ -213,7 +211,7 @@
       <!-- CSS Output -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium">{tg('generatedCss')}</label>
+          <div class="text-sm font-medium">{tg('generatedCss')}</div>
           <button
             onclick={copyCSS}
             class={`text-sm px-3 py-1 rounded ${copied ? 'bg-emerald-500' : 'bg-gray-700 hover:bg-gray-600'}`}

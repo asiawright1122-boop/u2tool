@@ -71,24 +71,22 @@
     <div class="space-y-6">
       <div class="flex flex-wrap gap-4 items-center">
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">Format</label>
+          <label for="document-outline-generator-field-7" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">Format</label>
           <select
             value={options.format}
             onchange={(e) => updateOption('format', e.target.value as OutlineOptions['format'])}
-            class="px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="document-outline-generator-field-7">
             <option value="markdown">Markdown</option>
             <option value="html">HTML</option>
             <option value="text">Plain Text</option>
           </select>
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">Max Depth</label>
+          <label for="document-outline-generator-field-6" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">Max Depth</label>
           <select
             value={options.maxDepth}
             onchange={(e) => updateOption('maxDepth', parseInt(e.target.value))}
-            class="px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="document-outline-generator-field-6">
             {#each [1, 2, 3, 4, 5, 6] as n (n)}
 <option  value={n}>H1-H{n}</option>
 {/each}
@@ -106,21 +104,21 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="document-outline-generator-field-5" class="tool-label">
             Document Content
           </label>
           <textarea
             bind:value={content}
             placeholder={t("inputPlaceholder")}
             rows={16}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm resize-none"></textarea>
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm resize-none" id="document-outline-generator-field-5"></textarea>
         </div>
 
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="tool-label">
+            <div class="tool-label">
               Generated Outline ({headings.length} headings)
-            </label>
+            </div>
             <button
               onclick={handleCopy}
               class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"

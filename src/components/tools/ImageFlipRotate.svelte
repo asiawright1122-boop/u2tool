@@ -105,17 +105,16 @@
         <!-- Settings -->
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium mb-2">{t('uploadImage')}</label>
+            <label for="image-flip-rotate-field-4" class="block text-sm font-medium mb-2">{t('uploadImage')}</label>
             <input
               type="file"
               accept="image/*"
               onchange={handleImageUpload}
-              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700"
-            />
+              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700" id="image-flip-rotate-field-4" />
           </div>
 
           <div>
-            <label class="block text-sm font-medium mb-2">{t('flip')}</label>
+            <div class="block text-sm font-medium mb-2">{t('flip')}</div>
             <div class="flex gap-2">
               <button
                 onclick={() => flipH = !flipH}
@@ -133,7 +132,7 @@
           </div>
 
           <div>
-            <label class="block text-sm font-medium mb-2">{t('rotation')}: {rotation}°</label>
+            <div class="block text-sm font-medium mb-2">{t('rotation')}: {rotation}°</div>
             <div class="flex gap-2 mb-2">
               {#each rotatePresets as deg (deg)}
 <button 

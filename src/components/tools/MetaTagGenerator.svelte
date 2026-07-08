@@ -214,7 +214,7 @@
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium">{t('metaTagGenerator.generatedMetaTags')}</label>
+          <div class="text-sm font-medium">{t('metaTagGenerator.generatedMetaTags')}</div>
           <button
             onclick={copyOutput}
             class={`text-sm px-3 py-1 rounded text-white ${copied ? 'bg-emerald-500' : 'bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600'}`}

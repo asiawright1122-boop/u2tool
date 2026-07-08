@@ -119,7 +119,7 @@
 
     <div class="space-y-6">
       <div>
-        <label class="tool-label">
+        <label for="xml-validator-field-2" class="tool-label">
           {t('xmlInput')}
         </label>
         <textarea
@@ -129,8 +129,7 @@
             result = null;
           }}
           placeholder={t('placeholder')}
-          class="w-full h-80 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm"
-        ></textarea>
+          class="w-full h-80 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm" id="xml-validator-field-2"></textarea>
       </div>
 
       <div class="flex gap-4 flex-wrap">

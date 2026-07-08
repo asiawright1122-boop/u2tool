@@ -141,9 +141,9 @@
 
       <!-- Highlighted Result -->
       <div>
-        <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
+        <div class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
           {t('result')} ({matches.length} {t('match')}{matches.length !== 1 ? 'es' : ''})
-        </label>
+        </div>
         <div
           class="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm whitespace-pre-wrap text-gray-900 dark:text-white">{@html highlightedText}</div>
       </div>
@@ -151,7 +151,7 @@
       <!-- Matches List -->
       {#if matches.length > 0}
 <div>
-          <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('matches')}</label>
+          <div class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('matches')}</div>
           <div class="space-y-2">
             {#each matches as m, i (i)}
 <div  class="p-2 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded text-sm">

@@ -159,20 +159,20 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label for="text-to-handwriting-field-8" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           {t('text')}
         </label>
         <textarea
           bind:value={text}
           class="w-full h-24 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
-          placeholder={tc('inputPlaceholder')}></textarea>
+          placeholder={tc('inputPlaceholder')} id="text-to-handwriting-field-8"></textarea>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div>
-          <label class="tool-label">
+          <div class="tool-label">
             {t('style')}
-          </label>
+          </div>
           <div class="space-y-1">
             {#each handwritingStyles as s (s.name)}
 <button 
@@ -190,9 +190,9 @@
         </div>
 
         <div>
-          <label class="tool-label">
+          <div class="tool-label">
             {t('paper')}
-          </label>
+          </div>
           <div class="space-y-1">
             {#each paperStyles as p (p.name)}
 <button 
@@ -210,14 +210,13 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="text-to-handwriting-field-7" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('inkColor')}
           </label>
           <input
             type="color"
             bind:value={inkColor}
-            class="w-full h-10 rounded-lg cursor-pointer"
-          />
+            class="w-full h-10 rounded-lg cursor-pointer" id="text-to-handwriting-field-7" />
           <div class="flex gap-1 mt-2">
             {#each ['#1a365d', '#000000', '#2d3748', '#744210', '#22543d'] as color (color)}
 <button 
@@ -230,7 +229,7 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="text-to-handwriting-field-6" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('fontSize')}: {fontSize}px
           </label>
           <input
@@ -239,8 +238,7 @@
             oninput={(e) => fontSize = parseInt((e.currentTarget as HTMLInputElement).value)}
             min="16"
             max="48"
-            class="w-full"
-          />
+            class="w-full" id="text-to-handwriting-field-6" />
         </div>
       </div>
 

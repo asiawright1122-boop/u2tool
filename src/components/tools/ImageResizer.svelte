@@ -108,22 +108,20 @@
             <div class="space-y-4">
               <div class="flex items-center gap-4">
                 <div>
-                  <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('imageResizer.width')}</label>
+                  <label for="image-resizer-field-4" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('imageResizer.width')}</label>
                   <input
                     type="number"
                     value={newWidth}
                     onchange={(e) => handleWidthChange(Number(e.target.value))}
-                    class="w-24 tool-input"
-                  />
+                    class="w-24 tool-input" id="image-resizer-field-4" />
                 </div>
                 <div>
-                  <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('imageResizer.height')}</label>
+                  <label for="image-resizer-field-3" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('imageResizer.height')}</label>
                   <input
                     type="number"
                     value={newHeight}
                     onchange={(e) => handleHeightChange(Number(e.target.value))}
-                    class="w-24 tool-input"
-                  />
+                    class="w-24 tool-input" id="image-resizer-field-3" />
                 </div>
                 <label class="flex items-center gap-2 mt-5">
                   <input type="checkbox" bind:checked={lockRatio} />

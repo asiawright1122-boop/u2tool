@@ -68,33 +68,30 @@
     <div class="space-y-4">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div>
-          <label class="block text-sm text-gray-700 dark:text-gray-300 mb-1">{t('min')}</label>
+          <label for="random-generator-field-6" class="block text-sm text-gray-700 dark:text-gray-300 mb-1">{t('min')}</label>
           <input
             type="number"
             value={min}
             onchange={(e) => min = Number(e.target.value)}
-            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none"
-          />
+            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none" id="random-generator-field-6" />
         </div>
         <div>
-          <label class="block text-sm text-gray-700 dark:text-gray-300 mb-1">{t('max')}</label>
+          <label for="random-generator-field-5" class="block text-sm text-gray-700 dark:text-gray-300 mb-1">{t('max')}</label>
           <input
             type="number"
             value={max}
             onchange={(e) => max = Number(e.target.value)}
-            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none"
-          />
+            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none" id="random-generator-field-5" />
         </div>
         <div>
-          <label class="block text-sm text-gray-700 dark:text-gray-300 mb-1">{tg('count')}</label>
+          <label for="random-generator-field-4" class="block text-sm text-gray-700 dark:text-gray-300 mb-1">{tg('count')}</label>
           <input
             type="number"
             value={count}
             min={1}
             max={1000}
             onchange={(e) => count = Math.min(1000, Math.max(1, Number(e.target.value)))}
-            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none"
-          />
+            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none" id="random-generator-field-4" />
         </div>
         <div class="flex items-end">
           <label class="flex items-center gap-2 cursor-pointer text-gray-700 dark:text-gray-200">

@@ -159,22 +159,22 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <!-- Input -->
         <div>
-          <label class="tool-label">
+          <label for="graphql-formatter-field-3" class="tool-label">
             {tc('input')}
           </label>
           <textarea
             bind:value={input}
             placeholder={t('placeholder')}
             rows={15}
-            class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm"></textarea>
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm" id="graphql-formatter-field-3"></textarea>
         </div>
 
         <!-- Output -->
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">
               {tc('output')}
-            </label>
+            </div>
             {#if output}
 <button
                 onclick={copyToClipboard}

@@ -82,7 +82,7 @@
     <div class="space-y-6">
       <!-- Topic Input -->
       <div>
-        <label class="tool-label">
+        <label for="hashtag-generator-field-8" class="tool-label">
           {t('topic')}
         </label>
         <input
@@ -90,15 +90,14 @@
           bind:value={topic}
           placeholder={t('topicPlaceholder')}
           class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          onkeydown={(e) => e.key === 'Enter' && handleGenerate()}
-        />
+          onkeydown={(e) => e.key === 'Enter' && handleGenerate()} id="hashtag-generator-field-8" />
       </div>
 
       <!-- Platform Selection -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('platform')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each platforms as p (p.id)}
 <button 
@@ -121,7 +120,7 @@
 
       <!-- Count Slider -->
       <div>
-        <label class="tool-label">
+        <label for="hashtag-generator-field-7" class="tool-label">
           {t('count')}: {count}
         </label>
         <input
@@ -130,15 +129,14 @@
           max={PLATFORM_LIMITS[platform]}
           value={count}
           onchange={(e) => count = parseInt(e.target.value)}
-          class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer"
-        />
+          class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer" id="hashtag-generator-field-7" />
       </div>
 
       <!-- Quick Topics -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('quickTopics')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each ['travel', 'food', 'fitness', 'fashion', 'tech', 'business', 'photography', 'art', 'music'] as quickTopic (quickTopic)}
 <button 
@@ -246,14 +244,14 @@
 
           <!-- Copy Box -->
           <div>
-            <label class="tool-label">
+            <label for="hashtag-generator-field-6" class="tool-label">
               {t('copyBox')}
             </label>
             <textarea
               value={result.hashtags.join(' ')}
               readOnly
               rows={4}
-              class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 text-sm resize-none"></textarea>
+              class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 text-sm resize-none" id="hashtag-generator-field-6"></textarea>
           </div>
         </div>
 {/if}

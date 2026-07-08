@@ -99,7 +99,7 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="vat-calculator-field-10" class="tool-label">
             {t('amount')}
           </label>
           <div class="relative">
@@ -110,20 +110,18 @@
               class="tool-input pl-8 text-lg"
               placeholder="100.00"
               min="0"
-              step="0.01"
-            />
+              step="0.01" id="vat-calculator-field-10" />
           </div>
         </div>
 
         <div>
-          <label class="tool-label">
+          <label for="vat-calculator-field-9" class="tool-label">
             {t('calculationMode')}
           </label>
           <select
             value={mode}
             onchange={(e) => mode = e.target.value as CalculationMode}
-            class="tool-select"
-          >
+            class="tool-select" id="vat-calculator-field-9">
             <option value="addVat">{t('addVat')}</option>
             <option value="removeVat">{t('removeVat')}</option>
             <option value="vatOnly">{t('vatOnly')}</option>
@@ -145,7 +143,7 @@
 
         {#if useCustomRate}
 <div>
-            <label class="tool-label">
+            <label for="vat-calculator-field-8" class="tool-label">
               {t('customRate')}
             </label>
             <div class="relative w-48">
@@ -156,15 +154,14 @@
                 placeholder="19"
                 min="0"
                 max="100"
-                step="0.1"
-              />
+                step="0.1" id="vat-calculator-field-8" />
               <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">%</span>
             </div>
           </div>
 {:else}
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label class="tool-label">
+              <label for="vat-calculator-field-7" class="tool-label">
                 {t('country')}
               </label>
               <select
@@ -174,8 +171,7 @@
                   selectedRateType = 'standard';
                   reducedIndex = 0;
                 }}
-                class="tool-select"
-              >
+                class="tool-select" id="vat-calculator-field-7">
                 {#each Object.entries(vatRates) as [code, data] (code)}
 <option  value={code}>
                     {data.name} ({data.standard}%)
@@ -185,7 +181,7 @@
             </div>
 
             <div>
-              <label class="tool-label">
+              <label for="vat-calculator-field-6" class="tool-label">
                 {t('rateType')}
               </label>
               <select
@@ -199,8 +195,7 @@
                     selectedRateType = value as 'standard' | 'superReduced';
                   }
                 }}
-                class="tool-select"
-              >
+                class="tool-select" id="vat-calculator-field-6">
                 <option value="standard">
                   {t('standardRate')} ({countryData?.standard}%)
                 </option>

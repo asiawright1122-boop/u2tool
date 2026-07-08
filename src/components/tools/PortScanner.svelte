@@ -51,24 +51,22 @@
 
       <div class="grid md:grid-cols-2 gap-6">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('searchPorts')}</label>
+          <label for="port-scanner-field-4" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('searchPorts')}</label>
           <input
             type="text"
             bind:value={searchTerm}
             placeholder={t('searchPlaceholder')}
-            class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-500"
-          />
+            class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-500" id="port-scanner-field-4" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('lookupPort')}</label>
+          <label for="port-scanner-field-3" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('lookupPort')}</label>
           <input
             type="number"
             bind:value={customPort}
             placeholder={t('portPlaceholder')}
             class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-gray-100 placeholder-gray-500 focus:outline-none focus:border-amber-500"
             min="1"
-            max="65535"
-          />
+            max="65535" id="port-scanner-field-3" />
         </div>
       </div>
 

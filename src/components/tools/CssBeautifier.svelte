@@ -95,12 +95,11 @@
     <div class="space-y-4">
       <div class="flex flex-wrap gap-2 items-center">
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">{t('indent')}:</label>
+          <label for="css-beautifier-field-6" class="text-sm text-gray-600 dark:text-gray-300">{t('indent')}:</label>
           <select
             value={indentSize}
             onchange={(e) => indentSize = Number(e.target.value)}
-            class="bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded px-2 py-1 text-sm"
-          >
+            class="bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded px-2 py-1 text-sm" id="css-beautifier-field-6">
             <option value={2}>2 spaces</option>
             <option value={4}>4 spaces</option>
             <option value={1}>1 tab</option>
@@ -129,21 +128,21 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
+          <label for="css-beautifier-field-5" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
           <textarea
             bind:value={input}
             class="w-full h-80 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
             placeholder={t('placeholder')}
-            spellCheck={false}></textarea>
+            spellCheck={false} id="css-beautifier-field-5"></textarea>
         </div>
 
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('output')}</label>
+          <label for="css-beautifier-field-4" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('output')}</label>
           <textarea
             value={output}
             readOnly
             class="w-full h-80 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
-            placeholder={t('outputPlaceholder')}></textarea>
+            placeholder={t('outputPlaceholder')} id="css-beautifier-field-4"></textarea>
         </div>
       </div>
     </div>

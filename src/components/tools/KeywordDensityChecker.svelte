@@ -42,27 +42,26 @@
     <div class="space-y-6">
       <!-- Input -->
       <div>
-        <label class="tool-label">
+        <label for="keyword-density-checker-field-4" class="tool-label">
           {t('enterText')}
         </label>
         <textarea
           bind:value={text}
           placeholder={tc('inputPlaceholder')}
           rows={6}
-          class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"></textarea>
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" id="keyword-density-checker-field-4"></textarea>
       </div>
 
       <!-- Options -->
       <div class="flex flex-wrap gap-4 items-center">
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-400">{t('minLength')}:</label>
+          <label for="keyword-density-checker-field-3" class="text-sm text-gray-600 dark:text-gray-400">{t('minLength')}:</label>
           <input
             type="number"
             bind:value={minLength}
             min="1"
             max="10"
-            class="w-16 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-sm"
-          />
+            class="w-16 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-sm" id="keyword-density-checker-field-3" />
         </div>
         <label class="flex items-center gap-2 cursor-pointer">
           <input

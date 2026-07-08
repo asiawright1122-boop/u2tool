@@ -138,14 +138,13 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="roi-calculator-field-2" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('timeUnit')}
           </label>
           <select
             value={timeUnit}
             onchange={(e) => timeUnit = e.target.value as 'years' | 'months'}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="roi-calculator-field-2">
             <option value="years">{t('years')}</option>
             <option value="months">{t('months')}</option>
           </select>

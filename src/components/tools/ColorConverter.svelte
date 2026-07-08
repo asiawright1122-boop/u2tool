@@ -153,7 +153,7 @@
       <!-- HSL -->
       <div class="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium text-gray-700 dark:text-gray-300">HSL</label>
+          <div class="text-sm font-medium text-gray-700 dark:text-gray-300">HSL</div>
           <button
             onclick={() => copyValue('hsl', `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`)}
             class={`text-xs px-2 py-1 rounded ${copied === 'hsl' ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}

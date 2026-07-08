@@ -242,27 +242,25 @@
       <!-- Settings -->
       <div class="grid grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="paint-calculator-field-4" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('coats')}
           </label>
           <select
             bind:value={coats}
-            class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-          >
+            class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="paint-calculator-field-4">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="paint-calculator-field-3" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('coverage')} (m²/L)
           </label>
           <input
             type="number"
             bind:value={coverage}
-            class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-          />
+            class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="paint-calculator-field-3" />
         </div>
       </div>
 

@@ -115,20 +115,19 @@
         <!-- Settings -->
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium mb-2">{t('uploadImage')}</label>
+            <label for="image-adjustment-field-3" class="block text-sm font-medium mb-2">{t('uploadImage')}</label>
             <input
               type="file"
               accept="image/*"
               onchange={handleImageUpload}
-              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700"
-            />
+              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700" id="image-adjustment-field-3" />
           </div>
 
           {#each sliders as slider (slider.key)}
 <div >
-              <label class="block text-sm font-medium mb-1">
+              <div class="block text-sm font-medium mb-1">
                 {slider.label}: {params[slider.key]}{slider.unit}
-              </label>
+              </div>
               <input
                 type="range"
                 min={slider.min}

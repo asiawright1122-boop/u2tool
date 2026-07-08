@@ -81,7 +81,7 @@
     <div class="space-y-6">
       <!-- Quick Add -->
       <div>
-        <label class="tool-label">{t('quickAddService')}</label>
+        <div class="tool-label">{t('quickAddService')}</div>
         <div class="flex flex-wrap gap-2">
           {#each Object.keys(SERVICE_TEMPLATES) as template (template)}
 <button 
@@ -97,7 +97,7 @@
       <!-- Services -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">{t('services')} ({services.length})</label>
+          <div class="tool-label">{t('services')} ({services.length})</div>
           <button onclick={() => addService()} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">{t('addEmptyService')}</button>
         </div>
         <div class="space-y-4 max-h-96 overflow-y-auto">
@@ -115,7 +115,7 @@
               </div>
               <div class="grid grid-cols-2 gap-3">
                 <div>
-                  <label class="text-xs text-gray-500 dark:text-gray-400">{t('image')}</label>
+                  <div class="text-xs text-gray-500 dark:text-gray-400">{t('image')}</div>
                   <input
                     type="text"
                     value={service.image}
@@ -125,7 +125,7 @@
                   />
                 </div>
                 <div>
-                  <label class="text-xs text-gray-500 dark:text-gray-400">{t('restartPolicy')}</label>
+                  <div class="text-xs text-gray-500 dark:text-gray-400">{t('restartPolicy')}</div>
                   <select
                     value={service.restart}
                     onchange={(e) => updateService(service.id, 'restart', e.target.value)}
@@ -139,7 +139,7 @@
                 </div>
               </div>
               <div>
-                <label class="text-xs text-gray-500 dark:text-gray-400">{t('ports')}</label>
+                <div class="text-xs text-gray-500 dark:text-gray-400">{t('ports')}</div>
                 <input
                   type="text"
                   value={service.ports.join(', ')}
@@ -149,7 +149,7 @@
                 />
               </div>
               <div>
-                <label class="text-xs text-gray-500 dark:text-gray-400">{t('volumes')}</label>
+                <div class="text-xs text-gray-500 dark:text-gray-400">{t('volumes')}</div>
                 <input
                   type="text"
                   value={service.volumes.join(', ')}
@@ -159,7 +159,7 @@
                 />
               </div>
               <div>
-                <label class="text-xs text-gray-500 dark:text-gray-400">{t('dependsOn')}</label>
+                <div class="text-xs text-gray-500 dark:text-gray-400">{t('dependsOn')}</div>
                 <input
                   type="text"
                   value={service.dependsOn.join(', ')}
@@ -176,7 +176,7 @@
       <!-- Output -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">docker-compose.yml</label>
+          <div class="tool-label">docker-compose.yml</div>
           <button onclick={handleCopy} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">
             {copied ? tCommon('copied') : tCommon('copy')}
           </button>

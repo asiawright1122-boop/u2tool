@@ -172,7 +172,7 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('output')}</label>
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('output')}</div>
             <div class="flex gap-2">
               <button
                 onclick={copyOutput}

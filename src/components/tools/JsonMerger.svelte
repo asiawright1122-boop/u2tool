@@ -50,12 +50,11 @@
 
     <div class="space-y-4">
       <div class="flex gap-4 items-center">
-        <label class="text-sm text-gray-600 dark:text-gray-300">{t('strategy')}:</label>
+        <label for="json-merger-field-7" class="text-sm text-gray-600 dark:text-gray-300">{t('strategy')}:</label>
         <select
           value={strategy}
           onchange={(e) => strategy = e.target.value as MergeStrategy}
-          class="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-1 text-gray-900 dark:text-white"
-        >
+          class="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-1 text-gray-900 dark:text-white" id="json-merger-field-7">
           <option value="shallow">{t('shallow')}</option>
           <option value="deep">{t('deep')}</option>
           <option value="concat">{t('concat')}</option>
@@ -64,22 +63,22 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+          <label for="json-merger-field-6" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             JSON 1
           </label>
           <textarea
             bind:value={json1}
             class="w-full h-48 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono text-sm focus:outline-none focus:border-amber-500"
-            placeholder={t('inputPlaceholder')}></textarea>
+            placeholder={t('inputPlaceholder')} id="json-merger-field-6"></textarea>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+          <label for="json-merger-field-5" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             JSON 2
           </label>
           <textarea
             bind:value={json2}
             class="w-full h-48 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono text-sm focus:outline-none focus:border-amber-500"
-            placeholder={t('inputPlaceholder')}></textarea>
+            placeholder={t('inputPlaceholder')} id="json-merger-field-5"></textarea>
         </div>
       </div>
 
@@ -99,7 +98,7 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-600 dark:text-gray-300">{t('result')}</label>
+            <div class="text-sm font-medium text-gray-600 dark:text-gray-300">{t('result')}</div>
             <button
               onclick={handleCopy}
               class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-300"

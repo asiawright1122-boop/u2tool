@@ -121,9 +121,9 @@
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+          <div class="text-sm font-medium text-gray-700 dark:text-gray-300">
             {t('additionalDiscounts')}
-          </label>
+          </div>
           <button
             onclick={addAdditionalDiscount}
             class="text-sm text-amber-600 hover:text-amber-700"

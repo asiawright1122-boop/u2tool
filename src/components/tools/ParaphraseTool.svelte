@@ -104,9 +104,9 @@
     <div class="space-y-6">
       <!-- Style Selection -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('selectStyle')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each styles as s (s.id)}
 <button 
@@ -126,14 +126,14 @@
 
       <!-- Input -->
       <div>
-        <label class="tool-label">
+        <label for="paraphrase-tool-field-3" class="tool-label">
           {t('originalText')}
         </label>
         <textarea
           bind:value={input}
           placeholder={tc('inputPlaceholder')}
           rows={5}
-          class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"></textarea>
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" id="paraphrase-tool-field-3"></textarea>
       </div>
 
       <!-- Paraphrase Button -->

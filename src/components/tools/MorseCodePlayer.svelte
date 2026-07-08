@@ -149,20 +149,19 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label for="morse-code-player-field-7" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           {mode === 'encode' ? t('inputText') : t('inputMorse')}
         </label>
         <textarea
           value={inputText}
           oninput={(e) => inputText = (e.currentTarget as HTMLTextAreaElement).value.toUpperCase()}
           class="w-full h-24 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono resize-none"
-          placeholder={mode === 'encode' ? 'HELLO WORLD' : '.... . .-.. .-.. ---'}
-        ></textarea>
+          placeholder={mode === 'encode' ? 'HELLO WORLD' : '.... . .-.. .-.. ---'} id="morse-code-player-field-7"></textarea>
       </div>
 
       <div class="grid grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="morse-code-player-field-6" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('speed')}: {speed}x
           </label>
           <input
@@ -172,11 +171,10 @@
             step="0.5"
             value={speed}
             oninput={(e) => speed = parseFloat((e.currentTarget as HTMLInputElement).value)}
-            class="w-full"
-          />
+            class="w-full" id="morse-code-player-field-6" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="morse-code-player-field-5" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('frequency')}: {frequency}Hz
           </label>
           <input
@@ -186,8 +184,7 @@
             step="50"
             value={frequency}
             oninput={(e) => frequency = parseInt((e.currentTarget as HTMLInputElement).value)}
-            class="w-full"
-          />
+            class="w-full" id="morse-code-player-field-5" />
         </div>
       </div>
 
@@ -215,9 +212,9 @@
         <div class="space-y-4">
           <div>
             <div class="flex justify-between items-center mb-1">
-              <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+              <div class="text-sm font-medium text-gray-700 dark:text-gray-300">
                 {mode === 'encode' ? t('morseOutput') : t('textOutput')}
-              </label>
+              </div>
               <button
                 onclick={copyToClipboard}
                 class="text-sm text-amber-600 hover:text-amber-700"

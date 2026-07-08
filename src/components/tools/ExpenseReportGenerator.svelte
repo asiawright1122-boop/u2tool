@@ -371,41 +371,37 @@
     <div class="space-y-6">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('reportTitle')}</label>
+          <label for="expense-report-generator-field-12" class="block text-xs text-gray-500 mb-1">{t('reportTitle')}</label>
           <input
             type="text"
             value={report.reportTitle}
             onchange={(e) => updateReport('reportTitle', e.target.value)}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="expense-report-generator-field-12" />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('employeeName')}</label>
+          <label for="expense-report-generator-field-11" class="block text-xs text-gray-500 mb-1">{t('employeeName')}</label>
           <input
             type="text"
             value={report.employeeName}
             onchange={(e) => updateReport('employeeName', e.target.value)}
             placeholder={t("namePlaceholder")}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="expense-report-generator-field-11" />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('department')}</label>
+          <label for="expense-report-generator-field-10" class="block text-xs text-gray-500 mb-1">{t('department')}</label>
           <input
             type="text"
             value={report.department}
             onchange={(e) => updateReport('department', e.target.value)}
             placeholder={t("departmentPlaceholder")}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="expense-report-generator-field-10" />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('currency')}</label>
+          <label for="expense-report-generator-field-9" class="block text-xs text-gray-500 mb-1">{t('currency')}</label>
           <select
             value={report.currency}
             onchange={(e) => updateReport('currency', e.target.value)}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="expense-report-generator-field-9">
             {#each CURRENCIES as c (c)}
 <option  value={c}>{c}</option>
 {/each}
@@ -415,22 +411,20 @@
 
       <div class="grid grid-cols-2 gap-4">
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('periodStart')}</label>
+          <label for="expense-report-generator-field-8" class="block text-xs text-gray-500 mb-1">{t('periodStart')}</label>
           <input
             type="date"
             value={report.reportPeriod.start}
             onchange={(e) => updateReport('reportPeriod', { ...report.reportPeriod, start: e.target.value })}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="expense-report-generator-field-8" />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('periodEnd')}</label>
+          <label for="expense-report-generator-field-7" class="block text-xs text-gray-500 mb-1">{t('periodEnd')}</label>
           <input
             type="date"
             value={report.reportPeriod.end}
             onchange={(e) => updateReport('reportPeriod', { ...report.reportPeriod, end: e.target.value })}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="expense-report-generator-field-7" />
         </div>
       </div>
 

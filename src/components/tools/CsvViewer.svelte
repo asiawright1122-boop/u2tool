@@ -74,11 +74,10 @@
     <div class="space-y-6">
       <div class="flex flex-wrap gap-4 items-center">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('csvJson.delimiter')}</label>
+          <label for="csv-viewer-field-5" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('csvJson.delimiter')}</label>
           <select
             bind:value={delimiter}
-            class="tool-select"
-          >
+            class="tool-select" id="csv-viewer-field-5">
             <option value=",">{t('csvViewer.delimiterComma')}</option>
             <option value=";">{t('csvViewer.delimiterSemicolon')}</option>
             <option value="\t">{t('csvViewer.delimiterTab')}</option>
@@ -102,16 +101,16 @@
       </div>
 
       <div>
-        <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('csvViewer.csvInput')}</label>
+        <label for="csv-viewer-field-4" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('csvViewer.csvInput')}</label>
         <textarea
           bind:value={input}
           class="tool-textarea"
-          placeholder={t('csvViewer.csvPlaceholder')}></textarea>
+          placeholder={t('csvViewer.csvPlaceholder')} id="csv-viewer-field-4"></textarea>
       </div>
 
       <div>
         <div class="flex items-center justify-between mb-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">{t('csvViewer.tablePreview')}</label>
+          <div class="text-sm text-gray-600 dark:text-gray-300">{t('csvViewer.tablePreview')}</div>
           <span class="text-sm text-gray-600 dark:text-gray-300">
             {t('csvViewer.stats', { rows: rows.length, columns: columnsCount })}
           </span>

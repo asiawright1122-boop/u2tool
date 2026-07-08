@@ -112,15 +112,14 @@
 
     <div class="space-y-6">
       <div class="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
-        <label class="tool-label">
+        <label for="git-tag-manager-field-11" class="tool-label">
           Current Version
         </label>
         <div class="flex gap-2 items-center">
           <input
             type="text"
             bind:value={currentVersion}
-            class="w-32 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono"
-          />
+            class="w-32 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono" id="git-tag-manager-field-11" />
           <span class="text-gray-500">→</span>
           <div class="flex gap-1">
             <button onclick={() => handleBump('major')} class="px-2 py-1 text-xs bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded hover:bg-red-200">
@@ -141,7 +140,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="git-tag-manager-field-10" class="tool-label">
             Tag Name *
           </label>
           <input
@@ -151,8 +150,7 @@
             placeholder={t("versionPlaceholder")}
             class={`w-full px-3 py-2 border rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono ${
               isValidSemver ? 'border-green-500' : 'border-gray-300 dark:border-gray-600'
-            }`}
-          />
+            }`} id="git-tag-manager-field-10" />
           {#if isValidSemver}
             <p class="text-xs text-green-600 mt-1">
               Valid semver: {semverParts.major}.{semverParts.minor}.{semverParts.patch}
@@ -164,14 +162,13 @@
         </div>
 
         <div>
-          <label class="tool-label">
+          <label for="git-tag-manager-field-9" class="tool-label">
             Tag Type
           </label>
           <select
             value={tag.type}
             onchange={(e) => updateTag('type', e.target.value as Tag['type'])}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="git-tag-manager-field-9">
             <option value="annotated">{t('annotated')}</option>
             <option value="lightweight">{t('lightweight')}</option>
           </select>
@@ -180,7 +177,7 @@
 
       {#if tag.type === 'annotated'}
 <div>
-          <label class="tool-label">
+          <label for="git-tag-manager-field-8" class="tool-label">
             Tag Message
           </label>
           <textarea
@@ -188,13 +185,12 @@
             onchange={(e) => updateTag('message', e.target.value)}
             placeholder={t("notesPlaceholder")}
             rows={3}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
-          ></textarea>
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none" id="git-tag-manager-field-8"></textarea>
         </div>
 {/if}
 
       <div>
-        <label class="tool-label">
+        <label for="git-tag-manager-field-7" class="tool-label">
           Commit Hash (optional)
         </label>
         <input
@@ -202,15 +198,14 @@
           value={tag.commit}
           onchange={(e) => updateTag('commit', e.target.value)}
           placeholder={t("commitPlaceholder")}
-          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono"
-        />
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono" id="git-tag-manager-field-7" />
       </div>
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">
+          <div class="tool-label">
             Git Commands
-          </label>
+          </div>
           <button
             onclick={() => handleCopy(allCommands, 'all')}
             class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"

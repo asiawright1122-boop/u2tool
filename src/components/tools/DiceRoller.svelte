@@ -89,9 +89,9 @@
 <div class="space-y-6">
   <!-- Dice Selection -->
   <div>
-    <label class="tool-label">
+    <div class="tool-label">
       {t('selectDice')}
-    </label>
+    </div>
     <div class="flex flex-wrap gap-2">
       {#each (Object.keys(diceConfig) as DiceType[]) as dice (dice)}
         <button

@@ -103,15 +103,14 @@ box-shadow: ${getShadow()};`;
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <label for="neumorphism-generator-field-12" class="tool-label">
               {t('backgroundColor')}
             </label>
             <div class="flex items-center gap-3">
               <input
                 type="color"
                 bind:value={bgColor}
-                class="w-12 h-10 rounded cursor-pointer"
-              />
+                class="w-12 h-10 rounded cursor-pointer" id="neumorphism-generator-field-12" />
               <input
                 type="text"
                 bind:value={bgColor}
@@ -121,9 +120,9 @@ box-shadow: ${getShadow()};`;
           </div>
 
           <div>
-            <label class="tool-label">
+            <div class="tool-label">
               {t('shape')}
-            </label>
+            </div>
             <div class="grid grid-cols-4 gap-2">
               {#each (['flat', 'concave', 'convex', 'pressed'] as const) as s (s)}
 <button 
@@ -141,7 +140,7 @@ box-shadow: ${getShadow()};`;
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="neumorphism-generator-field-11" class="tool-label">
               {t('distance')}: {distance}px
             </label>
             <input
@@ -150,14 +149,13 @@ box-shadow: ${getShadow()};`;
               max="50"
               value={distance}
               onchange={(e) => distance = Number(e.target.value)}
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-            />
+              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id="neumorphism-generator-field-11" />
           </div>
         </div>
 
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <label for="neumorphism-generator-field-10" class="tool-label">
               {t('intensity')}: {intensity}
             </label>
             <input
@@ -166,12 +164,11 @@ box-shadow: ${getShadow()};`;
               max="50"
               value={intensity}
               onchange={(e) => intensity = Number(e.target.value)}
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-            />
+              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id="neumorphism-generator-field-10" />
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="neumorphism-generator-field-9" class="tool-label">
               {t('blur')}: {blur}px
             </label>
             <input
@@ -180,12 +177,11 @@ box-shadow: ${getShadow()};`;
               max="100"
               value={blur}
               onchange={(e) => blur = Number(e.target.value)}
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-            />
+              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id="neumorphism-generator-field-9" />
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="neumorphism-generator-field-8" class="tool-label">
               {t('borderRadius')}: {borderRadius}px
             </label>
             <input
@@ -194,8 +190,7 @@ box-shadow: ${getShadow()};`;
               max="100"
               value={borderRadius}
               onchange={(e) => borderRadius = Number(e.target.value)}
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-            />
+              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id="neumorphism-generator-field-8" />
           </div>
         </div>
       </div>
@@ -203,9 +198,9 @@ box-shadow: ${getShadow()};`;
       <!-- CSS Output -->
       <div>
         <div class="flex items-center justify-between mb-2">
-          <label class="tool-label">
+          <div class="tool-label">
             CSS {common('output')}
-          </label>
+          </div>
           <button
             onclick={handleCopy}
             class="px-3 py-1 text-sm bg-amber-500 text-white rounded hover:bg-amber-600 transition-colors"

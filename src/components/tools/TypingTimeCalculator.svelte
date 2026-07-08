@@ -59,7 +59,7 @@
     <div class="space-y-4">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">
+          <label for="typing-time-calculator-field-4" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">
             {t('wordCount')}
           </label>
           <input
@@ -67,11 +67,10 @@
             min={1}
             value={wordCount}
             onchange={(e) => wordCount = Number(e.target.value) || 1}
-            class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white" id="typing-time-calculator-field-4" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">
+          <label for="typing-time-calculator-field-3" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">
             {t('typingSpeed')}: {typingSpeed} WPM
           </label>
           <input
@@ -80,8 +79,7 @@
             max={120}
             value={typingSpeed}
             onchange={(e) => typingSpeed = Number(e.target.value)}
-            class="w-full"
-          />
+            class="w-full" id="typing-time-calculator-field-3" />
         </div>
       </div>
 

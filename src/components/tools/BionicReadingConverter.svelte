@@ -66,17 +66,17 @@
 
     <div class="space-y-6">
       <div>
-        <label class="tool-label">
+        <label for="bionic-reading-converter-field-4" class="tool-label">
           {t('inputLabel')}
         </label>
         <textarea
           bind:value={input}
           placeholder={t('inputPlaceholder')}
-          class="w-full h-40 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"></textarea>
+          class="w-full h-40 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="bionic-reading-converter-field-4"></textarea>
       </div>
 
       <div>
-        <label class="tool-label">
+        <label for="bionic-reading-converter-field-3" class="tool-label">
           {t('fixationStrength')}: {fixationStrength}%
         </label>
         <input
@@ -85,8 +85,7 @@
           max="80"
           value={fixationStrength}
           onchange={(e) => fixationStrength = Number(e.target.value)}
-          class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer"
-        />
+          class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer" id="bionic-reading-converter-field-3" />
         <div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
           <span>{t('light')}</span>
           <span>{t('medium')}</span>

@@ -107,13 +107,12 @@
 
     <div class="space-y-6">
       <div>
-        <label class="tool-label">
+        <label for="curl-to-code-generator-field-5" class="tool-label">
           {t('convert')} → 
         </label>
         <select
           bind:value={language}
-          class="w-full sm:w-auto px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-        >
+          class="w-full sm:w-auto px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="curl-to-code-generator-field-5">
           <option value="python">Python (requests)</option>
           <option value="javascript">JavaScript (fetch)</option>
           <option value="go">Go (net/http)</option>
@@ -126,9 +125,9 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="tool-label">
+            <div class="tool-label">
               cURL {t('input')}
-            </label>
+            </div>
             <button
               onclick={() => curlCommand = exampleCurl}
               class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"
@@ -143,14 +142,14 @@
         </div>
 
         <div>
-          <label class="tool-label">
+          <label for="curl-to-code-generator-field-4" class="tool-label">
             {language.charAt(0).toUpperCase() + language.slice(1)} {t('output')}
           </label>
           <textarea
             value={output}
             readOnly
             placeholder={t('outputPlaceholder')}
-            class="w-full h-64 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm resize-none"></textarea>
+            class="w-full h-64 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm resize-none" id="curl-to-code-generator-field-4"></textarea>
         </div>
       </div>
 

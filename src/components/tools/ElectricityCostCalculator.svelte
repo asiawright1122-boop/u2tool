@@ -279,9 +279,9 @@
       <!-- Appliances List -->
       <div class="space-y-3">
         <div class="flex items-center justify-between">
-          <label class="tool-label">
+          <div class="tool-label">
             {t('appliances')} ({appliances.length})
-          </label>
+          </div>
         </div>
 
         {#each appliances as appliance (appliance.id)}

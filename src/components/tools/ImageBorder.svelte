@@ -86,29 +86,27 @@
         <!-- Settings -->
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium mb-2">{t('uploadImage')}</label>
+            <label for="image-border-field-5" class="block text-sm font-medium mb-2">{t('uploadImage')}</label>
             <input
               type="file"
               accept="image/*"
               onchange={handleImageUpload}
-              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700"
-            />
+              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700" id="image-border-field-5" />
           </div>
 
           <div>
-            <label class="block text-sm font-medium mb-2">{t('borderWidth')}: {borderWidth}px</label>
+            <label for="image-border-field-4" class="block text-sm font-medium mb-2">{t('borderWidth')}: {borderWidth}px</label>
             <input
               type="range"
               min="0"
               max="100"
               value={borderWidth}
               onchange={(e) => borderWidth = Number(e.target.value)}
-              class="w-full"
-            />
+              class="w-full" id="image-border-field-4" />
           </div>
 
           <div>
-            <label class="block text-sm font-medium mb-2">{t('borderColor')}</label>
+            <div class="block text-sm font-medium mb-2">{t('borderColor')}</div>
             <div class="flex flex-wrap gap-2 mb-2">
               {#each presetColors as color (color)}
 <button 

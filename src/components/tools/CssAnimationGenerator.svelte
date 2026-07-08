@@ -69,7 +69,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="tool-label">{t('cssAnimation.preset')}</label>
+            <div class="tool-label">{t('cssAnimation.preset')}</div>
             <div class="grid grid-cols-4 gap-2">
               {#each presetKeys as key (key)}
 <button 
@@ -84,32 +84,29 @@
 
           <div class="grid grid-cols-3 gap-4">
             <div>
-              <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('cssAnimation.duration')}</label>
+              <label for="css-animation-generator-field-9" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('cssAnimation.duration')}</label>
               <input
                 type="number"
                 bind:value={duration}
                 min="0.1"
                 step="0.1"
-                class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded px-3 py-2 text-gray-900 dark:text-white"
-              />
+                class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded px-3 py-2 text-gray-900 dark:text-white" id="css-animation-generator-field-9" />
             </div>
             <div>
-              <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('cssAnimation.timing')}</label>
+              <label for="css-animation-generator-field-8" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('cssAnimation.timing')}</label>
               <select
                 bind:value={timing}
-                class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded px-3 py-2 text-gray-900 dark:text-white"
-              >
+                class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded px-3 py-2 text-gray-900 dark:text-white" id="css-animation-generator-field-8">
                 {#each timingFunctions as tf (tf)}
 <option  value={tf}>{tf}</option>
 {/each}
               </select>
             </div>
             <div>
-              <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('cssAnimation.iteration')}</label>
+              <label for="css-animation-generator-field-7" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('cssAnimation.iteration')}</label>
               <select
                 bind:value={iteration}
-                class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded px-3 py-2 text-gray-900 dark:text-white"
-              >
+                class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded px-3 py-2 text-gray-900 dark:text-white" id="css-animation-generator-field-7">
                 {#each iterations as i (i)}
 <option  value={i}>{i}</option>
 {/each}
@@ -119,7 +116,7 @@
         </div>
 
         <div>
-          <label class="tool-label">{t('cssAnimation.preview')}</label>
+          <div class="tool-label">{t('cssAnimation.preview')}</div>
           <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-8 flex items-center justify-center min-h-[200px]">
             <div
               class="w-20 h-20 bg-gradient-to-br from-amber-500 to-slate-600 rounded-lg"
@@ -130,7 +127,7 @@
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('output')}</label>
+          <div class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('output')}</div>
           <button onclick={copyToClipboard} class="px-3 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-sm text-gray-900 dark:text-white">
             {copied ? t('copied') : t('copy')}
           </button>

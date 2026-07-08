@@ -153,43 +153,43 @@
       
       <div class="grid grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.invoiceNumber')}</label>
+          <label for="invoice-generator-field-18" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.invoiceNumber')}</label>
           <input type="text" bind:value={invoiceNumber}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500" />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500" id="invoice-generator-field-18" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.currency')}</label>
+          <label for="invoice-generator-field-17" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.currency')}</label>
           <select bind:value={currency}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500" id="invoice-generator-field-17">
             {#each CURRENCIES as c (c.code)}
               <option value={c.code}>{c.symbol} {c.code}</option>
             {/each}
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.invoiceDate')}</label>
+          <label for="invoice-generator-field-16" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.invoiceDate')}</label>
           <input type="date" bind:value={invoiceDate}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500" />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500" id="invoice-generator-field-16" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.dueDate')}</label>
+          <label for="invoice-generator-field-15" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.dueDate')}</label>
           <input type="date" bind:value={dueDate}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500" />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500" id="invoice-generator-field-15" />
         </div>
       </div>
 
       <div class="grid grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.from')}</label>
+          <label for="invoice-generator-field-14" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.from')}</label>
           <input type="text" bind:value={companyName} placeholder={t('invoice.companyName')}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white mb-2 focus:ring-2 focus:ring-amber-500 focus:border-amber-500" />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white mb-2 focus:ring-2 focus:ring-amber-500 focus:border-amber-500" id="invoice-generator-field-14" />
           <textarea bind:value={companyAddress} placeholder={t('invoice.address')} rows={2}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 resize-none"></textarea>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.to')}</label>
+          <label for="invoice-generator-field-13" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.to')}</label>
           <input type="text" bind:value={clientName} placeholder={t('invoice.clientName')}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white mb-2 focus:ring-2 focus:ring-amber-500 focus:border-amber-500" />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white mb-2 focus:ring-2 focus:ring-amber-500 focus:border-amber-500" id="invoice-generator-field-13" />
           <textarea bind:value={clientAddress} placeholder={t('invoice.address')} rows={2}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 resize-none"></textarea>
         </div>
@@ -234,21 +234,21 @@
 
       <div class="grid grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.taxRate')} (%)</label>
+          <label for="invoice-generator-field-12" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.taxRate')} (%)</label>
           <input type="number" min="0" max="100" step="0.1" bind:value={taxRate}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500" />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500" id="invoice-generator-field-12" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.discountRate')} (%)</label>
+          <label for="invoice-generator-field-11" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.discountRate')} (%)</label>
           <input type="number" min="0" max="100" step="0.1" bind:value={discountRate}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500" />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500" id="invoice-generator-field-11" />
         </div>
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.notes')}</label>
+        <label for="invoice-generator-field-10" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('invoice.notes')}</label>
         <textarea bind:value={notes} rows={2}
-          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 resize-none"></textarea>
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 resize-none" id="invoice-generator-field-10"></textarea>
       </div>
 
       <button onclick={downloadPDF} class="w-full px-4 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-semibold">

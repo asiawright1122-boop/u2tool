@@ -76,9 +76,9 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('ipType')}</label>
+          <label for="ip-address-generator-field-5" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('ipType')}</label>
           <select value={ipType} onchange={(e) => ipType = e.target.value as typeof ipType}
-            class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white">
+            class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white" id="ip-address-generator-field-5">
             <option value="ipv4">{t('ipv4Random')}</option>
             <option value="ipv6">{t('ipv6')}</option>
             <option value="private">{t('privateIpv4')}</option>
@@ -86,10 +86,10 @@
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('count')}: {count}</label>
+          <label for="ip-address-generator-field-4" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('count')}: {count}</label>
           <input type="range" min="1" max="100" value={count}
             onchange={(e) => count = parseInt(e.target.value)}
-            class="w-full mt-2" />
+            class="w-full mt-2" id="ip-address-generator-field-4" />
         </div>
         <div class="flex items-end gap-2">
           <button onclick={generate}
@@ -105,9 +105,9 @@
 
       {#if generated.length > 0}
 <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+          <div class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('generatedIps')} ({generated.length})
-          </label>
+          </div>
           <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 max-h-96 overflow-y-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
               {#each generated as ip, index (index)}

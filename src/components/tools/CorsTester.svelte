@@ -182,26 +182,24 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <label for="cors-tester-field-6" class="tool-label">
               {t('urlToTest')}
             </label>
             <input
               type="text"
               bind:value={url}
               placeholder={t('urlPlaceholder')}
-              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono"
-            />
+              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono" id="cors-tester-field-6" />
           </div>
 
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <label class="tool-label">
+              <label for="cors-tester-field-5" class="tool-label">
                 {t('method')}
               </label>
               <select
                 bind:value={method}
-                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              >
+                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="cors-tester-field-5">
                 <option value="GET">GET</option>
                 <option value="POST">POST</option>
                 <option value="PUT">PUT</option>
@@ -210,14 +208,13 @@
               </select>
             </div>
             <div>
-              <label class="tool-label">
+              <label for="cors-tester-field-4" class="tool-label">
                 {t('origin')}
               </label>
               <input
                 type="text"
                 bind:value={origin}
-                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm"
-              />
+                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm" id="cors-tester-field-4" />
             </div>
           </div>
 

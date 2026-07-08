@@ -134,23 +134,23 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+          <label for="css-minifier-field-4" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('input')}
           </label>
           <textarea
             bind:value={input}
             class="w-full h-80 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"
-            placeholder={t('inputPlaceholder')}></textarea>
+            placeholder={t('inputPlaceholder')} id="css-minifier-field-4"></textarea>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+          <label for="css-minifier-field-3" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('output')}
           </label>
           <textarea
             value={output}
             readOnly
             class="w-full h-80 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"
-            placeholder={t('outputPlaceholder')}></textarea>
+            placeholder={t('outputPlaceholder')} id="css-minifier-field-3"></textarea>
         </div>
       </div>
 

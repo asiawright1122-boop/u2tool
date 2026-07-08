@@ -142,7 +142,7 @@
 
       <!-- Preset Colors -->
       <div>
-        <label class="block text-sm font-medium mb-2">{t('colorPicker.presets')}</label>
+        <div class="block text-sm font-medium mb-2">{t('colorPicker.presets')}</div>
         <div class="flex flex-wrap gap-2">
           {#each presetColors as c (c)}
 <button 
@@ -160,7 +160,7 @@
       <!-- Recent Colors -->
       {#if recentColors.length > 0}
 <div>
-          <label class="block text-sm font-medium mb-2">{t('colorPicker.recent')}</label>
+          <div class="block text-sm font-medium mb-2">{t('colorPicker.recent')}</div>
           <div class="flex flex-wrap gap-2">
             {#each recentColors as c, i (`${c}-${i}`)}
 <button 

@@ -73,13 +73,12 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="phone-formatter-field-4" class="tool-label">
             {t('country')}
           </label>
           <select
             bind:value={country}
-            class="tool-select font-medium"
-          >
+            class="tool-select font-medium" id="phone-formatter-field-4">
             {#each countryFormats as c (c.code)}
 <option  value={c.code}>
                 {c.name} ({c.dialCode})
@@ -89,15 +88,14 @@
         </div>
 
         <div>
-          <label class="tool-label">
+          <label for="phone-formatter-field-3" class="tool-label">
             {t('phoneNumber')}
           </label>
           <input
             type="text"
             bind:value={phone}
             placeholder={t('inputPlaceholder')}
-            class="tool-input"
-          />
+            class="tool-input" id="phone-formatter-field-3" />
         </div>
       </div>
 

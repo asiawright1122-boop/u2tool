@@ -41,7 +41,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="tool-label mb-0">{t('originalList')}</label>
+            <div class="tool-label mb-0">{t('originalList')}</div>
             <button
               onclick={() => input = ''}
               class="text-xs text-red-600 dark:text-red-400 hover:text-red-500 dark:hover:text-red-300"
@@ -58,7 +58,7 @@
 
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="tool-label mb-0">{t('randomizedList')}</label>
+            <div class="tool-label mb-0">{t('randomizedList')}</div>
             <button
               onclick={() => navigator.clipboard.writeText(output)}
               class="text-xs text-amber-600 dark:text-amber-400 hover:text-amber-500 dark:hover:text-amber-300"

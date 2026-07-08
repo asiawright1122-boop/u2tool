@@ -94,7 +94,7 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, ${shadowOpacity});`;
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <label for="glassmorphism-generator-field-11" class="tool-label">
               {t('blur')}: {blur}px
             </label>
             <input
@@ -103,12 +103,11 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, ${shadowOpacity});`;
               max="30"
               value={blur}
               onchange={(e) => blur = Number(e.target.value)}
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-            />
+              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id="glassmorphism-generator-field-11" />
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="glassmorphism-generator-field-10" class="tool-label">
               {t('transparency')}: {(transparency * 100).toFixed(0)}%
             </label>
             <input
@@ -117,12 +116,11 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, ${shadowOpacity});`;
               max="100"
               value={transparency * 100}
               onchange={(e) => transparency = Number(e.target.value) / 100}
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-            />
+              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id="glassmorphism-generator-field-10" />
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="glassmorphism-generator-field-9" class="tool-label">
               {t('borderOpacity')}: {(borderOpacity * 100).toFixed(0)}%
             </label>
             <input
@@ -131,14 +129,13 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, ${shadowOpacity});`;
               max="100"
               value={borderOpacity * 100}
               onchange={(e) => borderOpacity = Number(e.target.value) / 100}
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-            />
+              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id="glassmorphism-generator-field-9" />
           </div>
         </div>
 
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <label for="glassmorphism-generator-field-8" class="tool-label">
               {t('shadowOpacity')}: {(shadowOpacity * 100).toFixed(0)}%
             </label>
             <input
@@ -147,20 +144,18 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, ${shadowOpacity});`;
               max="50"
               value={shadowOpacity * 100}
               onchange={(e) => shadowOpacity = Number(e.target.value) / 100}
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-            />
+              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id="glassmorphism-generator-field-8" />
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="glassmorphism-generator-field-7" class="tool-label">
               {t('backgroundColor')}
             </label>
             <div class="flex items-center gap-3">
               <input
                 type="color"
                 bind:value={bgColor}
-                class="w-12 h-10 rounded cursor-pointer"
-              />
+                class="w-12 h-10 rounded cursor-pointer" id="glassmorphism-generator-field-7" />
               <input
                 type="text"
                 bind:value={bgColor}
@@ -174,9 +169,9 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, ${shadowOpacity});`;
       <!-- CSS Output -->
       <div>
         <div class="flex items-center justify-between mb-2">
-          <label class="tool-label">
+          <div class="tool-label">
             CSS {common('output')}
-          </label>
+          </div>
           <button
             onclick={handleCopy}
             class="px-3 py-1 text-sm bg-amber-500 text-white rounded hover:bg-amber-600 transition-colors"

@@ -110,11 +110,11 @@
       </div>
 
       <div>
-        <label class="tool-label">{t('input')}</label>
+        <label for="json-path-finder-field-2" class="tool-label">{t('input')}</label>
         <textarea
           bind:value={input}
           placeholder={t('jsonPathFinder.placeholder')}
-          class="tool-textarea"></textarea>
+          class="tool-textarea" id="json-path-finder-field-2"></textarea>
       </div>
 
       <button

@@ -443,43 +443,39 @@
 
         <div class="grid grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs text-gray-500 mb-1">{t('invoiceNumber')}</label>
+            <label for="invoice-template-generator-field-12" class="block text-xs text-gray-500 mb-1">{t('invoiceNumber')}</label>
             <input
               type="text"
               value={invoice.invoiceNumber}
               onchange={(e) => updateInvoice('invoiceNumber', e.target.value)}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            />
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="invoice-template-generator-field-12" />
           </div>
           <div>
-            <label class="block text-xs text-gray-500 mb-1">{t('currency')}</label>
+            <label for="invoice-template-generator-field-11" class="block text-xs text-gray-500 mb-1">{t('currency')}</label>
             <select
               value={invoice.currency}
               onchange={(e) => updateInvoice('currency', e.target.value)}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            >
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="invoice-template-generator-field-11">
               {#each CURRENCIES as c (c.code)}
 <option  value={c.code}>{c.code} ({c.symbol})</option>
 {/each}
             </select>
           </div>
           <div>
-            <label class="block text-xs text-gray-500 mb-1">{t('invoiceDate')}</label>
+            <label for="invoice-template-generator-field-10" class="block text-xs text-gray-500 mb-1">{t('invoiceDate')}</label>
             <input
               type="date"
               value={invoice.date}
               onchange={(e) => updateInvoice('date', e.target.value)}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            />
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="invoice-template-generator-field-10" />
           </div>
           <div>
-            <label class="block text-xs text-gray-500 mb-1">{t('dueDate')}</label>
+            <label for="invoice-template-generator-field-9" class="block text-xs text-gray-500 mb-1">{t('dueDate')}</label>
             <input
               type="date"
               value={invoice.dueDate}
               onchange={(e) => updateInvoice('dueDate', e.target.value)}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            />
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="invoice-template-generator-field-9" />
           </div>
         </div>
 
@@ -584,24 +580,22 @@
 
         <div class="grid grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs text-gray-500 mb-1">{t('taxRate')}</label>
+            <label for="invoice-template-generator-field-8" class="block text-xs text-gray-500 mb-1">{t('taxRate')}</label>
             <input
               type="number"
               value={invoice.taxRate}
               onchange={(e) => updateInvoice('taxRate', parseFloat(e.target.value) || 0)}
               class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
               min="0"
-              max="100"
-            />
+              max="100" id="invoice-template-generator-field-8" />
           </div>
           <div>
-            <label class="block text-xs text-gray-500 mb-1">{t('notes')}</label>
+            <label for="invoice-template-generator-field-7" class="block text-xs text-gray-500 mb-1">{t('notes')}</label>
             <input
               type="text"
               value={invoice.notes}
               onchange={(e) => updateInvoice('notes', e.target.value)}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            />
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="invoice-template-generator-field-7" />
           </div>
         </div>
 

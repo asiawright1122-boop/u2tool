@@ -132,12 +132,11 @@
     <div class="space-y-6">
       <div class="flex flex-wrap gap-4 items-center">
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">{t('mode')}:</label>
+          <label for="octal-converter-field-5" class="text-sm text-gray-600 dark:text-gray-300">{t('mode')}:</label>
           <select
             value={mode}
             onchange={(e) => { mode = e.target.value as ConversionMode; output = ''; error = ''; }}
-            class="tool-input w-auto"
-          >
+            class="tool-input w-auto" id="octal-converter-field-5">
             <option value="octToDec">{t('octToDec')}</option>
             <option value="decToOct">{t('decToOct')}</option>
             <option value="octToBin">{t('octToBin')}</option>
@@ -157,20 +156,20 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-2">
-          <label class="tool-label">
+          <label for="octal-converter-field-4" class="tool-label">
             {t('input')}
           </label>
           <textarea
             bind:value={input}
             placeholder={t('inputPlaceholder')}
-            class="tool-textarea h-32"></textarea>
+            class="tool-textarea h-32" id="octal-converter-field-4"></textarea>
         </div>
 
         <div class="space-y-2">
           <div class="flex items-center justify-between">
-            <label class="tool-label mb-0">
+            <div class="tool-label mb-0">
               {t('output')}
-            </label>
+            </div>
             {#if output}
 <button
                 onclick={handleCopy}

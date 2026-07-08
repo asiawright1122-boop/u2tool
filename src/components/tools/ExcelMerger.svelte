@@ -188,9 +188,9 @@
       {#if files.length > 0}
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label class="tool-label">
+            <div class="tool-label">
               {t('excelMerger.mergeMode')}
-            </label>
+            </div>
             <div class="flex gap-4">
               <label class="flex items-center">
                 <input
@@ -215,14 +215,13 @@
             </div>
           </div>
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label for="excel-merger-field-3" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               {t('excelMerger.outputFileName')}
             </label>
             <input
               type="text"
               bind:value={outputFileName}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800"
-            />
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" id="excel-merger-field-3" />
           </div>
         </div>
 {/if}

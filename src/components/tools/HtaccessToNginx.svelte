@@ -250,19 +250,19 @@ Options -Indexes`;
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
-          <label class="block text-sm font-medium mb-2">{t('htaccessInput')}</label>
+          <label for="htaccess-to-nginx-field-4" class="block text-sm font-medium mb-2">{t('htaccessInput')}</label>
           <textarea
             bind:value={input}
             class="tool-textarea h-80 font-mono text-sm"
-            placeholder={t('placeholder')}></textarea>
+            placeholder={t('placeholder')} id="htaccess-to-nginx-field-4"></textarea>
         </div>
 
         <div>
-          <label class="block text-sm font-medium mb-2">{t('nginxOutput')}</label>
+          <label for="htaccess-to-nginx-field-3" class="block text-sm font-medium mb-2">{t('nginxOutput')}</label>
           <textarea
             value={output}
             readOnly
-            class="tool-textarea h-80 font-mono text-sm bg-gray-100 dark:bg-gray-800"></textarea>
+            class="tool-textarea h-80 font-mono text-sm bg-gray-100 dark:bg-gray-800" id="htaccess-to-nginx-field-3"></textarea>
         </div>
       </div>
 

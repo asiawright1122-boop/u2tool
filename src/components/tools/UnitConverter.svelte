@@ -82,7 +82,7 @@
     <div class="space-y-6">
       <!-- Category Selection -->
       <div>
-        <label class="tool-label">{'Category'}</label>
+        <div class="tool-label">{'Category'}</div>
         <div class="flex flex-wrap gap-2">
           {#each (Object.keys(units) as UnitCategory[]) as cat (cat)}
 <button 

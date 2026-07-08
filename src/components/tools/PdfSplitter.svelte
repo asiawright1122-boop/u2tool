@@ -181,8 +181,8 @@
 
           <div class="flex flex-wrap gap-4 items-end">
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('pdfSplitter.splitMode')}</label>
-              <select value={splitMode} onchange={e => splitMode = e.target.value as 'selected' | 'range' | 'each'} class="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800">
+              <label for="pdf-splitter-field-6" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('pdfSplitter.splitMode')}</label>
+              <select value={splitMode} onchange={e => splitMode = e.target.value as 'selected' | 'range' | 'each'} class="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" id="pdf-splitter-field-6">
                 <option value="selected">{t('pdfSplitter.selectedPages')}</option>
                 <option value="range">{t('pdfSplitter.pageRange')}</option>
                 <option value="each">{t('pdfSplitter.eachPage')}</option>
@@ -191,12 +191,12 @@
             {#if splitMode === 'range'}
 
                 <div>
-                  <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('pdfSplitter.from')}</label>
-                  <input type="number" bind:value={rangeStart} min={1} max={pages.length} class="w-20 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
+                  <label for="pdf-splitter-field-5" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('pdfSplitter.from')}</label>
+                  <input type="number" bind:value={rangeStart} min={1} max={pages.length} class="w-20 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" id="pdf-splitter-field-5" />
                 </div>
                 <div>
-                  <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('pdfSplitter.to')}</label>
-                  <input type="number" bind:value={rangeEnd} min={1} max={pages.length} class="w-20 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
+                  <label for="pdf-splitter-field-4" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('pdfSplitter.to')}</label>
+                  <input type="number" bind:value={rangeEnd} min={1} max={pages.length} class="w-20 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" id="pdf-splitter-field-4" />
                 </div>
 
 {/if}

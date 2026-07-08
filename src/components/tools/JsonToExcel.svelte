@@ -124,9 +124,9 @@
       <!-- Input Section -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">
+          <div class="tool-label">
             {t('jsonToExcel.jsonInput')}
-          </label>
+          </div>
           <button
             onclick={loadSample}
             class="text-sm text-amber-600 hover:text-amber-800 dark:text-amber-400"
@@ -151,24 +151,22 @@
       <!-- Options -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="json-to-excel-field-5" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('jsonToExcel.fileName')}
           </label>
           <input
             type="text"
             bind:value={fileName}
-            class="tool-input"
-          />
+            class="tool-input" id="json-to-excel-field-5" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="json-to-excel-field-4" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('jsonToExcel.sheetName')}
           </label>
           <input
             type="text"
             bind:value={sheetName}
-            class="tool-input"
-          />
+            class="tool-input" id="json-to-excel-field-4" />
         </div>
       </div>
 

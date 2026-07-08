@@ -149,9 +149,9 @@
     <div class="space-y-6">
       <!-- File Upload -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('selectFile')}
-        </label>
+        </div>
         <div class="flex items-center justify-center w-full">
           <label class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 dark:border-gray-600 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700">
             <div class="flex flex-col items-center justify-center pt-5 pb-6">
@@ -185,7 +185,7 @@
 
       <!-- Expected Checksum -->
       <div>
-        <label class="tool-label">
+        <label for="checksum-verifier-field-3" class="tool-label">
           {t('expectedChecksum')}
         </label>
         <input
@@ -193,8 +193,7 @@
           value={expectedChecksum}
           onchange={(e) => handleExpectedChecksumChange(e.target.value)}
           placeholder={t('expectedChecksumPlaceholder')}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-        />
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="checksum-verifier-field-3" />
       </div>
 
       <!-- Actions -->

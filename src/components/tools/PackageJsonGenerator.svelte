@@ -136,48 +136,43 @@
       <!-- Basic Info -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('name')}</label>
+          <label for="package-json-generator-field-19" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('name')}</label>
           <input
             type="text"
             value={packageInfo.name}
             onchange={(e) => packageInfo = { ...packageInfo, name: e.target.value }}
-            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
-          />
+            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white" id="package-json-generator-field-19" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('version')}</label>
+          <label for="package-json-generator-field-18" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('version')}</label>
           <input
             type="text"
             value={packageInfo.version}
             onchange={(e) => packageInfo = { ...packageInfo, version: e.target.value }}
-            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
-          />
+            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white" id="package-json-generator-field-18" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('main')}</label>
+          <label for="package-json-generator-field-17" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('main')}</label>
           <input
             type="text"
             value={packageInfo.main}
             onchange={(e) => packageInfo = { ...packageInfo, main: e.target.value }}
-            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
-          />
+            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white" id="package-json-generator-field-17" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('author')}</label>
+          <label for="package-json-generator-field-16" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('author')}</label>
           <input
             type="text"
             value={packageInfo.author}
             onchange={(e) => packageInfo = { ...packageInfo, author: e.target.value }}
-            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
-          />
+            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white" id="package-json-generator-field-16" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('license')}</label>
+          <label for="package-json-generator-field-15" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('license')}</label>
           <select
             value={packageInfo.license}
             onchange={(e) => packageInfo = { ...packageInfo, license: e.target.value }}
-            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
-          >
+            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white" id="package-json-generator-field-15">
             {#each LICENSES as license (license)}
 <option  value={license}>
                 {license}
@@ -186,14 +181,13 @@
           </select>
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('type')}</label>
+          <label for="package-json-generator-field-14" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('type')}</label>
           <select
             value={packageInfo.type}
             onchange={(e) =>
               packageInfo = { ...packageInfo, type: e.target.value as 'commonjs' | 'module' }
             }
-            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
-          >
+            class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white" id="package-json-generator-field-14">
             <option value="commonjs">CommonJS</option>
             <option value="module">ES Module</option>
           </select>
@@ -201,23 +195,21 @@
       </div>
 
       <div>
-        <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('description')}</label>
+        <label for="package-json-generator-field-13" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('description')}</label>
         <input
           type="text"
           value={packageInfo.description}
           onchange={(e) => packageInfo = { ...packageInfo, description: e.target.value }}
-          class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
-        />
+          class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white" id="package-json-generator-field-13" />
       </div>
 
       <div>
-        <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('keywords')}</label>
+        <label for="package-json-generator-field-12" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('keywords')}</label>
         <input
           type="text"
           bind:value={keywords}
           placeholder={t('keywordsPlaceholder')}
-          class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
-        />
+          class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white" id="package-json-generator-field-12" />
       </div>
 
       <div class="flex items-center gap-2">
@@ -235,7 +227,7 @@
 
       <!-- Scripts -->
       <div>
-        <label class="tool-label">{t('scripts')}</label>
+        <label for="package-json-generator-field-11" class="tool-label">{t('scripts')}</label>
         <div class="space-y-2 mb-4">
           {#each scripts as script, index (index)}
 <div  class="flex gap-2">
@@ -244,8 +236,7 @@
                 value={script.name}
                 onchange={(e) => updateScript(index, 'name', e.target.value)}
                 placeholder={t('scriptName')}
-                class="w-32 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
-              />
+                class="w-32 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white" id="package-json-generator-field-11" />
               <input
                 type="text"
                 value={script.command}
@@ -290,7 +281,7 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">package.json</label>
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">package.json</div>
             <div class="flex gap-2">
               <button
                 onclick={copyOutput}

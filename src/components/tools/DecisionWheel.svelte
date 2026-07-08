@@ -240,7 +240,7 @@
 
         <!-- Options List -->
         <div class="space-y-3">
-          <label class="tool-label">
+          <label for="decision-wheel-field-2" class="tool-label">
             {t('options')} ({options.length})
           </label>
           
@@ -254,8 +254,7 @@
                   type="text"
                   value={option.label}
                   onchange={(e) => updateOption(option.id, e.target.value)}
-                  class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                />
+                  class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="decision-wheel-field-2" />
                 <button
                   onclick={() => removeOption(option.id)}
                   disabled={options.length <= 2}

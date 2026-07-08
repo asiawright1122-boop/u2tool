@@ -75,7 +75,7 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('commonPatterns')}</label>
+        <div class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('commonPatterns')}</div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
           {#each PATTERN_OPTIONS as pattern (pattern.id)}
 <button 
@@ -131,7 +131,7 @@
 
       {#if matches.length > 0}
 <div>
-          <label class="tool-label">{t('matches')} ({matches.length})</label>
+          <div class="tool-label">{t('matches')} ({matches.length})</div>
           <div class="bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg p-4 space-y-2">
             {#each matches as match, i (i)}
 <div  class="px-3 py-2 bg-white dark:bg-gray-600 border border-gray-200 dark:border-gray-500 rounded font-mono text-green-600 dark:text-green-400">{match}</div>

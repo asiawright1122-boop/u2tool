@@ -72,7 +72,7 @@ INSERT INTO users (id, name, email, age) VALUES (2, 'Jane', 'jane@example.com', 
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-600 dark:text-gray-300">JSON</label>
+            <div class="text-sm font-medium text-gray-600 dark:text-gray-300">JSON</div>
             <button onclick={handleCopy} class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-500 dark:hover:text-amber-300">{t('copy')}</button>
           </div>
           <pre class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-green-600 dark:text-green-400 font-mono text-sm overflow-auto max-h-64">

@@ -56,72 +56,67 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="tool-label">{t('openGraphGenerator.siteTitle')}</label>
+            <label for="open-graph-generator-field-15" class="tool-label">{t('openGraphGenerator.siteTitle')}</label>
             <input
               type="text"
               name="title"
               value={data.title}
               onchange={handleChange}
               class="tool-input"
-              placeholder={t('openGraphGenerator.siteTitlePlaceholder')}
-            />
+              placeholder={t('openGraphGenerator.siteTitlePlaceholder')} id="open-graph-generator-field-15" />
           </div>
 
           <div>
-            <label class="tool-label">{t('openGraphGenerator.siteDescription')}</label>
+            <label for="open-graph-generator-field-14" class="tool-label">{t('openGraphGenerator.siteDescription')}</label>
             <textarea
               name="description"
               value={data.description}
               onchange={handleChange}
               rows={3}
               class="tool-textarea h-auto"
-              placeholder={t('openGraphGenerator.siteDescriptionPlaceholder')}></textarea>
+              placeholder={t('openGraphGenerator.siteDescriptionPlaceholder')} id="open-graph-generator-field-14"></textarea>
           </div>
 
           <div>
-            <label class="tool-label">{t('openGraphGenerator.url')}</label>
+            <label for="open-graph-generator-field-13" class="tool-label">{t('openGraphGenerator.url')}</label>
             <input
               type="url"
               name="url"
               value={data.url}
               onchange={handleChange}
               class="tool-input"
-              placeholder={t('openGraphGenerator.urlPlaceholder')}
-            />
+              placeholder={t('openGraphGenerator.urlPlaceholder')} id="open-graph-generator-field-13" />
           </div>
 
           <div>
-            <label class="tool-label">{t('openGraphGenerator.imageUrl')}</label>
+            <label for="open-graph-generator-field-12" class="tool-label">{t('openGraphGenerator.imageUrl')}</label>
             <input
               type="url"
               name="image"
               value={data.image}
               onchange={handleChange}
               class="tool-input"
-              placeholder={t('openGraphGenerator.imageUrlPlaceholder')}
-            />
+              placeholder={t('openGraphGenerator.imageUrlPlaceholder')} id="open-graph-generator-field-12" />
           </div>
 
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <label class="tool-label">{t('openGraphGenerator.siteName')}</label>
+              <label for="open-graph-generator-field-11" class="tool-label">{t('openGraphGenerator.siteName')}</label>
               <input
                 type="text"
                 name="siteName"
                 value={data.siteName}
                 onchange={handleChange}
                 class="tool-input"
-                placeholder={t('openGraphGenerator.siteNamePlaceholder')}
-              />
+                placeholder={t('openGraphGenerator.siteNamePlaceholder')} id="open-graph-generator-field-11" />
             </div>
             <div>
-              <label class="tool-label">{t('openGraphGenerator.type')}</label>
+              <label for="open-graph-generator-field-10" class="tool-label">{t('openGraphGenerator.type')}</label>
               <select
                 name="type"
                 value={data.type}
                 onchange={handleChange}
-                class="tool-input"
-              >
+                class="tool-input" id="open-graph-generator-field-10">
                 <option value="website">{t('openGraphGenerator.typeWebsite')}</option>
                 <option value="article">{t('openGraphGenerator.typeArticle')}</option>
                 <option value="profile">{t('openGraphGenerator.typeProfile')}</option>
@@ -134,7 +129,7 @@
 
         <div class="space-y-4">
           <div>
-            <label class="tool-label">{t('openGraphGenerator.preview')}</label>
+            <div class="tool-label">{t('openGraphGenerator.preview')}</div>
             <div class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden max-w-sm mx-auto">
               <div class="aspect-[1.91/1] bg-gray-200 dark:bg-gray-700 relative">
                 {#if data.image}
@@ -154,13 +149,13 @@
           </div>
 
           <div>
-            <label class="tool-label">{t('openGraphGenerator.generatedHtml')}</label>
+            <label for="open-graph-generator-field-9" class="tool-label">{t('openGraphGenerator.generatedHtml')}</label>
             <div class="relative">
               <textarea
                 readOnly
                 value={generateMetaTags()}
                 rows={8}
-                class="tool-textarea h-auto"></textarea>
+                class="tool-textarea h-auto" id="open-graph-generator-field-9"></textarea>
             </div>
           </div>
         </div>

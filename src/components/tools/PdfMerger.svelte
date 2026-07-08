@@ -128,8 +128,8 @@
       {#if pdfs.length > 0}
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('pdfMerger.outputFileName')}</label>
-            <input type="text" value={outputFileName} onchange={e => outputFileName = e.target.value} class="w-full md:w-1/2 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
+            <label for="pdf-merger-field-2" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('pdfMerger.outputFileName')}</label>
+            <input type="text" value={outputFileName} onchange={e => outputFileName = e.target.value} class="w-full md:w-1/2 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" id="pdf-merger-field-2" />
           </div>
 
           <div class="space-y-2">

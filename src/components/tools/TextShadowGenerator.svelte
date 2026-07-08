@@ -120,32 +120,29 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('previewText')}</label>
+          <label for="text-shadow-generator-field-15" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('previewText')}</label>
           <input
             type="text"
             bind:value={text}
-            class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white" id="text-shadow-generator-field-15" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('fontSize')}</label>
+          <label for="text-shadow-generator-field-14" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('fontSize')}</label>
           <input
             type="range"
             min={12}
             max={120}
             value={fontSize}
             onchange={(e) => fontSize = Number(e.target.value)}
-            class="w-full"
-          />
+            class="w-full" id="text-shadow-generator-field-14" />
           <span class="text-sm text-gray-500">{fontSize}px</span>
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('textColor')}</label>
+          <label for="text-shadow-generator-field-13" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('textColor')}</label>
           <input
             type="color"
             bind:value={textColor}
-            class="w-full h-10 rounded cursor-pointer"
-          />
+            class="w-full h-10 rounded cursor-pointer" id="text-shadow-generator-field-13" />
         </div>
       </div>
 
@@ -157,40 +154,36 @@
         {#each shadows as shadow, index (index)}
 <div  class="bg-gray-100 dark:bg-gray-700 rounded-lg p-3 grid grid-cols-5 gap-2 items-center">
             <div>
-              <label class="text-xs text-gray-500">X</label>
+              <label for={`text-shadow-generator-field-12-${index}`} class="text-xs text-gray-500">X</label>
               <input
                 type="number"
                 value={shadow.x}
                 onchange={(e) => updateShadow(index, 'x', Number(e.target.value))}
-                class="w-full px-2 py-1 bg-white dark:bg-gray-600 rounded text-sm"
-              />
+                class="w-full px-2 py-1 bg-white dark:bg-gray-600 rounded text-sm" id={`text-shadow-generator-field-12-${index}`} />
             </div>
             <div>
-              <label class="text-xs text-gray-500">Y</label>
+              <label for={`text-shadow-generator-field-11-${index}`} class="text-xs text-gray-500">Y</label>
               <input
                 type="number"
                 value={shadow.y}
                 onchange={(e) => updateShadow(index, 'y', Number(e.target.value))}
-                class="w-full px-2 py-1 bg-white dark:bg-gray-600 rounded text-sm"
-              />
+                class="w-full px-2 py-1 bg-white dark:bg-gray-600 rounded text-sm" id={`text-shadow-generator-field-11-${index}`} />
             </div>
             <div>
-              <label class="text-xs text-gray-500">{t('blur')}</label>
+              <label for={`text-shadow-generator-field-10-${index}`} class="text-xs text-gray-500">{t('blur')}</label>
               <input
                 type="number"
                 value={shadow.blur}
                 onchange={(e) => updateShadow(index, 'blur', Number(e.target.value))}
-                class="w-full px-2 py-1 bg-white dark:bg-gray-600 rounded text-sm"
-              />
+                class="w-full px-2 py-1 bg-white dark:bg-gray-600 rounded text-sm" id={`text-shadow-generator-field-10-${index}`} />
             </div>
             <div>
-              <label class="text-xs text-gray-500">{t('color')}</label>
+              <label for={`text-shadow-generator-field-9-${index}`} class="text-xs text-gray-500">{t('color')}</label>
               <input
                 type="text"
                 value={shadow.color}
                 onchange={(e) => updateShadow(index, 'color', e.target.value)}
-                class="w-full px-2 py-1 bg-white dark:bg-gray-600 rounded text-sm"
-              />
+                class="w-full px-2 py-1 bg-white dark:bg-gray-600 rounded text-sm" id={`text-shadow-generator-field-9-${index}`} />
             </div>
             <button
               onclick={() => removeShadow(index)}
@@ -205,7 +198,7 @@
 
       <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium text-gray-600 dark:text-gray-300">CSS</label>
+          <div class="text-sm font-medium text-gray-600 dark:text-gray-300">CSS</div>
           <button onclick={copyCSS} class="btn-secondary text-sm">
             {copied ? tg('copied') : tg('copy')}
           </button>

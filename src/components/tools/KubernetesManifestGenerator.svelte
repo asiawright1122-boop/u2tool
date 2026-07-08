@@ -116,43 +116,43 @@
       <!-- Basic Config -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('appName')}</label>
+          <label for="kubernetes-manifest-generator-field-25" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('appName')}</label>
           <input type="text" value={config.name} onchange={(e) => updateConfig('name', e.target.value.toLowerCase().replace(/[^a-z0-9-]/g, '-'))}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" id="kubernetes-manifest-generator-field-25" />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('namespace')}</label>
+          <label for="kubernetes-manifest-generator-field-24" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('namespace')}</label>
           <input type="text" bind:value={config.namespace}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" id="kubernetes-manifest-generator-field-24" />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('image')}</label>
+          <label for="kubernetes-manifest-generator-field-23" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('image')}</label>
           <input type="text" bind:value={config.image}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" id="kubernetes-manifest-generator-field-23" />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('replicas')}</label>
+          <label for="kubernetes-manifest-generator-field-22" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('replicas')}</label>
           <input type="number" bind:value={config.replicas} min={1}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" id="kubernetes-manifest-generator-field-22" />
         </div>
       </div>
 
       <!-- Ports & Service -->
       <div class="grid grid-cols-3 gap-4">
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('servicePort')}</label>
+          <label for="kubernetes-manifest-generator-field-21" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('servicePort')}</label>
           <input type="number" bind:value={config.port}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" id="kubernetes-manifest-generator-field-21" />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('containerPort')}</label>
+          <label for="kubernetes-manifest-generator-field-20" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('containerPort')}</label>
           <input type="number" bind:value={config.targetPort}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" id="kubernetes-manifest-generator-field-20" />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('serviceType')}</label>
+          <label for="kubernetes-manifest-generator-field-19" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('serviceType')}</label>
           <select value={config.serviceType} onchange={(e) => updateConfig('serviceType', e.target.value as K8sConfig['serviceType'])}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm">
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" id="kubernetes-manifest-generator-field-19">
             <option value="ClusterIP">ClusterIP</option>
             <option value="NodePort">NodePort</option>
             <option value="LoadBalancer">LoadBalancer</option>
@@ -162,27 +162,27 @@
 
       <!-- Resources -->
       <div>
-        <label class="tool-label">{t('resources')}</label>
+        <div class="tool-label">{t('resources')}</div>
         <div class="grid grid-cols-4 gap-4">
           <div>
-            <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('cpuRequest')}</label>
+            <label for="kubernetes-manifest-generator-field-18" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('cpuRequest')}</label>
             <input type="text" value={config.resources.cpuRequest} onchange={(e) => updateConfig('resources', { ...config.resources, cpuRequest: e.target.value })}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" id="kubernetes-manifest-generator-field-18" />
           </div>
           <div>
-            <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('cpuLimit')}</label>
+            <label for="kubernetes-manifest-generator-field-17" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('cpuLimit')}</label>
             <input type="text" value={config.resources.cpuLimit} onchange={(e) => updateConfig('resources', { ...config.resources, cpuLimit: e.target.value })}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" id="kubernetes-manifest-generator-field-17" />
           </div>
           <div>
-            <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('memoryRequest')}</label>
+            <label for="kubernetes-manifest-generator-field-16" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('memoryRequest')}</label>
             <input type="text" value={config.resources.memoryRequest} onchange={(e) => updateConfig('resources', { ...config.resources, memoryRequest: e.target.value })}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" id="kubernetes-manifest-generator-field-16" />
           </div>
           <div>
-            <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('memoryLimit')}</label>
+            <label for="kubernetes-manifest-generator-field-15" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('memoryLimit')}</label>
             <input type="text" value={config.resources.memoryLimit} onchange={(e) => updateConfig('resources', { ...config.resources, memoryLimit: e.target.value })}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" />
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" id="kubernetes-manifest-generator-field-15" />
           </div>
         </div>
       </div>
@@ -190,7 +190,7 @@
       <!-- Environment Variables -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">{t('environmentVariables')}</label>
+          <div class="tool-label">{t('environmentVariables')}</div>
           <button onclick={addEnvVar} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">{t('addEnvVar')}</button>
         </div>
         <div class="space-y-2">
@@ -225,7 +225,7 @@
       <!-- Output -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">{t('kubernetesManifests')}</label>
+          <div class="tool-label">{t('kubernetesManifests')}</div>
           <button onclick={handleCopy} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">
             {copied ? tCommon('copied') : tCommon('copy')}
           </button>

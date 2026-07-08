@@ -227,15 +227,14 @@
       {#if mode === 'fetch'}
 <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium mb-2">{t('openGraphPreview.fetchUrlLabel')}</label>
+            <label for="open-graph-preview-field-14" class="block text-sm font-medium mb-2">{t('openGraphPreview.fetchUrlLabel')}</label>
             <div class="flex gap-2">
               <input
                 type="text"
                 bind:value={fetchUrl}
                 class="tool-input flex-1"
                 placeholder="https://example.com/article"
-                onkeydown={(e) => e.key === 'Enter' && fetchOgTags()}
-              />
+                onkeydown={(e) => e.key === 'Enter' && fetchOgTags()} id="open-graph-preview-field-14" />
               <button
                 onclick={fetchOgTags}
                 disabled={loading || !fetchUrl.trim()}
@@ -256,52 +255,48 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm font-medium mb-2">{t('openGraphPreview.title')}</label>
+              <label for="open-graph-preview-field-13" class="block text-sm font-medium mb-2">{t('openGraphPreview.title')}</label>
               <input
                 type="text"
                 bind:value={title}
                 class="tool-input"
-                placeholder={t('openGraphPreview.titlePlaceholder')}
-              />
+                placeholder={t('openGraphPreview.titlePlaceholder')} id="open-graph-preview-field-13" />
             </div>
             <div>
-              <label class="block text-sm font-medium mb-2">{t('openGraphPreview.siteName')}</label>
+              <label for="open-graph-preview-field-12" class="block text-sm font-medium mb-2">{t('openGraphPreview.siteName')}</label>
               <input
                 type="text"
                 bind:value={siteName}
                 class="tool-input"
-                placeholder={t('openGraphPreview.siteNamePlaceholder')}
-              />
+                placeholder={t('openGraphPreview.siteNamePlaceholder')} id="open-graph-preview-field-12" />
             </div>
           </div>
 
           <div>
-            <label class="block text-sm font-medium mb-2">{t('openGraphPreview.description')}</label>
+            <label for="open-graph-preview-field-11" class="block text-sm font-medium mb-2">{t('openGraphPreview.description')}</label>
             <textarea
               bind:value={description}
               class="tool-input"
               rows={2}
-              placeholder={t('openGraphPreview.descriptionPlaceholder')}></textarea>
+              placeholder={t('openGraphPreview.descriptionPlaceholder')} id="open-graph-preview-field-11"></textarea>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm font-medium mb-2">{t('openGraphPreview.imageUrl')}</label>
+              <label for="open-graph-preview-field-10" class="block text-sm font-medium mb-2">{t('openGraphPreview.imageUrl')}</label>
               <input
                 type="text"
                 bind:value={image}
                 class="tool-input"
-                placeholder={t('openGraphPreview.imageUrlPlaceholder')}
-              />
+                placeholder={t('openGraphPreview.imageUrlPlaceholder')} id="open-graph-preview-field-10" />
             </div>
             <div>
-              <label class="block text-sm font-medium mb-2">{t('openGraphPreview.pageUrl')}</label>
+              <label for="open-graph-preview-field-9" class="block text-sm font-medium mb-2">{t('openGraphPreview.pageUrl')}</label>
               <input
                 type="text"
                 bind:value={url}
                 class="tool-input"
-                placeholder={t('openGraphPreview.pageUrlPlaceholder')}
-              />
+                placeholder={t('openGraphPreview.pageUrlPlaceholder')} id="open-graph-preview-field-9" />
             </div>
           </div>
         
@@ -343,7 +338,7 @@
 
       <!-- Preview -->
       <div>
-        <label class="block text-sm font-medium mb-2">{t('openGraphPreview.preview')}</label>
+        <div class="block text-sm font-medium mb-2">{t('openGraphPreview.preview')}</div>
         
         {#if previewType === 'facebook'}
 <div class="max-w-[500px] bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
@@ -386,7 +381,7 @@
       <!-- Generated Code -->
       <div>
         <div class="flex items-center justify-between mb-2">
-          <label class="block text-sm font-medium">{t('openGraphPreview.generatedCode')}</label>
+          <div class="block text-sm font-medium">{t('openGraphPreview.generatedCode')}</div>
           <button
             onclick={handleCopy}
             class="px-3 py-1 text-sm bg-amber-600 hover:bg-amber-700 rounded transition-colors"

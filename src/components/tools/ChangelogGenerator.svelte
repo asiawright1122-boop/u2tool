@@ -162,26 +162,24 @@
       <!-- Project Info -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="changelog-generator-field-9" class="tool-label">
             {t('projectName')}
           </label>
           <input
             type="text"
             bind:value={projectName}
             placeholder={t('projectNamePlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="changelog-generator-field-9" />
         </div>
         <div>
-          <label class="tool-label">
+          <label for="changelog-generator-field-8" class="tool-label">
             {t('projectUrl')}
           </label>
           <input
             type="text"
             bind:value={projectUrl}
             placeholder={t('projectUrlPlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="changelog-generator-field-8" />
         </div>
       </div>
 
@@ -200,23 +198,21 @@
             <!-- Version Header -->
             <div class="flex items-center gap-4">
               <div class="flex-1">
-                <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('version')}</label>
+                <label for={`changelog-generator-field-7-${entryIndex}`} class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('version')}</label>
                 <input
                   type="text"
                   value={entry.version}
                   onchange={(e) => updateEntry(entryIndex, 'version', e.target.value)}
                   placeholder={t('versionPlaceholder')}
-                  class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100"
-                />
+                  class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100" id={`changelog-generator-field-7-${entryIndex}`} />
               </div>
               <div class="flex-1">
-                <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('date')}</label>
+                <label for={`changelog-generator-field-6-${entryIndex}`} class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('date')}</label>
                 <input
                   type="date"
                   value={entry.date}
                   onchange={(e) => updateEntry(entryIndex, 'date', e.target.value)}
-                  class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100"
-                />
+                  class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100" id={`changelog-generator-field-6-${entryIndex}`} />
               </div>
               {#if entries.length > 1}
 <button
@@ -287,7 +283,7 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">CHANGELOG.md</label>
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">CHANGELOG.md</div>
             <div class="flex gap-2">
               <button
                 onclick={copyToClipboard}

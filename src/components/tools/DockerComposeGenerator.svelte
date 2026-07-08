@@ -158,11 +158,10 @@
 
 <div class="space-y-6">
   <div>
-    <label class="tool-label">{t('composeVersion')}</label>
+    <label for="docker-compose-generator-field-3" class="tool-label">{t('composeVersion')}</label>
     <select
       bind:value={composeVersion}
-      class="w-full max-w-xs px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100"
-    >
+      class="w-full max-w-xs px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100" id="docker-compose-generator-field-3">
       <option value="3.8">3.8</option>
       <option value="3.9">3.9</option>
       <option value="3.7">3.7</option>
@@ -206,7 +205,7 @@
   {#if output}
     <div class="space-y-3">
       <div class="flex justify-between items-center">
-        <label class="tool-label">docker-compose.yml</label>
+        <div class="tool-label">docker-compose.yml</div>
         <div class="flex gap-2">
           <button onclick={copyOutput} class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded text-sm">{t('copy')}</button>
           <button onclick={downloadOutput} class="px-3 py-1 bg-emerald-600 text-white rounded text-sm">{t('download')}</button>

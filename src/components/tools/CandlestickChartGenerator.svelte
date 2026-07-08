@@ -465,7 +465,7 @@
       <!-- 数据编辑 -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium">{t("dataEditor")}</label>
+          <div class="block text-sm font-medium">{t("dataEditor")}</div>
           <button onclick={addDataItem} class="btn-secondary btn-sm">
             + {t("addData")}
           </button>

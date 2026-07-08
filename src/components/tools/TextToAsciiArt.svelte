@@ -48,7 +48,7 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div class="md:col-span-3">
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+          <label for="text-to-ascii-art-field-5" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('input')}
           </label>
           <input
@@ -56,17 +56,15 @@
             bind:value={input}
             maxLength={20}
             class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white"
-            placeholder={t('placeholder')}
-          />
+            placeholder={t('placeholder')} id="text-to-ascii-art-field-5" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+          <label for="text-to-ascii-art-field-4" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('character')}
           </label>
           <select
             bind:value={char}
-            class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white"
-          >
+            class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white" id="text-to-ascii-art-field-4">
             <option value="█">{t('charBlock')}</option>
             <option value="#">{t('charHash')}</option>
             <option value="*">{t('charStar')}</option>
@@ -94,9 +92,9 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+        <div class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
           {t('output')}
-        </label>
+        </div>
         <pre class="w-full min-h-[200px] px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-green-600 dark:text-green-400 font-mono text-sm overflow-x-auto whitespace-pre">
           {output || t('outputPlaceholder')}
         </pre>

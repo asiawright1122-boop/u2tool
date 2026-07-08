@@ -359,7 +359,7 @@
 
                     <div>
                         <div class="flex justify-between items-center mb-2">
-                            <label class="text-sm font-medium">{t('dataEditor')}</label>
+                            <div class="text-sm font-medium">{t('dataEditor')}</div>
                             <button onclick={addTask} class="btn-secondary btn-sm">
                                 + {t('addTask')}
                             </button>

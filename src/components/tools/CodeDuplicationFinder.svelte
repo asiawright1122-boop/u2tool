@@ -56,7 +56,7 @@
     <div class="space-y-6">
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">Code {tCommon('input')}</label>
+          <div class="tool-label">Code {tCommon('input')}</div>
           <div class="flex items-center gap-4">
             <label class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
               {t('minLines')}:

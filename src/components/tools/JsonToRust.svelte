@@ -107,14 +107,13 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+          <label for="json-to-rust-field-6" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('structName')}
           </label>
           <input
             type="text"
             bind:value={structName}
-            class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white" id="json-to-rust-field-6" />
         </div>
         <div class="flex items-center gap-4">
           <label class="flex items-center gap-2 text-gray-600 dark:text-gray-300">
@@ -140,23 +139,23 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+          <label for="json-to-rust-field-5" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('input')}
           </label>
           <textarea
             bind:value={input}
             class="w-full h-80 px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"
-            placeholder={t('inputPlaceholder')}></textarea>
+            placeholder={t('inputPlaceholder')} id="json-to-rust-field-5"></textarea>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+          <label for="json-to-rust-field-4" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('output')}
           </label>
           <textarea
             value={output}
             readOnly
             class="w-full h-80 px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"
-            placeholder={t('outputPlaceholder')}></textarea>
+            placeholder={t('outputPlaceholder')} id="json-to-rust-field-4"></textarea>
         </div>
       </div>
 

@@ -90,9 +90,9 @@
     <div class="space-y-6">
       <!-- Type Selection -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('type')} *
-        </label>
+        </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
           {#each COMMIT_TYPES as ct (ct.value)}
 <button 
@@ -115,20 +115,19 @@
 
       <!-- Scope -->
       <div>
-        <label class="tool-label">
+        <label for="commit-message-generator-field-10" class="tool-label">
           {t('scope')} ({t('optional')})
         </label>
         <input
           type="text"
           bind:value={scope}
           placeholder={t('scopePlaceholder')}
-          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400"
-        />
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400" id="commit-message-generator-field-10" />
       </div>
 
       <!-- Subject -->
       <div>
-        <label class="tool-label">
+        <label for="commit-message-generator-field-9" class="tool-label">
           {t('subject')} *
         </label>
         <input
@@ -139,8 +138,7 @@
             isSubjectTooLong 
               ? 'border-yellow-500 dark:border-yellow-500' 
               : 'border-gray-300 dark:border-gray-600'
-          }`}
-        />
+          }`} id="commit-message-generator-field-9" />
         <p class={`mt-1 text-xs ${isSubjectTooLong ? 'text-yellow-500' : 'text-gray-500 dark:text-gray-400'}`}>
           {subjectLength}/50 {t('characters')} {#if isSubjectTooLong}
 `(${t('recommended50')})`
@@ -163,34 +161,34 @@
 
       <!-- Body -->
       <div>
-        <label class="tool-label">
+        <label for="commit-message-generator-field-8" class="tool-label">
           {t('body')} ({t('optional')})
         </label>
         <textarea
           bind:value={body}
           placeholder={t('bodyPlaceholder')}
           rows={3}
-          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 resize-y"></textarea>
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 resize-y" id="commit-message-generator-field-8"></textarea>
       </div>
 
       <!-- Footer -->
       <div>
-        <label class="tool-label">
+        <label for="commit-message-generator-field-7" class="tool-label">
           {t('footer')} ({t('optional')})
         </label>
         <textarea
           bind:value={footer}
           placeholder={t('footerPlaceholder')}
           rows={2}
-          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 resize-y"></textarea>
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 resize-y" id="commit-message-generator-field-7"></textarea>
       </div>
 
       <!-- Output -->
       <div>
         <div class="flex items-center justify-between mb-2">
-          <label class="tool-label">
+          <div class="tool-label">
             {t('commitMessage')}
-          </label>
+          </div>
           <button
             onclick={handleCopy}
             disabled={!subject}

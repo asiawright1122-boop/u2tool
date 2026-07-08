@@ -114,27 +114,25 @@
       <!-- Names Input -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div class="space-y-2">
-          <label class="tool-label">
+          <label for="love-calculator-field-4" class="tool-label">
             {t('yourName')}
           </label>
           <input
             type="text"
             bind:value={name1}
             placeholder={t('enterName')}
-            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-center text-lg"
-          />
+            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-center text-lg" id="love-calculator-field-4" />
         </div>
 
         <div class="space-y-2">
-          <label class="tool-label">
+          <label for="love-calculator-field-3" class="tool-label">
             {t('partnerName')}
           </label>
           <input
             type="text"
             bind:value={name2}
             placeholder={t('enterName')}
-            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-center text-lg"
-          />
+            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-center text-lg" id="love-calculator-field-3" />
         </div>
       </div>
 

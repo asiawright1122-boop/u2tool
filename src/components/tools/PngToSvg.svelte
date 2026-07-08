@@ -172,21 +172,20 @@
 <div class="space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label class="tool-label">
+              <label for="png-to-svg-field-6" class="tool-label">
                 {t('conversionMode')}
               </label>
               <select
                 value={mode}
                 onchange={(e) => mode = e.target.value as 'embed' | 'trace'}
-                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              >
+                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="png-to-svg-field-6">
                 <option value="embed">{t('embedMode')}</option>
                 <option value="trace">{t('traceMode')}</option>
               </select>
             </div>
             {#if mode === 'trace'}
 <div>
-                <label class="tool-label">
+                <label for="png-to-svg-field-5" class="tool-label">
                   {t('threshold')}: {threshold}
                 </label>
                 <input
@@ -195,8 +194,7 @@
                   max="255"
                   value={threshold}
                   onchange={(e) => threshold = Number(e.target.value)}
-                  class="w-full"
-                />
+                  class="w-full" id="png-to-svg-field-5" />
               </div>
 {/if}
           </div>
@@ -213,13 +211,13 @@
       {#if svgOutput}
 <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <label for="png-to-svg-field-4" class="tool-label">
               {t('svgOutput')}
             </label>
             <textarea
               value={svgOutput}
               readOnly
-              class="w-full h-48 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm"></textarea>
+              class="w-full h-48 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm" id="png-to-svg-field-4"></textarea>
           </div>
           <div class="flex gap-4">
             <button

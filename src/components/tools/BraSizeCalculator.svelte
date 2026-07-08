@@ -141,28 +141,26 @@
           </div>
           
           <div>
-            <label class="tool-label">
+            <label for="bra-size-calculator-field-6" class="tool-label">
               {t('underbust')} ({unit})
             </label>
             <input
               type="number"
               bind:value={underbust}
               placeholder={unit === 'cm' ? '70-120' : '28-46'}
-              class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-            />
+              class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" id="bra-size-calculator-field-6" />
             <p class="text-xs text-gray-500 mt-1">{t('underbustHelp')}</p>
           </div>
           
           <div>
-            <label class="tool-label">
+            <label for="bra-size-calculator-field-5" class="tool-label">
               {t('bust')} ({unit})
             </label>
             <input
               type="number"
               bind:value={bust}
               placeholder={unit === 'cm' ? '80-140' : '32-54'}
-              class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-            />
+              class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" id="bra-size-calculator-field-5" />
             <p class="text-xs text-gray-500 mt-1">{t('bustHelp')}</p>
           </div>
         </div>}
@@ -170,9 +168,9 @@
 <!-- Size Selection -->
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <div class="tool-label">
               {t('selectBand')}
-            </label>
+            </div>
             <div class="flex flex-wrap gap-2">
               {#each Object.keys(bandConversions) as band}
 <button
@@ -190,9 +188,9 @@
           </div>
           
           <div>
-            <label class="tool-label">
+            <div class="tool-label">
               {t('selectCup')}
-            </label>
+            </div>
             <div class="flex flex-wrap gap-2">
               {#each cupSizes as cup}
 <button

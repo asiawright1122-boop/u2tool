@@ -106,14 +106,14 @@
     <div class="space-y-4">
       <!-- Input Section -->
       <div>
-        <label class="tool-label">
+        <label for="env-parser-field-4" class="tool-label">
           {tg('input')}
         </label>
         <textarea
           class="tool-textarea"
           bind:value={input}
           placeholder={t('inputPlaceholder')}
-          rows={8}></textarea>
+          rows={8} id="env-parser-field-4"></textarea>
       </div>
 
       <!-- Action Buttons -->
@@ -204,9 +204,9 @@
       <!-- Output Format Selection -->
       {#if parseResult.entries.length > 0}
 <div>
-          <label class="tool-label">
+          <div class="tool-label">
             {t('outputFormat')}
-          </label>
+          </div>
           <div class="flex gap-2">
             {#each (['env', 'json', 'yaml'] as const) as format (format)}
 <button 
@@ -228,9 +228,9 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">
               {tg('output')}
-            </label>
+            </div>
             <button
               onclick={handleCopy}
               class={`text-sm px-3 py-1 rounded ${

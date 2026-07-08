@@ -71,14 +71,13 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <!-- Gender -->
         <div class="space-y-2">
-          <label class="tool-label">
+          <label for="name-generator-field-6" class="tool-label">
             {t('gender')}
           </label>
           <select
             value={gender}
             onchange={(e) => gender = e.target.value as Gender}
-            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="name-generator-field-6">
             <option value="any">{t('anyGender')}</option>
             <option value="male">{t('male')}</option>
             <option value="female">{t('female')}</option>
@@ -88,14 +87,13 @@
 
         <!-- Origin -->
         <div class="space-y-2">
-          <label class="tool-label">
+          <label for="name-generator-field-5" class="tool-label">
             {t('origin')}
           </label>
           <select
             value={origin}
             onchange={(e) => origin = e.target.value as Origin}
-            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="name-generator-field-5">
             {#each origins as o (o)}
 <option  value={o}>
                 {t(`origins.${o}`)}
@@ -106,14 +104,13 @@
 
         <!-- Count -->
         <div class="space-y-2">
-          <label class="tool-label">
+          <label for="name-generator-field-4" class="tool-label">
             {t('count')}
           </label>
           <select
             value={count}
             onchange={(e) => count = parseInt(e.target.value)}
-            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="name-generator-field-4">
             {#each [1, 5, 10, 20, 50] as n (n)}
 <option  value={n}>{n}</option>
 {/each}

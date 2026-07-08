@@ -237,21 +237,21 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div>
-                <label class="tool-label">
+                <div class="tool-label">
                   {t('preview')}
-                </label>
+                </div>
                 <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-gray-50 dark:bg-gray-900 min-h-[200px] flex items-center justify-center">
                   <img src={imagePreview} alt="Preview" class="max-w-full max-h-64 mx-auto" style="aspect-ratio: auto" />
                 </div>
               </div>
               <div>
-                <label class="tool-label">
+                <label for="base64-image-converter-field-6" class="tool-label">
                   Base64 {tCommon('output')}
                 </label>
                 <textarea
                   value={base64Output}
                   readOnly
-                  class="w-full h-64 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-xs resize-none"></textarea>
+                  class="w-full h-64 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-xs resize-none" id="base64-image-converter-field-6"></textarea>
               </div>
             </div>
 
@@ -281,13 +281,13 @@
 <!-- Decode Mode: Base64 to Image -->
         <div class="space-y-6">
           <div>
-            <label class="tool-label">
+            <label for="base64-image-converter-field-5" class="tool-label">
               Base64 {tCommon('input')}
             </label>
             <textarea
               bind:value={base64Input}
               placeholder={t("inputPlaceholder")}
-              class="w-full h-40 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-xs resize-none"></textarea>
+              class="w-full h-40 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-xs resize-none" id="base64-image-converter-field-5"></textarea>
           </div>
 
           <div class="flex gap-3 flex-wrap">
@@ -309,9 +309,9 @@
           {#if imagePreview}
 
             <div>
-              <label class="tool-label">
+              <div class="tool-label">
                 {t('preview')}
-              </label>
+              </div>
               <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-gray-50 dark:bg-gray-900 min-h-[200px] flex items-center justify-center">
                 <img src={imagePreview} alt="Decoded" class="max-w-full max-h-96 mx-auto" style="aspect-ratio: auto" />
               </div>

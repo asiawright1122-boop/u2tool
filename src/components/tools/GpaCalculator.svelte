@@ -138,9 +138,9 @@
       <!-- Courses List -->
       <div class="space-y-3">
         <div class="flex items-center justify-between">
-          <label class="tool-label">
+          <div class="tool-label">
             {t('courses')} ({courses.length})
-          </label>
+          </div>
         </div>
 
         <!-- Header -->

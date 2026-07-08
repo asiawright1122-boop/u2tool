@@ -134,20 +134,19 @@
 <div class="space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label class="tool-label">
+              <label for="webp-to-png-field-4" class="tool-label">
                 {t('fileName')}
               </label>
               <div class="flex items-center gap-2">
                 <input
                   type="text"
                   bind:value={fileName}
-                  class="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                />
+                  class="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="webp-to-png-field-4" />
                 <span class="text-gray-500">.png</span>
               </div>
             </div>
             <div>
-              <label class="tool-label">
+              <label for="webp-to-png-field-3" class="tool-label">
                 {t('quality')}: {quality}%
               </label>
               <input
@@ -156,8 +155,7 @@
                 max="100"
                 value={quality}
                 onchange={(e) => quality = Number(e.target.value)}
-                class="w-full"
-              />
+                class="w-full" id="webp-to-png-field-3" />
             </div>
           </div>
 

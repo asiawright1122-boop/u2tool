@@ -135,38 +135,36 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <label for="svg-to-png-field-9" class="tool-label">
               {t('uploadSvg')}
             </label>
             <input
               type="file"
               accept=".svg"
               onchange={handleFileUpload}
-              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            />
+              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="svg-to-png-field-9" />
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="svg-to-png-field-8" class="tool-label">
               {t('orPasteSvg')}
             </label>
             <textarea
               value={svgContent}
               onchange={handlePaste}
               placeholder={t('placeholder')}
-              class="w-full h-48 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm"></textarea>
+              class="w-full h-48 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm" id="svg-to-png-field-8"></textarea>
           </div>
 
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <label class="tool-label">
+              <label for="svg-to-png-field-7" class="tool-label">
                 {t('scale')}
               </label>
               <select
                 value={scale}
                 onchange={(e) => scale = Number(e.target.value)}
-                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              >
+                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="svg-to-png-field-7">
                 <option value={1}>1x</option>
                 <option value={2}>2x</option>
                 <option value={3}>3x</option>
@@ -174,7 +172,7 @@
               </select>
             </div>
             <div>
-              <label class="tool-label">
+              <label for="svg-to-png-field-6" class="tool-label">
                 {t('background')}
               </label>
               <div class="flex items-center gap-2">
@@ -182,8 +180,7 @@
                   type="color"
                   bind:value={backgroundColor}
                   disabled={transparent}
-                  class="w-10 h-10 rounded cursor-pointer"
-                />
+                  class="w-10 h-10 rounded cursor-pointer" id="svg-to-png-field-6" />
                 <label class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                   <input
                     type="checkbox"
@@ -206,9 +203,9 @@
         </div>
 
         <div>
-          <label class="tool-label">
+          <div class="tool-label">
             {t('preview')}
-          </label>
+          </div>
           <div class="border border-gray-300 dark:border-gray-600 rounded-lg p-4 min-h-64 flex items-center justify-center bg-[url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAADFJREFUOE9jZGBg+M+ABRw9epQRm3QYGxvDJRgZGRmxKcamBpsabGqwqcGmBpsabGoAAPvfB/1uTd4UAAAAAElFTkSuQmCC')]">
             {#if previewUrl}
 <img src={previewUrl} alt="SVG Preview" class="max-w-full max-h-64" style="aspect-ratio: auto" />

@@ -141,7 +141,7 @@
 
       {#if results.length > 0}
 <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('results')}</label>
+          <div class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('results')}</div>
           <div class="space-y-2">
             {#each results as result, index (index)}
 <div  class="bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg p-4">

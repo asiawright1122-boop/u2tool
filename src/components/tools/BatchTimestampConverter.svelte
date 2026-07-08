@@ -113,26 +113,25 @@
     <div class="space-y-4">
       <!-- Input Section -->
       <div>
-        <label class="tool-label">
+        <label for="batch-timestamp-converter-field-6" class="tool-label">
           {tg('input')}
         </label>
         <textarea
           class="tool-textarea font-mono"
           bind:value={input}
           placeholder={t('inputPlaceholder')}
-          rows={6}></textarea>
+          rows={6} id="batch-timestamp-converter-field-6"></textarea>
       </div>
 
       <!-- Options Section -->
       <div class="flex flex-wrap gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="batch-timestamp-converter-field-5" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('timezone')}
           </label>
           <select
             bind:value={timezone}
-            class="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-          >
+            class="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" id="batch-timestamp-converter-field-5">
             {#each TIMEZONES as tz (tz.value)}
 <option  value={tz.value}>{tz.label}</option>
 {/each}
@@ -140,13 +139,12 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="batch-timestamp-converter-field-4" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('outputFormat')}
           </label>
           <select
             bind:value={outputFormat}
-            class="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-          >
+            class="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" id="batch-timestamp-converter-field-4">
             <option value="local">Local Format</option>
             <option value="iso">ISO 8601</option>
           </select>

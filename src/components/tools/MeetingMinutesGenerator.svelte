@@ -109,97 +109,88 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('meetingTitle')}</label>
+          <label for="meeting-minutes-generator-field-19" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('meetingTitle')}</label>
           <input
             type="text"
             value={data.title}
             onchange={(e) => updateData('title', e.target.value)}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="meeting-minutes-generator-field-19" />
         </div>
         <div class="grid grid-cols-2 gap-2">
           <div>
-            <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('date')}</label>
+            <label for="meeting-minutes-generator-field-18" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('date')}</label>
             <input
               type="date"
               value={data.date}
               onchange={(e) => updateData('date', e.target.value)}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            />
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="meeting-minutes-generator-field-18" />
           </div>
           <div>
-            <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('time')}</label>
+            <label for="meeting-minutes-generator-field-17" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('time')}</label>
             <input
               type="text"
               value={data.time}
               onchange={(e) => updateData('time', e.target.value)}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            />
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="meeting-minutes-generator-field-17" />
           </div>
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('location')}</label>
+          <label for="meeting-minutes-generator-field-16" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('location')}</label>
           <input
             type="text"
             value={data.location}
             onchange={(e) => updateData('location', e.target.value)}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="meeting-minutes-generator-field-16" />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('attendees')} ({t('attendeesHint')})</label>
+          <label for="meeting-minutes-generator-field-15" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('attendees')} ({t('attendeesHint')})</label>
           <input
             type="text"
             value={data.attendees}
             onchange={(e) => updateData('attendees', e.target.value)}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="meeting-minutes-generator-field-15" />
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('agenda')}</label>
+          <label for="meeting-minutes-generator-field-14" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('agenda')}</label>
           <textarea
             value={data.agenda}
             onchange={(e) => updateData('agenda', e.target.value)}
             rows={3}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
-          ></textarea>
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none" id="meeting-minutes-generator-field-14"></textarea>
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('discussionNotes')}</label>
+          <label for="meeting-minutes-generator-field-13" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('discussionNotes')}</label>
           <textarea
             value={data.discussion}
             onchange={(e) => updateData('discussion', e.target.value)}
             rows={3}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
-          ></textarea>
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none" id="meeting-minutes-generator-field-13"></textarea>
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('decisionsMade')}</label>
+          <label for="meeting-minutes-generator-field-12" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('decisionsMade')}</label>
           <textarea
             value={data.decisions}
             onchange={(e) => updateData('decisions', e.target.value)}
             rows={3}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
-          ></textarea>
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none" id="meeting-minutes-generator-field-12"></textarea>
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('nextMeeting')}</label>
+          <label for="meeting-minutes-generator-field-11" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('nextMeeting')}</label>
           <input
             type="text"
             value={data.nextMeeting}
             onchange={(e) => updateData('nextMeeting', e.target.value)}
             placeholder={t("detailsPlaceholder")}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="meeting-minutes-generator-field-11" />
         </div>
       </div>
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">{t('actionItems')}</label>
+          <div class="tool-label">{t('actionItems')}</div>
           <button onclick={addActionItem} class="text-xs px-2 py-1 btn-success rounded hover:bg-green-700">
             {t('addItem')}
           </button>

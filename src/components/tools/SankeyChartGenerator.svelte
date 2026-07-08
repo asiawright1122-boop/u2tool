@@ -325,7 +325,7 @@
           <!-- 节点编辑 -->
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="block text-sm font-medium">{t('source')}/{t('target')}</label>
+              <div class="block text-sm font-medium">{t('source')}/{t('target')}</div>
               <button onclick={addNode} class="btn-secondary btn-sm">
                 + {tg('add')}
               </button>
@@ -354,7 +354,7 @@
           <!-- 链接编辑 -->
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="block text-sm font-medium">{t('source')} → {t('target')}</label>
+              <div class="block text-sm font-medium">{t('source')} → {t('target')}</div>
               <button onclick={addLink} class="btn-secondary btn-sm">
                 + {t('addLink')}
               </button>

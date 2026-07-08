@@ -91,44 +91,41 @@
 
 {#snippet TimeInput(value: TimeValue, onChange: (value: TimeValue) => void, label: string)}
 <div class="space-y-2">
-      <label class="tool-label">
+      <div class="tool-label">
         {label}
-      </label>
+      </div>
       <div class="flex gap-2 items-center">
         <div class="flex-1">
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('hours')}</label>
+          <label for="time-calculator-field-9" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('hours')}</label>
           <input
             type="number"
             min="0"
             max="999"
             value={value.hours}
             onchange={(e) => onChange({ ...value, hours: Math.max(0, parseInt(e.currentTarget.value, 10) || 0) })}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" id="time-calculator-field-9" />
         </div>
         <span class="text-2xl text-gray-400 mt-5">:</span>
         <div class="flex-1">
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('minutes')}</label>
+          <label for="time-calculator-field-8" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('minutes')}</label>
           <input
             type="number"
             min="0"
             max="59"
             value={value.minutes}
             onchange={(e) => onChange({ ...value, minutes: Math.min(59, Math.max(0, parseInt(e.currentTarget.value, 10) || 0)) })}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" id="time-calculator-field-8" />
         </div>
         <span class="text-2xl text-gray-400 mt-5">:</span>
         <div class="flex-1">
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('seconds')}</label>
+          <label for="time-calculator-field-7" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('seconds')}</label>
           <input
             type="number"
             min="0"
             max="59"
             value={value.seconds}
             onchange={(e) => onChange({ ...value, seconds: Math.min(59, Math.max(0, parseInt(e.currentTarget.value, 10) || 0)) })}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" id="time-calculator-field-7" />
         </div>
       </div>
     </div>
@@ -144,9 +141,9 @@
 
       <!-- Operation Selection -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('operation')}
-        </label>
+        </div>
         <div class="flex gap-2">
           {#each (['add', 'subtract', 'difference'] as Operation[]) as op (op)}
 <button 
@@ -165,9 +162,9 @@
 
       <!-- Format Selection -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('format')}
-        </label>
+        </div>
         <div class="flex gap-2">
           <button
             onclick={() => format = '24h'}

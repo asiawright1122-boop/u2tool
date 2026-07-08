@@ -59,11 +59,11 @@
 
     <div class="space-y-4">
       <div>
-        <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('input')}</label>
+        <label for="qr-generator-field-2" class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('input')}</label>
         <textarea
           class="tool-textarea h-24"
           bind:value={input}
-          placeholder={t('inputPlaceholder')}></textarea>
+          placeholder={t('inputPlaceholder')} id="qr-generator-field-2"></textarea>
       </div>
 
       <div class="flex gap-2">

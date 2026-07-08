@@ -94,33 +94,33 @@
 
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('topLeft')}: {topLeft}{unit}</label>
+              <label for="border-radius-generator-field-12" class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('topLeft')}: {topLeft}{unit}</label>
               <input type="range" min="0" max={unit === '%' ? 50 : 100} value={topLeft}
                 onchange={(e) => handleChange('topLeft', parseInt(e.target.value))}
-                class="w-full" />
+                class="w-full" id="border-radius-generator-field-12" />
             </div>
             <div>
-              <label class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('topRight')}: {topRight}{unit}</label>
+              <label for="border-radius-generator-field-11" class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('topRight')}: {topRight}{unit}</label>
               <input type="range" min="0" max={unit === '%' ? 50 : 100} value={topRight}
                 onchange={(e) => handleChange('topRight', parseInt(e.target.value))}
-                class="w-full" />
+                class="w-full" id="border-radius-generator-field-11" />
             </div>
             <div>
-              <label class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('bottomLeft')}: {bottomLeft}{unit}</label>
+              <label for="border-radius-generator-field-10" class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('bottomLeft')}: {bottomLeft}{unit}</label>
               <input type="range" min="0" max={unit === '%' ? 50 : 100} value={bottomLeft}
                 onchange={(e) => handleChange('bottomLeft', parseInt(e.target.value))}
-                class="w-full" />
+                class="w-full" id="border-radius-generator-field-10" />
             </div>
             <div>
-              <label class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('bottomRight')}: {bottomRight}{unit}</label>
+              <label for="border-radius-generator-field-9" class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('bottomRight')}: {bottomRight}{unit}</label>
               <input type="range" min="0" max={unit === '%' ? 50 : 100} value={bottomRight}
                 onchange={(e) => handleChange('bottomRight', parseInt(e.target.value))}
-                class="w-full" />
+                class="w-full" id="border-radius-generator-field-9" />
             </div>
           </div>
 
           <div>
-            <label class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('presets')}</label>
+            <div class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('presets')}</div>
             <div class="flex flex-wrap gap-2">
               {#each presets as preset (preset.name)}
 <button  onclick={() => applyPreset(preset.values)}
@@ -132,9 +132,9 @@
           </div>
 
           <div>
-            <label class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('boxColor')}</label>
+            <label for="border-radius-generator-field-8" class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('boxColor')}</label>
             <input type="color" bind:value={boxColor}
-              class="w-full h-10 rounded cursor-pointer" />
+              class="w-full h-10 rounded cursor-pointer" id="border-radius-generator-field-8" />
           </div>
         </div>
 
@@ -146,7 +146,7 @@
           </div>
           
           <div>
-            <label class="tool-label">{t('output')}</label>
+            <div class="tool-label">{t('output')}</div>
             <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 font-mono text-sm text-green-600 dark:text-green-400">
               {getCss()}
             </div>

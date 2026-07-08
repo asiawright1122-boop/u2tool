@@ -224,21 +224,20 @@ ${headers}
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('curlCommand')}</label>
+        <label for="curl-converter-field-5" class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('curlCommand')}</label>
         <textarea
           bind:value={curlCommand}
           class="w-full h-32 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-gray-100 focus:outline-none focus:border-amber-500"
-          placeholder={t('placeholder')}></textarea>
+          placeholder={t('placeholder')} id="curl-converter-field-5"></textarea>
       </div>
 
       <div class="flex flex-wrap gap-4 items-center">
         <div>
-          <label class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('outputLanguage')}</label>
+          <label for="curl-converter-field-4" class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('outputLanguage')}</label>
           <select
             value={language}
             onchange={(e) => language = e.target.value as OutputLanguage}
-            class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-amber-500"
-          >
+            class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-amber-500" id="curl-converter-field-4">
             <option value="javascript">{t('langJavaScript')}</option>
             <option value="python">{t('langPython')}</option>
             <option value="php">{t('langPhp')}</option>
@@ -263,7 +262,7 @@ ${headers}
 
       {#if output}
 <div>
-          <label class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('generatedCode')}</label>
+          <div class="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('generatedCode')}</div>
           <pre class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-gray-100 overflow-x-auto">
             <code>{output}</code>
           </pre>

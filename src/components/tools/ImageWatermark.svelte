@@ -155,32 +155,29 @@
         <!-- Settings -->
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium mb-2">{t('uploadImage')}</label>
+            <label for="image-watermark-field-14" class="block text-sm font-medium mb-2">{t('uploadImage')}</label>
             <input
               type="file"
               accept="image/*"
               onchange={handleImageUpload}
-              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700"
-            />
+              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700" id="image-watermark-field-14" />
           </div>
 
           <div>
-            <label class="block text-sm font-medium mb-2">{t('watermarkText')}</label>
+            <label for="image-watermark-field-13" class="block text-sm font-medium mb-2">{t('watermarkText')}</label>
             <input
               type="text"
               bind:value={watermarkText}
               class="tool-input"
-              placeholder={t('textPlaceholder')}
-            />
+              placeholder={t('textPlaceholder')} id="image-watermark-field-13" />
           </div>
 
           <div>
-            <label class="block text-sm font-medium mb-2">{t('position')}</label>
+            <label for="image-watermark-field-12" class="block text-sm font-medium mb-2">{t('position')}</label>
             <select
               value={position}
               onchange={(e) => position = e.target.value as typeof position}
-              class="tool-input"
-            >
+              class="tool-input" id="image-watermark-field-12">
               {#each positions as pos (pos.value)}
 <option  value={pos.value}>
                   {t(pos.labelKey)}
@@ -190,49 +187,45 @@
           </div>
 
           <div>
-            <label class="block text-sm font-medium mb-2">{t('fontSize')}: {fontSize}px</label>
+            <label for="image-watermark-field-11" class="block text-sm font-medium mb-2">{t('fontSize')}: {fontSize}px</label>
             <input
               type="range"
               min="12"
               max="120"
               value={fontSize}
               onchange={(e) => fontSize = Number(e.target.value)}
-              class="w-full"
-            />
+              class="w-full" id="image-watermark-field-11" />
           </div>
 
           <div>
-            <label class="block text-sm font-medium mb-2">{t('opacity')}: {opacity}%</label>
+            <label for="image-watermark-field-10" class="block text-sm font-medium mb-2">{t('opacity')}: {opacity}%</label>
             <input
               type="range"
               min="10"
               max="100"
               value={opacity}
               onchange={(e) => opacity = Number(e.target.value)}
-              class="w-full"
-            />
+              class="w-full" id="image-watermark-field-10" />
           </div>
 
           <div>
-            <label class="block text-sm font-medium mb-2">{t('rotation')}: {rotation}°</label>
+            <label for="image-watermark-field-9" class="block text-sm font-medium mb-2">{t('rotation')}: {rotation}°</label>
             <input
               type="range"
               min="-45"
               max="45"
               value={rotation}
               onchange={(e) => rotation = Number(e.target.value)}
-              class="w-full"
-            />
+              class="w-full" id="image-watermark-field-9" />
           </div>
 
           <div>
-            <label class="block text-sm font-medium mb-2">{t('color')}</label>
+            <label for="image-watermark-field-8" class="block text-sm font-medium mb-2">{t('color')}</label>
             <div class="flex gap-2">
               <input
                 type="color"
                 bind:value={color}
-                class="w-12 h-10 rounded cursor-pointer"
-              />
+                class="w-12 h-10 rounded cursor-pointer" id="image-watermark-field-8" />
               <input
                 type="text"
                 bind:value={color}

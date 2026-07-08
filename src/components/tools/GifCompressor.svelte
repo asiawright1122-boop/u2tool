@@ -157,7 +157,7 @@
       <!-- Settings -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm font-medium mb-2">
+          <label for="gif-compressor-field-6" class="block text-sm font-medium mb-2">
             {t('compressionLevel')}: {compressionLevel}%
           </label>
           <input
@@ -166,8 +166,7 @@
             max="100"
             value={compressionLevel}
             onchange={(e) => compressionLevel = Number(e.target.value)}
-            class="w-full"
-          />
+            class="w-full" id="gif-compressor-field-6" />
           <p class="text-xs text-gray-500">{t('compressionHint')}</p>
         </div>
         <div>
@@ -181,7 +180,7 @@
           </label>
           {#if colorReduction}
 <div>
-              <label class="text-sm">{t('maxColors')}: {maxColors}</label>
+              <label for="gif-compressor-field-5" class="text-sm">{t('maxColors')}: {maxColors}</label>
               <input
                 type="range"
                 min="16"
@@ -189,8 +188,7 @@
                 step="16"
                 value={maxColors}
                 onchange={(e) => maxColors = Number(e.target.value)}
-                class="w-full"
-              />
+                class="w-full" id="gif-compressor-field-5" />
             </div>
 {/if}
         </div>
@@ -220,7 +218,7 @@
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div>
               <div class="flex justify-between items-center mb-2">
-                <label class="text-sm font-medium">{t('original')}</label>
+                <div class="text-sm font-medium">{t('original')}</div>
                 <span class="text-sm text-gray-600 dark:text-gray-400">{formatSize(originalSize)}</span>
               </div>
               <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 flex items-center justify-center min-h-[200px]">
@@ -229,7 +227,7 @@
             </div>
             <div>
               <div class="flex justify-between items-center mb-2">
-                <label class="text-sm font-medium">{t('compressed')}</label>
+                <div class="text-sm font-medium">{t('compressed')}</div>
                 {#if compressedSize > 0}
 <span class="text-sm text-green-600 dark:text-green-400">
                     {formatSize(compressedSize)} ({t('saved')} {getSavingsPercent()}%)

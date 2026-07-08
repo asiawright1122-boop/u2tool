@@ -90,10 +90,10 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
+        <label for="url-shortener-preview-field-4" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
         <textarea bind:value={input}
           class="w-full h-40 px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white"
-          placeholder={t('placeholder')}></textarea>
+          placeholder={t('placeholder')} id="url-shortener-preview-field-4"></textarea>
       </div>
 
       <div class="flex gap-4">
@@ -109,7 +109,7 @@
 
       {#if results.length > 0}
 <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('results')}</label>
+          <div class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('results')}</div>
           <div class="space-y-2">
             {#each results as result, index (index)}
 <div  class={`p-4 rounded-lg ${result.status === 'error' ? 'bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-700' : 'bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600'}`}>
@@ -127,7 +127,7 @@
 {/if}
 
       <div>
-        <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('supportedServices')}</label>
+        <div class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('supportedServices')}</div>
         <div class="flex flex-wrap gap-2">
           {#each shortenerDomains.slice(0, 20) as domain (domain)}
 <span  class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded text-xs text-gray-600 dark:text-gray-300">{domain}</span>

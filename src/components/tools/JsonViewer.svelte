@@ -79,10 +79,10 @@
 
     <div class="space-y-6">
       <div>
-        <label class="tool-label">{t('input')}</label>
+        <label for="json-viewer-field-2" class="tool-label">{t('input')}</label>
         <textarea bind:value={input}
           class="w-full h-48 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"
-          placeholder={t('inputPlaceholder')}></textarea>
+          placeholder={t('inputPlaceholder')} id="json-viewer-field-2"></textarea>
       </div>
 
       <div class="flex gap-4">

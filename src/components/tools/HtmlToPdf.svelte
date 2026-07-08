@@ -76,44 +76,42 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <label for="html-to-pdf-field-9" class="tool-label">
               {t('htmlInput')}
             </label>
             <textarea
               bind:value={html}
               placeholder={t('placeholder')}
-              class="w-full h-80 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm"></textarea>
+              class="w-full h-80 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm" id="html-to-pdf-field-9"></textarea>
           </div>
 
           <div class="grid grid-cols-3 gap-4">
             <div>
-              <label class="tool-label">
+              <label for="html-to-pdf-field-8" class="tool-label">
                 {t('pageSize')}
               </label>
               <select
                 bind:value={pageSize}
-                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              >
+                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="html-to-pdf-field-8">
                 <option value="a4">A4</option>
                 <option value="letter">Letter</option>
                 <option value="legal">Legal</option>
               </select>
             </div>
             <div>
-              <label class="tool-label">
+              <label for="html-to-pdf-field-7" class="tool-label">
                 {t('orientation')}
               </label>
               <select
                 value={orientation}
                 onchange={(e) => orientation = e.target.value as 'portrait' | 'landscape'}
-                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              >
+                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="html-to-pdf-field-7">
                 <option value="portrait">{t('portrait')}</option>
                 <option value="landscape">{t('landscape')}</option>
               </select>
             </div>
             <div>
-              <label class="tool-label">
+              <label for="html-to-pdf-field-6" class="tool-label">
                 {t('margin')} (mm)
               </label>
               <input
@@ -122,8 +120,7 @@
                 onchange={(e) => margin = Number(e.target.value)}
                 min="0"
                 max="50"
-                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              />
+                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="html-to-pdf-field-6" />
             </div>
           </div>
 
@@ -151,9 +148,9 @@
         </div>
 
         <div>
-          <label class="tool-label">
+          <div class="tool-label">
             {t('previewLabel')}
-          </label>
+          </div>
           <div class="border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden bg-white">
             <iframe
               bind:this={iframeRef}

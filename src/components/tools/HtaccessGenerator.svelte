@@ -283,23 +283,21 @@ Options -Indexes
           </div>
 
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('blockIps')}</label>
+            <label for="htaccess-generator-field-6" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('blockIps')}</label>
             <textarea
               value={config.blockIps}
               onchange={(e) => config = { ...config, blockIps: e.target.value }}
               class="w-full h-20 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 font-mono text-sm text-gray-900 dark:text-white"
-              placeholder="192.168.1.1&#10;10.0.0.0/8"
-            ></textarea>
+              placeholder="192.168.1.1&#10;10.0.0.0/8" id="htaccess-generator-field-6"></textarea>
           </div>
 
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('redirects')}</label>
+            <label for="htaccess-generator-field-5" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('redirects')}</label>
             <textarea
               value={config.redirects}
               onchange={(e) => config = { ...config, redirects: e.target.value }}
               class="w-full h-20 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 font-mono text-sm text-gray-900 dark:text-white"
-              placeholder="/old-page /new-page&#10;/blog /articles"
-            ></textarea>
+              placeholder="/old-page /new-page&#10;/blog /articles" id="htaccess-generator-field-5"></textarea>
           </div>
         </div>
       </div>
@@ -319,11 +317,11 @@ Options -Indexes
 
       {#if output}
 <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('output')}</label>
+          <label for="htaccess-generator-field-4" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('output')}</label>
           <textarea
             value={output}
             readOnly
-            class="w-full h-96 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-white focus:outline-none"></textarea>
+            class="w-full h-96 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-white focus:outline-none" id="htaccess-generator-field-4"></textarea>
         </div>
 {/if}
     </div>

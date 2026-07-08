@@ -63,14 +63,14 @@
     <div class="space-y-6">
       <!-- Input -->
       <div>
-        <label class="tool-label">
+        <label for="instagram-font-generator-field-2" class="tool-label">
           {t('enterText')}
         </label>
         <textarea
           bind:value={input}
           placeholder={tc('inputPlaceholder')}
           rows={3}
-          class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-pink-500"></textarea>
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-pink-500" id="instagram-font-generator-field-2"></textarea>
       </div>
 
       <!-- Results -->

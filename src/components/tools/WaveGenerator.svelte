@@ -104,7 +104,7 @@ ${paths}
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <label for="wave-generator-field-12" class="tool-label">
               {t('height')}: {height}px
             </label>
             <input
@@ -113,12 +113,11 @@ ${paths}
               max="200"
               value={height}
               onchange={(e) => height = Number(e.target.value)}
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-            />
+              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id="wave-generator-field-12" />
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="wave-generator-field-11" class="tool-label">
               {t('frequency')}: {frequency}
             </label>
             <input
@@ -128,12 +127,11 @@ ${paths}
               step="0.5"
               value={frequency}
               onchange={(e) => frequency = Number(e.target.value)}
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-            />
+              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id="wave-generator-field-11" />
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="wave-generator-field-10" class="tool-label">
               {t('amplitude')}: {amplitude}px
             </label>
             <input
@@ -142,14 +140,13 @@ ${paths}
               max="50"
               value={amplitude}
               onchange={(e) => amplitude = Number(e.target.value)}
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-            />
+              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id="wave-generator-field-10" />
           </div>
         </div>
 
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <label for="wave-generator-field-9" class="tool-label">
               {t('layers')}: {layers}
             </label>
             <input
@@ -158,14 +155,13 @@ ${paths}
               max="4"
               value={layers}
               onchange={(e) => layers = Number(e.target.value)}
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-            />
+              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id="wave-generator-field-9" />
           </div>
 
           <div>
-            <label class="tool-label">
+            <div class="tool-label">
               {t('position')}
-            </label>
+            </div>
             <div class="flex gap-2">
               <button
                 onclick={() => position = 'top'}
@@ -191,15 +187,14 @@ ${paths}
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="wave-generator-field-8" class="tool-label">
               {t('color')}
             </label>
             <div class="flex items-center gap-3">
               <input
                 type="color"
                 bind:value={color}
-                class="w-12 h-10 rounded cursor-pointer"
-              />
+                class="w-12 h-10 rounded cursor-pointer" id="wave-generator-field-8" />
               <input
                 type="text"
                 bind:value={color}
@@ -228,9 +223,9 @@ ${paths}
 
       <!-- SVG Output -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           SVG {common('output')}
-        </label>
+        </div>
         <pre class="p-4 bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm font-mono max-h-48">
           {svgCode}
         </pre>

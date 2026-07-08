@@ -74,13 +74,13 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+        <label for="uuid-validator-field-2" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
           {t('uuidValidator.input')}
         </label>
         <textarea
           bind:value={input}
           placeholder={t('uuidValidator.placeholder')}
-          class="w-full h-40 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent"></textarea>
+          class="w-full h-40 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="uuid-validator-field-2"></textarea>
       </div>
 
       <div class="flex gap-3">

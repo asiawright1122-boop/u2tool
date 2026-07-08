@@ -171,15 +171,14 @@
       <!-- Settings -->
       <div class="flex flex-wrap items-center gap-4">
         <div class="flex items-center gap-2">
-          <label class="text-sm font-medium">{t('colorCount')}:</label>
+          <label for="color-extractor-field-2" class="text-sm font-medium">{t('colorCount')}:</label>
           <input
             type="range"
             min="5"
             max="10"
             value={colorCount}
             onchange={(e) => colorCount = Number(e.target.value)}
-            class="w-24"
-          />
+            class="w-24" id="color-extractor-field-2" />
           <span class="text-sm font-mono w-8">{colorCount}</span>
         </div>
         <button onclick={clearAll} class="btn-secondary">

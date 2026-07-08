@@ -111,14 +111,14 @@
 
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div>
-              <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('originalText')}</label>
+              <label for="text-diff-patch-field-11" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('originalText')}</label>
               <textarea bind:value={original}
-                class="w-full h-48 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"></textarea>
+                class="w-full h-48 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm" id="text-diff-patch-field-11"></textarea>
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('modifiedText')}</label>
+              <label for="text-diff-patch-field-10" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('modifiedText')}</label>
               <textarea bind:value={modified}
-                class="w-full h-48 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"></textarea>
+                class="w-full h-48 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm" id="text-diff-patch-field-10"></textarea>
             </div>
           </div>
           <button onclick={createPatch}
@@ -127,7 +127,7 @@
           </button>
           {#if patch}
 <div>
-              <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('generatedPatch')}</label>
+              <div class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('generatedPatch')}</div>
               <pre class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 font-mono text-sm overflow-x-auto">
                 {#each patch.split('\n') as line, i (i)}
 <div  class={line.startsWith('+') ? 'text-green-600 dark:text-green-400' : line.startsWith('-') ? 'text-red-600 dark:text-red-400' : line.startsWith('@@') ? 'text-amber-600 dark:text-amber-400' : 'text-gray-600 dark:text-gray-300'}>
@@ -142,15 +142,15 @@
 
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div>
-              <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('originalText')}</label>
+              <label for="text-diff-patch-field-9" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('originalText')}</label>
               <textarea bind:value={original}
-                class="w-full h-40 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"></textarea>
+                class="w-full h-40 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm" id="text-diff-patch-field-9"></textarea>
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('patch')}</label>
+              <label for="text-diff-patch-field-8" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('patch')}</label>
               <textarea bind:value={patchInput}
                 class="w-full h-40 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"
-                placeholder={t('patchPlaceholder')}></textarea>
+                placeholder={t('patchPlaceholder')} id="text-diff-patch-field-8"></textarea>
             </div>
           </div>
           <button onclick={applyPatch}
@@ -159,9 +159,9 @@
           </button>
           {#if patchResult}
 <div>
-              <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('result')}</label>
+              <label for="text-diff-patch-field-7" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('result')}</label>
               <textarea value={patchResult} readOnly
-                class="w-full h-40 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"></textarea>
+                class="w-full h-40 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm" id="text-diff-patch-field-7"></textarea>
             </div>
 {/if}
         

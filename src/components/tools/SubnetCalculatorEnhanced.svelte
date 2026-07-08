@@ -106,14 +106,14 @@
       <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border dark:border-gray-700">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label class="tool-label">{t('ipAddress')}</label>
+            <label for="subnet-calculator-enhanced-field-4" class="tool-label">{t('ipAddress')}</label>
             <input type="text" bind:value={ipAddress}
               class="w-full p-3 border rounded-lg font-mono dark:bg-gray-700 dark:border-gray-600"
-              placeholder="192.168.1.0" />
+              placeholder="192.168.1.0" id="subnet-calculator-enhanced-field-4" />
           </div>
           <div>
-            <label class="tool-label">CIDR: /{cidr}</label>
-            <input type="range" min="0" max="32" bind:value={cidr} class="w-full" />
+            <label for="subnet-calculator-enhanced-field-3" class="tool-label">CIDR: /{cidr}</label>
+            <input type="range" min="0" max="32" bind:value={cidr} class="w-full" id="subnet-calculator-enhanced-field-3" />
           </div>
         </div>
         <div class="mt-4 flex flex-wrap gap-2">

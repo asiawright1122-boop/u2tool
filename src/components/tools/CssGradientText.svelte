@@ -111,7 +111,7 @@
           </div>
 
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('presets')}</label>
+            <div class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('presets')}</div>
             <div class="flex flex-wrap gap-2">
               {#each presets as preset (preset.nameKey)}
 <button  onclick={() => applyPreset(preset.colors)}
@@ -127,7 +127,7 @@
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('output')}</label>
+            <div class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('output')}</div>
             <pre class="bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg p-4 font-mono text-sm text-green-600 dark:text-green-400 overflow-x-auto">{getCss()}</pre>
           </div>
 

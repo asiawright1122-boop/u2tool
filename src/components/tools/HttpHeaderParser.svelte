@@ -69,7 +69,7 @@ X-Requested-With: XMLHttpRequest`;
     <div class="space-y-6">
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="block text-sm font-medium">{t('httpHeader.input')}</label>
+          <div class="block text-sm font-medium">{t('httpHeader.input')}</div>
           <button
             onclick={loadExample}
             class="text-sm text-amber-400 hover:text-amber-300"

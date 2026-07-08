@@ -45,11 +45,11 @@
 
     <div class="space-y-4">
       <div>
-        <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('input')}</label>
+        <label for="word-counter-field-2" class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('input')}</label>
         <textarea
           class="tool-textarea h-64"
           bind:value={text}
-          placeholder={t('inputPlaceholder')}></textarea>
+          placeholder={t('inputPlaceholder')} id="word-counter-field-2"></textarea>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">

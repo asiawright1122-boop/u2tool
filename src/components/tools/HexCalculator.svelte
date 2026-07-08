@@ -83,7 +83,7 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label for="hex-calculator-field-5" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           {t('operand1')}
         </label>
         <div class="flex items-center">
@@ -95,15 +95,14 @@
             value={operand1}
             onchange={(e) => operand1 = formatInput(e.target.value)}
             class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-r-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono uppercase"
-          placeholder="FF"
-          />
+          placeholder="FF" id="hex-calculator-field-5" />
         </div>
       </div>
 
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('operation')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each operations as op (op.value)}
 <button 
@@ -122,7 +121,7 @@
 
       {#if needsSecondOperand}
 <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="hex-calculator-field-4" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('operand2')}
           </label>
           <div class="flex items-center">
@@ -134,8 +133,7 @@
               value={operand2}
               onchange={(e) => operand2 = formatInput(e.target.value)}
               class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-r-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono uppercase"
-              placeholder="0A"
-            />
+              placeholder="0A" id="hex-calculator-field-4" />
           </div>
         </div>
 {/if}

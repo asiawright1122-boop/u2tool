@@ -130,13 +130,12 @@
         <!-- Input -->
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium mb-2">{t('uploadSvg')}</label>
+            <label for="svg-to-image-field-11" class="block text-sm font-medium mb-2">{t('uploadSvg')}</label>
             <input
               type="file"
               accept=".svg"
               onchange={handleFileUpload}
-              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700"
-            />
+              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700" id="svg-to-image-field-11" />
           </div>
 
           <div class="flex gap-2">
@@ -149,21 +148,20 @@
           </div>
 
           <div>
-            <label class="block text-sm font-medium mb-2">{t('svgCode')}</label>
+            <label for="svg-to-image-field-10" class="block text-sm font-medium mb-2">{t('svgCode')}</label>
             <textarea
               bind:value={svgCode}
               class="tool-textarea h-48 font-mono text-sm"
-              placeholder={t('placeholder')}></textarea>
+              placeholder={t('placeholder')} id="svg-to-image-field-10"></textarea>
           </div>
 
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm font-medium mb-2">{t('format')}</label>
+              <label for="svg-to-image-field-9" class="block text-sm font-medium mb-2">{t('format')}</label>
               <select
                 value={format}
                 onchange={(e) => format = e.target.value as typeof format}
-                class="tool-input"
-              >
+                class="tool-input" id="svg-to-image-field-9">
                 {#each formats as f (f.value)}
 <option  value={f.value}>{f.label}</option>
 {/each}
@@ -171,7 +169,7 @@
             </div>
 
             <div>
-              <label class="block text-sm font-medium mb-2">{t('scale')}: {scale}x</label>
+              <label for="svg-to-image-field-8" class="block text-sm font-medium mb-2">{t('scale')}: {scale}x</label>
               <input
                 type="range"
                 min="0.5"
@@ -179,20 +177,18 @@
                 step="0.5"
                 value={scale}
                 onchange={(e) => scale = Number(e.target.value)}
-                class="w-full"
-              />
+                class="w-full" id="svg-to-image-field-8" />
             </div>
           </div>
 
           {#if format !== 'png' || !transparent}
 <div>
-              <label class="block text-sm font-medium mb-2">{t('backgroundColor')}</label>
+              <label for="svg-to-image-field-7" class="block text-sm font-medium mb-2">{t('backgroundColor')}</label>
               <div class="flex gap-2">
                 <input
                   type="color"
                   bind:value={bgColor}
-                  class="w-12 h-10 rounded cursor-pointer"
-                />
+                  class="w-12 h-10 rounded cursor-pointer" id="svg-to-image-field-7" />
                 <input
                   type="text"
                   bind:value={bgColor}
@@ -234,7 +230,7 @@
 
         <!-- Preview -->
         <div class="space-y-4">
-          <label class="block text-sm font-medium text-gray-700 dark:text-white">{t('preview')}</label>
+          <div class="block text-sm font-medium text-gray-700 dark:text-white">{t('preview')}</div>
           <div class="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg min-h-[300px] flex items-center justify-center"
             style="background-image: linear-gradient(45deg, #ddd 25%, transparent 25%), linear-gradient(-45deg, #ddd 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #ddd 75%), linear-gradient(-45deg, transparent 75%, #ddd 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px">
             {#if previewUrl}

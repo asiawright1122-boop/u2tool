@@ -201,79 +201,74 @@
     <div class="space-y-6">
       <!-- Pattern Input -->
       <div>
-        <label class="tool-label">
+        <label for="regex-to-code-generator-field-12" class="tool-label">
           Regex Pattern
         </label>
         <input
           type="text"
           bind:value={pattern}
           placeholder={t("patternPlaceholder")}
-          class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono"
-        />
+          class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono" id="regex-to-code-generator-field-12" />
       </div>
 
       <!-- Test String -->
       <div>
-        <label class="tool-label">
+        <label for="regex-to-code-generator-field-11" class="tool-label">
           Test String
         </label>
         <input
           type="text"
           bind:value={testString}
           placeholder={t("testTextPlaceholder")}
-          class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-        />
+          class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="regex-to-code-generator-field-11" />
       </div>
 
       <!-- Replacement (for replace operation) -->
       {#if operation === 'replace'}
 <div>
-          <label class="tool-label">
+          <label for="regex-to-code-generator-field-10" class="tool-label">
             Replacement
           </label>
           <input
             type="text"
             bind:value={replacement}
             placeholder={t("replacementPlaceholder")}
-            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="regex-to-code-generator-field-10" />
         </div>
 {/if}
 
       <!-- Options -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="regex-to-code-generator-field-9" class="tool-label">
             Language
           </label>
           <select
             value={language}
             onchange={(e) => language = e.target.value as Language}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="regex-to-code-generator-field-9">
             {#each LANGUAGES as lang (lang.value)}
 <option  value={lang.value}>{lang.label}</option>
 {/each}
           </select>
         </div>
         <div>
-          <label class="tool-label">
+          <label for="regex-to-code-generator-field-8" class="tool-label">
             Operation
           </label>
           <select
             value={operation}
             onchange={(e) => operation = e.target.value as Operation}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="regex-to-code-generator-field-8">
             {#each OPERATIONS as op (op.value)}
 <option  value={op.value}>{op.label}</option>
 {/each}
           </select>
         </div>
         <div>
-          <label class="tool-label">
+          <div class="tool-label">
             Flags
-          </label>
+          </div>
           <div class="flex gap-4">
             {#each [
               { key: 'i', label: 'Case Insensitive' },
@@ -297,9 +292,9 @@
       <!-- Generated Code -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">
+          <div class="tool-label">
             Generated Code ({LANGUAGES.find(l => l.value === language)?.label})
-          </label>
+          </div>
           <button
             onclick={handleCopy}
             class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"

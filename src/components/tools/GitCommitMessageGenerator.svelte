@@ -68,14 +68,13 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="git-commit-message-generator-field-13" class="tool-label">
             {t('commitType')} *
           </label>
           <select
             value={config.type}
             onchange={(e) => updateConfig('type', e.target.value)}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="git-commit-message-generator-field-13">
             {#each COMMIT_TYPE_KEYS as type (type)}
 <option  value={type}>
                 {type} - {t(`types.${type}`)}
@@ -85,7 +84,7 @@
         </div>
         
         <div>
-          <label class="tool-label">
+          <label for="git-commit-message-generator-field-12" class="tool-label">
             {t('scope')}
           </label>
           <input
@@ -93,13 +92,12 @@
             value={config.scope}
             onchange={(e) => updateConfig('scope', e.target.value)}
             placeholder={t('scopePlaceholder')}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="git-commit-message-generator-field-12" />
         </div>
       </div>
 
       <div>
-        <label class="tool-label">
+        <label for="git-commit-message-generator-field-11" class="tool-label">
           {t('subject')} * <span class="text-xs text-gray-500">({config.subject.length}/72)</span>
         </label>
         <input
@@ -110,13 +108,12 @@
           maxLength={72}
           class={`w-full px-3 py-2 border rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white ${
             config.subject.length > 72 ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
-          }`}
-        />
+          }`} id="git-commit-message-generator-field-11" />
         <p class="text-xs text-gray-500 mt-1">{t('subjectHint')}</p>
       </div>
 
       <div>
-        <label class="tool-label">
+        <label for="git-commit-message-generator-field-10" class="tool-label">
           {t('body')}
         </label>
         <textarea
@@ -124,8 +121,7 @@
           onchange={(e) => updateConfig('body', e.target.value)}
           placeholder={t('bodyPlaceholder')}
           rows={4}
-          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
-        ></textarea>
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none" id="git-commit-message-generator-field-10"></textarea>
       </div>
 
       <div class="flex items-center gap-4">
@@ -142,7 +138,7 @@
 
       {#if config.breaking}
 <div>
-          <label class="tool-label">
+          <label for="git-commit-message-generator-field-9" class="tool-label">
             {t('breakingDescription')}
           </label>
           <textarea
@@ -150,13 +146,12 @@
             onchange={(e) => updateConfig('breakingDescription', e.target.value)}
             placeholder={t('breakingPlaceholder')}
             rows={2}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
-          ></textarea>
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none" id="git-commit-message-generator-field-9"></textarea>
         </div>
 {/if}
 
       <div>
-        <label class="tool-label">
+        <label for="git-commit-message-generator-field-8" class="tool-label">
           {t('relatedIssues')}
         </label>
         <input
@@ -164,15 +159,14 @@
           value={config.issues}
           onchange={(e) => updateConfig('issues', e.target.value)}
           placeholder={t('issuesPlaceholder')}
-          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-        />
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="git-commit-message-generator-field-8" />
       </div>
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">
+          <div class="tool-label">
             {t('generatedMessage')}
-          </label>
+          </div>
           <button
             onclick={handleCopy}
             disabled={!isValid}

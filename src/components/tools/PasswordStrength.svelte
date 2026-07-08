@@ -132,14 +132,13 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('pwStrength.password')}</label>
+        <label for="password-strength-field-2" class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('pwStrength.password')}</label>
         <div class="relative">
           <input
             type={showPassword ? 'text' : 'password'}
             bind:value={password}
             placeholder={t('pwStrength.placeholder')}
-            class="w-full p-3 pr-20 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full p-3 pr-20 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="password-strength-field-2" />
           <button
             type="button"
             onclick={() => showPassword = !showPassword}

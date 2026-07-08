@@ -151,59 +151,54 @@ ${config.companyName ? `**${config.companyName}**\n` : ''}${config.email ? `Emai
       <div class="grid md:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.websiteName')}</label>
+            <label for="terms-generator-field-13" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.websiteName')}</label>
             <input
               type="text"
               value={config.websiteName}
               onchange={(e) => config = { ...config, websiteName: e.target.value }}
               class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
-              placeholder={t('termsGenerator.websiteNamePlaceholder')}
-            />
+              placeholder={t('termsGenerator.websiteNamePlaceholder')} id="terms-generator-field-13" />
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.websiteUrl')}</label>
+            <label for="terms-generator-field-12" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.websiteUrl')}</label>
             <input
               type="text"
               value={config.websiteUrl}
               onchange={(e) => config = { ...config, websiteUrl: e.target.value }}
               class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
-              placeholder={t('termsGenerator.websiteUrlPlaceholder')}
-            />
+              placeholder={t('termsGenerator.websiteUrlPlaceholder')} id="terms-generator-field-12" />
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.companyName')}</label>
+            <label for="terms-generator-field-11" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.companyName')}</label>
             <input
               type="text"
               value={config.companyName}
               onchange={(e) => config = { ...config, companyName: e.target.value }}
               class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
-              placeholder={t('termsGenerator.companyNamePlaceholder')}
-            />
+              placeholder={t('termsGenerator.companyNamePlaceholder')} id="terms-generator-field-11" />
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.contactEmail')}</label>
+            <label for="terms-generator-field-10" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.contactEmail')}</label>
             <input
               type="email"
               value={config.email}
               onchange={(e) => config = { ...config, email: e.target.value }}
               class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
-              placeholder={t('termsGenerator.contactEmailPlaceholder')}
-            />
+              placeholder={t('termsGenerator.contactEmailPlaceholder')} id="terms-generator-field-10" />
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.governingLawCountry')}</label>
+            <label for="terms-generator-field-9" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.governingLawCountry')}</label>
             <input
               type="text"
               value={config.country}
               onchange={(e) => config = { ...config, country: e.target.value }}
               class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
-              placeholder={t('termsGenerator.governingLawCountryPlaceholder')}
-            />
+              placeholder={t('termsGenerator.governingLawCountryPlaceholder')} id="terms-generator-field-9" />
           </div>
         </div>
 
         <div class="space-y-3">
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.featuresTitle')}</label>
+          <div class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.featuresTitle')}</div>
           {#each [
             { key: 'allowsUserContent', label: t('termsGenerator.features.allowsUserContent') },
             { key: 'hasSubscription', label: t('termsGenerator.features.hasSubscription') },
@@ -237,11 +232,11 @@ ${config.companyName ? `**${config.companyName}**\n` : ''}${config.email ? `Emai
 
       {#if output}
 <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.generatedOutput')}</label>
+          <label for="terms-generator-field-8" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.generatedOutput')}</label>
           <textarea
             value={output}
             readOnly
-            class="w-full h-96 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-white focus:outline-none"></textarea>
+            class="w-full h-96 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-white focus:outline-none" id="terms-generator-field-8"></textarea>
         </div>
 {/if}
     </div>

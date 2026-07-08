@@ -120,21 +120,21 @@
     <div class="space-y-6">
       <!-- Input -->
       <div>
-        <label class="tool-label">
+        <label for="text-summarizer-field-3" class="tool-label">
           {t('enterText')}
         </label>
         <textarea
           bind:value={text}
           placeholder={tc('inputPlaceholder')}
           rows={8}
-          class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"></textarea>
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" id="text-summarizer-field-3"></textarea>
       </div>
 
       <!-- Length Selection -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('summaryLength')}
-        </label>
+        </div>
         <div class="flex gap-2">
           {#each (['short', 'medium', 'long'] as const) as len (len)}
 <button 

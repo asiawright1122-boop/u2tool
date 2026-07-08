@@ -159,27 +159,27 @@
 
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('imageToPdf.pageSize')}</label>
-              <select value={pageSize} onchange={e => pageSize = e.target.value as 'a4' | 'letter' | 'fit'} class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800">
+              <label for="image-to-pdf-field-8" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('imageToPdf.pageSize')}</label>
+              <select value={pageSize} onchange={e => pageSize = e.target.value as 'a4' | 'letter' | 'fit'} class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" id="image-to-pdf-field-8">
                 <option value="a4">A4</option>
                 <option value="letter">Letter</option>
                 <option value="fit">{t('imageToPdf.fitToImage')}</option>
               </select>
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('imageToPdf.orientation')}</label>
-              <select value={orientation} onchange={e => orientation = e.target.value as 'portrait' | 'landscape'} disabled={pageSize === 'fit'} class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 disabled:opacity-50">
+              <label for="image-to-pdf-field-7" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('imageToPdf.orientation')}</label>
+              <select value={orientation} onchange={e => orientation = e.target.value as 'portrait' | 'landscape'} disabled={pageSize === 'fit'} class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 disabled:opacity-50" id="image-to-pdf-field-7">
                 <option value="portrait">{t('imageToPdf.portrait')}</option>
                 <option value="landscape">{t('imageToPdf.landscape')}</option>
               </select>
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('imageToPdf.margin')}</label>
-              <input type="number" bind:value={margin} min={0} max={100} class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
+              <label for="image-to-pdf-field-6" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('imageToPdf.margin')}</label>
+              <input type="number" bind:value={margin} min={0} max={100} class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" id="image-to-pdf-field-6" />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('imageToPdf.fileName')}</label>
-              <input type="text" value={outputFileName} onchange={e => outputFileName = e.target.value} class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
+              <label for="image-to-pdf-field-5" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('imageToPdf.fileName')}</label>
+              <input type="text" value={outputFileName} onchange={e => outputFileName = e.target.value} class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" id="image-to-pdf-field-5" />
             </div>
           </div>
 

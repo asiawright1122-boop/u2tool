@@ -240,7 +240,7 @@
     <div class="space-y-6">
       <!-- Project Name -->
       <div>
-        <label class="tool-label">
+        <label for="github-readme-generator-field-18" class="tool-label">
           {t('projectName')}
         </label>
         <input
@@ -248,13 +248,12 @@
           value={config.projectName}
           onchange={(e) => config = ({ ...config, projectName: e.target.value })}
           placeholder={t('projectNamePlaceholder')}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-        />
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="github-readme-generator-field-18" />
       </div>
 
       <!-- Description -->
       <div>
-        <label class="tool-label">
+        <label for="github-readme-generator-field-17" class="tool-label">
           {t('description')}
         </label>
         <textarea
@@ -262,14 +261,13 @@
           onchange={(e) => config = ({ ...config, description: e.target.value })}
           placeholder={t('descriptionPlaceholder')}
           rows={3}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent resize-none"
-        ></textarea>
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent resize-none" id="github-readme-generator-field-17"></textarea>
       </div>
 
       <!-- Author Info -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="github-readme-generator-field-16" class="tool-label">
             {t('author')}
           </label>
           <input
@@ -277,11 +275,10 @@
             value={config.author}
             onchange={(e) => config = ({ ...config, author: e.target.value })}
             placeholder={t('authorPlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="github-readme-generator-field-16" />
         </div>
         <div>
-          <label class="tool-label">
+          <label for="github-readme-generator-field-15" class="tool-label">
             {t('authorGithub')}
           </label>
           <input
@@ -289,16 +286,15 @@
             value={config.authorGithub}
             onchange={(e) => config = ({ ...config, authorGithub: e.target.value })}
             placeholder={t('authorGithubPlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="github-readme-generator-field-15" />
         </div>
       </div>
 
       <!-- Badges -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('badges')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each BADGE_TYPES as badge (badge.type)}
 <button 
@@ -317,7 +313,7 @@
 
       <!-- Features -->
       <div>
-        <label class="tool-label">
+        <label for="github-readme-generator-field-14" class="tool-label">
           {t('features')}
         </label>
         <div class="space-y-2">
@@ -328,8 +324,7 @@
                 value={feature}
                 onchange={(e) => updateFeature(index, e.target.value)}
                 placeholder={t('featurePlaceholder')}
-                class="flex-1 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-              />
+                class="flex-1 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="github-readme-generator-field-14" />
               <button
                 onclick={() => removeFeature(index)}
                 class="px-3 py-2 bg-red-500 hover:bg-rose-500 text-white rounded-lg"
@@ -349,7 +344,7 @@
 
       <!-- Installation -->
       <div>
-        <label class="tool-label">
+        <label for="github-readme-generator-field-13" class="tool-label">
           {t('installation')}
         </label>
         <textarea
@@ -357,13 +352,12 @@
           onchange={(e) => config = ({ ...config, installation: e.target.value })}
           placeholder={t('installationPlaceholder')}
           rows={2}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent resize-none"
-        ></textarea>
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent resize-none" id="github-readme-generator-field-13"></textarea>
       </div>
 
       <!-- Usage -->
       <div>
-        <label class="tool-label">
+        <label for="github-readme-generator-field-12" class="tool-label">
           {t('usage')}
         </label>
         <textarea
@@ -371,20 +365,18 @@
           onchange={(e) => config = ({ ...config, usage: e.target.value })}
           placeholder={t('usagePlaceholder')}
           rows={4}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent resize-none"
-        ></textarea>
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent resize-none" id="github-readme-generator-field-12"></textarea>
       </div>
 
       <!-- License -->
       <div>
-        <label class="tool-label">
+        <label for="github-readme-generator-field-11" class="tool-label">
           {t('license')}
         </label>
         <select
           value={config.license}
           onchange={(e) => config = ({ ...config, license: e.target.value })}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-        >
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="github-readme-generator-field-11">
           <option value="MIT">MIT</option>
           <option value="Apache-2.0">Apache 2.0</option>
           <option value="GPL-3.0">GPL 3.0</option>
@@ -426,7 +418,7 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">README.md</label>
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">README.md</div>
             <div class="flex gap-2">
               <button
                 onclick={copyToClipboard}

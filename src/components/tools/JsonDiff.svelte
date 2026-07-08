@@ -74,12 +74,12 @@
     <div class="space-y-4">
       <div class="grid md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('json1')}</label>
-          <textarea bind:value={json1} class="w-full h-48 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" placeholder={t('placeholder')}></textarea>
+          <label for="json-diff-field-4" class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('json1')}</label>
+          <textarea bind:value={json1} class="w-full h-48 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" placeholder={t('placeholder')} id="json-diff-field-4"></textarea>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('json2')}</label>
-          <textarea bind:value={json2} class="w-full h-48 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" placeholder={t('placeholder')}></textarea>
+          <label for="json-diff-field-3" class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('json2')}</label>
+          <textarea bind:value={json2} class="w-full h-48 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" placeholder={t('placeholder')} id="json-diff-field-3"></textarea>
         </div>
       </div>
       <button onclick={compare} class="px-4 py-2 bg-amber-600 text-white rounded hover:bg-amber-700">{t('compare')}</button>

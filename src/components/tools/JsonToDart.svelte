@@ -42,9 +42,9 @@
     <div class="space-y-4">
       <div class="flex gap-4 items-end">
         <div class="flex-1">
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('className')}</label>
+          <label for="json-to-dart-field-6" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('className')}</label>
           <input type="text" bind:value={className}
-            class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white" />
+            class="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white" id="json-to-dart-field-6" />
         </div>
         <button onclick={handleConvert} class="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700">
           {t('convert')}
@@ -52,14 +52,14 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">JSON</label>
+          <label for="json-to-dart-field-5" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">JSON</label>
           <textarea bind:value={input}
-            class="w-full h-64 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono text-sm"></textarea>
+            class="w-full h-64 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono text-sm" id="json-to-dart-field-5"></textarea>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">Dart</label>
+          <label for="json-to-dart-field-4" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">Dart</label>
           <textarea value={output} readOnly
-            class="w-full h-64 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-green-600 dark:text-green-400 font-mono text-sm"></textarea>
+            class="w-full h-64 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-green-600 dark:text-green-400 font-mono text-sm" id="json-to-dart-field-4"></textarea>
         </div>
       </div>
       {#if error}

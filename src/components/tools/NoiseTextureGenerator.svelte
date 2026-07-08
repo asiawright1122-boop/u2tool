@@ -127,9 +127,9 @@ background-repeat: repeat;`;
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <div class="tool-label">
               {t('noiseType')}
-            </label>
+            </div>
             <div class="grid grid-cols-3 gap-2">
               {#each (['random', 'perlin', 'grain'] as const) as type (type)}
 <button 
@@ -147,7 +147,7 @@ background-repeat: repeat;`;
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="noise-texture-generator-field-12" class="tool-label">
               {t('intensity')}: {intensity}%
             </label>
             <input
@@ -156,12 +156,11 @@ background-repeat: repeat;`;
               max="100"
               value={intensity}
               onchange={(e) => intensity = Number(e.target.value)}
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-            />
+              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id="noise-texture-generator-field-12" />
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="noise-texture-generator-field-11" class="tool-label">
               {t('scale')}: {scale}x
             </label>
             <input
@@ -170,21 +169,19 @@ background-repeat: repeat;`;
               max="10"
               value={scale}
               onchange={(e) => scale = Number(e.target.value)}
-              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-            />
+              class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id="noise-texture-generator-field-11" />
           </div>
         </div>
 
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <label for="noise-texture-generator-field-10" class="tool-label">
               {t('size')}: {size}px
             </label>
             <select
               value={size}
               onchange={(e) => size = Number(e.target.value)}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            >
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="noise-texture-generator-field-10">
               <option value={64}>64 x 64</option>
               <option value={128}>128 x 128</option>
               <option value={256}>256 x 256</option>
@@ -193,15 +190,14 @@ background-repeat: repeat;`;
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="noise-texture-generator-field-9" class="tool-label">
               {t('baseColor')}
             </label>
             <div class="flex items-center gap-3">
               <input
                 type="color"
                 bind:value={baseColor}
-                class="w-12 h-10 rounded cursor-pointer"
-              />
+                class="w-12 h-10 rounded cursor-pointer" id="noise-texture-generator-field-9" />
               <input
                 type="text"
                 bind:value={baseColor}
@@ -211,15 +207,14 @@ background-repeat: repeat;`;
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="noise-texture-generator-field-8" class="tool-label">
               {t('noiseColor')}
             </label>
             <div class="flex items-center gap-3">
               <input
                 type="color"
                 bind:value={noiseColor}
-                class="w-12 h-10 rounded cursor-pointer"
-              />
+                class="w-12 h-10 rounded cursor-pointer" id="noise-texture-generator-field-8" />
               <input
                 type="text"
                 bind:value={noiseColor}
@@ -254,9 +249,9 @@ background-repeat: repeat;`;
 
       <!-- CSS Usage -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           CSS {t('usage')}
-        </label>
+        </div>
         <pre class="p-4 bg-gray-900 text-green-400 rounded-lg overflow-x-auto text-sm font-mono">
           {cssCode}
         </pre>

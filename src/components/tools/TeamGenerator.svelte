@@ -65,20 +65,20 @@
     <div class="space-y-6">
       <!-- Input -->
       <div>
-        <label class="tool-label">
+        <label for="team-generator-field-6" class="tool-label">
           {t('enterMembers')}
         </label>
         <textarea
           bind:value={input}
           placeholder={t('membersPlaceholder')}
           rows={6}
-          class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"></textarea>
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" id="team-generator-field-6"></textarea>
       </div>
 
       <!-- Settings -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="team-generator-field-5" class="tool-label">
             {t('numberOfTeams')}
           </label>
           <input
@@ -86,19 +86,17 @@
             bind:value={teamCount}
             min="2"
             max="20"
-            class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-          />
+            class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="team-generator-field-5" />
         </div>
         <div>
-          <label class="tool-label">
+          <label for="team-generator-field-4" class="tool-label">
             {t('teamNames')} ({t('optional')})
           </label>
           <input
             type="text"
             bind:value={teamNames}
             placeholder={t('teamNamesPlaceholder')}
-            class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-          />
+            class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="team-generator-field-4" />
         </div>
       </div>
 

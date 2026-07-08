@@ -121,7 +121,7 @@
           </div>
 
           <div>
-            <label class="tool-label">{t('pdfCompressor.compressionLevel')}</label>
+            <div class="tool-label">{t('pdfCompressor.compressionLevel')}</div>
             <div class="flex gap-4">
               {#each (['low', 'medium', 'high'] as const) as level (level)}
 <label  class="flex items-center">

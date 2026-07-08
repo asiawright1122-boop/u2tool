@@ -114,34 +114,31 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('width')}</label>
+          <label for="aspect-ratio-box-generator-field-7" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('width')}</label>
           <input
             type="number"
             min={1}
             max={100}
             value={width}
             onchange={(e) => width = Number(e.target.value) || 1}
-            class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white" id="aspect-ratio-box-generator-field-7" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('height')}</label>
+          <label for="aspect-ratio-box-generator-field-6" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('height')}</label>
           <input
             type="number"
             min={1}
             max={100}
             value={height}
             onchange={(e) => height = Number(e.target.value) || 1}
-            class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white" id="aspect-ratio-box-generator-field-6" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('method')}</label>
+          <label for="aspect-ratio-box-generator-field-5" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('method')}</label>
           <select
             value={method}
             onchange={(e) => method = e.target.value as Method}
-            class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white"
-          >
+            class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white" id="aspect-ratio-box-generator-field-5">
             <option value="aspect-ratio">{t('aspectRatioProperty')}</option>
             <option value="padding">{t('paddingMethod')}</option>
           </select>
@@ -170,7 +167,7 @@
 
       <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium text-gray-600 dark:text-gray-300">CSS</label>
+          <div class="text-sm font-medium text-gray-600 dark:text-gray-300">CSS</div>
           <button onclick={copyCSS} class="btn-secondary text-sm">
             {copied ? tg('copied') : tg('copy')}
           </button>

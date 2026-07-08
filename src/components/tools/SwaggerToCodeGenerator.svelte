@@ -111,9 +111,9 @@
       <!-- Input -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">
+          <div class="tool-label">
             OpenAPI/Swagger Spec (JSON)
-          </label>
+          </div>
           <button
             onclick={loadExample}
             class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"
@@ -129,9 +129,9 @@
 
       <!-- Language Selection -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           Target Language
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each (['typescript', 'python', 'go'] as const) as lang (lang)}
 <button 
@@ -161,9 +161,9 @@
       {#if result}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="tool-label">
+            <div class="tool-label">
               Generated API Client
-            </label>
+            </div>
             <button
               onclick={handleCopy}
               class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"

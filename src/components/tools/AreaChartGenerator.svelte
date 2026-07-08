@@ -334,7 +334,7 @@
           <!-- 数据表格 -->
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="text-sm font-medium">{t('dataEditor')}</label>
+              <div class="text-sm font-medium">{t('dataEditor')}</div>
               <div class="flex gap-2">
                 <button onclick={addCategory} class="btn-secondary btn-sm">
                   + {t('addCategory')}

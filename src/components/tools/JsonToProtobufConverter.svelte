@@ -81,9 +81,9 @@
       <!-- Input -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">
+          <div class="tool-label">
             JSON {tCommon('input')}
-          </label>
+          </div>
           <button
             onclick={loadExample}
             class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"
@@ -100,36 +100,33 @@
       <!-- Options -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="json-to-protobuf-converter-field-8" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('packageName')}
           </label>
           <input
             type="text"
             bind:value={packageName}
             placeholder={t("packageNamePlaceholder")}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" id="json-to-protobuf-converter-field-8" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="json-to-protobuf-converter-field-7" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('messageName')}
           </label>
           <input
             type="text"
             bind:value={messageName}
             placeholder={t("messageNamePlaceholder")}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" id="json-to-protobuf-converter-field-7" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="json-to-protobuf-converter-field-6" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('syntax')}
           </label>
           <select
             value={syntax}
             onchange={(e) => syntax = e.target.value as 'proto3' | 'proto2'}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm"
-          >
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm" id="json-to-protobuf-converter-field-6">
             <option value="proto3">proto3</option>
             <option value="proto2">proto2</option>
           </select>
@@ -158,9 +155,9 @@
       {#if result}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="tool-label">
+            <div class="tool-label">
               {t('protocolBuffers')}
-            </label>
+            </div>
             <button
               onclick={handleCopy}
               class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"

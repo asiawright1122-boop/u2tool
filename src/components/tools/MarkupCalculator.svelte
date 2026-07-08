@@ -131,9 +131,9 @@
 
       <!-- Quick Markup Buttons -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('commonMarkups')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each [25, 50, 75, 100, 150, 200, 250, 300] as markup (markup)}
 <button 

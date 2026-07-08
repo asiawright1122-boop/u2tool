@@ -161,7 +161,7 @@
 <div class="space-y-6">
           <!-- Size Selection -->
           <div>
-            <label class="block text-sm font-medium mb-2">{t('selectSizes')}</label>
+            <div class="block text-sm font-medium mb-2">{t('selectSizes')}</div>
             <div class="flex flex-wrap gap-2">
               {#each ICO_SIZES as size (size)}
 <button 

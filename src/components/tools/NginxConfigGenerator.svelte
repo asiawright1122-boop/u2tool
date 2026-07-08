@@ -174,34 +174,31 @@ server {
       <div class="grid md:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('serverName')} (Domain)</label>
+            <label for="nginx-config-generator-field-8" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('serverName')} (Domain)</label>
             <input
               type="text"
               value={config.serverName}
               onchange={(e) => config = { ...config, serverName: e.target.value }}
               class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
-              placeholder={t('exampleDomain')}
-            />
+              placeholder={t('exampleDomain')} id="nginx-config-generator-field-8" />
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('rootPath')}</label>
+            <label for="nginx-config-generator-field-7" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('rootPath')}</label>
             <input
               type="text"
               value={config.rootPath}
               onchange={(e) => config = { ...config, rootPath: e.target.value }}
               class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
-              placeholder="/var/www/html"
-            />
+              placeholder="/var/www/html" id="nginx-config-generator-field-7" />
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('proxyPass')}</label>
+            <label for="nginx-config-generator-field-6" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('proxyPass')}</label>
             <input
               type="text"
               value={config.proxyPass}
               onchange={(e) => config = { ...config, proxyPass: e.target.value }}
               class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
-              placeholder="http://localhost:3000"
-            />
+              placeholder="http://localhost:3000" id="nginx-config-generator-field-6" />
           </div>
         </div>
 
@@ -272,11 +269,11 @@ server {
 
       {#if output}
 <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('output')}</label>
+          <label for="nginx-config-generator-field-5" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('output')}</label>
           <textarea
             value={output}
             readOnly
-            class="w-full h-96 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-gray-100 focus:outline-none"></textarea>
+            class="w-full h-96 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-gray-100 focus:outline-none" id="nginx-config-generator-field-5"></textarea>
         </div>
 {/if}
     </div>

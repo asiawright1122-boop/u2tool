@@ -61,12 +61,12 @@
     <div class="space-y-4">
       <div class="grid md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('textCompare.text1')}</label>
-          <textarea bind:value={text1} class="w-full h-40 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" placeholder={t('textCompare.placeholder')}></textarea>
+          <label for="text-compare-field-4" class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('textCompare.text1')}</label>
+          <textarea bind:value={text1} class="w-full h-40 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" placeholder={t('textCompare.placeholder')} id="text-compare-field-4"></textarea>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('textCompare.text2')}</label>
-          <textarea bind:value={text2} class="w-full h-40 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" placeholder={t('textCompare.placeholder')}></textarea>
+          <label for="text-compare-field-3" class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('textCompare.text2')}</label>
+          <textarea bind:value={text2} class="w-full h-40 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" placeholder={t('textCompare.placeholder')} id="text-compare-field-3"></textarea>
         </div>
       </div>
       {#if similarity}

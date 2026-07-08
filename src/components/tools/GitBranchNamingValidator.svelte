@@ -147,14 +147,13 @@
 
     <div class="space-y-6">
       <div>
-        <label class="tool-label">
+        <label for="git-branch-naming-validator-field-4" class="tool-label">
           {t('namingConvention')}
         </label>
         <select
           value={selectedConvention.name}
           onchange={(e) => selectedConvention = NAMING_CONVENTIONS.find(c => c.name === e.target.value) || NAMING_CONVENTIONS[0]}
-          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-        >
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="git-branch-naming-validator-field-4">
           {#each NAMING_CONVENTIONS as conv (conv.name)}
 <option  value={conv.name}>
               {conv.name} - {conv.description}
@@ -165,7 +164,7 @@
       </div>
 
       <div>
-        <label class="tool-label">
+        <label for="git-branch-naming-validator-field-3" class="tool-label">
           {t('branchName')}
         </label>
         <input
@@ -174,8 +173,7 @@
           placeholder={t("inputPlaceholder")}
           class={`w-full px-3 py-2 border rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white ${
             branchName && !isValid ? 'border-red-500' : branchName && isValid ? 'border-green-500' : 'border-gray-300 dark:border-gray-600'
-          }`}
-        />
+          }`} id="git-branch-naming-validator-field-3" />
       </div>
 
       {#if validation}

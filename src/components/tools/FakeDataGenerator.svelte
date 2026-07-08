@@ -376,7 +376,7 @@
       <!-- Configuration Section - Two columns with equal width -->
       <div class="grid grid-cols-2 gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="fake-data-generator-field-8" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('count')}
           </label>
           <input
@@ -385,17 +385,15 @@
             max="1000"
             value={count}
             onchange={(e) => count = Math.min(1000, Math.max(1, parseInt(e.target.value) || 1))}
-            class="w-full h-10 px-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-          />
+            class="w-full h-10 px-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" id="fake-data-generator-field-8" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="fake-data-generator-field-7" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('locale')}
           </label>
           <select
             bind:value={locale}
-            class="w-full h-10 px-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-          >
+            class="w-full h-10 px-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" id="fake-data-generator-field-7">
             {#each LOCALES as l (l.value)}
 <option  value={l.value}>{l.label}</option>
 {/each}
@@ -406,9 +404,9 @@
       <!-- Fields Configuration -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+          <div class="text-sm font-medium text-gray-700 dark:text-gray-300">
             {t('fields')}
-          </label>
+          </div>
           <button
             onclick={addField}
             class="text-sm px-3 py-1 rounded bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 hover:bg-amber-200 dark:hover:bg-amber-900/50"
@@ -453,14 +451,13 @@
 
       <!-- Table Name for SQL Export -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label for="fake-data-generator-field-6" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           {t('tableName')} (SQL)
         </label>
         <input
           type="text"
           bind:value={tableName}
-          class="w-full h-10 px-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-        />
+          class="w-full h-10 px-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" id="fake-data-generator-field-6" />
       </div>
 
       <!-- Action Buttons -->
@@ -477,9 +474,9 @@
       {#if data.length > 0}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">
               {t('preview')} ({data.length})
-            </label>
+            </div>
             <div class="flex gap-2">
               <button
                 onclick={handleCopy}

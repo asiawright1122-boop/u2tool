@@ -245,13 +245,13 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <label for="json-to-form-field-4" class="tool-label">
               {t('jsonInput')}
             </label>
             <textarea
               bind:value={input}
               placeholder={t('placeholder')}
-              class="w-full h-64 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm"></textarea>
+              class="w-full h-64 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm" id="json-to-form-field-4"></textarea>
           </div>
 
           {#if error}
@@ -279,18 +279,18 @@
         {#if fields.length > 0}
 <div class="space-y-4">
             <div>
-              <label class="tool-label">
+              <div class="tool-label">
                 {t('formPreview')}
-              </label>
+              </div>
               <div class="p-4 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800">
                 <form class="space-y-4">
                   {#each fields as field (field.name)}
 <div >
-                      <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                      <div class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                         {field.label} {#if field.required}
 <span class="text-red-500">*</span>
 {/if}
-                      </label>
+                      </div>
                       {#if field.type === 'textarea'}
 <textarea
                           name={field.name}

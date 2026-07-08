@@ -115,12 +115,11 @@
       <div class="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg space-y-4">
         <div class="flex flex-wrap gap-4 items-end">
           <div class="flex-1 min-w-[200px]">
-            <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('extractor.type')}</label>
+            <label for="text-extractor-field-5" class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('extractor.type')}</label>
             <select
               value={extractType}
               onchange={(e) => extractType = e.target.value as ExtractType | 'all'}
-              class="w-full px-3 py-2 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-white"
-            >
+              class="w-full px-3 py-2 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-white" id="text-extractor-field-5">
               {#each extractTypes as { value, label } (value)}
 <option  value={value}>{label}</option>
 {/each}
@@ -152,19 +151,19 @@
 
       <!-- 输入区域 -->
       <div>
-        <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
+        <label for="text-extractor-field-4" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
         <textarea
           bind:value={input}
           placeholder={t('extractor.placeholder')}
-          class="w-full h-40 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded font-mono text-sm text-gray-900 dark:text-white resize-none focus:outline-none focus:border-amber-500"></textarea>
+          class="w-full h-40 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded font-mono text-sm text-gray-900 dark:text-white resize-none focus:outline-none focus:border-amber-500" id="text-extractor-field-4"></textarea>
       </div>
 
       <!-- 结果区域 -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">
+          <div class="text-sm text-gray-600 dark:text-gray-300">
             {t('result')} ({totalResults} {t('extractor.found')})
-          </label>
+          </div>
           {#if results.length > 0}
 <button
               onclick={handleCopyAll}

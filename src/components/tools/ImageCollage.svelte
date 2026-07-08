@@ -164,36 +164,33 @@
       <!-- Controls -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div>
-          <label class="block text-sm font-medium mb-2">{t('direction')}</label>
+          <label for="image-collage-field-6" class="block text-sm font-medium mb-2">{t('direction')}</label>
           <select
             value={direction}
             onchange={(e) => { direction = e.target.value as LayoutDirection; result = null; }}
-            class="tool-input"
-          >
+            class="tool-input" id="image-collage-field-6">
             <option value="horizontal">{t('horizontal')}</option>
             <option value="vertical">{t('vertical')}</option>
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2">{t('spacing')}: {spacing}px</label>
+          <label for="image-collage-field-5" class="block text-sm font-medium mb-2">{t('spacing')}: {spacing}px</label>
           <input
             type="range"
             min="0"
             max="50"
             value={spacing}
             onchange={(e) => { spacing = Number(e.target.value); result = null; }}
-            class="w-full"
-          />
+            class="w-full" id="image-collage-field-5" />
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2">{t('backgroundColor')}</label>
+          <label for="image-collage-field-4" class="block text-sm font-medium mb-2">{t('backgroundColor')}</label>
           <div class="flex gap-2">
             <input
               type="color"
               value={backgroundColor}
               onchange={(e) => { backgroundColor = e.target.value; result = null; }}
-              class="w-12 h-10 rounded cursor-pointer"
-            />
+              class="w-12 h-10 rounded cursor-pointer" id="image-collage-field-4" />
             <input
               type="text"
               value={backgroundColor}

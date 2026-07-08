@@ -151,39 +151,36 @@ ${config.websiteUrl ? `Website: ${config.websiteUrl}` : ''}
       <div class="grid md:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('websiteName')}</label>
+            <label for="cookie-policy-generator-field-9" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('websiteName')}</label>
             <input
               type="text"
               value={config.websiteName}
               onchange={(e) => config = { ...config, websiteName: e.target.value }}
               class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
-              placeholder="My Website"
-            />
+              placeholder="My Website" id="cookie-policy-generator-field-9" />
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('websiteUrl')}</label>
+            <label for="cookie-policy-generator-field-8" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('websiteUrl')}</label>
             <input
               type="text"
               value={config.websiteUrl}
               onchange={(e) => config = { ...config, websiteUrl: e.target.value }}
               class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
-              placeholder="https://example.com"
-            />
+              placeholder="https://example.com" id="cookie-policy-generator-field-8" />
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('contactEmail')}</label>
+            <label for="cookie-policy-generator-field-7" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('contactEmail')}</label>
             <input
               type="email"
               value={config.email}
               onchange={(e) => config = { ...config, email: e.target.value }}
               class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
-              placeholder="privacy@example.com"
-            />
+              placeholder="privacy@example.com" id="cookie-policy-generator-field-7" />
           </div>
         </div>
 
         <div class="space-y-3">
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('cookieTypes')}</label>
+          <div class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('cookieTypes')}</div>
           {#each [
             { key: 'essentialCookies', label: t('essentialCookies') },
             { key: 'functionalCookies', label: t('functionalCookies') },
@@ -219,11 +216,11 @@ ${config.websiteUrl ? `Website: ${config.websiteUrl}` : ''}
 
       {#if output}
 <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('output')}</label>
+          <label for="cookie-policy-generator-field-6" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('output')}</label>
           <textarea
             value={output}
             readOnly
-            class="w-full h-96 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-white focus:outline-none"></textarea>
+            class="w-full h-96 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-white focus:outline-none" id="cookie-policy-generator-field-6"></textarea>
         </div>
 {/if}
     </div>

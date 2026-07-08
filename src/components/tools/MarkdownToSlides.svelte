@@ -169,9 +169,9 @@ Thank you for your attention!
         <!-- Input Section -->
         <div class="space-y-4">
           <div class="flex items-center justify-between">
-            <label class="tool-label">
+            <div class="tool-label">
               {t('markdownInput')}
-            </label>
+            </div>
             <button
               onclick={() => markdown = sampleMarkdown}
               class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"
@@ -191,15 +191,14 @@ Thank you for your attention!
         <!-- Preview Section -->
         <div class="space-y-4">
           <div class="flex items-center justify-between">
-            <label class="tool-label">
+            <label for="markdown-to-slides-field-3" class="tool-label">
               {t('preview')}
             </label>
             <div class="flex items-center gap-2">
               <select
                 value={theme}
                 onchange={(e) => theme = e.target.value as 'light' | 'dark' | 'gradient'}
-                class="text-sm border border-gray-300 dark:border-gray-600 rounded px-2 py-1 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-              >
+                class="text-sm border border-gray-300 dark:border-gray-600 rounded px-2 py-1 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="markdown-to-slides-field-3">
                 <option value="light">{t('themeLight')}</option>
                 <option value="dark">{t('themeDark')}</option>
                 <option value="gradient">{t('themeGradient')}</option>

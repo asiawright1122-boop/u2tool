@@ -64,12 +64,12 @@
       </div>
       <div class="grid md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('input')}</label>
-          <textarea bind:value={text} class="w-full h-48 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" placeholder={t('textWrapper.placeholder')}></textarea>
+          <label for="text-wrapper-field-4" class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('input')}</label>
+          <textarea bind:value={text} class="w-full h-48 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" placeholder={t('textWrapper.placeholder')} id="text-wrapper-field-4"></textarea>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('output')}</label>
-          <textarea value={output} readOnly class="w-full h-48 p-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-gray-900 dark:text-white"></textarea>
+          <label for="text-wrapper-field-3" class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('output')}</label>
+          <textarea value={output} readOnly class="w-full h-48 p-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-gray-900 dark:text-white" id="text-wrapper-field-3"></textarea>
         </div>
       </div>
       <div class="flex gap-2">

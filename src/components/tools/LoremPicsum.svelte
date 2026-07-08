@@ -78,7 +78,7 @@
         <div class="space-y-4">
           <div class="grid grid-cols-2 gap-4">
             <div class="space-y-2">
-              <label class="tool-label">
+              <label for="lorem-picsum-field-11" class="tool-label">
                 {t('width')} (px)
               </label>
               <input
@@ -87,11 +87,10 @@
                 onchange={(e) => width = parseInt(e.target.value) || 0}
                 min="1"
                 max="5000"
-                class="tool-input"
-              />
+                class="tool-input" id="lorem-picsum-field-11" />
             </div>
             <div class="space-y-2">
-              <label class="tool-label">
+              <label for="lorem-picsum-field-10" class="tool-label">
                 {t('height')} (px)
               </label>
               <input
@@ -100,8 +99,7 @@
                 onchange={(e) => height = parseInt(e.target.value) || 0}
                 min="1"
                 max="5000"
-                class="tool-input"
-              />
+                class="tool-input" id="lorem-picsum-field-10" />
             </div>
           </div>
 
@@ -118,7 +116,7 @@
 
           <div class="grid grid-cols-2 gap-4">
             <div class="space-y-2">
-              <label class="tool-label">
+              <label for="lorem-picsum-field-9" class="tool-label">
                 {t('seed')} ({t('optional')})
               </label>
               <input
@@ -126,11 +124,10 @@
                 value={seed}
                 onchange={(e) => { seed = e.target.value; imageId = ''; }}
                 placeholder={t('seedPlaceholder')}
-                class="tool-input"
-              />
+                class="tool-input" id="lorem-picsum-field-9" />
             </div>
             <div class="space-y-2">
-              <label class="tool-label">
+              <label for="lorem-picsum-field-8" class="tool-label">
                 {t('imageId')} ({t('optional')})
               </label>
               <input
@@ -138,8 +135,7 @@
                 value={imageId}
                 onchange={(e) => { imageId = e.target.value; seed = ''; }}
                 placeholder="0-1084"
-                class="tool-input"
-              />
+                class="tool-input" id="lorem-picsum-field-8" />
             </div>
           </div>
 
@@ -154,15 +150,14 @@
             </label>
 
             <div class="flex items-center gap-2">
-              <label class="text-sm text-gray-600 dark:text-gray-300">{t('blur')}:</label>
+              <label for="lorem-picsum-field-7" class="text-sm text-gray-600 dark:text-gray-300">{t('blur')}:</label>
               <input
                 type="range"
                 value={blur}
                 onchange={(e) => blur = parseInt(e.target.value)}
                 min="0"
                 max="10"
-                class="w-24"
-              />
+                class="w-24" id="lorem-picsum-field-7" />
               <span class="text-sm text-gray-600 dark:text-gray-300">{blur}</span>
             </div>
           </div>
@@ -178,7 +173,7 @@
 <div class="space-y-3">
               <div class="space-y-2">
                 <div class="flex items-center justify-between">
-                  <label class="tool-label mb-0">{t('imageUrl')}</label>
+                  <div class="tool-label mb-0">{t('imageUrl')}</div>
                   <button onclick={() => handleCopy(imageUrl)} class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-300">
                     {t('copy')}
                   </button>

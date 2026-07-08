@@ -76,30 +76,28 @@
 
     <div class="space-y-6">
       <div>
-        <label class="tool-label">{t('hmac.message')}</label>
+        <label for="hmac-generator-field-7" class="tool-label">{t('hmac.message')}</label>
         <textarea
           bind:value={message}
           placeholder={t('hmac.messagePlaceholder')}
-          class="tool-textarea h-32"></textarea>
+          class="tool-textarea h-32" id="hmac-generator-field-7"></textarea>
       </div>
 
       <div>
-        <label class="tool-label">{t('hmac.secretKey')}</label>
+        <label for="hmac-generator-field-6" class="tool-label">{t('hmac.secretKey')}</label>
         <input
           type="text"
           bind:value={secretKey}
           placeholder={t('hmac.keyPlaceholder')}
-          class="tool-input font-mono text-sm"
-        />
+          class="tool-input font-mono text-sm" id="hmac-generator-field-6" />
       </div>
 
       <div>
-        <label class="tool-label">{t('hmac.algorithm')}</label>
+        <label for="hmac-generator-field-5" class="tool-label">{t('hmac.algorithm')}</label>
         <select
           value={algorithm}
           onchange={(e) => algorithm = e.target.value as Algorithm}
-          class="tool-input"
-        >
+          class="tool-input" id="hmac-generator-field-5">
           <option value="SHA-1">SHA-1</option>
           <option value="SHA-256">SHA-256</option>
           <option value="SHA-384">SHA-384</option>
@@ -116,7 +114,7 @@
 
       {#if result}
 <div>
-          <label class="tool-label">{t('result')}</label>
+          <div class="tool-label">{t('result')}</div>
           <div class="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
             <div class="flex items-start justify-between gap-4">
               <code class="font-mono text-sm break-all text-green-600 dark:text-green-400">{result}</code>

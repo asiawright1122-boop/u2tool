@@ -127,55 +127,55 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="tool-label">{tCommon('input')}</label>
+            <label for="code-screenshot-generator-field-10" class="tool-label">{tCommon('input')}</label>
             <textarea
               bind:value={code}
               class="w-full h-48 p-3 border rounded-lg font-mono text-sm bg-white dark:bg-gray-800 dark:border-gray-600"
-              placeholder={tCommon('inputPlaceholder')}></textarea>
+              placeholder={tCommon('inputPlaceholder')} id="code-screenshot-generator-field-10"></textarea>
           </div>
 
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('theme')}</label>
+              <label for="code-screenshot-generator-field-9" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('theme')}</label>
               <select
                 value={theme}
                 onchange={(e) => theme = e.target.value as ThemeKey}
-                class="w-full p-2 border rounded-lg bg-white dark:bg-gray-800 dark:border-gray-600">
+                class="w-full p-2 border rounded-lg bg-white dark:bg-gray-800 dark:border-gray-600" id="code-screenshot-generator-field-9">
                 {#each THEME_NAMES as themeName (themeName)}
 <option value={themeName}>{themeName}</option>
 {/each}
               </select>
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('language')}</label>
+              <label for="code-screenshot-generator-field-8" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('language')}</label>
               <select
                 value={language}
                 onchange={(e) => language = e.target.value as LanguageKey}
-                class="w-full p-2 border rounded-lg bg-white dark:bg-gray-800 dark:border-gray-600">
+                class="w-full p-2 border rounded-lg bg-white dark:bg-gray-800 dark:border-gray-600" id="code-screenshot-generator-field-8">
                 {#each LANGUAGES as option (option)}
 <option value={option}>{option}</option>
 {/each}
               </select>
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('padding')}: {padding}px</label>
+              <label for="code-screenshot-generator-field-7" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('padding')}: {padding}px</label>
               <input
                 type="range"
                 min="16"
                 max="64"
                 value={padding}
                 onchange={(e) => padding = Number(e.target.value)}
-                class="w-full" />
+                class="w-full" id="code-screenshot-generator-field-7" />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('fontSize')}: {fontSize}px</label>
+              <label for="code-screenshot-generator-field-6" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('fontSize')}: {fontSize}px</label>
               <input
                 type="range"
                 min="12"
                 max="24"
                 value={fontSize}
                 onchange={(e) => fontSize = Number(e.target.value)}
-                class="w-full" />
+                class="w-full" id="code-screenshot-generator-field-6" />
             </div>
           </div>
 

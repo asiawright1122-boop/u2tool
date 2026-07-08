@@ -222,25 +222,23 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('chartSettings')}</label>
+                        <div class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('chartSettings')}</div>
                         <div class="space-y-3 p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('chartTitle')}</label>
+                                <label for="theme-river-generator-field-7" class="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('chartTitle')}</label>
                                 <input
                                     type="text"
                                     bind:value={chartTitle}
                                     class="tool-input"
-                                    placeholder={t('chartTitlePlaceholder')}
-                                />
+                                    placeholder={t('chartTitlePlaceholder')} id="theme-river-generator-field-7" />
                             </div>
 
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('colorTheme')}</label>
+                                <label for="theme-river-generator-field-6" class="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('colorTheme')}</label>
                                 <select
                                     value={colorTheme}
                                     onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
-                                    class="tool-input"
-                                >
+                                    class="tool-input" id="theme-river-generator-field-6">
                                     <option value="default">{t('themeDefault')}</option>
                                     <option value="ocean">{t('themeOcean')}</option>
                                     <option value="sunset">{t('themeSunset')}</option>
@@ -263,7 +261,7 @@
 
                     <div>
                         <div class="flex justify-between items-center mb-2">
-                            <label class="text-sm font-medium text-gray-700 dark:text-white">{t('dataEditor')}</label>
+                            <div class="text-sm font-medium text-gray-700 dark:text-white">{t('dataEditor')}</div>
                             <button onclick={addDataPoint} class="btn-secondary btn-sm">
                                 + {t('addPoint')}
                             </button>
@@ -324,7 +322,7 @@
                 </div>
 
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('chartPreview')}</label>
+                    <div class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('chartPreview')}</div>
                     <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="min-height: 500px">
                         <EChartsWrapper
               bind:this={chartRef}

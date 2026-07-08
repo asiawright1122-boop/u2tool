@@ -97,7 +97,7 @@
       <!-- Input Form -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="margin-calculator-field-6" class="tool-label">
             {t('cost')}
           </label>
           <div class="relative">
@@ -107,13 +107,12 @@
               bind:value={cost}
               placeholder="50"
               step="0.01"
-              class="w-full pl-8 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-            />
+              class="w-full pl-8 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="margin-calculator-field-6" />
           </div>
         </div>
 
         <div>
-          <label class="tool-label">
+          <label for="margin-calculator-field-5" class="tool-label">
             {t('sellingPrice')}
           </label>
           <div class="relative">
@@ -123,17 +122,16 @@
               bind:value={sellingPrice}
               placeholder="100"
               step="0.01"
-              class="w-full pl-8 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-            />
+              class="w-full pl-8 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="margin-calculator-field-5" />
           </div>
         </div>
       </div>
 
       <!-- Quick Margin Buttons -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('targetMargin')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each [10, 20, 25, 30, 40, 50] as margin (margin)}
 <button 
@@ -148,9 +146,9 @@
 
       <!-- Quick Markup Buttons -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('targetMarkup')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each [25, 50, 75, 100, 150, 200] as markup (markup)}
 <button 

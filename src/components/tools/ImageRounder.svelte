@@ -117,13 +117,12 @@
         <!-- Settings -->
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium mb-2">{t('uploadImage')}</label>
+            <label for="image-rounder-field-4" class="block text-sm font-medium mb-2">{t('uploadImage')}</label>
             <input
               type="file"
               accept="image/*"
               onchange={handleImageUpload}
-              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700"
-            />
+              class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-amber-600 file:text-white hover:file:bg-amber-700" id="image-rounder-field-4" />
           </div>
 
           <div>
@@ -139,15 +138,14 @@
 
           {#if !circleMode}
 <div>
-              <label class="block text-sm font-medium mb-2">{t('radius')}: {radius}px</label>
+              <label for="image-rounder-field-3" class="block text-sm font-medium mb-2">{t('radius')}: {radius}px</label>
               <input
                 type="range"
                 min="0"
                 max="200"
                 value={radius}
                 onchange={(e) => radius = Number(e.target.value)}
-                class="w-full"
-              />
+                class="w-full" id="image-rounder-field-3" />
             </div>
 {/if}
 

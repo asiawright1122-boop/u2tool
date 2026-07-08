@@ -128,7 +128,7 @@
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
+            <label for="carbon-footprint-calculator-field-15" class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
               {t('carDistance')} (km/{period === 'yearly' ? t('year') : t('month')})
             </label>
             <div class="flex gap-2">
@@ -136,8 +136,7 @@
                 type="number"
                 bind:value={carKm}
                 class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                min="0"
-              />
+                min="0" id="carbon-footprint-calculator-field-15" />
               <select
                 value={carType}
                 onchange={(e) => carType = e.target.value as typeof carType}
@@ -151,7 +150,7 @@
             </div>
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
+            <label for="carbon-footprint-calculator-field-14" class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
               {t('flightHours')} ({period === 'yearly' ? t('year') : t('month')})
             </label>
             <div class="flex gap-2">
@@ -160,8 +159,7 @@
                 bind:value={flightHours}
                 class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                 min="0"
-                step="0.5"
-              />
+                step="0.5" id="carbon-footprint-calculator-field-14" />
               <select
                 value={flightType}
                 onchange={(e) => flightType = e.target.value as typeof flightType}
@@ -174,26 +172,24 @@
             </div>
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
+            <label for="carbon-footprint-calculator-field-13" class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
               {t('trainDistance')} (km)
             </label>
             <input
               type="number"
               bind:value={trainKm}
               class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              min="0"
-            />
+              min="0" id="carbon-footprint-calculator-field-13" />
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
+            <label for="carbon-footprint-calculator-field-12" class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
               {t('busDistance')} (km)
             </label>
             <input
               type="number"
               bind:value={busKm}
               class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              min="0"
-            />
+              min="0" id="carbon-footprint-calculator-field-12" />
           </div>
         </div>
       </div>
@@ -205,37 +201,34 @@
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
+            <label for="carbon-footprint-calculator-field-11" class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
               {t('electricity')} (kWh/{period === 'yearly' ? t('year') : t('month')})
             </label>
             <input
               type="number"
               bind:value={electricityKwh}
               class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              min="0"
-            />
+              min="0" id="carbon-footprint-calculator-field-11" />
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
+            <label for="carbon-footprint-calculator-field-10" class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
               {t('naturalGas')} (m³)
             </label>
             <input
               type="number"
               bind:value={gasM3}
               class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              min="0"
-            />
+              min="0" id="carbon-footprint-calculator-field-10" />
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
+            <label for="carbon-footprint-calculator-field-9" class="block text-sm text-gray-600 dark:text-gray-400 mb-1">
               {t('heatingOil')} (L)
             </label>
             <input
               type="number"
               bind:value={heatingLiters}
               class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              min="0"
-            />
+              min="0" id="carbon-footprint-calculator-field-9" />
           </div>
         </div>
       </div>
@@ -246,9 +239,9 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21h10"/><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z"/><path d="M11.38 12a2.4 2.4 0 0 1-.4-4.77 2.4 2.4 0 0 1 3.2-2.77 2.4 2.4 0 0 1 3.47-.63 2.4 2.4 0 0 1 3.13 1.33l-12.44 1.62"/></svg> {t('lifestyle')}
         </h3>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-400 mb-2">
+          <div class="block text-sm text-gray-600 dark:text-gray-400 mb-2">
             {t('dietType')}
-          </label>
+          </div>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
             {#each (['meat', 'average', 'vegetarian', 'vegan'] as const) as diet (diet)}
 <button 

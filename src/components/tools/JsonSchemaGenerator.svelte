@@ -90,27 +90,26 @@
     <div class="space-y-4">
       <!-- Input Section -->
       <div>
-        <label class="tool-label">
+        <label for="json-schema-generator-field-5" class="tool-label">
           {tg('input')} (JSON)
         </label>
         <textarea
           class="tool-textarea font-mono"
           bind:value={input}
           placeholder={t('inputPlaceholder')}
-          rows={10}></textarea>
+          rows={10} id="json-schema-generator-field-5"></textarea>
       </div>
 
       <!-- Options Section -->
       <div class="flex flex-wrap gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="json-schema-generator-field-4" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('draft')}
           </label>
           <select
             value={options.draft}
             onchange={(e) => options = { ...options, draft: e.target.value as SchemaOptions['draft'] }}
-            class="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-          >
+            class="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" id="json-schema-generator-field-4">
             <option value="draft-07">Draft-07</option>
             <option value="draft-2020-12">Draft-2020-12</option>
           </select>
@@ -164,9 +163,9 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">
               {t('generatedSchema')}
-            </label>
+            </div>
             <button
               onclick={handleCopy}
               class={`text-sm px-3 py-1 rounded ${

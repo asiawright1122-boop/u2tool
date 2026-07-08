@@ -106,7 +106,7 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label for="chinese-lorem-ipsum-field-3" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           {t('count')}
         </label>
         <input
@@ -114,8 +114,7 @@
           bind:value={count}
           min="1"
           max="100"
-          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-        />
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="chinese-lorem-ipsum-field-3" />
       </div>
 
       <button
@@ -128,9 +127,9 @@
       {#if output}
 <div class="space-y-2">
           <div class="flex justify-between items-center">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">
               {t('output')}
-            </label>
+            </div>
             <div class="flex gap-2">
               <span class="text-sm text-gray-500">
                 {output.length} {t('characters')}

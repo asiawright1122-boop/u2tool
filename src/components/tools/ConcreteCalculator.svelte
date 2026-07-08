@@ -143,9 +143,9 @@
     <div class="space-y-6">
       <!-- Shape Selection -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('selectShape')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each shapes as s (s.id)}
 <button 
@@ -188,45 +188,41 @@
         {#if shape === 'slab' || shape === 'footing'}
 
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label for="concrete-calculator-field-23" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 {t('length')} ({unit === 'metric' ? 'm' : 'ft'})
               </label>
               <input
                 type="number"
                 bind:value={length}
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-              />
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="concrete-calculator-field-23" />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label for="concrete-calculator-field-22" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 {t('width')} ({unit === 'metric' ? 'm' : 'ft'})
               </label>
               <input
                 type="number"
                 bind:value={width}
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-              />
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="concrete-calculator-field-22" />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label for="concrete-calculator-field-21" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 {t('depth')} ({unit === 'metric' ? 'cm' : 'in'})
               </label>
               <input
                 type="number"
                 bind:value={depth}
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-              />
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="concrete-calculator-field-21" />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label for="concrete-calculator-field-20" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 {t('quantity')}
               </label>
               <input
                 type="number"
                 bind:value={quantity}
                 min="1"
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-              />
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="concrete-calculator-field-20" />
             </div>
           
 {/if}
@@ -234,35 +230,32 @@
         {#if shape === 'column'}
 
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label for="concrete-calculator-field-19" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 {t('diameter')} ({unit === 'metric' ? 'cm' : 'in'})
               </label>
               <input
                 type="number"
                 bind:value={diameter}
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-              />
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="concrete-calculator-field-19" />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label for="concrete-calculator-field-18" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 {t('height')} ({unit === 'metric' ? 'm' : 'ft'})
               </label>
               <input
                 type="number"
                 bind:value={height}
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-              />
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="concrete-calculator-field-18" />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label for="concrete-calculator-field-17" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 {t('quantity')}
               </label>
               <input
                 type="number"
                 bind:value={quantity}
                 min="1"
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-              />
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="concrete-calculator-field-17" />
             </div>
           
 {/if}
@@ -270,45 +263,41 @@
         {#if shape === 'stairs'}
 
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label for="concrete-calculator-field-16" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 {t('stairWidth')} ({unit === 'metric' ? 'm' : 'ft'})
               </label>
               <input
                 type="number"
                 bind:value={stairWidth}
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-              />
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="concrete-calculator-field-16" />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label for="concrete-calculator-field-15" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 {t('riseHeight')} ({unit === 'metric' ? 'cm' : 'in'})
               </label>
               <input
                 type="number"
                 bind:value={riseHeight}
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-              />
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="concrete-calculator-field-15" />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label for="concrete-calculator-field-14" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 {t('runDepth')} ({unit === 'metric' ? 'cm' : 'in'})
               </label>
               <input
                 type="number"
                 bind:value={runDepth}
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-              />
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="concrete-calculator-field-14" />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label for="concrete-calculator-field-13" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 {t('numSteps')}
               </label>
               <input
                 type="number"
                 bind:value={numSteps}
                 min="1"
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700"
-              />
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" id="concrete-calculator-field-13" />
             </div>
           
 {/if}

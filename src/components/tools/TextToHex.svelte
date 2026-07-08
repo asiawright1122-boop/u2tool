@@ -128,12 +128,11 @@
     <div class="space-y-6">
       <div class="flex flex-wrap gap-4 items-center">
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">{t('encoding')}:</label>
+          <label for="text-to-hex-field-5" class="text-sm text-gray-600 dark:text-gray-300">{t('encoding')}:</label>
           <select
             value={encoding}
             onchange={(e) => encoding = e.target.value as Encoding}
-            class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-          >
+            class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="text-to-hex-field-5">
             <option value="utf8">UTF-8</option>
             <option value="ascii">ASCII</option>
             <option value="utf16">UTF-16</option>
@@ -141,12 +140,11 @@
         </div>
 
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">{t('separator')}:</label>
+          <label for="text-to-hex-field-4" class="text-sm text-gray-600 dark:text-gray-300">{t('separator')}:</label>
           <select
             value={separator}
             onchange={(e) => separator = e.target.value as Separator}
-            class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-          >
+            class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="text-to-hex-field-4">
             <option value="space">{t('sepSpace')}</option>
             <option value="none">{t('sepNone')}</option>
             <option value="comma">{t('sepComma')}</option>
@@ -174,9 +172,9 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-2">
           <div class="flex items-center justify-between">
-            <label class="block text-sm font-medium text-gray-600 dark:text-gray-300">
+            <div class="block text-sm font-medium text-gray-600 dark:text-gray-300">
               {t('textInput')}
-            </label>
+            </div>
             {#if text}
 <button
                 onclick={() => handleCopy(text)}

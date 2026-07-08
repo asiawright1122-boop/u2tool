@@ -138,31 +138,30 @@
           </div>
 
           <div>
-            <label class="block text-sm font-medium mb-2">{ti('base64Output')}</label>
+            <label for="image-to-base64-field-6" class="block text-sm font-medium mb-2">{ti('base64Output')}</label>
             <textarea
               class="tool-textarea text-xs"
               value={base64}
               readOnly
-              rows={6}></textarea>
+              rows={6} id="image-to-base64-field-6"></textarea>
           </div>
 
           <div>
-            <label class="block text-sm font-medium mb-2">{ti('htmlImageTag')}</label>
+            <label for="image-to-base64-field-5" class="block text-sm font-medium mb-2">{ti('htmlImageTag')}</label>
             <textarea
               class="tool-textarea text-xs"
               value={`<img src="${base64}" alt="image">`}
               readOnly
-              rows={2}
-            ></textarea>
+              rows={2} id="image-to-base64-field-5"></textarea>
           </div>
 
           <div>
-            <label class="block text-sm font-medium mb-2">{ti('cssBackground')}</label>
+            <label for="image-to-base64-field-4" class="block text-sm font-medium mb-2">{ti('cssBackground')}</label>
             <textarea
               class="tool-textarea text-xs"
               value={`background-image: url('${base64}');`}
               readOnly
-              rows={2}></textarea>
+              rows={2} id="image-to-base64-field-4"></textarea>
           </div>
         </div>
 {/if}

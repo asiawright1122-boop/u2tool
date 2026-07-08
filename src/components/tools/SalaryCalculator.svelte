@@ -312,14 +312,13 @@
         <!-- Input Section -->
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label for="salary-calculator-field-8" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               {t('salary.amount')}
             </label>
             <div class="flex gap-2">
               <select
                 bind:value={currency}
-                class="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-              >
+                class="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="salary-calculator-field-8">
                 {#each CURRENCIES as c (c.code)}
 <option  value={c.code}>
                     {c.symbol} {c.code}
@@ -338,14 +337,13 @@
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label for="salary-calculator-field-7" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               {t('salary.payFrequency')}
             </label>
             <select
               value={frequency}
               onchange={(e) => frequency = e.target.value as PayFrequency}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-            >
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="salary-calculator-field-7">
               {#each frequencies as f (f.value)}
 <option  value={f.value}>
                   {f.label}
@@ -355,7 +353,7 @@
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label for="salary-calculator-field-6" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               {t('salary.hoursPerWeek')}
             </label>
             <input
@@ -364,12 +362,11 @@
               max="168"
               value={hoursPerWeek}
               onchange={(e) => hoursPerWeek = parseInt(e.target.value) || 40}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-            />
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="salary-calculator-field-6" />
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label for="salary-calculator-field-5" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               {t('salary.taxRate')} (%)
             </label>
             <input
@@ -379,8 +376,7 @@
               step="0.1"
               value={taxRate}
               onchange={(e) => taxRate = parseFloat(e.target.value) || 0}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-            />
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="salary-calculator-field-5" />
             <input
               type="range"
               min="0"

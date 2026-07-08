@@ -103,7 +103,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- File Size -->
         <div>
-          <label class="tool-label">
+          <label for="bandwidth-calculator-field-4" class="tool-label">
             {t('fileSize')}
           </label>
           <div class="flex gap-2">
@@ -112,8 +112,7 @@
               bind:value={fileSize}
               min="0"
               step="any"
-              class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            />
+              class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="bandwidth-calculator-field-4" />
             <select
               bind:value={fileSizeUnit}
               class="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -127,7 +126,7 @@
 
         <!-- Transfer Time -->
         <div>
-          <label class="tool-label">
+          <label for="bandwidth-calculator-field-3" class="tool-label">
             {t('transferTime')}
           </label>
           <div class="flex gap-2">
@@ -136,8 +135,7 @@
               bind:value={transferTime}
               min="0"
               step="any"
-              class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            />
+              class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="bandwidth-calculator-field-3" />
             <select
               bind:value={timeUnit}
               class="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"

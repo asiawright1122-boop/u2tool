@@ -145,49 +145,45 @@ ${config.companyName ? `**${config.companyName}**\n` : ''}${config.email ? `Emai
       <div class="grid md:grid-cols-2 gap-4">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('privacyPolicyGenerator.websiteName')}</label>
+            <label for="privacy-policy-generator-field-11" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('privacyPolicyGenerator.websiteName')}</label>
             <input
               type="text"
               value={config.websiteName}
               onchange={(e) => config = { ...config, websiteName: e.target.value }}
               class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
-              placeholder={t('privacyPolicyGenerator.websiteNamePlaceholder')}
-            />
+              placeholder={t('privacyPolicyGenerator.websiteNamePlaceholder')} id="privacy-policy-generator-field-11" />
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('privacyPolicyGenerator.websiteUrl')}</label>
+            <label for="privacy-policy-generator-field-10" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('privacyPolicyGenerator.websiteUrl')}</label>
             <input
               type="text"
               value={config.websiteUrl}
               onchange={(e) => config = { ...config, websiteUrl: e.target.value }}
               class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
-              placeholder={t('privacyPolicyGenerator.websiteUrlPlaceholder')}
-            />
+              placeholder={t('privacyPolicyGenerator.websiteUrlPlaceholder')} id="privacy-policy-generator-field-10" />
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('privacyPolicyGenerator.companyName')}</label>
+            <label for="privacy-policy-generator-field-9" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('privacyPolicyGenerator.companyName')}</label>
             <input
               type="text"
               value={config.companyName}
               onchange={(e) => config = { ...config, companyName: e.target.value }}
               class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
-              placeholder={t('privacyPolicyGenerator.companyNamePlaceholder')}
-            />
+              placeholder={t('privacyPolicyGenerator.companyNamePlaceholder')} id="privacy-policy-generator-field-9" />
           </div>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('privacyPolicyGenerator.contactEmail')}</label>
+            <label for="privacy-policy-generator-field-8" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('privacyPolicyGenerator.contactEmail')}</label>
             <input
               type="email"
               value={config.email}
               onchange={(e) => config = { ...config, email: e.target.value }}
               class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
-              placeholder={t('privacyPolicyGenerator.contactEmailPlaceholder')}
-            />
+              placeholder={t('privacyPolicyGenerator.contactEmailPlaceholder')} id="privacy-policy-generator-field-8" />
           </div>
         </div>
 
         <div class="space-y-3">
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('privacyPolicyGenerator.featuresTitle')}</label>
+          <div class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('privacyPolicyGenerator.featuresTitle')}</div>
           {#each [
             { key: 'collectsPersonalData', label: t('privacyPolicyGenerator.features.collectsPersonalData') },
             { key: 'usesCookies', label: t('privacyPolicyGenerator.features.usesCookies') },
@@ -224,11 +220,11 @@ ${config.companyName ? `**${config.companyName}**\n` : ''}${config.email ? `Emai
 
       {#if output}
 <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('privacyPolicyGenerator.generatedOutput')}</label>
+          <label for="privacy-policy-generator-field-7" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('privacyPolicyGenerator.generatedOutput')}</label>
           <textarea
             value={output}
             readOnly
-            class="w-full h-96 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-gray-100 focus:outline-none"></textarea>
+            class="w-full h-96 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-gray-100 focus:outline-none" id="privacy-policy-generator-field-7"></textarea>
         </div>
 {/if}
     </div>

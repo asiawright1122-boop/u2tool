@@ -77,22 +77,20 @@
 <div class="space-y-6">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     <div>
-      <label class="tool-label">{t('width')}</label>
+      <label for="aspect-ratio-calculator-enhanced-field-5" class="tool-label">{t('width')}</label>
       <input
         type="number"
         value={width}
         oninput={(event) => handleWidthChange(event.currentTarget.value)}
-        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800"
-      />
+        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800" id="aspect-ratio-calculator-enhanced-field-5" />
     </div>
     <div>
-      <label class="tool-label">{t('height')}</label>
+      <label for="aspect-ratio-calculator-enhanced-field-4" class="tool-label">{t('height')}</label>
       <input
         type="number"
         value={height}
         oninput={(event) => handleHeightChange(event.currentTarget.value)}
-        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800"
-      />
+        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800" id="aspect-ratio-calculator-enhanced-field-4" />
     </div>
   </div>
 
@@ -114,7 +112,7 @@
   </div>
 
   <div>
-    <label class="tool-label">{t('presets')}</label>
+    <div class="tool-label">{t('presets')}</div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
       {#each [
         { name: '16:9', width: 16, height: 9 },

@@ -249,7 +249,7 @@
       
       <!-- Pen Color -->
       <div>
-        <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+        <label for="signature-pad-field-6" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
           {t('signature.penColor')}
         </label>
         <div class="flex flex-wrap gap-2 mb-2">
@@ -264,29 +264,29 @@
           
           <div class="relative w-7 h-7 rounded-full overflow-hidden border border-gray-200 dark:border-gray-700 focus-within:ring-2 focus-within:ring-amber-500">
             <input type="color" bind:value={penColor}
-              class="absolute inset-[-4px] w-12 h-12 cursor-pointer border-0 p-0 bg-transparent" />
+              class="absolute inset-[-4px] w-12 h-12 cursor-pointer border-0 p-0 bg-transparent" id="signature-pad-field-6" />
           </div>
         </div>
       </div>
 
       <!-- Pen Width -->
       <div>
-        <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+        <label for="signature-pad-field-5" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
           {t('signature.penWidth')}: <span class="text-gray-900 dark:text-white font-bold">{penWidth}px</span>
         </label>
         <input type="range" min="1" max="15" bind:value={penWidth}
-          class="w-full h-1.5 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-amber-600" />
+          class="w-full h-1.5 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-amber-600" id="signature-pad-field-5" />
       </div>
 
       <!-- Background Config -->
       <div>
-        <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+        <label for="signature-pad-field-4" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
           {t('signature.backgroundColor')}
         </label>
         <div class="flex items-center gap-3">
           <div class="relative w-8 h-8 rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600">
             <input type="color" bind:value={backgroundColor} disabled={transparentBg}
-              class="absolute inset-[-4px] w-14 h-14 cursor-pointer border-0 p-0 bg-transparent disabled:opacity-40 disabled:cursor-not-allowed" />
+              class="absolute inset-[-4px] w-14 h-14 cursor-pointer border-0 p-0 bg-transparent disabled:opacity-40 disabled:cursor-not-allowed" id="signature-pad-field-4" />
           </div>
           <label class="flex items-center gap-2 text-sm font-semibold text-gray-600 dark:text-gray-400 select-none cursor-pointer">
             <input type="checkbox" bind:checked={transparentBg}

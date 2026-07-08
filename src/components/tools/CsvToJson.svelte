@@ -65,8 +65,8 @@
     <div class="space-y-4">
       <div class="flex items-center gap-4 flex-wrap">
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-700 dark:text-gray-300">{t('csvJson.delimiter')}:</label>
-          <select bind:value={delimiter} class="tool-select-sm">
+          <label for="csv-to-json-field-6" class="text-sm text-gray-700 dark:text-gray-300">{t('csvJson.delimiter')}:</label>
+          <select bind:value={delimiter} class="tool-select-sm" id="csv-to-json-field-6">
             <option value=",">,</option>
             <option value=";">;</option>
             <option value="\t">{t('csvToJson.delimiterTab')}</option>
@@ -80,12 +80,12 @@
       </div>
       <div class="grid md:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">{t('csvToJson.csv')}</label>
-          <textarea bind:value={csv} class="tool-textarea-tall" placeholder={t('csvToJson.csvPlaceholder')}></textarea>
+          <label for="csv-to-json-field-5" class="tool-label">{t('csvToJson.csv')}</label>
+          <textarea bind:value={csv} class="tool-textarea-tall" placeholder={t('csvToJson.csvPlaceholder')} id="csv-to-json-field-5"></textarea>
         </div>
         <div>
-          <label class="tool-label">{t('csvToJson.json')}</label>
-          <textarea value={json} readOnly class="tool-textarea-tall"></textarea>
+          <label for="csv-to-json-field-4" class="tool-label">{t('csvToJson.json')}</label>
+          <textarea value={json} readOnly class="tool-textarea-tall" id="csv-to-json-field-4"></textarea>
         </div>
       </div>
       <div class="flex gap-2">

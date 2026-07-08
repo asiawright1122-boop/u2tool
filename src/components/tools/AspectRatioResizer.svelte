@@ -146,15 +146,14 @@
 
     <div class="space-y-6">
       <div>
-        <label class="tool-label">
+        <label for="aspect-ratio-resizer-field-6" class="tool-label">
           {t('uploadImage')}
         </label>
         <input
           type="file"
           accept="image/*"
           onchange={handleImageUpload}
-          class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-        />
+          class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="aspect-ratio-resizer-field-6" />
       </div>
 
       {#if image}
@@ -169,26 +168,24 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label class="tool-label">
+              <label for="aspect-ratio-resizer-field-5" class="tool-label">
                 {t('width')} (px)
               </label>
               <input
                 type="number"
                 value={targetWidth}
                 onchange={(e) => handleWidthChange(parseInt(e.target.value) || 0)}
-                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              />
+                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="aspect-ratio-resizer-field-5" />
             </div>
             <div>
-              <label class="tool-label">
+              <label for="aspect-ratio-resizer-field-4" class="tool-label">
                 {t('height')} (px)
               </label>
               <input
                 type="number"
                 value={targetHeight}
                 onchange={(e) => handleHeightChange(parseInt(e.target.value) || 0)}
-                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              />
+                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="aspect-ratio-resizer-field-4" />
             </div>
           </div>
 

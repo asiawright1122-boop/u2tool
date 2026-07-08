@@ -119,7 +119,7 @@
 
       <!-- Keyword -->
       <div>
-        <label class="tool-label">
+        <label for="vigenere-cipher-field-5" class="tool-label">
           {t('keyword')}
         </label>
         <input
@@ -127,8 +127,7 @@
           value={keyword}
           onchange={(e) => handleKeywordChange(e.target.value)}
           placeholder={t('keywordPlaceholder')}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-        />
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="vigenere-cipher-field-5" />
         {#if keyword}
 <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
             {t('effectiveKey')}: {keyword.toUpperCase().replace(/[^A-Z]/g, '') || t('none')}
@@ -138,7 +137,7 @@
 
       <!-- Input -->
       <div>
-        <label class="tool-label">
+        <label for="vigenere-cipher-field-4" class="tool-label">
           {tCommon('input')}
         </label>
         <textarea
@@ -146,8 +145,7 @@
           onchange={(e) => handleInputChange(e.target.value)}
           placeholder={t('inputPlaceholder')}
           rows={6}
-          class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono focus:ring-2 focus:ring-amber-500 focus:border-transparent resize-none"
-        ></textarea>
+          class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono focus:ring-2 focus:ring-amber-500 focus:border-transparent resize-none" id="vigenere-cipher-field-4"></textarea>
       </div>
 
       <!-- Actions -->
@@ -177,9 +175,9 @@
       <!-- Output -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+          <div class="text-sm font-medium text-gray-700 dark:text-gray-300">
             {tCommon('output')}
-          </label>
+          </div>
           {#if output}
 <button
               onclick={copyToClipboard}

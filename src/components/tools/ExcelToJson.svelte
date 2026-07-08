@@ -162,9 +162,9 @@
       <!-- Sheet Selection -->
       {#if sheets.length > 1}
 <div>
-          <label class="tool-label">
+          <div class="tool-label">
             {t('excelToJson.selectSheet')}
-          </label>
+          </div>
           <div class="flex flex-wrap gap-2">
             {#each sheets as sheet (sheet.name)}
 <button 

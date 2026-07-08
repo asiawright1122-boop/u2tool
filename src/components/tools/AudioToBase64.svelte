@@ -190,9 +190,9 @@
 
       <div class="space-y-2">
         <div class="flex items-center justify-between">
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300">
+          <div class="block text-sm font-medium text-gray-600 dark:text-gray-300">
             {t('base64Output')}
-          </label>
+          </div>
           {#if base64}
 <button
               onclick={handleCopy}

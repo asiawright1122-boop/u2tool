@@ -86,12 +86,12 @@
       </div>
       <div class="grid md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium mb-2 text-gray-600 dark:text-white">{t('input')}</label>
-          <textarea bind:value={json} class="w-full h-64 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" placeholder={'{"name": "John", "age": 30}'}></textarea>
+          <label for="json-to-go-field-4" class="block text-sm font-medium mb-2 text-gray-600 dark:text-white">{t('input')}</label>
+          <textarea bind:value={json} class="w-full h-64 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" placeholder={'{"name": "John", "age": 30}'} id="json-to-go-field-4"></textarea>
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2 text-gray-600 dark:text-white">{t('output')}</label>
-          <textarea value={goCode} readOnly class="w-full h-64 p-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white"></textarea>
+          <label for="json-to-go-field-3" class="block text-sm font-medium mb-2 text-gray-600 dark:text-white">{t('output')}</label>
+          <textarea value={goCode} readOnly class="w-full h-64 p-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" id="json-to-go-field-3"></textarea>
         </div>
       </div>
       {#if error}

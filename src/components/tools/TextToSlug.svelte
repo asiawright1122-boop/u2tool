@@ -59,21 +59,20 @@
 
     <div class="space-y-4">
       <div>
-        <label class="block text-sm font-medium mb-2">{t('input')}</label>
+        <label for="text-to-slug-field-5" class="block text-sm font-medium mb-2">{t('input')}</label>
         <textarea
           class="tool-textarea"
           bind:value={input}
           placeholder={t('inputPlaceholder')}
-          rows={3}></textarea>
+          rows={3} id="text-to-slug-field-5"></textarea>
       </div>
 
       <div class="flex flex-wrap gap-4">
         <div>
-          <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">Separator</label>
+          <label for="text-to-slug-field-4" class="block text-xs text-gray-600 dark:text-gray-300 mb-1">Separator</label>
           <select
             bind:value={separator}
-            class="px-3 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100"
-          >
+            class="px-3 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100" id="text-to-slug-field-4">
             <option value="-">Hyphen (-)</option>
             <option value="_">Underscore (_)</option>
             <option value="">None</option>
@@ -93,7 +92,7 @@
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium text-gray-700 dark:text-gray-200">Slug</label>
+          <div class="text-sm font-medium text-gray-700 dark:text-gray-200">Slug</div>
           <button
             onclick={copySlug}
             class={`text-sm px-3 py-1 rounded ${copied ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100'}`}

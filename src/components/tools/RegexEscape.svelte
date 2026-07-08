@@ -75,12 +75,11 @@
     <div class="space-y-6">
       <div class="flex flex-wrap gap-4 items-center">
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">{t('mode')}:</label>
+          <label for="regex-escape-field-5" class="text-sm text-gray-600 dark:text-gray-300">{t('mode')}:</label>
           <select
             value={mode}
             onchange={(e) => mode = e.target.value as 'escape' | 'unescape'}
-            class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-          >
+            class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="regex-escape-field-5">
             <option value="escape">{t('escape')}</option>
             <option value="unescape">{t('unescape')}</option>
           </select>
@@ -96,20 +95,20 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-2">
-          <label class="tool-label">
+          <label for="regex-escape-field-4" class="tool-label">
             {t('input')}
           </label>
           <textarea
             bind:value={input}
             placeholder={mode === 'escape' ? t('inputPlaceholder') : t('escapedPlaceholder')}
-            class="w-full h-48 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono"></textarea>
+            class="w-full h-48 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono" id="regex-escape-field-4"></textarea>
         </div>
 
         <div class="space-y-2">
           <div class="flex items-center justify-between">
-            <label class="tool-label">
+            <div class="tool-label">
               {t('output')}
-            </label>
+            </div>
             {#if output}
 <button
                 onclick={handleCopy}

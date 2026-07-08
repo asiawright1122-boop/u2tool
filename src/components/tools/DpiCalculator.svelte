@@ -150,26 +150,24 @@
               <h4 class="font-medium text-gray-900 dark:text-white">{t('imageResolution')}</h4>
               <div class="grid grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-sm text-gray-500 dark:text-gray-400 mb-1">
+                  <label for="dpi-calculator-field-13" class="block text-sm text-gray-500 dark:text-gray-400 mb-1">
                     {t('width')} (px)
                   </label>
                   <input
                     type="number"
                     bind:value={pixelWidth}
                     min="1"
-                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                  />
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="dpi-calculator-field-13" />
                 </div>
                 <div>
-                  <label class="block text-sm text-gray-500 dark:text-gray-400 mb-1">
+                  <label for="dpi-calculator-field-12" class="block text-sm text-gray-500 dark:text-gray-400 mb-1">
                     {t('height')} (px)
                   </label>
                   <input
                     type="number"
                     bind:value={pixelHeight}
                     min="1"
-                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                  />
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="dpi-calculator-field-12" />
                 </div>
               </div>
             </div>
@@ -178,7 +176,7 @@
               <h4 class="font-medium text-gray-900 dark:text-white">{t('printSize')}</h4>
               <div class="grid grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-sm text-gray-500 dark:text-gray-400 mb-1">
+                  <label for="dpi-calculator-field-11" class="block text-sm text-gray-500 dark:text-gray-400 mb-1">
                     {t('width')} ({t('inches')})
                   </label>
                   <input
@@ -186,11 +184,10 @@
                     bind:value={printWidth}
                     min="0.1"
                     step="0.1"
-                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                  />
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="dpi-calculator-field-11" />
                 </div>
                 <div>
-                  <label class="block text-sm text-gray-500 dark:text-gray-400 mb-1">
+                  <label for="dpi-calculator-field-10" class="block text-sm text-gray-500 dark:text-gray-400 mb-1">
                     {t('height')} ({t('inches')})
                   </label>
                   <input
@@ -198,8 +195,7 @@
                     bind:value={printHeight}
                     min="0.1"
                     step="0.1"
-                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                  />
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="dpi-calculator-field-10" />
                 </div>
               </div>
             </div>
@@ -253,7 +249,7 @@
               <h4 class="font-medium text-gray-900 dark:text-white">{t('printSize')}</h4>
               <div class="grid grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-sm text-gray-500 dark:text-gray-400 mb-1">
+                  <label for="dpi-calculator-field-9" class="block text-sm text-gray-500 dark:text-gray-400 mb-1">
                     {t('width')} ({t('inches')})
                   </label>
                   <input
@@ -261,11 +257,10 @@
                     bind:value={targetPrintWidth}
                     min="0.1"
                     step="0.1"
-                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                  />
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="dpi-calculator-field-9" />
                 </div>
                 <div>
-                  <label class="block text-sm text-gray-500 dark:text-gray-400 mb-1">
+                  <label for="dpi-calculator-field-8" class="block text-sm text-gray-500 dark:text-gray-400 mb-1">
                     {t('height')} ({t('inches')})
                   </label>
                   <input
@@ -273,8 +268,7 @@
                     bind:value={targetPrintHeight}
                     min="0.1"
                     step="0.1"
-                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                  />
+                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="dpi-calculator-field-8" />
                 </div>
               </div>
             </div>
@@ -305,9 +299,9 @@
 
       <!-- Print Size Presets -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('commonPrintSizes')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each PRINT_SIZES as preset (preset.name)}
 <button 

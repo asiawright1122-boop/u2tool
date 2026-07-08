@@ -173,15 +173,14 @@
           />
 
           <div class="flex items-center gap-3">
-            <label class="text-xs text-gray-500 w-16">{t('progress')}:</label>
+            <label for={`milestone-tracker-field-2-${idx}`} class="text-xs text-gray-500 w-16">{t('progress')}:</label>
             <input
               type="range"
               min={0}
               max={100}
               value={milestone.progress}
               onchange={(e) => updateMilestone(milestone.id, 'progress', parseInt(e.currentTarget.value, 10))}
-              class="flex-1"
-            />
+              class="flex-1" id={`milestone-tracker-field-2-${idx}`} />
             <span class="text-xs font-medium w-10">{milestone.progress}%</span>
             <span class={`text-xs ${daysUntil < 0 ? 'text-red-600' : daysUntil <= 7 ? 'text-orange-600' : 'text-gray-500'}`}>
               {daysUntil === 0 ? t('today') : daysUntil > 0 ? `${daysUntil}${t('daysLeft')}` : `${Math.abs(daysUntil)}${t('daysOverdue')}`}

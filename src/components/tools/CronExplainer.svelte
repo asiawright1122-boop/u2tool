@@ -48,13 +48,12 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium mb-2">{tc('expression')}</label>
+        <label for="cron-explainer-field-2" class="block text-sm font-medium mb-2">{tc('expression')}</label>
         <input
           type="text"
           bind:value={cron}
           class="tool-input font-mono text-lg"
-          placeholder="* * * * *"
-        />
+          placeholder="* * * * *" id="cron-explainer-field-2" />
       </div>
 
       <!-- Field Labels -->

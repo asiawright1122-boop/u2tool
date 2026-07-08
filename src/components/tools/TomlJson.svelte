@@ -112,7 +112,7 @@ dc = "eqdc20"`;
       <!-- Controls -->
       <div class="flex flex-wrap items-center gap-4">
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">{t('mode')}:</label>
+          <label for="toml-json-field-6" class="text-sm text-gray-600 dark:text-gray-300">{t('mode')}:</label>
           <select
             value={mode}
             onchange={(e) => {
@@ -121,8 +121,7 @@ dc = "eqdc20"`;
               output = '';
               error = '';
             }}
-            class="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-1.5 text-sm text-gray-900 dark:text-white"
-          >
+            class="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-1.5 text-sm text-gray-900 dark:text-white" id="toml-json-field-6">
             <option value="toml-to-json">{t('tomlToJson')}</option>
             <option value="json-to-toml">{t('jsonToToml')}</option>
           </select>
@@ -130,12 +129,11 @@ dc = "eqdc20"`;
         
         {#if mode === 'toml-to-json'}
 <div class="flex items-center gap-2">
-            <label class="text-sm text-gray-600 dark:text-gray-300">{t('indent')}:</label>
+            <label for="toml-json-field-5" class="text-sm text-gray-600 dark:text-gray-300">{t('indent')}:</label>
             <select
               value={indentSize}
               onchange={(e) => indentSize = Number(e.target.value)}
-              class="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-1.5 text-sm text-gray-900 dark:text-white"
-            >
+              class="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-1.5 text-sm text-gray-900 dark:text-white" id="toml-json-field-5">
               <option value={2}>2 spaces</option>
               <option value={4}>4 spaces</option>
               <option value={0}>Minified</option>
@@ -162,9 +160,9 @@ dc = "eqdc20"`;
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-600 dark:text-gray-300">
+            <div class="text-sm font-medium text-gray-600 dark:text-gray-300">
               {mode === 'toml-to-json' ? 'TOML' : 'JSON'}
-            </label>
+            </div>
           </div>
           <textarea
             bind:value={input}
@@ -174,9 +172,9 @@ dc = "eqdc20"`;
 
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-600 dark:text-gray-300">
+            <div class="text-sm font-medium text-gray-600 dark:text-gray-300">
               {mode === 'toml-to-json' ? 'JSON' : 'TOML'}
-            </label>
+            </div>
             <div class="flex gap-2">
               <button
                 onclick={swap}

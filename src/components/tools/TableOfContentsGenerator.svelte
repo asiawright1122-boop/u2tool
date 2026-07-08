@@ -73,12 +73,11 @@
     <div class="space-y-6">
       <div class="flex flex-wrap gap-4 items-center">
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">Style</label>
+          <label for="table-of-contents-generator-field-9" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">Style</label>
           <select
             value={options.style}
             onchange={(e) => updateOption('style', e.target.value as TocOptions['style'])}
-            class="px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="table-of-contents-generator-field-9">
             <option value="dotted">Dotted</option>
             <option value="lined">Lined</option>
             <option value="simple">Simple</option>
@@ -86,23 +85,21 @@
           </select>
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">Output</label>
+          <label for="table-of-contents-generator-field-8" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">Output</label>
           <select
             value={outputFormat}
             onchange={(e) => outputFormat = e.target.value as 'text' | 'html'}
-            class="px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="table-of-contents-generator-field-8">
             <option value="text">Plain Text</option>
             <option value="html">HTML</option>
           </select>
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">Indent</label>
+          <label for="table-of-contents-generator-field-7" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">Indent</label>
           <select
             value={options.indentSize}
             onchange={(e) => updateOption('indentSize', parseInt(e.target.value))}
-            class="px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="table-of-contents-generator-field-7">
             <option value={2}>2 spaces</option>
             <option value={4}>4 spaces</option>
             <option value={6}>6 spaces</option>
@@ -116,22 +113,22 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="table-of-contents-generator-field-6" class="tool-label">
             TOC Entries (use indentation for hierarchy)
           </label>
           <textarea
             bind:value={input}
             placeholder={t("inputPlaceholder")}
             rows={14}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm resize-none"></textarea>
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm resize-none" id="table-of-contents-generator-field-6"></textarea>
           <p class="text-xs text-gray-500 mt-1">Format: Title | Page (page is optional)</p>
         </div>
 
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="tool-label">
+            <div class="tool-label">
               Generated Table of Contents
-            </label>
+            </div>
             <button
               onclick={handleCopy}
               class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"

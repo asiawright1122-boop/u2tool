@@ -130,36 +130,33 @@
           </div>
           
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{tr('userAgent')}</label>
+            <label for={`robots-txt-generator-field-11-${index}`} class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{tr('userAgent')}</label>
             <input
               type="text"
               value={rule.userAgent}
               onchange={(e) => updateRule(index, 'userAgent', e.target.value)}
               class="tool-input"
-              placeholder="*"
-            />
+              placeholder="*" id={`robots-txt-generator-field-11-${index}`} />
           </div>
           
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{tr('allow')}</label>
+            <label for={`robots-txt-generator-field-10-${index}`} class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{tr('allow')}</label>
             <textarea
               value={rule.allow.join('\n')}
               onchange={(e) => updateRule(index, 'allow', e.target.value.split('\n'))}
               class="tool-input"
               rows={2}
-              placeholder="/public/"
-            ></textarea>
+              placeholder="/public/" id={`robots-txt-generator-field-10-${index}`}></textarea>
           </div>
           
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{tr('disallow')}</label>
+            <label for={`robots-txt-generator-field-9-${index}`} class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{tr('disallow')}</label>
             <textarea
               value={rule.disallow.join('\n')}
               onchange={(e) => updateRule(index, 'disallow', e.target.value.split('\n'))}
               class="tool-input"
               rows={2}
-              placeholder="/admin/&#10;/private/"
-            ></textarea>
+              placeholder="/admin/&#10;/private/" id={`robots-txt-generator-field-9-${index}`}></textarea>
           </div>
         </div>
 {/each}
@@ -168,28 +165,26 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium mb-2">{tr('sitemapUrl')}</label>
+          <label for="robots-txt-generator-field-8" class="block text-sm font-medium mb-2">{tr('sitemapUrl')}</label>
           <input
             type="text"
             bind:value={sitemap}
             class="tool-input"
-            placeholder="https://example.com/sitemap.xml"
-          />
+            placeholder="https://example.com/sitemap.xml" id="robots-txt-generator-field-8" />
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2">{tr('crawlDelay')}</label>
+          <label for="robots-txt-generator-field-7" class="block text-sm font-medium mb-2">{tr('crawlDelay')}</label>
           <input
             type="number"
             bind:value={crawlDelay}
             class="tool-input"
-            placeholder="10"
-          />
+            placeholder="10" id="robots-txt-generator-field-7" />
         </div>
       </div>
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium">{tr('output')}</label>
+          <div class="text-sm font-medium">{tr('output')}</div>
           <button
             onclick={copyOutput}
             class={`text-sm px-3 py-1 rounded ${copied ? 'bg-emerald-500' : 'bg-gray-700 hover:bg-gray-600'}`}

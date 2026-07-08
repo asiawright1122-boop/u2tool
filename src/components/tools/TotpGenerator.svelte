@@ -81,15 +81,14 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium mb-2">{t('totp.secret')}</label>
+        <label for="totp-generator-field-2" class="block text-sm font-medium mb-2">{t('totp.secret')}</label>
         <div class="flex gap-2">
           <input
             type="text"
             value={secret}
             onchange={(e) => secret = e.target.value.toUpperCase().replace(/[^A-Z2-7]/g, '')}
             placeholder={t('totp.secretPlaceholder')}
-            class="flex-1 p-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent text-gray-900 dark:text-gray-100"
-          />
+            class="flex-1 p-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:border-transparent text-gray-900 dark:text-gray-100" id="totp-generator-field-2" />
           <button
             onclick={handleGenerateSecret}
             class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg text-sm"

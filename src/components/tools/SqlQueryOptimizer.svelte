@@ -69,7 +69,7 @@
     <div class="space-y-6">
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">{t('sqlQuery')}</label>
+          <div class="tool-label">{t('sqlQuery')}</div>
           <button onclick={loadExample} class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400">{t('loadExample')}</button>
         </div>
         <textarea bind:value={sql} placeholder={t("inputPlaceholder")}
@@ -106,7 +106,7 @@
 
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="tool-label">{t('formattedQuery')}</label>
+              <div class="tool-label">{t('formattedQuery')}</div>
               <button onclick={handleCopy} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">
                 {copied ? tCommon('copied') : tCommon('copy')}
               </button>

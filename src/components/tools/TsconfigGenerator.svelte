@@ -249,9 +249,9 @@
     <div class="space-y-6">
       <!-- Presets -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('presets')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each PRESETS as preset (preset.name)}
 <button 
@@ -267,14 +267,13 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Target -->
         <div>
-          <label class="tool-label">
+          <label for="tsconfig-generator-field-15" class="tool-label">
             {t('target')}
           </label>
           <select
             value={config.target}
             onchange={(e) => config = ({ ...config, target: e.target.value })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          >
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="tsconfig-generator-field-15">
             {#each TARGETS as t (t)}
 <option  value={t}>{t}</option>
 {/each}
@@ -283,14 +282,13 @@
 
         <!-- Module -->
         <div>
-          <label class="tool-label">
+          <label for="tsconfig-generator-field-14" class="tool-label">
             {t('module')}
           </label>
           <select
             value={config.module}
             onchange={(e) => config = ({ ...config, module: e.target.value })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          >
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="tsconfig-generator-field-14">
             {#each MODULES as m (m)}
 <option  value={m}>{m}</option>
 {/each}
@@ -299,14 +297,13 @@
 
         <!-- Module Resolution -->
         <div>
-          <label class="tool-label">
+          <label for="tsconfig-generator-field-13" class="tool-label">
             {t('moduleResolution')}
           </label>
           <select
             value={config.moduleResolution}
             onchange={(e) => config = ({ ...config, moduleResolution: e.target.value })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          >
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="tsconfig-generator-field-13">
             {#each MODULE_RESOLUTIONS as mr (mr)}
 <option  value={mr}>{mr}</option>
 {/each}
@@ -315,14 +312,13 @@
 
         <!-- JSX -->
         <div>
-          <label class="tool-label">
+          <label for="tsconfig-generator-field-12" class="tool-label">
             JSX
           </label>
           <select
             value={config.jsx}
             onchange={(e) => config = ({ ...config, jsx: e.target.value })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          >
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="tsconfig-generator-field-12">
             {#each JSX_OPTIONS as j (j)}
 <option  value={j}>{j}</option>
 {/each}
@@ -331,36 +327,34 @@
 
         <!-- Out Dir -->
         <div>
-          <label class="tool-label">
+          <label for="tsconfig-generator-field-11" class="tool-label">
             {t('outDir')}
           </label>
           <input
             type="text"
             value={config.outDir}
             onchange={(e) => config = ({ ...config, outDir: e.target.value })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="tsconfig-generator-field-11" />
         </div>
 
         <!-- Root Dir -->
         <div>
-          <label class="tool-label">
+          <label for="tsconfig-generator-field-10" class="tool-label">
             {t('rootDir')}
           </label>
           <input
             type="text"
             value={config.rootDir}
             onchange={(e) => config = ({ ...config, rootDir: e.target.value })}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="tsconfig-generator-field-10" />
         </div>
       </div>
 
       <!-- Lib -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('lib')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each LIBS as lib (lib)}
 <button 
@@ -424,7 +418,7 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">tsconfig.json</label>
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">tsconfig.json</div>
             <div class="flex gap-2">
               <button
                 onclick={copyToClipboard}

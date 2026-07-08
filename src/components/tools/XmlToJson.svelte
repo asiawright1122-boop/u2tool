@@ -122,16 +122,16 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
-          <label class="tool-label">{t('input')}</label>
+          <label for="xml-to-json-field-4" class="tool-label">{t('input')}</label>
           <textarea bind:value={input}
             class="tool-textarea-tall"
-            placeholder={t('inputPlaceholder')}></textarea>
+            placeholder={t('inputPlaceholder')} id="xml-to-json-field-4"></textarea>
         </div>
         <div>
-          <label class="tool-label">{t('output')}</label>
+          <label for="xml-to-json-field-3" class="tool-label">{t('output')}</label>
           <textarea value={output} readOnly
             class="tool-textarea-tall"
-            placeholder={t('outputPlaceholder')}></textarea>
+            placeholder={t('outputPlaceholder')} id="xml-to-json-field-3"></textarea>
         </div>
       </div>
 

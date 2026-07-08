@@ -122,27 +122,26 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium mb-2">{t('jwt.algorithm')}</label>
-          <select bind:value={algorithm} class="tool-input">
+          <label for="jwt-generator-field-6" class="block text-sm font-medium mb-2">{t('jwt.algorithm')}</label>
+          <select bind:value={algorithm} class="tool-input" id="jwt-generator-field-6">
             <option value="HS256">HS256 (HMAC SHA-256)</option>
             <option value="HS384">HS384 (HMAC SHA-384)</option>
             <option value="HS512">HS512 (HMAC SHA-512)</option>
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2">{t('jwt.secretKey')}</label>
+          <label for="jwt-generator-field-5" class="block text-sm font-medium mb-2">{t('jwt.secretKey')}</label>
           <input
             type="text"
             bind:value={secret}
             class="tool-input font-mono"
-            placeholder={t('jwt.secretPlaceholder')}
-          />
+            placeholder={t('jwt.secretPlaceholder')} id="jwt-generator-field-5" />
         </div>
       </div>
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium">{t('jwt.payload')}</label>
+          <div class="text-sm font-medium">{t('jwt.payload')}</div>
           <div class="flex gap-2">
             <button onclick={() => addClaim('iat')} class="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded hover:bg-gray-300 dark:hover:bg-gray-600">+iat</button>
             <button onclick={() => addClaim('exp')} class="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded hover:bg-gray-300 dark:hover:bg-gray-600">+exp</button>
@@ -167,7 +166,7 @@
       {#if token}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium">{t('jwt.generatedToken')}</label>
+            <div class="text-sm font-medium">{t('jwt.generatedToken')}</div>
             <button
               onclick={copyToken}
               class={`text-sm px-3 py-1 rounded ${copied ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}

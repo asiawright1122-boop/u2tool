@@ -58,9 +58,9 @@
     <div class="space-y-6">
       <!-- Gender Selection -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('gender')}
-        </label>
+        </div>
         <div class="flex gap-2">
           <button
             onclick={() => handleGenderChange('men')}
@@ -87,9 +87,9 @@
 
       <!-- Size System Selection -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('selectSystem')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each systems as system (system)}
 <button 
@@ -108,9 +108,9 @@
 
       <!-- Size Selection -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('selectSize')} ({sizeSystemNames[fromSystem]})
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each sizes as row, idx (idx)}
 <button 

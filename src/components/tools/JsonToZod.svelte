@@ -154,24 +154,23 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="tool-label">
+            <label for="json-to-zod-field-5" class="tool-label">
               {t('schemaName')}
             </label>
             <input
               type="text"
               bind:value={schemaName}
-              class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono"
-            />
+              class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono" id="json-to-zod-field-5" />
           </div>
 
           <div>
-            <label class="tool-label">
+            <label for="json-to-zod-field-4" class="tool-label">
               {t('jsonInput')}
             </label>
             <textarea
               bind:value={input}
               placeholder={t('placeholder')}
-              class="w-full h-80 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm"></textarea>
+              class="w-full h-80 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm" id="json-to-zod-field-4"></textarea>
           </div>
 
           {#if error}
@@ -198,9 +197,9 @@
 
         <div>
           <div class="flex items-center justify-between mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">
               {t('zodOutput')}
-            </label>
+            </div>
             {#if output}
 <button
                 onclick={copyToClipboard}

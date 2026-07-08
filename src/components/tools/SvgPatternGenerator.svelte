@@ -99,12 +99,11 @@
     <div class="space-y-4">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('pattern')}</label>
+          <label for="svg-pattern-generator-field-12" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('pattern')}</label>
           <select
             value={patternType}
             onchange={(e) => patternType = e.target.value as PatternType}
-            class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white"
-          >
+            class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white" id="svg-pattern-generator-field-12">
             <option value="dots">{t('dots')}</option>
             <option value="lines">{t('lines')}</option>
             <option value="grid">{t('grid')}</option>
@@ -115,37 +114,34 @@
           </select>
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('size')}</label>
+          <label for="svg-pattern-generator-field-11" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('size')}</label>
           <input
             type="range"
             min={10}
             max={100}
             value={size}
             onchange={(e) => size = Number(e.target.value)}
-            class="w-full"
-          />
+            class="w-full" id="svg-pattern-generator-field-11" />
           <span class="text-xs text-gray-500">{size}px</span>
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('color')}</label>
+          <label for="svg-pattern-generator-field-10" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('color')}</label>
           <input
             type="color"
             bind:value={color}
-            class="w-full h-10 rounded cursor-pointer"
-          />
+            class="w-full h-10 rounded cursor-pointer" id="svg-pattern-generator-field-10" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('bgColor')}</label>
+          <label for="svg-pattern-generator-field-9" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('bgColor')}</label>
           <input
             type="color"
             bind:value={bgColor}
-            class="w-full h-10 rounded cursor-pointer"
-          />
+            class="w-full h-10 rounded cursor-pointer" id="svg-pattern-generator-field-9" />
         </div>
       </div>
 
       <div>
-        <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('opacity')}: {opacity}</label>
+        <label for="svg-pattern-generator-field-8" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('opacity')}: {opacity}</label>
         <input
           type="range"
           min={0}
@@ -153,8 +149,7 @@
           step={0.1}
           value={opacity}
           onchange={(e) => opacity = Number(e.target.value)}
-          class="w-full"
-        />
+          class="w-full" id="svg-pattern-generator-field-8" />
       </div>
 
       <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 h-48 overflow-hidden">
@@ -166,7 +161,7 @@
       <div class="space-y-2">
         <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-600 dark:text-gray-300">SVG Code</label>
+            <div class="text-sm font-medium text-gray-600 dark:text-gray-300">SVG Code</div>
             <button onclick={() => copyCode(svgCode)} class="btn-secondary text-sm">
               {copied ? tg('copied') : tg('copy')}
             </button>
@@ -178,7 +173,7 @@
 
         <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-600 dark:text-gray-300">CSS Background</label>
+            <div class="text-sm font-medium text-gray-600 dark:text-gray-300">CSS Background</div>
             <button onclick={() => copyCode(cssBackground)} class="btn-secondary text-sm">
               {tg('copy')}
             </button>

@@ -81,7 +81,7 @@
     <div class="space-y-6">
       <div class="flex flex-wrap gap-4 items-center">
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">{t('inputMode')}:</label>
+          <label for="crc32-calculator-field-6" class="text-sm text-gray-600 dark:text-gray-300">{t('inputMode')}:</label>
           <select
             value={inputMode}
             onchange={(e) => {
@@ -90,8 +90,7 @@
               crcHex = '';
               crcDec = '';
             }}
-            class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-          >
+            class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="crc32-calculator-field-6">
             <option value="text">{t('modeText')}</option>
             <option value="file">{t('modeFile')}</option>
           </select>
@@ -107,24 +106,23 @@
 
       {#if inputMode === 'text'}
 <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300">
+          <label for="crc32-calculator-field-5" class="block text-sm font-medium text-gray-600 dark:text-gray-300">
             {t('textInput')}
           </label>
           <textarea
             bind:value={text}
             placeholder={t('textPlaceholder')}
-            class="w-full h-40 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono"></textarea>
+            class="w-full h-40 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono" id="crc32-calculator-field-5"></textarea>
         </div>
 {:else}
 <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300">
+          <label for="crc32-calculator-field-4" class="block text-sm font-medium text-gray-600 dark:text-gray-300">
             {t('fileInput')}
           </label>
           <input
             type="file"
             onchange={(e) => file = e.target.files?.[0] || null}
-            class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-          />
+            class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="crc32-calculator-field-4" />
           {#if file}
 <div class="text-sm text-gray-600 dark:text-gray-300">
               {t('selectedFile')}: {file.name} ({(file.size / 1024).toFixed(2)} KB)

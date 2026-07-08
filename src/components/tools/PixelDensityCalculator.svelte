@@ -101,29 +101,27 @@
       <!-- Input Section -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="pixel-density-calculator-field-7" class="tool-label">
             {t('width')} (px)
           </label>
           <input
             type="number"
             bind:value={width}
             min="1"
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="pixel-density-calculator-field-7" />
         </div>
         <div>
-          <label class="tool-label">
+          <label for="pixel-density-calculator-field-6" class="tool-label">
             {t('height')} (px)
           </label>
           <input
             type="number"
             bind:value={height}
             min="1"
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="pixel-density-calculator-field-6" />
         </div>
         <div>
-          <label class="tool-label">
+          <label for="pixel-density-calculator-field-5" class="tool-label">
             {t('diagonal')} ({t('inches')})
           </label>
           <input
@@ -131,16 +129,15 @@
             bind:value={diagonal}
             min="0.1"
             step="0.1"
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="pixel-density-calculator-field-5" />
         </div>
       </div>
 
       <!-- Preset Resolutions -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('commonResolutions')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each COMMON_RESOLUTIONS as preset (preset.name)}
 <button 

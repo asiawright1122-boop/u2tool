@@ -93,7 +93,7 @@
       <!-- Input Form -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="inflation-calculator-field-9" class="tool-label">
             {t('amount')}
           </label>
           <div class="relative">
@@ -102,13 +102,12 @@
               type="number"
               bind:value={amount}
               placeholder="1000"
-              class="w-full pl-8 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-            />
+              class="w-full pl-8 pr-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="inflation-calculator-field-9" />
           </div>
         </div>
 
         <div>
-          <label class="tool-label">
+          <label for="inflation-calculator-field-8" class="tool-label">
             {t('annualRate')}
           </label>
           <div class="relative">
@@ -117,42 +116,39 @@
               bind:value={annualRate}
               placeholder="3"
               step="0.1"
-              class="w-full pr-8 pl-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-            />
+              class="w-full pr-8 pl-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="inflation-calculator-field-8" />
             <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">%</span>
           </div>
         </div>
 
         <div>
-          <label class="tool-label">
+          <label for="inflation-calculator-field-7" class="tool-label">
             {t('startYear')}
           </label>
           <input
             type="number"
             bind:value={startYear}
             placeholder="2014"
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="inflation-calculator-field-7" />
         </div>
 
         <div>
-          <label class="tool-label">
+          <label for="inflation-calculator-field-6" class="tool-label">
             {t('endYear')}
           </label>
           <input
             type="number"
             bind:value={endYear}
             placeholder="2024"
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="inflation-calculator-field-6" />
         </div>
       </div>
 
       <!-- Quick Rate Buttons -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('commonRates')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each [2, 2.5, 3, 3.5, 4, 5, 6, 7, 8] as rate (rate)}
 <button 

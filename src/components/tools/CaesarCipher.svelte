@@ -109,7 +109,7 @@
 
       <!-- Shift Selection -->
       <div>
-        <label class="tool-label">
+        <label for="caesar-cipher-field-5" class="tool-label">
           {t('shift')}: {shift}
         </label>
         <input
@@ -118,8 +118,7 @@
           max="25"
           value={shift}
           onchange={(e) => handleShiftChange(parseInt(e.target.value))}
-          class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer"
-        />
+          class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer" id="caesar-cipher-field-5" />
         <div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
           <span>1</span>
           <span>13</span>
@@ -145,7 +144,7 @@
 
       <!-- Input -->
       <div>
-        <label class="tool-label">
+        <label for="caesar-cipher-field-4" class="tool-label">
           {tCommon('input')}
         </label>
         <textarea
@@ -153,8 +152,7 @@
           onchange={(e) => handleInputChange(e.target.value)}
           placeholder={t('inputPlaceholder')}
           rows={6}
-          class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono focus:ring-2 focus:ring-amber-500 focus:border-transparent resize-none"
-        ></textarea>
+          class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 font-mono focus:ring-2 focus:ring-amber-500 focus:border-transparent resize-none" id="caesar-cipher-field-4"></textarea>
       </div>
 
       <!-- Actions -->
@@ -183,9 +181,9 @@
       <!-- Output -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+          <div class="text-sm font-medium text-gray-700 dark:text-gray-300">
             {tCommon('output')}
-          </label>
+          </div>
           {#if output}
 <button
               onclick={copyToClipboard}

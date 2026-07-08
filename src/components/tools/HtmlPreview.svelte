@@ -63,16 +63,16 @@
 
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
     <div>
-      <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('htmlCode')}</label>
+      <label for="html-preview-field-3" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('htmlCode')}</label>
       <textarea
         bind:value={html}
         class="w-full h-96 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
         placeholder={t('placeholder')}
-        spellCheck={false}></textarea>
+        spellCheck={false} id="html-preview-field-3"></textarea>
     </div>
 
     <div>
-      <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('preview')}</label>
+      <div class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('preview')}</div>
       <div class="w-full h-96 bg-white dark:bg-gray-800 rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600">
         {#key previewKey}
           <iframe

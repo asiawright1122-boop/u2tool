@@ -85,9 +85,9 @@
       <!-- Input -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">
+          <div class="tool-label">
             SQL Query
-          </label>
+          </div>
           <div class="flex gap-2">
             {#each EXAMPLES.slice(0, 4) as ex (ex.label)}
 <button 
@@ -137,9 +137,9 @@
 
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="tool-label">
+              <div class="tool-label">
                 MongoDB Query
-              </label>
+              </div>
               <button
                 onclick={handleCopy}
                 class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"

@@ -115,7 +115,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label class="tool-label">
+          <label for="roman-numeral-converter-field-4" class="tool-label">
             {mode === 'toRoman' ? t('arabicNumber') : t('romanNumeral')}
           </label>
           <input
@@ -123,11 +123,10 @@
             value={mode === 'toRoman' ? arabic : roman}
             onchange={(e) => mode === 'toRoman' ? arabic = e.target.value : roman = e.target.value}
             placeholder={mode === 'toRoman' ? t('arabicPlaceholder') : t('romanPlaceholder')}
-            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-2xl text-center font-mono"
-          />
+            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-2xl text-center font-mono" id="roman-numeral-converter-field-4" />
         </div>
         <div>
-          <label class="tool-label">
+          <label for="roman-numeral-converter-field-3" class="tool-label">
             {mode === 'toRoman' ? t('romanNumeral') : t('arabicNumber')}
           </label>
           <input
@@ -135,8 +134,7 @@
             value={mode === 'toRoman' ? roman : arabic}
             readOnly
             placeholder={t('result')}
-            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white text-2xl text-center font-mono"
-          />
+            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white text-2xl text-center font-mono" id="roman-numeral-converter-field-3" />
         </div>
       </div>
 

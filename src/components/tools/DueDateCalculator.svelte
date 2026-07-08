@@ -141,9 +141,9 @@
     <div class="space-y-6">
       <!-- Method Selection -->
       <div class="space-y-2">
-        <label class="tool-label">
+        <div class="tool-label">
           {t('calculationMethod')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           <button
             onclick={() => method = 'lmp'}

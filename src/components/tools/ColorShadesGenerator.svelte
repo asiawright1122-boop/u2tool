@@ -78,19 +78,19 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="tool-label">{t('baseColor')}</label>
+          <label for="color-shades-generator-field-5" class="tool-label">{t('baseColor')}</label>
           <div class="flex gap-2">
             <input type="color" bind:value={baseColor}
-              class="w-16 h-10 rounded cursor-pointer" />
+              class="w-16 h-10 rounded cursor-pointer" id="color-shades-generator-field-5" />
             <input type="text" bind:value={baseColor}
               class="flex-1 px-3 py-2 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono" />
           </div>
         </div>
         <div>
-          <label class="tool-label">{t('numberOfShades', { count: shadeCount })}</label>
+          <label for="color-shades-generator-field-4" class="tool-label">{t('numberOfShades', { count: shadeCount })}</label>
           <input type="range" min="5" max="15" value={shadeCount}
             onchange={(e) => shadeCount = parseInt(e.target.value)}
-            class="w-full mt-2" />
+            class="w-full mt-2" id="color-shades-generator-field-4" />
         </div>
         <div class="flex items-end">
           <button onclick={copyAll}
@@ -115,7 +115,7 @@
       </div>
 
       <div>
-        <label class="tool-label">{t('output')}</label>
+        <div class="tool-label">{t('output')}</div>
         <pre class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 font-mono text-sm text-green-600 dark:text-green-400 overflow-x-auto">
           {#each shades as shade, i}
 `--color-${(i + 1) * 100}: ${shade};`).join('\n'

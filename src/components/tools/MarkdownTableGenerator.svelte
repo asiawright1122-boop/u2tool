@@ -234,7 +234,7 @@
       <!-- Output -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium">{tm('markdownOutput')}</label>
+          <div class="text-sm font-medium">{tm('markdownOutput')}</div>
           <button
             onclick={copyMarkdown}
             class={`text-sm px-3 py-1 rounded ${copied ? 'bg-emerald-500' : 'bg-gray-700 hover:bg-gray-600'}`}

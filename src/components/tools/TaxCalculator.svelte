@@ -207,14 +207,13 @@ function validateInput(value: string): boolean {
     <div class="space-y-6">
       <!-- Country Selector -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label for="tax-calculator-field-5" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           {t('selectCountry')}
         </label>
         <select
           value={selectedCountry}
           onchange={(e) => handleCountryChange(e.target.value)}
-          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-        >
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="tax-calculator-field-5">
           {#each Object.keys(TAX_REGIMES) as code (code)}
 <option  value={code}>
               {getCountryName(code)}
@@ -241,7 +240,7 @@ function validateInput(value: string): boolean {
           <!-- Income Input -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label for="tax-gross-income" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 {t('grossIncome')}
               </label>
               <div class="relative">
@@ -345,7 +344,7 @@ function validateInput(value: string): boolean {
           {#if regime?.additionalDeductions}
 
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+              <label for="tax-calculator-field-4" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
                 {t('additionalDeductions')}
               </label>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -368,8 +367,7 @@ function validateInput(value: string): boolean {
                             handleDeductionAmountChange(deduction.id, '0');
                           }
                         }}
-                        class="mt-1 text-amber-600 rounded flex-shrink-0"
-                      />
+                        class="mt-1 text-amber-600 rounded flex-shrink-0" id="tax-calculator-field-4" />
                       <div class="flex-1 min-w-0">
                         <div class="text-sm font-medium text-gray-800 dark:text-gray-200">
                           {getDeductionName(deduction.id)}

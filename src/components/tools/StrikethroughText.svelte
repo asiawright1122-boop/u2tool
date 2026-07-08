@@ -55,13 +55,13 @@
 
     <div class="space-y-6">
       <div>
-        <label class="tool-label">
+        <label for="strikethrough-text-field-2" class="tool-label">
           {t('inputLabel')}
         </label>
         <textarea
           bind:value={input}
           placeholder={t('inputPlaceholder')}
-          class="w-full h-32 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"></textarea>
+          class="w-full h-32 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="strikethrough-text-field-2"></textarea>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">

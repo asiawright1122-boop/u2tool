@@ -60,26 +60,24 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label class="tool-label">
+          <label for="percentage-change-calculator-field-4" class="tool-label">
             {t('oldValue')}
           </label>
           <input
             type="number"
             bind:value={oldValue}
             placeholder={t('oldValuePlaceholder')}
-            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-xl"
-          />
+            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-xl" id="percentage-change-calculator-field-4" />
         </div>
         <div>
-          <label class="tool-label">
+          <label for="percentage-change-calculator-field-3" class="tool-label">
             {t('newValue')}
           </label>
           <input
             type="number"
             bind:value={newValue}
             placeholder={t('newValuePlaceholder')}
-            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-xl"
-          />
+            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-xl" id="percentage-change-calculator-field-3" />
         </div>
       </div>
 

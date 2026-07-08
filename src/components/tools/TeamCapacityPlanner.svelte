@@ -97,32 +97,29 @@
     <div class="space-y-6">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('sprintDuration')}</label>
+          <label for="team-capacity-planner-field-6" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('sprintDuration')}</label>
           <input
             type="number"
             value={config.durationDays}
             onchange={(e) => updateConfig('durationDays', parseInt(e.target.value) || 10)}
             min={1}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="team-capacity-planner-field-6" />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('holidays')}</label>
+          <label for="team-capacity-planner-field-5" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('holidays')}</label>
           <input
             type="number"
             value={config.holidays}
             onchange={(e) => updateConfig('holidays', parseInt(e.target.value) || 0)}
             min={0}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="team-capacity-planner-field-5" />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('focusFactor')}</label>
+          <label for="team-capacity-planner-field-4" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('focusFactor')}</label>
           <select
             value={config.focusFactor}
             onchange={(e) => updateConfig('focusFactor', parseFloat(e.target.value))}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="team-capacity-planner-field-4">
             <option value={0.6}>60% ({t('newTeam')})</option>
             <option value={0.7}>70% ({t('forming')})</option>
             <option value={0.8}>80% ({t('established')})</option>

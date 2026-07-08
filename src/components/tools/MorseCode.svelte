@@ -104,7 +104,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm text-gray-600 dark:text-gray-300">{t('text')}</label>
+            <div class="text-sm text-gray-600 dark:text-gray-300">{t('text')}</div>
             <div class="flex gap-2">
               <button
                 onclick={copyText}
@@ -129,7 +129,7 @@
 
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm text-gray-600 dark:text-gray-300">{t('morse')}</label>
+            <div class="text-sm text-gray-600 dark:text-gray-300">{t('morse')}</div>
             <div class="flex gap-2">
               <button
                 onclick={morseToText}

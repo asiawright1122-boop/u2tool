@@ -75,7 +75,7 @@
 
     <div class="space-y-6">
       <div>
-        <label class="tool-label">
+        <label for="word-unscrambler-field-2" class="tool-label">
           {t('inputLabel')}
         </label>
         <input
@@ -83,8 +83,7 @@
           bind:value={input}
           placeholder={t('inputPlaceholder')}
           class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-lg uppercase tracking-widest"
-          maxLength={12}
-        />
+          maxLength={12} id="word-unscrambler-field-2" />
       </div>
 
       <div class="flex items-center justify-between">

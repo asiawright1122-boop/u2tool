@@ -226,19 +226,19 @@ console.log(calculateSum(5, 10));`;
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
-          <label class="block text-sm font-medium mb-2">{t('inputCode')}</label>
+          <label for="js-obfuscator-field-4" class="block text-sm font-medium mb-2">{t('inputCode')}</label>
           <textarea
             bind:value={input}
             class="tool-textarea h-72 font-mono text-sm"
-            placeholder={t('placeholder')}></textarea>
+            placeholder={t('placeholder')} id="js-obfuscator-field-4"></textarea>
         </div>
 
         <div>
-          <label class="block text-sm font-medium mb-2">{t('obfuscatedCode')}</label>
+          <label for="js-obfuscator-field-3" class="block text-sm font-medium mb-2">{t('obfuscatedCode')}</label>
           <textarea
             value={output}
             readOnly
-            class="tool-textarea h-72 font-mono text-sm bg-gray-100 dark:bg-gray-800"></textarea>
+            class="tool-textarea h-72 font-mono text-sm bg-gray-100 dark:bg-gray-800" id="js-obfuscator-field-3"></textarea>
         </div>
       </div>
 

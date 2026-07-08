@@ -63,12 +63,12 @@
 
     <div class="space-y-4">
       <div>
-        <label class="block text-sm font-medium mb-2">{t('sqlQuery')}</label>
+        <label for="sql-to-mongo-field-3" class="block text-sm font-medium mb-2">{t('sqlQuery')}</label>
         <textarea
           class="tool-textarea font-mono"
           bind:value={input}
           placeholder={t('sqlPlaceholder')}
-          rows={4}></textarea>
+          rows={4} id="sql-to-mongo-field-3"></textarea>
       </div>
 
       <div class="flex gap-2">
@@ -81,7 +81,7 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium">{t('mongoQuery')}</label>
+            <div class="text-sm font-medium">{t('mongoQuery')}</div>
             <button
               onclick={copyOutput}
               class={`text-sm px-3 py-1 rounded ${copied ? 'bg-emerald-500' : 'bg-gray-700 hover:bg-gray-600'}`}

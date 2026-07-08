@@ -80,35 +80,32 @@
     <div class="space-y-4">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('width')}</label>
+          <label for="placeholder-image-field-10" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('width')}</label>
           <input
             type="number"
             value={width}
             min={1}
             max={2000}
             onchange={(e) => width = Math.min(2000, Math.max(1, Number(e.target.value)))}
-            class="w-full bg-gray-100 dark:bg-gray-700 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none"
-          />
+            class="w-full bg-gray-100 dark:bg-gray-700 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none" id="placeholder-image-field-10" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('height')}</label>
+          <label for="placeholder-image-field-9" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('height')}</label>
           <input
             type="number"
             value={height}
             min={1}
             max={2000}
             onchange={(e) => height = Math.min(2000, Math.max(1, Number(e.target.value)))}
-            class="w-full bg-gray-100 dark:bg-gray-700 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none"
-          />
+            class="w-full bg-gray-100 dark:bg-gray-700 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none" id="placeholder-image-field-9" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('bgColor')}</label>
+          <label for="placeholder-image-field-8" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('bgColor')}</label>
           <div class="flex gap-2">
             <input
               type="color"
               bind:value={bgColor}
-              class="w-10 h-10 rounded cursor-pointer"
-            />
+              class="w-10 h-10 rounded cursor-pointer" id="placeholder-image-field-8" />
             <input
               type="text"
               bind:value={bgColor}
@@ -117,13 +114,12 @@
           </div>
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('textColor')}</label>
+          <label for="placeholder-image-field-7" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('textColor')}</label>
           <div class="flex gap-2">
             <input
               type="color"
               bind:value={textColor}
-              class="w-10 h-10 rounded cursor-pointer"
-            />
+              class="w-10 h-10 rounded cursor-pointer" id="placeholder-image-field-7" />
             <input
               type="text"
               bind:value={textColor}
@@ -134,13 +130,12 @@
       </div>
 
       <div>
-        <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('customText')}</label>
+        <label for="placeholder-image-field-6" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('customText')}</label>
         <input
           type="text"
           bind:value={text}
           placeholder={`${width} × ${height}`}
-          class="w-full bg-gray-100 dark:bg-gray-700 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none"
-        />
+          class="w-full bg-gray-100 dark:bg-gray-700 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none" id="placeholder-image-field-6" />
       </div>
 
       <div class="flex gap-2 flex-wrap">

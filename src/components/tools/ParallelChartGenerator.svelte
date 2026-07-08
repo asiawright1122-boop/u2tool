@@ -288,7 +288,7 @@
         <div class="space-y-4">
           <!-- 图表设置 -->
           <div>
-            <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('chartSettings')}</label>
+            <div class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('chartSettings')}</div>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
                 <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
@@ -363,7 +363,7 @@
           <!-- 维度编辑 -->
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="tool-label">{t('dimensionEditor')}</label>
+              <div class="tool-label">{t('dimensionEditor')}</div>
               <button onclick={addDimension} class="btn-secondary btn-sm">
                 + {t('addDimension')}
               </button>
@@ -407,7 +407,7 @@
           <!-- 数据系列编辑 -->
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="tool-label">{t('seriesEditor')}</label>
+              <div class="tool-label">{t('seriesEditor')}</div>
               <button onclick={addSeries} class="btn-secondary btn-sm">
                 + {t('addSeries')}
               </button>
@@ -450,7 +450,7 @@
 
         <!-- 右侧：图表预览 -->
         <div>
-          <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('chartPreview')}</label>
+          <div class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('chartPreview')}</div>
           <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="min-height: 400px">
             <EChartsWrapper
               bind:this={chartRef as any}

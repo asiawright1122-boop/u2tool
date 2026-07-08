@@ -74,12 +74,12 @@
       </div>
       <div class="grid md:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">{t('input')}</label>
-          <textarea bind:value={input} class="tool-textarea" placeholder={mode === 'encode' ? '<div>Hello & World</div>' : '&lt;div&gt;Hello &amp; World&lt;/div&gt;'} ></textarea>
+          <label for="html-entity-converter-field-4" class="tool-label">{t('input')}</label>
+          <textarea bind:value={input} class="tool-textarea" placeholder={mode === 'encode' ? '<div>Hello & World</div>' : '&lt;div&gt;Hello &amp; World&lt;/div&gt;'} id="html-entity-converter-field-4"></textarea>
         </div>
         <div>
-          <label class="tool-label">{t('output')}</label>
-          <textarea value={output} readOnly class="tool-textarea"></textarea>
+          <label for="html-entity-converter-field-3" class="tool-label">{t('output')}</label>
+          <textarea value={output} readOnly class="tool-textarea" id="html-entity-converter-field-3"></textarea>
         </div>
       </div>
       <div class="flex gap-2">

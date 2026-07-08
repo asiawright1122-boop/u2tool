@@ -100,11 +100,10 @@ console.log(greet(user));`);
     <div class="space-y-4">
       <div class="flex flex-wrap gap-4 items-center">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('target')}</label>
+          <label for="typescript-playground-field-6" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('target')}</label>
           <select
             bind:value={target}
-            class="px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white"
-          >
+            class="px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white" id="typescript-playground-field-6">
             <option value="ES5">ES5</option>
             <option value="ES2015">ES2015</option>
             <option value="ES2020">ES2020</option>
@@ -130,18 +129,18 @@ console.log(greet(user));`);
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">TypeScript</label>
+          <label for="typescript-playground-field-5" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">TypeScript</label>
           <textarea
             bind:value={input}
             class="w-full h-80 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
-            placeholder={t('inputPlaceholder')}></textarea>
+            placeholder={t('inputPlaceholder')} id="typescript-playground-field-5"></textarea>
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">JavaScript</label>
+          <label for="typescript-playground-field-4" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">JavaScript</label>
           <textarea
             value={output}
             readOnly
-            class="w-full h-80 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"></textarea>
+            class="w-full h-80 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none" id="typescript-playground-field-4"></textarea>
         </div>
       </div>
     </div>

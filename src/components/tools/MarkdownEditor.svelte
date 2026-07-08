@@ -121,21 +121,21 @@ function hello() {
       <div class={`grid gap-4 ${viewMode === 'split' ? 'md:grid-cols-2' : 'grid-cols-1'}`}>
         {#if viewMode === 'edit' || viewMode === 'split'}
 <div class="space-y-2">
-            <label class="tool-label">
+            <label for="markdown-editor-field-3" class="tool-label">
               {t('markdownEditor.markdown')}
             </label>
             <textarea
               bind:value={markdown}
               class="w-full h-96 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 font-mono text-sm resize-none"
-              placeholder={t('markdownEditor.placeholder')}></textarea>
+              placeholder={t('markdownEditor.placeholder')} id="markdown-editor-field-3"></textarea>
           </div>
 {/if}
 
         {#if viewMode === 'preview' || viewMode === 'split'}
 <div class="space-y-2">
-            <label class="tool-label">
+            <div class="tool-label">
               {t('markdownEditor.previewLabel')}
-            </label>
+            </div>
             <div
               class="w-full h-96 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 overflow-auto prose dark:prose-invert max-w-none">{@html getHtml() as string}</div>
           </div>

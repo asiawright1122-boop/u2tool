@@ -120,9 +120,9 @@
     <div class="space-y-6">
       <!-- License Selection -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('selectLicense')}
-        </label>
+        </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
           {#each LICENSES as license (license.id)}
 <button 
@@ -181,26 +181,24 @@
       <!-- Author Info -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="license-generator-field-6" class="tool-label">
             {t('author')}
           </label>
           <input
             type="text"
             bind:value={author}
             placeholder={t('authorPlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="license-generator-field-6" />
         </div>
         <div>
-          <label class="tool-label">
+          <label for="license-generator-field-5" class="tool-label">
             {t('year')}
           </label>
           <input
             type="text"
             bind:value={year}
             placeholder={t('yearPlaceholder')}
-            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
+            class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="license-generator-field-5" />
         </div>
       </div>
 
@@ -224,7 +222,7 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">LICENSE</label>
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">LICENSE</div>
             <div class="flex gap-2">
               <button
                 onclick={copyToClipboard}

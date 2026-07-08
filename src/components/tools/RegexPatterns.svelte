@@ -78,13 +78,12 @@
             {selectedPattern.pattern}
           </code>
           <div>
-            <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('regexPatterns.test')}</label>
+            <label for="regex-patterns-field-2" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('regexPatterns.test')}</label>
             <input
               type="text"
               bind:value={testInput}
               class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded p-2 text-gray-900 dark:text-white"
-              placeholder={selectedPattern.example}
-            />
+              placeholder={selectedPattern.example} id="regex-patterns-field-2" />
           </div>
           {#if testInput}
 <div class={`text-sm ${isMatch ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>

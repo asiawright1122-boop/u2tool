@@ -212,23 +212,23 @@
 
         <!-- Headers -->
         <div>
-          <label class="tool-label">
+          <label for="webhook-tester-field-3" class="tool-label">
             {t('headers')}
           </label>
           <textarea
             bind:value={headers}
             placeholder={t("headersPlaceholder")}
             rows={3}
-            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm resize-none"></textarea>
+            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm resize-none" id="webhook-tester-field-3"></textarea>
         </div>
 
         <!-- Body -->
         {#if method !== 'GET'}
 <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="tool-label">
+              <div class="tool-label">
                 {t('requestBody')}
-              </label>
+              </div>
               <div class="flex gap-2">
                 <button
                   onclick={() => loadSample('json')}

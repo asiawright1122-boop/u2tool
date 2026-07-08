@@ -39,11 +39,11 @@
 
     <div class="space-y-4">
       <div>
-        <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('input')}</label>
+        <label for="byte-counter-field-2" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('input')}</label>
         <textarea
           bind:value={text}
           class="w-full h-40 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded p-3 text-gray-900 dark:text-white font-mono text-sm"
-          placeholder={t('byteCounter.placeholder')}></textarea>
+          placeholder={t('byteCounter.placeholder')} id="byte-counter-field-2"></textarea>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">

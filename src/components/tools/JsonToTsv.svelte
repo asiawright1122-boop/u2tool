@@ -90,19 +90,19 @@
 
       <div class="grid md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('jsonInput')}</label>
+          <label for="json-to-tsv-field-4" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('jsonInput')}</label>
           <textarea
             bind:value={input}
             class="w-full h-64 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
-            placeholder={t('jsonPlaceholder')}></textarea>
+            placeholder={t('jsonPlaceholder')} id="json-to-tsv-field-4"></textarea>
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('tsvOutput')}</label>
+          <label for="json-to-tsv-field-3" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('tsvOutput')}</label>
           <textarea
             value={output}
             readOnly
             class="w-full h-64 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-white focus:outline-none"
-            placeholder={t('tsvPlaceholder')}></textarea>
+            placeholder={t('tsvPlaceholder')} id="json-to-tsv-field-3"></textarea>
         </div>
       </div>
 

@@ -87,7 +87,7 @@
         <div class="md:col-span-2 space-y-6">
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="block text-sm font-medium text-gray-600 dark:text-gray-300">{t('input')}</label>
+              <div class="block text-sm font-medium text-gray-600 dark:text-gray-300">{t('input')}</div>
               <button
                 onclick={() => input = ''}
                 class="text-xs text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300"
@@ -104,7 +104,7 @@
 
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="block text-sm font-medium text-gray-600 dark:text-gray-300">{t('cleanedText')}</label>
+              <div class="block text-sm font-medium text-gray-600 dark:text-gray-300">{t('cleanedText')}</div>
               <button
                 onclick={() => navigator.clipboard.writeText(output)}
                 class="text-xs text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300"

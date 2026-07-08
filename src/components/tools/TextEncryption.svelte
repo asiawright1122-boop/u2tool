@@ -100,21 +100,20 @@
       </div>
 
       <div>
-        <label class="block text-sm text-gray-700 dark:text-gray-300 mb-1">{t('encryption.password')}</label>
+        <label for="text-encryption-field-5" class="block text-sm text-gray-700 dark:text-gray-300 mb-1">{t('encryption.password')}</label>
         <input
           type="password"
           bind:value={password}
           class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-3 text-gray-900 dark:text-white"
-          placeholder={t('encryption.passwordPlaceholder')}
-        />
+          placeholder={t('encryption.passwordPlaceholder')} id="text-encryption-field-5" />
       </div>
 
       <div>
-        <label class="block text-sm text-gray-700 dark:text-gray-300 mb-1">{t('input')}</label>
+        <label for="text-encryption-field-4" class="block text-sm text-gray-700 dark:text-gray-300 mb-1">{t('input')}</label>
         <textarea
           bind:value={input}
           class="w-full h-32 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-3 text-gray-900 dark:text-white font-mono text-sm"
-          placeholder={t('encryption.inputPlaceholder')}></textarea>
+          placeholder={t('encryption.inputPlaceholder')} id="text-encryption-field-4"></textarea>
       </div>
 
       <button
@@ -126,7 +125,7 @@
 
       <div>
         <div class="flex justify-between items-center mb-1">
-          <label class="text-sm text-gray-700 dark:text-gray-300">{t('output')}</label>
+          <div class="text-sm text-gray-700 dark:text-gray-300">{t('output')}</div>
           <button onclick={copyOutput} class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-500 dark:hover:text-amber-300">
             {t('copy')}
           </button>

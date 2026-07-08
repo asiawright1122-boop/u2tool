@@ -65,14 +65,13 @@
       <!-- Input -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">
+          <label for="code-complexity-analyzer-field-2" class="tool-label">
             Code {tCommon('input')}
           </label>
           <div class="flex gap-2 items-center">
             <select
               bind:value={language}
-              class="px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            >
+              class="px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="code-complexity-analyzer-field-2">
               <option value="javascript">JavaScript</option>
               <option value="typescript">TypeScript</option>
               <option value="python">Python</option>

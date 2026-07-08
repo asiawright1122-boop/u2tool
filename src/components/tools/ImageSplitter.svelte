@@ -155,24 +155,22 @@
 {/each}
         </div>
         <div class="flex items-center gap-2">
-          <label class="text-sm">{t('rows')}:</label>
+          <label for="image-splitter-field-4" class="text-sm">{t('rows')}:</label>
           <input
             type="number"
             min="1"
             max="10"
             value={grid.rows}
             onchange={(e) => { grid = { ...grid, rows: Number(e.target.value) }; parts = []; }}
-            class="w-16 tool-input"
-          />
-          <label class="text-sm">{t('cols')}:</label>
+            class="w-16 tool-input" id="image-splitter-field-4" />
+          <label for="image-splitter-field-3" class="text-sm">{t('cols')}:</label>
           <input
             type="number"
             min="1"
             max="10"
             value={grid.cols}
             onchange={(e) => { grid = { ...grid, cols: Number(e.target.value) }; parts = []; }}
-            class="w-16 tool-input"
-          />
+            class="w-16 tool-input" id="image-splitter-field-3" />
         </div>
       </div>
 

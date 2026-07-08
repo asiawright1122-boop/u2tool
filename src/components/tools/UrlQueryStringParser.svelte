@@ -62,9 +62,9 @@
       <!-- Input -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">
+          <div class="tool-label">
             URL / Query String
-          </label>
+          </div>
           <button
             onclick={() => url = exampleUrl}
             class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"

@@ -167,23 +167,23 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
-          <label class="tool-label">
+          <label for="tailwind-to-css-field-4" class="tool-label">
             {t('tailwindInput')}
           </label>
           <textarea
             bind:value={input}
             placeholder={t('placeholder')}
-            class="w-full h-80 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm"></textarea>
+            class="w-full h-80 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm" id="tailwind-to-css-field-4"></textarea>
         </div>
         <div>
-          <label class="tool-label">
+          <label for="tailwind-to-css-field-3" class="tool-label">
             {t('cssOutput')}
           </label>
           <textarea
             value={output}
             readOnly
             placeholder={t('outputPlaceholder')}
-            class="w-full h-80 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm"></textarea>
+            class="w-full h-80 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-mono text-sm" id="tailwind-to-css-field-3"></textarea>
         </div>
       </div>
 

@@ -47,7 +47,7 @@
     <div class="space-y-6">
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">{t('sqlSchema')}</label>
+          <div class="tool-label">{t('sqlSchema')}</div>
           <button onclick={loadExample} class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400">{t('loadExample')}</button>
         </div>
         <textarea bind:value={sql} placeholder={t("inputPlaceholder")}

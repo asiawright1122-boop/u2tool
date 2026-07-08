@@ -287,7 +287,7 @@
 
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="text-sm font-medium">{t('dataEditor')}</label>
+              <div class="text-sm font-medium">{t('dataEditor')}</div>
               <button onclick={addRow} class="btn-secondary btn-sm">+ {t('addRow')}</button>
             </div>
             <div class="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-3 overflow-x-auto">

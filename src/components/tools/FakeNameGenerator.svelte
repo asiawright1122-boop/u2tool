@@ -80,35 +80,33 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="fake-name-generator-field-6" class="tool-label">
             {t('country')}
           </label>
           <select
             value={country}
             onchange={(e) => country = e.target.value as Country}
-            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="fake-name-generator-field-6">
             {#each Object.keys(nameData) as c (c)}
 <option  value={c}>{countryLabels[c as Country]}</option>
 {/each}
           </select>
         </div>
         <div>
-          <label class="tool-label">
+          <label for="fake-name-generator-field-5" class="tool-label">
             {t('gender')}
           </label>
           <select
             value={gender}
             onchange={(e) => gender = e.target.value as Gender}
-            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="fake-name-generator-field-5">
             <option value="random">{t('random')}</option>
             <option value="male">{t('male')}</option>
             <option value="female">{t('female')}</option>
           </select>
         </div>
         <div>
-          <label class="tool-label">
+          <label for="fake-name-generator-field-4" class="tool-label">
             {t('count')}
           </label>
           <input
@@ -117,8 +115,7 @@
             onchange={(e) => count = Math.max(1, Math.min(100, parseInt(e.target.value) || 1))}
             min="1"
             max="100"
-            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="fake-name-generator-field-4" />
         </div>
       </div>
 

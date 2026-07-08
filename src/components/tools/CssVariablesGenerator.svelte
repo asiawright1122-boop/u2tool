@@ -117,21 +117,19 @@
     <div class="space-y-6">
       <div class="flex flex-wrap gap-4 items-center">
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">{t('prefix')}:</label>
+          <label for="css-variables-generator-field-7" class="text-sm text-gray-600 dark:text-gray-300">{t('prefix')}:</label>
           <input
             type="text"
             bind:value={prefix}
             placeholder={t('prefixPlaceholder')}
-            class="w-24 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-          />
+            class="w-24 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="css-variables-generator-field-7" />
         </div>
 
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">{t('scope')}:</label>
+          <label for="css-variables-generator-field-6" class="text-sm text-gray-600 dark:text-gray-300">{t('scope')}:</label>
           <select
             bind:value={scope}
-            class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-          >
+            class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="css-variables-generator-field-6">
             <option value=":root">:root</option>
             <option value="body">body</option>
             <option value=".theme-light">.theme-light</option>
@@ -222,7 +220,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
         <div class="space-y-2">
           <div class="flex items-center justify-between">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('cssLabel')}</label>
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('cssLabel')}</div>
             <button onclick={() => handleCopy(cssOutput)} class="text-sm text-amber-600 hover:text-amber-800">
               {t('copy')}
             </button>
@@ -234,7 +232,7 @@
 
         <div class="space-y-2">
           <div class="flex items-center justify-between">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('scssLabel')}</label>
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('scssLabel')}</div>
             <button onclick={() => handleCopy(scssOutput)} class="text-sm text-amber-600 hover:text-amber-800">
               {t('copy')}
             </button>
@@ -246,7 +244,7 @@
 
         <div class="space-y-2">
           <div class="flex items-center justify-between">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('jsLabel')}</label>
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('jsLabel')}</div>
             <button onclick={() => handleCopy(jsOutput)} class="text-sm text-amber-600 hover:text-amber-800">
               {t('copy')}
             </button>

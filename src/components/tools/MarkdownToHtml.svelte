@@ -97,15 +97,15 @@
     <div class="space-y-4">
       <div class="grid md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">Markdown</label>
+          <label for="markdown-to-html-field-4" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">Markdown</label>
           <textarea
             bind:value={markdown}
             class="w-full h-64 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded p-3 font-mono text-sm text-gray-900 dark:text-gray-100"
-            placeholder={t('mdToHtml.mdPlaceholder')}></textarea>
+            placeholder={t('mdToHtml.mdPlaceholder')} id="markdown-to-html-field-4"></textarea>
         </div>
         <div>
           <div class="flex justify-between items-center mb-1">
-            <label class="text-sm text-gray-600 dark:text-gray-300">HTML</label>
+            <div class="text-sm text-gray-600 dark:text-gray-300">HTML</div>
             <button onclick={copyHtml} class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-500 dark:hover:text-amber-300">
               {copied ? t('copied') : t('copy')}
             </button>
@@ -118,7 +118,7 @@
       </div>
 
       <div>
-        <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('mdToHtml.preview')}</label>
+        <div class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('mdToHtml.preview')}</div>
         <div
           class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white rounded p-4 prose prose-sm max-w-none">{@html html}</div>
       </div>

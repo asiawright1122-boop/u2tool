@@ -105,17 +105,17 @@
 
     <div class="space-y-4">
       <div>
-        <label class="block text-sm font-medium mb-2">{t('input')}</label>
+        <label for="unicode-converter-field-5" class="block text-sm font-medium mb-2">{t('input')}</label>
         <textarea
           class="tool-textarea"
           bind:value={input}
           placeholder={t('unicode.placeholder')}
-          rows={4}></textarea>
+          rows={4} id="unicode-converter-field-5"></textarea>
       </div>
 
       <!-- Format Selection -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('unicode.format')}</label>
+        <div class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('unicode.format')}</div>
         <div class="flex flex-wrap gap-2">
           <button
             onclick={() => format = 'unicode'}
@@ -152,7 +152,7 @@
 
       <!-- Quick Examples -->
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('unicode.examples')}</label>
+        <div class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('unicode.examples')}</div>
         <div class="flex flex-wrap gap-2">
           {#each examples as ex (ex.text)}
 <button 
@@ -168,7 +168,7 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-white">{t('output')}</label>
+            <div class="text-sm font-medium text-gray-700 dark:text-white">{t('output')}</div>
             <button
               onclick={copyOutput}
               class={`text-sm px-3 py-1 rounded ${copied ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-white'}`}

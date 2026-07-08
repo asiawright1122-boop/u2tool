@@ -137,34 +137,31 @@ border-left: ${w}px solid transparent;`,
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('width')}: {width}px</label>
+          <label for="css-triangle-generator-field-7" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('width')}: {width}px</label>
           <input
             type="range"
             min={20}
             max={200}
             value={width}
             onchange={(e) => width = Number(e.target.value)}
-            class="w-full"
-          />
+            class="w-full" id="css-triangle-generator-field-7" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('height')}: {height}px</label>
+          <label for="css-triangle-generator-field-6" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('height')}: {height}px</label>
           <input
             type="range"
             min={20}
             max={200}
             value={height}
             onchange={(e) => height = Number(e.target.value)}
-            class="w-full"
-          />
+            class="w-full" id="css-triangle-generator-field-6" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('color')}</label>
+          <label for="css-triangle-generator-field-5" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('color')}</label>
           <input
             type="color"
             bind:value={color}
-            class="w-full h-10 rounded cursor-pointer"
-          />
+            class="w-full h-10 rounded cursor-pointer" id="css-triangle-generator-field-5" />
         </div>
       </div>
 
@@ -174,7 +171,7 @@ border-left: ${w}px solid transparent;`,
 
       <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium text-gray-600 dark:text-gray-300">CSS</label>
+          <div class="text-sm font-medium text-gray-600 dark:text-gray-300">CSS</div>
           <button onclick={copyCSS} class="btn-secondary text-sm">
             {copied ? tg('copied') : tg('copy')}
           </button>

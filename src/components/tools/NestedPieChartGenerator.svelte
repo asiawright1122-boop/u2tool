@@ -299,7 +299,7 @@
 
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="text-sm font-medium">{t('innerRing')}</label>
+              <div class="text-sm font-medium">{t('innerRing')}</div>
               <button onclick={addInnerItem} class="btn-secondary btn-sm">+ {t('addCategory')}</button>
             </div>
             <div class="space-y-2">

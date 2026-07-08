@@ -62,23 +62,22 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('pasteText')}</label>
+        <label for="reading-time-calculator-field-4" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('pasteText')}</label>
         <textarea
           bind:value={text}
           class="w-full h-64 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
-          placeholder={t('placeholder')}></textarea>
+          placeholder={t('placeholder')} id="reading-time-calculator-field-4"></textarea>
       </div>
 
       <div class="flex items-center gap-4">
-        <label class="text-sm text-gray-600 dark:text-gray-300">{t('readingSpeed')}</label>
+        <label for="reading-time-calculator-field-3" class="text-sm text-gray-600 dark:text-gray-300">{t('readingSpeed')}</label>
         <input
           type="range"
           min="100"
           max="400"
           value={wordsPerMinute}
           onchange={(e) => wordsPerMinute = parseInt(e.target.value)}
-          class="flex-1 max-w-xs"
-        />
+          class="flex-1 max-w-xs" id="reading-time-calculator-field-3" />
         <span class="text-sm font-mono w-24 text-gray-900 dark:text-white">{wordsPerMinute} {t('wpm')}</span>
       </div>
 

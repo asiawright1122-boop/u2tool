@@ -196,14 +196,13 @@
       <!-- Controls -->
       <div class="flex flex-wrap items-center gap-4">
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">{t('aspectRatio')}:</label>
+          <label for="image-cropper-field-8" class="text-sm text-gray-600 dark:text-gray-300">{t('aspectRatio')}:</label>
           <select
             value={aspectRatio?.toString() || 'free'}
             onchange={(e) =>
               handleAspectRatioChange(e.target.value === 'free' ? null : parseFloat(e.target.value))
             }
-            class="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-1.5 text-sm text-gray-900 dark:text-white"
-          >
+            class="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-1.5 text-sm text-gray-900 dark:text-white" id="image-cropper-field-8">
             {#each ASPECT_RATIOS as r (r.label)}
 <option  value={r.value?.toString() || 'free'}>
                 {r.label}
@@ -242,7 +241,7 @@
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="text-sm font-medium text-gray-600 dark:text-gray-300">{t('selectArea')}</label>
+              <div class="text-sm font-medium text-gray-600 dark:text-gray-300">{t('selectArea')}</div>
               <button
                 onclick={() => fileInputRef?.click()}
                 class="px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded text-xs"
@@ -277,29 +276,27 @@
             <!-- Size inputs -->
             <div class="flex gap-4 mt-4">
               <div class="flex items-center gap-2">
-                <label class="text-sm text-gray-600 dark:text-gray-300">{t('width')}:</label>
+                <label for="image-cropper-field-7" class="text-sm text-gray-600 dark:text-gray-300">{t('width')}:</label>
                 <input
                   type="number"
                   value={Math.round(cropArea.width)}
                   onchange={(e) => handleSizeChange('width', parseInt(e.target.value) || 0)}
-                  class="w-20 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm text-gray-900 dark:text-white"
-                />
+                  class="w-20 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm text-gray-900 dark:text-white" id="image-cropper-field-7" />
               </div>
               <div class="flex items-center gap-2">
-                <label class="text-sm text-gray-600 dark:text-gray-300">{t('height')}:</label>
+                <label for="image-cropper-field-6" class="text-sm text-gray-600 dark:text-gray-300">{t('height')}:</label>
                 <input
                   type="number"
                   value={Math.round(cropArea.height)}
                   onchange={(e) => handleSizeChange('height', parseInt(e.target.value) || 0)}
-                  class="w-20 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm text-gray-900 dark:text-white"
-                />
+                  class="w-20 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm text-gray-900 dark:text-white" id="image-cropper-field-6" />
               </div>
             </div>
           </div>
 
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="text-sm font-medium text-gray-600 dark:text-gray-300">{t('preview')}</label>
+              <div class="text-sm font-medium text-gray-600 dark:text-gray-300">{t('preview')}</div>
             </div>
             <div class="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 flex items-center justify-center min-h-[200px]">
               {#if croppedImage}

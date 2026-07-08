@@ -193,15 +193,15 @@
 
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('pdfToImage.format')}</label>
-              <select value={format} onchange={e => format = e.target.value as 'png' | 'jpeg'} class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800">
+              <label for="pdf-to-image-field-4" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('pdfToImage.format')}</label>
+              <select value={format} onchange={e => format = e.target.value as 'png' | 'jpeg'} class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" id="pdf-to-image-field-4">
                 <option value="png">PNG</option>
                 <option value="jpeg">JPEG</option>
               </select>
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('pdfToImage.dpi')}</label>
-              <select bind:value={dpi} class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800">
+              <label for="pdf-to-image-field-3" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('pdfToImage.dpi')}</label>
+              <select bind:value={dpi} class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" id="pdf-to-image-field-3">
                 <option value={72}>72 DPI</option>
                 <option value={150}>150 DPI</option>
                 <option value={300}>300 DPI</option>

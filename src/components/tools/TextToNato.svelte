@@ -63,12 +63,11 @@
     <div class="space-y-6">
       <div class="flex flex-wrap gap-4 items-center">
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">{t('separator')}:</label>
+          <label for="text-to-nato-field-5" class="text-sm text-gray-600 dark:text-gray-300">{t('separator')}:</label>
           <select
             value={separator}
             onchange={(e) => separator = e.target.value as 'newline' | 'dash' | 'space'}
-            class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-          >
+            class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="text-to-nato-field-5">
             <option value="newline">{t('sepNewline')}</option>
             <option value="dash">{t('sepDash')}</option>
             <option value="space">{t('sepSpace')}</option>
@@ -94,20 +93,20 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300">
+          <label for="text-to-nato-field-4" class="block text-sm font-medium text-gray-600 dark:text-gray-300">
             {t('textInput')}
           </label>
           <textarea
             bind:value={input}
             placeholder={t('textPlaceholder')}
-            class="w-full h-48 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"></textarea>
+            class="w-full h-48 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" id="text-to-nato-field-4"></textarea>
         </div>
 
         <div class="space-y-2">
           <div class="flex items-center justify-between">
-            <label class="block text-sm font-medium text-gray-600 dark:text-gray-300">
+            <div class="block text-sm font-medium text-gray-600 dark:text-gray-300">
               {t('natoOutput')}
-            </label>
+            </div>
             {#if output}
 <button
                 onclick={handleCopy}

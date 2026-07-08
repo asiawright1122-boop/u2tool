@@ -274,25 +274,23 @@
         <div class="space-y-4">
           <!-- 图表设置 -->
           <div>
-            <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('chartSettings')}</label>
+            <div class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('chartSettings')}</div>
             <div class="space-y-3 p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('chartTitle')}</label>
+                <label for="sunburst-chart-generator-field-11" class="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('chartTitle')}</label>
                 <input
                   type="text"
                   bind:value={chartTitle}
                   class="tool-input"
-                  placeholder={t('chartTitlePlaceholder')}
-                />
+                  placeholder={t('chartTitlePlaceholder')} id="sunburst-chart-generator-field-11" />
               </div>
 
               <div>
-                <label class="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('colorTheme')}</label>
+                <label for="sunburst-chart-generator-field-10" class="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('colorTheme')}</label>
                 <select
                   value={colorTheme}
                   onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes}
-                  class="tool-input"
-                >
+                  class="tool-input" id="sunburst-chart-generator-field-10">
                   <option value="default">{t('themeDefault')}</option>
                   <option value="ocean">{t('themeOcean')}</option>
                   <option value="sunset">{t('themeSunset')}</option>
@@ -302,26 +300,24 @@
 
               <div class="grid grid-cols-2 gap-2">
                 <div>
-                  <label class="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('innerRadius')}: {innerRadius}%</label>
+                  <label for="sunburst-chart-generator-field-9" class="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('innerRadius')}: {innerRadius}%</label>
                   <input
                     type="range"
                     min={0}
                     max={40}
                     value={innerRadius}
                     onchange={(e) => innerRadius = Number((e.target as HTMLInputElement).value)}
-                    class="w-full"
-                  />
+                    class="w-full" id="sunburst-chart-generator-field-9" />
                 </div>
                 <div>
-                  <label class="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('outerRadius')}: {outerRadius}%</label>
+                  <label for="sunburst-chart-generator-field-8" class="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('outerRadius')}: {outerRadius}%</label>
                   <input
                     type="range"
                     min={50}
                     max={95}
                     value={outerRadius}
                     onchange={(e) => outerRadius = Number((e.target as HTMLInputElement).value)}
-                    class="w-full"
-                  />
+                    class="w-full" id="sunburst-chart-generator-field-8" />
                 </div>
               </div>
 
@@ -339,7 +335,7 @@
           <!-- JSON 数据编辑 -->
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="block text-sm font-medium text-gray-700 dark:text-white">{t('dataEditor')}</label>
+              <div class="block text-sm font-medium text-gray-700 dark:text-white">{t('dataEditor')}</div>
               <button onclick={formatJson} class="btn-secondary btn-sm">
                 {t('formatJson')}
               </button>
@@ -356,7 +352,7 @@
 
         <!-- 右侧：图表预览 -->
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('chartPreview')}</label>
+          <div class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('chartPreview')}</div>
           <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="min-height: 400px">
             <EChartsWrapper
               bind:this={chartRef as any}

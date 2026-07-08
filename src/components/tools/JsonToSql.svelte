@@ -137,20 +137,18 @@
       <div class="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg space-y-4">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div>
-            <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('tableName')}</label>
+            <label for="json-to-sql-field-7" class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('tableName')}</label>
             <input
               type="text"
               bind:value={tableName}
-              class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-white"
-            />
+              class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-white" id="json-to-sql-field-7" />
           </div>
           <div>
-            <label class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('dialect')}</label>
+            <label for="json-to-sql-field-6" class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('dialect')}</label>
             <select
               value={dialect}
               onchange={(e) => dialect = e.target.value as 'mysql' | 'postgresql' | 'sqlite'}
-              class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-white"
-            >
+              class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-white" id="json-to-sql-field-6">
               <option value="mysql">MySQL</option>
               <option value="postgresql">PostgreSQL</option>
               <option value="sqlite">SQLite</option>
@@ -186,15 +184,15 @@
       <!-- 输入输出区域 -->
       <div class="grid md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">JSON {tg('input')}</label>
+          <label for="json-to-sql-field-5" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">JSON {tg('input')}</label>
           <textarea
             bind:value={input}
             placeholder={t('inputPlaceholder')}
-            class="w-full h-64 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded font-mono text-sm text-gray-900 dark:text-white resize-none focus:outline-none focus:border-amber-500"></textarea>
+            class="w-full h-64 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded font-mono text-sm text-gray-900 dark:text-white resize-none focus:outline-none focus:border-amber-500" id="json-to-sql-field-5"></textarea>
         </div>
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm text-gray-600 dark:text-gray-300">SQL {tg('output')}</label>
+            <div class="text-sm text-gray-600 dark:text-gray-300">SQL {tg('output')}</div>
             <button
               onclick={handleCopy}
               disabled={!output}

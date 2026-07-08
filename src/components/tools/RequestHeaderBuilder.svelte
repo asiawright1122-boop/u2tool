@@ -114,9 +114,9 @@
     <div class="space-y-6">
       <!-- Presets -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           Quick Presets
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           <button
             onclick={() => applyPreset('json')}
@@ -148,9 +148,9 @@
       <!-- Headers List -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">
+          <div class="tool-label">
             Headers ({enabledHeaders.length} active)
-          </label>
+          </div>
           <div class="flex gap-2">
             <button
               onclick={clearAll}
@@ -220,9 +220,9 @@
 
       <!-- Output Format -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {tCommon('output')} Format
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each (['raw', 'json', 'curl', 'fetch'] as const) as fmt (fmt)}
 <button 
@@ -242,9 +242,9 @@
       <!-- Output -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">
+          <div class="tool-label">
             {tCommon('output')}
-          </label>
+          </div>
           <button
             onclick={handleCopy}
             disabled={!output}

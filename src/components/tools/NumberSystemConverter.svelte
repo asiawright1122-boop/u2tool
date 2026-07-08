@@ -77,7 +77,7 @@
       <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border dark:border-gray-700">
         <div class="space-y-4">
           <div>
-            <label class="tool-label">{t('inputBase')}</label>
+            <div class="tool-label">{t('inputBase')}</div>
             <div class="flex gap-2 flex-wrap">
               {#each bases as base (base)}
 <button  onclick={() => handleBaseChange(base)}
@@ -90,12 +90,12 @@
             </div>
           </div>
           <div>
-            <label class="tool-label">{tCommon('input')}</label>
+            <label for="number-system-converter-field-3" class="tool-label">{tCommon('input')}</label>
             <div class="flex items-center gap-2">
               <span class="text-gray-500 font-mono">{basePrefixes[inputBase]}</span>
               <input type="text" bind:value={inputValue}
                 class={`flex-1 p-3 border rounded-lg font-mono text-lg dark:bg-gray-700 dark:border-gray-600 ${error ? 'border-red-500' : ''}`}
-                placeholder={tCommon('inputPlaceholder')} />
+                placeholder={tCommon('inputPlaceholder')} id="number-system-converter-field-3" />
             </div>
             {#if error}
 <p class="mt-1 text-sm text-red-500">{error}</p>

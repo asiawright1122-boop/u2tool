@@ -44,19 +44,19 @@
 
     <div class="space-y-4">
       <div>
-        <label class="tool-label">
+        <label for="text-template-field-5" class="tool-label">
           {t('template')}
         </label>
         <textarea
           bind:value={template}
           class="w-full h-32 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono text-sm focus:outline-none focus:border-amber-500"
-          placeholder={t('templatePlaceholder')}></textarea>
+          placeholder={t('templatePlaceholder')} id="text-template-field-5"></textarea>
         <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">{t('syntaxHint')}</p>
       </div>
 
       {#if detectedVars.length > 0}
 <div>
-          <label class="tool-label">
+          <label for="text-template-field-4" class="tool-label">
             {t('variables')} ({detectedVars.length})
           </label>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -70,8 +70,7 @@
                   value={variables[varName] || ''}
                   onchange={(e) => handleVariableChange(varName, e.target.value)}
                   class="flex-1 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded px-3 py-1 text-gray-900 dark:text-white text-sm focus:outline-none focus:border-amber-500"
-                  placeholder={t('valuePlaceholder')}
-                />
+                  placeholder={t('valuePlaceholder')} id="text-template-field-4" />
               </div>
 {/each}
           </div>
@@ -88,7 +87,7 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('result')}</label>
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('result')}</div>
             <button
               onclick={handleCopy}
               class="text-sm text-amber-600 dark:text-amber-400 hover:text-amber-500 dark:hover:text-amber-300"

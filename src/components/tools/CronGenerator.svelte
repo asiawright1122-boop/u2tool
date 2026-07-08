@@ -103,7 +103,7 @@
     <div class="space-y-6">
       <!-- Presets -->
       <div>
-        <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{tc('presets')}</label>
+        <div class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{tc('presets')}</div>
         <div class="flex flex-wrap gap-2">
           {#each presets as preset (preset.value)}
 <button 

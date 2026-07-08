@@ -132,7 +132,7 @@
     <div class="space-y-6">
       <!-- Size Selection -->
       <div class="flex flex-wrap items-center gap-4">
-        <label class="text-sm text-gray-700 dark:text-gray-300">{t('sizes')}:</label>
+        <div class="text-sm text-gray-700 dark:text-gray-300">{t('sizes')}:</div>
         <div class="flex flex-wrap gap-2">
           {#each FAVICON_SIZES as size (size)}
 <button
@@ -178,7 +178,7 @@
       <!-- Original Preview -->
       {#if originalImage}
 <div class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-          <label class="text-sm font-medium text-gray-700 dark:text-gray-300 block mb-2">{t('original')}</label>
+          <div class="text-sm font-medium text-gray-700 dark:text-gray-300 block mb-2">{t('original')}</div>
           <div class="flex items-center justify-center min-h-[192px]">
             <img
               src={originalImage}
@@ -207,7 +207,7 @@
       {#if favicons.length > 0}
 <div class="space-y-4">
           <div class="flex justify-between items-center">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('generated')}</label>
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('generated')}</div>
             <button
               onclick={downloadAll}
               class="px-3 py-1.5 bg-emerald-500 hover:bg-green-700 rounded text-sm text-white"
@@ -247,7 +247,7 @@
           <!-- HTML Code -->
           <div class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
             <div class="flex justify-between items-center mb-2">
-              <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('htmlCode')}</label>
+              <div class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('htmlCode')}</div>
               <button
                 onclick={copyHtml}
                 class="px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-xs text-gray-900 dark:text-gray-100"

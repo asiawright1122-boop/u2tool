@@ -67,21 +67,20 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label for="ip-subnet-calculator-field-3" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           {t('ipAddress')}
         </label>
         <input
           type="text"
           bind:value={ipAddress}
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono"
-          placeholder="192.168.1.100"
-        />
+          placeholder="192.168.1.100" id="ip-subnet-calculator-field-3" />
       </div>
 
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('subnetMask')}
-        </label>
+        </div>
         <div class="flex gap-2 mb-2">
           <button
             onclick={() => maskType = 'cidr'}

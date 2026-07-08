@@ -149,21 +149,21 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label class="block text-sm font-medium mb-2">
+          <label for="hex-base64-converter-field-4" class="block text-sm font-medium mb-2">
             {mode === 'hex-to-base64' ? t('hexInput') : t('base64Input')}
           </label>
           <textarea
             bind:value={input}
             class="tool-textarea h-40 font-mono"
-            placeholder={mode === 'hex-to-base64' ? t('hexPlaceholder') : t('base64Placeholder')}></textarea>
+            placeholder={mode === 'hex-to-base64' ? t('hexPlaceholder') : t('base64Placeholder')} id="hex-base64-converter-field-4"></textarea>
         </div>
 
         <div>
-          <label class="block text-sm font-medium mb-2">{tg('output')}</label>
+          <label for="hex-base64-converter-field-3" class="block text-sm font-medium mb-2">{tg('output')}</label>
           <textarea
             value={output}
             readOnly
-            class="tool-textarea h-40 font-mono"></textarea>
+            class="tool-textarea h-40 font-mono" id="hex-base64-converter-field-3"></textarea>
         </div>
       </div>
 

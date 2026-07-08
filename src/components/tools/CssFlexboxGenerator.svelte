@@ -64,8 +64,8 @@
     <div class="space-y-6">
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm font-medium mb-2">{t('cssFlexboxGenerator.direction')}</label>
-          <select bind:value={flexDirection} class="tool-input">
+          <label for="css-flexbox-generator-field-14" class="block text-sm font-medium mb-2">{t('cssFlexboxGenerator.direction')}</label>
+          <select bind:value={flexDirection} class="tool-input" id="css-flexbox-generator-field-14">
             <option value="row">{t('cssFlexboxGenerator.directionRow')}</option>
             <option value="row-reverse">{t('cssFlexboxGenerator.directionRowReverse')}</option>
             <option value="column">{t('cssFlexboxGenerator.directionColumn')}</option>
@@ -73,8 +73,8 @@
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2">{t('cssFlexboxGenerator.justifyContent')}</label>
-          <select bind:value={justifyContent} class="tool-input">
+          <label for="css-flexbox-generator-field-13" class="block text-sm font-medium mb-2">{t('cssFlexboxGenerator.justifyContent')}</label>
+          <select bind:value={justifyContent} class="tool-input" id="css-flexbox-generator-field-13">
             <option value="flex-start">{t('cssFlexboxGenerator.justifyFlexStart')}</option>
             <option value="flex-end">{t('cssFlexboxGenerator.justifyFlexEnd')}</option>
             <option value="center">{t('cssFlexboxGenerator.justifyCenter')}</option>
@@ -84,8 +84,8 @@
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2">{t('cssFlexboxGenerator.alignItems')}</label>
-          <select bind:value={alignItems} class="tool-input">
+          <label for="css-flexbox-generator-field-12" class="block text-sm font-medium mb-2">{t('cssFlexboxGenerator.alignItems')}</label>
+          <select bind:value={alignItems} class="tool-input" id="css-flexbox-generator-field-12">
             <option value="stretch">{t('cssFlexboxGenerator.alignStretch')}</option>
             <option value="flex-start">{t('cssFlexboxGenerator.alignFlexStart')}</option>
             <option value="flex-end">{t('cssFlexboxGenerator.alignFlexEnd')}</option>
@@ -94,39 +94,37 @@
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2">{t('cssFlexboxGenerator.flexWrap')}</label>
-          <select bind:value={flexWrap} class="tool-input">
+          <label for="css-flexbox-generator-field-11" class="block text-sm font-medium mb-2">{t('cssFlexboxGenerator.flexWrap')}</label>
+          <select bind:value={flexWrap} class="tool-input" id="css-flexbox-generator-field-11">
             <option value="nowrap">{t('cssFlexboxGenerator.wrapNoWrap')}</option>
             <option value="wrap">{t('cssFlexboxGenerator.wrapWrap')}</option>
             <option value="wrap-reverse">{t('cssFlexboxGenerator.wrapWrapReverse')}</option>
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2">{t('cssFlexboxGenerator.gap')}</label>
+          <label for="css-flexbox-generator-field-10" class="block text-sm font-medium mb-2">{t('cssFlexboxGenerator.gap')}</label>
           <input
             type="number"
             min={0}
             value={gap}
             onchange={(e) => gap = parseInt(e.target.value) || 0}
-            class="tool-input"
-          />
+            class="tool-input" id="css-flexbox-generator-field-10" />
         </div>
         <div>
-          <label class="block text-sm font-medium mb-2">{t('cssFlexboxGenerator.items')}</label>
+          <label for="css-flexbox-generator-field-9" class="block text-sm font-medium mb-2">{t('cssFlexboxGenerator.items')}</label>
           <input
             type="number"
             min={1}
             max={12}
             value={itemCount}
             onchange={(e) => itemCount = parseInt(e.target.value) || 1}
-            class="tool-input"
-          />
+            class="tool-input" id="css-flexbox-generator-field-9" />
         </div>
       </div>
 
       <!-- Preview -->
       <div>
-        <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('cssFlexboxGenerator.preview')}</label>
+        <div class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('cssFlexboxGenerator.preview')}</div>
         <div
           class="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg min-h-[200px]"
           style="display: flex; flex-direction: flexDirection as 'row' | 'row-reverse' | 'column' | 'column-reverse'; flex-wrap: flexWrap as 'nowrap' | 'wrap' | 'wrap-reverse'; gap: {gap}px"
@@ -145,7 +143,7 @@
       <!-- CSS Output -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium">{t('cssFlexboxGenerator.generatedCss')}</label>
+          <div class="text-sm font-medium">{t('cssFlexboxGenerator.generatedCss')}</div>
           <button
             onclick={copyCSS}
             class={`text-sm px-3 py-1 rounded ${copied ? 'bg-emerald-500' : 'bg-gray-700 hover:bg-gray-600'}`}

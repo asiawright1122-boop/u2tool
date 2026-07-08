@@ -70,13 +70,13 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+          <label for="text-hash-comparator-field-4" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('hashCompare.text1')}
           </label>
           <textarea
             bind:value={text1}
             placeholder={t('hashCompare.placeholder')}
-            class="w-full h-32 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500"></textarea>
+            class="w-full h-32 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500" id="text-hash-comparator-field-4"></textarea>
           {#if hash1}
 <div class="mt-2 p-2 bg-gray-100 dark:bg-gray-800 rounded text-xs font-mono break-all text-gray-600 dark:text-gray-300">
               {hash1}
@@ -84,13 +84,13 @@
 {/if}
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+          <label for="text-hash-comparator-field-3" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('hashCompare.text2')}
           </label>
           <textarea
             bind:value={text2}
             placeholder={t('hashCompare.placeholder')}
-            class="w-full h-32 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500"></textarea>
+            class="w-full h-32 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500" id="text-hash-comparator-field-3"></textarea>
           {#if hash2}
 <div class="mt-2 p-2 bg-gray-100 dark:bg-gray-800 rounded text-xs font-mono break-all text-gray-600 dark:text-gray-300">
               {hash2}

@@ -172,7 +172,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-3 mb-3">
           <div>
-            <label class="block text-xs text-gray-500 mb-1">{t('probability')}</label>
+            <div class="block text-xs text-gray-500 mb-1">{t('probability')}</div>
             <input
               type="range"
               min={1}
@@ -184,7 +184,7 @@
             <span class="text-xs text-gray-600 dark:text-gray-400">{risk.probability}/5</span>
           </div>
           <div>
-            <label class="block text-xs text-gray-500 mb-1">{t('impact')}</label>
+            <div class="block text-xs text-gray-500 mb-1">{t('impact')}</div>
             <input
               type="range"
               min={1}
@@ -204,7 +204,7 @@
             </span>
           </div>
           <div>
-            <label class="block text-xs text-gray-500 mb-1">{t('owner')}</label>
+            <div class="block text-xs text-gray-500 mb-1">{t('owner')}</div>
             <input
               type="text"
               value={risk.owner}
@@ -216,7 +216,7 @@
         </div>
 
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('mitigationStrategy')}</label>
+          <div class="block text-xs text-gray-500 mb-1">{t('mitigationStrategy')}</div>
           <input
             type="text"
             value={risk.mitigation}

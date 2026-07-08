@@ -121,15 +121,14 @@
       <!-- Quality Control -->
       <div class="flex flex-wrap items-center gap-4">
         <div class="flex items-center gap-2">
-          <label class="text-sm text-gray-600 dark:text-gray-300">{t('quality')}:</label>
+          <label for="image-compressor-field-4" class="text-sm text-gray-600 dark:text-gray-300">{t('quality')}:</label>
           <input
             type="range"
             min="10"
             max="100"
             value={quality}
             onchange={(e) => quality = Number(e.target.value)}
-            class="w-32"
-          />
+            class="w-32" id="image-compressor-field-4" />
           <span class="text-sm font-mono w-12 text-gray-900 dark:text-white">{quality}%</span>
         </div>
         <button
@@ -164,7 +163,7 @@
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('original')}</label>
+              <div class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('original')}</div>
               <span class="text-sm text-gray-600 dark:text-gray-300">{formatSize(originalSize)}</span>
             </div>
             <div class="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 flex items-center justify-center min-h-[200px]">
@@ -178,7 +177,7 @@
 
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('compressed')}</label>
+              <div class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('compressed')}</div>
               {#if compressedSize > 0}
 <span class="text-sm text-green-600 dark:text-green-400">
                   {formatSize(compressedSize)} ({t('saved')} {getSavingsPercent()}%)

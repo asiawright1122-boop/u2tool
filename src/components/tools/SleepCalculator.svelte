@@ -141,14 +141,13 @@
         </div>
 
         <div class="space-y-2">
-          <label class="tool-label">
+          <label for="sleep-calculator-field-2" class="tool-label">
             {t('fallAsleepTime')} ({t('minutes')})
           </label>
           <select
             value={fallAsleepTime}
             onchange={(e) => fallAsleepTime = parseInt(e.target.value)}
-            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="sleep-calculator-field-2">
             <option value="5">5 {t('minutes')}</option>
             <option value="10">10 {t('minutes')}</option>
             <option value="15">15 {t('minutes')}</option>

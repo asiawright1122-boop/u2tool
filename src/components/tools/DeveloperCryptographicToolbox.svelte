@@ -683,13 +683,12 @@
       <div class="space-y-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div class="space-y-2">
-            <label class="text-xs font-mono font-bold text-gray-400 block">{t('aesKey')}</label>
+            <label for="developer-cryptographic-toolbox-field-4" class="text-xs font-mono font-bold text-gray-400 block">{t('aesKey')}</label>
             <div class="flex gap-2">
               <input
                 type="text"
                 bind:value={aesKey}
-                class="flex-1 px-3 py-2 bg-black border border-gray-800 rounded-xl text-xs font-mono text-amber-200 focus:outline-none"
-              />
+                class="flex-1 px-3 py-2 bg-black border border-gray-800 rounded-xl text-xs font-mono text-amber-200 focus:outline-none" id="developer-cryptographic-toolbox-field-4" />
               <button
                 onclick={generateRandomAESKey}
                 class="px-3 py-2 bg-gray-900 hover:bg-amber-500/20 text-gray-300 hover:text-amber-300 rounded-xl border border-gray-800 transition-all duration-300"
@@ -725,12 +724,11 @@
             ></textarea>
           </div>
           <div class="space-y-2">
-            <label class="text-xs font-mono text-gray-400 block">{t('aesOutput')} (Hex Encoded)</label>
+            <label for="developer-cryptographic-toolbox-field-3" class="text-xs font-mono text-gray-400 block">{t('aesOutput')} (Hex Encoded)</label>
             <div class="relative">
               <textarea
                 bind:value={aesCiphertext}
-                class="w-full h-24 p-3 bg-black/60 border border-gray-900 rounded-xl text-xs font-mono text-amber-200"
-              ></textarea>
+                class="w-full h-24 p-3 bg-black/60 border border-gray-900 rounded-xl text-xs font-mono text-amber-200" id="developer-cryptographic-toolbox-field-3"></textarea>
               <button
                 onclick={() => copyText(aesCiphertext, 'aesOut')}
                 class="absolute bottom-3 right-3 p-1 bg-gray-900 hover:bg-amber-500/10 text-gray-400 hover:text-amber-300 rounded border border-gray-800 transition-all duration-300"

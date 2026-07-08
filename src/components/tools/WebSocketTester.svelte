@@ -157,7 +157,7 @@
       <div class="space-y-4">
         <div class="flex flex-col sm:flex-row gap-4">
           <div class="flex-1">
-            <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
+            <label for="web-socket-tester-field-2" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
               {t('serverUrl')}
             </label>
             <input
@@ -165,8 +165,7 @@
               bind:value={url}
               placeholder="wss://example.com/socket"
               disabled={isConnected}
-              class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 disabled:opacity-50"
-            />
+              class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 disabled:opacity-50" id="web-socket-tester-field-2" />
           </div>
           <div class="flex items-end gap-2">
             {#if !isConnected}

@@ -262,48 +262,44 @@ We may update this Privacy Policy from time to time. We will notify you of any c
       <!-- Configuration -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="gdpr-consent-generator-field-12" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('websiteName')}
           </label>
           <input
             type="text"
             value={config.websiteName}
             onchange={(e) => config = { ...config, websiteName: e.target.value }}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="gdpr-consent-generator-field-12" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="gdpr-consent-generator-field-11" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('websiteUrl')}
           </label>
           <input
             type="url"
             value={config.websiteUrl}
             onchange={(e) => config = { ...config, websiteUrl: e.target.value }}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="gdpr-consent-generator-field-11" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="gdpr-consent-generator-field-10" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('companyName')}
           </label>
           <input
             type="text"
             value={config.companyName}
             onchange={(e) => config = { ...config, companyName: e.target.value }}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="gdpr-consent-generator-field-10" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="gdpr-consent-generator-field-9" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('privacyEmail')}
           </label>
           <input
             type="email"
             value={config.email}
             onchange={(e) => config = { ...config, email: e.target.value }}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="gdpr-consent-generator-field-9" />
         </div>
       </div>
 
@@ -336,27 +332,25 @@ We may update this Privacy Policy from time to time. We will notify you of any c
       <!-- Style Options -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="gdpr-consent-generator-field-8" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('position')}
           </label>
           <select
             value={config.position}
             onchange={(e) => config = { ...config, position: e.target.value as 'top' | 'bottom' }}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="gdpr-consent-generator-field-8">
             <option value="top">{t('positionTop')}</option>
             <option value="bottom">{t('positionBottom')}</option>
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="gdpr-consent-generator-field-7" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('theme')}
           </label>
           <select
             value={config.theme}
             onchange={(e) => config = { ...config, theme: e.target.value as 'light' | 'dark' }}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="gdpr-consent-generator-field-7">
             <option value="light">{t('themeLight')}</option>
             <option value="dark">{t('themeDark')}</option>
           </select>

@@ -140,18 +140,18 @@
 
       <div class="grid md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">JSON</label>
+          <label for="json-schema-validator-field-4" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">JSON</label>
           <textarea
             bind:value={jsonInput}
             class="w-full h-48 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-3 font-mono text-sm text-gray-900 dark:text-gray-100"
-            placeholder={t('schemaValidator.jsonPlaceholder')}></textarea>
+            placeholder={t('schemaValidator.jsonPlaceholder')} id="json-schema-validator-field-4"></textarea>
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">JSON Schema</label>
+          <label for="json-schema-validator-field-3" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">JSON Schema</label>
           <textarea
             bind:value={schemaInput}
             class="w-full h-48 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-3 font-mono text-sm text-gray-900 dark:text-gray-100"
-            placeholder={t('schemaValidator.schemaPlaceholder')}></textarea>
+            placeholder={t('schemaValidator.schemaPlaceholder')} id="json-schema-validator-field-3"></textarea>
         </div>
       </div>
 

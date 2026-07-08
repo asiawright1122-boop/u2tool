@@ -94,7 +94,7 @@
     <div class="space-y-6">
       <!-- Original Dimensions -->
       <div>
-        <label class="block text-sm font-medium text-gray-900 dark:text-white mb-3">{t('aspect.original')}</label>
+        <div class="block text-sm font-medium text-gray-900 dark:text-white mb-3">{t('aspect.original')}</div>
         <div class="grid grid-cols-2 gap-4">
           <div>
             <label for="aspect-orig-width" class="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('aspect.width')}</label>
@@ -129,7 +129,7 @@
 
       <!-- Common Ratios -->
       <div>
-        <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('aspect.common')}</label>
+        <div class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('aspect.common')}</div>
         <div class="flex flex-wrap gap-2">
           {#each commonRatioKeys as r (r.name)}
 <button 
@@ -146,7 +146,7 @@
       <!-- Resize Calculator -->
       <div class="border-t border-gray-300 dark:border-gray-700 pt-6">
         <div class="flex items-center justify-between mb-3">
-          <label class="text-sm font-medium text-gray-900 dark:text-white">{t('aspect.resize')}</label>
+          <div class="text-sm font-medium text-gray-900 dark:text-white">{t('aspect.resize')}</div>
           <label class="flex items-center gap-2 cursor-pointer">
             <input
               id="aspect-lock-ratio"

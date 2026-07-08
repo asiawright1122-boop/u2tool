@@ -251,11 +251,11 @@
       <!-- JSON 导入面板 -->
       {#if showJsonInput}
 <div class="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg space-y-2">
-          <label class="block text-sm font-medium">{t('jsonFormat')}</label>
+          <label for="calendar-heatmap-generator-field-12" class="block text-sm font-medium">{t('jsonFormat')}</label>
           <textarea
             bind:value={jsonInput}
             class="tool-input h-32 font-mono text-sm"
-            placeholder={'[{"date": "2024-01-01", "value": 5}, ...]'}></textarea>
+            placeholder={'[{"date": "2024-01-01", "value": 5}, ...]'} id="calendar-heatmap-generator-field-12"></textarea>
           <div class="flex gap-2">
             <button onclick={importFromJson} class="btn-primary btn-sm">
               {t('import')}
@@ -271,37 +271,34 @@
         <!-- 左侧：设置 -->
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <div class="block text-sm font-medium mb-2">{t('chartSettings')}</div>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="calendar-heatmap-generator-field-11" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
                   type="text"
                   bind:value={chartTitle}
                   class="tool-input"
-                  placeholder={t('chartTitlePlaceholder')}
-                />
+                  placeholder={t('chartTitlePlaceholder')} id="calendar-heatmap-generator-field-11" />
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('year')}</label>
+                <label for="calendar-heatmap-generator-field-10" class="block text-sm font-medium mb-1">{t('year')}</label>
                 <input
                   type="number"
                   value={year}
                   onchange={(e) => year = Number(e.target.value)}
                   class="tool-input"
                   min={2000}
-                  max={2100}
-                />
+                  max={2100} id="calendar-heatmap-generator-field-10" />
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                <label for="calendar-heatmap-generator-field-9" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
                 <select
                   value={colorTheme}
                   onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
-                  class="tool-input"
-                >
+                  class="tool-input" id="calendar-heatmap-generator-field-9">
                   <option value="green">{t('themeGreen')}</option>
                   <option value="blue">{t('themeBlue')}</option>
                   <option value="purple">{t('themePurple')}</option>
@@ -310,15 +307,14 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('cellSize')}: {cellSize}px</label>
+                <label for="calendar-heatmap-generator-field-8" class="block text-sm font-medium mb-1">{t('cellSize')}: {cellSize}px</label>
                 <input
                   type="range"
                   min={8}
                   max={20}
                   value={cellSize}
                   onchange={(e) => cellSize = Number(e.target.value)}
-                  class="w-full"
-                />
+                  class="w-full" id="calendar-heatmap-generator-field-8" />
               </div>
             </div>
           </div>
@@ -341,7 +337,7 @@
 
         <!-- 右侧：图表预览 -->
         <div class="lg:col-span-2">
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <div class="block text-sm font-medium mb-2">{t('chartPreview')}</div>
           <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="min-height: 300px">
             <EChartsWrapper
               bind:this={chartRef}

@@ -244,9 +244,9 @@
             <div
                 class="p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg space-y-3"
             >
-                <label
+                <div
                     class="block text-sm font-medium text-gray-700 dark:text-white"
-                    >{t("settings")}</label
+                    >{t("settings")}</div
                 >
                 <div>
                     <input

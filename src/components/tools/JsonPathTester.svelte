@@ -147,7 +147,7 @@
       {#if result}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-600 dark:text-white">{t('result')}</label>
+            <div class="text-sm font-medium text-gray-600 dark:text-white">{t('result')}</div>
             <button
               onclick={copyResult}
               class={`text-sm px-3 py-1 rounded ${copied ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'}`}

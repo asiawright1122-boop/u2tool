@@ -100,18 +100,18 @@
 
     <div class="space-y-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <label for="text-to-image-field-14" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           {t('text')}
         </label>
         <textarea
           bind:value={text}
           class="w-full h-24 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
-          placeholder={tc('inputPlaceholder')}></textarea>
+          placeholder={tc('inputPlaceholder')} id="text-to-image-field-14"></textarea>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="text-to-image-field-13" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('fontSize')}
           </label>
           <input
@@ -120,18 +120,16 @@
             onchange={(e) => fontSize = parseInt(e.target.value) || 48}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
             min="8"
-            max="200"
-          />
+            max="200" id="text-to-image-field-13" />
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="text-to-image-field-12" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('fontFamily')}
           </label>
           <select
             bind:value={fontFamily}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="text-to-image-field-12">
             {#each fonts as font (font)}
 <option  value={font} style="font-family: {font}">
                 {font}
@@ -141,7 +139,7 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="text-to-image-field-11" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('padding')}
           </label>
           <input
@@ -150,41 +148,37 @@
             onchange={(e) => padding = parseInt(e.target.value) || 20}
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
             min="0"
-            max="100"
-          />
+            max="100" id="text-to-image-field-11" />
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="text-to-image-field-10" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('textColor')}
           </label>
           <input
             type="color"
             bind:value={textColor}
-            class="w-full h-10 rounded-lg cursor-pointer"
-          />
+            class="w-full h-10 rounded-lg cursor-pointer" id="text-to-image-field-10" />
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="text-to-image-field-9" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('backgroundColor')}
           </label>
           <input
             type="color"
             bind:value={bgColor}
-            class="w-full h-10 rounded-lg cursor-pointer"
-          />
+            class="w-full h-10 rounded-lg cursor-pointer" id="text-to-image-field-9" />
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label for="text-to-image-field-8" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             {t('textAlign')}
           </label>
           <select
             value={textAlign}
             onchange={(e) => textAlign = e.target.value as 'left' | 'center' | 'right'}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="text-to-image-field-8">
             <option value="left">{t('left')}</option>
             <option value="center">{t('center')}</option>
             <option value="right">{t('right')}</option>

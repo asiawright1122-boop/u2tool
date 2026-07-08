@@ -75,12 +75,11 @@ class MyClass:
     <div class="space-y-4">
       <div class="flex flex-wrap gap-4 items-center">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('indentSize')}</label>
+          <label for="python-formatter-field-6" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('indentSize')}</label>
           <select
             value={indentSize}
             onchange={(e) => indentSize = Number(e.target.value) as 2 | 4}
-            class="px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white"
-          >
+            class="px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white" id="python-formatter-field-6">
             <option value={2}>2 spaces</option>
             <option value={4}>4 spaces</option>
           </select>
@@ -101,18 +100,18 @@ class MyClass:
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('input')}</label>
+          <label for="python-formatter-field-5" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('input')}</label>
           <textarea
             bind:value={input}
             class="w-full h-80 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
-            placeholder={t('inputPlaceholder')}></textarea>
+            placeholder={t('inputPlaceholder')} id="python-formatter-field-5"></textarea>
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('output')}</label>
+          <label for="python-formatter-field-4" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('output')}</label>
           <textarea
             value={output}
             readOnly
-            class="w-full h-80 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"></textarea>
+            class="w-full h-80 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none" id="python-formatter-field-4"></textarea>
         </div>
       </div>
     </div>

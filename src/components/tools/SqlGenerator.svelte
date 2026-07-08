@@ -73,7 +73,7 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
 
     <div class="max-w-4xl mx-auto space-y-6">
       <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700">
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-4">{t('sqlGenerator.commandType')}</label>
+        <div class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-4">{t('sqlGenerator.commandType')}</div>
         <div class="flex flex-wrap gap-2 mb-6">
           {#each (['SELECT', 'INSERT', 'UPDATE', 'DELETE', 'CREATE TABLE'] as Command[]) as cmd (cmd)}
 <button 
@@ -92,87 +92,80 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="space-y-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.tableName')}</label>
+              <label for="sql-generator-field-18" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.tableName')}</label>
               <input
                 type="text"
                 bind:value={tableName}
-                class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"
-              />
+                class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono" id="sql-generator-field-18" />
             </div>
 
             {#if command !== 'DELETE'}
 {#if command !== 'CREATE TABLE'}
               <div>
-                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.columns')}</label>
+                <label for="sql-generator-field-17" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.columns')}</label>
                 <input
                   type="text"
                   bind:value={columns}
-                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"
-                />
+                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono" id="sql-generator-field-17" />
               </div>
             {/if}
 {/if}
 
             {#if command === 'INSERT'}
 <div>
-                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.values')}</label>
+                <label for="sql-generator-field-16" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.values')}</label>
                 <input
                   type="text"
                   bind:value={values}
-                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"
-                />
+                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono" id="sql-generator-field-16" />
               </div>
 {/if}
 
             {#if command === 'UPDATE'}
 <div>
-                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.setUpdates')}</label>
+                <label for="sql-generator-field-15" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.setUpdates')}</label>
                 <input
                   type="text"
                   bind:value={updates}
-                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"
-                />
+                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono" id="sql-generator-field-15" />
               </div>
 {/if}
 
             {#if command === 'CREATE TABLE'}
 <div>
-                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.schemaDefinition')}</label>
+                <label for="sql-generator-field-14" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.schemaDefinition')}</label>
                 <textarea
                   bind:value={tableSchema}
                   rows={6}
-                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"></textarea>
+                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono" id="sql-generator-field-14"></textarea>
               </div>
 {/if}
 
             {#if command === 'SELECT' || command === 'UPDATE' || command === 'DELETE'}
 <div>
-                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.whereClause')}</label>
+                <label for="sql-generator-field-13" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.whereClause')}</label>
                 <input
                   type="text"
                   bind:value={where}
-                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"
-                />
+                  class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono" id="sql-generator-field-13" />
               </div>
 {/if}
 
             {#if command === 'SELECT'}
 <div class="grid grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.orderBy')}</label>
+                  <label for="sql-generator-field-12" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.orderBy')}</label>
                   <input
                     type="text"
                     bind:value={orderBy}
-                    class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"
-                  />
+                    class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono" id="sql-generator-field-12" />
                 </div>
                 <div>
-                  <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.limit')}</label>
+                  <label for="sql-generator-field-11" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.limit')}</label>
                   <input
                     type="text"
                     bind:value={limit}
-                    class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono"
-                  />
+                    class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 font-mono" id="sql-generator-field-11" />
                 </div>
               </div>
 {/if}
@@ -180,7 +173,7 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
 
           <div>
              <div class="flex justify-between items-center mb-2">
-              <label class="tool-label">{t('sqlGenerator.generatedSql')}</label>
+              <div class="tool-label">{t('sqlGenerator.generatedSql')}</div>
               <button
                 onclick={() => navigator.clipboard.writeText(generateSql())}
                 class="text-xs text-amber-600 dark:text-amber-400 hover:text-amber-500 dark:hover:text-amber-300"

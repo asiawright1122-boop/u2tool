@@ -60,20 +60,20 @@
       <textarea bind:value={text} class="w-full h-40 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" placeholder={t('tts.placeholder')}></textarea>
       <div class="grid md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('tts.voice')}</label>
-          <select bind:value={voice} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white">
+          <label for="text-to-speech-field-6" class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('tts.voice')}</label>
+          <select bind:value={voice} class="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" id="text-to-speech-field-6">
             {#each voices as v, i (i)}
 <option  value={i}>{v.name} ({v.lang})</option>
 {/each}
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('tts.rate')}: {rate}</label>
-          <input type="range" min="0.5" max="2" step="0.1" bind:value={rate} class="w-full" />
+          <label for="text-to-speech-field-5" class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('tts.rate')}: {rate}</label>
+          <input type="range" min="0.5" max="2" step="0.1" bind:value={rate} class="w-full" id="text-to-speech-field-5" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('tts.pitch')}: {pitch}</label>
-          <input type="range" min="0.5" max="2" step="0.1" bind:value={pitch} class="w-full" />
+          <label for="text-to-speech-field-4" class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('tts.pitch')}: {pitch}</label>
+          <input type="range" min="0.5" max="2" step="0.1" bind:value={pitch} class="w-full" id="text-to-speech-field-4" />
         </div>
       </div>
       <div class="flex gap-2">

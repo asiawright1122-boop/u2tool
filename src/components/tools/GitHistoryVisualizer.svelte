@@ -66,9 +66,9 @@
     <div class="space-y-6">
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="tool-label">
+          <div class="tool-label">
             Git Log Output
-          </label>
+          </div>
           <button
             onclick={handleCopy}
             class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400"
@@ -138,34 +138,34 @@
             {#if selectedCommit}
 <div class="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg space-y-3">
                 <div>
-                  <label class="text-xs text-gray-500 dark:text-gray-400">Hash</label>
+                  <div class="text-xs text-gray-500 dark:text-gray-400">Hash</div>
                   <p class="text-sm font-mono text-gray-900 dark:text-white break-all">
                     {selectedCommit.hash}
                   </p>
                 </div>
                 <div>
-                  <label class="text-xs text-gray-500 dark:text-gray-400">Message</label>
+                  <div class="text-xs text-gray-500 dark:text-gray-400">Message</div>
                   <p class="text-sm text-gray-900 dark:text-white">
                     {selectedCommit.message}
                   </p>
                 </div>
                 <div>
-                  <label class="text-xs text-gray-500 dark:text-gray-400">Author</label>
+                  <div class="text-xs text-gray-500 dark:text-gray-400">Author</div>
                   <p class="text-sm text-gray-900 dark:text-white">
                     {selectedCommit.author}
                   </p>
                 </div>
                 <div>
-                  <label class="text-xs text-gray-500 dark:text-gray-400">Date</label>
+                  <div class="text-xs text-gray-500 dark:text-gray-400">Date</div>
                   <p class="text-sm text-gray-900 dark:text-white">
                     {selectedCommit.date}
                   </p>
                 </div>
                 {#if selectedCommit.parents.length > 0}
 <div>
-                    <label class="text-xs text-gray-500 dark:text-gray-400">
+                    <div class="text-xs text-gray-500 dark:text-gray-400">
                       Parent{selectedCommit.parents.length > 1 ? 's' : ''}
-                    </label>
+                    </div>
                     <div class="space-y-1">
                       {#each selectedCommit.parents as p (p)}
 <p  class="text-xs font-mono text-gray-700 dark:text-gray-300">

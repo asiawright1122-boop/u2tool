@@ -48,7 +48,7 @@
 
       {#if results.length > 0}
 <div class="space-y-2">
-          <label class="text-sm font-medium text-gray-600 dark:text-gray-300">{t('closestColors')}</label>
+          <div class="text-sm font-medium text-gray-600 dark:text-gray-300">{t('closestColors')}</div>
           {#each results as r, i (i)}
 <div  class="flex items-center gap-3 p-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg">
               <div class="w-10 h-10 rounded" style="background-color: {r.hex}"></div>

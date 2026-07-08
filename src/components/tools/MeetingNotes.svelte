@@ -145,20 +145,20 @@
       <!-- Header -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="md:col-span-2">
-          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('meeting.title')}</label>
+          <label for="meeting-notes-field-6" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('meeting.title')}</label>
           <input type="text" bind:value={title} placeholder={t('meeting.titlePlaceholder')}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" id="meeting-notes-field-6" />
         </div>
         <div class="flex gap-2">
           <div class="flex-1">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('meeting.date')}</label>
+            <label for="meeting-notes-field-5" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('meeting.date')}</label>
             <input type="date" bind:value={date}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" id="meeting-notes-field-5" />
           </div>
           <div class="flex-1">
-            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('meeting.time')}</label>
+            <label for="meeting-notes-field-4" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('meeting.time')}</label>
             <input type="time" bind:value={time}
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" />
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800" id="meeting-notes-field-4" />
           </div>
         </div>
       </div>

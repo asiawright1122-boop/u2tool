@@ -126,7 +126,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- File Size -->
         <div>
-          <label class="tool-label">
+          <label for="data-transfer-calculator-field-5" class="tool-label">
             {t('fileSize')}
           </label>
           <div class="flex gap-2">
@@ -135,8 +135,7 @@
               bind:value={fileSize}
               min="0"
               step="any"
-              class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            />
+              class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="data-transfer-calculator-field-5" />
             <select
               bind:value={fileSizeUnit}
               class="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -150,7 +149,7 @@
 
         <!-- Connection Speed -->
         <div>
-          <label class="tool-label">
+          <label for="data-transfer-calculator-field-4" class="tool-label">
             {t('connectionSpeed')}
           </label>
           <div class="flex gap-2">
@@ -159,8 +158,7 @@
               bind:value={speed}
               min="0"
               step="any"
-              class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            />
+              class="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="data-transfer-calculator-field-4" />
             <select
               bind:value={speedUnit}
               class="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -175,9 +173,9 @@
 
       <!-- Preset Speeds -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('presetSpeeds')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each COMMON_SPEEDS as preset (preset.name)}
 <button 

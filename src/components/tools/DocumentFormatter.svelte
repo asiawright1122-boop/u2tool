@@ -95,23 +95,21 @@
           <span class="text-sm text-gray-700 dark:text-gray-300">{t('fixPunctuation')}</span>
         </label>
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('lineWidth')}</label>
+          <label for="document-formatter-field-7" class="block text-xs text-gray-500 mb-1">{t('lineWidth')}</label>
           <input
             type="number"
             value={options.lineWidth}
             onchange={(e) => updateOption('lineWidth', parseInt(e.target.value) || 0)}
             min={0}
             max={200}
-            class="w-full px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          />
+            class="w-full px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="document-formatter-field-7" />
         </div>
         <div>
-          <label class="block text-xs text-gray-500 mb-1">{t('indentStyle')}</label>
+          <label for="document-formatter-field-6" class="block text-xs text-gray-500 mb-1">{t('indentStyle')}</label>
           <select
             value={options.indentStyle}
             onchange={(e) => updateOption('indentStyle', e.target.value as FormatOptions['indentStyle'])}
-            class="w-full px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-          >
+            class="w-full px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="document-formatter-field-6">
             <option value="none">{t('none')}</option>
             <option value="spaces">{t('spaces')}</option>
             <option value="tabs">{t('tabs')}</option>
@@ -121,21 +119,21 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label class="tool-label">
+          <label for="document-formatter-field-5" class="tool-label">
             {t('inputText')}
           </label>
           <textarea
             bind:value={input}
             placeholder={t("inputPlaceholder")}
             rows={14}
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm resize-none"></textarea>
+            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm resize-none" id="document-formatter-field-5"></textarea>
         </div>
 
         <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="tool-label">
+            <div class="tool-label">
               {t('formattedOutput')}
-            </label>
+            </div>
             <button
               onclick={handleCopy}
               class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400"

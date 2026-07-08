@@ -95,7 +95,7 @@
       <!-- Type & Angle -->
       <div class="flex flex-wrap gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('gradient.type')}</label>
+          <div class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('gradient.type')}</div>
           <div class="flex gap-2">
             <button
               onclick={() => type = 'linear'}
@@ -132,7 +132,7 @@
       <!-- Color Stops -->
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium text-gray-900 dark:text-white">{t('gradient.colors')}</label>
+          <div class="text-sm font-medium text-gray-900 dark:text-white">{t('gradient.colors')}</div>
           <button
             onclick={addColor}
             disabled={colors.length >= 5}
@@ -182,7 +182,7 @@
 
       <!-- Presets -->
       <div>
-        <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('gradient.presets')}</label>
+        <div class="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('gradient.presets')}</div>
         <div class="flex flex-wrap gap-2">
           {#each presets as preset (preset.nameKey)}
 <button 

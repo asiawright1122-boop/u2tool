@@ -202,14 +202,13 @@
     <div class="space-y-6">
       <!-- Framework -->
       <div>
-        <label class="tool-label">
+        <label for="eslint-config-generator-field-8" class="tool-label">
           {t('framework')}
         </label>
         <select
           value={config.framework}
           onchange={(e) => config = ({ ...config, framework: e.target.value })}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-        >
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="eslint-config-generator-field-8">
           {#each FRAMEWORKS as fw (fw.value)}
 <option  value={fw.value}>{fw.label}</option>
 {/each}
@@ -218,14 +217,13 @@
 
       <!-- Style Guide -->
       <div>
-        <label class="tool-label">
+        <label for="eslint-config-generator-field-7" class="tool-label">
           {t('styleGuide')}
         </label>
         <select
           value={config.styleGuide}
           onchange={(e) => config = ({ ...config, styleGuide: e.target.value })}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-        >
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="eslint-config-generator-field-7">
           {#each STYLE_GUIDES as sg (sg.value)}
 <option  value={sg.value}>{sg.label}</option>
 {/each}
@@ -248,9 +246,9 @@
 
       <!-- Environment -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('environment')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-4">
           <label class="flex items-center gap-2">
             <input
@@ -284,7 +282,7 @@
 
       <!-- Rules -->
       <div>
-        <label class="tool-label">
+        <label for="eslint-config-generator-field-6" class="tool-label">
           {t('rules')}
         </label>
         <div class="space-y-2">
@@ -297,8 +295,7 @@
               <select
                 value={config.rules[rule.key] || 'off'}
                 onchange={(e) => setRule(rule.key, e.target.value)}
-                class="px-3 py-1 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100"
-              >
+                class="px-3 py-1 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100" id="eslint-config-generator-field-6">
                 <option value="off">Off</option>
                 <option value="warn">Warn</option>
                 <option value="error">Error</option>
@@ -328,7 +325,7 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">.eslintrc.json</label>
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">.eslintrc.json</div>
             <div class="flex gap-2">
               <button
                 onclick={copyToClipboard}

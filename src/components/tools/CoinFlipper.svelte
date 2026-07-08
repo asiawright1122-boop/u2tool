@@ -104,14 +104,13 @@
 
       <!-- Flip Count -->
       <div class="flex justify-center items-center gap-4">
-        <label class="text-sm text-gray-600 dark:text-gray-400">{t('flipCount')}:</label>
+        <label for="coin-flipper-field-2" class="text-sm text-gray-600 dark:text-gray-400">{t('flipCount')}:</label>
         <input
           type="number"
           bind:value={flipCount}
           min="1"
           max="100"
-          class="w-20 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-center"
-        />
+          class="w-20 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-center" id="coin-flipper-field-2" />
       </div>
 
       <!-- Buttons -->

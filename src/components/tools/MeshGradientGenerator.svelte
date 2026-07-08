@@ -92,9 +92,9 @@ background-color: ${points[0]?.color || '#ffffff'};`;
       <!-- Color Points -->
       <div class="space-y-4">
         <div class="flex items-center justify-between">
-          <label class="tool-label">
+          <div class="tool-label">
             {t('colorPoints')}
-          </label>
+          </div>
           <button
             onclick={randomize}
             class="px-3 py-1 text-sm bg-slate-500 text-white rounded hover:bg-slate-600 transition-colors"
@@ -119,26 +119,24 @@ background-color: ${points[0]?.color || '#ffffff'};`;
               </div>
               <div class="grid grid-cols-2 gap-3">
                 <div>
-                  <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">X: {point.x}%</label>
+                  <label for={`mesh-gradient-generator-field-8-${index}`} class="block text-xs text-gray-500 dark:text-gray-400 mb-1">X: {point.x}%</label>
                   <input
                     type="range"
                     min="0"
                     max="100"
                     value={point.x}
                     onchange={(e) => updatePoint(index, 'x', Number(e.target.value))}
-                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-                  />
+                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id={`mesh-gradient-generator-field-8-${index}`} />
                 </div>
                 <div>
-                  <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">Y: {point.y}%</label>
+                  <label for={`mesh-gradient-generator-field-7-${index}`} class="block text-xs text-gray-500 dark:text-gray-400 mb-1">Y: {point.y}%</label>
                   <input
                     type="range"
                     min="0"
                     max="100"
                     value={point.y}
                     onchange={(e) => updatePoint(index, 'y', Number(e.target.value))}
-                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-                  />
+                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id={`mesh-gradient-generator-field-7-${index}`} />
                 </div>
               </div>
             </div>
@@ -148,7 +146,7 @@ background-color: ${points[0]?.color || '#ffffff'};`;
 
       <!-- Blur Control -->
       <div>
-        <label class="tool-label">
+        <label for="mesh-gradient-generator-field-6" class="tool-label">
           {t('blur')}: {blur}%
         </label>
         <input
@@ -157,16 +155,15 @@ background-color: ${points[0]?.color || '#ffffff'};`;
           max="80"
           value={blur}
           onchange={(e) => blur = Number(e.target.value)}
-          class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-        />
+          class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" id="mesh-gradient-generator-field-6" />
       </div>
 
       <!-- CSS Output -->
       <div>
         <div class="flex items-center justify-between mb-2">
-          <label class="tool-label">
+          <div class="tool-label">
             CSS {common('output')}
-          </label>
+          </div>
           <button
             onclick={handleCopy}
             class="px-3 py-1 text-sm bg-amber-500 text-white rounded hover:bg-amber-600 transition-colors"

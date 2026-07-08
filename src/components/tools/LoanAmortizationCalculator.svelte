@@ -1245,25 +1245,23 @@
       <!-- 利率类型与利率值 -->
       <div class="grid grid-cols-2 gap-3">
         <div class="space-y-1">
-          <label class="block text-xs text-zinc-400 font-medium">{l.rateType}</label>
+          <label for="loan-amortization-calculator-field-11" class="block text-xs text-zinc-400 font-medium">{l.rateType}</label>
           <select
             bind:value={rateType}
-            class="w-full px-2.5 py-2 bg-zinc-950 border border-zinc-800 focus:border-amber-500/50 rounded-lg text-xs text-zinc-200"
-          >
+            class="w-full px-2.5 py-2 bg-zinc-950 border border-zinc-800 focus:border-amber-500/50 rounded-lg text-xs text-zinc-200" id="loan-amortization-calculator-field-11">
             <option value="annual">{l.annualRate}</option>
             <option value="monthly">{l.monthlyRate}</option>
             <option value="daily">{l.dailyRate}</option>
           </select>
         </div>
         <div class="space-y-1">
-          <label class="block text-xs text-zinc-400 font-medium">{l.advertisedRate}</label>
+          <label for="loan-amortization-calculator-field-10" class="block text-xs text-zinc-400 font-medium">{l.advertisedRate}</label>
           <div class="relative">
             <input
               type="number"
               step="0.01"
               bind:value={advertisedRateInput}
-              class="w-full pl-3 pr-8 py-2 bg-zinc-950 border border-zinc-800 focus:border-amber-500/50 rounded-lg text-xs text-zinc-100 font-mono"
-            />
+              class="w-full pl-3 pr-8 py-2 bg-zinc-950 border border-zinc-800 focus:border-amber-500/50 rounded-lg text-xs text-zinc-100 font-mono" id="loan-amortization-calculator-field-10" />
             <span class="absolute right-3 top-2.5 text-xs text-zinc-500 font-mono">%</span>
           </div>
         </div>
@@ -1271,7 +1269,7 @@
 
       <!-- 还款方式 -->
       <div class="space-y-2.5">
-        <label class="block text-sm text-zinc-300 font-medium">{l.repayType}</label>
+        <div class="block text-sm text-zinc-300 font-medium">{l.repayType}</div>
         <div class="grid grid-cols-1 gap-2">
           <label class="flex items-center gap-2.5 p-3 rounded-lg border border-zinc-800 bg-zinc-950/60 hover:bg-zinc-950/90 cursor-pointer transition-all duration-200">
             <input
@@ -1370,11 +1368,10 @@
           
           <!-- 提前还款类型选择 -->
           <div class="space-y-1">
-            <label class="block text-xs text-zinc-400 font-medium">{l.prepayType}</label>
+            <label for="loan-amortization-calculator-field-9" class="block text-xs text-zinc-400 font-medium">{l.prepayType}</label>
             <select
               bind:value={prepayStrategy}
-              class="w-full px-2 py-2 bg-zinc-950 border border-zinc-800 focus:border-amber-500/50 rounded-lg text-xs text-zinc-200"
-            >
+              class="w-full px-2 py-2 bg-zinc-950 border border-zinc-800 focus:border-amber-500/50 rounded-lg text-xs text-zinc-200" id="loan-amortization-calculator-field-9">
               <option value="none">{l.noPrepay}</option>
               <option value="monthly">{l.prepayMonthly}</option>
               <option value="yearly">{l.prepayYearly}</option>
@@ -1384,26 +1381,24 @@
 
           <!-- 额外还款额度 -->
           <div class="space-y-1">
-            <label class="block text-xs text-zinc-400 font-medium">{l.prepayAmount}</label>
+            <label for="loan-amortization-calculator-field-8" class="block text-xs text-zinc-400 font-medium">{l.prepayAmount}</label>
             <input
               type="number"
               disabled={prepayStrategy === 'none'}
               bind:value={prepayAmountInput}
-              class="w-full px-3 py-2 bg-zinc-950 border border-zinc-800 focus:border-amber-500/50 rounded-lg text-xs text-zinc-100 font-mono disabled:opacity-40"
-            />
+              class="w-full px-3 py-2 bg-zinc-950 border border-zinc-800 focus:border-amber-500/50 rounded-lg text-xs text-zinc-100 font-mono disabled:opacity-40" id="loan-amortization-calculator-field-8" />
           </div>
 
           <!-- 一次性提前还款月份 -->
           <div class="space-y-1">
-            <label class="block text-xs text-zinc-400 font-medium">{l.prepayMonth}</label>
+            <label for="loan-amortization-calculator-field-7" class="block text-xs text-zinc-400 font-medium">{l.prepayMonth}</label>
             <input
               type="number"
               min="1"
               max={parseInt(termMonthsInput)}
               disabled={prepayStrategy !== 'lump-sum'}
               bind:value={prepayMonthInput}
-              class="w-full px-3 py-2 bg-zinc-950 border border-zinc-800 focus:border-amber-500/50 rounded-lg text-xs text-zinc-100 font-mono disabled:opacity-40"
-            />
+              class="w-full px-3 py-2 bg-zinc-950 border border-zinc-800 focus:border-amber-500/50 rounded-lg text-xs text-zinc-100 font-mono disabled:opacity-40" id="loan-amortization-calculator-field-7" />
           </div>
         </div>
 

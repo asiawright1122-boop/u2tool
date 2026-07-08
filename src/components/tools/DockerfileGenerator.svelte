@@ -215,14 +215,13 @@
     <div class="space-y-6">
       <!-- Base Image -->
       <div>
-        <label class="tool-label">
+        <label for="dockerfile-generator-field-17" class="tool-label">
           {t('baseImage')}
         </label>
         <select
           value={config.baseImage}
           onchange={(e) => config = ({ ...config, baseImage: e.target.value })}
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-        >
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="dockerfile-generator-field-17">
           {#each BASE_IMAGES as img (img.value)}
 <option  value={img.value}>{img.label}</option>
 {/each}
@@ -231,7 +230,7 @@
 
       <!-- Working Directory -->
       <div>
-        <label class="tool-label">
+        <label for="dockerfile-generator-field-16" class="tool-label">
           {t('workdir')}
         </label>
         <input
@@ -239,13 +238,12 @@
           value={config.workdir}
           onchange={(e) => config = ({ ...config, workdir: e.target.value })}
           placeholder="/app"
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-        />
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="dockerfile-generator-field-16" />
       </div>
 
       <!-- Environment Variables -->
       <div>
-        <label class="tool-label">
+        <label for="dockerfile-generator-field-15" class="tool-label">
           {t('envVars')}
         </label>
         <div class="space-y-2">
@@ -256,8 +254,7 @@
                 value={env.key}
                 onchange={(e) => updateEnvVar(index, 'key', e.target.value)}
                 placeholder={t('envKey')}
-                class="flex-1 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-              />
+                class="flex-1 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="dockerfile-generator-field-15" />
               <input
                 type="text"
                 value={env.value}
@@ -284,7 +281,7 @@
 
       <!-- COPY Commands -->
       <div>
-        <label class="tool-label">
+        <label for="dockerfile-generator-field-14" class="tool-label">
           {t('copyCommands')}
         </label>
         <div class="space-y-2">
@@ -295,8 +292,7 @@
                 value={cmd}
                 onchange={(e) => updateCopyCommand(index, e.target.value)}
                 placeholder="package*.json ./"
-                class="flex-1 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent font-mono text-sm"
-              />
+                class="flex-1 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent font-mono text-sm" id="dockerfile-generator-field-14" />
               <button
                 onclick={() => removeCopyCommand(index)}
                 class="px-3 py-2 bg-red-500 hover:bg-rose-500 text-white rounded-lg"
@@ -316,7 +312,7 @@
 
       <!-- RUN Commands -->
       <div>
-        <label class="tool-label">
+        <label for="dockerfile-generator-field-13" class="tool-label">
           {t('runCommands')}
         </label>
         <div class="space-y-2">
@@ -327,8 +323,7 @@
                 value={cmd}
                 onchange={(e) => updateRunCommand(index, e.target.value)}
                 placeholder="npm install"
-                class="flex-1 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent font-mono text-sm"
-              />
+                class="flex-1 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent font-mono text-sm" id="dockerfile-generator-field-13" />
               <button
                 onclick={() => removeRunCommand(index)}
                 class="px-3 py-2 bg-red-500 hover:bg-rose-500 text-white rounded-lg"
@@ -348,7 +343,7 @@
 
       <!-- Expose Port -->
       <div>
-        <label class="tool-label">
+        <label for="dockerfile-generator-field-12" class="tool-label">
           {t('exposePort')}
         </label>
         <input
@@ -356,13 +351,12 @@
           value={config.exposePort}
           onchange={(e) => config = ({ ...config, exposePort: e.target.value })}
           placeholder="3000"
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-        />
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent" id="dockerfile-generator-field-12" />
       </div>
 
       <!-- Entrypoint -->
       <div>
-        <label class="tool-label">
+        <label for="dockerfile-generator-field-11" class="tool-label">
           {t('entrypoint')}
         </label>
         <input
@@ -370,13 +364,12 @@
           value={config.entrypoint}
           onchange={(e) => config = ({ ...config, entrypoint: e.target.value })}
           placeholder="node server.js"
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent font-mono text-sm"
-        />
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent font-mono text-sm" id="dockerfile-generator-field-11" />
       </div>
 
       <!-- CMD -->
       <div>
-        <label class="tool-label">
+        <label for="dockerfile-generator-field-10" class="tool-label">
           {t('cmd')}
         </label>
         <input
@@ -384,8 +377,7 @@
           value={config.cmd}
           onchange={(e) => config = ({ ...config, cmd: e.target.value })}
           placeholder="npm start"
-          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent font-mono text-sm"
-        />
+          class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-amber-500 focus:border-transparent font-mono text-sm" id="dockerfile-generator-field-10" />
       </div>
 
       <!-- Actions -->
@@ -408,7 +400,7 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Dockerfile</label>
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">Dockerfile</div>
             <div class="flex gap-2">
               <button
                 onclick={copyToClipboard}

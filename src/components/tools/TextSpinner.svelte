@@ -102,12 +102,11 @@
     <div class="space-y-4">
       <div class="flex flex-wrap gap-4 items-center">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('level')}</label>
+          <label for="text-spinner-field-6" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('level')}</label>
           <select
             value={level}
             onchange={(e) => level = e.target.value as Level}
-            class="px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white"
-          >
+            class="px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white" id="text-spinner-field-6">
             <option value="conservative">{t('conservative')}</option>
             <option value="moderate">{t('moderate')}</option>
             <option value="aggressive">{t('aggressive')}</option>
@@ -134,18 +133,18 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('input')}</label>
+          <label for="text-spinner-field-5" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('input')}</label>
           <textarea
             bind:value={input}
             class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
-            placeholder={t('inputPlaceholder')}></textarea>
+            placeholder={t('inputPlaceholder')} id="text-spinner-field-5"></textarea>
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('output')}</label>
+          <label for="text-spinner-field-4" class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('output')}</label>
           <textarea
             value={output}
             readOnly
-            class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"></textarea>
+            class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none" id="text-spinner-field-4"></textarea>
         </div>
       </div>
     </div>

@@ -50,13 +50,12 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t('twitterCardGenerator.cardType')}</label>
+            <label for="twitter-card-generator-field-17" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t('twitterCardGenerator.cardType')}</label>
             <select
               name="card"
               value={data.card}
               onchange={handleChange}
-              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
-            >
+              class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500" id="twitter-card-generator-field-17">
               <option value="summary">{t('twitterCardGenerator.cardSummary')}</option>
               <option value="summary_large_image">{t('twitterCardGenerator.cardSummaryLargeImage')}</option>
               <option value="app">{t('twitterCardGenerator.cardApp')}</option>
@@ -65,19 +64,18 @@
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t('twitterCardGenerator.title')}</label>
+            <label for="twitter-card-generator-field-16" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t('twitterCardGenerator.title')}</label>
             <input
               type="text"
               name="title"
               value={data.title}
               onchange={handleChange}
               class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
-              placeholder={t('twitterCardGenerator.titlePlaceholder')}
-            />
+              placeholder={t('twitterCardGenerator.titlePlaceholder')} id="twitter-card-generator-field-16" />
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t('twitterCardGenerator.description')}</label>
+            <label for="twitter-card-generator-field-15" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t('twitterCardGenerator.description')}</label>
             <textarea
               name="description"
               value={data.description}
@@ -85,62 +83,58 @@
               rows={3}
               class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
               placeholder={t('twitterCardGenerator.descriptionPlaceholder')}
-              maxLength={200}></textarea>
+              maxLength={200} id="twitter-card-generator-field-15"></textarea>
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t('twitterCardGenerator.imageUrl')}</label>
+            <label for="twitter-card-generator-field-14" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t('twitterCardGenerator.imageUrl')}</label>
             <input
               type="url"
               name="image"
               value={data.image}
               onchange={handleChange}
               class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
-              placeholder={t('twitterCardGenerator.imageUrlPlaceholder')}
-            />
+              placeholder={t('twitterCardGenerator.imageUrlPlaceholder')} id="twitter-card-generator-field-14" />
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t('twitterCardGenerator.imageAltText')}</label>
+            <label for="twitter-card-generator-field-13" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t('twitterCardGenerator.imageAltText')}</label>
             <input
               type="text"
               name="alt"
               value={data.alt}
               onchange={handleChange}
               class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
-              placeholder={t('twitterCardGenerator.imageAltTextPlaceholder')}
-            />
+              placeholder={t('twitterCardGenerator.imageAltTextPlaceholder')} id="twitter-card-generator-field-13" />
           </div>
 
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t('twitterCardGenerator.siteUsername')}</label>
+              <label for="twitter-card-generator-field-12" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t('twitterCardGenerator.siteUsername')}</label>
               <input
                 type="text"
                 name="site"
                 value={data.site}
                 onchange={handleChange}
                 class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
-                placeholder={t('twitterCardGenerator.siteUsernamePlaceholder')}
-              />
+                placeholder={t('twitterCardGenerator.siteUsernamePlaceholder')} id="twitter-card-generator-field-12" />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t('twitterCardGenerator.creatorUsername')}</label>
+              <label for="twitter-card-generator-field-11" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t('twitterCardGenerator.creatorUsername')}</label>
               <input
                 type="text"
                 name="creator"
                 value={data.creator}
                 onchange={handleChange}
                 class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500"
-                placeholder={t('twitterCardGenerator.creatorUsernamePlaceholder')}
-              />
+                placeholder={t('twitterCardGenerator.creatorUsernamePlaceholder')} id="twitter-card-generator-field-11" />
             </div>
           </div>
         </div>
 
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t('twitterCardGenerator.preview')}</label>
+            <div class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t('twitterCardGenerator.preview')}</div>
             <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden max-w-sm mx-auto">
               {#if data.card === 'summary_large_image'}
 <div class="aspect-[2/1] bg-gray-100 dark:bg-gray-700 relative">
@@ -176,13 +170,13 @@
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t('twitterCardGenerator.generatedHtml')}</label>
+            <label for="twitter-card-generator-field-10" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t('twitterCardGenerator.generatedHtml')}</label>
             <div class="relative">
               <textarea
                 readOnly
                 value={generateMetaTags()}
                 rows={8}
-                class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-700 dark:text-gray-300 font-mono text-sm"></textarea>
+                class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-700 dark:text-gray-300 font-mono text-sm" id="twitter-card-generator-field-10"></textarea>
             </div>
           </div>
         </div>

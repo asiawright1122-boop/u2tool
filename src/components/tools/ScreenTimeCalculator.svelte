@@ -61,7 +61,7 @@
     <div class="space-y-4">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">
+          <label for="screen-time-calculator-field-4" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">
             {t('hoursPerDay')}: {hoursPerDay}h
           </label>
           <input
@@ -71,11 +71,10 @@
             step={0.5}
             value={hoursPerDay}
             onchange={(e) => hoursPerDay = Number(e.target.value)}
-            class="w-full"
-          />
+            class="w-full" id="screen-time-calculator-field-4" />
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">
+          <label for="screen-time-calculator-field-3" class="block text-sm text-gray-600 dark:text-gray-300 mb-1">
             {t('wakeHours')}: {wakeHours}h
           </label>
           <input
@@ -85,8 +84,7 @@
             step={0.5}
             value={wakeHours}
             onchange={(e) => wakeHours = Number(e.target.value)}
-            class="w-full"
-          />
+            class="w-full" id="screen-time-calculator-field-3" />
         </div>
       </div>
 

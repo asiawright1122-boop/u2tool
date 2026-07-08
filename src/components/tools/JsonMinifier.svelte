@@ -146,7 +146,7 @@
 
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium">{t('output')}</label>
+          <div class="text-sm font-medium">{t('output')}</div>
           {#if output}
 <button
               onclick={copyOutput}

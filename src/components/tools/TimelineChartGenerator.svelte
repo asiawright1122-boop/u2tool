@@ -203,13 +203,12 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="space-y-4">
                     <div class="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-4 space-y-3">
-                        <label class="block text-sm font-medium">{t('settings')}</label>
+                        <label for="timeline-chart-generator-field-3" class="block text-sm font-medium">{t('settings')}</label>
                         <input
                             type="text"
                             bind:value={chartTitle}
                             class="tool-input"
-                            placeholder={t('chartTitlePlaceholder')}
-                        />
+                            placeholder={t('chartTitlePlaceholder')} id="timeline-chart-generator-field-3" />
                         <div class="flex gap-4">
                             <select
                                 value={colorTheme}
@@ -234,7 +233,7 @@
 
                     <div>
                         <div class="flex justify-between items-center mb-2">
-                            <label class="text-sm font-medium">{t('dataEditor')}</label>
+                            <div class="text-sm font-medium">{t('dataEditor')}</div>
                             <button onclick={addEvent} class="btn-secondary btn-sm">
                                 + {t('addEvent')}
                             </button>

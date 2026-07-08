@@ -252,26 +252,24 @@
         <div class="space-y-4">
           <!-- 图表设置 -->
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <div class="block text-sm font-medium mb-2">{t('chartSettings')}</div>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="word-cloud-generator-field-17" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
                   type="text"
                   bind:value={chartTitle}
                   class="tool-input"
-                  placeholder={t('chartTitlePlaceholder')}
-                />
+                  placeholder={t('chartTitlePlaceholder')} id="word-cloud-generator-field-17" />
               </div>
 
               <div class="grid grid-cols-2 gap-2">
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                  <label for="word-cloud-generator-field-16" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
                   <select
                     value={colorTheme}
                     onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
-                    class="tool-input"
-                  >
+                    class="tool-input" id="word-cloud-generator-field-16">
                     <option value="default">{t('themeDefault')}</option>
                     <option value="ocean">{t('themeOcean')}</option>
                     <option value="sunset">{t('themeSunset')}</option>
@@ -279,12 +277,11 @@
                   </select>
                 </div>
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('shape')}</label>
+                  <label for="word-cloud-generator-field-15" class="block text-sm font-medium mb-1">{t('shape')}</label>
                   <select
                     value={shape}
                     onchange={(e) => shape = e.target.value as typeof shape}
-                    class="tool-input"
-                  >
+                    class="tool-input" id="word-cloud-generator-field-15">
                     <option value="circle">{t('shapeCircle')}</option>
                     <option value="cardioid">{t('shapeCardioid')}</option>
                     <option value="diamond">{t('shapeDiamond')}</option>
@@ -296,37 +293,34 @@
 
               <div class="grid grid-cols-3 gap-2">
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('minFontSize')}: {minFontSize}</label>
+                  <label for="word-cloud-generator-field-14" class="block text-sm font-medium mb-1">{t('minFontSize')}: {minFontSize}</label>
                   <input
                     type="range"
                     min={8}
                     max={30}
                     value={minFontSize}
                     onchange={(e) => minFontSize = Number(e.target.value)}
-                    class="w-full"
-                  />
+                    class="w-full" id="word-cloud-generator-field-14" />
                 </div>
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('maxFontSize')}: {maxFontSize}</label>
+                  <label for="word-cloud-generator-field-13" class="block text-sm font-medium mb-1">{t('maxFontSize')}: {maxFontSize}</label>
                   <input
                     type="range"
                     min={40}
                     max={100}
                     value={maxFontSize}
                     onchange={(e) => maxFontSize = Number(e.target.value)}
-                    class="w-full"
-                  />
+                    class="w-full" id="word-cloud-generator-field-13" />
                 </div>
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('rotation')}: ±{rotationRange}°</label>
+                  <label for="word-cloud-generator-field-12" class="block text-sm font-medium mb-1">{t('rotation')}: ±{rotationRange}°</label>
                   <input
                     type="range"
                     min={0}
                     max={90}
                     value={rotationRange}
                     onchange={(e) => rotationRange = Number(e.target.value)}
-                    class="w-full"
-                  />
+                    class="w-full" id="word-cloud-generator-field-12" />
                 </div>
               </div>
             </div>
@@ -334,12 +328,12 @@
 
           <!-- 文本输入 -->
           <div>
-            <label class="block text-sm font-medium mb-2">{t('textInput')}</label>
+            <label for="word-cloud-generator-field-11" class="block text-sm font-medium mb-2">{t('textInput')}</label>
             <div class="space-y-2">
               <textarea
                 bind:value={textInput}
                 class="tool-input h-24"
-                placeholder={t('textInputPlaceholder')}></textarea>
+                placeholder={t('textInputPlaceholder')} id="word-cloud-generator-field-11"></textarea>
               <button onclick={generateFromText} class="btn-secondary btn-sm w-full">
                 {t('generateFromText')}
               </button>
@@ -349,7 +343,7 @@
           <!-- 词项编辑 -->
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="block text-sm font-medium">{t('dataEditor')}</label>
+              <div class="block text-sm font-medium">{t('dataEditor')}</div>
               <button onclick={addWordItem} class="btn-secondary btn-sm">
                 + {t('addWord')}
               </button>
@@ -386,7 +380,7 @@
 
         <!-- 右侧：图表预览 -->
         <div>
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <div class="block text-sm font-medium mb-2">{t('chartPreview')}</div>
           <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="min-height: 400px">
             <EChartsWrapper
               bind:this={chartRef}

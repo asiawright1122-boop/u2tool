@@ -63,7 +63,7 @@ code blocks
         <!-- Editor 列 -->
         <div>
           <div class="flex justify-between items-center mb-2 h-8">
-            <label class="text-sm font-medium">{t('markdown.editor')}</label>
+            <div class="text-sm font-medium">{t('markdown.editor')}</div>
           </div>
           <textarea
             class="h-96 w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-900 dark:text-gray-100 focus:outline-none focus:border-amber-500 resize-none"
@@ -74,7 +74,7 @@ code blocks
         <!-- Preview 列 -->
         <div>
           <div class="flex justify-between items-center mb-2 h-8">
-            <label class="text-sm font-medium">{t('markdown.preview')}</label>
+            <div class="text-sm font-medium">{t('markdown.preview')}</div>
             <button
               onclick={copyHtml}
               class={`text-sm px-3 py-1 rounded ${copied ? 'bg-emerald-500' : 'bg-gray-700 hover:bg-gray-600'}`}

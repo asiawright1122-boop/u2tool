@@ -202,30 +202,28 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('indentStyle')}</label>
+            <label for="editorconfig-generator-field-14" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('indentStyle')}</label>
             <select
               value={config.defaultConfig.indentStyle}
               onchange={(e) => config = ({ 
                 ...config, 
                 defaultConfig: { ...config.defaultConfig, indentStyle: e.target.value as 'space' | 'tab' }
               })}
-              class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100"
-            >
+              class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100" id="editorconfig-generator-field-14">
               <option value="space">Space</option>
               <option value="tab">Tab</option>
             </select>
           </div>
 
           <div>
-            <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('indentSize')}</label>
+            <label for="editorconfig-generator-field-13" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('indentSize')}</label>
             <select
               value={config.defaultConfig.indentSize}
               onchange={(e) => config = ({ 
                 ...config, 
                 defaultConfig: { ...config.defaultConfig, indentSize: parseInt(e.target.value) }
               })}
-              class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100"
-            >
+              class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100" id="editorconfig-generator-field-13">
               <option value="2">2</option>
               <option value="4">4</option>
               <option value="8">8</option>
@@ -233,15 +231,14 @@
           </div>
 
           <div>
-            <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('endOfLine')}</label>
+            <label for="editorconfig-generator-field-12" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('endOfLine')}</label>
             <select
               value={config.defaultConfig.endOfLine}
               onchange={(e) => config = ({ 
                 ...config, 
                 defaultConfig: { ...config.defaultConfig, endOfLine: e.target.value as 'lf' | 'crlf' | 'cr' }
               })}
-              class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100"
-            >
+              class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100" id="editorconfig-generator-field-12">
               <option value="lf">LF (Unix)</option>
               <option value="crlf">CRLF (Windows)</option>
               <option value="cr">CR</option>
@@ -249,15 +246,14 @@
           </div>
 
           <div>
-            <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('charset')}</label>
+            <label for="editorconfig-generator-field-11" class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('charset')}</label>
             <select
               value={config.defaultConfig.charset}
               onchange={(e) => config = ({ 
                 ...config, 
                 defaultConfig: { ...config.defaultConfig, charset: e.target.value }
               })}
-              class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100"
-            >
+              class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100" id="editorconfig-generator-field-11">
               <option value="utf-8">UTF-8</option>
               <option value="utf-8-bom">UTF-8 BOM</option>
               <option value="latin1">Latin1</option>
@@ -296,9 +292,9 @@
 
       <!-- Add File Types -->
       <div>
-        <label class="tool-label">
+        <div class="tool-label">
           {t('addFileType')}
-        </label>
+        </div>
         <div class="flex flex-wrap gap-2">
           {#each COMMON_PATTERNS as { pattern, label } (pattern)}
 <button 
@@ -334,24 +330,22 @@
               
               <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                 <div>
-                  <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('indentStyle')}</label>
+                  <label for={`editorconfig-generator-field-10-${index}`} class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('indentStyle')}</label>
                   <select
                     value={ft.indentStyle}
                     onchange={(e) => updateFileType(index, { indentStyle: e.target.value as 'space' | 'tab' })}
-                    class="w-full px-2 py-1 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-xs text-gray-900 dark:text-gray-100"
-                  >
+                    class="w-full px-2 py-1 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-xs text-gray-900 dark:text-gray-100" id={`editorconfig-generator-field-10-${index}`}>
                     <option value="space">Space</option>
                     <option value="tab">Tab</option>
                   </select>
                 </div>
 
                 <div>
-                  <label class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('indentSize')}</label>
+                  <label for={`editorconfig-generator-field-9-${index}`} class="block text-xs text-gray-500 dark:text-gray-400 mb-1">{t('indentSize')}</label>
                   <select
                     value={ft.indentSize}
                     onchange={(e) => updateFileType(index, { indentSize: parseInt(e.target.value) })}
-                    class="w-full px-2 py-1 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-xs text-gray-900 dark:text-gray-100"
-                  >
+                    class="w-full px-2 py-1 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-xs text-gray-900 dark:text-gray-100" id={`editorconfig-generator-field-9-${index}`}>
                     <option value="2">2</option>
                     <option value="4">4</option>
                     <option value="8">8</option>
@@ -383,7 +377,7 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">.editorconfig</label>
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-300">.editorconfig</div>
             <div class="flex gap-2">
               <button
                 onclick={copyToClipboard}

@@ -167,15 +167,14 @@
       <!-- Settings -->
       <div class="flex flex-wrap items-center gap-4">
         <div class="flex items-center gap-2">
-          <label class="text-sm font-medium">{t('quality')}:</label>
+          <label for="image-to-webp-field-2" class="text-sm font-medium">{t('quality')}:</label>
           <input
             type="range"
             min="10"
             max="100"
             value={quality}
             onchange={(e) => quality = Number(e.target.value)}
-            class="w-32"
-          />
+            class="w-32" id="image-to-webp-field-2" />
           <span class="text-sm font-mono w-12">{quality}%</span>
         </div>
         <button onclick={clearAll} class="btn-secondary">

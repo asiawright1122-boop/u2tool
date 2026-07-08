@@ -57,7 +57,7 @@
     <div class="space-y-4">
       <div>
         <div class="flex justify-between items-center mb-2">
-          <label class="text-sm font-medium text-gray-700 dark:text-gray-200">{t('input')}</label>
+          <div class="text-sm font-medium text-gray-700 dark:text-gray-200">{t('input')}</div>
           <button
             onclick={() => input = exampleSql}
             class="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 rounded text-gray-900 dark:text-gray-100"
@@ -87,7 +87,7 @@
       {#if output}
 <div>
           <div class="flex justify-between items-center mb-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-200">{t('output')}</label>
+            <div class="text-sm font-medium text-gray-700 dark:text-gray-200">{t('output')}</div>
             <button
               onclick={copyOutput}
               class={`text-sm px-3 py-1 rounded ${copied ? 'btn-success' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100'}`}

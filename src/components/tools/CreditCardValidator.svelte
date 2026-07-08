@@ -100,7 +100,7 @@
 
     <div class="space-y-6">
       <div>
-        <label class="tool-label">
+        <label for="credit-card-validator-field-2" class="tool-label">
           {t('cardNumber')}
         </label>
         <input
@@ -109,8 +109,7 @@
           onchange={handleInputChange}
           placeholder={t('inputPlaceholder')}
           maxLength={23}
-          class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-lg tracking-wider"
-        />
+          class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-lg tracking-wider" id="credit-card-validator-field-2" />
       </div>
 
       <button

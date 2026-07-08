@@ -43,10 +43,10 @@
 
     <div class="space-y-4">
       <div>
-        <label class="tool-label">{t('inputLabel')}</label>
+        <label for="char-frequency-field-2" class="tool-label">{t('inputLabel')}</label>
         <textarea bind:value={input}
           class="w-full h-32 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-amber-500"
-          placeholder={t('placeholder')}></textarea>
+          placeholder={t('placeholder')} id="char-frequency-field-2"></textarea>
       </div>
 
       <div class="flex gap-4">
