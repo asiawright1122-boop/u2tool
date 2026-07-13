@@ -105,35 +105,39 @@ export const ganttChartGeneratorCapabilityProfile = defineToolCapabilityProfile(
     forbiddenClaims: [
       {
         code: "gantt-generator-dependencies-claim",
-        pattern: /\b(?:task )?dependenc(?:y|ies)\b/i,
+        pattern:
+          /(?<!not )(?<!n't )\b(?:supports?|models?|links?|shows?) (?:task )?dependenc(?:y|ies)\b/i,
         reason: "The editor does not model dependencies between tasks.",
       },
       {
         code: "gantt-generator-milestones-claim",
-        pattern: /\bmilestones?\b/i,
+        pattern:
+          /(?<!not )(?<!n't )\b(?:supports?|adds?|creates?|shows?) (?:project )?milestones?\b/i,
         reason: "The current chart model has no milestone type.",
       },
       {
         code: "gantt-generator-critical-path-claim",
-        pattern: /\bcritical path\b/i,
+        pattern:
+          /(?<!not )(?<!n't )\b(?:calculates?|shows?|highlights?|supports?) (?:the )?critical path\b/i,
         reason: "The current chart does not calculate a critical path.",
       },
       {
         code: "gantt-generator-persistence-claim",
         pattern:
-          /\b(?:autosave|saved projects?|persistent storage|stores? your charts?)\b/i,
+          /(?<!not )(?<!n't )\b(?:automatically saves?|persists?|stores?) (?:your )?(?:charts?|projects?)\b/i,
         reason: "The chart state is not persisted.",
       },
       {
         code: "gantt-generator-data-transfer-claim",
-        pattern: /\b(?:imports?|exports?) (?:project|task|chart) data\b/i,
+        pattern:
+          /(?<!not )(?<!n't )(?<!not import or )(?<!n't import or )\b(?:imports?|exports?) (?:project|task|chart) data\b/i,
         reason:
           "Only image export is supported; project data import and export are not.",
       },
       {
         code: "gantt-generator-collaboration-claim",
         pattern:
-          /\b(?:real[- ]time )?collaboration|share with (?:your )?team\b/i,
+          /(?<!not )(?<!n't )\b(?:supports?|offers?|enables?) (?:real[- ]time )?collaboration\b|(?<!not )(?<!n't )\blets? you share with (?:your )?team\b/i,
         reason: "The tool has no collaboration or sharing service.",
       },
     ],

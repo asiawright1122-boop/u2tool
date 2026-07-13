@@ -15,27 +15,31 @@ export const PILOT_TOOL_SLUGS = [
   "gantt-chart-generator",
 ] as const;
 
-type PilotToolSlug = (typeof PILOT_TOOL_SLUGS)[number];
+const PILOT_TOOL_CAPABILITY_PROFILES: readonly ToolCapabilityProfile[] =
+  Object.freeze([
+    grammarCheckerCapabilityProfile,
+    hexEditorCapabilityProfile,
+    sqlQueryOptimizerCapabilityProfile,
+    excelViewerCapabilityProfile,
+    typingSpeedTestCapabilityProfile,
+    ganttChartGeneratorCapabilityProfile,
+  ]);
 
-const PILOT_TOOL_CAPABILITY_PROFILES: Readonly<
-  Record<PilotToolSlug, ToolCapabilityProfile>
-> = {
-  "grammar-checker": grammarCheckerCapabilityProfile,
-  "hex-editor": hexEditorCapabilityProfile,
-  "sql-query-optimizer": sqlQueryOptimizerCapabilityProfile,
-  "excel-viewer": excelViewerCapabilityProfile,
-  "typing-speed-test": typingSpeedTestCapabilityProfile,
-  "gantt-chart-generator": ganttChartGeneratorCapabilityProfile,
-};
+const TOOL_CAPABILITY_PROFILE_BY_SLUG: ReadonlyMap<
+  string,
+  ToolCapabilityProfile
+> = new Map(
+  PILOT_TOOL_CAPABILITY_PROFILES.map((profile) => [profile.slug, profile]),
+);
 
 export function getToolCapabilityProfile(
   slug: string,
 ): ToolCapabilityProfile | undefined {
-  return PILOT_TOOL_CAPABILITY_PROFILES[slug as PilotToolSlug];
+  return TOOL_CAPABILITY_PROFILE_BY_SLUG.get(slug);
 }
 
 export function getPilotToolCapabilityProfiles(): readonly ToolCapabilityProfile[] {
-  return PILOT_TOOL_SLUGS.map((slug) => PILOT_TOOL_CAPABILITY_PROFILES[slug]);
+  return PILOT_TOOL_CAPABILITY_PROFILES;
 }
 
 export type {

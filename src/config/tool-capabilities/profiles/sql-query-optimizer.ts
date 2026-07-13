@@ -102,29 +102,33 @@ export const sqlQueryOptimizerCapabilityProfile = defineToolCapabilityProfile({
   forbiddenClaims: [
     {
       code: "sql-optimizer-database-selector-claim",
-      pattern: /\b(?:database|dialect) selector\b/i,
+      pattern:
+        /(?<!not )(?<!n't )\b(?:includes?|offers?|provides?) (?:a )?(?:database|dialect) selector\b/i,
       reason:
         "The current static analyzer has no database or dialect selector.",
     },
     {
       code: "sql-optimizer-explain-claim",
-      pattern: /\b(?:EXPLAIN|execution plan) (?:parser|analysis|analyzer)\b/i,
+      pattern:
+        /(?<!not )(?<!n't )\b(?:parses?|analyzes?|reads?) (?:database )?(?:EXPLAIN(?: output| plans?)?|execution plans?)\b/i,
       reason: "The tool does not parse database execution plans.",
     },
     {
       code: "sql-optimizer-connection-claim",
-      pattern: /\b(?:connects? to|database connection|live database)\b/i,
+      pattern:
+        /(?<!not )(?<!n't )\b(?:connects? to|queries?) (?:a )?(?:live )?database\b/i,
       reason: "The browser tool does not connect to a database.",
     },
     {
       code: "sql-optimizer-execution-claim",
-      pattern: /\b(?:executes?|runs?) (?:the )?(?:SQL|query|queries)\b/i,
+      pattern:
+        /(?<!not )(?<!n't )\b(?:executes?|runs?) (?:the )?(?:SQL|query|queries)\b/i,
       reason: "The tool analyzes SQL text without executing it.",
     },
     {
       code: "sql-optimizer-speed-guarantee-claim",
       pattern:
-        /\b(?:guaranteed?|guarantees?) (?:faster|speed|performance|improvement)\b/i,
+        /(?<!not )(?<!n't )\b(?:guarantees?|promises?) (?:faster )?(?:query )?(?:speed|performance|execution|improvements?)\b/i,
       reason: "Static suggestions cannot guarantee database performance gains.",
     },
   ],

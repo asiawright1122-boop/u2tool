@@ -85,27 +85,27 @@ export const hexEditorCapabilityProfile = defineToolCapabilityProfile({
     {
       code: "hex-editor-grid-claim",
       pattern:
-        /\b(?:open files?|file upload|offset grid|byte grid|hex grid)\b/i,
+        /(?<!not )(?<!n't )\b(?:opens?|uploads?|loads?) (?:local )?files?\b|(?<!not )(?<!n't )\b(?:shows?|provides?|includes?) (?:an? )?(?:offset|byte|hex) grid\b/i,
       reason:
         "The tool accepts pasted text or hex and has no file loader or offset grid.",
     },
     {
       code: "hex-editor-byte-edit-claim",
       pattern:
-        /\b(?:direct byte edit(?:ing)?|edit(?:able)? bytes?|overwrite bytes?)\b/i,
+        /(?<!not )(?<!n't )\b(?:edits?|modifies?|overwrites?) (?:individual )?bytes? directly\b|(?<!not )(?<!n't )\b(?:supports?|provides?) direct byte editing\b/i,
       reason:
         "The tool converts whole text values and does not expose direct byte editing.",
     },
     {
       code: "hex-editor-unsupported-encoding-claim",
       pattern:
-        /\b(?:UTF-16|UTF-32|Latin-1|Shift[- ]JIS|multiple encodings|encoding selector)\b/i,
+        /(?<!not )(?<!n't )\b(?:supports?|encodes?|decodes?) (?:text (?:as|with) )?(?:UTF-16|UTF-32|Latin-1|Shift[- ]JIS|multiple encodings)(?: encoding)?\b|(?<!not )(?<!n't )\b(?:offers?|provides?) (?:an )?encoding selector\b/i,
       reason: "The converter supports UTF-8 text only.",
     },
     {
       code: "hex-editor-file-export-claim",
       pattern:
-        /\b(?:(?:save|download|export)(?: an?)? (?:binary|hex|edited)? ?files?)\b/i,
+        /(?<!not )(?<!n't )\b(?:saves?|downloads?|exports?) (?:an? )?(?:binary|hex|edited)? ?files?\b/i,
       reason:
         "The current tool copies converted text but does not export files.",
     },
