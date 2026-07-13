@@ -28,6 +28,7 @@
     "report:gsc-crawled-not-indexed-actions": "node --import tsx/esm scripts/seo/gsc-crawled-not-indexed-action-matrix.ts",
     "report:gsc-content-refresh-links": "node --import tsx/esm scripts/seo/gsc-content-refresh-internal-link-audit.ts",
     "report:gsc-p1-post-deploy-monitoring": "node --import tsx/esm scripts/seo/gsc-p1-post-deploy-monitoring-list.ts",
+    "seo:sitemap-lastmod:update": "node --import tsx/esm scripts/seo/update-sitemap-lastmod.ts",
     "report:gsc-p1-checkpoint": "node --import tsx/esm scripts/seo/gsc-p1-checkpoint-report.ts",
     "report:gsc-content-refresh-live-preflight": "node --import tsx/esm scripts/seo/gsc-content-refresh-live-preflight.ts",
     "report:gsc-request-indexing-live-preflight": "node --import tsx/esm scripts/seo/gsc-request-indexing-live-preflight.ts",
