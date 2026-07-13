@@ -673,6 +673,22 @@ describe("assessToolCapabilityClaims", () => {
     );
   });
 
+  it("does not suppress a Japanese modifier-first recommendation located in our application", () => {
+    const faq = faqNoLocaleFixtures.ja;
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "ja",
+      text: [
+        faq.question,
+        `${faq.answer} 外部データベースに接続した私たちのアプリケーションでSQLクエリを実行してください。`,
+      ].join("\n"),
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
   it("does not suppress a Korean modifier-first recommendation for this application", () => {
     const faq = faqNoLocaleFixtures.ko;
     const report = assessToolCapabilityClaims({
@@ -692,6 +708,47 @@ describe("assessToolCapabilityClaims", () => {
   it.each([
     [
       "ja",
+      "外部データベースに接続した当アプリケーションでSQLクエリを実行してください。",
+    ],
+    [
+      "ja",
+      "外部データベースに接続した本アプリケーションでSQLクエリを実行してください。",
+    ],
+    [
+      "ja",
+      "外部データベースに接続したこのWebアプリケーションでSQLクエリを実行してください。",
+    ],
+    [
+      "ko",
+      "외부 데이터베이스에 연결된 우리 애플리케이션에서 SQL 쿼리를 실행하세요.",
+    ],
+    [
+      "ko",
+      "외부 데이터베이스에 연결된 본 애플리케이션에서 SQL 쿼리를 실행하세요.",
+    ],
+    [
+      "ko",
+      "외부 데이터베이스에 연결된 이 웹 애플리케이션에서 SQL 쿼리를 실행하세요.",
+    ],
+  ] as const)(
+    "flags a formal current-location modifier in %s: %s",
+    (locale, explanation) => {
+      const faq = faqNoLocaleFixtures[locale];
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text: [faq.question, `${faq.answer} ${explanation}`].join("\n"),
+      });
+
+      expect(report.issues.map((issue) => issue.code)).toContain(
+        "sql-optimizer-execution-claim",
+      );
+    },
+  );
+
+  it.each([
+    [
+      "ja",
       "外部データベースに接続した別のアプリケーションでSQLクエリを実行してください。",
     ],
     [
@@ -700,6 +757,29 @@ describe("assessToolCapabilityClaims", () => {
     ],
   ] as const)(
     "allows an honest modifier-first external FAQ recommendation in %s",
+    (locale, explanation) => {
+      const faq = faqNoLocaleFixtures[locale];
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text: [faq.question, `${faq.answer} ${explanation}`].join("\n"),
+      });
+
+      expect(report.issues).toEqual([]);
+    },
+  );
+
+  it.each([
+    [
+      "ja",
+      "外部データベースに接続した別のアプリケーションで、このツールが生成したSQLクエリを実行してください。",
+    ],
+    [
+      "ko",
+      "외부 데이터베이스에 연결된 다른 애플리케이션에서 이 도구가 생성한 SQL 쿼리를 실행하세요.",
+    ],
+  ] as const)(
+    "allows an external execution location when the current tool is only the generator in %s",
     (locale, explanation) => {
       const faq = faqNoLocaleFixtures[locale];
       const report = assessToolCapabilityClaims({
