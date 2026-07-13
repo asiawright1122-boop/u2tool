@@ -64,12 +64,15 @@ assertions independently. Negation in one assertion cannot mask the next.
 Explicit FAQ questions remain associated with a following localized bare
 `Yes` or `No`, but every following explanation is evaluated independently for
 affirmative governed claims. Localized negative limitations remain honest, as
-do explicit recommendations to use an external database, service, provider,
-application, browser, or server. No generic previous-negation suppression
-remains. Tests exercise every governed claim code in every UI locale with 320
-affirmative and 320 limitation cases, plus ten-locale contradictory and honest
-FAQ matrices, mixed-clause, adjacent-sentence, honest two-sentence limitation,
-and current-message regressions.
+do recommendations that contain explicit external ownership or provider
+semantics. Generic database/application/server words are insufficient, and
+localized `this/current tool`, application, server, service, or system phrases
+remain claims about the current subject. No generic previous-negation
+suppression remains. Tests exercise every governed claim code in every UI
+locale with 320 affirmative and 320 limitation cases, plus ten-locale
+contradictory, honest-limitation, and current-subject-versus-external FAQ
+matrices, mixed-clause, adjacent-sentence, honest two-sentence limitation, and
+current-message regressions.
 
 The repository audit scans all six pilots in all ten locales (60 pages). Copy
 found by both review waves was rewritten to match current production behavior.
@@ -123,7 +126,7 @@ without leaving temporary fixture directories.
 npx vitest run src/config/tool-capabilities/index.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts scripts/validation/validate-tool-capability-claims.test.ts scripts/validation/tool-page-render-contract.test.ts src/components/tools/ToolCapabilityDisclosure.test.ts src/lib/tool-capability-disclosure.test.ts
 ```
 
-Result: exit `0`; 7/7 files and 291/291 tests passed.
+Result: exit `0`; 7/7 files and 303/303 tests passed.
 
 ### Default claims validator
 
