@@ -1341,6 +1341,112 @@ describe("assessToolCapabilityClaims", () => {
     },
   );
 
+  it("treats an explicit Japanese SQL statement object as governed", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "ja",
+      text: "このアプリケーションでSQL文を実行します。",
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
+  it("clears carried SQL context for a Japanese topicalized test object", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "ja",
+      text: "SQLクエリを分析し、テストはこのアプリケーションで実行します。",
+    });
+
+    expect(report.issues).toEqual([]);
+  });
+
+  it("recognizes a Japanese continuative cannot-execute predicate", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "ja",
+      text: "このアプリケーションではSQL文を実行できず、分析のみ行います。",
+    });
+
+    expect(report.issues).toEqual([]);
+  });
+
+  it.each([
+    ["ja", "このアプリケーションでSQL 文を実行します。"],
+    ["ja", "このアプリケーションでクエリ文を実行します。"],
+    ["ja", "このアプリケーションでクエリ 文を実行します。"],
+    ["ja", "このアプリケーションでSQLクエリ文を実行します。"],
+    ["ja", "このアプリケーションでSQLステートメントを実行します。"],
+    ["ja", "SQL文はこのアプリケーションで実行します。"],
+    ["ko", "이 애플리케이션에서 SQL 문을 실행합니다."],
+    ["ko", "이 애플리케이션에서 SQL문을 실행합니다."],
+    ["ko", "이 애플리케이션에서 쿼리문을 실행합니다."],
+    ["ko", "이 애플리케이션에서 쿼리 문을 실행합니다."],
+    ["ko", "이 애플리케이션에서 SQL 쿼리문을 실행합니다."],
+    ["ko", "이 애플리케이션에서 SQL쿼리문을 실행합니다."],
+    ["ko", "이 애플리케이션에서 SQL 쿼리 문을 실행합니다."],
+    ["ko", "SQL문은 이 애플리케이션에서 실행합니다."],
+  ] as const)(
+    "treats SQL/query statement object variants as governed in %s: %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues.map((issue) => issue.code)).toContain(
+        "sql-optimizer-execution-claim",
+      );
+    },
+  );
+
+  it.each([
+    ["ja", "SQLクエリを分析し、処理はこのアプリケーションで実行します。"],
+    ["ja", "SQLクエリを分析し、プロセスはこのアプリケーションで実行します。"],
+    ["ja", "SQLクエリを分析し、タスクはこのアプリケーションで実行します。"],
+    ["ko", "SQL 쿼리를 분석하고 테스트 실행합니다."],
+    ["ko", "SQL 쿼리를 분석하고 프로세스 실행합니다."],
+    ["ko", "SQL 쿼리를 분석하고 작업 실행합니다."],
+    ["ko", "SQL 쿼리를 분석하고 테스트는 이 애플리케이션에서 실행합니다."],
+    ["ko", "SQL 쿼리를 분석하고 프로세스는 이 애플리케이션에서 실행합니다."],
+    ["ko", "SQL 쿼리를 분석하고 작업은 이 애플리케이션에서 실행합니다."],
+  ] as const)(
+    "clears stale SQL context for topic or omitted non-SQL objects in %s: %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues).toEqual([]);
+    },
+  );
+
+  it.each([
+    ["ko", "이 애플리케이션에서는 SQL 문을 실행할 수 없음."],
+    ["ko", "이 애플리케이션에서는 SQL문을 실행할 수 없고 분석만 합니다."],
+    ["ko", "이 애플리케이션에서는 SQL문 실행이 불가능합니다."],
+    ["ko", "이 애플리케이션에서는 SQL 쿼리문 실행을 지원하지 않아요."],
+    ["ko", "이 애플리케이션에서는 SQL문 실행할수없음."],
+    ["ko", "이 애플리케이션에서는 SQL문 실행을지원하지않아요."],
+    ["ko", "이 애플리케이션에서는 SQL문 실행을 지원하지 않는다."],
+  ] as const)(
+    "keeps added Korean execute-local negative forms clean in %s: %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues).toEqual([]);
+    },
+  );
+
   it.each(locales)(
     "flags a contradictory bare-No FAQ explanation in %s",
     (locale) => {
