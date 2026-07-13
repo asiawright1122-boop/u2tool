@@ -1,5 +1,8 @@
 import { execFileSync } from 'node:child_process';
 import {
+  copyFileSync,
+  cpSync,
+  existsSync,
   mkdirSync,
   mkdtempSync,
   readFileSync,
@@ -25,8 +28,15 @@ beforeAll(() => {
   tempRoot = mkdtempSync(path.join(tmpdir(), 'u2tool-capability-disclosure-'));
   const outDir = path.join(tempRoot, 'dist');
   const cacheDir = path.join(tempRoot, 'cache');
-  const projectRoot = path.join(cacheDir, 'project');
+  const projectRoot = path.join(tempRoot, 'project');
   mkdirSync(projectRoot, { recursive: true });
+  copyFileSync(
+    path.join(fixtureRoot, 'astro.config.mjs'),
+    path.join(projectRoot, 'astro.config.mjs'),
+  );
+  cpSync(path.join(fixtureRoot, 'src'), path.join(projectRoot, 'src'), {
+    recursive: true,
+  });
   symlinkSync(
     path.join(repoRoot, 'node_modules'),
     path.join(projectRoot, 'node_modules'),
@@ -34,12 +44,13 @@ beforeAll(() => {
   );
 
   execFileSync(astroBin, ['build'], {
-    cwd: fixtureRoot,
+    cwd: projectRoot,
     encoding: 'utf8',
     env: {
       ...process.env,
       CAPABILITY_FIXTURE_OUT_DIR: outDir,
       CAPABILITY_FIXTURE_CACHE_DIR: cacheDir,
+      CAPABILITY_FIXTURE_REPO_ROOT: repoRoot,
     },
     timeout: 60_000,
   });
@@ -82,6 +93,10 @@ describe('ToolCapabilityDisclosure', () => {
       'Server processing only starts after you explicitly request it.',
     );
   });
+
+  it('leaves the tracked fixture free of generated Astro and Vite artifacts', () => {
+    expect(trackedFixtureArtifacts()).toEqual([]);
+  });
 });
 
 function disclosureHtml(slug: string): string {
@@ -92,4 +107,10 @@ function disclosureHtml(slug: string): string {
   );
   expect(match, `missing rendered disclosure for ${slug}`).not.toBeNull();
   return match![0];
+}
+
+function trackedFixtureArtifacts(): string[] {
+  return ['.astro', 'dist', '.vite', 'node_modules'].filter((entry) =>
+    existsSync(path.join(fixtureRoot, entry)),
+  );
 }
