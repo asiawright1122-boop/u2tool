@@ -1,6 +1,8 @@
 import { readFileSync, realpathSync, statSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import ts from 'typescript';
 
 import type { ToolCapabilityProfile } from '../../src/config/tool-capabilities';
 import { getPilotToolCapabilityProfiles } from '../../src/config/tool-capabilities';
@@ -56,6 +58,19 @@ export interface RepositoryEvidenceTestModule {
   source: string;
 }
 
+export type CapabilityEvidenceExecutionStatus =
+  | 'passed'
+  | 'failed'
+  | 'skipped'
+  | 'todo'
+  | 'not-collected'
+  | 'error';
+
+export interface CapabilityEvidenceExecutionResult {
+  status: CapabilityEvidenceExecutionStatus;
+  details?: string;
+}
+
 export interface ToolCapabilityClaimOptions {
   requireReleaseReady?: string;
 }
@@ -77,6 +92,11 @@ export interface ToolCapabilityClaimRunDependencies {
   loadEvidenceTestModule: (
     path: string,
   ) => RepositoryEvidenceTestModule | null;
+  runEvidenceTest?: (
+    evidence: CapabilityEvidenceReference,
+  ) =>
+    | CapabilityEvidenceExecutionResult
+    | Promise<CapabilityEvidenceExecutionResult>;
 }
 
 export interface ToolCapabilityClaimRunReport {
@@ -257,6 +277,55 @@ export async function runToolCapabilityClaimValidation(
         },
     ),
   );
+
+  const requiredReleaseProfile = options.requireReleaseReady
+    ? releaseReadyProfiles.find(
+        (profile) => profile.slug === options.requireReleaseReady,
+      )
+    : undefined;
+  if (requiredReleaseProfile) {
+    const hasStructuralEvidenceIssue = issues.some(
+      (issue) =>
+        issue.slug === requiredReleaseProfile.slug &&
+        (issue.code.startsWith('release-ready-evidence-') ||
+          issue.code === 'release-ready-category-evidence-required'),
+    );
+    if (!hasStructuralEvidenceIssue) {
+      const evidenceReferences = [
+        ...requiredReleaseProfile.evidenceTests,
+        ...requiredReleaseProfile.modes.map(({ evidence }) => evidence),
+        ...requiredReleaseProfile.acceptedInputs.map(({ evidence }) => evidence),
+        ...requiredReleaseProfile.producedOutputs.map(({ evidence }) => evidence),
+        ...requiredReleaseProfile.browserOnlyFeatures.map(
+          ({ evidence }) => evidence,
+        ),
+        ...requiredReleaseProfile.optionalServerFeatures.map(
+          ({ evidence }) => evidence,
+        ),
+        ...requiredReleaseProfile.limits.map(({ evidence }) => evidence),
+        requiredReleaseProfile.supportedLocales.engine.evidence,
+      ].filter(
+        (evidence): evidence is CapabilityEvidenceReference =>
+          Boolean(evidence),
+      );
+      const runEvidenceTest =
+        dependencies.runEvidenceTest ?? runRepositoryEvidenceTest;
+
+      for (const evidence of evidenceReferences) {
+        const executionIssue = validateCapabilityEvidenceExecution(
+          evidence,
+          await runEvidenceTest(evidence),
+        );
+        if (executionIssue) {
+          issues.push({
+            locale: requiredReleaseProfile.supportedLocales.ui[0] ?? 'en',
+            slug: requiredReleaseProfile.slug,
+            ...executionIssue,
+          });
+        }
+      }
+    }
+  }
   issues.sort(compareIssues);
 
   return {
@@ -508,6 +577,10 @@ const repoRoot = path.resolve(
   '../..',
 );
 
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&');
+}
+
 const APPROVED_TEST_MODULE_PATH =
   /^(?:(?:src|scripts)\/.+\.test|(?:tests|e2e)\/.+\.(?:test|spec))\.(?:[cm]?[jt]sx?)$/u;
 
@@ -551,8 +624,105 @@ export function repositoryEvidenceTestModule(
   }
 }
 
-function escapeRegExp(value: string): string {
-  return value.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&');
+interface VitestJsonAssertion {
+  title?: string;
+  status?: string;
+  failureMessages?: string[];
+}
+
+interface VitestJsonResult {
+  testResults?: Array<{
+    assertionResults?: VitestJsonAssertion[];
+  }>;
+}
+
+export function runRepositoryEvidenceTest(
+  evidence: CapabilityEvidenceReference,
+  repositoryRoot = repoRoot,
+): CapabilityEvidenceExecutionResult {
+  const module = repositoryEvidenceTestModule(evidence.file, repositoryRoot);
+  if (!module) {
+    return {
+      status: 'error',
+      details: `Invalid evidence module: ${evidence.file}`,
+    };
+  }
+
+  const canonicalRoot = realpathSync(repositoryRoot);
+  const vitestModule = path.join(
+    canonicalRoot,
+    'node_modules/vitest/vitest.mjs',
+  );
+  if (!statSync(vitestModule, { throwIfNoEntry: false })?.isFile()) {
+    return { status: 'error', details: 'Local Vitest module is unavailable.' };
+  }
+
+  const result = spawnSync(
+    process.execPath,
+    [
+      vitestModule,
+      'run',
+      evidence.file,
+      '--reporter=json',
+      '--testNamePattern',
+      escapeRegExp(evidence.testName),
+    ],
+    {
+      cwd: canonicalRoot,
+      encoding: 'utf8',
+      env: { ...process.env, FORCE_COLOR: '0', NO_COLOR: '1' },
+      maxBuffer: 10 * 1024 * 1024,
+    },
+  );
+
+  if (result.error) {
+    return { status: 'error', details: result.error.message };
+  }
+
+  let report: VitestJsonResult;
+  try {
+    report = JSON.parse(result.stdout) as VitestJsonResult;
+  } catch {
+    const output = `${result.stdout}\n${result.stderr}`.trim();
+    return /no test|no tests|no test suite/iu.test(output)
+      ? { status: 'not-collected', details: output }
+      : { status: 'error', details: output || 'Vitest returned no JSON report.' };
+  }
+
+  const exactAssertions = (report.testResults ?? [])
+    .flatMap(({ assertionResults }) => assertionResults ?? [])
+    .filter(({ title }) => title === evidence.testName);
+  if (exactAssertions.length === 0) {
+    return { status: 'not-collected' };
+  }
+  if (exactAssertions.length > 1) {
+    return {
+      status: 'error',
+      details: 'Multiple tests use the exact evidence test name.',
+    };
+  }
+
+  const [assertion] = exactAssertions;
+  if (assertion.status === 'passed' && result.status === 0) {
+    return { status: 'passed' };
+  }
+  if (assertion.status === 'failed') {
+    return {
+      status: 'failed',
+      details: assertion.failureMessages?.join('\n'),
+    };
+  }
+  if (assertion.status === 'todo') {
+    return { status: 'todo' };
+  }
+  if (assertion.status === 'skipped' || assertion.status === 'pending') {
+    return { status: 'skipped' };
+  }
+
+  return {
+    status: 'error',
+    details: `Unexpected Vitest assertion status: ${String(assertion.status)}`,
+  };
 }
 
 export function capabilityEvidenceMarker(
@@ -584,18 +754,62 @@ export function validateCapabilityEvidenceReference(
     };
   }
 
-  const collectedTest = new RegExp(
-    `\\b(?:it|test)(?:\\.(?:only|skip|todo))?\\s*\\(\\s*(["'])${escapeRegExp(evidence.testName)}\\1`,
-    'u',
+  const sourceFile = ts.createSourceFile(
+    module.file,
+    module.source,
+    ts.ScriptTarget.Latest,
+    true,
+    ts.ScriptKind.TSX,
   );
-  if (!collectedTest.test(module.source)) {
+  const runnableTestNames = new Set<string>();
+  const visit = (node: ts.Node): void => {
+    if (
+      ts.isCallExpression(node) &&
+      ts.isIdentifier(node.expression) &&
+      (node.expression.text === 'it' || node.expression.text === 'test')
+    ) {
+      const [name] = node.arguments;
+      if (name && ts.isStringLiteral(name)) {
+        runnableTestNames.add(name.text);
+      }
+    }
+    ts.forEachChild(node, visit);
+  };
+  visit(sourceFile);
+
+  if (!runnableTestNames.has(evidence.testName)) {
     return {
-      code: 'release-ready-evidence-test-not-collected',
-      message: `Evidence test is not collected with the exact name ${JSON.stringify(evidence.testName)} in ${module.file}`,
+      code: 'release-ready-evidence-test-not-runnable',
+      message: `Evidence must be a direct runnable it/test declaration with the exact static name ${JSON.stringify(evidence.testName)} in ${module.file}`,
     };
   }
 
   return null;
+}
+
+export function validateCapabilityEvidenceExecution(
+  evidence: CapabilityEvidenceReference,
+  result: CapabilityEvidenceExecutionResult,
+): Pick<CapabilityValidationIssue, 'code' | 'message'> | null {
+  if (result.status === 'passed') {
+    return null;
+  }
+
+  const codeByStatus: Record<
+    Exclude<CapabilityEvidenceExecutionStatus, 'passed'>,
+    string
+  > = {
+    failed: 'release-ready-evidence-test-failed',
+    skipped: 'release-ready-evidence-test-skipped',
+    todo: 'release-ready-evidence-test-todo',
+    'not-collected': 'release-ready-evidence-test-not-collected',
+    error: 'release-ready-evidence-test-cannot-run',
+  };
+
+  return {
+    code: codeByStatus[result.status],
+    message: `Evidence test ${JSON.stringify(evidence.testName)} in ${evidence.file} did not pass (${result.status})${result.details ? `: ${result.details}` : ''}`,
+  };
 }
 
 const productionDependencies: ToolCapabilityClaimRunDependencies = {
@@ -607,6 +821,7 @@ const productionDependencies: ToolCapabilityClaimRunDependencies = {
   loadLocalizedToolMessages: async (locale, slug) =>
     (await readMessageFile(`${locale}/tools/${slug}.json`)) ?? {},
   loadEvidenceTestModule: repositoryEvidenceTestModule,
+  runEvidenceTest: runRepositoryEvidenceTest,
 };
 
 export async function runToolCapabilityClaimCli(

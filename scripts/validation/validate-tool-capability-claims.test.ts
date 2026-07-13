@@ -22,8 +22,10 @@ import {
   flattenToolMessages,
   parseToolCapabilityClaimArgs,
   repositoryEvidenceTestModule,
+  runRepositoryEvidenceTest,
   runToolCapabilityClaimValidation,
   validateCapabilityEvidenceReference,
+  validateCapabilityEvidenceExecution,
   validateCapabilityMessageMatrix,
   validateReleaseReadyProfiles,
 } from './validate-tool-capability-claims';
@@ -487,7 +489,7 @@ describe('validateCapabilityEvidenceReference', () => {
           source: 'it("loads locales", () => {});',
         }),
       )?.code,
-    ).toBe('release-ready-evidence-test-not-collected');
+    ).toBe('release-ready-evidence-test-not-runnable');
   });
 
   it('rejects a marker for the wrong slug, category, or item', () => {
@@ -524,6 +526,137 @@ describe('validateCapabilityEvidenceReference', () => {
       ),
     ).toBeNull();
   });
+
+  it('rejects skipped, todo, only, commented, and dynamic declarations', () => {
+    const declarations = [
+      `it.skip(${JSON.stringify(marker)}, () => {});`,
+      `it.todo(${JSON.stringify(marker)});`,
+      `it.only(${JSON.stringify(marker)}, () => {});`,
+      `// it(${JSON.stringify(marker)}, () => {});`,
+      `const name = ${JSON.stringify(marker)}; it(name, () => {});`,
+    ];
+
+    for (const source of declarations) {
+      expect(
+        validateCapabilityEvidenceReference(
+          subject,
+          { file: 'src/lib/grammar-checker.test.ts', testName: marker },
+          () => ({
+            file: 'src/lib/grammar-checker.test.ts',
+            source,
+          }),
+        )?.code,
+        source,
+      ).toBe('release-ready-evidence-test-not-runnable');
+    }
+  });
+});
+
+describe('validateCapabilityEvidenceExecution', () => {
+  const reference = {
+    file: 'src/lib/grammar-checker.test.ts',
+    testName: '[capability:grammar-checker:mode:local-english-rules]',
+  };
+
+  it('accepts a genuinely passing exact-marker test', () => {
+    expect(
+      validateCapabilityEvidenceExecution(reference, { status: 'passed' }),
+    ).toBeNull();
+  });
+
+  it.each([
+    ['failed', 'release-ready-evidence-test-failed'],
+    ['skipped', 'release-ready-evidence-test-skipped'],
+    ['todo', 'release-ready-evidence-test-todo'],
+    ['not-collected', 'release-ready-evidence-test-not-collected'],
+    ['error', 'release-ready-evidence-test-cannot-run'],
+  ] as const)('rejects a %s exact-marker test result', (status, code) => {
+    expect(
+      validateCapabilityEvidenceExecution(reference, {
+        status,
+        details: `synthetic ${status}`,
+      })?.code,
+    ).toBe(code);
+  });
+});
+
+describe('runRepositoryEvidenceTest', () => {
+  it.each([
+    ['passed', 'expect(1).toBe(1);'],
+    ['failed', 'expect(1).toBe(2);'],
+  ] as const)('executes an exact-marker test that is %s', (status, body) => {
+    const fixtureDirectory = mkdtempSync(
+      path.join(process.cwd(), 'src/lib/.evidence-runner-'),
+    );
+    const fixturePath = path.join(fixtureDirectory, 'synthetic.test.ts');
+    const testName =
+      '[capability:synthetic-tool:mode:synthetic-mode]';
+
+    try {
+      writeFileSync(
+        fixturePath,
+        `import { expect, it } from 'vitest';\nit(${JSON.stringify(testName)}, () => { ${body} });\n`,
+      );
+      const evidence = {
+        file: path.relative(process.cwd(), fixturePath),
+        testName,
+      };
+      expect(runRepositoryEvidenceTest(evidence).status).toBe(status);
+    } finally {
+      rmSync(fixtureDirectory, { recursive: true, force: true });
+    }
+  });
+
+  it.each([
+    ['skipped', 'it.skip'],
+    ['todo', 'it.todo'],
+  ] as const)('reports an exact-marker test declared as %s', (status, call) => {
+    const fixtureDirectory = mkdtempSync(
+      path.join(process.cwd(), 'src/lib/.evidence-runner-'),
+    );
+    const fixturePath = path.join(fixtureDirectory, 'synthetic.test.ts');
+    const testName =
+      '[capability:synthetic-tool:mode:synthetic-mode]';
+
+    try {
+      writeFileSync(
+        fixturePath,
+        `import { it } from 'vitest';\n${call}(${JSON.stringify(testName)}, () => {});\n`,
+      );
+      expect(
+        runRepositoryEvidenceTest({
+          file: path.relative(process.cwd(), fixturePath),
+          testName,
+        }).status,
+      ).toBe(status);
+    } finally {
+      rmSync(fixtureDirectory, { recursive: true, force: true });
+    }
+  });
+
+  it('reports a commented-out exact-marker test as not collected', () => {
+    const fixtureDirectory = mkdtempSync(
+      path.join(process.cwd(), 'src/lib/.evidence-runner-'),
+    );
+    const fixturePath = path.join(fixtureDirectory, 'synthetic.test.ts');
+    const testName =
+      '[capability:synthetic-tool:mode:synthetic-mode]';
+
+    try {
+      writeFileSync(
+        fixturePath,
+        `import { it } from 'vitest';\n// it(${JSON.stringify(testName)}, () => {});\n`,
+      );
+      expect(
+        runRepositoryEvidenceTest({
+          file: path.relative(process.cwd(), fixturePath),
+          testName,
+        }).status,
+      ).toBe('not-collected');
+    } finally {
+      rmSync(fixtureDirectory, { recursive: true, force: true });
+    }
+  });
 });
 
 describe('runToolCapabilityClaimValidation', () => {
@@ -548,6 +681,7 @@ describe('runToolCapabilityClaimValidation', () => {
         loadLocalizedToolMessages: async () =>
           (await readMessageFile('en/tools/grammar-checker.json')) ?? {},
         loadEvidenceTestModule: evidenceModuleForProfile(profile),
+        runEvidenceTest: async () => ({ status: 'passed' }),
       },
     );
 
@@ -558,6 +692,140 @@ describe('runToolCapabilityClaimValidation', () => {
       exitCode: 0,
     });
   });
+
+  it(
+    'executes every exact-marker test for a synthetic required release-ready profile',
+    async () => {
+      const fixtureDirectory = mkdtempSync(
+        path.join(process.cwd(), 'src/lib/.evidence-release-ready-'),
+      );
+      const fixturePath = path.join(fixtureDirectory, 'synthetic.test.ts');
+      const relativeFixturePath = path.relative(process.cwd(), fixturePath);
+      const base = releaseBlockingGrammarProfile();
+      const moveEvidence = (reference: CapabilityEvidenceReference) => ({
+        ...reference,
+        file: relativeFixturePath,
+      });
+      const profile: ToolCapabilityProfile = {
+        ...base,
+        evidenceTests: base.evidenceTests.map(moveEvidence),
+        modes: base.modes.map((item) => ({
+          ...item,
+          evidence: moveEvidence(item.evidence!),
+        })),
+        acceptedInputs: base.acceptedInputs.map((item) => ({
+          ...item,
+          evidence: moveEvidence(item.evidence!),
+        })),
+        producedOutputs: base.producedOutputs.map((item) => ({
+          ...item,
+          evidence: moveEvidence(item.evidence!),
+        })),
+        browserOnlyFeatures: base.browserOnlyFeatures.map((item) => ({
+          ...item,
+          evidence: moveEvidence(item.evidence!),
+        })),
+        limits: base.limits.map((item) => ({
+          ...item,
+          evidence: moveEvidence(item.evidence!),
+        })),
+        supportedLocales: {
+          ...base.supportedLocales,
+          ui: ['en'],
+          engine: {
+            ...base.supportedLocales.engine,
+            evidence: moveEvidence(base.supportedLocales.engine.evidence!),
+          },
+        },
+      };
+      const references = [
+        ...profile.evidenceTests,
+        ...profile.modes.map(({ evidence }) => evidence!),
+        ...profile.acceptedInputs.map(({ evidence }) => evidence!),
+        ...profile.producedOutputs.map(({ evidence }) => evidence!),
+        ...profile.browserOnlyFeatures.map(({ evidence }) => evidence!),
+        ...profile.limits.map(({ evidence }) => evidence!),
+        profile.supportedLocales.engine.evidence!,
+      ];
+
+      try {
+        writeFileSync(
+          fixturePath,
+          [
+            `import { expect, it } from 'vitest';`,
+            ...references.map(
+              ({ testName }) =>
+                `it(${JSON.stringify(testName)}, () => { expect(true).toBe(true); });`,
+            ),
+          ].join('\n'),
+        );
+
+        const report = await runToolCapabilityClaimValidation(
+          { requireReleaseReady: 'grammar-checker' },
+          {
+            profiles: [profile],
+            locales: ['en'],
+            loadToolMessages: async () => ({
+              description: 'Checks English text with local static rules.',
+            }),
+            loadLocalizedBaseMessages: async () =>
+              (await readMessageFile('en/base.json')) ?? {},
+            loadLocalizedToolMessages: async () =>
+              (await readMessageFile('en/tools/grammar-checker.json')) ?? {},
+            loadEvidenceTestModule: repositoryEvidenceTestModule,
+            runEvidenceTest: runRepositoryEvidenceTest,
+          },
+        );
+
+        expect(report.issues).toEqual([]);
+        expect(report.exitCode).toBe(0);
+      } finally {
+        rmSync(fixtureDirectory, { recursive: true, force: true });
+      }
+    },
+    20_000,
+  );
+
+  it.each([
+    ['failed', 'release-ready-evidence-test-failed'],
+    ['skipped', 'release-ready-evidence-test-skipped'],
+    ['todo', 'release-ready-evidence-test-todo'],
+    ['not-collected', 'release-ready-evidence-test-not-collected'],
+    ['error', 'release-ready-evidence-test-cannot-run'],
+  ] as const)(
+    'fails required readiness when an exact evidence test is %s',
+    async (status, code) => {
+      const base = releaseBlockingGrammarProfile();
+      const profile: ToolCapabilityProfile = {
+        ...base,
+        supportedLocales: { ...base.supportedLocales, ui: ['en'] },
+      };
+      let runCount = 0;
+
+      const report = await runToolCapabilityClaimValidation(
+        { requireReleaseReady: 'grammar-checker' },
+        {
+          profiles: [profile],
+          locales: ['en'],
+          loadToolMessages: async () => ({
+            description: 'Checks English text with local static rules.',
+          }),
+          loadLocalizedBaseMessages: async () =>
+            (await readMessageFile('en/base.json')) ?? {},
+          loadLocalizedToolMessages: async () =>
+            (await readMessageFile('en/tools/grammar-checker.json')) ?? {},
+          loadEvidenceTestModule: evidenceModuleForProfile(profile),
+          runEvidenceTest: async () => {
+            runCount += 1;
+            return runCount === 1 ? { status } : { status: 'passed' };
+          },
+        },
+      );
+
+      expect(report.issues.some((issue) => issue.code === code)).toBe(true);
+      expect(report.exitCode).toBe(1);
+    },
+  );
 
   it('does not accept an English-fallback tool label as localized release evidence', async () => {
     const base = releaseBlockingGrammarProfile();

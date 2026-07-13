@@ -14,7 +14,7 @@
       "noCollaboration": "Aucune collaboration"
     }
   },
-  "detailed_description": "Notre générateur gratuit de diagrammes de Gantt aide les chefs de projet et les équipes à visualiser facilement les calendriers de projets. Un diagramme de Gantt est un graphique à barres horizontal qui montre les tâches du projet dans le temps, essentiel pour la planification et le suivi des projets. Avec ce générateur, vous pouvez créer des calendriers professionnels en ajoutant des tâches avec des dates de début, de fin et des pourcentages de progression. La chronologie visuelle aide à identifier les dépendances des tâches, les activités qui se chevauchent et les goulots d'étranglement potentiels. Parfait pour les sprints agiles, les projets de construction, les campagnes marketing et les cycles de développement logiciel. Exportez vos diagrammes de Gantt en PNG ou SVG pour les présentations et les rapports.",
+  "detailed_description": "Le générateur de diagrammes de Gantt transforme une courte liste de tâches en chronologie visuelle dans le navigateur. Ajoutez les noms, les dates de début et de fin et les pourcentages d’avancement, choisissez un thème, puis téléchargez le diagramme en PNG ou SVG. L’outil ne modélise ni dépendances ni jalons, ne calcule pas le chemin critique et n’enregistre pas les données du projet.",
   "usage_steps": [
     "Cliquez sur 'Ajouter une tâche' pour créer votre première tâche de projet",
     "Entrez le nom de la tâche, la date de début et la date de fin pour chaque tâche",
@@ -25,6 +25,6 @@
   "usage_examples": [
     "Créez une chronologie de sprint de développement logiciel avec les phases de Planification, Développement, Tests et Déploiement",
     "Construisez un diagramme de Gantt de campagne marketing montrant les dates de création de contenu, de révision et de lancement",
-    "Planifiez un projet de construction avec des jalons pour les fondations, la structure, l'électricité et les finitions"
+    "Affichez les phases fondations, structure, électricité et finitions sous forme de barres de tâches simples"
   ]
 }

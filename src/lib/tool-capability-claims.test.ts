@@ -1,5 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { getPilotToolCapabilityProfiles } from "../config/tool-capabilities";
+import {
+  affirmativeClaimFixture,
+  limitationClaimFixture,
+} from "./tool-capability-claim-test-fixtures";
 import { hasLocalizedCapabilityClaimDetector } from "./tool-capability-claim-taxonomy";
 import { locales, type Locale } from "./i18n";
 import { assessToolCapabilityClaims } from "./tool-capability-claims";
@@ -187,6 +191,38 @@ describe("assessToolCapabilityClaims", () => {
     }
   });
 
+  it("enforces every governed claim code in every UI locale and permits its honest limitation", () => {
+    const failures: string[] = [];
+    for (const profile of getPilotToolCapabilityProfiles()) {
+      for (const claim of profile.forbiddenClaims) {
+        for (const locale of locales) {
+          const affirmative = assessToolCapabilityClaims({
+            slug: profile.slug,
+            locale,
+            text: affirmativeClaimFixture(claim.code, locale),
+          });
+          const limitation = assessToolCapabilityClaims({
+            slug: profile.slug,
+            locale,
+            text: limitationClaimFixture(claim.code, locale),
+          });
+
+          if (!affirmative.issues.some((issue) => issue.code === claim.code)) {
+            failures.push(
+              `${profile.slug}/${claim.code}/${locale}/affirmative`,
+            );
+          }
+          if (limitation.issues.length > 0) {
+            failures.push(
+              `${profile.slug}/${claim.code}/${locale}/limitation:${limitation.issues.map((issue) => issue.code).join(",")}`,
+            );
+          }
+        }
+      }
+    }
+    expect(failures).toEqual([]);
+  });
+
   it("blocks Excel advanced-filter and multi-column-sort overclaims", () => {
     const advancedFilter = assessToolCapabilityClaims({
       slug: "excel-viewer",
@@ -259,6 +295,45 @@ describe("assessToolCapabilityClaims", () => {
     );
   });
 
+  it.each([
+    [
+      "de",
+      "Der visuelle Zeitplan hilft, Abhängigkeiten zu identifizieren. Planen Sie ein Bauvorhaben mit Meilensteinen.",
+    ],
+    [
+      "ja",
+      "視覚的なタイムラインは、タスクの依存関係を特定するのに役立ちます。マイルストーンを含む建設プロジェクトを計画します。",
+    ],
+    [
+      "pt",
+      "A linha do tempo visual ajuda a identificar dependências de tarefas. Planeje um projeto com marcos.",
+    ],
+    [
+      "fr",
+      "La chronologie visuelle aide à identifier les dépendances des tâches. Planifiez un projet avec des jalons.",
+    ],
+    [
+      "ru",
+      "Визуальный график помогает определить зависимости задач. Планируйте проект с вехами.",
+    ],
+  ] as const)(
+    "blocks the current %s Gantt dependency and milestone copy",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "gantt-chart-generator",
+        locale,
+        text,
+      });
+
+      expect(report.issues.map((issue) => issue.code)).toEqual(
+        expect.arrayContaining([
+          "gantt-generator-dependencies-claim",
+          "gantt-generator-milestones-claim",
+        ]),
+      );
+    },
+  );
+
   it("blocks native Russian grammar claims while the engine is English-only", () => {
     const report = assessToolCapabilityClaims({
       slug: "grammar-checker",
@@ -290,5 +365,42 @@ describe("assessToolCapabilityClaims", () => {
     });
 
     expect(report).toEqual({ governed: false, issues: [] });
+  });
+
+  it("preserves FAQ question context when a bare affirmative answer confirms an overclaim", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "en",
+      text: "Does this tool execute SQL queries?\nYes.",
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
+  it("does not turn a FAQ question with a bare negative answer into an overclaim", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "en",
+      text: "Does this tool execute SQL queries?\nNo.",
+    });
+
+    expect(report.issues).toEqual([]);
+  });
+
+  it("scans the affirmative side of a mixed positive/negative clause", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "hex-editor",
+      locale: "en",
+      text: "It does not open files, but it edits individual bytes directly.",
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "hex-editor-byte-edit-claim",
+    );
+    expect(report.issues.map((issue) => issue.code)).not.toContain(
+      "hex-editor-grid-claim",
+    );
   });
 });

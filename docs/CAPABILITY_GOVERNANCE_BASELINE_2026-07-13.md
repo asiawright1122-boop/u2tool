@@ -3,8 +3,9 @@
 ## Decision
 
 Capability governance was re-verified on 2026-07-14 in `Asia/Shanghai` after
-the final whole-branch governance fixes. The implementation checkpoint is
-`7bdcf8091fe6149cd10d49d293d9f9952ccd1561`.
+the second whole-branch review and its follow-up fixes. This document records
+the verified working-tree state; the final implementation commit is recorded
+in the local SDD report and repository history.
 
 This remains an inventory baseline, not production release approval. All six
 pilot profiles remain `inventory`, contain no behavior evidence, and render no
@@ -58,16 +59,19 @@ all `categoryEvidence: 0`.
 ### Locale-aware claims
 
 The claim detector now selects deterministic taxonomy rules by locale, splits
-copy into assertion segments, ignores questions and explicit limitations, and
-covers all governed claim codes in all ten UI locales. Tests include 60
-affirmative/limitation pairs across the six pilot families plus concrete Arabic
-Hex, Arabic Excel, and German Gantt regressions.
+mixed statements at localized contrast clauses, and evaluates each resulting
+assertion independently. Questions are ignored unless a following localized
+bare affirmative answer confirms the claim; bare negative answers and explicit
+limitations remain honest. Tests exercise every governed claim code in every
+UI locale with 320 affirmative and 320 limitation cases, plus mixed-clause,
+FAQ, and current-message regressions.
 
-The repository audit scans all six pilots in all ten locales (60 pages). The
-Arabic, Japanese, Korean, and Chinese copy found by the corrected detector was
-rewritten to match current production behavior. Chinese root/base SEO copies
-were kept aligned, and the SEO keyword contract was updated from unsupported
-binary-editor claims to truthful text/hex conversion claims.
+The repository audit scans all six pilots in all ten locales (60 pages). Copy
+found by both review waves was rewritten to match current production behavior.
+The second wave corrected German, Japanese, Portuguese, French, and Russian
+Gantt dependency and milestone claims in tool messages and aligned root/base
+SEO records. Current-message regressions cover those five locales alongside
+the earlier Arabic Hex, Arabic Excel, and other multilingual corrections.
 
 ### Visible disclosure labels
 
@@ -87,9 +91,19 @@ features, limits, and engine-language support.
 Evidence files must be approved repository test modules under `src/`,
 `scripts/`, `tests/`, or `e2e/`. Absolute paths, arbitrary files such as
 `package.json`, directories, missing files, outside paths, and symlink escapes
-are rejected. The named collected test must contain the exact capability marker
+are rejected. TypeScript AST collection accepts only direct `it` or `test`
+declarations with static literal names. Skipped, todo, only, commented, and
+dynamically named declarations are not runnable evidence. The named test must
+contain the exact capability marker
 `[capability:<slug>:<category>:<item-id>]`; unrelated tests and wrong
 slug/category/item markers fail.
+
+When `--require-release-ready` targets a `release-blocking` profile, the gate
+also invokes local Vitest for every exact evidence reference, parses its JSON
+result, requires exactly one collected assertion with the exact leaf title,
+and requires that assertion to pass. Failed, skipped, todo, not-collected, and
+cannot-run results each fail readiness. The runner uses a fixed executable and
+argument array without a shell, with the test-name pattern escaped as data.
 
 ## Fresh Verification
 
@@ -99,7 +113,7 @@ slug/category/item markers fail.
 npx vitest run src/config/tool-capabilities/index.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts scripts/validation/validate-tool-capability-claims.test.ts scripts/validation/tool-page-render-contract.test.ts src/components/tools/ToolCapabilityDisclosure.test.ts src/lib/tool-capability-disclosure.test.ts
 ```
 
-Result: exit `0`; 7/7 files and 236/236 tests passed.
+Result: exit `0`; 7/7 files and 263/263 tests passed.
 
 ### Default claims validator
 
@@ -149,7 +163,7 @@ Result: exit `0`.
 npm run check
 ```
 
-Result: exit `0`; 329 files checked; 0 errors; 0 warnings; 13 pre-existing
+Result: exit `0`; 330 files checked; 0 errors; 0 warnings; 13 pre-existing
 unused-value hints.
 
 ### Production build
@@ -188,9 +202,14 @@ Result: exit `0`; no output.
 
 - No pilot is release-ready; all evidence associations remain empty by design.
 - A future promotion must add real passing behavior tests with exact capability
-  markers before changing enforcement to `release-blocking`.
+  markers before changing enforcement to `release-blocking`; the required
+  release-ready command will execute every referenced test automatically.
 - Non-pilot legacy tools remain non-blocking.
 - The production lane remains closed independently of repository gate status.
+
+The local `.superpowers/sdd/final-fix-report.md` report is intentionally ignored
+and absent from the Git index; no `.superpowers/` path is part of the baseline
+commit.
 
 ## Recorded Minor Findings
 
