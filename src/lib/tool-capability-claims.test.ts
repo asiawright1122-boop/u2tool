@@ -1001,6 +1001,158 @@ describe("assessToolCapabilityClaims", () => {
     },
   );
 
+  it("carries a Japanese SQL object into an adjacent execution action", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "ja",
+      text: "SQLクエリを分析し、このアプリケーションで実行します。",
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
+  it("carries a Korean SQL object into an adjacent execution action", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "ko",
+      text: "SQL 쿼리를 분석하고 이 애플리케이션에서 실행합니다.",
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
+  it.each([
+    [
+      "ja",
+      "SQLクエリの実行方法を説明し、このアプリケーションで実行します。",
+    ],
+    [
+      "ko",
+      "SQL 쿼리 실행 방법을 설명하고 이 애플리케이션에서 실행합니다.",
+    ],
+  ] as const)(
+    "carries SQL context through meta guidance into an elided execution in %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues.map((issue) => issue.code)).toContain(
+        "sql-optimizer-execution-claim",
+      );
+    },
+  );
+
+  it("separates a Japanese after-clause from an unlocated execution", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "ja",
+      text: "外部データベースでSQLクエリを分析した後、実行します。",
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
+  it.each([
+    [
+      "ja",
+      "外部データベースでSQLクエリを分析してから、実行します。",
+    ],
+    [
+      "ja",
+      "外部データベースでSQLクエリを分析したのち、実行します。",
+    ],
+    [
+      "ko",
+      "외부 데이터베이스에서 SQL 쿼리를 분석한 후 실행합니다.",
+    ],
+    [
+      "ko",
+      "외부 데이터베이스에서 SQL 쿼리를 분석한 다음 실행합니다.",
+    ],
+    [
+      "ko",
+      "외부 데이터베이스에서 SQL 쿼리를 분석하고 나서 실행합니다.",
+    ],
+  ] as const)(
+    "separates temporal analysis from an unlocated execution in %s: %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues.map((issue) => issue.code)).toContain(
+        "sql-optimizer-execution-claim",
+      );
+    },
+  );
+
+  it.each([
+    ["ja", "SQLクエリを分析し、別のアプリケーションで実行します。"],
+    ["ko", "SQL 쿼리를 분석하고 다른 애플리케이션에서 실행합니다."],
+  ] as const)(
+    "carries SQL context without reclassifying external execution in %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues).toEqual([]);
+    },
+  );
+
+  it("does not let a later Japanese negative action suppress execution", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "ja",
+      text: "このアプリケーションでSQLクエリを実行できますが、結果は保存できません。",
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
+  it("does not let a later Korean negative action suppress execution", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "ko",
+      text: "이 애플리케이션에서 SQL 쿼리를 실행할 수 있지만 결과는 저장할 수 없습니다.",
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
+  it.each([
+    ["ja", "このアプリケーションではSQLクエリを実行できません。"],
+    ["ko", "이 애플리케이션에서는 SQL 쿼리를 실행할 수 없습니다."],
+  ] as const)(
+    "keeps direct negative execution clean in %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues).toEqual([]);
+    },
+  );
+
   it.each(locales)(
     "flags a contradictory bare-No FAQ explanation in %s",
     (locale) => {

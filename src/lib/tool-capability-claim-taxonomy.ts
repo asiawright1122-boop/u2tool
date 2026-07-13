@@ -90,18 +90,18 @@ const FINAL_LOCATION_BINDING_BY_LOCALE: Partial<
 
 const SQL_EXECUTION_ACTION_BY_LOCALE = {
   ja: {
-    boundary: /[。！？!?；;\n\r]+|(?:分析|説明|表示|確認|生成|接続|実行)(?:して|し(?!た))\s*[、,]?\s*/gu,
+    boundary: /[。！？!?；;\n\r]+|(?:分析|説明|表示|確認|生成|接続|実行)(?:してから|した(?:後|のち)(?:に|で)?|して|し(?!た))\s*[、,]?\s*/gu,
     predicate: /実行/gu,
     sqlObject: /(?:SQL|クエリ)/u,
     meta: /^実行(?:(?:する|の)?(?:方法|手順|ステップ|ガイド|案内|指示|仕方))/u,
-    negation: /^実行(?:できません|しません|しない|せず|不可)/u,
+    negation: /^実行(?:(?:は|には|を)?(?:できません|しません|しない|せず|不可)|には対応しません)/u,
   },
   ko: {
-    boundary: /[.!?。！？；;\n\r]+|(?:분석|설명|표시|확인|생성|연결|실행)(?:하고|하며|해서)\s*,?\s*/gu,
+    boundary: /[.!?。！？；;\n\r]+|(?:분석|설명|표시|확인|생성|연결|실행)(?:한\s+(?:후|다음)|하고\s+나서|하고|하며|해서)\s*,?\s*/gu,
     predicate: /실행/gu,
     sqlObject: /(?:SQL|쿼리)/u,
     meta: /^실행(?:(?:하는|할|의)?\s*(?:방법|단계|절차|가이드|안내|지침))/u,
-    negation: /^실행(?:하지\s*(?:않습니다|않아요|않는다|마세요)|할\s*수\s*없습니다|하지\s*않음)/u,
+    negation: /^실행(?:하지\s*(?:않습니다|않아요|않는다|마세요)|할\s*수\s*없습니다|하지\s*않음|(?:을|은)\s*지원하지\s*않습니다)/u,
   },
 } as const;
 
@@ -384,6 +384,8 @@ function matchesJaKoSqlExecutionAction(
   action.predicate.lastIndex = 0;
   const predicates = [...segment.matchAll(action.predicate)];
   action.predicate.lastIndex = 0;
+  let sqlContext = false;
+  let contextCursor = 0;
 
   return predicates.some((predicate) => {
     if (predicate.index === undefined) {
@@ -392,6 +394,11 @@ function matchesJaKoSqlExecutionAction(
 
     const beforePredicate = segment.slice(0, predicate.index);
     const fromPredicate = segment.slice(predicate.index);
+    sqlContext ||= test(
+      action.sqlObject,
+      segment.slice(contextCursor, predicate.index),
+    );
+    contextCursor = predicate.index + predicate[0].length;
     action.boundary.lastIndex = 0;
     const boundaries = [...beforePredicate.matchAll(action.boundary)];
     action.boundary.lastIndex = 0;
@@ -400,18 +407,10 @@ function matchesJaKoSqlExecutionAction(
       ? 0
       : finalBoundary.index + finalBoundary[0].length;
     const actionPrefix = beforePredicate.slice(actionStart);
-    action.boundary.lastIndex = predicate.index;
-    const nextBoundary = action.boundary.exec(segment);
-    action.boundary.lastIndex = 0;
-    const actionEnd = nextBoundary
-      ? nextBoundary.index + nextBoundary[0].length
-      : segment.length;
-    const actionClause = segment.slice(actionStart, actionEnd);
     if (
-      !test(action.sqlObject, actionPrefix) ||
+      !sqlContext ||
       test(action.meta, fromPredicate) ||
-      test(action.negation, fromPredicate) ||
-      test(NEGATION_BY_LOCALE[locale], actionClause)
+      test(action.negation, fromPredicate)
     ) {
       return false;
     }
