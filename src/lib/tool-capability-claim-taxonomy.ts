@@ -59,17 +59,33 @@ const BARE_NEGATIVE_BY_LOCALE: Record<Locale, RegExp> = {
   ar: /^(?:لا|كلا)[.]?$/u,
 };
 
-const FAQ_EXTERNAL_RECOMMENDATION_BY_LOCALE: Record<Locale, RegExp> = {
+const FAQ_EXTERNAL_RECOMMENDATION_BY_LOCALE: Partial<Record<Locale, RegExp>> = {
   en: /^(?:use|consult|run|check|verify)\s+(?:(?:(?:your|another)\s+(?:(?:external|third-party|provider-owned|vendor-owned)\s+)?|(?:(?:an?|the)\s+)?(?:external|third-party|provider-owned|vendor-owned)\s+)(?:database|service|provider|application|browser|server|system|tool)(?:'s)?\b|(?:your\s+)?(?:provider|vendor)(?:'s)?\s+(?:service|application|server|system|tool)\b)/iu,
   zh: /^(?:请)?(?:使用|改用|查看|检查|运行)(?:您的|你的|外部|第三方|其他|提供商的|供应商的)(?:数据库|服务|提供商|应用程序?|浏览器|服务器|系统|工具)/u,
-  ja: /^(?=.{0,200}(?:使用|利用|確認|実行)してください).{0,140}(?:あなたの|外部|サードパーティー|別の|プロバイダーの|ベンダーの)(?:データベース|サービス|プロバイダー|アプリ(?:ケーション)?|Webアプリ(?:ケーション)?|ブラウザー|サーバー|システム|ツール)(?:(?:上)?で|にて).{0,100}(?:使用|利用|確認|実行)してください/u,
-  ko: /^(?=.{0,200}(?:사용|이용|확인|실행)하세요).{0,140}(?:사용자의|외부|서드파티|다른|공급자의|벤더의)\s*(?:데이터베이스|서비스|공급자|애플리케이션|앱|웹 애플리케이션|브라우저|서버|시스템|도구)(?:상)?에서.{0,100}(?:사용|이용|확인|실행)하세요/u,
   es: /^(?:usa|use|utiliza|utilice|consulta|consulte|ejecuta|ejecute)\s+(?:(?:su|otr\p{L}*)\s+(?:(?:extern\p{L}*|de terceros?)\s+)?|(?:(?:una?|la)\s+)?(?:extern\p{L}*|de terceros?|del proveedor|del vendedor)\s+)(?:base de datos|servicio|proveedor|aplicación|navegador|servidor|sistema|herramienta)\b/iu,
   pt: /^(?:usa|use|utiliza|utilize|consulta|consulte|executa|execute)\s+(?:(?:seu|sua|outr\p{L}*)\s+(?:(?:extern\p{L}*|de terceiros?)\s+)?|(?:(?:um|uma|o|a)\s+)?(?:extern\p{L}*|de terceiros?|do provedor|do fornecedor)\s+)(?:banco de dados|serviço|provedor|aplicativo|aplicação|navegador|servidor|sistema|ferramenta)\b/iu,
   fr: /^(?:utilise|utilisez|consulte|consultez|exécute|exécutez)\s+(?:(?:votre|autre)\s+(?:(?:externe|tierce)\s+)?|(?:(?:un|une|le|la)\s+)?(?:externe|tierce|du fournisseur|du prestataire)\s+)(?:base de données|service|fournisseur|application|navigateur|serveur|système|outil)\b/iu,
   de: /^(?:verwende|verwenden|verwendet|nutze|nutzen|nutzt|prüfe|prüfen|prüft)\s+(?:(?:Ihr\p{L}*|ander\p{L}*)\s+(?:extern\p{L}*\s+)?|(?:(?:ein\p{L}*|der|die|das)\s+)?(?:extern\p{L}*|Drittanbieter|anbieter-?eigen\p{L}*|hersteller-?eigen\p{L}*)\s+)(?:Datenbank|Dienst|Anbieter|Anwendung|Browser|Server|System|Werkzeug|Tool)\b/iu,
   ru: /^(?:используй|используйте|запусти|запустите|проверь|проверьте)(?:\s|[,:;])(?:(?:ваш\p{L}*|друг\p{L}*)\s+(?:внешн\p{L}*\s+)?|(?:внешн\p{L}*|сторонн\p{L}*|провайдерск\p{L}*|поставщик\p{L}*)\s+)(?:баз\p{L}* данных|сервис\p{L}*|провайдер\p{L}*|приложени\p{L}*|браузер\p{L}*|сервер\p{L}*|систем\p{L}*|инструмент\p{L}*)/iu,
   ar: /^(?:استخدم|استخدمي|استخدموا|شغّل|شغلي|شغّلوا|تحقق)\s+(?:(?:قاعدة البيانات|الخدمة|المزود|التطبيق|المتصفح|الخادم|النظام|الأداة)\s+(?:الخارجية|الخارجي|لديك|الخاصة بك|لطرف ثالث|لمزود|لمورّد)|(?:خارجي|خارجية|طرف ثالث|مزود|مورّد).{0,10}(?:قاعدة البيانات|الخدمة|التطبيق|المتصفح|الخادم|النظام|الأداة))/u,
+};
+
+const FAQ_FINAL_LOCATION_BINDING_BY_LOCALE: Partial<
+  Record<
+    Locale,
+    { predicate: RegExp; location: RegExp; externalLocation: RegExp }
+  >
+> = {
+  ja: {
+    predicate: /(?:使用|利用|確認|実行)してください/gu,
+    location: /(?:(?:あなたの|私たちの|我々の|当|本|この|その|外部|サードパーティー|別の|プロバイダーの|ベンダーの)?(?:Web)?(?:データベース|サービス|プロバイダー|アプリ(?:ケーション)?|ブラウザー|サーバー|システム|ツール)|U2Tool)(?:(?:上)?で|にて)/gu,
+    externalLocation: /^(?:あなたの|外部|サードパーティー|別の|プロバイダーの|ベンダーの)(?:Web)?(?:データベース|サービス|プロバイダー|アプリ(?:ケーション)?|ブラウザー|サーバー|システム|ツール)(?:(?:上)?で|にて)$/u,
+  },
+  ko: {
+    predicate: /(?:사용|이용|확인|실행)하세요/gu,
+    location: /(?:(?:사용자의|우리|본|이|그|외부|서드파티|다른|공급자의|벤더의)?\s*(?:웹\s*)?(?:데이터베이스|서비스|공급자|애플리케이션|앱|브라우저|서버|시스템|도구)|U2Tool)(?:상)?에서/gu,
+    externalLocation: /^(?:사용자의|외부|서드파티|다른|공급자의|벤더의)\s*(?:웹\s*)?(?:데이터베이스|서비스|공급자|애플리케이션|앱|브라우저|서버|시스템|도구)(?:상)?에서$/u,
+  },
 };
 
 const HEX_GRID_BY_LOCALE: Record<Locale, RegExp> = {
@@ -191,7 +207,7 @@ const CLAIM_TARGETS: Readonly<Record<string, ClaimTargets>> = {
     /Live-Datenbank|Datenbankverbindung/iu, /рабоч\p{L}* баз\p{L}* данных|подключени\p{L}* к баз\p{L}* данных/iu, /قاعدة بيانات مباشرة|الاتصال بقاعدة البيانات/u,
   ),
   "sql-optimizer-execution-claim": localeTargets(
-    /(?:run|execute).{0,12}(?:SQL|queries?)/iu, /(?:运行|执行).{0,8}(?:SQL|查询)/u, /(?:SQL|クエリ).{0,8}(?:実行|走らせ)/u, /(?:SQL|쿼리).{0,8}(?:실행)/u,
+    /(?:run|execute).{0,12}(?:SQL|queries?)/iu, /(?:运行|执行).{0,8}(?:SQL|查询)/u, /(?:SQL|クエリ).{0,40}(?:実行|走らせ)/u, /(?:SQL|쿼리).{0,40}(?:실행)/u,
     /(?:ejecuta|corre).{0,12}(?:SQL|consultas?)/iu, /(?:executa|roda).{0,12}(?:SQL|consultas?)/iu, /(?:exécute|lance).{0,12}(?:SQL|requêtes?)/iu,
     /(?:führt|startet).{0,12}(?:SQL|Abfragen?)/iu, /(?:выполняет|запускает).{0,12}(?:SQL|запрос\p{L}*)/iu, /(?:ينفذ|يشغل).{0,12}(?:SQL|الاستعلامات)/u,
   ),
@@ -306,6 +322,35 @@ function test(pattern: RegExp, value: string): boolean {
   return matched;
 }
 
+function matchesExternalFaqRecommendation(
+  locale: Locale,
+  segment: string,
+): boolean {
+  const locationBinding = FAQ_FINAL_LOCATION_BINDING_BY_LOCALE[locale];
+  if (locationBinding) {
+    locationBinding.predicate.lastIndex = 0;
+    const predicates = [...segment.matchAll(locationBinding.predicate)];
+    locationBinding.predicate.lastIndex = 0;
+    const finalPredicate = predicates.at(-1);
+    if (!finalPredicate || finalPredicate.index === undefined) {
+      return false;
+    }
+
+    const beforePredicate = segment.slice(0, finalPredicate.index);
+    locationBinding.location.lastIndex = 0;
+    const locations = [...beforePredicate.matchAll(locationBinding.location)];
+    locationBinding.location.lastIndex = 0;
+    const finalLocation = locations.at(-1)?.[0];
+    return Boolean(
+      finalLocation &&
+        test(locationBinding.externalLocation, finalLocation),
+    );
+  }
+
+  const recommendation = FAQ_EXTERNAL_RECOMMENDATION_BY_LOCALE[locale];
+  return Boolean(recommendation && test(recommendation, segment));
+}
+
 function splitClaimSegments(text: string, locale?: Locale): string[] {
   const sentences =
     text.match(/[^\n\r.!?。！？؟؛;]+[.!?。！？؟؛;]?/gu) ?? [];
@@ -352,7 +397,7 @@ export function matchesLocalizedCapabilityClaim(
       faqQuestion &&
       /[?？؟]\s*$/u.test(faqQuestion) &&
       test(BARE_NEGATIVE_BY_LOCALE[resolvedLocale], previous) &&
-      test(FAQ_EXTERNAL_RECOMMENDATION_BY_LOCALE[resolvedLocale], segment)
+      matchesExternalFaqRecommendation(resolvedLocale, segment)
     ) {
       return false;
     }

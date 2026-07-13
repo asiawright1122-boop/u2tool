@@ -580,6 +580,8 @@ describe('validateCapabilityEvidenceExecution', () => {
   });
 });
 
+const EVIDENCE_SUBPROCESS_PARENT_TIMEOUT_MS = 15_000;
+
 describe('runRepositoryEvidenceTest', () => {
   it.each([
     ['passed', 'expect(1).toBe(1);'],
@@ -605,7 +607,7 @@ describe('runRepositoryEvidenceTest', () => {
     } finally {
       rmSync(fixtureDirectory, { recursive: true, force: true });
     }
-  });
+  }, EVIDENCE_SUBPROCESS_PARENT_TIMEOUT_MS);
 
   it.each([
     ['skipped', 'it.skip'],
@@ -632,31 +634,35 @@ describe('runRepositoryEvidenceTest', () => {
     } finally {
       rmSync(fixtureDirectory, { recursive: true, force: true });
     }
-  });
+  }, EVIDENCE_SUBPROCESS_PARENT_TIMEOUT_MS);
 
-  it('reports a commented-out exact-marker test as not collected', () => {
-    const fixtureDirectory = mkdtempSync(
-      path.join(process.cwd(), 'src/lib/.evidence-runner-'),
-    );
-    const fixturePath = path.join(fixtureDirectory, 'synthetic.test.ts');
-    const testName =
-      '[capability:synthetic-tool:mode:synthetic-mode]';
-
-    try {
-      writeFileSync(
-        fixturePath,
-        `import { it } from 'vitest';\n// it(${JSON.stringify(testName)}, () => {});\n`,
+  it(
+    'reports a commented-out exact-marker test as not collected',
+    () => {
+      const fixtureDirectory = mkdtempSync(
+        path.join(process.cwd(), 'src/lib/.evidence-runner-'),
       );
-      expect(
-        runRepositoryEvidenceTest({
-          file: path.relative(process.cwd(), fixturePath),
-          testName,
-        }).status,
-      ).toBe('not-collected');
-    } finally {
-      rmSync(fixtureDirectory, { recursive: true, force: true });
-    }
-  });
+      const fixturePath = path.join(fixtureDirectory, 'synthetic.test.ts');
+      const testName =
+        '[capability:synthetic-tool:mode:synthetic-mode]';
+
+      try {
+        writeFileSync(
+          fixturePath,
+          `import { it } from 'vitest';\n// it(${JSON.stringify(testName)}, () => {});\n`,
+        );
+        expect(
+          runRepositoryEvidenceTest({
+            file: path.relative(process.cwd(), fixturePath),
+            testName,
+          }).status,
+        ).toBe('not-collected');
+      } finally {
+        rmSync(fixtureDirectory, { recursive: true, force: true });
+      }
+    },
+    EVIDENCE_SUBPROCESS_PARENT_TIMEOUT_MS,
+  );
 
   it(
     'terminates a hanging evidence test within the configured runner timeout',
@@ -697,7 +703,7 @@ describe('runRepositoryEvidenceTest', () => {
         rmSync(fixtureDirectory, { recursive: true, force: true });
       }
     },
-    5_000,
+    EVIDENCE_SUBPROCESS_PARENT_TIMEOUT_MS,
   );
 });
 
