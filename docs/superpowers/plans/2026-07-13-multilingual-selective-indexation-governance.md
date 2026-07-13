@@ -93,6 +93,7 @@ export interface IndexReadinessEvidence {
   locale: Locale;
   priority: 'pilot' | 'p1' | 'catalog';
   hasCapabilityProfile: boolean;
+  capabilityEnforcement: 'inventory' | 'release-blocking' | 'unprofiled';
   localEngineSupportsLocale: boolean;
   capabilityClaimIssues: string[];
   content: ContentEvidence;
@@ -123,7 +124,7 @@ Tests must lock these decisions:
 5. Unsupported locale, no current or historical impressions, fallback copy, no independent split copy → `noindex-candidate`.
 6. Missing canonical/hreflang/render evidence → `manual-review`.
 7. Protected control → `manual-review` regardless of score.
-8. Missing capability profile on a pilot or P1 page → `manual-review`.
+8. Missing capability profile or inventory-only profile on a pilot/P1 release candidate → `manual-review`.
 9. One-query dominance above `0.80` adds a reason and prevents automatic `keep`.
 
 - [ ] **Step 2: Run and confirm failure**
@@ -142,7 +143,7 @@ Implement rules in this order:
 protected control
 -> missing critical evidence
 -> technical failure
--> missing required profile
+-> missing required profile or release-ready enforcement
 -> capability claim issue or unsupported locale with demand
 -> confirmed overlap
 -> zero-demand + unsupported/thin/fallback candidate
@@ -238,7 +239,7 @@ Tests must prove:
 - `ru/grammar-checker` passes only with an English-input disclosure.
 - Native Russian checking claims fail.
 - Language-neutral file tools do not fail simply because UI locale differs.
-- A profile that declares a local-engine locale without a locale fixture path fails.
+- A release-blocking profile that declares a local-engine locale without a locale fixture path fails; an inventory profile is reported as not release-ready rather than pretending to have fixtures.
 
 - [ ] **Step 2: Implement the CLI across all profiled tools and locales**
 

@@ -23,7 +23,7 @@
 | 5 | `typing-speed-test` | `1.0.0` | `2.0.0` |
 | 6 | `gantt-chart-generator` | `1.0.0` | `2.0.0` |
 
-Do not update a profile version before the behavior tests named in `evidenceTests` pass.
+Do not update a profile version or promote `enforcement` from `inventory` to `release-blocking` before the public-behavior tests named in `evidenceTests` pass. Every visible capability value and limit uses a localized `labelKey`; language-neutral tools never declare fake engine locales.
 
 ## Task 1: Ship The Grammar Language Gate
 
@@ -102,13 +102,14 @@ For every locale, scan name, description, SEO fields, detailed description, step
 
 - [ ] **Step 6: Update the profile to `1.1.0`**
 
-Keep `supportedLocales.localEngine: ['en']`. Add `grammar-language-support.test.ts` and `grammar-rules.test.ts` to `evidenceTests`. No optional server features are enabled in this release.
+Set `supportedLocales.engine` to `{ kind: 'engine-limited', local: ['en'], optionalServer: [] }`. Add `grammar-language-support.test.ts` and `grammar-rules.test.ts` to `evidenceTests`, set `enforcement: 'release-blocking'`, and add the English and Russian Grammar routes to the rendered contract. No optional server features are enabled in this release.
 
 - [ ] **Step 7: Run gates and commit**
 
 ```bash
 npx vitest run src/lib/grammar-language-support.test.ts src/lib/grammar-rules.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts
 npm run validate:tool-capability-claims
+npm run validate:tool-capability-claims -- --require-release-ready grammar-checker
 npm run validate:tool-page-render-contract -- --filter grammar-checker
 npm run check
 git add src/lib/grammar-language-support.ts src/lib/grammar-language-support.test.ts src/lib/grammar-rules.test.ts src/lib/fixtures/grammar-checker/en.ts src/components/tools/GrammarChecker.svelte src/config/tool-capabilities/profiles/grammar-checker.ts src/messages scripts/validation/tool-page-render-contract.ts
@@ -182,7 +183,7 @@ Do not add disassembly, encoding selectors, remote URL open, or format interpret
 
 - [ ] **Step 5: Update the capability profile to `2.0.0`**
 
-Enable file editor and text converter modes, binary file input, modified binary output, byte editing, search, and download. Remove the four old forbidden claims only after the new tests pass. Add forbidden claims for disassembly, remote upload, executable analysis, and professional reverse-engineering workflows.
+Enable file editor and text converter modes, binary file input, modified binary output, byte editing, search, and download. Set `supportedLocales.engine` to `{ kind: 'language-neutral' }`, set `enforcement: 'release-blocking'`, and name `src/lib/hex-editor.test.ts` in `evidenceTests`. Remove the four old forbidden claims only after the new tests pass. Add forbidden claims for disassembly, remote upload, executable analysis, and professional reverse-engineering workflows. Add the English Hex route to the rendered contract.
 
 - [ ] **Step 6: Align localized copy**
 
@@ -193,6 +194,7 @@ Describe this as a browser binary file editor with a 2 MiB limit. Avoid claims a
 ```bash
 npx vitest run src/lib/hex-editor.test.ts src/config/tool-capabilities/index.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts
 npm run validate:tool-capability-claims
+npm run validate:tool-capability-claims -- --require-release-ready hex-editor
 npm run check
 npm run build
 git add src/lib/hex-editor.ts src/lib/hex-editor.test.ts src/components/tools/HexEditor.svelte src/config/tool-capabilities/profiles/hex-editor.ts src/messages
@@ -276,13 +278,14 @@ The UI must say it does not connect to a database, execute SQL, or guarantee fas
 
 - [ ] **Step 5: Update the profile to `2.0.0`**
 
-Enable dialect selection, static analysis, index candidates, formatting, and pasted EXPLAIN text analysis. Keep database connection, execution, automatic rewrite, verified indexes, and guaranteed speed as forbidden claims.
+Enable dialect selection, static analysis, index candidates, formatting, and pasted EXPLAIN text analysis. Set `supportedLocales.engine` to `{ kind: 'engine-limited', local: ['en'], optionalServer: [] }` until localized diagnostic fixtures pass, set `enforcement: 'release-blocking'`, and name `src/lib/sql-query-optimizer.test.ts` in `evidenceTests`. Non-English pages must disclose that local diagnostic explanations are English. Keep database connection, execution, automatic rewrite, verified indexes, and guaranteed speed as forbidden claims. Add the English SQL route to the rendered contract.
 
 - [ ] **Step 6: Verify and commit the local analyzer**
 
 ```bash
 npx vitest run src/lib/sql-query-optimizer.test.ts src/lib/tool-stubs-runtime.test.ts src/lib/tool-capability-claims.test.ts
 npm run validate:tool-capability-claims
+npm run validate:tool-capability-claims -- --require-release-ready sql-query-optimizer
 npm run check
 git add src/lib/sql-query-optimizer.ts src/lib/sql-query-optimizer.test.ts src/lib/tool-stubs.ts src/lib/tool-stubs-runtime.test.ts src/components/tools/SqlQueryOptimizer.svelte src/config/tool-capabilities/profiles/sql-query-optimizer.ts src/messages
 git commit -m "feat: add local database-aware SQL analysis"
@@ -375,7 +378,7 @@ The server action is a separate button labeled as optional. Before the first req
 
 - [ ] **Step 6: Update the profile to `2.1.0`**
 
-Add one optional server feature and keep all local capabilities unchanged. Do not add non-English engine locales unless locale-specific response fixtures pass.
+Add one optional server feature and keep `enforcement: 'release-blocking'` and all local capabilities unchanged. Do not add non-English engine locales unless locale-specific response fixtures pass.
 
 - [ ] **Step 7: Verify disabled, limited, fallback, and privacy behavior**
 
@@ -462,11 +465,14 @@ Render:
 
 Enforce a 10 MiB file limit. Do not upload the workbook.
 
-- [ ] **Step 5: Update profile to `2.0.0`, copy, tests, and commit**
+- [ ] **Step 5: Update profile to `2.0.0`, copy, tests, rendered contract, and commit**
+
+Set `supportedLocales.engine` to `{ kind: 'language-neutral' }`, set `enforcement: 'release-blocking'`, name `src/lib/excel-data-viewer.test.ts` in `evidenceTests`, and add the English Excel route to the rendered contract.
 
 ```bash
 npx vitest run src/lib/excel-data-viewer.test.ts src/lib/tool-capability-claims.test.ts
 npm run validate:tool-capability-claims
+npm run validate:tool-capability-claims -- --require-release-ready excel-viewer
 npm run check
 npm run build
 git add src/lib/excel-data-viewer.ts src/lib/excel-data-viewer.test.ts src/lib/excel-data-viewer.fixture.ts src/components/tools/ExcelViewer.svelte src/config/tool-capabilities/profiles/excel-viewer.ts src/messages
@@ -544,9 +550,12 @@ Keep `calculateTypingStats` exported from `calculator-utils.ts` for unrelated us
 
 - [ ] **Step 5: Update profile to `2.0.0`, verify, and commit**
 
+Set the engine-limited prompt locales to the ten locales with passing prompt fixtures, set `enforcement: 'release-blocking'`, name `src/lib/typing-speed-test.test.ts` in `evidenceTests`, and add the English Typing route to the rendered contract.
+
 ```bash
 npx vitest run src/lib/typing-speed-test.test.ts src/lib/tool-stubs-runtime.test.ts src/messages/seo-governance.test.ts
 npm run validate:tool-capability-claims
+npm run validate:tool-capability-claims -- --require-release-ready typing-speed-test
 npm run check
 git add src/lib/typing-speed-test.ts src/lib/typing-speed-test.test.ts src/lib/calculator-utils.ts src/components/tools/TypingSpeedTest.svelte src/config/tool-capabilities/profiles/typing-speed-test.ts src/messages
 git commit -m "feat: add timed typing modes and local history"
@@ -612,13 +621,14 @@ Imported data is parsed locally. No collaboration, cloud projects, resource allo
 
 - [ ] **Step 5: Update the profile to `2.0.0`**
 
-Remove dependency and critical-path forbidden claims only after tests pass. Keep collaboration, cloud sync, resource management, enterprise workflow, and live multi-user claims forbidden.
+Set `supportedLocales.engine` to `{ kind: 'language-neutral' }`, set `enforcement: 'release-blocking'`, name `src/lib/gantt-chart.test.ts` in `evidenceTests`, and add the English Gantt route to the rendered contract. Remove dependency and critical-path forbidden claims only after tests pass. Keep collaboration, cloud sync, resource management, enterprise workflow, and live multi-user claims forbidden.
 
 - [ ] **Step 6: Verify and commit**
 
 ```bash
 npx vitest run src/lib/gantt-chart.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts
 npm run validate:tool-capability-claims
+npm run validate:tool-capability-claims -- --require-release-ready gantt-chart-generator
 npm run check
 npm run build
 git add src/lib/gantt-chart.ts src/lib/gantt-chart.test.ts src/components/tools/GanttChartGenerator.svelte src/config/tool-capabilities/profiles/gantt-chart-generator.ts src/messages

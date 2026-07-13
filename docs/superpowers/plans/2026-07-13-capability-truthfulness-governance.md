@@ -8,7 +8,7 @@
 
 **Tech Stack:** TypeScript, Astro, Vitest, localized JSON messages, existing `content-trust.js`, `loadToolPageMessages`, repository validation scripts.
 
-**Global Constraints:** Start profiles from current production behavior, not planned behavior; update the profile version only when matching behavior tests pass; keep non-pilot legacy tools non-blocking; do not generate marketing copy from capability profiles; do not deploy before the master plan opens the production lane.
+**Global Constraints:** Start profiles from current production behavior, not planned behavior; inventory profiles may constrain claims but cannot render public capability disclosures or pass a release-ready gate; promote a profile to release-blocking only when matching public-behavior tests pass; keep non-pilot legacy tools non-blocking; resolve every user-visible capability label from localized message files; distinguish language-neutral tools from language-limited engines; do not deploy before the master plan opens the production lane.
 
 ---
 
@@ -26,7 +26,6 @@
 - `src/config/tool-capabilities/profiles/gantt-chart-generator.ts`
 - `src/config/tool-capabilities/index.ts`
 - `src/config/tool-capabilities/index.test.ts`
-- `src/config/tool-capabilities/current-state-evidence.test.ts`
 - `src/lib/tool-capability-claims.ts`
 - `src/lib/tool-capability-claims.test.ts`
 - `src/components/tools/ToolCapabilityDisclosure.astro`
@@ -52,15 +51,18 @@
 - `scripts/validation/tool-page-render-contract.test.ts`
 - `package.json`
 
-## Task 1: Define The Capability Contract
+## Task 1: Define The Capability Contract And Register Inventory Profiles
 
 **Files:**
 - Create: `src/config/tool-capabilities/types.ts`
 - Create: `src/config/tool-capabilities/define-profile.ts`
+- Create: six files under `src/config/tool-capabilities/profiles/`
+- Create: `src/config/tool-capabilities/index.ts`
+- Create: `src/config/tool-capabilities/index.test.ts`
 
 - [ ] **Step 1: Write the contract test first**
 
-Create `src/config/tool-capabilities/index.test.ts` with the initial shape test:
+Create `src/config/tool-capabilities/index.test.ts` with the initial registry test:
 
 ```ts
 import { describe, expect, it } from 'vitest';
@@ -81,8 +83,8 @@ describe('pilot tool capability registry', () => {
     for (const slug of PILOT_TOOL_SLUGS) {
       const profile = getToolCapabilityProfile(slug);
       expect(profile?.slug).toBe(slug);
-      expect(profile?.version).toMatch(/^1\.0\.0$/);
-      expect(profile?.evidenceTests.length).toBeGreaterThan(0);
+      expect(profile?.version).toMatch(/^\d+\.\d+\.\d+$/);
+      expect(profile?.enforcement).toBe('inventory');
       expect(profile?.forbiddenClaims.length).toBeGreaterThan(0);
       expect(profile?.supportedLocales.ui).toEqual(locales);
     }
@@ -100,7 +102,7 @@ describe('pilot tool capability registry', () => {
 npx vitest run src/config/tool-capabilities/index.test.ts
 ```
 
-Expected: FAIL because `src/config/tool-capabilities/index.ts` does not exist.
+Expected: FAIL because the capability registry does not exist.
 
 - [ ] **Step 3: Create the shared types**
 
@@ -110,6 +112,7 @@ Create `src/config/tool-capabilities/types.ts`:
 import type { Locale } from '@/lib/i18n';
 
 export type ToolRuntime = 'browser' | 'optional-server';
+export type ToolCapabilityEnforcement = 'inventory' | 'release-blocking';
 
 export interface CapabilityMode {
   id: string;
@@ -137,17 +140,23 @@ export interface ForbiddenCapabilityClaim {
 export interface ToolCapabilityProfile {
   slug: string;
   version: string;
+  enforcement: ToolCapabilityEnforcement;
   modes: readonly CapabilityMode[];
   acceptedInputs: readonly CapabilityValue[];
   producedOutputs: readonly CapabilityValue[];
   supportedLocales: {
     ui: readonly Locale[];
-    localEngine: readonly Locale[];
-    optionalServerEngine: readonly Locale[];
+    engine:
+      | { kind: 'language-neutral' }
+      | {
+          kind: 'engine-limited';
+          local: readonly Locale[];
+          optionalServer: readonly Locale[];
+        };
   };
   browserOnlyFeatures: readonly CapabilityFeature[];
   optionalServerFeatures: readonly CapabilityFeature[];
-  limits: readonly string[];
+  limits: readonly CapabilityValue[];
   forbiddenClaims: readonly ForbiddenCapabilityClaim[];
   targetSearchIntents: readonly string[];
   evidenceTests: readonly string[];
@@ -169,8 +178,8 @@ export function defineToolCapabilityProfile(
   if (!profile.slug || !SEMVER.test(profile.version)) {
     throw new Error(`Invalid capability profile identity: ${profile.slug}@${profile.version}`);
   }
-  if (profile.evidenceTests.length === 0) {
-    throw new Error(`${profile.slug}: at least one evidence test is required`);
+  if (profile.enforcement === 'release-blocking' && profile.evidenceTests.length === 0) {
+    throw new Error(`${profile.slug}: release-blocking profiles require behavior evidence`);
   }
   if (profile.forbiddenClaims.length === 0) {
     throw new Error(`${profile.slug}: at least one forbidden claim is required`);
@@ -179,24 +188,22 @@ export function defineToolCapabilityProfile(
 }
 ```
 
-- [ ] **Step 5: Commit the shared contract**
+- [ ] **Step 5: Add the six current-state inventory profiles**
 
-```bash
-git add src/config/tool-capabilities/types.ts src/config/tool-capabilities/define-profile.ts src/config/tool-capabilities/index.test.ts
-git commit -m "test: define tool capability profile contract"
-```
+Create one profile module per pilot. Every profile starts at version `1.0.0` with `enforcement: 'inventory'`, all ten UI locales, no optional server feature, stable intent IDs, localized `labelKey` values for every visible mode/input/output/feature/limit, forbidden-claim patterns, and an empty `evidenceTests` list. Empty evidence is permitted only while the profile remains inventory.
 
-## Task 2: Register Current-State Pilot Profiles
+Use these current-state contracts:
 
-**Files:**
-- Create: six files under `src/config/tool-capabilities/profiles/`
-- Create: `src/config/tool-capabilities/index.ts`
+| Slug | Engine support | Current browser capabilities | Required current limits |
+|---|---|---|---|
+| `grammar-checker` | engine-limited: local `en` | English local rules, highlights, individual/all fixes | no native non-English checking, AI, or server processing |
+| `hex-editor` | language-neutral | text-to-hex, hex-to-text, clipboard copy | no file open, offset grid, direct byte editing, or file export |
+| `sql-query-optimizer` | engine-limited: local `en` | static heuristics, score, SQL formatting, general index candidates | no DB selector, EXPLAIN parser, connection, execution, or guaranteed speed |
+| `excel-viewer` | language-neutral | XLS/XLSX open, sheet tabs, row table, sort, filter | no macros, formula recalculation, charts, full formatting fidelity, or export |
+| `typing-speed-test` | engine-limited: all ten prompt locales | difficulty prompt banks, completion WPM/accuracy/duration | no fixed timer, CPM, consistency, history, account, or ranking |
+| `gantt-chart-generator` | language-neutral | task name/dates/progress, theme, PNG/SVG export | no dependencies, milestones, critical path, persistence, data import/export, or collaboration |
 
-- [ ] **Step 1: Add the Hex Editor current-state profile**
-
-Create `src/config/tool-capabilities/profiles/hex-editor.ts` with version `1.0.0`. Its only mode is `text-converter`; accepted inputs are UTF-8 text and whitespace-separated hexadecimal text; outputs are UTF-8 text and uppercase hexadecimal text. Its browser features are text-to-hex, hex-to-text, and clipboard copy. Its limits must state no file open, no offset grid, no direct byte editing, and no modified-file export.
-
-Use these forbidden claim codes:
+For Hex Editor, preserve these existing forbidden claim codes:
 
 ```ts
 [
@@ -207,88 +214,26 @@ Use these forbidden claim codes:
 ]
 ```
 
-Set `evidenceTests` to `['src/config/tool-capabilities/current-state-evidence.test.ts']`. The pilot plan replaces this transitional source-and-function contract with `src/lib/hex-editor.test.ts` before the profile advances beyond current behavior.
+- [ ] **Step 6: Create the registry**
 
-- [ ] **Step 2: Add the remaining five current-state profiles**
+Create `src/config/tool-capabilities/index.ts` with `PILOT_TOOL_SLUGS`, a profile map, `getToolCapabilityProfile`, and `getPilotToolCapabilityProfiles`. Keep the approved release order: Grammar, Hex, SQL, Excel, Typing, Gantt.
 
-Use these contracts:
-
-| Slug | Local engine locales | Current browser capabilities | Required current limits |
-|---|---|---|---|
-| `grammar-checker` | `en` | English local rules, highlights, individual/all fixes | no native non-English checking, no AI, no server processing |
-| `sql-query-optimizer` | `en` | static heuristics, score, SQL formatting, general index candidates | no DB selector, EXPLAIN parser, database connection, SQL execution, guaranteed speed |
-| `excel-viewer` | all UI locales; file semantics are language-neutral | XLS/XLSX open, sheet tabs, row table, sort, filter | no macro execution, formula recalculation, charts, full formatting fidelity, export |
-| `typing-speed-test` | all UI locales | difficulty prompt banks, completion-based WPM/accuracy/duration | no fixed timed mode, CPM, consistency, history, account, ranking |
-| `gantt-chart-generator` | all UI locales | task name/dates/progress, chart theme, PNG/SVG export | no dependencies, milestones, critical path, persistence, import/export data, collaboration |
-
-Every profile uses all ten locales for `supportedLocales.ui`, no optional server locales, and one behavior-test path in `evidenceTests`.
-
-- [ ] **Step 3: Add a transitional current-state evidence test**
-
-Create `src/config/tool-capabilities/current-state-evidence.test.ts`. Import and exercise `checkGrammar`, `optimizeSQL`, and `calculateTypingStats`. Read the current Hex, Excel, and Gantt Svelte sources and assert only their current controls are present. The test must lock the six `1.0.0` profiles to the current production baseline and explicitly fail if a profile claims a feature not visible in its component or pure function.
-
-The product pilot plan replaces these source assertions with pure behavior tests as each tool version advances. Do not keep a source assertion as the only evidence for a `2.x` profile.
-
-- [ ] **Step 4: Create the registry**
-
-Create `src/config/tool-capabilities/index.ts`:
-
-```ts
-import type { ToolCapabilityProfile } from './types';
-import { grammarCheckerCapability } from './profiles/grammar-checker';
-import { hexEditorCapability } from './profiles/hex-editor';
-import { sqlQueryOptimizerCapability } from './profiles/sql-query-optimizer';
-import { excelViewerCapability } from './profiles/excel-viewer';
-import { typingSpeedTestCapability } from './profiles/typing-speed-test';
-import { ganttChartGeneratorCapability } from './profiles/gantt-chart-generator';
-
-export type { ToolCapabilityProfile } from './types';
-
-export const PILOT_TOOL_SLUGS = [
-  'grammar-checker',
-  'hex-editor',
-  'sql-query-optimizer',
-  'excel-viewer',
-  'typing-speed-test',
-  'gantt-chart-generator',
-] as const;
-
-const PROFILES = new Map<string, ToolCapabilityProfile>([
-  [grammarCheckerCapability.slug, grammarCheckerCapability],
-  [hexEditorCapability.slug, hexEditorCapability],
-  [sqlQueryOptimizerCapability.slug, sqlQueryOptimizerCapability],
-  [excelViewerCapability.slug, excelViewerCapability],
-  [typingSpeedTestCapability.slug, typingSpeedTestCapability],
-  [ganttChartGeneratorCapability.slug, ganttChartGeneratorCapability],
-]);
-
-export function getToolCapabilityProfile(
-  slug: string
-): ToolCapabilityProfile | undefined {
-  return PROFILES.get(slug);
-}
-
-export function getPilotToolCapabilityProfiles(): ToolCapabilityProfile[] {
-  return PILOT_TOOL_SLUGS.map((slug) => PROFILES.get(slug)!);
-}
-```
-
-- [ ] **Step 5: Run the registry tests**
+- [ ] **Step 7: Run the test and reach green**
 
 ```bash
-npx vitest run src/config/tool-capabilities/index.test.ts src/config/tool-capabilities/current-state-evidence.test.ts
+npx vitest run src/config/tool-capabilities/index.test.ts
 ```
 
-Expected: PASS.
+Expected: PASS. The test must also prove that an unrelated legacy slug resolves to `undefined`, visible fields contain message keys rather than English sentences, language-neutral profiles do not declare fake engine locales, and no inventory profile is treated as release-ready.
 
-- [ ] **Step 6: Commit the profiles**
+- [ ] **Step 8: Commit the green contract and inventory registry**
 
 ```bash
 git add src/config/tool-capabilities
-git commit -m "feat: register pilot capability profiles"
+git commit -m "feat: add pilot capability inventory"
 ```
 
-## Task 3: Add Profile-Based Claim Assessment
+## Task 2: Add Profile-Based Claim Assessment
 
 **Files:**
 - Create: `src/lib/tool-capability-claims.ts`
@@ -389,7 +334,7 @@ git add src/lib/tool-capability-claims.ts src/lib/tool-capability-claims.test.ts
 git commit -m "feat: enforce capability claims in content trust"
 ```
 
-## Task 4: Render Capability And Privacy Disclosure
+## Task 3: Add Localized Capability Vocabulary And Conditional Disclosure
 
 **Files:**
 - Create: `src/components/tools/ToolCapabilityDisclosure.astro`
@@ -400,7 +345,9 @@ git commit -m "feat: enforce capability claims in content trust"
 
 - [ ] **Step 1: Add localized disclosure labels**
 
-Under `tools.capabilityDisclosure` in each base file, add localized strings for:
+Under `tools.capabilityDisclosure` in each base file, add localized section labels. Under each pilot tool's split message file, add localized values for every profile `labelKey` used by its modes, inputs, outputs, features, limits, and language disclosure.
+
+The shared section labels are:
 
 ```json
 {
@@ -430,7 +377,7 @@ interface Props {
 }
 ```
 
-Render `data-tool-capability={profile.slug}`, `data-capability-version={profile.version}`, and `data-local-processing="true"`. Render mode, input, output, supported local-engine language, limits, and privacy copy. Render optional-server disclosure only when `optionalServerFeatures.length > 0`.
+Resolve every visible value through `messages` using its `labelKey`. Render `data-tool-capability={profile.slug}`, `data-capability-version={profile.version}`, and `data-local-processing="true"`. Render mode, input, output, limits, and privacy copy. For `language-neutral`, render the localized language-neutral label instead of a locale list. For `engine-limited`, render the supported local-engine languages. Render optional-server disclosure only when `optionalServerFeatures.length > 0`.
 
 - [ ] **Step 3: Integrate the disclosure before the interactive island**
 
@@ -441,9 +388,12 @@ import ToolCapabilityDisclosure from '@/components/tools/ToolCapabilityDisclosur
 import { getToolCapabilityProfile } from '@/config/tool-capabilities';
 
 const capabilityProfile = getToolCapabilityProfile(tool.slug);
+const publicCapabilityProfile = capabilityProfile?.enforcement === 'release-blocking'
+  ? capabilityProfile
+  : undefined;
 ```
 
-Render the component immediately before the `ToolWrapper` card when a profile exists. Do not render an empty disclosure for legacy tools.
+Render the component immediately before the `ToolWrapper` card only when `publicCapabilityProfile` exists. Inventory profiles continue to constrain claim validation but never render a public disclosure. Do not render an empty disclosure for legacy tools.
 
 - [ ] **Step 4: Extend the rendered contract**
 
@@ -455,7 +405,7 @@ expectedCapabilityVersion?: string;
 expectedLocalProcessing?: boolean;
 ```
 
-Add all six English pilot routes plus `ru/grammar-checker` to `TOOL_PAGE_RENDER_MATRIX`. The Russian grammar route must include a body sentinel that explicitly says the checker processes English text.
+Add extractor/comparator tests using an enforced fixture profile, and add a negative route expectation proving an inventory profile does not render disclosure attributes. Individual pilot routes are added to `TOOL_PAGE_RENDER_MATRIX` when their product task promotes the profile to `release-blocking`. The Grammar task adds `en/grammar-checker` and `ru/grammar-checker`, with a Russian body sentinel explicitly saying the checker processes English text.
 
 - [ ] **Step 5: Run component and render-contract tests**
 
@@ -464,7 +414,7 @@ npx vitest run scripts/validation/tool-page-render-contract.test.ts
 npm run build
 ```
 
-Expected: PASS; built HTML contains the capability attributes for the pilot pages.
+Expected: PASS; built HTML does not expose inventory profiles, while component/contract fixtures prove enforced profiles render localized capability attributes correctly.
 
 - [ ] **Step 6: Commit the disclosure**
 
@@ -473,7 +423,7 @@ git add src/components/tools/ToolCapabilityDisclosure.astro src/pages/'[locale]'
 git commit -m "feat: disclose pilot capabilities and privacy"
 ```
 
-## Task 5: Add The Repository Claim Validator
+## Task 4: Add The Repository Claim And Release-Readiness Validator
 
 **Files:**
 - Create: `scripts/validation/validate-tool-capability-claims.ts`
@@ -496,9 +446,13 @@ export function flattenToolMessages(messages: Record<string, unknown>): string;
 export function validateCapabilityMessageMatrix(
   rows: Array<{ locale: Locale; slug: string; messages: Record<string, unknown> }>
 ): CapabilityValidationIssue[];
+export function validateReleaseReadyProfiles(
+  profiles: readonly ToolCapabilityProfile[],
+  fileExists: (path: string) => boolean
+): CapabilityValidationIssue[];
 ```
 
-Test that `seo_title`, `seo_description`, `description`, `detailed_description`, usage steps/examples, and FAQ question/answers are scanned. Test a clean English disclosure and failing Russian native-language claim.
+Test that `seo_title`, `seo_description`, `description`, `detailed_description`, usage steps/examples, and FAQ question/answers are scanned. Test a clean English disclosure and failing Russian native-language claim. Test that inventory profiles may have no evidence, while release-blocking profiles fail when an evidence path is absent or when a visible `labelKey` is unresolved in any UI locale.
 
 - [ ] **Step 2: Run and confirm failure**
 
@@ -523,6 +477,8 @@ Tool capability claims passed. profiles=6 localePages=60 issues=0
 ```
 
 Set `process.exitCode = 1` when any issue exists.
+
+The default CLI validates claims for all six profiles and validates evidence only for profiles already marked `release-blocking`. Support `--require-release-ready grammar-checker` so a pilot release can prove the named profile is enforced, its behavior-test files exist, and all public label keys resolve before deployment.
 
 - [ ] **Step 4: Add package scripts**
 
@@ -551,7 +507,7 @@ git add scripts/validation/validate-tool-capability-claims.ts scripts/validation
 git commit -m "ci: validate tool capability claims"
 ```
 
-## Task 6: Verify Governance As A Release Gate
+## Task 5: Verify Governance As A Foundation Gate
 
 - [ ] **Step 1: Run the complete focused suite**
 
@@ -570,12 +526,14 @@ Expected: all commands exit `0`.
 
 Verify:
 
-- Missing one of the six pilot profiles fails the registry test.
+- Missing one of the six pilot inventory profiles fails the registry test.
 - An unsupported pilot claim fails the validator.
 - An unrelated legacy tool without a profile does not fail.
+- Inventory profiles never render public disclosure markup.
+- A release-blocking fixture without real evidence fails the readiness validator.
 - Optional server disclosure is absent while no optional server feature is enabled.
 - All ten localized disclosure label sets are non-English where applicable.
 
 - [ ] **Step 3: Record the profile baseline**
 
-Create a short evidence section in the implementation PR description listing all six `1.0.0` profiles and their behavior-test paths. Do not deploy before the master checkpoint allows it.
+Create a short evidence section in the implementation PR description listing all six `1.0.0` inventory profiles and stating that they are not production-release-ready. Each product pilot later records its real behavior-test paths when it promotes its profile. Do not deploy before the master checkpoint allows it.

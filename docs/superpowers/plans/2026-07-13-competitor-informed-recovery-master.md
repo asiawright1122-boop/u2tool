@@ -98,8 +98,8 @@ git commit -m "docs: record sitemap day 14 decision"
 **Plan:** `docs/superpowers/plans/2026-07-13-capability-truthfulness-governance.md`
 
 - [ ] **Step 1: Complete all governance tests and validators**
-- [ ] **Step 2: Confirm the six pilot profiles are the only release-blocking profiles**
-- [ ] **Step 3: Render the capability/privacy disclosure on all six pilot pages**
+- [ ] **Step 2: Confirm the six pilot profiles exist as inventory profiles and no inventory profile can pass a release-ready gate**
+- [ ] **Step 3: Install the localized disclosure framework while keeping inventory profiles hidden from public pages**
 - [ ] **Step 4: Run the focused governance gate**
 
 ```bash
@@ -108,7 +108,7 @@ npm run validate:tool-capability-claims
 npm run qa:seo-governance
 ```
 
-Expected: all commands exit `0`; six profiles resolve; unsupported claims produce non-zero validator results in fixtures.
+Expected: all commands exit `0`; six inventory profiles resolve; unsupported claims produce non-zero validator results in fixtures; no inventory profile renders publicly. Each product pilot later promotes and renders only its own tested profile.
 
 - [ ] **Step 5: Commit as an independently reviewable change**
 
