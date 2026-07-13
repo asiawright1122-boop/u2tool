@@ -20,6 +20,32 @@ const NEGATION_BY_LOCALE: Record<Locale, RegExp> = {
   ar: /(?:^|\s)(?:لا|ليس|ليست|لن|بدون)(?:\s|$)|غير (?:متاح|مدعوم)|يتعذر/u,
 };
 
+const CONTRAST_BY_LOCALE: Record<Locale, RegExp> = {
+  en: /\s*(?:,\s*)?\b(?:but|however|yet)\b\s*/iu,
+  zh: /\s*(?:，\s*)?(?:但是|但|不过|然而)\s*/u,
+  ja: /\s*(?:、|，)?\s*(?:しかし|ただし|一方で)\s*/u,
+  ko: /\s*(?:,\s*)?(?:하지만|그러나)\s*/u,
+  es: /\s*(?:,\s*)?\b(?:pero|sin embargo)\b\s*/iu,
+  pt: /\s*(?:,\s*)?\b(?:mas|porém)\b\s*/iu,
+  fr: /\s*(?:,\s*)?\b(?:mais|cependant)\b\s*/iu,
+  de: /\s*(?:,\s*)?\b(?:aber|jedoch)\b\s*/iu,
+  ru: /(?:,\s*|\s+)(?:но|однако)\s+/iu,
+  ar: /\s*(?:،\s*)?(?:لكن|ولكن)\s*/u,
+};
+
+const BARE_AFFIRMATIVE_BY_LOCALE: Record<Locale, RegExp> = {
+  en: /^yes\.?$/iu,
+  zh: /^(?:是|可以|支持)[。.]?$/u,
+  ja: /^(?:はい|対応します)[。.]?$/u,
+  ko: /^(?:예|네|지원합니다)[.]?$/u,
+  es: /^sí\.?$/iu,
+  pt: /^sim\.?$/iu,
+  fr: /^oui\.?$/iu,
+  de: /^ja\.?$/iu,
+  ru: /^да\.?$/iu,
+  ar: /^(?:نعم|أجل)[.]?$/u,
+};
+
 const HEX_GRID_BY_LOCALE: Record<Locale, RegExp> = {
   en: /\b(?:opens?|uploads?|loads?|analy[sz]es?)\b.{0,40}\b(?:local |binary )?files?\b|\b(?:shows?|provides?|includes?|displays?)\b.{0,40}\b(?:offset|byte|hex) (?:grid|table|view)\b/iu,
   zh: /(?:打开|上传|载入|加载|分析).{0,20}(?:本地|二进制)?文件|(?:显示|提供|包含).{0,20}(?:偏移|字节|十六进制).{0,8}(?:网格|表格|视图)/u,
@@ -36,13 +62,13 @@ const HEX_GRID_BY_LOCALE: Record<Locale, RegExp> = {
 const ASSERTION_BY_LOCALE: Record<Locale, RegExp> = {
   en: /\b(?:supports?|provides?|offers?|includes?|uses?|runs?|executes?|renders?|displays?|preserves?|exports?|downloads?|saves?|opens?|uploads?|loads?|edits?|modifies?|selects?|chooses?|analy[sz]es?|parses?|connects?|queries?|calculates?|shows?|tracks?|stores?|publishes?|issues?|generates?|awards?|identifies?|adds?|creates?|highlights?|enables?|allows?|guarantees?|promises?|powered)\b/iu,
   zh: /(?:支持|提供|具备|包含|使用|采用|运行|执行|渲染|显示|保留|导出|下载|保存|打开|上传|加载|编辑|修改|选择|分析|解析|连接|查询|计算|跟踪|存储|发布|颁发|生成|识别|添加|创建|突出|启用|允许|保证|驱动|可以|能够)/u,
-  ja: /(?:対応|サポート|提供|搭載|含む|使用|実行|表示|保持|エクスポート|ダウンロード|保存|開く|アップロード|読み込|編集|変更|選択|解析|接続|クエリ|計算|追跡|記録|公開|発行|生成|識別|追加|作成|強調|有効|可能|保証|搭載)/u,
+  ja: /(?:対応|サポート|提供|搭載|含む|使用|実行|表示|保持|エクスポート|ダウンロード|保存|開く|アップロード|読み込|編集|変更|選択|解析|接続|クエリ|計算|追跡|記録|公開|発行|生成|識別|特定|役立|追加|作成|強調|有効|可能|保証|搭載)/u,
   ko: /(?:지원|제공|포함|사용|실행|렌더링|표시|보존|내보내기|다운로드|저장|열기|업로드|불러오기|편집|수정|선택|분석|파싱|연결|쿼리|계산|추적|기록|게시|발급|생성|식별|추가|만들기|강조|활성화|허용|보장|구동|할 수 있)/u,
   es: /\b(?:admite|soporta|ofrece|proporciona|incluye|usa|ejecuta|renderiza|muestra|conserva|exporta|descarga|guarda|abre|carga|sube|edita|modifica|selecciona|analiza|interpreta|conecta|consulta|calcula|rastrea|almacena|publica|emite|genera|otorga|identifica|añade|crea|resalta|permite|garantiza|promete|impulsad\p{L}*)\b/iu,
-  pt: /\b(?:suporta|oferece|fornece|inclui|usa|executa|renderiza|mostra|preserva|exporta|baixa|salva|abre|carrega|envia|edita|modifica|seleciona|analisa|interpreta|conecta|consulta|calcula|rastreia|armazena|publica|emite|gera|concede|identifica|adiciona|cria|destaca|permite|garante|promete|alimentad\p{L}*)\b/iu,
-  fr: /\b(?:prend en charge|supporte|offre|fournit|inclut|utilise|exécute|affiche|préserve|conserve|exporte|télécharge|enregistre|ouvre|charge|téléverse|édite|modifie|sélectionne|analyse|interprète|connecte|interroge|calcule|suit|stocke|publie|émet|génère|attribue|identifie|ajoute|crée|met en évidence|permet|garantit|promet|alimenté\p{L}*)\b/iu,
-  de: /\b(?:unterstützt|bietet|stellt bereit|enthält|verwendet|nutzt|führt|rendert|zeigt|bewahrt|exportiert|lädt herunter|speichert|öffnet|lädt|bearbeitet|ändert|wählt|analysiert|parst|verbindet|fragt ab|berechnet|verfolgt|publiziert|stellt aus|erzeugt|vergibt|identifiziert|identifizieren|fügt hinzu|erstellt|hebt hervor|ermöglicht|hilft|garantiert|verspricht|KI-gestützt)\b/iu,
-  ru: /(?:поддерживает|предлагает|предоставляет|включает|использует|выполняет|запускает|отображает|показывает|сохраняет|экспортирует|скачивает|открывает|загружает|редактирует|изменяет|выбирает|анализирует|разбирает|подключается|запрашивает|вычисляет|рассчитывает|отслеживает|хранит|публикует|выдаёт|генерирует|награждает|определяет|добавляет|создаёт|подсвечивает|позволяет|гарантирует|обещает|работает на)/iu,
+  pt: /\b(?:suporta|oferece|fornece|inclui|usa|executa|renderiza|mostra|preserva|exporta|baixa|salva|abre|carrega|envia|edita|modifica|seleciona|analisa|interpreta|conecta|consulta|calcula|rastreia|armazena|publica|emite|gera|concede|identifica|identificar|ajuda|planeje|adiciona|cria|destaca|permite|garante|promete|alimentad\p{L}*)\b/iu,
+  fr: /\b(?:prend en charge|supporte|offre|fournit|inclut|utilise|exécute|affiche|préserve|conserve|exporte|télécharge|enregistre|ouvre|charge|téléverse|édite|modifie|sélectionne|analyse|interprète|connecte|interroge|calcule|suit|stocke|publie|émet|génère|attribue|identifie|identifier|aide|planifiez|ajoute|crée|met en évidence|permet|garantit|promet|alimenté\p{L}*)\b/iu,
+  de: /\b(?:unterstützt|bietet|stellt bereit|enthält|verwendet|nutzt|führt|rendert|zeigt|bewahrt|exportiert|lädt herunter|speichert|öffnet|lädt|bearbeitet|ändert|wählt|analysiert|parst|verbindet|fragt ab|berechnet|verfolgt|publiziert|stellt aus|erzeugt|vergibt|identifiziert|identifizieren|plant|planen|fügt hinzu|erstellt|hebt hervor|ermöglicht|hilft|garantiert|verspricht|KI-gestützt)\b/iu,
+  ru: /(?:поддерживает|предлагает|предоставляет|включает|использует|выполняет|запускает|отображает|показывает|сохраняет|экспортирует|скачивает|открывает|загружает|редактирует|изменяет|выбирает|анализирует|разбирает|подключается|запрашивает|вычисляет|рассчитывает|отслеживает|хранит|публикует|выдаёт|генерирует|награждает|определяет|определить|помогает|планируйте|добавляет|создаёт|подсвечивает|позволяет|гарантирует|обещает|работает на)/iu,
   ar: /(?:يدعم|تدعم|دعم|يوفر|توفر|يقدم|تقدم|يتضمن|تتضمن|يستخدم|تستخدم|يشغل|تشغل|ينفذ|تنفذ|يعرض|تعرض|يحافظ|تحافظ|يصدر|تصدر|تصدير|ينزل|تنزل|يحفظ|تحفظ|يفتح|تفتح|يرفع|ترفع|يحمّل|تحمّل|يحرر|تحرر|يعدل|تعدل|التعديل|يختار|تختار|اختر|يحلل|تحلل|تحليل|يفسر|تفسر|يتصل|تتصل|يستعلم|تستعلم|يحسب|تحسب|يتتبع|تتبع|يخزن|تخزن|ينشر|تنشر|ينشئ|تنشئ|يمنح|تمنح|يحدد|تحدد|يضيف|تضيف|يبرز|تبرز|يمكّن|تمكّن|يسمح|تسمح|يتيح|تتيح|يضمن|تضمن|يعد|تعد|مدعوم)/u,
 };
 
@@ -193,8 +219,8 @@ const CLAIM_TARGETS: Readonly<Record<string, ClaimTargets>> = {
   "typing-speed-test-account-claim": metricTargets(/user accounts?|sign[- ]in|profiles?/iu, /用户账户|登录|个人资料/u, /ユーザーアカウント|ログイン|プロフィール/u, /사용자 계정|로그인|프로필/u, /cuentas? de usuario|inicio de sesión|perfiles?/iu, /contas? de usuário|login|perfis?/iu, /comptes? utilisateur|connexion|profils?/iu, /Benutzerkonten?|Anmeldung|Profile?/iu, /учётн\p{L}* запис\p{L}*|вход|профил\p{L}*/iu, /حسابات المستخدم|تسجيل الدخول|الملفات الشخصية/u),
   "typing-speed-test-ranking-claim": metricTargets(/leaderboards?|global ranking|ranked results?/iu, /排行榜|全球排名|排名结果/u, /リーダーボード|世界ランキング|順位/u, /리더보드|글로벌 순위|순위 결과/u, /clasificación global|tabla de posiciones|resultados clasificados/iu, /ranking global|placar|resultados classificados/iu, /classement mondial|tableau des scores|résultats classés/iu, /Bestenliste|Weltrangliste|Rangliste/iu, /таблиц\p{L}* лидеров|глобальн\p{L}* рейтинг\p{L}*|ранжированн\p{L}* результат\p{L}*/iu, /لوحة المتصدرين|التصنيف العالمي|نتائج مرتبة/u),
   "typing-speed-test-certificate-claim": metricTargets(/(?:completion|typing) certificate/iu, /完成证书|打字证书/u, /修了証|タイピング証明書/u, /완료 인증서|타이핑 인증서/u, /certificado (?:de finalización|de mecanografía)/iu, /certificado (?:de conclusão|de digitação)/iu, /certificat (?:de fin|de frappe)/iu, /Abschlusszertifikat|Tippzertifikat/iu, /сертификат\p{L}* (?:об окончании|скорости печати)/iu, /شهادة (?:إكمال|كتابة)/u),
-  "gantt-generator-dependencies-claim": metricTargets(/task dependencies|dependencies between tasks/iu, /任务依赖|任务之间的依赖/u, /タスク依存関係|タスク間の依存/u, /작업 종속성|작업 간 종속성/u, /dependencias? (?:de|entre) tareas/iu, /dependências? (?:de|entre) tarefas/iu, /dépendances? (?:de|entre) tâches/iu, /Aufgabenabhängigkeiten|Abhängigkeiten zwischen Aufgaben/iu, /зависимост\p{L}* (?:задач|между задачами)/iu, /تبعيات المهام|الاعتماديات بين المهام/u),
-  "gantt-generator-milestones-claim": metricTargets(/project milestones?/iu, /项目里程碑/u, /プロジェクトマイルストーン/u, /프로젝트 마일스톤/u, /hitos? del proyecto/iu, /marcos? do projeto/iu, /jalons? du projet/iu, /Projektmeilensteine?/iu, /вех\p{L}* проекта/iu, /معالم المشروع/u),
+  "gantt-generator-dependencies-claim": metricTargets(/task dependencies|dependencies between tasks/iu, /任务依赖|任务之间的依赖/u, /タスクの?依存関係|タスク間の依存/u, /작업 종속성|작업 간 종속성/u, /dependencias? (?:de|entre) tareas/iu, /dependências? (?:de|entre) tarefas/iu, /dépendances? (?:des? |entre )?tâches/iu, /Aufgabenabhängigkeiten|Abhängigkeiten(?: zwischen Aufgaben)?/iu, /зависимост\p{L}* (?:задач|между задачами)/iu, /تبعيات المهام|الاعتماديات بين المهام/u),
+  "gantt-generator-milestones-claim": metricTargets(/project milestones?/iu, /项目里程碑/u, /(?:プロジェクト)?マイルストーン/u, /(?:프로젝트 )?마일스톤/u, /hitos?(?: del proyecto)?/iu, /marcos?(?: do projeto)?/iu, /jalons?(?: du projet)?/iu, /(?:Projekt)?Meilenstein\p{L}*/iu, /вех\p{L}*(?: проекта)?/iu, /معالم(?: المشروع)?/u),
   "gantt-generator-critical-path-claim": metricTargets(/critical path/iu, /关键路径/u, /クリティカルパス/u, /주요 경로|임계 경로/u, /ruta crítica/iu, /caminho crítico/iu, /chemin critique/iu, /kritischer Pfad/iu, /критическ\p{L}* пут\p{L}*/iu, /المسار الحرج/u),
   "gantt-generator-persistence-claim": metricTargets(/saved? (?:charts?|projects?)|chart persistence/iu, /保存(?:图表|项目)|持久化/u, /(?:チャート|プロジェクト)保存|永続化/u, /(?:차트|프로젝트) 저장|영구 저장/u, /guarda (?:diagramas?|proyectos?)|persistencia/iu, /salva (?:gráficos?|projetos?)|persistência/iu, /enregistre (?:diagrammes?|projets?)|persistance/iu, /speichert (?:Diagramme|Projekte)|Persistenz/iu, /сохраняет (?:диаграмм\p{L}*|проект\p{L}*)|постоянн\p{L}* хранени\p{L}*/iu, /يحفظ (?:المخططات|المشاريع)|تخزين دائم/u),
   "gantt-generator-data-transfer-claim": metricTargets(/(?:import|export).{0,12}(?:project|task|chart) data/iu, /(?:导入|导出).{0,8}(?:项目|任务|图表)数据/u, /(?:プロジェクト|タスク|チャート)データ.{0,8}(?:インポート|エクスポート)/u, /(?:프로젝트|작업|차트) 데이터.{0,8}(?:가져오기|내보내기)/u, /(?:importa|exporta).{0,12}datos (?:del proyecto|de tareas|del diagrama)/iu, /(?:importa|exporta).{0,12}dados (?:do projeto|de tarefas|do gráfico)/iu, /(?:importe|exporte).{0,12}données (?:du projet|des tâches|du diagramme)/iu, /(?:importiert|exportiert).{0,12}(?:Projekt|Aufgaben|Diagramm)daten/iu, /(?:импортирует|экспортирует).{0,12}(?:данные проекта|данные задач|данные диаграммы)/iu, /(?:يستورد|يصدر).{0,12}(?:بيانات المشروع|بيانات المهام|بيانات المخطط)/u),
@@ -254,13 +280,17 @@ function test(pattern: RegExp, value: string): boolean {
   return matched;
 }
 
-function splitClaimSegments(text: string): string[] {
-  return (text.match(/[^\n\r.!?。！？؟؛;]+[.!?。！？؟؛;]?/gu) ?? [])
+function splitClaimSegments(text: string, locale?: Locale): string[] {
+  const sentences =
+    text.match(/[^\n\r.!?。！？؟؛;]+[.!?。！？؟؛;]?/gu) ?? [];
+  const contrast = locale ? CONTRAST_BY_LOCALE[locale] : undefined;
+
+  return sentences
+    .flatMap((sentence) =>
+      contrast ? sentence.split(contrast) : [sentence],
+    )
     .map((segment) => segment.trim())
-    .filter(
-      (segment) =>
-        segment.length > 0 && !/[?？؟]\s*$/u.test(segment),
-    );
+    .filter(Boolean);
 }
 
 export function matchesLocalizedCapabilityClaim(
@@ -272,12 +302,23 @@ export function matchesLocalizedCapabilityClaim(
   const detector = TAXONOMY[code]?.[locale as Locale];
   if (!detector) {
     return Boolean(
-      fallback && splitClaimSegments(text).some((segment) => test(fallback, segment)),
+      fallback &&
+        splitClaimSegments(text).some((segment) => test(fallback, segment)),
     );
   }
 
-  const segments = splitClaimSegments(text);
+  const resolvedLocale = locale as Locale;
+  const segments = splitClaimSegments(text, resolvedLocale);
   return segments.some((segment, index) => {
+    if (/[?？؟]\s*$/u.test(segment)) {
+      const answer = segments[index + 1];
+      if (
+        !answer ||
+        !test(BARE_AFFIRMATIVE_BY_LOCALE[resolvedLocale], answer)
+      ) {
+        return false;
+      }
+    }
     const previous = segments[index - 1];
     if (
       previous &&

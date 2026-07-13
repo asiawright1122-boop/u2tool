@@ -14,7 +14,7 @@
       "noCollaboration": "Keine Zusammenarbeit"
     }
   },
-  "detailed_description": "Unser kostenloser Gantt Chart Maker hilft Projektmanagern und Teams, Projektzeitpläne problemlos zu visualisieren. Ein Gantt-Diagramm ist ein horizontaler Balkendiagramm, das Projektarbeiten gegen Zeit zeigt und für Projektplanung und -verfolgung unerlässlich ist. Mit diesem Gantt-Diagramm-Generator können Sie professionelle Projektzeitpläne erstellen, indem Sie Aufgaben mit Start- und Enddaten sowie Fortschrittswerten hinzufügen. Der visuelle Zeitplan hilft, Abhängigkeiten, überlappende Aktivitäten und potenzielle Engpässe zu identifizieren. Perfekt für agile Sprint, Bauvorhaben, Marketingkampagnen und Softwareentwicklungszyklen. Exportieren Sie Ihre Gantt-Diagramme als PNG oder SVG für Präsentationen und Berichte. Keine Anmeldung erforderlich - beginnen Sie sofort mit der Erstellung Ihres Projektzeitplans in Ihrem Browser.",
+  "detailed_description": "Der Gantt-Diagramm-Ersteller wandelt eine kurze Aufgabenliste im Browser in eine visuelle Zeitleiste um. Fügen Sie Aufgabennamen, Start- und Enddaten sowie Fortschrittswerte hinzu, wählen Sie ein Farbthema und laden Sie das Diagramm als PNG oder SVG herunter. Das Werkzeug modelliert keine Abhängigkeiten oder Meilensteine, berechnet keinen kritischen Pfad und speichert keine Projektdaten.",
   "usage_steps": [
     "Klicken Sie auf 'Aufgabe hinzufügen', um Ihre erste Projektarbeit zu erstellen",
     "Geben Sie den Namen, den Start- und Endtermin jeder Aufgabe ein",
@@ -25,6 +25,6 @@
   "usage_examples": [
     "Erstellen Sie einen Zeitplan für Softwareentwicklungs-Sprintphasen wie Planung, Entwicklung, Test und Deployment",
     "Erstellen Sie ein Gantt-Diagramm für eine Marketingkampagne, das die Daten für die Erstellung, Überprüfung und Einführung des Inhalts zeigt",
-    "Planen Sie ein Bauvorhaben mit Meilensteinen für Grundlage, Rahmen, Elektrik und Abschluss"
+    "Visualisieren Sie die Bauphasen Fundament, Rahmen, Elektrik und Abschluss als einfache Aufgabenbalken"
   ]
 }
