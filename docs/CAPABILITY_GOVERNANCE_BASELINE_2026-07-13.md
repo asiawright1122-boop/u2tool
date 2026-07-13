@@ -1,0 +1,176 @@
+# Capability Governance Foundation Baseline - 2026-07-13
+
+## Decision
+
+Capability governance is verified as a repository foundation gate against
+pre-baseline commit `9bc1b32c` (`docs: make governance baseline auditable`).
+The checkpoint name follows the 2026-07-13 governance plan; all evidence below
+was collected fresh on 2026-07-14 in `Asia/Shanghai`.
+
+This is an inventory baseline, not a production release approval. None of the
+six pilot profiles is production-release-ready. No deployment occurred. The
+production lane remains frozen until the 2026-07-27 Day 14 decision explicitly
+returns `OPEN_PRODUCT_LANE`.
+
+## Current Profile Registry
+
+The values below were read from `getPilotToolCapabilityProfiles()` rather than
+transcribed from the implementation plan.
+
+| Pilot profile | Version | Enforcement | Engine support | Current evidence paths |
+|---|---:|---|---|---|
+| `grammar-checker` | `1.0.0` | `inventory` | `engine-limited`; local `en`; optional server locales `[]` | `[]` |
+| `hex-editor` | `1.0.0` | `inventory` | `language-neutral` | `[]` |
+| `sql-query-optimizer` | `1.0.0` | `inventory` | `engine-limited`; local `en`; optional server locales `[]` | `[]` |
+| `excel-viewer` | `1.0.0` | `inventory` | `language-neutral` | `[]` |
+| `typing-speed-test` | `1.0.0` | `inventory` | `engine-limited`; local `en`, `zh`, `ja`, `ko`, `es`, `pt`, `fr`, `de`, `ru`, `ar`; optional server locales `[]` | `[]` |
+| `gantt-chart-generator` | `1.0.0` | `inventory` | `language-neutral` | `[]` |
+
+Every profile currently has browser-only modes, zero optional-server features,
+and zero top-level behavior-evidence paths. Each product pilot must record its
+real behavior-test paths when it promotes its profile to `release-blocking`.
+
+## Fresh Foundation Verification
+
+### Focused governance suite
+
+```bash
+npx vitest run src/config/tool-capabilities/index.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts scripts/validation/validate-tool-capability-claims.test.ts scripts/validation/tool-page-render-contract.test.ts src/components/tools/ToolCapabilityDisclosure.test.ts src/lib/tool-capability-disclosure.test.ts
+```
+
+Result: exit `0`; 7/7 test files passed; 207/207 tests passed.
+
+### Default claims validator
+
+```bash
+npm run validate:tool-capability-claims
+```
+
+Result: exit `0`; `profiles=6 localePages=60 issues=0`.
+
+### Type and Astro integration check
+
+```bash
+npm run check
+```
+
+Result: exit `0`; 328 files checked; 0 errors; 0 warnings; 13 hints.
+The hints are the pre-existing unused-value diagnostics listed by Astro.
+
+### SEO governance
+
+```bash
+npm run qa:seo-governance
+```
+
+Result: exit `0`.
+
+- Missing translation keys: 0 in every non-English catalog; total 0.
+- TDK integrity: 5,700 combinations, 0 errors, 2,476 non-blocking warnings.
+  The warnings break down to 404 title and 2,072 description warnings; 8 are
+  short and 2,468 are long.
+- TDK drift: 5,700 passed, 0 failed.
+- Translation corpus: 5,700 files, 0 schema errors, 0 coverage gaps, and 0
+  namespace issues.
+- Merge-chain consistency: 0 overlap warnings, 0 resolved divergences, and 0
+  English-fallback resolutions.
+- Localized long-tail support: 90 files passed.
+- Capability claims within the governance chain: 6 profiles, 60 locale pages,
+  0 issues.
+- SEO governance tests: 16/16 files and 251/251 tests passed.
+
+### Production build
+
+```bash
+npm run build
+```
+
+Result: exit `0`; the Cloudflare SSR server build completed. The build retained
+six pre-existing Vite externalization warnings: the same three
+`src/lib/translations.ts` imports (`node:fs/promises`, `node:url`, and
+`node:path`) were reported twice. It also reported that inspector port `9229`
+was occupied and used `9230`; neither condition blocked the build.
+
+### Whitespace check
+
+```bash
+git diff --check
+```
+
+Result: exit `0`; no output.
+
+## Release-Blocking Semantics
+
+A focused named-test run passed 10/10 selected assertions across six files
+(53 unrelated tests skipped). Together with the complete 207-test run, it
+confirmed:
+
+- The registry asserts the exact six approved pilot slugs and resolves each
+  one, so removing any pilot fails the exact-set/lookup contract.
+- A native Russian Grammar Checker claim produces the governed
+  `grammar-checker-native-non-english-claim` validator issue.
+- An unrelated legacy tool without a profile remains non-blocking.
+- Inventory routes require zero public capability-disclosure elements.
+- A release-blocking fixture with empty top-level evidence fails with
+  `release-ready-evidence-required`, and a named missing evidence file fails
+  with `release-ready-evidence-file-missing`.
+- The real disclosure builder and component omit optional-server disclosure
+  while `optionalServerFeatures` is empty.
+- Every locale has 20/20 direct capability-disclosure labels with zero missing
+  strings. Each of `zh`, `ja`, `ko`, `es`, `pt`, `fr`, `de`, `ru`, and `ar`
+  has zero strings unchanged from the English set.
+
+## Intentional Release-Ready Failure
+
+```bash
+npm run validate:tool-capability-claims -- --require-release-ready grammar-checker
+```
+
+Result: expected exit `1`; 6 profiles, 60 locale pages, 1 issue:
+
+```text
+en/tools/grammar-checker release-ready-enforcement-required: Required profile must use release-blocking enforcement.
+Tool capability claims failed. profiles=6 localePages=60 issues=1
+```
+
+This intentional failure proves the release lane remains closed; it is not a
+failure of the inventory foundation gate.
+
+## Real Inventory-Page Isolation
+
+A local SSR preview was started at `http://127.0.0.1:4327`, verified, and then
+stopped cleanly.
+
+```bash
+npm run preview -- --host 127.0.0.1 --port 4327
+npm run validate:tool-page-render-contract -- --base-url http://127.0.0.1:4327 --filter grammar-checker
+```
+
+Result: exit `0`; 1 route checked, 1 passed, 0 failed for
+`en/grammar-checker`.
+
+A direct request to `/en/tools/grammar-checker/` returned HTTP `200` and
+175,982 bytes of HTML. The response contained none of:
+
+- `data-tool-capability`
+- `data-capability-version`
+- `data-local-processing`
+
+After `Ctrl-C`, a follow-up connection check confirmed the local server was no
+longer reachable.
+
+## Remaining Non-Blocking Concern
+
+The known Task 2 Minor remains: profile-generated content-trust excerpts use
+the full content entry instead of a focused match window. This does not weaken
+claim detection or this foundation gate, but a later refinement may add matched
+offsets without changing the public scanner contract.
+
+## Release Constraint
+
+No profile may be called production-release-ready until it uses
+`release-blocking` enforcement, names existing real behavior-test paths at the
+top level and for every visible feature, resolves all required localized
+labels without fallback, passes the release-ready validator, and passes its
+render contract. Even then, no pilot may deploy before the 2026-07-27 Day 14
+checkpoint explicitly opens the production lane.
