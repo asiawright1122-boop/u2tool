@@ -91,21 +91,28 @@ const FINAL_LOCATION_BINDING_BY_LOCALE: Partial<
 const SQL_EXECUTION_ACTION_BY_LOCALE = {
   ja: {
     boundary: /[。！？!?；;\n\r]+|(?:分析|説明|表示|確認|生成|接続|実行)(?:してから|した(?:後|のち|あと)(?:に|で|から)?|して|し(?!た))\s*[、,]?\s*/gu,
-    directObject: /([^、。！？,]{1,80})を\s*$/u,
+    explicitObjects: [
+      /([^、。！？,]{1,80})を\s*$/u,
+      /((?:SQL\s*(?:クエリ\s*)?(?:文|ステートメント)?|クエリ\s*(?:文|ステートメント)?|テスト|試験|処理|プロセス|タスク|作業))(?:は|については)[^、。！？,]{0,80}$/u,
+    ],
     predicate: /実行/gu,
-    sqlDirectObject: /(?:SQL(?:クエリ)?|クエリ)\s*$/u,
+    sqlDirectObject: /(?:SQL\s*(?:クエリ\s*)?(?:文|ステートメント)?|クエリ\s*(?:文|ステートメント)?)\s*$/u,
     sqlObject: /(?:SQL|クエリ)/u,
     meta: /^実行(?:(?:する|の)?(?:方法|手順|ステップ|ガイド|案内|指示|仕方))/u,
-    negation: /^実行(?:(?:は|には|を)?(?:できません|できない|しません|しない|せず|不可)|すること(?:は|が)?でき(?:ません|ない)|には対応(?:し(?:ません|ない)|してい(?:ません|ない)|しておりません))/u,
+    negation: /^実行(?:(?:は|には|を)?(?:できません|できない|できず|しません|しない|せず|不可)|すること(?:は|が)?でき(?:ません|ない)|には対応(?:し(?:ません|ない)|してい(?:ません|ない)|しておりません))/u,
   },
   ko: {
     boundary: /[.!?。！？；;\n\r]+|(?:분석|설명|표시|확인|생성|연결|실행)(?:한\s+(?:후|다음|뒤)(?:에|로)?|하고\s+나서|하고|하며|해서)\s*,?\s*/gu,
-    directObject: /([^,.!?。！？]{1,80})(?:을|를)\s*$/u,
+    explicitObjects: [
+      /([^,.!?。！？]{1,80})(?:을|를)\s*$/u,
+      /((?:SQL\s*(?:쿼리\s*)?문?|쿼리\s*문?|테스트|시험|프로세스|처리|작업|태스크))(?:은|는)[^,.!?。！？]{0,80}$/u,
+      /((?:SQL\s*(?:쿼리\s*)?문?|쿼리\s*문?|테스트|시험|프로세스|처리|작업|태스크))\s*$/u,
+    ],
     predicate: /실행/gu,
-    sqlDirectObject: /(?:SQL(?:\s*쿼리)?|쿼리)\s*$/u,
+    sqlDirectObject: /(?:SQL\s*(?:쿼리\s*)?문?|쿼리\s*문?)\s*$/u,
     sqlObject: /(?:SQL|쿼리)/u,
     meta: /^실행(?:(?:하는|할|의)?\s*(?:방법|단계|절차|가이드|안내|지침))/u,
-    negation: /^실행(?:하지\s*(?:않습니다|않아요|않는다|마세요|못(?:합니다|해요|한다))|할\s*수\s*없(?:어요|다|습니다)|하지\s*않음|(?:을|은)\s*지원하지\s*않습니다)/u,
+    negation: /^실행(?:하지\s*(?:않습니다|않아요|않는다|마세요|못(?:합니다|해요|한다))|할\s*수\s*없(?:어요|다|습니다|음|고)|하지\s*않음|이\s*불가능(?:합니다|해요|하다)|(?:을|은)\s*지원하지\s*(?:않습니다|않아요|않는다|않음))/u,
   },
 } as const;
 
@@ -411,9 +418,11 @@ function matchesJaKoSqlExecutionAction(
       ? 0
       : finalBoundary.index + finalBoundary[0].length;
     const actionPrefix = beforePredicate.slice(actionStart);
-    const directObject = actionPrefix.match(action.directObject)?.[1];
-    if (directObject) {
-      sqlContext = test(action.sqlDirectObject, directObject);
+    const explicitObject = action.explicitObjects
+      .map((pattern) => actionPrefix.match(pattern)?.[1])
+      .find(Boolean);
+    if (explicitObject) {
+      sqlContext = test(action.sqlDirectObject, explicitObject);
     }
     if (
       !sqlContext ||

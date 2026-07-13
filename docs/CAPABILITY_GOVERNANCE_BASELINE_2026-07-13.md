@@ -89,15 +89,18 @@ within the same sentence, including meta/how-to clauses, so a later execute
 action may safely elide `SQLクエリ`/`SQL 쿼리` while retaining action-local
 location ownership. Before each execute predicate, an explicit Japanese `を`
 or Korean `을`/`를` direct object overrides inherited state: SQL/query objects
-remain governed, while test/process/task objects clear the SQL context for
-that action and later elision. Japanese `した後`/`してから`/`したあと` and
-Korean `한 후`/`한 다음`/`한 뒤`/`하고 나서` temporal forms create action
-boundaries without treating attributive `生成したSQLクエリ`/
-`생성한 SQL 쿼리` as boundaries. Negation is anchored to the execute
-predicate and covers direct, nominalized, unsupported, cannot, and unable
-morphology; a later unrelated negative save/display action cannot suppress an
-affirmative execution claim. Mixed-clause, adjacent-sentence, honest
-two-sentence limitation, and current-message regressions remain covered.
+remain governed, including Japanese `SQL文`/`クエリ文`/statement equivalents
+and Korean spaced or compact `SQL 문`/`쿼리문` variants. Japanese topicalized
+test/process/task objects and Korean topicalized or particle-omitted equivalents
+also clear stale SQL context without affecting true elision. Japanese
+`した後`/`してから`/`したあと` and Korean `한 후`/`한 다음`/`한 뒤`/
+`하고 나서` temporal forms create action boundaries without treating
+attributive `生成したSQLクエリ`/`생성한 SQL 쿼리` as boundaries. Negation is
+anchored to the execute predicate and covers direct, nominalized,
+continuative, unsupported, cannot, unable, and impossible morphology; a later
+unrelated negative action cannot suppress an affirmative execution claim.
+Mixed-clause, adjacent-sentence, honest two-sentence limitation, and
+current-message regressions remain covered.
 
 The repository audit scans all six pilots in all ten locales (60 pages). Copy
 found by both review waves was rewritten to match current production behavior.
@@ -156,7 +159,7 @@ assertions. Three repeated runner-group checks completed stably in about
 npx vitest run src/config/tool-capabilities/index.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts scripts/validation/validate-tool-capability-claims.test.ts scripts/validation/tool-page-render-contract.test.ts src/components/tools/ToolCapabilityDisclosure.test.ts src/lib/tool-capability-disclosure.test.ts
 ```
 
-Result: exit `0`; 7/7 files and 395/395 tests passed.
+Result: exit `0`; 7/7 files and 428/428 tests passed.
 
 ### Default claims validator
 
