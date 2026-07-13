@@ -12,7 +12,12 @@ function releaseReady(profile: ToolCapabilityProfile): ToolCapabilityProfile {
   return {
     ...profile,
     enforcement: 'release-blocking',
-    evidenceTests: [`fixture:${profile.slug}`],
+    evidenceTests: [
+      {
+        file: 'src/components/tools/ToolCapabilityDisclosure.test.ts',
+        testName: `[capability:${profile.slug}:profile:release-readiness]`,
+      },
+    ],
   };
 }
 

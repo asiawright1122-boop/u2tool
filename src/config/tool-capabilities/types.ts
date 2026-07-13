@@ -3,21 +3,28 @@ import type { Locale } from "@/lib/i18n";
 export type ToolRuntime = "browser" | "optional-server";
 export type ToolCapabilityEnforcement = "inventory" | "release-blocking";
 
+export interface CapabilityEvidenceReference {
+  file: string;
+  testName: string;
+}
+
 export interface CapabilityMode {
   id: string;
   labelKey: string;
   runtime: ToolRuntime;
+  evidence?: CapabilityEvidenceReference;
 }
 
 export interface CapabilityValue {
   id: string;
   labelKey: string;
+  evidence?: CapabilityEvidenceReference;
 }
 
 export interface CapabilityFeature {
   id: string;
   labelKey: string;
-  evidenceTest: string;
+  evidence?: CapabilityEvidenceReference;
 }
 
 export interface ForbiddenCapabilityClaim {
@@ -36,11 +43,15 @@ export interface ToolCapabilityProfile {
   supportedLocales: {
     ui: readonly Locale[];
     engine:
-      | { kind: "language-neutral" }
+      | {
+          kind: "language-neutral";
+          evidence?: CapabilityEvidenceReference;
+        }
       | {
           kind: "engine-limited";
           local: readonly Locale[];
           optionalServer: readonly Locale[];
+          evidence?: CapabilityEvidenceReference;
         };
   };
   browserOnlyFeatures: readonly CapabilityFeature[];
@@ -48,5 +59,5 @@ export interface ToolCapabilityProfile {
   limits: readonly CapabilityValue[];
   forbiddenClaims: readonly ForbiddenCapabilityClaim[];
   targetSearchIntents: readonly string[];
-  evidenceTests: readonly string[];
+  evidenceTests: readonly CapabilityEvidenceReference[];
 }

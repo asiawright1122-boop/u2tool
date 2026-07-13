@@ -45,17 +45,17 @@ export const hexEditorCapabilityProfile = defineToolCapabilityProfile({
     {
       id: "text-to-hex",
       labelKey: "tools.hex-editor.capabilities.features.textToHex",
-      evidenceTest: "",
+      evidence: undefined,
     },
     {
       id: "hex-to-text",
       labelKey: "tools.hex-editor.capabilities.features.hexToText",
-      evidenceTest: "",
+      evidence: undefined,
     },
     {
       id: "clipboard-copy",
       labelKey: "tools.hex-editor.capabilities.features.clipboardCopy",
-      evidenceTest: "",
+      evidence: undefined,
     },
   ],
   optionalServerFeatures: [],

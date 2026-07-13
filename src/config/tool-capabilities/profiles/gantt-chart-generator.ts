@@ -51,22 +51,22 @@ export const ganttChartGeneratorCapabilityProfile = defineToolCapabilityProfile(
         id: "task-name-dates-progress",
         labelKey:
           "tools.gantt-chart-generator.capabilities.features.taskNameDatesProgress",
-        evidenceTest: "",
+        evidence: undefined,
       },
       {
         id: "theme",
         labelKey: "tools.gantt-chart-generator.colorTheme",
-        evidenceTest: "",
+        evidence: undefined,
       },
       {
         id: "png-export",
         labelKey: "tools.gantt-chart-generator.downloadPng",
-        evidenceTest: "",
+        evidence: undefined,
       },
       {
         id: "svg-export",
         labelKey: "tools.gantt-chart-generator.downloadSvg",
-        evidenceTest: "",
+        evidence: undefined,
       },
     ],
     optionalServerFeatures: [],

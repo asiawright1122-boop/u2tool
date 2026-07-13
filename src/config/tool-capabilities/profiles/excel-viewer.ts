@@ -36,27 +36,27 @@ export const excelViewerCapabilityProfile = defineToolCapabilityProfile({
     {
       id: "xls-xlsx-open",
       labelKey: "tools.excel-viewer.capabilities.features.xlsXlsxOpen",
-      evidenceTest: "",
+      evidence: undefined,
     },
     {
       id: "sheet-tabs",
       labelKey: "tools.excel-viewer.capabilities.features.sheetTabs",
-      evidenceTest: "",
+      evidence: undefined,
     },
     {
       id: "row-table",
       labelKey: "tools.excel-viewer.capabilities.features.rowTable",
-      evidenceTest: "",
+      evidence: undefined,
     },
     {
       id: "sort",
       labelKey: "tools.excel-viewer.capabilities.features.sort",
-      evidenceTest: "",
+      evidence: undefined,
     },
     {
       id: "filter",
       labelKey: "tools.excel-viewer.capabilities.features.filter",
-      evidenceTest: "",
+      evidence: undefined,
     },
   ],
   optionalServerFeatures: [],
@@ -113,6 +113,20 @@ export const excelViewerCapabilityProfile = defineToolCapabilityProfile({
       pattern:
         /(?<!not )(?<!n't )\b(?:exports?|downloads?|saves?) (?:the )?(?:edited |converted )?(?:workbook|spreadsheet|Excel file)\b/i,
       reason: "The current viewer does not export workbooks.",
+    },
+    {
+      code: "excel-viewer-advanced-filter-claim",
+      pattern:
+        /(?<!not )(?<!n't )\b(?:supports?|offers?|provides?) (?:advanced |multi[- ]condition )?(?:regex|regular-expression) filters?\b/i,
+      reason:
+        "The current viewer only provides the implemented basic row filter.",
+    },
+    {
+      code: "excel-viewer-multi-sort-claim",
+      pattern:
+        /(?<!not )(?<!n't )\b(?:supports?|offers?|provides?) (?:hierarchical|multi[- ]column|multi[- ]level) sort(?:ing)?\b/i,
+      reason:
+        "The current viewer only provides the implemented single-column row sort.",
     },
   ],
   targetSearchIntents: ["excel-viewer.local-workbook-viewing"],

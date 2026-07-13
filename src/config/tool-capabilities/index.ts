@@ -43,6 +43,7 @@ export function getPilotToolCapabilityProfiles(): readonly ToolCapabilityProfile
 }
 
 export type {
+  CapabilityEvidenceReference,
   CapabilityFeature,
   CapabilityMode,
   CapabilityValue,

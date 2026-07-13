@@ -1,6 +1,16 @@
+import {
+  mkdirSync,
+  mkdtempSync,
+  rmSync,
+  symlinkSync,
+  writeFileSync,
+} from 'node:fs';
+import { tmpdir } from 'node:os';
+import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 
 import {
+  type CapabilityEvidenceReference,
   getToolCapabilityProfile,
   type ToolCapabilityProfile,
 } from '../../src/config/tool-capabilities';
@@ -11,11 +21,23 @@ import {
 import {
   flattenToolMessages,
   parseToolCapabilityClaimArgs,
-  repositoryEvidenceFileExists,
+  repositoryEvidenceTestModule,
   runToolCapabilityClaimValidation,
+  validateCapabilityEvidenceReference,
   validateCapabilityMessageMatrix,
   validateReleaseReadyProfiles,
 } from './validate-tool-capability-claims';
+
+function evidence(
+  category: string,
+  id: string,
+  file = 'src/lib/grammar-checker.behavior.test.ts',
+): CapabilityEvidenceReference {
+  return {
+    file,
+    testName: `[capability:grammar-checker:${category}:${id}]`,
+  };
+}
 
 function releaseBlockingGrammarProfile(
   overrides: Partial<ToolCapabilityProfile> = {},
@@ -28,12 +50,72 @@ function releaseBlockingGrammarProfile(
   return {
     ...inventoryProfile,
     enforcement: 'release-blocking',
-    evidenceTests: ['tests/grammar-checker.test.ts'],
+    evidenceTests: [evidence('profile', 'release-readiness')],
+    modes: inventoryProfile.modes.map((item) => ({
+      ...item,
+      evidence: evidence('mode', item.id),
+    })),
+    acceptedInputs: inventoryProfile.acceptedInputs.map((item) => ({
+      ...item,
+      evidence: evidence('accepted-input', item.id),
+    })),
+    producedOutputs: inventoryProfile.producedOutputs.map((item) => ({
+      ...item,
+      evidence: evidence('produced-output', item.id),
+    })),
+    supportedLocales: {
+      ...inventoryProfile.supportedLocales,
+      engine: {
+        ...inventoryProfile.supportedLocales.engine,
+        evidence: evidence('engine', 'language-support'),
+      },
+    },
     browserOnlyFeatures: inventoryProfile.browserOnlyFeatures.map((feature) => ({
       ...feature,
-      evidenceTest: 'tests/grammar-checker.test.ts',
+      evidence: evidence('browser-feature', feature.id),
+    })),
+    optionalServerFeatures: inventoryProfile.optionalServerFeatures.map(
+      (feature) => ({
+        ...feature,
+        evidence: evidence('optional-server-feature', feature.id),
+      }),
+    ),
+    limits: inventoryProfile.limits.map((item) => ({
+      ...item,
+      evidence: evidence('limit', item.id),
     })),
     ...overrides,
+  };
+}
+
+function evidenceModuleForProfile(profile: ToolCapabilityProfile) {
+  const references = [
+    ...profile.evidenceTests,
+    ...profile.modes.map(({ evidence }) => evidence),
+    ...profile.acceptedInputs.map(({ evidence }) => evidence),
+    ...profile.producedOutputs.map(({ evidence }) => evidence),
+    ...profile.browserOnlyFeatures.map(({ evidence }) => evidence),
+    ...profile.optionalServerFeatures.map(({ evidence }) => evidence),
+    ...profile.limits.map(({ evidence }) => evidence),
+    profile.supportedLocales.engine.evidence,
+  ].filter((item): item is CapabilityEvidenceReference => Boolean(item));
+  const byFile = new Map<string, string[]>();
+  for (const reference of references) {
+    const names = byFile.get(reference.file) ?? [];
+    names.push(reference.testName);
+    byFile.set(reference.file, names);
+  }
+
+  return (file: string) => {
+    const names = byFile.get(file);
+    return names
+      ? {
+          file,
+          source: names
+            .map((testName) => `it(${JSON.stringify(testName)}, () => {});`)
+            .join('\n'),
+        }
+      : null;
   };
 }
 
@@ -151,8 +233,8 @@ describe('validateReleaseReadyProfiles', () => {
     expect(
       validateReleaseReadyProfiles(
         [inventoryProfile!],
-        () => false,
-        () => false,
+        () => null,
+        () => undefined,
       ),
     ).toEqual([]);
   });
@@ -163,8 +245,8 @@ describe('validateReleaseReadyProfiles', () => {
     expect(
       validateReleaseReadyProfiles(
         [profile],
-        () => true,
-        () => true,
+        evidenceModuleForProfile(profile),
+        () => 'Honest localized label',
       ),
     ).toEqual([
       {
@@ -177,78 +259,71 @@ describe('validateReleaseReadyProfiles', () => {
     ]);
   });
 
-  it('requires every browser and optional-server feature to name evidence', () => {
+  it('requires evidence for every rendered capability category', () => {
     const base = releaseBlockingGrammarProfile();
     const profile: ToolCapabilityProfile = {
       ...base,
+      modes: [{ ...base.modes[0], evidence: undefined }],
       browserOnlyFeatures: [
-        { ...base.browserOnlyFeatures[0], evidenceTest: '' },
+        { ...base.browserOnlyFeatures[0], evidence: undefined },
         ...base.browserOnlyFeatures.slice(1),
-      ],
-      optionalServerFeatures: [
-        {
-          id: 'optional-review',
-          labelKey:
-            'tools.grammar-checker.capabilities.features.englishLocalRules',
-          evidenceTest: '   ',
-        },
       ],
     };
 
     expect(
       validateReleaseReadyProfiles(
         [profile],
-        () => true,
-        () => true,
+        evidenceModuleForProfile(profile),
+        () => 'Honest localized label',
       ),
     ).toEqual([
       {
         locale: 'en',
         slug: 'grammar-checker',
-        code: 'release-ready-feature-evidence-required',
+        code: 'release-ready-category-evidence-required',
         message:
-          'Browser feature "english-local-rules" must name a non-empty evidence test.',
+          'browser-feature "english-local-rules" must name structured behavior-test evidence.',
       },
       {
         locale: 'en',
         slug: 'grammar-checker',
-        code: 'release-ready-feature-evidence-required',
+        code: 'release-ready-category-evidence-required',
         message:
-          'Optional-server feature "optional-review" must name a non-empty evidence test.',
+          'mode "local-english-rules" must name structured behavior-test evidence.',
       },
     ]);
   });
 
-  it('requires every named top-level and feature evidence file to exist', () => {
+  it('rejects invalid structured evidence on a rendered category', () => {
     const base = releaseBlockingGrammarProfile();
     const profile: ToolCapabilityProfile = {
       ...base,
-      evidenceTests: ['tests/top-level.test.ts'],
       browserOnlyFeatures: [
         {
           ...base.browserOnlyFeatures[0],
-          evidenceTest: 'tests/missing-feature.test.ts',
+          evidence: {
+            file: 'package.json',
+            testName:
+              '[capability:grammar-checker:browser-feature:english-local-rules]',
+          },
         },
-        ...base.browserOnlyFeatures.slice(1).map((feature) => ({
-          ...feature,
-          evidenceTest: 'tests/top-level.test.ts',
-        })),
+        ...base.browserOnlyFeatures.slice(1),
       ],
     };
 
     expect(
       validateReleaseReadyProfiles(
         [profile],
-        (path) => path !== 'tests/missing-feature.test.ts',
-        () => true,
+        evidenceModuleForProfile(base),
+        () => 'Honest localized label',
       ),
     ).toEqual([
       {
         locale: 'en',
         slug: 'grammar-checker',
-        code: 'release-ready-evidence-file-missing',
+        code: 'release-ready-evidence-test-invalid',
         message:
-          'Evidence test file does not exist: tests/missing-feature.test.ts',
+          'Evidence must name an approved repository test module: package.json',
       },
     ]);
   });
@@ -259,15 +334,17 @@ describe('validateReleaseReadyProfiles', () => {
     expect(
       validateReleaseReadyProfiles(
         [profile],
-        () => true,
+        evidenceModuleForProfile(profile),
         (_profile, locale, labelKey) =>
-          !(
+          (
             (locale === 'de' &&
               labelKey === 'tools.capabilityDisclosure.title') ||
             (locale === 'ru' &&
               labelKey ===
                 'tools.grammar-checker.capabilities.inputs.plainText')
-          ),
+          )
+            ? undefined
+            : 'Honest localized label',
       ),
     ).toEqual([
       {
@@ -293,15 +370,44 @@ describe('validateReleaseReadyProfiles', () => {
     expect(
       validateReleaseReadyProfiles(
         [profile],
-        () => true,
+        evidenceModuleForProfile(profile),
         (_profile, _locale, labelKey) =>
-          ![
+          [
             'tools.capabilityDisclosure.optionalServer',
             'tools.capabilityDisclosure.privacyServer',
             'tools.capabilityDisclosure.languages.ru',
-          ].includes(labelKey),
+          ].includes(labelKey)
+            ? undefined
+            : 'Honest localized label',
       ),
     ).toEqual([]);
+  });
+
+  it('blocks an overclaim in a resolved visible disclosure label', () => {
+    const profile = releaseBlockingGrammarProfile({
+      supportedLocales: {
+        ...releaseBlockingGrammarProfile().supportedLocales,
+        ui: ['en'],
+      },
+    });
+
+    const issues = validateReleaseReadyProfiles(
+      [profile],
+      evidenceModuleForProfile(profile),
+      (_profile, _locale, labelKey) =>
+        labelKey ===
+        'tools.grammar-checker.capabilities.features.englishLocalRules'
+          ? 'Uses AI-powered grammar checking.'
+          : 'Honest localized label',
+    );
+
+    expect(issues).toContainEqual({
+      locale: 'en',
+      slug: 'grammar-checker',
+      code: 'grammar-checker-ai-claim',
+      message:
+        'The browser checker uses local static rules, not AI. Visible capability label: tools.grammar-checker.capabilities.features.englishLocalRules',
+    });
   });
 });
 
@@ -316,11 +422,107 @@ describe('parseToolCapabilityClaimArgs', () => {
   });
 });
 
-describe('repositoryEvidenceFileExists', () => {
-  it('accepts only regular files inside the repository', () => {
-    expect(repositoryEvidenceFileExists('package.json')).toBe(true);
-    expect(repositoryEvidenceFileExists('.')).toBe(false);
-    expect(repositoryEvidenceFileExists('/etc/passwd')).toBe(false);
+describe('repositoryEvidenceTestModule', () => {
+  it('accepts only recognized repository test modules', () => {
+    expect(repositoryEvidenceTestModule('src/lib/i18n.test.ts')).not.toBeNull();
+    expect(repositoryEvidenceTestModule('package.json')).toBeNull();
+    expect(repositoryEvidenceTestModule('.')).toBeNull();
+    expect(repositoryEvidenceTestModule('/etc/passwd')).toBeNull();
+  });
+
+  it('rejects a repository test-path symlink that escapes the repository', () => {
+    const repositoryRoot = mkdtempSync(
+      path.join(tmpdir(), 'u2tool-evidence-root-'),
+    );
+    const outsideRoot = mkdtempSync(
+      path.join(tmpdir(), 'u2tool-evidence-outside-'),
+    );
+
+    try {
+      mkdirSync(path.join(repositoryRoot, 'src/lib'), { recursive: true });
+      const outsideTest = path.join(outsideRoot, 'escape.test.ts');
+      writeFileSync(outsideTest, 'it("escape", () => {});');
+      symlinkSync(
+        outsideTest,
+        path.join(repositoryRoot, 'src/lib/escape.test.ts'),
+      );
+
+      expect(
+        repositoryEvidenceTestModule(
+          'src/lib/escape.test.ts',
+          repositoryRoot,
+        ),
+      ).toBeNull();
+    } finally {
+      rmSync(repositoryRoot, { recursive: true, force: true });
+      rmSync(outsideRoot, { recursive: true, force: true });
+    }
+  });
+});
+
+describe('validateCapabilityEvidenceReference', () => {
+  const subject = {
+    slug: 'grammar-checker',
+    category: 'mode' as const,
+    id: 'local-english-rules',
+  };
+  const marker =
+    '[capability:grammar-checker:mode:local-english-rules]';
+
+  it('rejects arbitrary files and unrelated test modules', () => {
+    expect(
+      validateCapabilityEvidenceReference(
+        subject,
+        { file: 'package.json', testName: marker },
+        () => null,
+      )?.code,
+    ).toBe('release-ready-evidence-test-invalid');
+
+    expect(
+      validateCapabilityEvidenceReference(
+        subject,
+        { file: 'src/lib/i18n.test.ts', testName: marker },
+        () => ({
+          file: 'src/lib/i18n.test.ts',
+          source: 'it("loads locales", () => {});',
+        }),
+      )?.code,
+    ).toBe('release-ready-evidence-test-not-collected');
+  });
+
+  it('rejects a marker for the wrong slug, category, or item', () => {
+    for (const testName of [
+      '[capability:hex-editor:mode:local-english-rules]',
+      '[capability:grammar-checker:limit:local-english-rules]',
+      '[capability:grammar-checker:mode:plain-text]',
+    ]) {
+      expect(
+        validateCapabilityEvidenceReference(
+          subject,
+          { file: 'src/lib/grammar-checker.test.ts', testName },
+          () => ({
+            file: 'src/lib/grammar-checker.test.ts',
+            source: `it(${JSON.stringify(testName)}, () => {});`,
+          }),
+        )?.code,
+      ).toBe('release-ready-evidence-marker-mismatch');
+    }
+  });
+
+  it('accepts a collected test with the exact capability marker', () => {
+    expect(
+      validateCapabilityEvidenceReference(
+        subject,
+        {
+          file: 'src/lib/grammar-checker.test.ts',
+          testName: `checks local rules ${marker}`,
+        },
+        () => ({
+          file: 'src/lib/grammar-checker.test.ts',
+          source: `it("checks local rules ${marker}", () => {});`,
+        }),
+      ),
+    ).toBeNull();
   });
 });
 
@@ -345,7 +547,7 @@ describe('runToolCapabilityClaimValidation', () => {
           (await readMessageFile('en/base.json')) ?? {},
         loadLocalizedToolMessages: async () =>
           (await readMessageFile('en/tools/grammar-checker.json')) ?? {},
-        fileExists: () => true,
+        loadEvidenceTestModule: evidenceModuleForProfile(profile),
       },
     );
 
@@ -376,7 +578,7 @@ describe('runToolCapabilityClaimValidation', () => {
         loadLocalizedBaseMessages: async () =>
           (await readMessageFile('ru/base.json')) ?? {},
         loadLocalizedToolMessages: async () => ({}),
-        fileExists: () => true,
+        loadEvidenceTestModule: evidenceModuleForProfile(profile),
       },
     );
 
@@ -403,7 +605,7 @@ describe('runToolCapabilityClaimValidation', () => {
         }),
         loadLocalizedBaseMessages: async () => ({ tools: {} }),
         loadLocalizedToolMessages: async () => ({}),
-        fileExists: () => false,
+        loadEvidenceTestModule: () => null,
       },
     );
 
@@ -424,7 +626,7 @@ describe('runToolCapabilityClaimValidation', () => {
         loadToolMessages: async () => ({}),
         loadLocalizedBaseMessages: async () => ({ tools: {} }),
         loadLocalizedToolMessages: async () => ({}),
-        fileExists: () => true,
+        loadEvidenceTestModule: () => null,
       },
     );
 
@@ -460,7 +662,7 @@ describe('runToolCapabilityClaimValidation', () => {
         }),
         loadLocalizedBaseMessages: async () => ({ tools: {} }),
         loadLocalizedToolMessages: async () => ({}),
-        fileExists: () => true,
+        loadEvidenceTestModule: () => null,
       },
     );
 
