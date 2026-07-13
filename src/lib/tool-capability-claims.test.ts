@@ -54,6 +54,22 @@ const hexGridLocaleFixtures: Record<
   },
 };
 
+const faqNoLocaleFixtures: Record<
+  Locale,
+  { question: string; answer: string }
+> = {
+  en: { question: "Does this tool execute SQL queries?", answer: "No." },
+  zh: { question: "此工具会执行 SQL 查询吗？", answer: "否。" },
+  ja: { question: "このツールはSQLクエリを実行しますか？", answer: "いいえ。" },
+  ko: { question: "이 도구는 SQL 쿼리를 실행하나요?", answer: "아니요." },
+  es: { question: "¿Esta herramienta ejecuta consultas SQL?", answer: "No." },
+  pt: { question: "Esta ferramenta executa consultas SQL?", answer: "Não." },
+  fr: { question: "Cet outil exécute-t-il des requêtes SQL ?", answer: "Non." },
+  de: { question: "Führt dieses Tool SQL-Abfragen aus?", answer: "Nein." },
+  ru: { question: "Этот инструмент выполняет SQL-запросы?", answer: "Нет." },
+  ar: { question: "هل تنفذ هذه الأداة استعلامات SQL؟", answer: "لا." },
+};
+
 const localeFamilyFixtures: Record<
   Locale,
   Record<
@@ -401,6 +417,63 @@ describe("assessToolCapabilityClaims", () => {
 
     expect(report.issues).toEqual([]);
   });
+
+  it("does not let a bare negative FAQ answer mask a contradictory explanation", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "en",
+      text: [
+        "Does this tool execute SQL queries?",
+        "No. It executes SQL queries anyway.",
+      ].join("\n"),
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
+  it.each(locales)(
+    "flags a contradictory bare-No FAQ explanation in %s",
+    (locale) => {
+      const fixture = faqNoLocaleFixtures[locale];
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text: [
+          fixture.question,
+          `${fixture.answer} ${affirmativeClaimFixture(
+            "sql-optimizer-execution-claim",
+            locale,
+          )}`,
+        ].join("\n"),
+      });
+
+      expect(report.issues.map((issue) => issue.code)).toContain(
+        "sql-optimizer-execution-claim",
+      );
+    },
+  );
+
+  it.each(locales)(
+    "allows an honest bare-No FAQ limitation in %s",
+    (locale) => {
+      const fixture = faqNoLocaleFixtures[locale];
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text: [
+          fixture.question,
+          `${fixture.answer} ${limitationClaimFixture(
+            "sql-optimizer-execution-claim",
+            locale,
+          )}`,
+        ].join("\n"),
+      });
+
+      expect(report.issues).toEqual([]);
+    },
+  );
 
   it("scans the affirmative side of a mixed positive/negative clause", () => {
     const report = assessToolCapabilityClaims({
