@@ -849,6 +849,158 @@ describe("assessToolCapabilityClaims", () => {
     },
   );
 
+  it("binds a Japanese execution action before a later external check", () => {
+    const faq = faqNoLocaleFixtures.ja;
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "ja",
+      text: [
+        faq.question,
+        `${faq.answer} このアプリケーションでSQLクエリを実行し、結果を外部データベースで確認してください。`,
+      ].join("\n"),
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
+  it("does not borrow a Japanese location from an earlier check action", () => {
+    const faq = faqNoLocaleFixtures.ja;
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "ja",
+      text: [
+        faq.question,
+        `${faq.answer} 結果を外部データベースで確認し、SQLクエリを実行してください。`,
+      ].join("\n"),
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
+  it("binds a Korean execution action before a later external check", () => {
+    const faq = faqNoLocaleFixtures.ko;
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "ko",
+      text: [
+        faq.question,
+        `${faq.answer} 이 애플리케이션에서 SQL 쿼리를 실행하고 결과를 외부 데이터베이스에서 확인하세요.`,
+      ].join("\n"),
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
+  it("does not borrow a Korean location from an earlier check action", () => {
+    const faq = faqNoLocaleFixtures.ko;
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "ko",
+      text: [
+        faq.question,
+        `${faq.answer} 결과를 외부 데이터베이스에서 확인하고 SQL 쿼리를 실행하세요.`,
+      ].join("\n"),
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
+  it.each([
+    [
+      "ja",
+      "SQLクエリの構文を分析して、データベースでの実行方法を説明します。",
+    ],
+    [
+      "ko",
+      "SQL 쿼리 구문을 분석하고 데이터베이스에서 실행하는 방법을 설명합니다.",
+    ],
+  ] as const)(
+    "does not treat explanatory execution prose as an execution action in %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues).toEqual([]);
+    },
+  );
+
+  it.each([
+    ["ja", "SQLクエリの実行手順を表示します。"],
+    ["ja", "SQLクエリの実行方法を説明します。"],
+    ["ja", "SQLクエリの実行ガイドを表示します。"],
+    ["ko", "SQL 쿼리 실행 단계를 표시합니다."],
+    ["ko", "SQL 쿼리 실행 방법을 설명합니다."],
+    ["ko", "SQL 쿼리 실행 지침을 표시합니다."],
+  ] as const)(
+    "does not treat displayed or explained execution guidance as execution in %s: %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues).toEqual([]);
+    },
+  );
+
+  it.each([
+    [
+      "ja",
+      "SQLクエリの実行方法を説明し、このアプリケーションでSQLクエリを実行します。",
+    ],
+    [
+      "ko",
+      "SQL 쿼리 실행 방법을 설명하고 이 애플리케이션에서 SQL 쿼리를 실행합니다.",
+    ],
+  ] as const)(
+    "does not let execution guidance mask a separate affirmative action in %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues.map((issue) => issue.code)).toContain(
+        "sql-optimizer-execution-claim",
+      );
+    },
+  );
+
+  it.each([
+    [
+      "ja",
+      "別のアプリケーションでSQLクエリを実行し、結果をこのアプリケーションで確認してください。",
+    ],
+    [
+      "ko",
+      "다른 애플리케이션에서 SQL 쿼리를 실행하고 결과를 이 애플리케이션에서 확인하세요.",
+    ],
+  ] as const)(
+    "binds an explicitly external location to its own execution action in %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues).toEqual([]);
+    },
+  );
+
   it.each(locales)(
     "flags a contradictory bare-No FAQ explanation in %s",
     (locale) => {

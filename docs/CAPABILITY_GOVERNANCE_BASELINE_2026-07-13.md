@@ -72,18 +72,22 @@ database/server noun appears later in the sentence. No generic
 previous-negation suppression remains. Tests exercise every governed claim
 code in every UI locale with 320 affirmative and 320 limitation cases, plus
 ten-locale contradictory, honest-limitation, anchored-external, and
-delayed-external-noun FAQ matrices. Japanese and Korean modifier-first forms
-bind ownership to the deterministic final relevant execution-location phrase
-before the final use/execute predicate. Only a Japanese `で`/`上で`/`にて` or
-Korean `에서`/`상에서` location that explicitly names external, another,
-third-party, provider, or vendor ownership suppresses the claim. An earlier
-external generation or source location cannot legitimize later execution in
-our/current/formal application. The reverse order remains honest when the
-current tool only generates the query and the final execution location is an
-explicitly external or different application. The Japanese and Korean SQL
-target windows cover the natural intervening execution-location phrase.
-Mixed-clause, adjacent-sentence, honest two-sentence limitation, and
-current-message regressions remain covered.
+delayed-external-noun FAQ matrices. Japanese and Korean SQL execution claims
+use a dedicated action-clause detector rather than a widened generic target
+window; the generic target remains narrowly bounded. Sentence punctuation and
+localized analyze/explain/display/check/generate/connect/execute conjunctions
+identify independent actions. Each SQL execute predicate binds only to the
+final relevant Japanese `で`/`上で`/`にて` or Korean `에서`/`상에서` location in
+its own action prefix. A later external check/display action cannot suppress a
+current or unlocated execution action, and an earlier external source/check
+cannot be borrowed by it. Execution is suppressed only when that action's
+location explicitly names external, another, third-party, provider, or vendor
+ownership. Explanations of how to execute and displayed methods, steps,
+guides, or instructions are excluded locally without masking a separate
+affirmative execute action. Attributive Japanese forms such as `生成した` and
+clause-local honest negations remain intact. Mixed-clause, adjacent-sentence,
+honest two-sentence limitation, and current-message regressions remain
+covered.
 
 The repository audit scans all six pilots in all ten locales (60 pages). Copy
 found by both review waves was rewritten to match current production behavior.
@@ -142,7 +146,7 @@ assertions. Three repeated runner-group checks completed stably in about
 npx vitest run src/config/tool-capabilities/index.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts scripts/validation/validate-tool-capability-claims.test.ts scripts/validation/tool-page-render-contract.test.ts src/components/tools/ToolCapabilityDisclosure.test.ts src/lib/tool-capability-disclosure.test.ts
 ```
 
-Result: exit `0`; 7/7 files and 333/333 tests passed.
+Result: exit `0`; 7/7 files and 349/349 tests passed.
 
 ### Default claims validator
 
