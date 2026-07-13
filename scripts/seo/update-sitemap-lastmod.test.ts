@@ -28,6 +28,8 @@ describe('sitemap lastmod updater', () => {
   it('rejects non-production hosts', () => {
     expect(() => canonicalizeRecoveryUrl('https://example.com/en/tools/uuid-generator/'))
       .toThrow('u2tool.com');
+    expect(() => canonicalizeRecoveryUrl('https://www.u2tool.com:444/en/tools/uuid-generator/'))
+      .toThrow('u2tool.com');
   });
 
   it('adds canonical paths in sorted order', () => {

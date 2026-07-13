@@ -19,6 +19,16 @@ describe('sitemap lastmod XML validation', () => {
       .toBe('2026-07-05');
   });
 
+  it('rejects malformed blocks without associating values across siblings', () => {
+    const xml = [
+      '<urlset>',
+      '<url><loc>https://www.u2tool.com/en/tools/uuid-generator/</loc></url>',
+      '<url><lastmod>2026-06-02</lastmod></url>',
+      '</urlset>',
+    ].join('');
+    expect(() => extractUrlLastmods(xml)).toThrow('missing lastmod');
+  });
+
   it('allows old but accurate dates and rejects future dates', () => {
     expect(() => assertValidLastmods(['2026-01-01'], '2026-07-13')).not.toThrow();
     expect(() => assertValidLastmods(['2026-02-30'], '2026-07-13')).toThrow('invalid');

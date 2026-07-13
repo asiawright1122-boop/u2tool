@@ -1,11 +1,21 @@
 function extractBlockLastmods(xml: string, tag: 'url' | 'sitemap'): Map<string, string> {
-  const pattern = new RegExp(
-    `<${tag}>[\\s\\S]*?<loc>(.*?)<\\/loc>[\\s\\S]*?<lastmod>(.*?)<\\/lastmod>[\\s\\S]*?<\\/${tag}>`,
-    'g'
-  );
-  return new Map(
-    Array.from(xml.matchAll(pattern)).map((match) => [match[1].trim(), match[2].trim()])
-  );
+  const blockPattern = new RegExp(`<${tag}>([\\s\\S]*?)<\\/${tag}>`, 'g');
+  const values = new Map<string, string>();
+
+  for (const match of xml.matchAll(blockPattern)) {
+    const block = match[1];
+    const loc = block.match(/<loc>(.*?)<\/loc>/)?.[1]?.trim();
+    const lastmod = block.match(/<lastmod>(.*?)<\/lastmod>/)?.[1]?.trim();
+    if (!loc) {
+      throw new Error(`${tag} block missing loc`);
+    }
+    if (!lastmod) {
+      throw new Error(`${tag} block for ${loc} missing lastmod`);
+    }
+    values.set(loc, lastmod);
+  }
+
+  return values;
 }
 
 export function extractUrlLastmods(xml: string): Map<string, string> {

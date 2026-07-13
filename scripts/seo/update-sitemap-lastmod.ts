@@ -83,7 +83,11 @@ export function parseArgs(argv: string[]): Args {
 
 export function canonicalizeRecoveryUrl(input: string): string {
   const url = new URL(input.trim());
-  if (url.protocol !== 'https:' || url.hostname !== 'www.u2tool.com') {
+  if (
+    url.origin !== 'https://www.u2tool.com' ||
+    url.username !== '' ||
+    url.password !== ''
+  ) {
     throw new Error(`Recovery URL must use https://www.u2tool.com: ${input}`);
   }
   return normalizeSitemapPath(url.toString());
