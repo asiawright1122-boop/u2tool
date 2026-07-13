@@ -70,7 +70,7 @@ const FAQ_EXTERNAL_RECOMMENDATION_BY_LOCALE: Partial<Record<Locale, RegExp>> = {
   ar: /^(?:استخدم|استخدمي|استخدموا|شغّل|شغلي|شغّلوا|تحقق)\s+(?:(?:قاعدة البيانات|الخدمة|المزود|التطبيق|المتصفح|الخادم|النظام|الأداة)\s+(?:الخارجية|الخارجي|لديك|الخاصة بك|لطرف ثالث|لمزود|لمورّد)|(?:خارجي|خارجية|طرف ثالث|مزود|مورّد).{0,10}(?:قاعدة البيانات|الخدمة|التطبيق|المتصفح|الخادم|النظام|الأداة))/u,
 };
 
-const FAQ_FINAL_LOCATION_BINDING_BY_LOCALE: Partial<
+const FINAL_LOCATION_BINDING_BY_LOCALE: Partial<
   Record<
     Locale,
     { predicate: RegExp; location: RegExp; externalLocation: RegExp }
@@ -87,6 +87,23 @@ const FAQ_FINAL_LOCATION_BINDING_BY_LOCALE: Partial<
     externalLocation: /^(?:사용자의|외부|서드파티|다른|공급자의|벤더의)\s*(?:웹\s*)?(?:데이터베이스|서비스|공급자|애플리케이션|앱|브라우저|서버|시스템|도구)(?:상)?에서$/u,
   },
 };
+
+const SQL_EXECUTION_ACTION_BY_LOCALE = {
+  ja: {
+    boundary: /[。！？!?；;\n\r]+|(?:分析|説明|表示|確認|生成|接続|実行)(?:して|し(?!た))\s*[、,]?\s*/gu,
+    predicate: /実行/gu,
+    sqlObject: /(?:SQL|クエリ)/u,
+    meta: /^実行(?:(?:する|の)?(?:方法|手順|ステップ|ガイド|案内|指示|仕方))/u,
+    negation: /^実行(?:できません|しません|しない|せず|不可)/u,
+  },
+  ko: {
+    boundary: /[.!?。！？；;\n\r]+|(?:분석|설명|표시|확인|생성|연결|실행)(?:하고|하며|해서)\s*,?\s*/gu,
+    predicate: /실행/gu,
+    sqlObject: /(?:SQL|쿼리)/u,
+    meta: /^실행(?:(?:하는|할|의)?\s*(?:방법|단계|절차|가이드|안내|지침))/u,
+    negation: /^실행(?:하지\s*(?:않습니다|않아요|않는다|마세요)|할\s*수\s*없습니다|하지\s*않음)/u,
+  },
+} as const;
 
 const HEX_GRID_BY_LOCALE: Record<Locale, RegExp> = {
   en: /\b(?:opens?|uploads?|loads?|analy[sz]es?)\b.{0,40}\b(?:local |binary )?files?\b|\b(?:shows?|provides?|includes?|displays?)\b.{0,40}\b(?:offset|byte|hex) (?:grid|table|view)\b/iu,
@@ -207,7 +224,7 @@ const CLAIM_TARGETS: Readonly<Record<string, ClaimTargets>> = {
     /Live-Datenbank|Datenbankverbindung/iu, /рабоч\p{L}* баз\p{L}* данных|подключени\p{L}* к баз\p{L}* данных/iu, /قاعدة بيانات مباشرة|الاتصال بقاعدة البيانات/u,
   ),
   "sql-optimizer-execution-claim": localeTargets(
-    /(?:run|execute).{0,12}(?:SQL|queries?)/iu, /(?:运行|执行).{0,8}(?:SQL|查询)/u, /(?:SQL|クエリ).{0,40}(?:実行|走らせ)/u, /(?:SQL|쿼리).{0,40}(?:실행)/u,
+    /(?:run|execute).{0,12}(?:SQL|queries?)/iu, /(?:运行|执行).{0,8}(?:SQL|查询)/u, /(?:SQL|クエリ).{0,8}(?:実行|走らせ)/u, /(?:SQL|쿼리).{0,8}(?:실행)/u,
     /(?:ejecuta|corre).{0,12}(?:SQL|consultas?)/iu, /(?:executa|roda).{0,12}(?:SQL|consultas?)/iu, /(?:exécute|lance).{0,12}(?:SQL|requêtes?)/iu,
     /(?:führt|startet).{0,12}(?:SQL|Abfragen?)/iu, /(?:выполняет|запускает).{0,12}(?:SQL|запрос\p{L}*)/iu, /(?:ينفذ|يشغل).{0,12}(?:SQL|الاستعلامات)/u,
   ),
@@ -326,7 +343,7 @@ function matchesExternalFaqRecommendation(
   locale: Locale,
   segment: string,
 ): boolean {
-  const locationBinding = FAQ_FINAL_LOCATION_BINDING_BY_LOCALE[locale];
+  const locationBinding = FINAL_LOCATION_BINDING_BY_LOCALE[locale];
   if (locationBinding) {
     locationBinding.predicate.lastIndex = 0;
     const predicates = [...segment.matchAll(locationBinding.predicate)];
@@ -349,6 +366,65 @@ function matchesExternalFaqRecommendation(
 
   const recommendation = FAQ_EXTERNAL_RECOMMENDATION_BY_LOCALE[locale];
   return Boolean(recommendation && test(recommendation, segment));
+}
+
+function matchesJaKoSqlExecutionAction(
+  locale: Locale,
+  segment: string,
+): boolean | undefined {
+  if (locale !== "ja" && locale !== "ko") {
+    return undefined;
+  }
+
+  const action = SQL_EXECUTION_ACTION_BY_LOCALE[locale];
+  const locationBinding = FINAL_LOCATION_BINDING_BY_LOCALE[locale];
+  if (!locationBinding) {
+    return false;
+  }
+  action.predicate.lastIndex = 0;
+  const predicates = [...segment.matchAll(action.predicate)];
+  action.predicate.lastIndex = 0;
+
+  return predicates.some((predicate) => {
+    if (predicate.index === undefined) {
+      return false;
+    }
+
+    const beforePredicate = segment.slice(0, predicate.index);
+    const fromPredicate = segment.slice(predicate.index);
+    action.boundary.lastIndex = 0;
+    const boundaries = [...beforePredicate.matchAll(action.boundary)];
+    action.boundary.lastIndex = 0;
+    const finalBoundary = boundaries.at(-1);
+    const actionStart = finalBoundary?.index === undefined
+      ? 0
+      : finalBoundary.index + finalBoundary[0].length;
+    const actionPrefix = beforePredicate.slice(actionStart);
+    action.boundary.lastIndex = predicate.index;
+    const nextBoundary = action.boundary.exec(segment);
+    action.boundary.lastIndex = 0;
+    const actionEnd = nextBoundary
+      ? nextBoundary.index + nextBoundary[0].length
+      : segment.length;
+    const actionClause = segment.slice(actionStart, actionEnd);
+    if (
+      !test(action.sqlObject, actionPrefix) ||
+      test(action.meta, fromPredicate) ||
+      test(action.negation, fromPredicate) ||
+      test(NEGATION_BY_LOCALE[locale], actionClause)
+    ) {
+      return false;
+    }
+
+    locationBinding.location.lastIndex = 0;
+    const locations = [...actionPrefix.matchAll(locationBinding.location)];
+    locationBinding.location.lastIndex = 0;
+    const finalLocation = locations.at(-1)?.[0];
+    return !(
+      finalLocation &&
+      test(locationBinding.externalLocation, finalLocation)
+    );
+  });
 }
 
 function splitClaimSegments(text: string, locale?: Locale): string[] {
@@ -388,6 +464,15 @@ export function matchesLocalizedCapabilityClaim(
         !test(BARE_AFFIRMATIVE_BY_LOCALE[resolvedLocale], answer)
       ) {
         return false;
+      }
+    }
+    if (code === "sql-optimizer-execution-claim") {
+      const sqlExecutionAction = matchesJaKoSqlExecutionAction(
+        resolvedLocale,
+        segment,
+      );
+      if (sqlExecutionAction !== undefined) {
+        return sqlExecutionAction;
       }
     }
     const previous = segments[index - 1];
