@@ -1,4 +1,26 @@
 {
+  "capabilities": {
+    "modes": { "localWorkbookViewing": "Visualización local de libros" },
+    "inputs": {
+      "xlsWorkbook": "Libro XLS",
+      "xlsxWorkbook": "Libro XLSX"
+    },
+    "outputs": { "sheetTable": "Vista tabular de la hoja" },
+    "features": {
+      "xlsXlsxOpen": "Abrir libros XLS y XLSX",
+      "sheetTabs": "Navegación por pestañas de hojas",
+      "rowTable": "Vista tabular de filas y columnas",
+      "sort": "Ordenar filas",
+      "filter": "Filtrar filas"
+    },
+    "limits": {
+      "noMacros": "No ejecuta macros",
+      "noFormulaRecalculation": "No recalcula fórmulas",
+      "noCharts": "No muestra gráficos del libro",
+      "noFullFormattingFidelity": "No conserva todo el formato del libro",
+      "noExport": "Sin exportación de libros"
+    }
+  },
   "detailed_description": "El Excel Viewer es una aplicación web basada en tecnologías HTML5 y JavaScript que permite procesar y visualizar archivos Excel (formatos XLSX, XLSM, XLS) sin dependencia de software de escritorio. Utiliza una biblioteca de análisis binario para interpretar la estructura del archivo y renderiza el contenido en una cuadrícula interactiva con soporte para múltiples hojas. Los usuarios pueden aplicar filtros avanzados mediante operadores lógicos (AND/OR), ordenar columnas mediante clics en encabezados y navegar entre hojas con un selector de pestañas dinámico. Esta herramienta es ideal para profesionales que necesitan revisar datos críticos en dispositivos móviles sin acceso a Microsoft Excel, analizar datasets grandes sin sobrecargar el navegador, o compartir resultados con equipos no técnicos mediante enlaces de acceso. El motor de renderizado optimiza la memoria mediante paginación virtual, permitiendo archivos de hasta 50MB con celdas que contienen fórmulas, gráficos incrustados y estilos condicionales. No requiere instalación ni transfiere datos a servidores externos, garantizando privacidad en entornos corporativos.",
   "usage_steps": [
     "Haz clic en el botón 'Cargar Archivo' y selecciona tu documento Excel desde el dispositivo local",

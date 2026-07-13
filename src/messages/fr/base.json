@@ -2764,6 +2764,30 @@
     }
   },
   "tools": {
+    "capabilityDisclosure": {
+      "title": "Fonctions de cet outil",
+      "runsLocally": "S’exécute localement dans votre navigateur",
+      "optionalServer": "Traitement facultatif sur le serveur",
+      "acceptedInputs": "Entrées acceptées",
+      "producedOutputs": "Résultats produits",
+      "supportedLanguage": "Langue de vérification prise en charge",
+      "limits": "Limites actuelles",
+      "privacyLocal": "En mode local, vos données restent dans ce navigateur.",
+      "privacyServer": "Le traitement sur le serveur ne commence qu’après votre demande explicite.",
+      "languageNeutral": "Indépendant de la langue",
+      "languages": {
+        "en": "Anglais",
+        "zh": "Chinois",
+        "ja": "Japonais",
+        "ko": "Coréen",
+        "es": "Espagnol",
+        "pt": "Portugais",
+        "fr": "Français",
+        "de": "Allemand",
+        "ru": "Russe",
+        "ar": "Arabe"
+      }
+    },
     "popular": "Populaire",
     "input": "Entrée",
     "output": "Sortie",

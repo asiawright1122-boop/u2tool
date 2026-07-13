@@ -2584,6 +2584,30 @@
     }
   },
   "tools": {
+    "capabilityDisclosure": {
+      "title": "このツールでできること",
+      "runsLocally": "ブラウザー内でローカル実行",
+      "optionalServer": "任意のサーバー処理",
+      "acceptedInputs": "対応する入力",
+      "producedOutputs": "生成される出力",
+      "supportedLanguage": "対応するチェック言語",
+      "limits": "現在の制限",
+      "privacyLocal": "ローカルモードでは、入力内容はこのブラウザー内に保持されます。",
+      "privacyServer": "サーバー処理は、明示的に要求した場合にのみ開始されます。",
+      "languageNeutral": "言語に依存しない",
+      "languages": {
+        "en": "英語",
+        "zh": "中国語",
+        "ja": "日本語",
+        "ko": "韓国語",
+        "es": "スペイン語",
+        "pt": "ポルトガル語",
+        "fr": "フランス語",
+        "de": "ドイツ語",
+        "ru": "ロシア語",
+        "ar": "アラビア語"
+      }
+    },
     "popular": "人気",
     "input": "入力",
     "output": "出力",

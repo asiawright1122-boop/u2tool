@@ -1,4 +1,23 @@
 {
+  "capabilities": {
+    "modes": { "localEnglishRules": "Local English grammar rules" },
+    "inputs": { "plainText": "Plain English text" },
+    "outputs": {
+      "highlightedIssues": "Highlighted grammar issues",
+      "correctedText": "Corrected text"
+    },
+    "features": {
+      "englishLocalRules": "Local English grammar checks",
+      "issueHighlights": "Issue highlighting",
+      "individualFixes": "Apply individual fixes",
+      "allFixes": "Apply all suggested fixes"
+    },
+    "limits": {
+      "englishOnlyEngine": "Checks English text only",
+      "noAi": "Does not use AI",
+      "noServerProcessing": "No server processing"
+    }
+  },
   "detailed_description": "Improve your writing with our free online grammar checker tool. Designed for developers, designers, content creators, and writers, this tool instantly analyzes text for grammar errors and provides accurate correction suggestions. No registration or download required, get instant results and refine your writing skills.",
   "usage_steps": [
     "Paste text",

@@ -1,4 +1,27 @@
 {
+  "capabilities": {
+    "modes": { "staticAnalysis": "Análisis estático de SQL" },
+    "inputs": { "sqlText": "Texto SQL" },
+    "outputs": {
+      "performanceScore": "Puntuación de rendimiento",
+      "formattedSql": "SQL formateado",
+      "optimizationSuggestions": "Sugerencias de optimización",
+      "generalIndexCandidates": "Candidatos generales para índices"
+    },
+    "features": {
+      "staticHeuristics": "Análisis heurístico estático",
+      "performanceScore": "Puntuación de rendimiento de la consulta",
+      "sqlFormatting": "Formateo de SQL",
+      "generalIndexCandidates": "Candidatos generales para índices"
+    },
+    "limits": {
+      "noDatabaseSelector": "Sin selector de base de datos o dialecto",
+      "noExplainParser": "No analiza planes EXPLAIN",
+      "noDatabaseConnection": "No se conecta a bases de datos",
+      "noQueryExecution": "No ejecuta consultas",
+      "noSpeedGuarantee": "No puede garantizar consultas más rápidas"
+    }
+  },
   "detailed_description": "El Optimizador de Consultas SQL analiza tus consultas SQL y proporciona sugerencias de optimización para mejorar el rendimiento. Optimizador de Consultas SQL está pensado para revisar tareas de desarrollo de forma rápida, no para aplicar resultados sin comprobación. Usa el resultado como punto de partida, revisa entradas, formato y contexto, y valida los cambios importantes dentro de tu propio flujo de trabajo.",
   "usage_steps": [
     "Pega la consulta SQL",

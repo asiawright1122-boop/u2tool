@@ -2589,6 +2589,30 @@
     }
   },
   "tools": {
+    "capabilityDisclosure": {
+      "title": "What this tool does",
+      "runsLocally": "Runs locally in your browser",
+      "optionalServer": "Optional server processing",
+      "acceptedInputs": "Accepted inputs",
+      "producedOutputs": "Produced outputs",
+      "supportedLanguage": "Supported checking language",
+      "limits": "Current limits",
+      "privacyLocal": "Your input stays in this browser for the local mode.",
+      "privacyServer": "Server processing only starts after you explicitly request it.",
+      "languageNeutral": "Language-neutral",
+      "languages": {
+        "en": "English",
+        "zh": "Chinese",
+        "ja": "Japanese",
+        "ko": "Korean",
+        "es": "Spanish",
+        "pt": "Portuguese",
+        "fr": "French",
+        "de": "German",
+        "ru": "Russian",
+        "ar": "Arabic"
+      }
+    },
     "popular": "Popular",
     "input": "Input",
     "output": "Output",

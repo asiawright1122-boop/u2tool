@@ -1,0 +1,67 @@
+---
+import ToolCapabilityDisclosure from '@/components/tools/ToolCapabilityDisclosure.astro';
+import {
+  getToolCapabilityProfile,
+  type ToolCapabilityProfile,
+} from '@/config/tool-capabilities';
+import type { Locale } from '@/lib/i18n';
+import { buildToolWrapperTranslations } from '@/lib/tool-page-translations';
+import { loadBaseUiMessages, loadToolPageMessages } from '@/lib/translations';
+
+function releaseReady(profile: ToolCapabilityProfile): ToolCapabilityProfile {
+  return {
+    ...profile,
+    enforcement: 'release-blocking',
+    evidenceTests: [`fixture:${profile.slug}`],
+  };
+}
+
+async function disclosureMessages(locale: Locale, slug: string) {
+  const baseMessages = await loadBaseUiMessages(locale);
+  const toolMessages = await loadToolPageMessages(locale, slug);
+  return buildToolWrapperTranslations({
+    currentSlug: slug,
+    currentToolMessages: toolMessages,
+    toolSlugs: [slug],
+    toolsCommon: baseMessages.tools as Record<string, unknown>,
+  });
+}
+
+const grammarInventory = getToolCapabilityProfile('grammar-checker')!;
+const hexInventory = getToolCapabilityProfile('hex-editor')!;
+const grammarProfile = releaseReady(grammarInventory);
+const hexProfile = releaseReady(hexInventory);
+const grammarServerProfile: ToolCapabilityProfile = {
+  ...releaseReady(grammarInventory),
+  slug: 'grammar-checker-server-fixture',
+  modes: [
+    ...grammarInventory.modes,
+    {
+      id: 'optional-server-check',
+      labelKey: 'tools.grammar-checker.capabilities.modes.localEnglishRules',
+      runtime: 'optional-server',
+    },
+  ],
+  optionalServerFeatures: [grammarInventory.browserOnlyFeatures[0]],
+};
+
+const grammarZhMessages = await disclosureMessages('zh', 'grammar-checker');
+const hexDeMessages = await disclosureMessages('de', 'hex-editor');
+const grammarEnMessages = await disclosureMessages('en', 'grammar-checker');
+---
+
+<ToolCapabilityDisclosure
+  profile={grammarProfile}
+  locale="zh"
+  messages={grammarZhMessages}
+/>
+<ToolCapabilityDisclosure
+  profile={hexProfile}
+  locale="de"
+  messages={hexDeMessages}
+/>
+<ToolCapabilityDisclosure
+  profile={grammarServerProfile}
+  locale="en"
+  messages={grammarEnMessages}
+/>

@@ -1,4 +1,19 @@
 {
+  "capabilities": {
+    "modes": { "localChartEditor": "Lokaler Gantt-Diagramm-Editor" },
+    "inputs": { "taskDates": "Start- und Enddatum der Aufgaben" },
+    "features": {
+      "taskNameDatesProgress": "Aufgabennamen, Daten und Fortschritt bearbeiten"
+    },
+    "limits": {
+      "noDependencies": "Keine Aufgabenabhängigkeiten",
+      "noMilestones": "Keine Meilensteine",
+      "noCriticalPath": "Keine Berechnung des kritischen Pfads",
+      "noPersistence": "Keine gespeicherten Projekte",
+      "noDataImportExport": "Kein Import oder Export von Projektdaten",
+      "noCollaboration": "Keine Zusammenarbeit"
+    }
+  },
   "detailed_description": "Unser kostenloser Gantt Chart Maker hilft Projektmanagern und Teams, Projektzeitpläne problemlos zu visualisieren. Ein Gantt-Diagramm ist ein horizontaler Balkendiagramm, das Projektarbeiten gegen Zeit zeigt und für Projektplanung und -verfolgung unerlässlich ist. Mit diesem Gantt-Diagramm-Generator können Sie professionelle Projektzeitpläne erstellen, indem Sie Aufgaben mit Start- und Enddaten sowie Fortschrittswerten hinzufügen. Der visuelle Zeitplan hilft, Abhängigkeiten, überlappende Aktivitäten und potenzielle Engpässe zu identifizieren. Perfekt für agile Sprint, Bauvorhaben, Marketingkampagnen und Softwareentwicklungszyklen. Exportieren Sie Ihre Gantt-Diagramme als PNG oder SVG für Präsentationen und Berichte. Keine Anmeldung erforderlich - beginnen Sie sofort mit der Erstellung Ihres Projektzeitplans in Ihrem Browser.",
   "usage_steps": [
     "Klicken Sie auf 'Aufgabe hinzufügen', um Ihre erste Projektarbeit zu erstellen",

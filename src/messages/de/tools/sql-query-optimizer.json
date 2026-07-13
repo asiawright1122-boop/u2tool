@@ -1,4 +1,27 @@
 {
+  "capabilities": {
+    "modes": { "staticAnalysis": "Statische SQL-Analyse" },
+    "inputs": { "sqlText": "SQL-Text" },
+    "outputs": {
+      "performanceScore": "Leistungsbewertung",
+      "formattedSql": "Formatiertes SQL",
+      "optimizationSuggestions": "Optimierungsvorschläge",
+      "generalIndexCandidates": "Allgemeine Indexkandidaten"
+    },
+    "features": {
+      "staticHeuristics": "Statische heuristische Analyse",
+      "performanceScore": "Leistungsbewertung der Abfrage",
+      "sqlFormatting": "SQL-Formatierung",
+      "generalIndexCandidates": "Allgemeine Indexkandidaten"
+    },
+    "limits": {
+      "noDatabaseSelector": "Keine Auswahl für Datenbank oder Dialekt",
+      "noExplainParser": "Analysiert keine EXPLAIN-Pläne",
+      "noDatabaseConnection": "Stellt keine Verbindung zu Datenbanken her",
+      "noQueryExecution": "Führt keine Abfragen aus",
+      "noSpeedGuarantee": "Kann schnellere Abfragen nicht garantieren"
+    }
+  },
   "detailed_description": "Der SQL-Abfrage-Optimierer analysiert Ihre SQL-Abfragen und bietet Optimierungsvorschläge für eine bessere Leistung.",
   "usage_steps": [
     "Fügen Sie SQL-Abfrage ein",

@@ -1,4 +1,18 @@
 {
+  "capabilities": {
+    "inputs": { "promptKeystrokes": "Teclas digitadas a partir do texto proposto" },
+    "features": {
+      "difficultyPromptBanks": "Textos de dificuldade localizados"
+    },
+    "limits": {
+      "noFixedTimer": "Sem cronômetro fixo",
+      "noCpm": "Sem pontuação de caracteres por minuto (CPM)",
+      "noConsistencyScore": "Sem pontuação de consistência",
+      "noHistory": "Sem histórico de resultados",
+      "noAccount": "Sem contas de usuário",
+      "noRanking": "Sem classificação ou placar"
+    }
+  },
   "detailed_description": "Teste de Digitação mede palavras por minuto (WPM), precisão, caracteres corretos, erros e duração diretamente no navegador. Escolha um texto fácil, médio ou difícil, comece a digitar na caixa e acompanhe o destaque de cada caractere: verde para acertos, vermelho para erros e marcação no próximo caractere. Quando você termina o texto, os cartões de resultado mostram WPM, porcentagem de precisão, contagem de caracteres, tempo gasto e uma classificação simples de nível. A ferramenta usa textos de exemplo locais, não exige conta e foi feita para treino rápido de velocidade e precisão.",
   "usage_steps": [
     "Escolha Fácil, Médio ou Difícil para definir o tipo de texto.",

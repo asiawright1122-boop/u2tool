@@ -1,4 +1,23 @@
 {
+  "capabilities": {
+    "modes": { "localEnglishRules": "Reglas locales de gramática inglesa" },
+    "inputs": { "plainText": "Texto sin formato en inglés" },
+    "outputs": {
+      "highlightedIssues": "Problemas gramaticales resaltados",
+      "correctedText": "Texto corregido"
+    },
+    "features": {
+      "englishLocalRules": "Comprobación local de gramática inglesa",
+      "issueHighlights": "Resaltado de problemas",
+      "individualFixes": "Aplicar correcciones individuales",
+      "allFixes": "Aplicar todas las correcciones sugeridas"
+    },
+    "limits": {
+      "englishOnlyEngine": "Solo comprueba textos en inglés",
+      "noAi": "No utiliza IA",
+      "noServerProcessing": "Sin procesamiento en el servidor"
+    }
+  },
   "detailed_description": "La Revisión de Gramática analiza el texto en busca de errores gramaticales comunes y sugiere correcciones. Revisión de Gramática está pensado para transformar y revisar texto con rapidez. Trata el resultado como borrador, revisa redacción, caracteres y formato antes de compartirlo o publicarlo.",
   "usage_steps": [
     "Pega el texto",

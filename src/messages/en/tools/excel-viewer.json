@@ -1,4 +1,26 @@
 {
+  "capabilities": {
+    "modes": { "localWorkbookViewing": "Local workbook viewing" },
+    "inputs": {
+      "xlsWorkbook": "XLS workbook",
+      "xlsxWorkbook": "XLSX workbook"
+    },
+    "outputs": { "sheetTable": "Worksheet table view" },
+    "features": {
+      "xlsXlsxOpen": "Open XLS and XLSX workbooks",
+      "sheetTabs": "Sheet tab navigation",
+      "rowTable": "Row-and-column table view",
+      "sort": "Sort rows",
+      "filter": "Filter rows"
+    },
+    "limits": {
+      "noMacros": "Does not run macros",
+      "noFormulaRecalculation": "Does not recalculate formulas",
+      "noCharts": "Does not render workbook charts",
+      "noFullFormattingFidelity": "Does not preserve full workbook formatting",
+      "noExport": "No workbook export"
+    }
+  },
   "detailed_description": "The Excel Viewer opens XLSX or XLS files in the browser and renders worksheet values in a table for quick inspection. You can switch between sheets, filter one column by text, and click column headers to sort the visible data. It is useful for checking simple spreadsheets without opening Microsoft Excel. The viewer focuses on tabular cell values and does not preserve workbook styling, charts, formulas, macros, multi-column sorting, regex filters, or export controls.",
   "usage_steps": [
     "Upload an XLSX or XLS file from your device.",

@@ -1,4 +1,27 @@
 {
+  "capabilities": {
+    "modes": { "staticAnalysis": "Análise estática de SQL" },
+    "inputs": { "sqlText": "Texto SQL" },
+    "outputs": {
+      "performanceScore": "Pontuação de desempenho",
+      "formattedSql": "SQL formatado",
+      "optimizationSuggestions": "Sugestões de otimização",
+      "generalIndexCandidates": "Candidatos gerais a índices"
+    },
+    "features": {
+      "staticHeuristics": "Análise heurística estática",
+      "performanceScore": "Pontuação de desempenho da consulta",
+      "sqlFormatting": "Formatação de SQL",
+      "generalIndexCandidates": "Candidatos gerais a índices"
+    },
+    "limits": {
+      "noDatabaseSelector": "Sem seletor de banco de dados ou dialeto",
+      "noExplainParser": "Não analisa planos EXPLAIN",
+      "noDatabaseConnection": "Não se conecta a bancos de dados",
+      "noQueryExecution": "Não executa consultas",
+      "noSpeedGuarantee": "Não pode garantir consultas mais rápidas"
+    }
+  },
   "detailed_description": "O Otimizador de Consultas SQL analisa suas consultas SQL e fornece sugestões de otimização para melhor desempenho.",
   "usage_steps": [
     "Cole a consulta SQL",

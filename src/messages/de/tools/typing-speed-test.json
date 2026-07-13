@@ -1,4 +1,18 @@
 {
+  "capabilities": {
+    "inputs": { "promptKeystrokes": "Tastenanschläge zum vorgegebenen Text" },
+    "features": {
+      "difficultyPromptBanks": "Lokalisierte Textsammlungen nach Schwierigkeitsgrad"
+    },
+    "limits": {
+      "noFixedTimer": "Kein fester Timer",
+      "noCpm": "Keine Bewertung der Zeichen pro Minute (CPM)",
+      "noConsistencyScore": "Keine Konsistenzbewertung",
+      "noHistory": "Kein Ergebnisverlauf",
+      "noAccount": "Keine Benutzerkonten",
+      "noRanking": "Keine Bestenliste oder Rangfolge"
+    }
+  },
   "detailed_description": "Tippgeschwindigkeitstest ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Tippgeschwindigkeitstest können Sie verschiedene Daten einfach verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und es effizient nutzen können. Ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Tippgeschwindigkeitstest kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser, wodurch die Sicherheit Ihrer Daten gewährleistet ist und nicht auf einen Server hochgeladen wird.",
   "usage_steps": [
     "Tippgeschwindigkeitstest-Tool-Seite öffnen",

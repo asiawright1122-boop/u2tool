@@ -1,4 +1,23 @@
 {
+  "capabilities": {
+    "modes": { "localEnglishRules": "本地英语语法规则" },
+    "inputs": { "plainText": "英语纯文本" },
+    "outputs": {
+      "highlightedIssues": "高亮显示的语法问题",
+      "correctedText": "修正后的文本"
+    },
+    "features": {
+      "englishLocalRules": "本地英语语法检查",
+      "issueHighlights": "问题高亮显示",
+      "individualFixes": "逐项应用修正",
+      "allFixes": "应用所有建议的修正"
+    },
+    "limits": {
+      "englishOnlyEngine": "仅检查英语文本",
+      "noAi": "不使用人工智能",
+      "noServerProcessing": "不进行服务器处理"
+    }
+  },
   "detailed_description": "语法检查工具分析文本中的常见语法错误并提供纠正建议。",
   "usage_steps": [
     "粘贴文本",

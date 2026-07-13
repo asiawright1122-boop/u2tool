@@ -1,4 +1,23 @@
 {
+  "capabilities": {
+    "modes": { "localEnglishRules": "로컬 영어 문법 규칙" },
+    "inputs": { "plainText": "영어 일반 텍스트" },
+    "outputs": {
+      "highlightedIssues": "강조 표시된 문법 문제",
+      "correctedText": "수정된 텍스트"
+    },
+    "features": {
+      "englishLocalRules": "로컬 영어 문법 검사",
+      "issueHighlights": "문제 부분 강조 표시",
+      "individualFixes": "수정 사항 개별 적용",
+      "allFixes": "제안된 수정 사항 모두 적용"
+    },
+    "limits": {
+      "englishOnlyEngine": "영어 텍스트만 검사",
+      "noAi": "AI를 사용하지 않음",
+      "noServerProcessing": "서버 처리를 하지 않음"
+    }
+  },
   "detailed_description": "문법 체커는 일반적인 문법 오류를 분석하고 교정을 제안합니다. 문법 체커은 입력, 설정, 결과를 빠르게 확인하기 위한 보조 도구입니다. 결과를 바로 확정하지 말고 초안으로 다루며, 형식, 숫자, 문자, 문맥을 확인한 뒤 공유하거나 게시하거나 실제 작업에 반영하세요. 중요한 결과는 사용하는 업무 흐름 안에서 한 번 더 검토하는 것이 좋습니다.",
   "usage_steps": [
     "텍스트를 붙여넣기",

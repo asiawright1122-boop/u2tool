@@ -1,4 +1,27 @@
 {
+  "capabilities": {
+    "modes": { "staticAnalysis": "SQL 静态分析" },
+    "inputs": { "sqlText": "SQL 文本" },
+    "outputs": {
+      "performanceScore": "性能评分",
+      "formattedSql": "格式化后的 SQL",
+      "optimizationSuggestions": "优化建议",
+      "generalIndexCandidates": "通用索引候选项"
+    },
+    "features": {
+      "staticHeuristics": "静态启发式分析",
+      "performanceScore": "查询性能评分",
+      "sqlFormatting": "SQL 格式化",
+      "generalIndexCandidates": "通用索引候选项"
+    },
+    "limits": {
+      "noDatabaseSelector": "不提供数据库或方言选择器",
+      "noExplainParser": "不解析 EXPLAIN 计划",
+      "noDatabaseConnection": "不连接数据库",
+      "noQueryExecution": "不执行查询",
+      "noSpeedGuarantee": "无法保证查询速度提升"
+    }
+  },
   "detailed_description": "SQL查询优化器分析您的SQL查询，并提供优化建议以提升性能。 SQL查询优化器用于快速检查输入、设置和结果。请把输出当作草稿，先核对格式、数字、字符和上下文，再在自己的工作流程中确认重要结果，然后用于分享、发布或项目落地。对于影响业务、代码、财务或安全的内容，仍应保留人工复核。",
   "usage_steps": [
     "粘贴SQL查询",

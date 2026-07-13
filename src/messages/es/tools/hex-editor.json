@@ -1,4 +1,30 @@
 {
+  "capabilities": {
+    "modes": {
+      "textToHex": "Texto a hexadecimal UTF-8",
+      "hexToText": "Hexadecimal UTF-8 a texto"
+    },
+    "inputs": {
+      "text": "Texto",
+      "utf8Hex": "Texto hexadecimal UTF-8"
+    },
+    "outputs": {
+      "utf8Hex": "Bytes hexadecimales UTF-8",
+      "decodedText": "Texto decodificado"
+    },
+    "features": {
+      "textToHex": "Codificar texto como hexadecimal UTF-8",
+      "hexToText": "Decodificar hexadecimal UTF-8 como texto",
+      "clipboardCopy": "Copiar resultados al portapapeles"
+    },
+    "limits": {
+      "noFileOpen": "No abre archivos",
+      "noOffsetGrid": "Sin cuadrícula de desplazamientos o bytes",
+      "noDirectByteEditing": "Sin edición directa de bytes",
+      "utf8Only": "Solo UTF-8",
+      "noFileExport": "Sin exportación de archivos"
+    }
+  },
   "detailed_description": "El Editor hexadecimal convierte texto en bytes hexadecimales UTF-8 y decodifica secuencias hexadecimales de vuelta a texto desde el navegador. La interfaz se centra en dos áreas de texto, botones explícitos para convertir en ambas direcciones y acciones de copia para cada resultado. Es una herramienta práctica para revisar valores de logs, preparar ejemplos de API, entender cómo se representan caracteres no ASCII o comprobar una cadena corta antes de incluirla en documentación o pruebas. No es un editor binario de archivos: trabaja con el texto pegado en la página y con pares hexadecimales legibles.",
   "usage_steps": [
     "Pega texto en el campo Texto si necesitas ver sus bytes UTF-8 en hexadecimal.",

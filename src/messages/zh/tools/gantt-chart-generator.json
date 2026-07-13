@@ -1,4 +1,19 @@
 {
+  "capabilities": {
+    "modes": { "localChartEditor": "本地甘特图编辑器" },
+    "inputs": { "taskDates": "任务开始和结束日期" },
+    "features": {
+      "taskNameDatesProgress": "编辑任务名称、日期和进度"
+    },
+    "limits": {
+      "noDependencies": "不支持任务依赖关系",
+      "noMilestones": "不支持里程碑",
+      "noCriticalPath": "不计算关键路径",
+      "noPersistence": "不保存项目",
+      "noDataImportExport": "不支持导入或导出项目数据",
+      "noCollaboration": "不支持协作"
+    }
+  },
   "detailed_description": "图表可视化工具可以快速生成各种类型的图表，用于数据可视化。 Gantt Chart Generator 是一个便捷的在线生成器，可以快速生成各种类型的数据。 使用 Gantt Chart Generator，您可以轻松创建符合特定格式要求的数据，无需手动编写。 这个工具支持多种配置选项，让您可以根据需要定制生成的内容。 无论您需要生成测试数据、示例内容还是随机值，Gantt Chart Generator 都能满足您的需求。 所有生成都在浏览器本地完成，确保您的隐私安全，不会上传任何数据。 立即使用 Gantt Chart Generator，体验快速、安全、免费的在线工具服务。",
   "usage_steps": [
     "打开 Gantt Chart Generator 工具页面",

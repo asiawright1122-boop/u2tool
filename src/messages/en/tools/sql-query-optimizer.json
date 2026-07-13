@@ -1,4 +1,27 @@
 {
+  "capabilities": {
+    "modes": { "staticAnalysis": "Static SQL analysis" },
+    "inputs": { "sqlText": "SQL text" },
+    "outputs": {
+      "performanceScore": "Performance score",
+      "formattedSql": "Formatted SQL",
+      "optimizationSuggestions": "Optimization suggestions",
+      "generalIndexCandidates": "General index candidates"
+    },
+    "features": {
+      "staticHeuristics": "Static heuristic analysis",
+      "performanceScore": "Query performance score",
+      "sqlFormatting": "SQL formatting",
+      "generalIndexCandidates": "General index candidates"
+    },
+    "limits": {
+      "noDatabaseSelector": "No database or dialect selector",
+      "noExplainParser": "Does not parse EXPLAIN plans",
+      "noDatabaseConnection": "Does not connect to databases",
+      "noQueryExecution": "Does not execute queries",
+      "noSpeedGuarantee": "Cannot guarantee faster queries"
+    }
+  },
   "detailed_description": "SQL Query Optimizer gives a quick browser-side review of a SQL statement. Paste a query or load the example to get a score, formatted SQL, and practical suggestions for common patterns such as SELECT *, unbounded SELECT results, UPDATE or DELETE without WHERE, leading-wildcard LIKE filters, functions in WHERE clauses, OR-heavy filters, and columns that may deserve index review. It is a static helper, not a database EXPLAIN plan or a replacement for testing against your real schema and data.",
   "usage_steps": [
     "Paste a SQL statement into the editor or click Load Example.",

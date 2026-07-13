@@ -1,4 +1,19 @@
 {
+  "capabilities": {
+    "modes": { "localChartEditor": "Local Gantt chart editor" },
+    "inputs": { "taskDates": "Task start and end dates" },
+    "features": {
+      "taskNameDatesProgress": "Edit task names, dates, and progress"
+    },
+    "limits": {
+      "noDependencies": "No task dependencies",
+      "noMilestones": "No milestones",
+      "noCriticalPath": "No critical path calculation",
+      "noPersistence": "No saved projects",
+      "noDataImportExport": "No project data import or export",
+      "noCollaboration": "No collaboration"
+    }
+  },
   "detailed_description": "The Gantt Chart Maker is a free online Gantt chart maker for turning a short task list into a visual project timeline or schedule chart. Use it to create Gantt chart online free when you need an easy Gantt chart maker for a quick plan, sprint, campaign, or roadmap snapshot. Add tasks, set start and end dates, update progress percentages, choose a color theme, and preview the result as a horizontal timeline chart. It is useful for sprint planning, marketing campaign schedules, roadmap snapshots, lightweight project briefs, and status visuals where a simple task-duration view is enough. The finished Gantt chart can be downloaded as PNG or SVG for docs, slides, reports, and stakeholder updates. The tool focuses on chart creation; it does not calculate dependencies, resource allocation, critical paths, or live project tracking.",
   "usage_steps": [
     "Edit the chart title and choose a color theme.",

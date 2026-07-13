@@ -1,4 +1,27 @@
 {
+  "capabilities": {
+    "modes": { "staticAnalysis": "SQL 정적 분석" },
+    "inputs": { "sqlText": "SQL 텍스트" },
+    "outputs": {
+      "performanceScore": "성능 점수",
+      "formattedSql": "서식이 적용된 SQL",
+      "optimizationSuggestions": "최적화 제안",
+      "generalIndexCandidates": "일반적인 인덱스 후보"
+    },
+    "features": {
+      "staticHeuristics": "정적 휴리스틱 분석",
+      "performanceScore": "쿼리 성능 점수",
+      "sqlFormatting": "SQL 서식 지정",
+      "generalIndexCandidates": "일반적인 인덱스 후보"
+    },
+    "limits": {
+      "noDatabaseSelector": "데이터베이스 또는 방언 선택기 없음",
+      "noExplainParser": "EXPLAIN 계획을 분석하지 않음",
+      "noDatabaseConnection": "데이터베이스에 연결하지 않음",
+      "noQueryExecution": "쿼리를 실행하지 않음",
+      "noSpeedGuarantee": "쿼리 속도 향상을 보장할 수 없음"
+    }
+  },
   "detailed_description": "SQL 쿼리 최적화 도구는 사용자의 SQL 쿼리를 분석하고 성능을 향상시키기 위한 최적화 제안을 제공합니다. SQL 쿼리 최적화 도구은 입력, 설정, 결과를 빠르게 확인하기 위한 보조 도구입니다. 결과를 바로 확정하지 말고 초안으로 다루며, 형식, 숫자, 문자, 문맥을 확인한 뒤 공유하거나 게시하거나 실제 작업에 반영하세요. 중요한 결과는 사용하는 업무 흐름 안에서 한 번 더 검토하는 것이 좋습니다.",
   "usage_steps": [
     "SQL 쿼리 붙여넣기",

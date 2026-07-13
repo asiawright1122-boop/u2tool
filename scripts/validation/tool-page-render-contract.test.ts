@@ -1,5 +1,14 @@
 import { describe, expect, it } from 'vitest';
 
+import { getPilotToolCapabilityProfiles } from '../../src/config/tool-capabilities';
+import { locales } from '../../src/lib/i18n';
+import { buildToolWrapperTranslations } from '../../src/lib/tool-page-translations';
+import {
+  loadBaseUiMessages,
+  loadToolPageMessages,
+  mergeMessageRecords,
+  readMessageFile,
+} from '../../src/lib/translations';
 import {
   buildToolPageRenderReport,
   compareToolPageRenderContract,
@@ -9,6 +18,20 @@ import {
   parseToolPageRenderArgs,
   TOOL_PAGE_RENDER_MATRIX,
 } from './tool-page-render-contract';
+
+const SHARED_CAPABILITY_LABEL_KEYS = [
+  'tools.capabilityDisclosure.title',
+  'tools.capabilityDisclosure.runsLocally',
+  'tools.capabilityDisclosure.optionalServer',
+  'tools.capabilityDisclosure.acceptedInputs',
+  'tools.capabilityDisclosure.producedOutputs',
+  'tools.capabilityDisclosure.supportedLanguage',
+  'tools.capabilityDisclosure.limits',
+  'tools.capabilityDisclosure.privacyLocal',
+  'tools.capabilityDisclosure.privacyServer',
+  'tools.capabilityDisclosure.languageNeutral',
+  ...locales.map((locale) => `tools.capabilityDisclosure.languages.${locale}`),
+] as const;
 
 const sampleHtml = String.raw`<!doctype html>
 <html lang="en">
@@ -30,6 +53,109 @@ const sampleHtml = String.raw`<!doctype html>
   </body>
 </html>`;
 
+const enforcedCapabilityHtml = sampleHtml.replace(
+  '<h1 class="text-4xl">YouTube Tags Generator</h1>',
+  `<h1 class="text-4xl">YouTube Tags Generator</h1>
+    <section
+      data-tool-capability="release-ready-tool"
+      data-capability-version="2.3.0"
+      data-local-processing="true"
+    >Localized capability disclosure</section>`,
+);
+
+function resolveMessage(
+  messages: Record<string, unknown>,
+  labelKey: string,
+): unknown {
+  return labelKey
+    .split('.')
+    .reduce<unknown>((value, segment) => {
+      if (typeof value !== 'object' || value === null || Array.isArray(value)) {
+        return undefined;
+      }
+      return (value as Record<string, unknown>)[segment];
+    }, messages);
+}
+
+function isNonEmptyString(value: unknown): value is string {
+  return typeof value === 'string' && value.trim().length > 0;
+}
+
+describe('localized capability catalogs', () => {
+  it('resolves every visible profile and shared disclosure label from each locale catalog', async () => {
+    const failures: string[] = [];
+
+    for (const locale of locales) {
+      const localizedBase = await readMessageFile(`${locale}/base.json`);
+      if (!localizedBase) {
+        failures.push(`${locale}: missing base catalog`);
+        continue;
+      }
+
+      for (const profile of getPilotToolCapabilityProfiles()) {
+        const localizedSplit = await readMessageFile(
+          `${locale}/tools/${profile.slug}.json`,
+        );
+        if (!localizedSplit) {
+          failures.push(`${locale}/${profile.slug}: missing split catalog`);
+          continue;
+        }
+
+        const runtimeBase = await loadBaseUiMessages(locale);
+        const runtimeTool = await loadToolPageMessages(locale, profile.slug);
+        const runtimeTools = runtimeBase.tools as Record<string, unknown>;
+        const runtimeMessages = buildToolWrapperTranslations({
+          currentSlug: profile.slug,
+          currentToolMessages: runtimeTool,
+          toolSlugs: getPilotToolCapabilityProfiles().map(({ slug }) => slug),
+          toolsCommon: runtimeTools,
+        });
+
+        const localizedTools = localizedBase.tools as Record<string, unknown>;
+        const localizedToolBase =
+          (localizedTools[profile.slug] as Record<string, unknown>) ?? {};
+        const localizedMessages = buildToolWrapperTranslations({
+          currentSlug: profile.slug,
+          currentToolMessages: mergeMessageRecords(
+            localizedToolBase,
+            localizedSplit,
+          ),
+          toolSlugs: getPilotToolCapabilityProfiles().map(({ slug }) => slug),
+          toolsCommon: localizedTools,
+        });
+
+        const profileLabelKeys = [
+          ...profile.modes,
+          ...profile.acceptedInputs,
+          ...profile.producedOutputs,
+          ...profile.browserOnlyFeatures,
+          ...profile.optionalServerFeatures,
+          ...profile.limits,
+        ].map(({ labelKey }) => labelKey);
+
+        for (const labelKey of new Set([
+          ...SHARED_CAPABILITY_LABEL_KEYS,
+          ...profileLabelKeys,
+        ])) {
+          const runtimeValue = resolveMessage(runtimeMessages, labelKey);
+          const localizedValue = resolveMessage(localizedMessages, labelKey);
+          if (!isNonEmptyString(localizedValue)) {
+            failures.push(`${locale}/${profile.slug}: ${labelKey}`);
+            continue;
+          }
+          if (runtimeValue !== localizedValue) {
+            failures.push(
+              `${locale}/${profile.slug}: ${labelKey} resolved through fallback`,
+            );
+          }
+        }
+      }
+    }
+
+    expect(failures).toEqual([]);
+  });
+});
+
 describe('TOOL_PAGE_RENDER_MATRIX', () => {
   it('covers every cluster plus FAQ, CJK, and RTL sentinel routes', () => {
     expect(TOOL_PAGE_RENDER_MATRIX.map((entry) => `${entry.locale}/${entry.slug}`)).toEqual([
@@ -42,6 +168,7 @@ describe('TOOL_PAGE_RENDER_MATRIX', () => {
       'en/password-generator',
       'en/word-counter',
       'en/markdown-editor',
+      'en/grammar-checker',
       'ja/json-formatter',
       'ar/password-generator',
     ]);
@@ -67,6 +194,21 @@ describe('extractToolPageRenderContract', () => {
       ],
       faqQuestionCount: 2,
       bodyTextSentinels: ['Does it call YouTube?'],
+      capabilitySlug: undefined,
+      capabilityVersion: undefined,
+      localProcessing: undefined,
+      capabilityDisclosureCount: 0,
+    });
+  });
+
+  it('extracts capability identity, version, and local-processing attributes', () => {
+    const contract = extractToolPageRenderContract(enforcedCapabilityHtml);
+
+    expect(contract).toMatchObject({
+      capabilitySlug: 'release-ready-tool',
+      capabilityVersion: '2.3.0',
+      localProcessing: true,
+      capabilityDisclosureCount: 1,
     });
   });
 });
@@ -95,6 +237,164 @@ describe('compareToolPageRenderContract', () => {
     );
 
     expect(failures).toEqual([]);
+  });
+
+  it('compares the capability attributes for an enforced profile fixture', () => {
+    const expectation = {
+      locale: 'en',
+      slug: 'release-ready-tool',
+      expectedTitleIncludes: 'YouTube Tags Generator',
+      expectedDescriptionIncludes: 'YouTube tags',
+      expectedH1Includes: 'YouTube Tags Generator',
+      expectedJsonLdTypes: ['Organization', 'SoftwareApplication'],
+      expectedCapabilitySlug: 'release-ready-tool',
+      expectedCapabilityVersion: '2.3.0',
+      expectedLocalProcessing: true,
+    };
+
+    const failures = compareToolPageRenderContract(
+      expectation,
+      extractToolPageRenderContract(enforcedCapabilityHtml),
+      enforcedCapabilityHtml,
+    );
+
+    expect(failures).toEqual([]);
+  });
+
+  it('reports capability identity, version, and processing drift', () => {
+    const expectation = {
+      locale: 'en',
+      slug: 'expected-tool',
+      expectedTitleIncludes: 'YouTube Tags Generator',
+      expectedDescriptionIncludes: 'YouTube tags',
+      expectedH1Includes: 'YouTube Tags Generator',
+      expectedJsonLdTypes: ['Organization', 'SoftwareApplication'],
+      expectedCapabilitySlug: 'expected-tool',
+      expectedCapabilityVersion: '9.0.0',
+      expectedLocalProcessing: false,
+    };
+
+    const failures = compareToolPageRenderContract(
+      expectation,
+      extractToolPageRenderContract(enforcedCapabilityHtml),
+      enforcedCapabilityHtml,
+    );
+
+    expect(failures).toContain(
+      'en/expected-tool capability disclosure: expected data-tool-capability="expected-tool" but found "release-ready-tool"',
+    );
+    expect(failures).toContain(
+      'en/expected-tool capability disclosure: expected data-capability-version="9.0.0" but found "2.3.0"',
+    );
+    expect(failures).toContain(
+      'en/expected-tool capability disclosure: expected data-local-processing=false but found true',
+    );
+  });
+
+  it('keeps an inventory pilot route free of public capability attributes', () => {
+    const expectation = {
+      locale: 'en',
+      slug: 'grammar-checker',
+      expectedTitleIncludes: 'YouTube Tags Generator',
+      expectedDescriptionIncludes: 'YouTube tags',
+      expectedH1Includes: 'YouTube Tags Generator',
+      expectedJsonLdTypes: ['Organization', 'SoftwareApplication'],
+    };
+    const contract = extractToolPageRenderContract(sampleHtml);
+
+    expect(contract).toMatchObject({
+      capabilitySlug: undefined,
+      capabilityVersion: undefined,
+      localProcessing: undefined,
+      capabilityDisclosureCount: 0,
+    });
+    expect(compareToolPageRenderContract(expectation, contract, sampleHtml)).toEqual([]);
+  });
+
+  it('rejects empty capability attributes on an inventory route', () => {
+    const expectation = {
+      locale: 'en',
+      slug: 'grammar-checker',
+      expectedTitleIncludes: 'YouTube Tags Generator',
+      expectedDescriptionIncludes: 'YouTube tags',
+      expectedH1Includes: 'YouTube Tags Generator',
+      expectedJsonLdTypes: ['Organization', 'SoftwareApplication'],
+    };
+    const htmlWithEmptyDisclosure = sampleHtml.replace(
+      '<h1 class="text-4xl">YouTube Tags Generator</h1>',
+      `<h1 class="text-4xl">YouTube Tags Generator</h1>
+      <section data-tool-capability="" data-capability-version="" data-local-processing=""></section>`,
+    );
+
+    expect(
+      compareToolPageRenderContract(
+        expectation,
+        extractToolPageRenderContract(htmlWithEmptyDisclosure),
+        htmlWithEmptyDisclosure,
+      ),
+    ).toContain(
+      'en/grammar-checker capability disclosure: expected 0 disclosure elements but found 1',
+    );
+  });
+
+  it('rejects duplicate disclosure elements on an enforced route', () => {
+    const expectation = {
+      locale: 'en',
+      slug: 'release-ready-tool',
+      expectedTitleIncludes: 'YouTube Tags Generator',
+      expectedDescriptionIncludes: 'YouTube tags',
+      expectedH1Includes: 'YouTube Tags Generator',
+      expectedJsonLdTypes: ['Organization', 'SoftwareApplication'],
+      expectedCapabilitySlug: 'release-ready-tool',
+      expectedCapabilityVersion: '2.3.0',
+      expectedLocalProcessing: true,
+    };
+    const duplicateDisclosureHtml = enforcedCapabilityHtml.replace(
+      '</body>',
+      `<aside data-tool-capability="release-ready-tool" data-capability-version="2.3.0" data-local-processing="true"></aside>
+      </body>`,
+    );
+
+    expect(
+      compareToolPageRenderContract(
+        expectation,
+        extractToolPageRenderContract(duplicateDisclosureHtml),
+        duplicateDisclosureHtml,
+      ),
+    ).toContain(
+      'en/release-ready-tool capability disclosure: expected 1 disclosure elements but found 2',
+    );
+  });
+
+  it('rejects capability attributes split across separate elements', () => {
+    const expectation = {
+      locale: 'en',
+      slug: 'release-ready-tool',
+      expectedTitleIncludes: 'YouTube Tags Generator',
+      expectedDescriptionIncludes: 'YouTube tags',
+      expectedH1Includes: 'YouTube Tags Generator',
+      expectedJsonLdTypes: ['Organization', 'SoftwareApplication'],
+      expectedCapabilitySlug: 'release-ready-tool',
+      expectedCapabilityVersion: '2.3.0',
+      expectedLocalProcessing: true,
+    };
+    const splitDisclosureHtml = sampleHtml.replace(
+      '<h1 class="text-4xl">YouTube Tags Generator</h1>',
+      `<h1 class="text-4xl">YouTube Tags Generator</h1>
+      <section data-tool-capability="release-ready-tool"></section>
+      <section data-capability-version="2.3.0"></section>
+      <section data-local-processing="true"></section>`,
+    );
+
+    expect(
+      compareToolPageRenderContract(
+        expectation,
+        extractToolPageRenderContract(splitDisclosureHtml),
+        splitDisclosureHtml,
+      ),
+    ).toContain(
+      'en/release-ready-tool capability disclosure: expected 1 disclosure elements but found 3',
+    );
   });
 
   it('fails when the canonical URL drifts away from the expected route path', () => {

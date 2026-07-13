@@ -22,6 +22,9 @@ export interface ToolPageRenderExpectation {
   minSiblingToolLinks?: number;
   minFaqQuestions?: number;
   bodyMustInclude?: string[];
+  expectedCapabilitySlug?: string;
+  expectedCapabilityVersion?: string;
+  expectedLocalProcessing?: boolean;
 }
 
 export interface ToolPageRenderContract {
@@ -36,6 +39,10 @@ export interface ToolPageRenderContract {
   siblingToolHrefs: string[];
   faqQuestionCount: number;
   bodyTextSentinels: string[];
+  capabilitySlug?: string;
+  capabilityVersion?: string;
+  localProcessing?: boolean;
+  capabilityDisclosureCount: number;
 }
 
 export interface ToolPageRenderResult {
@@ -175,6 +182,15 @@ export const TOOL_PAGE_RENDER_MATRIX: ToolPageRenderExpectation[] = [
     minFaqQuestions: 1,
   },
   {
+    locale: 'en',
+    slug: 'grammar-checker',
+    reason: 'inventory capability profile remains undisclosed',
+    expectedTitleIncludes: 'Grammar Checker',
+    expectedDescriptionIncludes: 'grammar',
+    expectedH1Includes: 'Grammar Checker',
+    expectedJsonLdTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+  },
+  {
     locale: 'ja',
     slug: 'json-formatter',
     reason: 'CJK rendering',
@@ -205,6 +221,10 @@ export function extractToolPageRenderContract(
   status = 200,
   bodySentinels: string[] = []
 ): ToolPageRenderContract {
+  const capabilityDisclosures = extractCapabilityDisclosureElements(html);
+  const capabilityDisclosure = capabilityDisclosures[0];
+  const localProcessingAttribute = capabilityDisclosure?.localProcessing;
+
   return {
     status,
     title: decodeHtmlEntities(getTagContent(html, 'title')),
@@ -217,6 +237,17 @@ export function extractToolPageRenderContract(
     siblingToolHrefs: uniqueSorted(siblingToolHrefs(html)),
     faqQuestionCount: countFaqQuestions(html),
     bodyTextSentinels: bodySentinels.filter((sentinel) => html.includes(sentinel)),
+    capabilitySlug: capabilityDisclosure?.slug,
+    capabilityVersion: capabilityDisclosure?.version,
+    localProcessing:
+      localProcessingAttribute === undefined
+        ? undefined
+        : localProcessingAttribute === 'true'
+          ? true
+          : localProcessingAttribute === 'false'
+            ? false
+            : undefined,
+    capabilityDisclosureCount: capabilityDisclosures.length,
   };
 }
 
@@ -278,6 +309,40 @@ export function compareToolPageRenderContract(
       failures.push(`${route} body: expected rendered HTML to include ${JSON.stringify(sentinel)}`);
     }
   }
+
+  const expectedCapabilityDisclosureCount =
+    expectation.expectedCapabilitySlug !== undefined ||
+    expectation.expectedCapabilityVersion !== undefined ||
+    expectation.expectedLocalProcessing !== undefined
+      ? 1
+      : 0;
+  if (contract.capabilityDisclosureCount !== expectedCapabilityDisclosureCount) {
+    failures.push(
+      `${route} capability disclosure: expected ${expectedCapabilityDisclosureCount} disclosure elements but found ${contract.capabilityDisclosureCount}`,
+    );
+  }
+
+  pushExactAttributeFailure(
+    failures,
+    route,
+    'data-tool-capability',
+    contract.capabilitySlug,
+    expectation.expectedCapabilitySlug,
+  );
+  pushExactAttributeFailure(
+    failures,
+    route,
+    'data-capability-version',
+    contract.capabilityVersion,
+    expectation.expectedCapabilityVersion,
+  );
+  pushExactAttributeFailure(
+    failures,
+    route,
+    'data-local-processing',
+    contract.localProcessing,
+    expectation.expectedLocalProcessing,
+  );
 
   return failures;
 }
@@ -429,6 +494,67 @@ function attributeValues(html: string, attribute: string): string[] {
   }
 
   return values;
+}
+
+function pushExactAttributeFailure(
+  failures: string[],
+  route: string,
+  attribute: string,
+  actual: string | boolean | undefined,
+  expected: string | boolean | undefined,
+): void {
+  if (actual === expected) {
+    return;
+  }
+
+  failures.push(
+    `${route} capability disclosure: expected ${attribute}=${JSON.stringify(expected)} but found ${JSON.stringify(actual)}`,
+  );
+}
+
+interface ExtractedCapabilityDisclosure {
+  slug?: string;
+  version?: string;
+  localProcessing?: string;
+}
+
+function extractCapabilityDisclosureElements(
+  html: string,
+): ExtractedCapabilityDisclosure[] {
+  const disclosures: ExtractedCapabilityDisclosure[] = [];
+  const tagPattern = /<[a-z][^>]*>/gi;
+  let match: RegExpExecArray | null;
+
+  while ((match = tagPattern.exec(html)) !== null) {
+    const tag = match[0];
+    if (
+      !/\b(?:data-tool-capability|data-capability-version|data-local-processing)\b/i.test(
+        tag,
+      )
+    ) {
+      continue;
+    }
+
+    disclosures.push({
+      slug: attributeValueFromTag(tag, 'data-tool-capability'),
+      version: attributeValueFromTag(tag, 'data-capability-version'),
+      localProcessing: attributeValueFromTag(tag, 'data-local-processing'),
+    });
+  }
+
+  return disclosures;
+}
+
+function attributeValueFromTag(
+  tag: string,
+  attribute: string,
+): string | undefined {
+  const pattern = new RegExp(
+    `\\b${escapeRegExp(attribute)}\\s*=\\s*(["'])(.*?)\\1`,
+    'i',
+  );
+  const match = tag.match(pattern);
+  return match ? decodeHtmlEntities(match[2] ?? '').trim() : undefined;
 }
 
 function siblingToolHrefs(html: string): string[] {

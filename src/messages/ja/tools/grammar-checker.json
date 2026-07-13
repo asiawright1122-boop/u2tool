@@ -1,4 +1,23 @@
 {
+  "capabilities": {
+    "modes": { "localEnglishRules": "ローカルの英語文法ルール" },
+    "inputs": { "plainText": "英語のプレーンテキスト" },
+    "outputs": {
+      "highlightedIssues": "強調表示された文法上の問題",
+      "correctedText": "修正済みテキスト"
+    },
+    "features": {
+      "englishLocalRules": "ローカルの英語文法チェック",
+      "issueHighlights": "問題箇所の強調表示",
+      "individualFixes": "修正を個別に適用",
+      "allFixes": "提案された修正をすべて適用"
+    },
+    "limits": {
+      "englishOnlyEngine": "英語のテキストのみチェック",
+      "noAi": "AIは使用しません",
+      "noServerProcessing": "サーバー処理は行いません"
+    }
+  },
   "detailed_description": "文法チェッカーは、開発者、デザイナー、コンテンツクリエイターが文法エラーをチェックし、修正案を取得するための無料オンラインツールです。登録不要、即時結果を提供します。文章の文法をチェックし、エラーを修正することで、文章の品質を向上させることができます。 文法チェッカーは、文章の変換や確認をすばやく行うための補助ツールです。結果は下書きとして扱い、表記、文字、形式、文脈を読み直してから共有や公開に進んでください。",
   "usage_steps": [
     "テキストを貼り付け",

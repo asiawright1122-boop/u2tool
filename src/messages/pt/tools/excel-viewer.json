@@ -1,4 +1,26 @@
 {
+  "capabilities": {
+    "modes": { "localWorkbookViewing": "Visualização local de pastas de trabalho" },
+    "inputs": {
+      "xlsWorkbook": "Pasta de trabalho XLS",
+      "xlsxWorkbook": "Pasta de trabalho XLSX"
+    },
+    "outputs": { "sheetTable": "Visualização da planilha em tabela" },
+    "features": {
+      "xlsXlsxOpen": "Abrir pastas de trabalho XLS e XLSX",
+      "sheetTabs": "Navegação pelas abas das planilhas",
+      "rowTable": "Visualização de linhas e colunas em tabela",
+      "sort": "Ordenar linhas",
+      "filter": "Filtrar linhas"
+    },
+    "limits": {
+      "noMacros": "Não executa macros",
+      "noFormulaRecalculation": "Não recalcula fórmulas",
+      "noCharts": "Não exibe gráficos da pasta de trabalho",
+      "noFullFormattingFidelity": "Não preserva toda a formatação da pasta de trabalho",
+      "noExport": "Sem exportação da pasta de trabalho"
+    }
+  },
   "detailed_description": "O Excel Viewer abre arquivos .xlsx e .xls no navegador, lê as abas disponíveis e mostra os dados em uma tabela simples. Depois do upload, você pode alternar entre planilhas, escolher uma coluna para filtrar por texto, clicar no cabeçalho para alternar ordenação crescente ou decrescente e ver quantas linhas estão sendo exibidas em relação ao total da aba. A ferramenta é útil para uma conferência rápida sem abrir o Microsoft Office, especialmente quando você precisa verificar linhas, colunas e valores de uma planilha recebida. Ela não edita o arquivo, não preserva todos os estilos visuais como uma suíte de planilhas completa e não exporta os dados filtrados.",
   "usage_steps": [
     "Clique na área de upload e selecione um arquivo .xlsx ou .xls do dispositivo.",

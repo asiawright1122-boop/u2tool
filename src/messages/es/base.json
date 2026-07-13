@@ -2758,6 +2758,30 @@
     }
   },
   "tools": {
+    "capabilityDisclosure": {
+      "title": "Qué hace esta herramienta",
+      "runsLocally": "Se ejecuta localmente en tu navegador",
+      "optionalServer": "Procesamiento opcional en el servidor",
+      "acceptedInputs": "Entradas aceptadas",
+      "producedOutputs": "Resultados generados",
+      "supportedLanguage": "Idioma de comprobación compatible",
+      "limits": "Limitaciones actuales",
+      "privacyLocal": "En el modo local, tus datos permanecen en este navegador.",
+      "privacyServer": "El procesamiento en el servidor solo comienza cuando lo solicitas explícitamente.",
+      "languageNeutral": "Independiente del idioma",
+      "languages": {
+        "en": "Inglés",
+        "zh": "Chino",
+        "ja": "Japonés",
+        "ko": "Coreano",
+        "es": "Español",
+        "pt": "Portugués",
+        "fr": "Francés",
+        "de": "Alemán",
+        "ru": "Ruso",
+        "ar": "Árabe"
+      }
+    },
     "popular": "Popular",
     "input": "Aporte",
     "output": "Producción",

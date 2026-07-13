@@ -1,4 +1,30 @@
 {
+  "capabilities": {
+    "modes": {
+      "textToHex": "Texte vers hexadécimal UTF-8",
+      "hexToText": "Hexadécimal UTF-8 vers texte"
+    },
+    "inputs": {
+      "text": "Texte",
+      "utf8Hex": "Texte hexadécimal UTF-8"
+    },
+    "outputs": {
+      "utf8Hex": "Octets hexadécimaux UTF-8",
+      "decodedText": "Texte décodé"
+    },
+    "features": {
+      "textToHex": "Encoder le texte en hexadécimal UTF-8",
+      "hexToText": "Décoder l’hexadécimal UTF-8 en texte",
+      "clipboardCopy": "Copier les résultats dans le presse-papiers"
+    },
+    "limits": {
+      "noFileOpen": "N’ouvre pas les fichiers",
+      "noOffsetGrid": "Aucune grille de décalages ou d’octets",
+      "noDirectByteEditing": "Aucune modification directe des octets",
+      "utf8Only": "UTF-8 uniquement",
+      "noFileExport": "Aucun export de fichier"
+    }
+  },
   "detailed_description": "L'éditeur hexadécimal convertit du texte en octets hexadécimaux UTF-8 et décode une suite hexadécimale en texte lisible directement dans le navigateur. L'interface reste volontairement simple : une zone Texte, une zone Hexadécimal, un bouton pour convertir vers l'hexadécimal, un bouton pour revenir vers le texte et des commandes de copie. Cette page est utile pour vérifier une valeur de log, préparer un exemple de payload, expliquer la représentation UTF-8 d'un caractère ou comparer rapidement une chaîne texte avec sa forme hexadécimale. L'outil ne modifie pas de fichier binaire et n'envoie pas le contenu à un serveur ; il traite uniquement le texte collé dans la page.",
   "usage_steps": [
     "Collez une chaîne courte dans le champ Texte lorsque vous voulez obtenir sa représentation hexadécimale.",

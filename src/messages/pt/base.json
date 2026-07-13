@@ -2764,6 +2764,30 @@
     }
   },
   "tools": {
+    "capabilityDisclosure": {
+      "title": "O que esta ferramenta faz",
+      "runsLocally": "Executa localmente no seu navegador",
+      "optionalServer": "Processamento opcional no servidor",
+      "acceptedInputs": "Entradas aceitas",
+      "producedOutputs": "Saídas produzidas",
+      "supportedLanguage": "Idioma de verificação compatível",
+      "limits": "Limitações atuais",
+      "privacyLocal": "No modo local, sua entrada permanece neste navegador.",
+      "privacyServer": "O processamento no servidor só começa depois que você o solicita explicitamente.",
+      "languageNeutral": "Independente de idioma",
+      "languages": {
+        "en": "Inglês",
+        "zh": "Chinês",
+        "ja": "Japonês",
+        "ko": "Coreano",
+        "es": "Espanhol",
+        "pt": "Português",
+        "fr": "Francês",
+        "de": "Alemão",
+        "ru": "Russo",
+        "ar": "Árabe"
+      }
+    },
     "popular": "Popular",
     "input": "Entrada",
     "output": "Saída",

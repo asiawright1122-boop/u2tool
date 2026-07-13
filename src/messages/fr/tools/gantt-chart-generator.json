@@ -1,4 +1,19 @@
 {
+  "capabilities": {
+    "modes": { "localChartEditor": "Éditeur local de diagramme de Gantt" },
+    "inputs": { "taskDates": "Dates de début et de fin des tâches" },
+    "features": {
+      "taskNameDatesProgress": "Modifier les noms, les dates et l’avancement des tâches"
+    },
+    "limits": {
+      "noDependencies": "Aucune dépendance entre les tâches",
+      "noMilestones": "Aucun jalon",
+      "noCriticalPath": "Aucun calcul du chemin critique",
+      "noPersistence": "Aucun projet enregistré",
+      "noDataImportExport": "Aucun import ni export des données du projet",
+      "noCollaboration": "Aucune collaboration"
+    }
+  },
   "detailed_description": "Notre générateur gratuit de diagrammes de Gantt aide les chefs de projet et les équipes à visualiser facilement les calendriers de projets. Un diagramme de Gantt est un graphique à barres horizontal qui montre les tâches du projet dans le temps, essentiel pour la planification et le suivi des projets. Avec ce générateur, vous pouvez créer des calendriers professionnels en ajoutant des tâches avec des dates de début, de fin et des pourcentages de progression. La chronologie visuelle aide à identifier les dépendances des tâches, les activités qui se chevauchent et les goulots d'étranglement potentiels. Parfait pour les sprints agiles, les projets de construction, les campagnes marketing et les cycles de développement logiciel. Exportez vos diagrammes de Gantt en PNG ou SVG pour les présentations et les rapports.",
   "usage_steps": [
     "Cliquez sur 'Ajouter une tâche' pour créer votre première tâche de projet",

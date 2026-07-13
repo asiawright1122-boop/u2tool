@@ -1,4 +1,30 @@
 {
+  "capabilities": {
+    "modes": {
+      "textToHex": "Text to UTF-8 hex",
+      "hexToText": "UTF-8 hex to text"
+    },
+    "inputs": {
+      "text": "Text",
+      "utf8Hex": "UTF-8 hexadecimal text"
+    },
+    "outputs": {
+      "utf8Hex": "UTF-8 hexadecimal bytes",
+      "decodedText": "Decoded text"
+    },
+    "features": {
+      "textToHex": "Encode text as UTF-8 hex",
+      "hexToText": "Decode UTF-8 hex to text",
+      "clipboardCopy": "Copy results to the clipboard"
+    },
+    "limits": {
+      "noFileOpen": "Does not open files",
+      "noOffsetGrid": "No offset or byte grid",
+      "noDirectByteEditing": "No direct byte editing",
+      "utf8Only": "UTF-8 only",
+      "noFileExport": "No file export"
+    }
+  },
   "detailed_description": "The online Hex Editor is a browser-based text and hexadecimal converter for quick byte-level inspection. Use it as a text to hex and hex to text converter: enter text to encode it as uppercase UTF-8 hex bytes, or paste a hex sequence to decode it back into readable text. The tool keeps the workflow intentionally simple with two editable text areas, explicit conversion buttons, and copy controls for either side. It is useful when checking API payloads, inspecting encoded strings, comparing byte values in logs, or teaching how characters map to hexadecimal bytes. All conversion runs in the browser through standard text encoding and decoding APIs, so pasted text and hex values stay on the device.",
   "usage_steps": [
     "1. Type or paste text in the Text field.",
