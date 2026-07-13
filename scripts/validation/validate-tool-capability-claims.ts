@@ -71,6 +71,17 @@ export interface CapabilityEvidenceExecutionResult {
   details?: string;
 }
 
+export interface RepositoryEvidenceTestRunOptions {
+  timeoutMs?: number;
+  killSignal?: NodeJS.Signals;
+}
+
+/** Production upper bound for one isolated capability-evidence invocation. */
+export const CAPABILITY_EVIDENCE_TEST_TIMEOUT_MS = 30_000;
+
+/** A hard kill prevents a stuck evidence process from ignoring termination. */
+export const CAPABILITY_EVIDENCE_TEST_KILL_SIGNAL: NodeJS.Signals = 'SIGKILL';
+
 export interface ToolCapabilityClaimOptions {
   requireReleaseReady?: string;
 }
@@ -639,6 +650,7 @@ interface VitestJsonResult {
 export function runRepositoryEvidenceTest(
   evidence: CapabilityEvidenceReference,
   repositoryRoot = repoRoot,
+  options: RepositoryEvidenceTestRunOptions = {},
 ): CapabilityEvidenceExecutionResult {
   const module = repositoryEvidenceTestModule(evidence.file, repositoryRoot);
   if (!module) {
@@ -657,6 +669,15 @@ export function runRepositoryEvidenceTest(
     return { status: 'error', details: 'Local Vitest module is unavailable.' };
   }
 
+  const timeoutMs =
+    options.timeoutMs ?? CAPABILITY_EVIDENCE_TEST_TIMEOUT_MS;
+  if (!Number.isFinite(timeoutMs) || timeoutMs <= 0) {
+    return {
+      status: 'error',
+      details: `Invalid evidence test timeout: ${String(timeoutMs)}`,
+    };
+  }
+
   const result = spawnSync(
     process.execPath,
     [
@@ -664,6 +685,8 @@ export function runRepositoryEvidenceTest(
       'run',
       evidence.file,
       '--reporter=json',
+      '--pool=threads',
+      '--maxWorkers=1',
       '--testNamePattern',
       escapeRegExp(evidence.testName),
     ],
@@ -672,6 +695,9 @@ export function runRepositoryEvidenceTest(
       encoding: 'utf8',
       env: { ...process.env, FORCE_COLOR: '0', NO_COLOR: '1' },
       maxBuffer: 10 * 1024 * 1024,
+      timeout: timeoutMs,
+      killSignal:
+        options.killSignal ?? CAPABILITY_EVIDENCE_TEST_KILL_SIGNAL,
     },
   );
 

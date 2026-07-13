@@ -389,6 +389,19 @@ describe("assessToolCapabilityClaims", () => {
     expect(report.issues).toEqual([]);
   });
 
+  it("keeps a bare negative FAQ answer associated with its explanation", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "en",
+      text: [
+        "Can it replace EXPLAIN ANALYZE?",
+        "No. Use your database's EXPLAIN tools for real execution plans.",
+      ].join("\n"),
+    });
+
+    expect(report.issues).toEqual([]);
+  });
+
   it("scans the affirmative side of a mixed positive/negative clause", () => {
     const report = assessToolCapabilityClaims({
       slug: "hex-editor",
@@ -403,4 +416,56 @@ describe("assessToolCapabilityClaims", () => {
       "hex-editor-grid-claim",
     );
   });
+
+  it("does not let an unrelated previous limitation mask the next assertion", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "hex-editor",
+      locale: "en",
+      text: "No file export. Edits individual bytes directly.",
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "hex-editor-byte-edit-claim",
+    );
+    expect(report.issues.map((issue) => issue.code)).not.toContain(
+      "hex-editor-file-export-claim",
+    );
+  });
+
+  it.each([
+    ["de", "Kein Dateiexport. Ermöglicht, einzelne Bytes direkt zu bearbeiten."],
+    ["zh", "不导出文件。可以直接编辑字节。"],
+  ] as const)(
+    "evaluates the assertion after an unrelated %s limitation independently",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "hex-editor",
+        locale,
+        text,
+      });
+
+      expect(report.issues.map((issue) => issue.code)).toContain(
+        "hex-editor-byte-edit-claim",
+      );
+      expect(report.issues.map((issue) => issue.code)).not.toContain(
+        "hex-editor-file-export-claim",
+      );
+    },
+  );
+
+  it.each([
+    ["en", "No file export. It does not edit individual bytes directly."],
+    ["zh", "不导出文件。不能直接编辑字节。"],
+  ] as const)(
+    "allows an honest two-sentence limitation in %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "hex-editor",
+        locale,
+        text,
+      });
+
+      expect(report.issues).toEqual([]);
+    },
+  );
 });

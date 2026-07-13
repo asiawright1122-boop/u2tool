@@ -3,9 +3,9 @@
 ## Decision
 
 Capability governance was re-verified on 2026-07-14 in `Asia/Shanghai` after
-the second whole-branch review and its follow-up fixes. This document records
-the verified working-tree state; the final implementation commit is recorded
-in the local SDD report and repository history.
+the third and final targeted review wave. This document records the verified
+working-tree state; the final implementation commit is recorded in the local
+SDD report and repository history.
 
 This remains an inventory baseline, not production release approval. All six
 pilot profiles remain `inventory`, contain no behavior evidence, and render no
@@ -59,12 +59,14 @@ all `categoryEvidence: 0`.
 ### Locale-aware claims
 
 The claim detector now selects deterministic taxonomy rules by locale, splits
-mixed statements at localized contrast clauses, and evaluates each resulting
-assertion independently. Questions are ignored unless a following localized
-bare affirmative answer confirms the claim; bare negative answers and explicit
-limitations remain honest. Tests exercise every governed claim code in every
-UI locale with 320 affirmative and 320 limitation cases, plus mixed-clause,
-FAQ, and current-message regressions.
+mixed statements at localized contrast clauses, and evaluates adjacent
+assertions independently. Negation in one assertion cannot mask the next.
+Explicit FAQ questions remain associated with a following localized bare
+`Yes` or `No`; a bare negative answer can also govern its immediate FAQ
+explanation. No generic previous-negation suppression remains. Tests exercise
+every governed claim code in every UI locale with 320 affirmative and 320
+limitation cases, plus mixed-clause, FAQ, adjacent-sentence, honest two-sentence
+limitation, and current-message regressions.
 
 The repository audit scans all six pilots in all ten locales (60 pages). Copy
 found by both review waves was rewritten to match current production behavior.
@@ -103,7 +105,12 @@ also invokes local Vitest for every exact evidence reference, parses its JSON
 result, requires exactly one collected assertion with the exact leaf title,
 and requires that assertion to pass. Failed, skipped, todo, not-collected, and
 cannot-run results each fail readiness. The runner uses a fixed executable and
-argument array without a shell, with the test-name pattern escaped as data.
+argument array without a shell, with the test-name pattern escaped as data. A
+single evidence invocation has a documented 30-second production timeout,
+runs in a one-worker thread pool, and receives `SIGKILL` on timeout. Timeout or
+termination maps to the existing cannot-run readiness failure. A real hanging
+evidence regression uses an injected 250-millisecond bound and terminates
+without leaving temporary fixture directories.
 
 ## Fresh Verification
 
@@ -113,7 +120,7 @@ argument array without a shell, with the test-name pattern escaped as data.
 npx vitest run src/config/tool-capabilities/index.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts scripts/validation/validate-tool-capability-claims.test.ts scripts/validation/tool-page-render-contract.test.ts src/components/tools/ToolCapabilityDisclosure.test.ts src/lib/tool-capability-disclosure.test.ts
 ```
 
-Result: exit `0`; 7/7 files and 263/263 tests passed.
+Result: exit `0`; 7/7 files and 270/270 tests passed.
 
 ### Default claims validator
 

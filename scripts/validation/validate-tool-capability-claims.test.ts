@@ -657,6 +657,48 @@ describe('runRepositoryEvidenceTest', () => {
       rmSync(fixtureDirectory, { recursive: true, force: true });
     }
   });
+
+  it(
+    'terminates a hanging evidence test within the configured runner timeout',
+    () => {
+      const fixtureDirectory = mkdtempSync(
+        path.join(process.cwd(), 'src/lib/.evidence-runner-'),
+      );
+      const fixturePath = path.join(fixtureDirectory, 'synthetic.test.ts');
+      const testName =
+        '[capability:synthetic-tool:mode:synthetic-mode]';
+
+      try {
+        writeFileSync(
+          fixturePath,
+          [
+            `import { it } from 'vitest';`,
+            `it(${JSON.stringify(testName)}, async () => { await new Promise(() => {}); }, 1_000);`,
+          ].join('\n'),
+        );
+        const startedAt = performance.now();
+        const evidence = {
+          file: path.relative(process.cwd(), fixturePath),
+          testName,
+        };
+        const result = runRepositoryEvidenceTest(
+          evidence,
+          process.cwd(),
+          { timeoutMs: 250 },
+        );
+
+        expect(result.status).toBe('error');
+        expect(result.details).toMatch(/ETIMEDOUT|timed out/iu);
+        expect(
+          validateCapabilityEvidenceExecution(evidence, result)?.code,
+        ).toBe('release-ready-evidence-test-cannot-run');
+        expect(performance.now() - startedAt).toBeLessThan(2_000);
+      } finally {
+        rmSync(fixtureDirectory, { recursive: true, force: true });
+      }
+    },
+    5_000,
+  );
 });
 
 describe('runToolCapabilityClaimValidation', () => {
