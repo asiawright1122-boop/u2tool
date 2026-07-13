@@ -64,15 +64,16 @@ assertions independently. Negation in one assertion cannot mask the next.
 Explicit FAQ questions remain associated with a following localized bare
 `Yes` or `No`, but every following explanation is evaluated independently for
 affirmative governed claims. Localized negative limitations remain honest, as
-do recommendations that contain explicit external ownership or provider
-semantics. Generic database/application/server words are insufficient, and
-localized `this/current tool`, application, server, service, or system phrases
-remain claims about the current subject. No generic previous-negation
-suppression remains. Tests exercise every governed claim code in every UI
-locale with 320 affirmative and 320 limitation cases, plus ten-locale
-contradictory, honest-limitation, and current-subject-versus-external FAQ
-matrices, mixed-clause, adjacent-sentence, honest two-sentence limitation, and
-current-message regressions.
+do recommendations matched by one anchored per-locale external-object pattern.
+The imperative's direct object itself must carry localized `your`, external,
+third-party, provider, or vendor ownership semantics. A current product, brand,
+possessive, or definite object is still a governed claim even when an external
+database/server noun appears later in the sentence. No generic
+previous-negation suppression remains. Tests exercise every governed claim
+code in every UI locale with 320 affirmative and 320 limitation cases, plus
+ten-locale contradictory, honest-limitation, anchored-external, and
+delayed-external-noun FAQ matrices, mixed-clause, adjacent-sentence, honest
+two-sentence limitation, and current-message regressions.
 
 The repository audit scans all six pilots in all ten locales (60 pages). Copy
 found by both review waves was rewritten to match current production behavior.
@@ -126,7 +127,7 @@ without leaving temporary fixture directories.
 npx vitest run src/config/tool-capabilities/index.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts scripts/validation/validate-tool-capability-claims.test.ts scripts/validation/tool-page-render-contract.test.ts src/components/tools/ToolCapabilityDisclosure.test.ts src/lib/tool-capability-disclosure.test.ts
 ```
 
-Result: exit `0`; 7/7 files and 303/303 tests passed.
+Result: exit `0`; 7/7 files and 316/316 tests passed.
 
 ### Default claims validator
 
