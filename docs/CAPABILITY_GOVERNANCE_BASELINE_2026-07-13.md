@@ -89,15 +89,18 @@ within the same sentence, including meta/how-to clauses, so a later execute
 action may safely elide `SQLクエリ`/`SQL 쿼리` while retaining action-local
 location ownership. Before each execute predicate, Japanese `を` and Korean
 `을`/`를` accusative markers provide generic direct-object evidence that
-overrides inherited state. Topic/additive markers (`は`/`も`, `은`/`는`/`도`)
-are deliberately constrained because they may mark the executing subject:
-only SQL/query-statement heads and documented non-SQL execution-object nouns
-such as tests, processes, tasks, jobs, code, batches, or programs may mutate
-state. SQL heads restore governed context, known non-SQL heads clear it, and
-current tool/application/system or other unknown topic heads preserve carried
-SQL context. Particle-omitted evidence uses the same finite head lexicon;
-arbitrary trailing tokens are not treated as objects. Japanese locatives
-`では`/`でも` and Korean
+overrides inherited state. Every accusative candidate in the action prefix is
+collected even when a location or adverb intervenes before the execute
+predicate, and the final candidate governs: a final SQL object restores
+governed context while a final non-SQL object clears it. Topic/additive markers
+(`は`/`も`, `은`/`는`/`도`) are deliberately constrained because they may mark
+the executing subject: only SQL/query-statement heads and documented non-SQL
+execution-object nouns such as tests, processes, tasks, jobs, code, batches,
+or programs may mutate state. SQL heads restore governed context, known
+non-SQL heads clear it, and current tool/application/system or other unknown
+topic heads preserve carried SQL context. Particle-omitted evidence uses the
+same finite head lexicon; arbitrary trailing tokens are not treated as
+objects. Japanese locatives `では`/`でも` and Korean
 locatives `에서는`/`에서도` are excluded from object evidence, while adverbial
 prefixes such as `すぐ`/`安全に` and `즉시`/`안전하게` preserve true SQL-object
 elision. Meta execute mentions do not mutate object state. Japanese
@@ -168,7 +171,7 @@ assertions. Three repeated runner-group checks completed stably in about
 npx vitest run src/config/tool-capabilities/index.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts scripts/validation/validate-tool-capability-claims.test.ts scripts/validation/tool-page-render-contract.test.ts src/components/tools/ToolCapabilityDisclosure.test.ts src/lib/tool-capability-disclosure.test.ts
 ```
 
-Result: exit `0`; 7/7 files and 473/473 tests passed.
+Result: exit `0`; 7/7 files and 479/479 tests passed.
 
 ### Default claims validator
 

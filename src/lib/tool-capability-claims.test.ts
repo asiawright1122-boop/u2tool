@@ -1630,6 +1630,74 @@ describe("assessToolCapabilityClaims", () => {
     },
   );
 
+  it.each([
+    [
+      "ja",
+      "SQLクエリを分析し、ワークフローをこのアプリケーションで実行します。",
+    ],
+    [
+      "ko",
+      "SQL 쿼리를 분석하고 워크플로를 이 애플리케이션에서 실행합니다.",
+    ],
+  ] as const)(
+    "finds an accusative object before an intervening location in %s: %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues).toEqual([]);
+    },
+  );
+
+  it.each([
+    [
+      "ja",
+      "SQLクエリを分析し、ワークフローをこのアプリケーションでSQL文を安全に実行します。",
+    ],
+    [
+      "ko",
+      "SQL 쿼리를 분석하고 워크플로를 이 애플리케이션에서 SQL 문을 안전하게 실행합니다.",
+    ],
+  ] as const)(
+    "lets the final SQL accusative object restore governed context in %s: %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues.map((issue) => issue.code)).toContain(
+        "sql-optimizer-execution-claim",
+      );
+    },
+  );
+
+  it.each([
+    [
+      "ja",
+      "SQLクエリを分析し、SQL文をこのアプリケーションでワークフローを安全に実行します。",
+    ],
+    [
+      "ko",
+      "SQL 쿼리를 분석하고 SQL 문을 이 애플리케이션에서 워크플로를 안전하게 실행합니다.",
+    ],
+  ] as const)(
+    "lets the final non-SQL accusative object clear governed context in %s: %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues).toEqual([]);
+    },
+  );
+
   it.each(locales)(
     "flags a contradictory bare-No FAQ explanation in %s",
     (locale) => {
