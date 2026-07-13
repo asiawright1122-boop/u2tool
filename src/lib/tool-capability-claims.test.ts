@@ -1639,6 +1639,14 @@ describe("assessToolCapabilityClaims", () => {
       "ko",
       "SQL 쿼리를 분석하고 워크플로를 이 애플리케이션에서 실행합니다.",
     ],
+    [
+      "ja",
+      "SQLクエリを分析し、ワークフローをこのアプリで安全に実行します。",
+    ],
+    [
+      "ko",
+      "SQL 쿼리를 분석하고 워크플로를 이 앱에서 안전하게 실행합니다.",
+    ],
   ] as const)(
     "finds an accusative object before an intervening location in %s: %s",
     (locale, text) => {
@@ -1695,6 +1703,32 @@ describe("assessToolCapabilityClaims", () => {
       });
 
       expect(report.issues).toEqual([]);
+    },
+  );
+
+  it.each([
+    ["ja", "SQLクエリを分析し、ボタンを押してこのアプリケーションで実行します。"],
+    ["ja", "SQLクエリを分析し、ボタンをクリックしてこのアプリケーションで実行します。"],
+    ["ja", "SQLクエリを分析し、オプションを選択してこのアプリケーションで実行します。"],
+    ["ja", "SQLクエリを分析し、値を入力してこのアプリケーションで実行します。"],
+    ["ja", "SQLクエリを分析し、画面を操作してこのアプリケーションで実行します。"],
+    ["ko", "SQL 쿼리를 분석하고 버튼을 눌러 이 애플리케이션에서 실행합니다."],
+    ["ko", "SQL 쿼리를 분석하고 버튼을 클릭하고 이 애플리케이션에서 실행합니다."],
+    ["ko", "SQL 쿼리를 분석하고 옵션을 선택하고 이 애플리케이션에서 실행합니다."],
+    ["ko", "SQL 쿼리를 분석하고 값을 입력하고 이 애플리케이션에서 실행합니다."],
+    ["ko", "SQL 쿼리를 분석하고 화면을 조작하고 이 애플리케이션에서 실행합니다."],
+  ] as const)(
+    "ignores an object consumed by an intervening action in %s: %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues.map((issue) => issue.code)).toContain(
+        "sql-optimizer-execution-claim",
+      );
     },
   );
 

@@ -92,6 +92,7 @@ const SQL_EXECUTION_ACTION_BY_LOCALE = {
   ja: {
     boundary: /[。！？!?；;\n\r]+|(?:分析|説明|表示|確認|生成|接続|実行)(?:してから|した(?:後|のち|あと)(?:に|で|から)?|して|し(?!た))\s*[、,]?\s*/gu,
     accusativeObjects: /([^、。！？,]{1,80}?)を/gu,
+    executionModifiers: /^(?:[\s、,]*(?:は|も|すぐ|安全に|即時に?|直ちに|直接|ここで))*[\s、,]*$/u,
     explicitObjects: [
       /((?:SQL\s*(?:クエリ\s*)?(?:文|ステートメント)?|クエリ\s*(?:文|ステートメント)?|テスト|試験|処理|プロセス|タスク|作業|ジョブ|コード|バッチ|プログラム))(?:は|も)(?=[^、。！？,]{0,80}$)/u,
       /((?:SQL\s*(?:クエリ\s*)?(?:文|ステートメント)?|クエリ\s*(?:文|ステートメント)?|テスト|試験|処理|プロセス|タスク|作業|ジョブ|コード|バッチ|プログラム))\s*$/u,
@@ -106,6 +107,7 @@ const SQL_EXECUTION_ACTION_BY_LOCALE = {
   ko: {
     boundary: /[.!?。！？；;\n\r]+|(?:분석|설명|표시|확인|생성|연결|실행)(?:한\s+(?:후|다음|뒤)(?:에|로)?|하고\s+나서|하고|하며|해서)\s*,?\s*/gu,
     accusativeObjects: /([^,.!?。！？]{1,80}?)(?:을|를)\s*/gu,
+    executionModifiers: /^(?:[\s,]*(?:은|는|도|즉시|안전하게|바로|직접|여기서))*[\s,]*$/u,
     explicitObjects: [
       /((?:SQL\s*(?:쿼리\s*)?문?|쿼리\s*문?|테스트|시험|프로세스|처리|작업|태스크|잡|코드|배치|프로그램))(?:은|는|도)(?=[^,.!?。！？]{0,80}$)/u,
       /((?:SQL\s*(?:쿼리\s*)?문?|쿼리\s*문?|테스트|시험|프로세스|처리|작업|태스크|잡|코드|배치|프로그램))\s*$/u,
@@ -425,7 +427,15 @@ function matchesJaKoSqlExecutionAction(
     action.accusativeObjects.lastIndex = 0;
     const accusativeObject = [
       ...actionPrefix.matchAll(action.accusativeObjects),
-    ].at(-1)?.[1];
+    ].filter((candidate) => {
+      const candidateEnd = (candidate.index ?? 0) + candidate[0].length;
+      locationBinding.location.lastIndex = 0;
+      const modifierTail = actionPrefix
+        .slice(candidateEnd)
+        .replace(locationBinding.location, "");
+      locationBinding.location.lastIndex = 0;
+      return test(action.executionModifiers, modifierTail);
+    }).at(-1)?.[1];
     action.accusativeObjects.lastIndex = 0;
     const explicitObject = accusativeObject ?? action.explicitObjects
       .map((pattern) => actionPrefix.match(pattern)?.[1])
