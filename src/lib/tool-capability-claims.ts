@@ -1,4 +1,5 @@
 import { getToolCapabilityProfile } from "../config/tool-capabilities";
+import { matchesLocalizedCapabilityClaim } from "./tool-capability-claim-taxonomy";
 
 export interface ToolCapabilityClaimInput {
   slug: string;
@@ -25,9 +26,12 @@ export function assessToolCapabilityClaims(
   }
 
   const issues = profile.forbiddenClaims.flatMap((claim) => {
-    claim.pattern.lastIndex = 0;
-    const matches = claim.pattern.test(input.text);
-    claim.pattern.lastIndex = 0;
+    const matches = matchesLocalizedCapabilityClaim(
+      claim.code,
+      input.locale,
+      input.text,
+      claim.pattern,
+    );
 
     return matches
       ? [{ code: claim.code, message: claim.reason }]

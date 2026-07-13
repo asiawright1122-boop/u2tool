@@ -365,6 +365,14 @@ describe("pilot tool capability registry", () => {
         positive: "Exports the workbook.",
         negative: "Does not export the workbook.",
       },
+      "excel-viewer-advanced-filter-claim": {
+        positive: "Provides advanced regex filters.",
+        negative: "Does not provide advanced regex filters.",
+      },
+      "excel-viewer-multi-sort-claim": {
+        positive: "Supports hierarchical sorting.",
+        negative: "Does not support hierarchical sorting.",
+      },
     } as const;
 
     for (const claim of profile.forbiddenClaims) {

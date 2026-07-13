@@ -547,8 +547,8 @@ const prioritySeoKeywords = {
       description: ['玻璃拟态生成器', '磨砂玻璃', '卡片组件'],
     },
     'grammar-checker': {
-      title: ['语法检查工具'],
-      description: ['语法检查工具', '病句', '校对'],
+      title: ['英语', '语法检查工具'],
+      description: ['语法检查工具', '英语文本', '校对'],
     },
     'graph-chart-generator': {
       title: ['关系图生成器'],
@@ -655,8 +655,8 @@ const prioritySeoKeywords = {
       description: ['十六进制', 'base64', '数据编码'],
     },
     'hex-editor': {
-      title: ['十六进制', '编辑器'],
-      description: ['十六进制编辑器', '字节数据', '二进制分析'],
+      title: ['文本', '十六进制', '转换器'],
+      description: ['十六进制', '字节', '转换'],
     },
     'html-minifier': {
       title: ['html', '压缩器'],
@@ -1422,6 +1422,7 @@ const allowedZhTechnicalTokens = new Set(
     'xml',
     'uuid',
     'v4',
+    'utf-8',
     'url',
     'xss',
     'regex',

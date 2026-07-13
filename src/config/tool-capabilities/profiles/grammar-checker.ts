@@ -40,22 +40,22 @@ export const grammarCheckerCapabilityProfile = defineToolCapabilityProfile({
     {
       id: "english-local-rules",
       labelKey: "tools.grammar-checker.capabilities.features.englishLocalRules",
-      evidenceTest: "",
+      evidence: undefined,
     },
     {
       id: "issue-highlights",
       labelKey: "tools.grammar-checker.capabilities.features.issueHighlights",
-      evidenceTest: "",
+      evidence: undefined,
     },
     {
       id: "individual-fixes",
       labelKey: "tools.grammar-checker.capabilities.features.individualFixes",
-      evidenceTest: "",
+      evidence: undefined,
     },
     {
       id: "all-fixes",
       labelKey: "tools.grammar-checker.capabilities.features.allFixes",
-      evidenceTest: "",
+      evidence: undefined,
     },
   ],
   optionalServerFeatures: [],

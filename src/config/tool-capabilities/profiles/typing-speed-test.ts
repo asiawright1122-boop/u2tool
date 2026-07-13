@@ -55,22 +55,22 @@ export const typingSpeedTestCapabilityProfile = defineToolCapabilityProfile({
       id: "difficulty-prompt-banks",
       labelKey:
         "tools.typing-speed-test.capabilities.features.difficultyPromptBanks",
-      evidenceTest: "",
+      evidence: undefined,
     },
     {
       id: "completion-wpm",
       labelKey: "tools.typing-speed-test.wpm",
-      evidenceTest: "",
+      evidence: undefined,
     },
     {
       id: "completion-accuracy",
       labelKey: "tools.typing-speed-test.accuracy",
-      evidenceTest: "",
+      evidence: undefined,
     },
     {
       id: "completion-duration",
       labelKey: "tools.typing-speed-test.duration",
-      evidenceTest: "",
+      evidence: undefined,
     },
   ],
   optionalServerFeatures: [],

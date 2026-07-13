@@ -52,24 +52,24 @@ export const sqlQueryOptimizerCapabilityProfile = defineToolCapabilityProfile({
       id: "static-heuristics",
       labelKey:
         "tools.sql-query-optimizer.capabilities.features.staticHeuristics",
-      evidenceTest: "",
+      evidence: undefined,
     },
     {
       id: "performance-score",
       labelKey:
         "tools.sql-query-optimizer.capabilities.features.performanceScore",
-      evidenceTest: "",
+      evidence: undefined,
     },
     {
       id: "sql-formatting",
       labelKey: "tools.sql-query-optimizer.capabilities.features.sqlFormatting",
-      evidenceTest: "",
+      evidence: undefined,
     },
     {
       id: "general-index-candidates",
       labelKey:
         "tools.sql-query-optimizer.capabilities.features.generalIndexCandidates",
-      evidenceTest: "",
+      evidence: undefined,
     },
   ],
   optionalServerFeatures: [],

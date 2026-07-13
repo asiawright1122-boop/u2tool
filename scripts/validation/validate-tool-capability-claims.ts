@@ -1,4 +1,4 @@
-import { realpathSync, statSync } from 'node:fs';
+import { readFileSync, realpathSync, statSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
@@ -30,6 +30,32 @@ export interface CapabilityValidationIssue {
   message: string;
 }
 
+export type CapabilityEvidenceCategory =
+  | 'profile'
+  | 'mode'
+  | 'accepted-input'
+  | 'produced-output'
+  | 'browser-feature'
+  | 'optional-server-feature'
+  | 'limit'
+  | 'engine';
+
+export interface CapabilityEvidenceReference {
+  file: string;
+  testName: string;
+}
+
+export interface CapabilityEvidenceSubject {
+  slug: string;
+  category: CapabilityEvidenceCategory;
+  id: string;
+}
+
+export interface RepositoryEvidenceTestModule {
+  file: string;
+  source: string;
+}
+
 export interface ToolCapabilityClaimOptions {
   requireReleaseReady?: string;
 }
@@ -48,7 +74,9 @@ export interface ToolCapabilityClaimRunDependencies {
     locale: Locale,
     slug: string,
   ) => Promise<Record<string, unknown>>;
-  fileExists: (path: string) => boolean;
+  loadEvidenceTestModule: (
+    path: string,
+  ) => RepositoryEvidenceTestModule | null;
 }
 
 export interface ToolCapabilityClaimRunReport {
@@ -218,14 +246,15 @@ export async function runToolCapabilityClaimValidation(
   issues.push(
     ...validateReleaseReadyProfiles(
       releaseReadyProfiles,
-      dependencies.fileExists,
+      dependencies.loadEvidenceTestModule,
       (profile, locale, labelKey) =>
-        isNonEmptyString(
-          resolveMessage(
+        {
+          const value = resolveMessage(
             labelMessagesByPage.get(`${locale}\0${profile.slug}`) ?? {},
             labelKey,
-          ),
-        ),
+          );
+          return isNonEmptyString(value) ? value.trim() : undefined;
+        },
     ),
   );
   issues.sort(compareIssues);
@@ -322,21 +351,21 @@ export function validateCapabilityMessageMatrix(
 
 export function validateReleaseReadyProfiles(
   profiles: readonly ToolCapabilityProfile[],
-  fileExists: (path: string) => boolean,
-  labelResolves: (
+  loadEvidenceTestModule: (
+    path: string,
+  ) => RepositoryEvidenceTestModule | null,
+  resolveLabel: (
     profile: ToolCapabilityProfile,
     locale: Locale,
     labelKey: string,
-  ) => boolean,
+  ) => string | undefined,
 ): CapabilityValidationIssue[] {
   return profiles
     .filter((profile) => profile.enforcement === 'release-blocking')
     .flatMap((profile) => {
       const locale = profile.supportedLocales.ui[0] ?? 'en';
       const issues: CapabilityValidationIssue[] = [];
-      const hasTopLevelEvidence = profile.evidenceTests.some(
-        (evidenceTest) => evidenceTest.trim().length > 0,
-      );
+      const hasTopLevelEvidence = profile.evidenceTests.length > 0;
 
       if (!hasTopLevelEvidence) {
         issues.push({
@@ -348,54 +377,115 @@ export function validateReleaseReadyProfiles(
         });
       }
 
-      for (const [featureKind, features] of [
-        ['Browser', profile.browserOnlyFeatures],
-        ['Optional-server', profile.optionalServerFeatures],
-      ] as const) {
-        for (const feature of features) {
-          if (feature.evidenceTest.trim().length > 0) {
-            continue;
-          }
+      const categoryEvidence: Array<{
+        subject: CapabilityEvidenceSubject;
+        evidence?: CapabilityEvidenceReference;
+      }> = [
+        ...profile.modes.map((item) => ({
+          subject: { slug: profile.slug, category: 'mode' as const, id: item.id },
+          evidence: item.evidence,
+        })),
+        ...profile.acceptedInputs.map((item) => ({
+          subject: {
+            slug: profile.slug,
+            category: 'accepted-input' as const,
+            id: item.id,
+          },
+          evidence: item.evidence,
+        })),
+        ...profile.producedOutputs.map((item) => ({
+          subject: {
+            slug: profile.slug,
+            category: 'produced-output' as const,
+            id: item.id,
+          },
+          evidence: item.evidence,
+        })),
+        ...profile.browserOnlyFeatures.map((item) => ({
+          subject: {
+            slug: profile.slug,
+            category: 'browser-feature' as const,
+            id: item.id,
+          },
+          evidence: item.evidence,
+        })),
+        ...profile.optionalServerFeatures.map((item) => ({
+          subject: {
+            slug: profile.slug,
+            category: 'optional-server-feature' as const,
+            id: item.id,
+          },
+          evidence: item.evidence,
+        })),
+        ...profile.limits.map((item) => ({
+          subject: { slug: profile.slug, category: 'limit' as const, id: item.id },
+          evidence: item.evidence,
+        })),
+        {
+          subject: {
+            slug: profile.slug,
+            category: 'engine',
+            id: 'language-support',
+          },
+          evidence: profile.supportedLocales.engine.evidence,
+        },
+      ];
 
+      for (const entry of categoryEvidence) {
+        if (!entry.evidence) {
           issues.push({
             locale,
             slug: profile.slug,
-            code: 'release-ready-feature-evidence-required',
-            message: `${featureKind} feature ${JSON.stringify(feature.id)} must name a non-empty evidence test.`,
+            code: 'release-ready-category-evidence-required',
+            message: `${entry.subject.category} ${JSON.stringify(entry.subject.id)} must name structured behavior-test evidence.`,
           });
-        }
-      }
-
-      const evidencePaths = new Set(
-        [
-          ...profile.evidenceTests,
-          ...profile.browserOnlyFeatures.map(({ evidenceTest }) => evidenceTest),
-          ...profile.optionalServerFeatures.map(
-            ({ evidenceTest }) => evidenceTest,
-          ),
-        ]
-          .map((evidenceTest) => evidenceTest.trim())
-          .filter(Boolean),
-      );
-
-      for (const evidencePath of [...evidencePaths].sort(compareStrings)) {
-        if (fileExists(evidencePath)) {
           continue;
         }
 
-        issues.push({
-          locale,
-          slug: profile.slug,
-          code: 'release-ready-evidence-file-missing',
-          message: `Evidence test file does not exist: ${evidencePath}`,
-        });
+        const evidenceIssue = validateCapabilityEvidenceReference(
+          entry.subject,
+          entry.evidence,
+          loadEvidenceTestModule,
+        );
+        if (evidenceIssue) {
+          issues.push({ locale, slug: profile.slug, ...evidenceIssue });
+        }
+      }
+
+      for (const evidence of profile.evidenceTests) {
+        const evidenceIssue = validateCapabilityEvidenceReference(
+          {
+            slug: profile.slug,
+            category: 'profile',
+            id: 'release-readiness',
+          },
+          evidence,
+          loadEvidenceTestModule,
+        );
+        if (evidenceIssue) {
+          issues.push({ locale, slug: profile.slug, ...evidenceIssue });
+        }
       }
 
       const visibleLabelKeys = visibleCapabilityLabelKeys(profile);
 
       for (const uiLocale of profile.supportedLocales.ui) {
         for (const labelKey of visibleLabelKeys) {
-          if (labelResolves(profile, uiLocale, labelKey)) {
+          const label = resolveLabel(profile, uiLocale, labelKey);
+          if (label) {
+            const report = assessToolCapabilityClaims({
+              slug: profile.slug,
+              locale: uiLocale,
+              text: label,
+            });
+            issues.push(
+              ...report.issues.map((issue) => ({
+                locale: uiLocale,
+                slug: profile.slug,
+                code: issue.code,
+                message: `${issue.message} Visible capability label: ${labelKey}`,
+              })),
+            );
             continue;
           }
 
@@ -418,12 +508,22 @@ const repoRoot = path.resolve(
   '../..',
 );
 
-export function repositoryEvidenceFileExists(
+const APPROVED_TEST_MODULE_PATH =
+  /^(?:(?:src|scripts)\/.+\.test|(?:tests|e2e)\/.+\.(?:test|spec))\.(?:[cm]?[jt]sx?)$/u;
+
+export function repositoryEvidenceTestModule(
   evidencePath: string,
   repositoryRoot = repoRoot,
-): boolean {
+): RepositoryEvidenceTestModule | null {
   try {
     const canonicalRoot = realpathSync(repositoryRoot);
+    const requestedRelativePath = path.normalize(evidencePath);
+    if (
+      path.isAbsolute(evidencePath) ||
+      !APPROVED_TEST_MODULE_PATH.test(requestedRelativePath)
+    ) {
+      return null;
+    }
     const candidatePath = realpathSync(
       path.resolve(canonicalRoot, evidencePath),
     );
@@ -433,10 +533,69 @@ export function repositoryEvidenceFileExists(
       relativePath.startsWith(`..${path.sep}`) ||
       path.isAbsolute(relativePath);
 
-    return !isOutsideRepository && statSync(candidatePath).isFile();
+    if (isOutsideRepository || !statSync(candidatePath).isFile()) {
+      return null;
+    }
+
+    const canonicalRelativePath = path.relative(canonicalRoot, candidatePath);
+    if (!APPROVED_TEST_MODULE_PATH.test(canonicalRelativePath)) {
+      return null;
+    }
+
+    return {
+      file: canonicalRelativePath.split(path.sep).join('/'),
+      source: readFileSync(candidatePath, 'utf8'),
+    };
   } catch {
-    return false;
+    return null;
   }
+}
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&');
+}
+
+export function capabilityEvidenceMarker(
+  subject: CapabilityEvidenceSubject,
+): string {
+  return `[capability:${subject.slug}:${subject.category}:${subject.id}]`;
+}
+
+export function validateCapabilityEvidenceReference(
+  subject: CapabilityEvidenceSubject,
+  evidence: CapabilityEvidenceReference,
+  loadTestModule: (
+    file: string,
+  ) => RepositoryEvidenceTestModule | null,
+): Pick<CapabilityValidationIssue, 'code' | 'message'> | null {
+  const module = loadTestModule(evidence.file);
+  if (!module) {
+    return {
+      code: 'release-ready-evidence-test-invalid',
+      message: `Evidence must name an approved repository test module: ${evidence.file}`,
+    };
+  }
+
+  const marker = capabilityEvidenceMarker(subject);
+  if (!evidence.testName.includes(marker)) {
+    return {
+      code: 'release-ready-evidence-marker-mismatch',
+      message: `Evidence test name must include ${marker}`,
+    };
+  }
+
+  const collectedTest = new RegExp(
+    `\\b(?:it|test)(?:\\.(?:only|skip|todo))?\\s*\\(\\s*(["'])${escapeRegExp(evidence.testName)}\\1`,
+    'u',
+  );
+  if (!collectedTest.test(module.source)) {
+    return {
+      code: 'release-ready-evidence-test-not-collected',
+      message: `Evidence test is not collected with the exact name ${JSON.stringify(evidence.testName)} in ${module.file}`,
+    };
+  }
+
+  return null;
 }
 
 const productionDependencies: ToolCapabilityClaimRunDependencies = {
@@ -447,7 +606,7 @@ const productionDependencies: ToolCapabilityClaimRunDependencies = {
     (await readMessageFile(`${locale}/base.json`)) ?? {},
   loadLocalizedToolMessages: async (locale, slug) =>
     (await readMessageFile(`${locale}/tools/${slug}.json`)) ?? {},
-  fileExists: repositoryEvidenceFileExists,
+  loadEvidenceTestModule: repositoryEvidenceTestModule,
 };
 
 export async function runToolCapabilityClaimCli(
