@@ -72,8 +72,12 @@ database/server noun appears later in the sentence. No generic
 previous-negation suppression remains. Tests exercise every governed claim
 code in every UI locale with 320 affirmative and 320 limitation cases, plus
 ten-locale contradictory, honest-limitation, anchored-external, and
-delayed-external-noun FAQ matrices, mixed-clause, adjacent-sentence, honest
-two-sentence limitation, and current-message regressions.
+delayed-external-noun FAQ matrices. Japanese and Korean modifier-first forms
+also reject an external-first recommendation whenever a localized current
+tool/application/server/service/system occurs before the final use/execute
+predicate. Honest modifier-first recommendations naming another external
+application remain clean. Mixed-clause, adjacent-sentence, honest two-sentence
+limitation, and current-message regressions remain covered.
 
 The repository audit scans all six pilots in all ten locales (60 pages). Copy
 found by both review waves was rewritten to match current production behavior.
@@ -127,7 +131,7 @@ without leaving temporary fixture directories.
 npx vitest run src/config/tool-capabilities/index.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts scripts/validation/validate-tool-capability-claims.test.ts scripts/validation/tool-page-render-contract.test.ts src/components/tools/ToolCapabilityDisclosure.test.ts src/lib/tool-capability-disclosure.test.ts
 ```
 
-Result: exit `0`; 7/7 files and 316/316 tests passed.
+Result: exit `0`; 7/7 files and 320/320 tests passed.
 
 ### Default claims validator
 
