@@ -257,9 +257,10 @@ describe("pilot tool capability registry", () => {
   it("flags affirmative grammar capability claims without flagging honest limits", () => {
     const profile = getToolCapabilityProfile("grammar-checker")!;
     const examples = {
-      "grammar-checker-multilingual-claim": {
-        positive: "Checks grammar in all languages.",
-        negative: "No multilingual checking is available.",
+      "grammar-checker-native-non-english-claim": {
+        positive: "Проверяет русскую грамматику, орфографию и пунктуацию.",
+        negative:
+          "Интерфейс переведен на русский язык, но локальная проверка предназначена для английского текста.",
       },
       "grammar-checker-ai-claim": {
         positive: "Uses AI-powered grammar checking.",
@@ -400,6 +401,10 @@ describe("pilot tool capability registry", () => {
       "typing-speed-test-ranking-claim": {
         positive: "Publishes a leaderboard.",
         negative: "No leaderboard is available.",
+      },
+      "typing-speed-test-certificate-claim": {
+        positive: "Awards a completion certificate.",
+        negative: "Does not issue a certificate.",
       },
     } as const;
 

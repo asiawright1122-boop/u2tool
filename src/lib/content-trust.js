@@ -1,3 +1,5 @@
+import { assessToolCapabilityClaims } from './tool-capability-claims.ts';
+
 /**
  * Shared heuristics for tool-page support content trust.
  *
@@ -983,6 +985,31 @@ export function assessSupportContentTrust(input) {
 
   applyRules(HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES, 'high');
   applyRules(MEDIUM_CONFIDENCE_SUPPORT_CONTENT_RULES, 'medium');
+
+  for (const entry of entries) {
+    const profileReport = assessToolCapabilityClaims({
+      slug: input.slug,
+      locale: input.locale ?? 'en',
+      text: entry.text,
+    });
+
+    for (const issue of profileReport.issues) {
+      const severity = 'high';
+      const dedupeKey = `${severity}:${issue.code}:${entry.field}`;
+      if (seen.has(dedupeKey)) {
+        continue;
+      }
+      seen.add(dedupeKey);
+
+      issues.push({
+        severity,
+        code: issue.code,
+        field: entry.field,
+        message: issue.message,
+        excerpt: buildExcerpt(entry.text, 0, entry.text.length),
+      });
+    }
+  }
 
   const highIssueCount = issues.filter((issue) => issue.severity === 'high').length;
   const mediumIssueCount = issues.filter((issue) => issue.severity === 'medium').length;

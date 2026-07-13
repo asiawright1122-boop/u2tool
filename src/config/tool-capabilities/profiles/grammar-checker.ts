@@ -75,9 +75,9 @@ export const grammarCheckerCapabilityProfile = defineToolCapabilityProfile({
   ],
   forbiddenClaims: [
     {
-      code: "grammar-checker-multilingual-claim",
+      code: "grammar-checker-native-non-english-claim",
       pattern:
-        /(?<!not )(?<!n't )\b(?:checks?|corrects?|supports?) grammar (?:in|for) (?:multiple|non-English|all) languages?\b|(?<!not )(?<!n't )\b(?:offers?|provides?|supports?) multilingual (?:grammar )?checking\b/i,
+        /(?<!not )(?<!n't )\b(?:checks?|corrects?|supports?) grammar (?:in|for) (?:multiple|non-English|all) languages?\b|(?<!not )(?<!n't )\b(?:offers?|provides?|supports?) multilingual (?:grammar )?checking\b|(?<!not )(?<!n't )\b(?:checks?|corrects?|supports?) (?:Russian|Chinese|Japanese|Korean|Spanish|Portuguese|French|German|Arabic) grammar\b|(?<!не )(?:проверяет|исправляет|поддерживает)\s+русскую\s+грамматику/i,
       reason: "The local grammar engine only checks English text.",
     },
     {

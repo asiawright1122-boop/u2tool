@@ -139,6 +139,12 @@ export const typingSpeedTestCapabilityProfile = defineToolCapabilityProfile({
         /(?<!not )(?<!n't )\b(?:offers?|shows?|publishes?|tracks?) (?:a )?(?:leaderboards?|global ranking|ranked results?)\b/i,
       reason: "The tool does not rank users or publish a leaderboard.",
     },
+    {
+      code: "typing-speed-test-certificate-claim",
+      pattern:
+        /(?<!not )(?<!n't )\b(?:awards?|issues?|provides?|generates?) (?:an? )?(?:completion |typing )?certificates?\b/i,
+      reason: "The tool does not issue typing or completion certificates.",
+    },
   ],
   targetSearchIntents: ["typing-speed-test.localized-completion-metrics"],
   evidenceTests: [],

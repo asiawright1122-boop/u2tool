@@ -3784,6 +3784,102 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
+  it('blocks native Russian Grammar Checker claims while preserving the issue shape', () => {
+    const report = assessSupportContentTrust({
+      slug: 'grammar-checker',
+      locale: 'ru',
+      name: 'Проверка грамматики',
+      description: '',
+      detailedDescription: 'Проверяет русскую грамматику, орфографию и пунктуацию.',
+      usageSteps: [],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues).toContainEqual(
+      expect.objectContaining({
+        severity: 'high',
+        code: 'grammar-checker-native-non-english-claim',
+        field: 'detailed_description',
+        message: 'The local grammar engine only checks English text.',
+        excerpt: 'Проверяет русскую грамматику, орфографию и пунктуацию.',
+      })
+    );
+  });
+
+  it('blocks Excel Viewer macro and full-fidelity claims from the capability profile', () => {
+    const report = assessSupportContentTrust({
+      slug: 'excel-viewer',
+      locale: 'en',
+      name: 'Excel Viewer',
+      description: '',
+      detailedDescription: 'Supports Excel macros and preserves full formatting fidelity.',
+      usageSteps: [],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toEqual(
+      expect.arrayContaining([
+        'excel-viewer-macro-claim',
+        'excel-viewer-formatting-fidelity-claim',
+      ])
+    );
+  });
+
+  it('blocks Typing Speed Test leaderboard and certificate overclaims', () => {
+    const report = assessSupportContentTrust({
+      slug: 'typing-speed-test',
+      locale: 'en',
+      name: 'Typing Speed Test',
+      description: '',
+      detailedDescription: 'Publishes a leaderboard and awards a certificate after every test.',
+      usageSteps: [],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(report.blockSupportContent).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toEqual(
+      expect.arrayContaining([
+        'typing-speed-test-ranking-claim',
+        'typing-speed-test-certificate-claim',
+      ])
+    );
+  });
+
+  it('deduplicates profile findings against existing static Hex rules by field', () => {
+    const report = assessSupportContentTrust({
+      slug: 'hex-editor',
+      locale: 'en',
+      name: 'Hex Editor',
+      description: '',
+      detailedDescription: 'Shows an offset grid with offset addresses.',
+      usageSteps: [],
+      usageExamples: [],
+      faqs: [],
+    });
+
+    expect(
+      report.issues.filter(
+        (issue) =>
+          issue.code === 'hex-editor-grid-claim' &&
+          issue.field === 'detailed_description'
+      )
+    ).toHaveLength(1);
+    expect(report.issues).toContainEqual(
+      expect.objectContaining({
+        severity: 'high',
+        code: 'hex-editor-grid-claim',
+        field: 'detailed_description',
+        message:
+          'Claims a hex grid or dump view, but the current Hex Editor exposes two text areas and conversion buttons.',
+      })
+    );
+  });
+
   it('keeps scoped rules from blocking unrelated tools', () => {
     const report = assessSupportContentTrust({
       slug: 'timezone-converter',
