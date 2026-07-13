@@ -46,6 +46,19 @@ const BARE_AFFIRMATIVE_BY_LOCALE: Record<Locale, RegExp> = {
   ar: /^(?:نعم|أجل)[.]?$/u,
 };
 
+const BARE_NEGATIVE_BY_LOCALE: Record<Locale, RegExp> = {
+  en: /^no\.?$/iu,
+  zh: /^(?:不|否|不是|不可以|不支持)[。.]?$/u,
+  ja: /^(?:いいえ|できません|対応しません)[。.]?$/u,
+  ko: /^(?:아니요|안 됩니다|지원하지 않습니다)[.]?$/u,
+  es: /^no\.?$/iu,
+  pt: /^não\.?$/iu,
+  fr: /^non\.?$/iu,
+  de: /^nein\.?$/iu,
+  ru: /^нет\.?$/iu,
+  ar: /^(?:لا|كلا)[.]?$/u,
+};
+
 const HEX_GRID_BY_LOCALE: Record<Locale, RegExp> = {
   en: /\b(?:opens?|uploads?|loads?|analy[sz]es?)\b.{0,40}\b(?:local |binary )?files?\b|\b(?:shows?|provides?|includes?|displays?)\b.{0,40}\b(?:offset|byte|hex) (?:grid|table|view)\b/iu,
   zh: /(?:打开|上传|载入|加载|分析).{0,20}(?:本地|二进制)?文件|(?:显示|提供|包含).{0,20}(?:偏移|字节|十六进制).{0,8}(?:网格|表格|视图)/u,
@@ -320,10 +333,12 @@ export function matchesLocalizedCapabilityClaim(
       }
     }
     const previous = segments[index - 1];
+    const faqQuestion = segments[index - 2];
     if (
       previous &&
-      previous.length <= 20 &&
-      test(detector.negation, previous)
+      faqQuestion &&
+      /[?？؟]\s*$/u.test(faqQuestion) &&
+      test(BARE_NEGATIVE_BY_LOCALE[resolvedLocale], previous)
     ) {
       return false;
     }
