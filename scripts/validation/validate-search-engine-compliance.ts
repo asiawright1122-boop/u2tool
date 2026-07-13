@@ -1,4 +1,4 @@
-import { sitemapLastmodManifest } from '../../src/generated/sitemap-lastmod';
+import { maxLastmod, sitemapLastmodManifest } from '../../src/lib/sitemap-lastmod';
 
 const FETCH_BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
 const CANONICAL_BASE_URL = (
@@ -159,10 +159,17 @@ async function validateSitemaps(): Promise<void> {
     ['tools sitemap', toolsXml],
   ] as const) {
     assertNoLeaks(name, xml);
-    const expectedLastmod = name === 'sitemap index' ? sitemapLastmodManifest.site :
-                            name === 'priority sitemap' ? sitemapLastmodManifest.site :
-                            name === 'pages sitemap' ? sitemapLastmodManifest.pages :
-                            sitemapLastmodManifest.tools;
+    const expectedLastmod = name === 'tools sitemap'
+      ? maxLastmod([
+          sitemapLastmodManifest.buckets.tools,
+          ...Object.entries(sitemapLastmodManifest.overrides)
+            .filter(([path]) => /^\/[a-z-]+\/tools\//.test(path))
+            .map(([, lastmod]) => lastmod),
+        ])
+      : maxLastmod([
+          sitemapLastmodManifest.buckets.pages,
+          sitemapLastmodManifest.buckets.ai,
+        ]);
     assert(xml.includes(`<lastmod>${expectedLastmod}</lastmod>`), `${name}: lastmod is not aligned to the recovery deploy date`);
   }
 

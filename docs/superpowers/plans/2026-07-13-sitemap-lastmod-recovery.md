@@ -512,8 +512,8 @@ Expected: all tests PASS, Astro check has 0 errors, build exits 0.
 - [ ] **Step 9: Inspect generated sitemap dates**
 
 ```bash
-rg -n -A2 -B1 "gantt-chart-generator|uuid-generator" dist/sitemap-tools.xml
-sed -n '1,40p' dist/sitemap.xml
+rg -n -A2 -B1 "gantt-chart-generator|uuid-generator" dist/client/sitemap-tools.xml
+sed -n '1,40p' dist/client/sitemap.xml
 ```
 
 Expected:
@@ -912,8 +912,8 @@ npm run build
 Then verify output:
 
 ```bash
-rg -n -A2 -B1 "gantt-chart-generator|sql-query-optimizer|uuid-generator" dist/sitemap-tools.xml
-sed -n '1,40p' dist/sitemap.xml
+rg -n -A2 -B1 "gantt-chart-generator|sql-query-optimizer|uuid-generator" dist/client/sitemap-tools.xml
+sed -n '1,40p' dist/client/sitemap.xml
 ```
 
 Expected: exact recovery dates, unchanged control date, and child maxima are correct.
