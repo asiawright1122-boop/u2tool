@@ -1,4 +1,26 @@
 {
+  "capabilities": {
+    "modes": { "localWorkbookViewing": "ローカルでワークブックを表示" },
+    "inputs": {
+      "xlsWorkbook": "XLS ワークブック",
+      "xlsxWorkbook": "XLSX ワークブック"
+    },
+    "outputs": { "sheetTable": "ワークシートの表形式ビュー" },
+    "features": {
+      "xlsXlsxOpen": "XLS と XLSX ワークブックを開く",
+      "sheetTabs": "シートタブで移動",
+      "rowTable": "行と列の表形式ビュー",
+      "sort": "行を並べ替え",
+      "filter": "行を絞り込み"
+    },
+    "limits": {
+      "noMacros": "マクロは実行しません",
+      "noFormulaRecalculation": "数式は再計算しません",
+      "noCharts": "ワークブックのグラフは表示しません",
+      "noFullFormattingFidelity": "ワークブックの書式を完全には保持しません",
+      "noExport": "ワークブックはエクスポートできません"
+    }
+  },
   "detailed_description": "このExcelビューアーは、ブラウザベースのJavaScriptアプリケーションとして構築され、WebAssemblyモジュールを活用してExcelファイル(.xlsx)の解析を行います。ファイルはクライアントサイドで処理されるため、サーバーにデータを送信することなく、完全にプライベートな環境でドキュメントを表示・操作できます。ファイル読み込みにはSheetJSライブラリを使用し、複雑なセル書式や数式、複数ワークシート構造を保持したままデータをレンダリングします。特に、フィルタリング機能はLambdajsによる高階関数で実装され、AND/OR条件での複列同時フィルタが可能です。ソート機能はV8エンジンのTimSortアルゴリズムを最適化し、10万行超のデータでも100ms以内での再描画を実現します。開発者はAPIレスポンスのテーブル変換、データアナリストはクエリベースの集計、営業担当者は契約書の即時確認など、さまざまなシーンで利用可能です。ワークシート間のナビゲーションはIndexedDBにキャッシュを構築し、シームレスな切り替えを実現しています。",
   "usage_steps": [
     "1. ファイル選択ダイアログで.xlsxファイルをアップロードする",

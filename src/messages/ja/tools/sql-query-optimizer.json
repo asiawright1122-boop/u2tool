@@ -1,4 +1,27 @@
 {
+  "capabilities": {
+    "modes": { "staticAnalysis": "SQL の静的解析" },
+    "inputs": { "sqlText": "SQL テキスト" },
+    "outputs": {
+      "performanceScore": "パフォーマンススコア",
+      "formattedSql": "整形済み SQL",
+      "optimizationSuggestions": "最適化の提案",
+      "generalIndexCandidates": "一般的なインデックス候補"
+    },
+    "features": {
+      "staticHeuristics": "静的ヒューリスティック解析",
+      "performanceScore": "クエリのパフォーマンススコア",
+      "sqlFormatting": "SQL の整形",
+      "generalIndexCandidates": "一般的なインデックス候補"
+    },
+    "limits": {
+      "noDatabaseSelector": "データベースまたは方言の選択機能はありません",
+      "noExplainParser": "EXPLAIN プランは解析しません",
+      "noDatabaseConnection": "データベースには接続しません",
+      "noQueryExecution": "クエリは実行しません",
+      "noSpeedGuarantee": "クエリの高速化は保証できません"
+    }
+  },
   "detailed_description": "SQLクエリ最適化ツールは、あなたのSQLクエリを分析し、より良いパフォーマンスのための最適化提案を行います。 SQLクエリ最適化ツールは、開発作業の下書き確認をすばやく行うための補助ツールであり、結果を確認せずに自動適用するものではありません。入力、形式、前提を確認し、重要な変更は自分の作業フローで追加確認してください。",
   "usage_steps": [
     "SQLクエリをペースト",

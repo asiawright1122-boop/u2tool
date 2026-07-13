@@ -2593,6 +2593,30 @@
     }
   },
   "tools": {
+    "capabilityDisclosure": {
+      "title": "此工具的功能",
+      "runsLocally": "在浏览器中本地运行",
+      "optionalServer": "可选的服务器处理",
+      "acceptedInputs": "支持的输入",
+      "producedOutputs": "生成的输出",
+      "supportedLanguage": "支持的检查语言",
+      "limits": "当前限制",
+      "privacyLocal": "在本地模式下，您的输入仅保留在此浏览器中。",
+      "privacyServer": "只有在您明确请求后，才会开始服务器处理。",
+      "languageNeutral": "不受语言限制",
+      "languages": {
+        "en": "英语",
+        "zh": "中文",
+        "ja": "日语",
+        "ko": "韩语",
+        "es": "西班牙语",
+        "pt": "葡萄牙语",
+        "fr": "法语",
+        "de": "德语",
+        "ru": "俄语",
+        "ar": "阿拉伯语"
+      }
+    },
     "popular": "热门",
     "input": "输入",
     "output": "输出",

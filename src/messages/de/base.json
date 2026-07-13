@@ -2820,6 +2820,30 @@
     }
   },
   "tools": {
+    "capabilityDisclosure": {
+      "title": "Was dieses Tool kann",
+      "runsLocally": "Wird lokal in Ihrem Browser ausgeführt",
+      "optionalServer": "Optionale Serververarbeitung",
+      "acceptedInputs": "Akzeptierte Eingaben",
+      "producedOutputs": "Erzeugte Ausgaben",
+      "supportedLanguage": "Unterstützte Prüfsprache",
+      "limits": "Aktuelle Einschränkungen",
+      "privacyLocal": "Im lokalen Modus verbleibt Ihre Eingabe in diesem Browser.",
+      "privacyServer": "Die Serververarbeitung beginnt erst, nachdem Sie sie ausdrücklich angefordert haben.",
+      "languageNeutral": "Sprachneutral",
+      "languages": {
+        "en": "Englisch",
+        "zh": "Chinesisch",
+        "ja": "Japanisch",
+        "ko": "Koreanisch",
+        "es": "Spanisch",
+        "pt": "Portugiesisch",
+        "fr": "Französisch",
+        "de": "Deutsch",
+        "ru": "Russisch",
+        "ar": "Arabisch"
+      }
+    },
     "popular": "Beliebt",
     "input": "Eingabe",
     "output": "Ausgabe",

@@ -1,4 +1,30 @@
 {
+  "capabilities": {
+    "modes": {
+      "textToHex": "文本转 UTF-8 十六进制",
+      "hexToText": "UTF-8 十六进制转文本"
+    },
+    "inputs": {
+      "text": "文本",
+      "utf8Hex": "UTF-8 十六进制文本"
+    },
+    "outputs": {
+      "utf8Hex": "UTF-8 十六进制字节",
+      "decodedText": "解码后的文本"
+    },
+    "features": {
+      "textToHex": "将文本编码为 UTF-8 十六进制",
+      "hexToText": "将 UTF-8 十六进制解码为文本",
+      "clipboardCopy": "将结果复制到剪贴板"
+    },
+    "limits": {
+      "noFileOpen": "不支持打开文件",
+      "noOffsetGrid": "不提供偏移量或字节网格",
+      "noDirectByteEditing": "不支持直接编辑字节",
+      "utf8Only": "仅支持 UTF-8",
+      "noFileExport": "不支持导出文件"
+    }
+  },
   "detailed_description": "Hex Editor 是一个基于浏览器的文本和十六进制转换器，用于快速进行字节级检查。输入文本可将其编码为大写 UTF-8 十六进制字节，或粘贴十六进制序列将其解码回可读文本。该工具有意保持工作流简单：两个可编辑文本区域、明确的转换按钮，以及两侧的复制控件。它适合检查 API 载荷、查看编码字符串、比较日志中的字节值，或教学字符如何映射为十六进制字节。所有转换都通过标准文本编码和解码 API 在浏览器中运行，因此粘贴的文本和十六进制值会留在设备上。",
   "usage_steps": [
     "在 Text 字段中输入或粘贴文本。",

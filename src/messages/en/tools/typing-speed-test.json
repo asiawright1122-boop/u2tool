@@ -1,4 +1,18 @@
 {
+  "capabilities": {
+    "inputs": { "promptKeystrokes": "Prompt keystrokes" },
+    "features": {
+      "difficultyPromptBanks": "Localized difficulty prompt banks"
+    },
+    "limits": {
+      "noFixedTimer": "No fixed timer",
+      "noCpm": "No characters-per-minute (CPM) score",
+      "noConsistencyScore": "No consistency score",
+      "noHistory": "No result history",
+      "noAccount": "No user accounts",
+      "noRanking": "No leaderboard or ranking"
+    }
+  },
   "detailed_description": "Typing Speed Test measures words per minute (WPM), accuracy, correct characters, mistakes, and elapsed time directly in the browser. Choose an easy, medium, or hard prompt, then start typing in the text box; the page highlights each character as correct or incorrect while you work. When you finish the prompt, the result cards show your WPM, accuracy percentage, character totals, duration, and a simple skill rating. The test is intentionally lightweight and private: it uses local sample text, does not require an account, and does not upload what you type.",
   "usage_steps": [
     "Select Easy, Medium, or Hard to choose the length and complexity of the prompt.",

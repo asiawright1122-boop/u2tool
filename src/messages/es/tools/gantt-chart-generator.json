@@ -1,4 +1,19 @@
 {
+  "capabilities": {
+    "modes": { "localChartEditor": "Editor local de diagramas de Gantt" },
+    "inputs": { "taskDates": "Fechas de inicio y fin de las tareas" },
+    "features": {
+      "taskNameDatesProgress": "Editar nombres, fechas y progreso de las tareas"
+    },
+    "limits": {
+      "noDependencies": "Sin dependencias entre tareas",
+      "noMilestones": "Sin hitos",
+      "noCriticalPath": "Sin cálculo de la ruta crítica",
+      "noPersistence": "Sin proyectos guardados",
+      "noDataImportExport": "Sin importación ni exportación de datos del proyecto",
+      "noCollaboration": "Sin colaboración"
+    }
+  },
   "detailed_description": "El generador de diagramas de Gantt convierte una lista corta de tareas en una línea de tiempo visual directamente en el navegador. Añade el nombre de la tarea, la fecha de inicio, la fecha de fin y el porcentaje de progreso; después elige un tema de color y revisa la vista previa creada con ECharts. Es útil para presentar planes simples, sprints, campañas, trabajos de clase o cronogramas internos cuando necesitas una imagen clara sin abrir una herramienta de gestión de proyectos completa. La página se centra en crear y exportar el gráfico como PNG o SVG.",
   "usage_steps": [
     "Escribe un título para el gráfico si quieres personalizar la vista previa.",

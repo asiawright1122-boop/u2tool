@@ -1,4 +1,30 @@
 {
+  "capabilities": {
+    "modes": {
+      "textToHex": "Texto para hexadecimal UTF-8",
+      "hexToText": "Hexadecimal UTF-8 para texto"
+    },
+    "inputs": {
+      "text": "Texto",
+      "utf8Hex": "Texto hexadecimal UTF-8"
+    },
+    "outputs": {
+      "utf8Hex": "Bytes hexadecimais UTF-8",
+      "decodedText": "Texto decodificado"
+    },
+    "features": {
+      "textToHex": "Codificar texto como hexadecimal UTF-8",
+      "hexToText": "Decodificar hexadecimal UTF-8 como texto",
+      "clipboardCopy": "Copiar resultados para a área de transferência"
+    },
+    "limits": {
+      "noFileOpen": "Não abre arquivos",
+      "noOffsetGrid": "Sem grade de deslocamentos ou bytes",
+      "noDirectByteEditing": "Sem edição direta de bytes",
+      "utf8Only": "Somente UTF-8",
+      "noFileExport": "Sem exportação de arquivos"
+    }
+  },
   "detailed_description": "O Hex Editor é um conversor de texto e hexadecimal executado no navegador para inspeções rápidas em nível de byte. Digite um texto para codificá-lo como bytes hexadecimais UTF-8 em maiúsculas, ou cole uma sequência hexadecimal para decodificá-la de volta para texto legível. O fluxo foi mantido simples de propósito: duas áreas de texto editáveis, botões claros de conversão e controles de cópia para cada lado. A ferramenta é útil para conferir payloads de API, valores em logs, strings de teste e exemplos de aprendizado sobre como caracteres aparecem como bytes hexadecimais. Todas as conversões rodam no navegador com APIs padrão de codificação e decodificação de texto, então os valores inseridos permanecem no dispositivo.",
   "usage_steps": [
     "1. Digite ou cole texto no campo Texto.",

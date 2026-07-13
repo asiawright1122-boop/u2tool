@@ -31,6 +31,7 @@ import StructuredData from '@/components/seo/StructuredData.astro';
 
 // --- Tools ---
 import ToolWrapper from '@/components/tools/ToolWrapper.svelte';
+import ToolCapabilityDisclosure from '@/components/tools/ToolCapabilityDisclosure.astro';
 import RelatedTools from '@/components/tools/RelatedTools.astro';
 import ToolFAQ from '@/components/tools/ToolFAQ.astro';
 import AiTokenCalculatorSeoContent from '@/components/tools/AiTokenCalculatorSeoContent.astro';
@@ -41,6 +42,7 @@ import type { ToolClusterBlock } from '@/lib/tool-cluster-types';
 
 // --- Config ---
 import { tools, categories } from '@/config/tools';
+import { getToolCapabilityProfile } from '@/config/tool-capabilities';
 import { getIconSvg } from '@/lib/icon-svg';
 
 // --- Lib ---
@@ -126,6 +128,11 @@ const tool = typeof slugCandidate === 'string'
 if (!tool) {
   return Astro.redirect(`/${locale}/tools/`, 302);
 }
+
+const capabilityProfile = getToolCapabilityProfile(tool.slug);
+const publicCapabilityProfile = capabilityProfile?.enforcement === 'release-blocking'
+  ? capabilityProfile
+  : undefined;
 
 // Load tool-specific translations without parsing every tool's long-form copy.
 const messages = await loadToolPageMessages(locale, tool.slug, Astro.url);
@@ -641,6 +648,14 @@ const CLUSTER_BLOCKS: ToolClusterBlock[] = [
             dataPrefix={dataPrefix}
           />
         )
+      )}
+
+      {publicCapabilityProfile && (
+        <ToolCapabilityDisclosure
+          profile={publicCapabilityProfile}
+          locale={locale}
+          messages={toolTranslations}
+        />
       )}
 
       {/* Tool Component — Island Architecture: hydrate only when visible */}

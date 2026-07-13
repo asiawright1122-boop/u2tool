@@ -1,4 +1,23 @@
 {
+  "capabilities": {
+    "modes": { "localEnglishRules": "Lokale Regeln für englische Grammatik" },
+    "inputs": { "plainText": "Englischer Klartext" },
+    "outputs": {
+      "highlightedIssues": "Hervorgehobene Grammatikprobleme",
+      "correctedText": "Korrigierter Text"
+    },
+    "features": {
+      "englishLocalRules": "Lokale Prüfung der englischen Grammatik",
+      "issueHighlights": "Hervorhebung von Problemen",
+      "individualFixes": "Korrekturen einzeln anwenden",
+      "allFixes": "Alle vorgeschlagenen Korrekturen anwenden"
+    },
+    "limits": {
+      "englishOnlyEngine": "Prüft nur englische Texte",
+      "noAi": "Verwendet keine KI",
+      "noServerProcessing": "Keine Serververarbeitung"
+    }
+  },
   "detailed_description": "Der Grammatikprüfer analysiert Ihren Text auf häufige Grammatikfehler und schlägt Korrekturen vor. Grammatikprüfer ist für eine schnelle Vorprüfung von Eingaben, Einstellungen und Ergebnissen gedacht. Nutze das Ergebnis als Entwurf, prüfe Format, Zahlen, Zeichen und Kontext, und bestätige wichtige Ausgaben in deinem eigenen Arbeitsablauf, bevor du sie teilst, veröffentlichst oder in einem Projekt verwendest.",
   "usage_steps": [
     "Fügen Sie Ihren Text ein",

@@ -1,4 +1,26 @@
 {
+  "capabilities": {
+    "modes": { "localWorkbookViewing": "Affichage local du classeur" },
+    "inputs": {
+      "xlsWorkbook": "Classeur XLS",
+      "xlsxWorkbook": "Classeur XLSX"
+    },
+    "outputs": { "sheetTable": "Vue tabulaire de la feuille" },
+    "features": {
+      "xlsXlsxOpen": "Ouvrir les classeurs XLS et XLSX",
+      "sheetTabs": "Navigation par onglets de feuilles",
+      "rowTable": "Vue tabulaire en lignes et colonnes",
+      "sort": "Trier les lignes",
+      "filter": "Filtrer les lignes"
+    },
+    "limits": {
+      "noMacros": "N’exécute pas les macros",
+      "noFormulaRecalculation": "Ne recalcule pas les formules",
+      "noCharts": "N’affiche pas les graphiques du classeur",
+      "noFullFormattingFidelity": "Ne conserve pas toute la mise en forme du classeur",
+      "noExport": "Aucun export de classeur"
+    }
+  },
   "detailed_description": "Le visualiseur Excel est un outil web permettant d'ouvrir, d'analyser et de manipuler des fichiers Excel (XLSX, XLS, CSV) sans logiciel local. Conçu avec des bibliothèques JavaScript comme SheetJS et une architecture basée sur le DOM, il convertit les structures binaires (BIFF) ou XML des fichiers Excel en une grille interactive. Les utilisateurs peuvent trier les colonnes via des algorithmes de comparaison personnalisés, appliquer des filtres avancés (y compris des critères multiples) et naviguer entre les feuilles de calcul avec un sélecteur dynamique. Le traitement s'effectue entièrement côté client, garantissant confidentialité des données et compatibilité avec les fichiers volumineux grâce à une pagination virtuelle. Cet outil est indispensable pour les professionnels souhaitant auditer des rapports financiers, analyser des jeux de données de vente ou collaborer sur des tableaux sans dépendre de logiciels propriétaires. Il intègre également une API de rendu permettant de personnaliser l'affichage des cellules (formatage conditionnel, masquage de données).",
   "usage_steps": [
     "Cliquez sur le bouton 'Importer' pour charger votre fichier Excel (formats XLSX, XLS, CSV).",

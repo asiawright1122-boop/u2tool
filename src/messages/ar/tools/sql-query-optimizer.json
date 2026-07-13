@@ -1,4 +1,27 @@
 {
+  "capabilities": {
+    "modes": { "staticAnalysis": "تحليل SQL ثابت" },
+    "inputs": { "sqlText": "نص SQL" },
+    "outputs": {
+      "performanceScore": "درجة الأداء",
+      "formattedSql": "SQL منسق",
+      "optimizationSuggestions": "اقتراحات التحسين",
+      "generalIndexCandidates": "مرشحات عامة للفهارس"
+    },
+    "features": {
+      "staticHeuristics": "تحليل استدلالي ثابت",
+      "performanceScore": "درجة أداء الاستعلام",
+      "sqlFormatting": "تنسيق SQL",
+      "generalIndexCandidates": "مرشحات عامة للفهارس"
+    },
+    "limits": {
+      "noDatabaseSelector": "لا يوجد محدد لقاعدة البيانات أو اللهجة",
+      "noExplainParser": "لا يحلل خطط EXPLAIN",
+      "noDatabaseConnection": "لا يتصل بقواعد البيانات",
+      "noQueryExecution": "لا ينفذ الاستعلامات",
+      "noSpeedGuarantee": "لا يمكنه ضمان استعلامات أسرع"
+    }
+  },
   "detailed_description": "مزيل تحسين استعلامات SQL هو أداة عبر الإنترنت قوية تساعدك على معالجة وتحويل البيانات بشكل فعال. بواجهة سهلة الاستخدام ونتائج فورية، هو مثالي للمطورين، المصممين، وإنشاء المحتوى.",
   "usage_steps": [
     "ادخل أو ألصق بيانات الدخول الخاصة بك",

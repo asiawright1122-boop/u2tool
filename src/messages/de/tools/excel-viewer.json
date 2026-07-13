@@ -1,4 +1,26 @@
 {
+  "capabilities": {
+    "modes": { "localWorkbookViewing": "Lokale Anzeige von Arbeitsmappen" },
+    "inputs": {
+      "xlsWorkbook": "XLS-Arbeitsmappe",
+      "xlsxWorkbook": "XLSX-Arbeitsmappe"
+    },
+    "outputs": { "sheetTable": "Tabellenansicht des Arbeitsblatts" },
+    "features": {
+      "xlsXlsxOpen": "XLS- und XLSX-Arbeitsmappen öffnen",
+      "sheetTabs": "Navigation über Blattregister",
+      "rowTable": "Tabellenansicht mit Zeilen und Spalten",
+      "sort": "Zeilen sortieren",
+      "filter": "Zeilen filtern"
+    },
+    "limits": {
+      "noMacros": "Führt keine Makros aus",
+      "noFormulaRecalculation": "Berechnet Formeln nicht neu",
+      "noCharts": "Zeigt keine Diagramme aus der Arbeitsmappe an",
+      "noFullFormattingFidelity": "Bewahrt nicht die vollständige Formatierung der Arbeitsmappe",
+      "noExport": "Kein Export von Arbeitsmappen"
+    }
+  },
   "detailed_description": "Der Excel Viewer öffnet .xlsx- und .xls-Dateien direkt im Browser, damit Tabellen schnell geprüft werden können, ohne ein Office-Programm zu starten. Nach dem Hochladen liest die Seite die Arbeitsblätter aus, zeigt verfügbare Blatt-Tabs an und rendert die Zeilen in einer scrollbaren Tabelle. Für die schnelle Kontrolle lassen sich einzelne Spalten per Texteingabe filtern und Spaltenüberschriften zwischen aufsteigender, absteigender und neutraler Sortierung umschalten. Die Datei wird über den Browser eingelesen; die Seite bietet eine Ansicht, Filterung und Sortierung, aber keine Bearbeitung der Originaldatei und keinen Export gespeicherter Änderungen.",
   "usage_steps": [
     "Wählen Sie eine .xlsx- oder .xls-Datei von Ihrem Gerät aus.",

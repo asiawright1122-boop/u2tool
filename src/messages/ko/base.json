@@ -2584,6 +2584,30 @@
     }
   },
   "tools": {
+    "capabilityDisclosure": {
+      "title": "이 도구의 기능",
+      "runsLocally": "브라우저에서 로컬로 실행",
+      "optionalServer": "선택적 서버 처리",
+      "acceptedInputs": "지원하는 입력",
+      "producedOutputs": "생성되는 출력",
+      "supportedLanguage": "지원하는 검사 언어",
+      "limits": "현재 제한 사항",
+      "privacyLocal": "로컬 모드에서는 입력 내용이 이 브라우저에만 유지됩니다.",
+      "privacyServer": "서버 처리는 사용자가 명시적으로 요청한 후에만 시작됩니다.",
+      "languageNeutral": "언어 중립적",
+      "languages": {
+        "en": "영어",
+        "zh": "중국어",
+        "ja": "일본어",
+        "ko": "한국어",
+        "es": "스페인어",
+        "pt": "포르투갈어",
+        "fr": "프랑스어",
+        "de": "독일어",
+        "ru": "러시아어",
+        "ar": "아랍어"
+      }
+    },
     "popular": "인기",
     "input": "입력",
     "output": "출력",

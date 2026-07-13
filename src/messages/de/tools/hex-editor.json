@@ -1,4 +1,30 @@
 {
+  "capabilities": {
+    "modes": {
+      "textToHex": "Text in UTF-8-Hexadezimal",
+      "hexToText": "UTF-8-Hexadezimal in Text"
+    },
+    "inputs": {
+      "text": "Text",
+      "utf8Hex": "UTF-8-Hexadezimaltext"
+    },
+    "outputs": {
+      "utf8Hex": "UTF-8-Hexadezimalbytes",
+      "decodedText": "Dekodierter Text"
+    },
+    "features": {
+      "textToHex": "Text als UTF-8-Hexadezimalwert kodieren",
+      "hexToText": "UTF-8-Hexadezimalwert in Text dekodieren",
+      "clipboardCopy": "Ergebnisse in die Zwischenablage kopieren"
+    },
+    "limits": {
+      "noFileOpen": "Öffnet keine Dateien",
+      "noOffsetGrid": "Kein Offset- oder Byte-Raster",
+      "noDirectByteEditing": "Keine direkte Byte-Bearbeitung",
+      "utf8Only": "Nur UTF-8",
+      "noFileExport": "Kein Dateiexport"
+    }
+  },
   "detailed_description": "Der Hex Editor ist ein browserbasierter Text- und Hexadezimal-Konverter für schnelle Prüfungen auf Byte-Ebene. Geben Sie Text ein, um ihn als großgeschriebene UTF-8-Hex-Bytes auszugeben, oder fügen Sie eine Hex-Sequenz ein, um sie wieder in lesbaren Text zu dekodieren. Der Ablauf bleibt bewusst einfach: zwei editierbare Textfelder, klare Umwandlungsbuttons und Kopierfunktionen für beide Seiten. Das Tool hilft beim Prüfen von API-Payloads, Logwerten, Teststrings und Lernbeispielen, bei denen sichtbar werden soll, wie Zeichen als hexadezimale Bytes dargestellt werden. Alle Umwandlungen laufen im Browser über Standard-APIs für Text-Encoding und -Decoding, sodass eingegebene Werte auf dem Gerät bleiben.",
   "usage_steps": [
     "1. Text in das Feld Text eingeben oder einfügen.",

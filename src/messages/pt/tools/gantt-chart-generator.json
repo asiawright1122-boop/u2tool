@@ -1,4 +1,19 @@
 {
+  "capabilities": {
+    "modes": { "localChartEditor": "Editor local de gráfico de Gantt" },
+    "inputs": { "taskDates": "Datas de início e término das tarefas" },
+    "features": {
+      "taskNameDatesProgress": "Editar nomes, datas e progresso das tarefas"
+    },
+    "limits": {
+      "noDependencies": "Sem dependências entre tarefas",
+      "noMilestones": "Sem marcos",
+      "noCriticalPath": "Sem cálculo do caminho crítico",
+      "noPersistence": "Sem projetos salvos",
+      "noDataImportExport": "Sem importação ou exportação de dados do projeto",
+      "noCollaboration": "Sem colaboração"
+    }
+  },
   "detailed_description": "Nosso gerador gratuito de gráficos de Gantt ajuda gerentes de projeto e equipes a visualizar cronogramas de projetos com facilidade. Um gráfico de Gantt é um gráfico de barras horizontal que mostra as tarefas do projeto ao longo do tempo, essencial para planejamento e acompanhamento de projetos. Com este gerador, você pode criar cronogramas profissionais adicionando tarefas com datas de início, fim e porcentagens de progresso. A linha do tempo visual ajuda a identificar dependências de tarefas, atividades sobrepostas e possíveis gargalos. Perfeito para sprints ágeis, projetos de construção, campanhas de marketing e ciclos de desenvolvimento de software. Exporte seus gráficos de Gantt como PNG ou SVG para apresentações e relatórios.",
   "usage_steps": [
     "Clique em 'Adicionar tarefa' para criar sua primeira tarefa do projeto",

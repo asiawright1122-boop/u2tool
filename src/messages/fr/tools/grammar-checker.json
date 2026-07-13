@@ -1,4 +1,23 @@
 {
+  "capabilities": {
+    "modes": { "localEnglishRules": "Règles locales de grammaire anglaise" },
+    "inputs": { "plainText": "Texte brut en anglais" },
+    "outputs": {
+      "highlightedIssues": "Problèmes grammaticaux surlignés",
+      "correctedText": "Texte corrigé"
+    },
+    "features": {
+      "englishLocalRules": "Vérification locale de la grammaire anglaise",
+      "issueHighlights": "Surlignage des problèmes",
+      "individualFixes": "Appliquer les corrections une par une",
+      "allFixes": "Appliquer toutes les corrections proposées"
+    },
+    "limits": {
+      "englishOnlyEngine": "Vérifie uniquement les textes en anglais",
+      "noAi": "N’utilise pas l’IA",
+      "noServerProcessing": "Aucun traitement sur le serveur"
+    }
+  },
   "detailed_description": "Le vérificateur de grammaire analyse le texte pour les erreurs de grammaire courantes et suggère des corrections.",
   "usage_steps": [
     "Collez le texte",

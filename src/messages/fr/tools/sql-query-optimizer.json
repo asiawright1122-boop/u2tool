@@ -1,4 +1,27 @@
 {
+  "capabilities": {
+    "modes": { "staticAnalysis": "Analyse statique du SQL" },
+    "inputs": { "sqlText": "Texte SQL" },
+    "outputs": {
+      "performanceScore": "Score de performance",
+      "formattedSql": "SQL mis en forme",
+      "optimizationSuggestions": "Suggestions d’optimisation",
+      "generalIndexCandidates": "Candidats généraux pour les index"
+    },
+    "features": {
+      "staticHeuristics": "Analyse heuristique statique",
+      "performanceScore": "Score de performance de la requête",
+      "sqlFormatting": "Mise en forme du SQL",
+      "generalIndexCandidates": "Candidats généraux pour les index"
+    },
+    "limits": {
+      "noDatabaseSelector": "Aucun sélecteur de base de données ou de dialecte",
+      "noExplainParser": "N’analyse pas les plans EXPLAIN",
+      "noDatabaseConnection": "Ne se connecte pas aux bases de données",
+      "noQueryExecution": "N’exécute pas les requêtes",
+      "noSpeedGuarantee": "Ne peut pas garantir des requêtes plus rapides"
+    }
+  },
   "detailed_description": "L'Optimiseur de Requêtes SQL analyse vos requêtes SQL et vous propose des suggestions d'optimisation pour une meilleure performance.",
   "usage_steps": [
     "Coller votre requête SQL",

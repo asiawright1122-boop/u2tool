@@ -1,4 +1,26 @@
 {
+  "capabilities": {
+    "modes": { "localWorkbookViewing": "本地查看工作簿" },
+    "inputs": {
+      "xlsWorkbook": "XLS 工作簿",
+      "xlsxWorkbook": "XLSX 工作簿"
+    },
+    "outputs": { "sheetTable": "工作表表格视图" },
+    "features": {
+      "xlsXlsxOpen": "打开 XLS 和 XLSX 工作簿",
+      "sheetTabs": "工作表标签导航",
+      "rowTable": "行列式表格视图",
+      "sort": "对行排序",
+      "filter": "筛选行"
+    },
+    "limits": {
+      "noMacros": "不运行宏",
+      "noFormulaRecalculation": "不重新计算公式",
+      "noCharts": "不呈现工作簿图表",
+      "noFullFormattingFidelity": "不保留工作簿的完整格式",
+      "noExport": "不支持导出工作簿"
+    }
+  },
   "detailed_description": "Excel Viewer 在浏览器中打开 XLSX 或 XLS 文件，并在表格中渲染工作表值以供快速检查。你可以在工作表之间切换，按文本筛选某一列，以及点击列标题对可见数据排序。适合在不打开 Microsoft Excel 的情况下检查简单电子表格。查看器专注于表格单元格值，不保留工作簿样式、图表、公式、宏、多列排序、正则筛选或导出控件。",
   "usage_steps": [
     "从设备上传 XLSX 或 XLS 文件。",
