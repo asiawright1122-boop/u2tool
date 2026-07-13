@@ -84,10 +84,16 @@ cannot be borrowed by it. Execution is suppressed only when that action's
 location explicitly names external, another, third-party, provider, or vendor
 ownership. Explanations of how to execute and displayed methods, steps,
 guides, or instructions are excluded locally without masking a separate
-affirmative execute action. Attributive Japanese forms such as `生成した` and
-clause-local honest negations remain intact. Mixed-clause, adjacent-sentence,
-honest two-sentence limitation, and current-message regressions remain
-covered.
+affirmative execute action. SQL-object state is carried across adjacent actions
+within the same sentence, including meta/how-to clauses, so a later execute
+action may safely elide `SQLクエリ`/`SQL 쿼리` while retaining action-local
+location ownership. Japanese `した後`/`してから` and Korean `한 후`/`한 다음`/
+`하고 나서` temporal forms create action boundaries without treating
+attributive `生成したSQLクエリ`/`생성한 SQL 쿼리` as boundaries. Negation is
+anchored to the execute predicate; a later unrelated negative save/display
+action cannot suppress an affirmative execution claim, while direct negative
+execution forms remain clean. Mixed-clause, adjacent-sentence, honest
+two-sentence limitation, and current-message regressions remain covered.
 
 The repository audit scans all six pilots in all ten locales (60 pages). Copy
 found by both review waves was rewritten to match current production behavior.
@@ -146,7 +152,7 @@ assertions. Three repeated runner-group checks completed stably in about
 npx vitest run src/config/tool-capabilities/index.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts scripts/validation/validate-tool-capability-claims.test.ts scripts/validation/tool-page-render-contract.test.ts src/components/tools/ToolCapabilityDisclosure.test.ts src/lib/tool-capability-disclosure.test.ts
 ```
 
-Result: exit `0`; 7/7 files and 349/349 tests passed.
+Result: exit `0`; 7/7 files and 365/365 tests passed.
 
 ### Default claims validator
 
