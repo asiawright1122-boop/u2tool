@@ -194,7 +194,7 @@ Approved release URL list + actual release date
 3. Commit only sitemap infrastructure, manifest data, tests, and recovery documentation.
 4. Run type checks, targeted tests, sitemap validation, production build, and local sitemap inspection.
 5. Push the isolated branch and merge through the normal repository workflow.
-6. Allow the existing GitHub workflow to deploy to Cloudflare from `main`.
+6. Configure the GitHub deployment workflow to ignore docs-only pushes, then allow the implementation merge to deploy to Cloudflare from `main`. This lets post-deploy GSC evidence enter the repository without creating a new Worker version.
 7. Verify the final Worker deployment, 95 monitored URLs, robots, sitemap index, child sitemaps, canonicals, and expected `lastmod` values.
 8. In Google Search Console, resubmit `https://www.u2tool.com/sitemap.xml` only after live verification succeeds.
 9. Record the accepted submission time, deployed commit, Worker version, latest complete GSC date, and monitoring cohort.
