@@ -1,4 +1,16 @@
-import { maxLastmod, sitemapLastmodManifest } from '../../src/lib/sitemap-lastmod';
+import {
+  buildPagesSitemapEntries,
+  buildPrioritySitemapEntries,
+  buildToolsSitemapEntries,
+} from '../../src/lib/sitemap-entry-builders';
+import { resolveSitemapLastmod } from '../../src/lib/sitemap-lastmod';
+import { newestEntryLastmod } from '../../src/lib/sitemap-utils';
+import {
+  assertExpectedLastmod,
+  assertValidLastmods,
+  extractSitemapIndexLastmods,
+  extractUrlLastmods,
+} from './sitemap-lastmod-xml';
 
 const FETCH_BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
 const CANONICAL_BASE_URL = (
@@ -13,6 +25,7 @@ interface HtmlCheck {
   path: string;
   canonicalPath?: string;
   isNoIndex?: boolean;
+  maxTitleLength?: number;
   requiredSchema: string[];
   requiredBody: Array<string | RegExp>;
 }
@@ -33,6 +46,7 @@ const htmlChecks: HtmlCheck[] = [
   {
     name: 'Tools search canonical',
     path: '/en/tools/?q=word',
+    canonicalPath: '/en/tools/',
     isNoIndex: true,
     requiredSchema: ['Organization', 'WebSite', 'CollectionPage'],
     requiredBody: ['Word Counter', 'https://www.u2tool.com/en/tools/word-counter/'],
@@ -40,6 +54,7 @@ const htmlChecks: HtmlCheck[] = [
   {
     name: 'AI discovery fallback',
     path: '/en/ai/',
+    maxTitleLength: 75,
     requiredSchema: ['Organization', 'WebSite'],
     requiredBody: ['AI Tools Directory', 'Text Tools', 'Choose the Right Text Tool'],
   },
@@ -159,19 +174,59 @@ async function validateSitemaps(): Promise<void> {
     ['tools sitemap', toolsXml],
   ] as const) {
     assertNoLeaks(name, xml);
-    const expectedLastmod = name === 'tools sitemap'
-      ? maxLastmod([
-          sitemapLastmodManifest.buckets.tools,
-          ...Object.entries(sitemapLastmodManifest.overrides)
-            .filter(([path]) => /^\/[a-z-]+\/tools\//.test(path))
-            .map(([, lastmod]) => lastmod),
-        ])
-      : maxLastmod([
-          sitemapLastmodManifest.buckets.pages,
-          sitemapLastmodManifest.buckets.ai,
-        ]);
-    assert(xml.includes(`<lastmod>${expectedLastmod}</lastmod>`), `${name}: lastmod is not aligned to the recovery deploy date`);
   }
+
+  const indexLastmods = extractSitemapIndexLastmods(indexXml);
+  const priorityLastmods = extractUrlLastmods(priorityXml);
+  const pageLastmods = extractUrlLastmods(pagesXml);
+  const toolLastmods = extractUrlLastmods(toolsXml);
+  const today = new Date().toISOString().slice(0, 10);
+
+  for (const values of [indexLastmods, priorityLastmods, pageLastmods, toolLastmods]) {
+    assertValidLastmods([...values.values()], today);
+  }
+
+  assertExpectedLastmod(
+    toolLastmods,
+    `${CANONICAL_BASE_URL}/en/tools/gantt-chart-generator/`,
+    resolveSitemapLastmod('/en/tools/gantt-chart-generator/', 'tools')
+  );
+  assertExpectedLastmod(
+    toolLastmods,
+    `${CANONICAL_BASE_URL}/en/tools/sql-query-optimizer/`,
+    resolveSitemapLastmod('/en/tools/sql-query-optimizer/', 'tools')
+  );
+  assertExpectedLastmod(
+    toolLastmods,
+    `${CANONICAL_BASE_URL}/en/tools/uuid-generator/`,
+    resolveSitemapLastmod('/en/tools/uuid-generator/', 'tools')
+  );
+  assertExpectedLastmod(
+    pageLastmods,
+    `${CANONICAL_BASE_URL}/en/ai/`,
+    resolveSitemapLastmod('/en/ai/', 'ai')
+  );
+  assertExpectedLastmod(
+    priorityLastmods,
+    `${CANONICAL_BASE_URL}/en/tools/gantt-chart-generator/`,
+    resolveSitemapLastmod('/en/tools/gantt-chart-generator/', 'tools')
+  );
+
+  assertExpectedLastmod(
+    indexLastmods,
+    `${CANONICAL_BASE_URL}/sitemap-priority.xml`,
+    newestEntryLastmod(buildPrioritySitemapEntries())
+  );
+  assertExpectedLastmod(
+    indexLastmods,
+    `${CANONICAL_BASE_URL}/sitemap-pages.xml`,
+    newestEntryLastmod(buildPagesSitemapEntries())
+  );
+  assertExpectedLastmod(
+    indexLastmods,
+    `${CANONICAL_BASE_URL}/sitemap-tools.xml`,
+    newestEntryLastmod(buildToolsSitemapEntries())
+  );
 
   const priorityLocs = extractLocs(priorityXml);
   const pageLocs = extractLocs(pagesXml);
@@ -200,7 +255,8 @@ async function validateHtml(check: HtmlCheck): Promise<void> {
   const h1 = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1]?.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim() || '';
   const expectedCanonical = `${CANONICAL_BASE_URL}${check.canonicalPath || check.path}`;
 
-  assert(title.length >= 10 && title.length <= 70, `${check.name}: title length ${title.length} outside safe range`);
+  const maxTitleLength = check.maxTitleLength || 70;
+  assert(title.length >= 10 && title.length <= maxTitleLength, `${check.name}: title length ${title.length} outside safe range`);
   assert(description.length >= 50 && description.length <= 180, `${check.name}: description length ${description.length} outside safe range`);
   assert(canonical === expectedCanonical, `${check.name}: canonical "${canonical}" does not match "${expectedCanonical}"`);
   

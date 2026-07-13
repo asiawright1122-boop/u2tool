@@ -1,5 +1,7 @@
+import { assertValidLastmods } from './sitemap-lastmod-xml';
+
 const BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
-const MAX_LASTMOD_AGE_DAYS = Number(process.env.MAX_SITEMAP_LASTMOD_AGE_DAYS || 45);
+const TODAY = new Date().toISOString().slice(0, 10);
 
 interface UrlCheck {
   name: string;
@@ -12,6 +14,7 @@ const urlChecks: UrlCheck[] = [
   { name: 'robots.txt', path: '/robots.txt', contentTypeIncludes: 'text/plain', bodyIncludes: ['Sitemap: https://www.u2tool.com/sitemap.xml', 'Disallow: /api/', 'Disallow: /_next/', 'Disallow: /dist/'] },
   { name: 'sitemap index', path: '/sitemap.xml', contentTypeIncludes: 'application/xml', bodyIncludes: ['/sitemap-priority.xml', '/sitemap-pages.xml', '/sitemap-tools.xml'] },
   { name: 'priority sitemap', path: '/sitemap-priority.xml', contentTypeIncludes: 'application/xml', bodyIncludes: ['/en/ai/', '/en/tools/json-formatter/', '/en/tools/jwt-decoder/'] },
+  { name: 'pages sitemap', path: '/sitemap-pages.xml', contentTypeIncludes: 'application/xml', bodyIncludes: ['/en/', '/en/ai/', '/en/tools/'] },
   { name: 'tools sitemap', path: '/sitemap-tools.xml', contentTypeIncludes: 'application/xml', bodyIncludes: ['/en/tools/json-formatter/', '/en/tools/jwt-decoder/'] },
 ];
 
@@ -46,16 +49,12 @@ function extractLastmods(xml: string): string[] {
   return Array.from(xml.matchAll(/<lastmod>(.*?)<\/lastmod>/g)).map((match) => match[1]);
 }
 
-function assertRecentLastmods(name: string, xml: string): void {
+function assertSitemapLastmods(name: string, xml: string): void {
   const lastmods = extractLastmods(xml);
-  assert(lastmods.length > 0, `${name}: no lastmod entries found`);
-
-  const now = Date.now();
-  for (const lastmod of lastmods.slice(0, 50)) {
-    const timestamp = Date.parse(lastmod);
-    assert(Number.isFinite(timestamp), `${name}: invalid lastmod "${lastmod}"`);
-    const ageDays = (now - timestamp) / 86_400_000;
-    assert(ageDays <= MAX_LASTMOD_AGE_DAYS, `${name}: stale lastmod "${lastmod}" (${Math.round(ageDays)} days old)`);
+  try {
+    assertValidLastmods(lastmods, TODAY);
+  } catch (error) {
+    throw new Error(`${name}: ${error instanceof Error ? error.message : String(error)}`);
   }
 }
 
@@ -74,7 +73,7 @@ async function validateUrlCheck(check: UrlCheck): Promise<void> {
     assert(text.includes(expected), `${check.name}: body missing "${expected}"`);
   }
   if (check.path.includes('sitemap')) {
-    assertRecentLastmods(check.name, text);
+    assertSitemapLastmods(check.name, text);
   }
 }
 

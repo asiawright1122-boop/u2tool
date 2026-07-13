@@ -47,6 +47,13 @@ describe('sitemap lastmod resolver', () => {
     }, '2026-07-13')).toThrow('future lastmod');
   });
 
+  it('rejects impossible calendar dates', () => {
+    expect(() => validateSitemapLastmodManifest({
+      ...manifest,
+      buckets: { ...manifest.buckets, pages: '2026-02-30' },
+    }, '2026-07-13')).toThrow('invalid lastmod');
+  });
+
   it('rejects unsupported locales and unknown tool slugs', () => {
     expect(() => validateSitemapLastmodManifest({
       ...manifest,
