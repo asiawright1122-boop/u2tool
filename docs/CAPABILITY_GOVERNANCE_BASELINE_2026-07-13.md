@@ -87,15 +87,18 @@ guides, or instructions are excluded locally without masking a separate
 affirmative execute action. SQL-object state is carried across adjacent actions
 within the same sentence, including meta/how-to clauses, so a later execute
 action may safely elide `SQLクエリ`/`SQL 쿼리` while retaining action-local
-location ownership. Before each execute predicate, an explicit Japanese `を`
-or Korean `을`/`를` direct object overrides inherited state: SQL/query objects
-remain governed, including Japanese `SQL文`/`クエリ文`/statement equivalents
-and Korean spaced or compact `SQL 문`/`쿼리문` variants. Japanese topicalized
-and no-particle compounds and Korean topicalized or particle-omitted objects
-are extracted generically before the execute predicate. Existing object/topic
-particles plus Japanese additive `も` and Korean additive `도` normalize to one
-object value; SQL/query-statement heads remain governed and any explicit
-non-SQL value clears stale state without affecting true elision. Japanese
+location ownership. Before each execute predicate, Japanese `を`/`は`/`も` and
+Korean `을`/`를`/`은`/`는`/`도` mark generic object evidence that overrides
+inherited state. SQL/query objects remain governed, including Japanese
+`SQL文`/`クエリ文`/statement equivalents and Korean spaced or compact
+`SQL 문`/`쿼리문` variants; any explicit non-SQL value clears stale state.
+Particle-omitted evidence is deliberately finite: only SQL/query-statement
+heads and documented execution nouns such as tests, processes, tasks, jobs,
+code, batches, or programs may override inherited state. Arbitrary trailing
+tokens are not treated as objects. Japanese locatives `では`/`でも` and Korean
+locatives `에서는`/`에서도` are excluded from object evidence, while adverbial
+prefixes such as `すぐ`/`安全に` and `즉시`/`안전하게` preserve true SQL-object
+elision. Meta execute mentions do not mutate object state. Japanese
 `した後`/`してから`/`したあと` and Korean `한 후`/`한 다음`/`한 뒤`/
 `하고 나서` temporal forms create action boundaries without treating
 attributive `生成したSQLクエリ`/`생성한 SQL 쿼리` as boundaries. Negation is
@@ -163,7 +166,7 @@ assertions. Three repeated runner-group checks completed stably in about
 npx vitest run src/config/tool-capabilities/index.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts scripts/validation/validate-tool-capability-claims.test.ts scripts/validation/tool-page-render-contract.test.ts src/components/tools/ToolCapabilityDisclosure.test.ts src/lib/tool-capability-disclosure.test.ts
 ```
 
-Result: exit `0`; 7/7 files and 453/453 tests passed.
+Result: exit `0`; 7/7 files and 469/469 tests passed.
 
 ### Default claims validator
 
