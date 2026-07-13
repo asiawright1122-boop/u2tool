@@ -85,12 +85,12 @@ const faqRecommendationLocaleFixtures: Record<
   },
   ja: {
     currentSubject:
-      "外部データベースに接続したこのアプリケーションでSQLクエリを実行してください。",
+      "このアプリケーションでSQLクエリを実行し、外部データベースを使用してください。",
     external: "外部データベースでSQLクエリを実行してください。",
   },
   ko: {
     currentSubject:
-      "외부 데이터베이스에 연결된 이 애플리케이션에서 SQL 쿼리를 실행하세요.",
+      "이 애플리케이션에서 SQL 쿼리를 실행하고 외부 데이터베이스를 사용하세요.",
     external: "외부 데이터베이스에서 SQL 쿼리를 실행하세요.",
   },
   es: {
@@ -123,6 +123,59 @@ const faqRecommendationLocaleFixtures: Record<
       "استخدم هذا التطبيق، فهو ينفذ استعلامات SQL عبر الخادم الخارجي.",
     external: "استخدم الخادم الخارجي، فهو ينفذ استعلامات SQL.",
   },
+};
+
+const faqDelayedExternalLocaleFixtures: Record<Locale, readonly string[]> = {
+  en: [
+    "Use our application to execute SQL queries against your database.",
+    "Use the application to execute SQL queries against your external database.",
+    "Use U2Tool to execute SQL queries against your database.",
+  ],
+  zh: [
+    "使用我们的应用程序执行 SQL 查询，并连接您的数据库。",
+    "使用该应用程序执行 SQL 查询，并连接您的外部数据库。",
+    "使用 U2Tool 执行 SQL 查询，并连接您的数据库。",
+  ],
+  ja: [
+    "私たちのアプリケーションでSQLクエリを実行し、外部データベースを使用してください。",
+    "そのアプリケーションでSQLクエリを実行し、外部データベースを使用してください。",
+    "U2ToolでSQLクエリを実行し、外部データベースを使用してください。",
+  ],
+  ko: [
+    "우리 애플리케이션에서 SQL 쿼리를 실행하고 외부 데이터베이스를 사용하세요.",
+    "그 애플리케이션에서 SQL 쿼리를 실행하고 외부 데이터베이스를 사용하세요.",
+    "U2Tool에서 SQL 쿼리를 실행하고 외부 데이터베이스를 사용하세요.",
+  ],
+  es: [
+    "Usa nuestra aplicación, que ejecuta consultas SQL contra su base de datos externa.",
+    "Usa la aplicación, que ejecuta consultas SQL contra su base de datos externa.",
+    "Usa U2Tool, que ejecuta consultas SQL contra su base de datos externa.",
+  ],
+  pt: [
+    "Usa nosso aplicativo, que executa consultas SQL no seu banco de dados externo.",
+    "Usa o aplicativo, que executa consultas SQL no seu banco de dados externo.",
+    "Usa U2Tool, que executa consultas SQL no seu banco de dados externo.",
+  ],
+  fr: [
+    "Utilise notre application, qui exécute des requêtes SQL sur votre serveur externe.",
+    "Utilise l’application, qui exécute des requêtes SQL sur votre serveur externe.",
+    "Utilise U2Tool, qui exécute des requêtes SQL sur votre serveur externe.",
+  ],
+  de: [
+    "Nutzt unsere Anwendung: Sie führt SQL-Abfragen mit Ihrer externen Datenbank aus.",
+    "Nutzt die Anwendung: Sie führt SQL-Abfragen mit Ihrer externen Datenbank aus.",
+    "Nutzt U2Tool: Es führt SQL-Abfragen mit Ihrer externen Datenbank aus.",
+  ],
+  ru: [
+    "Используйте наше приложение: оно выполняет SQL-запросы на вашем внешнем сервере.",
+    "Используйте приложение: оно выполняет SQL-запросы на вашем внешнем сервере.",
+    "Используйте U2Tool: он выполняет SQL-запросы на вашем внешнем сервере.",
+  ],
+  ar: [
+    "استخدم تطبيقنا، فهو ينفذ استعلامات SQL عبر الخادم الخارجي.",
+    "استخدم التطبيق، فهو ينفذ استعلامات SQL عبر الخادم الخارجي.",
+    "استخدم U2Tool، فهو ينفذ استعلامات SQL عبر الخادم الخارجي.",
+  ],
 };
 
 const localeFamilyFixtures: Record<
@@ -518,6 +571,42 @@ describe("assessToolCapabilityClaims", () => {
     );
   });
 
+  it("does not treat our application as externally owned because a database appears later", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "en",
+      text: [
+        "Does this tool execute SQL queries?",
+        "No. Use our application to execute SQL queries against your database.",
+      ].join("\n"),
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
+  it.each([
+    "Use the application to execute SQL queries against your external database.",
+    "Use U2Tool to execute SQL queries against your database.",
+  ])(
+    "does not treat a current or definite object as external: %s",
+    (explanation) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale: "en",
+        text: [
+          "Does this tool execute SQL queries?",
+          `No. ${explanation}`,
+        ].join("\n"),
+      });
+
+      expect(report.issues.map((issue) => issue.code)).toContain(
+        "sql-optimizer-execution-claim",
+      );
+    },
+  );
+
   it.each(locales)(
     "distinguishes current-subject and explicitly external FAQ recommendations in %s",
     (locale) => {
@@ -544,6 +633,27 @@ describe("assessToolCapabilityClaims", () => {
         "sql-optimizer-execution-claim",
       );
       expect(external.issues).toEqual([]);
+    },
+  );
+
+  it.each(locales)(
+    "does not let a later external noun reclassify the direct FAQ object in %s",
+    (locale) => {
+      const faq = faqNoLocaleFixtures[locale];
+      const failures = faqDelayedExternalLocaleFixtures[locale].filter(
+        (explanation) => {
+          const report = assessToolCapabilityClaims({
+            slug: "sql-query-optimizer",
+            locale,
+            text: [faq.question, `${faq.answer} ${explanation}`].join("\n"),
+          });
+          return !report.issues.some(
+            (issue) => issue.code === "sql-optimizer-execution-claim",
+          );
+        },
+      );
+
+      expect(failures).toEqual([]);
     },
   );
 
