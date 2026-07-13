@@ -1550,6 +1550,44 @@ describe("assessToolCapabilityClaims", () => {
   });
 
   it.each([
+    ["ja", "SQLクエリを分析し、このツールは実行します。"],
+    ["ja", "SQLクエリを分析し、このツールも実行します。"],
+    ["ko", "SQL 쿼리를 분석하고 이 도구는 실행합니다."],
+    ["ko", "SQL 쿼리를 분석하고 이 도구도 실행합니다."],
+  ] as const)(
+    "keeps a topic-marked executing subject as SQL-object elision in %s: %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues.map((issue) => issue.code)).toContain(
+        "sql-optimizer-execution-claim",
+      );
+    },
+  );
+
+  it.each([
+    ["ja", "SQLクエリを分析し、ワークフローも実行します。"],
+    ["ko", "SQL 쿼리를 분석하고 워크플로도 실행합니다."],
+  ] as const)(
+    "does not treat an unknown topic/additive head as a non-SQL object in %s: %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues.map((issue) => issue.code)).toContain(
+        "sql-optimizer-execution-claim",
+      );
+    },
+  );
+
+  it.each([
     ["ja", "SQLクエリを分析し、安全に実行します。"],
     ["ja", "SQLクエリを分析し、このアプリケーションでは実行します。"],
     ["ja", "SQLクエリを分析し、このアプリケーションでも実行します。"],
@@ -1576,13 +1614,11 @@ describe("assessToolCapabilityClaims", () => {
     ["ja", "SQLクエリを分析し、このアプリケーションでジョブ実行します。"],
     ["ja", "SQLクエリを分析し、このアプリケーションでコード実行します。"],
     ["ja", "SQLクエリを分析し、ワークフローを実行します。"],
-    ["ja", "SQLクエリを分析し、ワークフローも実行します。"],
     ["ko", "SQL 쿼리를 분석하고 잡 실행합니다."],
     ["ko", "SQL 쿼리를 분석하고 코드 실행합니다."],
     ["ko", "SQL 쿼리를 분석하고 워크플로를 실행합니다."],
-    ["ko", "SQL 쿼리를 분석하고 워크플로도 실행합니다."],
   ] as const)(
-    "keeps documented compounds and generic marked non-SQL objects clean in %s: %s",
+    "keeps documented compounds and generic accusative non-SQL objects clean in %s: %s",
     (locale, text) => {
       const report = assessToolCapabilityClaims({
         slug: "sql-query-optimizer",
