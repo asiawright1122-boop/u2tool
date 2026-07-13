@@ -93,26 +93,29 @@ const SQL_EXECUTION_ACTION_BY_LOCALE = {
     boundary: /[。！？!?；;\n\r]+|(?:分析|説明|表示|確認|生成|接続|実行)(?:してから|した(?:後|のち|あと)(?:に|で|から)?|して|し(?!た))\s*[、,]?\s*/gu,
     explicitObjects: [
       /([^、。！？,]{1,80})を\s*$/u,
-      /((?:SQL\s*(?:クエリ\s*)?(?:文|ステートメント)?|クエリ\s*(?:文|ステートメント)?|テスト|試験|処理|プロセス|タスク|作業))(?:は|については)[^、。！？,]{0,80}$/u,
+      /([^、。！？,\s]{1,40})(?:は|も)(?=[^、。！？,]{0,80}$)/u,
+      /([A-Za-z0-9一-龯ぁ-んァ-ヶー]+)\s*$/u,
     ],
+    locationObject: /(?:で|にて)$/u,
     predicate: /実行/gu,
     sqlDirectObject: /(?:SQL\s*(?:クエリ\s*)?(?:文|ステートメント)?|クエリ\s*(?:文|ステートメント)?)\s*$/u,
     sqlObject: /(?:SQL|クエリ)/u,
     meta: /^実行(?:(?:する|の)?(?:方法|手順|ステップ|ガイド|案内|指示|仕方))/u,
-    negation: /^実行(?:(?:は|には|を)?(?:できません|できない|できず|しません|しない|せず|不可)|すること(?:は|が)?でき(?:ません|ない)|には対応(?:し(?:ません|ない)|してい(?:ません|ない)|しておりません))/u,
+    negation: /^実行(?:(?:は|には|を)?(?:できません|できない|できず|できなくて|しません|しない|せず|不可)|すること(?:は|が)?でき(?:ません|ない|ず|なくて)|には対応(?:し(?:ません|ない)|してい(?:ません|ない)|しておりません))/u,
   },
   ko: {
     boundary: /[.!?。！？；;\n\r]+|(?:분석|설명|표시|확인|생성|연결|실행)(?:한\s+(?:후|다음|뒤)(?:에|로)?|하고\s+나서|하고|하며|해서)\s*,?\s*/gu,
     explicitObjects: [
       /([^,.!?。！？]{1,80})(?:을|를)\s*$/u,
-      /((?:SQL\s*(?:쿼리\s*)?문?|쿼리\s*문?|테스트|시험|프로세스|처리|작업|태스크))(?:은|는)[^,.!?。！？]{0,80}$/u,
-      /((?:SQL\s*(?:쿼리\s*)?문?|쿼리\s*문?|테스트|시험|프로세스|처리|작업|태스크))\s*$/u,
+      /([^,.!?。！？\s]{1,40})(?:은|는|도)(?=[^,.!?。！？]{0,80}$)/u,
+      /([A-Za-z0-9가-힣]+(?:\s+[A-Za-z0-9가-힣]+){0,2})\s*$/u,
     ],
+    locationObject: /(?:에서|상에서)$/u,
     predicate: /실행/gu,
     sqlDirectObject: /(?:SQL\s*(?:쿼리\s*)?문?|쿼리\s*문?)\s*$/u,
     sqlObject: /(?:SQL|쿼리)/u,
     meta: /^실행(?:(?:하는|할|의)?\s*(?:방법|단계|절차|가이드|안내|지침))/u,
-    negation: /^실행(?:하지\s*(?:않습니다|않아요|않는다|마세요|못(?:합니다|해요|한다))|할\s*수\s*없(?:어요|다|습니다|음|고)|하지\s*않음|이\s*불가능(?:합니다|해요|하다)|(?:을|은)\s*지원하지\s*(?:않습니다|않아요|않는다|않음))/u,
+    negation: /^실행(?:하지\s*(?:않습니다|않아요|않는다|마세요|못(?:합니다|해요|한다))|할\s*수\s*없(?:어요|다|습니다|음|고|지만|으며)|하지\s*않음|(?:이|은)\s*불가능(?:합니다|해요|하다|함)?|\s*(?:(?:을|은)\s*)?지원하지\s*(?:않습니다|않아요|않는다|않음))/u,
   },
 } as const;
 
@@ -405,6 +408,7 @@ function matchesJaKoSqlExecutionAction(
 
     const beforePredicate = segment.slice(0, predicate.index);
     const fromPredicate = segment.slice(predicate.index);
+    const isMeta = test(action.meta, fromPredicate);
     sqlContext ||= test(
       action.sqlObject,
       segment.slice(contextCursor, predicate.index),
@@ -420,13 +424,16 @@ function matchesJaKoSqlExecutionAction(
     const actionPrefix = beforePredicate.slice(actionStart);
     const explicitObject = action.explicitObjects
       .map((pattern) => actionPrefix.match(pattern)?.[1])
-      .find(Boolean);
-    if (explicitObject) {
+      .find(
+        (candidate) =>
+          candidate && !test(action.locationObject, candidate),
+      );
+    if (!isMeta && explicitObject) {
       sqlContext = test(action.sqlDirectObject, explicitObject);
     }
     if (
       !sqlContext ||
-      test(action.meta, fromPredicate) ||
+      isMeta ||
       test(action.negation, fromPredicate)
     ) {
       return false;
